@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.18 2009/02/02 12:22:07 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.19 2009/10/14 16:12:49 bicatali Exp $
+
+*pythonmagick-0.9.1 (14 Oct 2009)
+
+  14 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +pythonmagick-0.9.1.ebuild:
+  Version bump, closing bug #288608
 
 *pythonmagick-0.8-r2 (02 Feb 2009)
 
