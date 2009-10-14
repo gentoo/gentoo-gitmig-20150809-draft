@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.52 2009/10/09 16:48:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.53 2009/10/14 11:04:35 vapier Exp $
 
 EAPI="1"
 
@@ -104,7 +104,7 @@ src_install() {
 	mv "${D}/etc/runlevels" "${D}/usr/share/${PN}"
 
 	# Setup unicode defaults for silly unicode users
-	use unicode && sed -i -e '/^unicode=/s:NO:YES:' "${D}"/etc/rc.conf
+	use unicode && sed -i -r -e '/^#?unicode=/s:NO:YES:' "${D}"/etc/rc.conf
 
 	# Cater to the norm
 	(use x86 || use amd64) && sed -i -e '/^windowkeys=/s:NO:YES:' "${D}"/etc/conf.d/keymaps
