@@ -1,6 +1,3 @@
-
-;;; quack site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 
 (autoload 'quack-scheme-mode-hookfunc "quack")

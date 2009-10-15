@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/quack-0.30.ebuild,v 1.2 2008/06/14 23:29:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/quack-0.37.ebuild,v 1.1 2009/10/15 19:07:48 ulm Exp $
 
 inherit elisp
 
@@ -13,4 +13,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
