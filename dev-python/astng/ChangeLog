@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.27 2009/10/11 20:12:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.28 2009/10/15 08:40:11 maekke Exp $
+
+  15 Oct 2009; Markus Meier <maekke@gentoo.org> astng-0.19.1.ebuild:
+  amd64/x86 stable, bug #287944
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> astng-0.19.1.ebuild:
   ppc stable #287944

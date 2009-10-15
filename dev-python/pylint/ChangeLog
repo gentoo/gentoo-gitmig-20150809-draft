@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.54 2009/10/11 20:13:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.55 2009/10/15 08:41:09 maekke Exp $
+
+  15 Oct 2009; Markus Meier <maekke@gentoo.org> pylint-0.18.1-r1.ebuild:
+  amd64/x86 stable, bug #287944
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> pylint-0.18.1-r1.ebuild:
   ppc stable #287944
