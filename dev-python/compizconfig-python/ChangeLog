@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/compizconfig-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.14 2009/09/05 13:39:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.15 2009/10/15 17:35:19 mrpouet Exp $
+
+*compizconfig-python-0.8.4 (15 Oct 2009)
+
+  15 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +compizconfig-python-0.8.4.ebuild:
+  Version bump.
 
   05 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -compizconfig-python-0.6.0.1.ebuild:
