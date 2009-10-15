@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.10.0.ebuild,v 1.1 2009/10/13 12:44:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.10.0.ebuild,v 1.2 2009/10/15 13:37:35 djc Exp $
 
 EAPI="2"
 
-inherit eutils distutils multilib
+inherit eutils
 
 DESCRIPTION="Apache CouchDB is a distributed, fault-tolerant and schema-free document-oriented database."
 HOMEPAGE="http://couchdb.apache.org/"
@@ -14,7 +14,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="test mirror" #72375
 
 RDEPEND="dev-libs/icu
 		dev-lang/erlang[ssl]
@@ -32,12 +31,9 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf --with-erlang=/usr/lib/erlang/usr/include --prefix=/usr \
-		--localstatedir=/var || die "configure failed"
-}
-
-src_compile() {
-	emake || die "make failed"
+	econf \
+		--with-erlang=/usr/lib/erlang/usr/include \
+		--localstatedir=/var
 }
 
 src_install() {
