@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xml-writer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-writer/ChangeLog,v 1.4 2009/03/20 19:55:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-writer/ChangeLog,v 1.5 2009/10/15 08:36:00 maekke Exp $
+
+  15 Oct 2009; Markus Meier <maekke@gentoo.org> xml-writer-0.2.ebuild:
+  amd64/x86 stable, bug #287619
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> xml-writer-0.2.ebuild:
   Marked ~ppc64.
