@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/thinks
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.9 2007/11/25 21:33:00 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.10 2009/10/15 19:32:28 ulm Exp $
+
+*thinks-1.9 (15 Oct 2009)
+
+  15 Oct 2009; Ulrich Mueller <ulm@gentoo.org> -thinks-1.8.ebuild,
+  +thinks-1.9.ebuild:
+  Version bump. Straight to stable, as only the licence has changed.
 
   25 Nov 2007; Ulrich Mueller <ulm@gentoo.org> thinks-1.8.ebuild:
   Stable on amd64, bug #195512.

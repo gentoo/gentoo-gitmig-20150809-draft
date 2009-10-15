@@ -1,7 +1,5 @@
-
-;;; site-lisp configuration for thinks
-
 (add-to-list 'load-path "@SITELISP@")
+
 (autoload (quote thinks) "thinks" "\
 Insert TEXT wrapped in a think bubble.
 
