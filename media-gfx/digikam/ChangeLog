@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.141 2009/10/10 14:21:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.142 2009/10/15 11:53:05 maekke Exp $
+
+  15 Oct 2009; Markus Meier <maekke@gentoo.org> digikam-0.9.5-r1.ebuild:
+  amd64/x86 stable, bug #287980
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   digikam-0.10.0-r1.ebuild:
