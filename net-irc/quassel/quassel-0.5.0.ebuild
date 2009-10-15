@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.0.ebuild,v 1.1 2009/10/14 21:21:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.0.ebuild,v 1.2 2009/10/15 12:08:33 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE="dbus debug kde monolithic +oxygen phonon postgres +server +ssl webkit +X"
 
-LANGS="cs da de fr hu it nb_NO ru sl tr"
+LANGS="cs da de fi fr hu it nb_NO ru sl tr"
 for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
@@ -78,6 +78,7 @@ src_configure() {
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with ssl OPENSSL)
 		$(cmake-utils_use_with oxygen OXYGEN)
+		-DWITH_LIBINDICATE=OFF
 		-DEMBED_DATA=OFF
 		-DLINGUAS=${my_langs}
 		"
