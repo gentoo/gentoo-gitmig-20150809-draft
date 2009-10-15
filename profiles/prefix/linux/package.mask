@@ -1,6 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/package.mask,v 1.1 2009/06/06 03:54:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/package.mask,v 1.2 2009/10/15 19:49:42 darkside Exp $
+
+# Jeremy Olexa <darkside@gentoo.org> (15 Oct 2009)
+# Some wierd issue that prevents xulrunner from linking properly and completely
+# makes mozilla-firefox act up. Confirmed by two linux users. Apparently it
+# works fine for solaris..
+~dev-libs/nss-3.12.4
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Dec 2008)
 # app-misc/pax-utils-0.1.19 works fine on linux (and it should because it is
