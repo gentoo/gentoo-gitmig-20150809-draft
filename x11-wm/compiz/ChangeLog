@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.44 2009/08/29 12:28:11 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.45 2009/10/15 16:30:11 mrpouet Exp $
+
+*compiz-0.8.4 (15 Oct 2009)
+
+  15 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +compiz-0.8.4.ebuild, files/compiz-manager:
+  Version bump. Many bugfixes, 2 new plugins, Ported KDE4 window decorator
+  to KDE 4.3. Fix bug #286431 thanks to Evert.
 
 *compiz-0.8.2-r3 (29 Aug 2009)
 
