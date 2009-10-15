@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.15 2009/10/02 11:30:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.16 2009/10/15 21:40:47 zzam Exp $
 
 EAPI="1"
 
@@ -184,7 +184,7 @@ src_compile() {
 }
 
 src_install() {
-	local scriptdir="${FILESDIR}/136"
+	local scriptdir="${FILESDIR}/147"
 
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
@@ -355,6 +355,9 @@ pkg_preinst() {
 
 	has_version "<${CATEGORY}/${PN}-113"
 	previous_less_than_113=$?
+
+	has_version "<${CATEGORY}/${PN}-146-r2"
+	previous_less_than_146_r2=$?
 }
 
 fix_old_persistent_net_rules() {
@@ -487,6 +490,20 @@ pkg_postinst() {
 	then
 			rm -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
 			einfo "Removed unneeded file 64-device-mapper.rules"
+	fi
+
+	# add udev-postmount to default runlevel instead of that ugly injecting
+	# like a hotplug event, added 2009/10/15
+	if [[ $previous_less_than_146_r2 = 0 ]]
+	then
+		local initd=udev-postmount
+
+		if [[ -e ${ROOT}/etc/init.d/${initd} ]] && \
+			[[ ! -e ${ROOT}/etc/runlevels/default/${initd} ]]
+		then
+			ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/default/${initd}
+			elog "Auto-adding '${initd}' service to your default runlevel"
+		fi
 	fi
 
 	# requested in bug #275974, added 2009/09/05
