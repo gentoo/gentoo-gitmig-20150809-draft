@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/gpointing-device-settings-1.3.2.ebuild,v 1.2 2009/10/15 09:22:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/gpointing-device-settings-1.3.2.ebuild,v 1.3 2009/10/15 11:41:34 maekke Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/gsynaptics/43803/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # >=gnome-base/gnome-control-center-2.27.4 has touchpad configuration keys,
