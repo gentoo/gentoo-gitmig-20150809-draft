@@ -1,6 +1,12 @@
 # ChangeLog for games-roguelike/angband
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.25 2008/08/29 21:09:10 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.26 2009/10/15 04:04:29 mr_bones_ Exp $
+
+*angband-3.0.9e (15 Oct 2009)
+
+  15 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +angband-3.0.9e.ebuild, +files/angband-3.0.9e-gentoo.patch:
+  version bump
 
 *angband-3.0.9b (29 Aug 2008)
 
