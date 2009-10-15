@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>games</herd>
   <maintainer>
-    <email>genstef@gentoo.org</email>
+    <email>ssuominen@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="editor">Depend on inkscape, scripts to convert svg to level (svg2lvl)</flag>
