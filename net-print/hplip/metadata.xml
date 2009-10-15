@@ -43,8 +43,10 @@
     <flag name='snmp'>Add support for <pkg>net-analyzer/net-snmp</pkg> 
     which enables this driver to work over networks (both for server and 
     client)</flag>
-	<flag name='udev-acl'>Install udev acl rules. This needs
-	<pkg>sys-fs/udev</pkg> with acl support.</flag>
+    <flag name='udev-acl'>Install udev acl rules. This needs
+    <pkg>sys-fs/udev</pkg> with acl support.</flag>
+    <flag name='zeroconf'>Zeroconf support. Enable this flag to make use of the
+    mDNS network search for network attached printers.</flag>
     <flag name="cups">
       Build the hpcups driver for cups.
     </flag>
