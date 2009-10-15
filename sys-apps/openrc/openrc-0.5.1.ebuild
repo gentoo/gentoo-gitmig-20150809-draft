@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.1.ebuild,v 1.3 2009/10/14 11:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.1.ebuild,v 1.4 2009/10/15 00:49:31 vapier Exp $
 
 EAPI="1"
 
@@ -88,6 +88,13 @@ src_compile() {
 	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
 }
 
+set_conf() {
+	local file="${D}/$1" var=$2 val=NO u
+	shift 2
+	for u ; do use $u && val=YES ; done
+	sed -i -r -e "/^#?${var}=/{s:=([\"'])?[^ ]*\1:=\1${val}\1:;s:^#::}" "${file}"
+}
+
 src_install() {
 	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
 
@@ -106,10 +113,10 @@ src_install() {
 	mv "${D}/etc/runlevels" "${D}/usr/share/${PN}"
 
 	# Setup unicode defaults for silly unicode users
-	use unicode && sed -i -r -e '/^#?unicode=/s:NO:YES:' "${D}"/etc/rc.conf
+	set_conf /etc/rc.conf unicode unicode
 
 	# Cater to the norm
-	(use x86 || use amd64) && sed -i -e '/^windowkeys=/s:NO:YES:' "${D}"/etc/conf.d/keymaps
+	set_conf /etc/conf.d/keymaps windowkeys x86 amd64
 
 	# Support for logfile rotation
 	insinto /etc/logrotate.d
