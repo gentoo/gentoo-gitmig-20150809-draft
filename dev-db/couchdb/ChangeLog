@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.10 2009/10/15 13:37:35 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.11 2009/10/15 13:40:37 djc Exp $
+
+  15 Oct 2009; <djc@gentoo.org> -files/couchdb.conf-0.8.1,
+  -files/couchdb.init-0.8.1, -couchdb-0.8.1.ebuild:
+  Remove old versions.
 
   15 Oct 2009; <djc@gentoo.org> couchdb-0.10.0.ebuild:
   Clean up the ebuild for 0.10, thanks to pva for comments.
