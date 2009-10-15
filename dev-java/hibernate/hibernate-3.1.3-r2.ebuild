@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3-r2.ebuild,v 1.2 2009/03/29 16:57:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3-r2.ebuild,v 1.3 2009/10/15 08:13:17 maekke Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-antlr ant-swing ant-junit"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.hibernate.org"
 LICENSE="LGPL-2"
 IUSE=""
 SLOT="3.1"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 COMMON_DEPEND="
 	>=dev-java/antlr-2.7.7:0[java]
