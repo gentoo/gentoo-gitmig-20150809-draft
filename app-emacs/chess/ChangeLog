@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/chess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.31 2009/10/15 14:07:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.32 2009/10/15 22:43:19 fauli Exp $
+
+  15 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  -chess-2.0_beta6-r1.ebuild, -files/50chess-gentoo-2.0_beta6.el:
+  clean up
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> chess-2.0_beta6-r2.ebuild:
   amd64/x86 stable, bug #288395
