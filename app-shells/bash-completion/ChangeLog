@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.192 2009/10/09 16:43:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.193 2009/10/15 13:52:35 darkside Exp $
+
+*bash-completion-1.1 (15 Oct 2009)
+
+  15 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.0-r3.ebuild, +bash-completion-1.1.ebuild,
+  files/bash-completion.sh:
+  Version bump. Many new completion modules. Note: the 'base' module is
+  always enabled now.
 
   09 Oct 2009; Raúl Porcel <armin76@gentoo.org>
   bash-completion-1.0-r5.ebuild:
