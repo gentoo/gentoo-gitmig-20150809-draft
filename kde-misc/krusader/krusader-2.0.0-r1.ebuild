@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0-r1.ebuild,v 1.2 2009/10/10 17:16:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0-r1.ebuild,v 1.3 2009/10/15 20:46:50 abcd Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit kde4-base
 MY_P="${P/_/-}"
 
 DESCRIPTION="An advanced twin-panel (commander-style) file-manager for KDE with many extras."
-HOMEPAGE="http://krusader.sourceforge.net/"
+HOMEPAGE="http://www.krusader.org/"
 SRC_URI="mirror://sourceforge/krusader/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
