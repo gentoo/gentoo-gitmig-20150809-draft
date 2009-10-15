@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/klive
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.24 2008/10/05 13:32:59 klausman Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.25 2009/10/15 20:00:26 djc Exp $
+
+  15 Oct 2009; <djc@gentoo.org> klive-0.28.ebuild:
+  Add RDEPEND on twisted and Python (#278569).
 
   05 Oct 2008; Tobias Klausmann <klausman@gentoo.org> klive-0.28.ebuild:
   Stable on alpha, bug #238072
