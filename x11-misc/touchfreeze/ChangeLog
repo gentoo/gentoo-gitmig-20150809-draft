@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/touchfreeze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.2 2009/06/28 18:56:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.3 2009/10/15 07:53:41 scarabeus Exp $
+
+  15 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -touchfreeze-0.2.3.ebuild, touchfreeze-0.2.3-r1.ebuild:
+  Remove obsolete. Remove not-required die
 
 *touchfreeze-0.2.3-r1 (28 Jun 2009)
 
