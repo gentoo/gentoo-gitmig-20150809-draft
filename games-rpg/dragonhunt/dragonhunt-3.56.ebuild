@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.1 2007/05/20 21:14:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.2 2009/10/15 06:35:33 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P="Dragon_Hunt-${PV}"
@@ -19,10 +20,7 @@ RDEPEND="dev-lang/python
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Where to look for modules to load.
 	sed -i "s:\.\./modules/:${GAMES_DATADIR}/${PN}/:" \
 		code/g.py \
