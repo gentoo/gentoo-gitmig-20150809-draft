@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/javascript
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/javascript/ChangeLog,v 1.5 2008/06/14 23:26:59 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/javascript/ChangeLog,v 1.6 2009/10/15 21:42:59 ulm Exp $
+
+*javascript-2.2.1 (15 Oct 2009)
+
+  15 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +javascript-2.2.1.ebuild:
+  Version bump. New HOMEPAGE.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> javascript-2.0_beta8.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
