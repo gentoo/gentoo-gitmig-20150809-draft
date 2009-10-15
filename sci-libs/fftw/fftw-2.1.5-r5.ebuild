@@ -1,15 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.10 2009/05/01 12:07:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.11 2009/10/15 17:11:21 bicatali Exp $
 
-inherit eutils flag-o-matic multilib autotools fortran toolchain-funcs
+inherit eutils flag-o-matic autotools toolchain-funcs
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
 HOMEPAGE="http://www.fftw.org"
 
-# hppa does not have yet a virtual/mpi
 DEPEND="mpi? ( virtual/mpi )"
+RDEPEND="${DEPEND}"
 
 SLOT="2.1"
 LICENSE="GPL-2"
@@ -37,9 +37,7 @@ then
 		ewarn "Otherwise the configure script will select POSIX threads."
 		epause 5
 	fi
-
-	FORTRAN="gfortran ifc g77"
-	use fortran && fortran_pkg_setup
+	use openmp && [[ $(tc-getCC)$ == icc* ]] && no-as-needed
 }
 
 src_unpack() {
