@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/gnake-0.94b.ebuild,v 1.5 2008/03/19 23:02:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/gnake-0.94b.ebuild,v 1.6 2009/10/15 05:50:24 mr_bones_ Exp $
 
-inherit toolchain-funcs games
+inherit games
 
 DESCRIPTION="An ncurses-based Nibbles clone"
 HOMEPAGE="http://lightless.org/gnake"
@@ -18,7 +18,7 @@ DEPEND="sys-libs/ncurses"
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	emake CC="$(tc-getCC)" LDLIBS=-lncurses gnake || die "emake failed"
+	emake LDLIBS=-lncurses gnake || die "emake failed"
 }
 
 src_install() {
