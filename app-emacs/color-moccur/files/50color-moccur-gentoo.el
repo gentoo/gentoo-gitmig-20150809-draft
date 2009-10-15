@@ -1,6 +1,3 @@
-
-;;; color-moccur site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (mapc (function (lambda (x) (autoload x "color-moccur" nil t)))
       '(moccur

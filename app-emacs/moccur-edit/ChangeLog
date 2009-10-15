@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/moccur-edit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/ChangeLog,v 1.4 2008/06/14 23:28:14 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/ChangeLog,v 1.5 2009/10/15 19:35:54 ulm Exp $
+
+*moccur-edit-2.16 (15 Oct 2009)
+
+  15 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +moccur-edit-2.16.ebuild:
+  Version bump.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> moccur-edit-2.11-r1.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
