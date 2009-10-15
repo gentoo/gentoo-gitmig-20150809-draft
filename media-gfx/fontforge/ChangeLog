@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.113 2009/10/12 19:18:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.114 2009/10/15 13:51:56 maekke Exp $
+
+  15 Oct 2009; Markus Meier <maekke@gentoo.org> fontforge-20090622.ebuild:
+  amd64/x86 stable, bug #288261
 
   12 Oct 2009; Jeroen Roovers <jer@gentoo.org> fontforge-20090622.ebuild:
   Stable for HPPA (bug #288261).
