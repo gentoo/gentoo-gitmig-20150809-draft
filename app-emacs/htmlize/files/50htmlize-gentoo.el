@@ -1,6 +1,3 @@
-
-;;; htmlize site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'htmlize-buffer "htmlize"
   "Convert BUFFER to HTML, preserving colors and decorations." t)
