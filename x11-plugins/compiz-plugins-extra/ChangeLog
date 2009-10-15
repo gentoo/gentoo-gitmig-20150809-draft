@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/compiz-plugins-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.6 2009/08/27 11:00:42 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.7 2009/10/15 17:16:55 mrpouet Exp $
+
+*compiz-plugins-extra-0.8.4 (15 Oct 2009)
+
+  15 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +compiz-plugins-extra-0.8.4.ebuild:
+  Version bump.
 
   27 Aug 2009; Mike Auty <ikelos@gentoo.org>
   compiz-plugins-extra-0.8.2.ebuild:
