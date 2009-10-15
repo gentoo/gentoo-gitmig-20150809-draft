@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/touchfreeze-0.2.3-r1.ebuild,v 1.2 2009/10/15 07:53:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/touchfreeze-0.2.3-r1.ebuild,v 1.3 2009/10/15 09:37:50 ssuominen Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://qsynaptics.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4
