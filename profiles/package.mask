@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10586 2009/10/15 08:01:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10587 2009/10/15 09:06:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,8 +36,8 @@
 # gsynaptics is replaced by gnome-extra/gpointing-device-settings
 # libsynaptics is orphaned library
 # bug 289170
+# gnome-extra/gsynaptics
 x11-libs/libsynaptics
-gnome-extra/gsynaptics
 kde-misc/ksynaptics
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Oct 2009)
