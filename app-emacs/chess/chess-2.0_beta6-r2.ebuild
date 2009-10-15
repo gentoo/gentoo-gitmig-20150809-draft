@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta6-r2.ebuild,v 1.2 2009/10/11 19:45:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta6-r2.ebuild,v 1.3 2009/10/15 14:07:10 maekke Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/emacs-chess/${P/_beta/b}.tar.gz
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
