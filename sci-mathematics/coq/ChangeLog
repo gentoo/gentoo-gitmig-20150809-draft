@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.45 2009/10/13 17:20:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.46 2009/10/15 10:51:01 aballier Exp $
+
+  15 Oct 2009; Alexis Ballier <aballier@gentoo.org> coq-8.2_p1-r1.ebuild:
+  Add missing dep on tl-mathextra for doc, by Arttu Valo
+  <arttuv69@gmail.com>, bug #288990
 
   13 Oct 2009; Alexis Ballier <aballier@gentoo.org> -coq-8.2.ebuild,
   -coq-8.2_p1.ebuild:
