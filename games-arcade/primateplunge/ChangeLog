@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/primateplunge
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.9 2008/06/22 15:29:25 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.10 2009/10/15 16:24:06 mr_bones_ Exp $
+
+  15 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  primateplunge-1.1-r1.ebuild:
+  EAPI=2; HOMEPAGE tweak (bug #289211)
 
   22 Jun 2008; Markus Meier <maekke@gentoo.org> primateplunge-1.1-r1.ebuild:
   x86 stable, bug #227643
