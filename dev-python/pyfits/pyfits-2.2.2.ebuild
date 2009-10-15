@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.2.ebuild,v 1.1 2009/09/30 19:42:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.2.2.ebuild,v 1.1 2009/10/15 23:38:13 arfrever Exp $
 
 EAPI="2"
-
-NEED_PYTHON="2.3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -28,7 +26,7 @@ src_test() {
 	testing() {
 		local test
 		for test in test*.py; do
-			PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib*)" "$(PYTHON)" "${test}" || die "test ${test} failed"
+			PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib*)" "$(PYTHON)" "${test}" || die "test ${test} failed with Python ${PYTHON_ABI}"
 		done
 	}
 	python_execute_function testing
