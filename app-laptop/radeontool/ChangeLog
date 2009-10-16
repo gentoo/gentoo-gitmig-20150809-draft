@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/radeontool
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.21 2007/12/25 16:16:36 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.22 2009/10/16 18:53:02 bangert Exp $
+
+  16 Oct 2009; Thilo Bangert <bangert@gentoo.org> radeontool-1.5-r3.ebuild:
+  respect LDFLAGS (bug #262889)
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318.

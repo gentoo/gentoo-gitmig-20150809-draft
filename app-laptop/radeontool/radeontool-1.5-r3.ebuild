@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.5-r3.ebuild,v 1.5 2007/09/08 04:07:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.5-r3.ebuild,v 1.6 2009/10/16 18:53:02 bangert Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}"-pagesize.patch
 
 	sed -i \
-		-e "s:-Wall -O2:${CFLAGS}:" \
+		-e "s:-Wall -O2:${CFLAGS} ${LDFLAGS}:" \
 		-e "s:gcc:$(tc-getCC):" \
 		"${S}"/Makefile
 }
