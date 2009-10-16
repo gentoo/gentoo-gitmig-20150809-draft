@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.1-r1.ebuild,v 1.2 2009/10/15 19:48:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.1-r1.ebuild,v 1.3 2009/10/16 03:37:56 vapier Exp $
 
 EAPI="1"
 
@@ -87,11 +87,16 @@ src_compile() {
 	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
 }
 
-set_conf() {
-	local file="${D}/$1" var=$2 val=NO u
-	shift 2
-	for u ; do use $u && val=YES ; done
-	sed -i -r -e "/^#?${var}=/{s:=([\"'])?[^ ]*\1:=\1${val}\1:;s:^#::}" "${file}"
+# set_config <file> <option name> <yes value> <no value> test
+# a value of "#" will just comment out the option
+set_config() {
+	local file="${D}/$1" var=$2 val com
+	eval "${@:5}" && val=$3 || val=$4
+	[[ ${val} == "#" ]] && com="#" && val='\2'
+	sed -i -r -e "/^#?${var}=/{s:=([\"'])?([^ ]*)\1?:=\1${val}\1:;s:^#?:${com}:}" "${file}"
+}
+set_config_yes_no() {
+	set_config "$1" "$2" YES NO "${@:3}"
 }
 
 src_install() {
@@ -117,10 +122,10 @@ src_install() {
 	ln -s /etc/init.d/net.lo "${D}"/usr/share/${PN}/net.lo
 
 	# Setup unicode defaults for silly unicode users
-	set_conf /etc/rc.conf unicode unicode
+	set_config_yes_no /etc/rc.conf unicode use unicode
 
 	# Cater to the norm
-	set_conf /etc/conf.d/keymaps windowkeys x86 amd64
+	set_config_yes_no /etc/conf.d/keymaps windowkeys '(' use x86 '||' use amd64 ')'
 
 	# Support for logfile rotation
 	insinto /etc/logrotate.d
@@ -231,6 +236,9 @@ pkg_preinst() {
 				;;
 		esac
 	fi
+
+	# set default interactive shell to sulogin if it exists
+	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
 
 	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc || migrate_from_baselayout_1
