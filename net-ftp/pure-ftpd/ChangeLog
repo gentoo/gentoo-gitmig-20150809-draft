@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.78 2008/09/11 10:07:29 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.79 2009/10/16 11:26:08 voyageur Exp $
+
+  16 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
+  Add net-ftp herd
 
   11 Sep 2008; Raúl Porcel <armin76@gentoo.org> pure-ftpd-1.0.21-r1.ebuild:
   Add ~arm wrt #235873
