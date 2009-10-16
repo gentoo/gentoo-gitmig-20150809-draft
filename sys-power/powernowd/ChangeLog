@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/powernowd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.10 2007/10/11 06:05:00 tgall Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.11 2009/10/16 21:00:54 bangert Exp $
+
+*powernowd-1.00 (16 Oct 2009)
+
+  16 Oct 2009; Thilo Bangert <bangert@gentoo.org> +powernowd-1.00.ebuild,
+  +files/powernowd.initd:
+  version bump (bug #212209, bug #285535)
 
   11 Oct 2007; Tom Gall <tgall@gentoo.org> powernowd-0.97.ebuild:
   added ~ppc64, bug #195193
