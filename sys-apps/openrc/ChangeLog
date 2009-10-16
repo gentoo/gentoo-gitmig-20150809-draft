@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.83 2009/10/16 03:37:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.84 2009/10/16 07:21:51 vapier Exp $
+
+  16 Oct 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.1-r1.ebuild,
+  openrc-9999.ebuild:
+  Workaround parallel build issues #289264.
 
   16 Oct 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.1-r1.ebuild,
   openrc-9999.ebuild:
