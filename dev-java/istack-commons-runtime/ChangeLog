@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/istack-commons-runtime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.9 2009/06/21 02:47:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.10 2009/10/16 12:56:39 betelgeuse Exp $
+
+*istack-commons-runtime-20090620-r1 (16 Oct 2009)
+
+  16 Oct 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +istack-commons-runtime-20090620-r1.ebuild:
+  Fix building with JDK 1.5. Fixes bug #289078.
 
 *istack-commons-runtime-20090620 (21 Jun 2009)
 
