@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.52 2008/08/16 04:12:00 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.53 2009/10/16 13:22:12 bangert Exp $
+
+  16 Oct 2009; Thilo Bangert <bangert@gentoo.org> cpufreqd-2.1.1.ebuild,
+  cpufreqd-2.2.0-r2.ebuild, cpufreqd-2.2.1.ebuild:
+  fix dep on lm_sensors (<3) bug #244588
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

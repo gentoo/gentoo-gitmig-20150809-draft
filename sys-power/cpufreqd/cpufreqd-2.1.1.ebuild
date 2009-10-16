@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.1.1.ebuild,v 1.6 2006/11/13 10:20:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.1.1.ebuild,v 1.7 2009/10/16 13:22:12 bangert Exp $
 
 inherit eutils
 
@@ -17,17 +17,17 @@ KEYWORDS="amd64 ppc ~sparc x86"
 
 IUSE="acpi apm lm_sensors nforce2 nvidia pmu"
 RDEPEND=">=sys-power/cpufrequtils-002
-		lm_sensors? ( sys-apps/lm_sensors )"
+		lm_sensors? ( <sys-apps/lm_sensors-3 )"
 DEPEND="sys-apps/sed
 		${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 
-	sed -i -e "s:acpi_event:acpi:" ${S}/cpufreqd.conf
+	sed -i -e "s:acpi_event:acpi:" "${S}"/cpufreqd.conf
 
 	if use nvidia; then
-		cd ${WORKDIR}/nvclock${NVCLOCK_VERSION}
+		cd "${WORKDIR}"/nvclock${NVCLOCK_VERSION}
 		epatch "${FILESDIR}"/nvclock${NVCLOCK_VERSION}-fd.patch
 		epatch "${FILESDIR}"/nvclock${NVCLOCK_VERSION}-fpic.patch
 	fi
@@ -37,7 +37,7 @@ src_compile() {
 	local config
 
 	if use nvidia; then
-		cd ${WORKDIR}/nvclock${NVCLOCK_VERSION}
+		cd "${WORKDIR}"/nvclock${NVCLOCK_VERSION}
 		econf \
 			--disable-gtk \
 			--disable-qt \
