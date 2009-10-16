@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/acpitool
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.11 2008/04/20 08:46:22 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.12 2009/10/16 12:37:08 bangert Exp $
+
+*acpitool-0.5.1 (16 Oct 2009)
+
+  16 Oct 2009; Thilo Bangert <bangert@gentoo.org> +acpitool-0.5.1.ebuild:
+  version bump (bug #250535)
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   +files/acpitool-0.4.7-gcc43.patch, acpitool-0.4.7-r1.ebuild:
