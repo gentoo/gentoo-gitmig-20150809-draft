@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.76 2009/10/11 10:55:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.77 2009/10/16 13:51:18 jer Exp $
+
+  16 Oct 2009; Jeroen Roovers <jer@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
+  Stable for HPPA (bug #287562).
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
   Merge from Prefix
