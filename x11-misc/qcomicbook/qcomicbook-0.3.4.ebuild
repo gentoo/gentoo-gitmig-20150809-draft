@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.3.4.ebuild,v 1.4 2008/07/28 21:48:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.3.4.ebuild,v 1.5 2009/10/16 18:05:58 ssuominen Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://linux.bydg.org/~yogin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt:3
