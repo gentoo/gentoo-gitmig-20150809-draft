@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.26.0.ebuild,v 1.3 2009/10/08 03:24:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.26.0.ebuild,v 1.4 2009/10/16 19:27:47 leio Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_pre
+	gnome2_src_prepare
 
 	if ! use test ; then
 		sed -e 's/ tests//' -i logview/Makefile* || die "sed failed";
