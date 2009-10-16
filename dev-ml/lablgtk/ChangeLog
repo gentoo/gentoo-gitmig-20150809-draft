@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.74 2009/10/10 14:48:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.75 2009/10/16 14:04:41 jer Exp $
+
+  16 Oct 2009; Jeroen Roovers <jer@gentoo.org> lablgtk-2.12.0.ebuild:
+  Stable for HPPA (bug #286785).
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> lablgtk-2.12.0.ebuild:
   ia64/sparc stable wrt #286785
