@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.47-r1.ebuild,v 1.3 2009/09/27 03:47:10 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.47-r1.ebuild,v 1.4 2009/10/16 18:14:57 bangert Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ RDEPEND="sys-apps/ethtool
 			)
 		)
 		hal? ( sys-apps/hal )
-		scsi? ( sys-apps/sdparm )"
+		scsi? ( sys-apps/sdparm )
+		sys-apps/hdparm"
 
 S="${WORKDIR}/${MY_P}"
 
