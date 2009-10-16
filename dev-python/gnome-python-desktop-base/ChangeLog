@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.19 2009/10/10 17:11:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.20 2009/10/16 21:54:37 maekke Exp $
+
+  16 Oct 2009; Markus Meier <maekke@gentoo.org>
+  gnome-python-desktop-base-2.26.0.ebuild:
+  x86 stable, bug #281427
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   gnome-python-desktop-base-2.26.0.ebuild:
