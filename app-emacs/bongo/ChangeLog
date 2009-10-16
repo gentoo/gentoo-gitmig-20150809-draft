@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/bongo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/ChangeLog,v 1.5 2009/10/08 22:31:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/ChangeLog,v 1.6 2009/10/16 17:48:46 ulm Exp $
+
+*bongo-20090713 (16 Oct 2009)
+
+  16 Oct 2009; Ulrich Mueller <ulm@gentoo.org> bongo-20070619-r2.ebuild,
+  +bongo-20090713.ebuild:
+  Version bump. Renamed distfile for bongo-mplayer.
 
   08 Oct 2009; Ulrich Mueller <ulm@gentoo.org> bongo-20070619-r2.ebuild:
   Define ELISP_TEXINFO and use eclass default for src_compile.

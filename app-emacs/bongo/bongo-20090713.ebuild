@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20070619-r2.ebuild,v 1.3 2009/10/16 17:48:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20090713.ebuild,v 1.1 2009/10/16 17:48:46 ulm Exp $
 
 NEED_EMACS=22
 
@@ -38,7 +38,7 @@ src_unpack() {
 	# We need Emacs 22 for image-load-path anyway, so don't bother with 21.
 	rm -f bongo-emacs21.el
 
-	epatch "${FILESDIR}/${P}-fix-require.patch"
+	epatch "${FILESDIR}/${PN}-20070619-fix-require.patch"
 }
 
 src_install() {

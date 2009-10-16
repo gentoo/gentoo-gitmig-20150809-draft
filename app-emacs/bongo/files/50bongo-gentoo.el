@@ -1,6 +1,3 @@
-
-;;; bongo site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (if (boundp 'image-load-path)
     (add-to-list 'image-load-path "@SITEETC@" t))
