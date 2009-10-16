@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnomeprint-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.19 2009/10/10 17:32:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.20 2009/10/16 23:26:15 maekke Exp $
+
+  16 Oct 2009; Markus Meier <maekke@gentoo.org>
+  libgnomeprint-python-2.26.0.ebuild:
+  x86 stable, bug #281427
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   libgnomeprint-python-2.26.0.ebuild:
