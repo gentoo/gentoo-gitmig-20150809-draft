@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.1 2009/10/16 13:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.2 2009/10/16 13:46:07 ssuominen Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Lightweight, robust, and efficient POSIX compliant regexp matching 
 HOMEPAGE="http://laurikari.net/tre/"
 SRC_URI="http://laurikari.net/tre/${P}.tar.bz2"
 
-LICENSE="LGPL-2.1"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls static-libs"
@@ -16,10 +16,8 @@ IUSE="nls static-libs"
 RDEPEND="!app-misc/glimpse
 	!app-text/agrep"
 DEPEND="${RDEPEND}
-	sys-apps/grep
-	sys-apps/sed
-	sys-devel/gettext
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
 src_configure() {
 	econf \
