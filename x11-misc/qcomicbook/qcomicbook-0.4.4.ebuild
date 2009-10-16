@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.4.4.ebuild,v 1.1 2009/09/30 23:23:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.4.4.ebuild,v 1.2 2009/10/16 18:22:15 ssuominen Exp $
 
 EAPI="2"
 inherit eutils qt4
@@ -11,7 +11,7 @@ SRC_URI="http://linux.bydg.org/~yogin/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui
