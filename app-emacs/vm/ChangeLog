@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/vm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.75 2009/10/15 14:10:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.76 2009/10/16 18:29:42 ulm Exp $
+
+*vm-8.0.12-r5 (16 Oct 2009)
+
+  16 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +vm-8.0.12-r5.ebuild,
+  +files/vm-8.0.12-charset-displayable.patch:
+  Fix display of UTF-8 encoded messages on tty.
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> vm-8.0.12-r4.ebuild:
   amd64/x86 stable, bug #288397
