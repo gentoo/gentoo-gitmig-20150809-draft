@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/yatex
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.22 2008/07/30 14:58:07 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.23 2009/10/16 08:47:55 ulm Exp $
+
+*yatex-1.74 (16 Oct 2009)
+
+  16 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +yatex-1.74.ebuild:
+  Version bump.
 
 *yatex-1.73 (30 Jul 2008)
 
