@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.44 2009/08/19 22:17:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.45 2009/10/16 22:05:03 ulm Exp $
+
+  16 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
+  qemacs-0.4.0_pre20080605-r1.ebuild:
+  Remove empty src_test, restrict test instead.
 
 *qemacs-0.4.0_pre20080605-r1 (19 Aug 2009)
 

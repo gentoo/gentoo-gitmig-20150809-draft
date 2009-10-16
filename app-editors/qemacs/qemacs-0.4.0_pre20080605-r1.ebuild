@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.4.0_pre20080605-r1.ebuild,v 1.1 2009/08/19 22:17:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.4.0_pre20080605-r1.ebuild,v 1.2 2009/10/16 22:05:03 ulm Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X png unicode xv"
-RESTRICT="strip"
+RESTRICT="strip test"
 
 DEPEND="X? ( x11-libs/libX11
 			x11-libs/libXext
@@ -52,15 +52,6 @@ src_compile() {
 		|| die "econf failed"
 	# Does not support parallel building
 	emake -j1 || die
-}
-
-src_test() {
-	# There are some files purporting to be tests in the tarball, however
-	# there is no defined way to use them and I imagine even if there was
-	# it would require user interaction.
-	# The toplevel Makefile calls the test target from the non-existant
-	# tests/Makefile, so just noop to stop errors if maketest is set.
-	:
 }
 
 src_install() {
