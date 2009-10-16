@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.2.ebuild,v 1.2 2009/04/08 07:52:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.2.ebuild,v 1.3 2009/10/16 02:41:10 markusle Exp $
 
 EAPI=1
 inherit eutils kde multilib
@@ -36,11 +36,12 @@ RDEPEND="media-gfx/pstoedit
 	R? ( dev-lang/R )"
 
 DEPEND="${RDEPEND}"
-PATCHES="${FILESDIR}/${PN}-1.6.0.1-linkexec.patch
-	${FILESDIR}/${PN}-1.6.0.1-desktop.patch
-	${FILESDIR}/${PN}-1.6.0.1-audiofile.patch
-	${FILESDIR}/${PN}-1.6.0.1-liborigin.patch
-	${FILESDIR}/${P}-gcc43.patch"
+PATCHES=("${FILESDIR}/${PN}-1.6.0.1-linkexec.patch"
+	"${FILESDIR}/${PN}-1.6.0.1-desktop.patch"
+	"${FILESDIR}/${PN}-1.6.0.1-audiofile.patch"
+	"${FILESDIR}/${PN}-1.6.0.1-liborigin.patch"
+	"${FILESDIR}/${P}-gcc43.patch"
+	"${FILESDIR}/${P}-gsl-units-fix.patch")
 
 need-kde 3.5
 
