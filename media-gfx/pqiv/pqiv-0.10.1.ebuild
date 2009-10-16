@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.9.ebuild,v 1.1 2009/05/06 10:32:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.10.1.ebuild,v 1.1 2009/10/16 17:21:18 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -19,15 +19,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
-	./configure --prefix=/usr --destdir="${D}" || die "./configure failed"
+	./configure --prefix=/usr --destdir="${D}" || die
 }
 
 src_compile() {
 	tc-export CC
-	emake || die "emake failed"
+	emake || die
 }
 
 src_install() {
-	emake install || die "emake install failed"
+	emake install || die
 	dodoc README
 }

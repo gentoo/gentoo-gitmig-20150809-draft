@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>graphics</herd>
-	<maintainer>
-		<email>phillip.berndt@googlemail.com</email>
-		<name>Phillip Berndt</name>
-		<description>Upstream. CC on bugzilla!</description>
-	</maintainer>
+  <herd>graphics</herd>
+  <maintainer>
+    <email>phillip.berndt@googlemail.com</email>
+    <name>Phillip Berndt</name>
+    <description>Upstream - please CC him on valid bugs</description>
+  </maintainer>
 </pkgmetadata>
