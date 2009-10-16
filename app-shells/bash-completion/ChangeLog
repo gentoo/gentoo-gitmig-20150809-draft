@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.193 2009/10/15 13:52:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.194 2009/10/16 01:43:14 darkside Exp $
+
+*bash-completion-1.1-r1 (16 Oct 2009)
+
+  16 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.1.ebuild, +bash-completion-1.1-r1.ebuild,
+  files/bash-completion.sh:
+  Fix my previous screwup. The base module exists again and hopefully works,
+  bug 289240
 
 *bash-completion-1.1 (15 Oct 2009)
 

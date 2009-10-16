@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1.ebuild,v 1.1 2009/10/15 13:52:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r1.ebuild,v 1.1 2009/10/16 01:43:14 darkside Exp $
 
 EAPI="2"
 
@@ -30,8 +30,16 @@ src_install() {
 	mv "${D}"/etc/bash_completion.d/* "${D}/usr/share/bash-completion/" \
 		|| die "installation failed to move files"
 	rm -r "${D}"/etc/bash_completion.d || die "rm failed"
-	mv "${D}"/etc/bash_completion \
-		"${D}/usr/share/bash-completion/.bash-completion" || die "mv failed"
+	awk -v D="$D" '
+	BEGIN { out=".pre" }
+	/^# A lot of the following one-liners/ { out="base" }
+	/^# start of section containing completion functions called by other functions/ { out=".pre" }
+	/^# start of section containing completion functions for external programs/ { out="base" }
+	/^# source completion directory/ { out="" }
+	/^unset -f have/ { out=".post" }
+	out != "" { print > D"/usr/share/bash-completion/"out }' \
+	bash_completion || die "failed to split bash_completion"
+
 	dodoc AUTHORS README TODO || die "dodocs failes"
 }
 
