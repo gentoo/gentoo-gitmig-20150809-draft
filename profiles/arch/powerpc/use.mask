@@ -162,3 +162,6 @@ ofx
 # Doug Goldstein <cardoe@gentoo.org> (3 Apr 2008)
 # nvidia-drivers specific feature which don't exist for ppc
 opengl-xvmc
+
+# Intel Integrated Primitive (sci-libs/ipp) support
+ipp
