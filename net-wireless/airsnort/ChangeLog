@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airsnort
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.26 2008/03/12 16:04:57 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.27 2009/10/16 12:41:52 bangert Exp $
+
+  16 Oct 2009; Thilo Bangert <bangert@gentoo.org> airsnort-0.2.7e.ebuild:
+  einfo -> elog
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.

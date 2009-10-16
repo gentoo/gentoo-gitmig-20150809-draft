@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.7e.ebuild,v 1.5 2006/10/23 19:22:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.7e.ebuild,v 1.6 2009/10/16 12:41:52 bangert Exp $
 
 DESCRIPTION="802.11b Wireless Packet Sniffer/WEP Cracker"
 HOMEPAGE="http://airsnort.shmoo.com/"
@@ -22,9 +22,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Make sure to emerge linux-wlan-ng if you want support"
-	einfo "for Prism2 based cards in airsnort."
+	elog "Make sure to emerge linux-wlan-ng if you want support"
+	elog "for Prism2 based cards in airsnort."
 
-	einfo "Make sure to emerge orinoco if you want support"
-	einfo "for Orinoco based cards in airsnort."
+	elog "Make sure to emerge orinoco if you want support"
+	elog "for Orinoco based cards in airsnort."
 }
