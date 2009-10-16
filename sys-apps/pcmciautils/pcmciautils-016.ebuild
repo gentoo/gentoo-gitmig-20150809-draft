@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-015.ebuild,v 1.3 2009/10/16 19:19:38 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-016.ebuild,v 1.1 2009/10/16 19:19:38 bangert Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
 IUSE="debug static staticsocket"
 
-RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
+RDEPEND=">=sys-fs/sysfsutils-1.3.0
 	>=sys-apps/module-init-tools-3.2_pre4"
 DEPEND="${RDEPEND}
 	dev-util/yacc

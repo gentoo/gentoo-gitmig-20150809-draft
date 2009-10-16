@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcmciautils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.35 2008/09/01 05:12:28 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.36 2009/10/16 19:19:38 bangert Exp $
+
+*pcmciautils-016 (16 Oct 2009)
+
+  16 Oct 2009; Thilo Bangert <bangert@gentoo.org> pcmciautils-014-r1.ebuild,
+  pcmciautils-015.ebuild, +pcmciautils-016.ebuild:
+  needs yacc (bug #239422) - version bump fixes bug #255317
 
 *pcmciautils-015 (01 Sep 2008)
 

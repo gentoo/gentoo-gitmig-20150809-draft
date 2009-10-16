@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-014-r1.ebuild,v 1.8 2008/06/03 02:29:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-014-r1.ebuild,v 1.9 2009/10/16 19:19:38 bangert Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -17,7 +17,7 @@ IUSE="debug static staticsocket"
 RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
 	>=sys-apps/module-init-tools-3.2_pre4"
 DEPEND="${RDEPEND}
-	|| ( dev-util/yacc sys-devel/bison )
+	dev-util/yacc
 	sys-devel/flex
 	sys-apps/sed"
 
