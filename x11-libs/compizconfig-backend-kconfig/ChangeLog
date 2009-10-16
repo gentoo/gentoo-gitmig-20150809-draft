@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/compizconfig-backend-kconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.14 2009/10/15 21:20:43 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.15 2009/10/16 18:22:24 zmedico Exp $
+
+  16 Oct 2009; Zac Medico <zmedico@gentoo.org>
+  compizconfig-backend-kconfig-0.8.2.ebuild,
+  compizconfig-backend-kconfig-0.8.4.ebuild:
+  Bug #248293 - Use need-kde instead of NEED_KDE.
 
 *compizconfig-backend-kconfig-0.8.4 (15 Oct 2009)
 

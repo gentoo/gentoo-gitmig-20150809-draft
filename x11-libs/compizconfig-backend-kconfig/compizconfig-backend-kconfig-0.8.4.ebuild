@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.4.ebuild,v 1.1 2009/10/15 21:20:43 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.4.ebuild,v 1.2 2009/10/16 18:22:24 zmedico Exp $
 
 ARTS_REQUIRED="never"
-NEED_KDE="3.5"
 
 inherit kde
+need-kde 3.5
 
 DESCRIPTION="Compizconfig Kconfig Backend"
 HOMEPAGE="http://www.compiz.org/"
