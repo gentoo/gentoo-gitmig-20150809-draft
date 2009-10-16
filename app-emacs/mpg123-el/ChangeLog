@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mpg123-el
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.20 2009/06/03 17:08:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.21 2009/10/16 21:40:58 ulm Exp $
+
+*mpg123-el-1.52 (16 Oct 2009)
+
+  16 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +mpg123-el-1.52.ebuild:
+  Version bump.
 
   03 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   -mpg123-el-1.50.ebuild:
