@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.1-r1.ebuild,v 1.2 2009/09/22 19:33:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.4.ebuild,v 1.1 2009/10/16 08:14:30 arfrever Exp $
 
 EAPI="2"
+NEED_PYTHON="2.5"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
@@ -19,17 +20,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples"
 
 DEPEND=""
-RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/elementtree )"
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
-RESTRICT_PYTHON_ABIS="3*"
-
-PYTHON_MODNAME="atom gdata"
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
-	distutils_src_prepare
-	epatch "${FILESDIR}/${PN}-2.0.2-fix_tests.patch"
-}
+PYTHON_MODNAME="atom gdata"
 
 src_test() {
 	testing() {
