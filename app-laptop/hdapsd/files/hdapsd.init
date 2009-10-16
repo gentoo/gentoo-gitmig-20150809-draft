@@ -12,6 +12,12 @@ checkconfig() {
 	return 1
     fi
 
+    if [ ! -f /dev/${DISK} ]; then
+	eerror "Could not find disk /dev/${DISK}!"
+	eerror "Adjust teh DISK setting in /etc/conf.d/hdapsd"
+	return 1
+    fi
+
     if [[ ! -e /sys/block/${DISK}/queue/protect ]] && [[ ! -e /sys/block/${DISK}/device/unload_heads ]] ; then
 	eerror "No protect entry for ${DISK}!"
 	eerror "Make sure your kernel is patched with the blk_freeze patch"
