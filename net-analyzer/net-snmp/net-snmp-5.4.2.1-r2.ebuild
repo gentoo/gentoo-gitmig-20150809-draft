@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1.ebuild,v 1.8 2009/01/01 17:37:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r2.ebuild,v 1.1 2009/10/16 08:51:06 gengor Exp $
+
+EAPI=2
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -10,10 +12,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="diskio doc elf ipv6 lm_sensors mfd-rewrites minimal perl python rpm selinux smux ssl tcpd X sendmail extensible"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="bzip2 diskio doc elf extensible ipv6 kernel_linux lm_sensors mfd-rewrites minimal perl python rpm selinux sendmail smux ssl tcpd X zlib"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
+COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	rpm? (
 		app-arch/rpm
@@ -21,11 +23,15 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
 		app-arch/bzip2
 		>=sys-libs/zlib-1.1.4
 	)
+	bzip2? ( app-arch/bzip2 )
+	zlib? ( >=sys-libs/zlib-1.1.4 )
 	elf? ( dev-libs/elfutils )
-	lm_sensors? ( =sys-apps/lm_sensors-2* )
+	lm_sensors? (
+		kernel_linux? ( sys-apps/lm_sensors )
+	)
 	python? ( dev-python/setuptools )"
 
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON}
 	perl? (
 		X? ( dev-perl/perl-tk )
 		!minimal? ( dev-perl/TermReadKey )
@@ -33,14 +39,20 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-snmpd )"
 
 # Dependency on autoconf due to bug #225893
-DEPEND="${DEPEND}
+DEPEND="${COMMON}
 	>=sys-devel/autoconf-2.61-r2
 	>=sys-apps/sed-4
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# Fix CVE-2008-6123
+	epatch "${FILESDIR}"/CVE-2008-6123.patch
+
+	# lm_sensors-3 support
+	if use lm_sensors ; then
+		epatch "${FILESDIR}"/${PN}-5.4.1-sensors3.patch \
+			"${FILESDIR}"/${PN}-5.4.1-sensors3-version_detect.patch
+	fi
 
 	# fix access violation in make check
 	sed -i -e 's/\(snmpd.*\)-Lf/\1-l/' testing/eval_tools.sh || \
@@ -52,8 +64,9 @@ src_unpack() {
 	if use python ; then
 		python_version
 		PYTHON_MODNAME="netsnmp"
-		PYTHON_DIR=/usr/$(get_libdir)/python${PYVER}/site-packages
-		sed -i -e "s:\(install --basedir=\$\$dir\):\1 --root='${D}':" Makefile.in || die "sed python failed"
+		PYTHON_DIR="/usr/$(get_libdir)/python${PYVER}/site-packages"
+		sed -i -e "s:\(install --basedir=\$\$dir\):\1 --root='${D}':" Makefile.in || \
+			die "sed python failed"
 	fi
 
 	# snmpconf generates config files with proper selinux context
@@ -67,17 +80,35 @@ src_unpack() {
 	ht_fix_all
 }
 
-src_compile() {
-	local mibs
-
+src_configure() {
 	strip-flags
 
-	mibs="host ucd-snmp/dlmod"
-	use smux && mibs="${mibs} smux"
-	use sendmail && mibs="${mibs} mibII/mta_sendmail"
-	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
+	local mibs="host ucd-snmp/dlmod"
 	use diskio && mibs="${mibs} ucd-snmp/diskio"
 	use extensible && mibs="${mibs} ucd-snmp/extensible"
+	use lm_sensors && mibs="${mibs} ucd-snmp/lmsensorsMib"
+	use sendmail && mibs="${mibs} mibII/mta_sendmail"
+	use smux && mibs="${mibs} smux"
+
+	local myconf="$(use_enable ipv6) \
+			$(use_enable mfd-rewrites) \
+			$(use_enable perl embedded-perl) \
+			$(use_enable !ssl internal-md5) \
+			$(use_with elf) \
+			$(use_with perl perl-modules) \
+			$(use_with python python-modules) \
+			$(use_with ssl openssl) \
+			$(use_with tcpd libwrap)"
+	if use rpm ; then
+		myconf="${myconf} \
+			--with-rpm \
+			--with-bzip2 \
+			--with-zlib"
+	else
+		myconf="${myconf} \
+			$(use_with bzip2) \
+			$(use_with zlib)"
+	fi
 
 	econf \
 		--with-install-prefix="${D}" \
@@ -90,28 +121,11 @@ src_compile() {
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--enable-as-needed \
-		$(use_enable mfd-rewrites) \
-		$(use_enable perl embedded-perl) \
-		$(use_enable ipv6) \
-		$(use_enable !ssl internal-md5) \
-		$(use_with ssl openssl) \
-		$(use_with tcpd libwrap) \
-		$(use_with rpm) \
-		$(use_with rpm bzip2) \
-		$(use_with rpm zlib) \
-		$(use_with elf) \
-		$(use_with python python-modules) \
-		|| die "econf failed"
+		${myconf}
+}
 
+src_compile() {
 	emake -j1 || die "emake failed"
-
-	if use perl ; then
-		emake perlmodules || die "compile perl modules problem"
-	fi
-
-	if use python ; then
-		emake pythonmodules || die "compile python modules problem"
-	fi
 
 	if use doc ; then
 		einfo "Building HTML Documentation"
@@ -135,35 +149,29 @@ src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	if use perl ; then
-		make DESTDIR="${D}" perlinstall || die "make perlinstall failed"
 		fixlocalpod
-
-		use X || rm -f "${D}/usr/bin/tkmib"
+		use X || rm -f "${D}"/usr/bin/tkmib
 	else
-		rm -f "${D}/usr/bin/mib2c" "${D}/usr/bin/tkmib" "${D}/usr/bin/snmpcheck"
+		rm -f "${D}"/usr/bin/mib2c "${D}"/usr/bin/snmpcheck "${D}"/usr/bin/tkmib
 	fi
 
-	if use python ; then
-		mkdir -p "${D}/${PYTHON_DIR}" || die "Couldn't make $PYTHON_DIR"
-		make pythoninstall || die "make pythoninstall failed"
-	fi
+	dodoc AGENT.txt ChangeLog FAQ INSTALL NEWS PORTING README* TODO || die
+	newdoc EXAMPLE.conf.def EXAMPLE.conf || die
 
-	dodoc AGENT.txt ChangeLog FAQ INSTALL NEWS PORTING README* TODO
-	newdoc EXAMPLE.conf.def EXAMPLE.conf
-
-	use doc && dohtml docs/html/*
+	use doc && { dohtml docs/html/* || die ; }
 
 	keepdir /etc/snmp /var/lib/net-snmp
 
-	newinitd "${FILESDIR}"/snmpd.rc7 snmpd
-	newconfd "${FILESDIR}"/snmpd.conf snmpd
+	newinitd "${FILESDIR}"/snmpd.init snmpd || die
+	newconfd "${FILESDIR}"/snmpd.conf snmpd || die
 
-	newinitd "${FILESDIR}"/snmptrapd.rc7 snmptrapd
-	newconfd "${FILESDIR}"/snmptrapd.conf snmptrapd
+	newinitd "${FILESDIR}"/snmptrapd.init snmptrapd || die
+	newconfd "${FILESDIR}"/snmptrapd.conf snmptrapd || die
 
-	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
+	# Remove everything not required for an agent.
+	# Keep only the snmpd, snmptrapd, MIBs, headers and libraries.
 	if use minimal; then
-		elog "USE=minimal is set. Cleaning up excess cruft for a embedded/minimal/server only install."
+		elog "USE='minimal' is set. Removing excess/non-minimal components."
 		rm -rf
 		"${D}"/usr/bin/{encode_keychange,snmp{get,getnext,set,usm,walk,bulkwalk,table,trap,bulkget,translate,status,delta,test,df,vacm,netstat,inform,snmpcheck}}
 		rm -rf "${D}"/usr/share/snmp/snmpconf-data "${D}"/usr/share/snmp/*.conf
@@ -174,13 +182,11 @@ src_install () {
 
 	# bug 113788, install example config
 	insinto /etc/snmp
-	newins "${S}"/EXAMPLE.conf snmpd.conf.example
+	newins "${S}"/EXAMPLE.conf snmpd.conf.example || die
 }
 
 pkg_postrm() {
-	if use python ; then
-		python_mod_cleanup
-	fi
+	use python && python_mod_cleanup
 }
 
 pkg_postinst() {

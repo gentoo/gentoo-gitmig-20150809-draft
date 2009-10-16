@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.199 2009/07/27 22:09:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.200 2009/10/16 08:51:06 gengor Exp $
+
+*net-snmp-5.4.2.1-r2 (16 Oct 2009)
+
+  16 Oct 2009; Gordon Malm <gengor@gentoo.org>
+  +files/net-snmp-5.4.1-sensors3-version_detect.patch,
+  +files/net-snmp-5.4.1-sensors3.patch, -net-snmp-5.4.2.1.ebuild,
+  net-snmp-5.4.2.1-r1.ebuild, +net-snmp-5.4.2.1-r2.ebuild,
+  +files/snmpd.init, -files/snmpd.rc7, +files/snmptrapd.init,
+  -files/snmptrapd.rc7:
+  Minor revamp, add lm_sensors-3 support for bug #279423. Remove
+  old/vulnerable version.
 
   27 Jul 2009; Markus Meier <maekke@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
   amd64 stable, bug #250429

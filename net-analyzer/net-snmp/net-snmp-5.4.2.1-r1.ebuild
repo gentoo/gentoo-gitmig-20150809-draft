@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r1.ebuild,v 1.8 2009/07/27 22:09:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r1.ebuild,v 1.9 2009/10/16 08:51:06 gengor Exp $
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -158,10 +158,10 @@ src_install () {
 
 	keepdir /etc/snmp /var/lib/net-snmp
 
-	newinitd "${FILESDIR}"/snmpd.rc7 snmpd
+	newinitd "${FILESDIR}"/snmpd.init snmpd
 	newconfd "${FILESDIR}"/snmpd.conf snmpd
 
-	newinitd "${FILESDIR}"/snmptrapd.rc7 snmptrapd
+	newinitd "${FILESDIR}"/snmptrapd.init snmptrapd
 	newconfd "${FILESDIR}"/snmptrapd.conf snmptrapd
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
