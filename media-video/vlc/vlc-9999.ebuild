@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.42 2009/10/10 12:58:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.43 2009/10/16 12:20:16 aballier Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc139
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image seamonkey shine shout skins speex sse stream
-	svg svga taglib theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm
+	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vcdinfo vcdx vlm
 	vorbis win32codecs wma-fixed X x264 xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -137,6 +137,7 @@ RDEPEND="
 		truetype? ( media-libs/freetype
 			media-fonts/dejavu )
 		twolame? ( media-sound/twolame )
+		udev? ( sys-fs/udev )
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
 		vcdinfo? ( >=media-video/vcdimager-0.7.22 )
@@ -336,6 +337,7 @@ src_configure() {
 		$(use_enable theora) \
 		$(use_enable truetype freetype) \
 		$(use_enable twolame) \
+		$(use_enable udev) \
 		$(use_enable upnp) \
 		$(use_enable v4l) \
 		$(use_enable v4l2) \

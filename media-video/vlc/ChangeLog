@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.518 2009/10/10 12:58:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.519 2009/10/16 12:20:16 aballier Exp $
+
+  16 Oct 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild,
+  metadata.xml:
+  Add udev useflag
 
   10 Oct 2009; Patrick Lauer <patrick@gentoo.org> vlc-1.0.9999.ebuild,
   vlc-9999.ebuild:
