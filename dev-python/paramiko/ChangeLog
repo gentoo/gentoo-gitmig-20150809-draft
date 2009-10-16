@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.42 2009/10/15 13:37:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.43 2009/10/16 13:56:36 jer Exp $
+
+  16 Oct 2009; Jeroen Roovers <jer@gentoo.org> paramiko-1.7.5.ebuild:
+  Stable for HPPA (bug #288122).
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> paramiko-1.7.5.ebuild:
   amd64/x86 stable, bug #288122
