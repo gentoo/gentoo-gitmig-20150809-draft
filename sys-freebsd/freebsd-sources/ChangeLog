@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.50 2009/06/26 05:50:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.51 2009/10/16 13:05:27 aballier Exp $
+
+*freebsd-sources-7.2-r2 (16 Oct 2009)
+
+  16 Oct 2009; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-sources-7.2-r2.ebuild, +files/freebsd-sources-7.2-devfs7.patch,
+  +files/freebsd-sources-7.2-null.patch:
+  Add patches for latest fbsd sec. advisory and errata.
 
 *freebsd-sources-7.2-r1 (26 Jun 2009)
 
