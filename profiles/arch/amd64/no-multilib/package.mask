@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.52 2009/10/14 19:57:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.53 2009/10/16 18:04:10 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -201,7 +201,6 @@ www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
 www-plugins/nspluginwrapper
 x11-misc/googleearth
-x11-misc/qcomicbook
 
 # AMD64 Team; <amd64@gentoo.org>
 # grub is not available on no-multilib-profiles; use sys-boot/grub-static
