@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.2.ebuild,v 1.3 2009/10/16 02:41:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.2.ebuild,v 1.4 2009/10/16 02:49:03 markusle Exp $
 
 EAPI=1
-inherit eutils kde multilib
+inherit eutils kde multilib flag-o-matic
 
 MY_P="LabPlot-${PV}"
 
@@ -71,6 +71,9 @@ src_compile() {
 	export QWT3D_PATH="/usr"
 	export KEXIDB_DIR="/usr"
 	use R && export R_HOME=/usr/$(get_libdir)/R
+
+	# need to enable hdf-1.6 API
+	use hdf5 && append-flags -DH5_USE_16_API
 
 	# reasons for disabling options:
 	# - fftw is fftw2, so we prefer fftw3

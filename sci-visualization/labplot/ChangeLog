@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/labplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.25 2009/10/16 02:41:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/ChangeLog,v 1.26 2009/10/16 02:49:03 markusle Exp $
+
+  16 Oct 2009; Markus Dittrich <markusle@gentoo.org> labplot-1.6.0.2.ebuild:
+  Enable legacy API for hdf5 until upstream has caught up (#289172).
 
   16 Oct 2009; Markus Dittrich <markusle@gentoo.org> labplot-1.6.0.2.ebuild,
   +files/labplot-1.6.0.2-gsl-units-fix.patch:
