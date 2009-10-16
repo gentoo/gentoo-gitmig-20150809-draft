@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.180 2009/10/16 19:27:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.181 2009/10/16 23:55:20 maekke Exp $
+
+  16 Oct 2009; Markus Meier <maekke@gentoo.org> gnome-utils-2.26.0.ebuild:
+  x86 stable, bug #281427
 
   16 Oct 2009; Mart Raudsepp <leio@gentoo.org> gnome-utils-2.26.0.ebuild:
   QA: Fix typo in gnome2_src_prepare call, bug 289354
