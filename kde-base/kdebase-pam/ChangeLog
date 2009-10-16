@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.42 2009/07/08 13:37:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.43 2009/10/16 04:37:23 abcd Exp $
+
+  16 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kdebase-pam-4.ebuild,
+  -files/kde.pam-6, -kdebase-pam-6.ebuild, kdebase-pam-7.ebuild,
+  -files/kde.pam, -files/kde-np.pam:
+  Drop old versions; drop to ~mips to stop repoman from complaining
 
   08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Add ~mips keywords
