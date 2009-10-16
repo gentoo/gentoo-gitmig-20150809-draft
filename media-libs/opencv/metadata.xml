@@ -13,5 +13,9 @@ Face Recognition; Gesture Recognition; Motion Tracking, Ego Motion, Motion Under
 </longdescription>
 <use>
   <flag name="demos">Install applications that demo OpenCV library functions</flag>
+  <flag name="ipp">Enable Intel Integrated Primitive support</flag>
+  <flag name="octave">Enable octave support</flag>
+  <flag name="sse3">Enable optimization for SSE3 capable chips</flag>
+  <flag name="deprecated">Enable deprecated (old) python support</flag>
 </use>
 </pkgmetadata>
