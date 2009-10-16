@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/ocsigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.27 2009/10/13 06:57:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.28 2009/10/16 11:43:25 aballier Exp $
+
+  16 Oct 2009; Alexis Ballier <aballier@gentoo.org> -ocsigen-1.2.0.ebuild,
+  -files/ocsigen-1.2.0-pcre-ocaml-6.0.0.patch:
+  remove old
 
 *ocsigen-1.2.1 (13 Oct 2009)
 
