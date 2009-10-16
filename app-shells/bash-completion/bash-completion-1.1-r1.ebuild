@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r1.ebuild,v 1.1 2009/10/16 01:43:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r1.ebuild,v 1.2 2009/10/16 02:34:31 darkside Exp $
 
 EAPI="2"
 
@@ -44,9 +44,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "There is no more base module. It is always enabled due to"
-	ewarn "number of false bugs and ease of maintainership. Please remove"
-	ewarn "the base module symlinks that you have."
 	elog "Any user can enable the module completions without editing their"
 	elog ".bashrc by running:"
 	elog
@@ -56,7 +53,8 @@ pkg_postinst() {
 	elog
 	elog "    eselect bashcomp enable --global <module>"
 	elog
-	elog "Additional completion modules can be found by running"
+	elog "Make sure you at least enable the base module! Additional completion"
+	elog "modules can be found by running"
 	elog
 	elog "    eselect bashcomp list"
 	elog
