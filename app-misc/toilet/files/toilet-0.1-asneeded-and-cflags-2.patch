@@ -1,6 +1,6 @@
 diff -ur toilet-0.1.orig/configure.ac toilet-0.1/configure.ac
 --- toilet-0.1.orig/configure.ac	2006-11-16 02:26:50.000000000 +0200
-+++ toilet-0.1/configure.ac	2007-08-12 01:00:20.000000000 +0300
++++ toilet-0.1/configure.ac	2009-10-16 20:08:10.000000000 +0300
 @@ -67,7 +67,7 @@
  AC_DEFINE_UNQUOTED(DATE, "$ac_build_date", [Define the version date])
  
@@ -12,11 +12,25 @@ diff -ur toilet-0.1.orig/configure.ac toilet-0.1/configure.ac
  
 diff -ur toilet-0.1.orig/src/Makefile.am toilet-0.1/src/Makefile.am
 --- toilet-0.1.orig/src/Makefile.am	2006-11-10 12:47:29.000000000 +0200
-+++ toilet-0.1/src/Makefile.am	2007-08-12 01:02:15.000000000 +0300
-@@ -9,5 +9,4 @@
++++ toilet-0.1/src/Makefile.am	2009-10-16 20:08:10.000000000 +0300
+@@ -8,6 +8,6 @@
+ 	export.c export.h \
  	term.c figlet.c
  toilet_CPPFLAGS = -DFONTDIR=\"$(datadir)/figlet\"
- toilet_CFLAGS = `pkg-config --cflags cucul`
+-toilet_CFLAGS = `pkg-config --cflags cucul`
 -toilet_LDFLAGS = `pkg-config --libs cucul` @GETOPT_LIBS@ @ZLIB_LIBS@
--
-+toilet_LDADD = -lcaca @GETOPT_LIBS@ @ZLIB_LIBS@
++toilet_CFLAGS = @cucul_CFLAGS@
++toilet_LDADD = @cucul_LIBS@ @GETOPT_LIBS@ @ZLIB_LIBS@
+ 
+diff -ur toilet-0.1.orig/tools/Makefile.am toilet-0.1/tools/Makefile.am
+--- toilet-0.1.orig/tools/Makefile.am	2006-11-06 02:02:07.000000000 +0200
++++ toilet-0.1/tools/Makefile.am	2009-10-16 20:08:10.000000000 +0300
+@@ -3,6 +3,6 @@
+ noinst_PROGRAMS = caca2tlf
+ 
+ caca2tlf_SOURCES = caca2tlf.c
+-caca2tlf_CFLAGS = `pkg-config --cflags cucul`
+-caca2tlf_LDFLAGS = `pkg-config --libs cucul`
++caca2tlf_CFLAGS = @cucul_CFLAGS@
++caca2tlf_LDADD = @cucul_LIBS@
+ 
