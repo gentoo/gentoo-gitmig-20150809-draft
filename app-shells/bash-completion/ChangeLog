@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.195 2009/10/16 02:34:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.196 2009/10/16 03:01:09 darkside Exp $
+
+*bash-completion-1.1-r2 (16 Oct 2009)
+
+  16 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.1-r1.ebuild, +bash-completion-1.1-r2.ebuild,
+  files/bash-completion.sh:
+  revbump for another init script ommision, forgot to source
+  ~/.bash_completion.d/base. Add Gentoo Prefix compatibility to ebuild
 
   16 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
   bash-completion-1.1-r1.ebuild:

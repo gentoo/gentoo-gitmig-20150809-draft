@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r1.ebuild,v 1.2 2009/10/16 02:34:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r2.ebuild,v 1.1 2009/10/16 03:01:09 darkside Exp $
 
 EAPI="2"
+inherit prefix
 
 DESCRIPTION="Programmable Completion for bash"
 HOMEPAGE="http://bash-completion.alioth.debian.org/"
@@ -10,7 +11,7 @@ SRC_URI="http://bash-completion.alioth.debian.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
@@ -19,18 +20,23 @@ RDEPEND="app-admin/eselect
 	sys-apps/miscfiles"
 PDEPEND="app-shells/gentoo-bashcomp"
 
+src_prepare() {
+	cp "${FILESDIR}/bash-completion.sh" "${T}" || die
+	eprefixify "${T}/bash-completion.sh"
+}
+
 src_install() {
+	use prefix || local ED=${D}
 	emake DESTDIR="${D}" install || die
 
 	dodir /etc/profile.d
-	cp "${FILESDIR}/bash-completion.sh" \
-		"${D}/etc/profile.d/bash-completion.sh" || die "cp failed"
+	cp "${T}/bash-completion.sh" \
+		"${ED}/etc/profile.d/bash-completion.sh" || die "cp failed"
 
 	dodir /usr/share/bash-completion
-	mv "${D}"/etc/bash_completion.d/* "${D}/usr/share/bash-completion/" \
+	mv "${ED}"/etc/bash_completion.d/* "${ED}/usr/share/bash-completion/" \
 		|| die "installation failed to move files"
-	rm -r "${D}"/etc/bash_completion.d || die "rm failed"
-	awk -v D="$D" '
+	awk -v D="$ED" '
 	BEGIN { out=".pre" }
 	/^# A lot of the following one-liners/ { out="base" }
 	/^# start of section containing completion functions called by other functions/ { out=".pre" }
@@ -39,6 +45,9 @@ src_install() {
 	/^unset -f have/ { out=".post" }
 	out != "" { print > D"/usr/share/bash-completion/"out }' \
 	bash_completion || die "failed to split bash_completion"
+
+	# clean up
+	rm -r "${ED}"/etc/bash_completion{,.d} || die "rm failed"
 
 	dodoc AUTHORS README TODO || die "dodocs failes"
 }
