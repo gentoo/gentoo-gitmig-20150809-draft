@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.68.0_alpha3.ebuild,v 1.1 2009/10/16 09:07:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.68.0_alpha3.ebuild,v 1.2 2009/10/16 09:10:41 ssuominen Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
@@ -14,8 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dvd emovix encode ffmpeg flac mad lame musicbrainz
-policykit sndfile sox taglib vcd vorbis +wav"
+IUSE="debug dvd emovix encode ffmpeg flac mad lame musicbrainz sndfile sox taglib vcd vorbis +wav"
 
 DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	media-libs/libsamplerate
@@ -28,8 +27,7 @@ DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	musicbrainz? ( media-libs/musicbrainz:1 )
 	sndfile? ( media-libs/libsndfile )
 	taglib? ( >=media-libs/taglib-1.5 )
-	vorbis? ( media-libs/libvorbis )
-	policykit? ( sys-auth/policykit-qt )"
+	vorbis? ( media-libs/libvorbis )"
 RDEPEND="${DEPEND}
 	app-cdr/cdrdao
 	media-sound/cdparanoia
@@ -62,7 +60,7 @@ src_configure() {
 		$(cmake-utils_use sndfile K3B_BUILD_SNDFILE_DECODER_PLUGIN)
 		$(cmake-utils_use wav K3B_BUILD_WAVE_DECODER_PLUGIN)
 		$(cmake-utils_use encode K3B_BUILD_EXTERNAL_ENCODER_PLUGIN)
-		$(cmake-utils_use_with policykit PolkitQt)"
+		-DWITH_PolkitQt=OFF"
 
 	if use encode; then
 		mycmakeargs="${mycmakeargs}
