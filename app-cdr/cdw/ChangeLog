@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.25 2009/09/28 14:53:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.26 2009/10/16 19:53:16 mr_bones_ Exp $
+
+  16 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> cdw-0.3.93.ebuild,
+  +files/cdw-0.3.93-asneeded.patch:
+  patch to build with --asneeded from Kacper Kowalik via bug #272575
 
   28 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> cdw-0.3.93.ebuild:
   Build fix from Arseny Solokha (bug #286720)

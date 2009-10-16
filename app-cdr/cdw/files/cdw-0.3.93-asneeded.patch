@@ -1,0 +1,22 @@
+--- cdw.orig/src/Makefile.am	2009-08-09 20:02:12.000000000 +0200
++++ cdw/src/Makefile.am	2009-10-16 19:12:55.669768307 +0200
+@@ -35,7 +35,6 @@
+ 		-Wstrict-prototypes
+ 
+ # AM_CFLAGS = -pedantic -Wall -Wextra -Wformat-security -Wswitch-default -Wshadow -Wno-declaration-after-statement -Wno-long-long 
+-AM_LDFLAGS = -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio
+ 
+ 
+ # this lists the binaries to produce
+@@ -65,9 +64,11 @@
+ 
+ # this should include all source files except *_tests.c
+ cdw_SOURCES = $(cdw_base_sources) $(cdw_base_main) 
++cdw_LDADD = -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -lm
+ 
+ # this should include all source files except main.c
+ cdw_tests_SOURCES = $(cdw_base_sources) $(cdw_test_sources) $(cdw_test_main)
++cdw_tests_LDADD = -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -lm
+ 
+ # all header files
+ noinst_HEADERS = blank_wizard.h cdda2wav.h cddb.h cdrecord_interface.h \
