@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10593 2009/10/16 08:55:54 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10594 2009/10/16 10:45:42 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1057,6 +1057,7 @@ dev-util/w32api
 =www-client/opera-10.10_pre4632
 =www-client/opera-10.10_pre4644
 =www-client/opera-10.10_pre4665
+=www-client/opera-10.10_pre4678
 
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340
