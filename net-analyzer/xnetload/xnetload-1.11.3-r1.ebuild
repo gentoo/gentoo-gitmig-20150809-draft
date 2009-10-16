@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/xnetload-1.11.3-r1.ebuild,v 1.5 2007/07/22 08:09:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/xnetload-1.11.3-r1.ebuild,v 1.6 2009/10/16 16:35:12 tcunha Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xs4all.nl/~rsmith/software/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 DEPEND=">=x11-libs/libX11-1.0.0
 		>=x11-libs/libXmu-1.0.0

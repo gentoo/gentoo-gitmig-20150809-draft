@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/xnetload
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.15 2007/07/22 08:09:16 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.16 2009/10/16 16:35:12 tcunha Exp $
+
+  16 Oct 2009; Tiago Cunha <tcunha@gentoo.org> xnetload-1.11.3-r1.ebuild:
+  stable amd64/sparc, bug 288947
 
   22 Jul 2007; <pva@gentoo.org> xnetload-1.11.3-r1.ebuild:
   Removed virtual/x11 dependency.
