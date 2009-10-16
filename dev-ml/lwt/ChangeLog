@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lwt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.4 2009/10/13 06:47:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.5 2009/10/16 11:41:47 aballier Exp $
+
+*lwt-2.0.0 (16 Oct 2009)
+
+  16 Oct 2009; Alexis Ballier <aballier@gentoo.org> +lwt-2.0.0.ebuild:
+  bump to 2.0.0 final
 
 *lwt-2.0.0_rc1 (13 Oct 2009)
 
