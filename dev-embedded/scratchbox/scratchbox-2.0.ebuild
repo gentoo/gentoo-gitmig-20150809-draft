@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-2.0.ebuild,v 1.2 2009/10/16 16:55:51 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-2.0.ebuild,v 1.3 2009/10/16 17:23:16 ayoy Exp $
 
 EAPI="2"
 
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 MY_PN="${PN/cratch}2"
 MY_P="${MY_PN}-${PV}"
@@ -26,6 +26,12 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	sed -e "s/^\(CC = \).*/\1$(tc-getCC)/" \
+	    -e "s/^\(CXX = \).*/\1$(tc-getCXX)/" \
+	    -e "s/^\(LD = \).*/\1$(tc-getLD)/" \
+		-i Makefile || die "sed Makefile failed"
+
 	eautoreconf
 }
 
