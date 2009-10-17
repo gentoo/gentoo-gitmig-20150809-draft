@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.0.3.ebuild,v 1.1 2009/07/25 01:03:21 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.0.3.ebuild,v 1.2 2009/10/17 01:18:04 robbat2 Exp $
 
 EAPI=2
 
@@ -22,26 +22,10 @@ RDEPEND="${COMMON}
 		dev-lang/perl
 		virtual/logger"
 
-pkg_setup() {
-	linux-info_pkg_setup
-
-	if ! linux_chkconfig_present HWMON; then
-		eerror
-		eerror "${P} requires CONFIG_HWMON to be enabled."
-		eerror
-		die "CONFIG_HWMON not detected"
-	fi
-	if ! linux_chkconfig_present I2C_CHARDEV; then
-		ewarn
-		ewarn "sensors-detect requires CONFIG_I2C_CHARDEV to be enabled."
-		ewarn
-	fi
-	if ! linux_chkconfig_present I2C; then
-		ewarn
-		ewarn "${P} requires CONFIG_I2C to be enabled for most sensors."
-		ewarn
-	fi
-}
+CONFIG_CHECK="~HWMON ~I2C_CHARDEV ~I2C"
+WARNING_HWMON="${PN} requires CONFIG_HWMON to be enabled for use."
+WARNING_I2C_CHARDEV="sensors-detect requires CONFIG_I2C_CHARDEV to be enabled."
+WARNING_I2C="${PN} requires CONFIG_I2C to be enabled for most sensors."
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.3-sensors-detect-gentoo.patch

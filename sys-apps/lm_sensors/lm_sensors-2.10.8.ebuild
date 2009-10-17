@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.8.ebuild,v 1.1 2009/06/07 14:48:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.8.ebuild,v 1.2 2009/10/17 01:18:04 robbat2 Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -31,30 +31,39 @@ RDEPEND="${COMMON}
 pkg_setup() {
 	linux-info_pkg_setup
 
-	if kernel_is 2 4; then
+	if ! linux_config_src_exists; then
+		CONFIG_CHECK="I2C_SENSOR HWMON I2C CONFIG_I2C_CHARDEV"
+		ewarn "Unable to check for the following kernel config options due"
+		ewarn "to absence of any configured kernel sources or compiled"
+		ewarn "config:"
+		for config in ${CONFIG_CHECK}; do
+			ewarn " - ${config#\~}"
+		done
+		ewarn "You're on your own to make sure they are set if needed."
+	elif kernel_is 2 4; then
 		if use ppc || use amd64; then
 			eerror
 			eerror "${P} does not support kernel 2.4.x under PPC and AMD64."
 			eerror
-			die "${P} does not support kernel 2.4.x under PPC and AMD64."
+			eerror "${P} does not support kernel 2.4.x under PPC and AMD64."
 		elif ! has_version =sys-apps/lm_sensors-modules-${PV}; then
 			eerror
 			eerror "${P} needs sys-apps/lm_sensors-modules-${PV} to be installed"
 			eerror "for kernel 2.4.x"
 			eerror
-			die "sys-apps/lm_sensors-modules-${PV} not installed"
+			eerror "sys-apps/lm_sensors-modules-${PV} not installed"
 		fi
 	else
 		if kernel_is lt 2 6 14 && ! (linux_chkconfig_present I2C_SENSOR); then
 			eerror
 			eerror "${P} requires CONFIG_I2C_SENSOR to be enabled for non-2.4.x kernels."
 			eerror
-			die "CONFIG_I2C_SENSOR not detected"
+			ewarn "CONFIG_I2C_SENSOR not detected"
 		elif kernel_is gt 2 6 13 && ! (linux_chkconfig_present HWMON); then
 			eerror
 			eerror "${P} requires CONFIG_HWMON to be enabled for 2.6.14+ kernels."
 			eerror
-			die "CONFIG_HWMON not detected"
+			ewarn "CONFIG_HWMON not detected"
 		fi
 		if ! (linux_chkconfig_present I2C_CHARDEV); then
 			ewarn

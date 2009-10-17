@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.93 2009/07/25 01:03:21 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.94 2009/10/17 01:18:04 robbat2 Exp $
+
+  17 Oct 2009; Robin H. Johnson <robbat2@gentoo.org>
+  lm_sensors-2.10.8.ebuild, lm_sensors-3.0.2.ebuild,
+  lm_sensors-3.0.3.ebuild:
+  This package builds and runs perfectly without any kernel sources present,
+  the kernel checks are bogus. The user is responsible for their kernel
+  being sane if we cannot check it.
 
 *lm_sensors-3.0.3 (25 Jul 2009)
 
