@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/jp2a
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/ChangeLog,v 1.6 2008/01/09 21:27:34 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/ChangeLog,v 1.7 2009/10/17 11:40:18 chainsaw Exp $
+
+  17 Oct 2009; <chainsaw@gentoo.org> jp2a-1.0.6-r1.ebuild:
+  Marked stable on AMD64 as requested by Pierre in bug #286504. Tested using
+  tux.jpg from linuxadda with USE="curl".
 
   09 Jan 2008; Brent Baude <ranger@gentoo.org> jp2a-1.0.6-r1.ebuild:
   Marking  jp2a-1.0.6-r1 ~ppc64 per chainsaw's request
