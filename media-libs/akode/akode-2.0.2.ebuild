@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.2.ebuild,v 1.9 2008/05/24 16:07:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.2.ebuild,v 1.10 2009/10/17 12:08:00 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -8,14 +8,13 @@ WANT_AUTOCONF="2.5"
 inherit eutils autotools
 
 MY_P=${P/_beta/b}
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A simple framework to decode the most common audio formats."
 HOMEPAGE="http://www.carewolf.com/"
-#SRC_URI="http://www.carewolf.com/akode/${MY_P}.tar.gz"
 SRC_URI="http://www.kde-apps.org/CONTENT/content-files/30375-${P}.tar.bz2"
-LICENSE="LGPL-2"
 
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="alsa jack flac mp3 oss speex vorbis"
@@ -46,17 +45,17 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--with-libsamplerate
-				  $(use_with oss) $(use_with alsa) $(use_with jack)
-				  $(use_with flac) $(use_with mp3 libmad)
-				  $(use_with vorbis) $(use_with speex)
-				  --without-polypaudio
-				  --without-ffmpeg"
+		  $(use_with oss) $(use_with alsa) $(use_with jack)
+		  $(use_with flac) $(use_with mp3 libmad)
+		  $(use_with vorbis) $(use_with speex)
+		  --without-polypaudio
+		  --without-ffmpeg"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS NEWS README
 }
