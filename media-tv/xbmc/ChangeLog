@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.30 2009/10/17 10:48:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.31 2009/10/17 22:44:37 vapier Exp $
+
+  17 Oct 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Force libass-0.9.7+ #285328#10.
 
   17 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> xbmc-9999.ebuild:
   Remove libmpcdec (SV7) support.
