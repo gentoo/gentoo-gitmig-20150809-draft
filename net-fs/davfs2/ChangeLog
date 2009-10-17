@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/davfs2
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.41 2009/03/01 19:51:36 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.42 2009/10/17 02:23:13 arfrever Exp $
+
+  17 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  davfs2-1.3.3.ebuild:
+  Fix building with >=net-misc/neon-0.29.0 (bug #285243). Delete unused
+  USE flags.
 
   01 Mar 2009; Patrick Lauer <patrick@gentoo.org>
   +files/fortify_sources_fix.patch, davfs2-1.3.3.ebuild:

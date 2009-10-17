@@ -1,30 +1,34 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.3.3.ebuild,v 1.3 2009/03/05 16:05:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.3.3.ebuild,v 1.4 2009/10/17 02:23:13 arfrever Exp $
 
-inherit linux-mod eutils
+EAPI="2"
+
+inherit autotools eutils linux-mod
 
 DESCRIPTION="a Linux file system driver that allows you to mount a WebDAV server as a local disk drive. Davfs2 uses fuse (or coda) for kernel driver and neon for WebDAV interface"
-SRC_URI="mirror://sourceforge/dav/${P}.tar.gz"
 HOMEPAGE="http://dav.sourceforge.net"
+SRC_URI="mirror://sourceforge/dav/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="ssl debug socks5"
+IUSE="debug"
 RESTRICT="test"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
-		socks5? ( >=net-proxy/dante-1.1.13 )
-		dev-libs/libxml2
+DEPEND="dev-libs/libxml2
 		net-misc/neon
 		sys-libs/zlib"
-SLOT="0"
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+RDEPEND="${DEPEND}"
+
+src_prepare() {
 	epatch "${FILESDIR}/fortify_sources_fix.patch"
+
+	sed -e "s/^NE_REQUIRE_VERSIONS.*28/& 29 30/" -i configure.ac
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use debug; then
@@ -32,10 +36,11 @@ src_compile() {
 	fi
 
 	econf \
-		$(use_with ssl) \
-		$(use_with socks5 socks) \
 		--enable-largefile \
-		${myconf} || die "econf failed"
+		${myconf}
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
