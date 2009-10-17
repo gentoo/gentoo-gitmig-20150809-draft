@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4904 2009/10/17 07:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4905 2009/10/17 08:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -95,7 +95,6 @@ app-arch/rpm:magic - Add magic file support (sys-apps/file)
 app-arch/rpm:neon - Include support for net-misc/neon
 app-arch/squeeze:pathbar - Include pathbar feature
 app-arch/squeeze:toolbar - Include toolbar feature
-app-arch/xz-utils:static-libs - Build static libraries
 app-backup/amanda:devpay - Support for using Amazon DevPay with S3
 app-backup/amanda:s3 - Support for backing up to the Amazon S3 system
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
@@ -709,7 +708,6 @@ dev-lang/idb:icc - Use dev-lang/icc to install idb (default)
 dev-lang/idb:ifc - Use dev-lang/ifc to install idb
 dev-lang/ifc:idb - Install the Intel Debugger
 dev-lang/ifc:mkl - Install the Intel Math Kernel Library
-dev-lang/io:dbi - Enables dev-db/libdbi support
 dev-lang/lisaac:vim - install a syntax file for vim
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
 dev-lang/logtalk:gnupl - Support GNU Prolog back-end compiler
@@ -787,14 +785,12 @@ dev-libs/ferrisloki:stlport - Include support for dev-libs/STLport
 dev-libs/geoip:perl-geoipupdate - Install pure perl version of geoipupdate, with Proxy Server support via via the "http_proxy" environment variable and easy to customize.
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland
 dev-libs/libcdio:minimal -  Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library. 
-dev-libs/libffi:static-libs - Compile static archives
 dev-libs/libgcrypt:idea - Use the patented IDEA algorithm
 dev-libs/libjit:interpreter - Enable the libjit interpreter
 dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/libjit:new-reg-alloc - Enable new register allocator
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmix:no-net2 - Disable support for virtual/libpcap and net-libs/libnet
-dev-libs/libpcre:static-libs - Build static libs
 dev-libs/libprelude:easy-bindings - Enable support for high level bindings (available for C++, Perl, Python)
 dev-libs/libprelude:swig - Enable rebuild of swig bindings
 dev-libs/libpreludedb:swig - Enable rebuild of swig bindings
@@ -818,7 +814,6 @@ dev-libs/qsa:ide - Enable the qsa ide
 dev-libs/soprano:clucene - Enable dev-cpp/clucene backend support (java app).
 dev-libs/soprano:raptor - Enables support for media-libs/raptor RDF parser/serializer.
 dev-libs/soprano:redland - Enables support for the dev-libs/redland backend (really slow one).
-dev-libs/tre:static-libs - Compile static archives
 dev-libs/xerces-c:iconv - Use iconv (virtual/libiconv) as message loader and transcoder (in general it would be possible to use iconv only as message loader and something else like icu or the native method as transcoder and vice-versa, but this is a less common case and hard to handle)
 dev-libs/xerces-c:libwww - Use the net-libs/libwww library for fetching URLs, instead of the builtin method
 dev-libs/xerces-c:threads - Enable threading support through pthread (or other libraries on AIX, IRIX, HPUX, Solars). Highly recommended
@@ -827,7 +822,6 @@ dev-libs/xml-security-c:xalan - Enable support for XSLT and XPath parsing by dev
 dev-libs/xmlrpc-c:abyss - Build the Abyss mini web-server.
 dev-libs/xmlrpc-c:threads - Controls whether to build the Abyss web-server with pthreads or fork 'threading'.
 dev-libs/xmlrpc-c:tools - Build the xmlrpc* tools.
-dev-libs/xmlrpc-epi:static-libs - Compile static archives
 dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
 dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
@@ -1525,7 +1519,6 @@ media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:bonjour - Adds Bonjour/Zeroconf support.
 media-libs/libgpod:gtk - Enables ArtWorkDB support (including Photos and album covers)
 media-libs/libmp4v2:utils - Install command-line utilities
-media-libs/libmtp:static-libs - Compile static archives
 media-libs/libquicktime:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-libs/libsdl:audio - Control audio support (disable at your own risk)
 media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
@@ -1549,7 +1542,6 @@ media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, use
 media-libs/ploticus:cpulimit - Limit cpu usage when generating graphics
 media-libs/ploticus:flash - Adds support for creating SWF files using Ming
 media-libs/ploticus:svgz - Compressed svg graphics support
-media-libs/resid:static-libs - Compile static archives
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
@@ -1558,7 +1550,6 @@ media-libs/spandsp:sse3 - Enable SSE3 support
 media-libs/spandsp:sse4 - Enable SSE4 support
 media-libs/spandsp:sse4a - Enable SSE4a support
 media-libs/spandsp:sse5 - Enable SSE5 support
-media-libs/spandsp:static-libs - Compile static archives
 media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/swfdec:alsa - Use ALSA for audio output
 media-libs/swfdec:doc - Build documentation
@@ -1567,7 +1558,6 @@ media-libs/swfdec:gstreamer - Enable media-libs/gstreamer to support various med
 media-libs/swfdec:gtk - Enable GTK+ convenience library while is necessary for all GTK+ apps using swfdec (gnome-extra/swfdec-gnome and www-plugins/swfdec-mozilla)
 media-libs/swfdec:oss - Use Open Sound System for audio output
 media-libs/swfdec:pulseaudio - Use media-sound/pulseaudio for audio output
-media-libs/taglib:static-libs - Build static libs
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/xine-lib:dxr3 -  Enable support for DXR3 mpeg accelleration cards. 
@@ -1660,7 +1650,6 @@ media-sound/cmus:zsh-completion - enable zsh completion support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/decibel-audio-player:gnome-keyring - Adds support for storing your Last.fm password using gnome-keyring.
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
-media-sound/esound:static-libs - Compile static archives
 media-sound/exaile:libsexy - Enable libsexy support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
@@ -2032,7 +2021,6 @@ media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/base:signatures - Install community signatures from net-analyzer/snort
-net-analyzer/bmon:dbi - Enables dev-db/libdbi support
 net-analyzer/bmon:rrdtool - Enables net-analyzer/rrdtool support
 net-analyzer/bwm-ng:csv - Enable csv output
 net-analyzer/bwm-ng:html - Enable html output
@@ -2370,7 +2358,6 @@ net-libs/libssh:gcrypt - Prefer dev-libs/libgcrypt over dev-libs/openssl for enc
 net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
 net-libs/libssh:ssh1 - Build with SSH1 support
-net-libs/libssh:static-libs - Build static libs
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt for crypto
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
@@ -3149,8 +3136,6 @@ sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/procps:n32 - Enable n32 ABI support on mips
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 virtual/poppler-utils:abiword -  Enable support for app-office/abiword output. Requires dev-libs/libxml2. 
-www-apache/mod_ftpd:dbi - Enables dev-db/libdbi support
-www-apache/mod_log_sql:dbi - Enables dev-db/libdbi support
 www-apache/mod_mono:aspnet2 - Handle all applications using ASP.NET 2.0 engine by default
 www-apache/mod_suphp:checkpath - Check if script resides in DOCUMENT_ROOT
 www-apache/mod_suphp:mode-force - Run scripts with UID/GID specified in Apache configuration
