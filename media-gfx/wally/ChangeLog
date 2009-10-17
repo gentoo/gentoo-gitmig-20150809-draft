@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.17 2009/10/05 15:46:16 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.18 2009/10/17 22:47:21 hwoarang Exp $
+
+*wally-2.2.0 (17 Oct 2009)
+
+  17 Oct 2009; Markos Chandras <hwoarang@gentoo.org> +wally-2.2.0.ebuild,
+  +files/wally-2.2.0-disable-kde4.patch,
+  +files/wally-2.2.0-disable_popup.patch, -files/disable_popup.patch:
+  Version bump. Remove old patch
 
   05 Oct 2009; Theo Chatzimichos <tampakrap@gentoo.org> wally-2.0.3.ebuild:
   Use kde4-base eclass in order to have better KDE intergration, also add
