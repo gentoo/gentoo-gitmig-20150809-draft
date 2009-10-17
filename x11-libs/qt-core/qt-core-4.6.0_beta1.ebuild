@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.0_beta1.ebuild,v 1.2 2009/10/16 19:55:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.0_beta1.ebuild,v 1.3 2009/10/17 19:36:52 ayoy Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -13,7 +13,6 @@ IUSE="doc +glib iconv optimized-qmake qt3support ssl"
 RDEPEND="sys-libs/zlib
 	glib? ( dev-libs/glib )
 	ssl? ( dev-libs/openssl )
-	!<x11-libs/qt-gui-${PVR}
 	!<x11-libs/qt-4.4.0:4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
