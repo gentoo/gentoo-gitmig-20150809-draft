@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.0.0.ebuild,v 1.4 2009/01/13 02:09:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.0.0.ebuild,v 1.5 2009/10/17 17:34:40 tupone Exp $
 
 EAPI=2
 inherit autotools eutils multilib games
@@ -14,18 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-games/simgear
+RDEPEND="dev-games/simgear
 	x11-libs/fltk:1.1[opengl]
 	games-simulation/flightgear
 	x11-libs/libXi
 	x11-libs/libXmu"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-{fltk,gcc43}.patch
 	AT_M4DIR=. eautoreconf
 }
 
-src_prepare() {
+src_configure() {
 	egamesconf \
 		--with-plib-libraries=/usr/$(get_libdir) \
 		--with-plib-includes=/usr/include \
