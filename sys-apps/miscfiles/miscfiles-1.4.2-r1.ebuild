@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.4.2-r1.ebuild,v 1.2 2009/10/17 21:23:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.4.2-r1.ebuild,v 1.3 2009/10/17 22:43:08 ulm Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_install() {
 	emake install prefix="${D}/usr" || die
-	dodoc GNU* NEWS ORIGIN README dict-README
+	dodoc NEWS ORIGIN README dict-README
 	rm -f "${D}"/usr/share/dict/README
 
 	if use minimal ; then
