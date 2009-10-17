@@ -1,6 +1,10 @@
 # Unmask the flag which corresponds to ARCH.
 -arm
 
+# Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
+# Required package: media-sound/musepack-tools
+musepack
+
 # Raúl Porcel <armin76@gentoo.org>
 # I've been told xfs is broken on ARM
 xfs

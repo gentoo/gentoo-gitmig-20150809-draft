@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.47 2009/09/27 13:26:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.48 2009/10/17 10:07:27 ssuominen Exp $
+
+  17 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask USE musepack because media-sound/musepack-tools support is missing.
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> package.use.mask:
   mask media-gfx/imagemagick[autotrace] as autotrace is unkeyworded

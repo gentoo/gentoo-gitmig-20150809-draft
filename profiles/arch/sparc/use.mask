@@ -1,11 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.28 2009/08/19 21:19:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.29 2009/10/17 10:04:28 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
 
 # This file contains a list of useflags that cannot be used on sparc.
+
+# Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
+# Required package: media-sound/musepack-tools
+musepack
 
 # Raúl Porcel <armin76@gentoo.org>
 # Stuff that sigbuses
