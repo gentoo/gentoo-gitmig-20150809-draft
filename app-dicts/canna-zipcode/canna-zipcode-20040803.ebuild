@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/canna-zipcode-20040803.ebuild,v 1.6 2006/10/21 00:12:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/canna-zipcode-20040803.ebuild,v 1.7 2009/10/17 22:49:38 halcy0n Exp $
 
 inherit cannadic
 
@@ -29,9 +29,9 @@ CANNADICS="zipcode jigyousyo"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
-	cd ${S}
-	lha e ${DISTDIR}/ken_all_${MY_DATE}.lzh
-	lha e ${DISTDIR}/jigyosyo_${MY_DATE}.lzh
+	cd "${S}"
+	lha e "${DISTDIR}/ken_all_${MY_DATE}.lzh"
+	lha e "${DISTDIR}/jigyosyo_${MY_DATE}.lzh"
 	touch *.csv
 }
 

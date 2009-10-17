@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/bookview-3.2.1.ebuild,v 1.6 2006/09/25 16:27:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/bookview-3.2.1.ebuild,v 1.7 2009/10/17 22:48:11 halcy0n Exp $
 
 inherit eutils
 
@@ -19,15 +19,15 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/bookview
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}/bookview"
+	epatch "${FILESDIR}/${P}-gentoo.diff"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	insinto /etc/X11/app-defaults
-	newins ${FILESDIR}/Bookview.ad Bookview
+	newins "${FILESDIR}/Bookview.ad" Bookview
 
 	dodoc AUTHORS ChangeLog* INSTALL NEWS README
 }

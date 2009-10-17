@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/bookview
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/ChangeLog,v 1.9 2006/09/25 16:27:30 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/ChangeLog,v 1.10 2009/10/17 22:48:11 halcy0n Exp $
+
+  17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> bookview-3.2.1.ebuild:
+  QA fixes; unquoted variables
 
   25 Sep 2006; MATSUU Takuto <matsuu@gentoo.org>
   -files/bookview-3.2-gentoo.diff, -bookview-3.2.ebuild,

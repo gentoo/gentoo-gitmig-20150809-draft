@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/babytrans-en2pt-0.2.ebuild,v 1.6 2007/02/01 15:04:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/babytrans-en2pt-0.2.ebuild,v 1.7 2009/10/17 22:45:06 halcy0n Exp $
 
 MY_P="EngtoPor.dic.gz"
 MY_F="Engtoptg.dic"
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	insinto /usr/share/babytrans
 	doins ${MY_F} || die "Unable to install file ${MY_F}"
 }

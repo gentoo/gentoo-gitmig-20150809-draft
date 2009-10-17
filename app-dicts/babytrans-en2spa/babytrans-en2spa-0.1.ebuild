@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2spa/babytrans-en2spa-0.1.ebuild,v 1.3 2007/02/01 15:06:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2spa/babytrans-en2spa-0.1.ebuild,v 1.4 2009/10/17 22:45:57 halcy0n Exp $
 
 MY_P="EngtoSpa.dic.gz"
 MY_F="Engtospa.dic"
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	insinto /usr/share/babytrans
 	doins ${MY_F} || die "Unable to install file ${MY_F}"
 }

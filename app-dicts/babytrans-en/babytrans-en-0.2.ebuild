@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/babytrans-en-0.2.ebuild,v 1.5 2005/05/27 18:30:07 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/babytrans-en-0.2.ebuild,v 1.6 2009/10/17 22:40:19 halcy0n Exp $
 
 MY_P="english.dic.gz"
 MY_F="english.dic"
@@ -25,7 +25,7 @@ pkg_nofetch() {
 }
 
 src_install() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	insinto /usr/share/babytrans
 	doins ${MY_F} || die "Unable to install file"
 }

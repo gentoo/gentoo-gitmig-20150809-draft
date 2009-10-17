@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r2.ebuild,v 1.11 2007/01/25 04:24:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r2.ebuild,v 1.12 2009/10/17 22:38:44 halcy0n Exp $
 
 inherit eutils
 
@@ -18,15 +18,15 @@ RDEPEND="=x11-libs/gtk+-1.2*
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-gcc.patch
+	cd "${S}"/src
+	epatch "${FILESDIR}"/${P}-gcc.patch
 }
 
 src_install() {
 	einstall || die
 
 	insinto /usr/share/babytrans
-	doins ${FILESDIR}/dictionary
+	doins "${FILESDIR}"/dictionary
 	dodoc AUTHORS README
 }
 

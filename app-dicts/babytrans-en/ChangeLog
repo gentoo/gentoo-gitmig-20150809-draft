@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/babytrans-en
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/ChangeLog,v 1.9 2007/01/25 08:49:02 kevquinn Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/ChangeLog,v 1.10 2009/10/17 22:40:19 halcy0n Exp $
+
+  17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> babytrans-en-0.2.ebuild:
+  QA fixes; unquoted variables
 
   25 Jan 2007; Kevin F. Quinn <kevquinn@gentoo.org>
   files/digest-babytrans-en-0.2, Manifest:

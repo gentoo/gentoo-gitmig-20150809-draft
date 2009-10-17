@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.10 2008/10/05 13:39:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.11 2009/10/17 22:52:43 halcy0n Exp $
 
 pkg_dte="December 2003"
 
@@ -21,8 +21,8 @@ S=${WORKDIR}/vera-${PV}
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
-	patch -p1 < ${WORKDIR}/vera_${PV}-1.diff
+	cd "${S}"
+	patch -p1 < "${WORKDIR}/vera_${PV}-1.diff"
 }
 
 src_compile () {

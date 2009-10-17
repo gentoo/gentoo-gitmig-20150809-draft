@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.3.ebuild,v 1.7 2006/04/28 13:54:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.6.3.ebuild,v 1.8 2009/10/17 22:57:36 halcy0n Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	insinto /etc
 	doins chasenrc

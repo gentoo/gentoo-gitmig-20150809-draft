@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/babytrans-en2pt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.10 2007/02/01 15:04:14 blubb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.11 2009/10/17 22:45:06 halcy0n Exp $
+
+  17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> babytrans-en2pt-0.2.ebuild:
+  QA fixes; unquoted variables
 
   01 Feb 2007; Simon Stelling <blubb@gentoo.org> babytrans-en2pt-0.2.ebuild:
   added ~amd64

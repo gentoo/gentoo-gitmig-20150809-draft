@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r3.ebuild,v 1.10 2008/10/05 13:37:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r3.ebuild,v 1.11 2009/10/17 22:38:44 halcy0n Exp $
 
 inherit eutils
 
@@ -19,13 +19,13 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 	epatch "${FILESDIR}"/${P}-gcc.patch
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	# Using make install instead of einstall causes a problem with sandbox.
 	# This simple patch is supposed to solve this.
-	cd ${S}/po
+	cd "${S}"/po
 	epatch "${FILESDIR}"/${P}-nls.patch
 }
 
