@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/aspell-be-0.01-r1.ebuild,v 1.5 2007/11/03 21:58:09 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/aspell-be-0.01-r1.ebuild,v 1.6 2009/10/17 22:36:17 halcy0n Exp $
 
 ASPELL_LANG="Belarusian"
 
@@ -17,5 +17,5 @@ S="${WORKDIR}/aspell5-be-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	use classic || epatch ${FILESDIR}/aspell5-be-${PV}-official.patch
+	use classic || epatch "${FILESDIR}"/aspell5-be-${PV}-official.patch
 }
