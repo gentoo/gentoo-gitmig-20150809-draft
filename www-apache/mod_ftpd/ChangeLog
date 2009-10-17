@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ftpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/ChangeLog,v 1.7 2009/09/17 06:37:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/ChangeLog,v 1.8 2009/10/17 07:48:47 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  remove dbi description as it is global now
 
   17 Sep 2009; Benedikt Böhm <hollow@gentoo.org> mod_ftpd-0.14-r1.ebuild:
   fix #260945
