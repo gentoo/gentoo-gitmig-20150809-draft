@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.31 2009/10/11 19:40:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.32 2009/10/17 10:36:51 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org> openbabel-2.2.1.ebuild:
+  x86 stable, bug #288413
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> openbabel-2.2.1.ebuild:
   ppc stable #288413
