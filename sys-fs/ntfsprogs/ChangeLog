@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.68 2009/07/11 00:55:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.69 2009/10/17 22:15:49 arfrever Exp $
+
+  17 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ntfsprogs-1.13.1-r1.ebuild, +files/ntfsprogs-1.13.1-gnutls-2.8.patch:
+  Fix building with >=net-libs/gnutls-2.7.1 (bug #268488).
 
   11 Jul 2009; <chainsaw@gentoo.org> ntfsprogs-2.0.0-r1.ebuild:
   Marked stable on AMD64 for bug #275704; tested on a dual Opteron 2354.

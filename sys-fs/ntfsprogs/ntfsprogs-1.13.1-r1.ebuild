@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.13.1-r1.ebuild,v 1.8 2008/03/10 04:12:26 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.13.1-r1.ebuild,v 1.9 2009/10/17 22:15:49 arfrever Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="User tools for NTFS filesystems"
 HOMEPAGE="http://www.linux-ntfs.org/"
@@ -27,7 +27,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-resize-vista.patch
-	sed -i -e 's:-ggdb3::' configure
+	epatch "${FILESDIR}"/${P}-gnutls-2.8.patch
+	sed -i -e 's:-ggdb3::' configure.ac
+	eautoreconf
 }
 
 src_compile() {
@@ -35,13 +37,19 @@ src_compile() {
 		$(use_enable crypt crypto) \
 		$(use_enable debug) \
 		$(use_enable fuse fuse-module) \
-		$(use_enable gnome gnome-vfs) \
-		|| die "Configure failed"
-	emake || die "Make failed"
+		$(use_enable gnome gnome-vfs)
+	emake || die "emake failed"
+	emake extras || die "emake extras failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
+
+	dobin ntfsprogs/.libs/{ntfsdump_logfile,ntfswipe,ntfstruncate,ntfsmove,ntfsmftalloc} || die "dobin failed"
+	if use crypt; then
+		dobin ntfsprogs/.libs/ntfsdecrypt || die "dobin failed"
+	fi
+
 	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO.* \
 		doc/attribute_definitions doc/*.txt doc/tunable_settings
 }
