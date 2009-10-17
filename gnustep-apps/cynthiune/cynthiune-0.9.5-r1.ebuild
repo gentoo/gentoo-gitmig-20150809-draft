@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.10 2008/07/21 08:25:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r1.ebuild,v 1.11 2009/10/17 10:13:32 ssuominen Exp $
 
 inherit gnustep-2
 
@@ -10,9 +10,9 @@ DESCRIPTION="Free software and romantic music player for GNUstep."
 HOMEPAGE="http://organact.mine.nu/~wolfgang/cynthiune"
 SRC_URI="http://organact.mine.nu/~wolfgang/cynthiune/${P/c/C}.tar.gz"
 
-IUSE="arts esd flac mad modplug musepack timidity vorbis"
+IUSE="arts esd flac mad modplug timidity vorbis"
 
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -23,7 +23,6 @@ RDEPEND="media-libs/audiofile
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libid3tag
 		media-libs/libmad )
-	musepack? ( media-libs/libmpcdec )
 	modplug? ( media-libs/libmodplug )
 	timidity? ( media-sound/timidity++ )
 	vorbis? ( >=media-libs/libogg-1.1.2
@@ -51,7 +50,7 @@ cynthiune_get_config() {
 	use flac || myconf="${myconf} disable-flac=yes disable-flactags=yes"
 	use mad || myconf="${myconf} disable-mp3=yes disable-id3tag=yes"
 	use modplug || myconf="${myconf} disable-mod=yes"
-	use musepack || myconf="${myconf} disable-musepack=yes"
+	myconf="${myconf} disable-musepack=yes"
 	use timidity || myconf="${myconf} disable-timidity=yes"
 	use vorbis || myconf="${myconf} disable-ogg=yes disable-vorbistags=yes"
 
