@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r2.ebuild,v 1.1 2009/10/02 02:52:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r2.ebuild,v 1.2 2009/10/17 02:02:58 abcd Exp $
 
 EAPI="2"
 
@@ -71,10 +71,10 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die "installation of docs failed"
 	if use doc; then
-		insinto /usr/share/doc/${PF}/html/sbuild
-		doins doc/sbuild/html/* || die "installation of html docs failed"
-		insinto /usr/share/doc/${PF}/html/schroot
-		doins doc/schroot/html/* || die "installation of html docs failed"
+		docinto html/sbuild
+		dohtml doc/sbuild/html/* || die "installation of html docs failed"
+		docinto html/schroot
+		dohtml doc/schroot/html/* || die "installation of html docs failed"
 	fi
 
 	# Remove *.la files
