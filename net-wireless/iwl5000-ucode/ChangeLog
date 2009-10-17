@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iwl5000-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.5 2009/05/20 12:46:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.6 2009/10/17 11:23:58 chainsaw Exp $
+
+  17 Oct 2009; <chainsaw@gentoo.org> iwl5000-ucode-8.24.2.12.ebuild:
+  Marked stable on AMD64 as requested by Ihar Hrachyshka in bug #285577.
+  Tested on a Fujitsu-Siemens Lifebook S6420 with a 5300AGN [Shiloh] adapter
+  on a WPA2 PSK network.
 
 *iwl5000-ucode-8.24.2.12 (20 May 2009)
 
