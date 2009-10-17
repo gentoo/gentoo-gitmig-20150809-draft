@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.10.ebuild,v 1.7 2009/09/30 12:56:40 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.10.ebuild,v 1.8 2009/10/17 10:46:44 ssuominen Exp $
 
 EAPI="1"
 
@@ -49,7 +49,7 @@ KEYWORDS="alpha amd64 ~arm ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddax cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc esd fbcon fluidsynth +ffmpeg flac fontconfig +gcrypt ggi gnome gnutls hal httpd
 	id3tag jack kate libass libcaca libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
-	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
+	ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs
 	X x264 xinerama xml xosd xv zvbi"
@@ -105,7 +105,6 @@ RDEPEND="
 		modplug? ( media-libs/libmodplug )
 		mp3? ( media-libs/libmad )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
-		musepack? ( media-libs/libmpcdec )
 		ncurses? ( sys-libs/ncurses )
 		nsplugin? (
 			seamonkey?  ( =www-client/seamonkey-1* )
@@ -292,7 +291,7 @@ src_compile () {
 		$(use_enable modplug mod) \
 		$(use_enable mp3 mad) \
 		$(use_enable mpeg libmpeg2) \
-		$(use_enable musepack mpc) \
+		--disable-mpc \
 		$(use_enable ncurses) \
 		$(use_enable nsplugin mozilla) --with-mozilla-pkg="${MOZILLA_PC}" \
 		$(use_enable ogg) \
