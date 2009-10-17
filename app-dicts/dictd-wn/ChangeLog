@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-wn
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.18 2007/08/06 17:28:41 philantrop Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.19 2009/10/17 22:54:31 halcy0n Exp $
+
+  17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> dictd-wn-2.0.ebuild:
+  QA fixes; unquoted variables, redundant cd ${S}
 
   06 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> dictd-wn-2.0.ebuild:
   Removed deprecated gnuconfig_update as econf works fine now. Fixes bug 160176.

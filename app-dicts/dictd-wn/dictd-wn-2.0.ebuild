@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/dictd-wn-2.0.ebuild,v 1.9 2007/08/06 17:28:41 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/dictd-wn-2.0.ebuild,v 1.10 2009/10/17 22:54:31 halcy0n Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=app-text/dictd-1.5.5"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf || die "configure failed"
@@ -25,7 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
 	insinto /usr/lib/dict
 	doins wn.dict.dz wn.index || die
 }
