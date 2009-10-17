@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.13.8.ebuild,v 1.2 2009/10/17 03:57:30 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.0.ebuild,v 1.1 2009/10/17 03:57:30 nixphoeni Exp $
 
 EAPI="2"
 
@@ -13,28 +13,30 @@ SRC_URI="mirror://sourceforge/grecipe-manager/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome-print rtf"
+IUSE="gnome-print pdf rtf"
 
-RDEPEND=">=virtual/python-2.3
+RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygtk-2.3.93
 	>=dev-python/libgnome-python-2
 	>=gnome-base/libglade-2
 	|| ( >=dev-lang/python-2.5[sqlite]
 	     >=dev-python/pysqlite-2 )
+	>=dev-python/sqlalchemy-0.5.5
 	dev-python/imaging
-	dev-python/reportlab
 	dev-db/metakit[python]
+	pdf? ( dev-python/reportlab )
 	rtf? ( dev-python/pyrtf )
-	gnome-print? (	>=gnome-base/libgnomeprint-2
-			>=dev-python/libgnomeprint-python-2 )"
+	gnome-print? ( >=dev-python/libgnomeprint-python-2 )"
 DEPEND="${RDEPEND}"
 
-DOCS="README TODO PKG-INFO CHANGES"
+# distutils gets a bunch of default docs
+DOCS="TESTS FAQ"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-python-2.6-threading.patch"
+	epatch "${FILESDIR}/${P}-empty_dictionary_insert.patch"
 }
 
 src_install() {
 	distutils_src_install --disable-modules-check
+	doman gourmet.1
 }

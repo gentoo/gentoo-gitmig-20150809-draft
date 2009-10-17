@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.2 2009/06/26 03:47:34 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.3 2009/10/17 03:57:30 nixphoeni Exp $
+
+*gourmet-0.15.0 (17 Oct 2009)
+
+  17 Oct 2009; Joe Sapp <nixphoeni@gentoo.org> gourmet-0.13.8.ebuild,
+  +gourmet-0.15.0.ebuild,
+  +files/gourmet-0.15.0-empty_dictionary_insert.patch, metadata.xml:
+  Version bump (bug #289056); added upstream info to metadata.xml
 
   26 Jun 2009; Joe Sapp <nixphoeni@gentoo.org> -gourmet-0.13.4.ebuild,
   +gourmet-0.13.8.ebuild, +files/gourmet-python-2.6-threading.patch,
