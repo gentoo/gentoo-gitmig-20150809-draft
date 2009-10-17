@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.3.3.ebuild,v 1.4 2009/10/17 02:23:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.3.3.ebuild,v 1.5 2009/10/17 04:24:14 arfrever Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/dav/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug"
+IUSE=""
 RESTRICT="test"
 
 DEPEND="dev-libs/libxml2
@@ -29,15 +29,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
-	if use debug; then
-		myconf="--with-debug"
-	fi
-
-	econf \
-		--enable-largefile \
-		${myconf}
+	econf --enable-largefile
 }
 
 src_compile() {
