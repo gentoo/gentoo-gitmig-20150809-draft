@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.95 2009/10/12 22:07:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.96 2009/10/17 09:05:40 abcd Exp $
+
+  17 Oct 2009; Jonathan Callen <abcd@gentoo.org> kpilot-4.3.1.ebuild,
+  kpilot-4.3.2.ebuild:
+  Disable src_test, bug 289409
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kpilot-3.5.9.ebuild:
   KDE 3.5.9 removal
