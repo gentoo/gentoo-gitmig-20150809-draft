@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.75 2009/09/27 14:34:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.76 2009/10/17 18:27:12 hwoarang Exp $
+
+*ettercap-0.7.3-r4 (17 Oct 2009)
+
+  17 Oct 2009; Markos Chandras <hwoarang@gentoo.org>
+  +ettercap-0.7.3-r4.ebuild, +files/ettercap-0.7.3-64bit-casting.patch:
+  Revision bump which fixes segmentation fault on 64bit arches ( bug #288348
+  ).
+  Thanks to Timothy Redaelli <timothy@redaelli.eu> for the patch
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org> ettercap-0.7.3-r3.ebuild:
   Marking ettercap-0.7.3-r3 ppc64 for bug 277296
