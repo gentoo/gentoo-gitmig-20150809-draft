@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.426 2009/10/14 09:27:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.427 2009/10/17 05:09:30 arfrever Exp $
+
+  17 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.5.4-r3.ebuild, python-2.6.3.ebuild, python-3.1.1-r1.ebuild:
+  Fix paths passed to python_mod_optimize() and python_mod_cleanup() (bug
+  #288354).
 
   14 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   python-3.1.1-r1.ebuild:
