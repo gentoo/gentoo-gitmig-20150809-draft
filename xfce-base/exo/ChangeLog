@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.12 2009/10/12 14:36:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.13 2009/10/17 00:58:57 rich0 Exp $
+
+  17 Oct 2009; Richard Freeman <rich0@gentoo.org> exo-0.3.104.ebuild:
+  amd64 stable - 289179
 
 *exo-0.3.104 (12 Oct 2009)
 
