@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.149 2009/10/12 22:30:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.150 2009/10/17 08:58:16 abcd Exp $
+
+  17 Oct 2009; Jonathan Callen <abcd@gentoo.org> ksysguard-4.3.1.ebuild,
+  ksysguard-4.3.2.ebuild:
+  Disable src_test
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -ksysguard-3.5.9.ebuild,
   -ksysguard-3.5.9-r1.ebuild:
