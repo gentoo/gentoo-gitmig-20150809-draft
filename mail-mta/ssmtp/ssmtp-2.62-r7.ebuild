@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r4.ebuild,v 1.9 2009/03/17 10:51:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r7.ebuild,v 1.1 2009/10/17 17:37:59 dertobi123 Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/s/ssmtp/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="ssl ipv6 md5sum maxsysuid"
 
 DEPEND="ssl? ( dev-libs/openssl )"
@@ -36,8 +36,11 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-maxsysuid-conf.patch
 	fi
 
+	# 
+	epatch "${FILESDIR}/${P}-from_format_fix.patch"
+
 	# CVE-2008-3962
-	epatch "${FILESDIR}/CVE-2008-3962.patch"
+	epatch "${FILESDIR}/CVE-2008-3962-r2.patch"
 
 	# Fix AuthPass parsing (bug #238724)
 	epatch "${FILESDIR}/${P}-authpass.patch"
@@ -67,7 +70,7 @@ src_install() {
 	dosbin ssmtp || die
 	fperms 755 /usr/sbin/ssmtp
 
-	doman ssmtp.8
+	doman ssmtp.8 ssmtp.conf.5
 	dodoc INSTALL README TLS CHANGELOG_OLD
 	newdoc ssmtp.lsm DESC
 
