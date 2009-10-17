@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10607 2009/10/17 10:51:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10608 2009/10/17 20:42:35 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -227,12 +227,6 @@ sys-apps/minutils
 # QA!!? Installs to /package! No maintainer in Gentoo. Removed in 60 days.
 # bug 284618
 dev-libs/skalibs
-
-# Robin H. Johnson <robbat2@gentoo.org> (4 Jul 2009)
-# Bug #275291 - New GnuPG release broke seahorse, enigmail, mutt (uncommon
-# setup, not in tree).
-# Pending release of new versions of enigmail/seahorse.
->=app-crypt/gnupg-2.0.12
 
 # Vlastimil Babka <caster@gentoo.org> (04 Oct 2009)
 # Masked for removal in 30 days. Needs java 1.4 to build,
