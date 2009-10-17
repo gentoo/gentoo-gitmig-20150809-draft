@@ -4,5 +4,6 @@
   <herd>gnome</herd>
   <use>
 	<flag name="vapigen">Enable vala's library binding generator</flag>
+	<flag name="coverage">Enable coverage analysis</flag>
   </use>
 </pkgmetadata>
