@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xgalaga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.14 2009/02/19 04:38:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.15 2009/10/17 03:25:57 rich0 Exp $
+
+  17 Oct 2009; Richard Freeman <rich0@gentoo.org> xgalaga-2.1.1.0.ebuild:
+  amd64 stable - 289092
 
 *xgalaga-2.1.1.0 (19 Feb 2009)
 
