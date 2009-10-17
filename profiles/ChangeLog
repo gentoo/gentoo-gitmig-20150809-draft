@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3405 2009/10/17 09:59:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3406 2009/10/17 10:51:02 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask media-libs/libmpcdec. Replaced by media-sound/musepack-tools.
 
   17 Oct 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   tomboy-0.15* removed from tree, removing mask also

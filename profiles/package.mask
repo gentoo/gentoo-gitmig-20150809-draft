@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10606 2009/10/17 09:59:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10607 2009/10/17 10:51:02 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (17 Oct 200)
+# Obsolete Musepack SV7 format support. Install
+# media-sound/musepack-tools for libs and tools to convert
+# your audio files to SV8 format.
+media-libs/libmpcdec
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2009)
 # Fails to build with KDE4 installed wrt bug #277427.
