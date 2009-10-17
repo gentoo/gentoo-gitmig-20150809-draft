@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/io
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.4 2009/01/02 15:33:32 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.5 2009/10/17 07:47:11 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  remove dbi description as it is global now
 
 *io-2009.01.02-r1 (02 Jan 2009)
 
