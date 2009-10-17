@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.20 2009/10/10 09:33:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.21 2009/10/17 09:04:00 abcd Exp $
+
+  17 Oct 2009; Jonathan Callen <abcd@gentoo.org> killbots-4.3.1.ebuild,
+  killbots-4.3.2.ebuild:
+  Disable src_test, bug 289397
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> killbots-4.3.1.ebuild:
   amd64 stable wrt #287697
