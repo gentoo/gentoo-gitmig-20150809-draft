@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10605 2009/10/16 18:48:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10606 2009/10/17 09:59:20 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -938,7 +938,6 @@ media-libs/freeimage
 
 # Peter Alfredsen <loki_val@gentoo.org> (01 June 2009)
 # Development version, Work-In-Progress
-=app-misc/tomboy-0.15*
 =media-sound/banshee-1.5*
 
 # Peter Volkov <pva@gentoo.org> (26 May 2009)
