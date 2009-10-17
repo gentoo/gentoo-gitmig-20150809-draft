@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/addpatches
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.18 2008/03/14 09:20:19 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.19 2009/10/17 22:13:17 halcy0n Exp $
+
+  17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> addpatches-0.2.ebuild:
+  QA fixes; implicit RDEPEND
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Charlie Shepherd (masterdriverz, #153940) from metadata.xml.
