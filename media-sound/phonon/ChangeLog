@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.23 2009/10/09 20:21:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.24 2009/10/17 10:31:10 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org>
+  phonon-4.4_pre20090520.ebuild:
+  x86 stable, bug #287692
 
   09 Oct 2009; Alex Alexander <wired@gentoo.org>
   phonon-4.4_pre20090520.ebuild:
