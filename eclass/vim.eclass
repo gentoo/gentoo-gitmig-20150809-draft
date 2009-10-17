@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.178 2009/10/17 17:10:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.179 2009/10/17 18:30:40 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -236,8 +236,8 @@ vim_pkg_setup() {
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
 
-	# Need python[threads]
-	if use python && ! built_with_use dev-lang/python threads; then
+	# [g]vim needs dev-lang/python[threads]
+	if [[ ${MY_PN} != "vim-core" ]] && use python && ! built_with_use dev-lang/python threads; then
 		die "You must build dev-lang/python with USE=threads"
 	fi
 }
@@ -269,8 +269,14 @@ vim_src_prepare() {
 
 	# Another set of patches borrowed from src rpm to fix syntax errors etc.
 	cd "${S}" || die "cd ${S} failed"
-	EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}"/gentoo/patches-all/
+	if [[ -d "${WORKDIR}"/gentoo/patches-all/ ]]; then
+		EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
+			epatch "${WORKDIR}"/gentoo/patches-all/
+	elif [[ ${MY_PN} == "vim-core" ]] && [[ -d "${WORKDIR}"/gentoo/patches-core/ ]]; then
+		# Patches for vim-core only (runtime/*)
+		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
+			epatch "${WORKDIR}"/gentoo/patches-core/
+	fi
 
 	# Unpack an updated netrw snapshot if necessary. This is nasty. Don't
 	# ask, you don't want to know.
