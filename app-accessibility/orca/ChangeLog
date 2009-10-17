@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.67 2009/10/08 03:28:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.68 2009/10/17 00:15:31 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org> orca-2.26.3.ebuild:
+  x86 stable, bug #281427
 
   08 Oct 2009; Olivier Crête <tester@gentoo.org> orca-2.26.3.ebuild:
   Stable on amd64, bug #281427
