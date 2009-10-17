@@ -1,6 +1,17 @@
 # ChangeLog for net-print/magicfilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.14 2009/08/08 21:00:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.15 2009/10/17 23:44:57 dirtyepic Exp $
+
+*magicfilter-2.3h (17 Oct 2009)
+
+  17 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> +magicfilter-2.3h.ebuild,
+  +files/magicfilter-2.3h-configure.patch,
+  +files/magicfilter-2.3h-makefile.patch:
+  Version bump, rewritten ebuild.
+    - implement real DESTDIR support (bug #256137)
+    - fix man installation (bug #248165)
+    - fix prestripped files, use CC, CFLAGS, LDFLAGS (bug #252028)
+    - fix wonky permissions
 
   08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   magicfilter-2.3d.ebuild, +files/magicfilter-2.3d-glibc-2.10.patch:
