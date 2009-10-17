@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/resid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.21 2009/06/25 18:08:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.22 2009/10/17 07:56:11 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  remove static-libs description as it is global now
 
   25 Jun 2009; Raúl Porcel <armin76@gentoo.org> -resid-0.13-r1.ebuild,
   resid-0.16_p2.ebuild:

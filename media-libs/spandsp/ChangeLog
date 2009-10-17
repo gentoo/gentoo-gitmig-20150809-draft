@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.18 2009/07/24 15:42:36 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.19 2009/10/17 07:57:03 maekke Exp $
+
+  17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  remove static-libs description as it is global now
 
 *spandsp-0.0.6_pre12 (24 Jul 2009)
 

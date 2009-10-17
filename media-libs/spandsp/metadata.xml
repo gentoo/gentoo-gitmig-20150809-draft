@@ -4,7 +4,6 @@
   <herd>voip</herd>
   <use>
 	<flag name='fixed-point'>Enable fixed point support</flag>
-	<flag name='static-libs'>Compile static archives</flag>
     <flag name='sse3'>Enable SSE3 support</flag>
     <flag name='sse4'>Enable SSE4 support</flag>
     <flag name='sse4a'>Enable SSE4a support</flag>
