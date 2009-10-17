@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.334 2009/10/17 17:19:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.335 2009/10/17 18:38:50 lack Exp $
+
+  17 Oct 2009; Jim Ramsay <lack@gentoo.org> vim-7.2.264.ebuild:
+  Remove unneeded gentoo-specific patch tarball
 
   17 Oct 2009; Jim Ramsay <lack@gentoo.org> -vim-7.2.ebuild,
   -vim-7.2.108.ebuild, -vim-7.2.238.ebuild, vim-7.2.264.ebuild:
