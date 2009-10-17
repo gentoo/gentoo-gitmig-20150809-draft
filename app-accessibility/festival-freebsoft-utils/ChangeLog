@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival-freebsoft-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.16 2009/10/11 21:46:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.17 2009/10/17 21:57:00 halcy0n Exp $
+
+  17 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
+  festival-freebsoft-utils-0.2.ebuild, festival-freebsoft-utils-0.4.ebuild,
+  festival-freebsoft-utils-0.6.ebuild:
+  QA fixes; implicit RDEPEND
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
   festival-freebsoft-utils-0.2.ebuild, festival-freebsoft-utils-0.4.ebuild,

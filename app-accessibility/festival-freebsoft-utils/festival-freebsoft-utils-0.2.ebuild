@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/festival-freebsoft-utils-0.2.ebuild,v 1.7 2009/10/11 21:46:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/festival-freebsoft-utils-0.2.ebuild,v 1.8 2009/10/17 21:57:00 halcy0n Exp $
 
 DESCRIPTION="a collection of Festival functions for speech-dispatcher"
 HOMEPAGE="http://www.freebsoft.org/festival-freebsoft-utils"
@@ -12,6 +12,7 @@ KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=">=app-accessibility/festival-1.4.3"
+RDEPEND="${DEPEND}"
 
 src_compile(){
 	einfo "Nothing to compile."

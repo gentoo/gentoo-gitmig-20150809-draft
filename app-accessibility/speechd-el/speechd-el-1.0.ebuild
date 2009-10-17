@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-1.0.ebuild,v 1.3 2007/08/06 18:04:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-1.0.ebuild,v 1.4 2009/10/17 22:01:46 halcy0n Exp $
 
 inherit elisp
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND=">=app-emacs/elib-1.0
 	>=app-accessibility/speech-dispatcher-0.5"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	einfo "Nothing to compile"
