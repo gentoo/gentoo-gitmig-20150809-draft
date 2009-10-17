@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.176 2009/10/14 01:29:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.177 2009/10/17 13:43:30 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -24,6 +24,15 @@
 
 inherit eutils vim-doc flag-o-matic versionator fdo-mime
 
+# Check for EAPI functions we need:
+case "${EAPI:-0}" in
+	2)
+		HAS_SRC_PREPARE=1
+		HAS_USE_DEP=1
+		;;
+	*) ;;
+esac
+
 # Support -cvs ebuilds, even though they're not in the official tree.
 MY_PN=${PN%-cvs}
 
@@ -44,7 +53,13 @@ if version_is_at_least 6.3.1 ; then
 	inherit bash-completion
 fi
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test pkg_postinst pkg_postrm
+TO_EXPORT="pkg_setup src_compile src_install src_test pkg_postinst pkg_postrm"
+if [[ $HAS_SRC_PREPARE ]]; then
+	TO_EXPORT="${TO_EXPORT} src_prepare"
+else
+	TO_EXPORT="${TO_EXPORT} src_unpack"
+fi
+EXPORT_FUNCTIONS ${TO_EXPORT}
 
 if version_is_at_least 6.4_beta ; then
 	IUSE="${IUSE} nls acl"
@@ -59,20 +74,27 @@ if [[ ${MY_PN} == "vim-core" ]] ; then
 	IUSE="${IUSE} livecd"
 else
 	IUSE="${IUSE} cscope gpm perl python ruby"
+
+	if [[ $HAS_USE_DEP ]]; then
+		PYTHON_DEP="python?  ( dev-lang/python[threads] )"
+	else
+		PYTHON_DEP="python?  ( dev-lang/python )"
+	fi
+
 	DEPEND="${DEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
-		python?  ( dev-lang/python )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
-		ruby?    ( virtual/ruby )"
+		ruby?    ( virtual/ruby )
+		${PYTHON_DEP}"
 	RDEPEND="${RDEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
-		python?  ( dev-lang/python )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
-		ruby?    ( virtual/ruby )"
+		ruby?    ( virtual/ruby )
+		${PYTHON_DEP}"
 
 	if ! version_is_at_least 6.4_beta ; then
 		DEPEND="${DEPEND} selinux? ( sys-libs/libselinux )"
@@ -238,11 +260,14 @@ vim_pkg_setup() {
 	# Gnome sandbox silliness. bug #114475.
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
+
+	# Need python[threads]
+	if use python && ! built_with_use dev-lang/python threads; then
+		die "You must build dev-lang/python with USE=threads"
+	fi
 }
 
-vim_src_unpack() {
-	unpack ${A}
-
+vim_src_prepare() {
 	if [[ ${PN##*-} == cvs ]] ; then
 		ECVS_SERVER="vim.cvs.sourceforge.net:/cvsroot/vim"
 		ECVS_PASS=""
@@ -337,6 +362,11 @@ END
 			'/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \; ./testvim -X,' \
 			"${S}"/src/po/Makefile
 	fi
+}
+
+vim_src_unpack() {
+	unpack ${A}
+	vim_src_prepare
 }
 
 vim_src_compile() {
