@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-pl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.15 2007/11/03 22:16:49 uberlord Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.16 2009/10/18 20:40:25 halcy0n Exp $
+
+  18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-pl-0.50.2.ebuild,
+  aspell-pl-0.51.0.ebuild, aspell-pl-6.0.20061121.0.ebuild:
+  QA fixes; IUSE is not defined
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org>
   aspell-pl-6.0.20061121.0.ebuild:
