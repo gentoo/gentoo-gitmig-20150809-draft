@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/x11perf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.37 2009/10/11 11:12:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.38 2009/10/18 21:39:47 remi Exp $
+
+*x11perf-1.5.1 (18 Oct 2009)
+
+  18 Oct 2009; Rémi Cardona <remi@gentoo.org> +x11perf-1.5.1.ebuild:
+  bump to 1.5.1, sync with overlay
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> ChangeLog:
   ppc stable #282290
