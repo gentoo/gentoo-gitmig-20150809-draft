@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.7.ebuild,v 1.12 2008/11/01 12:25:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.7.ebuild,v 1.13 2009/10/18 01:04:23 halcy0n Exp $
 
 #MY_PV=$(echo ${PV} | sed 's/\.\([0-9]\)$/f\1/')
 MY_PV=${PV%*.*}f${PV##*.}
@@ -24,5 +24,5 @@ src_install () {
 	insinto /usr/lib/ispell
 	doins russian.hash russian.aff
 
-	dodoc README README.koi LICENSE
+	dodoc README README.koi
 }
