@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.0.ebuild,v 1.1 2008/09/07 11:16:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.0.ebuild,v 1.2 2009/10/18 09:10:23 spock Exp $
 
 DESCRIPTION="Interface for the Collins Dictionary."
 HOMEPAGE="http://toxygen.net/ydpdict/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ao"
 
-RDEPEND="=app-dicts/libydpdict-${PV}*
+RDEPEND=">=app-dicts/libydpdict-${PV}
 	ao? ( media-libs/libao )"
 
 DEPEND="${RDEPEND}
