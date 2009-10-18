@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/x3270/x3270-3.3.8_p2.ebuild,v 1.1 2009/01/02 09:50:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/x3270/x3270-3.3.8_p2.ebuild,v 1.2 2009/10/18 18:43:02 vapier Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/x3270/${MY_P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
