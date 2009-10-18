@@ -1,6 +1,6 @@
 # ChangeLog for app-pda/barry
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.8 2009/10/18 18:45:50 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.9 2009/10/18 19:03:04 vostorga Exp $
 
 *barry-0.16 (18 Oct 2009)
 
@@ -12,6 +12,7 @@
   Adding missing pkg-config dep, bug #206002
   Enabling gui backup tool, bug #214293
   Fixing build against gcc 4.4 , bug #277809
+  Adding Opensync plugin available as the opensync USE flag , bug #218172
   Version bump to 0.16 , bug #215399 , ebuild thanks to Nils Schlupp , Anton
   Bolshakov , et all.
 
