@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.131 2009/10/11 21:33:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.132 2009/10/18 18:23:44 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> ktorrent-3.2.3-r1.ebuild:
+  x86 stable, bug #288662
 
   11 Oct 2009; Jonathan Callen <abcd@gentoo.org> ktorrent-3.2.3-r1.ebuild:
   Set KDE_MINIMAL to 4.2 so this can be unmasked on hppa/ppc/ppc64
