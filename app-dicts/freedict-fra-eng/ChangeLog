@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/freedict-fra-eng
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-fra-eng/ChangeLog,v 1.5 2009/03/18 15:11:57 ricmm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-fra-eng/ChangeLog,v 1.6 2009/10/18 22:04:39 halcy0n Exp $
+
+  18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> freedict-fra-eng-1.0.ebuild:
+  QA fixes; IUSE is not defined
 
   18 Mar 2009; <ricmm@gentoo.org> freedict-fra-eng-1.0.ebuild:
   Drop down to ~mips due to unstable deps
