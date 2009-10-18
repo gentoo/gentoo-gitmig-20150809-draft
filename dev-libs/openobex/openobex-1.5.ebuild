@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.9 2009/09/22 07:57:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.10 2009/10/18 00:31:50 vapier Exp $
 
 EAPI="2"
 
@@ -9,13 +9,14 @@ inherit eutils autotools
 DESCRIPTION="An implementation of the OBEX protocol used for transferring data to mobile devices"
 HOMEPAGE="http://sourceforge.net/projects/openobex/"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
+
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc ppc64 ~sparc x86"
 IUSE="bluetooth debug irda syslog usb"
 
 RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
-	usb? ( dev-libs/libusb:0 )"
+	usb? ( virtual/libusb:0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -35,7 +36,7 @@ src_configure() {
 		$(use_enable syslog)
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README AUTHORS NEWS ChangeLog
 }
