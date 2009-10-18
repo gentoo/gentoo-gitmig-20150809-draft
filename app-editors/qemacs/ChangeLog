@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.45 2009/10/16 22:05:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.46 2009/10/18 13:54:43 ulm Exp $
+
+*qemacs-0.4.0_pre20090420 (18 Oct 2009)
+
+  18 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
+  +qemacs-0.4.0_pre20090420.ebuild:
+  Version bump. Fix man page location. Install headers in /usr/include/qe/
+  to be consistent with /usr/share/qe/.
 
   16 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
   qemacs-0.4.0_pre20080605-r1.ebuild:

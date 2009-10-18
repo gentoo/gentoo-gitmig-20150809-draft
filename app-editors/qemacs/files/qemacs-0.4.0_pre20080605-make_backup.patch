@@ -1,3 +1,7 @@
+Add make-backup-files command for backup toggling, from upstream mailing list:
+http://lists.gnu.org/archive/html/qemacs-devel/2004-11/msg00007.html
+http://bugs.gentoo.org/75052
+
 --- buffer.c.orig	2009-03-07 21:14:02.000000000 +0100
 +++ buffer.c	2009-03-07 21:15:40.000000000 +0100
 @@ -1657,12 +1657,14 @@
