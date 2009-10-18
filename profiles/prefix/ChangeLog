@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.103 2009/10/15 19:49:41 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.104 2009/10/18 18:57:07 grobian Exp $
+
+  18 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask ocaml-3.11.1 because it fails to build due to some missing symbol
 
   15 Oct 2009; Jeremy Olexa <darkside@gentoo.org> linux/package.mask:
   Mask ~dev-libs/nss-3.12.4 on linux only because it exposes some other
