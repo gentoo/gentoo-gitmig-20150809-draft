@@ -7,4 +7,9 @@
   allow synchronization, backup, restore, program 
   management, and charging for BlackBerry devices.
 </longdescription>
+<use>
+  <flag name='boost'>Enable boost support</flag>
+  <flag name='gui'>Gui backup tool support</flag>
+  <flag name='opensync'>Enabling opensync plugin</flag>
+</use>
 </pkgmetadata>
