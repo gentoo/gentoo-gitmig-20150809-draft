@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.6 2009/08/15 12:49:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.7 2009/10/18 21:01:43 ssuominen Exp $
 
-inherit kde-functions eutils base autotools
+inherit autotools base eutils
 
 DESCRIPTION="Smart Common Input Method (SCIM) Generic Table Input Method Server"
 HOMEPAGE="http://www.scim-im.org/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
-IUSE="kde nls"
+IUSE="nls"
 LANGS="am ar bn gu hi ja kn ko ml ne pa ru ta te th uk vi zh"
 for i in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${i}"
@@ -19,15 +19,12 @@ done
 
 RDEPEND="x11-libs/libXt
 	>=app-i18n/scim-1.4.7-r2
-	kde? ( >=app-i18n/skim-1.2.0 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-PATCHES=(
-	"${FILESDIR}"/${P}+gcc-4.3.patch
-)
+PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )
 
 pkg_setup() {
 	elog "Not all languages are going to be compiled."
@@ -52,7 +49,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable kde skim-support) \
+		--disable-skim-support \
 		$(use_enable nls) \
 		--disable-static \
 		--disable-dependency-tracking \
