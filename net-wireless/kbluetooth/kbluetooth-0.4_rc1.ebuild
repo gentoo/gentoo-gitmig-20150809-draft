@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4_rc1.ebuild,v 1.1 2009/10/15 16:06:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4_rc1.ebuild,v 1.2 2009/10/18 14:51:37 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="da de en_GB es et fr gl km lt nds pt pt_BR ro ru sv tr uk zh_CN zh_TW"
@@ -34,4 +34,11 @@ src_configure() {
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with semantic-desktop Nepomuk)"
 	kde4-base_src_configure
+}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+	ewarn "net-wireless/bluez can't work as normal user, so you need to setup"
+	ewarn "your dbus privilege granting yourself, see bug:"
+	ewarn "http://bugs.gentoo.org/279616"
 }
