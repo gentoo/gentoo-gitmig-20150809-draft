@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.140 2009/10/12 20:45:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.141 2009/10/18 18:13:03 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kde-meta-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kde-meta-3.5.9.ebuild:
   KDE 3.5.9 removal
