@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.15 2009/10/10 17:51:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.16 2009/10/18 19:37:44 arfrever Exp $
+
+  18 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mechanize-0.1.11.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> mechanize-0.1.11.ebuild:
   Merge from Prefix

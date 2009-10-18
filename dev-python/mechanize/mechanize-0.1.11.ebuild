@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.11.ebuild,v 1.4 2009/10/10 17:51:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.11.ebuild,v 1.5 2009/10/18 19:37:44 arfrever Exp $
 
-NEED_PYTHON=2.4
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -17,32 +18,31 @@ IUSE=""
 
 DEPEND=">=dev-python/clientform-0.2.7"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS="0.1-changes.txt"
 
-	# use distutils instead of setuptools
-	sed -i \
-		-e 's/not hasattr(sys, "version_info")/1/' \
-		setup.py || die "sed in setup.py failed"
+src_prepare() {
+	# Use distutils instead of setuptools.
+	# (This can't be removed in the same ${PV} due to file->directory replacement.)
+	sed -e 's/not hasattr(sys, "version_info")/True/' -i setup.py || die "sed in setup.py failed"
 
 	# We don't run coverage tests or functional_tests
 	# which access the network, just doctests and unit tests
-	sed -i \
-		-e '/import coverage/d' \
-		test.py || die "sed in test.py failed"
-}
-
-src_install() {
-	DOCS="0.1-changes.txt"
-	# remove to prevent distutils_src_install from installing it
-	dohtml *.html
-	rm README.html*
-
-	distutils_src_install
+	sed -e '/import coverage/d' -i test.py || die "sed in test.py failed"
 }
 
 src_test() {
-	PYTHONPATH=build/lib/ "${python}" test.py || die "tests failed"
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test.py
+	}
+	python_execute_function testing
+}
+
+src_install() {
+	# Remove some files to prevent distutils_src_install from installing them.
+	dohtml *.html
+	rm -f README.html*
+
+	distutils_src_install
 }
