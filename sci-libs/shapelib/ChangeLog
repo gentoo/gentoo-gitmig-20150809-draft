@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/shapelib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.10 2009/09/16 04:58:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.11 2009/10/18 07:05:49 nerdboy Exp $
+
+  18 Oct 2009; Steve Arnold <nerdboy@gentoo.org> shapelib-1.2.10-r1.ebuild,
+  +files/makefile-fix.patch:
+  More QA fixes: updated to respect LDFLAGS per bug 289158.
 
   16 Sep 2009; Steve Arnold <nerdboy@gentoo.org> shapelib-1.2.10-r1.ebuild,
   +files/fix-shapelib-test.diff, +files/stdlib_include_fix.patch:
