@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.6.0.ebuild,v 1.2 2009/10/10 17:00:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.6.0.ebuild,v 1.3 2009/10/18 18:19:28 maekke Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.kipi-plugins.org"
 SRC_URI="mirror://sourceforge/kipi/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cdr calendar debug +imagemagick ipod mjpeg scanner"
 SLOT="4"
 
