@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-hu
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.14 2008/11/21 19:53:32 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ChangeLog,v 1.15 2009/10/18 00:59:23 halcy0n Exp $
+
+  18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ispell-hu-0.99.4.ebuild,
+  ispell-hu-1.0.ebuild:
+  QA fixes; unquoted variables, useless dodoc LICENSE
 
 *ispell-hu-1.4 (21 Nov 2008)
 
