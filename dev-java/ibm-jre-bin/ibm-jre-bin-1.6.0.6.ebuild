@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.4.ebuild,v 1.3 2009/05/29 20:39:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.6.ebuild,v 1.1 2009/10/18 19:58:46 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -48,7 +48,7 @@ SRC_URI="x86? ( ${X86_JRE_DIST} )
 	ppc? ( ${PPC_JRE_DIST} )
 	ppc64? ( ${PPC64_JRE_DIST} )"
 LICENSE="IBM-J1.6"
-KEYWORDS="-* ~amd64 ppc ppc64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa nsplugin odbc"
 
@@ -127,21 +127,21 @@ opt/${P}/lib/amd64/compressedrefs/libj9gc24.so
 opt/${P}/lib/amd64/compressedrefs/libj9bcv24.so"
 
 pkg_nofetch() {
-	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
-	einfo "Please visit: ${DOWNLOADPAGE}"
+	elog "Due to license restrictions, we cannot redistribute or fetch the distfiles"
+	elog "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
-	einfo "${JRE_DIST}"
+	elog "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
+	elog "${JRE_DIST}"
 
-	einfo "You can use direct link to your arch download page:"
-	einfo "${DIRECT_DOWNLOAD}"
-	einfo "Place the file(s) in: ${DISTDIR}"
-	einfo "Then restart emerge: 'emerge --resume'"
+	elog "You can use direct link to your arch download page:"
+	elog "${DIRECT_DOWNLOAD}"
+	elog "Place the file(s) in: ${DISTDIR}"
+	elog "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
-	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
-	einfo "isn't updated, but the files should still available through the"
-	einfo "direct link to arch download page. If it doesn't work, file a bug."
+	elog "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+	elog "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
+	elog "isn't updated, but the files should still available through the"
+	elog "direct link to arch download page. If it doesn't work, file a bug."
 }
 
 src_compile() { :; }
