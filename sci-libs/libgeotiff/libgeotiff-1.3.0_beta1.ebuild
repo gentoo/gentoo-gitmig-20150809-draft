@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0_beta1.ebuild,v 1.1 2009/10/12 07:20:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0_beta1.ebuild,v 1.2 2009/10/18 06:13:14 nerdboy Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic
@@ -41,7 +41,10 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use doc; then
-	    emake dox || die "emake dox failed"
+		mkdir -p docs/api
+		cp "${FILESDIR}"/Doxyfile Doxyfile
+		doxygen -u Doxyfile || die "updating doxygen config failed"
+		doxygen Doxyfile || die "docs generation failed"
 	fi
 }
 
