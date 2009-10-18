@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.18.ebuild,v 1.1 2009/09/08 16:17:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.18.ebuild,v 1.2 2009/10/18 12:29:23 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://files.uvena.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
