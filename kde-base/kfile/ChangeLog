@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.36 2009/10/10 09:26:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.37 2009/10/18 15:08:59 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kfile-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kfile-4.3.1.ebuild:
   amd64 stable wrt #287697

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.128 2009/10/12 22:09:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.129 2009/10/18 17:13:02 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kppp-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kppp-3.5.9.ebuild:
   KDE 3.5.9 removal

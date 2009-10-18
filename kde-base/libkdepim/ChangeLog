@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.134 2009/10/12 23:02:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.135 2009/10/18 17:01:21 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> libkdepim-4.3.1-r1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -libkdepim-3.5.9.ebuild:
   KDE 3.5.9 removal

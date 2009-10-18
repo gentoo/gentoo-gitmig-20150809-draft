@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.132 2009/10/12 22:43:19 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.133 2009/10/18 15:34:47 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kttsd-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kttsd-3.5.9.ebuild:
   KDE 3.5.9 removal

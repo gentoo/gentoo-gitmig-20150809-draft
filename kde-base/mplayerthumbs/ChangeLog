@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.8 2009/10/10 10:38:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.9 2009/10/18 16:44:40 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> mplayerthumbs-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   mplayerthumbs-4.3.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.127 2009/10/12 19:46:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.128 2009/10/18 14:19:16 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> amor-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -amor-3.5.9.ebuild:
   KDE 3.5.9 removal

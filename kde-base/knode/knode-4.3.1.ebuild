@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-4.3.1.ebuild,v 1.2 2009/10/10 09:49:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-4.3.1.ebuild,v 1.3 2009/10/18 17:22:29 maekke Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="A newsreader for KDE"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 x86"
 IUSE="debug +handbook"
 
 # test fails, last checked for 4.2.96

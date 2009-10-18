@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.122 2009/10/13 00:35:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.123 2009/10/18 13:57:57 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kdialog-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   13 Oct 2009; Jonathan Callen <abcd@gentoo.org>
   -files/kdialog-3.5.9-kdeeject-186028.patch:

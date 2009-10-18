@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.123 2009/10/12 21:22:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.124 2009/10/18 17:21:36 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kjots-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kjots-3.5.9.ebuild:
   KDE 3.5.9 removal

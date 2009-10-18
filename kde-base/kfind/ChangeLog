@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.135 2009/10/12 21:09:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.136 2009/10/18 15:52:44 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kfind-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kfind-3.5.9.ebuild:
   KDE 3.5.9 removal

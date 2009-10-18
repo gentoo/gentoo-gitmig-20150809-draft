@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.183 2009/10/13 00:53:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.184 2009/10/18 16:48:10 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kdm-4.3.1-r2.ebuild:
+  x86 stable, bug #287697
 
   13 Oct 2009; Jonathan Callen <abcd@gentoo.org>
   -files/kdm-3.5.7-bsd-shutdown.patch,

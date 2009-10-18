@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.136 2009/10/13 00:03:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.137 2009/10/18 17:20:43 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> akregator-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   13 Oct 2009; Jonathan Callen <abcd@gentoo.org>
   -files/akregator-3.5.9-customcolors.patch:

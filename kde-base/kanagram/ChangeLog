@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.103 2009/10/12 20:03:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.104 2009/10/18 16:05:35 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kanagram-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kanagram-3.5.9.ebuild:
   KDE 3.5.9 removal
