@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.44 2009/10/17 10:46:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.45 2009/10/18 21:12:30 aballier Exp $
 
 EAPI="2"
 
@@ -136,7 +136,7 @@ RDEPEND="
 		truetype? ( media-libs/freetype
 			media-fonts/dejavu )
 		twolame? ( media-sound/twolame )
-		udev? ( sys-fs/udev )
+		udev? ( >=sys-fs/udev-142 )
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
 		vcdinfo? ( >=media-video/vcdimager-0.7.22 )
