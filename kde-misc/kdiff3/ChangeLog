@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.41 2009/10/13 14:12:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.42 2009/10/18 18:27:00 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kdiff3-0.9.95.ebuild:
+  x86 stable, bug #288883
 
   13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kdiff3-0.9.95.ebuild:
   amd64 stable wrt #288883
