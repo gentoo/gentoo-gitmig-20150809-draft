@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r24.ebuild,v 1.4 2009/09/10 18:08:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r24.ebuild,v 1.5 2009/10/18 10:17:01 mrness Exp $
 
 EAPI="2"
 
@@ -253,8 +253,9 @@ pkg_postinst() {
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_MPPE"
 			local WARNING_PPP_MPPE="CONFIG_PPP_MPPE:\t missing MPPE encryption (optional, mostly used by PPTP links)"
 		fi
-		CONFIG_CHECK="${CONFIG_CHECK} ~PPPOE"
-		local WARNING_PPPOE="CONFIG_PPPOE:\t missing PPPoE support (optional needed by rp-pppoe plugin)"
+		CONFIG_CHECK="${CONFIG_CHECK} ~PPPOE ~PACKET"
+		local WARNING_PPPOE="CONFIG_PPPOE:\t missing PPPoE support (optional, needed by rp-pppoe plugin)"
+		local WARNING_PACKET="CONFIG_PACKET:\t missing AF_PACKET support (optional, used by rp-pppoe and dhcpc plugins)"
 		if use atm ; then
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPPOATM"
 			local WARNING_PPPOATM="CONFIG_PPPOATM:\t missing PPPoA support (optional, needed by pppoatm plugin)"
