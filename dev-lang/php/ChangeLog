@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.349 2009/10/09 14:09:58 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.350 2009/10/18 14:33:47 ranger Exp $
+
+  18 Oct 2009; Brent Baude <ranger@gentoo.org> php-5.2.11.ebuild:
+  Marking php-5.2.11 ppc64 for bug 285434
 
   09 Oct 2009; Christian Hoffmann <hoffie@gentoo.org> php-5.2.11.ebuild:
   adding dependency on recent enough suhosin per bug 276583
