@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.523 2009/10/18 21:12:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.524 2009/10/18 21:20:22 aballier Exp $
+
+  18 Oct 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  hal support is gone in master, udev is preferred.
 
   18 Oct 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.9999.ebuild,
   vlc-9999.ebuild:
