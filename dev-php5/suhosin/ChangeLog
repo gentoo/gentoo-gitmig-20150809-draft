@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.48 2009/10/09 13:53:13 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.49 2009/10/18 14:19:23 ranger Exp $
+
+  18 Oct 2009; Brent Baude <ranger@gentoo.org> suhosin-0.9.29.ebuild:
+  Marking suhosin-0.9.29 ppc64 for bug 276583
 
   09 Oct 2009; Christian Hoffmann <hoffie@gentoo.org> suhosin-0.9.29.ebuild:
   amd64 stable #276583
