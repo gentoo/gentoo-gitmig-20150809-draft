@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.101 2009/10/15 08:16:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.102 2009/10/18 18:15:09 klausman Exp $
+
+  18 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  docutils-0.5-r1.ebuild:
+  Stable on alpha, bug #287642
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> docutils-0.5-r1.ebuild:
   amd64/x86 stable, bug #287642
