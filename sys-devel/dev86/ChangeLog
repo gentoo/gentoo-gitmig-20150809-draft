@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/dev86
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.14 2009/10/05 23:43:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.15 2009/10/18 09:35:53 fauli Exp $
+
+  18 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  dev86-0.16.17-r6.ebuild:
+  stable x86, bug 289014
 
   05 Oct 2009; Mike Frysinger <vapier@gentoo.org> dev86-0.16.17-r6.ebuild:
   Update HOMEPAGE/SRC_URI #259106 by Mr. Anderson, and clean up some of the
