@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.104 2009/10/18 18:57:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.105 2009/10/18 19:01:57 grobian Exp $
+
+  18 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask app-misc/mc-4.7.0_pre3 too, still insists on doing Linux stuff
 
   18 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
