@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.ebuild,v 1.4 2009/09/20 12:56:12 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.ebuild,v 1.5 2009/10/18 15:34:31 klausman Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ RESTRICT="test"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc -sparc ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-lang/tcl-8.4
