@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.367 2009/10/17 00:28:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.368 2009/10/18 16:48:59 nixnut Exp $
+
+  18 Oct 2009; nixnut <nixnut@gentoo.org> gnome-2.26.3.ebuild:
+  ~ppc'd
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> gnome-2.26.3.ebuild:
   x86 stable, bug #281427
