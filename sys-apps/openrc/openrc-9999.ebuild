@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.58 2009/10/16 07:21:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.59 2009/10/18 18:13:08 tommy Exp $
 
 EAPI="1"
 
@@ -37,7 +37,7 @@ RDEPEND="virtual/init
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
-pkg_setup() {
+make_args() {
 	unset LIBDIR #266688
 
 	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir) LIBEXECDIR=/$(get_libdir)/rc"
@@ -52,7 +52,9 @@ pkg_setup() {
 		brand="FreeBSD"
 	fi
 	export BRANDING="Gentoo ${brand}"
+}
 
+pkg_setup() {
 	export DEBUG=$(usev debug)
 	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
@@ -74,10 +76,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# catch people running `ebuild` w/out setup
-	if [[ -z ${MAKE_ARGS} ]] ; then
-		die "Your MAKE_ARGS is empty ... are you running 'ebuild' but forgot to execute 'setup' ?"
-	fi
+	make_args
 
 	if [[ ${PV} == "9999" ]] ; then
 		local ver="git-$(echo ${EGIT_VERSION} | cut -c1-8)"
@@ -101,6 +100,7 @@ set_config_yes_no() {
 }
 
 src_install() {
+	make_args
 	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
 
 	# move the shared libs back to /usr so ldscript can install
@@ -115,7 +115,8 @@ src_install() {
 
 	# Backup our default runlevels
 	dodir /usr/share/"${PN}"
-	mv "${D}"/etc/runlevels "${D}"/usr/share/${PN} || die
+	cp -PR "${D}"/etc/runlevels "${D}"/usr/share/${PN} || die
+	rm -rf "${D}"/etc/runlevels
 
 	# Stick with "old" net as the default for now
 	doconfd conf.d/net || die
