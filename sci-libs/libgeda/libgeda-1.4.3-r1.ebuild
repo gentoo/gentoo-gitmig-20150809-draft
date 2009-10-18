@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.3-r1.ebuild,v 1.2 2009/05/22 08:14:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.3-r1.ebuild,v 1.3 2009/10/18 17:36:56 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://geda.seul.org/release/v$(get_version_component_range 1-2)/${PV}/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 IUSE="nls threads"
 
 RDEPEND=">=dev-libs/glib-2.4
