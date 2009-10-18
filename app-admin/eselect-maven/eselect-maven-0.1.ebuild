@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-maven/eselect-maven-0.1.ebuild,v 1.3 2009/05/13 11:12:28 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-maven/eselect-maven-0.1.ebuild,v 1.4 2009/10/18 22:14:38 betelgeuse Exp $
 
 EAPI=1
 
@@ -16,8 +16,9 @@ RDEPEND=">=app-admin/eselect-1.0.10
 	!<dev-java/maven-bin-2.0.10-r1:2.1"
 PDEPEND="
 || (
-	dev-java/maven-bin:2.0
+	dev-java/maven-bin:2.2
 	dev-java/maven-bin:2.1
+	dev-java/maven-bin:2.0
 )"
 
 src_install() {
