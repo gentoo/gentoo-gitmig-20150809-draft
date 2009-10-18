@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.29 2009/10/07 18:36:07 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.30 2009/10/18 22:49:14 weaver Exp $
+
+*seaview-4.2 (18 Oct 2009)
+
+  18 Oct 2009; Andrey Kislyuk <weaver@gentoo.org>
+  +files/seaview-4.2-gcc44.patch, +seaview-4.2.ebuild:
+  Version bump and gcc-4.4 patch
 
   07 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> metadata.xml,
   +seaview-4.1.ebuild, seaview-20071113.ebuild:
