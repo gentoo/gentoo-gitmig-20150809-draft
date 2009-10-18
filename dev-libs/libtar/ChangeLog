@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libtar
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.4 2008/12/31 03:20:25 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.5 2009/10/18 16:13:56 vostorga Exp $
+
+*libtar-1.2.11-r2 (18 Oct 2009)
+
+  18 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
+  +libtar-1.2.11-r2.ebuild, +files/libtar-1.2.11-example-fix.patch:
+  Removing memory leak patch due to miscompilation in applications depending
+  on libtar. Check bug 228445 for reference
 
   31 Dec 2008; Jeremy Olexa <darkside@gentoo.org> libtar-1.2.11-r1.ebuild:
   add ~amd64 kw, bug 250566
