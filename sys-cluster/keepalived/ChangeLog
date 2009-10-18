@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/keepalived
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.62 2009/09/18 09:40:58 xmerlin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.63 2009/10/18 05:52:43 robbat2 Exp $
+
+*keepalived-1.1.19 (18 Oct 2009)
+
+  18 Oct 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +keepalived-1.1.19.ebuild,
+  +files/keepalived-1.1.19-do-not-need-kernel-sources.patch,
+  +files/keepalived-1.1.19-gcc44-fixup.patch:
+  Version bump.
 
   18 Sep 2009; Christian Zoffoli <xmerlin@gentoo.org>
   keepalived-1.1.17.ebuild:
