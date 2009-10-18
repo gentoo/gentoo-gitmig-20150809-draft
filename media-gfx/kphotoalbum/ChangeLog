@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.41 2009/10/13 09:03:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.42 2009/10/18 18:26:10 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kphotoalbum-4.0.1.ebuild:
+  x86 stable, bug #288840
 
   13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   kphotoalbum-4.0.1.ebuild:
