@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.1 2009/10/18 18:45:50 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.2 2009/10/18 23:51:41 mr_bones_ Exp $
 
 inherit base
 
@@ -32,7 +32,6 @@ RDEPEND="dev-libs/libusb
 				>=dev-cpp/libglademm-2.4
 				>=dev-cpp/glibmm-2.4 )
 	opensync? ( =app-pda/libopensync-0.22* )"
-
 
 src_compile(){
 	econf \
@@ -82,4 +81,3 @@ pkg_postinst() {
 	ewarn "Use at least kernel 2.6.22 and/or disable USB_SUSPEND."
 	ewarn
 }
-
