@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jp2a
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/ChangeLog,v 1.7 2009/10/17 11:40:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/ChangeLog,v 1.8 2009/10/18 17:44:55 nixnut Exp $
+
+  18 Oct 2009; nixnut <nixnut@gentoo.org> jp2a-1.0.6-r1.ebuild:
+  ppc stable #286504
 
   17 Oct 2009; <chainsaw@gentoo.org> jp2a-1.0.6-r1.ebuild:
   Marked stable on AMD64 as requested by Pierre in bug #286504. Tested using
