@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact-specialdates
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.117 2009/10/12 21:59:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.118 2009/10/18 17:38:19 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org>
+  kontact-specialdates-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org>
   -kontact-specialdates-3.5.9.ebuild:

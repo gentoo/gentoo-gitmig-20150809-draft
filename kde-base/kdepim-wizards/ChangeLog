@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.119 2009/10/12 20:54:53 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.120 2009/10/18 17:35:29 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kdepim-wizards-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org>
   -kdepim-wizards-3.5.9.ebuild:

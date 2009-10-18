@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.133 2009/10/13 17:03:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.134 2009/10/18 17:31:47 maekke Exp $
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> kgpg-4.3.1.ebuild:
+  x86 stable, bug #287697
 
   13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kgpg-3.5.10.ebuild:
   Remove built_with_use wrt #286719, thanks to Bartosz Szreder for patch.
