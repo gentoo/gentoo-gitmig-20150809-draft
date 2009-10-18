@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.28 2009/07/15 18:52:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.29 2009/10/18 11:36:47 flameeyes Exp $
+
+*iscsitarget-1.4.18 (18 Oct 2009)
+
+  18 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iscsitarget-1.4.18.ebuild, +files/iscsitarget-1.4.18+linux-2.6.32.patch:
+  Version bump and add patch to build with 2.6.32. Move the ietd binary to
+  /usr/libexec since it should never be executed directly.
 
   15 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -iscsitarget-0.4.16_p162.ebuild:
