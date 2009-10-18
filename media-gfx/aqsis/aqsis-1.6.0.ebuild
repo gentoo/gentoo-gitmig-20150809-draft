@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.4.2.ebuild,v 1.2 2009/08/07 16:18:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.6.0.ebuild,v 1.1 2009/10/18 15:30:57 maekke Exp $
 
 EAPI="1"
 
@@ -35,11 +35,9 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-libs/libxslt
-	>=dev-util/cmake-2.4.6
+	>=dev-util/cmake-2.6.3
 	>=sys-devel/bison-1.35
 	>=sys-devel/flex-2.5.4"
-
-PATCHES=( "${FILESDIR}/${P}-gcc44.patch" )
 
 src_compile() {
 	if use fltk ; then
@@ -67,6 +65,7 @@ src_compile() {
 }
 
 src_install() {
-	DOCS="AUTHORS INSTALL README ReleaseNotes"
+	DOCS="AUTHORS INSTALL README"
+	newdoc "release-notes/1.6/summary-1.6.0.txt" ReleaseNotes
 	cmake-utils_src_install
 }

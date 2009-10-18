@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/aqsis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/ChangeLog,v 1.19 2009/08/07 16:18:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/ChangeLog,v 1.20 2009/10/18 15:30:57 maekke Exp $
+
+*aqsis-1.6.0 (18 Oct 2009)
+
+  18 Oct 2009; Markus Meier <maekke@gentoo.org> -aqsis-1.4.2.ebuild,
+  -files/aqsis-1.4.2-gcc44.patch, +aqsis-1.6.0.ebuild:
+  version bump by Chris Foster in bug #288558, remove old
 
   07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> aqsis-1.4.2.ebuild,
   +files/aqsis-1.4.2-gcc44.patch:
