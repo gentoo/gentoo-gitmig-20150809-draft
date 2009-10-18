@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.408 2009/10/12 19:01:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.409 2009/10/18 07:24:58 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2484,7 +2484,7 @@ disable_multilib_libjava() {
 fix_libtool_libdir_paths() {
 	pushd "${D}" >/dev/null
 
-	pushd "${1}" >/dev/null
+	pushd "./${1}" >/dev/null
 	local dir="${PWD#${D}}"
 	local allarchives=$(echo *.la)
 	allarchives="\(${allarchives// /\\|}\)"
