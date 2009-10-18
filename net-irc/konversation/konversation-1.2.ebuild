@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.2.ebuild,v 1.1 2009/10/09 12:11:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.2.ebuild,v 1.2 2009/10/18 19:23:29 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://konversation.kde.org"
 SRC_URI="mirror://kde/stable/${PN}/${MY_PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="+crypt debug"
 
@@ -26,7 +26,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	mycmakeargs="$(cmake-utils_use_with crypt QCA2)"
