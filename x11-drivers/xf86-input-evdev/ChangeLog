@@ -1,6 +1,21 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.122 2009/10/11 11:21:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.123 2009/10/18 21:56:43 remi Exp $
+
+  18 Oct 2009; Rémi Cardona <remi@gentoo.org>
+  -files/1.1.5-fix_compatibility.patch, -xf86-input-evdev-2.2.3.ebuild,
+  -files/1.99.2/0002-Check-for-XINPUT-ABI-parameters-of-InitValuatorClas.pat
+  ch,
+  -files/2.2.0-Restore-repeat-filtering-for-server-1.5-and-earlier.patch,
+  -xf86-input-evdev-2.2.4.ebuild, -files/1.1.5-zaphod-mouse-fix.patch,
+  -files/1.99.2/0004-Check-for-XINPUT-ABI-3-corrected-version.patch,
+  -files/1.99.2/0001-Fail-if-the-device-cannot-be-grabbed-during-the-prob.pa
+  tch,
+  -files/1.99.2/0003-Revert-Check-for-XINPUT-ABI-parameters-of-InitValu.patc
+  h,
+  -files/1.99.2/0005-evdev-Port-b4a5a204-Fix-pointer-crossing-screen-bu.patc
+  h:
+  drop old ebuilds
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xf86-input-evdev-2.2.5.ebuild:
   ppc stable #282290
