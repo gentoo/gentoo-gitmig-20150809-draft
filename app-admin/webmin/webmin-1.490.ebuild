@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.490.ebuild,v 1.2 2009/10/14 22:27:25 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.490.ebuild,v 1.3 2009/10/18 00:06:25 vostorga Exp $
 
 inherit eutils pam
 
@@ -38,6 +38,8 @@ src_install() {
 	# Bug #249904
 	addpredict /dev/mapper/control
 	addpredict /etc/lvm/cache
+	# Bug #194305
+	addpredict /var/spool/cron/crontabs
 
 	rm -f mount/freebsd-mounts*
 	rm -f mount/netbsd-mounts*
