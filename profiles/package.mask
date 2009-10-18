@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10610 2009/10/18 20:24:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10611 2009/10/18 20:33:54 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
+# Fails to build with KDE4 installed wrt bug #279716.
+# Masked for removal in 30 days.
+kde-misc/ksplash-engine-moodin
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
 # Fails to build with KDE4 installed wrt bug #277575.
