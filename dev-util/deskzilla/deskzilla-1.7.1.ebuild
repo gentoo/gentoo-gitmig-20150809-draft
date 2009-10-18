@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.6.ebuild,v 1.3 2009/10/12 11:01:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.7.1.ebuild,v 1.1 2009/10/18 18:06:25 caster Exp $
 
 EAPI=1
 
@@ -56,14 +56,14 @@ src_unpack() {
 }
 
 src_install () {
-	local dir=/opt/${PN}
+	local dir="/opt/${PN}"
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins -r components etc license lib log deskzilla.url
-	insinto ${dir}/license
+	insinto "${dir}/license"
 	doins "${FILESDIR}"/${PN}_gentoo.license
 
-	java-pkg_jarinto ${dir}
+	java-pkg_jarinto "${dir}"
 	java-pkg_dojar ${PN}.jar
 	local dep="xerces-2,picocontainer-1,commons-logging,commons-codec"
 	dep+=",jgoodies-forms,javolution-4,xmlrpc,itext,jazzy"
