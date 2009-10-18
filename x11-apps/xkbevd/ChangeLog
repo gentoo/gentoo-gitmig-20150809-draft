@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xkbevd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbevd/ChangeLog,v 1.25 2009/10/11 10:51:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbevd/ChangeLog,v 1.26 2009/10/18 21:52:07 remi Exp $
+
+*xkbevd-1.1.0 (18 Oct 2009)
+
+  18 Oct 2009; Rémi Cardona <remi@gentoo.org> +xkbevd-1.1.0.ebuild:
+  bump to 1.1.0, sync with overlay
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xkbevd-1.0.2.ebuild:
   ppc stable #282290
