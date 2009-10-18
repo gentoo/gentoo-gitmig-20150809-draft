@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.33 2009/10/16 13:53:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.34 2009/10/18 18:04:32 klausman Exp $
+
+  18 Oct 2009; Tobias Klausmann <klausman@gentoo.org> sphinx-0.6.3.ebuild:
+  Stable on alpha, bug #287617
 
   16 Oct 2009; Jeroen Roovers <jer@gentoo.org> sphinx-0.6.3.ebuild:
   Stable for HPPA (bug #287617).
