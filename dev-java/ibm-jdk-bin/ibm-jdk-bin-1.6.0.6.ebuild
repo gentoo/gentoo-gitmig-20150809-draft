@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.0.ebuild,v 1.7 2009/05/29 20:37:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.6.ebuild,v 1.1 2009/10/18 19:52:15 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -9,46 +9,58 @@ JAVACOMM_RELEASE=$(get_version_component_range 3)
 SERVICE_RELEASE=$(get_version_component_range 4)
 SERVICE_RELEASE_LINK="${SERVICE_RELEASE}"
 TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
-JAVACOMM_PV="3.${JAVACOMM_RELEASE}-${SERVICE_RELEASE}.0"
+#JAVACOMM_PV="3.${JAVACOMM_RELEASE}-${SERVICE_RELEASE}.0"
+# looks like they didn't bump javacomm
+JAVACOMM_PV_ORIG="3.${JAVACOMM_RELEASE}-0.0"
+JAVACOMM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 
 JDK_DIST_PREFIX="ibm-java-sdk-${TGZ_PV}-linux"
-JAVACOMM_DIST_PREFIX="ibm-javacomm-${JAVACOMM_PV}-linux"
+JAVACOMM_DIST_PREFIX="ibm-java-javacomm-${JAVACOMM_PV}-linux"
+JAVACOMM_DIST_PREFIX_ORIG="ibm-java-javacomm-${JAVACOMM_PV_ORIG}-linux"
 
 X86_JDK_DIST="${JDK_DIST_PREFIX}-i386.tgz"
 X86_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-i386.tgz"
+X86_JAVACOMM_DIST_ORIG="${JAVACOMM_DIST_PREFIX_ORIG}-i386.tgz"
 
 AMD64_JDK_DIST="${JDK_DIST_PREFIX}-x86_64.tgz"
 AMD64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-x86_64.tgz"
+AMD64_JAVACOMM_DIST_ORIG="${JAVACOMM_DIST_PREFIX_ORIG}-x86_64.tgz"
 
 PPC_JDK_DIST="${JDK_DIST_PREFIX}-ppc.tgz"
 PPC_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-ppc.tgz"
+PPC_JAVACOMM_DIST_ORIG="${JAVACOMM_DIST_PREFIX_ORIG}-ppc.tgz"
 
 PPC64_JDK_DIST="${JDK_DIST_PREFIX}-ppc64.tgz"
 PPC64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-ppc64.tgz"
+PPC64_JAVACOMM_DIST_ORIG="${JAVACOMM_DIST_PREFIX_ORIG}-ppc64.tgz"
 
 if use x86; then
 	JDK_DIST=${X86_JDK_DIST}
 	JAVACOMM_DIST=${X86_JAVACOMM_DIST}
+	JAVACOMM_DIST_ORIG=${X86_JAVACOMM_DIST_ORIG}
 	S="${WORKDIR}/ibm-java-i386-60"
 	LINK_ARCH="intel"
 elif use amd64; then
 	JDK_DIST=${AMD64_JDK_DIST}
 	JAVACOMM_DIST=${AMD64_JAVACOMM_DIST}
+	JAVACOMM_DIST_ORIG=${AMD64_JAVACOMM_DIST_ORIG}
 	S="${WORKDIR}/ibm-java-x86_64-60"
 	LINK_ARCH="amd64"
 elif use ppc; then
 	JDK_DIST=${PPC_JDK_DIST}
 	JAVACOMM_DIST=${PPC_JAVACOMM_DIST}
+	JAVACOMM_DIST_ORIG=${PPC_JAVACOMM_DIST_ORIG}
 	S="${WORKDIR}/ibm-java-ppc-60"
 	LINK_ARCH="ipseries32"
 elif use ppc64; then
 	JDK_DIST=${PPC64_JDK_DIST}
 	JAVACOMM_DIST=${PPC64_JAVACOMM_DIST}
+	JAVACOMM_DIST_ORIG=${PPC64_JAVACOMM_DIST_ORIG}
 	S="${WORKDIR}/ibm-java-ppc64-60"
 	LINK_ARCH="ipseries64"
 fi
 
-DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}&S_TACT=105AGX05&S_CMP=JDK"
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}_6sr${SERVICE_RELEASE}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.6"
 DESCRIPTION="IBM Java SE Development Kit"
@@ -74,6 +86,8 @@ RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
 RDEPEND="
+	ppc? ( =virtual/libstdc++-3.3 )
+	ppc64? ( =virtual/libstdc++-3.3 )
 	X? (
 		x11-libs/libXext
 		x11-libs/libXft
@@ -116,35 +130,49 @@ opt/${P}/jre/lib/i386/libj9gc24.so
 opt/${P}/jre/lib/i386/libj9bcv24.so
 opt/${P}/jre/lib/i386/classic/libjvm.so"
 
-QA_TEXTRELS_amd64="opt/${P}/jre/lib/amd64/libjclscar_24.so
-opt/${P}/jre/lib/amd64/libj9jit24.so"
-
-QA_EXECSTACK_amd64="opt/${P}/jre/bin/classic/libjvm.so
-opt/${P}/jre/lib/amd64/j9vm/libjvm.so
-opt/${P}/jre/lib/amd64/libj9jvmti24.so
-opt/${P}/jre/lib/amd64/libj9hookable24.so
-opt/${P}/jre/lib/amd64/libj9vm24.so
-opt/${P}/jre/lib/amd64/libjclscar_24.so
-opt/${P}/jre/lib/amd64/libj9thr24.so
-opt/${P}/jre/lib/amd64/libj9dmp24.so
-opt/${P}/jre/lib/amd64/libj9prt24.so
-opt/${P}/jre/lib/amd64/libj9jit24.so
-opt/${P}/jre/lib/amd64/libiverel24.so
-opt/${P}/jre/lib/amd64/libj9trc24.so
-opt/${P}/jre/lib/amd64/libj9dbg24.so
-opt/${P}/jre/lib/amd64/libj9shr24.so
-opt/${P}/jre/lib/amd64/libj9gc24.so
-opt/${P}/jre/lib/amd64/libj9bcv24.so
-opt/${P}/jre/lib/amd64/classic/libjvm.so"
+QA_EXECSTACK_amd64="opt/${P}/jre/lib/amd64/default/libjvm.so
+opt/${P}/jre/lib/amd64/default/libj9jvmti24.so
+opt/${P}/jre/lib/amd64/default/libj9hookable24.so
+opt/${P}/jre/lib/amd64/default/libj9vm24.so
+opt/${P}/jre/lib/amd64/default/libjclscar_24.so
+opt/${P}/jre/lib/amd64/default/libj9jpi24.so
+opt/${P}/jre/lib/amd64/default/libj9thr24.so
+opt/${P}/jre/lib/amd64/default/libj9dmp24.so
+opt/${P}/jre/lib/amd64/default/libj9prt24.so
+opt/${P}/jre/lib/amd64/default/libj9jit24.so
+opt/${P}/jre/lib/amd64/default/libiverel24.so
+opt/${P}/jre/lib/amd64/default/libj9trc24.so
+opt/${P}/jre/lib/amd64/default/libj9dbg24.so
+opt/${P}/jre/lib/amd64/default/libj9shr24.so
+opt/${P}/jre/lib/amd64/default/libj9gc24.so
+opt/${P}/jre/lib/amd64/default/libj9bcv24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libjvm.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9jvmti24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9hookable24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9vm24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libjclscar_24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9jpi24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9thr24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9dmp24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9prt24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9jit24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libiverel24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9trc24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9dbg24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9shr24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9gc24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9bcv24.so"
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
 	einfo "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under Java SE 6, download GA for your arch:" #SR${SERVICE_RELEASE}
+	einfo "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
 	einfo "${JDK_DIST}"
 	if use javacomm ; then
-		einfo "${JAVACOMM_DIST}"
+		einfo "Also download ${JAVACOMM_DIST_ORIG}"
+		ewarn "and save it as ${JAVACOMM_DIST}"
+		ewarn "Renaming is needed because javacomm changes content without changing filename."
 	fi
 
 	einfo "You can also use a direct link to your arch download page:"
@@ -152,7 +180,7 @@ pkg_nofetch() {
 	einfo "Place the file(s) in: ${DISTDIR}"
 	einfo "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if GA is not available at ${DOWNLOADPAGE}"
+	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link to arch download page. If it doesn't work, file a bug."
@@ -217,5 +245,16 @@ src_install() {
 	dodoc "${S}"/{copyright,notices.txt,readmefirst.lnx.txt} || die
 
 	set_java_env
+
+	# a workaround to fix the BOOTCLASSPATH in our env file
+	# this is not optimal, using -Xcompressedrefs would probably make it
+	# expect the compressedrefs version...
+	if use amd64; then
+		sed -i -e "s|vm.jar|amd64/default/jclSC160/vm.jar|g" "${D}${JAVA_VM_CONFIG_DIR}/${VMHANDLE}" || die "sed failed"
+	fi
+	if use ppc64; then
+		sed -i -e "s|vm.jar|ppc64/default/jclSC160/vm.jar|g" "${D}${JAVA_VM_CONFIG_DIR}/${VMHANDLE}" || die "sed failed"
+	fi
+
 	java-vm_revdep-mask
 }
