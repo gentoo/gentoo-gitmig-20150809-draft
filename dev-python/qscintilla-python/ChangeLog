@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.44 2009/10/12 19:44:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.45 2009/10/18 14:47:12 armin76 Exp $
+
+  18 Oct 2009; Raúl Porcel <armin76@gentoo.org>
+  qscintilla-python-2.4.ebuild:
+  alpha/ia64/sparc stable wrt #284707
 
   12 Oct 2009; Jeroen Roovers <jer@gentoo.org> qscintilla-python-2.4.ebuild:
   Stable for HPPA (bug #284707).
