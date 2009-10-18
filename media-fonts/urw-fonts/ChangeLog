@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.36 2009/10/13 11:17:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.37 2009/10/18 16:46:26 aballier Exp $
+
+  18 Oct 2009; Alexis Ballier <aballier@gentoo.org> urw-fonts-2.4.6.ebuild:
+  keyword ~sparc-fbsd
 
   13 Oct 2009; Peter Volkov <pva@gentoo.org> urw-fonts-2.4.6.ebuild:
   Added some urw-fonts history, since it's really not a quick task to find
