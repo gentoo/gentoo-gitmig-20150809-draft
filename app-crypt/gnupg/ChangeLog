@@ -1,7 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.355 2009/10/12 02:50:44 robbat2 Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.356 2009/10/18 17:46:30 nixnut Exp $
+
+  18 Oct 2009; nixnut <nixnut@gentoo.org> gnupg-1.4.10.ebuild:
+  ppc stable #287436
+
   12 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> gnupg-2.0.12.ebuild,
   gnupg-2.0.13.ebuild:
   Add warning to restart your agent per request from Anarchy. Using a new
