@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-hy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.2 2007/11/03 22:12:13 uberlord Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.3 2009/10/18 20:27:18 halcy0n Exp $
+
+  18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-hy-0.10.0.ebuild:
+  QA fixes; IUSE is not defined
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-hy-0.10.0.ebuild:
   Keyworded ~sparc-fbsd and ~x86-fbsd
