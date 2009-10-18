@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.45 2009/05/30 06:05:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.46 2009/10/18 11:41:51 graaff Exp $
+
+*wml-2.0.11-r4 (18 Oct 2009)
+
+  18 Oct 2009; Hans de Graaff <graaff@gentoo.org> +wml-2.0.11-r4.ebuild,
+  +files/wml-2.0.11-perl510.patch:
+  Fix compilation with perl 5.10, thanks to Arttu Valo in #281268 for
+  providing and testing the patch. Also fix a configure warning and convert
+  to EAPI to make the different phases in the ebuild more clearly separated.
 
   30 May 2009; Hans de Graaff <graaff@gentoo.org> -wml-2.0.11-r1.ebuild,
   -wml-2.0.11-r2.ebuild:
