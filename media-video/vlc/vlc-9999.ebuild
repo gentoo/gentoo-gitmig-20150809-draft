@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.46 2009/10/18 21:20:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.47 2009/10/18 21:28:09 aballier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,6 @@ MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
 PATCHLEVEL="72"
-M4_TARBALL_VERSION="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -39,8 +38,7 @@ else
 fi
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2
-	mirror://gentoo/${PN}-m4-${M4_TARBALL_VERSION}.tar.bz2"
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -228,7 +226,7 @@ src_prepare() {
 	rm -f m4/lt* m4/libtool.m4
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-	AT_M4DIR="m4 ${WORKDIR}/${PN}-m4" eautoreconf
+	eautoreconf
 }
 
 src_configure() {
