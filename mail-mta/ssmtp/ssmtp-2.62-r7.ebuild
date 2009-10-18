@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r7.ebuild,v 1.1 2009/10/17 17:37:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r7.ebuild,v 1.2 2009/10/18 23:56:22 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -36,7 +36,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-maxsysuid-conf.patch
 	fi
 
-	# 
+	#
 	epatch "${FILESDIR}/${P}-from_format_fix.patch"
 
 	# CVE-2008-3962
