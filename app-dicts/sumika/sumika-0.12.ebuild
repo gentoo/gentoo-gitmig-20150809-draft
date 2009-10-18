@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.12.ebuild,v 1.8 2006/03/09 19:29:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.12.ebuild,v 1.9 2009/10/18 01:05:29 halcy0n Exp $
 
 DESCRIPTION="management utility for dictionaries of Anthy, SKK, Canna and PRIME"
 HOMEPAGE="http://sumika.sourceforge.jp/"
@@ -25,9 +25,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# we have our own place for docs
 	dodir /usr/share/doc
-	mv ${D}/usr/doc/${PN} ${D}/usr/share/doc/${PF}
+	mv "${D}/usr/doc/${PN}" "${D}/usr/share/doc/${PF}"
 }
