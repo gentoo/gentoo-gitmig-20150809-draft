@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.26 2009/10/11 11:26:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.27 2009/10/19 20:05:49 grobian Exp $
 
 # DON'T inherit distutils because it will cause a circular dependency with python
 #inherit distutils
@@ -22,6 +22,5 @@ src_compile() {
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
-	python setup.py install --root="${ED}" || die
+	python setup.py install --root="${D}" || die
 }
