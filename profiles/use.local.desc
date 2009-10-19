@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4909 2009/10/19 01:48:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4910 2009/10/19 16:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1491,7 +1491,8 @@ media-gfx/potrace:metric -  default to a4 paper size and metric measurement
 media-gfx/pstoedit:emf -  enables media-libs/libemf support 
 media-gfx/showimg:kipi -  Support for the KDE Image Plugin Interface. 
 media-gfx/splashutils:fbcondecor -  Support for the fbcondecor kernel patch. 
-media-gfx/ufraw:contrast -  enable the experimental contrast setting option 
+media-gfx/ufraw:contrast -  enable contrast setting option 
+media-gfx/ufraw:hotpixels -  enable hot pixel elimination 
 media-gfx/ufraw:lensfun -  enable the lensfun lens-correction library 
 media-gfx/ufraw:timezone -  enable DST correction for file timestamps 
 media-gfx/yafaray:blender - install media-gfx/blender scripts
