@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.375 2009/10/16 17:52:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.376 2009/10/19 13:02:22 ranger Exp $
+
+  18 Oct 2009; Brent Baude <ranger@gentoo.org> phpmyadmin-2.11.9.6.ebuild:
+  Marking phpmyadmin-2.11.9.6 ppc64 for bug 288899
 
   16 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
   phpmyadmin-2.11.9.6.ebuild:
