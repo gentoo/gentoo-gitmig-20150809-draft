@@ -1,6 +1,14 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.74 2009/10/10 15:53:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.75 2009/10/19 23:13:03 matsuu Exp $
+
+*kazehakase-0.5.7 (19 Oct 2009)
+
+  19 Oct 2009; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.5.0.ebuild,
+  -kazehakase-0.5.5-r1.ebuild, +kazehakase-0.5.7.ebuild,
+  +files/kazehakase-0.5.7-gentoo.patch,
+  +files/kazehakase-0.5.7-gtkentry.patch:
+  Version bumped, bug #284181. Cleanup.
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> kazehakase-0.5.6-r1.ebuild:
   sparc stable wrt #275706
