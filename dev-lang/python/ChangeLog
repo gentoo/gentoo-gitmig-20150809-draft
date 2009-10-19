@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.427 2009/10/17 05:09:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.428 2009/10/19 16:02:56 armin76 Exp $
+
+  19 Oct 2009; Raúl Porcel <armin76@gentoo.org> python-2.6.2-r1.ebuild:
+  s390/sh stable wrt #277645
 
   17 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.5.4-r3.ebuild, python-2.6.3.ebuild, python-3.1.1-r1.ebuild:
