@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.26.1.ebuild,v 1.4 2009/05/05 15:20:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.26.3.ebuild,v 1.1 2009/10/19 19:49:11 eva Exp $
 
 EAPI="2"
 
@@ -22,8 +22,10 @@ RDEPEND=">=dev-libs/glib-2.17.3
 DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
 	>=dev-util/intltool-0.35
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.11 )"
 
+DOCS="AUTHORS ChangeLog NEWS"
 G2CONF="${G2CONF} --disable-static"
 
 src_prepare() {
@@ -41,11 +43,7 @@ src_prepare() {
 	# Conditional patching is purely to avoid eautoreconf
 	if use test && ! use doc; then
 		# http://bugzilla.gnome.org/show_bug.cgi?id=577774
-		epatch "${FILESDIR}/${P}-fix-tests-without-gtk-doc.patch"
+		epatch "${FILESDIR}/${PN}-2.26.1-fix-tests-without-gtk-doc.patch"
 		eautoreconf
 	fi
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
 }
