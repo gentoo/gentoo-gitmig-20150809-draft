@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.2.ebuild,v 1.4 2009/10/15 17:47:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.2.ebuild,v 1.5 2009/10/19 21:06:46 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils flag-o-matic games
 
 LVL_PV="0.6.0" #they unfortunately don't release both at the same time, why ~ as separator :(
 LVL="inksmoto-${LVL_PV}"
@@ -49,6 +49,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# bug #289792
+	filter-flags -DdDOUBLE
+	has_version 'dev-games/ode[double-precision]' && append-flags -DdDOUBLE
+
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-enable-zoom=1 \
