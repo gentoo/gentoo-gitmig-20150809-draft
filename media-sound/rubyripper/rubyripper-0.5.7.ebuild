@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.7.ebuild,v 1.1 2009/09/30 22:23:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.7.ebuild,v 1.2 2009/10/19 21:13:37 abcd Exp $
 
 EAPI=2
+VIRTUALX_REQUIRED="always"
 inherit ruby virtualx
 
 DESCRIPTION="A secure audio ripper for Linux"
@@ -12,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="cli flac +gtk +mp3 normalize +vorbis wav X"
+IUSE="cli flac +gtk +mp3 normalize +vorbis wav"
 
 ILINGUAS="de es fr hu nl ru"
 
