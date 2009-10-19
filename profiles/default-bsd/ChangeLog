@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.71 2009/09/19 23:34:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.72 2009/10/19 21:08:45 aballier Exp $
+
+  19 Oct 2009; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/sparc/use.mask:
+  mask avahi useflag on sparc fbsd
 
   19 Sep 2009; Alexis Ballier <aballier@gentoo.org>
   fbsd/6.2/x86/package.use.mask:
