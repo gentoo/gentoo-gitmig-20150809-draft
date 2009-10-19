@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xrefresh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.25 2009/10/11 11:08:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.26 2009/10/19 18:26:06 scarabeus Exp $
+
+*xrefresh-1.0.3 (19 Oct 2009)
+
+  19 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xrefresh-1.0.3.ebuild:
+  Version bump.
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xrefresh-1.0.2.ebuild:
   ppc stable #282290
