@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.6 2009/06/03 14:17:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.7 2009/10/19 05:01:04 mr_bones_ Exp $
 
 EAPI=2
-
 inherit eutils games
 
 DESCRIPTION="A topdown shooter"
@@ -17,10 +16,9 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl
+	media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
-RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-gcc34.patch

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/shootingstar
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.6 2009/06/03 14:17:13 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.7 2009/10/19 05:01:04 mr_bones_ Exp $
+
+  19 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  shootingstar-1.2.0.ebuild:
+  add video use dep for libsdl; tidy
 
   03 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/shootingstar-1.2.0-gcc44.patch, shootingstar-1.2.0.ebuild:
