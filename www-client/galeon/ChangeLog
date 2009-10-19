@@ -1,6 +1,10 @@
 # ChangeLog for www-client/galeon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.51 2009/08/27 18:37:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.52 2009/10/19 11:05:38 ssuominen Exp $
+
+  19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  galeon-2.0.7-r1.ebuild:
+  amd64 stable wrt #282170
 
   27 Aug 2009; Raúl Porcel <armin76@gentoo.org> galeon-2.0.7-r1.ebuild:
   Mark -sparc since it needs xulrunner-1.9.1 and doesn't compile on sparc
