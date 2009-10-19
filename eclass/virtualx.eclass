@@ -1,13 +1,41 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.29 2009/08/10 15:44:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.30 2009/10/19 21:12:07 abcd Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
 # This eclass can be used for packages that needs a working X environment to build
 
-DEPEND="X? ( x11-base/xorg-server x11-apps/xhost )"
-IUSE="X"
+# Is a dependency on xorg-server and xhost needed?
+# Valid values are "always", "tests", and "manual"
+VIRTUALX_REQUIRED="${VIRTUALX_REQUIRED:-tests}"
+
+# Dep string available for use outside of eclass, in case a more
+# complicated dep is needed
+VIRTUALX_DEPEND="x11-base/xorg-server
+	x11-apps/xhost"
+
+case ${VIRTUALX_REQUIRED} in
+	always)
+		DEPEND="${VIRTUALX_DEPEND}"
+		RDEPEND=""
+		;;
+	tests)
+		DEPEND="test? ( ${VIRTUAX_DEPEND} )"
+		RDEPEND=""
+		IUSE="test"
+		;;
+	manual)
+		;;
+	*)
+		eerror "Invalid value (${VIRTUALX_REQUIRED}) for VIRTUALX_REQUIRED"
+		eerror "Valid values are:"
+		eerror "  always"
+		eerror "  tests"
+		eerror "  manual"
+		die "Invalid value (${VIRTUALX_REQUIRED}) for VIRTUALX_REQUIRED"
+		;;
+esac
 
 DESCRIPTION="Based on the $ECLASS eclass"
 
@@ -40,7 +68,7 @@ virtualmake() {
 		export SANDBOX_DISABLED="1"
 
 		local i=0
-		XDISPLAY=$(i=0; while [[ -f /tmp/.X${i}-lock ]] ; do i=$((${i}+1));done; echo ${i})
+		XDISPLAY=$(i=0; while [[ -f /tmp/.X${i}-lock ]] ; do ((i++));done; echo ${i})
 
 		# If we are in a chrooted environment, and there is already a
 		# X server started outside of the chroot, Xvfb will fail to start
@@ -66,12 +94,12 @@ virtualmake() {
 		local start=${XDISPLAY}
 		while [[ ! -f /tmp/.X${XDISPLAY}-lock ]] ; do
 			# Stop trying after 15 tries
-			if [[ $((${XDISPLAY} - ${start})) -gt 15 ]] ; then
+			if ((XDISPLAY - start > 15)) ; then
 
 				eerror ""
 				eerror "Unable to start Xvfb."
 				eerror ""
-				eerror "'/usr/bin/Xvfb :${XDISPLAY} -fp built-ins -screen 0 800x600x24' returns:"
+				eerror "'${XVFB} :${XDISPLAY} -fp built-ins -screen 0 800x600x24' returns:"
 				eerror ""
 				${XVFB} :${XDISPLAY} -fp built-ins -screen 0 800x600x24
 				eerror ""
@@ -80,7 +108,7 @@ virtualmake() {
 				die
 			fi
 
-			XDISPLAY=$((${XDISPLAY}+1))
+			((XDISPLAY++))
 			${XVFB} :${XDISPLAY} -fp built-ins -screen 0 800x600x24 &>/dev/null &
 			sleep 2
 		done
@@ -93,14 +121,14 @@ virtualmake() {
 		export DISPLAY=:${XDISPLAY}
 		#Do not break on error, but setup $retval, as we need
 		#to kill Xvfb
-		${maketype} $*
+		${maketype} "$@"
 		retval=$?
 
 		#Now kill Xvfb
 		kill $(cat /tmp/.X${XDISPLAY}-lock)
 	else
 		#Normal make if we can connect to an X display
-		${maketype} $*
+		${maketype} "$@"
 		retval=$?
 	fi
 
@@ -110,17 +138,17 @@ virtualmake() {
 #Same as "make", but setup the Xvfb hack if needed
 Xmake() {
 	export maketype="make"
-	virtualmake "$*"
+	virtualmake "$@"
 }
 
 #Same as "emake", but setup the Xvfb hack if needed
 Xemake() {
 	export maketype="emake"
-	virtualmake "$*"
+	virtualmake "$@"
 }
 
 #Same as "econf", but setup the Xvfb hack if needed
 Xeconf() {
 	export maketype="econf"
-	virtualmake "$*"
+	virtualmake "$@"
 }
