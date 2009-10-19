@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.8.ebuild,v 1.1 2009/04/27 14:28:06 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.8.ebuild,v 1.2 2009/10/19 10:43:37 s4t4n Exp $
 
 inherit elisp-common eutils pam
 
@@ -123,6 +123,7 @@ src_install()
 
 	use emacs && elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
+	rm "${D}/etc/pam.d/qingy"
 	pamd_mimic system-local-login qingy auth account password session
 }
 
