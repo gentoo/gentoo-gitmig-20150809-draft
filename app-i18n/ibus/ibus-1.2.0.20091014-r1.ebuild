@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20090904.ebuild,v 1.1 2009/09/07 23:57:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20091014-r1.ebuild,v 1.1 2009/10/19 16:39:42 matsuu Exp $
 
 EAPI="1"
-inherit eutils multilib python
+inherit eutils gnome2-utils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -25,6 +25,8 @@ RDEPEND=">=dev-libs/glib-2.18
 	>=dev-python/pygobject-2.14
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	>=dev-lang/perl-5.8.1
+	dev-perl/XML-Parser
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
@@ -56,6 +58,9 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
+	# bug 289547
+	keepdir /usr/share/ibus/{engine,icons}
+
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
@@ -82,6 +87,7 @@ pkg_postinst() {
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
 	python_mod_optimize /usr/share/${PN}
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
@@ -89,4 +95,5 @@ pkg_postrm() {
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
 
 	python_mod_cleanup /usr/share/${PN}
+	gnome2_icon_cache_update
 }
