@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.18 2009/10/14 00:56:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.19 2009/10/19 21:25:16 abcd Exp $
 
 WANT_AUTOMAKE=1.8
+VIRTUALX_REQUIRED="manual"
 
 inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 
@@ -18,7 +19,7 @@ SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl berkdb ipv6 ldap X"
+IUSE="ssl berkdb ipv6 ldap test X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
@@ -26,7 +27,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	|| ( ( >sys-libs/e2fsprogs-libs-1.40.11 ) ( sys-libs/com_err sys-libs/ss ) )
 	sys-libs/cracklib
 	!virtual/krb5"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
 PROVIDE="virtual/krb5"
 
 GENTOODIR=${WORKDIR}/gentoo

@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r3.ebuild,v 1.3 2009/08/06 08:58:45 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r3.ebuild,v 1.4 2009/10/19 21:25:16 abcd Exp $
 
 EAPI=1
+VIRTUALX_REQUIRED="manual"
 
 inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 
@@ -18,7 +19,7 @@ SRC_URI="http://www.h5l.org/dist/src/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~m68k"
-IUSE="afs +berkdb hdb-ldap ipv6 otp pkinit ssl threads X"
+IUSE="afs +berkdb hdb-ldap ipv6 otp pkinit ssl test threads X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
@@ -32,7 +33,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=sys-devel/autoconf-2.62"
+	>=sys-devel/autoconf-2.62
+	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
 #	>=sys-devel/libtool-2.2"
 
 PROVIDE="virtual/krb5"
