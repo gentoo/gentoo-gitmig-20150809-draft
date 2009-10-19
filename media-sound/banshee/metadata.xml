@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>dotnet</herd>
-  <herd>sound</herd>
+  <herd>gstreamer</herd>
   <use>
     <flag name="boo">Use external Boo instead of the bundled one</flag>
     <flag name="daap">Build with Daap support</flag>
