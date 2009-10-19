@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.29 2009/10/13 15:14:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.30 2009/10/19 21:43:06 klausman Exp $
+
+  19 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  GnuPG-Interface-0.42.ebuild:
+  Keyworded on alpha, bug #287962
 
   13 Oct 2009; Jeroen Roovers <jer@gentoo.org> GnuPG-Interface-0.42.ebuild:
   Marked ~hppa (bug #287962).

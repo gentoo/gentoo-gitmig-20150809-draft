@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.3 2009/10/13 15:11:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.4 2009/10/19 21:42:07 klausman Exp $
+
+  19 Oct 2009; Tobias Klausmann <klausman@gentoo.org> Mouse-0.39.ebuild:
+  Keyworded on alpha, bug #287962
 
   13 Oct 2009; Jeroen Roovers <jer@gentoo.org> Mouse-0.37.ebuild,
   Mouse-0.39.ebuild:
