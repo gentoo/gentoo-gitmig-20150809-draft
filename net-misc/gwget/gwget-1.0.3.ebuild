@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.1.ebuild,v 1.1 2009/02/22 19:13:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.3.ebuild,v 1.1 2009/10/19 19:45:11 eva Exp $
+
+EAPI="2"
+GCONF_DEBUG="no"
 
 inherit gnome2
 
@@ -18,7 +21,6 @@ RDEPEND="net-misc/wget
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/glib-2.16.0
 	>=gnome-base/gconf-2
-	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2
 	>=dev-libs/dbus-glib-0.70
 	epiphany? ( >=www-client/epiphany-1.4 )
@@ -42,5 +44,8 @@ src_install() {
 	gnome2_src_install
 
 	# remove /var/lib, which is created without any reason
-	rm -rf "${D}/var"
+	rm -rf "${D}"/var || die "rm failed"
+
+	# remove useless la files
+	find "${D}" -name '*.la' -delete
 }
