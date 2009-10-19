@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.16.ebuild,v 1.1 2009/10/19 16:39:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.16.ebuild,v 1.2 2009/10/19 20:40:53 maekke Exp $
 
 inherit fdo-mime gnome2-utils
 
 DESCRIPTION="RAW Image format viewer and GIMP plugin"
 HOMEPAGE="http://ufraw.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-1.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
