@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdpyinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.47 2009/10/11 11:14:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.48 2009/10/19 19:13:51 scarabeus Exp $
+
+*xdpyinfo-1.1.0 (19 Oct 2009)
+
+  19 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xdpyinfo-1.1.0.ebuild:
+  Version bump. Rework deps to reflect the configure.ac.
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> ChangeLog:
   ppc stable #282290
