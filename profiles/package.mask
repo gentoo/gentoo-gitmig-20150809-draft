@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10614 2009/10/18 23:49:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10615 2009/10/19 08:55:46 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Oct 2009)
+# No new x264 support.
+media-plugins/gst-plugins-x264
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
 # Fails to build with KDE4 installed wrt bug #279485.
@@ -374,11 +378,6 @@ dev-python/rhpxl
 # Masked for more testing, especially with cint7, afs and xrootd
 # on amd64 with gcc-4.4. See bug #280925
 =sci-physics/root-5.24.00
-
-# Alexis Ballier <aballier@gentoo.org> (23 Sep 2009)
-# API changes
->=media-libs/x264-0.0.20090923
->=media-video/x264-encoder-0.0.20090923
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (22 Sep 2009)
 # Removal in 30 days. We should keep only freeglut around.

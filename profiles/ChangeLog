@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3412 2009/10/18 23:49:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3413 2009/10/19 08:55:45 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask x264 and mask gst-plugins-x264.
 
   18 Oct 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Claws Mail has been bumped, so remove mask for plugins
