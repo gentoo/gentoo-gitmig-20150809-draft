@@ -1,8 +1,8 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.70 2009/10/12 20:34:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.71 2009/10/19 23:00:37 eva Exp $
 
-  12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org
+  12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libgnomecanvasmm-2.23.1.ebuild:
   Clean up old revisions.
 

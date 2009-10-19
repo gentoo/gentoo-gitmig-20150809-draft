@@ -1,8 +1,8 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.71 2009/10/12 20:43:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.72 2009/10/19 23:04:54 eva Exp $
 
-  12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org
+  12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libgnomeuimm-2.24.0.ebuild:
   Clean up old revisions.
 
