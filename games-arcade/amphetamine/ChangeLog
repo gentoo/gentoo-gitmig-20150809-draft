@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/amphetamine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.5 2009/07/12 17:24:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.6 2009/10/19 04:58:55 mr_bones_ Exp $
+
+  19 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  amphetamine-0.8.10.ebuild:
+  EAPI=2
 
   12 Jul 2009; Tupone Alfredo <tupone@gentoo.org> amphetamine-0.8.10.ebuild:
   Updating HOMEPAGE. Bug #277499 by Pacho Ramos
