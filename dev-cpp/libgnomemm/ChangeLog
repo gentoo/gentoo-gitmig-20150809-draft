@@ -1,12 +1,12 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.79 2009/10/19 21:48:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.80 2009/10/19 21:50:43 eva Exp $
 
-  19 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org
+  19 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libgnomemm-2.24.0.ebuild, +libgnomemm-2.26.0.ebuild:
   Restore 2.26 from attic since it is 2.24 that should have died.
 
-  12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org
+  12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libgnomemm-2.26.0.ebuild:
   Clean up old revisions.
 
