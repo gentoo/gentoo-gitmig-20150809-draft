@@ -1,8 +1,8 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.52 2009/10/12 22:54:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.53 2009/10/19 23:11:22 eva Exp $
 
-  13 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org
+  13 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -xchat-gnome-0.24.1.ebuild, -xchat-gnome-0.24.3.1.ebuild,
   -xchat-gnome-0.26.0.ebuild:
   Clean up old revisions.
