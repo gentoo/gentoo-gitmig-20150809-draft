@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4910 2009/10/19 16:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4911 2009/10/19 21:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1154,6 +1154,7 @@ gnome-extra/gnome-power-manager:policykit - Enable sys-auth/policykit authentica
 gnome-extra/gtkhtml:glade - Provide integration with dev-util/glade.
 gnome-extra/libgda:mdb - Enables Microsoft Access DB support
 gnome-extra/libgda:xbase - Enables support for xbase databases (dBase, FoxPro, etc.)
+gnome-extra/libgsf:gtk - Enable use of gdk in thumbnailer
 gnome-extra/music-applet:mpd - Enable MPD support
 gnome-extra/nautilus-sendto:eds - Enables support for evolution-sendto using gnome-extra/evolution-data-server
 gnome-extra/nautilus-sendto:empathy - Enables support for net-im/empathy
@@ -3354,6 +3355,7 @@ x11-wm/windowmaker:vdesktop - Enable dynamic virtual desktop (conflicts with sof
 xfce-base/libxfcegui4:glade - Build glade bindings
 xfce-base/thunar:trash-plugin - Build Trash plug-in for panel
 xfce-base/xfce-utils:lock - Enable screen locking
+xfce-base/xfce4-session:fortune - Install tips and tricks app (xfce4-tips), adds dependency on games-misc/fortune-mod
 xfce-base/xfce4-session:gnome-keyring - Support for storing your password.
 xfce-base/xfce4-settings:keyboard - Enable Keyboard layout selection with x11-libs/libxklavier
 xfce-base/xfce4-settings:sound - Enable sound event support with media-libs/libcanberra
