@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.87 2008/07/31 02:58:58 chutzpah Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.88 2009/10/19 12:20:28 ssuominen Exp $
+
+  19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> speex-1.2_rc1.ebuild:
+  amd64 stable wrt #289701
 
 *speex-1.2_rc1 (31 Jul 2008)
 
