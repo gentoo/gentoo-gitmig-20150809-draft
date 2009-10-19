@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/beast-mcmc/beast-mcmc-9999.ebuild,v 1.1 2009/10/02 21:47:11 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/beast-mcmc/beast-mcmc-9999.ebuild,v 1.2 2009/10/19 03:55:31 weaver Exp $
 
 EAPI="2"
 
 ESVN_REPO_URI="http://beast-mcmc.googlecode.com/svn/trunk/"
 
 WANT_ANT_TASKS="ant-junit4"
-EANT_GENTOO_CLASSPATH="colt,jdom-1.0,itext,junit-4,jebl,matrix-toolkits-java,commons-math-1,jdom-jaxen-1.0"
+EANT_GENTOO_CLASSPATH="colt,jdom-1.0,itext,junit-4,jebl,matrix-toolkits-java,commons-math-2,jdom-jaxen-1.0"
 JAVA_ANT_REWRITE_CLASSPATH="true"
 JAVA_ANT_ENCODING="latin1"
 JAVA_PKG_BSFIX_NAME="build.xml build_BEAST_MCMC.xml build_coalsim.xml build_development.xml build_pathogen.xml build_release.xml build_treestat.xml build_vcs.xml"
@@ -31,7 +31,7 @@ COMMON_DEPS="dev-java/colt:0
 	dev-java/junit:4
 	dev-java/jebl:0
 	dev-java/matrix-toolkits-java
-	dev-java/commons-math:1
+	dev-java/commons-math:2
 	dev-java/jdom-jaxen:1.0"
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEPS}"
@@ -61,7 +61,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar bin/dist/*.jar dist/*.jar
+	java-pkg_dojar build/dist/*.jar dist/*.jar
 
 	java-pkg_dolauncher beauti --jar beauti.jar --java_args '-Xms64m -Xmx256m'
 #	java-pkg_dolauncher beauti --main dr.app.beauti.BeautiApp --java_args '-Xms64m -Xmx256m'
