@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.14.ebuild,v 1.5 2009/10/18 18:49:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.14.ebuild,v 1.6 2009/10/19 01:00:35 fauli Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://farsight.freedesktop.org/"
 SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha ~amd64 hppa ~x86"
+KEYWORDS="alpha ~amd64 hppa x86"
 IUSE="python test"
 SLOT="0"
 
