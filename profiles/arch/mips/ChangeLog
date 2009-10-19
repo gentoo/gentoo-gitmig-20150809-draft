@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.14 2009/10/11 19:01:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.15 2009/10/19 13:22:37 alexxy Exp $
+
+  19 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> use.mask:
+  Mask graphite use flag on mips
+
 
   11 Oct 2009; Peter Volkov <pva@gentoo.org> package.use.mask:
   Masked fontforge USE flag for media-fonts/dejavu until fontforge keyworded

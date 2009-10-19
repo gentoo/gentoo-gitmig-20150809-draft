@@ -1,7 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.19 2009/08/16 22:07:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.20 2009/10/19 13:22:37 alexxy Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
+
+# Alexey Shvetsov <alexxy@gentoo.org>
+# Graphite feature of gcc-4.4.x didnt tested on mips at the moment
+graphite
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.
