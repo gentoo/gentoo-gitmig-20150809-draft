@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10615 2009/10/19 08:55:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10616 2009/10/19 09:09:02 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -188,13 +188,6 @@ app-admin/eselect-news
 # mask media-gfx/autopano-sift for removal in 30 days
 # use media-gfx/autopano-sift-C instead
 media-gfx/autopano-sift
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Oct 2009)
-# No opencore-amr support. Incorrect licensing used
-# in amwnb and amrwb, see bug 252140. Masked for removal
-# in few days.
-media-plugins/gst-plugins-amrnb
-media-plugins/gst-plugins-amrwb
 
 # Diego E. Pettenò <flameeyes@gmail.com> (9 Oct 2009)
 # Untested yet; documented only in Russian, help is appreciated.
