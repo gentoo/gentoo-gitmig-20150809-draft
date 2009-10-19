@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.178 2009/10/02 15:20:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.179 2009/10/19 17:04:36 dang Exp $
+
+  19 Oct 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Change to maintainer-needed
 
   02 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> liferea-1.6.0.ebuild:
   Keywording for ppc, bug 279241
