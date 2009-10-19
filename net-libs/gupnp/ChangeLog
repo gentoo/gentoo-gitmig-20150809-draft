@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.15 2009/10/19 08:22:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.16 2009/10/19 19:36:31 klausman Exp $
+
+  19 Oct 2009; Tobias Klausmann <klausman@gentoo.org> gupnp-0.13.1.ebuild:
+  Keyworded on alpha; whoever removed this kw please check with us before
+  removing it again.
 
 *gupnp-0.13.1 (19 Oct 2009)
 
