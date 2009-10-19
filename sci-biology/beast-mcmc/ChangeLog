@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/beast-mcmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/beast-mcmc/ChangeLog,v 1.2 2009/10/19 03:55:31 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/beast-mcmc/ChangeLog,v 1.3 2009/10/19 15:07:01 weaver Exp $
+
+*beast-mcmc-1.5.2 (19 Oct 2009)
+
+  19 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> +beast-mcmc-1.5.2.ebuild:
+  Version bump
 
   18 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> beast-mcmc-9999.ebuild:
   Address upstream changes in live ebuild
