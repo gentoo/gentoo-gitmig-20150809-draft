@@ -1,30 +1,30 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.8.ebuild,v 1.10 2009/04/30 17:54:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/kletterwizard-0.9.8.ebuild,v 1.11 2009/10/19 15:05:24 ssuominen Exp $
 
 inherit kde
 
 DESCRIPTION="KLetterWizard is a KDE application which simplifies letter writing and produces output via LaTeX."
 HOMEPAGE="http://www.kluenter.de/klw"
 SRC_URI="http://www.kluenter.de/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="kdeenablefinal"
 
 DEPEND="virtual/latex-base
-	|| ( =kde-base/kghostview-3.5* =kde-base/kdegraphics-3.5* )"
+	=kde-base/kghostview-3.5*"
 RDEPEND="${DEPEND}
 	|| ( >=dev-texlive/texlive-latexextra-2008 dev-tex/latex-unicode )"
 
-need-kde 3.4
+need-kde 3.5
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	kde_src_unpack
-	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {

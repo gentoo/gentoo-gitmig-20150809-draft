@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.29 2009/04/30 17:54:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.30 2009/10/19 15:05:24 ssuominen Exp $
+
+  19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -files/kletterwizard-0.9.6-gentoo.diff, -kletterwizard-0.9.7.ebuild,
+  -files/kletterwizard-0.9.7-gcc-4.1.patch, kletterwizard-0.9.8.ebuild:
+  amd64/x86 stable wrt #226695
 
   30 Apr 2009; Alexis Ballier <aballier@gentoo.org>
   kletterwizard-0.9.8.ebuild:
