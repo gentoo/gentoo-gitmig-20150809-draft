@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.30 2009/10/19 21:12:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.31 2009/10/19 23:52:39 abcd Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -21,7 +21,7 @@ case ${VIRTUALX_REQUIRED} in
 		RDEPEND=""
 		;;
 	tests)
-		DEPEND="test? ( ${VIRTUAX_DEPEND} )"
+		DEPEND="test? ( ${VIRTUALX_DEPEND} )"
 		RDEPEND=""
 		IUSE="test"
 		;;
