@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.16 2009/10/19 00:53:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.17 2009/10/19 08:49:46 ssuominen Exp $
+
+  19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> gssdp-0.7.0.ebuild:
+  Disabling GTK+ isn't supported by upstream Makefile.am wrt #287729.
 
   19 Oct 2009; Christian Faulhammer <fauli@gentoo.org> gssdp-0.6.4.ebuild:
   stable x86, bug 289298
