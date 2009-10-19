@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r3.ebuild,v 1.10 2009/07/14 09:37:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r3.ebuild,v 1.11 2009/10/19 16:32:58 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic eutils
@@ -25,12 +25,6 @@ RDEPEND="virtual/cdrtools
 DEPEND="${RDEPEND}
 	pccts? ( >=dev-util/pccts-1.33.24-r1 )
 	!app-cdr/cue2toc"
-
-pkg_setup() {
-	if hasq distcc ${FEATURES}; then
-		die "Please emerge without distcc in FEATURES, see bug #264170."
-	fi
-}
 
 src_prepare() {
 	# Use O_EXCL to avoid conflict with HAL, bug 193603.
