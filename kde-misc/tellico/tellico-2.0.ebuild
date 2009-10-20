@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.0.ebuild,v 1.1 2009/09/21 15:21:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.0.ebuild,v 1.2 2009/10/20 05:45:59 ssuominen Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ inherit kde4-base
 MY_P="${P/_}"
 
 DESCRIPTION="A collection manager for the KDE environment."
-HOMEPAGE="http://www.periapsis.org/tellico/"
+HOMEPAGE="http://tellico-project.org/"
 SRC_URI="http://tellico-project.org/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
