@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.490.ebuild,v 1.3 2009/10/18 00:06:25 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.490.ebuild,v 1.4 2009/10/20 20:18:10 vostorga Exp $
 
 inherit eutils pam
 
@@ -26,9 +26,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-
 	epatch "${FILESDIR}"/${PN}-1.170-setup-nocheck.patch
 }
 
@@ -40,6 +38,8 @@ src_install() {
 	addpredict /etc/lvm/cache
 	# Bug #194305
 	addpredict /var/spool/cron/crontabs
+	#Bug 267996
+	addpredict /lib/modules/$(uname -r)/kernel/net/netfilter
 
 	rm -f mount/freebsd-mounts*
 	rm -f mount/netbsd-mounts*
