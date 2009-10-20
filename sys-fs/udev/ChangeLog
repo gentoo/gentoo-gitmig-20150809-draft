@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.500 2009/10/20 12:38:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.501 2009/10/20 19:04:32 zzam Exp $
+
+  20 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> udev-9999.ebuild:
+  Auto enable udev-postmount only if udev is enabled.
 
   20 Oct 2009; Matthias Schwarzott <zzam@gentoo.org>
   files/147/shell-compat-addon.sh, udev-9999.ebuild, files/147/udev.initd,

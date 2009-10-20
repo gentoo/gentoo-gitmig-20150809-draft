@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.17 2009/10/20 12:38:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.18 2009/10/20 19:04:32 zzam Exp $
 
 EAPI="1"
 
@@ -349,9 +349,6 @@ pkg_preinst() {
 
 	has_version "<${CATEGORY}/${PN}-113"
 	previous_less_than_113=$?
-
-	has_version "<${CATEGORY}/${PN}-146-r2"
-	previous_less_than_146_r2=$?
 }
 
 # 19 Nov 2008
@@ -410,10 +407,8 @@ restart_udevd() {
 }
 
 postinst_init_scripts() {
-	# FIXME: we need some code like
-	# if use bootstrap; then
-	#   add init-scripts
-	# fi
+	# FIXME: we may need some code that detects if this is a system bootstrap
+	# and auto-enables udev then
 	#
 	# FIXME: inconsistent handling of init-scripts here
 	#  * udev is added to sysinit in openrc-ebuild
@@ -434,7 +429,15 @@ postinst_init_scripts() {
 
 	# add udev-postmount to default runlevel instead of that ugly injecting
 	# like a hotplug event, 2009/10/15
-	if [[ $previous_less_than_146_r2 = 0 ]]
+
+	# already enabled?
+	[[ -e "${ROOT}"/etc/runlevels/default/udev-postmount ]] && return
+
+	local enable_postmount=0
+	[[ -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && enable_postmount=1
+	[[ "${ROOT}" = "/" && -d /dev/.udev/ ]] && enable_postmount=1
+
+	if [[ ${enable_postmount} = 1 ]]
 	then
 		local initd=udev-postmount
 
@@ -444,6 +447,10 @@ postinst_init_scripts() {
 			ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/default/${initd}
 			elog "Auto-adding '${initd}' service to your default runlevel"
 		fi
+	else
+		elog "You should add the udev-postmount service to default runlevel."
+		elog "Run this to add it:"
+		elog "\trc-update add udev-postmount default"
 	fi
 }
 
