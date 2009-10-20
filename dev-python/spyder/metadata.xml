@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>python</herd>
+	<maintainer>
+		<email>grozin@gentoo.org</email>
+		<name>Andrey Grozin</name>
+	</maintainer>
+	<longdescription>Python IDE with matlab-like features</longdescription>
+	<use>
+		<flag name='numpy'>Add support for <pkg>dev-python/numpy</pkg></flag>
+		<flag name='scipy'>Add support for <pkg>sci-libs/scipy</pkg></flag>
+		<flag name='matplotlib'>Add support for <pkg>dev-python/matplotlib</pkg></flag>
+		<flag name='mayavi'>Add support for <pkg>sci-visualization/mayavi</pkg></flag>
+		<flag name='pylint'>Add support for <pkg>dev-python/pylint</pkg></flag>
+	</use>
+</pkgmetadata>
