@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-eb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ChangeLog,v 1.9 2009/08/22 22:26:43 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ChangeLog,v 1.10 2009/10/20 12:37:16 maekke Exp $
+
+  20 Oct 2009; Markus Meier <maekke@gentoo.org> ruby-eb-2.6.ebuild:
+  x86 stable, bug #284967
 
   22 Aug 2009; Alex Legler <a3li@gentoo.org> ruby-eb-2.3.ebuild,
   ruby-eb-2.5a.ebuild:
