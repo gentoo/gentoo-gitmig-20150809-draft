@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ktimetracker-4.3.2.ebuild,v 1.1 2009/10/06 20:12:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ktimetracker-4.3.2-r1.ebuild,v 1.1 2009/10/20 10:01:01 scarabeus Exp $
 
 EAPI="2"
 
@@ -25,6 +25,10 @@ KMEXTRACTONLY="
 "
 
 KMLOADLIBS="libkdepim"
+
+PATCHES=(
+	"${FILESDIR}"/${PV}-fix-menu.patch
+)
 
 src_unpack() {
 	if use kontact; then
