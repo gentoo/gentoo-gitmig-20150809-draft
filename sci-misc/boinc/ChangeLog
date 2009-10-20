@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.76 2009/10/03 15:04:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.77 2009/10/20 10:11:49 scarabeus Exp $
+
+  20 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  boinc-6.6.40-r2.ebuild:
+  Kill QA warning.
 
 *boinc-6.6.40-r2 (03 Oct 2009)
 
