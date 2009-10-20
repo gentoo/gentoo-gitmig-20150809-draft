@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10622 2009/10/20 05:29:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10623 2009/10/20 05:47:49 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -440,12 +440,6 @@ net-libs/libunicall
 app-doc/opengl-manpages
 app-doc/xorg-sgml-doctools
 app-doc/xorg-docs
-
-# Alexis Ballier <aballier@gentoo.org> (19 Sep 2009)
-# Masked for removal
-# Merged in media-libs/mlt
-# Removal due 19 Oct 2009
-media-libs/mlt++
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (2 Oct 2009)
 # update it a bit more to reflect what i will be adding now
