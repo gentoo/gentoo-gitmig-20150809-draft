@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tokyodystopia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.1 2009/10/10 00:00:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.2 2009/10/20 20:56:44 patrick Exp $
+
+*tokyodystopia-0.9.13-r1 (20 Oct 2009)
+
+  20 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +tokyodystopia-0.9.13-r1.ebuild, +files/fix_rpath.patch:
+  Fix rpath issues, #288524. Thanks to jbergstroem for the shiny patch.
 
 *tokyodystopia-0.9.13 (09 Oct 2009)
 
