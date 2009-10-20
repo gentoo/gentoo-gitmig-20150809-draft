@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/kdenetwork-meta-3.5.10.ebuild,v 1.7 2009/07/12 13:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/kdenetwork-meta-3.5.10.ebuild,v 1.8 2009/10/20 16:55:18 ssuominen Exp $
 
 EAPI="1"
 inherit kde-functions
@@ -22,7 +22,6 @@ RDEPEND=">=kde-base/dcoprss-${PV}:${SLOT}
 	>=kde-base/kppp-${PV}:${SLOT}
 	>=kde-base/krdc-${PV}:${SLOT}
 	>=kde-base/krfb-${PV}:${SLOT}
-	>=kde-base/ksirc-${PV}:${SLOT}
 	>=kde-base/ktalkd-${PV}:${SLOT}
 	wifi? ( >=kde-base/kwifimanager-${PV}:${SLOT} )
 	>=kde-base/librss-${PV}:${SLOT}
