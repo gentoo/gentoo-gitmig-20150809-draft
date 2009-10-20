@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-init.d,v 1.1 2007/05/17 08:51:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-init.d,v 1.2 2009/10/20 10:21:34 bangert Exp $
 
 CONFIGFILE=/etc/cpufreqd.conf
 
@@ -22,7 +22,8 @@ checkconfig() {
                         [[ -e ${cpu}/cpufreq ]] && return 0
 		done
 		eerror "cpufreqd requires the kernel to be configured with CONFIG_CPU_FREQ"
-		eerror "Make sure that the appropiate drivers for your CPU are available."
+		eerror "Make sure that the appropiate kernel drivers for your CPU are"
+		eerror "built-in or loaded."
 		return 1
 	fi
 }
