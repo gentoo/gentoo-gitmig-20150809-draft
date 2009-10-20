@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.6.ebuild,v 1.8 2009/08/31 00:34:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.6.ebuild,v 1.9 2009/10/20 08:33:14 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,12 +11,11 @@ SRC_URI="http://rsync.samba.org/ftp/rsync/src/${P/_/}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="acl iconv ipv6 static xattr xinetd"
+IUSE="acl iconv ipv6 static xattr"
 
 DEPEND=">=dev-libs/popt-1.5
 	acl? ( virtual/acl )
 	xattr? ( kernel_linux? ( sys-apps/attr ) )
-	xinetd? ( sys-apps/xinetd )
 	iconv? ( virtual/libiconv )"
 
 S=${WORKDIR}/${P/_/}
@@ -51,10 +50,8 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/rsyncd.logrotate rsyncd
 
-	if use xinetd ; then
-		insinto /etc/xinetd.d
-		newins "${FILESDIR}"/rsyncd.xinetd rsyncd
-	fi
+	insinto /etc/xinetd.d
+	newins "${FILESDIR}"/rsyncd.xinetd rsyncd
 }
 
 pkg_postinst() {
