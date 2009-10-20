@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.151 2009/09/30 17:47:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.152 2009/10/20 17:46:55 grobian Exp $
+
+*exim-4.69-r4 (20 Oct 2009)
+
+  20 Oct 2009; Fabian Groffen <grobian@gentoo.org> +exim-4.69-r4.ebuild,
+  +files/exim-4.69-dovecot-auth.patch:
+  Add patch to fix Dovecot authentication socket protocol error, thanks J G
+  in bug #288520
 
   30 Sep 2009; Raúl Porcel <armin76@gentoo.org> exim-4.69-r3.ebuild:
   ia64/sparc stable wrt #283443
