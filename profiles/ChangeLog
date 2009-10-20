@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3421 2009/10/20 05:47:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3422 2009/10/20 17:01:13 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Oct 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  openvz-sources-2.6.24 were dropped from the tree, unmask
+  sys-kernel/openvz-sources-2.6.27.2.1-r3 as I think it's fine,
+  net-libs/libssh-0.11 do not exist in the tree too.
 
   20 Oct 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
   mlt++ is gone
