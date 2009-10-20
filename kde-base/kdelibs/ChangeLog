@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.632 2009/10/18 18:19:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.633 2009/10/20 18:19:03 scarabeus Exp $
+
+*kdelibs-4.3.2-r3 (20 Oct 2009)
+
+  20 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdelibs-4.3.2-r2.ebuild, +kdelibs-4.3.2-r3.ebuild,
+  +files/kdelibs-4.3.2-fix-plasma-crash.patch:
+  Revision bump. Apply patch that fixes mine plasma crash.
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> kdelibs-4.3.1-r2.ebuild:
   x86 stable

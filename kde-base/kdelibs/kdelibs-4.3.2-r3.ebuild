@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.2-r2.ebuild,v 1.1 2009/10/14 06:24:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.2-r3.ebuild,v 1.1 2009/10/20 18:19:03 scarabeus Exp $
 
 EAPI="2"
 
@@ -114,6 +114,7 @@ PATCHES=(
 	"${FILESDIR}/dist/23_solid_no_double_build.patch"
 	"${FILESDIR}/${PN}-4.3.1-crash-on-konqueror-tabs.patch"
 	"${FILESDIR}/${PN}-4.3.2-fix-deadlock-in-KLocale.patch"
+	"${FILESDIR}/${PN}-4.3.2-fix-plasma-crash.patch"
 )
 
 src_prepare() {
