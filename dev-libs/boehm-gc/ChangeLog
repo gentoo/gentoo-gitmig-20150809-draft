@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.71 2009/10/18 16:24:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.72 2009/10/20 12:56:51 maekke Exp $
+
+  20 Oct 2009; Markus Meier <maekke@gentoo.org> boehm-gc-7.1.ebuild:
+  amd64/x86 stable, bug #284857
 
   18 Oct 2009; Tobias Klausmann <klausman@gentoo.org> boehm-gc-7.1.ebuild:
   Stable on alpha, bug #284857
