@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.10.91.9.3-r1.ebuild,v 1.1 2009/10/05 23:33:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.10.91.9.3-r1.ebuild,v 1.2 2009/10/20 13:36:07 matsuu Exp $
 
 inherit eutils linux-mod
 
@@ -23,6 +23,8 @@ S="${WORKDIR}"
 
 MODULE_NAMES="wl(net/wireless)"
 MODULESD_WL_ALIASES=("wlan0 wl")
+
+PROPERTIES="interactive"
 
 pkg_setup() {
 	check_license

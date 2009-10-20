@@ -1,6 +1,24 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.15 2009/10/05 23:33:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.16 2009/10/20 13:36:07 matsuu Exp $
+
+  20 Oct 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -broadcom-sta-5.10.79.10-r4.ebuild,
+  -files/broadcom-sta-5.10.79.10-hidden-essid.patch,
+  -files/broadcom-sta-5.10.79.10-license.patch,
+  -files/broadcom-sta-5.10.79.10-linux-2.6.29.patch,
+  -files/broadcom-sta-5.10.79.10-linux-2.6.30.patch,
+  -files/broadcom-sta-5.10.79.10-r4-linux-2.6.29.patch,
+  -files/broadcom-sta-5.10.79.10-wl_iw.patch,
+  -files/broadcom-sta-5.10.79.10-wl_iw_v2.patch,
+  -broadcom-sta-5.10.91.9-r5.ebuild, -broadcom-sta-5.10.91.9-r6.ebuild,
+  -files/broadcom-sta-5.10.91.9-linux-2.6.29.patch,
+  -files/broadcom-sta-5.10.91.9-linux-2.6.30.patch,
+  -files/broadcom-sta-5.10.91.9-linux-2.6.31.patch,
+  -broadcom-sta-5.10.91.9.3.ebuild,
+  -files/broadcom-sta-5.10.91.9-r1-linux-2.6.29.patch,
+  broadcom-sta-5.10.91.9.3-r1.ebuild:
+  Added PROPERTIES="interactive", bug #288831. Removed old versions.
 
 *broadcom-sta-5.10.91.9.3-r1 (05 Oct 2009)
 
