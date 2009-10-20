@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r6.ebuild,v 1.1 2009/09/21 11:00:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r6.ebuild,v 1.2 2009/10/20 17:55:10 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -22,15 +22,18 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	sidebar? (
 		http://www.lunar-linux.org/~tchan/mutt/${SIDEBAR_PATCH_N}
 	)"
-IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl sidebar smime smtp ssl vanilla"
+IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl sidebar smime smtp ssl tokyocabinet vanilla"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 RDEPEND=">=sys-libs/ncurses-5.2
-	qdbm?    ( dev-db/qdbm )
-	!qdbm?   (
-		gdbm?  ( sys-libs/gdbm )
-		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
+	tokyocabinet?  ( dev-db/tokyocabinet )
+	!tokyocabinet? (
+		qdbm?  ( dev-db/qdbm )
+		!qdbm? (
+			gdbm?  ( sys-libs/gdbm )
+			!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
+		)
 	)
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
@@ -166,18 +169,21 @@ src_compile() {
 
 	# mutt prioritizes gdbm over bdb, so we will too.
 	# hcache feature requires at least one database is in USE.
-	if use qdbm; then
+	if use tokyocabinet; then
 		myconf="${myconf} --enable-hcache \
-		--with-qdbm --without-gdbm --without-bdb"
+			--with-tokyocabinet --without-qdbm --without-gdbm --without-bdb"
+	elif use qdbm; then
+		myconf="${myconf} --enable-hcache \
+			--without-tokyocabinet --with-qdbm --without-gdbm --without-bdb"
 	elif use gdbm ; then
 		myconf="${myconf} --enable-hcache \
-			--without-qdbm --with-gdbm --without-bdb"
+			--without-tokyocabinet --without-qdbm --with-gdbm --without-bdb"
 	elif use berkdb; then
 		myconf="${myconf} --enable-hcache \
-			--without-gdbm --without-qdbm --with-bdb"
+			--without-tokyocabinet --without-qdbm --without-gdbm --with-bdb"
 	else
 		myconf="${myconf} --disable-hcache \
-			--without-qdbm --without-gdbm --without-bdb"
+			--without-tokyocabinet --without-qdbm --without-gdbm --without-bdb"
 	fi
 
 	# there's no need for gnutls, ssl or sasl without socket support

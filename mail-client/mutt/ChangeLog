@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.157 2009/09/21 11:00:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.158 2009/10/20 17:55:10 grobian Exp $
+
+  20 Oct 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r6.ebuild:
+  Add tokyocabinet support with USE=tokyocabinet, thanks Tim Harder in bug
+  #289010
 
 *mutt-1.5.20-r6 (21 Sep 2009)
 
