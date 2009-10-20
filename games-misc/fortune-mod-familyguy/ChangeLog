@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-familyguy
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.5 2006/10/12 15:03:05 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.6 2009/10/20 16:20:45 mr_bones_ Exp $
+
+  20 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-familyguy-0.2.ebuild:
+  Package moved home (bug #289145)
 
 *fortune-mod-familyguy-0.2 (12 Oct 2006)
 
