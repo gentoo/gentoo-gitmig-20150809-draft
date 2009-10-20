@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.4.ebuild,v 1.8 2008/01/13 08:34:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.4.ebuild,v 1.9 2009/10/20 10:57:16 tove Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -94,7 +94,7 @@ src_compile() {
 		--cache-file="${S}"/configuring.cache \
 		${myconf} || die
 
-	emake || die "compile problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install() {
