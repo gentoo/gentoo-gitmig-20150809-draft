@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10627 2009/10/20 19:29:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10628 2009/10/20 19:53:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -744,16 +744,6 @@ sci-mathematics/Macaulay2
 #
 # Removal on 2009-10-09
 dev-php/phpdbg-client
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build with gcc 4.3 (bug #252633), has an internal
-# copy of openbabel (bug #253068), has broken dependendencies
-# (bug #219217).
-#
-# Removal on 2009-10-09
-sci-chemistry/kemistry
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
 #  on behalf of QA team
