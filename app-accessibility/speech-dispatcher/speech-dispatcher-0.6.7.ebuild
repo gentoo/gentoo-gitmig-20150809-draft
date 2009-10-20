@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.9 2009/09/09 13:56:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.10 2009/10/20 18:02:15 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/dotconf
 	>=dev-libs/glib-2
 	alsa? ( media-libs/alsa-lib )
 	espeak? ( app-accessibility/espeak )
-	flite? ( app-accessibility/flite )
+	flite? ( >=app-accessibility/flite-1.3 )
 	nas? ( media-libs/nas )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( dev-lang/python )"
@@ -35,19 +35,19 @@ src_prepare() {
 
 src_configure() {
 	econf \
-	$(use_with alsa) \
-	$(use_with espeak) \
-	$(use_with flite) \
-	$(use_with pulseaudio pulse) \
-	$(use_with nas) || die "configure failed"
+		$(use_with alsa) \
+		$(use_with espeak) \
+		$(use_with flite) \
+		$(use_with pulseaudio pulse) \
+		$(use_with nas)
 }
 
 src_compile() {
-	make all || die "make failed"
+	emake all || die
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	if use python; then
 		cd "${S}"/src/python
