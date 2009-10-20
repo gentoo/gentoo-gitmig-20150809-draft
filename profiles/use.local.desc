@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4913 2009/10/20 16:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4914 2009/10/20 16:27:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1749,8 +1749,6 @@ media-sound/rubyripper:wav - Add support for wavegain
 media-sound/sonata:lyrics - Support for lyrics fetching
 media-sound/sonata:trayicon - Enable support for trayicon
 media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
-media-sound/sox:amrnb - Enables Adaptive Multi-Rate Audio support (Narrow Band)
-media-sound/sox:amrwb - Enables Adaptive Multi-Rate Audio support (Wide Band)
 media-sound/sox:id3tag - Enables ID3 tagging with id3tag library
 media-sound/squeezecenter:aac - Enable playback support for AAC (.m4a) encoded files
 media-sound/squeezecenter:alac - Enable support for alac
@@ -1830,7 +1828,6 @@ media-tv/xmltv:za - South Africa tv listing grabber
 media-video/arista:faac - Use external faac library for AAC encoding
 media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support
 media-video/avidemux:amr - Enable Adaptive Multi-Rate format support through media-libs/opencore-amr
-media-video/avidemux:amrnb - Enables Adaptive Multi-Rate Audio support (Narrow Band) through media-libs/amrnb
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/cinepaint:gutenprint - Enable support for gutenprint
 media-video/clive:clipboard - Support reading from X clipboard
