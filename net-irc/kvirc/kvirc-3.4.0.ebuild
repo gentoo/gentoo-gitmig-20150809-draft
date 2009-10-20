@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.4.0.ebuild,v 1.7 2009/09/30 17:28:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.4.0.ebuild,v 1.8 2009/10/20 16:52:09 ssuominen Exp $
 
 EAPI=1
 
@@ -20,8 +20,8 @@ RDEPEND="esd? ( media-sound/esound )
 	oss? ( media-libs/audiofile )
 	kde? ( =kde-base/kdelibs-3.5* )
 	qt4? ( x11-libs/qt-gui:4 )
-	!qt4? ( =x11-libs/qt-3* )"
-
+	!qt4? ( =x11-libs/qt-3* )
+	!kde-base/ksirc"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
