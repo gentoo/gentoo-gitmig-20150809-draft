@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.14 2009/10/19 14:36:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.15 2009/10/20 23:01:11 fauli Exp $
+
+  20 Oct 2009; Christian Faulhammer <fauli@gentoo.org> exo-0.3.105.ebuild:
+  stable x86, bug 289179
 
 *exo-0.3.105 (19 Oct 2009)
 
