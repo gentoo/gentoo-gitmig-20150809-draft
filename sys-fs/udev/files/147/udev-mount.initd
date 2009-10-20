@@ -30,14 +30,20 @@ check_kernel()
 
 mount_dev_directory()
 {
-	mountinfo -q /dev && return 0
+	if mountinfo -q /dev; then
+		einfo "/dev is already mounted"
+		return 0
+	fi
 
 	# No options are processed here as they should all be in /etc/fstab
 	ebegin "Mounting /dev"
 	if ! fstabinfo --mount /dev; then
+		# we mount devtmpfs if supported
+		local fs=tmpfs
+		grep -qs devtmpfs /proc/filesystems && fs=devtmpfs
+
 		# Some devices require exec, Bug #92921
-		# we could mount devtmpfs if supported
-		mount -n -t tmpfs -o "exec,nosuid,mode=0755,size=10M" udev /dev
+		mount -n -t "$fs" -o "exec,nosuid,mode=0755,size=10M" udev /dev
 	fi
 	eend $?
 }

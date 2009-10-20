@@ -115,8 +115,10 @@ populate_dev()
 	fi
 	eend $?
 
-	# we can speed up booting by not waiting for udev to finish event-processing
-	# if using devtmpfs so that kernel already created the device nodes for us
+	# we can speed up booting under these conditions:
+	#  * using devtmpfs so kernel creates device nodes for us
+	#  * only using kernel created device nodes at boot (in /etc/fstab and elsewhere)
+	#
 	ebegin "Waiting for uevents to be processed"
 	udevadm settle --timeout=${udev_settle_timeout:-60}
 	eend $?

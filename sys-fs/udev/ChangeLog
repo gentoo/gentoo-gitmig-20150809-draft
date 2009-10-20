@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.499 2009/10/15 21:40:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.500 2009/10/20 12:38:15 zzam Exp $
+
+  20 Oct 2009; Matthias Schwarzott <zzam@gentoo.org>
+  files/147/shell-compat-addon.sh, udev-9999.ebuild, files/147/udev.initd,
+  files/147/udev-mount.initd, files/147/udev-postmount.initd:
+  Update init-scripts. udev-postmount should be in default runlevel. No
+  longer handle it like a synthetic hotplug event. Let it rerun failed
+  events. Handle devtmpfs if supported, and also the case /dev is already
+  mounted. Do not run net.* init-scripts if the new network init-script is
+  used. Cleanup of pre/postinst code.
 
   15 Oct 2009; Matthias Schwarzott <zzam@gentoo.org>
   +files/147/shell-compat-KV.sh, +files/147/shell-compat-addon.sh,

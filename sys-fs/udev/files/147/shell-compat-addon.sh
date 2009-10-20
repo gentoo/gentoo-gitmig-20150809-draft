@@ -20,10 +20,27 @@ if ! cmd_exist yesno; then
 	}
 fi
 
+# does not exist in baselayout-1, does exist in openrc
+#
+# mountinfo <path>
+# check if some filesystem is mounted at mountpoint <path>
+#
+# return value:
+#   0 filesystem is mounted at <path>
+#   1 no filesystem is mounted exactly at <path>
 if ! cmd_exist mountinfo; then
 	mountinfo() {
-		# returning false makes the behaviour same as without check
-		return 1
+		[ "$1" = "-q" ] && shift
+		local dir="$1"
+
+		# check if entry is in /proc/mounts
+		local ret=$(gawk 'BEGIN { found="false"; }
+				  $1 ~ "^#" { next }
+				  $2 == "'$dir'" { found="true"; }
+				  END { print found; }
+			    ' /proc/mounts)
+
+		"${ret}"
 	}
 fi
 

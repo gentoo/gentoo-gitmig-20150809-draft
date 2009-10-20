@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/147/udev-postmount.initd,v 1.1 2009/10/15 21:40:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/147/udev-postmount.initd,v 1.2 2009/10/20 12:38:14 zzam Exp $
 
 depend() {
 	need localmount
@@ -16,9 +16,6 @@ dir_writeable()
 start() {
 	# check if this system uses udev
 	[ -d /dev/.udev/ ] || return 0
-
-	# disable coldplug stop from /etc/init.d/udev trigger
-	udevadm control --env do_not_run_plug_service=
 
 	# Run the events that failed at first udev trigger
 	udevadm trigger --type=failed -v
