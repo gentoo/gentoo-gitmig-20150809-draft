@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.155 2009/09/30 18:44:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.156 2009/10/20 16:23:35 ssuominen Exp $
+
+  20 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  avidemux-2.4.4-r2.ebuild:
+  Remove amrnb support wrt #252140.
 
 *avidemux-2.5.1_p5359 (30 Sep 2009)
 

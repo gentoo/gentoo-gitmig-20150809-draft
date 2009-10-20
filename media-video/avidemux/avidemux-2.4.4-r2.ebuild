@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.4-r2.ebuild,v 1.6 2009/09/30 14:40:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.4-r2.ebuild,v 1.7 2009/10/20 16:23:35 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="amd64 ppc x86"
-IUSE="+aac +aften +alsa amrnb +dts esd jack libsamplerate +mp3 +truetype
+IUSE="+aac +aften +alsa +dts esd jack libsamplerate +mp3 +truetype
 	+vorbis +x264 +xv +xvid gtk +qt4"
 RESTRICT="test"
 
@@ -27,7 +27,6 @@ RDEPEND="dev-libs/libxml2
 		media-libs/faad2 )
 	aften? ( media-libs/aften )
 	alsa? ( media-libs/alsa-lib )
-	amrnb? ( media-libs/amrnb )
 	dts? ( media-libs/libdca )
 	mp3? ( media-sound/lame )
 	esd? ( media-sound/esound )
@@ -81,7 +80,7 @@ src_configure() {
 	use aac || mycmakeargs="${mycmakeargs} -DNO_FAAC=1"
 	use mp3 || mycmakeargs="${mycmakeargs} -DNO_Lame=1"
 	use xvid || mycmakeargs="${mycmakeargs} -DNO_Xvid=1"
-	use amrnb || mycmakeargs="${mycmakeargs} -DNO_AMRNB=1"
+	mycmakeargs="${mycmakeargs} -DNO_AMRNB=1"
 	use dts || mycmakeargs="${mycmakeargs} -DNO_libdca=1"
 	use x264 || mycmakeargs="${mycmakeargs} -DNO_x264=1"
 	use aac || mycmakeargs="${mycmakeargs} -DNO_FAAD=1 -DNO_NeAAC=1"
