@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.59 2009/10/02 19:14:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.60 2009/10/20 12:57:38 maekke Exp $
+
+  20 Oct 2009; Markus Meier <maekke@gentoo.org> asymptote-1.86.ebuild:
+  x86 stable, bug #284693
 
   02 Oct 2009; Fabian Groffen <grobian@gentoo.org> asymptote-1.86.ebuild,
   asymptote-1.87.ebuild:
