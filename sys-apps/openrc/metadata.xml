@@ -7,7 +7,4 @@
 <name>Roy Marples</name>
 <description>Upstream - please CC him on valid bugs</description>
 </maintainer>
-<use>
-	<flag name="oldnet">Install the old type of network init-scripts with a symlink net.IFACE for each interface</flag>
-</use>
 </pkgmetadata>
