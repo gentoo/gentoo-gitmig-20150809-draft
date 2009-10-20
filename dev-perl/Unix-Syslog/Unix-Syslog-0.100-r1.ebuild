@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/Unix-Syslog-0.100-r1.ebuild,v 1.15 2007/07/10 23:33:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/Unix-Syslog-0.100-r1.ebuild,v 1.16 2009/10/20 19:13:59 jer Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~mharnisch/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
