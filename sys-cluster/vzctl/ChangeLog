@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.63 2009/04/05 19:34:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.64 2009/10/20 16:31:02 pva Exp $
+
+*vzctl-9999 (20 Oct 2009)
+
+  20 Oct 2009; Peter Volkov <pva@gentoo.org> -vzctl-3.0.22-r1.ebuild,
+  vzctl-3.0.23-r2.ebuild, +vzctl-9999.ebuild:
+  amd64/x86 stable, bug #199738. Removed old. Added git ebuild, thank
+  Andrian Nord for suggestion in bug #259433.
 
 *vzctl-3.0.23-r2 (05 Apr 2009)
 
