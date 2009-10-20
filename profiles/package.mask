@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10629 2009/10/20 19:58:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10630 2009/10/20 20:33:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
+# KDE3-only. Doesn't compile with stable networkmanager wrt bug 253788.
+# Other issues in bugs #197488, #217209, #255864, and #268732.
+# Masked for removal in 30 days.
+kde-misc/knetworkmanager
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
 # KDE3-only. Doesn't compile wrt #274206. Bundles internal
