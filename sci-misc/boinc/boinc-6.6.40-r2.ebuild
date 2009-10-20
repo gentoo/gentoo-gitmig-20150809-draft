@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40-r2.ebuild,v 1.2 2009/10/20 10:11:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40-r2.ebuild,v 1.3 2009/10/20 10:18:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -41,6 +41,9 @@ DEPEND="${RDEPEND}
 		x11-libs/wxGTK:2.8[X,opengl]
 	)
 "
+
+# Upstream sucks in autotools
+MAKEOPTS="-j1"
 
 src_prepare() {
 	# use system ssl certificates
