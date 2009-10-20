@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/vdr-wapd-0.9_p1.ebuild,v 1.1 2008/04/28 08:30:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/vdr-wapd-0.9_p1.ebuild,v 1.2 2009/10/20 11:39:56 zzam Exp $
 
 inherit vdr-plugin
 
@@ -20,7 +20,8 @@ DEPEND=">=media-video/vdr-1.3.44"
 
 PATCHES=("${FILESDIR}/${MY_P}_gcc-4.1.x.diff"
 	"${FILESDIR}/${MY_P}-gentoo.diff"
-	"${WORKDIR}/${MY_P#vdr-}-patch1.diff")
+	"${WORKDIR}/${MY_P#vdr-}-patch1.diff"
+	"${FILESDIR}/${MY_P}-as-needed.patch")
 
 S="${WORKDIR}/${MY_P#vdr-}"
 
