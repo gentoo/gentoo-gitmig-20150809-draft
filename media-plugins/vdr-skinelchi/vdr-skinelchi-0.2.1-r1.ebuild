@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.2.1.ebuild,v 1.1 2009/07/26 21:14:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.2.1-r1.ebuild,v 1.1 2009/10/20 18:31:35 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -32,4 +32,8 @@ src_unpack() {
 		sed -i "${S}"/Makefile \
 			-e '/^[[:space:]]*SKINELCHI_HAVE_IMAGEMAGICK = 1/s/^/#/'
 	fi
+
+	sed -i "${S}"/DisplayChannel.c \
+		-e "s:/hqlogos::" \
+		-e "s:/logos::"
 }

@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/vdr-skinelchi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.23 2009/07/26 21:14:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.24 2009/10/20 18:31:35 hd_brummy Exp $
+
+*vdr-skinelchi-0.2.1-r1 (20 Oct 2009)
+
+  20 Oct 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-skinelchi-0.1.1_pre2-r1.ebuild, -vdr-skinelchi-0.1.1_pre2-r2.ebuild,
+  -vdr-skinelchi-0.1.1_pre2-r3.ebuild,
+  -files/vdr-skinelchi-0.1.1_pre2-PatchCollection-FireFly.diff,
+  -vdr-skinelchi-0.2.1.ebuild, +vdr-skinelchi-0.2.1-r1.ebuild,
+  -files/compile-fix.diff:
+  cleanup, fixed not found logo DIR
 
 *vdr-skinelchi-0.2.1 (26 Jul 2009)
 
