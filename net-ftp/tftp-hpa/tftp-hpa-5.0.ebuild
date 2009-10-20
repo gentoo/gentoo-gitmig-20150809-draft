@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.0.ebuild,v 1.2 2009/08/16 00:02:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.0.ebuild,v 1.3 2009/10/20 08:35:19 vapier Exp $
 
 DESCRIPTION="port of the OpenBSD TFTP server"
 HOMEPAGE="http://www.kernel.org/pub/software/network/tftp/"
@@ -36,4 +36,6 @@ src_install() {
 
 	newconfd "${FILESDIR}"/in.tftpd.confd-0.44 in.tftpd
 	newinitd "${FILESDIR}"/in.tftpd.rc6 in.tftpd
+	insinto /etc/xinetd.d
+	newins "${FILESDIR}"/tftp.xinetd tftp
 }
