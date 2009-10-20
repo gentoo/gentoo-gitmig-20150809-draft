@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.54 2009/10/18 18:21:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.55 2009/10/20 17:05:13 scarabeus Exp $
+
+  20 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.0.0-fix_exiv2_support.patch, krename-4.0.1.ebuild:
+  Add patch for exiv2.
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> krename-4.0.1.ebuild:
   x86 stable, bug #288460
