@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.18.ebuild,v 1.4 2009/10/05 10:31:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.19-r1.ebuild,v 1.1 2009/10/20 13:34:12 flameeyes Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/${P/_rc/-test}"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="+alsa avahi +caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6"
+IUSE="+alsa avahi +caps jack lirc oss tcpd +X hal dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6"
 
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	caps? ( sys-libs/libcap )
@@ -81,6 +81,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fweb.patch
+
 	elibtoolize
 }
 
@@ -132,6 +134,14 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
+
+	if use X; then
+		dodir /etc/X11/xinit/xinitrc.d
+		ln -s ../../../usr/bin/start-pulseaudio-x11 "${D}"/etc/X11/xinit/xinitrc.d/95-pulseaudio
+	else
+		# Drop the script entirely
+		rm "${D}"/usr/bin/start-pulseaudio-x11
+	fi
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${D}/etc/pulse/default.pa"
 
