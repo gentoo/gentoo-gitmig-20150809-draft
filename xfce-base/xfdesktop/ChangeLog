@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.153 2009/10/17 01:00:08 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.154 2009/10/20 23:57:58 fauli Exp $
+
+  20 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  xfdesktop-4.6.1-r1.ebuild:
+  stable x86, bug 289179
 
   17 Oct 2009; Richard Freeman <rich0@gentoo.org> xfdesktop-4.6.1-r1.ebuild:
   amd64 stable - 289179
