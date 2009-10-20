@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.102 2009/10/12 22:20:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.103 2009/10/20 16:55:08 ssuominen Exp $
+
+  20 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> ksirc-3.5.10.ebuild:
+  Block kvirc wrt #214198.
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -ksirc-3.5.9.ebuild:
   KDE 3.5.9 removal
