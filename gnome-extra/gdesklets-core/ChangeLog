@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.112 2009/10/12 18:51:56 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.113 2009/10/21 02:06:20 nixphoeni Exp $
+
+*gdesklets-core-0.36.1-r3 (21 Oct 2009)
+
+  21 Oct 2009; Joe Sapp <nixphoeni@gentoo.org>
+  +gdesklets-core-0.36.1-r3.ebuild:
+  Ensure global Displays and Controls directories exist and force
+  gdesklets-core to be rebuilt after a python upgrade. Also moved ebuild to
+  EAPI 2 and removed now nonexistent blockers desklet-calendar and
+  desklet-clock.
 
   10 Sep 2009; Joe Sapp <nixphoeni@gentoo.org>
   files/gdesklets-core-0.36.1-bash-completion:
