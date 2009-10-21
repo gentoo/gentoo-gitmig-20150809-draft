@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/confluence
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/confluence/ChangeLog,v 1.8 2009/10/03 15:16:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/confluence/ChangeLog,v 1.9 2009/10/21 12:20:22 maekke Exp $
+
+  21 Oct 2009; Markus Meier <maekke@gentoo.org> confluence-0.10.6.ebuild:
+  x86 stable, bug #285603
 
   03 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
   confluence-0.10.6.ebuild:
