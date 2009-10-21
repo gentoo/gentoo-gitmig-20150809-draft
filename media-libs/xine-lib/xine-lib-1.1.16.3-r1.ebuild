@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r1.ebuild,v 1.10 2009/10/06 10:15:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r1.ebuild,v 1.11 2009/10/21 18:27:37 ssuominen Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-IUSE="-aalib -libcaca -arts esd win32codecs nls +css +X directfb +vorbis +alsa
+IUSE="-aalib -libcaca esd win32codecs nls +css +X directfb +vorbis +alsa
 gnome sdl speex +theora ipv6 altivec opengl aac -fbcon +xv xvmc
 -samba dxr3 vidix mng -flac -oss +v4l xinerama vcd +a52 +mad -imagemagick +dts
 +modplug -gtk pulseaudio -mmap -truetype wavpack +musepack +xcb -jack
@@ -38,7 +38,6 @@ RDEPEND="X? ( x11-libs/libXext
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
 	css? ( >=media-libs/libdvdcss-1.2.7 )
-	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
 	directfb? ( >=dev-libs/DirectFB-0.9.9 )
@@ -152,7 +151,7 @@ src_compile() {
 		$(use_with xcb) \
 		$(use_enable oss) \
 		$(use_with alsa) \
-		$(use_with arts) \
+		--without-arts \
 		$(use_with esd esound) \
 		$(use_with pulseaudio) \
 		$(use_with jack) \
