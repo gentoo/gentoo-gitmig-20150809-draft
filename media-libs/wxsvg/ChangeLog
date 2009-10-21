@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.11 2009/08/09 13:51:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.12 2009/10/21 02:27:12 dirtyepic Exp $
+
+  21 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> wxsvg-1.0.ebuild:
+  Fix EAPI 2 dependency.
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> wxsvg-1.0.ebuild:
   ppc stable #278923

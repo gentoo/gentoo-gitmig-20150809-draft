@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.ebuild,v 1.4 2009/08/17 14:23:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.ebuild,v 1.5 2009/10/21 02:27:12 dirtyepic Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="ffmpeg"
 
-RDEPEND="=x11-libs/wxGTK-2.8*
+RDEPEND="x11-libs/wxGTK:2.8[X]
 	>=dev-libs/glib-2.12
 	>=dev-libs/libxml2-2.6.26
 	>=media-libs/fontconfig-2.4
