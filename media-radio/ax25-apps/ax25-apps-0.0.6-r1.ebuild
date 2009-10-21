@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.10 2009/10/01 12:44:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.11 2009/10/21 16:03:21 maekke Exp $
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) user tools, additional daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ax25/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libax25-0.0.7"
