@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.21 2009/10/21 13:58:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.22 2009/10/21 16:57:23 djc Exp $
 
 inherit eutils distutils multilib python versionator check-reqs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="Boost-1.0"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
-IUSE="bcp bjam debug doc icu pyste threads threadsonly"
+IUSE="bcp bjam debug doc icu pyste test threads threadsonly"
 
 # Overriding var from python.eclass
 PYVER="2.4"

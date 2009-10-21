@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1-r2.ebuild,v 1.11 2009/10/21 13:58:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1-r2.ebuild,v 1.12 2009/10/21 16:57:23 djc Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2
 	mirror://gentoo/boost-patches-${PATCHSET_VERSION}.tbz2"
 LICENSE="Boost-1.0"
 SLOT="0"
-IUSE="debug doc icu pyste tools"
+IUSE="debug doc icu pyste test tools"
 
 DEPEND="icu? ( >=dev-libs/icu-3.2 )
 		sys-libs/zlib

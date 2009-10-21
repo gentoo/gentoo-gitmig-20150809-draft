@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r3.ebuild,v 1.4 2009/10/21 13:58:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r3.ebuild,v 1.5 2009/10/21 16:57:23 djc Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2
 	http://www.gentoo.org/~dev-zero/distfiles/boost-patches-${PATCHSET_VERSION}.tbz2"
 LICENSE="Boost-1.0"
 SLOT="0"
-IUSE="debug doc expat icu mpi tools"
+IUSE="debug doc expat icu mpi test tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	expat? ( dev-libs/expat )
