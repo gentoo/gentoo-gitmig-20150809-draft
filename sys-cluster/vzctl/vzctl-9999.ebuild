@@ -1,15 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.1 2009/10/20 16:31:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.2 2009/10/21 11:53:42 pva Exp $
 
 EAPI="2"
-inherit bash-completion eutils autotools
+
+inherit bash-completion autotools git
 
 DESCRIPTION="OpenVZ VE control utility"
 HOMEPAGE="http://openvz.org/"
-
 EGIT_REPO_URI="git://git.openvz.org/pub/vzctl"
-inherit git
 
 LICENSE="GPL-2"
 SLOT="0"
