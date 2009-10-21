@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r2.ebuild,v 1.1 2009/10/16 03:01:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r3.ebuild,v 1.1 2009/10/21 13:06:28 darkside Exp $
 
 EAPI="2"
 inherit prefix
@@ -23,6 +23,8 @@ PDEPEND="app-shells/gentoo-bashcomp"
 src_prepare() {
 	cp "${FILESDIR}/bash-completion.sh" "${T}" || die
 	eprefixify "${T}/bash-completion.sh"
+	# On the roadmap to change in next release, "2.0"
+	sed -i -e 's/declare -r bash4/export bash4/' bash_completion || die
 }
 
 src_install() {

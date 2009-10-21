@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.196 2009/10/16 03:01:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.197 2009/10/21 13:06:28 darkside Exp $
+
+*bash-completion-1.1-r3 (21 Oct 2009)
+
+  21 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.1-r2.ebuild, +bash-completion-1.1-r3.ebuild:
+  revbump to fix bug 263105 - long standing issue since bash-4 was
+  stabilized
 
 *bash-completion-1.1-r2 (16 Oct 2009)
 
