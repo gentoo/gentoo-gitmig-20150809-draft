@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4_rc2.ebuild,v 1.1 2009/09/29 14:23:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.ebuild,v 1.1 2009/10/21 14:49:48 matsuu Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
@@ -12,14 +12,13 @@ SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 #IUSE="dbus doc bash-completion"
 IUSE="dbus doc"
 
 RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	dev-libs/libev
 	>=dev-libs/libxdg-basedir-1
-	dev-util/gperf
 	media-libs/imlib2[png]
 	x11-libs/cairo[xcb]
 	x11-libs/libX11[xcb]
@@ -33,6 +32,7 @@ DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	>=dev-util/cmake-2.6
+	dev-util/gperf
 	dev-util/pkgconfig
 	media-gfx/imagemagick[png]
 	>=x11-proto/xcb-proto-1.5
