@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.167 2009/10/21 13:00:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.168 2009/10/21 13:10:29 djc Exp $
+
+  21 Oct 2009; Dirkjan Ochtman <djc@gentoo.org> boost-1.40.0.ebuild:
+  Re-add dropped keywords (1.39 -> 1.40), sorry about that.
 
 *boost-1.40.0 (21 Oct 2009)
 
