@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/libvdpau
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.1 2009/10/21 18:40:41 cardoe Exp $
+
+*libvdpau-0.2 (21 Oct 2009)
+
+  21 Oct 2009; Doug Goldstein <cardoe@gentoo.org> +libvdpau-0.2.ebuild,
+  +metadata.xml:
+  initial version. this library wraps VDPAU. marked as mirror restrict until
+  upstream creates a make dist tarball and we switch to that
+
