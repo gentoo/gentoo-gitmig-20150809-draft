@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.8.ebuild,v 1.2 2009/08/13 18:15:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.8.ebuild,v 1.3 2009/10/21 22:44:01 yngwin Exp $
 
 EAPI="2"
 
@@ -27,10 +27,10 @@ IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}
-	media-video/mplayer[ass,png]"
+	media-video/mplayer[ass,png,-openal]"
 
 LANGS="bg ca cs de en_US es et eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR
-pt_PT sk sr sv tr zh_CN zh_TW"
+pt sk sr sv tr zh_CN zh_TW"
 # langs with long notation in pkg, but no long notation in portage:
 NOLONGLANGS="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA vi_VN"
 for X in ${LANGS}; do
