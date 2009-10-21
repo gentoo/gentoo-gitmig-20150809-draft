@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libkdcraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.24 2009/10/15 11:44:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.25 2009/10/21 16:55:45 klausman Exp $
+
+  20 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  libkdcraw-0.1.9.ebuild:
+  Stable on alpha, bug #287980
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> libkdcraw-0.1.9.ebuild:
   amd64/x86 stable, bug #287980
