@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.6.ebuild,v 1.5 2008/12/20 18:43:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.6.ebuild,v 1.6 2009/10/21 15:35:23 ssuominen Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/scim-imengine/30199/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-IUSE="gtk kde nls"
+IUSE="gtk nls"
 
 DEPEND=">=app-i18n/scim-1.2
 	|| ( >=app-i18n/anthy-5900 >=app-i18n/anthy-ss-5911 )
@@ -22,12 +22,10 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
-PDEPEND="kde? ( app-i18n/skim-scim-anthy )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	elibtoolize
 }
 
@@ -35,13 +33,12 @@ src_compile() {
 	econf \
 		$(use_enable nls) \
 		--disable-static \
-		--disable-dependency-tracking || die "econf failed"
+		--disable-dependency-tracking
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
 	dodoc AUTHORS ChangeLog NEWS README
 }
 

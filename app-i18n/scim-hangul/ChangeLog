@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-hangul
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.28 2008/11/16 16:38:18 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.29 2009/10/21 15:37:37 ssuominen Exp $
+
+  21 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  scim-hangul-0.3.2.ebuild:
+  Remove KDE3 support.
 
   16 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> -scim-hangul-0.2.2.ebuild,
   -scim-hangul-0.3.1.ebuild:
