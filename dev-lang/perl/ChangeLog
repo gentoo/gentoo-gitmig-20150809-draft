@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.288 2009/10/13 01:48:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.289 2009/10/21 19:41:14 maekke Exp $
+
+  21 Oct 2009; Markus Meier <maekke@gentoo.org> perl-5.10.1.ebuild:
+  add ~amd64/~arm/~x86, bug #288028
 
   13 Oct 2009; Jeroen Roovers <jer@gentoo.org> perl-5.10.1.ebuild:
   Marked ~hppa (bug #288028).
