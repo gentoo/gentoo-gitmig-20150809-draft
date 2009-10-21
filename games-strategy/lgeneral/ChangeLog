@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.27 2009/09/21 04:43:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.28 2009/10/21 19:55:47 mr_bones_ Exp $
+
+  21 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  lgeneral-1.2_beta13.ebuild:
+  add use-deps for libsdl
 
 *lgeneral-1.2_beta13 (21 Sep 2009)
 
