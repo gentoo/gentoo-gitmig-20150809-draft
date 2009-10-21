@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/ChangeLog,v 1.8 2009/09/11 16:36:24 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gui/ChangeLog,v 1.9 2009/10/21 12:16:52 maekke Exp $
+
+  21 Oct 2009; Markus Meier <maekke@gentoo.org> sdl-gui-0.10.3.ebuild:
+  x86 stable, bug #285546
 
   11 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> sdl-gui-0.10.3.ebuild:
   Fixing -Werror bug 260910 , respecting CC, CXX, RANLIB, LD, AR variables
