@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta67.ebuild,v 1.1 2009/10/21 19:19:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta67.ebuild,v 1.2 2009/10/21 20:26:32 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils games
 
 MY_P=deng-1.9.0-beta6.7 # FIXME, this is stupid
 DESCRIPTION="A modern gaming engine for Doom, Heretic, and Hexen"
-HOMEPAGE="http://www.doomsdayhq.com/"
+HOMEPAGE="http://www.dengine.net/"
 SRC_URI="mirror://sourceforge/deng/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
