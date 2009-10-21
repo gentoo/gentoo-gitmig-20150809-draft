@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.25 2009/05/26 19:49:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.26 2009/10/21 16:31:39 maekke Exp $
+
+  21 Oct 2009; Markus Meier <maekke@gentoo.org>
+  doomsday-1.9.0_beta62.ebuild:
+  x86 stable, bug #287614
 
 *doomsday-1.9.0_beta62 (26 May 2009)
 
