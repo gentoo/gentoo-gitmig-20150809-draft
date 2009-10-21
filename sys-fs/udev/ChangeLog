@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.501 2009/10/20 19:04:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.502 2009/10/21 08:27:35 jer Exp $
+
+  21 Oct 2009; Jeroen Roovers <jer@gentoo.org> udev-146-r1.ebuild:
+  Stable for HPPA (bug #286074).
 
   20 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> udev-9999.ebuild:
   Auto enable udev-postmount only if udev is enabled.
