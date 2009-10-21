@@ -11,4 +11,14 @@
 <maintainer>
   <email>jmbsvicetto@gentoo.org</email>
 </maintainer>
+<use>
+  <flag name="pcap">
+    Enable the pcap-based plugin that allows creating a switch against
+    a real interface.
+  </flag>
+  <flag name="ssl">
+    Enable the cryptcab plugin that allows creating an encrypted
+    virtual cable.
+  </flag>
+</use>
 </pkgmetadata>
