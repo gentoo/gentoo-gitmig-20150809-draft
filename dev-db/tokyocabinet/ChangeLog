@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.3 2009/10/20 18:41:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.4 2009/10/21 19:19:29 grobian Exp $
+
+  21 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  tokyocabinet-1.4.34-r1.ebuild, tokyocabinet-1.4.35.ebuild,
+  files/fix_rpath.patch:
+  Update no-rpath path not to add bogus includes either. Do not enable
+  -fomg-extreme-performance flags. Marked ~ppc-macos and ~x64-solaris. Acked
+  by patrick.
 
 *tokyocabinet-1.4.35 (20 Oct 2009)
 

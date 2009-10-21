@@ -21,7 +21,8 @@ diff -ur configure.in configure.in
  # Building flags
 -MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char -O2"
 +MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char"
- MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -I$HOME/include -I/usr/local/include"
+-MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -I$HOME/include -I/usr/local/include"
++MYCPPFLAGS="-I. -I\$(INCLUDEDIR)"
  MYCPPFLAGS="$MYCPPFLAGS -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__"
 -MYLDFLAGS="-L. -L\$(LIBDIR) -L$HOME/lib -L/usr/local/lib"
 +MYLDFLAGS="-L. -L\$(LIBDIR)"
