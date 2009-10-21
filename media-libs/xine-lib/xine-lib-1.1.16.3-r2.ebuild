@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r2.ebuild,v 1.2 2009/10/21 18:27:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r2.ebuild,v 1.3 2009/10/21 19:30:08 gengor Exp $
 
 EAPI=1
 
@@ -16,6 +16,8 @@ else
 
 	SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.bz2"
 fi
+
+SRC_URI="${SRC_URI} mirror://gentoo/${PN}-1.1.15-textrel-fix.patch"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net"
@@ -90,7 +92,7 @@ src_unpack() {
 	rm -f ltmain.sh m4/{libtool,lt*}.m4 || die "libtool patch failed"
 	epatch "${FILESDIR}"/${P}-libmpcdecsv7.patch
 	# Bug 164425
-	epatch "${FILESDIR}"/${PN}-1.1.15-textrel-fix.patch
+	epatch "${DISTDIR}"/${PN}-1.1.15-textrel-fix.patch
 	eautoreconf
 }
 
