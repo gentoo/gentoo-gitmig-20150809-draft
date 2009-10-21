@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/debugedit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.20 2008/07/14 18:06:29 gmsoft Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.21 2009/10/21 07:40:50 loki_val Exp $
+
+*debugedit-4.4.6-r2 (21 Oct 2009)
+
+  21 Oct 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +debugedit-4.4.6-r2.ebuild, +files/debugedit-4.4.6-update.patch:
+  New revision of debugedit with lots of fixes from upstream. Requires patch
+  to portage to be applied to not misbehave
 
   14 Jul 2008; Guy Martin <gmsoft@gentoo.org> debugedit-4.4.6-r1.ebuild:
   Stable on hppa.
