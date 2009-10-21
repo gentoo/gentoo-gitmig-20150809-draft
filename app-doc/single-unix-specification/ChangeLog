@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.9 2009/10/16 14:05:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.10 2009/10/21 14:58:29 jer Exp $
+
+  21 Oct 2009; Jeroen Roovers <jer@gentoo.org>
+  single-unix-specification-4-r1.ebuild:
+  Stable for HPPA (bug #289002).
 
   16 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   single-unix-specification-4-r1.ebuild:
