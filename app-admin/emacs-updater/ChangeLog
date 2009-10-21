@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.29 2009/10/04 17:09:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.30 2009/10/21 09:04:09 jer Exp $
+
+  21 Oct 2009; Jeroen Roovers <jer@gentoo.org> emacs-updater-1.6.ebuild:
+  Stable for HPPA (bug #287461).
 
   04 Oct 2009; Raúl Porcel <armin76@gentoo.org> emacs-updater-1.6.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #287461
