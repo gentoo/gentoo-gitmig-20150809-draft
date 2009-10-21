@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.9.ebuild,v 1.1 2009/10/21 07:06:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.9.ebuild,v 1.2 2009/10/21 14:40:15 nyhm Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ DEPEND=">=media-libs/libsdl-1.2.10
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable wav music-wave) \
@@ -38,7 +38,6 @@ src_compile() {
 		$(use mad && echo --disable-music-mp3 || use_enable mp3 music-mp3) \
 		$(use_enable mad music-mp3-mad-gpl) \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
