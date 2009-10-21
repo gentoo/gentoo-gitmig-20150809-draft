@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PerlIO-gzip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-gzip/ChangeLog,v 1.7 2009/07/06 20:32:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-gzip/ChangeLog,v 1.8 2009/10/21 08:12:56 jer Exp $
+
+  21 Oct 2009; Jeroen Roovers <jer@gentoo.org> PerlIO-gzip-0.18.ebuild:
+  Stable for HPPA (bug #289360).
 
   06 Jul 2009; Alexis Ballier <aballier@gentoo.org> PerlIO-gzip-0.18.ebuild:
   keyword ~x86-fbsd
