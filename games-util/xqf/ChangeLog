@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xqf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.27 2009/07/26 22:04:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.28 2009/10/21 20:19:08 mr_bones_ Exp $
+
+  21 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> xqf-1.0.5.ebuild,
+  +files/xqf-1.0.5-cpu-overrun.patch:
+  Add patch to avoid cpu burn - submitted by Yannick Martin via bug #288853
 
   26 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org> xqf-1.0.5.ebuild:
   EAPI=2
@@ -139,7 +143,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.27 2009/07/26 22:04:36 mr_bones_ Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.28 2009/10/21 20:19:08 mr_bones_ Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 

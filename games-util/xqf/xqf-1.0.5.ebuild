@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.5.ebuild,v 1.4 2009/07/26 22:04:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.5.ebuild,v 1.5 2009/10/21 20:19:08 mr_bones_ Exp $
 
 EAPI=2
+inherit eutils
+
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
 SRC_URI="mirror://sourceforge/xqf/${P}.tar.gz"
@@ -20,6 +22,10 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cpu-overrun.patch # bug #288853
+}
 
 src_configure() {
 	econf \
