@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.20 2009/10/21 13:42:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.21 2009/10/21 13:58:13 djc Exp $
 
 inherit eutils distutils multilib python versionator check-reqs
 
@@ -41,7 +41,7 @@ src_unpack() {
 
 pkg_setup() {
 
-	if has test ${FEATURES} ; then
+	if use test ; then
 		CHECKREQS_DISK_BUILD="2048"
 		check_reqs
 	fi
@@ -220,7 +220,7 @@ src_install () {
 		dobin bjam || die "bjam install failed"
 	fi
 
-	if has test ${FEATURES} ; then
+	if use test ; then
 		cd "${S}/status"
 		elog "Tests enabled, installing the output to:"
 		elog "  ${ROOT}usr/share/doc/${PF}/status"

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.36.0-r1.ebuild,v 1.7 2009/10/21 13:42:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.36.0-r1.ebuild,v 1.8 2009/10/21 13:58:13 djc Exp $
 
 EAPI="2"
 
@@ -55,7 +55,7 @@ _add_line() {
 }
 
 pkg_setup() {
-	if has test ${FEATURES} ; then
+	if use test ; then
 		CHECKREQS_DISK_BUILD="1024"
 		check_reqs
 

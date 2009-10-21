@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1-r2.ebuild,v 1.10 2009/10/21 13:42:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34.1-r2.ebuild,v 1.11 2009/10/21 13:58:13 djc Exp $
 
 inherit distutils flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/${MY_P}
 # - write a patch to support /dev/urandom on FreeBSD and OSX (see below)
 
 pkg_setup() {
-	if has test ${FEATURES} ; then
+	if use test ; then
 		CHECKREQS_DISK_BUILD="1024"
 		check_reqs
 
@@ -156,7 +156,7 @@ src_compile() {
 			|| die "building tools failed"
 	fi
 
-	if has test ${FEATURES} ; then
+	if use test ; then
 		cd "${S}/tools/regression/build"
 		bjam -q \
 			${OPTIONS} \
@@ -226,7 +226,7 @@ src_install () {
 		doins -r share
 	fi
 
-	if has test ${FEATURES} ; then
+	if use test ; then
 		cd "${S}/status"
 		docinto status
 		dohtml *.{html,gif} ../boost.png

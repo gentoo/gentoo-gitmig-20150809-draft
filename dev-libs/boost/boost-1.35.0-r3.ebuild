@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r3.ebuild,v 1.3 2009/10/21 13:42:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r3.ebuild,v 1.4 2009/10/21 13:58:13 djc Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ MAJOR_PV=1_35
 BJAM="bjam-${MAJOR_PV}"
 
 pkg_setup() {
-	if has test ${FEATURES} ; then
+	if use test ; then
 		CHECKREQS_DISK_BUILD="1024"
 		check_reqs
 
