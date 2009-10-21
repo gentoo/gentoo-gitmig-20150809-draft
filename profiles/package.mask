@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10635 2009/10/21 12:51:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10636 2009/10/21 15:44:15 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -596,11 +596,6 @@ dev-lang/nemerle
 # Torsten Veller <tove@gentoo.org> (09 Sep 2009)
 # Convert-UUlib-1.30 breaks amavisd-new (#283797)
 =dev-perl/Convert-UUlib-1.30
-
-# Romain Perier <mrpouet@gentoo.org> (05 Sep 2009)
-# Masked because too old, contains a lot of QA warnings/errors
-# The last one has a lot of changes.
-=www-plugins/gnash-0.8.4
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2009)
 # Masked for security, has no maintainer. Bug 283434.
