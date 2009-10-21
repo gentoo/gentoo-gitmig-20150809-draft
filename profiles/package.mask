@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10632 2009/10/21 11:50:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10633 2009/10/21 11:55:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org (21 Oct 2009)
+# Samuli Suominen <ssuominen@gentoo.org> (21 Oct 2009)
+# KDE3-only. Doesn't work wrt #210034. Internal copy
+# of readline wrt #206953. Masked for removal in 30 days.
+kde-misc/tork
+
+# Samuli Suominen <ssuominen@gentoo.org> (21 Oct 2009)
 # KDE3-only. Doesn't compile wrt bug #276290.
 # Masked for removal in 30 days.
 net-dialup/trayimonc
