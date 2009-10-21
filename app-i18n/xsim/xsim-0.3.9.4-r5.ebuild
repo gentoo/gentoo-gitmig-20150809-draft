@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.2 2008/11/05 20:06:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.3 2009/10/21 15:11:40 ssuominen Exp $
 
-EAPI="1"
-inherit db-use eutils flag-o-matic kde-functions multilib
+EAPI=2
+inherit db-use eutils flag-o-matic multilib
 
 DESCRIPTION="A simple and fast GB and BIG5 Chinese XIM server"
 HOMEPAGE="http://developer.berlios.de/projects/xsim/"
@@ -12,17 +12,14 @@ SRC_URI="mirror://berlios/xsim/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug kde"
+IUSE="debug"
 
-DEPEND=">=sys-libs/db-4.1
-	>=sys-apps/sed-4
-	kde? ( kde-base/kdelibs:3.5 )"
+RDEPEND=">=sys-libs/db-4.1"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-src_unpack() {
+src_prepare() {
 	local dbver
-
-	unpack ${A}
-	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-compile-fix.patch
 	epatch "${FILESDIR}"/${P}-gcc-3.4.patch
@@ -42,24 +39,16 @@ src_unpack() {
 		-e "s#@prefix@/etc#/etc#" || die
 }
 
-src_compile() {
-	local myconf
+src_configure() {
+	local myconf=""
 
-	if use kde; then
-		set-qtdir 3
-		set-kdedir 3
-		myconf="${myconf}
-			--with-kde3=${KDEDIR} \
-			--with-qt3=${QTDIR} \
-			--enable-status-kde3"
-	fi
+	use debug && myconf="--enable-debug"
 
-	myconf="${myconf} --with-bdb-includes=$(db_includedir)"
-
-	use debug && myconf="${myconf} --enable-debug"
-
-	econf ${myconf} || die "configure failed"
-	emake || die "make failed"
+	econf \
+		--with-bdb-includes=$(db_includedir) \
+		--without-qt3 \
+		--without-kde3 \
+		${myconf}
 }
 
 src_install() {
@@ -68,7 +57,7 @@ src_install() {
 		xsim_libp="${D}"usr/$(get_libdir)/xsim/plugins \
 		xsim_binp="${D}"/usr/bin \
 		xsim_etcp="${D}"/etc \
-		install-data install || die "install failed"
+		install-data install || die
 
 	dodoc ChangeLog KNOWNBUG README* TODO
 }

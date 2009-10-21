@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xsim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.19 2009/09/23 15:42:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.20 2009/10/21 15:11:40 ssuominen Exp $
+
+  21 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xsim-0.3.9.4-r5.ebuild:
+  Remove KDE3 support.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> xsim-0.3.9.4-r2.ebuild:
   Remove virtual/libc
