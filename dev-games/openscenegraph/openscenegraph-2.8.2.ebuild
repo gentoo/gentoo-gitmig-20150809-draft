@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.1 2009/10/12 19:09:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.2 2009/10/21 20:30:09 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator base cmake-utils
@@ -42,7 +42,7 @@ S="${WORKDIR}"/${MY_P}
 DOCS="AUTHORS.txt ChangeLog NEWS.txt"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-2.8.0-magicoff.patch
+	"${FILESDIR}"/${P}-magicoff.patch
 )
 
 src_configure() {
