@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmsn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.10 2009/10/17 10:39:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.11 2009/10/21 08:02:45 jer Exp $
+
+  21 Oct 2009; Jeroen Roovers <jer@gentoo.org> libmsn-4.0_beta6.ebuild:
+  Stable for HPPA (bug #288420).
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> libmsn-4.0_beta6.ebuild:
   x86 stable, bug #288420
