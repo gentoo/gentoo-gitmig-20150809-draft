@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r1.ebuild,v 1.4 2009/02/07 19:58:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r1.ebuild,v 1.5 2009/10/21 13:42:37 djc Exp $
 
 inherit python flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -13,7 +13,7 @@ DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2
 	mirror://gentoo/boost-patches-${PATCHSET_VERSION}.tbz2"
-LICENSE="freedist Boost-1.0"
+LICENSE="Boost-1.0"
 SLOT="0"
 IUSE="debug doc expat icu mpi tools"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r5.ebuild,v 1.6 2009/08/07 05:47:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r5.ebuild,v 1.7 2009/10/21 13:42:37 djc Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.boost.org/"
 SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2
 	mirror://gentoo/boost-patches-${PATCHSET_VERSION}.tbz2
 	http://www.gentoo.org/~dev-zero/distfiles/boost-patches-${PATCHSET_VERSION}.tbz2"
-LICENSE="freedist Boost-1.0"
+LICENSE="Boost-1.0"
 SLOT="0"
 IUSE="doc +eselect expat icu mpi python tools"
 
