@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4921 2009/10/22 18:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4922 2009/10/22 22:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -564,6 +564,7 @@ dev-cpp/sptk:aspell - Enable support for app-text/aspell
 dev-cpp/sptk:excel - Enable Excel support
 dev-db/hk_classes:mdb - Enables Microsoft Access DB support
 dev-db/hk_classes:xbase - Enables support for xbase databases (dBase, FoxPro, etc.)
+dev-db/ingres:client - Disable dbms component
 dev-db/ingres:das - Enable das support
 dev-db/ingres:demodb - Install demo DB
 dev-db/ingres:net - Enable net support
