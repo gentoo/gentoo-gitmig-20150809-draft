@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/tinycdb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.18 2008/10/26 15:30:34 hattya Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.19 2009/10/22 20:47:22 patrick Exp $
+
+*tinycdb-0.77 (22 Oct 2009)
+
+  22 Oct 2009; Patrick Lauer <patrick@gentoo.org> +tinycdb-0.77.ebuild:
+  Bump, fixes #289357
 
   26 Oct 2008; Akinori Hattori <hattya@gentoo.org> tinycdb-0.76.ebuild:
   fixes bug #243772 and bug #240171.
