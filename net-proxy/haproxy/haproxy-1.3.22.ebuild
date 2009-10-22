@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.20.ebuild,v 1.1 2009/08/15 22:59:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.22.ebuild,v 1.1 2009/10/22 21:12:38 mrness Exp $
 
 inherit versionator eutils
 
@@ -24,6 +24,7 @@ pkg_setup() {
 src_compile() {
 	local ARGS="TARGET=linux26"
 	use pcre && ARGS="${ARGS} USE_PCRE=1"
+	use kernel_linux && ARGS="${ARGS} USE_LINUX_SPLICE=1"
 	emake ADDINC="${CFLAGS}" LDFLAGS="${LDFLAGS}" ${ARGS}
 }
 
