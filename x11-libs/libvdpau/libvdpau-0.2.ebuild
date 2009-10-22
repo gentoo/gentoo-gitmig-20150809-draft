@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.2.ebuild,v 1.3 2009/10/22 14:19:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.2.ebuild,v 1.4 2009/10/22 15:29:08 cardoe Exp $
 
 EAPI="2"
 
@@ -15,17 +15,17 @@ IUSE="doc"
 
 #unfortunately, there's driver versions in between that this works with
 RDEPEND="x11-libs/libX11
-	!>=x11-drivers/nvidia-drivers-180.29
-	!>=x11-drivers/nvidia-drivers-180.60
-	!>=x11-drivers/nvidia-drivers-185.18.14
-	!>=x11-drivers/nvidia-drivers-185.18.29
-	!>=x11-drivers/nvidia-drivers-185.18.31
-	!>=x11-drivers/nvidia-drivers-185.18.36
-	!>=x11-drivers/nvidia-drivers-190.18
-	!>=x11-drivers/nvidia-drivers-190.25
-	!>=x11-drivers/nvidia-drivers-190.32
-	!>=x11-drivers/nvidia-drivers-190.36
-	!>=x11-drivers/nvidia-drivers-190.40"
+	!=x11-drivers/nvidia-drivers-180.29
+	!=x11-drivers/nvidia-drivers-180.60
+	!=x11-drivers/nvidia-drivers-185.18.14
+	!=x11-drivers/nvidia-drivers-185.18.29
+	!=x11-drivers/nvidia-drivers-185.18.31
+	!=x11-drivers/nvidia-drivers-185.18.36
+	!=x11-drivers/nvidia-drivers-190.18
+	!=x11-drivers/nvidia-drivers-190.25
+	!=x11-drivers/nvidia-drivers-190.32
+	!=x11-drivers/nvidia-drivers-190.36
+	!=x11-drivers/nvidia-drivers-190.40"
 DEPEND="${RDEPEND}
 		x11-proto/xproto
 		doc? ( app-doc/doxygen
