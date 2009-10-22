@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-www
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.9 2009/08/03 21:09:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.10 2009/10/22 16:34:31 armin76 Exp $
+
+  22 Oct 2009; Raúl Porcel <armin76@gentoo.org> guile-www-2.23.ebuild:
+  sparc stable
 
   03 Aug 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   username change
