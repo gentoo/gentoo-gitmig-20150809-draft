@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.158 2009/10/20 17:55:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.159 2009/10/22 18:35:57 grobian Exp $
+
+*mutt-1.5.20-r7 (22 Oct 2009)
+
+  22 Oct 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r6.ebuild,
+  +mutt-1.5.20-r7.ebuild:
+  Revert addition of tokyocabinet USE-flag to -r6, add it to -r7 and drop
+  keywords for arches that don't have tokyocabinet keyworded, bug #290154
 
   20 Oct 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r6.ebuild:
   Add tokyocabinet support with USE=tokyocabinet, thanks Tim Harder in bug
