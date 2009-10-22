@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-BrowserDetect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-BrowserDetect/ChangeLog,v 1.21 2009/10/22 13:42:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-BrowserDetect/ChangeLog,v 1.22 2009/10/22 17:17:58 volkmar Exp $
+
+  22 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  HTTP-BrowserDetect-1.02.ebuild:
+  Keywording for ppc, bug 290136
 
 *HTTP-BrowserDetect-1.02 (22 Oct 2009)
 
