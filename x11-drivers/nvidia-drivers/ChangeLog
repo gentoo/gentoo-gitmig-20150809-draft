@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.178 2009/10/21 16:26:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.179 2009/10/22 02:46:37 cardoe Exp $
+
+  22 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-185.18.31.ebuild, nvidia-drivers-185.18.36.ebuild,
+  nvidia-drivers-190.32.ebuild, nvidia-drivers-190.36.ebuild,
+  nvidia-drivers-190.40.ebuild:
+  add note about needing to add QA_LDFLAGS for nvidia-smi
 
 *nvidia-drivers-185.18.36 (21 Oct 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.36.ebuild,v 1.1 2009/10/21 16:26:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.36.ebuild,v 1.2 2009/10/22 02:46:36 cardoe Exp $
 
 EAPI="2"
 
@@ -132,6 +132,9 @@ QA_DT_HASH="usr/lib32/libvdpau_trace.so.${PV}
 	usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/libXvMCNVIDIA.so.${PV}
 	usr/lib/libvdpau_nvidia.so.${PV}"
+
+# Bug #290081
+# QA_LDFLAGS="usr/bin/nvidia-smi"
 
 if use x86; then
 	PKG_V="-pkg0"
