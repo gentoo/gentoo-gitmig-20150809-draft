@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.2.ebuild,v 1.2 2009/10/08 11:59:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.2.ebuild,v 1.3 2009/10/22 11:15:24 scarabeus Exp $
 
 EAPI="2"
 
@@ -65,6 +65,7 @@ IUSE="${IUSE} ${PLUGINS} ${PROTOCOLS}"
 
 COMMONDEPEND="
 	dev-libs/libpcre
+	>=kde-base/kdepimlibs-${PV}[kdeprefix=]
 	x11-libs/libXScrnSaver
 	>=x11-libs/qt-gui-4.4.0:4[mng]
 	gadu? ( >=net-libs/libgadu-1.8.0[threads] )

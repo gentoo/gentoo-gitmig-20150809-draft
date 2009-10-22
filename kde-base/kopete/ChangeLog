@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.219 2009/10/18 17:12:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.220 2009/10/22 11:15:24 scarabeus Exp $
+
+  22 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> kopete-4.3.1.ebuild,
+  kopete-4.3.2.ebuild:
+  Add missing dep on kdepimlibs.
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> kopete-4.3.1.ebuild:
   x86 stable, bug #287697
