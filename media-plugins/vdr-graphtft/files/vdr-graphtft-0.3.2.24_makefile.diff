@@ -37,3 +37,18 @@ diff -Naur graphtft-24.orig/Makefile graphtft-24/Makefile
    DEFINES += -DHAVE_DFB
  endif
  
+diff -Naur graphtft-24.orig/graphtft-fe/Makefile graphtft-24/graphtft-fe/Makefile
+--- graphtft-24.orig/graphtft-fe/Makefile	2009-10-22 17:39:55.000000000 +0200
++++ graphtft-24/graphtft-fe/Makefile	2009-10-22 17:41:29.000000000 +0200
+@@ -1,9 +1,9 @@
+ 
+ CXX           = g++
+ CXXFLAGS      = -pipe -ggdb -O2 -Wall -W -D_REENTRANT -fPIC
+-INCPATH       = -I. `Magick++-config --cppflags`
++INCPATH       = -I. $(shell Magick++-config --cppflags)
+ LFLAGS        = -Wl,--no-undefined
+-LIBS          = -lpthread `imlib2-config --libs` `Magick++-config --libs`
++LIBS          = -lpthread $(shell imlib2-config --libs) $(shell Magick++-config --libs)
+ AR            = ar
+ 
+ TARGET = graphtft-fe
