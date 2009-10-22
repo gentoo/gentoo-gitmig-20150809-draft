@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gwget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.18 2009/10/19 19:45:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.19 2009/10/22 20:56:05 eva Exp $
+
+*gwget-1.0.4 (22 Oct 2009)
+
+  22 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> +gwget-1.0.4.ebuild:
+  Version bump. Fix some crashes with gtk+-2.18.
 
 *gwget-1.0.3 (19 Oct 2009)
 
