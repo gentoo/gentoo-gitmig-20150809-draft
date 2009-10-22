@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.16.ebuild,v 1.2 2009/10/19 20:40:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.16.ebuild,v 1.3 2009/10/22 21:09:52 maekke Exp $
 
 inherit fdo-mime gnome2-utils
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	if use gimp && ! use gtk; then
 		eerror "to enable gimp support, you must enable gtk support"
-		die "emerge lensfun with gtk support"
+		die "emerge ${PN} with gtk support"
 	fi
 }
 
@@ -40,6 +40,7 @@ src_compile() {
 		$(use_with exif exiv2) \
 		$(use_with gimp) \
 		$(use_enable gnome mime) \
+		$(use_with gtk) \
 		$(use_enable hotpixels) \
 		$(use_with lensfun) \
 		$(use_enable openmp) \
