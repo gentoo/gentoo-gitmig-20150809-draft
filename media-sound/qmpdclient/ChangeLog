@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.54 2009/10/07 18:37:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.55 2009/10/22 18:28:26 hwoarang Exp $
+
+*qmpdclient-1.1.1-r1 (22 Oct 2009)
+
+  22 Oct 2009; Markos Chandras <hwoarang@gentoo.org>
+  +qmpdclient-1.1.1-r1.ebuild:
+  Fix translations installation. Fixes bug #289717
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> qmpdclient-1.1.1.ebuild:
   ppc stable #287541
