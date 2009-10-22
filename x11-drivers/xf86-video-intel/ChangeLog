@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.40 2009/10/22 13:31:08 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.41 2009/10/22 13:45:49 remi Exp $
+
+*xf86-video-intel-2.9.0-r1 (22 Oct 2009)
+
+  22 Oct 2009; Rémi Cardona <remi@gentoo.org>
+  +files/2.9.0-0001-drmmode-with-1.7-server-set-mode-major-doesn-t-get-g.pat
+  ch, +xf86-video-intel-2.9.0-r1.ebuild,
+  +files/2.9.0-0002-uxa-Free-the-ScratchPixmapHeader-after-its-associate.pat
+  ch, +files/2.9.0-0003-Drop-frontbuffer-from-crtc-in-I830CloseScreen.patch:
+  add patches from the 2.9 branch (should fix bug #289980)
 
   22 Oct 2009; Rémi Cardona <remi@gentoo.org>
   -files/2.1.1-fix_build_without_dri.patch,
