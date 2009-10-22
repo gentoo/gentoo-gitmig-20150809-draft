@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.4.4.ebuild,v 1.8 2009/10/12 17:03:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.4.4.ebuild,v 1.9 2009/10/22 21:54:31 klausman Exp $
 
 EAPI=2
 
@@ -307,7 +307,10 @@ src_test() {
 		fi
 		# Bug #225601 - t0004 is not suitable for root perm
 		# Bug #219839 - t1004 is not suitable for root perm
-		disabled="${disabled} t0004-unwritable.sh t1004-read-tree-m-u-wf.sh"
+		# Bug #288575 - t3700 is not suitable for root perm 
+		# Bug #288575 - t7300 is not suitable for root perm
+		disabled="${disabled} t0004-unwritable.sh t1004-read-tree-m-u-wf.sh
+		t3700-add.sh t7300-clean.sh"
 	else
 		[[ $cvs -gt 0 ]] && \
 			has_version dev-util/cvs && \
