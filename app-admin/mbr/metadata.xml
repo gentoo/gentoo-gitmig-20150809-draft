@@ -5,6 +5,4 @@
 <maintainer>
   <email>maintainer-needed@gentoo.org</email>
 </maintainer>
-<longdescription>A replacement master boot record for IBM-PC compatible
-	computers.</longdescription>
 </pkgmetadata>
