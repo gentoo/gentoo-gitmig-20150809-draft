@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.22.ebuild,v 1.1 2009/10/16 12:42:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.22-r1.ebuild,v 1.1 2009/10/22 16:07:57 voyageur Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
@@ -31,6 +31,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-pam.patch
+	epatch "${FILESDIR}"/${P}-fix_rest_with_throttling.patch
 }
 
 src_configure() {
