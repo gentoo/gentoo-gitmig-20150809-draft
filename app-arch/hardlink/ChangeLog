@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/hardlink
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/ChangeLog,v 1.1 2009/10/22 18:53:21 robbat2 Exp $
+
+*hardlink-0.1.1 (22 Oct 2009)
+
+  22 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> +hardlink-0.1.1.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
