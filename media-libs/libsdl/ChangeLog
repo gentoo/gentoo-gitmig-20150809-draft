@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.161 2009/10/21 07:21:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.162 2009/10/22 16:28:06 mr_bones_ Exp $
+
+  22 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.14.ebuild:
+  arts is deprecated
 
 *libsdl-1.2.14 (21 Oct 2009)
 
