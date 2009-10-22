@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Moose/IO-Moose-0.1003.ebuild,v 1.1 2009/06/23 07:41:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Moose/IO-Moose-0.1003.ebuild,v 1.2 2009/10/22 11:51:08 tove Exp $
 
 EAPI=2
 MODULE_AUTHOR="DEXTER"
@@ -23,7 +23,7 @@ DEPEND=">=dev-perl/MooseX-GlobRef-0.07
 	>=dev-perl/Test-Assert-0.0501
 	dev-perl/Task-Weaken
 	>=dev-perl/Exception-System-0.11
-	>=dev-perl/Exception-Base-0.2201
+	>=dev-perl/Exception-Base-0.22.01
 	dev-perl/maybe
 	dev-perl/namespace-clean
 	dev-perl/Exception-Warning

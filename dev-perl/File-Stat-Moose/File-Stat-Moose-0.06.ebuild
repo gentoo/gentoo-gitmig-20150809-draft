@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Stat-Moose/File-Stat-Moose-0.06.ebuild,v 1.2 2009/08/10 21:45:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Stat-Moose/File-Stat-Moose-0.06.ebuild,v 1.3 2009/10/22 11:50:24 tove Exp $
 
 EAPI=2
 MODULE_AUTHOR="DEXTER"
@@ -24,7 +24,7 @@ DEPEND="dev-perl/DateTime
 	>=dev-perl/Exception-Died-0.06
 	dev-perl/constant-boolean
 	>=dev-perl/Test-Assert-0.0501
-	>=dev-perl/Exception-Base-0.2201
+	>=dev-perl/Exception-Base-0.22.01
 	>=dev-perl/Exception-System-0.11
 	dev-perl/Moose"
 RDEPEND="${DEPEND}"
