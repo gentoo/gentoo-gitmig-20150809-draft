@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.3.02-r1.ebuild,v 1.2 2009/08/06 15:30:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.3.02-r1.ebuild,v 1.3 2009/10/22 10:17:23 ssuominen Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/miscfiles
