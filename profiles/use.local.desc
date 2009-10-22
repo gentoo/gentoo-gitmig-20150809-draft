@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4918 2009/10/21 11:07:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4919 2009/10/22 14:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1608,6 +1608,11 @@ media-plugins/vdr-burn:projectx - Enables support for media-video/projectx
 media-plugins/vdr-dvdconvert:projectx - Enable support for media-video/projectx
 media-plugins/vdr-epgsearch:tre - Add support for unlimited fuzzy searching with help of dev-libs/tre library
 media-plugins/vdr-graphtft:graphtft-fe - Install external x11 remote frontend
+media-plugins/vdr-graphtft:theme_avp - graphTFT Alien vs. Predato theme
+media-plugins/vdr-graphtft:theme_deepblue - graphTFT default theme
+media-plugins/vdr-graphtft:theme_deeppurple - graphTFT Deep Purple theme
+media-plugins/vdr-graphtft:theme_poetter - graphTFT Poetter theme
+media-plugins/vdr-graphtft:touchscreen - Enable Touchscreen support
 media-plugins/vdr-music:4mb-mod - Enables support for modded FF-Card to 4MB ram or softdecoder
 media-plugins/vdr-music:ff-card - Enables scrollmode on FF-Card
 media-plugins/vdr-music:graphtft - Enable support for media-plugins/vdr-graphtft
