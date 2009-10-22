@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2-r1.ebuild,v 1.1 2009/10/11 17:27:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2-r2.ebuild,v 1.1 2009/10/22 18:09:59 patrick Exp $
 
 EAPI="2"
 
@@ -15,9 +15,11 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 IUSE="samba4 ads aio caps cluster cups debug examples ldap pam syslog winbind
-	+tdb +talloc +netapi +smbclient smbsharemodes addns tools"
+	+netapi +smbclient smbsharemodes addns tools"
 
 DEPEND="dev-libs/popt
+	sys-libs/talloc
+	sys-libs/tdb
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs )
 	caps? ( sys-libs/libcap )
@@ -27,19 +29,6 @@ DEPEND="dev-libs/popt
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam
 		winbind? ( dev-libs/iniparser ) )
-	addns? ( !talloc? ( virtual/talloc ) )
-	netapi? ( !tdb? ( virtual/tdb ) )
-	netapi? ( !talloc? ( virtual/talloc ) )
-	smbclient? ( !tdb? ( virtual/tdb ) )
-	smbclient? ( !talloc? ( virtual/talloc ) )
-	smbsharemodes? ( !tdb? ( virtual/tdb ) )
-	smbsharemodes? ( !talloc? ( virtual/talloc ) )
-	winbind? ( !tdb? ( virtual/tdb ) )
-	winbind? ( !talloc? ( virtual/talloc ) )
-	pam? ( !tdb? ( virtual/tdb ) )
-	pam? ( !talloc? ( virtual/talloc ) )
-	samba4? ( tools? ( !tdb? ( virtual/tdb ) ) )
-	samba4? ( tools? ( !talloc? ( virtual/talloc ) ) )
 	syslog? ( virtual/logger )
 	!<net-fs/samba-3.3"
 RDEPEND="${DEPEND}"
@@ -50,7 +39,6 @@ RESTRICT="test"
 BINPROGS=""
 
 if use tools ; then
-	if use tdb ; then BINPROGS="${BINPROGS} bin/tdbbackup bin/tdbdump bin/tdbtool"; fi
 	if use samba4 ; then BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename"; fi
 fi
 
@@ -65,14 +53,6 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 pkg_setup() {
 	confutils_use_depend_all samba4 ads
 	confutils_use_depend_all ads ldap
-
-	if use tdb && has_version sys-libs/tdb ; then
-		die "sys-libs/tdb already installed, please disable tdb use flag"
-	fi
-	if use talloc && has_version sys-libs/talloc ; then
-		die "sys-libs/talloc already installed, please disable talloc use flag"
-	fi
-
 }
 
 src_prepare() {
@@ -189,9 +169,9 @@ src_configure() {
 		--without-quotas \
 		--without-sys-quotas \
 		--without-utmp \
-		$(use_with tdb libtdb) \
+		--without-libtdb \
 		$(use_with netapi libnetapi) \
-		$(use_with talloc libtalloc) \
+		--without-libtalloc \
 		$(use_with smbclient libsmbclient) \
 		$(use_with smbsharemodes libsmbsharemodes) \
 		$(use_with addns libaddns) \
@@ -208,14 +188,6 @@ src_configure() {
 src_compile() {
 
 	# compile libs
-	if use tdb ; then
-		einfo "make tdb library"
-		emake libtdb || die "emake libtdb failed"
-	fi
-	if use talloc ; then
-		einfo "make talloc library"
-		emake libtalloc || die "emake libtalloc failed"
-	fi
 	if use addns ; then
 		einfo "make addns library"
 		emake libaddns || die "emake libaddns failed"
@@ -254,14 +226,6 @@ src_compile() {
 src_install() {
 
 	# install libs
-	if use tdb ; then
-		einfo "install tdb library"
-		emake installlibtdb DESTDIR="${D}" || die "emake install libtdb failed"
-	fi
-	if use talloc ; then
-		einfo "install talloc library"
-		emake installlibtalloc DESTDIR="${D}" || die "emake install libtalloc failed"
-	fi
 	if use netapi ; then
 		einfo "install netapi library"
 		emake installlibnetapi DESTDIR="${D}" || die "emake install libnetapi failed"

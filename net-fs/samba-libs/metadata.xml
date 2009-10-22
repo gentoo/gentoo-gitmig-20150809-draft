@@ -15,8 +15,6 @@ Samba is an Open Source/Free Software suite that provides seamless file and prin
 	<flag name="cluster">Enable support for clustering</flag>
 	<flag name="winbind">Enables support for the winbind auth daemon</flag>
 	<flag name="samba4">Enable experimental samba4 bits</flag>
-	<flag name="tdb">Enable building of tdb lib</flag>
-	<flag name="talloc">Enable building of talloc lib</flag>
 	<flag name="netapi">Enable building of netapi bits</flag>
 	<flag name="smbclient">Enable smbclient tool</flag>
 	<flag name="smbsharemodes">Enable special smb share modes (?) </flag>
