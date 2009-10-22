@@ -1,6 +1,30 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.39 2009/10/05 13:37:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.40 2009/10/22 13:31:08 remi Exp $
+
+  22 Oct 2009; Rémi Cardona <remi@gentoo.org>
+  -files/2.1.1-fix_build_without_dri.patch,
+  -files/2.7.99.902-0001-Fix-XV-scan-line-calculation-when-rotated.patch,
+  -files/2.7.0-0001-KMS-hook-up-output-properties-for-randr.patch,
+  -files/2.5.1-0001-clean-up-man-page-generation-and-remove-all-traces-o.pat
+  ch,
+  -files/2.6.1-0001-clean-up-man-page-generation-and-remove-all-traces-o.pat
+  ch, -files/2.2.1-0001-fixup-pciaccess-version-detect.patch,
+  -files/2.3.2-0001-intel-fix-drm-check.patch,
+  -files/2.4.3-0001-never-enable-DRI_MM-on-this-branch.patch,
+  -xf86-video-intel-2.4.3.ebuild,
+  -files/2.7.99.902-0002-Reset-framebuffer-offset-when-rebinding-aperture-22
+  7.patch, -xf86-video-intel-2.5.1-r1.ebuild,
+  -files/2.5.1-0002-include-X11-Xmd.h-to-define-CARD16-needed-by-edid.patch,
+  -xf86-video-intel-2.7.99.902-r1.ebuild, -xf86-video-intel-2.8.0.ebuild,
+  -files/2.7.99.902-0003-Use-batch_start_atomic-to-fix-batchbuffer-wrapping-
+  p.patch,
+  -files/2.7.99.902-0004-Fix-915-class-Render-after-the-8xx-class-Render-fix
+  .patch,
+  -files/2.7.99.902-0005-Really-fix-i915-render.-Fail-at-commit-amend.patch,
+  -files/2.7.99.902-0006-accessing-a-pixmap-if-prepare_access-fails-is-verbo
+  t.patch, -files/2.7.99.902-0007-Update-to-xextproto-7.1-support.patch:
+  drop old ebuilds
 
   05 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   xf86-video-intel-2.8.1.ebuild:
