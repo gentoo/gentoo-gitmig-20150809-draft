@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.36 2009/10/11 13:57:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.37 2009/10/22 19:24:42 voyageur Exp $
+
+*chromium-bin-4.0.224.2_p29794 (22 Oct 2009)
+
+  22 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +chromium-bin-4.0.224.2_p29794.ebuild:
+  Bump, has initial fixes for audio stuttering with HTML5 audio/video
 
 *chromium-bin-4.0.222.4_p28661 (11 Oct 2009)
 
