@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/igmpproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/ChangeLog,v 1.4 2009/09/08 17:14:47 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/ChangeLog,v 1.5 2009/10/22 19:19:11 idl0r Exp $
+
+*igmpproxy-0.1 (22 Oct 2009)
+
+  22 Oct 2009; Christian Ruppert <idl0r@gentoo.org>
+  -igmpproxy-0.1_beta3.ebuild, -igmpproxy-0.1_beta5.ebuild,
+  +igmpproxy-0.1.ebuild:
+  Version bump to 0.1, remove old ebuilds.
 
   08 Sep 2009; Mike Auty <ikelos@gentoo.org> igmpproxy-0.1_beta3.ebuild,
   igmpproxy-0.1_beta5.ebuild:
