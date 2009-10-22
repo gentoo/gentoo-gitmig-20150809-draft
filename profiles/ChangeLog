@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3436 2009/10/22 16:21:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3437 2009/10/22 20:19:33 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Oct 2009; Markus Meier <maekke@gentoo.org> package.mask:
+  unmask media-gfx/autopano-sift-C as final version has been released
 
   22 Oct 2009; Raúl Porcel <armin76@gentoo.org> package.mask:
   Add sh-sources to p.mask for removal in 30 days
