@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.14_beta.ebuild,v 1.1 2009/10/22 22:30:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.14_beta.ebuild,v 1.2 2009/10/22 23:12:43 mrness Exp $
 
 EAPI="2"
 
@@ -116,6 +116,7 @@ src_configure() {
 		--sysconfdir=/etc/squid \
 		--libexecdir=/usr/libexec/squid \
 		--localstatedir=/var \
+		--with-pidfile=/var/run/squid.pid \
 		--datadir=/usr/share/squid \
 		--with-logdir=/var/log/squid \
 		--with-default-user=squid \
