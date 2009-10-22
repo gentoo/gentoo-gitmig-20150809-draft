@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.218 2009/10/03 14:20:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.219 2009/10/22 17:27:49 mrpouet Exp $
+
+*epiphany-2.26.3-r2 (22 Oct 2009)
+
+  22 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +epiphany-2.26.3-r2.ebuild, +files/epiphany-2.26.3-favicon-cache.patch:
+  Fix missing favicon on most websites (due to a missing pattern matching)
+  per bug #290024.
 
   03 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
   epiphany-2.26.3-r1.ebuild:
