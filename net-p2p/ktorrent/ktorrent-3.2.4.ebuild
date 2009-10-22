@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.4.ebuild,v 1.1 2009/09/27 14:05:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.4.ebuild,v 1.2 2009/10/22 10:58:16 scarabeus Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="ar be bg ca cs da de el en_GB es et fr ga gl hi it ja
-	km lt lv nb nds nl nn oc pl pt pt_BR ro ru se sk sl sr sv
+KDE_LINGUAS="ar be bg ca cs da de el en_GB es et eu fr ga gl hi hne hr hu is it ja
+	km lt mai ms lv nb nds nl nn oc pl pt pt_BR ro ru se sk sl sr sv
 	tr uk zh_CN zh_TW"
 inherit kde4-base
 
