@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.9-r2.ebuild,v 1.4 2009/10/05 12:28:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.9-r2.ebuild,v 1.5 2009/10/22 10:49:06 scarabeus Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ KEYWORDS="amd64 x86"
 SLOT="1"
 
 RDEPEND="
+	!>=media-libs/mesa-7.6
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-opengl-1.0.8

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.552-r2.ebuild,v 1.8 2009/04/13 20:18:05 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.552-r2.ebuild,v 1.9 2009/10/22 10:49:06 scarabeus Exp $
 
 IUSE="acpi debug"
 
@@ -18,6 +18,7 @@ KEYWORDS="amd64 x86"
 # The eselect dep (>=1.0.9) is for COLON_SEPARATED in eselect env update.
 RDEPEND=">=x11-base/xorg-server-1.5
 	!x11-apps/ati-drivers-extra
+	!>=media-libs/mesa-7.6
 	>=app-admin/eselect-1.0.9
 	app-admin/eselect-opengl
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
