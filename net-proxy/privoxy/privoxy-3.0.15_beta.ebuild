@@ -1,15 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.11.ebuild,v 1.1 2009/03/13 20:00:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.15_beta.ebuild,v 1.1 2009/10/22 21:32:10 mrness Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs autotools
 
+[ "${PV##*_}" = "beta" ] &&
+	PRIVOXY_STATUS="beta" ||
+	PRIVOXY_STATUS="stable"
+
 HOMEPAGE="http://www.privoxy.org
 	http://sourceforge.net/projects/ijbswa/"
 DESCRIPTION="A web proxy with advanced filtering capabilities for protecting privacy against Internet junk"
-SRC_URI="mirror://sourceforge/ijbswa/${P/_/-}-stable-src.tar.gz"
+SRC_URI="mirror://sourceforge/ijbswa/${P%_*}-${PRIVOXY_STATUS}-src.tar.gz"
 
 IUSE="selinux threads zlib"
 SLOT="0"
@@ -21,17 +25,14 @@ DEPEND="dev-libs/libpcre
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-privoxy )"
 
-S="${WORKDIR}/${P/_/-}-stable"
+S="${WORKDIR}/${P%_*}-${PRIVOXY_STATUS}"
 
 pkg_setup() {
 	enewgroup privoxy
 	enewuser privoxy -1 -1 /etc/privoxy privoxy
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	# autoreconf needs to be called even if we don't modify any autotools source files
 	# See main makefile

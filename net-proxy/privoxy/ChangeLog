@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.54 2009/09/27 14:32:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.55 2009/10/22 21:32:10 mrness Exp $
+
+*privoxy-3.0.15_beta (22 Oct 2009)
+
+  22 Oct 2009; Alin Năstac <mrness@gentoo.org> -privoxy-3.0.10.ebuild,
+  -privoxy-3.0.11.ebuild, -privoxy-3.0.11-r1.ebuild,
+  -files/privoxy-3.0.11-gentoo.patch, -files/privoxy-3.0.11-timeout.patch,
+  +privoxy-3.0.15_beta.ebuild, +files/privoxy-3.0.15_beta-gentoo.patch:
+  Version bump.
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org> privoxy-3.0.12.ebuild:
   Marking privoxy-3.0.12 ppc64 for bug 277487
