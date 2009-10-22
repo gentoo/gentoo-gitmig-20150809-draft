@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.4.26.ebuild,v 1.3 2009/10/14 04:42:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.4.26.ebuild,v 1.4 2009/10/22 19:20:13 patrick Exp $
 
 EAPI="1"
 
@@ -52,7 +52,8 @@ src_unpack() {
 	epatch "${FILESDIR}/postgresql-${PV}-autoconf.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-vacuum-delay.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-server.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-hppa.patch"
+		"${FILESDIR}/postgresql-${SLOT}-hppa.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-com_err.patch"
 
 	if hasq test ${FEATURES}; then
 		epatch "${FILESDIR}/postgresql-${SLOT}-regress.patch"

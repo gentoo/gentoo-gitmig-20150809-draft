@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.26.ebuild,v 1.2 2009/10/11 09:05:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.26.ebuild,v 1.3 2009/10/22 19:19:49 patrick Exp $
 
 EAPI="1"
 
@@ -54,7 +54,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}/postgresql-${PV}-autoconf.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-hppa.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-base.patch"
+		"${FILESDIR}/postgresql-${SLOT}-base.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-com_err.patch"
 
 	# to avoid collision - it only should be installed by server
 	rm "${S}/src/backend/nls.mk"

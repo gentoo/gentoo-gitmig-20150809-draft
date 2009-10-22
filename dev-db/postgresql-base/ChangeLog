@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.29 2009/10/13 15:18:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.30 2009/10/22 19:19:49 patrick Exp $
+
+  22 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  postgresql-base-7.4.26.ebuild, +files/postgresql-7.4-com_err.patch:
+  Fixing for USE=kerberos, thanks to Jeroen Roovers for the patch. fixes
+  #288895
 
   13 Oct 2009; Jeroen Roovers <jer@gentoo.org> postgresql-base-8.4.1.ebuild:
   Stable for HPPA (bug #285475).
