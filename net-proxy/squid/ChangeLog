@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.285 2009/09/22 16:08:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.286 2009/10/22 22:30:13 mrness Exp $
+
+*squid-3.1.0.14_beta (22 Oct 2009)
+
+  22 Oct 2009; Alin Năstac <mrness@gentoo.org> +squid-3.1.0.14_beta.ebuild,
+  +files/squid-3.1.0.14_beta-gentoo.patch,
+  +files/squid-3.1.0.14_beta-qafixes.patch, files/squid.logrotate,
+  metadata.xml:
+  Version bump. Add ecap USE flag (#277885).
 
 *squid-2.7.7 (22 Sep 2009)
 

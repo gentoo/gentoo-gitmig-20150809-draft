@@ -3,6 +3,6 @@
     compress
     notifempty
     missingok
-	 sharedscripts
+    sharedscripts
 }
 
