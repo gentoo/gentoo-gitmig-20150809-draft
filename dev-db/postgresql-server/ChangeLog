@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.30 2009/10/22 19:20:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.31 2009/10/22 19:54:06 patrick Exp $
+
+*postgresql-server-8.4.1-r1 (22 Oct 2009)
+
+  22 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-server-8.4.1-r1.ebuild:
+  Fixing DB paths for initdb, thanks to Stephan Feder and the other nice
+  people in bug #284437
 
   22 Oct 2009; Patrick Lauer <patrick@gentoo.org>
   postgresql-server-7.4.26.ebuild, +files/postgresql-7.4-com_err.patch:
