@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/ingres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.1 2009/10/04 00:08:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.2 2009/10/22 22:06:07 patrick Exp $
+
+*ingres-10.0.0.108 (22 Oct 2009)
+
+  22 Oct 2009; Patrick Lauer <patrick@gentoo.org> +files/10.0-Jamdefs.patch,
+  +files/10.0-bldenv.patch, +files/10.0-mksecret.patch,
+  +files/10.0-sharelib.patch, +ingres-10.0.0.108.ebuild, metadata.xml:
+  Bump to 10.0, fixes bug #287626. Thanks to Alexander Thiem for the shiny
+  patches.
 
 *ingres-9.3.0.151 (04 Oct 2009)
 
