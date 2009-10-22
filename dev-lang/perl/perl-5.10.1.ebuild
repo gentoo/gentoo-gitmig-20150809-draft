@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.6 2009/10/21 19:41:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.7 2009/10/22 06:46:17 tove Exp $
 
 EAPI=2
 
@@ -77,7 +77,7 @@ pkg_setup() {
 			ewarn "TOGGLED USE-FLAGS WARNING:"
 			ewarn "You changed one of the use-flags ithreads or debug."
 			ewarn "You must rebuild all perl-modules installed."
-			ewarn "Use: perl-cleaner --all"
+			ewarn "Use: perl-cleaner --modules ; perl-cleaner --force --libperl"
 			epause
 		fi
 	fi
