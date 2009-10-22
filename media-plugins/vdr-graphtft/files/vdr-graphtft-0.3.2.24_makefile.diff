@@ -1,0 +1,39 @@
+Joerg Bornkessel <hd_brummy@g.o> 22 Aug 2009
+diff -Naur graphtft-24.orig/Makefile graphtft-24/Makefile
+--- graphtft-24.orig/Makefile	2009-10-21 21:53:56.000000000 +0200
++++ graphtft-24/Makefile	2009-10-21 21:57:24.000000000 +0200
+@@ -158,10 +158,10 @@
+ DEFINES += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
+ 
+ ifdef HAVE_IMLIB
+-  LIBS += `imlib2-config --libs`
++  LIBS += $(shell imlib2-config --libs)
+ 
+   ifdef HAVE_IMAGE_MAGICK
+-    LIBS += `Magick++-config --libs`
++    LIBS += $(shell Magick++-config --libs)
+     DEFINES += -DHAVE_IMAGE_MAGICK
+   endif
+ 
+@@ -170,8 +170,8 @@
+ endif
+ 
+ ifdef HAVE_GTOP
+-  GTOP_INC = `pkg-config libgtop-2.0 --cflags`
+-  GTOP_LIB = `pkg-config libgtop-2.0 --libs`
++  GTOP_INC = $(shell pkg-config libgtop-2.0 --cflags)
++  GTOP_LIB = $(shell pkg-config libgtop-2.0 --libs)
+ 
+   DEFINES += -DWITH_SYSINFO
+   LIBS += $(GTOP_LIB)
+@@ -186,8 +186,8 @@
+ endif
+ 
+ ifdef HAVE_DFB
+-  INCLUDES += `directfb-config --cflags`
+-  LIBS += `directfb-config --libs`
++  INCLUDES += $(shell directfb-config --cflags)
++  LIBS += $(shell directfb-config --libs)
+   DEFINES += -DHAVE_DFB
+ endif
+ 
