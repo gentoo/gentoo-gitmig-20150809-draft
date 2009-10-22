@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4920 2009/10/22 15:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4921 2009/10/22 18:27:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2199,8 +2199,6 @@ net-fs/samba-libs:netapi - Enable building of netapi bits
 net-fs/samba-libs:samba4 - Enable experimental samba4 bits
 net-fs/samba-libs:smbclient - Enable smbclient tool
 net-fs/samba-libs:smbsharemodes - Enable special smb share modes (?) 
-net-fs/samba-libs:talloc - Enable building of talloc lib
-net-fs/samba-libs:tdb - Enable building of tdb lib
 net-fs/samba-libs:tools - Enable extra tools
 net-fs/samba-libs:winbind - Enables support for the winbind auth daemon
 net-fs/samba-server:ads - Enable Active Directory support
