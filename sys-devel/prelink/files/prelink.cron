@@ -8,6 +8,7 @@ case $PRELINKING in
   *) exit 0;;
 esac
 
+ionice -c3 -p $$ >/dev/null 2>&1
 renice +19 -p $$ >/dev/null 2>&1
 
 if [ "$PRELINKING" != yes ]; then

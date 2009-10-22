@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.64 2009/08/12 05:50:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.65 2009/10/22 00:16:29 vapier Exp $
+
+  22 Oct 2009; Mike Frysinger <vapier@gentoo.org> files/prelink.cron:
+  Call ionice in the cron script #289322 by Johannes Buchner.
 
 *prelink-20090709 (12 Aug 2009)
 
