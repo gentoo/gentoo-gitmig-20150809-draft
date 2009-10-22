@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.1 2009/03/10 16:32:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.2 2009/10/22 18:19:35 chainsaw Exp $
+
+*dahdi-2.2.0.2 (22 Oct 2009)
+
+  22 Oct 2009; <chainsaw@gentoo.org> +dahdi-2.2.0.2.ebuild,
+  +files/dahdi-2.2.0.2-driver_data-2.6.32.patch,
+  +files/dahdi-2.2.0.2-gcc44-hack.patch,
+  +files/dahdi-2.2.0.2-includes.patch,
+  +files/dahdi-2.2.0.2-net-device-ops.patch,
+  +files/dahdi-2.2.0.2-no-depmod.patch:
+  Version bump, closes bug #286829 by Jeremy Johnson. Build all target
+  instead of modules target so echo cancellation becomes available, as
+  suggested by Jay Pfeifer in bug #268652. Ported to 2.6.32 kernels (release
+  candidate 5 at the time of writing), filed upstream bug. Quick hack for
+  GCC4.4 compilation.
 
 *dahdi-2.1.0.4 (10 Mar 2009)
 
