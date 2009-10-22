@@ -1,6 +1,14 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.255 2009/10/16 23:57:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.256 2009/10/22 22:25:26 eva Exp $
+
+*totem-2.26.4 (22 Oct 2009)
+
+  22 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/totem-2.18.1-browser-plugins.patch,
+  -files/totem-2.22.2-fix-python-and-libtool-2.2.patch,
+  -totem-2.26.2.ebuild, -totem-2.26.3.ebuild, +totem-2.26.4.ebuild:
+  Version bump. Bugs/crash fixes. Clean up old revisions.
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> totem-2.26.3-r1.ebuild:
   x86 stable, bug #281427
