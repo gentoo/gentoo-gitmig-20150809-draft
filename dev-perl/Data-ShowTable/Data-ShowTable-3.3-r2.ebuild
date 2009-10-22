@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/Data-ShowTable-3.3-r2.ebuild,v 1.15 2008/08/26 13:48:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/Data-ShowTable-3.3-r2.ebuild,v 1.16 2009/10/22 12:44:54 tove Exp $
 
 MODULE_AUTHOR=AKSTE
 inherit perl-module
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
-PATCHES="${FILESDIR}/${PV}.patch"
+PATCHES=( "${FILESDIR}"/${PV}.patch )
 SRC_TEST=do
 
 src_install () {
