@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.105 2009/10/18 19:01:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.106 2009/10/22 18:03:43 darkside Exp $
+
+  22 Oct 2009; Jeremy Olexa <darkside@gentoo.org> linux/amd64/parent,
+  linux/ia64/parent, linux/x86/parent:
+  Move prefix/linux profiles to inherit 10.0 instead of 2008.0 now that
+  those are deprecated, bug 280540
 
   18 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
