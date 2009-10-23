@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r3.ebuild,v 1.6 2009/09/25 13:15:44 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r3.ebuild,v 1.7 2009/10/23 09:54:03 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -18,8 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE="alsa aac jack mad musepack vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
 
-RDEPEND="media-libs/libao
-	alsa? ( media-libs/alsa-lib )
+RDEPEND="alsa? ( media-libs/alsa-lib )
 	aac? ( media-libs/faad2 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
