@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blockrage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blockrage/ChangeLog,v 1.6 2009/10/14 19:40:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blockrage/ChangeLog,v 1.7 2009/10/23 11:56:44 ssuominen Exp $
+
+  23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  blockrage-0.2.3.ebuild:
+  amd64 stable wrt #289091
 
   14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   blockrage-0.2.3.ebuild:
