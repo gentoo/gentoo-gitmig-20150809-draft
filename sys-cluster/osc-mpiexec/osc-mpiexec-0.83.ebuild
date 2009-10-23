@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/osc-mpiexec-0.83.ebuild,v 1.1 2009/02/05 02:59:51 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/osc-mpiexec-0.83.ebuild,v 1.2 2009/10/23 16:59:22 jsbronder Exp $
 
 MY_PN=${PN#osc-}
 DESCRIPTION="replacement for mpirun, integrates MPI with PBS."
@@ -38,7 +38,7 @@ src_compile() {
 
 src_install() {
 	local f
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 
 	# And the following so that osc-mpiexec doesn't conflict with
 	# the packaged mpiexec's that all the MPI-2 implementations have.
