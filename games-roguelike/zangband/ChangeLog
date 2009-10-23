@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/zangband
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.16 2009/08/06 20:15:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.17 2009/10/23 11:24:19 ssuominen Exp $
+
+  23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  zangband-2.7.4c.ebuild:
+  Keyword ~amd64 wrt #215578.
 
   06 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
   zangband-2.7.4c.ebuild, +files/zangband-2.7.4c-tk85.patch:
