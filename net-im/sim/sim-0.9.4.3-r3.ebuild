@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.5 2009/07/07 23:20:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.6 2009/10/23 12:49:13 pva Exp $
 
 EAPI=1
 
-inherit kde-functions eutils flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Simple Instant Messenger (with KDE support). ICQ/AIM/Jabber/MSN/Yahoo."
 HOMEPAGE="http://sim-im.org/"
@@ -14,15 +14,12 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="debug kde spell ssl"
+IUSE="debug spell ssl"
 
 RESTRICT="fetch"
 
-# kdebase-data provides the icon "licq.png"
-RDEPEND="kde? ( =kde-base/kdelibs-3.5*
-				|| ( =kde-base/kdebase-data-3.5* =kde-base/kdebase-3.5* ) )
-		 !kde? ( x11-libs/qt:3
-				 spell? ( app-text/aspell ) )
+RDEPEND="x11-libs/qt:3
+		 spell? ( app-text/aspell )
 		 ssl? ( dev-libs/openssl )
 		 dev-libs/libxml2
 		 dev-libs/libxslt
@@ -36,38 +33,13 @@ DEPEND="${RDEPEND}
 
 pkg_nofetch() {
 	elog "${CATEGORY}/${P} contains icons and sounds with unclear licensing and thus"
-	elog "you have to download and it put into '${DISTDIR}' by yourself."
+	elog "you have to download it and put into '${DISTDIR}' by yourself."
 	elog "Download location:"
 	echo
 	elog "${SRC_URI}"
 	echo
 	elog "See http://archives.gentoo.org/gentoo-dev/msg_144003.xml for further"
 	elog "information."
-}
-
-pkg_setup() {
-	if use kde; then
-		if use spell; then
-			if ! built_with_use "=kde-base/kdelibs-3.5*" spell; then
-				ewarn "kde-base/kdelibs were merged without spell in USE."
-				ewarn "Thus spelling will not work in sim. Please, either"
-				ewarn "reemerge kde-base/kdelibs with spell in USE or emerge"
-				ewarn 'sim with USE="-spell" to avoid this message.'
-				ebeep
-			fi
-		else
-			if built_with_use "=kde-base/kdelibs-3.5*" spell; then
-				ewarn 'kde-base/kdelibs were merged with spell in USE.'
-				ewarn 'Thus spelling will work in sim. Please, either'
-				ewarn 'reemerge kde-base/kdelibs without spell in USE or emerge'
-				ewarn 'sim with USE="spell" to avoid this message.'
-				ebeep
-			fi
-		fi
-		if ! built_with_use "=kde-base/kdelibs-3.5*" arts; then
-			myconf="--without-arts"
-		fi
-	fi
 }
 
 src_unpack() {
@@ -78,22 +50,19 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sslv23.patch
 	epatch ../${P}-r1919_1924.patch
 	epatch "${FILESDIR}"/${P}-old-protocol.patch
-	if use kde; then
-		set-kdedir 3
-	fi
 }
 
 src_compile() {
-	filter-flags -fstack-protector -fstack-protector-all
-
 	# Workaround for bug #119906
 	append-flags -fno-stack-protector
 
-	use kde || use spell || export DO_NOT_COMPILE="$DO_NOT_COMPILE plugins/spell"
+	use spell || export DO_NOT_COMPILE="$DO_NOT_COMPILE plugins/spell"
 
-	econf ${myconf} $(use_enable kde) \
+	econf ${myconf} \
 		  $(use_with ssl) \
-		  $(use_enable debug) || die "econf failed"
+		  $(use_enable debug) \
+		  --without-arts \
+		  --disable-kde
 
 	emake -j1 || die "make failed"
 }
