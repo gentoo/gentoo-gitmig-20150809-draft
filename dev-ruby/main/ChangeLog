@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/main
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/main/ChangeLog,v 1.1 2009/07/04 07:10:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/main/ChangeLog,v 1.2 2009/10/23 14:57:39 graaff Exp $
+
+*main-4.0.0 (23 Oct 2009)
+
+  23 Oct 2009; Hans de Graaff <graaff@gentoo.org> +main-4.0.0.ebuild:
+  Version bump. Major changes, but *should* be backward compatible.
 
 *main-2.8.4 (04 Jul 2009)
 
