@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10644 2009/10/23 09:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10645 2009/10/23 12:29:39 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (23 Oct 2009)
+#  on behalf of QA team
+#
+# Fetches FFmpeg sources out of Subversion repository which makes it
+# the same as a Live SVN. Even worse, it does not figure as one since
+# it does so in the upstream-provided scripts and not in the ebuild.
+#
+# See bug #290233
+=media-video/avidemux-2.5.1_p*
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2009)
 # KDE3-only. Doesn't compile with KDE4 installed, bugs

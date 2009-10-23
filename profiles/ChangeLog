@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3440 2009/10/23 09:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3441 2009/10/23 12:29:39 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  QA mask for media-video/avidemux-2.5.1_p*
 
   23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask =net-irc/kvirc-3* wrt #282891.
