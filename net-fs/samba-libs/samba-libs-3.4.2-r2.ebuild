@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2-r2.ebuild,v 1.1 2009/10/22 18:09:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2-r2.ebuild,v 1.2 2009/10/23 09:37:39 wired Exp $
 
 EAPI="2"
 
@@ -284,7 +284,7 @@ src_install() {
 	fi
 
 	# install utilities
-	if use tools ; then
+	if use tools && [[ -n "${BINPROGS}" ]] ; then
 		einfo "install utilities"
 		dobin ${BINPROGS} || die "not all bins around"
 		for prog in ${BINPROGS} ; do
