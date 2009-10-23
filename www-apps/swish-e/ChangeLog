@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/swish-e
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.15 2009/06/03 08:32:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.16 2009/10/23 16:17:33 vostorga Exp $
+
+  23 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> swish-e-2.4.3.ebuild,
+  swish-e-2.4.3-r1.ebuild:
+  Adding die to make install
 
 *swish-e-2.4.7 (03 Jun 2009)
 
