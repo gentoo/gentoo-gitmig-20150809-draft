@@ -48,3 +48,25 @@ diff -urNad vdr-plugin-graphtft-0.3.2~rc2+svn20090728.2153/theme.c vdr-plugin-gr
        {
           tell(0, "Parsing of [%s] failed, missing bracket '}'", expression);
           return fail;
+diff -Naur graphtft-24.orig/graphtft-fe/common.cc graphtft-24/graphtft-fe/common.cc
+--- graphtft-24.orig/graphtft-fe/common.cc	2009-10-23 15:10:20.000000000 +0200
++++ graphtft-24/graphtft-fe/common.cc	2009-10-23 15:11:11.000000000 +0200
+@@ -11,6 +11,7 @@
+ #include <time.h>
+ #include <stdio.h>
+ #include <string.h>
++#include <stdint.h>
+ 
+ #include <graphtft.hpp>
+ 
+diff -Naur graphtft-24.orig/graphtft-fe/graphtft.hpp graphtft-24/graphtft-fe/graphtft.hpp
+--- graphtft-24.orig/graphtft-fe/graphtft.hpp	2009-10-23 15:10:20.000000000 +0200
++++ graphtft-24/graphtft-fe/graphtft.hpp	2009-10-23 15:11:36.000000000 +0200
+@@ -16,6 +16,7 @@
+ #include <X11/Xlib.h>
+ #include <Imlib2.h>
+ #include <string.h>
++#include <stdint.h>
+ 
+ #define __FRONTEND
+ #include <../common.h>
