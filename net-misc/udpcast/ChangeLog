@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udpcast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.18 2009/10/21 17:11:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.19 2009/10/23 11:10:26 ssuominen Exp $
+
+  23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  udpcast-20090920.ebuild:
+  amd64 stable wrt #286340
 
   21 Oct 2009; Jeroen Roovers <jer@gentoo.org> udpcast-20090920.ebuild:
   Do not strip (bug #286340, comment #1).
