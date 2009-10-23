@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/gcdemu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.6 2008/08/22 22:09:56 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.7 2009/10/23 18:35:27 pva Exp $
+
+*gcdemu-1.2.0 (23 Oct 2009)
+
+  23 Oct 2009; Peter Volkov <pva@gentoo.org> +gcdemu-1.2.0.ebuild:
+  Version bump, bug #279908, thank Fabio Cavallo for report. Fixed
+  invisibility of applet, bug #248874, thank Vladimir Kokarev for report.
+  Added missed deps, bug #228239, thank Evil Compile Person for report.
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> gcdemu-1.0.0.ebuild:
   amd64 stable, bug #232566
