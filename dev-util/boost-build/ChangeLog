@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.39 2009/10/21 12:47:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.40 2009/10/23 13:19:31 jer Exp $
+
+  23 Oct 2009; Jeroen Roovers <jer@gentoo.org> boost-build-1.35.0-r2.ebuild:
+  Stable for HPPA (bug #288723).
 
 *boost-build-1.40.0 (21 Oct 2009)
 
