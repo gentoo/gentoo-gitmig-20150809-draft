@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.219 2009/09/22 16:09:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.220 2009/10/23 18:06:51 armin76 Exp $
+
+  23 Oct 2009; Raúl Porcel <armin76@gentoo.org> gnutls-2.8.3.ebuild:
+  ia64/sparc stable wrt #275695
 
 *gnutls-2.9.6 (22 Sep 2009)
 
