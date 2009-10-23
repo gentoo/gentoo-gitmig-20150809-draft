@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.3 2009/09/23 16:52:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.4 2009/10/23 15:48:24 vostorga Exp $
 
 inherit eutils
 
@@ -20,10 +20,10 @@ DEPEND="usb? ( dev-libs/legousbtower )"
 src_compile()
 {
 	if use usb; then
-		epatch ${FILESDIR}/${P}-usb.patch
+		epatch "${FILESDIR}"/${P}-usb.patch
 	fi
 	if use amd64; then
-		epatch ${FILESDIR}/${P}-amd64.patch
+		epatch "${FILESDIR}"/${P}-amd64.patch
 	fi
 	sed -i -e 's/PREFIX?\=\/usr\/local/PREFIX?\=\/usr/' Makefile
 	emake || die
