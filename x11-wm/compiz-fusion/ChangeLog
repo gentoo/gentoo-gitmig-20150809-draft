@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz-fusion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz-fusion/ChangeLog,v 1.10 2009/10/23 09:04:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz-fusion/ChangeLog,v 1.11 2009/10/23 17:35:56 ssuominen Exp $
+
+  23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  compiz-fusion-0.8.4.ebuild:
+  KDE4 support.
 
   23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   compiz-fusion-0.6.0.ebuild, compiz-fusion-0.8.2.ebuild,
