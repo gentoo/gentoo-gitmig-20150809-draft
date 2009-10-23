@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.204 2009/10/12 03:01:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.205 2009/10/23 02:40:35 anarchy Exp $
+
+*seamonkey-2.0_rc2 (23 Oct 2009)
+
+  23 Oct 2009; Jory A. Pratt <anarchy@gentoo.org>
+  +files/enigmail/0.95.0-replytolist.patch, +seamonkey-2.0_rc2.ebuild,
+  +files/enigmail/70_enigmail-fix.patch:
+  Update seamonkey-2, proxy commit for polynomal-c
 
 *seamonkey-2.0_rc1 (12 Oct 2009)
 
