@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r4.ebuild,v 1.8 2009/05/16 09:02:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r4.ebuild,v 1.9 2009/10/23 18:20:24 abcd Exp $
 
 EAPI="1"
 inherit multilib kde-dist eutils flag-o-matic
@@ -164,7 +164,8 @@ src_compile() {
 
 src_install() {
 	kde_src_install
-	cd "${S}/kdm" && make DESTDIR="${D}" GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install
+	cd "${S}/kdm"
+	make DESTDIR="${D}" GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install || die "make install failed"
 
 	# Fix an obscure desktop file that only gets generated during the install phase.
 	sed -i -e '$d' "${D}/usr/kde/3.5/share/applications/kde/panel_appearance.desktop"
