@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.6 2009/10/23 12:49:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.7 2009/10/23 13:45:22 pva Exp $
 
 EAPI=1
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic qt3
 
 DESCRIPTION="Simple Instant Messenger (with KDE support). ICQ/AIM/Jabber/MSN/Yahoo."
 HOMEPAGE="http://sim-im.org/"
