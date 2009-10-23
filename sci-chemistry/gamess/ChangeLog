@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.35 2009/07/07 23:25:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.36 2009/10/23 02:56:50 markusle Exp $
+
+*gamess-20090112.3 (23 Oct 2009)
+
+  23 Oct 2009; Markus Dittrich <markusle@gentoo.org>
+  -gamess-20070324.1.ebuild, -files/gamess-20070324.1.gentoo.patch,
+  -gamess-20070324.3.ebuild, -files/gamess-20070324.3.gentoo.patch,
+  -gamess-20070324.6.ebuild, +gamess-20090112.3.ebuild:
+  Version bump and removed old ebuilds.
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   gamess-20090112.1-r1.ebuild:

@@ -1,17 +1,24 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20070324.3.ebuild,v 1.4 2008/06/29 08:21:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.3.ebuild,v 1.1 2009/10/23 02:56:50 markusle Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
-HOMEPAGE="http://www.msg.ameslab.gov/GAMESS/GAMESS.html"
-SRC_URI="${P}.tar.gz"
+HOMEPAGE="http://www.msg.chem.iastate.edu/GAMESS/GAMESS.html"
+SRC_URI="
+		${P}.tar.gz
+		qmmm-tinker? ( tinker.tar.Z )"
 
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
-IUSE="hardened"
+# NOTE: PLEASE do not stabilize gamess. It does not make sense
+# since the tarball has fetch restrictions and upstream only
+# provides the latest version. In other words: As soon as a
+# new version comes out the stable version will be useless since
+# users can not get at the tarball any more.
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="hardened qmmm-tinker"
 
 RESTRICT="fetch"
 
@@ -25,16 +32,20 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN}"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
-GAMESS_VERSION="24 MAR 2007 (R3)"
+GAMESS_VERSION="12 JAN 2009 (R3)"
 FORTRAN="ifc g77 gfortran"
 
 pkg_nofetch() {
 	echo
-	einfo "Please download ${PN}-current.tar.gz from"
-	einfo "${GAMESS_DOWNLOAD}."
-	einfo "Be sure to select the version ${GAMESS_VERSION} tarball!!"
-	einfo "Then move the tarball to"
-	einfo "${DISTDIR}/${P}.tar.gz"
+	elog "Please download ${PN}-current.tar.gz from"
+	elog "${GAMESS_DOWNLOAD}."
+	elog "Be sure to select the version ${GAMESS_VERSION} tarball!!"
+	elog "Then move the tarball to"
+	elog "${DISTDIR}/${P}.tar.gz"
+	if use qmmm-tinker ; then
+		elog "Also download http://www.msg.ameslab.gov/GAMESS/tinker.tar.Z"
+		elog "and place tinker.tar.Z to ${DISTDIR}"
+	fi
 	echo
 }
 
@@ -45,13 +56,24 @@ pkg_setup() {
 	if [[ "${ARCH}" == "amd64" ]] && [[ "${FORTRANC}" != "gfortran" ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
+
+	if use qmmm-tinker; then
+		einfo "By default MM subsistem is restricted to 1000 atoms"
+		einfo "if you want larger MM subsystems then you should set"
+		einfo "QMMM_GAMESS_MAXMM variable to needed value in your make.conf"
+		ebeep 5
+	fi
 }
 
 src_unpack() {
 	unpack ${A}
 
+	if use qmmm-tinker; then
+		mv tinker gamess/ || die "failed to move tinker directory"
+	fi
+
 	# apply LINUX-arch patches to gamess makesfiles
-	epatch "${FILESDIR}"/${P}.gentoo.patch
+	epatch "${FILESDIR}"/${PN}-20090112.1.gentoo.patch
 
 	# select arch
 	# NOTE: please leave lked alone; it should be good as is!!
@@ -75,7 +97,22 @@ src_unpack() {
 	# enable NEO
 	sed -e "s:NEO=false:NEO=true:" -i compall lked || \
 		die "Failed to enable NEO code"
-
+	# enable GAMESS-qmmm
+	if use qmmm-tinker; then
+		sed -e "s:TINKER=false:TINKER=true:" -i compall lked || \
+			die "Failed to enable TINKER code"
+		if [ "x$QMMM_GAMESS_MAXMM" == "x" ]; then
+			einfo "No QMMM_GAMESS_MAXMM set. Using default value = 1000"
+		else
+			einfo "Setting QMMM_GAMESS_MAXMM to $QMMM_GAMESS_MAXMM"
+			sed -e "s:maxatm=1000:maxatm=$QMMM_GAMESS_MAXMM:g" \
+			 -i tinker/sizes.i \
+			 || die "Setting QMMM_GAMESS_MAXMM failed"
+			sed -e "s:MAXATM=1000:MAXATM=$QMMM_GAMESS_MAXMM:g" \
+			 -i source/inputb.src \
+			 || die "Setting QMMM_GAMESS_MAXMM failed"
+		fi
+	fi
 	# greate proper activate sourcefile
 	cp "./tools/actvte.code" "./tools/actvte.f" || \
 		die "Failed to create actvte.f"
@@ -168,6 +205,13 @@ src_install() {
 	# install mcpdata
 	insinto /usr/share/${PN}/mcpdata
 	doins mcpdata/* || die "Failed installing mcpdata"
+
+	# install tinker params in case of qmmm
+	if use qmmm-tinker ; then
+			dodoc tinker/simomm.doc || die "Failed installing docs"
+			insinto /usr/share/${PN}
+			doins -r tinker/params || die "Failed to install Tinker params"
+	fi
 
 	# install the tests the user should run, and
 	# fix up the runscript; also grab a copy of rungms
