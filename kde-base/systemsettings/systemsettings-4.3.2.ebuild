@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.3.2.ebuild,v 1.1 2009/10/06 20:44:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.3.2.ebuild,v 1.2 2009/10/23 08:45:02 ssuominen Exp $
 
 EAPI="2"
 
@@ -87,6 +87,5 @@ pkg_postinst() {
 	elog "If you want to use GTK integration then we recommend you to try"
 	elog "one of the following packages:"
 	elog "    x11-themes/gtk-engines-qt"
-	elog "    x11-themes/gtk-engines-kde4"
 	elog "    x11-themes/qtcurve-qt4"
 }
