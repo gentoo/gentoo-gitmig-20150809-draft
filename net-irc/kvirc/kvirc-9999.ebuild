@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.22 2009/08/15 19:21:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.23 2009/10/23 19:02:22 arfrever Exp $
 
 EAPI="2"
 
@@ -59,6 +59,7 @@ src_configure() {
 		-DCOEXISTENCE=1
 		-DLIB_SUFFIX=${libdir#lib}
 		-DMANUAL_REVISION=${VERSIO_PRAESENS}
+		-DUSE_ENV_FLAGS=1
 		-DVERBOSE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
 		$(cmake-utils_use_want crypt CRYPT)
