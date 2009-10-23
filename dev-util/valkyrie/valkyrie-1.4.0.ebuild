@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-1.4.0.ebuild,v 1.1 2009/07/14 21:12:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-1.4.0.ebuild,v 1.2 2009/10/23 15:57:52 vostorga Exp $
 
 EAPI=1
 inherit eutils qt3 autotools
@@ -42,7 +42,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install \
+		|| die "emake install failed"
 
 	dodoc README README_DEVELOPERS AUTHORS
 }
