@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.1 2009/10/23 12:31:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.2 2009/10/23 12:45:50 jer Exp $
 
 EAPI="2"
 
@@ -19,10 +19,7 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	for i in $(find . -name Makefile); do
-		cp -av "${i}"{,.orig}
-	done
-	epatch "${FILESDIR}/${P}-flags.patch"
+	epatch "${FILESDIR}/${P}-flags.patch" "${FILESDIR}/${P}-include.patch"
 }
 
 src_compile() {
