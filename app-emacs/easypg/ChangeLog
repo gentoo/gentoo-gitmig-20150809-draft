@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/easypg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/ChangeLog,v 1.11 2008/12/06 17:58:25 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/ChangeLog,v 1.12 2009/10/23 14:13:02 ulm Exp $
+
+*easypg-0.0.16-r1 (23 Oct 2009)
+
+  23 Oct 2009; Ulrich Mueller <ulm@gentoo.org> easypg-0.0.16.ebuild,
+  +easypg-0.0.16-r1.ebuild, +files/50easypg-gentoo-0.0.16.el,
+  files/50easypg-gentoo.el:
+  Deactivate package for Emacs 23; it is already included. Fixes bug 290225.
 
   06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -easypg-0.0.15.ebuild:

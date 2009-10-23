@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16.ebuild,v 1.3 2008/08/28 06:35:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16.ebuild,v 1.4 2009/10/23 14:13:02 ulm Exp $
 
 inherit elisp versionator
 
@@ -20,9 +20,8 @@ DEPEND="app-crypt/gnupg"
 RDEPEND="${DEPEND}
 	gnus? ( virtual/gnus )"
 
-SITEFILE=50${PN}-gentoo.el
-
 S="${WORKDIR}/${MY_PN}-${PV}"
+SITEFILE="50${PN}-gentoo-${PV}.el"
 
 src_unpack() {
 	unpack ${A}
