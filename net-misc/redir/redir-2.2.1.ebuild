@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/redir-2.2.1.ebuild,v 1.8 2009/05/30 02:00:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/redir-2.2.1.ebuild,v 1.9 2009/10/23 13:05:18 jer Exp $
 
-inherit toolchain-funcs
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Redir is a port redirector."
 HOMEPAGE="http://sammy.net/~sammy/hacks/"
@@ -16,8 +18,16 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+src_configure() {
+	epatch "${FILESDIR}/${P}-include.patch"
+}
+
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" || \
+		die "emake failed"
 }
 
 src_install() {
