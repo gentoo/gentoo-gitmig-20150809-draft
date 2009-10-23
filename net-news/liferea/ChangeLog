@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.179 2009/10/19 17:04:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.180 2009/10/23 00:41:29 patrick Exp $
+
+*liferea-1.7.1 (23 Oct 2009)
+
+  23 Oct 2009; Patrick Lauer <patrick@gentoo.org> +liferea-1.7.1.ebuild:
+  Bump, small dep fixups. Closes #289753
 
   19 Oct 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Change to maintainer-needed
