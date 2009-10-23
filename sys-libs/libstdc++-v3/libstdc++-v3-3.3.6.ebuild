@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.25 2009/08/09 16:43:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.26 2009/10/23 19:31:08 gengor Exp $
 
 inherit eutils flag-o-matic libtool multilib
 
@@ -94,8 +94,9 @@ do_filter_flags() {
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
 
-	# bug #269433
+	# Bug #269433 & #290202
 	filter-flags -fno-strict-overflow
+	filter-flags -fstrict-overflow
 
 	# ...sure, why not?
 	strip-unsupported-flags
