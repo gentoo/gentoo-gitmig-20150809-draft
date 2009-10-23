@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.83 2009/10/22 09:24:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.84 2009/10/23 23:39:11 rich0 Exp $
+
+  23 Oct 2009; Richard Freeman <rich0@gentoo.org> mtr-0.75.ebuild:
+  amd64 stable - 290113
 
   22 Oct 2009; Peter Volkov <pva@gentoo.org> mtr-0.75.ebuild,
   +files/mtr-0.75--Wno-pointer-sign.patch:
