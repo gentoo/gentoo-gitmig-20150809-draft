@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4923 2009/10/22 22:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4924 2009/10/23 23:27:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -248,12 +248,16 @@ app-emulation/kvm:test - Build tests
 app-emulation/kvm:vde - Enable VDE-based networking
 app-emulation/libvirt:iscsi - Add support for iSCSI (Internet SCSI) remote storage
 app-emulation/libvirt:kvm - Add support for app-emulation/kvm based virtual machines
+app-emulation/libvirt:libvirtd - Builds the libvirtd daemon as well as the client utilities instead of just the client utilities
 app-emulation/libvirt:lvm - Add support for the Logical Volume Manager sys-apps/lvm2
 app-emulation/libvirt:lxc - Add support for the Linux Containers
 app-emulation/libvirt:network - Enable networking support for guests
+app-emulation/libvirt:nfs - Allow the libvirtd daemon store VM images on NFS mounts
 app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numactl
+app-emulation/libvirt:one - Support the ONE hypervisor protocol
 app-emulation/libvirt:openvz - Add support for sys-kernel/openvz-sources OpenVZ-based virtual machines
 app-emulation/libvirt:parted - Add support for the sys-apps/parted partition editor
+app-emulation/libvirt:phyp - Support the PHYP hypervisor protocol
 app-emulation/libvirt:qemu - Add support for app-emulation/qemu based virtual machines
 app-emulation/libvirt:uml - Add support for User Mode Linux based virtual machines
 app-emulation/libvirt:virtualbox - Adds support for VirtualBox based virtual machines
