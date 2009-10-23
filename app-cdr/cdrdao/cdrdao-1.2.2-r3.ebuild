@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r3.ebuild,v 1.11 2009/10/19 16:32:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r3.ebuild,v 1.12 2009/10/23 08:13:49 loki_val Exp $
 
 EAPI=2
 inherit flag-o-matic eutils
@@ -84,6 +84,6 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS CREDITS ChangeLog NEWS README*
 }
