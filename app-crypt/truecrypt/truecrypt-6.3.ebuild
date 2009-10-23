@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.5 2009/08/31 21:53:26 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.3.ebuild,v 1.1 2009/10/23 23:45:17 arfrever Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
 SRC_URI="${P}.tar.gz"
 
-LICENSE="truecrypt-2.6"
+LICENSE="truecrypt-2.8"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X"
@@ -21,13 +21,15 @@ RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
 	x11-libs/wxGTK:2.8[X?]"
 DEPEND="${RDEPEND}
 	|| ( dev-libs/pkcs11-helper dev-libs/opensc )"
+RDEPEND="${RDEPEND}
+	app-admin/sudo"
 
 S="${WORKDIR}/${P}-source"
 
 pkg_nofetch() {
-	einfo "Please download tar.gz source from:"
-	einfo "http://www.truecrypt.org/downloads2.php"
-	einfo "Then put the file in ${DISTDIR}/${SRC_URI}"
+	elog "Please download .tar.gz source from:"
+	elog "http://www.truecrypt.org/downloads2"
+	elog "Then put the file in ${DISTDIR}/${SRC_URI}"
 }
 
 pkg_setup() {
