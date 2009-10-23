@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.10.ebuild,v 1.7 2009/07/12 13:40:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.10.ebuild,v 1.8 2009/10/23 18:25:12 abcd Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -44,7 +44,8 @@ src_compile() {
 
 src_install() {
 	kde-meta_src_install
-	cd "${S}/kdm" && make DESTDIR="${D}" GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install
+	cd "${S}/kdm"
+	make DESTDIR="${D}" GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install || die "make install failed"
 
 	# Customize the kdmrc configuration
 	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" \
