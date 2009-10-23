@@ -33,5 +33,11 @@
 			machines</flag>
 		<flag name='numa'>Use NUMA for memory segmenting via
 			<pkg>sys-process/numactl</pkg></flag>
+		<flag name='nfs'>Allow the libvirtd daemon store VM images on NFS
+			mounts</flag>
+		<flag name='libvirtd'>Builds the libvirtd daemon as well as the client
+			utilities instead of just the client utilities</flag>
+		<flag name='phyp'>Support the PHYP hypervisor protocol</flag>
+		<flag name='one'>Support the ONE hypervisor protocol</flag>
 	</use>
 </pkgmetadata>
