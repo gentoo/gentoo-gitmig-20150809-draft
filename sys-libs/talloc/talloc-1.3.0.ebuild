@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-1.3.0.ebuild,v 1.2 2009/10/09 17:24:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-1.3.0.ebuild,v 1.3 2009/10/23 16:36:21 patrick Exp $
 
 EAPI="2"
 
-inherit confutils eutils
+inherit confutils eutils autotools
 
 DESCRIPTION="Samba talloc library"
 HOMEPAGE="http://talloc.samba.org/"
@@ -14,19 +14,13 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 
-DEPEND="!net-fs/samba-libs[talloc]"
+DEPEND="!net-fs/samba-libs[talloc]
+	app-text/docbook-xml-dtd:4.2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-
-	./autogen.sh || die "autogen.sh failed"
-
-	sed -i \
-		-e 's|SHLD_FLAGS = @SHLD_FLAGS@|SHLD_FLAGS = @SHLD_FLAGS@ @LDFLAGS@|' \
-		-e 's|CC = @CC@|CC = @CC@\
-LDFLAGS = @LDFLAGS@|' \
-		Makefile.in || die "sed failed"
-
+	eautoconf -Ilibreplace
+	sed -e 's:$(SHLD_FLAGS) :$(SHLD_FLAGS) $(LDFLAGS) :' -i Makefile.in
 }
 
 src_configure() {
