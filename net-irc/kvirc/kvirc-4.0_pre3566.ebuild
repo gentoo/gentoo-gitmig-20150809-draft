@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3412.ebuild,v 1.1 2009/08/15 19:22:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3566.ebuild,v 1.1 2009/10/23 19:03:37 arfrever Exp $
 
 EAPI="2"
 
@@ -56,6 +56,7 @@ src_configure() {
 		-DCOEXISTENCE=1
 		-DLIB_SUFFIX=${libdir#lib}
 		-DMANUAL_REVISION=${VERSIO_PRAESENS}
+		-DUSE_ENV_FLAGS=1
 		-DVERBOSE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
 		$(cmake-utils_use_want crypt CRYPT)
@@ -89,15 +90,17 @@ src_install() {
 }
 
 pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-4.0_pre3412:4"; then
+	if has_version "=${CATEGORY}/${PN}-4.0_pre3412"; then
 		log_location_change="1"
 	fi
 }
 
 pkg_postinst() {
 	if [[ "${log_location_change}" == "1" ]]; then
-		elog "Default location of logs has changed from ~/.config/KVIrc/log to ~/log."
-		elog "You can set location of logs in KVIrc configuration."
-		ebeep 6
+		elog "Default location of logs has changed back from ~/log to ~/.config/KVIrc/log."
+		elog "You might want to run the following command to restore default location:"
+		elog "   sed -e \"/^stringLogsPath=/d\" -i ~/.config/KVIrc/config/main.kvc"
+		elog "You can also set location of logs in KVIrc configuration."
+		ebeep 12
 	fi
 }
