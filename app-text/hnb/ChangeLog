@@ -1,11 +1,11 @@
 # ChangeLog for app-text/hnb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.21 2009/10/23 12:45:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.22 2009/10/23 12:47:18 jer Exp $
 
   23 Oct 2009; Jeroen Roovers <jer@gentoo.org> hnb-1.9.18-r1.ebuild,
   +files/hnb-1.9.18-include.patch:
-  Apply the include patch too (bug #240132), remove the NULL define, remove
-  patching hack from ebuild.
+  Apply the include patch too (bug #240132) thanks to Espen Hustad, remove the
+  NULL define, remove patching hack from ebuild.
 
 *hnb-1.9.18-r1 (23 Oct 2009)
 
