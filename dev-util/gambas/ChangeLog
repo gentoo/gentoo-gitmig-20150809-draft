@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.57 2009/09/06 17:27:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.58 2009/10/23 00:50:53 patrick Exp $
+
+*gambas-2.16.0 (23 Oct 2009)
+
+  23 Oct 2009; Patrick Lauer <patrick@gentoo.org> +gambas-2.16.0.ebuild:
+  Bump, fixes #278205
 
   06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
   -files/gambas-2.5.0-mimetype-registration.patch,
