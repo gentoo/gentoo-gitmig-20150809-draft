@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libgnome-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnome-python/ChangeLog,v 1.13 2009/10/16 23:35:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnome-python/ChangeLog,v 1.14 2009/10/24 16:45:01 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> libgnome-python-2.26.1.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org>
   libgnome-python-2.26.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/metacity-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.23 2009/10/16 22:32:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.24 2009/10/24 16:40:02 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> metacity-python-2.26.0.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org>
   metacity-python-2.26.0.ebuild:
