@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.82 2009/10/17 00:03:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.83 2009/10/24 17:00:04 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gnome-netstatus-2.26.0.ebuild:
+  ppc stable #281427
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org>
   gnome-netstatus-2.26.0.ebuild:
