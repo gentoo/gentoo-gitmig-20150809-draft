@@ -7,7 +7,7 @@
     <name>Crypto Herd</name>
 </maintainer>
 <longdescription>
-ibopensc is a library for accessing SmartCard devices. It is also the core library of the OpenSC 
+OpenSC is a library for accessing SmartCard devices. It is also the core library of the OpenSC 
 project. 
 
 Basic functionality (e.g. SELECT FILE, READ BINARY) should work on any ISO 7816-4 compatible SmartCard. 
@@ -15,8 +15,7 @@ Encryption and decryption using private keys on the SmartCard is possible with P
 cards, such as the FINEID (Finnish Electronic IDentity) card.
 </longdescription>
 <use>
-  <flag name='openct'>Build using <pkg>dev-libs/openct</pkg> compatibility
-    </flag>
+  <flag name='openct'>Build using <pkg>dev-libs/openct</pkg> compatibility</flag>
   <flag name='pcsc-lite'>Build with <pkg>sys-apps/pcsc-lite</pkg></flag>
 </use>
 </pkgmetadata>
