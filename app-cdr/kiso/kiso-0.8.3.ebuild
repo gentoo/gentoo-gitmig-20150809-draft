@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.3.ebuild,v 1.10 2009/06/13 13:29:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.3.ebuild,v 1.11 2009/10/24 22:42:20 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="a frontend for KDE to make it as easy as possible to create manipulate and extract CD Image files."
@@ -21,7 +22,7 @@ RDEPEND="${DEPEND}"
 PATCHES=( "${FILESDIR}"/${P}-libcdio-077.patch
 	"${FILESDIR}"/${PN}-desktop_file.patch )
 
-need-kde 3.2
+need-kde 3.5
 
 S=${WORKDIR}/${P/c}
 
