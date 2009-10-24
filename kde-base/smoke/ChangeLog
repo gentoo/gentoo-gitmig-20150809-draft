@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.76 2009/10/12 23:20:15 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.77 2009/10/24 20:04:21 josejx Exp $
+
+  24 Oct 2009; Joseph Jezak <josejx@gentoo.org> smoke-4.3.1.ebuild,
+  smoke-4.3.2.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -smoke-3.5.9.ebuild:
   KDE 3.5.9 removal
