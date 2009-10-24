@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10661 2009/10/24 23:42:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10662 2009/10/24 23:44:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,6 +45,7 @@ media-libs/libkdcraw
 =media-gfx/kphotoalbum-3*
 media-gfx/gwenview
 =media-plugins/kipi-plugins-0.1*
+media-libs/libkipi
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # Replaced by kde-base/dragonplayer.

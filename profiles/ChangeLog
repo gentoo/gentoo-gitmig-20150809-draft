@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3453 2009/10/24 23:42:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3454 2009/10/24 23:44:38 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask old gwenview, digikam, kipi-plugins, libkdcraw and kphotoalbum.
+  Mask old libkipi, gwenview, digikam, kipi-plugins, libkdcraw and kphotoalbum.
 
   24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask media-video/codeine.
