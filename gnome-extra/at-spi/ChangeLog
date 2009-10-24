@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.189 2009/10/16 22:58:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.190 2009/10/24 17:04:39 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> ChangeLog:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> at-spi-1.26.0.ebuild:
   x86 stable, bug #281427
