@@ -1,0 +1,12 @@
+# ChangeLog for app-emulation/lxc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.1 2009/10/24 10:49:24 flameeyes Exp $
+
+*lxc-0.6.3 (24 Oct 2009)
+
+  24 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/0.6.2-as-needed.patch, +lxc-0.6.3.ebuild, +metadata.xml:
+  Initial import of lxc; based upon dev-zero's ebuild, modified by me. It
+  diverges a bit from upstream, in the path used, to stay more
+  Gentoo-styled. Init scripts will likely be added separately.
+
