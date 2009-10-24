@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/price
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.17 2009/07/21 15:16:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.18 2009/10/24 14:21:19 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> price-0.8.3.ebuild:
+  ppc stable #289446
 
 *price-0.8.3 (21 Jul 2009)
 
