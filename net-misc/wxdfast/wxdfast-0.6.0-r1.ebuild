@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0-r1.ebuild,v 1.1 2009/03/30 00:04:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0-r1.ebuild,v 1.2 2009/10/24 05:36:17 dirtyepic Exp $
 
 EAPI="2"
 
@@ -31,6 +31,6 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog TODO
 }
