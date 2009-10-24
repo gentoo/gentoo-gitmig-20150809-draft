@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c-r2.ebuild,v 1.2 2009/10/12 16:07:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c-r2.ebuild,v 1.3 2009/10/24 13:34:47 nixnut Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 
 SLOT="3.5"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
 IUSE="mplayer xine cairo gstreamer npp"
 
 DEPEND="x11-libs/libXv
