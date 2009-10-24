@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.17 2009/10/22 10:49:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.10.ebuild,v 1.1 2009/10/24 15:09:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -8,8 +8,15 @@ inherit eutils multilib linux-mod toolchain-funcs versionator
 
 DESCRIPTION="Ati precompiled drivers for r600 (HD Series) and newer chipsets"
 HOMEPAGE="http://www.ati.com"
-ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
-SRC_URI="${ATI_URL}/ati-driver-installer-${PV/./-}-x86.x86_64.run"
+# 8.ble will be used for beta releases.
+if [[ $(get_major_version) > 8 ]]; then
+	ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
+	SRC_URI="${ATI_URL}/ati-driver-installer-${PV/./-}-x86.x86_64.run"
+	FOLDER_PREFIX="common/"
+else
+	SRC_URI="https://launchpad.net/ubuntu/karmic/+source/fglrx-installer/2:${PV}-0ubuntu1/+files/fglrx-installer_${PV}.orig.tar.gz"
+	FOLDER_PREFIX=""
+fi
 IUSE="debug +modules multilib"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
@@ -95,8 +102,8 @@ _check_kernel_config() {
 	fi
 
 	# kernel hook checking up latest allowed version
-	if kernel_is ge 2 6 31; then
-		eerror "Kernels newer then 2.6.30 are not supported by this driver"
+	if kernel_is ge 2 6 32; then
+		eerror "Kernels newer then 2.6.31 are not supported by this driver"
 		die "Downgrade your kernel"
 	fi
 
@@ -166,7 +173,7 @@ _check_kernel_config() {
 
 pkg_setup() {
 	# Define module dir.
-	MODULE_DIR="${S}/common/lib/modules/fglrx/build_mod"
+	MODULE_DIR="${S}/${FOLDER_PREFIX}/lib/modules/fglrx/build_mod"
 	# xorg folder
 	BASE_DIR="${S}/x740"
 
@@ -182,7 +189,7 @@ pkg_setup() {
 	fi
 
 	if use modules; then
-		MODULE_NAMES="fglrx(video:${S}/common/lib/modules/fglrx/build_mod/2.6.x)"
+		MODULE_NAMES="fglrx(video:${S}/${FOLDER_PREFIX}/lib/modules/fglrx/build_mod/2.6.x)"
 		BUILD_TARGETS="kmod_build"
 		linux-mod_pkg_setup
 		BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
@@ -203,10 +210,14 @@ pkg_setup() {
 }
 
 src_unpack() {
-	# Switching to a standard way to extract the files since otherwise no signature file
-	# would be created
-	local src="${DISTDIR}/${A}"
-	sh "${src}" --extract "${S}"  2&>1 /dev/null
+	if [[ $(get_major_version) > 8 ]]; then
+		# Switching to a standard way to extract the files since otherwise no signature file
+		# would be created
+		local src="${DISTDIR}/${A}"
+		sh "${src}" --extract "${S}"  2&>1 /dev/null
+	else
+		unpack ${A}
+	fi
 }
 
 src_prepare() {
@@ -234,12 +245,12 @@ src_prepare() {
 	sed -i \
 		-e "s:/var/lib/xdm/authdir/authfiles/:/var/run/xauth/:" \
 		-e "s:/var/lib/gdm/:/var/gdm/:" \
-		"${S}/common/etc/ati/authatieventsd.sh" \
+		"${S}/${FOLDER_PREFIX}etc/ati/authatieventsd.sh" \
 		|| die "sed failed."
 
 	# Since "who" is in coreutils, we're using that one instead of "finger".
 	sed -i -e 's:finger:who:' \
-		"${S}/common/usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh" \
+		"${S}/${FOLDER_PREFIX}usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh" \
 		|| die "Replacing 'finger' with 'who' failed."
 	# Adjust paths in the script from /usr/X11R6/bin/ to /opt/bin/ and
 	# add function to detect default state.
@@ -263,7 +274,7 @@ src_prepare() {
 
 	mkdir extra || die "mkdir failed"
 	cd extra
-	unpack ./../common/usr/src/ati/fglrx_sample_source.tgz
+	unpack ./../${FOLDER_PREFIX}usr/src/ati/fglrx_sample_source.tgz
 	sed -i -e 's:include/extensions/extutil.h:X11/extensions/extutil.h:' \
 		lib/fglrx_gamma/fglrx_gamma.c || die "include fixup failed"
 	# Add a category.
@@ -282,7 +293,7 @@ src_compile() {
 	# The -DUSE_GLU is needed to compile using nvidia headers
 	# according to a comment in ati-drivers-extra-8.33.6.ebuild.
 	"$(tc-getCC)" -o fgl_glxgears ${CFLAGS} ${LDFLAGS} -DUSE_GLU \
-		-I"${S}"/common/usr/include fgl_glxgears.c \
+		-I"${S}"/${FOLDER_PREFIX}usr/include fgl_glxgears.c \
 		-lGL -lGLU -lX11 -lm || die "fgl_glxgears build failed"
 	eend $?
 
@@ -298,7 +309,7 @@ src_compile() {
 	ebegin "Building fglrx_gamma util"
 	cd "${S}"/extra/programs/fglrx_gamma
 	"$(tc-getCC)" -o fglrx_xgamma ${CFLAGS} ${LDFLAGS} \
-		-I../../../common/usr/X11R6/include -L../../lib/fglrx_gamma \
+		-I../../../${FOLDER_PREFIX}usr/X11R6/include -L../../lib/fglrx_gamma \
 		fglrx_xgamma.c -lm -lfglrx_gamma -lX11 \
 		|| die "fglrx_gamma util build failed"
 	eend $?
@@ -385,34 +396,34 @@ src_install() {
 	# etc.
 	insinto /etc/ati
 	# Everything except for the authatieventsd.sh script.
-	doins common/etc/ati/{logo*,control,atiogl.xml,signature,amdpcsdb.default}
+	doins ${FOLDER_PREFIX}etc/ati/{logo*,control,atiogl.xml,signature,amdpcsdb.default}
 	insopts -m0755
-	doins common/etc/ati/authatieventsd.sh || die
+	doins ${FOLDER_PREFIX}etc/ati/authatieventsd.sh || die
 
 	# include.
 	insinto /usr
-	doins -r common/usr/include || die
+	doins -r ${FOLDER_PREFIX}usr/include || die
 	insinto /usr/include/X11/extensions
-	doins common/usr/X11R6/include/X11/extensions/fglrx_gamma.h || die
+	doins ${FOLDER_PREFIX}usr/X11R6/include/X11/extensions/fglrx_gamma.h || die
 
 	# Just the atigetsysteminfo.sh script.
 	into /usr
-	dosbin common/usr/sbin/* || die
+	dosbin ${FOLDER_PREFIX}usr/sbin/* || die
 
 	# data files for the control panel.
 	insinto /usr/share
-	doins -r common/usr/share/ati || die
+	doins -r ${FOLDER_PREFIX}usr/share/ati || die
 	insinto /usr/share/pixmaps
-	doins common/usr/share/icons/ccc_{large,small}.xpm || die
+	doins ${FOLDER_PREFIX}usr/share/icons/ccc_{large,small}.xpm || die
 	make_desktop_entry amdcccle 'ATI Catalyst Control Center' \
 		ccc_large System
 
 	# doc.
-	dohtml -r common/usr/share/doc/fglrx || die
+	dohtml -r ${FOLDER_PREFIX}usr/share/doc/fglrx || die
 
-	doman common/usr/share/man/man8/atieventsd.8 || die
+	doman ${FOLDER_PREFIX}usr/share/man/man8/atieventsd.8 || die
 
-	pushd common/usr/share/doc/fglrx/examples/etc/acpi > /dev/null
+	pushd ${FOLDER_PREFIX}usr/share/doc/fglrx/examples/etc/acpi > /dev/null
 
 	exeinto /etc/acpi
 	doexe ati-powermode.sh || die
