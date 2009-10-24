@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.428 2009/10/19 16:02:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.429 2009/10/24 14:35:31 alexxy Exp $
+
+  24 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> python-2.6.3.ebuild,
+  python-3.1.1-r1.ebuild:
+  Add ~mips keyword #287383
 
   19 Oct 2009; Raúl Porcel <armin76@gentoo.org> python-2.6.2-r1.ebuild:
   s390/sh stable wrt #277645
