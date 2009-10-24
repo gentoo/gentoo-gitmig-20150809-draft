@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.9 2009/10/18 16:26:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.10 2009/10/24 16:58:15 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> seahorse-plugins-2.26.2.ebuild:
+  ppc stable #281427
 
   18 Oct 2009; nixnut <nixnut@gentoo.org> seahorse-plugins-2.26.2.ebuild:
   ~ppc'd
