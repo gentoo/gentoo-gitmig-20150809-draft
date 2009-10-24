@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.248 2009/10/16 23:14:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.249 2009/10/24 16:38:42 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> eog-2.26.3.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> eog-2.26.3.ebuild:
   x86 stable, bug #281427
