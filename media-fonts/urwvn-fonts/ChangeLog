@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urwvn-fonts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.24 2008/08/20 07:07:08 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.25 2009/10/24 05:40:46 pva Exp $
+
+  24 Oct 2009; Peter Volkov <pva@gentoo.org> urwvn-fonts-3.04.ebuild:
+  Fixed HOMEPAGE and updated a bit description, bug #289176, thank Alexey
+  Portnov for report.
 
   20 Aug 2008; Jeroen Roovers <jer@gentoo.org> urwvn-fonts-3.04.ebuild:
   Stable for HPPA (bug #234972).
