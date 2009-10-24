@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-cdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.23 2009/10/11 11:04:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.24 2009/10/24 14:04:07 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> python-cdb-0.34.ebuild:
+  ppc stable #289417
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> python-cdb-0.34.ebuild:
   Merge from Prefix
