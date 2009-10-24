@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.38 2009/10/21 18:16:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.39 2009/10/24 14:55:07 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> eventlog-0.2.10.ebuild:
+  ppc stable #289958
 
   21 Oct 2009; <chainsaw@gentoo.org> eventlog-0.2.10.ebuild:
   Marked stable on AMD64 as requested by Michael "Mr. Bones." Sterrett in
