@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/photopc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.10 2008/11/27 22:20:05 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.11 2009/10/24 12:37:55 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> photopc-3.05.ebuild:
+  ppc stable #286572
 
   27 Nov 2008; Jeroen Roovers <jer@gentoo.org> photopc-3.05.ebuild:
   Do not DEPEND on virtual/libc. Do not ignore CC (bug #244162).
