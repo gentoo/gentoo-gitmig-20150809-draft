@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.17 2009/10/11 16:18:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.18 2009/10/24 11:09:03 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> bluez-4.39-r2.ebuild:
+  ppc stable #284661
 
   11 Oct 2009; Markus Meier <maekke@gentoo.org> bluez-4.39-r2.ebuild:
   x86 stable, bug #284661
