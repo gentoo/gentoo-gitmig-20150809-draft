@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.15 2009/10/16 21:45:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.16 2009/10/24 16:18:21 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gnome-python-base-2.26.1.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org>
   gnome-python-base-2.26.1.ebuild:
