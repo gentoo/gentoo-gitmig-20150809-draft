@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.42 2009/10/24 14:13:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.43 2009/10/24 17:37:36 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> pygments-1.1.1.ebuild:
+  Stable on alpha, bug #289434
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> pygments-1.1.1.ebuild:
   ppc stable #289434
