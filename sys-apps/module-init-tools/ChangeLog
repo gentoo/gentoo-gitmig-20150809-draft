@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.153 2009/10/16 14:34:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.154 2009/10/24 08:27:43 vapier Exp $
+
+  24 Oct 2009; Mike Frysinger <vapier@gentoo.org>
+  module-init-tools-3.11.ebuild:
+  Force out-of-tree building to avoid bugs in local implementation #290207
+  by Brian Dolbec.
 
   16 Oct 2009; Mike Frysinger <vapier@gentoo.org>
   module-init-tools-3.11.ebuild:

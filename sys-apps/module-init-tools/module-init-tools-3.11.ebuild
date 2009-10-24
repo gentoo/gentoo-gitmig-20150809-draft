@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.11.ebuild,v 1.2 2009/10/16 14:34:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.11.ebuild,v 1.3 2009/10/24 08:27:43 vapier Exp $
 
 inherit eutils
 
@@ -27,6 +27,8 @@ src_unpack() {
 }
 
 src_compile() {
+	mkdir build && cd build #290207
+	ECONF_SOURCE=.. \
 	econf \
 		--prefix=/ \
 		--enable-zlib \
@@ -40,7 +42,7 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake -C build install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	into /
