@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-configuration
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-configuration/ChangeLog,v 1.1 2009/10/24 21:54:05 arfrever Exp $
+
+*zope-configuration-3.6.0 (24 Oct 2009)
+
+  24 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-configuration-3.6.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
