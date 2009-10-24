@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10654 2009/10/24 16:36:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10655 2009/10/24 20:58:23 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -754,10 +754,6 @@ sys-apps/einit-modules-xml
 # Mask Mumble 1.2.0 snapshots for testing.
 =media-sound/mumble-1.2.0_pre*
 =media-sound/murmur-1.2.0_pre*
-
-# Alex Alexander <wired@gentoo.org> (12 Aug 2009)
-# Masked beta versions for testing
-=net-p2p/ktorrent-3.3_beta*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
 #  on behalf of QA team
