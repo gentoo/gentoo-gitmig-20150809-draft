@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.152 2009/10/20 17:46:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.153 2009/10/24 11:36:25 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> exim-4.69-r3.ebuild:
+  ppc stable #282443
 
 *exim-4.69-r4 (20 Oct 2009)
 
