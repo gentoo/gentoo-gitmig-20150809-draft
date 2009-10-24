@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.6.2.ebuild,v 1.1 2009/10/19 14:25:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.6.2.ebuild,v 1.2 2009/10/24 16:39:13 ssuominen Exp $
 
 EAPI=2
+EAUTORECONF=yes
 inherit xfconf
 
 DESCRIPTION="Panel for Xfce4"
@@ -34,4 +35,5 @@ pkg_setup() {
 		$(use_enable startup-notification)
 		$(use_enable debug)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
+	PATCHES=( "${FILESDIR}/${P}-exo.patch" )
 }
