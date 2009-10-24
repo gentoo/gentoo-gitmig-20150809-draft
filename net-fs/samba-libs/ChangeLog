@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/ChangeLog,v 1.18 2009/10/23 17:32:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/ChangeLog,v 1.19 2009/10/24 11:20:45 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  samba-libs-3.3.8.ebuild:
+  Keyworded on alpha, bug #285952
 
 *samba-libs-3.4.2-r3 (23 Oct 2009)
 

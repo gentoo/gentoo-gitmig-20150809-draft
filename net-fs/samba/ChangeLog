@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.380 2009/10/22 18:51:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.381 2009/10/24 11:19:44 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> samba-3.3.8.ebuild:
+  Keyworded on alpha, bug #285952
 
 *samba-3.3.9 (22 Oct 2009)
 
