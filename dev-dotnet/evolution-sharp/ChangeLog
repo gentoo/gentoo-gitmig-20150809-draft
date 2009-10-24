@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.47 2009/10/17 00:19:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.48 2009/10/24 13:13:08 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> evolution-sharp-0.21.1.ebuild:
+  ppc stable #288324
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org>
   evolution-sharp-0.21.1.ebuild:
