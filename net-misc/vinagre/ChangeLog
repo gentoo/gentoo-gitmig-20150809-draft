@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.42 2009/10/16 22:45:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.43 2009/10/24 16:57:48 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> vinagre-2.26.2.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> vinagre-2.26.2.ebuild:
   x86 stable, bug #281427
