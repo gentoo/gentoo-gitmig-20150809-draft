@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkdcraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.25 2009/10/21 16:55:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.26 2009/10/24 13:08:14 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> libkdcraw-0.1.9.ebuild:
+  ppc stable #287980
 
   20 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
   libkdcraw-0.1.9.ebuild:

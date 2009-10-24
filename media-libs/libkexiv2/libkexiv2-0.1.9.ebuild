@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/libkexiv2-0.1.9.ebuild,v 1.2 2009/10/15 11:43:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/libkexiv2-0.1.9.ebuild,v 1.3 2009/10/24 13:09:44 nixnut Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2"
 
 SLOT="3.5"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=media-gfx/exiv2-0.18"
