@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xgalaga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.15 2009/10/17 03:25:57 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.16 2009/10/24 16:22:20 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  xgalaga-2.1.1.0.ebuild:
+  Stable on alpha, bug #289092
 
   17 Oct 2009; Richard Freeman <rich0@gentoo.org> xgalaga-2.1.1.0.ebuild:
   amd64 stable - 289092
