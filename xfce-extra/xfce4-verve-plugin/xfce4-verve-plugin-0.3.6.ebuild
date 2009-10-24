@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/xfce4-verve-plugin-0.3.6.ebuild,v 1.3 2009/10/08 17:48:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/xfce4-verve-plugin-0.3.6.ebuild,v 1.4 2009/10/24 17:54:18 ssuominen Exp $
 
 EAPI=2
+EAUTORECONF=yes
 inherit xfconf
 
 DESCRIPTION="Command line panel plugin"
@@ -28,4 +29,5 @@ pkg_setup() {
 		$(use_enable dbus)
 		$(use_enable debug)"
 	DOCS="AUTHORS ChangeLog README THANKS TODO"
+	PATCHES=( "${FILESDIR}/${P}-exo.patch" )
 }
