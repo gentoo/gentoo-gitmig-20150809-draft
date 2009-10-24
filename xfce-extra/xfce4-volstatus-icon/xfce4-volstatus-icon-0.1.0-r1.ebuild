@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/xfce4-volstatus-icon-0.1.0-r1.ebuild,v 1.7 2009/08/30 16:10:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/xfce4-volstatus-icon-0.1.0-r1.ebuild,v 1.8 2009/10/24 18:03:45 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=xfce-base/libxfce4util-4.4
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/exo-0.3.2[hal]
+	<xfce-base/exo-0.5
 	>=sys-apps/hal-0.5.9
 	>=dev-libs/dbus-glib-0.70"
 DEPEND="${RDEPEND}

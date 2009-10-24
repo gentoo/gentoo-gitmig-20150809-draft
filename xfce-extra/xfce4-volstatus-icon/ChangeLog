@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-volstatus-icon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.16 2009/08/30 16:10:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.17 2009/10/24 18:03:45 ssuominen Exp $
+
+  24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-volstatus-icon-0.1.0-r1.ebuild:
+  Restrict depend to <xfce-base/exo-0.5 because of API change.
 
   30 Aug 2009; nixnut <nixnut@gentoo.org>
   xfce4-volstatus-icon-0.1.0-r1.ebuild:
