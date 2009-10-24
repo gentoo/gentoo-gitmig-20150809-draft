@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.5.10.ebuild,v 1.7 2009/07/12 13:44:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.5.10.ebuild,v 1.8 2009/10/24 22:18:50 ssuominen Exp $
 
 EAPI="1"
 inherit kde-functions
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="arts"
+IUSE=""
 
 RDEPEND="
 >=kde-base/atlantikdesigner-${PV}:${SLOT}
@@ -24,5 +24,4 @@ RDEPEND="
 >=kde-base/konqueror-akregator-${PV}:${SLOT}
 >=kde-base/kdeaddons-docs-konq-plugins-${PV}:${SLOT}
 >=kde-base/renamedlg-audio-${PV}:${SLOT}
->=kde-base/renamedlg-images-${PV}:${SLOT}
-arts? ( >=kde-base/noatun-plugins-${PV}:${SLOT} )"
+>=kde-base/renamedlg-images-${PV}:${SLOT}"
