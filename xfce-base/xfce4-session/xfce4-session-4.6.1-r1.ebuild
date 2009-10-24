@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.1-r1.ebuild,v 1.1 2009/10/19 21:13:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.1-r1.ebuild,v 1.2 2009/10/24 12:04:51 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic xfconf
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/projects/xfce4-session/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="debug +fortune gnome gnome-keyring profile"
+IUSE="debug fortune gnome gnome-keyring profile"
 
 RDEPEND="gnome-base/libglade
 	>=dev-libs/dbus-glib-0.73
@@ -50,7 +50,7 @@ src_configure() {
 src_install() {
 	xfconf_src_install
 
-	if ! use fortune ; then
+	if ! use fortune; then
 		# Wipe away unusable xfce4-tips
 		rm -Rf "${D}"/usr/share/xfce4/tips
 		rm -f "${D}"/usr/bin/xfce4-tips \
