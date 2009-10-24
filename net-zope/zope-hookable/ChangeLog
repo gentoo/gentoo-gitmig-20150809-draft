@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-hookable
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-hookable/ChangeLog,v 1.1 2009/10/24 20:18:43 arfrever Exp $
+
+*zope-hookable-3.4.1 (24 Oct 2009)
+
+  24 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-hookable-3.4.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
