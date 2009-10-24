@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.27 2009/08/31 00:51:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.28 2009/10/24 01:15:13 arfrever Exp $
+
+*engine_pkcs11-0.1.7 (24 Oct 2009)
+
+  24 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -engine_pkcs11-0.1.4.ebuild, -engine_pkcs11-0.1.5.ebuild,
+  +engine_pkcs11-0.1.7.ebuild:
+  Version bump.
 
   31 Aug 2009; Brent Baude <ranger@gentoo.org> engine_pkcs11-0.1.6.ebuild:
   Marking engine_pkcs11-0.1.6 ppc64 for bug 279370
