@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/pyyaml-3.09.ebuild,v 1.4 2009/10/15 08:15:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/pyyaml-3.09.ebuild,v 1.5 2009/10/24 13:02:35 nixnut Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://pyyaml.org/download/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-linux ~x86-macos"
 IUSE="examples libyaml"
 
 DEPEND="libyaml? ( dev-libs/libyaml dev-python/pyrex )"
