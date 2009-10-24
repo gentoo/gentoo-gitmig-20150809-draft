@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libgtop-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.19 2009/10/16 21:57:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.20 2009/10/24 16:25:42 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> libgtop-python-2.26.0.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org>
   libgtop-python-2.26.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnomeprint-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.20 2009/10/16 23:26:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.21 2009/10/24 16:28:32 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org>
+  libgnomeprint-python-2.26.0.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org>
   libgnomeprint-python-2.26.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.29 2009/10/16 23:17:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.30 2009/10/24 16:26:35 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> pygtksourceview-2.6.0.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org>
   pygtksourceview-2.6.0.ebuild:
