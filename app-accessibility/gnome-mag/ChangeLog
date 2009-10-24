@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.163 2009/10/17 00:08:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.164 2009/10/24 16:33:31 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gnome-mag-0.15.9.ebuild:
+  ppc stable #281427
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> gnome-mag-0.15.9.ebuild:
   x86 stable, bug #281427
