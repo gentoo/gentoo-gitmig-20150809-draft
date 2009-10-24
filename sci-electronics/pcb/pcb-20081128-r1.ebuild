@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20081128-r1.ebuild,v 1.4 2009/10/10 14:40:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20081128-r1.ebuild,v 1.5 2009/10/24 12:15:46 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://geda.seul.org/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="dbus doc gif gtk jpeg motif nelma nls png xrender threads tk"
 
 RDEPEND="gif? ( >=media-libs/gd-2.0.23 )
