@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.9 2009/10/19 21:38:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.10 2009/10/24 18:11:34 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  ppc stable #289298
 
   19 Oct 2009; Markus Meier <maekke@gentoo.org> gupnp-igd-0.1.3.ebuild:
   amd64 stable, bug #289298
