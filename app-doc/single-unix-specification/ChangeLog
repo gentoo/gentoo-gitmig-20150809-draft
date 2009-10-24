@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.12 2009/10/24 13:45:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.13 2009/10/24 16:19:22 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  single-unix-specification-4-r1.ebuild:
+  Stable on alpha, bug #289002
 
   24 Oct 2009; nixnut <nixnut@gentoo.org>
   single-unix-specification-4-r1.ebuild:
