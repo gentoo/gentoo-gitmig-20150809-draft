@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.24 2009/10/16 22:10:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.25 2009/10/24 16:29:52 ssuominen Exp $
+
+  24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-settings-4.6.3.ebuild, +files/xfce4-settings-4.6.3-exo.patch:
+  Fix configure.ac to detect >=exo-0.5.
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> xfce4-settings-4.6.3.ebuild:
   x86 stable, bug #281427
