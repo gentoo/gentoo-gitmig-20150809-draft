@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10658 2009/10/24 23:15:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10659 2009/10/24 23:29:53 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
+# Replaced by kde-base/dragonplayer.
+# http://www.dragonplayer.net/
+# Masked for removal in 30 days.
+media-video/codeine
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # Replaced by >=kde-misc/filelight-1.9_rc3.
