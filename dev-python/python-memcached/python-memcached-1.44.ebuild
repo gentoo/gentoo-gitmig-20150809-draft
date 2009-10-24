@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.44.ebuild,v 1.4 2009/10/15 08:22:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.44.ebuild,v 1.5 2009/10/24 13:05:16 nixnut Exp $
 
 NEED_PYTHON="2.4"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.tummy.com/pub/python-memcached/${P}.tar.gz"
 
 LICENSE="OSL-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
