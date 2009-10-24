@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Curl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Curl/ChangeLog,v 1.10 2009/09/18 19:55:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Curl/ChangeLog,v 1.11 2009/10/24 11:54:31 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> WWW-Curl-4.09.ebuild:
+  ppc stable #284544
 
   18 Sep 2009; Alexis Ballier <aballier@gentoo.org> WWW-Curl-4.09.ebuild:
   keyword ~ppc64, working fine on a PowerMac 970
