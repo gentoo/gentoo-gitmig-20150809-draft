@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.143 2009/10/16 23:09:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.144 2009/10/24 16:47:45 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> dasher-4.10.1.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> dasher-4.10.1.ebuild:
   x86 stable, bug #281427
