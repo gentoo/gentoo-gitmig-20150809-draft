@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.28 2009/10/24 14:19:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.29 2009/10/24 18:08:23 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> flite-1.3.ebuild:
+  Stable on alpha, bug #289439
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> flite-1.3.ebuild:
   ppc stable #289439
