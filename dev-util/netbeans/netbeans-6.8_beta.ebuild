@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_alpha2.ebuild,v 1.1 2009/10/11 11:11:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_beta.ebuild,v 1.1 2009/10/24 00:04:50 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -10,7 +10,7 @@ DESCRIPTION="NetBeans IDE for Java"
 HOMEPAGE="http://www.netbeans.org"
 
 SLOT="6.8"
-SRC_URI="http://bits.netbeans.org/netbeans/6.8/m2/zip/netbeans-6.8m2-200910071658-src.zip
+SRC_URI="http://download.netbeans.org/netbeans/6.8/beta/zip/netbeans-6.8beta-200910212001-src.zip
 	mirror://gentoo/netbeans-6.7-l10n-20090626125342.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
@@ -468,6 +468,11 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_enterprise ; then
+			filter_file "javaee.api/external/javaee-api-6.0-SNAPSHOT.jar" ${tmpfile}
+			filter_file "javaee.api/external/javaee-web-api-6.0-SNAPSHOT.jar" ${tmpfile}
+			filter_file "javaee.api/external/javax.annotation.jar" ${tmpfile}
+			filter_file "javaee.api/external/jaxb-api-osgi.jar" ${tmpfile}
+			filter_file "javaee.api/external/webservices-api-osgi.jar" ${tmpfile}
 			filter_file "j2ee.sun.appsrv81/external/appservapis-2.0.58.3.jar" ${tmpfile}
 			filter_file "j2ee.sun.appsrv81/external/org-netbeans-modules-j2ee-sun-appsrv81.jar" ${tmpfile}
 			filter_file "libs.glassfish_logging/external/glassfish-logging-2.0.jar" ${tmpfile}
@@ -485,8 +490,8 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_harness ; then
-			filter_file "apisupport.harness/external/cobertura-1.9.jar" ${tmpfile}
 			filter_file "apisupport.harness/external/openjdk-javac-6-b12.jar" ${tmpfile}
+			filter_file "apisupport.tc.cobertura/external/cobertura-1.9.jar" ${tmpfile}
 			filter_file "jemmy/external/jemmy-2.3.0.0.jar" ${tmpfile}
 		fi
 
@@ -565,14 +570,6 @@ src_prepare () {
 			filter_file "libs.jrubyparser/external/jruby-parser-0.1.jar" ${tmpfile}
 			filter_file "o.kxml2/external/kxml2-2.3.0.jar" ${tmpfile}
 			filter_file "o.rubyforge.debugcommons/external/debug-commons-java-0.10.0.jar" ${tmpfile}
-		fi
-
-		if use netbeans_modules_websvccommon ; then
-			filter_file "libs.wag/external/JSON.org.jar" ${tmpfile}
-			filter_file "libs.wag/external/zcl-api-doc.jar" ${tmpfile}
-			filter_file "libs.wag/external/zcl4j_min-0.5.jar" ${tmpfile}
-			filter_file "libs.wag/external/zclcore-0.5.jar" ${tmpfile}
-			filter_file "libs.wag/external/zclfx_min-0.5.jar" ${tmpfile}
 		fi
 
 		if [ -n "${NB_FILTERFILESFAILED}" ] ; then
@@ -736,7 +733,7 @@ src_install() {
 		for file in *.sh ; do
 			fperms 755 ${file} || die
 		done
-		for file in *.so ; do
+		for file in `find -name "*.so"` ; do
 			fperms 755 ${file} || die
 		done
 	fi
@@ -827,10 +824,10 @@ place_unpack_symlinks() {
 	fi
 
 	if use netbeans_modules_harness ; then
-		dosymcompilejar "apisupport.harness/external" asm-2.2 asm.jar asm-2.2.1.jar
-		dosymcompilejar "apisupport.harness/external" asm-2.2 asm-tree.jar asm-tree-2.2.1.jar
-		dosymcompilejar "apisupport.harness/external" jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
-		dosymcompilejar "apisupport.harness/external" log4j log4j.jar log4j-1.2.9.jar
+		dosymcompilejar "apisupport.tc.cobertura/external" asm-2.2 asm.jar asm-2.2.1.jar
+		dosymcompilejar "apisupport.tc.cobertura/external" asm-2.2 asm-tree.jar asm-tree-2.2.1.jar
+		dosymcompilejar "apisupport.tc.cobertura/external" jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
+		dosymcompilejar "apisupport.tc.cobertura/external" log4j log4j.jar log4j-1.2.9.jar
 	fi
 
 	if use netbeans_modules_ide ; then
