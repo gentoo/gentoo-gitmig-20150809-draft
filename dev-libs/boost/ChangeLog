@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.172 2009/10/23 13:20:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.173 2009/10/24 12:07:08 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> boost-1.35.0-r5.ebuild:
+  ppc stable #284686
 
   23 Oct 2009; Jeroen Roovers <jer@gentoo.org> boost-1.35.0-r5.ebuild:
   Stable for HPPA (bug #288723).
