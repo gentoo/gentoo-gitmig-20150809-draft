@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.192 2009/10/16 21:26:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.193 2009/10/24 16:45:56 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gnumeric-1.8.4-r2.ebuild:
+  ppc stable #281427
 
   16 Oct 2009; Markus Meier <maekke@gentoo.org> gnumeric-1.8.4-r2.ebuild:
   x86 stable, bug #281427
