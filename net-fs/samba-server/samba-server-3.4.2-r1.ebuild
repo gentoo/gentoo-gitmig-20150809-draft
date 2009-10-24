@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.4.2-r1.ebuild,v 1.1 2009/10/23 17:33:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.4.2-r1.ebuild,v 1.2 2009/10/24 08:32:33 patrick Exp $
 
 EAPI="2"
 
@@ -25,6 +25,7 @@ DEPEND="!<net-fs/samba-3.3
 	caps? ( sys-libs/libcap )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
+	fam? ( dev-libs/libgamin )
 	ldap? ( net-nds/openldap )
 	syslog? ( virtual/logger )
 	sys-libs/tdb
