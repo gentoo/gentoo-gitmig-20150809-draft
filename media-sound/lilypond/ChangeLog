@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.100 2009/10/15 14:08:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.101 2009/10/24 14:01:56 klausman Exp $
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  lilypond-2.12.2.ebuild:
+  Stable on alpha, bug #288316
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> lilypond-2.12.2.ebuild:
   amd64/x86 stable, bug #288316
