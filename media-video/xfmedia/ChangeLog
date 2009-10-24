@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xfmedia
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/ChangeLog,v 1.7 2008/11/20 17:00:12 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/ChangeLog,v 1.8 2009/10/24 18:20:05 ssuominen Exp $
+
+  24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfmedia-0.9.2-r2.ebuild:
+  Restrict depend to <xfce-base/exo-0.5 because of API change.
 
   20 Nov 2008; Brent Baude <ranger@gentoo.org> xfmedia-0.9.2-r2.ebuild:
   stable ppc64, bug 243176
