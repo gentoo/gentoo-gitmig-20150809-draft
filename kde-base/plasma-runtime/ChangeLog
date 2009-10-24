@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.10 2009/10/18 14:17:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.11 2009/10/24 19:44:19 josejx Exp $
+
+  24 Oct 2009; Joseph Jezak <josejx@gentoo.org> plasma-runtime-4.3.1.ebuild,
+  plasma-runtime-4.3.2.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> plasma-runtime-4.3.1.ebuild:
   x86 stable, bug #287697
