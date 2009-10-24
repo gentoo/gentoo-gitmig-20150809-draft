@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.3-r10.ebuild,v 1.1 2009/07/22 00:28:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.6.ebuild,v 1.1 2009/10/24 15:02:21 arfrever Exp $
 
 EAPI="2"
 
@@ -183,9 +183,11 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.6.0-disable_linking_against_unneeded_libraries.patch"
 	epatch "${FILESDIR}/${PN}-1.6.2-local_library_preloading.patch"
-	epatch "${FILESDIR}/${P}-apache-2.4.patch"
-	epatch "${FILESDIR}/${P}-kwallet_window.patch"
+	epatch "${FILESDIR}/${PN}-1.6.3-kwallet_window.patch"
 	chmod +x build/transform_libtool_scripts.sh || die "chmod failed"
+
+	# Delete this in >=1.6.7.
+	sed -e '5581a"\\n"' -e '5595a"\\n"' -e '5615a"\\n"' -e'5629a"\\n"' -i subversion/po/pl.po || die "sed failed"
 
 	if ! use test; then
 		sed -i \
@@ -696,7 +698,7 @@ pkg_postinst() {
 	use perl && perl-module_pkg_postinst
 
 	if use ctypes-python; then
-		python_mod_compile "$(python_get_sitedir)/csvn/"{.,core,ext}/*.py
+		python_mod_optimize "$(python_get_sitedir)/csvn"
 	fi
 
 	elog "Subversion Server Notes"
@@ -779,7 +781,7 @@ pkg_postrm() {
 	use perl && perl-module_pkg_postrm
 
 	if use ctypes-python; then
-		python_mod_cleanup
+		python_mod_cleanup "$(python_get_sitedir)/csvn"
 	fi
 }
 
