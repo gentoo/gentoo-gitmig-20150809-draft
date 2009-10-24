@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.1.ebuild,v 1.1 2009/10/11 17:47:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.3.ebuild,v 1.1 2009/10/24 17:31:44 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -39,6 +39,7 @@ DOCS="doc/* HISTORY.txt README.txt"
 src_prepare() {
 	distutils_src_prepare
 	python_convert_shebangs -r 2 src
+	epatch "${FILESDIR}/${P}-py24compat.h.patch"
 }
 
 src_test() {
