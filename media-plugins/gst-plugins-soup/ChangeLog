@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-soup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.14 2009/09/07 05:22:15 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.15 2009/10/24 10:59:21 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gst-plugins-soup-0.10.14.ebuild:
+  ppc stable #281427
 
 *gst-plugins-soup-0.10.16 (07 Sep 2009)
 
