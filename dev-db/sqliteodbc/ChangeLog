@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.14 2009/10/11 17:03:26 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.15 2009/10/24 13:21:46 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> sqliteodbc-0.83.ebuild:
+  ppc stable #288562
 
   11 Oct 2009; Romain Perier <mrpouet@gentoo.org>
   sqliteodbc-0.83.ebuild:
