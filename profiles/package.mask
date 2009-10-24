@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10653 2009/10/24 13:52:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10654 2009/10/24 16:36:02 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (24 Oct 2009)
+# Replaced by app-mobilephone/gammu[python]. Masked for deletion in 30 days.
+dev-python/python-gammu
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # KDE3-only. Doesn't work with stable mplayer wrt bug #208786.
@@ -619,11 +623,6 @@ x11-plugins/desklet-weeklycalendar
 # and isn't properly maintained in Gentoo. Masked for deletion in 30 days.
 dev-python/omniorbpy
 
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (14 Sep 2009)
-# dev-python/xapwrap is no longer maintained and fails to build (bug #184264).
-# Masked for deletion in 30 days.
-dev-python/xapwrap
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (14 Sep 2009)
 #  on behalf of QA team
 #
@@ -656,10 +655,6 @@ dev-php5/onphp-module
 # Mission Control 5 API is compatible with MC4
 # It is also incompatible with empathy <2.27.91
 >=net-im/telepathy-mission-control-5
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (10 Sep 2009)
-# Included in Python 2.6. Masked for deletion in 30 days.
-dev-python/ssl-py26
 
 # Peter Alfredsen <loki_val@gentoo.org> (09 Sep 2009)
 # Fails to build with newest mono, causing dependency
@@ -834,11 +829,6 @@ dev-php/phpdbg-client
 # Removal on 2009-10-09
 app-backup/afbackup-client
 app-backup/afbackup-server
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (09 Aug 2009)
-# Masked for removal in 30 days due to security vulnerability (bug #280494).
-# Manually keyword >=dev-util/subversion-1.6.4.
-<dev-util/subversion-1.6.4
 
 # Michał Januszewski <spock@gentoo.org> (08 Aug 2009)
 # Live git ebuilds for pycuda/pytools. Use at your own risk, do not
