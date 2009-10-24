@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.81 2009/10/05 21:10:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.82 2009/10/24 16:56:42 ssuominen Exp $
+
+  24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> thunar-1.0.1.ebuild:
+  Restrict depend to <xfce-base/exo-0.5 because of API change.
 
   05 Oct 2009; Jeremy Olexa <darkside@gentoo.org> thunar-1.0.1.ebuild:
   Port Gentoo Prefix ebuild to gentoo-x86
