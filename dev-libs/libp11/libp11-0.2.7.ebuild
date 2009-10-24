@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.5.ebuild,v 1.6 2009/08/25 17:13:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.7.ebuild,v 1.1 2009/10/24 00:45:20 arfrever Exp $
 
 EAPI="2"
 
@@ -16,11 +16,12 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND=""
-DEPEND="dev-util/pkgconfig
+RDEPEND="dev-libs/openssl"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 if [[ "${PV}" = "9999" ]]; then
