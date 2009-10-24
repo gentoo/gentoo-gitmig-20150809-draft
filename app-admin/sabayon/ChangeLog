@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.61 2009/10/17 00:24:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.62 2009/10/24 16:41:23 nixnut Exp $
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> sabayon-2.25.0.ebuild:
+  ppc stable #281427
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> sabayon-2.25.0.ebuild:
   x86 stable, bug #281427
