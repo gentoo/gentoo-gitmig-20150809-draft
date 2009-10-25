@@ -1,6 +1,10 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.15 2009/10/25 12:26:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.16 2009/10/25 21:34:43 mr_bones_ Exp $
+
+  25 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  supertuxkart-0.6.2.ebuild:
+  build with -as-needed with patch from upstream SVN (bug #283490)
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> supertuxkart-0.6.2.ebuild:
   amd64/x86 stable, bug #288638
