@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnujump
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/ChangeLog,v 1.4 2009/01/25 03:24:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/ChangeLog,v 1.5 2009/10/25 12:52:15 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> gnujump-1.0.6.ebuild:
+  amd64/x86 stable, bug #288806
 
 *gnujump-1.0.6 (25 Jan 2009)
 
