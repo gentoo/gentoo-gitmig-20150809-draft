@@ -1,0 +1,12 @@
+# ChangeLog for www-client/icecat
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.1 2009/10/25 16:26:31 anarchy Exp $
+
+*icecat-3.5.3 (25 Oct 2009)
+
+  25 Oct 2009; Jory A. Pratt <anarchy@gentoo.org>
+  +files/000_flex-configure-LANG.patch, +icecat-3.5.3.ebuild,
+  +files/firefox-default-prefs.js, +files/icon/icecat.desktop,
+  +metadata.xml:
+  Initial import to tree, replaces iceweasel useflag on mozilla-firefox
+
