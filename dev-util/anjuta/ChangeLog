@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.100 2009/09/27 13:54:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.101 2009/10/25 17:37:49 tove Exp $
+
+  25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove welp from metadata.xml (#141007)
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> anjuta-2.24.2.ebuild:
   ppc stable #268359
