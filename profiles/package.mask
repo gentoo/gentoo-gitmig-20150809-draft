@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10667 2009/10/25 10:39:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10668 2009/10/25 11:46:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
+# KDE3-only. Replaced by >=kde-misc/kdiff3-0.9.95.
+# Masked for removal in 30 days.
+<kde-misc/kdiff3-0.9.95
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # KDE3-only. Replaced by app-cdr/acetoneiso.
