@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.19 2009/10/10 21:33:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.20 2009/10/25 12:56:33 scarabeus Exp $
+
+  25 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kchmviewer-4.0-r1.ebuild:
+  Drop ebuild using obsolete kde eclass code. Newer versions availible.
 
 *kchmviewer-4.1 (10 Oct 2009)
 
