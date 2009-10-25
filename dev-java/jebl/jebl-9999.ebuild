@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jebl/jebl-9999.ebuild,v 1.1 2009/09/21 00:35:25 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jebl/jebl-9999.ebuild,v 1.2 2009/10/25 18:39:23 weaver Exp $
 
 EAPI="2"
 
@@ -32,8 +32,12 @@ RDEPEND="${CDEPEND}
 
 S="${WORKDIR}/${P//./_}"
 
+java_prepare() {
+	rm -rf "${S}/src/org/virion/jam/maconly" || die
+}
+
 src_install() {
 	java-pkg_dojar dist/jebl.jar || die
 	java-pkg_dojar dist/jam.jar || die
-#	use doc && java-pkg_dojavadoc doc/api
+	use doc && java-pkg_dojavadoc doc/api
 }
