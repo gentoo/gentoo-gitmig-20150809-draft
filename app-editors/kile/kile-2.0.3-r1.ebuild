@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.3-r1.ebuild,v 1.9 2009/06/19 14:32:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.3-r1.ebuild,v 1.10 2009/10/25 22:55:51 abcd Exp $
 
 EAPI="1"
 
@@ -15,18 +15,11 @@ LICENSE="GPL-2"
 
 SLOT="3.5"
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
-IUSE="kde"
+IUSE=""
 
 RDEPEND="dev-lang/perl
 	virtual/latex-base
-	dev-tex/latex2html
-	kde? (
-		|| ( ( kde-base/kpdf:3.5
-			kde-base/kghostview:3.5
-			kde-base/kdvi:3.5
-			kde-base/kviewshell:3.5 )
-			kde-base/kdegraphics:3.5 )
-		)"
+	dev-tex/latex2html"
 
 need-kde 3.5
 
@@ -61,7 +54,13 @@ pkg_postinst() {
 
 	echo
 	elog "${P} can use the following optional tools:"
-	elog "- Adobe Reader (PDF Viewer)    - app-text/acroread"
+	elog "- PDF Viewer (any of)          - app-text/acroread"
+	elog "                               - kde-base/kpdf"
+	elog "                               - kde-base/okular"
+	elog "- DVI Viewer (either of)       - kde-base/kdvi"
+	elog "                               - kde-base/okular"
+	elog "- PS Viewer (either of)        - kde-base/kghostview"
+	elog "                               - kde-base/okular"
 	elog "- DVIPNG (PNG previews)        - app-text/dvipng"
 	elog "- ImageMagick (PNG previews)   - media-gfx/imagemagick"
 	elog "- zip (Archive)                - app-arch/zip"
@@ -69,7 +68,7 @@ pkg_postinst() {
 	elog "- Asymptote                    - media-gfx/asymptote"
 	elog "- Tex4ht (LaTeX to Web)        - dev-tex/tex4ht"
 	elog "- Lilypond (Music Typesetting) - media-sound/lilypond"
-	elog "- Web-Browser (either of)      - kde-base/konqueror"
+	elog "- Web-Browser (any of)         - kde-base/konqueror"
 	elog "                               - www-client/mozilla-firefox"
 	elog "                               - www-client/seamonkey"
 	elog "For viewing BibTeX files:"

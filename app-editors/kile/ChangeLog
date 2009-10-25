@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.121 2009/10/22 21:01:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.122 2009/10/25 22:55:51 abcd Exp $
+
+  25 Oct 2009; Jonathan Callen <abcd@gentoo.org> kile-2.0.3-r1.ebuild:
+  Move some optional runtime deps to elogs in pkg_postinst
 
 *kile-2.1_beta2 (22 Oct 2009)
 
