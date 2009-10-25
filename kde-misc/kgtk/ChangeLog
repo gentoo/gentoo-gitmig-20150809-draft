@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.22 2009/10/12 09:11:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.23 2009/10/25 13:06:07 scarabeus Exp $
+
+  25 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> kgtk-0.10.1.ebuild:
+  QA: Remove usage of deprecated kde eclass code.
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kgtk-0.10.1.ebuild:
   QA fix: unquoted variable
