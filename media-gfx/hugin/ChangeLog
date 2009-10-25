@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.77 2009/10/25 12:01:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.78 2009/10/25 12:05:47 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> -hugin-0.7.0.ebuild:
+  old
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> hugin-0.8.0.ebuild:
   amd64/x86 stable, bug #284686
