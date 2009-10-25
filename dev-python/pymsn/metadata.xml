@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>voip</herd>
-<maintainer>
-  <email>coldwind@gentoo.org</email>
-  <name>Santiago M. Mola</name>
-</maintainer>
-<longdescription lang="en">MSN protocol implementation in Python.
+  <herd>voip</herd>
+  <longdescription lang="en">MSN protocol implementation in Python.
 </longdescription>
 </pkgmetadata>
-
