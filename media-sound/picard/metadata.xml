@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>sound</herd>
   <maintainer>
-    <email>coldwind@gentoo.org</email>
-    <name>Santiago M. Mola</name>
-  </maintainer>
-  <maintainer>
     <email>marti@juffo.org</email>
     <name>Marti Raudsepp</name>
     <description>Proxy maintainer</description>
