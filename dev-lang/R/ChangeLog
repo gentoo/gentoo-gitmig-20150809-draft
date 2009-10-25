@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.158 2009/10/24 14:01:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.159 2009/10/25 23:20:05 jer Exp $
+
+  25 Oct 2009; Jeroen Roovers <jer@gentoo.org> R-2.9.2.ebuild:
+  Stable for HPPA (bug #289381).
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> R-2.9.2.ebuild:
   ppc stable #289381
