@@ -1,6 +1,9 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.25 2009/09/18 18:19:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.26 2009/10/25 17:13:55 tove Exp $
+
+  25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove coldwind from metadata.xml (#181764)
 
 *telepathy-mission-control-5.2.5 (18 Sep 2009)
 
