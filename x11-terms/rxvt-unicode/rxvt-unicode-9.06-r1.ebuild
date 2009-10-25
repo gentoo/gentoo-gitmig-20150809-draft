@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.06-r1.ebuild,v 1.1 2009/10/25 18:09:06 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.06-r1.ebuild,v 1.2 2009/10/25 18:31:11 vostorga Exp $
 
 inherit autotools flag-o-matic
 
@@ -69,6 +69,9 @@ src_unpack() {
 	#	    '/rxvt-unicode256/p;/@TIC@/d' \
 	#		doc/Makefile.in
 	#fi
+
+	# bug #263638
+	epatch "${FILESDIR}"/${P}-popups-hangs.patch
 
 	eautoreconf
 }
