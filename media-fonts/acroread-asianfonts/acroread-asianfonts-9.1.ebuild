@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.3 2009/10/09 14:09:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.4 2009/10/25 11:52:30 maekke Exp $
 
 EAPI="2"
 inherit confutils
@@ -19,7 +19,7 @@ SRC_URI="!minimal? ( ${SRC_PREFIX}xtd${SRC_SUFFIX} )
 
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="minimal linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW"
 RESTRICT="strip mirror"
 
