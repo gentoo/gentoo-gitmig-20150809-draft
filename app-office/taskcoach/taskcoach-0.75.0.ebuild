@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.74.3.ebuild,v 1.1 2009/10/05 09:58:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.75.0.ebuild,v 1.1 2009/10/25 22:33:40 caster Exp $
 
 EAPI=1
 
@@ -44,7 +44,6 @@ src_install() {
 	distutils_src_install
 
 	mv "${D}/usr/bin/taskcoach.py" "${D}/usr/bin/taskcoach" || die
-	rm "${D}/usr/bin/taskcoach.pyw" || die
 
 	doicon "icons.in/${PN}.png" || die
 	make_desktop_entry ${PN} "Task Coach" ${PN} Office || die
