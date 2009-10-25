@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.14 2008/07/27 19:40:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.1.ebuild,v 1.15 2009/10/25 00:36:00 ssuominen Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="anthy canna eb emacs gnome gtk kde libedit m17n-lib ncurses nls prime qt3 X linguas_zh_CN linguas_ja linguas_ko"
+IUSE="anthy canna eb emacs gnome gtk libedit m17n-lib ncurses nls prime qt3 X linguas_zh_CN linguas_ja linguas_ko"
 
 RDEPEND="X? ( x11-libs/libX11
 		x11-libs/libXft
@@ -28,7 +28,6 @@ RDEPEND="X? ( x11-libs/libX11
 	emacs? ( virtual/emacs )
 	gnome? ( >=gnome-base/gnome-panel-2.14 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
-	kde? ( kde-base/kdelibs )
 	libedit? ( dev-libs/libedit )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
 	ncurses? ( sys-libs/ncurses )
@@ -90,7 +89,7 @@ src_compile() {
 		$(use_enable gnome gnome-applet) \
 		$(use_with gtk gtk2) \
 		$(use_with libedit) \
-		$(use_enable kde kde-applet) \
+		--disable-kde-applet \
 		$(use_with m17n-lib m17nlib) \
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \

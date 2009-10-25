@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.6-r2.ebuild,v 1.1 2009/09/16 16:23:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.6-r2.ebuild,v 1.2 2009/10/25 00:36:00 ssuominen Exp $
 
 EAPI="2"
 inherit autotools eutils qt3 multilib elisp-common flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+IUSE="+anthy canna eb emacs gnome gtk libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RDEPEND="X? (
 		x11-libs/libX11
@@ -32,7 +32,6 @@ RDEPEND="X? (
 	emacs? ( virtual/emacs )
 	gnome? ( >=gnome-base/gnome-panel-2.14 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
-	kde? ( kde-base/kdelibs:3.5 )
 	libedit? ( dev-libs/libedit )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
@@ -121,9 +120,7 @@ src_configure() {
 		myconf="${myconf} --without-anthy"
 	fi
 
-	if use qt3 && use kde ; then
-		myconf="${myconf} --enable-notify=knotify3"
-	elif use libnotify ; then
+	if use libnotify ; then
 		myconf="${myconf} --enable-notify=libnotify"
 	fi
 
@@ -135,7 +132,7 @@ src_configure() {
 		$(use_enable gnome gnome-applet) \
 		$(use_with gtk gtk2) \
 		$(use_with libedit) \
-		$(use_enable kde kde-applet) \
+		--disable-kde-applet \
 		$(use_with m17n-lib m17nlib) \
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \
