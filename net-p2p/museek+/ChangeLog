@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.17 2009/03/07 15:22:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.18 2009/10/25 17:15:23 tove Exp $
+
+  25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove coldwind from metadata.xml (#181764)
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   museek+-0.1.13-r3.ebuild:
