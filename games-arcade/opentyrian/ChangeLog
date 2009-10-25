@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/opentyrian
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.6 2009/07/04 14:01:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.7 2009/10/25 19:05:51 chainsaw Exp $
+
+*opentyrian-20091025 (25 Oct 2009)
+
+  25 Oct 2009; <chainsaw@gentoo.org> +files/20091025-cflag-idiocy.diff,
+  +opentyrian-20091025.ebuild, +files/20091025-datapath.diff:
+  Version bump; upstream switched from subversion to mercurial. The build
+  system has changed and now needs to be fought to a degree where a debug
+  USE-flag is no longer feasible.
 
 *opentyrian-20090702 (04 Jul 2009)
 
