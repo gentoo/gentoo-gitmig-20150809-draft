@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>killerfox@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='aliaschain'>Enables a fix for the truncation of alias
