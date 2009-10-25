@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.3.8-r1.ebuild,v 1.1 2008/01/05 22:00:33 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.3.8-r1.ebuild,v 1.2 2009/10/25 15:44:40 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils
 
@@ -13,26 +16,26 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc gmp"
 
-DEPEND="virtual/python"
-RDEPEND="${DEPEND}
-	dev-python/cryptlib_py
+DEPEND=">=dev-libs/cryptlib-3.3.3[python]
 	|| (
 		dev-python/m2crypto
 		dev-python/pycrypto
 	)
 	gmp? ( dev-python/gmpy )"
+RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="tlslite"
+DOCS="readme.txt"
 
-src_unpack() {
-	distutils_src_unpack
+src_prepare() {
+	distutils_src_prepare
 
-	# add patch for python 2.5 (see bug #204278)
+	# Add patch for compatibility with Python 2.5 (bug #204278).
 	epatch "${FILESDIR}/${P}-python25.diff"
 }
 
 src_install(){
-	DOCS="readme.txt"
 	distutils_src_install
 	use doc && dohtml -r docs/.
 }
