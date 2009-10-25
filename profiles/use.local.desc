@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4926 2009/10/25 03:47:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4927 2009/10/25 09:47:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1545,7 +1545,6 @@ media-libs/mlt:compressed-lumas - Compress the luma files in png.
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
 media-libs/mlt:melt - Build the melt commandline tool
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
-media-libs/opencv:demos - Install applications that demo OpenCV library functions
 media-libs/opencv:deprecated - Enable deprecated (old) python support
 media-libs/opencv:ipp - Enable Intel Integrated Primitive support
 media-libs/opencv:octave - Enable octave support
