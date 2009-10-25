@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.197 2009/10/24 14:38:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.198 2009/10/25 12:03:56 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> postfix-2.6.5.ebuild:
+  amd64/x86 stable, bug #288521
 
   24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> postfix-2.6.5.ebuild:
   Stable on alpha, bug #288521
