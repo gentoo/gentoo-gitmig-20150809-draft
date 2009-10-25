@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.96.0.ebuild,v 1.1 2009/10/25 17:51:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.96.0.ebuild,v 1.2 2009/10/25 17:58:42 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -45,8 +45,8 @@ RDEPEND="${DEPEND}
 			>=app-crypt/gnupg-2.0
 			|| (
 				app-crypt/pinentry[gtk]
-				app-crypt/pinentry[qt3]
 				app-crypt/pinentry[qt4]
+				app-crypt/pinentry[qt3]
 			)
 		)
 		=app-crypt/gnupg-1.4*

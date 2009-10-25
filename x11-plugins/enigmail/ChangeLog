@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.164 2009/10/25 17:51:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.165 2009/10/25 17:58:42 anarchy Exp $
+
+  25 Oct 2009; Jory A. Pratt <anarchy@gentoo.org> enigmail-0.96.0.ebuild:
+  reverse preferred qt on pinetry
 
 *enigmail-0.96.0 (25 Oct 2009)
 
