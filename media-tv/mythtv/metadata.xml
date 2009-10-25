@@ -55,5 +55,7 @@
 	<flag name="xvmc">Instructs MythTV to use XvMC for it's video output. By
 		default, this will use the generic XvMC wrapper unless a specific video
 		card driver is enabled via their VIDEO_CARDS USE flags.</flag>
+	<flag name="vdpau">enable support of NVIDIA's VDPAU for video
+		playback</flag>
 </use>
 </pkgmetadata>
