@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_beta.ebuild,v 1.1 2009/10/24 00:04:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_beta-r1.ebuild,v 1.1 2009/10/25 19:09:45 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -60,7 +60,6 @@ RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/javahelp-2:0
 	dev-java/jna:0
 	dev-java/jsr223:0
-	>=dev-java/junit-4:4
 	>=dev-java/swing-layout-1:1
 	netbeans_modules_enterprise? (
 		>=dev-java/antlr-2.7.7:0[java]
@@ -166,7 +165,6 @@ DEPEND=">=virtual/jdk-1.5
 	>=dev-java/javahelp-2:0
 	dev-java/jna:0
 	dev-java/jsr223:0
-	>=dev-java/junit-4:4
 	>=dev-java/swing-layout-1:1
 	netbeans_modules_enterprise? (
 		>=dev-java/commons-fileupload-1:0
@@ -461,6 +459,8 @@ src_prepare () {
 
 		einfo "Removing rest of the bundled jars..."
 		find "${S}" -type f -name "*.jar" > ${tmpfile} || die "Cannot put jars in tmp file"
+
+		filter_file "libs.junit4/external/junit-4.5.jar" ${tmpfile}
 
 		if use netbeans_modules_dlight ; then
 			filter_file "dlight.db.h2/external/h2-1.0.79.jar" ${tmpfile}
@@ -812,7 +812,6 @@ place_unpack_symlinks() {
 	dosymcompilejar "o.jdesktop.layout/external" swing-layout-1 swing-layout.jar swing-layout-1.0.3.jar
 	dosymcompilejar "libs.jna/external" jna jna.jar jna-3.0.9.jar
 	dosymcompilejar "libs.jsr223/external" jsr223 script-api.jar jsr223-api.jar
-	dosymcompilejar "libs.junit4/external" junit-4 junit.jar junit-4.5.jar
 
 	if use netbeans_modules_enterprise ; then
 		dosymcompilejar "j2eeapis/external" glassfish-deployment-api-1.2 glassfish-deployment-api.jar jsr88javax.jar
@@ -897,7 +896,6 @@ symlink_extjars() {
 	dosyminstjar ${targetdir} javahelp jh.jar jh-2.0_05.jar
 	dosyminstjar ${targetdir} jna jna.jar jna-3.0.9.jar
 	dosyminstjar ${targetdir} jsr223 script-api.jar script-api.jar
-	dosyminstjar ${targetdir} junit-4 junit.jar junit-4.5.jar
 	dosyminstjar ${targetdir} swing-layout-1 swing-layout.jar swing-layout-1.0.3.jar
 
 	if use netbeans_modules_dlight ; then
