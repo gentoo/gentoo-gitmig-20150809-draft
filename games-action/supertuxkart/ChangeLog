@@ -1,6 +1,9 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.14 2009/09/02 13:21:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.15 2009/10/25 12:26:22 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> supertuxkart-0.6.2.ebuild:
+  amd64/x86 stable, bug #288638
 
   02 Sep 2009; Tristan Heaven <nyhm@gentoo.org> supertuxkart-0.6.2.ebuild:
   Don't install .svn directories
