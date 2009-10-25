@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.2-r3.ebuild,v 1.1 2009/08/29 12:28:11 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.2-r3.ebuild,v 1.2 2009/10/25 00:29:13 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://releases.compiz.org/${PV}/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="+cairo dbus fuse gnome gtk kde kde3 +svg"
+IUSE="+cairo dbus fuse gnome gtk kde +svg"
 
 DEPEND="
 	dev-libs/glib:2
@@ -52,12 +52,6 @@ DEPEND="
 			>=kde-base/kwin-4.2.0
 			kde-base/kwin:live
 		)
-	)
-	kde3? (
-		|| ( kde-base/kwin:3.5
-			kde-base/kdebase:3.5
-		)
-		dev-libs/dbus-qt3-old
 	)
 	svg? (
 		>=gnome-base/librsvg-2.14.0:2
@@ -101,7 +95,7 @@ src_configure() {
 		$(use_enable gnome metacity) \
 		$(use_enable gtk) \
 		$(use_enable kde kde4) \
-		$(use_enable kde3 kde)
+		--disable-kde
 }
 
 src_install() {

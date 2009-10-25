@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.45 2009/10/15 16:30:11 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.46 2009/10/25 00:29:13 ssuominen Exp $
+
+  25 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  compiz-0.8.2-r3.ebuild, compiz-0.8.4.ebuild, metadata.xml:
+  Remove KDE3 support.
 
 *compiz-0.8.4 (15 Oct 2009)
 
