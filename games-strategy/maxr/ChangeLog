@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/maxr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/maxr/ChangeLog,v 1.1 2009/09/05 19:02:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/maxr/ChangeLog,v 1.2 2009/10/25 12:07:56 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> maxr-0.2.6.ebuild:
+  amd64/x86 stable, bug #288633
 
 *maxr-0.2.6 (05 Sep 2009)
 
