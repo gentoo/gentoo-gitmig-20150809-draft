@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libgrapple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.6 2009/09/02 12:04:55 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.7 2009/10/25 13:11:58 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> libgrapple-0.9.8.ebuild:
+  amd64/x86 stable, bug #288821
 
 *libgrapple-0.9.8 (02 Sep 2009)
 
