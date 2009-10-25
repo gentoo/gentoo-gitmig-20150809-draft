@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-	<email>drizzt@gentoo.org</email>
-	<name>Timothy Redaelli</name>
-</maintainer>
 <longdescription lang="en">
 DatUtil was created to aid in the creation of dat files for Rom Managers such as
 ClrMamePro and RomCenter (Roman Scherzer / Eric Bole-Feysot). It can convert
