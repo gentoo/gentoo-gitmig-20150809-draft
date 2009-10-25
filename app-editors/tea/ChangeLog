@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.44 2009/03/07 19:43:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.45 2009/10/25 17:35:58 tove Exp $
+
+  25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove welp from metadata.xml (#141007)
 
 *tea-23.2.0 (07 Mar 2009)
 

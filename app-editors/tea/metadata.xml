@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>welp@gentoo.org</email>
-	<name>Peter Weller</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>
     This is an very small GTK2 text editor. It has lots of extra features
