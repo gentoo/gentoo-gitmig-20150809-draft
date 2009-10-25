@@ -1,9 +1,0 @@
---- interfaces/swig/python/pyhelpers.i.orig	2009-02-11 22:24:10.000000000 +0000
-+++ interfaces/swig/python/pyhelpers.i	2009-02-11 22:22:15.000000000 +0000
-@@ -1,4 +1,6 @@
- /* These functions need the SWIG_* functions defined in the wrapper */
-+%include "pyname_compat.i"
-+
- %{
- 
- static CvArr * PyObject_to_CvArr(PyObject * obj, bool * freearg);
