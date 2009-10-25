@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.05-r3.ebuild,v 1.1 2008/11/01 09:35:13 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.05-r3.ebuild,v 1.2 2009/10/25 22:32:49 jer Exp $
 
 inherit autotools flag-o-matic
 
@@ -47,16 +47,16 @@ src_unpack() {
 
 	use wcwidth && epatch doc/wcwidth.patch
 
-	# https://bugs.gentoo.org/show_bug.cgi?id=240165
-	epatch ${FILESDIR}/${PN}_no-urgency-if-focused.diff
+	# bug #240165
+	epatch "${FILESDIR}"/${PN}_no-urgency-if-focused.diff
 
 	if ! use vanilla; then
 		ewarn "You are going to include third-party bug fixes/features."
 		ewarn "They came without any warranty and are not supported by the"
 		ewarn "Gentoo community."
 		ebeep 5
-		# https://bugs.gentoo.org/show_bug.cgi?id=237271
-		epatch ${FILESDIR}/${P}_no-MOTIF-WM-INFO.patch
+		# bug #237271
+		epatch "${FILESDIR}"/${P}_no-MOTIF-WM-INFO.patch
 	fi
 
 	sed -i -e \
