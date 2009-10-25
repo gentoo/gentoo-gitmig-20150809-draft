@@ -1,6 +1,9 @@
 # ChangeLog for games-board/grhino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/ChangeLog,v 1.8 2009/05/04 02:26:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/ChangeLog,v 1.9 2009/10/25 15:54:54 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> grhino-0.16.0.ebuild:
+  amd64/x86 stable, bug #288917
 
   04 May 2009; Michael Sterrett <mr_bones_@gentoo.org> grhino-0.16.0.ebuild:
   EAPI=2
