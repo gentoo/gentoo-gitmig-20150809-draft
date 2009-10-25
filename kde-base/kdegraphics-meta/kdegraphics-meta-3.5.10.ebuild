@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/kdegraphics-meta-3.5.10.ebuild,v 1.7 2009/07/12 13:15:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/kdegraphics-meta-3.5.10.ebuild,v 1.8 2009/10/25 17:07:10 ssuominen Exp $
 
 EAPI="1"
 inherit kde-functions
@@ -23,7 +23,6 @@ RDEPEND="gphoto2? ( >=kde-base/kamera-${PV}:${SLOT} )
 	>=kde-base/kolourpaint-${PV}:${SLOT}
 	scanner? ( >=kde-base/kooka-${PV}:${SLOT}
 			>=kde-base/libkscan-${PV}:${SLOT} )
-	>=kde-base/kpdf-${PV}:${SLOT}
 	povray? ( >=kde-base/kpovmodeler-${PV}:${SLOT} )
 	>=kde-base/kruler-${PV}:${SLOT}
 	>=kde-base/ksnapshot-${PV}:${SLOT}
