@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyamlb/jvyamlb-0.2.5.ebuild,v 1.3 2009/07/05 20:35:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyamlb/jvyamlb-0.2.5.ebuild,v 1.4 2009/10/25 21:28:54 volkmar Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source test"
@@ -11,7 +11,7 @@ HOMEPAGE="http://code.google.com/p/jvyamlb/"
 SRC_URI="http://jvyamlb.googlecode.com/files/jvyamlb-src-${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 CDEPEND="dev-java/bytelist:0

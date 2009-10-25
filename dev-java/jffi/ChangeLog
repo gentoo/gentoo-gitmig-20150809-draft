@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.4 2009/08/07 09:40:27 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.5 2009/10/25 21:43:47 volkmar Exp $
+
+  25 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> jffi-0.3-r3.ebuild,
+  jffi-0.5.ebuild:
+  Keywording for ppc, bug 270910
 
 *jffi-0.5 (07 Aug 2009)
 

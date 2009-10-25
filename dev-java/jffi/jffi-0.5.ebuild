@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-0.5.ebuild,v 1.1 2009/08/07 09:40:27 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-0.5.ebuild,v 1.2 2009/10/25 21:43:47 volkmar Exp $
 
 # Probably best to leave the CFLAGS as they are here. See...
 # http://weblogs.java.net/blog/kellyohair/archive/2006/01/compilation_of_1.html
@@ -14,7 +14,7 @@ HOMEPAGE="http://kenai.com/projects/jffi"
 SRC_URI="mirror://gentoo//${P}.tar.bz2"
 LICENSE="LGPL-3"
 SLOT="0.4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5
