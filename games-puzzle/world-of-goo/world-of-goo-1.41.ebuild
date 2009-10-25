@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.41.ebuild,v 1.2 2009/09/02 20:11:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.41.ebuild,v 1.3 2009/10/25 07:53:40 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -34,8 +34,9 @@ QA_EXECSTACK="opt/${MY_PN}/WorldOfGoo.bin32
 	opt/${MY_PN}/WorldOfGoo.bin64"
 
 pkg_nofetch() {
-	elog "To download the demo, visit http://worldofgoo.com/dl2.php?lk=demo"
-	elog "and download ${A} and place it in ${DISTDIR}"
+	echo
+	elog "Download ${A} from ${HOMEPAGE} and place it in ${DISTDIR}"
+	echo
 }
 
 src_install() {
