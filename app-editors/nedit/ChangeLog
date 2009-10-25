@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.55 2009/09/25 09:11:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.56 2009/10/25 17:36:06 vostorga Exp $
+
+  25 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
+  nedit-5.5_p20090914.ebuild, +files/nedit-5.5_p20090914-ldflags.patch:
+  Respecting LDFLAGS, patch thanks to Justin Lecher <jlec@j-schmitz.net> bug
+  290337
 
 *nedit-5.5_p20090914 (25 Sep 2009)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20090914.ebuild,v 1.1 2009/09/25 09:11:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20090914.ebuild,v 1.2 2009/10/25 17:36:06 vostorga Exp $
 
 EAPI=2
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Multi-purpose text editor for the X Window System"
 HOMEPAGE="http://nedit.org/"
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 S="${WORKDIR}/${PN}"
+
+src_prepare() {
+	#respecting LDFLAGS, bug #208189
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+}
 
 src_configure() {
 	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" -e "s:check_tif_rule::" \
