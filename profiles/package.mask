@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10676 2009/10/25 21:58:55 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10677 2009/10/25 22:50:27 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,7 @@
 # Olivier Crête <tester@gentoo.org> (25 Oct 2009)
 # Has been replaced by its fork dev-python/papyon
 # Will be removed in 30 days
-dev-python/papyon
+dev-python/pymsn
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # Masked for security. CVE-2009-{3603,3604,3606,3608,3609}.
