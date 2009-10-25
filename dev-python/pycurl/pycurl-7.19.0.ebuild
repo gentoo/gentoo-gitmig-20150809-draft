@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.10 2009/10/11 09:45:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.11 2009/10/25 13:53:13 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -15,13 +18,21 @@ IUSE="examples"
 
 DEPEND=">=net-misc/curl-7.19.0"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="curl"
+
+src_test() {
+	testing() {
+		"$(PYTHON)" tests/test_internals.py -q
+	}
+	python_execute_function testing
+}
 
 src_install() {
 	sed -i \
 		-e "/data_files=/d" \
-		setup.py || die "sed in setup.py failed."
+		setup.py || die "sed in setup.py failed"
 
 	distutils_src_install
 
@@ -32,8 +43,4 @@ src_install() {
 		doins -r examples
 		doins -r tests
 	fi
-}
-
-src_test() {
-	emake test || die "test failed"
 }
