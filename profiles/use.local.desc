@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4928 2009/10/25 16:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4929 2009/10/25 19:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -87,9 +87,10 @@ app-arch/cabextract:extra-tools - Install experimental tools: wince_info and win
 app-arch/dump:ermt - encrypted rmt support
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu.
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
-app-arch/libarchive:bzip2 -  Allow accessing bzip2-compressed archives through libbz2 (which comes with bzip2). 
-app-arch/libarchive:lzma -  Allow accessing lzma-compressed archives through the lzmadec library. 
-app-arch/libarchive:static -  Build bsdtar and bsdcpio as static archives, removing dependencies over the enabled compression libraries (lzmadec, libbz2, zlib). 
+app-arch/libarchive:bzip2 -  Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in. 
+app-arch/libarchive:lzma -  Allow accessing lzma-compressed archives through the lzma library (app-arch/xz-utils). This only affects libarchive's native support: bsdtar will keep using unlzma as a filter if that's not built-in. 
+app-arch/libarchive:static -  Build bsdtar and bsdcpio as static archives, removing dependencies over the enabled compression libraries (lzma, lzmadec, libbz2, zlib). 
+app-arch/libarchive:zlib -  Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files. 
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/rpm:magic - Add magic file support (sys-apps/file)
 app-arch/rpm:neon - Include support for net-misc/neon
