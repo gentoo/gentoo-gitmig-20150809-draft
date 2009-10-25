@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.34 2009/10/22 14:07:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.35 2009/10/25 10:30:07 tove Exp $
+
+*Carp-Clan-6.04 (25 Oct 2009)
+
+  25 Oct 2009; Torsten Veller <tove@gentoo.org> +Carp-Clan-6.04.ebuild:
+  Version bump
 
 *Carp-Clan-6.03 (22 Oct 2009)
 
