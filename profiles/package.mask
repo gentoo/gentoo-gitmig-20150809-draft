@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10668 2009/10/25 11:46:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10669 2009/10/25 14:06:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -572,13 +572,6 @@ dev-perl/Net-FTPServer
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Sep 2009)
 # wsgiref module is included in Python >=2.5. Masked for deletion in 30 days.
 dev-python/wsgiref
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2009)
-# Obsolete. Supported by in-kernel drivers. Masked for removal,
-# see bug 159176.
-media-video/gspca
-media-video/spca5xx
-media-video/gspcav1
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2009)
 # Obsolete. Supported by in-kernel drivers. Masked for removal,
