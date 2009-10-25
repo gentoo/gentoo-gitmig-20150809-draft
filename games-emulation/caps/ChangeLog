@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/caps
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/ChangeLog,v 1.16 2008/10/28 16:56:07 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/ChangeLog,v 1.17 2009/10/25 12:56:35 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> caps-20071115.ebuild:
+  amd64/x86 stable, bug #288807
 
   28 Oct 2008; Tupone Alfredo <tupone@gentoo.org> caps-20071115.ebuild:
   Fix the URI for amd64 specific tgz.
