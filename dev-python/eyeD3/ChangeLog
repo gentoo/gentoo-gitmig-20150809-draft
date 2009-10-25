@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.35 2009/10/10 15:47:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.36 2009/10/25 13:33:35 arfrever Exp $
+
+  25 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  eyeD3-0.6.17.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> eyeD3-0.6.17.ebuild:
   Merge from Prefix

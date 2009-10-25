@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.3 2009/10/10 15:47:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.4 2009/10/25 13:33:35 arfrever Exp $
 
-EAPI=2
-NEED_PYTHON=2.5
-inherit distutils python
+EAPI="2"
+NEED_PYTHON="2.5"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit distutils
 
 DESCRIPTION="Module for manipulating ID3 (v1 + v2) tags in Python"
 HOMEPAGE="http://eyed3.nicfit.net/"
@@ -14,6 +16,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE=""
+
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 
