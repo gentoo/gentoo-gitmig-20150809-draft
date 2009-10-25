@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.8.4.ebuild,v 1.1 2009/08/22 04:16:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.8.4.ebuild,v 1.2 2009/10/25 12:20:32 maekke Exp $
 
 EAPI=2
 WANT_ANT_TASKS="ant-nodeps"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="dev-java/higlayout"
