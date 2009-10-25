@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.47 2009/10/20 06:22:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.48 2009/10/25 15:20:59 ssuominen Exp $
+
+  25 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kdenlive-0.7.6.ebuild:
+  Depend on media-libs/mlt[qt4] wrt #290407, thanks to Anthoine Bourgeois
+  for reporting.
 
 *kdenlive-0.7.6 (20 Oct 2009)
 

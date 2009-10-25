@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.7.6.ebuild,v 1.1 2009/10/20 06:22:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.7.6.ebuild,v 1.2 2009/10/25 15:20:59 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 
 # No linguas since they add it weirdly.
 #KDE_LINGUAS="ca cs da de es fr he hu it nl pt_BR ru sl zh"
@@ -17,9 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-libs/mlt-0.4.6[ffmpeg,sdl,xml,melt]
+DEPEND=">=media-libs/mlt-0.4.6[ffmpeg,sdl,xml,melt,qt4]
 	media-video/ffmpeg[X,sdl]
 	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop]"
-RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/"${PN}-${PV/_/}"
+S=${WORKDIR}/${PN}-${PV/_/}
