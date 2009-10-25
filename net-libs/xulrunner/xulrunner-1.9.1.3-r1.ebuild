@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.3-r1.ebuild,v 1.1 2009/10/25 16:25:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.3-r1.ebuild,v 1.2 2009/10/25 19:09:06 arfrever Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -58,10 +58,10 @@ pkg_setup() {
 
 	if use sqlite ; then
 		elog "You are enabling system sqlite. Do not file a bug with gentoo if you have"
-		elog "issues that arise from enabling system sqlite. All bugs will be concidered"
-		elog  "invalid. All patches are welcomed to fix any issues that might be found with"
+		elog "issues that arise from enabling system sqlite. All bugs will be considered"
+		elog "invalid. All patches are welcomed to fix any issues that might be found with"
 		elog "system sqlite. If you are starting with a fresh profile you can enable sqlite"
-		elog  "without any major issues."
+		elog "without any major issues."
 		epause 10
 	fi
 }
