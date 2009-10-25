@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/geomview
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.11 2008/08/06 20:33:51 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.12 2009/10/25 17:09:03 ssuominen Exp $
+
+  25 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> geomview-1.9.2.ebuild,
+  geomview-1.9.4.ebuild:
+  Remove kde-base/kpdf depend wrt security #290470.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
