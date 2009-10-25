@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gnuit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/ChangeLog,v 1.1 2009/09/06 05:27:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/ChangeLog,v 1.2 2009/10/25 11:55:12 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> gnuit-4.9.5.ebuild:
+  amd64/x86 stable, bug #287863
 
 *gnuit-4.9.5 (06 Sep 2009)
 
