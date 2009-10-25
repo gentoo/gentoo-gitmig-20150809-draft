@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-1.0.1.ebuild,v 1.2 2009/05/22 00:01:31 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-1.0.1.ebuild,v 1.3 2009/10/25 10:22:37 loki_val Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit mono multilib nsplugins
 MY_P=moon-${PV}
 DESCRIPTION="Moonlight is an open source implementation of Silverlight"
 HOMEPAGE="http://www.mono-project.com/Moonlight"
-SRC_URI="ftp://ftp.novell.com/pub/mono/sources/moon/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.novell.com/pub/mono/sources/moon/${PV}/${MY_P}.tar.bz2"
 LICENSE="LGPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
