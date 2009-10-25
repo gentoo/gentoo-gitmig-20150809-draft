@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-location
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/ChangeLog,v 1.1 2009/10/25 17:31:32 arfrever Exp $
+
+*zope-location-3.7.0 (25 Oct 2009)
+
+  25 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-location-3.7.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
