@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/hdapsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.13 2009/10/16 11:57:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.14 2009/10/25 18:40:07 bangert Exp $
+
+  25 Oct 2009; Thilo Bangert <bangert@gentoo.org> files/hdapsd.init:
+  check for blockdevice - not file
 
   16 Oct 2009; Thilo Bangert <bangert@gentoo.org> files/hdapsd.init:
   warn if non-existing hdd has been configured

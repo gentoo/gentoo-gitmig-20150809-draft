@@ -12,7 +12,7 @@ checkconfig() {
 	return 1
     fi
 
-    if [ ! -f /dev/${DISK} ]; then
+    if [ ! -b /dev/${DISK} ]; then
 	eerror "Could not find disk /dev/${DISK}!"
 	eerror "Adjust teh DISK setting in /etc/conf.d/hdapsd"
 	return 1
