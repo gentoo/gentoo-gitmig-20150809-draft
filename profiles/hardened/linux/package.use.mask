@@ -1,9 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.use.mask,v 1.7 2009/10/16 06:35:41 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.use.mask,v 1.8 2009/10/25 05:50:43 vapier Exp $
 
 sys-devel/gcc -hardened
 sys-libs/glibc -hardened
 
 # No -z now support?  Bug #269288.
 sys-devel/binutils gold
+
+# requires gcc-4.4
+app-emulation/wine win64
