@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.173 2009/10/24 12:07:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.174 2009/10/25 11:58:54 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> boost-1.35.0-r5.ebuild:
+  amd64/x86 stable, bug #284686
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> boost-1.35.0-r5.ebuild:
   ppc stable #284686
