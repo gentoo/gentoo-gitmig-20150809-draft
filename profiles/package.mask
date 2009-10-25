@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10671 2009/10/25 15:47:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10672 2009/10/25 16:14:36 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Oct 2009)
+# Documentation for removed versions of dev-python/twisted. Masked for deletion in 30 days.
+dev-python/twisted-docs
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Oct 2009)
 # Replaced by dev-libs/cryptlib[python]. Masked for deletion in 30 days.
