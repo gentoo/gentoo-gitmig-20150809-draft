@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.6_pre2.ebuild,v 1.1 2009/10/05 13:11:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.6.ebuild,v 1.1 2009/10/25 20:21:15 voyageur Exp $
 
 EAPI=2
 inherit multilib
@@ -10,12 +10,11 @@ MY_PV=${LLVM_GCC_VERSION}-${PV/_pre*}
 
 DESCRIPTION="LLVM C front-end"
 HOMEPAGE="http://llvm.org"
-#SRC_URI="http://llvm.org/releases/${PV}/${PN}-${MY_PV}.source.tar.gz"
-SRC_URI="http://llvm.org/prereleases/${PV/_pre*}/pre-release${PV/*_pre}/${PN}-${MY_PV}.source.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/${PN}-${MY_PV}.source.tar.gz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bootstrap fortran nls objc objc++ test"
 
 RDEPEND=">=sys-devel/llvm-$PV"

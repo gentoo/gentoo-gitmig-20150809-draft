@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6_pre2.ebuild,v 1.1 2009/10/05 13:19:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6.ebuild,v 1.1 2009/10/25 20:21:33 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -8,8 +8,8 @@ inherit eutils python
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 # Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-SRC_URI="http://llvm.org/prereleases/${PV/_pre*}/pre-release${PV/*_pre}/llvm-${PV/_pre*}.tar.gz -> llvm-${PV}.tar.gz
-	http://llvm.org/prereleases/${PV/_pre*}/pre-release${PV/*_pre}/${PN}-${PV/_pre*}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
+	http://llvm.org/releases/${PV}/${P}.tar.gz"
 
 # See http://www.opensource.org/licenses/UoI-NCSA.php
 LICENSE="UoI-NCSA"
