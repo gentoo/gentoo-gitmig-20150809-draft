@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.42 2009/10/24 12:06:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.43 2009/10/25 11:57:14 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org>
+  boost-build-1.35.0-r2.ebuild:
+  amd64/x86 stable, bug #284686
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> boost-build-1.35.0-r2.ebuild:
   ppc stable #284686
