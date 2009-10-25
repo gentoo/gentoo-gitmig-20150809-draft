@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10673 2009/10/25 17:12:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10674 2009/10/25 20:22:05 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -468,12 +468,6 @@ media-video/qc-usb
 # Samuli Suominen <ssuominen@gentoo.org> (05 Oct 2009)
 # Masked for testing.
 =dev-libs/libffi-3.0.9_rc*
-
-# Bernard Cafarelli <voyageur@gentoo.org> (5 Oct 2009)
-# New ebuilds, mask rc versions for testing
-<sys-devel/clang-2.6
-<sys-devel/llvm-2.6
-<sys-devel/llvm-gcc-2.6
 
 # Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
 # Dead project, missing deps, no maintainer. Removed in 60 days by treecleaners.
