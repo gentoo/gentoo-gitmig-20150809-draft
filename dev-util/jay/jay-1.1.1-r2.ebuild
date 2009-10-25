@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.3 2009/09/19 15:22:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.4 2009/10/25 21:26:13 volkmar Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cs.rit.edu/~ats/projects/lp/doc/jay/package-summary.html"
 SRC_URI="http://www.cs.rit.edu/~ats/projects/lp/doc/jay/doc-files/src.zip -> ${P}.zip"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="java mono"
 
 COMMON_DEPEND="
