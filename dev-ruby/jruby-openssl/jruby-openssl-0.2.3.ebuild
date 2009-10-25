@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/jruby-openssl-0.2.3.ebuild,v 1.1 2009/05/23 07:44:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/jruby-openssl-0.2.3.ebuild,v 1.2 2009/10/25 21:48:16 volkmar Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-java/jruby"
