@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.46 2009/05/31 07:11:55 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.47 2009/10/25 12:55:13 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> gcompris-8.4.12.ebuild:
+  amd64/x86 stable, bug #288655
 
 *gcompris-8.4.12 (31 May 2009)
 
