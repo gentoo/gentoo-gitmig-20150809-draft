@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-im</herd>
-<maintainer>
-<email>drizzt@gentoo.org</email>
-<name>Timothy Redaelli</name>
-</maintainer>
 <longdescription lang="en">
 An Open Implementation of SIP/Simple protocol for Live Communications Server 2003/2005/2007.
 </longdescription>
