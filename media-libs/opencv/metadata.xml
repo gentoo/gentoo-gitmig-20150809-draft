@@ -12,7 +12,6 @@ Example applications of the OpenCV library are Human-Computer Interaction (HCI);
 Face Recognition; Gesture Recognition; Motion Tracking, Ego Motion, Motion Understanding; Structure From Motion (SFM); and Mobile Robotics.
 </longdescription>
 <use>
-  <flag name="demos">Install applications that demo OpenCV library functions</flag>
   <flag name="ipp">Enable Intel Integrated Primitive support</flag>
   <flag name="octave">Enable octave support</flag>
   <flag name="sse3">Enable optimization for SSE3 capable chips</flag>
