@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3465 2009/10/25 20:22:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3466 2009/10/25 21:58:55 tester Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Oct 2009; Olivier Crête <tester@gentoo.org> package.mask:
+  dev-python/pymsn has been replaced by dev-python/papyon
 
   25 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove llvm* 2.6_pre mask, as they are not in tree anymore
