@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.21 2009/10/25 11:49:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.22 2009/10/25 12:23:19 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org>
+  eselect-ruby-20090909.ebuild:
+  arm stable, bug #288699
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org>
   eselect-ruby-20090909.ebuild:
