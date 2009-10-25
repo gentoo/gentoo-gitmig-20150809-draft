@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-0.1.0.ebuild,v 1.1 2009/10/23 14:02:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-0.1.0.ebuild,v 1.2 2009/10/25 13:50:30 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -25,5 +25,5 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
 		$(use_enable debug)"
-	DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
+	DOCS="AUTHORS ChangeLog NEWS README THANKS"
 }
