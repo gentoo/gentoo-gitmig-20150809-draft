@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.2 2009/08/30 11:05:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.3 2009/10/25 15:19:15 maekke Exp $
 
 EAPI=2
 inherit games
@@ -12,7 +12,7 @@ SRC_URI="amd64? ( http://www.xe-emulator.com/files/${PN}-x86-64-bin.${PV}.tar.bz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
