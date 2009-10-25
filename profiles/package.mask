@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10672 2009/10/25 16:14:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10673 2009/10/25 17:12:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
+# Masked for security. CVE-2009-{3603,3604,3606,3608,3609}.
+#
+# http://bugs.gentoo.org/290470
+#
+# Removed in 30 days.
+kde-base/kpdf
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Oct 2009)
 # Documentation for removed versions of dev-python/twisted. Masked for deletion in 30 days.
