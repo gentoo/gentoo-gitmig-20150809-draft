@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.22 2009/10/19 15:35:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.23 2009/10/25 15:35:52 ssuominen Exp $
+
+*kshutdown-2.0_beta8 (25 Oct 2009)
+
+  25 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kshutdown-2.0_beta8.ebuild:
+  Version bump wrt #286581, thanks to Dennis Schridde for reporting.
 
   19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   kshutdown-2.0_beta6.ebuild:
