@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-  <email>welp@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>pva@gentoo.org</email>
 </maintainer>
 <longdescription>Psi is a very good jabber client that uses QT</longdescription>
