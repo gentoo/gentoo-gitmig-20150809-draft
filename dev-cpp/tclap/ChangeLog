@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/tclap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.3 2009/07/24 18:23:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.4 2009/10/25 21:48:54 vostorga Exp $
+
+  25 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> tclap-1.1.0.ebuild:
+  Fixing description, license and repoman complains. Adding doc USE flag.
+  Patch thanks to Toffanin <toffanin.mauro@gmail.com> bug 223203
 
   24 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> tclap-1.1.0.ebuild,
   +files/tclap-1.1.0-gcc44.patch:
