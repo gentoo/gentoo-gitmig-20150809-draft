@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cryptlib
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.15 2009/01/31 00:20:57 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.16 2009/10/25 15:20:48 arfrever Exp $
+
+*cryptlib-3.3.3 (25 Oct 2009)
+
+  25 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cryptlib-3.3.0-r1.ebuild, -files/cryptlib-3.3.0-ld.patch,
+  -cryptlib-3.3.1.ebuild, +cryptlib-3.3.3.ebuild:
+  Version bump. Optionally build Python bindings which were previously built
+  in dev-python/cryptlib_py. Filter some flags for Python bindings (bug #268947).
 
 *cryptlib-3.3.2 (31 Jan 2009)
 
