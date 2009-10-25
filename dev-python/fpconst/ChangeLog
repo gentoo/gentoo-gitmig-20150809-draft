@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fpconst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.25 2009/10/10 17:00:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.26 2009/10/25 19:37:12 arfrever Exp $
+
+  25 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  fpconst-0.7.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> fpconst-0.7.3.ebuild:
   Merge from Prefix
