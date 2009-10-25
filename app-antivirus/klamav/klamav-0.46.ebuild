@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.46.ebuild,v 1.7 2009/06/09 13:07:49 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.46.ebuild,v 1.8 2009/10/25 23:17:27 abcd Exp $
 
+EAPI=1
 ARTS_REQUIRED="never"
 
 inherit kde
@@ -20,7 +21,7 @@ IUSE=""
 
 DEPEND=">=app-antivirus/clamav-0.90"
 RDEPEND="${DEPEND}
-	>=kde-base/kdebase-kioslaves-3.5.9"
+	>=kde-base/kdebase-kioslaves-3.5.9:3.5"
 
 need-kde 3.5
 

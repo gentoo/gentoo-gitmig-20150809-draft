@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.61 2009/06/09 13:07:49 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.62 2009/10/25 23:17:27 abcd Exp $
+
+  25 Oct 2009; Jonathan Callen <abcd@gentoo.org> klamav-0.46.ebuild:
+  Bump EAPI to 1 in order to force slot :3.5 on kde deps
 
   09 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> klamav-0.46.ebuild:
   Add kdebase-kioslaves:3.5 as runtime dep
