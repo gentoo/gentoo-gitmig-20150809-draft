@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10664 2009/10/25 09:05:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10665 2009/10/25 09:09:34 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,14 @@
 #--- END OF EXAMPLES ---
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
+# KDE3-only. Replaced by >=kmplayer-0.11.1a.
+# Masked for removal in 30 days.
+<media-video/kmplayer-0.11.1a
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # Replaced by KDE4 menu. For KDE3-only and is using
-# cmake utils directly wrt bug #287593.
+# cmake directly wrt bug #287593.
+# Masked for removal in 30 days.
 kde-misc/kbfx
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
