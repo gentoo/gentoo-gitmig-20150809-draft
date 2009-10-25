@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.18.ebuild,v 1.8 2009/10/11 09:39:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.18.ebuild,v 1.9 2009/10/25 14:00:33 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
@@ -15,9 +16,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-DEPEND="virtual/python"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
+PYTHON_MODNAME="pychecker pychecker2"
 DOCS="pycheckrc"
 
 src_prepare() {
@@ -25,12 +28,4 @@ src_prepare() {
 	epatch "${FILESDIR}"/pychecker-0.8.17-no-data-files.patch
 	epatch "${FILESDIR}"/pychecker-0.8.18-pychecker2.patch
 	sed -e 's:root = self\.distribution\.get_command_obj("install")\.root:&\.rstrip("/"):' -i setup.py || die "sed setup.py failed"
-}
-
-pkg_postinst() {
-	python_mod_optimize "$(python_get_sitedir)"
-}
-
-pkg_postrm() {
-	python_mod_cleanup "$(python_get_sitedir)"
 }
