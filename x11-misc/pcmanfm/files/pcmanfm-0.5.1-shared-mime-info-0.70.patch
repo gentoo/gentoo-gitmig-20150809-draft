@@ -1,0 +1,58 @@
+diff -ur pcmanfm-0.5.1.orig/src/mime-type/mime-cache.c pcmanfm-0.5.1/src/mime-type/mime-cache.c
+--- pcmanfm-0.5.1.orig/src/mime-type/mime-cache.c	2009-04-20 20:41:30.000000000 +0300
++++ pcmanfm-0.5.1/src/mime-type/mime-cache.c	2009-10-24 20:39:51.000000000 +0300
+@@ -40,7 +40,13 @@
+ #include <fnmatch.h>
+ 
+ #define LIB_MAJOR_VERSION 1
+-#define LIB_MAX_MINOR_VERSION 1
++/* FIXME: since mime-cache 1.2, weight is splitted into three parts
++ * only lower 8 bit contains weight, and higher bits are flags and case-sensitivity.
++ * anyway, since we don't support weight at all, it'll be fixed later.
++ * We claimed that we support 1.2 to cheat pcmanfm as a temporary quick dirty fix
++ * for the broken file manager, but this should be correctly done in the future.
++ * Weight and case-sensitivity are not handled now. */
++#define LIB_MAX_MINOR_VERSION 2
+ #define LIB_MIN_MINOR_VERSION 0
+ 
+ /* handle byte order here */
+@@ -57,7 +63,6 @@
+ #define    GLOB_LIST    20
+ #define    MAGIC_LIST    24
+ #define    NAMESPACE_LIST    28
+-#define    HEADER_SIZE    32
+ 
+ MimeCache* mime_cache_new( const char* file_path )
+ {
+@@ -111,7 +116,7 @@
+     if ( fd < 0 )
+         return FALSE;
+ 
+-    if( fstat ( fd, &statbuf ) < 0 || statbuf.st_size < HEADER_SIZE )
++    if( fstat ( fd, &statbuf ) < 0 )
+     {
+         close( fd );
+         return FALSE;
+@@ -346,7 +351,6 @@
+         const char* node =nodes + i * 12;
+         guint32 ch = VAL32(node, 0);
+         _suffix_pos = suffix;
+-
+         if( G_LIKELY( ch ) )
+         {
+             if( ch == uchar )
+@@ -391,14 +395,12 @@
+ 
+     if( G_UNLIKELY( ! filename || ! *filename || 0 == n ) )
+         return NULL;
+-
+     if( cache->has_reverse_suffix )  /* since mime.cache ver: 1.1 */
+     {
+         const char *suffix, *leaf_node, *_suffix_pos = (const char*)-1;
+         fn_len = strlen( filename );
+         suffix = g_utf8_find_prev_char( filename, filename + fn_len );
+         leaf_node = lookup_reverse_suffix_nodes( cache->buffer, root, n, filename, suffix, &_suffix_pos );
+-
+         if( leaf_node )
+         {
+             mime_type = cache->buffer + VAL32( leaf_node, 4 );

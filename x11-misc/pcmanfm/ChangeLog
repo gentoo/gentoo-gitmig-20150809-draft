@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.6 2009/08/15 11:02:58 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.7 2009/10/25 03:12:02 vostorga Exp $
+
+*pcmanfm-0.5.1-r1 (25 Oct 2009)
+
+  25 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
+  +pcmanfm-0.5.1-r1.ebuild,
+  +files/pcmanfm-0.5.1-shared-mime-info-0.70.patch:
+  Allowing pcmanfm to work against shared-mime-info-0.70 , patch thanks to
+  Samuli Suominen <ssuominen@gentoo.org> bug 288820
 
   15 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> pcmanfm-0.5.1.ebuild:
   Keywording for ppc. Bug 271148
