@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.7 2009/09/27 18:23:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.8 2009/10/25 17:16:16 tove Exp $
+
+  25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove coldwind from metadata.xml (#181764)
 
 *telepathy-haze-0.3.2 (27 Sep 2009)
 
