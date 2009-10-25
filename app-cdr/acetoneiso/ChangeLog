@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/acetoneiso
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/ChangeLog,v 1.1 2009/10/25 10:32:17 ssuominen Exp $
+
+*acetoneiso-2.1.1 (25 Oct 2009)
+
+  25 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +acetoneiso-2.1.1.ebuild:
+  Initial commit wrt #197961, thanks to Gregor Münch for reporting.
+
