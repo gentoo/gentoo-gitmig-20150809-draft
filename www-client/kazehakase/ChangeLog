@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.75 2009/10/19 23:13:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.76 2009/10/25 11:15:06 volkmar Exp $
+
+  25 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> kazehakase-0.5.7.ebuild:
+  Stable for ppc, bug 275706
 
 *kazehakase-0.5.7 (19 Oct 2009)
 

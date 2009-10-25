@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.7.ebuild,v 1.1 2009/10/19 23:13:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.7.ebuild,v 1.2 2009/10/25 11:15:06 volkmar Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/43338/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 LICENSE="GPL-2"
 
 DEPEND=">=x11-libs/gtk+-2.14
