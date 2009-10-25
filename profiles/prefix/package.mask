@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.37 2009/10/05 10:23:12 grobian Exp $
+# $Id: package.mask,v 1.38 2009/10/25 21:03:56 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -405,10 +405,6 @@ net-wireless/aircrack-ng
 # Issues on Linux too, elevate mask to global, not solaris specific.
 ~sys-apps/findutils-4.5.3
 ~sys-apps/findutils-4.5.4
-
-# Fabian Groffen <grobian@gentoo.org> (03 Dec 2008)
-# contains GNU-isms that the no-GNU-man should fix himself, bug #249731
-~app-misc/pax-utils-0.1.19
 
 # Jeremy Olexa <darkside@gentoo.org> (02 Dec 2008)
 # Reported to work. However, you will need to package.provide some deps. 

@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.106 2009/10/22 18:03:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.107 2009/10/25 21:03:56 grobian Exp $
+
+  25 Oct 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Unmask pax-utils-0.1.19, I added the strndup patches to the Prefix ebuild
 
   22 Oct 2009; Jeremy Olexa <darkside@gentoo.org> linux/amd64/parent,
   linux/ia64/parent, linux/x86/parent:
