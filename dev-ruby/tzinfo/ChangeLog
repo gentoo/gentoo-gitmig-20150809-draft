@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.37 2009/08/29 20:00:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.38 2009/10/25 11:51:47 maekke Exp $
+
+  25 Oct 2009; Markus Meier <maekke@gentoo.org> tzinfo-0.3.13.ebuild:
+  amd64/x86 stable, bug #282207
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> tzinfo-0.3.13.ebuild:
   ppc stable #282207
