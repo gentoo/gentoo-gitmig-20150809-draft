@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.4.ebuild,v 1.1 2009/08/25 15:31:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.4.ebuild,v 1.2 2009/10/26 12:51:21 aballier Exp $
 
 EAPI="2"
 
@@ -54,6 +54,7 @@ src_prepare() {
 		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
 		"${S}"/docs/pvm3/Makefile.am "${S}"/docs/tech/html/Makefile.am \
 		"${S}"/docs/tech/Makefile.am
+	epatch "${FILESDIR}/${P}-x264.patch"
 
 	eautoreconf
 }
