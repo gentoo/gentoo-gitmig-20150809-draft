@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10678 2009/10/26 00:28:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10679 2009/10/26 12:02:50 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -222,6 +222,7 @@ sys-kernel/sh-sources
 # New x264 snapshot. Masked for testing.
 >=media-libs/x264-0.0.20091001
 >=media-video/x264-encoder-0.0.20091001
+>=media-video/ffmpeg-0.5_p20373
 
 # Doug Goldstein <cardoe@gentoo.org> (21 Oct 2009)
 # Work in progress
