@@ -1,6 +1,0 @@
-# Copyright 1999-2009 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2007.0/amd64/use.mask,v 1.1 2009/10/15 19:14:15 ssuominen Exp $
-
-# Parent's are in wrong order.
--x264
