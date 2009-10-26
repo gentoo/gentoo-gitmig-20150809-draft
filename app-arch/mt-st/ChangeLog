@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.32 2009/10/12 16:43:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.33 2009/10/26 18:43:59 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintain it.
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> mt-st-0.9b.ebuild:
   QA fixes; unquoted variables
