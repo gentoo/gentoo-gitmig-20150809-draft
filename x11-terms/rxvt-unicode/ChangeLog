@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.137 2009/10/26 13:03:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.138 2009/10/26 13:11:01 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.05-r3.ebuild,
+  rxvt-unicode-9.06.ebuild, rxvt-unicode-9.06-r1.ebuild,
+  rxvt-unicode-9.06-r2.ebuild:
+  IUSE=+vanilla, thanks to volkmar for the suggestion (bug #237271 comment
+  #38).
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add wired as maintainer.
