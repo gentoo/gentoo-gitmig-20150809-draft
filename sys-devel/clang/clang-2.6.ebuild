@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6.ebuild,v 1.1 2009/10/25 20:21:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6.ebuild,v 1.2 2009/10/26 17:26:41 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -15,7 +15,7 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+static-analyzer test"
+IUSE="debug +static-analyzer test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )
@@ -26,6 +26,10 @@ S="${WORKDIR}/llvm-2.6"
 
 src_prepare() {
 	mv "${WORKDIR}"/clang-2.6 "${S}"/tools/clang || die "clang source directory not found"
+
+	# Same as llvm doc patches
+	epatch "${FILESDIR}"/${PN}-2.6-fixdoc.patch
+
 	sed -e "s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
 		-i "${S}"/tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
