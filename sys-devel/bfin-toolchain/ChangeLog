@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bfin-toolchain
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.9 2009/10/04 00:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.10 2009/10/26 05:59:30 vapier Exp $
+
+  26 Oct 2009; Mike Frysinger <vapier@gentoo.org> Manifest:
+  Digest the right jtag tarball for x86_64 #289456 by Marc Joliet.
 
 *bfin-toolchain-2009.1_rc10 (04 Oct 2009)
 
