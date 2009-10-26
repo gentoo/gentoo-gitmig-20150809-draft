@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.6.1.ebuild,v 1.1 2009/10/26 22:19:50 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.6.1.ebuild,v 1.2 2009/10/26 22:56:59 kolmodin Exp $
 
-CABAL_FEATURES="lib profile haddock hscolour"
-inherit haskell-cabal
+CABAL_FEATURES="lib profile haddock"
+inherit haskell-cabal eutils
 
 MY_PN="X11"
 MY_P="${MY_PN}-${PV}"
@@ -17,11 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="xinerama"
 
-DEPEND=">=dev-haskell/cabal-1.2"
-RDEPEND="${DEPEND}
-		>=dev-lang/ghc-6.8
+RDEPEND=">=dev-lang/ghc-6.8
 		x11-libs/libX11
 		xinerama? ( x11-libs/libXinerama )"
+DEPEND="${RDEPEND}
+		>=dev-haskell/cabal-1.2"
 
 S="${WORKDIR}/${MY_P}"
 
