@@ -1,0 +1,44 @@
+http://bugs.gentoo.org/290575
+Backported from Emacs 23
+
+--- gnus-5.10.10-orig/lisp/gnus-win.el
++++ gnus-5.10.10/lisp/gnus-win.el
+@@ -308,7 +308,7 @@
+     ;; The SPLIT might be something that is to be evaled to
+     ;; return a new SPLIT.
+     (while (and (not (assq (car split) gnus-window-to-buffer))
+-		(functionp (car split)))
++		(fboundp (car split)))
+       (setq split (eval split)))
+     (let* ((type (car split))
+ 	   (subs (cddr split))
+@@ -371,7 +371,7 @@
+ 	  (while subs
+ 	    (setq sub (append (pop subs) nil))
+ 	    (while (and (not (assq (car sub) gnus-window-to-buffer))
+-			(functionp (car sub)))
++			(fboundp (car sub)))
+ 	      (setq sub (eval sub)))
+ 	    (when sub
+ 	      (push sub comp-subs)
+@@ -511,7 +511,7 @@
+       ;; The SPLIT might be something that is to be evaled to
+       ;; return a new SPLIT.
+       (while (and (not (assq (car split) gnus-window-to-buffer))
+-		  (functionp (car split)))
++		  (fboundp (car split)))
+ 	(setq split (eval split)))
+ 
+       (setq type (elt split 0))
+--- gnus-5.10.10-orig/lisp/mail-source.el
++++ gnus-5.10.10/lisp/mail-source.el
+@@ -482,8 +482,7 @@
+    ((stringp value)
+     value)
+    ;; Function
+-   ((and (listp value)
+-	 (functionp (car value)))
++   ((and (listp value) (symbolp (car value)) (fboundp (car value)))
+     (eval value))
+    ;; Just return the value.
+    (t
