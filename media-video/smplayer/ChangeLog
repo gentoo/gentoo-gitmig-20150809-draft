@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.75 2009/10/21 22:44:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.76 2009/10/26 19:34:01 ssuominen Exp $
+
+  26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> smplayer-0.6.8.ebuild:
+  Remove media-video/mplayer[-openal] depend wrt #290304.
 
   21 Oct 2009; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.8.ebuild:
   Fix pt lingua (bug 283011). Specify openal disabled in mplayer (bug

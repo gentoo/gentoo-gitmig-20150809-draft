@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.8.ebuild,v 1.3 2009/10/21 22:44:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.8.ebuild,v 1.4 2009/10/26 19:34:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}
-	media-video/mplayer[ass,png,-openal]"
+	media-video/mplayer[ass,png]"
 
 LANGS="bg ca cs de en_US es et eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR
 pt sk sr sv tr zh_CN zh_TW"
