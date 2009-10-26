@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0_rc1.ebuild,v 1.1 2009/10/12 03:01:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0_rc2-r1.ebuild,v 1.1 2009/10/26 00:35:30 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -8,10 +8,10 @@ WANT_AUTOCONF="2.1"
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2
 
 PATCH="${PN}-2.0-patches-0.1"
-EMVER="0.96.0"
+EMVER="0.97a0"
 
-LANGS="be ca cs de en-US es-AR es-ES fr gl hu lt nb-NO nl pl pt-PT ru sk tr"
-NOSHORTLANGS="es-AR"
+LANGS="be ca cs de en-US es-AR es-ES fr gl hu ka lt nb-NO nl pl pt-PT ru sk sv-SE tr"
+NOSHORTLANGS="es-AR es-ES nb-NO pt-PT sv-SE"
 
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
@@ -27,7 +27,7 @@ IUSE="+alsa +crypt java ldap mozdevelop moznocompose moznoirc moznomail moznoroa
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2
-	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
+	crypt? ( !moznomail? ( http://dev.gentoo.org/~anarchy/dist/enigmail-${EMVER}-20091011.tar.gz ) )"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
@@ -130,6 +130,8 @@ src_prepare() {
 	if use crypt && ! use moznomail; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
 		cd "${S}"/mailnews/extensions/enigmail || die
+		epatch "${FILESDIR}"/enigmail/70_enigmail-fix.patch
+		epatch "${FILESDIR}"/enigmail/0.95.0-replytolist.patch
 		makemake2
 		cd "${S}"
 	fi
@@ -225,13 +227,25 @@ src_compile() {
 	# Only build enigmail extension if conditions are met.
 	if use crypt && ! use moznomail; then
 		emake -C "${S}"/mailnews/extensions/enigmail || die "make enigmail failed"
+		emake -j1 -C "${S}"/mailnews/extensions/enigmail xpi || die "make enigmail xpi failed"
 	fi
 }
 
 src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
+	declare emid
 
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	if use crypt && ! use moznomail; then
+		cd "${T}"
+		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi install.rdf
+		emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
+
+		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid}
+		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid}
+		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi
+	fi
 
 	linguas
 	for X in ${linguas}; do
@@ -249,6 +263,11 @@ src_install() {
 	# Install icon and .desktop for menu entry
 	newicon "${S}"/suite/branding/content/icon64.png seamonkey.png
 	domenu "${FILESDIR}"/icon/seamonkey.desktop
+
+	# Add StartupNotify=true bug 290401
+	if use startup-notification ; then
+		echo "StartupNotify=true" >> "${D}"/usr/share/applications/seamonkey.desktop
+	fi
 
 	# Add vendor
 	echo "pref(\"general.useragent.vendor\",\"Gentoo\");" \

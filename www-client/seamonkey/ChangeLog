@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.205 2009/10/23 02:40:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.206 2009/10/26 00:35:30 anarchy Exp $
+
+*seamonkey-2.0_rc2-r1 (26 Oct 2009)
+
+  26 Oct 2009; Jory A. Pratt <anarchy@gentoo.org> -seamonkey-2.0_rc1.ebuild,
+  -seamonkey-2.0_rc2.ebuild, +seamonkey-2.0_rc2-r1.ebuild:
+  fix startup notification, bug #290401
 
 *seamonkey-2.0_rc2 (23 Oct 2009)
 
