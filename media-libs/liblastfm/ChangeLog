@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liblastfm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.1 2009/10/02 01:08:22 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.2 2009/10/26 15:54:49 ssuominen Exp $
+
+  26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  liblastfm-0.3.0.ebuild:
+  amd64 stable wrt #290483
 
 *liblastfm-0.3.0 (02 Oct 2009)
 

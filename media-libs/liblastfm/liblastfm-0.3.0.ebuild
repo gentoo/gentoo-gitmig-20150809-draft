@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.0.ebuild,v 1.1 2009/10/02 01:08:22 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.0.ebuild,v 1.2 2009/10/26 15:54:49 ssuominen Exp $
 
 EAPI="2"
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://github.com/mxcl/liblastfm/"
 SRC_URI="http://cdn.last.fm/src/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
