@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.23.ebuild,v 1.6 2009/04/20 20:16:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.23.ebuild,v 1.7 2009/10/26 07:47:26 tove Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,8 +8,8 @@ MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="NTP client and server programs"
-HOMEPAGE="http://chrony.sunsite.dk/"
-SRC_URI="http://chrony.sunsite.dk/download/${MY_P}.tar.gz"
+HOMEPAGE="http://chrony.tuxfamily.org/"
+SRC_URI="http://download.tuxfamily.org/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
