@@ -1,0 +1,13 @@
+diff -ur k3b-1.68.0.orig/src/k3bdirview.cpp k3b-1.68.0/src/k3bdirview.cpp
+--- k3b-1.68.0.orig/src/k3bdirview.cpp	2009-09-26 18:02:55.000000000 +0300
++++ k3b-1.68.0/src/k3bdirview.cpp	2009-10-27 01:12:06.000000000 +0200
+@@ -55,7 +55,9 @@
+ 
+     AudioCdView* cdView;
+     VideoCdView* videoView;
++#ifdef ENABLE_DVD_RIPPING
+     VideoDVDRippingView* movieView;
++#endif
+     FileView* fileView;
+     DiskInfoView* infoView;
+ 
