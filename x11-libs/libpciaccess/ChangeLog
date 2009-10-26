@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.31 2009/10/11 10:52:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.32 2009/10/26 21:04:07 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org> libpciaccess-0.10.6.ebuild:
+  Stable for HPPA (bug #282290).
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> libpciaccess-0.10.6.ebuild:
   ppc stable #282290

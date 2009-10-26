@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/libXCalibrate-0.1_pre20081207-r1.ebuild,v 1.6 2009/10/11 11:13:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/libXCalibrate-0.1_pre20081207-r1.ebuild,v 1.7 2009/10/26 20:56:36 jer Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,7 +8,7 @@ inherit x-modular
 
 LICENSE="GPL-2"
 DESCRIPTION="X.Org Calibrate client-side protocol library"
-KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
