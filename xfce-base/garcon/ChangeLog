@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.2 2009/10/23 11:40:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.3 2009/10/26 14:20:06 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> garcon-0.1.0.ebuild:
+  Keywording for ppc, bug 289983
 
   23 Oct 2009; Jeroen Roovers <jer@gentoo.org> garcon-0.1.0.ebuild:
   Marked ~hppa (bug #289983).

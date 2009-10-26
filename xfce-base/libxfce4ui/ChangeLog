@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.2 2009/10/23 11:41:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.3 2009/10/26 14:22:28 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> libxfce4ui-4.7.0.ebuild:
+  Keywording for ppc, bug 289983
 
   23 Oct 2009; Jeroen Roovers <jer@gentoo.org> libxfce4ui-4.7.0.ebuild:
   Marked ~hppa (bug #289983).
