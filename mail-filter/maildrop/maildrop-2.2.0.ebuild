@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.2.0.ebuild,v 1.1 2009/06/29 19:20:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.2.0.ebuild,v 1.2 2009/10/26 10:34:18 tove Exp $
 
 EAPI=2
 
@@ -44,7 +44,7 @@ src_prepare() {
 	if use gdbm ; then
 		use berkdb && elog "Both gdbm and berkdb selected. Using gdbm."
 	elif use berkdb ; then
-			epatch "${FILESDIR}"/${PN}-2.1.0-db4.patch
+			epatch "${FILESDIR}"/${PN}-2.2.0-db4.patch
 	fi
 
 	if ! use fam ; then
