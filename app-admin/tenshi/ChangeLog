@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.59 2009/02/01 19:07:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.60 2009/10/26 19:56:21 hncaldwell Exp $
+
+  26 Oct 2009; Heath Caldwell <hncaldwell@gentoo.org>
+  -tenshi-0.9.1-r1.ebuild, -tenshi-0.10.ebuild, -tenshi-0.10-r1.ebuild,
+  -tenshi-0.10-r2.ebuild, tenshi-0.10-r3.ebuild:
+  Added die if emake fails.  Removed old versions.
 
   01 Feb 2009; nixnut <nixnut@gentoo.org> tenshi-0.10-r3.ebuild:
   ppc stable #256858

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10-r3.ebuild,v 1.6 2009/02/01 19:07:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10-r3.ebuild,v 1.7 2009/10/26 19:56:21 hncaldwell Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	fowners tenshi:root /etc/tenshi/tenshi.conf
 	dodir /var/lib/tenshi
 	fowners tenshi:root /var/lib/tenshi
