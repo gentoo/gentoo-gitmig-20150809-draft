@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10681 2009/10/26 16:52:49 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10682 2009/10/26 17:14:25 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -52,7 +52,7 @@ dev-python/pymsn
 #
 # http://bugs.gentoo.org/290470
 #
-# Removed in 30 days.
+# Replaced by kde-base/okular. Removed in 30 days.
 kde-base/kpdf
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Oct 2009)
