@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3467 2009/10/26 00:28:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3468 2009/10/26 09:05:30 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> profiles.desc:
+  Change selinux profiles from stable to dev because of missing stable
+  toolchain (gcc-4, bug 290485), and parent files with wrong ordering (see
+  repoman -d full in e.g. media-video/h264enc).
 
   26 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
   Mask app-office/koffice for removal
