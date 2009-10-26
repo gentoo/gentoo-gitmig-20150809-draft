@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.6.ebuild,v 1.5 2009/10/11 11:18:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.6.ebuild,v 1.6 2009/10/26 21:08:26 jer Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
