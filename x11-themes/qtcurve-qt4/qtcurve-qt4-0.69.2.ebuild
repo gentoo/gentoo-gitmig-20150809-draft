@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.69.2.ebuild,v 1.1 2009/10/18 22:19:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.69.2.ebuild,v 1.2 2009/10/26 14:00:07 ssuominen Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -14,14 +14,14 @@ SRC_URI="http://craigd.wikispaces.com/file/view/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="kde"
 
 DEPEND="x11-libs/qt-gui:4[dbus]
 	kde? ( >=kde-base/kwin-${KDE_MINIMAL} )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 DOCS="ChangeLog README TODO"
 
 src_configure() {
