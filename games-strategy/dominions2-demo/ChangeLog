@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/dominions2-demo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/ChangeLog,v 1.4 2007/02/22 00:01:10 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/ChangeLog,v 1.5 2009/10/26 18:24:15 mr_bones_ Exp $
+
+  26 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  dominions2-demo-2.08.ebuild:
+  EAPI=2; tidy
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
