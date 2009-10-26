@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta3.ebuild,v 1.3 2009/08/11 06:35:14 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta3.ebuild,v 1.4 2009/10/26 06:24:15 wormo Exp $
 
 EAPI="1"
+
+inherit eutils
 
 MY_P=${P/_/}
 S="${WORKDIR}/${MY_P}"
@@ -32,6 +34,11 @@ DEPEND="${RDEPEND}
 			app-text/linuxdoc-tools
 			app-text/texlive-core
 		 )"
+
+pkg_setup() {
+	enewgroup ulogd
+	enewuser ulogd -1 -1 /var/log/ulogd ulogd
+}
 
 src_compile() {
 	econf \
@@ -77,4 +84,9 @@ src_install() {
 	newins ulogd.logrotate ulogd || die "logrotate config failed"
 
 	doman ulogd.8 || die
+}
+
+pkg_postinst() {
+	chown root:ulogd "${ROOT}"/etc/ulogd.conf
+	chmod 640        "${ROOT}"/etc/ulogd.conf
 }
