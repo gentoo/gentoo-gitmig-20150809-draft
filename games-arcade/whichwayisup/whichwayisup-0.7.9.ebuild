@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.7 2008/06/22 15:34:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.8 2009/10/26 05:53:21 mr_bones_ Exp $
 
 NEED_PYTHON="2.4"
-
+EAPI=2
 inherit eutils python games
 
 MY_PV=${PV//./}
@@ -19,17 +19,18 @@ IUSE=""
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=dev-python/pygame-1.6"
-# media-libs/sdl-image[png]
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "s:libdir\ =\ .*:libdir\ =\ \"$(games_get_libdir)/${PN}\":" \
-		run_game.py || die "Changing library path failed"
-	sed -i -e "s:data_dir\ =\ .*:data_dir\ =\ \"${GAMES_DATADIR}/${PN}\":" \
-		lib/data.py || die "Changing data path failed"
+src_prepare() {
+	sed -i \
+		-e "s:libdir\ =\ .*:libdir\ =\ \"$(games_get_libdir)/${PN}\":" \
+		run_game.py \
+		|| die "Changing library path failed"
+	sed -i \
+		-e "s:data_dir\ =\ .*:data_dir\ =\ \"${GAMES_DATADIR}/${PN}\":" \
+		lib/data.py \
+		|| die "Changing data path failed"
 	rm data/pictures/Thumbs.db
 }
 
@@ -44,8 +45,8 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r data/* || die "doins data failed"
 
-	doicon "${FILESDIR}"/${PN}-32.xpm
-	make_desktop_entry ${PN} "Which Way Is Up?" ${PN}-32
+	newicon "${FILESDIR}"/${PN}-32.xpm ${PN}.xpm
+	make_desktop_entry ${PN} "Which Way Is Up?"
 	prepgamesdirs
 }
 
