@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.15 2009/09/16 15:03:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.16 2009/10/26 22:19:50 kolmodin Exp $
+
+*x11-1.4.6.1 (26 Oct 2009)
+
+  26 Oct 2009; <kolmodin@gentoo.org> +x11-1.4.6.1.ebuild:
+  Version bump
 
   16 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> -x11-1.1.ebuild:
   Remove old version with built_with_use call.
