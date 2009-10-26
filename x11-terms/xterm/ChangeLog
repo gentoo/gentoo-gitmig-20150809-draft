@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.278 2009/10/26 10:52:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.279 2009/10/26 20:47:10 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org> xterm-243.ebuild:
+  Stable for HPPA (bug #282290).
 
 *xterm-250 (26 Oct 2009)
 
