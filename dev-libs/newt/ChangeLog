@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.60 2009/10/18 14:28:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.61 2009/10/26 08:40:07 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> newt-0.52.10-r1.ebuild:
+  Stable for ppc, bug 285854
 
   18 Oct 2009; Brent Baude <ranger@gentoo.org> newt-0.52.10-r1.ebuild:
   Marking newt-0.52.10-r1 ppc64 for bug 285854
