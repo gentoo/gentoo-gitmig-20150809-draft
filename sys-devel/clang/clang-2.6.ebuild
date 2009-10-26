@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6.ebuild,v 1.2 2009/10/26 17:26:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6.ebuild,v 1.3 2009/10/26 20:08:58 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -11,7 +11,6 @@ HOMEPAGE="http://clang.llvm.org/"
 SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
 	http://llvm.org/releases/${PV}/${P}.tar.gz"
 
-# See http://www.opensource.org/licenses/UoI-NCSA.php
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -30,9 +29,11 @@ src_prepare() {
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.6-fixdoc.patch
 
+	# multilib-strict
 	sed -e "s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
 		-i "${S}"/tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
+	# install python files as module
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i "${S}"/tools/clang/tools/scan-view/scan-view \
 		|| die "scan-view sed failed"
@@ -72,6 +73,17 @@ src_configure() {
 
 src_compile() {
 	emake VERBOSE=1 KEEP_SYMBOLS=1  clang-only || die "emake failed"
+}
+
+src_test() {
+	cd "${S}"/tools/clang || die "cd clang failed"
+
+	# 20091026: many tests fail not finding headers?
+	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	if ! emake -j1 VERBOSE=1 test; then
+		hasq test $FEATURES && die "Make test failed. See above for details."
+		hasq test $FEATURES || eerror "Make test failed. See above for details."
+	fi
 }
 
 src_install() {
