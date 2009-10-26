@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/mutrace
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mutrace/ChangeLog,v 1.1 2009/10/26 18:21:11 ford_prefect Exp $
+
+*mutrace-0.2 (26 Oct 2009)
+
+  26 Oct 2009; Arun Raghavan <ford_prefect@gentoo.org> +mutrace-0.2.ebuild,
+  +metadata.xml:
+  Initial commit
+
