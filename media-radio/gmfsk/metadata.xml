@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>redhatter@gentoo.org</email>
+		<name>Stuart Longland</name>
+	</maintainer>
+	<longdescription lang="en">
+		gmfsk is a multi-mode digital radiocommunications terminal for Amateur
+		radio use.  It supports many of the popular digital modes including
+		PSK31, PSK63, MFSK16, Hellschriber, Olivia and computer-generated CW.
+	</longdescription>
 </pkgmetadata>
+
