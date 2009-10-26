@@ -12,5 +12,7 @@
     <flag name="sidebar">Use the vanilla tree + sidebar patch</flag>
     <flag name="smime">Enable support for smime</flag>
     <flag name="smtp">Enable support for smtp</flag>
+    <flag name="tokyocabinet">Enable tokyocabinet database backend for header
+      caching</flag>
   </use>
 </pkgmetadata>
