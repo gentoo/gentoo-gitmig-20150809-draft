@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/lastfmlib-0.3.0.ebuild,v 1.2 2009/07/13 07:43:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/lastfmlib-0.3.0.ebuild,v 1.3 2009/10/26 15:49:02 ssuominen Exp $
 
-EAPI="2"
-
-inherit eutils
+EAPI=2
 
 DESCRIPTION="C++ library to scrobble tracks on Last.fm"
 HOMEPAGE="http://code.google.com/p/lastfmlib"
@@ -12,20 +10,19 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="syslog debug"
 
-RDEPEND="net-misc/curl"
-DEPEND="${RDEPEND}"
+DEPEND="net-misc/curl"
 
 src_configure() {
 	econf \
-	$(use_enable syslog logging) \
-	$(use_enable debug) \
-	--disable-unittests || die
+		$(use_enable syslog logging) \
+		$(use_enable debug) \
+		--disable-unittests
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README TODO || die
 }
