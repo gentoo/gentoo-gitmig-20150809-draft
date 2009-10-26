@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10682 2009/10/26 17:14:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10683 2009/10/26 18:35:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -224,12 +224,6 @@ games-board/knights
 # pretty well on SH nowadays.
 # Removal in 30 days
 sys-kernel/sh-sources
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Oct 2009)
-# New x264 snapshot. Masked for testing.
->=media-libs/x264-0.0.20091001
->=media-video/x264-encoder-0.0.20091001
->=media-video/ffmpeg-0.5_p20373
 
 # Doug Goldstein <cardoe@gentoo.org> (21 Oct 2009)
 # Work in progress

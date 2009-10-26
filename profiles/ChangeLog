@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3471 2009/10/26 16:52:49 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3472 2009/10/26 18:35:37 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask ffmpeg and x264 snapshot.
 
   26 Oct 2009; Bryan Stine <battousai@gentoo.org> package.mask:
   x11-base/x11-drm removed from tree
