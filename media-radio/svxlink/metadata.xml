@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name></name>
+		<email>redhatter@gentoo.org</email>
+		<name>Stuart Longland</name>
 	</maintainer>
 	<longdescription lang="en">
 		The SvxLink project aim to develop a flexible, general purpose voice
