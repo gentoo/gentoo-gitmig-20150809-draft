@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.4 2009/10/25 20:20:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.5 2009/10/26 09:58:41 voyageur Exp $
+
+  26 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.6.ebuild,
+  metadata.xml:
+  Fix libffi automagic dependency, bug #289933
 
 *llvm-2.6 (25 Oct 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6.ebuild,v 1.1 2009/10/25 20:20:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6.ebuild,v 1.2 2009/10/26 09:58:41 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.tar.gz"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alltargets debug llvm-gcc ocaml test"
+IUSE="alltargets debug +libffi llvm-gcc ocaml test"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/make-3.79
@@ -22,6 +22,7 @@ DEPEND="dev-lang/perl
 	!~sys-devel/bison-1.875
 	>=sys-devel/gcc-3.0
 	>=sys-devel/binutils-2.18
+	libffi? ( virtual/libffi )
 	llvm-gcc? ( sys-devel/llvm-gcc )
 	ocaml? ( dev-lang/ocaml )
 	test? ( dev-util/dejagnu )"
@@ -139,6 +140,8 @@ src_configure() {
 	else
 		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=none"
 	fi
+
+	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
 	econf ${CONF_FLAGS} || die "econf failed"
 }
 
