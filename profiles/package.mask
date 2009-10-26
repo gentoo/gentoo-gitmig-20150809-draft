@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10677 2009/10/25 22:50:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10678 2009/10/26 00:28:21 abcd Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jonathan Callen <abcd@gentoo.org> (26 Oct 2009)
+# Old monolithic ebuild. Replaced by app-office/koffice-meta
+# Will be removed in 30 days
+app-office/koffice
 
 # Olivier Crête <tester@gentoo.org> (25 Oct 2009)
 # Has been replaced by its fork dev-python/papyon
