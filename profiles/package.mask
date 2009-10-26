@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10684 2009/10/26 20:34:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10685 2009/10/26 21:34:43 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -620,13 +620,6 @@ net-p2p/nicotine
 # Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
 # Much testing needed, not ready for mainline by any means.
 >=www-client/seamonkey-2.0_beta2
-
-# Rémi Cardona <remi@gentoo.org> (24 Sep 2009)
-# Both require xorg-server's libxf86config library which is busted
-# and they both have no maintainer. See bug #222683
-# Masked for removal in 30 days
-dev-python/pyxf86config
-dev-python/rhpxl
 
 # Sebastien Fabbro <bicatali@gentoo.org> (23 Sep 2009)
 # Masked for more testing, especially with cint7, afs and xrootd
