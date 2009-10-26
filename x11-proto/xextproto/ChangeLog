@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xextproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.46 2009/10/11 10:53:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.47 2009/10/26 11:11:15 remi Exp $
+
+  26 Oct 2009; Rémi Cardona <remi@gentoo.org> xextproto-7.1.1.ebuild:
+  sync with overlay, define DEPEND
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xextproto-7.0.5.ebuild:
   ppc stable #282290
