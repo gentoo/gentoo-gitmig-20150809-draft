@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.10.ebuild,v 1.2 2009/10/02 10:46:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.10-r1.ebuild,v 1.1 2009/10/26 10:26:14 flameeyes Exp $
 
 inherit apache-module autotools
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
-APACHE2_MOD_CONF="2.1.2/99_mod_security"
+APACHE2_MOD_CONF="2.5.10/99_mod_security"
 APACHE2_MOD_DEFINE="SECURITY"
 
 need_apache2
@@ -90,9 +90,10 @@ src_install() {
 	sed -i -e 's:logs/:/var/log/apache2/:g' *.conf || die
 
 	insinto ${APACHE_MODULES_CONFDIR}/mod_security/
-	for i in *.conf; do
-		newins ${i} ${i/modsecurity_crs_/} || die
-	done
+	doins *.conf base_rules/* || die
+
+	insinto ${APACHE_MODULES_CONFDIR}/mod_security/optional_rules
+	doins optional_rules/* || die
 }
 
 pkg_postinst() {

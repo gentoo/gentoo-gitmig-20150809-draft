@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.29 2009/10/02 10:46:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.30 2009/10/26 10:26:14 flameeyes Exp $
+
+*mod_security-2.5.10-r1 (26 Oct 2009)
+
+  26 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/2.5.10/99_mod_security.conf, -mod_security-2.5.10.ebuild,
+  +mod_security-2.5.10-r1.ebuild:
+  Revision bump; install the proper ruleset; install a new config file.
 
   02 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mod_security-2.5.10.ebuild,
