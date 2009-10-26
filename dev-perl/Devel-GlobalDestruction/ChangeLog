@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.1 2009/01/14 10:24:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.2 2009/10/26 13:50:59 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  Devel-GlobalDestruction-0.02.ebuild:
+  Keywording for ppc, bug 283244
 
 *Devel-GlobalDestruction-0.02 (14 Jan 2009)
 

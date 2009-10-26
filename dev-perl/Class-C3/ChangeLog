@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.3 2009/05/02 11:53:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.4 2009/10/26 13:47:02 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> Class-C3-0.21.ebuild:
+  Keywording for ppc, bug 283244
 
   02 May 2009; Torsten Veller <tove@gentoo.org> -Class-C3-0.20.ebuild:
   Cleanup

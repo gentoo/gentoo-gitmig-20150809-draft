@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.3 2009/05/02 10:34:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.4 2009/10/26 13:35:58 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  Sub-Exporter-0.982.ebuild:
+  Keywording for ppc, bug 283244
 
   02 May 2009; Torsten Veller <tove@gentoo.org> -Sub-Exporter-0.981.ebuild:
   Cleanup
