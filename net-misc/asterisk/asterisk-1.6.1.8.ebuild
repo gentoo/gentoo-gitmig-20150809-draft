@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.6-r2.ebuild,v 1.2 2009/10/26 20:02:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.8.ebuild,v 1.1 2009/10/26 23:50:29 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -140,26 +140,26 @@ src_unpack() {
 	#
 	# compensate for non-standard LUA header paths in Gentoo
 	#
-	epatch "${FILESDIR}"/1.6.1/${P}-lua-includes.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.6-lua-includes.patch || die "patch failed"
 
 	#
 	# make sure FXO ports are usable immediately, without requiring an inbound call first
 	# https://issues.asterisk.org/view.php?id=14577
 	#
-	epatch "${FILESDIR}"/1.6.1/${P}-fxsks-hookstate.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.6-fxsks-hookstate.patch || die "patch failed"
 
 	#
 	# avoid segmentation fault when transferring a queue call
 	# https://issues.asterisk.org/view.php?id=15848
 	#
-	epatch "${FILESDIR}"/1.6.1/${P}-transfer-segfault.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.6-transfer-segfault.patch || die "patch failed"
 
 	#
 	# do not ignore alarm-cleared event while V23 caller ID detection is in progress
 	# otherwise automated British Telecom line test causes permanent red alarm
 	# https://issues.asterisk.org/view.php?id=14163
 	#
-	epatch "${FILESDIR}"/1.6.1/${P}-bt-line-test.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.6-bt-line-test.patch || die "patch failed"
 
 	AT_M4DIR=autoconf eautoreconf
 
