@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731-r1.ebuild,v 1.6 2009/09/24 14:25:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731-r1.ebuild,v 1.7 2009/10/26 23:54:15 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -66,7 +66,7 @@ RDEPEND="sys-libs/ncurses
 		mp2? ( media-sound/twolame )
 		mp3? ( media-sound/lame )
 		faac? ( media-libs/faac )
-		x264? ( >=media-libs/x264-0.0.20090629 )
+		x264? ( >=media-libs/x264-0.0.20090629 <media-libs/x264-0.0.20090923 )
 		xvid? ( media-libs/xvid )
 		)
 	esd? ( media-sound/esound )

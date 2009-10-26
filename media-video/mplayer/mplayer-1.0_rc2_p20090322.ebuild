@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090322.ebuild,v 1.17 2009/10/11 09:15:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090322.ebuild,v 1.18 2009/10/26 23:54:15 ssuominen Exp $
 
 EAPI="1"
 
@@ -66,7 +66,7 @@ RDEPEND="sys-libs/ncurses
 		mp2? ( media-sound/twolame )
 		mp3? ( media-sound/lame )
 		faac? ( media-libs/faac )
-		x264? ( >=media-libs/x264-0.0.20081006 )
+		x264? ( >=media-libs/x264-0.0.20081006 <media-libs/x264-0.0.20090923 )
 		xvid? ( media-libs/xvid )
 		)
 	esd? ( media-sound/esound )
