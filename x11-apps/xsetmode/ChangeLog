@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xsetmode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetmode/ChangeLog,v 1.26 2009/10/11 11:15:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetmode/ChangeLog,v 1.27 2009/10/26 20:39:35 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org> xsetmode-1.0.0.ebuild:
+  Stable for HPPA (bug #282290).
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xsetmode-1.0.0.ebuild:
   ppc stable #282290
