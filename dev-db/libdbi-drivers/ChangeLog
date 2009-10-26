@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/libdbi-drivers
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.48 2009/02/24 17:44:47 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.49 2009/10/26 07:19:33 robbat2 Exp $
+
+*libdbi-drivers-0.8.3-r1 (26 Oct 2009)
+
+  26 Oct 2009; Robin H. Johnson <robbat2@gentoo.org>
+  libdbi-drivers-0.8.3.ebuild, +libdbi-drivers-0.8.3-r1.ebuild,
+  +files/libdbi-drivers-0.8.3-firebird-fix.patch,
+  +files/libdbi-drivers-0.8.3-oracle-build-fix.patch:
+  Bug #289519: Fixup for Firebird compile. Bug #256411: Fix for Oracle
+  compile. Bug #254851: USE-default for tinderbox build.
 
   24 Feb 2009; Raúl Porcel <armin76@gentoo.org>
   libdbi-drivers-0.8.3.ebuild:
