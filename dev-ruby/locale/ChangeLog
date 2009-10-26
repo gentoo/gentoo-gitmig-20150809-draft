@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.9 2009/08/24 17:29:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.10 2009/10/26 14:16:49 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> locale-2.0.4.ebuild:
+  Keywording for ppc, bug 289839
 
   24 Aug 2009; Hans de Graaff <graaff@gentoo.org> -locale-2.0.3.ebuild:
   Remove old version.
