@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.135 2009/10/25 22:32:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.136 2009/10/26 13:00:26 volkmar Exp $
+
+  26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  rxvt-unicode-9.05-r3.ebuild:
+  Stable for ppc, bug 260199
 
   25 Oct 2009; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.05-r3.ebuild:
   bugs.g.o -> bug #. Quote FILESDIR.
