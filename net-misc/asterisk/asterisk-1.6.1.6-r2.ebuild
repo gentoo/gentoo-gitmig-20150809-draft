@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.6.ebuild,v 1.2 2009/09/23 19:33:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.6-r2.ebuild,v 1.1 2009/10/26 13:34:21 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa +caps curl dahdi debug freetds h323 iconv imap jabber ldap keepsrc misdn newt nosamples odbc oss postgres radius snmp span speex ssl sqlite static vorbis"
+IUSE="alsa +caps curl dahdi debug freetds iconv jabber ldap keepsrc misdn newt nosamples odbc oss postgres radius snmp span speex ssl sqlite static vorbis"
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
@@ -25,10 +25,7 @@ RDEPEND="sys-libs/ncurses
 	dahdi? ( >=net-libs/libpri-1.4.7
 		net-misc/dahdi-tools )
 	freetds? ( dev-db/freetds )
-	h323? ( dev-libs/pwlib
-		net-libs/openh323 )
 	iconv? ( virtual/libiconv )
-	imap? ( virtual/imap-c-client )
 	jabber? ( dev-libs/iksemel )
 	ldap?	( net-nds/openldap )
 	misdn? ( net-dialup/misdnuser )
@@ -115,24 +112,6 @@ pkg_setup() {
 	einfo "Running some pre-flight checks..."
 	echo
 
-	# imap requires ssl if imap-c-client was built with ssl,
-	# conversely if ssl and imap are both on then imap-c-client needs ssl
-	if use imap; then
-		if use ssl && ! built_with_use virtual/imap-c-client ssl; then
-			eerror
-			eerror "IMAP with SSL requested, but your IMAP C-Client libraries"
-			eerror "are built without SSL!"
-			eerror
-			die "Please recompile the IMAP C-Client libraries with SSL support enabled"
-		elif ! use ssl && built_with_use virtual/imap-c-client ssl; then
-			eerror
-			eerror "IMAP without SSL requested, but your IMAP C-Client"
-			eerror "libraries are built with SSL!"
-			eerror
-			die "Please recompile the IMAP C-Client libraries without SSL support enabled"
-		fi
-	fi
-
 	if [[ -n "${ASTERISK_MODULES}" ]] ; then
 		ewarn "You are overriding ASTERISK_MODULES. We will assume you know what you are doing. There is no support for this option, try without if you see breakage."
 	fi
@@ -141,15 +120,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	#
-	# comment about h323 issues
-	#
-	if use h323 ; then
-		ewarn "h323 useflag: It is known that the h323 module doesn't compile
-		the \"normal\" way: For a workaround, asterisk will be built two times
-		without cleaning the build dir."
-	fi
 
 	#
 	# put pid file(s) into /var/run/asterisk
@@ -168,14 +138,28 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1-uclibc.patch  || die "patch failed"
 
 	#
-	# link UW-IMAP with Kerberos5 if necessary
-	#
-	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-imap-kerberos.patch || die "patch failed"
-
-	#
 	# compensate for non-standard LUA header paths in Gentoo
 	#
-	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1.6-lua-includes.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${P}-lua-includes.patch || die "patch failed"
+
+	#
+	# make sure FXO ports are usable immediately, without requiring an inbound call first
+	# https://issues.asterisk.org/view.php?id=14577
+	#
+	epatch "${FILESDIR}"/1.6.1/${P}-fxsks-hookstate.patch || die "patch failed"
+
+	#
+	# avoid segmentation fault when transferring a queue call
+	# https://issues.asterisk.org/view.php?id=15848
+	#
+	epatch "${FILESDIR}"/1.6.1/${P}-transfer-segfault.patch || die "patch failed"
+
+	#
+	# do not ignore alarm-cleared event while V23 caller ID detection is in progress
+	# otherwise automated British Telecom line test causes permanent red alarm
+	# https://issues.asterisk.org/view.php?id=14163 
+	#
+	epatch "${FILESDIR}"/1.6.1/${P}-bt-line-test.patch || die "patch failed"
 
 	AT_M4DIR=autoconf eautoreconf
 
@@ -224,10 +208,7 @@ src_compile() {
 		$(use_with dahdi tonezone) \
 		$(use_with dahdi) \
 		$(use_with freetds tds) \
-		$(use_with h323 h323 "/usr/share/openh323") \
-		$(use_with h323 pwlib "/usr/share/pwlib") \
 		$(use_with iconv) \
-		$(use_with imap) \
 		$(use_with jabber iksemel) \
 		$(use_with misdn isdnnet) \
 		$(use_with misdn suppserv) \
@@ -299,14 +280,6 @@ src_compile() {
 		done
 	fi
 
-	#
-	# fasten your seatbelts (and start praying)
-	#
-	if use h323 ; then
-		# emake one time to get h323 to make.... yea not "clean" but works
-		emake
-	fi
-
 	emake || die "emake failed"
 }
 
@@ -340,10 +313,16 @@ src_install() {
 	doins "${D}"etc/asterisk/*.conf*
 
 	# keep directories
+	diropts -m 0770 -o asterisk -g asterisk
+	keepdir	/etc/asterisk
+	keepdir /var/lib/asterisk
+	keepdir /var/run/asterisk
+	keepdir /var/spool/asterisk
 	keepdir /var/spool/asterisk/{system,tmp,meetme,monitor,dictate,voicemail}
+	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.6.1/asterisk.rc6 asterisk
+	newinitd "${FILESDIR}"/1.6.1/asterisk.initd asterisk
 	newconfd "${FILESDIR}"/1.6.0/asterisk.confd asterisk
 
 	# some people like to keep the sources around for custom patching
@@ -384,11 +363,6 @@ pkg_postinst() {
 	ebegin "Fixing up permissions"
 		chown -R asterisk:asterisk "${ROOT}"var/log/asterisk
 		chmod -R u=rwX,g=rX,o=     "${ROOT}"var/log/asterisk
-
-		for x in lib run spool; do
-			chown -R asterisk:asterisk "${ROOT}"var/${x}/asterisk
-			chmod -R u=rwX,g=rwX,o=    "${ROOT}"var/${x}/asterisk
-		done
 
 		chown asterisk:asterisk "${ROOT}"etc/asterisk/
 		chown asterisk:asterisk "${ROOT}"etc/asterisk/*.adsi

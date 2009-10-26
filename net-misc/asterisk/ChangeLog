@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.217 2009/10/22 14:47:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.218 2009/10/26 13:34:21 chainsaw Exp $
+
+*asterisk-1.6.1.6-r2 (26 Oct 2009)
+
+  26 Oct 2009; <chainsaw@gentoo.org> -asterisk-1.6.1.6.ebuild,
+  +asterisk-1.6.1.6-r2.ebuild,
+  +files/1.6.1/asterisk-1.6.1.6-bt-line-test.patch:
+  Cope with automated British Telecom line tests as they currently cause the
+  DAHDI channel to wedge with "exiting simple switch" messages. An upstream
+  bug exists since July but has not been actioned yet. Delete old ebuild.
 
 *asterisk-1.6.1.6-r1 (22 Oct 2009)
 
