@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.77 2009/10/24 20:04:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.78 2009/10/26 21:31:59 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org> smoke-4.3.1.ebuild,
+  smoke-4.3.2.ebuild:
+  Marked ~hppa (bug #280312).
 
   24 Oct 2009; Joseph Jezak <josejx@gentoo.org> smoke-4.3.1.ebuild,
   smoke-4.3.2.ebuild:

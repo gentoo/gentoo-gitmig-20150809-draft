@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libknotificationitem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.10 2009/10/24 19:35:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.11 2009/10/26 21:28:09 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org>
+  libknotificationitem-4.3.1.ebuild, libknotificationitem-4.3.2.ebuild:
+  Marked ~hppa (bug #280312).
 
   24 Oct 2009; Joseph Jezak <josejx@gentoo.org>
   libknotificationitem-4.3.1.ebuild, libknotificationitem-4.3.2.ebuild:
