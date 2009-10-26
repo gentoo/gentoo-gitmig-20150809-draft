@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.59 2009/10/11 11:25:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.60 2009/10/26 21:16:38 jer Exp $
+
+  26 Oct 2009; Jeroen Roovers <jer@gentoo.org>
+  xf86-video-fbdev-0.4.1.ebuild:
+  Stable for HPPA (bug #282290).
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xf86-video-fbdev-0.4.1.ebuild:
   ppc stable #282290
