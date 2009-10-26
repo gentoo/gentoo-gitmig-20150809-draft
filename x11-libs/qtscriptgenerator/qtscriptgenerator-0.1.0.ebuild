@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.7 2009/06/26 20:28:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.8 2009/10/26 13:46:56 ssuominen Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ HOMEPAGE="http://code.google.com/p/qtscriptgenerator/"
 SRC_URI="http://qtscriptgenerator.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+KEYWORDS="amd64 ~x86"
 IUSE="debug kde"
 
 DEPEND="

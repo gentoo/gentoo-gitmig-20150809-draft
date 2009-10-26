@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qtscriptgenerator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.7 2009/06/26 20:28:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.8 2009/10/26 13:46:56 ssuominen Exp $
+
+  26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  qtscriptgenerator-0.1.0.ebuild:
+  amd64 stable wrt #290493
 
   26 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
   qtscriptgenerator-0.1.0.ebuild:
