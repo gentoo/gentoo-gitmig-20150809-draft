@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.2 2009/09/30 08:36:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.3 2009/10/26 07:44:56 vapier Exp $
+
+*libcap-ng-0.6.2 (26 Oct 2009)
+
+  26 Oct 2009; Mike Frysinger <vapier@gentoo.org> +libcap-ng-0.6.2.ebuild:
+  Version bump.
 
   30 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   libcap-ng-0.6.1.ebuild:
