@@ -1,0 +1,283 @@
+? libquicktime.spec
+? m4/libtool.m4
+? m4/ltoptions.m4
+? m4/ltsugar.m4
+? m4/ltversion.m4
+? m4/lt~obsolete.m4
+? plugins/audiocodec/.libs
+? plugins/audiocodec/ima4.lo
+? plugins/audiocodec/lqt_audiocodec.la
+? plugins/audiocodec/lqt_audiocodec.lo
+? plugins/audiocodec/pcm.lo
+? plugins/faac/.libs
+? plugins/faac/faac.lo
+? plugins/faac/lqt_faac.la
+? plugins/faac/lqt_faac.lo
+? plugins/faad2/.libs
+? plugins/faad2/faad2.lo
+? plugins/faad2/lqt_faad2.la
+? plugins/faad2/lqt_faad2.lo
+? plugins/ffmpeg/.libs
+? plugins/ffmpeg/audio.lo
+? plugins/ffmpeg/lqt_ffmpeg.la
+? plugins/ffmpeg/lqt_ffmpeg.lo
+? plugins/ffmpeg/params.lo
+? plugins/ffmpeg/video.lo
+? plugins/lame/.libs
+? plugins/lame/lame_codec.lo
+? plugins/lame/lqt_lame.la
+? plugins/lame/lqt_lame.lo
+? plugins/mjpeg/.libs
+? plugins/mjpeg/jpeg.lo
+? plugins/mjpeg/libmjpeg.lo
+? plugins/mjpeg/lqt_mjpeg.la
+? plugins/mjpeg/lqt_mjpeg.lo
+? plugins/png/.libs
+? plugins/png/lqt_png.la
+? plugins/png/lqt_png.lo
+? plugins/png/qtpng.lo
+? plugins/rtjpeg/.libs
+? plugins/rtjpeg/RTjpeg.lo
+? plugins/rtjpeg/lqt_rtjpeg.la
+? plugins/rtjpeg/lqt_rtjpeg.lo
+? plugins/rtjpeg/rtjpeg_codec.lo
+? plugins/schroedinger/.libs
+? plugins/schroedinger/lqt_schroedinger.la
+? plugins/schroedinger/lqt_schroedinger.lo
+? plugins/schroedinger/schroedinger.lo
+? plugins/schroedinger/schroedinger_decode.lo
+? plugins/schroedinger/schroedinger_encode.lo
+? plugins/videocodec/.libs
+? plugins/videocodec/lqt_videocodec.la
+? plugins/videocodec/lqt_videocodec.lo
+? plugins/videocodec/raw.lo
+? plugins/videocodec/v210.lo
+? plugins/videocodec/v308.lo
+? plugins/videocodec/v408.lo
+? plugins/videocodec/v410.lo
+? plugins/videocodec/videocodec.lo
+? plugins/videocodec/yuv2.lo
+? plugins/videocodec/yuv4.lo
+? plugins/videocodec/yv12.lo
+? plugins/vorbis/.libs
+? plugins/vorbis/lqt_vorbis.la
+? plugins/vorbis/lqt_vorbis.lo
+? plugins/vorbis/vorbis.lo
+? plugins/x264/.libs
+? plugins/x264/lqt_x264.la
+? plugins/x264/lqt_x264.lo
+? plugins/x264/x264.lo
+? src/.libs
+? src/atom.lo
+? src/audio.lo
+? src/avi_avih.lo
+? src/avi_guid.lo
+? src/avi_hdrl.lo
+? src/avi_idx1.lo
+? src/avi_indx.lo
+? src/avi_info.lo
+? src/avi_ix.lo
+? src/avi_movi.lo
+? src/avi_odml.lo
+? src/avi_riff.lo
+? src/avi_strf.lo
+? src/avi_strh.lo
+? src/avi_strl.lo
+? src/chan.lo
+? src/charset.lo
+? src/clap.lo
+? src/cmodel_default.lo
+? src/cmodel_yuv420p.lo
+? src/cmodel_yuv422.lo
+? src/colormodels.lo
+? src/colr.lo
+? src/ctab.lo
+? src/ctts.lo
+? src/dinf.lo
+? src/dref.lo
+? src/edts.lo
+? src/elst.lo
+? src/enda.lo
+? src/esds.lo
+? src/fiel.lo
+? src/frma.lo
+? src/ftab.lo
+? src/ftyp.lo
+? src/gama.lo
+? src/gmhd.lo
+? src/gmhd_text.lo
+? src/gmin.lo
+? src/hdlr.lo
+? src/imgp.lo
+? src/impn.lo
+? src/iods.lo
+? src/language.lo
+? src/libquicktime.la
+? src/log.lo
+? src/lqt_bufalloc.lo
+? src/lqt_codecfile.lo
+? src/lqt_codecinfo.lo
+? src/lqt_codecs.lo
+? src/lqt_color.lo
+? src/lqt_divx.lo
+? src/lqt_qtvr.lo
+? src/lqt_quicktime.lo
+? src/matrix.lo
+? src/mdat.lo
+? src/mdhd.lo
+? src/mdia.lo
+? src/minf.lo
+? src/moov.lo
+? src/multichannel.lo
+? src/mvhd.lo
+? src/navg.lo
+? src/ndhd.lo
+? src/nloc.lo
+? src/nmhd.lo
+? src/obji.lo
+? src/pHdr.lo
+? src/pano.lo
+? src/pasp.lo
+? src/pdat.lo
+? src/qtatom.lo
+? src/qtvr.lo
+? src/smhd.lo
+? src/stbl.lo
+? src/stco.lo
+? src/stsc.lo
+? src/stsd.lo
+? src/stsdtable.lo
+? src/stss.lo
+? src/stsz.lo
+? src/stts.lo
+? src/tcmi.lo
+? src/texttrack.lo
+? src/timecode.lo
+? src/tkhd.lo
+? src/tmcd.lo
+? src/trak.lo
+? src/translation.lo
+? src/tref.lo
+? src/udta.lo
+? src/useratoms.lo
+? src/util.lo
+? src/vmhd.lo
+? src/vrni.lo
+? src/vrnp.lo
+? src/vrsc.lo
+? src/wave.lo
+? src/workarounds.lo
+? utils/.libs
+? utils/dump_codecs
+? utils/gen_colorspace_tables
+? utils/lqt_transcode
+? utils/lqtplay
+? utils/qt2text
+? utils/qtdechunk
+? utils/qtdump
+? utils/qtinfo
+? utils/qtrechunk
+? utils/qtstreamize
+? utils/qtyuv4toyuv
+? utils/test_codec
+? utils/testqt
+? utils/gtk/.libs
+? utils/gtk/libquicktime_config
+Index: plugins/x264/lqt_x264.c
+===================================================================
+RCS file: /cvsroot/libquicktime/libquicktime/plugins/x264/lqt_x264.c,v
+retrieving revision 1.13
+diff -u -B -r1.13 lqt_x264.c
+--- plugins/x264/lqt_x264.c	6 Dec 2008 14:03:10 -0000	1.13
++++ plugins/x264/lqt_x264.c	26 Oct 2009 11:02:55 -0000
+@@ -94,6 +94,17 @@
+       .val_max =     { .val_int = 100 },
+       .help_string = TRS("Influences how often B-frames are used"),
+     },
++#if X264_BUILD >= 78
++    {
++      .name =        "x264_i_bframe_pyramid",
++      .real_name =   TRS("B-frame pyramid"),
++      .type =        LQT_PARAMETER_INT,
++      .val_default = { .val_int = 0 },
++      .val_min =     { .val_int = 0 },
++      .val_max =     { .val_int = 2 },
++      .help_string = TRS("Keep some B-frames as references")
++    },
++#else
+     {
+       .name =        "x264_b_bframe_pyramid",
+       .real_name =   TRS("B-frame pyramid"),
+@@ -103,6 +114,7 @@
+       .val_max =     { .val_int = 1 },
+       .help_string = TRS("Keep some B-frames as references")
+     },
++#endif
+     {
+       .name =        "x264_ratecontrol",
+       .real_name =   TRS("Ratecontrol"),
+Index: plugins/x264/x264.c
+===================================================================
+RCS file: /cvsroot/libquicktime/libquicktime/plugins/x264/x264.c,v
+retrieving revision 1.30
+diff -u -B -r1.30 x264.c
+--- plugins/x264/x264.c	11 Mar 2009 14:25:50 -0000	1.30
++++ plugins/x264/x264.c	26 Oct 2009 11:02:55 -0000
+@@ -67,7 +67,11 @@
+   lqt_dump("  i_bframe:                    %d\n", params->i_bframe);          // 0.. X264_BFRAME_MAX
+   lqt_dump("  b_bframe_adaptive:           %d\n", params->b_bframe_adaptive);
+   lqt_dump("  i_bframe_bias:               %d\n", params->i_bframe_bias);
++#if X264_BUILD >= 78
++  lqt_dump("  i_bframe_pyramid:            %d\n", params->i_bframe_pyramid);
++#else
+   lqt_dump("  b_bframe_pyramid:            %d\n", params->b_bframe_pyramid);
++#endif
+   
+   lqt_dump("  b_deblocking_filter:         %d\n", params->b_deblocking_filter);
+   lqt_dump("  i_deblocking_filter_alphac0: %d\n", params->i_deblocking_filter_alphac0); // -6..6
+@@ -174,14 +178,21 @@
+   {
+   uint8_t *p = buf;
+   int i;
++#if X264_BUILD < 76
+   int s;
++#endif
+   
+   for(i = 0; i < nnal; i++)
+     {
++#if X264_BUILD >= 76
++    memcpy(p, nals[i].p_payload, nals[i].i_payload);
++    p+=nals[i].i_payload;
++#else
+     s = x264_nal_encode(p, &size, 1, nals + i);
+     if(s < 0)
+       return -1;
+     p += s;
++#endif
+     }
+   
+   return p - buf;
+@@ -407,7 +417,11 @@
+ 
+   pic_out.i_pts = 0;
+   /* Encode frames, get nals */
++#if X264_BUILD >= 76
++  if(x264_encoder_encode(codec->enc, &nal, &nnal, pic_in, &pic_out)<0)
++#else
+   if(x264_encoder_encode(codec->enc, &nal, &nnal, pic_in, &pic_out))
++#endif
+     return 0;
+   
+   /* Encode nals -> get h264 stream */
+@@ -782,7 +796,11 @@
+   ENUMPARAM("x264_i_bframe_adaptive", codec->params.i_bframe_adaptive, bframe_adaptives);
+ #endif
+   INTPARAM("x264_i_bframe_bias", codec->params.i_bframe_bias);
++#if X264_BUILD >= 78
++  INTPARAM("x264_i_bframe_pyramid", codec->params.i_bframe_pyramid);
++#else
+   INTPARAM("x264_b_bframe_pyramid", codec->params.b_bframe_pyramid);
++#endif
+ 
+   ENUMPARAM("x264_i_rc_method", codec->params.rc.i_rc_method, rc_methods);
+   INTPARAM("x264_i_bitrate", codec->params.rc.i_bitrate);

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.143 2009/10/24 11:42:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.144 2009/10/26 11:16:38 aballier Exp $
+
+  26 Oct 2009; Alexis Ballier <aballier@gentoo.org>
+  libquicktime-1.1.3.ebuild, +files/libquicktime-1.1.3-x264.patch:
+  Add a fix for latest x264 versions.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> libquicktime-1.1.3.ebuild:
   ppc stable #283815

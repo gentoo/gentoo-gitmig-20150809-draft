@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.3.ebuild,v 1.6 2009/10/24 11:42:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.3.ebuild,v 1.7 2009/10/26 11:16:38 aballier Exp $
 
 inherit libtool eutils
 
@@ -49,6 +49,7 @@ PROVIDE="virtual/quicktime"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-x264.patch"
 
 	# Needed for sane .so versionning on g/fbsd
 	elibtoolize
