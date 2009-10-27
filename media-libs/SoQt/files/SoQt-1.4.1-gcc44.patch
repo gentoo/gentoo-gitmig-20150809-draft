@@ -1,11 +1,22 @@
---- ./src/Inventor/Qt/SoQtComponent.cpp.orig	2006-10-30 16:09:20.000000000 -0600
-+++ ./src/Inventor/Qt/SoQtComponent.cpp	2009-08-17 08:07:57.000000000 -0500
-@@ -100,7 +100,7 @@
+diff -ru soqt-1.4.1~/src/Inventor/Qt/SoQtComponent.cpp soqt-1.4.1/src/Inventor/Qt/SoQtComponent.cpp
+--- soqt-1.4.1~/src/Inventor/Qt/SoQtComponent.cpp	2009-02-25 07:55:02.000000000 -0800
++++ soqt-1.4.1/src/Inventor/Qt/SoQtComponent.cpp	2009-02-25 07:56:36.000000000 -0800
+@@ -100,10 +100,17 @@
    this->parent->removeEventFilter(this);
  }
  
--static void delete_dict_value(unsigned long key, void * value)
-+static void delete_dict_value(SbDictKeyType key, void * value)
++#if COIN_MAJOR_VERSION >= 3
++static void delete_dict_value(SbDict::Key key, void * value)
++{
++  delete (QCursor *)value;
++}
++#else // COIN_MAJOR_VERSION >= 3
+ static void delete_dict_value(unsigned long key, void * value)
  {
    delete (QCursor *)value;
  }
++#endif // COIN_MAJOR_VERSION < 3
+ 
+ void
+ SoQtComponentP::atexit_cleanup()
+

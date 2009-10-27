@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.22 2009/10/04 14:56:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.23 2009/10/27 22:02:48 vostorga Exp $
+
+  27 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
+  files/SoQt-1.4.1-gcc44.patch:
+  Updating patch to compile against gcc 4.4 , detecting if
+  >=media-libs/coin-3* is installed
 
   04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> SoQt-1.4.1.ebuild:
   Replace -Wl,--no-as-needed with function from flag-o-matic eclass.
