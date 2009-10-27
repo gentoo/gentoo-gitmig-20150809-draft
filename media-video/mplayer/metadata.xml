@@ -9,6 +9,7 @@
     <flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
     <flag name="ass">Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
     <flag name="bl">Enables Blinkenlights support in mplayer</flag>
+	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
     <flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
     <flag name="cpudetection">Enables runtime cpudetection (useful for bindist, compatability on other CPUs)</flag>
     <flag name="custom-cpuopts">Fine-tune custom CPU optimizations (UNSUPPORTED)</flag>
@@ -42,7 +43,9 @@
     <flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
     <flag name="teletext">Support for TV teletext interface</flag>
     <flag name="tga">Enables Targa video output</flag>
+	<flag name="toolame">Enable toolame MPEG-2 encoding</flag>
 	<flag name="tremor">Enable internal support for Vorbis</flag>
+	<flag name="twolame">Enable twolame MPEG-2 encoding</flag>
     <flag name="vdpau">Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card</flag>
     <flag name="vidix">Support for vidix video output</flag>
     <flag name="xanim">Enables support for xanim based codecs</flag>

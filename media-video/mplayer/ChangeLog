@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.683 2009/10/26 18:31:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.684 2009/10/27 13:35:11 ssuominen Exp $
+
+*mplayer-1.0_rc4_p20091026-r1 (27 Oct 2009)
+
+  27 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +mplayer-1.0_rc4_p20091026-r1.ebuild, metadata.xml:
+  Fix missing media-libs/libbs2b depend wrt #287993, thanks to Sebastian
+  Pipping for reporting. Also, missing media-sound/toolame handling.
 
 *mplayer-1.0_rc4_p20091026 (26 Oct 2009)
 
