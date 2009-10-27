@@ -1,9 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.98 2009/10/14 09:59:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.99 2009/10/27 13:36:58 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
+# Broken on so many setups it is just insane.
+# Unmask if you really know what you are doing.
+sys-apps/groff linguas_jp
 
 # Samuli Suominen <ssuominen@gentoo.org) (14 Oct 2009)
 # Conflict with dev-libs/libffi in ld.so.conf.
@@ -27,10 +32,6 @@ app-misc/strigi log
 # Jean-Noël Rivasseau <elvanor@gentoo.org> (23 Sep 2009)
 # X use flag only for amd64/x86, bug 285951.
 media-gfx/iscan X
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (22 Sep 2009)
-# Broken with KDE4, mask for now
->=app-office/openoffice-3.1.1 kde
 
 # Alex Legler <a3li@gentoo.org> (16 Sep 2009)
 # Maintainer of the kolab patch is not available (wrobel).
