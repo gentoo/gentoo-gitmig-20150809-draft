@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.3.2.ebuild,v 1.1 2009/10/06 19:59:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.3.2.ebuild,v 1.2 2009/10/27 16:57:26 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ DEPEND="
 	>=net-libs/libvncserver-0.9
 	net-libs/openslp
 	x11-libs/libXdamage
+	x11-libs/libXtst
 	zeroconf? (
 		|| (
 			net-dns/avahi[mdnsresponder-compat]
