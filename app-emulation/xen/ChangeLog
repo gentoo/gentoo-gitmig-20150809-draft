@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.63 2009/08/17 16:00:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.64 2009/10/27 22:14:43 patrick Exp $
+
+  27 Oct 2009; Patrick Lauer <patrick@gentoo.org> -xen-3.3.0.ebuild,
+  -xen-3.3.1.ebuild, -xen-3.3.1-r1.ebuild:
+  Removing old versions for #287936
 
 *xen-3.4.1 (17 Aug 2009)
 
