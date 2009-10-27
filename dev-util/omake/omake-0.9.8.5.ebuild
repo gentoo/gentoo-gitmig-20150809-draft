@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.5.ebuild,v 1.6 2009/10/12 07:55:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.5.ebuild,v 1.7 2009/10/27 11:54:51 aballier Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils toolchain-funcs multilib
 
 RESTRICT="installsources"
@@ -15,19 +15,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="doc fam ncurses +ocamlopt readline"
-DEPEND=">=dev-lang/ocaml-3.0.8
+DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	fam? ( virtual/fam )
 	readline? ( >=sys-libs/readline-4.3 )"
-
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
 
 use_boolean() {
 	if use $1; then
@@ -37,7 +28,12 @@ use_boolean() {
 	fi
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}/${P}-caml_sync.patch"
+	epatch "${FILESDIR}/${P}-lm_printf.patch"
+}
+
+src_configure() {
 	# Configuration steps...
 	echo "PREFIX = \$(dir \$\"/usr\")" > .config
 	echo "BINDIR = \$(dir \$\"\$(PREFIX)/bin\")" >> .config
@@ -64,7 +60,9 @@ src_compile() {
 	echo "DEFAULT_SAVE_INTERVAL = 60" >> .config
 
 	echo "OCAMLDEP_MODULES_ENABLED = false" >> .config
+}
 
+src_compile() {
 	emake all || die "compilation failed"
 }
 
