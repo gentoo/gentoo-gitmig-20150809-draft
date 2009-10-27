@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/parent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.3 2009/09/24 06:30:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.4 2009/10/27 17:54:07 volkmar Exp $
+
+  27 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> parent-0.223.ebuild:
+  Keywording for ppc.
 
 *parent-0.223 (24 Sep 2009)
 
