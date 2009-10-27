@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.72 2009/09/28 10:28:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.73 2009/10/27 20:02:50 klausman Exp $
+
+  27 Oct 2009; Tobias Klausmann <klausman@gentoo.org> tora-2.1.0.ebuild:
+  Stable on alpha, bug #289448
 
   28 Sep 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   -files/tora-2.0.0-gcc44.patch, -files/tora-gcc43.patch:
