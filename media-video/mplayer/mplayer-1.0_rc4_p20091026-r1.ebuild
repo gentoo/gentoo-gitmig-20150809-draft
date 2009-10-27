@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.1 2009/10/27 13:35:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.2 2009/10/27 13:59:32 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -486,6 +486,7 @@ src_configure() {
 
 	filter-flags -fPIC -fPIE
 	append-flags -D__STDC_LIMIT_MACROS
+	is-flag -O? || append-flags -O2
 	if use x86 || use x86-fbsd; then
 		use debug || append-flags -fomit-frame-pointer
 	fi
