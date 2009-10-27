@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.20 2009/10/05 15:53:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.21 2009/10/27 10:24:27 volkmar Exp $
+
+  27 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> libpst-0.6.41.ebuild:
+  Keywording for ppc, bug 271000
 
   05 Oct 2009; Raúl Porcel <armin76@gentoo.org> libpst-0.6.41.ebuild:
   Add ~ia64/~sparc wrt #271000
