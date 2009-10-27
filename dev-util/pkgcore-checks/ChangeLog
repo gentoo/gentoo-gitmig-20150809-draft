@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.37 2009/10/22 10:37:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.38 2009/10/27 08:04:06 patrick Exp $
+
+*pkgcore-checks-0.4.7 (27 Oct 2009)
+
+  27 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  -pkgcore-checks-0.4.2.ebuild, -pkgcore-checks-0.4.3.ebuild,
+  -pkgcore-checks-0.4.4.ebuild, -pkgcore-checks-0.4.5.ebuild,
+  +pkgcore-checks-0.4.7.ebuild:
+  Bump, remove old
 
 *pkgcore-checks-0.4.6 (22 Oct 2009)
 
