@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10691 2009/10/27 19:41:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10692 2009/10/27 22:37:13 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -199,6 +199,7 @@ kde-misc/kio-locate
 # Masked for testing. Doesn't work with current Thunar.
 # See, http://bugs.gentoo.org/show_bug.cgi?id=289867
 >=xfce-base/exo-0.5
+>=xfce-base/thunar-1.0.1-r1
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (23 Oct 2009)
 #
