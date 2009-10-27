@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.13.ebuild,v 1.2 2009/03/04 21:17:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.14.ebuild,v 1.1 2009/10/27 19:40:42 dertobi123 Exp $
 
-inherit confutils
+EAPI="2"
 
 MY_P=pnp-${PV}
 
@@ -16,30 +16,30 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/php-4.3
+DEPEND=">=dev-lang/php-4.3[gd-external,pcre,xml,zlib]
 	>=net-analyzer/rrdtool-1.2
 	net-analyzer/nagios-core"
 RDEPEND="${DEPEND}
 	virtual/perl-Getopt-Long
 	virtual/perl-Time-HiRes"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	confutils_require_built_with_all dev-lang/php gd pcre xml zlib
-}
-
-src_compile() {
+src_configure() {
 	econf \
 		--sysconfdir=/etc/pnp \
 		--datarootdir=/usr/share/pnp \
 		--with-perfdata-dir=/var/nagios/perfdata \
 		--with-perfdata-spool-dir=/var/spool/pnp  || die "econf failed"
+}
+
+src_compile() {
 	emake all || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" fullinstall || die "emake install failed"
+	emake DESTDIR="${D}" install install-config || die "emake install failed"
+	doinitd "${FILESDIR}/npcd"
 }
 
 pkg_postinst() {

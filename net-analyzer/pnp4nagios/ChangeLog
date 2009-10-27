@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.11 2009/03/18 22:23:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.12 2009/10/27 19:40:42 dertobi123 Exp $
+
+*pnp4nagios-0.4.14 (27 Oct 2009)
+
+  27 Oct 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  -pnp4nagios-0.4.13.ebuild, +pnp4nagios-0.4.14.ebuild, +files/npcd:
+  Version bump (#290758)
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> pnp4nagios-0.4.12.ebuild:
   Marking pnp4nagios-0.4.12 ppc stable for bug 256177
