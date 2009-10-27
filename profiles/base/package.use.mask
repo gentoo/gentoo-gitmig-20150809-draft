@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.99 2009/10/27 13:36:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.100 2009/10/27 19:18:24 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -8,7 +8,7 @@
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
 # Broken on so many setups it is just insane.
 # Unmask if you really know what you are doing.
-sys-apps/groff linguas_jp
+sys-apps/groff linguas_ja
 
 # Samuli Suominen <ssuominen@gentoo.org) (14 Oct 2009)
 # Conflict with dev-libs/libffi in ld.so.conf.
