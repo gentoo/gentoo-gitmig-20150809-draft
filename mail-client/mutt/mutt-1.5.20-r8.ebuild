@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r8.ebuild,v 1.2 2009/10/27 13:28:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r8.ebuild,v 1.3 2009/10/27 20:37:34 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -241,6 +241,10 @@ src_install() {
 		cp doc/mutt.man mutt.1
 		cp doc/muttbug.man flea.1
 		doman mutt.1 flea.1
+	else
+		# nuke manpages that should be provided by an MTA, bug #177605
+		rm "${ED}"/usr/share/man/man5/{mbox,mmdf}.5 \
+			|| ewarn "failed to remove files, please file a bug"
 	fi
 
 	if use !prefix ; then

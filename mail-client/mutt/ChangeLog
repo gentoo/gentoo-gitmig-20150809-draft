@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.163 2009/10/27 13:28:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.164 2009/10/27 20:37:34 grobian Exp $
+
+  27 Oct 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r8.ebuild:
+  Remove mmdf.5 and mbox.5 manpages, bug #177605
 
   27 Oct 2009; Alexis Ballier <aballier@gentoo.org> mutt-1.5.20-r8.ebuild:
   keyword ~x86-fbsd, bug #290154
