@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.160 2009/10/26 20:37:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.161 2009/10/27 09:08:08 grobian Exp $
+
+  27 Oct 2009; Fabian Groffen <grobian@gentoo.org> -mutt-1.5.16.ebuild,
+  -mutt-1.5.19-r1.ebuild:
+  Dropped vulnerable versions that won't get a backported fix, bug #290660
 
   26 Oct 2009; Tobias Klausmann <klausman@gentoo.org> mutt-1.5.20-r7.ebuild:
   Keyworded on alpha, bug #290154
