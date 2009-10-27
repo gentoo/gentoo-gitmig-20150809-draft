@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3.ebuild,v 1.3 2009/09/23 20:31:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3-r1.ebuild,v 1.1 2009/10/27 19:47:34 dertobi123 Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -31,6 +31,7 @@ src_unpack() {
 	if [ $KV_PATCH -lt 15 ]; then
 		die "Sorry, your kernel must be 2.6.16-rc5 or newer!"
 	fi
+	epatch "${FILESDIR}"/CVE-2009-1297.patch
 }
 
 src_compile() {
