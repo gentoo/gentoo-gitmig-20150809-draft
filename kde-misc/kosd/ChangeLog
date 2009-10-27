@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/kosd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.1 2009/10/27 23:40:39 ssuominen Exp $
+
+*kosd-0.4.2 (28 Oct 2009)
+
+  28 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> +kosd-0.4.2.ebuild:
+  Initial commit wrt #223837, thanks to Baldrun Orv for reporting.
+
