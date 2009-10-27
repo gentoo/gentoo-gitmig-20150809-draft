@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.16 2009/10/12 19:11:40 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.17 2009/10/27 14:19:19 scarabeus Exp $
+
+  27 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> gnash-0.8.5.ebuild,
+  gnash-0.8.6.ebuild:
+  Rename variable to correspond with kde eclass.
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> gnash-0.8.5.ebuild,
   gnash-0.8.6.ebuild:
