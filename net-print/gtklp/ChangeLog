@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gtklp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.32 2009/10/02 06:52:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.33 2009/10/27 21:52:03 bangert Exp $
+
+  27 Oct 2009; Thilo Bangert <bangert@gentoo.org> gtklp-1.2.7.ebuild:
+  fix building by fetching an existing icon (bug #287467)
 
 *gtklp-1.2.7 (02 Oct 2009)
 

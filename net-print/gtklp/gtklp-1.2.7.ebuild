@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.7.ebuild,v 1.1 2009/10/02 06:52:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.7.ebuild,v 1.2 2009/10/27 21:52:03 bangert Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit autotools eutils
 DESCRIPTION="A GUI for cupsd"
 HOMEPAGE="http://gtklp.sourceforge.net"
 SRC_URI="mirror://sourceforge/gtklp/${P}.src.tar.gz
-	mirror://gentoo/gtklp-logo.png.gz"
+	mirror://sourceforge/gtklp/logo.xpm.gz -> gtklp-logo.xpm.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,8 +40,7 @@ src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS BUGS ChangeLog README TODO USAGE || die
 
-	mv gtklp/{logo,gtklp-logo}.xpm
-	doicon gtklp/gtklp-logo.xpm
-	make_desktop_entry 'gtklp -i' "print files via CUPS" gtklp-logo 'System;Printing'
+	doicon "${WORKDIR}"/gtklp-logo.xpm
+	make_desktop_entry 'gtklp -i' "Print files via CUPS" gtklp-logo 'System;Printing'
 	make_desktop_entry gtklpq "CUPS queue manager" gtklp-logo 'System;Printing'
 }
