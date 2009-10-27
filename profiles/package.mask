@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10689 2009/10/27 14:44:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10690 2009/10/27 19:36:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (27 Oct 2009)
+# KDE3-only. Doesn't compile.
+#
+# kde-misc/katalog, bug 278031
+# kde-misc/kblogger, bugs 260989 and 277820
+#
+# Masked for removal in 30 days.
+kde-misc/katalog
+kde-misc/kblogger
 
 # Joe Sapp <nixphoeni@gentoo.org> (27 Oct 2009)
 # Uses old, deprecated Sensors.
