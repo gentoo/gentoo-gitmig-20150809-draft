@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6.ebuild,v 1.3 2009/10/26 20:08:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.1 2009/10/27 12:12:35 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -33,10 +33,13 @@ src_prepare() {
 	sed -e "s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
 		-i "${S}"/tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
-	# install python files as module
+	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i "${S}"/tools/clang/tools/scan-view/scan-view \
 		|| die "scan-view sed failed"
+	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#/usr/share/${PN}#" \
+		-i "${S}"/tools/clang/utils/scan-build \
+		|| die "scan-build sed failed"
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
@@ -93,6 +96,10 @@ src_install() {
 	if use static-analyzer ; then
 		dobin utils/ccc-analyzer
 		dobin utils/scan-build
+
+		insinto /usr/share/${PN}
+		doins utils/scanview.css
+		doins utils/sorttable.js
 
 		cd tools/scan-view || "die cd scan-view failed"
 		dobin scan-view
