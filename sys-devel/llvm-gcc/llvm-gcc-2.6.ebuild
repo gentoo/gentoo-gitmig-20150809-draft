@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.6.ebuild,v 1.1 2009/10/25 20:21:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.6.ebuild,v 1.2 2009/10/27 22:59:59 voyageur Exp $
 
 EAPI=2
 inherit multilib
@@ -15,7 +15,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${PN}-${MY_PV}.source.tar.gz"
 LICENSE="GPL-2"
 SLOT=0
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="bootstrap fortran nls objc objc++ test"
+IUSE="bootstrap fortran multilib nls objc objc++ test"
 
 RDEPEND=">=sys-devel/llvm-$PV"
 DEPEND="${RDEPEND}
@@ -40,6 +40,7 @@ src_configure() {
 	use objc++ && EXTRALANGS="${EXTRALANGS},obj-c++"
 
 	ECONF_SOURCE="${WORKDIR}"/llvm-gcc${MY_PV}.source econf --prefix=/usr/$(get_libdir)/${PN}-${MY_PV} \
+		$(use_enable multilib) \
 		--program-prefix=${PN}-${MY_PV}- \
 		--enable-llvm=/usr --enable-languages=c,c++${EXTRALANGS} \
 		|| die "configure failed"
