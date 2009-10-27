@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.492 2009/10/17 19:21:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.493 2009/10/27 14:27:27 scarabeus Exp $
+
+  27 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  openoffice-3.1.1.ebuild:
+  Rename variable to correspond with kde eclass.
 
   17 Oct 2009; Zac Medico <zmedico@gentoo.org> openoffice-3.1.1.ebuild:
   Prefer newer xulrunner:1.9 over xulrunner:1.8.
