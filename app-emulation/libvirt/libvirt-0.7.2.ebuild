@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.2.ebuild,v 1.2 2009/10/23 23:19:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.2.ebuild,v 1.3 2009/10/27 21:20:30 patrick Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="avahi caps hal iscsi kvm +libvirtd lvm +lxc +network nfs one nls numa
 
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
+	net-misc/curl
 	>=dev-libs/libxml2-2.5
 	>=net-libs/gnutls-1.0.25
 	dev-lang/python
