@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/efte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.7 2009/10/09 21:52:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.8 2009/10/27 21:51:06 scarabeus Exp $
+
+  27 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> -efte-0.95.ebuild,
+  -efte-0.96.ebuild:
+  Drop old packages using direct cmake calls.
 
   09 Oct 2009; Hanno Boeck <hanno@gentoo.org> efte-1.0.ebuild:
   Better usage of cmake eclass.
