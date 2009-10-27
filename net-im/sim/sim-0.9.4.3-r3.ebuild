@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.7 2009/10/23 13:45:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.8 2009/10/27 14:40:30 pva Exp $
 
 EAPI=1
 
@@ -70,4 +70,11 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed."
 	dodoc TODO README AUTHORS.sim jisp-resources.txt ChangeLog
+}
+
+pkg_postinst() {
+	ewarn "Since kde-3.5 is deprecated sim doesn't have kde support any more (#275316)."
+	ewarn "If you have used sim built with kde USE flag enabled to migrate on qt only"
+	ewarn "version of sim, please, run the following command:"
+	ewarn " $ mv ~/.kde3.5/share/apps/sim ~/.sim"
 }

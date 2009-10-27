@@ -1,6 +1,9 @@
 # ChangeLog for net-im/sim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.98 2009/10/23 13:45:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.99 2009/10/27 14:40:30 pva Exp $
+
+  27 Oct 2009; Peter Volkov <pva@gentoo.org> sim-0.9.4.3-r3.ebuild:
+  Added migration note, thank Anton Bolshakov for report in bug #275316.
 
   23 Oct 2009; Peter Volkov <pva@gentoo.org> sim-0.9.4.3-r3.ebuild:
   Added inherit on qt3 to avoid sandbox violations, bug #275316, thank
