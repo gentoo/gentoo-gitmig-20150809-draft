@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmalms
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.15 2008/06/28 06:40:39 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.16 2009/10/27 08:48:48 bangert Exp $
+
+  27 Oct 2009; Thilo Bangert <bangert@gentoo.org> wmalms-1.1.1.ebuild,
+  wmalms-1.1.1-r1.ebuild:
+  restricting to old lm_sensors (bug #289829)
 
   28 Jun 2008; Markus Meier <maekke@gentoo.org> wmalms-1.1.1-r1.ebuild:
   x86 stable, bug #229549
