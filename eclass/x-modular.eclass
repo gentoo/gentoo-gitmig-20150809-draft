@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.114 2009/10/11 07:41:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.115 2009/10/27 15:16:17 scarabeus Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -440,6 +440,7 @@ x-modular_src_install() {
 			|| die
 	else
 		make \
+			docdir=/usr/share/doc/${PF} \
 			DESTDIR="${D}" \
 			install \
 			|| die
