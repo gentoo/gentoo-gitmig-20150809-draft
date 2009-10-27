@@ -40,6 +40,7 @@ hardened
 jack
 lapack
 prolog
+lqr
 
 # Stuff we don't want
 antlr
