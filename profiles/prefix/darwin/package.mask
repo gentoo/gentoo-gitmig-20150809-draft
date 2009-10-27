@@ -1,7 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.5 2009/09/12 14:13:49 grobian Exp $
-# $Id: package.mask,v 1.5 2009/09/12 14:13:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.6 2009/10/27 19:38:42 grobian Exp $
+# $Id: package.mask,v 1.6 2009/10/27 19:38:42 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (27 Oct 2009)
+# Fails compiling due to some missing dwarf symbols and internal
+# segfaults
+~sys-devel/gcc-4.3.2
+~sys-devel/gcc-4.3.3
+~sys-devel/gcc-4.3.4
+~sys/devel/gcc-4.4.1
+~sys/devel/gcc-4.4.2
 
 # Fabian Groffen <grobian@gentoo.org> (05 Sep 2009)
 # These are Snow Leopard releases and still a Work In Progress (tm)
