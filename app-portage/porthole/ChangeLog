@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/porthole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.39 2009/05/24 04:19:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.40 2009/10/27 14:25:48 idl0r Exp $
+
+*porthole-0.6.0 (27 Oct 2009)
+
+  27 Oct 2009; Christian Ruppert <idl0r@gentoo.org> -porthole-0.5.0.ebuild,
+  +porthole-0.6.0.ebuild:
+  Version bump to 0.6.0, bug 219902, thanks to Brian Dolbec
+  <brian.dolbec@gmail.com> and all others.
+  This release fixes bug 224877, bug 238192, bug 264167 and bug 265602.
+  Remove porthole-0.5.0 due to e.g. bug 195465.
 
   24 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   porthole-0.5.0.ebuild, porthole-0.6.0_rc2.ebuild,
