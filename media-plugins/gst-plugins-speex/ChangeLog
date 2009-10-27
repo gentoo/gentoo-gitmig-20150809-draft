@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-speex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.60 2009/10/18 18:48:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.61 2009/10/27 13:38:06 aballier Exp $
+
+  27 Oct 2009; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-speex-0.10.15.ebuild:
+  keyword ~x86-fbsd
 
   18 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-speex-0.10.14.ebuild:
