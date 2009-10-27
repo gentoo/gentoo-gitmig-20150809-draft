@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ingres-10.0.0.109.ebuild,v 1.1 2009/10/27 23:26:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ingres-10.0.0.109.ebuild,v 1.2 2009/10/27 23:40:05 patrick Exp $
 
 EAPI="2"
 
@@ -35,7 +35,8 @@ LICENSE="GPL-2"
 IUSE="client net das odbc demodb"
 
 RDEPEND="dev-libs/xerces-c
-	app-arch/pax"
+	app-arch/pax
+	virtual/jre"
 
 DEPEND="${RDEPEND}
 	app-crypt/mit-krb5

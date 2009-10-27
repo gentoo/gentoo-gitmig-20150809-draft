@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ingres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.3 2009/10/27 23:26:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.4 2009/10/27 23:40:05 patrick Exp $
+
+  27 Oct 2009; Patrick Lauer <patrick@gentoo.org> ingres-10.0.0.109.ebuild:
+  Fixing deps: Adding virtual/jre. paths for ingsql still broken.
 
 *ingres-10.0.0.109 (27 Oct 2009)
 
