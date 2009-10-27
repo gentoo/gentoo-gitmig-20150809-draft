@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/utf8-string
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.1 2009/10/27 06:46:30 kolmodin Exp $
+
+*utf8-string-0.3.5 (27 Oct 2009)
+
+  27 Oct 2009; <kolmodin@gentoo.org> +utf8-string-0.3.5.ebuild,
+  +metadata.xml:
+  Initial version of utf8-string, a UTF8 layer for IO and Strings for
+  Haskell.
+
