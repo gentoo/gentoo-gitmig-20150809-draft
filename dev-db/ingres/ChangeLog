@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/ingres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.2 2009/10/22 22:06:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.3 2009/10/27 23:26:42 patrick Exp $
+
+*ingres-10.0.0.109 (27 Oct 2009)
+
+  27 Oct 2009; Patrick Lauer <patrick@gentoo.org> +ingres-10.0.0.109.ebuild:
+  Bump, fixes #290742
 
 *ingres-10.0.0.108 (22 Oct 2009)
 
