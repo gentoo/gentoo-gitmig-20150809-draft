@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-1.0.0-r1.ebuild,v 1.1 2009/07/11 15:46:26 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-1.0.0-r1.ebuild,v 1.2 2009/10/27 11:09:03 ssuominen Exp $
 
 EAPI="2"
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 MY_P="${P/_/-}"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="curl debug doc event-callback gtk minimal ncurses session test upnp webinterface"
 
 RDEPEND=">=dev-libs/boost-1.35
@@ -48,6 +48,7 @@ src_prepare() {
 }
 
 src_configure() {
+	append-flags -pthread
 	econf LIBS="-lboost_thread -lboost_date_time" \
 		$(use_enable curl url) \
 		$(use_enable debug) \
