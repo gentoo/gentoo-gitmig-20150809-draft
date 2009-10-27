@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.6 2007/08/15 21:08:15 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.7 2009/10/27 11:18:26 elvanor Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -35,7 +35,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-${PVR}-build.xml.patch"
-	rm -v ${S}/lib/*.jar || die
+	rm -v "${S}/lib/"*.jar || die
 
 	java-ant_rewrite-classpath
 }
