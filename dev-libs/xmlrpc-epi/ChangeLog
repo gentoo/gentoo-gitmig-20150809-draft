@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.6 2009/10/17 07:54:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.7 2009/10/27 10:49:17 ssuominen Exp $
+
+  27 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xmlrpc-epi-0.54-r1.ebuild:
+  amd64 stable wrt #288970
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   remove static-libs description as it is global now
