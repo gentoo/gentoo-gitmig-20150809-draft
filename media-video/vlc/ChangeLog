@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.526 2009/10/22 13:12:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.527 2009/10/27 11:36:13 aballier Exp $
+
+  27 Oct 2009; Alexis Ballier <aballier@gentoo.org> vlc-0.9.10.ebuild,
+  vlc-1.0.2.ebuild:
+  adjust x264 deps
 
 *vlc-1.0.3_rc (22 Oct 2009)
 
