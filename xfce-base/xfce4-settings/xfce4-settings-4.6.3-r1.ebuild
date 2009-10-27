@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.3.ebuild,v 1.9 2009/10/27 16:46:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.3-r1.ebuild,v 1.1 2009/10/27 16:46:42 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="debug +keyboard libnotify sound"
 
 RDEPEND=">=dev-libs/glib-2.12:2
@@ -21,8 +21,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	>=x11-libs/gtk+-2.10:2
 	>=x11-libs/libX11-1
 	>=x11-libs/libXcursor-1.1
-	>=x11-libs/libXi-1
-	<x11-libs/libXi-1.3
+	>=x11-libs/libXi-1.3
 	>=x11-libs/libXrandr-1.1
 	>=x11-libs/libwnck-2.12
 	>=xfce-base/libxfce4util-4.6
@@ -47,5 +46,6 @@ pkg_setup() {
 		$(use_enable sound sound-settings)
 		$(use_enable debug)"
 	DOCS="AUTHORS ChangeLog NEWS TODO"
-	PATCHES=( "${FILESDIR}/${P}-exo.patch" )
+	PATCHES=( "${FILESDIR}/${P}-exo.patch"
+		"${FILESDIR}/${P}-Xi.patch" )
 }
