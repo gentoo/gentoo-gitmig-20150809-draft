@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.6.ebuild,v 1.1 2009/09/26 14:01:33 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.6.ebuild,v 1.2 2009/10/27 14:24:33 scarabeus Exp $
 
 EAPI="2"
 
 KDE_REQUIRED="optional"
-WANT_CMAKE="false"
+CMAKE_REQUIRED="false"
 GCONF_DEBUG="no" # debug managed by the ebuild
 
 inherit kde4-base gnome2
