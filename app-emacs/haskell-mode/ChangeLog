@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/haskell-mode
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.32 2009/01/29 01:56:31 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.33 2009/10/27 06:31:27 ulm Exp $
+
+*haskell-mode-2.5.1 (27 Oct 2009)
+
+  27 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
+  +files/50haskell-mode-gentoo.el, +haskell-mode-2.5.1.ebuild:
+  Version bump. Thanks to <Ivan.Miljenovic@gmail.com> in bug 290675.
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -haskell-mode-2.3.ebuild:
@@ -135,9 +141,9 @@
 *haskell-mode-1.44 (09 Feb 2003)
 
   09 Feb 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
-  haskell-mode-1.44.ebuild, files/50haskell-mode-gentoo.el, 
+  haskell-mode-1.44.ebuild, files/50haskell-mode-gentoo.el,
   files/digest-haskell-mode-1.44 :
 
   Initial import. Ebuild contributed by Peter Simons
-  <simons+gentoo@cryp.to> of bug #13156 (polished up by 
+  <simons+gentoo@cryp.to> of bug #13156 (polished up by
   <mkennedy@gentoo.org>)
