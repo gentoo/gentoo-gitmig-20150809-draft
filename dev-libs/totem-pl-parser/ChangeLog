@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.35 2009/10/24 16:53:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.36 2009/10/27 16:02:06 mrpouet Exp $
+
+*totem-pl-parser-2.26.3-r1 (27 Oct 2009)
+
+  27 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +totem-pl-parser-2.26.3-r1.ebuild,
+  +files/totem-pl-parser-2.26.3-no-libcamel-use-gmime.patch:
+  Use gmime instead of libcamel removing the e-d-s dependency, GNOME Bug
+  522639 and GNOME Bug 589559, patch wrote by nirbheek, drop ~arm due
+  to gmime:2.4 (need to be rekeyworded).
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> totem-pl-parser-2.26.2.ebuild:
   ppc stable #281427

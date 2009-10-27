@@ -1,0 +1,303 @@
+Use gmime instead of libcamel for dates (patch from upstream)
+
+https://bugzilla.gnome.org/show_bug.cgi?id=522639
+https://bugzilla.gnome.org/show_bug.cgi?id=589559
+
+---
+--- README
++++ README
+@@ -16,6 +16,7 @@
+ ============
+ 
+ glib with GIO (glib 2.16)
++gmime 2.4
+ 
+ BUGS
+ ====
+--- configure.in
++++ configure.in
+@@ -59,35 +59,35 @@
+ pkg_modules="glib-2.0 >= $GLIB_REQS gtk+-2.0 libxml-2.0 gthread-2.0 gio-2.0 >= $GIO_REQS"
+ 
+ ##################################
+-# Checking libcamel dependency
++# Checking libgmime dependency
+ ##################################
+-camel_message=""
++gmime_message=""
+ 
+-AC_ARG_ENABLE(camel-i-know-what-im-doing,
+-	      AS_HELP_STRING([--disable-camel-i-know-what-im-doing],
+-			     [Disable libcamel (Unsupported, breaks Podcast support).]),
+-			     [enable_camel=no],
+-			     [enable_camel=yes])
+-
+-if test "x$enable_camel" = "xyes" ; then
+-   PKG_CHECK_MODULES(LIBCAMEL,  
+-		     camel-1.2,
+-                     [have_camel=yes], 
+-                     [have_camel=no])
+-
+-   if test "x$have_camel" = "xyes" ; then
+-      AC_SUBST(LIBCAMEL, camel-1.2)
+-      AC_SUBST(USELIBCAMEL, yes)
+-      AC_DEFINE(HAVE_CAMEL, 1, [Camel available in the system])
+-      pkg_modules="$pkg_modules camel-1.2"
++AC_ARG_ENABLE(gmime-i-know-what-im-doing,
++	      AS_HELP_STRING([--disable-gmime-i-know-what-im-doing],
++			     [Disable libgmime (Unsupported, breaks Podcast support).]),
++			     [enable_gmime=no],
++			     [enable_gmime=yes])
++
++if test "x$enable_gmime" = "xyes" ; then
++   PKG_CHECK_MODULES(GMIME,  
++		     gmime-2.4,
++                     [have_gmime=yes], 
++                     [have_gmime=no])
++
++   if test "x$have_gmime" = "xyes" ; then
++      AC_SUBST(GMIME, gmime-2.4)
++      AC_SUBST(USEGMIME, yes)
++      AC_DEFINE(HAVE_GMIME, 1, [GMime available in the system])
++      pkg_modules="$pkg_modules gmime-2.4"
+    else
+-      AC_MSG_ERROR([libcamel is required to compile totem-pl-parser.])
++      AC_MSG_ERROR([libgmime is required to compile totem-pl-parser.])
+    fi
+ else
+-   AC_SUBST(USELIBCAMEL, no)
+-   camel_message="
++   AC_SUBST(USEGMIME, no)
++   gmime_message="
+  **************************************************************
+- Compiling totem-pl-parser without libcamel.
++ Compiling totem-pl-parser without libgmime.
+  This will break podcast support and is completely unsupported.
+  **************************************************************"
+ fi
+@@ -142,5 +142,5 @@
+ AC_OUTPUT
+ 
+ echo "
+-$camel_message
++$gmime_message
+ "
+--- plparse/totem-pl-parser-podcast.c
++++ plparse/totem-pl-parser-podcast.c
+@@ -235,8 +235,8 @@
+ 			 GFile *base_file,
+ 			 gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	xml_node_t* doc, *channel;
+ 	char *contents;
+@@ -277,7 +277,7 @@
+ 	xml_parser_free_tree (doc);
+ 
+ 	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ /* http://www.apple.com/itunes/store/podcaststechspecs.html */
+@@ -287,8 +287,8 @@
+ 			  GFile *base_file,
+ 			  gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	TotemPlParserResult ret;
+ 	char *uri, *new_uri, *uri_scheme;
+@@ -308,7 +308,7 @@
+ 	g_object_unref (new_file);
+ 
+ 	return ret;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ TotemPlParserResult
+@@ -317,8 +317,8 @@
+ 			  GFile *base_file,
+ 			  gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	TotemPlParserResult ret;
+ 	char *uri, *new_uri;
+@@ -346,7 +346,7 @@
+ 	g_object_unref (new_file);
+ 
+ 	return ret;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ /* Atom docs:
+@@ -485,8 +485,8 @@
+ 			  GFile *base_file,
+ 			  gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	xml_node_t* doc;
+ 	char *contents, *uri;
+@@ -517,7 +517,7 @@
+ 	xml_parser_free_tree (doc);
+ 
+ 	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ TotemPlParserResult
+@@ -526,8 +526,8 @@
+ 			      GFile *base_file,
+ 			      gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	guint len;
+ 
+@@ -544,7 +544,7 @@
+ 		return totem_pl_parser_add_opml (parser, file, base_file, data);
+ 
+ 	return TOTEM_PL_PARSER_RESULT_UNHANDLED;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ /* From libgsf's gsf-utils.h */
+@@ -716,8 +716,8 @@
+ 			  GFile *base_file,
+ 			  gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	char *contents, *uncompressed, *itms_uri;
+ 	GFile *itms_file, *feed_uri;
+@@ -766,7 +766,7 @@
+ 	g_object_unref (feed_uri);
+ 
+ 	return ret;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ gboolean
+@@ -865,8 +865,8 @@
+ 			  GFile *base_file,
+ 			  gpointer data)
+ {
+-#ifndef HAVE_CAMEL
+-	WARN_NO_CAMEL;
++#ifndef HAVE_GMIME
++	WARN_NO_GMIME;
+ #else
+ 	xml_node_t* doc;
+ 	char *contents, *uri;
+@@ -897,7 +897,7 @@
+ 	xml_parser_free_tree (doc);
+ 
+ 	return TOTEM_PL_PARSER_RESULT_SUCCESS;
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ }
+ 
+ #endif /* !TOTEM_PL_PARSER_MINI */
+--- plparse/totem-pl-parser-podcast.h
++++ plparse/totem-pl-parser-podcast.h
+@@ -38,12 +38,12 @@
+ 
+ #ifndef TOTEM_PL_PARSER_MINI
+ 
+-#ifndef HAVE_CAMEL
+-#define WARN_NO_CAMEL { \
+-	g_warning("Trying to parse a podcast, but totem-pl-parser built without libcamel support. Please contact your distribution provider."); \
++#ifndef HAVE_GMIME
++#define WARN_NO_GMIME { \
++	g_warning("Trying to parse a podcast, but totem-pl-parser built without libgmime support. Please contact your distribution provider."); \
+ 	return TOTEM_PL_PARSER_RESULT_ERROR; \
+ }
+-#endif /* !HAVE_CAMEL */
++#endif /* !HAVE_GMIME */
+ 
+ gboolean totem_pl_parser_is_itms_feed (GFile *file);
+ 
+--- plparse/totem-pl-parser.c
++++ plparse/totem-pl-parser.c
+@@ -109,8 +109,8 @@
+ #include <gobject/gvaluecollector.h>
+ #include <gtk/gtk.h>
+ 
+-#ifdef HAVE_CAMEL
+-#include <camel/camel-mime-utils.h>
++#ifdef HAVE_GMIME
++#include <gmime/gmime-utils.h>
+ #endif
+ 
+ #include "totem-pl-parser.h"
+@@ -1991,7 +1991,7 @@
+ guint64
+ totem_pl_parser_parse_date (const char *date_str, gboolean debug)
+ {
+-#ifdef HAVE_CAMEL
++#ifdef HAVE_GMIME
+ 	GTimeVal val;
+ 
+ 	g_return_val_if_fail (date_str != NULL, -1);
+@@ -2004,10 +2004,10 @@
+ 	}
+ 	D(g_message ("Failed to parse duration '%s' using the ISO8601 parser", date_str));
+ 	/* Fall back to RFC 2822 date parsing */
+-	return camel_header_decode_date (date_str, NULL);
++	return g_mime_utils_header_decode_date (date_str, NULL);
+ #else
+-	WARN_NO_CAMEL;
+-#endif /* HAVE_CAMEL */
++	WARN_NO_GMIME;
++#endif /* HAVE_GMIME */
+ }
+ #endif /* !TOTEM_PL_PARSER_MINI */
+ 
+--- totem-plparser-uninstalled.pc.in
++++ totem-plparser-uninstalled.pc.in
+@@ -9,6 +9,6 @@
+ Description: Totem Playlist Parser library
+ Version: @VERSION@
+ Requires: gtk+-2.0
+-Requires.private: libxml-2.0 camel-1.2
++Requires.private: libxml-2.0 gmime-2.4
+ Libs: ${pc_top_builddir}/${pcfiledir}/plparse/libtotem-plparser.la
+ Cflags: -I${pc_top_builddir}/${pcfiledir}/plparse
+--- totem-plparser.pc.in
++++ totem-plparser.pc.in
+@@ -9,7 +9,7 @@
+ Description: Totem Playlist Parser library
+ Version: @VERSION@
+ Requires: gtk+-2.0
+-Requires.private: libxml-2.0 @LIBCAMEL@
++Requires.private: libxml-2.0 @GMIME@
+ Libs: -L${libdir} -ltotem-plparser
+ Cflags: -I${includedir}/totem-pl-parser/1/plparser
+-uselibcamel=@USELIBCAMEL@
++uselibcamel=@USEGMIME@
