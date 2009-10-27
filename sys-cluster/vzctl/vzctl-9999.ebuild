@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.2 2009/10/21 11:53:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.3 2009/10/27 13:50:33 pva Exp $
 
 EAPI="2"
 
@@ -13,9 +13,9 @@ EGIT_REPO_URI="git://git.openvz.org/pub/vzctl"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="bash-completion logrotate"
+IUSE="bash-completion"
 
-RDEPEND="logrotate? ( app-admin/logrotate )
+RDEPEND="
 	net-firewall/iptables
 	sys-apps/ed
 	sys-apps/iproute2
@@ -35,8 +35,8 @@ src_configure() {
 		--localstatedir=/var \
 		--enable-cron \
 		--enable-udev \
-		$(use_enable bash-completion bashcomp) \
-		$(use_enable logrotate)
+		--enable-logrotate \
+		$(use_enable bash-completion bashcomp)
 }
 
 src_install() {

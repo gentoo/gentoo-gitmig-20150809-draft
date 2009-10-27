@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.65 2009/10/21 11:53:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.66 2009/10/27 13:50:33 pva Exp $
+
+  27 Oct 2009; Peter Volkov <pva@gentoo.org> vzctl-9999.ebuild:
+  Nuke logrotate USE flag in git ebuild too.
 
   21 Oct 2009; Peter Volkov <pva@gentoo.org> vzctl-9999.ebuild:
   Small clenup to restore DESCRIPTION, thank Mr_Bones_ for report.
