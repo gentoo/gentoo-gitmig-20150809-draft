@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.6 2007/09/06 22:32:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.7 2009/10/27 06:33:51 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Descent 2 engine from Icculus"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cdinstall debug opengl ggi svga"
 
-COMMON="media-libs/libsdl
+COMMON="media-libs/libsdl[audio,joystick,video]
 	media-libs/sdl-image
 	opengl? ( virtual/opengl )
 	ggi? ( media-libs/libggi )
@@ -26,12 +27,10 @@ DEPEND="${COMMON}
 
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PV}-shellscripts.patch"
-	epatch "${FILESDIR}/${P}-dofpcalcs-macro.patch"
+src_prepare() {
+	epatch \
+		"${FILESDIR}/${PV}-shellscripts.patch" \
+		"${FILESDIR}/${P}-dofpcalcs-macro.patch"
 
 	sed -i \
 		-e '/NASMFLAGS/s/-d/-D/g' \
@@ -68,15 +67,14 @@ src_compile() {
 		egamesconf \
 			${myconf} \
 			${renconf} \
-			--datadir="${GAMES_DATADIR_BASE}" \
-			|| die "conf ${ren}"
+			--datadir="${GAMES_DATADIR_BASE}"
 		emake CXXFLAGS="${CXXFLAGS} ${defflags}" || die "build ${ren}"
 		mv d2x* my-bins/
 	done
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dogamesbin my-bins/* || die "dogamesbin failed"
 	dodoc AUTHORS ChangeLog NEWS README* TODO readme.txt
 
