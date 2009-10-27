@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r7.ebuild,v 1.2 2009/10/26 20:37:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r8.ebuild,v 1.1 2009/10/27 09:20:24 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -78,6 +78,8 @@ src_unpack() {
 	built_with_use sys-libs/ncurses unicode && \
 		epatch "${FILESDIR}"/mutt-1.5.18-solaris-ncurses-chars.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-1.2.0.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
+
 	# post-release hot-fixes
 	epatch "${FILESDIR}"/mutt-1.5.20-imap-port-invalid-d6f88fbf8387.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-header-weeding-f40de578e8ed.patch
@@ -98,7 +100,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/mutt-1.5.20-fix-mh-parsing-14bb498c6a1c.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-search-pattern-crash-053ef7bbaa72.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-next-invalid-pattern-crash-6a08a5244d60.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-ssl-CVE-2009-3765-dc09812e63a3.patch
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \

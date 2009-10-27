@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.161 2009/10/27 09:08:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.162 2009/10/27 09:20:24 grobian Exp $
+
+*mutt-1.5.20-r8 (27 Oct 2009)
+
+  27 Oct 2009; Fabian Groffen <grobian@gentoo.org> -mutt-1.5.20-r7.ebuild,
+  +mutt-1.5.20-r8.ebuild,
+  +files/mutt-1.5.20-ssl-CVE-2009-3765-dc09812e63a3.patch:
+  Add patch to fix ssl security issue CVE-2009-3765, bug #290660
 
   27 Oct 2009; Fabian Groffen <grobian@gentoo.org> -mutt-1.5.16.ebuild,
   -mutt-1.5.19-r1.ebuild:
