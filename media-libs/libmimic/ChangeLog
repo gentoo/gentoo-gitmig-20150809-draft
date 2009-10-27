@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmimic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.8 2009/09/11 21:54:33 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.9 2009/10/27 15:40:21 aballier Exp $
+
+  27 Oct 2009; Alexis Ballier <aballier@gentoo.org>
+  libmimic-1.0.4-r1.ebuild:
+  keyword ~x86-fbsd
 
   11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> libmimic-1.0.4-r1.ebuild:
   Keywording for ppc. Bug 282263
