@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/qtparted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.34 2009/07/29 16:20:28 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.35 2009/10/27 02:16:59 abcd Exp $
+
+  27 Oct 2009; Jonathan Callen <abcd@gentoo.org> -qtparted-0.4.4.ebuild,
+  -qtparted-0.4.4-r1.ebuild:
+  drop old versions
 
   29 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> qtparted-0.4.5.ebuild,
   +files/qtparted-0.4.5-parted-1.9-fix.patch:
