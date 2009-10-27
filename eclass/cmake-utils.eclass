@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.33 2009/10/27 14:30:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.34 2009/10/27 21:20:40 mr_bones_ Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -52,7 +52,7 @@ if [[ ${PN} != cmake ]]; then
 	CMAKEDEPEND+=">=dev-util/cmake-2.6.2-r1"
 fi
 
-CMAKEDEPEND+="userland_GNU? ( >=sys-apps/findutils-4.4.0 )"
+CMAKEDEPEND+=" userland_GNU? ( >=sys-apps/findutils-4.4.0 )"
 
 [[ ${WANT_CMAKE} = always ]] || CMAKEDEPEND+=" )"
 
