@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.1-r1.ebuild,v 1.1 2009/10/22 18:28:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.1-r2.ebuild,v 1.1 2009/10/28 06:09:52 hwoarang Exp $
 
 EAPI="2"
 
@@ -43,7 +43,7 @@ src_prepare() {
 		|| die "sed failed (nostrip)"
 
 	# fix installation folder name
-	sed -i "s/share\/QMPDClient/share\/qmpdclient/" src/config.cpp \
+	sed -i "s/share\/QMPDClient/share\/qmpdclient/" ${PN}.pro src/config.cpp \
 		|| die "failed to fix installation directory"
 
 	# check dbus
