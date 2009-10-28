@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.7 2009/10/22 20:47:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.8 2009/10/28 18:33:06 armin76 Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=app-text/sgmltools-lite-3.0.3-r9"
