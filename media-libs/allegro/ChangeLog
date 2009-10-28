@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.85 2009/04/15 07:58:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.86 2009/10/28 00:12:05 vapier Exp $
+
+  28 Oct 2009; Mike Frysinger <vapier@gentoo.org> allegro-4.2.2-r1.ebuild:
+  Use newer autoconf cache style to set ldconfig.
 
   15 Apr 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/allegro-4.2.2-deplib.patch, allegro-4.2.2-r1.ebuild:
