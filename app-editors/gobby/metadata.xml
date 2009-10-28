@@ -5,5 +5,8 @@
 <maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
-     <longdescription>Multiuser text editor.</longdescription>
+<maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<longdescription>Multiuser text editor.</longdescription>
 </pkgmetadata>
