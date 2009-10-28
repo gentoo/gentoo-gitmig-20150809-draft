@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/fancytasks
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/ChangeLog,v 1.1 2009/10/28 12:48:54 ssuominen Exp $
+
+*fancytasks-0.9.8 (28 Oct 2009)
+
+  28 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +fancytasks-0.9.8.ebuild:
+  Initial commit wrt #285313, thanks to Art Win for reporting.
+
