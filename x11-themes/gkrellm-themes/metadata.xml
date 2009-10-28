@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
 <longdescription>This package installs all the gkrellm2 themes available at http://www.muhri.net/gkrellm</longdescription>
