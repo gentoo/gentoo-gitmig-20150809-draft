@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.101 2008/08/26 06:56:22 grobian Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.102 2009/10/28 21:40:31 grobian Exp $
+
+*windowmaker-0.92.0-r8 (28 Oct 2009)
+
+  28 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  +windowmaker-0.92.0-r8.ebuild:
+  Bump, add many patches from upstream's HG, possibly fix some segfaults
+  here and there, like bug #289949.  Make compatible for Prefix.  Added
+  Prefix keywords.
 
   26 Aug 2008; Fabian Groffen <grobian@gentoo.org> metadata.xml,
   -windowmaker-0.92.0-r3.ebuild, -windowmaker-0.92.0-r4.ebuild,
