@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.ebuild,v 1.1 2009/10/28 16:47:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.ebuild,v 1.2 2009/10/28 16:49:50 dertobi123 Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -28,7 +28,7 @@ ERROR_CFG="open-iscsi needs CRC32C support in your kernel."
 pkg_setup() {
 	linux-info_pkg_setup
 	linux-mod_pkg_setup
-	
+
 	# Needs to be done, as iscsid currently only starts, when having the iSCSI
 	# support loaded as module. Kernel builtion options don't work. See this for
 	# more information:
