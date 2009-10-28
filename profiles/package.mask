@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10692 2009/10/27 22:37:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10693 2009/10/28 05:44:53 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -622,11 +622,6 @@ media-video/qc-usb-messenger
 # Also blocks bluez-4 stabilization
 # Replacements: net-wireless/bluez{,-utils}[test-programs]
 net-wireless/bluez-hciemu
-
-# Ryan Hill <dirtyepic@gentoo.org> (26 Sep 2008)
-# Mask net-p2p/nicotine for removal on 20091026. (bug #286607)
-# Superseded by net-p2p/nicotine+, no activity since 2005.
-net-p2p/nicotine
 
 # Steve Arnold <nerdboy@gentoo.org> (25 Sep 2009)
 # Masking only this version due to eigen breakage; fixed in 1.6.1 but
