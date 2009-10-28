@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/fgrun
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.7 2009/10/17 17:34:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.8 2009/10/28 15:28:05 voyageur Exp $
+
+*fgrun-1.5.1 (28 Oct 2009)
+
+  28 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org> +fgrun-1.5.1.ebuild,
+  +files/fgrun-1.5.1-fltk.patch:
+  Version bump, closes bug #255094
 
   17 Oct 2009; Tupone Alfredo <tupone@gentoo.org> fgrun-1.0.0.ebuild:
   Fix typo on src_configure. Bug #258405 by Steven Parker
