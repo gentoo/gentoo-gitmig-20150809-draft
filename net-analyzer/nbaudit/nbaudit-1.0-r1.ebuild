@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0-r1.ebuild,v 1.4 2006/10/14 21:07:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0-r1.ebuild,v 1.5 2009/10/28 04:19:14 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.tux.org/pub/security/secnet/tools/nat10/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="ppc sparc x86 ~amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
