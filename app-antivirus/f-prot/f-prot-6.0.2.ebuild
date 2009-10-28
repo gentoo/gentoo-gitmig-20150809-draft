@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-6.0.2.ebuild,v 1.2 2009/04/04 14:43:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-6.0.2.ebuild,v 1.3 2009/10/28 18:05:07 grobian Exp $
 
 inherit eutils
 
@@ -64,6 +64,9 @@ pkg_postinst() {
 	elog "Portage (4.6.7).  Most notably the binary names and their command"
 	elog "line options have changed.  Review all of your scripts, and be"
 	elog "sure to read ${ROOT}usr/share/doc/${P}/README."
+	elog
+	elog "This is the Home User Workstation version of f-prot, and hence lacks"
+	elog "utilities like fpscand, fp.so and fpmon."
 	elog
 	elog "Remember to run /opt/f-prot/fpupdate regularly to keep the virus"
 	elog "database up to date.  Recommended method is to use cron.  See"
