@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.28.2.ebuild,v 1.1 2009/10/28 18:22:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.28.2.ebuild,v 1.2 2009/10/28 18:32:45 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="beagle +cdr +css +libburn totem nautilus"
+IUSE="beagle +cdr +css +libburn totem nautilus test"
 
 CDEPEND=">=dev-libs/glib-2.15.6:2
 	>=x11-libs/gtk+-2.16:2
@@ -39,7 +39,8 @@ DEPEND="${CDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
 	sys-devel/gettext
-	dev-util/intltool"
+	dev-util/intltool
+	test? ( app-text/docbook-xml-dtd:4.3 )"
 
 pkg_setup() {
 	G2CONF="--disable-dependency-tracking
