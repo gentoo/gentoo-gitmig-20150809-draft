@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.404 2009/10/28 11:50:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.405 2009/10/28 20:08:37 fauli Exp $
+
+  28 Oct 2009; Christian Faulhammer <fauli@gentoo.org> opera-10.01.ebuild:
+  stable x86, security bug 290862
 
 *opera-10.01 (28 Oct 2009)
 
