@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.54 2009/10/07 23:04:12 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.55 2009/10/28 18:08:33 armin76 Exp $
+
+  28 Oct 2009; Raúl Porcel <armin76@gentoo.org> PAR-Dist-0.46.ebuild:
+  ia64 stable
 
   07 Oct 2009; Tiago Cunha <tcunha@gentoo.org> PAR-Dist-0.46.ebuild:
   stable sparc, bug 283969

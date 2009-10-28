@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-DAV
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-DAV/ChangeLog,v 1.23 2009/10/07 23:12:03 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-DAV/ChangeLog,v 1.24 2009/10/28 18:11:14 armin76 Exp $
+
+  28 Oct 2009; Raúl Porcel <armin76@gentoo.org> HTTP-DAV-0.38.ebuild:
+  ia64 stable
 
   07 Oct 2009; Tiago Cunha <tcunha@gentoo.org> HTTP-DAV-0.38.ebuild:
   stable sparc, bug 283969
