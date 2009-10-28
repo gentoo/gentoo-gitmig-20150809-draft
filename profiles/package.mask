@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10698 2009/10/28 16:33:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10699 2009/10/28 22:31:35 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -257,16 +257,6 @@ app-emulation/lxc
 # KDE3-only. Doesn't work with unicode, which is Gentoo
 # default. Masked for removal in 30 days. Bug #221115.
 app-mobilephone/kmobiletools
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (23 Oct 2009)
-#  on behalf of QA team
-#
-# Fetches FFmpeg sources out of Subversion repository which makes it
-# the same as a Live SVN. Even worse, it does not figure as one since
-# it does so in the upstream-provided scripts and not in the ebuild.
-#
-# See bug #290233
-=media-video/avidemux-2.5.1_p*
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2009)
 # KDE3-only. Doesn't compile with KDE4 installed, bugs
@@ -601,7 +591,7 @@ dev-java/xmojo-bin
 
 # Vlastimil Babka <caster@gentoo.org> (03 Oct 2009)
 # Masked for removal in 30 days Needs java 1.4,
-# library nothing uses. 
+# library nothing uses.
 dev-java/axion
 
 # Markus Meier <maekke@gentoo.org> (03 Oct 2009)
@@ -624,7 +614,7 @@ games-action/astromenace-bin
 
 # Torsten Veller <tove@gentoo.org> (01 Oct 2009)
 # Old. Replaced. Or just unmaintained.
-# - replaced by dev-perl/Gtk2-Ex-PodViewer 
+# - replaced by dev-perl/Gtk2-Ex-PodViewer
 #   bug 281511 (01 Oct 2009)
 dev-perl/Gtk2-PodViewer
 # - AWW is dead!
@@ -640,7 +630,7 @@ dev-perl/perlrapi
 #   bug 281495 (01 Oct 2009)
 dev-perl/Gtk2-Html2
 # - added as dep for a package that never made it into the tree (#21549)
-#   nothing depends on it, broken, no releases for years 
+#   nothing depends on it, broken, no releases for years
 #   bug #280497 (12 Oct 2009)
 dev-perl/Net-FTPServer
 
@@ -714,12 +704,12 @@ app-doc/xorg-sgml-doctools
 app-doc/xorg-docs
 
 # Gilles Dartiguelongue <eva@gentoo.org> (16 Sep 2009)
-# Masking at-poke, unmainted and superseeded by 
+# Masking at-poke, unmainted and superseeded by
 # app-accessibility/accerciser. bug #279304
 app-accessibility/at-poke
 
 # Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
-# Alpha releases. Unmask at your own risk, bugs 
+# Alpha releases. Unmask at your own risk, bugs
 # go upstream to http://jira.atheme.org/
 =media-sound/audacious-2.2_alpha*
 =media-plugins/audacious-plugins-2.2_alpha*

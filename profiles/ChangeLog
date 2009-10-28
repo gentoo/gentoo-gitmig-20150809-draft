@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3481 2009/10/28 16:33:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3482 2009/10/28 22:31:35 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Oct 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Removing the unwarranted mask of avidemux snapshots, bug 290233.
 
   28 Oct 2009; <chainsaw@gentoo.org> package.mask:
   Remove older >1.4 Asterisk mask that I overlooked.
