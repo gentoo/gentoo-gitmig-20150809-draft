@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.25 2009/10/25 22:43:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.26 2009/10/28 19:24:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -16,11 +16,6 @@ LICENSE="GPL-3"
 KEYWORDS=""
 SLOT="0"
 IUSE="dbus debug kde monolithic phonon postgres +server +ssl webkit +X"
-
-LANGS="cs da de fi fr hu it nb_NO ru sl tr"
-for l in ${LANGS}; do
-	IUSE="${IUSE} linguas_${l}"
-done
 
 RDEPEND="
 	dbus? ( x11-libs/qt-dbus:4 )
@@ -61,11 +56,6 @@ pkg_setup() {
 }
 
 src_configure() {
-	local my_langs
-	for i in ${LINGUAS}; do
-		my_langs="${i},${my_langs}"
-	done
-
 	local mycmakeargs="
 		$(cmake-utils_use_want X QTCLIENT)
 		$(cmake-utils_use_want server CORE)
@@ -78,8 +68,7 @@ src_configure() {
 		$(cmake-utils_use_with !kde OXYGEN)
 		-DWITH_LIBINDICATE=OFF
 		-DEMBED_DATA=OFF
-		-DLINGUAS=${my_langs}
-		"
+	"
 
 	cmake-utils_src_configure
 }

@@ -10,6 +10,10 @@
 		<email>patrick@gentoo.org</email>
 	</maintainer>
 	<maintainer>
+		<email>scarabeus@gentoo.org</email>
+		<name>Tomáš Chvátal</name>
+	</maintainer>
+	<maintainer>
 		<email>sputnick@quassel-irc.org</email>
 		<description>Upstream author, please CC on bugs</description>
 	</maintainer>
