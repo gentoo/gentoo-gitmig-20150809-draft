@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10_pre4632.ebuild,v 1.1 2009/09/25 16:42:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.01.ebuild,v 1.1 2009/10/28 11:50:02 jer Exp $
 
 EAPI="2"
 
@@ -25,44 +25,34 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
 done
 
-O_U="http://snapshot.opera.com/unix/snapshot-${PV/*_pre}/"
-
-# 1) Please check for missing (qt3/qt-static) builds
-# 2) and only then update the build number manually
-OPERABUILD="4632"
-
-if [ "${PV/*_pre}" = "${OPERABUILD}" ]; then
-	O_P="${P/_pre*/}-${OPERABUILD}"
-else
-	O_P="SET_OPERABUILD_IN_THE_EBUILD"
-fi
+O_U="mirror://opera/linux/1001/final/en/"
 
 SRC_URI="
 	amd64? (
 		!ia32? (
-			qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
+			qt-static? ( ${O_U}x86_64/${P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
 			!qt-static? (
-				qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
-				!qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
+				qt3? ( ${O_U}x86_64/${P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+				!qt3? ( ${O_U}x86_64/${P}.gcc4-qt4.x86_64.tar.bz2 )
 			)
 		)
 		ia32? (
-			qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
+			qt-static? ( ${O_U}i386/${P}.gcc4-bundled-qt4.i386.tar.bz2 )
 			!qt-static? (
-				qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
-				!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+				qt3? ( ${O_U}i386/shared/${P}.gcc4-shared-qt3.i386.tar.bz2 )
+				!qt3? ( ${O_U}i386/${P}.gcc4-qt4.i386.tar.bz2 )
 			)
 		)
 	)
-	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
+	ppc? ( ${O_U}ppc/shared/${P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	x86? (
-		qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
+		qt-static? ( ${O_U}i386/${P}.gcc4-bundled-qt4.i386.tar.bz2 )
 		!qt-static? (
-			qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
-			!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+			qt3? ( ${O_U}i386/shared/${P}.gcc4-shared-qt3.i386.tar.bz2 )
+			!qt3? ( ${O_U}i386/${P}.gcc4-qt4.i386.tar.bz2 )
 		)
 	)
-	x86-fbsd? ( ${O_U}intel-freebsd/${O_P}.freebsd6-shared-qt3.i386.tar.bz2 )
+	x86-fbsd? ( mirror://opera/unix/freebsd/1001/en/intel/shared/${P}-freebsd7-shared-qt3.i386.tar.bz2 )
 	"
 
 DEPEND=">=sys-apps/sed-4"
@@ -97,6 +87,7 @@ RDEPEND="
 			)
 		)
 	)
+	ppc? ( =x11-libs/qt-3*[-immqt] )
 	x86? (
 		qt-static? ( media-libs/nas )
 		!qt-static? (
@@ -104,7 +95,6 @@ RDEPEND="
 			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
 		)
 	)
-	ppc? ( =x11-libs/qt-3*[-immqt] )
 	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
 
