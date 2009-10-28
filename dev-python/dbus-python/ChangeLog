@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.53 2009/10/21 19:40:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.54 2009/10/28 18:27:32 armin76 Exp $
+
+  28 Oct 2009; Raúl Porcel <armin76@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild:
+  ia64/s390/sh/sparc stable wrt #287548
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org>
   dbus-python-0.83.0-r1.ebuild:
