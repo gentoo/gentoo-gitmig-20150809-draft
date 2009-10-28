@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.8.ebuild,v 1.1 2009/10/26 23:50:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.8.ebuild,v 1.2 2009/10/28 11:31:03 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -41,7 +41,8 @@ RDEPEND="sys-libs/ncurses
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
-	!<net-misc/asterisk-addons-1.6"
+	!<net-misc/asterisk-addons-1.6
+	!net-misc/zaptel"
 
 S="${WORKDIR}/${MY_P}"
 
