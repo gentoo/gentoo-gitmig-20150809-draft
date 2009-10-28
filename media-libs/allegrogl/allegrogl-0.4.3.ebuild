@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.3.ebuild,v 1.4 2008/02/26 16:10:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.4.3.ebuild,v 1.5 2009/10/28 00:13:49 vapier Exp $
 
 MY_PN="alleggl"
 DESCRIPTION="A library to mix OpenGL graphics with Allegro routines"
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake LDCONFIG=/bin/true DESTDIR="${D}" install || die "emake install failed"
 	dodoc changelog {bugs,extensions,faq,howto,quickstart,readme,todo}.txt
 	dohtml -r docs/html/*
 	if use examples ; then
