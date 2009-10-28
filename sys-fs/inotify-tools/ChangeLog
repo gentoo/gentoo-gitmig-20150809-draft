@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.26 2009/09/23 20:51:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.27 2009/10/28 23:22:20 vapier Exp $
+
+*inotify-tools-3.13-r1 (28 Oct 2009)
+
+  28 Oct 2009; Mike Frysinger <vapier@gentoo.org>
+  +inotify-tools-3.13-r1.ebuild:
+  Fix implicit doxygen handling, broken autotools, and install more doc
+  files #177054 by Mart Raudsepp.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> inotify-tools-3.12.ebuild,
   inotify-tools-3.13.ebuild:
