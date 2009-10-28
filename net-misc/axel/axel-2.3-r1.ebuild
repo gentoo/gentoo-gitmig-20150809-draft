@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-2.3-r1.ebuild,v 1.1 2009/02/07 10:28:35 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-2.3-r1.ebuild,v 1.2 2009/10/28 09:25:12 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,13 +11,12 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2718/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug kde nls"
+IUSE="debug nls"
 
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-RDEPEND="${RDEPEND}
-	kde? ( kde-misc/kaptain )"
+RDEPEND="${RDEPEND}"
 
 #S="${WORKDIR}/${PN}-1.1"
 
@@ -44,13 +43,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
-	if use kde; then
-		dobin gui/kapt/axel-kapt || die
-		doman gui/kapt/axel-kapt.1 || die
-		domenu gui/kapt/axel-kapt.desktop || die
-	fi
-
 	dodoc API CHANGES CREDITS README axelrc.example
 }
 
