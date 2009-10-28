@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.1.10.ebuild,v 1.1 2009/09/14 14:31:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.1.10.ebuild,v 1.2 2009/10/28 13:52:15 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 inherit xfconf multilib
 
 DESCRIPTION="A lightweight web browser"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
-SRC_URI="http://archive.xfce.org/src/apps/${PN}/0.1/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/0.1/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -58,7 +58,7 @@ src_compile() {
 
 src_install() {
 	DESTDIR=${D} ./waf install || die "install failed"
-	rm -r ${D}/usr/share/doc/${PN}
+	rm -r "${D}"/usr/share/doc/${PN}
 	dodoc AUTHORS ChangeLog INSTALL TODO || die "dodoc failed"
 }
 

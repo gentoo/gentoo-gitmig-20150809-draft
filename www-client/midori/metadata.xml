@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>xfce</herd>
-<use>
-	<flag name="html">Install HTML documentation</flag>
-	<flag name="soup">Use Soup (<pkg>net-libs/libsoup</pkg>) as HTTP backend instead of curl(<pkg>net-misc/curl</pkg>), if you want better gnome integration for URL processing</flag>
-	<flag name="unique">Optional libunique support</flag>
-</use>
+  <herd>xfce</herd>
+  <use>
+    <flag name="html">Install HTML documentation</flag>
+    <flag name="unique">Optional libunique support</flag>
+  </use>
 </pkgmetadata>
