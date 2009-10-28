@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.279 2009/10/24 16:32:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.280 2009/10/28 23:15:34 eva Exp $
+
+*gedit-2.26.3-r1 (28 Oct 2009)
+
+  28 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> -gedit-2.26.2.ebuild,
+  +gedit-2.26.3-r1.ebuild, +files/gedit-2.26.3-external_tools_config.patch:
+  Version bump. Add patch to fix external tools plugin configuration dialog,
+  bug #207457.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> gedit-2.26.3.ebuild:
   ppc stable #281427
