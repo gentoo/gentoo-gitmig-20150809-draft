@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/chntpw-080526.ebuild,v 1.3 2008/12/30 17:57:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/chntpw-080526.ebuild,v 1.4 2009/10/28 04:18:27 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.eunet.no/~pnordahl/ntpasswd/${PN}-source-${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="static"
 
 RDEPEND="dev-libs/openssl"
