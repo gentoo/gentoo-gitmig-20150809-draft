@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.26.2.ebuild,v 1.4 2009/10/24 16:57:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.26.2.ebuild,v 1.5 2009/10/28 20:43:30 eva Exp $
 
 EAPI="2"
+GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2
 

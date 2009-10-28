@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.43 2009/10/24 16:57:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.44 2009/10/28 20:43:30 eva Exp $
+
+  28 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -vinagre-2.26.1.ebuild, vinagre-2.26.2.ebuild:
+  Add GCONF_DEBUG, bug #270905. Clean up old revision.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> vinagre-2.26.2.ebuild:
   ppc stable #281427
