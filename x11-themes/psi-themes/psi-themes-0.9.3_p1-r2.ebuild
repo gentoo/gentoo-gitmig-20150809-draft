@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.5 2008/07/19 12:52:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.6 2009/10/28 11:06:12 pva Exp $
 
 SMILEYS="critters-1.0.jisp
 	icq-2002a.jisp
@@ -85,7 +85,7 @@ SRC_URI="${HTTPIURI}/emots-main-${VMAIN}.tar.bz2
 	${HTTPIURI}/emots-netflint-${VNETF}.tar.bz2"
 
 DESCRIPTION="Iconsets for Psi, a QT 3.x Jabber Client"
-HOMEPAGE="http://psi.affinix.com/ http://jisp.netflint.net/"
+HOMEPAGE="http://psi-im.org/ http://jisp.netflint.net/"
 
 SLOT="0"
 LICENSE="GPL-2"

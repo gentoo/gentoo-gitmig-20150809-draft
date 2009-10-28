@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.9 2007/07/12 07:35:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.10 2009/10/28 11:06:12 pva Exp $
 
 SMILEYS="http://dev.gentoo.org/~humpback/jisp/AIM.jisp
 	http://dev.gentoo.org/~humpback/jisp/apple_ichat-1.0.jisp
@@ -48,7 +48,7 @@ ICONSETS="http://dev.gentoo.org/~humpback/jisp/amibulb.jisp
 SRC_URI="${SMILEYS}${ICONSETS}"
 
 DESCRIPTION="Iconsets for Psi, a QT 3.x Jabber Client"
-HOMEPAGE="http://psi.affinix.com/ http://jisp.netflint.net/"
+HOMEPAGE="http://psi-im.org/ http://jisp.netflint.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
