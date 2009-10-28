@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3478 2009/10/28 09:42:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3479 2009/10/28 11:51:45 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Oct 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Tweak www-client/opera mask.
 
   28 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask KDE3-only apps.
