@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kim4/kim4-0.9.5.ebuild,v 1.1 2009/10/28 21:02:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kim4/kim4-0.9.5.ebuild,v 1.2 2009/10/28 21:04:30 ssuominen Exp $
 
 EAPI=2
 KDE_MINIMAL=4.3
@@ -18,6 +18,7 @@ IUSE=""
 S=${WORKDIR}/${PN}
 
 RDEPEND=">=kde-base/kdelibs-${KDE_MINIMAL}
+	>=kde-base/kdialog-${KDE_MINIMAL}
 	|| ( >=kde-base/dolphin-${KDE_MINIMAL} >=kde-base/konqueror-${KDE_MINIMAL} )
 	media-gfx/imagemagick"
 DEPEND=""
