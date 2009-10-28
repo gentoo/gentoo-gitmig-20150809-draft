@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3479 2009/10/28 11:51:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3480 2009/10/28 12:53:56 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Oct 2009; <chainsaw@gentoo.org> package.mask:
+  Remove Asterisk 1.6 mask as requested by Mounir "volkmar" Lamouri in bug
+  #285435.
 
   28 Oct 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera mask.

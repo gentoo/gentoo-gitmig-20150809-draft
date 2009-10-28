@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10696 2009/10/28 11:51:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10697 2009/10/28 12:53:56 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1260,19 +1260,6 @@ sys-apps/sreadahead
 =gnome-base/gnome-keyring-2.24*
 =app-crypt/seahorse-2.24*
 =app-crypt/seahorse-plugins-2.24*
-
-# Tony Vroon <chainsaw@gentoo.org> (10 Mar 2009)
-# This is *very* new and will require an extensive rewrite of your
-# configuration before it will work. If you are not ready to dedicate
-# at least a day towards testing and another day towards configuring
-# you simply do not want this yet. If you do have this amount of time
-# on your hands please join #gentoo-voip and help us document the
-# migration path. Thank you.
-net-misc/dahdi
-net-misc/dahdi-tools
-=net-misc/asterisk-1.6*
-=net-misc/asterisk-addons-1.6*
-=net-libs/libpri-1.4*
 
 # Matti Bickel <mabi@gentoo.org> (1 Mar 2009)
 # Mask testing branch
