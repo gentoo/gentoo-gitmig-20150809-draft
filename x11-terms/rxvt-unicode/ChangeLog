@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.140 2009/10/26 21:20:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.141 2009/10/28 12:18:35 wired Exp $
+
+*rxvt-unicode-9.06-r3 (28 Oct 2009)
+
+  28 Oct 2009; Alex Alexander <wired@gentoo.org>
+  +rxvt-unicode-9.06-r3.ebuild:
+  moved terminfo generation to ncurses wrt bug #192083
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add vostorga too.
