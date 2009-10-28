@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
      <longdescription>Network access framework for IPv4/IPv6 written in C++ used
