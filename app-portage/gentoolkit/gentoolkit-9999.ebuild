@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.1 2009/05/27 19:16:44 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.2 2009/10/28 20:54:14 idl0r Exp $
 
 EAPI=2
 
@@ -24,7 +24,8 @@ DEPEND="sys-apps/portage
 	dev-lang/perl
 	sys-apps/grep
 	sys-apps/gawk"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	app-misc/realpath"
 
 src_install() {
 	distutils_src_install
