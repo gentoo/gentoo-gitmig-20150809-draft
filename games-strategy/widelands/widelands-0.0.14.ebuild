@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.1 2009/10/28 07:59:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.2 2009/10/28 08:11:13 tupone Exp $
 EAPI=2
 
 inherit toolchain-funcs eutils versionator games
@@ -26,7 +26,8 @@ RDEPEND="media-libs/libsdl
 	dev-games/ggz-client-libs"
 
 DEPEND="${RDEPEND}
-	app-arch/p7zip"
+	app-arch/p7zip
+	dev-util/scons"
 
 S=${WORKDIR}/${PN}
 
