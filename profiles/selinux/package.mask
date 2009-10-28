@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.45 2009/10/12 20:11:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.46 2009/10/28 02:12:08 pebenito Exp $
+
+# Chris PeBenito <pebenito@gentoo.org> (27 Oct 2009)
+# Needs updated selinux patch   
+=sys-apps/sysvinit-2.87
 
 # Vlastimil Babka <caster@gentoo.org> (12 Oct 2009)
 # Requires libstdc++ from >=gcc-4.3

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.12 2009/10/12 18:49:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.13 2009/10/28 02:12:08 pebenito Exp $
+
+  28 Oct 2009; Chris PeBenito <pebenito@gentoo.org> package.mask:
+  Mask sysvinit for selinux patch update.
 
   12 Oct 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   P.mask >=dev-java/icedtea6-bin-1.6.1 due to gcc-4.3 dep
