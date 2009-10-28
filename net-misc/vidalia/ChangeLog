@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.12 2009/10/06 19:06:15 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.13 2009/10/28 09:15:13 tove Exp $
+
+  28 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  humpback is AWOL (#34793). Adding maintainer-needed
 
   06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> vidalia-0.1.7.ebuild,
   vidalia-0.1.12.ebuild, vidalia-0.1.15.ebuild:

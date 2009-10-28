@@ -4,6 +4,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
 <longdescription>Stand alone server for the obby colaborative editor</longdescription>
