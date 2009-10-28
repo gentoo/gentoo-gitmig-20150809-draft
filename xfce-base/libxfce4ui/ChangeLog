@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.4 2009/10/27 12:47:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.5 2009/10/28 20:19:48 fauli Exp $
+
+  28 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  libxfce4ui-4.7.0.ebuild:
+  added ~x86, bug 289983
 
   27 Oct 2009; Alexis Ballier <aballier@gentoo.org> libxfce4ui-4.7.0.ebuild:
   keyword ~x86-fbsd, bug #289983
