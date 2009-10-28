@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.8.ebuild,v 1.3 2009/08/12 02:59:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.8.ebuild,v 1.4 2009/10/28 23:41:55 vapier Exp $
 
 EAPI="2"
 
@@ -14,9 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-
-DEPEND=""
-RDEPEND=""
 
 CONFIG_CHECK="~INOTIFY"
 ERROR_INOTIFY="Recompile your kernel with inotify support - CONFIG_INOTIFY"
@@ -32,4 +29,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc CHANGELOG README TODO
 }
