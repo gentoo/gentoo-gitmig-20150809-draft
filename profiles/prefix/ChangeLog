@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.108 2009/10/27 19:38:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.109 2009/10/28 16:00:11 haubi Exp $
+
+  28 Oct 2009; Michael Haubenwallner <haubi@gentoo.org> -aix/profile.bashrc:
+  portage handles merging of shared library archives on aix itself now,
+  no need to do this in profile.bashrc any more.
 
   27 Oct 2009; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask gcc-4.{3,4} on Darwin, as it doesn't compile for a while now
