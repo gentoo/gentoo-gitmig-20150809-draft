@@ -1,6 +1,10 @@
 # ChangeLog for net-im/sim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.99 2009/10/27 14:40:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.100 2009/10/28 13:18:15 pva Exp $
+
+  28 Oct 2009; Peter Volkov <pva@gentoo.org> sim-9999.ebuild:
+  Dropped kde support from svn ebuild, bug 290867, thank Samuli Suominen for
+  report. If you need kde-3.5 support use kde-sunset overlay.
 
   27 Oct 2009; Peter Volkov <pva@gentoo.org> sim-0.9.4.3-r3.ebuild:
   Added migration note, thank Anton Bolshakov for report in bug #275316.
