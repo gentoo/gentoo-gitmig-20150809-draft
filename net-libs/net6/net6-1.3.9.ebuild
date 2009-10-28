@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.9.ebuild,v 1.2 2009/07/02 18:17:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.9.ebuild,v 1.3 2009/10/28 20:59:46 vostorga Exp $
 
 EAPI="2"
+
+inherit eutils autotools
 
 DESCRIPTION="Network access framework for IPv4/IPv6 written in C++"
 HOMEPAGE="http://gobby.0x539.de/"
@@ -17,6 +19,14 @@ RDEPEND="dev-libs/libsigc++:2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	#bug #271989
+	epatch "${FILESDIR}"/net6-1.3.9-libgnutls.patch
+	#bug #271994
+	sed -i -e 's:@addcflags@::g' net6-1.3.pc.in || die
+	eautoreconf
+}
 
 src_configure() {
 	econf $(use_enable nls)
