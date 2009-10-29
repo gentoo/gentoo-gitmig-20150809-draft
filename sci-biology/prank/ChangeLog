@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prank
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.3 2009/10/29 01:53:33 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.4 2009/10/29 02:04:18 weaver Exp $
+
+  28 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> prank-091016.ebuild:
+  Restore erroneously removed patch
 
 *prank-091016 (28 Oct 2009)
 
