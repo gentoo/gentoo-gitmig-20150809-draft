@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.43 2009/10/16 19:53:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.44 2009/10/29 15:14:26 scarabeus Exp $
+
+  29 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  qt-opengl-4.5.3.ebuild:
+  Stable on x86. Fixing broken depgraph.
 
   16 Oct 2009; Alex Alexander <wired@gentoo.org>
   qt-opengl-4.6.0_beta1.ebuild:
