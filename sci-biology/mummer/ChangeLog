@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mummer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.10 2009/10/29 02:16:25 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.11 2009/10/29 02:21:12 weaver Exp $
+
+  28 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> mummer-3.22.ebuild:
+  Set EAPI
 
 *mummer-3.22 (28 Oct 2009)
 
