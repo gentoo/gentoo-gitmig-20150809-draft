@@ -1,23 +1,20 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.8.ebuild,v 1.4 2009/10/24 11:20:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.4.3.ebuild,v 1.1 2009/10/29 20:39:03 patrick Exp $
 
 EAPI="2"
 
-inherit pam confutils versionator multilib
+inherit pam confutils versionator multilib autotools
 
 MY_P="samba-${PV}"
 
-DESCRIPTION="Libraries from Samba"
+DESCRIPTION="Samba Server component"
 HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc64 ~x86"
-IUSE="acl ads aio avahi caps cluster cups debug doc examples fam ldap quota swat syslog winbind zeroconf"
-
-# currently a bit broken
-RESTRICT="test"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
+IUSE="samba4 acl ads aio avahi caps cluster cups debug doc examples fam ldap quota swat syslog winbind zeroconf"
 
 DEPEND="!<net-fs/samba-3.3
 	ads? ( virtual/krb5 sys-fs/e2fsprogs net-fs/samba-libs[ads] )
@@ -28,52 +25,60 @@ DEPEND="!<net-fs/samba-3.3
 	caps? ( sys-libs/libcap )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
+	fam? ( dev-libs/libgamin )
 	ldap? ( net-nds/openldap )
 	syslog? ( virtual/logger )
-	net-fs/samba-libs[caps?,cluster?,cups?,ldap?,syslog?,winbind?]"
+	sys-libs/tdb
+	sys-libs/talloc
+	~net-fs/samba-libs-${PV}[caps?,cluster?,cups?,ldap?,syslog?,winbind?,ads?,samba4?]"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}/source"
+S="${WORKDIR}/${MY_P}/source3"
 
-# TODO:
-# - enable iPrint on Prefix/OSX and Darwin?
-# - selftest-prefix? selftest?
+RESTRICT="test"
 
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 SBINPROGS="bin/smbd bin/nmbd"
-BINPROGS="bin/testparm bin/smbstatus bin/smbcontrol bin/tdbbackup bin/pdbedit
-	bin/tdbdump bin/tdbtool bin/profiles bin/sharesec
+BINPROGS="bin/testparm bin/smbstatus bin/smbcontrol bin/pdbedit
+	bin/profiles bin/sharesec
 	bin/eventlogadm bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename"
 
 pkg_setup() {
+	confutils_use_depend_all samba4 ads
 	confutils_use_depend_all ads ldap
 }
 
 src_prepare() {
-	sed -i \
-		-e 's|"lib32" ||' \
-		-e 's|if test -d "$i/$l" ;|if test -d "$i/$l" -o -L "$i/$l";|' \
-		configure || die "sed failed"
 
-	sed -i \
-		-e 's|@LIBTALLOC_SHARED@||g' \
-		-e 's|@LIBTDB_SHARED@||g' \
-		-e 's|@LIBWBCLIENT_SHARED@||g' \
-		-e 's|@LIBNETAPI_SHARED@||g' \
-		-e 's|$(REG_SMBCONF_OBJ) @LIBNETAPI_STATIC@ $(LIBNET_OBJ)|$(REG_SMBCONF_OBJ) @LIBNETAPI_LIBS@ $(LIBNET_OBJ)|' \
-		Makefile.in || die "sed failed"
+	cd ".."
 
-	# Upstream doesn't want us to link certain things dynamically, but those binaries here seem to work
-	sed -i \
-		-e '/^LINK_LIBNETAPI/d' \
-		configure || die "sed failed"
+	epatch \
+		"${FILESDIR}/samba-3.4.2-missing_includes.patch" \
+		"${FILESDIR}/samba-3.4.2-fix-samba4-automake.patch" \
+		"${FILESDIR}/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch"
+#		"${FILESDIR}/samba-3.4.2-upgrade-tevent-version.patch" \
 
-	#Fixing crash in dns_register_smbd_reply
-	epatch "${CONFDIR}/${PN}-3.3.7-dns-register.patch"
+	cp "${FILESDIR}/samba-3.4.2-lib.tevent.python.mk" "lib/tevent/python.mk"
+
+	cd "source3"
+	eautoconf -Ilibreplace -Im4 -I../m4 -I../lib/replace -I../source4
 }
 
 src_configure() {
 	local myconf
+
+	# compile franky samba4 hybrid
+	# http://wiki.samba.org/index.php/Franky
+	if use samba4 ; then
+		myconf="${myconf} --enable-merged-build --enable-developer"
+		if has_version app-crypt/heimdal ; then
+			myconf="${myconf} --with-krb5=/usr/"
+		elif has_version app-crypt/mit-krb5 ; then
+			die "MIT Kerberos not supported by samba 4, use heimdal"
+		else
+			die "No supported kerberos provider detected"
+		fi
+	fi
 
 	# Filter out -fPIE
 	[[ ${CHOST} == *-*bsd* ]] && myconf="${myconf} --disable-pie"
@@ -92,10 +97,11 @@ src_configure() {
 	# - AFS is a pw-auth-method and only used in client/server code
 	# - AFSACL is a server module
 	# - automount is only needed in conjunction with NIS and we don't have that
-	#   anymore
+	# anymore
 	# - quota-support is only needed in server-code
 	# - acl-support is only used in server-code
 	# - --without-dce-dfs and --without-nisplus-home can't be passed to configure but are disabled by default
+
 	econf ${myconf} \
 		--with-piddir=/var/run/samba \
 		--sysconfdir=/etc/samba \
@@ -136,7 +142,7 @@ src_configure() {
 		$(use_with quota quotas) \
 		$(use_with quota sys-quotas) \
 		--without-utmp \
-		--with-lib{talloc,tdb,netapi,smbclient,smbsharemodes} \
+		--without-lib{talloc,tdb,netapi,smbclient,smbsharemodes} \
 		--without-libaddns \
 		$(use_with cluster ctdb /usr) \
 		$(use_with cluster cluster-support) \
@@ -190,7 +196,7 @@ src_install() {
 	doins "${CONFDIR}"/{smbusers,lmhosts,smb.conf.default}
 
 	insinto /usr/"$(get_libdir)"/samba
-	doins codepages/{valid.dat,upcase.dat,lowcase.dat}
+	doins ../codepages/{valid.dat,upcase.dat,lowcase.dat}
 
 	if use ldap ; then
 		insinto /etc/openldap/schema

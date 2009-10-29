@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2-r2.ebuild,v 1.2 2009/10/23 09:37:39 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.3.ebuild,v 1.1 2009/10/29 20:38:39 patrick Exp $
 
 EAPI="2"
 
-inherit pam confutils versionator multilib
+inherit pam confutils versionator multilib autotools
 
 MY_P="samba-${PV}"
 
@@ -60,7 +60,6 @@ src_prepare() {
 	cd ".."
 
 	epatch \
-		"${FILESDIR}/samba-3.4.2-add-zlib-linking.patch" \
 		"${FILESDIR}/samba-3.4.2-missing_includes.patch" \
 		"${FILESDIR}/samba-3.4.2-fix-samba4-automake.patch" \
 		"${FILESDIR}/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch"
@@ -69,32 +68,12 @@ src_prepare() {
 	cp "${FILESDIR}/samba-3.4.2-lib.tevent.python.mk" "lib/tevent/python.mk"
 
 	cd "source3"
-
-#	sed -i \
-#		-e 's|@LIBTALLOC_SHARED@||g' \
-#		-e 's|@LIBTDB_SHARED@||g' \
-#		-e 's|@LIBWBCLIENT_SHARED@||g' \
-#		-e 's|@LIBNETAPI_SHARED@||g' \
-#		-e 's|$(REG_SMBCONF_OBJ) @LIBNETAPI_STATIC@ $(LIBNET_OBJ)|$(REG_SMBCONF_OBJ) @LIBNETAPI_LIBS@ $(LIBNET_OBJ)|' \
-#		Makefile.in || die "sed failed"
-
-	./autogen.sh || die "autogen.sh failed"
+	eautoconf -Ilibreplace -Im4 -I../m4 -I../lib/replace -I../source4
 
 	# ensure that winbind has correct ldflags (QA notice)
 	sed -i \
 		-e 's|LDSHFLAGS="|LDSHFLAGS="\\${LDFLAGS} |g' \
 		configure || die "sed failed"
-
-#	sed -i \
-#		-e 's|"lib32" ||' \
-#		-e 's|if test -d "$i/$l" ;|if test -d "$i/$l" -o -L "$i/$l";|' \
-#		configure || die "sed failed"
-
-	# Upstream doesn't want us to link certain things dynamically, but those binaries here seem to work
-#	sed -i \
-#		-e '/^LINK_LIBNETAPI/d' \
-#		configure || die "sed failed"
-
 }
 
 src_configure() {
