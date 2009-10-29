@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.36-r1.ebuild,v 1.3 2009/10/29 19:47:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.36-r1.ebuild,v 1.4 2009/10/29 20:22:23 cardoe Exp $
 
 EAPI="2"
 
@@ -67,7 +67,8 @@ QA_TEXTRELS_amd64="usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 
 QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
-	usr/lib/opengl/nvidia/extensions/libglx.so"
+	usr/lib/opengl/nvidia/extensions/libglx.so
+	usr/lib/libXvMCNVIDIA.a:NVXVMC.o"
 
 QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}

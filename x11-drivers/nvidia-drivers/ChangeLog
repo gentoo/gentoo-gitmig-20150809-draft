@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.189 2009/10/29 19:47:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.190 2009/10/29 20:22:23 cardoe Exp $
+
+  29 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-185.18.36.ebuild, nvidia-drivers-185.18.36-r1.ebuild,
+  nvidia-drivers-190.42-r1.ebuild:
+  fix QA_EXECSTACKS issue with libXvMCNVIDIA as reported in bug #290258
 
   29 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-71.86.09.ebuild, nvidia-drivers-71.86.11.ebuild,
