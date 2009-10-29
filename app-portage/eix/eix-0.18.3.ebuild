@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.0.ebuild,v 1.1 2009/09/20 03:07:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.3.ebuild,v 1.1 2009/10/29 18:15:01 darkside Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit multilib autotools
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.sourceforge.net"
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/eix/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="+bzip2 deprecated doc nls sqlite tools"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+IUSE="+bzip2 debug deprecated doc +hardened nls +optimization strong-optimization sqlite tools"
 
 RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )
@@ -37,34 +37,21 @@ src_unpack() {
 src_configure() {
 	econf $(use_with bzip2) $(use_with sqlite) $(use_with doc rst) \
 		$(use_enable nls) $(use_enable tools separate-tools) \
+		$(use_enable hardened security) $(use_enable optimization) \
+		$(use_enable strong-optimization) $(use_enable debug debugging) \
 		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
+		--with-eprefix-default="${EPREFIX}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable deprecated obsolete-reminder)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc AUTHORS ChangeLog doc/format.txt
-	use doc && dodoc doc/format.html
+	prepalldocs
 }
 
 pkg_postinst() {
-	elog "Ask your overlay maintainers to provide metadata or consider to run"
-	elog " egencache --repo=foo --update"
-	elog "after updates (e.g. in /etc/eix-sync)."
-	elog "This will speed up portage and eix-update (when the new default cache method"
-	elog "\"...#metadata-flat\" is used and file dates are correct) for those overlays."
-	elog "If metadata is provided but file dates are mangled during overlay updates,"
-	elog "you may switch to cache method \"metadata-flat\" instead for that overlay:"
-	elog "This is even faster, but works only if metadata is actually up-to-date."
-	ewarn
-	ewarn "Security Warning:"
-	ewarn
-	ewarn "Since >=eix-0.12.0, eix uses by default OVERLAY_CACHE_METHOD=\"parse|ebuild*\""
-	ewarn "(since >=eix-0.16.1 with automagic \"#metadata-flat\")."
-	ewarn "This is rather reliable, but ebuilds may be executed by user \"portage\". Set"
-	ewarn "OVERLAY_CACHE_METHOD=parse in /etc/eixrc if you do not trust the ebuilds."
 	if use deprecated; then
 		elog "ATTENTION: The old eix executable names will be going away soon"
 		elog "Update your scripts"
@@ -72,5 +59,4 @@ pkg_postinst() {
 		elog "ATTENTION: The eix executable names have changed. Update your"
 		elog "scripts, if needed. This message will go away soon."
 	fi
-
 }
