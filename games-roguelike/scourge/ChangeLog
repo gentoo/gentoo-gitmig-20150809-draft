@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/scourge
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.33 2009/03/08 06:44:58 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.34 2009/10/29 15:49:44 maekke Exp $
+
+  29 Oct 2009; Markus Meier <maekke@gentoo.org> scourge-0.21.1.ebuild:
+  amd64/x86 stable, bug #289117
 
   08 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   scourge-0.21.1.ebuild:
