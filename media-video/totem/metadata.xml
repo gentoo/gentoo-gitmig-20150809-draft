@@ -26,5 +26,7 @@ Totem is movie player for the GNOME desktop. It features a playlist, fullscreen 
     <flag name="nautilus">Enable the nautilus extension</flag>
     <flag name="nvtv">Support for nvtv to use tv in on nvidia cards</flag>
     <flag name="tracker">Enable the search plugin using app-misc/tracker</flag>
+	<flag name="iplayer">Enable BBC player support</flag>
+	<flag name="youtube">Enable youtube plugin</flag>
   </use>
 </pkgmetadata>

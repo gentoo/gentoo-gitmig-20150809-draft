@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.258 2009/10/24 16:56:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.259 2009/10/29 22:39:44 eva Exp $
+
+*totem-2.28.1 (29 Oct 2009)
+
+  29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> -totem-2.24.3.ebuild,
+  +totem-2.28.1.ebuild, metadata.xml:
+  New version for GNOME 2.28. Clean up old revision.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> totem-2.26.3-r1.ebuild:
   ppc stable #281427
