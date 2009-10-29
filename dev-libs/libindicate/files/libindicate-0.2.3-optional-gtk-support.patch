@@ -1,12 +1,13 @@
 From: Romain Perier <mrpouet@gentoo.org>
-Date: Thu, 29 Oct 2009 16:21:56 +0100
-Subject: Make gtk support optional
+Date: Thu, 29 Oct 2009 17:19:31 +0100
+Subject: Make gtk support optional and fix some QA: do not ever use ../something/something.la, it is prone to breakage (parallel build)
 
 ---
- Makefile.am          |   13 +++++++----
- configure.ac         |   17 +++++++++++----
- examples/Makefile.am |   52 +++++++++++++++++++++++++------------------------
- 3 files changed, 47 insertions(+), 35 deletions(-)
+ Makefile.am                 |   13 +++++---
+ configure.ac                |   17 ++++++++---
+ examples/Makefile.am        |   62 ++++++++++++++++++++++--------------------
+ libindicate-gtk/Makefile.am |    2 +-
+ 4 files changed, 53 insertions(+), 41 deletions(-)
 
 --- a/Makefile.am
 +++ b/Makefile.am
@@ -93,8 +94,25 @@ Subject: Make gtk support optional
  listen_and_print_SOURCES = \
  	listen-and-print.c
  
-@@ -55,6 +34,29 @@ im_client_LDADD = \
- 	../libindicate-gtk/libindicate-gtk.la \
+@@ -37,8 +16,8 @@ listen_and_print_CFLAGS = \
+ 	$(LIBINDICATEGTK_CFLAGS)
+ 
+ listen_and_print_LDADD = \
+-	../libindicate/libindicate.la \
+-	../libindicate-gtk/libindicate-gtk.la \
++	$(top_srcdir)/libindicate/libindicate.la \
++	$(top_srcdir)/libindicate-gtk/libindicate-gtk.la \
+ 	$(LIBINDICATE_LIBS) \
+ 	$(LIBINDICATEGTK_LIBS)
+ 
+@@ -51,10 +30,33 @@ im_client_CFLAGS = \
+ 	$(LIBINDICATEGTK_CFLAGS)
+ 
+ im_client_LDADD = \
+-	../libindicate/libindicate.la \
+-	../libindicate-gtk/libindicate-gtk.la \
++	$(top_srcdir)/libindicate/libindicate.la \
++	$(top_srcdir)/libindicate-gtk/libindicate-gtk.la \
  	$(LIBINDICATE_LIBS) \
  	$(LIBINDICATEGTK_LIBS)
 +endif
@@ -107,7 +125,7 @@ Subject: Make gtk support optional
 +	$(LIBINDICATE_CFLAGS)
 +
 +indicate_and_crash_LDADD = \
-+	../libindicate/libindicate.la \
++	$(top_srcdir)/libindicate/libindicate.la \
 +	$(LIBINDICATE_LIBS)
 +
 +indicate_alot_SOURCES = \
@@ -118,9 +136,31 @@ Subject: Make gtk support optional
 +	$(LIBINDICATE_CFLAGS)
 +
 +indicate_alot_LDADD = \
-+	../libindicate/libindicate.la \
++	$(top_srcdir)/libindicate/libindicate.la \
 +	$(LIBINDICATE_LIBS)
  
  show_hide_server_SOURCES = \
  	show-hide-server.c
+@@ -64,7 +66,7 @@ show_hide_server_CFLAGS = \
+ 	$(LIBINDICATE_CFLAGS)
+ 
+ show_hide_server_LDADD = \
+-	../libindicate/libindicate.la \
++	$(top_srcdir)/libindicate/libindicate.la \
+ 	$(LIBINDICATE_LIBS)
+ 
+ examplesdir = $(docdir)/examples/
+--- a/libindicate-gtk/Makefile.am
++++ b/libindicate-gtk/Makefile.am
+@@ -32,7 +32,7 @@ libindicate_gtk_la_CFLAGS = \
+ 	$(LIBINDICATEGTK_CFLAGS)
+ 
+ libindicate_gtk_la_LIBADD = \
+-	../libindicate/libindicate.la \
++	$(top_srcdir)/libindicate/libindicate.la \
+ 	$(LIBINDICATEGTK_LIBS)
+ 
+ pkgconfig_DATA = indicate-gtk.pc
+-- 
+1.6.5.1
 

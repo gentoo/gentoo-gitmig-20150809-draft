@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3.ebuild,v 1.1 2009/10/29 15:47:05 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3.ebuild,v 1.2 2009/10/29 16:27:13 mrpouet Exp $
 
 EAPI=2
 
@@ -43,5 +43,5 @@ src_test() {
 }
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS
+	dodoc AUTHORS || die "dodoc failed"
 }

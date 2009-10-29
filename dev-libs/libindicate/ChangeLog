@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.1 2009/10/29 15:47:05 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.2 2009/10/29 16:27:13 mrpouet Exp $
+
+  29 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  libindicate-0.2.3.ebuild,
+  files/libindicate-0.2.3-optional-gtk-support.patch:
+  Fix some QA : do not ever use ../something/something.la, it is prone to
+  breakage (parallel build). Add a missing die to dodoc. Thanks to EvaSDK.
 
 *libindicate-0.2.3 (29 Oct 2009)
 
