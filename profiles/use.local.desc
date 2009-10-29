@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4939 2009/10/29 18:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4940 2009/10/29 21:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -531,6 +531,7 @@ app-text/enchant:aspell - Adds support for app-text/aspell spell checker
 app-text/enchant:hunspell - Adds support for app-text/hunspell spell checker
 app-text/enchant:zemberek - Adds support for app-text/zemberek-server spell checker server
 app-text/evince:dvi - Enable the built-in DVI viewer
+app-text/evince:gnome - Enable the use of gnome-base/gconf to honour lockdown settings
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
