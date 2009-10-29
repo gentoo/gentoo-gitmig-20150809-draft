@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.15 2009/10/20 22:31:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.16 2009/10/29 08:41:42 voyageur Exp $
+
+  29 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-4.0.221.5_p27967.ebuild, chromium-4.0.222.6_p28888.ebuild,
+  chromium-4.0.223.5.ebuild, chromium-9999.ebuild:
+  Drop tcmalloc compile flag, by upstream recommendation
 
 *chromium-4.0.223.5 (20 Oct 2009)
 

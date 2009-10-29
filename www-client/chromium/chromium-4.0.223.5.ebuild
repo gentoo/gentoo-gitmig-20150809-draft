@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.223.5.ebuild,v 1.1 2009/10/20 22:31:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.223.5.ebuild,v 1.2 2009/10/29 08:41:42 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -63,7 +63,7 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1 -Dlinux_use_tcmalloc=1"
+	local myconf="-Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
 	# -Duse_system_zlib=1: needs mozzconf.h and some MOZ_Z_* functions
 	# -Duse_system_libevent=1: http://crbug.com/22140
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
