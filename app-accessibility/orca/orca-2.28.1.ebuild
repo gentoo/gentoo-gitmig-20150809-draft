@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.2.ebuild,v 1.1 2009/05/18 21:34:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.28.1.ebuild,v 1.1 2009/10/29 20:47:01 eva Exp $
+
+GCONF_DEBUG="no"
 
 inherit gnome2 python
 
@@ -15,19 +17,20 @@ IUSE=""
 # liblouis is not in portage yet
 # it is used to provide contracted braille support
 RDEPEND=">=dev-libs/glib-2.10
-	>=gnome-extra/at-spi-1.7.6
+	>=gnome-extra/at-spi-1.24
 	>=gnome-base/orbit-2
-	>=dev-python/pyorbit-2.14
-	>=gnome-base/libbonobo-2.14
-	>=dev-python/libbonobo-python-2.14
+	>=dev-python/pyorbit-2.24
+	>=gnome-base/libbonobo-2.24
+	>=dev-python/libbonobo-python-2.24
 
 	>=dev-lang/python-2.4
 	dev-python/pygobject
 	dev-python/pycairo
+	>=dev-python/dbus-python-0.83
 	>=dev-python/pygtk-2.12
 
-	>=dev-python/libwnck-python-2.14
-	>=dev-python/gconf-python-2.14
+	>=dev-python/libwnck-python-2.24
+	>=dev-python/gconf-python-2.24
 	>=dev-python/libgnome-python-2.14
 
 	>=app-accessibility/gnome-speech-0.3.10
@@ -39,16 +42,16 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
 
-pkg_setup() {
-	G2CONF="${G2CONF} --disable-liblouis"
-}
-
 src_unpack() {
 	gnome2_src_unpack
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed 2 failed"
 }
 
 pkg_postinst() {
