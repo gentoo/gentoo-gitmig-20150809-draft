@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.72 2009/10/16 19:52:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.73 2009/10/29 11:30:54 fauli Exp $
+
+  29 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  qt-gui-4.5.3-r1.ebuild:
+  stable x86, bug 290922
 
   16 Oct 2009; Alex Alexander <wired@gentoo.org> qt-gui-4.6.0_beta1.ebuild:
   added keywords: ~alpha ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86-fbsd
