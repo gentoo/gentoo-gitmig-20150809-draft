@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libindicate
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.1 2009/10/29 15:47:05 mrpouet Exp $
+
+*libindicate-0.2.3 (29 Oct 2009)
+
+  29 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +libindicate-0.2.3.ebuild,
+  +files/libindicate-0.2.3-optional-gtk-support.patch, +metadata.xml:
+  New package, necessary for libindicate-qt (kde team).
+
