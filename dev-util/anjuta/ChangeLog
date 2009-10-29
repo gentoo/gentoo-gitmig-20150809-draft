@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.101 2009/10/25 17:37:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.102 2009/10/29 23:38:19 eva Exp $
+
+*anjuta-2.28.1.0 (29 Oct 2009)
+
+  29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +anjuta-2.28.1.0.ebuild, +files/anjuta-2.28.1.0-debug-mode.patch,
+  +files/anjuta-2.28.1.0-symbol-db-optional.patch:
+  New version for GNOME 2.28.
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove welp from metadata.xml (#141007)
