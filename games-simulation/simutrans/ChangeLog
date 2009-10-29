@@ -1,6 +1,16 @@
 # ChangeLog for games-simulation/simutrans
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.19 2009/03/05 20:57:14 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.20 2009/10/29 06:38:12 mr_bones_ Exp $
+
+  29 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -simutrans-0.88.10.5.ebuild, +simutrans-0.102.2.ebuild:
+  version bump
+
+*simutrans-0.102.2 (29 Oct 2009)
+
+  29 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -simutrans-0.88.10.5.ebuild, +simutrans-0.102.2.ebuild:
+  version bump
 
 *simutrans-0.101.0 (05 Mar 2009)
 
