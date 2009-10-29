@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.4.ebuild,v 1.1 2009/10/29 00:29:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.4.ebuild,v 1.2 2009/10/29 03:53:09 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -253,7 +253,7 @@ pkg_postinst() {
 
 	einfo
 	ewarn "Please remember to rebuild your browser(s) after update to prevent an xpcom error."
-	ewarn "This bump is needed in order to bring iceat to the tree to replace iceweasel useflag."
+	ewarn "This bump is needed in order to bring icecat to the tree to replace iceweasel useflag."
 }
 
 pkg_postrm() {
