@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.0-r1.ebuild,v 1.1 2009/10/29 21:13:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.0.ebuild,v 1.1 2009/10/29 22:52:29 eva Exp $
 
 GCONF_DEBUG="no"
 
