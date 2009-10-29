@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.495 2009/10/28 14:34:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.496 2009/10/29 11:43:23 suka Exp $
+
+  29 Oct 2009; Andreas Proschofsky <suka@gentoo.org>
+  files/gentoo-3.1.1.diff:
+  Accidentaly dropped db-4.8 fix, re-introduce
 
   28 Oct 2009; Jonathan Callen <abcd@gentoo.org> openoffice-3.1.1.ebuild:
   CMAKE_REQUIRED changed to WANT_CMAKE in kde4-base.eclass
