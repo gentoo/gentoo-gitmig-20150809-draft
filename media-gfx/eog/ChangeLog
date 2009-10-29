@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.249 2009/10/24 16:38:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.250 2009/10/29 22:27:12 eva Exp $
+
+*eog-2.28.1 (29 Oct 2009)
+
+  29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> +eog-2.28.1.ebuild:
+  New version for GNOME 2.28.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> eog-2.26.3.ebuild:
   ppc stable #281427
