@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.8 2009/10/29 01:41:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.9 2009/10/29 17:51:19 vostorga Exp $
+
+  29 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> pcmanfm-0.5.2.ebuild,
+  +files/pcmanfm-0.5.2-fix-ca-translation.patch:
+  Fixing broken catalan translation, bug #290983
 
 *pcmanfm-0.5.2 (29 Oct 2009)
 

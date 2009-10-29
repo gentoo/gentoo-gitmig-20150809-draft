@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.2.ebuild,v 1.1 2009/10/29 01:41:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.2.ebuild,v 1.2 2009/10/29 17:51:19 vostorga Exp $
 
 EAPI="2"
 inherit autotools eutils fdo-mime
@@ -28,6 +28,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Don't break Gnome & possibly other environments, bug 272318
 	epatch "${FILESDIR}"/pcmanfm-find.desktop.patch
+	#Fixing ca translation, bug #290983
+	epatch "${FILESDIR}"/${P}-fix-ca-translation.patch
 	eautoreconf
 }
 
