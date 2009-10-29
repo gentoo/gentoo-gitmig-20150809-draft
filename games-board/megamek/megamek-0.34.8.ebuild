@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.34.8.ebuild,v 1.1 2009/09/27 22:04:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.34.8.ebuild,v 1.2 2009/10/29 00:00:19 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils java-pkg-2 java-ant-2 games
@@ -33,6 +33,7 @@ src_prepare() {
 		-e "s:/usr/share/java:${GAMES_DATADIR}/${PN}:" \
 		-e "s:/usr/share/MegaMek:${GAMES_DATADIR}/${PN}:" \
 		startup.sh || die "sed failed"
+	java-pkg-2_src_prepare
 }
 
 src_compile() {

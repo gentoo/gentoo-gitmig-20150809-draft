@@ -1,6 +1,10 @@
 # ChangeLog for games-board/megamek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.15 2009/09/27 22:04:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.16 2009/10/29 00:00:19 mr_bones_ Exp $
+
+  29 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  megamek-0.34.8.ebuild:
+  call java-pkg-2_src_prepare in src_prepare
 
 *megamek-0.34.8 (27 Sep 2009)
 
