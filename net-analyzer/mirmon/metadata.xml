@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>mirror-admin@gentoo.org</email>
   </maintainer>
-
 <longdescription>Simple graphical mirror monitor with html output to analyze whether data is being kept in sync.</longdescription>
 </pkgmetadata>
