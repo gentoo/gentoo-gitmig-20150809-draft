@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.26.2-r1.ebuild,v 1.1 2009/06/11 22:42:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.28.1.ebuild,v 1.1 2009/10/29 21:57:01 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="eds libnotify"
 
-RDEPEND="
-	|| ( >=dev-lang/python-2.5[sqlite]
-		 ( dev-lang/python:2.4
-		   dev-python/pysqlite:2 ) )
+RDEPEND=">=dev-lang/python-2.4
+	|| (
+		>=dev-lang/python-2.5[sqlite]
+		dev-python/pysqlite:2 )
 	dev-python/gconf-python
 	dev-python/libgnome-python
 	dev-python/gnome-applets-python
@@ -46,12 +46,6 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
-
-	# Use pango layout instead of cairo for drawing text in graphs, bug #585420
-	epatch "${FILESDIR}/${P}-pango-layout.patch"
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
 
 pkg_postinst() {
