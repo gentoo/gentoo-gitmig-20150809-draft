@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.188 2009/10/29 19:39:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.189 2009/10/29 19:47:28 cardoe Exp $
+
+  29 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-71.86.09.ebuild, nvidia-drivers-71.86.11.ebuild,
+  nvidia-drivers-96.43.13.ebuild, nvidia-drivers-173.14.20.ebuild,
+  nvidia-drivers-180.60.ebuild, nvidia-drivers-185.18.36.ebuild,
+  nvidia-drivers-185.18.36-r1.ebuild, nvidia-drivers-190.42-r1.ebuild:
+  >=media-libs/mesa-7.6 makes changes to the libGL.la behavior with eselect
+  that will cause OpenGL to be broken
 
   29 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-185.18.14.ebuild, -nvidia-drivers-185.18.29.ebuild,

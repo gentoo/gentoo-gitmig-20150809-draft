@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r1.ebuild,v 1.4 2009/10/29 19:37:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r1.ebuild,v 1.5 2009/10/29 19:47:28 cardoe Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ DEPEND="${COMMON}
 	app-admin/eselect-opengl"
 RDEPEND="${COMMON}
 	kernel_linux? ( virtual/modutils )
-	media-libs/mesa
+	!>=media-libs/mesa-7.6
 	acpi? ( sys-power/acpid )"
 PDEPEND="x11-libs/libvdpau
 	gtk? ( media-video/nvidia-settings )"
