@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.1.ebuild,v 1.3 2009/10/14 22:37:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.1.ebuild,v 1.4 2009/10/29 15:00:46 maekke Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -13,7 +13,7 @@ SRC_URI="http://www.anakreon.cz/download/${PN}/tar.gz/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]"
