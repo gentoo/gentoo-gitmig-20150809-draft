@@ -1,18 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.38-r1.ebuild,v 1.1 2009/10/29 02:26:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.38-r2.ebuild,v 1.1 2009/10/29 16:21:00 darkside Exp $
 
 inherit webapp eutils
 
 DESCRIPTION="Monitor the status of mirrors"
-HOMEPAGE="http://www.cs.uu.nl/people/henkp/mirmon/"
-SRC_URI="http://www.cs.uu.nl/people/henkp/$PN/src/$P.tar.gz"
+HOMEPAGE="http://people.cs.uu.nl/henkp/mirmon/"
+SRC_URI="http://people.cs.uu.nl/henkp/mirmon/src/$PN/src/$P.tar.gz"
 
 LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-lang/perl-5.8.5-r2"
+RDEPEND="${DEPEND} dev-perl/Socket6"
 
 src_unpack() {
 	unpack ${A}
