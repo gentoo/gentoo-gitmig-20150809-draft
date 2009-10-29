@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.322 2009/10/28 22:06:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.323 2009/10/29 22:08:07 eva Exp $
+
+*nautilus-2.28.1 (29 Oct 2009)
+
+  29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/nautilus-2.27.4-change-reg-desktop-file-with-no-desktop.patch,
+  +nautilus-2.28.1.ebuild:
+  New version for GNOME 2.28.
 
   28 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -nautilus-2.24.2.ebuild, nautilus-2.24.2-r3.ebuild,
