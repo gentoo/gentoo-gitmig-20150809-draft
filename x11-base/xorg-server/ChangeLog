@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.458 2009/10/26 21:10:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.459 2009/10/29 10:45:04 remi Exp $
+
+  29 Oct 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.7.1.ebuild:
+  sync with the overlay, update dmx deps (fixes bug #290866)
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   xorg-server-1.6.3.901-r2.ebuild:
