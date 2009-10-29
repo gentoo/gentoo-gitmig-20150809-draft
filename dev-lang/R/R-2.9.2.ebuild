@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.9.2.ebuild,v 1.5 2009/10/27 19:00:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.9.2.ebuild,v 1.6 2009/10/29 16:28:20 maekke Exp $
 
 EAPI=2
 inherit eutils flag-o-matic bash-completion versionator
@@ -12,7 +12,7 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="doc java jpeg lapack minimal nls png readline threads tk X cairo"
 
