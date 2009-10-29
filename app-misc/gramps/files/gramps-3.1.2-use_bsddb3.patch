@@ -1,0 +1,75 @@
+--- src/DbManager.py
++++ src/DbManager.py
+@@ -129,7 +129,7 @@
+         Returns (people_count, version_number) of current DB.
+         Returns ("Unknown", "Unknown") if invalid DB or other error.
+         """
+-        from bsddb import dbshelve, db
++        from bsddb3 import dbshelve, db
+         from gen.db import META, PERSON_TBL
+         env = db.DBEnv()
+         flags = db.DB_CREATE | db.DB_PRIVATE |\
+--- src/Editors/_EditFamily.py
++++ src/Editors/_EditFamily.py
+@@ -26,7 +26,7 @@
+ # python modules
+ #
+ #-------------------------------------------------------------------------
+-from bsddb import db as bsddb_db
++from bsddb3 import db as bsddb_db
+ from gettext import gettext as _
+ from DdTargets import DdTargets
+ import pickle
+--- src/gen/db/base.py
++++ src/gen/db/base.py
+@@ -36,7 +36,7 @@
+ import locale
+ import os
+ from sys import maxint
+-from bsddb import db
++from bsddb3 import db
+ from gettext import gettext as _
+ 
+ import logging
+--- src/gen/db/dbdir.py
++++ src/gen/db/dbdir.py
+@@ -37,7 +37,7 @@
+ from types import InstanceType
+ 
+ from gettext import gettext as _
+-from bsddb import dbshelve, db
++from bsddb3 import dbshelve, db
+ import logging
+ 
+ _LOG = logging.getLogger(".GrampsDb")
+--- src/GrampsLogger/_ErrorReportAssistant.py
++++ src/GrampsLogger/_ErrorReportAssistant.py
+@@ -2,7 +2,7 @@
+ import Assistant
+ import const
+ import gtk
+-import sys, os,bsddb
++import sys, os, bsddb3
+ 
+ 
+ 
+@@ -99,7 +99,7 @@
+                "OS: %s\n"\
+                "Distribution: %s\n"\
+                % (str(sys.version).replace('\n',''),
+-                  str(bsddb.__version__),
++                  str(bsddb3.__version__),
+                   str(const.VERSION),
+                   os.environ.get('LANG',''),
+                   operatingsystem,
+--- src/plugins/import/ImportGrdb.py
++++ src/plugins/import/ImportGrdb.py
+@@ -35,7 +35,7 @@
+ from gettext import gettext as _
+ import cPickle as pickle
+ import time
+-from bsddb import dbshelve, db
++from bsddb3 import dbshelve, db
+ import logging
+ __LOG = logging.getLogger(".GrampsDb")
+ 
