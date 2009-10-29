@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/polkit-gnome
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.1 2009/10/29 23:35:10 eva Exp $
+
+*polkit-gnome-0.94 (29 Oct 2009)
+
+  29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +polkit-gnome-0.94.ebuild, +metadata.xml:
+  Initial ebuild for GNOME 2.28.
+
