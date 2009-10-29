@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xvideoservicethief
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.9 2009/10/19 15:34:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.10 2009/10/29 11:17:42 fauli Exp $
+
+  29 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  xvideoservicethief-2.2.ebuild:
+  stable x86, bug 289747
 
   19 Oct 2009; Markos Chandras <hwoarang@gentoo.org> -files/gcc-4.3.patch:
   Remove unneeded gcc-4.3 patch

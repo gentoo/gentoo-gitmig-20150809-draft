@@ -1,6 +1,10 @@
 # ChangeLog for media-video/flvstreamer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/ChangeLog,v 1.2 2009/08/08 10:54:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/ChangeLog,v 1.3 2009/10/29 11:16:31 fauli Exp $
+
+  29 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  flvstreamer-1.8i.ebuild:
+  stable x86, bug 289747
 
   08 Aug 2009; Markos Chandras <hwoarang@gentoo.org>
   flvstreamer-1.8i.ebuild:
