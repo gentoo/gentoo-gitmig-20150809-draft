@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnake
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.6 2008/03/19 23:02:07 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnake/ChangeLog,v 1.7 2009/10/29 15:16:07 maekke Exp $
+
+  29 Oct 2009; Markus Meier <maekke@gentoo.org> gnake-0.94b.ebuild:
+  amd64/x86 stable, bug #289156
 
   19 Mar 2008; Tristan Heaven <nyhm@gentoo.org> gnake-0.94b.ebuild:
   Add ~amd64 keyword
