@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.43 2009/10/16 19:55:03 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.44 2009/10/29 11:44:34 fauli Exp $
+
+  29 Oct 2009; Christian Faulhammer <fauli@gentoo.org> qt-svg-4.5.3.ebuild:
+  stable x86, bug 290922
 
   16 Oct 2009; Alex Alexander <wired@gentoo.org> qt-svg-4.6.0_beta1.ebuild:
   added keywords: ~alpha ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86-fbsd
