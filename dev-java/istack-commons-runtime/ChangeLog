@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/istack-commons-runtime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.10 2009/10/16 12:56:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.11 2009/10/29 15:29:18 maekke Exp $
+
+  29 Oct 2009; Markus Meier <maekke@gentoo.org>
+  istack-commons-runtime-20070122-r1.ebuild:
+  amd64/x86 stable, bug #289311
 
 *istack-commons-runtime-20090620-r1 (16 Oct 2009)
 
