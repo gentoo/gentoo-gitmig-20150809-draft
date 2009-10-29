@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-146.ebuild,v 1.3 2009/10/02 11:30:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-146.ebuild,v 1.4 2009/10/29 19:41:57 zzam Exp $
 
 EAPI="1"
 
@@ -94,7 +94,7 @@ pkg_setup() {
 	# 2.6.30.4 -> 2.6.30 is all we check
 	udev_check_KV
 	case "$?" in
-		2)	einfo "Your kernel version (${KV_FULL}) is new enough to run ${P} reliable." ;;
+		2)	einfo "Your kernel version (${KV_FULL}) is new enough to run ${P} reliably." ;;
 		1)	ewarn "Your kernel version (${KV_FULL}) is new enough to run ${P},"
 			ewarn "but it may be unreliable in some cases."
 			ebeep ;;

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.502 2009/10/21 08:27:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.503 2009/10/29 19:41:57 zzam Exp $
+
+  29 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> udev-145-r1.ebuild,
+  udev-145-r2.ebuild, udev-145-r3.ebuild, udev-146.ebuild,
+  udev-146-r1.ebuild, udev-9999.ebuild:
+  Fix grammar, Bug #290961.
 
   21 Oct 2009; Jeroen Roovers <jer@gentoo.org> udev-146-r1.ebuild:
   Stable for HPPA (bug #286074).
