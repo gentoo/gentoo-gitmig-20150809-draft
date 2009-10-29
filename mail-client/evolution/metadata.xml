@@ -18,7 +18,7 @@
 		<flag name="networkmanager">Allows Evolution to automagically toggle
 			online/offline mode by talking to <pkg>net-misc/networkmanager</pkg>
 			and getting the current network state</flag>
-		<flag name="pst">Build optional plugin for PST file format import</flag>
+		<!-- <flag name="pst">Build optional plugin for PST file format import</flag> -->
 		<flag name="pda">Enable support for syncing Evolution Calendar and
 			Addressbooks with PDAs using <pkg>app-pda/gnome-pilot</pkg> and
 			<pkg>app-pda/gnome-pilot-conduit</pkg></flag>
