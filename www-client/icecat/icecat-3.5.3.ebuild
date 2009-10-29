@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.3.ebuild,v 1.1 2009/10/25 16:26:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.3.ebuild,v 1.2 2009/10/29 12:50:23 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -58,6 +58,7 @@ RDEPEND="
 	>=app-text/hunspell-1.2
 	alsa? ( media-libs/alsa-lib )
 	>=net-libs/xulrunner-${XUL_PV}[java=,sqlite=]
+	!>=net-libs/xulrunner-1.9.2
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]"
 
