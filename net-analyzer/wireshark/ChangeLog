@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.193 2009/10/28 23:19:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.194 2009/10/29 13:53:17 chainsaw Exp $
+
+  29 Oct 2009; <chainsaw@gentoo.org> wireshark-1.2.3.ebuild:
+  Marked stable on AMD64 as requested by Alex "a3li" Legler in security bug
+  #290710. Tested capture on a Marvell "sky2" 88E8055 Gig-copper NIC.
 
   28 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   wireshark-1.2.3.ebuild:
