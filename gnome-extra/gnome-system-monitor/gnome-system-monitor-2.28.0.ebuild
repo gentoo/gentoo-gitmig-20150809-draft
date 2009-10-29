@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.26.1.ebuild,v 1.1 2009/05/11 23:18:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.28.0.ebuild,v 1.1 2009/10/29 22:18:50 eva Exp $
 
+EAPI="2"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -18,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=gnome-base/gconf-2
 	>=x11-libs/libwnck-2.5
 	>=gnome-base/libgtop-2.23.1
-	>=x11-libs/gtk+-2.12
+	>=x11-libs/gtk+-2.16
 	>=x11-themes/gnome-icon-theme-2.15.3
 	>=dev-cpp/gtkmm-2.8
 	>=dev-cpp/glibmm-2.16
@@ -36,4 +37,9 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
+}
+
+src_prepare() {
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
