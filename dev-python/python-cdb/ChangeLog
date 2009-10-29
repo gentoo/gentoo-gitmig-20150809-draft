@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-cdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.24 2009/10/24 14:04:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.25 2009/10/29 16:33:08 maekke Exp $
+
+  29 Oct 2009; Markus Meier <maekke@gentoo.org> python-cdb-0.34.ebuild:
+  amd64/x86 stable, bug #289417
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> python-cdb-0.34.ebuild:
   ppc stable #289417
