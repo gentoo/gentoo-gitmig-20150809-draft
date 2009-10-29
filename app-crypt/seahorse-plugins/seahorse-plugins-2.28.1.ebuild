@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.26.2-r1.ebuild,v 1.2 2009/10/29 21:05:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.28.1.ebuild,v 1.1 2009/10/29 21:05:29 eva Exp $
 
 EAPI="2"
 
@@ -72,16 +72,12 @@ src_prepare() {
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
-
-	# Fix build with gpgme built with lfs support, bug #275445
-	epatch "${FILESDIR}/${P}-gpgme-lfs.patch"
-	# Fix compatibility with gnupg-2.0.12, patch import from upstream bug #586855,
-	# solves gentoo bug #275291.
-	epatch "${FILESDIR}/${P}-agent-gpg-compat.patch"
 }
 
 src_install() {
 	gnome2_src_install
+
+	find "${D}" name "*.la" -delete || die "remove of la files failed"
 
 	exeinto /etc/X11/xinit/xinitrc.d/
 	doexe "${FILESDIR}/70-seahorse-agent" || die "doexe failed"
