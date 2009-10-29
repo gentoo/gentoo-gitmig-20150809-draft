@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3483 2009/10/29 14:58:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3484 2009/10/29 20:38:56 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Add comment about security bug #290470 to app-office/koffice mask
 
   29 Oct 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera-10.10 mask.
