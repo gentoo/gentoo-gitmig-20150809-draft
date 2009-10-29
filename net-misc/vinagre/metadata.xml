@@ -4,8 +4,8 @@
 <herd>gnome</herd>
 <use>
 	<flag name="applet">Enable vinagre applet for <pkg>gnome-base/gnome-panel</pkg>.</flag>
+	<flag name="telepathy">Enable access to remote desktop via a telepathy client.</flag>
+	<flag name="ssh">Enable ssh plugin.</flag>
 </use>
-<longdescription lang="en">
-</longdescription>
 </pkgmetadata>
 
