@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.18.4-r2.ebuild,v 1.2 2009/09/23 17:19:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.22.2.ebuild,v 1.1 2009/10/29 21:20:48 eva Exp $
 
 EAPI="2"
 
@@ -11,10 +11,11 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug doc fam hardened selinux xattr"
 
-RDEPEND="virtual/libiconv
+RDEPEND="virtual/libc
+	virtual/libiconv
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )"
 DEPEND="${RDEPEND}
@@ -22,7 +23,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11
 	doc? (
 		>=dev-libs/libxslt-1.0
-		>=dev-util/gtk-doc-1.8
+		>=dev-util/gtk-doc-1.11
 		~app-text/docbook-xml-dtd-4.1.2 )"
 
 src_prepare() {
@@ -46,15 +47,6 @@ src_prepare() {
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
-
-	# Fix g_base64 overruns. bug #249214
-	epatch "${FILESDIR}"/glib2-CVE-2008-4316.patch
-
-	# Fix compilation with gcc 4.4, bug #264686
-	epatch "${FILESDIR}/${P}-gcc44.patch"
-
-	# Fix GIO null unref, bug #260301
-	epatch "${FILESDIR}/${PN}-2.20.1-gio-unref.patch"
 
 	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
@@ -91,4 +83,12 @@ src_install() {
 	rm -f "${D}/usr/lib/charset.alias"
 
 	dodoc AUTHORS ChangeLog* NEWS* README || die "dodoc failed"
+}
+
+src_test() {
+	unset DBUS_SESSION_BUS_ADDRESS
+	export XDG_CONFIG_DIRS=/etc/xdg
+	export XDG_DATA_DIRS=/usr/local/share:/usr/share
+	export XDG_DATA_HOME=${T}
+	emake check || die "tests failed"
 }
