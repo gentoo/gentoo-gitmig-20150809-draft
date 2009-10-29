@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.190 2009/10/29 20:22:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.191 2009/10/29 20:28:26 cardoe Exp $
+
+*nvidia-drivers-173.14.20-r1 (29 Oct 2009)
+
+  29 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-173.14.20-r1.ebuild:
+  install nvidia-smi application and nvidia-xconfig man page
 
   29 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-185.18.36.ebuild, nvidia-drivers-185.18.36-r1.ebuild,
