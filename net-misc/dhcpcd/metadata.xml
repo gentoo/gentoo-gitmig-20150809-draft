@@ -3,8 +3,8 @@
 <pkgmetadata>
   <herd>base-system</herd>
   <maintainer>
-  	<email>darkside@gentoo.org</email>
-	<name>Jeremy Olexa</name>
+  	<email>williamh@gentoo.org</email>
+	<name>William Hubbs</name>
   </maintainer>
   <use>
     <flag name="compat">Enable commandline compability with dhcpcd-3.x</flag>
