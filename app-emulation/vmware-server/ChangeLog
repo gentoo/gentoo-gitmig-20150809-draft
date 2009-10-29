@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.59 2009/09/22 17:58:50 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.60 2009/10/29 13:24:13 vadimk Exp $
+
+*vmware-server-2.0.2.203138 (29 Oct 2009)
+
+  29 Oct 2009; Vadim Kuznetsov vadimk@gentoo.org
+  +files/2.0.2.203138/000_all_initd-location.patch,
+  +files/2.0.2.203138/001_all_fix-permissions.patch,
+  +files/2.0.2.203138/002_all_pagebreak-detection-fix.patch,
+  +files/2.0.2.203138/004_all_do-not-build-modules.patch,
+  +files/2.0.2.203138/007_all_use-modprobe-over-insmod.patch,
+  +files/2.0.2.203138/009_all_init.d-modules-warning.patch,
+  +files/2.0.2.203138/011_all_legit-modules-only.patch,
+  -vmware-server-2.0.1.156745.ebuild, -vmware-server-2.0.1.156745-r1.ebuild,
+  +vmware-server-2.0.2.203138.ebuild,
+  +files/2.0.2.203138/012_all_rc-config.patch,
+  -vmware-server-2.0.1.156745-r2.ebuild:
+  version bump. Bug 290702
 
 *vmware-server-2.0.1.156745-r3 (22 Sep 2009)
 

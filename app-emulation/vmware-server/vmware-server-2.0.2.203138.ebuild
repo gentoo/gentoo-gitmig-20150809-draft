@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.1.156745-r2.ebuild,v 1.2 2009/07/08 20:17:28 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.2.203138.ebuild,v 1.1 2009/10/29 13:24:13 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -15,17 +15,19 @@ MY_PN="VMware-server-${MY_PV}"
 
 DESCRIPTION="VMware Server for Linux"
 HOMEPAGE="http://www.vmware.com/"
+DOWNLOAD_URL="http://downloads.vmware.com/d/info/datacenter_downloads/vmware_server/2_0"
 SRC_URI=" x86? ( mirror://vmware/software/vmserver/${MY_PN}.i386.tar.gz )
-		amd64? ( mirror://vmware/software/vmserver/${MY_PN}.x86_64.tar.gz ) "
+	  amd64? ( mirror://vmware/software/vmserver/${MY_PN}.x86_64.tar.gz ) "
 
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
-RESTRICT="strip"
+RESTRICT="fetch strip"
 
-CDEPEND=">=sys-libs/glibc-2.3.5
+CDEPEND="
 	>=dev-lang/perl-5
+	>=sys-libs/glibc-2.3.5
 	sys-apps/pciutils"
 DEPEND="${CDEPEND}
 	sys-apps/findutils
@@ -34,28 +36,26 @@ DEPEND="${CDEPEND}
 # vmware-server should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
 RDEPEND="${CDEPEND}
-	dev-libs/libxml2
+	~app-emulation/vmware-modules-1.0.0.24
 	dev-libs/glib
+	dev-libs/libxml2
+	sys-apps/hal
+	sys-fs/fuse
+	sys-libs/zlib
+	virtual/pam
 	x11-libs/libICE
 	x11-libs/libSM
-	x11-libs/libXft
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/libXext
+	x11-libs/libXft
 	x11-libs/libXt
 	x11-libs/libXtst
 	x11-misc/xdg-utils
-	sys-fs/fuse
-	sys-apps/hal
-	sys-libs/zlib
-	virtual/pam
 	!<sys-apps/dbus-0.62
 	!app-emulation/vmware-player
 	!app-emulation/vmware-workstation
-	~app-emulation/vmware-modules-1.0.0.24
-	!<app-emulation/vmware-modules-1.0.0.24
-	!>=app-emulation/vmware-modules-1.0.0.25
 	"
 
 PDEPEND="app-emulation/vmware-vix"
@@ -68,6 +68,18 @@ pkg_setup() {
 	elif use amd64; then
 		MY_P="${MY_PN}.x86_64"
 	fi
+}
+
+pkg_nofetch() {
+	if use x86; then
+		MY_P="${MY_PN}.i386"
+	elif use amd64; then
+		MY_P="${MY_PN}.x86_64"
+	fi
+
+	einfo "Please download the ${MY_P}.bundle from"
+	einfo "${DOWNLOAD_URL}"
+	einfo "and place it in ${DISTDIR}"
 }
 
 src_prepare() {
@@ -124,6 +136,11 @@ src_install() {
 				|| die "copying ${x}"
 		fi
 	done
+
+	# Bug 282213
+	mv "${D}"/"${VMWARE_INSTALL_DIR}"/lib/lib/libpng12.so.0/libpng12.so.0 \
+	   "${D}"/"${VMWARE_INSTALL_DIR}"/lib/lib/libpng12.so.0/libpng12.so.0.old
+	dosym /usr/lib/libpng12.so.0 "${VMWARE_INSTALL_DIR}"/lib/lib/libpng12.so.0/libpng12.so.0
 
 	# If we have an /etc directory, we copy it.
 	if [[ -e "${S}/etc" ]]
