@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/bug-buddy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.166 2009/10/24 17:04:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.167 2009/10/29 22:05:08 eva Exp $
+
+*bug-buddy-2.28.0 (29 Oct 2009)
+
+  29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +bug-buddy-2.28.0.ebuild:
+  Initial ebuild for GNOME 2.28.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> ChangeLog:
   ppc stable #281427
