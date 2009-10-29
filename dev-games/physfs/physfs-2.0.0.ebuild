@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.0.ebuild,v 1.8 2009/10/11 16:46:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.0.ebuild,v 1.9 2009/10/29 16:04:58 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -12,7 +12,7 @@ SRC_URI="http://icculus.org/physfs/downloads/${P}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc grp hog mvl wad qpak +zip"
+IUSE="doc grp hog mvl qpak static-libs wad +zip"
 
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
@@ -31,10 +31,10 @@ src_configure() {
 	local mycmakeargs="
 		-DPHYSFS_ARCHIVE_7Z=OFF
 		-DPHYSFS_BUILD_SHARED=ON
-		-DPHYSFS_BUILD_STATIC=ON
 		-DPHYSFS_BUILD_TEST=OFF
 		-DPHYSFS_BUILD_WX_TEST=OFF
 		-DPHYSFS_INTERNAL_ZLIB=OFF
+		$(cmake-utils_use static-libs PHYSFS_BUILD_STATIC)
 		$(cmake-utils_use grp PHYSFS_ARCHIVE_GRP)
 		$(cmake-utils_use hog PHYSFS_ARCHIVE_HOG)
 		$(cmake-utils_use mvl PHYSFS_ARCHIVE_MVL)
