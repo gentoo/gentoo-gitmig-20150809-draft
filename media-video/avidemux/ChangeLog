@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.157 2009/10/21 22:18:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.158 2009/10/29 01:32:06 yngwin Exp $
+
+*avidemux-2.5.1_p5428 (29 Oct 2009)
+
+  29 Oct 2009; Ben de Groot <yngwin@gentoo.org>
+  -avidemux-2.5.1_p5359.ebuild, -avidemux-2.5.1_p5396.ebuild,
+  +avidemux-2.5.1_p5428.ebuild,
+  +files/avidemux-2.5.1-build-plugins-fix.patch:
+  New snapshot, fixes bug 290233. Drop older snapshots.
 
 *avidemux-2.5.1_p5396 (21 Oct 2009)
 
