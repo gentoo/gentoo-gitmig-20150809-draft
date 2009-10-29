@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.26.1-r1.ebuild,v 1.2 2009/06/30 07:50:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.28.1.ebuild,v 1.1 2009/10/29 22:09:54 eva Exp $
 
 EAPI="2"
 
-inherit gnome2 pam virtualx eutils autotools
+inherit gnome2 pam virtualx
 
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://www.gnome.org/"
@@ -19,7 +19,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/gtk+-2.6
 	gnome-base/gconf
 	>=sys-apps/dbus-1.0
-	hal? ( >=sys-apps/hal-0.5.7 )
 	pam? ( virtual/pam )
 	>=dev-libs/libgcrypt-1.2.2
 	>=dev-libs/libtasn1-1"
@@ -30,12 +29,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+DOCS="AUTHORS ChangeLog NEWS README TODO keyring-intro.txt"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable debug)
-		$(use_enable hal)
 		$(use_enable test tests)
 		$(use_enable pam)
 		$(use_with pam pam-dir $(getpam_mod_dir))
@@ -51,22 +49,9 @@ src_prepare() {
 	# Remove silly CFLAGS
 	sed 's:CFLAGS="$CFLAGS -Werror:CFLAGS="$CFLAGS:' \
 		-i configure.in configure || die "sed failed"
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
-
-	# Detect where dlopen functions are rather than hardcoding -ldl
-	# Fixes build on BSD
-	# Bug #271359
-	# Gnome bug #584307
-	epatch "${FILESDIR}/${P}-dlopen.patch"
-	eautoreconf
-
 }
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	Xemake check || die "emake check failed!"
-
-	Xemake -C tests run || die "running tests failed!"
 }
