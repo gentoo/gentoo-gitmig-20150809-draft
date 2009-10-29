@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.20.3.ebuild,v 1.1 2009/05/28 21:03:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.22.3.ebuild,v 1.1 2009/10/29 21:26:52 eva Exp $
 
 EAPI="2"
 
@@ -40,12 +40,9 @@ pkg_setup() {
 		$(use_enable python)"
 }
 
-src_prepare() {
-	gnome2_src_prepare
-
-	# backspace broken within screen, bug #249618
-	epatch "${FILESDIR}/${PN}-0.17.4-no-null-backspace.patch"
+#src_prepare() {
+#	gnome2_src_prepare
 
 	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
-}
+#	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+#}
