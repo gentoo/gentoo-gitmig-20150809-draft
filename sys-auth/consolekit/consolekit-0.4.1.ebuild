@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.2.10-r1.ebuild,v 1.2 2009/03/17 22:48:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.1.ebuild,v 1.1 2009/10/29 23:33:46 eva Exp $
 
 EAPI="2"
 
@@ -8,49 +8,56 @@ inherit autotools eutils multilib pam
 
 MY_PN="ConsoleKit"
 MY_PV="${PV//_pre*/}"
+MY_P="${MY_PN}-${MY_PV}"
 
+# FIXME: Report on upstream for patch about policies ? (probably upstream devs wanted this behaviour as default...)
 DESCRIPTION="Framework for defining and tracking users, login sessions and seats."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/ConsoleKit"
-SRC_URI="http://people.freedesktop.org/~mccann/dist/${MY_PN}-${PV}.tar.gz"
+SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug pam"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug doc pam policykit"
 
 RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/dbus-glib-0.61
 	>=x11-libs/libX11-1.0.0
 	pam? ( virtual/pam )
-	elibc_glibc? ( !=sys-libs/glibc-2.4* )"
+	policykit? ( >=sys-auth/polkit-0.92 )
+	elibc_glibc? ( !=sys-libs/glibc-2.4* )
+	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-libs/libxslt
+	doc? ( app-text/xmlto )"
 
-S="${WORKDIR}/${MY_PN}-${MY_PV}"
+S=${WORKDIR}/${MY_PN}-${MY_PV}
 
 src_prepare() {
-	# Fix directory leaks, bug #258685
-	epatch "${FILESDIR}/${P}-directory-leak.patch"
-
 	# Clean up at_console compat files, bug #257761
-	epatch "${FILESDIR}/${P}-cleanup_console_tags.patch"
-
-	# Add nox11 option to no interfere with Xsession script, bug #257763
-	epatch "${FILESDIR}/${P}-pam-add-nox11.patch"
+	epatch "${FILESDIR}/${PN}-0.2.10-cleanup_console_tags.patch"
 
 	# Fix automagic dependency on policykit
-	epatch "${FILESDIR}/${P}-polkit-automagic.patch"
+	epatch "${FILESDIR}/${PN}-0.4.0-polkit-automagic.patch"
+
+	# Fix multilib support
+	epatch "${FILESDIR}/${PN}-0.4.0-multilib.patch"
+
+	# Be able to shutdown or reboot even without polkit or RBAC supports
+	epatch "${FILESDIR}/${P}-shutdown-reboot-without-policies.patch"
 
 	eautoreconf
 }
 
 src_configure() {
 	econf \
+		XMLTO_FLAGS="--skip-validation" \
 		$(use_enable debug) \
+		$(use_enable doc docbook-docs) \
 		$(use_enable pam pam-module) \
-		--disable-polkit \
+		$(use_enable policykit polkit) \
 		--with-pam-module-dir=/$(getpam_mod_dir) \
-		--with-pid-file=/var/run/consolekit.pid \
 		--with-dbus-services=/usr/share/dbus-1/services/ \
 		--localstatedir=/var
 }
@@ -73,11 +80,11 @@ src_install() {
 	keepdir /var/run/ConsoleKit
 	keepdir /var/log/ConsoleKit
 
-	insinto /etc/X11/xinit/xinitrc.d/
-	doins "${FILESDIR}/90-consolekit" || die "doins failed"
+	exeinto /etc/X11/xinit/xinitrc.d/
+	doexe "${FILESDIR}/90-consolekit" || die "doexe failed"
 
 	exeinto /usr/$(get_libdir)/ConsoleKit/run-session.d/
-	doexe "${FILESDIR}/pam-foreground-compat.ck" || die "doexe failed"
+	doexe "${FILESDIR}/pam-foreground-compat.ck" || die "doexe failed"
 }
 
 pkg_postinst() {
@@ -86,8 +93,4 @@ pkg_postinst() {
 	ewarn "This can be done with /etc/init.d/consolekit restart"
 	ewarn "but make sure you do this and then restart your session"
 	ewarn "otherwise you will get access denied for certain actions"
-
-	ewarn
-	ewarn "You need to chmod +x /etc/X11/xinit/xinitrc.d/90-consolekit"
-	ewarn "to benefit of consolekit if you are not using gdm or pam integration."
 }
