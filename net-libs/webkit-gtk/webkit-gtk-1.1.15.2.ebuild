@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.7.ebuild,v 1.4 2009/09/12 22:42:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.2.ebuild,v 1.1 2009/10/29 21:35:36 eva Exp $
 
 EAPI="2"
+
+inherit autotools
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -13,7 +15,7 @@ LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 # geoclue
-IUSE="coverage debug doc gnome-keyring +gstreamer pango"
+IUSE="coverage debug doc +gstreamer pango ruby +websockets"
 
 # use sqlite, svg by default
 RDEPEND="
@@ -24,27 +26,39 @@ RDEPEND="
 	x11-libs/cairo
 
 	>=x11-libs/gtk+-2.10
+	>=gnome-base/gail-1.8
 	>=dev-libs/icu-3.8.1-r1
-	>=net-libs/libsoup-2.25.90
+	>=net-libs/libsoup-2.27.91
 	>=dev-db/sqlite-3
 	>=app-text/enchant-0.22
 
-	gnome-keyring? ( >=gnome-base/gnome-keyring-2.26.0 )
 	gstreamer? (
 		media-libs/gstreamer:0.10
 		media-libs/gst-plugins-base:0.10 )
-	pango? ( x11-libs/pango )
+	pango? ( >=x11-libs/pango-1.12 )
 	!pango? (
 		media-libs/freetype:2
 		media-libs/fontconfig )
 "
 DEPEND="${RDEPEND}
+	>=sys-devel/flex-2.5.33
 	sys-devel/gettext
 	dev-util/gperf
 	dev-util/pkgconfig
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	# Make it libtool-1 compatible
+	rm -v autotools/lt* autotools/libtool.m4 \
+		|| die "removing libtool macros failed"
+	# Don't force -O2
+	sed -i 's/-O2//g' "${S}"/configure.ac || die "sed failed"
+	# Prevent maintainer mode from being triggered during make
+	AT_M4DIR=autotools eautoreconf
+}
 
 src_configure() {
 	# It doesn't compile on alpha without this in LDFLAGS
@@ -52,11 +66,13 @@ src_configure() {
 
 	local myconf
 
-	myconf="--enable-svg-filters
-		$(use_enable gnome-keyring gnomekeyring)
-		$(use_enable gstreamer video)
+	myconf="
+		$(use_enable coverage)
 		$(use_enable debug)
-		$(use_enable coverage)"
+		$(use_enable gstreamer video)
+		$(use_enable ruby)
+		$(use_enable websockets web_sockets)
+		--enable-filters"
 
 	# USE-flag controlled font backend because upstream default is freetype
 	# Remove USE-flag once font-backend becomes pango upstream
@@ -74,12 +90,4 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 	dodoc WebKit/gtk/{NEWS,ChangeLog} || die "dodoc failed"
-}
-
-pkg_postinst() {
-	if use gstreamer; then
-	    ewarn
-	    ewarn "If ${PN} doesn't play some video format, please check your"
-	    ewarn "USE flags on media-plugins/gst-plugins-meta"
-	fi
 }
