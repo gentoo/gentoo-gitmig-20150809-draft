@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnome-mastermind
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/ChangeLog,v 1.5 2008/04/27 02:25:32 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/ChangeLog,v 1.6 2009/10/29 15:14:11 maekke Exp $
+
+  29 Oct 2009; Markus Meier <maekke@gentoo.org>
+  gnome-mastermind-0.3.1.ebuild:
+  amd64/x86 stable, bug #289154
 
 *gnome-mastermind-0.3.1 (27 Apr 2008)
 
