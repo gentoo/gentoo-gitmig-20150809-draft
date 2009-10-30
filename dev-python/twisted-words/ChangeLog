@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.37 2009/01/24 16:50:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.38 2009/10/30 13:02:55 arfrever Exp $
+
+  30 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  twisted-words-8.2.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *twisted-words-8.2.0 (24 Jan 2009)
 

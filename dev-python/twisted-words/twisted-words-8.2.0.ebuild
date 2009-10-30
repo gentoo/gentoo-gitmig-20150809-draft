@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-8.2.0.ebuild,v 1.1 2009/01/24 16:50:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-8.2.0.ebuild,v 1.2 2009/10/30 13:02:55 arfrever Exp $
 
-MY_PACKAGE=Words
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+MY_PACKAGE="Words"
 
 inherit twisted
 
@@ -13,10 +15,14 @@ IUSE=""
 
 DEPEND="=dev-python/twisted-$(get_version_component_range 1)*
 	=dev-python/twisted-web-$(get_version_component_range 1)*"
+RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
+
+PYTHON_MODNAME="twisted/plugins twisted/words"
 
 src_install() {
 	twisted_src_install
 
-	# Remove the "im" script we do not depend on the required pygtk.
-	rm -rf "${D}"/usr/{bin,share/man}
+	# Remove the "im" script, because we do not depend on the required pygtk.
+	rm -fr "${D}"usr/{bin,share/man}
 }
