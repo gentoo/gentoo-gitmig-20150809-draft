@@ -1,0 +1,14 @@
+# ChangeLog for media-video/miro
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.1 2009/10/30 08:29:50 volkmar Exp $
+
+*miro-2.5.3 (30 Oct 2009)
+
+  30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> +miro-2.5.3.ebuild,
+  +files/miro-2.5.3-disable-xine-hack.patch,
+  +files/miro-2.5.3-dont-install-test-files.patch,
+  +files/miro-2.5.3-fix-debug.patch, +files/miro-2.5.3-fix-locale.patch,
+  +files/miro-2.5.3-remove-unittest-option.patch, +metadata.xml:
+  Initial commit. Fix bug 131527
+  Thanks to wayne work on the bug.
+

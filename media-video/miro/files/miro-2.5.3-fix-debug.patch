@@ -1,0 +1,12 @@
+This patch comes from Debian
+--- platform/gtk-x11/setup.py.orig	2009-02-28 17:29:13.000000000 +0100
++++ platform/gtk-x11/setup.py	2009-02-28 17:29:26.000000000 +0100
+@@ -330,7 +330,7 @@
+         exit;
+     fi
+ 
+-    %(runtimelib)s$GDB -ex 'set breakpoint pending on' -ex 'run' --args $PYTHON ./miro.real --sync "$@"
++    %(runtimelib)s$GDB -ex 'set breakpoint pending on' -ex 'run' --args $PYTHON /usr/bin/miro.real --sync "$@"
+ else
+     %(runtimelib)smiro.real "$@"
+ fi

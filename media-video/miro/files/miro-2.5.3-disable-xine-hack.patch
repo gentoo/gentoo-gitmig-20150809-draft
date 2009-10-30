@@ -1,0 +1,16 @@
+# This patch comes from Debian
+# This seems to cause segfaults with newer libxine (?) releases, so disable it.
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=512719
+# http://bugzilla.pculture.org/show_bug.cgi?id=11263
+
+--- platform/gtk-x11/plat/options.py.orig	2009-07-24 15:11:34.000000000 +0200
++++ platform/gtk-x11/plat/options.py	2009-07-24 15:11:42.000000000 +0200
+@@ -51,7 +51,7 @@
+                        help="Which renderer to use.  (gstreamer, xine)" )
+ 
+ USE_XINE_XV_HACK = GTKPref(key="UseXineXVHack",
+-                           default=True,
++                           default=False,
+                            alias="xine-xvhack",
+                            help="Whether or not to use the Xine xv hack.  (true, false)" )
+ 
