@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.55 2009/10/26 19:13:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.56 2009/10/30 20:50:17 scarabeus Exp $
+
+*eselect-opengl-1.0.9 (30 Oct 2009)
+
+  30 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +eselect-opengl-1.0.9.ebuild:
+  Version bump.
+  Use symlinks with relative path instead of absolute one everywhere.
+  Rewrite code to be at least a bit readable (use functions).
+  Since this release .la files are ignored.
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   eselect-opengl-1.0.8-r1.ebuild:
