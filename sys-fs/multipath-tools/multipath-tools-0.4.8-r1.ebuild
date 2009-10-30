@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8-r1.ebuild,v 1.1 2009/10/30 06:50:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8-r1.ebuild,v 1.2 2009/10/30 07:01:35 robbat2 Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -28,6 +28,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.4.8-udev-scsi_id-changes.patch
 	# Patch per upstream tree for 1GiB limit of kpartx
 	epatch "${FILESDIR}"/${PN}-0.4.8-r1-kpartx.patch
+	# CVE-2009-0115, world writable socket
+	epatch "${FILESDIR}"/${PN}-0.4.8-socket-cve-2009-0115.patch
 }
 
 src_compile() {
