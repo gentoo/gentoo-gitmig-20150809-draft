@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.4.ebuild,v 1.3 2009/10/30 10:30:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.4.ebuild,v 1.4 2009/10/30 17:39:03 nyhm Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ ka kk kn ko ku lt lv mk ml mn mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
 ru si sk sl sq sr sv-SE ta-LK ta te th tr uk vi zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
-XUL_PV="1.9.1.3"
+XUL_PV="1.9.1.4"
 MAJ_XUL_PV="1.9.1"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.5"
