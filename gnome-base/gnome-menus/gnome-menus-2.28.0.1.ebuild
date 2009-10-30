@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.28.0.1.ebuild,v 1.1 2009/10/29 21:44:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.28.0.1.ebuild,v 1.2 2009/10/30 16:18:43 mr_bones_ Exp $
 
 inherit eutils gnome2 python
 
@@ -46,7 +46,7 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install
-	
+
 	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 
 	# Prefix menu, bug #256614
