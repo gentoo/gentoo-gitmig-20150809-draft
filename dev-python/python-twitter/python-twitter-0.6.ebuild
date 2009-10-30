@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.6.ebuild,v 1.2 2009/10/23 08:30:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.6.ebuild,v 1.3 2009/10/30 20:39:54 volkmar Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://python-twitter.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-python/simplejson"

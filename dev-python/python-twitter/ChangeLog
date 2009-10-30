@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-twitter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.1 2009/10/23 08:18:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.2 2009/10/30 20:39:54 volkmar Exp $
+
+  30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  python-twitter-0.6.ebuild:
+  Keywording for ppc.
 
 *python-twitter-0.6 (23 Oct 2009)
 
