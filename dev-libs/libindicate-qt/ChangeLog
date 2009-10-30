@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libindicate-qt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.1 2009/10/30 00:06:11 scarabeus Exp $
+
+*libindicate-qt-0.2.2 (30 Oct 2009)
+
+  30 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libindicate-qt-0.2.2.ebuild, +metadata.xml:
+  Initial commit. Add Qt bindings for libindicate.
+
