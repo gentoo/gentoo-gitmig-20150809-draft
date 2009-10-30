@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.8 2009/10/10 17:40:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.9 2009/10/30 19:12:57 maekke Exp $
+
+  30 Oct 2009; Markus Meier <maekke@gentoo.org> mako-0.2.5.ebuild:
+  amd64/x86 stable, bug #290608
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> mako-0.2.5.ebuild:
   Merge from Prefix
