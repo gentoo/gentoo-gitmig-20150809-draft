@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.4.ebuild,v 1.2 2009/10/29 13:26:12 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.4.ebuild,v 1.3 2009/10/30 10:30:46 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -61,8 +61,7 @@ RDEPEND="
 	>=app-text/hunspell-1.2
 	sqlite? ( >=dev-db/sqlite-3.6.10 )
 	alsa? ( media-libs/alsa-lib )
-	>=net-libs/xulrunner-${XUL_PV}[java=,sqlite=]
-	!>=net-libs/xulrunner-1.9.2
+	~net-libs/xulrunner-${XUL_PV}[java=,sqlite=]
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]"
 
