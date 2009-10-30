@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.15 2009/10/03 22:18:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.16 2009/10/30 20:19:31 arfrever Exp $
+
+*ipy-0.70 (30 Oct 2009)
+
+  30 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +ipy-0.70.ebuild:
+  Version bump.
 
 *ipy-0.64 (04 Oct 2009)
 
