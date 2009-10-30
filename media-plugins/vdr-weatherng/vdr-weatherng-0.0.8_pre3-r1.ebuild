@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3-r1.ebuild,v 1.1 2009/01/20 15:39:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3-r1.ebuild,v 1.2 2009/10/30 19:50:06 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin eutils
 
@@ -16,8 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dxr3"
 
-DEPEND="media-libs/imlib2
+DEPEND="media-libs/imlib2[jpeg,gif]
 	>=media-video/vdr-1.3.34"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/weatherng-${MY_PV}"
 
@@ -26,20 +29,9 @@ VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.0.8.sh"
 
 PATCHES=("${FILESDIR}/${P}-i18n-fix.diff")
 
-pkg_setup() {
-	vdr-plugin_pkg_setup
-
-	if ! built_with_use media-libs/imlib2 jpeg gif ; then
-		echo
-		eerror "Please recompile media-libs/imlib2 with"
-		eerror "USE=\"jpeg gif\""
-		die "media-libs/imlib2 need jpeg and gif support"
-	fi
-}
-
-src_unpack() {
-	vdr-plugin_src_unpack
-	cd "${S}"
+src_prepare() {
+	vdr-plugin_src_prepare
+#	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-timeout.diff"

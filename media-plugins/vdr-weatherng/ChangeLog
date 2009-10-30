@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.24 2009/01/20 15:39:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.25 2009/10/30 19:50:06 hd_brummy Exp $
+
+  30 Oct 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-weatherng-0.0.8_pre3.ebuild, vdr-weatherng-0.0.8_pre3-r1.ebuild:
+  moved to eapi=2
 
 *vdr-weatherng-0.0.8_pre3-r1 (20 Jan 2009)
 
