@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3484 2009/10/29 20:38:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3485 2009/10/30 16:45:33 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Oct 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Remove net-wireless/bluez-hciemu -- fix bug 257826
 
   29 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
   Add comment about security bug #290470 to app-office/koffice mask
