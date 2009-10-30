@@ -1,0 +1,11 @@
+diff -Naur iotop-0.3.2/setup.py iotop-0.3.2.new/setup.py
+--- iotop-0.3.2/setup.py	2009-09-22 11:43:42.000000000 +0000
++++ iotop-0.3.2.new/setup.py	2009-10-20 14:28:59.158934815 +0000
+@@ -2,7 +2,6 @@
+ 
+ import sys
+ 
+-sys.path.insert(0, 'setuptools-0.6c9-py2.4.egg')
+ from setuptools import setup, find_packages
+ from iotop.version import VERSION
+ 

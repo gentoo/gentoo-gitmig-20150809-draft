@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.17 2009/10/02 15:23:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.18 2009/10/30 03:59:47 darkside Exp $
+
+*iotop-0.3.2-r1 (30 Oct 2009)
+
+  30 Oct 2009; Jeremy Olexa <darkside@gentoo.org> -iotop-0.3.ebuild,
+  -iotop-0.3.1.ebuild, -iotop-0.3.2.ebuild, +iotop-0.3.2-r1.ebuild,
+  +files/iotop-0.3.2-rm-bundled-setuptools.patch:
+  revbump. Remove bundled setuptools and add it as a dep, patch by Kent
+  Fredric in bug 289875. Other small cleanup
 
 *iotop-0.3.2 (02 Oct 2009)
 
