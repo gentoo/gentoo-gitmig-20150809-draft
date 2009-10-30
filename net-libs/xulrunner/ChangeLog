@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.263 2009/10/30 17:52:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.264 2009/10/30 18:10:41 jer Exp $
+
+  30 Oct 2009; Jeroen Roovers <jer@gentoo.org> xulrunner-1.9.1.4.ebuild:
+  Stable for HPPA (bug #290892).
 
   30 Oct 2009; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.0.13.ebuild,
   xulrunner-1.9.0.14.ebuild:
