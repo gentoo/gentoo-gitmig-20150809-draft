@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.2 2009/10/29 07:35:41 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.3 2009/10/30 11:32:45 wired Exp $
+
+*zen-sources-2.6.31_p5-r1 (30 Oct 2009)
+*zen-sources-2.6.31_p4 (30 Oct 2009)
+*zen-sources-2.6.30_p9 (30 Oct 2009)
+
+  30 Oct 2009; Alex Alexander <wired@gentoo.org>
+  -zen-sources-2.6.30-r9.ebuild, +zen-sources-2.6.30_p9.ebuild,
+  -zen-sources-2.6.31-r4.ebuild, -zen-sources-2.6.31-r5.ebuild,
+  +zen-sources-2.6.31_p4.ebuild, +zen-sources-2.6.31_p5-r1.ebuild,
+  +files/zen-sources-2.6.31_p5-config_fb_fix.patch:
+  modified versioning scheme to allow revisions of the same patchset. the
+  patchset version is now defined by _p. this was necessary in order to be
+  able to add hotfixes (like the one in 2.6.31_p5-r1).
 
 *zen-sources-2.6.31-r5 (29 Oct 2009)
 

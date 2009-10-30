@@ -9,6 +9,7 @@ K_SECURITY_UNSUPPORTED="1"
 
 RESTRICT="binchecks strip primaryuri mirror"
 
+CKV="${PV/_p[0-9]*}"
 ETYPE="sources"
 inherit kernel-2
 detect_version
@@ -16,7 +17,12 @@ K_NOSETEXTRAVERSION="don't_set_it"
 
 DESCRIPTION="The Zen Kernel v${KV_MAJOR}.${KV_MINOR}-${PR}"
 HOMEPAGE="http://zen-kernel.org"
-ZEN_URI="http://downloads.zen-kernel.org/$(get_version_component_range 1-3)/${KV_FULL}.patch${COMPRESSTYPE}"
+
+ZEN_PATCHSET="${PV/*_p}"
+ZEN_KERNEL="${PV/_p[0-9]*}"
+ZEN_KERNEL="${ZEN_KERNEL/_/-}"
+ZEN_FILE="${ZEN_KERNEL}-zen${ZEN_PATCHSET}.patch${COMPRESSTYPE}"
+ZEN_URI="http://downloads.zen-kernel.org/$(get_version_component_range 1-3)/${ZEN_FILE}"
 SRC_URI="${KERNEL_URI} ${ZEN_URI}"
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
@@ -36,7 +42,7 @@ pkg_setup(){
 src_unpack(){
 	kernel-2_src_unpack
 	cd "${S}"
-	epatch "${DISTDIR}"/${KV_FULL}.patch${COMPRESSTYPE}
+	epatch "${DISTDIR}"/"${ZEN_FILE}"
 }
 
 K_EXTRAEINFO="For more info on zen-sources and details on how to report problems, see: \

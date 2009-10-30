@@ -1,0 +1,12 @@
+diff --git a/drivers/video/console/fbcon.c b/drivers/video/console/fbcon.c
+index 70316a8..3d0ccc0 100644
+--- a/drivers/video/console/fbcon.c
++++ b/drivers/video/console/fbcon.c
+@@ -204,6 +204,7 @@ int fbcon_is_softback(const unsigned short *str)
+ 		return 1;
+ 	return 0;
+ }
++EXPORT_SYMBOL(fbcon_is_softback);
+ 
+ #ifdef CONFIG_FRAMEBUFFER_CONSOLE_ROTATION
+ static inline void fbcon_set_rotation(struct fb_info *info)
