@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.11.ebuild,v 1.8 2009/08/10 22:19:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.13.ebuild,v 1.1 2009/10/30 08:57:00 tove Exp $
 
 EAPI=2
 
@@ -12,18 +12,19 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="ssl nls kerberos krb4 hesiod"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="ssl nls kerberos hesiod tk"
 
 RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	kerberos? ( app-crypt/mit-krb5 )
-	krb4? ( <app-crypt/mit-krb5-1.7[krb4] )
+	kerberos? ( virtual/krb5 )
 	nls? ( virtual/libintl )
 	elibc_FreeBSD? ( sys-libs/com_err )
-	virtual/python"
+	dev-lang/python[tk?]"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+RESTRICT=test
 
 pkg_setup() {
 	enewgroup ${PN}
@@ -48,7 +49,6 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_with kerberos gssapi) \
 		$(use_with kerberos kerberos5) \
-		$(use_with krb4 kerberos) \
 		$(use_with ssl) \
 		$(use_with hesiod) \
 		${myconf} || die "Configuration failed."
@@ -85,18 +85,11 @@ src_install() {
 
 pkg_postinst() {
 	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/fetchmailconf.py
 
-	if ! python -c "import Tkinter" >/dev/null 2>&1
-	then
-		elog
-		elog "You will not be able to use fetchmailconf(1), because you"
-		elog "don't seem to have Python with tkinter support."
-		elog
-		elog "If you want to be able to use fetchmailconf(1), do the following:"
-		elog "  1.  Add 'tk' to the USE variable in /etc/make.conf."
-		elog "  2.  (Re-)merge Python."
-		elog
+	if ! has_version dev-lang/python[tk] ; then
+		elog "Reinstall ${CATEGORY}/${PN} with USE=tk"
+		elog "if you want to use fetchmailconf."
 	fi
 
 	elog "Please see /etc/conf.d/fetchmail if you want to adjust"
