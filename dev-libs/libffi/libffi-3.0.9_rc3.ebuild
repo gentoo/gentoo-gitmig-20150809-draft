@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9_rc2.ebuild,v 1.1 2009/10/27 17:46:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9_rc3.ebuild,v 1.1 2009/10/30 12:57:10 ssuominen Exp $
 
 inherit libtool
 
@@ -14,8 +14,7 @@ KEYWORDS=""
 IUSE="debug static-libs test"
 
 RDEPEND=""
-DEPEND="!<dev-libs/g-wrap-1.9.11
-	test? ( dev-util/dejagnu )"
+DEPEND="test? ( dev-util/dejagnu )"
 
 S=${WORKDIR}/${P/_}
 
