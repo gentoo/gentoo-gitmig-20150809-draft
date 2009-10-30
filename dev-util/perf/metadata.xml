@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="demangle">
+      Enable C++ symbol name demangling, using libbfd from
+      <pkg>sys-devel/binutils</pkg>. When this flag is enabled, the
+      package will have to be rebuilt after every version bump of
+      binutils.
+    </flag>
+  </use>
+</pkgmetadata>
