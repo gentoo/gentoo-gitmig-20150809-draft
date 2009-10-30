@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.29 2009/01/08 22:49:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.30 2009/10/30 12:50:07 arfrever Exp $
+
+  30 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  twisted-news-8.2.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *twisted-news-8.2.0 (08 Jan 2009)
 
