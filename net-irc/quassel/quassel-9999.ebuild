@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.26 2009/10/28 19:24:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.27 2009/10/30 00:17:28 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://quassel-irc.org/"
 LICENSE="GPL-3"
 KEYWORDS=""
 SLOT="0"
-IUSE="dbus debug kde monolithic phonon postgres +server +ssl webkit +X"
+IUSE="ayatana dbus debug kde monolithic phonon postgres +server +ssl webkit +X"
 
 RDEPEND="
 	dbus? ( x11-libs/qt-dbus:4 )
@@ -24,6 +24,7 @@ RDEPEND="
 		postgres? ( x11-libs/qt-sql:4[postgres] >=virtual/postgresql-base-8.3 )
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
+		ayatana? ( dev-libs/libindicate-qt )
 		kde? ( >=kde-base/kdelibs-4.3 )
 		phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
 		webkit? ( x11-libs/qt-webkit:4 )
@@ -36,6 +37,7 @@ RDEPEND="
 		)
 		X? (
 			x11-libs/qt-gui:4
+			ayatana? ( dev-libs/libindicate-qt )
 			kde? ( >=kde-base/kdelibs-4.1 )
 			phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
 			webkit? ( x11-libs/qt-webkit:4 )
@@ -57,16 +59,16 @@ pkg_setup() {
 
 src_configure() {
 	local mycmakeargs="
+		$(cmake-utils_use_with ayatana LIBINDICATE)
 		$(cmake-utils_use_want X QTCLIENT)
 		$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want monolithic MONO)
-		$(cmake-utils_use_with webkit WEBKIT)
-		$(cmake-utils_use_with phonon PHONON)
-		$(cmake-utils_use_with kde KDE)
-		$(cmake-utils_use_with dbus DBUS)
+		$(cmake-utils_use_with webkit)
+		$(cmake-utils_use_with phonon)
+		$(cmake-utils_use_with kde)
+		$(cmake-utils_use_with dbus)
 		$(cmake-utils_use_with ssl OPENSSL)
 		$(cmake-utils_use_with !kde OXYGEN)
-		-DWITH_LIBINDICATE=OFF
 		-DEMBED_DATA=OFF
 	"
 

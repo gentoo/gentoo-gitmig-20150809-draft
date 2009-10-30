@@ -48,5 +48,9 @@
 			want to disable this on the server, but you need it enabled on
 			the client.
 		</flag>
+		<flag name="ayatana">
+			Build in support for Ayatana notification using the libindicate-qt
+			plugin.
+		</flag>
 	</use>
 </pkgmetadata>
