@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.12 2009/10/07 14:53:19 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.13 2009/10/30 19:11:55 maekke Exp $
+
+  30 Oct 2009; Markus Meier <maekke@gentoo.org> beaker-1.4.2.ebuild:
+  amd64/x86 stable, bug #290610
 
   07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> beaker-1.4.2.ebuild:
   Keywording for ppc
