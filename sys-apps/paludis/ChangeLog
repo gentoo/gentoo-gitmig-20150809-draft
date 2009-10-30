@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.144 2009/10/30 18:42:19 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.145 2009/10/30 18:58:01 tanderson Exp $
+
+  30 Oct 2009; Thomas Anderson <tanderson@gentoo.org>
+  -paludis-0.36.0.ebuild, -paludis-0.36.1.ebuild, -paludis-0.38.0.ebuild,
+  -paludis-0.38.1.ebuild, -paludis-0.38.2.ebuild:
+  Cleanup a bit.
 
 *paludis-0.42.0 (30 Oct 2009)
 
