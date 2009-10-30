@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.15 2009/10/24 14:35:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.16 2009/10/30 11:45:28 arfrever Exp $
 
 EAPI="2"
 
@@ -250,21 +250,18 @@ src_install() {
 
 pkg_preinst() {
 	if has_version "<${CATEGORY}/${PN}-${SLOT}" && ! has_version ">=${CATEGORY}/${PN}-${SLOT}_alpha"; then
-		# Delete this check after global switching to Python 3.
-		if [[ "$(eselect python show)" == "python3."* ]]; then
-			python_updater_warning="1"
-		fi
+		python_updater_warning="1"
 	fi
 }
 
 eselect_python_update() {
-	local ignored_python_slots
-	[[ "$(eselect python show)" == "python2."* ]] && ignored_python_slots="--ignore 3.0 --ignore 3.1 --ignore 3.2"
+	local ignored_python_slots_options=
+	[[ "$(eselect python show)" == "python2."* ]] && ignored_python_slots_options="--ignore 3.0 --ignore 3.1 --ignore 3.2"
 
 	# Create python3 symlink.
 	eselect python update > /dev/null
 
-	eselect python update ${ignored_python_slots}
+	eselect python update ${ignored_python_slots_options}
 }
 
 pkg_postinst() {
