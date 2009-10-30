@@ -1,6 +1,9 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.1 2009/10/30 08:29:50 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.2 2009/10/30 08:35:40 volkmar Exp $
+
+  30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> miro-2.5.3.ebuild:
+  Add ~x86 keyword (maintainer keywording).
 
 *miro-2.5.3 (30 Oct 2009)
 
