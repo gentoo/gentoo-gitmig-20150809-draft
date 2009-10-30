@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.1.ebuild,v 1.7 2009/10/10 18:08:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.1.ebuild,v 1.8 2009/10/30 20:40:00 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils
 
 DESCRIPTION="A unittest extension offering automatic test suite discovery and easy test authoring"
-HOMEPAGE="http://somethingaboutorange.com/mrl/projects/nose/"
+HOMEPAGE="http://somethingaboutorange.com/mrl/projects/nose/ http://pypi.python.org/pypi/nose"
 SRC_URI="http://somethingaboutorange.com/mrl/projects/nose/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
