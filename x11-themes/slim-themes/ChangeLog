@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.19 2009/03/25 23:26:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.20 2009/10/30 04:27:48 darkside Exp $
+
+*slim-themes-1.2.3a-r4 (30 Oct 2009)
+
+  30 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  +slim-themes-1.2.3a-r4.ebuild:
+  Add new 10.0 themes, by hitachi in bug 290523
 
   25 Mar 2009; Jeremy Olexa <darkside@gentoo.org>
   slim-themes-1.2.3a-r3.ebuild:
