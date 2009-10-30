@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.5.0-r1.ebuild,v 1.1 2009/10/17 09:46:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.5.0-r1.ebuild,v 1.2 2009/10/30 13:32:04 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
@@ -17,6 +18,9 @@ IUSE="pyzord"
 
 DEPEND="pyzord? ( dev-lang/python[gdbm] )"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
+
+DOCS="THANKS UPGRADING"
 
 src_prepare() {
 	epatch "${FILESDIR}/pyzord_getopt.patch"
@@ -28,26 +32,31 @@ src_prepare() {
 		unittests.py || die "sed in unittest.py failed"
 }
 
+src_test() {
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" unittests.py
+	}
+	python_execute_function testing
+}
+
 src_install () {
-	DOCS="INSTALL THANKS UPGRADING"
 	distutils_src_install
+
 	dohtml docs/usage.html
-	rm -rf "${D}/usr/share/doc/pyzor"
+	rm -rf "${D}usr/share/doc/pyzor"
 
 	if use pyzord; then
 		dodir /usr/sbin
-		mv "${D}/usr/bin/pyzord" "${D}/usr/sbin/"
+		mv "${D}usr/bin/pyzord" "${D}usr/sbin/"
 	else
-		rm "${D}/usr/bin/pyzord"
+		rm "${D}usr/bin/pyzord"
 	fi
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	if use pyzord; then
 		ewarn "/usr/bin/pyzord has been moved to /usr/sbin"
 	fi
-}
-
-src_test() {
-	PYTHONPATH=build/lib/ "${python}" unittests.py || die "tests failed"
 }

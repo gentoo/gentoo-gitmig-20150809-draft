@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.52 2009/10/17 09:46:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.53 2009/10/30 13:32:04 arfrever Exp $
+
+  30 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyzor-0.5.0-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *pyzor-0.5.0-r1 (17 Oct 2009)
 
