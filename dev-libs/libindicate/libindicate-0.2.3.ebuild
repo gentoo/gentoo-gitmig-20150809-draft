@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3.ebuild,v 1.2 2009/10/29 16:27:13 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3.ebuild,v 1.3 2009/10/30 00:02:59 scarabeus Exp $
 
 EAPI=2
 
@@ -12,8 +12,8 @@ SRC_URI="http://launchpad.net/${PN}/$(get_version_component_range 1-2)/${PV}/+do
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="gtk"
+KEYWORDS="~amd64 ~x86"
+IUSE="gtk doc"
 # They put their mother in the tarball ? ^^
 RESTRICT="test"
 
@@ -22,8 +22,8 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/libxml2:2
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-util/gtk-doc"
+	doc? ( dev-util/gtk-doc )
+	dev-util/pkgconfig"
 src_prepare() {
 	# Make libindicator-gtk library optional
 	epatch "${FILESDIR}/${P}-optional-gtk-support.patch"
@@ -36,7 +36,8 @@ src_configure() {
 	# and not for libindicate-gtk, disable it until its fixed on upstream
 	econf --disable-dependency-tracking \
 		--disable-gobject-introspection \
-		$(use_enable gtk)
+		$(use_enable gtk) \
+		$(use_enable doc)
 }
 src_test() {
 	emake check || die "testsuite failed"
