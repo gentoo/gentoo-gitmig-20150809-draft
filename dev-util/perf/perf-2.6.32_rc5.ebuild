@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc5.ebuild,v 1.1 2009/10/30 22:18:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc5.ebuild,v 1.2 2009/10/30 22:30:51 flameeyes Exp $
 
 EAPI=2
 
@@ -8,7 +8,6 @@ inherit versionator eutils toolchain-funcs linux-info
 
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-pre/-git}"
-
 
 DESCRIPTION="Userland tools for Linux Performance Counters"
 HOMEPAGE="http://perf.wiki.kernel.org/"
