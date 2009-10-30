@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1_alpha4.ebuild,v 1.1 2009/09/12 22:10:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1_alpha4.ebuild,v 1.2 2009/10/30 21:21:26 arfrever Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ MY_PN="PyOpenGL"
 MY_P="${MY_PN}-${PV/_alpha/a}"
 
 DESCRIPTION="Python OpenGL bindings"
-HOMEPAGE="http://pyopengl.sourceforge.net/"
+HOMEPAGE="http://pyopengl.sourceforge.net/ http://pypi.python.org/pypi/PyOpenGL"
 SRC_URI="http://pypi.python.org/packages/source/P/PyOpenGL/${MY_P}.tar.gz
 	mirror://sourceforge/pyopengl/${MY_P}.tar.gz"
 LICENSE="BSD"
