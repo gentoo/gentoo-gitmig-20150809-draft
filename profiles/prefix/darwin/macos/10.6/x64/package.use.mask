@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.6/x64/package.use.mask,v 1.1 2009/08/17 09:46:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.6/x64/package.use.mask,v 1.2 2009/10/30 20:40:38 grobian Exp $
 
 # Elias Pipping <pipping@gentoo.org> (21 Nov 2007)
 # generating documentation fails for hugs98 because of too many errors
@@ -14,24 +14,6 @@ dev-lang/ruby threads
 # mc fails to compile with USE=slang (unicode implies slang)
 app-misc/mc unicode slang
 
-# Elias Pipping <pipping@gentoo.org> (01 Sep 2007)
-# imlib2 does not compile with USE=mmx
-media-libs/imlib2 mmx
-
-# Elias Pipping <pipping@gentoo.org> (01 Sep 2007)
-# libpng does not compile with USE=mmx
-media-libs/libpng mmx
-
 # Elias Pipping <pipping@gentoo.org> (27 Aug 2007)
 # elinks does not compile with USE=perl (tested with 0.11.{2,3})
 www-client/elinks perl
-
-# flag returns compile errors
-media-video/mplayer livecd cpudetection
-# libs mising
-media-video/mplayer gtk sdl libcaca dv nas musepack bidi enca real win32codecs cdparanoia samba xanim live openal
-# X only
-media-video/mplayer xvmc xv dga X xinerama
-# linux only
-media-video/mplayer dvb esd lirc svga arts jack joystick matrox
-media-sound/mpg123 mmx

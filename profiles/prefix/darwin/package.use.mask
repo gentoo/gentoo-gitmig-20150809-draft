@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.use.mask,v 1.1 2009/06/06 03:54:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.use.mask,v 1.2 2009/10/30 20:40:34 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (30 Oct 2009)
+# linux only
+media-video/mplayer dvb esd lirc svga arts jack joystick matrox real win32codecs
 
 # Fabian Groffen <grobian@gentoo.org> (03 Apr 2009)
 # ld: unknown option: -R/Library/Gentoo/usr/lib
 ~sys-devel/gcc-4.3.3 gcj
-
-# Fabian Groffen <grobian@gentoo.org> (08 Aug 2008)
-# mmx don't really works on x86-macos
-net-irc/xchat mmx
 
 # Elias Pipping <pipping@gentoo.org> (16 Nov 2007)
 # make fails
