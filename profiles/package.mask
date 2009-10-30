@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10703 2009/10/30 16:59:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10704 2009/10/30 23:41:15 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -657,11 +657,6 @@ media-video/qc-usb-messenger
 # Masked for more testing, especially with cint7, afs and xrootd
 # on amd64 with gcc-4.4. See bug #280925
 =sci-physics/root-5.24.00
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (22 Sep 2009)
-# Removal in 30 days. We should keep only freeglut around.
-media-libs/vgui
-media-libs/glut
 
 # Mounir Lamouri <volkmar@gentoo.org> (21 Sep 2009)
 # net-misc/asterisk-app_rtxfax fails with >=media-libs/spandsp-0.0.3, bug 180318
