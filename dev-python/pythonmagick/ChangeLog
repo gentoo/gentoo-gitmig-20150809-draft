@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.19 2009/10/14 16:12:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.20 2009/10/30 16:00:18 bicatali Exp $
+
+  30 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  pythonmagick-0.9.1.ebuild:
+  Re-added BOOST_LIBS to support older boost versions, should close #289283
 
 *pythonmagick-0.9.1 (14 Oct 2009)
 

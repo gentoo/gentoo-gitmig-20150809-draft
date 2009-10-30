@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.1.ebuild,v 1.1 2009/10/14 16:12:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.1.ebuild,v 1.2 2009/10/30 16:00:18 bicatali Exp $
 
 EAPI=2
-inherit python
+inherit python flag-o-matic
 
 MY_PN=PythonMagick
 MY_P=${MY_PN}-${PV}
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 
 PYTHON_MODNAME="${MY_PN}"
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	append-flags $(python-config --includes)
+	export BOOST_PYTHON_LIB=boost_python
+}
 
 src_install() {
 	python_need_rebuild
