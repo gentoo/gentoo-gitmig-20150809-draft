@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.1 2009/10/29 23:28:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.2 2009/10/30 17:31:04 nirbheek Exp $
+
+  30 Oct 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -files/polkit-0.92-zsh-completions.patch, polkit-0.94.ebuild:
+  Remove zsh-completion (bug 291114), force pam support on (bug 291116)
 
 *polkit-0.94 (29 Oct 2009)
 
