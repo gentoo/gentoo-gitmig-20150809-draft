@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.11 2009/10/15 13:40:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.12 2009/10/30 20:56:05 volkmar Exp $
+
+  30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> couchdb-0.10.0.ebuild:
+  Keywording for ppc.
 
   15 Oct 2009; <djc@gentoo.org> -files/couchdb.conf-0.8.1,
   -files/couchdb.init-0.8.1, -couchdb-0.8.1.ebuild:
