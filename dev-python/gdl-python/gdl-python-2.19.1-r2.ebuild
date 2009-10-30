@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1-r1.ebuild,v 1.11 2009/10/30 07:44:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1-r2.ebuild,v 1.1 2009/10/30 07:44:43 eva Exp $
 
 G_PY_PN="gnome-python-extras"
 
@@ -13,10 +13,10 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
 DESCRIPTION="Python bindings for GDL"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples"
 
-RDEPEND=">=dev-libs/gdl-2.24.0"
+RDEPEND=">=dev-libs/gdl-2.28.0"
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/gdl/*"
@@ -27,6 +27,9 @@ src_unpack() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
 
-	# Fix build failure with recent gdl
+	# Fix build failure with gdl-2.24
 	epatch "${FILESDIR}/${P}-gdlicons.patch"
+
+	# Fix build failure with gdl-2.28
+	epatch "${FILESDIR}/${P}-gdlapi-removal.patch"
 }

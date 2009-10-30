@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.19 2009/09/27 13:50:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.20 2009/10/30 07:44:43 eva Exp $
+
+*gdl-python-2.19.1-r2 (30 Oct 2009)
+
+  30 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gdl-python-2.19.1-r1.ebuild, +gdl-python-2.19.1-r2.ebuild,
+  +files/gdl-python-2.19.1-gdlapi-removal.patch:
+  Version bump, fix compilation with gdl-2.28, bug #290522. Remove
+  built_with_use since it is useless with corresponding gdl versions, bug
+  #289028.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> gdl-python-2.19.1-r1.ebuild:
   ppc stable #268359
