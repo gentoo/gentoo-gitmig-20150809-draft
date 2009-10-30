@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-COMPRESSTYPE=".bz2"
-K_PREPATCHED="yes"
+COMPRESSTYPE=".lzma"
+K_USEPV="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
 
@@ -28,6 +28,9 @@ SRC_URI="${KERNEL_URI} ${ZEN_URI}"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
+KV_FULL="${PVR/_p/-zen}"
+S="${WORKDIR}"/linux-"${KV_FULL}"
+
 pkg_setup(){
 	ewarn
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
@@ -43,6 +46,7 @@ src_unpack(){
 	kernel-2_src_unpack
 	cd "${S}"
 	epatch "${DISTDIR}"/"${ZEN_FILE}"
+	epatch "${FILESDIR}"/"${P}-config_fb_fix.patch"
 }
 
 K_EXTRAEINFO="For more info on zen-sources and details on how to report problems, see: \
