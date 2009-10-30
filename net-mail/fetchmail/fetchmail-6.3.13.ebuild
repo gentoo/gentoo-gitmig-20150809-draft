@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.13.ebuild,v 1.1 2009/10/30 08:57:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.13.ebuild,v 1.2 2009/10/30 10:16:51 tove Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="ssl nls kerberos hesiod tk"
 
 RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	kerberos? ( virtual/krb5 )
+	kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 )
 	nls? ( virtual/libintl )
 	elibc_FreeBSD? ( sys-libs/com_err )
 	dev-lang/python[tk?]"
@@ -47,9 +47,10 @@ src_configure() {
 		--enable-NTLM \
 		--enable-SDPS \
 		$(use_enable nls) \
+		$(use_with ssl) \
+		$(use kerberos && echo "--with-ssl" ) \
 		$(use_with kerberos gssapi) \
 		$(use_with kerberos kerberos5) \
-		$(use_with ssl) \
 		$(use_with hesiod) \
 		${myconf} || die "Configuration failed."
 }
