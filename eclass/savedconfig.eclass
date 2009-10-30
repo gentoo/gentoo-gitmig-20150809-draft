@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.11 2009/10/30 00:05:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.12 2009/10/30 16:46:41 vapier Exp $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:
@@ -115,7 +115,7 @@ restore_config() {
 		die "do not know how to handle non-file/directory ${found}"
 	else
 		# maybe the user is screwing around with perms they shouldnt #289168
-		if [[ -r ${base} ]] ; then
+		if [[ ! -r ${base} ]] ; then
 			eerror "Unable to read ${base} -- perms are screwed ?"
 			die "fix your system"
 		fi
