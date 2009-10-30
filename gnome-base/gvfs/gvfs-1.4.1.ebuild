@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.4.1.ebuild,v 1.1 2009/10/29 21:56:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.4.1.ebuild,v 1.2 2009/10/30 00:35:57 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -48,9 +48,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	if use cdda && ! use hal && ! use gudev; then
-		ewarn "You have \"+cdda\", but you have \"-hal\" and \"-gudev\""
-		ewarn "cdda support will NOT be built unless you enable EITHER hal OR gudev"
+	if use cdda && ! use hal && ! use udev; then
+		ewarn "You have \"+cdda\", but you have \"-hal\" and \"-udev\""
+		ewarn "cdda support will NOT be built unless you enable EITHER hal OR udev"
 	fi
 
 	G2CONF="${G2CONF}

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.82 2009/10/29 21:56:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.83 2009/10/30 00:35:57 eva Exp $
+
+  30 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> gvfs-1.4.1.ebuild:
+  Rename all references to gudev to udev, bug #291086.
 
 *gvfs-1.4.1 (29 Oct 2009)
 
