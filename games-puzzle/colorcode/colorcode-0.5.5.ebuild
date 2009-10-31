@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/colorcode-0.5.5.ebuild,v 1.1 2009/10/31 21:21:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/colorcode-0.5.5.ebuild,v 1.2 2009/10/31 21:36:48 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 games
@@ -23,6 +23,14 @@ S=${WORKDIR}/${MY_PN}
 pkg_setup() {
 	games_pkg_setup
 	qt4_pkg_setup
+}
+
+src_prepare() {
+	sed -i \
+		-e '/FLAGS/d' \
+		ColorCode.pro \
+		|| die "sed failed"
+	qt4_src_prepare
 }
 
 src_configure() {
