@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.5.ebuild,v 1.3 2009/06/13 10:16:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7.ebuild,v 1.1 2009/10/31 10:39:33 volkmar Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils python games
 
@@ -31,6 +31,14 @@ S=${WORKDIR}/${PN}
 # Having a real install script and let playonlinux use standard filesystem
 # 	architecture to prevent having everything installed into GAMES_DATADIR
 # It will let using LANGUAGES easily
+# How to deal with Microsoft Fonts installation asked every time ?
+# How to deal with wine version installed ? (have a better mgmt of system one)
+
+src_prepare() {
+	einfo "Removing temporary files..."
+	rm -f $(find . -name *.pyc) || die "rm -f doesn't die"
+	rm -f $(find . -name *~) || die "rm -f doesn't die"
+}
 
 src_install() {
 	# all things without exec permissions
@@ -44,14 +52,10 @@ src_install() {
 	doexe bash/terminals/* || die "doexe failed"
 	exeinto "${GAMES_DATADIR}/${PN}/bash/expert"
 	doexe bash/expert/* || die "doexe failed"
-	exeinto "${GAMES_DATADIR}/${PN}/bash/options"
-	doexe bash/options/* || die "doexe failed"
 
 	# python/ install
 	exeinto "${GAMES_DATADIR}/${PN}/python"
 	doexe python/* || die "doexe failed"
-	exeinto "${GAMES_DATADIR}/${PN}/python/tools"
-	doexe python/tools/* || die "doexe failed"
 	# sub dir without exec permissions
 	insinto "${GAMES_DATADIR}/${PN}/python"
 	doins -r python/lib || die "doins failed"
@@ -62,9 +66,7 @@ src_install() {
 
 	# main executable files
 	exeinto "${GAMES_DATADIR}/${PN}"
-	doexe ${PN} || die "doexe failed"
-	doexe ${PN}-pkg || die "doexe failed"
-	doexe ${PN}-daemon || die "doexe failed"
+	doexe ${PN}{,-pkg,-daemon} || die "doexe failed"
 
 	# making a script to run app from ${GAMES_BINDIR}
 	echo "#!/bin/bash" > ${PN}_launcher
@@ -74,7 +76,7 @@ src_install() {
 	dodoc CHANGELOG || die "dodoc failed"
 
 	doicon etc/${PN}.png || die "doicon failed"
-	make_desktop_entry ${PN} ${MY_PN} || die "make_desktop_entry failed"
+	domenu etc/${MY_PN}.desktop || die "domenu failed"
 	prepgamesdirs
 }
 
