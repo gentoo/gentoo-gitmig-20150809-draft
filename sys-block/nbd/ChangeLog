@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.46 2009/10/30 10:08:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.47 2009/10/31 14:19:26 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> nbd-2.9.13.ebuild:
+  Marking nbd-2.9.13 ppc64 for bug 289523
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> nbd-2.9.13.ebuild:
   amd64/x86 stable, bug #289523
