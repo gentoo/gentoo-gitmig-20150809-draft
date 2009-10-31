@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10706 2009/10/31 12:53:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10707 2009/10/31 13:24:41 kolmodin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1037,11 +1037,6 @@ dev-lisp/gcl
 # actually doing 'amazonmp3-libcompat' for both x86 and amd64. (bug #272699)
 net-misc/amazonmp3
 
-# Lennart Kolmodin <kolmodin@gentoo.org> (22 Jul 2009)
-# Mark ghc-6.10.4 and the haskell updater.
-~dev-lang/ghc-6.10.4
-app-admin/haskell-updater
-
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jul 2009)
 # The attempts to unbundle iniparser from libcompizconfig are still
 # unsuccessful as it causes ccp to break
@@ -1148,14 +1143,6 @@ media-libs/freeimage
 # Masked for testing of ~ (tilde) unmasked packages
 >=app-portage/portpeek-1.8
 
-# Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
-# Mark the haskell-platform, depends on other things masked for testing.
-dev-haskell/haskell-platform
-
-# Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
-# Mark ghc-6.10.3 for testing.
-~dev-lang/ghc-6.10.3
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Apr 2009)
 # Mask libopensync 0.38 since no plugin was fixed for this
 ~app-pda/libopensync-0.38
@@ -1180,12 +1167,6 @@ app-benchmarks/phoronix-test-suite
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
 =net-analyzer/centreon-1.4.2.7
-
-# Lennart Kolmodin <kolmodin@gentoo.org> (19 Apr 2009)
-# Mark ghc-6.10.2 and related packages for testing.
-~dev-lang/ghc-6.10.2
-~dev-haskell/parallel-1.1.0.1
-~dev-haskell/haddock-2.4.2
 
 # Torsten Veller <tove@gentoo.org> (19 Apr 2009)
 # Uses pari-2.3* now.
