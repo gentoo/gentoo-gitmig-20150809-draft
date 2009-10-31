@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.28.1.ebuild,v 1.1 2009/10/29 23:19:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.28.1-r1.ebuild,v 1.1 2009/10/31 15:32:08 nirbheek Exp $
 
 inherit eutils gnome2
 
@@ -40,14 +40,4 @@ pkg_setup() {
 		--with-gnome-distributor=Gentoo
 		--disable-scrollkeeper
 		--disable-static"
-}
-
-pkg_preinst() {
-	gnome2_pkg_preinst
-	preserve_old_lib /usr/$(get_libdir)/libgnome-desktop-2.so.11
-}
-
-pkg_postinst() {
-	gnome2_pkg_postinst
-	preserve_old_lib_notify /usr/$(get_libdir)/libgnome-desktop-2.so.11
 }
