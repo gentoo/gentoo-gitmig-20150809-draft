@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.15.ebuild,v 1.5 2009/09/06 08:49:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.15.ebuild,v 1.6 2009/10/31 14:40:32 ranger Exp $
 
 DESCRIPTION="Files which haven't been accessed in a given period of time are removed from specified directories"
 HOMEPAGE="https://fedorahosted.org/tmpwatch/"
@@ -8,7 +8,7 @@ SRC_URI="https://fedorahosted.org/releases/t/m/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 src_unpack() {
