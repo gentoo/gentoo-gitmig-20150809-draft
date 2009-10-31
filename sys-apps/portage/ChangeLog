@@ -1,6 +1,27 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.643 2009/10/23 03:21:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.644 2009/10/31 04:27:07 zmedico Exp $
+
+*portage-2.2_rc47 (31 Oct 2009)
+
+  31 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc47.ebuild:
+  2.2_rc47 bump. This includes all fixes in 2.1.7.2 and also fixes
+  bug #266454 (make @world all-inclusive, and add @selected set for
+  user-selected world atoms).
+
+*portage-2.1.7.2 (31 Oct 2009)
+
+  31 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.2.ebuild:
+  2.1.7.2 bump. This fixes bug #134466 (new --ask-enter-invalid option),
+  bug #227225 (repoman check for ~ operator with explicit revision),
+  bug #259697 (fix repoman docs for GLEP 56), bug #287869 (--select[=n]
+  option that is inverse of --oneshot), bug #288863 (sandbox violations
+  with /dev/std*), bug #288906 (show file collisions in build log),
+  bug #289068 (KeyError related to ACCEPT_LICENSE), bug #289967
+  (installsources fix for >=debugedit-4.4.6-r2), bug #290428 (update
+  /var/db/pkg mtime for each modification), and bug #290625
+  (UnicodeEncodeError displaying unicode with python3). Bug #288499 tracks
+  all bugs fixed since 2.1.6.x.
 
   23 Oct 2009; Zac Medico <zmedico@gentoo.org> -portage-2.1.4.5.ebuild,
   -portage-2.1.7.ebuild, -portage-2.2_rc41.ebuild, -portage-2.2_rc42.ebuild,
