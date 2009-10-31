@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.83 2009/09/28 19:29:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.84 2009/10/31 15:40:13 swegener Exp $
+
+*systemtap-1.0-r1 (31 Oct 2009)
+
+  31 Oct 2009; Sven Wegener <swegener@gentoo.org> +systemtap-1.0-r1.ebuild,
+  +files/systemtap-1.0-CVE-2009-2911-dwarf.patch,
+  +files/systemtap-1.0-CVE-2009-2911-unwind.patch,
+  +files/systemtap-1.0-CVE-2009-2911-varargs.patch:
+  Revision bump, security bug #290218.
 
 *systemtap-1.0 (28 Sep 2009)
 
