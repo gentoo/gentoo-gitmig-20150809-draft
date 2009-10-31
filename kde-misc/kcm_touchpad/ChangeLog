@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kcm_touchpad
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/ChangeLog,v 1.1 2009/10/31 13:46:02 ssuominen Exp $
+
+*kcm_touchpad-0.3.0 (31 Oct 2009)
+
+  31 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kcm_touchpad-0.3.0.ebuild:
+  Initial commit wrt #289889, thanks to Andreis Vinogradovs for reporting.
+
