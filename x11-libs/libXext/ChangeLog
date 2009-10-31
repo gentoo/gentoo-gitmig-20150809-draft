@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.65 2009/10/26 21:01:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.66 2009/10/31 21:42:03 zmedico Exp $
+
+  31 Oct 2009; Zac Medico <zmedico@gentoo.org> libXext-1.1.1.ebuild:
+  Add blocker for <xextproto-7.1.1, to avoid file collisions when merging
+  binary packages.
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> libXext-1.0.5.ebuild:
   Stable for HPPA (bug #282290).
