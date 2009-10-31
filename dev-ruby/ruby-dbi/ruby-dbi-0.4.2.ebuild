@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.4 2009/09/24 14:11:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.5 2009/10/31 21:46:27 volkmar Exp $
 
 inherit "ruby"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://rubyforge/ruby-dbi/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="examples odbc postgres mysql sqlite sqlite3 test"
 
 DEPEND="
