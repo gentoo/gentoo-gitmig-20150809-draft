@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc5.ebuild,v 1.2 2009/10/30 22:30:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc5.ebuild,v 1.3 2009/10/31 11:58:37 flameeyes Exp $
 
 EAPI=2
 
@@ -28,11 +28,12 @@ SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v$(get_version_component_range 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+demangle"
+IUSE="+demangle +doc"
 
 RDEPEND="demangle? ( sys-devel/binutils )
 	dev-libs/elfutils"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( app-text/asciidoc app-text/xmlto )"
 
 if [[ -n ${LINUX_PATH} ]]; then
 	DEPEND="${DEPEND}
@@ -93,6 +94,12 @@ src_compile() {
 		prefix="/usr" bindir_relative="sbin" \
 		CFLAGS_OPTIMIZE="${CFLAGS}" \
 		LDFLAGS_OPTIMIZE="${LDFLAGS}" || die
+
+	if use doc; then
+		pushd Documentation
+		emake ${makeargs} || die
+		popd
+	fi
 }
 
 src_test() {
@@ -104,9 +111,18 @@ src_install() {
 	dosbin perf || die
 
 	dodoc CREDITS || die
+
+	if use doc; then
+		dodoc Documentation/*.txt || die
+		dohtml Documentation/*.html || die
+		doman Documentation/*.1 || die
+	fi
 }
 
 pkg_postinst() {
-	elog "We currently provide no documentation with perf; we're sorry"
-	elog "but there will be no man page nor --help output."
+	if ! use doc; then
+		elog "Without the doc USE flag you won't get any documentation nor man pages."
+		elog "And without man pages, you won't get any --help output for perf and its"
+		elog "sub-tools."
+	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.2 2009/10/30 22:18:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.3 2009/10/31 11:58:37 flameeyes Exp $
+
+  31 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  perf-2.6.32_rc5.ebuild, metadata.xml:
+  Add doc USE flag to build documentation and man pages.
 
 *perf-2.6.32_rc5 (30 Oct 2009)
 
