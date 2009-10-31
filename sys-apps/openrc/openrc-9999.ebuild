@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.60 2009/10/19 02:10:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.61 2009/10/31 01:04:54 williamh Exp $
 
 EAPI="1"
 
@@ -11,10 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git
 	KEYWORDS=""
 else
-	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2
-		mirror://gentoo/${P}.tar.bz2
-		http://dev.gentoo.org/~cardoe/files/${P}.tar.bz2
-		http://dev.gentoo.org/~vapier/dist/${P}.tar.bz2"
+	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 fi
 
