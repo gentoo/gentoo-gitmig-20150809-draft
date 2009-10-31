@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/mothur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.1 2009/07/07 18:09:18 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.2 2009/10/31 22:10:04 weaver Exp $
+
+*mothur-1.6.0 (31 Oct 2009)
+
+  31 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> +mothur-1.6.0.ebuild:
+  Version bump
 
 *mothur-1.4.1 (07 Jul 2009)
 
