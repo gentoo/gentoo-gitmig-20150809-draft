@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/njplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.10 2009/09/04 17:22:15 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.11 2009/10/31 17:59:45 maekke Exp $
+
+  31 Oct 2009; Markus Meier <maekke@gentoo.org> njplot-2.3.ebuild:
+  amd64/x86 stable, bug #290935
 
 *njplot-2.3 (04 Sep 2009)
 
