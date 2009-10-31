@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ophcrack-tables
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack-tables/ChangeLog,v 1.3 2008/09/14 12:08:53 ikelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack-tables/ChangeLog,v 1.4 2009/10/31 00:38:46 ikelos Exp $
+
+  31 Oct 2009; Mike Auty <ikelos@gentoo.org> ophcrack-tables-1.0.ebuild,
+  ophcrack-tables-1.0-r1.ebuild:
+  Add unzip to DEPEND for ophcrack-tables (bug 289545).
 
 *ophcrack-tables-1.0-r1 (14 Sep 2008)
 
