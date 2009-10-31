@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.2.ebuild,v 1.2 2009/09/04 19:30:55 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.2.ebuild,v 1.3 2009/10/31 17:56:05 maekke Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://wwwkramer.in.tum.de/exelixis/software/RAxML-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+threads"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 # mpi is not supported in version 7.2.2. mpi is enabled by adding -DPARALLEL to CFLAGS
 DEPEND="" # mpi? ( virtual/mpi )"
