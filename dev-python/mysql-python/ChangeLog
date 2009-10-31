@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.65 2009/10/10 17:55:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.66 2009/10/31 16:00:06 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org>
+  mysql-python-1.2.3_rc1.ebuild:
+  Marking mysql-python-1.2.3_rc1 ppc64 for bug 284574
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   mysql-python-1.2.3_rc1.ebuild:
