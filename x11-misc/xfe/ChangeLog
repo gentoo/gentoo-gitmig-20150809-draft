@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.53 2009/10/11 16:05:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.54 2009/10/31 14:23:25 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> xfe-1.19.2.ebuild:
+  Marking xfe-1.19.2 ppc64 for bug 281650
 
   11 Oct 2009; Raúl Porcel <armin76@gentoo.org> xfe-1.19.2.ebuild:
   sparc stable wrt #281650
