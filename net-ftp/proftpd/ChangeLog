@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.214 2009/10/30 17:29:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.215 2009/10/31 13:11:48 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> proftpd-1.3.2b.ebuild:
+  Marking proftpd-1.3.2b ppc64 for bug 290664
 
   30 Oct 2009; Jeroen Roovers <jer@gentoo.org> proftpd-1.3.2b.ebuild:
   Stable for HPPA (bug #290664).
