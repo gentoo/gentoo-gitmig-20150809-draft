@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.170 2009/09/16 06:50:28 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.171 2009/10/31 13:29:17 kolmodin Exp $
+
+  31 Oct 2009; <kolmodin@gentoo.org> -ghc-6.10.2.ebuild, -ghc-6.10.3.ebuild,
+  metadata.xml:
+  Remove previous ghc versions 6.10.2 and 6.10.3 as 6.10.4 now is unmasked.
+  Remove ghcmakebinary USE flag from metadata, it was unused.
 
   16 Sep 2009; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.10.4.ebuild,
   +files/ghc-6.10.4-ppc64-always-minimal-toc.patch,
