@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r2.ebuild,v 1.1 2009/10/31 20:17:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r2.ebuild,v 1.2 2009/10/31 20:18:19 cardoe Exp $
 
 EAPI="2"
 
@@ -275,8 +275,6 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
-
 	if use kernel_linux; then
 		linux-mod_src_install
 
@@ -316,7 +314,7 @@ src_install() {
 	dosym /usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so.${NV_SOVER} \
 		/usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so || \
 		die "failed to create libglx.so symlink"
-	
+
 	# XvMC driver
 	dolib.a ${NV_X11}/libXvMCNVIDIA.a || \
 		die "failed to install libXvMCNVIDIA.so"
