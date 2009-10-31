@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/eugene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.3 2009/09/09 21:58:14 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.4 2009/10/31 17:58:24 maekke Exp $
+
+  31 Oct 2009; Markus Meier <maekke@gentoo.org> eugene-3.5g.ebuild:
+  amd64/x86 stable, bug #290937
 
 *eugene-3.5g (09 Sep 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5g.ebuild,v 1.1 2009/09/09 21:58:14 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5g.ebuild,v 1.2 2009/10/31 17:58:24 maekke Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RESTRICT="test"
 
