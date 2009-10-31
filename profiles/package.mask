@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10704 2009/10/30 23:41:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10705 2009/10/31 10:26:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Oct 2009)
+# Moved to kde-base/kdeplasma-addons. Masked for removal.
+kde-misc/systemloadviewer
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Oct 2009)
 # KDE3-only applications.
