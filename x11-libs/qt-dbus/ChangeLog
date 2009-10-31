@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.43 2009/10/29 18:09:59 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.44 2009/10/31 13:36:38 maekke Exp $
+
+  31 Oct 2009; Markus Meier <maekke@gentoo.org> qt-dbus-4.5.3-r1.ebuild:
+  x86 stable, bug #290922
 
 *qt-dbus-4.5.3-r1 (29 Oct 2009)
 
