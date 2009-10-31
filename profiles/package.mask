@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10710 2009/10/31 20:19:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10711 2009/10/31 22:45:30 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1429,6 +1429,7 @@ net-p2p/limewire
 # you shouldn't be running this version
 >=media-tv/mythtv-0.22_alpha1
 >=x11-themes/mythtv-themes-0.22_alpha1
+>=x11-themes/mythtv-themes-extra-0.22_alpha1
 >=media-plugins/mytharchive-0.22_alpha1
 >=media-plugins/mythbrowser-0.22_alpha1
 >=media-plugins/mythcontrols-0.22_alpha1
