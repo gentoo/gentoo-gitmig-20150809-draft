@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.3 2009/09/21 09:39:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.4 2009/10/31 15:42:04 ssuominen Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -22,7 +22,7 @@ USE="${USE} dri"
 
 # 2006/03/29 - Stefan Schweizer <genstef@gentoo.org>
 # isdn USE flag defaults
-USE="${USE} pppd isdnlog"
+USE="${USE} pppd"
 
 # 2006/04/19 - Chris Gianelloni <wolf31o2@gentoo.org>
 # Make sure dev-lang/php works right.  See bug #120088 for more info.
