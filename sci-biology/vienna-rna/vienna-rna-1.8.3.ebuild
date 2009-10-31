@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.3.ebuild,v 1.2 2009/09/10 23:44:49 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.3.ebuild,v 1.3 2009/10/31 18:11:01 weaver Exp $
 
 EAPI="2"
 
@@ -48,6 +48,7 @@ src_configure() {
 }
 
 src_compile() {
+	emake clean || die
 	emake || die "Compilation failed."
 	emake -C Readseq || die "Failed to compile readseq."
 	# TODO: Add (optional?) support for the NCBI toolkit.
