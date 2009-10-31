@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/colorcode
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/ChangeLog,v 1.1 2009/10/31 21:21:14 mr_bones_ Exp $
+
+*colorcode-0.5.5 (31 Oct 2009)
+
+  31 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +colorcode-0.5.5.ebuild, +metadata.xml:
+  Initial commit - ebuild submitted by ssuominen
+
