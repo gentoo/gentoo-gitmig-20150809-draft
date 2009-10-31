@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.124 2009/10/28 04:16:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.125 2009/10/31 03:30:10 robbat2 Exp $
+
+*fuse-2.8.1 (31 Oct 2009)
+
+  31 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> +fuse-2.8.1.ebuild:
+  Version bump. Thanks to Rafał Mużyło <galtgendo@o2.pl> for the ebuild
+  work.
 
   28 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> fuse-2.7.4-r1.ebuild:
   USE=modules support for sys-fs/fuse.
