@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.79 2009/10/10 16:04:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.80 2009/10/31 14:40:56 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org>
+  gtkpod-0.99.14_p20090710.ebuild:
+  Marking gtkpod-0.99.14_p20090710 ppc64 for bug 280792
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org>
   gtkpod-0.99.14_p20090710.ebuild:
