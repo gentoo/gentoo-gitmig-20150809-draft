@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rescan-scsi-bus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.25 2009/09/05 21:48:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.26 2009/10/31 14:43:32 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> rescan-scsi-bus-1.29.ebuild:
+  Marking rescan-scsi-bus-1.29 ppc64 for bug 273074
 
   05 Sep 2009; Markus Meier <maekke@gentoo.org> rescan-scsi-bus-1.29.ebuild:
   amd64 stable, bug #273074
