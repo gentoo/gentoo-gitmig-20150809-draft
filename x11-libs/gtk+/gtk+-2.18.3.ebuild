@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.18.3.ebuild,v 1.1 2009/10/29 22:56:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.18.3.ebuild,v 1.2 2009/10/31 13:49:52 nirbheek Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="cups debug doc jpeg jpeg2k tiff test vim-syntax xinerama"
 
 # FIXME: configure says >=xrandr-1.2.99 but remi tells me it's broken
+# NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 RDEPEND="x11-libs/libXrender
 	x11-libs/libX11
 	x11-libs/libXi
@@ -29,7 +30,7 @@ RDEPEND="x11-libs/libXrender
 	>=dev-libs/glib-2.21.3
 	>=x11-libs/pango-1.20
 	>=dev-libs/atk-1.13
-	>=x11-libs/cairo-1.6[X]
+	>=x11-libs/cairo-1.6[X,svg]
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
