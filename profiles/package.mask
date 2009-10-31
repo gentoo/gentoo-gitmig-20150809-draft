@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10705 2009/10/31 10:26:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10706 2009/10/31 12:53:31 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Oct 2009)
+# KDE3-only. Replaced by kde-misc/qalculate-applet
+# and sci-calculators/qalculate-gtk. Masked for removal
+# in 30 days.
+sci-calculators/qalculate-kde
 
 # Samuli Suominen <ssuominen@gentoo.org> (31 Oct 2009)
 # Moved to kde-base/kdeplasma-addons. Masked for removal.

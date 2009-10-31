@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3487 2009/10/31 10:26:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3488 2009/10/31 12:53:31 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask sci-calculators/qalculate-kde (replaced by
+  kde-misc/qalculate-applet).
 
   31 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask kde-misc/systemloadviewer because it's moved into
