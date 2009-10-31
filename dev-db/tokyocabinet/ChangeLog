@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.7 2009/10/27 13:27:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.8 2009/10/31 22:36:23 volkmar Exp $
+
+  31 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  tokyocabinet-1.4.35.ebuild, tokyocabinet-1.4.36.ebuild:
+  Keywording for ppc, bug 291287
 
   27 Oct 2009; Alexis Ballier <aballier@gentoo.org>
   tokyocabinet-1.4.36.ebuild:
