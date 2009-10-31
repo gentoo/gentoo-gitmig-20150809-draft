@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.13 2009/10/11 17:02:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.14 2009/10/31 03:47:36 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -18,6 +18,7 @@ DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 )"
+# the debugedit blocker is for bug #289967
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
@@ -26,7 +27,8 @@ RDEPEND="${python_dep}
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	>=app-misc/pax-utils-0.1.17
-	selinux? ( >=dev-python/python-selinux-2.16 )"
+	selinux? ( >=dev-python/python-selinux-2.16 )
+	!>=dev-util/debugedit-4.4.6-r2"
 PDEPEND="
 	!build? (
 		>=net-misc/rsync-2.6.4
