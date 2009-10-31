@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5.ebuild,v 1.1 2009/09/28 20:40:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5-r1.ebuild,v 1.1 2009/10/31 16:48:10 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.10"
@@ -104,7 +104,7 @@ pkg_setup() {
 
 	if ! use cdr ; then
 		ewarn "You have cdr USE flag disabled."
-		ewarn "You will not be able to play audio CDs."
+		ewarn "You will not be able to burn CDs."
 	fi
 
 	if use brasero; then
@@ -138,6 +138,10 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	# Fix bug 291315 (patch taken from upstream repo)
+	# DAAP plugin load failure when built with --as-needed
+	epatch "${FILESDIR}/${P}-fix-daap-plugin-linking.patch"
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig

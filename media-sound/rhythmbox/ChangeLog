@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.160 2009/09/28 20:40:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.161 2009/10/31 16:48:10 nirbheek Exp $
+
+*rhythmbox-0.12.5-r1 (31 Oct 2009)
+
+  31 Oct 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -rhythmbox-0.12.5.ebuild, +rhythmbox-0.12.5-r1.ebuild,
+  +files/rhythmbox-0.12.5-fix-daap-plugin-linking.patch:
+  Fix bug 291315 -- daap plugin load failure & bug 287604 -- wrong ewarn
+  with USE=-cdr
 
 *rhythmbox-0.12.5 (28 Sep 2009)
 
