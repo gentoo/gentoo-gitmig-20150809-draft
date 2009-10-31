@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/velvet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.8 2009/09/20 00:36:36 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.9 2009/10/31 17:57:32 maekke Exp $
+
+  31 Oct 2009; Markus Meier <maekke@gentoo.org> velvet-0.7.55.ebuild:
+  amd64/x86 stable, bug #290936
 
   19 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> velvet-0.7.55.ebuild:
   Use elog
