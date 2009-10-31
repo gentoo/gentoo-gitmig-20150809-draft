@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.5 2009/09/24 14:04:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.6 2009/10/31 21:44:11 volkmar Exp $
+
+  31 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> deprecated-2.0.1.ebuild:
+  Keywording for ppc, bug 283229
 
   24 Sep 2009; Raúl Porcel <armin76@gentoo.org> deprecated-2.0.1.ebuild:
   Add ~ia64/~sparc wrt #283229
