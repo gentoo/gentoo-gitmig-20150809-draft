@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.36 2009/10/17 13:56:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.37 2009/10/31 14:17:56 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> procps-3.2.8.ebuild:
+  Marking procps-3.2.8 ppc64 for bug 287743
 
   17 Oct 2009; Raúl Porcel <armin76@gentoo.org> procps-3.2.8.ebuild:
   arm/ia64/m68k/s390/sh stable wrt #287743
