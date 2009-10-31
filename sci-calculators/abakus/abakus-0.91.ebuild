@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.6 2009/03/29 12:20:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.7 2009/10/31 11:39:01 ssuominen Exp $
 
 inherit kde
 
@@ -16,7 +16,7 @@ IUSE="debug gmp"
 
 RDEPEND="gmp? ( dev-libs/mpfr )"
 DEPEND="${RDEPEND}
-		>=dev-util/scons-0.96.1"
+	>=dev-util/scons-1.2"
 
 need-kde 3.3
 

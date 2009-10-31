@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/abakus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.11 2009/03/29 12:20:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.12 2009/10/31 11:39:01 ssuominen Exp $
+
+  31 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> abakus-0.91.ebuild:
+  Change scons depend to >= 1.2.0 wrt #264050.
 
   29 Mar 2009; Patrick Lauer <patrick@gentoo.org> abakus-0.91.ebuild:
   HOMEPAGE fix, closes #264052
