@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.26.0.ebuild,v 1.1 2009/10/29 21:25:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.26.0.ebuild,v 1.2 2009/10/31 14:33:29 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
@@ -65,6 +65,9 @@ src_prepare() {
 	# Fix introspection automagic.
 	# https://bugzilla.gnome.org/show_bug.cgi?id=596506
 	epatch "${FILESDIR}/${PN}-1.26.0-introspection-automagic.patch"
+
+	# Fix parallel build, bug 287825
+	epatch "${FILESDIR}/${PN}-1.26.0-fix-parallel-build.patch"
 
 	eautoreconf
 }

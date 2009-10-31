@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.275 2009/10/29 21:25:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.276 2009/10/31 14:33:29 nirbheek Exp $
+
+  31 Oct 2009; Nirbheek Chauhan <nirbheek@gentoo.org> pango-1.26.0.ebuild,
+  +files/pango-1.26.0-fix-parallel-build.patch:
+  Fix parallel build with patch by Martin von Gagern from bug 287825
 
 *pango-1.26.0 (29 Oct 2009)
 
