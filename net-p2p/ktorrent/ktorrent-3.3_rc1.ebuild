@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3_rc1.ebuild,v 1.2 2009/10/25 22:22:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3_rc1.ebuild,v 1.3 2009/10/31 11:23:47 scarabeus Exp $
 
 EAPI="2"
 
@@ -36,8 +36,10 @@ COMMONDEPEND="
 	mediaplayer? ( >=media-libs/taglib-1.5 )
 	plasma? ( >=kde-base/libtaskmanager-${KDE_MINIMAL} )
 	rss? (
-		dev-libs/boost
 		>=kde-base/kdepimlibs-${KDE_MINIMAL}
+	)
+	shutdown? (
+		>=kde-base/solid-${KDE_MINIMAL}
 	)
 "
 DEPEND="${COMMONDEPEND}
