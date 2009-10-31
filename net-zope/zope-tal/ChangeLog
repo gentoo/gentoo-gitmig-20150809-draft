@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-tal
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-tal/ChangeLog,v 1.1 2009/10/31 18:51:42 arfrever Exp $
+
+*zope-tal-3.5.2 (31 Oct 2009)
+
+  31 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-tal-3.5.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
