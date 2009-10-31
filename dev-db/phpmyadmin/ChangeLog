@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.376 2009/10/19 13:02:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.377 2009/10/31 14:48:13 armin76 Exp $
+
+  31 Oct 2009; Raúl Porcel <armin76@gentoo.org> phpmyadmin-2.11.9.6.ebuild:
+  sparc stable wrt #288899
 
   18 Oct 2009; Brent Baude <ranger@gentoo.org> phpmyadmin-2.11.9.6.ebuild:
   Marking phpmyadmin-2.11.9.6 ppc64 for bug 288899
