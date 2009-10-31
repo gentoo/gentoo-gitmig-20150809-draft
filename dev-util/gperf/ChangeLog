@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gperf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.46 2009/10/30 12:12:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.47 2009/10/31 14:32:31 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> gperf-3.0.4.ebuild:
+  Marking gperf-3.0.4 ppc64 for bug 288572
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> gperf-3.0.4.ebuild:
   arm/x86 stable, bug #288572
