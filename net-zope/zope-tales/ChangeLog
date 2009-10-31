@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-tales
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-tales/ChangeLog,v 1.1 2009/10/31 19:38:55 arfrever Exp $
+
+*zope-tales-3.4.0 (31 Oct 2009)
+
+  31 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-tales-3.4.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
