@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.129 2009/10/30 09:42:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.130 2009/10/31 14:39:01 ranger Exp $
+
+  31 Oct 2009; Brent Baude <ranger@gentoo.org> openal-1.9.563.ebuild:
+  Marking openal-1.9.563 ppc64 for bug 287653
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> openal-1.9.563.ebuild:
   arm stable, bug #287653
