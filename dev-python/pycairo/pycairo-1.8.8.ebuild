@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.13 2009/10/19 16:04:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.14 2009/11/01 15:49:47 arfrever Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils multilib
 
 DESCRIPTION="Python wrapper for cairo vector graphics library"
-HOMEPAGE="http://cairographics.org/pycairo/"
+HOMEPAGE="http://cairographics.org/pycairo/ http://pypi.python.org/pypi/pycairo"
 SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
@@ -22,8 +22,7 @@ RDEPEND=">=x11-libs/cairo-1.8.8[svg?]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-python/sphinx-0.6 )"
-
-RESTRICT_PYTHON_ABIS="2.4 2.5 3*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 
 PYTHON_MODNAME="cairo"
 DOCS="AUTHORS NEWS README"
@@ -68,7 +67,7 @@ src_test() {
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
+	[[ -z "${ED}" ]] && local ED="${D}"
 	PKGCONFIG_DIR="${EPREFIX}/usr/$(get_libdir)/pkgconfig" distutils_src_install
 
 	if use doc; then
