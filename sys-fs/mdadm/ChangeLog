@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.118 2009/10/21 08:49:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.119 2009/11/01 19:55:42 vapier Exp $
+
+  01 Nov 2009; Mike Frysinger <vapier@gentoo.org> mdadm-3.0.ebuild:
+  Restore ppc64 stable.
 
   21 Oct 2009; Jeroen Roovers <jer@gentoo.org> mdadm-3.0.ebuild:
   Stable for HPPA and reverted to ~ppc64 (bug #287013).
