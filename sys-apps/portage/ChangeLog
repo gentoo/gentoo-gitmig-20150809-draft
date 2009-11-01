@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.644 2009/10/31 04:27:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.645 2009/11/01 00:17:54 zmedico Exp $
+
+*portage-2.2_rc48 (01 Nov 2009)
+
+  01 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc48.ebuild:
+  2.2_rc48 bump. This includes all fixes in 2.1.7.3.
+
+*portage-2.1.7.3 (01 Nov 2009)
+
+  01 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.3.ebuild:
+  2.1.7.3 bump. This fixes bug #290921 (make dohtml always warn if given a
+  directory without -r) and bug #291271 (OSError when installing package
+  with new category). Bug #288499 tracks all bugs fixed since 2.1.6.x.
 
 *portage-2.2_rc47 (31 Oct 2009)
 
