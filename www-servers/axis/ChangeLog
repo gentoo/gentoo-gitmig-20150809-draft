@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/axis
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.21 2008/03/22 22:31:00 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.22 2009/11/01 23:06:46 caster Exp $
+
+*axis-1.4 (01 Nov 2009)
+
+  01 Nov 2009; Vlastimil Babka <caster@gentoo.org> +axis-1.4.ebuild,
+  +files/axis-1.4-build.xml.patch, +files/axis-1.4-path_refs.xml.patch,
+  +files/axis-1.4-targets.xml.patch, +files/axis-1.4-tools-build.xml.patch,
+  +files/build.properties:
+  Version bump, bug #268603.
 
   22 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   -axis-1.2_rc2-r2.ebuild:
