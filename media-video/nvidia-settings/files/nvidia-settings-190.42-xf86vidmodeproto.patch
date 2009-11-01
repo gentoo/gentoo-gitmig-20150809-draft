@@ -1,11 +1,12 @@
-diff -ur nvidia-settings-1.0.orig/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c nvidia-settings-1.0/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
---- nvidia-settings-1.0.orig/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c	2009-10-21 07:04:35.000000000 +0300
-+++ nvidia-settings-1.0/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c	2009-11-01 15:08:53.000000000 +0200
-@@ -28,6 +28,7 @@
+--- src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
++++ src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
+@@ -28,6 +28,9 @@
  #include "msg.h"
  
  #include <X11/extensions/xf86vmode.h>
++#if !defined(XF86VIDMODE_MAJOR_VERSION) || !defined(XF86VIDMODE_MINOR_VERSION)
 +#include <X11/extensions/xf86vmproto.h>
++#endif /* XF86VidMode Extension protocol defines */
  
  #include <stdlib.h>
  #include <string.h>
