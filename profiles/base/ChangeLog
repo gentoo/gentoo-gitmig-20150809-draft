@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.104 2009/10/19 21:27:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.105 2009/11/01 23:05:57 eva Exp $
+
+  01 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Mask tracker USE flag in apps using it, bug #291501.
 
   19 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.use.force:
   Remove media-sound/rubyripper's X USE flag from package.use.force; flag
