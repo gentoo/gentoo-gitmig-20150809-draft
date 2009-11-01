@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.104 2009/07/01 15:44:15 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.105 2009/11/01 09:31:45 abcd Exp $
+
+  01 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/koffice-18n-1.6.1-es-fix.diff:
+  Drop old patch
 
   01 Jul 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   -koffice-i18n-1.6.1.ebuild, koffice-i18n-1.6.3.ebuild:
