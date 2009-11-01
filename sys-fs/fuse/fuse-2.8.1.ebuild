@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.1.ebuild,v 1.1 2009/10/31 03:30:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.1.ebuild,v 1.2 2009/11/01 01:24:32 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils libtool linux-info
@@ -68,7 +68,7 @@ src_install() {
 		# The default is 1000.
 		#
 		#mount_max = 1000
-		
+
 		# Allow non-root users to specify the 'allow_other' or 'allow_root'
 		# mount options.
 		#
