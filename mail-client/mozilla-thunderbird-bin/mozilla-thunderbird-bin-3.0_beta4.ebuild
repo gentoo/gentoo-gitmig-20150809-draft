@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta4.ebuild,v 1.1 2009/10/31 14:53:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta4.ebuild,v 1.2 2009/11/01 01:24:13 mr_bones_ Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -37,7 +37,6 @@ for X in ${LANGS} ; do
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
-
 
 DEPEND="app-arch/unzip"
 RDEPEND="x11-libs/libXrender
