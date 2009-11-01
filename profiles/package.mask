@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10711 2009/10/31 22:45:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10712 2009/11/01 14:56:32 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -615,7 +615,7 @@ dev-java/axion
 
 # Markus Meier <maekke@gentoo.org> (03 Oct 2009)
 # mask hugin and deps beta/rc versions for testing
->=media-gfx/hugin-hugin-2009.4.0_rc1
+>=media-gfx/hugin-2009.4.0_rc1
 >=media-libs/libpano13-2.9.15_beta3
 
 # Michael Sterrett <mr_bones_@gentoo.org> (01 Oct 2009)
