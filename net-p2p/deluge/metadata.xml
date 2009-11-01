@@ -5,4 +5,9 @@
 <maintainer>
 <email>net-p2p@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='webinterface'>Install dependencies needed for the web
+		interface
+	</flag>
+</use>
 </pkgmetadata>
