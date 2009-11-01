@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.406 2009/10/29 15:03:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.407 2009/11/01 15:53:02 nixnut Exp $
+
+  01 Nov 2009; nixnut <nixnut@gentoo.org> opera-10.01.ebuild:
+  ppc stable #290862
 
 *opera-10.10_pre4685 (29 Oct 2009)
 
