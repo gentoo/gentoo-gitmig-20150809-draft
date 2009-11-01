@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.5-r1.ebuild,v 1.2 2009/11/01 20:35:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.5-r2.ebuild,v 1.1 2009/11/01 20:35:22 caster Exp $
 
 JAVA_PKG_IUSE="doc source examples test"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/firebird/${At}.zip"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="java6"
+IUSE="jni java6"
 
 RDEPEND="java6? ( >=virtual/jre-1.6 )
 	!java6? ( >=virtual/jre-1.5 )
@@ -24,6 +24,7 @@ DEPEND="java6? ( =virtual/jdk-1.6* )
 	app-arch/unzip
 	dev-java/ant-core
 	dev-java/log4j
+	jni? ( dev-java/cpptasks )
 	test? (
 		=dev-java/junit-3.8*
 		dev-java/ant-junit
@@ -57,7 +58,9 @@ src_unpack() {
 
 src_compile() {
 	java-pkg_filter-compiler jikes
+	use jni && ANT_TASKS="cpptasks"
 	eant $(use test && echo "-Dtests=true") jars \
+		$(use jni && echo "compile-native") \
 		$(use_doc javadocs)
 }
 
@@ -70,6 +73,13 @@ src_install() {
 	done
 	if use test; then
 		java-pkg_newjar ${MY_PN}-test-${PV}.jar ${MY_PN}-${jar}.jar || die "java-pkg_newjar ${MY_PN}-${jar}.jar failed"
+	fi
+
+	if use jni; then
+		cd "${S}/output/native"
+		sodest="/usr/lib/"
+		java-pkg_doso libjaybird21.so || die \
+			"java-pkg_doso ${sodest}libjaybird21.so failed"
 	fi
 
 	cd "${S}"
