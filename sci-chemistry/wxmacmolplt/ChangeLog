@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/wxmacmolplt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.1 2009/11/01 14:34:22 alexxy Exp $
+
+*wxmacmolplt-7.3 (01 Nov 2009)
+
+  01 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> +wxmacmolplt-7.3.ebuild,
+  +metadata.xml:
+  Initial import. Thanks to Reinis Danne
+
