@@ -1,6 +1,12 @@
-# ChangeLog for net-zope/zcbuildout
+# ChangeLog for net-zope/zc-buildout
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/ChangeLog,v 1.1 2009/10/10 17:03:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/ChangeLog,v 1.2 2009/11/01 23:51:39 arfrever Exp $
+
+*zc-buildout-1.4.2 (02 Nov 2009)
+
+  02 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zc-buildout-1.4.2.ebuild:
+  Version bump.
 
   29 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -zcbuildout-1.2.1.ebuild, -zcbuildout-1.4.1.ebuild, +zc-buildout-1.4.1.ebuild:
