@@ -1,0 +1,11 @@
+--- packETH-1.6.3/interface.c.orig	2009-10-23 17:24:31.000000000 +0200
++++ packETH-1.6.3/interface.c	2009-11-01 23:27:22.000000000 +0100
+@@ -914,6 +914,8 @@
+   GtkWidget *label251;
+   GtkWidget *statusbar1;
+ 
++  add_pixmap_directory ("/usr/share/pixmaps/packETH");
++
+   window1 = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+   gtk_window_set_title (GTK_WINDOW (window1), _("PackETH - ethernet packet generator"));
+   gtk_window_set_position (GTK_WINDOW (window1), GTK_WIN_POS_CENTER);

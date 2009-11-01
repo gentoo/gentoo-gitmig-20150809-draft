@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/packETH
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.4 2008/01/30 21:08:35 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.5 2009/11/01 22:41:57 jer Exp $
+
+*packETH-1.6.3 (01 Nov 2009)
+
+  01 Nov 2009; Jeroen Roovers <jer@gentoo.org> +packETH-1.6.3.ebuild,
+  +files/packETH-1.6.3-gentoo.patch, +files/packETH-1.6.3-pixmaps.patch:
+  Version bump thanks to DrChandra (bug #260381). Respect CC, CFLAGS,
+  LDFLAGS, and point to proper pixmaps directory.
 
   30 Jan 2008; <pva@gentoo.org> -packETH-1.3.ebuild, packETH-1.4.ebuild:
   Fixed missing gtk+ dependency, bug 205423, thank Evil Compile Person <bugs
