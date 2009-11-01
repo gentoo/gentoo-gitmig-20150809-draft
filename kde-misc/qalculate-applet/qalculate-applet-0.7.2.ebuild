@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/qalculate-applet/qalculate-applet-0.7.2.ebuild,v 1.1 2009/10/31 12:34:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/qalculate-applet/qalculate-applet-0.7.2.ebuild,v 1.2 2009/11/01 10:55:40 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -21,4 +21,4 @@ DEPEND=">=kde-base/plasma-workspace-${KDE_MINIMAL}
 
 S=${WORKDIR}/${MY_P}
 
-DOCS="ChangeLog README TODO"
+DOCS="Changelog README TODO"

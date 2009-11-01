@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/qalculate-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/qalculate-applet/ChangeLog,v 1.1 2009/10/31 12:34:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/qalculate-applet/ChangeLog,v 1.2 2009/11/01 10:55:40 ssuominen Exp $
+
+  01 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  qalculate-applet-0.7.2.ebuild:
+  Changelog instead of ChangeLog wrt #291306, thanks to DaggyStyle for
+  reporting.
 
 *qalculate-applet-0.7.2 (31 Oct 2009)
 
