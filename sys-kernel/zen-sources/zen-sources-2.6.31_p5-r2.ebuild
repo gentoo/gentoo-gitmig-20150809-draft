@@ -15,7 +15,7 @@ inherit kernel-2
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
 
-DESCRIPTION="The Zen Kernel v${KV_MAJOR}.${KV_MINOR}-${PR}"
+DESCRIPTION="The Zen Kernel Sources v2.6"
 HOMEPAGE="http://zen-kernel.org"
 
 ZEN_PATCHSET="${PV/*_p}"
