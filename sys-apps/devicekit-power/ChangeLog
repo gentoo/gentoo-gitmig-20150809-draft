@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/devicekit-power
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.3 2009/10/29 23:41:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.4 2009/11/01 12:45:55 eva Exp $
+
+*devicekit-power-012 (01 Nov 2009)
+
+  01 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +devicekit-power-012.ebuild:
+  Version bump. Disable static libs, review missing dtds in DEPEND, add
+  missing DOCS. Do not hibernate on encrypted swap and bugfixes.
 
 *devicekit-power-011 (29 Oct 2009)
 
