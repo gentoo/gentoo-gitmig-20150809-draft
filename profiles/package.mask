@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10712 2009/11/01 14:56:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10713 2009/11/01 18:03:22 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (01 Nov 2009)
+# Old gnome component superseeded by seahorse.
+# See bug #291456 for details.
+gnome-extra/gnome-keyring-manager
 
 # Samuli Suominen <ssuominen@gentoo.org> (31 Oct 2009)
 # Unported to KDE4 wrt #251992. Masked for removal in 30 days.
