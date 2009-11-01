@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10713 2009/11/01 18:03:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10714 2009/11/01 19:01:49 abcd Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -123,6 +123,12 @@ media-video/xfmedia
 # Old monolithic ebuild. Replaced by app-office/koffice-meta
 # Will be removed in 30 days
 # Also affected by security bug 290470
+#
+# Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
+# koffice monolithic masked, latest koffice version
+# 1.6.3_p20090204 provides only split ebuilds, please
+# refer to the KDE guide for more info
+# http://kde.gentoo.org/kde4-guide.xml
 app-office/koffice
 
 # Olivier Crête <tester@gentoo.org> (25 Oct 2009)
@@ -1086,13 +1092,6 @@ sys-cluster/gnbd-kernel
 sys-fs/gfs2
 sys-fs/gfs
 sys-fs/clvm
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
-# koffice monolithic masked, latest koffice version
-# 1.6.3_p20090204 provides only split ebuilds, please
-# refer to the KDE guide for more info
-# http://kde.gentoo.org/kde4-guide.xml
-app-office/koffice
 
 # Ben de Groot <yngwin@gentoo.org> (25 Jun 2009)
 # Mask the Qt4 meta ebuild, to prevent devs from being silly and depend on
