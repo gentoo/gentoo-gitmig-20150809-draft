@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.173 2009/10/30 21:35:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.174 2009/11/01 16:37:48 nixnut Exp $
+
+  01 Nov 2009; nixnut <nixnut@gentoo.org> mc-4.7.0_pre3.ebuild:
+  ppc stable #290347
 
 *mc-4.7.0_pre4 (30 Oct 2009)
 
