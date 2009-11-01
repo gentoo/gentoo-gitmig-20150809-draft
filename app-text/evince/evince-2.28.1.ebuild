@@ -1,6 +1,6 @@
- # Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.28.1.ebuild,v 1.1 2009/10/29 21:19:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.28.1.ebuild,v 1.2 2009/11/01 10:38:20 nirbheek Exp $
 
 EAPI="2"
 
@@ -87,6 +87,11 @@ src_prepare() {
 
 	# Make it libtool-1 compatible
 	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
+
+	# gconf-2.m4 is needed for autoconf; bug 291339
+	if ! use gnome; then
+		cp "${FILESDIR}/gconf-2.m4" m4/ || die "Copying gconf-2.m4 failed!"
+	fi
 
 	intltoolize --force --automake --copy || die "intltoolized failed"
 	eautoreconf
