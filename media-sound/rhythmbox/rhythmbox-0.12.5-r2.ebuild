@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5-r1.ebuild,v 1.1 2009/10/31 16:48:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5-r2.ebuild,v 1.1 2009/11/01 09:48:33 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.10"
 
-inherit eutils gnome2 python multilib virtualx
+inherit autotools eutils gnome2 python multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
@@ -142,6 +142,8 @@ src_prepare() {
 	# Fix bug 291315 (patch taken from upstream repo)
 	# DAAP plugin load failure when built with --as-needed
 	epatch "${FILESDIR}/${P}-fix-daap-plugin-linking.patch"
+
+	eautoreconf
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
