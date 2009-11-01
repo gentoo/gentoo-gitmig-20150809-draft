@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r1.ebuild,v 1.6 2009/10/29 20:22:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r1.ebuild,v 1.7 2009/11/01 07:58:10 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -533,7 +533,7 @@ pkg_postinst() {
 
 	elog "This ebuild installs a kernel module and X driver. Both must"
 	elog "match explicitly in their version. This means, if you restart"
-	elog "X, you most modprobe -r nvidia before starting it back up"
+	elog "X, you must modprobe -r nvidia before starting it back up"
 	elog
 
 	elog "To use the NVIDIA GLX, run \"eselect opengl set nvidia\""
