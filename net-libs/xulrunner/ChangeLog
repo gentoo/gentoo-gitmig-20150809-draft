@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.264 2009/10/30 18:10:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.265 2009/11/01 15:29:58 armin76 Exp $
+
+  01 Nov 2009; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.1.4.ebuild:
+  External sqlite needs to be 3.6.16
 
   30 Oct 2009; Jeroen Roovers <jer@gentoo.org> xulrunner-1.9.1.4.ebuild:
   Stable for HPPA (bug #290892).
