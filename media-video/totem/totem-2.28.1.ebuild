@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.1.ebuild,v 1.1 2009/10/29 22:39:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.1.ebuild,v 1.2 2009/11/01 20:44:06 eva Exp $
 
 EAPI="2"
 
@@ -83,17 +83,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.20
 	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1.11 )"
+	doc? ( >=dev-util/gtk-doc-1.11 )
+	app-text/docbook-xml-dtd:4.5"
+# docbook-xml-dtd is needed for user doc
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-# FIXME: tests broken with USE="doc" upstream bug #598805.
-
 pkg_setup() {
-	# Installed for plugins, but they're dlopen()-ed
-	# firefox, totem as well as nautilus
-	G2PUNT_LA="yes"
-
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--disable-schemas-install
@@ -154,6 +150,8 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
+	# Installed for plugins, but they're dlopen()-ed
+	# firefox, totem as well as nautilus
 	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 }
 
