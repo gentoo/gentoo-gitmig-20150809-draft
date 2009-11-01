@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.14 2009/10/26 23:05:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.15 2009/11/01 19:51:01 vapier Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -38,6 +38,7 @@ src_unpack() {
 	fi
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.96-genkernel.patch #256335
+	epatch_user
 
 	# autogen.sh does more than just run autotools
 	sed -i -e 's:^auto:eauto:' autogen.sh
