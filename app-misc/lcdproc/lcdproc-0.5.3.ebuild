@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3_pre1.ebuild,v 1.3 2009/06/13 10:38:47 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3.ebuild,v 1.1 2009/11/01 16:29:07 rbu Exp $
 
 EAPI=2
 inherit multilib versionator
@@ -58,7 +58,8 @@ RDEPEND="
 	lcd_devices_lis?        ( dev-embedded/libftdi virtual/libusb:0 )
 	lcd_devices_shuttlevfd? ( virtual/libusb:0 )"
 DEPEND="${RDEPEND}
-	doc?      ( app-text/xmlto )"
+	doc? ( app-text/xmlto
+	       app-text/docbook-xml-dtd:4.5 )"
 RDEPEND="${RDEPEND}
 	lcd_devices_g15?      ( app-misc/g15daemon )"
 

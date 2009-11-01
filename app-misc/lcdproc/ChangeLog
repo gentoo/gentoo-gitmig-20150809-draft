@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.67 2009/06/13 10:38:47 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.68 2009/11/01 16:29:07 rbu Exp $
+
+*lcdproc-0.5.3 (01 Nov 2009)
+
+  01 Nov 2009; Robert Buchholz <rbu@gentoo.org> -lcdproc-0.5.3_pre1.ebuild,
+  +lcdproc-0.5.3.ebuild:
+  Add docbook-xml-dtd as direct dependency, version bump to final. Thanks to
+  Samuli Suominen, bug #273214.
 
   13 Jun 2009; Robert Buchholz <rbu@gentoo.org> -lcdproc-0.5.1-r4.ebuild,
   lcdproc-0.5.2-r1.ebuild, lcdproc-0.5.2-r2.ebuild,
