@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.8 2009/08/02 13:15:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.9 2009/11/01 16:59:22 rbu Exp $
+
+*xournal-0.4.5 (01 Nov 2009)
+
+  01 Nov 2009; Robert Buchholz <rbu@gentoo.org> +xournal-0.4.5.ebuild:
+  Version bump, change to poppler (bug #287701).
 
   02 Aug 2009; Markus Meier <maekke@gentoo.org> xournal-0.4.2.1-r1.ebuild:
   x86 stable, bug #257980
