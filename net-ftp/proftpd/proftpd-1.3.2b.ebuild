@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2b.ebuild,v 1.5 2009/10/31 13:11:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2b.ebuild,v 1.6 2009/11/01 16:01:00 nixnut Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
 
 IUSE="acl authfile ban case clamav deflate hardened ifsession ipv6 kerberos ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
