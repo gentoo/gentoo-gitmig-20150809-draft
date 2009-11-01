@@ -1,0 +1,17 @@
+Index: es.c
+===================================================================
+RCS file: /cvsroot/eflite/eflite/es.c,v
+retrieving revision 1.20
+diff -r1.20 es.c
+714c714,722
+<     if (size == -1) terror("read");
+---
+>     if (size == -1)
+>     {
+>       if (errno == EBADF)
+>       {
+> 	/* this might really be an eof */
+> 	exit(0);
+>       }
+>       else terror("read");
+>     }

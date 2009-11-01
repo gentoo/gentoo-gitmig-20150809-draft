@@ -1,0 +1,59 @@
+diff -Naur eflite-0.3.8.orig/es.c eflite-0.3.8/es.c
+--- eflite-0.3.8.orig/es.c	2004-02-20 15:58:35.000000000 -0800
++++ eflite-0.3.8/es.c	2004-03-21 23:32:25.000000000 -0800
+@@ -760,9 +760,13 @@
+   char *input = NULL;
+   int more_opts = 1;
+   int debug = 0;
++  int daemon_only = 0;
+ 
+-  while (more_opts) switch(getopt_long(argc, argv, "df:v", (struct option *)&longopts, NULL))
++  while (more_opts) switch(getopt_long(argc, argv, "Ddf:v", (struct option *)&longopts, NULL))
+   {
++  case 'D':
++    daemon_only = 1;
++    break;
+   case 'd':
+     debug = 1;
+     break;
+@@ -783,19 +787,32 @@
+   sockname = lookup_string(NULL, "socketfile");
+   if (!sockname) sockname = "/tmp/es.socket";
+   local_fd = sockconnect(sockname);
+-  if (local_fd != -1) passthrough(infile, local_fd);
+-  if (!debug && (child = fork()))
++
++  if(daemon_only)
+   {
+-    usleep(200000);
+-    local_fd = sockconnect(sockname);
+-    if (local_fd == -1)
++    if(local_fd != -1)
+     {
+-      es_log(1 | LOG_STDERR, "Daemon not accepting connections -- exiting\n");
++      es_log(1 | LOG_STDERR, "Socket already exists.  Exiting.\n");
+       exit(1);
+     }
+-    passthrough(infile, local_fd);
+-    exit(0);
+   }
++  else
++  {
++    if (local_fd != -1) passthrough(infile, local_fd);
++    if (!debug && (child = fork()))
++    {
++      usleep(200000);
++      local_fd = sockconnect(sockname);
++      if (local_fd == -1)
++      {
++        es_log(1 | LOG_STDERR, "Daemon not accepting connections -- exiting\n");
++        exit(1);
++      }
++      passthrough(infile, local_fd);
++      exit(0);
++    }
++  }
++
+   punct_some = lookup_string(NULL, "punct_some");
+   if (punct_some == NULL) punct_some = "@#$%^&_[]{}\\|";
+   punct_all = lookup_string(NULL, "punct_all");
