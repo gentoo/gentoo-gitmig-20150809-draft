@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10714 2009/11/01 19:01:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10715 2009/11/01 19:15:19 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -721,11 +721,6 @@ net-libs/libunicall
 app-doc/opengl-manpages
 app-doc/xorg-sgml-doctools
 app-doc/xorg-docs
-
-# Gilles Dartiguelongue <eva@gentoo.org> (16 Sep 2009)
-# Masking at-poke, unmainted and superseeded by
-# app-accessibility/accerciser. bug #279304
-app-accessibility/at-poke
 
 # Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
 # Alpha releases. Unmask at your own risk, bugs
