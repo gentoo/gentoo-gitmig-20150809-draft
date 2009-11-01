@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10715 2009/11/01 19:15:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10716 2009/11/01 20:11:03 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -586,12 +586,6 @@ sys-apps/minutils
 # bug 284618
 dev-libs/skalibs
 
-# Vlastimil Babka <caster@gentoo.org> (04 Oct 2009)
-# Masked for removal in 30 days. Needs java 1.4 to build,
-# nothing uses it. Unless someone steps up and properly
-# bumps.
-dev-db/xindice
-
 # Mike Doty <kingtaco@gentoo.org> (04 Oct 2009)
 # alpha packages, kills puppies.
 =app-emulation/emul-linux-x86-baselibs-20091004_rc1
@@ -606,23 +600,6 @@ dev-db/xindice
 # Mike Doty <kingtaco@gentoo.org> (03 Oct 2009)
 # alpha packages, kills puppies.
 =app-emulation/emul-linux-x86-baselibs-20091003_rc1
-
-# Vlastimil Babka <caster@gentoo.org> (03 Oct 2009)
-# Masked for removal in 30 days. Needs java 1.4 to build,
-# seems dead, nothing uses it.
-dev-java/tagunit
-
-# Vlastimil Babka <caster@gentoo.org> (03 Oct 2009)
-# Masked for removal in 30 days. Crimson needs java 1.4,
-# xmojo-bin is the only thing depending on it, nothing
-# needs xmojo-bin.
-dev-java/crimson
-dev-java/xmojo-bin
-
-# Vlastimil Babka <caster@gentoo.org> (03 Oct 2009)
-# Masked for removal in 30 days Needs java 1.4,
-# library nothing uses.
-dev-java/axion
 
 # Markus Meier <maekke@gentoo.org> (03 Oct 2009)
 # mask hugin and deps beta/rc versions for testing
