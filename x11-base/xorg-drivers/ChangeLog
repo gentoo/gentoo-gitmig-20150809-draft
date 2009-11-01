@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.7 2009/10/26 21:08:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.8 2009/11/01 14:57:53 ikelos Exp $
+
+  01 Nov 2009; Mike Auty <ikelos@gentoo.org> xorg-drivers-1.7.ebuild:
+  Temporarily remove wacom support from xorg-drivers-1.7 until
+  xf86-input-wacom makes it to the main tree (see bug 290730).
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> xorg-drivers-1.6.ebuild:
   Stable for HPPA (bug #282290).
