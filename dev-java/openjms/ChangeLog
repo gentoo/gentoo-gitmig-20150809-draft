@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/openjms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.29 2009/10/30 10:56:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.30 2009/11/01 19:20:34 caster Exp $
+
+  01 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  -openjms-0.7.6.1-r5.ebuild, -openjms-0.7.6.1-r6.ebuild,
+  openjms-0.7.6.1-r7.ebuild:
+  Fix jre deps, remove old.
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> openjms-0.7.6.1-r7.ebuild:
   amd64/x86 stable, bug #289555
