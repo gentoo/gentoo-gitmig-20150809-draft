@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-190.42.ebuild,v 1.1 2009/10/22 05:22:21 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-190.42.ebuild,v 1.2 2009/11/01 12:11:44 ssuominen Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -33,7 +33,13 @@ RDEPEND=">=x11-libs/gtk+-2
 	x11-libs/libXt
 	x11-drivers/nvidia-drivers"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-xf86vidmodeproto.patch
+}
 
 src_compile() {
 	einfo "Building libXNVCtrl..."
