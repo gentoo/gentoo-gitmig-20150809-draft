@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.38 2009/10/31 13:32:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.39 2009/11/01 16:07:04 nixnut Exp $
+
+  01 Nov 2009; nixnut <nixnut@gentoo.org> schroedinger-1.0.8.ebuild:
+  ppc stable #290761
 
   31 Oct 2009; Markus Meier <maekke@gentoo.org> schroedinger-1.0.8.ebuild:
   amd64/x86 stable, bug #290761
