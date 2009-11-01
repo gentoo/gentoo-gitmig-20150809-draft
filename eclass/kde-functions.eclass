@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.174 2009/11/01 09:43:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.175 2009/11/01 20:26:34 abcd Exp $
 
 # @ECLASS: kde-functions.eclass
 # @MAINTAINER:
@@ -389,19 +389,10 @@ need-kde() {
 	fi
 	if [[ -n "${KDEBASE}" ]]; then
 		# If we're a kde-base package, we need at least our own version of kdelibs.
-		# Also, split kde-base ebuilds are not updated with every KDE release, and so
-		# can require support of different versions of kdelibs.
-		# KM_DEPRANGE should contain 2nd and 3rd parameter to deprange:
-		# max and min KDE versions. E.g. KM_DEPRANGE="$PV $MAXKDEVER".
 		# Note: we only set RDEPEND if it is already set, otherwise
 		# we break packages relying on portage copying RDEPEND from DEPEND.
-		if [[ -n "${KM_DEPRANGE}" ]]; then
-			DEPEND="${DEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
-			RDEPEND="${x_DEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
-		else
-			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
-			RDEPEND="${x_DEPEND} ~kde-base/kdelibs-${PV}"
-		fi
+		DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
+		RDEPEND="${x_DEPEND} ~kde-base/kdelibs-${PV}"
 	else
 		# Things outside kde-base need a minimum version,
 		# but kde-base/kdelibs:kde-4 mustn't satisfy it.
