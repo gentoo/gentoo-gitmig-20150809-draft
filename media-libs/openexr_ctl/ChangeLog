@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr_ctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.20 2009/10/28 18:29:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.21 2009/11/01 16:31:34 nixnut Exp $
+
+  01 Nov 2009; nixnut <nixnut@gentoo.org> openexr_ctl-1.0.1-r1.ebuild:
+  ppc stable #290143
 
   28 Oct 2009; Raúl Porcel <armin76@gentoo.org>
   openexr_ctl-1.0.1-r1.ebuild:
