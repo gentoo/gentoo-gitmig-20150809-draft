@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.6.1.ebuild,v 1.11 2009/10/05 21:26:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.6.1.ebuild,v 1.12 2009/11/01 23:52:07 angelos Exp $
 
 EAPI=2
 inherit xfconf
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/projects/xfwm4/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="debug startup-notification xcomposite"
+IUSE="debug startup-notification +xcomposite"
 
 RDEPEND=">=dev-libs/glib-2.10:2
 	>=x11-libs/gtk+-2.10:2

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.139 2009/10/05 21:26:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.140 2009/11/01 23:52:07 angelos Exp $
+
+  01 Nov 2009; Christoph Mende <angelos@gentoo.org> xfwm4-4.6.1.ebuild:
+  Enable xcomposite by default
 
   05 Oct 2009; Jeremy Olexa <darkside@gentoo.org> xfwm4-4.6.1.ebuild:
   Port Gentoo Prefix ebuild to gentoo-x86
