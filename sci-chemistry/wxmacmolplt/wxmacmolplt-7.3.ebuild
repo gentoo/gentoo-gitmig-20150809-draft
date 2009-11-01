@@ -1,15 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/wxmacmolplt-7.3.ebuild,v 1.1 2009/11/01 14:34:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/wxmacmolplt-7.3.ebuild,v 1.2 2009/11/01 15:03:02 alexxy Exp $
 
 EAPI="2"
 
 inherit base eutils
 
 DESCRIPTION="Chemical 3D graphics program with GAMESS input builder"
-HOMEPAGE="http://www.scl.ameslab.gov/~brett/MacMolPlt/"
+HOMEPAGE="http://www.scl.ameslab.gov/MacMolPlt/"
 
-SRC_URI="http://www.scl.ameslab.gov/~brett/MacMolPlt/download/${P}.tar.gz"
+SRC_URI="http://www.scl.ameslab.gov/MacMolPlt/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~x86"
