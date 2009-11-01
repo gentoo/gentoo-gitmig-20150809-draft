@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.98 2009/09/27 12:33:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.99 2009/11/01 09:33:06 abcd Exp $
+
+  01 Nov 2009; Jonathan Callen <abcd@gentoo.org> -koffice-libs-1.6.3.ebuild:
+  Drop old version
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org>
   koffice-libs-1.6.3_p20090204.ebuild:

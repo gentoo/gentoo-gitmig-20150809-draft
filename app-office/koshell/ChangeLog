@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koshell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.81 2009/09/27 12:33:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.82 2009/11/01 09:24:19 abcd Exp $
+
+  01 Nov 2009; Jonathan Callen <abcd@gentoo.org> -koshell-1.6.2.ebuild:
+  Drop old version
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org>
   koshell-1.6.3_p20090204.ebuild:

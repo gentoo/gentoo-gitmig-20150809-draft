@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.65 2009/09/27 12:34:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.66 2009/11/01 09:25:45 abcd Exp $
+
+  01 Nov 2009; Jonathan Callen <abcd@gentoo.org> -kplato-1.6.2.ebuild:
+  Drop old version
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org>
   kplato-1.6.3_p20090204.ebuild:
