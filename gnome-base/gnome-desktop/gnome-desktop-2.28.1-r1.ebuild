@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.28.1-r1.ebuild,v 1.1 2009/10/31 15:32:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.28.1-r1.ebuild,v 1.2 2009/11/01 10:09:04 nirbheek Exp $
 
 inherit eutils gnome2
 
@@ -26,8 +26,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	>=x11-proto/randrproto-1.2"
 PDEPEND=">=dev-python/pygtk-2.8
-	>=dev-python/pygobject-2.14
-	>=dev-python/libgnome-python-2.22"
+	>=dev-python/pygobject-2.14"
 
 # Includes X11/Xatom.h in libgnome-desktop/gnome-bg.c which comes from xproto
 # Includes X11/extensions/Xrandr.h that includes randr.h from randrproto (and
