@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.28.1.1.ebuild,v 1.1 2009/10/30 16:43:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.28.1.1.ebuild,v 1.2 2009/11/01 16:38:25 tester Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # FIXME: Add location support once geoclue stops being idiotic with automagic deps
-IUSE="applet doc networkmanager python spell test webkit" # map
+IUSE="applet networkmanager python spell test webkit" # map
 
 # FIXME: libnotify & libcanberra hard deps
 RDEPEND=">=dev-libs/glib-2.16.0
@@ -33,6 +33,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	net-libs/telepathy-farsight
 	dev-libs/libxml2
 	x11-libs/libX11
+	net-voip/telepathy-connection-managers
 
 	applet? ( >=gnome-base/gnome-panel-2.10 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
@@ -57,7 +58,6 @@ DEPEND="${RDEPEND}
 		>=dev-libs/check-0.9.4 )
 	dev-libs/libxslt
 	virtual/python
-	doc? ( >=dev-util/gtk-doc-1.3 )
 "
 PDEPEND=">=net-im/telepathy-mission-control-5"
 
@@ -71,6 +71,7 @@ pkg_setup() {
 		--disable-maintainer-mode
 		--disable-static
 		--disable-location
+		--disable-gtk-doc
 		$(use_enable applet megaphone)
 		$(use_enable applet nothere)
 		$(use_enable debug)
@@ -105,12 +106,8 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 	echo
 	elog "Empathy needs telepathy's connection managers to use any IM protocol."
-	elog "You will need to install connection managers yourself."
-	elog "MSN: net-voip/telepathy-butterfly"
-	elog "Jabber and Gtalk: net-voip/telepathy-gabble"
-	elog "IRC: net-irc/telepathy-idle"
-	elog "Link-local XMPP: net-irc/telepathy-salut"
-	echo
+	elog "See the USE flags on net-voip/telepathy-connection-managers"
+	elog "to install them."
 	preserve_old_lib_notify /usr/$(get_libdir)/libempathy.so.23
 	preserve_old_lib_notify /usr/$(get_libdir)/libempathy-gtk.so.19
 }
