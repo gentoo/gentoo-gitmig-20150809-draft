@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/boxquote-1.23.ebuild,v 1.2 2009/10/30 19:16:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/boxquote-1.23.ebuild,v 1.3 2009/11/01 16:03:59 nixnut Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.el.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"
