@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.1 2009/10/29 23:03:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.2 2009/11/02 16:30:11 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -88,14 +88,6 @@ src_install() {
 		gnome2_src_install
 		mv "${ED}$(python_get_sitedir)/pygtk.py" "${ED}$(python_get_sitedir)/pygtk.py-2.0"
 		mv "${ED}$(python_get_sitedir)/pygtk.pth" "${ED}$(python_get_sitedir)/pygtk.pth-2.0"
-
-		if [[ ${CHOST} == *-darwin* ]]; then
-			# Python on Darwin uses bundles.
-			mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/_gio.{so,bundle} || die
-			mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/unix.{so,bundle} || die
-			mv "${ED}"$(python_get_sitedir)/gtk-2.0/glib/_glib.{so,bundle} || die
-			mv "${ED}"$(python_get_sitedir)/gtk-2.0/gobject/_gobject.{so,bundle} || die
-		fi
 	}
 	python_execute_function -s installation
 

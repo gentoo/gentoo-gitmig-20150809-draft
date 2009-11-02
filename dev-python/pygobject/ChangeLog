@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.85 2009/11/02 16:28:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.86 2009/11/02 16:30:11 grobian Exp $
 
   02 Nov 2009; Fabian Groffen <grobian@gentoo.org>
-  pygobject-2.18.0-r2.ebuild:
+  pygobject-2.18.0-r2.ebuild, pygobject-2.20.0.ebuild:
   Drop Darwin hack, no longer necessary, thanks Heiko Przybyl, bug #291524
 
 *pygobject-2.20.0 (29 Oct 2009)
