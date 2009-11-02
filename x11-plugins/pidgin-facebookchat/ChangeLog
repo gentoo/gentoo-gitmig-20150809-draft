@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/pidgin-facebookchat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.24 2009/09/08 08:50:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.25 2009/11/02 19:54:21 voyageur Exp $
+
+  02 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -pidgin-facebookchat-1.51-r1.ebuild, -pidgin-facebookchat-1.53.ebuild,
+  -pidgin-facebookchat-1.54.ebuild:
+  Drop old 1.5* versions
 
 *pidgin-facebookchat-1.61 (08 Sep 2009)
 
