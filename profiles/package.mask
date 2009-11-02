@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10717 2009/11/01 23:05:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10718 2009/11/02 16:08:39 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -611,10 +611,6 @@ dev-libs/skalibs
 # mask hugin and deps beta/rc versions for testing
 >=media-gfx/hugin-2009.4.0_rc1
 >=media-libs/libpano13-2.9.15_beta3
-
-# Michael Sterrett <mr_bones_@gentoo.org> (01 Oct 2009)
-# Doesn't work with newer openal.  Use games-action/openastromenace instead.
-games-action/astromenace-bin
 
 # Marcus D. Hanwell <cryos@gentoo.org> (01 Oct 2009)
 # Release candidates for the new CMake release
