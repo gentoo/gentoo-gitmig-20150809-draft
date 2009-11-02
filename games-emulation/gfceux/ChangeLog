@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gfceux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.1 2009/09/29 05:16:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.2 2009/11/02 21:09:38 maekke Exp $
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org> gfceux-2.1.1.ebuild:
+  amd64/x86 stable, bug #291227
 
 *gfceux-2.1.1 (29 Sep 2009)
 
