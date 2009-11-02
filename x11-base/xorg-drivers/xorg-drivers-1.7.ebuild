@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.2 2009/11/01 14:57:53 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.3 2009/11/02 12:20:31 remi Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -13,16 +13,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
-	input_devices_citron
-	input_devices_elographics
 	input_devices_evdev
-	input_devices_fpit
-	input_devices_hyperpen
 	input_devices_joystick
 	input_devices_keyboard
 	input_devices_mouse
-	input_devices_mutouch
-	input_devices_penmount
 	input_devices_tslib
 	input_devices_virtualbox
 	input_devices_vmmouse
@@ -89,16 +83,10 @@ IUSE="${IUSE_VIDEO_CARDS} ${IUSE_INPUT_DEVICES}"
 PDEPEND="
 	input_devices_acecad?      ( x11-drivers/xf86-input-acecad )
 	input_devices_aiptek?      ( x11-drivers/xf86-input-aiptek )
-	input_devices_citron?      ( x11-drivers/xf86-input-citron )
-	input_devices_elographics? ( x11-drivers/xf86-input-elographics )
 	input_devices_evdev?       ( x11-drivers/xf86-input-evdev )
-	input_devices_fpit?        ( x11-drivers/xf86-input-fpit )
-	input_devices_hyperpen?    ( x11-drivers/xf86-input-hyperpen )
 	input_devices_joystick?    ( x11-drivers/xf86-input-joystick )
 	input_devices_keyboard?    ( x11-drivers/xf86-input-keyboard )
 	input_devices_mouse?       ( x11-drivers/xf86-input-mouse )
-	input_devices_mutouch?     ( x11-drivers/xf86-input-mutouch )
-	input_devices_penmount?    ( x11-drivers/xf86-input-penmount )
 	input_devices_tslib?       ( x11-drivers/xf86-input-tslib )
 	input_devices_virtualbox?  ( x11-drivers/xf86-input-virtualbox )
 	input_devices_vmmouse?     ( x11-drivers/xf86-input-vmmouse )
@@ -148,16 +136,22 @@ PDEPEND="
 	video_cards_voodoo?        ( x11-drivers/xf86-video-voodoo )
 	video_cards_xgi?           ( x11-drivers/xf86-video-xgi )
 
+	!x11-drivers/xf86-input-citron
+	!x11-drivers/xf86-input-elographics
+	!x11-drivers/xf86-input-fpit
+	!x11-drivers/xf86-input-hyperpen
+	!x11-drivers/xf86-input-mutouch
+	!x11-drivers/xf86-input-penmount
+	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-imstt
+	!x11-drivers/xf86-video-nsc
 	!x11-drivers/xf86-video-sunbw2
 	!x11-drivers/xf86-video-suncg14
 	!x11-drivers/xf86-video-suncg3
 	!x11-drivers/xf86-video-suncg6
 	!x11-drivers/xf86-video-suntcx
 	!x11-drivers/xf86-video-vermilion
-	!x11-drivers/xf86-video-cyrix
-	!x11-drivers/xf86-video-nsc
 	!x11-drivers/xf86-video-vga
 "
 #	input_devices_wacom?       ( x11-drivers/xf86-input-wacom )
