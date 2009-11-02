@@ -1,6 +1,9 @@
 # ChangeLog for games-action/heretic2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.5 2009/09/24 16:17:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.6 2009/11/02 20:45:07 maekke Exp $
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org> heretic2-1.06c.ebuild:
+  amd64/x86 stable, bug #290685
 
   24 Sep 2009; Tristan Heaven <nyhm@gentoo.org> heretic2-1.06c.ebuild:
   Fix gl_driver path in default.cfg on x86
