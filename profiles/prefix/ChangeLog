@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.111 2009/11/01 10:50:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.112 2009/11/02 16:29:59 haubi Exp $
+
+  02 Nov 2009; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
+  dropped openssl mask on aix, fixed again to build good shared libs
 
   01 Nov 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Unmask ssmtp-2.62 since -r7, as that one finally got the fix we'd been

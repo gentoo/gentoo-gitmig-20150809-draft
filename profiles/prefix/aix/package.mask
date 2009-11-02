@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/package.mask,v 1.5 2009/08/05 09:48:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/package.mask,v 1.6 2009/11/02 16:30:00 haubi Exp $
 
 # Michael Haubenwallner <haubi@gentoo.org> (23 Jul 2008)
 # gdb-*.50 are linux-only releases and don't (need to) work on aix.
@@ -10,10 +10,6 @@
 # Something is fishy with the port-aix.{c,h} code provided by upstream. Old
 # versions work. 
 >=net-misc/openssh-5.0_p1-r2
-
-# Jeremy Olexa <darkside@gentoo.org> (07 Jan 2008)
-# critical aix patch does not apply anymore. broken.
->=dev-libs/openssl-0.9.8i
 
 # Fabian Groffen <grobian@gentoo.org> (04 Apr 2007)
 # This is the only linker for AIX
