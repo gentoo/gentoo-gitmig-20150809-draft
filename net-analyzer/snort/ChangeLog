@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.153 2009/09/12 03:01:27 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.154 2009/11/02 17:24:37 patrick Exp $
+
+*snort-2.8.5.1 (02 Nov 2009)
+
+  02 Nov 2009; Patrick Lauer <patrick@gentoo.org> +snort-2.8.5.1.ebuild,
+  +files/snort.reload.rc1, metadata.xml:
+  Bump, thanks to Jason Wallace. Fixes #291558 #291604 #291357
 
   12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   -files/snort-2.6.1.1-libnet.patch, -files/snort-2.6.1.2-libdir.patch,

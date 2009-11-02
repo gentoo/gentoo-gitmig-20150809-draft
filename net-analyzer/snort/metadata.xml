@@ -31,5 +31,7 @@
 <flag name='react'>Enable interception and termination of offending HTTP accesses</flag>
 <flag name='targetbased'>Enable targetbased support</flag>
 <flag name='timestats'>Enable TimeStats functionality</flag>
+<flag name='reload'>Enable reloading a configuration without restarting</flag>
+<flag name='reload-error-restart'>Enable restarting on reload error</flag>
 </use>
 </pkgmetadata>
