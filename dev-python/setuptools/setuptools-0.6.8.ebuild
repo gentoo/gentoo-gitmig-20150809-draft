@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.8.ebuild,v 1.1 2009/11/01 23:40:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.8.ebuild,v 1.2 2009/11/02 05:59:23 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
-DESCRIPTION="Easily download, build, install, upgrade, and uninstall Python packages. Distribute is a fork of the Setuptools project."
+DESCRIPTION="Distribute (fork of Setuptools) is a collection of extensions to Distutils"
 HOMEPAGE="http://pypi.python.org/pypi/distribute"
 SRC_URI="http://pypi.python.org/packages/source/d/distribute/distribute-${PV}.tar.gz"
 
