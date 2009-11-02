@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10721 2009/11/02 19:51:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10722 2009/11/02 23:28:03 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1125,10 +1125,6 @@ sys-apps/einit-modules-xml
 # Removal on 2009-10-10
 app-i18n/canuum
 
-# Federico Ferri <mescalinum@gentoo.org> (10 Aug 2009)
-# Unmaintained. Masked for removal, bug #249468. (2009-10-11)
-net-irc/quirc
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
 #  on behalf of QA team
 #
@@ -1456,13 +1452,6 @@ app-portage/udept
 # as well. As such, this is for the adventurous only.
 # Bug reports are welcome if they carry patches.
 >=net-misc/dhcp-4.0.0
-
-# Jeremy Olexa <darkside@gentoo.org> (28 Mar 2009)
-# Upstream is very unresponsive and we had to guess at which kernel patch was
-# needed. May not work and/or may be harmful. You have been warned.
-# Jeremy Olexa <darkside@gentoo.org> (4 Oct 2009)
-# Removed in 30 days. Dead project, needs kernel patches. bug 257207
-sys-apps/sreadahead
 
 # Alex Legler <a3li@gentoo.org> (20 Mar 2009)
 # Ruby 1.9.1 for preliminary testing of libraries depending on it, bug 203706.
