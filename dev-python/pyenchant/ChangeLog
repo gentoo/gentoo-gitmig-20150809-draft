@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.10 2009/06/06 10:29:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.11 2009/11/02 05:21:49 arfrever Exp $
+
+  02 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyenchant-1.5.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Restrict tests (bug #261908).
 
 *pyenchant-1.5.3 (06 Jun 2009)
 
