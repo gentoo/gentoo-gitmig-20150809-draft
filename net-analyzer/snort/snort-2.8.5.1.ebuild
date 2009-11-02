@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.1.ebuild,v 1.1 2009/11/02 17:24:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.1.ebuild,v 1.2 2009/11/02 21:14:55 mr_bones_ Exp $
 
 inherit eutils autotools multilib
 
@@ -82,7 +82,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Fix to allow parallel building. 
+	# Fix to allow parallel building.
 	# Thanks to Natanael Copa #291558
 	einfo "Applying parallel building fix."
 	sed -i -e 's/^all-local:.*/all-local: $(LTLIBRARIES)/' \
