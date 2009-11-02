@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.28.1.ebuild,v 1.1 2009/10/29 23:16:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.28.1.ebuild,v 1.2 2009/11/02 21:36:30 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ IUSE="crypt dbus hal kerberos krb4 ldap mono networkmanager nntp pda profile pyt
 # password from inside evolution, bug 160302
 RDEPEND=">=dev-libs/glib-2.20
 	>=x11-libs/gtk+-2.16
-	>=gnome-extra/evolution-data-server-2.26.3
+	>=gnome-extra/evolution-data-server-${PV}
 	>=x11-themes/gnome-icon-theme-2.20
 	>=gnome-base/libbonobo-2.20.3
 	>=gnome-base/libbonoboui-2.4.2
