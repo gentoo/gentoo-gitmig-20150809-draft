@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-5.4.ebuild,v 1.2 2009/11/02 21:18:23 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-5.4.ebuild,v 1.3 2009/11/02 22:15:48 weaver Exp $
 
 EAPI="2"
 
@@ -46,7 +46,8 @@ src_install() {
 	MY_S="${OSTYPE}-${MACHTYPE}"
 	sed -i 's|#!/usr/local/bin/|#!/usr/bin/env |' $(find $MY_S -type f) || die
 
-	sed -i '/sub getBinDirectory/ a return "/usr/bin";' ${MY_S}/bin/runCA* || die
+	sed -i '/sub getBinDirectory ()/ a return "/usr/bin";' ${MY_S}/bin/runCA* || die
+	sed -i '/sub getBinDirectoryShellCode ()/ a return "bin=/usr/bin\n";' ${MY_S}/bin/runCA* || die
 	sed -i '1 a use lib "/usr/share/'${PN}'/lib";' $(find $MY_S -name '*.p*') || die
 
 	dobin kmer/${MY_S}/bin/* || die
