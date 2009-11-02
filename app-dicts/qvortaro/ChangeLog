@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/qvortaro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/ChangeLog,v 1.12 2009/10/23 15:24:02 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/ChangeLog,v 1.13 2009/11/02 20:44:19 abcd Exp $
+
+  02 Nov 2009; Jonathan Callen <abcd@gentoo.org> -qvortaro-0.3.0.ebuild:
+  Drop old version
 
   23 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> qvortaro-0.3.0.ebuild,
   qvortaro-0.3.1.ebuild:
