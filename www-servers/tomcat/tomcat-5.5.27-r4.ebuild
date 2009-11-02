@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r4.ebuild,v 1.1 2009/10/03 23:17:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r4.ebuild,v 1.2 2009/11/02 21:44:55 maekke Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -14,7 +14,7 @@ MY_P="apache-${P}-src"
 SLOT="5.5"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="~amd64 -ppc -ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 -ppc -ppc64 x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE="admin examples test"
