@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.11 2009/08/22 23:18:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.12 2009/11/02 01:52:04 nerdboy Exp $
+
+*mapnik-0.6.1 (02 Nov 2009)
+
+  02 Nov 2009; Steve Arnold <nerdboy@gentoo.org> +mapnik-0.6.1.ebuild:
+  Updated to latest upstream release and shed some patches.  Seems to work
+  fine both with and without use=python.  Closes bug #291376.
 
   22 Aug 2009; Steve Arnold <nerdboy@gentoo.org> mapnik-0.5.1.ebuild,
   mapnik-0.6.0.ebuild:
