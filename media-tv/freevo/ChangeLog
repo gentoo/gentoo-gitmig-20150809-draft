@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/freevo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.62 2009/03/08 14:16:36 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.63 2009/11/02 10:02:08 rbu Exp $
+
+*freevo-1.9.0 (02 Nov 2009)
+
+  02 Nov 2009; Robert Buchholz <rbu@gentoo.org> +freevo-1.9.0.ebuild:
+  Version bump (#273091), fixes a numeric (#246202) and xset (#263336)
+  dependency error. Thanks to arfrever.
 
   08 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> freevo-1.7.6.1.ebuild,
   freevo-1.8.2.ebuild:
