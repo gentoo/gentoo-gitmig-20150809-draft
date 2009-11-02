@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcron
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.123 2009/10/18 18:11:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.124 2009/11/02 20:44:38 wired Exp $
+
+*kcron-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org> +kcron-4.3.3.ebuild:
+  Version bump
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> kcron-4.3.1.ebuild:
   x86 stable, bug #287697

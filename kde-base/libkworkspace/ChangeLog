@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.42 2009/10/18 13:21:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.43 2009/11/02 22:02:05 wired Exp $
+
+*libkworkspace-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org>
+  +libkworkspace-4.3.3.ebuild:
+  Version bump
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> libkworkspace-4.3.1.ebuild:
   x86 stable, bug #287697

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.131 2009/10/18 16:49:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.132 2009/11/02 21:21:35 wired Exp $
+
+*klipper-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org> +klipper-4.3.3.ebuild:
+  Version bump
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> klipper-4.3.1.ebuild:
   x86 stable, bug #287697

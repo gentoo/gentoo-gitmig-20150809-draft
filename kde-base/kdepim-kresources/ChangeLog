@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.135 2009/10/18 17:30:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.136 2009/11/02 21:01:12 wired Exp $
+
+*kdepim-kresources-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org>
+  +kdepim-kresources-4.3.3.ebuild:
+  Version bump
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org>
   kdepim-kresources-4.3.1.ebuild:

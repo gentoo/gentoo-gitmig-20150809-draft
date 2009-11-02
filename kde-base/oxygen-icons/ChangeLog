@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/oxygen-icons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/ChangeLog,v 1.13 2009/10/24 19:40:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/ChangeLog,v 1.14 2009/11/02 22:06:58 wired Exp $
+
+*oxygen-icons-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org> +oxygen-icons-4.3.3.ebuild:
+  Version bump
 
   24 Oct 2009; Joseph Jezak <josejx@gentoo.org> oxygen-icons-4.3.1.ebuild,
   oxygen-icons-4.3.2-r1.ebuild:

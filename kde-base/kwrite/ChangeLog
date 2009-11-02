@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.39 2009/10/18 15:38:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.40 2009/11/02 21:55:27 wired Exp $
+
+*kwrite-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org> +kwrite-4.3.3.ebuild:
+  Version bump
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> kwrite-4.3.1.ebuild:
   x86 stable, bug #287697

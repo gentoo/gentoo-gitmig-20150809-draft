@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klettres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.130 2009/10/18 16:18:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.131 2009/11/02 21:20:26 wired Exp $
+
+*klettres-4.3.3 (02 Nov 2009)
+
+  02 Nov 2009; Alex Alexander <wired@gentoo.org> +klettres-4.3.3.ebuild:
+  Version bump
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> klettres-4.3.1.ebuild:
   x86 stable, bug #287697
