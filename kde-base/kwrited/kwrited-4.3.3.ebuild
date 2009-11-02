@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/kwrited-4.3.3.ebuild,v 1.1 2009/11/02 21:55:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/kwrited-4.3.3.ebuild,v 1.2 2009/11/02 23:55:19 mr_bones_ Exp $
 
 EAPI="2"
 KMNAME="kdebase-workspace"
@@ -16,4 +16,3 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 add_blocker konsole 4.1.50
-
