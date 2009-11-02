@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta4.ebuild,v 1.2 2009/11/01 01:24:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta4.ebuild,v 1.3 2009/11/02 08:20:36 nirbheek Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -87,7 +87,7 @@ src_unpack() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_unpack ${MY_P/-bin}-${X}.xpi
+		[[ ${X} != en ]] && xpi_unpack "${P/-bin}-${X}.xpi"
 	done
 	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
@@ -103,7 +103,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${MY_P/-bin}-${X}
+		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${P/-bin}-${X}
 	done
 
 	local LANG=${linguas%% *}
