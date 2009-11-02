@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/knetworkmanager
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.9 2008/08/06 18:22:39 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.10 2009/11/02 09:19:49 abcd Exp $
+
+  02 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -knetworkmanager-0.2.1_pre20071119.ebuild,
+  -knetworkmanager-0.2.1_p20071228.ebuild,
+  -files/knetworkmanager-0.2.1-autostart.patch:
+  Drop old versions
 
   06 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
