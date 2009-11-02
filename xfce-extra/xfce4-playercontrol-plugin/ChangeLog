@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-playercontrol-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-playercontrol-plugin/ChangeLog,v 1.1 2009/08/31 13:57:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-playercontrol-plugin/ChangeLog,v 1.2 2009/11/02 16:48:49 angelos Exp $
+
+  02 Nov 2009; Christoph Mende <angelos@gentoo.org>
+  xfce4-playercontrol-plugin-0.3.0.ebuild:
+  Added missing intltool and gettext dependencies
 
 *xfce4-playercontrol-plugin-0.3.0 (31 Aug 2009)
 
