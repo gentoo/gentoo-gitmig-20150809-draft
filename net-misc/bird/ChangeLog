@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.7 2009/10/02 11:52:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.8 2009/11/02 15:58:45 chainsaw Exp $
+
+*bird-1.1.5 (02 Nov 2009)
+
+  02 Nov 2009; <chainsaw@gentoo.org> +files/1.1.5-nostrip.patch,
+  +files/initd-v4-bird-1.1.5, +files/initd-v6-bird-1.1.5,
+  +bird-1.1.5.ebuild:
+  Version bump, increases scalability of the BGP implementation. New
+  accessors for AS path and allows import of kernel onlink routes.
 
 *bird-1.1.4 (02 Oct 2009)
 
