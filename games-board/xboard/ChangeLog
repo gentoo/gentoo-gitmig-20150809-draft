@@ -1,6 +1,12 @@
 # ChangeLog for games-board/xboard
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.20 2009/06/09 21:33:29 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.21 2009/11/02 06:25:19 mr_bones_ Exp $
+
+*xboard-4.4.1 (02 Nov 2009)
+
+  02 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org> +xboard-4.4.1.ebuild,
+  +files/xboard-4.4.1-gentoo.patch:
+  version bump
 
   09 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
   xboard-4.2.7-r1.ebuild:
