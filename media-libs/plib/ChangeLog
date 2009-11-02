@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plib
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.33 2008/08/05 05:30:41 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.34 2009/11/02 20:43:50 maekke Exp $
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org> plib-1.8.5.ebuild:
+  amd64/x86 stable, bug #290969
 
 *plib-1.8.5 (05 Aug 2008)
 
