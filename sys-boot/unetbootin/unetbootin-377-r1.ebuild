@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-377.ebuild,v 1.1 2009/10/29 12:10:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-377-r1.ebuild,v 1.1 2009/11/02 21:06:15 jer Exp $
 
 inherit qt4
 
@@ -32,4 +32,6 @@ src_compile() {
 src_install() {
 	dodoc README.TXT
 	dobin unetbootin || die "dobin failed"
+	insinto /usr/share/applications
+	doins unetbootin.desktop
 }
