@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.23 2009/10/31 18:11:01 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.24 2009/11/02 20:23:39 maekke Exp $
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org> vienna-rna-1.8.3.ebuild:
+  amd64/x86 stable, bug #290926
 
   31 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> vienna-rna-1.8.3.ebuild:
   Fix linking failure on x86
