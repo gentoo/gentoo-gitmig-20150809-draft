@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xclip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.36 2009/10/31 14:24:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.37 2009/11/02 19:20:02 jer Exp $
+
+  02 Nov 2009; Jeroen Roovers <jer@gentoo.org> xclip-0.12.ebuild:
+  Stable for HPPA (bug #289200).
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org> xclip-0.12.ebuild:
   Marking xclip-0.12 ppc64 for bug 289200
