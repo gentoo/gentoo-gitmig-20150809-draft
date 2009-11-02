@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4956 2009/11/01 23:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4957 2009/11/02 08:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1236,8 +1236,6 @@ kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
 kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kdvi:kpathsea - Enable integration with kpathsea search library (TeX related)
-kde-base/kget:bittorrent - Enable embedded bittorrent transport plugin
-kde-base/kget:bittorrent-external - Enable external bittorrent transport plugin via ktorrent
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
 kde-base/konqueror:auth -  Add dependency on authentization packages. 
