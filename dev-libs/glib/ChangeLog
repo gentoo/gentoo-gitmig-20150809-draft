@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.383 2009/10/29 21:20:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.384 2009/11/02 00:12:23 eva Exp $
+
+  02 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> glib-2.22.2.ebuild:
+  Remove virtual/libc again.
 
 *glib-2.22.2 (29 Oct 2009)
 
