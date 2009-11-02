@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10718 2009/11/02 16:08:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10719 2009/11/02 16:16:02 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -666,27 +666,10 @@ media-video/qc-usb-messenger
 # on amd64 with gcc-4.4. See bug #280925
 =sci-physics/root-5.24.00
 
-# Mounir Lamouri <volkmar@gentoo.org> (21 Sep 2009)
-# net-misc/asterisk-app_rtxfax fails with >=media-libs/spandsp-0.0.3, bug 180318
-# Masked for removal in 30 days.
-net-misc/asterisk-app_rtxfax
-
 # Jesus Rivero <neurogeek@gentoo.org> (20 Sep 2009)
 # Masked for removal in 30 days.
 # Not needed for Python versions higher then 2.4
 dev-python/optik
-
-# Mounir Lamouri <volkmar@gentoo.org> (20 Sep 2009)
-# media-libs/libsupertone fails with >=media-libs/spandsp-0.0.5, bug 273995
-# net-misc/asterisk-chan_unicall needs media-libs/libsupertone
-# net-libs/libmfcr2 needs libsupertone and only needed by asterisk-chan_unicall
-# net-libs/libunicall is only needed by libmfcr2 and asterisk-chan_unicall
-# net-libs/libunicall has also QA issues, bug 277783
-# Masked for removal in 30 days.
-net-misc/asterisk-chan_unicall
-media-libs/libsupertone
-net-libs/libmfcr2
-net-libs/libunicall
 
 # Torsten Veller <tove@gentoo.org> (20 Sep 2009)
 # Add perl-5.10 masks (#280724)
