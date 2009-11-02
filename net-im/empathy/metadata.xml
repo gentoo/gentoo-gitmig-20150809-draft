@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-im</herd>
-<maintainer>
-  <email>coldwind@gentoo.org</email>
-  <name>Santiago M. Mola</name>
-</maintainer>
 <herd>gnome</herd>
 <use>
   <flag name="applet">Enable Empathy's applets for <pkg>gnome-base/gnome-panel</pkg></flag>

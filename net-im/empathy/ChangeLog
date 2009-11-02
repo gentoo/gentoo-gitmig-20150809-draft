@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.45 2009/11/01 16:38:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.46 2009/11/02 00:14:40 eva Exp $
+
+  02 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Remove coldwind from metadata again.
 
   01 Nov 2009; Olivier Crête <tester@gentoo.org> empathy-2.28.1.1.ebuild:
   Remove gtk-doc rebuild, it wont work without geoclue. Add dep on the
