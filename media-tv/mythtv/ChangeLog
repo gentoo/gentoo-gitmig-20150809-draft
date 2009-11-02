@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.283 2009/10/31 22:30:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.284 2009/11/02 00:01:33 cardoe Exp $
+
+  02 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.22_rc22679.ebuild:
+  add support for pulseaudio. add warning about automagical dependencies
 
   31 Oct 2009; Doug Goldstein <cardoe@gentoo.org>
   -mythtv-0.21_p18314-r1.ebuild, -mythtv-0.21_p18314-r2.ebuild,

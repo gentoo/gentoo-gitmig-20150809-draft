@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_rc22679.ebuild,v 1.1 2009/10/31 22:16:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_rc22679.ebuild,v 1.2 2009/11/02 00:01:33 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -46,6 +46,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	perl? ( dev-perl/DBD-mysql )
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.7 )
 	python? ( dev-python/mysql-python )
 	vdpau? ( x11-libs/libvdpau )
 	xvmc? ( x11-libs/libXvMC )"
@@ -256,10 +257,6 @@ pkg_preinst() {
 pkg_postinst() {
 	use python && python_mod_optimize $(python_get_sitedir)/MythTV
 
-	elog "Want mythfrontend to start automatically?"
-	elog "Set USE=autostart. Details can be found at:"
-	elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
-
 	elog
 	elog "To always have MythBackend running and available run the following:"
 	elog "rc-update add mythbackend default"
@@ -275,12 +272,25 @@ pkg_postinst() {
 		ewarn "'eselect xvmc set nvidia' for example"
 	fi
 
+	elog "Want mythfrontend to start automatically?"
+	elog "Set USE=autostart. Details can be found at:"
+	elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
+
 	if use autostart; then
 		elog
 		elog "Please add the following to your /etc/inittab file at the end of"
 		elog "the TERMINALS section"
 		elog "c8:2345:respawn:/sbin/mingetty --autologin mythtv tty8"
 	fi
+
+	elog
+	ewarn "Beware when you change ANY packages on your system that it may"
+	ewarn "break some or all of the MythTV components. MythTV's build system"
+	ewarn "is very fragile and only supports automagic dependencies."
+	ewarn "i.e. It depends on libraries and components it finds at build time"
+	ewarn "We try to mitigate this with RDEPENDs but be prepared to run"
+	ewarn "revdep-rebuild as necessary."
+
 
 }
 
