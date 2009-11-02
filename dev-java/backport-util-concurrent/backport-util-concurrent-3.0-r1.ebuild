@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0-r1.ebuild,v 1.1 2009/10/03 23:40:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-3.0-r1.ebuild,v 1.2 2009/11/02 21:48:00 maekke Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -11,7 +11,7 @@ SRC_URI="http://dcl.mathcs.emory.edu/util/${PN}/dist/${P}/Java50/${PN}-Java50-${
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="=virtual/jdk-1.5*
