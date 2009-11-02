@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3.ebuild,v 1.1 2009/11/01 16:29:07 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3.ebuild,v 1.2 2009/11/02 09:33:58 rbu Exp $
 
 EAPI=2
 inherit multilib versionator
@@ -71,7 +71,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i "79s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf
+	sed -i "37s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf
 	einfo "Patching LCDd.conf to use DriverPath=/usr/$(get_libdir)/lcdproc/"
 }
 
