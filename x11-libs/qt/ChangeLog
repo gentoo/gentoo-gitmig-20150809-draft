@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.595 2009/11/02 09:13:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.596 2009/11/02 16:01:31 tampakrap Exp $
+
+  02 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +files/qt-ulibc.patch:
+  Restore removed patch
 
   02 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/0037-dnd-timestamp-fix.patch,
