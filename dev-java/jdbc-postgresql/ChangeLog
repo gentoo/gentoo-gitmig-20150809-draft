@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.27 2009/10/06 19:45:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.28 2009/11/02 21:56:31 maekke Exp $
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org>
+  jdbc-postgresql-8.3_p605.ebuild:
+  amd64/x86 stable, bug #291476
 
   06 Oct 2009; Vlastimil Babka <caster@gentoo.org>
   jdbc-postgresql-8.3_p603-r1.ebuild, jdbc-postgresql-8.3_p604.ebuild:
