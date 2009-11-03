@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.45.ebuild,v 1.2 2009/08/23 08:38:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.45.ebuild,v 1.3 2009/11/03 00:15:29 vapier Exp $
 
 EAPI="2"
 mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-}}mingw32)
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="bzip2 config-log doc zlib"
 
 # NSIS Menu uses wxwindows but it's all broken, so disable for now
