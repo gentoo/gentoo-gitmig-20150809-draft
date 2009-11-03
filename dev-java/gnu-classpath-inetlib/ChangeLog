@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.25 2009/11/02 22:01:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.26 2009/11/03 18:41:08 caster Exp $
+
+  03 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  -gnu-classpath-inetlib-1.0-r2.ebuild,
+  -gnu-classpath-inetlib-1.1-r2.ebuild:
+  Remove old revisions that depend on jessie.
 
   02 Nov 2009; Markus Meier <maekke@gentoo.org>
   gnu-classpath-inetlib-1.0-r3.ebuild:
