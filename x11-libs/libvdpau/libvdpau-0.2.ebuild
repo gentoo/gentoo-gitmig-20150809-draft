@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.2.ebuild,v 1.4 2009/10/22 15:29:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.2.ebuild,v 1.5 2009/11/03 21:53:12 aballier Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freedesktop.org/~aplattner/vdpau/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
 #unfortunately, there's driver versions in between that this works with

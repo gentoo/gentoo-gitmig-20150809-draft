@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.3 2009/10/22 15:29:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.4 2009/11/03 21:53:12 aballier Exp $
+
+  03 Nov 2009; Alexis Ballier <aballier@gentoo.org> libvdpau-0.2.ebuild:
+  keyword ~x86-fbsd
 
   22 Oct 2009; Doug Goldstein <cardoe@gentoo.org> libvdpau-0.2.ebuild:
   messed up the blocker version syntax
