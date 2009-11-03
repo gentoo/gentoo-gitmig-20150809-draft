@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/irssi-xmpp-0.50.ebuild,v 1.1 2009/11/03 17:49:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/irssi-xmpp-0.50.ebuild,v 1.2 2009/11/03 17:50:43 dertobi123 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://cybione.org/~${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=net-irc/irssi-0.8.13
