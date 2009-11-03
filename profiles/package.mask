@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10725 2009/11/03 15:17:21 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10726 2009/11/03 18:43:53 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vlastimil Babka <caster@gentoo.org> (03 Nov 2009)
+# Obsolete, needs 1.4 JDK, nothing uses it.
+dev-java/jessie
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Nov 2009)
 # Upstream seems dead; segfaults; unplayable on modern systems
