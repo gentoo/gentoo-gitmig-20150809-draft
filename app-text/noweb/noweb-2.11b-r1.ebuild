@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b-r1.ebuild,v 1.2 2009/10/30 19:08:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b-r1.ebuild,v 1.3 2009/11/03 17:57:31 armin76 Exp $
 
 inherit eutils toolchain-funcs elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.eecs.harvard.edu/~nr/noweb/dist/${P}.tgz"
 
 LICENSE="freedist emacs? ( GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE="emacs examples"
 
 DEPEND="virtual/tex-base

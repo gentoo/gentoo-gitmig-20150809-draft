@@ -1,6 +1,9 @@
 # ChangeLog for app-text/noweb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.42 2009/10/30 19:08:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.43 2009/11/03 17:57:31 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> noweb-2.11b-r1.ebuild:
+  alpha/ia64/sparc stable wrt #290530
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> noweb-2.11b-r1.ebuild:
   amd64/x86 stable, bug #290530
