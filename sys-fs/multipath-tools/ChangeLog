@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.29 2009/10/31 13:14:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.30 2009/11/03 19:23:50 fauli Exp $
+
+  03 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  multipath-tools-0.4.8-r1.ebuild:
+  stable x86, security bug 264564
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org>
   multipath-tools-0.4.8-r1.ebuild:
