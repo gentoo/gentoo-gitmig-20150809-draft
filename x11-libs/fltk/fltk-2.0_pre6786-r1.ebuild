@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786-r1.ebuild,v 1.2 2009/09/04 06:46:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786-r1.ebuild,v 1.3 2009/11/03 17:06:33 weaver Exp $
 
 EAPI="2"
 inherit multilib autotools flag-o-matic
@@ -29,6 +29,7 @@ RDEPEND="x11-libs/libXext
 	>=sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
+	x11-libs/libXi
 	xinerama? ( x11-proto/xineramaproto )
 	cairo? ( dev-util/pkgconfig )
 	doc? ( app-doc/doxygen )"
