@@ -1,0 +1,11 @@
+diff -ur nitrogen-1.4.orig/src/Thumbview.cc nitrogen-1.4/src/Thumbview.cc
+--- nitrogen-1.4.orig/src/Thumbview.cc	2008-07-30 22:16:53.000000000 +0300
++++ nitrogen-1.4/src/Thumbview.cc	2009-11-03 20:56:28.000000000 +0200
+@@ -23,7 +23,6 @@
+ #include "Thumbview.h"
+ #include "md5.h"
+ #include <glib/gstdio.h>
+-#include <png.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4-r1.ebuild,v 1.1 2009/07/14 19:47:04 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4-r1.ebuild,v 1.2 2009/11/03 18:59:54 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -24,8 +24,8 @@ DEPEND="${RDEPEND}
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}"/Makefile-as-needed.patch
+	epatch "${FILESDIR}"/${P}-png.patch \
+		"${FILESDIR}"/Makefile-as-needed.patch
 	eautoreconf
 }
 

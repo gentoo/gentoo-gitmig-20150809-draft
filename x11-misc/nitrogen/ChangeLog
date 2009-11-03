@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/nitrogen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.10 2009/07/14 19:48:23 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.11 2009/11/03 18:59:54 ssuominen Exp $
+
+  03 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  nitrogen-1.4-r1.ebuild, +files/nitrogen-1.4-png.patch:
+  Fix compilation wrt #291737, thanks to Łukasz Michalik for reporting.
 
   14 Jul 2009; <omp@gentoo.org> -nitrogen-1.2.ebuild:
   Remove older version.
