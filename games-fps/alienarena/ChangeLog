@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.15 2009/10/14 18:34:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.16 2009/11/03 23:28:31 nyhm Exp $
+
+*alienarena-20091016 (03 Nov 2009)
+
+  03 Nov 2009; Tristan Heaven <nyhm@gentoo.org> +alienarena-20091016.ebuild:
+  Version bump, bug #290121
 
 *alienarena-20091006 (14 Oct 2009)
 
