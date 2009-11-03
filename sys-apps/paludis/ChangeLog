@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.146 2009/10/31 13:07:07 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.147 2009/11/03 16:31:46 peper Exp $
+
+*paludis-0.42.2 (03 Nov 2009)
+
+  03 Nov 2009; Piotr Jaroszyński <peper@gentoo.org> +paludis-0.42.2.ebuild:
+  Add 0.42.2.
 
   31 Oct 2009; Thomas Anderson <tanderson@gentoo.org> paludis-0.42.0.ebuild:
   Remove QA like I should have during the bump. I fail at mv.
