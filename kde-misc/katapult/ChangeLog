@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/katapult
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.18 2008/02/08 18:12:04 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katapult/ChangeLog,v 1.19 2009/11/03 09:06:54 abcd Exp $
+
+  03 Nov 2009; Jonathan Callen <abcd@gentoo.org> -katapult-0.3.1.4.ebuild:
+  Drop old version
 
   08 Feb 2008; Markus Meier <maekke@gentoo.org> katapult-0.3.2.1.ebuild:
   x86 stable, bug #209108
