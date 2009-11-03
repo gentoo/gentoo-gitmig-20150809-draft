@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/quadkonsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.5 2009/03/29 13:56:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.6 2009/11/03 09:24:56 abcd Exp $
+
+  03 Nov 2009; Jonathan Callen <abcd@gentoo.org> -quadkonsole-2.0.2.ebuild:
+  Drop old version
 
 *quadkonsole-2.0.3 (29 Mar 2009)
 
