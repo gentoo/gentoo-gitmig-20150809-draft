@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.39 2009/09/07 21:15:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.40 2009/11/03 09:22:22 pva Exp $
+
+*culmus-0.103-r1 (03 Nov 2009)
+
+  03 Nov 2009; Peter Volkov <pva@gentoo.org> +culmus-0.103-r1.ebuild:
+  Added Hillel fancy font.
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> culmus-0.103.ebuild:
   Don't override pkg_postinst.
