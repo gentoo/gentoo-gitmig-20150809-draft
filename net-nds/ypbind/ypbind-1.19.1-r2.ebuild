@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1-r2.ebuild,v 1.1 2009/07/07 01:15:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1-r2.ebuild,v 1.2 2009/11/03 15:56:59 ulm Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-strip.patch"
+	epatch "${FILESDIR}/${P}-man-port.patch"
 }
 
 src_configure() {

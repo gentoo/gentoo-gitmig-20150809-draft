@@ -1,0 +1,24 @@
+Mention "-p port" option in man page
+http://bugs.gentoo.org/77810
+
+--- ypbind-mt-1.19.1-orig/man/ypbind.8.in
++++ ypbind-mt-1.19.1/man/ypbind.8.in
+@@ -45,6 +45,8 @@
+ ] [
+ .B \-local-only
+ ] [
++.BR \-p " port"
++] [
+ .BR \-ping-interval " ping-interval"
+ ]
+ .LP
+@@ -235,6 +237,9 @@
+ will only bind to the loopback device and is not reacheable from
+ a remote network.
+ .TP
++.BR "\-p" " port"
++Bind to the specified port instead of dynamically allocating one.
++.TP
+ .BR "\-ping-interval" " ping-interval"
+ The default value for
+ . B ypbind

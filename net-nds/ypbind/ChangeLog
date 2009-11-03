@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.50 2009/07/07 01:17:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.51 2009/11/03 15:56:59 ulm Exp $
+
+  03 Nov 2009; Ulrich Mueller <ulm@gentoo.org> ypbind-1.19.1-r2.ebuild,
+  +files/ypbind-1.19.1-man-port.patch:
+  Mention "-p port" option in man page, bug 77810.
 
   07 Jul 2009; Jeroen Roovers <jer@gentoo.org> -ypbind-1.19.1.ebuild:
   Remove old.
