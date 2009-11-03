@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.2 2009/11/03 15:21:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.3 2009/11/03 15:22:39 voyageur Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils
@@ -49,7 +49,7 @@ src_prepare() {
 	# Do not use bundled libungif, bug #253259
 	sed -e '/--with-builtin-gif/s/$with_gif/no/' \
 		-i autoconf/configure.in || die "bundled gif sed failed"
-	
+
 	cd "${S}"/autoconf || die "cd autoconf failed"
 	eautoreconf
 	cp "${S}"/autoconf/autoconf/config.h.in "${S}"/autoconf || die "cp failed"
