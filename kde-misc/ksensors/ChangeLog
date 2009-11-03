@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/ksensors
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.17 2009/10/12 09:28:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.18 2009/11/03 09:20:31 abcd Exp $
+
+  03 Nov 2009; Jonathan Callen <abcd@gentoo.org> -ksensors-0.7.3-r1.ebuild,
+  -ksensors-0.7.3-r2.ebuild, -files/ksensors.desktop:
+  Drop old versions
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> ksensors-0.7.3.ebuild,
   ksensors-0.7.3-r1.ebuild, ksensors-0.7.3-r2.ebuild,
