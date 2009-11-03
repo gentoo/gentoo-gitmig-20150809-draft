@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.83 2009/11/03 14:49:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.84 2009/11/03 15:21:55 voyageur Exp $
+
+  03 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  afterstep-2.2.9.ebuild:
+  Do not use bundled libungif, bug #253259
 
 *afterstep-2.2.9 (03 Nov 2009)
 
