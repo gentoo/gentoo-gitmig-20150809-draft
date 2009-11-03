@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.210 2009/10/06 21:15:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.211 2009/11/03 19:53:29 zzam Exp $
+
+  03 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.6-r1.ebuild:
+  Change ebuild, so that lirc package does no longer own lircd.conf. That
+  way portage should not delete lircd.conf on update or unmerge.
+
+  03 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.6-r1.ebuild:
+  Change ebuild, so that lirc package does no longer own lircd.conf. That
+  way portage should not delete lircd.conf on update or unmerge.
 
   06 Oct 2009; Christian Faulhammer <fauli@gentoo.org> lirc-0.8.5.ebuild:
   remove iguanaIR, because it is still in testing

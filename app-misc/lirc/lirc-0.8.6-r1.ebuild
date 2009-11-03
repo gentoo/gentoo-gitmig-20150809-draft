@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.6-r1.ebuild,v 1.1 2009/10/04 18:48:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.6-r1.ebuild,v 1.2 2009/11/03 19:53:29 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -303,7 +303,10 @@ src_install() {
 	insinto /usr/share/lirc/remotes
 	doins -r remotes/*
 
-	keepdir /var/run/lirc
+	keepdir /var/run/lirc /etc/lirc
+	if [[ -e "${D}"/etc/lirc/lircd.conf ]]; then
+		newdoc "${D}"/etc/lirc/lircd.conf lircd.conf.example
+	fi
 }
 
 pkg_preinst() {
@@ -315,14 +318,36 @@ pkg_preinst() {
 		mv -f "${dir}/lirc" "${dir}/lirc.conf"
 	fi
 
-	# stop portage from deleting this file
-	if [[ -f "${ROOT}"/etc/lirc/lircd.conf && ! -f "${D}"/etc/lirc/lircd.conf ]]; then
-		cp "${ROOT}"/etc/lirc/lircd.conf "${D}"/etc/lirc/lircd.conf
+	# copy the first file that can be found
+	if [[ -f "${ROOT}"/etc/lirc/lircd.conf ]]; then
+		cp "${ROOT}"/etc/lirc/lircd.conf "${T}"/lircd.conf
+	elif [[ -f "${ROOT}"/etc/lircd.conf ]]; then
+		cp "${ROOT}"/etc/lircd.conf "${T}"/lircd.conf
+		MOVE_OLD_LIRCD_CONF=1
+	elif [[ -f "${D}"/etc/lirc/lircd.conf ]]; then
+		cp "${D}"/etc/lirc/lircd.conf "${T}"/lircd.conf
+	fi
+
+	# stop portage from touching the config file
+	if [[ -e "${D}"/etc/lirc/lircd.conf ]]; then
+		rm -f "${D}"/etc/lirc/lircd.conf
 	fi
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
+	
+	# copy config file to new location
+	# without portage knowing about it
+	# so it will not delete it on unmerge or ever touch it again
+	if [[ -e "${T}"/lircd.conf ]]; then
+		cp "${T}"/lircd.conf "${ROOT}"/etc/lirc/lircd.conf
+		if [[ "$MOVE_OLD_LIRCD_CONF" = "1" ]]; then
+			elog "Moved /etc/lircd.conf to /etc/lirc/lircd.conf"
+			rm -f "${ROOT}"/etc/lircd.conf
+		fi
+	fi
+
 	ewarn
 	ewarn "The lirc_gpio driver will not work with Kernels 2.6.22+"
 	ewarn "You need to switch over to /dev/input/event? if you need gpio"
