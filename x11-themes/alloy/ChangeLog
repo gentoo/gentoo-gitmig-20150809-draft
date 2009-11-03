@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/alloy
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.28 2008/07/28 21:39:23 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.29 2009/11/03 04:05:47 abcd Exp $
+
+  03 Nov 2009; Jonathan Callen <abcd@gentoo.org> alloy-0.5.3.ebuild:
+  Update kde-base/ deps so KDE 4 doesn't satisfy it
 
   28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> alloy-0.5.2.ebuild,
   alloy-0.5.3.ebuild:
