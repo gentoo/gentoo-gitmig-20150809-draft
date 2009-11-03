@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.11 2009/10/12 06:41:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.12 2009/11/03 22:18:36 dang Exp $
 
 EAPI="2"
 
@@ -17,11 +17,13 @@ IUSE="selinux"
 
 RDEPEND="
 	>=dev-libs/popt-1.5
-	selinux? ( sys-libs/libselinux )"
+	selinux? (
+		sys-libs/libselinux 
+		sec-policy/selinux-logrotate
+	)"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	selinux? ( sec-policy/selinux-logrotate )"
+	>=sys-apps/sed-4"
 
 src_prepare() {
 	strip-flags
