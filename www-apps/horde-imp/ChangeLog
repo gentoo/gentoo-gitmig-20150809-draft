@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-imp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.55 2009/09/17 16:50:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.56 2009/11/03 17:11:20 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> horde-imp-4.3.5.ebuild:
+  Add ~ia64 wrt #282942
 
 *horde-imp-4.3.5 (17 Sep 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-dimp/horde-dimp-1.1.3.ebuild,v 1.1 2009/09/17 16:57:54 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-dimp/horde-dimp-1.1.3.ebuild,v 1.2 2009/11/03 17:13:31 armin76 Exp $
 
 HORDE_PHP_FEATURES="imap"
 HORDE_MAJ="-h3"
@@ -9,7 +9,7 @@ inherit horde
 DESCRIPTION="Horde DIMP is a alternate presentation view of IMP using AJAX-ish
 technologies"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=""
 RDEPEND="|| ( >=www-apps/horde-3.2 >=www-apps/horde-groupware-1 )
