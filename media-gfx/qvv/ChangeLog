@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/qvv
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qvv/ChangeLog,v 1.1 2009/11/03 16:09:57 ssuominen Exp $
+
+*qvv-4.01 (03 Nov 2009)
+
+  03 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> +qvv-4.01.ebuild:
+  Initial commit.
+
