@@ -6,4 +6,7 @@
         <name>Markus Dittrich</name>
     </maintainer>
 	<herd>sci-chemistry</herd>
+	<use>
+		<flag name='arpack'>Include support for arpack libs</flag>
+	</use>
 </pkgmetadata>
