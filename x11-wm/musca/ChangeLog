@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/musca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.4 2009/09/29 18:24:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.5 2009/11/03 06:45:20 jer Exp $
+
+*musca-0.9.24 (03 Nov 2009)
+
+  03 Nov 2009; Jeroen Roovers <jer@gentoo.org> +musca-0.9.24.ebuild,
+  metadata.xml:
+  Version bump.
 
   29 Sep 2009; Jeroen Roovers <jer@gentoo.org> musca-0.9.23.ebuild:
   Die if dobin fails.
