@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.16.ebuild,v 1.2 2009/11/01 18:07:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.16.ebuild,v 1.3 2009/11/03 19:46:57 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://wireless.kernel.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libnl-1.1"
