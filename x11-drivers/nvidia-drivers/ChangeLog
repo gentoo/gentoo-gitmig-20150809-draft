@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.195 2009/11/03 03:58:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.196 2009/11/03 16:36:45 cardoe Exp $
+
+  03 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-190.42-r2.ebuild:
+  clean up x86 QA_ settings
 
   03 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-185.18.36-r1.ebuild, -nvidia-drivers-190.42-r1.ebuild,
