@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc5.ebuild,v 1.3 2009/10/31 11:58:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc6.ebuild,v 1.1 2009/11/03 20:37:16 flameeyes Exp $
 
 EAPI=2
 
@@ -12,18 +12,20 @@ MY_PV="${MY_PV/-pre/-git}"
 DESCRIPTION="Userland tools for Linux Performance Counters"
 HOMEPAGE="http://perf.wiki.kernel.org/"
 
+LINUX_V=$(get_version_component_range 1-2)
+
 if [ ${PV/_rc} != ${PV} ]; then
 	LINUX_VER=$(get_version_component_range 1-2).$(($(get_version_component_range 3)-1))
 	PATCH_VERSION=$(get_version_component_range 1-3)
 	LINUX_PATCH=patch-${PV//_/-}.bz2
-	SRC_URI="mirror://kernel/linux/kernel/testing/${LINUX_PATCH}
-		mirror://kernel/linux/kernel/testing/v${PATCH_VERSION}/${LINUX_PATCH}"
+	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/testing/${LINUX_PATCH}
+		mirror://kernel/linux/kernel/v${LINUX_V}/testing/v${PATCH_VERSION}/${LINUX_PATCH}"
 else
 	LINUX_VER=${PV}
 fi
 
 LINUX_SOURCES=linux-${LINUX_VER}.tar.bz2
-SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v$(get_version_component_range 1-2)/${LINUX_SOURCES}"
+SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 
 LICENSE="GPL-2"
 SLOT="0"
