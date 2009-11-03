@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.69 2009/11/01 02:04:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.70 2009/11/03 21:46:36 arfrever Exp $
+
+  03 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-ldap-2.3.10.ebuild:
+  Update dependencies (bug #291671).
 
 *python-ldap-2.3.10 (01 Nov 2009)
 
