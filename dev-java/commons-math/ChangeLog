@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-math
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.1 2009/10/02 18:15:45 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.2 2009/11/03 09:00:31 betelgeuse Exp $
+
+  03 Nov 2009; Petteri Räty <betelgeuse@gentoo.org>
+  commons-math-1.2.ebuild, commons-math-2.0.ebuild:
+  Remove dev-java/ant-core from DEPEND as it's handled by java-ant-2 eclass.
+  Add slot atoms to java dependencies.
 
 *commons-math-2.0 (02 Oct 2009)
 *commons-math-1.2 (02 Oct 2009)

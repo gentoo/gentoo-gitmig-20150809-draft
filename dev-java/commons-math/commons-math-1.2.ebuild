@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-1.2.ebuild,v 1.1 2009/10/02 18:15:45 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-1.2.ebuild,v 1.2 2009/11/03 09:00:31 betelgeuse Exp $
 
 EAPI="2"
 
@@ -20,11 +20,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 COMMON_DEP="
-	>=dev-java/commons-discovery-0.2
-	>=dev-java/commons-logging-1.0.3"
+	>=dev-java/commons-discovery-0.2:0
+	>=dev-java/commons-logging-1.0.3:0"
 
 DEPEND=">=virtual/jdk-1.5
-	>=dev-java/ant-core-1.6
 	${COMMON_DEP}
 	test? ( dev-java/ant-junit )"
 
