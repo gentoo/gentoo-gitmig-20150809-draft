@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.70 2009/10/10 17:20:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.71 2009/11/03 17:20:09 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> ipython-0.10.ebuild:
+  s390 stable wrt #286859
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> ipython-0.10.ebuild:
   Merge from Prefix
