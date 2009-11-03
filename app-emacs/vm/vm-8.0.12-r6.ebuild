@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12-r5.ebuild,v 1.1 2009/10/16 18:29:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12-r6.ebuild,v 1.1 2009/11/03 07:42:22 ulm Exp $
 
 inherit elisp eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-autoload-vm-pine.patch" #246185
-	epatch "${FILESDIR}/${P}-supercite-yank.patch" #256886
+	epatch "${FILESDIR}/${P}-supercite-yank-1.patch" #256886
 	epatch "${FILESDIR}/${P}-folder-corruption.patch" #284668
 	epatch "${FILESDIR}/${P}-emacs-23.patch"
 	epatch "${FILESDIR}/${P}-charset-displayable.patch"
