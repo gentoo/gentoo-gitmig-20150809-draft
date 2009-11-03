@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.3-r1.ebuild,v 1.1 2009/08/22 23:05:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.3-r1.ebuild,v 1.2 2009/11/03 17:31:26 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dkim-milter/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ia64 x86"
 IUSE="ipv6 diffheaders"
 
 DEPEND="dev-libs/openssl
