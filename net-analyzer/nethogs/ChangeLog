@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.14 2009/05/07 13:54:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.15 2009/11/03 17:27:16 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> nethogs-0.7.0.ebuild:
+  Add ~ia64 wrt #282956
 
   07 May 2009; Samuli Suominen <ssuominen@gentoo.org> nethogs-0.7.0.ebuild,
   +files/nethogs-0.7.0-gcc44.patch:
