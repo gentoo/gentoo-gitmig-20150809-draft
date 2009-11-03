@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10722 2009/11/02 23:28:03 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10723 2009/11/03 06:23:01 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (02 Nov 2009)
+# Upstream seems dead; segfaults; unplayable on modern systems
+games-rpg/tux_aqfh
 
 # Alex Alexander <wired@gentoo.org> (02 Nov 2009)
 # Masking KDE 4.3.3 before we begin our commit run
