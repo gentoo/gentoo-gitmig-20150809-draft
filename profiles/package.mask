@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10723 2009/11/03 06:23:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10724 2009/11/03 11:51:58 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -915,21 +915,6 @@ dev-libs/skalibs
 
 # Torsten Veller <tove@gentoo.org> (01 Oct 2009)
 # Old. Replaced. Or just unmaintained.
-# - replaced by dev-perl/Gtk2-Ex-PodViewer
-#   bug 281511 (01 Oct 2009)
-dev-perl/Gtk2-PodViewer
-# - AWW is dead!
-#   bug 281504 (01 Oct 2009)
-dev-perl/aww
-# - seems to be dead.
-#   bug 281509 (01 Oct 2009)
-dev-perl/perlsieve
-# - seems to be dead too.
-#   bug 281507 (01 Oct 2009)
-dev-perl/perlrapi
-# - replaced, dead, unneeded
-#   bug 281495 (01 Oct 2009)
-dev-perl/Gtk2-Html2
 # - added as dep for a package that never made it into the tree (#21549)
 #   nothing depends on it, broken, no releases for years
 #   bug #280497 (12 Oct 2009)
