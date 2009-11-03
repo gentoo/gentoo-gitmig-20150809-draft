@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/youtube-servicemenu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/youtube-servicemenu/ChangeLog,v 1.6 2008/08/29 09:13:05 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/youtube-servicemenu/ChangeLog,v 1.7 2009/11/03 09:27:05 abcd Exp $
+
+  03 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -youtube-servicemenu-1.3j.ebuild, -youtube-servicemenu-1.4.ebuild:
+  Drop old versions
 
 *youtube-servicemenu-1.5 (29 Aug 2008)
 
