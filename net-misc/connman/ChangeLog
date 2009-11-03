@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.6 2009/10/22 14:58:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.7 2009/11/03 16:13:46 dagger Exp $
+
+  03 Nov 2009; Robert Piasek <dagger@gentoo.org> -connman-0.41.ebuild,
+  +connman-0.46.ebuild:
+  Version bump
+
+*connman-0.46 (03 Nov 2009)
+
+  03 Nov 2009; Robert Piasek <dagger@gentoo.org> -connman-0.41.ebuild,
+  +connman-0.46.ebuild:
+  Version bump
 
 *connman-0.44 (22 Oct 2009)
 
