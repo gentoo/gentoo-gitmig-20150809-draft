@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.137 2009/10/25 21:58:20 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.138 2009/11/03 20:39:30 caster Exp $
+
+  03 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  ibm-jre-bin-1.6.0.6.ebuild:
+  Pull libXt on all arches, bug #290506.
 
   25 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
   ibm-jre-bin-1.6.0.6.ebuild:

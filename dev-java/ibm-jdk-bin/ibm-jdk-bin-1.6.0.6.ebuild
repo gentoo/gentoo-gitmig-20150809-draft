@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.6.ebuild,v 1.2 2009/10/25 21:55:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.6.ebuild,v 1.3 2009/11/03 20:35:39 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -95,7 +95,7 @@ RDEPEND="
 		x11-libs/libXp
 		x11-libs/libXtst
 		x11-libs/libX11
-		amd64? ( x11-libs/libXt )
+		x11-libs/libXt
 	)
 	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.6.0* )
