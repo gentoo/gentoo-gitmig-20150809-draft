@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.63 2009/09/11 22:07:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.64 2009/11/03 20:14:33 caster Exp $
+
+*jdbc-mysql-5.1.10 (03 Nov 2009)
+
+  03 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  -files/compile-without-log4j.patch, -jdbc-mysql-3.1.13-r5.ebuild,
+  -jdbc-mysql-5.0.6.ebuild, +jdbc-mysql-5.1.10.ebuild,
+  -files/no-testsuite.diff:
+  Version bump, bug #290456. Remove old.
 
   11 Sep 2009; Markus Meier <maekke@gentoo.org> jdbc-mysql-5.1.6.ebuild:
   amd64/x86 stable, bug #284299

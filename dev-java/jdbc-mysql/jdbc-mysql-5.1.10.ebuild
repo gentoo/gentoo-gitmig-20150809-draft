@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.0.6.ebuild,v 1.7 2007/10/07 14:18:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.10.ebuild,v 1.1 2009/11/03 20:14:33 caster Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-contrib"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.mysql.com/products/connector/j/"
 SRC_URI="mirror://mysql/Downloads/Connector-J/${MY_P}.tar.gz"
 LICENSE="GPL-2-with-MySQL-FLOSS-exception"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="c3p0 log4j"
 COMMON_DEP="
 	log4j? ( dev-java/log4j )
@@ -23,11 +23,12 @@ COMMON_DEP="
 	dev-java/commons-logging"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
-# FIXME doesn't like Java 1.6's JDBC API
-DEPEND="|| (
-		=virtual/jdk-1.5*
-		=virtual/jdk-1.4*
-	)
+
+JAVA_PKG_NV_DEPEND="
+	|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )"
+
+DEPEND="${JAVA_PKG_NV_DEPEND}
+	>=virtual/jdk-1.6
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}"
@@ -36,15 +37,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# gcj hangs, but works for others -> why regexp over pictures?!
-	epatch "${FILESDIR}/do-not-filter-png.diff"
 	epatch "${FILESDIR}/5.0.5-remove-jboss-dependency-from-tests.patch"
 	# http://bugs.mysql.com/bug.php?id=28286
 	epatch "${FILESDIR}/5.0.5-dist-target-depends.patch"
+	epatch "${FILESDIR}/5.1.6-java6-detection.patch"
 
-	rm -v *.jar debug/*.jar || die
-
-	java-ant_ignore-system-classes
+	rm -v *.jar || die
 
 	# use test && mkdir src/lib-nodist # needed, or ant will fail
 
@@ -55,7 +53,22 @@ src_unpack() {
 	use c3p0 && java-pkg_jar-from c3p0
 }
 
+# Needs two different source/targets
+JAVA_PKG_BSFIX="off"
+JAVA_ANT_IGNORE_SYSTEM_CLASSES="true"
 EANT_BUILD_TARGET="dist"
+
+src_compile() {
+	local vm=$(depend-java-query -v ">=virtual/jdk-1.6")
+	local javac=$(GENTOO_VM="${vm}" java-config --javac)
+	local rt=$(GENTOO_VM="${vm}" java-config --jdk-home)/jre/lib/rt.jar
+	einfo "Using ${vm} to compile the JDBC4 driver"
+	einfo "javac: ${javac}"
+	einfo "rt.jar: ${rt}"
+	java-pkg-2_src_compile \
+		-Dcom.mysql.jdbc.java6.javac="${javac}" \
+		-Dcom.mysql.jdbc.java6.rtjar="${rt}"
+}
 
 # Tests need a mysql DB to exist
 RESTRICT="test"
@@ -67,7 +80,8 @@ src_test() {
 }
 
 src_install() {
-	java-pkg_newjar build/${MY_P}/${MY_P}-bin.jar ${PN}.jar
+	# Skip bytecode check because we want two versions there
+	JAVA_PKG_STRICT= java-pkg_newjar build/${MY_P}/${MY_P}-bin.jar ${PN}.jar
 	dodoc README CHANGES || die
 	dohtml docs/*.html || die
 	use source && java-pkg_dosrc src/com src/org
