@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.5 2009/07/05 20:49:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.6 2009/11/03 21:20:10 caster Exp $
 
 EAPI="1"
 
@@ -54,7 +54,8 @@ COMMON=">=dev-libs/glib-2.6
 		opengl?	(
 			virtual/opengl
 			virtual/glu
-		)"
+		)
+		x11-libs/libXtst"
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
 		x11-libs/libX11
@@ -65,7 +66,6 @@ DEPEND=">=virtual/jdk-1.4
 		${COMMON}"
 
 RDEPEND=">=virtual/jre-1.4
-		x11-libs/libXtst
 		${COMMON}"
 
 S="${WORKDIR}"

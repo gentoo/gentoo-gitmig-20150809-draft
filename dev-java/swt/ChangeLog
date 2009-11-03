@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.110 2009/09/22 17:43:40 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.111 2009/11/03 21:20:10 caster Exp $
+
+  03 Nov 2009; Vlastimil Babka <caster@gentoo.org> swt-3.3.1.1-r1.ebuild,
+  -swt-3.4-r3.ebuild, swt-3.4-r4.ebuild, swt-3.5.ebuild:
+  Add x11-libs/libXtst also to DEPEND, as it now provides the required
+  headers in new xorg, bug #288412.
 
   22 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   swt-3.4-r4.ebuild:
