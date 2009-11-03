@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.18 2009/09/24 23:43:11 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.19 2009/11/03 05:40:25 markusle Exp $
+
+*pdb2pqr-1.5.0 (03 Nov 2009)
+
+  03 Nov 2009; Markus Dittrich <markusle@gentoo.org> -pdb2pqr-1.1.2.ebuild,
+  -files/pdb2pqr-1.1.2-fpic-gentoo.patch, -files/pdb2pqr-gcc4-gentoo.patch,
+  -files/pdb2pqr-1.1.2-gcc4-gentoo.patch, -pdb2pqr-1.2.1.ebuild,
+  -files/pdb2pqr-propka-gentoo.patch, +pdb2pqr-1.5.0.ebuild:
+  Version bump and removed old ebuilds.
 
   24 Sep 2009; Markus Dittrich <markusle@gentoo.org>
   pdb2pqr-1.4.0-r1.ebuild, files/pdb2pqr-1.4.0-automagic.patch:
