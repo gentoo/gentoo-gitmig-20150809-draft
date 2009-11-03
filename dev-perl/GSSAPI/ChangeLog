@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.17 2009/09/24 18:49:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.18 2009/11/03 17:14:34 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> GSSAPI-0.24.ebuild:
+  m68k/s390/sh stable wrt #241572
 
   24 Sep 2009; Raúl Porcel <armin76@gentoo.org> GSSAPI-0.24.ebuild:
   arm stable
