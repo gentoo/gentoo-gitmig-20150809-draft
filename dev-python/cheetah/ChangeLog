@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.51 2009/10/25 13:22:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.52 2009/11/03 18:34:45 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> cheetah-2.2.2.ebuild,
+  cheetah-2.4.0.ebuild:
+  Add ~ia64/~sparc wrt #285153
 
 *cheetah-2.4.0 (25 Oct 2009)
 
