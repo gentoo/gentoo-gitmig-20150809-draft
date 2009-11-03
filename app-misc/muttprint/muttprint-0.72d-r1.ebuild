@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72d-r1.ebuild,v 1.6 2009/03/18 22:16:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72d-r1.ebuild,v 1.7 2009/11/03 14:55:49 vostorga Exp $
 
 EAPI=2
 
@@ -16,6 +16,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="virtual/latex-base
+	dev-texlive/texlive-latexextra
 	dev-lang/perl
 	dev-perl/TimeDate
 	dev-perl/Text-Iconv
