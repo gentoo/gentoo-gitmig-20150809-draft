@@ -1,6 +1,9 @@
 # ChangeLog for games-util/uz2unpack
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uz2unpack/ChangeLog,v 1.5 2007/02/08 22:45:18 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/uz2unpack/ChangeLog,v 1.6 2009/11/03 21:40:12 nyhm Exp $
+
+  03 Nov 2009; Tristan Heaven <nyhm@gentoo.org> uz2unpack-0.1.ebuild:
+  Respect LDFLAGS
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
