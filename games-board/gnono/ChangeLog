@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnono
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/ChangeLog,v 1.12 2009/03/02 22:24:42 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/ChangeLog,v 1.13 2009/11/03 05:36:38 mr_bones_ Exp $
+
+  03 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/gnono-1.9.1-gentoo.patch:
+  reroll patch for bug #206306
 
   02 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   files/gnono-1.9.1-gentoo.patch:
