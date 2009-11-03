@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.14 2009/10/31 14:26:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.15 2009/11/03 17:56:02 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org>
+  single-unix-specification-4-r1.ebuild:
+  arm/ia64/s390/sparc stable wrt #289002
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org>
   single-unix-specification-4-r1.ebuild:
