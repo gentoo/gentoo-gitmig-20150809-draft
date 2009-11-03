@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/irssi-xmpp
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/ChangeLog,v 1.1 2009/11/03 17:49:04 dertobi123 Exp $
+
+*irssi-xmpp-0.50 (03 Nov 2009)
+
+  03 Nov 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +irssi-xmpp-0.50.ebuild, +metadata.xml:
+  Initial import, ebuild by Tim Weber (#291577)
+

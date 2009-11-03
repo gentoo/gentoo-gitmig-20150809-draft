@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>scy-bugs-gentoo@scytale.name</email>
+	<name>Tim Weber</name>
+	<description>Ebuild maintainer</description>
+</maintainer>
+<maintainer>
+	<email>dertobi123@gentoo.org</email>
+	<description>Proxy maintainer</description>
+</maintainer>
+</pkgmetadata>
