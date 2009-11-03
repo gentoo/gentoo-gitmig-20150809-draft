@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.23 2009/11/03 16:55:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.24 2009/11/03 18:52:43 armin76 Exp $
+
+  03 Nov 2009; Raúl Porcel <armin76@gentoo.org> beautifulsoup-3.0.7.ebuild,
+  beautifulsoup-3.1.0.1.ebuild:
+  Add ~ia64/~sparc wrt #291232
 
   03 Nov 2009; Jeroen Roovers <jer@gentoo.org> beautifulsoup-3.1.0.1.ebuild:
   Marked ~HPPA (bug #291232).
