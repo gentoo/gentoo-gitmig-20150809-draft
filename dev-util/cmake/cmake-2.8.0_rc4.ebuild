@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0_rc3.ebuild,v 1.1 2009/10/10 20:21:02 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0_rc4.ebuild,v 1.1 2009/11/03 03:34:51 cryos Exp $
 
 EAPI="2"
 
@@ -41,7 +41,6 @@ S="${WORKDIR}/${MY_P}"
 CMAKE_IN_SOURCE_BUILD=1
 
 PATCHES=(
-	"${FILESDIR}/${PN}-FindJNI.patch"
 	"${FILESDIR}/${PN}-FindPythonLibs.patch"
 	"${FILESDIR}/${PN}-FindPythonInterp.patch"
 )
