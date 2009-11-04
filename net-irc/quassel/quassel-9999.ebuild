@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.29 2009/11/04 18:19:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.30 2009/11/04 23:29:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ SERVER_RDEPEND="
 
 GUI_RDEPEND="
 	x11-libs/qt-gui:4
-	yatana? ( dev-libs/libindicate-qt )
+	ayatana? ( dev-libs/libindicate-qt )
 	kde? (
 		>=kde-base/kdelibs-4.3
 		ayatana? ( kde-misc/plasma-indicatordisplay )
