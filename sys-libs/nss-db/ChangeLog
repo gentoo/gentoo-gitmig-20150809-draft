@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/nss-db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.18 2009/11/04 07:43:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.19 2009/11/04 07:45:01 robbat2 Exp $
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  nss-db-2.2.3_pre1-r2.ebuild:
+  Minor repoman cleanup.
 
   04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
   -nss-db-2.2.3_pre1.ebuild, -nss-db-2.2.3_pre1-r1.ebuild:
