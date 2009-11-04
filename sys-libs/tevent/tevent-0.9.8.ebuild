@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.8.ebuild,v 1.2 2009/10/09 17:24:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.8.ebuild,v 1.3 2009/11/04 11:47:20 patrick Exp $
 
 EAPI="2"
 
-inherit confutils eutils
+inherit confutils eutils autotools
 
 DESCRIPTION="Samba tevent library"
 HOMEPAGE="http://tevent.samba.org/"
@@ -14,12 +14,11 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 
-DEPEND="virtual/talloc"
+DEPEND="sys-libs/talloc"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-
-	./autogen.sh || die "autogen.sh failed"
+	eautoconf -Ilibreplace
 
 }
 
