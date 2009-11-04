@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.14 2008/04/08 01:38:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.15 2009/11/04 06:29:39 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_OGG=danslatristesse2-48.ogg
@@ -17,10 +18,10 @@ IUSE="vorbis nls"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl
-	media-libs/sdl-mixer
-	media-libs/sdl-image
-	=x11-libs/gtk+-2*
+	media-libs/libsdl[audio,video]
+	media-libs/sdl-mixer[vorbis?]
+	media-libs/sdl-image[jpeg,png]
+	x11-libs/gtk+:2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -30,7 +31,9 @@ S=${WORKDIR}/csmash-${PV}
 
 src_unpack() {
 	unpack csmash-${PV}.tar.gz
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-x-inc.patch \
 		"${FILESDIR}"/${P}-sizeof-cast.patch \
@@ -42,11 +45,13 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		$(use_enable nls) \
-		--datadir="${GAMES_DATADIR_BASE}" \
-		|| die
+		--datadir="${GAMES_DATADIR_BASE}"
+}
+
+src_compile() {
 	emake \
 		localedir="/usr/share" \
 		|| die "emake failed"
