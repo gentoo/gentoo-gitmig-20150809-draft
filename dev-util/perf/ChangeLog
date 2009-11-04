@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.4 2009/11/03 20:37:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.5 2009/11/04 13:04:02 flameeyes Exp $
+
+  04 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  perf-2.6.32_rc6.ebuild:
+  Fix typo, closes bug #291801 by Zeev Tarantov.
 
 *perf-2.6.32_rc6 (03 Nov 2009)
 
