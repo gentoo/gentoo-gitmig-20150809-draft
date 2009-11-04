@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.6-r1.ebuild,v 1.2 2009/11/03 19:53:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.6-r1.ebuild,v 1.3 2009/11/04 15:47:48 mr_bones_ Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -336,7 +336,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	
+
 	# copy config file to new location
 	# without portage knowing about it
 	# so it will not delete it on unmerge or ever touch it again
