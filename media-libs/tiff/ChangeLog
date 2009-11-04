@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.132 2009/09/19 04:10:34 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.133 2009/11/04 16:03:58 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> tiff-3.9.1.ebuild:
+  amd64/arm/x86 stable, bug #291612
 
 *tiff-3.9.1 (19 Sep 2009)
 
