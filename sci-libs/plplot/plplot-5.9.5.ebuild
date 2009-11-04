@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.4.ebuild,v 1.2 2009/09/02 14:28:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.1 2009/11/04 14:21:08 markusle Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -66,9 +66,6 @@ src_prepare() {
 	# path for python independent of python version
 	epatch "${FILESDIR}"/${PN}-5.9.0-python.patch
 
-	# we're missing the proper reference file pdf.rc
-	epatch "${FILESDIR}"/${P}-pdf-driver.patch
-
 	# remove license
 	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
 
@@ -100,10 +97,10 @@ src_configure() {
 		-DUSE_RPATH=OFF
 		-DDEFAULT_ALL_DEVICES=ON
 		-DCMAKE_INSTALL_LIBDIR=/usr/$(get_libdir)
-		$(cmake-utils_has python numpy)
-		$(cmake-utils_has qhull QHULL)
-		$(cmake-utils_has threads PTHREAD)
-		$(cmake-utils_has truetype FREETYPE)
+		$(cmake-utils_use_has python numpy)
+		$(cmake-utils_use_has qhull QHULL)
+		$(cmake-utils_use_has threads PTHREAD)
+		$(cmake-utils_use_with truetype FREETYPE)
 		$(cmake-utils_use_enable ada ada)
 		$(cmake-utils_use_enable fortran f77)
 		$(cmake-utils_use_enable java java)

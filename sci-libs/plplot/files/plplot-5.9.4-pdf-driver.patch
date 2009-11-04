@@ -1,5 +1,0 @@
-diff -Naur plplot-5.9.4/drivers/pdf.rc.in plplot-5.9.4.new/drivers/pdf.rc.in
---- drivers/pdf.rc.in	1969-12-31 19:00:00.000000000 -0500
-+++ drivers/pdf.rc.in	2009-09-02 09:58:24.000000000 -0400
-@@ -0,0 +1 @@
-+pdf:Portable Document Format PDF:1:pdf:58:pdf
