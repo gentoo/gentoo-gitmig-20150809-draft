@@ -1,12 +1,18 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.117 2009/10/15 11:40:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.118 2009/11/04 07:57:27 pva Exp $
+
+  04 Nov 2009; Peter Volkov <pva@gentoo.org>
+  openvz-sources-2.6.27.2.1-r3.ebuild:
+  x86/amd64 stable, bug #198632
 
 *openvz-sources-2.6.27.2.1-r3 (15 Oct 2009)
 
   15 Oct 2009; Peter Volkov <pva@gentoo.org>
   +openvz-sources-2.6.27.2.1-r3.ebuild:
-  openvz-sources with current git fixes and 2.6.27.37 merged in.
+  openvz-sources with current git fixes and 2.6.27.37 merged in. Fixes security
+  issue #287469, thank   	 Fabio Erculiani for report. Fixes oops
+  reported in bug #288526, thank Aniruddha for report.
 
 *openvz-sources-2.6.18.028.064.7 (22 Sep 2009)
 
