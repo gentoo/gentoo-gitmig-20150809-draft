@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.6 2009/09/09 02:59:39 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.7 2009/11/04 11:05:01 markusle Exp $
 
 EAPI="2"
 inherit flag-o-matic fortran xemacs-elisp-common
@@ -26,6 +26,7 @@ RDEPEND="virtual/lapack
 	curl? ( net-misc/curl )
 	xemacs? ( app-editors/xemacs )
 	sparse? ( sci-libs/umfpack
+		sci-libs/arpack
 		sci-libs/colamd
 		sci-libs/camd
 		sci-libs/ccolamd
@@ -53,13 +54,13 @@ src_configure() {
 	econf \
 		--localstatedir=/var/state/octave \
 		--enable-shared \
-		--without-arpack \
 		--with-blas="$(pkg-config --libs blas)" \
 		--with-lapack="$(pkg-config --libs lapack)" \
 		$(use_with hdf5) \
 		$(use_with curl) \
 		$(use_with zlib) \
 		$(use_with fftw) \
+		$(use_with sparse arpack) \
 		$(use_with sparse umfpack) \
 		$(use_with sparse colamd) \
 		$(use_with sparse ccolamd) \
