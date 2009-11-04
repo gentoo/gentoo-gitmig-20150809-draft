@@ -20,6 +20,6 @@ Samba is an Open Source/Free Software suite that provides seamless file and prin
 	<flag name="smbsharemodes">Enable special smb share modes (?) </flag>
 	<flag name="addns">Enable AD DNS integration</flag>
 	<flag name="tools">Enable extra tools</flag>
-
+	<flag name="ldb">Enable the ldb tools</flag>
 </use>
 </pkgmetadata>
