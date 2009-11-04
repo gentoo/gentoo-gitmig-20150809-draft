@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/ast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.9 2009/09/16 03:33:14 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.10 2009/11/04 01:39:55 bicatali Exp $
+
+*ast-5.2.0 (04 Nov 2009)
+
+  04 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> +ast-5.2.0.ebuild:
+  Version bump
 
   16 Sep 2009; Markus Dittrich <markusle@gentoo.org>
   files/ast-5.1.0-makefile.in.patch:
