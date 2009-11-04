@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.4.ebuild,v 1.1 2009/10/30 10:28:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.4.ebuild,v 1.2 2009/11/04 14:19:24 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -144,6 +144,7 @@ src_prepare() {
 	eautoreconf
 
 	# We need to re-patch this because autoreconf overwrites it
+	cd "${S}"
 	epatch "${FILESDIR}/000_flex-configure-LANG.patch"
 }
 
