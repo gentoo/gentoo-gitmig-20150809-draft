@@ -10,5 +10,8 @@
 	<email>wired@gentoo.org</email>
 	<name>Alex Alexander</name>
 </maintainer>
+<use>
+	<flag name="stable">Clone stable git tree</flag>
+</use>
 </pkgmetadata>
 
