@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-COMPRESSTYPE=".bz2"
+COMPRESSTYPE=".lzma"
 K_USEPV="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
