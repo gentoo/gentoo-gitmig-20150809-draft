@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.97 2009/09/28 03:52:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.98 2009/11/04 16:05:18 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> hylafax-6.0.3.ebuild:
+  amd64/x86 stable, bug #290525
 
 *hylafax-6.0.3 (28 Sep 2009)
 
