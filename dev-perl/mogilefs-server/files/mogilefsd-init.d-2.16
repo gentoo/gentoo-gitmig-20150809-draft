@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/files/mogilefsd-init.d-2.16,v 1.1 2007/05/16 11:11:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/files/mogilefsd-init.d-2.16,v 1.2 2009/11/04 02:29:23 robbat2 Exp $
 
 NAME="mogilefsd"
 BINARY="/usr/bin/mogilefsd"
@@ -7,8 +7,8 @@ MOGILE_UID="mogile"
 MOGILE_GID="mogile"
 
 depend() {
-	use net
-	after mysql
+	use net mysql postgresql
+	after mysql postgresql
 }
 
 start() {

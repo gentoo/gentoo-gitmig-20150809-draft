@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.8 2009/11/04 02:20:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.9 2009/11/04 02:29:22 robbat2 Exp $
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/mogilefsd-init.d-2.16, -files/mogilefsd.conf-2.16,
+  -files/mogstored-conf.d-2.16, -files/mogstored-init.d-2.16,
+  -files/mogilefs-server-2.16-Use-saner-name-in-process-listing.patch,
+  -mogilefs-server-2.20.ebuild, files/mogstored-init.d-2.30:
+  Cleanup and also ensure that mogilefsd only starts after postgres in case
+  that is the backend in use.
 
 *mogilefs-server-2.32 (04 Nov 2009)
 
