@@ -1,16 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.6.0.ebuild,v 1.5 2009/11/04 14:45:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.6.0.ebuild,v 1.6 2009/11/04 15:06:08 arfrever Exp $
 
 EAPI="2"
-
-NEED_PYTHON="2.4"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils
 
 DESCRIPTION="Simple config file reader and writer"
-HOMEPAGE="http://www.voidspace.org.uk/python/configobj.html"
+HOMEPAGE="http://www.voidspace.org.uk/python/configobj.html http://code.google.com/p/configobj/ http://pypi.python.org/pypi/configobj"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="BSD"
@@ -20,8 +18,7 @@ IUSE="doc"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-bad-tests.patch
