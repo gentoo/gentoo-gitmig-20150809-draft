@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/x86info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.28 2009/08/15 23:41:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.29 2009/11/04 05:21:18 robbat2 Exp $
+
+*x86info-1.25 (04 Nov 2009)
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +x86info-1.25.ebuild,
+  +files/x86info-1.25-parallel-make-cleanup.patch:
+  Version bump per bug #291446, also more parallel make fixes.
 
   15 Aug 2009; Mike Frysinger <vapier@gentoo.org> x86info-1.24-r2.ebuild,
   +files/x86info-1.24-pic.patch:
