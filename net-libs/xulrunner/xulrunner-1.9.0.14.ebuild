@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.14.ebuild,v 1.7 2009/10/30 17:52:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.14.ebuild,v 1.8 2009/11/04 19:52:06 armin76 Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -59,6 +59,9 @@ src_prepare() {
 
 	# We need to re-patch this because autoreconf overwrites it
 	epatch "${WORKDIR}"/patch/000_flex-configure-LANG.patch
+
+	# ARM EABI can't use -fshort-wchar
+	use arm && sed -i -e 's/-fshort-wchar//g' xulrunner/installer/libxul*
 }
 
 src_configure() {
