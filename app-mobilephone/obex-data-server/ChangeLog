@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.19 2009/10/11 16:19:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.20 2009/11/04 03:02:30 robbat2 Exp $
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  obex-data-server-0.4.4.ebuild:
+  Update the libusb dep to point to virtual/libusb:0 as this should work
+  fine with libusb-compat layer.
 
   11 Oct 2009; Markus Meier <maekke@gentoo.org>
   obex-data-server-0.4.4.ebuild:
