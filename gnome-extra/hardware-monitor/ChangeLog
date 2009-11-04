@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.28 2009/11/04 22:26:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.29 2009/11/04 22:52:57 mrpouet Exp $
+
+  04 Nov 2009; Romain Perier (mrpouet) <mrpouet@gentoo.org> metadata.xml:
+  Assigned to maintainer-need, pending for removal until 4 Dec. 2009.
 
   04 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -hardware-monitor-1.2.1.ebuild, -hardware-monitor-1.4.ebuild,
