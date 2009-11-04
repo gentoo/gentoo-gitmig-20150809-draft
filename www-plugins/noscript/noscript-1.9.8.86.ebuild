@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/noscript-1.9.8.86.ebuild,v 1.1 2009/09/16 18:12:44 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/noscript-1.9.8.86.ebuild,v 1.2 2009/11/04 00:03:11 anarchy Exp $
 
 inherit mozextension multilib
 
@@ -19,6 +19,7 @@ RDEPEND="
 		>=www-client/mozilla-firefox-bin-1.5
 		>=www-client/seamonkey-1.1
 		>=www-client/seamonkey-bin-1.1
+		>=www-client/icecat-3.5
 	)"
 DEPEND="${RDEPEND}"
 
@@ -55,6 +56,12 @@ src_install() {
 		xpi_install "${WORKDIR}/${P}"
 		mozillas="$(best_version www-client/seamonkey-bin) ${mozillas}"
 	fi
+	if has_version '>=www-client/icecat-3.5'; then
+		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/icecat"
+		xpi_install "${WORKDIR}/${P}"
+		mozillas="$(best_version www-client/icecat) ${mozillas}"
+	fi
+
 }
 
 pkg_postinst() {
