@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.7 2009/10/04 17:17:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.8 2009/11/04 19:12:32 armin76 Exp $
 
 inherit eutils toolchain-funcs java-pkg-opt-2
 
@@ -70,6 +70,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.3.9-fbsd.patch
 	epatch "${FILESDIR}"/1.3.9-arm.patch
 	epatch "${FILESDIR}"/1.3.9-sh.patch
+	epatch "${FILESDIR}"/${PV}-sparc.patch
 
 	if use java; then
 		cd "${WORKDIR}"

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.143 2009/10/04 17:17:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.144 2009/11/04 19:12:32 armin76 Exp $
+
+  04 Nov 2009; Raúl Porcel <armin76@gentoo.org> +files/1.3.10-sparc.patch,
+  tightvnc-1.3.10-r1.ebuild:
+  Add a patch to fix corruption on sparc
 
   04 Oct 2009; Raúl Porcel <armin76@gentoo.org> -tightvnc-1.3.9-r2.ebuild,
   -tightvnc-1.3.9-r3.ebuild, -tightvnc-1.3.10.ebuild,
