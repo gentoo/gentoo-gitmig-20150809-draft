@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.112 2009/11/02 16:29:59 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.113 2009/11/04 13:25:02 haubi Exp $
+
+  04 Nov 2009; Michael Haubenwallner <haubi@gentoo.org>
+  linux/x86/make.defaults:
+  add -m32 to CFLAGS, for bootstrapping i686 on x86_64-linux using host gcc
 
   02 Nov 2009; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
   dropped openssl mask on aix, fixed again to build good shared libs
