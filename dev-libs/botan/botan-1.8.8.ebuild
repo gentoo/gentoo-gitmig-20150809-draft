@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.8.ebuild,v 1.1 2009/11/03 21:39:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.8.ebuild,v 1.2 2009/11/04 12:24:23 arfrever Exp $
 
 EAPI="2"
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 MY_PN="Botan"
 MY_P="${MY_PN}-${PV}"
@@ -26,6 +26,10 @@ RDEPEND="bzip2? ( >=app-arch/bzip2-1.0.5 )
 
 DEPEND="${RDEPEND}
 	>=dev-lang/python-2.4"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-use_negative_lea_displacement.patch"
+}
 
 src_configure() {
 	local disable_modules="proc_walk,unix_procs,cpu_counter"

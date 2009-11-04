@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.50 2009/11/03 21:39:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.51 2009/11/04 12:24:23 arfrever Exp $
+
+  04 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  botan-1.8.8.ebuild,
+  +files/botan-1.8.8-use_negative_lea_displacement.patch:
+  Fix building with sys-devel/binutils-2.20.51.0.2 (bug #291785).
 
 *botan-1.8.8 (03 Nov 2009)
 
