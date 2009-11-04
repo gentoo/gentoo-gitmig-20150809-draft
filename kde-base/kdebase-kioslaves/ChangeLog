@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.167 2009/11/02 20:51:55 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.168 2009/11/04 13:57:49 patrick Exp $
+
+*kdebase-kioslaves-4.3.3-r1 (04 Nov 2009)
+
+  04 Nov 2009; Patrick Lauer <patrick@gentoo.org>
+  +kdebase-kioslaves-4.3.3-r1.ebuild:
+  Fixing samba dep, #288517. Might not be completely correct, worksforme.
 
 *kdebase-kioslaves-4.3.3 (02 Nov 2009)
 
