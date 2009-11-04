@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.18 2009/08/02 14:15:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.19 2009/11/04 22:51:55 patrick Exp $
+
+  04 Nov 2009; Patrick Lauer <patrick@gentoo.org> virt-manager-0.8.0.ebuild:
+  Fixing libvirt dep (+python useflag) for #291896
 
   02 Aug 2009; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.8.0.ebuild:
   fix up depends a little bit. has no effect on those running ~arch

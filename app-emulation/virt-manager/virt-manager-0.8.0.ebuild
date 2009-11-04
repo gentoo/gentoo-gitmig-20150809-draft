@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.0.ebuild,v 1.2 2009/08/02 14:15:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.0.ebuild,v 1.3 2009/11/04 22:51:55 patrick Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gnome-keyring +network"
 RDEPEND=">=dev-lang/python-2.4.0
 	>=dev-python/pygtk-1.99.12
-	>=app-emulation/libvirt-0.4.5
+	>=app-emulation/libvirt-0.4.5[python]
 	>=dev-libs/libxml2-2.6.23[python]
 	>=app-emulation/virtinst-0.500.0
 	>=gnome-base/librsvg-2
