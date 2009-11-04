@@ -1,6 +1,10 @@
 # ChangeLog for games-action/moon-buggy
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.22 2009/03/21 17:07:25 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.23 2009/11/04 17:15:08 mr_bones_ Exp $
+
+  04 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  moon-buggy-1.0.51.ebuild:
+  esd is deprecated
 
   21 Mar 2009; Raúl Porcel <armin76@gentoo.org> moon-buggy-1.0.51.ebuild:
   x86 stable, bug #261796
