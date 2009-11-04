@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.176 2009/10/27 15:34:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.177 2009/11/04 07:20:25 robbat2 Exp $
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.36.ebuild,
+  lvm2-2.02.37.ebuild, lvm2-2.02.39.ebuild, lvm2-2.02.42.ebuild,
+  lvm2-2.02.45.ebuild, lvm2-2.02.45-r1.ebuild, lvm2-2.02.45-r2.ebuild,
+  lvm2-2.02.48.ebuild, lvm2-2.02.48-r1.ebuild, lvm2-2.02.48-r2.ebuild,
+  lvm2-2.02.49.ebuild, lvm2-2.02.49-r1.ebuild, lvm2-2.02.49-r2.ebuild,
+  lvm2-2.02.49-r3.ebuild, lvm2-2.02.51.ebuild, lvm2-2.02.51-r1.ebuild,
+  lvm2-2.02.51-r2.ebuild:
+  Bug #285868: Change openrc dep to make it not downgrade BL2 users to BL1
+  _or_ upgrade BL1 users to BL2. This should have the same effect as (
+  =sys-apps/baselayout-1* >=sys-apps/openrc-0.4 ) without the bad side
+  effect.
 
 *lvm2-2.02.51-r2 (27 Oct 2009)
 
