@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.6.3.ebuild,v 1.2 2009/11/03 19:30:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.6.3.ebuild,v 1.3 2009/11/04 11:25:59 maekke Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ DESCRIPTION="A download utility with resuming and segmented downloading with HTT
 HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
 IUSE="ares bittorrent expat gnutls metalink nls sqlite ssl test"
 
