@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.9.2.ebuild,v 1.1 2009/11/04 11:23:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.9.2.ebuild,v 1.2 2009/11/04 15:48:11 mr_bones_ Exp $
 
 DESCRIPTION="Simple programming interface for decoding and encoding audio data using vorbis or speex"
 HOMEPAGE="http://www.annodex.net/software/libfishsound/html/"
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	# use flac || 
+	# use flac ||
 	# disable it for now, it causes compile failures in sonic-visualiser because
 	# it adds -I/usr/include/FLAC to pkgconfig cflags...
 	myconf="$myconf --disable-flac"
