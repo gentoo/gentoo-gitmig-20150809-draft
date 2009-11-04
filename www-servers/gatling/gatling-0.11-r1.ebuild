@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.11-r1.ebuild,v 1.2 2009/08/18 15:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.11-r1.ebuild,v 1.3 2009/11/04 08:31:38 patrick Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 #IUSE="ssl"
 IUSE=""
 
-DEPEND="dev-libs/libowfat
+DEPEND=">=dev-libs/libowfat-0.25
 	dev-libs/dietlibc"
 	#ssl? ( dev-libs/openssl )
 	#"
