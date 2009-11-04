@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/seekwatcher
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.6 2008/02/12 17:33:12 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/seekwatcher/ChangeLog,v 1.7 2009/11/04 08:23:42 robbat2 Exp $
+
+*seekwatcher-0.12 (04 Nov 2009)
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +seekwatcher-0.12.ebuild:
+  Bug #247020: version bump.
 
   12 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> seekwatcher-0.6.ebuild,
   seekwatcher-0.9.ebuild:
