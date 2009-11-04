@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.1 2009/10/20 19:46:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.2 2009/11/04 11:02:55 arfrever Exp $
+
+  04 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  argparse-1.0.1.ebuild:
+  Define src_test(). Update HOMEPAGE. Support Python 3.
 
 *argparse-1.0.1 (20 Oct 2009)
 
