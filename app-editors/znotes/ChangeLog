@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/znotes
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/ChangeLog,v 1.1 2009/11/04 18:26:50 yngwin Exp $
+
+*znotes-0.3.4 (04 Nov 2009)
+
+  04 Nov 2009; Ben de Groot <yngwin@gentoo.org> +znotes-0.3.4.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild slightly edited from the one provided by upstream.
+
