@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.7 2009/02/23 09:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.8 2009/11/04 02:20:50 robbat2 Exp $
+
+*mogilefs-server-2.32 (04 Nov 2009)
+
+  04 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +mogilefs-server-2.32.ebuild:
+  Version bump, now with official Postgres support.
 
 *mogilefs-server-2.30 (23 Feb 2009)
 
