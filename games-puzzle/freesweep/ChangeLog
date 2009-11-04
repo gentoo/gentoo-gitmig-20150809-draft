@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/freesweep
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/ChangeLog,v 1.1 2009/11/04 05:08:35 mr_bones_ Exp $
+
+*freesweep-0.92 (04 Nov 2009)
+
+  04 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +freesweep-0.92.ebuild, +metadata.xml:
+  Initial commit - ebuild submitted by Alexey Charkov via bug #290803
+
