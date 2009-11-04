@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10728 2009/11/04 16:39:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10729 2009/11/04 20:38:50 spock Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -984,12 +984,6 @@ dev-lisp/openmcl
 # Maxima is the only consumer and can be built with sbcl or clisp.
 # Hopefully upstream will do a release that we can add to revive this package.
 dev-lisp/gcl
-
-# Michal Januszewski <spock@gentoo.org> (29 Jul 2009)
-# Masked until an official, non-beta NVIDIA driver supporting CUDA 2.3
-# is released.
->=dev-util/nvidia-cuda-sdk-2.3
->=dev-util/nvidia-cuda-toolkit-2.3
 
 # Jeremy Olexa <darkside@gentoo.org> (28 Jul 2009)
 # On behalf of Robin H. Johnson <robbat2@gentoo.org>.
