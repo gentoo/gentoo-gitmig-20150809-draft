@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.383 2009/11/04 11:16:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.384 2009/11/04 11:34:38 patrick Exp $
+
+  04 Nov 2009; Patrick Lauer <patrick@gentoo.org> -samba-3.4.2.ebuild:
+  Remove old
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org> samba-3.0.37.ebuild:
   amd64/x86 stable, bug #290633
