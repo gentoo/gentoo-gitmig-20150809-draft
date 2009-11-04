@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/xlwt-0.7.2.ebuild,v 1.1 2009/06/26 22:07:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/xlwt-0.7.2.ebuild,v 1.2 2009/11/04 15:57:42 maekke Exp $
 
 EAPI=2
 inherit distutils
@@ -11,7 +11,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="examples"
 
 src_prepare() {

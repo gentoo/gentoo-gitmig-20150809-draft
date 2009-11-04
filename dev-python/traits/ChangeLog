@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.4 2009/10/05 21:32:25 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.5 2009/11/04 15:59:42 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> traits-3.2.0.ebuild:
+  amd64/x86 stable, bug #290607
 
   05 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> traits-3.1.0.ebuild,
   traits-3.2.0.ebuild:
