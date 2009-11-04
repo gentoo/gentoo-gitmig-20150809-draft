@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4961 2009/11/03 06:48:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4962 2009/11/04 12:47:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2218,6 +2218,7 @@ net-fs/samba-libs:addns - Enable AD DNS integration
 net-fs/samba-libs:ads - Enable Active Directory support
 net-fs/samba-libs:aio - Enable asynchronous IO support
 net-fs/samba-libs:cluster - Enable support for clustering
+net-fs/samba-libs:ldb - Enable the ldb tools
 net-fs/samba-libs:netapi - Enable building of netapi bits
 net-fs/samba-libs:samba4 - Enable experimental samba4 bits
 net-fs/samba-libs:smbclient - Enable smbclient tool
