@@ -1,6 +1,10 @@
 # ChangeLog for games-action/openastromenace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/ChangeLog,v 1.4 2009/05/27 14:23:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/ChangeLog,v 1.5 2009/11/04 04:33:06 mr_bones_ Exp $
+
+  04 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  openastromenace-1.2.0.ebuild:
+  Actually work with LINGUAS support (bug #234729)
 
   27 May 2009; Tristan Heaven <nyhm@gentoo.org>
   openastromenace-1.2.0.ebuild:
