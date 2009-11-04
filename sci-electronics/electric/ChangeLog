@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.31 2009/09/23 20:00:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.32 2009/11/04 00:10:28 calchan Exp $
+
+*electric-8.09 (04 Nov 2009)
+
+  04 Nov 2009; Denis Dupeyron <calchan@gentoo.org> +electric-8.09.ebuild:
+  Version bump, thanks to Rafael Goncalves Martins.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> electric-7.00.ebuild:
   Remove virtual/libc
