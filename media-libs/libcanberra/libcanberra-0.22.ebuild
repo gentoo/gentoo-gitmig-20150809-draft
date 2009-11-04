@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.11-r5.ebuild,v 1.1 2009/03/28 18:25:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.22.ebuild,v 1.1 2009/11/04 22:39:49 eva Exp $
 
 EAPI="1"
 
-inherit eutils gnome2-utils
+inherit eutils gnome2-utils autotools
 
 DESCRIPTION="Portable Sound Event Library"
 HOMEPAGE="http://0pointer.de/lennart/projects/libcanberra/"
@@ -25,16 +25,33 @@ RDEPEND="media-libs/libvorbis
 		>=gnome-base/gconf-2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.17
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-dont-crash-without-display.patch"	#259891
+
+	# Fix bug 277739, replace LT_PREREQ and LT_INIT by AC_LIBTOOL*
+	# macros (equivalent for earlier version), preserve backward
+	# compatibility with libtool-1
+	epatch "${FILESDIR}/${PN}-0.14-backward-compatibility-libtool.patch"
+
+	# Fix bug 278354, Backport AM_GCONF_SOURCE_2 macro to m4/ dir
+	# in case where gconf isn't installed on the system
+	# (eautoconf could fail)
+	epatch "${FILESDIR}/${PN}-0.14-am-gconf-source-2-m4.patch"
+
+	rm lt*    || die "clean-up ltmain.sh failed"
+	rm m4/lt* || die "clean-up lt scripts failed"
+	rm m4/libtool* || die "clean-up libtool script failed"
+
+	eautoreconf
 }
 
 src_compile() {
 	econf --disable-static \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable alsa) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
@@ -50,17 +67,11 @@ src_compile() {
 
 src_install() {
 	# we must delay gconf schema installation due to sandbox
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
+	#export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
 	emake DESTDIR="${D}" install || die "emake install failed."
 
-	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-
-	rm "${D}/usr/share/doc/${PN}/README"
-	# If the rmdir errors, you probably need to add a file to dodoc
-	# and remove the package installed above
-	rmdir "${D}/usr/share/doc/${PN}"
-	dodoc README
+	#unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 }
 
 pkg_preinst() {
