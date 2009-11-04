@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.13 2009/10/10 12:42:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.14 2009/11/04 14:45:26 bicatali Exp $
+
+  04 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  configobj-4.6.0.ebuild, +files/configobj-4.6.0-bad-tests.patch:
+  Removed some bad tests (bug #277921)
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> configobj-4.6.0.ebuild:
   Merge from Prefix
