@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.18 2009/10/18 16:43:40 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.19 2009/11/04 14:03:35 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (04 Nov. 2009)
+# split samba isn't keyworded yet
+>=kde-base/kdebase-kioslaves-4.3.3 samba
 
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.

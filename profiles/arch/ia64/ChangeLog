@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.55 2009/10/27 18:42:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.56 2009/11/04 14:03:35 patrick Exp $
+
+  04 Nov 2009; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  package.use.mask kioslaves samba useflag
 
   27 Oct 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask lqr
