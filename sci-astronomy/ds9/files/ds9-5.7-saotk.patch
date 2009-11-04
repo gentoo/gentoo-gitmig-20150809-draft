@@ -1,6 +1,6 @@
 diff -Nur saods9.orig/saotk/fitsy++/Makefile saods9/saotk/fitsy++/Makefile
---- saods9.orig/saotk/fitsy++/Makefile	2007-12-28 22:07:11.000000000 +0000
-+++ saods9/saotk/fitsy++/Makefile	2008-11-03 23:06:28.000000000 +0000
+--- saods9.orig/saotk/fitsy++/Makefile	2009-11-04 02:32:17.000000000 +0000
++++ saods9/saotk/fitsy++/Makefile	2009-11-04 06:26:59.000000000 +0000
 @@ -3,8 +3,8 @@
  
  CXXFLAGS = $(CXXOPT) -I. -I.. -I../vector -I../util \
@@ -12,47 +12,10 @@ diff -Nur saods9.orig/saotk/fitsy++/Makefile saods9/saotk/fitsy++/Makefile
  
  SS	= \
  	alloc.C \
-diff -Nur saods9.orig/saotk/frame/Makefile saods9/saotk/frame/Makefile
---- saods9.orig/saotk/frame/Makefile	2008-09-23 20:47:09.000000000 +0100
-+++ saods9/saotk/frame/Makefile	2008-11-03 23:11:01.000000000 +0000
-@@ -4,8 +4,7 @@
- CXXFLAGS = $(CXXOPT) -w \
- 	-I. -I.. -I../widget -I../vector -I../list -I../fitsy++ -I../util \
- 	-I../../include -I$(X11INCLUDE) \
--	-I../../$(FUNTOOLSDIR)/util \
--	-I../../$(ASTDIR)
-+	-I/usr/include/funtools/util
- 
- SS	= \
- 	annulus.C \
-diff -Nur saods9.orig/saotk/util/tkpostscript.h saods9/saotk/util/tkpostscript.h
---- saods9.orig/saotk/util/tkpostscript.h	2008-02-20 22:26:21.000000000 +0000
-+++ saods9/saotk/util/tkpostscript.h	2008-11-04 09:58:00.000000000 +0000
-@@ -4,7 +4,7 @@
- 
- // this is copied from tkCanvPs.c
- 
--#include "../../tk8.4.18/generic/tkCanvas.h"
-+#include </usr/lib/tk8.4/include/generic/tkCanvas.h>
- 
- typedef struct TkPostscriptInfo {
-     int x, y, width, height;	/* Area to print, in canvas pixel
-diff -Nur saods9.orig/saotk/widget/ps.h saods9/saotk/widget/ps.h
---- saods9.orig/saotk/widget/ps.h	2008-01-04 17:29:27.000000000 +0000
-+++ saods9/saotk/widget/ps.h	2008-11-04 09:59:00.000000000 +0000
-@@ -13,7 +13,7 @@
- #include "zlib.h"
- extern int DebugGZ;
- 
--#if defined( __alpha) || defined(__mips64) || defined(__sparcv9) || defined(__M64)
-+#if defined( __alpha) || defined(__mips64) || defined(__sparcv9) || defined(__M64) || defined(__LP64__)
- #define BIT32 int
- #else
- #define BIT32 long
-diff -ur saods9.orig/saotk/frame/fitsimage.C saods9/saotk/frame/fitsimage.C
---- saods9.orig/saotk/frame/fitsimage.C	2007-05-22 20:36:50.000000000 +0200
-+++ saods9/saotk/frame/fitsimage.C	2008-11-04 16:36:40.000000000 +0100
-@@ -31,7 +31,99 @@
+diff -Nur saods9.orig/saotk/frame/fitsimage.C saods9/saotk/frame/fitsimage.C
+--- saods9.orig/saotk/frame/fitsimage.C	2009-11-04 02:32:17.000000000 +0000
++++ saods9/saotk/frame/fitsimage.C	2009-11-04 06:26:59.000000000 +0000
+@@ -26,7 +26,99 @@
  // this is kluge to speed up doug minks wcssubs 'ksearch' routine
  extern "C" {
    FitsHead* wcshead = NULL;
@@ -153,3 +116,28 @@ diff -ur saods9.orig/saotk/frame/fitsimage.C saods9/saotk/frame/fitsimage.C
  
    char* findit(char* cards, char* key)
    {
+diff -Nur saods9.orig/saotk/frame/Makefile saods9/saotk/frame/Makefile
+--- saods9.orig/saotk/frame/Makefile	2009-11-04 02:32:17.000000000 +0000
++++ saods9/saotk/frame/Makefile	2009-11-04 06:28:21.000000000 +0000
+@@ -5,8 +5,7 @@
+ 	-I. -I.. -I../widget -I../vector -I../list -I../fitsy++ -I../util \
+ 	-I../../include -I$(X11INCLUDE) \
+ 	-I../../$(FUNTOOLSDIR)/util \
+-	-I/usr/include/libxml2 \
+-	-I../../$(ASTDIR)
++	-I/usr/include/libxml2
+ 
+ SS	= \
+ 	annulus.C \
+diff -Nur saods9.orig/saotk/widget/ps.h saods9/saotk/widget/ps.h
+--- saods9.orig/saotk/widget/ps.h	2009-11-04 02:32:17.000000000 +0000
++++ saods9/saotk/widget/ps.h	2009-11-04 06:26:59.000000000 +0000
+@@ -13,7 +13,7 @@
+ #include "zlib.h"
+ extern int DebugGZ;
+ 
+-#if defined( __alpha) || defined(__mips64) || defined(__sparcv9) || defined(__M64)
++#if defined( __alpha) || defined(__mips64) || defined(__sparcv9) || defined(__M64) || defined(__LP64__)
+ #define BIT32 int
+ #else
+ #define BIT32 long

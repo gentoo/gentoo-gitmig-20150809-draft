@@ -1,6 +1,19 @@
 # ChangeLog for sci-astronomy/ds9
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.19 2009/02/25 17:17:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.20 2009/11/04 06:25:14 bicatali Exp $
+
+*ds9-5.7 (04 Nov 2009)
+
+  04 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/ds9-5.1-gcc4.2-x86.patch, -ds9-5.2.ebuild,
+  -files/ds9-5.2-Makefile.patch, -files/ds9-5.2-gcc43.patch,
+  -files/ds9-5.4-gcc43.patch, -files/ds9-5.4-saotk.patch, -ds9-5.5.ebuild,
+  -files/ds9-5.5-main.patch, -files/ds9-5.5-makefile.patch,
+  -files/ds9-5.5-src.patch, +ds9-5.7.ebuild, +files/ds9-5.7-main.patch,
+  +files/ds9-5.7-makefile.patch, +files/ds9-5.7-saotk.patch,
+  +files/ds9-5.7-src.patch, +files/ds9-5.7-tcl85.patch, +files/ds9.png:
+  Version bump. Updated all patches, added icon and fix for tcl-8.5 (bug
+  #267558)
 
   25 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -files/ds9-5.4-fitsy.patch, -files/ds9-5.4-main.patch,

@@ -1,0 +1,31 @@
+--- saods9.orig/Makefile	2009-11-04 02:32:17.000000000 +0000
++++ saods9/Makefile	2009-11-04 02:39:27.000000000 +0000
+@@ -177,14 +177,12 @@
+ all	: build
+ 
+ build : dirs \
+-	tcl tk \
+-	tktable tcllib tkcon xmlrpc blt \
+-	zlib tclxml tkimg tkmpeg html \
+-	xpa iis checkdns $(SIGNAL) funtools \
+-	sla ast wcssubs \
++	xmlrpc \
++	tkmpeg html \
++	iis checkdns $(SIGNAL) funtools \
++	sla \
+ 	rice hcompress plio \
+-	$(OPTDIR) \
+-	saotk zip zvfs ds9
++	saotk ds9
+ 
+ doc	: FORCE
+ 	@echo "Making Documentation..."
+@@ -299,7 +297,7 @@
+ 
+ html	: FORCE
+ 	@echo "Installing HTMLWIDGET..."
+-	cd $(HTMLDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' $(PREHTMLFLAGS) $(root)/htmlwidget/configure --prefix $(root) --with-tcl=$(root)/$(TCLDIR) --with-tk=$(root)/$(TKDIR) $(XFLAGS) --enable-shared=no
++	cd $(HTMLDIR); CC='$(CC)' CFLAGS='$(OPTS)' LDFLAGS='$(LIBS)' $(PREHTMLFLAGS) $(root)/htmlwidget/configure --prefix $(root) $(XFLAGS) --enable-shared=no
+ 	cd $(HTMLDIR); $(MAKE)
+ 	cp $(HTMLDIR)/libtkhtml.a lib/.
+ 
