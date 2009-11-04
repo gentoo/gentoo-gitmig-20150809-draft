@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.4 2009/11/03 21:53:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.5 2009/11/04 14:09:20 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> libvdpau-0.2.ebuild:
+  amd64/x86 stable, bug #291657
 
   03 Nov 2009; Alexis Ballier <aballier@gentoo.org> libvdpau-0.2.ebuild:
   keyword ~x86-fbsd
