@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.22 2009/11/02 20:50:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.23 2009/11/04 14:03:44 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> vuze-4.2.0.8.ebuild:
+  amd64/x86 stable, bug #291631
 
   02 Nov 2009; Vlastimil Babka <caster@gentoo.org> vuze-4.2.0.8.ebuild:
   Add postinst elog messages about bug #259884.
