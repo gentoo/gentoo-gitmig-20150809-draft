@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.34 2009/09/24 22:03:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.35 2009/11/04 13:55:46 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> iscan-2.21.0.ebuild:
+  amd64/x86 stable, bug #291535
 
   24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> iscan-2.21.0.ebuild,
   +files/iscan-2.21.0-drop-ltdl.patch,

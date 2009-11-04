@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.4 2009/10/01 08:14:22 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.5 2009/11/04 13:55:46 maekke Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ SRC_REV="6"  # revision used by upstream
 
 # feel free to add your arch, every non-x86
 # arch doesn't install any x86-only stuff.
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="EPSON Image Scan! for Linux (including sane-epkowa backend)"
 HOMEPAGE="http://www.avasys.jp/english/linux_e/dl_scan.html"
