@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.21 2009/10/04 16:54:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.22 2009/11/04 15:43:54 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> tigervnc-1.0.0-r1.ebuild:
+  amd64/arm/x86 stable, bug #291726
 
 *tigervnc-1.0.0-r1 (04 Oct 2009)
 
