@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan-plugin-gt-f720
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/ChangeLog,v 1.1 2009/10/01 07:53:21 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/ChangeLog,v 1.2 2009/11/04 13:56:40 maekke Exp $
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org>
+  iscan-plugin-gt-f720-0.0.1.ebuild:
+  amd64/x86 stable, bug #291536
 
 *iscan-plugin-gt-f720-0.0.1 (01 Oct 2009)
 
