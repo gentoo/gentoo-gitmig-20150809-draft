@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4966 2009/11/04 19:07:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4967 2009/11/05 01:48:14 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -622,7 +622,6 @@ dev-embedded/ponyprog:epiphany - Enable support for www-client/epiphany
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips (dev-embedded/libftdi)
 dev-games/cegui:devil - Enable image loading via DevIL
-dev-games/cegui:freeimage - Enable image loading via FreeImage
 dev-games/cegui:irrlicht - Enable the Irrlicht renderer
 dev-games/cegui:xerces-c - Enable the Xerces-C++ XML parser module
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
@@ -639,7 +638,6 @@ dev-games/ogre:cegui - build the CEGUI samples
 dev-games/ogre:cg - NVIDIA toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
 dev-games/ogre:double-precision - more precise calculations at the expense of speed
-dev-games/ogre:freeimage - image loading support with FreeImage
 dev-games/openscenegraph:osgapps -  Build osg applications 
 dev-games/openscenegraph:xrandr -  Enable support for the X xrandr extension 
 dev-games/physfs:grp - Enable Build Engine GRP archive support
