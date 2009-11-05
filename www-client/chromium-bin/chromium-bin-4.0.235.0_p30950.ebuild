@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.222.4_p28661.ebuild,v 1.1 2009/10/11 13:57:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.235.0_p30950.ebuild,v 1.1 2009/11/05 01:14:02 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -32,12 +32,8 @@ S=${WORKDIR}
 QA_EXECSTACK="opt/chromium.org/chrome-linux/chrome"
 
 # Ogg/Theora/Vorbis-only FFmpeg binaries
-QA_TEXTRELS="opt/chromium.org/chrome-linux/libavcodec.so.52
-	opt/chromium.org/chrome-linux/libavformat.so.52
-	opt/chromium.org/chrome-linux/libavutil.so.50"
-QA_PRESTRIPPED="opt/chromium.org/chrome-linux/libavcodec.so.52
-	opt/chromium.org/chrome-linux/libavformat.so.52
-	opt/chromium.org/chrome-linux/libavutil.so.50"
+QA_TEXTRELS="opt/chromium.org/chrome-linux/libffmpegsumo.so"
+QA_PRESTRIPPED="opt/chromium.org/chrome-linux/libffmpegsumo.so"
 
 pkg_setup() {
 	# Built with SSE2 enabled, so will fail on older processors
