@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/asteroid
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/asteroid/ChangeLog,v 1.5 2007/04/09 21:47:34 welp Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/asteroid/ChangeLog,v 1.6 2009/11/05 23:40:23 nyhm Exp $
+
+  05 Nov 2009; Tristan Heaven <nyhm@gentoo.org> asteroid-1.1.ebuild,
+  +files/asteroid-1.1-include.patch:
+  Fix implicit declarations and add ~amd64 keyword
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> asteroid-1.1.ebuild:
   Keyworded ~x86-fbsd wrt bug 173405
