@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kdmthemegenerator
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmthemegenerator/ChangeLog,v 1.1 2009/11/05 12:54:39 ssuominen Exp $
+
+*kdmthemegenerator-0.8 (05 Nov 2009)
+
+  05 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kdmthemegenerator-0.8.ebuild:
+  Initial commit.
+
