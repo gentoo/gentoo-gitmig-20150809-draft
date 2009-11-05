@@ -1,6 +1,10 @@
 # ChangeLog for games-action/clanbomber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.11 2009/10/14 21:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.12 2009/11/05 23:31:20 volkmar Exp $
+
+  05 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  clanbomber-2.0.9.1.ebuild:
+  Keywording for ppc, bug 289266
 
   14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   clanbomber-2.0.9.1.ebuild:
