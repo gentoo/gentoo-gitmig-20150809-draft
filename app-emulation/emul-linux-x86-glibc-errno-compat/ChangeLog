@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-glibc-errno-compat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/ChangeLog,v 1.1 2008/02/18 23:50:45 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/ChangeLog,v 1.2 2009/11/05 22:13:27 vapier Exp $
+
+  05 Nov 2009; Mike Frysinger <vapier@gentoo.org>
+  emul-linux-x86-glibc-errno-compat-2.5.ebuild:
+  Disable foritfy source #273982 by Diego E. Pettenò.
 
 *emul-linux-x86-glibc-errno-compat-2.5 (18 Feb 2008)
 

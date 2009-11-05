@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/emul-linux-x86-glibc-errno-compat-2.5.ebuild,v 1.1 2008/02/18 23:50:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/emul-linux-x86-glibc-errno-compat-2.5.ebuild,v 1.2 2009/11/05 22:13:27 vapier Exp $
 
 inherit flag-o-matic
 
@@ -16,8 +16,6 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-
-DEPEND=""
 
 S=${WORKDIR}/glibc-${PV}
 
@@ -45,7 +43,7 @@ src_compile() {
 		--disable-sanity-checks \
 		--enable-add-ons=linuxthreads \
 		|| die
-	sed -i '/^defines/s:$: -U__i686:' config.make || die
+	sed -i '/^defines/s:$: -U__i686 -U_FORTIFY_SOURCE:' config.make || die
 	emake -j1 \
 		PARALLELMFLAGS="${MAKEOPTS}" \
 		build-programs="no" \
