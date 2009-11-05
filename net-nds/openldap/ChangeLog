@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.349 2009/11/04 16:58:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.350 2009/11/05 19:56:42 jer Exp $
+
+  05 Nov 2009; Jeroen Roovers <jer@gentoo.org> openldap-2.4.19.ebuild:
+  Stable for HPPA (bug #290345).
 
   04 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   openldap-2.4.19.ebuild:
