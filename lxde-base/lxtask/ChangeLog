@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxtask
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.5 2009/07/30 21:41:45 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.6 2009/11/05 17:41:34 vostorga Exp $
+
+  05 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> -lxtask-0.1.ebuild:
+  Cleaning out old ebuild
 
   30 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> lxtask-0.1.ebuild,
   lxtask-0.1.1.ebuild:
