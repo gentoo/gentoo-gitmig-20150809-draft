@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.6 2009/04/14 07:29:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.7 2009/11/05 05:03:54 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -55,9 +55,7 @@ src_install() {
 	doexe "${demo}/${exe}" || die "doexe failed"
 
 	# Replace bad library
-	use x86 && dosym /usr/lib/libSDL.so "${dir}"/libSDL-1.1.so.0
-	use amd64 && dosym /emul/linux/x86/usr/lib/libSDL.so \
-		"${dir}"/libSDL-1.1.so.0
+	dosym /usr/$(use amd64 && echo lib32 || echo lib)/libSDL.so "${dir}"/libSDL-1.1.so.0
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}" "${dir}"
 	newicon "${demo}"/launch/box.png ${PN}.png || die
