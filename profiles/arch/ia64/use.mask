@@ -63,6 +63,7 @@ flite
 wicd
 opencore-amr
 nut
+sctp
 
 # Stuff that doesn't compile on ia64
 chicken
