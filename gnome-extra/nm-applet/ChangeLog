@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.34 2009/10/24 12:13:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.35 2009/11/05 14:33:36 dagger Exp $
+
+*nm-applet-0.8.0_pre20091105 (05 Nov 2009)
+
+  05 Nov 2009; Robert Piasek <dagger@gentoo.org>
+  +nm-applet-0.8.0_pre20091105.ebuild:
+  New development version of network-manager-applet 0.8
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> nm-applet-0.7.1-r3.ebuild:
   ppc stable #285278
