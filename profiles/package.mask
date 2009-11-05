@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10729 2009/11/04 20:38:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10730 2009/11/05 01:03:08 nyhm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tristan Heaven <nyhm@gentoo.org> (05 Nov 2009)
+# Broken. Will be replaced by games-fps/urbanterror when it's ready.
+# Follow progress on bug #203296
+games-fps/quake3-urbanterror
 
 # Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2009)
 # media-video/mplayerthumbs replaced by kde-base/mplayerthumbs
