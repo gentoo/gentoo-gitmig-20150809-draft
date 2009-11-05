@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.135 2009/11/05 16:21:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.136 2009/11/05 22:30:28 volkmar Exp $
+
+  05 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> deluge-1.2.0_rc2.ebuild,
+  deluge-1.2.0_rc3.ebuild:
+  Re-Keywording for ppc, bug 291423
 
 *deluge-1.2.0_rc3 (05 Nov 2009)
 
