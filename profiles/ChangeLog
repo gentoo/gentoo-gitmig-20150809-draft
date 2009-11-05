@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3507 2009/11/05 08:24:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3508 2009/11/05 23:16:16 volkmar Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  arch/powerpc/package.use.mask:
+  p.use.mask media-gfx/f-spot flickr on powerpc, bug 284473
 
   05 Nov 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add xdm 1.1.9 to p.mask

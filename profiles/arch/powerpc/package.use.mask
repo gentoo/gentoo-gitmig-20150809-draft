@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.27 2009/10/27 13:44:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.28 2009/11/05 23:16:15 volkmar Exp $
 
 # This file requires >=portage-2.1.1
+
+# Mounir Lamouri <volkmar@gentoo.org> (06 Nov 2009)
+# flickr USE flag needs dev-dotnet/flickrnet-bin, not keyworded, bug 284473
+media-gfx/f-spot flickr
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
 # Requires stable KDE4                              
