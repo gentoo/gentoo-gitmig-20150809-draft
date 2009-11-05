@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.134 2009/11/01 12:17:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.135 2009/11/05 16:21:10 armin76 Exp $
+
+*deluge-1.2.0_rc3 (05 Nov 2009)
+
+  05 Nov 2009; Raúl Porcel <armin76@gentoo.org> deluge-1.1.9.ebuild,
+  +deluge-1.2.0_rc3.ebuild:
+  Version bump wrt #291968, add missing lzma-utils dep wrt #274754
 
 *deluge-1.2.0_rc2 (01 Nov 2009)
 
