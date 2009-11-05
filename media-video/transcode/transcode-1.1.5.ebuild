@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5.ebuild,v 1.1 2009/11/02 23:18:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5.ebuild,v 1.2 2009/11/05 19:41:11 aballier Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://berlios/tcforge/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X 3dnow a52 aac alsa altivec dv dvd iconv imagemagick jpeg lzo mjpeg mp3 mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xml xvid"
+IUSE="X 3dnow a52 aac alsa altivec dv dvd iconv imagemagick jpeg lzo mjpeg mp3 mpeg mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xml xvid"
 
 RDEPEND="aac? ( media-libs/faac )
 	a52? ( media-libs/a52dec )
@@ -37,7 +37,7 @@ RDEPEND="aac? ( media-libs/faac )
 	truetype? ( >=media-libs/freetype-2 )
 	>=media-video/ffmpeg-0.4.9_p20081014
 	|| ( sys-libs/glibc dev-libs/libiconv )
-	media-libs/libmpeg2
+	mpeg? ( media-libs/libmpeg2 )
 	x264? ( media-libs/x264 )
 	xml? ( dev-libs/libxml2 )
 	xvid? ( media-libs/xvid )
@@ -88,6 +88,8 @@ src_configure() {
 		$(use_enable a52) \
 		$(use_enable aac faac) \
 		$(use_enable xml libxml2) \
+		$(use_enable mpeg libmpeg2) \
+		$(use_enable mpeg libmpeg2convert) \
 		$(use_enable mjpeg mjpegtools) \
 		$(use_enable sdl) \
 		$(use_enable jpeg libjpeg) \

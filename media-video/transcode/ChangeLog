@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.262 2009/11/02 23:18:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.263 2009/11/05 19:41:11 aballier Exp $
+
+  05 Nov 2009; Alexis Ballier <aballier@gentoo.org> transcode-1.1.5.ebuild:
+  Fix libmpeg2 support, by Rafał Mużyło, bug 291734
 
 *transcode-1.1.5 (02 Nov 2009)
 
