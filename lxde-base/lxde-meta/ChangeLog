@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.11 2009/08/15 11:07:43 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.12 2009/11/05 17:19:07 vostorga Exp $
+
+  05 Nov 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -lxde-meta-0.3.2.1-r1.ebuild, -lxde-meta-0.4.ebuild:
+  Cleaning out old, leaving only the latest lxde-meta
 
   15 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> lxde-meta-0.4.2.ebuild:
   Keywording for ppc. Fix bug 271148
