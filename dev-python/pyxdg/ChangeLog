@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.56 2009/10/18 18:01:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.57 2009/11/05 20:37:10 maekke Exp $
+
+  05 Nov 2009; Markus Meier <maekke@gentoo.org> pyxdg-0.17-r1.ebuild:
+  arm stable, bug #281427
 
 *pyxdg-0.17-r2 (18 Oct 2009)
 
