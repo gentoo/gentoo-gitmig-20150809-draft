@@ -1,6 +1,13 @@
 # ChangeLog for games-util/loki_patch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.10 2008/03/04 15:53:30 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.11 2009/11/05 06:33:46 nyhm Exp $
+
+*loki_patch-20091105 (05 Nov 2009)
+
+  05 Nov 2009; Tristan Heaven <nyhm@gentoo.org> +loki_patch-20091105.ebuild,
+  +files/loki_patch-20091105-build.patch,
+  +files/loki_patch-20091105-patchdata.patch:
+  Version bump, fixes bugs #251102 and #281440
 
   04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -loki_patch-20051209.ebuild:
