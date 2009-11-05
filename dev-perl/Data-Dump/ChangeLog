@@ -1,9 +1,9 @@
 # ChangeLog for dev-perl/Data-Dump
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.6 2009/11/05 18:26:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.7 2009/11/05 18:27:41 armin76 Exp $
 
   05 Nov 2009; Raúl Porcel <armin76@gentoo.org> Data-Dump-1.15.ebuild:
-  ~alpha/~ia64/~sparc stable wrt #290136
+  Add ~alpha/~ia64/~sparc wrt #290136
 
   27 Oct 2009; Jeroen Roovers <jer@gentoo.org> Data-Dump-1.15.ebuild:
   Marked ~hppa (bug #290136).
