@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20091105.ebuild,v 1.1 2009/11/05 06:33:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20091105.ebuild,v 1.2 2009/11/05 06:48:37 nyhm Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="=dev-util/xdelta-1*
+RDEPEND="dev-util/xdelta:0
 	dev-libs/libxml2
 	dev-libs/glib:2"
 DEPEND="${RDEPEND}
