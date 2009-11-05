@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.2.4.ebuild,v 1.2 2009/06/05 00:20:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.2.4.ebuild,v 1.3 2009/11/05 09:16:14 ssuominen Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="+auth +bookmarks debug +handbook thumbnail"
+IUSE="+auth +bookmarks debug +handbook"
 # 4 of 4 tests fail. Last checked for 4.0.3
 RESTRICT="test"
 
@@ -22,9 +22,6 @@ RDEPEND="${DEPEND}
 	>=kde-base/kurifilter-plugins-${PV}:${SLOT}[kdeprefix=]
 	auth? ( >=kde-base/kpasswdserver-${PV}:${SLOT}[kdeprefix=] )
 	bookmarks? ( >=kde-base/keditbookmarks-${PV}:${SLOT}[kdeprefix=] )
-"
-PDEPEND="
-	thumbnail? ( media-video/mplayerthumbs:1 )
 "
 
 KMEXTRACTONLY="
