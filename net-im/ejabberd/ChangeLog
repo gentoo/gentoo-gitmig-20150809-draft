@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.65 2009/06/05 13:00:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.66 2009/11/05 16:29:46 armin76 Exp $
+
+  05 Nov 2009; Raúl Porcel <armin76@gentoo.org> ejabberd-2.0.5-r3.ebuild:
+  Add ~arm/~ia64
 
   05 Jun 2009; Peter Volkov <pva@gentoo.org> +ejabberd-2.0.5.ebuild,
   +ejabberd-2.0.5-r1.ebuild:
