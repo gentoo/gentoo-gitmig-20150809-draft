@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.20 2009/09/28 22:56:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.21 2009/11/05 06:01:40 nyhm Exp $
 
 inherit eutils games
 
@@ -59,7 +59,7 @@ src_install() {
 
 	cd "${S}"
 	loki_patch --verify patch.dat
-	loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching"
+	loki_patch patch.dat "${Ddir}" || die "patching"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
