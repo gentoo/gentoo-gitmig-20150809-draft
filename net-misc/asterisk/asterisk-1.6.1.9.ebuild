@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.8.ebuild,v 1.2 2009/10/28 11:31:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.9.ebuild,v 1.1 2009/11/05 11:21:10 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -91,12 +91,12 @@ get_available_modules() {
 pkg_setup() {
 	local checkfailed=0 waitaftermsg=0
 
-	if is_ast10update || is_ast12update || is_ast14update ; then
-		ewarn "      Asterisk UPGRADE Warning"
-		ewarn ""
+	if is_ast12update ; then
+		ewarn "Please note that the configuration style (particularly the dial plan) has changed significantly."
+		ewarn "sip.conf: insecure=very -> insecure=port,invite"
+		ewarn "asterisk.conf: please familiarise yourself with [compat]"
+		ewarn "extensions.conf: use comma instead of pipe as a separator"
 		ewarn "- Please read "${ROOT}"usr/share/doc/${PF}/UPGRADE.txt.bz2 after the installation!"
-		ewarn ""
-		ewarn "      Asterisk UPGRADE Warning"
 		echo
 		waitaftermsg=1
 	fi
@@ -161,6 +161,13 @@ src_unpack() {
 	# https://issues.asterisk.org/view.php?id=14163
 	#
 	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.6-bt-line-test.patch || die "patch failed"
+
+	#
+	# SIP invites without a session-expires header end up with an expiry time of -1 seconds
+	# causing immediate hangup.
+	# https://issues.asterisk.org/view.php?id=15621
+	#
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.8-session_expiry.patch || die "patch failed"
 
 	AT_M4DIR=autoconf eautoreconf
 

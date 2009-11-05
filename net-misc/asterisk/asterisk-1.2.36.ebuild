@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.35-r1.ebuild,v 1.1 2009/10/28 12:26:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.36.ebuild,v 1.1 2009/11/05 11:21:10 chainsaw Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -168,7 +168,7 @@ src_prepare() {
 			-e '/^LIBS+=-lssl/d' Makefile || die
 	fi
 
-	epatch "${FILESDIR}/1.2.0/${P}-lpc10-prototypes.diff"
+	epatch "${FILESDIR}/1.2.0/${PN}-1.2.35-lpc10-prototypes.diff"
 
 	#
 	# uclibc patch
