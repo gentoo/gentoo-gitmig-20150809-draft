@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.102.2.ebuild,v 1.1 2009/10/29 06:38:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.102.2.ebuild,v 1.2 2009/11/05 08:15:11 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -34,6 +34,9 @@ OSTYPE=linux
 FLAGS=-DSTEPS16" > config.default \
 	|| die "echo failed"
 
+	if use amd64; then
+		echo "FLAGS+=-DUSE_C" >> config.default
+	fi
 	# make it look in the install location for the data
 	sed -i \
 		-e "s:argv\[0\]:\"${GAMES_DATADIR}/${PN}/\":" \

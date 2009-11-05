@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.20 2009/10/29 06:38:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.21 2009/11/05 08:15:11 tupone Exp $
+
+  05 Nov 2009; Alfredo Tupone <tupone@gentoo.org> simutrans-0.102.2.ebuild:
+  Fix compilation on amd64. Bug #291285 by Oliver Put
 
   29 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -simutrans-0.88.10.5.ebuild, +simutrans-0.102.2.ebuild:
