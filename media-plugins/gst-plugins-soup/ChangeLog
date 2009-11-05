@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-soup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.15 2009/10/24 10:59:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.16 2009/11/05 20:36:28 maekke Exp $
+
+  05 Nov 2009; Markus Meier <maekke@gentoo.org>
+  gst-plugins-soup-0.10.14.ebuild:
+  arm stable, bug #281427
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> gst-plugins-soup-0.10.14.ebuild:
   ppc stable #281427
