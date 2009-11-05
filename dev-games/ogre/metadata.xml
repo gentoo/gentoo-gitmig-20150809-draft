@@ -78,6 +78,5 @@ Exporters
     <flag name="cg">NVIDIA toolkit plugin</flag>
     <flag name="devil">image loading support with DevIL</flag>
     <flag name="double-precision">more precise calculations at the expense of speed</flag>
-    <flag name="freeimage">image loading support with FreeImage</flag>
   </use>
 </pkgmetadata>

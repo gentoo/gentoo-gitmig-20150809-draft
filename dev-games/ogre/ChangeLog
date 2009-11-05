@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.57 2009/09/10 23:12:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.58 2009/11/05 01:42:23 nyhm Exp $
+
+  05 Nov 2009; Tristan Heaven <nyhm@gentoo.org> ogre-1.6.3.ebuild,
+  metadata.xml:
+  Remove masked freeimage USE flag
 
 *ogre-1.6.3 (10 Sep 2009)
 

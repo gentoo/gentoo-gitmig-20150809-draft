@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.5 2009/07/01 21:18:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.6 2009/11/05 01:40:28 nyhm Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -14,14 +14,13 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${MY_P}b.tar.gz
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="debug devil directfb doc examples expat freeimage irrlicht lua opengl xerces-c xml"
+IUSE="debug devil directfb doc examples expat irrlicht lua opengl xerces-c xml"
 
 RDEPEND="dev-libs/libpcre
 	media-libs/freetype:2
 	devil? ( media-libs/devil )
 	directfb? ( dev-libs/DirectFB )
 	expat? ( dev-libs/expat )
-	freeimage? ( media-libs/freeimage )
 	irrlicht? ( dev-games/irrlicht )
 	lua? (
 		dev-lang/lua
@@ -61,7 +60,6 @@ src_configure() {
 		$(use_enable directfb directfb-renderer) \
 		$(use_enable examples samples) \
 		$(use_enable expat) \
-		$(use_enable freeimage) \
 		$(use_enable irrlicht irrlicht-renderer) \
 		$(use_enable lua external-toluapp) \
 		$(use_enable lua lua-module) \
@@ -76,6 +74,7 @@ src_configure() {
 		--disable-corona \
 		--disable-dependency-tracking \
 		--disable-external-tinyxml \
+		--disable-freeimage \
 		--disable-samples \
 		--disable-silly \
 		--without-gtk2 \

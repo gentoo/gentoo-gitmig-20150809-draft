@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.3.ebuild,v 1.1 2009/09/10 23:12:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.3.ebuild,v 1.2 2009/11/05 01:42:23 nyhm Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ogre/ogre-v${PV//./-}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc cg devil double-precision examples freeimage gtk threads"
+IUSE="doc cg devil double-precision examples gtk threads"
 RESTRICT="test" #139905
 
 RDEPEND="dev-libs/zziplib
@@ -25,7 +25,6 @@ RDEPEND="dev-libs/zziplib
 	x11-libs/libX11
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	devil? ( media-libs/devil )
-	freeimage? ( media-libs/freeimage )
 	gtk? ( x11-libs/gtk+:2 )
 	threads? ( || ( >=dev-libs/boost-1.34.1 dev-libs/boost[threads] ) )"
 DEPEND="${RDEPEND}
@@ -55,6 +54,7 @@ src_configure() {
 	strip-flags
 		econf \
 		--disable-dependency-tracking \
+		--disable-freeimage \
 		--disable-openexr \
 		--disable-ogre-demos \
 		--enable-static \
@@ -63,7 +63,6 @@ src_configure() {
 		$(use_enable cg) \
 		$(use_enable devil) \
 		$(use_enable double-precision double) \
-		$(use_enable freeimage) \
 		$(use_enable threads threading)
 }
 
