@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/icm-browser
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/ChangeLog,v 1.1 2009/11/05 20:55:12 alexxy Exp $
+
+*icm-browser-3.6.1g (05 Nov 2009)
+
+  05 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> +files/90icm-browser,
+  +icm-browser-3.6.1g.ebuild, +files/icm-browser.png, +metadata.xml:
+  Initial import
+
