@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.3.0-r1.ebuild,v 1.1 2009/10/13 19:10:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.3.0-r2.ebuild,v 1.1 2009/11/05 23:53:12 calchan Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_configure() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog CONTRIBUTORS HACKING NEWS README* TODO BUGS
 
 	rm doc/Doxyfile.nopreprocessing
