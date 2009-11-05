@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.222.6_p28888.ebuild,v 1.2 2009/10/29 08:41:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.236.0.ebuild,v 1.1 2009/11/05 13:20:13 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -109,7 +109,6 @@ src_install() {
 
 	doins -r out/Release/locales
 	doins -r out/Release/resources
-	doins -r out/Release/themes
 
 	newman out/Release/chromium-browser.1 chrome.1
 
