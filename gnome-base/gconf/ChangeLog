@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.216 2009/11/04 21:43:37 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.217 2009/11/05 19:46:30 maekke Exp $
+
+  05 Nov 2009; Markus Meier <maekke@gentoo.org> gconf-2.26.2-r1.ebuild:
+  arm stable, bug #281427
 
 *gconf-2.28.0-r1 (04 Nov 2009)
 
