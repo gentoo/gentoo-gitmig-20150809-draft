@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>sci-electronics</herd>
-	<longdescription>
-		Meta-package for the GPL Electronic Design Automation tools (gEDA)
-		offering a mature suite of free software applications for electronics
-		design, including schematic capture, attribute management, bill of
-		materials (BOM) generation, etc...
-	</longdescription>
-</pkgmetadata>
 
+<pkgmetadata>
+
+	<herd>sci-electronics</herd>
+
+	<longdescription>
+		The GPL Electronic Design Automation tools (gEDA) offers a mature suite
+		of free software applications for electronics design, including
+		schematic capture, attribute management, bill of materials (BOM)
+		generation, etc...
+	</longdescription>
+
+	<use>
+		<flag name='stroke'>enable mouse gesture support</flag>
+	</use>
+
+</pkgmetadata>
