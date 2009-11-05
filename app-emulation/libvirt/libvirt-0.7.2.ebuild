@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.2.ebuild,v 1.3 2009/10/27 21:20:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.2.ebuild,v 1.4 2009/11/05 23:27:51 patrick Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ RDEPEND="sys-libs/readline
 	iscsi? ( sys-block/open-iscsi )
 	kvm? ( app-emulation/kvm )
 	libvirtd? ( net-misc/bridge-utils )
-	lvm? ( sys-fs/lvm2 )
+	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	network? ( net-dns/dnsmasq net-firewall/iptables )
 	nfs? ( net-fs/nfs-utils )
 	numa? ( sys-process/numactl )
