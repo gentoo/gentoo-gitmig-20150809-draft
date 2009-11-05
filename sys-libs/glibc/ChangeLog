@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.649 2009/11/05 22:30:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.650 2009/11/05 22:31:15 vapier Exp $
+
+  05 Nov 2009; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.9_p20081201-r3.ebuild:
+  Add binutils-2.20 detection patch to glibc-2.9.
 
   30 Oct 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1.ebuild:
   Import a bunch of alpha patches #289642 by Matt Turner.
