@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.3 2009/11/02 12:20:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.4 2009/11/05 12:14:10 remi Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -22,8 +22,8 @@ IUSE_INPUT_DEVICES="
 	input_devices_vmmouse
 	input_devices_void
 	input_devices_synaptics
+	input_devices_wacom
 "
-#	input_devices_wacom
 IUSE_VIDEO_CARDS="
 	video_cards_apm
 	video_cards_ark
@@ -92,6 +92,7 @@ PDEPEND="
 	input_devices_vmmouse?     ( x11-drivers/xf86-input-vmmouse )
 	input_devices_void?        ( x11-drivers/xf86-input-void )
 	input_devices_synaptics?   ( x11-drivers/xf86-input-synaptics )
+	input_devices_wacom?       ( x11-drivers/xf86-input-wacom )
 
 	video_cards_apm?           ( x11-drivers/xf86-video-apm )
 	video_cards_ark?           ( x11-drivers/xf86-video-ark )
@@ -154,4 +155,3 @@ PDEPEND="
 	!x11-drivers/xf86-video-vermilion
 	!x11-drivers/xf86-video-vga
 "
-#	input_devices_wacom?       ( x11-drivers/xf86-input-wacom )
