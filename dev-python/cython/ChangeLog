@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.30 2009/11/02 21:29:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.31 2009/11/05 15:34:30 jer Exp $
+
+  05 Nov 2009; Jeroen Roovers <jer@gentoo.org> cython-0.11.3.ebuild:
+  Stable for HPPA (bug #291193).
 
   02 Nov 2009; Markus Meier <maekke@gentoo.org> cython-0.11.3.ebuild:
   amd64/x86 stable, bug #291193
