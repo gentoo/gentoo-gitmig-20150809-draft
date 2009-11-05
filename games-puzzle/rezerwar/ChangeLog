@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/rezerwar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/ChangeLog,v 1.1 2009/10/20 21:57:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/ChangeLog,v 1.2 2009/11/05 22:41:54 nyhm Exp $
+
+  05 Nov 2009; Tristan Heaven <nyhm@gentoo.org> rezerwar-0.4.1.ebuild:
+  Add ~amd64 keyword; respect LDFLAGS
 
 *rezerwar-0.4.1 (20 Oct 2009)
 

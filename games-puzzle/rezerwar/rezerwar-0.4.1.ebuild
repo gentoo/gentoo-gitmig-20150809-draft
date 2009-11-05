@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/rezerwar-0.4.1.ebuild,v 1.1 2009/10/20 21:57:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/rezerwar-0.4.1.ebuild,v 1.2 2009/11/05 22:41:54 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://tamentis.com/projects/rezerwar/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio,joystick,video]
@@ -20,8 +20,13 @@ DEPEND="media-libs/libsdl[audio,joystick,video]
 src_prepare() {
 	sed -i \
 		-e '/check_sdl$/d' \
+		-e 's/-O2 //' \
 		configure \
 		|| die 'sed failed'
+	sed -i \
+		-e '/CC.*OBJECTS/s:$(CC):$(CC) $(LDFLAGS):' \
+		mkfiles/Makefile.src \
+		|| die "sed failed"
 }
 
 src_configure() {
@@ -29,7 +34,6 @@ src_configure() {
 	TARGET_BIN="${GAMES_BINDIR}" \
 	TARGET_DOC=/usr/share/doc/${PF} \
 	TARGET_DATA="${GAMES_DATADIR}/${PN}" \
-	MK_EXTRACFLAGS="${CFLAGS}" \
 	./configure \
 	|| die "configure failed"
 	sed -i \
