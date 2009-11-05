@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.223 2009/11/05 11:21:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.224 2009/11/05 16:17:49 chainsaw Exp $
+
+  05 Nov 2009; <chainsaw@gentoo.org> asterisk-1.2.36.ebuild:
+  Marked stable on AMD64 for security bug #284892, based on compilation &
+  start/stop init.d test on default configuration.
 
 *asterisk-1.6.1.9 (04 Nov 2009)
 *asterisk-1.2.36 (04 Nov 2009)
