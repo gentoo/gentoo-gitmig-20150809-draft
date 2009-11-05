@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.0_pre20091105.ebuild,v 1.1 2009/11/05 14:33:16 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.0_pre20091105.ebuild,v 1.2 2009/11/05 15:52:12 dagger Exp $
 
 EAPI="2"
 inherit eutils
@@ -66,7 +66,8 @@ src_configure() {
 		--with-dbus-sys-dir=/etc/dbus-1/system.d
 		$(use_enable doc gtk-doc)
 		$(use_with doc docs)
-		$(use_with resolvconf)"
+		$(use_with resolvconf)
+		$(use_with connection-sharing iptables)"
 
 	# default is dhcpcd (if none or both are specified), ISC dchclient otherwise
 	if use dhclient ; then
