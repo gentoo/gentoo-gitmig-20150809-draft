@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.55 2009/10/26 14:34:02 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.56 2009/11/05 18:31:23 armin76 Exp $
+
+  05 Nov 2009; Raúl Porcel <armin76@gentoo.org> ruby-gettext-2.0.4.ebuild:
+  Add ~ia64/~sparc wrt #289839
 
   26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> ruby-gettext-2.0.4.ebuild:
   Re-Keywording for ppc, bug 289839
