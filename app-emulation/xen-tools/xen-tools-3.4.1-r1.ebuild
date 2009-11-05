@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1-r1.ebuild,v 1.2 2009/10/11 17:00:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1-r1.ebuild,v 1.3 2009/11/05 23:15:42 patrick Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ CDEPEND="dev-lang/python[ncurses,threads]
 #	vtpm? ( dev-libs/gmp dev-libs/openssl )
 
 DEPEND="${CDEPEND}
+	sys-devel/gettext
 	sys-devel/gcc
 	dev-lang/perl
 	dev-lang/python[ssl]
