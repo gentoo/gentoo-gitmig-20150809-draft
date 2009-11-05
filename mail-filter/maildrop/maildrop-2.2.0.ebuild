@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.2.0.ebuild,v 1.3 2009/10/30 19:10:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.2.0.ebuild,v 1.4 2009/11/05 15:34:13 jer Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.courier-mta.org/maildrop/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~s390 ~sh ~sparc x86"
 IUSE="berkdb debug fam gdbm ldap mysql postgres authlib"
 
 DEPEND="!mail-mta/courier
