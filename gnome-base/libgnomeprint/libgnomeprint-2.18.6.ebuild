@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.6.ebuild,v 1.4 2009/10/24 16:21:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.6.ebuild,v 1.5 2009/11/05 20:11:49 maekke Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="cups doc"
 
 RDEPEND=">=dev-libs/glib-2
