@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.ebuild,v 1.2 2009/11/06 14:22:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.ebuild,v 1.3 2009/11/06 21:18:01 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -25,7 +25,7 @@ fi
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
 LIBIDN_VER=""                                  # it's integrated into the main tarball now
-PATCH_VER="1"                                  # Gentoo patchset
+PATCH_VER="2"                                  # Gentoo patchset
 PORTS_VER= #${RELEASE_VER}                     # version of glibc ports addon
 LT_VER=""                                      # version of linuxthreads addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl requires
@@ -82,6 +82,8 @@ fi
 # arch: we need to make sure our binutils/gcc supports TLS
 DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
+	x86? ( >=sys-devel/gcc-4.3 )
+	amd64? ( >=sys-devel/binutils-2.19 )
 	ppc? ( >=sys-devel/gcc-4.1.0 )
 	ppc64? ( >=sys-devel/gcc-4.1.0 )
 	>=sys-devel/binutils-2.15.94
