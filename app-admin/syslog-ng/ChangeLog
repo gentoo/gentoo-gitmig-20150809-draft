@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.219 2009/10/30 11:04:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.220 2009/11/06 17:03:32 mr_bones_ Exp $
+
+  06 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.rc6-r1, files/syslog-ng.rc6.3.0:
+  remove the --quiet option to start-stop-daemon so config errors are
+  obvious (bug #291346)
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> syslog-ng-3.0.4.ebuild:
   amd64/x86 stable, bug #289960
