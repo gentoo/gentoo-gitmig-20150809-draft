@@ -1,0 +1,13 @@
+--- x11vnc-0.9.8/x11vnc/x11vnc.h
++++ x11vnc-0.9.8/x11vnc/x11vnc.h
+@@ -76,6 +76,10 @@
+ #include <X11/keysym.h>
+ #include <X11/Xatom.h>
+ 
++#include <X11/Xmd.h>
++#include <X11/extensions/shm.h>
++#include <X11/extensions/shmproto.h>
++
+ #else
+ 
+ #define NO_X11 1
