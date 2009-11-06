@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.144 2009/10/27 09:28:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.145 2009/11/06 16:21:24 robbat2 Exp $
+
+*bugzilla-3.4.3 (06 Nov 2009)
+*bugzilla-3.2.5 (06 Nov 2009)
+*bugzilla-3.0.10 (06 Nov 2009)
+
+  06 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +bugzilla-3.0.10.ebuild, +bugzilla-3.2.5.ebuild, +bugzilla-3.4.3.ebuild:
+  Version bumps for security bug #284824.
 
   27 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> bugzilla-3.4.1-r1.ebuild:
   Re-Keywording for ppc, bug 284166
