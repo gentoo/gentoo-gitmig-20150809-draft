@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.5 2008/10/05 16:45:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.6 2009/11/06 22:37:01 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -18,17 +18,15 @@ SRC_URI="http://platan.vc.cvut.cz/ftp/pub/vmware/${MY_P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="arts esd"
+IUSE="esd"
 RESTRICT=""
 
 RDEPEND="sys-libs/glibc
 	amd64? (
 		app-emulation/emul-linux-x86-soundlibs
-		esd? ( media-sound/esound )
-		arts? ( kde-base/arts ) )
+		esd? ( media-sound/esound ) )
 	x86? (
-		esd? ( media-sound/esound )
-		arts? ( kde-base/arts ) )"
+		esd? ( media-sound/esound ) )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -38,25 +36,16 @@ Ddir=${D}/${dir}
 
 src_compile() {
 	cd "${S}"/src
-	if use arts && use esd
-	then
-		einfo "Building both aRts and ESD support."
-	elif use arts
-	then
-		einfo "Building aRts support only."
-		sed -i '/PLUGINS :=/ s/ libvmdsp_esd.so//' 32/Makefile 64/Makefile \
-			|| die "sed failed"
-	else
-		einfo "Building ESD support only."
+
+	if use esd; then
 		sed -i '/PLUGINS :=/ s/ libvmdsp_arts.so//' 32/Makefile 64/Makefile \
 			|| die "sed failed"
 	fi
-	if use x86
-	then
+
+	if use x86; then
 		cd 32
 		emake -j1 || die
-	elif has_multilib_profile
-	then
+	elif has_multilib_profile; then
 		emake -j1 || die
 	else
 		cd 64
@@ -77,14 +66,7 @@ src_install() {
 	else
 		src/64/libvmdsp*.so || die
 	fi
-	if use arts
-	then
-		dobin vmwarearts || die
-		make_desktop_entry vmwarearts "VMware Workstation (aRts)" \
-			vmware-workstation.png System
-	fi
-	if use esd
-	then
+	if use esd; then
 		dobin vmwareesd || die
 		make_desktop_entry vmwareesd "VMware Workstation (ESD)" \
 			vmware-workstation.png System
