@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.634 2009/11/02 20:57:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.635 2009/11/06 12:31:33 ssuominen Exp $
+
+  06 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kdelibs-4.3.3.ebuild,
+  +files/kdelibs-4.3.3-glibc-2.11.patch:
+  Fix building with GLIBC 2.11+ wrt #292072, thanks to Manfred Knick for
+  reporting.
 
 *kdelibs-4.3.3 (02 Nov 2009)
 
