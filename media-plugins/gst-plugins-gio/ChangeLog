@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-gio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.36 2009/09/15 02:00:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.37 2009/11/06 16:21:34 leio Exp $
+
+  06 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-gio-0.10.22.ebuild, gst-plugins-gio-0.10.24.ebuild:
+  QA: Remove src_unpack override, as gio is not an experimental plugin
+  anymore and so it is not needed. Remove old
 
   15 Sep 2009; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-gio-0.10.23.ebuild:
