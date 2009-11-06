@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3510 2009/11/06 16:38:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3511 2009/11/06 17:39:40 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask x11-misc/karamba, replaced by kde-base/superkaramba. Mask themes that
+  dep on =kde-base/kwin-3* so it can be masked in near future.
 
   06 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   arch/powerpc/package.use.mask:

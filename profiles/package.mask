@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10733 2009/11/06 13:49:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10734 2009/11/06 17:39:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,28 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
+# Cleaning out themes depending on kde-base/kwin-3.5.10,
+# to allow kwin mask in near future.
+# x11-misc/karamba, replaced by kde-base/superkaramba.
+# Masked for removal.
+x11-themes/domino
+<x11-themes/crystal-2
+x11-themes/comix
+x11-themes/baghira
+x11-themes/alloy
+x11-themes/activeheart
+x11-themes/fahrenheit
+x11-themes/fusionx-aqua
+x11-themes/knifty
+x11-themes/kwin-neos
+x11-themes/liquid
+<x11-themes/polyester-2
+x11-themes/reinhardtstyle
+x11-themes/ridge
+x11-themes/thinkeramik
+x11-misc/karamba
 
 # Vlastimil Babka <caster@gentoo.org> (06 Nov 2009)
 # Removal for EOL and security, bug #287615
