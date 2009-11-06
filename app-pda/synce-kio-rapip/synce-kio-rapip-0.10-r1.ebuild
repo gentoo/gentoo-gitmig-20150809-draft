@@ -1,29 +1,26 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/synce-kio-rapip-0.10-r1.ebuild,v 1.2 2009/08/05 23:51:05 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/synce-kio-rapip-0.10-r1.ebuild,v 1.3 2009/11/06 19:01:23 ssuominen Exp $
 
 inherit distutils eutils qt3
 
 DESCRIPTION="SynCE - KDE kioslave for the SynCE RAPIP protocol"
 HOMEPAGE="http://sourceforge.net/projects/synce/"
-LICENSE="MIT"
-
-IUSE="arts"
-SLOT="0"
-KEYWORDS="~x86 ~amd64"
-RDEPEND="app-pda/synce-libsynce
-		app-pda/synce-librapi2"
-DEPEND="${RDEPEND}
-	arts? ( kde-base/arts )"
-
-#need-kde 3.2
-
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
-S="${WORKDIR}/synce-kio-rapip-${PV}"
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+
+DEPEND="app-pda/synce-libsynce
+	app-pda/synce-librapi2"
+
+S=${WORKDIR}/synce-kio-rapip-${PV}
 
 src_compile() {
-	econf $(use_with arts) || die
+	econf \
+		--without-arts
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-kio-rapip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/ChangeLog,v 1.4 2009/08/05 23:51:05 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/ChangeLog,v 1.5 2009/11/06 19:01:23 ssuominen Exp $
+
+  06 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  synce-kio-rapip-0.10-r1.ebuild:
+  Remove USE arts.
 
   05 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
   -synce-kio-rapip-0.10.ebuild, synce-kio-rapip-0.10-r1.ebuild:
