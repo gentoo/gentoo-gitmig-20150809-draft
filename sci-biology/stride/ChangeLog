@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/stride
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.7 2009/11/06 02:44:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.8 2009/11/06 02:50:45 markusle Exp $
+
+  06 Nov 2009; Markus Dittrich <markusle@gentoo.org> stride-20011129.ebuild,
+  stride-20011129-r1.ebuild:
+  Updated outdated homepage (fixes bug #290795).
 
 *stride-20011129-r1 (06 Nov 2009)
 
