@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3509 2009/11/06 13:49:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3510 2009/11/06 16:38:09 volkmar Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  arch/powerpc/package.use.mask:
+  Remove p.use.mask for 'media-gfx/f-spot flickr' on powerpc, bug 284473
 
   06 Nov 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   Mask 1.4 JRE's, bug #287615.
