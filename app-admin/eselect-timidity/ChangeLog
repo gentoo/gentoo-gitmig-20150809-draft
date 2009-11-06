@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-timidity
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-timidity/ChangeLog,v 1.14 2007/09/29 09:03:15 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-timidity/ChangeLog,v 1.15 2009/11/06 20:59:29 ulm Exp $
+
+*eselect-timidity-20091106 (06 Nov 2009)
+
+  06 Nov 2009; Ulrich Mueller <ulm@gentoo.org>
+  +eselect-timidity-20091106.ebuild:
+  Version bump, bug 292102.
 
   29 Sep 2007; Samuli Suominen <drac@gentoo.org>
   eselect-timidity-20061203.ebuild:
