@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.384 2009/11/02 00:12:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.385 2009/11/06 19:53:15 mrpouet Exp $
+
+*glib-2.20.5-r1 (06 Nov 2009)
+
+  06 Nov 2009; Romain Perier <mrpouet@gentoo.org>
+  +glib-2.20.5-r1.ebuild,
+  +files/glib2-CVE-2009-3289.patch:
+  Fix bug #286102, symlink permission error (CVE-2009-3289), new revision.
 
   02 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> glib-2.22.2.ebuild:
   Remove virtual/libc again.
