@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10739 2009/11/06 18:57:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10740 2009/11/06 19:06:23 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,30 +39,13 @@
 app-backup/keep
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
-# Cleaning out packages depending on kde-base/libkonq-3.5.10,
-# to allow kde-base/libkonq mask in near future.
-# Masked for removal.
+# Cleaning out packages with KDE3 dependencies.
+# Masked for removal in 30 days.
 media-sound/musicman
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
-# Cleaning out packages depending on kde-base/kdebase-kioslaves-3.5.10,
-# to allow kdebase-kioslaves mask in near future.
-# Masked for removal.
 app-antivirus/klamav
 <net-p2p/ktorrent-3
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
-# Cleaning out packages depending on kde-base/konqueror-3.5.10,
-# to allow konqueror mask in near future.
-# Masked for removal.
 <net-misc/smb4k-0.10
 <net-im/kmess-2
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
-# Cleaning out themes depending on kde-base/kwin-3.5.10,
-# to allow kwin mask in near future.
-# x11-misc/karamba, replaced by kde-base/superkaramba.
-# Masked for removal.
 x11-themes/domino
 <x11-themes/crystal-2
 x11-themes/comix
@@ -80,6 +63,7 @@ x11-themes/ridge
 x11-themes/thinkeramik
 x11-misc/karamba
 x11-misc/dekorator
+app-pda/libopensync-plugin-kdepim
 
 # Vlastimil Babka <caster@gentoo.org> (06 Nov 2009)
 # Removal for EOL and security, bug #287615
