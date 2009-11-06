@@ -1,0 +1,18 @@
+diff -up openbox-3.4.7.2/data/xsession/openbox-gnome-session.in.gnomesession openbox-3.4.7.2/data/xsession/openbox-gnome-session.in
+--- openbox-3.4.7.2/data/xsession/openbox-gnome-session.in.gnomesession	2008-12-09 18:06:37.000000000 +0100
++++ openbox-3.4.7.2/data/xsession/openbox-gnome-session.in	2008-12-09 19:04:14.000000000 +0100
+@@ -11,5 +11,12 @@ fi
+ xprop -root -remove _NET_NUMBER_OF_DESKTOPS -remove _NET_DESKTOP_NAMES -remove _NET_CURRENT_DESKTOP 2> /dev/null
+ 
+ # Run GNOME with Openbox as its window manager
+-export WINDOW_MANAGER="@bindir@/openbox"
+-exec gnome-session --choose-session=openbox-session "$@"
++SESSION=$(gconftool-2 -g /desktop/gnome/session/default_session 2> /dev/null)
++test -z "$SESSION" && SESSION="[openbox]"
++echo "$SESSION" | grep -q openbox || SESSION="${SESSION%]},openbox]"
++
++OPENBOX_SESSION=$(gconftool-2 -g /desktop/gnome/session/openbox_session 2> /dev/null)
++[ "$SESSION" != "$OPENBOX_SESSION" ] && gconftool-2 -t list --list-type=strings -s \
++  /desktop/gnome/session/openbox_session "$SESSION" 2> /dev/null
++
++exec gnome-session --default-session-key /desktop/gnome/session/openbox_session "$@"
