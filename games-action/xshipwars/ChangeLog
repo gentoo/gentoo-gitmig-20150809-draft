@@ -1,6 +1,10 @@
 # ChangeLog for games-action/xshipwars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.23 2009/11/04 17:12:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.24 2009/11/06 20:43:51 mr_bones_ Exp $
+
+  06 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xshipwars-2.5.5.ebuild:
+  EAPI=2; update HOMEPAGE
 
   04 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
   xshipwars-2.5.5.ebuild:

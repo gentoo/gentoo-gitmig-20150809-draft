@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.9 2009/11/04 17:12:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.10 2009/11/06 20:43:51 mr_bones_ Exp $
 
-inherit toolchain-funcs eutils games
+EAPI=2
+inherit eutils games
 
 MY_P=xsw-${PV}
 DESCRIPTION="massively multi-player, ultra graphical, space-oriented gaming system designed for network play"
-HOMEPAGE="http://wolfpack.twu.net/ShipWars/XShipWars/"
+HOMEPAGE="http://wolfsinger.com/~wolfpack/XShipWars/"
 SRC_URI="http://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 	http://wolfpack.twu.net/users/wolfpack/xsw-data-${PV}.tar.bz2
 	http://wolfpack.twu.net/users/wolfpack/stimages-1.11.1.tar.bz2
@@ -26,11 +27,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${WORKDIR}"/${P}-64bit.patch
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${WORKDIR}"/${P}-64bit.patch
 	sed -i \
 		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^DATADIR/s:=.*:=${GAMES_DATADIR}:" \
@@ -38,6 +38,10 @@ src_unpack() {
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		client/xsw.h || die "sed on xsw.h failed"
+}
+
+src_configure() {
+	:
 }
 
 src_compile() {
