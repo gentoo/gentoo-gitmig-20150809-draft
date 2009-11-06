@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.5_beta6.ebuild,v 1.4 2008/09/16 22:21:35 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ies4linux/ies4linux-2.5_beta6.ebuild,v 1.5 2009/11/06 22:33:05 ssuominen Exp $
 
 inherit eutils versionator
 
@@ -22,7 +22,7 @@ DEPEND=">=app-arch/cabextract-1.0
 RDEPEND="${DEPEND}
 		gtk? ( dev-python/pygtk
 		>=dev-lang/python-2.4 )
-		kde? ( || ( kde-base/kommander kde-base/kdewebdev ) )"
+		kde? ( kde-base/kommander )"
 
 S="${WORKDIR}/${MY_P}"
 
