@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10_pre4672.ebuild,v 1.2 2009/11/01 20:40:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10_pre4672.ebuild,v 1.3 2009/11/06 12:50:40 jer Exp $
 
 EAPI="2"
 
@@ -212,10 +212,6 @@ pkg_postinst() {
 		elog "To improve shared memory usage please set:"
 		elog "$ sysctl kern.ipc.shm_allow_removed=1"
 	fi
-
-	elog
-	elog "The current Opera builds may still have issues with plugins, notably"
-	elog "www-plugins/adobe-flash. See also https://bugs.gentoo.org/198162"
 }
 
 pkg_postrm() {
