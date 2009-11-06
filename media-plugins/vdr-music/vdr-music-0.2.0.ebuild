@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.2.0.ebuild,v 1.6 2009/08/09 19:49:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.2.0.ebuild,v 1.7 2009/11/06 17:33:17 caster Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ DEPEND=">=media-video/vdr-1.3.30
 	!imagemagick? ( media-libs/imlib2[png] )"
 
 RDEPEND="${DEPEND}
-	dev-java/blackdown-jre
+	virtual/jre
 	media-tv/shoutcast2vdr
 	sys-process/at
 	graphtft? ( >=media-plugins/vdr-graphtft-0.1.5 )"
