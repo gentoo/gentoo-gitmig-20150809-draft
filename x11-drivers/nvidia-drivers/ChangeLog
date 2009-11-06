@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.197 2009/11/06 14:36:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.198 2009/11/06 16:15:04 cardoe Exp $
+
+*nvidia-drivers-190.42-r3 (06 Nov 2009)
+
+  06 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-190.42-r3.ebuild:
+  remove generation of libGL.la since eselect-opengl-1.0.9 and newer no
+  longer uses it. refactor installation of libraries to fix FreeBSD issues
 
   06 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-190.42-r2.ebuild:
