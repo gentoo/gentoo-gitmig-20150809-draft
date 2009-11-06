@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10737 2009/11/06 18:24:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10738 2009/11/06 18:29:57 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
+# Cleaning out packages depending on kde-base/kcontrol-3.5.10,
+# to allow kde-base/kcontrol mask in near future.
+# Masked for removal.
+<net-p2p/kmldonkey-2
+app-backup/keep
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
 # Cleaning out packages depending on kde-base/libkonq-3.5.10,
