@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.3 2009/10/27 13:50:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.4 2009/11/06 13:12:44 pva Exp $
 
 EAPI="2"
 
 inherit bash-completion autotools git
 
-DESCRIPTION="OpenVZ VE control utility"
+DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
 EGIT_REPO_URI="git://git.openvz.org/pub/vzctl"
 
@@ -56,9 +56,9 @@ pkg_postinst() {
 	ewarn
 	if has_version "<sys-cluster/vzctl-3.0.10"; then
 		ewarn "The location of some vzctl files have changed. Most notably,"
-		ewarn "VE configuration files and samples directory has changed from"
+		ewarn "CT configuration files and samples directory has changed from"
 		ewarn "/etc/vz to /etc/vz/conf. In order to be able to work with"
-		ewarn "your VEs, please do the following:"
+		ewarn "your CTs, please do the following:"
 		ewarn
 		ewarn "bash# mv /etc/vz/[0-9]*.conf /etc/vz/conf/"
 		ewarn
@@ -92,11 +92,11 @@ pkg_postinst() {
 
 	elog "NOTE: Starting with vzctl-3.0.22 the mechanism for choosing the"
 	elog "interfaces to send ARP requests to has been improved (see description"
-	elog "of NEIGHBOUR_DEVS in vz.conf(5) man page). In case VE IP addresses"
-	elog "are not on the same subnet as HN IPs, it may lead to such VEs being"
+	elog "of NEIGHBOUR_DEVS in vz.conf(5) man page). In case CT IP addresses"
+	elog "are not on the same subnet as HN IPs, it may lead to such CTs being"
 	elog "unreachable from the outside world."
 	elog
-	elog "The solution is to set up a device route(s) for the network your VEs are"
+	elog "The solution is to set up a device route(s) for the network your CTs are"
 	elog "in. For more details, see http://bugzilla.openvz.org/show_bug.cgi?id=771#c1"
 	elog
 	elog "The old vzctl behavior can be restored by setting NEIGHBOUR_DEVS to any"
