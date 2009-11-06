@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.62 2009/10/23 23:06:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.63 2009/11/06 19:47:11 alexxy Exp $
+
+  06 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> no-multilib/package.mask:
+  Mask icm and icm-browser
 
   23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   no-multilib/package.use.mask:
