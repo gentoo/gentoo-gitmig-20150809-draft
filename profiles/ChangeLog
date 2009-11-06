@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3508 2009/11/05 23:16:16 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3509 2009/11/06 13:49:42 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Mask 1.4 JRE's, bug #287615.
 
   05 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   arch/powerpc/package.use.mask:
