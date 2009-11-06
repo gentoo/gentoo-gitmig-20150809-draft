@@ -1,5 +1,5 @@
---- build.xml	2009-08-04 20:54:09.267989544 +0200
-+++ build.xml.new	2009-08-04 20:57:01.295527065 +0200
+--- freenet/build.xml	2009-08-04 20:54:09.267989544 +0200
++++ freenet/build.xml.new	2009-08-04 20:57:01.295527065 +0200
 @@ -68,19 +68,9 @@
  		</exec>
  	</target>
@@ -16,13 +16,14 @@
 -
  	<!-- ================================================== -->
  
--	<target name="compile" depends="get-extjar, generate-CSSTokenizerFilter">
-+	<target name="compile" depends="generate-CSSTokenizerFilter">
+-	<target name="compile" depends="get-extjar">
++	<target name="compile" depends="env">
  		<!-- Create the time stamp -->
  		<tstamp/>
 
---- src/freenet/node/NodeStarter.java	2008-10-28 21:40:50.000000000 +0100
-+++ src/freenet/node/NodeStarter.java	2008-10-28 21:39:14.000000000 +0100
+diff -ur freenet-old/src/freenet/node/NodeStarter.java freenet/src/freenet/node/NodeStarter.java
+--- freenet-old/src/freenet/node/NodeStarter.java	2008-10-28 21:40:50.000000000 +0100
++++ freenet/src/freenet/node/NodeStarter.java	2008-10-28 21:39:14.000000000 +0100
 @@ -162,37 +162,8 @@
  	}
  
