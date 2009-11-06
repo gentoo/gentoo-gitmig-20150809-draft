@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r1.ebuild,v 1.3 2009/10/07 20:47:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r2.ebuild,v 1.1 2009/11/06 16:51:03 calchan Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -56,8 +56,8 @@ src_configure() {
 		-DKICAD_CYRILLIC=ON
 		-DwxUSE_UNICODE=ON
 		$(cmake-utils_use python KICAD_PYTHON)
-		-DKICAD_DOCS=/usr/share/doc/${P}
-		-DKICAD_HELP=/usr/share/doc/${P}"
+		-DKICAD_DOCS=/usr/share/doc/${PF}
+		-DKICAD_HELP=/usr/share/doc/${PF}"
 
 	cmake-utils_src_configure
 }
