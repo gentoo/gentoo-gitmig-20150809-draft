@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.71 2009/11/06 21:54:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.72 2009/11/06 22:06:57 swegener Exp $
+
+  06 Nov 2009; Sven Wegener <swegener@gentoo.org> x11vnc-0.9.6.ebuild,
+  x11vnc-0.9.7.ebuild, x11vnc-0.9.8.ebuild:
+  Update libvncserver dependency on the one having threads always enabled.
 
 *x11vnc-0.9.8-r1 (06 Nov 2009)
 

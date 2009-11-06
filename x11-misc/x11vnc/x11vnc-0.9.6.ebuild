@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.6.ebuild,v 1.7 2009/04/17 19:07:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.6.ebuild,v 1.8 2009/11/06 22:06:57 swegener Exp $
 
 DESCRIPTION="A VNC server for real X displays"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="jpeg zlib threads ssl crypt v4l xinerama avahi system-libvncserver"
 
-RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.1 )
+RDEPEND="system-libvncserver? ( <net-libs/libvncserver-0.9.7 )
 	zlib? ( sys-libs/zlib )
 	jpeg? (	media-libs/jpeg )
 	ssl? ( dev-libs/openssl )
