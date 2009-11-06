@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10741 2009/11/06 19:08:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10742 2009/11/06 19:18:49 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (06 Nov 2009)
+# Masked since 01 Feb 2009 because it's broken.
+# Now scheduled for removal by treecleaners in 30 days.
+# Several issues, see tracker bug 224951
+dev-ruby/qt4-qtruby
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
 # Cleaning out packages with KDE3 dependencies.
@@ -98,8 +104,8 @@ dev-java/jessie
 games-rpg/tux_aqfh
 
 # Víctor Ostorga <vostorga@gentoo.org> (02 Nov 2009)
-# If you use a kernel >= 2.6.29 it is needed >=linux-headers-2.6.29 
-# as well, otherwise net-firewall/ipsec-tools won't compile. 
+# If you use a kernel >= 2.6.29 it is needed >=linux-headers-2.6.29
+# as well, otherwise net-firewall/ipsec-tools won't compile.
 # See bug #264233 for reference
 =net-firewall/ipsec-tools-0.7.2
 
@@ -1235,10 +1241,6 @@ app-portage/udept
 # which now provides this package.
 sci-chemistry/gchempaint
 
-# Ben de Groot <yngwin@gentoo.org> (1 Feb 2009)
-# Masked because it's broken in current form. Several issues, see
-# tracker bug 224951
-dev-ruby/qt4-qtruby
 
 # Jim Ramsay <lack@gentoo.org> (1 Feb 2008)
 # This isn't actually used by anyone, but hopefully will be soon to allow
