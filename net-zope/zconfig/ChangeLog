@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zconfig/ChangeLog,v 1.1 2009/10/10 15:37:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zconfig/ChangeLog,v 1.2 2009/11/06 16:51:01 volkmar Exp $
+
+  06 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> zconfig-2.7.1.ebuild:
+  Keywording for ppc, bug 288603
 
 *zconfig-2.7.1 (10 Oct 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/transaction
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/transaction/ChangeLog,v 1.1 2009/10/10 21:01:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/transaction/ChangeLog,v 1.2 2009/11/06 16:47:29 volkmar Exp $
+
+  06 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> transaction-1.0.0.ebuild:
+  Keywording for ppc, bug 288603
 
 *transaction-1.0.0 (10 Oct 2009)
 

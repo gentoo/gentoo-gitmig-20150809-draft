@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-testing
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.1 2009/10/10 16:23:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.2 2009/11/06 16:46:13 volkmar Exp $
+
+  06 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  zope-testing-3.8.3.ebuild:
+  Keywording for ppc, bug 288603
 
 *zope-testing-3.8.3 (10 Oct 2009)
 

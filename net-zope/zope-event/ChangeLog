@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-event
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-event/ChangeLog,v 1.1 2009/10/11 17:19:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-event/ChangeLog,v 1.2 2009/11/06 16:49:09 volkmar Exp $
+
+  06 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> zope-event-3.4.1.ebuild:
+  Keywording for ppc, bug 288603
 
 *zope-event-3.4.1 (11 Oct 2009)
 

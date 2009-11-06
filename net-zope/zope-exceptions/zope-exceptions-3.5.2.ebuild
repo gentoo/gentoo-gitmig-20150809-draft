@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-exceptions/zope-exceptions-3.5.2.ebuild,v 1.1 2009/10/07 21:28:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-exceptions/zope-exceptions-3.5.2.ebuild,v 1.2 2009/11/06 16:45:30 volkmar Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 RDEPEND="net-zope/zope-interface"
