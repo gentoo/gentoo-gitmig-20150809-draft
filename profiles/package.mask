@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10738 2009/11/06 18:29:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10739 2009/11/06 18:57:09 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -79,6 +79,7 @@ x11-themes/reinhardtstyle
 x11-themes/ridge
 x11-themes/thinkeramik
 x11-misc/karamba
+x11-misc/dekorator
 
 # Vlastimil Babka <caster@gentoo.org> (06 Nov 2009)
 # Removal for EOL and security, bug #287615
