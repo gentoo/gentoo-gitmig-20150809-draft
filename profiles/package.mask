@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10744 2009/11/06 21:38:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10745 2009/11/06 21:47:28 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,6 +40,7 @@ dev-ruby/qt4-qtruby
 # Samuli Suominen <ssuominen@gentoo.org> (06 Nov 2009)
 # Cleaning out packages with KDE3 dependencies.
 # Masked for removal in 30 days.
+<net-irc/konversation-1.2
 net-im/kopete-otr
 <dev-util/kscope-1.9
 <net-p2p/kmldonkey-2
