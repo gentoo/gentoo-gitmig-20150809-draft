@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.5.1.ebuild,v 1.2 2009/11/06 19:35:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.5.1.ebuild,v 1.3 2009/11/06 19:37:09 ulm Exp $
 
 inherit elisp
 
@@ -24,7 +24,7 @@ src_compile() {
 pkg_postinst() {
 	elisp-site-regen
 
-	elog "If you update from version 2.4 or earlier you must reconfigure,"
+	elog "If you update from before version 2.5 you must reconfigure,"
 	elog "or indentation will not work."
 	elog "Read the README file in /usr/share/doc/${PF}."
 }
