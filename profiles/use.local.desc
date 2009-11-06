@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4972 2009/11/06 16:28:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4973 2009/11/06 21:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2292,10 +2292,7 @@ net-im/kadu:audacious - Enables media-sound/audacious media player support
 net-im/kadu:avatar - Display Gadu Avatars in Kadu
 net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:dragonplayer - Enables kde-base/dragonplayer KDE4 media player support
-net-im/kadu:extramodules - Enables building of extra modules
-net-im/kadu:mail - Enables mail module
 net-im/kadu:phonon - Enable phonon audio plugin
-net-im/kadu:powerkadu - Installs extra powerkadu modules
 net-im/kadu:sms - Enables SMS sending plugin
 net-im/kadu:speech - Enables speech module
 net-im/kadu:vlc - Enables media-video/vlc media player support
