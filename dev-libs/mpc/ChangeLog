@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.9 2009/10/21 15:19:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.10 2009/11/06 00:42:18 dirtyepic Exp $
+
+*mpc-0.8 (06 Nov 2009)
+
+  06 Nov 2009; Ryan Hill <dirtyepic@gentoo.org> -mpc-0.6.ebuild,
+  -files/mpc-0.6-fortify.patch, +mpc-0.8.ebuild:
+  Version bump.
 
   21 Oct 2009; Raúl Porcel <armin76@gentoo.org> mpc-0.7.ebuild:
   Add ~ia64/~s390/~sh/~sparc wrt #279851
