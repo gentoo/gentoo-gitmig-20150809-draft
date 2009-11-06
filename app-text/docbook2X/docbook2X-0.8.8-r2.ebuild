@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.7 2008/09/17 08:57:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.8 2009/11/06 05:58:34 truedfx Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Tools to convert docbook to man and info"
 SRC_URI="mirror://sourceforge/docbook2x/${P}.tar.gz"
@@ -33,6 +33,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-filename_whitespace_handling.patch
 	epatch "${FILESDIR}"/${P}-preprocessor_declaration_syntax.patch
 	epatch "${FILESDIR}"/${P}-error_on_missing_refentry.patch
+
+	eautoreconf #290284
 }
 
 src_compile() {
