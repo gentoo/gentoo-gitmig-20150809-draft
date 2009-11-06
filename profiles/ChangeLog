@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3516 2009/11/06 19:06:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3517 2009/11/06 20:03:09 weaver Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2009; Andrey Kislyuk <weaver@gentoo.org> updates/4Q-2009:
+  Package move: sci-biology/dialign-t -> sci-biology/dialign-tx
 
   06 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask pkgs with KDE3 dependencies.
