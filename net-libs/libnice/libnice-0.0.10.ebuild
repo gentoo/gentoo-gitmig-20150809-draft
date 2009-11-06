@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.0.6.ebuild,v 1.2 2009/05/15 20:55:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.0.10.ebuild,v 1.1 2009/11/06 15:10:20 tester Exp $
 
 EAPI="2"
 
@@ -10,13 +10,14 @@ SRC_URI="http://nice.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
-IUSE="+gstreamer"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+IUSE="+gstreamer upnp"
 
 RDEPEND=">=dev-libs/glib-2.10
 	gstreamer? (
 		media-libs/gstreamer:0.10
-		media-libs/gst-plugins-base:0.10 )"
+		media-libs/gst-plugins-base:0.10 )
+	upnp? ( >=net-libs/gupnp-igd-0.1.3 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
