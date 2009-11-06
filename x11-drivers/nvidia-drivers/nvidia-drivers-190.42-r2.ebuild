@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r2.ebuild,v 1.5 2009/11/03 16:36:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r2.ebuild,v 1.6 2009/11/06 14:36:52 cardoe Exp $
 
 EAPI="2"
 
@@ -200,6 +200,8 @@ pkg_setup() {
 		NV_SRC="${S}/src"
 		NV_MAN="${S}/x11/man"
 		NV_X11="${S}/obj"
+		NV_X11_DRV="${NV_X11}"
+		NV_X11_EXT="${NV_X11}"
 		NV_SOVER=1
 	elif use kernel_linux; then
 		NV_DOC="${S}/usr/share/doc"
@@ -208,6 +210,8 @@ pkg_setup() {
 		NV_SRC="${S}/usr/src/nv"
 		NV_MAN="${S}/usr/share/man/man1"
 		NV_X11="${S}/usr/X11R6/lib"
+		NV_X11_DRV="${NV_X11}/modules/drivers"
+		NV_X11_EXT="${NV_X11}/modules/extensions"
 		NV_SOVER=${PV}
 	else
 		die "Could not determine proper NVIDIA package"
@@ -303,11 +307,11 @@ src_install() {
 
 	# Xorg DDX driver
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
-	doins ${NV_X11}/modules/drivers/nvidia_drv.so || die "failed to install nvidia_drv.so"
+	doins ${NV_X11_DRV}/nvidia_drv.so || die "failed to install nvidia_drv.so"
 
 	# Xorg GLX driver
 	insinto /usr/$(get_libdir)/opengl/nvidia/extensions
-	doins ${NV_X11}/modules/extensions/libglx.so.${NV_SOVER} || \
+	doins ${NV_X11_EXT}/libglx.so.${NV_SOVER} || \
 		die "failed to install libglx.so"
 	dosym /usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so.${NV_SOVER} \
 		/usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so || \
