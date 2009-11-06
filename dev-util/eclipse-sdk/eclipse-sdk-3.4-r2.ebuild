@@ -1,6 +1,6 @@
-# Copyright 2007-2008 Gentoo Foundation
+# Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.4-r2.ebuild,v 1.1 2008/08/05 08:07:53 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.4-r2.ebuild,v 1.2 2009/11/06 14:10:29 elvanor Exp $
 
 # To unbundle a jar, do the following:
 # 1) Rewrite the ebuild so it uses OSGi packaging
@@ -50,10 +50,9 @@ CDEPEND="dev-java/ant-eclipse-ecj:${SLOT}
 	>=dev-java/tomcat-servlet-api-5.5.25-r1:2.4
 	dev-java/lucene:1.9
 	>=dev-java/lucene-analyzers-1.9.1-r1:1.9"
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
-DEPEND=">=virtual/jdk-1.5
-	java6? ( >=virtual/jdk-1.6 )
+DEPEND=">=virtual/jdk-1.6
 	dev-java/cldc-api:1.1
 	app-arch/unzip
 	app-arch/zip
