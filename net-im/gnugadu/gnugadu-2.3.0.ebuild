@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.9 2009/04/02 11:49:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.10 2009/11/06 21:30:53 ssuominen Exp $
 
-IUSE="debug dbus tlen esd oss xosd arts jabber perl spell gnutls"
+IUSE="debug dbus tlen esd oss xosd jabber perl spell gnutls"
 
 inherit eutils
 
@@ -21,7 +21,6 @@ RDEPEND="net-libs/libgadu
 	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
-	arts? ( >=kde-base/arts-0.9.5 )
 	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )
 	spell? ( app-text/gtkspell app-text/aspell )
@@ -43,16 +42,12 @@ src_compile() {
 	myconf="--with-gui --with-gadu --with-remote --with-docklet_system_tray --with-docklet_dockapp \
 		--with-sms --with-update --with-external --with-gghist --with-history-external-viewer --with-external-libgadu"
 
-	if use arts; then
-		myconf="${myconf} --with-arts --with-arts-prefix=`artsc-config --arts-prefix`"
-	fi
-
 	econf ${myconf} \
 		`use_enable debug` \
 		`use_with oss` \
 		`use_with esd` \
 		`use_with xosd` \
-		`use_with arts` \
+		--without-arts \
 		`use_with perl` \
 		`use_with tlen` \
 		`use_with jabber` \
@@ -63,7 +58,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	insinto /usr/share/applications
 	doins gg2.desktop
 	dodoc AUTHORS ChangeLog NEWS README TODO
