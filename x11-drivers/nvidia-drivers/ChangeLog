@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.198 2009/11/06 16:15:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.199 2009/11/06 16:25:24 cardoe Exp $
+
+  06 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-190.42-r3.ebuild:
+  more FreeBSD fixes
 
 *nvidia-drivers-190.42-r3 (06 Nov 2009)
 

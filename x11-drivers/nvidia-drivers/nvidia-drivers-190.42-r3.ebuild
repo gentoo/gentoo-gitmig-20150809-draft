@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r3.ebuild,v 1.1 2009/11/06 16:15:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r3.ebuild,v 1.2 2009/11/06 16:25:24 cardoe Exp $
 
 EAPI="2"
 
@@ -410,27 +410,31 @@ src_install-libs() {
 	# The GLX libraries
 	donvidia ${NV_ROOT}/lib ${libdir}/libGL.so ${sover}
 	donvidia ${NV_ROOT}/lib ${libdir}/libGLcore.so ${sover}
-	donvidia ${NV_ROOT}/lib ${libdir}/tls/libnvidia-tls.so ${sover}
+	if use x86-fbsd; then
+		donvidia ${NV_ROOT}/lib ${libdir}/libnvidia-tls.so ${sover}
+	else
+		donvidia ${NV_ROOT}/lib ${libdir}/tls/libnvidia-tls.so ${sover}
+	fi
 
 	#cuda
-	if [[ -f usr/${libdir}/libcuda.so.${PV} ]]; then
-		dolib.so usr/${libdir}/libcuda.so.${PV}
-		dosym libcuda.so.${PV} /usr/${inslibdir}/libcuda.so.1
+	if [[ -f usr/${libdir}/libcuda.so.${sover} ]]; then
+		dolib.so usr/${libdir}/libcuda.so.${sover}
+		[[ ${sover} -ne 1 ]] && dosym libcuda.so.${sover} /usr/${inslibdir}/libcuda.so.1
 		dosym libcuda.so.1 /usr/${inslibdir}/libcuda.so
 	fi
 
 	#vdpau
-	if [[ -f usr/${libdir}/libvdpau_nvidia.so.${PV} ]]; then
-		dolib.so usr/${libdir}/libvdpau_nvidia.so.${PV}
-		dosym libvdpau_nvidia.so.${PV} /usr/${inslibdir}/libvdpau_nvidia.so
+	if [[ -f usr/${libdir}/libvdpau_nvidia.so.${sover} ]]; then
+		dolib.so usr/${libdir}/libvdpau_nvidia.so.${sover}
+		dosym libvdpau_nvidia.so.${sover} /usr/${inslibdir}/libvdpau_nvidia.so
 	fi
 
 	# OpenCL
 	# NOTE: This isn't currently available in the publicly released drivers.
 	if [[ -f usr/${libdir}/libOpenCL.so.1.0.0 ]]; then
 
-		dolib.so usr/${libdir}/libnvcompiler.so.${PV}
-		dosym libnvcompiler.so.${PV} /usr/${inslibdir}/libnvcompiler.so.1
+		dolib.so usr/${libdir}/libnvcompiler.so.${sover}
+		[[ ${sover} -ne 1 ]] && dosym libnvcompiler.so.${sover} /usr/${inslibdir}/libnvcompiler.so.1
 		dosym libnvcompiler.so.1 /usr/${inslibdir}/libnvcompiler.so
 
 		dolib.so usr/${libdir}/libOpenCL.so.1.0.0
