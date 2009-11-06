@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/haskell-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.33 2009/10/27 06:31:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.34 2009/11/06 19:35:27 ulm Exp $
+
+*haskell-mode-2.6.2 (06 Nov 2009)
+
+  06 Nov 2009; Ulrich Mueller <ulm@gentoo.org>
+  -haskell-mode-2.4_p20080826.ebuild, haskell-mode-2.5.1.ebuild,
+  +haskell-mode-2.6.2.ebuild:
+  Version bump. Add elog message warning about the necessary reconfiguration.
+  Use our eclass functions in src_compile() because the Makefile sucks.
+  Remove intermediate version.
 
 *haskell-mode-2.5.1 (27 Oct 2009)
 
