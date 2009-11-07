@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/dwarves
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.7 2008/12/07 03:14:47 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.8 2009/11/07 20:34:56 flameeyes Exp $
+
+*dwarves-1.6_p20091107 (07 Nov 2009)
+
+  07 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> -dwarves-1.6.ebuild,
+  +dwarves-1.6_p20091107.ebuild, dwarves-9999.ebuild:
+  Add a snapshot of dwarves since it has been almost two years that no new
+  releases are made.
 
   07 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Add long description.
