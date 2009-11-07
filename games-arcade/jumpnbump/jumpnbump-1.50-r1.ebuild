@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.11 2009/04/14 22:32:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.12 2009/11/07 00:19:03 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,9 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="X fbcon kde svga tk"
 
 DEPEND="X? ( x11-libs/libXext )
-	kde? ( || (
-		kde-base/kdialog
-		kde-base/kdebase ) )
+	kde? ( kde-base/kdialog )
 	media-libs/sdl-mixer
 	media-libs/libsdl
 	media-libs/sdl-net"
