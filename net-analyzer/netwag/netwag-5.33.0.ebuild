@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.33.0.ebuild,v 1.5 2007/07/11 23:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.33.0.ebuild,v 1.6 2009/11/07 10:48:24 ssuominen Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -22,8 +22,7 @@ DEPEND="~net-analyzer/netwox-${PV}
 		x11-terms/eterm
 		x11-terms/rxvt
 		x11-terms/gnome-terminal
-		kde-base/konsole
-		kde-base/kdebase )"
+		kde-base/konsole )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-src"
