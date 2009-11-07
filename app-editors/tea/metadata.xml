@@ -4,14 +4,16 @@
   <herd>no-herd</herd>
   <maintainer>
     <email>maintainer-needed@gentoo.org</email>
-  </maintainer>
-  <longdescription>
-    This is an very small GTK2 text editor. It has lots of extra features
-	including syntax hilighting and a built in file manager as well as a
-	built in image viewer. It can also read lots of 'other' filetypes.
+    </maintainer>
+    <longdescription>
+    A very small Qt text editor. It has lots of extra features including syntax
+    highlighting and a built in file manager as well as a built in image viewer.
+    It can also read lots of 'other' filetypes.
   </longdescription>
   <use>
+    <flag name='aspell'>Enable spell checking using aspell</flag>
     <flag name='enchant'>Enable spell checking using enchant</flag>
     <flag name='hacking'>Enable hacking support</flag>
+    <flag name='hunspell'>Enable spellchecking using hunspell</flag>
   </use>
 </pkgmetadata>

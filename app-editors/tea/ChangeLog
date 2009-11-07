@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.45 2009/10/25 17:35:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.46 2009/11/07 22:45:40 billie Exp $
+
+*tea-26.0.1 (07 Nov 2009)
+
+  07 Nov 2009; Pielmeier Daniel <billie@gentoo.org> -tea-22.0.1.ebuild,
+  -tea-23.2.0.ebuild, +tea-26.0.1.ebuild, metadata.xml:
+  Version bump. Remove old. This release also fixes fix spell automagic.
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove welp from metadata.xml (#141007)
