@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.155 2009/11/04 11:19:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.156 2009/11/07 22:30:24 klausman Exp $
+
+  07 Nov 2009; Tobias Klausmann <klausman@gentoo.org> snort-2.8.5.1.ebuild:
+  Stable on alpha, bug #291357
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org> snort-2.8.5.1.ebuild:
   amd64/x86 stable, bug #291357
