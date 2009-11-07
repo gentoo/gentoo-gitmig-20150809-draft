@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.5.2.ebuild,v 1.1 2009/10/31 21:30:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.5.2.ebuild,v 1.2 2009/11/07 18:33:57 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS_DIR="translations"
@@ -13,7 +13,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php?content=12956"
 SRC_URI="http://www.kde-apps.org/CONTENT/content-files/12956-${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 
