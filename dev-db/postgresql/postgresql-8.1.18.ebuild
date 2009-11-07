@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.18.ebuild,v 1.1 2009/11/05 21:34:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.18.ebuild,v 1.2 2009/11/07 19:48:21 patrick Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs versionator
 
@@ -68,7 +68,7 @@ src_unpack() {
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source
 
 		# Fix broken tests
-		#epatch "${FILESDIR}/${P}-regress_fix.patch"
+		#epatch "${FILESDIR}/${PN}-8.1.11-regress_fix.patch"
 
 		# We need to run the tests as a non-root user, portage seems the most fitting here,
 		# so if userpriv is enabled, we use it directly. If userpriv is disabled, we need to
@@ -79,7 +79,7 @@ src_unpack() {
 		if ! hasq userpriv ${FEATURES} ; then
 			mkdir -p "${S}/src/test/regress/results"
 			chown portage "${S}/src/test/regress/results"
-			epatch "${FILESDIR}/${P}-regress_su.patch"
+			epatch "${FILESDIR}/${PN}-8.1.11-regress_su.patch"
 			sed -e "s|PORTAGETEMPDIRPG|${S}/src/test/regress|g" -i src/test/regress/pg_regress.sh
 		fi
 	fi
