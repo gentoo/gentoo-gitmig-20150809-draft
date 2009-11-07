@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.342 2009/10/26 15:55:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.343 2009/11/07 00:39:24 ssuominen Exp $
+
+  07 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  amarok-1.4.10_p20090130-r3.ebuild:
+  Remove kde-base/konqueror:3.5 support.
 
   26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> amarok-2.2.0.ebuild:
   amd64 stable wrt #290483
