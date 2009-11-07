@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.90 2009/11/07 16:34:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.91 2009/11/07 20:28:39 klausman Exp $
+
+  07 Nov 2009; Tobias Klausmann <klausman@gentoo.org> kbd-1.15.ebuild:
+  Stable on alpha, bug #259129
 
   07 Nov 2009; Christian Faulhammer <fauli@gentoo.org> kbd-1.15.ebuild:
   stable x86, bug 259129
