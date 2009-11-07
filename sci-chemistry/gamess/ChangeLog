@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.36 2009/10/23 02:56:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.37 2009/11/07 16:21:39 volkmar Exp $
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  gamess-20090112.1-r1.ebuild:
+  Stable on ppc, bug 268848
 
 *gamess-20090112.3 (23 Oct 2009)
 
