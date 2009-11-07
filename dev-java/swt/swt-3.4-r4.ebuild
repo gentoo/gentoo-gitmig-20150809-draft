@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.5 2009/11/03 21:20:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.6 2009/11/07 13:39:28 caster Exp $
 
 EAPI="1"
 
@@ -52,6 +52,7 @@ COMMON=">=dev-libs/glib-2.6
 # Use a blocker to avoid file collisions when upgrading to the slotted version
 # We cannot use slotmove, java packages are expected to be in /usr/share/PN-SLOT
 # so this is the only way to prevent collisions
+# libXtst/xextproto is done like this due to the XTest.h move - bug #292244
 
 DEPEND=">=virtual/jdk-1.4
 		!=dev-java/swt-3.4*:3
@@ -59,7 +60,7 @@ DEPEND=">=virtual/jdk-1.4
 		x11-libs/libX11
 		x11-libs/libXrender
 		x11-libs/libXt
-		x11-proto/xextproto
+		|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1 )
 		x11-proto/inputproto
 		dev-util/pkgconfig
 		${COMMON}"

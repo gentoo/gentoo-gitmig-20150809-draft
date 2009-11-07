@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.6 2009/11/03 21:20:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.7 2009/11/07 13:39:28 caster Exp $
 
 EAPI="1"
 
@@ -56,12 +56,14 @@ COMMON=">=dev-libs/glib-2.6
 			virtual/glu
 		)
 		x11-libs/libXtst"
+
+# libXtst/xextproto is done like this due to the XTest.h move - bug #292244
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
 		x11-libs/libX11
 		x11-libs/libXrender
 		x11-libs/libXt
-		x11-proto/xextproto
+		|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1 )
 		dev-util/pkgconfig
 		${COMMON}"
 
