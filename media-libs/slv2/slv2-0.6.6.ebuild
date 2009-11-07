@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.2 2009/09/19 08:31:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.3 2009/11/07 18:07:34 volkmar Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.drobilla.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc jack"
 
 RDEPEND=">=dev-libs/redland-1.0.6
