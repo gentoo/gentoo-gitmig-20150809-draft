@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10752 2009/11/07 00:29:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10753 2009/11/07 10:01:32 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (07 Nov 2009)
+# Produces invalid files for Autoconf 2.64, bug 279482.
+# Has KDE3 dependencies. Masked for removal in 30 days.
+<dev-util/kdevelop-3.9
 
 # Ben de Groot <yngwin@gentoo.org> (06 Nov 2009)
 # Masked since 01 Feb 2009 because it's broken.
