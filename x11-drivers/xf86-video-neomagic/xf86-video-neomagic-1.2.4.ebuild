@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/xf86-video-neomagic-1.2.4.ebuild,v 1.3 2009/10/05 13:45:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/xf86-video-neomagic-1.2.4.ebuild,v 1.4 2009/11/07 14:37:37 nirbheek Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -18,3 +18,4 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xf86dgaproto
 	x11-proto/xproto"
+PATCHES=("${FILESDIR}/${P}-fix-build-with-xserver-1.7.1.patch")
