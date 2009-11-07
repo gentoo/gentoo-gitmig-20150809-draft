@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libsyncml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.16 2009/09/27 23:32:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.17 2009/11/07 23:45:02 eva Exp $
+
+  07 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -libsyncml-0.4.6-r1.ebuild, -libsyncml-0.5.2.ebuild:
+  Clean up old revisions, bug #280906.
 
 *libsyncml-0.5.2-r1 (27 Sep 2009)
 
