@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.7 2009/11/04 23:18:02 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.8 2009/11/07 04:42:22 hwoarang Exp $
+
+*zen-sources-2.6.31_p7 (07 Nov 2009)
+
+  07 Nov 2009; Markos Chandras <hwoarang@gentoo.org>
+  +zen-sources-2.6.31_p7.ebuild:
+  Bump to 2.6.31-zen7 "Masturbating Monkeys"
 
 *zen-sources-2.6.31_p6 (04 Nov 2009)
 *zen-sources-2.6.30_p10 (04 Nov 2009)
