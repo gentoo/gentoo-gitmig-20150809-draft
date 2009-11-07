@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.7.0-r1.ebuild,v 1.1 2009/02/22 12:50:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.7.0-r1.ebuild,v 1.2 2009/11/07 00:33:35 ssuominen Exp $
 
 EAPI="1"
 
@@ -15,10 +15,9 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="javascript"
+IUSE=""
 
-DEPEND="javascript? ( kde-base/kjsembed:3.5 )
-	sys-libs/readline
+DEPEND="sys-libs/readline
 	sci-libs/gsl
 	>=sci-libs/netcdf-3.6.1-r1"
 RDEPEND="${DEPEND}"
@@ -33,7 +32,7 @@ PATCHES=(
 src_unpack() {
 	kde_src_unpack
 	rm -f "${S}"/configure
-	use javascript || sed -e "s:KJSE_SUBDIR=js:KJSE_SUBDIR=:" -i kst/src/extensions/Makefile.am
+	sed -e "s:KJSE_SUBDIR=js:KJSE_SUBDIR=:" -i kst/src/extensions/Makefile.am
 	# automagic dependency, ensure internel lib isn't used by mistake
 	echo "FAIL FOR GOOD" > "${S}"/kst/src/extensions/js/kjsembed/global.cpp
 }

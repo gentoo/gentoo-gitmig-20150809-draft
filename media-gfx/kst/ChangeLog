@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.22 2009/10/27 02:02:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.23 2009/11/07 00:33:35 ssuominen Exp $
+
+  07 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kst-1.7.0-r1.ebuild:
+  Remove kde-base/kjsembed:3.5 support.
 
   27 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kst-0.97.ebuild,
   -kst-1.1.0.ebuild, -kst-1.1.0-r1.ebuild, -kst-1.4.0.ebuild,
