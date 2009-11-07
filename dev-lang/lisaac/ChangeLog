@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lisaac
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.3 2008/08/23 05:28:29 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.4 2009/11/07 00:05:27 ssuominen Exp $
+
+  07 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> lisaac-0.13.1.ebuild:
+  Remove KDE3 support.
 
   23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add GLEP 56 USE flag descriptions.

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/lisaac-0.13.1.ebuild,v 1.1 2008/03/01 16:44:34 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/lisaac-0.13.1.ebuild,v 1.2 2009/11/07 00:05:27 ssuominen Exp $
 
 inherit versionator elisp-common
 
@@ -11,11 +11,10 @@ SRC_URI="http://isaacproject.u-strasbg.fr/download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="vim emacs kde examples"
+IUSE="vim emacs examples"
 
 DEPEND="vim? ( app-editors/vim )
-		emacs? ( virtual/emacs )
-		kde? ( || ( =kde-base/kate-3.5* =kde-base/kdebase-3.5* ) )"
+		emacs? ( virtual/emacs )"
 
 RDEPEND="${DEPEND}"
 
@@ -45,11 +44,6 @@ src_install(){
 			|| die "installing emacs coponent failed."
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE} \
 			|| die "installing emacs site file failed"
-	fi
-
-	if use kde; then
-		insinto /usr/share/apps/katepart/syntax/
-		doins editor/kate/lisaac_v2.xml
 	fi
 
 	if use examples; then
