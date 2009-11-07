@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.20 2009/09/23 10:42:11 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.21 2009/11/07 20:54:09 volkmar Exp $
 
 # This file requires >=portage-2.1.1
+
+# Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
+# Masked in base, unmak for amd64/x86. Bug 267264
+media-gfx/k3d -cuda
 
 # Jean-Noël Rivasseau <elvanor@gentoo.org> (23 Sep 2009)
 # X use flag only for amd64/x86, bug 285951.

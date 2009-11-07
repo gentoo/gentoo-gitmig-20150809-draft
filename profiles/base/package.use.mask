@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.101 2009/11/01 23:05:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.102 2009/11/07 20:54:10 volkmar Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
+# Mask cuda for k3d. Works only on amd64/x86. Bug 267264
+media-gfx/k3d cuda
 
 # Gilles Dartiguelongue <eva@gentoo.org> (01 Nov 2009)
 # Broken on so many setups it is just insane.
