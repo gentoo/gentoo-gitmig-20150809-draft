@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/rbot
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.40 2008/10/22 13:08:56 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.41 2009/11/07 20:22:24 a3li Exp $
+
+  07 Nov 2009; Alex Legler <a3li@gentoo.org> -rbot-0.9.11_rc2.ebuild,
+  rbot-0.9.14.ebuild, metadata.xml:
+  Taking over maintenance; restrict ruby-gettext dependency to the 1.x
+  versions, bug 292297; remove old version
 
 *rbot-0.9.14 (22 Oct 2008)
 

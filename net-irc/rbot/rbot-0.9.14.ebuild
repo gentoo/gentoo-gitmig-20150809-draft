@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.14.ebuild,v 1.1 2008/10/22 13:08:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.14.ebuild,v 1.2 2009/11/07 20:22:24 a3li Exp $
 
 inherit ruby eutils
 
@@ -41,7 +41,7 @@ RDEPEND=">=virtual/ruby-1.8
 	host? ( net-dns/bind-tools )"
 DEPEND="
 	nls? (
-		dev-ruby/ruby-gettext
+		=dev-ruby/ruby-gettext-1*
 		dev-ruby/rake
 	)"
 

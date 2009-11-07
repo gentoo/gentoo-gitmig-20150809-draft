@@ -3,7 +3,9 @@
 <pkgmetadata>
 <herd>net-irc</herd>
 <maintainer>
-  <email>flameeyes@gentoo.org</email>
+  <email>a3li@gentoo.org</email>
+  <name>Alex Legler</name>
+  <description>Primary maintainer</description>
 </maintainer>
 <use>
   <flag name="timezone">
