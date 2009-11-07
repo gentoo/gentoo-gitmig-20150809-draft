@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.385 2009/11/06 19:53:15 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.386 2009/11/07 17:07:55 fauli Exp $
+
+  07 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  glib-2.20.5-r1.ebuild:
+  stable x86, security bug 286102
 
 *glib-2.20.5-r1 (06 Nov 2009)
 
