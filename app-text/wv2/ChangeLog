@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.57 2009/10/09 15:50:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.58 2009/11/07 13:29:07 scarabeus Exp $
+
+*wv2-0.4.2 (07 Nov 2009)
+
+  07 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> +wv2-0.4.2.ebuild:
+  Version bump. Drop old.
 
 *wv2-0.4.1 (09 Oct 2009)
 
