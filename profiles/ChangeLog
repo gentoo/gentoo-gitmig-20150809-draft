@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3524 2009/11/07 20:54:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3525 2009/11/07 23:49:35 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Mask net-libs/libsoup-2.2, bug #280906.
 
   07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   arch/amd64/package.use.mask, arch/x86/package.use.mask,
