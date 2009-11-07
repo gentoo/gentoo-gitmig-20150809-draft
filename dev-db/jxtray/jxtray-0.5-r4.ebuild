@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r4.ebuild,v 1.8 2008/10/22 11:51:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r4.ebuild,v 1.9 2009/11/07 23:47:43 caster Exp $
 
 EAPI="1"
 inherit java-pkg-2 java-ant-2
@@ -27,7 +27,7 @@ COMMON_DEP="
 	!firebird? ( !mssql? ( !postgres? ( dev-java/jdbc-mysql:0 ) ) )"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
-DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
+DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${PN}-src-${PV}"

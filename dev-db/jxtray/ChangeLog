@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/jxtray
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.32 2008/10/22 11:51:43 fordfrog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.33 2009/11/07 23:47:43 caster Exp $
+
+  07 Nov 2009; Vlastimil Babka <caster@gentoo.org> jxtray-0.5-r4.ebuild:
+  Change JDK dep to allow 1.6 as well.
 
   22 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org> jxtray-0.5-r4.ebuild:
   Migrated to EAPI-1 and restricted to dev-java/poi:0 because of slotting
