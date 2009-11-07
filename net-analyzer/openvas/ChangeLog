@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.6 2009/09/08 11:21:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.7 2009/11/07 20:24:03 volkmar Exp $
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> openvas-2.0.2.ebuild:
+  Keywording for ppc, bug 262366
 
 *openvas-2.0.2 (08 Sep 2009)
 
