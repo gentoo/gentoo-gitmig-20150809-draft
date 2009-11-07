@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.5 2008/01/06 07:23:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.6 2009/11/07 18:39:22 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="simple game similar to the classical game Marble Madness"
@@ -16,7 +17,7 @@ IUSE="nls"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl
+	media-libs/libsdl[audio,joystick,video]
 	>=dev-scheme/guile-1.8
 	media-libs/sdl-mixer
 	media-libs/sdl-image
@@ -25,9 +26,7 @@ RDEPEND="virtual/opengl
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e 's/icons //' share/Makefile.in \
 		|| die "sed failed"
@@ -38,13 +37,11 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-highscores="${GAMES_STATEDIR}"/${PN}-highscores \
-		$(use_enable nls) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable nls)
 }
 
 src_install() {

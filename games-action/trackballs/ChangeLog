@@ -1,6 +1,10 @@
 # ChangeLog for games-action/trackballs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.24 2008/02/29 18:08:34 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.25 2009/11/07 18:39:22 mr_bones_ Exp $
+
+  07 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  trackballs-1.1.4.ebuild:
+  EAPI=2
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> trackballs-1.1.2.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
