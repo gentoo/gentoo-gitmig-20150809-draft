@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.1.ebuild,v 1.1 2009/10/17 06:36:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.1.ebuild,v 1.2 2009/11/07 20:10:08 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -59,7 +59,7 @@ src_configure() {
 src_compile() {
 	building() {
 		cd Source
-		emake || die "emake failed with Python ${PYTHON_ABI}"
+		emake
 	}
 	python_execute_function -s building
 }
@@ -84,12 +84,12 @@ src_install() {
 	python_execute_function -s installation
 
 	if use doc; then
-		dohtml -r ../Docs/ || die "dohtml failed"
+		dohtml -r Docs/ || die "dohtml failed"
 	fi
 
 	if use examples; then
 		docinto examples
-		dodoc ../Examples/Client/* || die "dodoc examples failed"
+		dodoc Examples/Client/* || die "dodoc examples failed"
 	fi
 }
 
