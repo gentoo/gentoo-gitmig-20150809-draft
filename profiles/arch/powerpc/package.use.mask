@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.29 2009/11/06 16:38:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.30 2009/11/07 09:45:01 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
 # Requires stable KDE4                              
 app-office/openoffice kde   
+sys-block/gparted kde
 
 # Brent Baude <ranger@gentoo.org>
 # Masking off video cards and input devices for xorg-1.5.3 stablization
