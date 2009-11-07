@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/galago-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.17 2009/03/20 03:37:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.18 2009/11/07 16:05:48 flameeyes Exp $
+
+*galago-sharp-0.5.0-r1 (07 Nov 2009)
+
+  07 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +galago-sharp-0.5.0-r1.ebuild:
+  Fix bug #285760 (remove built_with_use usage, by bumping dbus dep), fix
+  bug #292252 (fetch libgalago-0.5.0 within the ebuild and move it in the
+  right place).
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, galago-sharp-0.5.0.ebuild:
