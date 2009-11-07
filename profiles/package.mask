@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10760 2009/11/07 18:40:13 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10761 2009/11/07 19:10:19 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Víctor Ostorga <vostorga@gentoo.org> (07 Nov 2009) 
+# Upstream dead, URL in package description is offline
+# security vulerability CVE-2008-5136 bug #247985
+net-misc/tkusr
 
 # Víctor Ostorga <vostorga@gentoo.org> (07 Nov 2009) 
 # Added in 2007, never KEYWORDED, does not work with python-2.6.
