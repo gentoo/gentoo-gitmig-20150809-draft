@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4973 2009/11/06 21:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4974 2009/11/07 22:47:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -204,8 +204,10 @@ app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/jove:unix98 - Use Unix 98 pty's instead of BSD pts's
 app-editors/leafpad:emacs - Enable Emacs key theme
 app-editors/nano:justify - Toggle the justify option
+app-editors/tea:aspell - Enable spell checking using aspell
 app-editors/tea:enchant - Enable spell checking using enchant
 app-editors/tea:hacking - Enable hacking support
+app-editors/tea:hunspell - Enable spellchecking using hunspell
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vim:vim-with-x - Link console vim against X11 libraries to enable title and clipboard features in xterm
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
