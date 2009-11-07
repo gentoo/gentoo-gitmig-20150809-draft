@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.2.ebuild,v 1.1 2009/08/19 09:18:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.2.ebuild,v 1.2 2009/11/07 18:09:10 volkmar Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="altivec curl debug nls lv2 sse"
 
 # FIXME. Internal libsndfile, rubberband, vamp-plugin-sdk, and others.
