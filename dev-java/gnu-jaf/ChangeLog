@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/gnu-jaf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.19 2009/10/03 20:48:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.20 2009/11/07 12:17:13 caster Exp $
+
+*gnu-jaf-1.1.1 (07 Nov 2009)
+
+  07 Nov 2009; Vlastimil Babka <caster@gentoo.org> +gnu-jaf-1.1.1.ebuild:
+  Version bump. Switch to the ant build which is faster and works with java
+  1.6.
 
   03 Oct 2009; Vlastimil Babka <caster@gentoo.org> gnu-jaf-1.0-r2.ebuild:
   Change order of 1.4 and 1.5 deps.
