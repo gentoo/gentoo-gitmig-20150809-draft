@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.8.ebuild,v 1.1 2009/08/10 20:07:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.8.ebuild,v 1.2 2009/11/07 22:55:23 dragonheart Exp $
 
 EAPI="2"
 
@@ -28,9 +28,15 @@ DEPEND=">=sys-libs/ncurses-5.2
 		crypt? ( >=app-crypt/gpgme-1.0.2 )
 	)
 	msn? (
-		net-misc/curl[ssl]
+		|| ( net-misc/curl[ssl] net-misc/curl[openssl] )
 		dev-libs/openssl
 	)"
+# dual curl dependancies added by dragonheart 20091108
+# as I transition between USE flags
+# I also note that curl hides its crypt so maybe this should be:
+# || ( net-misc/curl[ssl]
+#		net-misc/curl[openssl] net-misc/curl[nss]
+# 		net-misc/curl[gnutls] )
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
