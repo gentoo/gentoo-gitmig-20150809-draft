@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.5.80.ebuild,v 1.1 2009/11/07 18:32:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.5.80.ebuild,v 1.2 2009/11/07 22:28:55 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="ar bg br cs cy da de el en_GB es et fr ga gl hu is it ja ka lt ms
@@ -18,6 +18,7 @@ IUSE="debug"
 
 DEPEND=">=kde-base/systemsettings-${KDE_MINIMAL}
 	net-wireless/wireless-tools
-	sys-apps/net-tools"
+	sys-apps/net-tools
+	dev-libs/libnl"
 
 DOCS="AUTHORS ChangeLog README TODO"
