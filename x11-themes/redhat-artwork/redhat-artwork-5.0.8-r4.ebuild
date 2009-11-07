@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.8 2009/07/21 14:15:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.9 2009/11/07 13:29:58 ssuominen Exp $
 
-inherit eutils rpm kde-functions autotools
+inherit eutils rpm autotools
 
 MY_R=${PR/r/}
 DESCRIPTION="RedHat's Bluecurve theme for GTK2, KDE, GDM, Metacity and Nautilus"
@@ -12,14 +12,12 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
-IUSE="kde audacious"
+IUSE="audacious"
 
 # See end of src_install():
 IUSE="${IUSE} gdm kdm cursors icons nautilus"
 
-RDEPEND=">=x11-libs/gtk+-2
-	kde? ( || ( ( kde-base/kcontrol kde-base/kwin )
-	            kde-base/kdebase ) )"
+RDEPEND=">=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
@@ -34,11 +32,6 @@ src_compile() {
 	epatch "${WORKDIR}/redhat-artwork-5.0.5-add-dirs-to-bluecurve-theme-index.patch"
 	epatch "${WORKDIR}/redhat-artwork-5.0.8-echo.patch"
 
-	if use kde; then
-		set-qtdir 3
-		set-kdedir 3
-	fi
-
 	# dies if LANG has UTF-8
 	export LANG=C
 	export LC_ALL=C
@@ -51,20 +44,18 @@ src_compile() {
 	       -e "s|.*ARTSCCONFIG.*||" \
 		acinclude.m4
 
-	if ! use kde; then
-		sed -i -e "s|KDE_SET_PREFIX||" \
-		       -e "s|KDE_CHECK_FINAL||" \
-		       -e "s|dnl KDE_USE_QT||" \
-		       -e "s|AC_PATH_KDE||" \
-		       -e "s|art/kde/Makefile||" \
-		       -e "s|art/kde/kwin/Makefile||" \
-		       -e "s|art/kde/kwin/Bluecurve/Makefile||" \
+	sed -i -e "s|KDE_SET_PREFIX||" \
+	       -e "s|KDE_CHECK_FINAL||" \
+	       -e "s|dnl KDE_USE_QT||" \
+	       -e "s|AC_PATH_KDE||" \
+	       -e "s|art/kde/Makefile||" \
+	       -e "s|art/kde/kwin/Makefile||" \
+	       -e "s|art/kde/kwin/Bluecurve/Makefile||" \
 			configure.in
 
-		sed -i -e "s|kde||" \
-		       -e "s|qt||" \
+	sed -i -e "s|kde||" \
+	       -e "s|qt||" \
 			art/Makefile.am
-	fi
 
 	sed -i -e "s|AM_PATH_GTK(1.2.9, ,||" \
 	       -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
