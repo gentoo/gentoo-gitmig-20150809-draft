@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.1.ebuild,v 1.9 2009/11/07 20:51:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.1.ebuild,v 1.10 2009/11/07 21:21:49 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ IUSE="doc examples test"
 # dev-python/setuptools is used at run time
 RDEPEND="dev-python/setuptools"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx )
+	doc? ( >=dev-python/sphinx-0.6 )
 	test? ( dev-python/twisted )"
 RESTRICT_PYTHON_ABIS="3.*"
 
