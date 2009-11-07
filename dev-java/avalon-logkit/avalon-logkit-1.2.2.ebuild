@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.2.ebuild,v 1.5 2009/11/06 17:13:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.2.ebuild,v 1.6 2009/11/07 11:21:27 caster Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -33,7 +33,7 @@ S="${WORKDIR}/logkit-${PV}-dev"
 SRC_DIR="${S}/src/java"
 JAVADOC_DIR="${S}/javadoc"
 
-src_prepare() {
+java_prepare() {
 	epatch "${FILESDIR}/${P}-java6.patch"
 }
 

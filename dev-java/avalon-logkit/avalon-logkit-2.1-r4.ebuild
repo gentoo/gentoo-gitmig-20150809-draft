@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r4.ebuild,v 1.1 2009/11/06 17:23:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r4.ebuild,v 1.2 2009/11/07 11:21:27 caster Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -32,7 +32,7 @@ DEPEND=">=virtual/jdk-1.4
 	)
 	${COMMON_DEP}"
 
-src_prepare() {
+java_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2.2-java6.patch"
 
 	java-ant_ignore-system-classes

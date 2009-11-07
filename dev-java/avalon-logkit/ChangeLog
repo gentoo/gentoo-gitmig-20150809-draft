@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.72 2009/11/06 17:23:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.73 2009/11/07 11:21:27 caster Exp $
+
+  07 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  avalon-logkit-1.2.2.ebuild, avalon-logkit-2.1-r4.ebuild:
+  Use java_prepare.
 
 *avalon-logkit-2.1-r4 (06 Nov 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.113 2009/11/05 20:42:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.114 2009/11/07 11:19:27 caster Exp $
+
+  07 Nov 2009; Vlastimil Babka <caster@gentoo.org> swt-3.5.ebuild,
+  swt-3.5.1.ebuild:
+  Use java_prepare.
 
 *swt-3.5.1 (05 Nov 2009)
 
