@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qdvdauthor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.26 2009/09/04 16:34:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.27 2009/11/07 17:23:20 volkmar Exp $
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> qdvdauthor-1.2.0.ebuild,
+  qdvdauthor-1.11.1.ebuild:
+  Re-Keywording for ppc, bug 251357
 
 *qdvdauthor-1.11.1 (04 Sep 2009)
 
