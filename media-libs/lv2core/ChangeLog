@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lv2core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2core/ChangeLog,v 1.5 2009/09/18 23:19:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2core/ChangeLog,v 1.6 2009/11/07 18:00:35 volkmar Exp $
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> lv2core-3.0.ebuild:
+  Keywording for ppc, bug 282006
 
   18 Sep 2009; Markus Meier <maekke@gentoo.org> lv2core-3.0.ebuild:
   amd64/x86 stable, bug #284456
