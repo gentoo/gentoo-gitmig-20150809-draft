@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.5-r1.ebuild,v 1.3 2009/11/07 21:20:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.5-r1.ebuild,v 1.4 2009/11/07 21:45:13 mrpouet Exp $
 
 EAPI="2"
 
-inherit gnome.org libtool eutils flag-o-matic autotools
+inherit gnome.org eutils flag-o-matic autotools
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -20,6 +20,7 @@ RDEPEND="virtual/libiconv
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.16
 	>=sys-devel/gettext-0.11
+	dev-util/gtk-doc-am
 	doc? (
 		>=dev-libs/libxslt-1.0
 		>=dev-util/gtk-doc-1.11
@@ -51,8 +52,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}2-CVE-2009-3289.patch
 
 	eautoreconf
-
-	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
 
 src_configure() {
