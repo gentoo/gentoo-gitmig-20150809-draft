@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.68.0_alpha3.ebuild,v 1.4 2009/11/04 13:58:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.68.0_alpha3.ebuild,v 1.5 2009/11/07 16:33:30 ssuominen Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
@@ -29,6 +29,7 @@ DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	taglib? ( >=media-libs/taglib-1.5 )
 	vorbis? ( media-libs/libvorbis )"
 RDEPEND="${DEPEND}
+	sys-apps/hal
 	app-cdr/cdrdao
 	media-sound/cdparanoia
 	virtual/cdrtools
