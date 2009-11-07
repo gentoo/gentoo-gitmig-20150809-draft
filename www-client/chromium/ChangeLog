@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.17 2009/11/05 13:20:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.18 2009/11/07 10:39:05 voyageur Exp $
+
+*chromium-4.0.237.1 (07 Nov 2009)
+
+  07 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-4.0.236.0.ebuild, +chromium-4.0.237.1.ebuild:
+  Remove 4.0.236.0 and bump, this version displayed all drop down menus as
+  blank
 
 *chromium-4.0.236.0 (05 Nov 2009)
 
