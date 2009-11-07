@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.26 2009/10/29 14:14:51 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.27 2009/11/07 13:46:16 vadimk Exp $
+
+  07 Nov 2009; Vadim Kuznetsov vadimk@gentoo.org
+  open-vm-tools-0.0.20091015.201664.ebuild, +files/checkvm-pie-safety.patch:
+  Bug 200376. Thanks to Gordon Malm and Anthony Basile.
 
 *open-vm-tools-0.0.20091015.201664 (29 Oct 2009)
 

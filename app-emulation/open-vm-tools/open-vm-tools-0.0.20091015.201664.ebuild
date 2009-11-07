@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20091015.201664.ebuild,v 1.1 2009/10/29 14:14:51 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20091015.201664.ebuild,v 1.2 2009/11/07 13:46:16 vadimk Exp $
 
 EAPI="2"
 
@@ -60,7 +60,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/default-scripts1.patch"
-	#epatch "${FILESDIR}/checkvm-pie-safety.patch"
+	epatch "${FILESDIR}/checkvm-pie-safety.patch"
 	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
 }
