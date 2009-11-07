@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.11 2009/11/07 17:51:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.12 2009/11/07 22:29:34 volkmar Exp $
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> mod_wsgi-2.5.ebuild,
+  mod_wsgi-2.6.ebuild:
+  Keywording for ppc, bug 279109
 
 *mod_wsgi-2.6 (07 Nov 2009)
 
