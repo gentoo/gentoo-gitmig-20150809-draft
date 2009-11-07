@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.34-r1.ebuild,v 1.3 2009/10/21 19:19:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.37.ebuild,v 1.1 2009/11/07 18:49:06 patrick Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86 ~x86-fbsd ~ppc-macos ~x64-solaris"
 IUSE="debug doc examples"
 
 DEPEND="sys-libs/zlib
