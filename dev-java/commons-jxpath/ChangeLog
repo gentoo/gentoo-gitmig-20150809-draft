@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jxpath
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.32 2009/03/18 15:03:10 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.33 2009/11/07 11:48:56 caster Exp $
+
+  07 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  -commons-jxpath-1.2-r3.ebuild, -files/commons-jxpath-1.2-gentoo.patch:
+  Remove old.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> commons-jxpath-1.3.ebuild:
   stable ppc, bug 262534
