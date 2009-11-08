@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.79 2009/11/08 18:45:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.80 2009/11/08 20:14:59 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> iso-codes-3.10.ebuild:
+  ppc stable #291467
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> iso-codes-3.10.ebuild:
   Stable on alpha, bug #291467
