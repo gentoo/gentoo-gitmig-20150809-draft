@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1-r1.ebuild,v 1.1 2009/10/28 19:38:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1-r2.ebuild,v 1.1 2009/11/08 23:53:27 ulm Exp $
 
 EAPI=2
 
@@ -16,7 +16,8 @@ if [ "${PV##*.}" = "9999" ]; then
 	SRC_URI=""
 	S="${WORKDIR}/${ECVS_LOCALNAME}"
 else
-	SRC_URI="mirror://gnu/emacs/${P}.tar.bz2"
+	SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
+		mirror://gentoo/${P}-patches-2.tar.bz2"
 	# FULL_VERSION keeps the full version number, which is needed in
 	# order to determine some path information correctly for copy/move
 	# operations later on
@@ -90,10 +91,9 @@ src_prepare() {
 		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 		echo
+	else
+		EPATCH_SUFFIX=patch epatch
 	fi
-
-	epatch "${FILESDIR}/${PN}-23.0.94-handle-xz-suffix.patch"
-	epatch "${FILESDIR}/${P}-backspace.patch"
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
