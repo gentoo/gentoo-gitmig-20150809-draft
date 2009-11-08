@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.5.1.ebuild,v 1.1 2009/01/05 07:00:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.6.0.ebuild,v 1.1 2009/11/08 12:11:22 patrick Exp $
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
 HOMEPAGE="http://la-samhna.de/samhain/"
 SRC_URI="http://la-samhna.de/archive/samhain_signed-${PV}.tar.gz"
@@ -139,7 +139,7 @@ src_install() {
 	if [[ -n "${STEALTH}" ]] ; then
 		rm -Rf "${D}/usr/share"
 	else
-		dodoc COPYING LICENSE docs/BUGS docs/MANUAL* docs/README* docs/TODO docs/*.txt
+		dodoc docs/BUGS docs/MANUAL* docs/README* docs/TODO docs/*.txt
 		dohtml docs/*.html
 		docinto scripts
 		dodoc scripts/*
