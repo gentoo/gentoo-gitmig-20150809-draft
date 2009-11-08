@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.2 2009/10/18 23:51:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.3 2009/11/08 22:15:42 vostorga Exp $
 
 inherit base
 
@@ -61,7 +61,7 @@ src_install() {
 
 	#  blacklist for BERRY_CHARGE kernel module
 	insinto /etc/modprobe.d
-	newins "${FILESDIR}"/blacklist-berry_charge blacklist-berry_charge
+	newins "${FILESDIR}"/blacklist-berry_charge.conf blacklist-berry_charge.conf
 
 	#if use gui ; then
 		# Add an entry into K Menu or gnome's menu if available.

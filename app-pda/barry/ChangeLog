@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/barry
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.9 2009/10/18 19:03:04 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.10 2009/11/08 22:15:42 vostorga Exp $
+
+  08 Nov 2009; <vostorga@gentoo.org> barry-0.16.ebuild,
+  -files/blacklist-berry_charge, +files/blacklist-berry_charge.conf:
+  Renamed config file blacklist-berry_charge to blacklist-berry_charge.conf
+  , bug #292340
 
 *barry-0.16 (18 Oct 2009)
 
