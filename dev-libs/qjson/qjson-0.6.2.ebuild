@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.2.ebuild,v 1.1 2009/09/16 21:34:41 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.2.ebuild,v 1.2 2009/11/08 15:10:43 ayoy Exp $
 
 EAPI="2"
 
@@ -22,6 +22,9 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}"
 DOCS=( "${S}/README" )
+
+# bug 292387
+PATCHES=( "${FILESDIR}/${PN}-quint64.patch" )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
