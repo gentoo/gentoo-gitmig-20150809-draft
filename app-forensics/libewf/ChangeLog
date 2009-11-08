@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.5 2009/05/01 18:58:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.6 2009/11/08 11:54:19 patrick Exp $
+
+*libewf-20091108 (08 Nov 2009)
+
+  08 Nov 2009; Patrick Lauer <patrick@gentoo.org> +libewf-20091108.ebuild:
+  Bump
 
   01 May 2009; Raúl Porcel <armin76@gentoo.org> libewf-20090209.ebuild:
   Add ~arm/~s390 wrt #224121
