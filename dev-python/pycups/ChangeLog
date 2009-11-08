@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.8 2009/11/08 04:30:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.9 2009/11/08 14:14:44 jer Exp $
+
+  08 Nov 2009; Jeroen Roovers <jer@gentoo.org> pycups-1.9.46.ebuild:
+  Marked ~hppa (bug #280312).
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org> pycups-1.9.45-r1.ebuild,
   pycups-1.9.46.ebuild:
