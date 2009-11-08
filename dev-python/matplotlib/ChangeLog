@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.74 2009/11/04 16:02:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.75 2009/11/08 20:01:26 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> matplotlib-0.99.1.1.ebuild:
+  ppc stable #290607
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org> matplotlib-0.99.1.1.ebuild:
   amd64/x86 stable, bug #290607

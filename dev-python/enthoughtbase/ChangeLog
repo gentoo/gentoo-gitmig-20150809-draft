@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enthoughtbase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.8 2009/11/04 15:56:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.9 2009/11/08 19:53:57 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> enthoughtbase-3.0.3.ebuild:
+  ppc stable #290607
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org> enthoughtbase-3.0.3.ebuild:
   amd64/x86 stable, bug #290607
