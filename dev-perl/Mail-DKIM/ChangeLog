@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.36 2009/10/18 16:05:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.37 2009/11/08 15:01:46 jer Exp $
+
+  08 Nov 2009; Jeroen Roovers <jer@gentoo.org> Mail-DKIM-0.36.ebuild:
+  Stable for HPPA (LuckyLuke).
 
   18 Oct 2009; Tobias Klausmann <klausman@gentoo.org> Mail-DKIM-0.36.ebuild:
   Stable on alpha, bug #283969
