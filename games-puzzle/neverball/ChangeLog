@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.39 2009/10/30 11:21:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.40 2009/11/08 07:48:29 josejx Exp $
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org> neverball-1.5.4.ebuild:
+  Marked ppc stable for bug #290054.
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> neverball-1.5.4.ebuild:
   amd64/x86 stable, bug #290054
