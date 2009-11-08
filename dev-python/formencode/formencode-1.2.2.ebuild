@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.2.2.ebuild,v 1.3 2009/10/30 19:14:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.2.2.ebuild,v 1.4 2009/11/08 20:05:22 nixnut Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://formencode.org/"
 SRC_URI="http://cheeseshop.python.org/packages/source/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="PSF-2.4"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ia64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools
