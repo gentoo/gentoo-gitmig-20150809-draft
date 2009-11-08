@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/mythzoneminder-0.21_p20671.ebuild,v 1.1 2009/07/19 05:48:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/mythzoneminder-0.21_p20671.ebuild,v 1.2 2009/11/08 03:55:33 cardoe Exp $
 
 EAPI=2
 MYTHTV_NODEPS="true"
@@ -15,8 +15,7 @@ DEPEND="minimal? ( dev-db/mysql
 	=media-tv/mythtv-${MY_PV}*"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	mythtv-plugins_src_unpack
+src_prepare() {
 	sed -i -e "s:g++:$(tc-getCXX):" \
 		"${S}"/mythzoneminder/mythzmserver/Makefile.standalone \
 		|| die "Sed failed"
