@@ -1,14 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.1.2.ebuild,v 1.3 2009/11/08 20:35:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.1.2.ebuild,v 1.4 2009/11/08 20:38:47 arfrever Exp $
 
 inherit distutils
 
 MY_P=CherryPy-${PV}
 
 DESCRIPTION="CherryPy is a pythonic, object-oriented web development framework."
+HOMEPAGE="http://www.cherrypy.org/ http://pypi.python.org/pypi/CherryPy"
 SRC_URI="http://download.cherrypy.org/${PN}/${PV}/${MY_P}.tar.gz"
-HOMEPAGE="http://www.cherrypy.org/"
+
 IUSE="doc"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
