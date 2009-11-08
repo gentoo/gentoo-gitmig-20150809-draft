@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.20 2009/05/30 12:27:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.21 2009/11/08 14:37:26 klausman Exp $
+
+  08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> toolame-02l-r3.ebuild:
+  Keyworded on alpha, bug #280281
 
 *toolame-02l-r3 (30 May 2009)
 
