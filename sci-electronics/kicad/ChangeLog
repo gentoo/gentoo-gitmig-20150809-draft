@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.42 2009/11/06 16:51:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.43 2009/11/08 18:52:51 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> kicad-20090320.1666-r2.ebuild:
+  ppc stable #285472
 
 *kicad-20090320.1666-r2 (06 Nov 2009)
 
