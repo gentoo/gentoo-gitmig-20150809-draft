@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.59 2009/10/19 08:35:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.60 2009/11/08 13:39:31 patrick Exp $
+
+*yaz-3.0.50 (08 Nov 2009)
+
+  08 Nov 2009; Patrick Lauer <patrick@gentoo.org> +yaz-3.0.50.ebuild:
+  Bump
 
   19 Oct 2009; Mike Frysinger <vapier@gentoo.org>
   files/yaz-3.0.26-icu-automagic.patch:
