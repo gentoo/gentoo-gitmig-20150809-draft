@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-xlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.29 2009/11/08 17:48:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.30 2009/11/08 19:29:31 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> python-xlib-0.14.ebuild:
+  ppc stable #290200
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
   python-xlib-0.14.ebuild:
