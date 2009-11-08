@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/castor
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.53 2009/02/04 12:22:37 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.54 2009/11/08 20:56:00 caster Exp $
+
+*castor-0.9.9.1-r6 (08 Nov 2009)
+
+  08 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  +castor-0.9.9.1-r6.ebuild:
+  Revbump to remove dependency on 1.5 jdk - bug #292001.
 
   04 Feb 2009; Petteri Räty <betelgeuse@gentoo.org> -castor-1.1.1.ebuild,
   -castor-1.1.1-r1.ebuild:
