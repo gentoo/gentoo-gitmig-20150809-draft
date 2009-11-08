@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.61 2009/10/31 01:04:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.62 2009/11/08 19:43:41 williamh Exp $
 
 EAPI="1"
 
@@ -353,6 +353,36 @@ pkg_postinst() {
 
 	# update the dependency tree bug #224171
 	[[ "${ROOT}" = "/" ]] && "${ROOT}/${LIBDIR}"/rc/bin/rc-depend -u
+
+	# /etc/conf.d/net.example is no longer valid
+	local NET_EXAMPLE="${ROOT}/etc/conf.d/net.example"
+	local NET_MD5='8ebebfa07441d39eb54feae0ee4c8210'
+	if [[ -e "${NET_EXAMPLE}" ]] ; then
+		if [[ $(md5sum "${NET_EXAMPLE}") == ${NET_MD5}* ]]; then
+			rm -f "${NET_EXAMPLE}"
+			elog "${NET_EXAMPLE} has been removed."
+		else
+			sed -i '1i# This file is obsolete.\n' "${NET_EXAMPLE}"
+			elog "${NET_EXAMPLE} should be removed."
+		fi
+		elog "The new version is in ${ROOT}/usr/share/${PF}/net.example"
+	fi
+
+	# /etc/conf.d/wireless.example is no longer valid
+	local WIRELESS_EXAMPLE="${ROOT}/etc/conf.d/wireless.example"
+	local WIRELESS_MD5='d1fad7da940bf263c76af4d2082124a3'
+	if [[ -e "${WIRELESS_EXAMPLE}" ]] ; then
+		if [[ $(md5sum "${WIRELESS_EXAMPLE}") == ${WIRELESS_MD5}* ]]; then
+			rm -f "${WIRELESS_EXAMPLE}"
+			elog "${WIRELESS_EXAMPLE} is deprecated and has been removed."
+		else
+			sed -i '1i# This file is obsolete.\n' "${WIRELESS_EXAMPLE}"
+			elog "${WIRELESS_EXAMPLE} is deprecated and should be removed."
+		fi
+		elog "If you are using the old style network scripts,"
+		elog "Configure wireless settings in ${ROOT}/etc/conf.d/net"
+		elog "after reviewing ${ROOT}/usr/share/doc/${PF}/net.example"
+	fi
 
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
