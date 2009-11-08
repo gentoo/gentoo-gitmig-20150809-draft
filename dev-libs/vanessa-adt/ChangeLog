@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/vanessa-adt
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.13 2008/01/05 02:34:29 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.14 2009/11/08 13:52:32 patrick Exp $
+
+*vanessa-adt-0.0.8 (08 Nov 2009)
+
+  08 Nov 2009; Patrick Lauer <patrick@gentoo.org> +vanessa-adt-0.0.8.ebuild:
+  Bump
 
   05 Jan 2008; Robert Buchholz <rbu@gentoo.org> vanessa-adt-0.0.6.ebuild,
   vanessa-adt-0.0.7.ebuild:
