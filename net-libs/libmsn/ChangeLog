@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmsn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.14 2009/10/31 14:31:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.15 2009/11/08 17:58:00 armin76 Exp $
+
+  08 Nov 2009; Raúl Porcel <armin76@gentoo.org> libmsn-4.0_beta6.ebuild:
+  ia64 stable
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org> libmsn-4.0_beta6.ebuild:
   Marking libmsn-4.0_beta6 ppc64 for bug 288420
