@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.18 2009/11/07 10:39:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.19 2009/11/08 23:15:39 voyageur Exp $
+
+*chromium-4.0.240.0 (08 Nov 2009)
+
+  08 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-4.0.237.1.ebuild, +chromium-4.0.240.0.ebuild:
+  Drop down menus were not fixed for select tags, so bump again
 
 *chromium-4.0.237.1 (07 Nov 2009)
 
