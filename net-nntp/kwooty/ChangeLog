@@ -1,0 +1,9 @@
+# ChangeLog for net-nntp/kwooty
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.1 2009/11/08 21:47:14 ssuominen Exp $
+
+*kwooty-0.1.2 (08 Nov 2009)
+
+  08 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> +kwooty-0.1.2.ebuild:
+  Initial commit.
+
