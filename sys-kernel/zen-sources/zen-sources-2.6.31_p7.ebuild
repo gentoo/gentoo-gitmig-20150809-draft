@@ -22,11 +22,13 @@ ZEN_PATCHSET="${PV/*_p}"
 ZEN_KERNEL="${PV/_p[0-9]*}"
 ZEN_KERNEL="${ZEN_KERNEL/_/-}"
 ZEN_FILE="${ZEN_KERNEL}-zen${ZEN_PATCHSET}.patch${COMPRESSTYPE}"
+ZEN_DRM_FILE="${ZEN_KERNEL}-zen${ZEN_PATCHSET}-drmnext.patch"
 ZEN_URI="http://downloads.zen-kernel.org/$(get_version_component_range 1-3)/${ZEN_FILE}"
-SRC_URI="${KERNEL_URI} ${ZEN_URI}"
+ZEN_DRM_URI="http://downloads.zen-kernel.org/$(get_version_component_range 1-3)/custom/${ZEN_DRM_FILE}"
+SRC_URI="${KERNEL_URI} ${ZEN_URI} drm-next? ( ${ZEN_DRM_URI} )"
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="drm-next"
 
 KV_FULL="${PVR/_p/-zen}"
 S="${WORKDIR}"/linux-"${KV_FULL}"
@@ -46,6 +48,7 @@ src_unpack(){
 	kernel-2_src_unpack
 	cd "${S}"
 	epatch "${DISTDIR}"/"${ZEN_FILE}"
+	use drm-next && epatch "${DISTDIR}"/"${ZEN_DRM_FILE}"
 }
 
 K_EXTRAEINFO="For more info on zen-sources and details on how to report problems, see: \

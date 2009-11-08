@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.8 2009/11/07 04:42:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.9 2009/11/08 20:12:51 wired Exp $
+
+  08 Nov 2009; Alex Alexander <wired@gentoo.org>
+  zen-sources-2.6.31_p7.ebuild, metadata.xml:
+  added USE flag for drm-next patch
 
 *zen-sources-2.6.31_p7 (07 Nov 2009)
 
