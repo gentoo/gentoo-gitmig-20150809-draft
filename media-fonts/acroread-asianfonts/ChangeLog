@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.26 2009/10/25 11:52:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.27 2009/11/08 01:48:07 matsuu Exp $
+
+  08 Nov 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -acroread-asianfonts-8.1.2.ebuild:
+  Removed old versions. bug #286250.
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org>
   acroread-asianfonts-9.1.ebuild:
