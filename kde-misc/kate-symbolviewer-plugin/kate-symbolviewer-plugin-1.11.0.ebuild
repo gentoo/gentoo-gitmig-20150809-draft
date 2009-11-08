@@ -1,6 +1,6 @@
-# Copyright 2007-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kate-symbolviewer-plugin/kate-symbolviewer-plugin-1.11.0.ebuild,v 1.1 2008/06/09 01:14:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kate-symbolviewer-plugin/kate-symbolviewer-plugin-1.11.0.ebuild,v 1.2 2009/11/08 21:05:31 ssuominen Exp $
 
 ARTS_REQUIRED="never"
 EAPI="1"
@@ -17,7 +17,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="|| ( kde-base/kate:3.5 kde-base/kdebase:3.5 )"
