@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.2.ebuild,v 1.1 2009/11/07 13:29:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.2.ebuild,v 1.2 2009/11/08 19:16:43 scarabeus Exp $
 
 EAPI=1
 
@@ -16,26 +16,16 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="zlib"
 
 RDEPEND=">=gnome-extra/libgsf-1.8
-	media-libs/freetype:2
-	media-libs/libpng
-	media-gfx/imagemagick
 	virtual/libiconv
 	zlib? ( sys-libs/zlib )
 "
 DEPEND="${RDEPEND}"
 
-PATCHES=(
-	"${FILESDIR}"/0.4.0-cmake.patch
-)
+DOCS="AUTHORS ChangeLog README RELEASE THANKS TODO"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with zlib)
 	"
 	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	dodoc AUTHORS ChangeLog README RELEASE THANKS TODO || die "dodoc failed"
 }

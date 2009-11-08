@@ -1,6 +1,12 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.58 2009/11/07 13:29:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.59 2009/11/08 19:16:43 scarabeus Exp $
+
+  08 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0.4.0-cmake.patch, -wv2-0.4.1.ebuild, wv2-0.4.2.ebuild,
+  metadata.xml:
+  Remove old+unused patch. Drop deps that are not directly named in
+  cmakelists. Add kde as backup herd.
 
 *wv2-0.4.2 (07 Nov 2009)
 
