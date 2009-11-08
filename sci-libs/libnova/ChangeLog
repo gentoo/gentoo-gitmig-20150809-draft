@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnova
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.9 2009/10/17 10:43:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.10 2009/11/08 14:07:49 jer Exp $
+
+  08 Nov 2009; Jeroen Roovers <jer@gentoo.org> libnova-0.12.3.ebuild:
+  Marked ~hppa (bug #280312).
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> libnova-0.12.3.ebuild:
   x86 stable, bug #288092
