@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.41-r1.ebuild,v 1.3 2009/07/23 21:01:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.41-r1.ebuild,v 1.4 2009/11/08 18:47:07 nixnut Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pdfhacks.com/pdftk"
 SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~x86"
 IUSE=""
 DEPEND=">=sys-devel/gcc-4.3.1[gcj]"
 
