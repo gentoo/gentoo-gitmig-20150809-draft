@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.11 2008/05/02 14:21:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.96.ebuild,v 1.1 2009/11/08 12:26:15 patrick Exp $
 
 inherit eutils
 
@@ -10,17 +10,11 @@ SRC_URI="http://www.coker.com.au/bonnie++/experimental/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-64bit.patch" \
-		"${FILESDIR}/${P}-missing_include.patch"
-}
+RDEPEND=""
 
 src_compile() {
 	econf \
