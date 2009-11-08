@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.1.ebuild,v 1.1 2009/09/09 20:33:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.3.ebuild,v 1.1 2009/11/08 17:11:53 ayoy Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug doc test"
 
 RDEPEND="x11-libs/qt-core:4"
