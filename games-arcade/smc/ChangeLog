@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/smc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.22 2009/10/30 17:54:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.23 2009/11/08 08:05:22 josejx Exp $
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org> smc-1.9.ebuild:
+  Marked ppc stable for bug #290267.
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> smc-1.9.ebuild:
   amd64/x86 stable, bug #290267
