@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.11.3.ebuild,v 1.5 2009/11/08 20:12:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.11.3.ebuild,v 1.6 2009/11/08 20:17:46 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ MY_PN="Cython"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A language for writing Python extension modules based on pyrex"
-HOMEPAGE="http://www.cython.org/"
+HOMEPAGE="http://www.cython.org/ http://pypi.python.org/pypi/Cython"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz
 	http://www.cython.org/${MY_P}.tar.gz"
 
