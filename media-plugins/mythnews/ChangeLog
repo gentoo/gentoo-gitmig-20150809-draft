@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythnews
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.43 2009/11/08 02:28:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.44 2009/11/08 03:25:23 cardoe Exp $
+
+  08 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  -mythnews-0.21_p17105.ebuild, mythnews-0.21_p20585.ebuild:
+  stabilize newer version. remove old version.
 
 *mythnews-0.22_p22763 (08 Nov 2009)
 
