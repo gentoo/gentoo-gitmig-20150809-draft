@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.17 2009/10/10 16:56:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.18 2009/11/08 20:04:38 arfrever Exp $
+
+  08 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  feedparser-4.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Set PYTHON_MODNAME (bug #288424).
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> feedparser-4.1.ebuild:
   Merge from Prefix
