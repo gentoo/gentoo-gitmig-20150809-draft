@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.74 2009/10/29 07:54:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.75 2009/11/08 18:13:33 klausman Exp $
+
+  08 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
+  gtk-engines-qtcurve-0.69.2.ebuild:
+  Stable on alpha, bug #290212
 
   29 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   gtk-engines-qtcurve-0.69.2.ebuild:
