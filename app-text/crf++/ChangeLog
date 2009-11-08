@@ -1,6 +1,11 @@
 # ChangeLog for app-text/crf++
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.9 2008/10/07 23:43:31 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.10 2009/11/08 13:09:49 patrick Exp $
+
+*crf++-0.53 (08 Nov 2009)
+
+  08 Nov 2009; Patrick Lauer <patrick@gentoo.org> +crf++-0.53.ebuild:
+  Bump
 
 *crf++-0.51 (07 Oct 2008)
 
