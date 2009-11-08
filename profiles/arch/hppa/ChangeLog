@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.38 2009/10/12 09:50:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.39 2009/11/08 20:11:42 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Drop KDE 4.3 mask since KDE 4.3 is keyworded and we dropping kde 4.2
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
   Remove filelight, now fixed
