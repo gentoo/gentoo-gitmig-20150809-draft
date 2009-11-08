@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.10 2009/11/03 18:31:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.11 2009/11/08 15:04:22 klausman Exp $
+
+  08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> markdown-2.0.3.ebuild:
+  Stable on alpha, bug #288165
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> markdown-2.0.2.ebuild,
   markdown-2.0.3.ebuild:
