@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.60 2009/11/01 23:42:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.61 2009/11/08 19:16:28 yngwin Exp $
+
+*qt-webkit-4.5.3-r1 (08 Nov 2009)
+
+  08 Nov 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/30_webkit_unaligned_access.diff, +qt-webkit-4.5.3-r1.ebuild:
+  Add patch to fix unaligned access which caused sigbus in sparc (bug 235685).
+  Patch originally from Debian:
+  http://patch-tracker.debian.org/package/qt4-x11/4:4.5.3-4
 
   01 Nov 2009; Ben de Groot <yngwin@gentoo.org> qt-webkit-4.5.3.ebuild,
   qt-webkit-4.6.0_beta1.ebuild:
