@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.12 2009/11/04 11:26:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.13 2009/11/08 20:17:33 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> pyenchant-1.5.3.ebuild:
+  ppc stable #291519
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org> pyenchant-1.5.3.ebuild:
   amd64/x86 stable, bug #291519
