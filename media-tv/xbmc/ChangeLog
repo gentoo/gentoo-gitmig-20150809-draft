@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.32 2009/11/08 14:14:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.33 2009/11/08 14:34:55 vapier Exp $
+
+  08 Nov 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Control squish altivec/sse support via USE #290564 by Francisco González.
 
   08 Nov 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Pull in jbigkit/tiff #289621 by Michael Lange.
