@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.179 2009/10/30 11:29:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.180 2009/11/08 17:04:44 armin76 Exp $
+
+  08 Nov 2009; Raúl Porcel <armin76@gentoo.org> courier-imap-4.5.0.ebuild:
+  ia64/s390/sparc stable wrt #287933
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> courier-imap-4.5.0.ebuild:
   arm/x86 stable, bug #287933
