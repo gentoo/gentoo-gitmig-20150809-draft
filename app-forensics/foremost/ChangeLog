@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/foremost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.16 2009/11/08 11:56:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.17 2009/11/08 15:09:03 patrick Exp $
+
+  08 Nov 2009; Patrick Lauer <patrick@gentoo.org> foremost-1.5.6.ebuild:
+  Fixing SRC_URI
 
 *foremost-1.5.6 (08 Nov 2009)
 
