@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3528 2009/11/08 22:12:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3529 2009/11/08 22:30:49 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,10 @@
 
   08 Nov 2009; Vlastimil Babka <caster@gentoo.org> license_groups:
   Add IBM JDK licenses to @EULA.
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Mask kde 4.3.2 since we gonna drop it from tree and drop mask for 4.2.4
+  since its dropped from tree
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask kde 4.2.4 since we gonna drop it from tree
