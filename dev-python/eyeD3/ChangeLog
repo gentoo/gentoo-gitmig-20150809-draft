@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.38 2009/11/08 18:16:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.39 2009/11/08 19:38:34 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> eyeD3-0.6.17.ebuild:
+  ppc stable #290462
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> eyeD3-0.6.17.ebuild:
   Stable on alpha, bug #290462
