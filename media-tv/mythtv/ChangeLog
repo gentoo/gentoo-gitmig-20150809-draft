@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.284 2009/11/02 00:01:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.285 2009/11/08 01:53:19 cardoe Exp $
+
+*mythtv-0.22_p22764 (08 Nov 2009)
+
+  08 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.22_p22764.ebuild:
+  add 0.22 final + fixes version. blocks old mythcontrols due to file
+  collisions
 
   02 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.22_rc22679.ebuild:
