@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10763 2009/11/07 23:49:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10764 2009/11/08 02:09:04 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,7 @@
 # Gilles Dartiguelongue <eva@gentoo.org> (08 Nov 2009)
 # Masked for removeal in 30 days. Discontinued upstream support, every user of
 # this library should move to 2.4 slot, bug #280906.
-=net-libs/libsoup-2.2*
+<net-libs/libsoup-2.24
 
 # Víctor Ostorga <vostorga@gentoo.org> (07 Nov 2009) 
 # Beta package, qt3 app, dead upstream, last release 4 years ago 
