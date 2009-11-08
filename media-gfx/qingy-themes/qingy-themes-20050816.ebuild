@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/qingy-themes-20050816.ebuild,v 1.4 2007/10/06 21:20:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/qingy-themes-20050816.ebuild,v 1.5 2009/11/08 18:56:47 nixnut Exp $
 
 DESCRIPTION="Collection of qingy themes"
 
@@ -48,7 +48,7 @@ SRC_URI="http://jefklak.suidzer0.org/downloads/qingy/qingy_lila.tar.bz2
 # lila -> freedist
 # all the others -> GPL
 LICENSE="GPL-2 freedist"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 SLOT="0"
 IUSE=""

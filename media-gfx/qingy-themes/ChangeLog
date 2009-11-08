@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qingy-themes
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.5 2007/10/06 21:20:12 dertobi123 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.6 2009/11/08 18:56:47 nixnut Exp $
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> qingy-themes-20050816.ebuild:
+  ppc stable #286646
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   qingy-themes-20050816.ebuild:
