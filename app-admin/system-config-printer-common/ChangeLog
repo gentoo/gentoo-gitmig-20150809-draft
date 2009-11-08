@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer-common
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.4 2009/10/14 13:21:23 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.5 2009/11/08 04:39:40 josejx Exp $
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org>
+  system-config-printer-common-1.1.13.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
 *system-config-printer-common-1.1.13 (14 Oct 2009)
 
