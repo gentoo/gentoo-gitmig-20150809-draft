@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.114 2009/11/03 03:34:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.115 2009/11/08 11:27:15 volkmar Exp $
+
+  08 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> cmake-2.6.4-r3.ebuild:
+  Stable for ppc, bug 290723
 
 *cmake-2.8.0_rc4 (03 Nov 2009)
 
