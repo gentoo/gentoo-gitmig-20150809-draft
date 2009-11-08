@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.199 2009/11/07 16:47:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.200 2009/11/08 14:58:14 jer Exp $
+
+  08 Nov 2009; Jeroen Roovers <jer@gentoo.org> postfix-2.6.5.ebuild:
+  Stable for HPPA (bug #288521).
 
   07 Nov 2009; Raúl Porcel <armin76@gentoo.org> postfix-2.6.5.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #288521
