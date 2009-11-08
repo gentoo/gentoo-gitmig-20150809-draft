@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.82 2009/11/08 16:41:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.83 2009/11/08 16:54:19 arfrever Exp $
+
+  08 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  setuptools-0.6.6.ebuild, setuptools-0.6.8.ebuild,
+  +files/distribute-0.6.8-C_locale_tests.patch:
+  Skip test failing with C locale (bug #287439).
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
   setuptools-0.6.6.ebuild:
