@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.92 2009/11/08 19:43:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.93 2009/11/08 23:15:43 williamh Exp $
+
+  08 Nov 2009; William Hubbs <williamh@gentoo.org>
+  -files/0.4.2/0001-msg-style.patch,
+  -files/0.4.2/0002-useful-functions.patch, -files/0.4.2/0003-KV.patch,
+  -files/0.4.3/0001-fix-is_older_than.patch,
+  -files/0.4.3/0002-support-custom-status.patch, -openrc-0.4.3-r4.ebuild,
+  -files/0.4.3/0003-command-line-size-fix.patch:
+  removed old version
 
   08 Nov 2009; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Fix the live ebuild to remove /etc/conf.d/net.example and
