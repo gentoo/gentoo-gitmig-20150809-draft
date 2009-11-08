@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.7 2009/09/12 10:28:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.8 2009/11/08 04:30:34 josejx Exp $
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org> pycups-1.9.45-r1.ebuild,
+  pycups-1.9.46.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org> pycups-1.9.45-r1.ebuild,
   pycups-1.9.46.ebuild:

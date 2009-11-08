@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.45-r1.ebuild,v 1.3 2009/09/12 10:28:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.45-r1.ebuild,v 1.4 2009/11/08 04:30:34 josejx Exp $
 
 NEED_PYTHON="2.4"
 inherit distutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://cyberelk.net/tim/data/pycups/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="doc examples"
 
 RDEPEND="
