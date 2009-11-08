@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jax-ws
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.8 2008/03/28 18:14:20 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.9 2009/11/08 21:13:14 caster Exp $
+
+*jax-ws-2.0.1-r1 (08 Nov 2009)
+
+  08 Nov 2009; Vlastimil Babka <caster@gentoo.org> +jax-ws-2.0.1-r1.ebuild:
+  Revbump to remove dependency on 1.5 jdk - bug #292001.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> jax-ws-2.0.1.ebuild:
   Stable on ppc wrt bug 214778
