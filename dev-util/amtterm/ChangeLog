@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/amtterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/ChangeLog,v 1.1 2009/09/01 11:54:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/ChangeLog,v 1.2 2009/11/08 11:15:50 patrick Exp $
+
+  08 Nov 2009; Patrick Lauer <patrick@gentoo.org> amtterm-1.2.ebuild:
+  Fixing depends for #286673
 
 *amtterm-1.2 (01 Sep 2009)
 
