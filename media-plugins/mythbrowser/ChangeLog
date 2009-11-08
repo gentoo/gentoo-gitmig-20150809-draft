@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythbrowser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.46 2009/11/02 02:09:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.47 2009/11/08 02:10:30 cardoe Exp $
+
+*mythbrowser-0.22_p22763 (08 Nov 2009)
+
+  08 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  -mythbrowser-0.22_rc22667.ebuild, +mythbrowser-0.22_p22763.ebuild:
+  add 0.22 final version
 
 *mythbrowser-0.22_rc22667 (02 Nov 2009)
 
