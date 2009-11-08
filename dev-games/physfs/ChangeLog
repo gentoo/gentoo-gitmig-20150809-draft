@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.29 2009/10/29 16:04:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.30 2009/11/08 07:47:47 josejx Exp $
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org> physfs-2.0.0.ebuild:
+  Marked ppc stable for bug #290054.
 
   29 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> physfs-2.0.0.ebuild:
   add static-libs support
