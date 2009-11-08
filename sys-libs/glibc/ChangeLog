@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.654 2009/11/06 21:18:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.655 2009/11/08 17:26:26 volkmar Exp $
+
+  08 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> glibc-2.10.1.ebuild:
+  Keywording for ppc, bug 291287
 
   06 Nov 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.11.ebuild:
   Add patch for ia64 build failure #292059 by Dennis Schridde. Force newer
