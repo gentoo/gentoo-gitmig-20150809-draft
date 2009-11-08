@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspaceduel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.127 2009/11/02 21:42:39 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.128 2009/11/08 21:46:05 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kspaceduel-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *kspaceduel-4.3.3 (02 Nov 2009)
 

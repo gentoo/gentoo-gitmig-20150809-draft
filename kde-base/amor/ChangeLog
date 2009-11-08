@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.129 2009/11/02 20:30:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.130 2009/11/08 20:53:03 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -amor-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *amor-4.3.3 (02 Nov 2009)
 

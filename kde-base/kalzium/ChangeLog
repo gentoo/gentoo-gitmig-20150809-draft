@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.142 2009/11/02 20:35:59 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.143 2009/11/08 20:57:21 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kalzium-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *kalzium-4.3.3 (02 Nov 2009)
 

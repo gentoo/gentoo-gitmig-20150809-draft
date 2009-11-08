@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.113 2009/11/02 21:23:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.114 2009/11/08 21:31:27 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmailcvt-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *kmailcvt-4.3.3 (02 Nov 2009)
 

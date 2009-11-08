@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.102 2009/10/12 21:51:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.103 2009/11/08 21:35:45 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kode-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kode-3.5.9.ebuild:
   KDE 3.5.9 removal

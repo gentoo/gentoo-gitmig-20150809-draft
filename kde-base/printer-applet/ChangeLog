@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.10 2009/11/02 22:10:06 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.11 2009/11/08 22:04:32 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -printer-applet-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *printer-applet-4.3.3 (02 Nov 2009)
 

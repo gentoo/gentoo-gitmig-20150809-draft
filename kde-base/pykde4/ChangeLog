@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.33 2009/11/02 22:10:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.34 2009/11/08 22:04:48 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -pykde4-4.2.4-r3.ebuild:
+  Drop KDE 4.2.4
 
 *pykde4-4.3.3 (02 Nov 2009)
 

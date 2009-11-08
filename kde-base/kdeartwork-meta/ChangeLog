@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.132 2009/11/02 20:48:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.133 2009/11/08 21:07:16 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdeartwork-meta-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *kdeartwork-meta-4.3.3 (02 Nov 2009)
 

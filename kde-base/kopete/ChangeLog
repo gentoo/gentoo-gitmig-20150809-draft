@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.222 2009/11/02 21:33:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.223 2009/11/08 21:39:25 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.2.4-r1.ebuild:
+  Drop KDE 4.2.4
 
 *kopete-4.3.3 (02 Nov 2009)
 

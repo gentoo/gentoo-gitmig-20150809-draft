@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.21 2009/11/02 20:37:06 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.22 2009/11/08 20:58:12 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kapman-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *kapman-4.3.3 (02 Nov 2009)
 

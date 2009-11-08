@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.38 2009/11/02 21:10:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.39 2009/11/08 21:22:31 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kfile-4.2.4.ebuild:
+  Drop KDE 4.2.4
 
 *kfile-4.3.3 (02 Nov 2009)
 
