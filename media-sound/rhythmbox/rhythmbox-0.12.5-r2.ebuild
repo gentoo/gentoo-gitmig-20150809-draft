@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5-r2.ebuild,v 1.1 2009/11/01 09:48:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5-r2.ebuild,v 1.2 2009/11/08 14:29:08 fauli Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.10"
@@ -19,6 +19,7 @@ IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mt
 SLOT="0"
 
 COMMON_DEPEND=">=dev-libs/glib-2.16.0
+	dev-libs/libxml2
 	>=x11-libs/gtk+-2.16
 	>=dev-libs/dbus-glib-0.71
 	>=dev-libs/totem-pl-parser-2.26.0
