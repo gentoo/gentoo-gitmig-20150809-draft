@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.118 2009/09/30 02:15:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.119 2009/11/08 21:26:18 halcy0n Exp $
+
+  08 Nov 2009; Mark Loeser <halcy0n@gentoo.org>
+  enlightenment-0.16.8.15.ebuild:
+  Really mark stable on ppc64
 
 *enlightenment-1.0.1 (30 Sep 2009)
 
