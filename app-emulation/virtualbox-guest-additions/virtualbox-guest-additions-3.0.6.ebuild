@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.0.6.ebuild,v 1.2 2009/09/21 23:38:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.0.6.ebuild,v 1.3 2009/11/09 13:14:04 maekke Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="X"
 
 RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
