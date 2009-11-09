@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/stringtemplate-3.2.ebuild,v 1.5 2009/04/26 23:53:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/stringtemplate-3.2.ebuild,v 1.6 2009/11/09 13:31:07 maekke Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.stringtemplate.org/"
 SRC_URI="http://www.stringtemplate.org/download/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 # no junit targets in build.xml, but unconditional compile and jar of test
