@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r1.ebuild,v 1.1 2009/11/08 20:33:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r1.ebuild,v 1.2 2009/11/09 13:41:10 caster Exp $
 
 EAPI=2
 
@@ -77,6 +77,9 @@ src_configure() {
 	export JAVA="/usr/bin/java"
 	# build takes care of them itself, duplicate -source -target kills ecj
 	export JAVACFLAGS="-nowarn"
+	# build system is passing -J-Xmx768M which ecj however ignores
+	# this will make the ecj launcher do it (seen case where default was not enough heap)
+	export gjl_java_args="-Xmx768M"
 
 	# don't use econf, because it ends up putting things under /usr, which may
 	# collide with other slots of classpath

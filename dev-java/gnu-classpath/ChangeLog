@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.93 2009/11/08 20:33:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.94 2009/11/09 13:41:09 caster Exp $
+
+  09 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  gnu-classpath-0.98-r1.ebuild:
+  Ensure ecj has enough heap space. Fixed build failure for me.
 
 *gnu-classpath-0.98-r1 (08 Nov 2009)
 
