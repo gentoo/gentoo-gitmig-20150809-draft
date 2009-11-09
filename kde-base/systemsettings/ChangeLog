@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.51 2009/11/09 00:22:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.52 2009/11/09 10:36:21 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/10_xklavier_adaptor_fix.patch,
+  -files/systemsettings-4.2.1-kxkb-strip-hot_plugging-support.patch:
+  Drop unneeded patches
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -systemsettings-4.3.2.ebuild:
