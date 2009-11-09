@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.35 2009/11/05 17:09:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.36 2009/11/09 10:53:36 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/qscintilla-2.1-qt.patch, -files/qscintilla-2.1-qt4.patch:
+  Drop unneeded patches
 
   05 Nov 2009; Ben de Groot <yngwin@gentoo.org> +qscintilla-1.7.1.ebuild:
   Also restoring 1.7.1 for hppa.
