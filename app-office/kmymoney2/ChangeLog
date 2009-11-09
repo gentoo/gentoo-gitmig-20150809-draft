@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.83 2009/10/05 22:24:36 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.84 2009/11/09 21:15:31 ssuominen Exp $
+
+  09 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kmymoney2-1.0.2.ebuild:
+  Remove USE arts and rename USE sqlite3 to sqlite.
 
 *kmymoney2-1.0.2 (05 Oct 2009)
 
