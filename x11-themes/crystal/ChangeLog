@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.39 2009/09/20 01:50:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.40 2009/11/09 20:05:02 ssuominen Exp $
+
+  09 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> crystal-2.0.5.ebuild:
+  amd64 stable wrt #292323
 
   20 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> crystal-2.0.3.ebuild,
   crystal-2.0.5.ebuild:
