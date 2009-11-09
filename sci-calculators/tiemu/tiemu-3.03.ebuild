@@ -1,18 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.1 2009/03/24 12:22:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.2 2009/11/09 11:12:26 ssuominen Exp $
 
 EAPI=2
-inherit eutils kde-functions
+inherit eutils
 
 DESCRIPTION="Texas Instruments hand-helds emulator"
 HOMEPAGE="http://lpg.ticalc.org/prj_tiemu/"
 SRC_URI="http://repo.calcforge.org/debian/source/${PN}_${PV}.orig.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="dbus kde nls sdl threads xinerama"
+IUSE="dbus nls sdl threads xinerama"
 
 RDEPEND="sci-libs/libticables2
 	sci-libs/libticalcs2
@@ -21,7 +21,6 @@ RDEPEND="sci-libs/libticables2
 	>=gnome-base/libglade-2.4.0
 	>=x11-libs/gtk+-2.6.0
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
-	kde? ( kde-base/kdelibs:3.5 )
 	nls? ( virtual/libintl )
 	sdl? ( media-libs/libsdl )
 	xinerama? ( x11-libs/libXinerama )"
@@ -32,7 +31,6 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_configure() {
-	use kde && set-kdedir 3
 	econf \
 		--disable-rpath \
 		--disable-debugger \
@@ -42,14 +40,14 @@ src_configure() {
 		$(use_enable threads) \
 		$(use_enable threads threading) \
 		$(use_with dbus) \
-		$(use_with kde) \
+		--without-kde \
 		$(use_with xinerama)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	rm -f "${D}"usr/share/tiemu/{Manpage.txt,COPYING,RELEASE,AUTHORS,LICENSES}
-	dodoc AUTHORS NEWS README README.linux RELEASE THANKS TODO *.txt
+	dodoc AUTHORS NEWS README README.linux RELEASE TODO
 	make_desktop_entry tiemu "TiEmu Calculator" \
 		/usr/share/tiemu/pixmaps/icon.xpm
 }
