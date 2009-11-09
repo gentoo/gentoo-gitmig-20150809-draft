@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4976 2009/11/09 09:27:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4977 2009/11/09 11:07:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1277,17 +1277,13 @@ kde-base/kttsd:epos - Build a plugin for app-accessibility/epos
 kde-base/kttsd:festival - Build a plugin for app-accessibility/festival
 kde-base/kttsd:flite - Build a plugin for app-accessibility/flite
 kde-base/kttsd:freetts - Build a plugin for app-accessibility/freetts
-kde-base/kttsd:ktts - Enable KDE Text To Speech modules
 kde-base/kttsd:mbrola - Build a plugin for app-accessibility/mbrola
-kde-base/kttsd:phonon - Enable support for the KDE multimedia API
-kde-base/kwin:captury - Enable the 'Capture'-plugin in kwin
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:ebook - Add E-Book suppport
 kde-base/okular:ps - Add PostScript support
 kde-base/plasma-workspace:google-gadgets - Add google-gadgets support
 kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-base/kdepimlibs)
-kde-base/plasma-workspace:xcomposite - Disable this flag to enable experimental fake transparency support for plasma panel.
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/pykde4:akonadi - Builds Akonadi python language bindings
 kde-base/smoke:akonadi - Compile bindings for kde-base/akonadi.
