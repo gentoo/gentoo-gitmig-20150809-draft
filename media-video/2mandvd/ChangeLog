@@ -1,0 +1,9 @@
+# ChangeLog for media-video/2mandvd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.1 2009/11/09 21:06:11 hwoarang Exp $
+
+*2mandvd-1.1.1 (09 Nov 2009)
+
+  09 Nov 2009; <hwoarang@gentoo.org> +2mandvd-1.1.1.ebuild, +metadata.xml:
+  Initial commit of 2mandvd application. Fixes bug 266949
+
