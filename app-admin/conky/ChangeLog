@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.121 2009/09/15 18:40:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.122 2009/11/09 18:40:48 billie Exp $
+
+  09 Nov 2009; Daniel Pielmeier <billie@gentoo.org> conky-1.7.2-r2.ebuild:
+  Fix USE"-X". Thanks to Jon Bramley in bug #292531.
 
   15 Sep 2009; Pielmeier Daniel <billie@gentoo.org> -conky-1.7.2.ebuild,
   -conky-1.7.2-r1.ebuild, conky-1.7.2-r2.ebuild:

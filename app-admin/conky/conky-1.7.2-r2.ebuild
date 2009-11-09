@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.2 2009/09/15 18:40:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.3 2009/11/09 18:40:48 billie Exp $
 
 EAPI="2"
 
@@ -65,8 +65,8 @@ src_configure() {
 		myconf="${myconf}  $(use_enable nvidia) $(use_enable truetype xft)"
 	else
 		myconf="--disable-x11 --disable-own-window"
-		myconf="--disable-imlib --disable-lua-cairo --disable-lua-imlib"
-		myconf="--disable-nvidia --disable-xft"
+		myconf="${myconf} --disable-imlib --disable-lua-cairo --disable-lua-imlib"
+		myconf="${myconf} --disable-nvidia --disable-xft"
 	fi
 
 	econf \
