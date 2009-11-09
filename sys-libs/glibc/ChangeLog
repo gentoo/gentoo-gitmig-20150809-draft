@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.655 2009/11/08 17:26:26 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.656 2009/11/09 12:59:13 vapier Exp $
+
+  09 Nov 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.11.ebuild:
+  Pull in newer gcc for multilib on amd64 #292174.
 
   08 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> glibc-2.10.1.ebuild:
   Keywording for ppc, bug 291287
