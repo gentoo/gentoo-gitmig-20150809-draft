@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/rt73-firmware-1.8-r1.ebuild,v 1.1 2009/10/12 02:25:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/rt73-firmware-1.8-r1.ebuild,v 1.2 2009/11/09 13:54:36 maekke Exp $
 
 inherit multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ralinktech.com.tw/data/${MY_P}.zip"
 
 LICENSE="ralink-firmware"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
