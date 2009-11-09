@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.35 2009/10/15 12:28:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.36 2009/11/09 22:50:36 mr_bones_ Exp $
+
+  09 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild:
+  arts is deprecated (bug #292236)
 
   15 Oct 2009; Tupone Alfredo <tupone@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild:
