@@ -1,6 +1,13 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.37 2009/06/13 16:53:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.38 2009/11/09 13:33:01 tupone Exp $
+
+*bsd-games-2.17-r4 (09 Nov 2009)
+
+  09 Nov 2009; Alfredo Tupone <tupone@gentoo.org> +bsd-games-2.17-r4.ebuild,
+  +files/bsd-games-2.17-64bitutmp.patch:
+  Updating patchset from debian. Fix hunt unplayable on amd64 Bug #288749 by
+  Keith Nickum
 
   13 Jun 2009; Tristan Heaven <nyhm@gentoo.org> bsd-games-2.17-r3.ebuild,
   +files/bsd-games-2.17-glibc2.10.patch:
