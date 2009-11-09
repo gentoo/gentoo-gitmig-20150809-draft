@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.503 2009/10/29 19:41:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.504 2009/11/09 12:12:44 fauli Exp $
+
+  09 Nov 2009; Christian Faulhammer <fauli@gentoo.org> udev-146-r1.ebuild:
+  stable x86, bug 286074
 
   29 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> udev-145-r1.ebuild,
   udev-145-r2.ebuild, udev-145-r3.ebuild, udev-146.ebuild,
