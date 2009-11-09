@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.32 2007/06/16 02:08:23 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.33 2009/11/09 08:25:59 remi Exp $
+
+  09 Nov 2009; Rémi Cardona <remi@gentoo.org> font-bh-ttf-1.0.0.ebuild:
+  drop useless dep on ttmkfdir
 
   16 Jun 2007; Christoph Mende <angelos@gentoo.org>
   font-bh-ttf-1.0.0.ebuild:
