@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.135 2009/11/08 23:39:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.136 2009/11/09 10:17:04 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/khotkeys-4-parallel.patch:
+  Drop unneeded patch
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -khotkeys-4.3.2.ebuild:
   Drop KDE 4.3.2

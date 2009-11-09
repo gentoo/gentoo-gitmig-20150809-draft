@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.37 2009/11/08 23:30:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.38 2009/11/09 10:15:57 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org> -files/lancelot-qt45.patch:
+  Drop unneeded patch
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeplasma-addons-4.3.2.ebuild:
