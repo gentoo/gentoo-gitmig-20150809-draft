@@ -1,10 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.52 2009/09/07 05:19:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.53 2009/11/09 03:05:34 leio Exp $
 
-  07 Sep 2009; Olivier Crête <tester@gentoo.org>
-  +gst-plugins-gconf-0.10.16.ebuild:
-  Version bump
+  09 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  gst-plugins-gconf-0.10.16.ebuild:
+  QA: Remove now unnecessary src_unpack and co overriding
 
 *gst-plugins-gconf-0.10.16 (07 Sep 2009)
 
