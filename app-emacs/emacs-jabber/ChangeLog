@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.22 2009/10/15 14:13:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.23 2009/11/09 16:34:32 tcunha Exp $
+
+  09 Nov 2009; Tiago Cunha <tcunha@gentoo.org> emacs-jabber-0.8.0.ebuild:
+  stable sparc, bug 288399
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> emacs-jabber-0.8.0.ebuild:
   amd64/x86 stable, bug #288399
