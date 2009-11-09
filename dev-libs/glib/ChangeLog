@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.389 2009/11/08 23:04:03 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.390 2009/11/09 09:22:44 jer Exp $
+
+  09 Nov 2009; Jeroen Roovers <jer@gentoo.org> glib-2.20.5-r1.ebuild:
+  Stable for HPPA (bug #286102).
 
   08 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> glib-2.20.5-r1.ebuild:
   Stable for ppc, bug 286102
