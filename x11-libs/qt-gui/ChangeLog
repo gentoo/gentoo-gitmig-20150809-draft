@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.76 2009/11/05 11:31:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.77 2009/11/09 11:04:47 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/qt-gui-4.4.0-scrollbars.patch, -files/qt-gui-designer-4.4.1.patch,
+  -files/qt-x11-opensource-src-4.5.0-linguist-crash.patch,
+  -files/qt-x11-opensource-src-4.5.0-lrelease.patch,
+  -qt-gui-4.5.2-r1.ebuild, -qt-gui-4.5.3-r1.ebuild, -files/Designer.desktop,
+  -files/Linguist.desktop, -files/xinerama.patch:
+  Drop old versions; files
 
   05 Nov 2009; Markus Meier <maekke@gentoo.org> qt-gui-4.5.3-r2.ebuild:
   x86 stable, bug #290922
