@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.1 2009/08/01 22:33:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.2 2009/11/09 19:23:39 fauli Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # Too broken upstream to support
