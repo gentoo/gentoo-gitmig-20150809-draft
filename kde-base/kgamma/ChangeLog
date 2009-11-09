@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.129 2009/11/08 21:23:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.130 2009/11/08 23:37:37 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgamma-4.3.2.ebuild:
+  Drop KDE 4.3.2
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgamma-4.2.4.ebuild:
   Drop KDE 4.2.4

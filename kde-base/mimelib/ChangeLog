@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.118 2009/11/08 22:01:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.119 2009/11/09 00:15:12 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -mimelib-4.3.2.ebuild:
+  Drop KDE 4.3.2
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -mimelib-4.2.4.ebuild:
   Drop KDE 4.2.4

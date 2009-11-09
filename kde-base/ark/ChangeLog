@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.131 2009/11/08 20:53:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.132 2009/11/08 23:07:11 alexxy Exp $
+
+  08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -ark-4.3.2.ebuild:
+  Drop KDE 4.3.2
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -ark-4.2.4.ebuild:
   Drop KDE 4.2.4
