@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.53 2009/10/31 13:45:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.54 2009/11/09 10:54:48 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org> -files/Assistant.desktop:
+  Drop unused file
 
   31 Oct 2009; Markus Meier <maekke@gentoo.org> qt-assistant-4.5.3.ebuild:
   amd64 stable, bug #290922
