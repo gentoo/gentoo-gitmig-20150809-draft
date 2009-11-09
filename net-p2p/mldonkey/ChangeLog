@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.230 2009/03/18 22:26:32 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.231 2009/11/09 18:34:32 fauli Exp $
+
+  09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  -mldonkey-2.9.6.ebuild:
+  clean up
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> mldonkey-3.0.0.ebuild:
   Marking mldonkey-3.0.0 ppc for bug 260072
