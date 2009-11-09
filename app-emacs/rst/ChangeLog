@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.33 2009/11/08 17:12:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.34 2009/11/09 16:05:54 tcunha Exp $
+
+  09 Nov 2009; Tiago Cunha <tcunha@gentoo.org> rst-0.5-r1.ebuild:
+  stable sparc, bug 290041
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> rst-0.5-r1.ebuild:
   Stable on alpha, bug #290041
