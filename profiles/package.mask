@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10770 2009/11/09 11:05:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10771 2009/11/09 13:35:08 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -623,10 +623,6 @@ mail-client/kcheckgmail
 # in 30 days.
 sci-calculators/qalculate-kde
 
-# Samuli Suominen <ssuominen@gentoo.org> (31 Oct 2009)
-# Moved to kde-base/kdeplasma-addons. Masked for removal.
-kde-misc/systemloadviewer
-
 # Samuli Suominen <ssuominen@gentoo.org> (28 Oct 2009)
 # KDE3-only applications.
 #
@@ -724,11 +720,6 @@ dev-python/twisted-docs
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Oct 2009)
 # Replaced by dev-libs/cryptlib[python]. Masked for deletion in 30 days.
 dev-python/cryptlib_py
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# KDE3-only. Replaced by >=kshutdown-2.0_beta6.
-# Masked for removal in 30 days.
-<kde-misc/kshutdown-1.9999
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # KDE3-only. Replaced by >=kde-misc/kdiff3-0.9.95.
