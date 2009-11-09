@@ -1,0 +1,22 @@
+Index: asymptote-1.89/settings.cc
+===================================================================
+--- asymptote-1.89.orig/settings.cc
++++ asymptote-1.89/settings.cc
+@@ -86,14 +86,14 @@ mode_t mask;
+ bool msdos=false;
+ string HOME="HOME";
+ const char pathSeparator=':';
+-string defaultPSViewer="gv";
++string defaultPSViewer="xdg-open";
+ #ifdef __APPLE__
+ string defaultPDFViewer="open";
+ #else  
+-string defaultPDFViewer="acroread";
++string defaultPDFViewer="xdg-open";
+ #endif  
+ string defaultGhostscript="gs";
+-string defaultDisplay="display";
++string defaultDisplay="xdg-open";
+ string defaultAnimate="animate";
+ string systemDir=ASYMPTOTE_SYSDIR;
+ string docdir=ASYMPTOTE_DOCDIR;
