@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/bf1942-desertcombat-0.6.ebuild,v 1.6 2004/06/24 23:17:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/bf1942-desertcombat-0.6.ebuild,v 1.7 2009/11/09 22:43:06 mr_bones_ Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ RESTRICT="fetch"
 
 DEPEND="games-server/bf1942-lnxded"
 
-S="${WORKDIR}/Mods"
+S=${WORKDIR}/Mods
 
 pkg_nofetch() {
 	einfo "Please visit download ${A} from:"
@@ -36,7 +36,7 @@ src_unpack() {
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/bf1942/mods
-	dodir ${dir}
-	mv * ${D}/${dir}/
+	dodir "${dir}"
+	mv * "${D}/${dir}/"
 	prepgamesdirs
 }
