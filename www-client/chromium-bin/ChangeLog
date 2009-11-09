@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.38 2009/11/05 01:14:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.39 2009/11/09 14:55:24 voyageur Exp $
+
+*chromium-bin-4.0.240.0_p31382 (09 Nov 2009)
+
+  09 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.224.2_p29794.ebuild,
+  +chromium-bin-4.0.240.0_p31382.ebuild:
+  Version bump, also add gnome-icon-theme to RDEPEND, thanks to Oleksandr
+  Kovalenko <alx.kovalenko@gmail.com> in bug #292201
 
 *chromium-bin-4.0.235.0_p30950 (05 Nov 2009)
 
