@@ -1,6 +1,6 @@
-# Copyright 2007-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.4-r2.ebuild,v 1.2 2009/11/06 14:10:29 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.4-r2.ebuild,v 1.3 2009/11/09 17:21:17 maekke Exp $
 
 # To unbundle a jar, do the following:
 # 1) Rewrite the ebuild so it uses OSGi packaging
@@ -30,7 +30,7 @@ SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/${DMF}/${MY_A}"
 SLOT="3.4"
 LICENSE="EPL-1.0"
 IUSE="java6"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 S=${WORKDIR}
 PATCHDIR="${FILESDIR}/${SLOT}"
