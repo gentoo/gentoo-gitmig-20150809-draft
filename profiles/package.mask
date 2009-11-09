@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10767 2009/11/08 22:30:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10768 2009/11/09 05:41:21 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
+# beta/experimental drivers
+>=x11-drivers/nvidia-drivers-195.01
 
 # Alexey Shvetsov <alexxy@gentoo.org> (08 Nov 2009)
 # Drop kde 4.3.2
