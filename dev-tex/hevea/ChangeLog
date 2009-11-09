@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.21 2009/09/20 15:48:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.22 2009/11/09 16:04:32 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org> hevea-1.10.ebuild:
+  amd64 stable
 
   20 Sep 2009; Alexis Ballier <aballier@gentoo.org> hevea-1.10.ebuild:
   keyword ~ppc64, working fine on a PowerMac 970
