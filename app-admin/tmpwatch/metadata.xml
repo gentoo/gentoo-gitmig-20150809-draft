@@ -6,4 +6,8 @@
 	  <email>tanderson@gentoo.org</email>
 	  <name>Thomas Anderson</name>
 	</maintainer>
+	<maintainer>
+	  <email>fauli@gentoo.org</email>
+	  <name>Christian Faulhammer</name>
+	</maintainer>
 </pkgmetadata>
