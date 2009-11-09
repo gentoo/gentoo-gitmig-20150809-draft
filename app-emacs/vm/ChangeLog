@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.78 2009/11/03 07:42:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.79 2009/11/09 16:25:01 tcunha Exp $
+
+  09 Nov 2009; Tiago Cunha <tcunha@gentoo.org> vm-8.0.12-r4.ebuild:
+  stable sparc, bug 288397
 
 *vm-8.0.12-r6 (03 Nov 2009)
 
