@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.ebuild,v 1.4 2009/11/09 12:59:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.ebuild,v 1.5 2009/11/09 13:02:57 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -187,7 +187,7 @@ eblit-src_unpack-post() {
 	if use hardened ; then
 		cd "${S}"
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
-		gcc-specs-pie && epatch "${FILESDIR}"/2.5/glibc-2.5-hardened-pie.patch
+		gcc-specs-pie && epatch "${FILESDIR}"/2.11/glibc-2.5-hardened-pie.patch
 		epatch "${FILESDIR}"/2.10/glibc-2.10-hardened-configure-picdefault.patch
 		epatch "${FILESDIR}"/2.10/glibc-2.10-hardened-inittls-nosysenter.patch
 

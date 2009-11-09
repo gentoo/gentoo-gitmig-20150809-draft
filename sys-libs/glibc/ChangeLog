@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.656 2009/11/09 12:59:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.657 2009/11/09 13:02:57 vapier Exp $
+
+  09 Nov 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.11.ebuild,
+  +files/2.11/glibc-2.11-hardened-pie.patch:
+  Update hardened-pie patch by Magnus Granberg #292139.
 
   09 Nov 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.11.ebuild:
   Pull in newer gcc for multilib on amd64 #292174.
