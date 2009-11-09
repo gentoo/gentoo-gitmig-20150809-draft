@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.287 2009/11/08 05:22:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.288 2009/11/09 19:38:31 cardoe Exp $
+
+  09 Nov 2009; Doug Goldstein <cardoe@gentoo.org> mythtv-0.22_p22764.ebuild,
+  mythtv-0.22_p22772.ebuild:
+  add some blockers against the themes packages to make the upgrade path
+  smoother
 
   08 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   -mythtv-0.22_rc22588.ebuild, -mythtv-0.22_rc22679.ebuild:
