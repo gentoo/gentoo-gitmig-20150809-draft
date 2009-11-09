@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.170 2009/10/12 05:34:25 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.171 2009/11/09 09:54:41 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org> -kde-i18n-3.5.9.ebuild,
+  -files/kde-i18n-3.5.9-russian.patch:
+  Drop KDE 3.5.9
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kde-i18n-3.5.9.ebuild:
   Fix QA issues

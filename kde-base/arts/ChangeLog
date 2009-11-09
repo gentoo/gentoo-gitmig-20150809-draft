@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.281 2009/07/12 09:17:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.282 2009/11/09 09:50:53 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/arts-1.5.4-multilib.patch, -arts-3.5.9.ebuild:
+  Drop KDE 3.5.9
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org> arts-3.5.10.ebuild:
   alpha/ia64/sparc stable wrt #271889
