@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.27 2009/11/07 07:07:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.28 2009/11/09 07:06:06 tove Exp $
 
 *fcitx-3.6.2 (07 Nov 2009)
 
@@ -30,7 +30,7 @@
   fcitx-3.4.2.ebuild, fcitx-3.5_pre070703.ebuild, +fcitx-3.5.ebuild:
   Version bumped. Fxied HOMEPAGE and SRC_URI, bug #196078.
 
-  07 Jun 2008; Diego Petten嘆 <flameeyes@gentoo.org>
+  07 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/fcitx-3.5_pre070703-asneeded.patch, fcitx-3.5_pre070703.ebuild:
   Add patch to fix building with --as-needed, closes bug #225211. Thanks to
   Hong Hao for reporting.
@@ -55,7 +55,7 @@
   +fcitx-3.5_pre070403.ebuild:
   Version bumped, bug #168303.
 
-  05 Jan 2007; Diego Petten嘆 <flameeyes@gentoo.org> fcitx-3.1.1.ebuild,
+  05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> fcitx-3.1.1.ebuild,
   fcitx-3.2.1.ebuild, fcitx-3.4.ebuild:
   Convert to use elog.
 
