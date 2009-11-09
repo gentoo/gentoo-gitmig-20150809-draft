@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/vbetool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.16 2009/02/05 05:43:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.17 2009/11/09 13:38:37 scarabeus Exp $
+
+*vbetool-1.1 (09 Nov 2009)
+
+  09 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> -vbetool-0.2.ebuild,
+  -vbetool-0.3.ebuild, -files/vbetool-0.3-pci-compile-fix.patch,
+  -vbetool-0.5.ebuild, -vbetool-0.5-r1.ebuild, -vbetool-0.7.ebuild,
+  +vbetool-1.1.ebuild, metadata.xml:
+  Version bump per bug #254441. Drop old stuff. Add x11 as backup herd. Fix
+  also bug #265099 for 1.1.
 
   05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> vbetool-0.2.ebuild,
   vbetool-0.3.ebuild, vbetool-0.5.ebuild, vbetool-0.5-r1.ebuild,
