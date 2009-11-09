@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.30 2009/10/03 19:27:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.31 2009/11/09 10:52:11 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/add_missing_plugins.patch:
+  Drop unneeded patch
 
   03 Oct 2009; Markos Chandras <hwoarang@gentoo.org>
   qt-creator-1.2.90.ebuild:
