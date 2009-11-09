@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.39 2009/11/08 20:11:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.40 2009/11/09 09:22:22 jer Exp $
+
+  09 Nov 2009; Jeroen Roovers <jer@gentoo.org> package.mask,
+  package.use.mask:
+  Remove masks now KDE 4.3 keywording is complete.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Drop KDE 4.3 mask since KDE 4.3 is keyworded and we dropping kde 4.2
