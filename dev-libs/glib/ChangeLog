@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.391 2009/11/09 12:44:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.392 2009/11/09 15:42:48 tcunha Exp $
+
+  09 Nov 2009; Tiago Cunha <tcunha@gentoo.org> glib-2.20.5-r1.ebuild:
+  stable sparc, security bug 286102
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> glib-2.20.5-r1.ebuild:
   amd64/arm stable, bug #286102
