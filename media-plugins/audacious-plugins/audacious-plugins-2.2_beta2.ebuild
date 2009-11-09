@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2_beta2.ebuild,v 1.2 2009/11/09 14:56:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2_beta2.ebuild,v 1.3 2009/11/09 17:04:20 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,7 +46,6 @@ RDEPEND="app-arch/unzip
 	sdl? (	>=media-libs/libsdl-1.2.5 )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
 	sndfile? ( >=media-libs/libsndfile-1.0.17-r1 )
-	timidity? ( media-sound/timidity++ )
 	vorbis? ( >=media-libs/libvorbis-1.2.0
 		  >=media-libs/libogg-1.1.3 )
 	wavpack? ( >=media-sound/wavpack-4.41.0 )"
