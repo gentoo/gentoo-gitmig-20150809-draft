@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-ose-additions
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.25 2009/11/09 13:11:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.26 2009/11/09 13:45:34 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org>
+  virtualbox-ose-additions-3.0.8.ebuild:
+  amd64 stable, bug #288836
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org>
   virtualbox-ose-additions-3.0.6.ebuild:
