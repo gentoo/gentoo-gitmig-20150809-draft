@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/axis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.24 2009/11/08 21:25:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.25 2009/11/09 17:19:18 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org> axis-1.4.ebuild:
+  amd64/x86 stable, bug #292093
 
 *axis-1.4-r1 (08 Nov 2009)
 
