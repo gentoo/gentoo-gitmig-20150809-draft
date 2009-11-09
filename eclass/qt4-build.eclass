@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.49 2009/11/09 19:30:40 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.50 2009/11/09 19:35:44 ayoy Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -177,6 +177,12 @@ qt4-build_src_prepare() {
 		skip_project_generation_patch
 		symlink_binaries_to_buildtree
 	fi
+
+	# Bug 282984
+	sed -e "s/\(^SYSTEM_VARIABLES\)/CC=$(tc-getCC)\nCXX=$(tc-getCXX)\n\1/" \
+		-i configure || die "sed qmake compilers failed"
+	sed -e "s/\(\$MAKE\)/\1 CC=$(tc-getCC) CXX=$(tc-getCXX) LD=$(tc-getCXX)/" \
+		-i config.tests/unix/compile.test || die "sed test compilers failed"
 
 	# Bug 178652
 	if [[ "$(gcc-major-version)" == "3" ]] && use amd64; then
