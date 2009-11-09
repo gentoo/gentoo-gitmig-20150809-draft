@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.56 2009/10/31 13:54:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.57 2009/11/09 13:17:11 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org> qt-sql-4.5.3.ebuild:
+  arm stable, bug #290922
 
   31 Oct 2009; Markus Meier <maekke@gentoo.org> qt-sql-4.5.3.ebuild:
   amd64 stable, bug #290922
