@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.178 2009/11/09 12:05:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.179 2009/11/09 21:44:13 robbat2 Exp $
+
+  09 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.51-r2.ebuild,
+  +files/lvm2-2.02.51-dmsetup-selinux-linking-fix.patch:
+  Bug #291217: Fix linking of dmsetup on selinux.
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   lvm2-2.02.51-r1.ebuild:
