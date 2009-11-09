@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.232 2009/11/08 20:36:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.233 2009/11/09 16:14:11 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org> busybox-1.14.2.ebuild:
+  amd64/arm/x86 stable, bug #291931
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> busybox-1.14.2.ebuild:
   ppc stable #291931
