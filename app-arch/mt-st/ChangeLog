@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.36 2009/11/08 19:49:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.37 2009/11/09 09:39:34 jer Exp $
+
+  09 Nov 2009; Jeroen Roovers <jer@gentoo.org> mt-st-1.1.ebuild:
+  Stable for HPPA (bug #290604).
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> mt-st-1.1.ebuild:
   ppc stable #290604
