@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.74 2009/11/08 19:15:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.75 2009/11/09 11:51:48 fauli Exp $
+
+  09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  hal-info-20090716.ebuild:
+  stable x86, bug 287411
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> hal-info-20090716.ebuild:
   ppc stable #287411
