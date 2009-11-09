@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.6.ebuild,v 1.1 2009/11/01 16:14:19 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.6.ebuild,v 1.2 2009/11/09 13:20:57 maekke Exp $
 
 EAPI=2
 inherit eutils
@@ -9,7 +9,7 @@ DESCRIPTION="lcd-stuff is a client for lcdproc that displays RSS, Weather, MPD a
 HOMEPAGE="http://lcd-stuff.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2" # and GPL-2 only
 
