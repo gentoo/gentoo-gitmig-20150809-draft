@@ -6,3 +6,4 @@ move app-admin/realpath app-misc/realpath
 slotmove kde-misc/ksystemlog 0 3.5
 slotmove kde-misc/rsibreak 0 3.5
 move sci-biology/dialign-t sci-biology/dialign-tx
+move games-emulation/dosbox-cvs games-emulation/dosbox
