@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.6.1.ebuild,v 1.1 2009/07/11 20:59:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.9.2.ebuild,v 1.1 2009/11/09 17:50:27 hwoarang Exp $
 
 EAPI="2"
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="WYSIWYG score editor for GTK+2"
 HOMEPAGE="http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml"
-SRC_URI="http://vsr.informatik.tu-chemnitz.de/staff/jan/${PN}/${P}.tar.gz"
+SRC_URI="http://vsr.informatik.tu-chemnitz.de/staff/jan/${PN}/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,12 +21,6 @@ RDEPEND="doc? ( gnome-extra/yelp app-text/xmlto )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}.desktop.patch"
-	epatch "${FILESDIR}/makefile_am_ldflags.patch"
-	eautoreconf
-}
 
 src_configure() {
 	econf $(use_with doc) \
