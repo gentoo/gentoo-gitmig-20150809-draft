@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.343 2009/11/08 23:53:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.344 2009/11/09 17:15:23 ulm Exp $
+
+  09 Nov 2009; Ulrich Mueller <ulm@gentoo.org> emacs-22.3-r3.ebuild,
+  emacs-23.1-r2.ebuild:
+  Fix undefined reference to x_any_window_to_frame in xterm.c, bug 292492.
+  This regression was introduced with the previous bugfix.
 
 *emacs-23.1-r2 (08 Nov 2009)
 *emacs-22.3-r3 (08 Nov 2009)
