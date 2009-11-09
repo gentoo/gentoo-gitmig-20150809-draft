@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/grub-splashes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/ChangeLog,v 1.10 2009/10/25 17:39:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/ChangeLog,v 1.11 2009/11/09 14:05:51 maekke Exp $
+
+*grub-splashes-20091109 (09 Nov 2009)
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org>
+  +grub-splashes-20091109.ebuild:
+  bump, fixes bug #253922
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove welp from metadata.xml (#141007)
