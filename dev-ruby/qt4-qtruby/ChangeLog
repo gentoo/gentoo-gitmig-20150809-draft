@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/qt4-qtruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.18 2009/10/06 20:33:19 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.19 2009/11/09 10:48:46 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/qt4-qtruby-1.4.7.diff, -files/FindQwt.cmake.diff:
+  Drop unneeded patches
 
   06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> qt4-qtruby-1.4.9-r3.ebuild:
   Removed dependency on Qt metapackage and obsolete QT4_BUILD_WITH_USE_CHECK
