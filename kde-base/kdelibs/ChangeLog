@@ -1,12 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.640 2009/11/09 10:08:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.641 2009/11/09 10:40:16 abcd Exp $
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
-  -files/dist/09_disable_debug_messages_if_not_explicitly_enabled.patch:
-  Drop unneeded patch
-
-  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/kdelibs-4.3.2-fix-deadlock-in-KLocale.patch,
+  -files/kdelibs-4.3.2-fix-plasma-crash.patch,
+  -files/dist/09_disable_debug_messages_if_not_explicitly_enabled.patch,
   -files/4.2.4-CVE-2009-1687.patch,
   -files/4.2.4-fixPopupForPlasmaboard.patch,
   -files/kdelibs-4.2-fixx11h.h.patch, -files/4.2.4-CVE-2009-1690.patch,
