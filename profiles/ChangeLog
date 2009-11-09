@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3534 2009/11/09 14:05:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3535 2009/11/09 16:36:59 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Masking net-misc/mmsclient for removal, bug #211133
 
   09 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask <media-video/kaffeine-1.0_pre1.

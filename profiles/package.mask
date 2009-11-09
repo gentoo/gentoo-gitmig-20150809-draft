@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10772 2009/11/09 14:05:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10773 2009/11/09 16:36:59 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Víctor Ostorga <vostorga@gentoo.org> (09 Nov 2009)
+# Last version bump in 2004, allows buffer overflow bug #284747
+# Upstream not available
+net-misc/mmsclient
 
 # Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
 # beta/experimental drivers
