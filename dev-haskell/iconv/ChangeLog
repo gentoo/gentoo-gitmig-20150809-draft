@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/iconv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/iconv/ChangeLog,v 1.1 2007/12/15 18:38:13 dcoutts Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/iconv/ChangeLog,v 1.2 2009/11/09 18:59:23 kolmodin Exp $
+
+*iconv-0.4.0.2 (09 Nov 2009)
+
+  09 Nov 2009; <kolmodin@gentoo.org> +iconv-0.4.0.2.ebuild:
+  Version bump, works with ghc 6.10.
 
 *iconv-0.4 (15 Dec 2007)
 
