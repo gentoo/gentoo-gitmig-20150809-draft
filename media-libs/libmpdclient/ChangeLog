@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.1 2009/10/30 17:34:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.2 2009/11/09 19:33:21 jer Exp $
+
+  09 Nov 2009; Jeroen Roovers <jer@gentoo.org> libmpdclient-2.0.ebuild:
+  Marked ~hppa (bug #291197).
 
 *libmpdclient-2.0 (30 Oct 2009)
 
