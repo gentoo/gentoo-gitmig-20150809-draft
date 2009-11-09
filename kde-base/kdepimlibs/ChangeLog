@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.45 2009/11/08 23:29:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.46 2009/11/09 09:42:47 ssuominen Exp $
+
+  09 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kdepimlibs-4.3.3.ebuild:
+  Missing dev-libs/boost[python] depend wrt #291660, thanks to Lars Wendler
+  for reporting.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdepimlibs-4.3.2.ebuild:
   Drop KDE 4.3.2
