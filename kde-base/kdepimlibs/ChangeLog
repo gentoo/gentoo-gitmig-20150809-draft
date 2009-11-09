@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.47 2009/11/09 10:14:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.48 2009/11/09 15:22:00 ssuominen Exp $
+
+  09 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kdepimlibs-4.3.3.ebuild:
+  Revert a commit for bug 291660.
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/kdepimlibs-4.2.4-gpgme-1.2.0.patch:

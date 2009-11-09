@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.3.3.ebuild,v 1.2 2009/11/09 09:42:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.3.3.ebuild,v 1.3 2009/11/09 15:22:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RESTRICT="test"
 DEPEND="
 	>=app-crypt/gpgme-1.1.6
 	>=app-office/akonadi-server-1.2.0
-	>=dev-libs/boost-1.35.0-r5[python]
+	dev-libs/boost
 	dev-libs/libgpg-error
 	>=dev-libs/libical-0.43
 	dev-libs/cyrus-sasl
