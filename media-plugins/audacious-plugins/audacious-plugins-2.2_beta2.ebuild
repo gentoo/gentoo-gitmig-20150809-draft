@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2_beta2.ebuild,v 1.1 2009/11/09 14:39:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2_beta2.ebuild,v 1.2 2009/11/09 14:56:19 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,9 +13,8 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="aac adplug alsa bs2b cdda cue esd flac ffmpeg gnome icecast ipv6 jack lame
-lirc mp3 mtp nls oss pulseaudio projectm scrobbler sdl sid sndfile sse2 timidity
-tta vorbis wavpack"
+IUSE="aac adplug alsa bs2b cdda cue esd flac ffmpeg gnome icecast ipv6 jack lame lirc
+mp3 mtp nls oss pulseaudio projectm scrobbler sdl sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
@@ -48,7 +47,6 @@ RDEPEND="app-arch/unzip
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
 	sndfile? ( >=media-libs/libsndfile-1.0.17-r1 )
 	timidity? ( media-sound/timidity++ )
-	tta? ( media-libs/libid3tag )
 	vorbis? ( >=media-libs/libvorbis-1.2.0
 		  >=media-libs/libogg-1.1.3 )
 	wavpack? ( >=media-sound/wavpack-4.41.0 )"
@@ -101,8 +99,6 @@ src_compile() {
 		$(use_enable sid) \
 		$(use_enable sndfile) \
 		$(use_enable sse2) \
-		$(use_enable timidity) \
-		$(use_enable tta) \
 		$(use_enable vorbis) \
 		$(use_enable vorbis filewriter_vorbis) \
 		$(use_enable wavpack) \
