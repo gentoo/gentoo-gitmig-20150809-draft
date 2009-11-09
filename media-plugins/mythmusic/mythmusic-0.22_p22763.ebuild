@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.22_p22763.ebuild,v 1.1 2009/11/08 02:27:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.22_p22763.ebuild,v 1.2 2009/11/09 21:18:03 mr_bones_ Exp $
 
 EAPI=2
 inherit qt4 mythtv-plugins
@@ -15,7 +15,7 @@ RDEPEND=">=media-sound/cdparanoia-3.9.8
 	cdr? ( virtual/cdrtools )
 	fftw? ( sci-libs/fftw )
 	opengl? ( virtual/opengl )
-	sdl? ( >=media-libs/libsdl-1.2.5 
+	sdl? ( >=media-libs/libsdl-1.2.5
 		libvisual? ( =media-libs/libvisual-0.4* )
 		)"
 
