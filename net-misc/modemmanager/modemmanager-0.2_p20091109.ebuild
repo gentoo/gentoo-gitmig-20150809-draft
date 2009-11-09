@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.2_p20090824.ebuild,v 1.2 2009/09/22 14:02:07 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.2_p20091109.ebuild,v 1.1 2009/11/09 09:16:32 dagger Exp $
 
 EAPI=2
 
@@ -23,6 +23,11 @@ RDEPEND="net-dialup/ppp"
 DEPEND=">=sys-fs/udev-145[extras]
 	dev-util/pkgconfig
 	dev-util/intltool"
+
+src_configure() {
+	econf \
+		--disable-more-warnings
+}
 
 S=${WORKDIR}/${MY_P/_p20090806/}
 
