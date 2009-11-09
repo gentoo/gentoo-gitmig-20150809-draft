@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.18 2009/10/24 19:53:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.19 2009/11/09 20:51:22 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org> exo-0.3.105-r1.ebuild:
+  arm stable, bug #289179
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> exo-0.3.105-r1.ebuild:
   ppc stable #289179
