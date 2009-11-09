@@ -5,3 +5,8 @@ net-im/kadu amarok2
 
 # Not keyworded
 media-plugins/gst-plugins-meta mythtv
+
+# VDPAU is currently not keyworded on PPC since its a nvidia-drivers feature
+# only presently. If other drivers support it in the future, then this can
+# get unmasked
+media-tv/mythtv vdpau
