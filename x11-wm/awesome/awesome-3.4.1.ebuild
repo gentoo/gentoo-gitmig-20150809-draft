@@ -1,40 +1,42 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1-r3.ebuild,v 1.7 2009/11/09 23:12:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.1.ebuild,v 1.1 2009/11/09 23:12:02 matsuu Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
 
+MY_P="${P/_/-}"
 DESCRIPTION="A dynamic floating and tiling window manager"
 HOMEPAGE="http://awesome.naquadah.org/"
-SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
+SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 #IUSE="dbus doc bash-completion"
 IUSE="dbus doc"
 
-RDEPEND=">=dev-lang/lua-5.1
-	>=dev-libs/glib-2
+RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	dev-libs/libev
-	dev-util/gperf
+	>=dev-libs/libxdg-basedir-1
 	media-libs/imlib2[png]
-	sys-libs/ncurses
 	x11-libs/cairo[xcb]
 	x11-libs/libX11[xcb]
-	>=x11-libs/libxcb-1.1
+	>=x11-libs/libxcb-1.4
 	>=x11-libs/pango-1.19.3
-	~x11-libs/xcb-util-0.3.3
+	>=x11-libs/startup-notification-0.10
+	>=x11-libs/xcb-util-0.3.6
 	dbus? ( >=sys-apps/dbus-1 )"
 
 DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	>=dev-util/cmake-2.6
+	dev-util/gperf
 	dev-util/pkgconfig
-	x11-proto/xcb-proto
-	>=x11-proto/xproto-7.0.11
+	media-gfx/imagemagick[png]
+	>=x11-proto/xcb-proto-1.5
+	>=x11-proto/xproto-7.0.15
 	doc? (
 		app-doc/doxygen
 		dev-util/luadoc
@@ -46,21 +48,10 @@ RDEPEND="${RDEPEND}
 	|| (
 		x11-misc/gxmessage
 		x11-apps/xmessage
-	)
-	|| (
-		x11-terms/eterm
-		x11-misc/habak
-		x11-wm/windowmaker
-		media-gfx/feh
-		x11-misc/hsetroot
-		( media-gfx/imagemagick x11-apps/xwininfo )
-		media-gfx/xv
-		x11-misc/xsri
-		x11-apps/xsetroot
 	)"
-#		media-gfx/qiv (media-gfx/pqiv doesn't work)
-#		x11-misc/chbg #68116
 #	bash-completion? ( app-shells/bash-completion )
+
+S="${WORKDIR}/${MY_P}"
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
