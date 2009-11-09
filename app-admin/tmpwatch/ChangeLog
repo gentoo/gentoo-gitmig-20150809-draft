@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.89 2009/11/09 19:53:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.90 2009/11/09 20:04:31 fauli Exp $
+
+*tmpwatch-2.9.16 (09 Nov 2009)
+
+  09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  +tmpwatch-2.9.16.ebuild:
+  version bump
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   add myself as maintainer
