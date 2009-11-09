@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.13.ebuild,v 1.2 2009/10/19 01:31:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.13.ebuild,v 1.3 2009/11/09 12:47:23 maekke Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gsoap2/gsoap_${PV}.tar.gz"
 
 LICENSE="GPL-2 gSOAP"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="doc debug examples +ssl"
 
 DEPEND="sys-devel/flex
