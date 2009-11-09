@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.185 2009/10/23 14:25:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.186 2009/11/09 11:20:13 abcd Exp $
+
+  09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/webmin-1.140-apache2.patch,
+  -files/webmin-1.270-ldap-useradmin.patch,
+  -files/virtual-server-3.23-nocgibin.patch,
+  -files/virtual-server-3.23-pgsql.patch:
+  Drop unused files
 
   23 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> webmin-1.490.ebuild:
   Fixing sandbox violation with iptables, bug 267996
