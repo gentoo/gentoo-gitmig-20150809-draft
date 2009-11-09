@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.22 2009/11/09 13:08:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.23 2009/11/09 13:43:07 maekke Exp $
+
+  09 Nov 2009; Markus Meier <maekke@gentoo.org>
+  xf86-video-virtualbox-3.0.8.ebuild:
+  amd64 stable, bug #288836
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org>
   xf86-video-virtualbox-3.0.6.ebuild:
