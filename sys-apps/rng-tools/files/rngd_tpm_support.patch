@@ -1,0 +1,288 @@
+Patch taken from http://sourceforge.net/tracker/?func=detail&aid=2261574&group_id=3242&atid=353242
+
+diff -uNr rng-tools-2-orig/rngd.c rng-tools-2/rngd.c
+--- rng-tools-2-orig/rngd.c	2004-08-24 23:30:00.000000000 +0530
++++ rng-tools-2/rngd.c	2008-11-11 15:39:31.000000000 +0530
+@@ -91,6 +91,8 @@
+ 
+ 	{ "timeout", 't', "nnn", 0,
+ 	  "Interval written to random-device when the entropy pool is full, in seconds (default: 60)" },
++	{ "no-tpm", 'n', "1|0", 0,
++	  "do not use tpm as a source of random number input (default: 0)" },
+ 
+ 	{ 0 },
+ };
+@@ -102,6 +104,7 @@
+ 	.random_step	= 64,
+ 	.fill_watermark = 2048,
+ 	.daemon		= 1,
++	.no_tpm		=0,
+ };
+ struct arguments *arguments = &default_arguments;
+ 
+@@ -147,6 +150,15 @@
+ 			arguments->fill_watermark = n;
+ 		break;
+ 	}
++	case 'n': {
++		int n;
++		if ((sscanf(arg,"%i", &n) == 0) || ((n | 1)!=1))
++			argp_usage(state);
++		else
++			arguments->no_tpm=0;
++		break;
++			
++	}
+ 
+ 	default:
+ 		return ARGP_ERR_UNKNOWN;
+@@ -162,26 +174,41 @@
+ 		    double poll_timeout)
+ {
+ 	unsigned char buf[FIPS_RNG_BUFFER_SIZE];
+-	unsigned char *p;
+-	int fips;
++	int fips,retval;
+ 
+ 	for (;;) {
+-		xread(buf, sizeof buf);
++		if (arguments->no_tpm == 0) {
++			retval=xread_tpm(buf, sizeof buf);
++			if (retval < 0)
++				sleep(1);
++			else
++				update_kernel_random(random_step,
++					poll_timeout, buf, &tpm_fipsctx);
++		}
++		retval=xread(buf, sizeof buf);
++		if (retval > 0)
++			update_kernel_random(random_step,
++				poll_timeout, buf, &fipsctx);
++	}
++}
+ 
+-		fips = fips_run_rng_test(&fipsctx, buf);
++int update_kernel_random(int random_step, double poll_timeout,
++	unsigned char *buf, fips_ctx_t *fipsctx) {
+ 
+-		if (fips) {
+-			message(LOG_DAEMON|LOG_ERR, "failed fips test\n");
+-			sleep(1);
+-			continue;
+-		}
++	int fips;
++	unsigned char *p;
++	fips = fips_run_rng_test(fipsctx, buf);
++	if (fips) {
++		message(LOG_DAEMON|LOG_ERR, "failed fips test\n");
++		return 1;
++	}
+ 
+-		for (p = buf; p + random_step <= &buf[sizeof buf];
+-		     p += random_step) {
+-			random_add_entropy(p, random_step);
+-			random_sleep(poll_timeout);
+-		}
++	for (p = buf; p + random_step <= &buf[FIPS_RNG_BUFFER_SIZE];
++		 p += random_step) {
++		random_add_entropy(p, random_step);
++		random_sleep(poll_timeout);
+ 	}
++	return 0;
+ }
+ 
+ 
+diff -uNr rng-tools-2-orig/rngd_entsource.c rng-tools-2/rngd_entsource.c
+--- rng-tools-2-orig/rngd_entsource.c	2004-04-15 10:36:17.000000000 +0530
++++ rng-tools-2/rngd_entsource.c	2008-11-11 15:39:31.000000000 +0530
+@@ -35,6 +35,7 @@
+ #include <errno.h>
+ #include <syslog.h>
+ #include <string.h>
++#include <signal.h>
+ 
+ #include "rngd.h"
+ #include "fips.h"
+@@ -42,17 +43,27 @@
+ #include "rngd_entsource.h"
+ 
+ 
+-/* Logic and contexts */
+-static int rng_fd;			/* rng data source */
+-fips_ctx_t fipsctx;			/* Context for the FIPS tests */
++/* The overhead incured when tpm returns the random nos as per TCG spec 
++ * it is 14 bytes.*/
++#define TPM_GET_RNG_OVERHEAD	14
+ 
++static const char *rng_device="/dev/tpm0";
++/* Logic and contexts */
++static int rng_fd;	/* rng data source */
++fips_ctx_t fipsctx;	/* Context for the FIPS tests */
++fips_ctx_t tpm_fipsctx;	/* Context for the tpm FIPS tests */
+ 
+ /* Read data from the entropy source */
+-void xread(void *buf, size_t size)
++int xread(void *buf, size_t size)
+ {
+ 	size_t off = 0;
+ 	ssize_t r;
+ 
++	/* Do nothing if we have no hw rng, maybe we have tpm */
++	if (rng_fd < 0) {
++		message(LOG_DAEMON|LOG_ERR, "Invalid file handle\n");
++		return -1;
++	}
+ 	while (size > 0) {
+ 		do {
+ 			r = read(rng_fd, buf + off, size);
+@@ -65,8 +76,85 @@
+ 
+ 	if (size) {
+ 		message(LOG_DAEMON|LOG_ERR, "read error\n");
+-		exit(1);
++		return -1;
++	}
++	return 0;
++}
++
++alarm_handler(int i) {
++	;
++}
++/* tpm rng read call to kernel has 13 bytes of overhead
++ * the logic to process this involves reading to a temporary_buf
++ * and copying the no generated to buf*/
++int xread_tpm(void *buf, size_t size)
++{
++	size_t bytes_read = 0;
++	ssize_t r;
++	int retval,rngtpm_fd;
++	unsigned char *temp_buf=NULL;
++	unsigned char rng_cmd[] = {
++		0, 193,            /* TPM_TAG_RQU_COMMAND */
++		0, 0, 0, 14,       /* length */
++		0, 0, 0, 70,       /* TPM_ORD_GetRandom */
++		0, 0, 0, 0,        /* number of bytes to return */
++	};
++	char *offset;
++	
++	rngtpm_fd=open(rng_device, O_RDWR);
++	if (rngtpm_fd < 0) {
++		message(LOG_ERR|LOG_INFO,
++			"Unable to open %s: %s\n",rng_device,strerror(errno));
++		return -1;
++	}
++
++	temp_buf= (unsigned char *) malloc(size + TPM_GET_RNG_OVERHEAD);
++	memset(temp_buf,0,(size+TPM_GET_RNG_OVERHEAD));
++	if (temp_buf == NULL) {
++		message(LOG_ERR|LOG_INFO,"No memory");
++		return -1;
++	}
++	/* 32 bits has been reserved for random byte size */
++	rng_cmd[13]=(unsigned char)(size & 0xFF);
++	rng_cmd[12]=(unsigned char)((size >> 8) & 0xFF);
++	rng_cmd[11]=(unsigned char)((size >> 16) & 0xFF);
++	rng_cmd[10]=(unsigned char)((size >> 24) & 0xFF);
++	offset=buf;
++	while (bytes_read < size) {
++		r=0;
++		while (r < sizeof(rng_cmd)) {
++			retval=write(rngtpm_fd,rng_cmd + r,sizeof(rng_cmd)-r);
++			if (retval < 0) {
++				message(LOG_ERR|LOG_INFO,
++					"Error writing %s\n",rng_device);
++				retval=-1;
++				goto error_out;
++			}
++			r+=retval;
++		}
++		if (r < sizeof(rng_cmd)) {
++			message(LOG_ERR|LOG_INFO,
++				"Error writing %s\n",rng_device);
++			retval=-1;
++			goto error_out;
++		}
++		r=read(rngtpm_fd,temp_buf,size);
++		r=(r - TPM_GET_RNG_OVERHEAD);
++		bytes_read=bytes_read + r;
++		if (bytes_read > size) {
++			memcpy(offset,temp_buf + TPM_GET_RNG_OVERHEAD,
++				r - (bytes_read - size));
++			break;
++		}
++		memcpy(offset, temp_buf + TPM_GET_RNG_OVERHEAD,
++			r);
++		offset=offset+r;
+ 	}
++	retval=0;
++error_out:
++	free(temp_buf);
++	close(rngtpm_fd);
++	return retval;
+ }
+ 
+ /* Initialize entropy source */
+@@ -93,14 +181,31 @@
+  */
+ void init_entropy_source(const char* sourcedev)
+ {
++	/* We cannot keep the tpm device open always.
++	 * We need to open get random data and close
++	 * to allow tpm-tools and other utilities
++	 * access to /dev/tpm */
++	int tpm_fd;
+ 	rng_fd = open(sourcedev, O_RDONLY);
+ 	if (rng_fd == -1) {
+ 		message(LOG_DAEMON|LOG_ERR, "can't open %s: %s",
+ 			sourcedev, strerror(errno));
+-		exit(EXIT_FAIL);
++		/* Try to open tpm this is just a test, no point in proceeding further
++		 * if no source of entropy is present
++		 */
++		tpm_fd = open(rng_device, O_RDONLY);
++		if (tpm_fd < 0 ) {
++			message(LOG_DAEMON|LOG_ERR,
++				"can't open entropy source(tpm or intel/amd rng) %s",
++				strerror(errno));
++			message(LOG_DAEMON|LOG_ERR,"Maybe RNG device modules are not loaded\n");
++			exit(1);
++		}
++		close(tpm_fd);
+ 	}
+ 
+ 	/* Bootstrap FIPS tests */
+ 	fips_init(&fipsctx, discard_initial_data());
++	fips_init(&tpm_fipsctx, 0);
+ }
+ 
+diff -uNr rng-tools-2-orig/rngd_entsource.h rng-tools-2/rngd_entsource.h
+--- rng-tools-2-orig/rngd_entsource.h	2004-04-15 10:34:45.000000000 +0530
++++ rng-tools-2/rngd_entsource.h	2008-11-11 15:39:31.000000000 +0530
+@@ -28,7 +28,7 @@
+ 
+ /* Logic and contexts */
+ extern fips_ctx_t fipsctx;		/* Context for the FIPS tests */
+-
++extern fips_ctx_t tpm_fipsctx;	/* Context for the tpm FIPS tests */
+ /*
+  * Initialize entropy source and entropy conditioning
+  *
+@@ -37,6 +37,6 @@
+ extern void init_entropy_source(const char* sourcedev);
+ 
+ /* Read data from the entropy source */
+-void xread(void *buf, size_t size);
++int xread(void *buf, size_t size);
+ 
+ #endif /* RNGD_ENTSOURCE__H */
+diff -uNr rng-tools-2-orig/rngd.h rng-tools-2/rngd.h
+--- rng-tools-2-orig/rngd.h	2004-08-24 23:23:04.000000000 +0530
++++ rng-tools-2/rngd.h	2008-11-11 15:39:31.000000000 +0530
+@@ -42,6 +42,7 @@
+ 	double poll_timeout;
+ 
+ 	int daemon;
++	int no_tpm;
+ };
+ extern struct arguments *arguments;
+ 
