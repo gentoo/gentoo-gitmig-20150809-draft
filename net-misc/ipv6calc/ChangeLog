@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.28 2009/11/01 16:30:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.29 2009/11/10 17:33:11 jer Exp $
+
+  10 Nov 2009; Jeroen Roovers <jer@gentoo.org> ipv6calc-0.73.0.ebuild:
+  Stable for HPPA (bug #290112).
 
   01 Nov 2009; nixnut <nixnut@gentoo.org> ipv6calc-0.73.0.ebuild:
   ppc stable #290112
