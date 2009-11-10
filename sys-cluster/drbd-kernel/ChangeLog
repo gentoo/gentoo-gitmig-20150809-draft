@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/drbd-kernel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/ChangeLog,v 1.18 2009/08/17 11:31:56 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/ChangeLog,v 1.19 2009/11/10 11:27:05 wschlich Exp $
+
+*drbd-kernel-8.3.6 (10 Nov 2009)
+
+  10 Nov 2009; Wolfram Schlich <wschlich@gentoo.org>
+  +drbd-kernel-8.3.6.ebuild:
+  version bump wrt bug #290313
 
 *drbd-kernel-8.3.2 (17 Aug 2009)
 
