@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/open4
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/open4/ChangeLog,v 1.1 2007/12/15 22:07:45 nichoj Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/open4/ChangeLog,v 1.2 2009/11/10 06:54:16 graaff Exp $
+
+*open4-1.0.1 (10 Nov 2009)
+
+  10 Nov 2009; Hans de Graaff <graaff@gentoo.org> +open4-1.0.1.ebuild:
+  Version bump.
 
 *open4-0.9.6 (09 Dec 2007)
 
