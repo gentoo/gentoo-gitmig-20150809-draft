@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.40 2009/11/03 14:55:49 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.41 2009/11/10 04:11:28 abcd Exp $
+
+  10 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/muttprint-0.72a-platex.patch:
+  Drop unused file
 
   03 Nov 2009; Víctor Ostorga <vostorga@gentoo.org>
   muttprint-0.72d-r1.ebuild:
