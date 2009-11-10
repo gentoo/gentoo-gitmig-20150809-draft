@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.226 2009/11/08 15:29:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.227 2009/11/10 22:47:44 maekke Exp $
+
+  10 Nov 2009; Markus Meier <maekke@gentoo.org> gnutls-2.8.4.ebuild:
+  amd64/arm stable, bug #289625
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> gnutls-2.8.4.ebuild:
   Stable on alpha, bug #289625
