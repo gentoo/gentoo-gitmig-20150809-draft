@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.64 2009/11/09 13:48:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.65 2009/11/10 01:47:45 patrick Exp $
+
+  10 Nov 2009; Patrick Lauer <patrick@gentoo.org>
+  -virtualbox-bin-1.6.6.ebuild, -virtualbox-bin-3.0.6.ebuild,
+  -virtualbox-bin-3.0.6-r1.ebuild:
+  Drop old
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> virtualbox-bin-3.0.8.ebuild:
   amd64 stable, bug #288836
