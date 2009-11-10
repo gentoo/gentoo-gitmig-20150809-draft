@@ -1,6 +1,9 @@
 # ChangeLog for games-util/aabrowse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/ChangeLog,v 1.9 2008/07/27 21:34:12 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/ChangeLog,v 1.10 2009/11/10 21:01:34 ssuominen Exp $
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> aabrowse-0.0.8.ebuild:
+  Remove USE arts (deprecated).
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> aabrowse-0.0.8.ebuild:
   QA: Get rid of deprecated qt_min_version().
