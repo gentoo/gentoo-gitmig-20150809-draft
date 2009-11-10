@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.10 2009/03/27 22:30:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.11 2009/11/10 21:12:23 ssuominen Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -13,11 +13,10 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
-IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
+IUSE="alsa dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
 
 RDEPEND="sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
-	arts? ( kde-base/arts )
 	dga? (
 		x11-libs/libXxf86dga
 		x11-libs/libXxf86vm )
@@ -109,7 +108,7 @@ EOF
 	#toggle_feature net XMAME_NET # Broken
 	toggle_feature esd SOUND_ESOUND
 	toggle_feature alsa SOUND_ALSA
-	toggle_feature arts SOUND_ARTS
+	#toggle_feature arts SOUND_ARTS # Deprecated
 	toggle_feature dga X11_DGA
 	toggle_feature xv X11_XV
 	# if we don't have expat on the system, use the internal one
