@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/adns
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.34 2009/08/23 01:54:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.35 2009/11/10 13:53:36 hwoarang Exp $
+
+*adns-1.4-r1 (10 Nov 2009)
+
+  10 Nov 2009; Markos Chandras <hwoarang@gentoo.org> +adns-1.4-r1.ebuild,
+  +files/adns-1.4-cnamechain.patch:
+  Fix cname issue ( bug #292545 ). EAPI2fy it. Thanks to Alex Efros <powerman-asdf@yandex.ru>
+  for the attached patch.
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -files/1.1-gcc34.patch,
   -files/adns-gcc34.patch:
