@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.96 2009/09/30 14:00:20 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.97 2009/11/10 11:46:08 wschlich Exp $
+
+*drbd-8.3.6 (10 Nov 2009)
+
+  10 Nov 2009; Wolfram Schlich <wschlich@gentoo.org> +drbd-8.3.6.ebuild:
+  version bump wrt bug #290313
 
   30 Sep 2009; Christian Zoffoli <xmerlin@gentoo.org>
   +files/drbd-8.3.2-bitsperlong.h.patch, drbd-8.3.2.ebuild:
