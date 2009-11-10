@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/quadros-0.1.ebuild,v 1.6 2007/04/17 13:46:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/quadros-0.1.ebuild,v 1.7 2009/11/10 21:06:43 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit eutils kde games
 need-qt 3
 

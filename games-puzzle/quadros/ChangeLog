@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/quadros
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/ChangeLog,v 1.7 2007/04/17 13:46:48 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/ChangeLog,v 1.8 2009/11/10 21:06:43 ssuominen Exp $
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> quadros-0.1.ebuild:
+  Remove USE arts (deprecated).
 
   17 Apr 2007; Christian Faulhammer <opfer@gentoo.org> quadros-0.1.ebuild:
   keyworded ~amd64, bug 172218
