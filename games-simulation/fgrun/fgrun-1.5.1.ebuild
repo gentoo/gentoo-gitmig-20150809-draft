@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.5.1.ebuild,v 1.1 2009/10/28 15:28:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.5.1.ebuild,v 1.2 2009/11/10 19:11:16 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils multilib games
@@ -32,8 +32,7 @@ src_prepare() {
 src_configure() {
 	egamesconf \
 		--with-plib-libraries=/usr/$(get_libdir) \
-		--with-plib-includes=/usr/include \
-		|| die
+		--with-plib-includes=/usr/include
 }
 
 src_install() {
