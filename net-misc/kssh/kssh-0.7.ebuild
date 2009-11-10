@@ -1,7 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kssh/kssh-0.7.ebuild,v 1.10 2007/02/04 08:27:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kssh/kssh-0.7.ebuild,v 1.11 2009/11/10 23:06:10 cla Exp $
 
+ARTS_REQUIRED="never"
 inherit kde
 
 HOMEPAGE="http://kssh.sourceforge.net"

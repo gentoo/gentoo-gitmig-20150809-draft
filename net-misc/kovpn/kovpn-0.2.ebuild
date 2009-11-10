@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/kovpn-0.2.ebuild,v 1.2 2006/07/02 21:43:06 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/kovpn-0.2.ebuild,v 1.3 2009/11/10 23:03:39 cla Exp $
 
+ARTS_REQUIRED="never"
 inherit kde
 
 DESCRIPTION="kovpn - a simple OpenVPN GUI"

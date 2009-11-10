@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.7 2009/02/15 20:26:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.8 2009/11/10 23:12:22 cla Exp $
 
+ARTS_REQUIRED="never"
 inherit kde eutils
 
 DESCRIPTION="A KDE frontend for wget."
@@ -21,8 +22,5 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	kde_src_unpack
-
-	# respect the "arts" USE flag until it's fixed upstream
-	use arts || epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
