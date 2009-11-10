@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.19 2009/11/10 01:00:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.20 2009/11/10 01:09:37 fauli Exp $
+
+  10 Nov 2009; Christian Faulhammer <fauli@gentoo.org> italc-1.0.9.ebuild,
+  +files/italc-1.0.9-as-needed.patch:
+  fix as-needed issues, bug 269843, patch by Kacper Kowalik <xarthisius DOT
+  kk AT gmail DOT com>
 
   10 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   -italc-1.0.3-r1.ebuild:

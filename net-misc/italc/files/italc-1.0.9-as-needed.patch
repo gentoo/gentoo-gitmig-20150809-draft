@@ -1,0 +1,11 @@
+--- italc-1.0.9.orig/setup/Makefile.am	2008-02-09 12:14:52.000000000 +0100
++++ italc-1.0.9/setup/Makefile.am	2009-10-16 15:14:21.086898900 +0200
+@@ -65,7 +65,7 @@
+ PLATFORM_LDADD = ../lib/libitalc_core-static.a
+ endif
+ 
+-setup_LDADD = $(QT_LDADD) $(QT_LIB_GUI) $(LIBSSL_LDADD) -ljpeg $(PLATFORM_LDADD)
++setup_LDADD = $(PLATFORM_LDADD) $(QT_LDADD) $(QT_LIB_GUI) $(LIBSSL_LDADD) -ljpeg
+ setup_LDFLAGS = $(LDFLAGS) -mwindows
+ 
+ AM_CXXFLAGS := $(AM_CXXFLAGS) $(QT_CXXFLAGS)
