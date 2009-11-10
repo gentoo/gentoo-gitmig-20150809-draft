@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jdbc-jaybird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.29 2009/11/10 14:34:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.30 2009/11/10 19:53:37 caster Exp $
+
+  10 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  -jdbc-jaybird-2.0.1.ebuild, -files/archive-xml-2.0.1.patch,
+  -files/compile-xml-2.0.1.patch, -files/dist-xml-2.0.1.patch,
+  -jdbc-jaybird-2.1.0.ebuild, -jdbc-jaybird-2.1.0-r1.ebuild,
+  -files/compile-xml-2.1.0.patch, -jdbc-jaybird-2.1.2.ebuild,
+  -jdbc-jaybird-2.1.5.ebuild:
+  Remove old.
 
   10 Nov 2009; Markus Meier <maekke@gentoo.org>
   jdbc-jaybird-2.1.5-r1.ebuild:
