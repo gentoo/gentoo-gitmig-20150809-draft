@@ -1,0 +1,64 @@
+diff -Burp a/mythweather/mythweather/scripts/us_nws/nwsxml.pl b/mythweather/mythweather/scripts/us_nws/nwsxml.pl
+--- a/mythweather/mythweather/scripts/us_nws/nwsxml.pl	2008-02-11 11:38:20.000000000 -0500
++++ b/mythweather/mythweather/scripts/us_nws/nwsxml.pl	2009-09-29 17:59:08.000000000 -0400
+@@ -99,11 +99,17 @@ foreach (@types) {
+             $xml->{$key} = int($xml->{'wind_mph'} * 1.609344 + .5);
+         }
+     } elsif (/wind_gust/) {
+-        if ($units =~ /ENG/ || $xml->{'wind_gust_mph'} eq 'NA') {
+-            $key = 'wind_gust_mph';
++	if (defined($xml->{'wind_gust_mph'})) { 
++            if ($units =~ /ENG/ || $xml->{'wind_gust_mph'} eq 'NA') { 
++                $key = 'wind_gust_mph'; 
++            } else { 
++                $key = 'wind_gust_kph'; 
++                $xml->{$key} = int($xml->{'wind_gust_mph'} * 1.609344 + .5); 
++            }
+         } else {
+-            $key = 'wind_gust_kph';
+-            $xml->{$key} = int($xml->{'wind_gust_mph'} * 1.609344 + .5);
++            $xml->{'wind_gust_mph'} = 'NA';
++            $xml->{'wind_gust_kph'} = 'NA';
++            $key = 'wind_gust';
+         }
+     } elsif (/visibility/) {
+         if ($units =~ /ENG/) {
+@@ -128,14 +134,17 @@ foreach (@types) {
+     } elsif (/cclocation/) {
+         $key = 'location';   
+     } elsif (/appt$/) {
+-        if ($xml->{windchill_f} eq 'NA') {
+-            $key = 'heat_index_f' if ($units =~ /ENG/); 
+-            $key = 'heat_index_c' if ($units =~ /SI/);
+-        } else { 
+-            $key = 'windchill_f' if ($units =~ /ENG/); 
+-            $key = 'windchill_c' if ($units =~ /SI/);
+-        };
+-        
++        if (defined($xml->{windchill_f})) {
++            if ($xml->{windchill_f} eq 'NA') {
++                $key = 'heat_index_f' if ($units =~ /ENG/); 
++                $key = 'heat_index_c' if ($units =~ /SI/);
++            } else { 
++                $key = 'windchill_f' if ($units =~ /ENG/); 
++                $key = 'windchill_c' if ($units =~ /SI/);
++            };
++        } else {
++            $key = 'appt';
++        }
+     } elsif (/wind_spdgst/) {
+         # relying on this being after speed and gust
+         $key = "wind_spdgst";
+@@ -148,5 +157,11 @@ foreach (@types) {
+     } else {
+         $key = $label;
+     }
+-    printf $label . "::" . $xml->{$key}. "\n";
++    print $label . "::";
++    if (defined($xml->{$key})) {
++        print $xml->{$key};
++    } else {
++        print "NA";
++    }
++    print "\n";
+ }

@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.57 2009/11/08 03:53:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.58 2009/11/10 15:58:40 cardoe Exp $
+
+*mythweather-0.22_p22763-r1 (10 Nov 2009)
+*mythweather-0.21_p20069-r1 (10 Nov 2009)
+
+  10 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythweather-0.21_p20069-r1.ebuild,
+  +files/mythweather-0.21_p20069-nws-parse-fix.patch,
+  -mythweather-0.22_p22763.ebuild, +mythweather-0.22_p22763-r1.ebuild:
+  Patch from Jerry McDonald <gentoo@greatships.com> from bug #287001 fixing
+  the parsing error in the NWS script in 0.21. Fixed permissions on the
+  scripts in 0.21 and 0.22
 
 *mythweather-0.22_p22763 (08 Nov 2009)
 
