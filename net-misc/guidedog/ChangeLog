@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/guidedog
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.14 2007/06/21 15:43:42 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.15 2009/11/10 22:57:18 cla Exp $
+
+  10 Nov 2009; Dawid Węgliński <cla@gentoo.org> guidedog-1.0.0.ebuild:
+  Drop arts dependency
 
   21 Jun 2007; Christoph Mende <angelos@gentoo.org> guidedog-1.0.0.ebuild:
   Added ~amd64 and missing arts dependency wrt bug 180592
