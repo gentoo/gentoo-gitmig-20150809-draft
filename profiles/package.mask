@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10780 2009/11/10 22:06:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10781 2009/11/10 22:44:54 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -548,6 +548,7 @@ app-antivirus/klamav
 <net-p2p/ktorrent-3
 <net-misc/smb4k-0.10
 <net-im/kmess-2
+<app-text/kding-0.5
 x11-plugins/khexclock
 x11-themes/domino
 x11-themes/comix
