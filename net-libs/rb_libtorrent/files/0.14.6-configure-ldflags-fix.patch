@@ -1,0 +1,10 @@
+--- libtorrent-rasterbar-0.14.6/configure.in.orig	2009-11-10 19:04:06.000000000 +0100
++++ libtorrent-rasterbar-0.14.6/configure.in	2009-11-10 19:05:06.000000000 +0100
+@@ -157,7 +157,6 @@
+
+ dnl Apply boost config.
+ CPPFLAGS="$CPPFLAGS $BOOST_CPPFLAGS"
+-LDFLAGS="$LDFLAGS $BOOST_LDFLAGS"
+
+ if [[ "x$BUILD_TESTCLIENT" != "xno" ]]; then
+ 	CLIENT_TEST_BIN=client_test;

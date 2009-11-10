@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.67 2009/10/27 10:39:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.68 2009/11/10 18:21:58 yngwin Exp $
+
+  10 Nov 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/0.14.6-configure-ldflags-fix.patch, rb_libtorrent-0.14.6.ebuild:
+  Adding patch to fix problematic ldflags use in configure, bug 290756.
 
   27 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   rb_libtorrent-0.14.6.ebuild:
