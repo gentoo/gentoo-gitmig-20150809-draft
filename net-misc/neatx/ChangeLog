@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neatx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.4 2009/09/30 10:13:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.5 2009/11/10 21:57:46 rich0 Exp $
+
+  10 Nov 2009; Richard Freeman <rich0@gentoo.org> neatx-0.3.1_p43-r1.ebuild:
+  amd64 stable - 291619
 
   30 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   neatx-0.3.1_p43-r1.ebuild:
