@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.5.5.ebuild,v 1.1 2009/11/05 16:21:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.5.5.ebuild,v 1.2 2009/11/10 11:35:11 spatz Exp $
 
 EAPI="2"
 inherit eutils qt4 multilib
@@ -36,6 +36,7 @@ src_prepare() {
 src_configure() {
 	# econf fails, since this uses qconf
 	./configure --prefix=/usr --qtdir=/usr || die "configure failed"
+	eqmake4
 }
 
 src_install() {
