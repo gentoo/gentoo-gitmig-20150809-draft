@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3-r2.ebuild,v 1.2 2009/03/08 15:30:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3-r2.ebuild,v 1.3 2009/11/10 23:17:34 cla Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 RESTRICT="strip"
-IUSE="arts cups esd nxclient"
+IUSE="cups esd nxclient"
 
 DEPEND="x11-misc/gccmakedep
 	x11-misc/imake"
@@ -26,7 +26,6 @@ RDEPEND="dev-tcltk/expect
 	x11-apps/xauth
 	x11-apps/xrdb
 	x11-apps/sessreg
-	arts? ( kde-base/arts )
 	cups? ( net-print/cups )
 	esd? ( media-sound/esound )
 	nxclient? ( net-misc/nxclient )
@@ -59,11 +58,6 @@ src_unpack() {
 		-i nxloadconfig || die "nxloadconfig sed failed"
 
 	# Change the defaults in nxloadconfig to meet the users needs.
-	if use arts ; then
-		einfo "Enabling arts support."
-		sed -i '/ENABLE_ARTSD_PRELOAD=/s/"0"/"1"/' nxloadconfig || die
-		sed -i '/ENABLE_ARTSD_PRELOAD=/s/"0"/"1"/' node.conf.sample || die
-	fi
 	if use esd ; then
 		einfo "Enabling esd support."
 		sed -i '/ENABLE_ESD_PRELOAD=/s/"0"/"1"/' nxloadconfig || die
