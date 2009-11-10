@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.72 2009/11/09 18:51:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.73 2009/11/10 22:36:15 jer Exp $
+
+  10 Nov 2009; Jeroen Roovers <jer@gentoo.org> qt-core-4.5.3-r2.ebuild:
+  Stable for HPPA (bug #290922).
 
   09 Nov 2009; Raúl Porcel <armin76@gentoo.org> qt-core-4.5.3-r2.ebuild:
   alpha/ia64/sparc stable wrt #290922

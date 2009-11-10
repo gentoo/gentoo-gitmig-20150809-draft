@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.51 2009/11/09 18:56:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.52 2009/11/10 22:37:23 jer Exp $
+
+  10 Nov 2009; Jeroen Roovers <jer@gentoo.org> qt-script-4.5.3-r1.ebuild:
+  Stable for HPPA (bug #290922).
 
   09 Nov 2009; Joseph Jezak <josejx@gentoo.org> qt-script-4.5.3-r1.ebuild:
   Marked ppc/ppc64 stable for bug #290922.
