@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.17.ebuild,v 1.1 2009/11/10 21:04:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.17.ebuild,v 1.2 2009/11/10 22:03:21 ulm Exp $
 
 inherit elisp eutils
 
@@ -16,10 +16,9 @@ IUSE=""
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	emake || die "emake failed"
-	elisp-make-autoload-file lisp/${PN}-autoloads.el lisp \
-		|| die "elisp-make-autoload-file failed"
+	elisp-make-autoload-file lisp/${PN}-autoloads.el lisp || die
 }
 
 src_install() {
