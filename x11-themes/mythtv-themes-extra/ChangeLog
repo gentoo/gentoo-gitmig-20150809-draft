@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.16 2009/11/10 14:52:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.17 2009/11/10 16:04:07 cardoe Exp $
+
+  10 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-themes-extra-0.21_p18657.ebuild:
+  fix for bug #258115
 
 *mythtv-themes-extra-0.22_p22492 (10 Nov 2009)
 
