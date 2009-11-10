@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/mythtv-themes-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.15 2009/11/10 14:50:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.16 2009/11/10 14:52:45 cardoe Exp $
+
+*mythtv-themes-extra-0.22_p22492 (10 Nov 2009)
+
+  10 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-themes-extra-0.22_rc22492.ebuild,
+  +mythtv-themes-extra-0.22_p22492.ebuild:
+  add 0.22 final. remove rc version. the installed data is identical just
+  renamed
 
   10 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   -mythtv-themes-extra-0.21_p17416.ebuild,

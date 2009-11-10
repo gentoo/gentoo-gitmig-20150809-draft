@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.22_rc22492.ebuild,v 1.1 2009/10/31 22:44:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.22_p22492.ebuild,v 1.1 2009/11/10 14:52:45 cardoe Exp $
 
 EAPI=2
 inherit qt4 mythtv
