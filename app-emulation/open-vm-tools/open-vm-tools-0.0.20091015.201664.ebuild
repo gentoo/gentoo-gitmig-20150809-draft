@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20091015.201664.ebuild,v 1.2 2009/11/07 13:46:16 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20091015.201664.ebuild,v 1.3 2009/11/10 16:51:16 vadimk Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ RDEPEND="app-emulation/open-vm-tools-kmod
 		x11-libs/gtk+
 		x11-libs/libnotify
 		x11-libs/libX11
+		x11-libs/libXtst
 	)
 	fuse? ( sys-fs/fuse )
 	icu? ( dev-libs/icu )
