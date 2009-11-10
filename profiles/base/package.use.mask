@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.102 2009/11/07 20:54:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.103 2009/11/10 18:39:23 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -175,8 +175,3 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Alexis Ballier <aballier@gentoo.org> (07 Jul 2009)
 # The pda interface doesnt build, bug #277037
 >=media-video/vlc-1.0.0 pda
-
-# Samuli Suominen <ssuominen@gentoo.org> (31 Jul 2009)
-# Security issues wrt #190835
-games-fps/doom-data doomsday
-games-fps/freedoom doomsday

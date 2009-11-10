@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.106 2009/11/10 01:33:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.107 2009/11/10 18:39:23 ssuominen Exp $
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE doomsday.
 
   10 Nov 2009; Christian Faulhammer <fauli@gentoo.org> use.mask:
   Mask ps3 USE flag for bug 244018
