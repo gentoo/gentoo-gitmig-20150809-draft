@@ -100,9 +100,9 @@ attach() {
 	printf "    Enter your Account Key: "
 	read key
 
-	RC_QUIET_STDOUT="yes" svc_status
+	RC_QUIET_STDOUT="yes" status
 	if [ $? = 1 ]; then
-		svc_start
+		start
 	fi
 	ebegin "Attaching to project"
 		# we have to work in runtime directory
@@ -125,6 +125,7 @@ stop() {
 }
 
 restart() {
-	svc_stop
-	svc_start
+	stop
+	sleep 3
+	start
 }
