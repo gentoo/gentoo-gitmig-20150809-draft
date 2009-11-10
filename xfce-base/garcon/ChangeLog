@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.6 2009/11/02 18:14:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.7 2009/11/10 16:41:18 josejx Exp $
+
+  10 Nov 2009; Joseph Jezak <josejx@gentoo.org> garcon-0.1.0.ebuild:
+  Marked ~ppc64 for bug #289983.
 
   02 Nov 2009; Raúl Porcel <armin76@gentoo.org> garcon-0.1.0.ebuild:
   Add ~alpha/~arm/~ia64/~sh/~sparc wrt #289983
