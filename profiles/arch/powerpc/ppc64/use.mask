@@ -11,6 +11,9 @@ battery
 # Unmask the flag which corresponds to ARCH.
 -ppc64
 
+# Unmask the flag for Playstation 3
+-ps3
+
 # Raúl Porcel <armin76@gentoo.org> (11 Aug 2008)
 # Missing keyword on net-wireless/madwifi
 madwifi

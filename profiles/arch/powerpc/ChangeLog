@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.40 2009/11/08 07:05:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.41 2009/11/10 01:41:00 fauli Exp $
+
+  10 Nov 2009; Christian Faulhammer <fauli@gentoo.org> ppc64/use.mask:
+  unmask ps3 USE flag for bug 244018
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org> package.mask:
   Removed kde-4.3 mask.
