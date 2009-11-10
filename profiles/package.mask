@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10775 2009/11/10 11:58:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10776 2009/11/10 12:20:41 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -541,7 +541,6 @@ app-antivirus/klamav
 <net-misc/smb4k-0.10
 <net-im/kmess-2
 x11-themes/domino
-<x11-themes/crystal-2
 x11-themes/comix
 x11-themes/baghira
 x11-themes/alloy
@@ -1058,15 +1057,6 @@ media-sound/krecord
 # Dominik Kapusta <ayoy@gentoo.org> (15 Oct 2009)
 # Masked for testing
 =dev-embedded/scratchbox-2*
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Oct 2009)
-# ksynaptics is replaced by x11-misc/touchfreeze
-# gsynaptics is replaced by gnome-extra/gpointing-device-settings
-# libsynaptics is orphaned library
-# bug 289170
-gnome-extra/gsynaptics
-x11-libs/libsynaptics
-kde-misc/ksynaptics
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Oct 2009)
 # Requires aRTs and last released in 2007

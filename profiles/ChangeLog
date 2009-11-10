@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3536 2009/11/09 17:04:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3537 2009/11/10 12:20:40 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Removed gsynaptics, ksynaptics and libsynaptics from tree. Replaced by
+  kcm_touchpad, synaptiks, touchfreeze, and gpointing-device-settings.
 
   09 Nov 2009; Vlastimil Babka <caster@gentoo.org> license_groups:
   Add jrockit license to @EULA.
