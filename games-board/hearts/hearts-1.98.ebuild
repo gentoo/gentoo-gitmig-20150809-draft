@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/hearts-1.98.ebuild,v 1.6 2009/08/12 00:56:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/hearts-1.98.ebuild,v 1.7 2009/11/10 20:55:53 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit eutils kde
 
 DESCRIPTION="clone of the hearts game for KDE that comes with Windows"
