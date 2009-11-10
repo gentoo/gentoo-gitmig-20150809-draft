@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/six-0.5.3.ebuild,v 1.5 2009/08/18 00:19:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/six-0.5.3.ebuild,v 1.6 2009/11/10 20:58:49 ssuominen Exp $
 
-ARTS_REQUIRED="yes"
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="A Hex playing program for KDE"
@@ -18,7 +18,7 @@ PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 DEPEND="!dev-scheme/gambit" # bug #272633
 
-need-kde 3
+need-kde 3.5
 
 src_unpack() {
 	kde_src_unpack

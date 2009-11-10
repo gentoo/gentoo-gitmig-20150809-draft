@@ -1,6 +1,9 @@
 # ChangeLog for games-board/six
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.16 2009/08/18 00:19:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.17 2009/11/10 20:58:49 ssuominen Exp $
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> six-0.5.3.ebuild:
+  Remove aRts support (deprecated).
 
   18 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> six-0.5.3.ebuild:
   add a blocker for dev-scheme/gambit (bug #272633)
