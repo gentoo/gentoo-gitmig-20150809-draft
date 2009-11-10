@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.11 2009/09/15 20:51:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/xpertmud/xpertmud-3.1_pre1.ebuild,v 1.12 2009/11/10 21:03:24 ssuominen Exp $
 
 EAPI=2
+ARTS_REQUIRED=never
 inherit eutils kde
 
 MY_PV="${PV/_pre/preview}"
@@ -19,7 +20,7 @@ DEPEND=">=sys-devel/libperl-5.6.1
 	python? ( >=dev-lang/python-2.2 )
 	ruby? ( >=dev-lang/ruby-1.8.0 )"
 
-need-kde 3
+need-kde 3.5
 
 S=${WORKDIR}/xpertmud-${MY_PV}
 
