@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.7.ebuild,v 1.1 2009/11/10 08:39:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.7.ebuild,v 1.2 2009/11/10 08:42:08 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic apache-module autotools perl-module
 
-DESCRIPTION="OpenSRF is a framework that allows the development of software without requiring a detailed knowledge of Evergreen's structure."
+DESCRIPTION="Framework for the high-level development of the Evergreen ILS software"
 HOMEPAGE="http://open-ils.org/"
 SRC_URI="http://open-ils.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -45,7 +45,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.0.7-buildfix.patch
 	eautoreconf
 }
@@ -83,7 +82,7 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}" && emake || die "main emake failed"
+	emake || die "main emake failed"
 	cd "${PERL_S}" && S="${PERL_S}" perl-module_src_compile || die "perl-module_src_compile failed"
 }
 
@@ -97,11 +96,6 @@ src_install() {
 
 	# Docs
 	dodoc README doc/*
-	
-	# Fixup upstream javascript install
-	#insinto /usr/share/opensrf
-	#doins src/javascript/*js
-	#rm -rf "${D}"/usr/$(get_libdir)/javascript/
 }
 
 src_test() {
