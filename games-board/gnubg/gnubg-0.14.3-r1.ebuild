@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.14 2009/08/07 21:09:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.15 2009/11/10 20:45:53 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -16,7 +16,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="arts esd gdbm gtk guile nas nls opengl python readline X"
+IUSE="esd gdbm gtk guile nas nls opengl python readline X"
 
 # test fail - bug #132002
 RESTRICT="test"
@@ -25,7 +25,6 @@ RESTRICT="test"
 RDEPEND=">=media-libs/freetype-2
 	media-libs/libpng
 	dev-libs/libxml2
-	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	gdbm? ( sys-libs/gdbm )
 	=dev-libs/glib-2*
@@ -77,8 +76,8 @@ src_compile() {
 	else
 		myconf="${myconf} --without-gtk --disable-gtktest --without-board3d"
 	fi
-	if use arts || use esd ; then
-		myconf="${myconf} --with-sound"
+	if use esd; then
+		myconf="${myconf} --disable-artsc-test --with-sound"
 	else
 		myconf="${myconf} --without-sound --disable-esdtest --disable-artsc-test"
 	fi
@@ -89,7 +88,7 @@ src_compile() {
 	filter-flags -ffast-math #bug #67929
 
 	LIBART_CONFIG="/usr/bin/libart2-config" egamesconf \
-		$(use_enable arts artsc) \
+		--disable-artsc \
 		$(use_enable esd) \
 		$(use_with gdbm) \
 		$(use_enable nas) \

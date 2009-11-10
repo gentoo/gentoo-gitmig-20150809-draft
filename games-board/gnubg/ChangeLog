@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.43 2009/08/20 06:44:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.44 2009/11/10 20:45:53 ssuominen Exp $
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gnubg-0.14.3-r1.ebuild:
+  Remove USE arts (deprecated).
 
 *gnubg-20090817 (20 Aug 2009)
 
