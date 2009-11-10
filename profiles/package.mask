@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10781 2009/11/10 22:44:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10782 2009/11/10 23:16:08 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -797,8 +797,6 @@ kde-misc/filelight-i18n
 # Masked for removal in 30 days.
 kde-base/noatun
 kde-base/noatun-plugins
-media-plugins/hayes
-media-plugins/jefferson
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # KDE3-only packages with QA issues.
