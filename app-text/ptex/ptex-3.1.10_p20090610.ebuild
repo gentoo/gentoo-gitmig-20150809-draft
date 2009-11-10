@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610.ebuild,v 1.4 2009/10/24 17:29:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610.ebuild,v 1.5 2009/11/10 14:35:30 maekke Exp $
 
 # jmbreuer FOR DEV ONLY
 RESTRICT="mirror test"
@@ -29,7 +29,7 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	http://tutimura.ath.cx/~nob/tex/ptetex/ptetex-cmap/${PTETEX_CMAP}.tar.gz
 	mirror://gentoo/${PN}-3.1.10_p20071122-dviljk-security-fixes.patch.bz2"
 
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 
 BUILD_DIR="${WORKDIR}/build/usr"
 
