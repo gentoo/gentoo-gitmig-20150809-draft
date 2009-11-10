@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r1.ebuild,v 1.2 2009/11/09 18:28:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r1.ebuild,v 1.3 2009/11/10 13:25:44 cla Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://libgd.org/releases/${P}.tar.bz2"
 
 LICENSE="|| ( as-is BSD )"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="fontconfig jpeg png truetype xpm"
 
 RDEPEND="fontconfig? ( media-libs/fontconfig )
