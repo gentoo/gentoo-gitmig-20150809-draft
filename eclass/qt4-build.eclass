@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.50 2009/11/09 19:35:44 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.51 2009/11/10 00:56:29 spatz Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -328,7 +328,7 @@ standard_configure_options() {
 		;;
 	esac
 
-	myconf="${myconf} -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license -no-rpath
+	myconf="${myconf} -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
 		-datadir ${QTDATADIR} -docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR}
 		-plugindir ${QTPLUGINDIR} -sysconfdir ${QTSYSCONFDIR}
