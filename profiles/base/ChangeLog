@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.105 2009/11/01 23:05:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.106 2009/11/10 01:33:26 fauli Exp $
+
+  10 Nov 2009; Christian Faulhammer <fauli@gentoo.org> use.mask:
+  Mask ps3 USE flag for bug 244018
 
   01 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   Mask tracker USE flag in apps using it, bug #291501.
