@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.83 2009/08/10 19:57:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.84 2009/11/10 10:27:04 robbat2 Exp $
+
+*PDL-2.4.5 (10 Nov 2009)
+
+  10 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +PDL-2.4.5.ebuild:
+  Version bump via perl-bump experimental tool.
 
   10 Aug 2009; Torsten Veller <tove@gentoo.org> PDL-2.4.3-r1.ebuild,
   PDL-2.4.4.ebuild:
