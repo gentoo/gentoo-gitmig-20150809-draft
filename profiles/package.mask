@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10777 2009/11/10 16:45:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10778 2009/11/10 20:35:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -863,11 +863,6 @@ app-mobilephone/kmobiletools
 # Masked for removal in 30 days.
 =net-irc/kvirc-3*
 
-# Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2009)
-# KDE3-only. Doesn't compile wrt bug #237966.
-# Masked for removal in 30 days.
-games-board/knights
-
 # Raúl Porcel <armin76@gentoo.org> (22 Oct 2009)
 # Not needed anymore, vanilla kernel works
 # pretty well on SH nowadays.
@@ -932,11 +927,6 @@ kde-misc/kdmtheme
 =dev-util/bzrtools-2.1.0_beta1*
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
-# Doesn't compile with KDE4 installed wrt bug #279297.
-# Masked for removal in 30 days.
-games-board/kwappen
-
-# Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
 # Doesn't compile with KDE4 installed wrt bug #279659.
 # Masked for removal in 30 days.
 kde-misc/ksystemlog
@@ -968,11 +958,6 @@ kde-misc/metamonitor
 # Fails to build with KDE4 installed wrt bug #279716.
 # Masked for removal in 30 days.
 kde-misc/ksplash-engine-moodin
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
-# Fails to build with KDE4 installed wrt bug #277575.
-# Masked for removal in 30 days.
-games-board/schafkopf
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
 # Fails to build with KDE4 installed wrt bug #277575.
