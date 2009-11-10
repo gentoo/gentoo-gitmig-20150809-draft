@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.14 2009/01/29 08:20:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.15 2009/11/10 21:03:00 mr_bones_ Exp $
 
 EAPI=2
+ARTS_REQUIRED=never
 inherit eutils kde
 
 DESCRIPTION="A comfortable replacement for the xboard chess interface"
@@ -14,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="=dev-db/sqlite-2*
+DEPEND="dev-db/sqlite:0
 	x11-libs/qt:3[opengl]"
 need-kde 3
 
