@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.3.ebuild,v 1.2 2009/10/29 12:50:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.5.ebuild,v 1.1 2009/11/10 07:42:50 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ ka kk kn ko ku lt lv mk ml mn mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
 ru si sk sl sq sr sv-SE ta-LK ta te th tr uk vi zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
-XUL_PV="1.9.1.3"
+XUL_PV="1.9.1.5"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 MAJ_XUL_PV="1.9.1"
 DESKTOP_PV="3.5"
@@ -57,8 +57,7 @@ RDEPEND="
 	sqlite? ( >=dev-db/sqlite-3.6.10 )
 	>=app-text/hunspell-1.2
 	alsa? ( media-libs/alsa-lib )
-	>=net-libs/xulrunner-${XUL_PV}[java=,sqlite=]
-	!>=net-libs/xulrunner-1.9.2
+	~net-libs/xulrunner-${XUL_PV}[java=,sqlite=]
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]"
 
@@ -120,7 +119,7 @@ src_prepare() {
 			cp "${S}"/browser/branding/unofficial/brand\.* locale/branding/
 
 			# Any variable being set should be changed
-			find . -type f -exec sed -i 's/\(.*=.*\)Firefox/\1IceCat/g' {} \;
+			find . -type f -exec sed -i 's/\(.*=.*\)Firefox/\1IceCat/g' {} +;
 
 			rm ${X}.jar
 			zip -q -r ${X}.jar .
@@ -145,6 +144,7 @@ src_prepare() {
 	eautoreconf
 
 	# We need to re-patch this because autoreconf overwrites it
+	cd "${S}"
 	epatch "${FILESDIR}/000_flex-configure-LANG.patch"
 }
 
