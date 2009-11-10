@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.93 2009/11/08 23:15:43 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.94 2009/11/10 01:54:12 williamh Exp $
+
+*openrc-0.5.2-r2 (10 Nov 2009)
+
+  10 Nov 2009; William Hubbs <williamh@gentoo.org> +openrc-0.5.2-r2.ebuild,
+  +files/openrc-0.5.2-dont-wipe-wtmp.patch,
+  +files/openrc-0.5.2-fix-default-domain.patch,
+  +files/openrc-0.5.2-fix-iproute2-support.patch,
+  +files/openrc-0.5.2-linux-containers.patch,
+  +files/openrc-0.5.2-ppp-options.patch, openrc-9999.ebuild,
+  +files/openrc-9999-msg-style.patch:
+  Revision bump and sync with live ebuild.
+  This new revision adds linux containers support, fixes ppp options, 
+  and fixes #289849.
 
   08 Nov 2009; William Hubbs <williamh@gentoo.org>
   -files/0.4.2/0001-msg-style.patch,
