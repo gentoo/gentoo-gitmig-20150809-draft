@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-jaybird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.28 2009/11/01 20:35:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.29 2009/11/10 14:34:30 maekke Exp $
+
+  10 Nov 2009; Markus Meier <maekke@gentoo.org>
+  jdbc-jaybird-2.1.5-r1.ebuild:
+  amd64/x86 stable, bug #216412
 
 *jdbc-jaybird-2.1.5-r2 (01 Nov 2009)
 
