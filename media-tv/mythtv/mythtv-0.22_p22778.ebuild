@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p22778.ebuild,v 1.2 2009/11/10 15:24:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p22778.ebuild,v 1.3 2009/11/10 15:25:48 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -100,9 +100,13 @@ src_configure() {
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use vdpau && myconf="${myconf} --enable-vdpau"
 
-	#from bug #220857
-	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw \
-		--disable-xvmc-vld"
+	#from bug #220857 and fixed for bug #292481
+	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw"
+	if use video_cards_via && use xvmc; then
+		myconf="${myconf} --enable-xvmc-vld";
+	else
+		myconf="${myconf} --disable-xvmc-vld";
+	fi
 
 	# according to the Ubuntu guys, this works better being always on
 	myconf="${myconf} --enable-glx-procaddrarb"
