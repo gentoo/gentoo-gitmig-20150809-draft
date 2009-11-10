@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.6 2009/06/12 16:35:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.7 2009/11/10 21:15:26 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,8 +19,8 @@ RDEPEND="sys-libs/glibc"
 
 S=${WORKDIR}
 
-dir="${GAMES_PREFIX_OPT}/bf1942"
-Ddir="${D}/${dir}"
+dir=${GAMES_PREFIX_OPT}/bf1942
+Ddir=${D}/${dir}
 
 src_unpack() {
 	mkdir bf1942 && cd bf1942
@@ -30,13 +30,13 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
-	mv -f ${S}/bf1942/* ${S} || die "Copying patch files"
-	rm -rf ${S}/bf1942 || die "removing extra directory"
+	dodir "${dir}"
+	mv -f "${S}"/bf1942/* "${S}" || die "Copying patch files"
+	rm -rf "${S}"/bf1942 || die "removing extra directory"
 
-	mv ${S}/* ${Ddir} || die "Copying game data"
-	dosym bf1942_lnxded.dynamic ${dir}/bf1942_lnxded
-	games_make_wrapper ${PN} ./bf1942_lnxded ${dir}
+	mv "${S}"/* "${Ddir}" || die "Copying game data"
+	dosym bf1942_lnxded.dynamic "${dir}"/bf1942_lnxded
+	games_make_wrapper ${PN} ./bf1942_lnxded "${dir}"
 
 	prepgamesdirs
 }
