@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10774 2009/11/10 11:54:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10775 2009/11/10 11:58:55 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1252,10 +1252,6 @@ dev-php5/onphp-module
 # Fails to build with newest mono, causing dependency
 # conflicts (#259700).
 dev-lang/nemerle
-
-# Torsten Veller <tove@gentoo.org> (09 Sep 2009)
-# Convert-UUlib-1.30 breaks amavisd-new (#283797)
-=dev-perl/Convert-UUlib-1.30
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2009)
 # Masked for security, has no maintainer. Bug 283434.
