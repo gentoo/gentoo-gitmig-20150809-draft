@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.46 2009/11/08 10:41:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.47 2009/11/10 02:05:56 fauli Exp $
+
+  10 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  mDNSResponder-212.1.ebuild:
+  stable x86, security bug 290822
 
 *mDNSResponder-212.1 (08 Nov 2009)
 
