@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10778 2009/11/10 20:35:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10779 2009/11/10 21:28:06 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (10 Nov 2009)
+# Has kde-base/arts depend, and it can't be removed.
+# Masked for removal.
+games-puzzle/quintalign
+games-sports/kbilliards
+games-strategy/kpictorial
+games-util/krconlinux
 
 # Víctor Ostorga <vostorga@gentoo.org> (09 Nov 2009)
 # Last version bump in 2004, allows buffer overflow bug #284747
