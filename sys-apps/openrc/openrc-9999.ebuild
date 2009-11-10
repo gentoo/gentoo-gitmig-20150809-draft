@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.63 2009/11/10 01:54:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.64 2009/11/10 18:35:40 williamh Exp $
 
 EAPI="1"
 
@@ -363,7 +363,7 @@ pkg_postinst() {
 			sed -i '1i# This file is obsolete.\n' "${NET_EXAMPLE}"
 			elog "${NET_EXAMPLE} should be removed."
 		fi
-		elog "The new version is in ${ROOT}/usr/share/${PF}/net.example"
+		elog "The new file is ${ROOT}/usr/share/doc/${PF}/net.example"
 	fi
 
 	# /etc/conf.d/wireless.example is no longer valid
