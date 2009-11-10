@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kamikaze
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.18 2009/01/23 08:53:43 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.19 2009/11/10 20:06:26 ssuominen Exp $
+
+  10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kamikaze-0.2.2-r1.ebuild:
+  Remove USE arts (deprecated).
 
   23 Jan 2009; Alfredo Tupone <tupone@gentoo.org> kamikaze-0.2.2-r1.ebuild:
   Fix gcc-4.3 bug #251120 by flameeyes@gentoo.org
