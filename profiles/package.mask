@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10773 2009/11/09 16:36:59 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10774 2009/11/10 11:54:07 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1161,13 +1161,6 @@ dev-libs/skalibs
 # Live ebuilds for bleeding-edge users
 ~www-client/chromium-9999
 ~www-client/chromium-bin-9999
-
-# Torsten Veller <tove@gentoo.org> (01 Oct 2009)
-# Old. Replaced. Or just unmaintained.
-# - added as dep for a package that never made it into the tree (#21549)
-#   nothing depends on it, broken, no releases for years
-#   bug #280497 (12 Oct 2009)
-dev-perl/Net-FTPServer
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Sep 2009)
 # wsgiref module is included in Python >=2.5. Masked for deletion in 30 days.
