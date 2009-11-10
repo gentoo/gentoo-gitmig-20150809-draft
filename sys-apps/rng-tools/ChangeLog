@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.26 2009/09/04 03:21:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.27 2009/11/10 03:41:57 robbat2 Exp $
+
+*rng-tools-2-r2 (10 Nov 2009)
+  
+  10 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +rng-tools-2-r2.ebuild,
+  +files/2-r2/rngd, +files/2-r2/rngd-conf:
+  Add support to use TPM devices as RNG sources per Matt Domsch:
+  http://domsch.com/blog/?p=107. Also clean up the init script.
 
   04 Sep 2009; William Hubbs <williamh@gentoo.org> -rng-tools-2.ebuild:
   removed old version
