@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4978 2009/11/09 14:47:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4979 2009/11/10 22:08:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1122,8 +1122,6 @@ games-rpg/nwn-cep:sou - Adds support for the Shadows of Undrentide expension pac
 games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
-games-simulation/openttd:scenarios - Install additional contributed scenarios
-games-simulation/openttd:timidity - Add sound support (timidity)
 games-simulation/singularity:music - Install music files
 games-sports/xmoto:editor - Depend on inkscape, scripts to convert svg to level (svg2lvl)
 games-strategy/dark-oberon:fmod - Add sound support (fmod)
