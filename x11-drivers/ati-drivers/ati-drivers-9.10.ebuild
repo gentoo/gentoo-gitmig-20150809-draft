@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.10.ebuild,v 1.2 2009/10/28 10:48:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.10.ebuild,v 1.3 2009/11/10 14:06:31 scarabeus Exp $
 
 EAPI="2"
 
@@ -24,7 +24,6 @@ KEYWORDS="~amd64 ~x86"
 SLOT="1"
 
 RDEPEND="
-	!>=media-libs/mesa-7.6
 	!>=x11-base/xorg-server-1.7.0
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra

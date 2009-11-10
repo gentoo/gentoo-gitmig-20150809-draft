@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.200 2009/10/29 22:06:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.201 2009/11/10 14:06:31 scarabeus Exp $
+
+  10 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.10.ebuild:
+  Drop blocker where not needed.
 
   29 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop myself from maintainers. Dont use this, its getting more and more
