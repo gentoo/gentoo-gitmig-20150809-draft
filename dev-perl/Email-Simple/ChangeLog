@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-Simple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.43 2009/10/12 12:02:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.44 2009/11/10 10:13:28 robbat2 Exp $
+
+*Email-Simple-2.100 (10 Nov 2009)
+
+  10 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Email-Simple-2.100.ebuild:
+  Version bump via perl-bump experimental tool.
 
   12 Oct 2009; Torsten Veller <tove@gentoo.org> -Email-Simple-2.003.ebuild:
   Cleanup

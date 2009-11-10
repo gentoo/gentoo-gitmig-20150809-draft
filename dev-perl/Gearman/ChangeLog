@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Gearman
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman/ChangeLog,v 1.5 2008/09/30 13:10:20 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman/ChangeLog,v 1.6 2009/11/10 10:15:19 robbat2 Exp $
+
+*Gearman-1.10 (10 Nov 2009)
+
+  10 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +Gearman-1.10.ebuild:
+  Version bump via perl-bump experimental tool.
 
   30 Sep 2008; Torsten Veller <tove@gentoo.org> -Gearman-1.07.ebuild,
   -Gearman-1.08.ebuild:
