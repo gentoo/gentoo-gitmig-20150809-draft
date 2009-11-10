@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826.ebuild,v 1.2 2008/08/06 14:50:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826-r1.ebuild,v 1.1 2009/11/10 16:40:54 hncaldwell Exp $
 
 inherit eutils
 
@@ -27,6 +27,10 @@ src_compile() {
 	if use !binary; then
 		has_version dev-lang/mlton || die "emerge with binary use flag first"
 
+		# Fix location in which to install man pages
+		sed -i 's@^MAN_PREFIX_EXTRA :=.*@MAN_PREFIX_EXTRA := /share@' \
+			Makefile || die 'sed Makefile failed'
+
 		# Does not support parallel make
 		emake -j1 all-no-docs || die
 		if use doc; then
@@ -38,7 +42,10 @@ src_compile() {
 
 src_install() {
 	if use binary; then
-		mv "${WORKDIR}/usr" "${D}"
+		# Fix location in which to install man pages
+		mv "${WORKDIR}/usr/man" "${WORKDIR}/usr/share" || die "mv man failed"
+
+		mv "${WORKDIR}/usr" "${D}" || die "mv failed"
 	else
 		emake DESTDIR="${D}" install-no-docs || die
 		if use doc; then emake DESTDIR="${D}" TDOC="${D}"/usr/share/doc/${P} install-docs || die; fi
