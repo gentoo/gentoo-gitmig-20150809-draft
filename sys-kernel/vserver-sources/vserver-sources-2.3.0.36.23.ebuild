@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.3.0.36.14-r1.ebuild,v 1.1 2009/08/25 07:19:05 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.3.0.36.23.ebuild,v 1.1 2009/11/11 08:29:10 hollow Exp $
 
 ETYPE="sources"
-CKV="2.6.29"
+CKV="2.6.31"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="6"
 
 K_USEPV=1
 K_NOSETEXTRAVERSION=1
