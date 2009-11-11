@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3551 2009/11/11 15:38:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3552 2009/11/11 17:39:36 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask app-laptop/khdapsmon, app-laptop/khdapsmonitor, and
+  app-laptop/kthinkbat.
 
   11 Nov 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Unmask libdvdread/-nav
