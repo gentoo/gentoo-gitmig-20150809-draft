@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.19 2009/10/18 10:19:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.20 2009/11/11 11:44:15 hwoarang Exp $
+
+*wally-2.3.0 (11 Nov 2009)
+
+  11 Nov 2009; <hwoarang@gentoo.org> +wally-2.3.0.ebuild:
+  Version bump
 
   18 Oct 2009; Markos Chandras <hwoarang@gentoo.org> -wally-2.0.3.ebuild:
   Remove old ebuild
