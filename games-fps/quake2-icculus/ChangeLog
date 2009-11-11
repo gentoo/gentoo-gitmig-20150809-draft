@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.36 2009/11/09 22:50:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.37 2009/11/11 09:43:08 volkmar Exp $
+
+  11 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild:
+  Stable for ppc, bug 275507
 
   09 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild:

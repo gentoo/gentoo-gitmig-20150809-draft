@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-demodata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.4 2009/06/30 21:00:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.5 2009/11/11 09:42:09 volkmar Exp $
+
+  11 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  quake2-demodata-3.14.ebuild:
+  Stable for ppc, bug 275507
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   quake2-demodata-3.14.ebuild:
