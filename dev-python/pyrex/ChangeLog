@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.79 2009/11/11 00:07:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.80 2009/11/11 01:47:45 tcunha Exp $
+
+  11 Nov 2009; Tiago Cunha <tcunha@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
+  stable sparc, bug 287562
 
   11 Nov 2009; Brent Baude <ranger@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
   Marking pyrex-0.9.8.5-r1 ppc64 for bug 287562
