@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.1 2009/06/20 01:04:12 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.2 2009/11/11 19:39:17 ssuominen Exp $
 
-inherit eutils kde-functions
+inherit eutils
 
 DESCRIPTION="A GTK program for drawing organic molecules"
 HOMEPAGE="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/"
@@ -10,32 +10,22 @@ SRC_URI="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="gnome kde nls"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="gnome nls"
 
 RDEPEND="media-gfx/transfig
-		=x11-libs/gtk+-2*
-		kde? ( =kde-base/kdelibs-3.5* )
-		x86? ( media-libs/libemf )"
-
+	=x11-libs/gtk+-2*
+	x86? ( media-libs/libemf )"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-}
+	dev-util/pkgconfig"
 
 src_compile() {
 	local config_opts
 	local mycppflags
-	if ! use kde; then
-		unset KDEDIR
-		config_opts="${config_opts} --without-kdedir"
-	else
-		set-kdedir
-		config_opts="${config_opts} --with-kdedir=${KDEDIR}"
-	fi
+
+	unset KDEDIR
+	config_opts="${config_opts} --without-kdedir"
+
 	if [ ${ARCH} = "x86"  ]; then
 		config_opts="${config_opts} --enable-emf"
 		mycppflags="${mycppflags} -I /usr/include/libEMF"
