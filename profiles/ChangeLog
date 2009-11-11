@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3554 2009/11/11 20:10:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3555 2009/11/11 20:34:07 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Nov 2009; Ben de Groot <yngwin@gentoo.org> arch/sparc/package.use.mask:
+  Mask doc useflag on dev-libs/uriparser on sparc, as it depends on
+  qt-assistant, which needs rekeywording (bug 292838).
 
   11 Nov 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking dev-embedded/qvfb
