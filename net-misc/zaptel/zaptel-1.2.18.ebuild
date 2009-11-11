@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.18.ebuild,v 1.7 2009/09/23 19:50:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.18.ebuild,v 1.8 2009/11/11 07:50:18 robbat2 Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -26,7 +26,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 
-RDEPEND="dev-libs/libusb
+RDEPEND="=virtual/libusb-0*
 	>=dev-libs/newt-0.50.0
 	astribank? ( dev-lang/perl )"
 
