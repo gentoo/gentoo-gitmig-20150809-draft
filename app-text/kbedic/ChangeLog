@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbedic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.23 2009/08/07 09:02:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.24 2009/11/11 19:25:40 ssuominen Exp $
+
+  11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kbedic-4.0.ebuild:
+  Remove kde-base/kdelibs:3.5 support.
 
   07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   -files/kbedic-3.1-gcc3.diff, -files/kbedic-3.1-location.diff,
