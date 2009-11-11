@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.5 2009/11/10 07:42:50 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.6 2009/11/11 14:23:51 anarchy Exp $
+
+  11 Nov 2009; Jory A. Pratt <anarchy@gentoo.org> icecat-3.5.5.ebuild:
+  update patchset to match firefox's
 
 *icecat-3.5.5 (10 Nov 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.5.ebuild,v 1.1 2009/11/10 07:42:50 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.5.ebuild,v 1.2 2009/11/11 14:23:51 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -20,7 +20,7 @@ MY_PV="${PV/_beta/b}" # Handle betas for SRC_URI
 MY_PV="${PV/_/}" # Handle rcs for SRC_URI
 FIREFOX_PN="mozilla-firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
-PATCH="${FIREFOX_PN}-3.5.2-patches-0.1"
+PATCH="${FIREFOX_PN}-3.5.5-patches-0.1"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
