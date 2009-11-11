@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.3-r3.ebuild,v 1.4 2009/11/06 17:47:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.3-r3.ebuild,v 1.5 2009/11/11 17:07:48 jer Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -39,7 +39,7 @@ src_prepare() {
 	rm setuptools/tests/test_packageindex.py
 
 	sed -e "/def _being_installed():/a \\
-    return False" -i setup.py || die "sed setup.py failed"
+	return False" -i setup.py || die "sed setup.py failed"
 }
 
 src_test() {
