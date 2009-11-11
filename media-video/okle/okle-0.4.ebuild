@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/okle/okle-0.4.ebuild,v 1.11 2007/11/27 12:10:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/okle/okle-0.4.ebuild,v 1.12 2009/11/11 12:59:41 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde eutils
 
 DESCRIPTION="oKle is a KDE frontend to the Ogle DVD player."
@@ -18,6 +19,5 @@ need-kde 3
 
 src_unpack() {
 	kde_src_unpack
-
-	use arts || epatch "${FILESDIR}/${P}-configure-arts.patch"
+	epatch "${FILESDIR}/${P}-configure-arts.patch"
 }
