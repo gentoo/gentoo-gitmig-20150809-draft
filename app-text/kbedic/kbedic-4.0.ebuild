@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.17 2009/11/11 19:25:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.18 2009/11/11 19:29:20 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils qt3
 
 DESCRIPTION="English <-> Bulgarian Dictionary"
 HOMEPAGE="http://kbedic.sourceforge.net"
-SRC_URI="mirror://sourceforge/kbedic/$P.tar.gz"
+SRC_URI="mirror://sourceforge/kbedic/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
