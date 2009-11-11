@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/waveselect-0.1.2.ebuild,v 1.6 2009/06/28 23:33:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/waveselect-0.1.2.ebuild,v 1.7 2009/11/11 12:37:20 ssuominen Exp $
 
 EAPI=1
+ARTS_REQUIRED=never
 inherit eutils kde
 
 DESCRIPTION="Waveselect is wireless lan connection tool for Linux using QT and wireless-tools."
