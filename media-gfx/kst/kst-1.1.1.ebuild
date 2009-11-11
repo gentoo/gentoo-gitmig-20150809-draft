@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.1.1.ebuild,v 1.6 2008/06/26 13:58:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.1.1.ebuild,v 1.7 2009/11/11 12:11:31 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="A plotting and data viewing program for KDE."
@@ -15,7 +16,7 @@ IUSE=""
 
 DEPEND="sci-libs/gsl"
 
-need-kde 3.1
+need-kde 3.5
 
 PATCHES=( "${FILESDIR}/${PN}-1.1.0-netcdf-fix.patch" )
 
