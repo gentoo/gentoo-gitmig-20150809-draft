@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2-r1.ebuild,v 1.7 2009/11/11 14:30:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2-r1.ebuild,v 1.8 2009/11/11 17:04:17 ssuominen Exp $
 
 ARTS_REQUIRED=never
 inherit kde
@@ -12,7 +12,7 @@ SRC_URI="http://helios.et.put.poznan.pl/~jstachow/pub/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="3.5"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="net-dns/avahi"
