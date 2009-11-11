@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/guarddog-2.6.0-r1.ebuild,v 1.3 2009/05/18 17:38:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/guarddog-2.6.0-r1.ebuild,v 1.4 2009/11/11 14:25:29 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="Firewall configuration utility for KDE 3"

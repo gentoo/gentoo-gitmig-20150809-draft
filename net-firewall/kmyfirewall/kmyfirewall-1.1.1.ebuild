@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.1.1.ebuild,v 1.4 2008/06/27 21:11:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/kmyfirewall-1.1.1.ebuild,v 1.5 2009/11/11 14:24:02 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde eutils
 
 MY_P="${P/_/}"
@@ -18,7 +19,7 @@ RDEPEND="net-firewall/iptables"
 
 S=${WORKDIR}/${MY_P}
 
-need-kde 3
+need-kde 3.5
 
 src_unpack() {
 	kde_src_unpack
