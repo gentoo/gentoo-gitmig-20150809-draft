@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.11 2008/03/21 10:04:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.12 2009/11/11 16:47:20 ssuominen Exp $
 
 inherit eutils kde-functions
 
-IUSE="kde oracle debug oci8-instant-client xinerama"
+IUSE="oracle debug oci8-instant-client xinerama"
 DESCRIPTION="TOra - Toolkit For Oracle"
 HOMEPAGE="http://tora.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -19,8 +19,6 @@ RDEPEND="${DEPEND}
 DEPEND="=x11-libs/qt-3*
 	dev-lang/perl
 	<x11-libs/qscintilla-2.1
-	kde? ( >=kde-base/kdelibs-3.1
-		   kde-base/arts )
 	xinerama? ( x11-proto/xineramaproto )
 	oci8-instant-client? ( dev-db/oracle-instantclient-basic )"
 
@@ -57,7 +55,7 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	local myconf
-	myconf="${myconf} $(use_with kde)"
+	myconf="${myconf} --without-kde"
 	myconf="${myconf} $(use_with oracle)"
 	myconf="${myconf} $(use_with xinerama)"
 
