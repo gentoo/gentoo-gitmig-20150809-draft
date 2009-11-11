@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.3.6.ebuild,v 1.1 2009/11/10 11:27:05 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.3.6.ebuild,v 1.2 2009/11/11 06:47:15 swegener Exp $
 
 inherit eutils versionator linux-mod
 
@@ -33,7 +33,7 @@ pkg_setup() {
 	CONFIG_CHECK="CONNECTOR"
 	CONNECTOR_ERROR="You must enable \"CONNECTOR - unified userspace <-> kernelspace linker\" in your kernel configuration, because drbd needs it."
 	linux-mod_pkg_setup
-	BUILD_PARAMS="-j1 KDIR=${KERNEL_DIR} O=${KERNEL_DIR}"
+	BUILD_PARAMS="-j1 KDIR=${KV_DIR} O=${KV_OUT_DIR}"
 }
 
 pkg_postinst() {
