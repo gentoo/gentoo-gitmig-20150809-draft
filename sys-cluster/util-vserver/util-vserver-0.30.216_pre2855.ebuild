@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2841.ebuild,v 1.1 2009/06/28 16:24:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2855.ebuild,v 1.1 2009/11/11 08:47:50 hollow Exp $
 
 inherit eutils bash-completion
 
