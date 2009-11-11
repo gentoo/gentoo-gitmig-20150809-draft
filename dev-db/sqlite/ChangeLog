@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.290 2009/11/08 09:37:32 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.291 2009/11/11 14:26:35 jer Exp $
+
+  11 Nov 2009; Jeroen Roovers <jer@gentoo.org> sqlite-3.6.19.ebuild:
+  Stable for HPPA (bug #291913).
 
   08 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> sqlite-3.6.19.ebuild:
   Stable for ppc, bug 291913
