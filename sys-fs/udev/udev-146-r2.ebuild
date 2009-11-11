@@ -1,24 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.20 2009/11/11 19:15:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-146-r2.ebuild,v 1.1 2009/11/11 19:15:28 zzam Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+
+PATCHSET=${P}-gentoo-patchset-v1
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
 	inherit git autotools
 else
-	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
+	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
+			mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux +devfs-compat -extras"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
@@ -130,6 +133,11 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
+
+	# backport some patches
+	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
+	        EPATCH_FORCE="yes" epatch
+
 	if ! use devfs-compat; then
 		# see Bug #269359
 		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
@@ -145,7 +153,7 @@ src_unpack() {
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != 8afa8fc0fc71ada547792b5b2a608e4f ]]
+		if [[ ${MD5} != d2fdf2614797f525677001d9146509a0 ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
@@ -178,9 +186,7 @@ src_compile() {
 		--libexecdir="${udev_libexec_dir}" \
 		--enable-logging \
 		$(use_with selinux) \
-		$(use_enable extras) \
-		--disable-introspection
-	# we don't have gobject-introspection in portage tree
+		$(use_enable extras)
 
 	emake || die "compiling udev failed"
 }
@@ -237,6 +243,7 @@ src_install() {
 
 	# Our rules files
 	doins gentoo/??-*.rules
+	doins packages/40-alsa.rules
 	doins packages/40-isdn.rules
 
 	# Adding arch specific rules
