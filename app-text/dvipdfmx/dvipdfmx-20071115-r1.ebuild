@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20071115-r1.ebuild,v 1.2 2007/12/07 13:32:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20071115-r1.ebuild,v 1.3 2009/11/11 20:47:58 jer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/current/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 DEPEND="virtual/tex-base
 	>=media-libs/libpng-1.2.1

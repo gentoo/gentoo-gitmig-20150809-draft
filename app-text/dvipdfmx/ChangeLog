@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.39 2008/09/04 05:54:52 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.40 2009/11/11 20:47:58 jer Exp $
+
+  11 Nov 2009; Jeroen Roovers <jer@gentoo.org> dvipdfmx-20071115-r1.ebuild:
+  Marked ~hppa (bug #292808).
 
   04 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   dvipdfmx-20050831.ebuild:
