@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p22778.ebuild,v 1.3 2009/11/10 15:25:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p22778.ebuild,v 1.4 2009/11/11 20:09:39 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -148,9 +148,9 @@ src_configure() {
 	## CFLAG cleaning so it compiles
 	MARCH=$(get-flag "march")
 	MTUNE=$(get-flag "mtune")
-	strip-flags
-	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
-	filter-flags "-O" "-O?"
+	#strip-flags
+	#filter-flags "-march=*" "-mtune=*" "-mcpu=*"
+	#filter-flags "-O" "-O?"
 
 	if [[ -n "${MARCH}" ]]; then
 		myconf="${myconf} --cpu=${MARCH}"
@@ -164,8 +164,8 @@ src_configure() {
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
 	# let MythTV come up with our CFLAGS. Upstream will support this
-	#CFLAGS=""
-	#CXXFLAGS=""
+	unset CFLAGS
+	unset CXXFLAGS
 	einfo "Running ./configure ${myconf}"
 	sh ./configure ${myconf} || die "configure died"
 }
