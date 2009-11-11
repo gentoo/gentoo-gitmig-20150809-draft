@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.21 2009/11/07 20:54:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.22 2009/11/11 15:31:13 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -20,7 +20,7 @@ games-fps/quakeforge -video_cards_tdfx
 media-libs/realcodecs win32codecs
 
 # Tomas Chvatal <scarabeus@gentoo.org> (24 Nov 2008)
-# masked in base, unmaks for x86/amd64
+# masked in base, unmask for x86/amd64
 sci-misc/boinc -cuda
 
 # Robert Buchholz <rbu@gentoo.org> (16 Aug 2008)

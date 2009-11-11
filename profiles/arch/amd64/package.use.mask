@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.46 2009/11/07 20:54:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.47 2009/11/11 15:31:12 scarabeus Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -75,7 +75,7 @@ media-video/mplayer -cpudetection -custom-cpuopts -bindist -vdpau
 >=dev-java/sun-jdk-1.6.0.12_beta2 -nsplugin
 
 # Tomas Chvatal <scarabeus@gentoo.org> (31 Jan 2009)
-# masked in base, unmaks for x86/amd64
+# masked in base, unmask for x86/amd64
 sci-misc/boinc -cuda
 
 # Serkan Kaba <serkan@gentoo.org> (20 Jul 2008)
