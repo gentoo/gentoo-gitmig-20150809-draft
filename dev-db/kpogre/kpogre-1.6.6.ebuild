@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-1.6.6.ebuild,v 1.4 2009/07/01 12:31:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-1.6.6.ebuild,v 1.5 2009/11/11 12:05:20 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 KEYWORDS="~alpha ~amd64 ~ppc x86"
