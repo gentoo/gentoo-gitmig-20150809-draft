@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.10 2009/10/28 00:12:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.11 2009/11/11 06:59:44 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools multilib eutils
@@ -12,11 +12,9 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 LICENSE="Allegro"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="X alsa arts esd fbcon jack oss svga vga"
+IUSE="X alsa fbcon jack oss svga vga"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
-	esd? ( media-sound/esound )
-	arts? ( kde-base/arts )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXcursor
@@ -55,12 +53,12 @@ src_configure() {
 		--disable-asm \
 		--disable-mmx \
 		--disable-sse \
+		--disable-esddigi \
+		--disable-artsdigi \
 		$(use_enable oss ossdigi) \
 		$(use_enable oss ossmidi) \
 		$(use_enable alsa alsadigi) \
 		$(use_enable alsa alsamidi) \
-		$(use_enable esd esddigi) \
-		$(use_enable arts artsdigi) \
 		$(use_with X x) \
 		$(use_enable X xwin-shm) \
 		$(use_enable X xwin-vidmode) \
