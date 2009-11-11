@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.29 2009/10/30 09:39:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.30 2009/11/11 00:03:27 ranger Exp $
+
+  10 Nov 2009; Brent Baude <ranger@gentoo.org> jinja2-2.2.1.ebuild:
+  Marking jinja2-2.2.1 ppc64 for bug 287618
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> jinja2-2.2.1.ebuild:
   arm stable, bug #287618
