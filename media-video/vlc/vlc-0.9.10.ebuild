@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.10.ebuild,v 1.9 2009/10/27 11:36:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.10.ebuild,v 1.10 2009/11/11 13:06:44 ssuominen Exp $
 
 EAPI="1"
 
@@ -46,7 +46,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="alpha amd64 ~arm ppc ~ppc64 sparc x86 ~x86-fbsd"
-IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddax cddb cdio dbus dc1394
+IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc esd fbcon fluidsynth +ffmpeg flac fontconfig +gcrypt ggi gnome gnutls hal httpd
 	id3tag jack kate libass libcaca libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
 	ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
@@ -61,7 +61,6 @@ RDEPEND="
 		aalib? ( media-libs/aalib )
 		aac? ( >=media-libs/faad2-2.6.1 )
 		alsa? ( media-libs/alsa-lib )
-		arts? ( kde-base/arts )
 		avahi? ( >=net-dns/avahi-0.6 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		cdda? (	cddb? ( >=media-libs/libcddb-1.2.0 ) )
@@ -242,7 +241,7 @@ src_compile () {
 		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
-		$(use_enable arts) \
+		--disable-arts \
 		--disable-asademux \
 		$(use_enable atmo) \
 		$(use_enable avahi bonjour) \
