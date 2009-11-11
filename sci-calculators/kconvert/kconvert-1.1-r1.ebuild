@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/kconvert-1.1-r1.ebuild,v 1.5 2005/07/14 21:21:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/kconvert-1.1-r1.ebuild,v 1.6 2009/11/11 11:42:14 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="KDE tool to convert between different units"
@@ -11,13 +12,13 @@ SRC_URI="http://ftp.kde.com/Math_Science/KConvert/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE="arts"
+IUSE=""
 
-need-kde 3
+need-kde 3.5
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	kde_src_unpack
-	use arts || epatch ${FILESDIR}/${P}-arts-configure.patch
+	epatch "${FILESDIR}"/${P}-arts-configure.patch
 }

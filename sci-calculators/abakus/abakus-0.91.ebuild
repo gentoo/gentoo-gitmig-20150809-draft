@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.7 2009/10/31 11:39:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.8 2009/11/11 11:43:44 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="Abakus is a simple calculator for kde, similar to bc with a nice gui."
@@ -18,7 +19,7 @@ RDEPEND="gmp? ( dev-libs/mpfr )"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-1.2"
 
-need-kde 3.3
+need-kde 3.5
 
 src_compile() {
 	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr"
