@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.5.ebuild,v 1.10 2009/09/17 15:03:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.5.ebuild,v 1.11 2009/11/11 12:38:56 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde db-use
 
 DESCRIPTION="KDE Linux Binaries Downloader"
