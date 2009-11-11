@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.20 2009/03/23 18:34:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.21 2009/11/11 04:15:27 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ READLINE_VER=5.1
 READLINE_PLEVEL=1
 
 DESCRIPTION="The standard GNU Bourne again shell"
-HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
+HOMEPAGE="http://tiswww.case.edu/php/chet/bash/bashtop.html"
 # Hit the GNU mirrors before hitting Chet's site
 #		printf 'mirror://gnu/bash/bash-%s-patches/bash%s-%03d\n' \
 #			${MY_PV} ${MY_PV/\.} ${i}
