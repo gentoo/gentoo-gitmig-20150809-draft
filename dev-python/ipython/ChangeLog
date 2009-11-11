@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.71 2009/11/03 17:20:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.72 2009/11/11 00:06:28 ranger Exp $
+
+  11 Nov 2009; Brent Baude <ranger@gentoo.org> ipython-0.10.ebuild:
+  Marking ipython-0.10 ppc64 for bug 286859
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> ipython-0.10.ebuild:
   s390 stable wrt #286859
