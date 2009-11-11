@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.47 2009/10/18 18:08:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.48 2009/11/11 00:09:43 ranger Exp $
+
+  11 Nov 2009; Brent Baude <ranger@gentoo.org> pyparsing-1.5.2.ebuild:
+  Marking pyparsing-1.5.2 ppc64 for bug 287627
 
   18 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
   pyparsing-1.5.2.ebuild:
