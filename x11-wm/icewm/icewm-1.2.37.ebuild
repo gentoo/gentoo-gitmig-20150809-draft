@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.2 2009/09/29 18:47:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.3 2009/11/11 21:25:27 vostorga Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="esd imlib nls spell truetype xinerama minimal debug uclibc"
+IUSE="esd imlib nls truetype xinerama minimal debug uclibc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXrandr
@@ -63,7 +63,7 @@ src_compile() {
 
 	if use truetype
 	then
-		myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations"
+		myconf="${myconf} --enable-gradients --enable-shape --enable-shaped-decorations"
 	else
 		myconf="${myconf} --disable-xfreetype --enable-corefonts
 			$(use_enable minimal lite)"
@@ -77,7 +77,6 @@ src_compile() {
 		$(use_enable nls)
 		$(use_enable nls i18n)
 		$(use_with imlib)
-		$(use_enable spell GtkSpell)
 		$(use_enable x86 x86-asm)
 		$(use_enable xinerama)
 		$(use_enable debug)"

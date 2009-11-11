@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.138 2009/09/29 18:47:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.139 2009/11/11 21:25:27 vostorga Exp $
+
+  11 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> icewm-1.2.37.ebuild:
+  Fixing unrecognized options provided to configure, bug #261728
 
   29 Sep 2009; Tobias Klausmann <klausman@gentoo.org> icewm-1.2.37.ebuild:
   Keyworded on alpha, bug #283789
