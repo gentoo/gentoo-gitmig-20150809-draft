@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.35 2009/08/21 20:32:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.36 2009/11/11 16:09:34 hwoarang Exp $
+
+*stgit-0.15 (11 Nov 2009)
+
+  11 Nov 2009; Markos Chandras <hwoarang@gentoo.org> +stgit-0.15.ebuild:
+  Version bump. Fixes bug 292615. Thanks to René 'Necoro' Neumann
+  <gentoo@necoro.eu> for the ebuilds and recommendations
 
   21 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -stgit-0.10.ebuild,
   -stgit-0.14.1.ebuild:
