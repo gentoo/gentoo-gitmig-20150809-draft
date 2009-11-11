@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/kdsl-0.5.ebuild,v 1.4 2008/06/21 09:08:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/kdsl-0.5.ebuild,v 1.5 2009/11/11 12:45:09 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="Frontend for pppd with DSL support for PPPoE/PPPoA connections"
@@ -13,7 +14,6 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=""
 RDEPEND="net-dialup/ppp"
 
-need-kde 3
+need-kde 3.5

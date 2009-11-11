@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/komport-0.5.9-r1.ebuild,v 1.1 2009/02/10 23:32:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/komport-0.5.9-r1.ebuild,v 1.2 2009/11/11 12:46:24 ssuominen Exp $
 
-ARTS_REQUIRED="never"
-
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="Komport - Serial port communications and vt102 terminal emulator for KDE"
@@ -18,7 +17,5 @@ IUSE=""
 
 need-kde 3.5
 
-PATCHES=(
-	"${FILESDIR}/komport-0.5.9-gcc43.diff"
-	"${FILESDIR}/komport-0.5.9-desktop-file.diff"
-	)
+PATCHES=( "${FILESDIR}/komport-0.5.9-gcc43.diff"
+	"${FILESDIR}/komport-0.5.9-desktop-file.diff" )

@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/serlook/serlook-0.3.3.ebuild,v 1.3 2007/07/24 17:07:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/serlook/serlook-0.3.3.ebuild,v 1.4 2009/11/11 12:47:16 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="tool to inspect and debug serial line data traffic"

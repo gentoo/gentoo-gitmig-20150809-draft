@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/komport-0.5.9.ebuild,v 1.10 2007/04/14 11:30:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/komport-0.5.9.ebuild,v 1.11 2009/11/11 12:46:24 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="Komport - Serial port communications and vt102 terminal emulator for KDE"
@@ -14,4 +15,4 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-need-kde 3
+need-kde 3.5

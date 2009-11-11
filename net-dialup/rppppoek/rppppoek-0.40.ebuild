@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rppppoek/rppppoek-0.40.ebuild,v 1.5 2008/05/04 10:34:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rppppoek/rppppoek-0.40.ebuild,v 1.6 2009/11/11 12:46:42 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="KDE panel applet for managing RP-PPPoE (tm)"
@@ -15,4 +16,5 @@ IUSE=""
 
 RDEPEND=">=net-dialup/rp-pppoe-3.7
 	app-admin/sudo"
-need-kde 3
+
+need-kde 3.5

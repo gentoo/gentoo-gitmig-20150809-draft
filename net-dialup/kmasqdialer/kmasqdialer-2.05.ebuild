@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kmasqdialer/kmasqdialer-2.05.ebuild,v 1.6 2006/04/01 21:04:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kmasqdialer/kmasqdialer-2.05.ebuild,v 1.7 2009/11/11 12:45:35 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="KMasqdialer - A KDE Client for MasqDialer"
@@ -14,6 +15,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-PATCHES="${FILESDIR}/${P}-noarts.patch"
+PATCHES=( "${FILESDIR}/${P}-noarts.patch" )
 
-need-kde 3
+need-kde 3.5
