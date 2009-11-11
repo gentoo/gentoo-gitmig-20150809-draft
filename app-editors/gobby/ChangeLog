@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.35 2009/11/09 15:11:44 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.36 2009/11/11 02:30:33 idl0r Exp $
+
+  11 Nov 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/gobby-0.4.5-GtkSourceView2.patch, -files/gobby-0.4.5-gcc43.patch,
+  -files/gobby.desktop-r1:
+  Remove obsolete files.
 
 *gobby-0.4.92 (09 Nov 2009)
 
