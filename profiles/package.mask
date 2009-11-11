@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10784 2009/11/10 23:28:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10785 2009/11/11 08:31:20 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1991,10 +1991,6 @@ dev-libs/liboobs
 # Masked until it's updated to use >=wxpython-2.6
 # https://bugs.gentoo.org/show_bug.cgi?id=115079
 games-rpg/openrpg
-
-# Benedikt Böhm <hollow@gentoo.org> (07 Apr 2007)
-# masked for testing
->=sys-kernel/vserver-sources-2.3
 
 # MATSUU Takuto <matsuu@gentoo.org> (5 Apr 2007)
 # to be tested, seems unstable
