@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.105 2009/11/11 00:07:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.106 2009/11/11 14:38:10 grobian Exp $
+
+  11 Nov 2009; Fabian Groffen <grobian@gentoo.org> pysqlite-2.5.5-r1.ebuild:
+  Marked ~x64-macos, thanks Matt Michalowski, bug #291936
 
   11 Nov 2009; Brent Baude <ranger@gentoo.org> pysqlite-2.5.5-r1.ebuild:
   Marking pysqlite-2.5.5-r1 ppc64 for bug 287572
