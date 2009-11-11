@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta2.ebuild,v 1.10 2007/07/10 23:33:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.009_beta2.ebuild,v 1.11 2009/11/11 12:31:31 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit perl-module kde
 
 #install pqtsh to this directory
@@ -16,7 +17,7 @@ SRC_URI="mirror://sourceforge/perlqt/${P/_beta2/-b2}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ia64 ppc sparc x86"
-IUSE="arts"
+IUSE=""
 S=${WORKDIR}/${P/_beta2/}
 
 #if kdebindings is installed compilation is really fast!
@@ -35,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	useq arts || myconf="${myconf} --without-arts"
+	myconf="${myconf} --without-arts"
 	addwrite $QTDIR/etc/settings
 	perl Makefile.PL ${myconf} --prefix=${D}/usr --exec-prefix=/usr
 	emake
