@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.3.ebuild,v 1.12 2009/07/01 15:44:15 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6.3.ebuild,v 1.13 2009/11/11 12:25:50 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 RV="${PV}"
