@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2-r1.ebuild,v 1.6 2009/10/12 07:09:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2-r1.ebuild,v 1.7 2009/11/11 14:30:25 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="DNS Service Discovery kioslave using Avahi (rather than mDNSResponder)"
