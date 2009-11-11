@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.32 2009/11/09 19:03:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.33 2009/11/11 12:45:24 jer Exp $
+
+  11 Nov 2009; Jeroen Roovers <jer@gentoo.org> qt-demo-4.5.3.ebuild:
+  Stable for HPPA (bug #290922).
 
   09 Nov 2009; Joseph Jezak <josejx@gentoo.org> qt-demo-4.5.3.ebuild:
   Marked ppc/ppc64 stable for bug #290922.
