@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3549 2009/11/11 14:28:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3550 2009/11/11 14:29:18 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask kde-base/arts and <kde-misc/krename-4.
+  Mask kde-base/arts, kde-misc/kfish and <kde-misc/krename-4.
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask x11-misc/lineak-kdeplugins and mail-client/mailody.
