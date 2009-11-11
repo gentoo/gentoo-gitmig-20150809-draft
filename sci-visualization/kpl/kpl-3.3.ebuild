@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kpl/kpl-3.3.ebuild,v 1.5 2007/03/13 14:04:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kpl/kpl-3.3.ebuild,v 1.6 2009/11/11 12:32:18 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="KDE tool for plotting data sets and functions in 2D and 3D."
@@ -13,6 +14,6 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
 
-need-kde 3.2
+need-kde 3.5
 
-PATCHES="${FILESDIR}/${PN}-3.2-arts-configure.patch"
+PATCHES=( "${FILESDIR}/${PN}-3.2-arts-configure.patch" )

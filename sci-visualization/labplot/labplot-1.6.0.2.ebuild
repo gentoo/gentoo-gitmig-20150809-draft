@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.2.ebuild,v 1.4 2009/10/16 02:49:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/labplot/labplot-1.6.0.2.ebuild,v 1.5 2009/11/11 12:32:40 ssuominen Exp $
 
 EAPI=1
+ARTS_REQUIRED=never
 inherit eutils kde multilib flag-o-matic
 
 MY_P="LabPlot-${PV}"
