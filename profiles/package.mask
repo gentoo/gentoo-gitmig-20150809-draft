@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10794 2009/11/11 17:48:57 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10795 2009/11/11 20:10:08 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,10 +31,15 @@
 
 #--- END OF EXAMPLES ---
 
-# Víctor Ostorga <vostorga@gentoo.org> (11 Nov 2009) 
+# Ben de Groot <yngwin@gentoo.org> (11 Nov 2009)
+# Depending on Qt versions no longer in portage because of security bugs
+# bug 292834
+<dev-embedded/qvfb-4.5.3
+
+# Víctor Ostorga <vostorga@gentoo.org> (11 Nov 2009)
 # KDE3 app, replaced by kde-base/powerdevil in KDE4.
 # Removal in 30 days, bug #292799
-sys-power/kpowersave 
+sys-power/kpowersave
 
 # Matthias Schwarzott <zzam@gentoo.org> (11 Nov 2009)
 # Mask new udev-ebuilds for testing their new init-script logic.
