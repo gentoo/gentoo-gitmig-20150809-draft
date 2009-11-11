@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5.1-r1.ebuild,v 1.5 2009/03/07 14:13:26 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5.1-r1.ebuild,v 1.6 2009/11/11 02:08:55 ssuominen Exp $
 
 EAPI="2"
+ARTS_REQUIRED=never
 inherit kde eutils versionator
 
 DESCRIPTION="KDE Bible study application using the SWORD library."
