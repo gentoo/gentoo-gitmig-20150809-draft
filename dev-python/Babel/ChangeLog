@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.20 2009/10/30 19:15:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.21 2009/11/11 00:01:06 ranger Exp $
+
+  10 Nov 2009; Brent Baude <ranger@gentoo.org> Babel-0.9.4.ebuild:
+  Marking Babel-0.9.4 ppc64 for bug 290613
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> Babel-0.9.4.ebuild:
   amd64/x86 stable, bug #290613
