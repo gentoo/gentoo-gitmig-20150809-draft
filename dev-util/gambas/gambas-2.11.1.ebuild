@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.11.1.ebuild,v 1.3 2009/06/03 11:57:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.11.1.ebuild,v 1.4 2009/11/11 21:09:34 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="
-	bzip2 corba curl debug doc examples firebird gtk kde mysql odbc opengl pcre
+	bzip2 corba curl debug doc examples firebird gtk mysql odbc opengl pcre
 	pdf postgres qt3 sdl smtp sqlite sqlite3 svg v4l xml zlib
 "
 
@@ -36,10 +36,7 @@ COMMON_DEPEND="
 	pcre?	( >=dev-libs/libpcre-7.6-r1 )
 	pdf?	( >=virtual/poppler-0.5.3 )
 	postgres?	( >=virtual/postgresql-base-8.2 )
-	qt3?	(
-		>=x11-libs/qt-3.2:3
-		kde?	( >=kde-base/kdelibs-3.5.9-r1:3.5 )
-	)
+	qt3? ( x11-libs/qt:3 )
 	sdl?	(
 		>=media-libs/sdl-image-1.2.6-r1
 		>=media-libs/sdl-mixer-1.2.7
@@ -82,8 +79,6 @@ pkg_setup() {
 	fi
 
 	if ! use qt3; then
-		use kde && die "KDE support depends on Qt being enabled"
-
 		einfo
 		ewarn "The Gambas IDE currently cannot be be build without Qt being enabled."
 		if use gtk; then
@@ -201,7 +196,7 @@ src_prepare() {
 	use pcre ||	my_reduce_eautoreconf pcre
 	use qt3 ||	my_reduce_eautoreconf qt
 			my_reduce_eautoreconf qte
-	use kde ||	my_reduce_eautoreconf kde
+	my_reduce_eautoreconf kde
 	use sdl ||	my_reduce_eautoreconf sdl
 	use sdl ||	my_reduce_eautoreconf sdlsound
 	use xml ||	my_reduce_eautoreconf xml
@@ -242,7 +237,7 @@ src_configure() {
 		$(use_enable pcre)
 		$(use_enable qt3 qt)
 		--disable-qte
-		$(use_enable kde)
+		--disable-kde
 		$(use_enable sdl)
 		$(use_enable sdl sdlsound)
 		$(use_enable xml)
@@ -271,12 +266,6 @@ src_configure() {
 			$(use_enable opengl qtopengl)
 			--enable-qt-translation
 		"
-		if use kde; then
-			myconf="${myconf}
-				--with-kde-includes=/usr/kde/3.5/include
-				--with-kde-libraries=/usr/kde/3.5/$(get_libdir)
-			"
-		fi
 	fi
 
 	# --without-xdg-utils comes from svn-r1636-xdg-utils.patch

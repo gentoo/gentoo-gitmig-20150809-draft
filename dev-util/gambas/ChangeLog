@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.58 2009/10/23 00:50:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.59 2009/11/11 21:09:34 ssuominen Exp $
+
+  11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> gambas-2.11.1.ebuild,
+  gambas-2.16.0.ebuild:
+  Remove kde-base/kdelibs:3.5 support.
 
 *gambas-2.16.0 (23 Oct 2009)
 
