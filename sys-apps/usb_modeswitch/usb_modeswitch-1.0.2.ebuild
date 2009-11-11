@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.0.2.ebuild,v 1.1 2009/06/27 12:25:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.0.2.ebuild,v 1.2 2009/11/11 07:47:17 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-libs/libusb"
+DEPEND="=virtual/libusb-0*"
 RDEPEND="${DEPEND}"
 
 src_compile() {
