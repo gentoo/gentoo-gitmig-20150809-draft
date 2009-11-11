@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10796 2009/11/11 21:46:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10797 2009/11/11 22:00:24 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1075,10 +1075,6 @@ media-sound/krecord
 # Dominik Kapusta <ayoy@gentoo.org> (15 Oct 2009)
 # Masked for testing
 =dev-embedded/scratchbox-2*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (14 Oct 2009)
-# Requires aRTs and last released in 2007
-games-engines/kwest
 
 # Ulrich Mueller <ulm@gentoo.org> (11 Oct 2009)
 # Blocked by its own dependency, therefore no longer installable.
