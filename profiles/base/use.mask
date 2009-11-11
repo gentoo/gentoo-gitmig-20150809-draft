@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.82 2009/11/10 01:33:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.83 2009/11/11 14:41:50 ssuominen Exp $
 
 # profile specific USE flags
 # Don't put hardened in here.
@@ -224,3 +224,7 @@ i6fork
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2009)
 # RealMagic Hollywood+/Creative DXR3 support
 dxr3
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2009)
+# Mask USE arts. Deprecated. Remove this entry when kdelibs-3 is out of tree.
+arts
