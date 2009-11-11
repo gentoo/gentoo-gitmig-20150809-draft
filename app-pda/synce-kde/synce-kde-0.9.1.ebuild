@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.9.1.ebuild,v 1.2 2008/06/09 12:50:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/synce-kde-0.9.1.ebuild,v 1.3 2009/11/11 02:05:38 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 AGVER="agsync-0.2-pre"
@@ -23,7 +24,7 @@ DEPEND=">=app-pda/synce-libsynce-0.9
 	app-pda/dynamite
 	!app-pda/rapip"
 
-need-kde 3.2
+need-kde 3.5
 
 PATCHES=(
 	"${FILESDIR}"/${P}+gcc-4.3.patch
@@ -33,15 +34,15 @@ src_unpack() {
 	kde_src_unpack
 
 	# the default install location of iptables is /sbin/iptables
-	cd ${S}/raki
+	cd "${S}"/raki
 	sed -i "s:/usr/sbin/iptables:/sbin/iptables:" configdialogimpl.cpp
 }
 
 src_compile() {
 	if use avantgo; then
-		cd ${S}/../agsync-0.2-pre
+		cd "${S}"/../agsync-0.2-pre
 		emake
-		cd ${S}
+		cd "${S}"
 		myconf="$myconf --with-agsync=${S}/../${AGVER}"
 	fi
 	kde_src_compile
