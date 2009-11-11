@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.126 2009/11/01 19:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.127 2009/11/11 04:13:32 vapier Exp $
+
+*grub-1.97.1 (11 Nov 2009)
+
+  11 Nov 2009; Mike Frysinger <vapier@gentoo.org> +grub-1.97.1.ebuild:
+  Version bump #292677 by Hanno Boeck.
 
   01 Nov 2009; Mike Frysinger <vapier@gentoo.org> grub-1.97.ebuild,
   grub-9999.ebuild:
