@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.9 2009/07/12 13:06:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.10 2009/11/11 14:39:47 ssuominen Exp $
 
 KMNAME=kdebase
 EAPI="1"
+ARTS_REQUIRED=never
 inherit kde-meta eutils
 
 SRC_URI="${SRC_URI}
@@ -11,7 +12,7 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="arts ieee1394 joystick logitech-mouse opengl kdehiddenvisibility"
+IUSE="ieee1394 joystick logitech-mouse opengl kdehiddenvisibility"
 
 DEPEND="x11-libs/libXext
 	x11-libs/libXtst
@@ -60,17 +61,15 @@ src_unpack() {
 			-i "${S}/kcontrol/Makefile.am" \
 		|| die "sed failed"
 	fi
-	if ! use arts ; then
-		sed -e 's:arts::' \
-			-i "${S}/kcontrol/Makefile.am" \
+	sed -e 's:arts::' \
+		-i "${S}/kcontrol/Makefile.am" \
 		|| die "sed failed"
-	fi
 
 	kde-meta_src_unpack makefiles
 }
 
 src_compile() {
-	myconf="$myconf --with-ssl $(use_with arts) $(use_with opengl gl)
+	myconf="$myconf --with-ssl --without-arts $(use_with opengl gl)
 			$(use_with ieee1394 libraw1394) $(use_with logitech-mouse libusb)
 			--with-usbids=/usr/share/misc/usb.ids"
 	kde-meta_src_compile

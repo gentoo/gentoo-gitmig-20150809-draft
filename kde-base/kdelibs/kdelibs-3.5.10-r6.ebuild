@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.8 2009/08/01 07:12:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.9 2009/11/11 14:37:30 ssuominen Exp $
 
 EAPI="1"
+ARTS_REQUIRED=never
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
 
@@ -15,7 +16,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="acl alsa arts bindist branding cups doc jpeg2k kerberos legacyssl utempter openexr spell tiff
+IUSE="acl alsa bindist branding cups doc jpeg2k kerberos legacyssl utempter openexr spell tiff
 	avahi kernel_linux fam lua kdehiddenvisibility"
 
 # Added aspell-en as dependency to work around bug 131512.
@@ -58,7 +59,6 @@ RDEPEND="
 		virtual/acl
 	)
 	alsa? ( media-libs/alsa-lib )
-	arts? ( ~kde-base/arts-3.5.10 )
 	!avahi? (
 		!bindist? (
 			!kde-misc/kdnssd-avahi
@@ -164,7 +164,7 @@ src_compile() {
 			--without-hspell
 			$(use_enable fam libfam) $(use_enable kernel_linux dnotify)
 			$(use_with acl) $(use_with alsa)
-			$(use_with arts) $(use_enable cups)
+			--without-arts $(use_enable cups)
 			$(use_with kerberos gssapi) $(use_with tiff)
 			$(use_with jpeg2k jasper) $(use_with openexr)
 			$(use_with utempter) $(use_with lua)
