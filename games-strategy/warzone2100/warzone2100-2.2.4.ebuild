@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.2.4.ebuild,v 1.1 2009/10/12 16:29:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.2.4.ebuild,v 1.2 2009/11/11 19:41:20 mr_bones_ Exp $
 
 EAPI=2
 inherit versionator games
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug nls videos"
 
 RDEPEND="dev-db/sqlite:3
-	|| ( >=dev-games/physfs-2[zip] <dev-games/physfs-2 )
+	>=dev-games/physfs-2[zip]
 	dev-libs/popt
 	media-libs/libogg
 	media-libs/libpng
