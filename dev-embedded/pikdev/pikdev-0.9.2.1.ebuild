@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.9.2.1.ebuild,v 1.6 2008/06/17 10:08:30 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.9.2.1.ebuild,v 1.7 2009/11/11 12:33:47 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde versionator
 
 MY_P=${PN}-$(replace_version_separator 3 '-' )
