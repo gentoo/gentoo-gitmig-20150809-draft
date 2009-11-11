@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klogic/klogic-1.63.ebuild,v 1.4 2009/08/09 16:40:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klogic/klogic-1.63.ebuild,v 1.5 2009/11/11 11:46:06 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde
 
 DESCRIPTION="KLogic is an application for easy creation and simulation of electrical circuits"
@@ -11,6 +12,6 @@ IUSE=""
 SRC_URI="http://www.a-rostin.de/klogic/Version/${P}.tar.gz"
 LICENSE="GPL-2"
 
-need-kde 3
+need-kde 3.5
 
 PATCHES=( "${FILESDIR}/${P}-glibc-2.10.patch" )
