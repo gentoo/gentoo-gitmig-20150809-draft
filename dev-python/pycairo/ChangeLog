@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.82 2009/10/19 16:04:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.83 2009/11/11 00:00:07 ranger Exp $
+
+  10 Nov 2009; Brent Baude <ranger@gentoo.org> pycairo-1.8.8.ebuild:
+  Marking pycairo-1.8.8 ppc64 for bug 285115
 
   19 Oct 2009; Raúl Porcel <armin76@gentoo.org> pycairo-1.8.8.ebuild:
   arm/ia64/sh/sparc stable wrt #285115
