@@ -1,0 +1,9 @@
+# ChangeLog for app-mobilephone/past
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/past/ChangeLog,v 1.1 2009/11/11 17:53:35 ssuominen Exp $
+
+*past-0.0.4 (11 Nov 2009)
+
+  11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> +past-0.0.4.ebuild:
+  Initial commit.
+
