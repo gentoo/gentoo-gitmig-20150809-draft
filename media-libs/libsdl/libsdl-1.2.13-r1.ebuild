@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.13-r1.ebuild,v 1.12 2009/02/17 18:15:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.13-r1.ebuild,v 1.13 2009/11/11 13:10:23 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs eutils libtool
@@ -16,12 +16,11 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 # if you disable the audio, video, joystick use flags or turn on the custom-cflags use flag
 # in USE and something breaks, you pick up the pieces.  Be prepared for
 # bug reports to be marked INVALID.
-IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca +audio +video +joystick custom-cflags pulseaudio"
+IUSE="oss alsa esd nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca +audio +video +joystick custom-cflags pulseaudio"
 
 RDEPEND="audio? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( >=media-sound/esound-0.2.19 )
-	arts? ( kde-base/arts )
 	nas? (
 		media-libs/nas
 		x11-libs/libXt
@@ -122,7 +121,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable esd) \
 		$(use_enable pulseaudio) \
-		$(use_enable arts) \
+		--disable-arts \
 		$(use_enable nas) \
 		$(use_enable X video-x11) \
 		$(use_enable dga) \

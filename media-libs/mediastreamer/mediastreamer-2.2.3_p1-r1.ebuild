@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.3_p1-r1.ebuild,v 1.8 2009/07/08 20:55:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.3_p1-r1.ebuild,v 1.9 2009/11/11 13:13:54 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,12 +16,11 @@ SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/${MY_P}.tar
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="+alsa arts debug doc examples gsm ilbc ipv6 jack oss portaudio +speex
+IUSE="+alsa debug doc examples gsm ilbc ipv6 jack oss portaudio +speex
 theora video x264 X"
 
 RDEPEND=">=net-libs/ortp-0.15.0_p1
 	alsa? ( media-libs/alsa-lib )
-	arts? ( kde-base/arts )
 	gsm? ( media-sound/gsm )
 	jack? ( media-libs/libsamplerate
 		media-sound/jack-audio-connection-kit )
@@ -41,16 +40,15 @@ PDEPEND="ilbc? ( media-plugins/mediastreamer-ilbc )
 S=${WORKDIR}/${MY_P}
 
 # TODO:
-# run-time test for arts support
 # run-time test for ipv6 : does it need ortp[ipv6] ?
 
 # NOTES:
 # in some way, v4l support is auto-magic but keeping it like that atm
 
 pkg_setup() {
-	if ! use oss && ! use alsa && ! use arts && ! use jack && ! use portaudio;
+	if ! use oss && ! use alsa && ! use jack && ! use portaudio;
 	then
-		eerror "You must enable at least oss, alsa, arts, jack or portaudio"
+		eerror "You must enable at least oss, alsa, jack or portaudio"
 		eerror "Please, re-emerge ${PN} with one of this USE flag enabled"
 		die
 	fi
@@ -113,7 +111,7 @@ src_configure() {
 		--enable-external-ortp \
 		--disable-dependency-tracking \
 		$(use_enable alsa) \
-		$(use_enable arts artsc) \
+		--disable-artsc \
 		$(use_enable debug) \
 		$(use_enable doc) \
 		$(use_enable gsm) \
