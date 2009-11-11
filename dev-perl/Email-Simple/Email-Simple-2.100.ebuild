@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/Email-Simple-2.100.ebuild,v 1.1 2009/11/10 10:13:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/Email-Simple-2.100.ebuild,v 1.2 2009/11/11 04:36:33 robbat2 Exp $
 
 MODULE_AUTHOR=RJBS
 inherit perl-module
@@ -15,3 +15,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl"
+RDEPEND="!dev-perl/Email-Simple-Creator"
