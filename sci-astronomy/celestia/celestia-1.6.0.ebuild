@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.3 2009/09/06 18:24:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.4 2009/11/11 12:36:00 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic gnome2 kde-functions autotools
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts cairo gnome gtk kde nls pch theora threads"
+IUSE="cairo gnome gtk kde nls pch theora threads"
 
 RDEPEND="virtual/glu
 	media-libs/jpeg
@@ -29,7 +29,6 @@ RDEPEND="virtual/glu
 	)
 	kde?  ( !gnome? ( kde-base/kdelibs:3.5 ) )
 	!gtk? ( !gnome? ( !kde? ( virtual/glut ) ) )
-	arts? ( kde-base/arts )
 	cairo? ( x11-libs/cairo )
 	theora? ( media-libs/libtheora )"
 
@@ -104,7 +103,7 @@ src_configure() {
 		--disable-rpath \
 		--with-lua \
 		--with-${CELESTIA_GUI} \
-		$(use_with arts) \
+		--without-arts \
 		$(use_enable cairo) \
 		$(use_enable threads threading) \
 		$(use_enable nls) \
