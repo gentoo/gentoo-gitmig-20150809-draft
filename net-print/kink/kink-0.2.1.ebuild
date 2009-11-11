@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/kink/kink-0.2.1.ebuild,v 1.6 2007/07/13 07:15:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/kink/kink-0.2.1.ebuild,v 1.7 2009/11/11 12:39:46 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit kde eutils
 
 DESCRIPTION="KDE printer ink level utility monitor"
@@ -14,10 +15,11 @@ KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 
 DEPEND="<=net-print/libinklevel-0.6.5"
-need-kde 3.1
+
+need-kde 3.5
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/kink-0.2.1-compilefix.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/kink-0.2.1-compilefix.diff
 }
