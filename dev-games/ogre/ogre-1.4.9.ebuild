@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.4 2008/09/23 18:30:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.5 2009/11/12 21:30:30 mr_bones_ Exp $
 
 inherit multilib eutils autotools flag-o-matic
 
@@ -57,7 +57,7 @@ src_unpack() {
 			|| die "sed failed"
 	fi
 	sed -i -e '/CPPUNIT/d' configure.in || die "sed failed"
-	epatch "${FILESDIR}"/${P}-*.patch
+	epatch "${FILESDIR}"/${P}*.patch
 	eautoreconf
 }
 
