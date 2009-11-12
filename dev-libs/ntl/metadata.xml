@@ -9,7 +9,4 @@
   integers, and for vectors, matrices, and polynomials over the
   integers and over finite fields.
 </longdescription>
-<use>
-  <flag name='gf2x'>Use high performance polynomial arithmetic with <pkg>dev-libs/gf2x</pkg></flag>
-</use>
 </pkgmetadata>
