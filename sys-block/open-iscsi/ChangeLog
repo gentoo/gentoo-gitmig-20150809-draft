@@ -1,6 +1,19 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.23 2009/10/28 16:47:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.24 2009/11/12 09:29:49 robbat2 Exp $
+
+*open-iscsi-2.0.871-r1 (12 Nov 2009)
+
+  12 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +open-iscsi-2.0.871-r1.ebuild,
+  +files/open-iscsi-2.0.871-makefile-cleanup.patch,
+  +files/iscsid-2.0.871-r1.init.d:
+  Cleanup remaining modules code so that kernel sources are no longer
+  required. Do not decide what to include in the binpkg based on $ROOT, as
+  it may be for use on a different machine. Always install the utils. Bug
+  #273321: Do not build iscsistart statically. Bug #284871: Fix init.d
+  return codes. Bug #291584: install initiatorname.iscsi in the correct
+  place.
 
 *open-iscsi-2.0.871 (28 Oct 2009)
 
