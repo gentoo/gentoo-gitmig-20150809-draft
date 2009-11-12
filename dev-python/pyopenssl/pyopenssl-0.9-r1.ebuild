@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.9-r1.ebuild,v 1.9 2009/11/11 01:52:49 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.9-r1.ebuild,v 1.10 2009/11/12 23:55:47 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ MY_P=${P/openssl/OpenSSL}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Python interface to the OpenSSL library"
-HOMEPAGE="http://pyopenssl.sourceforge.net/"
+HOMEPAGE="http://pyopenssl.sourceforge.net/ http://pypi.python.org/pypi/pyOpenSSL"
 SRC_URI="mirror://sourceforge/pyopenssl/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -22,8 +22,9 @@ IUSE="doc"
 RDEPEND=">=dev-libs/openssl-0.9.6g"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-tex/latex2html-2002.2 )"
+RESTRICT_PYTHON_ABIS="3.*"
 
-RESTRICT_PYTHON_ABIS="3*"
+PYTHON_MODNAME="OpenSSL"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-tests.patch"
@@ -57,21 +58,13 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml "${S}"/doc/html/*
-		dodoc "${S}"/doc/pyOpenSSL.*
+		dohtml doc/html/*
+		dodoc doc/pyOpenSSL.*
 	fi
 
 	# Install examples
 	docinto examples
-	dodoc "${S}"/examples/*
+	dodoc examples/*
 	docinto examples/simple
-	dodoc "${S}"/examples/simple/*
-}
-
-pkg_postinst() {
-	python_mod_optimize OpenSSL
-}
-
-pkg_postrm() {
-	python_mod_cleanup OpenSSL
+	dodoc examples/simple/*
 }
