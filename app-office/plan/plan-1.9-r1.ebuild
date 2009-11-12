@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.7 2008/10/29 04:30:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.1 2009/11/12 20:29:57 hwoarang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.fu-berlin.de/unix/X11/apps/plan/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/openmotif"
@@ -24,6 +24,8 @@ src_unpack() {
 	epatch "${WORKDIR}"/${P}-gentoo.patch
 	epatch "${WORKDIR}"/${P}-webplan.patch
 	epatch "${FILESDIR}"/makefile.patch
+	epatch "${FILESDIR}"/nostrip.patch
+	epatch "${FILESDIR}"/ldflags.patch
 }
 
 src_compile() {
