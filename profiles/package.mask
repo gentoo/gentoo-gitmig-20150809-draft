@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10802 2009/11/12 18:58:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10803 2009/11/12 19:05:08 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -585,6 +585,8 @@ dev-perl/PerlQt
 media-video/dpencoder
 media-video/qvamps
 media-video/asdf
+sci-misc/kboincspy
+games-puzzle/easysok
 
 # Vlastimil Babka <caster@gentoo.org> (06 Nov 2009)
 # Removal for EOL and security, bug #287615
