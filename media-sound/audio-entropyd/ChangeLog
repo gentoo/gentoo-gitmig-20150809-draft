@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.33 2009/11/04 21:02:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.34 2009/11/12 09:54:20 angelos Exp $
+
+*audio-entropyd-2.0.1-r1 (12 Nov 2009)
+
+  12 Nov 2009; Christoph Mende <angelos@gentoo.org>
+  +files/audio-entropyd.conf-1, +files/audio-entropyd.init-1,
+  audio-entropyd-1.0.5.ebuild, +files/audio-entropyd.conf-2,
+  +files/audio-entropyd.init-2, -audio-entropyd-2.0.1.ebuild,
+  +audio-entropyd-2.0.1-r1.ebuild, -files/audio-entropyd.conf,
+  -files/audio-entropyd.init:
+  Fix init script for 2.0.1 (bug 271882), thanks to Tim O'Kelly
 
   04 Nov 2009; Christoph Mende <angelos@gentoo.org>
   audio-entropyd-2.0.1.ebuild:

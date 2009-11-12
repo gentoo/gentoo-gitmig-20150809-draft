@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.1.ebuild,v 1.2 2009/11/04 21:02:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.1-r1.ebuild,v 1.1 2009/11/12 09:54:20 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,6 +32,6 @@ src_compile() {
 src_install() {
 	dosbin audio-entropyd || die "dosbin failed"
 	dodoc README TODO
-	newinitd "${FILESDIR}/${PN}.init" ${PN}
-	newconfd "${FILESDIR}/${PN}.conf" ${PN}
+	newinitd "${FILESDIR}/${PN}.init-2" ${PN}
+	newconfd "${FILESDIR}/${PN}.conf-2" ${PN}
 }
