@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.7 2009/11/08 20:25:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.8 2009/11/12 19:14:40 bicatali Exp $
 
 WX_GTK_VER=2.8
 EAPI=2
@@ -39,6 +39,7 @@ DEPEND="${CDEPEND}
 			   dev-texlive/texlive-latexrecommended )
 			 ( app-text/ptex dev-tex/latex-unicode ) )
 		app-text/dvipng
+		dev-python/imaging
 		dev-python/ipython )"
 
 RDEPEND="${CDEPEND}
