@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.90 2009/11/12 07:41:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.91 2009/11/12 11:40:20 scarabeus Exp $
+
+  12 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  konversation-1.2.1.ebuild:
+  Sync changes from local overlay. Not commit first.
 
   12 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   konversation-1.2.1.ebuild:
