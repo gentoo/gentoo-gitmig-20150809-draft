@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.10 2009/10/27 18:44:08 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.11 2009/11/12 18:29:17 bicatali Exp $
 
-inherit eutils autotools fortran
+EAPI=2
+inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="Arnoldi package library to solve large scale eigenvalue problems."
-HOMEPAGE="http://www.caam.rice.edu/software/ARPACK"
+HOMEPAGE="http://www.caam.rice.edu/software/ARPACK/"
 SRC_URI="http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
 	http://www.caam.rice.edu/software/ARPACK/SRC/p${PN}${PV}.tar.gz
 	mirror://gentoo/${P}-patches.tar.bz2
@@ -24,13 +25,13 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/ARPACK"
 
-FORTRAN="gfortran ifc g77"
-
 src_unpack() {
 	unpack ${A}
 	unpack ./*patch.tar.gz
+}
+
+src_prepare() {
 	epatch "${WORKDIR}"/${PN}-arscnd.patch
-	cd "${S}"
 	epatch "${WORKDIR}"/${PN}-autotools.patch
 
 	BLAS_LIBS="$(pkg-config --libs blas)"
@@ -38,7 +39,6 @@ src_unpack() {
 	sed -i \
 		-e '/^include/d' \
 		-e "s:\$(ALIBS):-larpack ${BLAS_LIBS}:g" \
-		-e 's:$(FC):$(F77):g' \
 		-e 's:$(FFLAGS):$(FFLAGS) $(LDFLAGS):g' \
 		EXAMPLES/*/makefile || die "sed failed"
 
@@ -49,22 +49,18 @@ src_unpack() {
 		-e 's:$(PFC):mpif77:g' \
 		-e 's:$(PFFLAGS):$(FFLAGS) $(LDFLAGS) $(EXTOBJS):g' \
 		PARPACK/EXAMPLES/MPI/makefile || die "sed failed"
-
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-blas="${BLAS_LIBS}" \
-		$(use_enable mpi) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable mpi)
 }
 
 src_test() {
-
 	pushd EXAMPLES/SIMPLE
-	emake simple FC=${FORTRANC} LDFLAGS="-L${S}/.libs"
+	emake simple FC=$(tc-getFC) LDFLAGS="${LDFLAGS} -L${S}/.libs"
 	local prog=
 	for p in ss ds sn dn cn zn; do
 		prog=${p}simp
