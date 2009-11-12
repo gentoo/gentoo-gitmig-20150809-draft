@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.75 2009/11/12 15:51:45 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.76 2009/11/12 16:03:51 jer Exp $
+
+  12 Nov 2009; Jeroen Roovers <jer@gentoo.org> iptraf-3.0.0-r4.ebuild,
+  iptraf-3.0.0-r5.ebuild:
+  Fix whitespace. Download ipv6 patch conditionally. Separate unpacking and
+  patching (bug #291491 comment #3).
 
   12 Nov 2009; Tiago Cunha <tcunha@gentoo.org> iptraf-3.0.0-r5.ebuild:
   stable sparc, bug 291491
