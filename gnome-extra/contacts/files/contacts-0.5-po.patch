@@ -1,7 +1,0 @@
---- po/POTFILES.in-	2007-04-29 19:40:12.518473872 +0200
-+++ po/POTFILES.in	2007-04-29 19:40:18.474813302 +0200
-@@ -4,3 +4,4 @@
- src/contacts-main.c
- src/contacts-utils.c
- src/contacts-gtk.c
-+src/contacts-ui.c
