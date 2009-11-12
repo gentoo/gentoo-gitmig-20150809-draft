@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.0.6.ebuild,v 1.3 2009/11/12 18:53:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.0.6.ebuild,v 1.4 2009/11/12 18:55:43 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/sysstat.init.d sysstat
 
-	use doc && rm -f ${D}usr/share/doc/${PF}/COPYING
+	use doc && rm -f "${D}"usr/share/doc/${PF}/COPYING
 
 	ewarn "The sysstat configuration files have moved from /etc/sysconfig to /etc"
 }
