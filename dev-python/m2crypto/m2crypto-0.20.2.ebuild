@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.2.ebuild,v 1.6 2009/11/11 15:48:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.2.ebuild,v 1.7 2009/11/12 22:39:59 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,7 +10,7 @@ inherit distutils eutils multilib portability
 MY_PN="M2Crypto"
 
 DESCRIPTION="A python wrapper for the OpenSSL crypto library"
-HOMEPAGE="http://chandlerproject.org/bin/view/Projects/MeTooCrypto"
+HOMEPAGE="http://chandlerproject.org/bin/view/Projects/MeTooCrypto http://pypi.python.org/pypi/M2Crypto"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
