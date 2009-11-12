@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.120 2009/11/12 11:36:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.121 2009/11/12 19:43:39 pva Exp $
+
+  12 Nov 2009; Peter Volkov <pva@gentoo.org>
+  openvz-sources-2.6.27.2.1-r4.ebuild:
+  x86/amd64 stable, bug #198632. Fast stabilized since security matters
+  (pipe vulnerability).
 
 *openvz-sources-2.6.18.028.064.8 (12 Nov 2009)
 
