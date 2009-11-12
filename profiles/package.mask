@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10798 2009/11/12 11:42:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10799 2009/11/12 13:04:54 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -932,12 +932,6 @@ net-dialup/trayimonc
 =dev-util/debugedit-4.4.6-r2
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
-# KDE3-only. Doesn't compile with stable networkmanager wrt bug 253788.
-# Other issues in bugs #197488, #217209, #255864, and #268732.
-# Masked for removal in 30 days.
-=kde-misc/knetworkmanager-0.2*
-
-# Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
 # KDE3-only. Doesn't compile wrt #274206. Bundles internal
 # copies of sqlite wrt #252546.
 # Masked for removal in 30 days.
@@ -949,20 +943,10 @@ media-libs/libkexif
 # Masked for removal in 30 days.
 dev-embedded/pikdev
 
-# Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
-# KDE3-only and doesn't work anymore wrt #237320.
-# Masked for removal in 30 days.
-kde-misc/kdmtheme
-
 # Peter Volkov <pva@gentoo.org> (20 Oct 2009)
 # Masked development versions
 =dev-util/bzr-2.1.0_beta1*
 =dev-util/bzrtools-2.1.0_beta1*
-
-# Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
-# Doesn't compile with KDE4 installed wrt bug #279659.
-# Masked for removal in 30 days.
-kde-misc/ksystemlog
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Oct 2009)
 # Doesn't compile with KDE4 installed wrt bug #279486.
@@ -974,28 +958,8 @@ media-tv/mtvg
 games-rpg/galaxymage
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Oct 2009)
-# KDE3-only and doesn't compile, bug #246783.
-# Removed in 30 days.
-kde-misc/kdissert
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 Oct 2009)
 # No new x264 support.
 media-plugins/gst-plugins-x264
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
-# Fails to build with KDE4 installed wrt bug #279485.
-# Masked for removal in 30 days.
-kde-misc/metamonitor
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
-# Fails to build with KDE4 installed wrt bug #279716.
-# Masked for removal in 30 days.
-kde-misc/ksplash-engine-moodin
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Oct 2009)
-# Fails to build with KDE4 installed wrt bug #277575.
-# Masked for removal in 30 days.
-kde-misc/kkeyled
 
 # Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
 # Obsolete Musepack SV7 format support. Install
