@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3556 2009/11/12 11:44:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3557 2009/11/12 15:05:35 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Nov 2009; Ben de Groot <yngwin@gentoo.org> arch/sparc/package.use.mask:
+  Also mask doc useflag for media-libs/libxspf on sparc, pending qt-webkit
+  and qt-assistant keywording (bug 292838)
 
   12 Nov 2009; Alexis Ballier <aballier@gentoo.org> profiles.desc:
   remove deprecated fbsd profiles from profiles.desc
