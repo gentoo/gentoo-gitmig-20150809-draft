@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.77 2009/11/08 04:45:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.78 2009/11/12 22:44:19 cardoe Exp $
+
+*mythvideo-0.22_p22807 (12 Nov 2009)
+
+  12 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythvideo-0.22_p22807.ebuild:
+  fix numerous issues with image downloads for seasons, posters and banners.
+  Fix issues with Jamu when using illegal characters.
 
 *mythvideo-0.22_p22763 (08 Nov 2009)
 
