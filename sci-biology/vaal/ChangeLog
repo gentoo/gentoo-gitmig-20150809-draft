@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/vaal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.1 2009/07/08 03:52:35 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.2 2009/11/12 18:45:22 weaver Exp $
+
+  12 Nov 2009; Andrey Kislyuk <weaver@gentoo.org>
+  +files/vaal-1.2-gcc-x86-no-autocast.patch, vaal-1.2.ebuild:
+  Add patch for bug 279087
 
 *vaal-1.2 (07 Jul 2009)
 
