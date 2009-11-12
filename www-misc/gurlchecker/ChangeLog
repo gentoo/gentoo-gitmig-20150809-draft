@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.29 2009/09/20 19:37:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.30 2009/11/12 22:18:33 eva Exp $
+
+  12 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gurlchecker-0.8.2.ebuild, -gurlchecker-0.10.2.ebuild:
+  Clean up old revisions.
 
   20 Sep 2009; nixnut <nixnut@gentoo.org> gurlchecker-0.10.5.ebuild:
   ppc stable #283800
