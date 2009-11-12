@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.6.ebuild,v 1.9 2009/11/12 15:54:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.6.ebuild,v 1.10 2009/11/12 21:23:26 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,7 +22,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/distribute-${PV}"
+S="${WORKDIR}/${MY_P}"
 
 DOCS="README.txt docs/easy_install.txt docs/pkg_resources.txt docs/setuptools.txt"
 
@@ -38,8 +38,7 @@ src_prepare() {
 
 	sed -e 's:if copied and outf.endswith(".py"):& and outf not in ("build/src/distribute_setup.py", "build/src/distribute_setup_3k.py"):' -i setup.py || die "sed setup.py failed"
 
-	sed -e '/def _being_installed():/a \\n    return False' -i setup.py \
-		|| die "sed setup.py failed"
+	sed -e "/def _being_installed():/a \\    return False" -i setup.py || die "sed setup.py failed"
 }
 
 src_test() {

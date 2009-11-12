@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.8.ebuild,v 1.4 2009/11/08 16:54:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.8.ebuild,v 1.5 2009/11/12 21:23:26 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,7 +22,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/distribute-${PV}"
+S="${WORKDIR}/${MY_P}"
 
 DOCS="README.txt docs/easy_install.txt docs/pkg_resources.txt docs/setuptools.txt"
 
