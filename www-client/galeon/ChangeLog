@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.53 2009/11/09 13:02:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.54 2009/11/12 17:22:42 josejx Exp $
+
+  12 Nov 2009; Joseph Jezak <josejx@gentoo.org> galeon-2.0.7-r1.ebuild:
+  Marked ppc stable for bug #280393.
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   galeon-2.0.7-r1.ebuild:
