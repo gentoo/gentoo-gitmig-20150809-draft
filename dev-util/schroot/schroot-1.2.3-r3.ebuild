@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r2.ebuild,v 1.2 2009/10/17 02:02:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r3.ebuild,v 1.1 2009/11/12 02:06:50 abcd Exp $
 
 EAPI="2"
 
-inherit autotools base
+inherit autotools base pam
 
 DESCRIPTION="Utility to execute commands in a chroot environment"
 HOMEPAGE="http://packages.debian.org/source/sid/schroot"
@@ -33,7 +33,6 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${P}-autotools.patch"
-	"${FILESDIR}/${P}-pam.patch"
 	"${FILESDIR}/${P}-tests.patch"
 )
 
@@ -76,6 +75,9 @@ src_install() {
 		docinto html/schroot
 		dohtml doc/schroot/html/* || die "installation of html docs failed"
 	fi
+
+	rm -f "${D}"/etc/pam.d/schroot
+	pamd_mimic_system schroot auth account session
 
 	# Remove *.la files
 	find "${D}" -name "*.la" -exec rm {} + || die "removal of *.la files failed"

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.6 2009/10/17 02:02:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.7 2009/11/12 02:06:50 abcd Exp $
+
+*schroot-1.2.3-r3 (12 Nov 2009)
+
+  12 Nov 2009; Jonathan Callen <abcd@gentoo.org> -schroot-1.2.3-r2.ebuild,
+  +schroot-1.2.3-r3.ebuild, -files/schroot-1.2.3-pam.patch:
+  Use pamd_mimic_system to use the primary pam configuration; drop old
+  revision
 
   17 Oct 2009; Jonathan Callen <abcd@gentoo.org> -schroot-1.2.3-r1.ebuild,
   schroot-1.2.3-r2.ebuild:
