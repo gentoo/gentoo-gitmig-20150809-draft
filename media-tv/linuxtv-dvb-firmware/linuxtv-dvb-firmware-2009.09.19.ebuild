@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.09.19.ebuild,v 1.1 2009/10/08 16:05:47 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.09.19.ebuild,v 1.2 2009/11/12 18:18:55 billie Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -20,6 +20,8 @@ S="${WORKDIR}"
 # Files which can be fetched from linuxtv.org
 PACKET_NAME=dvb-firmwares-1.tar.bz2
 PACKET_SRC_URI="http://www.linuxtv.org/downloads/firmware/${PACKET_NAME}"
+TEVII_NAME=Tevii_linuxdriver_0815.rar
+TEVII_SRC_URI="http://tevii.com/${TEVII_NAME}"
 get_dvb_firmware="${FILESDIR}/get_dvb_firmware-${PV}"
 # from http://git.kernel.org/?p=linux/kernel/git/stable/linux-2.6-stable.git;a=history;f=Documentation/dvb/get_dvb_firmware
 
@@ -36,6 +38,8 @@ FW_USE_FLAGS=(
 	"or51211"
 	"or51132"
 	"or51132"
+	"usb-dw2104"
+	"usb-dw2104"
 # own URL
 	"ttpci"
 	"bcm3510"
@@ -81,6 +85,8 @@ FW_FILES=(
 	"dvb-fe-or51211.fw"
 	"dvb-fe-or51132-qam.fw"
 	"dvb-fe-or51132-vsb.fw"
+	"dvb-usb-dw2104.fw"
+	"dvb-fe-cx24116.fw"
 # own URL
 	"dvb-ttpci-01.fw"
 	"dvb-fe-bcm3510-01.fw"
@@ -115,6 +121,8 @@ FW_FILES=(
 
 FW_GET_PARAMETER=(
 # packet
+	"-"
+	"-"
 	"-"
 	"-"
 	"-"
@@ -171,6 +179,8 @@ FW_URLS=(
 	"${PACKET_SRC_URI}"
 	"${PACKET_SRC_URI}"
 	"${PACKET_SRC_URI}"
+	"${TEVII_SRC_URI}"
+	"${TEVII_SRC_URI}"
 # own URL
 	"http://www.escape-edv.de/endriss/firmware/dvb-ttpci-01.fw-fc2624"
 	"http://www.linuxtv.org/downloads/firmware/dvb-fe-bcm3510-01.fw"
@@ -304,11 +314,21 @@ src_unpack() {
 		unpack ${PACKET_NAME}
 	fi
 
+	# unpack tevii packet
+	if has ${TEVII_NAME} ${A}; then
+		unpack ${TEVII_NAME}
+	fi
+
 	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_mpc718 ; then
 		mv Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip "Yuan MPC718 TV Tuner Card 2.13.10.1016.zip"
 	fi
 	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_ttpci ; then
 		mv dvb-ttpci-01.fw-fc2624 dvb-ttpci-01.fw
+	fi
+
+	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_usb-dw2104 ; then
+		mv tevii_linuxdriver_0815/fw/dvb-usb-s650.fw dvb-usb-dw2104.fw
+		mv tevii_linuxdriver_0815/fw/dvb-fe-cx24116.fw ./
 	fi
 
 	local script_v=${PV}
