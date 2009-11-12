@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r1.ebuild,v 1.2 2009/10/14 18:03:04 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.1 2009/11/12 21:34:46 billie Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt3 qt4 scanner snmp static-ppds"
+IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt3 qt4 scanner snmp static-ppds -udev-acl zeroconf"
 
 # Note : libusb-compat untested (calchan 20090516)
 
@@ -22,9 +22,10 @@ COMMON_DEPEND="
 	virtual/ghostscript
 	media-libs/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
+	!static-ppds? ( || ( >=net-print/cups-1.4.0[zeroconf?] net-print/cupsddk ) )
+	udev-acl? ( >=sys-fs/udev-145[extras] )
 	!minimal? (
-		net-print/cups
+		net-print/cups[zeroconf?]
 		virtual/libusb:0
 		>=dev-lang/python-2.4.4[threads,xml]
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
@@ -82,6 +83,8 @@ pkg_setup() {
 
 	if use minimal ; then
 		ewarn "Installing driver portions only, make sure you know what you are doing."
+		ewarn "Depending on the USE flags set for hpcups and/or hpijs the appropiate"
+		ewarn "drivers are installed."
 	else
 		use parport && linux-info_pkg_setup
 	fi
@@ -102,13 +105,7 @@ src_prepare() {
 
 	# SYSFS deprecated - https://bugs.launchpad.net/hplip/+bug/346390
 	sed -i -e "s/SYSFS/ATTRS/g" -e "s/sysfs/attrs/g" data/rules/56-hpmud_support.rules \
-		|| die "Sed data/rules/56-hpmud_support.rules failed"
-
-	# Replace udev rules, see bug #197726.
-	mv data/rules/40-hplip.rules data/rules/70-hplip.rules || die
-	sed -i \
-		-e "s/40-hplip.rules/70-hplip.rules/g" \
-		Makefile.am */*.html || die "Sed Makefile.am */*.html failed"
+		data/rules/55-hpmud.rules || die "Sed 55-hpmud.rules 56-hpmud_support.rules failed"
 
 	sed -i \
 		-e s:/usr/lib/cups/driver:$(cups-config --serverbin)/driver:g \
@@ -146,7 +143,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local drv_build gui_build myconf
+	local gui_build myconf drv_build minimal_build
 
 	if use qt3 || use qt4 ; then
 		gui_build="--enable-gui-build"
@@ -161,7 +158,7 @@ src_configure() {
 			use qt3 && gui_build="${gui_build} --enable-qt3 --disable-qt4"
 		fi
 	else
-		gui_build="--disable-gui-build"
+		gui_build="--disable-gui-build --disable-qt3 --disable-qt4"
 	fi
 
 	if use fax || use qt4 ; then
@@ -171,7 +168,7 @@ src_configure() {
 	fi
 
 	if use hpcups ; then
-		drv_build="${drv_build} $(use_enable hpcups hpcups-install)"
+		drv_build="$(use_enable hpcups hpcups-install)"
 		if use static-ppds ; then
 			drv_build="${drv_build} --enable-cups-ppd-install"
 			drv_build="${drv_build} --disable-cups-drv-install"
@@ -179,6 +176,9 @@ src_configure() {
 			drv_build="${drv_build} --enable-cups-drv-install"
 			drv_build="${drv_build} --disable-cups-ppd-install"
 		fi
+	else
+		drv_build="--disable-hpcups-install --disable-cups-drv-install"
+		drv_build="${drv_build} --disable-cups-ppd-install"
 	fi
 
 	if use hpijs ; then
@@ -190,35 +190,52 @@ src_configure() {
 			drv_build="${drv_build} --enable-foomatic-drv-install"
 			drv_build="${drv_build} --disable-foomatic-ppd-install"
 		fi
+	else
+		drv_build="${drv_build} --disable-hpijs-install"
+		drv_build="${drv_build} --disable-foomatic-drv-install"
+		drv_build="${drv_build} --disable-foomatic-ppd-install"
+	fi
+
+	if use minimal ; then
+		if use hpijs ; then
+			minimal_build="--enable-hpijs-only-build"
+		else
+			minimal_build="--disable-hpijs-only-build"
+		fi
+		if use hpcups ; then
+			minimal_build="${minimal_build} --enable-hpcups-only-build"
+		else
+			minimal_build="${minimal_build} --disable-hpcups-only-build"
+		fi
 	fi
 
 	econf \
 		--disable-dependency-tracking \
 		--disable-cups11-build \
 		--disable-lite-build \
-		--disable-new-hpcups \
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--htmldir=/usr/share/doc/${P}/html \
-		--enable-udev-acl-rules \
-		${drv_build} \
 		${gui_build} \
 		${myconf} \
+		${drv_build} \
+		${minimal_build} \
+		$(use_enable new-hpcups new-hpcups) \
 		$(use_enable doc doc-build) \
 		$(use_enable fax fax-build) \
-		$(use_enable minimal hpijs-only-build) \
 		$(use_enable parport pp-build) \
 		$(use_enable scanner scan-build) \
-		$(use_enable snmp network-build)
+		$(use_enable snmp network-build) \
+		$(use_enable udev-acl udev-acl-rules)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Emake install failed"
-	rm -f "${D}"/etc/sane.d/dll.conf
 
-	use minimal && rm -r "${D}"/usr/$(get_libdir)
+	# Bug #201023
+	rm -f "${D}"/etc/sane.d/dll.conf
 
 	# bug 106035/259763
 	if ! use qt3 && ! use qt4 ; then
@@ -243,13 +260,18 @@ pkg_postinst() {
 	use !minimal && python_mod_optimize /usr/share/${PN}
 	fdo-mime_desktop_database_update
 
-	elog "You should run hp-setup as root if you are installing hplip for the first time, and may also"
-	elog "need to run it if you are upgrading from an earlier version."
+	elog "You should run hp-setup as root if you are installing hplip for the first time,"
+	elog "and may also need to run it if you are upgrading from an earlier version."
 	elog
-	elog "If your device is connected using USB, users will need to be in the lp group to access it."
+	elog "If your device is connected using USB, users will need to be in the lp group to"
+	elog "access it."
 	elog
 	elog "This release doesn't use an init script anymore, so you should probably do a"
 	elog "'rc-update del hplip' if you are updating from an old version."
+	elog
+	elog "Starting with versions of hplip >=3.9.8 mDNS is the default network search"
+	elog "mechanism. To make use of it you need to activate the zeroconf flag. If you"
+	elog "prefer the SLP method you have to choose this when configuring the device."
 }
 
 pkg_postrm() {

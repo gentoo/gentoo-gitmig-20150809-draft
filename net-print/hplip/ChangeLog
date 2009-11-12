@@ -1,6 +1,15 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.130 2009/10/15 18:21:29 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.131 2009/11/12 21:34:46 billie Exp $
+
+*hplip-3.9.10 (12 Nov 2009)
+
+  12 Nov 2009; Daniel Pielmeier <billie@gentoo.org>
+  -files/hplip-3.9.2-high_cpu_utilization_logout.patch, -hplip-3.9.8.ebuild,
+  -hplip-3.9.8-r1.ebuild, -hplip-3.9.8-r2.ebuild, +hplip-3.9.10.ebuild,
+  metadata.xml:
+  Version bump thanks to Manfred Knick in bug #292915. Remove old versions
+  and unused files files. Cleanup metadata.xml.
 
 *hplip-3.9.8-r3 (15 Oct 2009)
 

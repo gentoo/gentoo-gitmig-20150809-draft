@@ -20,53 +20,44 @@
   </maintainer>
 
   <use>
-    <flag name='cupsddk'>Add support for <pkg>net-print/cupsddk</pkg> which 
+    <flag name="doc">Build documentation</flag>
+    <flag name="cupsddk">Add support for <pkg>net-print/cupsddk</pkg> which 
     enables dynamic PPD files (recommended)</flag>
-    <flag name='dbus'>Add support for <pkg>sys-apps/dbus</pkg> which enables 
+    <flag name="dbus">Add support for <pkg>sys-apps/dbus</pkg> which enables 
     better communications with your device (recommended)</flag>
-    <flag name='doc'>Build documentation</flag>
-    <flag name='fax'>Enable fax on multifunction devices which support it</flag>
-    <flag name='gtk'>Enable GTK+ dependencies, currently only the scanner GUI 
-    with USE=scanner.</flag>
-    <flag name='minimal'>Only build internal hpijs driver (not recommended at 
-    all, make sure you know what you are doing)</flag>
-    <flag name='parport'>Enable parallel port for devices which require 
+    <flag name="fax">Enable fax on multifunction devices which support 
     it</flag>
-    <flag name='ppds'>Use precompiled PPD files (obsolete, use cupsddk 
+    <flag name="gtk">Enable GTK+ dependencies, currently only the scanner GUI 
+    with USE=scanner</flag>
+    <flag name="hpcups">Build the hpcups driver for cups (by HP)</flag>
+    <flag name="hpijs">Build the IJS driver for cups (Foomatic)</flag>
+    <flag name="libnotify">Enables desktop notifications</flag>
+    <flag name="minimal">Only build internal hpijs driver (not recommended at 
+    all, make sure you know what you are doing)</flag>
+    <flag name="new-hpcups">Build the new hpcups driver for cups which is no 
+    longer based on APDK (by HP)</flag>
+    <flag name="parport">Enable parallel port for devices which require 
+    it</flag>
+    <flag name="policykit">Enable sys-auth/policykit authentication 
+    support</flag>
+    <flag name="ppds">Use precompiled PPD files (obsolete, use cupsddk 
     instead)</flag>
-    <flag name='qt3'>Enable graphical interface using Qt 3; when both qt3 and
-	qt4 USE flags are enabled then qt4 has priority over qt3</flag>
-    <flag name='qt4'>Enable graphical interface using Qt 4; when both qt3 and
-	qt4 USE flags are enabled then qt4 has priority over qt3</flag>
-    <flag name='scanner'>Enable scanner on multifunction devices which support 
-    it </flag>
-    <flag name='snmp'>Add support for <pkg>net-analyzer/net-snmp</pkg> 
-    which enables this driver to work over networks (both for server and 
+    <flag name="qt3">Enable graphical interface using Qt 3; when both qt3 and 
+    qt4 USE flags are enabled then qt4 has priority over qt3</flag>
+    <flag name="qt4">Enable graphical interface using Qt 4; when both qt3 and 
+    qt4 USE flags are enabled then qt4 has priority over qt3</flag>
+    <flag name="scanner">Enable scanner on multifunction devices which support 
+    it</flag>
+    <flag name="snmp">Add support for <pkg>net-analyzer/net-snmp</pkg> which 
+    enables this driver to work over networks (both for server and 
     client)</flag>
-    <flag name='udev-acl'>Install udev acl rules. This needs
-    <pkg>sys-fs/udev</pkg> with acl support.</flag>
-    <flag name='zeroconf'>Zeroconf support. Enable this flag to make use of the
-    mDNS network search for network attached printers.</flag>
-    <flag name="cups">
-      Build the hpcups driver for cups.
-    </flag>
-    <flag name="foomatic">
-      Build the IJS/foomatic driver for cups.
-    </flag>
-
-    <flag name="hpcups">
-      Build the hpcups driver for cups (by HP).
-    </flag>
-
-    <flag name="hpijs">
-      Build the IJS driver for cups (Foomatic)
-    </flag>
-
-    <flag name="static-ppds">
-      Use statically-generated PPDs instead of Dynamic PPDs. This is
-      deprecated, and this USE flag is thus suggested to stay turned
-      off.
-    </flag>
+    <flag name="static-ppds">Use statically-generated PPDs instead of Dynamic 
+    PPDs. This is deprecated, and this USE flag is thus suggested to stay 
+    turned off</flag>
+    <flag name="udev-acl">Install udev acl rules which needs 
+    <pkg>sys-fs/udev</pkg> with acl support</flag>
+    <flag name="zeroconf">Zeroconf support. Enable this flag to make use of the
+    mDNS network search for network attached printers</flag>
   </use>
 
 </pkgmetadata>
