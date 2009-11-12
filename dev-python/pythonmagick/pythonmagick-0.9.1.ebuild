@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.1.ebuild,v 1.2 2009/10/30 16:00:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.1.ebuild,v 1.3 2009/11/12 19:48:13 bicatali Exp $
 
 EAPI=2
 inherit python flag-o-matic
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-gfx/imagemagick-6.4
-	>=dev-libs/boost-1.34.0"
+	>=dev-libs/boost-1.35.0[python]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
