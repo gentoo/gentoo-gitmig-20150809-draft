@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.7.5.ebuild,v 1.1 2009/09/03 16:15:34 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.7.8.ebuild,v 1.1 2009/11/12 22:47:57 eva Exp $
 
 EAPI=1
 GCONF_DEBUG=no
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/Vala"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="test +vapigen"
+IUSE="test +vapigen +coverage"
 
 #FIXME: flex and bison are in "base" profile,
 # so why put them into DEPEND ?
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/dbus-glib )"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable vapigen)"
+	G2CONF="${G2CONF}
+		$(use_enable vapigen)
+		$(use_enable coverage)"
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 }
