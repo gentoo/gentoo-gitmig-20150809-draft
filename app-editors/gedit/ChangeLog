@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.284 2009/11/11 16:55:04 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.285 2009/11/12 22:13:36 eva Exp $
+
+*gedit-2.28.2 (12 Nov 2009)
+
+  12 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> -gedit-2.28.0.ebuild,
+  +gedit-2.28.2.ebuild:
+  Version bump. Regression/warning fixes due to OSX integration.
 
 *gedit-2.28.1 (11 Nov 2009)
 

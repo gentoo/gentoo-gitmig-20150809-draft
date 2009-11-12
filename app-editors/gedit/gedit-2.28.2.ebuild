@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.0.ebuild,v 1.1 2009/10/29 22:52:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.2.ebuild,v 1.1 2009/11/12 22:13:36 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -49,9 +49,6 @@ if [[ "${ARCH}" == "PPC" ]] ; then
 fi
 
 pkg_setup() {
-	# Installed for plugins, but they're dlopen()-ed
-	G2PUNT_LA="yes"
-
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--disable-updater
@@ -70,6 +67,8 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install
+
+	# Installed for plugins, but they're dlopen()-ed
 	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 }
 
