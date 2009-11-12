@@ -6,7 +6,4 @@
   <email>chainsaw@gentoo.org</email>
   <name>Tony Vroon</name>
 </maintainer>
-<use>
-  <flag name='amarok'>Enable display of titles played in Amarok</flag>
-</use>
 </pkgmetadata>

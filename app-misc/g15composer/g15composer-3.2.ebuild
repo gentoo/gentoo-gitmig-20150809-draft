@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.2.ebuild,v 1.4 2009/08/15 12:44:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-3.2.ebuild,v 1.5 2009/11/12 18:33:06 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -12,15 +12,11 @@ SRC_URI="mirror://sourceforge/g15tools/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="amarok truetype examples"
+IUSE="truetype examples"
 
 DEPEND="app-misc/g15daemon
 	>=dev-libs/libg15render-1.2[truetype?]
-	truetype? ( media-libs/freetype )
-	amarok? ( kde-base/kdelibs
-		dev-lang/perl[ithreads] )"
-RDEPEND="${DEPEND}
-	amarok? ( dev-perl/DCOP-Amarok-Player )"
+	truetype? ( media-libs/freetype )"
 
 src_configure() {
 	econf \
@@ -39,19 +35,8 @@ src_install() {
 		exeinto "/usr/share/${PN}"
 		doexe examples/*
 	fi
-
-	if use amarok ; then
-		exeinto "/usr/share/apps/amarok/scripts"
-		newexe examples/amarok-g15-perl.pl g15-display.pl
-	fi
 }
 
 pkg_postinst() {
 	elog "Set the user to run g15composer in /etc/conf.d/g15composer before starting the service."
-
-	if use amarok; then
-		echo
-		elog "g15-display.pl was installed into your Amarok script directory."
-		elog "To start it, have a look at Tools -> Script Manager in the Amarok menu."
-	fi
 }
