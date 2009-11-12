@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.10 2009/11/08 05:03:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.11 2009/11/12 15:51:53 mrpouet Exp $
+
+*kdevplatform-0.9.96 (12 Nov 2009)
+
+  12 Nov 2009; Romain Perier <mrpouet@gentoo.org>
+  +kdevplatform-0.9.96.ebuild:
+  Version bump, import from kde overlay , request per bug #292012.
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org> kdevplatform-0.9.95.ebuild:
   Marked ~ppc/~ppc64 for bug #280312.
