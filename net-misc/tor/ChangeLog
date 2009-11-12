@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.180 2009/09/07 11:23:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.181 2009/11/12 14:32:08 fauli Exp $
+
+*tor-0.2.1.19-r2 (12 Nov 2009)
+
+  12 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  +tor-0.2.1.19-r2.ebuild, +files/tor-0.2.1.19-openssl.patch:
+  fix bug 2926611, patch discovered by Aidan Marks <aidan AT cisco DOT com>
 
   07 Sep 2009; Christian Faulhammer <fauli@gentoo.org> files/tor.initd-r4:
   respect CONFFILE variable in start calls, reported by Iome <frodone AT
