@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.530 2009/11/11 20:00:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.531 2009/11/12 19:30:43 aballier Exp $
+
+  12 Nov 2009; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.10.ebuild:
+  remove old
 
   11 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> vlc-1.0.2.ebuild:
   Stable for ppc, bug 285370
