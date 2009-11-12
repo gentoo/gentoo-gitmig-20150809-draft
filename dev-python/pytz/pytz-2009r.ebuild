@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2009n.ebuild,v 1.2 2009/10/11 11:29:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2009r.ebuild,v 1.1 2009/11/12 22:50:56 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -36,7 +36,7 @@ src_test() {
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
+	[[ -z "${ED}" ]] && local ED="${D}"
 	distutils_src_install
 	rm -fr "${ED}"usr/lib*/python*/site-packages/pytz/zoneinfo
 }
