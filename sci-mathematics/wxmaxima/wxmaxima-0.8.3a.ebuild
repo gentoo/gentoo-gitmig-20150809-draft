@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.4.ebuild,v 1.8 2009/11/12 18:14:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.3a.ebuild,v 1.1 2009/11/12 18:14:00 bicatali Exp $
 
 WX_GTK_VER="2.8"
-inherit eutils wxwidgets fdo-mime
+EAPI="2"
+inherit wxwidgets fdo-mime
 
 MYP=wxMaxima-${PV}
 
@@ -13,40 +14,38 @@ SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="unicode"
 
-DEPEND=">=dev-libs/libxml2-2.5.0
-	>=x11-libs/wxGTK-2.8.7"
+DEPEND="dev-libs/libxml2
+	x11-libs/wxGTK:2.8"
 RDEPEND="${DEPEND}
-	>=sci-mathematics/maxima-5.14.0"
+	media-fonts/jsmath
+	sci-visualization/gnuplot[wxwidgets]
+	sci-mathematics/maxima"
 
 S="${WORKDIR}/${MYP}"
 
-src_compile () {
-
+src_prepare() {
 	# consistent package names
-	sed -i \
-		-e "s:${datadir}/wxMaxima:${datadir}/${PN}:g" \
-		Makefile.in data/Makefile.in || die "sed failed"
+	sed -e "s:${datadir}/wxMaxima:${datadir}/${PN}:g" \
+		-i Makefile.in data/Makefile.in || die "sed failed"
 
-	sed -i \
-		-e 's:share/wxMaxima:share/wxmaxima:g' \
-		src/wxMaxima.cpp || die "sed failed"
+	sed -e 's:share/wxMaxima:share/wxmaxima:g' \
+		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp || die "sed failed"
+}
 
+src_configure() {
 	econf \
 		--enable-dnd \
 		--enable-printing \
 		--with-wx-config=${WX_CONFIG} \
-		$(use_enable unicode unicode-glyphs) \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+		$(use_enable unicode unicode-glyphs)
 }
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	doicon wxmaxima.png
+	doicon data/wxmaxima.png
 	make_desktop_entry wxmaxima wxMaxima wxmaxima
 	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
