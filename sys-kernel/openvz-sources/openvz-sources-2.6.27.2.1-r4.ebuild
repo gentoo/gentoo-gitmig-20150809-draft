@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.2.1-r2.ebuild,v 1.3 2009/07/22 05:54:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.2.1-r4.ebuild,v 1.1 2009/11/12 11:22:11 pva Exp $
 
 inherit versionator
 
@@ -39,23 +39,18 @@ if [[ ${PR} != r0 ]]; then
 	SLOT+=-${PR}
 fi
 
-KEYWORDS="amd64 ~ia64 ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DESCRIPTION="Kernel sources with OpenVZ patchset"
 HOMEPAGE="http://www.openvz.org"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}
-	http://download.openvz.org/kernel/branches/${CKV}/${CKV}-${OVZ_KV}/patches/patch-${OVZ_KV}-combined.gz"
+	http://download.openvz.org/kernel/branches/${CKV}/${CKV}-${OVZ_KV}/patches/patch-${OVZ_KV}-combined.gz
+	mirror://gentoo/linux-2.6.27-openvz-2.6.27.39-merge.patch.bz2"
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KV}-combined.gz
-${FILESDIR}/${PN}-2.6.27.2.1-ban-netns-creation.patch
-${FILESDIR}/${PN}-2.6.27.2.1-bridge-process-skbs.patch
-${FILESDIR}/${PN}-2.6.27.2.1-bridge-set_via_phys_dev_state.patch
-${FILESDIR}/${PN}-2.6.27.2.1-avoid-double-free.patch
-${FILESDIR}/${PN}-2.6.27.2.1-check-for-no-mmaps.patch
-${FILESDIR}/${PN}-2.6.27.2.1-pi-futex-pid-check-fixup.patch
-${FILESDIR}/${PN}-2.6.27.2.1-SLAB.patch"
+${DISTDIR}/linux-2.6.27-openvz-2.6.27.39-merge.patch.bz2"
 
 K_EXTRAEINFO="For more information about this kernel take a look at:
 http://wiki.openvz.org/Download/kernel/${CKV}/${CKV}-${OVZ_KV}"
