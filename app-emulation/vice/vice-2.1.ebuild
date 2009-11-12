@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.1.ebuild,v 1.4 2009/11/02 09:54:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.1.ebuild,v 1.5 2009/11/12 07:59:49 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -53,7 +53,8 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-xshm.patch
 }
 
 src_configure() {

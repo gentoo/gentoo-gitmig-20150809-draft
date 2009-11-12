@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.64 2009/11/02 09:54:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.65 2009/11/12 07:59:49 tupone Exp $
+
+  12 Nov 2009; Alfredo Tupone <tupone@gentoo.org> vice-2.1.ebuild,
+  +files/vice-2.1-xshm.patch:
+  Fix X_ShmAttach not declared. Bug #292508 by Cedric Godin
 
   02 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> vice-1.22.ebuild,
   vice-2.1.ebuild:
