@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10799 2009/11/12 13:04:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10800 2009/11/12 14:02:29 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -545,8 +545,6 @@ app-laptop/kthinkbat
 app-laptop/khdapsmon
 app-laptop/khdapsmonitor
 kde-misc/kfish
-<kde-misc/krename-4
-<media-video/kaffeine-1.0_pre1
 x11-misc/lineak-kdeplugins
 mail-client/mailody
 app-portage/kelogviewer
@@ -556,22 +554,14 @@ kde-misc/kopete-antispam-kde3
 kde-misc/koppermine
 www-client/kita
 sci-mathematics/koctave
-<dev-util/kdesvn-1.4
 x11-terms/kuake
 app-cdr/koverartist
 net-misc/kbandwidth
 net-irc/vyqchat
-<net-irc/konversation-1.2
 net-im/kopete-otr
-<dev-util/kscope-1.9
-<net-p2p/kmldonkey-2
 app-backup/keep
 media-sound/musicman
 app-antivirus/klamav
-<net-p2p/ktorrent-3
-<net-misc/smb4k-0.10
-<net-im/kmess-2
-<app-text/kding-0.5
 x11-plugins/khexclock
 x11-themes/domino
 x11-themes/comix
@@ -587,7 +577,6 @@ x11-themes/liquid
 <media-gfx/kflickr-0.9.1_p1
 x11-themes/tiblit
 x11-themes/qtcurve
-<x11-themes/gtk-engines-qt-1.1
 x11-themes/reinhardtstyle
 x11-themes/ridge
 x11-themes/thinkeramik
@@ -617,7 +606,6 @@ games-fps/quake3-urbanterror
 # <net-misc/knemo-0.5.2 replaced by >=net-misc/knemo-0.5.2
 # Removed in 30 days.
 media-video/mplayerthumbs
-<net-misc/knemo-0.5.2
 
 # Alex Alexander <wired@gentoo.org> (04 Nov 2009)
 # keeping rc and live ebuilds masked
@@ -688,16 +676,13 @@ kde-misc/komparator
 kde-misc/kompose
 kde-misc/kooldock
 kde-misc/kopete-ktts
-<kde-misc/krusader-2
 kde-misc/ksensors
 kde-misc/ksmoothdock
 kde-misc/kvdrmon
 kde-misc/mtaskbar
 kde-misc/pwmanager
 kde-misc/quadkonsole
-<kde-misc/rsibreak-0.10
 kde-misc/strigiapplet
-<kde-misc/yakuake-2.9.6
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Oct 2009)
 # KDE3-only. Doesn't compile.
@@ -762,11 +747,6 @@ dev-python/twisted-docs
 dev-python/cryptlib_py
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# KDE3-only. Replaced by >=kde-misc/kdiff3-0.9.95.
-# Masked for removal in 30 days.
-<kde-misc/kdiff3-0.9.95
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # KDE3-only. Replaced by app-cdr/acetoneiso.
 # Masked for removal in 30 days.
 app-cdr/kiso
@@ -776,11 +756,6 @@ app-cdr/kiso
 # wrt bugs 178072, 280808, 234385, 117247, 191557, and 253231.
 # Masked for removal in 30 days.
 app-office/taskjuggler
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# KDE3-only. Replaced by >=kmplayer-0.11.1a.
-# Masked for removal in 30 days.
-<media-video/kmplayer-0.11.1a
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # Replaced by KDE4 menu. For KDE3-only and is using
@@ -854,11 +829,6 @@ net-im/kpopup
 dev-python/python-gammu
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
-# KDE3-only. Doesn't work with stable mplayer wrt bug #208786.
-# Masked for removal in 30 days.
-=media-video/kplayer-0.6*
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # KDE3-only. Doesn't compile wrt bug #262318.
 # Masked for removal in 30 days.
 kde-misc/kio-locate
@@ -879,11 +849,6 @@ kde-misc/kio-locate
 # Will be unmasked when felt “ready” (and openrc'll support it as
 # guest).
 app-emulation/lxc
-
-# Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2009)
-# KDE3-only. Doesn't work with stable sqlite, wrt bug #224503.
-# Masked for removal in 30 days.
-<kde-misc/krecipes-1.9999
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2009)
 # KDE3-only. Doesn't work with unicode, which is Gentoo
