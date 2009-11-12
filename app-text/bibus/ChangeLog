@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.16 2009/11/12 23:09:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.17 2009/11/12 23:39:40 markusle Exp $
+
+  12 Nov 2009; Markus Dittrich <markusle@gentoo.org> -bibus-1.5_rc1.ebuild,
+  -files/bibus-1.5_rc1-install.patch:
+  Removed broken version (see bug #290481).
 
 *bibus-1.5.0 (12 Nov 2009)
 
