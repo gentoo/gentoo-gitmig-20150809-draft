@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythnews
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.44 2009/11/08 03:25:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.45 2009/11/12 22:48:12 cardoe Exp $
+
+*mythnews-0.22_p22807 (12 Nov 2009)
+
+  12 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythnews-0.22_p22807.ebuild:
+  makes some widgets optional, which fixes MythNews not working with
+  Metallurgy theme
 
   08 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   -mythnews-0.21_p17105.ebuild, mythnews-0.21_p20585.ebuild:
