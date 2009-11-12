@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1.ebuild,v 1.1 2009/11/02 01:52:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r1.ebuild,v 1.1 2009/11/12 05:06:32 nerdboy Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs
+inherit eutils distutils toolchain-funcs
 
 DESCRIPTION="A Free Toolkit for developing mapping applications."
 HOMEPAGE="http://www.mapnik.org/"
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/boost
 	media-libs/tiff
 	media-libs/freetype:2
 	sci-libs/proj
-	x11-libs/agg
+	x11-libs/agg[gpc,truetype]
 	media-fonts/dejavu
 	python? ( >=dev-libs/boost-1.35.0-r5[python] )
 	cairo? ( x11-libs/cairo
@@ -46,10 +46,12 @@ src_prepare() {
 
 	sed -i -e "s:mapniklibpath + '/fonts':'/usr/share/fonts/dejavu/':g" \
 	    bindings/python/SConscript || die "sed 1 failed"
+	rm -rf agg
+	epatch "${FILESDIR}"/${P}-libagg.patch
 }
 
 src_configure() {
-	MAKEOPTS="INTERNAL_LIBAGG=no"
+	MAKEOPTS="SYSTEM_FONTS=/usr/share/fonts/dejavu"
 
 	MAKEOPTS="${MAKEOPTS} INPUT_PLUGINS="
 	use postgres && MAKEOPTS="${MAKEOPTS}postgis,"
@@ -76,7 +78,8 @@ src_install() {
 	scons install || die "scons install failed"
 
 	if use python ; then
-		fperms o-w /usr/lib/python*/site-packages/mapnik/paths.py
+	    distutils_python_version
+	    fperms 0755 /usr/$(get_libdir)/python${PYVER}/site-packages/mapnik/paths.py
 	    dobin utils/stats/mapdef_stats.py
 	    insinto /usr/share/doc/${P}/examples
 	    doins utils/ogcserver/*

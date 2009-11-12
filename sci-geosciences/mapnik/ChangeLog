@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.12 2009/11/02 01:52:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.13 2009/11/12 05:06:32 nerdboy Exp $
+
+*mapnik-0.6.1-r1 (12 Nov 2009)
+
+  12 Nov 2009; Steve Arnold <nerdboy@gentoo.org> -mapnik-0.6.1.ebuild,
+  +mapnik-0.6.1-r1.ebuild, +files/mapnik-0.6.1-libagg.patch:
+  Patch for building properly against external libagg (fixes bug #292078) 
+  and removal of redundant fonts.
 
 *mapnik-0.6.1 (02 Nov 2009)
 
