@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r3.ebuild,v 1.3 2009/11/06 16:55:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.42-r3.ebuild,v 1.4 2009/11/12 19:12:29 cardoe Exp $
 
 EAPI="2"
 
@@ -419,7 +419,7 @@ src_install-libs() {
 	#cuda
 	if [[ -f ${libdir}/libcuda.so.${sover} ]]; then
 		dolib.so ${libdir}/libcuda.so.${sover}
-		[[ ${sover} -ne 1 ]] && dosym libcuda.so.${sover} /usr/${inslibdir}/libcuda.so.1
+		[[ "${sover}" != "1" ]] && dosym libcuda.so.${sover} /usr/${inslibdir}/libcuda.so.1
 		dosym libcuda.so.1 /usr/${inslibdir}/libcuda.so
 	fi
 
@@ -434,7 +434,7 @@ src_install-libs() {
 	if [[ -f ${libdir}/libOpenCL.so.1.0.0 ]]; then
 
 		dolib.so ${libdir}/libnvcompiler.so.${sover}
-		[[ ${sover} -ne 1 ]] && dosym libnvcompiler.so.${sover} /usr/${inslibdir}/libnvcompiler.so.1
+		[[ "${sover}" != "1" ]] && dosym libnvcompiler.so.${sover} /usr/${inslibdir}/libnvcompiler.so.1
 		dosym libnvcompiler.so.1 /usr/${inslibdir}/libnvcompiler.so
 
 		dolib.so ${libdir}/libOpenCL.so.1.0.0
