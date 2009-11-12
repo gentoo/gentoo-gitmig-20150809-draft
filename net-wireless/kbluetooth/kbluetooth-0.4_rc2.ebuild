@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4_rc2.ebuild,v 1.1 2009/11/12 07:35:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4_rc2.ebuild,v 1.2 2009/11/12 11:02:57 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="da de en_GB es et fr gl km lt nds pt pt_BR ro ru sv tr uk zh_CN zh_TW"
@@ -29,6 +29,16 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	kde4-base_src_prepare
+
+	sed -e 's/${KDE4WORKSPACE_SOLIDCONTROL_LIBRARY}/solidcontrol/g' \
+		-i src/CMakeLists.txt \
+		-i src/device-manager/CMakeLists.txt \
+		-i src/inputwizard/CMakeLists.txt \
+		|| die "Failed to patch CMake files"
+}
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
