@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.4 2009/07/26 00:24:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.5 2009/11/12 17:55:06 bicatali Exp $
 
 EAPI=2
-inherit eutils distutils fortran python
+inherit eutils distutils python toolchain-funcs
 
 DESCRIPTION="Full vectorial Maxwell solver based on eigenmode expansion"
 HOMEPAGE="http://camfr.sourceforge.net/"
@@ -18,7 +18,7 @@ RDEPEND="sci-libs/scipy
 	dev-lang/python[tk]
 	dev-python/imaging[tk]
 	dev-python/matplotlib
-	dev-libs/boost
+	dev-libs/boost[python]
 	dev-libs/blitz
 	virtual/lapack"
 
@@ -49,17 +49,15 @@ src_prepare() {
 		lapack_libdirs="${lapack_libdirs}, \"${x#-L}\""
 	done
 	local libfort
-	case ${FORTRANC} in
-		gfortran) libfort=gfortran ;;
-		g77) libfort=g2c ;;
+	case "$(tc-getF77)" in
+		*gfortran) libfort=gfortran ;;
+		*g77) libfort=g2c ;;
 	esac
 	cat <<-EOF >> machine_cfg.py
 		library_dirs = [${lapack_libdirs#,}]
 		libs = ["boost_python", "${libfort}", "blitz"${lapack_libs}]
 	EOF
-
-	# scons redefines F77 to FORTRAN for env variables
-	sed -i -e 's/F77/FORTRAN/g' SConstruct || die
+	export F77=$(tc-getF77)
 }
 
 src_test() {

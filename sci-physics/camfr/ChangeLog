@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.14 2009/07/26 00:24:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.15 2009/11/12 17:55:06 bicatali Exp $
+
+  12 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  camfr-20070717-r1.ebuild:
+  Now depend on boost[python] and removed the use of fortran eclass
 
   26 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org>
   camfr-20070717-r1.ebuild, files/machine_cfg.py.gentoo:
