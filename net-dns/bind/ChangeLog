@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.245 2009/08/13 00:41:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.246 2009/11/12 07:56:57 scarabeus Exp $
+
+  12 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> bind-9.6.1_p1.ebuild:
+  Fix collision issues. Per bug #276966 and #282565.
 
   13 Aug 2009; Christian Ruppert <idl0r@gentoo.org> files/named.ca,
   files/named.init-r6:

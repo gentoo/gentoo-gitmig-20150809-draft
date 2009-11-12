@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p1.ebuild,v 1.2 2009/07/29 20:20:15 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p1.ebuild,v 1.3 2009/11/12 07:56:57 scarabeus Exp $
 
 EAPI="2"
 
@@ -203,9 +203,10 @@ src_install() {
 	dosym /var/bind/sec /etc/bind/sec
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
-	rm -f "${D}"/usr/share/man/man1/{dig,host,nslookup}.1
-	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen,nsupdate}.8
+	rm -f "${D}"/usr/share/man/man1/{dig,host,nslookup}.1*
+	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen,nsupdate}.8*
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
+	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 }
 
 pkg_postinst() {
