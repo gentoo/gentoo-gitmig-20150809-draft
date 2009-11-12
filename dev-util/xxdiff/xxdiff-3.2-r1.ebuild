@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2-r1.ebuild,v 1.7 2009/07/12 08:39:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2-r1.ebuild,v 1.8 2009/11/12 17:13:22 ssuominen Exp $
 
-EAPI="1"
-
-inherit distutils eutils kde-functions toolchain-funcs
+EAPI=1
+inherit distutils eutils toolchain-funcs qt3
 
 DESCRIPTION="A graphical file and directories comparator and merge tool."
 HOMEPAGE="http://furius.ca/xxdiff/"
@@ -13,29 +12,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
-IUSE="kde python debug"
+IUSE="python debug"
 
-RDEPEND="=x11-libs/qt-3*
-	kde? ( kde-base/kdelibs:3.5 )"
-DEPEND="${RDEPEND}
+COMMON_DEPEND="x11-libs/qt:3"
+RDEPEND="${COMMON_DEPEND}
+	sys-apps/diffutils"
+DEPEND="${COMMON_DEPEND}
 	sys-devel/flex
 	|| ( sys-devel/bison dev-util/yacc )"
-RDEPEND="${RDEPEND}
-	sys-apps/diffutils"
-
-set-kdedir 3
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch #214181
-
-	if use kde; then
-		cd "${S}/src"
-		epatch "${FILESDIR}/${P}-kdesupport.patch"
-		sed -i "s:/usr/include/kde:${KDEDIR}/include:g" xxdiff.pro
-		sed -i "s:QMAKE_LIBS +=:QMAKE_LIBS+= -L${KDEDIR}/lib:g" xxdiff.pro
-	fi
 
 	use debug || sed -i -e '/CONFIG/s:debug::' "${S}/src/xxdiff.pro"
 
@@ -49,30 +38,24 @@ src_unpack() {
 }
 
 src_compile() {
-	if use python; then
-		distutils_src_compile
-	fi
+	use python && distutils_src_compile
 
 	cd src
-	make -f Makefile.bootstrap makefile || die "Makefile creation failed"
+	emake -f Makefile.bootstrap makefile || die
 	emake \
 		CC="$(tc-getCC) ${CFLAGS}" \
 		CXX="$(tc-getCXX) ${CXXFLAGS}" \
 		LINK="$(tc-getCXX) ${LDFLAGS}" \
-		|| die "make failed"
+		|| die
 	cd ../doc
-	emake || die "Doc failed"
+	emake || die
 
 }
 
 src_install () {
-	if use python; then
-		distutils_src_install
-	fi
-
+	use python && distutils_src_install
 	dobin bin/xxdiff bin/xx-cvs-diff bin/xx-encrypted bin/xx-find-grep-sed bin/xx-match
 	doman src/xxdiff.1
 	dodoc README CHANGES TODO
-	cd doc
-	dodoc xxdiff-doc.html
+	dohtml doc/xxdiff-doc.html
 }
