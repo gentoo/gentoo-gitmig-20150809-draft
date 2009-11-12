@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sshguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.10 2009/03/22 01:51:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.11 2009/11/12 19:40:18 pva Exp $
+
+*sshguard-1.4 (12 Nov 2009)
+
+  12 Nov 2009; Peter Volkov <pva@gentoo.org> +sshguard-1.4.ebuild:
+  Version bump, bug #292645, thank Stefan Nilsson for report.
 
   22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
