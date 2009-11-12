@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/noscript
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/ChangeLog,v 1.8 2009/11/04 00:03:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/ChangeLog,v 1.9 2009/11/12 14:59:21 josejx Exp $
+
+  12 Nov 2009; Joseph Jezak <josejx@gentoo.org> noscript-1.9.6.6.ebuild:
+  Marked ppc64 stable for bug #282466.
 
   04 Nov 2009; Jory A. Pratt <anarchy@gentoo.org> noscript-1.9.8.86.ebuild:
   update noscript-1.9.8.86 to support icecat
