@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.12 2009/11/11 12:36:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.13 2009/11/12 19:37:27 bicatali Exp $
 
-EAPI=1
-inherit eutils flag-o-matic gnome2 kde-functions autotools
+EAPI=2
+inherit eutils flag-o-matic gnome2 autotools
 
 DESCRIPTION="OpenGL 3D space simulator"
 HOMEPAGE="http://www.shatters.net/celestia/"
@@ -14,22 +14,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="cairo gnome gtk kde lua nls pch theora threads unicode"
+IUSE="cairo gnome gtk lua nls pch theora threads unicode"
 
 RDEPEND="virtual/glu
 	media-libs/jpeg
 	media-libs/libpng
-	gtk? ( !gnome? ( !kde? (
-		>=x11-libs/gtk+-2.6
-		>=x11-libs/gtkglext-1.0
-	) ) )
+	gtk? ( !gnome? ( >=x11-libs/gtk+-2.6 >=x11-libs/gtkglext-1.0 ) )
 	gnome? (
 		>=x11-libs/gtk+-2.6
 		>=x11-libs/gtkglext-1.0
 		>=gnome-base/libgnomeui-2.0
 	)
-	kde?  ( !gnome? ( kde-base/kdelibs:3.5 ) )
-	!gtk? ( !gnome? ( !kde? ( virtual/glut ) ) )
+	!gtk? ( !gnome? ( virtual/glut ) )
 	lua? ( >=dev-lang/lua-5.0 )
 	cairo? ( x11-libs/cairo )
 	theora? ( media-libs/libtheora )"
@@ -39,31 +35,21 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	# Check for one for the following use flags to be set.
-
-	if ! use gnome && use kde; then
-		einfo "USE=\"kde\" detected."
-		CELESTIA_GUI="kde"
-	elif ! use kde && use gnome; then
+	if use gnome; then
 		einfo "USE=\"gnome\" detected."
 		USE_DESTDIR="1"
 		CELESTIA_GUI="gnome"
-	elif ! use kde && ! use gnome && use gtk; then
+	elif use gtk; then
 		einfo "USE=\"gtk\" detected."
 		CELESTIA_GUI="gtk"
-	elif use kde && use gnome; then
-		einfo "Both gnome and kde support requested. Defaulting to kde"
-		CELESTIA_GUI="kde"
 	else
-		ewarn "If you want to use the full gui, set USE=\"{kde/gnome/gtk}\""
+		ewarn "If you want to use the full gui, set USE=\"{gnome/gtk}\""
 		ewarn "Defaulting to glut support (no GUI)."
 		CELESTIA_GUI="glut"
 	fi
 }
 
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# make better desktop files
 	epatch "${FILESDIR}"/${PN}-1.5.0-desktop.patch
 
@@ -119,36 +105,19 @@ src_unpack() {
 		mv guide_ja.cel.utf8 guide_ja.cel
 		popd > /dev/null
 	fi
-
 	eautoreconf
+	filter-flags "-funroll-loops -frerun-loop-opt"
 }
 
-src_compile() {
-
-	if [[ ${CELESTIA_GUI} == kde ]]; then
-		REALHOME="${HOME}"
-		mkdir -p "${T}"/fakehome/.kde
-		mkdir -p "${T}"/fakehome/.qt
-		export HOME="${T}"/fakehome
-		[[ -d ${REALHOME}/.ccache ]] && ln -sf "${REALHOME}/.ccache" "${HOME}/"
-		set-kdedir 3
-		export kde_widgetdir="${KDEDIR}/lib/kde3/plugins/designer"
-	fi
-
-	filter-flags "-funroll-loops -frerun-loop-opt"
-
+src_configure() {
 	econf \
 		--with-${CELESTIA_GUI} \
-		--without-arts \
 		$(use_with lua) \
 		$(use_enable cairo) \
 		$(use_enable threads threading) \
 		$(use_enable nls) \
 		$(use_enable pch) \
-		$(use_enable theora) \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+		$(use_enable theora)
 }
 
 src_install() {

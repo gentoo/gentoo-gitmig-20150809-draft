@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.54 2009/11/11 12:36:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.55 2009/11/12 19:37:27 bicatali Exp $
+
+  12 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  celestia-1.5.1.ebuild, celestia-1.6.0.ebuild:
+  Removed kde3 support, see bug #292845
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> celestia-1.5.1.ebuild,
   celestia-1.6.0.ebuild:
