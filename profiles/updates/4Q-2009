@@ -9,3 +9,4 @@ move sci-biology/dialign-t sci-biology/dialign-tx
 move games-emulation/dosbox-cvs games-emulation/dosbox
 move media-sound/kenvy24gui media-sound/kenvy24
 move dev-perl/File-Path perl-core/File-Path
+move x11-themes/auroare x11-themes/aurorae
