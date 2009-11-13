@@ -1,18 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.0_pre20090911.ebuild,v 1.1 2009/09/13 12:22:30 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.0_beta1.ebuild,v 1.1 2009/11/13 20:31:47 tgurr Exp $
 
 EAPI="2"
 
 inherit eutils qt4
 
-GIT_REV="402695"
-MY_PN="${PN/murmur}mumble"
-MY_P="mumble-${PV/_pre20090911}~200909111826-${GIT_REV}"
+MY_P="${PN/murmur/mumble}-${PV/_/~}"
 
 DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software."
 HOMEPAGE="http://mumble.sourceforge.net/"
-SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz -> ${MY_PN}-${PV}.tar.gz"
+SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -26,11 +24,12 @@ RDEPEND="dev-libs/openssl
 	|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] )
 	x11-libs/qt-xmlpatterns:4
 	dbus? ( x11-libs/qt-dbus:4 )
-	ice? ( dev-cpp/Ice dev-libs/boost )
+	ice? ( dev-cpp/Ice )
 	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	ice? ( dev-libs/boost )"
 
 S="${WORKDIR}/${MY_P}"
 
