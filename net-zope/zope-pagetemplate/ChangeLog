@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-pagetemplate
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-pagetemplate/ChangeLog,v 1.1 2009/11/13 23:58:55 arfrever Exp $
+
+*zope-pagetemplate-3.5.0 (14 Nov 2009)
+
+  14 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-pagetemplate-3.5.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
