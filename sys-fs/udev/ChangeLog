@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.506 2009/11/13 17:17:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.507 2009/11/13 19:34:45 zzam Exp $
+
+  13 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> udev-147.ebuild,
+  udev-9999.ebuild:
+  Depend on linux-headers-2.6.29 to get bsg.h, Bug #292922.
 
   13 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> files/147/udev.initd,
   files/147/udev-start.sh:
