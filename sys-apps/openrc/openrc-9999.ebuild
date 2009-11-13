@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.64 2009/11/10 18:35:40 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.65 2009/11/13 19:40:33 zzam Exp $
 
 EAPI="1"
 
@@ -134,21 +134,22 @@ src_install() {
 
 add_boot_init() {
 	local initd=$1
+	local runlevel=${2:-boot}
 	# if the initscript is not going to be installed and is not
 	# currently installed, return
 	[[ -e ${D}/etc/init.d/${initd} || -e ${ROOT}/etc/init.d/${initd} ]] \
 		|| return
-	[[ -e ${ROOT}/etc/runlevels/boot/${initd} ]] && return
+	[[ -e ${ROOT}/etc/runlevels/${runlevel}/${initd} ]] && return
 
 	# if runlevels dont exist just yet, then create it but still flag
 	# to pkg_postinst that it needs real setup #277323
-	if [[ ! -d ${ROOT}/etc/runlevels/boot ]] ; then
-		mkdir -p "${ROOT}"/etc/runlevels/boot
+	if [[ ! -d ${ROOT}/etc/runlevels/${runlevel} ]] ; then
+		mkdir -p "${ROOT}"/etc/runlevels/${runlevel}
 		touch "${ROOT}"/etc/runlevels/.add_boot_init.created
 	fi
 
-	elog "Auto-adding '${initd}' service to your boot runlevel"
-	ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/boot/${initd}
+	elog "Auto-adding '${initd}' service to your ${runlevel} runlevel"
+	ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/${runlevel}/${initd}
 }
 add_boot_init_mit_config() {
 	local config=$1 initd=$2
@@ -218,30 +219,32 @@ pkg_preinst() {
 	# termencoding was added in 0.2.1 and needed in boot
 	has_version ">=sys-apps/openrc-0.2.1" || add_boot_init termencoding
 
-	# openrc-0.4.0 no longer loads the udev addon
-	enable_udev=0
-	if [[ ! -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && \
-		[[ -e "${ROOT}"/etc/init.d/udev ]] && \
-		! has_version ">=sys-apps/openrc-0.4.0"
-	then
-		# make sure udev is in sysinit if it was enabled before
-		local rc_devices=$(
-			[[ -f /etc/rc.conf ]] && source /etc/rc.conf
-			[[ -f /etc/conf.d/rc ]] && source /etc/conf.d/rc
-			echo "${rc_devices:-${RC_DEVICES:-auto}}"
-		)
-		case ${rc_devices} in
-			udev|auto)
-				enable_udev=1
-				;;
-		esac
-	fi
-
 	# set default interactive shell to sulogin if it exists
 	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
 
-	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc || migrate_from_baselayout_1
+	has_version ">=sys-apps/openrc-0.4.0" || migrate_udev_init_script
+}
+
+# >=openrc-0.4.0 no longer loads the udev addon
+migrate_udev_init_script() {
+	# make sure udev is in sysinit if it was enabled before
+	local enable_udev=false
+	local rc_devices=$(
+		[[ -f /etc/rc.conf ]] && source /etc/rc.conf
+		[[ -f /etc/conf.d/rc ]] && source /etc/conf.d/rc
+		echo "${rc_devices:-${RC_DEVICES:-auto}}"
+	)
+	case ${rc_devices} in
+		udev|auto)
+			enable_udev=true
+			;;
+	esac
+
+	if $enable_udev; then
+		add_boot_init udev sysinit
+		add_boot_init udev-postmount default
+	fi
 }
 
 migrate_from_baselayout_1() {
@@ -342,11 +345,6 @@ pkg_postinst() {
 			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* \
 				"${ROOT}"/etc/runlevels/shutdown
 		fi
-	fi
-
-	if [[ "$enable_udev" = 1 ]]; then
-		elog "Auto adding udev init script to the sysinit runlevel"
-		ln -sf /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
 	fi
 
 	# update the dependency tree bug #224171
