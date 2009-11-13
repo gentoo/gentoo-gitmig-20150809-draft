@@ -61,6 +61,7 @@ rules_disable_switch()
 	fi
 }
 
+# only called on openrc
 is_service_enabled() {
 	local svc="$1"
 

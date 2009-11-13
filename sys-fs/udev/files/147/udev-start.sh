@@ -30,6 +30,10 @@ start_initd()
 	)
 }
 
+# set it as openrc does
+RC_BOOTLEVEL=${BOOTLEVEL:-default}
+RC_DEFAULTLEVEL=${DEFAULTLEVEL:-default}
+
 # mount tmpfs on /dev
 start_initd udev-mount || exit 1
 
