@@ -1,17 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.0_pre20090911.ebuild,v 1.1 2009/09/13 12:16:52 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.0_beta1.ebuild,v 1.1 2009/11/13 20:22:30 tgurr Exp $
 
 EAPI="2"
 
 inherit eutils multilib qt4
 
-GIT_REV="402695"
-MY_P="mumble-${PV/_pre20090911}~200909111826-${GIT_REV}"
+MY_P="${PN}-${PV/_/~}"
 
 DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software."
 HOMEPAGE="http://mumble.sourceforge.net/"
-SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -21,7 +20,7 @@ IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
 RDEPEND="dev-libs/boost
 	dev-libs/openssl
 	>=dev-libs/protobuf-2.2.0
-	>=media-libs/celt-0.6.1
+	>=media-libs/celt-0.7.0
 	>=media-libs/libsndfile-1.0.20
 	>=media-libs/speex-1.2_rc1
 	x11-libs/qt-core:4[ssl]
