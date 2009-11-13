@@ -3,7 +3,4 @@
 <pkgmetadata>
   <herd>kde</herd>
   <herd>sound</herd>
-  <use>
-    <flag name="amarok">Build Amarok script</flag>
-  </use>
 </pkgmetadata>

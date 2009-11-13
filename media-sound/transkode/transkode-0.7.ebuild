@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7.ebuild,v 1.7 2009/09/28 19:06:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7.ebuild,v 1.8 2009/11/13 16:46:42 ssuominen Exp $
 
 EAPI="1"
 
@@ -14,10 +14,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc"
-IUSE="amarok ffmpeg gstreamer mplayer wavpack xine"
+IUSE="ffmpeg gstreamer mplayer wavpack xine"
 
 RDEPEND="media-libs/taglib
-	amarok? ( media-sound/amarok:3.5 )
 	ffmpeg? ( media-video/ffmpeg )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
@@ -54,7 +53,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf="$(use_enable amarok amarokscript)"
+	local myconf="--disable-amarokscript"
 	kde_src_compile
 }
 
@@ -66,13 +65,4 @@ src_install() {
 		"${D}/usr/share/applications/kde"
 	echo "\nCategories=Qt;KDE;Application;AudioVideo;" \
 		>> "${D}/usr/share/applications/kde/${PN}.desktop"
-}
-
-pkg_postinst() {
-	if use amarok; then
-		elog "If you want to use TransKode to encode audio files on the fly"
-		elog "when transferring music to a portable media device, remember"
-		elog "to start the TransKode script through the Script Manager"
-		elog "on the Tools menu."
-	fi
 }
