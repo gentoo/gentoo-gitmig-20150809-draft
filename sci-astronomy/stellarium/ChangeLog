@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.53 2009/08/09 13:14:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.54 2009/11/13 18:04:08 mr_bones_ Exp $
+
+  13 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.10.2.ebuild:
+  boost isn't a run-time dep (bug #293079)
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> stellarium-0.10.2.ebuild:
   ppc stable #271176
