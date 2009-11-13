@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10808 2009/11/13 16:52:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10809 2009/11/13 17:04:35 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1475,10 +1475,6 @@ sys-fs/clvm
 # broken opengl support, forces gcc's objc for no reason
 # masked until fixed (see bug #274092)
 =media-libs/tiff-3.8.2-r6
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (14 Jun 2009)
-# Masked for removal in 30 days. Old and dead by upstream.
-app-dicts/kannadic
 
 # Markus Meier <maekke@gentoo.org> (13 Jun 2009)
 # mask pre releases of media-gfx/inkscape-0.47
