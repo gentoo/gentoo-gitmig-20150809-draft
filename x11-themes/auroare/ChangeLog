@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/aurorae
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/auroare/ChangeLog,v 1.1 2009/11/13 20:04:59 scarabeus Exp $
+
+*aurorae-0.2.1 (13 Nov 2009)
+
+  13 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +aurorae-0.2.1.ebuild, +metadata.xml:
+  Initial commit. From sabayon overlay, basic ebuild from Thev00d00.
+
