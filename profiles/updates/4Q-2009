@@ -8,3 +8,4 @@ slotmove kde-misc/rsibreak 0 3.5
 move sci-biology/dialign-t sci-biology/dialign-tx
 move games-emulation/dosbox-cvs games-emulation/dosbox
 move media-sound/kenvy24gui media-sound/kenvy24
+move dev-perl/File-Path perl-core/File-Path
