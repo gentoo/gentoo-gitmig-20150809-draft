@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tclib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tclib/ChangeLog,v 1.1 2009/11/12 17:48:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tclib/ChangeLog,v 1.2 2009/11/13 18:42:53 weaver Exp $
+
+  13 Nov 2009; Andrey Kislyuk <weaver@gentoo.org> tclib-1.1.ebuild:
+  Move package to official mirror
 
 *tclib-1.1 (12 Nov 2009)
 
