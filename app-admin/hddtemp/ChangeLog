@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.77 2009/09/23 20:27:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.78 2009/11/13 22:45:50 spock Exp $
+
+  13 Nov 2009; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
+  Add 4 new drives reported in bug #291970.
 
   23 Sep 2009; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
   Add two new devices to the hdd database (bugs #285329, #284702).
