@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.203 2009/11/13 20:39:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.204 2009/11/13 20:51:43 cardoe Exp $
+
+*nvidia-drivers-96.43.14 (13 Nov 2009)
+
+  13 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-96.43.14.ebuild:
+  version bump for xorg-server 1.7 support. ebuild uses the refactored
+  ebuild as a base
 
 *nvidia-drivers-173.14.22 (13 Nov 2009)
 
