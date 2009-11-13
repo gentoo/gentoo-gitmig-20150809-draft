@@ -1,6 +1,11 @@
 # ChangeLog for app-text/vlna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.28 2009/08/04 07:43:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.29 2009/11/13 09:51:33 aballier Exp $
+
+*vlna-1.4 (13 Nov 2009)
+
+  13 Nov 2009; Alexis Ballier <aballier@gentoo.org> +vlna-1.4.ebuild:
+  version bump
 
   04 Aug 2009; Alexis Ballier <aballier@gentoo.org> -vlna-1.2.ebuild:
   remove old
