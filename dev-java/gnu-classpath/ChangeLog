@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.94 2009/11/09 13:41:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.95 2009/11/13 23:41:25 caster Exp $
+
+  13 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  gnu-classpath-0.98-r1.ebuild:
+  Pull the version of gjdoc that uses gjl launcher to prevent insufficient
+  heap memory, bug #292534.
 
   09 Nov 2009; Vlastimil Babka <caster@gentoo.org>
   gnu-classpath-0.98-r1.ebuild:

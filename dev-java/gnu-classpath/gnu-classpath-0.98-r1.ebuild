@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r1.ebuild,v 1.2 2009/11/09 13:41:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r1.ebuild,v 1.3 2009/11/13 23:41:25 caster Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="alsa debug doc dssi examples gconf gjdoc gmp gtk gstreamer nsplugin qt4 xm
 
 # xulrunner: http://bugs.gentoo.org/show_bug.cgi?id=257803
 RDEPEND="alsa? ( media-libs/alsa-lib )
-		doc? ( >=dev-java/gjdoc-0.7.9 )
+		doc? ( >=dev-java/gjdoc-0.7.9-r2 )
 		dssi? ( >=media-libs/dssi-0.9 )
 		gconf? ( gnome-base/gconf )
 		gjdoc? ( >=dev-java/antlr-2.7.1:0 )
