@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.247 2009/11/12 08:37:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.248 2009/11/13 12:37:23 scarabeus Exp $
+
+  13 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  bind-9.6.1_p1-r1.ebuild:
+  Update the annoying elog messages to einfo. Remove obsolete ewarn.
 
 *bind-9.6.1_p1-r1 (12 Nov 2009)
 
