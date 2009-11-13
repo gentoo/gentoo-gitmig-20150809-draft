@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.19 2009/11/13 15:28:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.20 2009/11/13 16:07:24 idl0r Exp $
+
+  13 Nov 2009; Christian Ruppert <idl0r@gentoo.org>
+  ogg-vorbis-header-0.03.ebuild:
+  Fix HOMEPAGE.
 
   13 Nov 2009; Christian Ruppert <idl0r@gentoo.org>
   ogg-vorbis-header-0.03.ebuild:

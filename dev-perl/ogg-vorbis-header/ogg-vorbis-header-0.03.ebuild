@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.03.ebuild,v 1.14 2009/11/13 15:28:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.03.ebuild,v 1.15 2009/11/13 16:07:24 idl0r Exp $
 
 MODULE_AUTHOR="DBP"
-MY_P=Ogg-Vorbis-Header-${PV}
+MY_PN=Ogg-Vorbis-Header
+MY_P=${MY_PN}-${PV}
 
 inherit perl-module
 
