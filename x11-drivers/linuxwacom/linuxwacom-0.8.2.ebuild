@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.2.ebuild,v 1.9 2009/11/01 14:41:59 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.2.ebuild,v 1.10 2009/11/13 19:19:01 remi Exp $
 
 inherit eutils autotools toolchain-funcs linux-mod
 
@@ -24,7 +24,8 @@ RDEPEND="x11-proto/inputproto
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	usb? ( >=sys-kernel/linux-headers-2.6 )"
+	usb? ( >=sys-kernel/linux-headers-2.6 )
+	!x11-drivers/xf86-input-wacom"
 S=${WORKDIR}/${P/_p/-}
 
 MODULE_NAMES="wacom(input:${S}/src:${S}/src)"
