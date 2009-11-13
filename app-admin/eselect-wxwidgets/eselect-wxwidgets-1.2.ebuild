@@ -1,10 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-1.0.ebuild,v 1.1 2009/07/01 07:16:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-1.2.ebuild,v 1.1 2009/11/13 01:48:24 dirtyepic Exp $
+
+WXWRAP_VER=1.1
+WXESELECT_VER=1.2
 
 DESCRIPTION="Eselect module and wrappers for wxWidgets"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI=""
+SRC_URI="mirror://gentoo.org/wxwidgets.eselect-${WXESELECT_VER}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -12,20 +15,22 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE=""
 
 DEPEND="!<=x11-libs/wxGTK-2.6.4.0-r2"
-RDEPEND="app-admin/eselect"
+RDEPEND=">=app-admin/eselect-1.2.3"
 
-WXWRAP_VER=1
+S=${WORKDIR}
 
 src_install() {
 	insinto /usr/share/eselect/modules
-	newins "${FILESDIR}"/wxwidgets.eselect-0.8 wxwidgets.eselect \
+	newins "${S}"/wxwidgets.eselect-${WXESELECT_VER} wxwidgets.eselect \
 		|| die "Failed installing module"
 
 	insinto /usr/share/aclocal
-	doins "${FILESDIR}"/wxwin.m4
+	doins "${FILESDIR}"/wxwin.m4 || die "Failed installing m4"
 
-	newbin "${FILESDIR}"/wx-config-${WXWRAP_VER} wx-config
-	newbin "${FILESDIR}"/wxrc-${WXWRAP_VER} wxrc
+	newbin "${FILESDIR}"/wx-config-${WXWRAP_VER} wx-config \
+		|| die "Failed installing wx-config"
+	newbin "${FILESDIR}"/wxrc-${WXWRAP_VER} wxrc \
+		|| die "Failed installing wxrc"
 
 	keepdir /var/lib/wxwidgets
 	keepdir /usr/share/bakefile/presets
