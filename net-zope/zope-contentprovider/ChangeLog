@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-contentprovider
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-contentprovider/ChangeLog,v 1.1 2009/11/13 19:59:47 arfrever Exp $
+
+*zope-contentprovider-3.5.0 (13 Nov 2009)
+
+  13 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-contentprovider-3.5.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
