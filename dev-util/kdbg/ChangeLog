@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.65 2009/10/05 02:41:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.66 2009/11/13 07:50:25 abcd Exp $
+
+  13 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/kdbg-2.1.1-glibc-2.10.patch:
+  Drop unused file
 
   05 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> kdbg-2.2.0.ebuild,
   +files/kdbg-2.2.0-glibc-2.10.patch:
