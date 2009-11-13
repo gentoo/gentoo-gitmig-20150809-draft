@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.9.ebuild,v 1.1 2009/09/21 05:30:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.9.ebuild,v 1.2 2009/11/13 19:45:45 bicatali Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -23,6 +23,7 @@ CDEPEND=">=sci-libs/xylib-0.4
 	wxwidgets? ( x11-libs/wxGTK:2.8 )"
 
 DEPEND="${CDEPEND}
+	dev-libs/boost
 	>=sys-devel/libtool-2.2"
 
 RDEPEND="${CDEPEND}
