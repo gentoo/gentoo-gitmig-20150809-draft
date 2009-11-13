@@ -1,0 +1,14 @@
+# ChangeLog for perl-core/File-Path
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Path/ChangeLog,v 1.1 2009/11/13 21:50:00 robbat2 Exp $
+
+  13 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +File-Path-2.08.ebuild,
+  +metadata.xml:
+  Changing category as this is part of core perl.
+
+*File-Path-2.08 (13 Nov 2009)
+
+  13 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +File-Path-2.08.ebuild,
+  +metadata.xml:
+  Initial commit. Dependancy for CPAN-Mini-0.576. Ebuild by g-cpan.
+
