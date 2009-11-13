@@ -228,6 +228,8 @@ start()
 	_start
 	
 	display_hotplugged_services
+
+	return 0
 }
 
 _start()
