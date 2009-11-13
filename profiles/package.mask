@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10811 2009/11/13 19:50:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10812 2009/11/13 20:40:17 tgurr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1234,11 +1234,6 @@ sys-apps/einit-modules-xml
 # for testing.
 >=net-misc/networkmanager-0.8.0_pre20090824
 >=gnome-extra/nm-applet-0.8.0_pre20090824
-
-# Timo Gurr <tgurr@gentoo.org> (13 Aug 2009)
-# Mask Mumble 1.2.0 snapshots for testing.
-=media-sound/mumble-1.2.0_pre*
-=media-sound/murmur-1.2.0_pre*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
 #  on behalf of QA team
