@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r1.ebuild,v 1.7 2009/09/30 16:57:04 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r1.ebuild,v 1.8 2009/11/13 03:45:51 markusle Exp $
 
-EAPI=1
+EAPI=2
 
 inherit eutils autotools multilib qt3 qt4
 
@@ -17,9 +17,10 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="doc examples +fits +numpy qt4 root wcs"
 
-CDEPEND="dev-libs/boost
+CDEPEND="dev-libs/boost[python]
 	virtual/latex-base
 	media-libs/netpbm
+	dev-lang/python[threads]
 	fits? ( sci-libs/cfitsio )
 	numpy? ( dev-python/numpy )
 	qt4? (
@@ -41,17 +42,12 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 pkg_setup() {
-	# need python threads (see bug #224269)
-	if ! built_with_use dev-lang/python threads; then
-		die "hippodraw needs dev-lang/python with USE=\"threads\""
-	fi
 	use qt4 && qt4_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+	epatch "${FILESDIR}"/${P}-gcc4.4.patch
 	epatch "${FILESDIR}"/${P}-numarray.patch
 	epatch "${FILESDIR}"/${P}-test-fix.patch
 	epatch "${FILESDIR}"/${P}-minuit2.patch
@@ -71,7 +67,7 @@ src_unpack() {
 	AT_M4DIR=config/m4 eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf="
 		--disable-numarraybuild
 		$(use_enable numpy numpybuild)
@@ -120,7 +116,9 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "econf failed"
+}
 
+src_compile() {
 	emake || die "emake failed"
 	if use doc; then
 		emake docs || die "emake docs failed"

@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.12 2009/09/30 16:57:04 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.13 2009/11/13 03:45:51 markusle Exp $
+
+  13 Nov 2009; Markus Dittrich <markusle@gentoo.org>
+  hippodraw-1.21.3-r1.ebuild, +files/hippodraw-1.21.3-gcc4.4.patch:
+  Ebuild cleanup and added missing dependency on boost[python] 
+  (bug #292880).
 
   30 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> hippodraw-1.21.3-r1.ebuild:
   Removed obsolete QT_BUILT_WITH_USE and dependency on Qt metapackage
