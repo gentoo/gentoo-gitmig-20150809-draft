@@ -1,6 +1,17 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.17 2008/08/23 06:03:23 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.18 2009/11/13 15:28:25 voyageur Exp $
+
+*spamassassin-fuzzyocr-3.6.0 (13 Nov 2009)
+
+  13 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +spamassassin-fuzzyocr-3.6.0.ebuild,
+  +files/spamassassin-fuzzyocr-3.6.0-fix_falsepositives.patch,
+  +files/spamassassin-fuzzyocr-3.6.0-fix_tmpdir.patch, metadata.xml:
+  Version bump (bug #285327) and add myself to maintainers, patches from
+  bugs #174993, #273183 (both merged in #251687), default to ocrad ocr
+  engine if none are specified (bugs #171376, #254751), RDEPEND on netpbm
+  with jpeg,png,tiff (bug #244828). Also fixes bug #249668
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
