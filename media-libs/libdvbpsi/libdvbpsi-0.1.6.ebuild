@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.6.ebuild,v 1.8 2009/10/18 18:54:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.6.ebuild,v 1.9 2009/11/13 00:35:31 josejx Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # doxygen missing: ~ia64
-KEYWORDS="alpha amd64 ~arm ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ppc ppc64 sparc x86 ~x86-fbsd"
 
 DEPEND="doc? (
 		>=app-doc/doxygen-1.2.16
