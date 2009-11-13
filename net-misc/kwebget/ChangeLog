@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kwebget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.6 2009/02/15 20:26:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.7 2009/11/13 08:10:11 abcd Exp $
+
+  13 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/kwebget-0.8.1-configure.patch:
+  Drop unused file
 
   15 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
   +files/kwebget-0.8.1-gcc43.patch, kwebget-0.8.1.ebuild:
