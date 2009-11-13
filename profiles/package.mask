@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10810 2009/11/13 17:26:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10811 2009/11/13 19:50:37 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2000)
+# kde-base/kdelibs:3.5 reverse dependencies
+#
+# Masked for removal in 30 days.
+#
+# Bug 292791.
+#
+<net-misc/kvpnc-0.9.3
+media-tv/kdetv
+media-tv/kvdr
+net-wireless/kwlaninfo
+<net-misc/guidedog-1.1
+net-misc/knutclient
+net-misc/kovpn
+net-misc/kwebget
+net-analyzer/knetscan
+net-analyzer/ksniffer
 
 # Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2009)
 # For deprecated media-sound/amarok:3.5. Masked for removal in 30 days.
