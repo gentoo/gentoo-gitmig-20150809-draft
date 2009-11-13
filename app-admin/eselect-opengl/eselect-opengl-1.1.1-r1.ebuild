@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.1.1.ebuild,v 1.1 2009/11/08 21:28:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.1.1-r1.ebuild,v 1.1 2009/11/13 21:35:23 scarabeus Exp $
 
 inherit multilib
 
@@ -25,6 +25,11 @@ IUSE=""
 
 DEPEND="app-arch/bzip2"
 RDEPEND=">=app-admin/eselect-1.2.4"
+
+src_prepare() {
+	# fix la FAIL
+	sed -i -e 's/{la}/la/' opengl.eselect || die
+}
 
 pkg_postinst() {
 	local impl="$(eselect opengl show)"
