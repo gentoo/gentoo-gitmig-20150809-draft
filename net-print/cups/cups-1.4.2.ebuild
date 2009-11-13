@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.1.ebuild,v 1.2 2009/09/17 15:36:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2.ebuild,v 1.1 2009/11/13 18:53:55 tgurr Exp $
 
 EAPI="2"
 
@@ -57,6 +57,11 @@ RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
+LANGS="da de es eu fi fr it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 pkg_setup() {
 	enewgroup lp
 	enewuser lp -1 -1 -1 lp
@@ -66,12 +71,16 @@ pkg_setup() {
 src_prepare() {
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.4.0-backend-https.patch"
-	epatch "${FILESDIR}/${PN}-1.4.1-usb-function-decl.patch"
 }
 
 src_configure() {
-	local myconf
+	# locale support
+	strip-linguas ${LANGS}
+	if [ -z "${LINGUAS}" ] ; then
+		export LINGUAS=none
+	fi
 
+	local myconf
 	if use ssl || use gnutls ; then
 		myconf="${myconf} \
 			$(use_enable gnutls) \
@@ -88,9 +97,9 @@ src_configure() {
 		--with-cups-user=lp \
 		--with-cups-group=lp \
 		--with-docdir=/usr/share/cups/html \
+		--with-languages=${LINGUAS} \
 		--with-pdftops=pdftops \
 		--with-system-groups=lpadmin \
-		--with-xinetd=/etc/xinetd.d \
 		$(use_enable acl) \
 		$(use_enable dbus) \
 		$(use_enable debug) \
@@ -103,6 +112,7 @@ src_configure() {
 		$(use_enable slp) \
 		$(use_enable static) \
 		$(use_enable tiff) \
+		$(use_enable xinetd xinetd /etc/xinetd.d) \
 		$(use_enable zeroconf dnssd) \
 		$(use_with java) \
 		$(use_with perl) \
@@ -150,8 +160,11 @@ src_install() {
 		rm -rf "${D}"/etc/xinetd.d
 	fi
 
-	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
-		/var/run/cups/certs /var/cache/cups /var/spool/cups/tmp /etc/cups/ssl
+	keepdir /usr/libexec/cups/driver /usr/share/cups/{model,profiles} \
+		/var/cache/cups /var/cache/cups/rss /var/log/cups /var/run/cups/certs \
+		/var/spool/cups/tmp
+
+	keepdir /etc/cups/{interfaces,ppd,ssl}
 
 	use X || rm -r "${D}"/usr/share/applications
 

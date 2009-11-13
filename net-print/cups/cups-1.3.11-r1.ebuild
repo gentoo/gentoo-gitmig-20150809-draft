@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11.ebuild,v 1.1 2009/07/08 22:41:43 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r1.ebuild,v 1.1 2009/11/13 18:53:55 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -8,7 +8,7 @@ MY_P=${P/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
+SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -103,6 +103,11 @@ src_unpack() {
 
 	# detect recent libgnutls versions, upstream bug STR #3178
 	epatch "${FILESDIR}/${PN}-1.3.10-str3178.patch"
+
+	# security fix CUPS XSS and HTTP header/body attacks via attribute injection
+	# upstream bug STR #3178 and STR #3401
+	epatch "${FILESDIR}/${PN}-1.3.11-str3367-security-1.3v2.patch"
+	epatch "${FILESDIR}/${PN}-1.3.11-str3401-security-1.3v2-regression.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
