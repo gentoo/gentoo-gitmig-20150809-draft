@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut-monitor/nut-monitor-1.1.ebuild,v 1.1 2009/11/13 20:22:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut-monitor/nut-monitor-1.1.ebuild,v 1.2 2009/11/13 20:29:55 ssuominen Exp $
 
 inherit eutils
 
@@ -18,6 +18,8 @@ RDEPEND="dev-python/pygtk
 
 src_install() {
 	dobin NUT-Monitor || die
+	insinto /usr/share/nut-monitor
+	doins gui.glade || die
 	dosym NUT-Monitor /usr/bin/${PN}
 	doicon ${PN}.png
 	domenu ${PN}.desktop
