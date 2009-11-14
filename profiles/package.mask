@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10825 2009/11/14 16:48:05 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10826 2009/11/14 16:55:56 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -89,6 +89,7 @@ net-analyzer/knetscan
 net-analyzer/ksniffer
 mail-client/kbiff
 app-text/kbarcode
+app-crypt/calcchecksum
 
 # Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2009)
 # For deprecated media-sound/amarok:3.5. Masked for removal in 30 days.
