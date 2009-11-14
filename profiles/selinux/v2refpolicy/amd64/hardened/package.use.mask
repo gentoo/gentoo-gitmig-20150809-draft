@@ -1,7 +1,0 @@
-# Copyright 1999-2009 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/v2refpolicy/amd64/hardened/package.use.mask,v 1.1 2009/08/09 18:21:17 pebenito Exp $
-
-# 2008/08/01 Jean-Noël Rivasseau <elvanor@gentoo.org>
-# Disabling gcj flag, no gcc-4.3.1 yet
-dev-java/eclipse-ecj gcj

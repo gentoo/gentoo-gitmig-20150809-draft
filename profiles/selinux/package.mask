@@ -1,31 +1,13 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.46 2009/10/28 02:12:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.47 2009/11/14 21:18:16 gengor Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (27 Oct 2009)
 # Needs updated selinux patch   
 =sys-apps/sysvinit-2.87
-
-# Vlastimil Babka <caster@gentoo.org> (12 Oct 2009)
-# Requires libstdc++ from >=gcc-4.3
->=dev-java/icedtea6-bin-1.6.1
-
-# Vlastimil Babka <caster@gentoo.org> (07 Oct 2009)
-# Requires libstdc++ from >=gcc-4.2
->=x11-misc/googleearth-5
-
-# Ryan Hill <dirtyepic@gentoo.org> (26 Sep 2009)
-# requires gcc-4
->=dev-libs/elfutils-0.140
->=dev-util/systemtap-1
-
-# Bernard Cafarelli <voyageur@gentoo.org> (25 Aug 2009)
-# Requires libstdc++ from >=gcc-4.2
-www-client/chromium-bin
 
 # Chris PeBenito <pebenito@gentoo.org> (10 Aug 2009)
 # SELinux code problems
 =sys-apps/portage-2.2_rc37
 =sys-apps/portage-2.2_rc38
 
-# Sebastien Fabbro <bicatali@gentoo.org> (08 Oct 2007)
-# acml -3.6 and over needs gcc-4.1*
+# >=sci-libs/acml-3.6 requires gcc-4.2.
 >=sci-libs/acml-3.6
