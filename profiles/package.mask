@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10813 2009/11/14 01:01:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10814 2009/11/14 09:06:57 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2000)
+# Torsten Veller <tove@gentoo.org> (14 Nov 2009)
+# Port the alternatives utilisation to perl-5.8.8
+# solves bugs 235904 293145
+=dev-lang/perl-5.8.8-r8
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2009)
 # kde-base/kdelibs:3.5 reverse dependencies
 #
 # Masked for removal in 30 days.
