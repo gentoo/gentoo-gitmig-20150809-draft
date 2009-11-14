@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.9 2009/10/27 17:20:11 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.10 2009/11/14 11:31:30 tove Exp $
 
 EAPI=2
 
@@ -50,7 +50,7 @@ dual_scripts() {
 	src_remove_dual_scripts perl-core/Module-CoreList    2.18    corelist
 	src_remove_dual_scripts perl-core/PodParser          1.37    pod2usage podchecker podselect
 	src_remove_dual_scripts perl-core/Test-Harness       3.17    prove
-	src_remove_dual_scripts !perl-core/podlators          2.2.2   pod2man pod2text
+	src_remove_dual_scripts perl-core/podlators          2.2.2   pod2man pod2text
 }
 
 pkg_setup() {
@@ -400,8 +400,8 @@ src_remove_dual_scripts() {
 		done
 	elif has "${EBUILD_PHASE:-none}" "setup" ; then
 		for i in "$@" ; do
-			if [[ -f /usr/bin/${i} && ! -h /usr/bin/${i} ]] ; then
-				[[ ${pkg::1} == "!" ]] || ewarn "You must reinstall $pkg !"
+			if [[ -f ${ROOT}/usr/bin/${i} && ! -h ${ROOT}/usr/bin/${i} ]] ; then
+				has_version ${pkg} && ewarn "You must reinstall $pkg !"
 				break
 			fi
 		done
