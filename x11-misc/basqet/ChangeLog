@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/basqet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basqet/ChangeLog,v 1.1 2009/11/04 19:28:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basqet/ChangeLog,v 1.2 2009/11/14 18:52:39 wired Exp $
+
+*basqet-0.1.2 (14 Nov 2009)
+
+  14 Nov 2009; Alex Alexander <wired@gentoo.org> +basqet-0.1.2.ebuild:
+  version bump, bug #293149
 
 *basqet-0.1.0 (04 Nov 2009)
 
