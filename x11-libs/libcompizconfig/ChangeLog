@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.19 2009/10/15 17:30:28 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.20 2009/11/14 16:37:41 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libcompizconfig-0.8.2-r2.ebuild:
+  Drop masked version since newer unmasked are around.
 
 *libcompizconfig-0.8.4 (15 Oct 2009)
 
