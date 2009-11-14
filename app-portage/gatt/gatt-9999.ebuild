@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.6 2009/08/25 19:48:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.7 2009/11/14 13:36:42 scarabeus Exp $
 
 inherit eutils subversion autotools
 
@@ -17,7 +17,7 @@ SRC_URI=""
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS=""
 IUSE="doc libpaludis"
 
 RDEPEND=">=dev-libs/boost-1.33.1

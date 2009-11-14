@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.49 2009/10/15 22:06:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.50 2009/11/14 13:36:42 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> gatt-9999.ebuild:
+  QA: Drop keywords from live ebuild.
 
   15 Oct 2009; Christian Faulhammer <fauli@gentoo.org> -gatt-0.6.3.ebuild:
   clean up
