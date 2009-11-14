@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.5-r1.ebuild,v 1.2 2009/09/08 18:09:17 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.5-r1.ebuild,v 1.3 2009/11/14 16:05:26 maekke Exp $
 
 inherit linux-info toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://distanz.ch/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
