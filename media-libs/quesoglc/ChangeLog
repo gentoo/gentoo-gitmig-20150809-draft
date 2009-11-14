@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quesoglc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.10 2009/10/12 20:51:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.11 2009/11/14 20:40:57 maekke Exp $
+
+  14 Nov 2009; Markus Meier <maekke@gentoo.org> quesoglc-0.7.2.ebuild:
+  amd64/x86 stable, bug #292854
 
 *quesoglc-0.7.2 (12 Oct 2009)
 
