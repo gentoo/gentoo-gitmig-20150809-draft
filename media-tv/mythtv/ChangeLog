@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.297 2009/11/13 22:23:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.298 2009/11/14 23:22:31 cardoe Exp $
+
+  14 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.21_p19961-r2.ebuild, mythtv-0.21_p20877.ebuild,
+  mythtv-0.22_p22778.ebuild, mythtv-0.22_p22811.ebuild,
+  mythtv-0.23_alpha22784.ebuild, mythtv-0.23_alpha22823.ebuild,
+  metadata.xml:
+  rename dvd USE flag to css at the insistence of bug #287247
 
 *mythtv-0.23_alpha22823 (13 Nov 2009)
 

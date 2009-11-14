@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p19961-r2.ebuild,v 1.5 2009/08/29 18:32:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p19961-r2.ebuild,v 1.6 2009/11/14 23:22:31 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
-IUSE="aac alsa altivec autostart debug directv dvb dvd fftw ieee1394 jack lcd \
+IUSE="aac alsa altivec autostart +css debug directv dvb fftw ieee1394 jack lcd \
 lirc mmx opengl perl python xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
@@ -31,9 +31,9 @@ RDEPEND=">=media-libs/freetype-2.0
 	autostart? ( net-dialup/mingetty
 				x11-wm/evilwm
 				x11-apps/xset )
+	css? ( media-libs/libdvdcss )
 	directv? ( virtual/perl-Time-HiRes )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
-	dvd? ( media-libs/libdvdcss )
 	fftw? ( sci-libs/fftw:3.0 )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			>=sys-libs/libavc1394-0.5.3
