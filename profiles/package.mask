@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10817 2009/11/14 10:54:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10818 2009/11/14 11:14:57 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -848,32 +848,6 @@ media-video/codeine
 # Masked for removal in 30 days.
 kde-base/noatun
 kde-base/noatun-plugins
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
-# KDE3-only packages with QA issues.
-#
-# sci-calculators/fung-calc, bug #248340
-# kde-misc/krd, bug #276266
-# kde-misc/kadslwatch, bug #276809
-# x11-themes/thinkeramik, bug #276898
-# app-admin/klogview, bug #277182
-# app-admin/kiosktool, bug #277411
-# net-ftp/kcmpureftpd, bug #277581
-# x11-themes/lipstik, bug #277737
-# kde-misc/styleclock, bug #277767
-# net-im/kpopup, bug #278425
-#
-# Masked for removal in 30 days.
-sci-calculators/fung-calc
-kde-misc/krd
-kde-misc/kadslwatch
-x11-themes/thinkeramik
-app-admin/klogview
-app-admin/kiosktool
-net-ftp/kcmpureftpd
-x11-themes/lipstik
-kde-misc/styleclock
-net-im/kpopup
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (24 Oct 2009)
 # Replaced by app-mobilephone/gammu[python]. Masked for deletion in 30 days.
