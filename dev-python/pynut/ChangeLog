@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pynut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynut/ChangeLog,v 1.1 2009/11/13 20:12:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynut/ChangeLog,v 1.2 2009/11/14 22:52:00 arfrever Exp $
+
+  14 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pynut-1.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *pynut-1.1 (13 Nov 2009)
 

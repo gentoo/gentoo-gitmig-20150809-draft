@@ -1,8 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynut/pynut-1.1.ebuild,v 1.1 2009/11/13 20:12:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynut/pynut-1.1.ebuild,v 1.2 2009/11/14 22:52:00 arfrever Exp $
 
-inherit multilib python
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit python
 
 DESCRIPTION="An abstraction class written in Python to access NUT (Network UPS Tools) server"
 HOMEPAGE="http://www.lestat.st/informatique/projets/pynut-en/"
@@ -13,20 +16,26 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S=${WORKDIR}/python-${P}
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
+
+S="${WORKDIR}/python-${P}"
 
 src_install() {
-	python_version
-	insinto /usr/$(get_libdir)/python${PYVER}/site-packages
-	doins PyNUT.py
+	installation() {
+		insinto $(python_get_sitedir)
+		doins PyNUT.py
+	}
+	python_execute_function -q installation
+
 	dodoc README
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/PyNUT.py
+	python_mod_optimize PyNUT.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup PyNUT.py
 }
