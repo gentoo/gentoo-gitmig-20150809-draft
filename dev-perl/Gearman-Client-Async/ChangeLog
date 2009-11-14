@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gearman-Client-Async
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman-Client-Async/ChangeLog,v 1.3 2009/05/01 22:12:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gearman-Client-Async/ChangeLog,v 1.4 2009/11/14 11:14:06 robbat2 Exp $
+
+  14 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  Gearman-Client-Async-0.94.ebuild:
+  Package moved.
 
   01 May 2009; Torsten Veller <tove@gentoo.org>
   -Gearman-Client-Async-0.93.ebuild:
