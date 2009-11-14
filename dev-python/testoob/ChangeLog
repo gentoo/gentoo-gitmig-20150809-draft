@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testoob
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.18 2009/10/08 22:11:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.19 2009/11/14 16:34:33 armin76 Exp $
+
+  14 Nov 2009; Raúl Porcel <armin76@gentoo.org> testoob-1.15.ebuild:
+  ia64/x86 stable wrt #288088
 
 *testoob-1.15 (09 Oct 2009)
 
