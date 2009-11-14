@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.298 2009/11/14 23:22:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.299 2009/11/14 23:27:11 cardoe Exp $
+
+  14 Nov 2009; Doug Goldstein <cardoe@gentoo.org> mythtv-0.22_p22778.ebuild,
+  mythtv-0.22_p22811.ebuild:
+  add missing video_cards_via USE flag
 
   14 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.21_p19961-r2.ebuild, mythtv-0.21_p20877.ebuild,
