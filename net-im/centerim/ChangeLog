@@ -1,6 +1,10 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.39 2009/11/14 10:19:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.40 2009/11/14 10:28:14 swegener Exp $
+
+  14 Nov 2009; Sven Wegener <swegener@gentoo.org> centerim-4.22.7-r1.ebuild,
+  centerim-4.22.8.ebuild:
+  Also force curl dependency for yahoo protocol support, bug #292540.
 
   14 Nov 2009; Sven Wegener <swegener@gentoo.org> centerim-4.22.8.ebuild:
   Fix net-misc/curl dependency to also match on the gnutls and nss USE

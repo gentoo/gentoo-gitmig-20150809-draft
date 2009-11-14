@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.8.ebuild,v 1.4 2009/11/14 10:19:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.8.ebuild,v 1.5 2009/11/14 10:28:15 swegener Exp $
 
 EAPI="2"
 
@@ -34,7 +34,14 @@ DEPEND=">=sys-libs/ncurses-5.2
 			>=net-misc/curl-7.19.7[gnutls]
 			>=net-misc/curl-7.19.7[nss]
 		)
-		dev-libs/openssl
+	)
+	yahoo? (
+		|| (
+			<net-misc/curl-7.19.7[ssl]
+			>=net-misc/curl-7.19.7[openssl]
+			>=net-misc/curl-7.19.7[gnutls]
+			>=net-misc/curl-7.19.7[nss]
+		)
 	)"
 
 RDEPEND="${DEPEND}
