@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.3.ebuild,v 1.1 2009/11/12 18:26:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.3.ebuild,v 1.2 2009/11/14 04:44:48 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,9 +18,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=dev-python/numpy-1.0.2
-	dev-python/pyxml"
-
-RESTRICT_PYTHON_ABIS="3*"
+	|| ( dev-lang/python[xml] dev-python/pyxml )"
+RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="FontTools"
 
