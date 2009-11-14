@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.0.ebuild,v 1.3 2009/11/09 18:18:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.0.ebuild,v 1.4 2009/11/14 15:20:30 tampakrap Exp $
 
 EAPI="2"
 
@@ -62,7 +62,7 @@ RDEPEND="${DEPEND}
 	semantic-desktop? ( >=kde-base/nepomuk-${KDE_MINIMAL} )
 "
 
-PATCHES=( "${FILESDIR}/disable_bindings_test.patch" )
+PATCHES=( "${FILESDIR}/amarok-qtscriptcheck.patch" )
 
 # Only really required for live ebuild, to skip git_src_prepare
 src_prepare() {

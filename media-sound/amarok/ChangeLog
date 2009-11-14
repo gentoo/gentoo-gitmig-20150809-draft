@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.345 2009/11/14 12:48:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.346 2009/11/14 15:20:30 tampakrap Exp $
+
+  14 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org> amarok-2.2.0.ebuild,
+  amarok-2.2.1.ebuild, +files/amarok-qtscriptcheck.patch:
+  after a long time, fix qtscript check, bug 270923, kde bug 189367
 
 *amarok-2.2.1 (14 Nov 2009)
 
