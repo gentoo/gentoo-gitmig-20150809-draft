@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.131 2009/11/12 21:34:46 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.132 2009/11/14 16:33:06 billie Exp $
+
+  14 Nov 2009; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.10.ebuild,
+  +files/hplip-3.9.10-browser.patch, +files/hplip-3.9.10-desktop.patch:
+  Converted some ebuild hackery into patches for upstream integration.
 
 *hplip-3.9.10 (12 Nov 2009)
 

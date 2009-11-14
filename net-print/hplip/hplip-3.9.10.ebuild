@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.1 2009/11/12 21:34:46 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.2 2009/11/14 16:33:06 billie Exp $
 
 EAPI="2"
 
@@ -91,9 +91,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e "s/'skipstone']/'skipstone', 'epiphany']/" \
-		-e "s/'skipstone': ''}/'skipstone': '', 'epiphany': '--new-window'}/" \
-		base/utils.py  || die "Sed base/utils.py failed"
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
+	epatch "${FILESDIR}"/${P}-desktop.patch
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/482674
+	epatch "${FILESDIR}"/${P}-browser.patch
 
 	# bug 98428
 	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" hpssd.py || die "Sed hpssd.py failed"
@@ -236,11 +237,6 @@ src_install() {
 
 	# Bug #201023
 	rm -f "${D}"/etc/sane.d/dll.conf
-
-	# bug 106035/259763
-	if ! use qt3 && ! use qt4 ; then
-		rm -r "${D}"/usr/share/applications "${D}"/etc/xdg
-	fi
 
 	# kde3 autostart hack
 	if [[ -d /usr/kde/3.5/share/autostart ]] && use !minimal ; then
