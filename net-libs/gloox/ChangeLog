@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.12 2009/07/30 21:12:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.13 2009/11/14 13:43:50 scarabeus Exp $
+
+*gloox-1.0 (14 Nov 2009)
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -gloox-1.0_beta4.ebuild, +gloox-1.0.ebuild:
+  QA: Version bump to latest stable release to drop need for pmask entry.
 
   30 Jul 2009; Markus Meier <maekke@gentoo.org> gloox-0.9.9.5.ebuild:
   amd64/x86 stable, bug #271917

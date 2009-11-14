@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0_beta4.ebuild,v 1.1 2009/01/31 21:33:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.ebuild,v 1.1 2009/11/14 13:43:50 scarabeus Exp $
 
 EAPI=2
 
@@ -31,8 +31,7 @@ src_configure() {
 		$(use_with idn libidn) \
 		$(use_with gnutls gnutls) \
 		$(use_with ssl openssl) \
-		$(use_with zlib zlib) \
-		|| die "econf failed"
+		$(use_with zlib zlib)
 }
 
 src_install() {
