@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.22 2009/09/27 15:00:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.23 2009/11/14 17:17:28 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -dbskkd-cdb-1.71.ebuild:
+  Drop old.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> dbskkd-cdb-2.00.ebuild:
   ppc stable #281579
