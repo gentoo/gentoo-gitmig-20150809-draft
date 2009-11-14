@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.61 2009/11/11 00:13:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.62 2009/11/14 16:48:25 armin76 Exp $
+
+  14 Nov 2009; Raúl Porcel <armin76@gentoo.org> reportlab-2.3-r1.ebuild:
+  ia64/sparc stable wrt #289435
 
   11 Nov 2009; Brent Baude <ranger@gentoo.org> reportlab-2.3-r1.ebuild:
   Marking reportlab-2.3-r1 ppc64 for bug 289435
