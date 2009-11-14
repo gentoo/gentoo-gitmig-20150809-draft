@@ -15,7 +15,4 @@
 
 		Additionally, it is possible to write plugins to add your own checks.
 	</longdescription>
-	<use>
-		<flag name="html">Install HTML documenation</flag>
-	</use>
 </pkgmetadata>
