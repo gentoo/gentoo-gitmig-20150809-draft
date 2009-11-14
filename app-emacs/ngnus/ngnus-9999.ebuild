@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-9999.ebuild,v 1.3 2009/02/14 09:42:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-9999.ebuild,v 1.4 2009/11/14 13:20:05 scarabeus Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -16,7 +16,7 @@ SRC_URI=""
 
 LICENSE="GPL-3 FDL-1.2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""
@@ -31,7 +31,6 @@ src_compile() {
 		--with-emacs --without-w3 --without-url \
 		--with-lispdir=${SITELISP}/${PN} \
 		--with-etcdir=${SITEETC} \
-		|| die "econf failed"
 	emake || die "emake failed"
 }
 

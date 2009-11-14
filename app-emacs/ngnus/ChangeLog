@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ngnus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ChangeLog,v 1.6 2009/02/14 09:42:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ChangeLog,v 1.7 2009/11/14 13:20:04 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> ngnus-9999.ebuild:
+  QA: Drop keywords and not required die from live ebuild
 
 *ngnus-0.10 (14 Feb 2009)
 
