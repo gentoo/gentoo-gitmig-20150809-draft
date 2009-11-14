@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-0.8.ebuild,v 1.3 2009/02/14 09:42:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ngnus-0.8.ebuild,v 1.4 2009/11/14 15:58:58 ulm Exp $
 
 inherit elisp
 
@@ -23,8 +23,7 @@ src_compile() {
 	econf \
 		--with-emacs --without-w3 --without-url \
 		--with-lispdir=${SITELISP}/${PN} \
-		--with-etcdir=${SITEETC} \
-		|| die "econf failed"
+		--with-etcdir=${SITEETC}
 	emake || die "emake failed"
 }
 
@@ -39,8 +38,7 @@ src_install() {
 		mv "${i}" "${i}".info || die "mv info failed"
 	done
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-		|| die "elisp-site-file-install failed"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
 	dodoc ChangeLog GNUS-NEWS README todo || die "dodoc failed"
 }
