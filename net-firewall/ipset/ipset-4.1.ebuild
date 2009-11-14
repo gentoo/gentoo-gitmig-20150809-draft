@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-4.1.ebuild,v 1.1 2009/11/14 08:20:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-4.1.ebuild,v 1.2 2009/11/14 09:01:20 pva Exp $
 
 EAPI="2"
 
@@ -38,16 +38,18 @@ pkg_setup() {
 	get_version
 
 	modules=0
-	msg=''
 	if linux_chkconfig_builtin "MODULES" ; then
-		modules=1
-		msg="Modular kernel detected, will build kernel modules"
+		if linux_chkconfig_builtin "IP_NF_SET"; then #274577
+			einfo "Modular kernel detected but IP_NF_SET=y, will not build kernel modules"
+		else
+			modules=1
+			einfo "Modular kernel detected, will build kernel modules"
+		fi
 	else
-		msg="Nonmodular kernel detected, will not build kernel modules"
+		einfo "Nonmodular kernel detected, will not build kernel modules"
 	fi
-	einfo "${msg}"
 
-	[[ $modules -eq 1 ]] && \
+	[[ ${modules} -eq 1 ]] && \
 		linux-mod_pkg_setup
 	myconf="${myconf} PREFIX="
 	myconf="${myconf} LIBDIR=/$(get_libdir)"
@@ -72,7 +74,7 @@ src_compile() {
 	einfo "Building userspace"
 	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" ${myconf} binaries || die "failed to build"
 
-	if [[ $modules -eq 1 ]]; then
+	if [[ ${modules} -eq 1 ]]; then
 		einfo "Building kernel modules"
 		cd "${S}/kernel"
 		export KERNELDIR="${KERNEL_DIR}"
@@ -84,7 +86,7 @@ src_install() {
 	einfo "Installing userspace"
 	emake DESTDIR="${D}" ${myconf} binaries_install || die "failed to package"
 
-	if [[ $modules -eq 1 ]]; then
+	if [[ ${modules} -eq 1 ]]; then
 		einfo "Installing kernel modules"
 		cd "${S}/kernel"
 		export KERNELDIR="${KERNEL_DIR}"
