@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10816 2009/11/14 09:50:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10817 2009/11/14 10:54:12 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (14 Nov 2009)
+# beta release
+>=dev-ml/ocamlnet-3.0_beta
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Nov 2009)
 # ggz-kde-client has a missing dep on hardmasked kde-base/arts
