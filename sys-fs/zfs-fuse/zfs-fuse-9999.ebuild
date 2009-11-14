@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-9999.ebuild,v 1.2 2008/09/25 16:29:02 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-9999.ebuild,v 1.3 2009/11/14 14:06:40 scarabeus Exp $
 
 IUSE="doc debug"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.wizy.org/wiki/ZFS_on_FUSE"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 
 DEPEND=">=sys-libs/glibc-2.3.3
 		>=dev-util/scons-0.96.1

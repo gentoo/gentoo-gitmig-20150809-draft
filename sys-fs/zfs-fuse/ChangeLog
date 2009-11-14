@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-fuse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.8 2008/10/04 03:54:34 trapni Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.9 2009/11/14 14:06:40 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> zfs-fuse-9999.ebuild:
+  QA: Drop keywords from live ebuild.
 
   04 Oct 2008; Christian Parpart <trapni@gentoo.org> zfs-fuse-0.5.0.ebuild:
   fixed install-bug noticed in #237924. thanks for testing
