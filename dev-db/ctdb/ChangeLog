@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.8 2009/10/24 11:18:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.9 2009/11/14 13:53:58 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> ctdb-9999.ebuild:
+  QA: Drop keywords for live ebuild. Note for maintainer: the live ebuild is
+  out of sync from release versions. You should review it.
 
   24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> ctdb-1.0.88.ebuild:
   Keyworded on alpha, bug #285952

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.1 2008/07/26 20:23:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.2 2009/11/14 13:53:58 scarabeus Exp $
 
 EGIT_REPO_URI="git://git.samba.org/tridge/ctdb.git"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A cluster implementation of the TDB database used by Samba and othe
 HOMEPAGE="http://ctdb.samba.org/"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-libs/popt"
