@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4988 2009/11/13 17:27:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4989 2009/11/14 01:47:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2332,8 +2332,14 @@ net-irc/rbot:translator -  Add dependency over dev-ruby/mechanize, which is need
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/supybot:twisted - Allows supybot to use dev-python/twisted as driver
 net-irc/unrealircd:hub - Enable hub support
+net-irc/unrealircd:operoverride - Enable OperOverride extension
+net-irc/unrealircd:operoverride-verify - Enable requiring opers to invite themselves to +s/+p channels
 net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
-net-irc/unrealircd:showlistmodes - Support displaying channel modes during compilation
+net-irc/unrealircd:showlistmodes - Support displaying channel modes in /list
+net-irc/unrealircd:shunnotices - Enable notifying a user when un-shunned
+net-irc/unrealircd:spoof - Enable the spoof protection
+net-irc/unrealircd:topicisnuhost - Enable displaying nick!user@host as topic setter
+net-irc/unrealircd:usermod - Enable /set* and /chg* commands
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat-gnome:sound - Enable sound event support with media-libs/libcanberra
