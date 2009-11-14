@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.21 2009/10/21 07:40:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.22 2009/11/14 09:14:33 swegener Exp $
+
+*debugedit-5.1.9 (14 Nov 2009)
+
+  14 Nov 2009; Sven Wegener <swegener@gentoo.org> +debugedit-5.1.9.ebuild,
+  +files/debugedit-5.1.9-DWARF-3.patch,
+  +files/debugedit-5.1.9-cleanup.patch:
+  Instead od pulling in one big update, bump the whole tarball to debugedit
+  taken from rpm-5.1.9. Also include support for build-id, which has been
+  dropped on purpose in the last update, but portage supports this for over
+  a year now.
 
 *debugedit-4.4.6-r2 (21 Oct 2009)
 
