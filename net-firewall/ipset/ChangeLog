@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.30 2009/09/06 21:15:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.31 2009/11/14 08:20:30 pva Exp $
+
+*ipset-4.1 (14 Nov 2009)
+
+  14 Nov 2009; Peter Volkov <pva@gentoo.org> -ipset-2.4.9-r1.ebuild,
+  -ipset-2.5.0-r1.ebuild, +ipset-4.1.ebuild:
+  Version bump, bug #293043, thank Marcin Mirosław for report.
 
   06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> ipset-2.4.7.ebuild,
   ipset-2.4.9-r1.ebuild, ipset-2.5.0-r1.ebuild, ipset-3.0.ebuild:
