@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.300 2009/11/14 23:30:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.301 2009/11/14 23:48:42 cardoe Exp $
+
+*mythtv-0.22_p22824 (14 Nov 2009)
+
+  14 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.22_p22824.ebuild:
+  fix rescheduling deadlock. fix change change from EPG. fix that all
+  contrib scripts weren't executable. fix bug #292992 where backup scripts
+  weren't executable
 
 *mythtv-0.23_alpha22834 (14 Nov 2009)
 
