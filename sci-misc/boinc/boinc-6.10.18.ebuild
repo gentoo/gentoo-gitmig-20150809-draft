@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.1 2009/11/10 21:14:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.2 2009/11/14 01:40:46 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X +client cuda server"
+IUSE="X +client cuda"
 
 RDEPEND="
 	!sci-misc/boinc-bin
@@ -27,23 +27,15 @@ RDEPEND="
 		>=dev-util/nvidia-cuda-toolkit-2.1
 		>=x11-drivers/nvidia-drivers-180.22
 	)
-	server? (
-		>=virtual/mysql-5.0
-		dev-python/mysql-python
-	)
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	server? ( virtual/imap-c-client )
 	X? (
 		media-libs/freeglut
 		media-libs/jpeg
 		x11-libs/wxGTK:2.8[X,opengl]
 	)
 "
-
-# Upstream sucks in autotools
-#MAKEOPTS="-j1"
 
 src_prepare() {
 	# use system ssl certificates
@@ -75,13 +67,7 @@ src_configure() {
 		wxconf+=" --without-wxdir"
 	fi
 
-	# Bug #248769: don't use strlcat and friends from kerberos or similar
-	#local func
-	#for func in strlcat strlcpy; do
-	#	eval "export ac_cv_func_${func}=no"
-	#	append-cppflags -D${func}=boinc_${func}
-	#done
-	use server || conf+=" --disable-server"
+	conf+=" --disable-server"
 	use X || conf+=" --disable-manager"
 	use client || conf+=" --disable-client"
 
