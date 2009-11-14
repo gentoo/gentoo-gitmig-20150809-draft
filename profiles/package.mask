@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10820 2009/11/14 12:43:40 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10821 2009/11/14 14:14:28 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1250,17 +1250,6 @@ net-dialup/penggy
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
 #  on behalf of QA team
 #
-# Latest version fails with current Linux headers (bug
-# #247970), and has multiple issues; masked version is in
-# package.mask since 2007, since then, never touched. It
-# also uses the old net-nds/portmap package.
-#
-# Removal on 2009-10-09
-net-fs/sfs
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
 # Lack Gentoo maintainership as testified by the current
 # open bugs (bug #187889 - gcc-4.2, bug #240216 - prestripped
 # fiels, bug #91601, bug #125995, bug #140587). Last release
@@ -1615,10 +1604,6 @@ dev-util/w32api
 # Snapshots and alphas but not betas and RCs of Opera 10.10
 =www-client/opera-10.10_pre4694
 
-# MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
-# Masked for bug #196340
-=media-fonts/ja-ipafonts-0.0.20040715
-
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # The development branch, to be unmasked when out of beta by upstream.
 =net-misc/socat-2.0.0*
@@ -1628,14 +1613,6 @@ dev-util/w32api
 # http://forums.gentoo.org/viewtopic-t-713051.html
 media-libs/amd64codecs
 media-libs/realcodecs
-
-# Christian Parpart <trapni@gentoo.org> (04 Oct 2008)
-# for testing/experienced users only
->=games-rpg/mangos-9999
-
-# Christian Parpart <trapni@gentoo.org> (25 Sep 2008)
-# for testing/experienced users only
->=sys-fs/zfs-fuse-9999
 
 # Alin Năstac <mrness@gentoo.org> (21 Sep 2008)
 # Breaks L2TP connections (see http://bugs.xelerance.com/view.php?id=1004)
@@ -1651,29 +1628,9 @@ gnome-extra/gnome-lirc-properties
 =sys-kernel/xen-sources-2.6.20*
 =sys-kernel/xen-sources-2.6.21*
 
-# Tiziano Müller <dev-zero@gentoo.org> (15 Aug 2008)
-# Masked for testing (works with >=dev-libs/xerces-c-3.0.0)
-=dev-libs/xqilla-9999
-
-# Mike Doty <kingtaco@gentoo.org> (11 Aug 2008)
-# Masked due to build failure, bug 234448
-=app-emulation/emul-linux-x86-gtklibs-20080810
-
 # Raúl Porcel <armin76@gentoo.org> (1 Aug 2008)
 # This is just for preview
 >=www-client/seamonkey-bin-2.0_alpha1
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (28 Jul 2008)
-# These are masked for removal.  Please leave this mask in place, even after the
-# packages have been removed, until at least December 2008.  These packages have
-# been replaced by the Gentoo Release Engineering repository, available via
-# http://sources.gentoo.org/viewcvs.py/releng/
-dev-util/livecd-kconfigs
-dev-util/livecd-specs
-
-# Tiziano Müller <dev-zero@gentoo.org> (26 Jul 2008)
-# Masking live version
-=dev-db/ctdb-9999
 
 # Markus Ullmann <jokey@gentoo.org> (7 Jul 2008)
 # mask for security bug #190667
@@ -1686,14 +1643,10 @@ net-irc/bitchx
 =dev-java/mx4j-tools-3.0.2
 =dev-java/mx4j-3.0.2
 
-# Joe Peterson <lavajoe@gentoo.org> (09 Jun 2008)
-# Live ebuild too volatile for normal use.
-# Users who need to test this should unmask explicitly.
-=sys-fs/btrfs-progs-9999
-
-# Rémi Cardona <remi@gentoo.org> (27 May 2008)
-# mildly broken, see bug #156583
-=app-text/gtranslator-1.1.7
+# Rémi Cardona <remi@gentoo.org> (14 Nov 2009)
+# Masked for removal, until there is 2.0 branch release this must go.
+# See bug #156583.
+app-text/gtranslator
 
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing
@@ -1702,10 +1655,6 @@ net-irc/bitchx
 # Rémi Cardona <remi@gentoo.org> (16 Apr 2008)
 # Masked until somebody picks it up
 dev-cpp/bakery
-
-# Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
-# mask beta version
-=net-libs/gloox-1.0_beta*
 
 # Gilles Dartiguelongue <eva@gentoo.org> (12 Apr 2008)
 # Masking gnome-system-tools because it is broken,
@@ -1718,30 +1667,9 @@ dev-cpp/bakery
 #>=mail-client/mozilla-thunderbird-3.0_alpha1
 >=mail-client/mozilla-thunderbird-bin-3.0_alpha1
 
-# Denis Dupeyron <calchan@gentoo.org> (31 Mar 2008)
-# New versions using guile-1.8 and gtk-2 used to build and run at some point,
-# but not anymore. If you know how or want to fix this feel free to contact
-# me. Warning: dependency hell.
-=sci-electronics/gwave-20070514
-
 # Hanno Boeck <hanno@gentoo.org> (31 Mar 2008)
 # As 1.3.3.x became a stable series and 1.3.4 has crash issues, mask it for now.
 =app-office/scribus-1.3.4-r1
-
-# William L. Thomson Jr. <wltjr@gentoo.org> (25 Mar 2008)
-# Masked due to bugs and availability of forked alternative Frostwire.
-# Which is more equivalent to Limewire Pro and has been added to portage.
-# This ebuild will be moved to the java junkyard overlay when Frostwire
-# is unmasked or stabilized.
-net-p2p/limewire
-
-# Christian Faulhammer <fauli@gentoo.org> (11 Mar 2008)
-# Live SVN ebuild
-=app-portage/gatt-9999
-
-# MATSUU Takuto <matsuu@gentoo.org> (8 Mar 2008)
-# Masked for Bug 173467
->=net-im/coccinella-0.96.10
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (3 Mar 2008)
 # Masking due to security bug #194607 and security bug #204067
@@ -1792,10 +1720,6 @@ sys-fs/redirfs
 # sci-libs/metis-5.* still experimental
 >=sci-libs/metis-4.99
 
-# Luca Barbato <lu_zero@gentoo.org> (28 Jan 2008)
-# linking broken
-=app-emulation/qemu-user-0.9.1
-
 # Gilles Dartiguelongue <eva@gentoo.org> (24 Jan 2008)
 # add masked gnome-system-tools-2.20 and dependencies
 # for testing purpose
@@ -1812,24 +1736,9 @@ dev-libs/liboobs
 # CVS snapshots.
 =app-emacs/wanderlust-2.15.5_pre*
 
-# Ulrich Mueller <ulm@gentoo.org> (21 Dec 2007)
-# Christian Faulhammer <fauli@gentoo.org>
-# Live SVN ebuilds
-~app-emacs/gentoo-syntax-9999
-~app-emacs/ngnus-9999
-
-# Peter Volkov <pva@gentoo.org> (13 Dec 2007)
-# Live svn ebuild... 0.9.4 branch is not supported atm.
-=net-im/sim-9999
-
 # Raúl Porcel <armin76@gentoo.org> (12 Dec 2007)
 # Segfaults with IMAP
 =x11-plugins/replytolist-0.3.0
-
-# Raúl Porcel <armin76@gentoo.org> (04 Dec 2007)
-# Mozilla stopped supporting 1.5 series in October 2007
-# Will be removed when mips keywords 2.0
-=mail-client/mozilla-thunderbird-1.5*
 
 # Piotr Jaroszyński <peper@gentoo.org> (26 Nov 2007)
 # opensync svn ebuilds
@@ -1847,27 +1756,6 @@ dev-libs/liboobs
 =app-pda/libopensync-plugin-python-9999
 =app-pda/libopensync-plugin-syncml-9999
 =app-pda/libopensync-plugin-vformat-9999
-
-# Stefan Schweizer <genstef@gentoo.org> (14 Oct 2007)
-# Development release
->=net-libs/openslp-1.3.0
-
-# Sven Wegener <swegener@gentoo.org> (07 Aug 2007)
-# CVS snapshot, needs some more testing
-~app-misc/screen-4.0.3_p20070403
-
-# Gustavo Zacarias <gustavoz@gentoo.org> (16 Jul 2007)
-# Mask zaptel-1.2.18-r1 since it seems to have some issues and is experimental
-# See bug #185268
-=net-misc/zaptel-1.2.18-r1
-
-# Raúl Porcel <armin76@gentoo.org> (15 Jun 2007)
-# Mask livesvn ebuild
-=net-p2p/deluge-9999
-
-# Ryan Hill <dirtyepic@gentoo.org> (13 May 2007)
-#   Mask for testing.
-=net-fs/sfs-0.8.0_pre20070512
 
 # Tristan Heaven <nyhm@gentoo.org> (25 Apr 2007)
 # Masked until it's updated to use >=wxpython-2.6
@@ -1898,18 +1786,6 @@ net-misc/xsupplicant
 # However, keep around for data migration purposes.
 <=dev-db/mysql-3.23.58-r1
 
-# Alexandre Buisse <nattfodd@gentoo.org> (21 Feb 2007)
-# All of those are provided by tetex-3 which is now stabilized everywhere.
-# The current TeX setup doesn't yet allow for single package updates so
-# those are masked for the time being.
-dev-tex/lineno
-dev-tex/SIunits
-dev-tex/floatflt
-
-# Raúl Porcel <armin76@gentoo.org> (24 Jan 2007)
-# Mask cvs version of net-p2p/linuxdcpp
-=net-p2p/linuxdcpp-9999
-
 # Chris Gianelloni <wolf31o2@gentoo.org> (15 Jan 2007)
 # The Armagetron Advanced packages in Gentoo's repository are obsolete and will
 # likely remain masked until they can be revisted to be maintainable.  Until
@@ -1922,15 +1798,6 @@ games-action/armagetronad
 # 1.5.x is a development branch, people should test 1.4.x by default
 =net-fs/openafs-1.5*
 =net-fs/openafs-kernel-1.5*
-
-# Brent Baude <ranger@gentoo.org> (18 Apr 2006)
-# Masked pending removal. This package had been deprecated
-# in favor of sys-apps/ibm-powerpc-utils and an optional
-# package called sys-apps/ibm-powerpc-utils-papr.  Please
-# unmerge ppc64-utils and emerge ibm-powerpc-utils. And if you
-# if you are running on IBM hardware, emerge ibm-powerpc-utils-papr
-# as well.
-sys-apps/ppc64-utils
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #127319
@@ -1966,22 +1833,11 @@ app-benchmarks/ltp
 >=dev-db/mysql-community-5.1
 >=virtual/mysql-5.1
 
-# Sven Wegener <swegener@gentoo.org> (05 May 2005)
-# Development versions, without this mask users will not get the upstream
-# stable ~arch version by default, which means we can't mark it stable because
-# it's not tested. If you want it, please unmask.
->=net-nntp/leafnode-2.0.0_alpha0
-
 # Fernando J. Pereda <ferdy@gentoo.org> (25 April 2005)
 # mask these until the new mailwrapper/mailer-config scheme is ready
 # it is secure to unmask them to test
 net-mail/mailer-config
 =net-mail/mailwrapper-0.2.1-r1
-
-# Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
-# Tihs package is conflict with postgresql at the moment
-# and waiting on implementing virtual/postgresql.
-dev-db/pgcluster
 
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
