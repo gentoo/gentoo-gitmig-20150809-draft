@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.3.ebuild,v 1.7 2009/11/01 16:02:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.3.ebuild,v 1.8 2009/11/14 11:26:49 pva Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -87,8 +87,12 @@ src_configure() {
 	# our hardened toolchain bug
 	filter-flags -fstack-protector
 
-	# profile and -fomit-frame-pointer are incompatible, bug #215806
-	use profile && filter-flags -fomit-frame-pointer
+	# profile and -fomit-frame-pointer or pie are incompatible #215806, #292991
+	if use profile; then
+		filter-flags -fomit-frame-pointer
+		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
+		append-flags $(test-flags-CC -nopie)
+	fi
 
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
