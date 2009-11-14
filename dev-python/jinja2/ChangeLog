@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.30 2009/11/11 00:03:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.31 2009/11/14 16:41:52 armin76 Exp $
+
+  14 Nov 2009; Raúl Porcel <armin76@gentoo.org> jinja2-2.2.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #287618
 
   10 Nov 2009; Brent Baude <ranger@gentoo.org> jinja2-2.2.1.ebuild:
   Marking jinja2-2.2.1 ppc64 for bug 287618
