@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.18.1-r1.ebuild,v 1.4 2009/10/15 08:41:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.18.1-r1.ebuild,v 1.5 2009/11/14 18:47:22 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -76,7 +76,7 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 
-	if ! built_with_use dev-lang/python tk; then
+	if ! has_version dev-lang/python[tk]; then
 		ewarn "dev-lang/python has been built without tk support,"
 		ewarn "${PN}-gui doesn't work without Tkinter so if you really need it"
 		ewarn "re-install dev-lang/python with tk useflag enabled."
