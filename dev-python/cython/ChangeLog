@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.32 2009/11/08 20:12:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.33 2009/11/14 16:37:28 armin76 Exp $
+
+  14 Nov 2009; Raúl Porcel <armin76@gentoo.org> cython-0.11.3.ebuild:
+  ia64/sparc stable wrt #291193
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> cython-0.11.3.ebuild:
   ppc stable #291193
