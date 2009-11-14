@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.7 2009/08/16 09:55:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.8 2009/11/14 20:38:31 maekke Exp $
 
 EAPI=2
 
@@ -15,13 +15,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/boost-1.31.0
+RDEPEND="
 	media-libs/lcms
 	media-libs/glew
 	media-libs/plotutils[X]
 	media-libs/tiff
 	virtual/glut"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-libs/boost-1.31.0"
 
 S="${WORKDIR}/${PN}-enfuse-${PV}"
 
