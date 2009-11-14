@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.24 2009/10/05 17:46:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.25 2009/11/14 17:04:23 nyhm Exp $
+
+*warsow-0.5-r1 (14 Nov 2009)
+
+  14 Nov 2009; Tristan Heaven <nyhm@gentoo.org> -warsow-0.5.ebuild,
+  +warsow-0.5-r1.ebuild, files/warsow-0.5-build.patch,
+  +files/warsow-0.5-pic.patch:
+  Workaround bug #285448; fix textrels on x86
 
   05 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> warsow-0.5.ebuild:
   The code seems fragile. strip-flags to fix at least bug #285448 and

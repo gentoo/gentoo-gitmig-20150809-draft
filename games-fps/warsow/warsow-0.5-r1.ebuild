@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5.ebuild,v 1.2 2009/10/05 17:46:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5-r1.ebuild,v 1.1 2009/11/14 17:04:23 nyhm Exp $
 
 EAPI=2
-inherit flag-o-matic eutils toolchain-funcs versionator games
+inherit eutils toolchain-funcs versionator games
 
 MY_P=${PN}_${PV}
 DESCRIPTION="Multiplayer FPS based on the QFusion engine (evolved from Quake 2)"
@@ -47,10 +47,11 @@ src_prepare() {
 		|| die "sed files.c failed"
 
 	cd "${WORKDIR}"
+	rm -rf docs/old
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-openal.patch
-	strip-flags
+		"${FILESDIR}"/${P}-openal.patch \
+		"${FILESDIR}"/${P}-pic.patch
 }
 
 src_compile() {
@@ -63,15 +64,22 @@ src_compile() {
 		use openal && openal="YES"
 	fi
 
-	tc-export CC AR RANLIB
-
 	if use angelscript ; then
+		tc-export AR RANLIB
 		emake \
 			-C ../libsrcs/angelscript/angelSVN/sdk/angelscript/projects/gnuc \
 			|| die "emake angelscript failed"
 	fi
 
+	local arch
+	if use amd64 ; then
+		arch=x86_64
+	elif use x86 ; then
+		arch=i386
+	fi
+
 	emake \
+		BASE_ARCH=${arch} \
 		BINDIR=bin \
 		BUILD_CLIENT=${client} \
 		BUILD_SERVER=$(yesno dedicated) \
