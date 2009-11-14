@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.ebuild,v 1.1 2009/11/14 13:43:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.ebuild,v 1.2 2009/11/14 13:44:47 scarabeus Exp $
 
 EAPI=2
-
-inherit autotools
 
 MY_P=${P/_/-}
 DESCRIPTION="A portable high-level Jabber/XMPP library for C++"
