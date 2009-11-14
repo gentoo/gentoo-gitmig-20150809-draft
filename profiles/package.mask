@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10818 2009/11/14 11:14:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10819 2009/11/14 12:41:55 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (14 Nov 2009)
+# Mask all packages that fail to comply to cmake eclass
+# and where maintainers were not responsive.
+# See bug #287583 and those added to it.
+<dev-libs/boost-1.35.0-r1
+net-p2p/museek+
+dev-cpp/gccxml
+games-arcade/blinkensisters
+sys-apps/initng-ifiles
+sys-apps/initng
+games-rpg/mangos
+dev-lisp/cl-gcc-xml-ffi
 
 # Alexis Ballier <aballier@gentoo.org> (14 Nov 2009)
 # beta release
