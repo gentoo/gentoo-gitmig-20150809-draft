@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1.9.3.ebuild,v 1.2 2009/07/29 01:26:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1.9.3.ebuild,v 1.3 2009/11/14 16:33:53 tupone Exp $
 
 EAPI=2
 inherit games
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
-IUSE="cdinstall opengl svga"
+IUSE="cdinstall opengl svga +X"
 
 QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.x11
@@ -24,12 +24,15 @@ QA_EXECSTACK_amd64="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.x11
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.svga"
 
-DEPEND=">=dev-libs/expat-2.0
-	sys-libs/glibc
-	!svga? ( x11-libs/libXext )
+DEPEND="cdinstall? ( games-fps/quake1-data )"
+RDEPEND="${DEPEND}
+	X? ( x11-libs/libXext )
 	svga? ( media-libs/svgalib )
-	opengl? ( virtual/opengl x11-libs/libXext )
-	cdinstall? ( games-fps/quake1-data )"
+	opengl? (
+		virtual/opengl
+		x11-libs/libXxf86dga
+		x11-libs/libXxf86vm
+	)"
 
 S=${WORKDIR}/${MY_PN}
 
@@ -48,7 +51,8 @@ src_install() {
 	exeinto "${dir}"
 	insinto "${dir}"
 
-	local x BINS="ezquake.x11"
+	local x BINS=""
+	use X && BINS="ezquake.x11"
 	use svga && BINS="${BINS} ezquake.svga"
 	use opengl && BINS="${BINS} ezquake-gl.glx"
 
