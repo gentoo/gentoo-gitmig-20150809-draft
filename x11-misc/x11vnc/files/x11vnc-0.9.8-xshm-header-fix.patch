@@ -1,13 +1,15 @@
---- x11vnc-0.9.8/x11vnc/x11vnc.h
-+++ x11vnc-0.9.8/x11vnc/x11vnc.h
-@@ -76,6 +76,10 @@
- #include <X11/keysym.h>
- #include <X11/Xatom.h>
+Looks like X_ShmAttach is considered private to the library and has been removed from its headers.
+Just hardcode the value, it's only usd to print some help in case of an shm attach error.
+--- x11vnc-0.9.8/x11vnc/cleanup.c
++++ x11vnc-0.9.8/x11vnc/cleanup.c
+@@ -276,6 +276,10 @@
+ 	return 0;
+ }
  
-+#include <X11/Xmd.h>
-+#include <X11/extensions/shm.h>
-+#include <X11/extensions/shmproto.h>
++#ifndef X_ShmAttach
++#define X_ShmAttach 1
++#endif
 +
- #else
+ static int Xerror(Display *d, XErrorEvent *error) {
+ 	X_UNLOCK;
  
- #define NO_X11 1
