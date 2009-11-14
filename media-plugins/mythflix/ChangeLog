@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythflix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.25 2009/11/08 02:11:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.26 2009/11/14 23:53:10 cardoe Exp $
+
+*mythflix-0.22_p22763-r1 (14 Nov 2009)
+
+  14 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  -mythflix-0.22_p22763.ebuild, +mythflix-0.22_p22763-r1.ebuild:
+  fix to make netflix script executable
 
 *mythflix-0.22_p22763 (08 Nov 2009)
 
