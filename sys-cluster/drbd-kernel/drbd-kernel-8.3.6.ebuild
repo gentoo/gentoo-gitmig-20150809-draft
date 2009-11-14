@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.3.6.ebuild,v 1.2 2009/11/11 06:47:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.3.6.ebuild,v 1.3 2009/11/14 11:43:19 swegener Exp $
+
+EAPI="2"
 
 inherit eutils versionator linux-mod
 
@@ -22,6 +24,10 @@ RDEPEND=""
 SLOT="0"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-linux-2.6.32.patch
+}
 
 pkg_setup() {
 	if ! kernel_is 2 6; then
