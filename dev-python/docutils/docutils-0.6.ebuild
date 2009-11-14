@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.2 2009/10/13 17:20:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.3 2009/11/14 17:05:54 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils multilib
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc..."
-HOMEPAGE="http://docutils.sourceforge.net/"
+HOMEPAGE="http://docutils.sourceforge.net/ http://pypi.python.org/pypi/docutils"
 SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
 	glep? ( mirror://gentoo/glep-0.4-r1.tbz2 )"
 

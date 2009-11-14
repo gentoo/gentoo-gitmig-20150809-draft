@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.6-r1.ebuild,v 1.12 2009/11/14 16:44:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.6-r1.ebuild,v 1.13 2009/11/14 17:01:55 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,7 +10,7 @@ inherit eutils distutils
 MY_P=Imaging-${PV}
 
 DESCRIPTION="Python Imaging Library (PIL)"
-HOMEPAGE="http://www.pythonware.com/products/pil/index.htm"
+HOMEPAGE="http://www.pythonware.com/products/pil/index.htm http://pypi.python.org/pypi/PIL"
 SRC_URI="http://www.effbot.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="as-is"
