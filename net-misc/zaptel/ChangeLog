@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.120 2009/11/11 07:50:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.121 2009/11/14 13:06:33 scarabeus Exp $
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -zaptel-1.2.18-r1.ebuild:
+  Drop 2 years masked version. Since newer versions are around.
 
   11 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> zaptel-1.2.18.ebuild,
   zaptel-1.2.18-r1.ebuild, zaptel-1.2.24.ebuild, zaptel-1.2.26-r1.ebuild,
