@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/nanumfont
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/nanumfont/ChangeLog,v 1.1 2009/07/06 16:34:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nanumfont/ChangeLog,v 1.2 2009/11/14 16:09:21 maekke Exp $
+
+  14 Nov 2009; Markus Meier <maekke@gentoo.org> nanumfont-2.0.ebuild:
+  amd64/x86 stable, bug #286234
 
 *nanumfont-2.0 (06 Jul 2009)
 
