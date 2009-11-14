@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10827 2009/11/14 17:10:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10828 2009/11/14 17:24:18 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1060,10 +1060,6 @@ dev-libs/skalibs
 ~www-client/chromium-9999
 ~www-client/chromium-bin-9999
 
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Sep 2009)
-# wsgiref module is included in Python >=2.5. Masked for deletion in 30 days.
-dev-python/wsgiref
-
 # Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2009)
 # Obsolete. Supported by in-kernel drivers. Masked for removal,
 # see bug 277605.
@@ -1083,64 +1079,17 @@ media-video/qc-usb-messenger
 # on amd64 with gcc-4.4. See bug #280925
 =sci-physics/root-5.24.00
 
-# Jesus Rivero <neurogeek@gentoo.org> (20 Sep 2009)
-# Masked for removal in 30 days.
-# Not needed for Python versions higher then 2.4
-dev-python/optik
-
 # Torsten Veller <tove@gentoo.org> (20 Sep 2009)
 # Add perl-5.10 masks (#280724)
 ~dev-lang/perl-5.10.1
 ~sys-devel/libperl-5.10.1
 =app-admin/perl-cleaner-2*
 
-# Rémi Cardona <remi@gentoo.org> (19 Sep 2009)
-# Outdated and useless X doc packages
-# Masked for removal in 30 days
-app-doc/opengl-manpages
-app-doc/xorg-sgml-doctools
-app-doc/xorg-docs
-
 # Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
 # Alpha releases. Unmask at your own risk, bugs
 # go upstream to http://jira.atheme.org/
 =media-sound/audacious-2.2_alpha*
 =media-plugins/audacious-plugins-2.2_alpha*
-
-# Joe Sapp <nixphoeni@gentoo.org> (14 Sep 2009)
-# Package has new name (x11-plugins/desklet-WeeklyCalendar) to reflect
-# new gDesklets naming system within Gentoo and new gDesklets packaging
-# guidelines. Masked for removal on 14 Nov 2009 (bug #285034).
-x11-plugins/desklet-weeklycalendar
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (14 Sep 2009)
-# dev-python/omniorbpy installs __init__.py in illegal location (bug #247851)
-# and isn't properly maintained in Gentoo. Masked for deletion in 30 days.
-dev-python/omniorbpy
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (14 Sep 2009)
-#  on behalf of QA team
-#
-# Fails to build for over an year, see bug #233089 opened
-# in July 2008.
-#
-# Removal on 2009-11-13
-app-forensics/pyflag
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (14 Sep 2009)
-#  on behalf of QA team
-#
-# Replaced by app-i18n/skk-jisyo (with cdb USE flag); old
-# and stale.
-#
-# Removal on 2009-11-13
-<app-i18n/dbskkd-cdb-2
-app-i18n/skk-jisyo-cdb
-app-i18n/skk-jisyo-extra
-
-# Konstantin V. Arkhipov <voxus@gentoo.org> (13 Sep 2009)
-# Upstream no longer supports it, removal in 30 days.
-dev-php5/onphp-module
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2009)
 # Masked to enforce upgrade which looks like downgrade.
@@ -1151,152 +1100,15 @@ dev-php5/onphp-module
 # conflicts (#259700).
 dev-lang/nemerle
 
-# Alex Legler <a3li@gentoo.org> (1 Sep 2009)
-# Masked for security, has no maintainer. Bug 283434.
-# Will be proposed for treecleaning if noone steps up in let's say two weeks.
-app-office/tinyerp-client
-app-office/tinyerp-server
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
-#  on behalf of QA team
-#
-# Old version of synce framework; 0.13 and 0.14 are in the
-# tree and don't need these packages. synce-rra was just
-# fixed after almost an year (at least) of build failure.
-#
-# Removal on 2009-10-29
-<app-pda/synce-0.10
-app-pda/synce-rra
-app-pda/synce-kde
-app-pda/synce-multisync_plugin
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
-#  on behalf of QA team
-#
-# Unmaintained upstream, unneeded in tree, collides with
-# dev-libs/mini-xml (bug #247405) which is actually used.
-#
-# Removal on 2009-10-29
-dev-cpp/libmxmlplus
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
-#  on behalf of QA team
-#
-# Blocks iputils since 2007 (and iputils is a system
-# package); lacks a Gentoo maintainer, and upstream seems
-# to be gone. The same code has been used and patched since
-# 2002 at least.
-#
-# Removal on 2009-10-29
-net-misc/rarpd
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
-#  on behalf of QA team
-#
-# Uses serial make (and can't build in parallel, bug
-# #283170); last release in 2004, declared dead upstream,
-# uses Qt 3.
-#
-# Removal on 2009-10-29
-dev-util/qtunit
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build since at least November 2007, bug #199164.
-#
-# Removal on 2009-10-29
-sys-process/acctail
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to patch, bug #214719, since March 2008.
-#
-# Package need a new maintainer, possibly someone actually
-# using this stuff.
-#
-# Removal on 2009-10-26
-app-emulation/parallels-workstation
-
 # Christian Faulhammer <fauli@gentoo.org> (24 Aug 2009)
 # Has bundled security-vulnerable expat library, see bug 250049
 dev-tex/mpm
-
-# Christian Faulhammer <fauli@gentoo.org> (24 Aug 2009)
-# Masking for removal: Has bundled security-vulnerable expat library
-# and is discontinued.  See bug 248427
-sys-apps/einit
-sys-apps/einit-modules-scheme
-sys-apps/einit-modules-xml
 
 # Robert Piasek <dagger@gentoo.org> (24 Aug 2009)
 # Development snapshots of NetworkManager. Masked
 # for testing.
 >=net-misc/networkmanager-0.8.0_pre20090824
 >=gnome-extra/nm-applet-0.8.0_pre20090824
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build (bug #277245), last release in 2004,
-# unmaintained in Gentoo.
-#
-# Removal on 2009-10-10
-app-i18n/canuum
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
-# Package install a net.aol that does not work with OpenRC,
-# and if I'm not mistaken, is now useless as CompuServe was
-# shut down on June 30th.
-#
-# Removal on 2009-10-09
-net-dialup/penggy
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
-# Lack Gentoo maintainership as testified by the current
-# open bugs (bug #187889 - gcc-4.2, bug #240216 - prestripped
-# fiels, bug #91601, bug #125995, bug #140587). Last release
-# in tree is 2.2, last release upstream is 2.3 from 2007.
-#
-# Removal on 2009-10-09
-dev-lang/smarteiffel
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build with both gcc 4.3 (bug #246095) and
-# something else (bug #248365).
-#
-# Removal on 2009-10-09
-sci-mathematics/Macaulay2
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build with gcc 4.3 (bug #250922).
-#
-# Removal on 2009-10-09
-dev-php/phpdbg-client
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
-#  on behalf of QA team
-#
-# Fail to build with glibc 2.8 (bug #239935).
-#
-# Removal on 2009-10-09
-app-backup/afbackup-client
-app-backup/afbackup-server
-
-# Michał Januszewski <spock@gentoo.org> (08 Aug 2009)
-# Live git ebuilds for pycuda/pytools. Use at your own risk, do not
-# report Gentoo bugs if stuff breaks after you install them.
-=dev-python/pytools-9999
-=dev-python/pycuda-9999
 
 # Ulrich Mueller <ulm@gentoo.org> (08 Aug 2009)
 # Emacs live CVS ebuilds. Use at your own risk.
@@ -1328,42 +1140,14 @@ dev-lisp/cl-ansi-tests-cvs
 # Doesn't build with Tcl 8.5, has several bugs open
 =dev-tcltk/tcl-debug-2.0
 
-# Marijn Schouten <hkBst@gentoo.org> (08 Aug 2009)
-# unmask 4.3 version. Apparently the older versions are
-# "Defective By Design" as scarabeus put it.
-# Jorge Manuel B. S. Vicetto <jmbsvicett@gentoo.org> (07 Aug 2009)
-# Update the mask to match only system-config-printer-kde-4.2.4
-# and not later versions. Mask left as-is for printer-applet for
-# the moment.
-# Alexey Shvetsov <alexxy@gentoo.org> (04 Jun 2009)
-# Mask kde4 printing stuff
-<kde-base/printer-applet-4.3.0
-<kde-base/system-config-printer-kde-4.3.0
-
-# Chris PeBenito <pebenito@gentoo.org> (02 Aug 2009)
-# Masked for removal.  These policies have been
-# in selinux-base-policy for a long time.
-sec-policy/selinux-lvm
-sec-policy/selinux-mdadm
-
-# Steve Dibb <beandog@gentoo.org> (01 Aug 2009)
-# Mask for removal, name change to app-text/xiphos
-# bug 278973
-app-text/gnomesword
-
 # Steve Dibb <beandog@gentoo.org> (31 Jul 2009)
 # Unsupported, but popular.  No plans for removal.
 media-sound/alsa-driver
 
-# Mounir Lamouri <volkmar@gentoo.org> (30 Jul 2009)
-# Masked for removal in 60 days.
-# Upstream's unactive since 2005. Do not support asterisk versions in tree.
-# bug 279383
-net-misc/asterisk-chan_bluetooth
-
-# Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
-# Masked for removal. Upstream renamed to Clozure CL which can be found in lisp overlay.
-dev-lisp/openmcl
+# Marijn Schouten <hkBst@gentoo.org> (14 Nov 2009)
+# Masked for removal in 30 days. Depends or provide tools for openmcl which was removed.
+dev-libs/openmcl-build-tools
+media-sound/cm
 
 # Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
 # Masked for increasingly many problems. Upstream is flaky and hasn't released since 2005.
@@ -1395,47 +1179,12 @@ dev-lisp/gcl
 # actually doing 'amazonmp3-libcompat' for both x86 and amd64. (bug #272699)
 net-misc/amazonmp3
 
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jul 2009)
-# The attempts to unbundle iniparser from libcompizconfig are still
-# unsuccessful as it causes ccp to break
-=x11-libs/libcompizconfig-0.8.2-r2
-
 # Maintainer Needed <maintainer-needed@gentoo.org> (21 Jul 2009)
 # Security issues with bundled libraries.
 # See, http://bugs.gentoo.org/show_bug.cgi?id=251492
 # Waiting for TeamSpeak 3 to be released.
 media-sound/teamspeak2-server-bin
 media-sound/teamspeak2-client-bin
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (13 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to install since 2007, not touched afterwards but for a fix I
-# did today.
-#
-# Removal scheduled for 2009-08-13
-# bug #164016
-app-backup/bobs
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
-#  on behalf of QA Team
-#
-# openais: Multiple issues, not installable on stable glibc
-# systems. ha-cluster team seems to be MIA, as well as wschlich who's
-# listed as maintainer.
-#
-# rest: deps; check also out the cman USE flag masking
-#
-# Check bug #274922
-# Removal on 2009-10-06
-sys-cluster/openais
-sys-cluster/fence
-sys-cluster/cman
-sys-cluster/gnbd
-sys-cluster/gnbd-kernel
-sys-fs/gfs2
-sys-fs/gfs
-sys-fs/clvm
 
 # Ben de Groot <yngwin@gentoo.org> (25 Jun 2009)
 # Mask the Qt4 meta ebuild, to prevent devs from being silly and depend on
@@ -1446,11 +1195,6 @@ sys-fs/clvm
 # more than you need. This meta ebuild will be removed when we can add sets
 # to the portage tree.
 =x11-libs/qt-4*
-
-# Rémi Cardona <remi@gentoo.org> (23 Jun 2009)
-# broken opengl support, forces gcc's objc for no reason
-# masked until fixed (see bug #274092)
-=media-libs/tiff-3.8.2-r6
 
 # Markus Meier <maekke@gentoo.org> (13 Jun 2009)
 # mask pre releases of media-gfx/inkscape-0.47
@@ -1481,18 +1225,9 @@ sys-fs/clvm
 # Masked development/git sources
 =sys-kernel/openvz-sources-2.6.27.9999
 
-# Mike Pagano <mpagano@gentoo.org> (13 May 2009)
-# Masked for testing of ~ (tilde) unmasked packages
->=app-portage/portpeek-1.8
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Apr 2009)
 # Mask libopensync 0.38 since no plugin was fixed for this
 ~app-pda/libopensync-0.38
-
-# Federico Ferri <mescalinum@gentoo.org> (27 Apr 2009)
-# Sandbox violations, QA issues.
-# Masking before it hits more people.
-~dev-tcltk/tls-1.6
 
 # Alin Năstac <mrness@gentoo.org> (26 Apr 2009)
 # Beta version
@@ -1501,10 +1236,6 @@ sys-fs/clvm
 # Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
 # Masked until out of beta
 =dev-libs/libevent-2*
-
-# Doug Goldstein <cardoe@gentoo.org> (19 Apr 2009)
-# developing ebuild for phoronix-test-suite
-app-benchmarks/phoronix-test-suite
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
@@ -1515,13 +1246,6 @@ app-benchmarks/phoronix-test-suite
 # Thomas Anderson <gentoofan23@gentoo.org>
 # Live version
 ~app-doc/pms-99999999
-
-# Jeremy Olexa <darkside@gentoo.org> (10 Apr 2009)
-# The bash-completion upstream naming scheme has drastically changed. As such,
-# I have renamed the 20081219-r1 to 0.20081219-r1 to allow for ~arch testing of
-# 1.0. v0.20081219-r1 is the stable version, v1.0* is the ~arch version. It will
-# seem like a downgrade for stable and ~arch users, but it is not.
->=app-shells/bash-completion-20000000
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases
@@ -1560,12 +1284,6 @@ app-portage/udept
 # Mask testing branch
 =x11-libs/fox-1.7*
 
-# Jeffrey Gardner <je_fro@gentoo.org> (27 Feb 2009)
-# Masked while we switch to sci-chemistry/gchemutils
-# which now provides this package.
-sci-chemistry/gchempaint
-
-
 # Jim Ramsay <lack@gentoo.org> (1 Feb 2008)
 # This isn't actually used by anyone, but hopefully will be soon to allow
 # net-misc/amazonmp3 to be used by amd64 users.  Once I get around to it.
@@ -1593,14 +1311,6 @@ dev-util/w32api
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
 >=app-portage/portpeek-1.6
-
-# Jim Ramsay <lack@gentoo.org> (11 Dec 2008)
-# Live ebuild, for advanced users only
-=x11-wm/fluxbox-9999
-
-# Luca Barbato <lu_zero@gentoo.org> (07 Dec 2008)
-# Live sources to be used with other live source applications
-~media-video/ffmpeg-9999
 
 # Robin H. Johnson <robbat2@gentoo.org> (06 Dec 2008)
 # The init.d scripts and default rules need updating and serious testing.
@@ -1789,11 +1499,6 @@ games-rpg/openrpg
 # Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
 # Masking net-misc/xsupplicant due to security bug 154995
 net-misc/xsupplicant
-
-# Stefan Cornelius <dercorny@gentoo.org> (2 Mar 2007)
-# Masked because it's affected by 7 GLSAs or so, nobody should use it
-# However, keep around for data migration purposes.
-<=dev-db/mysql-3.23.58-r1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (15 Jan 2007)
 # The Armagetron Advanced packages in Gentoo's repository are obsolete and will
