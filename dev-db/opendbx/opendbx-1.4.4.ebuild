@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.0.ebuild,v 1.2 2009/11/14 10:47:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.4.ebuild,v 1.1 2009/11/14 10:47:06 swegener Exp $
 
 EAPI="2"
 
@@ -51,10 +51,6 @@ src_configure() {
 	use sqlite3 && backends="${backends} sqlite3"
 
 	econf --with-backends="${backends}" || die "econf failed"
-}
-
-src_compile() {
-	emake -j1 || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.25 2009/03/23 16:00:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.26 2009/11/14 10:47:06 swegener Exp $
+
+  14 Nov 2009; Sven Wegener <swegener@gentoo.org> opendbx-1.4.0.ebuild,
+  +opendbx-1.4.4.ebuild:
+  Version bump. Correctly split src_configure() and src_compile().
+
+*opendbx-1.4.4 (14 Nov 2009)
+
+  14 Nov 2009; Sven Wegener <swegener@gentoo.org> +opendbx-1.4.4.ebuild:
+  Version bump.
 
 *opendbx-1.4.0 (23 Mar 2009)
 
