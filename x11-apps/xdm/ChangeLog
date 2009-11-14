@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.104 2009/10/26 22:15:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.105 2009/11/14 15:35:28 remi Exp $
+
+  14 Nov 2009; Rémi Cardona <remi@gentoo.org> xdm-1.1.9.ebuild:
+  create the directory where authfiles will be stored (see bug #286350)
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> xdm-1.1.9.ebuild:
   Stable for HPPA (bug #282290).

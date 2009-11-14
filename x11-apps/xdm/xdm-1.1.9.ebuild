@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.9.ebuild,v 1.6 2009/10/26 22:15:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.9.ebuild,v 1.7 2009/11/14 15:35:28 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -42,6 +42,8 @@ src_install() {
 	exeinto /usr/$(get_libdir)/X11/xdm
 	doexe "${FILESDIR}"/Xsession
 	newpamd "${FILESDIR}"/xdm.pamd xdm
+	# Keep /var/lib/xdm. This is where authfiles are stored. See #286350.
+	keepdir /var/lib/xdm
 }
 
 pkg_preinst() {
