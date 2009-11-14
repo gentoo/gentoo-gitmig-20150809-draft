@@ -1,9 +1,13 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.136 2009/11/14 16:10:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.137 2009/11/14 16:29:44 scarabeus Exp $
 
   14 Nov 2009; Markus Meier <maekke@gentoo.org> tiff-3.9.2.ebuild:
   amd64/x86 stable, bug #291612
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -tiff-3.8.2-r6.ebuild:
+  Drop old masked since newer stable are around.
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> tiff-3.9.2.ebuild:
   ppc stable #291612
