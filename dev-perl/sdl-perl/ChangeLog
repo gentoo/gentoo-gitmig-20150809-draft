@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/sdl-perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.51 2009/11/10 10:29:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.52 2009/11/14 16:12:06 jer Exp $
+
+  14 Nov 2009; Jeroen Roovers <jer@gentoo.org> sdl-perl-2.2.2.7.ebuild:
+  Stable for HPPA (bug #291230).
 
 *sdl-perl-2.2.6 (10 Nov 2009)
 
