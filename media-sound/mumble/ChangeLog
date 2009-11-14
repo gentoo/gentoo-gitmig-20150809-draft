@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.20 2009/11/13 20:22:30 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.21 2009/11/14 16:38:48 tgurr Exp $
+
+  14 Nov 2009; Timo Gurr <tgurr@gentoo.org> mumble-1.2.0_beta1.ebuild:
+  Disable build of 11x client.
 
 *mumble-1.2.0_beta1 (13 Nov 2009)
 
