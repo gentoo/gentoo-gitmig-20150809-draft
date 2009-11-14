@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4994 2009/11/14 17:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4995 2009/11/14 18:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -904,7 +904,6 @@ dev-python/paste:flup - enable support for flup (and therefore for various wgsi 
 dev-python/paste:openid - enable OpenID support
 dev-python/psycopg:mxdatetime - Enable support for MX DateTime and use it instead of Python's built-in datetime module
 dev-python/pygobject:libffi - Enable support to connect to signals on python objects from C.
-dev-python/pylint:html - Install HTML documenation
 dev-python/pylons:cheetah - Add optional cheetah support
 dev-python/pylons:genshi - Add optional genshi support
 dev-python/pylons:jinja2 - Add optional jinja2 support
