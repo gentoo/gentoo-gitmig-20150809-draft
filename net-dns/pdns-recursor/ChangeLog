@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns-recursor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.30 2009/08/03 19:34:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.31 2009/11/14 09:56:34 swegener Exp $
+
+  14 Nov 2009; Sven Wegener <swegener@gentoo.org>
+  pdns-recursor-3.1.7.ebuild, pdns-recursor-3.1.7.1.ebuild:
+  Move boost to DEPEND-only, bug #293076.
 
 *pdns-recursor-3.1.7.1 (03 Aug 2009)
 

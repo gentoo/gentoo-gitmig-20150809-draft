@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.7.1.ebuild,v 1.1 2009/08/03 19:34:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.7.1.ebuild,v 1.2 2009/11/14 09:56:34 swegener Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -13,10 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="lua"
 
-DEPEND=">=dev-libs/boost-1.33.1
-	lua? ( >=dev-lang/lua-5.1 )"
+DEPEND="lua? ( >=dev-lang/lua-5.1 )"
 RDEPEND="${DEPEND}
 	!<net-dns/pdns-2.9.20-r1"
+DEPEND="${DEPEND}
+	>=dev-libs/boost-1.33.1"
 
 pkg_setup() {
 	filter-flags -ftree-vectorize
