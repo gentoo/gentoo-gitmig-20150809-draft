@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23_alpha22784.ebuild,v 1.2 2009/11/14 23:22:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23_alpha22834.ebuild,v 1.1 2009/11/14 23:30:30 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -9,7 +9,7 @@ DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE_VIDEO_CARDS="video_cards_nvidia"
+IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
 IUSE="alsa altivec autostart +css debug directv dvb \
 fftw ieee1394 jack lcd lirc mmx perl pulseaudio python \
 tiff vdpau xvmc ${IUSE_VIDEO_CARDS}"
@@ -100,9 +100,13 @@ src_configure() {
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use vdpau && myconf="${myconf} --enable-vdpau"
 
-	#from bug #220857
-	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw \
-		--disable-xvmc-vld"
+	#from bug #220857 and fixed for bug #292481
+	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw"
+	if use video_cards_via && use xvmc; then
+		myconf="${myconf} --enable-xvmc-vld";
+	else
+		myconf="${myconf} --disable-xvmc-vld";
+	fi
 
 	# according to the Ubuntu guys, this works better being always on
 	myconf="${myconf} --enable-glx-procaddrarb"
@@ -144,9 +148,9 @@ src_configure() {
 	## CFLAG cleaning so it compiles
 	MARCH=$(get-flag "march")
 	MTUNE=$(get-flag "mtune")
-	strip-flags
-	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
-	filter-flags "-O" "-O?"
+	#strip-flags
+	#filter-flags "-march=*" "-mtune=*" "-mcpu=*"
+	#filter-flags "-O" "-O?"
 
 	if [[ -n "${MARCH}" ]]; then
 		myconf="${myconf} --cpu=${MARCH}"
@@ -160,8 +164,8 @@ src_configure() {
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
 	# let MythTV come up with our CFLAGS. Upstream will support this
-	CFLAGS=""
-	CXXFLAGS=""
+	unset CFLAGS
+	unset CXXFLAGS
 	einfo "Running ./configure ${myconf}"
 	sh ./configure ${myconf} || die "configure died"
 }
