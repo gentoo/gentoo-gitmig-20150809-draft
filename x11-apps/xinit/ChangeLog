@@ -1,6 +1,15 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.162 2009/10/18 14:14:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.163 2009/11/14 14:18:45 scarabeus Exp $
+
+*xinit-1.2.0 (14 Nov 2009)
+
+  14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> +files/00-xhost,
+  files/xdm-setup.initd-1, -xinit-1.0.8-r4.ebuild, -xinit-1.0.8-r7.ebuild,
+  -xinit-1.0.8-r8.ebuild, +xinit-1.2.0.ebuild, +files/xdm.confd-2,
+  +files/0001-Gentoo-specific-customizations.patch, +files/xdm.initd-4,
+  files/chooser.sh, +files/xserverrc:
+  Version bump. Drop old.
 
   18 Oct 2009; Brent Baude <ranger@gentoo.org> xinit-1.0.8-r10.ebuild:
   Marking xinit-1.0.8-r10 ppc64 for bug 287913
