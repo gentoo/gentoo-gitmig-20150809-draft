@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.43 2009/11/13 16:38:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.44 2009/11/14 17:37:07 armin76 Exp $
+
+  14 Nov 2009; Raúl Porcel <armin76@gentoo.org> pyopenssl-0.9-r1.ebuild:
+  ia64/s390/sh stable wrt #287563
 
 *pyopenssl-0.10 (13 Nov 2009)
 
