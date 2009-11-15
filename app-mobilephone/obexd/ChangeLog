@@ -1,0 +1,9 @@
+# ChangeLog for app-mobilephone/obexd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.1 2009/11/15 21:32:51 dev-zero Exp $
+
+*obexd-0.18 (15 Nov 2009)
+
+  15 Nov 2009; Tiziano Müller <dev-zero@gentoo.org> +obexd-0.18.ebuild:
+  Moved over from my overlay (for bug #285043).
+
