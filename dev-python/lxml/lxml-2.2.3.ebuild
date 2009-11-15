@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.3.ebuild,v 1.2 2009/11/03 18:53:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.3.ebuild,v 1.3 2009/11/15 18:44:58 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,6 +32,9 @@ pkg_setup() {
 src_prepare() {
 	# Use Cython instead of own bundled version of Pyrex.
 	epatch "${FILESDIR}/${PN}-2.0.3-no-fake-pyrex.patch"
+
+	# Disable broken tests.
+	sed -e "/elementsoup\.txt/d" -i src/lxml/html/tests/test_elementsoup.py || die "sed failed"
 }
 
 src_compile() {

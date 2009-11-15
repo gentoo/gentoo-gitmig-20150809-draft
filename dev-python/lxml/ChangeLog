@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.67 2009/11/03 18:53:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.68 2009/11/15 18:44:58 arfrever Exp $
+
+  15 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  lxml-2.2.3.ebuild:
+  Disable broken tests (bug #292806).
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> lxml-2.2.3.ebuild:
   Add ~ia64/~sparc wrt #291232
