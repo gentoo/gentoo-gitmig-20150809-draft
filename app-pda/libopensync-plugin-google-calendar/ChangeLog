@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libopensync-plugin-google-calendar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-google-calendar/ChangeLog,v 1.9 2009/03/20 12:57:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-google-calendar/ChangeLog,v 1.10 2009/11/15 23:45:00 eva Exp $
+
+  15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -libopensync-plugin-google-calendar-0.21.ebuild,
+  -libopensync-plugin-google-calendar-0.35.ebuild:
+  Clean up old revisions.
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org>
   libopensync-plugin-google-calendar-0.35.ebuild,

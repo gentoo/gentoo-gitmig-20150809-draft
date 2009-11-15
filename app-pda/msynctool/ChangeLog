@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/msynctool
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/msynctool/ChangeLog,v 1.7 2008/01/27 17:41:00 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/msynctool/ChangeLog,v 1.8 2009/11/15 23:52:10 eva Exp $
+
+  15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -msynctool-0.21.ebuild, -msynctool-0.35.ebuild:
+  Clean up old revisions.
 
 *msynctool-0.36 (27 Jan 2008)
 
