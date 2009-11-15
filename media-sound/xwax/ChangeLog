@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.9 2009/09/20 20:03:37 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.10 2009/11/15 20:39:38 nixphoeni Exp $
+
+  15 Nov 2009; Joe Sapp <nixphoeni@gentoo.org> -xwax-0.4.ebuild,
+  -xwax-0.6.ebuild:
+  Removed old ebuilds
 
 *xwax-0.6-r1 (20 Sep 2009)
 
