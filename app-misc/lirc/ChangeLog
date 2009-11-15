@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.211 2009/11/03 19:53:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.212 2009/11/15 10:04:21 zzam Exp $
+
+*lirc-0.8.6-r2 (15 Nov 2009)
+
+  15 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/irexec-initd-0.8.6-r2, +lirc-0.8.6-r2.ebuild:
+  Let irexec init-script depend on the virtual service lirc to be able to
+  use a different lirc server, Bug #277588.
 
   03 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.6-r1.ebuild:
   Change ebuild, so that lirc package does no longer own lircd.conf. That
