@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.78 2009/11/12 22:44:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.79 2009/11/15 00:10:10 cardoe Exp $
+
+*mythvideo-0.22_p22821 (15 Nov 2009)
+
+  15 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythvideo-0.22_p22821.ebuild:
+  fix jamu script always exiting with 1. fix executable bit on scripts
+  necessary for metadata retrieval, bug #293104
 
 *mythvideo-0.22_p22807 (12 Nov 2009)
 
