@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.13 2009/10/18 19:01:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.14 2009/11/15 11:22:24 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (15 Nov 2009)
+# doesn't compile, bug #293263
+=app-portage/eix-0.18.3
 
 # Fabian Groffen <grobian@gentoo.org> (18 Oct 2009)
 # ocamlrun: fatal: relocation error: file ../otherlibs/unix/dllunix.so:

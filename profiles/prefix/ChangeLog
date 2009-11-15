@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.114 2009/11/15 11:14:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.115 2009/11/15 11:22:23 grobian Exp $
+
+  15 Nov 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask eix-0.18.3 due to compilation issues
 
   15 Nov 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   unmask File-Spec again, perl-5.10.1 is in the Prefix tree now
