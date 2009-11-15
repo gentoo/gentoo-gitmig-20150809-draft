@@ -1,6 +1,15 @@
 # ChangeLog for app-pda/libopensync-plugin-syncml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.13 2009/09/19 16:11:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.14 2009/11/15 22:31:27 eva Exp $
+
+*libopensync-plugin-syncml-0.39 (15 Nov 2009)
+
+  15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -libopensync-plugin-syncml-0.36.ebuild,
+  +libopensync-plugin-syncml-0.39.ebuild,
+  libopensync-plugin-syncml-9999.ebuild:
+  Version bump. Restrict tests in 0.39. Clean up 0.36 due to removed
+  libsyncml-0.4.
 
   19 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
   -libopensync-plugin-syncml-0.21.ebuild,

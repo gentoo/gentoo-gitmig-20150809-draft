@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-9999.ebuild,v 1.2 2007/12/07 16:34:57 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-9999.ebuild,v 1.3 2009/11/15 22:31:27 eva Exp $
 
-EAPI="1"
+EAPI="2"
 
-inherit eutils cmake-utils subversion
+inherit cmake-utils subversion
 
 DESCRIPTION="OpenSync SyncML Plugin"
 HOMEPAGE="http://www.opensync.org/"
@@ -12,14 +12,16 @@ SRC_URI=""
 
 ESVN_REPO_URI="http://svn.opensync.org/plugins/syncml"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="http +obex"
 
-DEPEND="=app-pda/libopensync-${PV}*
-	>=app-pda/libsyncml-0.4.3"
-RDEPEND="${DEPEND}"
+RDEPEND="=app-pda/libopensync-${PV}*
+	dev-libs/glib:2
+	dev-libs/libxml2
+	>=app-pda/libsyncml-0.5.0[obex?,http?]"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if ! use obex && ! use http; then
@@ -27,28 +29,14 @@ pkg_setup() {
 		eerror "Please enable \"obex\" or/and \"http\" USE flags."
 		die "Please enable \"obex\" or/and \"http\" USE flags."
 	fi
-
-	if use obex && ! built_with_use app-pda/libsyncml obex; then
-		eerror "You are trying to build ${CATEGORY}/${P} with the \"obex\""
-		eerror "USE flags, but app-pda/libsyncml was built without"
-		eerror "the \"obex\" USE flag."
-		eerror "Please rebuild app-pda/libsyncml with \"obex\" USE flag."
-		die "Please rebuild app-pda/libsyncml with \"obex\" USE flag."
-	fi
-
-	if use http && ! built_with_use app-pda/libsyncml http; then
-		eerror "You are trying to build ${CATEGORY}/${P} with the \"http\""
-		eerror "USE flags, but app-pda/libsyncml was built without"
-		eerror "the \"http\" USE flag."
-		eerror "Please rebuild app-pda/libsyncml with \"http\" USE flag."
-		die "Please rebuild app-pda/libsyncml with \"http\" USE flag."
-	fi
 }
 
-src_compile() {
+src_configure() {
+	DOCS="AUTHORS"
+
 	local mycmakeargs="
 		$(cmake-utils_use_enable http HTTP)
 		$(cmake-utils_use_enable obex OBEX)"
 
-	cmake-utils_src_compile
+	cmake-utils_src_configure
 }
