@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.21 2009/11/15 13:08:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.22 2009/11/15 23:26:04 voyageur Exp $
+
+*chromium-4.0.248.0 (15 Nov 2009)
+
+  15 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-4.0.223.5.ebuild, +chromium-4.0.248.0.ebuild:
+  Version bump, enables bookmarks sync (with --enable-sync), and fix menu
+  location for adblock+ extension
 
   15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> chromium-9999.ebuild:
   QA: Drop keywords on live ebuilds.

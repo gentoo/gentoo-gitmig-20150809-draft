@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.223.5.ebuild,v 1.2 2009/10/29 08:41:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.248.0.ebuild,v 1.1 2009/11/15 23:26:04 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -25,8 +25,9 @@ RDEPEND="app-arch/bzip2
 	media-libs/jpeg
 	media-libs/libpng
 	>=media-video/ffmpeg-0.5_p19787
-	>=x11-libs/gtk+-2.14.7"
-#	sys-libs/zlib
+	sys-libs/zlib
+	>=x11-libs/gtk+-2.14.7
+	x11-themes/gnome-icon-theme"
 #	>=dev-libs/libevent-1.4.13
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
@@ -42,6 +43,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
 	# Add configuration flag to use system libevent
 	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
+
+	# Disable prefixing to allow linking against system zlib
+	sed -e '/^#include "mozzconf.h"$/d' \
+		-i third_party/{,WebKit/WebCore/platform/image-decoders}/zlib/zconf.h \
+		|| die "zlib sed failed"
 
 	# Display correct svn revision in about box (if not a release)
 	if [[ "${PV}" =~ "_p" ]]; then
@@ -63,8 +69,7 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
-	# -Duse_system_zlib=1: needs mozzconf.h and some MOZ_Z_* functions
+	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
 	# -Duse_system_libevent=1: http://crbug.com/22140
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
@@ -109,7 +114,6 @@ src_install() {
 
 	doins -r out/Release/locales
 	doins -r out/Release/resources
-	doins -r out/Release/themes
 
 	newman out/Release/chromium-browser.1 chrome.1
 
