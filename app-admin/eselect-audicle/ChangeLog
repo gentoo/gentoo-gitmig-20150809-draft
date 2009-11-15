@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-audicle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-audicle/ChangeLog,v 1.1 2009/08/13 21:30:41 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-audicle/ChangeLog,v 1.2 2009/11/15 15:16:52 cedk Exp $
+
+*eselect-audicle-1.0.1 (15 Nov 2009)
+
+  15 Nov 2009; Cédric Krier <cedk@gentoo.org>
+  +eselect-audicle-1.0.1.ebuild:
+  Add support brief output mode for bug #292097
 
 *eselect-audicle-1.0.0 (13 Aug 2009)
 
