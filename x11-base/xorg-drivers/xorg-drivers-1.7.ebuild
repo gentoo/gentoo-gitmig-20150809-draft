@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.4 2009/11/05 12:14:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.5 2009/11/15 22:05:11 remi Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -39,7 +39,6 @@ IUSE_VIDEO_CARDS="
 	video_cards_i740
 	video_cards_intel
 	video_cards_impact
-	video_cards_imstt
 	video_cards_mach64
 	video_cards_mga
 	video_cards_neomagic
@@ -67,7 +66,6 @@ IUSE_VIDEO_CARDS="
 	video_cards_trident
 	video_cards_tseng
 	video_cards_v4l
-	video_cards_vermilion
 	video_cards_vesa
 	video_cards_via
 	video_cards_virtualbox
