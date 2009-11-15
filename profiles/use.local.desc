@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4997 2009/11/15 05:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4998 2009/11/15 05:47:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2595,7 +2595,6 @@ net-misc/zaptel:ecmark - Use the MARK echo canceller
 net-misc/zaptel:ecmark2 - Use the MARK2 echo canceller (default)
 net-misc/zaptel:ecmark3 - Use the MARK3 echo canceller
 net-misc/zaptel:ecmg2 - Use the MG2 echo canceller
-net-misc/zaptel:ecoslec - Use the OSLEC echo canceller (http://www.rowetel.com/ucasterisk/oslec.html)
 net-misc/zaptel:ecsteve - Use the STEVE echo canceller
 net-misc/zaptel:ecsteve2 - Use the STEVE2 echo canceller
 net-misc/zaptel:florz - Enable florz enhancement patches for ISDN BRI
