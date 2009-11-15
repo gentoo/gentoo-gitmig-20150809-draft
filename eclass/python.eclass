@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.78 2009/11/15 14:25:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.79 2009/11/15 22:00:47 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -107,7 +107,7 @@ PYTHON() {
 		echo -n "python${slot}"
 	fi
 
-	if [[ "${ABI}" != "${DEFAULT_ABI}" ]]; then
+	if [[ -n "${ABI}" && "${ABI}" != "${DEFAULT_ABI}" && "${DEFAULT_ABI}" != "default" ]]; then
 		echo -n "-${ABI}"
 	fi
 }
@@ -260,6 +260,12 @@ validate_PYTHON_ABIS() {
 
 			# Ensure that EPYTHON variable is respected.
 			if [[ "$(EPYTHON="$(PYTHON)" python -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')" != "${PYTHON_ABI}" ]]; then
+				eerror "python:                    '$(type -p python)'"
+				eerror "ABI:                       '${ABI}'"
+				eerror "DEFAULT_ABI:               '${DEFAULT_ABI}'"
+				eerror "EPYTHON:                   '$(PYTHON)'"
+				eerror "PYTHON_ABI:                '${PYTHON_ABI}'"
+				eerror "Version of enabled Python: '$(EPYTHON="$(PYTHON)" python -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')'"
 				die "'python' doesn't respect EPYTHON variable"
 			fi
 		done
@@ -1016,10 +1022,10 @@ python_mod_optimize() {
 }
 
 # @FUNCTION: python_mod_cleanup
-# @USAGE: [directory]
+# @USAGE: [directory|file]
 # @DESCRIPTION:
-# Run with optional arguments, where arguments are directories of
-# python modules. If none given, it will look in /usr/lib/python[0-9].[0-9].
+# Run with optional arguments, where arguments are Python modules. If none given,
+# it will look in /usr/lib/python[0-9].[0-9].
 #
 # It will recursively scan all compiled Python modules in the directories and
 # determine if they are orphaned (i.e. their corresponding .py files are missing.)
