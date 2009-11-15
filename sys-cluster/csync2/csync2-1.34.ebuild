@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34.ebuild,v 1.7 2009/11/15 13:38:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34.ebuild,v 1.8 2009/11/15 14:24:25 xmerlin Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ SLOT="0"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/${P}-pure-gnutls.patch || die #274213
+	epatch "${WORKDIR}"/${P}-pure-gnutls.patch #274213
 }
 
 src_compile() {
