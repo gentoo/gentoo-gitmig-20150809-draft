@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.11 2009/11/15 22:05:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.12 2009/11/15 22:12:23 remi Exp $
+
+  15 Nov 2009; Rémi Cardona <remi@gentoo.org> xorg-drivers-1.6.ebuild:
+  sync with overlay, imstt and vermilon are blocked, drop USE flags
 
   15 Nov 2009; Rémi Cardona <remi@gentoo.org> xorg-drivers-1.7.ebuild:
   sync with overlay, imstt and vermilon are blocked, drop USE flags
