@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/wxmud-9999.ebuild,v 1.3 2008/02/13 13:43:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/wxmud-9999.ebuild,v 1.4 2009/11/15 13:58:08 scarabeus Exp $
 
 WX_GTK_VER=2.8
 inherit flag-o-matic subversion wxwidgets autotools games
@@ -12,7 +12,7 @@ ESVN_REPO_URI="https://wxmud.svn.sourceforge.net/svnroot/wxmud/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="python"
 
 RDEPEND="=x11-libs/wxGTK-2.8*
@@ -31,13 +31,12 @@ src_compile() {
 	# No audiere in portage yet, so useful MSP support is disabled for now
 	egamesconf --with-wx-config="${WX_CONFIG}" \
 		$(use_enable python) \
-		--disable-audiere \
-		|| die
+		--disable-audiere
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README TODO docs/input.txt docs/scripting.txt
+	dodoc AUTHORS README TODO docs/input.txt docs/scripting.txt || die
 	prepgamesdirs
 }
