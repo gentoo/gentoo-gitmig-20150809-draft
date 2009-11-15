@@ -1,29 +1,40 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34.ebuild,v 1.6 2008/11/13 00:29:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34.ebuild,v 1.7 2009/11/15 13:38:29 xmerlin Exp $
+
+inherit eutils
 
 DESCRIPTION="Cluster synchronization tool."
-SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
+SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz
+	http://dev.gentoo.org/~xmerlin/dist/csync2-1.34-pure-gnutls.patch.bz2
+	"
 HOMEPAGE="http://oss.linbit.com/csync2/"
 
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 
-IUSE=""
+IUSE="ssl"
 
 DEPEND=">=net-libs/librsync-0.9.5
 	=dev-db/sqlite-2.8*
-	>=net-libs/gnutls-1.0.0
+	>=net-libs/gnutls-2.7.3
 	"
 
 RDEPEND="${DEPEND}"
 
 SLOT="0"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${WORKDIR}"/${P}-pure-gnutls.patch || die #274213
+}
+
 src_compile() {
 	econf \
 		--localstatedir=/var \
 		--sysconfdir=/etc/csync2 \
+		$(use_enable ssl gnutls) \
 		|| die "configure problem"
 
 	emake || die "compile problem"
@@ -41,7 +52,7 @@ src_install() {
 	dodir /var/lib/csync2/ || die
 	keepdir /var/lib/csync2/
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO csync2_locheck.sh
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO csync2_locheck.sh
 }
 
 pkg_postinst() {
