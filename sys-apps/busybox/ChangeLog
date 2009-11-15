@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.233 2009/11/09 16:14:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.234 2009/11/15 12:32:48 armin76 Exp $
+
+  15 Nov 2009; Raúl Porcel <armin76@gentoo.org> busybox-1.14.2.ebuild:
+  alpha/ia64/sparc stable wrt #291931
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> busybox-1.14.2.ebuild:
   amd64/arm/x86 stable, bug #291931
