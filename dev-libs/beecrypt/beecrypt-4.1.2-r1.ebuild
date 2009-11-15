@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.22 2008/01/13 01:02:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.23 2009/11/15 09:44:26 swegener Exp $
 
 inherit flag-o-matic eutils multilib autotools java-pkg-opt-2
 
@@ -35,6 +35,7 @@ src_unpack() {
 	# let configure figure out libpaths, not a pokey build system
 	sed -i \
 		-e '/^libaltdir=/s:=.*:=$(libdir):' \
+		-e '/^pkgaltlibdir=/s:=.*:=$(libdir)/beecrypt:' \
 		$(find . -name Makefile.am) || die
 
 	# upstream patches from CVS
