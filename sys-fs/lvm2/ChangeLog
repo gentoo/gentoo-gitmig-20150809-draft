@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.179 2009/11/09 21:44:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.180 2009/11/15 00:37:22 robbat2 Exp $
+
+  15 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.51-r1.ebuild:
+  Backport selinux compile fix to stable build.
 
   09 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.51-r2.ebuild,
   +files/lvm2-2.02.51-dmsetup-selinux-linking-fix.patch:

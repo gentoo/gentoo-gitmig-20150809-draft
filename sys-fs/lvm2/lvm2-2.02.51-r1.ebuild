@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.51-r1.ebuild,v 1.6 2009/11/09 12:05:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.51-r1.ebuild,v 1.7 2009/11/15 00:37:22 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools
@@ -49,6 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.51-as-needed.patch
 	epatch "${FILESDIR}"/${PN}-2.02.48-fix-pkgconfig.patch
 	epatch "${FILESDIR}"/${PN}-2.02.51-fix-pvcreate.patch
+	epatch "${FILESDIR}"/${PN}-2.02.51-dmsetup-selinux-linking-fix.patch
 	eautoreconf
 }
 
