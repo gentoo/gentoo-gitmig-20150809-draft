@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-ftb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.15 2009/04/29 01:49:28 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.16 2009/11/15 20:48:42 nixphoeni Exp $
+
+  15 Nov 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-ftb-0.3.2.ebuild:
+  Keyworded ~sparc and ~ppc64 since gnome-extra/gdesklets-core supports
+  those ARCHes
 
   29 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-ftb-0.3.2:
   Set SRC_URI and HOMEPAGE to the unofficial archive
