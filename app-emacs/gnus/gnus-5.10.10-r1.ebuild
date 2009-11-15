@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.10-r1.ebuild,v 1.1 2009/10/26 22:00:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.10-r1.ebuild,v 1.2 2009/11/15 18:13:02 ulm Exp $
 
 inherit elisp
 
@@ -23,14 +23,14 @@ src_compile() {
 	econf \
 		--with-emacs --without-w3 --without-url \
 		--with-lispdir=${SITELISP}/${PN} \
-		--with-etcdir=${SITEETC}
+		--with-etcdir=${SITEETC}/${PN}
 	emake || die "emake failed"
 }
 
 src_install() {
 	einstall \
 		lispdir="${D}${SITELISP}/${PN}" \
-		etcdir="${D}${SITEETC}" \
+		etcdir="${D}${SITEETC}/${PN}" \
 		|| die "einstall failed"
 
 	# fix info documentation
