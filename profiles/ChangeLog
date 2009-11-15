@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3574 2009/11/14 17:10:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3575 2009/11/15 11:58:15 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2009; Peter Volkov <pva@gentoo.org> updates/4Q-2009:
+  Move slot for app-text/kchmviewer back to 0. This is not kde-3.5
+  application any more.
 
   14 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Masking app-cdr/kcdlabel for removal, kde-base/kdelibs-3* removal, bug
