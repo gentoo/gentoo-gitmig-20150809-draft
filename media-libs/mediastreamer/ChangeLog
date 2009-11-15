@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.19 2009/11/11 13:13:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.20 2009/11/15 13:56:03 volkmar Exp $
+
+  15 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  mediastreamer-2.2.3_p1-r1.ebuild,
+  -files/mediastreamer-2.2.3_p1-arts.patch, mediastreamer-2.2.4.ebuild:
+  Remove arts related patch and clean ebuilds, wrt bug 291546
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   mediastreamer-2.2.3_p1-r1.ebuild, mediastreamer-2.2.4.ebuild:

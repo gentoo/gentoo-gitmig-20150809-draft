@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.4.ebuild,v 1.2 2009/11/11 13:13:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.4.ebuild,v 1.3 2009/11/15 13:56:03 volkmar Exp $
 
 EAPI="2"
 
@@ -53,9 +53,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix arts detection for gentoo
-	epatch "${FILESDIR}"/${PN}-2.2.3_p1-arts.patch
-
 	# too hard to have a flexible lib dir in a clean way
 	sed -i -e "s:\(/usr/kde/3.5/\)lib:\1$(get_libdir):" configure.ac \
 		|| die "patching configure.ac failed"
@@ -76,10 +73,6 @@ src_prepare() {
 
 	eautoreconf
 
-	# fix arts include
-	sed -i -e "s:kde/\(artsc/artsc.h\):\1:" src/arts.c \
-		|| die "patching src/arts.c failed"
-
 	# don't build examples in tests/
 	sed -i -e "s:\(SUBDIRS = .*\) tests \(.*\):\1 \2:" Makefile.in \
 		|| die "patching Makefile.in failed"
@@ -89,6 +82,7 @@ src_configure() {
 	# strict: don't want -Werror
 	# macsnd and macaqsnd: macosx related
 	# external-ortp: don't use bundled libs
+	# arts: arts is deprecated
 	econf \
 		--htmldir=/usr/share/doc/${PF}/html \
 		--datadir=/usr/share/${PN} \
@@ -98,8 +92,8 @@ src_configure() {
 		--disable-macaqsnd \
 		--enable-external-ortp \
 		--disable-dependency-tracking \
-		$(use_enable alsa) \
 		--disable-artsc \
+		$(use_enable alsa) \
 		$(use_enable debug) \
 		$(use_enable doc) \
 		$(use_enable gsm) \
