@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI-Plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-Plugin/ChangeLog,v 1.1 2009/11/14 10:47:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-Plugin/ChangeLog,v 1.2 2009/11/15 00:38:34 robbat2 Exp $
+
+  15 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  Class-DBI-Plugin-0.03.ebuild:
+  Missed keyword.
 
 *Class-DBI-Plugin-0.03 (14 Nov 2009)
 
