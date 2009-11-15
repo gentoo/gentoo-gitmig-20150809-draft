@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.1.ebuild,v 1.9 2009/03/23 10:11:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.1.ebuild,v 1.10 2009/11/15 14:34:39 pva Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ for LNG in ${LANGS}; do
 done
 
 COMMON_DEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
-	app-crypt/qca:2
+	>=app-crypt/qca-2.0.2:2
 	spell? ( app-text/aspell )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 
