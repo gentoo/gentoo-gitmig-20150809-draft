@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mtools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.24 2008/08/18 03:37:19 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.25 2009/11/15 19:19:11 vapier Exp $
+
+*mtools-4.0.12 (15 Nov 2009)
+
+  15 Nov 2009; Mike Frysinger <vapier@gentoo.org> +mtools-4.0.12.ebuild:
+  Version bump.
 
   18 Aug 2008; Mike Frysinger <vapier@gentoo.org> mtools-3.9.11.ebuild:
   Remove /usr/local paths from docs, install using `emake DESTDIR`, and dont
