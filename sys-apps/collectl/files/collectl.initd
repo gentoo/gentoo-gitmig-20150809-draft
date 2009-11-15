@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/files/collectl.initd,v 1.1 2008/01/05 22:29:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/files/collectl.initd,v 1.2 2009/11/15 01:29:22 vapier Exp $
 
 start() {
 	ebegin "Starting collectl"
 	start-stop-daemon \
 		--start \
 		--pidfile /var/run/collectl.pid \
-		--exec /usr/sbin/collectl -- -D
+		--exec /usr/bin/collectl -- -D
 	eend $?
 }
 

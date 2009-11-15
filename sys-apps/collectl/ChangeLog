@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/collectl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.6 2009/04/27 05:36:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.7 2009/11/15 01:29:22 vapier Exp $
+
+  15 Nov 2009; Mike Frysinger <vapier@gentoo.org> files/collectl.initd:
+  Fix path to collectl #292864 by DBautell.
 
 *collectl-3.2.1 (27 Apr 2009)
 
