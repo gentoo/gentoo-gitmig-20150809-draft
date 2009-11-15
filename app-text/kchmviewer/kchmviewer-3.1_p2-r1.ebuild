@@ -1,18 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2-r1.ebuild,v 1.4 2009/07/01 20:51:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2-r1.ebuild,v 1.5 2009/11/15 11:57:44 pva Exp $
 
 EAPI="2"
 
-ARTS_REQUIRED="never"
-
-LANGS="cs fr ru tr zh_CN"
-
-USE_KEG_PACKAGING="1"
-
-inherit kde versionator
-
-set-kdedir 3.5
+inherit versionator eutils qt3
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
 MY_P=${MY_P/p}
@@ -22,30 +14,27 @@ HOMEPAGE="http://www.kchmviewer.net/"
 SRC_URI="mirror://sourceforge/kchmviewer/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
-SLOT="3.5"
+SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="kde"
+IUSE=""
 
-DEPEND="!<app-text/kchmviewer-3.1_p2-r1
-	x11-libs/qt:3
-	dev-libs/chmlib
-	kde? ( kde-base/kdelibs:3.5 )"
+DEPEND="x11-libs/qt:3
+	dev-libs/chmlib"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 
-PATCHES=( "${FILESDIR}/${P}-gcc43.patch" ) #218812
-
 src_prepare() {
-	kde_src_prepare
+	epatch "${FILESDIR}/${P}-gcc43.patch" #218812
 	# broken configure script, assure it doesn't fall back to internal libs
 	echo "# We use the external chmlib!" > lib/chmlib/chm_lib.h
+	# we sanitise LINGUAS to avoid issues when a user specifies the same
 }
 
 src_install() {
-	kde_src_install
-
+	emake install DESTDIR="${D}" || die
 	dodoc ChangeLog FAQ DCOP-bingings README || die "installing docs failed"
+	make_desktop_entry ${PN} ${PN} ${PN} "QT;Graphics;Viewer"
 }
 
 pkg_postinst() {

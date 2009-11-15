@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.21 2009/11/14 19:30:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.22 2009/11/15 11:57:44 pva Exp $
+
+  15 Nov 2009; Peter Volkov <pva@gentoo.org> kchmviewer-3.1_p2-r1.ebuild:
+  Drop kde-3.5 support from kchmviewer. Moved back to SLOT=0, this is not
+  slotted package.
 
 *kchmviewer-4.2 (14 Nov 2009)
 
