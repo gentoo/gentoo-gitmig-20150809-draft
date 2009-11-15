@@ -15,7 +15,6 @@
     <flag name="ecmark3">Use the MARK3 echo canceller</flag>
     <flag name="ecmark">Use the MARK echo canceller</flag>
     <flag name="ecmg2">Use the MG2 echo canceller</flag>
-    <flag name="ecoslec">Use the OSLEC echo canceller (http://www.rowetel.com/ucasterisk/oslec.html)</flag>
     <flag name="ecsteve2">Use the STEVE2 echo canceller</flag>
     <flag name="ecsteve">Use the STEVE echo canceller</flag>
     <flag name="florz">Enable florz enhancement patches for ISDN BRI</flag>
