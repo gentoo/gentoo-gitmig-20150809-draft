@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10833 2009/11/15 14:53:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10834 2009/11/15 17:21:26 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (15 Nov 2009)
+# Last release was in May 2008 which is a long time
+# for a development branch. Use app-emacs/gnus, or the
+# Gnus version included with app-editors/emacs instead.
+# Masked for removal in 30 days, bug 293302.
+app-emacs/ngnus
 
 # Peter Volkov <pva@gentoo.org> (15 Nov 2009)
 # Use net-analyzer/cacti-spine instead. It's the same package but newer.
