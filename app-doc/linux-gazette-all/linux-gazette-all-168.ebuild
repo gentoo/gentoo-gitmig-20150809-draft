@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-129.ebuild,v 1.1 2006/08/17 22:08:38 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-168.ebuild,v 1.1 2009/11/15 02:36:14 vapier Exp $
 
 DESCRIPTION="Linux Gazette - all issues"
 HOMEPAGE="http://linuxgazette.net/"
@@ -134,4 +134,43 @@ RDEPEND="
 	=app-doc/linux-gazette-127
 	=app-doc/linux-gazette-128
 	=app-doc/linux-gazette-129
+	=app-doc/linux-gazette-130
+	=app-doc/linux-gazette-131
+	=app-doc/linux-gazette-132
+	=app-doc/linux-gazette-133
+	=app-doc/linux-gazette-134
+	=app-doc/linux-gazette-135
+	=app-doc/linux-gazette-136
+	=app-doc/linux-gazette-137
+	=app-doc/linux-gazette-138
+	=app-doc/linux-gazette-139
+	=app-doc/linux-gazette-140
+	=app-doc/linux-gazette-141
+	=app-doc/linux-gazette-142
+	=app-doc/linux-gazette-143
+	=app-doc/linux-gazette-144
+	=app-doc/linux-gazette-145
+	=app-doc/linux-gazette-146
+	=app-doc/linux-gazette-147
+	=app-doc/linux-gazette-148
+	=app-doc/linux-gazette-149
+	=app-doc/linux-gazette-150
+	=app-doc/linux-gazette-151
+	=app-doc/linux-gazette-152
+	=app-doc/linux-gazette-153
+	=app-doc/linux-gazette-154
+	=app-doc/linux-gazette-155
+	=app-doc/linux-gazette-156
+	=app-doc/linux-gazette-157
+	=app-doc/linux-gazette-158
+	=app-doc/linux-gazette-159
+	=app-doc/linux-gazette-160
+	=app-doc/linux-gazette-161
+	=app-doc/linux-gazette-162
+	=app-doc/linux-gazette-163
+	=app-doc/linux-gazette-164
+	=app-doc/linux-gazette-165
+	=app-doc/linux-gazette-166
+	=app-doc/linux-gazette-167
+	=app-doc/linux-gazette-168
 	"
