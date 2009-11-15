@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r8.ebuild,v 1.2 2009/11/14 11:31:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r8.ebuild,v 1.3 2009/11/15 09:06:30 tove Exp $
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
@@ -156,6 +156,9 @@ src_unpack() {
 
 	# perlcc fix patch - bug #181229
 	epatch "${FILESDIR}"/${P}-perlcc.patch
+
+	# libnet hostname test patch
+	epatch "${FILESDIR}"/${P}-libnet-hostname.patch
 
 	# patch to fix bug #198196
 	# UTF/Regular expressions boundary error (CVE-2007-5116)
