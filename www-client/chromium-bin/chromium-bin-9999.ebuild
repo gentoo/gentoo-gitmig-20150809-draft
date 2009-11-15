@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.20 2009/09/30 12:34:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.21 2009/11/15 13:10:16 scarabeus Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -9,7 +9,7 @@ DESCRIPTION="Open-source version of Google Chrome web browser (binary version)"
 HOMEPAGE="http://code.google.com/chromium/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="app-arch/unzip"

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.20 2009/11/09 14:55:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.21 2009/11/15 13:08:39 scarabeus Exp $
+
+  15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> chromium-9999.ebuild:
+  QA: Drop keywords on live ebuilds.
 
   09 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-4.0.240.0.ebuild:

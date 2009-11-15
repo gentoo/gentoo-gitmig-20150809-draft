@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.39 2009/11/09 14:55:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.40 2009/11/15 13:10:16 scarabeus Exp $
+
+  15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  chromium-bin-9999.ebuild:
+  QA: Drop keywords on live ebuilds.
 
 *chromium-bin-4.0.240.0_p31382 (09 Nov 2009)
 

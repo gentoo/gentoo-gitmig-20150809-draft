@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.5 2009/11/05 13:20:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.6 2009/11/15 13:08:39 scarabeus Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -13,7 +13,7 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="app-arch/bzip2
