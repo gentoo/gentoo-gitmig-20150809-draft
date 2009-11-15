@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/libopensync-plugin-vformat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-vformat/ChangeLog,v 1.4 2009/03/20 12:54:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-vformat/ChangeLog,v 1.5 2009/11/15 22:44:22 eva Exp $
+
+*libopensync-plugin-vformat-0.39 (15 Nov 2009)
+
+  15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -libopensync-plugin-vformat-0.35.ebuild,
+  +libopensync-plugin-vformat-0.39.ebuild,
+  libopensync-plugin-vformat-9999.ebuild:
+  Version bump. Sync live ebuild. Clean up old revisions.
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org>
   libopensync-plugin-vformat-0.35.ebuild,
