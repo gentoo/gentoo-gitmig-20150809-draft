@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-evolution2/libopensync-plugin-evolution2-0.35.ebuild,v 1.1 2007/12/21 23:05:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-evolution2/libopensync-plugin-evolution2-0.39.ebuild,v 1.1 2009/11/15 22:30:46 eva Exp $
+
+EAPI="2"
 
 inherit cmake-utils
 
@@ -13,9 +15,10 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""
 
-DEPEND="=app-pda/libopensync-${PV}*
+RDEPEND="=app-pda/libopensync-${PV}*
+	dev-libs/glib:2
 	gnome-extra/evolution-data-server"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 # interactive and broken
 RESTRICT="test"

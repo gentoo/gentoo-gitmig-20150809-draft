@@ -1,16 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-file/libopensync-plugin-file-9999.ebuild,v 1.2 2009/11/15 22:34:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-file/libopensync-plugin-file-0.39.ebuild,v 1.1 2009/11/15 22:34:30 eva Exp $
 
 EAPI="2"
 
-inherit cmake-utils subversion
+inherit cmake-utils
 
 DESCRIPTION="OpenSync File Plugin"
 HOMEPAGE="http://www.opensync.org/"
-SRC_URI=""
-
-ESVN_REPO_URI="http://svn.opensync.org/plugins/file-sync"
+SRC_URI="http://www.opensync.org/download/releases/${PV}/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
