@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.115 2009/11/15 11:22:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.116 2009/11/15 12:45:14 grobian Exp $
+
+  15 Nov 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  A new pre-release of mc, a new breakage on Solaris
 
   15 Nov 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
