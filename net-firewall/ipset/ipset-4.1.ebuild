@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-4.1.ebuild,v 1.2 2009/11/14 09:01:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-4.1.ebuild,v 1.3 2009/11/15 17:34:19 pva Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="modules"
 
 RDEPEND=">=net-firewall/iptables-1.4.4"
 DEPEND="${RDEPEND}"
@@ -37,20 +37,21 @@ ERROR_CFG="ipset requires netfilter support in your kernel."
 pkg_setup() {
 	get_version
 
-	modules=0
-	if linux_chkconfig_builtin "MODULES" ; then
-		if linux_chkconfig_builtin "IP_NF_SET"; then #274577
-			einfo "Modular kernel detected but IP_NF_SET=y, will not build kernel modules"
+	build_modules=0
+	if use modules; then
+		if linux_chkconfig_builtin "MODULES" ; then
+			if linux_chkconfig_builtin "IP_NF_SET"; then #274577
+				einfo "Modular kernel detected but IP_NF_SET=y, will not build kernel modules"
+			else
+				build_modules=1
+				einfo "Modular kernel detected, will build kernel modules"
+			fi
 		else
-			modules=1
-			einfo "Modular kernel detected, will build kernel modules"
+			einfo "Nonmodular kernel detected, will not build kernel modules"
 		fi
-	else
-		einfo "Nonmodular kernel detected, will not build kernel modules"
 	fi
 
-	[[ ${modules} -eq 1 ]] && \
-		linux-mod_pkg_setup
+	[[ ${build_modules} -eq 1 ]] && linux-mod_pkg_setup
 	myconf="${myconf} PREFIX="
 	myconf="${myconf} LIBDIR=/$(get_libdir)"
 	myconf="${myconf} BINDIR=/sbin"
@@ -74,7 +75,7 @@ src_compile() {
 	einfo "Building userspace"
 	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" ${myconf} binaries || die "failed to build"
 
-	if [[ ${modules} -eq 1 ]]; then
+	if [[ ${build_modules} -eq 1 ]]; then
 		einfo "Building kernel modules"
 		cd "${S}/kernel"
 		export KERNELDIR="${KERNEL_DIR}"
@@ -86,7 +87,7 @@ src_install() {
 	einfo "Installing userspace"
 	emake DESTDIR="${D}" ${myconf} binaries_install || die "failed to package"
 
-	if [[ ${modules} -eq 1 ]]; then
+	if [[ ${build_modules} -eq 1 ]]; then
 		einfo "Installing kernel modules"
 		cd "${S}/kernel"
 		export KERNELDIR="${KERNEL_DIR}"

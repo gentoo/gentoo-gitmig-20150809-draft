@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.32 2009/11/14 09:01:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.33 2009/11/15 17:34:19 pva Exp $
+
+  15 Nov 2009; Peter Volkov <pva@gentoo.org> ipset-4.1.ebuild:
+  USE='modules' support.
 
   14 Nov 2009; Peter Volkov <pva@gentoo.org> ipset-4.1.ebuild:
   Do not build modules in case kernel is patched and modules are built in,
