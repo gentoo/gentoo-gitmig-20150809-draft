@@ -1,6 +1,15 @@
 # ChangeLog for app-pda/libsyncml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.17 2009/11/07 23:45:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.18 2009/11/15 21:14:28 eva Exp $
+
+*libsyncml-0.5.4 (15 Nov 2009)
+
+  15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  libsyncml-0.5.2-r1.ebuild, +libsyncml-0.5.4.ebuild, libsyncml-9999.ebuild:
+  Version bump, bug #278256. Remove test restrictions since they pass fine now.
+    * Fix build issues in live ebuild, bug #274005.
+    * Restore doc useflag functionality, bug #266320.
+    * Always enable obex with bluetooth, bug #285040.
 
   07 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libsyncml-0.4.6-r1.ebuild, -libsyncml-0.5.2.ebuild:

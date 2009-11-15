@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.5 2009/09/27 23:32:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.6 2009/11/15 21:14:28 eva Exp $
 
-EAPI="1"
+EAPI="2"
 
-inherit eutils subversion cmake-utils
+inherit cmake-utils subversion
 
 DESCRIPTION="Implementation of the SyncML protocol"
 HOMEPAGE="http://libsyncml.opensync.org/"
@@ -12,23 +12,25 @@ SRC_URI=""
 
 ESVN_REPO_URI="http://svn.opensync.org/libsyncml/trunk"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="bluetooth +debug doc http +obex"
+IUSE="+debug doc http +obex test"
 
-RDEPEND=">=dev-libs/glib-2.0
-	>=dev-libs/libwbxml-0.9.2
+# bluetooth and obex merged because bluetooth support in obex backend is
+# automagic, bug #285040
+# libsoup:2.2 is forced off to avoid automagic
+RDEPEND=">=dev-libs/glib-2.12
+	>=dev-libs/libwbxml-0.10
 	dev-libs/libxml2
 	http? ( net-libs/libsoup:2.4 )
-	obex? ( >=dev-libs/openobex-1.1 )
-	bluetooth? ( net-wireless/bluez-libs )"
+	obex? (
+		net-wireless/bluez
+		>=dev-libs/openobex-1.1[bluetooth] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( app-doc/doxygen )"
-
-# Some of the tests are broken
-RESTRICT="test"
+	doc? ( app-doc/doxygen )
+	test? ( >=dev-libs/check-0.9.7 )"
 
 pkg_setup() {
 	if ! use obex && ! use http; then
@@ -37,29 +39,18 @@ pkg_setup() {
 		die "Please enable \"obex\" or/and \"http\" USE flags."
 	fi
 
-	if use bluetooth; then
-		if use obex && ! built_with_use dev-libs/openobex bluetooth; then
-			eerror "You are trying to build ${CATEGORY}/${P} with the \"bluetooth\""
-			eerror "and \"obex\" USE flags, but dev-libs/openobex was built without"
-			eerror "the \"bluetooth\" USE flag."
-			eerror "Please rebuild dev-libs/openobex with \"bluetooth\" USE flag."
-			die "Please rebuild dev-libs/openobex with \"bluetooth\" USE flag."
-		elif ! use obex; then
-			eerror "You are trying to build ${CATEGORY}/${P} with the \"bluetooth\""
-			eerror "USE flag, but you didn't enable the \"obex\" flag, which is"
-			eerror "needed for bluetooth support."
-			eerror "Please enable \"obex\" USE flag."
-			die "Please enable \"obex\" USE flag."
-		fi
-	fi
+	DOCS="AUTHORS CODING ChangeLog RELEASE"
 }
 
-src_compile() {
+src_configure() {
 	local mycmakeargs="
+		-DHAVE_LIBSOUP22=OFF
+		$(cmake-utils_use_build doc DOCUMENTATION)
+		$(cmake-utils_use_enable debug TRACE)
 		$(cmake-utils_use_enable http HTTP)
 		$(cmake-utils_use_enable obex OBEX)
-		$(cmake-utils_use_enable bluetooth BLUETOOTH)
-		$(cmake-utils_use_enable debug TRACE)"
+		$(cmake-utils_use_enable obex BLUETOOTH)
+		$(cmake-utils_use_enable test UNIT_TEST)"
 
-	cmake-utils_src_compile
+	cmake-utils_src_configure
 }
