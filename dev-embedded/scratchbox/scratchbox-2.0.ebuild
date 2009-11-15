@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-2.0.ebuild,v 1.3 2009/10/16 17:23:16 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-2.0.ebuild,v 1.4 2009/11/15 16:46:49 ayoy Exp $
 
 EAPI="2"
 
-inherit autotools eutils toolchain-funcs
+inherit autotools eutils multilib toolchain-funcs
 
 MY_PN="${PN/cratch}2"
 MY_P="${MY_PN}-${PV}"
@@ -28,8 +28,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	sed -e "s/^\(CC = \).*/\1$(tc-getCC)/" \
-	    -e "s/^\(CXX = \).*/\1$(tc-getCXX)/" \
-	    -e "s/^\(LD = \).*/\1$(tc-getLD)/" \
+		-e "s/^\(CXX = \).*/\1$(tc-getCXX)/" \
+		-e "s/^\(LD = \).*/\1$(tc-getLD)/" \
 		-i Makefile || die "sed Makefile failed"
 
 	eautoreconf
@@ -41,5 +41,17 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+
+	# List all the multilib libdirs
+	local libdirs=
+	for libdir in $(get_all_libdirs); do
+			libdirs="${libdirs}:/usr/${libdir}/libsb2"
+	done
+
+	cat <<-EOF > "${T}/55scratchbox2"
+	LDPATH=${libdirs:1}
+	EOF
+	doenvd "${T}/55scratchbox2" || die "doenvd failed"
+
 	dodoc AUTHORS README || die "dodoc failed"
 }

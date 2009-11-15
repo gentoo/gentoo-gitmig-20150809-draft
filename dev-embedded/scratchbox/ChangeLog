@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.8 2009/10/16 17:23:16 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.9 2009/11/15 16:46:49 ayoy Exp $
+
+  15 Nov 2009; Dominik Kapusta <ayoy@gentoo.org> scratchbox-2.0.ebuild:
+  Fixed LDPATH
 
   16 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> scratchbox-2.0.ebuild:
   Fixed to avoid possible distcc issues
