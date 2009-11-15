@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ngnus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ChangeLog,v 1.8 2009/11/14 15:58:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ngnus/ChangeLog,v 1.9 2009/11/15 13:53:16 scarabeus Exp $
+
+  15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> ngnus-9999.ebuild:
+  QA: drop keywords from live package.
 
   14 Nov 2009; Ulrich Mueller <ulm@gentoo.org> ngnus-9999.ebuild:
   Remove spurious backslash from econf. Re-add keywords.
