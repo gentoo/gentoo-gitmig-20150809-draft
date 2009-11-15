@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20080414.ebuild,v 1.2 2008/10/31 21:08:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610-r1.ebuild,v 1.1 2009/11/15 02:37:33 matsuu Exp $
+
+# jmbreuer FOR DEV ONLY
+RESTRICT="mirror test"
 
 TETEX_PV=3.0_p1
 
@@ -13,20 +16,18 @@ TETEX_S="${WORKDIR}/tetex-src-${SMALL_PV}"
 DESCRIPTION="TeX distribution teTeX with Japanese patch collection 'ptetex3'"
 HOMEPAGE="http://www.nn.iij4u.or.jp/~tutimura/tex/ptetex.html"
 
-#TETEX_SRC="tetex-src-${TETEX_PV}.tar.gz"
 TETEX_SRC="tetex-src-${SMALL_PV}.tar.gz"
 TETEX_TEXMF="tetex-texmf-${TETEX_TEXMF_PV:-${TETEX_PV}}"
 TETEX_TEXMF_SRC="tetex-texmf-${TETEX_TEXMF_PV:-${TETEX_PV}}po.tar.gz"
 PTETEX="ptetex3-${PV/*_p}"
-PTETEX_CMAP="ptetex-cmap-20051117"
+PTETEX_CMAP="ptetex-cmap-20090506"
 
-SRC_PATH_TETEX="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/3.0/distrib"
+SRC_PATH_TETEX="http://www.ctan.org/tex-archive/obsolete/systems/unix/teTeX/3.0/distrib"
 SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}
 	http://tutimura.ath.cx/~nob/tex/ptetex/ptetex3/${PTETEX}.tar.gz
 	http://tutimura.ath.cx/~nob/tex/ptetex/ptetex-cmap/${PTETEX_CMAP}.tar.gz
 	mirror://gentoo/${PN}-3.1.10_p20071122-dviljk-security-fixes.patch.bz2"
-#	mirror://gentoo/tetex-${TETEX_PV}-gentoo.tar.gz
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
@@ -39,12 +40,15 @@ RDEPEND="!app-text/tetex
 	!<app-text/ptetex-3.1.9
 	!app-text/dvipdfmx
 	!app-text/xdvik
+	!dev-texlive/texlive-basic
+	!dev-texlive/texlive-latex
+	!dev-texlive/texlive-latexrecommended
 	media-libs/t1lib
 	media-libs/gd
 	X? (
 		>=media-libs/freetype-2.3.4
 		|| (
-			media-fonts/ja-ipafonts
+			>=media-fonts/ja-ipafonts-003.01
 			media-fonts/ipamonafont
 			media-fonts/vlgothic
 			media-fonts/sazanami
@@ -57,7 +61,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PTETEX}"
 
 src_unpack() {
-	#tetex-3_src_unpack
 	mkdir -p "${WORKDIR}/${TETEX_TEXMF}"
 	cd "${WORKDIR}/${TETEX_TEXMF}"
 	unpack ${TETEX_TEXMF_SRC}
@@ -73,7 +76,7 @@ src_unpack() {
 
 	# Gentoo box reserves variable ${P}!!
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${PF}-gentoo.patch
 
 	cat <<EOF > "${S}"/my_option
 SRC_DIR="${WORKDIR}"
@@ -87,9 +90,11 @@ make_option vartexfonts="${T}/texfonts"
 make_option CC="$(tc-getCC)"
 make_option CXX="$(tc-getCXX)"
 JAPANESE=international
+EXTRA_TRUETYPE="/usr/share/fonts/ja-ipafonts"
 XDVI=echo
 PXDVI=echo
 PLATEX209=no
+STRIP=no
 conf_option --without-dviljk
 conf_option --without-dvipng
 conf_option --without-info
@@ -125,8 +130,8 @@ EOF
 		else
 			toolkit="xaw"
 		fi
-		append-ldflags $(freetype-config --libs)
 		echo "export CPPFLAGS=\"${CPPFLAGS} $(freetype-config --cflags)\"" >> "${S}"/my_option
+		echo "export LDFLAGS=\"${LDFLAGS} $(freetype-config --libs)\"" >> "${S}"/my_option
 		echo "conf_option --with-xdvi-x-toolkit=${toolkit}" >> "${S}"/my_option
 	else
 		echo "conf_option --without-x" >> "${S}"/my_option
@@ -191,6 +196,11 @@ EOF
 	# security bug #198238 and bug #193437
 	epatch "${FILESDIR}/tetex-${TETEX_PV}-t1lib-SA26241_buffer_overflow.patch"
 
+	# security bug #282874
+	epatch "${FILESDIR}/CVE-2009-1284.patch"
+
+	epatch "${FILESDIR}/${P}-getline.patch"
+
 	cd "${TETEX_S}/texk/dviljk"
 	eautoreconf
 }
@@ -206,15 +216,25 @@ src_compile() {
 
 	einfo "Setting ptetex-cmap ..."
 	cd "${WORKDIR}/${PTETEX_CMAP}"
-	PATH="${BUILD_DIR}/bin:$PATH" ./setup.sh "${BUILD_DIR}"/share/texmf/fonts/cmap
+	PATH="${BUILD_DIR}/bin:${PATH}" \
+	LD_LIBRARY_PATH="${BUILD_DIR}/lib:${LD_LIBRARY_PATH}" \
+	TEXMFMAIN="${BUILD_DIR}/share/texmf" \
+		./setup.sh "${BUILD_DIR}"/share/texmf/fonts/cmap
 }
 
 src_test() {
-	emake -j1 test || die "emake test failed"
+	PATH="${BUILD_DIR}/bin:${PATH}" \
+	LD_LIBRARY_PATH="${BUILD_DIR}/lib:${LD_LIBRARY_PATH}" \
+	TEXMFMAIN="${BUILD_DIR}/share/texmf" \
+		emake -j1 test || die "emake test failed"
 }
 
 src_install() {
-	#tetex-3_src_install
+	einfo "Installing texmf files ..."
+	find "${WORKDIR}"/${TETEX_TEXMF} -maxdepth 1 -mindepth 1 -type f | xargs rm -f
+	insinto /usr/share/texmf
+	doins -r "${WORKDIR}"/${TETEX_TEXMF}/*
+
 	einfo "Installing ptetex3 binaries ..."
 	dobin "${BUILD_DIR}"/bin/*
 	dolib "${BUILD_DIR}"/lib/*
@@ -225,7 +245,6 @@ src_install() {
 
 	einfo "Installing /usr/share/* files ..."
 	insinto /usr/share
-	#doins -r "${BUILD_DIR}"/share/*
 	cp -dr "${BUILD_DIR}"/share/* "${D}"/usr/share
 
 	einfo "Installing document files ..."
@@ -237,32 +256,19 @@ src_install() {
 	doins -r "${WORKDIR}"/jis/tfm/*        || die "installing jis/tfm failed"
 	doins -r "${WORKDIR}"/morisawa/tfm/*   || die "installing morisawa/tfm failed"
 
-	einfo "Installing texmf files ..."
-	find "${WORKDIR}"/${TETEX_TEXMF} -maxdepth 1 -mindepth 1 -type f | xargs rm -f
-	insinto /usr/share/texmf
-	doins -r "${WORKDIR}"/${TETEX_TEXMF}/*
-
 	einfo "Installing other files ..."
 	insinto /usr/share/texmf/fonts/map/dvips/tetex
-	doins "${WORKDIR}"/${TETEX_S}/texk/pdvipsk/psfonts_jp.map
-	#insinto /var/lib/texmf/web2c
 	insinto /usr/share/texmf/web2c
-	doins -r "${BUILD_DIR}"/share/texmf-config/web2c/*
 	doins -r "${BUILD_DIR}"/share/texmf-var/web2c/*.fmt
 
 	einfo "Removing unnecessary files ..."
 	rm -r "${D}"/usr/share/texmf/doc
-	#rm -r "${D}"/usr/share/texmf-config
-	#rm -r "${D}"/usr/share/texmf-var
 	rm -r "${D}"/usr/share/texmf/web2c/texmf.cnf.*
 	rm -r "${D}"/usr/share/texmf/web2c/fmtutil.cnf.*
-	rm -r "${D}"/usr/info/dir
 	find "${D}"/usr/share/texmf | grep "ls-R" | xargs rm -f
 
 	einfo "Installing texmf-update scripte ..."
 	dosbin "${FILESDIR}"/texmf-update
-	#einfo "Making ls-R files ..."
-	#TEXMF="${D}"/usr/share/texmf "${D}"/usr/bin/mktexlsr || die
 
 	dodoc ChangeLog* README*
 }
@@ -272,6 +278,11 @@ pkg_postinst() {
 
 	elog
 	elog "Japanese dvips and xdvi have been renamed to pdvipsk and pxdvik."
-	#elog "You also need to emerge app-text/dvipdfmx to convert dvi into PDF."
+	elog
+	elog "To use proper Japanese font in dvips/dvipdfmx/xdvi/pdftex, you"
+	elog "needs to run updmap or updmap-sys w/ map. More deteil info about"
+	elog "this fonts central configuration can be available at following"
+	elog "ptetex Wiki:"
+	elog " http://tutimura.ath.cx/ptetex/?%A5%D5%A5%A9%A5%F3%A5%C8%A4%CE%BD%B8%C3%E6%B4%C9%CD%FD"
 	elog
 }
