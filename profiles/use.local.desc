@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5001 2009/11/16 06:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5002 2009/11/16 19:07:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1052,6 +1052,7 @@ games-arcade/moleinvasion:music - Download and install the music files
 games-arcade/smc:music - Download and install the music files
 games-arcade/stepmania:force-oss - force using OSS
 games-arcade/triplexinvaders:psyco - psyco python accelerator
+games-arcade/tuxanci:sound - Enable sound
 games-arcade/ultrastar-ng:songs - Install a few demo songs
 games-arcade/ultrastar-ng:video - Enable smpeg video support
 games-board/chessdb:tb4 - Install 4 pieces table bases
