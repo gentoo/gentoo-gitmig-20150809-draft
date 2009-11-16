@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10838 2009/11/16 06:13:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10839 2009/11/16 10:59:36 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -141,11 +141,6 @@ media-sound/kstreamripper
 # KDE3 app, replaced by kde-base/powerdevil in KDE4.
 # Removal in 30 days, bug #292799
 sys-power/kpowersave
-
-# Matthias Schwarzott <zzam@gentoo.org> (11 Nov 2009)
-# Mask new udev-ebuilds for testing their new init-script logic.
-=sys-fs/udev-146-r2
-~sys-fs/udev-147
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Nov 2009)
 # Has kde-base/arts depend, and it can't be removed.

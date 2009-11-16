@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3579 2009/11/15 22:25:48 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3580 2009/11/16 10:59:36 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Unmask udev-146-r2 and udev-147.
 
   15 Nov 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   mask dead X drivers
