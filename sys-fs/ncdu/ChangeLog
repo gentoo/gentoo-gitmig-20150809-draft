@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.14 2009/05/11 13:22:08 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.15 2009/11/16 08:59:51 wschlich Exp $
+
+*ncdu-1.6 (16 Nov 2009)
+
+  16 Nov 2009; Wolfram Schlich <wschlich@gentoo.org> +ncdu-1.6.ebuild:
+  version bump, added ~ppc64 wrt bug #287324
 
 *ncdu-1.5 (11 May 2009)
 
