@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.1 2009/11/16 21:40:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.2 2009/11/16 21:44:16 calchan Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -16,11 +16,13 @@ KEYWORDS=""
 IUSE="dev-doc doc debug examples minimal python"
 
 CDEPEND="x11-libs/wxGTK:2.8[X,opengl]"
-DEPEND=">=dev-util/cmake-2.6.0
+DEPEND="${CDEPEND}
+	>=dev-util/cmake-2.6.0
 	>=dev-libs/boost-1.39
 	dev-doc? ( app-doc/doxygen )"
 RDEPEND="${CDEPEND}
 	sys-libs/zlib
+	sci-electronics/electronics-menu
 	python? ( dev-lang/python )"
 
 src_unpack() {
