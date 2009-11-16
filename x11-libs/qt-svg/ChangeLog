@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.52 2009/11/11 14:45:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.53 2009/11/16 04:52:35 abcd Exp $
+
+  16 Nov 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/0279-svg-rendering-4.5.1-regression.diff:
+  Drop unused file
 
   11 Nov 2009; Ben de Groot <yngwin@gentoo.org> -qt-svg-4.4.2.ebuild,
   -qt-svg-4.5.1-r1.ebuild, -qt-svg-4.5.2.ebuild, -qt-svg-4.5.3.ebuild:
