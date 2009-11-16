@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.0.7.ebuild,v 1.2 2009/11/11 20:14:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.0.7.ebuild,v 1.3 2009/11/16 17:12:30 flameeyes Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND="${RDEPEND}
 	kernel_linux? ( sys-fs/udev )
 	usb? ( !kernel_linux? ( sys-apps/usbutils ) )"
 
-CONFIG_CHECK="USB_ACM"
+CONFIG_CHECK="~USB_ACM"
 
 pkg_setup() {
 	if use kernel_linux && ! use usb && linux_config_exists; then
