@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-libraries/em84xx-libraries-1.6.95.16.ebuild,v 1.2 2007/07/12 02:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em84xx-libraries/em84xx-libraries-1.6.95.16.ebuild,v 1.3 2009/11/16 15:14:16 zzam Exp $
 
 inherit eutils
 
@@ -19,6 +19,12 @@ DEPEND=""
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}RC
+
+# binary files are as they are
+em84xx_libs="usr/lib/libosd.so usr/lib/libEM84xx.so"
+QA_PRESTRIPPED="${em84xx_libs}"
+QA_SONAME="${em84xx_libs}"
+QA_TEXTRELS="${em84xx_libs}"
 
 pkg_setup() {
 	if built_with_use -a sys-libs/glibc glibc-compat20 -nptlonly; then
