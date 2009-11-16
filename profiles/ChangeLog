@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3580 2009/11/16 10:59:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3581 2009/11/16 20:33:38 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2009; Jeremy Olexa <darkside@gentoo.org> updates/4Q-2009:
+  move app-misc/git app-misc/gnuit, part of bug 287863
 
   16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Unmask udev-146-r2 and udev-147.

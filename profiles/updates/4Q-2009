@@ -11,3 +11,4 @@ move media-sound/kenvy24gui media-sound/kenvy24
 move dev-perl/File-Path perl-core/File-Path
 move x11-themes/auroare x11-themes/aurorae
 slotmove =app-text/kchmviewer-3.1_p2-r1 3.5 0
+move app-misc/git app-misc/gnuit
