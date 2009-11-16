@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/electronics-menu
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/ChangeLog,v 1.1 2009/11/16 21:09:26 calchan Exp $
+
+*electronics-menu-1.0 (16 Nov 2009)
+
+  16 Nov 2009; Denis Dupeyron <calchan@gentoo.org>
+  +electronics-menu-1.0.ebuild:
+  Initial commit.
+
