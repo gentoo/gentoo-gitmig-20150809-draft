@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.128 2009/10/10 16:37:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.129 2009/11/16 23:42:39 jer Exp $
+
+  16 Nov 2009; Jeroen Roovers <jer@gentoo.org> timidity++-2.13.2-r11.ebuild:
+  Stable for HPPA (bug #285945).
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org>
   timidity++-2.13.2-r11.ebuild:
