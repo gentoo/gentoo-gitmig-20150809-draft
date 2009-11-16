@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/inputlircd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.15 2009/11/16 10:56:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.16 2009/11/16 14:20:23 zzam Exp $
+
+  16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
+  inputlircd-0.0.1_pre11-r1.ebuild:
+  Respect CC, CFLAGS and LDFLAGS, Bug #243650.
 
 *inputlircd-0.0.1_pre11-r1 (16 Nov 2009)
 
