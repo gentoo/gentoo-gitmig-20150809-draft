@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.16 2009/11/16 04:51:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.17 2009/11/16 06:04:12 leio Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -23,9 +23,9 @@ inherit eutils gst-plugins10
 
 MY_PN=gst-plugins-ugly
 MY_P=${MY_PN}-${PV}
-# All relevant configure options for gst-plugins
-# need a better way to extract these
-# gst-plugins-base 0.9
+# All relevant configure options for gst-plugins-ugly
+# need a better way to extract these.
+# Not necessary since -ugly-0.10.13: id3tag dvdnav
 my_gst_plugins_ugly="a52dec amrnb amrwb cdio dvdread dvdnav lame id3tag mad
 mpeg2dec sidplay twolame x264"
 
