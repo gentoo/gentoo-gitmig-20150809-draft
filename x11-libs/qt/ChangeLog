@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.601 2009/11/16 22:11:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.602 2009/11/16 22:13:05 jer Exp $
+
+  16 Nov 2009; Jeroen Roovers <jer@gentoo.org> qt-4.5.3.ebuild:
+  Stable for HPPA (bug #290922).
 
   16 Nov 2009; Jeroen Roovers <jer@gentoo.org> qt-3.3.8b-r2.ebuild:
   Stable for HPPA (bug #292929).
