@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.25.ebuild,v 1.1 2009/11/16 00:27:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.25.ebuild,v 1.2 2009/11/16 01:12:58 leio Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-base gst-plugins10 gnome2 flag-o-matic eutils
@@ -30,6 +30,7 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 
 	gst-plugins-base_src_configure \
+		--disable-introspection \
 		$(use_enable nls)
 	emake || die "emake failed."
 }
