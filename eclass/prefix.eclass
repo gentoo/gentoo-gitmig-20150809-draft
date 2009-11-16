@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: prefix.eclass,v 1.2 2009/11/16 21:37:14 grobian Exp $
+# $Id: prefix.eclass,v 1.3 2009/11/16 21:39:00 grobian Exp $
 
 # @ECLASS: prefix.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@ fi
 eprefixify() {
 	[[ $# -lt 1 ]] && die "at least one argument required"
 
-	einfo "Adjusting to prefix ${EPREFIX:-/}" \
+	einfo "Adjusting to prefix ${EPREFIX:-/}"
 	local x
 	for x in "$@" ; do
 		if [[ -e ${x} ]] ; then
