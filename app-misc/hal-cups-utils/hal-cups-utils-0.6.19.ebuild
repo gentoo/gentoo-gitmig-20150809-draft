@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/hal-cups-utils-0.6.19.ebuild,v 1.4 2009/11/09 19:41:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/hal-cups-utils-0.6.19.ebuild,v 1.5 2009/11/16 23:35:53 spatz Exp $
 
 EAPI="2"
 
@@ -30,5 +30,8 @@ RDEPEND="${COMMON_DEPEND}
 src_install() {
 	dodoc AUTHORS ChangeLog README || die "dodoc failed"
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake \
+		DESTDIR="${D}" \
+		cupsdir="/usr/libexec/cups/backend" \
+		install || die "emake install failed"
 }
