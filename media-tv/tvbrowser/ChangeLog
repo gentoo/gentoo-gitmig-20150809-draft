@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/tvbrowser
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.29 2008/11/08 18:12:26 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.30 2009/11/16 10:05:00 zzam Exp $
+
+*tvbrowser-2.7.4 (16 Nov 2009)
+
+  16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +tvbrowser-2.7.4.ebuild:
+  Version bumped. Bug #258280.
 
 *tvbrowser-2.7.1 (08 Nov 2008)
 
