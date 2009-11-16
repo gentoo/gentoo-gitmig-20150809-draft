@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.1.ebuild,v 1.1 2009/09/18 20:44:42 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.1.ebuild,v 1.2 2009/11/16 00:20:35 darkside Exp $
 
 EAPI="2"
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug pch"
 
-DEPEND="x11-libs/qt-core:4[qt3support]
-	x11-libs/qt-gui:4[qt3support]
+DEPEND="x11-libs/qt-core:4
+	x11-libs/qt-gui:4
 	x11-libs/qt-xmlpatterns:4"
 RDEPEND="${DEPEND}"
 
