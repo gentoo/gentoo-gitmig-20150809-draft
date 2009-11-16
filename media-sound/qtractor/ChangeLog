@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.22 2009/10/06 17:14:06 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.23 2009/11/16 12:43:00 aballier Exp $
+
+*qtractor-0.4.3 (16 Nov 2009)
+
+  16 Nov 2009; Alexis Ballier <aballier@gentoo.org> +qtractor-0.4.3.ebuild:
+  version bump
 
   06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> qtractor-0.4.2.ebuild:
   Removed alternative dependency on Qt metapackage
