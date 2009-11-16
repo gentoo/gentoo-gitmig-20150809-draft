@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.1.ebuild,v 1.7 2009/09/06 19:57:47 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.1.ebuild,v 1.8 2009/11/16 05:01:06 abcd Exp $
 
 EAPI="2"
 
@@ -36,7 +36,6 @@ LANGS="cs de es fr ru tr"
 python_version
 
 src_prepare() {
-	#epatch "${FILESDIR}"/4.3.0-paths.patch
 	epatch "${FILESDIR}"/4.2.3-no-interactive.patch
 }
 
