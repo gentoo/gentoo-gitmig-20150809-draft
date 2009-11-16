@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7.ebuild,v 1.1 2009/10/31 10:39:33 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7-r1.ebuild,v 1.1 2009/11/16 20:27:45 volkmar Exp $
 
 EAPI="2"
 
@@ -18,11 +18,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="app-emulation/wine
+RDEPEND="
+		app-emulation/wine
 		app-arch/cabextract
 		app-arch/unzip
 		dev-python/wxpython:2.8
 		media-gfx/imagemagick
+		x11-apps/mesa-progs
 		x11-terms/xterm"
 
 S=${WORKDIR}/${PN}
@@ -33,6 +35,7 @@ S=${WORKDIR}/${PN}
 # It will let using LANGUAGES easily
 # How to deal with Microsoft Fonts installation asked every time ?
 # How to deal with wine version installed ? (have a better mgmt of system one)
+# Look at debian pkg: http://packages.debian.org/sid/playonlinux
 
 src_prepare() {
 	einfo "Removing temporary files..."
