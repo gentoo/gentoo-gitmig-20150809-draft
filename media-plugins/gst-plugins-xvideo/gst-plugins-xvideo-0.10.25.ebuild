@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.10.22.ebuild,v 1.8 2009/07/01 16:22:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.10.25.ebuild,v 1.1 2009/11/16 01:58:32 leio Exp $
 
 inherit gst-plugins-base
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=media-libs/gst-plugins-base-0.10.22
-	x11-libs/libXv"
+RDEPEND="x11-libs/libXv
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
 	x11-proto/videoproto
 	x11-proto/xproto
