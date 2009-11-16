@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.7.ebuild,v 1.1 2009/10/05 12:22:30 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.10.ebuild,v 1.1 2009/11/16 13:48:15 dagger Exp $
 
 EAPI="2"
 
