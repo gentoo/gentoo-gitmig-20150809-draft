@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1_beta2.ebuild,v 1.2 2009/11/11 20:48:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1_beta2.ebuild,v 1.3 2009/11/16 22:14:53 maekke Exp $
 
 EAPI=2
 inherit kde4-base
@@ -12,7 +12,7 @@ HOMEPAGE="http://kile.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 SLOT="4"
 IUSE="debug +pdf +png"
 
