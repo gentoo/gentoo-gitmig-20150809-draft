@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.63 2009/10/24 16:45:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.64 2009/11/16 22:21:49 eva Exp $
+
+  16 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-bluetooth-2.27.8.ebuild, gnome-bluetooth-2.28.1.ebuild,
+  gnome-bluetooth-2.28.3.ebuild:
+  Fix dependencies to have functional transfer, bug #285043.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> gnome-bluetooth-0.12.0.ebuild:
   ppc stable #281427
