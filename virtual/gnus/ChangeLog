@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.11 2008/05/29 13:44:18 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnus/ChangeLog,v 1.12 2009/11/16 19:49:44 ulm Exp $
+
+  16 Nov 2009; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
+  Change test in pkg_setup to account for app-emacs/gnus cvs snapshots.
 
   29 May 2008; Ulrich Mueller <ulm@gentoo.org> gnus-5.10.ebuild:
   Empty HOMEPAGE according to devmanual.
