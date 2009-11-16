@@ -1,6 +1,6 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.116 2009/11/15 12:45:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.117 2009/11/16 19:39:18 grobian Exp $
 
   15 Nov 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
@@ -12,9 +12,6 @@
 
   15 Nov 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   unmask File-Spec again, perl-5.10.1 is in the Prefix tree now
-
-  15 Nov 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
-  Mask app-misc/screen-4.0.3_p20070403 due to multiple compilation problems
 
   04 Nov 2009; Michael Haubenwallner <haubi@gentoo.org>
   linux/x86/make.defaults:
