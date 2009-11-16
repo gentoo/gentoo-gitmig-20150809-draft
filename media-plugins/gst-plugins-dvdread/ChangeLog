@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/gst-plugins-dvdread
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.78 2009/11/10 16:16:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.79 2009/11/16 05:32:55 leio Exp $
+
+*gst-plugins-dvdread-0.10.13 (16 Nov 2009)
+
+  16 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-dvdread-0.10.13.ebuild:
+  Version bump. Only change is that it points at gst-plugins-resindvd
+  instead of now non-existing never packaged gst-plugins-dvdnav if dvdread
+  can't handle things. You should also be using gst-plugins-resindvd instead
+  of this package for most of your needs (this one can't deal with
+  interactive DVD titles)
 
   10 Nov 2009; Olivier Crête <tester@gentoo.org>
   gst-plugins-dvdread-0.10.12.ebuild:
