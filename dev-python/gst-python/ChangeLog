@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.67 2009/11/16 05:45:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.68 2009/11/16 05:46:55 tester Exp $
 
   16 Nov 2009; Olivier Crête <tester@gentoo.org> gst-python-0.10.16.ebuild:
-  Stable on amd64, bug #290084
+  Stable on amd64, bug #290343
 
 *gst-python-0.10.17 (16 Nov 2009)
 
