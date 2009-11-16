@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.62 2009/11/10 14:45:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.63 2009/11/16 05:20:48 cardoe Exp $
+
+*mythtv-themes-0.22_p22793 (16 Nov 2009)
+
+  16 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-themes-0.22_p22793.ebuild:
+  Fixes previewing scheduling changes causing myth to lock up with certain
+  themes
 
 *mythtv-themes-0.22_p22783 (10 Nov 2009)
 
