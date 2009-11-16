@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-012.ebuild,v 1.1 2009/11/01 12:45:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-012.ebuild,v 1.2 2009/11/16 21:57:32 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.21.5
 	>=sys-fs/udev-145[extras]
 	>=sys-auth/polkit-0.91
 	sys-apps/dbus
-	virtual/libusb
+	virtual/libusb:0
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40

@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-011.ebuild,v 1.2 2009/11/16 21:57:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-012-r1.ebuild,v 1.1 2009/11/16 21:57:32 eva Exp $
 
 EAPI="2"
+GCONF_DEBUG="no"
 
-inherit gnome2 linux-info
+inherit eutils gnome2 linux-info
 
 MY_PN="DeviceKit-power"
 
@@ -29,8 +30,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
 	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1.3 )
+	doc? (
+		>=dev-util/gtk-doc-1.3
+		app-text/docbook-xml-dtd:4.1.2 )
+	app-text/docbook-xsl-stylesheets
 "
+# docbook xsl is required for man pages
+# FIXME: needs dbus-dtd currently only available with dbus[doc]
+
+DOCS="AUTHORS HACKING NEWS"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
@@ -45,6 +53,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--localstatedir=/var
 		--disable-ansi
+		--disable-static
 		--enable-man-pages
 		$(use_enable debug verbose-mode)
 		$(use_enable test tests)
@@ -63,4 +72,7 @@ src_prepare() {
 	# bug 289873.
 	sed 's:WARNINGFLAGS_C=\"$WARNINGFLAGS_C -Wtype-limits\"::g' -i configure.ac configure \
 		|| die "sed 2 failed"
+
+	# Fix detection of encrypted swap partition for hibernation, bug #292090
+	epatch "${FILESDIR}/${P}-hibernate-encrypted-swap.patch"
 }
