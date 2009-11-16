@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.414 2009/11/13 16:10:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.415 2009/11/16 01:30:13 jer Exp $
+
+*opera-10.10_pre4725 (16 Nov 2009)
+
+  16 Nov 2009; Jeroen Roovers <jer@gentoo.org> +opera-10.10_pre4725.ebuild:
+  Version bump <http://my.opera.com/desktopteam/blog/sunday-build>.
 
 *opera-10.10_pre4720 (13 Nov 2009)
 
