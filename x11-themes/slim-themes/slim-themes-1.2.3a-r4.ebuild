@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r4.ebuild,v 1.1 2009/10/30 04:27:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r4.ebuild,v 1.2 2009/11/16 00:46:45 darkside Exp $
 
 DESCRIPTION="SLiM (Simple Login Manager) themes pack"
 HOMEPAGE="http://slim.berlios.de"
@@ -22,9 +22,9 @@ SRC_URI="mirror://berlios/slim/slim-1.2.3-themepack1a.tar.gz
 	mirror://berlios/slim/slim-lake.tar.gz
 	mirror://gentoo/slim-gentoo-1.0.tar.bz2
 	http://www.xfce-look.org/CONTENT/content-files/48605-xfce-g-box-slim-0.1.tar.gz
-	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_purple/gentoo_10_purple.tar.bz2
-	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_blue/gentoo_10_blue.tar.bz2
-	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_dark/gentoo_10_dark.tar.bz2"
+	http://slim.berlios.de/themes/gentoo_10_blue.tar.bz2
+	http://slim.berlios.de/themes/gentoo_10_purple.tar.bz2
+	http://slim.berlios.de/themes/gentoo_10_dark.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
