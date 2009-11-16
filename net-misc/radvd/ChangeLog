@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.55 2009/08/20 12:23:49 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.56 2009/11/16 09:15:46 wschlich Exp $
+
+*radvd-1.5 (16 Nov 2009)
+
+  16 Nov 2009; Wolfram Schlich <wschlich@gentoo.org>
+  -files/radvd-1.4-parallel-make.patch, -radvd-1.2.ebuild,
+  -radvd-1.4.ebuild, +radvd-1.5.ebuild:
+  version bump, removed old versions
 
 *radvd-1.4 (20 Aug 2009)
 
