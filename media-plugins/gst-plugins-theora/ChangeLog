@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.119 2009/11/10 16:07:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.120 2009/11/16 01:31:11 leio Exp $
+
+*gst-plugins-theora-0.10.25 (16 Nov 2009)
+
+  16 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-theora-0.10.22.ebuild, +gst-plugins-theora-0.10.25.ebuild:
+  Version bump. Supports Y444 and Y42B in the encoder; various code
+  improving refactoring
 
   10 Nov 2009; Olivier Crête <tester@gentoo.org>
   gst-plugins-theora-0.10.24.ebuild:
