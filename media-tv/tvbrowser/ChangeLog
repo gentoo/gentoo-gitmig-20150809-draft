@@ -1,6 +1,21 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.30 2009/11/16 10:05:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.31 2009/11/16 10:24:48 zzam Exp $
+
+  16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
+  -files/tvbrowser-2.1-makefiles.patch, -tvbrowser-2.2.1.ebuild,
+  -files/tvbrowser-2.2.1-makefiles.patch, -tvbrowser-2.5.ebuild,
+  -tvbrowser-2.5-r1.ebuild, -tvbrowser-2.5.2.ebuild,
+  -files/tvbrowser-2.5.2_buildxml.patch,
+  -files/tvbrowser-2.5.2_noWin32.patch, -tvbrowser-2.5.3.ebuild,
+  -files/tvbrowser-2.5.3_buildxml.patch,
+  -files/tvbrowser-2.5.3_noWin32.patch,
+  -files/tvbrowser-2.5-makefiles.patch,
+  -files/tvbrowser-2.5_Localizer.patch, -files/tvbrowser-2.5_buildxml.patch,
+  -files/tvbrowser-2.5_noWin32.patch, -tvbrowser-2.6.2.ebuild,
+  -tvbrowser-2.6.3.ebuild, -files/tvbrowser-2.6._Localizer.patch,
+  tvbrowser-2.7.1.ebuild:
+  Cleanup.
 
 *tvbrowser-2.7.4 (16 Nov 2009)
 
