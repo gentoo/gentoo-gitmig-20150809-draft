@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/hgview-1.0.0.ebuild,v 1.1 2009/07/23 22:48:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/hgview-1.1.3.ebuild,v 1.1 2009/11/16 15:46:25 spatz Exp $
 
 EAPI="2"
 
@@ -13,21 +13,22 @@ SRC_URI="http://ftp.logilab.org/pub/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
-DEPEND="dev-python/egenix-mx-base
+DEPEND="dev-util/mercurial
+	dev-python/egenix-mx-base
 	dev-python/PyQt4[X]
-	dev-python/qscintilla-python"
+	dev-python/qscintilla-python
+	doc? ( app-text/asciidoc )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 	distutils_src_prepare
 
-	# fix mercurial extension install path
-	local origdir="share/python-support/mercurial-common/hgext"
-	local sitedir="$(python_get_sitedir)/hgext"
-	sed -i -e "s:${origdir}:${sitedir#/usr/}:" \
-		"${S}/hgviewlib/__pkginfo__.py" || die "sed failed"
+	if ! use doc; then
+		sed -i '/make -C doc/d' "${S}/setup.py" || die "sed failed"
+		sed -i '/share\/man\/man1/,+1 d' "${S}/hgviewlib/__pkginfo__.py" || die "sed failed"
+	fi
 }
 
 src_install() {
