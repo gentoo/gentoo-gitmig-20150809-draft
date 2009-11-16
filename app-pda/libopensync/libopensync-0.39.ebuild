@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.39.ebuild,v 1.1 2009/11/15 22:02:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.39.ebuild,v 1.2 2009/11/16 21:25:21 eva Exp $
 
 inherit cmake-utils
 
@@ -61,10 +61,4 @@ src_install() {
 		cd "${CMAKE_BUILD_DIR}"
 		dohtml docs/html/* || die "Failed to install docs."
 	fi
-}
-
-pkg_postinst() {
-	elog "Building with 'debug' useflag is highly encouraged"
-	elog "and requiered for bug reports."
-	elog "Also see http://www.opensync.org/wiki/tracing"
 }
