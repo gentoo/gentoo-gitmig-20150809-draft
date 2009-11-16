@@ -1,7 +1,7 @@
 diff -NrU5 icewm-1.2.37.original/configure.in icewm-1.2.37/configure.in
 --- icewm-1.2.37.original/configure.in	2009-11-16 15:16:24.000000000 -0600
-+++ icewm-1.2.37/configure.in	2009-11-16 15:17:39.000000000 -0600
-@@ -818,12 +818,12 @@
++++ icewm-1.2.37/configure.in	2009-11-16 16:15:13.000000000 -0600
+@@ -818,19 +818,19 @@
    [ if test "${enable_menus_gnome2}" = "yes"; then
        AC_PATH_PROG(PKG_CONFIG, pkg-config)
      
@@ -16,3 +16,11 @@ diff -NrU5 icewm-1.2.37.original/configure.in icewm-1.2.37/configure.in
  
  	APPLICATIONS="${APPLICATIONS} icewm-menu-gnome2"
  	GNOME2_PREFIX=`pkg-config --variable=prefix gnome-desktop-2.0`
+ 	GWMDIR="${GNOME2_PREFIX}/share/gnome/wm-properties/"
+-	CONFIG_GNOME2_MENU_DIR="${GNOME2_PREFIX}/share/gnome/vfolders/"
++	CONFIG_GNOME2_MENU_DIR="${GNOME2_PREFIX}/share/desktop-directories/"
+       fi
+ 
+       if test "${GNOME2_CFLAGS}" = ""; then
+ 	AC_MSG_ERROR([gnome 2 can not be found via pkg-config.
+ *** Install the GNOME´s development packages.])
