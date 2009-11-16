@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/gnuit-4.9.5.ebuild,v 1.3 2009/11/08 19:17:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/gnuit-4.9.5.ebuild,v 1.4 2009/11/16 20:23:24 armin76 Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 # app-text/texi2html is only needed if any documentation patches are added

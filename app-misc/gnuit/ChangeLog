@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gnuit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/ChangeLog,v 1.3 2009/11/08 19:17:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/ChangeLog,v 1.4 2009/11/16 20:23:24 armin76 Exp $
+
+  16 Nov 2009; Raúl Porcel <armin76@gentoo.org> gnuit-4.9.5.ebuild:
+  sparc stable wrt #287863
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> gnuit-4.9.5.ebuild:
   ppc stable #287863
