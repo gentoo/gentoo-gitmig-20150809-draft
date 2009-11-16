@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10839 2009/11/16 10:59:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10840 2009/11/16 15:19:26 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -78,7 +78,6 @@ app-emulation/transgaming-mozctlinstaller
 # See bug #287583 and those added to it.
 <dev-libs/boost-1.35.0-r1
 net-p2p/museek+
-dev-cpp/gccxml
 games-arcade/blinkensisters
 sys-apps/initng-ifiles
 sys-apps/initng
