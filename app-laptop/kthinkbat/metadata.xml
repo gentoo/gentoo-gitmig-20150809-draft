@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>mobile</herd>
-<use>
-  <flag name='smapi'>Use extended ThinkPad battery info exported via SMAPI
-    BIOS by <pkg>app-laptop/tp_smapi</pkg></flag>
-</use>
-</pkgmetadata>
