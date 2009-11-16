@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/inputlircd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.14 2007/05/18 20:56:01 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.15 2009/11/16 10:56:35 zzam Exp $
+
+*inputlircd-0.0.1_pre11-r1 (16 Nov 2009)
+
+  16 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
+  inputlircd-0.0.1_pre11.ebuild, +inputlircd-0.0.1_pre11-r1.ebuild,
+  +files/inputlircd.init.2:
+  Add provide lirc to init-script.
 
   18 May 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Added to herd media-tv.
