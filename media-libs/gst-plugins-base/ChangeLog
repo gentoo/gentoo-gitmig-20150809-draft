@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.109 2009/11/10 16:05:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.110 2009/11/16 00:27:58 leio Exp $
+
+*gst-plugins-base-0.10.25 (16 Nov 2009)
+
+  16 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-base-0.10.25.ebuild:
+  Version bump. Per-stream volume control support; interlaced content
+  support in videoscale and ffmpegcolorspace; improved audio capture timing
+  and audio output starting; many other bug fixes and improvements
 
   10 Nov 2009; Olivier Crête <tester@gentoo.org>
   gst-plugins-base-0.10.24.ebuild:
