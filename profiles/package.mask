@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10837 2009/11/16 00:23:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10838 2009/11/16 06:13:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -645,14 +645,11 @@ dev-ruby/qt4-qtruby
 app-laptop/kthinkbat
 app-laptop/khdapsmon
 app-laptop/khdapsmonitor
-kde-misc/kfish
 x11-misc/lineak-kdeplugins
 mail-client/mailody
 app-portage/kelogviewer
 dev-python/pykde
 x11-themes/qinx
-kde-misc/kopete-antispam-kde3
-kde-misc/koppermine
 www-client/kita
 sci-mathematics/koctave
 x11-terms/kuake
@@ -760,51 +757,6 @@ mail-client/kcheckgmail
 # and sci-calculators/qalculate-gtk. Masked for removal
 # in 30 days.
 sci-calculators/qalculate-kde
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Oct 2009)
-# KDE3-only applications.
-#
-# Removed in 30 days.
-#
-# If you find a KDE4 replacement, please open a
-# request at http://bugs.gentoo.org/
-kde-misc/basket
-kde-misc/dolphin
-kde-misc/kalbum
-kde-misc/kaptain
-kde-misc/katapult
-kde-misc/kate-symbolviewer-plugin
-kde-misc/kerry
-kde-misc/kexchange
-kde-misc/kima
-kde-misc/kio-sword
-kde-misc/kkbswitch
-kde-misc/kleds
-kde-misc/knetdockapp
-kde-misc/knetstats
-kde-misc/komparator
-kde-misc/kompose
-kde-misc/kooldock
-kde-misc/kopete-ktts
-kde-misc/ksensors
-kde-misc/ksmoothdock
-kde-misc/kvdrmon
-kde-misc/mtaskbar
-kde-misc/pwmanager
-kde-misc/quadkonsole
-kde-misc/strigiapplet
-
-# Samuli Suominen <ssuominen@gentoo.org> (27 Oct 2009)
-# KDE3-only. Doesn't compile.
-#
-# kde-misc/katalog, bug 278031
-# kde-misc/kblogger, bugs 260989 and 277820
-# kde-misc/kbeam, bugs 276961 and 279788
-#
-# Masked for removal in 30 days.
-kde-misc/kbeam
-kde-misc/katalog
-kde-misc/kblogger
 
 # Joe Sapp <nixphoeni@gentoo.org> (27 Oct 2009)
 # Uses old, deprecated Sensors.
