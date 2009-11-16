@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/duke3d
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.32 2009/02/06 11:47:17 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.33 2009/11/16 14:06:08 volkmar Exp $
+
+  16 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  duke3d-20040817-r2.ebuild:
+  Stable for ppc, bug 286423
 
   06 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   files/duke3d-20040817-as-needed.patch, duke3d-20040817-r1.ebuild:
