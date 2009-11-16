@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-evolution2/libopensync-plugin-evolution2-0.39.ebuild,v 1.1 2009/11/15 22:30:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-evolution2/libopensync-plugin-evolution2-0.39.ebuild,v 1.2 2009/11/16 00:16:43 mr_bones_ Exp $
 
 EAPI="2"
 
