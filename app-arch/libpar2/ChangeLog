@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libpar2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.7 2009/11/06 17:53:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.8 2009/11/16 22:08:05 maekke Exp $
+
+  16 Nov 2009; Markus Meier <maekke@gentoo.org> libpar2-0.2-r1.ebuild:
+  amd64/x86 stable, bug #292370
 
 *libpar2-0.2-r1 (06 Nov 2009)
 
