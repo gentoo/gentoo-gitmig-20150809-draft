@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc6.ebuild,v 1.2 2009/11/04 13:04:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32_rc7.ebuild,v 1.1 2009/11/16 17:09:23 flameeyes Exp $
 
 EAPI=2
 
@@ -44,7 +44,7 @@ fi
 
 S="${WORKDIR}/linux-${LINUX_VER}/tools/perf"
 
-CONFIG_CHECK="PERF_EVENTS KALLSYMS"
+CONFIG_CHECK="~PERF_EVENTS ~KALLSYMS"
 
 src_unpack() {
 	local _tarpattern=
@@ -56,8 +56,13 @@ src_unpack() {
 
 	# We expect the tar implementation to support the -j option (both
 	# GNU tar and libarchive's tar support that).
-	tar --wildcards -xpf "${DISTDIR}"/${LINUX_SOURCES} ${_tarpattern} || die
+	ebegin "Unpacking partial source tarball"
+	tar --wildcards -xpf "${DISTDIR}"/${LINUX_SOURCES} ${_tarpattern}
+	eend $? || die "tar failed"
+
+	ebegin "Filtering partial source patch"
 	filterdiff ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
+	eend $? || die "filterdiff failed"
 
 	MY_A=
 	for _AFILE in ${A}; do

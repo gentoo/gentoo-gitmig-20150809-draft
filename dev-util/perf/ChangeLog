@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.5 2009/11/04 13:04:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.6 2009/11/16 17:09:23 flameeyes Exp $
+
+*perf-2.6.32_rc7 (16 Nov 2009)
+
+  16 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -perf-2.6.32_rc6.ebuild, +perf-2.6.32_rc7.ebuild:
+  Version bump to latest rc; make the linux-info checks non-fatal since the
+  package builds anyway.
 
   04 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   perf-2.6.32_rc6.ebuild:
