@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.139 2009/11/11 21:25:27 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.140 2009/11/16 15:36:27 vostorga Exp $
+
+  16 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> icewm-1.2.37.ebuild,
+  +files/icewm-1.2.37-gnome2.patch:
+  Enabling support of icewm-menu-gnome2 bug 205133
 
   11 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> icewm-1.2.37.ebuild:
   Fixing unrecognized options provided to configure, bug #261728

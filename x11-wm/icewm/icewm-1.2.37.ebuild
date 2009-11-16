@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.3 2009/11/11 21:25:27 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.4 2009/11/16 15:36:27 vostorga Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Ice Window Manager with Themes"
 
@@ -18,7 +18,7 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="esd imlib nls truetype xinerama minimal debug uclibc"
+IUSE="esd gnome imlib nls truetype xinerama minimal debug uclibc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXrandr
@@ -30,6 +30,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libICE
 	xinerama? ( x11-libs/libXinerama )
 	esd? ( media-sound/esound )
+	gnome? ( gnome-base/gnome-desktop )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
@@ -57,6 +58,12 @@ src_unpack() {
 
 	echo "#!/bin/sh" > "$T/icewm"
 	echo "/usr/bin/icewm-session" >> "$T/icewm"
+
+	cd "${S}"
+	#Fixing gnome2 support
+	epatch "${FILESDIR}/${P}-gnome2.patch"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -74,6 +81,7 @@ src_compile() {
 		--with-cfgdir=/etc/icewm
 		--with-docdir=/usr/share/doc/${PF}/html
 		$(use_with esd esd-config /usr/bin/esd-config)
+		$(use_enable gnome menus-gnome2)
 		$(use_enable nls)
 		$(use_enable nls i18n)
 		$(use_with imlib)
@@ -100,4 +108,12 @@ src_install(){
 
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}/IceWM.desktop"
+}
+
+pkg_postinst() {
+	if use gnome; then
+		elog "You have enabled gnome USE flag which provides icewm-menu-gnome2 ."
+		elog "It is used internally and generates IceWM program menus from"
+		elog "FreeDesktop .desktop files"
+	fi
 }
