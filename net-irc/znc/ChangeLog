@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.25 2009/08/14 17:50:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.26 2009/11/16 23:36:03 cla Exp $
+
+*znc-0.076 (16 Nov 2009)
+
+  16 Nov 2009; Dawid Węgliński <cla@gentoo.org> +znc-0.076.ebuild:
+  Version bump (bug #293134)
 
   14 Aug 2009; Markus Meier <maekke@gentoo.org> znc-0.074.ebuild:
   amd64 stable, bug #278684
