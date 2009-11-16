@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+
   <herd>sci-electronics</herd>
+
   <longdescription>
-  Kicad is an open source (GPL) software for the creation of electronic
-  schematic diagrams and printed circuit board artwork.
+    Kicad is an open source (GPL) software for the creation of electronic
+    schematic diagrams and printed circuit board artwork.
   </longdescription>
+
+  <use>
+	<flag name="dev-doc">Install developer documentation (requires
+	<pkg>app-doc/doxygen</pkg>)</flag>
+  </use>
 </pkgmetadata>
