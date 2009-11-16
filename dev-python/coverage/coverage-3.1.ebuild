@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-3.1.ebuild,v 1.2 2009/10/10 12:44:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-3.1.ebuild,v 1.3 2009/11/16 22:06:22 maekke Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/c/coverage/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="test"
 
 RDEPEND=""
