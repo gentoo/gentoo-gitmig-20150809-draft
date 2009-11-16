@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.73 2009/11/14 01:34:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.74 2009/11/16 14:41:04 rbu Exp $
+
+  16 Nov 2009; Robert Buchholz <rbu@gentoo.org> +unrealircd-3.2.7-r2.ebuild:
+  Re-add old stable until the new one is stable
 
 *unrealircd-3.2.8.1 (14 Nov 2009)
 
