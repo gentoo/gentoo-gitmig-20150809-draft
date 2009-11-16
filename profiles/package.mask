@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10836 2009/11/15 22:25:48 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10837 2009/11/16 00:23:09 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,6 +58,8 @@ net-analyzer/cacti-cactid
 # which download/install/update things for you.  And upstream isn't
 # interested in working with packagers.  Will punt in ~30 days.
 app-emulation/cedega
+app-emulation/transgaming-fontinstaller
+app-emulation/transgaming-mozctlinstaller
 
 # Ulrich Mueller <ulm@gentoo.org> (14 Nov 2009)
 # CVS snapshot, masked for one week of testing.
