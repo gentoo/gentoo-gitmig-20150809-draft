@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5005 2009/11/17 10:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5006 2009/11/17 15:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1445,7 +1445,6 @@ media-gfx/comix:rar -  Pulls app-arch/unrar for rar file support
 media-gfx/digikam:addressbook - Add support for kdepim
 media-gfx/digikam:geolocation - Add support for marble
 media-gfx/digikam:lensfun - Enable support for lens-correnction library
-media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
 media-gfx/digikam:thumbnails - Allow thumbnail previews for images/photos
 media-gfx/eog:xmp - Adds support for XMP metadata
 media-gfx/exiv2:contrib -  Build additional contrib components 
@@ -1467,7 +1466,6 @@ media-gfx/graphviz:cgraph -  Enables cgraph (PostScript plotting library in C) l
 media-gfx/graphviz:lasi -  Enables PostScript output via media-libs/lasi library 
 media-gfx/graphviz:pango -  Enables the rendering of the graphs using pango & cairo (with antialiasing support) 
 media-gfx/gthumb:iptc -  Add support for IPTC metadata 
-media-gfx/gwenview:kipi -  Support for the KDE Image Plugin Interface. 
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift or media-gfx/autopano-sift-C
 media-gfx/imagemagick:autotrace -  use media-gfx/autotrace to convert bitmaps into vector graphics 
 media-gfx/imagemagick:corefonts -  pull in media-fonts/corefonts, which is required for some commands 
