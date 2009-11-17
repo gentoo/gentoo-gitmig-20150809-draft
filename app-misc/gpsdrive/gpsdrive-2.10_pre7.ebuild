@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.3 2009/11/16 09:27:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.4 2009/11/17 05:39:46 nerdboy Exp $
 EAPI=2
 
 inherit cmake-utils eutils fdo-mime
@@ -24,12 +24,12 @@ COMMON_DEP="sci-geosciences/gpsd
 	dev-libs/libxml2
 	dev-db/sqlite:3
 	x11-libs/gtk+:2
-	>=dev-libs/boost-1.39.0
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
-	mapnik? ( sci-geosciences/mapnik )
+	mapnik? ( sci-geosciences/mapnik
+		>=dev-libs/boost-1.39.0 )
 	libgda? ( =gnome-extra/libgda-3.0*[postgres] )
-	speech? ( app-accessibility/speech-dispatcher )"
+	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )"
 
 DEPEND="${COMMON_DEP}
 	dev-util/pkgconfig"
