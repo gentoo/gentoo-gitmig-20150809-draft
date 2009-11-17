@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10843 2009/11/17 14:46:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10844 2009/11/17 14:50:42 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -808,18 +808,6 @@ dev-python/cryptlib_py
 app-cdr/kiso
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# KDE3 support. aRts support. Doesn't compile, install or work
-# wrt bugs 178072, 280808, 234385, 117247, 191557, and 253231.
-# Masked for removal in 30 days.
-app-office/taskjuggler
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# Replaced by KDE4 menu. For KDE3-only and is using
-# cmake directly wrt bug #287593.
-# Masked for removal in 30 days.
-kde-misc/kbfx
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
 # Replaced by:
 #
 # >=media-gfx/digikam-0.10
@@ -835,12 +823,6 @@ media-gfx/gwenview
 =media-plugins/kipi-plugins-0.1*
 media-libs/libkipi
 media-libs/libkexiv2
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# Replaced by kde-base/dragonplayer.
-# http://www.dragonplayer.net/
-# Masked for removal in 30 days.
-media-video/codeine
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # Deprecated aRts support wrt bug #270575
