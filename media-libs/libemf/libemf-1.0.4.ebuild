@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.4.ebuild,v 1.2 2009/11/16 22:11:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.4.ebuild,v 1.3 2009/11/17 23:39:41 dirtyepic Exp $
 
 EAPI=2
 
-inherit eutils
+inherit autotools eutils
 
 MY_P="${P/emf/EMF}"
 DESCRIPTION="Library implementation of ECMA-234 API for the generation of enhanced metafiles."
@@ -22,6 +22,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-amd64-alpha.patch
+	eautoreconf # or libtool tries to link against the gcc it was built with
 }
 
 src_configure() {
