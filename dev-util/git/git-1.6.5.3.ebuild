@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5.3.ebuild,v 1.2 2009/11/17 21:53:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5.3.ebuild,v 1.3 2009/11/17 22:07:37 robbat2 Exp $
 
 EAPI=2
 
@@ -128,6 +128,11 @@ exportmakeopts() {
 	has_version '>=app-text/asciidoc-8.0' \
 		&& myopts="${myopts} ASCIIDOC8=YesPlease"
 	myopts="${myopts} ASCIIDOC_NO_ROFF=YesPlease"
+
+	# Bug 290465:
+	# builtin-fetch-pack.c:816: error: 'struct stat' has no member named 'st_mtim'
+	[[ "${CHOST}" == *-uclibc* ]] && \
+		myopts="${myopts} NO_NSEC=YesPlease"
 
 	export MY_MAKEOPTS="${myopts}"
 }
