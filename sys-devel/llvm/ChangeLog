@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.7 2009/10/26 16:38:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.8 2009/11/17 10:14:09 voyageur Exp $
+
+  17 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.6.ebuild:
+  Drop llvm-gcc depend, as it triggers circular dependency on first install
+  (warn the user if it is not found instead), bug #293382
 
   26 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org>
   files/llvm-2.6-commandguide-nops.patch:

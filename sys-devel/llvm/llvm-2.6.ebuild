@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6.ebuild,v 1.3 2009/10/26 16:16:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6.ebuild,v 1.4 2009/11/17 10:14:09 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -120,15 +120,20 @@ src_configure() {
 	local LLVM_GCC_DIR=/dev/null
 	local LLVM_GCC_DRIVER=nope ; local LLVM_GPP_DRIVER=nope
 	if use llvm-gcc ; then
-		LLVM_GCC_DIR=$(ls -d ${ROOT}/usr/$(get_libdir)/llvm-gcc* 2> /dev/null)
-		LLVM_GCC_DRIVER=$(find ${LLVM_GCC_DIR} -name 'llvm*-gcc' 2> /dev/null)
-
-		if [[ -z ${LLVM_GCC_DRIVER} ]] ; then
-			die "failed to find installed llvm-gcc, LLVM_GCC_DIR=${LLVM_GCC_DIR}"
+		if has_version sys-devel/llvm-gcc; then
+			LLVM_GCC_DIR=$(ls -d ${ROOT}/usr/$(get_libdir)/llvm-gcc* 2> /dev/null)
+			LLVM_GCC_DRIVER=$(find ${LLVM_GCC_DIR} -name 'llvm*-gcc' 2> /dev/null)
+			if [[ -z ${LLVM_GCC_DRIVER} ]] ; then
+				die "failed to find installed llvm-gcc, LLVM_GCC_DIR=${LLVM_GCC_DIR}"
+			fi
+			einfo "Using $LLVM_GCC_DRIVER"
+			LLVM_GPP_DRIVER=${LLVM_GCC_DRIVER/%-gcc/-g++}
+		else
+			eerror "llvm-gcc USE flag enabled, but sys-devel/llvm-gcc was not found"
+			eerror "Building with standard gcc, re-merge this package after installing"
+			eerror "llvm-gcc to build with it"
+			eerror "This is normal behavior on first LLVM merge"
 		fi
-
-		einfo "Using $LLVM_GCC_DRIVER"
-		LLVM_GPP_DRIVER=${LLVM_GCC_DRIVER/%-gcc/-g++}
 	fi
 
 	CONF_FLAGS="${CONF_FLAGS} \
