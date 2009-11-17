@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.4 2008/03/11 15:47:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.5 2009/11/17 16:59:45 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,8 +13,7 @@ KEYWORDS="x86 ~ppc amd64"
 IUSE="test"
 
 DEPEND="
-	!test? ( >=virtual/jdk-1.4 )
-	test? ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
+	|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	=dev-java/junit-3.8*
 	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
