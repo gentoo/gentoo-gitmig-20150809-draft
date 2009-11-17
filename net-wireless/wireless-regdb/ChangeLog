@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.16 2009/11/04 14:53:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.17 2009/11/17 14:01:30 chainsaw Exp $
+
+  17 Nov 2009; <chainsaw@gentoo.org> -wireless-regdb-20090130.ebuild,
+  -wireless-regdb-20090417.ebuild, -wireless-regdb-20090805.ebuild,
+  -wireless-regdb-20090908.ebuild:
+  Remove old ebuilds, the November release will be pushed for stable soon.
+  The September release broke CRDA rebuilds as pointed out by Adrian Bassett
+  in bug #285282.
 
 *wireless-regdb-20091104 (04 Nov 2009)
 
