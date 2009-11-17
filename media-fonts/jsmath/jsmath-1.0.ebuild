@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jsmath/jsmath-1.0.ebuild,v 1.1 2009/11/12 18:03:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jsmath/jsmath-1.0.ebuild,v 1.2 2009/11/17 06:42:38 bicatali Exp $
 
 inherit font
 
@@ -19,5 +19,6 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${MYPN}"
+FONT_S="${S}"
 FONT_PN="jsMath"
 FONT_SUFFIX="ttf"
