@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.154 2009/11/16 01:45:55 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.155 2009/11/17 20:56:46 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking gst-plugins-vorbis-0.10.24 ppc64 stable for bug 290343
 
 *gst-plugins-vorbis-0.10.25 (16 Nov 2009)
 
