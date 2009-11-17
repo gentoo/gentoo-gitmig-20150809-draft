@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.164 2009/11/16 16:02:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.165 2009/11/17 08:45:48 remi Exp $
+
+*xinit-1.2.0-r1 (17 Nov 2009)
+
+  17 Nov 2009; Rémi Cardona <remi@gentoo.org>
+  files/0001-Gentoo-specific-customizations.patch, -xinit-1.2.0.ebuild,
+  +xinit-1.2.0-r1.ebuild:
+  update Gentoo patch to fix bug #293342
 
   16 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> xinit-1.2.0.ebuild:
   After carefull testing i found out that xrdb is indeed always required.

@@ -1,6 +1,6 @@
-From fdeff43b7550a63643a1cec743e0f8b838e65af5 Mon Sep 17 00:00:00 2001
+From bba43805362a62c835ce2af34bc1087d9c442b19 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?R=C3=A9mi=20Cardona?= <remi@gentoo.org>
-Date: Thu, 5 Nov 2009 20:46:56 +0100
+Date: Tue, 17 Nov 2009 09:12:02 +0100
 Subject: [PATCH] Gentoo-specific customizations
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Gentoo-specific customizations
  1 files changed, 16 insertions(+), 12 deletions(-)
 
 diff --git a/xinitrc.cpp b/xinitrc.cpp
-index 379b1f3..f7f8784 100644
+index 379b1f3..5b517ea 100644
 --- a/xinitrc.cpp
 +++ b/xinitrc.cpp
 @@ -2,8 +2,8 @@ XCOMM!SHELL_CMD
@@ -30,7 +30,7 @@ index 379b1f3..f7f8784 100644
 +if [ -n "`/etc/X11/chooser.sh`" ]; then
 +	command="`/etc/X11/chooser.sh`"
 +else
-+	command="XTERM -geometry 80x66+0+0 -name login"
++	command=XTERM -geometry 80x66+0+0 -name login
 +	failsafe="yes"
 +fi
  
