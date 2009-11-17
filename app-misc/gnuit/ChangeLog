@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gnuit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/ChangeLog,v 1.4 2009/11/16 20:23:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/ChangeLog,v 1.5 2009/11/17 15:15:51 darkside Exp $
+
+*gnuit-4.9.5-r1 (17 Nov 2009)
+
+  17 Nov 2009; Jeremy Olexa <darkside@gentoo.org> -gnuit-4.9.5.ebuild,
+  +gnuit-4.9.5-r1.ebuild:
+  Just remove the braindead situation of blocking on dev-util[git] by
+  renaming the colliding binary, gitview -> gnuitview
 
   16 Nov 2009; Raúl Porcel <armin76@gentoo.org> gnuit-4.9.5.ebuild:
   sparc stable wrt #287863
