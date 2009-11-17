@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.7 2009/10/27 11:18:26 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0-r2.ebuild,v 1.8 2009/11/17 16:55:02 caster Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
@@ -18,9 +18,8 @@ IUSE=""
 CDEPEND="=dev-java/junit-3*"
 DEPEND="
 	app-arch/unzip
-	!test? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
+	|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	test? (
-		=virtual/jdk-1.4*
 		dev-java/ant-junit
 		dev-java/ant-trax
 	)
@@ -28,6 +27,8 @@ DEPEND="
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 
+# tests fail with 1.5 JDK
+RESTRICT="test"
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
