@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.0.ebuild,v 1.2 2009/11/05 23:39:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.0.ebuild,v 1.3 2009/11/17 23:06:34 lu_zero Exp $
 
 EAPI="2"
 
@@ -59,6 +59,8 @@ src_prepare() {
 	[[ -x /sbin/paxctl ]] && \
 		sed -i 's/^VL_LDFLAGS=$/VL_LDFLAGS=-Wl,-z,execheap/' \
 			Makefile.target
+	# Append CFLAGS while linking
+	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak
 	# avoid strip
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' \
 		Makefile Makefile.target */Makefile
@@ -116,7 +118,7 @@ src_configure() {
 
 	target_list="${softmmu_targets} ${user_targets}"
 
-	filter-flags -fpie -fstack-protector
+	filter-flags -fPIE
 
 	./configure ${conf_opts} \
 		--audio-drv-list="$audio_opts" \

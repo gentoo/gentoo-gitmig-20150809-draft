@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.71 2009/11/05 23:39:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.72 2009/11/17 23:06:34 lu_zero Exp $
+
+  17 Nov 2009; Luca Barbato <lu_zero@gentoo.org> qemu-0.11.0.ebuild:
+  Fix hardened build, thanks to Xake <xake@rymdraket.net> for the patch and
+  the notice in bug #287308
 
   05 Nov 2009; Patrick Lauer <patrick@gentoo.org> qemu-0.11.0.ebuild:
   Fixing bad --disable-gfx-check, closes #286370
