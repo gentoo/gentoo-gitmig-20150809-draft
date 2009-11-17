@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.7-r1.ebuild,v 1.2 2007/08/22 18:39:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.7-r1.ebuild,v 1.3 2009/11/17 21:40:15 robbat2 Exp $
 
 DESCRIPTION="Tools to convert docbook to man and info"
 SRC_URI="mirror://sourceforge/docbook2x/${P}.tar.gz"
@@ -20,7 +20,6 @@ RDEPEND=">=dev-perl/XML-Writer-0.4
 	dev-libs/libxslt"
 
 src_compile () {
-	cd "${S}"
 	econf \
 		--with-xslt-processor=libxslt \
 		--program-suffix=.pl \
@@ -29,7 +28,7 @@ src_compile () {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	elog "To avoid conflict with docbook-sgml-utils, which is much more widely used,"
 	elog "all executables have been renamed to *.pl."
 }
