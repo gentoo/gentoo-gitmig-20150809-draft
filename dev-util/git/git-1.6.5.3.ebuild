@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5.3.ebuild,v 1.1 2009/11/17 09:16:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5.3.ebuild,v 1.2 2009/11/17 21:53:24 robbat2 Exp $
 
 EAPI=2
 
@@ -35,7 +35,6 @@ IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl ppcsha1 tk +threads +webdav x
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
-	app-arch/cpio
 	perl?   ( dev-lang/perl )
 	tk?     ( dev-lang/tk )
 	curl?   (
@@ -63,6 +62,7 @@ RDEPEND="${CDEPEND}
 #   .xml/docbook  --(docbook2texi.pl)--> .texi
 #   .texi         --(makeinfo)---------> .info
 DEPEND="${CDEPEND}
+	app-arch/cpio
 	doc?    (
 		app-text/asciidoc
 		app-text/docbook2X
