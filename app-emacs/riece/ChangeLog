@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.72 2009/10/15 22:03:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.73 2009/11/17 19:56:12 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> riece-6.1.0.ebuild:
+  Marking riece-6.1.0 ppc64 for bug 293034
 
 *riece-6.1.0 (15 Oct 2009)
 
