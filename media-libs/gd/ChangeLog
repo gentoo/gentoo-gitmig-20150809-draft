@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.59 2009/11/11 01:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.60 2009/11/17 16:18:17 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> gd-2.0.35-r1.ebuild:
+  Marking gd-2.0.35-r1 ppc64 for bug 292130
 
   11 Nov 2009; Jeroen Roovers <jer@gentoo.org> gd-2.0.35-r1.ebuild:
   Stable for HPPA (bug #292130).
