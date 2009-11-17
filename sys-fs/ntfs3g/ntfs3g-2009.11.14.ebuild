@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.2531.ebuild,v 1.6 2009/08/21 14:40:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.11.14.ebuild,v 1.1 2009/11/17 05:39:48 chutzpah Exp $
+
+EAPI=2
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -11,29 +13,36 @@ SRC_URI="http://www.ntfs-3g.org/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
-IUSE="debug suid"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="debug hal suid +external-fuse"
 
-RDEPEND=""
-DEPEND=""
+RDEPEND=">=sys-fs/fuse-2.6.0
+	hal? ( sys-apps/hal )"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
+src_configure() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--enable-ldscript \
 		--disable-ldconfig \
+		--with-fuse=$(use external-fuse && echo external || echo internal) \
 		$(use_enable debug)
-	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	prepalldocs
+
+	prepalldocs || die "prepalldocs failed"
 	dodoc AUTHORS ChangeLog CREDITS
 
 	use suid && fperms u+s "/bin/${MY_PN}"
+
+	if use hal; then
+		insinto /etc/hal/fdi/policy/
+		newins "${FILESDIR}/10-ntfs3g.fdi.2009-r1" "10-ntfs3g.fdi"
+	fi
 }
 
 pkg_postinst() {
