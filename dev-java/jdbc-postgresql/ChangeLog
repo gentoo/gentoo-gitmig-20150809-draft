@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.28 2009/11/02 21:56:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.29 2009/11/17 14:50:54 caster Exp $
+
+  17 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  jdbc-postgresql-8.3_p603.ebuild, jdbc-postgresql-8.3_p603-r1.ebuild,
+  -jdbc-postgresql-8.3_p604.ebuild:
+  Remove unused versions, leave versions left for just one arch on its
+  respective keyword only, in order to remove Sun 1.4 java.
 
   02 Nov 2009; Markus Meier <maekke@gentoo.org>
   jdbc-postgresql-8.3_p605.ebuild:
