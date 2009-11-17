@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2-r1.ebuild,v 1.6 2008/04/27 20:03:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2-r1.ebuild,v 1.7 2009/11/17 14:46:49 caster Exp $
 
 JAVA_PKG_IUSE="doc examples java5 source"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dist.codehaus.org/xstream/distributions/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="ppc"
 IUSE=""
 
 COMMON_DEPS="
