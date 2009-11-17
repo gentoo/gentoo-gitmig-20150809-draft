@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-esd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.128 2009/11/17 03:57:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.129 2009/11/17 20:59:21 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking gst-plugins-esd-0.10.16 ppc64 stable for bug 290343
 
 *gst-plugins-esd-0.10.17 (17 Nov 2009)
 
