@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3583 2009/11/17 18:23:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3584 2009/11/17 19:09:03 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Nov 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Mask also java-virtuals/jdk-with-com-sun:1.4
 
   17 Nov 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   Mask sun-based 1.4 jdk and jre.
