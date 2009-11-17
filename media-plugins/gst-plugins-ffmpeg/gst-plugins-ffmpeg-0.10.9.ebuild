@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.9.ebuild,v 1.1 2009/11/17 03:33:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.9.ebuild,v 1.2 2009/11/17 06:02:17 mr_bones_ Exp $
 
 inherit flag-o-matic eutils base
 
@@ -28,7 +28,6 @@ RDEPEND=">=media-libs/gstreamer-0.10.25
 	>=dev-libs/liboil-0.3.6"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
 
 src_compile() {
 	append-flags -fno-strict-aliasing
