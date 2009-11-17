@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.110 2009/11/16 00:27:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.111 2009/11/17 03:57:57 tester Exp $
+
+  17 Nov 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-base-0.10.25.ebuild:
+  Add dep on gst core 0.10.25
 
 *gst-plugins-base-0.10.25 (16 Nov 2009)
 
