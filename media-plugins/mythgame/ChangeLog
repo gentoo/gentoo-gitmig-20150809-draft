@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.57 2009/11/08 02:23:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.58 2009/11/17 23:04:24 cardoe Exp $
+
+  17 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  replace media-tv herd for MythTV
 
 *mythgame-0.22_p22763 (08 Nov 2009)
 
