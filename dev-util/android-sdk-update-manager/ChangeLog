@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/android-sdk-update-manager
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.1 2009/11/17 03:07:20 rich0 Exp $
+
+*android-sdk-update-manager-3 (17 Nov 2009)
+
+  17 Nov 2009; Richard Freeman <rich0@gentoo.org>
+  +android-sdk-update-manager-3.ebuild, +metadata.xml:
+  moved from android-sdk, thanks to Frederic Barthelery for the ebuild
+
