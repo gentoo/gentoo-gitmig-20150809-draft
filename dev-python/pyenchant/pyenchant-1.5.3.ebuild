@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.5.3.ebuild,v 1.5 2009/11/11 01:24:24 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.5.3.ebuild,v 1.6 2009/11/17 18:58:55 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,6 +19,8 @@ IUSE=""
 DEPEND=">=app-text/enchant-1.4.0
 	>=dev-python/setuptools-0.6_alpha11"
 RDEPEND="${DEPEND}"
+# Note: tests should be fixed in >1.5.3
+# http://github.com/rfk/pyenchant/issues/closed/#issue/1
 RESTRICT="test"
 RESTRICT_PYTHON_ABIS="3.*"
 
