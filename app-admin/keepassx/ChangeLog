@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.41 2009/11/16 00:20:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.42 2009/11/17 22:35:37 spatz Exp $
+
+  17 Nov 2009; Dror Levin <spatz@gentoo.org> keepassx-0.4.1.ebuild:
+  Fix pch USE flag handling, bug 271658.
 
   16 Nov 2009; Jeremy Olexa <darkside@gentoo.org> keepassx-0.4.1.ebuild:
   (non maintainer commit) Fix erroneous dep of USE=qt3support, bug 286598

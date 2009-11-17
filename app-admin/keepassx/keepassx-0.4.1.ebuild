@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.1.ebuild,v 1.2 2009/11/16 00:20:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.1.ebuild,v 1.3 2009/11/17 22:35:37 spatz Exp $
 
 EAPI="2"
 
@@ -21,14 +21,12 @@ DEPEND="x11-libs/qt-core:4
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	local conf_add
-	use debug && conf_add="${conf_add} debug" || conf_add="${conf_add} release"
-	use pch && conf_add="${conf_add} PRECOMPILED=1" || conf_add="${conf_add} PRECOMPILED=0"
+	local conf_pch
+	use pch && conf_pch="PRECOMPILED=1" || conf_pch="PRECOMPILED=0"
 
 	eqmake4 ${PN}.pro -recursive \
 		PREFIX="${D}/usr" \
-		CONFIG+="${conf_add}" \
-		|| die "eqmake4 failed."
+		"${conf_pch}"
 }
 
 src_compile() {
