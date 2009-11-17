@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.23 2009/11/10 16:13:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.24 2009/11/17 04:27:51 leio Exp $
+
+*gst-plugins-pulse-0.10.17 (17 Nov 2009)
+
+  17 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-pulse-0.10.15.ebuild, +gst-plugins-pulse-0.10.17.ebuild:
+  Version bump. Support for Pulseaudio PLAY/PAUSE requests, other fixes and
+  improvements
 
   10 Nov 2009; Olivier Crête <tester@gentoo.org>
   gst-plugins-pulse-0.10.16.ebuild:
