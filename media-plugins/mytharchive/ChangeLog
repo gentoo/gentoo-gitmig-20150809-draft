@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.38 2009/11/08 02:08:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.39 2009/11/17 21:42:17 cardoe Exp $
+
+  17 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  replace media-tv herd for MythTV
 
   08 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   -mytharchive-0.21_p17948.ebuild, mytharchive-0.21_p20566.ebuild:
