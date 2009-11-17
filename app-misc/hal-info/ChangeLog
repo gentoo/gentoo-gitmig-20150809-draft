@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.76 2009/11/11 13:43:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.77 2009/11/17 19:59:45 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> hal-info-20090716.ebuild:
+  Marking hal-info-20090716 ppc64 for bug 287411
 
   11 Nov 2009; Jeroen Roovers <jer@gentoo.org> hal-info-20090716.ebuild:
   Stable for HPPA (bug #287411).
