@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.355 2009/11/15 06:02:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.356 2009/11/17 16:34:10 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> php-5.2.11-r1.ebuild:
+  Marking php-5.2.11-r1 ppc64 for bug 292132
 
   15 Nov 2009; Jeroen Roovers <jer@gentoo.org> php-5.2.11-r1.ebuild:
   Stable for HPPA (bug #292132).
