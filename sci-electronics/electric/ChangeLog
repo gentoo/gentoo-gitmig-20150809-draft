@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.32 2009/11/04 00:10:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.33 2009/11/17 18:23:48 calchan Exp $
+
+  17 Nov 2009; Denis Dupeyron <calchan@gentoo.org> electric-8.09.ebuild:
+  Added dependency to electronics-menu. Updated desktop entry.
 
 *electric-8.09 (04 Nov 2009)
 
