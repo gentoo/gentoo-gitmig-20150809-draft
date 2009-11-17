@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-cdio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.27 2009/11/16 05:26:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.28 2009/11/17 21:03:24 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-cdio-0.10.12.ebuild:
+  Marking gst-plugins-cdio-0.10.12 ppc64 stable for bug 290343
 
 *gst-plugins-cdio-0.10.13 (16 Nov 2009)
 
