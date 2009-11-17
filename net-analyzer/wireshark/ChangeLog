@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.200 2009/11/14 11:26:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.201 2009/11/17 13:43:51 pva Exp $
+
+*wireshark-1.2.4 (17 Nov 2009)
+
+  17 Nov 2009; Peter Volkov <pva@gentoo.org> +wireshark-1.2.4.ebuild:
+  Version bump.
 
   14 Nov 2009; Peter Volkov <pva@gentoo.org> wireshark-1.2.3.ebuild:
   USE='profile' and PIE are incompatible, bug 292991, thank Radoslaw Madej
