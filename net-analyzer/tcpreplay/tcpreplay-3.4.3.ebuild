@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.3.ebuild,v 1.2 2009/07/08 10:22:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.3.ebuild,v 1.3 2009/11/17 19:34:32 pva Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_configure() {
 }
 
 src_test() {
-	if hasq userpriv "${FEATURES}"; then
+	if [[ ! ${EUID} -eq 0 ]]; then
 		ewarn "Some tests were disabled due to FEATURES=userpriv"
 		ewarn "To run all tests issue the following command as root:"
 		ewarn " # make -C ${S}/test"
