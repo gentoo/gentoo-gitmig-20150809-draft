@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.0.ebuild,v 1.1 2009/11/05 23:49:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.0-r1.ebuild,v 1.1 2009/11/17 18:20:22 calchan Exp $
 
 EAPI="2"
 
-inherit fdo-mime versionator
+inherit fdo-mime versionator gnome2-utils
 
 MY_P="${PN}-gaf-${PV}"
 DESCRIPTION="GPL Electronic Design Automation (gEDA):gaf core package"
@@ -14,9 +14,12 @@ SRC_URI="http://geda.seul.org/release/v$(get_version_component_range 1-2)/${PV}/
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug doc examples nls stroke threads"
+# Do not stabilize 1.6.0, upstream says it's suboptimal. Calchan, 20091117.
+IUSE="doc examples nls stroke threads"
+# Removed the debug USE flag from above because it's currently broken. Make sure
+# to add it back when upstream fixes it. Calchan, 20091117.
 
-RDEPEND="
+CDEPEND="
 	>=dev-libs/glib-2.12
 	>=x11-libs/gtk+-2.10
 	>=x11-libs/cairo-1.2.0
@@ -24,7 +27,7 @@ RDEPEND="
 	nls? ( virtual/libintl )
 	stroke? ( >=dev-libs/libstroke-0.5.1 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	!sci-libs/libgeda
 	!sci-electronics/geda-gschem
 	!sci-electronics/geda-symbols
@@ -37,6 +40,9 @@ DEPEND="${RDEPEND}
 	x11-misc/shared-mime-info
 	>=dev-util/pkgconfig-0.15.0
 	nls? ( >=sys-devel/gettext-0.16 )"
+
+RDEPEND="${RDEPEND}
+	sci-electronics/electronics-menu"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -67,12 +73,18 @@ src_install() {
 	dodoc AUTHORS NEWS README
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
-	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }

@@ -1,6 +1,14 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.51 2009/11/05 23:49:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.52 2009/11/17 18:20:22 calchan Exp $
+
+*geda-1.6.0-r1 (17 Nov 2009)
+
+  17 Nov 2009; Denis Dupeyron <calchan@gentoo.org> -geda-1.6.0.ebuild,
+  +geda-1.6.0-r1.ebuild:
+  Removed debug USE flag as upstream says it doesn't work in this release
+  and will be fixed for the next one. Fixed icon cache updates. Added
+  dependency to electronics-menu.
 
 *geda-1.6.0 (05 Nov 2009)
 
