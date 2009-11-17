@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.19.ebuild,v 1.4 2009/08/09 16:45:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.19.ebuild,v 1.5 2009/11/17 00:27:04 cla Exp $
 
 inherit eutils
 
@@ -38,6 +38,8 @@ src_unpack()  {
 	fi
 
 	EPATCH_SUFFIX="patch" epatch || die "epatch failed"
+	sed -i -e '/^install-\(bin\|data\):$/s/$/ install-start/' Makefile.in || \
+		die "sed Makefile.in failed"
 }
 
 src_compile() {
@@ -62,12 +64,12 @@ src_compile() {
 		target="debug"
 	fi
 
-	emake -j1 ${target} || die "emake ${target} failed"
+	emake ${target} || die "emake ${target} failed"
 }
 
 src_install() {
 	local a b
-	emake -j1 DEST="${D}"/opt/eggdrop install || die "make install failed"
+	emake DEST="${D}"/opt/eggdrop install || die "make install failed"
 
 	for a in doc/*
 	do
