@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.5.ebuild,v 1.1 2009/11/17 16:14:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.5.ebuild,v 1.2 2009/11/17 16:40:20 jer Exp $
 
 inherit eutils multilib autotools
 
@@ -45,9 +45,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	rm "${D}"/usr/sbin/install-info
-	rm "${D}"/usr/share/man/man?/install-info.?
+	emake DESTDIR="${D}" install || die "emake install failed"
+	rm "${D}"/usr/sbin/install-info || die "rm install-info failed"
 	dodoc ChangeLog INSTALL THANKS TODO
 	keepdir /usr/$(get_libdir)/db/methods/{mnt,floppy,disk}
 	keepdir /usr/$(get_libdir)/db/{alternatives,info,methods,parts,updates}
