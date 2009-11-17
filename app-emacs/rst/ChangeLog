@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.36 2009/11/14 17:42:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst/ChangeLog,v 1.37 2009/11/17 19:54:50 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> rst-0.5-r1.ebuild:
+  Marking rst-0.5-r1 ppc64 for bug 290041
 
   14 Nov 2009; Jeroen Roovers <jer@gentoo.org> rst-0.5-r1.ebuild:
   Stable for HPPA (bug #290041).
