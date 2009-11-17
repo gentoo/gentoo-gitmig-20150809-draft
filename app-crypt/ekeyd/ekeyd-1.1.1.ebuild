@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.0.6-r1.ebuild,v 1.4 2009/11/16 17:12:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.1.ebuild,v 1.1 2009/11/17 23:03:37 flameeyes Exp $
 
 EAPI=2
 
