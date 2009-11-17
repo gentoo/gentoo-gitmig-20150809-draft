@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/augustus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/ChangeLog,v 1.4 2009/10/31 17:55:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/ChangeLog,v 1.5 2009/11/17 02:32:03 weaver Exp $
+
+*augustus-2.3.1 (16 Nov 2009)
+
+  16 Nov 2009; Andrey Kislyuk <weaver@gentoo.org> +augustus-2.3.1.ebuild:
+  Version bump
 
   31 Oct 2009; Markus Meier <maekke@gentoo.org> augustus-2.1.ebuild:
   amd64/x86 stable, bug #290924
