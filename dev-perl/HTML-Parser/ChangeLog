@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Parser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.126 2009/11/16 23:18:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.127 2009/11/17 17:11:05 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> HTML-Parser-3.64.ebuild:
+  Marking HTML-Parser-3.64 ppc64 for bug 290194
 
   16 Nov 2009; Markus Meier <maekke@gentoo.org> HTML-Parser-3.64.ebuild:
   arm stable, bug #290194
