@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.240.0_p31382.ebuild,v 1.1 2009/11/09 14:55:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.240.0_p31382.ebuild,v 1.2 2009/11/17 14:27:25 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -38,7 +38,7 @@ QA_PRESTRIPPED="opt/chromium.org/chrome-linux/libffmpegsumo.so"
 
 pkg_setup() {
 	# Built with SSE2 enabled, so will fail on older processors
-	if ! grep -q sse2 /proc/cpuinfo; then
+	if [[ ${ROOT} == "/" ]] && ! grep -q sse2 /proc/cpuinfo; then
 		die "This binary requires SSE2 support, it will not work on older processors"
 	fi
 }
@@ -77,4 +77,8 @@ pkg_postinst() {
 	ewarn "This binary requires the C++ runtime from >=sys-devel/gcc-4.2"
 	ewarn "If you get the \"version \`GLIBCXX_3.4.9' not found\" error message,"
 	ewarn "switch your active gcc to a version >=4.2 with gcc-config"
+	if [[ ${ROOT} != "/" ]]; then
+		ewarn "This package will not work on processors without SSE2 instruction"
+		ewarn "set support (Intel Pentium III/AMD Athlon or older)."
+	fi
 }
