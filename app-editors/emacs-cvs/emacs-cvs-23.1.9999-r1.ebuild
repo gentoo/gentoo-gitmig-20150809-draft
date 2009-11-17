@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.1.9999-r1.ebuild,v 1.2 2009/08/20 07:40:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.1.9999-r1.ebuild,v 1.3 2009/11/17 10:09:47 ulm Exp $
 
 EAPI=2
 
@@ -30,8 +30,8 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is X11 W3C unicode"
 SLOT="23"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="alsa dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 RESTRICT="strip"
 
 RDEPEND="sys-libs/ncurses
@@ -46,6 +46,7 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
+		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gif? ( media-libs/giflib )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )
@@ -89,6 +90,8 @@ src_prepare() {
 		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 		echo
+	else
+		EPATCH_SUFFIX=patch epatch
 	fi
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
@@ -136,6 +139,7 @@ src_configure() {
 
 	if use X; then
 		myconf="${myconf} --with-x"
+		myconf="${myconf} $(use_with gconf)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
 		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
