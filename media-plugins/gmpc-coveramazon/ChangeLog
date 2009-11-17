@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-coveramazon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/ChangeLog,v 1.29 2009/06/09 19:03:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/ChangeLog,v 1.30 2009/11/17 16:49:52 angelos Exp $
+
+  17 Nov 2009; Christoph Mende <angelos@gentoo.org>
+  gmpc-coveramazon-0.18.0.ebuild:
+  Adding blocker for gmpc-0.19 since the plugin API changed (bug 293287)
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   gmpc-coveramazon-0.18.0.ebuild:
