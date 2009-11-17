@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-x264
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.7 2009/09/07 05:09:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.8 2009/11/17 03:54:02 tester Exp $
+
+*gst-plugins-x264-0.10.13 (17 Nov 2009)
+
+  17 Nov 2009; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-x264-0.10.13.ebuild,
+  +files/gst-plugins-x264-0.10.13-x264-api-change-1.patch:
+  Version bump
 
 *gst-plugins-x264-0.10.12 (07 Sep 2009)
 
