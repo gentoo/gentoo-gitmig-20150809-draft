@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.6.ebuild,v 1.3 2009/11/03 20:39:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.6.ebuild,v 1.4 2009/11/17 16:18:19 ranger Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -48,7 +48,7 @@ SRC_URI="x86? ( ${X86_JRE_DIST} )
 	ppc? ( ${PPC_JRE_DIST} )
 	ppc64? ( ${PPC64_JRE_DIST} )"
 LICENSE="IBM-J1.6"
-KEYWORDS="-* ~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="-* ~amd64 ppc ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa nsplugin odbc"
 
