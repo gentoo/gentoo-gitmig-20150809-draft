@@ -1,22 +1,22 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zeus-jscl/zeus-jscl-1.60.ebuild,v 1.1 2009/04/04 18:34:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zeus-jscl/zeus-jscl-1.08.ebuild,v 1.1 2009/11/17 19:07:25 weaver Exp $
 
-EAPI=2
+EAPI="2"
 
 JAVA_PKG_IUSE="source doc"
 
-inherit java-pkg-2 java-ant-2 versionator
+inherit java-pkg-2 java-ant-2
 
-MY_PV=$(replace_all_version_separators '_')
+MY_P="${PN}_v${PV//./_}"
 
 DESCRIPTION="Zeus Java Swing Components Library"
 HOMEPAGE="http://sourceforge.net/projects/zeus-jscl/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}_v${MY_PV}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND=""
@@ -26,10 +26,10 @@ DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
 	${COMMON_DEPEND}"
 
-S="${WORKDIR}/${PN}_v${MY_PV}"
+S="${WORKDIR}/${PN}"
 
 src_install() {
-	java-pkg_newjar lib/${P}.jar ${PN}.jar
+	java-pkg_newjar lib/${PN}.jar ${PN}.jar
 	use source && java-pkg_dosrc src
 	use doc && java-pkg_dodoc doc
 }
