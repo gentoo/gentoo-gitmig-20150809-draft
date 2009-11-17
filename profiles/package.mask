@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10842 2009/11/17 03:53:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10843 2009/11/17 14:46:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -853,11 +853,6 @@ kde-base/noatun-plugins
 dev-python/python-gammu
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
-# KDE3-only. Doesn't compile wrt bug #262318.
-# Masked for removal in 30 days.
-kde-misc/kio-locate
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # Masked for testing. Doesn't work with current Thunar.
 # See, http://bugs.gentoo.org/show_bug.cgi?id=289867
 >=xfce-base/exo-0.5
@@ -873,11 +868,6 @@ kde-misc/kio-locate
 # Will be unmasked when felt “ready” (and openrc'll support it as
 # guest).
 app-emulation/lxc
-
-# Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2009)
-# KDE3-only. Doesn't work with unicode, which is Gentoo
-# default. Masked for removal in 30 days. Bug #221115.
-app-mobilephone/kmobiletools
 
 # Raúl Porcel <armin76@gentoo.org> (22 Oct 2009)
 # Not needed anymore, vanilla kernel works
