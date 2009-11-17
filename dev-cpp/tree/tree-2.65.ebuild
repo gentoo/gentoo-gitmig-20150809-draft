@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.65.ebuild,v 1.1 2009/06/26 22:16:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.65.ebuild,v 1.2 2009/11/17 19:51:29 halcy0n Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.aei.mpg.de/~peekas/tree/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc"
 
 DEPEND=""
