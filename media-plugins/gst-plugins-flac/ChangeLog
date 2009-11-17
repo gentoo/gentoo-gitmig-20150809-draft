@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.121 2009/11/17 04:04:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.122 2009/11/17 20:59:41 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking gst-plugins-flac-0.10.16 ppc64 stable for bug 290343
 
 *gst-plugins-flac-0.10.17 (17 Nov 2009)
 
