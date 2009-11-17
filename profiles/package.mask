@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10841 2009/11/17 01:27:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10842 2009/11/17 03:53:44 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -908,10 +908,6 @@ media-sound/paman
 # Michael Sterrett <mr_bones_@gentoo.org> (19 Oct 2009)
 # Homepage is gone; requires dev-python/numeric; last released in 2006
 games-rpg/galaxymage
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 Oct 2009)
-# No new x264 support.
-media-plugins/gst-plugins-x264
 
 # Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
 # Obsolete Musepack SV7 format support. Install

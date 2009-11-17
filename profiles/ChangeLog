@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3581 2009/11/16 20:33:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3582 2009/11/17 03:53:44 tester Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Nov 2009; Olivier Crête <tester@gentoo.org> package.mask:
+  Unmask gst-plugins-x264, new version is coming and stable still works fine
 
   16 Nov 2009; Jeremy Olexa <darkside@gentoo.org> updates/4Q-2009:
   move app-misc/git app-misc/gnuit, part of bug 287863
