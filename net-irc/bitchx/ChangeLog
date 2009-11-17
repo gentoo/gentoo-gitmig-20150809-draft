@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bitchx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.68 2008/03/11 18:07:32 cla Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.69 2009/11/17 00:10:50 cla Exp $
+
+  17 Nov 2009; Dawid Węgliński <cla@gentoo.org> bitchx-1.1-r4.ebuild,
+  +files/1.1/bitchx-1.1-open-mode.patch:
+  Pass mode to O_CREAT bug #285374
 
   11 Mar 2008; Dawid Węgliński <cla@gentoo.org> bitchx-1.1-r4.ebuild:
   Use sane unpack(), add lowercase symlink.

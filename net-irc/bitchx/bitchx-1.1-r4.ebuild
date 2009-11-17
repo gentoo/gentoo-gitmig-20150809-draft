@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.4 2008/03/11 18:07:32 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r4.ebuild,v 1.5 2009/11/17 00:10:50 cla Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}/${P}-inline.patch
 	epatch "${FILESDIR}"/${PV}/${P}-headers.patch
 	epatch "${FILESDIR}"/${PV}/${P}-build.patch
+	epatch "${FILESDIR}"/${PV}/${P}-open-mode.patch
 	epatch "${FILESDIR}"/fPIC.patch
 	epatch "${FILESDIR}"/BitchX-64bit.patch
 
