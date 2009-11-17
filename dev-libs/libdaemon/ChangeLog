@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.62 2009/11/11 13:41:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.63 2009/11/17 19:57:36 ranger Exp $
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org> libdaemon-0.13-r1.ebuild:
+  Marking libdaemon-0.13-r1 ppc64 for bug 286670
 
   11 Nov 2009; Jeroen Roovers <jer@gentoo.org> libdaemon-0.13-r1.ebuild:
   Stable for HPPA (bug #286670).
