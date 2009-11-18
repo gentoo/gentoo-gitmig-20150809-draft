@@ -64,6 +64,7 @@ wicd
 opencore-amr
 nut
 sctp
+bs2b
 
 # Stuff that doesn't compile on ia64
 chicken

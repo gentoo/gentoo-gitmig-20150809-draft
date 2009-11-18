@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.57 2009/11/05 16:23:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.58 2009/11/18 17:52:24 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  add bs2b to use.mask
 
   05 Nov 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add sctp to use.mask
