@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.65 2009/10/22 00:16:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.66 2009/11/18 04:24:48 robbat2 Exp $
+
+  18 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  prelink-20090709.ebuild:
+  prelink does not pass tests on arm, and acts weird. /temp/ccChjHpK.s:
+  Assembler messages: /temp/ccChjHpK.s:86: Error: junk at end of line, first
+  unrecognized character is `,' cp: cannot stat `shuffle2': No such file or
+  directory FAIL: shuffle2.sh
 
   22 Oct 2009; Mike Frysinger <vapier@gentoo.org> files/prelink.cron:
   Call ionice in the cron script #289322 by Johannes Buchner.
