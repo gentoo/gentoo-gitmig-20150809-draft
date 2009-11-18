@@ -1,6 +1,12 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.1 2009/11/01 10:43:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.2 2009/11/18 06:37:28 scarabeus Exp $
+
+*rekonq-0.3.0 (18 Nov 2009)
+
+  18 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -rekonq-0.2.90.ebuild, +rekonq-0.3.0.ebuild:
+  Version bump.
 
 *rekonq-0.2.90 (01 Nov 2009)
 
