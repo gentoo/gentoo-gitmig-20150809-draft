@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.7 2009/11/12 02:06:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.8 2009/11/18 09:56:05 abcd Exp $
+
+*schroot-1.2.3-r4 (18 Nov 2009)
+
+  18 Nov 2009; Jonathan Callen <abcd@gentoo.org> -schroot-1.2.3-r3.ebuild,
+  +schroot-1.2.3-r4.ebuild, files/schroot.initd:
+  Fix init script to actually end sessions when requested instead of recover
+  them (copy & paste error)
 
 *schroot-1.2.3-r3 (12 Nov 2009)
 

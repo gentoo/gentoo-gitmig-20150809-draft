@@ -5,46 +5,37 @@ depend() {
 	after net netmount
 }
 
-recover_sessions() {
-	einfo "Recovering schroot sessions"
-	eindent
-	local chroot
-	local chroots="$(schroot --all-sessions --list --quiet)"
-	if [ -n "${chroots}" ]; then
-		for chroot in ${chroots}; do
-			ebegin "$chroot"
-			schroot --chroot=$chroot --recover-session
-			eend $?
-		done
-	else
-		einfo "(none)"
-	fi
-	eoutdent
-	einfo "...done"
-}
-
-end_sessions() {
-	einfo "Ending schroot sessions"
-	eindent
-	local chroot
-	local chroots="$(schroot --all-sessions --list --quiet)"
-	if [ -n "${chroots}" ]; then
-		for chroot in ${chroots}; do
-			ebegin "$chroot"
-			schroot --chroot=$chroot --recover-session
-			eend $?
-		done
-	else
-		einfo "(none)"
-	fi
-	eoutdent
-	einfo "...done"
-}
-
 start() {
-	if [ "${SESSIONS_RECOVER}" = "end" ]; then
-		end_sessions
+	local msg param
+	case "${SESSIONS_RECOVER}" in
+		end)
+			msg="Ending"
+			param="--end-session"
+			;;
+		recover|"")
+			msg="Recovering"
+			param="--recover-session"
+			;;
+		*)
+			ewarn "Invalid value \"$SESSIONS_RECOVER\" for \$SESSIONS_RECOVER, using \"recover\""
+			msg="Recovering"
+			param="--recover-session"
+			;;
+	esac
+
+	einfo "$msg schroot sessions"
+	eindent
+	local chroot
+	local chroots="$(schroot --all-sessions --list --quiet)"
+	if [ -n "$chroots" ]; then
+		for chroot in $chroots; do
+			ebegin "$chroot"
+			schroot --chroot=$chroot $param
+			eend $?
+		done
 	else
-		recover_sessions
+		einfo "(none)"
 	fi
+	eoutdent
+	einfo "...done"
 }

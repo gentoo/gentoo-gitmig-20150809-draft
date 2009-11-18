@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r3.ebuild,v 1.1 2009/11/12 02:06:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r4.ebuild,v 1.1 2009/11/18 09:56:05 abcd Exp $
 
 EAPI="2"
 
