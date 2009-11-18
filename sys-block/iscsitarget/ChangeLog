@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.30 2009/11/18 12:48:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.31 2009/11/18 13:00:04 flameeyes Exp $
+
+  18 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -iscsitarget-1.4.18.ebuild:
+  Remove older version, not stable candidate.
 
 *iscsitarget-1.4.19 (18 Nov 2009)
 
