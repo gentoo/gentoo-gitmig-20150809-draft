@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/atari800
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.27 2009/10/24 14:46:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.28 2009/11/18 18:46:25 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> atari800-2.1.0.ebuild:
+  sparc stable wrt #288658
 
   24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> atari800-2.1.0.ebuild:
   Stable on alpha, bug #288658
