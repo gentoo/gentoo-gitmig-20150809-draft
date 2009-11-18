@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.75 2009/11/16 04:48:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.76 2009/11/18 20:53:38 wired Exp $
+
+*qt-core-4.6.0_rc1 (18 Nov 2009)
+
+  18 Nov 2009; Alex Alexander <wired@gentoo.org>
+  -qt-core-4.6.0_beta1.ebuild, +qt-core-4.6.0_rc1.ebuild:
+  added 4.6.0_rc1, removed 4.6.0_beta1
 
   16 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/0167-fix-group-reading.diff,
