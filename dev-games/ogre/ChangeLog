@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.58 2009/11/05 01:42:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.59 2009/11/18 14:15:44 tupone Exp $
+
+  18 Nov 2009; Alfredo Tupone <tupone@gentoo.org> ogre-1.6.3.ebuild,
+  +files/ogre-1.6.3-boost.patch:
+  Fix build with dev-libs/boost-1.40 Bug #292874 by Sebastian Mingramm
 
   05 Nov 2009; Tristan Heaven <nyhm@gentoo.org> ogre-1.6.3.ebuild,
   metadata.xml:
