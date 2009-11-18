@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.142 2009/11/16 13:05:21 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.143 2009/11/18 20:14:20 ranger Exp $
+
+  18 Nov 2009; Brent Baude <ranger@gentoo.org> libtorrent-0.12.5.ebuild:
+  Marking libtorrent-0.12.5 ppc64 for bug 291036
 
   16 Nov 2009; Dawid Węgliński <cla@gentoo.org> libtorrent-0.12.5.ebuild:
   Stable on amd64 (bug #291036)
