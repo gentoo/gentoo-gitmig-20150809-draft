@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.4.ebuild,v 1.2 2009/10/02 14:10:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.5-r1.ebuild,v 1.1 2009/11/18 20:28:01 remi Exp $
 
 EAPI="2"
 
@@ -9,8 +9,8 @@ EAPI="2"
 
 inherit x-modular multilib versionator
 
-SRC_URI="${SRC_URI}"
-#	mirror://gentoo/${P}-gentoo-patches-01.tar.bz2
+SRC_URI="${SRC_URI}
+	mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
 
 OPENGL_DIR="xorg-x11"
 
@@ -19,7 +19,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 
 IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_SERVERS} tslib hal ipv6 minimal nptl sdl"
-RDEPEND="hal? ( sys-apps/hal )
+
+RDEPEND="
+	hal? ( sys-apps/hal )
 	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
 	dev-libs/openssl
 	>=x11-libs/libXfont-1.4.0
@@ -99,12 +101,11 @@ EPATCH_FORCE="yes"
 EPATCH_SUFFIX="patch"
 
 # These have been sent upstream
-#UPSTREAMED_PATCHES=(
-#	"${WORKDIR}/patches/"
-#	)
+UPSTREAMED_PATCHES=(
+	"${WORKDIR}/patches/"
+	)
 
 PATCHES=(
-	"${FILESDIR}/1.6.4-re-fix-DGA-removal.patch"
 	"${UPSTREAMED_PATCHES[@]}"
 	)
 
