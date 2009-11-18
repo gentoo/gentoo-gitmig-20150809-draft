@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.68 2009/10/31 22:49:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.69 2009/11/18 00:27:43 cardoe Exp $
+
+  18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  replace media-tv herd for MythTV
 
 *mythweb-0.22_rc22667 (31 Oct 2009)
 
