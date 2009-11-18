@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.7 2009/05/05 08:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.8 2009/11/18 20:07:57 ulm Exp $
 
 WANT_AUTOMAKE="1.6"
 
@@ -10,7 +10,7 @@ MY_P=openMotif-${PV}
 DESCRIPTION="Legacy Open Motif libraries for old binaries"
 HOMEPAGE="http://www.motifzone.org/"
 SRC_URI="ftp://ftp.ics.com/openmotif/2.2/${PV}/src/${MY_P}.tar.gz
-	mirror://gentoo/openmotif-${PV}-patches-2.tar.bz2"
+	mirror://gentoo/openmotif-${PV}-patches-3.tar.bz2"
 
 LICENSE="MOTIF libXpm"
 SLOT="2.2"
