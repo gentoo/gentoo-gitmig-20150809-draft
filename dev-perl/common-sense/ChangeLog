@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/common-sense
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.6 2009/11/10 10:58:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.7 2009/11/18 18:37:30 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> common-sense-2.01.ebuild,
+  common-sense-2.02.ebuild:
+  Add ~sparc wrt #286168
 
 *common-sense-2.02 (10 Nov 2009)
 
