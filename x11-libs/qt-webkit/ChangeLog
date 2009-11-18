@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.67 2009/11/16 04:54:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.68 2009/11/18 15:36:39 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.5.3-r1.ebuild:
+  Add ~sparc
 
   16 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/0249-webkit-stale-frame-pointer.diff,
