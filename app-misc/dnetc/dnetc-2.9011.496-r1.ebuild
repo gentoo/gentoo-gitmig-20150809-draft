@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.496-r1.ebuild,v 1.9 2009/11/18 03:14:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.496-r1.ebuild,v 1.10 2009/11/18 15:02:07 jer Exp $
 
 inherit eutils
 
@@ -16,10 +16,12 @@ LICENSE="distributed.net"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RESTRICT="mirror strip"
+RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="net-dns/bind-tools"
+
+QA_PRESTRIPPED="opt/distributed.net/dnetc"
 
 if use amd64; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-amd64-elf"

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.19 2009/11/18 03:14:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.20 2009/11/18 15:02:07 jer Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -13,10 +13,12 @@ LICENSE="distributed.net"
 SLOT="0"
 KEYWORDS="~mips"
 IUSE=""
-RESTRICT="mirror strip"
+RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="net-dns/bind-tools"
+
+QA_PRESTRIPPED="opt/distributed.net/dnetc"
 
 S="${WORKDIR}/dnetc${MIN_PV}-ps2linux-mipsel"
 
