@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3585 2009/11/17 19:54:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3586 2009/11/18 20:05:53 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2009; Alex Alexander <wired@gentoo.org> package.mask:
+  masked Qt 4.6.0 rc before adding for testing
 
   17 Nov 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Masked app-text/ghostscript-gnu, bug 264614.
