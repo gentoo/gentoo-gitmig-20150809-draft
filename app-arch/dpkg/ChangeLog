@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.107 2009/11/18 14:50:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.108 2009/11/18 15:52:14 yvasilev Exp $
+
+  18 Nov 2009; Yuri Vasilevski <yvasilev@gentoo.org> -dpkg-1.15.5.1.ebuild:
+  Removed broken (due to lack of perl 5.10) version.
 
 *dpkg-1.15.5.2 (18 Nov 2009)
 
