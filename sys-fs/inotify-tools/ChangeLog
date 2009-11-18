@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.28 2009/11/04 16:06:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.29 2009/11/18 01:36:01 jer Exp $
+
+  18 Nov 2009; Jeroen Roovers <jer@gentoo.org> inotify-tools-3.13-r1.ebuild:
+  Stable for HPPA (bug #275057).
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org>
   inotify-tools-3.13-r1.ebuild:
