@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.52 2009/11/17 20:59:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.53 2009/11/18 22:10:27 fauli Exp $
+
+  18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-dv-0.10.16.ebuild:
+  x86 stable, bug 290343
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking gst-plugins-dv-0.10.16 ppc64 stable for bug 290343
