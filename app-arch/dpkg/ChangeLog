@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.106 2009/11/17 18:56:21 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.107 2009/11/18 14:50:54 jer Exp $
+
+*dpkg-1.15.5.2 (18 Nov 2009)
+
+  18 Nov 2009; Jeroen Roovers <jer@gentoo.org> +dpkg-1.15.5.2.ebuild:
+  Version bump (fixes bug 293516).
 
 *dpkg-1.15.5.1 (17 Nov 2009)
 
