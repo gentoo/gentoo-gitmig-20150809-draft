@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10848 2009/11/17 19:54:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10849 2009/11/18 12:41:41 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,9 +47,11 @@ dev-java/blackdown-jdk
 =java-virtuals/jdk-with-com-sun-1.4*
 
 # Rémi Cardona <remi@gentoo.org> (15 Nov 2009)
+# Tomáš Chvátal <scarabeus@gentoo.org> (18 Nov 2009)
 # Broken since xorg-server 1.5 stabilization
-# see bugs #248529 and #248531
+# see bugs #248529 and #248531 and #275825
 # Masked for removal in 7 days
+x11-drivers/xf86-video-vga
 x11-drivers/xf86-video-imstt
 x11-drivers/xf86-video-vermilion
 
