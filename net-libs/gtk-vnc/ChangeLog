@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.37 2009/10/22 22:33:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.38 2009/11/18 04:44:59 jer Exp $
+
+  18 Nov 2009; Jeroen Roovers <jer@gentoo.org> gtk-vnc-0.3.8-r1.ebuild:
+  Stable for HPPA (bug #279511).
 
 *gtk-vnc-0.3.10 (22 Oct 2009)
 
