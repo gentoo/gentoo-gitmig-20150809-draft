@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.6.ebuild,v 1.5 2009/11/18 15:57:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.7.ebuild,v 1.1 2009/11/18 15:57:14 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.dovecot.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1" # MIT too?
-KEYWORDS="~alpha amd64 x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 
 IUSE="berkdb bzip2 caps cydir dbox doc ipv6 kerberos ldap +maildir managesieve mbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
 
@@ -172,7 +172,7 @@ src_install () {
 		sed -i -e '/passdb pam/, /^[ \t]*}/ s|#args = dovecot|args = "\*"|' \
 			"${conf}" || die "failed to update PAM settings in dovecot.conf"
 		# mailbase does not provide a managesieve pam file
-		use managesieve && dosym imap /etc/pam.d/sieve
+		use managesieve && dosym imap /etc/pam.d/managesieve
 	fi
 
 	# Listen on ipv6 and ipv4
