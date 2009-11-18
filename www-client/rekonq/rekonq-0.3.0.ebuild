@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.3.0.ebuild,v 1.1 2009/11/18 06:37:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.3.0.ebuild,v 1.2 2009/11/18 06:39:10 scarabeus Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
 # Seriously non-standart behaviour
 #KDE_LINGUAS="da de en en_GB es fr it pt pt_BR ru sr sv tr uk"
 #KDE_LINGUAS_DIR="i18n"
-#KDE_DOC_DIRS="docs"
+KDE_DOC_DIRS="docs"
 inherit kde4-base
 
 DESCRIPTION="A browser based on qt-webkit"
