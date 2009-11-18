@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.29 2009/10/18 11:36:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.30 2009/11/18 12:48:17 flameeyes Exp $
+
+*iscsitarget-1.4.19 (18 Nov 2009)
+
+  18 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iscsitarget-1.4.19.ebuild:
+  Version bump; remove initiators.deny since upstream deprecated it; install
+  more documentation.
 
 *iscsitarget-1.4.18 (18 Oct 2009)
 
