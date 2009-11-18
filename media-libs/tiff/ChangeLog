@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.139 2009/11/18 02:22:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.140 2009/11/18 17:58:31 ranger Exp $
+
+  18 Nov 2009; Brent Baude <ranger@gentoo.org> tiff-3.9.2.ebuild:
+  Marking tiff-3.9.2 ppc64 for bug 291612
 
   18 Nov 2009; Jeroen Roovers <jer@gentoo.org> tiff-3.9.2.ebuild:
   Stable for HPPA (bug #291612).
