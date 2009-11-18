@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.18 2009/11/06 00:10:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.19 2009/11/18 18:43:37 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> py-1.0.2.ebuild:
+  sparc stable wrt #288116
 
 *py-1.1.0 (06 Nov 2009)
 
