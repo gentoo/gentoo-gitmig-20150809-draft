@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.22 2009/11/15 23:26:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.23 2009/11/18 22:18:41 voyageur Exp $
+
+*chromium-4.0.251.0 (18 Nov 2009)
+
+  18 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +chromium-4.0.251.0.ebuild:
+  Bump to fix bug #293539 (crash at startup for stable amd64)
 
 *chromium-4.0.248.0 (15 Nov 2009)
 
