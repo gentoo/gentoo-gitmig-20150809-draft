@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dchroot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/ChangeLog,v 1.4 2007/07/08 21:37:19 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/ChangeLog,v 1.5 2009/11/18 16:58:35 vostorga Exp $
+
+  18 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> dchroot-0.12.1.ebuild:
+  Respecting CC variable, respecting LDFLAGS, bug #293575
 
 *dchroot-0.12.1 (08 Jul 2007)
 
