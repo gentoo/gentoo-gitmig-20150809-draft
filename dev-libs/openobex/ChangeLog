@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.63 2009/10/18 00:31:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.64 2009/11/18 18:38:10 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> openobex-1.5.ebuild:
+  sparc stable wrt #274854
 
   18 Oct 2009; Mike Frysinger <vapier@gentoo.org> openobex-1.5.ebuild:
   Switch to virtual/libusb:0.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.10 2009/10/18 00:31:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.11 2009/11/18 18:38:10 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86"
 IUSE="bluetooth debug irda syslog usb"
 
 RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
