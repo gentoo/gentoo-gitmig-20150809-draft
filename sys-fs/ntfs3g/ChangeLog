@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.86 2009/11/17 05:39:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.87 2009/11/18 22:10:52 chutzpah Exp $
+
+  18 Nov 2009; Patrick McLean <chutzpah@gentoo.org>
+  ntfs3g-2009.11.14.ebuild:
+  Add DEPEND on sys-apps/attr and acl USE flag (Bug #293476).
 
 *ntfs3g-2009.11.14 (17 Nov 2009)
 
