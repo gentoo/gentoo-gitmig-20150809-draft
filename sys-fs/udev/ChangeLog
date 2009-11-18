@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.508 2009/11/13 19:51:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.509 2009/11/18 21:32:47 zzam Exp $
+
+  18 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> udev-147.ebuild,
+  udev-9999.ebuild:
+  Add depend to tree for test-suite. Bug #292787.
 
   13 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> files/136/udev.initd,
   files/147/udev.initd:

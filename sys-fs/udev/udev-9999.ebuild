@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.21 2009/11/13 19:34:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.22 2009/11/18 21:32:47 zzam Exp $
 
 EAPI="1"
 
@@ -34,7 +34,8 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 
 DEPEND="${COMMON_DEPEND}
 	extras? ( dev-util/gperf )
-	>=sys-kernel/linux-headers-2.6.29"
+	>=sys-kernel/linux-headers-2.6.29
+	test? ( app-text/tree )"
 
 RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
