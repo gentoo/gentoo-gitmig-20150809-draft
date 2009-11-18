@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4_pre20091118.ebuild,v 1.2 2009/11/18 14:49:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4_pre20091119.ebuild,v 1.1 2009/11/18 20:53:40 spatz Exp $
 
 EAPI="2"
 
@@ -50,8 +50,6 @@ src_configure() {
 	if use xine; then
 		mycmakeargs="${mycmakeargs}
 			$(cmake-utils_use_with xcb)"
-	else
-		sed -i -e '/xine/d' CMakeLists.txt || die "sed failed"
 	fi
 
 	cmake-utils_src_configure
