@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-modplug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.12 2009/11/17 21:06:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.13 2009/11/18 23:04:36 fauli Exp $
+
+  18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-modplug-0.10.14.ebuild:
+  x86 stable, bug 290343
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org>
   gst-plugins-modplug-0.10.14.ebuild:
