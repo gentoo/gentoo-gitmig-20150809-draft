@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.74 2009/11/16 14:41:04 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.75 2009/11/18 18:20:48 fauli Exp $
+
+  18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  unrealircd-3.2.8.1.ebuild:
+  stable x86, security bug 260806
 
   16 Nov 2009; Robert Buchholz <rbu@gentoo.org> +unrealircd-3.2.7-r2.ebuild:
   Re-add old stable until the new one is stable
