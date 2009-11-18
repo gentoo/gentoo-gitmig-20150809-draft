@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20071113-r1.ebuild,v 1.3 2009/05/07 20:10:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20071113-r1.ebuild,v 1.4 2009/11/18 20:48:09 zzam Exp $
 
 inherit vdr-plugin
 
@@ -18,7 +18,6 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.34
-		>=media-libs/libdvdcss-1.2.8
 		>=media-libs/libdvdnav-0.1.9
 		>=media-libs/libdvdread-0.9.4
 		>=media-libs/a52dec-0.7.4"
