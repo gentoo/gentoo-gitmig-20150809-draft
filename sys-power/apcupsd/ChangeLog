@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.56 2009/09/24 22:38:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.57 2009/11/18 18:36:15 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> apcupsd-3.14.6.ebuild:
+  sparc stable wrt #280300
 
   24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   apcupsd-3.14.7.ebuild:
