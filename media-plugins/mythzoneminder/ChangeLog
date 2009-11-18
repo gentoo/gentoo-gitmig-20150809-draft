@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythzoneminder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.5 2009/11/08 04:08:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.6 2009/11/18 00:24:21 cardoe Exp $
+
+  18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add MythTV herd
 
 *mythzoneminder-0.22_p22763 (08 Nov 2009)
 
