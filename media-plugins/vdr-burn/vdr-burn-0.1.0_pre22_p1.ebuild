@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre22_p1.ebuild,v 1.1 2009/10/10 10:07:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre22_p1.ebuild,v 1.2 2009/11/18 21:04:07 zzam Exp $
 
 EAPI="2"
 
@@ -27,7 +27,6 @@ PATCHES=("${FILESDIR}/vdr-burn-0.1.0_pre22_p1-makefile.diff"
 
 DEPEND=">=media-video/vdr-1.6
 		>=dev-libs/libcdio-0.71
-		>=dev-libs/boost-1.32.0
 		media-libs/gd[png,truetype,jpeg]"
 
 RDEPEND="${DEPEND}
@@ -41,6 +40,10 @@ RDEPEND="${DEPEND}
 		virtual/cdrtools
 		>=app-cdr/dvd+rw-tools-5.21
 		projectx? ( >=media-video/projectx-0.90.4.00-r3 )"
+
+# depends that are not rdepend
+DEPEND="${DEPEND}
+		>=dev-libs/boost-1.32.0"
 
 VDR_CONFD_FILE="${FILESDIR}/confd"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon.sh"

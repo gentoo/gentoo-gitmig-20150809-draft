@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.43 2009/10/10 10:07:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.44 2009/11/18 21:04:07 zzam Exp $
+
+  18 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.1.0_pre22_p1.ebuild:
+  boost is no RDEPEND, Bug #293073.
 
 *vdr-burn-0.1.0_pre22_p1 (10 Oct 2009)
 
