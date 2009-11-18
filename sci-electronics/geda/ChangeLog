@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.52 2009/11/17 18:20:22 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.53 2009/11/18 00:55:09 calchan Exp $
+
+  18 Nov 2009; Denis Dupeyron <calchan@gentoo.org> geda-1.6.0-r1.ebuild:
+  Re-enabled debug after discussion with Stefan Salewski.
 
 *geda-1.6.0-r1 (17 Nov 2009)
 

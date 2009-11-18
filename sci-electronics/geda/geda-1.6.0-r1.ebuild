@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.0-r1.ebuild,v 1.1 2009/11/17 18:20:22 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.0-r1.ebuild,v 1.2 2009/11/18 00:55:09 calchan Exp $
 
 EAPI="2"
 
@@ -14,10 +14,7 @@ SRC_URI="http://geda.seul.org/release/v$(get_version_component_range 1-2)/${PV}/
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-# Do not stabilize 1.6.0, upstream says it's suboptimal. Calchan, 20091117.
-IUSE="doc examples nls stroke threads"
-# Removed the debug USE flag from above because it's currently broken. Make sure
-# to add it back when upstream fixes it. Calchan, 20091117.
+IUSE="debug doc examples nls stroke threads"
 
 CDEPEND="
 	>=dev-libs/glib-2.12
