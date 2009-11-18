@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4_pre20091119.ebuild,v 1.1 2009/11/18 20:53:40 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4_pre20091119.ebuild,v 1.2 2009/11/18 21:49:26 spatz Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.lzma"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug gstreamer +xcb +xine"
+IUSE="alsa debug gstreamer +xcb +xine"
 
 RDEPEND="
 	!kde-base/phonon-xine
@@ -25,6 +25,7 @@ RDEPEND="
 	gstreamer? (
 		media-libs/gstreamer
 		media-libs/gst-plugins-base
+		alsa? ( media-libs/alsa-lib )
 	)
 	xine? (
 		>=media-libs/xine-lib-1.1.15-r1[xcb?]
@@ -43,14 +44,11 @@ pkg_setup() {
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
+		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with gstreamer GStreamer)
 		$(cmake-utils_use_with gstreamer GStreamerPlugins)
-		$(cmake-utils_use_with xine)"
-
-	if use xine; then
-		mycmakeargs="${mycmakeargs}
-			$(cmake-utils_use_with xcb)"
-	fi
+		$(cmake-utils_use_with xine)
+		$(cmake-utils_use_with xcb)"
 
 	cmake-utils_src_configure
 }
