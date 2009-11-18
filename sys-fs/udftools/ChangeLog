@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udftools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.26 2009/10/19 14:05:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.27 2009/11/18 18:44:26 armin76 Exp $
+
+  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> udftools-1.0.0b-r9.ebuild:
+  sparc/x86 stable wrt #289721
 
   19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   udftools-1.0.0b-r9.ebuild:
