@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.2.0.ebuild,v 1.6 2009/07/13 12:59:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.2.0.ebuild,v 1.7 2009/11/18 04:13:03 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -16,9 +16,8 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 RESTRICT="test"
 
-RDEPEND="x11-libs/vte
+DEPEND="x11-libs/vte
 	dev-scheme/guile"
-DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
