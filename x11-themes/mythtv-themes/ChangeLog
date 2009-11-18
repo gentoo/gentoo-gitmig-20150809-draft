@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.63 2009/11/16 05:20:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.64 2009/11/18 00:25:14 cardoe Exp $
+
+  18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  replace media-tv herd for MythTV
 
 *mythtv-themes-0.22_p22793 (16 Nov 2009)
 
