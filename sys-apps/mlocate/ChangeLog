@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.51 2009/11/18 10:25:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.52 2009/11/18 10:29:14 fauli Exp $
+
+*mlocate-0.22.2-r1 (18 Nov 2009)
+
+  18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  -mlocate-0.22.2.ebuild, +mlocate-0.22.2-r1.ebuild, +files/mlocate.cron-r2:
+  remove Bashisms from cron file, thanks to Richard Li <admin AT chys DOT
+  info> in bug 293459
 
   18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   -mlocate-0.22.1.ebuild:

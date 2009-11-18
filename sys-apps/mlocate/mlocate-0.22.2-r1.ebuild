@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.22.2.ebuild,v 1.1 2009/10/24 14:43:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.22.2-r1.ebuild,v 1.1 2009/11/18 10:29:14 fauli Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_install() {
 	fperms 0644 /etc/mlocate-cron.conf
 
 	insinto /etc/cron.daily
-	newins "${FILESDIR}/mlocate.cron-r1" mlocate
+	newins "${FILESDIR}/mlocate.cron-r2" mlocate
 	fperms 0755 /etc/cron.daily/mlocate
 
 	fowners 0:locate /usr/bin/locate
