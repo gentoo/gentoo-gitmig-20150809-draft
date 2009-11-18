@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.22_rc22667.ebuild,v 1.1 2009/10/31 22:49:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.22_p22763.ebuild,v 1.1 2009/11/18 00:29:49 cardoe Exp $
 
 EAPI=2
 inherit mythtv webapp depend.php
