@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481-r1.ebuild,v 1.13 2008/04/10 00:47:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481-r1.ebuild,v 1.14 2009/11/18 03:14:18 jer Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -17,7 +17,7 @@ LICENSE="distributed.net"
 SLOT="0"
 KEYWORDS="alpha ppc sparc x86"
 IUSE=""
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="net-dns/bind-tools"

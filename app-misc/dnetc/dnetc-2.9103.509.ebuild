@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9103.509.ebuild,v 1.1 2009/04/02 01:45:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9103.509.ebuild,v 1.2 2009/11/18 03:14:18 jer Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="distributed.net"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="net-dns/bind-tools"
