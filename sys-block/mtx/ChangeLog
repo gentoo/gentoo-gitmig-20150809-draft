@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mtx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/ChangeLog,v 1.10 2009/11/17 19:51:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mtx/ChangeLog,v 1.11 2009/11/19 16:30:04 maekke Exp $
+
+  19 Nov 2009; Markus Meier <maekke@gentoo.org> mtx-1.3.12.ebuild:
+  amd64/x86 stable, bug #293360
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> mtx-1.3.12.ebuild:
   Marking mtx-1.3.12 ppc64 for bug 293360
