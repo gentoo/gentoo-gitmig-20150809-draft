@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.14 2009/08/03 20:39:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.15 2009/11/19 14:39:32 beandog Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
 ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum
 +mmx mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
 oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba +shm
-+schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
++schroedinger sdl +speex sse sse2 ssse3 svga tga +theora +tremor
 +truetype +unicode v4l v4l2 vdpau vidix +vorbis win32codecs +X +x264 xanim
 xinerama +xscreensaver +xv +xvid xvmc zoran"
 
@@ -377,7 +377,6 @@ src_configure() {
 		use pvr || myconf="${myconf} --disable-pvr"
 		use v4l	|| myconf="${myconf} --disable-tv-v4l1"
 		use v4l2 || myconf="${myconf} --disable-tv-v4l2"
-		use teletext || myconf="${myconf} --disable-tv-teletext"
 		if use radio && { use dvb || use v4l || use v4l2; }; then
 			myconf="${myconf} --enable-radio $(use_enable encode radio-capture)"
 		else
@@ -386,7 +385,7 @@ src_configure() {
 	else
 		myconf="${myconf} --disable-tv --disable-tv-v4l1 --disable-tv-v4l2 \
 			--disable-radio --disable-radio-v4l2 --disable-radio-bsdbt848 \
-			--disable-dvb --disable-dvbhead --disable-tv-teletext \
+			--disable-dvb --disable-dvbhead \
 			--disable-v4l2 --disable-pvr"
 	fi
 
