@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.24 2009/11/12 09:29:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.25 2009/11/19 18:15:14 robbat2 Exp $
+
+  19 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  open-iscsi-2.0.871-r1.ebuild:
+  Works on ~arm (mv78100).
 
 *open-iscsi-2.0.871-r1 (12 Nov 2009)
 
