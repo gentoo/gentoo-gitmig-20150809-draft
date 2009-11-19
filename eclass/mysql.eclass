@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.117 2009/11/19 18:22:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.118 2009/11/19 20:59:38 hanno Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -68,6 +68,8 @@ if [ "${PN}" == "mysql-community" ]; then
 elif [ "${PV#5.0}" != "${PV}" ] && mysql_version_is_at_least "5.0.82"; then
 	MYSQL_COMMUNITY_FEATURES=1
 elif [ "${PV#5.1}" != "${PV}" ] && mysql_version_is_at_least "5.1.28"; then
+	MYSQL_COMMUNITY_FEATURES=1
+elif [ "${PV#5.4}" != "${PV}" ]; then
 	MYSQL_COMMUNITY_FEATURES=1
 else
 	MYSQL_COMMUNITY_FEATURES=0
