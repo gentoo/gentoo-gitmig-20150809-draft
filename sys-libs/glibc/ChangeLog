@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.659 2009/11/18 14:43:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.660 2009/11/19 09:32:56 jer Exp $
+
+  19 Nov 2009; Jeroen Roovers <jer@gentoo.org> glibc-2.10.1.ebuild:
+  Marked ~hppa (bug #291287).
 
   18 Nov 2009; Raúl Porcel <armin76@gentoo.org> glibc-2.10.1.ebuild:
   Add ~arm wrt #291287
