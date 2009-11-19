@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.22 2009/07/02 20:30:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.23 2009/11/19 16:40:34 maekke Exp $
+
+  19 Nov 2009; Markus Meier <maekke@gentoo.org> Curses-UI-0.96.07.ebuild:
+  amd64/x86 stable, bug #293380
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> Curses-UI-0.95.ebuild,
   Curses-UI-0.96.07.ebuild:
