@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.37 2009/11/11 09:43:08 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.38 2009/11/19 18:39:09 armin76 Exp $
+
+  19 Nov 2009; Raúl Porcel <armin76@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild:
+  sparc stable wrt #275507
 
   11 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild:
