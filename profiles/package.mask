@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10852 2009/11/19 06:59:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10853 2009/11/19 10:25:31 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -680,7 +680,6 @@ x11-misc/lineak-kdeplugins
 mail-client/mailody
 app-portage/kelogviewer
 dev-python/pykde
-x11-themes/qinx
 www-client/kita
 sci-mathematics/koctave
 x11-terms/kuake
@@ -692,23 +691,7 @@ app-backup/keep
 media-sound/musicman
 app-antivirus/klamav
 x11-plugins/khexclock
-x11-themes/domino
-x11-themes/comix
-x11-themes/baghira
-x11-themes/alloy
-x11-themes/activeheart
-x11-themes/fahrenheit
-x11-themes/fusionx-aqua
-x11-themes/knifty
-x11-themes/kwin-neos
-x11-themes/liquid
-<x11-themes/polyester-2
 <media-gfx/kflickr-0.9.1_p1
-x11-themes/tiblit
-x11-themes/qtcurve
-x11-themes/reinhardtstyle
-x11-themes/ridge
-x11-themes/thinkeramik
 x11-misc/karamba
 x11-misc/dekorator
 app-pda/libopensync-plugin-kdepim
