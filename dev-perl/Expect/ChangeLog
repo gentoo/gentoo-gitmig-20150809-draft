@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Expect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.17 2009/10/24 11:57:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.18 2009/11/19 14:45:52 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> Expect-1.21.ebuild:
+  stable x86, bug 284544
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> Expect-1.21.ebuild:
   ppc stable #284544

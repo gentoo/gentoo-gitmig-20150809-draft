@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Clipboard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.5 2009/10/24 11:52:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.6 2009/11/19 14:45:04 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  Clipboard-0.09.ebuild:
+  stable x86, bug 284544
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> Clipboard-0.09.ebuild:
   ppc stable #284544
