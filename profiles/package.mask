@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10853 2009/11/19 10:25:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10854 2009/11/19 18:44:18 ayoy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -901,10 +901,6 @@ media-libs/libmpcdec
 =x11-libs/qt-test-4.6.0_beta*
 =x11-libs/qt-webkit-4.6.0_beta*
 =x11-libs/qt-xmlpatterns-4.6.0_beta*
-
-# Dominik Kapusta <ayoy@gentoo.org> (15 Oct 2009)
-# Masked for testing
-=dev-embedded/scratchbox-2*
 
 # Diego E. Pettenò <flameeyes@gmail.com> (9 Oct 2009)
 # Untested yet; documented only in Russian, help is appreciated.
