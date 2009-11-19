@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.67.ebuild,v 1.2 2009/07/12 18:05:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.67.ebuild,v 1.3 2009/11/19 04:10:25 jer Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.joedog.org/JoeDog/Siege"
 SRC_URI="ftp://sid.joedog.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86"
+KEYWORDS="~amd64 hppa ~mips ~ppc ~x86"
 SLOT="0"
 IUSE="debug ssl"
 
