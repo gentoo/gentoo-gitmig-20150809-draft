@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.3.1.ebuild,v 1.1 2009/03/28 23:36:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/IceRuby-3.3.1.ebuild,v 1.2 2009/11/19 14:36:59 fauli Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ S=${WORKDIR}/${MY_P}/rb
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="test debug"
 
 RDEPEND="~dev-cpp/Ice-3.3.1
