@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.9-r1.ebuild,v 1.3 2009/07/27 16:42:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.9-r1.ebuild,v 1.4 2009/11/19 16:38:56 maekke Exp $
 
 inherit apache-module autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~mips ~ppc ~sparc x86"
 IUSE="lua perl"
 
 DEPEND="dev-libs/libxml2
