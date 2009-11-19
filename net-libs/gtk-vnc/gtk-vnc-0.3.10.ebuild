@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.10.ebuild,v 1.1 2009/10/22 22:33:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.10.ebuild,v 1.2 2009/11/19 13:29:30 leio Exp $
 
 EAPI="2"
 
@@ -35,4 +35,9 @@ src_configure() {
 		$(use_with sasl) \
 		--with-coroutine=gthread \
 		--without-libview
+}
+
+src_install() {
+	base_src_install
+	dodoc AUTHORS ChangeLog NEWS README
 }
