@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lockdev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.4 2009/10/17 03:50:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.5 2009/11/19 09:27:13 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  lockdev-1.0.3.1.2-r1.ebuild:
+  stable x86, bug 289428
 
   17 Oct 2009; Jonathan Callen <abcd@gentoo.org> -lockdev-1.0.3.1.2.ebuild:
   Drop old revision
