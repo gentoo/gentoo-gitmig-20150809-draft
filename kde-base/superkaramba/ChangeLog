@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.121 2009/11/09 00:21:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.122 2009/11/19 18:59:28 ssuominen Exp $
+
+  19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -files/superkaramba-python-2.6.patch,
+  -files/superkaramba-3.5.2-multilib-python.diff,
+  -files/superkaramba-3.5.7-network_sensor.patch,
+  -superkaramba-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -superkaramba-4.3.2.ebuild:
