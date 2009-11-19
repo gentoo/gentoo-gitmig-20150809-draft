@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.304 2009/11/18 05:37:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.305 2009/11/19 05:53:24 cardoe Exp $
+
+*mythtv-0.22_p22860 (19 Nov 2009)
+
+  19 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.22_p22860.ebuild, +files/mythtv-0.22-x86-no-fpic.patch:
+  upstream fixes for channel scanner failing on SD New Zealand channels. Fix
+  for status on a tuner saying it was asleep when in fact there was an
+  error. potential fix for bugs #279944 & #292421
 
   18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> mythtv-0.22_p22778.ebuild,
   mythtv-0.22_p22811.ebuild, mythtv-0.22_p22824.ebuild,
