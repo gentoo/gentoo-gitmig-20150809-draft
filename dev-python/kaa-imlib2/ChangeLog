@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kaa-imlib2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.11 2009/09/04 01:27:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.12 2009/11/19 09:23:01 volkmar Exp $
+
+  19 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
+  kaa-imlib2-0.2.3-r1.ebuild:
+  Stable for ppc, bug 287622
 
   04 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   kaa-imlib2-0.2.3-r1.ebuild:
