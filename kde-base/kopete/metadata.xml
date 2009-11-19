@@ -2,12 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<use>
-	<flag name="emoticons-manager">Enables emoticons theme manager so that the user can edit and remove emoticons or add custom ones etc</flag>
 		<!-- PLUGINS -->
 	<flag name="addbookmarks">Automaticaly add incoming urls to bookmarks.</flag>
-	<flag name="alias">Enables creating of your own aliases for commands.</flag>
 	<flag name="autoreplace">Automaticaly replace selected text</flag>
-	<flag name="connectionstatus">Builds Connection Status plugin</flag>
 	<flag name="contactnotes">Enables writing personal notes for contacts.</flag>
 	<flag name="highlight">Allows you to specify highlights on specific events.</flag>
 	<flag name="history">Enables saving chat history.</flag>
@@ -26,15 +23,11 @@
 	<flag name="facebook">Enable Facebook support.</flag>
 	<flag name="gadu">Enable the Gadu protocol handler.</flag>
 	<flag name="groupwise">Enable the Groupwise protocol handler.</flag>
-	<flag name="irc">Enable the IRC protocol handler.</flag>
 	<flag name="jabber">Enable XMPP protocol handler (this is also gmail).</flag>
 	<flag name="meanwhile">Enable the Sametime protocol handler.</flag>
 	<flag name="msn">Enable "Windows live messenger" protocol support.</flag>
-	<flag name="netmeeting">Builds netmeeting plugin (require gnomemeeting)</flag>
 	<flag name="qq">enable support for the chinese network protocol.</flag>
-	<flag name="sametime">Enables support for the Sametime protocol for instant messaging</flag>
 	<flag name="skype">Enable Skype protocol handler (not fully functional yet).</flag>
-	<flag name="sms">Enable the sms sending plugin.</flag>
 	<flag name="testbed">Enable the testbed protocol.</flag>
 	<flag name="winpopup">Enable pop-up messages sending on windows. (same as good old "net send" messages ;])</flag>
 	<flag name="yahoo">Enable yahoo protocol support.</flag>
