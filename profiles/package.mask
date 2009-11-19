@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10850 2009/11/18 20:05:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10851 2009/11/19 05:45:56 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -987,11 +987,6 @@ dev-libs/skalibs
 # Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
 # Much testing needed, not ready for mainline by any means.
 >=www-client/seamonkey-2.0_beta2
-
-# Sebastien Fabbro <bicatali@gentoo.org> (23 Sep 2009)
-# Masked for more testing, especially with cint7, afs and xrootd
-# on amd64 with gcc-4.4. See bug #280925
-=sci-physics/root-5.24.00
 
 # Torsten Veller <tove@gentoo.org> (20 Sep 2009)
 # Add perl-5.10 masks (#280724)
