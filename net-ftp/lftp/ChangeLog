@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.240 2009/11/19 15:46:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.241 2009/11/19 15:47:32 jer Exp $
+
+  19 Nov 2009; Jeroen Roovers <jer@gentoo.org>
+  -files/lftp-3.99.5-torrent_la.patch:
+  Remove unused patch.
 
   19 Nov 2009; Jeroen Roovers <jer@gentoo.org> -lftp-4.0.1.ebuild,
   -lftp-4.0.2.ebuild, -lftp-4.0.2.91.ebuild, -lftp-4.0.2.91-r1.ebuild:
