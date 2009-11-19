@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5010 2009/11/19 20:47:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5011 2009/11/19 21:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1223,7 +1223,6 @@ kde-base/kdelibs:utempter - Records user logins. Useful on multi-user systems
 kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble.
 kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
-kde-base/kdvi:kpathsea - Enable integration with kpathsea search library (TeX related)
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/konqueror:auth -  Add dependency on authentization packages. 
 kde-base/konqueror:bookmarks -  Add dependency on bookmark package. 
