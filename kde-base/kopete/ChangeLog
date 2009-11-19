@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.225 2009/11/09 10:21:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.226 2009/11/19 19:51:11 ssuominen Exp $
+
+  19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -files/kopete-0.12_alpha1-xscreensaver.patch,
+  -files/kopete-3.5.5-icqfix.patch,
+  -files/kdenetwork-3.5.5-linux-headers-2.6.18.patch, -kopete-3.5.10.ebuild,
+  -kopete-3.5.10-r2.ebuild, -kopete-3.5.10-r4.ebuild,
+  -files/kopete-3.5.10-gcc43.patch, -files/kopete-3.5.10-glibc210.patch,
+  -files/kopete-3.5.10-icq-protocol-change2.patch,
+  -files/kopete-3.5.10-jabber-protocol-gtalknickfix.patch,
+  -files/kopete-3.5.10-libgadu-CVE-2008-4776.patch,
+  -files/kopete-3.5-rolling_icon.patch, -files/emoticon-manager.patch:
+  Remove KDE 3.5.10.
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org> -files/4.2.4-yahoo.patch:
   Drop unneeded patch

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.156 2009/11/09 00:15:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.157 2009/11/19 19:48:15 ssuominen Exp $
+
+  19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -nsplugins-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -nsplugins-4.3.2.ebuild:
   Drop KDE 4.3.2
