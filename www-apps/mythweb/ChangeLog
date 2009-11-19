@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.70 2009/11/18 00:29:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.71 2009/11/19 01:34:51 cardoe Exp $
+
+*mythweb-0.22_p22763-r1 (19 Nov 2009)
+
+  19 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythweb-0.22_p22763-r1.ebuild, +files/mythweb-0.22_p22763-ao-click.patch:
+  fix clicking advanced options redirecting to index page. Fix by user
+  fracmak on upstream ticket #7606.
 
 *mythweb-0.22_p22763 (18 Nov 2009)
 
