@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.52 2009/11/18 22:12:47 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.53 2009/11/19 12:01:35 deathwing00 Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -111,9 +111,9 @@ qt4-build_pkg_setup() {
 		ewarn "re-emerge everything that depends on Qt."
 		ewarn "Use the following command:"
 		ewarn
-		ewarn "   emerge -av1 \$(for pkg in \$(equery -q d \\"
-		ewarn "   \$(qlist -IC x11-libs/qt-) | grep -v \"x11-libs/qt-\" |"
-		ewarn "   sort -u); do echo \"=\$pkg\"; done)"
+		ewarn "   emerge -av1 \$(for i in \$(qlist -IC x11-libs/qt-);"
+		ewarn "   do equery -q d \$i | grep -v 'x11-libs/qt-' |"
+		ewarn "   sed \"s/^/=/\"; done)"
 		ewarn 
 		ewarn "YOU'VE BEEN WARNED"
 		ewarn
