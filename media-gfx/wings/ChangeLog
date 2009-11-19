@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.26 2009/09/27 18:16:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.27 2009/11/19 14:54:33 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> wings-1.1.1.ebuild:
+  stable x86, bug 284691
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> wings-1.1.1.ebuild:
   ppc stable #284691
