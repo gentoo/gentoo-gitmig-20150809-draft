@@ -1,6 +1,15 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.57 2009/10/06 17:46:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.58 2009/11/19 05:44:31 bicatali Exp $
+
+*root-5.24.00-r1 (19 Nov 2009)
+
+  19 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  root-5.22.00-r2.ebuild, root-5.22.00-r3.ebuild, -root-5.24.00.ebuild,
+  +root-5.24.00-r1.ebuild:
+  Forbid as-needed (bug #287178), fixed a syntax while installing TMVA
+  documentation, new version bump with new set of patches. Thanks Andrew
+  Savchenko for his contribution.
 
   06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> root-5.22.00-r2.ebuild,
   root-5.22.00-r3.ebuild, root-5.24.00.ebuild:

@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r2.ebuild,v 1.5 2009/10/06 17:46:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r2.ebuild,v 1.6 2009/11/19 05:44:31 bicatali Exp $
 
 EAPI=2
-inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs
+inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs flag-o-matic
 
 #DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 DOC_PV=5_21
@@ -105,6 +105,8 @@ pkg_setup() {
 		export USE_OPENMP=1
 		use math && export USE_PARALLEL_MINUIT2=1
 	fi
+	# bug #287178
+	append-ldflags $(no-as-needed)
 }
 
 src_prepare() {
@@ -223,7 +225,7 @@ doc_install() {
 		insinto /usr/share/doc/${PF}
 		doins \
 			"${DISTDIR}"/Users_Guide_${DOC_PV}.pdf \
-			"${DISTDIR}"/TMVAUsersGuide_v${TMVA_DOC_PV}.pdf \
+			"${DISTDIR}"/TMVAUsersGuide-v${TMVA_DOC_PV}.pdf \
 			|| die "pdf install failed"
 		if use math; then
 			doins "${DISTDIR}"/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf \

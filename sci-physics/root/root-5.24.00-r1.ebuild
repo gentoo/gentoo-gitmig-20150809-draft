@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.24.00.ebuild,v 1.2 2009/10/06 17:46:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.24.00-r1.ebuild,v 1.1 2009/11/19 05:44:31 bicatali Exp $
 
 EAPI=2
-inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs
+inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs flag-o-matic
 
 DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4
-PATCH_PV=p01
+PATCH_PV=p02
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
@@ -98,16 +98,17 @@ pkg_setup() {
 		export USE_OPENMP=1
 		use math && export USE_PARALLEL_MINUIT2=1
 	fi
+	# bug #287178
+	append-ldflags $(no-as-needed)
 }
 
 src_prepare() {
+	epatch "${WORKDIR}"/${P}-svn31303.patch
 	epatch "${WORKDIR}"/${P}-gcc44.patch
-	epatch "${WORKDIR}"/${P}-svn30106.patch
 	epatch "${WORKDIR}"/${P}-prop-flags.patch
-	epatch "${WORKDIR}"/${P}-as-needed.patch
 	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
+	epatch "${WORKDIR}"/${P}-as-needed.patch
 	epatch "${WORKDIR}"/${P}-configure-paths.patch
-	epatch "${WORKDIR}"/${P}-configure-sandbox.patch
 	epatch "${WORKDIR}"/${P}-g4root-flags.patch
 
 	# use system cfortran
@@ -215,7 +216,7 @@ doc_install() {
 		insinto /usr/share/doc/${PF}
 		doins \
 			"${DISTDIR}"/Users_Guide_${DOC_PV}.pdf \
-			"${DISTDIR}"/TMVAUsersGuide_v${TMVA_DOC_PV}.pdf \
+			"${DISTDIR}"/TMVAUsersGuide-v${TMVA_DOC_PV}.pdf \
 			|| die "pdf install failed"
 		if use math; then
 			doins "${DISTDIR}"/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf \
