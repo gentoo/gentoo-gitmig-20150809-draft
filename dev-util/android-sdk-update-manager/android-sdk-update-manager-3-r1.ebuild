@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-3-r1.ebuild,v 1.1 2009/11/18 15:06:28 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-3-r1.ebuild,v 1.2 2009/11/19 02:41:03 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -36,7 +36,6 @@ QA_DT_HASH_x86="
 	opt/${P}/tools/dmtracedump
 "
 QA_DT_HASH_amd64="${QA_DT_HASH_x86}"
-
 
 pkg_setup() {
 	enewgroup android
