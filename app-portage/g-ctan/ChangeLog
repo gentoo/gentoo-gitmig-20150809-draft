@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/g-ctan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.8 2009/09/23 10:29:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.9 2009/11/19 08:16:48 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  g-ctan-2008.1-r1.ebuild:
+  added ~amd64 for bug 286060
 
 *g-ctan-2008.1-r1 (23 Sep 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-2008.1-r1.ebuild,v 1.1 2009/09/23 10:29:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-2008.1-r1.ebuild,v 1.2 2009/11/19 08:16:48 fauli Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/g-ctan/2008/${PV}/+download/${P}.tar.bz2"
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 DEPEND=""
