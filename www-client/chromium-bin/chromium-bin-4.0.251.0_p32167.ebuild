@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.251.0_p32167.ebuild,v 1.2 2009/11/19 14:02:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.251.0_p32167.ebuild,v 1.3 2009/11/19 16:12:11 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -57,20 +57,20 @@ src_install() {
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/chrome-linux/plugins
 
 	# Create symlinks for needed libraries
-	dodir ${CHROMIUM_HOME}/lib
-	NSS_DIR=../../../usr/$(get_libdir)/nss
-	NSPR_DIR=../../../usr/$(get_libdir)/nspr
+	dodir ${CHROMIUM_HOME}/nss-nspr
+	NSS_DIR=/usr/$(get_libdir)/nss
+	NSPR_DIR=/usr/$(get_libdir)/nspr
 
-	dosym ${NSPR_DIR}/libnspr4.so ${CHROMIUM_HOME}/lib/libnspr4.so.0d
-	dosym ${NSPR_DIR}/libplc4.so ${CHROMIUM_HOME}/lib/libplc4.so.0d
-	dosym ${NSPR_DIR}/libplds4.so ${CHROMIUM_HOME}/lib/libplds4.so.0d
-	dosym ${NSS_DIR}/libnss3.so ${CHROMIUM_HOME}/lib/libnss3.so.1d
-	dosym ${NSS_DIR}/libnssutil3.so ${CHROMIUM_HOME}/lib/libnssutil3.so.1d
-	dosym ${NSS_DIR}/libsmime3.so ${CHROMIUM_HOME}/lib/libsmime3.so.1d
-	dosym ${NSS_DIR}/libssl3.so ${CHROMIUM_HOME}/lib/libssl3.so.1d
+	dosym ${NSPR_DIR}/libnspr4.so ${CHROMIUM_HOME}/nss-nspr/libnspr4.so.0d
+	dosym ${NSPR_DIR}/libplc4.so ${CHROMIUM_HOME}/nss-nspr/libplc4.so.0d
+	dosym ${NSPR_DIR}/libplds4.so ${CHROMIUM_HOME}/nss-nspr/libplds4.so.0d
+	dosym ${NSS_DIR}/libnss3.so ${CHROMIUM_HOME}/nss-nspr/libnss3.so.1d
+	dosym ${NSS_DIR}/libnssutil3.so ${CHROMIUM_HOME}/nss-nspr/libnssutil3.so.1d
+	dosym ${NSS_DIR}/libsmime3.so ${CHROMIUM_HOME}/nss-nspr/libsmime3.so.1d
+	dosym ${NSS_DIR}/libssl3.so ${CHROMIUM_HOME}/nss-nspr/libssl3.so.1d
 
 	# Create chromium-bin wrapper
-	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/lib:${CHROMIUM_HOME}/chrome-linux
+	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/nss-nspr:${CHROMIUM_HOME}/chrome-linux
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
 	make_desktop_entry chromium-bin "Chromium (bin)" ${PN} "Network;WebBrowser"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
