@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mpg123-el
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.21 2009/10/16 21:40:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.22 2009/11/19 16:43:51 maekke Exp $
+
+  19 Nov 2009; Markus Meier <maekke@gentoo.org> mpg123-el-1.52.ebuild:
+  amd64/x86 stable, bug #293417
 
 *mpg123-el-1.52 (16 Oct 2009)
 
