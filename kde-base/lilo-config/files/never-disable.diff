@@ -1,8 +1,0 @@
---- lilo-config/configure.in.in	2001-02-02 12:42:09.000000000 +0200
-+++ lilo-config/configure.in.in	2004-10-22 17:15:50.044391232 +0200
-@@ -1,5 +0,0 @@
--KDE_FIND_PATH(lilo, LILO, [/sbin /usr/sbin /usr/local/sbin /opt/lilo],
--[
--	DO_NOT_COMPILE="$DO_NOT_COMPILE lilo-config" 
--])
--

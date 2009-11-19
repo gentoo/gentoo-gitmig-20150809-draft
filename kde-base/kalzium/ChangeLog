@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.145 2009/11/09 10:00:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.146 2009/11/19 21:55:29 ssuominen Exp $
+
+  19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -files/kalzium-3.5.7-copy_string.patch, -kalzium-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/kalzium-include-order.patch:
