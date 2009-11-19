@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.5.ebuild,v 1.6 2009/05/26 17:07:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.5.ebuild,v 1.7 2009/11/19 08:02:53 tove Exp $
 
 inherit webapp depend.apache versionator eutils
 
@@ -21,7 +21,7 @@ RDEPEND="
 	>=dev-lang/perl-5.8.0
 
 	>=dev-perl/DBI-1.41
-	dev-perl/Email-MIME-Modifier
+	|| ( >=dev-perl/Email-MIME-1.900 dev-perl/Email-MIME-Modifier )
 	>=dev-perl/Email-Send-2.00
 	dev-perl/MIME-tools
 	>=dev-perl/Template-Toolkit-2.13

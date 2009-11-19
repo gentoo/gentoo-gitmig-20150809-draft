@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.1.ebuild,v 1.2 2009/09/08 11:01:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.1.ebuild,v 1.3 2009/11/19 08:02:53 tove Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND="
 	>=dev-perl/URI-1.38
 	>=dev-perl/Email-MIME-1.861
 	>=dev-perl/Email-MIME-Encodings-1.313
-	>=dev-perl/Email-MIME-Modifier-1.442
+	|| ( >=dev-perl/Email-MIME-1.900 >=dev-perl/Email-MIME-Modifier-1.442 )
 	>=dev-perl/Email-Send-2.190
 	>=dev-perl/MIME-tools-5.427
 	>=dev-perl/Template-Toolkit-2.22
