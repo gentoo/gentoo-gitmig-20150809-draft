@@ -1,9 +1,0 @@
---- ./ark/ark.desktop.orig	2009-09-10 17:42:28.000000000 +0300
-+++ ./ark/ark.desktop	2009-09-10 17:42:44.000000000 +0300
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--MimeType=application/x-gzip;application/x-lha;application/x-tar;application/x-tgz;application/x-tbz;application/x-tbz2;application/x-zip;application/zip;application/x-bzip;application/x-tzo;application/x-lzop;application/x-rar;application/x-zoo;application/x-tarz;application/x-archive;application/x-bzip2;application/x-jar;application/x-deb;application/x-ace;application/x-7z;application/x-arc;application/x-arj;application/x-compress;application/x-cpio;application/x-pak;application/x-zip-compressed
-+MimeType=application/x-gzip;application/x-lha;application/x-tar;application/x-tgz;application/x-tbz;application/x-tbz2;application/x-zip;application/zip;application/x-bzip;application/x-tzo;application/x-lzop;application/x-rar;application/x-zoo;application/x-tarz;application/x-archive;application/x-bzip2;application/x-jar;application/x-deb;application/x-ace;application/x-7z;application/x-arc;application/x-arj;application/x-compress;application/x-cpio;application/x-pak;application/x-zip-compressed;
- GenericName=Archiving Tool
- GenericName[af]=Argiveer Program
- GenericName[ar]=أداة أرشفة
