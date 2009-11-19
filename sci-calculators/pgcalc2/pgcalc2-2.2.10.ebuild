@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pgcalc2/pgcalc2-2.2.10.ebuild,v 1.2 2009/11/11 11:45:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pgcalc2/pgcalc2-2.2.10.ebuild,v 1.3 2009/11/19 17:20:10 ssuominen Exp $
 
-ARTS_RQUIRED=never
+ARTS_REQUIRED=never
 inherit versionator kde
 
 MY_PV=$(get_major_version).$(get_version_component_range 2)-$(get_version_component_range 3)
