@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.103 2009/11/08 23:37:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.104 2009/11/19 20:01:58 ssuominen Exp $
+
+  19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -kgeography-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgeography-4.3.2.ebuild:
   Drop KDE 4.3.2
