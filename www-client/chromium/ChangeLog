@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.24 2009/11/19 12:56:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.25 2009/11/19 13:42:34 voyageur Exp $
+
+  19 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-4.0.251.0.ebuild, chromium-9999.ebuild:
+  Also install man page as chromium.1
 
   19 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-4.0.251.0.ebuild, chromium-9999.ebuild, metadata.xml:

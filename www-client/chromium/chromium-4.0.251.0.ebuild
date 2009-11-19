@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.251.0.ebuild,v 1.2 2009/11/19 12:56:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.251.0.ebuild,v 1.3 2009/11/19 13:42:34 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -109,7 +109,9 @@ src_install() {
 	doins -r out/Release/locales
 	doins -r out/Release/resources
 
+	# chrome.1 is for chromium --help
 	newman out/Release/chromium-browser.1 chrome.1
+	newman out/Release/chromium-browser.1 chromium.1
 
 	if use ffmpeg; then
 		# Chromium looks for these in its folder
