@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.22 2009/10/24 10:50:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.23 2009/11/19 21:21:18 flameeyes Exp $
+
+*freeipmi-0.7.15 (19 Nov 2009)
+
+  19 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -freeipmi-0.7.12.ebuild, -freeipmi-0.7.13.ebuild, -freeipmi-0.7.14.ebuild,
+  +freeipmi-0.7.15.ebuild:
+  Version bump and remove old.
 
 *freeipmi-0.7.14 (24 Oct 2009)
 
