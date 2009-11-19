@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.51 2009/11/19 08:32:23 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.52 2009/11/19 16:21:58 maekke Exp $
+
+  19 Nov 2009; Markus Meier <maekke@gentoo.org>
+  logilab-common-0.45.1.ebuild:
+  amd64/x86 stable, bug #293250
 
   19 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   logilab-common-0.45.1.ebuild:
