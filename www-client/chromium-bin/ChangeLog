@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.43 2009/11/17 16:32:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.44 2009/11/19 14:02:46 voyageur Exp $
+
+  19 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-bin-4.0.251.0_p32167.ebuild, chromium-bin-9999.ebuild:
+  Install man page as chromium-bin.1, bug #293634
 
 *chromium-bin-4.0.251.0_p32167 (17 Nov 2009)
 
