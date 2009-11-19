@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3.ebuild,v 1.1 2009/06/06 12:45:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3.ebuild,v 1.2 2009/11/19 16:48:07 maekke Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.pocoo.org/hg/lodgeit-main/raw-file/tip/scripts/lodgeit.py
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="vim"
 
 RESTRICT="test"
