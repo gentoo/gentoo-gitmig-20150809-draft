@@ -1,0 +1,26 @@
+diff -urN ctapi-cyberjack-3.3.3beta4/checksuite/cm_reader.cpp ctapi-cyberjack-3.3.3beta5/checksuite/cm_reader.cpp
+--- ctapi-cyberjack-3.3.3beta4/checksuite/cm_reader.cpp	2009-09-17 16:59:30.000000000 +0200
++++ ctapi-cyberjack-3.3.3beta5/checksuite/cm_reader.cpp	2009-11-19 21:40:40.000000000 +0100
+@@ -465,6 +465,7 @@
+ bool CM_Reader::_checkPcsc(std::string &xmlString,
+ 			   std::string &reportString,
+ 			   std::string &hintString) {
++#ifdef HAVE_PCSC
+   Cyberjack::Driver *dr=Cyberjack::NewDriverPcsc();
+   bool b;
+ 
+@@ -477,6 +478,14 @@
+ 
+   delete dr;
+   return b;
++#else
++  reportString+="PC/SC Interface\n";
++  reportString+="  PC/SC-Interface nicht getestet (keine Unterstuetzung eincompiliert).\n";
++  xmlString+="<api type=\"pcsc\">\n";
++  xmlString+="  <result type=\"untested\">\n";
++  xmlString+="  </result>\n";
++  xmlString+="</api>\n";
++#endif
+ }
+ 
+ 

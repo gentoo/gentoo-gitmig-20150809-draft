@@ -1,5 +1,0 @@
-# using the cyberJack libusb driver
-ACTION=="add", SUBSYSTEM=="usb", ENV{PRODUCT}=="c4b/100/*", RUN+="cyberjack.sh"
-ACTION=="add", SUBSYSTEM=="usb", ENV{PRODUCT}=="c4b/300/*", RUN+="cyberjack.sh"
-# using the cyberJack kernel module
-ACTION=="add", SUBSYSTEM=="tty", DRIVERS=="cyberjack", RUN+="cyberjack.sh"

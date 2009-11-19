@@ -1,6 +1,6 @@
-diff -urN ../ctapi-cyberjack-3.0.4.orig/etc/udev/Makefile.am ../ctapi-cyberjack-3.0.4/etc/udev/Makefile.am
---- ../ctapi-cyberjack-3.0.4.orig/etc/udev/Makefile.am	2007-05-07 20:53:28.000000000 +0200
-+++ ../ctapi-cyberjack-3.0.4/etc/udev/Makefile.am	2007-09-19 15:28:50.000000000 +0200
+diff -urN ctapi-cyberjack-3.3.2.orig/etc/udev/Makefile.am ctapi-cyberjack-3.3.2/etc/udev/Makefile.am
+--- ctapi-cyberjack-3.3.2.orig/etc/udev/Makefile.am	2008-05-27 19:24:05.000000000 +0200
++++ ctapi-cyberjack-3.3.2/etc/udev/Makefile.am	2009-11-16 16:19:49.491648055 +0100
 @@ -2,8 +2,8 @@
  
  udevdir=/etc/udev/rules.d

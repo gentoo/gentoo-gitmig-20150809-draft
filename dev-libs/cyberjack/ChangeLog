@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.9 2009/05/16 09:22:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.10 2009/11/19 23:20:21 wschlich Exp $
+
+*cyberjack-3.3.2 (19 Nov 2009)
+
+  19 Nov 2009; Wolfram Schlich <wschlich@gentoo.org>
+  -files/91-cyberjack.rules, -cyberjack-2.0.13.ebuild,
+  -files/cyberjack-2.0.13-build.patch, -files/cyberjack-2.0.13-qa.patch,
+  -files/cyberjack-2.0.13-udev.patch, -cyberjack-2.0.14_beta1.ebuild,
+  -cyberjack-3.0.4.ebuild, -files/cyberjack-3.0.4-udev.patch,
+  +cyberjack-3.3.2.ebuild, +files/cyberjack-3.3.2-nohal.patch,
+  +files/cyberjack-3.3.2-nopcsc.patch, +files/cyberjack-3.3.2-udev.patch:
+  version bump, removed old versions. also fixes bug #227539.
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org>
   cyberjack-2.0.13.ebuild, cyberjack-2.0.14_beta1.ebuild,
