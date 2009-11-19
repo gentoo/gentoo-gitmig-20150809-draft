@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3587 2009/11/19 05:45:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3588 2009/11/19 06:59:22 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Add mask for live ebuild of app-emacs/gnus.
 
   19 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Removed masking of sci-physics/root
