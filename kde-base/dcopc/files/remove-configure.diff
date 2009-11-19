@@ -1,8 +1,0 @@
---- dcopc/configure.in.in	2003-10-26 12:48:00.000000000 +0200
-+++ dcopc/configure.in.in	2004-10-29 18:10:09.593206264 +0200
-@@ -1,5 +0,0 @@
--dnl if test "$GTK_CONFIG" = "no"; then 
--    DO_NOT_COMPILE="$DO_NOT_COMPILE dcopc"
--dnl fi
--dnl 
--dnl AC_CHECK_GETHOSTNAME
