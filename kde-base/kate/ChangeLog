@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.152 2009/11/08 23:12:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/ChangeLog,v 1.153 2009/11/19 23:12:21 ssuominen Exp $
+
+  19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> -kate-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kate-4.3.2.ebuild:
   Drop KDE 4.3.2
