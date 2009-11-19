@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.51 2009/11/19 09:36:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.52 2009/11/19 20:32:41 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  kdenlive-0.7.6.ebuild:
+  revert stable x86
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   kdenlive-0.7.6.ebuild:
