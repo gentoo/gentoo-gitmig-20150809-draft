@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.65 2009/11/10 01:47:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.66 2009/11/19 16:55:23 patrick Exp $
+
+*virtualbox-bin-3.0.12 (19 Nov 2009)
+
+  19 Nov 2009; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-bin-3.0.12.ebuild, files/virtualbox-bin-3-wrapper,
+  files/vboxwebsrv-initd:
+  Bump, closes #293556
 
   10 Nov 2009; Patrick Lauer <patrick@gentoo.org>
   -virtualbox-bin-1.6.6.ebuild, -virtualbox-bin-3.0.6.ebuild,

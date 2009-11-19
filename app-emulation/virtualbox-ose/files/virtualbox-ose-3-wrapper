@@ -37,7 +37,7 @@ elif ! lsmod|grep -q vboxdrv; then
 WARNING: The VirtualBox kernel modules are not loaded.
          Please load all the needed kernel modules by:
 
-           for m in vbox{drv,netadp,netflt}; do modprobe $m; done
+           for m in vbox{drv,netadp,netflt}; do modprobe \$m; done
 
          You will not be able to start VMs until this problem is fixed.
 EOF
@@ -46,8 +46,8 @@ elif [ ! -c /dev/vboxdrv ]; then
 WARNING: The character device /dev/vboxdrv does not exist.
          Please try to reload all the needed kernel modules by:
 
-           for m in vbox{netflt,netadp,drv}; do rmmod $m; done
-           for m in vbox{drv,netadp,netflt}; do modprobe $m; done
+           for m in vbox{netflt,netadp,drv}; do rmmod \$m; done
+           for m in vbox{drv,netadp,netflt}; do modprobe \$m; done
 
          and if that is not successful, try to re-install the package by:
 

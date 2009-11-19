@@ -41,7 +41,8 @@ start() {
         start-stop-daemon --start --make-pidfile \
 		--exec /usr/sbin/vboxadd-service --pidfile /var/run/vboxadd-service.pid \
 		--name vboxadd-service \
-		--background
+		--background -- \
+		--foreground
 
         eend $? "Failed to start VirtualBox guest additions"
 }
