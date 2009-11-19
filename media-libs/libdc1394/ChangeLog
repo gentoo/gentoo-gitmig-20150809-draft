@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.43 2009/11/19 20:26:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.44 2009/11/19 20:31:03 fauli Exp $
+
+  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  libdc1394-2.1.2.ebuild:
+  revert stable x86
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   libdc1394-2.1.2.ebuild:
