@@ -1,15 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ibus-sunpinyin-2.0.20091104.ebuild,v 1.1 2009/11/08 03:49:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ibus-sunpinyin-2.0_rc3.ebuild,v 1.1 2009/11/19 16:05:58 matsuu Exp $
 
 EAPI="2"
 
 inherit python
 
-MY_P="${P/ibus-}"
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://code.google.com/p/ibus-sunpinyin/"
-SRC_URI="http://ibus-sunpinyin.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://ibus-sunpinyin.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0"
@@ -26,7 +25,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}/${MY_P%.*}"
+S="${WORKDIR}/sunpinyin-${PV/_*}"
 
 src_prepare() {
 	mv py-compile py-compile.orig || die
