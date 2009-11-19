@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.6 2009/11/15 13:08:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.7 2009/11/19 12:56:13 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -14,9 +14,10 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+ffmpeg"
 
 RDEPEND="app-arch/bzip2
+	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.2
@@ -25,10 +26,10 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg
 	media-libs/libpng
-	>=media-video/ffmpeg-0.5_p19787
-	>=x11-libs/gtk+-2.14.7"
-#	sys-libs/zlib
-#	>=dev-libs/libevent-1.4.13
+	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
+	sys-libs/zlib
+	>=x11-libs/gtk+-2.14.7
+	x11-themes/gnome-icon-theme"
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
@@ -86,6 +87,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
 	# Add configuration flag to use system libevent
 	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
+
+	# Disable prefixing to allow linking against system zlib
+	sed -e '/^#include "mozzconf.h"$/d' \
+		-i third_party/{,WebKit/WebCore/platform/image-decoders}/zlib/zconf.h \
+		|| die "zlib sed failed"
 }
 
 src_configure() {
@@ -102,9 +108,7 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
-	# -Duse_system_zlib=1: needs mozzconf.h and some MOZ_Z_* functions
-	# -Duse_system_libevent=1: http://crbug.com/22140
+	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
@@ -151,11 +155,13 @@ src_install() {
 
 	newman out/Release/chromium-browser.1 chrome.1
 
-	# Chromium looks for these in its folder
-	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	if use ffmpeg; then
+		# Chromium looks for these in its folder
+		# See media_posix.cc and base_paths_linux.cc
+		dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
+		dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
+		dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	fi
 
 	# Plugins symlink
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins

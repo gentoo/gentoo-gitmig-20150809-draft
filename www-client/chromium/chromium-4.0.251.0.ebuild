@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.251.0.ebuild,v 1.1 2009/11/18 22:18:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.251.0.ebuild,v 1.2 2009/11/19 12:56:13 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -13,9 +13,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+ffmpeg"
 
 RDEPEND="app-arch/bzip2
+	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.2
@@ -24,11 +25,10 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg
 	media-libs/libpng
-	>=media-video/ffmpeg-0.5_p19787
+	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-themes/gnome-icon-theme"
-#	>=dev-libs/libevent-1.4.13
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
@@ -64,8 +64,7 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
-	# -Duse_system_libevent=1: http://crbug.com/22140
+	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
@@ -112,11 +111,13 @@ src_install() {
 
 	newman out/Release/chromium-browser.1 chrome.1
 
-	# Chromium looks for these in its folder
-	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	if use ffmpeg; then
+		# Chromium looks for these in its folder
+		# See media_posix.cc and base_paths_linux.cc
+		dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
+		dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
+		dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	fi
 
 	# Plugins symlink
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
