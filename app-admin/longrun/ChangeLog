@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/longrun
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.20 2009/09/06 22:41:52 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.21 2009/11/20 14:44:33 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> longrun-0.9-r4.ebuild:
+  x86 stable, bug #287893
 
 *longrun-0.9-r4 (06 Sep 2009)
 
