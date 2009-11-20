@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.6 2009/10/28 11:06:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.7 2009/11/20 19:25:17 pva Exp $
+
+EAPI="2"
 
 SMILEYS="critters-1.0.jisp
 	icq-2002a.jisp
@@ -91,13 +93,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
-DEPEND=">=net-im/psi-0.9.2"
+DEPEND=">=net-im/psi-0.9.2
+	!!net-im/psi[extras]"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	mkdir roster
 	for FILE in ${ICONSETS}; do
@@ -123,5 +126,5 @@ src_unpack() {
 
 src_install() {
 	dodir /usr/share/psi/iconsets
-	mv {emoticons,system,roster} ${D}/usr/share/psi/iconsets/
+	mv {emoticons,system,roster} "${D}/usr/share/psi/iconsets/"
 }

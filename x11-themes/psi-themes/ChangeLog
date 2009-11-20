@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/psi-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.19 2009/10/28 11:06:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.20 2009/11/20 19:25:17 pva Exp $
+
+  20 Nov 2009; Peter Volkov <pva@gentoo.org> psi-themes-0.9.3_p1-r2.ebuild:
+  Added blocker for psi[extras], bug #293756, thank Nikoli for report.
 
   28 Oct 2009; Peter Volkov <pva@gentoo.org> psi-themes-0.9.3_p1-r2.ebuild:
   Updated HOMEPAGE, bug #273550, thank hitachi for report.
