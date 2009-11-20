@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.140 2009/11/08 23:09:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.141 2009/11/20 01:38:08 ssuominen Exp $
+
+  20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -drkonqi-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -drkonqi-4.3.2.ebuild:
   Drop KDE 4.3.2
