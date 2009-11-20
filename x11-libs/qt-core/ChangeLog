@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.77 2009/11/18 21:45:50 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.78 2009/11/20 00:00:35 spatz Exp $
+
+  20 Nov 2009; Dror Levin <spatz@gentoo.org> qt-core-4.6.0_rc1.ebuild:
+  Revert /etc/env.d/44qt4 removal, seems like it's still needed.
 
   18 Nov 2009; Dror Levin <spatz@gentoo.org> qt-core-4.6.0_rc1.ebuild:
   Don't install /etc/env.d/44qt4 anymore.
