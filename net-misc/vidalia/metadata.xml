@@ -8,5 +8,8 @@
 <maintainer>
   <email>humpback@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='tor'>Allow to use a local tor setup</flag>
+</use>
 </pkgmetadata>
 

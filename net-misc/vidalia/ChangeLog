@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.14 2009/10/31 14:10:06 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.15 2009/11/20 23:11:17 vostorga Exp $
+
+*vidalia-0.2.6 (20 Nov 2009)
+
+  20 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> +vidalia-0.2.6.ebuild:
+  Version bump, adding tor USE flag allowing to use a remote tor
+  installation, bug #245915
 
 *vidalia-0.2.5 (31 Oct 2009)
 
