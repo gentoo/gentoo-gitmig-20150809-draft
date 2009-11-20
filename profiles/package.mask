@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10857 2009/11/20 04:13:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10858 2009/11/20 04:26:36 abcd Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -349,18 +349,6 @@ x11-plugins/desklet-newsgrab
 # Replaced by media-video/parole.
 # Masked for removal in 30 days.
 media-video/xfmedia
-
-# Jonathan Callen <abcd@gentoo.org> (26 Oct 2009)
-# Old monolithic ebuild. Replaced by app-office/koffice-meta
-# Will be removed in 30 days
-# Also affected by security bug 290470
-#
-# Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
-# koffice monolithic masked, latest koffice version
-# 1.6.3_p20090204 provides only split ebuilds, please
-# refer to the KDE guide for more info
-# http://kde.gentoo.org/kde4-guide.xml
-app-office/koffice
 
 # Olivier Crête <tester@gentoo.org> (25 Oct 2009)
 # Has been replaced by its fork dev-python/papyon
