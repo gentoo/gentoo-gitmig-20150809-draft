@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.170 2009/11/08 23:22:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.171 2009/11/20 03:34:31 ssuominen Exp $
+
+  20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -kdebase-kioslaves-3.5.10.ebuild, -kdebase-kioslaves-3.5.10-r1.ebuild,
+  -files/kdebase-3.5.10-ntfs3g-locale.patch:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdebase-kioslaves-4.3.2.ebuild:
