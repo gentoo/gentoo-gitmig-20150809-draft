@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.7 2008/11/15 21:30:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.8 2009/11/20 18:06:34 halcy0n Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,7 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
-EAPI=1
 RDEPEND="X? ( x11-libs/fltk:1.1 )
 	sys-libs/zlib
 	net-libs/libpcap
