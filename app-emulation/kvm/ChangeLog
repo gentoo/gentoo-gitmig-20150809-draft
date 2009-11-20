@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.39 2009/09/21 14:57:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.40 2009/11/20 09:04:52 zzam Exp $
+
+*kvm-88-r2 (20 Nov 2009)
+
+  20 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> +kvm-88-r2.ebuild:
+  Make udev happy. Fix installation of kvm_stat command, Bug #281031.
 
   21 Sep 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Remove myself as maintainer
