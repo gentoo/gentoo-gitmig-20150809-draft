@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.142 2009/11/08 23:59:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.143 2009/11/20 00:54:13 ssuominen Exp $
+
+  20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> -kstars-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kstars-4.3.2.ebuild:
   Drop KDE 4.3.2

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.118 2009/11/09 00:01:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.119 2009/11/20 01:05:41 ssuominen Exp $
+
+  20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -ksystraycmd-3.5.10.ebuild, -ksystraycmd-3.5.10-r1.ebuild,
+  -files/ksystraycmd-3.5-transparency.diff:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -ksystraycmd-4.3.2.ebuild:
