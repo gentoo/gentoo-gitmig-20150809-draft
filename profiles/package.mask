@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10855 2009/11/19 23:08:56 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10856 2009/11/20 03:30:18 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -101,12 +101,6 @@ app-emulation/transgaming-mozctlinstaller
 # Ulrich Mueller <ulm@gentoo.org> (14 Nov 2009)
 # CVS snapshot, masked for one week of testing.
 =app-emacs/wanderlust-2.15.7_pre*
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (14 Nov 2009)
-# Masked until tarballs are released into the public
-# Currently fails to run when built with binutils-2.20 (bug 290662)
-~media-sound/amarok-2.2.1
-~media-sound/amarok-utils-2.2.1
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (14 Nov 2009)
 # Mask all packages that fail to comply to cmake eclass
