@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <use>
-	<flag name="akode">Support for the aKode audio-decoding frame-work.</flag>
 	<flag name="epos">Build a plugin for <pkg>app-accessibility/epos</pkg></flag>
 	<flag name="festival">Build a plugin for <pkg>app-accessibility/festival</pkg></flag>
 	<flag name="flite">Build a plugin for <pkg>app-accessibility/flite</pkg></flag>
