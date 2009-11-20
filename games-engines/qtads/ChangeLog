@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/qtads
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.7 2009/06/30 05:37:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.8 2009/11/20 15:17:59 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> qtads-1.9.ebuild:
+  x86 stable, bug #288651
 
 *qtads-1.9 (30 Jun 2009)
 
