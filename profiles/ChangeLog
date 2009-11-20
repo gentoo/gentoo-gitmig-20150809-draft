@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3589 2009/11/19 23:08:56 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3590 2009/11/20 04:13:15 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove KDE 3.5.10 mask.
 
   19 Nov 2009; Gordon Malm <gengor@gentoo.org> package.mask:
   Remove sci-calculators/qalculate-kde from package.mask, already removed
