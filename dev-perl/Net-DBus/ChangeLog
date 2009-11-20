@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DBus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.12 2008/09/30 14:34:26 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.13 2009/11/20 14:46:11 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> Net-DBus-0.33.6.ebuild:
+  x86 stable, bug #287926
 
   30 Sep 2008; Torsten Veller <tove@gentoo.org> -Net-DBus-0.33.4.ebuild,
   -Net-DBus-0.33.5.ebuild:
