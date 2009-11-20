@@ -1,6 +1,12 @@
-# ChangeLog for sci-libs/hdf5
+B1;1704;0c# ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.42 2009/10/12 19:58:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.43 2009/11/20 22:41:05 bicatali Exp $
+
+*hdf5-1.8.4 (20 Nov 2009)
+
+  20 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> +hdf5-1.8.4.ebuild:
+  Version bump. mpi and fortran do not compile together, so disable
+  simultaneous mpi/fortran uses until patch
 
   12 Oct 2009; Jeroen Roovers <jer@gentoo.org> hdf5-1.8.3-r1.ebuild:
   Stable for HPPA (bug #245707).
