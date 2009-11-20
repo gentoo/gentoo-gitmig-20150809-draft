@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/whine
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/ChangeLog,v 1.3 2008/02/25 20:43:46 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/ChangeLog,v 1.4 2009/11/20 08:18:11 ulm Exp $
+
+*whine-20091120 (20 Nov 2009)
+
+  20 Nov 2009; Ulrich Mueller <ulm@gentoo.org> +whine-20091120.ebuild:
+  Version bump.
 
   25 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   whine-20071227.ebuild:
