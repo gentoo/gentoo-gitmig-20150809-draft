@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/vdrift
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.12 2009/09/27 23:54:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.13 2009/11/20 14:16:12 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> vdrift-20090615.ebuild:
+  amd64/x86 stable, bug #290955
 
   27 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
   vdrift-20090615.ebuild:
