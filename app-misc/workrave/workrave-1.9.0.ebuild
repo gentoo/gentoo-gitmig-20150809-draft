@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.0.ebuild,v 1.4 2009/11/11 14:21:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.0.ebuild,v 1.5 2009/11/20 17:04:13 ssuominen Exp $
 
 inherit autotools eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="dbus distribution gnome kde nls xml"
+IUSE="dbus distribution gnome nls xml"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-2
@@ -30,9 +30,6 @@ RDEPEND=">=dev-libs/glib-2
 		>=sys-apps/dbus-1.0
 		dev-libs/dbus-glib )
 	xml? ( dev-libs/gdome2 )
-	kde? (
-		=x11-libs/qt-3*
-		=kde-base/kdelibs-3* )
 	x11-libs/libX11
 	x11-libs/libXtst
 	x11-libs/libXt
@@ -58,7 +55,7 @@ pkg_setup() {
 		$(use_enable distribution)
 		$(use_enable gnome)
 		$(use_enable gnome gnomemm)
-		$(use_enable kde)
+		--disable-kde
 		$(use_enable nls)
 		$(use_enable xml)
 		--without-arts"
@@ -90,14 +87,4 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-nosoundplayer.patch"
 
 	eautoreconf
-}
-
-src_compile() {
-	if use kde; then
-		addwrite "/usr/qt/3/etc/settings"
-		export KDEDIR=$(kde-config --prefix)
-		einfo "KDEDIR set to ${KDEDIR}"
-	fi
-
-	gnome2_src_compile
 }
