@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/celt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.5 2009/10/26 21:58:22 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.6 2009/11/20 00:42:41 tgurr Exp $
+
+*celt-0.7.0-r1 (20 Nov 2009)
+
+  20 Nov 2009; Timo Gurr <tgurr@gentoo.org> -celt-0.7.0.ebuild,
+  +celt-0.7.0-r1.ebuild:
+  Introduce library versioning, needed to fix bug #293300. Thanks to Dennis
+  Schridde.
 
 *celt-0.7.0 (26 Oct 2009)
 
