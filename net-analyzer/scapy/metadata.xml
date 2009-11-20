@@ -12,5 +12,6 @@ Scapy is a powerful interactive packet manipulation program.
 <use>
 <flag name='pyx'>Enable <pkg>dev-python/pyx</pkg> support for psdump/pdfdump commands</flag>
 <flag name='visual'>Enable <pkg>dev-python/visual</pkg> support for 3d graphs</flag>
+<flag name='tcpreplay'>Enable <pkg>net-analyzer/tcpreply</pkg> support for fast packet replay</flag>
 </use>
 </pkgmetadata>
