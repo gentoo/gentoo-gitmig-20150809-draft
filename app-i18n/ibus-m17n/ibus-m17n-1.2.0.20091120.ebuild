@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.2.0.20090617.ebuild,v 1.1 2009/06/18 15:40:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.2.0.20091120.ebuild,v 1.1 2009/11/20 23:28:26 matsuu Exp $
 
 DESCRIPTION="The M17N engine IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
