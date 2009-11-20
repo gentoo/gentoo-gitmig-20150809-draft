@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.27 2009/10/21 09:04:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.28 2009/11/20 22:18:59 ulm Exp $
+
+*emacs-daemon-0.17 (20 Nov 2009)
+
+  20 Nov 2009; Ulrich Mueller <ulm@gentoo.org> +emacs-daemon-0.17.ebuild:
+  Version bump.
 
   21 Oct 2009; Jeroen Roovers <jer@gentoo.org> emacs-daemon-0.15.ebuild:
   Stable for HPPA (bug #285525).
