@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.32 2009/10/24 12:36:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.33 2009/11/20 14:41:03 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> websvn-2.2.1.ebuild:
+  x86 stable, bug #286443
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> websvn-2.2.1.ebuild:
   ppc stable #286443
