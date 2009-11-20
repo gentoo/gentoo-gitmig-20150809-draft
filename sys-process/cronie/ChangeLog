@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.6 2009/08/23 20:12:43 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.7 2009/11/20 09:25:20 bangert Exp $
+
+*cronie-1.4.3 (20 Nov 2009)
+
+  20 Nov 2009; Thilo Bangert <bangert@gentoo.org> +cronie-1.4.3.ebuild,
+  +files/cronie-1.4.3-pamd:
+  version bump
 
 *cronie-1.4.1 (23 Aug 2009)
 
