@@ -1,12 +1,17 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.22 2009/09/10 12:09:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.23 2009/11/20 16:57:53 tupone Exp $
 
-  10 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  20 Nov 2009; Alfredo Tupone <tupone@gentoo.org> quakeforge-0.5.5.ebuild,
+  quakeforge-0.5.5-r2.ebuild, +files/quakeforge-0.5.5-noWerror.patch:
+  No more using -Werror during compiling. Bug #260899 by
+  flameeyes@gentoo.org
+
+  10 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   quakeforge-0.5.5-r2.ebuild:
   voodoo->tdfx. Thx ssuominen.
 
-  10 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  10 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   quakeforge-0.5.5-r2.ebuild:
   Rename 3dfx useflag onto video_cards_voodoo. Per bug #283943.
 
@@ -42,7 +47,7 @@
   quakeforge-0.5.5.ebuild:
   Removing old virtual/x11 dependency.
 
-  13 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  13 Nov 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   quakeforge-0.5.5.ebuild:
   Remove xmms useflag.
 
@@ -108,11 +113,11 @@
 
 *quakeforge-0.5.0 (21 julio 2002)
 
-  22 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :  
+  22 Aug 2002; J. Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> quakeforge-0.5.0.ebuild :  
   Now SRC_URI i direct to the tarball of quakeforge in Gentoo mirrors,
   and not to the hourly created in the official homepage.
   Aclaration: before the tarball used was the _same_ of now.
 
-  21 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :
+  21 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> quakeforge-0.5.0.ebuild :
   First Relase.
 

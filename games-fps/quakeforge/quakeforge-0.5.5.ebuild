@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.19 2008/02/15 01:12:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.20 2009/11/20 16:57:53 tupone Exp $
 
 inherit eutils games
 
@@ -95,8 +95,8 @@ src_compile() {
 		--enable-sound \
 		--disable-optimize \
 		${debugopts} \
-		--with-global-cfg=${GAMES_SYSCONFDIR}/quakeforge.conf \
-		--with-sharepath=${GAMES_DATADIR}/quake1 \
+		--with-global-cfg="${GAMES_SYSCONFDIR}"/quakeforge.conf \
+		--with-sharepath="${GAMES_DATADIR}"/quake1 \
 		--with-clients=${clients} \
 		--with-servers=${servers} \
 		--with-tools=${tools} \

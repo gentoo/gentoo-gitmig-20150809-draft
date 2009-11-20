@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.5 2009/09/10 12:09:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.6 2009/11/20 16:57:53 tupone Exp $
 
 EAPI=2
-inherit eutils games
+inherit base eutils autotools games
 
 DESCRIPTION="A new 3d engine based off of id Softwares's legendary Quake and QuakeWorld game engine"
 HOMEPAGE="http://www.quakeforge.net/"
@@ -45,7 +45,13 @@ PATCHES=(
 	"${FILESDIR}"/${P}-gcc41.patch
 	"${FILESDIR}"/${P}-keys.patch
 	"${FILESDIR}"/${P}-amd64.patch
+	"${FILESDIR}"/${P}-noWerror.patch
 )
+
+src_prepare() {
+	base_src_prepare
+	eautoreconf
+}
 
 src_configure() {
 	#i should do this at some point :x ... i guess if you disable all shared stuff
