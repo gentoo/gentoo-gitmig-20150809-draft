@@ -1,25 +1,34 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.3.0-r2.ebuild,v 1.1 2009/11/20 11:55:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.3.0-r2.ebuild,v 1.2 2009/11/20 20:03:39 bicatali Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.4"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils eutils flag-o-matic toolchain-funcs
+inherit distutils eutils flag-o-matic toolchain-funcs versionator
+
+NP="${PN}-$(get_version_component_range 1-2)"
 
 DESCRIPTION="Fast array and numerical python library"
-SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz
+	doc? (
+		http://docs.scipy.org/doc/${NP}.x/numpy-html.zip -> ${NP}-html.zip
+		http://docs.scipy.org/doc/${NP}.x/numpy-ref.pdf -> ${NP}-ref.pdf
+		http://docs.scipy.org/doc/${NP}.x/numpy-user.pdf -> ${NP}-user.pdf
+	)"
+
 HOMEPAGE="http://numpy.scipy.org/"
 
 RDEPEND="dev-python/setuptools
 	lapack? ( virtual/cblas virtual/lapack )"
 DEPEND="${RDEPEND}
 	lapack? ( dev-util/pkgconfig )
-	test? ( >=dev-python/nose-0.10 )"
+	test? ( >=dev-python/nose-0.10 )
+	doc? ( app-arch/unzip )"
 
-IUSE="lapack test"
+IUSE="doc lapack test"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 LICENSE="BSD"
@@ -47,6 +56,13 @@ pkg_setup() {
 	# when fortran flags are set, pic is removed.
 	FFLAGS="${FFLAGS} -fPIC"
 	export NUMPY_FCONFIG="config_fc --noopt --noarch"
+}
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	if use doc; then
+		unzip -qo "${DISTDIR}"/${NP}-html.zip -d html || die
+	fi
 }
 
 src_prepare() {
@@ -128,4 +144,9 @@ src_install() {
 	docinto f2py
 	dodoc numpy/f2py/docs/*.txt || die "dodoc f2py failed"
 	doman numpy/f2py/f2py.1 || die "doman failed"
+	if use doc; then
+		insinto /usr/share/doc/${PF}
+		doins -r "${WORKDIR}"/html || die
+		doins  "${DISTDIR}"/${NP}*pdf || die
+	fi
 }
