@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.4.ebuild,v 1.1 2009/11/20 20:21:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.4.ebuild,v 1.2 2009/11/20 22:22:49 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils flag-o-matic
+inherit distutils eutils flag-o-matic
 
 DESCRIPTION="A Pythonic binding for the libxml2 and libxslt libraries"
 HOMEPAGE="http://codespeak.net/lxml/ http://pypi.python.org/pypi/lxml"
@@ -33,6 +33,8 @@ src_prepare() {
 
 	# Disable broken tests.
 	sed -e "/elementsoup\.txt/d" -i src/lxml/html/tests/test_elementsoup.py || die "sed failed"
+
+	epatch "${FILESDIR}/${P}-python-3.patch"
 }
 
 src_compile() {
@@ -43,6 +45,9 @@ src_compile() {
 
 src_test() {
 	testing() {
+		# Tests are broken with Python 3.
+		[[ "${PYTHON_ABI}" == 3.* ]] && return
+
 		local module
 		for module in lxml/etree lxml/objectify; do
 			ln -fs "../../$(ls -d build-${PYTHON_ABI}/lib.*)/${module}.so" "src/${module}.so" || die "ln -fs src/${module} failed"
