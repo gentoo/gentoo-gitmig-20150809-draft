@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/osc-mpiexec-0.83.ebuild,v 1.2 2009/10/23 16:59:22 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/osc-mpiexec-0.83.ebuild,v 1.3 2009/11/20 14:43:48 maekke Exp $
 
 MY_PN=${PN#osc-}
 DESCRIPTION="replacement for mpirun, integrates MPI with PBS."
@@ -13,7 +13,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 S="${WORKDIR}"/${MY_PN}-${PV}
