@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10865 2009/11/20 18:10:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10866 2009/11/20 20:32:26 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -138,6 +138,11 @@ games-board/ggz-kde-games
 #
 # Bug 292791.
 #
+<media-sound/amarok-2
+<app-cdr/k3b-1.68.0_alpha1
+net-print/kink
+<app-editors/kile-2.1_beta1
+kde-misc/kload
 <net-misc/kvpnc-0.9.3
 media-tv/kdetv
 media-tv/kvdr
