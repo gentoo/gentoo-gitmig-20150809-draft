@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.9 2009/11/11 14:37:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.10 2009/11/20 18:47:59 abcd Exp $
 
-EAPI="1"
+EAPI="2"
 ARTS_REQUIRED=never
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -54,7 +54,7 @@ RDEPEND="
 	>=sys-apps/portage-2.1.2.11
 	virtual/ghostscript
 	x11-libs/libXext
-	>=x11-libs/qt-3.3.3:3
+	>=x11-libs/qt-3.3.3:3[doc?]
 	acl? (
 		virtual/acl
 	)
@@ -115,9 +115,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	kde_src_unpack
-
+src_prepare() {
 	# remove this symlink, bug 264767
 	rm -f "${WORKDIR}/${P}"/kdeprint/kdeprint
 
@@ -156,7 +154,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-khtml.patch"
 }
 
-src_compile() {
+src_configure() {
 	rm -f "${S}/configure"
 
 	myconf="--with-distribution=Gentoo --disable-fast-malloc
@@ -191,6 +189,10 @@ src_compile() {
 
 	replace-flags "-O3" "-O2" # see bug #148180
 
+	kde_src_configure
+}
+
+src_compile() {
 	kde_src_compile
 
 	if use doc; then
