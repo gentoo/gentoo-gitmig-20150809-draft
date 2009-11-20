@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.44 2009/11/10 20:45:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.45 2009/11/20 15:13:33 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> gnubg-20090817.ebuild:
+  x86 stable, bug #288644
 
   10 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   gnubg-0.14.3-r1.ebuild:
