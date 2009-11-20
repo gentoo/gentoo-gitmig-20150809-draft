@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10858 2009/11/20 04:26:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10859 2009/11/20 15:23:50 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -355,14 +355,6 @@ media-video/xfmedia
 # Will be removed in 30 days
 dev-python/pymsn
 
-# Samuli Suominen <ssuominen@gentoo.org> (25 Oct 2009)
-# Masked for security. CVE-2009-{3603,3604,3606,3608,3609}.
-#
-# http://bugs.gentoo.org/290470
-#
-# Replaced by kde-base/okular. Removed in 30 days.
-kde-base/kpdf
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Oct 2009)
 # Documentation for removed versions of dev-python/twisted. Masked for deletion in 30 days.
 dev-python/twisted-docs
@@ -375,12 +367,6 @@ dev-python/cryptlib_py
 # KDE3-only. Replaced by app-cdr/acetoneiso.
 # Masked for removal in 30 days.
 app-cdr/kiso
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
-# Deprecated aRts support wrt bug #270575
-# Masked for removal in 30 days.
-kde-base/noatun
-kde-base/noatun-plugins
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (24 Oct 2009)
 # Replaced by app-mobilephone/gammu[python]. Masked for deletion in 30 days.
