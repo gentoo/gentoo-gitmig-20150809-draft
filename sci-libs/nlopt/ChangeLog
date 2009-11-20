@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.1 2009/07/10 19:27:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.2 2009/11/20 22:12:29 bicatali Exp $
+
+*nlopt-1.2 (20 Nov 2009)
+
+  20 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> +nlopt-1.2.ebuild:
+  Version bump, thanks Jean-Francis Roy for his contribution
 
 *nlopt-1.0.1 (10 Jul 2009)
 
