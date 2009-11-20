@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.10 2009/11/11 14:39:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.11 2009/11/20 03:10:56 ssuominen Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -31,7 +31,6 @@ RDEPEND="${DEPEND}
 	>=kde-base/kcminit-${PV}:${SLOT}
 	>=kde-base/kdebase-data-${PV}:${SLOT}
 	>=kde-base/kdesu-${PV}:${SLOT}
-	>=kde-base/khelpcenter-${PV}:${SLOT}
 	>=kde-base/khotkeys-${PV}:${SLOT}"
 
 KMEXTRACTONLY="kwin/kwinbindings.cpp
