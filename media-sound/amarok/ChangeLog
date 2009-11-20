@@ -1,10 +1,16 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.347 2009/11/15 00:27:26 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.348 2009/11/20 03:02:48 jmbsvicetto Exp $
 
-  15 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org> -amarok-2.1.ebuild,
-  -amarok-2.1.1.ebuild, -files/disable_bindings_test.patch:
-  Remove old 2.1 ebuilds and deprecated patch
+*amarok-2.2.1-r1 (20 Nov 2009)
+
+  20 Nov 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.2.1-r1.ebuild:
+  Added missing app-crypt/qca:2 dep. Fixes bug #293509 - thanks to Rafael
+  <rktspm@gmail.com>.
+  Added missing kde-base/kdemultimedia-kioslaves. Fixes bug #292216 - thanks
+  to Hubert Lee <oboe-nerd@hotmail.com>.
+  Bumped revision to avoid dep tree issues.
 
   14 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org> amarok-2.2.0.ebuild,
   amarok-2.2.1.ebuild, +files/amarok-qtscriptcheck.patch:
