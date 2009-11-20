@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.37 2009/08/13 21:02:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.38 2009/11/20 17:27:29 arfrever Exp $
 
 inherit toolchain-funcs
 
@@ -89,7 +89,7 @@ src_unpack() {
 src_compile() {
 	# Set XA_DLL_PATH even though we statically link the mods, I guess
 	# this provides extensibility
-	emake CC="$(tc-getCC)" OPTIMIZE="${CFLAGS}" \
+	emake CC="$(tc-getCC)" OPTIMIZE="${CFLAGS}" LD_FLAGS="${LDFLAGS}" \
 		XA_DLL_DEF="-DXA_DLL -DXA_PRINT" XA_DLL_PATH=/usr/lib/xanim/mods \
 		${_XA_EXT:+ \
 			XA_IV32_LIB="mods/${_XA_CVID}" \
