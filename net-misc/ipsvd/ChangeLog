@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipsvd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.6 2009/09/23 19:38:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.7 2009/11/20 09:09:25 bangert Exp $
+
+  20 Nov 2009; Thilo Bangert <bangert@gentoo.org> -ipsvd-0.13.0.ebuild:
+  remove old version
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ipsvd-0.13.0.ebuild,
   ipsvd-1.0.0.ebuild:
