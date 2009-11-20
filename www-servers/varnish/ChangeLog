@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.28 2009/10/07 13:10:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.29 2009/11/20 09:05:35 bangert Exp $
+
+*varnish-2.0.5 (20 Nov 2009)
+
+  20 Nov 2009; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.5.ebuild:
+  version bump
 
   07 Oct 2009; Benedikt Böhm <hollow@gentoo.org> varnish-2.0.4-r1.ebuild:
   stable on amd64
