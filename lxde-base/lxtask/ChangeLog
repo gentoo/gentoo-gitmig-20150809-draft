@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxtask
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.6 2009/11/05 17:41:34 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.7 2009/11/20 14:23:05 maekke Exp $
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> lxtask-0.1.1.ebuild:
+  amd64/x86 stable, bug #292698
 
   05 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> -lxtask-0.1.ebuild:
   Cleaning out old ebuild
