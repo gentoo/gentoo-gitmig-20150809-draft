@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4_p20091118.ebuild,v 1.1 2009/11/18 20:59:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4_p20091118.ebuild,v 1.2 2009/11/20 09:58:26 zzam Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -10,9 +10,6 @@ inherit vdr-plugin eutils multilib versionator
 
 MY_PV=${PV#*_p}
 MY_P=${PN}-cvs-${MY_PV}
-
-SO_VERSION="${PV%_p*}"
-SO_VERSION="${SO_VERSION/_/}"
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
@@ -130,13 +127,17 @@ src_install() {
 		# install vdr plugin
 		vdr-plugin_src_install
 
-		# There may be no sub-plugin, depending on use-flags
+		# version number that the sources contain
+		local SO_VERSION="$(grep 'static const char \*VERSION *=' xineliboutput.c |\
+						cut	-d'"' -f2)"
+	echo SO_VERSION=$SO_VERSION
 		insinto ${VDR_PLUGIN_DIR}
-		local f
-		for f in libxineliboutput*.so.${SO_VERSION}; do
-			[[ -f "$f" ]] || continue
-			doins "${f}" || die "could not install sub-plugin ${f}"
-		done
+		if use fbcon; then
+			doins libxineliboutput-fbfe.so.${SO_VERSION} || die "doins failed"
+		fi
+		if use X; then
+			doins libxineliboutput-sxfe.so.${SO_VERSION} || die "doins failed"
+		fi
 	fi
 
 	if use xine; then
