@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.136 2009/11/08 23:16:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.137 2009/11/20 04:03:58 ssuominen Exp $
+
+  20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -kcheckpass-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kcheckpass-4.3.2.ebuild:
   Drop KDE 4.3.2
