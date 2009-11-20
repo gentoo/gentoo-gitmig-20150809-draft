@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5013 2009/11/19 23:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5014 2009/11/20 03:37:21 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1255,7 +1255,6 @@ kde-base/kpilot:avantgo - Add support for syncing Avantgo accounts
 kde-base/krdc:rdp - Enable runtime dependency for net-misc/rdesktop
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:indi - Enable support for Astronomical control library using libindi
-kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kttsd:epos - Build a plugin for app-accessibility/epos
 kde-base/kttsd:festival - Build a plugin for app-accessibility/festival
 kde-base/kttsd:flite - Build a plugin for app-accessibility/flite
