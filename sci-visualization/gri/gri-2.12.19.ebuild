@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.19.ebuild,v 1.1 2009/07/21 08:20:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.19.ebuild,v 1.2 2009/11/20 13:14:21 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gri/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc emacs examples"
 RESTRICT="test"
 
