@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/mosaik
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mosaik/ChangeLog,v 1.1 2009/11/20 19:02:25 weaver Exp $
+
+*mosaik-1.0.1367 (20 Nov 2009)
+
+  20 Nov 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +mosaik-1.0.1367.ebuild:
+  New package, ebuild written by me
+
