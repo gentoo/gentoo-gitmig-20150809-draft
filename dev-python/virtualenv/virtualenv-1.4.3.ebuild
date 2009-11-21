@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.4.ebuild,v 1.1 2009/11/07 03:05:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.4.3.ebuild,v 1.1 2009/11/21 02:53:20 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,8 @@ IUSE=""
 
 RDEPEND=">=dev-python/setuptools-0.6_rc8"
 DEPEND="${RDEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
+# 2.7: Bug #292409
+RESTRICT_PYTHON_ABIS="2.7 3.*"
 
 PYTHON_MODNAME="virtualenv.py virtualenv_support"
-DOCS="docs/index.txt"
+DOCS="docs/index.txt docs/news.txt"
