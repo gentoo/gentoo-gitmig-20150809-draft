@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.181 2009/11/12 14:32:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.182 2009/11/21 19:55:52 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> tor-0.2.1.19-r2.ebuild:
+  ppc stable #292022
 
 *tor-0.2.1.19-r2 (12 Nov 2009)
 
