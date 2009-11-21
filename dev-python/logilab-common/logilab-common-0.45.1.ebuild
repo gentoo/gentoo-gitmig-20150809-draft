@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.45.1.ebuild,v 1.3 2009/11/19 16:21:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.45.1.ebuild,v 1.4 2009/11/21 02:21:39 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -40,38 +40,20 @@ src_test() {
 	testing() {
 		# Install temporarily.
 		local tpath="${T}/test-${PYTHON_ABI}"
-		local lpath="${tpath}/lib/python"
+		local spath="${tpath}$(python_get_sitedir)"
 
-		# setuptools would fail if the directory doesn't exist.
-		mkdir -p "${lpath}" || die
-
-		# We also have to add ${lpath} to PYTHONPATH else the installation would
-		# fail.
-		PYTHONPATH="${lpath}" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --home="${tpath}" || die "test copy failed"
-
-		# Get a rid of precompiled files to ensure we run our _modified_ tests
-		find ${lpath} -type f -name '*.pyc' -exec rm {} ';'
-
-		# Remove a botched tests.
-		# To support test w/o setuptools.
-		if [[ -d "${lpath}/${PN/-//}" ]]; then
-			pushd "${lpath}/${PN/-//}" >/dev/null || die
-		else
-			pushd "${lpath}/${P/-/_}-py${PYTHON_ABI}.egg/${PN/-//}" >/dev/null || die
-		fi
+		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${tpath}" || die "Installation for tests failed with Python ${PYTHON_ABI}"
 
 		# Bug 223079.
 		if [[ "${EUID}" -eq 0 ]]; then
 			rm test/unittest_fileutils.py || die
 		fi
 
-		popd >/dev/null || die
-
-		# It picks up the tests relative to the current dir, so cd in. Do
+		# pytest picks up the tests relative to the current directory, so cd in. Do
 		# not cd in too far though (to logilab/common for example) or some
 		# relative/absolute module location tests fail.
-		pushd "${lpath}" >/dev/null || die
-		PYTHONPATH="${lpath}" "$(PYTHON)" "${tpath}/bin/pytest" -v || die "tests failed"
+		pushd "${spath}" >/dev/null || die
+		PYTHONPATH="${spath}" "$(PYTHON)" "${tpath}/usr/bin/pytest" -v || return 1
 		popd >/dev/null || die
 	}
 	python_execute_function testing
