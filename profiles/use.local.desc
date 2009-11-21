@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5019 2009/11/21 05:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5020 2009/11/21 10:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2358,7 +2358,6 @@ net-libs/libssh:sftp - Build with SFTP support
 net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt for crypto
 net-libs/libvncserver:no24bpp - disable 24bpp support
-net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/loudmouth:asyncns - Use libasyncns for asynchronous name resolution.
 net-libs/netembryo:sctp - Support for Stream Control Transmission Protocol
 net-libs/opal:audio - Enable audio support
