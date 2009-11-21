@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/files/mysql-proxy.initd,v 1.1 2009/11/21 13:52:45 wschlich Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting MySQL Proxy"
+	start-stop-daemon --start --quiet \
+		--exec /usr/sbin/mysql-proxy \
+		-- --daemon --pid-file="${PIDFILE}" ${OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping MySQL Proxy"
+	start-stop-daemon --stop --quiet \
+		--pidfile "${PIDFILE}"
+	eend $?
+}
