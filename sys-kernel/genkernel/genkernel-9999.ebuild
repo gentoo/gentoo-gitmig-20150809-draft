@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.14 2009/05/09 01:52:01 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.15 2009/11/21 19:21:27 robbat2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -10,8 +10,9 @@ VERSION_BUSYBOX='1.7.4'
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.40.9'
-VERSION_LVM='2.02.28'
 VERSION_FUSE='2.7.4'
+VERSION_ISCSI='2.0-871'
+VERSION_LVM='2.02.28'
 VERSION_UNIONFS_FUSE='0.22'
 
 MY_HOME="http://dev.gentoo.org/~wolf31o2"
@@ -26,6 +27,7 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		${RH_HOME}/dm/device-mapper.${VERSION_DMAP}.tgz
 		${RH_HOME}/dm/old/device-mapper.${VERSION_DMAP}.tgz
 		${BB_HOME}/busybox-${VERSION_BUSYBOX}.tar.bz2
+		http://www.open-iscsi.org/bits/open-iscsi-${VERSION_ISCSI}.tar.gz
 		mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz
 		mirror://sourceforge/fuse/fuse-${VERSION_FUSE}.tar.gz
 		http://podgorny.cz/unionfs-fuse/releases/unionfs-fuse-${VERSION_UNIONFS_FUSE}.tar.bz2"
@@ -34,6 +36,7 @@ if [[ ${PV} == 9999* ]]
 then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
 	EGIT_REPO_URI="git://git.wolf31o2.org/projs/genkernel.git"
+	#EGIT_BRANCH=''
 	inherit git bash-completion eutils
 	S="${WORKDIR}/${PN}"
 	SRC_URI="${COMMON_URI}"
@@ -72,12 +75,14 @@ src_unpack() {
 
 src_install() {
 	# This block updates genkernel.conf
-	sed -e "s:VERSION_DMAP:$VERSION_DMAP:" \
+	sed \
+		-e "s:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
+		-e "s:VERSION_DMAP:$VERSION_DMAP:" \
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
-		-e "s:VERSION_LVM:$VERSION_LVM:" \
-		-e "s:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
 		-e "s:VERSION_FUSE:$VERSION_FUSE:" \
+		-e "s:VERSION_ISCSI:$VERSION_ISCSI:" \
+		-e "s:VERSION_LVM:$VERSION_LVM:" \
 		-e "s:VERSION_UNIONFS_FUSE:$VERSION_UNIONFS_FUSE:" \
 		"${S}"/genkernel.conf > "${T}"/genkernel.conf \
 		|| die "Could not adjust versions"
@@ -107,6 +112,7 @@ src_install() {
 		"${DISTDIR}"/busybox-${VERSION_BUSYBOX}.tar.bz2 \
 		"${DISTDIR}"/fuse-${VERSION_FUSE}.tar.gz \
 		"${DISTDIR}"/unionfs-fuse-${VERSION_UNIONFS_FUSE}.tar.bz2 \
+		"${DISTDIR}"/open-iscsi-${VERSION_ISCSI}.tar.gz \
 		"${D}"/var/cache/genkernel/src || die "Copying distfiles..."
 
 	dobashcompletion "${FILESDIR}"/genkernel.bash

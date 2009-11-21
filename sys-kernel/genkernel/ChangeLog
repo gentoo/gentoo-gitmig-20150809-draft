@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.218 2009/08/05 13:27:24 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.219 2009/11/21 19:21:27 robbat2 Exp $
+
+  21 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
+  iSCSI support now in the Git tree.
 
 *genkernel-3.4.10.906 (05 Aug 2009)
 
