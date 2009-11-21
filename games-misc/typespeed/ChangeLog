@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/typespeed
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.24 2009/11/07 22:51:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.25 2009/11/21 18:20:08 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> typespeed-0.6.5.ebuild:
+  x86 stable, bug #288955
 
   07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> typespeed-0.6.5.ebuild:
   Stable for ppc, bug 288955
