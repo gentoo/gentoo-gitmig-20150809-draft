@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.204 2009/11/13 20:51:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.205 2009/11/21 05:45:11 cardoe Exp $
+
+  21 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-71.86.11.ebuild:
+  stabilize for bug #290561
 
 *nvidia-drivers-96.43.14 (13 Nov 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.11.ebuild,v 1.4 2009/10/29 19:47:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.11.ebuild,v 1.5 2009/11/21 05:45:11 cardoe Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/${X86_NV}/${PV}/${X86_NV_PACKA
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="acpi custom-cflags gtk multilib kernel_FreeBSD kernel_linux userland_BSD"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
