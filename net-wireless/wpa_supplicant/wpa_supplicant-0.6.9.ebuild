@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.9.ebuild,v 1.7 2009/07/24 16:42:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.9.ebuild,v 1.8 2009/11/21 12:03:21 gurligebis Exp $
 
 EAPI="2"
 
@@ -188,6 +188,11 @@ src_install() {
 		dosym /usr/sbin/wpa_supplicant /sbin/wpa_supplicant || die
 		dodir /bin
 		dosym /usr/bin/wpa_cli /bin/wpa_cli || die
+	fi
+
+	if has_version ">=sys-apps/openrc-0.5.0"; then
+		newinitd "$FILESDIR"/${PN}-init.d wpa_supplicant
+		newconfd "$FILESDIR"/${PN}-conf.d wpa_supplicant
 	fi
 
 	exeinto /etc/wpa_supplicant/
