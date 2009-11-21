@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.16 2009/10/29 22:28:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.17 2009/11/21 14:32:56 mrpouet Exp $
+
+*cheese-2.28.1-r1 (21 Nov 2009)
+
+  21 Nov 2009; Romain Perier <mrpouet@gentoo.org> +cheese-2.28.1-r1.ebuild:
+  Add missing gst-plugins-good pure RDEPEND (for videobalance plugin) per
+  bug #293642, new revision.
 
 *cheese-2.28.1 (29 Oct 2009)
 
