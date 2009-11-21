@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/htmlize
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/ChangeLog,v 1.19 2009/11/18 19:10:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/ChangeLog,v 1.20 2009/11/21 19:09:55 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> htmlize-1.36.ebuild:
+  ppc stable #293033
 
   18 Nov 2009; Christian Faulhammer <fauli@gentoo.org> htmlize-1.36.ebuild:
   stable x86, bug 293033
