@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/klu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/klu/ChangeLog,v 1.1 2008/02/05 18:42:23 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/klu/ChangeLog,v 1.2 2009/11/21 07:25:56 bicatali Exp $
+
+*klu-1.1.0 (21 Nov 2009)
+
+  21 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> +klu-1.1.0.ebuild:
+  Version bump
 
 *klu-1.0.1 (05 Feb 2008)
 
