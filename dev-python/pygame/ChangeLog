@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.67 2009/10/13 17:05:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.68 2009/11/21 01:18:44 arfrever Exp $
+
+  21 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygame-1.9.1.ebuild:
+  Install examples only with USE="examples" (bug #287990).
 
   13 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> -pygame-1.7.1.ebuild,
   -pygame-1.8.0.ebuild, -pygame-1.8.1-r1.ebuild,
