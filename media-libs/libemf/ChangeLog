@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.27 2009/11/17 23:39:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.28 2009/11/21 18:43:49 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> libemf-1.0.4.ebuild:
+  ppc stable #292610
 
   17 Nov 2009; Ryan Hill <dirtyepic@gentoo.org> libemf-1.0.4.ebuild:
   Fix libtool trying to link against the wrong library versions, spotted by
