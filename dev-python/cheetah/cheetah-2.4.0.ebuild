@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.0.ebuild,v 1.2 2009/11/03 18:34:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.0.ebuild,v 1.3 2009/11/21 19:03:34 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,6 +34,7 @@ src_test() {
 	sed \
 		-e "/Unicode/d" \
 		-e "s/if not sys.platform.startswith('java'):/if False:/" \
+		-e "/results =/a\\    sys.exit(not results.wasSuccessful())" \
 		-i cheetah/Tests/Test.py || die "sed failed"
 
 	testing() {
