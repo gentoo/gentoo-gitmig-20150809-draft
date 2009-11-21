@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/btf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/btf/ChangeLog,v 1.1 2008/02/05 18:34:57 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/btf/ChangeLog,v 1.2 2009/11/21 06:59:44 bicatali Exp $
+
+*btf-1.1.0 (21 Nov 2009)
+
+  21 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> +btf-1.1.0.ebuild:
+  Version bump
 
 *btf-1.0.1 (05 Feb 2008)
 
