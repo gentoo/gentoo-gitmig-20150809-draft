@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.604 2009/11/18 20:52:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.605 2009/11/21 18:24:15 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> qt-3.3.8b-r2.ebuild:
+  ppc stable #292929
 
 *qt-4.6.0_rc1 (18 Nov 2009)
 
