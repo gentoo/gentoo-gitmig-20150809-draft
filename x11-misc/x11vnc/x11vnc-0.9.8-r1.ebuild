@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.8-r1.ebuild,v 1.1 2009/11/06 21:54:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.8-r1.ebuild,v 1.2 2009/11/21 08:59:09 swegener Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ src_prepare() {
 }
 
 pkg_setup() {
-	if use avahi && ! use threads && ! use system-libvncserver
+	if use avahi && ! use threads
 	then
 		ewarn "Non-native avahi support has been enabled."
 		ewarn "Native avahi support can be enabled by also enabling the threads USE flag."
