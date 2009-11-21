@@ -24,6 +24,9 @@ java-external
 # broken upstream, see libavcodec/sh4/idct_sh4.c:#error
 ffmpeg
 
+# No hardware to test
+bluetooth
+
 # Stuff we don't want
 chicken
 clisp
