@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-4.3.0.ebuild,v 1.2 2009/11/21 12:36:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-4.5.0.ebuild,v 1.1 2009/11/21 12:36:16 patrick Exp $
 
 MY_PV="${PV//./_}"
 MY_PV="${MY_PV/_p/p}"
 S="${WORKDIR}/${PN}-perso-${MY_PV}"
 
 ADDON_LIST="batik_imagetoolkit jimi_imagetoolkit dav_vdrive ftp_vdrive jeuclid_imagetoolkit mathml_config"
-ADDON_LIST="${ADDON_LIST} dita_dtd_config sample_customize_xxe sdocbook_config slides_config wxs_config"
+ADDON_LIST="${ADDON_LIST} sample_customize_xxe sdocbook_config slides_config wxs_config"
 ADDON_LIST="${ADDON_LIST} xep_foprocessor fop1_foprocessor xfc_foprocessor xxe-devdocs xxe-docsrc xxe_config_pack"
 
 DESCRIPTION="The XMLmind XML Editor"
@@ -17,8 +17,8 @@ do
 	SRC_URI_ADDON="${SRC_URI_ADDON} http://www.xmlmind.com/xmleditor/_download/${i}-${MY_PV}.zip"
 done
 
-SRC_URI="http://www.xmlmind.com/archive/xmleditor/4.3.0_01/${PN}-perso-${MY_PV}.tar.gz
-	doc? ( http://www.xmlmind.com/archive/xmleditor/4.3.0_01/${PN}-devdocs-${MY_PV}.tar.gz )
+SRC_URI="http://www.xmlmind.com/xmleditor/_download/${PN}-perso-${MY_PV}.tar.gz
+	doc? ( http://www.xmlmind.com/xmleditor/_download/${PN}-devdocs-${MY_PV}.tar.gz )
 	!minimal? ( ${SRC_URI_ADDON} )"
 
 HOMEPAGE="http://www.xmlmind.com/xmleditor/index.html"
