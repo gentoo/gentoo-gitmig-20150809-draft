@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.195 2009/10/09 17:48:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.196 2009/11/21 22:10:27 ulm Exp $
+
+*sudo-1.7.2_p1-r1 (21 Nov 2009)
+
+  21 Nov 2009; Ulrich Mueller <ulm@gentoo.org> +sudo-1.7.2_p1-r1.ebuild:
+  Fix default editor handling, bug 286017.
 
   09 Oct 2009; Raúl Porcel <armin76@gentoo.org> sudo-1.7.2_p1.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #284089
