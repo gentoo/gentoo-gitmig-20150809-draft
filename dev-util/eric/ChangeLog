@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.97 2009/11/19 17:50:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.98 2009/11/21 18:16:56 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> eric-4.3.8.ebuild:
+  ppc stable #292964
 
   19 Nov 2009; Jeroen Roovers <jer@gentoo.org> eric-4.3.8.ebuild:
   Stable for HPPA (bug #292964).
