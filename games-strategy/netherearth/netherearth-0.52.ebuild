@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.4 2006/09/26 16:51:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.5 2009/11/21 17:46:52 maekke Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.braingames.getput.com/nether/sources.zip
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.6-r3
