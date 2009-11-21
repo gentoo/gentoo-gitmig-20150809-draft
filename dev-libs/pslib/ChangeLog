@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pslib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.15 2009/08/03 10:27:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.16 2009/11/21 17:30:30 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> pslib-0.4.1-r1.ebuild:
+  amd64 stable, bug #289340
 
   03 Aug 2009; Alexis Ballier <aballier@gentoo.org> pslib-0.4.1-r1.ebuild,
   +files/pslib-getline.patch:
