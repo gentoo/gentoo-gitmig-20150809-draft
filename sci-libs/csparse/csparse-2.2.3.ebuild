@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/csparse-2.2.2.ebuild,v 1.1 2009/03/09 16:45:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/csparse-2.2.3.ebuild,v 1.1 2009/11/21 07:15:59 bicatali Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -20,7 +20,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${PN}-2.2.2-autotools.patch
 	eautoreconf
 }
 
