@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.81 2009/11/18 00:22:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.82 2009/11/21 05:28:37 cardoe Exp $
+
+*mythvideo-0.22_p22864 (21 Nov 2009)
+
+  21 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythvideo-0.22_p22864.ebuild, files/mtd.init.d, +files/mythvideo.daily,
+  +files/mythvideo.hourly, +files/mythvideo.weekly, metadata.xml:
+  update upstream JAMU version. Improve JAMU support by installing depends
+  (which are now in the tree) and optionally installing default cronjobs to
+  do the right things with JAMU
 
   18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   replace media-tv herd for MythTV

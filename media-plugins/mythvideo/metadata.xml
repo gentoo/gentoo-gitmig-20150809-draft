@@ -6,4 +6,8 @@
 	<email>cardoe@gentoo.org</email>
 	<description>Do not CC me on bugs</description>
 </maintainer>
+<use>
+	<flag name='jamu'>Use and configure the Just Another Metadata Utility by
+		default</flag>
+</use>
 </pkgmetadata>

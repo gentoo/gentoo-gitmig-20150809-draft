@@ -9,6 +9,9 @@ depend() {
 
 start() {
 
+	# necessary so it can read the correct mysql.txt
+	export HOME=/etc/mythtv/
+
         ebegin "Starting MythTV Transcoding Daemon"
         start-stop-daemon --start --quiet  \
                 --exec /usr/bin/mtd \
