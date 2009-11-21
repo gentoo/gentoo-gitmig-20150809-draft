@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10866 2009/11/20 20:32:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10867 2009/11/21 23:52:37 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -105,6 +105,7 @@ app-emulation/transgaming-mozctlinstaller
 
 # Ulrich Mueller <ulm@gentoo.org> (14 Nov 2009)
 # CVS snapshot, masked for one week of testing.
+# Duration extended until bug 293953 is resolved.
 =app-emacs/wanderlust-2.15.7_pre*
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (14 Nov 2009)
