@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.51 2009/11/17 16:13:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.52 2009/11/21 19:59:13 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> mDNSResponder-212.1.ebuild:
+  ppc stable #290822
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> mDNSResponder-212.1.ebuild:
   Marking mDNSResponder-212.1 ppc64 for bug 290822
