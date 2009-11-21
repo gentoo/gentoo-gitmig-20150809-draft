@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.6 2009/10/18 15:28:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.7 2009/11/21 17:23:50 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> libunwind-0.99.ebuild:
+  x86 stable, bug #289445
 
   18 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> libunwind-0.99.ebuild:
   amd64 stable wrt #289445
