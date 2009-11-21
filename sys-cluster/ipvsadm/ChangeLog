@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.39 2009/10/10 17:39:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.40 2009/11/21 21:59:51 swegener Exp $
+
+  21 Nov 2009; Sven Wegener <swegener@gentoo.org> ipvsadm-1.21-r1.ebuild,
+  ipvsadm-1.24.ebuild, ipvsadm-1.25.ebuild:
+  Drop diropts and insopts, just use the default values. Drop dodir, because
+  insinto implicitly creates the directories.
 
 *ipvsadm-1.25 (10 Oct 2009)
 
