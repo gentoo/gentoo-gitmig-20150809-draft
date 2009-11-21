@@ -19,7 +19,7 @@ fi
 
 if [ -z "${EDITOR}" ]; then
     # Try to get EDITOR from system profile
-    EDITOR=$(source /etc/profile &>/dev/null; echo "${EDITOR}")
+    EDITOR=$(. /etc/profile &>/dev/null; echo "${EDITOR}")
 fi
 
 if [ -z "${EDITOR}" ]; then
