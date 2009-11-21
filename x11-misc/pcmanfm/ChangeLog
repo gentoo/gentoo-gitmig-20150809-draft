@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.11 2009/11/20 14:26:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.12 2009/11/21 18:42:33 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> pcmanfm-0.5.2.ebuild:
+  ppc stable #292698
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> pcmanfm-0.5.2.ebuild:
   amd64/x86 stable, bug #292698
