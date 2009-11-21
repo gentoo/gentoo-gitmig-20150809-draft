@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.67 2009/11/06 13:12:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.68 2009/11/21 12:30:27 pva Exp $
+
+  21 Nov 2009; Peter Volkov <pva@gentoo.org> -vzctl-3.0.22-r2.ebuild,
+  -files/vzctl-3.0.22-adjust-meminfo.patch,
+  -files/vzctl-3.0.22-capability-fix.patch,
+  -files/vzctl-3.0.22-document-disable-modules.patch,
+  -files/vzctl-3.0.22-glibc28.patch,
+  -files/vzctl-3.0.22-workaround-gentoo-add_ip.patch, metadata.xml:
+  Drop old.
 
   06 Nov 2009; Peter Volkov <pva@gentoo.org> vzctl-9999.ebuild:
   Rename VE -> CT (like upstream already did).

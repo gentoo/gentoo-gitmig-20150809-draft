@@ -6,7 +6,4 @@
 		<email>pva@gentoo.org</email>
 		<name>Peter Volkov</name>
 	</maintainer>
-	<use>
-		<flag name='logrotate'>Enable logrotate file installation</flag>
-	</use>
 </pkgmetadata>
