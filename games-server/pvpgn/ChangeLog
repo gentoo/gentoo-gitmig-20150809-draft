@@ -1,6 +1,9 @@
 # ChangeLog for games-server/pvpgn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.17 2009/06/30 02:01:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.18 2009/11/21 18:16:53 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> pvpgn-1.8.5.ebuild:
+  x86 stable, bug #288952
 
 *pvpgn-1.8.5 (30 Jun 2009)
 
