@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/zoom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.17 2009/07/11 03:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.18 2009/11/21 17:44:53 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> zoom-1.1.4.ebuild:
+  x86 stable, bug #288804
 
 *zoom-1.1.4 (11 Jul 2009)
 
