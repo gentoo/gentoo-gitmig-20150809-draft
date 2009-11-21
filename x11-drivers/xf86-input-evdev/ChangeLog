@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.126 2009/10/26 21:13:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.127 2009/11/21 09:21:42 scarabeus Exp $
+
+*xf86-input-evdev-2.3.1 (21 Nov 2009)
+
+  21 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86-input-evdev-2.3.1.ebuild:
+  Version bump.
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   xf86-input-evdev-2.2.5.ebuild:
