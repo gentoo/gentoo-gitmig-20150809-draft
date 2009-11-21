@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/memonix-bin-1.6.ebuild,v 1.3 2008/02/29 19:27:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix-bin/memonix-bin-1.6.ebuild,v 1.4 2009/11/21 19:33:55 maekke Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.viewizard.com/download/memx${PV//./}.tar.gz
 
 LICENSE="Memonix"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RESTRICT="strip"
 
