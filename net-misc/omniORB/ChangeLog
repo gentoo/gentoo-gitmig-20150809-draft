@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.54 2009/11/17 19:52:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.55 2009/11/21 19:16:50 caster Exp $
+
+  21 Nov 2009; Vlastimil Babka <caster@gentoo.org> omniORB-4.1.4.ebuild:
+  Call econf in src_configure, spotted by maekke in bug #290199. Add doc USE
+  flag to install html and pdf docs.
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> omniORB-4.1.4.ebuild:
   Marking omniORB-4.1.4 ppc64 for bug 290199

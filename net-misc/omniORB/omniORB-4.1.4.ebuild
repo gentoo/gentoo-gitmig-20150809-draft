@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4.ebuild,v 1.3 2009/11/17 19:52:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4.ebuild,v 1.4 2009/11/21 19:16:50 caster Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://omniorb.sourceforge.net/"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
-IUSE="ssl"
+IUSE="doc ssl"
 
 RDEPEND="dev-lang/python
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
@@ -26,31 +26,36 @@ src_prepare() {
 		mk/platforms/i586_linux_2.0*.mk || die "sed failed"
 }
 
-src_compile() {
-	mkdir build || die
-	cd build
+src_configure() {
+	mkdir build && cd build || die
 
-	MY_CONF="--prefix=/usr --with-omniORB-config=/etc/omniorb/omniORB.cfg \
+	local MY_CONF="--prefix=/usr --with-omniORB-config=/etc/omniorb/omniORB.cfg \
 		--with-omniNames-logdir=/var/log/omniORB --libdir=/usr/$(get_libdir)"
 
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
 	python_version
-	PYTHON=/usr/bin/python${PYVER} ECONF_SOURCE=".." econf ${MY_CONF} \
-		|| die "./configure failed"
+	PYTHON=/usr/bin/python${PYVER} ECONF_SOURCE=".." econf ${MY_CONF}
+}
 
-	emake OPTCFLAGS="${OPTCFLAGS}" OPTCXXFLAGS="${CXXFLAGS}" || die "emake failed"
+src_compile() {
+	cd build
+	emake OPTCFLAGS="${CFLAGS}" OPTCXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install () {
-	cd "${S}/build"
+	cd build
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	cd "${S}"
 	dodoc COPYING* CREDITS README* ReleaseNotes* || die
 
-	docinto print
-	#dodoc doc/*.ps doc/*.pdf || die
+	if use doc; then
+		dohtml doc/*.html || die
+		dohtml -r doc/omniORB || die
+		docinto print
+		dodoc doc/*.pdf || die
+	fi
 
 	dodir /etc/env.d/
 	cat <<- EOF > "${T}/90omniORB"
