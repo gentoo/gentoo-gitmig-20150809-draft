@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.3 2009/01/19 15:42:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.4 2009/11/21 19:18:09 maekke Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.daphne-emu.com/download/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libogg
