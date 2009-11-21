@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/jag
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/ChangeLog,v 1.3 2009/11/04 05:53:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/ChangeLog,v 1.4 2009/11/21 17:51:07 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> jag-0.2.5.ebuild:
+  x86 stable, bug #288813
 
 *jag-0.2.6 (04 Nov 2009)
 
