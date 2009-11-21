@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.1.ebuild,v 1.1 2009/11/08 12:02:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.1.1.ebuild,v 1.1 2009/11/21 10:55:48 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca cs da de el en_GB es et fi fr ga gl hu it lt ms nb nds nl nn
