@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.28.ebuild,v 1.2 2009/09/20 19:34:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.28.ebuild,v 1.3 2009/11/21 15:17:26 armin76 Exp $
 
 inherit autotools multilib eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://bluez.sourceforge.net/"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE="alsa cups debug doc gstreamer old-daemons test-programs usb"
 

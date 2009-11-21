@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-utils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.141 2009/03/30 09:52:35 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.142 2009/11/21 15:22:26 armin76 Exp $
+
+  21 Nov 2009; Raúl Porcel <armin76@gentoo.org> bluez-utils-2.25-r1.ebuild,
+  bluez-utils-3.25.ebuild, bluez-utils-3.27.ebuild, bluez-utils-3.28.ebuild,
+  bluez-utils-3.28-r1.ebuild, bluez-utils-3.30.ebuild,
+  bluez-utils-3.32.ebuild, bluez-utils-3.36.ebuild:
+  Drop sparc/sh keyword
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> bluez-utils-3.36.ebuild:
   arm/sh stable wrt #264222
