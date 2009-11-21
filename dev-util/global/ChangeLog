@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.40 2009/11/16 22:05:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.41 2009/11/21 18:53:21 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> global-5.7.6.ebuild:
+  ppc stable #292307
 
   16 Nov 2009; Markus Meier <maekke@gentoo.org> global-5.7.6.ebuild:
   amd64/x86 stable, bug #292307
