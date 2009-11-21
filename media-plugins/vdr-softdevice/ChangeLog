@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.65 2009/09/19 18:29:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.66 2009/11/21 19:42:25 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org>
+  vdr-softdevice-0.5.0.20090630.ebuild:
+  x86 stable, bug #285612
 
   19 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
   vdr-softdevice-0.5.0.20090630.ebuild:
