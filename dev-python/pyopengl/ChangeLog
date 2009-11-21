@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.38 2009/10/08 17:54:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.39 2009/11/21 03:27:38 arfrever Exp $
+
+*pyopengl-3.0.1_beta1 (21 Nov 2009)
+
+  21 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pyopengl-2.0.0.44.ebuild, -files/pyopengl-2.0.0.44-fix_togl.patch,
+  -pyopengl-3.0.1_alpha3.ebuild, +pyopengl-3.0.1_beta1.ebuild,
+  -files/config.diff:
+  Version bump.
 
   08 Oct 2009; Raúl Porcel <armin76@gentoo.org> pyopengl-3.0.0.ebuild:
   ia64/sh/sparc stable wrt #271976
