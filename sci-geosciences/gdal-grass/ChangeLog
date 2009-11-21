@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/gdal-grass
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.1 2009/11/21 20:06:52 bicatali Exp $
+
+*gdal-grass-1.4.3 (21 Nov 2009)
+
+  21 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +gdal-grass-1.4.3.ebuild, +files/gdal-grass-makefile.patch, +metadata.xml:
+  Initial import from science overlay, requirement for qgis, see bug #113355
+
