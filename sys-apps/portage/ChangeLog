@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.648 2009/11/16 01:13:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.649 2009/11/21 05:15:16 zmedico Exp $
+
+*portage-2.2_rc51 (21 Nov 2009)
+
+  21 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc51.ebuild:
+  2.2_rc51 bump. This includes all fixes in 2.1.7.6.
+
+*portage-2.1.7.6 (21 Nov 2009)
+
+  21 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.6.ebuild:
+  2.1.7.6 bump. This fixes bug #293448 (TypeError sending elog mail with
+  python3), bug #293603 (ED variable triggers 'Missing gen_usr_ldscript'),
+  and bug #293730 (bad || dep handling in some cases). Bug #288499 tracks
+  all bugs fixed since 2.1.6.x.
 
 *portage-2.2_rc50 (15 Nov 2009)
 
