@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/qtm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/ChangeLog,v 1.1 2009/06/27 14:51:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/ChangeLog,v 1.2 2009/11/21 04:48:01 hwoarang Exp $
+
+*qtm-1.1.1 (20 Nov 2009)
+
+  20 Nov 2009; Markos Chandras <hwoarang@gentoo.org> +qtm-1.1.1.ebuild:
+  Version bump
 
 *qtm-1.1 (27 Jun 2009)
 
