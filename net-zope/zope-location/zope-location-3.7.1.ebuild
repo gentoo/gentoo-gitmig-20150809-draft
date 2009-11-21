@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/zope-location-3.7.0.ebuild,v 1.1 2009/10/25 17:31:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/zope-location-3.7.1.ebuild,v 1.1 2009/11/21 19:30:24 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="net-zope/zope-component
+RDEPEND=">=net-zope/zope-component-3.8.0
 	net-zope/zope-copy
 	net-zope/zope-interface
 	net-zope/zope-proxy
