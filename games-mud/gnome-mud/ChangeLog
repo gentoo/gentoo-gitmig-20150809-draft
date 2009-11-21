@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.25 2009/06/27 11:51:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.26 2009/11/21 18:07:34 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> gnome-mud-0.11.2.ebuild:
+  x86 stable, bug #288920
 
   27 Jun 2009; Alexis Ballier <aballier@gentoo.org> gnome-mud-0.11.2.ebuild:
   keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
