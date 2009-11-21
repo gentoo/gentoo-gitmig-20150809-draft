@@ -1,6 +1,19 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.32 2009/11/19 16:38:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.33 2009/11/21 13:13:47 flameeyes Exp $
+
+*mod_security-2.5.11-r1 (21 Nov 2009)
+
+  21 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -mod_security-2.5.10-r1.ebuild, -mod_security-2.5.11.ebuild,
+  +mod_security-2.5.11-r1.ebuild,
+  +files/mod_security-2.5.11-disable-http-pollution.patch, metadata.xml:
+  Sanitising mod_security: add a vanilla USE flag that restores the original
+  upstream behaviour for the CRS, if disabled (default), then also disable
+  some pretty braindamaged rules. Add warnings about the original rules if
+  vanilla USE flag is enabled or if perl USE flag is enabled. Document in
+  metadata the new vanilla flag as well as the package-local meaning of the
+  perl USE flag. Remove older versions.
 
   19 Nov 2009; Markus Meier <maekke@gentoo.org>
   mod_security-2.5.9-r1.ebuild:

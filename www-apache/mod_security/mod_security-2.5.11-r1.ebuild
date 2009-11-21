@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.10-r1.ebuild,v 1.1 2009/10/26 10:26:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.11-r1.ebuild,v 1.1 2009/11/21 13:13:47 flameeyes Exp $
 
 inherit apache-module autotools
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
-IUSE="lua perl"
+IUSE="lua perl vanilla"
 
 DEPEND="dev-libs/libxml2
 	perl? ( dev-perl/libwww-perl )
@@ -32,11 +32,16 @@ need_apache2
 src_unpack() {
 	unpack ${A}
 
-	cd "${S}"/apache2
+	cd "${S}"
+	if ! use vanilla; then
+		# Disabling rules here
+		epatch "${FILESDIR}"/${PN}-2.5.11-disable-http-pollution.patch
+	fi
 
-	epatch "${FILESDIR}"/${P}-broken-autotools.patch
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-2.5.10-broken-autotools.patch
+	epatch "${FILESDIR}"/${PN}-2.5.10-as-needed.patch
 
+	cd apache2
 	eautoreconf
 }
 
@@ -94,20 +99,36 @@ src_install() {
 
 	insinto ${APACHE_MODULES_CONFDIR}/mod_security/optional_rules
 	doins optional_rules/* || die
+
+	if ! use vanilla; then
+		mv "${D}"${APACHE_MODULES_CONFDIR}/mod_security/modsecurity_*{41_phpids,50_outbound}* \
+			"${D}"${APACHE_MODULES_CONFDIR}/mod_security/optional_rules || die
+	fi
 }
 
 pkg_postinst() {
-	elog "Please note that the core rule set distributed with mod_security is quite"
-	elog "draconic. If you're using this on a blog, a forum or another user-submitted"
-	elog "web application where you might talk about standard Unix paths (such as /etc"
-	elog "or /bin), you might want to disable at least rules 950005 and 950907"
-	elog "(command injection) if you're sure it might not be a security risk."
-	elog " "
-	elog "To do that on the most limited case you might want to use something like"
-	elog "the following code (this comes from a Typo weblog instance):"
-	elog " "
-	elog "	<Location /comments>"
-	elog "	SecRuleRemoveById 950005 950907"
-	elog "	</Location>"
-	elog " "
+	if ! use vanilla; then
+		elog "Please note that the core rule set distributed with mod_security is quite"
+		elog "draconic; to make it more usable, the Gentoo distribution disables a few"
+		elog "rule set files, that are relevant for PHP-only websites or that would make it"
+		elog "kill a website that discussed of source code."
+		elog
+		elog "Furthermore we disable the 'HTTP Parameter Pollution' tests that disallow"
+		elog "multiple parameters with the same name, because that's common practice both"
+		elog "for Rails-based web-applications and Bugzilla."
+		if use perl; then
+			elog
+			elog "You want to install the Perl-based updater script for the Core Rule Set."
+			elog "Be warned that the script will update the rules iwth the original, draconic"
+			elog "rules, so you might end up with unusable web applications."
+		fi
+	else
+		elog "You decided to enable the original Core Rule Set from ModSecurity."
+		elog "Be warned that the original Core Rule Set is draconic and most likely will"
+		elog "render your web application unusable if you don't disable at leat some of"
+		elog "the rules."
+	fi
+		elog
+	elog "If you want to enable further rules, check the following directory:"
+	elog "	${APACHE_MODULES_CONFDIR}/mod_security/optional_rules"
 }

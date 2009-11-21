@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>apache</herd>
-	<maintainer>
-		<email>flameeyes@gentoo.org</email>
-		<name>Diego E. Pettenò</name>
-	</maintainer>
-	<maintainer>
-		<email>chtekk@gentoo.org</email>
-		<name>Luca Longinotti</name>
-	</maintainer>
+  <herd>apache</herd>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+    <name>Diego E. Pettenò</name>
+  </maintainer>
+  <maintainer>
+    <email>chtekk@gentoo.org</email>
+    <name>Luca Longinotti</name>
+  </maintainer>
+  <use>
+    <flag name="perl">
+      Add a dependency upon Perl and install the script to update the
+      Core Rule Set. Please note that this script will use the
+      original Core Rule Set, and it's currently mostly untested.
+    </flag>
+    <flag name="vanilla">
+      Provide the original ModSecurity Core Rule Set without
+      Gentoo-specific relaxation. When this flag is enabled, we
+      install the unadulterated Core Rule Set. Warning! The original
+      Core Rule Set is draconic and most likely will break your web
+      applications, including Rails-based web applications and
+      Bugzilla.
+    </flag>
+  </use>
 </pkgmetadata>
