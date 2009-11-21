@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.0.3.ebuild,v 1.1 2009/10/20 22:10:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.0.3.ebuild,v 1.2 2009/11/21 14:43:29 flameeyes Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ DEPEND="
 "
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.0.2.91-lafile.patch"
+	epatch "${FILESDIR}/${P}+autoconf-2.64.patch"
 	eautoreconf
 }
 
