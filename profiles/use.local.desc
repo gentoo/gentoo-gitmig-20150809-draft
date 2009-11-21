@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5020 2009/11/21 10:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5021 2009/11/21 11:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1991,6 +1991,7 @@ media-video/vlc:libass - Enables subtitles support using libass.
 media-video/vlc:libproxy - Enables support for proxy settings in the HTTP access module.
 media-video/vlc:libsysfs - Get user key from firewire connected iPod via libsysfs.
 media-video/vlc:libtiger - Enables Ogg Kate subtitles rendering using libtiger.
+media-video/vlc:libv4l - Enables Libv4l Video4Linux support.
 media-video/vlc:libv4l2 - Enables Libv4l2 Video4Linux2 support (for conversion from various video formats to standard ones, needed to use v4l2 devices with strange formats).
 media-video/vlc:live - Enables live555 streaming media support (client support for rtsp).
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance.
