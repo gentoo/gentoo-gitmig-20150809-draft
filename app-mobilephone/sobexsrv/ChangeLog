@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/sobexsrv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.19 2009/05/12 10:02:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.20 2009/11/21 15:14:07 armin76 Exp $
+
+  21 Nov 2009; Raúl Porcel <armin76@gentoo.org> sobexsrv-1.0.1.ebuild:
+  Drop sparc keyword
 
   12 May 2009; Peter Alfredsen <loki_val@gentoo.org> sobexsrv-1.0.1.ebuild:
   List net-wireless/bluez first in ( a b ) dependency w.r.t. bug 269519.
