@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.16.ebuild,v 1.1 2009/09/16 00:07:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.16.ebuild,v 1.2 2009/11/21 14:28:28 ayoy Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://scratchbox.org/download/files/sbox-releases/stable/tarball/scrat
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""

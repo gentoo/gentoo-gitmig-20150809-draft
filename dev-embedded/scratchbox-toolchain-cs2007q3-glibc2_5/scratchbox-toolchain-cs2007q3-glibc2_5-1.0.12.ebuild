@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5/scratchbox-toolchain-cs2007q3-glibc2_5-1.0.12.ebuild,v 1.1 2009/09/16 00:13:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5/scratchbox-toolchain-cs2007q3-glibc2_5-1.0.12.ebuild,v 1.2 2009/11/21 14:39:59 ayoy Exp $
 
 SBOX_GROUP="sbox"
 RESTRICT="strip binchecks"
@@ -14,7 +14,7 @@ SRC_URI="http://scratchbox.org/download/files/sbox-releases/stable/tarball/${PN/
 	http://scratchbox.org/download/files/sbox-releases/stable/tarball/${PN/_/.}-i486-${I486V}-i386.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
