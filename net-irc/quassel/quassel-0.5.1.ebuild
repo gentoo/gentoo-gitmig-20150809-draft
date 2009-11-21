@@ -1,21 +1,23 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.3-r50.ebuild,v 1.1 2009/08/26 18:06:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.1.ebuild,v 1.1 2009/11/21 15:59:19 scarabeus Exp $
 
 EAPI="2"
+
+MY_P="${P/_/-}"
 
 inherit cmake-utils eutils
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
-SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
+SRC_URI="http://quassel-irc.org/pub/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="dbus debug kde monolithic +oxygen phonon +server +ssl webkit +X"
+IUSE="dbus debug kde monolithic +oxygen phonon postgres +server +ssl webkit +X"
 
-LANGS="cs da de fr hu nb_NO ru sl tr"
+LANGS="cs da de fi fr hu it nb_NO ru sl tr"
 for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
@@ -23,8 +25,8 @@ done
 RDEPEND="
 	dbus? ( x11-libs/qt-dbus:4 )
 	monolithic? (
-		dev-db/sqlite[threadsafe]
-		x11-libs/qt-sql:4[sqlite]
+		!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
+		postgres? ( x11-libs/qt-sql:4[postgres] >=virtual/postgresql-base-8.3 )
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
 		kde? ( >=kde-base/kdelibs-4.1 )
@@ -33,8 +35,8 @@ RDEPEND="
 	)
 	!monolithic? (
 		server? (
-			dev-db/sqlite[threadsafe]
-			x11-libs/qt-sql:4[sqlite]
+			!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
+			postgres? ( x11-libs/qt-sql:4[postgres] )
 			x11-libs/qt-script:4
 		)
 		X? (
@@ -50,6 +52,8 @@ DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
 
+S="${WORKDIR}/${MY_P}"
+
 pkg_setup() {
 	if ! use monolithic && ! use server && ! use X ; then
 		eerror "You have to build at least one of the monolithic client (USE=monolithic),"
@@ -59,9 +63,9 @@ pkg_setup() {
 }
 
 src_configure() {
-	local MY_LANGUAGES=""
+	local my_langs
 	for i in ${LINGUAS}; do
-		MY_LANGUAGES="${i},${MY_LANGUAGES}"
+		my_langs="${i},${my_langs}"
 	done
 
 	local mycmakeargs="
@@ -74,8 +78,9 @@ src_configure() {
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with ssl OPENSSL)
 		$(cmake-utils_use_with oxygen OXYGEN)
+		-DWITH_LIBINDICATE=OFF
 		-DEMBED_DATA=OFF
-		-DLINGUAS=${MY_LANGUAGES}
+		-DLINGUAS=${my_langs}
 		"
 
 	cmake-utils_src_configure
@@ -90,9 +95,6 @@ src_install() {
 
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/quassel.logrotate" quassel
-
-		insinto /usr/share/doc/${PF}
-		doins "${S}"/scripts/manageusers.py || die "installing manageusers.py failed"
 	fi
 }
 
@@ -103,15 +105,6 @@ pkg_postinst() {
 		ewarn "QUASSEL_USER variable in ${ROOT%/}/etc/conf.d/quasselcore to your username."
 		ewarn "Note: This is the user who runs the quasselcore and is independent"
 		ewarn "from the users you set up in the quasselclient."
-		elog
-		elog "Adding more than one user or changing username/password is not"
-		elog "possible via the quasselclient yet. If you need to do these things"
-		elog "you have to use the manageusers.py script, which has been installed in"
-		elog "${ROOT%/}/usr/share/doc/${PF}".
-		elog "http://bugs.quassel-irc.org/wiki/quassel-irc/Manage_core_users provides"
-		elog "some information on using the script."
-		elog "To be sure nothing bad will happen you need to stop the quasselcore"
-		elog "before adding more users."
 	fi
 
 	if ( use server || use monolithic ) && use ssl ; then
