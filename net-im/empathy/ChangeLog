@@ -1,6 +1,11 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.46 2009/11/02 00:14:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.47 2009/11/21 09:55:15 mrpouet Exp $
+
+*empathy-2.28.1.2 (21 Nov 2009)
+
+  21 Nov 2009; Romain Perier <mrpouet@gentoo.org> +empathy-2.28.1.2.ebuild:
+  Version bump.
 
   02 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Remove coldwind from metadata again.
