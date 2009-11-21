@@ -18,6 +18,5 @@ the RFB protocol, you can download this library from sourceforge.
 </longdescription>
   <use>
     <flag name="no24bpp">disable 24bpp support</flag>
-    <flag name="nobackchannel">disable backchannel support</flag>
   </use>
 </pkgmetadata>

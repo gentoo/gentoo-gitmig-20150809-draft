@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.1.ebuild,v 1.14 2009/03/02 16:06:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.1.ebuild,v 1.15 2009/11/21 10:18:22 swegener Exp $
 
-inherit eutils libtool
+inherit libtool
 
 DESCRIPTION="library for creating vnc servers"
 HOMEPAGE="http://libvncserver.sourceforge.net/"
@@ -12,12 +12,12 @@ SRC_URI="http://libvncserver.sourceforge.net/LibVNCServer-${PV/_}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="nobackchannel no24bpp zlib jpeg"
+IUSE="no24bpp zlib jpeg"
 
 DEPEND="zlib? ( sys-libs/zlib )
 	jpeg? ( media-libs/jpeg )"
 
-S=${WORKDIR}/LibVNCServer-${PV/_}
+S="${WORKDIR}"/LibVNCServer-${PV/_}
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +35,6 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_with !nobackchannel backchannel) \
 		$(use_with !no24bpp 24bpp) \
 		$(use_with zlib) \
 		$(use_with jpeg) \
