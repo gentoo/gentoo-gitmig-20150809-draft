@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.85 2009/09/06 16:58:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.86 2009/11/21 05:06:48 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -198,6 +198,12 @@ toolchain-binutils_src_compile() {
 
 	cd "${MY_BUILDDIR}"
 	local myconf=""
+	# new versions allow gold and ld while older allowed only one
+	if grep -q 'gold.*yes,both' "${S}"/configure ; then
+		myconf="${myconf} $(use_enable gold gold both) --enable-linker=bfd"
+	else
+		myconf="${myconf} $(use_enable gold)"
+	fi
 	use nls \
 		&& myconf="${myconf} --without-included-gettext" \
 		|| myconf="${myconf} --disable-nls"
@@ -221,7 +227,6 @@ toolchain-binutils_src_compile() {
 		--enable-64-bit-bfd \
 		--enable-shared \
 		--disable-werror \
-		$(use_enable gold) \
 		${myconf} ${EXTRA_ECONF}"
 	echo ./configure ${myconf}
 	"${S}"/configure ${myconf} || die "configure failed"
