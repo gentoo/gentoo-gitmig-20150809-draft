@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r1.ebuild,v 1.1 2009/11/21 03:09:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r1.ebuild,v 1.2 2009/11/21 05:18:12 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,7 +27,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
-	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
 	#Forward port of the -b patch. Parallel make fails though.
 	epatch "${FILESDIR}"/${PN}-0.9.8j-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
@@ -42,6 +41,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-CVE-2009-1387.patch #270305
 	epatch "${FILESDIR}"/${P}-CVE-2009-2409.patch #280591
 	epatch "${FILESDIR}"/${P}-dtls-compat.patch #280370
+	epatch "${FILESDIR}"/${PN}-0.9.8l-binutils.patch #289130
 	sed -i -e '/DIRS/ s/ fips / /g' Makefile{,.org} \
 		|| die "Removing fips from openssl failed."
 
