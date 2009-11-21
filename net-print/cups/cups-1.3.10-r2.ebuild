@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.10-r2.ebuild,v 1.10 2009/11/13 18:53:55 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.10-r2.ebuild,v 1.11 2009/11/21 14:21:41 jer Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -273,7 +273,7 @@ pkg_postinst() {
 		echo
 		ewarn "/usr/lib/cups exists - You need to remerge every ebuild that"
 		ewarn "installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
-		ewarn "# FEATURES=-collision-protect emerge -va1 \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
+		ewarn "# FEATURES=-collision-protect emerge -va1 \$(qfile -qC /usr/lib/cups /etc/cups | sed -e \"s:net-print/cups$::\")"
 		echo
 		ewarn "FEATURES=-collision-protect is needed to overwrite the compatibility"
 		ewarn "symlinks installed by this package, it won't be needed on later merges."
