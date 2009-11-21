@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/spindown
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.5 2009/09/23 20:33:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.6 2009/11/21 15:01:55 wschlich Exp $
+
+*spindown-0.4.0-r1 (21 Nov 2009)
+
+  21 Nov 2009; Wolfram Schlich <wschlich@gentoo.org>
+  +files/spindownd.confd-r1, +files/spindownd.initd-r1,
+  +spindown-0.4.0-r1.ebuild:
+  fix bug #278651
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> spindown-0.4.0.ebuild:
   Remove virtual/libc
