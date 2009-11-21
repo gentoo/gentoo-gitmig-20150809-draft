@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-common
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.7 2009/11/20 14:11:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.8 2009/11/21 18:29:15 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> lxde-common-0.4.2.ebuild:
+  ppc stable #292698
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> lxde-common-0.4.2.ebuild:
   amd64/x86 stable, bug #292698

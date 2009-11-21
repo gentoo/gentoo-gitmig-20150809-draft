@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.5 2009/11/20 14:20:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.6 2009/11/21 18:36:07 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> lxsession-0.3.8.ebuild:
+  ppc stable #292698
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> lxsession-0.3.8.ebuild:
   amd64/x86 stable, bug #292698
