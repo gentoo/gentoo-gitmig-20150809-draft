@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.08113.ebuild,v 1.1 2009/11/14 10:56:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.08114.ebuild,v 1.1 2009/11/21 08:16:12 tove Exp $
 
 EAPI=2
 
@@ -39,7 +39,6 @@ RDEPEND="
 	>=dev-perl/Data-Dumper-Concise-1.000
 "
 DEPEND="${RDEPEND}
-	dev-perl/Module-Install
 	test? (
 		>=virtual/perl-Test-Simple-0.92
 		dev-perl/Test-Deep
