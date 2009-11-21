@@ -1,6 +1,9 @@
 # ChangeLog for games-board/kcheckers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.13 2008/07/27 21:09:30 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.14 2009/11/21 18:21:59 maekke Exp $
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> kcheckers-0.8.1.ebuild:
+  x86 stable, bug #288959
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kcheckers-0.6.ebuild:
   QA: Get rid of deprecated qt_min_version().
