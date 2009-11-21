@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.7.2.ebuild,v 1.1 2009/11/21 13:52:45 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.7.2-r1.ebuild,v 1.1 2009/11/21 14:16:33 wschlich Exp $
 
 EAPI=2
 
@@ -13,21 +13,19 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
-DEPEND=">=dev-libs/libevent-1.0
+RDEPEND=">=dev-libs/libevent-1.0
 	>=dev-libs/glib-2.0
 	>=virtual/mysql-4.0
 	>=dev-lang/lua-5.1"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+RESTRICT="test"
 
 src_configure() {
 	econf \
 		--with-mysql \
 		--with-lua \
 		|| die "econf failed"
-}
-
-src_compile() {
-	emake || die "emake failed"
 }
 
 src_install() {
