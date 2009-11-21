@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.75.ebuild,v 1.5 2009/10/24 14:31:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.75.ebuild,v 1.6 2009/11/21 19:57:14 maekke Exp $
 
 EAPI=2
 inherit autotools eutils fdo-mime gnome2-utils qt4
@@ -11,7 +11,7 @@ SRC_URI="http://download.${PN}bt.com/${PN}/files/${P}.tar.bz2"
 
 LICENSE="MIT GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="+dht gtk libnotify qt4"
 
 RDEPEND=">=dev-libs/libevent-1.4.11
