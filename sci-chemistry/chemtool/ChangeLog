@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.28 2009/11/21 18:25:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.29 2009/11/21 21:15:12 ssuominen Exp $
+
+  21 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -chemtool-1.6.9-r1.ebuild, -chemtool-1.6.10.ebuild,
+  -chemtool-1.6.11.ebuild, -files/chemtool-1.6.11-makefile.patch:
+  Remove kde-base/kdelibs:3.5 reverse deps.
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> chemtool-1.6.12.ebuild:
   ppc stable #292831
