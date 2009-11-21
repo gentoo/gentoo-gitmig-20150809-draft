@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5023 2009/11/21 13:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5024 2009/11/21 20:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2794,6 +2794,7 @@ sci-geosciences/mapserver:proj - Enable sci-libs/proj library support (geographi
 sci-geosciences/merkaartor:gdal - Enable sci-libs/gdal library support
 sci-geosciences/merkaartor:proj - Enable sci-libs/proj library support
 sci-geosciences/merkaartor:webkit - Enable net-libs/webkit-gtk library support
+sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
 sci-libs/acml:gfortran - Fetch and install acml compiled with GNU gfortran
 sci-libs/acml:ifc - Fetch and install acml compiled with Intel Fortran Compiler (dev-lang/ifc)
 sci-libs/acml:int64 - Install the 64 bits integer library
