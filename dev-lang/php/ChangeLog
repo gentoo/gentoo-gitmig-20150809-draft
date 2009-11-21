@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.357 2009/11/17 17:05:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.358 2009/11/21 19:53:36 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> php-5.2.11-r1.ebuild:
+  ppc stable #292132
 
   17 Nov 2009; Raúl Porcel <armin76@gentoo.org> php-5.2.11-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #292132
