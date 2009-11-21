@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.21.ebuild,v 1.1 2009/08/31 15:45:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.21-r1.ebuild,v 1.1 2009/11/21 12:49:21 ayoy Exp $
 
 EAPI=2
 inherit eutils

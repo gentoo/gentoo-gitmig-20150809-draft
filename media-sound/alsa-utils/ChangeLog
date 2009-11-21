@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.283 2009/10/13 17:51:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.284 2009/11/21 12:49:21 ayoy Exp $
+
+*alsa-utils-1.0.21-r1 (21 Nov 2009)
+
+  21 Nov 2009; Dominik Kapusta <ayoy@gentoo.org> -alsa-utils-1.0.21.ebuild,
+  +alsa-utils-1.0.21-r1.ebuild, files/alsa-utils-1.0.21-init_default.patch:
+  Updated init_default patch (bug #281538). Thanks to Michał Guminiak
+  (michal.guminiak@gmail.com) for reporting.
 
   13 Oct 2009; Raúl Porcel <armin76@gentoo.org>
   alsa-utils-1.0.20-r5.ebuild:
