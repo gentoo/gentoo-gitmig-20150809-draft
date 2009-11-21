@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.51 2009/10/24 11:09:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.52 2009/11/21 15:12:19 armin76 Exp $
+
+  21 Nov 2009; Raúl Porcel <armin76@gentoo.org> libbtctl-0.9.0.ebuild,
+  libbtctl-0.10.0.ebuild, libbtctl-0.11.1.ebuild:
+  Drop sparc keyword
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> libbtctl-0.11.1.ebuild:
   ppc stable #284661
