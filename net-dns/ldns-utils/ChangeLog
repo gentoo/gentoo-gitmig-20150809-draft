@@ -1,0 +1,10 @@
+# ChangeLog for net-dns/ldns-utils
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.1 2009/11/21 01:53:45 matsuu Exp $
+
+*ldns-utils-1.6.2 (21 Nov 2009)
+
+  21 Nov 2009; MATSUU Takuto <matsuu@gentoo.org> +ldns-utils-1.6.2.ebuild,
+  +metadata.xml:
+  Initial import, bug #192728.
+

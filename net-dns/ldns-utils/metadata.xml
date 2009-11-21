@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+<email>matsuu@gentoo.org</email>
+</maintainer>
+<longdescription lang="en">
+ldns is a library with the aim to simplify DNS programing in C. All
+lowlevel DNS/DNSSEC operations are supported. We also define a higher
+level API which allows a programmer to (for instance) create or sign
+packets.
+</longdescription>
+</pkgmetadata>
+
