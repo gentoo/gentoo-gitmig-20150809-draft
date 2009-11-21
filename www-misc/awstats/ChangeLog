@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.3 2009/05/26 17:08:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.4 2009/11/21 22:58:13 flameeyes Exp $
+
+*awstats-6.95 (21 Nov 2009)
+
+  21 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +awstats-6.95.ebuild:
+  Version bump; thanks to Tom Hendriks in bug #293981 (also for ipv6 USE
+  flag).
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   awstats-6.9-r1.ebuild:
