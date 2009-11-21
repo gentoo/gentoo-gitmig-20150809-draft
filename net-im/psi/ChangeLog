@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.174 2009/11/16 00:14:44 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.175 2009/11/21 18:08:59 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> psi-0.13-r1.ebuild:
+  ppc stable #293281
 
   15 Nov 2009; Dawid Węgliński <cla@gentoo.org> psi-0.13-r1.ebuild:
   Stable on amd64 (bug #293281)
