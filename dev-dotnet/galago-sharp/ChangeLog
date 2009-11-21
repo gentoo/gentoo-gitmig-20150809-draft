@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/galago-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.19 2009/11/09 17:20:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/ChangeLog,v 1.20 2009/11/21 18:51:59 nixnut Exp $
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> galago-sharp-0.5.0-r1.ebuild:
+  ppc stable #292273
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org>
   galago-sharp-0.5.0-r1.ebuild:
