@@ -21,6 +21,7 @@
     <flag name="libass">Enables subtitles support using libass.</flag>
     <flag name="libproxy">Enables support for proxy settings in the HTTP access module.</flag>
     <flag name="libsysfs">Get user key from firewire connected iPod via libsysfs.</flag>
+    <flag name="libv4l">Enables Libv4l Video4Linux support.</flag>
     <flag name="libv4l2">Enables Libv4l2 Video4Linux2 support (for conversion
 		from various video formats to standard ones, needed to use v4l2 devices
 		with strange formats).</flag>
