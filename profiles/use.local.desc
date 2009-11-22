@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5029 2009/11/22 20:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5030 2009/11/22 21:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1101,7 +1101,6 @@ games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the o
 games-rpg/drascula:audio - Install optional audio files
 games-rpg/eternal-lands-data:music - Install optional music files (extra 30 meg)
 games-rpg/eternal-lands-data:sound - Install optional sound files (extra 40 meg)
-games-rpg/galaxymage:psyco - psyco python accelerator
 games-rpg/mangos:ahbot - include the AHBot-patch
 games-rpg/mangos:cli - compiles with support command line system
 games-rpg/mangos:ra - compiles with support remote console system
