@@ -1,0 +1,13 @@
+Index: branches/KDE/4.3/kdeutils/okteta/core/piecetablebytearraymodel_p.cpp
+===================================================================
+--- branches/KDE/4.3/kdeutils/okteta/core/piecetablebytearraymodel_p.cpp	(revision 1047099)
++++ branches/KDE/4.3/kdeutils/okteta/core/piecetablebytearraymodel_p.cpp	(revision 1047100)
+@@ -267,7 +267,7 @@
+     mBeforeGroupedChangeVersionIndex = mPieceTable.appliedChangesCount();
+     mPieceTable.openGroupedChange( description );
+ 
+-    if( ! isModifiedBefore ) emit p->modifiedChanged( true );
++    if( ! isModifiedBefore ) emit p->modificationChanged( true );
+     emit p->headVersionChanged( mPieceTable.changesCount() );
+ }
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.30 2009/11/22 18:13:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.31 2009/11/22 18:36:30 scarabeus Exp $
+
+  22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.3.3-fix_variable_name.patch, okteta-4.3.3-r1.ebuild:
+  Add one more patch fixing the compilation.
 
   22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   files/4.3.3-detect_changes_correctly.patch:
