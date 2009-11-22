@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p22864.ebuild,v 1.1 2009/11/21 05:28:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p22864-r1.ebuild,v 1.1 2009/11/22 05:57:25 cardoe Exp $
 
 EAPI=2
 
@@ -15,7 +15,9 @@ RDEPEND="dev-perl/libwww-perl
 	dev-perl/URI
 	dev-perl/XML-Simple
 	sys-apps/eject
-	dev-python/imdbpy"
+	jamu? ( >=dev-python/imdbpy-3.8
+			>=dev-python/mysql-python-1.2.2 
+			media-tv/mythtv[python] )"		
 DEPEND=""
 
 src_install() {
@@ -30,11 +32,13 @@ src_install() {
 	# setup JAMU cron jobs
 	if use jamu; then
 		exeinto /etc/cron.daily
-		newexe "${FILESDIR}/mythvideo.daily" mythvideo
+		newexe "${FILESDIR}/mythvideo.daily" mythvideo || die
 		exeinto /etc/cron.hourly
-		newexe "${FILESDIR}/mythvideo.hourly" mythvideo
+		newexe "${FILESDIR}/mythvideo.hourly" mythvideo || die
 		exeinto /etc/cron.weekly
-		newexe "${FILESDIR}/mythvideo.weekly" mythvideo
+		newexe "${FILESDIR}/mythvideo.weekly" mythvideo || die
+		insinto /home/mythtv/.mythtv/
+		newins mythvideo/scripts/jamu-example.conf jamu.conf || die
 	fi
 }
 
