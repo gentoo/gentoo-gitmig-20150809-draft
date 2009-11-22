@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.79 2009/11/15 22:00:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.80 2009/11/22 13:48:16 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1074,8 +1074,8 @@ python_mod_cleanup() {
 
 	local BLUE CYAN NORMAL
 	if [[ "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
-		BLUE=$'\e[34m'
-		CYAN=$'\e[36m'
+		BLUE=$'\e[1;34m'
+		CYAN=$'\e[1;36m'
 		NORMAL=$'\e[0m'
 	else
 		BLUE=
