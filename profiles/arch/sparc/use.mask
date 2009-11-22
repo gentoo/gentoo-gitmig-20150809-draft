@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.32 2009/11/21 15:11:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.33 2009/11/22 15:41:56 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -68,6 +68,7 @@ hyperwave-api
 jfs
 libedit
 nforce2
+pm-utils
 reiser4
 reiserfs
 voodoo3
