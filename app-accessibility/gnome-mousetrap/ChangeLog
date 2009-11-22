@@ -1,0 +1,10 @@
+# ChangeLog for app-accessibility/gnome-mousetrap
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mousetrap/ChangeLog,v 1.1 2009/11/22 17:06:12 mrpouet Exp $
+
+*gnome-mousetrap-0.3 (22 Nov 2009)
+
+  22 Nov 2009; Romain Perier <mrpouet@gentoo.org>
+  +gnome-mousetrap-0.3.ebuild, +metadata.xml:
+  New ebuild per bug #294023
+
