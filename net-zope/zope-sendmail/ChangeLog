@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-sendmail
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-sendmail/ChangeLog,v 1.1 2009/11/22 02:20:13 arfrever Exp $
+
+*zope-sendmail-3.6.1 (22 Nov 2009)
+
+  22 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-sendmail-3.6.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
