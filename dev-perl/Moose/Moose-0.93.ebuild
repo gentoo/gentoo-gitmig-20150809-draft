@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.93.ebuild,v 1.2 2009/11/22 17:18:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.93.ebuild,v 1.3 2009/11/22 21:04:49 robbat2 Exp $
 
 EAPI=2
 
@@ -20,7 +20,6 @@ RDEPEND="dev-perl/Data-OptList
 	>=dev-perl/Sub-Exporter-0.980
 	dev-perl/Sub-Name
 	dev-perl/Try-Tiny
-	dev-perl/Task-Weaken
 	dev-perl/Devel-GlobalDestruction"
 DEPEND="${RDEPEND}
 	test? ( >=virtual/perl-Test-Simple-0.88

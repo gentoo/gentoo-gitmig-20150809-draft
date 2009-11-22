@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.33 2009/11/22 10:57:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.34 2009/11/22 21:04:49 robbat2 Exp $
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> Moose-0.93.ebuild:
+  Bug 294096: dev-perl/Task-Weaken should not be in any DEPEND.
 
 *Moose-0.93 (22 Nov 2009)
 
