@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3596 2009/11/22 15:56:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3597 2009/11/22 16:35:21 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Nov 2009; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
+  Added libevent local USE flag for net-dns/unbound.
 
   22 Nov 2009; Fabian Groffen <grobian@gentoo.org> profiles.desc:
   Drop all Prefix profiles to experimental state for the time being. This
