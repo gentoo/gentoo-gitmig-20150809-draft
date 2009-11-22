@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.52 2009/11/22 10:50:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.53 2009/11/22 10:54:53 caster Exp $
+
+  22 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  googleearth-5.1.3533.1731-r1.ebuild:
+  Add dejavu font alternative as suggested in bug #262780.
 
 *googleearth-5.1.3533.1731-r1 (22 Nov 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.1 2009/11/22 10:50:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.2 2009/11/22 10:54:53 caster Exp $
 
 EAPI=2
 
@@ -46,7 +46,10 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 			<x11-drivers/ati-drivers-8.28.8
 		)
 	)
-	media-fonts/ttf-bitstream-vera"
+	|| (
+		media-fonts/dejavu
+		media-fonts/ttf-bitstream-vera
+	)"
 
 S="${WORKDIR}"
 
