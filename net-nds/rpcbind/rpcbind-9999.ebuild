@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.2 2009/05/30 21:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.3 2009/11/22 17:50:34 vapier Exp $
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.infradead.org/~steved/rpcbind.git"
 	inherit autotools git
 	SRC_URI=""
-	KEYWORDS=""
+	#KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -15,7 +15,7 @@ fi
 DESCRIPTION="portmap replacement which supports RPC over various protocols"
 HOMEPAGE="http://sourceforge.net/projects/rpcbind/"
 
-LICENSE="BSD sun-rpc"
+LICENSE="BSD"
 SLOT="0"
 IUSE=""
 

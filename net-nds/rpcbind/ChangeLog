@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.6 2009/05/30 21:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.7 2009/11/22 17:50:34 vapier Exp $
+
+  22 Nov 2009; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0.ebuild,
+  rpcbind-9999.ebuild:
+  Update LICENSE field #271921 by Chí-Thanh Christopher Nguyễn.
 
   30 May 2009; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0.ebuild,
   rpcbind-9999.ebuild:
