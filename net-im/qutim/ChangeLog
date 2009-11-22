@@ -1,0 +1,11 @@
+# ChangeLog for net-im/qutim
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.1 2009/11/22 14:59:24 hwoarang Exp $
+
+*qutim-0.2.0 (22 Nov 2009)
+
+  22 Nov 2009; Markos Chandras <hwoarang@gentoo.org> +qutim-0.2.0.ebuild:
+  Moved from sunrise overlay. Thanks to Sergey Kondakov
+  <virtuousfox@gmail.com>
+  for the base ebuild. Fixes bug #227627
+
