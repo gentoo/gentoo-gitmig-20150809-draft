@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.3.3.ebuild,v 1.1 2009/11/02 22:04:20 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.3.3-r1.ebuild,v 1.1 2009/11/22 12:10:06 scarabeus Exp $
 
 EAPI="2"
 
@@ -25,6 +25,10 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!kdeprefix? ( !sci-geosciences/marble )
 "
+
+PATCHES=(
+	"${FILESDIR}/${PV}-world_clock.patch"
+)
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}

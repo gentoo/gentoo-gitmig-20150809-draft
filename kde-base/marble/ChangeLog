@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.47 2009/11/09 00:14:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.48 2009/11/22 12:10:06 scarabeus Exp $
+
+*marble-4.3.3-r1 (22 Nov 2009)
+
+  22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.3.3-world_clock.patch, -marble-4.3.3.ebuild,
+  +marble-4.3.3-r1.ebuild:
+  Fix world clock plasmoid. Per bug #280834.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -marble-4.3.2.ebuild:
   Drop KDE 4.3.2
