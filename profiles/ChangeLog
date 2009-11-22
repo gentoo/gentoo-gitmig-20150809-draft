@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3592 2009/11/20 17:15:47 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3593 2009/11/22 13:40:31 dertobi123 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Nov 2009; Tobias Scherbaum <dertobi123@gentoo.org> package.mask:
+  Mask app-admin/eselect-oracle for removal in 30 days.
 
   20 Nov 2009; Justin Bronder <jsbronder@gentoo.org> package.mask:
   Masking sys-cluster/mpiexec for removal in 30 days.
