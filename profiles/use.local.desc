@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5026 2009/11/22 16:35:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5027 2009/11/22 16:47:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2149,7 +2149,6 @@ net-dns/pdns:opendbx - Enable the OpenDBX backend
 net-dns/pdnsd:isdn - Enable ISDN features
 net-dns/pdnsd:underscores - Enable support for domain names containing underscores
 net-dns/pdnsd:urandom - Use /dev/urandom instead of /dev/random
-net-dns/unbound:libevent - Use libevent instead of internal select based events
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
 net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth support
 net-firewall/ipsec-tools:idea - Enable support for the patented IDEA algorithm
