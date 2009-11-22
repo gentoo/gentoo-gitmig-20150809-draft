@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/uade
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.53 2008/11/30 19:32:10 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.54 2009/11/22 09:30:42 spock Exp $
+
+*uade-2.13 (22 Nov 2009)
+
+  22 Nov 2009; Michał Januszewski <spock@gentoo.org> +uade-2.13.ebuild:
+  Version bump.
 
   30 Nov 2008; Michał Januszewski <spock@gentoo.org>
   +files/uade-2.12-asneeded.patch, -uade-2.02.ebuild, -uade-2.03.ebuild,
