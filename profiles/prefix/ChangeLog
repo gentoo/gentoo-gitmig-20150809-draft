@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.117 2009/11/16 19:39:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.118 2009/11/22 15:22:13 grobian Exp $
+
+  22 Nov 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask sys-devel/patch-2.6, it's too much GNU is not Linux (they stopped
+  with UNIX years ago)
 
   15 Nov 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:

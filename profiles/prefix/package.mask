@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.41 2009/11/16 19:39:18 grobian Exp $
+# $Id: package.mask,v 1.42 2009/11/22 15:22:13 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+
+# Fabian Groffen <grobian@gentoo.org> (22 Nov 2009)
+# non-portable shell code, unconditionally requires strndup (despite
+# gnulib) would need eautoreconf fix ... basically GNU got worse again
+=sys-devel/patch-2.6
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (2 Sep 2009)
 # Masking >= KDE-4.3 for this arch to prevent tree breakage following
