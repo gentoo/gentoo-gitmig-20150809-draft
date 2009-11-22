@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5030 2009/11/22 21:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5031 2009/11/22 23:47:56 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -292,6 +292,13 @@ app-emulation/qemu:ncurses - Enable the ncurses-based console
 app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu:sdl - Enable the SDL-based console
 app-emulation/qemu:vde - Enable VDE-based networking
+app-emulation/qemu-kvm:alsa - Enable alsa output for sound emulation
+app-emulation/qemu-kvm:esd - Enable esound output for sound emulation
+app-emulation/qemu-kvm:gnutls - Enable TLS support for the VNC console server
+app-emulation/qemu-kvm:ncurses - Enable the ncurses-based console
+app-emulation/qemu-kvm:pulseaudio - Enable pulseaudio output for sound emulation
+app-emulation/qemu-kvm:sdl - Enable the SDL-based console
+app-emulation/qemu-kvm:vde - Enable VDE-based networking
 app-emulation/qemu-softmmu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu-softmmu:esd - Enable esound output for sound emulation
 app-emulation/qemu-softmmu:gnutls - Enable TLS support for the VNC console server
