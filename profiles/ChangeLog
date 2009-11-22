@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3594 2009/11/22 14:35:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3595 2009/11/22 15:14:57 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Mask koffice-2.1.0 until official release
 
   22 Nov 2009; Torsten Veller <tove@gentoo.org> package.mask:
   Mask net-mail/vimap for removal
