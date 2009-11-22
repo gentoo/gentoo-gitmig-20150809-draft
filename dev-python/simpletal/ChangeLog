@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/simpletal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/ChangeLog,v 1.7 2009/07/21 20:51:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/ChangeLog,v 1.8 2009/11/22 19:32:06 arfrever Exp $
+
+*simpletal-5.0 (22 Nov 2009)
+*simpletal-4.2 (22 Nov 2009)
+
+  22 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -simpletal-4.1.ebuild, +simpletal-4.2.ebuild, +simpletal-5.0.ebuild:
+  Version bump (4.2 is the last version supporting Python 2). Set SUPPORT_PYTHON_ABIS.
 
   21 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   simpletal-4.1.ebuild:
