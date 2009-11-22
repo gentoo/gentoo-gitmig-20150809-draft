@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.28 2009/11/09 00:16:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.29 2009/11/22 15:59:24 scarabeus Exp $
+
+*okteta-4.3.3-r1 (22 Nov 2009)
+
+  22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.3.3-detect_changes_correctly.patch, -okteta-4.3.3.ebuild,
+  +files/4.3.3-fix_inverse_save_logic.patch, +okteta-4.3.3-r1.ebuild:
+  Make okteta actualy functional. Per bug #292608.
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -okteta-4.3.2.ebuild:
   Drop KDE 4.3.2
