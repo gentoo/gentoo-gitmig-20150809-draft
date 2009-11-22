@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.00.ebuild,v 1.3 2009/09/27 10:47:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.00.ebuild,v 1.4 2009/11/22 16:34:54 spock Exp $
 
 QA_PRESTRIPPED=/boot/memtest86plus/memtest
 
@@ -42,6 +42,7 @@ src_compile() {
 src_install() {
 	insinto /boot/memtest86plus
 	doins memtest.bin || die
+	dosym memtest.bin /boot/memtest86plus/memtest
 	dodoc README README.build-process
 
 	if use floppy ; then
@@ -59,7 +60,7 @@ pkg_postinst() {
 	einfo " - For grub: (replace '?' with correct numbers for your boot partition)"
 	einfo "    > title=Memtest86Plus"
 	einfo "    > root (hd?,?)"
-	einfo "    > kernel --type=netbsd /boot/memtest86plus/memtest.bin"
+	einfo "    > kernel /boot/memtest86plus/memtest.bin"
 
 	einfo " - For lilo:"
 	einfo "    > image  = /boot/memtest86plus/memtest.bin"

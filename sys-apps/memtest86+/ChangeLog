@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.53 2009/09/27 10:47:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.54 2009/11/22 16:34:54 spock Exp $
+
+  22 Nov 2009; Michał Januszewski <spock@gentoo.org>
+  memtest86+-4.00.ebuild:
+  Fix the installation instructions, add a 'memtest' symlink to make memtest
+  work with boot loaders from the syslinux family (bug #290452).
 
   27 Sep 2009; Patrick Lauer <patrick@gentoo.org> memtest86+-4.00.ebuild:
   Installing kernel instead of elf binary. Fixes #286644
