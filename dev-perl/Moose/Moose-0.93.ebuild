@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.93.ebuild,v 1.1 2009/11/22 10:57:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.93.ebuild,v 1.2 2009/11/22 17:18:54 mr_bones_ Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 		>=dev-perl/Test-Output-0.09
 		>=dev-perl/Test-Warn-0.11
 		dev-perl/Test-Deep
-		dev-perl/Module-Refresh 
+		dev-perl/Module-Refresh
 		)"
 
 SRC_TEST=do
