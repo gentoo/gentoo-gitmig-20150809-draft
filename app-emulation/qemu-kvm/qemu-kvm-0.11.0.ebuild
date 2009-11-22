@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.1 2009/11/22 23:30:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.2 2009/11/22 23:31:47 cardoe Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa bluetooth esd gnutls ncurses pulseaudio +sdl vde"
+IUSE="alsa bluetooth esd gnutls ncurses pulseaudio sasl +sdl vde"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k mips mipsel mips64 mips64el ppc \
 ppc64 sh4 sh4eb sparc"
@@ -41,6 +41,7 @@ RDEPEND="sys-libs/zlib
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
 	pulseaudio? ( media-sound/pulseaudio )
+	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
 	vde? ( net-misc/vde )
 	!app-emulation/qemu-softmmu
@@ -121,6 +122,7 @@ src_configure() {
 	use sdl || conf_opts="$conf_opts --disable-sdl"
 	use vde || conf_opts="$conf_opts --disable-vde"
 	use bluetooth || conf_opts="$conf_opts --disable-bluez"
+	use sasl || conf_opts='$conf_opts --disable-vnc-sasl"
 	conf_opts="--disable-darwin-user --disable-bsd-user"
 
 	# audio options
