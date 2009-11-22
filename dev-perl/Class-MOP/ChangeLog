@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-MOP
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.28 2009/10/26 13:54:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.29 2009/11/22 10:55:44 robbat2 Exp $
+
+*Class-MOP-0.95 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +Class-MOP-0.95.ebuild:
+  Version bump via perl-bump experimental tool.
 
   26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> Class-MOP-0.94.ebuild:
   Keywording for ppc, bug 283244

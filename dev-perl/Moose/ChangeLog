@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.32 2009/10/26 13:56:25 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.33 2009/11/22 10:57:33 robbat2 Exp $
+
+*Moose-0.93 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +Moose-0.93.ebuild:
+  Version bump via perl-bump experimental tool.
 
   26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> Moose-0.92.ebuild:
   Keywording for ppc, bug 283244

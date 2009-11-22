@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.19 2009/07/19 17:39:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.20 2009/11/22 10:50:10 robbat2 Exp $
+
+*Module-Signature-0.61 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Module-Signature-0.61.ebuild:
+  Version bump via perl-bump experimental tool.
 
   19 Jul 2009; Torsten Veller <tove@gentoo.org>
   Module-Signature-0.55.ebuild:

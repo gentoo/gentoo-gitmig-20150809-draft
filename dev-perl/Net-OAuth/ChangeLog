@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-OAuth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OAuth/ChangeLog,v 1.1 2009/10/10 11:07:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OAuth/ChangeLog,v 1.2 2009/11/22 10:47:12 robbat2 Exp $
+
+*Net-OAuth-0.20 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +Net-OAuth-0.20.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *Net-OAuth-0.19 (10 Oct 2009)
 

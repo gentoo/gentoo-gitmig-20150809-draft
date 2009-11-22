@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/WWW-Shorten
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Shorten/ChangeLog,v 1.1 2009/10/10 11:09:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Shorten/ChangeLog,v 1.2 2009/11/22 10:51:49 robbat2 Exp $
+
+*WWW-Shorten-2.06 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +WWW-Shorten-2.06.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *WWW-Shorten-2.05 (10 Oct 2009)
 

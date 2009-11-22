@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.19 2009/10/19 14:50:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.20 2009/11/22 10:51:17 robbat2 Exp $
+
+*SQL-Statement-1.23 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +SQL-Statement-1.23.ebuild:
+  Version bump via perl-bump experimental tool.
 
   19 Oct 2009; Torsten Veller <tove@gentoo.org> SQL-Statement-1.22.ebuild:
   Fix upgrade killer feature (#289723)
