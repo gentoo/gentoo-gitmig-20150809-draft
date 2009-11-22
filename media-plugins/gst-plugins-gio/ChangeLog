@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.42 2009/11/18 21:52:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.43 2009/11/22 18:50:25 klausman Exp $
+
+  22 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-gio-0.10.24.ebuild:
+  Stable on alpha, bug #290343
 
   18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-gio-0.10.24.ebuild:
