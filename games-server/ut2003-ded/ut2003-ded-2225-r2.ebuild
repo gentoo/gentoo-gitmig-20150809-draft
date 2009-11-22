@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.8 2006/11/14 17:58:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.9 2009/11/22 23:08:14 mr_bones_ Exp $
 
 inherit games
 
@@ -8,6 +8,7 @@ DESCRIPTION="Unreal Tournament 2003 Linux Dedicated Server"
 HOMEPAGE="http://www.ut2003.com/"
 SRC_URI="http://games.gci.net/pub/UT2003/ut2003-lnxded-${PV}.tar.bz2
 	mirror://3dgamers/unrealtourn2/ut2003-lnxded-${PV}.tar.bz2
+	http://downloads.unrealadmin.org/UT2003/Server/Linux/ut2003-lnxded-${PV}.tar.bz2
 	mirror://gentoo/UT2003CrashFix.zip
 	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
 
