@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/apgdiff
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.1 2008/10/22 14:48:21 fordfrog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.2 2009/11/22 09:50:38 fordfrog Exp $
+
+*apgdiff-1.4 (22 Nov 2009)
+
+  22 Nov 2009; Miroslav Šulc <fordfrog@gentoo.org> +apgdiff-1.4.ebuild:
+  Version bump
 
 *apgdiff-1.3 (22 Oct 2008)
 
