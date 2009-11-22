@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/IPC-Cmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.6 2009/11/14 09:12:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.7 2009/11/22 10:57:41 robbat2 Exp $
+
+*IPC-Cmd-0.54 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +IPC-Cmd-0.54.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *IPC-Cmd-0.52 (14 Nov 2009)
 
