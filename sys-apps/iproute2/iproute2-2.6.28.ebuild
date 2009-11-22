@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.28.ebuild,v 1.12 2009/10/31 15:59:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.28.ebuild,v 1.13 2009/11/22 17:36:32 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git"
 	inherit git
 	SRC_URI=""
-	KEYWORDS=""
+	#KEYWORDS=""
 else
 	if [[ ${PV} == *.*.*.* ]] ; then
 		MY_PV=${PV%.*}
