@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.0.ebuild,v 1.3 2009/11/17 23:06:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.0.ebuild,v 1.4 2009/11/22 23:51:36 lu_zero Exp $
 
 EAPI="2"
 
@@ -61,9 +61,6 @@ src_prepare() {
 			Makefile.target
 	# Append CFLAGS while linking
 	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak
-	# avoid strip
-	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' \
-		Makefile Makefile.target */Makefile
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
 }
 
@@ -80,7 +77,7 @@ src_configure() {
 			user_targets="${user_targets} ${target}-linux-user"
 	done
 
-	conf_opts="--disable-darwin-user --disable-bsd-user"
+	conf_opts="--disable-darwin-user --disable-bsd-user --disable-strip"
 
 	if test ! -z "${softmmu_targets}" ; then
 		einfo "Building following softmmu targets: ${softmmu_targets}"
