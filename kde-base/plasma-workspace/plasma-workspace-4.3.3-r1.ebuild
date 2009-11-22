@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.3.3.ebuild,v 1.2 2009/11/22 11:38:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.3.3-r1.ebuild,v 1.1 2009/11/22 12:02:10 scarabeus Exp $
 
 EAPI="2"
 
@@ -61,6 +61,10 @@ KMEXTRACTONLY="
 "
 
 KMLOADLIBS="libkworkspace libplasmaclock libtaskmanager"
+
+PATCHES=(
+	"${FILESDIR}/${PV}-progress_indicator.patch"
+)
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
