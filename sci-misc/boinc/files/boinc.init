@@ -56,21 +56,20 @@ start() {
 		ewarn "network is needed only for jobs fetching afterwards"
 	fi
 
-	generate_logs
-
 	if [ "${ALLOW_REMOTE_RPC}" = "yes" ]; then
 		ARGS="${ARGS} -allow_remote_gui_rpc"
 	fi
 
-	# sys-apps/util-linux
-	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
-
-	# check for baselayout version
 	if [ -n "${RC_UNAME}" ]; then
 		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' -- ${ARGS}"
 	else
 		PARAMS="-- ${ARGS} >> '${LOGFILE}' 2>&1 &"
 	fi
+
+	generate_logs
+
+	# sys-apps/util-linux
+	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
 
 	eval ${CHRT} start-stop-daemon \
 		--quiet --start --chdir "${RUNTIMEDIR}" \
@@ -95,26 +94,32 @@ start() {
 }
 
 attach() {
+	local password args url key
+	local was_started=true
+
 	printf "    Enter the Project URL: "
 	read url
 	printf "    Enter your Account Key: "
 	read key
 
-	RC_QUIET_STDOUT="yes" status
-	if [ $? = 1 ]; then
-		start
+	password=$(cat "${RUNTIMEDIR}/gui_rpc_auth.cfg")
+	args="--project_attach ${url} ${key}"
+
+	if ! service_started; then
+		was_started=false
+		"${RC_SERVICE}" start
 	fi
+
 	ebegin "Attaching to project"
-		# we have to work in runtime directory
-		cd "${RUNTIMEDIR}"
-		# boinc does not return 1 when it fails currently
-		"${BOINCBIN}" --attach_project "${url}" "${key}" &> /dev/null
-		# change the perms for the files to defined user/group
-		chown -R ${USER}:${GROUP} *
+		boinccmd --host localhost --passwd ${password} ${args}
 	eend $?
+
+	unset password args url key
 
 	sleep 10
 	tail "${LOGFILE}"
+
+	[[ ${was_started} = "false" ]] && "${RC_SERVICE}" stop
 }
 
 stop() {

@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.81 2009/11/14 01:40:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.82 2009/11/22 13:38:26 scarabeus Exp $
+
+  22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
+  Update script attach function to work correcty.
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> boinc-6.10.18.ebuild:
   Drop the server support from now on. Better for my sanity sorry guys.
