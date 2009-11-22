@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.11 2009/09/15 00:44:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.12 2009/11/22 16:52:35 arfrever Exp $
+
+*xapian-bindings-1.0.17 (22 Nov 2009)
+
+  22 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -xapian-bindings-1.0.6.ebuild, -xapian-bindings-1.0.12.ebuild,
+  +xapian-bindings-1.0.17.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
 *xapian-bindings-1.0.16 (15 Sep 2009)
 
