@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.268 2009/11/20 13:12:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.269 2009/11/22 17:41:05 tcunha Exp $
+
+  22 Nov 2009; Tiago Cunha <tcunha@gentoo.org> dhcpcd-4.0.15.ebuild:
+  stable sparc, bug 293502
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> dhcpcd-4.0.15.ebuild:
   arm stable, bug #293502
