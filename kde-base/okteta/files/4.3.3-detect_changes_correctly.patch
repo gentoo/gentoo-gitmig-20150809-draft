@@ -1,16 +1,16 @@
-Index: branches/KDE/4.3/kdeutils/okteta/program/libkakao/core/system/kdocumentsyncmanager.cpp
+Index: branches/KDE/4.3/kdeutils/okteta/core/piecetablebytearraymodel_p.cpp
 ===================================================================
---- branches/KDE/4.3/kdeutils/okteta/program/libkakao/core/system/kdocumentsyncmanager.cpp	(revision 1046928)
-+++ branches/KDE/4.3/kdeutils/okteta/program/libkakao/core/system/kdocumentsyncmanager.cpp	(revision 1046929)
-@@ -217,9 +217,9 @@
-                 if( synchronizer )
-                 {
-                     AbstractSyncToRemoteJob *syncJob = synchronizer->startSyncToRemote();
--                    const bool syncFailed = JobManager::executeJob( syncJob, mWidget );
-+                    const bool isSynced = JobManager::executeJob( syncJob, mWidget );
+--- branches/KDE/4.3/kdeutils/okteta/core/piecetablebytearraymodel_p.cpp	(revision 1046918)
++++ branches/KDE/4.3/kdeutils/okteta/core/piecetablebytearraymodel_p.cpp	(revision 1046919)
+@@ -263,9 +263,11 @@
  
--                    canClose = !syncFailed;
-+                    canClose = isSynced;
-                 }
-                 else
-                     canClose = setSynchronizer( document );
+ void PieceTableByteArrayModel::Private::openGroupedChange( const QString &description )
+ {
++    const bool isModifiedBefore = isModified();
+     mBeforeGroupedChangeVersionIndex = mPieceTable.appliedChangesCount();
+     mPieceTable.openGroupedChange( description );
+ 
++    if( ! isModifiedBefore ) emit p->modifiedChanged( true );
+     emit p->headVersionChanged( mPieceTable.changesCount() );
+ }
+ 
