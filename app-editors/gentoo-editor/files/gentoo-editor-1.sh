@@ -1,6 +1,6 @@
 #!/bin/sh
 # Copyright 2009 Gentoo Foundation
-# Distributed under the terms of the MIT license
+# Distributed under the terms of the MIT/X11 license
 
 # Editor wrapper script, executes ${EDITOR} on file $1.
 # We disallow options and multiple file name arguments on purpose, so
