@@ -1,6 +1,12 @@
 # ChangeLog for net-im/amsn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.92 2009/10/18 15:34:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.93 2009/11/22 06:12:08 tester Exp $
+
+*amsn-0.98.1 (22 Nov 2009)
+
+  22 Nov 2009; Olivier Crête <tester@gentoo.org> -amsn-0.98.ebuild,
+  +amsn-0.98.1.ebuild:
+  Version bump, bug #293661
 
   18 Oct 2009; Tobias Klausmann <klausman@gentoo.org> amsn-0.98.ebuild:
   Keyworded on alpha, bug #282989
