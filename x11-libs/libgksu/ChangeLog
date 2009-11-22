@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.65 2009/11/17 19:53:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.66 2009/11/22 19:09:19 klausman Exp $
+
+  22 Nov 2009; Tobias Klausmann <klausman@gentoo.org> libgksu-2.0.12.ebuild:
+  Stable on alpha, bug #290733
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> libgksu-2.0.12.ebuild:
   Marking libgksu-2.0.12 ppc64 for bug 290733
