@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.3 2009/11/22 23:32:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.4 2009/11/22 23:49:48 cardoe Exp $
 
 EAPI="2"
 
@@ -121,7 +121,7 @@ src_configure() {
 	use sdl || conf_opts="$conf_opts --disable-sdl"
 	use vde || conf_opts="$conf_opts --disable-vde"
 	use bluetooth || conf_opts="$conf_opts --disable-bluez"
-	use sasl || conf_opts='$conf_opts --disable-vnc-sasl"
+	use sasl || conf_opts="$conf_opts --disable-vnc-sasl"
 	conf_opts="--disable-darwin-user --disable-bsd-user"
 
 	# audio options
