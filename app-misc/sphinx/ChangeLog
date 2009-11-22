@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.19 2009/11/05 15:41:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.20 2009/11/22 22:04:50 robbat2 Exp $
+
+*sphinx-0.9.9_rc2-r2 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +sphinx-0.9.9_rc2-r2.ebuild:
+  No action for a couple of months on this bug #276252. libstemmer mirrored
+  to Gentoo systems now with a version number. revbump so that all
+  existing users can converge on having an identical libstemmer.
 
 *sphinx-0.9.9_rc2-r1 (26 Sep 2009)
 
