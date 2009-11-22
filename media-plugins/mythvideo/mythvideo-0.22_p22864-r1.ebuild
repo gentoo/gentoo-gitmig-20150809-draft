@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p22864-r1.ebuild,v 1.1 2009/11/22 05:57:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p22864-r1.ebuild,v 1.2 2009/11/22 17:19:12 mr_bones_ Exp $
 
 EAPI=2
 
@@ -16,8 +16,8 @@ RDEPEND="dev-perl/libwww-perl
 	dev-perl/XML-Simple
 	sys-apps/eject
 	jamu? ( >=dev-python/imdbpy-3.8
-			>=dev-python/mysql-python-1.2.2 
-			media-tv/mythtv[python] )"		
+			>=dev-python/mysql-python-1.2.2
+			media-tv/mythtv[python] )"
 DEPEND=""
 
 src_install() {
