@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.38 2009/11/08 14:34:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.39 2009/11/22 20:24:50 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="alsa altivec debug joystick opengl profile pulseaudio sse sse2 vdpau"
+IUSE="aac alsa altivec css debug joystick midi opengl profile pulseaudio sse sse2 vdpau xrandr"
 
 RDEPEND="opengl? ( virtual/opengl )
 	app-arch/bzip2
@@ -43,15 +43,18 @@ RDEPEND="opengl? ( virtual/opengl )
 	>=dev-python/pysqlite-2
 	media-libs/a52dec
 	media-libs/alsa-lib
-	media-libs/faac
+	aac? ( media-libs/faac )
+	media-libs/faad2
 	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/glew
 	media-libs/jasper
 	media-libs/jbigkit
+	media-libs/jpeg
 	>=media-libs/libass-0.9.7
 	media-libs/libdca
+	css? ( media-libs/libdvdcss )
 	media-libs/libmad
 	media-libs/libmms
 	media-libs/libmpeg2
@@ -64,20 +67,22 @@ RDEPEND="opengl? ( virtual/opengl )
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
 	media-libs/tiff
+	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
 	media-video/ffmpeg
+	avahi? ( net-dns/avahi )
 	net-misc/curl
 	net-fs/samba
 	sys-apps/dbus
 	sys-apps/hal
-	sys-apps/pmount
+	sys-libs/zlib
 	virtual/mysql
 	x11-apps/xdpyinfo
 	x11-apps/mesa-progs
+	vdpau? ( >=x11-drivers/nvidia-drivers-180.51 )
 	x11-libs/libXinerama
-	x11-libs/libXrandr
+	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender"
-# media-libs/faad2 we use internal one for now
 DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	dev-util/cmake
@@ -111,12 +116,6 @@ src_prepare() {
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -print0 | xargs -0 touch -r configure
 
-	# use internal faad2 as mp4ff is dead and xbmc hasnt
-	# switched to libmp4v2 yet
-	sed -i \
-		-e '/use_external_libfaad/s:use_external_libraries:FOOOO:' \
-		configure || die
-
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.
 	export SVN_REV=${ESVN_WC_REVISION:-exported}
@@ -140,12 +139,18 @@ src_configure() {
 		--disable-ccache \
 		--disable-optimizations \
 		--enable-external-libraries \
+		--enable-goom \
+		$(use_enable avahi) \
+		$(use_enable css dvdcss) \
 		$(use_enable debug) \
+		$(use_enable aac faac) \
 		$(use_enable joystick) \
+		$(use_enable midi mid) \
 		$(use_enable opengl gl) \
 		$(use_enable profile profiling) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable vdpau)
+		$(use_enable vdpau) \
+		$(use_enable xrandr)
 }
 
 src_install() {

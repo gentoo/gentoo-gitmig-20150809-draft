@@ -3,6 +3,8 @@
 <pkgmetadata>
 <herd>xbox</herd>
 <use>
+ <flag name='midi'>Support MIDI files</flag>
+ <flag name='xrandr'>Support X randr extension</flag>
  <flag name='vdpau'>enable support for Video Decode and Presentation API for Unix</flag>
 </use>
 </pkgmetadata>
