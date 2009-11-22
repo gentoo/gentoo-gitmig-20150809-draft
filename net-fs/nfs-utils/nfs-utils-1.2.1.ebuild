@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.1.ebuild,v 1.1 2009/11/22 17:53:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.1.ebuild,v 1.2 2009/11/22 21:30:20 swegener Exp $
 
 EAPI="2"
 
@@ -38,14 +38,12 @@ RDEPEND="${DEPEND_COMMON} !net-nds/portmap"
 DEPEND="${DEPEND_COMMON}
 	>=sys-apps/util-linux-2.12r-r7"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.4-mtab-sym.patch
 	epatch "${FILESDIR}"/${PN}-1.1.4-no-exec.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-statedir=/var/lib/nfs \
 		--enable-tirpc \
@@ -54,7 +52,6 @@ src_compile() {
 		$(use_enable nfsv4) \
 		$(use_enable ipv6) \
 		$(use nfsv4 && use_enable kerberos gss || echo "--disable-gss")
-	emake || die "Failed to compile"
 }
 
 src_install() {

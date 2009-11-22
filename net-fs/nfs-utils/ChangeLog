@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.162 2009/11/22 17:53:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.163 2009/11/22 21:30:20 swegener Exp $
+
+  22 Nov 2009; Sven Wegener <swegener@gentoo.org> nfs-utils-1.2.1.ebuild:
+  Use src_configure and src_prepare for EAPI-2 compliance, this should fix
+  bug #294082.
 
 *nfs-utils-1.2.1 (22 Nov 2009)
 
