@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.2 2009/11/22 23:31:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.3 2009/11/22 23:32:26 cardoe Exp $
 
 EAPI="2"
 
@@ -29,7 +29,6 @@ done
 for target in ${IUSE_USER_TARGETS}; do
 	IUSE="${IUSE} +qemu_user_targets_${target}"
 done
-
 
 RESTRICT="test"
 
@@ -113,7 +112,7 @@ src_configure() {
 		einfo "Building the following user targets: ${user_targets}"
 		conf_opts="${conf_opts} --enable-linux-user"
 	else
-		conf_opts="${conf_opts} --disable-linux-user"	
+		conf_opts="${conf_opts} --disable-linux-user"
 	fi
 
 	#config options
