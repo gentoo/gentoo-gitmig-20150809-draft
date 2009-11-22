@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.4 2009/11/22 23:49:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.5 2009/11/22 23:58:44 cardoe Exp $
 
 EAPI="2"
 
@@ -94,6 +94,8 @@ src_prepare() {
 src_configure() {
 	local conf_opts audio_opts softmmu_targets user_targets
 
+	filter-flags -fpie -fstack-protector
+
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
 		softmmu_targets="${softmmu_targets} ${target}-softmmu"
@@ -142,40 +144,16 @@ src_configure() {
 		|| die "configure failed"
 }
 
-src_compile() {
-	local mycc=$(cat config-host.mak | egrep "^CC=" | cut -d "=" -f 2)
-
-	filter-flags -fpie -fstack-protector
-
-	# If using gentoo's compiler set the SPEC to non-hardened
-	if [ ! -z ${GCC_SPECS} -a -f ${GCC_SPECS} ]; then
-		local myccver=$(${mycc} -dumpversion)
-		local gccver=$($(tc-getBUILD_CC) -dumpversion)
-
-		#Is this a SPEC for the right compiler version?
-		myspec="${GCC_SPECS/${gccver}/${myccver}}"
-		if [ "${myspec}" == "${GCC_SPECS}" ]; then
-			shopt -s extglob
-			GCC_SPECS="${GCC_SPECS/%hardened*specs/vanilla.specs}"
-			shopt -u extglob
-		else
-			unset GCC_SPECS
-		fi
-	fi
-
-	emake || die "emake failed"
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	insinto /etc/udev/rules.d/
 	doins kvm/scripts/65-kvm.rules
 
-	insinto /etc/kvm/
+	insinto /etc/qemu/
 	insopts -m0755
-	newins kvm/scripts/qemu-ifup kvm-ifup
-	newins kvm/scripts/qemu-ifdown kvm-ifdown
+	doins kvm/scripts/qemu-ifup
+	doins kvm/scripts/qemu-ifdown
 
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
