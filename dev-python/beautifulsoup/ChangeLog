@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.24 2009/11/03 18:52:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.25 2009/11/22 19:00:36 grobian Exp $
+
+  22 Nov 2009; Fabian Groffen <grobian@gentoo.org>
+  beautifulsoup-3.1.0.1.ebuild:
+  Marked ~x86-solaris
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> beautifulsoup-3.0.7.ebuild,
   beautifulsoup-3.1.0.1.ebuild:
