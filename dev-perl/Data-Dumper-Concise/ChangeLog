@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Data-Dumper-Concise
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper-Concise/ChangeLog,v 1.1 2009/11/14 10:48:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper-Concise/ChangeLog,v 1.2 2009/11/22 21:06:43 robbat2 Exp $
+
+*Data-Dumper-Concise-1.002 (22 Nov 2009)
+
+  22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Data-Dumper-Concise-1.002.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *Data-Dumper-Concise-1.001 (14 Nov 2009)
 
