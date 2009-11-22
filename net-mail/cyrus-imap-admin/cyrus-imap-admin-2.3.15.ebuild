@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.14-r1.ebuild,v 1.2 2009/07/03 16:06:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.15.ebuild,v 1.1 2009/11/22 14:01:23 dertobi123 Exp $
 
 inherit autotools perl-app eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${MY_PV}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ssl kerberos kolab"
+IUSE="ssl kerberos"
 
 RDEPEND=">=sys-libs/db-3.2
 	>=dev-lang/perl-5.6.1
@@ -44,11 +44,6 @@ src_unpack() {
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
-
-	# Add kolab support.
-	if use kolab ; then
-		epatch "${FILESDIR}/${P}-kolab-annotations.patch" || die "epatch failed"
-	fi
 }
 
 src_compile() {
