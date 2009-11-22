@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/kdeedu-meta-4.3.3.ebuild,v 1.1 2009/11/02 20:55:00 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/kdeedu-meta-4.3.3-r1.ebuild,v 1.1 2009/11/22 12:22:53 scarabeus Exp $
 
 EAPI="2"
 inherit kde4-functions
@@ -28,6 +28,7 @@ RDEPEND="
 	$(add_kdebase_dep kstars)
 	$(add_kdebase_dep ktouch)
 	$(add_kdebase_dep kturtle)
+	$(add_kdebase_dep kvtml-data)
 	$(add_kdebase_dep kwordquiz)
 	$(add_kdebase_dep libkdeedu)
 	$(add_kdebase_dep marble)
