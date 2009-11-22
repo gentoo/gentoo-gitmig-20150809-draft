@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/netwox
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.27 2007/04/16 08:31:09 welp Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.28 2009/11/22 23:31:34 jer Exp $
+
+*netwox-5.36.0 (22 Nov 2009)
+
+  22 Nov 2009; Jeroen Roovers <jer@gentoo.org> +netwox-5.36.0.ebuild:
+  Version bump. Respect LDFLAGS. Support parallel make. Run genemake in
+  src_configure, and through sh (bug #294069). Use emake to install. Marked
+  ~hppa too.
 
   16 Apr 2007; <welp@gentoo.org> netwox-5.33.0.ebuild:
   Keyworded ~amd64
