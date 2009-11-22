@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10870 2009/11/22 15:14:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10871 2009/11/22 21:13:25 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -393,10 +393,6 @@ media-sound/paman
 # Masked development versions
 =dev-util/bzr-2.1.0_beta1*
 =dev-util/bzrtools-2.1.0_beta1*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Oct 2009)
-# Homepage is gone; requires dev-python/numeric; last released in 2006
-games-rpg/galaxymage
 
 # Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
 # Obsolete Musepack SV7 format support. Install
