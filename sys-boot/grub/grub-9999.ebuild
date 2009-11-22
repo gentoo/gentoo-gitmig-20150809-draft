@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.15 2009/11/01 19:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.16 2009/11/22 17:34:52 vapier Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="svn://svn.sv.gnu.org/grub/trunk/grub2"
-	inherit subversion
+	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub"
+	inherit bzr
 	SRC_URI=""
 else
 	SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
@@ -32,7 +32,7 @@ QA_EXECSTACK="sbin/grub-probe sbin/grub-setup sbin/grub-mkdevicemap"
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		subversion_src_unpack
+		bzr_src_unpack
 	else
 		unpack ${A}
 	fi
