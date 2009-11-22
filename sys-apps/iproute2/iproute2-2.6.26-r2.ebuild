@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.26-r2.ebuild,v 1.12 2009/08/26 21:49:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.26-r2.ebuild,v 1.13 2009/11/22 17:42:45 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ else
 fi
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="kernel routing and traffic control utilities"
-HOMEPAGE="http://linux-net.osdl.org/index.php/Iproute2"
+HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2"
 SRC_URI="http://developer.osdl.org/dev/iproute2/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"

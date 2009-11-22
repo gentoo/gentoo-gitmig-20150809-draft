@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.29.1-r1.ebuild,v 1.9 2009/11/22 17:37:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.29.1-r1.ebuild,v 1.10 2009/11/22 17:42:45 vapier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ else
 fi
 
 DESCRIPTION="kernel routing and traffic control utilities"
-HOMEPAGE="http://linux-net.osdl.org/index.php/Iproute2"
+HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2"
 
 LICENSE="GPL-2"
 SLOT="0"
