@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.79 2009/11/15 02:05:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.80 2009/11/22 16:41:07 spock Exp $
+
+  22 Nov 2009; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
+  Add a new drive to the HDD database (bug #294058).
 
   15 Nov 2009; Ryan Hill <dirtyepic@gentoo.org> Manifest:
   Fix Manifest.
