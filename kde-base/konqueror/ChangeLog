@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.161 2009/11/19 20:42:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.162 2009/11/22 13:10:39 tampakrap Exp $
+
+  22 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  konqueror-4.3.3.ebuild:
+  Add svg USE flag for svgpart, bug 241162
 
   19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   -konqueror-3.5.10.ebuild:
