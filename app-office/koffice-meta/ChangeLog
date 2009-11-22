@@ -1,6 +1,12 @@
 # ChangeLog for app-office/koffice-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.90 2009/11/15 14:16:26 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.91 2009/11/22 16:28:10 tampakrap Exp $
+
+*koffice-meta-2.1.0 (22 Nov 2009)
+
+  22 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +koffice-meta-2.1.0.ebuild:
+  version bump
 
   15 Nov 2009; Dominik Kapusta <ayoy@gentoo.org> koffice-meta-2.0.2.ebuild:
   "RDEPEND" on ~${PV} instead of >=${PV}
