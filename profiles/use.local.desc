@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5028 2009/11/22 17:08:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5029 2009/11/22 20:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1771,7 +1771,9 @@ media-tv/mythtv:xvmc - Instructs MythTV to use XvMC for it's video output. By de
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extensions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
+media-tv/xbmc:midi - Support MIDI files
 media-tv/xbmc:vdpau - enable support for Video Decode and Presentation API for Unix
+media-tv/xbmc:xrandr - Support X randr extension
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
 media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
 media-tv/xdtv:schedule - Adds the possibility to schedule tv recording via xdtv_record.sh
