@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.135 2009/11/20 00:34:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.136 2009/11/22 11:51:50 scarabeus Exp $
+
+*klipper-4.3.3-r1 (22 Nov 2009)
+
+  22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -klipper-4.3.3.ebuild, +klipper-4.3.3-r1.ebuild:
+  Revision bump to fix kipper action issues. Per bug #292233.
 
   20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   -klipper-3.5.10.ebuild:
