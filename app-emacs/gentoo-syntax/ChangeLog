@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.57 2009/11/15 16:58:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.58 2009/11/22 18:42:59 ulm Exp $
+
+  22 Nov 2009; Ulrich Mueller <ulm@gentoo.org>
+  files/50gentoo-syntax-gentoo.el:
+  Set coding system to utf-8 also for eselect and eblit files.
 
   15 Nov 2009; Ulrich Mueller <ulm@gentoo.org> -gentoo-syntax-1.14.ebuild,
   -files/50gentoo-syntax-gentoo-1.14.el, -gentoo-syntax-9999.ebuild:
