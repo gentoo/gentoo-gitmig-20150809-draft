@@ -166,6 +166,8 @@ x86-macos		prefix/darwin/macos/10.4/x86			exp
 ppc-macos		prefix/darwin/macos/10.5/ppc			exp
 x86-macos		prefix/darwin/macos/10.5/x86			exp
 x64-macos		prefix/darwin/macos/10.5/x64			exp
+x86-macos		prefix/darwin/macos/10.6/x86			exp
+x64-macos		prefix/darwin/macos/10.6/x64			exp
 
 # Solaris Profiles
 sparc-solaris		prefix/sunos/solaris/5.9/sparc			exp
