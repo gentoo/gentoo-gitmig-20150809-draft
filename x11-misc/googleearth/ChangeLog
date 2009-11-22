@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.51 2009/11/18 23:35:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.52 2009/11/22 10:50:29 caster Exp $
+
+*googleearth-5.1.3533.1731-r1 (22 Nov 2009)
+
+  22 Nov 2009; Vlastimil Babka <caster@gentoo.org>
+  +googleearth-5.1.3533.1731-r1.ebuild, +files/decimal-separator.patch:
+  Revbump with patch to prevent locales with comma decimal separator from
+  killing the saved places. Thanks to András <cucaracha@loco.hu> in bug
+  #262780.
 
 *googleearth-5.1.3533.1731 (18 Nov 2009)
 
