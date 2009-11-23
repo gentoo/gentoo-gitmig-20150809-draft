@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090615.ebuild,v 1.3 2009/11/20 14:16:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090615.ebuild,v 1.4 2009/11/23 01:38:47 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -40,7 +40,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[0-9]\+\).*/\1/; p }")
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
 
 	scons \
 		${sconsopts} \
