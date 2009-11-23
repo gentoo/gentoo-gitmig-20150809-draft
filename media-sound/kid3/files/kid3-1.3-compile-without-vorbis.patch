@@ -1,0 +1,105 @@
+diff -ur kid3-1.3-orig/kid3/oggfile.cpp kid3-1.3/kid3/oggfile.cpp
+--- kid3-1.3-orig/kid3/oggfile.cpp	2009-09-20 12:22:55.000000000 +0300
++++ kid3-1.3/kid3/oggfile.cpp	2009-11-23 15:23:24.992619259 +0200
+@@ -636,6 +636,49 @@
+ }
+ 
+ /**
++ * Read information about an Ogg/Vorbis file.
++ * @param fn file name
++ * @return true if ok.
++ */
++bool OggFile::FileInfo::read(const char* fn)
++{
++	valid = false;
++	FILE* fp = ::fopen(fn, "rb");
++	if (fp) {
++		OggVorbis_File vf;
++		if (::ov_open(fp, &vf, NULL, 0) == 0) {
++			vorbis_info* vi = ::ov_info(&vf, -1);
++			if (vi) {
++				valid = true;
++				version = vi->version;
++				channels = vi->channels;
++				sampleRate = vi->rate;
++				bitrate = vi->bitrate_nominal;
++				if (bitrate <= 0) {
++					bitrate = vi->bitrate_upper;
++				}
++				if (bitrate <= 0) {
++					bitrate = vi->bitrate_lower;
++				}
++			}
++#ifdef WIN32
++			duration = (long)::ov_time_total(&vf, -1);
++#else
++			duration = ::lrint(::ov_time_total(&vf, -1));
++#endif
++			::ov_clear(&vf); // closes file, do not use ::fclose()
++		} else {
++			::fclose(fp);
++		}
++	}
++	return valid;
++}
++#else // HAVE_VORBIS
++void OggFile::getDetailInfo(DetailInfo& info) const { info.valid = false; }
++unsigned OggFile::getDuration() const { return 0; }
++#endif // HAVE_VORBIS
++
++/**
+  * Get the format of tag 2.
+  *
+  * @return "Vorbis".
+@@ -809,51 +852,6 @@
+ 	return lst;
+ }
+ 
+-
+-
+-/**
+- * Read information about an Ogg/Vorbis file.
+- * @param fn file name
+- * @return true if ok.
+- */
+-bool OggFile::FileInfo::read(const char* fn)
+-{
+-	valid = false;
+-	FILE* fp = ::fopen(fn, "rb");
+-	if (fp) {
+-		OggVorbis_File vf;
+-		if (::ov_open(fp, &vf, NULL, 0) == 0) {
+-			vorbis_info* vi = ::ov_info(&vf, -1);
+-			if (vi) {
+-				valid = true;
+-				version = vi->version;
+-				channels = vi->channels;
+-				sampleRate = vi->rate;
+-				bitrate = vi->bitrate_nominal;
+-				if (bitrate <= 0) {
+-					bitrate = vi->bitrate_upper;
+-				}
+-				if (bitrate <= 0) {
+-					bitrate = vi->bitrate_lower;
+-				}
+-			}
+-#ifdef WIN32
+-			duration = (long)::ov_time_total(&vf, -1);
+-#else
+-			duration = ::lrint(::ov_time_total(&vf, -1));
+-#endif
+-			::ov_clear(&vf); // closes file, do not use ::fclose()
+-		} else {
+-			::fclose(fp);
+-		}
+-	}
+-	return valid;
+-}
+-#else // HAVE_VORBIS
+-void OggFile::getDetailInfo(DetailInfo& info) const { info.valid = false; }
+-unsigned OggFile::getDuration() const { return 0; }
+-#endif // HAVE_VORBIS
+-
+ /**
+  * Get value.
+  * @param name name

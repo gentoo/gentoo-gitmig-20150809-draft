@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.3.ebuild,v 1.1 2009/11/19 17:47:37 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.3.ebuild,v 1.2 2009/11/23 13:30:49 spatz Exp $
 
 EAPI=2
 inherit kde4-base
@@ -22,6 +22,12 @@ RDEPEND="mp3? ( media-libs/id3lib )
 	musicbrainz? ( media-libs/musicbrainz:3
 		media-libs/tunepimp )"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-compile-without-vorbis.patch"
+
+	kde4-base_src_prepare
+}
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
