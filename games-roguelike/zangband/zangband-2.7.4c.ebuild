@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.9 2009/11/20 15:16:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.10 2009/11/23 09:33:19 volkmar Exp $
 
 EAPI=2
 inherit autotools games
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/games/Angband/Variant/ZAngband/${P}.tar.gz"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
 IUSE="tk"
 
 RDEPEND="tk? (
