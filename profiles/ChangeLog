@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3599 2009/11/23 14:01:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3600 2009/11/23 17:50:45 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Nov 2009; Alex Legler <a3li@gentoo.org> package.mask:
+  Moved xoops mask, scheduling for removal
 
   23 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking sys-apps/inputd for QA removal.
