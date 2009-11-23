@@ -1,0 +1,10 @@
+# ChangeLog for perl-core/Attribute-Handlers
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.1 2009/11/23 18:57:48 tove Exp $
+
+*Attribute-Handlers-0.87 (23 Nov 2009)
+
+  23 Nov 2009; Torsten Veller <tove@gentoo.org>
+  +Attribute-Handlers-0.87.ebuild, +metadata.xml:
+  Initial commit (#294206)
+
