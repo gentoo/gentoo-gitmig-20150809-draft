@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/rafkill-1.2.3.ebuild,v 1.3 2008/04/30 16:46:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/rafkill-1.2.3.ebuild,v 1.4 2009/11/23 01:40:57 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="space shoot-em-up game"
@@ -18,20 +19,21 @@ RDEPEND="media-libs/allegro
 DEPEND="${RDEPEND}
 	dev-util/scons"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f {data,music}/.sconsign
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
-	sed -i "/^#define INSTALL_DIR/s:\.:${GAMES_DATADIR}:" \
-		src/defs.cpp || die "sed failed"
+	sed -i \
+		-e "/^#define INSTALL_DIR/s:\.:${GAMES_DATADIR}:" \
+		src/defs.cpp \
+		|| die "sed failed"
 }
 
 src_compile() {
-	tc-export CXX
-	scons || die "scons failed"
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
+
+	scons ${sconsopts} || die "scons failed"
 }
 
 src_install() {
