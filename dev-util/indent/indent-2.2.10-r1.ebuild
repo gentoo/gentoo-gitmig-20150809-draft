@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.10-r1.ebuild,v 1.2 2009/11/23 05:16:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.10-r1.ebuild,v 1.3 2009/11/23 05:36:49 jer Exp $
 
 EAPI="2"
 
@@ -29,7 +29,11 @@ src_prepare() {
 src_configure() {
 	# LINGUAS is used in aclocal.m4 (bug #94837)
 	unset LINGUAS
-	econf $(use_enable nls) || die
+	econf $(use_enable nls) || die "configure failed"
+}
+
+src_test() {
+	emake -C regression/ || die "regression tests failed"
 }
 
 src_install() {
