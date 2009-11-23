@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.54 2009/11/18 20:37:38 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.55 2009/11/23 20:56:28 calchan Exp $
+
+  23 Nov 2009; Denis Dupeyron <calchan@gentoo.org> geda-1.6.0-r1.ebuild:
+  Fixed blockers, bug #294291.
 
   18 Nov 2009; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Updated metadata, thanks to Stefan Salewski.
