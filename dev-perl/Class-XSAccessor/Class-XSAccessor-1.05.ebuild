@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-XSAccessor/Class-XSAccessor-1.05.ebuild,v 1.1 2009/11/22 10:48:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-XSAccessor/Class-XSAccessor-1.05.ebuild,v 1.2 2009/11/23 17:42:05 tove Exp $
 
 EAPI=2
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-perl/AutoXS-Header-1.01"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!dev-perl/Class-XSAccessor-Array"
 
 SRC_TEST=do
