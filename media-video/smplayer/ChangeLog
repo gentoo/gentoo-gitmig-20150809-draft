@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.76 2009/10/26 19:34:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.77 2009/11/23 14:34:49 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> smplayer-0.6.8.ebuild:
+  amd64/x86 stable, bug #291025
 
   26 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> smplayer-0.6.8.ebuild:
   Remove media-video/mplayer[-openal] depend wrt #290304.
