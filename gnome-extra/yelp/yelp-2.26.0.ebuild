@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.26.0.ebuild,v 1.7 2009/11/05 20:03:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.26.0.ebuild,v 1.8 2009/11/23 14:57:46 armin76 Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 -sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="beagle lzma"
 
 RDEPEND=">=gnome-base/gconf-2
