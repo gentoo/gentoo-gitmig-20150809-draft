@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.6.0.ebuild,v 1.1 2009/10/06 21:38:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.6.0.ebuild,v 1.2 2009/11/23 10:26:14 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib libtool
@@ -61,11 +61,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-4.0.6-db4-configure.in.patch
 	fi
 
-	AT_NO_RECURSIVE="true" eautoreconf || die "root eautoreconf failed"
-	cd "${S}"/maildir
-	eautoreconf || die "maildir eautoreconf failed"
-	cd "${S}"/bdbobj
-	eautoreconf || die "bdobj eautoreconf failed"
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_configure() {

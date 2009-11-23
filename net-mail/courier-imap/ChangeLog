@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.180 2009/11/08 17:04:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.181 2009/11/23 10:26:14 voyageur Exp $
+
+  23 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -courier-imap-3.0.8.ebuild, -courier-imap-4.0.6-r2.ebuild,
+  -courier-imap-4.1.2-r1.ebuild, -courier-imap-4.1.2-r2.ebuild,
+  -courier-imap-4.4.1.ebuild, -courier-imap-4.4.1-r1.ebuild,
+  courier-imap-4.6.0.ebuild:
+  Make eautoreconf recursive again, fixes libtool issue in bug #293971. Also
+  drop some versions
 
   08 Nov 2009; Raúl Porcel <armin76@gentoo.org> courier-imap-4.5.0.ebuild:
   ia64/s390/sparc stable wrt #287933
