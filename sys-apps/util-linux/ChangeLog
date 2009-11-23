@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.285 2009/11/09 12:29:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.286 2009/11/23 20:41:44 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> util-linux-2.16.1.ebuild:
+  arm stable, bug #284744
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   util-linux-2.16.1.ebuild:
