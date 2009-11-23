@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.68 2009/10/15 20:07:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.69 2009/11/23 13:25:40 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> mime-types-8.ebuild:
+  amd64/arm/x86 stable, bug #293895
 
 *mime-types-8 (15 Oct 2009)
 
