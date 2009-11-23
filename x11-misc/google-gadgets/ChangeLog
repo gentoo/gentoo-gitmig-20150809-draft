@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.27 2009/09/09 20:35:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.28 2009/11/23 14:04:34 voyageur Exp $
+
+*google-gadgets-0.11.1-r1 (23 Nov 2009)
+
+  23 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/google-gadgets-0.10.0-xulrunner-1.9.patch,
+  -files/google-gadgets-0.10.4-gcc41.patch,
+  -files/google-gadgets-0.10.4-xulrunner-1.9.1.patch,
+  -google-gadgets-0.10.5.ebuild, -google-gadgets-0.11.0.ebuild,
+  -google-gadgets-0.11.1.ebuild, +google-gadgets-0.11.1-r1.ebuild:
+  Add gtk+-2.18 support, reported by Alexandre Rostovtsev
+  <tetromino@gmail.com> in bug #294124
 
 *google-gadgets-0.11.1 (09 Sep 2009)
 

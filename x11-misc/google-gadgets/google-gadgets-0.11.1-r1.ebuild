@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.0.ebuild,v 1.2 2009/06/02 08:08:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.1-r1.ebuild,v 1.1 2009/11/23 14:04:34 voyageur Exp $
 
 EAPI=2
 
@@ -11,13 +11,13 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Cool gadgets from Google for your Desktop"
 HOMEPAGE="http://code.google.com/p/google-gadgets-for-linux/"
-SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2"
+SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2
+	mirror://gentoo/${P}-gtk+-2.18.patch.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
-IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification
-webkit +xulrunner"
+IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification webkit +xulrunner"
 
 # Weird things happen when we start mix-n-matching, so for the time being
 # I've just locked the deps to the versions I had as of Summer 2008. With any
@@ -82,6 +82,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${DISTDIR}"/${P}-gtk+-2.18.patch.bz2
+
 	sed -i -r \
 		-e '/^GGL_SYSDEPS_INCLUDE_DIR/ c\GGL_SYSDEPS_INCLUDE_DIR=$GGL_INCLUDE_DIR' \
 		configure.ac||die "404"
