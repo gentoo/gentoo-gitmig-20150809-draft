@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.3.0.ebuild,v 1.1 2009/11/21 20:08:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.3.0.ebuild,v 1.2 2009/11/23 02:01:13 bicatali Exp $
 
 EAPI="2"
 
@@ -44,8 +44,8 @@ src_configure() {
 	mycmakeargs="${mycmakeargs}
 		-D BUILD_SHARED_LIBS:BOOL=ON
 		-D BINDINGS_GLOBAL_INSTALL:BOOL=ON
-		-D QGIS_LIB_SUBDIR=/usr/$(get_libdir)
-		-D QGIS_PLUGIN_SUBDIR=/usr/$(get_libdir)/qgis
+		-D QGIS_LIB_SUBDIR=$(get_libdir)
+		-D QGIS_PLUGIN_SUBDIR=$(get_libdir)/qgis
 		$(cmake-utils_use_with postgres POSTGRESQL)
 		$(cmake-utils_use_with grass GRASS)
 		$(cmake-utils_use_with gps EXPAT)
