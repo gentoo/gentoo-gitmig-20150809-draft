@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.43 2009/11/11 00:01:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.44 2009/11/23 01:43:59 arfrever Exp $
+
+  23 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nose-0.11.1.ebuild, +files/nose-0.11.1-python-2.7.patch:
+  Fix building with Python 2.7 (bug #292404).
 
   10 Nov 2009; Brent Baude <ranger@gentoo.org> nose-0.11.1.ebuild:
   Marking nose-0.11.1 ppc64 for bug 284978

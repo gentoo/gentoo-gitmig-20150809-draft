@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.1.ebuild,v 1.11 2009/11/11 00:01:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.1.ebuild,v 1.12 2009/11/23 01:43:59 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,9 +27,10 @@ src_prepare() {
 	distutils_src_prepare
 
 	# Disable tests and doc features that access the network
-	epatch \
-		"${FILESDIR}/${PN}-0.10.0-tests-nonetwork.patch" \
-		"${FILESDIR}/${PN}-0.11.0-disable_intersphinx.patch"
+	epatch "${FILESDIR}/${PN}-0.10.0-tests-nonetwork.patch"
+	epatch "${FILESDIR}/${PN}-0.11.0-disable_intersphinx.patch"
+
+	epatch "${FILESDIR}/${P}-python-2.7.patch"
 }
 
 src_compile() {

@@ -1,0 +1,503 @@
+https://bugs.gentoo.org/show_bug.cgi?id=292404
+http://code.google.com/p/python-nose/issues/detail?id=305
+https://bitbucket.org/jpellerin/nose/changeset/92a11c73d7a3/
+https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
+
+--- functional_tests/doc_tests/test_init_plugin/init_plugin.rst
++++ functional_tests/doc_tests/test_init_plugin/init_plugin.rst
+@@ -32,6 +32,9 @@
+     ...     def test_likes_cheese(self):
+     ...         """Widgets might like cheese"""
+     ...         self.widget.likes_cheese()
++    ...     def shortDescription(self): # 2.7 compat
++    ...         doc = self._testMethodDoc
++    ...         return doc and doc.split("\n")[0].strip() or None
+ 
+ The tests are bundled into a suite that we can pass to the test runner.
+ 
+--- functional_tests/test_buggy_generators.py
++++ functional_tests/test_buggy_generators.py
+@@ -3,6 +3,7 @@
+ from cStringIO import StringIO
+ from nose.core import TestProgram
+ from nose.config import Config
++from nose.result import _TextTestResult
+ 
+ here = os.path.dirname(__file__)
+ support = os.path.join(here, 'support')
+@@ -10,7 +11,7 @@
+ 
+ class TestRunner(unittest.TextTestRunner):
+     def _makeResult(self):
+-        self.result = unittest._TextTestResult(
++        self.result = _TextTestResult(
+             self.stream, self.descriptions, self.verbosity)
+         return self.result
+ 
+--- functional_tests/test_collector.py
++++ functional_tests/test_collector.py
+@@ -3,13 +3,14 @@
+ import unittest
+ import warnings
+ from cStringIO import StringIO
++from nose.result import _TextTestResult
+ here = os.path.dirname(__file__)
+ support = os.path.join(here, 'support')
+ 
+ 
+ class TestRunner(unittest.TextTestRunner):
+     def _makeResult(self):
+-        self.result = unittest._TextTestResult(
++        self.result = _TextTestResult(
+             self.stream, self.descriptions, self.verbosity)
+         return self.result
+     
+--- functional_tests/test_loader.py
++++ functional_tests/test_loader.py
+@@ -9,6 +9,12 @@
+ from nose.plugins.skip import Skip
+ from nose import loader
+ from nose import suite
++from nose.result import _TextTestResult
++try:
++    # 2.7+
++    from unittest.runner import _WritelnDecorator
++except ImportError:
++    from unittest import _WritelnDecorator
+ 
+ support = os.path.abspath(os.path.join(os.path.dirname(__file__), 'support'))
+ 
+@@ -225,8 +231,8 @@
+         self.assertEqual(m.state, expect, diff(expect, m.state))
+ 
+     def test_fixture_context_multiple_names_some_common_ancestors(self):
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, 2)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, 2)
+         wd = os.path.join(support, 'ltfn')
+         l = loader.TestLoader(workingDir=wd)
+         suite = l.loadTestsFromNames(
+@@ -256,8 +262,8 @@
+         self.assertEqual(m.called, expect, diff(expect, m.called))
+ 
+     def test_fixture_context_multiple_names_no_common_ancestors(self):
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, 2)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, 2)
+         wd = os.path.join(support, 'ltfn')
+         l = loader.TestLoader(workingDir=wd)
+         suite = l.loadTestsFromNames(
+@@ -336,8 +342,8 @@
+         l = loader.TestLoader(workingDir=ctx)
+         suite = l.loadTestsFromName('no_such_module.py')
+ 
+-        res = unittest._TextTestResult(
+-            stream=unittest._WritelnDecorator(sys.stdout),
++        res = _TextTestResult(
++            stream=_WritelnDecorator(sys.stdout),
+             descriptions=0, verbosity=1)
+         suite(res)
+ 
+@@ -353,8 +359,8 @@
+         l = loader.TestLoader(workingDir=ctx)
+         suite = l.loadTestsFromName('no_such_module')
+ 
+-        res = unittest._TextTestResult(
+-            stream=unittest._WritelnDecorator(sys.stdout),
++        res = _TextTestResult(
++            stream=_WritelnDecorator(sys.stdout),
+             descriptions=0, verbosity=1)
+         suite(res)
+         print res.errors
+@@ -370,8 +376,8 @@
+         l = loader.TestLoader(workingDir=ctx)
+         suite = l.loadTestsFromName('fred!')
+ 
+-        res = unittest._TextTestResult(
+-            stream=unittest._WritelnDecorator(sys.stdout),
++        res = _TextTestResult(
++            stream=_WritelnDecorator(sys.stdout),
+             descriptions=0, verbosity=1)
+         suite(res)
+         print res.errors
+@@ -388,8 +394,8 @@
+         gen = os.path.join(support, 'gen')
+         l = loader.TestLoader(workingDir=gen)
+         suite = l.loadTestsFromName('test')
+-        res = unittest._TextTestResult(
+-            stream=unittest._WritelnDecorator(sys.stdout),
++        res = _TextTestResult(
++            stream=_WritelnDecorator(sys.stdout),
+             descriptions=0, verbosity=1)
+         suite(res)
+         assert not res.errors
+--- functional_tests/test_program.py
++++ functional_tests/test_program.py
+@@ -5,13 +5,14 @@
+ from nose.core import TestProgram
+ from nose.config import Config
+ from nose.plugins.manager import DefaultPluginManager
++from nose.result import _TextTestResult
+ 
+ here = os.path.dirname(__file__)
+ support = os.path.join(here, 'support')
+ 
+ class TestRunner(unittest.TextTestRunner):
+     def _makeResult(self):
+-        self.result = unittest._TextTestResult(
++        self.result = _TextTestResult(
+             self.stream, self.descriptions, self.verbosity)
+         return self.result 
+ 
+--- nose/case.py
++++ nose/case.py
+@@ -20,7 +20,7 @@
+ 
+     When a plugin sees a test, it will always see an instance of this
+     class. To access the actual test case that will be run, access the
+-    test property of the nose.case.Test instance.    
++    test property of the nose.case.Test instance.
+     """
+     __test__ = False # do not collect
+     def __init__(self, test, config=None, resultProxy=None):
+@@ -148,27 +148,24 @@
+         if plug_test is not None:
+             test = plug_test
+         test(result)
+-        
++
+     def shortDescription(self):
+         desc = self.plugins.describeTest(self)
+         if desc is not None:
+             return desc
+-        doc = self.test.shortDescription()
+-        if doc is not None:
+-            return doc
+         # work around bug in unittest.TestCase.shortDescription
+         # with multiline docstrings.
+         test = self.test
+         try:
+-            doc = test._testMethodDoc # 2.5
++            test._testMethodDoc = test._testMethodDoc.strip()# 2.5
+         except AttributeError:
+             try:
+-                doc = test._TestCase__testMethodDoc # 2.4 and earlier
++                # 2.4 and earlier
++                test._TestCase__testMethodDoc = \
++                    test._TestCase__testMethodDoc.strip()
+             except AttributeError:
+                 pass
+-        if doc is not None:
+-            doc = doc.strip().split("\n")[0].strip()
+-        return doc
++        return self.test.shortDescription()
+ 
+ 
+ class TestBase(unittest.TestCase):
+--- nose/core.py
++++ nose/core.py
+@@ -108,9 +108,13 @@
+         self.config = config
+         self.suite = suite
+         self.exit = exit
++        extra_args = {}
++        if sys.version_info[0:2] >= (2,7):
++            extra_args['exit'] = exit
+         unittest.TestProgram.__init__(
+             self, module=module, defaultTest=defaultTest,
+-            argv=argv, testRunner=testRunner, testLoader=testLoader)
++            argv=argv, testRunner=testRunner, testLoader=testLoader,
++            **extra_args)
+ 
+     def makeConfig(self, env, plugins=None):
+         """Load a Config, pre-filled with user config files if any are
+--- nose/plugins/errorclass.py
++++ nose/plugins/errorclass.py
+@@ -37,7 +37,13 @@
+ 
+     >>> import sys
+     >>> import unittest
+-    >>> buf = unittest._WritelnDecorator(sys.stdout)
++    >>> try:
++    ...     # 2.7+
++    ...     from unittest.runner import _WritelnDecorator
++    ... except ImportError:
++    ...     from unittest import _WritelnDecorator
++    ... 
++    >>> buf = _WritelnDecorator(sys.stdout)
+ 
+ Now define a test case that raises a Todo.
+ 
+@@ -53,8 +59,8 @@
+ each step.
+ 
+     >>> plugin = TodoError()
+-    >>> result = unittest._TextTestResult(stream=buf,
+-    ...                                   descriptions=0, verbosity=2)
++    >>> from nose.result import _TextTestResult
++    >>> result = _TextTestResult(stream=buf, descriptions=0, verbosity=2)
+     >>> plugin.prepareTestResult(result)
+ 
+ Now run the test. TODO is printed.
+--- nose/plugins/multiprocess.py
++++ nose/plugins/multiprocess.py
+@@ -95,6 +95,11 @@
+ from nose.result import TextTestResult
+ from nose.suite import ContextSuite
+ from nose.util import test_address
++try:
++    # 2.7+
++    from unittest.runner import _WritelnDecorator
++except ImportError:
++    from unittest import _WritelnDecorator
+ from Queue import Empty
+ from warnings import warn
+ try:
+@@ -456,7 +461,7 @@
+         return case
+ 
+     def makeResult():
+-        stream = unittest._WritelnDecorator(StringIO())
++        stream = _WritelnDecorator(StringIO())
+         result = resultClass(stream, descriptions=1,
+                              verbosity=config.verbosity,
+                              config=config)
+--- nose/plugins/plugintest.py
++++ nose/plugins/plugintest.py
+@@ -164,7 +164,7 @@
+             ...         raise ValueError("Now do something, plugin!")
+             ... 
+             >>> unittest.TestSuite([SomeTest()]) # doctest: +ELLIPSIS
+-            <unittest.TestSuite tests=[<...SomeTest testMethod=runTest>]>
++            <unittest...TestSuite tests=[<...SomeTest testMethod=runTest>]>
+         
+         """
+         raise NotImplementedError
+--- nose/result.py
++++ nose/result.py
+@@ -2,14 +2,18 @@
+ Test Result
+ -----------
+ 
+-Provides a TextTestResult that extends unittest._TextTestResult to
++Provides a TextTestResult that extends unittest's _TextTestResult to
+ provide support for error classes (such as the builtin skip and
+ deprecated classes), and hooks for plugins to take over or extend
+ reporting.
+ """
+ 
+ import logging
+-from unittest import _TextTestResult
++try:
++    # 2.7+
++    from unittest.runner import _TextTestResult
++except ImportError:
++    from unittest import _TextTestResult
+ from nose.config import Config
+ from nose.util import isclass, ln as _ln # backwards compat
+ 
+--- nose/suite.py
++++ nose/suite.py
+@@ -29,6 +29,9 @@
+ _def = object()
+ 
+ 
++def _strclass(cls):
++    return "%s.%s" % (cls.__module__, cls.__name__)
++
+ class MixedContextError(Exception):
+     """Error raised when a context suite sees tests from more than
+     one context.
+@@ -49,7 +52,7 @@
+         
+     def __repr__(self):
+         return "<%s tests=generator (%s)>" % (
+-            unittest._strclass(self.__class__), id(self))
++            _strclass(self.__class__), id(self))
+ 
+     def __hash__(self):
+         return object.__hash__(self)
+@@ -142,7 +145,7 @@
+ 
+     def __repr__(self):
+         return "<%s context=%s>" % (
+-            unittest._strclass(self.__class__),
++            _strclass(self.__class__),
+             getattr(self.context, '__name__', self.context))
+     __str__ = __repr__
+ 
+--- nose/util.py
++++ nose/util.py
+@@ -439,9 +439,13 @@
+                 "%s.%s" % (cls_adr[2], test.__name__))
+     # handle unittest.TestCase instances
+     if isinstance(test, unittest.TestCase):
+-        if hasattr(test, '_FunctionTestCase__testFunc'):
++        if (hasattr(test, '_FunctionTestCase__testFunc') # pre 2.7
++            or hasattr(test, '_testFunc')):              # 2.7
+             # unittest FunctionTestCase
+-            return test_address(test._FunctionTestCase__testFunc)
++            try:
++                return test_address(test._FunctionTestCase__testFunc)
++            except AttributeError:
++                return test_address(test._testFunc)
+         # regular unittest.TestCase
+         cls_adr = test_address(test.__class__)
+         # 2.5 compat: __testMethodName changed to _testMethodName
+--- unit_tests/test_cases.py
++++ unit_tests/test_cases.py
+@@ -243,9 +243,10 @@
+         case_b = nose.case.Test(TC('test_b'))
+         case_c = nose.case.Test(TC('test_c'))
+ 
+-        self.assertEqual(case_a.shortDescription(), "This is the description")
+-        self.assertEqual(case_b.shortDescription(), "This is the description")
+-        self.assertEqual(case_c.shortDescription(), None)
+-        
++        assert case_a.shortDescription().endswith("This is the description")
++        assert case_b.shortDescription().endswith("This is the description")
++        assert case_c.shortDescription() in (None, # pre 2.7
++                                             'test_c (test_cases.TC)') # 2.7
++
+ if __name__ == '__main__':
+     unittest.main()
+--- unit_tests/test_deprecated_plugin.py
++++ unit_tests/test_deprecated_plugin.py
+@@ -1,9 +1,14 @@
+ import unittest
+ from nose.config import Config
+ from nose.plugins.deprecated import Deprecated, DeprecatedTest
+-from nose.result import TextTestResult
++from nose.result import TextTestResult, _TextTestResult
+ from StringIO import StringIO
+ from optparse import OptionParser
++try:
++    # 2.7+
++    from unittest.runner import _WritelnDecorator
++except ImportError:
++    from unittest import _WritelnDecorator
+ 
+ 
+ class TestDeprecatedPlugin(unittest.TestCase):
+@@ -15,8 +20,8 @@
+         sk.prepareTestResult        
+ 
+     def test_prepare_patches_result(self):
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, 1)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, 1)
+         sk = Deprecated()
+         sk.prepareTestResult(res)
+         res._orig_addError
+@@ -69,8 +74,8 @@
+             def test(self):
+                 raise DeprecatedTest('deprecated me')
+ 
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, 1)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, 1)
+         sk = Deprecated()
+         sk.prepareTestResult(res)
+ 
+@@ -91,8 +96,8 @@
+             def test(self):
+                 raise DeprecatedTest('deprecated me too')
+         
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, verbosity=2)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, verbosity=2)
+         sk = Deprecated()
+         sk.prepareTestResult(res)
+         test = TC('test')
+--- unit_tests/test_skip_plugin.py
++++ unit_tests/test_skip_plugin.py
+@@ -3,7 +3,13 @@
+ from nose.plugins.skip import Skip, SkipTest
+ from nose.result import TextTestResult
+ from StringIO import StringIO
++from nose.result import _TextTestResult
+ from optparse import OptionParser
++try:
++    # 2.7+
++    from unittest.runner import _WritelnDecorator
++except ImportError:
++    from unittest import _WritelnDecorator
+ 
+ 
+ class TestSkipPlugin(unittest.TestCase):
+@@ -15,8 +21,8 @@
+         sk.prepareTestResult        
+ 
+     def test_prepare_patches_result(self):
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, 1)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, 1)
+         sk = Skip()
+         sk.prepareTestResult(res)
+         res._orig_addError
+@@ -67,8 +73,8 @@
+             def test(self):
+                 raise SkipTest('skip me')
+ 
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, 1)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, 1)
+         sk = Skip()
+         sk.prepareTestResult(res)
+ 
+@@ -89,8 +95,8 @@
+             def test(self):
+                 raise SkipTest('skip me too')
+         
+-        stream = unittest._WritelnDecorator(StringIO())
+-        res = unittest._TextTestResult(stream, 0, verbosity=2)
++        stream = _WritelnDecorator(StringIO())
++        res = _TextTestResult(stream, 0, verbosity=2)
+         sk = Skip()
+         sk.prepareTestResult(res)
+         test = TC('test')
+--- unit_tests/test_utils.py
++++ unit_tests/test_utils.py
+@@ -51,7 +51,7 @@
+             pass
+         else:
+             self.fail("Nonsense test name should throw ValueError")
+-        
++
+     def test_test_address(self):
+         # test addresses are specified as
+         #     package.module:class.method
+@@ -73,7 +73,7 @@
+                 pass
+             def test_two(self):
+                 pass
+-        
++
+         class CustomTestType(type):
+             pass
+         class CustomTC(unittest.TestCase):
+@@ -82,7 +82,7 @@
+                 pass
+             def test_two(self):
+                 pass
+-        
++
+         foo_funct = case.FunctionTestCase(baz)
+         foo_functu = unittest.FunctionTestCase(baz)
+ 
+@@ -111,7 +111,7 @@
+                          (me, __name__, 'baz'))
+         self.assertEqual(test_address(foo_mtc),
+                          (me, __name__, 'Foo.bar'))
+-    
++
+     def test_isclass_detects_classes(self):
+         class TC(unittest.TestCase):
+             pass
