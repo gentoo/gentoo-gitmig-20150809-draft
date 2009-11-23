@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.14 2009/04/16 17:39:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.15 2009/11/23 01:57:11 bicatali Exp $
+
+  23 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  liborigin-20080225-r1.ebuild, liborigin-20090406.ebuild:
+  Removed ppc64, wrongly keyworded (dev-cpp/tree was not)
+
+  23 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  liborigin-20090406.ebuild:
+  Removed Qt libraries from run time dependencies. Unfortunately compiling
+  still need them until upstream change the build system
 
 *liborigin-20080225-r1 (16 Apr 2009)
 
