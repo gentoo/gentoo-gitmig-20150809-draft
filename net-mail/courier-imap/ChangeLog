@@ -1,6 +1,38 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.181 2009/11/23 10:26:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.182 2009/11/23 10:40:24 voyageur Exp $
+
+  23 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/gentoo-pop3d-1.7.3-r1.rc, -files/gentoo-pop3d-ssl-1.7.3-r1.rc,
+  -files/authdaemond-3.0.4-r1, -files/authdaemond.conf-3.0.4-r1,
+  -files/courier-imapd-ssl.rc6-3.0.5, -files/courier-pop3d-ssl.rc6-3.0.5,
+  -files/courier-imap-3.0.8-db4-bdbobj_configure.in.patch,
+  -files/courier-imap-3.0.8-db4-configure.in.patch,
+  -files/courier-imap-3.0.8-disable-fam-configure.in.patch,
+  -files/courier-imap-4.0.1-courier-imapd.rc6,
+  -files/courier-imap-4.0.1-courier-imapd-ssl.rc6,
+  -files/courier-imap-4.0.1-courier-pop3d.rc6,
+  -files/courier-imap-4.0.1-courier-pop3d-ssl.rc6,
+  -files/courier-imap-4.0.1-db4-bdbobj_configure.in.patch,
+  -files/courier-imap-4.0.1-db4-configure.in.patch,
+  -files/courier-imap-4.0.1-gentoo-imapd.rc,
+  -files/courier-imap-4.0.1-gentoo-imapd-ssl.rc,
+  -files/courier-imap-4.0.1-gentoo-pop3d.rc,
+  -files/courier-imap-4.0.1-gentoo-pop3d-ssl.rc,
+  -files/courier-imap-4.0.1-r1-courier-imapd.indirect,
+  -files/courier-imap-4.0.1-r1-courier-pop3d.indirect,
+  -files/courier-imap-4.0.1-r1-gentoo-imapd.rc,
+  -files/courier-imap-4.0.1-r1-gentoo-imapd-ssl.rc,
+  -files/courier-imap-4.0.1-r1-gentoo-pop3d.rc,
+  -files/courier-imap-4.0.1-r1-gentoo-pop3d-ssl.rc,
+  -files/courier-imap-4.0.4-courier-imapd.rc6,
+  -files/courier-imap-4.0.4-courier-imapd-ssl.rc6,
+  -files/courier-imap-4.0.4-courier-pop3d.rc6,
+  -files/courier-imap-4.0.4-courier-pop3d-ssl.rc6,
+  -files/courier-imap-4.1.2-as-needed.patch, -files/courier-imapd.rc6,
+  -files/courier-pop3d.rc6, -files/gentoo-imapd-1.7.3-r1.rc,
+  -files/gentoo-imapd-ssl-1.7.3-r1.rc:
+  And also clean files dir
 
   23 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   -courier-imap-3.0.8.ebuild, -courier-imap-4.0.6-r2.ebuild,
