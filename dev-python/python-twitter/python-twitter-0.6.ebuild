@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.6.ebuild,v 1.3 2009/10/30 20:39:54 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.6.ebuild,v 1.4 2009/11/23 02:30:15 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -11,15 +14,37 @@ SRC_URI="http://python-twitter.googlecode.com/files/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="examples"
 
 RDEPEND="dev-python/simplejson"
+DEPEND="${RDEPEND}
+	dev-python/setuptools"
+RESTRICT_PYTHON_ABIS="3.*"
 
-pkg_postinst() {
-	python_version
-	python_mod_optimize $(python_get_sitedir)/python_twitter-${PV}-py${PYVER}.egg/
+DOCS="CHANGES README"
+PYTHON_MODNAME="twitter.py"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# Delete internal copy of simplejson.
+	rm -fr simplejson
 }
 
-pkg_postrm() {
-	python_mod_cleanup
+src_test() {
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" twitter_test.py
+	}
+	python_execute_function testing
+}
+
+src_install() {
+	distutils_src_install
+
+	dohtml doc/twitter.html
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins examples/*
+	fi
 }
