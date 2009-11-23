@@ -11,6 +11,8 @@
 		<name>Michael Marineau</name>
 	</maintainer>
 	<use>
+		<flag name='udev'>Use <pkg>sys-fs/udev</pkg> to determine available
+			devices</flag>
 		<flag name='iscsi'>Add support for iSCSI (Internet SCSI) remote
 			storage</flag>
 		<flag name='kvm'>Add support for <pkg>app-emulation/kvm</pkg> based

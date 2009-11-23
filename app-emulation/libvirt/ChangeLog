@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.39 2009/11/23 00:15:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.40 2009/11/23 01:52:33 cardoe Exp $
+
+*libvirt-0.7.4 (23 Nov 2009)
+
+  23 Nov 2009; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.7.4.ebuild:
+  version bump. switch to udev over hal for device info
 
   23 Nov 2009; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.6.3-r3.ebuild,
   -libvirt-0.6.4-r1.ebuild, -libvirt-0.6.5.ebuild, -libvirt-0.6.5-r1.ebuild,
