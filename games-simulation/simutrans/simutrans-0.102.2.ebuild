@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.102.2.ebuild,v 1.2 2009/11/05 08:15:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.102.2.ebuild,v 1.3 2009/11/23 03:11:25 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit flag-o-matic eutils games
 
 MY_PV=${PV/0./}
 MY_PV=${MY_PV/./-}
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}
 
 src_prepare() {
+	strip-flags # bug #293927
 	echo "BACKEND=mixer_sdl
 COLOUR_DEPTH=16
 OSTYPE=linux
