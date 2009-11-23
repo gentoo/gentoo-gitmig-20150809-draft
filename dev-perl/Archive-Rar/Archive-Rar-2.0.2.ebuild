@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/Archive-Rar-2.0.2.ebuild,v 1.2 2009/01/20 14:15:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/Archive-Rar-2.0.2.ebuild,v 1.3 2009/11/23 15:36:58 tove Exp $
 
 inherit versionator
 MODULE_AUTHOR=SMUELLER
@@ -18,6 +18,7 @@ IUSE="test"
 
 RDEPEND="dev-lang/perl
 	virtual/perl-IPC-Cmd
+	dev-perl/IPC-Run
 	app-arch/rar"
 DEPEND="${RDEPEND}
 	test? ( dev-perl/Test-Pod )"
