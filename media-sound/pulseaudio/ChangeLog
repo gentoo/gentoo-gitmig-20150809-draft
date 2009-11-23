@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.174 2009/11/15 19:05:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.175 2009/11/23 12:27:28 flameeyes Exp $
+
+*pulseaudio-0.9.21-r50 (23 Nov 2009)
+*pulseaudio-0.9.21 (23 Nov 2009)
+
+  23 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pulseaudio-0.9.19-r1.ebuild, -pulseaudio-0.9.19-r51.ebuild,
+  -pulseaudio-0.9.20.ebuild, -pulseaudio-0.9.20-r50.ebuild,
+  +pulseaudio-0.9.21.ebuild, +pulseaudio-0.9.21-r50.ebuild:
+  Version bump, remove the xinitrc symlink (bug #291497), should also fix
+  bug #293472.
 
 *pulseaudio-0.9.20-r50 (15 Nov 2009)
 *pulseaudio-0.9.20 (15 Nov 2009)
