@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.5 2009/11/09 09:16:32 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.6 2009/11/23 15:34:50 dagger Exp $
+
+*modemmanager-0.2_p20091123 (23 Nov 2009)
+
+  23 Nov 2009; Robert Piasek <dagger@gentoo.org>
+  -modemmanager-0.2_p20090925.ebuild, +modemmanager-0.2_p20091123.ebuild:
+  New snapshot of modemmanager. Contains fixes for PPC. Special thanks to
+  papillon81 for helping to hunt this the problem down.
 
 *modemmanager-0.2_p20091109 (09 Nov 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.2_p20090925.ebuild,v 1.2 2009/09/28 14:33:05 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.2_p20091123.ebuild,v 1.1 2009/11/23 15:34:50 dagger Exp $
 
 EAPI=2
 
