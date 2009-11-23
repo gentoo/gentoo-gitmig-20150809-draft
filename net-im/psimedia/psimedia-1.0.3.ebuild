@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3.ebuild,v 1.5 2009/11/21 18:07:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3.ebuild,v 1.6 2009/11/23 21:19:24 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://delta.affinix.com/download/psimedia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~x86"
+KEYWORDS="amd64 ~hppa ppc x86"
 IUSE="demo"
 
 DEPEND=">=dev-libs/glib-2.18
