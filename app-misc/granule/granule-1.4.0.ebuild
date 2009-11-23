@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/granule-1.4.0.ebuild,v 1.2 2009/09/22 18:38:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/granule-1.4.0.ebuild,v 1.3 2009/11/23 13:31:47 maekke Exp $
 
 DESCRIPTION="A flashcard program that implements Leitner cardfile methodology"
 HOMEPAGE="http://granule.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-7.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-cpp/gtkmm-2.4.1
