@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871-r1.ebuild,v 1.3 2009/11/19 18:15:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871-r1.ebuild,v 1.4 2009/11/23 13:19:59 maekke Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic
@@ -11,7 +11,7 @@ MY_PV="${PN}-$(replace_version_separator 2 "-" $MY_PV)"
 SRC_URI="http://www.open-iscsi.org/bits/${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~arm ~amd64 ~ppc ~mips"
+KEYWORDS="amd64 ~arm ~mips ~ppc x86"
 IUSE="debug"
 DEPEND=""
 RDEPEND="${DEPEND}
