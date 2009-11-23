@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.20.ebuild,v 1.1 2009/03/18 16:19:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.22.ebuild,v 1.1 2009/11/23 07:15:40 bicatali Exp $
 
 EAPI=2
-inherit fortran versionator autotools
+inherit versionator autotools
 
 MV=$(get_major_version)
 MY_PN=${PN}${MV}
@@ -14,7 +14,7 @@ DESCRIPTION="Lund Monte Carlo high-energy physics event generator"
 HOMEPAGE="http://projects.hepforge.org/pythia6/"
 
 # pythia6 from root is needed for some files to interface pythia6 with root.
-# To produce a split version on mirror do:
+# To produce a split version on mirror do, replace the 6.4.19 by the current version
 # svn export http://svn.hepforge.org/pythia6/tags/v_6_4_19/ pythia-6.4.19
 # tar cjf pythia-6.4.19.tar.bz2
 SRC_URI="mirror://gentoo/${P}.tar.bz2
