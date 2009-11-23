@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.1 2009/10/20 08:55:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.2 2009/11/23 01:24:20 arfrever Exp $
+
+  23 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dulwich-0.4.0.ebuild:
+  Add src_test().
 
 *dulwich-0.4.0 (20 Oct 2009)
 
