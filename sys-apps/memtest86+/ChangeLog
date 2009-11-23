@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.55 2009/11/22 16:49:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.56 2009/11/23 23:37:04 spock Exp $
+
+  23 Nov 2009; Michał Januszewski <spock@gentoo.org>
+  memtest86+-4.00.ebuild:
+  Install the ELF binary along with the Linux kernel one (bug #291729).
 
   22 Nov 2009; Michał Januszewski <spock@gentoo.org>
   memtest86+-4.00.ebuild:
