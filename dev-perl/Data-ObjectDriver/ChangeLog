@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-ObjectDriver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/ChangeLog,v 1.3 2009/10/27 09:09:22 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/ChangeLog,v 1.4 2009/11/23 17:38:28 tove Exp $
+
+  23 Nov 2009; Torsten Veller <tove@gentoo.org>
+  Data-ObjectDriver-0.06.ebuild:
+  Depend on Module-Build (#294231) and remove Test-Exception
 
   27 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
   Data-ObjectDriver-0.06.ebuild:
