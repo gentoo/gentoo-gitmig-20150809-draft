@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnono
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/ChangeLog,v 1.13 2009/11/03 05:36:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/ChangeLog,v 1.14 2009/11/23 14:32:31 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> gnono-1.9.1.ebuild:
+  amd64/x86 stable, bug #294145
 
   03 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
   files/gnono-1.9.1-gentoo.patch:
