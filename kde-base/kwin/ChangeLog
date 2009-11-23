@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.171 2009/11/19 23:13:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.172 2009/11/23 19:45:34 scarabeus Exp $
+
+*kwin-4.3.3-r1 (23 Nov 2009)
+
+  23 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.3.3-fix_no_opengl.patch, -kwin-4.3.3.ebuild,
+  +kwin-4.3.3-r1.ebuild:
+  Revision bump to fix -opengl build. Thanks to Bartosz Brachaczek for the
+  patch.
 
   19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> -kwin-3.5.10.ebuild:
   Remove KDE 3.5.10.

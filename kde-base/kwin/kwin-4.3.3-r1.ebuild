@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.3.ebuild,v 1.1 2009/11/02 21:54:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.3-r1.ebuild,v 1.1 2009/11/23 19:45:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -32,6 +32,10 @@ DEPEND="${COMMONDEPEND}
 "
 RDEPEND="${COMMONDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PV}-fix_no_opengl.patch"
+)
+
 src_prepare() {
 # NOTE uncomment when enabled again by upstream
 #	if ! use captury; then
@@ -39,12 +43,6 @@ src_prepare() {
 #			-i kwin/effects/CMakeLists.txt || \
 #			die "Making captury optional failed."
 #	fi
-	# Dirty hax to fix building without OpenGL
-	if ! use opengl; then
-		sed -e 's|^[[:space:]]*windowOpacity.*|// commented out &|' \
-			-i kwin/effects/logout/logout.cpp || \
-			die "Commenting out windowOpacity failed."
-	fi
 
 	kde4-meta_src_prepare
 }
