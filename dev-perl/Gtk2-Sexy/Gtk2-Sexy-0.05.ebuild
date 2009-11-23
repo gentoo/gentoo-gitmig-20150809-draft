@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Sexy/Gtk2-Sexy-0.05.ebuild,v 1.1 2008/12/23 18:56:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Sexy/Gtk2-Sexy-0.05.ebuild,v 1.2 2009/11/23 21:27:40 tove Exp $
 
 MODULE_AUTHOR=FLORA
 inherit perl-module
@@ -16,4 +16,6 @@ RDEPEND="dev-perl/gtk2-perl
 	x11-libs/libsexy
 	dev-lang/perl"
 DEPEND="${RDEPEND}
+	dev-perl/extutils-depends
+	dev-perl/extutils-pkgconfig
 	dev-util/pkgconfig"
