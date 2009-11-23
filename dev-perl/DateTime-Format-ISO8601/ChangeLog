@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-ISO8601
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.1 2008/12/09 08:53:25 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.2 2009/11/23 18:49:13 tove Exp $
+
+  23 Nov 2009; Torsten Veller <tove@gentoo.org>
+  DateTime-Format-ISO8601-0.06.ebuild:
+  Depend on Module-Build (#294247). Run tests
 
 *DateTime-Format-ISO8601-0.06 (09 Dec 2008)
 
