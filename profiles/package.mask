@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10871 2009/11/22 21:13:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10872 2009/11/23 00:17:32 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (22 Nov 2009)
+# masking until this package can follow the actual
+# kvm-kmod upstream package
+app-emulation/kvm-kmod
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (22 Nov 2009)
 # KOffice 2.1.0 Masked until the release
