@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5031 2009/11/22 23:47:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5032 2009/11/23 00:13:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -242,16 +242,6 @@ app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/ganeti:drbd - Enable DRBD support
 app-emulation/ganeti:kvm - Enable KVM support
 app-emulation/ganeti:xen - Enable Xen support
-app-emulation/kvm:alsa - Enable alsa output for sound emulation
-app-emulation/kvm:esd - Enable esound output for sound emulation
-app-emulation/kvm:gnutls - Enable TLS support for the VNC console server
-app-emulation/kvm:havekernel - Don't require a kernel build tree (useful if using a binary distrbuted kernel aka binary packages)
-app-emulation/kvm:modules - Build the kernel modules from the kvm package
-app-emulation/kvm:ncurses - Enable the ncurses-based console
-app-emulation/kvm:pulseaudio - Enable pulseaudio output for sound emulation
-app-emulation/kvm:sdl - Enable the SDL-based console
-app-emulation/kvm:test - Build tests
-app-emulation/kvm:vde - Enable VDE-based networking
 app-emulation/libvirt:iscsi - Add support for iSCSI (Internet SCSI) remote storage
 app-emulation/libvirt:kvm - Add support for app-emulation/kvm based virtual machines
 app-emulation/libvirt:libvirtd - Builds the libvirtd daemon as well as the client utilities instead of just the client utilities
