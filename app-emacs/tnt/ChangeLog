@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/tnt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/ChangeLog,v 1.16 2009/11/23 13:21:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/ChangeLog,v 1.17 2009/11/23 17:08:52 ulm Exp $
+
+  23 Nov 2009; Ulrich Mueller <ulm@gentoo.org> -files/51tnt-gentoo.el,
+  -tnt-2.6-r1.ebuild:
+  Remove old.
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> tnt-2.6-r2.ebuild:
   amd64/x86 stable, bug #293811
