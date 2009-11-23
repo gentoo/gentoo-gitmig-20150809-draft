@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.6 2009/05/31 02:09:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.7 2009/11/23 07:24:22 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="An Alien Invaders style game with 3d graphics"
@@ -18,9 +19,7 @@ RDEPEND="dev-python/pygame
 	dev-python/pyopengl
 	psyco? ( dev-python/psyco )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
 	sed -i -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		sound.py \
