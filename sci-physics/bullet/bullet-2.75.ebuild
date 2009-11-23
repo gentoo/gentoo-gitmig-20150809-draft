@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.75.ebuild,v 1.1 2009/09/14 01:53:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.75.ebuild,v 1.2 2009/11/23 02:07:42 bicatali Exp $
 
 EAPI=2
 inherit eutils cmake-utils
@@ -30,7 +30,7 @@ src_configure() {
 		-DBUILD_DEMOS=OFF
 		-DBUILD_EXTRAS=OFF"
 	cmake-utils_src_configure
-	sed -e 's|@prefix@|${ROOT}usr|' \
+	sed -e "s|@prefix@|${ROOT}usr|" \
 		-e 's|@exec_prefix@|${prefix}|' \
 		-e "s|@libdir@|\${exec_prefix}/$(get_libdir)|" \
 		-e "s|@PACKAGE_VERSION@|${PV}|" \
