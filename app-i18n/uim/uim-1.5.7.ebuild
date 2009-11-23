@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.6-r2.ebuild,v 1.2 2009/10/25 00:36:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7.ebuild,v 1.1 2009/11/23 15:14:17 matsuu Exp $
 
 EAPI="2"
 inherit autotools eutils qt3 multilib elisp-common flag-o-matic
@@ -11,8 +11,8 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+anthy canna eb emacs gnome gtk libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
+IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RDEPEND="X? (
 		x11-libs/libX11
@@ -32,6 +32,7 @@ RDEPEND="X? (
 	emacs? ( virtual/emacs )
 	gnome? ( >=gnome-base/gnome-panel-2.14 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
+	kde? ( >=kde-base/kdelibs-4 )
 	libedit? ( dev-libs/libedit )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
@@ -50,6 +51,7 @@ RDEPEND="X? (
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gettext-0.15
+	kde? ( dev-util/cmake )
 	X? (
 		x11-proto/xextproto
 		x11-proto/xproto
@@ -81,10 +83,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.5.4-gentoo.patch"
-	epatch "${FILESDIR}/${PN}-1.5.4-gcc43.patch"
-	epatch "${FILESDIR}/${PN}-1.5.4-zhTW.patch"
-	epatch "${FILESDIR}/${PN}-disable-notify.diff"
+	epatch \
+		"${FILESDIR}/${PN}-1.5.4-gentoo.patch" \
+		"${FILESDIR}/${PN}-1.5.4-gcc43.patch" \
+		"${FILESDIR}/${PN}-1.5.4-zhTW.patch"
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
@@ -104,7 +106,7 @@ src_configure() {
 		append-flags -DQT_THREAD_SUPPORT
 	fi
 
-	if use gtk || use qt3 ; then
+	if use gtk || use qt3 || use qt4 ; then
 		myconf="${myconf} --enable-pref"
 	else
 		myconf="${myconf} --disable-pref"
@@ -133,12 +135,14 @@ src_configure() {
 		$(use_with gtk gtk2) \
 		$(use_with libedit) \
 		--disable-kde-applet \
+		$(use_enable kde kde4-applet) \
 		$(use_with m17n-lib m17nlib) \
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \
 		$(use_with prime) \
 		$(use_with qt3 qt) \
 		$(use_with qt3 qt-immodule) \
+		$(use_with qt4 qt4) \
 		$(use_with qt4 qt4-immodule) \
 		$(use_with xft) \
 		${myconf} || die "econf failed"
