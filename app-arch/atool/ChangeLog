@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/atool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.30 2009/08/17 14:19:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.31 2009/11/23 13:38:37 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> atool-0.37.0.ebuild:
+  amd64/x86 stable, bug #293993
 
 *atool-0.37.0 (17 Aug 2009)
 
