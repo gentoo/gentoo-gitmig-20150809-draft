@@ -1,9 +1,9 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.56 2009/11/23 14:43:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.57 2009/11/23 14:45:43 maekke Exp $
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> omniORB-4.1.4.ebuild:
-  amd64/x86 stable, bug #290199
+  x86 stable, bug #290199
 
   21 Nov 2009; Vlastimil Babka <caster@gentoo.org> omniORB-4.1.4.ebuild:
   Call econf in src_configure, spotted by maekke in bug #290199. Add doc USE
