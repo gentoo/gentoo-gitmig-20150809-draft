@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.9.ebuild,v 1.4 2009/11/01 15:51:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.9.ebuild,v 1.5 2009/11/23 14:41:53 maekke Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gobby.0x539.de/"
 SRC_URI="http://releases.0x539.de/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ~x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="nls"
 
 RDEPEND="dev-libs/libsigc++:2
