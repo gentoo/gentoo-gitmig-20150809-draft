@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<use>
+<flag name="exec">Enable exec:/// support</flag>
+<flag name="pcap">Use <pkg>net-libs/libpcap</pkg> for packet capturing</flag>
+</use>
 </pkgmetadata>
