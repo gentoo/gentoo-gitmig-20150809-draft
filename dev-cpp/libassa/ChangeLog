@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libassa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.8 2009/11/12 14:40:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.9 2009/11/23 13:32:29 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> libassa-3.5.0.ebuild:
+  x86 stable, bug #293978
 
   12 Nov 2009; Christoph Mende <angelos@gentoo.org> libassa-3.5.0.ebuild,
   +files/libassa-3.5.0-dont-run-ldconfig.patch:
