@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10874 2009/11/23 17:50:45 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10875 2009/11/23 19:02:17 nelchael Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Krzysiek Pawlik <nelchael@gentoo.org> (23 Nov 2009)
+# Borken TPM patch, see bug #294119
+=sys-apps/rng-tools-2-r2
 
 # Alex Legler <a3li@gentoo.org> (23 Nov 2009)
 # [Security] Masked for removal, bug 285020
