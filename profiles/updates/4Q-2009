@@ -14,3 +14,4 @@ slotmove =app-text/kchmviewer-3.1_p2-r1 3.5 0
 move app-misc/git app-misc/gnuit
 move dev-util/android-sdk dev-util/android-sdk-update-manager
 slotmove dev-embedded/scratchbox2 2 0
+move app-emulation/kvm app-emulation/qemu-kvm
