@@ -1,6 +1,6 @@
-diff -uNr bird-1.1.4.ORIG/tools/Makefile.in bird-1.1.4/tools/Makefile.in
---- bird-1.1.4.ORIG/tools/Makefile.in	2009-10-02 12:45:06.000000000 +0100
-+++ bird-1.1.4/tools/Makefile.in	2009-10-02 12:45:31.000000000 +0100
+diff -uNr bird-1.1.6.ORIG/tools/Makefile.in bird-1.1.6/tools/Makefile.in
+--- bird-1.1.6.ORIG/tools/Makefile.in	2009-11-23 14:18:19.000000000 +0000
++++ bird-1.1.6/tools/Makefile.in	2009-11-23 14:18:36.000000000 +0000
 @@ -56,9 +56,9 @@
  
  install: all
