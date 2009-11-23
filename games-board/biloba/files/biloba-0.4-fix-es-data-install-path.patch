@@ -1,8 +1,0 @@
---- res/es/Makefile.am.orig	2006-07-29 11:13:30.000000000 +0200
-+++ res/es/Makefile.am	2006-07-29 11:13:47.000000000 +0200
-@@ -1,4 +1,4 @@
--bilobadir = $(prefix)/share/biloba/es
-+bilobadir = $(pkgdatadir)/es
- 
- CFLAGS = -DMYDATADIR=\"$(bilobadir)\"
- 
