@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-0.4.ebuild,v 1.2 2009/10/16 19:19:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-0.4.ebuild,v 1.3 2009/11/23 01:13:08 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ MY_PN="WTForms"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Flexible forms validation and rendering library for python web development"
-HOMEPAGE="http://wtforms.simplecodes.com/"
+HOMEPAGE="http://wtforms.simplecodes.com/ http://pypi.python.org/pypi/WTForms"
 SRC_URI="http://pypi.python.org/packages/source/W/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
@@ -36,10 +36,9 @@ src_compile() {
 }
 
 src_test() {
+	cd tests
 	testing() {
-		pushd tests > /dev/null
-		"$(PYTHON)" runtests.py || return 1
-		popd > /dev/null
+		"$(PYTHON)" runtests.py
 	}
 	python_execute_function testing
 }
