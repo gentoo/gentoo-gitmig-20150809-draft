@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/spacerider
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.4 2009/10/14 20:25:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.5 2009/11/23 14:28:33 maekke Exp $
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org> spacerider-0.13.ebuild:
+  amd64/x86 stable, bug #294141
 
   14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   spacerider-0.13.ebuild:
