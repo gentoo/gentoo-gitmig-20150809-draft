@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/indent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.36 2009/11/23 03:46:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.37 2009/11/23 05:16:02 jer Exp $
+
+  23 Nov 2009; Jeroen Roovers <jer@gentoo.org> files/2.2.10-man.patch,
+  indent-2.2.10-r1.ebuild, +files/2.2.10-segfault.patch:
+  Do install texinfo2man but reapply the usage patch (bug #71690).
 
 *indent-2.2.10-r1 (23 Nov 2009)
 
