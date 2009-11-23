@@ -1,0 +1,10 @@
+# ChangeLog for games-util/xgamer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.1 2009/11/23 22:35:57 mr_bones_ Exp $
+
+*xgamer-0.2.1 (23 Nov 2009)
+
+  23 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org> +xgamer-0.2.1.ebuild,
+  +metadata.xml:
+  initial commit - ebuild submitted by mikeym via bug #292776
+
