@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.36.0.ebuild,v 1.1 2009/11/22 23:31:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.36.0.ebuild,v 1.2 2009/11/23 00:17:29 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -40,7 +40,7 @@ src_prepare() {
 		-e "s:-O2:${CFLAGS}:" \
 		config.dat || die "patching config.dat failed"
 	sed -i \
-		-e "s:\$(GCCOPT):& \${LDFLAGS}:g" \
+		-e "s:-o netwox:& \${LDFLAGS}:g" \
 		-e 's: ; make: ; \\$(MAKE):g' \
 		genemake || die "patching genemake failed"
 }
