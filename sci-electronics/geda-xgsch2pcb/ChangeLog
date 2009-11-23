@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/geda-xgsch2pcb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-xgsch2pcb/ChangeLog,v 1.1 2009/11/23 06:00:47 calchan Exp $
+
+*geda-xgsch2pcb-0.1.3 (23 Nov 2009)
+
+  23 Nov 2009; Denis Dupeyron <calchan@gentoo.org>
+  +geda-xgsch2pcb-0.1.3.ebuild, +metadata.xml:
+  Initial commit, thanks to Stefan Salewski and Rafael Martins.
+
