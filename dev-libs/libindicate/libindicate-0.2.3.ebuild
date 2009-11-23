@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3.ebuild,v 1.3 2009/10/30 00:02:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3.ebuild,v 1.4 2009/11/23 22:34:22 mrpouet Exp $
 
 EAPI=2
 
@@ -32,12 +32,17 @@ src_prepare() {
 	eautoreconf
 }
 src_configure() {
+	local my_conf
+
 	# gobject-instrospection is a nightmare in this package, it's fixable for libindicate
 	# and not for libindicate-gtk, disable it until its fixed on upstream
-	econf --disable-dependency-tracking \
-		--disable-gobject-introspection \
-		$(use_enable gtk) \
-		$(use_enable doc)
+	my_conf="--disable-dependency-tracking
+		--disable-gobject-introspection
+		$(use_enable gtk)
+		$(use_enable doc)"
+	# Fix bug 294279
+	use doc && my_conf="$my_conf --docdir=/usr/share/doc/${PF}"
+	econf $my_conf
 }
 src_test() {
 	emake check || die "testsuite failed"

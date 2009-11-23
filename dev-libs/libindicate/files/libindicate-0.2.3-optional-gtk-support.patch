@@ -1,13 +1,13 @@
-From: Romain Perier <mrpouet@gentoo.org>
-Date: Thu, 29 Oct 2009 23:54:53 +0100
+Date: Mon, 23 Nov 2009 23:14:01 +0100
 Subject: Make gtk support optional, Fix some QA
 
 ---
  Makefile.am                 |   17 +++++++----
- configure.ac                |   23 ++++++++++++----
- examples/Makefile.am        |   62 ++++++++++++++++++++++--------------------
+ configure.ac                |   23 +++++++++++----
+ examples/Makefile.am        |   64 ++++++++++++++++++++++---------------------
  libindicate-gtk/Makefile.am |    2 +-
- 4 files changed, 61 insertions(+), 43 deletions(-)
+ tests/Makefile.am           |    2 +-
+ 5 files changed, 63 insertions(+), 45 deletions(-)
 
 --- a/Makefile.am
 +++ b/Makefile.am
@@ -75,8 +75,10 @@ Subject: Make gtk support optional, Fix some QA
  ##############################
 --- a/examples/Makefile.am
 +++ b/examples/Makefile.am
-@@ -2,32 +2,11 @@
- libexec_PROGRAMS = \
+@@ -1,33 +1,12 @@
+ 
+-libexec_PROGRAMS = \
++EXTRA_PROGRAMS = \
  	indicate-and-crash \
  	indicate-alot \
 -	listen-and-print \
@@ -106,7 +108,7 @@ Subject: Make gtk support optional, Fix some QA
 -	$(LIBINDICATE_LIBS)
 -
 +if HAVE_LIBINDICATEGTK
-+libexec_PROGRAMS +=		\
++EXTRA_PROGRAMS +=		\
 +	listen-and-print	\
 +	im-client
  listen_and_print_SOURCES = \
@@ -179,3 +181,14 @@ Subject: Make gtk support optional, Fix some QA
  	$(LIBINDICATEGTK_LIBS)
  
  pkgconfig_DATA = indicate-gtk.pc
+--- a/tests/Makefile.am
++++ b/tests/Makefile.am
+@@ -9,7 +9,7 @@ TESTS = \
+ 	test_indicator_display \
+ 	test_indicator_display_half
+ 
+-libexec_PROGRAMS = \
++check_PROGRAMS = \
+ 	test-interests-client \
+ 	test-interests-server \
+ 	test-interests-server1 \
