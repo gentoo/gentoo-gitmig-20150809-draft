@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.35 2009/11/19 18:36:20 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.36 2009/11/23 20:08:42 spatz Exp $
+
+  23 Nov 2009; Dror Levin <spatz@gentoo.org> ffmpeg2theora-0.25.ebuild:
+  Depend on newer version of media-video/ffmpeg, bug 294287.
 
 *ffmpeg2theora-0.25 (19 Nov 2009)
 
