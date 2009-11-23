@@ -1,6 +1,15 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.420 2009/11/21 15:17:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.421 2009/11/23 15:16:48 jer Exp $
+
+*opera-10.10 (23 Nov 2009)
+
+  23 Nov 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.10_pre4694.ebuild,
+  -opera-10.10_pre4720.ebuild, -opera-10.10_pre4725.ebuild,
+  -opera-10.10_pre4728.ebuild, -opera-10.10_pre4738.ebuild,
+  -opera-10.10_pre4740.ebuild, -opera-10.10_pre4742.ebuild,
+  +opera-10.10.ebuild:
+  Version bump (bug #294208). Remove old.
 
 *opera-10.10_pre4742 (21 Nov 2009)
 
