@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5035 2009/11/24 00:07:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5036 2009/11/24 00:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1438,6 +1438,11 @@ media-gfx/freewrl:spidermonkey - Use spidermonkey instead of Firefox
 media-gfx/geeqie:xmp - Adds support for XMP metadata
 media-gfx/gimp:smp -  Enable support for multiprocessors 
 media-gfx/gimp:webkit -  Enable the webkit rendering engine 
+media-gfx/graphicsmagick:fpx - Enable FlashPix support
+media-gfx/graphicsmagick:gs - Enable Ghoscript support
+media-gfx/graphicsmagick:imagemagick - Enable ImageMagick command compatibility
+media-gfx/graphicsmagick:q16 - Set quantum depth to 16
+media-gfx/graphicsmagick:q32 - Set quantum depth to 32
 media-gfx/graphviz:cgraph -  Enables cgraph (PostScript plotting library in C) library 
 media-gfx/graphviz:lasi -  Enables PostScript output via media-libs/lasi library 
 media-gfx/graphviz:pango -  Enables the rendering of the graphs using pango & cairo (with antialiasing support) 
