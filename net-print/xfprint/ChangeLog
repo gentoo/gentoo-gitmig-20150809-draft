@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xfprint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.21 2009/07/27 17:38:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.22 2009/11/24 20:23:55 darkside Exp $
+
+  24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> xfprint-4.6.1.ebuild:
+  Add prefix keywords, as tested in prefix overlay
 
   27 Jul 2009; nixnut <nixnut@gentoo.org> xfprint-4.6.1.ebuild:
   ppc stable #265587
