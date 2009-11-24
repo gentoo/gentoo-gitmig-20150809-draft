@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1-r1.ebuild,v 1.2 2009/11/24 09:40:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1-r1.ebuild,v 1.3 2009/11/24 14:22:18 ulm Exp $
 
 inherit eutils pam confutils autotools
 
@@ -33,6 +33,7 @@ DEPEND="pam? ( virtual/pam )
 	)
 	skey? ( >=sys-auth/skey-1.1.5-r1 )
 	app-editors/gentoo-editor
+	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
