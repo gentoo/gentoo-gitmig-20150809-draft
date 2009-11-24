@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.2 2009/09/01 01:56:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.3 2009/11/24 04:02:08 markusle Exp $
 
 EAPI="2"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
@@ -23,7 +23,6 @@ RDEPEND="mpi? ( || (
 					sys-cluster/lam-mpi
 					sys-cluster/mpich2[cxx] ) )
 	python? ( >=dev-lang/python-2.0 )
-	boost? ( dev-libs/boost )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
@@ -45,6 +44,7 @@ RDEPEND="mpi? ( || (
 
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
+		boost? ( dev-libs/boost )
 		>=dev-util/cmake-2.4"
 
 S="${WORKDIR}"/VTK
