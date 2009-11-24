@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.23 2009/11/06 12:46:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.24 2009/11/24 19:16:50 beandog Exp $
 
 EAPI=2
 SCM=""
@@ -59,7 +59,7 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	video_cards_nvidia? (
-		vdpau? ( >=x11-drivers/nvidia-drivers-180.29 )
+		vdpau? ( x11-libs/libvdpau )
 	)"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.327 2009/11/24 17:09:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.328 2009/11/24 19:16:50 beandog Exp $
+
+  24 Nov 2009; Steve Dibb <beandog@gentoo.org> ffmpeg-9999-r1.ebuild:
+  Update vdpau deps
 
 *ffmpeg-0.5_p20601 (24 Nov 2009)
 
