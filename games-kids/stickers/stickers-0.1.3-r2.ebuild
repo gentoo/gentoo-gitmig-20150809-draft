@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.5 2009/01/12 16:54:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.6 2009/11/24 17:57:48 halcy0n Exp $
 
 EAPI=2
 inherit base eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND="media-libs/imlib[gtk]
+RDEPEND="media-libs/imlib[deprecated]
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXi
