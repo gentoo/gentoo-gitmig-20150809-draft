@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.42 2009/10/09 03:34:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.43 2009/11/24 04:05:41 markusle Exp $
+
+  24 Nov 2009; Markus Dittrich <markusle@gentoo.org>
+  paraview-3.6.1-r1.ebuild:
+  Removed boost from RDEPEND (fixes bug #293086).
 
   09 Oct 2009; Markus Dittrich <markusle@gentoo.org>
   paraview-3.6.1-r1.ebuild:

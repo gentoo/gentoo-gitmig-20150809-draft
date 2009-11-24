@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1-r1.ebuild,v 1.3 2009/10/09 03:34:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1-r1.ebuild,v 1.4 2009/11/24 04:05:41 markusle Exp $
 
 EAPI="2"
 
@@ -27,7 +27,6 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	qt4? ( x11-libs/qt-gui:4
 			x11-libs/qt-qt3support:4
 			x11-libs/qt-assistant:4 )
-	boost? ( >=dev-libs/boost-1.37 )
 	dev-libs/libxml2
 	media-libs/libpng
 	media-libs/jpeg
@@ -43,6 +42,7 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 
 DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )
+		boost? ( >=dev-libs/boost-1.37 )
 		>=dev-util/cmake-2.6.4"
 
 PVLIBDIR="$(get_libdir)/${PN}-${MAJOR_PV}"
