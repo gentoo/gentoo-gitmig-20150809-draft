@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-222.ebuild,v 1.14 2008/05/11 20:35:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-222.ebuild,v 1.15 2009/11/24 16:27:14 darkside Exp $
 
 inherit eutils bash-completion toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz
 
 LICENSE="AFL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-macos"
 IUSE=""
 
 DEPEND=""
@@ -46,10 +46,11 @@ src_compile() {
 src_install() {
 	dodir /usr/bin /usr/share/man/man6 || die "dodir failed"
 	chmod +x figlist showfigfonts
+	use prefix || ED=${D}
 	emake \
-		DESTDIR="${D}"/usr/bin \
-		MANDIR="${D}"/usr/share/man/man6 \
-	    DEFAULTFONTDIR="${D}"/usr/share/figlet \
+		DESTDIR="${ED}"/usr/bin \
+		MANDIR="${ED}"/usr/share/man/man6 \
+		DEFAULTFONTDIR="${ED}"/usr/share/figlet \
 		install || die "make install failed"
 
 	dodoc README figfont.txt

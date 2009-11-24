@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.33 2008/05/11 20:35:07 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.34 2009/11/24 16:27:14 darkside Exp $
+
+  24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> figlet-222.ebuild:
+  Add ~x86-macos keyword, bug 292179
 
   11 May 2008; <solar@gentoo.org> figlet-222.ebuild:
   - cross compile love. fixes /usr/bin/chkfont being installed with the wrong
