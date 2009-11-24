@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.2.3.ebuild,v 1.1 2009/11/04 00:19:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.2.3.ebuild,v 1.2 2009/11/24 20:27:33 darkside Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://gtkwave.sourceforge.net/${P}.tar.gz"
 IUSE="doc examples"
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
