@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/PEAR-Date-1.5.0_alpha1.ebuild,v 1.1 2009/08/22 22:35:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/PEAR-Date-1.5.0_alpha1.ebuild,v 1.2 2009/11/24 14:29:30 beandog Exp $
 
 inherit php-pear-r1
 
@@ -11,5 +11,6 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
+DEPEND="|| ( <dev-php/PEAR-PEAR-1.71
+	dev-php/PEAR-Console_Getopt )"
 RDEPEND=""
