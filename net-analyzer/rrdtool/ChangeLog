@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.196 2009/11/23 06:19:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.197 2009/11/24 16:55:48 jer Exp $
+
+  24 Nov 2009; Jeroen Roovers <jer@gentoo.org> -rrdtool-1.4.1.ebuild,
+  rrdtool-1.4.2.ebuild:
+  Remove old. Make lua support optional. Remove last USE=nls usage.
 
 *rrdtool-1.4.2 (23 Nov 2009)
 

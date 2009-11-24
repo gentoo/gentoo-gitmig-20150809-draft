@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.2.ebuild,v 1.1 2009/11/23 06:07:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.2.ebuild,v 1.2 2009/11/24 16:55:48 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc perl python ruby rrdcgi tcl"
+IUSE="doc lua perl python ruby rrdcgi tcl"
 
 # This versions are minimal versions upstream tested with.
 RDEPEND="
@@ -47,7 +47,8 @@ src_configure() {
 	export RRDDOCDIR=/usr/share/doc/${PF}
 
 	econf $(use_enable rrdcgi) \
-		$(use_enable nls) \
+		$(use_enable lua) \
+		$(use_enable lua lua-site-install) \
 		$(use_enable ruby) \
 		$(use_enable ruby ruby-site-install) \
 		$(use_enable perl) \
