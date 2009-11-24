@@ -17,7 +17,6 @@
 <use>
   <flag name='fpx'>Enable FlashPix support</flag>
   <flag name='gs'>Enable Ghoscript support</flag>
-  <flag name='imagemagick'>Enable ImageMagick command compatibility</flag>
   <flag name='q16'>Set quantum depth to 16</flag>
   <flag name='q32'>Set quantum depth to 32</flag>
 </use>
