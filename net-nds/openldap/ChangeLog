@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.356 2009/11/21 20:06:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.357 2009/11/24 05:35:03 robbat2 Exp $
+
+*openldap-2.4.19-r1 (24 Nov 2009)
+
+  24 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +openldap-2.4.19-r1.ebuild:
+  Bug #293699: Ensure new contrib overlays work properly when dynamically
+  compiled. Bug #291821: Detect that the to-be-linked against version of DB
+  is not the same as the existing linked version and prevent the users data
+  from becoming inaccessible.
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> openldap-2.4.19.ebuild:
   ppc stable #290345
