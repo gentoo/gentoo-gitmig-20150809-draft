@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/construo
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.13 2008/05/01 13:11:32 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.14 2009/11/24 17:37:06 tupone Exp $
+
+  24 Nov 2009; Tupone Alfredo <tupone@gentoo.org> construo-0.2.2.ebuild,
+  +files/construo-0.2.2-lGLU.patch:
+  Adjusting dependency and fix missing GLU in linking command.
+  Fix bug #294293 by flameeyes@gentoo.org
 
   01 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/construo-0.2.2-gcc43.patch, construo-0.2.2.ebuild:
@@ -12,7 +17,7 @@
   21 Dec 2007; nixnut <nixnut@gentoo.org> construo-0.2.2.ebuild:
   Stable on ppc wrt bug 201403
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> construo-0.2.2.ebuild:
