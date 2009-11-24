@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.11 2009/09/15 16:25:16 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.12 2009/11/24 21:37:22 jsbronder Exp $
 
 EAPI=1
 inherit python eutils fortran autotools
 
 DESCRIPTION="MPICH2 - A portable MPI implementation"
-HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich2"
+HOMEPAGE="http://www.mcs.anl.gov/research/projects/mpich2/index.php"
 SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/${PV}/${P}.tar.gz"
 
 LICENSE="as-is"

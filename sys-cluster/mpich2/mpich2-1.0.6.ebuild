@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.8 2009/09/23 20:42:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.9 2009/11/24 21:37:22 jsbronder Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
@@ -10,7 +10,7 @@ MY_P=${P}p1
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="MPICH2 - A portable MPI implementation"
-HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich2"
+HOMEPAGE="http://www.mcs.anl.gov/research/projects/mpich2/index.php"
 SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/${MY_P}.tar.gz"
 #SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${MY_P}.tar.gz"
 
