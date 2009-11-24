@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5034 2009/11/23 06:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5035 2009/11/24 00:07:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2854,6 +2854,7 @@ sci-mathematics/dataplot:gs - Add Ghostscript support (virtual/ghostscript)
 sci-mathematics/freemat:arpack - Add sparse eigen value support via sci-libs/arpack
 sci-mathematics/freemat:ffcall - Enable use of dev-libs/ffcall
 sci-mathematics/freemat:umfpack - Add sparse solving via sci-libs/umfpack
+sci-mathematics/freemat:volpack - Add volume rendering via media-libs/volpack
 sci-mathematics/geomview:avg - Enable experimental motion averaging technique
 sci-mathematics/geomview:netpbm - Add media-libs/netpbm support for external modules
 sci-mathematics/gretl:sourceview - Enable support for x11-libs/gtksourceview 
