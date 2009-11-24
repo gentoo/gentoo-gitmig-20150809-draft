@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.3 2009/09/22 19:54:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.4 2009/11/24 15:58:19 joker Exp $
+
+*mupen64plus-1.5-r1 (24 Nov 2009)
+
+  24 Nov 2009; Christian Birchinger <joker@gentoo.org>
+  +mupen64plus-1.5-r1.ebuild, +files/README.gentoo-patches-20091123:
+  Added almost all Debian patches. A big thank you to all the authors of the
+  patches.
 
   22 Sep 2009; Tristan Heaven <nyhm@gentoo.org> mupen64plus-1.5.ebuild:
   Override Makefile arch detection; add ~x86 keyword
