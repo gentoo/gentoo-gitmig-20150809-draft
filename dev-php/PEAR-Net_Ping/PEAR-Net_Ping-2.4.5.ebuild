@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/PEAR-Net_Ping-2.4.4.ebuild,v 1.1 2009/08/22 19:33:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/PEAR-Net_Ping-2.4.5.ebuild,v 1.1 2009/11/24 14:24:11 beandog Exp $
 
 inherit php-pear-r1
 
