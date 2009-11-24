@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/shell-fm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.11 2009/09/22 17:44:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.12 2009/11/24 14:09:05 flameeyes Exp $
+
+  24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -shell-fm-0.6.ebuild, shell-fm-0.7.ebuild,
+  +files/shell-fm-0.7-asneeded.patch:
+  Add patch by Marco Leogrande to build with --as-needed (bug #286662),
+  remove old automagic version (bug #280816), remove ao USE flag, as
+  upstream does not seem to make it optional (bug #292743), add missing
+  taglib dependency.
 
 *shell-fm-0.7 (22 Sep 2009)
 
