@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/bomns-0.99.2.ebuild,v 1.1 2009/10/14 20:12:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/bomns-0.99.2.ebuild,v 1.2 2009/11/24 03:26:28 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools flag-o-matic games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="gtk editor"
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	gtk? ( x11-libs/gtk+:2 )"
 
