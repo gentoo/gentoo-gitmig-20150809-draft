@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.3 2009/11/24 15:13:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.4 2009/11/24 15:17:56 flameeyes Exp $
+
+  24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> lxc-0.6.4.ebuild:
+  Remove autotools inherit and add the ~x86 KEYWORD.
 
 *lxc-0.6.4 (24 Nov 2009)
 

@@ -1,16 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.4.ebuild,v 1.1 2009/11/24 15:13:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.4.ebuild,v 1.2 2009/11/24 15:17:56 flameeyes Exp $
 
 EAPI="2"
 
-inherit autotools eutils linux-info versionator
+inherit eutils linux-info versionator
 
 DESCRIPTION="LinuX Containers userspace utilities"
 HOMEPAGE="http://lxc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="LGPL-3"
 SLOT="0"
