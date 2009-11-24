@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.54 2009/11/23 21:07:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.55 2009/11/24 16:08:41 armin76 Exp $
+
+  24 Nov 2009; Raúl Porcel <armin76@gentoo.org> cheetah-2.2.2.ebuild:
+  alpha/ia64/sparc stable wrt #292316
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> cheetah-2.2.2.ebuild:
   x86 stable, bug #292316
