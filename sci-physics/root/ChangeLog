@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.58 2009/11/19 05:44:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.59 2009/11/24 06:59:53 bicatali Exp $
+
+  24 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  root-5.24.00-r1.ebuild:
+  Fixed a PIC problem when configuring with AFS (bug #294038)
 
 *root-5.24.00-r1 (19 Nov 2009)
 

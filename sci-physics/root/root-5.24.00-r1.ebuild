@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.24.00-r1.ebuild,v 1.1 2009/11/19 05:44:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.24.00-r1.ebuild,v 1.2 2009/11/24 06:59:53 bicatali Exp $
 
 EAPI=2
 inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs flag-o-matic
@@ -169,6 +169,7 @@ src_configure() {
 		--enable-soversion \
 		--enable-table \
 		--enable-xft \
+		--with-afs-shared=yes \
 		$(use_enable afs) \
 		$(use_enable cint7) \
 		$(use_enable clarens) \
