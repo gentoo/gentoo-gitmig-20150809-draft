@@ -1,17 +1,20 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-147.ebuild,v 1.4 2009/11/19 08:17:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-147-r1.ebuild,v 1.1 2009/11/24 09:01:06 zzam Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+
+PATCHSET=${P}-gentoo-patchset-v1
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
 	inherit git autotools
 else
-	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
+	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
+			mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -132,6 +135,11 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
+
+	# backport some patches
+	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
+	        EPATCH_FORCE="yes" epatch
+
 	if ! use devfs-compat; then
 		# see Bug #269359
 		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
@@ -147,7 +155,7 @@ src_unpack() {
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != 8afa8fc0fc71ada547792b5b2a608e4f ]]
+		if [[ ${MD5} != f38d3e1344588b6e44746097e1dfd149 ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
