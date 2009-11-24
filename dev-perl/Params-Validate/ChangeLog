@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.70 2009/11/23 19:16:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.71 2009/11/24 09:46:34 aballier Exp $
+
+  24 Nov 2009; Alexis Ballier <aballier@gentoo.org>
+  Params-Validate-0.92-r1.ebuild:
+  keyword ~x86-fbsd, bug #294206
 
 *Params-Validate-0.92-r1 (23 Nov 2009)
 
