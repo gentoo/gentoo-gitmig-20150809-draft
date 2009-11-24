@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.5.3.ebuild,v 1.1 2009/11/09 16:19:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.5.4.ebuild,v 1.1 2009/11/24 15:31:27 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca da de en_GB es et fr gl it lt ms nds nl pl pt pt_BR ro sk sv
