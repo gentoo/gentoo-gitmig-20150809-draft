@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.1 2009/11/24 05:35:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.2 2009/11/24 20:02:50 mr_bones_ Exp $
 
 EAPI="2"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -146,7 +146,7 @@ openldap_upgrade_howto() {
 	eerror
 	eerror "As major version upgrades can corrupt your database,"
 	eerror "you need to dump your database and re-create it afterwards."
-	eerror 
+	eerror
 	eerror "Additionally, rebuilding against different major versions of the"
 	eerror "sys-libs/db libraries will cause your database to be inaccessible."
 	eerror ""
