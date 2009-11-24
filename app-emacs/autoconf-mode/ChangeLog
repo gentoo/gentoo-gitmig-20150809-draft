@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/autoconf-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.18 2009/02/14 11:59:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.19 2009/11/24 20:44:55 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  autoconf-mode-2.63.ebuild:
+  import changes from Prefix overlay
 
   14 Feb 2009; Ulrich Mueller <ulm@gentoo.org> -autoconf-mode-2.61.ebuild,
   -autoconf-mode-2.62.ebuild, autoconf-mode-2.63.ebuild:

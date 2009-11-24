@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.6.0-r1.ebuild,v 1.6 2009/10/10 15:21:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.6.0-r1.ebuild,v 1.7 2009/11/24 20:54:40 fauli Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.gnu.org/releases-noredirect/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ppc sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"

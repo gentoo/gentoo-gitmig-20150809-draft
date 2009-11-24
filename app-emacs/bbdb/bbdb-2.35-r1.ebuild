@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35-r1.ebuild,v 1.5 2008/11/01 18:01:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35-r1.ebuild,v 1.6 2009/11/24 20:48:13 fauli Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://bbdb.sourceforge.net/${P}.tar.gz
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="tex"
 
 DEPEND=""

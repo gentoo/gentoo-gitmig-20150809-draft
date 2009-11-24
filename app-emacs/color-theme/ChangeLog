@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.40 2009/10/10 15:47:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.41 2009/11/24 20:54:40 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  color-theme-6.6.0-r1.ebuild:
+  import changes from Prefix overlay
 
   10 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
   -files/51color-theme-gentoo.el, -color-theme-6.6.0.ebuild:

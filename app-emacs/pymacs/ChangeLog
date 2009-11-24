@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.42 2009/07/02 17:21:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.43 2009/11/24 21:14:16 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org> pymacs-0.23.ebuild:
+  import changes from Prefix overlay
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> pymacs-0.23.ebuild:
   Stable for HPPA too.

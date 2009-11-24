@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/scheme-complete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scheme-complete/ChangeLog,v 1.3 2009/10/15 19:16:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scheme-complete/ChangeLog,v 1.4 2009/11/24 21:19:43 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  scheme-complete-0.8.1.ebuild, scheme-complete-0.8.8.ebuild:
+  import changes from Prefix overlay
 
 *scheme-complete-0.8.8 (15 Oct 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/matlab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.19 2009/11/19 08:40:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.20 2009/11/24 20:59:48 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  matlab-3.1.0_pre20070306.ebuild, matlab-3.3.0_pre20091116.ebuild:
+  import changes from Prefix overlay
 
 *matlab-3.3.0_pre20091116 (19 Nov 2009)
 

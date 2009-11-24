@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.40 2008/11/01 18:09:12 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.41 2009/11/24 20:48:13 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org> bbdb-2.35-r1.ebuild:
+  import changes from Prefix overlay
 
   01 Nov 2008; Ulrich Mueller <ulm@gentoo.org> -bbdb-2.35.ebuild:
   Remove old.

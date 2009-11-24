@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.58 2009/11/22 18:42:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.59 2009/11/24 20:57:24 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  gentoo-syntax-1.12.ebuild, gentoo-syntax-1.15-r1.ebuild:
+  import changes from Prefix overlay
 
   22 Nov 2009; Ulrich Mueller <ulm@gentoo.org>
   files/50gentoo-syntax-gentoo.el:

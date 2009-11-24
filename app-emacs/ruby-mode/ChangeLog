@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.40 2009/10/21 18:44:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.41 2009/11/24 21:18:53 fauli Exp $
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  ruby-mode-1.8.6.ebuild, ruby-mode-1.9.1_pre1.ebuild,
+  ruby-mode-1.9.1_p243.ebuild:
+  import changes from Prefix overlay
 
 *ruby-mode-1.9.1_p243 (21 Oct 2009)
 
