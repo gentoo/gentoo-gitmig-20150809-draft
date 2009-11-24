@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.196 2009/11/21 22:10:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.197 2009/11/24 09:40:45 aballier Exp $
+
+  24 Nov 2009; Alexis Ballier <aballier@gentoo.org> sudo-1.7.2_p1-r1.ebuild:
+  keyword ~x86-fbsd, bug #293985
 
 *sudo-1.7.2_p1-r1 (21 Nov 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1-r1.ebuild,v 1.1 2009/11/21 22:10:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1-r1.ebuild,v 1.2 2009/11/24 09:40:45 aballier Exp $
 
 inherit eutils pam confutils autotools
 
@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
 # 3-clause BSD license
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( virtual/pam )
