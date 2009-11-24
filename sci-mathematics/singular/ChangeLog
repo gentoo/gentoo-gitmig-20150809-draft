@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.28 2009/08/09 16:09:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.29 2009/11/24 03:38:03 markusle Exp $
+
+*singular-3.1.0.7 (24 Nov 2009)
+
+  24 Nov 2009; Markus Dittrich <markusle@gentoo.org>
+  +files/singular-3.1.0-emacs-22.patch, +files/singular-3.1.0-gentoo.patch,
+  +files/singular-3.1.0-glibc-2.10.patch, +singular-3.1.0.7.ebuild:
+  Version bump (fixes #293645 and #293084). I've dropped ppc until
+  we have ntl keyworded on ppc.
 
   09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   singular-3.0.4.4.ebuild, +files/singular-3.0.4.4-glibc-2.10.patch:
