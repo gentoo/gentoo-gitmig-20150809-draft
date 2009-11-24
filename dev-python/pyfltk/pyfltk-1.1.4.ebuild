@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.4.ebuild,v 1.5 2009/10/16 21:51:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.4.ebuild,v 1.6 2009/11/24 00:03:53 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,12 +17,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="doc opengl"
-
-DEPEND="dev-lang/swig
-	>=x11-libs/fltk-1.1.9:1.1[opengl]"
+IUSE="doc"
 
 RDEPEND=">=x11-libs/fltk-1.1.9:1.1[opengl]"
+DEPEND="${RDEPEND}
+	dev-lang/swig"
 
 RESTRICT_PYTHON_ABIS="3*"
 
@@ -42,8 +41,7 @@ src_compile() {
 	cd "${S}"/python
 	${python} MakeSwig.py || die "swigging wrappers failed"
 	cd "${S}"
-	distutils_src_compile \
-		$(use opengl || echo "--disable-gl")
+	distutils_src_compile
 }
 
 src_install() {
