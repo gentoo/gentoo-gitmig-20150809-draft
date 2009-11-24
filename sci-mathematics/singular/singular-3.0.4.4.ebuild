@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.4.ebuild,v 1.4 2009/08/09 16:09:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.4.ebuild,v 1.5 2009/11/24 03:47:20 markusle Exp $
 
 inherit eutils elisp-common flag-o-matic autotools multilib versionator
 
@@ -19,9 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc emacs boost"
 
-DEPEND=">=dev-lang/perl-5.6
-		>=dev-libs/gmp-4.1-r1
-		emacs? ( >=virtual/emacs-22 )
+RDEPEND=">=dev-libs/gmp-4.1-r1
+		emacs? ( >=virtual/emacs-22 )"
+
+DEPEND="${RDEPEND}
+		>=dev-lang/perl-5.6
 		boost? ( dev-libs/boost )"
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}
