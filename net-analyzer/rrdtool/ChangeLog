@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.197 2009/11/24 16:55:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.198 2009/11/24 17:26:22 jer Exp $
+
+  24 Nov 2009; Jeroen Roovers <jer@gentoo.org> rrdtool-1.3.7.ebuild,
+  rrdtool-1.3.8.ebuild, rrdtool-1.3.8-r1.ebuild, rrdtool-1.3.9.ebuild,
+  rrdtool-1.4.2.ebuild:
+  Spelling correction.
 
   24 Nov 2009; Jeroen Roovers <jer@gentoo.org> -rrdtool-1.4.1.ebuild,
   rrdtool-1.4.2.ebuild:
