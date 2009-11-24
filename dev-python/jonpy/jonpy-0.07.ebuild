@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/jonpy-0.07.ebuild,v 1.3 2009/11/20 14:48:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/jonpy-0.07.ebuild,v 1.4 2009/11/24 19:18:56 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 x86"
+KEYWORDS="~amd64 ia64 x86"
 IUSE="doc examples"
 
 DEPEND=""
