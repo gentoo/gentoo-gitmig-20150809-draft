@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.168 2009/11/05 18:34:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.169 2009/11/24 16:28:52 ssuominen Exp $
+
+  24 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -fvwm-2.5.18-r1.ebuild, fvwm-2.5.27-r1.ebuild, fvwm-2.5.28.ebuild:
+  Remove USE gtk and imlib (media-libs/imlib[deprecated]).
 
   05 Nov 2009; Raúl Porcel <armin76@gentoo.org> fvwm-2.5.28.ebuild:
   ia64/sparc stable wrt #290126

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.27-r1.ebuild,v 1.4 2009/10/02 17:29:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.27-r1.ebuild,v 1.5 2009/11/24 16:28:52 ssuominen Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2"
 LICENSE="GPL-2 FVWM"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="bidi debug doc gtk gtk2-perl imlib netpbm nls perl png readline rplay stroke svg tk truetype vanilla xinerama lock"
+IUSE="bidi debug doc gtk2-perl netpbm nls perl png readline rplay stroke svg tk truetype vanilla xinerama lock"
 
 COMMON_DEPEND="
 	sys-libs/zlib
@@ -30,10 +30,6 @@ COMMON_DEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	bidi? ( dev-libs/fribidi )
-	gtk? (
-		=x11-libs/gtk+-1.2*
-		imlib? ( media-libs/imlib[gtk] )
-	)
 	png? ( media-libs/libpng )
 	readline? (
 		sys-libs/ncurses
@@ -91,15 +87,6 @@ src_configure() {
 
 	# Signed chars are required.
 	use ppc && append-flags -fsigned-char
-
-	if use gtk; then
-		if ! use imlib; then
-			einfo "ATTN: You can safely ignore any imlib related configure errors."
-			myconf="${myconf} --with-imlib-prefix=${T}"
-		fi
-	else
-		myconf="${myconf} --disable-gtk"
-	fi
 
 	use readline && myconf="${myconf} --without-termcap-library"
 
