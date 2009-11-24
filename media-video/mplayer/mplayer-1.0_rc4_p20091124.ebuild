@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091124.ebuild,v 1.1 2009/11/24 16:50:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091124.ebuild,v 1.2 2009/11/24 20:02:28 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -314,7 +314,7 @@ src_configure() {
 	else
 		myconf="${myconf} --disable-tv --disable-tv-v4l1 --disable-tv-v4l2
 			--disable-radio --disable-radio-v4l2 --disable-radio-bsdbt848
-			--disable-dvb --disable-dvbhead 
+			--disable-dvb --disable-dvbhead
 			--disable-v4l2 --disable-pvr"
 	fi
 
