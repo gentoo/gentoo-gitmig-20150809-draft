@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TextToHTML/TextToHTML-2.51.ebuild,v 1.2 2009/10/22 13:10:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TextToHTML/TextToHTML-2.51.ebuild,v 1.3 2009/11/24 09:46:26 tove Exp $
 
 MY_PN=txt2html
 MY_P=${MY_PN}-${PV}
@@ -18,6 +18,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/YAML-Syck
 	virtual/perl-Getopt-Long
 	dev-perl/Getopt-ArgvFile"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/perl-Module-Build"
 
 SRC_TEST="do"
