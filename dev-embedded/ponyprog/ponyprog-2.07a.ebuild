@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.6 2009/06/28 13:44:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.7 2009/11/24 09:31:41 flameeyes Exp $
 
 inherit eutils
 
@@ -56,6 +56,11 @@ src_unpack() {
 
 	# Fix compilation with gcc-4.3, bug #227503
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
+
+src_compile() {
+	# bug #282244
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
