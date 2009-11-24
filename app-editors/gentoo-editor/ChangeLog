@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gentoo-editor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.2 2009/11/24 09:25:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.3 2009/11/24 18:26:37 ulm Exp $
+
+*gentoo-editor-2 (24 Nov 2009)
+
+  24 Nov 2009; Ulrich Mueller <ulm@gentoo.org> -gentoo-editor-1.ebuild,
+  -files/gentoo-editor-1.sh, +gentoo-editor-2.ebuild,
+  +files/gentoo-editor-2.sh:
+  Pass arguments to editor transparently.
 
   24 Nov 2009; Alexis Ballier <aballier@gentoo.org> gentoo-editor-1.ebuild:
   keyword ~x86-fbsd, bug #293985
