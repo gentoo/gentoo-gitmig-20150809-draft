@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-Mouse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-Mouse/ChangeLog,v 1.1 2009/10/27 11:24:17 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-Mouse/ChangeLog,v 1.2 2009/11/24 13:05:29 nixphoeni Exp $
+
+  24 Nov 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-Mouse-0.1.ebuild:
+  Fixed SRC_URI (bug #294114); keyworded ~ARCH for all supported by
+  gnome-extra/gdesklets-core
 
 *desklet-Mouse-0.1 (27 Oct 2009)
 
