@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.8-r1.ebuild,v 1.1 2009/04/08 17:23:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.8-r1.ebuild,v 1.2 2009/11/24 14:54:45 flameeyes Exp $
 
 DESCRIPTION="A GUI front-end to dd/dcfldd"
 HOMEPAGE="http://air-imager.sourceforge.net/"
@@ -52,5 +52,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The author, steve@unixgurus.com, would appreciate and email of the install file /usr/share/doc/${PF}/air-install.log"
+	elog "The author, steve@unixgurus.com, would appreciate an email of the install file /usr/share/doc/${PF}/air-install.log"
 }
