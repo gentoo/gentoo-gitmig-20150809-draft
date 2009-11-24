@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.24 2008/12/30 20:00:08 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.25 2009/11/24 19:25:53 darkside Exp $
+
+  24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> geekcode-1.7.3.ebuild:
+  Add prefix keywords, as tested in prefix overlay
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> geekcode-1.7.3.ebuild:
   QA: Respect CC (bug 243644)

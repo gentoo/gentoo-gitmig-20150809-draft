@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorak7min
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.13 2008/12/30 19:46:34 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.14 2009/11/24 19:29:06 darkside Exp $
+
+  24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> dvorak7min-1.6.1.ebuild:
+  Add prefix keywords, as tested in prefix overlay
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> dvorak7min-1.6.1.ebuild:
   QA: Respect CC (bug 243634) and CFLAGS (bug 240069)
