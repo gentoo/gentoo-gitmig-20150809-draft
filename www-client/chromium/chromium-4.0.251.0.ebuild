@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.251.0.ebuild,v 1.3 2009/11/19 13:42:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.251.0.ebuild,v 1.4 2009/11/24 10:41:12 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -37,6 +37,9 @@ DEPEND="${RDEPEND}
 export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 
 src_prepare() {
+	# Gentoo uses .kde4, not .kde
+	sed -e 's/\.kde/.kde4/' -i net/proxy/proxy_config_service_linux.cc \
+		|| die "kde proxy sed failed"
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
