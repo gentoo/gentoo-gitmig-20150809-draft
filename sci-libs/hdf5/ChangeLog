@@ -1,6 +1,9 @@
 B1;1704;0c# ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.43 2009/11/20 22:41:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.44 2009/11/24 04:41:44 markusle Exp $
+
+  24 Nov 2009; Markus Dittrich <markusle@gentoo.org> hdf5-1.6.7.ebuild:
+  Added a few improvements.
 
 *hdf5-1.8.4 (20 Nov 2009)
 

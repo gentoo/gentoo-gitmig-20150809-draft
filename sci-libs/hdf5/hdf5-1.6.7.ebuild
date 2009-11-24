@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.7.ebuild,v 1.4 2009/09/23 20:11:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.7.ebuild,v 1.5 2009/11/24 04:41:44 markusle Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -212,13 +212,11 @@ src_install() {
 	fi
 
 	dodoc README.txt
-	dohtml doc/html/*
+	dohtml -r doc/html/*
 
 	if use mpi ; then
-	    mv "${D}"usr/bin/h5pcc "${D}"usr/bin/h5cc
-	fi
-	if use fortran ; then
-	    mv "${D}"usr/bin/h5pfc "${D}"usr/bin/h5fc
+	    mv "${D}"usr/bin/h5pcc "${D}"usr/bin/h5cc \
+			|| die "failed to move h5pcc"
 	fi
 }
 
