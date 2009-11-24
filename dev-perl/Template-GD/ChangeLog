@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-GD
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.15 2008/12/13 12:51:59 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.16 2009/11/24 17:23:43 tove Exp $
+
+  24 Nov 2009; Torsten Veller <tove@gentoo.org> Template-GD-2.66.ebuild:
+  Test need png support in GD (#294373)
 
   13 Dec 2008; Alexis Ballier <aballier@gentoo.org> Template-GD-2.66.ebuild:
   keyword ~x86-fbsd
