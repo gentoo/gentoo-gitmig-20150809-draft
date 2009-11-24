@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.36 2009/11/16 23:41:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.37 2009/11/24 20:19:47 klausman Exp $
+
+  24 Nov 2009; Tobias Klausmann <klausman@gentoo.org> plib-1.8.5.ebuild:
+  Stable on alpha, bug #290969
 
   16 Nov 2009; Jeroen Roovers <jer@gentoo.org> plib-1.8.5.ebuild:
   Stable for HPPA (bug #290969).
