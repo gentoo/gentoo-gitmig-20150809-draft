@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Attribute-Handlers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.1 2009/11/23 18:58:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.2 2009/11/24 09:45:37 aballier Exp $
+
+  24 Nov 2009; Alexis Ballier <aballier@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  keyword ~x86-fbsd, bug #294206
 
 *perl-Attribute-Handlers-0.87 (23 Nov 2009)
 
