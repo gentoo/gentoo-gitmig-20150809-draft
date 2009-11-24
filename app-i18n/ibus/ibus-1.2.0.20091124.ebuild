@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20091014-r1.ebuild,v 1.1 2009/10/19 16:39:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20091124.ebuild,v 1.1 2009/11/24 14:31:11 matsuu Exp $
 
 EAPI="1"
 inherit eutils gnome2-utils multilib python
@@ -46,6 +46,7 @@ src_unpack() {
 	cd "${S}"
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
+	echo "ibus/_config.py" >> po/POTFILES.skip || die
 }
 
 src_compile() {
