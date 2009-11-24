@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.2 2009/01/09 16:15:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.3 2009/11/24 04:33:02 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -18,7 +18,7 @@ RDEPEND=">=dev-games/guichan-0.8[opengl,sdl]
 	media-libs/libpng
 	virtual/opengl
 	virtual/glu
-	media-libs/libsdl
+	media-libs/libsdl[video]
 	media-libs/sdl-image[gif,jpeg,png]
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
