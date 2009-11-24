@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.2 2009/11/14 19:23:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.3 2009/11/24 15:13:23 flameeyes Exp $
+
+*lxc-0.6.4 (24 Nov 2009)
+
+  24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> +lxc-0.6.4.ebuild:
+  Version bump, improve checking of kernel features.
 
   14 Nov 2009; Sven Wegener <swegener@gentoo.org> lxc-0.6.3.ebuild:
   Add ~x86 keyword.
