@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.7.ebuild,v 1.1 2009/11/04 06:25:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.7-r1.ebuild,v 1.1 2009/11/24 07:40:17 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -50,7 +50,11 @@ src_prepare() {
 }
 
 src_install () {
-	dobin bin/ds9 || die "failed installing ds9 binary"
+	newbin bin/ds9 ds9.exe || die "failed installing ds9 binary"
+	echo "#!/bin/sh" > ds9
+	echo "LD_LIBRARY_PATH=$(dir -d ${ROOT}usr/$(get_libdir)/Tclxml*) ds9.exe" >> ds9.sh
+	exeinto /usr/bin
+	newexe ds9.sh ds9
 	insinto /usr/share/${PN}
 	doins -r ds9/zipdir/zvfsmntpt/* || die
 	dodoc README acknowledgement || die "failed installing basic doc"

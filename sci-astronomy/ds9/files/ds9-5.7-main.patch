@@ -24,7 +24,7 @@ diff -Nur saods9.orig/ds9/ds9.C saods9/ds9/ds9.C
  
    // invoke startup script
 -  TclSetStartupScriptFileName("./zvfsmntpt/src/ds9.tcl");
-+  TclSetStartupScriptFileName("/usr/share/ds9/ds9.tcl");
++  TclSetStartupScriptFileName("/usr/share/ds9/src/ds9.tcl");
  }
  
  Tcl_Interp *global_interp;
