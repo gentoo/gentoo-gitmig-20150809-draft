@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10886 2009/11/25 16:43:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10887 2009/11/25 18:41:13 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (25 Nov 2009)
+#  on behalf of QA team
+#
+# Fails to build, bug #250372 opened in December 2008.
+#
+# Removal on 2010-01-24
+sci-visualization/gfsview
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (25 Nov 2009)
 #  on behalf of QA team
