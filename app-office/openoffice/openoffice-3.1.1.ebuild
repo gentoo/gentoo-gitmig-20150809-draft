@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.19 2009/11/25 11:43:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.20 2009/11/25 12:32:52 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -395,7 +395,7 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	BASH_COMPLETION_NAME=ooffice && bash-completion_pkg_postinst
 
-	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
+	( [[ -x /sbin/chpax ]] || [[ -x /sbin/paxctl ]] ) && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && scanelf -Xzm /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	# Add available & useful jars to openoffice classpath
 	use java && /usr/$(get_libdir)/openoffice/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
