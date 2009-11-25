@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.11 2009/09/30 09:04:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.12 2009/11/25 19:20:22 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="bogofilter crypt dbus dillo doc gnome gnutls imap ipv6 kde ldap nntp pda session smime spamassassin spell ssl startup-notification xface"
+IUSE="bogofilter crypt dbus dillo doc gnome gnutls imap ipv6 ldap nntp pda session smime spamassassin spell ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.6
 	pda? ( >=app-pda/jpilot-0.99 )
@@ -22,7 +22,6 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	dillo? ( www-client/dillo )
 	spell? ( >=app-text/enchant-1.0.0 )
-	kde? ( kde-base/kdelibs )
 	imap? ( >=net-libs/libetpan-0.57 )
 	nntp? ( >=net-libs/libetpan-0.57 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
@@ -105,24 +104,6 @@ src_install() {
 	exeinto /usr/$(get_libdir)/${PN}/tools
 	doexe *.pl *.py *.conf *.sh || die
 	doexe tb2claws-mail update-po uudec uuooffice || die
-
-	if use kde; then
-		einfo "Installing kde service scripts"
-		local kdeprefix="$(kde-config --prefix)"
-		local servicescript="${PN}-kdeservicemenu.pl"
-		local desktopfile="${PN}-attach-files.desktop"
-		cd "${S}"/tools/kdeservicemenu
-		sed -i -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" \
-			${desktopfile}.template
-		dodir /usr/share/apps/konqueror/servicemenus
-		insopts -m 0644
-		insinto /usr/share/apps/konqueror/servicemenus
-		newins ${desktopfile}.template ${desktopfile} || die
-		dodir ${kdeprefix}/bin
-		insopts -m 755
-		exeinto ${kdeprefix}/bin
-		doexe ${servicescript} || die
-	fi
 
 	# kill useless plugin files
 	rm -f "${D}"/usr/lib*/${PN}/plugins/*.{la,a}
