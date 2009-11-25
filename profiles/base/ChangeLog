@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.110 2009/11/11 16:53:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.111 2009/11/25 16:24:13 alexxy Exp $
+
+  25 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  Mask infiniband use flag. OFED stack available via science overlay
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Unmask USE arts for app-emulation/emul-linux-x86-soundlibs, required by
