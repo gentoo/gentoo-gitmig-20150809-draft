@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.17 2009/09/03 13:41:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.18 2009/11/25 16:54:46 matsuu Exp $
+
+  25 Nov 2009; MATSUU Takuto <matsuu@gentoo.org> -libev-3.53.ebuild,
+  -libev-3.80.ebuild:
+  Removed old versions.
 
 *libev-3.80-r1 (03 Sep 2009)
 
