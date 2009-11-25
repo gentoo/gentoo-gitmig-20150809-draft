@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.18 2009/11/25 09:43:12 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.19 2009/11/25 11:43:59 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -155,10 +155,7 @@ pkg_setup() {
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
 	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
-	ewarn " merge again. Also note that building OOo takes a lot of time and "
-	ewarn " hardware ressources: 4-6 GB free diskspace and 256 MB RAM are "
-	ewarn " the minimum requirements. If you have less, use openoffice-bin "
-	ewarn " instead. "
+	ewarn " merge again. "
 	ewarn
 	ewarn " Also if you experience a build break, please make sure to retry "
 	ewarn " with MAKEOPTS="-j1" before filing a bug. "
@@ -166,7 +163,7 @@ pkg_setup() {
 
 	# Check if we have enough RAM and free diskspace to build this beast
 	CHECKREQS_MEMORY="512"
-	use debug && CHECKREQS_DISK_BUILD="8192" || CHECKREQS_DISK_BUILD="6144"
+	use debug && CHECKREQS_DISK_BUILD="12288" || CHECKREQS_DISK_BUILD="6144"
 	check_reqs
 
 	strip-linguas ${LANGS}

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.497 2009/11/25 09:43:12 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.498 2009/11/25 11:43:59 suka Exp $
+
+  25 Nov 2009; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.1.1.ebuild:
+  Remove outdated mem- and disk-requirement info, also raise disk-usage 
+  warning for debug builds
 
   25 Nov 2009; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.1.1.ebuild, +files/ooo-build-patchver.diff:
