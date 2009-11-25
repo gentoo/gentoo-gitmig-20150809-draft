@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.47 2009/11/23 13:29:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.48 2009/11/25 22:57:18 tcunha Exp $
+
+  25 Nov 2009; Tiago Cunha <tcunha@gentoo.org> sonata-1.6.2.1.ebuild:
+  stable sparc, bug 293976
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> sonata-1.6.2.1.ebuild:
   amd64/x86 stable, bug #293976
