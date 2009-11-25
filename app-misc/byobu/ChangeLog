@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/byobu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.6 2009/08/03 16:03:01 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.7 2009/11/25 19:32:53 weaver Exp $
+
+*byobu-2.38 (25 Nov 2009)
+
+  25 Nov 2009; Andrey Kislyuk <weaver@gentoo.org> +byobu-2.38.ebuild:
+  Version bump, sync with Karmic
 
 *byobu-2.24 (03 Aug 2009)
 
