@@ -1,18 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p1-r1.ebuild,v 1.2 2009/11/13 12:37:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p2.ebuild,v 1.1 2009/11/25 09:36:05 idl0r Exp $
 
 EAPI="2"
 
 inherit eutils autotools toolchain-funcs flag-o-matic
 
-MY_PV="${PV/_p1/-P1}"
+MY_PV="${PV/_p/-P}"
 MY_P="${PN}-${MY_PV}"
 
 SDB_LDAP_VER="1.1.0"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
-HOMEPAGE="https://www.isc.org/software/bind"
+HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
