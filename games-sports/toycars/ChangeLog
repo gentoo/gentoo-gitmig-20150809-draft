@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/toycars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.14 2009/08/12 20:37:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.15 2009/11/25 14:27:06 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> toycars-0.3.10.ebuild:
+  amd64/x86 stable, bug #294341
 
   12 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> toycars-0.3.10.ebuild,
   +files/toycars-0.3.10-glibc-2.10.patch:
