@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer><email>hanno@gentoo.org</email></maintainer>
-<use>
-	<flag name='chipcard'>
-		Enable support for DDV/RSA-chipcards
-	</flag>
-	<flag name='dtaus'>
-		Enable dtaus backend
-	</flag>
-	<flag name='geldkarte'>
-		Enable geldkarte backend
-	</flag>
-	<flag name='hbci'>
-		Enable support for HBCI
-	</flag>
-	<flag name='yellownet'>
-		Enable support for Yellownet
-	</flag>
-</use>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>hanno@gentoo.org</email></maintainer>
+  <use>
+    <flag name='chipcard'>Enable support for DDV/RSA-chipcards</flag>
+  </use>
 </pkgmetadata>

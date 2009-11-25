@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.75 2009/10/22 16:31:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.76 2009/11/25 17:10:14 ssuominen Exp $
+
+  25 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  aqbanking-4.0.0.ebuild, aqbanking-4.1.4.ebuild:
+  Remove kde-base/kdelibs:3.5 support wrt #292846.
 
   22 Oct 2009; Raúl Porcel <armin76@gentoo.org> aqbanking-4.0.0.ebuild:
   sparc stable wrt #275705
