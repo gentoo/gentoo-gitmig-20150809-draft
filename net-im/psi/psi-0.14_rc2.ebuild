@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14_rc1.ebuild,v 1.1 2009/11/13 10:10:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14_rc2.ebuild,v 1.1 2009/11/25 15:19:22 pva Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ HOMEPAGE="http://psi-im.org/"
 # http://lists.affinix.com/pipermail/psi-devel-affinix.com/2009-August/008798.html
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-0.13-20090817_langpack_for_packagers.zip
-	extras? ( mirror://gentoo/${PN}-extra-patches-r1326.tar.bz2
-		mirror://gentoo/${PN}-extra-iconsets-r1326.tar.bz2 )"
+	extras? ( mirror://gentoo/${PN}-extra-patches-r1393.tar.bz2
+		mirror://gentoo/${PN}-extra-iconsets-r1393.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -59,9 +59,12 @@ src_prepare() {
 		ewarn "that fail too."
 		ebeep
 
+		echo "		755-psiplus-fix-application-info-defines.diff
+		9999-psiplus-application-info.diff"
+
 		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE}
-		755-psiplus-fix-application-info-defines.diff
-		9999-psiplus-application-info.diff" \
+			755-psiplus-fix-application-info-defines.diff
+			9999-psiplus-application-info.diff" \
 		EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch
 		sed -e 's/\(^#define PROG_CAPS_NODE	\).*/\1"http:\/\/psi-dev.googlecode.com\/caps";/' \
 			-e 's:\(^#define PROG_NAME "Psi\):\1+:' \
