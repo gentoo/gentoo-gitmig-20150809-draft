@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.183 2009/11/24 20:47:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.184 2009/11/25 10:55:52 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> tor-0.2.1.19-r2.ebuild:
+  amd64 stable, bug #294297
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   tor-0.2.1.19-r2.ebuild:
