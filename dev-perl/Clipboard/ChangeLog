@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clipboard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.6 2009/11/19 14:45:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.7 2009/11/25 10:19:15 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> Clipboard-0.09.ebuild:
+  amd64 stable, bug #284544
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   Clipboard-0.09.ebuild:
