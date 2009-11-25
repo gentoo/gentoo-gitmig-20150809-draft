@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.4.0.5.ebuild,v 1.2 2009/11/10 21:56:13 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.4.0.5.ebuild,v 1.3 2009/11/25 13:55:57 maekke Exp $
 
 inherit eutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="amd64? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxclient-${FUL
 	x86? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxclient-${FULL_PV}.i386.tar.gz )"
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip"
 

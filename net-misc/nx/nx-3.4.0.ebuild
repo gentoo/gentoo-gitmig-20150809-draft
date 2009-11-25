@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0.ebuild,v 1.2 2009/11/10 21:56:46 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0.ebuild,v 1.3 2009/11/25 13:57:46 maekke Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -21,7 +21,7 @@ SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY $UR
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXau

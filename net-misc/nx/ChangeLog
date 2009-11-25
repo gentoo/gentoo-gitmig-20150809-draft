@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.47 2009/11/10 21:56:46 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.48 2009/11/25 13:57:46 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> nx-3.4.0.ebuild:
+  x86 stable, bug #291619
 
   10 Nov 2009; Richard Freeman <rich0@gentoo.org> nx-3.4.0.ebuild:
   amd64 stable - 291619

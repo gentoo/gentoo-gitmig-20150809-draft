@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.80 2009/11/10 21:56:13 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.81 2009/11/25 13:55:57 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> nxclient-3.4.0.5.ebuild:
+  x86 stable, bug #291619
 
   10 Nov 2009; Richard Freeman <rich0@gentoo.org> nxclient-3.4.0.5.ebuild:
   amd64 stable - 291619
