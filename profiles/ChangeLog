@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3605 2009/11/25 10:28:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3606 2009/11/25 11:55:20 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking www-apps/Embperl for QA removal.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> package.mask:
   drop media-gfx/inkscape-0.47 mask as the final version is in tree
