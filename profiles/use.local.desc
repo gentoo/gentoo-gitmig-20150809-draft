@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5040 2009/11/25 02:11:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5041 2009/11/25 12:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -259,6 +259,7 @@ app-emulation/libvirt:udev - Use sys-fs/udev to determine available devices
 app-emulation/libvirt:uml - Add support for User Mode Linux based virtual machines
 app-emulation/libvirt:virtualbox - Adds support for VirtualBox based virtual machines
 app-emulation/libvirt:xen - Add support for app-emulation/xen based virtual machines
+app-emulation/lxc:doc -  Build documentation and man pages. This is optional since it requires extra dependencies. If you don't enable this flag, you will have no man pages. 
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
 app-emulation/mol:sheep - Support for the sheep net driver
