@@ -1,6 +1,9 @@
 # ChangeLog for media-video/clive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.59 2009/11/19 14:53:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.60 2009/11/25 10:23:22 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> clive-2.2.6.ebuild:
+  amd64 stable, bug #284544
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> clive-2.2.6.ebuild:
   stable x86, bug 284544
