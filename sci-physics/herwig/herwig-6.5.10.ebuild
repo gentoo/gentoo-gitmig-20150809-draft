@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.10.ebuild,v 1.2 2009/09/09 22:03:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.10.ebuild,v 1.3 2009/11/25 22:11:29 maekke Exp $
 
 EAPI=2
 inherit versionator autotools
@@ -21,7 +21,7 @@ SRC_URI="${COM_URI}/${MY_P}.f
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="!sci-physics/cernlib-montecarlo[herwig]"
