@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10.ebuild,v 1.2 2009/11/23 20:52:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10.ebuild,v 1.3 2009/11/25 15:44:03 jer Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ QA_PRESTRIPPED="
 	opt/${PN}/lib/opera/${PV/_pre*}/operapluginwrapper
 "
 
-IUSE="elibc_FreeBSD gnome ia32 qt3 qt-static"
+IUSE="elibc_FreeBSD gnome qt3 qt-static"
 MY_LINGUAS="be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk zh-CN zh-HK zh-TW"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
@@ -38,19 +38,10 @@ O_U="mirror://opera/linux/1010/final/en/"
 
 SRC_URI="
 	amd64? (
-		!ia32? (
-			qt-static? ( ${O_U}x86_64/${P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
-			!qt-static? (
-				qt3? ( ${O_U}x86_64/${P}.gcc4-shared-qt3.x86_64.tar.bz2 )
-				!qt3? ( ${O_U}x86_64/${P}.gcc4-qt4.x86_64.tar.bz2 )
-			)
-		)
-		ia32? (
-			qt-static? ( ${O_U}i386/${P}.gcc4-bundled-qt4.i386.tar.bz2 )
-			!qt-static? (
-				qt3? ( ${O_U}i386/shared/${P}.gcc4-shared-qt3.i386.tar.bz2 )
-				!qt3? ( ${O_U}i386/${P}.gcc4-qt4.i386.tar.bz2 )
-			)
+		qt-static? ( ${O_U}x86_64/${P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
+		!qt-static? (
+			qt3? ( ${O_U}x86_64/${P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+			!qt3? ( ${O_U}x86_64/${P}.gcc4-qt4.x86_64.tar.bz2 )
 		)
 	)
 	ppc? ( ${O_U}ppc/shared/${P}.gcc4-shared-qt3.ppc.tar.bz2 )
@@ -81,19 +72,10 @@ RDEPEND="
 	x11-libs/libSM
 	x11-libs/libICE
 	amd64? (
-		ia32? (
-			qt-static? ( media-libs/nas )
-			!qt-static? (
-				qt3? ( =x11-libs/qt-3*[-immqt] )
-				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
-			)
-		)
-		!ia32? (
-			qt-static? ( media-libs/nas )
-			!qt-static? (
-				qt3? ( =x11-libs/qt-3*[-immqt] )
-				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
-			)
+		qt-static? ( media-libs/nas )
+		!qt-static? (
+			qt3? ( =x11-libs/qt-3*[-immqt] )
+			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
 		)
 	)
 	ppc? ( =x11-libs/qt-3*[-immqt] )
