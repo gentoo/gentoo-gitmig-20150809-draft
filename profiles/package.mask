@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10883 2009/11/25 13:30:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10884 2009/11/25 13:37:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -231,6 +231,13 @@ x11-misc/switcher
 media-gfx/kst
 sci-electronics/ktechlab
 app-text/kbibtex
+net-ftp/kftpgrabber
+media-video/okle
+media-video/ksubtile
+media-video/kmenc15
+media-radio/qsstv
+media-radio/qgrid
+media-gfx/potracegui
 
 # Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2009)
 # For deprecated media-sound/amarok:3.5. Masked for removal in 30 days.
