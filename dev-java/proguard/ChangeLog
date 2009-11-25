@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/proguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.18 2009/11/04 15:28:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.19 2009/11/25 09:56:31 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> proguard-4.3.ebuild:
+  amd64 stable, bug #284296
 
 *proguard-4.4 (04 Nov 2009)
 
