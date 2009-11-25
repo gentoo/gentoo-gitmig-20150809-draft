@@ -1,6 +1,6 @@
 --- saods9.orig/src/ds9.tcl	2009-11-04 02:32:17.000000000 +0000
 +++ saods9/src/ds9.tcl	2009-11-04 02:50:39.000000000 +0000
-@@ -34,24 +34,34 @@
+@@ -34,24 +34,32 @@
  option add {*Label*BorderWidth} 2
  
  # initialize
@@ -13,7 +13,6 @@
 +package require http
  
 -source $ds9(root)/tk8.4/tearoff.tcl
-+package require tearoff
  
 -source $ds9(root)/tcllib1.10/base64/base64.tcl
 -source $ds9(root)/tcllib1.10/log/log.tcl
@@ -33,7 +32,6 @@
 +package require textutil::tabify
 +
 +package require tkcon
-+package require xmlrpc
 +
 +package require BLT
 +package require Tktable
