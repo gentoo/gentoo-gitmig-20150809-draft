@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.12 2009/10/07 17:30:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.13 2009/11/25 22:16:57 maekke Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.orig.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="web doc samba"
 
 DEPEND=">=dev-python/twisted-2
