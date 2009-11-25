@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/comical
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.8 2009/09/27 13:49:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.9 2009/11/25 22:16:00 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> comical-0.8.ebuild:
+  amd64 stable, bug #286321
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> comical-0.8.ebuild:
   assign RDEPEND
