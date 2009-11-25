@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/librep
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.53 2009/03/08 20:06:34 truedfx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.54 2009/11/25 20:58:35 truedfx Exp $
+
+*librep-0.90.3 (25 Nov 2009)
+
+  25 Nov 2009; Harald van Dĳk <truedfx@gentoo.org> +librep-0.90.3.ebuild:
+  Version bump
 
 *librep-0.17.3 (05 Mar 2009)
 

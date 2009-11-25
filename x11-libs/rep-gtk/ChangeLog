@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/rep-gtk
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.58 2009/03/08 20:06:34 truedfx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.59 2009/11/25 20:58:35 truedfx Exp $
+
+*rep-gtk-0.90.0 (25 Nov 2009)
+
+  25 Nov 2009; Harald van Dĳk <truedfx@gentoo.org> +rep-gtk-0.90.0.ebuild:
+  Version bump
 
 *rep-gtk-0.18.4 (05 Mar 2009)
 
