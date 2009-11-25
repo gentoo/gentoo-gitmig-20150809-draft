@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2.ebuild,v 1.2 2009/11/23 23:02:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r1.ebuild,v 1.1 2009/11/25 00:24:36 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,12 +14,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac adplug alsa bs2b cdda cue esd flac ffmpeg gnome icecast ipv6 jack lame lirc
-mp3 mtp nls oss pulseaudio projectm scrobbler sdl sid sndfile sse2 vorbis wavpack"
+midi mp3 mtp nls oss pulseaudio projectm scrobbler sdl sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
-	>=media-sound/audacious-2.2_beta2
+	>=media-sound/audacious-2.2
 	>=net-misc/neon-0.26.4
 	>=x11-libs/gtk+-2.14
 	aac? ( >=media-libs/faad2-2.7-r1 )
@@ -40,7 +40,8 @@ RDEPEND="app-arch/unzip
 	mp3? ( media-libs/libmad )
 	mtp? ( media-libs/libmtp )
 	projectm? ( >=media-libs/libprojectm-1.2.0
-		>=media-libs/libsdl-1.2.5 )
+		>=media-libs/libsdl-1.2.5
+		x11-libs/gtkglext )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
 	sdl? (	>=media-libs/libsdl-1.2.5 )
@@ -95,6 +96,7 @@ src_compile() {
 		$(use_enable lame filewriter_mp3) \
 		$(use_enable lirc) \
 		$(use_enable mp3) \
+		$(use_enable midi amidiplug) \
 		$(use_enable mtp mtp_up) \
 		$(use_enable nls) \
 		$(use_enable oss) \
