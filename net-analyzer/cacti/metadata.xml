@@ -16,9 +16,6 @@
 		devices.
 	</longdescription>
 	<use>
-		<flag name='bundled-adodb'>use adodb bundled with web-application instead of system wide</flag>
-	</use>
-	<use>
 		<flag name='doc'>install html documentation</flag>
 	</use>
 </pkgmetadata>
