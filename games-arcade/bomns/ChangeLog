@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/bomns
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.5 2009/10/14 20:12:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.6 2009/11/25 14:03:35 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> bomns-0.99.2.ebuild:
+  amd64/x86 stable, bug #294334
 
 *bomns-0.99.2 (14 Oct 2009)
 
