@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.148 2009/11/25 00:24:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.149 2009/11/25 01:49:32 robbat2 Exp $
+
+*audacious-plugins-2.2-r2 (25 Nov 2009)
+
+  25 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +audacious-plugins-2.2-r2.ebuild, metadata.xml:
+  Less automagic - explicit control over use of fluidsynth as the midi synth
+  backend. ACKed by chainsaw.
 
 *audacious-plugins-2.2-r1 (25 Nov 2009)
 
