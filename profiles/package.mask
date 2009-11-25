@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10878 2009/11/25 06:21:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10879 2009/11/25 10:28:04 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -640,10 +640,6 @@ media-sound/teamspeak2-client-bin
 # more than you need. This meta ebuild will be removed when we can add sets
 # to the portage tree.
 =x11-libs/qt-4*
-
-# Markus Meier <maekke@gentoo.org> (13 Jun 2009)
-# mask pre releases of media-gfx/inkscape-0.47
->=media-gfx/inkscape-0.47_pre0
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (10 Jun 2009)
 # Several feature regressions that will make our users
