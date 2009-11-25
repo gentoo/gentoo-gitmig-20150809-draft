@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.4.0.8.ebuild,v 1.3 2009/11/25 13:57:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.4.0.8.ebuild,v 1.4 2009/11/25 14:00:17 maekke Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="amd64? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/FE/nxserver-${
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip"
 

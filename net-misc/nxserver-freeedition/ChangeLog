@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.44 2009/11/25 13:57:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.45 2009/11/25 14:00:17 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org>
+  nxserver-freeedition-3.4.0.8.ebuild:
+  amd64 stable, bug #291619
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org>
   nxserver-freeedition-3.4.0.8.ebuild:

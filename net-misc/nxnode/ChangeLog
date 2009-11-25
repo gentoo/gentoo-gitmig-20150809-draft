@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.50 2009/11/25 13:56:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.51 2009/11/25 13:59:42 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> nxnode-3.4.0.6.ebuild:
+  amd64 stable, bug #291619
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> nxnode-3.4.0.6.ebuild:
   x86 stable, bug #291619
