@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.423 2009/11/25 15:44:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.424 2009/11/25 22:42:26 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> opera-10.10.ebuild:
+  amd64 stable, bug #294208
 
   25 Nov 2009; Jeroen Roovers <jer@gentoo.org> opera-10.01.ebuild,
   opera-10.10.ebuild, metadata.xml:
