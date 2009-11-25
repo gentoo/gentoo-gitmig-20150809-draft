@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9.ebuild,v 1.1 2009/04/19 06:28:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9.ebuild,v 1.2 2009/11/25 19:34:10 ssuominen Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -85,8 +85,6 @@ pkg_postinst() {
 	elog
 	elog "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	elog "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
-	elog
-	elog "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
 	elog
 	elog "To use Chinese input methods:"
 	elog "	# emerge app-i18n/scim-tables app-i18n/scim-pinyin"
