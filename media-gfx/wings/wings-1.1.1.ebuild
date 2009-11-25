@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-1.1.1.ebuild,v 1.3 2009/11/19 14:54:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-1.1.1.ebuild,v 1.4 2009/11/25 11:21:48 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/wings/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/erlang-13.0
