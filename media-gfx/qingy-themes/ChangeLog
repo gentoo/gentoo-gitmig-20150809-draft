@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/qingy-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.6 2009/11/08 18:56:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.7 2009/11/25 22:21:37 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org>
+  qingy-themes-20050816.ebuild:
+  amd64 stable, bug #286646
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> qingy-themes-20050816.ebuild:
   ppc stable #286646
