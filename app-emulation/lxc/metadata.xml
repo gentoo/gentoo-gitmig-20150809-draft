@@ -8,4 +8,11 @@
   <maintainer>
     <email>dev-zero@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="doc">
+      Build documentation and man pages. This is optional since it
+      requires extra dependencies. If you don't enable this flag, you
+      will have no man pages.
+    </flag>
+  </use>
 </pkgmetadata>

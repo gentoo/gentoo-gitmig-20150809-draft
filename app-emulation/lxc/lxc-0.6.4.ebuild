@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.4.ebuild,v 1.2 2009/11/24 15:17:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.4.ebuild,v 1.3 2009/11/25 12:16:28 flameeyes Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="doc examples"
+IUSE="+doc examples"
 
 RDEPEND="sys-libs/libcap"
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.4 2009/11/24 15:17:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.5 2009/11/25 12:16:28 flameeyes Exp $
+
+  25 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> lxc-0.6.4.ebuild,
+  metadata.xml:
+  Enable doc USE flag by default and explicit in the description that it
+  enables the man pages as well.
 
   24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> lxc-0.6.4.ebuild:
   Remove autotools inherit and add the ~x86 KEYWORD.
