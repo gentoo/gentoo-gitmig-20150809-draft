@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3603 2009/11/25 01:13:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3604 2009/11/25 06:21:16 beandog Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Nov 2009; Steve Dibb <beandog@gentoo.org> package.mask:
+  Mask media-libs/x264-0.0.20091124 for testing
 
   25 Nov 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Temporary mask of latest mplayer and ffmpeg bumps wrt bug 294469
