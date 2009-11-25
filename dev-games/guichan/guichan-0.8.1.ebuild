@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.1.ebuild,v 1.5 2009/02/03 15:54:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.1.ebuild,v 1.6 2009/11/25 14:29:42 maekke Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://guichan.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="allegro opengl sdl"
 
 DEPEND="allegro? ( media-libs/allegro )
