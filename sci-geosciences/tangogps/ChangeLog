@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/tangogps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/ChangeLog,v 1.5 2009/11/20 09:33:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/ChangeLog,v 1.6 2009/11/25 08:51:16 bangert Exp $
+
+*tangogps-0.99.1 (25 Nov 2009)
+
+  25 Nov 2009; Thilo Bangert <bangert@gentoo.org> +tangogps-0.99.1.ebuild:
+  version bump - bug #294104
 
 *tangogps-0.9.9 (20 Nov 2009)
 
