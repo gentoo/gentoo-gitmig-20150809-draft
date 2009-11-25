@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3602 2009/11/24 17:28:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3603 2009/11/25 01:13:47 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Nov 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Temporary mask of latest mplayer and ffmpeg bumps wrt bug 294469
 
   24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking app-forensics/airt for QA removal.
