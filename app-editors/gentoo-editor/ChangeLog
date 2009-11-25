@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gentoo-editor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.3 2009/11/24 18:26:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.4 2009/11/25 10:17:11 jer Exp $
+
+  25 Nov 2009; Jeroen Roovers <jer@gentoo.org> gentoo-editor-2.ebuild:
+  Marked ~hppa (bug #293985).
 
 *gentoo-editor-2 (24 Nov 2009)
 
