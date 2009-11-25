@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.60 2009/11/19 14:41:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.61 2009/11/25 10:04:04 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> lucene-2.4.1.ebuild:
+  amd64 stable, bug #284325
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> lucene-2.4.1.ebuild:
   stable x86, bug 284325
