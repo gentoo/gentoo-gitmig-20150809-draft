@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/diameter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/ChangeLog,v 1.4 2009/01/09 16:15:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/ChangeLog,v 1.5 2009/11/25 14:30:18 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> diameter-0.4.0.3.ebuild:
+  amd64/x86 stable, bug #294344
 
   09 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   diameter-0.4.0.3.ebuild:
