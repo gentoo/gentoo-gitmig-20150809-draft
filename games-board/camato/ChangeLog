@@ -1,6 +1,9 @@
 # ChangeLog for games-board/camato
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/camato/ChangeLog,v 1.5 2009/10/14 19:43:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/camato/ChangeLog,v 1.6 2009/11/25 14:07:32 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> camato-0.7.4.ebuild:
+  amd64/x86 stable, bug #294345
 
   14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> camato-0.7.4.ebuild:
   EAPI=2
