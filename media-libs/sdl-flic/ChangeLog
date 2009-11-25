@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-flic
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/ChangeLog,v 1.6 2008/12/06 16:50:21 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/ChangeLog,v 1.7 2009/11/25 16:01:10 nyhm Exp $
+
+  25 Nov 2009; Tristan Heaven <nyhm@gentoo.org> sdl-flic-1.2.ebuild:
+  Install into correct libdir, bug #284488
 
   06 Dec 2008; Tristan Heaven <nyhm@gentoo.org> files/Makefile,
   sdl-flic-1.2.ebuild:

@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/sdl-flic-1.2.ebuild,v 1.5 2008/12/06 16:50:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/sdl-flic-1.2.ebuild,v 1.6 2009/11/25 16:01:10 nyhm Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="FLIC animation file loading library"
 HOMEPAGE="http://www.geocities.com/andre_leiradella/#sdl_flic"
@@ -26,6 +26,10 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake \
+		DESTDIR="${D}" \
+		LIBDIR=/usr/$(get_libdir) \
+		install \
+		|| die "emake install failed"
 	dodoc README.txt
 }
