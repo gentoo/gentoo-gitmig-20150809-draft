@@ -1,6 +1,9 @@
 # ChangeLog for games-util/gamepick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/ChangeLog,v 1.10 2009/10/14 19:31:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/ChangeLog,v 1.11 2009/11/25 14:04:17 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> gamepick-0.35.ebuild:
+  amd64/x86 stable, bug #294336
 
   14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> gamepick-0.35.ebuild:
   EAPI=2
