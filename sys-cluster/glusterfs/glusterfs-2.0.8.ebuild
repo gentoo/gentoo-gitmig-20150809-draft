@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.8.ebuild,v 1.2 2009/11/25 20:04:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.8.ebuild,v 1.3 2009/11/25 20:28:03 alexxy Exp $
 
 EAPI="2"
 
@@ -63,9 +63,9 @@ src_install() {
 	fi
 
 	if use extras ; then
-		dobin extras/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
-		dobin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || 	die "Failed to install bins"
-		dobin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die "Failed to install bins"
+		newbin extras/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
+		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die "Failed to install bins"
+		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die "Failed to install bins"
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS || die "dodoc failed"
