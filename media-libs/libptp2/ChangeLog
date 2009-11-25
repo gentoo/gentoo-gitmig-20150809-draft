@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libptp2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.21 2008/06/22 22:06:12 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.22 2009/11/25 09:53:23 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> libptp2-1.1.10.ebuild:
+  amd64 stable, bug #284445
 
   22 Jun 2008; Daniel Black <dragonheart@gentoo.org> -libptp2-1.1.0.ebuild:
   purge 1.1.0
