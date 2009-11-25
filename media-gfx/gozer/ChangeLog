@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gozer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.13 2009/09/25 16:17:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.14 2009/11/25 22:19:57 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> gozer-0.7-r1.ebuild:
+  amd64 stable, bug #286411
 
   25 Sep 2009; Jeroen Roovers <jer@gentoo.org> gozer-0.7-r1.ebuild:
   Fix HOMEPAGE.
