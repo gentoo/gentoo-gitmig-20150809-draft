@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5045 2009/11/25 16:47:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5046 2009/11/25 17:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2342,11 +2342,7 @@ net-irc/xchat-gnome:sound - Enable sound event support with media-libs/libcanber
 net-irc/xchat-xsys:audacious - Enables media-sound/audacious integration
 net-irc/znc:ares - Enables support for asynchronous DNS using the c-ares library
 net-irc/znc:nomodules - Don't build modules
-net-libs/aqbanking:chipcard -  Enable support for DDV/RSA-chipcards 
-net-libs/aqbanking:dtaus -  Enable dtaus backend 
-net-libs/aqbanking:geldkarte -  Enable geldkarte backend 
-net-libs/aqbanking:hbci -  Enable support for HBCI 
-net-libs/aqbanking:yellownet -  Enable support for Yellownet 
+net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
 net-libs/clinkcc:mythtv - Enable MythTV support
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/cvm:vpopmail - Enable vpopmail support
