@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.3.2.ebuild,v 1.2 2009/05/06 15:57:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.3.2.ebuild,v 1.3 2009/11/25 02:11:07 vapier Exp $
 
 EAPI=2
-inherit eutils
 
 DESCRIPTION="A framework for managing DNS information"
 HOMEPAGE="http://roy.marples.name/projects/openresolv"
@@ -24,9 +23,9 @@ pkg_setup() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	exeinto /lib/resolvconf/
-	doexe "${FILESDIR}/pdnsd"
+	doexe "${FILESDIR}/pdnsd" || die
 }
 
 pkg_postinst() {
