@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.18 2009/04/15 07:36:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.19 2009/11/25 20:34:27 fauli Exp $
+
+  25 Nov 2009; Christian Faulhammer <fauli@gentoo.org> mg-20090107.ebuild:
+  import changes from Prefix overlay
 
   15 Apr 2009; Christian Faulhammer <fauli@gentoo.org> -mg-20080610.ebuild:
   clean up
