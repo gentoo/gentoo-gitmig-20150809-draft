@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.10.ebuild,v 1.2 2009/09/12 10:24:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.10.ebuild,v 1.3 2009/11/25 09:51:46 maekke Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pypi.python.org/packages/source/o/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/twisted-web

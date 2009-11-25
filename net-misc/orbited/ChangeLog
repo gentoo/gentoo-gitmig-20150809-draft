@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/orbited
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.4 2009/09/12 10:24:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.5 2009/11/25 09:51:46 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> orbited-0.7.10.ebuild:
+  amd64 stable, bug #281571
 
   12 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   orbited-0.7.10.ebuild:
