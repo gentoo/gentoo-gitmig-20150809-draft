@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.31 2009/06/28 14:06:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.32 2009/11/25 13:43:09 rbu Exp $
+
+*dstat-0.6.9-r1 (25 Nov 2009)
+
+  25 Nov 2009; Robert Buchholz <rbu@gentoo.org> +dstat-0.6.9-r1.ebuild,
+  +files/dstat-0.6.9-CVE-2009-3894.patch:
+  Fix Untrusted Search Path Vulnerability (CVE-2009-3894), bug 293497.
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org> dstat-0.6.9.ebuild:
   Keyworded on alpha, bug #274851
