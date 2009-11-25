@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.26.00.ebuild,v 1.2 2009/07/08 20:31:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.26.00.ebuild,v 1.3 2009/11/25 14:26:31 maekke Exp $
 
 inherit versionator
 
@@ -13,7 +13,7 @@ SRC_URI="x86? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )
 
 LICENSE="fmod"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 RDEPEND=""
