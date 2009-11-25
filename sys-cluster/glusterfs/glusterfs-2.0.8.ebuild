@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.8.ebuild,v 1.1 2009/11/25 16:25:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.8.ebuild,v 1.2 2009/11/25 20:04:05 alexxy Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="emacs +fuse infiniband static vim-syntax extras"
 
 DEPEND="emacs? ( virtual/emacs )
 		fuse? ( >=sys-fs/fuse-2.7.0 )
-		infiniband? ( sys-cluster/libibverbs )"
+		infiniband? ( sys-infiniband/libibverbs )"
 RDEPEND="${DEPEND}
 		!net-fs/glusterfs"
 
