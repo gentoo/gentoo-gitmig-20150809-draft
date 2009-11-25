@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.153 2009/11/21 18:11:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.154 2009/11/25 11:14:41 pva Exp $
+
+*cacti-0.8.7e-r1 (25 Nov 2009)
+
+  25 Nov 2009; Peter Volkov <pva@gentoo.org> -cacti-0.8.6j-r8.ebuild,
+  -files/cacti-0.8.6j-dos-large-values.patch, -cacti-0.8.7d.ebuild,
+  +cacti-0.8.7e-r1.ebuild:
+  Added patch to fix HTML injection vulnerabilities, thank Vadim Efimov for
+  report, bug #294573. Removed old.
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> cacti-0.8.7e.ebuild:
   ppc stable #293268

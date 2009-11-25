@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7d.ebuild,v 1.1 2009/03/08 11:26:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7e-r1.ebuild,v 1.1 2009/11/25 11:14:41 pva Exp $
 
 inherit eutils webapp depend.php
 
@@ -14,10 +14,11 @@ SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
 if [ "${HAS_PATCHES}" == "1" ] ; then
-	UPSTREAM_PATCHES="ping_timeout
-					graph_search
-					page_length_graph_view
-					snmp_string_issue_with_rrdtool_creation"
+	UPSTREAM_PATCHES="cli_add_graph
+		snmp_invalid_response
+		template_duplication
+		fix_icmp_on_windows_iis_servers
+		cross_site_fix"
 	for i in ${UPSTREAM_PATCHES} ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
@@ -54,6 +55,8 @@ src_unpack() {
 	sed -i -e \
 		's:$config\["library_path"\] . "/adodb/adodb.inc.php":"adodb/adodb.inc.php":' \
 		"${S}"/include/global.php
+
+	rm -rf lib/adodb # don't use bundled adodb
 }
 
 pkg_setup() {
@@ -68,10 +71,9 @@ src_install() {
 	webapp_src_preinst
 
 	rm LICENSE README
-	dodoc docs/{CHANGELOG,CONTRIB,INSTALL,README,REQUIREMENTS,UPGRADE,text/manual.txt}
+	dodoc docs/{CHANGELOG,CONTRIB,README,txt/manual.txt} || die
 	use doc && dohtml -r docs/html/
 	rm -rf docs
-	rm -rf lib/adodb
 
 	edos2unix `find -type f -name '*.php'`
 
