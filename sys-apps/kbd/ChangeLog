@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.92 2009/11/11 13:29:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.93 2009/11/25 09:37:00 maekke Exp $
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> kbd-1.15.ebuild:
+  amd64 stable, bug #259129
 
   11 Nov 2009; Jeroen Roovers <jer@gentoo.org> kbd-1.15.ebuild:
   Stable for HPPA (bug #259129).
