@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.19 2009/11/23 14:42:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.20 2009/11/26 20:05:51 vostorga Exp $
+
+  26 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> -sobby-0.3.0.ebuild:
+  Cleaning out old version
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> sobby-0.4.5.ebuild:
   amd64/x86 stable, bug #291030
