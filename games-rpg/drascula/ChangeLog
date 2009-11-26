@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/drascula
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.3 2009/07/14 07:13:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.4 2009/11/26 10:55:45 fauli Exp $
+
+  26 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  drascula-1.0-r1.ebuild:
+  stable x86, bug 288888
 
 *drascula-1.0-r1 (14 Jul 2009)
 
