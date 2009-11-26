@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/pngtools-0.4.ebuild,v 1.4 2009/11/09 12:55:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/pngtools-0.4.ebuild,v 1.5 2009/11/26 09:22:33 maekke Exp $
 
 inherit eutils
 
 MY_PV=${PV/./_}
 
 DESCRIPTION="A series of tools for the PNG image format"
-HOMEPAGE="http://www.stillhq.com/pngtools"
+HOMEPAGE="http://www.stillhq.com/pngtools/"
 SRC_URI="http://www.stillhq.com/pngtools/source/pngtools_${MY_PV}.tgz"
 
 LICENSE="GPL-2"
