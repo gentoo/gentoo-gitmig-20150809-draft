@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.8 2009/08/21 17:41:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.9 2009/11/26 23:39:03 nelchael Exp $
+
+*protobuf-2.2.0a (26 Nov 2009)
+
+  26 Nov 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +protobuf-2.2.0a.ebuild:
+  Version bump.
 
 *protobuf-2.2.0 (21 Aug 2009)
 
