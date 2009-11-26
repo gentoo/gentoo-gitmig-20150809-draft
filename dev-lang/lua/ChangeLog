@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.136 2009/11/24 17:31:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.137 2009/11/26 10:21:04 robbat2 Exp $
+
+*lua-5.1.4-r4 (26 Nov 2009)
+
+  26 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +lua-5.1.4-r4.ebuild:
+  jer's earlier fix missed some of the pkgconfig calls for the INSTALL_LIB
+  and libdir settings. Fixup so I can do Lua SWIG bindings.
 
 *lua-5.1.4-r3 (24 Nov 2009)
 
