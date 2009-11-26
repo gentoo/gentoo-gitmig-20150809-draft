@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PerlIO-gzip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-gzip/ChangeLog,v 1.10 2009/10/24 13:59:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-gzip/ChangeLog,v 1.11 2009/11/26 17:30:19 maekke Exp $
+
+  26 Nov 2009; Markus Meier <maekke@gentoo.org> PerlIO-gzip-0.18.ebuild:
+  amd64 stable, bug #289360
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> PerlIO-gzip-0.18.ebuild:
   ppc stable #289360
