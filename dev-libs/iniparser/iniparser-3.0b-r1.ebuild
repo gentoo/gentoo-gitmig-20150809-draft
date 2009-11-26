@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0b-r1.ebuild,v 1.8 2009/11/26 17:07:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0b-r1.ebuild,v 1.9 2009/11/26 20:57:30 vostorga Exp $
 
 inherit eutils multilib toolchain-funcs
 
 MY_P="${PN}${PV}"
 
-DESCRIPTION="A ree stand-alone ini file parsing library."
+DESCRIPTION="A free stand-alone ini file parsing library."
 HOMEPAGE="http://ndevilla.free.fr/iniparser/"
 SRC_URI="http://ndevilla.free.fr/iniparser/${MY_P}.tar.gz"
 LICENSE="MIT"
