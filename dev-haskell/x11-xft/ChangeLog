@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/x11-xft
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11-xft/ChangeLog,v 1.1 2009/11/26 21:34:23 kolmodin Exp $
+
+*x11-xft-0.3 (26 Nov 2009)
+
+  26 Nov 2009; <kolmodin@gentoo.org> +x11-xft-0.3.ebuild, +metadata.xml:
+  Initial version.
+
