@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.15.ebuild,v 1.14 2009/11/25 09:36:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.15.ebuild,v 1.15 2009/11/26 10:36:26 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.altlinux.org/pub/people/legion/kbd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="nls"
 
 RDEPEND=""
