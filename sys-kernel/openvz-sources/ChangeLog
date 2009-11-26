@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.121 2009/11/12 19:43:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.122 2009/11/26 19:12:49 pva Exp $
+
+*openvz-sources-2.6.18.028.066.7 (26 Nov 2009)
+
+  26 Nov 2009; Peter Volkov <pva@gentoo.org>
+  +openvz-sources-2.6.18.028.066.7.ebuild,
+  -openvz-sources-2.6.27.2.1-r3.ebuild,
+  -files/openvz-sources-2.6.27.2.1-SLAB.patch,
+  -files/openvz-sources-2.6.27.2.1-avoid-double-free.patch,
+  -files/openvz-sources-2.6.27.2.1-ban-netns-creation.patch,
+  -files/openvz-sources-2.6.27.2.1-bridge-process-skbs.patch,
+  -files/openvz-sources-2.6.27.2.1-bridge-set_via_phys_dev_state.patch,
+  -files/openvz-sources-2.6.27.2.1-check-for-no-mmaps.patch,
+  -files/openvz-sources-2.6.27.2.1-pi-futex-pid-check-fixup.patch:
+  Bump RHEL patched kernel. Drop old patches and unused ebuild.
 
   12 Nov 2009; Peter Volkov <pva@gentoo.org>
   openvz-sources-2.6.27.2.1-r4.ebuild:
