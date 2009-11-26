@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/jools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/ChangeLog,v 1.5 2008/08/25 23:32:12 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/ChangeLog,v 1.6 2009/11/26 11:01:06 fauli Exp $
+
+  26 Nov 2009; Christian Faulhammer <fauli@gentoo.org> jools-0.20-r1.ebuild:
+  stable x86, bug 289072
 
   25 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> jools-0.20-r1.ebuild:
   update HOMEPAGE, etc.

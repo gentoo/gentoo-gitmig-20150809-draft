@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.3 2008/08/25 23:32:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.4 2009/11/26 11:01:06 fauli Exp $
 
 inherit eutils python games
 
@@ -12,7 +12,7 @@ SRC_URI="http://pessimization.com/software/jools/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/pygame"
