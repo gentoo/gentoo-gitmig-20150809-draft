@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.424 2009/11/25 22:42:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.425 2009/11/26 12:16:46 jer Exp $
+
+*opera-10.20_pre4744 (26 Nov 2009)
+
+  26 Nov 2009; Jeroen Roovers <jer@gentoo.org> +opera-10.20_pre4744.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/opera-10-20-goes-alpha>.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> opera-10.10.ebuild:
   amd64 stable, bug #294208
