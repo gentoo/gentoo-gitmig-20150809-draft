@@ -1,0 +1,11 @@
+# ChangeLog for www-apache/mod_httpbl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_httpbl/ChangeLog,v 1.1 2009/11/26 10:37:09 flameeyes Exp $
+
+*mod_httpbl-1.5 (26 Nov 2009)
+
+  26 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/99_mod_httpbl.conf, +mod_httpbl-1.5.ebuild, +metadata.xml:
+  Initial import of mod_httpbl that allows using Project Honey Pot's
+  blacklist to filter HTTP requests.
+
