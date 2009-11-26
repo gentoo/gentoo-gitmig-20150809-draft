@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.178 2009/11/25 15:19:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.179 2009/11/26 19:15:36 pva Exp $
+
+*psi-0.14_rc3 (26 Nov 2009)
+
+  26 Nov 2009; Peter Volkov <pva@gentoo.org> -psi-0.14_rc2.ebuild,
+  +psi-0.14_rc3.ebuild:
+  RC version bump, thank Vadim Efimov for xmpp-report.
 
 *psi-0.14_rc2 (25 Nov 2009)
 
@@ -26,7 +32,7 @@
 *psi-0.14_rc1 (13 Nov 2009)
 
   13 Nov 2009; Peter Volkov <pva@gentoo.org> +psi-0.14_rc1.ebuild:
-  Version bump, thank Vadim Efimov for xmmp-report.
+  Version bump, thank Vadim Efimov for xmpp-report.
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove welp from metadata.xml (#141007)
