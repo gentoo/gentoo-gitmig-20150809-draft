@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.20 2009/11/25 12:32:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.21 2009/11/26 15:05:50 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -238,6 +238,7 @@ src_prepare() {
 	epatch "${FILESDIR}/gentoo-pythonpath.diff"
 	epatch "${FILESDIR}/ooo-env_log.diff"
 	epatch "${FILESDIR}/ooo-build-patchver.diff"
+	epatch "${FILESDIR}/Gentoo_ODK_install.patch"
 	cp -f "${FILESDIR}/base64.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/boost-undefined-references.diff" "${S}/patches/hotfixes" || die
 
