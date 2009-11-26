@@ -5,4 +5,7 @@
 <maintainer>
   <email>haskell@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='mail'>Support the mail plugin. Pulls dependency dev-haskell/hinotify.</flag>
+</use>
 </pkgmetadata>
