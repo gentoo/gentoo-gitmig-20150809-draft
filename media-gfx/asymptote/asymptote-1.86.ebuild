@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.86.ebuild,v 1.3 2009/10/20 12:57:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.86.ebuild,v 1.4 2009/11/26 11:08:44 maekke Exp $
 EAPI=2
 inherit eutils autotools elisp-common latex-package multilib python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://asymptote.sourceforge.net/"
 SRC_URI="mirror://sourceforge/asymptote/${P}.src.tgz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex python sigsegv vim-syntax X"
 
 RDEPEND=">=sys-libs/readline-4.3-r5
