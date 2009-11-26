@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.1 2009/10/14 05:48:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.2 2009/11/26 20:03:31 maekke Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="http://bram.creative4vision.nl/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/fltk:1.1[opengl]
