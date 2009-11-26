@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.6-r1.ebuild,v 1.1 2009/11/26 10:32:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.6-r1.ebuild,v 1.2 2009/11/26 21:17:13 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -49,11 +49,11 @@ DEPEND="${RDEPEND}
 	lua? ( ${SWIG_DEPEND} dev-util/pkgconfig )
 	python? ( ${SWIG_DEPEND} )
 	ruby? ( ${SWIG_DEPEND} )
-	tcl? ( ${SWIG_DEPEND} )
 	"
 #	java? ( ${SWIG_DEPEND} >=virtual/jdk-1.5 )
 #	perl? ( ${SWIG_DEPEND} )
 #	php? ( ${SWIG_DEPEND} )
+#	tcl? ( ${SWIG_DEPEND} )
 
 #pkg_setup() {
 #    local fail="USE sox needs also USE libsamplerate enabled."
