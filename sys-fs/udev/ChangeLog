@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.511 2009/11/24 09:01:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.512 2009/11/26 14:18:09 klausman Exp $
+
+  26 Nov 2009; Tobias Klausmann <klausman@gentoo.org> udev-147-r1.ebuild:
+  Versions >=147 require functionality not available on alpha kernels at the
+  moment, resulting in systems not working at all after boot.
 
 *udev-147-r1 (24 Nov 2009)
 
