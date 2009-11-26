@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.2.ebuild,v 1.4 2009/11/14 16:36:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.2.ebuild,v 1.5 2009/11/26 17:35:59 maekke Exp $
 
 inherit eutils distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://fisica.ehu.es/jsaenz/pyclimate_files/${MY_P}.tar.gz"
 HOMEPAGE="http://www.pyclimate.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~ia64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ~sparc x86"
 
 DEPEND="virtual/python
 	dev-python/numpy
