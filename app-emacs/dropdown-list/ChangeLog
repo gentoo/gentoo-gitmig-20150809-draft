@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/dropdown-list
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dropdown-list/ChangeLog,v 1.2 2009/10/15 19:03:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dropdown-list/ChangeLog,v 1.3 2009/11/26 23:34:29 ulm Exp $
+
+*dropdown-list-20090814-r1 (26 Nov 2009)
+
+  26 Nov 2009; Ulrich Mueller <ulm@gentoo.org>
+  -dropdown-list-20080316.ebuild, +dropdown-list-20090814-r1.ebuild,
+  +files/dropdown-list-20090814-selection-face.patch:
+  Fix definition of dropdown-list-selection-face. Patch taken from yasnippet
+  bug tracker. Remove old.
 
 *dropdown-list-20090814 (15 Oct 2009)
 
