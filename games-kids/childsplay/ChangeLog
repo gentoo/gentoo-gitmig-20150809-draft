@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/childsplay
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.15 2009/01/14 21:17:14 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.16 2009/11/26 21:07:05 maekke Exp $
+
+  26 Nov 2009; Markus Meier <maekke@gentoo.org> childsplay-0.90.2.ebuild:
+  x86 stable, bug #294562
 
 *childsplay-0.90.2 (14 Jan 2009)
 
