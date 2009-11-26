@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/udav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.3 2009/04/13 13:23:44 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.4 2009/11/26 19:51:43 bicatali Exp $
+
+*udav-0.5.2 (26 Nov 2009)
+
+  26 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/udav-0.5.1-pro.patch, +udav-0.5.2.ebuild:
+  Version bump, keyworded amd64 and added flags to compile against recent
+  hdf5 versions
 
 *udav-0.5.1 (13 Apr 2009)
 
