@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.10 2009/11/26 08:47:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.11 2009/11/26 08:47:57 aballier Exp $
+
+  26 Nov 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  unmask mlt[frei0r], bug #276679
 
   26 Nov 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   usemasks for frei0r plugins
