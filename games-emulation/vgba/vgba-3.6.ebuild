@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vgba/vgba-3.6.ebuild,v 1.1 2009/10/13 06:39:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vgba/vgba-3.6.ebuild,v 1.2 2009/11/26 20:56:44 maekke Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://fms.komkon.org/VGBA/VGBA${PV/.}-Linux-Ubuntu-bin.tgz"
 
 LICENSE="VGBA"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 RESTRICT="strip"
 IUSE=""
 
