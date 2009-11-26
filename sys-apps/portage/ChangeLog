@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.650 2009/11/24 19:40:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.651 2009/11/26 00:00:28 zmedico Exp $
+
+*portage-2.2_rc52 (25 Nov 2009)
+
+  25 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc52.ebuild:
+  2.2_rc52 bump. This includes all fixes in 2.1.7.7.
+
+*portage-2.1.7.7 (25 Nov 2009)
+
+  25 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.7.ebuild:
+  2.1.7.7 bump. This fixes bug #293614 (suggest --backtrack option for
+  slot conflict), and bug #293998 (TypeError with python3 in movefile).
+  Bug #288499 tracks all bugs fixed since 2.1.6.x.
 
   24 Nov 2009; Zac Medico <zmedico@gentoo.org> -portage-2.1.7.3.ebuild,
   -portage-2.1.7.4.ebuild, -portage-2.2_rc48.ebuild,
