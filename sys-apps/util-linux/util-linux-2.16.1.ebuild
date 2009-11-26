@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.1.ebuild,v 1.11 2009/11/23 20:41:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.1.ebuild,v 1.12 2009/11/26 21:19:38 vapier Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux-ng/"
 if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
-	KEYWORDS="arm"
+	#KEYWORDS=""
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
 		loop-aes? ( http://dev.gentoo.org/~ssuominen/${P}-loop-aes.patch.bz2 )"
