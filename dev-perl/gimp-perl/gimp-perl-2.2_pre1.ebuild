@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.9 2009/01/30 08:26:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.10 2009/11/26 16:42:46 tove Exp $
 
 inherit multilib perl-module
 
@@ -23,6 +23,7 @@ RDEPEND=">=dev-lang/perl-5.8
 	>=media-gfx/gimp-2.2"
 DEPEND="${RDEPEND}
 	dev-perl/extutils-depends
+	dev-perl/extutils-pkgconfig
 	dev-util/pkgconfig"
 
 myinst="DESTDIR=${D} INSTALLDIRS=vendor"
