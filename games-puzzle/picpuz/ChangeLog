@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/picpuz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.7 2009/10/13 18:36:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.8 2009/11/26 19:58:11 maekke Exp $
+
+  26 Nov 2009; Markus Meier <maekke@gentoo.org> picpuz-2.0.ebuild:
+  amd64/x86 stable, bug #294535
 
 *picpuz-2.0 (13 Oct 2009)
 
