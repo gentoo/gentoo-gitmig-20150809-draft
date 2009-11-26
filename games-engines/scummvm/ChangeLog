@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.81 2009/11/17 08:02:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.82 2009/11/26 13:38:28 josejx Exp $
+
+  26 Nov 2009; Joseph Jezak <josejx@gentoo.org> scummvm-1.0.0_rc1.ebuild:
+  Marked ppc/ppc64 stable for bug #292946.
 
 *scummvm-1.0.0 (17 Nov 2009)
 
