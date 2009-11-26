@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.50 2009/11/19 20:31:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.51 2009/11/26 10:32:00 robbat2 Exp $
+
+*mlt-0.4.6-r1 (26 Nov 2009)
+
+  26 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> +mlt-0.4.6-r1.ebuild,
+  metadata.xml:
+  Add several of the SWIG bindings, the Python one will be used for
+  media-video/openshot per bug #283673.
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> mlt-0.4.6.ebuild:
   revert stable x86
