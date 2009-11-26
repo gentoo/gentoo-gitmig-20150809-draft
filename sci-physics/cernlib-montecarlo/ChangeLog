@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.8 2009/11/25 14:46:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.9 2009/11/26 21:36:08 bicatali Exp $
+
+  26 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  cernlib-montecarlo-2006-r2.ebuild:
+  Fixing patch application with more recent versions
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org>
   cernlib-montecarlo-2006-r2.ebuild:

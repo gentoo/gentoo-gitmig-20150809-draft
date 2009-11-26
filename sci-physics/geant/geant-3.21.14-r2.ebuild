@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.11 2009/05/05 19:49:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.12 2009/11/26 21:35:34 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -31,11 +31,13 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-misc/makedepend"
 
-S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
+S="${WORKDIR}/${DEB_PN}-${DEB_PV}"
 
 src_prepare() {
 	cd "${WORKDIR}"
-	epatch "${WORKDIR}/${DEB_P}-${DEB_PR}.diff"
+	sed -i -e 's:/tmp/dp.*/cern:cern:g' ${DEB_P}-${DEB_PR}.diff || die
+	epatch ${DEB_P}-${DEB_PR}.diff
+	mv ${DEB_PN}-${DEB_PV}{.orig,}/upstream
 	cd "${S}"
 	cp debian/add-ons/Makefile .
 	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.15 2009/09/17 19:11:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.16 2009/11/26 21:34:17 bicatali Exp $
+
+  26 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  paw-2.14.04-r2.ebuild:
+  Fixing patch application with more recent versions
 
   17 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org>
   paw-2.14.04-r2.ebuild:
