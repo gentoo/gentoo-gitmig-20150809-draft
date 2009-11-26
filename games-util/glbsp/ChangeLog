@@ -1,6 +1,9 @@
 # ChangeLog for games-util/glbsp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.8 2008/11/14 18:48:23 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.9 2009/11/26 20:55:44 maekke Exp $
+
+  26 Nov 2009; Markus Meier <maekke@gentoo.org> glbsp-2.20.ebuild:
+  x86 stable, bug #294541
 
   14 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> glbsp-2.20.ebuild:
   Restrict fltk dependency to SLOT 1.1 (bug #246445).
