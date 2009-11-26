@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.3.2-r1.ebuild,v 1.1 2009/10/30 03:59:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.3.2-r1.ebuild,v 1.2 2009/11/26 15:11:13 grobian Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://guichaz.free.fr/iotop//files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.5[ncurses]

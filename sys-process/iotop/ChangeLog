@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.18 2009/10/30 03:59:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.19 2009/11/26 15:11:13 grobian Exp $
+
+  26 Nov 2009; Fabian Groffen <grobian@gentoo.org> iotop-0.3.2-r1.ebuild:
+  Marked ~x86-linux, thanks Aaron Kaplan, bug #294699
 
 *iotop-0.3.2-r1 (30 Oct 2009)
 
