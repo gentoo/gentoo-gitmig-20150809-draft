@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.2 2009/10/15 06:35:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.3 2009/11/26 11:04:45 fauli Exp $
 
 EAPI=2
 inherit eutils games
@@ -12,7 +12,7 @@ SRC_URI="http://emhsoft.com/dh/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 CCPL-ShareAlike-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/python
