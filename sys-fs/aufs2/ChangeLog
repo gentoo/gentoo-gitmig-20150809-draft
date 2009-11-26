@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.10 2009/10/09 18:08:02 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.11 2009/11/26 18:01:48 tommy Exp $
+
+*aufs2-0_p20090916-r1 (26 Nov 2009)
+
+  26 Nov 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +aufs2-0_p20090916-r1.ebuild, metadata.xml:
+  Add nfs useflag for nfs export support, fixes bug 294653
 
   09 Oct 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -aufs2-0_p20090727.ebuild, aufs2-0_p20090916.ebuild,
