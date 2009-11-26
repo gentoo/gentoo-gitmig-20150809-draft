@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/guidedog-1.1.ebuild,v 1.1 2009/11/12 16:40:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/guidedog-1.1.ebuild,v 1.2 2009/11/26 20:51:02 maekke Exp $
 
 EAPI=2
 inherit kde4-base
@@ -11,7 +11,7 @@ SRC_URI="http://www.simonzone.com/software/guidedog/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug"
 
 DEPEND="dev-python/PyQt4

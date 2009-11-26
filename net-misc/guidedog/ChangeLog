@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/guidedog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.17 2009/11/12 17:25:27 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.18 2009/11/26 20:51:02 maekke Exp $
+
+  26 Nov 2009; Markus Meier <maekke@gentoo.org> guidedog-1.1.ebuild:
+  x86 stable, bug #293862
 
 *guidedog-1.1 (12 Nov 2009)
 
