@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091124.ebuild,v 1.2 2009/11/24 20:02:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091124-r1.ebuild,v 1.1 2009/11/26 04:21:37 beandog Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -64,7 +64,7 @@ RDEPEND="sys-libs/ncurses
 		twolame? ( media-sound/twolame )
 		mp3? ( media-sound/lame )
 		faac? ( media-libs/faac )
-		x264? ( >=media-libs/x264-0.0.20091021 )
+		x264? ( >=media-libs/x264-0.0.20091124 )
 		xvid? ( media-libs/xvid )
 		)
 	esd? ( media-sound/esound )
@@ -204,6 +204,10 @@ src_unpack() {
 src_prepare() {
 	# Set version #
 	sed -i s/UNKNOWN/${MPLAYER_REVISION}/ "${S}/version.sh"
+
+	# Applying libtheora patch that went in right after this build, allows
+	# buliding against older version of libtheora (1.0)
+	epatch "${FILESDIR}/${PF}-libtheora.patch"
 
 	if use svga; then
 		echo
