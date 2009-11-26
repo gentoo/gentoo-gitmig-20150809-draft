@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fattr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/ChangeLog,v 1.2 2009/10/03 13:08:03 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/ChangeLog,v 1.3 2009/11/26 07:23:57 graaff Exp $
+
+*fattr-2.1.0 (26 Nov 2009)
+
+  26 Nov 2009; Hans de Graaff <graaff@gentoo.org> +fattr-2.1.0.ebuild:
+  Version bump: support class/module inheritable attributes.
 
 *fattr-1.1.0 (03 Oct 2009)
 
