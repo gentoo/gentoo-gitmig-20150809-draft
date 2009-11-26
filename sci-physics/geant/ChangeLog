@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.30 2009/10/06 17:41:33 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.31 2009/11/26 10:48:40 fauli Exp $
+
+  26 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  geant-4.9.2_p02.ebuild:
+  stable x86, bug 294442
 
   06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> geant-4.9.2-r2.ebuild,
   geant-4.9.2_p02.ebuild:
