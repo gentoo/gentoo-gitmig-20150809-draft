@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.16 2009/09/17 07:15:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.17 2009/11/26 12:34:40 graaff Exp $
+
+*passenger-2.2.7 (26 Nov 2009)
+
+  26 Nov 2009; Hans de Graaff <graaff@gentoo.org> +passenger-2.2.7.ebuild:
+  Version bump. See
+  http://blog.phusion.nl/2009/11/18/phusion-passenger-2-2-6-released/ for
+  the list of changes. 
 
 *passenger-2.2.5 (17 Sep 2009)
 
