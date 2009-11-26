@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3610 2009/11/26 12:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3611 2009/11/26 21:02:59 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Nov 2009; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/DateManip-6* for testing
 
   26 Nov 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera mask for 10.20_pre4744.

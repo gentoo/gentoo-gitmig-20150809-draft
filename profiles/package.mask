@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10891 2009/11/26 12:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10892 2009/11/26 21:02:59 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (26 Nov 2009)
+# Complete reorganization (and almost complete rewrite),
+# depends on perl-5.10, needs testing
+>=dev-perl/DateManip-6.0
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (25 Nov 2009)
 #  on behalf of QA team
