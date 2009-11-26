@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/hinotify
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hinotify/ChangeLog,v 1.1 2009/11/26 21:24:10 kolmodin Exp $
+
+*hinotify-0.3 (26 Nov 2009)
+
+  26 Nov 2009; <kolmodin@gentoo.org> +hinotify-0.3.ebuild, +metadata.xml:
+  Initial import.
+
