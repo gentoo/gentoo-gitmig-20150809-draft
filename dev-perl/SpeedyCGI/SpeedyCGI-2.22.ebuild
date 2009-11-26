@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/SpeedyCGI-2.22.ebuild,v 1.4 2009/03/07 12:55:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/SpeedyCGI-2.22.ebuild,v 1.5 2009/11/26 12:36:42 flameeyes Exp $
 
 inherit perl-module
 
@@ -20,3 +20,5 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/CGI-${P}
 
 PATCHES=( "${DISTDIR}/speedy-error.patch" )
+
+MAKEOPTS="${MAKEOPTS} -j1"

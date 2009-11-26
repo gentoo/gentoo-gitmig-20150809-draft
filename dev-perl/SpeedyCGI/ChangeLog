@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SpeedyCGI
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.7 2009/03/07 12:55:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.8 2009/11/26 12:36:41 flameeyes Exp $
+
+  26 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  SpeedyCGI-2.22.ebuild:
+  Use -j1 to workaround parallel make failure (bug #277177). This does not
+  fix the bug.
 
   07 Mar 2009; Raúl Porcel <armin76@gentoo.org> SpeedyCGI-2.22.ebuild:
   Add ~sparc wrt #258458
