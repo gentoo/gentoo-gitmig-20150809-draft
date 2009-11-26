@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.18 2009/11/21 18:00:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.19 2009/11/26 04:01:28 mr_bones_ Exp $
+
+  26 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  adonthell-0.3.5.ebuild, +files/adonthell-0.3.5-glibc-2.10.patch:
+  re-add glibc210 patch
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> adonthell-0.3.5.ebuild:
   x86 stable, bug #288816

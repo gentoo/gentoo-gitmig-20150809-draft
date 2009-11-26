@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.2 2009/11/21 18:00:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.3 2009/11/26 04:01:28 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -34,7 +34,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${PV/a/}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-configure.in.patch
+	epatch \
+		"${FILESDIR}"/${P}-configure.in.patch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch
 	rm -f ac{local,include}.m4
 	eautoreconf
 }
