@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_httpbl/mod_httpbl-1.5.ebuild,v 1.1 2009/11/26 10:37:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_httpbl/mod_httpbl-1.5.ebuild,v 1.2 2009/11/26 20:39:59 flameeyes Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://httpbl.cvs.sourceforge.net/viewvc/*checkout*/httpbl/mod_httpbl_f
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="debug"
 
 KEYWORDS="~amd64"
 
@@ -31,11 +31,22 @@ src_unpack() {
 	cp "${DISTDIR}"/${P}.c ${PN}.c || die
 }
 
+src_prepare() {
+	sed -i \
+		-e '/#define VERBOSITY/i#ifndef VERBOSITY' \
+		-e '/#define VERBOSITY/a#endif' \
+		${PN}.c || die
+}
+
 src_compile() {
 	APXS_FLAGS=
 	for flag in ${CFLAGS}; do
 		APXS_FLAGS="${APXS_FLAGS} -Wc,${flag}"
 	done
+
+	if use debug; then
+		APXS_FLAGS="${APXS_FLAGS} -DVERBOSITY=APLOG_DEBUG"
+	fi
 
 	# Yes we need to prefix it _twice_
 	for flag in ${LDFLAGS}; do
