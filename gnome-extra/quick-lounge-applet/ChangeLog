@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/quick-lounge-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/ChangeLog,v 1.30 2009/10/11 19:50:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/ChangeLog,v 1.31 2009/11/26 10:51:09 fauli Exp $
+
+  26 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  quick-lounge-applet-2.14.0.ebuild:
+  stable x86, bug 288240
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> quick-lounge-applet-2.14.0.ebuild:
   ppc stable #288240
