@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3609 2009/11/25 20:50:32 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3610 2009/11/26 12:14:16 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Nov 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Tweak www-client/opera mask for 10.20_pre4744.
 
   25 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> updates/4Q-2009:
   Move www-plugins/mozilla-weave to www-plugins/weave.
