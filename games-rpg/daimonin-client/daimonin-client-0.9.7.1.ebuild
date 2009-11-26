@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.9.7.1.ebuild,v 1.1 2009/01/13 04:51:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.9.7.1.ebuild,v 1.2 2009/11/26 10:50:04 fauli Exp $
 
 EAPI=2
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/daimonin/${MY_P}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~ppc ~x86"
+KEYWORDS="-amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
