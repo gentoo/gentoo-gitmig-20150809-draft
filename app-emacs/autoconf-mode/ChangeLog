@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/autoconf-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.19 2009/11/24 20:44:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.20 2009/11/26 09:38:58 fauli Exp $
+
+*autoconf-mode-2.64 (26 Nov 2009)
+
+  26 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  +autoconf-mode-2.64.ebuild:
+  version bump, minimal changes
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   autoconf-mode-2.63.ebuild:
