@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5048 2009/11/26 10:48:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5049 2009/11/26 18:07:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3101,6 +3101,7 @@ sys-freebsd/freebsd-usbin:netware -  Build libraries and tools to work with NetW
 sys-fs/aufs2:debug - Enable additional debugging support
 sys-fs/aufs2:inotify - Enable inotify support
 sys-fs/aufs2:kernel-patch - Patch the current kernel for aufs2 support
+sys-fs/aufs2:nfs - Enable support for nfs export
 sys-fs/aufs2:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
