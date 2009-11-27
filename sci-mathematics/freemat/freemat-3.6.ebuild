@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.9 2009/10/06 17:37:16 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.10 2009/11/27 18:40:14 bicatali Exp $
 
 EAPI="2"
 inherit eutils autotools fdo-mime virtualx
@@ -55,7 +55,8 @@ src_configure() {
 		$(use_enable arpack) \
 		$(use_enable fftw) \
 		$(use_enable portaudio) \
-		$(use_enable ffcall)
+		$(use_enable ffcall) \
+		LLVM_CONFIG=no
 }
 
 src_test () {
