@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xmpp4r
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.14 2009/09/23 18:09:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.15 2009/11/27 17:11:21 a3li Exp $
+
+  27 Nov 2009; Alex Legler <a3li@gentoo.org> xmpp4r-0.5.ebuild:
+  Remove SRC_URI, hopefully fixes bug 294440
 
   23 Sep 2009; Hans de Graaff <graaff@gentoo.org> -xmpp4r-0.3.2.ebuild,
   -xmpp4r-0.4.ebuild:
