@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-a52dec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.103 2009/11/18 22:40:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.104 2009/11/27 15:31:04 maekke Exp $
+
+  27 Nov 2009; Markus Meier <maekke@gentoo.org>
+  gst-plugins-a52dec-0.10.12.ebuild:
+  arm stable, bug #290343
 
   18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-a52dec-0.10.12.ebuild:
