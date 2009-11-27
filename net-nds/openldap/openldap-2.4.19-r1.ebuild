@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.3 2009/11/24 23:31:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.4 2009/11/27 23:35:41 arfrever Exp $
 
 EAPI="2"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -118,18 +118,20 @@ openldap_find_versiontags() {
 		fi
 	done
 
-	# Now we must check for the major version of sys-libs/db linked against.
-	SLAPD_PATH=${ROOT}/usr/$(get_libdir)/openldap/slapd
-	if [ -f "${SLAPD_PATH}" ]; then
-		OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
-			| awk '/libdb-/{gsub("^libdb-","",$1);gsub(".so$","",$1);print $1}')"
-		NEWVER="$(db_findver sys-libs/db)"
-		if [ "${OLDVER}" != "${NEWVER}" ]; then
-			eerror "	Your existing version of OpenLDAP was built against"
-			eerror "	sys-libs/db:${OLDVER}, but the new one will build against"
-			eerror "	${NEWVER} and your database would be inaccessible."
-			echo
-			openldap_upgrade_howto
+	if use berkdb ; then
+		# Now we must check for the major version of sys-libs/db linked against.
+		SLAPD_PATH=${ROOT}/usr/$(get_libdir)/openldap/slapd
+		if [ -f "${SLAPD_PATH}" ]; then
+			OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
+				| awk '/libdb-/{gsub("^libdb-","",$1);gsub(".so$","",$1);print $1}')"
+			NEWVER="$(db_findver sys-libs/db)"
+			if [ "${OLDVER}" != "${NEWVER}" ]; then
+				eerror "	Your existing version of OpenLDAP was built against"
+				eerror "	sys-libs/db:${OLDVER}, but the new one will build against"
+				eerror "	${NEWVER} and your database would be inaccessible."
+				echo
+				openldap_upgrade_howto
+			fi
 		fi
 	fi
 
