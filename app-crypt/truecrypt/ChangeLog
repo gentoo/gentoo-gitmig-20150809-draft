@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.51 2009/10/23 23:45:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.52 2009/11/27 17:43:38 arfrever Exp $
+
+*truecrypt-6.3a (27 Nov 2009)
+
+  27 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -truecrypt-6.3.ebuild, +truecrypt-6.3a.ebuild:
+  Version bump (bug #294660).
 
 *truecrypt-6.3 (24 Oct 2009)
 
