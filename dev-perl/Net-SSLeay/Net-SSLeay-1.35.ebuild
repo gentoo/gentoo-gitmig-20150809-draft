@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.35.ebuild,v 1.8 2009/03/21 01:48:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.35.ebuild,v 1.9 2009/11/27 10:31:55 tove Exp $
 
 MODULE_AUTHOR=FLORA
-inherit perl-module multilib
+inherit perl-module
 
 DESCRIPTION="Net::SSLeay module for perl"
 
-LICENSE="|| ( Artistic GPL-2 )"
+LICENSE="openssl"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
@@ -22,11 +22,3 @@ DEPEND="${RDEPEND}"
 #SRC_TEST=do
 
 export OPTIMIZE="$CFLAGS"
-
-src_unpack() {
-	unpack ${A}
-	if [ $(get_libdir) != "lib" ] ; then
-		sed -i -e "s:openssl_path/lib:openssl_path/$(get_libdir):" \
-		"${S}"/Makefile.PL || die
-	fi
-}
