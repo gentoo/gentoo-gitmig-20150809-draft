@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20090907.ebuild,v 1.1 2009/09/08 00:04:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20091127.ebuild,v 1.1 2009/11/27 16:07:15 matsuu Exp $
 
 inherit eutils python
 
