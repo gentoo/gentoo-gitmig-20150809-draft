@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916-r1.ebuild,v 1.1 2009/11/26 18:01:48 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916-r1.ebuild,v 1.2 2009/11/27 14:14:40 tommy Exp $
 
 EAPI="2"
 
@@ -70,10 +70,9 @@ src_prepare() {
 }
 
 src_compile() {
-	local myargs="" ARCH=i386
+	local myargs="" ARCH=x86
 	use nfs && myargs="CONFIG_EXPORTFS=y CONFIG_AUFS_EXPORT=y "
 	use nfs && use amd64 && myargs+="CONFIG_AUFS_INO_T_64=y"
-	use amd64 && ARCH=x86_64
 	emake CC=$(tc-getCC) CONFIG_AUFS_FS=m ${myargs} KDIR=${KV_DIR} || die
 	cd "${WORKDIR}"/${PN}-util
 	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_DIR} C_INCLUDE_PATH="${S}"/include || die
