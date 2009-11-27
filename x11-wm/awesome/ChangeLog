@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.88 2009/11/09 23:12:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.89 2009/11/27 17:07:01 matsuu Exp $
+
+*awesome-3.4.2 (27 Nov 2009)
+
+  27 Nov 2009; MATSUU Takuto <matsuu@gentoo.org> -awesome-3.4.ebuild,
+  +awesome-3.4.2.ebuild, +files/awesome-3.4.2-backtrace.patch:
+  Version bumped, bug #294782. Added backtrace patch for FreeBSD, bug
+  #293609.
 
 *awesome-3.4.1 (09 Nov 2009)
 
