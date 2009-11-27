@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.2.ebuild,v 1.2 2009/09/29 01:45:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.2.ebuild,v 1.3 2009/11/27 22:29:08 arfrever Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ MY_PN="WebTest"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Helper to test WSGI applications"
-HOMEPAGE="http://pythonpaste.org/webtest/"
+HOMEPAGE="http://pythonpaste.org/webtest/ http://pypi.python.org/pypi/WebTest"
 SRC_URI="http://pypi.python.org/packages/source/W/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
