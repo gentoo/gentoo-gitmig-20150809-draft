@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.21 2009/08/01 06:46:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.22 2009/11/27 00:06:42 lu_zero Exp $
 
 EAPI=2
 
-inherit subversion fdo-mime flag-o-matic multilib python
+inherit git eutils gnome2 fdo-mime multilib python
 
-ESVN_REPO_URI="http://svn.gnome.org/svn/gimp/trunk/"
+EGIT_REPO_URI="git://git.gnome.org/gimp"
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
@@ -16,72 +16,69 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS=""
 
-IUSE="alsa aalib altivec curl dbus debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
+IUSE="alsa aalib altivec curl dbus debug doc exif gnome hal jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
 
-RDEPEND=">=dev-libs/glib-2.12.3
-	>=x11-libs/gtk+-2.10.6
-	>=x11-libs/pango-1.12.2
+RDEPEND=">=dev-libs/glib-2.18.1
+	>=x11-libs/gtk+-2.12.5
+	>=x11-libs/pango-1.18.0
 	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2.0
-	>=media-libs/libart_lgpl-2.3.8-r1
 	sys-libs/zlib
 	dev-libs/libxml2
 	dev-libs/libxslt
+	x11-misc/xdg-utils
 	x11-themes/hicolor-icon-theme
+	>=media-libs/gegl-0.0.22
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	curl? ( net-misc/curl )
-	dbus? ( dev-libs/dbus-glib
-		sys-apps/hal )
-	gnome? ( >=gnome-base/gnome-vfs-2.10.0
-		>=gnome-base/libgnomeui-2.10.0
-		>=gnome-base/gnome-keyring-0.4.5 )
-	gtkhtml? ( =gnome-extra/gtkhtml-2* )
-	jpeg? ( >=media-libs/jpeg-6b-r2
-		>=media-libs/libexif-0.6.15 )
+	dbus? ( dev-libs/dbus-glib )
+	hal? ( sys-apps/hal )
+	gnome? ( gnome-base/gvfs )
+	webkit? ( net-libs/webkit-gtk )
+	jpeg? ( >=media-libs/jpeg-6b-r2 )
+	exif? ( >=media-libs/libexif-0.6.15 )
 	lcms? ( media-libs/lcms )
 	mng? ( media-libs/libmng )
 	pdf? ( >=virtual/poppler-glib-0.3.1[cairo] )
 	png? ( >=media-libs/libpng-1.2.2 )
-	python?	( >=dev-lang/python-2.2.1
+	python?	( >=dev-lang/python-2.5.0
 		>=dev-python/pygtk-2.10.4 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svg? ( >=gnome-base/librsvg-2.8.0 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	>=dev-util/intltool-0.31
+	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-src_configure() {
-	# workaround portage variable leakage
-	local AA=
+DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 
-	# gimp uses inline functions (e.g. plug-ins/common/grid.c) (#23078)
-	# gimp uses floating point math, needs accuracy (#98685)
-	filter-flags "-fno-inline" "-ffast-math"
-	# gimp assumes char is signed (fixes preview corruption)
-	if use ppc || use ppc64; then
-		append-flags "-fsigned-char"
-	fi
-
+src_prepare() {
 	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
-	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die
+	./autogen.sh
+	gnome2_src_prepare
+}
 
-	econf --enable-default-binary \
+src_unpack() {
+	git_src_unpack
+}
+
+pkg_setup() {
+	G2CONF="--enable-default-binary \
 		--with-x \
 		$(use_with aalib aa) \
 		$(use_with alsa) \
 		$(use_enable altivec) \
-		$(use_with curl) \
-		$(use_enable debug) \
-		$(use_enable doc gtk-doc) \
+		$(use_with curl libcurl) \
 		$(use_with dbus) \
-		$(use_with gnome) \
-		$(use_with gtkhtml gtkhtml2) \
+		$(use_with hal) \
+		$(use_with gnome gvfs) \
+		--without-gnomevfs \
+		$(use_with webkit) \
 		$(use_with jpeg libjpeg) \
-		$(use_with jpeg libexif) \
+		$(use_with exif libexif) \
 		$(use_with lcms) \
 		$(use_enable mmx) \
 		$(use_with mng libmng) \
@@ -92,37 +89,18 @@ src_configure() {
 		$(use_enable sse) \
 		$(use_with svg librsvg) \
 		$(use_with tiff libtiff) \
-		$(use_with wmf) \
-		|| die "econf failed"
-}
-
-src_compile() {
-	# workaround portage variable leakage
-	local AA=
-	emake || die "emake failed"
-}
-
-src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-
-	dodoc AUTHORS ChangeLog* HACKING NEWS README*
+		$(use_with wmf)"
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-
-	elog
-	elog "If you want Postscript file support, emerge ghostscript."
-	elog
+	gnome2_pkg_postinst
 
 	python_mod_optimize /usr/$(get_libdir)/gimp/2.0/python \
 		/usr/$(get_libdir)/gimp/2.0/plug-ins
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
+	gnome2_pkg_postrm
 	python_mod_cleanup /usr/$(get_libdir)/gimp/2.0/python \
 		/usr/$(get_libdir)/gimp/2.0/plug-ins
 }
