@@ -5,7 +5,6 @@
 	<herd>crypto</herd>
 	<use>
 		<flag name='gpg'>Enable <pkg>app-crypt/gnupg</pkg> key module</flag>
-		<flag name='nss'>Enable support for <pkg>dev-libs/nss</pkg></flag>
 		<flag name='openssl'>Enable <pkg>dev-libs/openssl</pkg> key
 			module</flag>
 		<flag name='pkcs11'>Enable PKCS#11 (Smartcards) key module</flag>
