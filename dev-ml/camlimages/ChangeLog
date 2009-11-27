@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.21 2009/11/27 09:27:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.22 2009/11/27 12:44:27 fauli Exp $
+
+  27 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  camlimages-3.0.2.ebuild:
+  stable x86, security bug 290222
 
   27 Nov 2009; Alexis Ballier <aballier@gentoo.org> camlimages-3.0.2.ebuild,
   +files/camlimages-3.0.2-annot.patch:
