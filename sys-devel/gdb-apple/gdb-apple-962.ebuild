@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-962.ebuild,v 1.2 2009/09/26 18:18:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-962.ebuild,v 1.3 2009/11/27 08:40:03 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -58,11 +58,11 @@ src_install() {
 
 pkg_postinst() {
 	if [[ ${CHOST} == *-darwin* && ${CHOST#*-darwin} -ge 9 ]] ; then
-		ewarn "Due to increased security measures in 10.5 and up, gdb is"
-		ewarn "not able to get a mach task port when installed by Prefix"
-		ewarn "Portage, unprivileged.  To make gdb fully functional you'll"
-		ewarn "have to perform the following steps:"
-		ewarn "  % sudo chgrp procmod ${EPREFIX}/usr/bin/gdb"
-		ewarn "  % sudo chmod g+s ${EPREFIX}/usr/bin/gdb"
+		elog "Due to increased security measures in 10.5 and up, gdb is"
+		elog "not able to get a mach task port when installed by Prefix"
+		elog "Portage, unprivileged.  To make gdb fully functional you'll"
+		elog "have to perform the following steps:"
+		elog "  % sudo chgrp procmod ${EPREFIX}/usr/bin/gdb"
+		elog "  % sudo chmod g+s ${EPREFIX}/usr/bin/gdb"
 	fi
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb-apple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.4 2009/09/25 11:52:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.5 2009/11/27 08:40:03 grobian Exp $
+
+  27 Nov 2009; Fabian Groffen <grobian@gentoo.org> gdb-apple-962.ebuild,
+  gdb-apple-966.ebuild:
+  Turn ewarn into elog for instructions on how to get gdb usable on 10.5+,
+  as it turns out many people don't see these instructions.
 
   25 Sep 2009; Fabian Groffen <grobian@gentoo.org> gdb-apple-1344.ebuild,
   +files/gdb-apple-1344-darwin8.patch:
