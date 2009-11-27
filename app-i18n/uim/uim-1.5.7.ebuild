@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7.ebuild,v 1.1 2009/11/23 15:14:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7.ebuild,v 1.2 2009/11/27 16:15:55 matsuu Exp $
 
 EAPI="2"
 inherit autotools eutils qt3 multilib elisp-common flag-o-matic
@@ -40,7 +40,7 @@ RDEPEND="X? (
 	nls? ( virtual/libintl )
 	prime? ( app-i18n/prime )
 	qt3? ( || ( >=x11-libs/qt-3.2.0:3[immqt-bc] >=x11-libs/qt-3.2.0:3[immqt] ) )
-	qt4? ( || ( x11-libs/qt-core:4 =x11-libs/qt-4.3*:4 ) )
+	qt4? ( x11-libs/qt-gui:4[qt3support] )
 	!app-i18n/uim-svn
 	!<app-i18n/prime-0.9.4"
 #	mana? ( app-i18n/mana )
@@ -183,8 +183,8 @@ pkg_postinst() {
 	elog "(define default-im-name 'anthy)"
 	elog "to your ~/.uim."
 	elog
-	elog "All input methods can be found by running uim-im-switcher-gtk"
-	elog "or uim-im-switcher-qt."
+	elog "All input methods can be found by running uim-im-switcher-gtk, "
+	elog "uim-im-switcher-qt or uim-im-switcher-qt4."
 	elog
 	elog "If you upgrade from a version of uim older than 1.4.0,"
 	elog "you should run revdep-rebuild."
