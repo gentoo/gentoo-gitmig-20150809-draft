@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10893 2009/11/27 13:18:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10894 2009/11/27 15:48:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (27 Oct 2009)
+# As per upstream bug tracking system, this package
+# isn't developed anymore and isn't compatible with
+# Konsole from KDE4. Masked for removal in 30 days.
+net-misc/kssh
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Oct 2009)
 # Missing Qt3 and Kdelibs-3 deps wrt bug #256350.
