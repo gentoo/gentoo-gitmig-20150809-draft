@@ -1,6 +1,16 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.16 2009/10/08 16:31:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.17 2009/11/27 18:17:00 bicatali Exp $
+
+*opendx-4.4.4-r3 (27 Nov 2009)
+
+  27 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> -opendx-4.4.4.ebuild,
+  -opendx-4.4.4-r2.ebuild, +opendx-4.4.4-r3.ebuild,
+  -files/opendx-4.4.4-gcc43-fedora.patch, files/opendx-4.4.4-gcc43.patch,
+  -files/opendx-4.4.4-install.patch, +files/opendx-4.4.4-installpaths.patch,
+  +files/opendx-4.4.4-null.patch, -files/opendx-compressed-man.patch:
+  Added a patch for ssh over X, fixed a bunch of install paths (including
+  bug #294858), and cleaned a bit the ebuild
 
   08 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org>
   +opendx-4.4.4-r2.ebuild, files/opendx-4.4.4-concurrent-make-fix.patch,

@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r2.ebuild,v 1.1 2009/10/08 16:31:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r3.ebuild,v 1.1 2009/11/27 18:17:00 bicatali Exp $
 
 EAPI=2
 
-inherit eutils flag-o-matic autotools multilib
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A 3D data visualization tool"
 HOMEPAGE="http://www.opendx.org/"
@@ -36,14 +36,15 @@ S="${WORKDIR}/${P/open}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.3.2-sys.h.patch"
-	epatch "${FILESDIR}/${P}-install.patch"
+	epatch "${FILESDIR}/${P}-installpaths.patch"
 	epatch "${FILESDIR}/${P}-xdg.patch"
-	epatch "${FILESDIR}/${P}-gcc43-fedora.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-dx-errno.patch"
 	epatch "${FILESDIR}/${P}-libtool.patch"
 	epatch "${FILESDIR}/${P}-concurrent-make-fix.patch"
 	epatch "${FILESDIR}/${P}-open.patch"
 	epatch "${FILESDIR}/${P}-szip.patch"
+	epatch "${FILESDIR}/${P}-null.patch"
 	eautoreconf
 }
 
@@ -57,13 +58,13 @@ src_configure() {
 	replace-flags -O3 -O2
 
 	# opendx uses this variable
-	local GENTOOARCH="${ARCH}"
 	unset ARCH
 
+	# javadx is currently broken. we may try to fix it someday.
 	econf \
-		"--libdir=/usr/$(get_libdir)" \
-		"--with-x" \
-		"--without-javadx" \
+		--libdir=/usr/$(get_libdir) \
+		--with-x \
+		--without-javadx \
 		$(use_with szip szlib) \
 		$(use_with cdf) \
 		$(use_with netcdf) \
@@ -71,22 +72,10 @@ src_configure() {
 		$(use_with tiff) \
 		$(use_with imagemagick magick) \
 		$(use_enable smp smp-linux)
-
-	ARCH="${GENTOOARCH}"
-	# javadx is currently broken. we may try to fix it someday.
-}
-
-src_compile() {
-	local GENTOOARCH="${ARCH}"
-	unset ARCH
-
-	emake || die
-	ARCH="${GENTOOARCH}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
-	newicon "src/uipp/ui/icon50.xpm" "${PN}.xpm"
-	make_desktop_entry dx "openDX" "${PN}.xpm" "DataVisualization;Education;Science;"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newicon src/uipp/ui/icon50.xpm ${PN}.xpm
+	make_desktop_entry dx "Open Data Explorer" ${PN}.xpm
 }
