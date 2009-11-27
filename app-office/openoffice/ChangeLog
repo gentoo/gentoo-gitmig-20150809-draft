@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.500 2009/11/26 15:05:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.501 2009/11/27 13:32:40 suka Exp $
+
+  27 Nov 2009; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.1.1.ebuild:
+  Remove unnecessary dependencies
 
   26 Nov 2009; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.1.1.ebuild, +files/Gentoo_ODK_install.patch:
