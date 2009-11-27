@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.1 2009/08/08 14:15:43 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.2 2009/11/27 19:39:57 flameeyes Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -129,7 +129,8 @@ src_compile() {
 		$(use_with threads) \
 		${myconf}
 
-	emake || die "make failed"
+	# bug #279627
+	emake -j1 || die "make failed"
 
 	if use perl; then
 		cd_script perl ${step}

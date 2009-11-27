@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.19 2009/08/13 16:00:01 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.20 2009/11/27 19:39:57 flameeyes Exp $
+
+  27 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mapserver-5.4.2.ebuild:
+  Use serial make for main build (bug #279627).
 
   13 Aug 2009; Alex Legler <a3li@gentoo.org> -mapserver-5.0.0.ebuild,
   -mapserver-5.0.0-r1.ebuild, -files/mapserver-5.0.0_php.patch,
