@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.25 2009/11/19 16:54:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.26 2009/11/27 12:38:06 fauli Exp $
+
+  27 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  xf86-video-virtualbox-3.0.12.ebuild:
+  stable x86, security bug 294678
 
   19 Nov 2009; Patrick Lauer <patrick@gentoo.org>
   +xf86-video-virtualbox-3.0.12.ebuild,
