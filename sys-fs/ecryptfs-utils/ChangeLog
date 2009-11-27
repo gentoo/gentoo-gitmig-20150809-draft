@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.27 2009/09/17 13:58:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.28 2009/11/27 19:44:24 arfrever Exp $
+
+*ecryptfs-utils-82 (27 Nov 2009)
+
+  27 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ecryptfs-utils-76.ebuild, +ecryptfs-utils-82.ebuild:
+  Version bump (bug #292594). Fix permissions (bug #294716). Set
+  SUPPORT_PYTHON_ABIS.
 
   17 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ecryptfs-utils-79.ebuild:
