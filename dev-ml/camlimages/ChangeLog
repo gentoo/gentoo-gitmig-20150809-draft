@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.20 2009/11/25 17:10:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.21 2009/11/27 09:27:42 aballier Exp $
+
+  27 Nov 2009; Alexis Ballier <aballier@gentoo.org> camlimages-3.0.2.ebuild,
+  +files/camlimages-3.0.2-annot.patch:
+  dont build with ocamlc -annot since it appeared in ocaml 3.11, reported by
+  Fauli
 
 *camlimages-3.0.2 (25 Nov 2009)
 

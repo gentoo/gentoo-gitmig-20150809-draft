@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.1 2009/11/25 17:10:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.2 2009/11/27 09:27:42 aballier Exp $
 
 EAPI=2
 
@@ -33,6 +33,7 @@ DEPEND="${DEPEND}
 src_prepare() {
 	epatch "${FILESDIR}/${P}-tiffread-CVE-2009-3296.patch"
 	epatch "${FILESDIR}/${P}-ocaml-autoconf11.patch"
+	epatch "${FILESDIR}/${P}-annot.patch"
 	eautoreconf
 }
 
