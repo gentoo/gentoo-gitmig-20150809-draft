@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.150 2009/11/26 17:44:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.151 2009/11/27 12:16:14 chainsaw Exp $
+
+  27 Nov 2009; <chainsaw@gentoo.org> -files/1.5.1-libmtp-0.3.0-API.patch,
+  -files/1.5.1-missing-include.patch, -audacious-plugins-1.5.1-r3.ebuild,
+  metadata.xml:
+  Remove old ebuild.
 
   26 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   audacious-plugins-2.1-r1.ebuild:
