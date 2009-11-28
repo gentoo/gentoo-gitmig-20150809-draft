@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mash/ChangeLog,v 1.1 2009/05/16 20:25:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mash/ChangeLog,v 1.2 2009/11/28 10:02:59 a3li Exp $
+
+*mash-0.1.1 (28 Nov 2009)
+
+  28 Nov 2009; Alex Legler <a3li@gentoo.org> +mash-0.1.1.ebuild:
+  Version bump
 
 *mash-0.0.3 (16 May 2009)
 
