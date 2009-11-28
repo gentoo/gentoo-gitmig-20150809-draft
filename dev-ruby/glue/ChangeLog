@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/glue
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/glue/ChangeLog,v 1.12 2009/05/31 07:57:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/glue/ChangeLog,v 1.13 2009/11/28 10:23:47 a3li Exp $
+
+*glue-1.1.0 (28 Nov 2009)
+
+  28 Nov 2009; Alex Legler <a3li@gentoo.org> +glue-1.1.0.ebuild:
+  Version bump, fix license; drop ~ppc64 and ~ia64, new dependency
 
   31 May 2009; Hans de Graaff <graaff@gentoo.org> -glue-0.29.0.ebuild,
   -glue-0.40.0.ebuild:
