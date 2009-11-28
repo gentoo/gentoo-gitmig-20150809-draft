@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.5-r1.ebuild,v 1.1 2009/11/18 20:28:01 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.5-r1.ebuild,v 1.2 2009/11/28 09:14:38 scarabeus Exp $
 
 EAPI="2"
 
@@ -159,7 +159,7 @@ pkg_setup() {
 	fi
 
 	OLD_IMPLEM="$(eselect opengl show)"
-	eselect opengl set --impl-headers ${OPENGL_DIR}
+	eselect opengl set ${OPENGL_DIR}
 }
 
 src_install() {

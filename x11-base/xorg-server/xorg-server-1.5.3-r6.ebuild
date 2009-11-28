@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.15 2009/09/19 22:40:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.16 2009/11/28 09:14:38 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -328,7 +328,7 @@ pkg_setup() {
 	# Nothing else provides new enough glxtokens.h
 	ewarn "Forcing on xorg-x11 for new enough glxtokens.h..."
 	OLD_IMPLEM="$(eselect opengl show)"
-	eselect opengl set --impl-headers ${OPENGL_DIR}
+	eselect opengl set ${OPENGL_DIR}
 }
 
 src_unpack() {
