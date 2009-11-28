@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.2.3.ebuild,v 1.8 2009/11/05 20:12:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.2.3.ebuild,v 1.9 2009/11/28 18:03:06 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="archive avahi bluetooth cdda doc fuse gnome gnome-keyring gphoto2 hal samba"
 
 RDEPEND=">=dev-libs/glib-2.19
