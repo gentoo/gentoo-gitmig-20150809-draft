@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.56 2009/11/05 18:31:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.57 2009/11/28 07:35:37 graaff Exp $
+
+*ruby-gettext-2.1.0 (28 Nov 2009)
+
+  28 Nov 2009; Hans de Graaff <graaff@gentoo.org>
+  +ruby-gettext-2.1.0.ebuild:
+  Version bump.
 
   05 Nov 2009; Raúl Porcel <armin76@gentoo.org> ruby-gettext-2.0.4.ebuild:
   Add ~ia64/~sparc wrt #289839
