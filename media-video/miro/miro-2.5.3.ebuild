@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.3.ebuild,v 1.3 2009/11/20 14:47:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.3.ebuild,v 1.4 2009/11/28 15:09:34 volkmar Exp $
 
 EAPI="2"
 
@@ -45,20 +45,22 @@ S="${WORKDIR}/${P}/platform/gtk-x11"
 # psyco can make miro speedier, add a USE flag, recommand in postinst ?
 
 # TODO:
-# create a real test suite
-# try to have a real xine/gstreamer choice
+# create a real test suite, upstream bug 12369
+# try to have a real xine/gstreamer choice, upstream bug 12371
 
 src_prepare() {
 	# install only needed locales
-	epatch "${FILESDIR}"/${P}-fix-locale.patch
+	epatch "${FILESDIR}"/${P}-fix-locale.patch # upstream bug 12368
 	# fix debug mode
 	epatch "${FILESDIR}"/${P}-fix-debug.patch
 	# disable xine hack which is failing
 	epatch "${FILESDIR}"/${P}-disable-xine-hack.patch
 	# prevent installing unneeded test files
-	epatch "${FILESDIR}"/${P}-dont-install-test-files.patch
+	epatch "${FILESDIR}"/${P}-dont-install-test-files.patch # upstream bug 12370
 	# do not show --unittest option
-	epatch "${FILESDIR}"/${P}-remove-unittest-option.patch
+	epatch "${FILESDIR}"/${P}-remove-unittest-option.patch # upstream bug 12370
+	# remove 'pkg-config --list-all' call, bug 294183, upstream bug 4613
+	epatch "${FILESDIR}"/${P}-remove-pkg-config-list-all.patch
 
 	# disable autoupdate
 	sed -i -e "/autoupdate/d" ../../portable/startup.py || die "sed failed"
@@ -80,6 +82,7 @@ src_prepare() {
 src_test() {
 	# there is a test suite but it has been designed to be used when installed
 	# should be fixed
+	#./run.sh --unittests || die "tests failed"
 	:
 }
 

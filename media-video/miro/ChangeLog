@@ -1,9 +1,16 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.3 2009/11/20 14:47:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.4 2009/11/28 15:09:34 volkmar Exp $
+
+  28 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> miro-2.5.3.ebuild,
+  +files/miro-2.5.3-remove-pkg-config-list-all.patch:
+  Remove 'pkg-config --list-all' call, bug 294183
 
   20 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> miro-2.5.3.ebuild:
   keyword with ~amd64. Per bug #291673.
+
+  30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> miro-2.5.3.ebuild:
+  Add references to upstream bugs.
 
   30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> miro-2.5.3.ebuild:
   Add ~x86 keyword (maintainer keywording).
