@@ -1,6 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.83 2009/11/11 14:41:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.84 2009/11/28 20:47:20 scarabeus Exp $
+
+# KDE4 specific enablefinal flag
+# Uses huge amounts of ram, and those ricers would be spamming bugzilla.
+# By huge i mean around 8Gigs at least.
+# Most applications also fails with this approach now
+kdeenablefinal
 
 # profile specific USE flags
 # Don't put hardened in here.
