@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.24 2009/11/28 20:25:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.25 2009/11/28 20:54:32 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -64,6 +64,13 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
+# intersection of available linguas and app-dicts/myspell-* dictionaries
+SPELL_DIRS="af bg ca cs cy da de el en eo es et fr ga gl he hr hu it ku lt mk nb nl nn pl pt ru sk sl sv tn zu"
+SPELL_DIRS_DEPEND=""
+for X in ${SPELL_DIRS} ; do
+	SPELL_DIRS_DEPEND="${SPELL_DIRS_DEPEND} linguas_${X}? ( app-dicts/myspell-${X} )"
+done
+
 HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
@@ -115,6 +122,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	>=virtual/poppler-0.8.0"
 
 RDEPEND="java? ( >=virtual/jre-1.5 )
+	${SPELL_DIRS_DEPEND}
 	${COMMON_DEPEND}"
 
 DEPEND="${COMMON_DEPEND}
@@ -398,12 +406,6 @@ pkg_postinst() {
 
 	# Add available & useful jars to openoffice classpath
 	use java && /usr/$(get_libdir)/openoffice/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
-
-	elog
-	elog " Spell checking is provided through our own myspell-ebuilds, "
-	elog " if you want to use it, please install the correct myspell package "
-	elog " according to your language needs. "
-	elog
 
 	elog " Some aditional functionality can be installed via Extension Manager: "
 	elog " *) PDF Import "
