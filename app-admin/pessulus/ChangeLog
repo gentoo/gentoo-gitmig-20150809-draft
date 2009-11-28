@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.68 2009/10/29 20:55:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.69 2009/11/28 18:49:02 armin76 Exp $
+
+  28 Nov 2009; Raúl Porcel <armin76@gentoo.org> pessulus-2.26.2.ebuild:
+  alpha/ia64/sparc stable wrt #281427
 
 *pessulus-2.28.0 (29 Oct 2009)
 
