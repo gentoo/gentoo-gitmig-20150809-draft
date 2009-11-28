@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.4 2009/11/27 23:35:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.5 2009/11/28 00:28:26 robbat2 Exp $
 
 EAPI="2"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -118,21 +118,37 @@ openldap_find_versiontags() {
 		fi
 	done
 
-	if use berkdb ; then
-		# Now we must check for the major version of sys-libs/db linked against.
-		SLAPD_PATH=${ROOT}/usr/$(get_libdir)/openldap/slapd
-		if [ -f "${SLAPD_PATH}" ]; then
-			OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
-				| awk '/libdb-/{gsub("^libdb-","",$1);gsub(".so$","",$1);print $1}')"
-			NEWVER="$(db_findver sys-libs/db)"
-			if [ "${OLDVER}" != "${NEWVER}" ]; then
-				eerror "	Your existing version of OpenLDAP was built against"
-				eerror "	sys-libs/db:${OLDVER}, but the new one will build against"
-				eerror "	${NEWVER} and your database would be inaccessible."
-				echo
-				openldap_upgrade_howto
-			fi
+	# Now we must check for the major version of sys-libs/db linked against.
+	SLAPD_PATH=${ROOT}/usr/$(get_libdir)/openldap/slapd
+	if [ -f "${SLAPD_PATH}" ]; then
+		OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
+			| awk '/libdb-/{gsub("^libdb-","",$1);gsub(".so$","",$1);print $1}')"
+		NEWVER="$(use berkdb && db_findver sys-libs/db)"
+		local fail=0
+		if [ -z "${OLDVER}" -a -z "${NEWVER}" ]; then
+			:
+			# Nothing wrong here.
+		elif [ -z "${OLDVER}" -a -n "${NEWVER}" ]; then
+			eerror "	Your existing version of OpenLDAP was not built against"
+			eerror "	any version of sys-libs/db, but the new one will build"
+			eerror "	against	${NEWVER} and your database may be inaccessible."
+			echo
+			fail=1
+		elif [ -n "${OLDVER}" -a -z "${NEWVER}" ]; then
+			eerror "	Your existing version of OpenLDAP was built against"
+			eerror "	sys-libs/db:${OLDVER}, but the new one will not be"
+			eerror "	built against any version and your database may be"
+			eerror "	inaccessible."
+			echo
+			fail=1
+		elif [ "${OLDVER}" != "${NEWVER}" ]; then
+			eerror "	Your existing version of OpenLDAP was built against"
+			eerror "	sys-libs/db:${OLDVER}, but the new one will build against"
+			eerror "	${NEWVER} and your database would be inaccessible."
+			echo
+			fail=1
 		fi
+		[ "${fail}" == "1" ] && openldap_upgrade_howto
 	fi
 
 	echo
@@ -228,9 +244,11 @@ build_contrib_module() {
 	# <dir> <sources> <outputname>
 	cd "${S}/contrib/slapd-modules/$1"
 	einfo "Compiling contrib-module: $3"
+	# Make sure it's uppercase
+	local define_name="$(echo "SLAPD_OVER_${1}" | LC_ALL=C tr '[:lower:]' '[:upper:]')"
 	"${lt}" --mode=compile --tag=CC \
 		"${CC}" \
-		-DSLAPD_OVER_${1^^}=SLAPD_MOD_DYNAMIC \
+		-D${define_name}=SLAPD_MOD_DYNAMIC \
 		-I../../../include -I../../../servers/slapd ${CFLAGS} \
 		-o ${2%.c}.lo -c $2 || die "compiling $3 failed"
 	einfo "Linking contrib-module: $3"
