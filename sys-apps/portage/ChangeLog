@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.652 2009/11/28 00:23:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.653 2009/11/28 23:28:37 zmedico Exp $
+
+*portage-2.2_rc54 (28 Nov 2009)
+
+  28 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc54.ebuild:
+  2.2_rc54 bump. This includes all fixes in 2.1.7.9.
+
+*portage-2.1.7.9 (28 Nov 2009)
+
+  28 Nov 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.9.ebuild:
+  2.1.7.9 bump. This fixes bug #294945 (KeyError triggered by blockers).
+  Bug #288499 tracks all bugs fixed since 2.1.6.x.
 
 *portage-2.2_rc53 (27 Nov 2009)
 
