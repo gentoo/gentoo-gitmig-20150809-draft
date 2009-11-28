@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.246 2009/11/23 14:58:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.247 2009/11/28 16:10:38 tcunha Exp $
+
+  28 Nov 2009; Tiago Cunha <tcunha@gentoo.org> lftp-4.0.3.ebuild:
+  stable sparc, bug 293737
 
   23 Nov 2009; Jeroen Roovers <jer@gentoo.org> lftp-4.0.3.ebuild:
   Stable for HPPA (bug #293737).
