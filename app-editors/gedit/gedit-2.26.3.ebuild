@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.26.3.ebuild,v 1.6 2009/11/05 20:28:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.26.3.ebuild,v 1.7 2009/11/28 17:37:39 armin76 Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc python spell xattr"
 
 RDEPEND=">=gnome-base/gconf-2
