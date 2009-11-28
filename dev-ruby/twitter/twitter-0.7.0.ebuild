@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/twitter-0.6.13.ebuild,v 1.1 2009/07/30 05:55:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/twitter-0.7.0.ebuild,v 1.1 2009/11/28 10:56:59 a3li Exp $
 
 inherit gems
 
@@ -15,6 +15,6 @@ IUSE=""
 USE_RUBY="ruby18"
 
 DEPEND="=dev-ruby/httparty-0.4.3
-	>=dev-ruby/oauth-0.3.4
+	>=dev-ruby/oauth-0.3.5
 	=dev-ruby/mash-0.0.3"
 RDEPEND="${DEPEND}"
