@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.8-r2.ebuild,v 1.1 2009/02/02 12:22:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.8-r2.ebuild,v 1.2 2009/11/28 15:19:36 josejx Exp $
 
 NEED_PYTHON=2.5
 EAPI=2
@@ -15,7 +15,7 @@ SRC_URI="http://www.imagemagick.org/download/python/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=media-gfx/imagemagick-6.4
