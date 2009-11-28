@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.360 2009/11/28 00:28:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.361 2009/11/28 01:56:44 robbat2 Exp $
+
+  28 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.4.19-r1.ebuild:
+  Bug #294401: ldapc++ will not build on a fresh system as it needs liblber
+  to finish it's configure process.
 
   28 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.4.19-r1.ebuild:
