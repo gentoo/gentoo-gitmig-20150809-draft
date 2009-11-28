@@ -1,0 +1,13 @@
+Patch for bug 294797 (strip_tags XSS), based on upstream commit 785281ade8. -a3li@g.o
+
+--- action_controller/vendor/html-scanner/html/node.rb.orig	2009-11-28 12:09:54.476218352 +0100
++++ action_controller/vendor/html-scanner/html/node.rb	2009-11-28 12:10:12.748213673 +0100
+@@ -162,7 +162,7 @@
+           end
+           
+           closing = ( scanner.scan(/\//) ? :close : nil )
+-          return Text.new(parent, line, pos, content) unless name = scanner.scan(/[\w:-]+/)
++          return Text.new(parent, line, pos, content) unless name = scanner.scan(/[-:\w\x00-\x09\x0b-\x0c\x0e-\x1f]+/)
+           name.downcase!
+   
+           unless closing
