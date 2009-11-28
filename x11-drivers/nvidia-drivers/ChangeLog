@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.206 2009/11/21 05:55:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.207 2009/11/28 04:14:41 cardoe Exp $
+
+  28 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-185.18.36.ebuild, nvidia-drivers-185.18.36-r1.ebuild:
+  remove defunct compat_device_check. bug #294896 and bug #294623
 
   21 Nov 2009; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-185.18.36.ebuild:

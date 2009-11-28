@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.36.ebuild,v 1.7 2009/11/21 05:55:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.36.ebuild,v 1.8 2009/11/28 04:14:41 cardoe Exp $
 
 EAPI="2"
 
@@ -182,7 +182,6 @@ pkg_setup() {
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} HOST_CC=$(tc-getBUILD_CC)"
 		mtrr_check
-		compat_device_check
 	fi
 
 	# On BSD userland it wants real make command
