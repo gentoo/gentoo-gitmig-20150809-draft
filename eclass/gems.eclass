@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.30 2009/11/28 08:26:40 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.31 2009/11/28 09:02:59 a3li Exp $
 
 # @ECLASS: gems.eclass
 # @MAINTAINER:
@@ -20,8 +20,7 @@
 
 inherit eutils ruby
 
-#SRC_URI="mirror://rubyforge/gems/${P}.gem"
-SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
+SRC_URI="mirror://rubygems/${P}.gem"
 
 IUSE="doc"
 
