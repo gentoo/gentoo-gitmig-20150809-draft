@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/shorturl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.8 2009/03/12 08:11:58 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.9 2009/11/28 10:42:42 a3li Exp $
+
+*shorturl-0.8.7 (28 Nov 2009)
+
+  28 Nov 2009; Alex Legler <a3li@gentoo.org> +shorturl-0.8.7.ebuild:
+  Version bump, add USE_RUBY=ruby18
 
   12 Mar 2009; Alex Legler <a3li@gentoo.org> metadata.xml:
   Remove flameeyes from metadata.xml, as per his request.
