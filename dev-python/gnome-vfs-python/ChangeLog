@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-vfs-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-vfs-python/ChangeLog,v 1.16 2009/11/05 19:42:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-vfs-python/ChangeLog,v 1.17 2009/11/28 16:58:20 armin76 Exp $
+
+  28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
+  gnome-vfs-python-2.26.1.ebuild:
+  alpha/ia64/sparc stable wrt #281427
 
   05 Nov 2009; Markus Meier <maekke@gentoo.org>
   gnome-vfs-python-2.26.1.ebuild:
