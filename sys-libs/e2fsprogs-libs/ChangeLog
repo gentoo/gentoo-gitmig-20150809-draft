@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.39 2009/11/23 20:43:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.40 2009/11/28 16:06:59 armin76 Exp $
+
+  28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
+  e2fsprogs-libs-1.41.9.ebuild:
+  ia64/sparc stable wrt #284745
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org>
   e2fsprogs-libs-1.41.9.ebuild:
