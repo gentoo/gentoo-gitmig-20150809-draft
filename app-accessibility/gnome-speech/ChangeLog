@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.139 2009/10/24 16:28:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.140 2009/11/28 17:08:26 armin76 Exp $
+
+  28 Nov 2009; Raúl Porcel <armin76@gentoo.org> gnome-speech-0.4.25.ebuild:
+  alpha/ia64/sparc stable wrt #281427
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> gnome-speech-0.4.25.ebuild:
   ppc stable #281427
