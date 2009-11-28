@@ -6,5 +6,9 @@
 		<flag name='consolekit'>
 			Enable consolekit integration for the privileges detection.
 		</flag>
+		<flag name='minimal'>
+			Control dependencies on legacy apps (xterm, twm, ...). Safe to
+			enable if you use a modern desktop environment.
+		</flag>
 	</use>
 </pkgmetadata>
