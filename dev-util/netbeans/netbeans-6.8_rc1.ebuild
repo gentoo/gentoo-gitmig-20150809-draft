@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_beta-r1.ebuild,v 1.1 2009/10/25 19:09:45 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_rc1.ebuild,v 1.1 2009/11/28 23:35:50 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -10,8 +10,8 @@ DESCRIPTION="NetBeans IDE for Java"
 HOMEPAGE="http://www.netbeans.org"
 
 SLOT="6.8"
-SRC_URI="http://download.netbeans.org/netbeans/6.8/beta/zip/netbeans-6.8beta-200910212001-src.zip
-	mirror://gentoo/netbeans-6.7-l10n-20090626125342.tar.bz2"
+SRC_URI="http://download.netbeans.org/netbeans/6.8/rc1/zip/netbeans-6.8rc1-200911252200-src.zip
+	mirror://gentoo/netbeans-6.8-l10n-20091127193013.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
 KEYWORDS="~amd64 ~x86"
@@ -35,6 +35,7 @@ IUSE_NETBEANS_MODULES="
 	+netbeans_modules_websvccommon"
 IUSE_LINGUAS="
 	linguas_ar
+	linguas_ca
 	linguas_cs
 	linguas_de
 	linguas_es
@@ -47,6 +48,7 @@ IUSE_LINGUAS="
 	linguas_nl
 	linguas_pl
 	linguas_pt_BR
+	linguas_ro
 	linguas_ru
 	linguas_sq
 	linguas_sv
@@ -94,7 +96,6 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-java/flute-1.3:0
 		>=dev-java/freemarker-2.3.8:2.3
 		>=dev-java/jakarta-oro-2:2.0
-		>=dev-java/jaxb-2:2
 		>=dev-java/jdbc-mysql-5.1:0
 		>=dev-java/jdbc-postgresql-8.3_p603:0
 		>=dev-java/jsch-0.1.39:0
@@ -130,7 +131,6 @@ RDEPEND=">=virtual/jdk-1.5
 		dev-java/jtidy:0
 		>=dev-java/junit-3.8.2:0
 		dev-java/saaj:0
-		dev-java/sjsxp:0
 		dev-java/stax-ex:0
 		>=dev-java/swing-worker-1.1:0
 		dev-java/xmlstreambuffer:0
@@ -189,7 +189,6 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/freemarker-2.3.8:2.3
 		>=dev-java/jakarta-oro-2:2.0
 		>=dev-java/javacc-3.2:0
-		>=dev-java/jaxb-2.1:2
 		>=dev-java/jdbc-mysql-5.1:0
 		>=dev-java/jdbc-postgresql-8.3_p603:0
 		>=dev-java/jsch-0.1.39:0
@@ -481,7 +480,8 @@ src_prepare () {
 			filter_file "spring.webmvc/external/spring-webmvc-2.5.jar" ${tmpfile}
 			filter_file "web.jspparser/external/glassfish-jspparser-2.0.jar" ${tmpfile}
 			# api documentation packaged as jar
-			filter_file "websvc.restlib/external/jersey-api-doc.jar" ${tmpfile}
+			filter_file "websvc.restlib/external/jersey-1.1.4-javadoc.jar" ${tmpfile}
+			filter_file "websvc.restlib/external/jsr311-api-1.1.1-javadoc.jar" ${tmpfile}
 		fi
 
 		if use netbeans_modules_groovy ; then
@@ -512,7 +512,8 @@ src_prepare () {
 			filter_file "libs.swingx/external/swingx-0.9.5.jar" ${tmpfile}
 			filter_file "libs.smack/external/smack.jar" ${tmpfile}
 			filter_file "libs.smack/external/smackx.jar" ${tmpfile}
-			# packaged in a different way than we do
+			# packaged in a different way than we do (also netbeans seems to require JAXB 2.2)
+			filter_file "libs.jaxb/external/jaxb-api.jar" ${tmpfile}
 			filter_file "libs.jaxb/external/jaxb-impl.jar" ${tmpfile}
 			filter_file "libs.jaxb/external/jaxb1-impl.jar" ${tmpfile}
 			# packaged in a different way than we do
@@ -623,6 +624,8 @@ src_compile() {
 	else
 		heap="-Xmx1g"
 	fi
+
+	local extra_tasks=""
 
 	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="${heap} -Djava.awt.headless=true" \
 		eant ${antflags} ${clusters} -f nbbuild/build.xml ${extra_flags} ${build_target} $(use_doc build-javadoc)
@@ -748,7 +751,7 @@ src_install() {
 		done
 	fi
 	if use netbeans_modules_ruby ; then
-		cd "${D}"/${DESTINATION}/ruby2/jruby-1.3.1/bin || die
+		cd "${D}"/${DESTINATION}/ruby2/jruby-1.4.0/bin || die
 		for file in * ; do
 			fperms 755 ${file} || die
 		done
@@ -809,7 +812,7 @@ place_unpack_symlinks() {
 
 	dosymcompilejar "apisupport.harness/external" javahelp jhall.jar jsearch-2.0_05.jar
 	dosymcompilejar "javahelp/external" javahelp jh.jar jh-2.0_05.jar
-	dosymcompilejar "o.jdesktop.layout/external" swing-layout-1 swing-layout.jar swing-layout-1.0.3.jar
+	dosymcompilejar "o.jdesktop.layout/external" swing-layout-1 swing-layout.jar swing-layout-1.0.4.jar
 	dosymcompilejar "libs.jna/external" jna jna.jar jna-3.0.9.jar
 	dosymcompilejar "libs.jsr223/external" jsr223 script-api.jar jsr223-api.jar
 
@@ -850,7 +853,6 @@ place_unpack_symlinks() {
 		dosymcompilejar "libs.jakarta_oro/external" jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
 		dosymcompilejar "libs.commons_net/external" commons-net commons-net.jar commons-net-1.4.1.jar
 		dosymcompilejar "libs.freemarker/external" freemarker-2.3 freemarker.jar freemarker-2.3.8.jar
-		dosymcompilejar "libs.jaxb/external" jaxb-2 jaxb-api.jar jaxb-api.jar
 		dosymcompilejar "libs.jaxb/external" jsr173 jsr173.jar jsr173_api.jar
 		dosymcompilejar "libs.jaxb/external" sun-jaf activation.jar activation.jar
 	fi
@@ -896,7 +898,7 @@ symlink_extjars() {
 	dosyminstjar ${targetdir} javahelp jh.jar jh-2.0_05.jar
 	dosyminstjar ${targetdir} jna jna.jar jna-3.0.9.jar
 	dosyminstjar ${targetdir} jsr223 script-api.jar script-api.jar
-	dosyminstjar ${targetdir} swing-layout-1 swing-layout.jar swing-layout-1.0.3.jar
+	dosyminstjar ${targetdir} swing-layout-1 swing-layout.jar swing-layout-1.0.4.jar
 
 	if use netbeans_modules_dlight ; then
 		targetdir="dlight2/modules/ext"
@@ -957,7 +959,7 @@ symlink_extjars() {
 		# jersey.jar
 		# jersey-spring.jar
 		dosyminstjar ${targetdir} jettison jettison.jar jettison-1.1.jar
-		dosyminstjar ${targetdir} jsr311-api jsr311-api.jar jsr311-api.jar
+		dosyminstjar ${targetdir} jsr311-api jsr311-api.jar jsr311-api-1.1.1.jar
 		# wadl2java.jar - atm do not know what to do with it
 	fi
 
@@ -1018,7 +1020,7 @@ symlink_extjars() {
 		# jaxb-impl.jar
 		# jaxb-xjc.jar
 		targetdir="ide${IDE_VERSION}/modules/ext/jaxb/api"
-		dosyminstjar ${targetdir} jaxb-2 jaxb-api.jar jaxb-api.jar
+		# jaxb-api.jar
 		dosyminstjar ${targetdir} jsr173 jsr173.jar jsr173_api.jar
 	fi
 
@@ -1043,17 +1045,20 @@ symlink_extjars() {
 		# nexus-indexer-2.0.0-shaded.jar
 		dosyminstjar ${targetdir} junit junit.jar junit-3.8.2.jar
 		dosyminstjar ${targetdir} swing-worker swing-worker.jar swing-worker-1.1.jar
-		targetdir="java3/modules/ext/jaxws21"
+		targetdir="java3/modules/ext/jaxws22"
 		dosyminstjar ${targetdir} fastinfoset fastinfoset.jar FastInfoset.jar
+		# gmbal-api-only.jar
 		# http.jar
 		# jaxws-rt.jar
 		# jaxws-tools.jar
+		# management-api.jar
 		# mimepull.jar - atm do not know what to do with it
+		# policy.jar
 		dosyminstjar ${targetdir} saaj saaj.jar saaj-impl.jar
-		dosyminstjar ${targetdir} sjsxp sjsxp.jar sjsxp.jar
 		dosyminstjar ${targetdir} stax-ex stax-ex.jar stax-ex.jar
 		dosyminstjar ${targetdir} xmlstreambuffer streambuffer.jar streambuffer.jar
-		targetdir="java3/modules/ext/jaxws21/api"
+		# woodstox.jar
+		targetdir="java3/modules/ext/jaxws22/api"
 		# jaxws-api.jar
 		dosyminstjar ${targetdir} jsr250 jsr250.jar jsr250-api.jar
 		dosyminstjar ${targetdir} jsr67 jsr67.jar saaj-api.jar
