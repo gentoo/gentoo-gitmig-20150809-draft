@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.39 2009/11/19 13:29:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.40 2009/11/28 17:43:41 armin76 Exp $
+
+  28 Nov 2009; Raúl Porcel <armin76@gentoo.org> gtk-vnc-0.3.8-r1.ebuild:
+  alpha stable
 
   19 Nov 2009; Mart Raudsepp <leio@gentoo.org> gtk-vnc-0.3.10.ebuild:
   Install documentation files (NEWS, ChangeLog, etc)
