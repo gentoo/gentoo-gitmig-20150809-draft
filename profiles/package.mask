@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10894 2009/11/27 15:48:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10895 2009/11/28 17:39:33 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -451,12 +451,6 @@ dev-python/python-gammu
 # Will be unmasked when felt “ready” (and openrc'll support it as
 # guest).
 app-emulation/lxc
-
-# Raúl Porcel <armin76@gentoo.org> (22 Oct 2009)
-# Not needed anymore, vanilla kernel works
-# pretty well on SH nowadays.
-# Removal in 30 days
-sys-kernel/sh-sources
 
 # Dirkjan Ochtman <djc@gentoo.org> (21 Oct 2009)
 # Needs some more testing before unleashing on the masses.
