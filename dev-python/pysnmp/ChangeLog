@@ -1,11 +1,11 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.29 2009/11/28 16:12:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.30 2009/11/28 17:46:23 arfrever Exp $
 
 *pysnmp-4.1.12a (28 Nov 2009)
 
   28 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
-  +pysnmp-4.1.12a.ebuild:
+  +pysnmp-3.4.4.ebuild, +pysnmp-4.1.12a.ebuild:
   Version bump. Set SUPPORT_PYTHON_ABIS.
 
   05 Sep 2009; Patrick Lauer <patrick@gentoo.org> +pysnmp-3.4.2.ebuild:
