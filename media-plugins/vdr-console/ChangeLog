@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-console
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-console/ChangeLog,v 1.5 2008/07/06 17:12:19 hd_brummy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-console/ChangeLog,v 1.6 2009/11/28 10:57:05 swegener Exp $
+
+  28 Nov 2009; Sven Wegener <swegener@gentoo.org> vdr-console-0.6.0.ebuild:
+  Do not escape ' in " in DESCRIPTION.
 
   06 Jul 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/vdr-console-0.6.0-vdr-1.6.x-compilefix.diff,
