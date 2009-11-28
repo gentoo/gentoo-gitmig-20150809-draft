@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.643 2009/11/20 18:47:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.644 2009/11/28 20:38:55 scarabeus Exp $
+
+*kdelibs-4.3.3-r1 (28 Nov 2009)
+
+  28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdelibs-4.3.3.ebuild, +kdelibs-4.3.3-r1.ebuild,
+  +files/kdelibs-4.3.3-plasma-pixmap-cache.patch:
+  Revision bump. Apply the plasma-pixmap-cache fix.
 
   20 Nov 2009; Jonathan Callen <abcd@gentoo.org> kdelibs-3.5.10-r6.ebuild:
   Switch to EAPI=2 to add a USE dep
