@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/policykit-gnome/policykit-gnome-0.9.2-r1.ebuild,v 1.10 2009/11/05 19:45:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/policykit-gnome/policykit-gnome-0.9.2-r1.ebuild,v 1.11 2009/11/28 17:34:06 armin76 Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND=">=x11-libs/gtk+-2.13.6
