@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/rox-tail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-tail/ChangeLog,v 1.5 2007/11/16 15:25:23 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-tail/ChangeLog,v 1.6 2009/11/28 10:58:18 swegener Exp $
+
+  28 Nov 2009; Sven Wegener <swegener@gentoo.org> rox-tail-2.1.4.ebuild:
+  Do not escape ' in " in DESCRIPTION.
 
   16 Nov 2007; Samuli Suominen <drac@gentoo.org> rox-tail-2.1.4.ebuild:
   amd64 stable wrt #197514
