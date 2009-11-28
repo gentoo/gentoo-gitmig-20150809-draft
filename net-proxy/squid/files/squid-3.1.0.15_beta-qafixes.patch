@@ -1,6 +1,6 @@
-diff -Nru squid-3.1.0.13.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.0.13/helpers/negotiate_auth/squid_kerb_auth/configure.in
---- squid-3.1.0.13.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-09-19 13:30:54.000000000 +0200
-+++ squid-3.1.0.13/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-09-19 13:33:38.000000000 +0200
+diff -Nru squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.0.15/helpers/negotiate_auth/squid_kerb_auth/configure.in
+--- squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-11-28 10:51:49.000000000 +0100
++++ squid-3.1.0.15/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-11-28 10:52:03.000000000 +0100
 @@ -94,7 +94,7 @@
                         else
                           ac_gssapi_libs=`krb5-config --libs gssapi 2>/dev/null`
@@ -37,19 +37,10 @@ diff -Nru squid-3.1.0.13.orig/helpers/negotiate_auth/squid_kerb_auth/configure.i
                       else
                           for lib in $ac_gss_libs; do
                              AC_CHECK_LIB($lib,main)
-@@ -425,6 +425,8 @@
-   [ squid_dir=$withval ]
- )
- 
-+test "x$prefix" = xNONE && prefix=$ac_default_prefix
-+test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
- eval ac_p_include=$includedir
- CPPFLAGS="$CPPFLAGS -I$ac_p_include -I../../../ -I../../../include/ -I$squid_dir/include -I$squid_dir/src -I$squid_dir"
- AC_CACHE_CHECK([for SQUID at '$squid_dir' ],ac_cv_have_squid,[
-diff -Nru squid-3.1.0.13.orig/src/forward.cc squid-3.1.0.13/src/forward.cc
---- squid-3.1.0.13.orig/src/forward.cc	2009-08-04 15:32:17.000000000 +0200
-+++ squid-3.1.0.13/src/forward.cc	2009-09-19 13:33:38.000000000 +0200
-@@ -995,7 +995,12 @@
+diff -Nru squid-3.1.0.15.orig/src/forward.cc squid-3.1.0.15/src/forward.cc
+--- squid-3.1.0.15.orig/src/forward.cc	2009-11-23 04:10:09.000000000 +0100
++++ squid-3.1.0.15/src/forward.cc	2009-11-28 10:52:03.000000000 +0100
+@@ -999,7 +999,12 @@
                          break;
  
                      if (o->cmsg_level == SOL_IP && o->cmsg_type == IP_TOS) {
@@ -63,29 +54,3 @@ diff -Nru squid-3.1.0.13.orig/src/forward.cc squid-3.1.0.13/src/forward.cc
                          break;
                      }
                      p += CMSG_LEN(o->cmsg_len);
-diff -Nru squid-3.1.0.13.orig/src/ftp.cc squid-3.1.0.13/src/ftp.cc
---- squid-3.1.0.13.orig/src/ftp.cc	2009-08-04 15:32:17.000000000 +0200
-+++ squid-3.1.0.13/src/ftp.cc	2009-09-19 13:33:38.000000000 +0200
-@@ -534,16 +534,18 @@
- void
- FtpStateData::loginParser(const char *login, int escaped)
- {
--    char *s = NULL;
-+    const char *s = NULL;
-     debugs(9, 4, HERE << ": login='" << login << "', escaped=" << escaped);
-     debugs(9, 9, HERE << ": IN : login='" << login << "', escaped=" << escaped << ", user=" << user << ", password=" << password);
- 
-     if ((s = strchr(login, ':'))) {
--        *s = '\0';
--
-         /* if there was a username part */
-         if (s > login) {
--            xstrncpy(user, login, MAX_URL);
-+	    int len = s - login;
-+	    if (len > MAX_URL)
-+		len = MAX_URL;
-+            xstrncpy(user, login, len);
-+	    user[len] = '\0';
-             if (escaped)
-                 rfc1738_unescape(user);
-         }

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.12 2009/10/25 08:35:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.13 2009/11/28 12:32:58 mrness Exp $
 
 opts="${opts} reload rotate"
 
@@ -89,24 +89,27 @@ start() {
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
-	/usr/sbin/squid -k shutdown -f /etc/squid/${SVCNAME}.conf
-	# Now we have to wait until squid has _really_ stopped.
-	sleep 1
-	if [ -f /var/run/${SVCNAME}.pid ] ; then
-		einfon "Waiting for squid to shutdown ."
-		cnt=0
-		while [ -f /var/run/${SVCNAME}.pid ] ; do
-			cnt=$(expr $cnt + 1)
-			if [ $cnt -gt 60 ] ; then
-				# Waited 120 seconds now. Fail.
-				echo
-				eend 1 "Failed."
-				break
-			fi
-			sleep 2
-			echo -n "."
-		done
-		echo
+	if /usr/sbin/squid -k shutdown -f /etc/squid/${SVCNAME}.conf ; then
+		# Now we have to wait until squid has _really_ stopped.
+		sleep 1
+		if [ -f /var/run/${SVCNAME}.pid ] ; then
+			einfon "Waiting for squid to shutdown ."
+			cnt=0
+			while [ -f /var/run/${SVCNAME}.pid ] ; do
+				cnt=$(expr $cnt + 1)
+				if [ $cnt -gt 60 ] ; then
+					# Waited 120 seconds now. Fail.
+					echo
+					eend 1 "Failed."
+					break
+				fi
+				sleep 2
+				echo -n "."
+			done
+			echo
+		fi
+	else
+		eerror "Squid shutdown failed, probably service is already down."
 	fi
 	eend 0
 }

@@ -1,6 +1,22 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.291 2009/11/08 17:43:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.292 2009/11/28 12:32:59 mrness Exp $
+
+*squid-3.1.0.15_beta (28 Nov 2009)
+*squid-3.0.20 (28 Nov 2009)
+
+  28 Nov 2009; Alin Năstac <mrness@gentoo.org> +squid-3.0.20.ebuild,
+  +files/squid-3.0.20-adapted-zph.patch,
+  +files/squid-3.0.20-cross-compile.patch, +files/squid-3.0.20-gentoo.patch,
+  -squid-3.1.0.13_beta-r2.ebuild,
+  -files/squid-3.1.0.13_beta-cve-2009-2855.patch,
+  -files/squid-3.1.0.13_beta-gentoo.patch,
+  -files/squid-3.1.0.13_beta-qafixes.patch, +squid-3.1.0.15_beta.ebuild,
+  +files/squid-3.1.0.15_beta-gentoo.patch,
+  +files/squid-3.1.0.15_beta-qafixes.patch, files/squid.initd,
+  files/squid.initd-logrotate:
+  Version bumps (#294871). Speed up service stop when squid has crashed
+  (#291911). Add digest_auth_ldap helper (#293803).
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> squid-3.0.19.ebuild:
   Stable on alpha, bug #290185

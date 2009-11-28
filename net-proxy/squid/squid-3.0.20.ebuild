@@ -1,25 +1,33 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.13_beta-r2.ebuild,v 1.1 2009/09/19 11:58:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.20.ebuild,v 1.1 2009/11/28 12:32:59 mrness Exp $
 
 EAPI="2"
 
-inherit eutils pam toolchain-funcs
+inherit eutils pam toolchain-funcs autotools
+
+# lame archive versioning scheme..
+S_PMV="${PV%%.*}"
+S_PV="${PV%.*}"
+S_PL="${PV##*.}"
+S_PP="${PN}-${S_PV}.STABLE${S_PL}"
+
+RESTRICT="test" # check if test works in next bump
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
-SRC_URI="http://www.squid-cache.org/Versions/v3/3.1/${P/_beta}.tar.gz"
+SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate test \
+IUSE="caps pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate \
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
 	elibc_uclibc kernel_linux +epoll"
 
-COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
+DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
 	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
@@ -29,18 +37,13 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
 	dev-lang/perl"
-DEPEND="${COMMON_DEPEND}
-	sys-devel/automake
-	sys-devel/autoconf
-	sys-devel/libtool
-	test? ( dev-util/cppunit )"
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${DEPEND}
 	samba? ( net-fs/samba )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
 	sqlite? ( dev-perl/DBD-SQLite )"
 
-S="${WORKDIR}/${P/_beta}"
+S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
 	if grep -qs '^[[:space:]]*cache_dir[[:space:]]\+coss' "${ROOT}"etc/squid/squid.conf; then
@@ -56,18 +59,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3-capability.patch
-	epatch "${FILESDIR}"/${P}-cve-2009-2855.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-qafixes.patch
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
+	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-adapted-zph.patch
 
-	# eautoreconf breaks lib/libLtdl/libtool script
-	./bootstrap.sh || die "autoreconf failed"
+	eautoreconf
 }
 
 src_configure() {
-	local myconf=""
-
 	local basic_modules="getpwnam,NCSA,MSNT"
 	use samba && basic_modules="SMB,multi-domain-NTLM,${basic_modules}"
 	use ldap && basic_modules="LDAP,${basic_modules}"
@@ -79,24 +78,24 @@ src_configure() {
 		basic_modules="DB,${basic_modules}"
 	fi
 
+	local digest_modules="password"
+	use ldap && digest_modules="ldap,${digest_modules}"
+
 	local ext_helpers="ip_user,session,unix_group"
 	use samba && ext_helpers="wbinfo_group,${ext_helpers}"
 	use ldap && ext_helpers="ldap_group,${ext_helpers}"
 
 	local ntlm_helpers="fakeauth"
-	use samba && ntlm_helpers="smb_lm,${ntlm_helpers}"
+	use samba && ntlm_helpers="SMB,${ntlm_helpers}"
 
 	local negotiate_helpers=
-	if use kerberos; then
-		negotiate_helpers="squid_kerb_auth"
-		has_version app-crypt/mit-krb5 \
-			&& myconf="--enable-mit --disable-heimdal" \
-			|| myconf="--disable-mit --enable-heimdal"
-	fi
+	use kerberos && local negotiate_helpers="squid_kerb_auth"
+
+	local myconf=""
 
 	# coss support has been disabled
 	# If it is re-enabled again, make sure you don't enable it for elibc_uclibc (#61175)
-	myconf="${myconf} --enable-storeio=ufs,diskd,aufs"
+	myconf="${myconf} --enable-storeio=ufs,diskd,aufs,null"
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter
@@ -117,11 +116,10 @@ src_configure() {
 		--libexecdir=/usr/libexec/squid \
 		--localstatedir=/var \
 		--datadir=/usr/share/squid \
-		--with-logdir=/var/log/squid \
 		--with-default-user=squid \
 		--enable-auth="basic,digest,negotiate,ntlm" \
 		--enable-removal-policies="lru,heap" \
-		--enable-digest-auth-helpers="password" \
+		--enable-digest-auth-helpers="${digest_modules}" \
 		--enable-basic-auth-helpers="${basic_modules}" \
 		--enable-external-acl-helpers="${ext_helpers}" \
 		--enable-ntlm-auth-helpers="${ntlm_helpers}" \
@@ -134,11 +132,9 @@ src_configure() {
 		--with-large-files \
 		--with-filedescriptors=8192 \
 		$(use_enable caps) \
-		$(use_enable ipv6) \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
 		$(use_enable icap-client) \
-		$(use_enable zero-penalty-hit zph-qos) \
 		${myconf} || die "econf failed"
 }
 
