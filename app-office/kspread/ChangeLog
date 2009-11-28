@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.106 2009/11/22 16:19:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.107 2009/11/28 08:27:10 scarabeus Exp $
+
+  28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kspread-2.0.2.ebuild:
+  Drop old 2.0 release series.
 
 *kspread-2.1.0 (22 Nov 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.92 2009/11/22 16:18:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.93 2009/11/28 08:26:28 scarabeus Exp $
+
+  28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -koffice-data-2.0.2.ebuild:
+  Drop old 2.0 release series.
 
 *koffice-data-2.1.0 (22 Nov 2009)
 

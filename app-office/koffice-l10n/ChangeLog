@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-l10n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/ChangeLog,v 1.8 2009/11/26 19:53:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/ChangeLog,v 1.9 2009/11/28 08:27:34 scarabeus Exp $
+
+  28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -koffice-l10n-2.0.2.ebuild:
+  Drop old 2.0 release series.
 
   26 Nov 2009; <tampakrap@gentoo.org> koffice-l10n-2.1.0.ebuild:
   Fix SRC_URI, bug 294747
