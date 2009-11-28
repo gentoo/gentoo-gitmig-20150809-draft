@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.33.ebuild,v 1.1 2009/11/26 07:58:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.33.ebuild,v 1.2 2009/11/28 23:11:46 robbat2 Exp $
 
 EAPI=2
 MODULE_AUTHOR="DORMANDO"
@@ -23,8 +23,6 @@ DEPEND="dev-perl/Net-Netmask
 		>=dev-perl/Sys-Syscall-0.22
 		>=dev-perl/Perlbal-1.73
 		dev-perl/IO-AIO
-		>=dev-perl/Gearman-Server-1.09
-		dev-perl/Gearman-Client-Async
 		dev-perl/libwww-perl
 		>=dev-perl/MogileFS-Client-1.09
 		dev-perl/Cache-Memcached
