@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/lfhex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.25 2009/11/28 21:43:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.26 2009/11/28 21:45:53 scarabeus Exp $
+
+  28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> lfhex-0.42.ebuild:
+  Stable on amd64.
 
   28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/lfhex-gcc3-inline-fix.patch, -lfhex-0.3.7.2.ebuild,
