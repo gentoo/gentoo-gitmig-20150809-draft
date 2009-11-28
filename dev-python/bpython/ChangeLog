@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.12 2009/11/15 06:29:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.13 2009/11/28 18:45:41 arfrever Exp $
+
+  28 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bpython-0.9.5.2-r1.ebuild:
+  Rename /usr/bin/bpython to /usr/bin/bpython-${PYTHON_ABI} (bug #294807).
 
 *bpython-0.9.5.2-r1 (15 Nov 2009)
 
