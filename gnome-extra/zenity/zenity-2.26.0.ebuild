@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.26.0.ebuild,v 1.6 2009/11/05 19:57:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.26.0.ebuild,v 1.7 2009/11/28 17:00:31 armin76 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="libnotify"
 
 RDEPEND=">=x11-libs/gtk+-2.15.2
