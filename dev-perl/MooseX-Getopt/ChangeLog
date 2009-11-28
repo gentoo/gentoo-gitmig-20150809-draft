@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MooseX-Getopt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.9 2009/10/24 10:35:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.10 2009/11/28 02:01:27 robbat2 Exp $
+
+*MooseX-Getopt-0.25 (28 Nov 2009)
+
+  28 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +MooseX-Getopt-0.25.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *MooseX-Getopt-0.24 (24 Oct 2009)
 
