@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pysnmp-apps
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-apps/ChangeLog,v 1.6 2008/06/23 06:46:13 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-apps/ChangeLog,v 1.7 2009/11/28 16:30:45 arfrever Exp $
+
+*pysnmp-apps-0.2.8a (28 Nov 2009)
+
+  28 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pysnmp-apps-0.2.8a.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
 *pysnmp-apps-0.2.7a (23 Jun 2008)
 
