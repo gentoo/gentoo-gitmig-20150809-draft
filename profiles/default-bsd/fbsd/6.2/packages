@@ -1,5 +1,0 @@
-# Copyright 2004-2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/packages,v 1.2 2006/10/05 10:41:00 flameeyes Exp $
-
-*>=sys-apps/baselayout-1.13_alpha

@@ -1,9 +1,0 @@
-# Copyright 2004-2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/make.defaults,v 1.3 2007/08/08 19:27:22 dev-zero Exp $
-
-# Note: CHOST must be *-gentoo-freebsd6.2, so that Gentoo can be recognized in
-# ./configure files.
-# Note: ARCH must be *-fbsd
-
-USE="cups gdbm gpm ppds unicode"
