@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10.ebuild,v 1.4 2009/11/25 22:42:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10.ebuild,v 1.5 2009/11/28 17:11:41 jer Exp $
 
 EAPI="2"
 
@@ -19,12 +19,12 @@ RESTRICT="mirror test"
 
 QA_DT_HASH="opt/${PN}/.*"
 QA_PRESTRIPPED="
-	opt/${PN}/lib/opera/${PV/_pre*}/missingsyms.so
-	opt/${PN}/lib/opera/${PV/_pre*}/spellcheck.so
-	opt/${PN}/lib/opera/${PV/_pre*}/opera
-	opt/${PN}/lib/opera/${PV/_pre*}/works
-	opt/${PN}/lib/opera/${PV/_pre*}/operaplugincleaner
-	opt/${PN}/lib/opera/${PV/_pre*}/operapluginwrapper
+	opt/${PN}/lib/${PN}/${PV/_pre*}/missingsyms.so
+	opt/${PN}/lib/${PN}/${PV/_pre*}/spellcheck.so
+	opt/${PN}/lib/${PN}/${PV/_pre*}/opera
+	opt/${PN}/lib/${PN}/${PV/_pre*}/works
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operaplugincleaner
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper
 "
 
 IUSE="elibc_FreeBSD gnome qt3 qt-static"
