@@ -1,4 +1,0 @@
-default/linux/alpha/10.0
-# cd /etc
-# rm make.profile
-# ln -s ../usr/portage/profiles/default/linux/alpha/10.0 make.profile

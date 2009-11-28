@@ -1,8 +1,0 @@
-default/linux/x86/10.0
-# 
-# SYNC AND EMERGE THE NEWEST PORTAGE BEFORE SWITCHING!
-#
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/default/linux/x86/10.0 make.profile
-

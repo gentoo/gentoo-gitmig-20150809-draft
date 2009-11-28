@@ -1,7 +1,0 @@
-# Copyright 1999-2009 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/package.mask,v 1.19 2009/07/31 09:44:44 ssuominen Exp $
-
-# Christian Faulhammer <opfer@gentoo.org> (05 Dec 2006)
-# this version is badly broken on x86, see bug #153280
-~app-arch/rpm-4.4.7

@@ -1,4 +1,0 @@
-default/linux/ia64/10.0
-# cd /etc
-# rm make.profile
-# ln -s ../usr/portage/profiles/default/linux/ia64/10.0 make.profile

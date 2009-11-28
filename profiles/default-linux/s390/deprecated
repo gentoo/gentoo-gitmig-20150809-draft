@@ -1,4 +1,0 @@
-default/linux/s390/10.0
-# cd /etc
-# rm make.profile
-# ln -s ../usr/portage/profiles/default/linux/s390/10.0 make.profile
