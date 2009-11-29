@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>graphics</herd>
+	<use>
+		<flag name="gpu">GPU support for Enblend</flag>
+		<flag name="image-cache">allow for processing of large images</flag>
+	</use>
 </pkgmetadata>
