@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/zope-publisher-3.10.0.ebuild,v 1.1 2009/11/01 05:45:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/zope-publisher-3.10.1.ebuild,v 1.1 2009/11/29 19:41:49 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
