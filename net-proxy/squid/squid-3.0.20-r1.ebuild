@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.20.ebuild,v 1.1 2009/11/28 12:32:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.20-r1.ebuild,v 1.1 2009/11/29 08:53:09 mrness Exp $
 
 EAPI="2"
 
@@ -61,6 +61,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-cross-compile.patch
+	epatch "${FILESDIR}"/${P}-libmd5.patch
 	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-adapted-zph.patch
 
 	eautoreconf

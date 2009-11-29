@@ -1,0 +1,16 @@
+diff -Nru squid-3.0.STABLE20.orig/configure.in squid-3.0.STABLE20/configure.in
+--- squid-3.0.STABLE20.orig/configure.in	2009-11-28 10:29:42.000000000 +0100
++++ squid-3.0.STABLE20/configure.in	2009-11-29 09:36:03.000000000 +0100
+@@ -2426,7 +2426,11 @@
+ AC_CHECK_LIB(crypt, crypt, [CRYPTLIB="-lcrypt"])
+ 
+ dnl Solaris10 provides MD5 natively through libmd5
+-AC_CHECK_LIB(md5, MD5Init, [CRYPTLIB="$CRYPTLIB -lmd5"])
++case "$host" in
++	*-solaris*)
++	    AC_CHECK_LIB(md5, MD5Init, [CRYPTLIB="$CRYPTLIB -lmd5"])
++	    ;;
++esac
+ 
+ AC_SUBST(CRYPTLIB)
+ 
