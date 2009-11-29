@@ -1,9 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.106 2009/11/25 16:24:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.107 2009/11/29 17:02:59 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (29 Nov 2009)
+# This will need stable xz-utils.
+<kde-base/ark-4.3.3-r1 lzma
+<kde-base/kdebase-kioslaves-4.3.3-r1 lzma
+<kde-base/kdelibs-4.3.3-r2 lzma
 
 # Alexey Shvetsov <alexxy@gentoo.org> (25 Nov 2009)
 # mask infiniband use flag for some packages since infiniband software
