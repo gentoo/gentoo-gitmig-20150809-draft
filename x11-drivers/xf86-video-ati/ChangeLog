@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.95 2009/10/11 11:18:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.96 2009/11/29 13:01:25 scarabeus Exp $
+
+  29 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-video-ati-6.6.3.ebuild, -xf86-video-ati-6.8.0-r1.ebuild,
+  -xf86-video-ati-6.9.0.ebuild, -xf86-video-ati-6.10.0.ebuild:
+  Drop driver versions that ain't entirely working with xorg-server-1.6
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xf86-video-ati-6.12.4.ebuild:
   ppc stable #282290
