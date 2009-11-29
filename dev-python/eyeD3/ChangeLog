@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.39 2009/11/08 19:38:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.40 2009/11/29 16:27:42 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> eyeD3-0.6.17.ebuild:
+  sparc stable
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> eyeD3-0.6.17.ebuild:
   ppc stable #290462
