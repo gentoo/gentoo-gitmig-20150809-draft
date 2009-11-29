@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.71 2009/11/27 15:34:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.72 2009/11/29 17:40:25 klausman Exp $
+
+  29 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-python-0.10.16.ebuild:
+  Stable on alpha, bug #290343
 
   27 Nov 2009; Markus Meier <maekke@gentoo.org> gst-python-0.10.16.ebuild:
   arm stable, bug #290343
