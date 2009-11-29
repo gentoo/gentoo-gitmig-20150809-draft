@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.51-r2.ebuild,v 1.3 2009/11/09 21:44:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.51-r2.ebuild,v 1.4 2009/11/29 22:35:00 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools
@@ -138,6 +138,11 @@ src_compile() {
 	einfo "Doing lib"
 	pushd lib
 	emake || die "failed to build lib"
+	popd
+
+	einfo "Doing dmeventd"
+	pushd daemons/dmeventd
+	emake device-mapper || die "failed to build lib"
 	popd
 
 	einfo "Doing main build"
