@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.112 2009/11/29 17:02:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.113 2009/11/29 18:29:19 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove obsolete kde-base/kopete[jingle] mask for KDE 3.5.10.
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE lzma for ark, kdelibs and kdebase-kioslaves because of xz-utils
