@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0.ebuild,v 1.1 2009/11/22 14:59:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0.ebuild,v 1.2 2009/11/29 09:39:13 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="debug histman icq irc jabber gnutls mrim ssl vkontakte yandexnarod"
 
 DEPEND="x11-libs/qt-gui:4[debug?]
 	x11-libs/qt-webkit:4
-	media-sound/phonon
+	|| ( media-sound/phonon x11-libs/qt-phonon )
 	jabber? ( ssl? ( dev-libs/openssl )
 		gnutls? ( net-libs/gnutls ) )"
 RDEPEND="${DEPEND}"
