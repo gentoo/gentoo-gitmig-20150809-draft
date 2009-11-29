@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.51 2009/11/26 10:32:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.52 2009/11/29 20:25:34 robbat2 Exp $
+
+  29 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Just comment out some of the SWIG USE flags that didn't compile yet.
 
 *mlt-0.4.6-r1 (26 Nov 2009)
 
