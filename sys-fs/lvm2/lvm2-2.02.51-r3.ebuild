@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.51-r3.ebuild,v 1.1 2009/11/29 23:44:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.51-r3.ebuild,v 1.2 2009/11/29 23:44:56 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools
@@ -128,7 +128,7 @@ src_compile() {
 	pushd include
 	emake || die "Failed to prepare symlinks"
 	popd
-	
+
 	einfo "Starting main build"
 	emake || die "compile fail"
 }
