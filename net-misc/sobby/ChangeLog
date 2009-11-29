@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.20 2009/11/26 20:05:51 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.21 2009/11/29 13:34:11 abcd Exp $
+
+  29 Nov 2009; Jonathan Callen <abcd@gentoo.org> -files/sobby-conf-0.2.0,
+  -files/sobby-init-0.2.0:
+  Remove unused files
 
   26 Nov 2009; Víctor Ostorga <vostorga@gentoo.org> -sobby-0.3.0.ebuild:
   Cleaning out old version
