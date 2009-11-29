@@ -17,9 +17,6 @@
 </longdescription>
 <use>
   <flag name='ada'>Add bindings for the ADA programming language</flag>
-  <flag name='itcl'>Add bindings for <pkg>dev-tcltk/itcl</pkg></flag>
-  <flag name='jadetex'>Add device for <pkg>app-text/jadetex</pkg>
-    (for processing tex files produced by the TeX backend of Jade)</flag>
   <flag name='octave'>Add bindings for <pkg>sci-mathematics/octave</pkg></flag> 
   <flag name='qhull'>Add bindings for <pkg>media-libs/qhull</pkg>
   bindings</flag> 
