@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.12 2009/10/17 10:30:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.13 2009/11/29 16:13:50 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> qimageblitz-0.0.4.ebuild:
+  Add ~sparc
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> qimageblitz-0.0.4.ebuild:
   x86 stable, bug #287691
