@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10896 2009/11/29 14:57:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10897 2009/11/29 15:35:36 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (29 Nov 2009)
+# Breaks Video ABI
+=x11-base/xorg-server-1.7.2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Nov 2009)
 #  on behalf of QA team
