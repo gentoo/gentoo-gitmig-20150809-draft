@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.2 2008/05/21 19:00:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.3 2009/11/29 13:51:00 arfrever Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/python
 	mysql?    ( dev-python/mysql-python )
 	postgres? ( virtual/postgresql-server dev-db/pygresql )
 	sqlite?   ( =dev-python/pysqlite-2* )
-	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4.2 )
+	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4* )
 	xml?      ( dev-python/jaxml )"
 
 RDEPEND="${DEPEND}"
