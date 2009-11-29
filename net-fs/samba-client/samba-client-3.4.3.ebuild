@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.4.3.ebuild,v 1.2 2009/11/08 03:34:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.4.3.ebuild,v 1.3 2009/11/29 16:01:58 klausman Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="samba4 ads aio avahi caps cluster cups debug ldap minimal syslog winbind zeroconf"
 
 DEPEND="!<net-fs/samba-3.3
