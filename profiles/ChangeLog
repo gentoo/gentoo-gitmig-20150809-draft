@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3613 2009/11/28 17:39:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3614 2009/11/29 06:41:03 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Nov 2009; Ryan Hill <dirtyepic@gentoo.org> arch/amd64/use.mask:
+  Remove emf from use.mask now that stable libemf is keyworded on amd64.
+  Also remove the related mask for plugin as no ebuild in the tree uses
+  it anymore.
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org> package.mask:
   sh-sources were punted
