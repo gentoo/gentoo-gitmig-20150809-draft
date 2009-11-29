@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/kdebase-wallpapers-4.3.3.ebuild,v 1.2 2009/11/29 14:37:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/kdebase-wallpapers-4.3.3.ebuild,v 1.3 2009/11/29 16:55:43 armin76 Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ KMMODULE="wallpapers"
 inherit kde4-meta
 
 DESCRIPTION="KDE wallpapers"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 add_blocker kde-wallpapers

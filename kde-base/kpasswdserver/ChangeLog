@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.40 2009/11/29 15:42:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.41 2009/11/29 16:52:08 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> kpasswdserver-4.3.3.ebuild:
+  Add ~sparc
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   kpasswdserver-4.3.3.ebuild:
