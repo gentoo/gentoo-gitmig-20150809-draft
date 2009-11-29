@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10895 2009/11/28 17:39:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10896 2009/11/29 14:57:35 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (29 Nov 2009)
+#  on behalf of QA team
+#
+# Fails to build with recent kernel headers (bug #236449,
+# September 2008); ignores LDFLAGS (bug #231934); has
+# parallel make issues (bug #264671) and is pending version
+# bump since at least April 2009 (bug #266745).
+#
+# Removal on 2010-01-28
+sys-apps/hwinfo
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Oct 2009)
 # As per upstream bug tracking system, this package
