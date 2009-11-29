@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.1.0.ebuild,v 1.1 2009/11/22 16:28:10 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.1.0.ebuild,v 1.2 2009/11/29 18:09:35 scarabeus Exp $
 
 EAPI=2
 
@@ -22,4 +22,5 @@ RDEPEND="
 	>=app-office/krita-${PV}:${SLOT}
 	>=app-office/kspread-${PV}:${SLOT}
 	>=app-office/kword-${PV}:${SLOT}
+	nls? ( >=app-office/koffice-l10n-${PV}:${SLOT} )
 "
