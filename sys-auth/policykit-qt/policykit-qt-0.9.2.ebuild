@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit-qt/policykit-qt-0.9.2.ebuild,v 1.6 2009/11/08 03:55:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit-qt/policykit-qt-0.9.2.ebuild,v 1.7 2009/11/29 16:22:27 armin76 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://kde.org/"
 SRC_URI="mirror://kde/stable/apps/KDE4.x/admin/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
 IUSE="debug examples"
 
