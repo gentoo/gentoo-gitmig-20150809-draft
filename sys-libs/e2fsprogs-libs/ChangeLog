@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.40 2009/11/28 16:06:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.41 2009/11/29 21:31:52 josejx Exp $
+
+  29 Nov 2009; Joseph Jezak <josejx@gentoo.org>
+  e2fsprogs-libs-1.41.9.ebuild:
+  Marked ppc stable for bug #284745.
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   e2fsprogs-libs-1.41.9.ebuild:
