@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.29 2009/11/29 16:10:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.30 2009/11/29 18:06:32 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> kubrick-4.3.3.ebuild:
+  Add ~sparc
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kubrick-4.3.3.ebuild:
   amd64 stable wrt #292455

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.24 2009/11/29 14:10:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.25 2009/11/29 18:19:21 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> kapman-4.3.3.ebuild:
+  Add ~sparc
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kapman-4.3.3.ebuild:
   amd64 stable wrt #292455

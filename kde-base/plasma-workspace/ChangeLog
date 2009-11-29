@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.43 2009/11/29 16:40:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.44 2009/11/29 18:30:29 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org>
+  plasma-workspace-4.3.3-r1.ebuild:
+  Add ~sparc
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   plasma-workspace-4.3.3-r1.ebuild:

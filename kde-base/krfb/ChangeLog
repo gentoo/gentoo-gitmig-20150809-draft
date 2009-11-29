@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.135 2009/11/29 17:13:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.136 2009/11/29 17:21:10 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> krfb-4.3.3.ebuild:
+  Add ~sparc
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> krfb-4.3.3.ebuild:
   amd64 stable wrt #292455

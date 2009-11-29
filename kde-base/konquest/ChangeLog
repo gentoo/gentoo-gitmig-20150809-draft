@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.131 2009/11/29 15:36:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.132 2009/11/29 18:10:55 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> konquest-4.3.3.ebuild:
+  Add ~sparc
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> konquest-4.3.3.ebuild:
   amd64 stable wrt #292455
