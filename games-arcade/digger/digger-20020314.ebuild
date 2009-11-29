@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20020314.ebuild,v 1.11 2007/04/09 21:58:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20020314.ebuild,v 1.12 2009/11/29 21:35:32 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Digger Remastered"
@@ -13,13 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gcc3.patch
-}
+DEPEND="media-libs/libsdl[video]"
 
 src_compile() {
 	emake -f Makefile.sdl || die
