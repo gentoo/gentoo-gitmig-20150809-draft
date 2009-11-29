@@ -1,0 +1,27 @@
+From 260d288027d9cdcd6944a6bb16d0e1f596550552 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tom=C3=A1=C5=A1=20Chv=C3=A1tal?= <scarabeus@gentoo.org>
+Date: Sun, 29 Nov 2009 13:28:41 +0100
+Subject: [PATCH] Make libXrender use docdir for documentation placement.
+
+---
+ Makefile.am |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index a15b64d..3c98504 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -24,8 +24,8 @@ SUBDIRS = src
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = xrender.pc
+ 
+-renderdocdir = $(datadir)/doc/$(PACKAGE)
+-dist_renderdoc_DATA = doc/libXrender.txt
++docdir = $(datadir)/doc/$(PACKAGE)
++dist_doc_DATA = doc/libXrender.txt
+ 
+ EXTRA_DIST = xrender.pc.in ChangeLog
+ MAINTAINERCLEANFILES = ChangeLog
+-- 
+1.6.5.3
+
