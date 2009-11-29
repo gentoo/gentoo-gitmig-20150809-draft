@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10.ebuild,v 1.5 2009/11/28 17:11:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10.ebuild,v 1.6 2009/11/29 17:00:46 jer Exp $
 
 EAPI="2"
 
@@ -25,6 +25,11 @@ QA_PRESTRIPPED="
 	opt/${PN}/lib/${PN}/${PV/_pre*}/works
 	opt/${PN}/lib/${PN}/${PV/_pre*}/operaplugincleaner
 	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper
+"
+QA_PRESTRIPPED_amd64="
+	${QA_PRESTRIPPED}
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper-ia32-linux
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper-native
 "
 
 IUSE="elibc_FreeBSD gnome qt3 qt-static"

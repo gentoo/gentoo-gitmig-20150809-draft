@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.1 2009/11/26 12:16:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.2 2009/11/29 17:00:46 jer Exp $
 
 EAPI="2"
 
@@ -19,12 +19,17 @@ RESTRICT="mirror test"
 
 QA_DT_HASH="opt/${PN}/.*"
 QA_PRESTRIPPED="
-	opt/${PN}/lib/opera/${PV/_pre*}/missingsyms.so
-	opt/${PN}/lib/opera/${PV/_pre*}/spellcheck.so
-	opt/${PN}/lib/opera/${PV/_pre*}/opera
-	opt/${PN}/lib/opera/${PV/_pre*}/works
-	opt/${PN}/lib/opera/${PV/_pre*}/operaplugincleaner
-	opt/${PN}/lib/opera/${PV/_pre*}/operapluginwrapper
+	opt/${PN}/lib/${PN}/${PV/_pre*}/missingsyms.so
+	opt/${PN}/lib/${PN}/${PV/_pre*}/spellcheck.so
+	opt/${PN}/lib/${PN}/${PV/_pre*}/opera
+	opt/${PN}/lib/${PN}/${PV/_pre*}/works
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operaplugincleaner
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper
+"
+QA_PRESTRIPPED_amd64="
+	${QA_PRESTRIPPED}
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper-ia32-linux
+	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper-native
 "
 
 IUSE="elibc_FreeBSD gnome qt3 qt-static"
