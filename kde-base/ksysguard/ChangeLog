@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.155 2009/11/20 02:19:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.156 2009/11/29 16:02:03 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ksysguard-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   -ksysguard-3.5.10.ebuild:

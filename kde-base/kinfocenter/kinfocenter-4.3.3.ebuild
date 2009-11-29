@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/kinfocenter-4.3.3.ebuild,v 1.1 2009/11/02 21:17:46 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/kinfocenter-4.3.3.ebuild,v 1.2 2009/11/29 15:16:38 ssuominen Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ OPENGL_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="The KDE Info Center"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug +handbook ieee1394"
 
 DEPEND="

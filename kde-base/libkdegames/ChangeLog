@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.133 2009/11/19 22:22:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.134 2009/11/29 16:20:28 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  libkdegames-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   -libkdegames-3.5.10.ebuild:

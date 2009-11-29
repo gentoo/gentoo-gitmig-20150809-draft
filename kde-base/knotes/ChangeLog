@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.126 2009/11/20 00:04:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.127 2009/11/29 15:32:00 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> knotes-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> -knotes-3.5.10.ebuild:
   Remove KDE 3.5.10.

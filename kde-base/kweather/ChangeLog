@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.135 2009/11/20 01:54:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.136 2009/11/29 16:14:34 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kweather-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   -files/kweather-3.5.9-gcc-4.3.patch, -kweather-3.5.10.ebuild:

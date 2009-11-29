@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.3.3.ebuild,v 1.2 2009/11/22 13:10:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.3.3.ebuild,v 1.3 2009/11/29 15:36:37 ssuominen Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdebase-apps"
 inherit kde4-meta
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="+auth +bookmarks debug +handbook svg thumbnail"
 # 4 of 4 tests fail. Last checked for 4.0.3
 RESTRICT="test"

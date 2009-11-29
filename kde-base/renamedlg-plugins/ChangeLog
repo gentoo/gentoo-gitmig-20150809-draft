@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/renamedlg-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-plugins/ChangeLog,v 1.29 2009/11/09 00:19:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-plugins/ChangeLog,v 1.30 2009/11/29 16:43:38 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  renamedlg-plugins-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -renamedlg-plugins-4.3.2.ebuild:

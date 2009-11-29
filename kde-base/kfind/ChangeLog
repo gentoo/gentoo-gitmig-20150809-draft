@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.140 2009/11/19 21:25:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.141 2009/11/29 15:05:47 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kfind-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   19 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> -kfind-3.5.10.ebuild:
   Remove KDE 3.5.10.

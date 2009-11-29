@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.133 2009/11/08 23:35:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.134 2009/11/29 15:02:29 ssuominen Exp $
+
+  29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> kdnssd-4.3.3.ebuild:
+  amd64 stable wrt #292455
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdnssd-4.3.2.ebuild:
   Drop KDE 4.3.2
