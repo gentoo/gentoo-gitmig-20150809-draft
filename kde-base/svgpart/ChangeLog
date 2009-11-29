@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/svgpart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.38 2009/11/09 00:21:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.39 2009/11/29 16:49:58 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> svgpart-4.3.3.ebuild:
+  Add ~sparc
 
   08 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> -svgpart-4.3.2.ebuild:
   Drop KDE 4.3.2
