@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-cups-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/ChangeLog,v 1.5 2009/11/16 23:35:53 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/ChangeLog,v 1.6 2009/11/29 16:20:58 armin76 Exp $
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org>
+  hal-cups-utils-0.6.19.ebuild:
+  Add ~sparc
 
   16 Nov 2009; Dror Levin <spatz@gentoo.org> hal-cups-utils-0.6.19.ebuild:
   Install cups backend to correct directory, bug 293441.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/hal-cups-utils-0.6.19.ebuild,v 1.5 2009/11/16 23:35:53 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/hal-cups-utils-0.6.19.ebuild,v 1.6 2009/11/29 16:20:58 armin76 Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://fedorahosted.org/hal-cups-utils/"
 SRC_URI="https://fedorahosted.org/releases/h/a/hal-cups-utils/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
