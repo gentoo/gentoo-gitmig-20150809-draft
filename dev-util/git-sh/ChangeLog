@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/git-sh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git-sh/ChangeLog,v 1.1 2009/11/28 10:13:32 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git-sh/ChangeLog,v 1.2 2009/11/29 10:56:01 ayoy Exp $
+
+*git-sh-1.0-r1 (29 Nov 2009)
+
+  29 Nov 2009; Dominik Kapusta <ayoy@gentoo.org> -git-sh-1.0.ebuild,
+  +git-sh-1.0-r1.ebuild:
+  Remove git bash completion script, as it's delivered with git itself
 
 *git-sh-1.0 (28 Nov 2009)
 
