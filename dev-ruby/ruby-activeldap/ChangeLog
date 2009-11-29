@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-activeldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.14 2009/11/09 19:11:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.15 2009/11/29 14:35:49 a3li Exp $
+
+  29 Nov 2009; Alex Legler <a3li@gentoo.org> ruby-activeldap-1.2.0.ebuild:
+  Fix SRC_URI due to gemcutter
 
   09 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   ruby-activeldap-1.2.0.ebuild:
