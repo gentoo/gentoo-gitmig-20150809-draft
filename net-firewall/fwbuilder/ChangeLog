@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.89 2009/11/12 09:33:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.90 2009/11/29 20:04:25 tcunha Exp $
+
+  29 Nov 2009; Tiago Cunha <tcunha@gentoo.org> fwbuilder-2.0.12.ebuild:
+  Remove sparc keyword from vulnerable version (can't keyword the newest
+  ebuild, since it depends on dev-java/antlr, which depends on virtual/jdk,
+  and virtual/jre), bug 235809.
 
 *fwbuilder-3.0.7 (12 Nov 2009)
 
