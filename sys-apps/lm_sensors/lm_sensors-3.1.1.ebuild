@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.1.1.ebuild,v 1.1 2009/10/27 08:26:24 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.1.1.ebuild,v 1.2 2009/11/29 13:13:08 bangert Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="sensord"
 
-DEPEND="sys-apps/sed"
+DEPEND="sys-apps/sed
+	sensord? ( net-analyzer/rrdtool )"
 RDEPEND="dev-lang/perl
 		virtual/logger"
 
@@ -28,7 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-sensors-detect-gentoo.patch
 
 	if use sensord; then
-		sed -i -e 's:^# \(PROG_EXTRA\):\1:' "${S}"/Makefile || die
+		sed -i -e 's:^#\(PROG_EXTRA.*\):\1:' "${S}"/Makefile || die
 	fi
 
 	# Respect LDFLAGS
@@ -58,7 +59,7 @@ src_install() {
 
 	if use sensord; then
 		newconfd "${FILESDIR}"/sensord-conf.d sensord || die
-		newinitd "${FILESDIR}"/sensord-init.d sensord || die
+		newinitd "${FILESDIR}"/sensord-3-init.d sensord || die
 	fi
 
 	dodoc CHANGES CONTRIBUTORS INSTALL README*
