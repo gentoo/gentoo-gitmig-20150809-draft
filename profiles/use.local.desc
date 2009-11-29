@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5054 2009/11/29 02:43:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5055 2009/11/29 10:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2692,6 +2692,7 @@ net-proxy/squid:logrotate - Use app-admin/logrotate for rotating logs
 net-proxy/squid:pf-transparent - Adds transparent proxy support for systems using PF (only for *bsd)
 net-proxy/squid:zero-penalty-hit - Add Zero Penalty Hit patch (http://zph.bratcheda.org)
 net-proxy/sshproxy:client-only - Install only the client wrappers
+net-proxy/tinyproxy:http-via-header - Add Via field to HTTP headers
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-proxy/tsocks:tordns -  Apply tordns patch which allows transparent TORification of the DNS queries 
 net-voip/ekiga:gconf - Enable GConf support
