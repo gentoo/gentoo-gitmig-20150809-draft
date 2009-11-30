@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.392 2009/11/29 16:01:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.393 2009/11/30 16:38:54 armin76 Exp $
+
+  30 Nov 2009; Raúl Porcel <armin76@gentoo.org> samba-3.4.3.ebuild:
+  Add ~arm/~ia64/~s390/~sh/~sparc wrt #285952
 
   29 Nov 2009; Tobias Klausmann <klausman@gentoo.org> samba-3.4.3.ebuild:
   Keyworded on alpha, bug #285952
