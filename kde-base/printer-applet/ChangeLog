@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.14 2009/11/30 07:07:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.15 2009/11/30 07:12:36 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> printer-applet-4.3.3.ebuild:
+  Revert accidental stable marking.
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> printer-applet-4.3.3.ebuild:
   Marked ppc/ppc64 stable for bug #292455.
