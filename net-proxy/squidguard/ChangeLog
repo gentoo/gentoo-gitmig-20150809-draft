@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.36 2009/11/28 08:45:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.37 2009/11/30 10:09:46 maekke Exp $
+
+  30 Nov 2009; Markus Meier <maekke@gentoo.org> squidguard-1.4-r4.ebuild:
+  amd64/x86 stable, bug #290623
 
 *squidguard-1.4-r4 (28 Nov 2009)
 
