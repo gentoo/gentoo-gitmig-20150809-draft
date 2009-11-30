@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.288 2009/11/29 21:30:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.289 2009/11/30 23:52:51 vapier Exp $
+
+*util-linux-2.16.2 (30 Nov 2009)
+
+  30 Nov 2009; Mike Frysinger <vapier@gentoo.org> +util-linux-2.16.2.ebuild:
+  Version bump.
 
   29 Nov 2009; Joseph Jezak <josejx@gentoo.org> util-linux-2.16.1.ebuild:
   Marked ppc stable for bug #284744.
