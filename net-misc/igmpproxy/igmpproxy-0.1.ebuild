@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/igmpproxy-0.1.ebuild,v 1.1 2009/10/22 19:19:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/igmpproxy-0.1.ebuild,v 1.2 2009/11/30 10:25:36 maekke Exp $
 
 inherit linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 Stanford"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CONFIG_CHECK="~IP_MULTICAST ~IP_MROUTE"
