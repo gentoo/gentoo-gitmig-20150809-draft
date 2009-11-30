@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.60 2009/11/30 14:26:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.61 2009/11/30 19:44:05 armin76 Exp $
+
+  30 Nov 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask tokyocabinet
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Remove obsolete net-misc/kvpnc[smartcard] mask for KDE 3 version.

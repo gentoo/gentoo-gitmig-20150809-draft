@@ -65,6 +65,7 @@ opencore-amr
 nut
 sctp
 bs2b
+tokyocabinet
 
 # Stuff that doesn't compile on ia64
 chicken
