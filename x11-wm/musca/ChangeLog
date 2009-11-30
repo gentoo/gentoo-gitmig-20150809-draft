@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/musca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.6 2009/11/04 10:27:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.7 2009/11/30 20:46:34 jer Exp $
+
+  30 Nov 2009; Jeroen Roovers <jer@gentoo.org> musca-0.9.24.ebuild,
+  +files/musca-0.9.24-make.patch, metadata.xml:
+  Fix linking with --as-needed (bug #295165). Make in parallel too. Build
+  xlisten optionally too.
 
   04 Nov 2009; Jeroen Roovers <jer@gentoo.org> musca-0.9.24.ebuild:
   Die more often.

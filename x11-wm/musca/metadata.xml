@@ -8,5 +8,6 @@
 </maintainer>
 <use>
 	<flag name="apis">Optionally install the experimental `apis' window manager</flag> 
+	<flag name="xlisten">Optionally install the xlisten utility</flag> 
 </use>
 </pkgmetadata>
