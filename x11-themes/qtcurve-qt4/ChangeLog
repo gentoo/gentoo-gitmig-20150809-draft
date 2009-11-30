@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.86 2009/11/08 17:54:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.87 2009/11/30 07:40:31 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> qtcurve-qt4-0.69.2.ebuild:
+  Marked ppc/ppc64 stable for bug #290212.
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
   qtcurve-qt4-0.69.2.ebuild:
