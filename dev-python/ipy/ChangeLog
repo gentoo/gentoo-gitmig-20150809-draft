@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.18 2009/11/23 20:57:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.19 2009/11/30 12:44:16 maekke Exp $
+
+  30 Nov 2009; Markus Meier <maekke@gentoo.org> ipy-0.70.ebuild:
+  amd64/x86 stable, bug #295069
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> ipy-0.64.ebuild:
   x86 stable, bug #291827
