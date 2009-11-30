@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.2.ebuild,v 1.1 2009/11/21 01:53:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.2.ebuild,v 1.2 2009/11/30 14:17:31 tove Exp $
 
 EAPI="2"
 
@@ -41,6 +41,6 @@ src_install() {
 
 	if use vim-syntax ; then
 		insinto /usr/share/vim/vimfiles/ftdetect
-		doins libdns.vim || "doins libdns.vim failed"
+		doins libdns.vim || die "doins libdns.vim failed"
 	fi
 }
