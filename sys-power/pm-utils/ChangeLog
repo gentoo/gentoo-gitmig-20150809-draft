@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.27 2009/11/08 06:22:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.28 2009/11/30 06:36:23 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> pm-utils-1.2.5.ebuild:
+  Marked ppc64 stable.
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org> pm-utils-1.2.5.ebuild:
   Marked ~ppc64.
