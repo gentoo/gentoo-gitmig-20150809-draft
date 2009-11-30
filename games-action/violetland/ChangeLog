@@ -1,0 +1,10 @@
+# ChangeLog for games-action/violetland
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.1 2009/11/30 19:25:50 mr_bones_ Exp $
+
+*violetland-0.2.4 (30 Nov 2009)
+
+  30 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +violetland-0.2.4.ebuild, +metadata.xml:
+  initial commit - ebuild submitted by Azamat H. Hackimov via bug #294776
+
