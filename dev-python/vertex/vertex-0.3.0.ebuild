@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.1 2009/11/30 14:07:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.2 2009/11/30 16:35:31 mr_bones_ Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-# setup.py uses epsilon.setuphelper.autosetup(), which tries to use                                             
-# build-${PYTHON_ABI} directories as packages.                                                                  
+# setup.py uses epsilon.setuphelper.autosetup(), which tries to use
+# build-${PYTHON_ABI} directories as packages.
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
 inherit distutils
