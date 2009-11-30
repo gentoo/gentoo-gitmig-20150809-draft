@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.12 2009/11/24 10:15:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.13 2009/11/30 19:42:08 hwoarang Exp $
+
+*zen-sources-2.6.31_p9 (30 Nov 2009)
+
+  30 Nov 2009; Markos Chandras <hwoarang@gentoo.org>
+  -zen-sources-2.6.31_p5-r2.ebuild, -zen-sources-2.6.31_p6.ebuild,
+  -zen-sources-2.6.31_p7.ebuild, +zen-sources-2.6.31_p9.ebuild:
+  Bump to 2.6.31-zen9-white-toast. Remove old 2.6.31 ebuilds
 
 *zen-sources-2.6.32_rc8_p1 (24 Nov 2009)
 
