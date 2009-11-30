@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gentoo-editor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.4 2009/11/25 10:17:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.5 2009/11/30 14:44:47 volkmar Exp $
+
+  30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> gentoo-editor-2.ebuild:
+  Keywording for ppc, bug 293985
 
   25 Nov 2009; Jeroen Roovers <jer@gentoo.org> gentoo-editor-2.ebuild:
   Marked ~hppa (bug #293985).
