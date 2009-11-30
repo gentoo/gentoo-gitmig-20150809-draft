@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/kmuddy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.23 2009/09/15 19:20:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.24 2009/11/30 18:53:53 scarabeus Exp $
+
+*kmuddy-1.0.1 (30 Nov 2009)
+
+  30 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> +kmuddy-1.0.1.ebuild:
+  Version bump. Per bug #278506. Acked by Mr_Bones_
 
   15 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> kmuddy-0.8.ebuild:
   EAPI=2; build when kde4 is installed (bug #274737)
