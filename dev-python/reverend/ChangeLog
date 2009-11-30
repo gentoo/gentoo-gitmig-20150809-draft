@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/reverend
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reverend/ChangeLog,v 1.1 2008/11/28 01:39:20 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reverend/ChangeLog,v 1.2 2009/11/30 02:22:26 arfrever Exp $
+
+*reverend-0.4 (30 Nov 2009)
+
+  30 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +reverend-0.4.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
 *reverend-0.3 (28 Nov 2008)
 
