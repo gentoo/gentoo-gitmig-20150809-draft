@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.0.88.ebuild,v 1.3 2009/11/16 21:33:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.0.88.ebuild,v 1.4 2009/11/30 16:02:46 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ctdb.samba.org/"
 SRC_URI="http://ctdb.samba.org/packages/redhat/RHEL5/${P}.tgz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/popt"

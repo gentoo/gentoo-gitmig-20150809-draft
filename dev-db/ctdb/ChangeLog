@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.10 2009/11/16 21:33:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.11 2009/11/30 16:02:46 armin76 Exp $
+
+  30 Nov 2009; Raúl Porcel <armin76@gentoo.org> ctdb-1.0.88.ebuild:
+  Add ~arm/~ia64/~s390/~sh/~sparc wrt #285952
 
   16 Nov 2009; Joseph Jezak <josejx@gentoo.org> ctdb-1.0.73.ebuild,
   ctdb-1.0.88.ebuild:
