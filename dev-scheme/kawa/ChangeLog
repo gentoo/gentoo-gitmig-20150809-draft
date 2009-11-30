@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/kawa
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.9 2008/10/06 16:58:28 pchrist Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.10 2009/11/30 19:51:42 ulm Exp $
+
+*kawa-1.9.90 (30 Nov 2009)
+
+  30 Nov 2009; Ulrich Mueller <ulm@gentoo.org> +kawa-1.9.90.ebuild,
+  +files/kawa-1.9.90.patch, metadata.xml:
+  Version bump, from lisp overlay. Proxy commit for Tomás Touceda (chiiph).
 
   06 Oct 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
   -kawa-1.6.97.ebuild, -kawa-1.7.ebuild, -kawa-1.8.ebuild:
