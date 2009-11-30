@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/pecl-memcached
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcached/ChangeLog,v 1.1 2009/11/30 07:55:11 robbat2 Exp $
+
+*pecl-memcached-1.0.0 (30 Nov 2009)
+
+  30 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +pecl-memcached-1.0.0.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
