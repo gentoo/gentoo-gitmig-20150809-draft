@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.204 2009/11/28 16:19:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.205 2009/11/30 03:55:48 josejx Exp $
+
+  29 Nov 2009; Joseph Jezak <josejx@gentoo.org> e2fsprogs-1.41.9.ebuild:
+  Marked ppc stable for bug #284745.
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org> e2fsprogs-1.41.9.ebuild:
   ia64/sparc stable wrt #284745
