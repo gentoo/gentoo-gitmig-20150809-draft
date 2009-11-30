@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.64 2009/11/09 19:22:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.65 2009/11/30 16:39:01 volkmar Exp $
+
+  30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> freevo-1.9.0.ebuild:
+  Re-Keyworded for ppc, bug 291548
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org> freevo-1.9.0.ebuild:
   keyworded ~arch for x86, bug 291548
