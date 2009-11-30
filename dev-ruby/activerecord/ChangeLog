@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.121 2009/11/30 10:44:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.122 2009/11/30 18:01:59 ranger Exp $
+
+  30 Nov 2009; Brent Baude <ranger@gentoo.org> activerecord-2.3.5.ebuild:
+  Marking activerecord-2.3.5 ppc64 stable for bug 294797
 
   30 Nov 2009; Markus Meier <maekke@gentoo.org> activerecord-2.3.5.ebuild:
   amd64/x86 stable, bug #294797
