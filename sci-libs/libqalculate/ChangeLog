@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libqalculate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.32 2009/04/17 23:23:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.33 2009/11/30 06:22:57 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org>
+  libqalculate-0.9.6-r1.ebuild:
+  Marked ppc/ppc64 stable.
 
   17 Apr 2009; Jeroen Roovers <jer@gentoo.org> libqalculate-0.9.6-r1:
   Marked ~hppa (bug #260777).
