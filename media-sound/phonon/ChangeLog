@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.28 2009/11/18 21:49:26 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.29 2009/11/30 04:43:14 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org>
+  phonon-4.4_pre20090520.ebuild:
+  Marked ppc/ppc64.
 
   18 Nov 2009; Dror Levin <spatz@gentoo.org> phonon-4.4_pre20091119.ebuild:
   Add alsa USE flag and fix automagic deps. Thanks to Maciej Mrozowski.
