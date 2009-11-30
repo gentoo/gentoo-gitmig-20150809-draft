@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-wpactrl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.8 2009/11/08 06:26:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.9 2009/11/30 06:38:24 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org>
+  python-wpactrl-20081102.ebuild:
+  Marked ppc64 stable.
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org>
   python-wpactrl-20081102.ebuild:
