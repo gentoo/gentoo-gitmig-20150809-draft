@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.3-r1.ebuild,v 1.1 2009/11/30 14:53:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.3-r1.ebuild,v 1.2 2009/11/30 15:13:46 alexxy Exp $
 
 EAPI="2"
 
@@ -60,11 +60,20 @@ pkg_setup() {
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
 
+	# note about qmmm-tinker
 	if use qmmm-tinker; then
 		einfo "By default MM subsistem is restricted to 1000 atoms"
 		einfo "if you want larger MM subsystems then you should set"
 		einfo "QMMM_GAMESS_MAXMM variable to needed value in your make.conf"
 		ebeep 5
+	fi
+	
+	#note about mpi
+	if use mpi; then
+		ewarn ""
+		ewarn "You should adjust rungms script for your mpi implentation"
+		ewarn "because deafult one will not work"
+		ewarn ""
 	fi
 }
 
@@ -208,7 +217,7 @@ src_install() {
 	# the executables
 	dobin ${PN}.00.x rungms \
 		|| die "Failed installing binaries"
-	if !use mpi; then
+	if use !mpi; then
 		dobin ddi/ddikick.x \
 			|| die "Failed installing binaries"
 	fi
