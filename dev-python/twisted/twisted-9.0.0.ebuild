@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0.ebuild,v 1.1 2009/11/30 01:29:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0.ebuild,v 1.2 2009/11/30 12:45:57 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -65,6 +65,8 @@ src_test() {
 
 src_install() {
 	distutils_src_install
+
+	python_convert_shebangs "" "${D}usr/bin/trial"
 
 	# get rid of this to prevent collision-protect from killing us. it
 	# is regenerated in pkg_postinst.
