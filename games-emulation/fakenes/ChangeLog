@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fakenes
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.14 2007/10/01 19:11:22 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.15 2009/11/30 14:26:42 volkmar Exp $
+
+  30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> fakenes-0.5.8.ebuild:
+  Keywording for ppc, bug 293568
 
   01 Oct 2007; Christian Faulhammer <opfer@gentoo.org> fakenes-0.5.8.ebuild:
   stable x86, bug #192649
