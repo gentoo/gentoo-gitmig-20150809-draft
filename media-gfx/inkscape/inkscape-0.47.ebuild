@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.1 2009/11/25 10:25:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.2 2009/11/30 19:46:45 lxnay Exp $
 
 EAPI=2
 inherit gnome2
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.inkscape.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="dia gnome inkjar lcms mmx nls postscript spell wmf wpg"
+IUSE="dia gnome inkjar lcms mmx nls postscript spell wmf"
 RESTRICT="test"
 
 COMMON_DEPEND="
@@ -34,6 +34,7 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	>=media-libs/freetype-2
 	>=media-libs/libpng-1.2
+	>=media-libs/libwpg-0.1
 	sci-libs/gsl
 	x11-libs/libXft
 	>=x11-libs/gtk+-2.10.7
@@ -43,8 +44,7 @@ COMMON_DEPEND="
 	spell? (
 		app-text/aspell
 		app-text/gtkspell
-	)
-	wpg? ( >=media-libs/libwpg-0.1 )"
+	)"
 
 # These only use executables provided by these packages
 # See share/extensions for more details. inkscape can tell you to

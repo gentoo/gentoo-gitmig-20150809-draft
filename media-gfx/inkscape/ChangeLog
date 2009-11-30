@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.127 2009/11/25 10:25:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.128 2009/11/30 19:46:45 lxnay Exp $
+
+  30 Nov 2009; Fabio Erculiani <lxnay@gentoo.org> inkscape-0.47.ebuild,
+  metadata.xml:
+  Remove automagic RDEPEND against media-libs/libwpg (no switch in
+  configure)
 
 *inkscape-0.47 (25 Nov 2009)
 
