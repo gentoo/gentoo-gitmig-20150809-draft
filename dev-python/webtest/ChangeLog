@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.4 2009/09/29 01:45:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.5 2009/11/30 16:48:43 volkmar Exp $
+
+  30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> webtest-1.2.ebuild:
+  Keywording for ppc, bug 294905
 
   29 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   webtest-1.2.ebuild:

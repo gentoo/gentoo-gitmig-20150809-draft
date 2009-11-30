@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.15 2009/11/27 22:56:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.16 2009/11/30 16:50:13 volkmar Exp $
+
+  30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> beaker-1.5.ebuild:
+  Keyworded for ppc, bug 294905
 
 *beaker-1.5 (27 Nov 2009)
 
