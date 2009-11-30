@@ -1,0 +1,242 @@
+diff -ur qp8.10.orig/Makefile.in qp8.10/Makefile.in
+--- qp8.10.orig/Makefile.in	2009-11-30 15:12:18.000000000 +1300
++++ qp8.10/Makefile.in	2009-11-30 20:30:23.000000000 +1300
+@@ -14,6 +14,7 @@
+ # objects.
+ #
+ 
++export QPHOME	= @prefix@/lib/qu-prolog
+ export QPBIN	= @QPHOME@/bin
+ 
+ 
+diff -ur qp8.10.orig/bin/qc.in qp8.10/bin/qc.in
+--- qp8.10.orig/bin/qc.in	2009-11-30 15:11:47.000000000 +1300
++++ qp8.10/bin/qc.in	2009-11-30 20:30:23.000000000 +1300
+@@ -47,24 +47,25 @@
+ #
+ # location of Qu-Prolog project
+ #
+-PATH=@QPHOME@/bin:$PATH
++QPHOME=@libdir@/qu-prolog
++PATH=$QPHOME/bin:$PATH
+ 
+ #
+ # names of Qu-Prolog binaries
+ #
+-preprocess=@QPHOME@/bin/qppp
+-expand=@QPHOME@/bin/qg
+-compile=@QPHOME@/bin/qc1
++preprocess=qppp
++expand=qg
++compile=qc1
+ compversion=qup
+-assemble=@QPHOME@/bin/qa
+-link=@QPHOME@/bin/ql
+-execute=@QPHOME@/bin/qem
++assemble=qa
++link=ql
++execute=qem
+ 
+ #
+ # Use the line below when dynamic search for libraries is implemented.
+ #
+ # libqofiles=""
+-libqofiles="@QPHOME@/prolog/compiler/*.qo @QPHOME@/prolog/library/*.qo"
++libqofiles="@QPHOME@/compiler/*.qo @QPHOME@/library/*.qo"
+ 
+ qlfiles=""
+ qlefiles=""
+@@ -327,18 +328,7 @@
+ 	absexecfile=$execfile
+ 	;;
+ *)
+-	currdir=`pwd`
+-	case $currdir in
+-	/u*)
+-		abspath=`echo $currdir | sed "s,/u./$HOSTNAME/,/homes/,"`
+-		;;
+-	/tmp_mnt/*)
+-		abspath=`echo $currdir | sed 's,/tmp_mnt/homes/[^/]*/,/homes/,'`
+-		;;
+-	*)
+-		abspath=$currdir
+-		;;
+-	esac
++	abspath=`pwd`
+ 	absexecfile=$abspath/$execfile
+ 	;;
+ esac
+@@ -354,5 +344,8 @@
+ 
+ # make executable file
+ 
+-echo "exec $execute $Eoptions $lflag -Q '$savefile' \$* $*" >$execfile
++echo "QPPATH=@prefix@/bin:$QPHOME/bin" >$execfile
++echo "QPLIBPATH=$QPHOME/compiler:$QPHOME/library:"'$QPLIBPATH' >>$execfile
++echo "export QPPATH QPLIBPATH" >>$execfile
++echo "exec $execute $Eoptions $lflag -Q '$savefile' \$* $*" >>$execfile
+ chmod a+x $execfile
+diff -ur qp8.10.orig/prolog/compiler/Makefile.in qp8.10/prolog/compiler/Makefile.in
+--- qp8.10.orig/prolog/compiler/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/prolog/compiler/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -33,5 +33,5 @@
+ 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
+ 
+diff -ur qp8.10.orig/prolog/library/Makefile.in qp8.10/prolog/library/Makefile.in
+--- qp8.10.orig/prolog/library/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/prolog/library/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -104,4 +104,4 @@
+ 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
+diff -ur qp8.10.orig/prolog/qc1/Makefile.in qp8.10/prolog/qc1/Makefile.in
+--- qp8.10.orig/prolog/qc1/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/prolog/qc1/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -3,6 +3,7 @@
+ #
+ PROGRAM		= @QPHOME@/bin/qc1.qup
+ 
++SAVEFILE	= qc1.qx
+ SOURCES		= qc1.ql
+ 
+ BASES		= $(basename $(SOURCES))
+@@ -13,12 +14,16 @@
+ all: $(PROGRAM)
+ 
+ $(PROGRAM): $(OBJECTS)
+-	$(COMPILE.qc) -L -o $(PROGRAM) $(OBJECTS)
++	@QPHOME@/src/ql -o $(SAVEFILE) @QPHOME@/prolog/compiler/*.qo @QPHOME@/prolog/library/*.qo $(OBJECTS)
++	@echo "QPPATH=@prefix@/bin:$(QPHOME)/bin" >$(PROGRAM)
++	@echo "QPLIBPATH=$(QPHOME)/compiler:$(QPHOME)/library" >>$(PROGRAM)
++	@echo "export QPPATH QPLIBPATH" >>$(PROGRAM)
++	@echo -e "exec qem -L -Q $(QPHOME)/bin/$(SAVEFILE) \044\052" >>$(PROGRAM)
+ 
+ .PHONY:	clean
+ clean:
+ 	$(RM) Makefile $(OBJECTS) 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
+ 
+diff -ur qp8.10.orig/prolog/qecat/Makefile.in qp8.10/prolog/qecat/Makefile.in
+--- qp8.10.orig/prolog/qecat/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/prolog/qecat/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -4,6 +4,7 @@
+ 
+ PROGRAM		= $(QPBIN)/qecat
+ 
++SAVEFILE	= qecat.qx
+ SOURCES		= qecat.ql
+ 
+ BASES		= $(basename $(SOURCES))
+@@ -14,7 +15,11 @@
+ all: $(PROGRAM)
+ 
+ $(PROGRAM): $(OBJECTS)
+-	$(COMPILE.qc) -L -o $(PROGRAM) $(OBJECTS)
++	@QPHOME@/src/ql -o $(SAVEFILE) @QPHOME@/prolog/compiler/*.qo @QPHOME@/prolog/library/*.qo $(OBJECTS)
++	@echo "QPPATH=@prefix@/bin:$(QPHOME)/bin" >$(PROGRAM)
++	@echo "QPLIBPATH=$(QPHOME)/compiler:$(QPHOME)/library" >>$(PROGRAM)
++	@echo "export QPPATH QPLIBPATH" >>$(PROGRAM)
++	@echo -e "exec qem -L -Q $(QPHOME)/bin/$(SAVEFILE) \044\052" >>$(PROGRAM)
+ 
+ .PHONY:	clean
+ clean:
+@@ -22,5 +27,5 @@
+ 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
+ 
+diff -ur qp8.10.orig/prolog/qg/Makefile.in qp8.10/prolog/qg/Makefile.in
+--- qp8.10.orig/prolog/qg/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/prolog/qg/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -4,6 +4,7 @@
+ 
+ PROGRAM		= @QPHOME@/bin/qg
+ 
++SAVEFILE	= qg.qx
+ SOURCES		= qg.ql
+ 
+ BASES		= $(basename $(SOURCES))
+@@ -14,7 +15,11 @@
+ all: $(PROGRAM)
+ 
+ $(PROGRAM): $(OBJECTS)
+-	$(COMPILE.qc) -L -o $(PROGRAM) $(OBJECTS)
++	@QPHOME@/src/ql -o $(SAVEFILE) @QPHOME@/prolog/compiler/*.qo @QPHOME@/prolog/library/*.qo $(OBJECTS)
++	@echo "QPPATH=@prefix@/bin:$(QPHOME)/bin" >$(PROGRAM)
++	@echo "QPLIBPATH=$(QPHOME)/compiler:$(QPHOME)/library" >>$(PROGRAM)
++	@echo "export QPPATH QPLIBPATH" >>$(PROGRAM)
++	@echo -e "exec qem -L -Q $(QPHOME)/bin/$(SAVEFILE) \044\052" >>$(PROGRAM)
+ 
+ .PHONY:	clean
+ clean:
+@@ -22,5 +27,5 @@
+ 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
+ 
+diff -ur qp8.10.orig/prolog/qp/Makefile.in qp8.10/prolog/qp/Makefile.in
+--- qp8.10.orig/prolog/qp/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/prolog/qp/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -3,6 +3,7 @@
+ #
+ PROGRAM		= @QPHOME@/bin/qp
+ 
++SAVEFILE	= qp.qx
+ SOURCES		= qp.ql
+ 
+ BASES		= $(basename $(SOURCES))
+@@ -13,7 +14,11 @@
+ all: $(PROGRAM)
+ 
+ $(PROGRAM): $(OBJECTS)
+-	$(COMPILE.qc) -o $(PROGRAM) $(OBJECTS)
++	@QPHOME@/src/ql -o $(SAVEFILE) @QPHOME@/prolog/compiler/*.qo @QPHOME@/prolog/library/*.qo $(OBJECTS)
++	@echo "QPPATH=@prefix@/bin:$(QPHOME)/bin" >$(PROGRAM)
++	@echo "QPLIBPATH=$(QPHOME)/compiler:$(QPHOME)/library" >>$(PROGRAM)
++	@echo "export QPPATH QPLIBPATH" >>$(PROGRAM)
++	@echo -e "exec qem -Q $(QPHOME)/bin/$(SAVEFILE) \044\052" >>$(PROGRAM)
+ 
+ .PHONY:	clean
+ clean:
+@@ -21,5 +26,5 @@
+ 
+ 
+ %.qo: %.qs
+-	$(COMPILE.qc) -c -o $@ $<
++	@QPHOME@/src/qa -i $< -o $@
+ 
+diff -ur qp8.10.orig/src/Makefile.in qp8.10/src/Makefile.in
+--- qp8.10.orig/src/Makefile.in	2009-11-30 15:12:19.000000000 +1300
++++ qp8.10/src/Makefile.in	2009-11-30 20:30:24.000000000 +1300
+@@ -40,7 +40,7 @@
+ 
+ #export DEBUGGING=
+ 
+-export CXXFLAGS = @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 $(OPTIMISATION) @DEBUGGING@ @GCCINCLUDES@ -Wno-uninitialized
++#export CXXFLAGS = @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 $(OPTIMISATION) @DEBUGGING@ @GCCINCLUDES@ -Wno-uninitialized
+ export QACXXFLAGS = -Wall -D_GNU_SOURCE=1 @DEBUGGING@ @GCCINCLUDES@ -Wno-uninitialized
+ 
+ .PHONY: all
+@@ -79,6 +79,9 @@
+ 
+ # Targets
+ 
++.cc.o:
++	$(CXX) $(CXXFLAGS) @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 @DEBUGGING@ @GCCINCLUDES@ -Wno-uninitialized -c $<
++
+ .PHONY: commands
+ commands: $(GENERATED) $(LIBRARIES) $(BIG_LIBRARY)
+ 	@$(MAKE) $(ALL_COMMANDS)
