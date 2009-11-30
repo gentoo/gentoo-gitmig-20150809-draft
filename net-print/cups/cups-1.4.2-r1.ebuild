@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2.ebuild,v 1.1 2009/11/13 18:53:55 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.1 2009/11/30 22:00:56 tgurr Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static +tiff X xinetd zeroconf"
+IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static +tiff X xinetd"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	dbus? ( sys-apps/dbus )
@@ -33,7 +33,6 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8g ) )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	xinetd? ( sys-apps/xinetd )
-	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )
 	app-text/libpaper
 	app-text/poppler-utils
 	dev-libs/libgcrypt
@@ -71,6 +70,11 @@ pkg_setup() {
 src_prepare() {
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.4.0-backend-https.patch"
+
+	# CVE-2009-3553: Use-after-free (crash) due improper reference counting
+	# in abstract file descriptors handling interface
+	# upstream bug STR #3200
+	epatch "${FILESDIR}/${PN}-1.4.2-str3200.patch"
 }
 
 src_configure() {
@@ -97,7 +101,7 @@ src_configure() {
 		--with-cups-user=lp \
 		--with-cups-group=lp \
 		--with-docdir=/usr/share/cups/html \
-		--with-languages=${LINGUAS} \
+		--with-languages="${LINGUAS}" \
 		--with-pdftops=pdftops \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
@@ -113,7 +117,6 @@ src_configure() {
 		$(use_enable static) \
 		$(use_enable tiff) \
 		$(use_enable xinetd xinetd /etc/xinetd.d) \
-		$(use_enable zeroconf dnssd) \
 		$(use_with java) \
 		$(use_with perl) \
 		$(use_with php) \
@@ -122,6 +125,7 @@ src_configure() {
 		--enable-libusb \
 		--enable-threads \
 		--enable-pdftops \
+		--disable-dnssd \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
@@ -140,8 +144,6 @@ src_install() {
 
 	# install our init script
 	local neededservices
-	use zeroconf && has_version 'net-dns/avahi' && neededservices="$neededservices avahi-daemon"
-	use zeroconf && has_version 'net-misc/mDNSResponder' && neededservices="$neededservices mDNSResponderPosix"
 	use dbus && neededservices="$neededservices dbus"
 	[[ -n ${neededservices} ]] && neededservices="need${neededservices}"
 	sed -e "s/@neededservices@/$neededservices/" "${FILESDIR}"/cupsd.init.d > "${T}"/cupsd

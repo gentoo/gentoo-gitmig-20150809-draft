@@ -1,6 +1,17 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.374 2009/11/24 04:02:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.375 2009/11/30 22:00:56 tgurr Exp $
+
+*cups-1.4.2-r1 (30 Nov 2009)
+*cups-1.3.11-r2 (30 Nov 2009)
+
+  30 Nov 2009; Timo Gurr <tgurr@gentoo.org> -cups-1.3.10-r2.ebuild,
+  +cups-1.3.11-r2.ebuild, +files/cups-1.3.11-str3200.patch,
+  -cups-1.4.2.ebuild, +cups-1.4.2-r1.ebuild,
+  +files/cups-1.4.2-str3200.patch:
+  Revbumps fixing security issue CVE-2009-3553. Fix linguas handling bug
+  #293217 thanks to Rafał Mużyło, remove zeroconf of cups 1.4 since it's
+  missing an avahi implementation, bug #293295. Remove old.
 
   24 Nov 2009; Jeroen Roovers <jer@gentoo.org> cups-1.3.11-r1.ebuild:
   Stable for HPPA (bug #293865).

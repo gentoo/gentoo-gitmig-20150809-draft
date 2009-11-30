@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.10-r2.ebuild,v 1.11 2009/11/21 14:21:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r2.ebuild,v 1.1 2009/11/30 22:00:56 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="acl avahi dbus gnutls java jpeg kerberos ldap pam perl php png ppds python samba slp ssl static tiff X xinetd zeroconf"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
@@ -103,6 +103,14 @@ src_unpack() {
 
 	# detect recent libgnutls versions, upstream bug STR #3178
 	epatch "${FILESDIR}/${PN}-1.3.10-str3178.patch"
+
+	# CVE-2009-2820: Several XSS flaws in forms processed by CUPS web interface
+	# upstream bug STR #3178 and STR #3401
+	epatch "${FILESDIR}/${PN}-1.3.11-str3367-security-1.3v2.patch"
+	epatch "${FILESDIR}/${PN}-1.3.11-str3401-security-1.3v2-regression.patch"
+	# CVE-2009-3553: Use-after-free (crash) due improper reference counting in abstract file descriptors handling interface
+	# upstream bug STR #3200
+	epatch "${FILESDIR}/${PN}-1.3.11-str3200.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
