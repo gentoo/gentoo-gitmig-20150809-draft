@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.1.1.ebuild,v 1.1 2009/11/21 23:12:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.1.1.ebuild,v 1.2 2009/11/30 22:01:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -49,9 +49,6 @@ src_install() {
 	newinitd "${FILESDIR}"/mdadm.rc mdadm || die "installing mdadm.rc failed"
 	newconfd "${FILESDIR}"/mdadm.confd mdadm || die "installing mdadm.confd failed"
 	newinitd "${FILESDIR}"/mdraid.rc mdraid || die "installing mdraid.rc failed"
-
-	insinto /etc/udev/rules.d/
-	newins "${FILESDIR}"/udev-145-64-md-raid.rules 64-md-raid.rules || die
 }
 
 pkg_postinst() {
