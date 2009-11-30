@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10898 2009/11/29 23:53:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10899 2009/11/30 11:14:01 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (30 Nov 2009)
+#  on behalf of QA team
+#
+# Fails to build, bug #239819 open October 2008. Solution
+# in overlay, as usual for lisp-team packages.
+#
+# Removal on 2010-01-29
+dev-scheme/kawa
 
 # Markus Meier <maekke@gentoo.org> (30 Nov 2009)
 # mask rc versions of enblend for testing
