@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.130 2009/11/28 11:18:29 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.131 2009/11/30 09:21:04 a3li Exp $
+
+  30 Nov 2009; Alex Legler <a3li@gentoo.org> actionpack-2.3.5.ebuild:
+  Bump rack dependency
 
 *actionpack-2.2.3-r1 (28 Nov 2009)
 
