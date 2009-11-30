@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.13 2009/11/29 18:50:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.14 2009/11/30 06:53:39 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> mplayerthumbs-4.3.3.ebuild:
+  Marked ppc/ppc64 stable for bug #292455.
 
   29 Nov 2009; Raúl Porcel <armin76@gentoo.org> mplayerthumbs-4.3.3.ebuild:
   Add ~sparc

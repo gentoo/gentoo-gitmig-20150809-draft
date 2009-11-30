@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.117 2009/11/29 16:11:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.118 2009/11/30 06:54:37 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> kuiviewer-4.3.3.ebuild:
+  Marked ppc/ppc64 stable for bug #292455.
 
   29 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   kuiviewer-4.3.3.ebuild:

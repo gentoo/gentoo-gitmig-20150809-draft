@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.51 2009/11/29 17:23:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.52 2009/11/30 06:55:12 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> okular-4.3.3.ebuild:
+  Marked ppc/ppc64 stable for bug #292455.
 
   29 Nov 2009; Raúl Porcel <armin76@gentoo.org> okular-4.3.3.ebuild:
   Add ~sparc
