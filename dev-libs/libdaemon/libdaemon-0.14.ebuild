@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.14.ebuild,v 1.1 2009/11/01 17:45:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.14.ebuild,v 1.2 2009/11/30 14:13:02 tove Exp $
 
 inherit libtool eutils
 
@@ -36,7 +36,7 @@ src_install() {
 	if use doc; then
 		ln -sf doc/reference/html reference
 		dohtml -r doc/README.html doc/style.css reference || die "dohtml failed"
-		doman doc/reference/man/man*/* || "doman failed"
+		doman doc/reference/man/man*/* || die "doman failed"
 	fi
 
 	if use examples; then
