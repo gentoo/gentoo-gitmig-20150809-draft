@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.6.0.ebuild,v 1.1 2009/11/30 02:46:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.6.0.ebuild,v 1.2 2009/11/30 02:51:14 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -42,6 +42,11 @@ src_prepare() {
 	epatch "${FILESDIR}/epsilon_plugincache_portagesandbox.patch"
 
 	python_copy_sources
+}
+
+src_compile() {
+	# Skip distutils_src_compile to avoid installation of $(python_get_sitedir)/build directory.
+	:
 }
 
 src_test() {
