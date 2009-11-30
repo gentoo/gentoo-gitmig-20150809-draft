@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10900 2009/11/30 16:02:42 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10901 2009/11/30 20:01:46 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,15 +38,6 @@ dev-ruby/nitro
 dev-ruby/glue
 dev-ruby/gen
 dev-ruby/og
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Nov 2009)
-#  on behalf of QA team
-#
-# Fails to build, bug #239819 open October 2008. Solution
-# in overlay, as usual for lisp-team packages.
-#
-# Removal on 2010-01-29
-dev-scheme/kawa
 
 # Markus Meier <maekke@gentoo.org> (30 Nov 2009)
 # mask rc versions of enblend for testing
