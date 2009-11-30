@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0-r1.ebuild,v 1.2 2009/10/22 21:11:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0-r2.ebuild,v 1.1 2009/11/30 11:43:57 wired Exp $
 
 EAPI="2"
 
@@ -131,7 +131,7 @@ src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 	dodoc *.txt || die "doc installation failed"
 	doman doc/"${PN}".1.gz || die "man page installation failed"
-	insinto /usr/share/doc/${P}/examples
+	insinto /usr/share/doc/${PF}/examples
 	for I in ${UEXAMPLES}; do
 		doins indenters/example.${I}
 	done

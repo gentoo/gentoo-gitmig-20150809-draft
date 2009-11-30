@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/universalindentgui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.5 2009/10/22 21:11:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.6 2009/11/30 11:43:57 wired Exp $
+
+*universalindentgui-1.1.0-r2 (30 Nov 2009)
+
+  30 Nov 2009; Alex Alexander <wired@gentoo.org>
+  -universalindentgui-1.1.0-r1.ebuild, +universalindentgui-1.1.0-r2.ebuild:
+  fixed bug #295097
 
   22 Oct 2009; Alex Alexander <wired@gentoo.org>
   universalindentgui-1.1.0-r1.ebuild:
