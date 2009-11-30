@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.11.ebuild,v 1.1 2009/10/30 17:22:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.11.ebuild,v 1.2 2009/11/30 12:58:18 maekke Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc-project.org/opensc/"
 
 SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
