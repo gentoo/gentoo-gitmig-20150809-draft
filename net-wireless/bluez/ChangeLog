@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.19 2009/11/21 15:17:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.20 2009/11/30 06:33:54 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> bluez-4.39-r2.ebuild:
+  Marked ppc64 stable.
 
   21 Nov 2009; Raúl Porcel <armin76@gentoo.org> bluez-4.28.ebuild,
   bluez-4.38.ebuild, bluez-4.39.ebuild, bluez-4.39-r1.ebuild,
