@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.15 2009/05/17 01:18:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.16 2009/11/30 02:46:35 arfrever Exp $
+
+*epsilon-0.6.0 (30 Nov 2009)
+
+  30 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -epsilon-0.5.11.ebuild, +epsilon-0.6.0.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
 *epsilon-0.5.12 (17 May 2009)
 
