@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/nevow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.35 2009/10/06 17:27:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.36 2009/11/30 03:10:32 arfrever Exp $
+
+*nevow-0.10.0 (30 Nov 2009)
+
+  30 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +nevow-0.10.0.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   06 Oct 2009; Raúl Porcel <armin76@gentoo.org> nevow-0.9.33.ebuild:
   sparc stable
