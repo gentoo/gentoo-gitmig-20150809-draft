@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.19.ebuild,v 1.6 2009/11/29 22:14:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.19.ebuild,v 1.7 2009/11/30 11:18:02 flameeyes Exp $
 
 EAPI=2
 
@@ -175,7 +175,7 @@ pkg_postinst() {
 	fi
 	if use alsa &&
 		has_version media-plugins/alsa-plugins &&
-		!built_with_use --missing false media-plugins/alsa-plugins pulseaudio; then
+		! built_with_use --missing false media-plugins/alsa-plugins pulseaudio; then
 
 		elog
 		elog "You have alsa support enabled so you probably want to install"
