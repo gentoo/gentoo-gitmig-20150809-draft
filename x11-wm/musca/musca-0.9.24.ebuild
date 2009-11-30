@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24.ebuild,v 1.3 2009/11/30 20:46:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24.ebuild,v 1.4 2009/11/30 21:16:03 jer Exp $
 
 EAPI="2"
 
@@ -41,10 +41,14 @@ src_compile() {
 }
 
 src_install() {
-	dobin musca xlisten || die "dobin failed"
-	if use apis; then
-		dobin apis || die "dobin failed"
-	fi
+	dobin musca || die "dobin failed"
+
+	local i
+	for i in xlisten apis; do 
+		if use ${i}; then
+			dobin ${i} || die "dobin ${i} failed"
+		fi
+	done
 	doman musca.1 || die "doman failed"
 	save_config config.h
 }

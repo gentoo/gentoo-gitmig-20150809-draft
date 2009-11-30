@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/musca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.8 2009/11/30 20:47:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.9 2009/11/30 21:16:03 jer Exp $
+
+  30 Nov 2009; Jeroen Roovers <jer@gentoo.org> musca-0.9.24.ebuild:
+  Fix USE=xlisten dobin.
 
   30 Nov 2009; Jeroen Roovers <jer@gentoo.org> -musca-0.9.23.ebuild,
   -files/musca-0.9.23-flags.patch:
