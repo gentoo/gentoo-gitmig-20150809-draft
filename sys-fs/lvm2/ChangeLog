@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.186 2009/11/30 00:33:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.187 2009/11/30 00:51:36 robbat2 Exp $
+
+*lvm2-2.02.56-r1 (30 Nov 2009)
+
+  30 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +lvm2-2.02.56-r1.ebuild,
+  +files/lvm2-2.02.56-always-make-static-libdm.patch:
+  Bug #276803: Always build static libdevicemapper for cryptsetup to
+  optionally link to. Same behavior that sys-fs/devicemapper used to have.
 
 *lvm2-2.02.56 (30 Nov 2009)
 
