@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ebook-tools-0.1.1.ebuild,v 1.8 2009/10/17 10:34:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ebook-tools-0.1.1.ebuild,v 1.9 2009/11/30 06:14:55 josejx Exp $
 
 inherit cmake-utils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2
