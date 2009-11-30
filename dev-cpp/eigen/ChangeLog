@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.22 2009/11/29 16:15:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.23 2009/11/30 06:12:02 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> Manifest:
+  Marked ppc/ppc64 stable.
 
   29 Nov 2009; Raúl Porcel <armin76@gentoo.org> eigen-2.0.9.ebuild:
   Add ~sparc
