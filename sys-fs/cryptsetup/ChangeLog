@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.77 2009/11/28 00:32:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.78 2009/11/30 00:53:54 robbat2 Exp $
+
+*cryptsetup-1.0.7-r1 (30 Nov 2009)
+
+  30 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +cryptsetup-1.0.7-r1.ebuild:
+  Bug #276803: old sys-fs/devicemapper not supported anymore. Use the new
+  lvm2-2.02.56-r1 for safe static linking.
 
 *cryptsetup-1.0.7 (28 Nov 2009)
 
