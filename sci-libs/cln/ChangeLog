@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.38 2009/10/30 16:07:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.39 2009/11/30 06:22:26 josejx Exp $
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> cln-1.2.2.ebuild:
+  Marked ppc64 stable.
 
   30 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> -cln-1.1.13.ebuild:
   Removed old
