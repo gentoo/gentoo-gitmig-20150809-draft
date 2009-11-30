@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.5.ebuild,v 1.1 2009/11/28 09:34:07 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.5.ebuild,v 1.2 2009/11/30 10:45:37 maekke Exp $
 
 inherit ruby gems
 USE_RUBY="ruby18 ruby19"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.rubyonrails.org"
 
 LICENSE="MIT"
 SLOT="2.3"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE="fastcgi"
 DEPEND=">=dev-lang/ruby-1.8.6
