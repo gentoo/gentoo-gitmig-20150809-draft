@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlunit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.17 2009/11/17 16:55:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.18 2009/11/30 12:43:12 maekke Exp $
+
+  30 Nov 2009; Markus Meier <maekke@gentoo.org> xmlunit-1.3.ebuild:
+  amd64/x86 stable, bug #294991
 
   17 Nov 2009; Vlastimil Babka <caster@gentoo.org> xmlunit-1.0-r2.ebuild:
   Restrict tests because they fail with a 1.5+ JDK and we want to remove
