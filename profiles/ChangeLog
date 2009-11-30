@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3620 2009/11/30 20:01:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3621 2009/11/30 20:34:53 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Nov 2009; Alex Legler <a3li@gentoo.org> thirdpartymirrors:
+  add bytemark mirror to mirror://rubygems, thanks to Rubyforge's Tom
+  Copeland
 
   30 Nov 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for dev-scheme/kawa after version bump.
