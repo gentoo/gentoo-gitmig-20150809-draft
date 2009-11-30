@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.53 2009/07/12 18:08:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.54 2009/11/30 12:56:20 maekke Exp $
+
+  30 Nov 2009; Markus Meier <maekke@gentoo.org> sword-1.6.0.ebuild:
+  x86 stable, bug #294863
 
   12 Jul 2009; Mark Loeser <halcy0n@gentoo.org> sword-1.5.8-r2.ebuild,
   sword-1.5.9-r2.ebuild, sword-1.5.10-r2.ebuild, sword-1.5.11.ebuild,
