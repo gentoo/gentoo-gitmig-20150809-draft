@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.3-r1.ebuild,v 1.2 2009/11/30 15:13:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.3-r1.ebuild,v 1.3 2009/11/30 17:33:36 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -67,7 +67,7 @@ pkg_setup() {
 		einfo "QMMM_GAMESS_MAXMM variable to needed value in your make.conf"
 		ebeep 5
 	fi
-	
+
 	#note about mpi
 	if use mpi; then
 		ewarn ""
