@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-qemu/scratchbox-devkit-qemu-0.10.0.0.5.ebuild,v 1.2 2009/11/21 14:37:24 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-qemu/scratchbox-devkit-qemu-0.10.0.0.5.ebuild,v 1.3 2009/11/30 11:07:21 flameeyes Exp $
 
 SBOX_GROUP="sbox"
-RESTRICT="strip binchecks"
 
 MYPV=0.10.0-0sb5
 MYP=${PN}-${MYPV}

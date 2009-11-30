@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-cputransp/scratchbox-devkit-cputransp-1.0.7.ebuild,v 1.1 2009/05/06 19:34:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-cputransp/scratchbox-devkit-cputransp-1.0.7.ebuild,v 1.2 2009/11/30 11:05:37 flameeyes Exp $
 
 SBOX_GROUP="sbox"
-RESTRICT="strip binchecks"
 
 DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
 HOMEPAGE="http://www.scratchbox.org/"
