@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-display
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.2 2009/11/09 19:18:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.3 2009/11/30 16:36:11 volkmar Exp $
+
+  30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> kaa-display-0.1.0.ebuild:
+  Keyworded for ppc, bug 291548
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   kaa-display-0.1.0.ebuild:
