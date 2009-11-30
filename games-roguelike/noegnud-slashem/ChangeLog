@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/noegnud-slashem
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-slashem/ChangeLog,v 1.7 2006/05/21 15:17:05 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-slashem/ChangeLog,v 1.8 2009/11/30 16:30:27 flameeyes Exp $
+
+  30 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  noegnud-slashem-0.8.2.ebuild:
+  Fix build failure when sys-devel/patch-2.6 is installed (bug #294841).
 
   21 May 2006; <Tupone@gentoo.org> +files/noegnud-slashem-0.8.2-gcc41.patch,
   noegnud-slashem-0.8.2.ebuild:
