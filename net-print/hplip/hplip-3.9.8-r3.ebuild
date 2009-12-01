@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r3.ebuild,v 1.3 2009/12/01 11:18:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r3.ebuild,v 1.4 2009/12/01 12:43:27 flameeyes Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt3 qt4 scanner snmp static-ppds -udev-acl zeroconf"
+IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt3 qt4 scanner snmp static-ppds -udev-acl"
 
 # Note : libusb-compat untested (calchan 20090516)
 
@@ -25,8 +25,7 @@ COMMON_DEPEND="
 	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	udev-acl? ( >=sys-fs/udev-145[extras] )
 	!minimal? (
-		!zeroconf? ( net-print/cups )
-		zeroconf? ( || ( net-print/cups[avahi] net-print/cups[zeroconf] ) )
+		net-print/cups
 		virtual/libusb:0
 		>=dev-lang/python-2.4.4[threads,xml]
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
@@ -256,8 +255,9 @@ pkg_postinst() {
 	elog "'rc-update del hplip' if you are updating from an old version."
 	elog
 	elog "Starting with versions of hplip >=3.9.8 mDNS is the default network search"
-	elog "mechanism. To make use of it you need to activate the zeroconf flag. If you"
-	elog "prefer the SLP method you have to choose this when configuring the device."
+	elog "mechanism. To make use of it you need to activate the zeroconf flag on cups."
+	elog "If you prefer the SLP method you have to choose this when configuring the"
+	elog "device."
 }
 
 pkg_postrm() {

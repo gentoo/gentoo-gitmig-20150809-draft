@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.134 2009/12/01 11:18:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.135 2009/12/01 12:43:27 flameeyes Exp $
+
+  01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  hplip-3.9.8-r3.ebuild, hplip-3.9.10.ebuild:
+  Actually, remove the zeroconf USE flag, since it was only used to depend
+  on cups[zeroconf] (which would force a downgrade of cups).
 
   01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   hplip-3.9.8-r3.ebuild, hplip-3.9.10.ebuild:
