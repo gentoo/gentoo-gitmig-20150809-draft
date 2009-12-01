@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.27 2009/10/27 14:16:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.28 2009/12/01 10:56:17 scarabeus Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -20,21 +20,13 @@ if [[ -z ${KMNAME} ]]; then
 	die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
 fi
 
-# Add khelpcenter dependency when installing handbooks
-if [[ ${PN} != khelpcenter ]] && has handbook ${IUSE//+}; then
-	RDEPEND+=" handbook? ( $(add_kdebase_dep khelpcenter) )"
-fi
-
 # Add dependencies that all packages in a certain module share.
 case ${KMNAME} in
 	kdebase|kdebase-apps|kdebase-workspace|kdebase-runtime|kdegraphics)
 		COMMONDEPEND+=" >=kde-base/qimageblitz-0.0.4"
 		;;
 	kdepim|kdepim-runtime)
-		COMMONDEPEND+="
-			dev-libs/boost
-			$(add_kdebase_dep kdepimlibs)
-		"
+		COMMONDEPEND+="	$(add_kdebase_dep kdepimlibs)"
 		case ${PN} in
 			akregator|kaddressbook|kjots|kmail|knode|knotes|korganizer|ktimetracker)
 				IUSE+=" +kontact"
@@ -222,8 +214,9 @@ kde4-meta_src_extract() {
 				postfix="bz2"
 				;;
 			4.3.[6-9]*)
-				KMTARPARAMS+=" --lzma" # lzma
-				postfix="lzma"
+				# Not passing --xz, as it doesn't work with stable tar
+				KMTARPARAMS+=" --use-compress-program=xz" # xz
+				postfix="xz"
 				;;
 			*)
 				KMTARPARAMS+=" --bzip2" # bz2
@@ -700,16 +693,9 @@ kde4-meta_src_make_doc() {
 
 # @FUNCTION: kde4-meta_pkg_postinst
 # @DESCRIPTION:
-# Display information about application handbook and invoke kbuildsycoca4.
+# Invoke kbuildsycoca4.
 kde4-meta_pkg_postinst() {
 	debug-print-function ${FUNCNAME} "$@"
-
-	if has handbook ${IUSE//+} && ! use handbook; then
-		echo
-		einfo "Application handbook for ${PN} has not been installed."
-		einfo "To install handbook, reemerge =${CATEGORY}/${PF} with 'handbook' USE flag."
-		echo
-	fi
 
 	kde4-base_pkg_postinst
 }
