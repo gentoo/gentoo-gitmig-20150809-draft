@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10911 2009/12/01 20:42:17 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10912 2009/12/01 20:45:38 spatz Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -169,25 +169,6 @@ app-admin/eselect-oracle
 # Masked for removal in 30 days.  sys-cluster/osc-mpiexec
 # is a fully functional replacement.  Bug #293861
 sys-cluster/mpiexec
-
-# Alex Alexander <wired@gentoo.org> (18 Nov 2009)
-# Qt 4.6.0 rc - masking before adding for testing
-=x11-libs/qt-4.6.0_rc*
-=x11-libs/qt-assistant-4.6.0_rc*
-=x11-libs/qt-core-4.6.0_rc*
-=x11-libs/qt-dbus-4.6.0_rc*
-=x11-libs/qt-demo-4.6.0_rc*
-=x11-libs/qt-gui-4.6.0_rc*
-=x11-libs/qt-multimedia-4.6.0_rc*
-=x11-libs/qt-opengl-4.6.0_rc*
-=x11-libs/qt-phonon-4.6.0_rc*
-=x11-libs/qt-qt3support-4.6.0_rc*
-=x11-libs/qt-script-4.6.0_rc*
-=x11-libs/qt-sql-4.6.0_rc*
-=x11-libs/qt-svg-4.6.0_rc*
-=x11-libs/qt-test-4.6.0_rc*
-=x11-libs/qt-webkit-4.6.0_rc*
-=x11-libs/qt-xmlpatterns-4.6.0_rc*
 
 # Peter Volkov <pva@gentoo.org> (17 Nov 2009)
 # Masked for removal. Use app-text/ghostscript-gpl - most up to date version
