@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tiers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.13 2009/09/23 19:46:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.14 2009/12/01 10:58:26 flameeyes Exp $
+
+  01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> tiers-1.1.ebuild:
+  Fix building with sys-devel/patch-2.6 (bug #295306).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> tiers-1.1.ebuild:
   Remove virtual/libc

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.10 2009/09/23 22:29:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.11 2009/12/01 10:58:26 flameeyes Exp $
 
 inherit eutils
 
@@ -20,6 +20,8 @@ S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
+	cd "${S}"
+
 	epatch "${FILESDIR}"/${MY_P}-gccfixes.patch
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -e '1a\#!/bin/sh' -e '1d' -e "s|-f |-f /usr/share/${PN}/|g" -i "${S}"/bin/strip4gnuplot3.5
