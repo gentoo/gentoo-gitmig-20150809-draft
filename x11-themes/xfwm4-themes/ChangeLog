@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xfwm4-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.19 2009/06/30 19:19:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.20 2009/12/01 18:05:21 darkside Exp $
+
+  01 Dec 2009; Jeremy Olexa <darkside@gentoo.org> xfwm4-themes-4.6.0.ebuild:
+  Add Prefix keywords, as tested in the prefix overlay
 
   30 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xfwm4-themes-4.6.0.ebuild:
