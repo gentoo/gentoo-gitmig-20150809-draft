@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.20 2009/11/22 10:51:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.21 2009/12/01 09:54:52 maekke Exp $
+
+  01 Dec 2009; Markus Meier <maekke@gentoo.org> SQL-Statement-1.22.ebuild:
+  x86 stable, bug #278409
 
 *SQL-Statement-1.23 (22 Nov 2009)
 
