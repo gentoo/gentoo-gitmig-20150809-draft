@@ -1,12 +1,16 @@
---- src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
-+++ src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
-@@ -28,6 +28,9 @@
- #include "msg.h"
+--- nvidia-settings-1.0/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
++++ nvidia-settings-1.0/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
+@@ -210,11 +210,12 @@
+     if (vm) free(vm);
  
- #include <X11/extensions/xf86vmode.h>
-+#if !defined(XF86VIDMODE_MAJOR_VERSION) || !defined(XF86VIDMODE_MINOR_VERSION)
-+#include <X11/extensions/xf86vmproto.h>
-+#endif /* XF86VidMode Extension protocol defines */
+     /* restore the original error handler, if we overrode it */
+-
++#if defined(X_XF86VidModeGetGammaRampSize)
+     if (prev_error_handler) {
+         XSetErrorHandler(prev_error_handler);
+         prev_error_handler = NULL;
+     }
++#endif
  
- #include <stdlib.h>
- #include <string.h>
+     return NULL;
+ 
