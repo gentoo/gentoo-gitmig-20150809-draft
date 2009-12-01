@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/openmoko-dfu-util-5484.ebuild,v 1.2 2009/10/17 23:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/openmoko-dfu-util-5484.ebuild,v 1.3 2009/12/01 22:32:33 vapier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="http://svn.openmoko.org/trunk/src/host/dfu-util/"
 	inherit subversion
 	SRC_URI=""
-	KEYWORDS=""
+	#KEYWORDS=""
 else
 	MY_P="${PN}-svn-${PV}"
 	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
