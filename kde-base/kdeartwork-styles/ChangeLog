@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeartwork-styles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.132 2009/11/30 06:53:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.133 2009/12/01 10:14:49 wired Exp $
+
+*kdeartwork-styles-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org>
+  +kdeartwork-styles-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org>
   kdeartwork-styles-4.3.3.ebuild:

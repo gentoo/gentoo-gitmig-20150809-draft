@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.31 2009/11/30 06:53:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.32 2009/12/01 10:16:35 wired Exp $
+
+*kdebase-desktoptheme-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org>
+  +kdebase-desktoptheme-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org>
   kdebase-desktoptheme-4.3.3.ebuild:

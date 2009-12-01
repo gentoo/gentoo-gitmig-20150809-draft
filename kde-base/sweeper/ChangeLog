@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/sweeper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.40 2009/11/30 06:55:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.41 2009/12/01 11:35:14 wired Exp $
+
+*sweeper-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org> +sweeper-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> sweeper-4.3.3.ebuild:
   Marked ppc/ppc64 stable for bug #292455.

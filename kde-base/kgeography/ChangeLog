@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.107 2009/11/30 06:54:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.108 2009/12/01 10:37:31 wired Exp $
+
+*kgeography-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org> +kgeography-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> kgeography-4.3.3.ebuild:
   Marked ppc/ppc64 stable for bug #292455.

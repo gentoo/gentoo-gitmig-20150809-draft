@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.170 2009/11/30 06:54:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.171 2009/12/01 10:09:46 wired Exp $
+
+*kcontrol-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org> +kcontrol-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> kcontrol-4.3.3.ebuild:
   Marked ppc/ppc64 stable for bug #292455.

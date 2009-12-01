@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.147 2009/11/30 06:53:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.148 2009/12/01 10:54:43 wired Exp $
+
+*konsole-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org> +konsole-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> konsole-4.3.3.ebuild:
   Marked ppc/ppc64 stable for bug #292455.

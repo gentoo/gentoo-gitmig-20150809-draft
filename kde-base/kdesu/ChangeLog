@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.134 2009/11/30 06:54:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.135 2009/12/01 10:30:25 wired Exp $
+
+*kdesu-4.3.4 (01 Dec 2009)
+
+  01 Dec 2009; Alex Alexander <wired@gentoo.org> +kdesu-4.3.4.ebuild:
+  Version bump
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> kdesu-4.3.3.ebuild:
   Marked ppc/ppc64 stable for bug #292455.
