@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.0.ebuild,v 1.1 2009/12/01 18:38:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.0.ebuild,v 1.2 2009/12/01 20:02:21 ayoy Exp $
 
 EAPI="2"
 
@@ -13,11 +13,11 @@ SRC_URI="http://get.qt.nokia.com/qtcreator/${P}-src.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bineditor bookmarks +cmake cvs debug +debugger +designer doc examples fakevim git kde mercurial perforce qtscript subversion"
 
-DEPEND=">=x11-libs/qt-assistant-4.6.0_alpha_pre1:4
-	>=x11-libs/qt-gui-4.6.0_alpha_pre1:4[dbus,qt3support]"
+DEPEND=">=x11-libs/qt-assistant-4.6.0:4
+	>=x11-libs/qt-gui-4.6.0:4[dbus,qt3support]"
 
 RDEPEND="${DEPEND}
 	>=x11-libs/qt-sql-4.6.0:4
