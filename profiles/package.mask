@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10910 2009/12/01 19:21:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10911 2009/12/01 20:42:17 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -280,15 +280,11 @@ net-misc/knutclient
 net-misc/kovpn
 net-misc/kwebget
 app-text/kbarcode
-app-crypt/calcchecksum
-app-cdr/kcdlabel
 app-backup/kdar
-app-office/kmymoney2
 app-office/kmm_kbanking
 x11-misc/kflog
 x11-misc/switcher
 media-gfx/kst
-sci-electronics/ktechlab
 app-text/kbibtex
 net-ftp/kftpgrabber
 media-video/okle
@@ -318,11 +314,6 @@ sys-fs/dazuko
 # KDE3-only. Replaced by media-sound/kradioripper.
 # Masked for removal.
 media-sound/kstreamripper
-
-# Víctor Ostorga <vostorga@gentoo.org> (11 Nov 2009)
-# KDE3 app, replaced by kde-base/powerdevil in KDE4.
-# Removal in 30 days, bug #292799
-sys-power/kpowersave
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Nov 2009)
 # Has kde-base/arts depend, and it can't be removed.
@@ -369,11 +360,6 @@ net-misc/mmsclient
 # Masked for removeal in 30 days. Discontinued upstream support, every user of
 # this library should move to 2.4 slot, bug #280906.
 <net-libs/libsoup-2.24
-
-# Víctor Ostorga <vostorga@gentoo.org> (07 Nov 2009)
-# Beta package, qt3 app, dead upstream, last release 4 years ago
-# Bug #292143
-net-ftp/easyftp
 
 # Víctor Ostorga <vostorga@gentoo.org> (07 Nov 2009)
 # Upstream dead, URL in package description is offline
@@ -524,38 +510,6 @@ sys-auth/pam_keystore
 # Dead project, missing deps, no maintainer. Removed in 60 days by treecleaners.
 # bug 205190
 sys-apps/qtparted
-
-# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
-# Obsolete and produces bad isos. Upstream recommends app-cdr/iat.
-# Removed in 60 days (or sooner based on lack of usefullness), bug 281149
-app-cdr/mdf2iso
-
-# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
-# QA standards are seriously missing on this package. It was marked stable
-# without applying a patch, even. No maintainer, remove in 60 days. bug 282388
-net-misc/rdist
-
-# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
-# Dead, broken software. Upstream themselves requested the removal from Gentoo.
-# bug 282820. Removed in 60 days.
-net-im/curphoo
-net-im/magnesium
-
-# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
-# Depends on gtk-1, orphaned library. Nothing uses it. Removed in 60 days. bug
-# 284494
-media-libs/SoGtk
-
-# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
-# Does not compile properly and hence does not install any of the tools it
-# offers. No maintainer. Removed in 60 days. bug 284623
-# (Depends on dev-libs/skalibs (below)
-sys-apps/minutils
-
-# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
-# QA!!? Installs to /package! No maintainer in Gentoo. Removed in 60 days.
-# bug 284618
-dev-libs/skalibs
 
 # Mike Doty <kingtaco@gentoo.org> (04 Oct 2009)
 # alpha packages, kills puppies.
