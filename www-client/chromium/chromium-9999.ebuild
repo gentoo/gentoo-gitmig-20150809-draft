@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.9 2009/11/24 10:41:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.10 2009/12/01 16:01:32 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -20,7 +20,7 @@ RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=dev-libs/nss-3.12.2
+	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
 	media-fonts/corefonts
 	>=media-libs/alsa-lib-1.0.19

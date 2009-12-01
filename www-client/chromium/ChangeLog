@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.27 2009/12/01 13:27:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.28 2009/12/01 16:01:32 voyageur Exp $
+
+  01 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-4.0.260.0.ebuild, chromium-9999.ebuild:
+  Bump required nss version to 3.12.3
 
 *chromium-4.0.260.0 (01 Dec 2009)
 
