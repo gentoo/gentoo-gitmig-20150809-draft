@@ -1,8 +1,0 @@
-diff --exclude='*~' -Naur knetscan-1.0.orig/knetscan/knetscan.desktop knetscan-1.0/knetscan/knetscan.desktop
---- knetscan-1.0.orig/knetscan/knetscan.desktop	2005-09-04 19:36:06.000000000 -0300
-+++ knetscan-1.0/knetscan/knetscan.desktop	2005-09-04 19:39:34.000000000 -0300
-@@ -10,3 +10,4 @@
- Terminal=0
- Name=Knetscan
- Name[de]=Knetscan
-+Categories=KDE;Network;
