@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-0.9.10.ebuild,v 1.1 2009/11/25 16:33:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-0.9.10.ebuild,v 1.2 2009/12/01 13:16:49 alexxy Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -C usr/ install DESTDIR="${D}" || die "install failed"
+	emake  install-programs install-scripts install-doc DESTDIR="${D}" || die "install failed"
 	doinitd "${FILESDIR}/tgtd"
-	dodoc doc/README.* doc/targets.conf.example doc/tmf.txt
+	dodir "${D}/etc/tgt"
 }
