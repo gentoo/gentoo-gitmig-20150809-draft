@@ -1,3 +1,8 @@
+# Dominik Kapusta <ayoy@gentoo.org> (01 Dec 2009)
+#
+# qt-demo-4.6.0, required by examples is  not keyworded on ppc and ppc64 yet
+dev-util/qt-creator examples
+
 # Dawid Węgliński <cla@gentoo.org>
 # Mask amarok2 useflag for net-im/kadu
 # See bug #238487 for references
