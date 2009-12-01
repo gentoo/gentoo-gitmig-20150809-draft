@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.45 2009/11/19 16:12:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.46 2009/12/01 13:36:26 voyageur Exp $
+
+*chromium-bin-4.0.260.0_p33405 (01 Dec 2009)
+
+  01 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.240.0_p31382.ebuild,
+  +chromium-bin-4.0.260.0_p33405.ebuild:
+  Version bump, enables bookmarks sync by default, allows again extensions
+  to access file:// elements (adblock+)
 
   19 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-bin-4.0.251.0_p32167.ebuild, chromium-bin-9999.ebuild:

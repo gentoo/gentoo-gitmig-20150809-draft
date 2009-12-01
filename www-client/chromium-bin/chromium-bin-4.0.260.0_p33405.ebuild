@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.240.0_p31382.ebuild,v 1.2 2009/11/17 14:27:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.260.0_p33405.ebuild,v 1.1 2009/12/01 13:36:26 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -49,24 +49,28 @@ src_install() {
 	dodir ${CHROMIUM_HOME}
 	cp -R chrome-linux/ "${D}"${CHROMIUM_HOME} || die "Unable to install chrome-linux folder"
 
+	# Man page (rename to prevent collision with chromium)
+	newman chrome-linux/chrome.1 chromium-bin.1
+	rm "${D}"${CHROMIUM_HOME}/chrome-linux/chrome.1
+
 	# Plugins symlink
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/chrome-linux/plugins
 
 	# Create symlinks for needed libraries
-	dodir ${CHROMIUM_HOME}/lib
-	NSS_DIR=../../../usr/$(get_libdir)/nss
-	NSPR_DIR=../../../usr/$(get_libdir)/nspr
+	dodir ${CHROMIUM_HOME}/nss-nspr
+	NSS_DIR=/usr/$(get_libdir)/nss
+	NSPR_DIR=/usr/$(get_libdir)/nspr
 
-	dosym ${NSPR_DIR}/libnspr4.so ${CHROMIUM_HOME}/lib/libnspr4.so.0d
-	dosym ${NSPR_DIR}/libplc4.so ${CHROMIUM_HOME}/lib/libplc4.so.0d
-	dosym ${NSPR_DIR}/libplds4.so ${CHROMIUM_HOME}/lib/libplds4.so.0d
-	dosym ${NSS_DIR}/libnss3.so ${CHROMIUM_HOME}/lib/libnss3.so.1d
-	dosym ${NSS_DIR}/libnssutil3.so ${CHROMIUM_HOME}/lib/libnssutil3.so.1d
-	dosym ${NSS_DIR}/libsmime3.so ${CHROMIUM_HOME}/lib/libsmime3.so.1d
-	dosym ${NSS_DIR}/libssl3.so ${CHROMIUM_HOME}/lib/libssl3.so.1d
+	dosym ${NSPR_DIR}/libnspr4.so ${CHROMIUM_HOME}/nss-nspr/libnspr4.so.0d
+	dosym ${NSPR_DIR}/libplc4.so ${CHROMIUM_HOME}/nss-nspr/libplc4.so.0d
+	dosym ${NSPR_DIR}/libplds4.so ${CHROMIUM_HOME}/nss-nspr/libplds4.so.0d
+	dosym ${NSS_DIR}/libnss3.so ${CHROMIUM_HOME}/nss-nspr/libnss3.so.1d
+	dosym ${NSS_DIR}/libnssutil3.so ${CHROMIUM_HOME}/nss-nspr/libnssutil3.so.1d
+	dosym ${NSS_DIR}/libsmime3.so ${CHROMIUM_HOME}/nss-nspr/libsmime3.so.1d
+	dosym ${NSS_DIR}/libssl3.so ${CHROMIUM_HOME}/nss-nspr/libssl3.so.1d
 
 	# Create chromium-bin wrapper
-	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/lib:${CHROMIUM_HOME}/chrome-linux
+	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/nss-nspr:${CHROMIUM_HOME}/chrome-linux
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
 	make_desktop_entry chromium-bin "Chromium (bin)" ${PN} "Network;WebBrowser"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
