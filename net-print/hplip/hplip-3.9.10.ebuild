@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.3 2009/11/30 18:20:27 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.4 2009/12/01 11:18:46 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,10 +22,11 @@ COMMON_DEPEND="
 	virtual/ghostscript
 	media-libs/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	!static-ppds? ( || ( >=net-print/cups-1.4.0[zeroconf?] net-print/cupsddk ) )
+	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	udev-acl? ( >=sys-fs/udev-145[extras] )
 	!minimal? (
-		net-print/cups[zeroconf?]
+		!zeroconf? ( net-print/cups )
+		zeroconf? ( || ( net-print/cups[avahi] net-print/cups[zeroconf] ) )
 		virtual/libusb:0
 		>=dev-lang/python-2.4.4[threads,xml]
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
