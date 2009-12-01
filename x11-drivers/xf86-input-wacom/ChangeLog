@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-wacom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.4 2009/11/20 13:03:52 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.5 2009/12/01 09:40:44 ikelos Exp $
+
+*xf86-input-wacom-0.10.2 (01 Dec 2009)
+
+  01 Dec 2009; Mike Auty <ikelos@gentoo.org>
+  +xf86-input-wacom-0.10.2.ebuild:
+  Version bump xf86-input-wacom to 0.10.2. This now supports hotplugging and
+  autoconfiguration for serial devices.
 
 *xf86-input-wacom-0.10.1 (20 Nov 2009)
 
