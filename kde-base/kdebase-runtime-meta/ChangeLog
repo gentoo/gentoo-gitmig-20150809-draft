@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.1 2009/12/01 10:18:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.2 2009/12/01 10:35:10 scarabeus Exp $
+
+  01 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdebase-runtime-meta-4.3.4.ebuild, +metadata.xml:
+  Add all keywords since it is just metapackage so it "builds" everywhere
 
 *kdebase-runtime-meta-4.3.4 (01 Dec 2009)
 
