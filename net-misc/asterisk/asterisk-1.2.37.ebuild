@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.35.ebuild,v 1.7 2009/12/01 10:54:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.37.ebuild,v 1.1 2009/12/01 10:54:28 chainsaw Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
 
-IUSE="alsa curl debug doc gtk h323 hardened lowmem mmx nosamples \
+IUSE="alsa curl debug doc gtk hardened lowmem mmx nosamples \
 	odbc osp postgres pri sqlite ssl speex zaptel elibc_uclibc"
 
 AST_PATCHES="1.2.27-patches-1.0"
@@ -21,15 +21,13 @@ S="${WORKDIR}/${MY_P}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 RDEPEND="dev-libs/newt
 	media-sound/sox
 	ssl? ( dev-libs/openssl )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	pri? ( >=net-libs/libpri-1.2.5[-bri] )
-	h323? ( >=dev-libs/pwlib-1.8.3
-		>=net-libs/openh323-1.15.0 )
+	pri? ( =net-libs/libpri-1.2*[-bri] )
 	alsa? ( media-libs/alsa-lib )
 	curl? ( net-misc/curl )
 	odbc? ( dev-db/unixODBC )
@@ -170,8 +168,7 @@ src_prepare() {
 			-e '/^LIBS+=-lssl/d' Makefile || die
 	fi
 
-	epatch "${FILESDIR}/1.2.0/${PN}-1.2.21.1-h323-dumb-makefile.diff"
-	epatch "${FILESDIR}/1.2.0/${P}-lpc10-prototypes.diff"
+	epatch "${FILESDIR}/1.2.0/${PN}-1.2.35-lpc10-prototypes.diff"
 
 	#
 	# uclibc patch
@@ -201,15 +198,6 @@ src_compile() {
 	use lowmem && \
 		myopts="-DLOW_MEMORY"
 
-	if use h323; then
-		einfo "Building H.323 wrapper lib..."
-		make -C channels/h323 \
-			NOTRACE=1 \
-			PWLIBDIR=/usr/share/pwlib \
-			OPENH323DIR=/usr/share/openh323 \
-			libchanh323.a Makefile.ast || die "Make h323 failed"
-	fi
-
 	einfo "Building Asterisk..."
 	if use debug; then
 		unset CFLAGS
@@ -217,7 +205,6 @@ src_compile() {
 			CC=$(tc-getCC) \
 			NOTRACE=1 \
 			PWLIBDIR=/usr/share/pwlib \
-			OPENH323DIR=/usr/share/openh323 \
 			OPTIONS="${myopts}" \
 			dont-optimize=1 || die "Make failed"
 	else
@@ -226,7 +213,6 @@ src_compile() {
 			NOTRACE=1 \
 			OPTIMIZE="${CFLAGS}" \
 			PWLIBDIR=/usr/share/pwlib \
-			OPENH323DIR=/usr/share/openh323 \
 			OPTIONS="${myopts}" || die "Make failed"
 	fi
 
