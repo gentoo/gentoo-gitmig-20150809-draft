@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.84 2009/11/17 00:27:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.85 2009/12/01 10:49:27 flameeyes Exp $
+
+  01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  eggdrop-1.6.19.ebuild:
+  Add -j1 for install, see bug #295302.
 
   17 Nov 2009; Dawid Węgliński <cla@gentoo.org> eggdrop-1.6.19.ebuild:
   Fix parallel install (bug #279712). Thanks to Kevin Pyle for proposed
