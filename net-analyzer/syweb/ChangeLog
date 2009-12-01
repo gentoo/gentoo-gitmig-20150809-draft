@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/syweb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/ChangeLog,v 1.3 2008/12/13 17:43:49 tcunha Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/ChangeLog,v 1.4 2009/12/01 18:31:23 tcunha Exp $
+
+*syweb-0.59 (01 Dec 2009)
+
+  01 Dec 2009; Tiago Cunha <tcunha@gentoo.org> -syweb-0.58-r1.ebuild,
+  +syweb-0.59.ebuild, files/postinstall-en.txt, +files/reconfig,
+  -files/syweb-class_lexer.inc.patch, -files/syweb-setup.inc.patch,
+  -files/syweb-total_firewall.layout.patch:
+  - Version bump.
+  - Remove old.
 
 *syweb-0.58-r1 (13 Dec 2008)
 

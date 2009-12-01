@@ -1,9 +1,8 @@
 Test your syweb installation by pointing your browser to the URL
 http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/configtest.php
 
-Customize syweb by editing the file ${MY_INSTALLDIR}/setup.inc.
-
 If you don't want any user interaction, move index_noui.php to index.php.
 
-NOTE that syweb expects a machine/*.rrd style directory structure under
-/var/lib/symon/rrds.
+syweb expects a <host>/*.rrd style directory structure under
+/var/lib/symon/rrds. Customize ${MY_INSTALLDIR}/setup.inc
+if this is incorrect for your setup.
