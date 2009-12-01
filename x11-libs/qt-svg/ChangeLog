@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.55 2009/12/01 15:00:46 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.56 2009/12/01 18:11:40 tampakrap Exp $
+
+  01 Dec 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -qt-svg-4.6.0_rc1.ebuild:
+  Remove Qt 4.6.0 RC
 
 *qt-svg-4.6.0 (01 Dec 2009)
 
