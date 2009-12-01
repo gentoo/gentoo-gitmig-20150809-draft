@@ -1,6 +1,11 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.2 2009/11/24 15:31:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.3 2009/12/01 19:39:00 ssuominen Exp $
+
+*skrooge-0.5.5 (01 Dec 2009)
+
+  01 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +skrooge-0.5.5.ebuild:
+  Version bump.
 
 *skrooge-0.5.4 (24 Nov 2009)
 
