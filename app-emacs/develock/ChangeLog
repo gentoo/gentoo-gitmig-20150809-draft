@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/develock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.16 2009/11/21 19:24:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.17 2009/12/01 10:36:16 maekke Exp $
+
+  01 Dec 2009; Markus Meier <maekke@gentoo.org> develock-0.39.ebuild:
+  amd64 stable, bug #293027
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> develock-0.39.ebuild:
   ppc stable #293027
