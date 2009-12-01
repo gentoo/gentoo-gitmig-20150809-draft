@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/log4r
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.9 2009/11/29 14:07:52 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.10 2009/12/01 10:48:14 maekke Exp $
+
+  01 Dec 2009; Markus Meier <maekke@gentoo.org> log4r-1.1.2.ebuild:
+  x86 stable, bug #295047
 
   29 Nov 2009; Alex Legler <a3li@gentoo.org> log4r-1.0.5.ebuild:
   Fix SRC_URI for gemcutter
