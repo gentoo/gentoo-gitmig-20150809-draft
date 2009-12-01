@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10902 2009/11/30 20:45:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10903 2009/12/01 09:34:03 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -499,25 +499,6 @@ media-sound/paman
 # media-sound/musepack-tools for libs and tools to convert
 # your audio files to SV8 format.
 media-libs/libmpcdec
-
-# Alex Alexander <wired@gentoo.org> (16 Oct 2009)
-# Qt 4.6.0 beta - masking before adding for testing
-=x11-libs/qt-4.6.0_beta*
-=x11-libs/qt-assistant-4.6.0_beta*
-=x11-libs/qt-core-4.6.0_beta*
-=x11-libs/qt-dbus-4.6.0_beta*
-=x11-libs/qt-demo-4.6.0_beta*
-=x11-libs/qt-gui-4.6.0_beta*
-=x11-libs/qt-multimedia-4.6.0_beta*
-=x11-libs/qt-opengl-4.6.0_beta*
-=x11-libs/qt-phonon-4.6.0_beta*
-=x11-libs/qt-qt3support-4.6.0_beta*
-=x11-libs/qt-script-4.6.0_beta*
-=x11-libs/qt-sql-4.6.0_beta*
-=x11-libs/qt-svg-4.6.0_beta*
-=x11-libs/qt-test-4.6.0_beta*
-=x11-libs/qt-webkit-4.6.0_beta*
-=x11-libs/qt-xmlpatterns-4.6.0_beta*
 
 # Diego E. Pettenò <flameeyes@gmail.com> (9 Oct 2009)
 # Untested yet; documented only in Russian, help is appreciated.
