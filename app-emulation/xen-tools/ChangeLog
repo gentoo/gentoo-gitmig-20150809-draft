@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.55 2009/11/05 23:15:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.56 2009/12/01 13:39:18 patrick Exp $
+
+*xen-tools-3.4.2 (01 Dec 2009)
+
+  01 Dec 2009; Patrick Lauer <patrick@gentoo.org> +xen-tools-3.4.2.ebuild:
+  Bump
 
   05 Nov 2009; Patrick Lauer <patrick@gentoo.org> xen-tools-3.4.1-r1.ebuild:
   Adding gettext depend for #287935
