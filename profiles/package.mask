@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10904 2009/12/01 09:47:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10905 2009/12/01 10:00:49 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -546,14 +546,10 @@ net-wireless/kwlaninfo
 net-misc/knutclient
 net-misc/kovpn
 net-misc/kwebget
-net-analyzer/knetscan
-net-analyzer/ksniffer
-mail-client/kbiff
 app-text/kbarcode
 app-crypt/calcchecksum
 app-cdr/kcdlabel
 app-backup/kdar
-net-nntp/klibido
 app-office/kmymoney2
 app-office/kmm_kbanking
 x11-misc/kflog
@@ -568,7 +564,6 @@ media-video/kmenc15
 media-radio/qsstv
 media-radio/qgrid
 media-gfx/potracegui
-app-pda/ipodslave
 app-i18n/skim-scim-anthy
 app-i18n/skim
 
