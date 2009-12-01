@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.349 2009/11/20 10:27:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.350 2009/12/01 01:58:35 jmbsvicetto Exp $
+
+*amarok-2.2.1-r2 (01 Dec 2009)
+
+  01 Dec 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.2.1-r2.ebuild, +files/amarok-2.2-mysql-libs.patch:
+  Updated taglib dependency - fixes bug 293950.
+  Patched mysqlecollection to fix the build with >=binutils-2.20 - fixes bug
+  290662.
+  Should fix bug 277785.
 
   20 Nov 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   amarok-2.2.1-r1.ebuild:
