@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/files/bash-completion.sh,v 1.6 2009/10/16 03:01:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/files/bash-completion.sh,v 1.7 2009/12/01 17:29:36 darkside Exp $
 
 # Check for interactive bash and that we haven't already been sourced.
 [ -z "$BASH_VERSION" -o -z "$PS1" -o -n "$BASH_COMPLETION" ] && return
@@ -32,6 +32,7 @@ if [ $bmajor -eq 2 -a $bminor '>' 04 ] || [ $bmajor -gt 2 ]; then
     done
 
     # Clean up
+    $loaded_pre && source /usr/share/bash-completion/.post
     unset -f _load_completions  # not designed to be called more than once
     }
 
