@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.2-r2.ebuild,v 1.2 2009/07/19 00:12:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.2-r2.ebuild,v 1.3 2009/12/01 19:05:24 fauli Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ SRC_URI="amd64? ( ${BASE_URI}/cudatoolkit_${PV}_linux_64_suse11.1.run
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debugger doc profiler"
 
 DEPEND="!dev-util/nvidia-cuda-profiler"
