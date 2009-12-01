@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.240.0.ebuild,v 1.2 2009/11/09 14:55:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.260.0.ebuild,v 1.1 2009/12/01 13:27:46 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+ffmpeg"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/libxml2
@@ -24,11 +24,10 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg
 	media-libs/libpng
-	>=media-video/ffmpeg-0.5_p19787
+	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-themes/gnome-icon-theme"
-#	>=dev-libs/libevent-1.4.13
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
@@ -37,22 +36,18 @@ DEPEND="${RDEPEND}
 export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 
 src_prepare() {
+	# Gentoo uses .kde4, not .kde
+	sed -e 's/\.kde/.kde4/' -i net/proxy/proxy_config_service_linux.cc \
+		|| die "kde proxy sed failed"
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-	# Add configuration flag to use system libevent
-	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \
 		-i third_party/{,WebKit/WebCore/platform/image-decoders}/zlib/zconf.h \
 		|| die "zlib sed failed"
-
-	# Display correct svn revision in about box (if not a release)
-	if [[ "${PV}" =~ "_p" ]]; then
-		echo "${PV/[0-9.]*\_p}" > build/LASTCHANGE.in || die "setting revision failed"
-	fi
 }
 
 src_configure() {
@@ -70,7 +65,6 @@ EOF
 
 	# Configuration options (system libraries)
 	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
-	# -Duse_system_libevent=1: http://crbug.com/22140
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
@@ -115,13 +109,17 @@ src_install() {
 	doins -r out/Release/locales
 	doins -r out/Release/resources
 
-	newman out/Release/chromium-browser.1 chrome.1
+	# chrome.1 is for chromium --help
+	newman out/Release/chrome.1 chrome.1
+	newman out/Release/chrome.1 chromium.1
 
-	# Chromium looks for these in its folder
-	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	if use ffmpeg; then
+		# Chromium looks for these in its folder
+		# See media_posix.cc and base_paths_linux.cc
+		dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
+		dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
+		dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	fi
 
 	# Plugins symlink
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins

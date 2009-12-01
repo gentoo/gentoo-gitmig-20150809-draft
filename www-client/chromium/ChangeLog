@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.26 2009/11/24 10:41:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.27 2009/12/01 13:27:46 voyageur Exp $
+
+*chromium-4.0.260.0 (01 Dec 2009)
+
+  01 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-4.0.240.0.ebuild, +chromium-4.0.260.0.ebuild:
+  Version bump, enables bookmarks sync by default, allows again extensions
+  to access file:// elements (adblock+), external libevent disabled as it
+  crashes with it
 
   24 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-4.0.251.0.ebuild, chromium-9999.ebuild:
