@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3625 2009/12/01 11:08:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3626 2009/12/01 15:38:46 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Unmask Qt 4.6.0
 
   01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask patch-2.6 and later until bug #293570 is solved.
