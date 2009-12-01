@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.34 2009/11/30 01:31:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.35 2009/12/01 09:51:57 maekke Exp $
+
+  01 Dec 2009; Markus Meier <maekke@gentoo.org> twisted-lore-8.2.0.ebuild:
+  amd64/x86 stable, bug #289680
 
 *twisted-lore-9.0.0 (30 Nov 2009)
 

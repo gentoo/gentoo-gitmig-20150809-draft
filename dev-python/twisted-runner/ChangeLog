@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.31 2009/11/30 01:34:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.32 2009/12/01 09:48:55 maekke Exp $
+
+  01 Dec 2009; Markus Meier <maekke@gentoo.org> twisted-runner-8.2.0.ebuild:
+  amd64/x86 stable, bug #289680
 
 *twisted-runner-9.0.0 (30 Nov 2009)
 
