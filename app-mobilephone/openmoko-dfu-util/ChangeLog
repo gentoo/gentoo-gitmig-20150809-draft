@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/openmoko-dfu-util
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/ChangeLog,v 1.5 2009/10/17 23:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/ChangeLog,v 1.6 2009/12/01 22:33:04 vapier Exp $
+
+  01 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  openmoko-dfu-util-5484.ebuild:
+  Stabilize for amd64/x86.
 
   17 Oct 2009; Mike Frysinger <vapier@gentoo.org>
   openmoko-dfu-util-5484.ebuild, openmoko-dfu-util-9999.ebuild:
