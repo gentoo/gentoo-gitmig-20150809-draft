@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.58 2009/11/30 06:40:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.59 2009/12/01 01:31:04 darkside Exp $
+
+*wicd-1.7.0_alpha1 (01 Dec 2009)
+
+  01 Dec 2009; Jeremy Olexa <darkside@gentoo.org> -wicd-1.5.9-r1.ebuild,
+  -wicd-1.6.2.ebuild, wicd-1.6.2.2.ebuild, +wicd-1.7.0_alpha1.ebuild,
+  metadata.xml:
+  Removed old versions. Limit urwid dep on 1.6.2.2 (bug #295033). Version
+  bump to 1.7.0_alpha1 which has major tray changes and many minor changes
+  including an ability to not install the gtk UI (bug #293538)
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> wicd-1.6.2.2.ebuild:
   Marked ppc/ppc64 stable.
