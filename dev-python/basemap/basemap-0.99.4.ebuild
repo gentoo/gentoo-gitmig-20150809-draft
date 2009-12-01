@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.99.4.ebuild,v 1.1 2009/08/12 17:13:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.99.4.ebuild,v 1.2 2009/12/01 06:03:45 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -32,11 +32,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.99.3-syslib.patch
 	epatch "${FILESDIR}"/${PN}-0.99.3-datadir.patch
 	rm -f lib/mpl_toolkits/basemap/pupynere.py || die
-}
-
-src_test() {
-	cd build/lib*
-	PYTHONPATH=. "${python}" mpl_toolkits/basemap/test.py || die "tests failed"
+	# quick sed to match upstream
+	sed -i \
+		-e 's/NumpyTestCase/TestCase/g' \
+		lib/mpl_toolkits/basemap/test.py || die
 }
 
 src_install() {
