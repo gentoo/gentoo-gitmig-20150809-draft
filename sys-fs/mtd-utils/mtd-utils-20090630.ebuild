@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20090630.ebuild,v 1.1 2009/07/03 05:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20090630.ebuild,v 1.2 2009/12/01 03:13:00 vapier Exp $
 
-inherit toolchain-funcs eutils
+inherit eutils
 
 # Git ID for the snapshot
 MY_PV="${PV}-22494a8d105936785af53235b088fa38112128fc"
@@ -32,11 +32,11 @@ src_unpack() {
 }
 
 makeopts() {
+	echo CROSS=${CHOST}-
 	use xattr || echo WITHOUT_XATTR=1
 }
 
 src_compile() {
-	tc-export CC
 	emake $(makeopts) || die
 }
 

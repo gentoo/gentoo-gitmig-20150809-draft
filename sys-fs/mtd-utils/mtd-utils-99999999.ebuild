@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.1 2009/03/10 15:09:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.2 2009/12/01 03:13:00 vapier Exp $
 
 ECVS_USER="anoncvs"
 ECVS_PASS="anoncvs"
 EGIT_REPO_URI="git://git.infradead.org/mtd-utils.git"
-inherit toolchain-funcs flag-o-matic git
+inherit git
 
 DESCRIPTION="MTD userspace tools"
 HOMEPAGE="http://git.infradead.org/?p=mtd-utils.git;a=summary"
@@ -37,9 +37,9 @@ src_compile() {
 	local myflags="-j1"
 	use xattr || myflags+=" WITHOUT_XATTR=1"
 	emake DESTDIR="${D}" \
+		CROSS=${CHOST}- \
 		OPTFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		CC="$(tc-getCC)" \
 		${myflags} || die
 }
 

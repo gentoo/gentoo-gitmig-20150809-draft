@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.22 2009/07/03 05:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.23 2009/12/01 03:13:00 vapier Exp $
+
+  01 Dec 2009; Mike Frysinger <vapier@gentoo.org> mtd-utils-20090630.ebuild,
+  mtd-utils-99999999.ebuild:
+  Set CROSS when running make so correct ar/ranlib is used.
 
 *mtd-utils-20090630 (03 Jul 2009)
 
