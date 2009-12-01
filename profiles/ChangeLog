@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3624 2009/12/01 09:47:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3625 2009/12/01 11:08:16 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask patch-2.6 and later until bug #293570 is solved.
 
   01 Dec 2009; Alex Alexander <wired@gentoo.org> package.mask:
   masked KDE 4.3.4 before commit run
