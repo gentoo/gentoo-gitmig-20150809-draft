@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.1.ebuild,v 1.15 2009/11/29 21:30:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.1.ebuild,v 1.16 2009/12/01 04:52:17 vapier Exp $
 
 EAPI="2"
 
@@ -71,7 +71,8 @@ src_configure() {
 		--without-pam \
 		$(use unicode || echo --with-ncurses) \
 		$(use_with selinux) \
-		$(use_with slang)
+		$(use_with slang) \
+		$(tc-has-tls || echo --disable-tls)
 }
 
 src_install() {
