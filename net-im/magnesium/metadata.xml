@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>net-im</herd>
-<longdescription>
-    Magnesium is a Yahoo! Chat client based off the original curphoo. 
-</longdescription>
-</pkgmetadata>
