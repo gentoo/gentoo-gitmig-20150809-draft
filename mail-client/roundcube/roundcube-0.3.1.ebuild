@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.1.ebuild,v 1.4 2009/11/30 18:22:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.1.ebuild,v 1.5 2009/12/01 07:44:58 hollow Exp $
 
 EAPI="2"
 
 MY_PN="${PN}mail"
 MY_P="${MY_PN}-${PV}"
 
-inherit confutils webapp depend.php depend.apache
+inherit webapp depend.php depend.apache
 
 DESCRIPTION="A browser-based multilingual IMAP client with an application-like user interface"
 HOMEPAGE="http://roundcube.net"
@@ -17,10 +17,11 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 # for bundled PEAR components, googiespell and utf8.class.php
 LICENSE="GPL-2 BSD PHP-2.02 PHP-3 MIT public-domain"
 KEYWORDS="amd64 ~ppc ppc64 x86"
-IUSE="ldap mysql postgres +sqlite +ssl spell"
+IUSE="ldap mysql postgres ssl spell"
 
 DEPEND=""
-RDEPEND="dev-lang/php[crypt,iconv,ldap?,pcre,postgres?,session,spl,ssl?,sqlite?,unicode]
+RDEPEND="dev-lang/php[crypt,iconv,ldap?,pcre,postgres?,session,spl,ssl?,unicode]
+	!postgres? ( !mysql? ( dev-lang/php[sqlite] ) )
 	spell? ( dev-lang/php[curl,spell] )
 	dev-php/PEAR-PEAR
 "
@@ -31,7 +32,6 @@ need_php_httpd
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	confutils_require_any mysql postgres sqlite
 	use mysql && require_php_with_any_use mysql mysqli
 
 	# add some warnings about optional functionality
