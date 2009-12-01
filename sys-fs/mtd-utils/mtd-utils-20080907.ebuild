@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080907.ebuild,v 1.6 2009/03/08 00:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080907.ebuild,v 1.7 2009/12/01 03:27:10 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -30,9 +30,11 @@ src_unpack() {
 	cd "${S}"
 	sed -i 's:-Werror::' $(find . -name Makefile)
 	epatch "${FILESDIR}"/mtd-utils-fixup.patch
+	sed -i -e 's:\<ar\>:$(AR):' tests/ubi-tests/Makefile || die
 }
 
 src_compile() {
+	tc-export AR RANLIB
 	emake \
 		CC="$(tc-getCC)" \
 		OPTFLAGS="${CFLAGS}" \
