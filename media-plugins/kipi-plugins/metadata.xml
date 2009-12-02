@@ -5,6 +5,5 @@
 <use>
 	<flag name="mjpeg">Add mjpeg suppport</flag>
 	<flag name="redeyes">Add redeyes removal suppport</flag>
-	<flag name="linguas_zn_CN">Add zn_CN lingua suppport</flag>
 </use>
 </pkgmetadata>
