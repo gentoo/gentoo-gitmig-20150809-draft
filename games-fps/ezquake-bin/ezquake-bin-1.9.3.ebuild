@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1.9.3.ebuild,v 1.3 2009/11/14 16:33:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1.9.3.ebuild,v 1.4 2009/12/02 21:54:40 mr_bones_ Exp $
 
 EAPI=2
 inherit games
@@ -72,7 +72,7 @@ pkg_postinst() {
 
 	if ! use cdinstall; then
 		elog "NOTE that this client doesn't include .pak files. You *should*"
-		elog "enable \"cdinstall\" flag or install quake1-demodata."
+		elog "enable \"cdinstall\" flag or install quake1-demodata with the symlink use flag."
 		elog "You can also copy the files from your Quake1 CD to"
 		elog "  ${dir}/quake1/id1 (all names lowercase)"
 		elog ""
