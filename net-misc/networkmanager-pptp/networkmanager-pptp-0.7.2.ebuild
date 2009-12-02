@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.7.0.ebuild,v 1.2 2009/04/22 14:22:09 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.7.2.ebuild,v 1.1 2009/12/02 11:39:42 dagger Exp $
 
+EAPI=2
 inherit eutils versionator
 
 # NetworkManager likes itself with capital letters
@@ -19,6 +20,7 @@ IUSE="gnome"
 
 RDEPEND="
 	=net-misc/networkmanager-${MYPV_MINOR}*
+	net-dialup/pptpclient
 	gnome? (
 		>=gnome-base/gconf-2.20
 		>=gnome-base/gnome-keyring-2.20
@@ -33,12 +35,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_configure() {
 	ECONF="--disable-more-warnings \
 		$(use_with gnome)"
 
 	econf ${ECONF}
-	emake || die "emake failed"
 }
 
 src_install() {
