@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.5 2009/04/22 14:22:10 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.6 2009/12/02 11:49:37 dagger Exp $
+
+*networkmanager-vpnc-0.7.2 (02 Dec 2009)
+
+  02 Dec 2009; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-vpnc-0.7.0.ebuild, +networkmanager-vpnc-0.7.2.ebuild:
+  Version bump for NetworkManager's VPNC plugin
 
 *networkmanager-vpnc-0.7.1 (22 Apr 2009)
 
