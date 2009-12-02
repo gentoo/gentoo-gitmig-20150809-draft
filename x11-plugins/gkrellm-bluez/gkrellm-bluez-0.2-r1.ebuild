@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/gkrellm-bluez-0.2-r1.ebuild,v 1.5 2009/11/19 14:39:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/gkrellm-bluez-0.2-r1.ebuild,v 1.6 2009/12/02 11:53:45 maekke Exp $
 
 inherit gkrellm-plugin
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gkrellm-bluez.sourceforge.net"
 RDEPEND="|| ( net-wireless/bluez-libs net-wireless/bluez )"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT="0"
 
