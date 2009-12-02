@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.223 2009/11/18 17:57:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.224 2009/12/02 17:37:09 armin76 Exp $
+
+  02 Dec 2009; Raúl Porcel <armin76@gentoo.org> syslog-ng-3.0.4.ebuild:
+  ia64/s390/sh/sparc stable wrt #289960
 
   18 Nov 2009; Brent Baude <ranger@gentoo.org> syslog-ng-3.0.4.ebuild:
   Marking syslog-ng-3.0.4 ppc64 for bug 289960
