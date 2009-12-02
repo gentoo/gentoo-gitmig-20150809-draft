@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.307 2009/11/29 22:06:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.308 2009/12/02 14:44:49 dang Exp $
+
+  02 Dec 2009; Daniel Gryniewicz <dang@gentoo.org> +hal-0.5.14.ebuild:
+  Bump to 0.5.14
+
+*hal-0.5.14 (02 Dec 2009)
+
+  02 Dec 2009; Daniel Gryniewicz <dang@gentoo.org> +hal-0.5.14.ebuild:
+  Bump to 0.5.14
 
   29 Nov 2009; Joseph Jezak <josejx@gentoo.org> hal-0.5.13-r2.ebuild:
   Marked ppc stable for bug #287380.
