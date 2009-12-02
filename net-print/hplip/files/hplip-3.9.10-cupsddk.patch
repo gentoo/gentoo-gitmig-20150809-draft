@@ -1,0 +1,22 @@
+--- installer/core_install.py.old	2009-11-15 14:39:35.000000000 +0100
++++ installer/core_install.py	2009-11-15 16:38:27.000000000 +0100
+@@ -29,6 +29,7 @@
+ import grp
+ import pwd
+ import tarfile
++import commands # TODO: Replace with subprocess (commands is deprecated in Python 3.0)
+ 
+ try:
+     import hashlib # new in 2.5
+@@ -1036,9 +1037,8 @@
+     def check_cupsddk(self):
+         log.debug("Checking for cups-ddk...")
+         # TODO: Compute these paths some way or another...
+-        #return check_tool("/usr/lib/cups/driver/drv list") and os.path.exists("/usr/share/cupsddk/include/media.defs")
+-        return (check_file('drv', "/usr/lib/cups/driver") or check_file('drv', "/usr/lib64/cups/driver")) and \
+-            check_file('media.defs', "/usr/share/cupsddk/include")
++        #return check_tool(commands.getoutput("cups-config --serverbin") + "/driver/drv list") and os.path.exists("/usr/share/cupsddk/include/media.defs")
++        return check_file('drv', commands.getoutput("cups-config --serverbin") + "/driver") and check_file('media.defs', "/usr/share/cupsddk/include")
+ 
+ 
+     def check_policykit(self):

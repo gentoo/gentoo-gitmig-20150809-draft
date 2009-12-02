@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.5 2009/12/01 12:43:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.6 2009/12/02 19:27:06 billie Exp $
 
 EAPI="2"
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
+# zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
 IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt3 qt4 scanner snmp static-ppds -udev-acl"
 
 # Note : libusb-compat untested (calchan 20090516)
@@ -91,30 +92,36 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Do not install desktop files if there is no gui
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
 	epatch "${FILESDIR}"/${P}-desktop.patch
+
+	# Browser detection through xdg-open
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/482674
 	epatch "${FILESDIR}"/${P}-browser.patch
 
-	# bug 98428
-	sed -i -e "s:/usr/bin/env python:/usr/bin/python:g" hpssd.py || die "Sed hpssd.py failed"
+	# Use cups-config when checking for cupsddk
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483136
+	epatch "${FILESDIR}"/${P}-cupsddk.patch
+
+	# htmldocs are not installed under docdir/html so enable htmldir configure switch
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
+	epatch "${FILESDIR}"/${P}-htmldir.patch
+
+	# SYSFS deprecated but kept upstream for compatibility reasons
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
+	sed -i -e "s/SYSFS/ATTRS/g" -e "s/sysfs/attrs/g" data/rules/56-hpmud_support.rules \
+		data/rules/55-hpmud.rules || die "Sed 55-hpmud.rules 56-hpmud_support.rules failed"
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
 		-e "s:file('/etc/issue', 'r').read():'Gentoo':" \
 		installer/core_install.py || die "Sed installer/core_install.py failed"
 
-	# SYSFS deprecated - https://bugs.launchpad.net/hplip/+bug/346390
-	sed -i -e "s/SYSFS/ATTRS/g" -e "s/sysfs/attrs/g" data/rules/56-hpmud_support.rules \
-		data/rules/55-hpmud.rules || die "Sed 55-hpmud.rules 56-hpmud_support.rules failed"
-
-	sed -i \
-		-e s:/usr/lib/cups/driver:$(cups-config --serverbin)/driver:g \
-		installer/core_install.py || die "Sed installer/core_install.py failed"
-
-	# Use system foomatic-rip instead of foomatic-rip-hplip
+	# Use system foomatic-rip for hpijs driver instead of foomatic-rip-hplip
+	# The hpcups driver does not use foomatic-rip
 	local i
-	for i in ppd/{hpcups,hpijs}/*.ppd.gz
+	for i in ppd/hpijs/*.ppd.gz
 	do
 		rm -f ${i}.temp
 		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | gzip > ${i}.temp || die "Sed *.ppd.gz failed"
@@ -132,12 +139,6 @@ src_prepare() {
 		sed -i \
 			-e "s/Exec=hp-systray/Exec=hp-systray --qt${qt_ver}/" \
 			hplip-systray.desktop.in || die "Sed hplip-systray.desktop.in failed"
-	fi
-
-	# htmldocs are not installed under docdir/html
-	# the following sed enables --htmldir configure switch in src_configure
-	if use doc ; then
-			sed -i -e 's/www\([0-9]\)dir = $(docdir)/www\1dir = $(htmldir)/g' Makefile.am || die "Sed Makefile.am failed"
 	fi
 
 	eautoreconf
@@ -218,7 +219,7 @@ src_configure() {
 		--disable-shadow-build \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
-		--htmldir=/usr/share/doc/${P}/html \
+		--with-htmldir=/usr/share/doc/${P}/html \
 		${gui_build} \
 		${myconf} \
 		${drv_build} \
@@ -235,7 +236,8 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Emake install failed"
 
-	# Bug #201023
+	# Installed by sane-backends
+	# Gentoo Bug: #201023
 	rm -f "${D}"/etc/sane.d/dll.conf
 
 	# kde3 autostart hack
