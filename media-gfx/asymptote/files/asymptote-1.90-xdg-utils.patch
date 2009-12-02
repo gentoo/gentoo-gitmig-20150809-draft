@@ -1,8 +1,8 @@
-Index: asymptote-1.87/settings.cc
+Index: asymptote-1.90/settings.cc
 ===================================================================
---- asymptote-1.87.orig/settings.cc
-+++ asymptote-1.87/settings.cc
-@@ -82,14 +82,14 @@ mode_t mask;
+--- asymptote-1.90.orig/settings.cc
++++ asymptote-1.90/settings.cc
+@@ -86,14 +86,14 @@ mode_t mask;
  bool msdos=false;
  string HOME="HOME";
  const char pathSeparator=':';
