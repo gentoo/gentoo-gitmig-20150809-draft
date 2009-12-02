@@ -1,0 +1,55 @@
+diff -uNr asterisk-addons-1.6.1.2.ORIG/cdr/cdr_addon_mysql.c asterisk-addons-1.6.1.2/cdr/cdr_addon_mysql.c
+--- asterisk-addons-1.6.1.2.ORIG/cdr/cdr_addon_mysql.c	2009-12-02 18:35:01.000000000 +0000
++++ asterisk-addons-1.6.1.2/cdr/cdr_addon_mysql.c	2009-12-02 18:36:00.000000000 +0000
+@@ -29,6 +29,13 @@
+ 
+ #include <asterisk.h>
+ 
++#include <stdio.h>
++#include <string.h>
++
++#include <stdlib.h>
++#include <unistd.h>
++#include <time.h>
++
+ #include <sys/types.h>
+ #include <asterisk/config.h>
+ #include <asterisk/options.h>
+@@ -40,13 +47,6 @@
+ #include <asterisk/strings.h>
+ #include <asterisk/linkedlists.h>
+ 
+-#include <stdio.h>
+-#include <string.h>
+-
+-#include <stdlib.h>
+-#include <unistd.h>
+-#include <time.h>
+-
+ #include <mysql/mysql.h>
+ #include <mysql/errmsg.h>
+ 
+diff -uNr asterisk-addons-1.6.1.2.ORIG/res/res_config_mysql.c asterisk-addons-1.6.1.2/res/res_config_mysql.c
+--- asterisk-addons-1.6.1.2.ORIG/res/res_config_mysql.c	2009-12-02 18:35:01.000000000 +0000
++++ asterisk-addons-1.6.1.2/res/res_config_mysql.c	2009-12-02 18:36:00.000000000 +0000
+@@ -44,6 +44,9 @@
+ 
+ #include <asterisk.h>
+ 
++#include <stdlib.h>
++#include <stdio.h>
++#include <string.h>
+ #include <asterisk/channel.h>
+ #include <asterisk/logger.h>
+ #include <asterisk/config.h>
+@@ -53,10 +56,6 @@
+ #include <asterisk/cli.h>
+ #include <asterisk/utils.h>
+ #include <asterisk/threadstorage.h>
+-#include <stdlib.h>
+-#include <stdio.h>
+-#include <string.h>
+-#include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>

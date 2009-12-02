@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-addons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.16 2009/09/11 16:39:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.17 2009/12/02 18:45:27 chainsaw Exp $
+
+*asterisk-addons-1.6.1.2 (02 Dec 2009)
+
+  02 Dec 2009; <chainsaw@gentoo.org> +asterisk-addons-1.6.1.2.ebuild,
+  +files/asterisk-addons-1.6.1.2-parallel-make.diff,
+  +files/asterisk-addons-1.6.1.2-uclibc.diff:
+  Version bump. Robustness fixes for the MP3 support, the MySQL module has
+  also recieved some love.
 
 *asterisk-addons-1.6.1.1 (11 Sep 2009)
 
