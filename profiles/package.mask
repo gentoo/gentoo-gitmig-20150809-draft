@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10913 2009/12/02 11:14:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10914 2009/12/02 14:58:09 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -433,19 +433,9 @@ media-sound/paman
 =dev-util/bzr-2.1.0_beta1*
 =dev-util/bzrtools-2.1.0_beta1*
 
-# Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
-# Obsolete Musepack SV7 format support. Install
-# media-sound/musepack-tools for libs and tools to convert
-# your audio files to SV8 format.
-media-libs/libmpcdec
-
 # Diego E. Pettenò <flameeyes@gmail.com> (9 Oct 2009)
 # Untested yet; documented only in Russian, help is appreciated.
 sys-auth/pam_keystore
-
-# Samuli Suominen <ssuominen@gentoo.org> (05 Oct 2009)
-# Masked for testing.
-=dev-libs/libffi-3.0.9_rc*
 
 # Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
 # Dead project, missing deps, no maintainer. Removed in 60 days by treecleaners.
