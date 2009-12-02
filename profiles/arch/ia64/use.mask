@@ -80,6 +80,10 @@ xemacs
 
 # Other
 
+# Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2009)
+# This will need media-sound/musepack-tools
+musepack
+
 # Raúl Porcel <armin76@gentoo.org> (20 Mar 2009)
 # Current webkit segfaults
 webkit
