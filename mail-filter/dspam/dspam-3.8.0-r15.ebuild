@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r15.ebuild,v 1.5 2009/12/01 07:35:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r15.ebuild,v 1.6 2009/12/02 22:12:23 mrness Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils autotools multilib
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20091201.tar.gz
+	mirror://gentoo/${P}-patches-20091202.tar.gz
 	http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 
 LICENSE="GPL-2"
@@ -129,7 +129,6 @@ src_install () {
 	dodir "${DSPAM_CONFDIR}"
 	insinto "${DSPAM_CONFDIR}"
 	insopts -m640 -o dspam -g dspam
-	doins src/dspam.conf
 	dosym /etc/mail/dspam /etc/dspam
 
 	# make install
