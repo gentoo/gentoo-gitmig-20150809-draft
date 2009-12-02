@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/Email-Sender-0.093110.ebuild,v 1.1 2009/11/10 10:10:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/Email-Sender-0.093110.ebuild,v 1.2 2009/12/02 10:49:12 tove Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="A library for sending email"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="virtual/perl-Scalar-List-Utils
