@@ -56,8 +56,6 @@
     turned off</flag>
     <flag name="udev-acl">Install udev acl rules which needs 
     <pkg>sys-fs/udev</pkg> with acl support</flag>
-    <flag name="zeroconf">Zeroconf support. Enable this flag to make use of the
-    mDNS network search for network attached printers</flag>
   </use>
 
 </pkgmetadata>
