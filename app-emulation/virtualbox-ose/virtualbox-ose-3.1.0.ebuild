@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.0.ebuild,v 1.1 2009/12/02 20:37:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.0.ebuild,v 1.2 2009/12/02 23:33:02 patrick Exp $
 
 EAPI=2
 
@@ -112,8 +112,6 @@ src_prepare() {
 	# unset useless/problematic mesa checks in configure
 	epatch "${FILESDIR}/${PN}-3.0.0-mesa-check.patch"
 
-	# stupid hal being stupid code
-	use hal || epatch "${FILESDIR}/${PN}-3.0.8-without-hal-fix.patch"
 }
 
 src_configure() {
