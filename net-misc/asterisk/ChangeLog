@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.231 2009/12/01 15:26:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.232 2009/12/02 10:56:28 maekke Exp $
+
+  02 Dec 2009; Markus Meier <maekke@gentoo.org> asterisk-1.2.37.ebuild:
+  amd64 stable, bug #295270
 
   01 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   asterisk-1.2.37.ebuild:
