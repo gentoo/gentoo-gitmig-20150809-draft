@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.17.ebuild,v 1.1 2009/12/02 12:28:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.17.ebuild,v 1.2 2009/12/02 16:55:38 ssuominen Exp $
 
 EAPI=2
-inherit flag-o-matic toolchain-funcs multilib
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 # This should normally be empty string, unless a release has a suffix.
 if [[ "${P/_pre/}" != "${P}" ]]; then
@@ -83,6 +83,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${DISTDIR}"/${PN}-1.1.15-textrel-fix.patch
+}
 
 src_configure() {
 	#prevent quicktime crashing
