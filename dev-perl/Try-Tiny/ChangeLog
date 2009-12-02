@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.2 2009/10/26 13:39:26 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.3 2009/12/02 09:27:56 tove Exp $
+
+  02 Dec 2009; Torsten Veller <tove@gentoo.org> Try-Tiny-0.02.ebuild:
+  Stable on amd64 and x86 (#293622)
 
   26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> Try-Tiny-0.02.ebuild:
   Keywording for ppc, bug 283244
