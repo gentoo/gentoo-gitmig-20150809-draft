@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.54 2009/12/01 10:56:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.55 2009/12/02 17:07:05 abcd Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -146,7 +146,7 @@ esac
 # Currently defaults to 4.5.1 for KDE 4.3 and earlier
 # or 4.6.0_rc1 for KDE 4.4 and later
 if slot_is_at_least 4.4 "${KDE_MINIMAL}"; then
-	QT_MINIMAL="${QT_MINIMAL:-4.6.0_rc1}"
+	QT_MINIMAL="${QT_MINIMAL:-4.6.0}"
 fi
 
 QT_MINIMAL="${QT_MINIMAL:-4.5.1}"
@@ -240,7 +240,7 @@ fi
 kdedepend="
 	dev-util/pkgconfig
 	!aqua? (
-		x11-proto/xextproto
+		|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1.0 )
 		x11-proto/xf86vidmodeproto
 	)
 "
@@ -364,7 +364,7 @@ case ${BUILD_TYPE} in
 			case ${KDEBASE} in
 				kde-base)
 					case ${PV} in
-						4.3.85 | 4.3.9[0568])
+						4.3.8[05] | 4.3.9[0568])
 							# block for normally packed unstable releases
 							SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
 						4.3.[6-9]*)
