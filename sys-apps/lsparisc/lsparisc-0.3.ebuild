@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3.ebuild,v 1.4 2008/11/06 19:23:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3.ebuild,v 1.5 2009/12/02 18:40:13 jer Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Like lspci but for PARISC devices"
 HOMEPAGE="http://packages.debian.org/unstable/utils/lsparisc"
-SRC_URI="http://ftp.debian.org/debian/pool/main/l/${PN}/${P/-/_}.tar.gz"
+SRC_URI="mirror://debian/pool/main/l/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

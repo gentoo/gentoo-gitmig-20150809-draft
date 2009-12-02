@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lsparisc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/ChangeLog,v 1.14 2009/12/02 18:36:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/ChangeLog,v 1.15 2009/12/02 18:40:13 jer Exp $
+
+  02 Dec 2009; Jeroen Roovers <jer@gentoo.org> lsparisc-0.3.ebuild:
+  Use Debian mirrors.
 
   02 Dec 2009; Jeroen Roovers <jer@gentoo.org>
   files/lsparisc-0.3-compile.patch:
