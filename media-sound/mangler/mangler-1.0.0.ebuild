@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.0_rc3.ebuild,v 1.1 2009/11/22 19:34:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.0.0.ebuild,v 1.1 2009/12/02 16:07:10 yngwin Exp $
 
 EAPI="2"
 inherit autotools
