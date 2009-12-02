@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.0.1.ebuild,v 1.3 2009/11/04 11:07:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.0.1.ebuild,v 1.4 2009/12/02 10:49:48 maekke Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://argparse.googlecode.com/files/${P}.zip"
 LICENSE="Apache-2.0"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
