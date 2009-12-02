@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3630 2009/12/01 20:45:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3631 2009/12/02 21:27:07 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Dec 2009; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  cvs ebuild vdr-xineliboutput-9999 masked for lifetime
 
   01 Dec 2009; Dror Levin <spatz@gentoo.org> package.mask:
   Remove mask for qt-*-4.6.0_rc
