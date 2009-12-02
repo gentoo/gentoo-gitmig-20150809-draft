@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.10 2009/12/01 16:01:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.11 2009/12/02 17:14:31 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -89,7 +89,7 @@ src_prepare() {
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
 	# Add configuration flag to use system libevent
-	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
+	epatch "${FILESDIR}"/${PN}-use_system_libevent-1.4.13.patch
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \

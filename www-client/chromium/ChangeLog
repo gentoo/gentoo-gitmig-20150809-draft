@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.28 2009/12/01 16:01:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.29 2009/12/02 17:14:31 voyageur Exp $
+
+  02 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/chromium-use_system_libevent-1.4.13.patch,
+  chromium-4.0.260.0.ebuild, chromium-9999.ebuild:
+  Update external libevent patch and re-enable it, crash was unrelated to it
 
   01 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-4.0.260.0.ebuild, chromium-9999.ebuild:
