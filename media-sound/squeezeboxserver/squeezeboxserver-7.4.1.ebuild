@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.1.ebuild,v 1.1 2009/11/25 22:52:26 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.1.ebuild,v 1.2 2009/12/02 23:31:35 lavajoe Exp $
 
 inherit eutils
 
@@ -84,8 +84,7 @@ RDEPEND="
 	>=dev-perl/AnyEvent-5.2
 	>=dev-perl/Sub-Name-0.04
 	>=dev-perl/Module-Find-0.08
-	>=dev-perl/Class-XSAccessor-1.03
-	>=dev-perl/Class-XSAccessor-Array-1.04
+	>=dev-perl/Class-XSAccessor-1.05
 	>=dev-perl/AutoXS-Header-1.02
 	>=dev-perl/Scope-Guard-0.03
 	>=dev-perl/Class-C3-XS-0.13
