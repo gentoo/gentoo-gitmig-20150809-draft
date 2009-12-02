@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.5.1.ebuild,v 1.3 2009/11/06 19:37:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.7.0.ebuild,v 1.1 2009/12/02 20:45:14 ulm Exp $
 
 inherit elisp
 
@@ -18,7 +18,8 @@ DOCS="ChangeLog NEWS README *.hs"
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
-	emake || die "emake failed"
+	elisp-make-autoload-file haskell-site-file.el || die
+	elisp-compile *.el || die
 }
 
 pkg_postinst() {
