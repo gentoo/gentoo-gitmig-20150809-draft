@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/Email-Abstract-3.001.ebuild,v 1.1 2008/12/31 17:03:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/Email-Abstract-3.001.ebuild,v 1.2 2009/12/02 10:08:41 tove Exp $
 
 inherit versionator
 
@@ -14,7 +14,7 @@ DESCRIPTION="unified interface to mail representations"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="test"
 
 RDEPEND=">=virtual/perl-Class-ISA-0.20
