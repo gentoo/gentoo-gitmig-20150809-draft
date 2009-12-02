@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.34 2009/11/18 17:21:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.35 2009/12/02 16:47:58 armin76 Exp $
+
+  02 Dec 2009; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r2.ebuild:
+  Add ~s390/~sh
 
   18 Nov 2009; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r2.ebuild:
   Add ~ia64 wrt #290161
