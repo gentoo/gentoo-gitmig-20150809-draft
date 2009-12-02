@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.3.4.ebuild,v 1.2 2009/12/01 10:35:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.3.4-r1.ebuild,v 1.1 2009/12/02 17:13:15 abcd Exp $
 
 EAPI="2"
 inherit kde4-functions
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="4.3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="kdeprefix +semantic-desktop"
+IUSE="+handbook kdeprefix +semantic-desktop"
 
 RDEPEND="
 	$(add_kdebase_dep drkonqi)
@@ -27,7 +27,6 @@ RDEPEND="
 	$(add_kdebase_dep keditfiletype)
 	$(add_kdebase_dep kfile)
 	$(add_kdebase_dep kglobalaccel)
-	$(add_kdebase_dep khelpcenter)
 	$(add_kdebase_dep kiconfinder)
 	$(add_kdebase_dep kioclient)
 	$(add_kdebase_dep kmimetypefinder)
@@ -47,6 +46,7 @@ RDEPEND="
 	$(add_kdebase_dep solid-hardware)
 	$(add_kdebase_dep solidautoeject)
 	$(add_kdebase_dep soliduiserver)
+	handbook? ( $(add_kdebase_dep khelpcenter) )
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
 	$(block_other_slots)
 "
