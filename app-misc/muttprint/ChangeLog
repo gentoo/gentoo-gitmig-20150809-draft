@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.41 2009/11/10 04:11:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.42 2009/12/03 18:38:17 vostorga Exp $
+
+  03 Dec 2009; Víctor Ostorga <vostorga@gentoo.org>
+  muttprint-0.72d-r1.ebuild:
+  Fixing documentation path, patch thanks to Thomas Beierlein
+  <tb@forth-ev.de> bug #295315
 
   10 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/muttprint-0.72a-platex.patch:

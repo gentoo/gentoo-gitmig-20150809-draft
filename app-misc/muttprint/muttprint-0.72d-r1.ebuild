@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72d-r1.ebuild,v 1.7 2009/11/03 14:55:49 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72d-r1.ebuild,v 1.8 2009/12/03 18:38:17 vostorga Exp $
 
 EAPI=2
 
@@ -36,5 +36,5 @@ src_compile() {
 }
 
 src_install() {
-	make prefix="${D}"/usr docdir="${D}"/usr/share/doc docdirname=${P} install || die
+	make prefix="${D}"/usr docdir="${D}"/usr/share/doc docdirname=${PF} install || die
 }
