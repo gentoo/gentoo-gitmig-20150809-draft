@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/evolution-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.23 2009/11/28 18:22:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.24 2009/12/03 17:20:34 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org>
+  evolution-python-2.26.0.ebuild:
+  Marking evolution-python-2.26.0 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   evolution-python-2.26.0.ebuild:
