@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4.ebuild,v 1.1 2009/11/20 22:41:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.1 2009/12/03 21:12:09 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="cxx examples fortran mpi szip threads zlib"
 
@@ -34,10 +34,7 @@ pkg_setup() {
 		fi
 		export CC=mpicc
 		if use fortran; then
-			# can't make mpi and fortran to work
-			#export FC=mpif90
-			ewarn "Simultaneous use of mpi and fortran for ${PN} will not compile"
-			ewarn "Disabling fortran interface"
+			export FC=mpif90
 		fi
 	fi
 }
@@ -47,7 +44,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.3-includes.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3-noreturn.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3-destdir.patch
-	epatch "${FILESDIR}"/${PN}-1.8.3-signal.patch
+	epatch "${FILESDIR}"/${P}-gnutools.patch
+	epatch "${FILESDIR}"/${P}-scaleoffset.patch
 
 	# gentoo examples directory
 	sed -i \
@@ -66,9 +64,15 @@ src_configure() {
 		&& myconf="--enable-threadsafe"
 
 	if use mpi; then
-		myconf="${myconf} --disable-cxx --disable-fortran"
+		myconf="${myconf} --disable-cxx"
 	else
-		myconf="${myconf} $(use_enable cxx) $(use_enable fortran)"
+	# workaround for bug 285148
+		if use cxx; then
+			myconf="${myconf} $(use_enable cxx) CXX=$(tc-getCXX)"
+		fi
+		if use fortran; then
+			myconf="${myconf} FC=$(tc-getFC)"
+		fi
 	fi
 
 	econf \
@@ -78,6 +82,7 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--enable-deprecated-symbols \
 		--enable-shared \
+		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
 		$(use_with szip szlib) \
 		$(use_with threads pthread) \
