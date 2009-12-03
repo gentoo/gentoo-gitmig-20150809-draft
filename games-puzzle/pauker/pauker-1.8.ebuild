@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8.ebuild,v 1.2 2009/10/13 19:33:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8.ebuild,v 1.3 2009/12/03 03:26:00 mr_bones_ Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -64,5 +64,7 @@ src_install() {
 	use doc && java-pkg_dojavadoc dist/javadoc
 	use source && java-pkg_dosrc src
 
+	newicon src/pauker/icons/repeat.png ${PN}.png
+	make_desktop_entry pauker Pauker
 	prepgamesdirs
 }
