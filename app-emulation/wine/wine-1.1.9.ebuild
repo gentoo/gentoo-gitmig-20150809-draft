@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.9.ebuild,v 1.4 2009/08/26 21:57:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.9.ebuild,v 1.5 2009/12/03 03:04:41 vapier Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* amd64 x86 ~x86-fbsd"
-IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
+IUSE="alsa cups custom-cflags dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -121,8 +121,7 @@ src_compile() {
 	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
 	config_cache lcms lcms.h
 
-	strip-flags
-
+	use custom-cflags || strip-flags
 	use amd64 && multilib_toolchain_setup x86
 
 	#	$(use_enable amd64 win64)

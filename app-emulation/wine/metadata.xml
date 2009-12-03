@@ -9,6 +9,7 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 </longdescription> 
 <use>
 	<flag name='capi'>Enable ISDN support via CAPI</flag>
+	<flag name='custom-cflags'>Bypass strip-flags; use are your own peril</flag>
 	<flag name='gecko'>Add support for the Gecko engine when using iexplore</flag>
 	<flag name='perl'>Install helpers written in perl (winedump/winemaker)</flag>
 	<flag name='samba'>Add support for NTLM auth. see

@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.47 2009/12/03 02:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.48 2009/12/03 03:04:41 vapier Exp $
 
 EAPI="2"
 
-inherit multilib eutils
+inherit eutils flag-o-matic multilib
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups dbus esd fontconfig +gecko gnutls gphoto2 gsm hal jack jpeg lcms ldap mp3 nas ncurses openal +opengl oss +perl png samba scanner ssl test +threads +truetype win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags dbus esd fontconfig +gecko gnutls gphoto2 gsm hal jack jpeg lcms ldap mp3 nas ncurses openal +opengl oss +perl png samba scanner ssl test +threads +truetype win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
@@ -101,6 +101,7 @@ src_prepare() {
 src_configure() {
 	export LDCONFIG=/bin/true
 
+	use custom-cflags || strip-flags
 	use amd64 && ! use win64 && multilib_toolchain_setup x86
 
 	econf \
