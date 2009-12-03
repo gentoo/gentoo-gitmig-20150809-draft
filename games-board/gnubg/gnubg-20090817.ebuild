@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20090817.ebuild,v 1.3 2009/11/22 23:55:30 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20090817.ebuild,v 1.4 2009/12/03 21:51:13 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,19 +14,20 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="gtk opengl python threads"
 
+GTK_DEPS="
+	x11-libs/gtk+:2
+	x11-libs/cairo
+	x11-libs/pango"
 RDEPEND="dev-libs/glib:2
 	media-libs/libpng
 	dev-libs/libxml2
 	media-libs/freetype:2
 	media-libs/libcanberra
-	gtk? (
-		x11-libs/gtk+:2
-		x11-libs/cairo
-		x11-libs/pango
-		opengl? (
-			x11-libs/gtkglext
-			>=media-libs/ftgl-2.1.2-r1
-		)
+	gtk? ( ${GTK_DEPS} )
+	opengl? (
+		${GTK_DEPS}
+		x11-libs/gtkglext
+		>=media-libs/ftgl-2.1.2-r1
 	)
 	sys-libs/readline
 	python? ( dev-lang/python )
