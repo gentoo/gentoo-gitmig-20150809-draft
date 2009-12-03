@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.17 2009/11/27 18:17:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.18 2009/12/03 20:13:51 bicatali Exp $
+
+*opendx-4.4.4-r4 (03 Dec 2009)
+
+  03 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -opendx-4.4.4-r3.ebuild, +opendx-4.4.4-r4.ebuild,
+  files/opendx-4.4.4-installpaths.patch:
+  Revision bump for the install paths according to bug #295395. Thanks
+  Francois Bissey to follow-up
 
 *opendx-4.4.4-r3 (27 Nov 2009)
 
