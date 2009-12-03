@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.294 2009/11/30 19:27:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.295 2009/12/03 03:24:31 jer Exp $
+
+  03 Dec 2009; Jeroen Roovers <jer@gentoo.org> squid-2.7.7.ebuild,
+  squid-3.0.19.ebuild:
+  Stable for HPPA (bug #290185).
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> squid-2.7.7.ebuild,
   squid-3.0.19.ebuild:
