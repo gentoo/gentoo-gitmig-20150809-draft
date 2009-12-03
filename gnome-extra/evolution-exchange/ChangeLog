@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.107 2009/11/28 19:05:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.108 2009/12/03 17:19:58 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org>
+  evolution-exchange-2.26.3.ebuild:
+  Marking evolution-exchange-2.26.3 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   evolution-exchange-2.26.3.ebuild:
