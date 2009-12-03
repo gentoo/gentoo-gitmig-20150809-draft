@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.363 2009/12/03 02:47:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.364 2009/12/03 20:02:00 robbat2 Exp $
+
+  03 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.4.19-r1.ebuild:
+  Make cxx NOT defaulted per the profile, due to the circular dependency it
+  brings in with dev-libs/cyrus-sasl. Thanks to Cardoe for pointing out.
 
   03 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.4.19-r1.ebuild:
