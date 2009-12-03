@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.33 2009/11/28 17:04:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.34 2009/12/03 17:14:23 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking pygtksourceview-2.6.0 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   pygtksourceview-2.6.0.ebuild:
