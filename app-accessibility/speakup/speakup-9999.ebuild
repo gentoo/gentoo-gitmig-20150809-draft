@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.2 2009/08/19 22:40:45 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.3 2009/12/03 20:43:20 williamh Exp $
 
 EAPI="2"
 
@@ -14,56 +14,58 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="modules"
+
+MODULE_NAMES="speakup(${PN}:\"${S}\"/src)
+	speakup_acntpc(${PN}:\"${S}\"/src)
+	speakup_acntsa(${PN}:\"${S}\"/src)
+	speakup_apollo(${PN}:\"${S}\"/src)
+	speakup_audptr(${PN}:\"${S}\"/src)
+	speakup_bns(${PN}:\"${S}\"/src)
+	speakup_decext(${PN}:\"${S}\"/src)
+	speakup_decpc(${PN}:\"${S}\"/src)
+	speakup_dectlk(${PN}:\"${S}\"/src)
+	speakup_dtlk(${PN}:\"${S}\"/src)
+	speakup_dummy(${PN}:\"${S}\"/src)
+	speakup_keypc(${PN}:\"${S}\"/src)
+	speakup_ltlk(${PN}:\"${S}\"/src)
+	speakup_soft(${PN}:\"${S}\"/src)
+	speakup_spkout(${PN}:\"${S}\"/src)
+	speakup_txprt(${PN}:\"${S}\"/src)"
+BUILD_PARAMS="KERNELDIR=${KERNEL_DIR}"
+BUILD_TARGETS="clean all"
 
 src_prepare() {
+	use modules && cmd=die || cmd=ewarn
 	case ${KV_EXTRA} in
 		*gentoo)
 			if kernel_is lt 2 6 25; then
-				die "Speakup requires at least gentoo-sources-2.6.25"
+				$cmd "Speakup requires at least gentoo-sources-2.6.25"
 			fi
 			;;
 		*)
 			if kernel_is lt 2 6 26; then
-				die "Speakup requires at least kernel version2.6.26"
+				$cmd "Speakup requires at least kernel version 2.6.26"
 			fi
 			;;
 	esac
 }
 
 src_compile() {
-	MODULE_NAMES="speakup(${PN}:\"${S}\"/src)
-		speakup_acntpc(${PN}:\"${S}\"/src)
-		speakup_acntsa(${PN}:\"${S}\"/src)
-		speakup_apollo(${PN}:\"${S}\"/src)
-		speakup_audptr(${PN}:\"${S}\"/src)
-		speakup_bns(${PN}:\"${S}\"/src)
-		speakup_decext(${PN}:\"${S}\"/src)
-		speakup_decpc(${PN}:\"${S}\"/src)
-		speakup_dectlk(${PN}:\"${S}\"/src)
-		speakup_dtlk(${PN}:\"${S}\"/src)
-		speakup_dummy(${PN}:\"${S}\"/src)
-		speakup_keypc(${PN}:\"${S}\"/src)
-		speakup_ltlk(${PN}:\"${S}\"/src)
-		speakup_soft(${PN}:\"${S}\"/src)
-		speakup_spkout(${PN}:\"${S}\"/src)
-		speakup_txprt(${PN}:\"${S}\"/src)"
-	BUILD_PARAMS="KERNELDIR=${KERNEL_DIR}"
-	BUILD_TARGETS="clean all"
-	linux-mod_src_compile
+	use modules && linux-mod_src_compile
 }
 
 src_install() {
-	linux-mod_src_install
+	use modules && linux-mod_src_install
 	dobin tools/speakupconf
 	dosbin tools/talkwith
 	dodoc Bugs.txt README To-Do doc/DefaultKeyAssignments doc/spkguide.txt
-	doman man/*
 	newdoc tools/README README.tools
 }
 
 pkg_postinst() {
-	linux-mod_pkg_postinst
+	use modules && linux-mod_pkg_postinst
+
 	elog "You must set up the speech synthesizer driver to be loaded"
 	elog "automatically in order for your system to start speaking"
 	elog "when it is booted."
