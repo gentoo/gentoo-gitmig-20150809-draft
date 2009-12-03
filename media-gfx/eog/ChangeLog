@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.252 2009/11/28 17:55:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.253 2009/12/03 17:13:45 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org> eog-2.26.3.ebuild:
+  Marking eog-2.26.3 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org> eog-2.26.3.ebuild:
   alpha/ia64/sparc stable wrt #281427
