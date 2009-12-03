@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.42 2009/11/30 15:34:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.43 2009/12/03 20:38:00 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org> terminal-0.4.2.ebuild:
+  Marking terminal-0.4.2 ppc64 stable for bug 289179
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> terminal-0.4.2.ebuild:
   alpha/ia64/sparc stable wrt #289179
