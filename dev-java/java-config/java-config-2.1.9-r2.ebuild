@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.9.ebuild,v 1.1 2009/08/27 19:31:29 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.9-r2.ebuild,v 1.1 2009/12/03 20:17:08 caster Exp $
 
 inherit fdo-mime gnome2-utils distutils eutils
 
@@ -18,6 +18,14 @@ RDEPEND="${DEPEND}
 	>=dev-java/java-config-wrapper-0.15"
 
 PYTHON_MODNAME="java_config_2"
+
+src_unpack() {
+	distutils_src_unpack
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}.patch"
+	epatch "${FILESDIR}/${PF}.patch"
+}
 
 src_install() {
 	distutils_src_install
