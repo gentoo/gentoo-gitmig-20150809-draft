@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-1.0.1.ebuild,v 1.1 2009/11/10 16:38:26 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-1.0.1.ebuild,v 1.2 2009/12/03 11:32:59 maekke Exp $
 EAPI=2
 NEED_PYTHON=2.5
 inherit distutils
@@ -11,7 +11,7 @@ SRC_URI="http://spyderlib.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="matplotlib mayavi numpy pylint scipy"
 
 RDEPEND=">=dev-python/PyQt4-4.4
