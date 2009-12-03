@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.31 2009/11/30 04:37:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.32 2009/12/03 15:55:14 ssuominen Exp $
+
+*soprano-2.3.1-r1 (03 Dec 2009)
+
+  03 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +soprano-2.3.1-r1.ebuild:
+  (Dummy) revision bump straight to stable for bug #295388.
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> soprano-2.3.1.ebuild:
   Marked ppc/ppc64 stable.
