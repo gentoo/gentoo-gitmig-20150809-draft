@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.2 2009/11/14 01:40:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.3 2009/12/03 20:04:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -99,7 +99,7 @@ src_install() {
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
 }
 
-pkg_setup() {
+pkg_preinst() {
 	enewgroup ${PN}
 	# note this works only for first install so we have to
 	# elog user about the need of being in video group
