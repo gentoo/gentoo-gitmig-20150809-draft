@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.663 2009/12/02 08:13:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.664 2009/12/03 03:55:08 vapier Exp $
+
+  03 Dec 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.11-r1.ebuild:
+  Update patchset to fix building on alpha.
 
 *glibc-2.11-r1 (02 Dec 2009)
 
