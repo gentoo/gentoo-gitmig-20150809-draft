@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.362 2009/11/28 22:25:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.363 2009/12/03 02:47:19 robbat2 Exp $
+
+  03 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.4.19-r1.ebuild:
+  Bug #291821 redux Cleanup the sys-libs/db check more to NOT fire when
+  there are no database files present.
 
   28 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.4.19-r1.ebuild:

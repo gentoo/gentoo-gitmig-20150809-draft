@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.7 2009/11/28 22:25:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.8 2009/12/03 02:47:19 robbat2 Exp $
 
 EAPI="2"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -64,6 +64,7 @@ openldap_find_versiontags() {
 
 	# scan datadirs if we have a version tag
 	openldap_found_tag=0
+	have_files=0
 	for each in ${openldap_datadirs}; do
 		CURRENT_TAGDIR=${ROOT}`echo ${each} | sed "s:\/::"`
 		CURRENT_TAG=${CURRENT_TAGDIR}/${OPENLDAP_VERSIONTAG}
@@ -82,10 +83,12 @@ openldap_find_versiontags() {
 
 				OLD_MAJOR=`get_version_component_range 2-3 ${OLDPF}`
 
+				[ `ls -a ${CURRENT_TAGDIR} | wc -l` -gt 5 ] && have_files=1
+
 				# are we on the same branch?
 				if [ "${OLD_MAJOR}" != "${PV:0:3}" ] ; then
 					ewarn "   Versiontag doesn't match current major release!"
-					if [[ `ls -a ${CURRENT_TAGDIR} | wc -l` -gt 5 ]] ; then
+					if [[ "${have_files}" == "1" ]] ; then
 						eerror "   Versiontag says other major and you (probably) have datafiles!"
 						echo
 						openldap_upgrade_howto
@@ -97,7 +100,8 @@ openldap_find_versiontags() {
 				fi
 			else
 				einfo "   Non-tagged dir ${each}"
-				if [[ `ls -a ${each} | wc -l` > 5 ]] ; then
+				[[ `ls -a ${each} | wc -l`  > 5 ]] && have_files=1
+				if [[ "${have_files}" == "1" ]] ; then
 					einfo "   EEK! Non-empty non-tagged datadir, counting `ls -a ${each} | wc -l` files"
 					echo
 
@@ -120,7 +124,7 @@ openldap_find_versiontags() {
 
 	# Now we must check for the major version of sys-libs/db linked against.
 	SLAPD_PATH=${ROOT}/usr/$(get_libdir)/openldap/slapd
-	if [ -f "${SLAPD_PATH}" ]; then
+	if [ "${have_files}" == "1" -a -f "${SLAPD_PATH}" ]; then
 		OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
 			| awk '/libdb-/{gsub("^libdb-","",$1);gsub(".so$","",$1);print $1}')"
 		NEWVER="$(use berkdb && db_findver sys-libs/db)"
