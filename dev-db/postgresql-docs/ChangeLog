@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.25 2009/10/24 12:23:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.26 2009/12/03 19:49:49 jer Exp $
+
+  03 Dec 2009; Jeroen Roovers <jer@gentoo.org>
+  postgresql-docs-7.4.26.ebuild, postgresql-docs-8.0.22.ebuild,
+  postgresql-docs-8.1.18.ebuild, postgresql-docs-8.2.14.ebuild,
+  postgresql-docs-8.3.8.ebuild:
+  Stable for HPPA (bug #285475).
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> postgresql-docs-7.4.26.ebuild,
   postgresql-docs-8.0.22.ebuild, postgresql-docs-8.1.18.ebuild,
