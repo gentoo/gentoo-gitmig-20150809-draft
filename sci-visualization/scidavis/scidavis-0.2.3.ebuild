@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.3.ebuild,v 1.1 2009/08/07 22:08:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.3.ebuild,v 1.2 2009/12/03 21:59:10 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime
@@ -40,6 +40,7 @@ RDEPEND="${CDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-profile.patch
+	epatch "${FILESDIR}"/${P}-sip49.patch
 	sed -i -e '/lgsl/d' fitPlugins/*/*.pro || die "sed gsl link failed"
 	sed -i \
 		-e "s:doc/${PN}:doc/${PF}:g" \
