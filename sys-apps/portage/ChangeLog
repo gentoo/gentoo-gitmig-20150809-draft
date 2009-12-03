@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.653 2009/11/28 23:28:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.654 2009/12/03 06:13:11 zmedico Exp $
+
+*portage-2.2_rc55 (03 Dec 2009)
+
+  03 Dec 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc55.ebuild:
+  2.2_rc55 bump. This includes all fixes in 2.1.7.10.
+
+*portage-2.1.7.10 (03 Dec 2009)
+
+  03 Dec 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.10.ebuild:
+  2.1.7.10 bump. This fixes bug #280336, comment #2 (incorrect choices
+  with || deps sometimes), and bug #295351 (TypeError with python3 triggered
+  by old installed packages). Bug #288499 tracks all bugs fixed since 2.1.6.x.
+
+  03 Dec 2009; Zac Medico <zmedico@gentoo.org> -portage-2.1.7.5.ebuild,
+  -portage-2.1.7.6.ebuild, -portage-2.1.7.7.ebuild, -portage-2.1.7.8.ebuild,
+  -portage-2.2_rc50.ebuild, -portage-2.2_rc51.ebuild,
+  -portage-2.2_rc52.ebuild, -portage-2.2_rc53.ebuild:
+  Remove old ebuilds.
 
 *portage-2.2_rc54 (28 Nov 2009)
 
