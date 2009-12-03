@@ -1,24 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/powerpc/package.mask,v 1.8 2009/10/13 23:02:37 gengor Exp $
-
-# needs masked gcc
-=sys-libs/glibc-2.5*
-=sys-libs/glibc-2.6*
-=sys-libs/glibc-2.7*
-=sys-libs/glibc-2.8*
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/powerpc/package.mask,v 1.9 2009/12/03 17:48:37 nixnut Exp $
 
 # Wulf C. Krueger <philantrop@gentoo.org> (22 Sep 2007)
 # Needs OOo.
 app-text/bibus
 
-# Raúl Porcel <armin76@gentoo.org> (14 Jul 2008)
-# Needs glibc-2.7
->=sys-apps/iproute2-2.6.25.20080417
-
-# Requires glibc 2.4 or better
-games-strategy/ufo-ai
-sys-apps/openrc
->=sys-apps/baselayout-2
-# needs openrc
->=media-sound/pulseaudio-0.9.11
