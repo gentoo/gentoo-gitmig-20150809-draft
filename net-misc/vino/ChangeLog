@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.134 2009/11/28 18:06:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.135 2009/12/03 17:13:26 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking vino-2.26.2-r1 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org> vino-2.26.2-r1.ebuild:
   alpha/ia64/sparc stable wrt #281427
