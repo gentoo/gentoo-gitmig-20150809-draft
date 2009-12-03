@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.48 2009/12/01 11:13:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.49 2009/12/03 06:56:42 jer Exp $
+
+  03 Dec 2009; Jeroen Roovers <jer@gentoo.org> openresolv-3.3.2.ebuild:
+  Stable for HPPA (bug #294510).
 
   01 Dec 2009; Markus Meier <maekke@gentoo.org> openresolv-3.3.2.ebuild:
   amd64/arm stable, bug #294510
