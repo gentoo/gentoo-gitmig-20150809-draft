@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.40 2009/11/28 18:19:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.41 2009/12/03 17:18:16 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org>
+  totem-pl-parser-2.26.2.ebuild:
+  Marking totem-pl-parser-2.26.2 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   totem-pl-parser-2.26.2.ebuild:
