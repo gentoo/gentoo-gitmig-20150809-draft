@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.132 2009/11/25 13:53:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.133 2009/12/03 06:19:22 jer Exp $
+
+  03 Dec 2009; Jeroen Roovers <jer@gentoo.org> fltk-2.0_pre6786-r1.ebuild:
+  Marked ~hppa (bug #294147).
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> fltk-2.0_pre6786-r1.ebuild:
   restore ~arm keyword, bug #294147
