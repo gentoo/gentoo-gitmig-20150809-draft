@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.1 2009/12/02 21:29:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.2 2009/12/03 16:57:58 mr_bones_ Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -159,7 +159,7 @@ pkg_config() {
 }
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.1 2009/12/02 21:29:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.2 2009/12/03 16:57:58 mr_bones_ Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -316,4 +316,3 @@ src_install() {
 pkg_config() {
 	einfo "emerge --config is not supported"
 }
-
