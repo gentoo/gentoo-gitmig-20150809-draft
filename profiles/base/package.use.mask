@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.108 2009/11/29 18:29:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.109 2009/12/03 13:31:34 alexxy Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexey Shvetsov <alexxy@gentoo.org> (3 Dec 2009)
+# Mask very experimental mpi use flag dfor gamess
+sci-chemistry/gamess mpi
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Nov 2009)
 # This will need stable xz-utils.
