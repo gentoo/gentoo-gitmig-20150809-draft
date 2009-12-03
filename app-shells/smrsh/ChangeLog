@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/smrsh
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.7 2007/01/24 03:55:34 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.8 2009/12/03 11:41:55 maekke Exp $
+
+  03 Dec 2009; Markus Meier <maekke@gentoo.org> smrsh-8.12.10.ebuild:
+  add ~amd64, bug #286627
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> smrsh-8.12.10.ebuild:
   Replacing einfo with elog
