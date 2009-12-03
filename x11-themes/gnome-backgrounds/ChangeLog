@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.116 2009/11/28 16:55:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.117 2009/12/03 16:54:36 ranger Exp $
+
+  03 Dec 2009; Brent Baude <ranger@gentoo.org>
+  gnome-backgrounds-2.24.1.ebuild:
+  Marking gnome-backgrounds-2.24.1 ppc64 stable for bug 281427
 
   28 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   gnome-backgrounds-2.24.1.ebuild:
