@@ -1,20 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.1 2009/11/04 14:21:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.2 2009/12/03 21:50:53 bicatali Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
-inherit eutils fortran cmake-utils wxwidgets java-pkg-opt-2
+inherit eutils cmake-utils toolchain-funcs wxwidgets java-pkg-opt-2
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${P}-wxwidgets-cmake.patch.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ada cairo doc examples fortran gd gnome java jpeg latex octave
-	 pdf perl png python qhull svg svga tcl threads tk truetype wxwindows X"
+	 pdf perl png python qhull svg svga tcl threads tk truetype wxwidgets X"
 
 RDEPEND="ada? ( virtual/gnat )
 	cairo? ( x11-libs/cairo[svg?,X?] )
@@ -34,7 +35,7 @@ RDEPEND="ada? ( virtual/gnat )
 	truetype? ( media-fonts/freefont-ttf
 				media-libs/lasi
 				gd? ( media-libs/gd[truetype] ) )
-	wxwindows? ( x11-libs/wxGTK:2.8[X] x11-libs/agg )
+	wxwidgets? ( x11-libs/wxGTK:2.8[X] x11-libs/agg[truetype?] )
 	X? ( x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp )"
 
 DEPEND="${RDEPEND}
@@ -54,17 +55,18 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use fortran; then
-		FORTRAN="gfortran ifc g77"
-		fortran_pkg_setup
+		export FC=$(tc-getFC) F77=$(tc-getF77)
+	else
+		export FC="" F77=""
 	fi
-	export FC=${FORTRANC} F77=${FORTRANC}
-
-	wxwidgets_pkg_setup
 }
 
 src_prepare() {
 	# path for python independent of python version
 	epatch "${FILESDIR}"/${PN}-5.9.0-python.patch
+
+	# bug #242212
+	epatch "${WORKDIR}"/${P}-wxwidgets-cmake.patch
 
 	# remove license
 	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
@@ -112,13 +114,14 @@ src_configure() {
 		$(cmake-utils_use_enable tcl itcl)
 		$(cmake-utils_use_enable tk tk)
 		$(cmake-utils_use_enable tk itk)
-		$(cmake-utils_use_enable wxwindows wxwidgets)
+		$(cmake-utils_pld wxwidgets _wxwidgets)
+		$(cmake-utils_pld wxwidgets _wxpng)
 		$(cmake-utils_pld pdf pdf)
 		$(cmake-utils_pld truetype psttf)
 		$(cmake-utils_pld latex pstex)
 		$(cmake-utils_pld svga linuxvga)"
 
-	use fortran && [[ ${FORTRANC} != g77 ]] && \
+	use fortran && [[ $(tc-getFC) != g77 ]] && \
 		mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable fortran f95)"
 
 	use truetype && mycmakeargs="${mycmakeargs}
@@ -162,7 +165,7 @@ src_compile() {
 		mycmakeargs="${mycmakeargs}	-DHAVE_HTML_SS=ON"
 		mycmakeargs="${mycmakeargs}	-DHAVE_PRINT_SS=ON"
 		cmake-utils_src_configure
-		cmake-utils_src_make -j1
+		VARTEXFONTS="${T}/fonts" cmake-utils_src_make -j1
 	fi
 }
 

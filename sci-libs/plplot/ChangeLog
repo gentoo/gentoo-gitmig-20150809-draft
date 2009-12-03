@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.25 2009/11/04 14:21:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.26 2009/12/03 21:50:53 bicatali Exp $
+
+  03 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> -plplot-5.9.2.ebuild,
+  plplot-5.9.5.ebuild, +files/plplot-5.9.5-wxwidgets-cmake.patch:
+  Fixed for wxwidgets build (thanks dirtyepic for his patches, bug #242212,
+  and removed dirty fortran eclass
 
 *plplot-5.9.5 (04 Nov 2009)
 
