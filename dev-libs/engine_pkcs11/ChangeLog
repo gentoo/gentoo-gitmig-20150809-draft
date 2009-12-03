@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.29 2009/11/23 13:58:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.30 2009/12/03 06:53:45 jer Exp $
+
+  03 Dec 2009; Jeroen Roovers <jer@gentoo.org> engine_pkcs11-0.1.7.ebuild:
+  Stable for HPPA (bug #294076).
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> engine_pkcs11-0.1.7.ebuild:
   amd64/x86 stable, bug #294076
