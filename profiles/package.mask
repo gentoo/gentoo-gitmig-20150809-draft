@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10917 2009/12/04 13:08:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10918 2009/12/04 18:26:22 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -241,31 +241,10 @@ dev-lisp/cl-gcc-xml-ffi
 # Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2009)
 # kde-base/kdelibs:3.5 reverse dependencies
 #
-# Masked for removal in 30 days.
-#
-# Bug 292791.
-#
+# Masked for removal in 30 days, bug 292791.
 <media-sound/amarok-2
-<app-cdr/k3b-1.68.0_alpha1
-net-print/kink
 <app-editors/kile-2.1_beta1
-kde-misc/kload
-media-tv/kdetv
-media-tv/kvdr
-net-misc/knutclient
-net-misc/kovpn
-net-misc/kwebget
-app-text/kbarcode
-app-backup/kdar
-app-office/kmm_kbanking
-x11-misc/kflog
-x11-misc/switcher
-media-gfx/kst
 app-text/kbibtex
-net-ftp/kftpgrabber
-media-gfx/potracegui
-app-i18n/skim-scim-anthy
-app-i18n/skim
 
 # Markos Chandras <hwoarang@gentoo.org> (12 Nov 2009)
 # Fails to build with recent kernels. Upstream doesn't
