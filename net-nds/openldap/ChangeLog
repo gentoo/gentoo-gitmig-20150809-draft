@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.365 2009/12/03 20:03:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.366 2009/12/04 20:46:19 robbat2 Exp $
+
+  04 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.4.19-r1.ebuild:
+  Bug #295622: Try for a major improvement in the detection of an existing
+  on-disk DB.
 
   03 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.4.19.ebuild, openldap-2.4.19-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.9 2009/12/03 20:02:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.10 2009/12/04 20:46:19 robbat2 Exp $
 
 EAPI="2"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -48,6 +48,11 @@ DEPEND="${RDEPEND}"
 OPENLDAP_VERSIONTAG=".version-tag"
 OPENLDAP_DEFAULTDIR_VERSIONTAG="/var/lib/openldap-data"
 
+openldap_filecount() {
+	local dir="$1"
+	find "${dir}" -type f ! -name '.*' ! -name 'DB_CONFIG.example' | wc -l
+}
+
 openldap_find_versiontags() {
 	# scan for all datadirs
 	openldap_datadirs=""
@@ -83,7 +88,7 @@ openldap_find_versiontags() {
 
 				OLD_MAJOR=`get_version_component_range 2-3 ${OLDPF}`
 
-				[ `ls -a ${CURRENT_TAGDIR} | wc -l` -gt 5 ] && have_files=1
+				[ $(openldap_filecount ${CURRENT_TAGDIR}) -gt 0 ] && have_files=1
 
 				# are we on the same branch?
 				if [ "${OLD_MAJOR}" != "${PV:0:3}" ] ; then
@@ -100,7 +105,7 @@ openldap_find_versiontags() {
 				fi
 			else
 				einfo "   Non-tagged dir ${each}"
-				[[ `ls -a ${each} | wc -l`  > 5 ]] && have_files=1
+				[ $(openldap_filecount ${each}) -gt 0 ] && have_files=1
 				if [[ "${have_files}" == "1" ]] ; then
 					einfo "   EEK! Non-empty non-tagged datadir, counting `ls -a ${each} | wc -l` files"
 					echo
@@ -121,6 +126,7 @@ openldap_find_versiontags() {
 			einfo
 		fi
 	done
+	[ "${have_files}" == "1" ] && einfo "DB files present" || einfo "No DB files present"
 
 	# Now we must check for the major version of sys-libs/db linked against.
 	SLAPD_PATH=${ROOT}/usr/$(get_libdir)/openldap/slapd
