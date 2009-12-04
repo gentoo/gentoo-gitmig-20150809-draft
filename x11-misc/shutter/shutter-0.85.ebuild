@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.85.ebuild,v 1.1 2009/11/21 18:39:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.85.ebuild,v 1.2 2009/12/04 17:44:34 hwoarang Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/File-Copy-Recursive
 	dev-perl/File-MimeInfo
 	dev-perl/Locale-gettext
+	dev-perl/Net-DBus
 	dev-perl/Proc-Simple
 	dev-perl/Sort-Naturally
 	dev-perl/WWW-Mechanize
