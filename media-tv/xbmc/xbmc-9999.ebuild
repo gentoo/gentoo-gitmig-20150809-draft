@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.40 2009/11/22 21:09:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.41 2009/12/04 07:16:32 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -113,9 +113,6 @@ src_prepare() {
 		-e "1iCXXFLAGS += ${squish}" \
 		xbmc/lib/libsquish/Makefile.in || die
 
-	# Tweak autotool timestamps to avoid regeneration
-	find . -type f -print0 | xargs -0 touch -r configure
-
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.
 	export SVN_REV=${ESVN_WC_REVISION:-exported}
@@ -127,6 +124,11 @@ src_prepare() {
 
 	# Do not use termcap #262822
 	sed -i 's:-ltermcap::' xbmc/lib/libPython/Python/configure
+
+	epatch_user #293109
+
+	# Tweak autotool timestamps to avoid regeneration
+	find . -type f -print0 | xargs -0 touch -r configure
 }
 
 src_configure() {
