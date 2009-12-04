@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.32 2009/10/20 16:13:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.33 2009/12/04 07:20:15 grozin Exp $
+
+  04 Dec 2009; Andrey Grozin <grozin@gentoo.org> -visual-5.03_rc1.ebuild:
+  Cleaning an old version
 
 *visual-5.13 (20 Oct 2009)
 
