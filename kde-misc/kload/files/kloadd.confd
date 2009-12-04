@@ -1,7 +1,0 @@
-# config for /etc/init.d/kloadd
-
-# bind to IP address (default=any)
-#BIND=0.0.0.0
-
-# listen port
-PORT=1234
