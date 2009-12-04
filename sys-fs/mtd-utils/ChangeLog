@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.24 2009/12/01 03:27:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.25 2009/12/04 21:23:15 flameeyes Exp $
+
+  04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mtd-utils-20090630.ebuild:
+  Add -j1 to build (bug #276374).
 
   01 Dec 2009; Mike Frysinger <vapier@gentoo.org> mtd-utils-20080907.ebuild:
   Set AR/RANLIB so correct tools are used.
