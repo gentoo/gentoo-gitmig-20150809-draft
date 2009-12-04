@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10915 2009/12/02 21:27:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10916 2009/12/04 09:49:36 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -261,10 +261,6 @@ net-ftp/kftpgrabber
 media-gfx/potracegui
 app-i18n/skim-scim-anthy
 app-i18n/skim
-
-# Peter Volkov <pva@gentoo.org> (13 Nov 2009)
-# Mask release candidate
-=net-im/psi-0.14*
 
 # Markos Chandras <hwoarang@gentoo.org> (12 Nov 2009)
 # Fails to build with recent kernels. Upstream doesn't
