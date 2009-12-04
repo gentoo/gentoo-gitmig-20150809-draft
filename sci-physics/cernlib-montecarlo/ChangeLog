@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.9 2009/11/26 21:36:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.10 2009/12/04 19:48:26 bicatali Exp $
+
+  04 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  cernlib-montecarlo-2006-r2.ebuild:
+  Re-changing to old style patching at least until patch-2.6 is not buggy
+  and masked. Also now install doc in proper directory, bug #295172
 
   26 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
   cernlib-montecarlo-2006-r2.ebuild:

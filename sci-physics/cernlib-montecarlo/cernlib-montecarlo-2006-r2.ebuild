@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+B1;1704;0c# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r2.ebuild,v 1.3 2009/11/26 21:36:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r2.ebuild,v 1.4 2009/12/04 19:48:26 bicatali Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -30,13 +30,12 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-misc/makedepend"
 
-S="${WORKDIR}/${DEB_PN}-${DEB_PV}"
+S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
 
 src_prepare() {
 	cd "${WORKDIR}"
 	sed -i -e 's:/tmp/dp.*/cern:cern:g' ${DEB_P}-${DEB_PR}.diff || die
 	epatch ${DEB_P}-${DEB_PR}.diff
-	mv ${DEB_PN}-${DEB_PV}{.orig,}/upstream
 	cd "${S}"
 	cp debian/add-ons/Makefile .
 	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"
@@ -64,7 +63,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" \
+		MCDOC="${D}usr/share/doc/${PF}" \
+		install || die "emake install failed"
 	cd "${S}"/debian
 	dodoc changelog README.* deadpool.txt copyright || die "dodoc failed"
 	newdoc add-ons/README README.add-ons || die "newdoc failed"
