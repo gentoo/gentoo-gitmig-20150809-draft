@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r3.ebuild,v 1.7 2009/10/23 09:54:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r3.ebuild,v 1.8 2009/12/04 10:35:31 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,13 +16,12 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
-IUSE="alsa aac jack mad musepack vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
+IUSE="alsa aac jack mad vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	aac? ( media-libs/faad2 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
-	musepack? ( media-libs/libmpcdecsv7 >=media-libs/taglib-1.3 )
 	vorbis? ( >=media-libs/libvorbis-1 )
 	flac? ( media-libs/flac )
 	wavpack? ( >=media-sound/wavpack-4.31 )
@@ -43,8 +42,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-faad2.patch \
 		"${FILESDIR}"/${P}-ffmpegheaders.patch \
 		"${FILESDIR}"/${P}-libtool22.patch \
-		"${FILESDIR}"/${P}-fix_default_configuration_layout.patch \
-		"${FILESDIR}"/${P}-libmpcdecsv7.patch
+		"${FILESDIR}"/${P}-fix_default_configuration_layout.patch
 	cp -f "${WORKDIR}"/m4/* m4/
 	AT_M4DIR="m4" eautoreconf
 }
@@ -55,7 +53,7 @@ src_configure() {
 		$(use_with aac) \
 		$(use_with jack) \
 		$(use_with mad mp3) \
-		$(use_with musepack) \
+		--without-musepack \
 		$(use_with vorbis) \
 		$(use_with flac) \
 		$(use_with wavpack) \
@@ -71,7 +69,7 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO *.example
 	rm -rf "${D}"/usr/share/doc/${PN}
 }
