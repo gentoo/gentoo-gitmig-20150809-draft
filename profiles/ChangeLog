@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3632 2009/12/04 09:49:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3633 2009/12/04 13:08:53 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Mask coreutils 8.1 because of broken rm that can cause major issues. For
+  more info see bug #295654.
 
   04 Dec 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Unmask net-im/psi-0.14 as it's finally released
