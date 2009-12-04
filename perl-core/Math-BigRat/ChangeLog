@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.19 2009/09/10 20:43:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.20 2009/12/04 12:50:07 fauli Exp $
+
+  04 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  Math-BigRat-0.22.ebuild:
+  x86 stable, bug 288026
 
 *Math-BigRat-0.24 (10 Sep 2009)
 

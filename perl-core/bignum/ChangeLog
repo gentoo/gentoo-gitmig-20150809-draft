@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.18 2009/03/13 22:02:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.19 2009/12/04 12:50:46 fauli Exp $
+
+  04 Dec 2009; Christian Faulhammer <fauli@gentoo.org> bignum-0.23.ebuild:
+  x86 stable, bug 288026
 
   13 Mar 2009; Torsten Veller <tove@gentoo.org> -bignum-0.19.ebuild,
   -bignum-0.20.ebuild:
