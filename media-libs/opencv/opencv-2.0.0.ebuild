@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0.ebuild,v 1.3 2009/12/04 14:02:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0.ebuild,v 1.4 2009/12/04 14:05:33 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -38,6 +38,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 PATCHES=( "${FILESDIR}/${P}-multilib.patch" )
+
+# Skip test suite for -r0, try to solve it in -r1.
+RESTRICT="test"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
