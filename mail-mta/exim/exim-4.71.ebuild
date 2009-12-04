@@ -1,16 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.71.ebuild,v 1.1 2009/12/04 18:12:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.71.ebuild,v 1.2 2009/12/04 19:04:51 grobian Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib pam
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis syslog spf srs gnutls sqlite dovecot-sasl radius maildir +dkim dcc"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl
+mbx X nis syslog spf srs gnutls sqlite dovecot-sasl radius maildir +dkim dcc dsn"
+
+DSN_EXIM_V=469
+DSN_V=1_3
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
-	mirror://gentoo/system_filter.exim.gz"
+	mirror://gentoo/system_filter.exim.gz
+	dsn? ( mirror://sourceforge/eximdsn/eximdsn-patch-1.3/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch )"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -65,10 +70,9 @@ src_unpack() {
 	# for cross-compilation, but currently breaks normal compiles :/ #266591
 	#epatch "${FILESDIR}"/${P}-buildconfig-cross-compile.patch
 
-	if use maildir; then
-		einfo "Patching maildir support into exim.conf"
-		epatch "${FILESDIR}"/exim-4.20-maildir.patch
-	fi
+	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
+	use dsn && epatch "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
+
 	sed -i "/SYSTEM_ALIASES_FILE/ s'SYSTEM_ALIASES_FILE'/etc/mail/aliases'" "${S}"/src/configure.default
 	cp "${S}"/src/configure.default "${S}"/src/configure.default.orig
 
@@ -93,7 +97,7 @@ src_unpack() {
 		-e "s:# LOOKUP_PASSWD=yes:LOOKUP_PASSWD=yes:" \
 		src/EDITME > Local/Makefile
 
-	# exiscan-acl is now integrated - enabled it when use-flag set
+	# exiscan-acl is now integrated - enable it when use-flag set
 	if use exiscan-acl; then
 		sed -i "s:# WITH_CONTENT_SCAN=yes:WITH_CONTENT_SCAN=yes:" Local/Makefile
 		sed -i "s:# WITH_OLD_DEMIME=yes:WITH_OLD_DEMIME=yes:" Local/Makefile
@@ -225,8 +229,8 @@ src_unpack() {
 	sed -i "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Local/Makefile
 
 	if use nis; then
-		sed -i "s:# LOOKUP_NIS=yes:LOOKUP_NIS=yes:" Local/Makefile
-		sed -i "s:# LOOKUP_NISPLUS=yes:LOOKUP_NISPLUS=yes:" Local/Makefile
+		sed -i -e "s:# LOOKUP_NIS=yes:LOOKUP_NIS=yes:" \
+			-e "s:# LOOKUP_NISPLUS=yes:LOOKUP_NISPLUS=yes:" Local/Makefile
 	fi
 	if use syslog; then
 		sed -i "s:LOG_FILE_PATH=/var/log/exim/exim_%s.log:LOG_FILE_PATH=syslog:" Local/Makefile
@@ -237,6 +241,9 @@ src_unpack() {
 	fi
 	if use dcc; then
 		echo "EXPERIMENTAL_DCC=yes">> Local/Makefile
+	fi
+	if use dsn; then
+		sed -i -e "s:#define SUPPORT_DSN:define SUPPORT_DSN:" Local/Makefile
 	fi
 
 	# use the "native" interface to the DBM library
@@ -276,6 +283,7 @@ src_install () {
 
 	dodoc "${S}"/doc/*
 	doman "${S}"/doc/exim.8
+	use dsn && dodoc "${S}"/README.DSN
 
 	# conf files
 	insinto /etc/exim

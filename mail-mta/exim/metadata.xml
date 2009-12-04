@@ -18,14 +18,16 @@
 	<use>
 		<flag name='dcc'>Adds support for Distributed Checksum Clearinghouse
 			(DCC)</flag>
-		<flag name='dnsdb'>Adds support for a DNS search for a record whose
-			domain name is the supplied query</flag>
 		<flag name='dkim'>Adds support for DomainKeys Identified Mail
 			(DKIM)</flag>
+		<flag name='dnsdb'>Adds support for a DNS search for a record whose
+			domain name is the supplied query</flag>
 		<flag name='domainkeys'>Adds support for Yahoo!'s DomainKey sender
 			verification system</flag>
 		<flag name='dovecot-sasl'>Adds support for Dovecot's
 			authentication</flag>
+		<flag name='dsn'>Adds support for Delivery Status Notifications
+			(DSN)</flag>
 		<flag name='exiscan-acl'>Patch providing support for content
 			scanning</flag>
 		<flag name='exiscan'>Patch providing support for content scanning
