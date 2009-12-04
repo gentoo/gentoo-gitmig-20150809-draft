@@ -1,19 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4_pre20090520.ebuild,v 1.7 2009/11/30 04:44:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.80.ebuild,v 1.1 2009/12/04 15:58:38 scarabeus Exp $
 
 EAPI="2"
-
 inherit cmake-utils
 
 DESCRIPTION="KDE multimedia API"
 HOMEPAGE="http://phonon.kde.org"
-SRC_URI="http://dev.gentooexperimental.org/~alexxy/kde/${P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/phonon/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
-IUSE="debug gstreamer +xcb +xine"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="alsa debug gstreamer pulseaudio +xcb +xine"
 
 RDEPEND="
 	!kde-base/phonon-xine
@@ -25,6 +24,11 @@ RDEPEND="
 	gstreamer? (
 		media-libs/gstreamer
 		media-libs/gst-plugins-base
+		alsa? ( media-libs/alsa-lib )
+	)
+	pulseaudio? (
+		dev-libs/glib:2
+		>=media-sound/pulseaudio-0.9.21[glib]
 	)
 	xine? (
 		>=media-libs/xine-lib-1.1.15-r1[xcb?]
@@ -41,18 +45,22 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	echo ">>> Unpacking ${P}.tar.xz to ${PWD}"
+	xz -dc "${DISTDIR}"/${P}.tar.xz | tar xof -
+	assert "failed unpacking ${P}.tar.xz"
+}
+
 src_configure() {
 	mycmakeargs="${mycmakeargs}
+		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with gstreamer GStreamer)
 		$(cmake-utils_use_with gstreamer GStreamerPlugins)
-		$(cmake-utils_use_with xine)"
-
-	if use xine; then
-		mycmakeargs="${mycmakeargs}
-			$(cmake-utils_use_with xcb)"
-	else
-		sed -i -e '/xine/d' CMakeLists.txt || die "sed failed"
-	fi
+		$(cmake-utils_use_with pulseaudio PulseAudio)
+		$(cmake-utils_use_with pulseaudio GLib2)
+		$(cmake-utils_use_with xine)
+		$(cmake-utils_use_with xcb)
+	"
 
 	cmake-utils_src_configure
 }
