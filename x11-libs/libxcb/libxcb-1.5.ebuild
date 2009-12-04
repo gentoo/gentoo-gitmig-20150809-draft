@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.5.ebuild,v 1.1 2009/12/04 10:32:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.5.ebuild,v 1.2 2009/12/04 21:18:36 remi Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libXau
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-libs/libxslt
-	>=x11-proto/xcb-proto-1.5
+	>=x11-proto/xcb-proto-1.6
 	>=dev-lang/python-2.5[xml]"
 
 pkg_setup() {
