@@ -1,17 +1,12 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.53 2009/11/29 15:01:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.54 2009/12/04 14:29:17 ssuominen Exp $
+
+  04 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> kdenlive-0.7.6.ebuild:
+  amd64 stable wrt #291947
 
   29 Nov 2009; Joseph Jezak <josejx@gentoo.org> kdenlive-0.7.6.ebuild:
   Marked ~ppc for bug #241712.
-
-  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
-  kdenlive-0.7.6.ebuild:
-  revert stable x86
-
-  19 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
-  kdenlive-0.7.6.ebuild:
-  stable x86, bug 291947
 
   12 Nov 2009; Alexis Ballier <aballier@gentoo.org> -kdenlive-0.7.5.ebuild:
   remove old
