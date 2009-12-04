@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/IO-1.25.ebuild,v 1.1 2009/05/14 10:07:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/IO-1.25.ebuild,v 1.2 2009/12/04 12:02:21 fauli Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="load various IO modules"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~sparc x86"
 IUSE=""
 
 SRC_TEST=do
