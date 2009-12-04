@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.2a.ebuild,v 1.7 2008/09/25 14:42:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.2a.ebuild,v 1.8 2009/12/04 21:51:12 flameeyes Exp $
 
 inherit eutils
 
@@ -25,7 +25,8 @@ src_unpack() {
 src_compile() {
 	#note: We override CDEBUGFLAGS instead of CFLAGS because otherwise
 	#      we lost the INCLUDES in the makefile.
-	make CDEBUGFLAGS="${CFLAGS}" || die "make failed"
+	# bug #295741
+	emake -j1 CDEBUGFLAGS="${CFLAGS}" || die "make failed"
 }
 
 # likewise, no make install (we're real Unix hackers, we are)

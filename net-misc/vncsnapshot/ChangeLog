@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vncsnapshot
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.13 2008/09/24 21:10:48 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.14 2009/12/04 21:51:12 flameeyes Exp $
+
+  04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  vncsnapshot-1.2a.ebuild:
+  Add -j1 for build (bug #295741).
 
   24 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
   +files/vncsnapshot-1.2a-amd64grey.patch, vncsnapshot-1.2a.ebuild:
