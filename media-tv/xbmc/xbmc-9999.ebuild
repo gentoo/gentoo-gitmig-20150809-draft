@@ -1,9 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.41 2009/12/04 07:16:32 vapier Exp $
-
-# XXX: be nice to split out packages that come bundled and use the
-#      system libraries ...
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.42 2009/12/04 09:32:54 vapier Exp $
 
 EAPI="2"
 
@@ -157,6 +154,9 @@ src_configure() {
 
 src_install() {
 	einstall || die "Install failed!"
+
+	insinto /usr/share/xbmc/web/styles/
+	doins -r "${S}"/web/*/styles/*/ || die
 
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop
