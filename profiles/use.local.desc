@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5070 2009/12/04 09:47:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5071 2009/12/04 14:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3246,6 +3246,7 @@ www-client/seamonkey:moznopango - Disable x11-libs/pango during runtime
 www-client/seamonkey:moznoroaming - sroaming extension support
 www-client/seamonkey:restrict-javascript - Pull in www-plugins/noscript extension to disable javascript globally, putting the user full$ control of the sites he/she visits
 www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
+www-client/uzbl:experimental - Enable experimental branch
 www-client/uzbl:helpers - Optional tools used by uzbl scripts
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/vdradmin-am:vdr -  Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine. 
