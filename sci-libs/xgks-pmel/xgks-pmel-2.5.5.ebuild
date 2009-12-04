@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.3 2009/06/08 02:28:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.4 2009/12/04 21:01:44 flameeyes Exp $
 
 inherit eutils fortran toolchain-funcs multilib
 
@@ -26,20 +26,21 @@ src_unpack() {
 
 src_compile() {
 	sed -i -e "s:lib64:$(get_libdir):g" port/master.mk.in \
-	    fontdb/Makefile.in || die "sed 1 failed"
+		fontdb/Makefile.in || die "sed 1 failed"
 
 	CFLAGS=${CFLAGS} LD_X11='-L/usr/$(get_libdir) -lX11' \
-	    FC=${FORTRANC} CC=$(tc-getCC) OS=linux \
-	    ./configure --prefix=/usr --exec_prefix=/usr/bin \
-	    || die "configure failed"
+		FC=${FORTRANC} CC=$(tc-getCC) OS=linux \
+		./configure --prefix=/usr --exec_prefix=/usr/bin \
+		|| die "configure failed"
 
 	sed -i -e "s:port/all port/install:port/all:g" Makefile \
-	    || die "sed 2 failed"
+		|| die "sed 2 failed"
 
-	make || die "make failed"
+	# Fails parallel build, bug #295724
+	emake -j1 || die "make failed"
 
 	cd src/fortran
-	make || die "make fortran failed"
+	emake -j1 || die "make fortran failed"
 }
 
 src_install() {
@@ -56,10 +57,10 @@ src_install() {
 	dodoc COPYRIGHT HISTORY INSTALL README || die
 	doman doc/{xgks.3,xgks_synop.3} || die
 	if use doc; then
-	    newdoc doc/binding/cbinding.me cbinding || die
-	    newdoc doc/userdoc/userdoc.me userdoc || die
-	    insinto /usr/share/doc/${P}/examples
-	    doins progs/{hanoi.c,star.c} || die
+		newdoc doc/binding/cbinding.me cbinding || die
+		newdoc doc/userdoc/userdoc.me userdoc || die
+		insinto /usr/share/doc/${P}/examples
+		doins progs/{hanoi.c,star.c} || die
 	fi
 
 	insinto /usr/include/xgks
@@ -68,7 +69,7 @@ src_install() {
 	doins src/fortran/f*.h || die
 	doins src/lib/w*.h || die
 	doins src/lib/{input.h,metafile.h,polylines.h,polymarkers.h,text.h} \
-	    || die
+		|| die
 
 	insinto /usr/include
 	doins src/lib/xgks.h || die
