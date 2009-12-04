@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10928 2009/12/04 21:58:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10929 2009/12/04 22:14:06 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -103,11 +103,6 @@ sci-chemistry/coot
 #
 # Removal on 2010-02-02
 x11-misc/seyon
-
-# Víctor Ostorga <vostorga@gentoo.org> (04 Dec 2009)
-# Latest release in 2005, man pages obsolete, masked for removal
-# in 60 days, bug #295188
-app-i18n/man-pages-es
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (04 Dec 2009)
 # Mask coreutils 8.1 because of broken rm that can cause major issues.
