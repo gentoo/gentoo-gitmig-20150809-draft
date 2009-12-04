@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10923 2009/12/04 20:56:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10924 2009/12/04 21:19:42 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
+#  on behalf of QA team
+#
+# Fails to build (bug #232841, open July 2008; bug #256926,
+# open January 2008).
+#
+# Removal on 2010-02-02
+dev-dotnet/mono-fuse
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
 #  on behalf of QA team
