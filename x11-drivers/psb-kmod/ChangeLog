@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/psb-kmod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/psb-kmod/ChangeLog,v 1.2 2009/09/30 07:37:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/psb-kmod/ChangeLog,v 1.3 2009/12/04 08:19:52 zmedico Exp $
+
+*psb-kmod-4.41.1_p10-r1 (04 Dec 2009)
+
+  04 Dec 2009; Zac Medico <zmedico@gentoo.org>
+  +psb-kmod-4.41.1_p10-r1.ebuild:
+  Fix to compile with linux-2.6.32 kernel.
 
 *psb-kmod-4.41.1_p10 (30 Sep 2009)
 
