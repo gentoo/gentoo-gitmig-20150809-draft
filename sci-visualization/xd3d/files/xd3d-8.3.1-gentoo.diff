@@ -45,24 +45,24 @@ diff -Naur RULES.gentoo RULES.gentoo
 +#
 +# Fortran compiler
 +#
-+COMPILF = ##FC##
++COMPILF = $(FC)
 +
 +#
 +# C compiler
 +#
-+COMPILC = ##CC##
++COMPILC = $(CC)
 +RANLIB  = ranlib
 +AR      = ar r
-+STRIP   = strip $@
++STRIP   = echo $@
 +
 +#
 +# Options for the Fortran compiler
 +#
-+OPTF = ##FFLAGS##
++OPTF = $(FFLAGS)
 +#
 +# Options for the C compiler
 +#
-+OPTC = ##CFLAGS##
++OPTC = $(CFLAGS)
 +
 +#-----------------------------------------------
 +# You should not need to change anything below !
@@ -75,7 +75,7 @@ diff -Naur RULES.gentoo RULES.gentoo
 +INCF   = -I$(XD3D_DIR)/src/include
 +INCC   = -I$(LIBX11)/../include
 +
-+LINK      = $(COMPILF) $(OPTF) -o
++LINK      = $(COMPILF) $(LDFLAGS) -o
 +LINKOPT   = -lc -lm
 +LINKOPTX  = -L$(LIBX11) -lX11 -lXpm -lc -lm
 +LIBRAIRIE = $(LIBDIR)/question_lib.a

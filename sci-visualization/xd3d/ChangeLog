@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/xd3d
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.8 2008/04/04 10:10:12 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.9 2009/12/04 19:05:23 bicatali Exp $
+
+  04 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> xd3d-8.3.1.ebuild,
+  files/xd3d-8.3.1-gentoo.diff, +files/xd3d-8.3.1-parallel.patch,
+  +files/xd3d-8.3.1-rotated.patch:
+  Fixed parallel building, no more forced stripping, added a missing header
+  for QA, removed fortran eclass, switched to EAPI=2
 
   04 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/gentoo-xd3d-8.2.1.diff, -xd3d-8.2.1.ebuild, xd3d-8.3.1.ebuild:
