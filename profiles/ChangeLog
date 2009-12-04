@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3640 2009/12/04 21:53:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3641 2009/12/04 21:54:53 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking net-analyzer/ttt for QA removal.
 
   04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking dev-java/aspectj for QA removal.
