@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.14 2009/10/16 14:53:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.15 2009/12/04 14:02:12 ssuominen Exp $
+
+*opencv-2.0.0-r1 (04 Dec 2009)
+
+  04 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> opencv-2.0.0.ebuild,
+  +opencv-2.0.0-r1.ebuild:
+  amd64 stable wrt #295475. Revision bump to skip sci-libs/ipp depend for
+  -r0.
 
 *opencv-2.0.0 (16 Oct 2009)
 
