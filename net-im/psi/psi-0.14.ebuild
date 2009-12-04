@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14_rc3.ebuild,v 1.1 2009/11/26 19:15:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14.ebuild,v 1.1 2009/12/04 09:44:02 pva Exp $
 
 EAPI="2"
 
@@ -14,13 +14,13 @@ HOMEPAGE="http://psi-im.org/"
 # http://lists.affinix.com/pipermail/psi-devel-affinix.com/2009-August/008798.html
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-0.13-20090817_langpack_for_packagers.zip
-	extras? ( mirror://gentoo/${PN}-extra-patches-r1398.tar.bz2
-		mirror://gentoo/${PN}-extra-iconsets-r1398.tar.bz2 )"
+	extras? ( mirror://gentoo/${PN}-extra-patches-r1428.tar.bz2
+		mirror://gentoo/${PN}-extra-iconsets-r1428.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x86-fbsd"
-IUSE="crypt dbus debug doc extras jingle spell ssl xscreensaver"
+KEYWORDS="~amd64 ~x86"
+IUSE="crypt dbus debug doc extras jingle spell ssl xscreensaver webkit"
 RESTRICT="test"
 
 LANGS="de es fr it mk pl pt_BR ru sv ur_PK zh_TW"
@@ -33,9 +33,11 @@ RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
 	>=app-crypt/qca-2.0.2:2
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )
+	extras? ( webkit? ( x11-libs/qt-webkit ) )
 	app-arch/unzip"
 
 DEPEND="${RDEPEND}
+	extras? ( sys-devel/qconf )
 	doc? ( app-doc/doxygen )"
 
 PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
@@ -69,6 +71,13 @@ src_prepare() {
 		sed -e 's/\(^#define PROG_CAPS_NODE	\).*/\1"http:\/\/psi-dev.googlecode.com\/caps";/' \
 			-e 's:\(^#define PROG_NAME "Psi\):\1+:' \
 				-i src/applicationinfo.cpp || die
+
+		qconf || die "Failed to create ./configure."
+	else
+		if use webkit; then
+			ewarn "Webkit support disabled as it is only availalable in Psi+"
+			ewarn "(USE='extras' enabled)."
+		fi
 	fi
 
 	rm -rf third-party/qca # We use system libraries.
@@ -86,10 +95,13 @@ src_configure() {
 			$(use debug && echo '--enable-debug')
 			$(use spell || echo '--disable-aspell')
 			$(use spell || echo '--disable-enchant')
-			$(use xscreensaver || echo '--disable-xss')"
+			$(use xscreensaver || echo '--disable-xss')
+			$(use extras && { use webkit || echo '--enable-qtwebkit';} )"
 
 	echo ${confcmd}
 	${confcmd} || die "configure failed"
+	# Makefile is not always created...
+	[[ ! -f Makefile ]] && die "configure failed"
 }
 
 src_compile() {

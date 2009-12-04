@@ -7,12 +7,7 @@
 </maintainer>
 <longdescription>Psi is a very good jabber client that uses QT</longdescription>
 <use>
-	<flag name='audacious'>Enable monitoring of audio tracks that are played in
-		(media-sound/audacious)
-	</flag>
 	<flag name='extras'>Enables extra non official patches</flag>
-	<flag name='insecure-patches'>Enables extra non official patches that may
-		pose as a security risk
-	</flag>
+	<flag name='webkit'>Enable chatlog rendering using webkit</flag>
 </use>
 </pkgmetadata>

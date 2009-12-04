@@ -1,6 +1,16 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.179 2009/11/26 19:15:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.180 2009/12/04 09:44:02 pva Exp $
+
+*psi-0.14 (04 Dec 2009)
+
+  04 Dec 2009; Peter Volkov <pva@gentoo.org> -files/psi-0.10-gpg2.patch,
+  -files/psi-desktop2.patch, -files/psi-echoplugin.patch,
+  -files/psi-indicator.png, -files/psi-jingle-gcc4.patch,
+  -files/psi-pathfix2.patch, -files/psi-ptr_64bit_fix.patch,
+  -files/psi-reverse_trayicon2.patch, -psi-0.10-r3.ebuild,
+  -psi-0.10-r4.ebuild, -psi-0.14_rc3.ebuild, +psi-0.14.ebuild, metadata.xml:
+  Version bump, thank Rion and Vadim Efimov for report.
 
 *psi-0.14_rc3 (26 Nov 2009)
 
