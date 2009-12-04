@@ -1,13 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.71.ebuild,v 1.2 2009/12/04 19:04:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.71.ebuild,v 1.3 2009/12/04 19:08:03 grobian Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib pam
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl
-mbx X nis syslog spf srs gnutls sqlite dovecot-sasl radius maildir +dkim dcc dsn"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis syslog spf srs gnutls sqlite dovecot-sasl radius maildir +dkim dcc dsn"
 
 DSN_EXIM_V=469
 DSN_V=1_3
