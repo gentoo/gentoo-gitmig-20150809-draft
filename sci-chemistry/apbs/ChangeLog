@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.22 2009/11/03 05:30:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.23 2009/12/04 04:09:15 markusle Exp $
+
+*apbs-1.2.1b (04 Dec 2009)
+
+  04 Dec 2009; Markus Dittrich <markusle@gentoo.org> +apbs-1.2.1b.ebuild,
+  +files/apbs-1.2.1b-autoconf-2.64.patch:
+  Version bump and fixed compilation with autoconf 2.64 (fixes bug
+  #294453 and #295537).
 
 *apbs-1.2.0 (03 Nov 2009)
 
