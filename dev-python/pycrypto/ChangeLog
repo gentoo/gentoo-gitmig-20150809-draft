@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.76 2009/11/02 23:32:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.77 2009/12/04 23:24:44 arfrever Exp $
+
+  04 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycrypto-2.1.0_beta1.ebuild:
+  Fix LICENSE (bug #177815).
 
 *pycrypto-2.1.0_beta1 (03 Nov 2009)
 

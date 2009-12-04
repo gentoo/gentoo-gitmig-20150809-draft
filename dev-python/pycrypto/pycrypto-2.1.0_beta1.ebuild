@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0_beta1.ebuild,v 1.1 2009/11/02 23:32:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0_beta1.ebuild,v 1.2 2009/12/04 23:24:44 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ DESCRIPTION="Python Cryptography Toolkit"
 HOMEPAGE="http://www.dlitz.net/software/pycrypto/"
 SRC_URI="http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/${PN}-${MY_PV}.tar.gz"
 
-LICENSE="freedist"
+LICENSE="public-domain PSF-2.2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc +gmp"
