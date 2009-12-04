@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.5.80.ebuild,v 1.2 2009/11/07 22:28:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.6.0.ebuild,v 1.1 2009/12/04 10:51:11 ssuominen Exp $
 
 EAPI=2
-KDE_LINGUAS="ar bg br cs cy da de el en_GB es et fr ga gl hu is it ja ka lt ms
-nds nl pl pt pt_BR ru rw sk sv tr uk zh_TW"
+KDE_LINGUAS="ar bg br cs cy da de el en_GB eo es et fr ga gl hu is it ja ka lt
+ms nb nds nl pl pt pt_BR ru rw sk sv tr uk zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KNemo - the KDE Network Monitor"
