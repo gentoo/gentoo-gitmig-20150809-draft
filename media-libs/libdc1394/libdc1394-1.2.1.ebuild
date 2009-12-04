@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.2.1.ebuild,v 1.3 2007/07/22 09:35:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.2.1.ebuild,v 1.4 2009/12/04 13:59:23 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="libdc1394 is a library that is intended to provide a high level programming interface for application developers who wish to control IEEE 1394 based cameras that conform to the 1394-based Digital Camera Specification (found at http://www.1394ta.org/)"
+DESCRIPTION="Library to interface with IEEE 1394 cameras following the IIDC specification"
 HOMEPAGE="http://sourceforge.net/projects/libdc1394/"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -20,9 +20,10 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}
+	cd "${S}"
 	if ! use X; then
-		epatch ${FILESDIR}/${P}-nox11.patch
+		epatch "${FILESDIR}"/${P}-nox11.patch
 	fi
 }
 
@@ -31,11 +32,11 @@ src_compile() {
 		append-flags "-DCLK_TCK=CLOCKS_PER_SEC"
 	fi
 
-	econf || die
+	econf
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc NEWS README AUTHORS
 }
