@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/iulib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.3 2008/11/02 10:48:10 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.4 2009/12/04 07:20:26 vapier Exp $
+
+  04 Dec 2009; Mike Frysinger <vapier@gentoo.org> iulib-0.3.ebuild:
+  Mark amd64/x86 stable #283960 by Pierre.
 
   02 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Vapier slacks and did not include metadata.xml
