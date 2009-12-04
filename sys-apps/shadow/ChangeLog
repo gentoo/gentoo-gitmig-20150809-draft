@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.228 2009/07/24 18:26:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.229 2009/12/04 23:26:34 lxnay Exp $
+
+*shadow-4.1.4.2-r1 (04 Dec 2009)
+
+  04 Dec 2009; Fabio Erculiani <lxnay@gentoo.org> -shadow-4.1.3.1.ebuild,
+  -shadow-4.1.4.1.ebuild, -shadow-4.1.4.2.ebuild, +shadow-4.1.4.2-r1.ebuild,
+  +files/shadow-4.1.4.2-env-reset-keep-locale.patch:
+  Fix invalid environment variables reset, close bug #283725, thanks to
+  myself for reporting, thanks to parafin for providing a working patch
 
 *shadow-4.1.4.2 (24 Jul 2009)
 

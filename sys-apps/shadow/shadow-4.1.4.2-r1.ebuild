@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.1.ebuild,v 1.2 2009/08/23 10:45:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.2-r1.ebuild,v 1.1 2009/12/04 23:26:34 lxnay Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -29,6 +29,8 @@ RDEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# See Gentoo bug #283725
+	epatch "${FILESDIR}/${P}-env-reset-keep-locale.patch"
 	epatch "${FILESDIR}"/${PN}-4.1.3-dots-in-usernames.patch #22920
 	elibtoolize
 	epunt_cxx

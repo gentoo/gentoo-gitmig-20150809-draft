@@ -1,0 +1,12 @@
+diff -ur shadow-4.1.4.2/libmisc/env.c shadow-4.1.4.2-patched/libmisc/env.c
+--- shadow-4.1.4.2/libmisc/env.c	2009-04-28 00:07:56.000000000 +0400
++++ shadow-4.1.4.2-patched/libmisc/env.c	2009-12-04 16:12:42.000000000 +0300
+@@ -251,7 +251,7 @@
+ 			if (strncmp (*cur, *bad, strlen (*bad)) != 0) {
+ 				continue;
+ 			}
+-			if (strchr (*cur, '/') != NULL) {
++			if (strchr (*cur, '/') == NULL) {
+ 				continue;	/* OK */
+ 			}
+ 			for (move = cur; NULL != *move; move++) {
