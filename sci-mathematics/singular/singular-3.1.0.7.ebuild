@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.0.7.ebuild,v 1.1 2009/11/24 03:38:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.0.7.ebuild,v 1.2 2009/12/04 02:12:41 markusle Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/SOURCES/${MY_PV_M
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="doc emacs boost"
 
 RDEPEND=">=dev-libs/gmp-4.1-r1
