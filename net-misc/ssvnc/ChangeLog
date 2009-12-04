@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ssvnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.5 2009/06/29 20:55:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.6 2009/12/04 08:19:54 vapier Exp $
+
+*ssvnc-1.0.24 (04 Dec 2009)
+
+  04 Dec 2009; Mike Frysinger <vapier@gentoo.org> +ssvnc-1.0.24.ebuild,
+  +files/ssvnc-1.0.24-build.patch, +files/ssvnc-1.0.24-optional-java.patch,
+  +files/Makefile.libvncauth, +files/Makefile.vncviewer:
+  Version bump and avoid imake #289407 by Dmitri Pogosian.
 
   29 Jun 2009; Markus Meier <maekke@gentoo.org> ssvnc-1.0.22.ebuild:
   amd64/x86 stable, bug #274986
