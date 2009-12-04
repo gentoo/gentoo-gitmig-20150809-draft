@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.236 2009/12/03 20:53:28 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.237 2009/12/04 12:52:45 fauli Exp $
+
+  04 Dec 2009; Christian Faulhammer <fauli@gentoo.org> bash-4.0_p35.ebuild:
+  stable x86, bug 295405
 
   03 Dec 2009; Tiago Cunha <tcunha@gentoo.org> bash-4.0_p35.ebuild:
   stable sparc, bug 295405
