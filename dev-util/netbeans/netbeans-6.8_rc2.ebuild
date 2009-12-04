@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_rc1.ebuild,v 1.1 2009/11/28 23:35:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8_rc2.ebuild,v 1.1 2009/12/04 20:38:49 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -10,7 +10,7 @@ DESCRIPTION="NetBeans IDE for Java"
 HOMEPAGE="http://www.netbeans.org"
 
 SLOT="6.8"
-SRC_URI="http://download.netbeans.org/netbeans/6.8/rc1/zip/netbeans-6.8rc1-200911252200-src.zip
+SRC_URI="http://download.netbeans.org/netbeans/6.8/rc/zip/netbeans-6.8rc2-200912022200-src.zip
 	mirror://gentoo/netbeans-6.8-l10n-20091127193013.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
