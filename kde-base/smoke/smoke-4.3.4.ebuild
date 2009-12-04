@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.4.ebuild,v 1.1 2009/12/01 11:32:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.4.ebuild,v 1.2 2009/12/04 17:58:27 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ COMMON_DEPEND="
 	>=kde-base/qimageblitz-0.0.4
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
 	kdevplatform? ( dev-util/kdevplatform:4 )
-	phonon? ( >=media-sound/phonon-4.4_pre[xcb] )
+	phonon? ( >=media-sound/phonon-4.3.49[xcb] )
 	qscintilla? ( x11-libs/qscintilla[qt4] )
 	qwt? ( x11-libs/qwt:5 )
 "

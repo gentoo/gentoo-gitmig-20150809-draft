@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.1.ebuild,v 1.4 2009/10/26 21:31:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.1.ebuild,v 1.5 2009/12/04 17:58:27 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ COMMON_DEPEND="
 		>=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=]
 	)
 	kdevplatform? ( dev-util/kdevplatform:4 )
-	phonon? ( >=media-sound/phonon-4.4_pre[xcb] )
+	phonon? ( >=media-sound/phonon-4.3.49[xcb] )
 	qscintilla? ( x11-libs/qscintilla[qt4] )
 	qwt? ( x11-libs/qwt:5 )
 	semantic-desktop? (

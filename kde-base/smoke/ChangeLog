@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.84 2009/12/01 11:32:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.85 2009/12/04 17:58:27 scarabeus Exp $
+
+  04 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> smoke-4.3.1.ebuild,
+  smoke-4.3.3.ebuild, smoke-4.3.4.ebuild:
+  Depend on correct phonon version.
 
 *smoke-4.3.4 (01 Dec 2009)
 
