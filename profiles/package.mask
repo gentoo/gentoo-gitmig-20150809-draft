@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10919 2009/12/04 18:54:13 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10920 2009/12/04 19:42:56 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -329,10 +329,6 @@ games-fps/quake3-urbanterror
 # Vlastimil Babka <caster@gentoo.org> (03 Nov 2009)
 # Obsolete, needs 1.4 JDK, nothing uses it.
 dev-java/jessie
-
-# Michael Sterrett <mr_bones_@gentoo.org> (02 Nov 2009)
-# Upstream seems dead; segfaults; unplayable on modern systems
-games-rpg/tux_aqfh
 
 # Víctor Ostorga <vostorga@gentoo.org> (02 Nov 2009)
 # If you use a kernel >= 2.6.29 it is needed >=linux-headers-2.6.29
