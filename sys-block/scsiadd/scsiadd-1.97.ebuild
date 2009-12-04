@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiadd/scsiadd-1.97.ebuild,v 1.1 2009/12/04 21:05:48 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiadd/scsiadd-1.97.ebuild,v 1.2 2009/12/04 21:39:26 sbriesen Exp $
 
 EAPI="2"
 
@@ -36,7 +36,6 @@ src_compile() {
 	# extra safety for suid
 	append-ldflags -Wl,-z,now
 
-	econf || die "econf failed"
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
