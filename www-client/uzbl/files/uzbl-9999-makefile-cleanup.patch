@@ -1,18 +1,16 @@
---- Makefile.old	2009-11-24 15:20:22.086005098 +0200
-+++ Makefile	2009-11-24 15:44:30.944138916 +0200
-@@ -1,10 +1,8 @@
+--- Makefile.old	2009-12-04 15:52:06.100130674 +0200
++++ Makefile	2009-12-04 15:54:32.143205265 +0200
+@@ -1,7 +1,7 @@
  # first entries are for gnu make, 2nd for BSD make.  see http://lists.uzbl.org/pipermail/uzbl-dev-uzbl.org/2009-July/000177.html
  
 -CFLAGS:=-std=c99 $(shell pkg-config --cflags gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0) -ggdb -Wall -W -DARCH="\"$(shell uname -m)\"" -lgthread-2.0 -DCOMMIT="\"$(shell git log | head -n1 | sed "s/.* //")\"" $(CPPFLAGS) -fPIC -W -Wall -Wextra -pedantic -ggdb3
 -CFLAGS!=echo -std=c99 `pkg-config --cflags gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0` -ggdb -Wall -W -DARCH='"\""'`uname -m`'"\""' -lgthread-2.0 -DCOMMIT='"\""'`git log | head -n1 | sed "s/.* //"`'"\""' $(CPPFLAGS) -fPIC -W -Wall -Wextra -pedantic -ggdb3
-+CFLAGS:=-std=c99 $(shell pkg-config --cflags gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0) -Wall -W -DARCH="\"$(shell uname -m)\"" -lgthread-2.0 -DCOMMIT="\"$(shell git log | head -n1 | sed "s/.* //")\"" $(CPPFLAGS) -fPIC -W -Wall -Wextra -pedantic 
++CFLAGS:=-std=c99 $(shell pkg-config --cflags gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0) -Wall -W -DARCH="\"$(shell uname -m)\"" -lgthread-2.0 -DCOMMIT="\"$(shell uname -m)\"" -lgthread-2.0 -DCOMMIT="\"$(shell git log | head -n1 | sed "s/.* //")\"" $(CPPFLAGS) -fPIC -W -Wall -Wextra -pedantic 
++CFLAGS!=echo -std=c99 `pkg-config --cflags gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0` -ggdb -Wall -W -DARCH='"\""'`uname -m`'"\""' -lgthread-2.0 -DCOMMIT='"\""'`git log | head -n1 | sed "s/.* //"`'"\""' $(CPPFLAGS) -fPIC -W -Wall -Wextra -pedantic
  
  LDFLAGS:=$(shell pkg-config --libs gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0) -pthread $(LDFLAGS)
--LDFLAGS!=echo `pkg-config --libs gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0` -pthread $(LDFLAGS)
- 
- SRC = uzbl-core.c events.c callbacks.c inspector.c
- OBJ = ${SRC:.c=.o}
-@@ -32,10 +30,6 @@
+ LDFLAGS!=echo `pkg-config --libs gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0` -pthread $(LDFLAGS)
+@@ -32,10 +32,6 @@
  	@echo LINKING object files
  	@${CC} -o $@ ${OBJ} ${LDFLAGS}
  	@echo ... done.
@@ -23,9 +21,12 @@
  
  uzbl-browser: uzbl-core
  
-@@ -86,14 +80,10 @@
+@@ -86,18 +82,14 @@
  
- install-uzbl-core: all
+ install: install-uzbl-core install-uzbl-browser install-uzbl-tabbed
+ 
+-install-uzbl-core: all
++install-uzbl-core:
  	install -d $(INSTALLDIR)/bin
 -	install -d $(INSTALLDIR)/share/uzbl/docs
  	install -d $(INSTALLDIR)/share/uzbl/examples
@@ -37,5 +38,17 @@
 -	install -m644 AUTHORS      $(INSTALLDIR)/share/uzbl/docs
 -	install -m644 README       $(INSTALLDIR)/share/uzbl/docs
  
- install-uzbl-browser: all
+-install-uzbl-browser: all
++install-uzbl-browser: install-uzbl-core
  	install -d $(INSTALLDIR)/bin
+ 	install -m755 uzbl-browser $(INSTALLDIR)/bin/uzbl-browser
+ 	install -m755 examples/data/uzbl/scripts/uzbl-cookie-daemon $(INSTALLDIR)/bin/uzbl-cookie-daemon
+@@ -106,7 +98,7 @@
+ 	sed -i "s#^PREFIX = .*#PREFIX = '$(PREFIX)'#" $(INSTALLDIR)/bin/uzbl-event-manager
+ 	sed -i 's#^set prefix.*=.*#set prefix     = $(PREFIX)#' $(INSTALLDIR)/share/uzbl/examples/config/uzbl/config
+ 
+-install-uzbl-tabbed: all
++install-uzbl-tabbed: install-uzbl-browser
+ 	install -d $(INSTALLDIR)/bin
+ 	install -m755 examples/data/uzbl/scripts/uzbl-tabbed $(INSTALLDIR)/bin/uzbl-tabbed
+ 
