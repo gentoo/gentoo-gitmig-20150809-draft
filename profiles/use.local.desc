@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5071 2009/12/04 14:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5072 2009/12/04 18:27:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -112,8 +112,6 @@ app-backup/boxbackup:client-only - Disable server support, and just build a clie
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite by 64 bit integers
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
-app-backup/kdar:dar32 - Support libdar32.so usage
-app-backup/kdar:dar64 - Support libdar64.so usage
 app-benchmarks/bootchart:acct - Enable process accounting
 app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
 app-cdr/brasero:beagle - Enable app-misc/beagle support for searches
@@ -1381,6 +1379,8 @@ mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/courier:web - Enable the web interface
 mail-mta/courier:webmail - Enable the webmail interface
+mail-mta/exim:dcc - Adds support for Distributed Checksum Clearinghouse (DCC)
+mail-mta/exim:dkim - Adds support for DomainKeys Identified Mail (DKIM)
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
 mail-mta/exim:domainkeys - Adds support for Yahoo!'s DomainKey sender verification system
 mail-mta/exim:dovecot-sasl - Adds support for Dovecot's authentication
@@ -1769,7 +1769,6 @@ media-tv/freevo:tv - Enable support for the tv guide plugin
 media-tv/freevo:tvtime - Enables tvtime support, additional to tv use flag
 media-tv/freevo:xmame - Enables support for Xmame arcade games
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
-media-tv/kdetv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/mythtv:alsa - Allows MythTV to directly output sound to ALSA devices, this is needed if you are using ALSA dmix or SPDIF. Note, you will have to physically type your device into the MythTV configuration since it will only give you /dev/dsp devices in the drop down.
 media-tv/mythtv:altivec - Builds ffmpeg's codec libraries with altivec support.
 media-tv/mythtv:autostart - Uses a custom autostart configuration gleened from expierence with MythTV since it's early versions and discussed with other MythTV maintainers and users. Does not rely on KDE being installed like most methods do.
