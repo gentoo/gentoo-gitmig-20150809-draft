@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.24.00.ebuild,v 1.1 2009/09/24 06:20:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.24.00.ebuild,v 1.2 2009/12/04 22:41:48 bicatali Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs autotools
+inherit eutils toolchain-funcs
 
 MY_PN=Minuit2
 
@@ -30,10 +30,6 @@ pkg_setup() {
 		ewarn "Switch CXX to an OpenMP capable compiler"
 		die "Need openmp"
 	fi
-}
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-as-needed.patch
-	AT_M4DIR="config/m4" eautoreconf
 }
 
 src_configure() {
