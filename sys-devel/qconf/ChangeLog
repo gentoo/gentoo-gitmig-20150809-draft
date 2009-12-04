@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/qconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.1 2009/12/04 09:27:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.2 2009/12/04 23:51:19 aballier Exp $
+
+  04 Dec 2009; Alexis Ballier <aballier@gentoo.org> qconf-1.5_pre717.ebuild:
+  keyword ~x86-fbsd
 
 *qconf-1.5_pre717 (04 Dec 2009)
 
