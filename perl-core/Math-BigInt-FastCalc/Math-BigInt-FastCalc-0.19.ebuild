@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/Math-BigInt-FastCalc-0.19.ebuild,v 1.2 2009/12/04 12:10:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/Math-BigInt-FastCalc-0.19.ebuild,v 1.3 2009/12/04 13:34:26 tove Exp $
 
 MODULE_AUTHOR="TELS"
 MODULE_SECTION="math"
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~hppa ~ppc x86"
+KEYWORDS="amd64 ~hppa ~ppc x86"
 RDEPEND=">=virtual/perl-Math-BigInt-1.87"
 DEPEND="${RDEPEND}"
 
