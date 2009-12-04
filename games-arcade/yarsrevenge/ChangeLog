@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/yarsrevenge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/ChangeLog,v 1.10 2009/06/18 00:16:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/ChangeLog,v 1.11 2009/12/04 09:06:21 tupone Exp $
+
+  04 Dec 2009; Tupone Alfredo <tupone@gentoo.org> files/0.99-math.patch,
+  yarsrevenge-0.99.ebuild:
+  Fix build with sys-devel/patch-2.6 Bug #295304 by flameeyes@gentoo.org
 
   18 Jun 2009; Tristan Heaven <nyhm@gentoo.org> yarsrevenge-0.99.ebuild,
   +files/yarsrevenge-0.99-gcc44.patch:

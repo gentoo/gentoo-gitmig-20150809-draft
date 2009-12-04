@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/yarsrevenge-0.99.ebuild,v 1.10 2009/06/18 00:16:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/yarsrevenge-0.99.ebuild,v 1.11 2009/12/04 09:06:21 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl"
+RDEPEND="media-libs/libsdl"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/yar-${PV}
 
