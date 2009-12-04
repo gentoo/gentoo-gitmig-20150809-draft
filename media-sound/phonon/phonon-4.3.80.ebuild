@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.80.ebuild,v 1.1 2009/12/04 15:58:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.80.ebuild,v 1.2 2009/12/04 16:04:17 scarabeus Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -43,12 +43,6 @@ pkg_setup() {
 	if use !xine && use !gstreamer; then
 		die "you must at least select one backend for phonon"
 	fi
-}
-
-src_unpack() {
-	echo ">>> Unpacking ${P}.tar.xz to ${PWD}"
-	xz -dc "${DISTDIR}"/${P}.tar.xz | tar xof -
-	assert "failed unpacking ${P}.tar.xz"
 }
 
 src_configure() {
