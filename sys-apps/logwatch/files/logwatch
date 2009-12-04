@@ -1,5 +1,5 @@
 #!/bin/sh
 
 if [ -x /usr/sbin/logwatch.pl ] ; then
-	exec /usr/sbin/logwatch.pl 2>&1 > /dev/null
+	exec /usr/sbin/logwatch.pl --output mail
 fi

@@ -1,23 +1,26 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3.4.ebuild,v 1.2 2007/03/23 23:00:35 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3.7_pre20091204.ebuild,v 1.1 2009/12/04 11:21:58 hollow Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org/"
-SRC_URI="ftp://ftp.kaybee.org/pub/linux/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+DEPEND=""
 RDEPEND="virtual/cron
 	virtual/mta
+	virtual/mailx
 	dev-lang/perl
-	dev-perl/Tie-IxHash
 	dev-perl/Date-Calc
-	virtual/mailx"
-DEPEND=""
+	dev-perl/DateManip
+	dev-perl/Tie-IxHash
+	dev-perl/Sys-CPU
+	dev-perl/Sys-MemInfo"
 
 src_install() {
 	dodir /usr/share/logwatch/lib
@@ -26,7 +29,7 @@ src_install() {
 	dodir /usr/share/logwatch/default.conf/logfiles
 	dodir /usr/share/logwatch/default.conf/services
 	dodir /usr/share/logwatch/default.conf/html
-	dodir /etc/logwatch
+	keepdir /etc/logwatch
 	keepdir /var/cache/logwatch
 
 	newsbin scripts/logwatch.pl logwatch.pl || die "dosbin logwatch failed"
