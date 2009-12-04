@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.3 2009/11/24 04:02:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.4 2009/12/04 04:23:51 markusle Exp $
 
 EAPI="2"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
@@ -50,6 +50,13 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/VTK
 
 pkg_setup() {
+	echo
+	einfo "Please note that the VTK build occasionally fails when"
+	einfo "using parallel make. Hence, if you experience a build"
+	einfo "failure please try re-emerging with MAKEOPTS=\"-j1\" first."
+	echo
+	epause 5
+
 	java-pkg-opt-2_pkg_setup
 	if use qt3 && use qt4; then
 		echo

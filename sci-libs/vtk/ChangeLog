@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.56 2009/11/24 04:02:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.57 2009/12/04 04:23:51 markusle Exp $
+
+  04 Dec 2009; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2.ebuild:
+  Added short notice regarding possible parallel make issues per bug
+  #244896.
 
   24 Nov 2009; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2.ebuild:
   Removed boost from RDEPEND (fixes bug #293083).
