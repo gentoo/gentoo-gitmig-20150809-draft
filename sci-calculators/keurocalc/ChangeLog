@@ -1,0 +1,10 @@
+# ChangeLog for sci-calculators/keurocalc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.1 2009/12/04 12:17:21 ssuominen Exp $
+
+*keurocalc-1.0.2 (04 Dec 2009)
+
+  04 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +keurocalc-1.0.2.ebuild:
+  Initial commit wrt #99313, thanks to Theofilos Intzoglou for reporting.
+
