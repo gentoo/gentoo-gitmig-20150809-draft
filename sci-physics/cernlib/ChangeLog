@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.17 2009/11/26 21:37:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.18 2009/12/04 15:55:43 jer Exp $
+
+  04 Dec 2009; Jeroen Roovers <jer@gentoo.org> cernlib-2006-r3.ebuild:
+  Stable for HPPA (bug #294439).
 
   26 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -cernlib-2006-r2.ebuild, cernlib-2006-r3.ebuild:
