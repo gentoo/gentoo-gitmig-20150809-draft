@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10930 2009/12/04 22:23:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10931 2009/12/05 09:36:52 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,52 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (05 Dec 2009)
+# Doesn't compile with Autoconf >= 2.64 (#279482)
+#
+# Additional bugs include:
+# app-text/bibletime (#294863)
+# dev-util/kprof and kdbg (#292780)
+# net-firewall/guarddog (#270532)
+# sci-electronics/klogic (#277525)
+# media-video/kavi2svcd (#255888)
+#
+# Unresolved security bugs affecting kdelibs-3 include:
+# Remote code execution (CVE-2009-1690), bug 274566
+# Remote code execution (CVE-2009-1725), bug 279027
+# SSL certificate spoofing (CVE-2009-2702), bug 285018
+#
+# You should uninstall kdelibs-3.5 soon as possible,
+# which will be masked after KOffice 2.1.0 is in stable.
+#
+# Masked for removal.
+app-text/knowit
+app-office/kletterwizard
+app-mobilephone/ksms
+app-editors/kxmleditor
+<app-text/bibletime-2
+dev-db/kpogre
+dev-util/kdbg
+dev-util/kprof
+net-dialup/kdsl
+net-dialup/kmasqdialer
+net-dialup/komport
+net-dialup/rppppoek
+net-dialup/serlook
+net-firewall/guarddog
+net-firewall/kmyfirewall
+sci-visualization/kpl
+sci-calculators/abakus
+sci-calculators/pgcalc2
+sci-electronics/klogic
+sci-calculators/kconvert
+net-misc/x2gokdebindings
+net-misc/x2gosessionadministration
+media-video/kavi2svcd
+media-sound/scret
+media-sound/transkode
+media-sound/kzenexplorer
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
 #  on behalf of QA team
