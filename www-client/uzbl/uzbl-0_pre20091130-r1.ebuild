@@ -1,21 +1,22 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.4 2009/12/05 16:19:54 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-0_pre20091130-r1.ebuild,v 1.1 2009/12/05 16:19:54 wired Exp $
 
 EAPI="2"
 
-inherit base git
+inherit base
+
+MY_PV=${PV/*_pre}
+MY_PV=${MY_PV:0:4}.${MY_PV:4:2}.${MY_PV:6}
 
 DESCRIPTION="A keyboard controlled (modal vim-like bindings, or with modifierkeys) browser based on Webkit."
 HOMEPAGE="http://www.uzbl.org"
-SRC_URI=""
-
-EGIT_REPO_URI="git://github.com/Dieterbe/uzbl.git"
+SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${MY_PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS=""
-IUSE="+browser experimental helpers +tabbed"
+KEYWORDS="~amd64 ~x86"
+IUSE="+browser helpers +tabbed"
 
 COMMON_DEPEND="
 	>=net-libs/webkit-gtk-1.1.15
@@ -44,8 +45,6 @@ RDEPEND="
 "
 
 pkg_setup() {
-	use experimental && EGIT_BRANCH="experimental"
-
 	ewarn "Since the helpers are growing into a fine list I've decided"
 	ewarn "to keep them under a single USE flag to avoid a USE hell".
 	ewarn "You can always install the ones you need manually if you don't"
@@ -61,10 +60,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	git_src_prepare
+	cd "${WORKDIR}"/Dieterbe-uzbl-*
+	S=$(pwd)
 
 	# patch Makefile to make it more sane
-	epatch "${FILESDIR}"/"${P}"-makefile-cleanup.patch
+	epatch "${FILESDIR}"/"${PN}"-makefile-cleanup.patch
 
 	# adjust path in default config file to /usr/share
 	sed -i "s:/usr/local/share/uzbl:/usr/share/uzbl:g" \
