@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10935 2009/12/05 13:26:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10936 2009/12/05 19:51:02 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (05 Dec 2009)
+# Gadfly doesn't work with Python 2.6 (bug #295166) and had last release over 7 years ago. Masked for deletion in 30 days.
+dev-python/gadfly
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (05 Dec 2009)
 #  on behalf of QA team
