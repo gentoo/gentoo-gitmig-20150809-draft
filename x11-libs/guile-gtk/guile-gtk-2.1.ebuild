@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.0.ebuild,v 1.8 2009/12/05 13:13:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.1 2009/12/05 13:13:50 ulm Exp $
 
 inherit virtualx eutils
 
 DESCRIPTION="GTK+ bindings for guile"
 HOMEPAGE="http://www.gnu.org/software/guile-gtk/"
 SRC_URI="ftp://ftp.gnu.org/gnu/guile-gtk/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
@@ -29,7 +29,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-g-object-ref.diff"
+	epatch "${FILESDIR}/${PN}-2.0-g-object-ref.diff"
 }
 
 src_test() {
