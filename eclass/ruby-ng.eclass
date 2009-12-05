@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.2 2009/12/05 11:30:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.3 2009/12/05 11:32:19 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -380,7 +380,7 @@ _each_ruby_check_install() {
 	# The current implementation lacks libruby (i.e.: jruby)
 	[[ -z ${libruby_soname} ]] && return 0
 
-	scanelf -qnR "${D}"/$(dirname $(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitedir"]')) \
+	scanelf -qnR "${D}${sitedir}" \
 		| fgrep -v "${libruby_soname}" \
 		> "${T}"/ruby-ng-${_ruby_implementation}-mislink.log
 
