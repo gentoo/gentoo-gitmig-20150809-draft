@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.0.ebuild,v 1.1 2009/08/18 08:18:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.0.ebuild,v 1.2 2009/12/05 06:52:36 abcd Exp $
 
 EAPI="2"
 
@@ -38,10 +38,4 @@ src_configure() {
 	"
 
 	kde4-base_src_configure
-}
-
-src_test() {
-	mycmakeargs="${mycmakeargs}
-		-DKDE4_BUILD_TESTS=ON"
-	kde4-base_src_test
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partitionmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/ChangeLog,v 1.2 2009/08/18 08:18:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/ChangeLog,v 1.3 2009/12/05 06:52:36 abcd Exp $
+
+  05 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  partitionmanager-1.0.0.ebuild:
+  Don't override src_test, just use version from eclass
 
 *partitionmanager-1.0.0 (18 Aug 2009)
 
