@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.1-r1.ebuild,v 1.1 2009/12/05 10:08:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.1-r1.ebuild,v 1.2 2009/12/05 16:58:19 flameeyes Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ pkg_setup() {
 src_prepare() {
 	# Enhance ebtables-save to take table names as parameters bug #189315
 	epatch "${FILESDIR}/${PN}-2.0.8.1-ebt-save.diff"
-	epatch "${FILESDIR}/${PN}-2.0.9.1-LDFLAGS.diff"
+	epatch "${FILESDIR}/${PN}-2.0.9-1-LDFLAGS.diff"
 	epatch "${FILESDIR}/${PN}-v2.0.8-2-ethertype-DESTDIR-mkdir.patch"
 
 	sed -i -e "s,^MANDIR:=.*,MANDIR:=/usr/share/man," \

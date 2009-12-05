@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.32 2009/12/05 10:08:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.33 2009/12/05 16:58:19 flameeyes Exp $
+
+  05 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ebtables-2.0.9.1-r1.ebuild:
+  Fix typo.
 
 *ebtables-2.0.9.1-r1 (05 Dec 2009)
 
