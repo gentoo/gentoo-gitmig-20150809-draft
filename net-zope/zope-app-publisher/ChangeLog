@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-app-publisher
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publisher/ChangeLog,v 1.1 2009/12/05 02:28:34 arfrever Exp $
+
+*zope-app-publisher-3.10.0 (05 Dec 2009)
+
+  05 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-app-publisher-3.10.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
