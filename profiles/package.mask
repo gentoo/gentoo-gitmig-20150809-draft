@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10931 2009/12/05 09:36:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10932 2009/12/05 11:47:16 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (05 Dec 2009)
+#  on behalf of QA team
+#
+# Fails parallel make and install (bug #295821); unused in
+# tree; upstream homepage returns 404.
+#
+# Removal on 2010-02-03
+dev-util/cook
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Dec 2009)
 # Doesn't compile with Autoconf >= 2.64 (#279482)
