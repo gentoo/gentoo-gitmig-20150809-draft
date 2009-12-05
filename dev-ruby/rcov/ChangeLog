@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rcov
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/ChangeLog,v 1.7 2009/05/31 07:28:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/ChangeLog,v 1.8 2009/12/05 08:32:25 graaff Exp $
+
+*rcov-0.9.6 (05 Dec 2009)
+
+  05 Dec 2009; Hans de Graaff <graaff@gentoo.org> +rcov-0.9.6.ebuild:
+  Version bump.
 
   31 May 2009; Hans de Graaff <graaff@gentoo.org> -rcov-0.8.0.1.ebuild,
   -rcov-0.8.0.2.ebuild:
