@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.516 2009/12/05 16:34:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.517 2009/12/05 16:38:53 zzam Exp $
+
+  05 Dec 2009; Matthias Schwarzott <zzam@gentoo.org> udev-141-r1.ebuild:
+  Mark this ebuild as the highest that can work with xen-sources and should
+  not be removed.
 
 *udev-149 (05 Dec 2009)
 
