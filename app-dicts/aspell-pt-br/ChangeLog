@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/aspell-pt-br
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.10 2009/10/18 20:42:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt-br/ChangeLog,v 1.11 2009/12/05 19:08:40 ssuominen Exp $
+
+*aspell-pt-br-6.0.20090702 (05 Dec 2009)
+
+  05 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +aspell-pt-br-6.0.20090702.ebuild:
+  Version bump wrt #254562, thanks to Ronan Arraes Jardim Chagas for
+  reporting.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
   aspell-pt-br-6.0.20070411.ebuild, aspell-pt-br-6.0.20080221.ebuild:
