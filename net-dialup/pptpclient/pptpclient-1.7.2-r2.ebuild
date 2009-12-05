@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2-r1.ebuild,v 1.5 2009/09/30 22:15:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2-r2.ebuild,v 1.1 2009/12/05 08:51:41 mrness Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P=${P/client}
 MY_CMD=pptp-command-20050401
@@ -35,19 +35,17 @@ src_prepare() {
 }
 
 src_compile() {
-	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" || die "make failed"
+	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" LDFLAGS=${LDFLAGS} CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
-	dosbin pptp
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog DEVELOPERS NEWS README TODO USING
 	dodoc Documentation/*
 	dodir /etc/pptp.d
 
 	# The current version of pptp-linux doesn't include the
 	# RH-specific portions, so include them ourselves.
-	insinto /etc/ppp
-	doins options.pptp
 	newsbin "${WORKDIR}/${MY_CMD}" pptp-command
 	dosbin "${FILESDIR}/pptp_fe.pl"
 	use tk && dosbin "${FILESDIR}/xpptp_fe.pl"

@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.54 2009/09/30 22:15:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.55 2009/12/05 08:51:41 mrness Exp $
+
+*pptpclient-1.7.2-r2 (05 Dec 2009)
+
+  05 Dec 2009; Alin Năstac <mrness@gentoo.org> -pptpclient-1.7.2-r1.ebuild,
+  +pptpclient-1.7.2-r2.ebuild:
+  Use selected CC and LDFLAGS (#293577). Install pptpsetup and man pages
+  (#293885).
 
   30 Sep 2009; Alin Năstac <mrness@gentoo.org> pptpclient-1.7.2-r1.ebuild:
   Add sys-apps/iproute2 to RDEPEND (#284460).
