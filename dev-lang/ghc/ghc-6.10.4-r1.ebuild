@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.1 2009/12/05 09:19:27 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.2 2009/12/05 22:19:21 mr_bones_ Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -179,7 +179,6 @@ src_unpack() {
 		# Modify the ghc driver script to use GHC_CFLAGS
 		sed -i -e "s|wrapped|wrapped ${GHC_CFLAGS}|" \
 	                "${S}/ghc/ghc.wrapper"
-
 
 		cd "${S}"
 
