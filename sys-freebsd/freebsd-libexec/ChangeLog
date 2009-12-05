@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.33 2009/12/04 20:02:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.34 2009/12/05 09:48:09 aballier Exp $
+
+*freebsd-libexec-7.2-r1 (05 Dec 2009)
+
+  05 Dec 2009; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-libexec-7.2-r1.ebuild, +files/freebsd-libexec-7.2-rtld7.patch:
+  Add a patch for latest FreeBSD security advisory
 
   04 Dec 2009; Alexis Ballier <aballier@gentoo.org>
   -freebsd-libexec-7.1.ebuild:
