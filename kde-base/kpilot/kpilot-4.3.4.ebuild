@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-4.3.4.ebuild,v 1.1 2009/12/01 10:57:55 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-4.3.4.ebuild,v 1.2 2009/12/05 05:11:30 abcd Exp $
 
 EAPI="2"
 
@@ -18,6 +18,9 @@ DEPEND="
 	crypt? ( app-crypt/qca:2 )
 "
 RDEPEND="${DEPEND}"
+
+# Tests hang, last checked in 4.3.3
+RESTRICT="test"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.33 2009/12/01 11:08:47 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.34 2009/12/05 05:13:08 abcd Exp $
+
+  05 Dec 2009; Jonathan Callen <abcd@gentoo.org> ksystemlog-4.3.3.ebuild,
+  ksystemlog-4.3.4.ebuild:
+  Tests hang, RESTRICTing until upstream fixes
 
 *ksystemlog-4.3.4 (01 Dec 2009)
 

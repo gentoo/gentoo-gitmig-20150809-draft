@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/okteta-4.3.3-r1.ebuild,v 1.5 2009/11/30 06:54:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/okteta-4.3.3-r1.ebuild,v 1.6 2009/12/05 05:15:13 abcd Exp $
 
 EAPI="2"
 
@@ -15,6 +15,9 @@ DEPEND="
 	app-crypt/qca:2
 "
 RDEPEND="${DEPEND}"
+
+# Tests hang, last checked in 4.3.3
+RESTRICT="test"
 
 PATCHES=(
 	"${FILESDIR}/${PV}-detect_changes_correctly.patch"
