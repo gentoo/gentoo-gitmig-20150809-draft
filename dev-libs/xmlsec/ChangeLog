@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/xmlsec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.18 2009/09/17 13:36:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.19 2009/12/05 22:16:50 arfrever Exp $
+
+*xmlsec-1.2.14 (05 Dec 2009)
+
+  05 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -xmlsec-1.2.12.ebuild,
+  -files/xmlsec-1.2.12-fix_implicit_declaration.patch,
+  -files/xmlsec-1.2.12-min_hmac_size.patch, -xmlsec-1.2.13.ebuild,
+  +xmlsec-1.2.14.ebuild:
+  Version bump (bug #295912).
 
 *xmlsec-1.2.13 (17 Sep 2009)
 

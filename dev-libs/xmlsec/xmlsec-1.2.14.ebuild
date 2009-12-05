@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.12.ebuild,v 1.1 2009/07/29 16:37:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.14.ebuild,v 1.1 2009/12/05 22:16:50 arfrever Exp $
 
 EAPI="2"
-
-inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Command line tool for signing, verifying, encrypting and decrypting XML"
 HOMEPAGE="http://www.aleksey.com/xmlsec"
@@ -15,30 +13,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gnutls mozilla ssl"
 
-RDEPEND=">=dev-libs/libxslt-1.0.20
-	ssl? ( >=dev-libs/openssl-0.9.7 )
+RDEPEND=">=dev-libs/libxml2-2.7.4
+	>=dev-libs/libxslt-1.0.20
 	gnutls? ( >=net-libs/gnutls-0.8.1 )
 	mozilla? ( >=dev-libs/nspr-4.0
-		>=dev-libs/nss-3.2 )"
+		>=dev-libs/nss-3.2 )
+	ssl? ( >=dev-libs/openssl-0.9.7 )"
 DEPEND="${RDEPEND}
-	>=dev-libs/libxml2-2.6.12
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}1-${PV}"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-min_hmac_size.patch"
-	epatch "${FILESDIR}/${P}-fix_implicit_declaration.patch"
-
-	sed -i \
-		-e '/^XMLSEC_SHLIBSFX=/s/\(XMLSEC_SHLIBSFX=\).*/\1".so"/' \
-		-e '/sha1.*pkgconfig/s/sha1/pkgconfig/' \
-		-e '/^AC_LIB_LTDL$/d' configure.in || die "sed configure.in failed"
-	eautoreconf
-}
+#src_prepare() {
+#	eautoreconf
+#	append-cppflags '-DLTDL_OBJDIR=\".libs\"' '-DLTDL_SHLIB_EXT=\".so\"'
+#}
 
 src_configure() {
-	append-cppflags '-DLTDL_OBJDIR=\".libs\"' '-DLTDL_SHLIB_EXT=\".so\"'
 	local myconf
 	use gnutls || myconf="--without-gnutls"
 	econf \
@@ -51,10 +42,14 @@ src_configure() {
 }
 
 src_test() {
+	if has_version ${CATEGORY}/${PN} && ! has_version "=${CATEGORY}/${PF}"; then
+		ewarn "Tests will be probably skipped. First install ${CATEGORY}/${PF} and next reinstall it again with testing enabled."
+	fi
+
 	TMPFOLDER="${T}" emake check || die "emake check failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS README NEWS
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS README NEWS || die "dodoc failed"
 }
