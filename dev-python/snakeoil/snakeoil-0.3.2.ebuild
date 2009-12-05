@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.2.ebuild,v 1.7 2009/04/09 02:21:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.2.ebuild,v 1.8 2009/12/05 21:22:18 arfrever Exp $
 
-NEED_PYTHON=2.4
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -15,38 +16,33 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
-DOCS="AUTHORS NEWS"
 DEPEND="!<sys-apps/pkgcore-0.4.7.8"
 RDEPEND=${DEPEND}
+RESTRICT_PYTHON_ABIS="3.*"
 
-# Uses an ugly hack to install for all versions of python on the
-# system. This should be supported through the eclass at some point.
-# pkgcore needs it now to support upgrading to a different python slot.
+DOCS="AUTHORS NEWS"
 
-src_compile() {
-	local opython=${python}
-	for python in /usr/bin/python2.[4-9]; do
-		distutils_src_compile
+pkg_setup() {
+	validate_PYTHON_ABIS
+
+	# A hack to install for all versions of Python 2 in the system.
+	# pkgcore needs it to support upgrading to a different Python slot.
+	PYTHON_ABIS=""
+	local python_version
+	for python_version in /usr/bin/python2.[4-9]; do
+		PYTHON_ABIS+=" ${python_version#/usr/bin/python}"
 	done
-	python=${opython}
+	export PYTHON_ABIS="${PYTHON_ABIS# }"
 }
 
 src_test() {
-	local opython=${python} tempdir
-	for python in /usr/bin/python2.[4-9]; do
-		tempdir="${T}/tests/$(basename ${python})"
+	testing() {
+		local tempdir
+		tempdir="${T}/tests/python-${PYTHON_ABI}"
 		mkdir -p "${tempdir}" || die "tempdir creation failed"
 		cp -r "${S}" "${tempdir}" || die "test copy failed"
 		cd "${tempdir}/${P}"
-		"${python}" setup.py test || die "testing returned non zero"
-	done
-	python=${opython}
-	rm -rf "${T}/tests"
-}
-
-src_install() {
-	local opython=${python}
-	for python in /usr/bin/python2.[4-9]; do
-		distutils_src_install
-	done
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+	}
+	python_execute_function testing
 }
