@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.70 2009/09/17 16:07:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.71 2009/12/05 08:01:44 mrness Exp $
+
+*openswan-2.6.23-r2 (05 Dec 2009)
+*openswan-2.4.15-r2 (05 Dec 2009)
+
+  05 Dec 2009; Alin Năstac <mrness@gentoo.org> +openswan-2.4.15-r2.ebuild,
+  -openswan-2.6.22.ebuild, -files/openswan-2.6.22-gentoo.patch,
+  +openswan-2.6.23-r2.ebuild:
+  Use selected CC (#293277). Install more doc files (#294533).
 
 *openswan-2.6.23-r1 (17 Sep 2009)
 

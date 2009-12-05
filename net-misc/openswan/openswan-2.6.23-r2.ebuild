@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.22.ebuild,v 1.2 2009/06/28 09:45:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.23-r2.ebuild,v 1.1 2009/12/05 08:01:44 mrness Exp $
 
 EAPI="2"
 
-inherit eutils linux-info
+inherit eutils linux-info toolchain-funcs
 
 DESCRIPTION="Open Source implementation of IPsec for the Linux operating system (was SuperFreeS/WAN)."
 HOMEPAGE="http://www.openswan.org/"
@@ -13,7 +13,7 @@ SRC_URI="http://www.openswan.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="curl ldap smartcard extra-algorithms weak-algorithms nocrypto-algorithms"
+IUSE="curl ldap smartcard extra-algorithms weak-algorithms nocrypto-algorithms ms-bad-proposal"
 
 COMMON_DEPEND="!net-misc/strongswan
 	dev-libs/gmp
@@ -60,10 +60,11 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	use ms-bad-proposal && epatch "${FILESDIR}"/${PN}-${PV%.*}-allow-ms-bad-proposal.patch
 
-	find . -type f -regex '.*[.][1-8]' -exec sed -i \
+	find . -type f -regex '.*[.]\([1-8]\|html\|xml\)' -exec sed -i \
 	    -e s:/usr/local:/usr:g '{}' \; ||
-	    die "failed to replace text in xml docs"
+	    die "failed to replace text in docs"
 }
 
 get_make_options() {
@@ -74,7 +75,8 @@ get_make_options() {
 		INC_MANDIR=share/man \
 		FINALDOCDIR=/usr/share/doc/${PF}/html \
 		DESTDIR=\"${D}\" \
-		USERCOMPILE=\"${CFLAGS}\"
+		USERCOMPILE=\"${CFLAGS}\" \
+		CC=\"$(tc-getCC)\"
 	if use smartcard ; then
 		echo USE_SMARTCARD=true
 	fi
@@ -112,6 +114,11 @@ src_install() {
 	eval set -- $(get_make_options)
 	emake "$@" \
 		install || die "emake install failed"
+
+	dodoc docs/{KNOWN_BUGS*,RELEASE-NOTES*,PATENTS*,debugging*}
+	dohtml doc/*.html
+	docinto quickstarts
+	dodoc doc/quickstarts/*
 
 	newinitd "${FILESDIR}"/ipsec-initd ipsec || die "failed to install init script"
 
