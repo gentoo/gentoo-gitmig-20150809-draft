@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.32 2009/12/03 15:55:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.33 2009/12/05 06:42:12 abcd Exp $
+
+  05 Dec 2009; Jonathan Callen <abcd@gentoo.org> metadata.xml:
+  Update metadata.xml from overlay
 
 *soprano-2.3.1-r1 (03 Dec 2009)
 
