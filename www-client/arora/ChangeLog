@@ -1,6 +1,11 @@
 # ChangeLog for www-client/arora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.28 2009/12/05 21:16:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.29 2009/12/05 23:49:23 yngwin Exp $
+
+*arora-0.10.2 (05 Dec 2009)
+
+  05 Dec 2009; Ben de Groot <yngwin@gentoo.org> +arora-0.10.2.ebuild:
+  Version bump. Fixes bug 295808.
 
   05 Dec 2009; Ben de Groot <yngwin@gentoo.org> -arora-0.8.0.ebuild,
   -arora-0.9.0.ebuild, -arora-0.10.0.ebuild, arora-0.10.1.ebuild:
