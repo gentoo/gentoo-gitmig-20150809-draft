@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-0_pre20091130-r1.ebuild,v 1.1 2009/12/05 16:19:54 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-0_pre20091130-r1.ebuild,v 1.2 2009/12/05 17:37:22 wired Exp $
 
 EAPI="2"
 
@@ -77,13 +77,12 @@ src_compile() {
 }
 
 src_install() {
-	if use tabbed; then
-		emake DESTDIR="${D}" PREFIX="/usr" install || die "Installation failed"
-	else if use browser; then
+	emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-core || die "Installation failed"
+	if use browser || use tabbed; then
 			emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-browser || die "Installation failed"
-		else
-			emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-core || die "Installation failed"
-		fi
+	fi
+	if use tabbed; then
+		emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-tabbed || die "Installation failed"
 	fi
 
 	# Move the docs to /usr/share/doc instead.

@@ -1,5 +1,5 @@
---- Makefile.old	2009-12-04 15:52:06.100130674 +0200
-+++ Makefile	2009-12-04 15:54:32.143205265 +0200
+--- Makefile.old	2009-12-05 19:22:12.079131232 +0200
++++ Makefile	2009-12-05 19:24:51.863115587 +0200
 @@ -1,7 +1,7 @@
  # first entries are for gnu make, 2nd for BSD make.  see http://lists.uzbl.org/pipermail/uzbl-dev-uzbl.org/2009-July/000177.html
  
@@ -21,12 +21,9 @@
  
  uzbl-browser: uzbl-core
  
-@@ -86,18 +82,14 @@
+@@ -88,14 +84,10 @@
  
- install: install-uzbl-core install-uzbl-browser install-uzbl-tabbed
- 
--install-uzbl-core: all
-+install-uzbl-core:
+ install-uzbl-core: all
  	install -d $(INSTALLDIR)/bin
 -	install -d $(INSTALLDIR)/share/uzbl/docs
  	install -d $(INSTALLDIR)/share/uzbl/examples
@@ -37,18 +34,6 @@
  	install -m755 uzbl-core    $(INSTALLDIR)/bin/uzbl-core
 -	install -m644 AUTHORS      $(INSTALLDIR)/share/uzbl/docs
 -	install -m644 README       $(INSTALLDIR)/share/uzbl/docs
- 
--install-uzbl-browser: all
-+install-uzbl-browser: install-uzbl-core
- 	install -d $(INSTALLDIR)/bin
- 	install -m755 uzbl-browser $(INSTALLDIR)/bin/uzbl-browser
- 	install -m755 examples/data/uzbl/scripts/uzbl-cookie-daemon $(INSTALLDIR)/bin/uzbl-cookie-daemon
-@@ -106,7 +98,7 @@
- 	sed -i "s#^PREFIX = .*#PREFIX = '$(PREFIX)'#" $(INSTALLDIR)/bin/uzbl-event-manager
  	sed -i 's#^set prefix.*=.*#set prefix     = $(PREFIX)#' $(INSTALLDIR)/share/uzbl/examples/config/uzbl/config
  
--install-uzbl-tabbed: all
-+install-uzbl-tabbed: install-uzbl-browser
- 	install -d $(INSTALLDIR)/bin
- 	install -m755 examples/data/uzbl/scripts/uzbl-tabbed $(INSTALLDIR)/bin/uzbl-tabbed
- 
+ install-uzbl-browser: all
