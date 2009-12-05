@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.31 2009/11/08 19:20:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.32 2009/12/05 10:08:38 pva Exp $
+
+*ebtables-2.0.9.1-r1 (05 Dec 2009)
+
+  05 Dec 2009; Peter Volkov <pva@gentoo.org> -ebtables-2.0.8.2-r2.ebuild,
+  +ebtables-2.0.9.1-r1.ebuild:
+  Added static USE flag, bug #275460, thank Joakim Tjernlund for report.
+  Drop old.
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> ebtables-2.0.9.1.ebuild:
   ppc stable #288289
