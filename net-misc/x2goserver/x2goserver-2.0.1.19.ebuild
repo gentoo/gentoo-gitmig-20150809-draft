@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-2.0.1.19.ebuild,v 1.1 2009/03/13 12:44:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-2.0.1.19.ebuild,v 1.2 2009/12/05 09:11:32 ssuominen Exp $
 
 EAPI=1
 inherit versionator
@@ -14,22 +14,16 @@ SRC_URI="http://x2go.obviously-nice.de/deb/pool-lenny/${PN}/${PN}_${FULL_PV}_all
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+fuse kde"
+IUSE="+fuse"
 
 DEPEND=""
 RDEPEND="app-admin/sudo
 	net-misc/nx
 	virtual/postgresql-server
 	virtual/ssh
-	fuse? ( sys-fs/sshfs-fuse )
-	kde? ( net-misc/x2gokdebindings
-		net-misc/x2gosessionadministration )"
+	fuse? ( sys-fs/sshfs-fuse )"
 # Still in the NX overlay for now
-#	ldap? ( net-misc/x2goldaptools
-#		kde? ( net-misc/x2gogroupadministration
-#			net-misc/x2gohostadministration
-#			net-misc/x2gosystemadministration
-#			net-misc/x2gouseradministration ) )"
+#	ldap? ( net-misc/x2goldaptools )"
 
 S=${WORKDIR}
 
