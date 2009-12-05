@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3648 2009/12/05 13:26:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3649 2009/12/05 22:37:15 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Dec 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Temporarily mask =hal-0.5.14, which breaks KDE, bug 295600
 
   05 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking dev-lang/sunstudioexpress for QA removal.
