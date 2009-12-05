@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.13 2009/11/25 10:11:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.14 2009/12/05 16:10:30 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="debug doc"
 GNUSTEP_CORE_DEPEND="doc? ( virtual/texi2dvi dev-tex/latex2html app-text/texi2html )"
 
 # Where to install GNUstep
-GNUSTEP_PREFIX="/usr/GNUstep"
+GNUSTEP_PREFIX="${EPREFIX}/usr/GNUstep"
 
 # GNUstep environment array
 typeset -a GS_ENV
@@ -221,7 +221,7 @@ EOF
 	done
 	echo 'echo "done"' >> "${T}"/${cfile}
 
-	exeinto ${GNUSTEP_SYSTEM_TOOLS}/Gentoo
+	exeinto ${GNUSTEP_SYSTEM_TOOLS#${EPREFIX}}/Gentoo
 	doexe "${T}"/${cfile}
 }
 
