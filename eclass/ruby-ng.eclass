@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.3 2009/12/05 11:32:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.4 2009/12/05 11:33:10 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -411,8 +411,9 @@ ruby-ng_src_install() {
 # @DESCRIPTION:
 # Installs the specified file(s) into the sitelibdir of the Ruby interpreter in ${RUBY}.
 doruby() {
+	[[ -z ${RUBY} ]] && die "\$RUBY is not set"
 	( # don't want to pollute calling env
-		insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
+		insinto $(${RUBY} -rrbconfig -e 'print Config::CONFIG["sitelibdir"]')
 		insopts -m 0644
 		doins "$@"
 	) || die "failed to install $@"
