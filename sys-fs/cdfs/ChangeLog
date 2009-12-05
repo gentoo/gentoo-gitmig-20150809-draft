@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cdfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.10 2009/10/25 20:21:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/ChangeLog,v 1.11 2009/12/05 22:09:44 idl0r Exp $
+
+  05 Dec 2009; Christian Ruppert <idl0r@gentoo.org> cdfs-2.6.19.ebuild,
+  cdfs-2.6.23.ebuild, cdfs-2.6.27.ebuild:
+  Fix HOMEPAGE/SRC_URI, bug 294784.
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove drizzt from metadata.xml (#149111)
