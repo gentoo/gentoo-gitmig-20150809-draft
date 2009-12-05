@@ -2,15 +2,22 @@ https://bugs.gentoo.org/show_bug.cgi?id=292404
 http://code.google.com/p/python-nose/issues/detail?id=305
 https://bitbucket.org/jpellerin/nose/changeset/92a11c73d7a3/
 https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
+https://bitbucket.org/jpellerin/nose/changeset/0ba5d4461097/
+https://bitbucket.org/jpellerin/nose/changeset/4537746a563d/
+https://bitbucket.org/jpellerin/nose/changeset/0cd5b3760e61/
 
 --- functional_tests/doc_tests/test_init_plugin/init_plugin.rst
 +++ functional_tests/doc_tests/test_init_plugin/init_plugin.rst
-@@ -32,6 +32,9 @@
+@@ -32,6 +32,13 @@
      ...     def test_likes_cheese(self):
      ...         """Widgets might like cheese"""
      ...         self.widget.likes_cheese()
 +    ...     def shortDescription(self): # 2.7 compat
-+    ...         doc = self._testMethodDoc
++    ...         try:
++    ...             doc = self._testMethodDoc
++    ...         except AttributeError:
++    ...             # 2.4 compat
++    ...             doc = self._TestCase__testMethodDoc
 +    ...         return doc and doc.split("\n")[0].strip() or None
  
  The tests are bundled into a suite that we can pass to the test runner.
@@ -133,6 +140,29 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
              descriptions=0, verbosity=1)
          suite(res)
          assert not res.errors
+--- functional_tests/test_plugins.py
++++ functional_tests/test_plugins.py
+@@ -41,7 +41,7 @@
+              'loadTestsFromDir', 'afterDirectory',
+              'report', 'finalize'])
+ 
+-    def test_plugin_calls_package1_versbose(self):
++    def test_plugin_calls_package1_verbose(self):
+         wdir = os.path.join(support, 'package1')
+         man = RecordingPluginManager()
+         conf = Config(plugins=man, stream=sys.stdout)
+@@ -61,9 +61,9 @@
+              'makeTest', 'wantMethod', 'loadTestsFromTestClass',
+              'loadTestsFromTestCase', 'loadTestsFromModule', 'startContext',
+              'beforeTest', 'prepareTestCase', 'startTest', 'describeTest',
+-             'addSuccess', 'stopTest', 'afterTest', 'stopContext', 'testName',
++             'testName', 'addSuccess', 'stopTest', 'afterTest', 'stopContext',
+              'afterContext', 'loadTestsFromDir', 'afterDirectory',
+-             'report', 'finalize'])        
++             'report', 'finalize'])
+ 
+ 
+ 
 --- functional_tests/test_program.py
 +++ functional_tests/test_program.py
 @@ -5,13 +5,14 @@
@@ -162,7 +192,55 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
      """
      __test__ = False # do not collect
      def __init__(self, test, config=None, resultProxy=None):
-@@ -148,27 +148,24 @@
+@@ -39,7 +39,7 @@
+         self.plugins = config.plugins
+         self.passed = None
+         unittest.TestCase.__init__(self)
+-        
++
+     def __call__(self, *arg, **kwarg):
+         return self.run(*arg, **kwarg)
+ 
+@@ -74,10 +74,10 @@
+ 
+     def exc_info(self):
+         """Extract exception info.
+-        """        
++        """
+         exc, exv, tb = sys.exc_info()
+         return (exc, exv, tb)
+-        
++
+     def id(self):
+         """Get a short(er) description of the test
+         """
+@@ -107,10 +107,10 @@
+             return resolve_name(self.test.__module__)
+         except AttributeError:
+             pass
+-        return None                
++        return None
+     context = property(_context, None, None,
+                       """Get the context object of this test (if any).""")
+-    
++
+     def run(self, result):
+         """Modified run for the test wrapper.
+ 
+@@ -137,51 +137,54 @@
+                 result.addError(self, err)
+         finally:
+             self.afterTest(result)
+-        
++
+     def runTest(self, result):
+         """Run the test. Plugins may alter the test by returning a
+         value from prepareTestCase. The value must be callable and
+         must accept one argument, the result instance.
+-        """        
++        """
+         test = self.test
+         plug_test = self.config.plugins.prepareTestCase(self)
          if plug_test is not None:
              test = plug_test
          test(result)
@@ -192,10 +270,139 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
 -        if doc is not None:
 -            doc = doc.strip().split("\n")[0].strip()
 -        return doc
-+        return self.test.shortDescription()
++        # 2.7 compat: shortDescription() always returns something
++        # which is a change from 2.6 and below, and breaks the
++        # testName plugin call.
++        desc = self.test.shortDescription()
++        if desc == str(self.test):
++            return
++        return desc
  
  
  class TestBase(unittest.TestCase):
+     """Common functionality for FunctionTestCase and MethodTestCase.
+     """
+     __test__ = False # do not collect
+-    
++
+     def id(self):
+         return str(self)
+-        
++
+     def runTest(self):
+         self.test(*self.arg)
+-    
++
+     def shortDescription(self):
+         if hasattr(self.test, 'description'):
+             return self.test.description
+@@ -191,7 +194,7 @@
+             doc = str(self)
+         return doc.strip().split("\n")[0].strip()
+ 
+-    
++
+ class FunctionTestCase(TestBase):
+     """TestCase wrapper for test functions.
+ 
+@@ -199,7 +202,7 @@
+     create test cases for test functions.
+     """
+     __test__ = False # do not collect
+-    
++
+     def __init__(self, test, setUp=None, tearDown=None, arg=tuple(),
+                  descriptor=None):
+         """Initialize the MethodTestCase.
+@@ -220,13 +223,13 @@
+         * descriptor -- the function, other than the test, that should be used
+           to construct the test name. This is to support generator functions.
+         """
+-        
++
+         self.test = test
+         self.setUpFunc = setUp
+         self.tearDownFunc = tearDown
+         self.arg = arg
+         self.descriptor = descriptor
+-        TestBase.__init__(self)        
++        TestBase.__init__(self)
+ 
+     def address(self):
+         """Return a round-trip name for this test, a name that can be
+@@ -236,13 +239,13 @@
+         if self.descriptor is not None:
+             return test_address(self.descriptor)
+         else:
+-            return test_address(self.test)    
++            return test_address(self.test)
+ 
+     def _context(self):
+         return resolve_name(self.test.__module__)
+     context = property(_context, None, None,
+                       """Get context (module) of this test""")
+-        
++
+     def setUp(self):
+         """Run any setup function attached to the test function
+         """
+@@ -260,7 +263,7 @@
+         else:
+             names = ('teardown', 'tearDown', 'tearDownFunc')
+             try_run(self.test, names)
+-        
++
+     def __str__(self):
+         func, arg = self._descriptors()
+         if hasattr(func, 'compat_func_name'):
+@@ -273,9 +276,9 @@
+         # FIXME need to include the full dir path to disambiguate
+         # in cases where test module of the same name was seen in
+         # another directory (old fromDirectory)
+-        return name 
++        return name
+     __repr__ = __str__
+-    
++
+     def _descriptors(self):
+         """Get the descriptors of the test function: the function and
+         arguments that will be used to construct the test name. In
+@@ -286,7 +289,7 @@
+         """
+         if self.descriptor:
+             return self.descriptor, self.arg
+-        else:            
++        else:
+             return self.test, self.arg
+ 
+ 
+@@ -297,7 +300,7 @@
+     create test cases for test methods.
+     """
+     __test__ = False # do not collect
+-    
++
+     def __init__(self, method, test=None, arg=tuple(), descriptor=None):
+         """Initialize the MethodTestCase.
+ 
+@@ -328,7 +331,7 @@
+         self.inst = self.cls()
+         if self.test is None:
+             method_name = self.method.__name__
+-            self.test = getattr(self.inst, method_name)            
++            self.test = getattr(self.inst, method_name)
+         TestBase.__init__(self)
+ 
+     def __str__(self):
+@@ -365,7 +368,7 @@
+ 
+     def tearDown(self):
+         try_run(self.inst, ('teardown', 'tearDown'))
+-        
++
+     def _descriptors(self):
+         """Get the descriptors of the test method: the method and
+         arguments that will be used to construct the test name. In
 --- nose/core.py
 +++ nose/core.py
 @@ -108,9 +108,13 @@
@@ -215,6 +422,15 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
          """Load a Config, pre-filled with user config files if any are
 --- nose/plugins/errorclass.py
 +++ nose/plugins/errorclass.py
+@@ -29,7 +29,7 @@
+ the result. This is an internal format and subject to change; you
+ should always use the declarative syntax for attaching ErrorClasses to
+ an ErrorClass plugin.
+-    
++
+     >>> TodoError.errorClasses # doctest: +ELLIPSIS
+     ((<class ...Todo...>, ('todo', 'TODO', True)),)
+ 
 @@ -37,7 +37,13 @@
  
      >>> import sys
@@ -225,7 +441,7 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
 +    ...     from unittest.runner import _WritelnDecorator
 +    ... except ImportError:
 +    ...     from unittest import _WritelnDecorator
-+    ... 
++    ...
 +    >>> buf = _WritelnDecorator(sys.stdout)
  
  Now define a test case that raises a Todo.
@@ -241,6 +457,56 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
      >>> plugin.prepareTestResult(result)
  
  Now run the test. TODO is printed.
+@@ -148,6 +154,7 @@
+                 result.errorClasses[cls] = (storage, label, isfail)
+ 
+     def patchResult(self, result):
++        result.printLabel = print_label_patch(result)
+         result._orig_addError, result.addError = \
+             result.addError, add_error_patch(result)
+         result._orig_wasSuccessful, result.wasSuccessful = \
+@@ -155,6 +162,9 @@
+         if hasattr(result, 'printErrors'):
+             result._orig_printErrors, result.printErrors = \
+                 result.printErrors, print_errors_patch(result)
++        if hasattr(result, 'addSkip'):
++            result._orig_addSkip, result.addSkip = \
++                result.addSkip, add_skip_patch(result)
+         result.errorClasses = {}
+ 
+ 
+@@ -175,6 +185,14 @@
+         TextTestResult.printErrors.im_func, result, result.__class__)
+ 
+ 
++def print_label_patch(result):
++    """Create a new printLabel method that prints errorClasses items
++    as well.
++    """
++    return instancemethod(
++        TextTestResult.printLabel.im_func, result, result.__class__)
++
++
+ def wassuccessful_patch(result):
+     """Create a new wasSuccessful method that checks errorClasses for
+     exceptions that were put into other slots than error or failure
+@@ -183,7 +201,15 @@
+     return instancemethod(
+         TextTestResult.wasSuccessful.im_func, result, result.__class__)
+ 
+-    
++
++def add_skip_patch(result):
++    """Create a new addSkip method to patch into a result instance
++    that delegates to addError.
++    """
++    return instancemethod(
++        TextTestResult.addSkip.im_func, result, result.__class__)
++
++
+ if __name__ == '__main__':
+     import doctest
+     doctest.testmod()
 --- nose/plugins/multiprocess.py
 +++ nose/plugins/multiprocess.py
 @@ -95,6 +95,11 @@
@@ -275,6 +541,98 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
          
          """
          raise NotImplementedError
+--- nose/plugins/skip.py
++++ nose/plugins/skip.py
+@@ -5,13 +5,18 @@
+ the exception will not be counted as an error or failure. This plugin
+ is enabled by default but may be disabled with the ``--no-skip`` option.
+ """
+-    
++
+ from nose.plugins.errorclass import ErrorClass, ErrorClassPlugin
+ 
+ 
+-class SkipTest(Exception):
+-    """Raise this exception to mark a test as skipped.
+-    """
++try:
++    # 2.7
++    from unittest.case import SkipTest
++except ImportError:
++    # 2.6 and below
++    class SkipTest(Exception):
++        """Raise this exception to mark a test as skipped.
++        """
+     pass
+ 
+ 
+@@ -48,4 +53,4 @@
+         disable = getattr(options, 'noSkip', False)
+         if disable:
+             self.enabled = False
+-            
++
+--- nose/proxy.py
++++ nose/proxy.py
+@@ -72,8 +72,8 @@
+     the wrapped test case) as each result call is made. Finally, the
+     real result method is called, also with the nose.case.Test
+     instance as the test parameter.
+-    
+-    """    
++
++    """
+     def __init__(self, result, test, config=None):
+         if config is None:
+             config = Config()
+@@ -90,12 +90,12 @@
+         # .test's .test. or my .test.test's .case
+ 
+         case = getattr(self.test, 'test', None)
+-        assert (test is self.test 
+-                or test is case 
+-                or test is getattr(case, '_nose_case', None)), ( 
+-                "ResultProxy for %r (%s) was called with test %r (%s)" 
++        assert (test is self.test
++                or test is case
++                or test is getattr(case, '_nose_case', None)), (
++                "ResultProxy for %r (%s) was called with test %r (%s)"
+                 % (self.test, id(self.test), test, id(test)))
+-    
++
+     def afterTest(self, test):
+         self.assertMyTest(test)
+         self.plugins.afterTest(self.test)
+@@ -137,7 +137,15 @@
+         self.result.addFailure(self.test, err)
+         if self.config.stopOnError:
+             self.shouldStop = True
+-    
++
++    def addSkip(self, test, reason):
++        # 2.7 compat shim
++        from nose.plugins.skip import SkipTest
++        self.assertMyTest(test)
++        plugins = self.plugins
++        plugins.addError(self.test, (SkipTest, reason, None))
++        self.result.addSkip(self.test, reason)
++
+     def addSuccess(self, test):
+         self.assertMyTest(test)
+         self.plugins.addSuccess(self.test)
+@@ -147,10 +155,10 @@
+         self.assertMyTest(test)
+         self.plugins.startTest(self.test)
+         self.result.startTest(self.test)
+-    
++
+     def stop(self):
+         self.result.stop()
+-    
++
+     def stopTest(self, test):
+         self.assertMyTest(test)
+         self.plugins.stopTest(self.test)
 --- nose/result.py
 +++ nose/result.py
 @@ -2,14 +2,18 @@
@@ -297,6 +655,114 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
 +    from unittest import _TextTestResult
  from nose.config import Config
  from nose.util import isclass, ln as _ln # backwards compat
+ 
+@@ -28,23 +32,30 @@
+     """Text test result that extends unittest's default test result
+     support for a configurable set of errorClasses (eg, Skip,
+     Deprecated, TODO) that extend the errors/failures/success triad.
+-    """    
++    """
+     def __init__(self, stream, descriptions, verbosity, config=None,
+-                 errorClasses=None):        
++                 errorClasses=None):
+         if errorClasses is None:
+             errorClasses = {}
+         self.errorClasses = errorClasses
+         if config is None:
+-            config = Config()       
++            config = Config()
+         self.config = config
+         _TextTestResult.__init__(self, stream, descriptions, verbosity)
+-                
++
++    def addSkip(self, test, reason):
++        # 2.7 skip compat
++        from nose.plugins.skip import SkipTest
++        if SkipTest in self.errorClasses:
++            storage, label, isfail = self.errorClasses[SkipTest]
++            storage.append((test, reason))
++            self.printLabel(label, (SkipTest, reason, None))
++
+     def addError(self, test, err):
+         """Overrides normal addError to add support for
+         errorClasses. If the exception is a registered class, the
+         error will be added to the list for that class, not errors.
+         """
+-        stream = getattr(self, 'stream', None)
+         ec, ev, tb = err
+         try:
+             exc_info = self._exc_info_to_string(err, test)
+@@ -52,28 +63,32 @@
+             # 2.3 compat
+             exc_info = self._exc_info_to_string(err)
+         for cls, (storage, label, isfail) in self.errorClasses.items():
++            #if 'Skip' in cls.__name__ or 'Skip' in ec.__name__:
++            #    from nose.tools import set_trace
++            #    set_trace()
+             if isclass(ec) and issubclass(ec, cls):
+                 if isfail:
+                     test.passed = False
+                 storage.append((test, exc_info))
+-                # Might get patched into a streamless result
+-                if stream is not None:
+-                    if self.showAll:
+-                        message = [label]
+-                        detail = _exception_detail(err[1])
+-                        if detail:
+-                            message.append(detail)
+-                        stream.writeln(": ".join(message))
+-                    elif self.dots:
+-                        stream.write(label[:1])
++                self.printLabel(label, err)
+                 return
+         self.errors.append((test, exc_info))
+         test.passed = False
++        self.printLabel('ERROR')
++
++    def printLabel(self, label, err=None):
++        # Might get patched into a streamless result
++        stream = getattr(self, 'stream', None)
+         if stream is not None:
+             if self.showAll:
+-                self.stream.writeln('ERROR')
++                message = [label]
++                if err:
++                    detail = _exception_detail(err[1])
++                    if detail:
++                        message.append(detail)
++                stream.writeln(": ".join(message))
+             elif self.dots:
+-                stream.write('E')
++                stream.write(label[:1])
+ 
+     def printErrors(self):
+         """Overrides to print all errorClasses errors as well.
+@@ -96,7 +111,7 @@
+         taken = float(stop - start)
+         run = self.testsRun
+         plural = run != 1 and "s" or ""
+-        
++
+         writeln(self.separator2)
+         writeln("Ran %s test%s in %.3fs" % (run, plural, taken))
+         writeln()
+@@ -157,6 +172,10 @@
+             self.stream.write('E')
+ 
+     def _exc_info_to_string(self, err, test=None):
++        # 2.7 skip compat
++        from nose.plugins.skip import SkipTest
++        if issubclass(err[0], SkipTest):
++            return str(err[1])
+         # 2.3/2.4 -- 2.4 passes test, 2.3 does not
+         try:
+             return _TextTestResult._exc_info_to_string(self, err, test)
+@@ -171,5 +190,5 @@
+          "from nose.result in a future release. Please update your imports ",
+          DeprecationWarning)
+     return _ln(*arg, **kw)
+-    
++
  
 --- nose/suite.py
 +++ nose/suite.py
@@ -430,8 +896,12 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
  
  
  class TestSkipPlugin(unittest.TestCase):
-@@ -15,8 +21,8 @@
-         sk.prepareTestResult        
+@@ -12,11 +18,11 @@
+         sk = Skip()
+         sk.addOptions
+         sk.configure
+-        sk.prepareTestResult        
++        sk.prepareTestResult
  
      def test_prepare_patches_result(self):
 -        stream = unittest._WritelnDecorator(StringIO())
@@ -441,7 +911,22 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
          sk = Skip()
          sk.prepareTestResult(res)
          res._orig_addError
-@@ -67,8 +73,8 @@
+@@ -54,31 +60,32 @@
+         class NoPatch(unittest.TestResult):
+             def __init__(self):
+                 self.errorClasses = {}
+-                
++
+         res = NoPatch()
+         sk = Skip()
+         sk.prepareTestResult(res)
+         assert not hasattr(res, '_orig_addError'), \
+                "Skip patched a result class it didn't need to patch"
+-        
++
+ 
+     def test_skip_output(self):
+         class TC(unittest.TestCase):
              def test(self):
                  raise SkipTest('skip me')
  
@@ -452,17 +937,38 @@ https://bitbucket.org/jpellerin/nose/changeset/c610aade196e/
          sk = Skip()
          sk.prepareTestResult(res)
  
-@@ -89,8 +95,8 @@
+         test = TC('test')
+         test(res)
+         assert not res.errors, "Skip was not caught: %s" % res.errors
+-        assert res.skipped            
++        assert res.skipped
+ 
+         res.printErrors()
+         out = stream.getvalue()
++        print out
+         assert out
+         assert out.strip() == "S"
+         assert res.wasSuccessful()
+@@ -88,15 +95,15 @@
+         class TC(unittest.TestCase):
              def test(self):
                  raise SkipTest('skip me too')
-         
+-        
 -        stream = unittest._WritelnDecorator(StringIO())
 -        res = unittest._TextTestResult(stream, 0, verbosity=2)
++
 +        stream = _WritelnDecorator(StringIO())
 +        res = _TextTestResult(stream, 0, verbosity=2)
          sk = Skip()
          sk.prepareTestResult(res)
          test = TC('test')
+         test(res)
+         assert not res.errors, "Skip was not caught: %s" % res.errors
+-        assert res.skipped            
++        assert res.skipped
+ 
+         res.printErrors()
+         out = stream.getvalue()
 --- unit_tests/test_utils.py
 +++ unit_tests/test_utils.py
 @@ -51,7 +51,7 @@
