@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>games</herd>
+  <maintainer>
+    <email>ssuominen@gentoo.org</email>
+	<name>Samuli Suominen</name>
+  </maintainer>
   <use>
     <flag name="force-oss">force using OSS</flag>
   </use>
