@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.2 2009/10/28 20:54:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.3 2009/12/05 23:00:35 arfrever Exp $
 
-EAPI=2
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils subversion
 
@@ -26,6 +27,7 @@ DEPEND="sys-apps/portage
 	sys-apps/gawk"
 RDEPEND="${DEPEND}
 	app-misc/realpath"
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
 	distutils_src_install
@@ -36,19 +38,15 @@ src_install() {
 	fowners root:root /var/cache/revdep-rebuild
 	fperms 0700 /var/cache/revdep-rebuild
 
-	# Can distutils handle this?
-	dosym eclean /usr/bin/eclean-dist
-	dosym eclean /usr/bin/eclean-pkg
-}
-
-pkg_preinst() {
-	subversion_pkg_preinst
-
 	# Gentoolkit scripts can use this to report a consistant version
 	echo "${PV}-r${ESVN_WC_REVISION}" > VERSION
 	dodir /usr/share/gentoolkit
 	insinto /usr/share/gentoolkit
 	doins VERSION
+
+	# Can distutils handle this?
+	dosym eclean /usr/bin/eclean-dist
+	dosym eclean /usr/bin/eclean-pkg
 }
 
 pkg_postinst() {
