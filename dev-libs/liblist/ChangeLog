@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/liblist
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.1 2009/04/20 05:44:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.2 2009/12/05 22:32:30 nerdboy Exp $
+
+*liblist-2.1-r1 (05 Dec 2009)
+
+  05 Dec 2009; Steve Arnold <nerdboy@gentoo.org> +liblist-2.1-r1.ebuild,
+  +files/liblist-2.1-sharedlib.patch:
+  Lemony-fresh rev-bump, now with shared library support. Closes bug #294788.
+  Manifest issue also fixed (closes bug #294785).
 
 *liblist-2.1 (20 Apr 2009)
 
