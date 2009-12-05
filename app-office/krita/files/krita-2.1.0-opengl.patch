@@ -1,0 +1,24 @@
+http://bugs.kde.org/217239
+
+--- krita/ui/kis_3d_object_model.h
++++ krita/ui/kis_3d_object_model.h
+@@ -56,7 +56,9 @@
+     void parseMaterial(const QString &fileName);
+ 
+ 
++#ifdef HAVE_OPENGL
+     GLuint displayList();
++#endif
+ 
+ private:
+     QString m_fileName;
+@@ -71,7 +73,9 @@
+     void debug(Material m);
+ 
+     bool m_cached;
++#ifdef HAVE_OPENGL
+     GLuint m_displayList;
++#endif
+ };
+ 
+ #endif // KIS_3D_OBJECT_MODEL_H

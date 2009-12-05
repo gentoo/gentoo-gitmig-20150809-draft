@@ -1,6 +1,11 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.102 2009/11/28 08:26:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.103 2009/12/05 17:55:10 ssuominen Exp $
+
+  05 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> krita-2.1.0.ebuild,
+  +files/krita-2.1.0-opengl.patch:
+  Fix building with USE="-opengl" wrt #294787, thanks to Jouni Rinne for
+  reporting.
 
   28 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> -krita-2.0.2.ebuild:
   Drop old 2.0 release series.
