@@ -1,0 +1,13 @@
+diff -Nru freeradius-server-2.1.7.orig/src/main/event.c freeradius-server-2.1.7/src/main/event.c
+--- freeradius-server-2.1.7.orig/src/main/event.c	2009-09-14 16:43:29.000000000 +0200
++++ freeradius-server-2.1.7/src/main/event.c	2009-12-05 09:17:06.000000000 +0100
+@@ -1617,7 +1617,9 @@
+ 	 */
+ 	request->num_proxied_requests = 1;
+ 	request->num_proxied_responses = 0;
++#ifdef HAVE_PTHREAD_H
+ 	request->child_pid = NO_SUCH_CHILD_PID;
++#endif
+ 
+ 	update_event_timestamp(request->proxy, request->proxy_when.tv_sec);
+ 
