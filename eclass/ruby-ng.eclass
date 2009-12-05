@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.1 2009/12/05 09:35:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.2 2009/12/05 11:30:17 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -364,6 +364,18 @@ ruby-ng_src_test() {
 _each_ruby_check_install() {
 	local libruby_basename=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["LIBRUBY_SO"]')
 	local libruby_soname=$(scanelf -qS "/usr/$(get_libdir)/${libruby_basename}" | awk '{ print $1 }')
+	local sitedir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitedir"]')
+	local sitelibdir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitelibdir"]')
+
+	# Look for wrong files in sitedir
+	if [[ -d "${D}${sitedir}" ]]; then
+		local f=$(find "${D}${sitedir}" -mindepth 1 -maxdepth 1 -not -wholename "${D}${sitelibdir}")
+		if [[ -n ${f} ]]; then
+			eerror "Found files in sitedir, outsite sitelibdir:"
+			eerror "${f}"
+			die "Misplaced files in sitedir"
+		fi
+	fi
 
 	# The current implementation lacks libruby (i.e.: jruby)
 	[[ -z ${libruby_soname} ]] && return 0
