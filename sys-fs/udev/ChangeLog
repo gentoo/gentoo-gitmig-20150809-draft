@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.515 2009/12/04 17:51:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.516 2009/12/05 16:34:54 zzam Exp $
+
+*udev-149 (05 Dec 2009)
+
+  05 Dec 2009; Matthias Schwarzott <zzam@gentoo.org> +udev-149.ebuild:
+  Version bumped. No longer exclude /etc/udev/rules.d from config_protect.
 
   04 Dec 2009; Raúl Porcel <armin76@gentoo.org> udev-147-r1.ebuild:
   Doesn't compile on sh
