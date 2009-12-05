@@ -1,22 +1,64 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/files/sid-filter.init,v 1.1 2006/07/18 01:06:48 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/files/sid-filter.init,v 1.2 2009/12/05 06:49:37 mrness Exp $
 
 depend() {
 	# need net
 	use dns logger net
 }
 
+parse_opts() {
+	local filter_opt filter_flag=
+	for filter_opt in ${SID_FILTER_OPTS}; do
+		case "${filter_flag}" in
+			-u)	filter_user=${filter_opt}
+				;;
+			-P)	filter_pid=${filter_opt}
+				;;
+		esac
+		[ -n "${filter_user}" -a -n "${filter_pid}" ] && break
+		filter_flag=${filter_opt}
+	done
+
+	if [ -z "${filter_user}" ]; then 
+		filter_user=milter
+		SID_FILTER_OPTS="${SID_FILTER_OPTS} -u ${filter_user}"
+	fi
+}
+
 start() {
+	local filter_user= filter_pid= SSD_OPTS=
+
+	parse_opts
+	if [ -n "${filter_pid}" ]; then
+		if ! (touch ${filter_pid} && chown ${filter_user} ${filter_pid}) ; then
+			eerror "Failed to create pidfile"
+			return 1
+		fi
+		SSD_OPTS="--pidfile ${filter_pid}"
+	fi
+
 	ebegin "Starting Sender-ID Filter"
-	start-stop-daemon --start --quiet --background \
+	start-stop-daemon --start --quiet --background ${SSD_OPTS} \
 		--exec /usr/bin/sid-filter -- ${SID_FILTER_OPTS}
 	eend $?
 }
 
 stop() {
+	local filter_user= filter_pid= SSD_OPTS=
+
+	parse_opts
+	if [ -n "${filter_pid}" ]; then
+		SSD_OPTS="--pidfile ${filter_pid}"
+	fi
+	
 	ebegin "Stopping Sender-ID Filter"
-	start-stop-daemon --stop --quiet --name sid-filter
+	start-stop-daemon --stop --quiet --name sid-filter ${SSD_OPTS}
 	eend $?
+
+	if [ $? = 0 -a -n "${filter_pid}" -a -f "${filter_pid}" ]; then
+		rm ${filter_pid}
+	fi
 }
+
