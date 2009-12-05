@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.41 2009/11/29 22:24:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.42 2009/12/05 18:51:09 scarabeus Exp $
+
+  05 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  dvipdfmx-20090708.ebuild:
+  Call better command in postinst and postrm calls.
 
 *dvipdfmx-20090708 (29 Nov 2009)
 
