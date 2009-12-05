@@ -1,6 +1,13 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.4 2009/08/08 17:23:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.5 2009/12/05 22:02:02 ulm Exp $
+
+*conkeror-0.9.1 (05 Dec 2009)
+
+  05 Dec 2009; Ulrich Mueller <ulm@gentoo.org>
+  -conkeror-0.9_pre20090401.ebuild, -conkeror-0.9_pre20090724.ebuild,
+  +conkeror-0.9.1.ebuild, files/conkeror.desktop:
+  Version bump. Add icon. Remove old.
 
 *conkeror-0.9_pre20090724 (08 Aug 2009)
 
