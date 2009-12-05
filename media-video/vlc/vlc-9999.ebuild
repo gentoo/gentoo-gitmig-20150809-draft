@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.48 2009/11/21 11:39:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.49 2009/12/05 08:43:26 aballier Exp $
 
 EAPI="2"
 
@@ -150,10 +150,6 @@ RDEPEND="
 		xosd? ( x11-libs/xosd )
 		zvbi? ( >=media-libs/zvbi-0.2.25 )
 		"
-
-# Disabled features and reasons:
-# xvmc? ( x11-libs/libXvMC )
-#	Will probably compile only on x86
 
 DEPEND="${RDEPEND}
 	dvb? ( sys-kernel/linux-headers )
@@ -350,7 +346,6 @@ src_configure() {
 		$(use_enable xml libxml2) \
 		$(use_enable xosd) \
 		$(use_enable xv xvideo) \
-		--disable-xvmc \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-snapshot \
 		--disable-growl \
