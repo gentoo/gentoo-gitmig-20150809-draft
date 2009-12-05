@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.4.ebuild,v 1.1 2009/12/04 23:42:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.4.ebuild,v 1.2 2009/12/05 00:44:07 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils
 
@@ -25,6 +26,7 @@ RDEPEND=">=dev-lang/python-2.5
 			>=dev-util/subversion-1.5.4[webdav-serf]
 		)
 	)"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 pkg_setup() {
 	if ! has_version dev-util/subversion; then
@@ -38,8 +40,14 @@ pkg_setup() {
 	fi
 }
 
-src_install() {
+src_test() {
+	testing() {
+		PYTHONPATH="." "$(PYTHON)" layman/tests/dtest.py
+	}
+	python_execute_function testing
+}
 
+src_install() {
 	distutils_src_install
 
 	dodir /etc/layman
@@ -52,16 +60,9 @@ src_install() {
 	keepdir /usr/local/portage/layman
 }
 
-src_test() {
-	einfo "Running layman doctests..."
-	echo
-	if ! PYTHONPATH="." ${python} layman/tests/dtest.py; then
-		eerror "DocTests failed - please submit a bug report"
-		die "DocTesting failed!"
-	fi
-}
-
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	einfo "You are now ready to add overlays into your system."
 	einfo
 	einfo "layman -L"
