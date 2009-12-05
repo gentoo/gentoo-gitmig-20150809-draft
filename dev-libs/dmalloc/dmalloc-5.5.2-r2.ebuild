@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r2.ebuild,v 1.5 2009/10/03 09:29:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r2.ebuild,v 1.6 2009/12/05 12:25:55 armin76 Exp $
 
 inherit autotools eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://dmalloc.com/releases/${P}.tgz"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="threads"
 
 DEPEND=""
