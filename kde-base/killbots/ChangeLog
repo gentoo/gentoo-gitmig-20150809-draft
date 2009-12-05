@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.29 2009/12/01 10:41:04 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.30 2009/12/05 05:07:02 abcd Exp $
+
+  05 Dec 2009; Jonathan Callen <abcd@gentoo.org> killbots-4.3.3.ebuild,
+  killbots-4.3.4.ebuild:
+  Tests hang, RESTRCTing until upstream fixes
 
 *killbots-4.3.4 (01 Dec 2009)
 
