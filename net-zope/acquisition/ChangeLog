@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/acquisition
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/acquisition/ChangeLog,v 1.1 2009/12/05 03:24:36 arfrever Exp $
+
+*acquisition-2.12.4 (05 Dec 2009)
+
+  05 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +acquisition-2.12.4.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
