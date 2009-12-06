@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3651 2009/12/06 17:59:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3652 2009/12/06 21:33:58 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking dev-libs/libip_vs_user_sync for QA removal.
 
   06 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking x11-apps/xmh for QA removal.

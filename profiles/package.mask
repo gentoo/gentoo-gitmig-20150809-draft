@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10943 2009/12/06 19:39:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10944 2009/12/06 21:33:58 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (06 Dec 2009)
+#  on behalf of QA team
+#
+# libip_vs_user_sync fails to build with current
+# linux-headers, bug #247061 open November
+# 2008. sys-cluster/saru depends on that.
+#
+# Removal on 2010-02-04
+dev-libs/libip_vs_user_sync
+sys-cluster/saru
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (06 Dec 2009)
 #  on behalf of QA team
