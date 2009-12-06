@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.4 2009/06/10 20:22:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.5 2009/12/06 08:21:13 vapier Exp $
+
+*microcode-data-20090927 (06 Dec 2009)
+
+  06 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +microcode-data-20090927.ebuild:
+  Version bump #290370 by Jochen.
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org>
   microcode-data-20090330.ebuild:
