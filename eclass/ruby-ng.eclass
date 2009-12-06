@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.4 2009/12/05 11:33:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.5 2009/12/06 13:01:26 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -267,7 +267,7 @@ ruby-ng_pkg_setup() {
 
 # @FUNCTION: ruby-ng_src_unpack
 # @DESCRIPTION:
-# Unpack the source archive, including gems.
+# Unpack the source archive.
 ruby-ng_src_unpack() {
 	mkdir "${WORKDIR}"/all
 	pushd "${WORKDIR}"/all &>/dev/null
