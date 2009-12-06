@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.9 2009/11/30 15:59:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.10 2009/12/06 17:14:48 flameeyes Exp $
+
+  06 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  talloc-2.0.0-r1.ebuild:
+  Block older samba (to force uninstall).
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> talloc-2.0.0-r1.ebuild:
   Add ~arm/~ia64/~s390/~sh/~sparc wrt #285952
