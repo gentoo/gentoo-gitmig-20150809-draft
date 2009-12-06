@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.28.1.ebuild,v 1.1 2009/10/29 22:29:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.28.1.ebuild,v 1.2 2009/12/06 15:19:34 eva Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 # TODO: Re-generate doc ?
-IUSE="doc hal test"
+IUSE="doc test"
 
 RDEPEND=">=dev-libs/glib-2.21.6
 	>=x11-libs/gtk+-2.12
