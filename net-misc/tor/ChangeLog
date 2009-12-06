@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.185 2009/12/02 14:39:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.186 2009/12/06 14:36:45 fauli Exp $
+
+*tor-0.2.1.20-r1 (06 Dec 2009)
+
+  06 Dec 2009; Christian Faulhammer <fauli@gentoo.org> -tor-0.2.1.20.ebuild,
+  +tor-0.2.1.20-r1.ebuild:
+  reintroduce OpenSSL patch for bug 292661
 
 *tor-0.2.1.20 (02 Dec 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.20.ebuild,v 1.1 2009/12/02 14:39:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.20-r1.ebuild,v 1.1 2009/12/06 14:36:45 fauli Exp $
 
 EAPI=2
 
@@ -30,6 +30,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/torrc.sample-0.1.2.6.patch
 	epatch "${FILESDIR}"/${PN}-0.2.1.19-logrotate.patch
+	epatch "${FILESDIR}"/${PN}-0.2.1.19-openssl.patch
 	# Normally tor uses a bundled libevent fragment to provide
 	# asynchronous DNS requests.  This is generally a bad idea, but at
 	# the moment the official libevent does not have the 0x20 hack, so
