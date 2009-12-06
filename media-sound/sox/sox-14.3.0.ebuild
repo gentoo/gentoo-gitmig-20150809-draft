@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.0.ebuild,v 1.6 2009/11/12 16:09:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.0.ebuild,v 1.7 2009/12/06 14:56:01 klausman Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="alsa ao debug encode ffmpeg flac id3tag ladspa mad ogg oss png pulseaudio sndfile wavpack"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
