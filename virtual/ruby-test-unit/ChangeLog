@@ -1,0 +1,11 @@
+# ChangeLog for virtual/ruby-test-unit
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.1 2009/12/06 13:18:31 graaff Exp $
+
+*ruby-test-unit-0 (06 Dec 2009)
+
+  06 Dec 2009; Hans de Graaff <graaff@gentoo.org> +ruby-test-unit-0.ebuild,
+  +metadata.xml:
+  Initial import from ruby-ng-testbed. Required for forthcoming
+  ruby-fakegem.eclass.
+
