@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/persistence
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/persistence/ChangeLog,v 1.1 2009/12/06 00:53:52 arfrever Exp $
+
+*persistence-2.11.1 (06 Dec 2009)
+
+  06 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +persistence-2.11.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
