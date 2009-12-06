@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/nstx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.8 2009/09/23 19:42:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.9 2009/12/06 19:37:39 robbat2 Exp $
+
+*nstx-1.1_beta6-r3 (06 Dec 2009)
+
+  06 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +nstx-1.1_beta6-r3.ebuild, +files/nstx-1.1_beta6_00-linux-tuntap.patch,
+  +files/nstx-1.1_beta6_01-bind-interface-name.patch,
+  +files/nstx-1.1_beta6_02-warn-on-frag.patch,
+  +files/nstx-1.1_beta6_03-delete-dwrite.patch,
+  +files/nstx-1.1_beta6_04-delete-werror.patch, +files/nstxcd.conf,
+  +files/nstxcd.init, +files/nstxd.conf, +files/nstxd.init:
+  Bug #262765, #260925, #156491: Submission by Steve Brudenell
+  <steven.brudenell@gmail.com> that fixes outstanding bugs and adds init
+  scripts.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> nstx-1.1_beta6-r2.ebuild:
   Remove virtual/libc
