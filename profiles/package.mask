@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10937 2009/12/05 22:37:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10938 2009/12/06 13:41:58 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (06 Dec 2009)
+#  on behalf of QA team
+#
+# pvm builds but segfaults if compiled with GCC 4. This is
+# bug #151316 *Open October 2006!* Over three years later
+# the bug is still unsolved; if somebody wants to care for
+# this package, please fix it up and feel free to unmask,
+# but not before that.
+#
+# Removal on 2010-02-04
+sys-cluster/pvm
+sys-cluster/pvm-povray
+sys-cluster/pypvm
 
 # Ben de Groot <yngwin@gentoo.org> (05 Dec 2009)
 # Breaks KDE, bug 295600
