@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/yawp-0.2.3.ebuild,v 1.1 2009/11/10 19:09:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/yawp-0.3.2.ebuild,v 1.1 2009/12/06 21:21:55 scarabeus Exp $
 
 EAPI=2
-KDE_LINGUAS="af cs de es fr it pl ru sk sl"
+KDE_LINGUAS="af cs de es fr he it pl ru sk sl"
 inherit kde4-base
 
 DESCRIPTION="Yet Another Weather Plasmoid"
