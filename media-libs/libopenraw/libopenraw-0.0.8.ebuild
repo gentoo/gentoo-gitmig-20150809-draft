@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.8.ebuild,v 1.8 2009/11/21 19:16:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.8.ebuild,v 1.9 2009/12/06 16:09:48 eva Exp $
 
-EAPI=2
+EAPI="2"
 
 DESCRIPTION="Decoding library for RAW image formats"
 HOMEPAGE="http://libopenraw.freedesktop.org"
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="gtk test"
 
-RDEPEND=">=dev-libs/boost-1.35
-	media-libs/jpeg
+RDEPEND="media-libs/jpeg
 	>=dev-libs/libxml2-2.5
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
+	>=dev-libs/boost-1.35
 	dev-util/pkgconfig
 	test? ( net-misc/curl )"
 
@@ -28,6 +28,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
 }
