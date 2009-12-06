@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.3.ebuild,v 1.7 2009/10/24 14:35:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.3.ebuild,v 1.8 2009/12/06 17:50:22 arfrever Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.6"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite ssl +threads tk ucs2 wininst +xml"
+IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite ssl +threads tk +wide-unicode wininst +xml"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes}
 #       do not conflict with the ones in python proper. - liquidx
@@ -184,7 +184,7 @@ src_configure() {
 		--enable-shared \
 		$(use_enable ipv6) \
 		$(use_with threads) \
-		$(use ucs2 && echo "--enable-unicode=ucs2" || echo "--enable-unicode=ucs4") \
+		$(use wide-unicode && echo "--enable-unicode=ucs4" || echo "--enable-unicode=ucs2") \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
 		--with-libc='' \

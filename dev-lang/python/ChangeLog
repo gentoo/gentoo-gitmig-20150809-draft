@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.434 2009/12/04 16:07:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.435 2009/12/06 17:50:22 arfrever Exp $
+
+  06 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.4.6.ebuild, python-2.5.4-r3.ebuild, python-2.6.2-r1.ebuild,
+  python-2.6.2-r2.ebuild, python-2.6.3.ebuild, python-2.6.4.ebuild,
+  python-3.1.1-r1.ebuild, metadata.xml:
+  Remove "ucs2" USE flag and add "wide-unicode" USE flag (bug #293135).
 
   04 Dec 2009; Jeroen Roovers <jer@gentoo.org> python-2.6.4.ebuild:
   Stable for HPPA (bug #295066).

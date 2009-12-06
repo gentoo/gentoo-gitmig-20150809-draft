@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.23 2009/10/30 11:45:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.24 2009/12/06 17:50:22 arfrever Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.4"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="-berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 +ncurses +readline ssl +threads tk ucs2 wininst +xml"
+IUSE="-berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 +ncurses +readline ssl +threads tk +wide-unicode wininst +xml"
 
 RDEPEND=">=app-admin/eselect-python-20090606
 		>=sys-libs/zlib-1.1.3
@@ -166,7 +166,7 @@ src_configure() {
 		--enable-shared \
 		$(use_enable ipv6) \
 		$(use_with threads) \
-		$(use ucs2 && echo "--enable-unicode=ucs2" || echo "--enable-unicode=ucs4") \
+		$(use wide-unicode && echo "--enable-unicode=ucs4" || echo "--enable-unicode=ucs2") \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
 		--with-libc='' \
