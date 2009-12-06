@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.29 2009/10/19 21:13:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.30 2009/12/06 12:14:58 graaff Exp $
+
+  06 Dec 2009; Hans de Graaff <graaff@gentoo.org>
+  rubyripper-0.5.5-r1.ebuild, rubyripper-0.5.7.ebuild:
+  dev-ruby/ruby-gettext is needed at build and runtime, thanks to René
+  Neumann in #287956 for reporting.
 
   19 Oct 2009; Jonathan Callen <abcd@gentoo.org> rubyripper-0.5.5-r1.ebuild,
   rubyripper-0.5.7.ebuild:

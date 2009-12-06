@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.5 2009/10/19 21:13:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.6 2009/12/06 12:14:58 graaff Exp $
 
 EAPI=2
 VIRTUALX_REQUIRED="always"
@@ -23,6 +23,7 @@ done
 
 RDEPEND="gtk? ( dev-ruby/ruby-gtk2
 	>=dev-ruby/rcairo-1.8.0-r1[svg] )
+	dev-ruby/ruby-gettext
 	virtual/eject
 	media-sound/cd-discid
 	media-sound/cdparanoia
@@ -33,8 +34,7 @@ RDEPEND="gtk? ( dev-ruby/ruby-gtk2
 		mp3? ( media-sound/mp3gain )
 		vorbis? ( media-sound/vorbisgain )
 		wav? ( media-sound/wavegain ) )"
-DEPEND="${RDEPEND}
-	dev-ruby/ruby-gettext"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	# fix for bug 203737
