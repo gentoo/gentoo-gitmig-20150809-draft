@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.8 2009/11/30 16:00:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.9 2009/12/06 16:57:49 flameeyes Exp $
+
+  06 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> tdb-1.1.5-r1.ebuild:
+  Block older samba (to force uninstall).
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> tdb-1.1.5-r1.ebuild:
   Add ~arm/~ia64/~s390/~sh/~sparc wrt #285952
