@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10942 2009/12/06 17:59:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10943 2009/12/06 19:39:48 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -179,15 +179,6 @@ net-analyzer/ttt
 # Removal on 2010-02-02
 dev-java/aspectj
 app-emacs/aspectj4emacs
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
-#  on behalf of QA team
-#
-# Uses -Werror and fails to build with _FORTIFY_SOURCE=2
-# (bug #260925; open March 2009).
-#
-# Removal on 2010-02-02
-net-misc/nstx
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
 #  on behalf of QA team
