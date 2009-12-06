@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.230 2009/12/03 20:17:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.231 2009/12/06 01:50:43 ali_bush Exp $
+
+*java-config-2.1.10 (06 Dec 2009)
+
+  06 Dec 2009; Alistair Bush <ali_bush@gentoo.org>
+  +java-config-2.1.10.ebuild:
+  Version Bump.
 
 *java-config-2.1.9-r2 (03 Dec 2009)
 
