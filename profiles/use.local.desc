@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5078 2009/12/06 18:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5079 2009/12/06 19:07:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2433,6 +2433,7 @@ net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/webkit-gtk:coverage - enable code coverage support
 net-libs/webkit-gtk:pango - Use pango as fontbackend instead of freetype
+net-libs/webkit-gtk:ruby - Enable HTML5 support for furigana/ruby annotation
 net-libs/webkit-gtk:soup - Use SOUP as backend instead of curl
 net-libs/webkit-gtk:websockets - enable full duplex single socket communication
 net-libs/webkit-gtk:xslt - enable support for XSLT
