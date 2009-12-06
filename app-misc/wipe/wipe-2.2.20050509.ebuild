@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.20050509.ebuild,v 1.8 2009/06/19 22:11:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.20050509.ebuild,v 1.9 2009/12/06 03:52:44 jsbronder Exp $
 
 inherit versionator toolchain-funcs
 
@@ -16,6 +16,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE=""
+
+DEPEND="!sys-cluster/lam-mpi"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf
