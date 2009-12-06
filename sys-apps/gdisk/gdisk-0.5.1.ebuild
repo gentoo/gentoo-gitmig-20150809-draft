@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/gdisk-0.5.0.ebuild,v 1.2 2009/12/06 17:45:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/gdisk-0.5.1.ebuild,v 1.1 2009/12/06 22:40:24 alexxy Exp $
+
+EAPI="2"
 
 inherit eutils
 
