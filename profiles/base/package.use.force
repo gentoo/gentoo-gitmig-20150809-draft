@@ -1,6 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.9 2009/10/19 21:27:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.10 2009/12/06 17:43:47 arfrever Exp $
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+# Python should use wide Unicode implementation by default.
+# Switching of "wide-unicode" USE flag changes ABI of Python
+# and requires reinstallation of many Python modules.
+dev-lang/python wide-unicode
 
 # Peter Alfredsen <loki_val@gentoo.org> (11 Apr 2009)
 # Forcing w.r.t. bug 265336. When unicode use-flag is
