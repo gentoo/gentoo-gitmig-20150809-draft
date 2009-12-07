@@ -1,22 +1,23 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.15 2009/06/13 18:01:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.16 2009/12/07 18:57:00 mr_bones_ Exp $
 
+EAPI=2
 inherit flag-o-matic eutils games
 
 DESCRIPTION="SDL-rewrite of the classical real time strategy hit Command & Conquer"
 HOMEPAGE="http://www.freecnc.org/"
 #mirror://sourceforge/freecnc/freecnc++-${PV}-src.tar.bz2
 SRC_URI="mirror://gentoo/freecnc++-${PV}-src.tar.bz2
-	nocd? ( ftp://ftp.westwood.com/pub/cc1/previews/demo/cc1demo1.zip )
-	nocd? ( ftp://ftp.westwood.com/pub/cc1/previews/demo/cc1demo2.zip )"
+	nocd? ( ftp://ftp.westwood.com/pub/cc1/previews/demo/cc1demo1.zip
+			ftp://ftp.westwood.com/pub/cc1/previews/demo/cc1demo2.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="nocd"
 
-RDEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl[audio,video]
 	media-libs/sdl-net"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
@@ -32,14 +33,17 @@ src_unpack() {
 			mv ${f} $(echo ${f} | awk '{print tolower($1)}') || die "moving $f"
 		done
 	fi
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-makefile-cflags.patch \
 		"${FILESDIR}"/${PV}-remove-root.patch \
 		"${FILESDIR}"/${PV}-gentoo-paths.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-gcc42.patch \
-		"${FILESDIR}"/${P}-glibc2.10.patch
+		"${FILESDIR}"/${P}-glibc2.10.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 	sed -i \
 		-e "s:GENTOO_LOGDIR:${GAMES_LOGDIR}:" \
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}/${PN}/:" \
@@ -82,7 +86,9 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	elog "If you have the C&C games, then just copy the .mix"
-	elog "to ${GAMES_DATADIR}/${PN}"
-	elog "Otherwise, re-emerge freecnc with 'nocd' in your USE."
+	if ! use nocd ; then
+		elog "If you have the C&C games, then just copy the .mix"
+		elog "to ${GAMES_DATADIR}/${PN}"
+		elog "Otherwise, re-emerge freecnc with 'nocd' in your USE."
+	fi
 }

@@ -1,0 +1,11 @@
+--- freecnc++.org/tools/tmpinied/Makefile	2009-12-07 18:18:23.985443151 +0000
++++ freecnc++/tools/tmpinied/Makefile	2009-12-07 18:19:45.869476911 +0000
+@@ -13,7 +13,7 @@
+ CFLAGS = -g -Wall -Werror -I../../src/include `sdl-config --cflags`
+ 
+ ../../tmpinied: $(LOCALOBJS) $(OBJECTS)
+-	$(CXX) -o ../../tmpinied -g `sdl-config --libs` $(LOCALOBJS) $(OBJECTS) $(LIBS) $(LDFLAGS)
++	$(CXX) -g $(LDFLAGS) -o ../../tmpinied $(LOCALOBJS) $(OBJECTS) $(LIBS) `sdl-config --libs`
+ clean:
+ 	\rm -f $(LOCALOBJS) ../../tmpinied
+ 
