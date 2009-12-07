@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.12 2009/12/07 17:53:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.13 2009/12/07 18:30:46 mr_bones_ Exp $
 
 EAPI=2
 
@@ -72,7 +72,6 @@ src_configure() {
 		$(use_enable doc docs-install) \
 		${myconf}
 }
-
 
 src_compile() {
 	# hack to allow parallel build
