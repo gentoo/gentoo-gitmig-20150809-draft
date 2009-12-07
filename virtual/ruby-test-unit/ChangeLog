@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.1 2009/12/06 13:18:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.2 2009/12/07 18:30:51 a3li Exp $
+
+  07 Dec 2009; Alex Legler <a3li@gentoo.org> ruby-test-unit-0.ebuild:
+  s/gentoo_rubylib/ruby_targets/g, thanks mr.bones
 
 *ruby-test-unit-0 (06 Dec 2009)
 

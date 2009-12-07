@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.1 2009/12/06 13:18:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.2 2009/12/07 18:29:57 a3li Exp $
+
+  07 Dec 2009; Alex Legler <a3li@gentoo.org> rubygems-0.ebuild:
+  s/gentoo_rubylib/ruby_targets/g, thanks mr.bones
 
 *rubygems-0 (06 Dec 2009)
 
