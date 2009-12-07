@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.10 2009/10/13 06:19:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.11 2009/12/07 17:00:16 graaff Exp $
+
+  07 Dec 2009; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Add no-herd to metadata.
 
 *cucumber-0.4.0 (13 Oct 2009)
 
