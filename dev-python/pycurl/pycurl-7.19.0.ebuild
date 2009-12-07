@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.11 2009/10/25 13:53:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.12 2009/12/07 11:29:58 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,9 +30,7 @@ src_test() {
 }
 
 src_install() {
-	sed -i \
-		-e "/data_files=/d" \
-		setup.py || die "sed in setup.py failed"
+	sed -e "/data_files=/d" -i setup.py || die "sed in setup.py failed"
 
 	distutils_src_install
 
