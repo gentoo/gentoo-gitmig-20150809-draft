@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.654 2009/12/03 06:13:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.655 2009/12/07 03:19:23 zmedico Exp $
+
+*portage-2.2_rc56 (07 Dec 2009)
+
+  07 Dec 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc56.ebuild:
+  2.2_rc56 bump. This includes all fixes in 2.1.7.11.
+
+*portage-2.1.7.11 (07 Dec 2009)
+
+  07 Dec 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.11.ebuild:
+  2.1.7.11 bump. This fixes bug #295715 (new register_success_hooks
+  function for bashrc) and bug #295805 (ValueError with python3 in
+  update_config_files). Bug #288499 tracks all bugs fixed since 2.1.6.x.
 
 *portage-2.2_rc55 (03 Dec 2009)
 
