@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Package-Constants
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Package-Constants/ChangeLog,v 1.7 2009/12/07 20:05:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Package-Constants/ChangeLog,v 1.8 2009/12/07 23:08:00 maekke Exp $
+
+  07 Dec 2009; Markus Meier <maekke@gentoo.org>
+  perl-Package-Constants-0.02.ebuild:
+  arm stable, bug #288026
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org>
   perl-Package-Constants-0.02.ebuild:

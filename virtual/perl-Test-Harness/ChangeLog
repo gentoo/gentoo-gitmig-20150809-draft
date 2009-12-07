@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.43 2009/12/07 20:04:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.44 2009/12/07 23:05:02 maekke Exp $
+
+  07 Dec 2009; Markus Meier <maekke@gentoo.org>
+  perl-Test-Harness-3.17.ebuild:
+  arm stable, bug #288026
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org>
   perl-Test-Harness-3.17.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Storable
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.27 2009/12/07 20:11:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.28 2009/12/07 23:14:18 maekke Exp $
+
+  07 Dec 2009; Markus Meier <maekke@gentoo.org> perl-Storable-2.20.ebuild:
+  arm stable, bug #288026
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org> perl-Storable-2.20.ebuild:
   Stable for HPPA (bug #288026).
