@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.3 2009/12/07 18:58:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.4 2009/12/07 23:28:32 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -31,15 +31,17 @@ src_prepare() {
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
-		-i "${S}"/tools/clang/lib/Headers/Makefile \
+		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
-		-i "${S}"/tools/clang/tools/scan-view/scan-view \
+		-i tools/clang/tools/scan-view/scan-view \
 		|| die "scan-view sed failed"
 	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#/usr/share/${PN}#" \
-		-i "${S}"/tools/clang/utils/scan-build \
+		-i tools/clang/utils/scan-build \
 		|| die "scan-build sed failed"
+	# Broken test in 2.6, http://llvm.org/bugs/show_bug.cgi?id=5111
+	rm tools/clang/test/Analysis/retain-release.m
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
