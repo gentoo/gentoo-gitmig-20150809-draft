@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.3-r2.ebuild,v 1.2 2009/12/01 05:54:19 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.3-r2.ebuild,v 1.3 2009/12/07 23:14:11 maekke Exp $
 
 inherit autotools eutils java-pkg-opt-2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ncc.up.pt/~vsc/Yap/current/Yap-5.1.3.tar.gz"
 
 LICENSE="Artistic LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug doc examples gmp java mpi mysql odbc readline static tk threads"
 
 DEPEND="gmp? ( dev-libs/gmp )
