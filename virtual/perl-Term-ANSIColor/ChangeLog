@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Term-ANSIColor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ANSIColor/ChangeLog,v 1.11 2009/12/04 14:01:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ANSIColor/ChangeLog,v 1.12 2009/12/07 20:12:13 jer Exp $
+
+  07 Dec 2009; Jeroen Roovers <jer@gentoo.org>
+  perl-Term-ANSIColor-2.00.ebuild:
+  Stable for HPPA (bug #288026).
 
   04 Dec 2009; Torsten Veller <tove@gentoo.org>
   perl-Term-ANSIColor-2.00.ebuild:

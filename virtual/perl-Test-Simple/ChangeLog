@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.49 2009/12/07 12:30:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.50 2009/12/07 20:13:30 jer Exp $
+
+  07 Dec 2009; Jeroen Roovers <jer@gentoo.org> perl-Test-Simple-0.92.ebuild:
+  Stable for HPPA (bug #288026).
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org>
   perl-Test-Simple-0.92.ebuild:

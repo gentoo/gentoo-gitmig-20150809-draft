@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.7 2009/12/04 13:43:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.8 2009/12/07 20:19:55 jer Exp $
+
+  07 Dec 2009; Jeroen Roovers <jer@gentoo.org> perl-version-0.77.02.ebuild:
+  Stable for HPPA (bug #288026).
 
   04 Dec 2009; Torsten Veller <tove@gentoo.org> perl-version-0.77.02.ebuild:
   Stable on amd64 (#288026)
