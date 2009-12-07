@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.67 2009/12/07 22:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.68 2009/12/07 23:01:46 vapier Exp $
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org> squashfs-tools-4.0.ebuild:
+  Fix building on non-glibc systems #276951 by Ed Wildgoose.
 
   07 Dec 2009; Mike Frysinger <vapier@gentoo.org>
   -squashfs-tools-3.1_p2.ebuild, squashfs-tools-3.2_p2.ebuild,
