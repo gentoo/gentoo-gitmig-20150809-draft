@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.4.ebuild,v 1.3 2009/12/07 22:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.4.ebuild,v 1.4 2009/12/07 23:01:11 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="sys-libs/zlib"
 
-S=${WORKDIR}/squashfs${PV/_p/-r}/squashfs-tools
+S=${WORKDIR}/squashfs${MY_PV}/squashfs-tools
 
 src_unpack() {
 	unpack ${A}
