@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.20 2009/11/20 15:42:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.21 2009/12/07 10:30:49 vapier Exp $
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org> apsw-3.6.18.1.ebuild,
+  apsw-3.6.19.1.ebuild, apsw-3.6.20.1.ebuild:
+  Enable verbose output in tests.
 
 *apsw-3.6.20.1 (20 Nov 2009)
 
