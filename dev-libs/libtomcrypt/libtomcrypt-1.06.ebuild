@@ -1,14 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.06.ebuild,v 1.5 2008/09/05 07:38:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.06.ebuild,v 1.6 2009/12/07 11:27:04 bangert Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="modular and portable cryptographic toolkit"
 HOMEPAGE="http://libtomcrypt.org/"
-SRC_URI="http://libtomcrypt.org/files/crypt-${PV}.tar.bz2
-	http://libtomcrypt.org/files/patch-1.06/makefile.diff
-	http://libtomcrypt.org/files/patch-1.06/makefile.shared.diff"
+SRC_URI="http://libtomcrypt.org/files/crypt-${PV}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -24,7 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack crypt-${PV}.tar.bz2
 	cd "${S}"
-	epatch "${DISTDIR}"/makefile{,.shared}.diff
+	epatch "${FILESDIR}"/libtomcrypt-1.06-makefile{,.shared}.diff
 	use doc || sed -i '/^install:/s:docs::' makefile
 }
 
@@ -34,8 +32,13 @@ src_compile() {
 	emake IGNORE_SPEED=1 || die
 }
 
+src_test() {
+	# Tests don't compile
+	true
+}
+
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" DATAPATH="/usr/share/doc/${P}" install || die
 	dodoc TODO changes
 	if use doc ; then
 		dodoc doc/*

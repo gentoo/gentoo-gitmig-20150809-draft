@@ -1,0 +1,28 @@
+--- makefile.shared	2005-08-01 13:33:58.000000000 -0400
++++ makefile.shared	2005-08-07 19:41:08.000000000 -0400
+@@ -6,7 +6,7 @@
+ # Tom St Denis
+ 
+ # The version
+-VERSION=0:106
++VERSION=0:107
+ 
+ # Compiler and Linker Names
+ CC=libtool --mode=compile gcc
+@@ -205,7 +205,7 @@
+ testprof/$(LIBTEST):
+ 	cd testprof ; CFLAGS="$(CFLAGS)" GROUP=$(GROUP) USER=$(USER) VERSION=$(VERSION) LIBPATH=$(LIBPATH) LIBTEST=$(LIBTEST) LIBTEST_S=$(LIBTEST_S) make -f makefile.shared
+ 
+-$(LIBNAME): $(OBJECTS)
++$(LIBNAME): $(OBJECTS) testprof/$(LIBTEST)
+ 	libtool --silent --mode=link gcc $(CFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
+ 	libtool --silent --mode=link gcc $(CFLAGS) `find . -type f | grep "[.]o" | grep "src/" | xargs`  $(EXTRALIBS) -o $(LIBNAME_S)
+ 	ranlib $(LIBNAME_S)
+@@ -233,5 +233,5 @@
+ 	gcc -o $(TIMING) $(TIMINGS) -ltomcrypt_prof -ltomcrypt $(EXTRALIBS)
+ 
+ # $Source: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/files/libtomcrypt-1.06-makefile.shared.diff,v $   
+-# $Revision: 1.1 $   
+-# $Date: 2009/12/07 11:27:03 $ 
++# $Revision: 1.1 $   
++# $Date: 2009/12/07 11:27:03 $ 

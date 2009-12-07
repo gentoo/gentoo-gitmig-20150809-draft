@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.36 2009/04/03 19:33:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.37 2009/12/07 11:27:04 bangert Exp $
+
+  07 Dec 2009; Thilo Bangert <bangert@gentoo.org> libtomcrypt-1.06.ebuild,
+  +files/libtomcrypt-1.06-makefile.diff,
+  +files/libtomcrypt-1.06-makefile.shared.diff:
+  rework patches so they apply (bug #245998) - fix doc install location -
+  disables tests
 
   03 Apr 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   libtomcrypt-1.17-r3.ebuild:
