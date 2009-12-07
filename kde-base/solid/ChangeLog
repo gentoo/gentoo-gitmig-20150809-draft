@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.47 2009/12/01 11:32:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.48 2009/12/07 15:34:47 ssuominen Exp $
+
+*solid-4.3.4-r1 (07 Dec 2009)
+
+  07 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +solid-4.3.4-r1.ebuild, +files/solid-4.3.4-hal.patch:
+  Fix crash in Solid::Control::PowerManager::brightness wrt #295600, thanks
+  to Magnus Kessler.
 
 *solid-4.3.4 (01 Dec 2009)
 
