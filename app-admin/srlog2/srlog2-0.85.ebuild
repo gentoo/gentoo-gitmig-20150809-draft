@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/srlog2-0.85.ebuild,v 1.1 2009/01/27 20:40:43 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/srlog2-0.85.ebuild,v 1.2 2009/12/07 11:36:49 bangert Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Secure Remote Log transmission system"
 HOMEPAGE="http://untroubled.org/srlog2/"
@@ -34,6 +34,8 @@ src_unpack() {
 	sed -i -e 's/x86cpuid /x86cpuid -fno-pie /' curve25519/curve25519.impl.do
 	sed -i -e 's/) >/) -fPIC >/g' curve25519/Makefile
 	#If this isn't fixed it just includes app-crypt/nistp224 support only
+
+	epatch "${FILESDIR}"/srlog2-0.85-fix-incude.patch
 }
 
 src_compile() {

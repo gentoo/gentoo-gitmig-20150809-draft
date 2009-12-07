@@ -1,0 +1,10 @@
+diff -Naur srlog2-0.85.orig/srlog2d-ini.c srlog2-0.85/srlog2d-ini.c
+--- srlog2-0.85.orig/srlog2d-ini.c	2009-12-07 12:29:58.000000000 +0100
++++ srlog2-0.85/srlog2d-ini.c	2009-12-07 12:30:20.000000000 +0100
+@@ -1,5 +1,6 @@
+ #include <sys/types.h>
+ #include <string.h>
++#include <sys/socket.h>
+ 
+ #include <systime.h>
+ #include <adt/ghash.h>
