@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3654 2009/12/07 00:51:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3655 2009/12/07 13:48:58 weaver Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Dec 2009; Andrey Kislyuk <weaver@gentoo.org> package.mask:
+  Remove app-admin/rackview from p.mask, blocker bug fixed
 
   07 Dec 2009; Luca Barbato <lu_zero@gentoo.org> package.mask:
   Mask media-libs/netpbm-10.48.00 see bug #287725

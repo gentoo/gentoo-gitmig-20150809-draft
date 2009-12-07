@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10946 2009/12/07 00:51:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10947 2009/12/07 13:48:58 weaver Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -88,14 +88,6 @@ dev-python/gadfly
 #
 # Removal on 2010-02-03
 dev-lang/sunstudioexpress
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (05 Dec 2009)
-#  on behalf of QA team
-#
-# Collides with itself (bug #256230 open January 2009).
-#
-# Removal on 2010-02-03
-app-admin/rackview
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (05 Dec 2009)
 #  on behalf of QA team
