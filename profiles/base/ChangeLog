@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.117 2009/12/04 19:54:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.118 2009/12/07 18:28:28 a3li Exp $
+
+  07 Dec 2009; Alex Legler <a3li@gentoo.org> use.mask:
+  use.mask ruby_targets_ruby19 and ruby_targets_ree18
 
   04 Dec 2009; Zac Medico <zmedico@gentoo.org> +package.use:
   Bug #295615 - Disable cxx by default for net-nds/openldap, in order to
