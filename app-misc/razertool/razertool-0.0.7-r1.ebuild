@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7.ebuild,v 1.4 2009/05/16 09:14:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7-r1.ebuild,v 1.1 2009/12/07 19:19:35 voyageur Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Unofficial tool for controlling the Razer Copperhead mouse"
@@ -22,12 +23,9 @@ RDEPEND="=virtual/libusb-0*
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i razertool.rules.example \
-		-e 's:ACTION=="add", ::' \
+		-e 's:ACTION=="add", ::;s:BUS=:SUBSYSTEMS=:;s:SYSFS{:ATTRS{:g' \
 		|| die "sed razertool.rules.example action failed"
 
 	if ! use hal ; then
@@ -38,9 +36,8 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable gtk) || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
