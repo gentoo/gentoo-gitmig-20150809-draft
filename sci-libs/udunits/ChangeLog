@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/udunits
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.6 2008/11/25 07:35:36 nerdboy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.7 2009/12/07 03:41:00 bicatali Exp $
+
+*udunits-2.1.11 (07 Dec 2009)
+
+  07 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  udunits-1.12.3.ebuild, +files/udunits-1.12.9-fixingtests.patch,
+  +udunits-2.1.11.ebuild:
+  Version bump and fixed failing tests (bug #295722, thanks Kacper Kowalik)
 
   25 Nov 2008; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.3.ebuild:
   Fixed configure and build issues, added manual install commands (closes 

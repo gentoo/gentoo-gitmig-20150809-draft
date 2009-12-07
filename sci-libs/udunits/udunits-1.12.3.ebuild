@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.3.ebuild,v 1.3 2008/11/25 07:35:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.3.ebuild,v 1.4 2009/12/07 03:41:00 bicatali Exp $
 
 inherit eutils flag-o-matic fortran perl-module toolchain-funcs
 
@@ -25,9 +25,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e "s:\${prefix}/etc:/etc:g" \
-	    -i -e "s:\${prefix}/man:\${prefix}/share/man:g" \
-	    -i -e "s:\${exec_prefix}/lib:\${exec_prefix}/$(get_libdir):g" \
-	    configure || die "sed 1 failed"
+		-i -e "s:\${prefix}/man:\${prefix}/share/man:g" \
+		-i -e "s:\${exec_prefix}/lib:\${exec_prefix}/$(get_libdir):g" \
+		configure || die "sed 1 failed"
+	epatch "${FILESDIR}/${P}-fixingtests.patch"
 }
 
 src_compile() {
@@ -43,12 +44,12 @@ src_compile() {
 	econf || die "econf failed"
 
 	cd "${S}"/lib
-	    emake || die "emake lib failed"
+		emake || die "emake lib failed"
 	cd "${S}"
 
 	cd "${S}"/perl
-	    perl-module_src_prep
-	    perl-module_src_compile
+		perl-module_src_prep
+		perl-module_src_compile
 	cd "${S}"
 
 	# random compile failures with -jN (when N > 1)
@@ -77,12 +78,12 @@ src_install() {
 
 	fixlocalpod
 	cd "${S}"/perl
-	    perl-module_src_install
+		perl-module_src_install
 	cd "${S}"
 
 	# Clean up left-over cruft...  (yes, this is still needed)
 	find "${D}" -type f -a \( -name perllocal.pod -o -name .packlist \
-	    -o \( -name '*.bs' -a -empty \) \) -exec rm -f {} ';'
+		-o \( -name '*.bs' -a -empty \) \) -exec rm -f {} ';'
 	find "${D}" -type d -depth -exec rmdir {} 2>/dev/null ';'
 	chmod -R u+w "${D}"/*
 }
