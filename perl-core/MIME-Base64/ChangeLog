@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/MIME-Base64
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.20 2009/12/07 19:17:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.21 2009/12/07 22:53:42 maekke Exp $
+
+  07 Dec 2009; Markus Meier <maekke@gentoo.org> MIME-Base64-3.08.ebuild:
+  arm stable, bug #288026
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org> MIME-Base64-3.08.ebuild:
   Stable for HPPA (bug #288026).
