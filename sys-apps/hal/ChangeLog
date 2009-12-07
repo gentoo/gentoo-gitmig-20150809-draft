@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.308 2009/12/02 14:44:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.309 2009/12/07 11:21:12 ssuominen Exp $
+
+  07 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> hal-0.5.13-r2.ebuild:
+  amd64 stable wrt #287411
 
   02 Dec 2009; Daniel Gryniewicz <dang@gentoo.org> +hal-0.5.14.ebuild:
   Bump to 0.5.14
