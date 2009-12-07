@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.66 2009/07/18 20:18:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.67 2009/12/07 22:57:21 vapier Exp $
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  -squashfs-tools-3.1_p2.ebuild, squashfs-tools-3.2_p2.ebuild,
+  -squashfs-tools-3.3.ebuild, squashfs-tools-3.4.ebuild:
+  Slot older versions of squashfs-tools as the filesystem format is not
+  backwards compatible and sometimes we need to easily create older
+  filesystem versions.
 
   18 Jul 2009; Joseph Jezak <josejx@gentoo.org> squashfs-tools-4.0.ebuild:
   Marked ppc stable for bug #273131.
