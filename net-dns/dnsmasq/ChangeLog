@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.187 2009/12/07 21:42:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.188 2009/12/07 22:05:24 chutzpah Exp $
+
+  07 Dec 2009; Patrick McLean <chutzpah@gentoo.org> dnsmasq-2.51.ebuild:
+  Add dep on net-dns/libidn with USE=nls.
 
 *dnsmasq-2.51 (07 Dec 2009)
 

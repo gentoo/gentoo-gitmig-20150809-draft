@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.51.ebuild,v 1.1 2009/12/07 21:42:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.51.ebuild,v 1.2 2009/12/07 22:05:24 chutzpah Exp $
 
 EAPI=2
 
@@ -18,7 +18,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="dbus +dhcp ipv6 nls tftp"
 
 RDEPEND="dbus? ( sys-apps/dbus )
-	nls? ( sys-devel/gettext )"
+	nls? (
+		sys-devel/gettext
+		net-dns/libidn
+	)"
 
 DEPEND="${RDEPEND}
 	|| ( app-arch/xz-utils app-arch/lzma-utils )"
