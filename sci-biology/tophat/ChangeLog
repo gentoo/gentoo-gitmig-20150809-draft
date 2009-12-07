@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/tophat
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.1 2009/12/07 15:50:08 weaver Exp $
+
+*tophat-1.0.12 (07 Dec 2009)
+
+  07 Dec 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +tophat-1.0.12.ebuild:
+  Import from Science overlay and version bump. Thanks to Philippe Veber.
+
