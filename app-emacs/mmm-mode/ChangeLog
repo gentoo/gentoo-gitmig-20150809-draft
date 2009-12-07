@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mmm-mode
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.14 2007/11/15 06:55:05 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.15 2009/12/07 22:36:00 ulm Exp $
+
+  07 Dec 2009; Ulrich Mueller <ulm@gentoo.org> mmm-mode-0.4.8-r1.ebuild:
+  Remove redundant and misspelt configure options. Add Prefix KEYWORDS.
 
   15 Nov 2007; Ulrich Mueller <ulm@gentoo.org> -mmm-mode-0.4.7.ebuild:
   Remove old.
