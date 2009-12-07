@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.200 2009/12/07 22:22:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.201 2009/12/07 23:19:36 flameeyes Exp $
+
+*sudo-1.7.2_p2-r2 (07 Dec 2009)
+*sudo-1.7.2_p2-r1 (07 Dec 2009)
+
+  07 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -sudo-1.7.2_p2.ebuild, +sudo-1.7.2_p2-r1.ebuild, +sudo-1.7.2_p2-r2.ebuild:
+  Use -r1 and -r2 so that we can eventually stable this.
 
 *sudo-1.7.2_p2 (07 Dec 2009)
 

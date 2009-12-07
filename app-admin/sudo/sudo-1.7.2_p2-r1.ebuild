@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p2.ebuild,v 1.1 2009/12/07 22:22:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p2-r1.ebuild,v 1.1 2009/12/07 23:19:36 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
 # 3-clause BSD license
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( virtual/pam )
@@ -32,7 +32,6 @@ DEPEND="pam? ( virtual/pam )
 		dev-libs/cyrus-sasl
 	)
 	skey? ( >=sys-auth/skey-1.1.5-r1 )
-	app-editors/gentoo-editor
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
@@ -151,8 +150,9 @@ src_compile() {
 	einfo "...done."
 
 	# XXX: --disable-path-info closes an info leak, but may be confusing.
+	# XXX: /bin/vi may not be available, make nano visudo's default.
 	econf --with-secure-path="${ROOTPATH}" \
-		--with-editor=/usr/libexec/gentoo-editor \
+		--with-editor="${EDITOR:-/bin/nano}" \
 		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
