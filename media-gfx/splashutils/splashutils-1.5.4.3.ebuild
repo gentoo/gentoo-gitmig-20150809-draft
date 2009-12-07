@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.16 2009/11/22 20:12:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.17 2009/12/07 19:58:11 spock Exp $
 
 EAPI="2"
 
@@ -115,6 +115,7 @@ src_configure() {
 		$(use_with truetype ttf) \
 		$(use_with truetype ttf-kernel) \
 		$(use_enable fbcondecor) \
+		--docdir=/usr/share/doc/${PF} \
 		--with-freetype2-src=${FT2SRC} \
 		--with-jpeg-src=${JPEGSRC} \
 		--with-lpng-src=${LPNGSRC} \
