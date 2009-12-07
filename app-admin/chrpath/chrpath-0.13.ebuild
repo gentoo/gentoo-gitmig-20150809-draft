@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13.ebuild,v 1.10 2008/11/23 18:05:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13.ebuild,v 1.11 2009/12/07 12:10:17 grobian Exp $
 
 inherit eutils
 
 DESCRIPTION="chrpath can modify the rpath and runpath of ELF executables"
 HOMEPAGE="http://directory.fsf.org/project/chrpath/"
-SRC_URI="ftp://ftp.hungry.com/pub/hungry/chrpath/${P}.tar.gz"
+# original upstream no longer exists (ftp://ftp.hungry.com/pub/hungry)
+SRC_URI="http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
