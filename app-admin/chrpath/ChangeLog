@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.10 2009/12/07 12:10:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.11 2009/12/07 12:13:28 grobian Exp $
+
+  07 Dec 2009; Fabian Groffen <grobian@gentoo.org> chrpath-0.13.ebuild:
+  Add Prefix keywords
 
   07 Dec 2009; Fabian Groffen <grobian@gentoo.org> chrpath-0.13.ebuild,
   metadata.xml:
