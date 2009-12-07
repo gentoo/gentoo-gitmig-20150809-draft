@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.207 2009/12/07 11:39:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.208 2009/12/07 18:23:03 tcunha Exp $
+
+  07 Dec 2009; Tiago Cunha <tcunha@gentoo.org> nmap-5.00-r2.ebuild:
+  stable sparc, bug 295134
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> nmap-5.00-r2.ebuild:
   amd64/x86 stable, bug #295134
