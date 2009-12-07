@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.02_alpha2.ebuild,v 1.3 2009/12/05 23:56:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.02_alpha2-r1.ebuild,v 1.1 2009/12/07 05:46:17 ssuominen Exp $
 
 EAPI=2
-inherit fdo-mime multilib
+inherit eutils fdo-mime multilib
 
 MY_P=${P/_/-}
 
@@ -33,13 +33,18 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	sed -i \
 		-e 's:update-mime-database:true:g' Makefile.in || die
+
+	epatch "${FILESDIR}"/${P}-qt-4.6.0.patch
 }
 
 src_configure() {
+	local myconf
+	use debug && myconf="--enable-debug"
+
 	econf \
-		$(use_enable debug) \
 		--with-qtdir=/usr \
-		--with-qtlibdir=/usr/$(get_libdir)/qt4
+		--with-qtlibdir=/usr/$(get_libdir)/qt4 \
+		${myconf}
 }
 
 src_install() {

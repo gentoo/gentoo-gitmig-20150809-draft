@@ -1,0 +1,24 @@
+diff -ur rosegarden-10.02-alpha2.orig/src/gui/widgets/Led.cpp rosegarden-10.02-alpha2/src/gui/widgets/Led.cpp
+--- rosegarden-10.02-alpha2.orig/src/gui/widgets/Led.cpp	2009-12-02 04:31:41.000000000 +0200
++++ rosegarden-10.02-alpha2/src/gui/widgets/Led.cpp	2009-12-07 07:29:06.000000000 +0200
+@@ -202,7 +202,7 @@
+         width /= 3;
+         i = i.smoothScale(width, width);
+         delete tmpMap;
+-        dest = new QPixmap(i);
++        dest = new QPixmap(QPixmap::fromImage(i));
+         paint.begin(this);
+         paint.drawPixmap(0, 0, *dest);
+         paint.end();
+diff -ur rosegarden-10.02-alpha2.orig/src/gui/widgets/Rotary.cpp rosegarden-10.02-alpha2/src/gui/widgets/Rotary.cpp
+--- rosegarden-10.02-alpha2.orig/src/gui/widgets/Rotary.cpp	2009-12-02 04:31:41.000000000 +0200
++++ rosegarden-10.02-alpha2/src/gui/widgets/Rotary.cpp	2009-12-07 07:29:21.000000000 +0200
+@@ -295,7 +295,7 @@
+     paint.end();
+ 
+     QImage i = map.convertToImage().smoothScale(m_size, m_size);
+-    m_pixmaps[index] = QPixmap(i);
++    m_pixmaps[index] = QPixmap::fromImage(i);
+     paint.begin(this);
+     paint.drawPixmap(0, 0, m_pixmaps[index]);
+     paint.end();

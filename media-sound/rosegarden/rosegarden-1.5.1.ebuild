@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.5.1.ebuild,v 1.6 2009/08/01 06:37:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.5.1.ebuild,v 1.7 2009/12/07 05:46:17 ssuominen Exp $
 
 inherit eutils kde-functions
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/rosegarden/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="ppc"
 IUSE="alsa jack dssi lirc debug"
 
 RDEPEND="
