@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-MD5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.24 2009/12/04 13:39:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.25 2009/12/07 19:08:57 jer Exp $
+
+  07 Dec 2009; Jeroen Roovers <jer@gentoo.org> Digest-MD5-2.39.ebuild:
+  Stable for HPPA (bug #288026).
 
   04 Dec 2009; Torsten Veller <tove@gentoo.org> Digest-MD5-2.39.ebuild:
   Stable on amd64 (#288026)
