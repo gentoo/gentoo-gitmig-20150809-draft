@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/tophat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.1 2009/12/07 15:50:08 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.2 2009/12/07 21:03:03 weaver Exp $
+
+  07 Dec 2009; Andrey Kislyuk <weaver@gentoo.org> tophat-1.0.12.ebuild:
+  Fix x86 compile issue. Thanks to Fabian Groffen.
 
 *tophat-1.0.12 (07 Dec 2009)
 
