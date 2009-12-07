@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.13 2009/12/04 19:37:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.14 2009/12/07 18:25:00 jer Exp $
 
 EAPI=2
 inherit eutils
@@ -17,7 +17,7 @@ LICENSE="GPL-2 LGPL-2 BSD"
 SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"
 
-KEYWORDS="amd64 ~hppa sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 SLOT="3"
 IUSE=""
 

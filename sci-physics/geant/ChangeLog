@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.34 2009/12/04 19:37:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.35 2009/12/07 18:25:00 jer Exp $
+
+  07 Dec 2009; Jeroen Roovers <jer@gentoo.org> geant-3.21.14-r2.ebuild,
+  geant-4.9.2_p02.ebuild:
+  Stable for HPPA (bug #294442).
 
   04 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
   geant-3.21.14-r2.ebuild:
