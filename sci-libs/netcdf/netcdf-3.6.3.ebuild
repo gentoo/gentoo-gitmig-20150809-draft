@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.10 2009/11/21 20:48:26 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.11 2009/12/07 08:59:30 bicatali Exp $
 
 EAPI=2
 
@@ -29,7 +29,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
-	#epatch "${FILESDIR}"/${P}-libtool.patch
 	eautoreconf
 }
 
@@ -65,10 +64,18 @@ src_configure() {
 	else
 		myconf="${myconf} --disable-f77 --disable-f90"
 	fi
+
+	# otherwise fortran/fort-nc4.c is not compiled and package fails
+	#  tests with --as-needed
+	if use hdf5; then
+		myconf="${myconf} --with-hdf5=/usr"
+	fi
+
 	econf \
 		--enable-shared \
 		--docdir=/usr/share/doc/${PF} \
-		$(use_enable debug flag-setting ) \
+		$(use_enable fortran separate-fortran ) \
+		$(use_enable hdf5 netcdf-4 ) \
 		$(use_enable doc docs-install) \
 		${myconf}
 }
