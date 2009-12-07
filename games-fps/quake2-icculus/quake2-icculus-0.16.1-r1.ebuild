@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.18 2009/11/19 18:39:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.19 2009/12/07 21:20:56 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 MY_P="quake2-r${PV}"
@@ -15,13 +16,12 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc sparc x86 ~x86-fbsd"
-IUSE="aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix"
+IUSE="aalib cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix"
 
 UIDEPEND="aalib? ( media-libs/aalib )
-	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
-	sdl? ( media-libs/libsdl )
+	sdl? ( media-libs/libsdl[audio,joystick?,video] )
 	X? (
 		x11-libs/libXxf86dga
 		x11-libs/libXxf86vm
@@ -47,13 +47,6 @@ pkg_setup() {
 		alert_user=y
 	fi
 
-	if ! use sdl ; then
-		ewarn "The ALSA sound driver for this game is broken."
-		ewarn "The 'sdl' USE flag is recommended instead."
-		echo
-		alert_user=y
-	fi
-
 	if [[ -n "${alert_user}" ]] ; then
 		ebeep
 		epause
@@ -64,9 +57,11 @@ src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd "${S}"
 	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile || die
-	epatch "${FILESDIR}"/${P}-amd64.patch # make sure this is still needed in future versions
-	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
-	epatch "${FILESDIR}"/${P}-no-asm-io.patch #193107
+	# -amd64.patch # make sure this is still needed in future versions
+	epatch \
+		"${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}"/${P}-gentoo-paths.patch \
+		"${FILESDIR}"/${P}-no-asm-io.patch #193107
 
 	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
 	ln -s $(type -P echo) "${T}"/more
@@ -131,7 +126,7 @@ src_compile() {
 			BUILD_QMAX=${BUILD_QMAX} \
 			HAVE_IPV6=$(yesno ipv6) \
 			BUILD_ARTS=NO \
-			BUILD_ALSA=$(yesno alsa) \
+			BUILD_ALSA=NO \
 			SDLDIR=/usr/lib \
 			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2" \
 			DEFAULT_LIBDIR="$(games_get_libdir)/${PN}${libsuffix}" \
