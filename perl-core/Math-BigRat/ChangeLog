@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.22 2009/12/07 19:19:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.23 2009/12/07 23:00:59 maekke Exp $
+
+  07 Dec 2009; Markus Meier <maekke@gentoo.org> Math-BigRat-0.22.ebuild:
+  arm stable, bug #288026
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org> Math-BigRat-0.22.ebuild:
   Stable for HPPA (bug #288026).
