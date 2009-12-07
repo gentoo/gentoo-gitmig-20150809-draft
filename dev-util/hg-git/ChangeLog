@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hg-git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hg-git/ChangeLog,v 1.2 2009/12/01 10:17:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hg-git/ChangeLog,v 1.3 2009/12/07 12:40:38 djc Exp $
+
+  07 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add python herd to metadata.
 
   01 Dec 2009; Markus Meier <maekke@gentoo.org> hg-git-0.1.0.ebuild:
   amd64/x86 stable, bug #295213
