@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.18 2009/10/21 12:18:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.19 2009/12/07 08:02:05 aballier Exp $
+
+  07 Dec 2009; Alexis Ballier <aballier@gentoo.org> -camlzip-1.03-r1.ebuild:
+  remove old
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org> camlzip-1.04.ebuild:
   x86 stable, bug #285691
