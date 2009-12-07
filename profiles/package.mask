@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10945 2009/12/06 22:27:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10946 2009/12/07 00:51:31 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Luca Barbato <lu_zero@gentoo.org (07 Dec 2009)
+# bad regression https://bugs.gentoo.org/287725
+=media-libs/netpbm-10.48.00
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (06 Dec 2009)
 #  on behalf of QA team
