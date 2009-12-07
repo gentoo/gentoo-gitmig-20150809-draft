@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.6 2009/08/17 16:45:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.7 2009/12/07 19:51:39 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -27,6 +27,9 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-systemlibs.patch
 	epatch "${FILESDIR}"/${P}-tests.patch
+	sed -i \
+		-e 's:$(prefix)/man:$(prefix)/share/man:g' \
+		Makefile.in  || die
 }
 
 src_install() {
