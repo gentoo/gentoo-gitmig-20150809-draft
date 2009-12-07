@@ -1,0 +1,103 @@
+From 8634bc197f742267b2eabd8543265ba93177b529 Mon Sep 17 00:00:00 2001
+From: Michael Tokarev <mjt@tls.msk.ru>
+Date: Thu, 26 Nov 2009 15:46:23 +0000
+Subject: allow lxc.network.pair to specify host-side name for veth interface
+
+Currently we allocate veth device with random name on host side,
+so that things like firewall rules or accounting does not work
+at all.  Fix this by recognizing yet anothe keyword to specify
+the host-side device name: lxc.network.pair, and use it instead
+of random name if specified.
+
+Signed-off-by: Michael Tokarev <mjt@tls.msk.ru>
+Signed-off-by: Daniel Lezcano <dlezcano@fr.ibm.com>
+---
+diff --git a/src/lxc/conf.c b/src/lxc/conf.c
+index 9c3a558..523270e 100644
+--- a/src/lxc/conf.c
++++ b/src/lxc/conf.c
+@@ -829,14 +829,19 @@ int lxc_conf_init(struct lxc_conf *conf)
+ 
+ static int instanciate_veth(struct lxc_netdev *netdev)
+ {
+-	char veth1[IFNAMSIZ];
++	char veth1buf[IFNAMSIZ], *veth1;
+ 	char veth2[IFNAMSIZ];
+ 	int ret = -1;
+ 
+-	snprintf(veth1, sizeof(veth1), "vethXXXXXX");
+-	snprintf(veth2, sizeof(veth2), "vethXXXXXX");
++	if (netdev->pair)
++		veth1 = netdev->pair;
++	else {
++		snprintf(veth1buf, sizeof(veth1buf), "vethXXXXXX");
++		mktemp(veth1buf);
++		veth1 = veth1buf;
++	}
+ 
+-	mktemp(veth1);
++	snprintf(veth2, sizeof(veth2), "vethXXXXXX");
+ 	mktemp(veth2);
+ 
+ 	if (!strlen(veth1) || !strlen(veth2)) {
+diff --git a/src/lxc/conf.h b/src/lxc/conf.h
+index 0b8d732..bb38206 100644
+--- a/src/lxc/conf.h
++++ b/src/lxc/conf.h
+@@ -73,6 +73,7 @@ struct lxc_route6 {
+  * Defines a structure to configure a network device
+  * @link   : lxc.network.link, name of bridge or host iface to attach if any
+  * @name   : lxc.network.name, name of iface on the container side
++ * @pair   : lxc.network.pair, name of host-side iface in case of veth etc
+  * @flags  : flag of the network device (IFF_UP, ... )
+  * @ipv4   : a list of ipv4 addresses to be set on the network device
+  * @ipv6   : a list of ipv6 addresses to be set on the network device
+@@ -83,6 +84,7 @@ struct lxc_netdev {
+ 	int ifindex;
+ 	char *link;
+ 	char *name;
++	char *pair;
+ 	char *hwaddr;
+ 	char *mtu;
+ 	struct lxc_list ipv4;
+diff --git a/src/lxc/confile.c b/src/lxc/confile.c
+index 39a8e2c..3a9a86d 100644
+--- a/src/lxc/confile.c
++++ b/src/lxc/confile.c
+@@ -49,6 +49,7 @@ static int config_network_type(const char *, char *, struct lxc_conf *);
+ static int config_network_flags(const char *, char *, struct lxc_conf *);
+ static int config_network_link(const char *, char *, struct lxc_conf *);
+ static int config_network_name(const char *, char *, struct lxc_conf *);
++static int config_network_pair(const char *, char *, struct lxc_conf *);
+ static int config_network_hwaddr(const char *, char *, struct lxc_conf *);
+ static int config_network_mtu(const char *, char *, struct lxc_conf *);
+ static int config_network_ipv4(const char *, char *, struct lxc_conf *);
+@@ -73,6 +74,7 @@ static struct config config[] = {
+ 	{ "lxc.network.flags",  config_network_flags  },
+ 	{ "lxc.network.link",   config_network_link   },
+ 	{ "lxc.network.name",   config_network_name   },
++	{ "lxc.network.pair",   config_network_pair   },
+ 	{ "lxc.network.hwaddr", config_network_hwaddr },
+ 	{ "lxc.network.mtu",    config_network_mtu    },
+ 	{ "lxc.network.ipv4",   config_network_ipv4   },
+@@ -221,6 +223,18 @@ static int config_network_name(const char *key, char *value,
+ 	return network_ifname(&netdev->name, value);
+ }
+ 
++static int config_network_pair(const char *key, char *value,
++			       struct lxc_conf *lxc_conf)
++{
++	struct lxc_netdev *netdev;
++
++	netdev = network_netdev(key, value, &lxc_conf->network);
++	if (!netdev)
++		return -1;
++
++	return network_ifname(&netdev->pair, value);
++}
++
+ static int config_network_hwaddr(const char *key, char *value,
+ 				 struct lxc_conf *lxc_conf)
+ {
+--
+cgit v0.8.3

@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.5 2009/11/25 12:16:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.6 2009/12/07 11:39:11 flameeyes Exp $
+
+*lxc-0.6.4-r1 (07 Dec 2009)
+
+  07 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/0.6.2-as-needed.patch, -lxc-0.6.3.ebuild, +lxc-0.6.4-r1.ebuild,
+  +files/lxc-0.6.4-fix-full-system.patch,
+  +files/lxc-0.6.4-lxc.network.pair.patch,
+  +files/lxc-0.6.4-move-rcfile.patch:
+  Backport fixes from upstream, including one to not break host systems if
+  lxc-start is launched in the old (pre-0.6.4) way. Thanks to Andrian Nord
+  in bug #296030.
 
   25 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org> lxc-0.6.4.ebuild,
   metadata.xml:
