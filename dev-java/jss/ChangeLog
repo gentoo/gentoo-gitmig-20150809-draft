@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jss
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.22 2009/11/03 19:45:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.23 2009/12/07 23:08:36 maekke Exp $
+
+  07 Dec 2009; Markus Meier <maekke@gentoo.org> jss-4.3.ebuild:
+  amd64/x86 stable, bug #295590
 
 *jss-4.3 (03 Nov 2009)
 
