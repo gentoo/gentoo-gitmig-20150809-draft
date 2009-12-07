@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/ckermit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.30 2009/12/07 07:54:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.31 2009/12/07 12:51:20 vapier Exp $
+
+*ckermit-8.0.211-r4 (07 Dec 2009)
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +ckermit-8.0.211-r4.ebuild, +files/ckermit-8.0.211-cleanup.patch:
+  Disable auth/telnet/ftp cruft as other packages do these things better.
+  Switch to the linuxa target to avoid parsing /usr/include/ directly. Make
+  ncurses support optional. Respect all env build flags. Clean up missing
+  prototypes and other bad warnings.
 
   07 Dec 2009; Mike Frysinger <vapier@gentoo.org> ckermit-8.0.211-r3.ebuild:
   Mark all stable.
