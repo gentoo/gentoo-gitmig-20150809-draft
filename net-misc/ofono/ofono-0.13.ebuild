@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.9.ebuild,v 1.1 2009/11/03 16:11:43 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.13.ebuild,v 1.1 2009/12/07 12:01:29 dagger Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE="threads +udev"
 
 RDEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/glib-2.16
-	udev? ( >=sys-fs/udev-141 )"
+	udev? ( >=sys-fs/udev-143 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
