@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.100 2009/12/06 19:00:43 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.101 2009/12/07 09:09:26 vapier Exp $
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.3.ebuild,
+  openrc-9999.ebuild:
+  Migrate hostname by default to avoid default thrashing on conf.d/hostname
+  #295406 by Martin Mokrejš. Also delay automatic dep tree update till
+  after we are done screwing with /etc.
 
   06 Dec 2009; William Hubbs <williamh@gentoo.org> -openrc-0.5.2-r2.ebuild,
   -files/openrc-0.5.2-dont-wipe-wtmp.patch,

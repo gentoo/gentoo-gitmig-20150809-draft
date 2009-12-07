@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.3.ebuild,v 1.1 2009/12/02 23:42:29 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.3.ebuild,v 1.2 2009/12/07 09:09:26 vapier Exp $
 
 EAPI="1"
 
@@ -170,9 +170,20 @@ pkg_preinst() {
 	# file in the CONTENTS for binary packages.
 	[[ -e ${ROOT}/etc/conf.d/net ]] && cp "${ROOT}"/etc/conf.d/net "${D}"/etc/conf.d/
 
+	# avoid default thrashing in conf.d files when possible #295406
+	if [[ -e ${ROOT}/etc/conf.d/hostname ]] ; then
+		(
+		unset hostname HOSTNAME
+		source "${ROOT}"/etc/conf.d/hostname
+		: ${hostname:=${HOSTNAME}}
+		[[ -n ${hostname} ]] && set_config /etc/conf.d/hostname hostname "${hostname}"
+		)
+	fi
+
 	# upgrade timezone file ... do it before moving clock
 	if [[ -e ${ROOT}/etc/conf.d/clock && ! -e ${ROOT}/etc/timezone ]] ; then
 		(
+		unset TIMEZONE
 		source "${ROOT}"/etc/conf.d/clock
 		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${ROOT}"/etc/timezone
 		)
@@ -347,9 +358,6 @@ pkg_postinst() {
 		fi
 	fi
 
-	# update the dependency tree bug #224171
-	[[ "${ROOT}" = "/" ]] && "${ROOT}/${LIBDIR}"/rc/bin/rc-depend -u
-
 	# /etc/conf.d/net.example is no longer valid
 	local NET_EXAMPLE="${ROOT}/etc/conf.d/net.example"
 	local NET_MD5='8ebebfa07441d39eb54feae0ee4c8210'
@@ -384,6 +392,9 @@ pkg_postinst() {
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
 		ewarn "your files to /etc/conf.d/modules and delete the directory."
 	fi
+
+	# update the dependency tree after touching all files #224171
+	[[ "${ROOT}" = "/" ]] && "${ROOT}/${LIBDIR}"/rc/bin/rc-depend -u
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."
