@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/huludesktop
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/ChangeLog,v 1.1 2009/12/07 16:41:20 vapier Exp $
+
+*huludesktop-0.9.6 (07 Dec 2009)
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org> +huludesktop-0.9.6.ebuild,
+  +files/huludesktop, +metadata.xml:
+  New package #288372.
+

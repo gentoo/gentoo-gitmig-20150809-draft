@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ ! -e ~/.huludesktop ] ; then
+	cat <<-EOF > ~/.huludesktop
+	[flash]
+	flash_location = /opt/netscape/plugins/libflashplayer.so
+	EOF
+fi
+exec /opt/bin/huludesktop.bin "$@"
