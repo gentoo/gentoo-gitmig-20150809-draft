@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r3.ebuild,v 1.2 2009/04/26 20:00:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r3.ebuild,v 1.3 2009/12/07 07:54:34 vapier Exp $
 
 inherit versionator multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.kermit-project.org/"
 
 LICENSE="Kermit"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"

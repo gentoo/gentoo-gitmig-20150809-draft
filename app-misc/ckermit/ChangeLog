@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ckermit
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.29 2009/04/26 20:00:02 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.30 2009/12/07 07:54:34 vapier Exp $
+
+  07 Dec 2009; Mike Frysinger <vapier@gentoo.org> ckermit-8.0.211-r3.ebuild:
+  Mark all stable.
 
   26 Apr 2009; Ryan Hill <dirtyepic@gentoo.org> ckermit-8.0.211-r3:
   Use CC, bug #243626.
