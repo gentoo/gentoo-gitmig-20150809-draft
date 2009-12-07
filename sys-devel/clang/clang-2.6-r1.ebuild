@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.2 2009/11/30 14:15:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.3 2009/12/07 18:58:55 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -30,7 +30,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.6-fixdoc.patch
 
 	# multilib-strict
-	sed -e "s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
+	sed -e "/PROJ_headers/s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
 		-i "${S}"/tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# fix the static analyzer for in-tree install
@@ -71,6 +71,9 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
+	# Skip llvm-gcc parts even if installed
+	CONF_FLAGS="${CONF_FLAGS} --with-llvmgccdir=/dev/null"
+
 	econf ${CONF_FLAGS} || die "econf failed"
 }
 
@@ -81,7 +84,6 @@ src_compile() {
 src_test() {
 	cd "${S}"/tools/clang || die "cd clang failed"
 
-	# 20091026: many tests fail not finding headers?
 	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	if ! emake -j1 VERBOSE=1 test; then
 		hasq test $FEATURES && die "Make test failed. See above for details."
