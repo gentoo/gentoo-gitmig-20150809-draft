@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/rhpl-0.213.ebuild,v 1.5 2009/08/30 15:54:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/rhpl-0.213.ebuild,v 1.6 2009/12/07 13:07:23 djc Exp $
 
 inherit eutils multilib python rpm toolchain-funcs distutils
 
@@ -9,7 +9,7 @@ inherit eutils multilib python rpm toolchain-funcs distutils
 RPMREV="1"
 
 DESCRIPTION="Library of python code used by Red Hat Linux programs"
-HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/"
+HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig"
 SRC_URI="mirror://fedora-dev/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rhpl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.13 2009/09/04 17:44:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.14 2009/12/07 13:07:23 djc Exp $
+
+  07 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> rhpl-0.213.ebuild,
+  metadata.xml:
+  Fix homepage, let the python herd worry about this.
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -rhpl-0.210.ebuild:
   Remove old
