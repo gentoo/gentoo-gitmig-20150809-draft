@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.62 2009/12/07 08:59:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.63 2009/12/07 17:53:00 bicatali Exp $
+
+  07 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/netcdf-3.6.2-as-needed.patch, -files/netcdf-3.6.2-gcc43.patch,
+  -files/netcdf-3.6.2-parallel-make.patch, netcdf-3.6.3.ebuild:
+  Cleaning and added same trick for parallel build in 3.6.3 as in 4.0.1
 
 *netcdf-4.0.1 (07 Dec 2009)
 
