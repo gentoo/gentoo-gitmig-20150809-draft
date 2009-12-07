@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rackview
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.13 2009/01/15 21:04:17 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.14 2009/12/07 13:46:22 weaver Exp $
+
+  07 Dec 2009; Andrey Kislyuk <weaver@gentoo.org> rackview-0.09.ebuild,
+  rackview-0.09-r1.ebuild:
+  Use webapp slots and block to avoid collisions, fix bug 256230
 
 *rackview-0.09-r1 (15 Jan 2009)
 
