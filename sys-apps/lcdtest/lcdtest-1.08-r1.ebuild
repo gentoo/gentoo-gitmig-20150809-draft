@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.08-r1.ebuild,v 1.7 2009/10/13 13:55:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.08-r1.ebuild,v 1.8 2009/12/07 00:30:55 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,8 +32,8 @@ src_compile() {
 	eend $?
 	einfo "Generating font"
 	pngtopnm 14P_Arial_Plain_Red.png > help_font.ppm || die pngtopnm failed
-	ppmtoxpm -name `basename help_font.ppm .ppm`_xpm help_font.ppm |
-	sed 's/static //;s/black/#000000/;s/magenta/#FF00FF/;s/#E40808/#009900/' > help_font.c || die ppmtoxpm failed
+	ppmtoxpm -name `basename help_font.ppm .ppm`_xpm help_font.ppm || die ppmtoxpm failed
+	sed 's/static //;s/black/#000000/;s/magenta/#FF00FF/;s/#E40808/#009900/' > help_font.c || sed failed
 	ebegin "Running final stage compilation"
 	"${CC}" -o help_font.o -c ${CFLAGS} -DRELEASE=${PV} help_font.c || die help_font compilation failed
 	"${CC}" -o lcdtest lcdtest.o SFont.o help_font.o -lSDL -lSDL_image || die final link failed
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/lcdtest
-	doman man/lcdtest.1
-	dodoc README
+	dobin src/lcdtest || die Binary missing
+	doman man/lcdtest.1 || die Manpage missing
+	dodoc README || die Documentation missing
 }
