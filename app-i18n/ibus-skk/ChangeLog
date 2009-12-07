@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-skk
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.1 2009/12/07 12:44:32 matsuu Exp $
+
+*ibus-skk-0.0.1 (07 Dec 2009)
+
+  07 Dec 2009; MATSUU Takuto <matsuu@gentoo.org> +ibus-skk-0.0.1.ebuild,
+  +metadata.xml:
+  Initial import.
+
