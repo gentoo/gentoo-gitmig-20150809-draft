@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.19 2009/11/04 22:51:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.20 2009/12/08 14:50:33 flameeyes Exp $
+
+*virt-manager-0.8.1 (08 Dec 2009)
+
+  08 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +virt-manager-0.8.1.ebuild:
+  Version bump, thanks to Elias Probst in bug #296142. Remove the network
+  USE flag that pulled in iptables as it's not really required to have
+  bridged or routed networks.
 
   04 Nov 2009; Patrick Lauer <patrick@gentoo.org> virt-manager-0.8.0.ebuild:
   Fixing libvirt dep (+python useflag) for #291896
