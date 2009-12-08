@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/analog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.57 2009/10/04 20:43:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.58 2009/12/08 21:34:30 tcunha Exp $
+
+  08 Dec 2009; Tiago Cunha <tcunha@gentoo.org> analog-6.0-r3.ebuild:
+  stable sparc, bug 281585
 
   04 Oct 2009; Markus Meier <maekke@gentoo.org> analog-6.0-r3.ebuild:
   arm stable, bug #281585
