@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.51 2009/12/02 21:29:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.52 2009/12/08 20:05:51 halcy0n Exp $
+
+  08 Dec 2009; Mark Loeser <halcy0n@gentoo.org>
+  vdr-xineliboutput-9999.ebuild:
+  It looks like the ebuild was duplicated inside itself...so, removed the
+  duplicate
 
 *vdr-xineliboutput-9999 (02 Dec 2009)
 
