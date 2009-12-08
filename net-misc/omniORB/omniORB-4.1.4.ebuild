@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4.ebuild,v 1.7 2009/11/23 14:47:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4.ebuild,v 1.8 2009/12/08 19:18:39 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://omniorb.sourceforge.net/"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="doc ssl"
 
 RDEPEND="dev-lang/python
