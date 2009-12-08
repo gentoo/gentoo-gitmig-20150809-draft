@@ -1,0 +1,10 @@
+# ChangeLog for www-client/uget
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.1 2009/12/08 21:21:25 wired Exp $
+
+*uget-1.5.0 (08 Dec 2009)
+
+  08 Dec 2009; Alex Alexander <wired@gentoo.org> +uget-1.5.0.ebuild,
+  +metadata.xml:
+  ebuild for uget - new version of urlgfe - renamed by upstream
+
