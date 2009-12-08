@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r8.ebuild,v 1.6 2009/11/30 19:45:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r8.ebuild,v 1.7 2009/12/08 13:36:30 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -101,6 +101,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/mutt-1.5.20-search-pattern-crash-053ef7bbaa72.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-next-invalid-pattern-crash-6a08a5244d60.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-ssl-CVE-2009-3765-dc09812e63a3.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-ssl-stack-compile-fix-1cf34ea1f128.patch
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \

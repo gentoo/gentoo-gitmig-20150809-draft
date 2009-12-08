@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.168 2009/11/30 19:45:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.169 2009/12/08 13:36:30 grobian Exp $
+
+  08 Dec 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r8.ebuild,
+  +files/mutt-1.5.20-ssl-stack-compile-fix-1cf34ea1f128.patch:
+  Add patch from upstream for compiling against newer OpenSSL
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> mutt-1.5.20-r8.ebuild:
   Re-add ~ia64/~sparc wrt #290154
