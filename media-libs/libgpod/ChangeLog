@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.68 2009/09/27 15:25:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.69 2009/12/08 01:44:32 jer Exp $
+
+  08 Dec 2009; Jeroen Roovers <jer@gentoo.org> libgpod-0.7.2.ebuild:
+  Stable for HPPA (bug #289703).
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org> libgpod-0.7.2.ebuild:
   stable ppc64, bug 271496

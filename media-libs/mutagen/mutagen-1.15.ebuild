@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.15.ebuild,v 1.7 2009/06/08 11:26:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.15.ebuild,v 1.8 2009/12/08 01:43:19 jer Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sacredchao.net/~piman/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND=">=virtual/python-2.4"
