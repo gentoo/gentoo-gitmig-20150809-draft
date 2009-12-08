@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.40 2009/11/23 01:52:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.41 2009/12/08 14:25:37 flameeyes Exp $
+
+*libvirt-0.7.4-r1 (08 Dec 2009)
+
+  08 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libvirt-0.7.4-r1.ebuild:
+  Add a revision of libvirt that doesn't force you to install dnsmasq and
+  iptables (they are not mandatory!).
 
 *libvirt-0.7.4 (23 Nov 2009)
 
