@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.0_beta1.ebuild,v 1.1 2009/11/13 20:31:47 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.0_beta2.ebuild,v 1.1 2009/12/08 00:49:05 tgurr Exp $
 
 EAPI="2"
 
@@ -28,8 +28,8 @@ RDEPEND="dev-libs/openssl
 	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	ice? ( dev-libs/boost )"
+	>=dev-libs/boost-1.36.0-r1
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
