@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.19 2009/12/04 19:35:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.20 2009/12/08 17:16:13 bicatali Exp $
+
+  08 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  cernlib-2006-r3.ebuild:
+  Respect user's compiler commands, thanks to jer, bug #296058
 
   04 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
   cernlib-2006-r3.ebuild:

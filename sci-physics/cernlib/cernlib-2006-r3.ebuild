@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.5 2009/12/04 19:35:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.6 2009/12/08 17:16:13 bicatali Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -68,6 +68,9 @@ src_prepare() {
 	sed -i \
 		-e 's/-O3/-O2/g' \
 		-e "s/-O2/${CFLAGS}/g" \
+		-e "s|\(CcCmd[[:space:]]*\)gcc|\1$(tc-getCC)|g" \
+		-e "s|\(CplusplusCmd[[:space:]]*\)g++|\1$(tc-getCXX)|g" \
+		-e "s|\(FortranCmd[[:space:]]*\)gfortran|\1$(tc-getFC)|g" \
 		src/config/linux.cf	\
 		|| die "sed linux.cf failed"
 	sed -i \
