@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dwarves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.8 2009/11/07 20:34:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.9 2009/12/08 22:10:36 flameeyes Exp $
+
+*dwarves-1.8 (08 Dec 2009)
+
+  08 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -dwarves-1.6_p20091107.ebuild, +dwarves-1.8.ebuild:
+  Bump to version 1.8 and remove my home made snapshot.
 
 *dwarves-1.6_p20091107 (07 Nov 2009)
 

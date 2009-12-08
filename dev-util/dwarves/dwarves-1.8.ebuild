@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.6_p20091107.ebuild,v 1.1 2009/11/07 20:34:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.8.ebuild,v 1.1 2009/12/08 22:10:36 flameeyes Exp $
 
 inherit toolchain-funcs multilib cmake-utils flag-o-matic
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/elfutils-0.131
 DEPEND="${RDEPEND}"
 
 if [[ ${PV//_p} == ${PV} ]]; then
-	SRC_URI="http://userweb.kernel.org/~acme/dwarves/${P}.tar.bz2"
+	SRC_URI="http://fedorapeople.org/~acme/dwarves/${P}.tar.bz2"
 	S=${WORKDIR}
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
