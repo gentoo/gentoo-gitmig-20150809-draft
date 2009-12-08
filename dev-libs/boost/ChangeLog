@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.177 2009/12/02 14:32:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.178 2009/12/08 14:48:51 djc Exp $
+
+*boost-1.41.0-r1 (08 Dec 2009)
+
+  08 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> +boost-1.41.0-r1.ebuild,
+  +files/boost-1.41.0-iostreams-missing-include-guard.patch:
+  Bump 1.41.0 to r1 to fix bug with mapnik, also fix #241684.
 
 *boost-1.41.0 (02 Dec 2009)
 
