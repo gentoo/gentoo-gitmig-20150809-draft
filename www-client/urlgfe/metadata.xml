@@ -6,6 +6,10 @@
 <email>swegener@gentoo.org</email>
 <name>Sven Wegener</name>
 </maintainer>
+<maintainer>
+<email>wired@gentoo.org</email>
+<name>Alex Alexander</name>
+</maintainer>
 <longdescription lang="en">
 Urlgfe is a download manager. It allows you to classify URLs before downloading
 them, and allows you to import URLs from HTML files. Every category has an
