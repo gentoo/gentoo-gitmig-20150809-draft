@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3656 2009/12/07 15:37:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3657 2009/12/08 15:29:58 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Dec 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  Masking app-i18n/jless for removal, bug #294759.
 
   07 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask HAL 0.5.14 wrt #295600.
