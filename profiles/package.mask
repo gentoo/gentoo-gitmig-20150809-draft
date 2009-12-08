@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10950 2009/12/08 15:29:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10951 2009/12/08 17:43:00 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (08 Dec 2009)
+# Beta versions of sudo
+=app-admin/sudo-1.7.3_beta*
 
 # MATSUU Takuto <matsuu@gentoo.org> (08 Dec 2009)
 # Upstream dead.
