@@ -1,6 +1,14 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.9 2009/12/05 17:37:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.10 2009/12/08 12:36:47 wired Exp $
+
+  08 Dec 2009; Alex Alexander <wired@gentoo.org>
+  uzbl-0_pre20091130-r1.ebuild, uzbl-9999.ebuild,
+  files/uzbl-9999-makefile-cleanup.patch:
+  added better elog messages to inform the user about optional runtime
+  dependencies. fixed -9999 patch to work with updated makefile. -browser
+  +tabbed results in -browser -tabbed (with ewarn). +browser depends on
+  x11-misc/xclip, used in uzbl's example config.
 
   05 Dec 2009; Alex Alexander <wired@gentoo.org> -uzbl-0_pre20091130.ebuild,
   uzbl-0_pre20091130-r1.ebuild, uzbl-9999.ebuild,

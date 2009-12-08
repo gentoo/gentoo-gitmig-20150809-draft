@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-0_pre20091130-r1.ebuild,v 1.2 2009/12/05 17:37:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-0_pre20091130-r1.ebuild,v 1.3 2009/12/08 12:36:47 wired Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ DESCRIPTION="A keyboard controlled (modal vim-like bindings, or with modifierkey
 HOMEPAGE="http://www.uzbl.org"
 SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${MY_PV} -> ${P}.tar.gz"
 
-LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
+LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+browser helpers +tabbed"
@@ -32,6 +32,9 @@ DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
+	browser? (
+		x11-misc/xclip
+	)
 	helpers? (
 		dev-lang/perl
 		dev-python/pygtk
@@ -45,17 +48,32 @@ RDEPEND="
 "
 
 pkg_setup() {
-	ewarn "Since the helpers are growing into a fine list I've decided"
-	ewarn "to keep them under a single USE flag to avoid a USE hell".
-	ewarn "You can always install the ones you need manually if you don't"
-	ewarn "need them all."
-	ewarn
+	if ! use helpers; then
+		elog "uzbl's extra scripts use various optional applications:"
+		elog
+		elog "   dev-lang/perl"
+		elog "   dev-python/pygtk"
+		elog "   dev-python/pygobject"
+		elog "   gnome-extra/zenity"
+		elog "   net-misc/socat"
+		elog "   x11-libs/pango"
+		elog "   x11-misc/dmenu"
+		elog "   x11-misc/xclip"
+		elog
+		elog "Make sure you emerge the ones you need manually."
+		elog "You may also activate the *helpers* USE flag to"
+		elog "install all of them automatically."
+	else
+		einfo "You have enabled the *helpers* USE flag that installs"
+		einfo "various optional applications used by uzbl's extra scripts."
+	fi
 
 	if use tabbed && ! use browser; then
-		ewarn "You enabled 'tabbed' but not 'browser' which is required by"
-		ewarn "'tabbed'. uzbl-browser will be installed anyway to fulfill the"
-		ewarn "dependency."
 		ewarn
+		ewarn "You enabled the *tabbed* USE flag but not *browser*."
+		ewarn "*tabbed* depends on *browser*, so it will be disabled."
+		ewarn
+		ebeep 3
 	fi
 }
 
@@ -77,14 +95,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-core || die "Installation failed"
-	if use browser || use tabbed; then
-			emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-browser || die "Installation failed"
-	fi
-	if use tabbed; then
-		emake DESTDIR="${D}" PREFIX="/usr" install-uzbl-tabbed || die "Installation failed"
-	fi
+	local targets="install-uzbl-core"
+	use browser && targets="${targets} install-uzbl-browser"
+	use browser && use tabbed && targets="${targets} install-uzbl-tabbed"
 
-	# Move the docs to /usr/share/doc instead.
-	dodoc AUTHORS README docs/*
+	emake DESTDIR="${D}" PREFIX="/usr" ${targets} || die "Installation failed"
+
+	# Install the docs in /usr/share/doc.
+	dodoc AUTHORS README docs/* || die "docs install failed"
 }
