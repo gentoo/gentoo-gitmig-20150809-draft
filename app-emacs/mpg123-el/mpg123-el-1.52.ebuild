@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.52.ebuild,v 1.2 2009/11/19 16:43:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.52.ebuild,v 1.3 2009/12/08 19:35:45 nixnut Exp $
 
 inherit elisp toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="vorbis"
 
 DEPEND=""
