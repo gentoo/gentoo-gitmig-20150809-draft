@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.51 2009/12/08 09:33:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.52 2009/12/08 19:21:31 billie Exp $
+
+  08 Dec 2009; Daniel Pielmeier <billie@gentoo.org> k9copy-2.3.4.ebuild:
+  Remove x11-libs/qt-dbus from DEPEND as it is already handled by the
+  kde4-base eclass.
 
 *k9copy-2.3.4 (08 Dec 2009)
 

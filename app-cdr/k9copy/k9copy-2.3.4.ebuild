@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.4.ebuild,v 1.1 2009/12/08 09:33:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.4.ebuild,v 1.2 2009/12/08 19:21:31 billie Exp $
 
 EAPI="2"
 
@@ -20,8 +20,7 @@ IUSE=""
 DEPEND="media-libs/libdvdread
 	>=media-libs/libmpeg2-0.5.1
 	media-libs/xine-lib
-	>=media-video/ffmpeg-0.5
-	x11-libs/qt-dbus:4"
+	>=media-video/ffmpeg-0.5"
 RDEPEND="${DEPEND}
 	media-video/dvdauthor
 	media-video/mplayer"
