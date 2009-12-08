@@ -8,5 +8,6 @@
 		runtime</flag>
 	<flag name='replytolist'>Enable <pkg>x11-plugins/replytolist</pkg>
 		plugin</flag>
+	<flag name='lightning'>Enable calendar support</flag>
 </use>
 </pkgmetadata>
