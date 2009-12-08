@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7.ebuild,v 1.1 2009/12/07 20:51:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7.ebuild,v 1.2 2009/12/08 15:08:23 alexxy Exp $
 
 EAPI="2"
 
@@ -92,8 +92,9 @@ src_configure() {
 	fi
 
 	if [[ $(gcc-version) == "4.1" ]]; then
-		ewarn "gcc 4.1 is not supported by gromacs"
-		ewarn "please run test suite"
+		eerror "gcc 4.1 is not supported by gromacs"
+		eerror "please run test suite"
+		die
 	fi
 
 	#note for gentoo-PREFIX on apple: use --enable-apple-64bit
@@ -121,6 +122,13 @@ src_configure() {
 		myconf="${myconf} $(use_with lapack external-lapack)"
 	fi
 
+	# by default its better to have dynamicaly linked binaries
+	if use static; then
+		myconf="${myconf} $(use_enable static all-static)"
+	else
+		myconf="${myconf} --enable-shared"
+	fi
+
 	myconf="--datadir=/usr/share \
 			--bindir=/usr/bin \
 			--libdir=/usr/$(get_libdir) \
@@ -130,7 +138,6 @@ src_configure() {
 			$(use_with gsl) \
 			$(use_with X x) \
 			$(use_with xml) \
-			$(use_enable static all-static) \
 			${myconf}"
 
 	#if we build single and double - double is suffixed
