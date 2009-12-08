@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.48 2009/11/08 17:08:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.49 2009/12/08 21:15:24 tcunha Exp $
+
+  08 Dec 2009; Tiago Cunha <tcunha@gentoo.org> lbdb-0.36-r1.ebuild:
+  stable sparc, bug 289954
 
   08 Nov 2009; Tobias Klausmann <klausman@gentoo.org> lbdb-0.36-r1.ebuild:
   Stable on alpha, bug #289954

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.36-r1.ebuild,v 1.4 2009/11/08 17:08:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.36-r1.ebuild,v 1.5 2009/12/08 21:15:24 tcunha Exp $
 
 inherit versionator eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Little Brother database"
 SRC_URI="http://www.spinnaker.de/debian/${MY_P}.tar.gz"
 HOMEPAGE="http://www.spinnaker.de/lbdb/"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 LICENSE="GPL-2"
 IUSE="pda ldap finger nis abook crypt evo"
 
