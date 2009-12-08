@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.3.ebuild,v 1.2 2009/11/09 19:08:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.3.ebuild,v 1.3 2009/12/08 12:32:14 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -51,10 +51,6 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-
-	# Don't install tests.
-	rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/{BTrees,persistent,ZEO,ZODB}/tests
-	rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/{ZEO,ZODB}/scripts/manual_tests
 
 	# Don't install sources.
 	find "${D}"usr/$(get_libdir)/python*/site-packages -name "*.c" -o -name "*.h" | xargs rm -f
