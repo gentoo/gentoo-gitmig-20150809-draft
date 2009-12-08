@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/tempstorage
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/ChangeLog,v 1.1 2009/12/08 12:17:44 arfrever Exp $
+
+*tempstorage-2.11.2 (08 Dec 2009)
+
+  08 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +tempstorage-2.11.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
