@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.50 2009/08/20 13:00:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.51 2009/12/08 09:33:09 scarabeus Exp $
+
+*k9copy-2.3.4 (08 Dec 2009)
+
+  08 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -k9copy-2.3.3.ebuild,
+  +k9copy-2.3.4.ebuild:
+  Version bump. Drop old.
 
 *k9copy-2.3.3 (20 Aug 2009)
 
