@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.26.ebuild,v 1.1 2009/12/07 04:23:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.26.ebuild,v 1.2 2009/12/08 07:44:28 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -82,10 +82,11 @@ src_install() {
 	# violation with kbuildsycoca as in bug #287067, comment #13.
 	export -n DISPLAY
 
-	# Bug #295672 - Try to avoid sandbox violation in ~/.config by forcing
-	# CALIBRE_CONFIG_DIRECTORY to point to our fake temporary $HOME.
-	export CALIBRE_CONFIG_DIRECTORY="$HOME/.config/calibre"
-	mkdir -p "$CALIBRE_CONFIG_DIRECTORY"
+	# Bug #295672 - Aavoid sandbox violation in ~/.config by forcing
+	# variables to point to our fake temporary $HOME.
+	export XDG_CONFIG_HOME="$HOME/.config"
+	export CALIBRE_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/calibre"
+	mkdir -p "$XDG_CONFIG_HOME" "$CALIBRE_CONFIG_DIRECTORY"
 
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 		distutils_src_install --bindir="${D}usr/bin" --sharedir="${D}usr/share"

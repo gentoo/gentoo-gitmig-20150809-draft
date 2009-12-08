@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.63 2009/12/07 04:23:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.64 2009/12/08 07:44:28 zmedico Exp $
+
+  08 Dec 2009; Zac Medico <zmedico@gentoo.org> calibre-0.6.26.ebuild:
+  Bug #295672 - Override XDG_CONFIG_HOME to avoid sandbox violations.
 
 *calibre-0.6.26 (07 Dec 2009)
 
