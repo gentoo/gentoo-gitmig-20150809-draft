@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.47 2009/12/01 15:59:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.48 2009/12/08 10:33:57 voyageur Exp $
+
+*chromium-bin-4.0.266.0_p33995 (08 Dec 2009)
+
+  08 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.248.0_p32003.ebuild,
+  +chromium-bin-4.0.266.0_p33995.ebuild:
+  Version bump
 
   01 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-bin-4.0.260.0_p33405.ebuild, chromium-bin-9999.ebuild:
