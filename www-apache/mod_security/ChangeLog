@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.34 2009/11/26 09:48:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.35 2009/12/08 19:39:46 nixnut Exp $
+
+  08 Dec 2009; nixnut <nixnut@gentoo.org> mod_security-2.5.9-r1.ebuild:
+  ppc stable #293366
 
 *mod_security-2.5.11-r2 (26 Nov 2009)
 
