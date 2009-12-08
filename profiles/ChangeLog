@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3657 2009/12/08 15:29:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3658 2009/12/08 15:51:40 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Dec 2009; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
+  Add ignum to sourceforge mirrors (bug #296179).
 
   08 Dec 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   Masking app-i18n/jless for removal, bug #294759.
