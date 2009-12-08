@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-deferredimport
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-deferredimport/ChangeLog,v 1.1 2009/12/08 12:47:06 arfrever Exp $
+
+*zope-deferredimport-3.5.0 (08 Dec 2009)
+
+  08 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-deferredimport-3.5.0.ebuild, +metadata.xml:
+  Initial import from python overlay.
+
