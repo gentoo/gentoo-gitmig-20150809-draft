@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.2 2009/10/21 20:30:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.3 2009/12/08 20:18:35 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator base cmake-utils
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-arch/unzip"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS.txt ChangeLog NEWS.txt"
 
