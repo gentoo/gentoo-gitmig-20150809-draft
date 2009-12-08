@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.4-r1.ebuild,v 1.1 2009/09/16 08:05:17 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.4-r1.ebuild,v 1.2 2009/12/08 00:02:40 eva Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ src_install() {
 		exampledir=/usr/share/doc/${PF}/python/examples \
 		install || die "Installation failed"
 
-	rm "${D}"/usr/share/doc/${P}/{AUTHORS,ChangeLog,Copyright,NEWS,README*,TODO*}
+	rm -rf "${D}"/usr/share/doc/${P}
 	dodoc AUTHORS ChangeLog Copyright NEWS README* TODO* || die "dodoc failed"
 
 	if ! use python; then
