@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.9 2009/11/21 19:27:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.10 2009/12/08 16:37:52 ranger Exp $
+
+  08 Dec 2009; Brent Baude <ranger@gentoo.org> lensfun-0.2.4.ebuild:
+  Marking lensfun-0.2.4 ppc64 for bug 293850
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> lensfun-0.2.4.ebuild:
   ppc stable #293850
