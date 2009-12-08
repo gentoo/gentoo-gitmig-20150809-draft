@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.186 2009/12/06 14:36:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.187 2009/12/08 19:17:44 ranger Exp $
+
+  08 Dec 2009; Brent Baude <ranger@gentoo.org> tor-0.2.1.19-r2.ebuild:
+  Marking tor-0.2.1.19-r2 ppc64 for bug 294297
 
 *tor-0.2.1.20-r1 (06 Dec 2009)
 
