@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5080 2009/12/07 21:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5081 2009/12/08 21:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1307,6 +1307,7 @@ mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:mh - Enable MH mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
+mail-client/mozilla-thunderbird:lightning - Enable calendar support
 mail-client/mozilla-thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/mozilla-thunderbird:moznopango - Disable x11-libs/pango during runtime
 mail-client/mozilla-thunderbird:replytolist - Enable x11-plugins/replytolist plugin
