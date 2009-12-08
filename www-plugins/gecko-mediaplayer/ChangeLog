@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.22 2009/11/21 20:07:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.23 2009/12/08 01:47:48 jer Exp $
+
+  08 Dec 2009; Jeroen Roovers <jer@gentoo.org>
+  gecko-mediaplayer-0.9.8.ebuild:
+  Stable for HPPA (bug #289703).
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org>
   gecko-mediaplayer-0.9.8.ebuild:
