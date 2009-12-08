@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/celt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.6 2009/11/20 00:42:41 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.7 2009/12/08 00:41:32 tgurr Exp $
+
+*celt-0.7.0-r2 (08 Dec 2009)
+
+  08 Dec 2009; Timo Gurr <tgurr@gentoo.org> -celt-0.7.0-r1.ebuild,
+  +celt-0.7.0-r2.ebuild:
+  Revert library versioning hack, upstream solution still a work in
+  progress.
 
 *celt-0.7.0-r1 (20 Nov 2009)
 

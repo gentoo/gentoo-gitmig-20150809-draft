@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.7.0-r1.ebuild,v 1.1 2009/11/20 00:42:41 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.7.0-r2.ebuild,v 1.1 2009/12/08 00:41:32 tgurr Exp $
 
 EAPI="2"
 
@@ -25,9 +25,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc ChangeLog README TODO || die "dodoc failed."
-
-	# needed until upstream cares about proper library versioning
-	dosym /usr/$(get_libdir)/libcelt.so.0.0.0 /usr/$(get_libdir)/libcelt.so.${PV}
 
 	find "${D}" -name '*.la' -delete
 }
