@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.5.3.ebuild,v 1.1 2009/08/26 06:05:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.0.0.ebuild,v 1.1 2009/12/08 17:06:59 bicatali Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="http://www.panix.com/~gesslein/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc gnuplot"
 
 DEPEND="sys-libs/readline
 	sys-libs/ncurses"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	gnuplot? ( sci-visualization/gnuplot )"
 
 src_compile() {
 	# respect the user's CFLAGS
