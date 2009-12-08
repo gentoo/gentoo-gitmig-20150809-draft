@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.99 2009/11/21 18:20:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.100 2009/12/08 00:12:12 eva Exp $
+
+  08 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org> gmime-2.2.23.ebuild,
+  gmime-2.2.24.ebuild, gmime-2.4.3.ebuild, gmime-2.4.7.ebuild,
+  gmime-2.4.9.ebuild, gmime-2.4.11.ebuild:
+  Add gtk-sharp-api everywhere, bug #294480
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> gmime-2.2.24.ebuild,
   gmime-2.4.9.ebuild:
