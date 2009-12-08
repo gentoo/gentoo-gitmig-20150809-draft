@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.168 2009/11/28 21:53:06 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.169 2009/12/08 22:14:12 remi Exp $
+
+*xinit-1.2.0-r3 (08 Dec 2009)
+
+  08 Dec 2009; Rémi Cardona <remi@gentoo.org>
+  files/0001-Gentoo-specific-customizations.patch, -xinit-1.2.0-r2.ebuild,
+  +xinit-1.2.0-r3.ebuild:
+  update Gentoo patch to fix bug #295616
 
   28 Nov 2009; Rémi Cardona <remi@gentoo.org> metadata.xml:
   add blurb in metadata.xml, see bug #293507
