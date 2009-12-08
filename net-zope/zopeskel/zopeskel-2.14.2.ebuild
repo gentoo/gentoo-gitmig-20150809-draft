@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeskel/zopeskel-2.13.ebuild,v 1.1 2009/10/04 00:25:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeskel/zopeskel-2.14.2.ebuild,v 1.1 2009/12/08 17:04:41 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
