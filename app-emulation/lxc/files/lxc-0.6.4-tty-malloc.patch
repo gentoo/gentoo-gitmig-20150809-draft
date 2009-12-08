@@ -1,0 +1,25 @@
+From e4e7d59db88478186188024c78f76066dad1e733 Mon Sep 17 00:00:00 2001
+From: Sven Wegener <sven.wegener@stealer.net>
+Date: Thu, 26 Nov 2009 16:46:23 +0100
+Subject: [PATCH] use correct number of ttys during setup
+
+commit 985d15b106c8959ff130ba5425c2abbe36dc2cca "fix fdleak and errors
+in lxc_create_tty()" created a zero-sized malloc(), causing memory
+corruption. use config->tty like all the other code does.
+
+Signed-off-by: Sven Wegener <sven.wegener@stealer.net>
+Signed-off-by: Daniel Lezcano <dlezcano@fr.ibm.com>
+
+diff --git a/src/lxc/conf.c b/src/lxc/conf.c
+index 0ce51aa..81bc470 100644
+--- a/src/lxc/conf.c
++++ b/src/lxc/conf.c
+@@ -999,7 +999,7 @@ int lxc_create_tty(const char *name, struct lxc_conf *conf)
+ 		return 0;
+ 
+ 	tty_info->pty_info =
+-		malloc(sizeof(*tty_info->pty_info)*tty_info->nbtty);
++		malloc(sizeof(*tty_info->pty_info)*conf->tty);
+ 	if (!tty_info->pty_info) {
+ 		SYSERROR("failed to allocate pty_info");
+ 		return -1;
