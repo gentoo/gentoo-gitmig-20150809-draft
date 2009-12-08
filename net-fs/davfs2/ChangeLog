@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.47 2009/11/23 21:16:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.48 2009/12/08 19:43:53 nixnut Exp $
+
+  08 Dec 2009; nixnut <nixnut@gentoo.org> davfs2-1.4.1.ebuild:
+  ppc stable #293847
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> davfs2-1.4.1.ebuild:
   x86 stable, bug #293847
