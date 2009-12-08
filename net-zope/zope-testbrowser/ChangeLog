@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-testbrowser
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testbrowser/ChangeLog,v 1.1 2009/12/08 13:08:50 arfrever Exp $
+
+*zope-testbrowser-3.7.0_alpha1 (08 Dec 2009)
+
+  08 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-testbrowser-3.7.0_alpha1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
