@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.32.18.ebuild,v 1.3 2009/08/03 20:12:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.32.18.ebuild,v 1.4 2009/12/08 18:54:41 lack Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -188,10 +188,4 @@ pkg_postinst() {
 	ewarn "issues.  Please consider only running flash applets you know to"
 	ewarn "be safe.  The 'flashblock' extension may help for mozilla users:"
 	ewarn "  https://addons.mozilla.org/en-US/firefox/addon/433"
-
-	if has_version 'kde-base/konqueror'; then
-		elog "Konqueror users - You may need to follow the instructions here:"
-		elog "  http://www.gentoo.org/proj/en/desktop/kde/kde-flash.xml"
-		elog "For flash to work with your browser."
-	fi
 }

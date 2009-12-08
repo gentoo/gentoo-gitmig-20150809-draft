@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.246.0.ebuild,v 1.1 2009/08/04 15:02:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.246.0.ebuild,v 1.2 2009/12/08 18:54:41 lack Exp $
 
 inherit nsplugins
 
@@ -50,11 +50,5 @@ pkg_postinst() {
 	if has_version 'www-client/mozilla-firefox'; then
 		elog "The firefox 'flashblock' extension may help:"
 		elog "  https://addons.mozilla.org/en-US/firefox/addon/433"
-	fi
-
-	if has_version 'kde-base/konqueror'; then
-		elog "Konqueror users:  You may need to follow the instructions here:"
-		elog "  http://dev.gentoo.org/~lack/konqueror-flash.xml"
-		elog "For flash to work with your browser."
 	fi
 }
