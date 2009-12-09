@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.8 2009/11/26 11:03:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.9 2009/12/09 18:18:37 mr_bones_ Exp $
+
+*gnurobbo-0.64 (09 Dec 2009)
+
+  09 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnurobbo-0.64.ebuild:
+  version bump
 
   26 Nov 2009; Christian Faulhammer <fauli@gentoo.org> gnurobbo-0.62.ebuild:
   stable x86, bug 289076
