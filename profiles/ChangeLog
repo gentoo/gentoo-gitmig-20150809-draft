@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3662 2009/12/09 17:24:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3663 2009/12/09 18:13:51 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> thirdpartymirrors:
+  Upstream MySQL culled a lot of old mirrors. Update the list from
+  http://dev.mysql.com/downloads/mirrors.html again.
 
   09 Dec 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   mask app-portage/g-ctan as upstream web content has been gone
