@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.0a.ebuild,v 1.1 2007/08/30 12:58:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.9.ebuild,v 1.1 2009/12/09 08:37:26 hollow Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="ZendOptimizer"
@@ -11,9 +11,9 @@ inherit php-ext-base-r1
 KEYWORDS="~amd64 ~x86"
 
 SRC_URI="amd64? ( ${PN}-${PV}-linux-glibc23-x86_64.tar.gz )
-	    x86? ( ${PN}-${PV}-linux-glibc21-i386.tar.gz )"
+		x86? ( ${PN}-${PV}-linux-glibc23-i386.tar.gz )"
 
-MY_ARCH=${ARCH/x86/glibc21-i386}
+MY_ARCH=${ARCH/x86/glibc23-i386}
 MY_ARCH=${MY_ARCH/amd64/glibc23-x86_64}
 
 S="${WORKDIR}/${PN}-${PV}-linux-${MY_ARCH}"
@@ -27,18 +27,18 @@ IUSE=""
 RESTRICT="mirror fetch strip"
 
 DEPEND=""
-RDEPEND="!dev-php5/xdebug !dev-php5/pecl-apc !dev-php5/eaccelerator"
+RDEPEND="!dev-php5/xdebug !dev-php5/pecl-apc"
 
 need_php_by_category
 
 pkg_nofetch() {
-	einfo
-	einfo "Please download ${PN}-${PV}-linux-${MY_ARCH} from:"
-	einfo "${HOMEPAGE}"
-	einfo "and put it into /usr/portage/distfiles/."
-	einfo "Please note that you need a valid Zend Account"
-	einfo "(free) to download the Zend Optimizer!"
-	einfo
+	elog
+	elog "Please download ${PN}-${PV}-linux-${MY_ARCH} from:"
+	elog "${HOMEPAGE}"
+	elog "and put it into ${DISTDIR}."
+	elog "Please note that you need a valid Zend Account"
+	elog "(free) to download the Zend Optimizer!"
+	elog
 }
 
 pkg_setup() {
@@ -50,10 +50,7 @@ pkg_setup() {
 src_install() {
 	php-ext-base-r1_src_install
 
-	# Detect which PHP5 version is installed
-	if has_version =dev-lang/php-5.1* ; then
-		ZENDOPT_VERSION_DIR="5_1_x_comp"
-	elif has_version =dev-lang/php-5.2* ; then
+	if has_version =dev-lang/php-5.2* ; then
 		ZENDOPT_VERSION_DIR="5_2_x_comp"
 	else
 		die "Unable to find an installed dev-lang/php-5* package."
@@ -72,7 +69,7 @@ src_install() {
 
 	# Add the correct settings to the extension ini files
 	php-ext-base-r1_addtoinifiles "zend_optimizer.optimization_level" "15"
-	php-ext-base-r1_addtoinifiles "zend_optimizer.enable_loader" "0"
+	php-ext-base-r1_addtoinifiles "zend_optimizer.enable_loader" "1"
 	php-ext-base-r1_addtoinifiles "zend_optimizer.disable_licensing" "0"
 
 	dodoc-php README-${PN} data/doc/Zend_Optimizer_User_Guide.pdf

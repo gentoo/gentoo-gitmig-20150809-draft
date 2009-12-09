@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/ZendOptimizer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ChangeLog,v 1.4 2009/07/07 23:18:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ChangeLog,v 1.5 2009/12/09 08:37:26 hollow Exp $
+
+*ZendOptimizer-3.3.9 (09 Dec 2009)
+
+  09 Dec 2009; Benedikt Böhm <hollow@gentoo.org>
+  -ZendOptimizer-3.3.0a.ebuild, -ZendOptimizer-3.3.3.ebuild,
+  +ZendOptimizer-3.3.9.ebuild:
+  version bump wrt #292474, remove blocker on eAccelerator wrt #258736
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ZendOptimizer-3.3.3-r1.ebuild:
