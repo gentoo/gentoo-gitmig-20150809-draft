@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.59 2009/09/05 15:18:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.60 2009/12/09 18:41:24 graaff Exp $
+
+  09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -hoe-1.8.2.ebuild,
+  -hoe-2.1.0.ebuild:
+  Remove old versions.
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> hoe-2.3.2.ebuild:
   Marking hoe-2.3.2 ppc64 stable for bug 280851
