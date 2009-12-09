@@ -1,6 +1,9 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.18 2009/10/16 07:12:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.19 2009/12/09 22:51:31 fauli Exp $
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org> scid-4.0.ebuild:
+  stable x86, bug 296125
 
 *scid-4.0 (16 Oct 2009)
 
