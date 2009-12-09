@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord-jdbc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord-jdbc/ChangeLog,v 1.5 2009/07/09 05:39:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord-jdbc/ChangeLog,v 1.6 2009/12/09 18:44:31 graaff Exp $
+
+  09 Dec 2009; Hans de Graaff <graaff@gentoo.org>
+  -activerecord-jdbc-0.4.ebuild:
+  Remove old version.
 
 *activerecord-jdbc-0.5 (09 Jul 2009)
 

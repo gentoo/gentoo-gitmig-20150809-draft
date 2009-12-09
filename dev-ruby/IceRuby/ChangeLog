@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/IceRuby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.17 2009/11/19 14:36:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IceRuby/ChangeLog,v 1.18 2009/12/09 18:45:37 graaff Exp $
+
+  09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -IceRuby-3.2.1-r1.ebuild:
+  Remove old version.
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> IceRuby-3.3.1.ebuild:
   stable x86, bug 282359
