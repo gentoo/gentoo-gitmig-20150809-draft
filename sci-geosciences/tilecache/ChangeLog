@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/tilecache
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tilecache/ChangeLog,v 1.1 2009/12/09 14:58:25 scarabeus Exp $
+
+*tilecache-2.10 (09 Dec 2009)
+
+  09 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +tilecache-2.10.ebuild, +metadata.xml:
+  Initial commit.
+
