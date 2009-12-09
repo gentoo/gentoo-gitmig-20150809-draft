@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.47 2009/11/30 18:39:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.48 2009/12/09 19:18:15 billie Exp $
+
+*libisofs-0.6.24-r1 (09 Dec 2009)
+
+  09 Dec 2009; Daniel Pielmeier <billie@gentoo.org>
+  +libisofs-0.6.24-r1.ebuild:
+  Revision bump. Add additional docs. Remove tests, this will be re-added
+  for all libburnia tools if it works again.
 
   30 Nov 2009; Brent Baude <ranger@gentoo.org> libisofs-0.6.20-r1.ebuild:
   Marking libisofs-0.6.20-r1 ppc64 for bug 282658
