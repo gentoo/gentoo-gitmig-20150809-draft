@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/libconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.48 2009/07/02 23:57:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.49 2009/12/09 14:12:49 scarabeus Exp $
+
+*libconf-0.42.10-r2 (09 Dec 2009)
+
+  09 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.42.10-perl5.10.patch, -libconf-0.42.10-r1.ebuild,
+  +libconf-0.42.10-r2.ebuild:
+  QA: Revbump. Fix ruby bindings and perl-5.10 issues. Non-maintainer
+  commit. Fixes bug #117061 and #256686.
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> libconf-0.42.10-r1.ebuild:
   Marked ~hppa too.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r1.ebuild,v 1.8 2009/07/02 23:57:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r2.ebuild,v 1.1 2009/12/09 14:12:49 scarabeus Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -27,7 +27,8 @@ bindings() {
 	local mybindings
 	mybindings="bash"
 	use python && mybindings="${mybindings} python"
-	use ruby && mybindings="${mybindings} ruby"
+	# ruby bindings require c bindings - bug #117061
+	use ruby && mybindings="${mybindings} c ruby"
 	echo ${mybindings}
 }
 
@@ -36,6 +37,7 @@ src_unpack() {
 	cd "${S}"
 
 	[[ ${USERLAND} == *BSD ]] && epatch "${FILESDIR}/${PV}-fbsd.patch"
+	epatch "${FILESDIR}/${PV}-per5.10.patch"
 
 	# Multilib fix
 	sed -i \
@@ -63,7 +65,6 @@ src_install() {
 		BINDINGS="$(bindings)" \
 		PREFIX="${D}/usr" DESTDIR="${D}" ROOT="${D}" \
 		CPA="cp -pR" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog \
-		bindings/ruby/src/{AUTHORS,README} \
-		bindings/python/src/README
+	dodoc AUTHORS ChangeLog || die
+	use python && { newdoc newdoc bindings/ruby/src/AUTHORS AUTHORS.python || die ; }
 }
