@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.8 2009/11/21 02:44:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.9 2009/12/09 19:20:41 nixnut Exp $
+
+  09 Dec 2009; nixnut <nixnut@gentoo.org> cclive-0.5.3.ebuild:
+  ppc stable #287175
 
 *cclive-0.5.5 (21 Nov 2009)
 
