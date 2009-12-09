@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20081105.ebuild,v 1.6 2009/11/26 18:11:11 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20081105.ebuild,v 1.7 2009/12/09 19:13:56 nixnut Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://invisible-island.net/cdk/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ~ppc64 ~s390 ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 DEPEND=">=sys-libs/ncurses-5.2"
