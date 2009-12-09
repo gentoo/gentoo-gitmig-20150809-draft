@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.7 2009/11/19 06:41:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.8 2009/12/09 19:09:53 graaff Exp $
+
+  09 Dec 2009; Hans de Graaff <graaff@gentoo.org>
+  -eventmachine-0.12.8.ebuild:
+  Remove old version.
 
 *eventmachine-0.12.10 (19 Nov 2009)
 
