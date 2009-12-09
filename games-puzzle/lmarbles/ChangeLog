@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/lmarbles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/ChangeLog,v 1.6 2009/11/07 18:34:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/ChangeLog,v 1.7 2009/12/09 22:50:31 fauli Exp $
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  lmarbles-1.0.8.ebuild:
+  stable x86, bug 296122
 
 *lmarbles-1.0.8 (07 Nov 2009)
 
