@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.88 2009/09/29 22:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.89 2009/12/09 22:54:06 fauli Exp $
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  DirectFB-1.4.2.ebuild:
+  stable x86, bug 296263
 
 *DirectFB-1.4.2 (29 Sep 2009)
 
