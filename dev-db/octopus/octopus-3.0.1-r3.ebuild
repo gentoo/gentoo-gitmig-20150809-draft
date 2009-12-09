@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r3.ebuild,v 1.1 2009/11/08 20:47:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/octopus/octopus-3.0.1-r3.ebuild,v 1.2 2009/12/09 22:39:14 maekke Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -16,7 +16,7 @@ SRC_URI="http://download.forge.objectweb.org/${PN}/${PN}-${MY_PV}.src.tar.gz
 HOMEPAGE="http://octopus.objectweb.org"
 LICENSE="LGPL-2.1"
 SLOT="3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 COMMON_DEP="
 	>=dev-java/xerces-2.7
