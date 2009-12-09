@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.10 2009/12/08 18:54:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.11 2009/12/09 12:26:21 lack Exp $
+
+*adobe-flash-10.0.42.34 (09 Dec 2009)
+*adobe-flash-9.0.260.0 (09 Dec 2009)
+
+  09 Dec 2009; Jim Ramsay <lack@gentoo.org> -adobe-flash-9.0.246.0.ebuild,
+  +adobe-flash-9.0.260.0.ebuild, +adobe-flash-10.0.42.34.ebuild:
+  Version bump: 10.0.42.34 is released
 
   08 Dec 2009; Jim Ramsay <lack@gentoo.org> adobe-flash-9.0.246.0.ebuild,
   adobe-flash-10.0.32.18.ebuild:
