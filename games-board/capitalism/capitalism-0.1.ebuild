@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/capitalism-0.1.ebuild,v 1.1 2009/11/05 18:53:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/capitalism-0.1.ebuild,v 1.2 2009/12/09 22:42:23 fauli Exp $
 
 EAPI=2
 inherit eutils gnome2-utils qt4 games
@@ -13,7 +13,7 @@ SRC_URI="http://www.qt-apps.org/CONTENT/content-files/113173-${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
