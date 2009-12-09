@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.78 2009/12/08 01:50:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.79 2009/12/09 18:54:01 nixnut Exp $
+
+  09 Dec 2009; nixnut <nixnut@gentoo.org> pycrypto-2.1.0_beta1.ebuild:
+  ppc stable #295698
 
   08 Dec 2009; Jeroen Roovers <jer@gentoo.org> pycrypto-2.1.0_beta1.ebuild:
   Stable for HPPA (bug #295698).
