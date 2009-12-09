@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.14 2009/10/12 19:09:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.15 2009/12/09 22:52:51 fauli Exp $
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  openscenegraph-2.8.2.ebuild:
+  stable x86, bug 296257
 
 *openscenegraph-2.8.2 (12 Oct 2009)
 
