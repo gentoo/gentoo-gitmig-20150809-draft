@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1.ebuild,v 1.4 2009/06/30 03:53:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1.ebuild,v 1.5 2009/12/09 22:32:01 fauli Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/accelerator3d/accelerator-${PV}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-python/pyode
