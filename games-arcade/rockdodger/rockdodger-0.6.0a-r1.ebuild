@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.8 2008/02/29 18:51:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.9 2009/12/09 00:23:36 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Dodge the rocks for as long as possible until you die"
@@ -13,23 +14,23 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl
-	media-libs/sdl-image
+DEPEND="media-libs/libsdl[audio,video]
+	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Modify highscores & data directory and add our CFLAGS to the Makefile
 	sed -i \
 		-e "s:\./data:${GAMES_DATADIR}/${PN}:" \
 		-e "s:/usr/share/rockdodger/\.highscore:${GAMES_STATEDIR}/rockdodger.scores:" \
 		-e 's:umask(0111):umask(0117):' main.c \
-			|| die " sed main.c failed"
+		|| die " sed main.c failed"
 	sed -i \
-		-e "s:-g:${CFLAGS}:" Makefile \
-			|| die "sed Makefile failed"
+		-e "s:-g:${CFLAGS}:" \
+		-e 's:cc:$(CC):' \
+		-e '/-o/s:\$+:$(LDFLAGS) $+:' \
+		Makefile \
+		|| die "sed Makefile failed"
 
 	# The 512 chunksize makes the music skip
 	sed -i \
