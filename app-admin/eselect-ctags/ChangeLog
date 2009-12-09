@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-ctags
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.43 2009/12/07 21:37:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.44 2009/12/09 22:00:40 ulm Exp $
+
+*eselect-ctags-1.13 (09 Dec 2009)
+
+  09 Dec 2009; Ulrich Mueller <ulm@gentoo.org> -eselect-ctags-1.11.ebuild,
+  +eselect-ctags-1.13.ebuild:
+  Version bump. Remove intermediate version.
 
   07 Dec 2009; Ulrich Mueller <ulm@gentoo.org> eselect-ctags-1.12.ebuild:
   Add KEYWORDS from Prefix overlay.
