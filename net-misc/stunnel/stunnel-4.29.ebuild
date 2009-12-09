@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.27-r2.ebuild,v 1.2 2009/12/09 01:01:58 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.29.ebuild,v 1.1 2009/12/09 01:01:58 ramereth Exp $
 
 inherit autotools ssl-cert eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="ipv6 selinux tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
@@ -50,7 +50,7 @@ src_install() {
 	# symlink for backwards compatibility
 	dosym ../bin/stunnel /usr/sbin/stunnel
 
-	dodoc AUTHORS BUGS CREDITS PORTS README TODO ChangeLog doc/en/transproxy.txt
+	dodoc AUTHORS BUGS CREDITS PORTS README TODO ChangeLog
 	dohtml doc/stunnel.html doc/en/VNC_StunnelHOWTO.html tools/ca.html \
 		tools/importCA.html
 
