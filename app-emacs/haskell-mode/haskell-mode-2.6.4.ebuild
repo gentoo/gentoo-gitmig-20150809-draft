@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.6.4.ebuild,v 1.1 2009/11/07 11:20:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-2.6.4.ebuild,v 1.2 2009/12/09 21:41:56 maekke Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ SRC_URI="http://projects.haskell.org/haskellmode-emacs/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DOCS="ChangeLog NEWS README *.hs"
