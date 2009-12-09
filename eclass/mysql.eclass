@@ -1,11 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.118 2009/11/19 20:59:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.119 2009/12/09 18:45:46 robbat2 Exp $
 
+# @ECLASS: mysql.eclass
+# @MAINTAINER:
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
-# Maintainer: MySQL Team <mysql-bugs@gentoo.org>
+# Maintainers: MySQL Team <mysql-bugs@gentoo.org>
 #		- Luca Longinotti <chtekk@gentoo.org>
 #		- Robin H. Johnson <robbat2@gentoo.org>
+# @BLURB: This eclass provides most of the functions for mysql ebuilds
+# @DESCRIPTION:
+# The mysql.eclass provides almost all the code to build the mysql ebuilds
+# including the src_unpack, src_prepare, src_configure, src_compile,
+# scr_install, pkg_preinst, pkg_postinst, pkg_config and pkg_postrm
+# phase hooks.
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,7 +30,7 @@ case "${EAPI:-0}" in
 					pkg_config pkg_postrm
 		IUSE_DEFAULT_ON='+'
 		;;
-	*)
+	0 | 1)
 		EXPORT_FUNCTIONS pkg_setup \
 					src_unpack \
 					src_compile \
@@ -30,6 +38,8 @@ case "${EAPI:-0}" in
 					pkg_preinst pkg_postinst \
 					pkg_config pkg_postrm
 		;;
+	*)
+		die "Unsupported EAPI: ${EAPI}" ;;
 esac
 
 # Shorten the path because the socket path length must be shorter than 107 chars
@@ -43,6 +53,8 @@ if [[ "${MY_EXTRAS_VER}" == "live" ]]; then
 	inherit git
 fi
 
+# @ECLASS-VARIABLE: MYSQL_VERSION_ID
+# @DESCRIPTION:
 # MYSQL_VERSION_ID will be:
 # major * 10e6 + minor * 10e4 + micro * 10e2 + gentoo revision number, all [0..99]
 # This is an important part, because many of the choices the MySQL ebuild will do
@@ -61,6 +73,10 @@ done
 # strip leading "0" (otherwise it's considered an octal number by BASH)
 MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 
+# @ECLASS-VARIABLE: MYSQL_COMMUNITY_FEATURES
+# @DESCRIPTION:
+# Specifiy if community features are available. Possible values are 1 (yes)
+# and 0 (no).
 # Community features are available in mysql-community
 # AND in the re-merged mysql-5.0.82 and newer
 if [ "${PN}" == "mysql-community" ]; then
@@ -156,10 +172,14 @@ mysql_version_is_at_least "5.1.12" \
 [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ] \
 && IUSE="${IUSE} ${IUSE_DEFAULT_ON}community profiling"
 
+
 #
 # HELPER FUNCTIONS:
 #
 
+# @FUNCTION: mysql_disable_test
+# @DESCRIPTION:
+# Helper function to disable specific tests.
 mysql_disable_test() {
 	local testname="${1}" ; shift
 	local reason="${@}"
@@ -168,11 +188,11 @@ mysql_disable_test() {
 	ewarn "test '${testname}' disabled: '${reason}'"
 }
 
+# @FUNCTION: mysql_init_vars
+# @DESCRIPTION:
 # void mysql_init_vars()
-#
 # Initialize global variables
 # 2005-11-19 <vivo@gentoo.org>
-
 mysql_init_vars() {
 	MY_SHAREDSTATEDIR=${MY_SHAREDSTATEDIR="/usr/share/mysql"}
 	MY_SYSCONFDIR=${MY_SYSCONFDIR="/etc/mysql"}
@@ -468,6 +488,13 @@ pbxt_src_install() {
 #
 # EBUILD FUNCTIONS
 #
+# @FUNCTION: mysql_pkg_setup
+# @DESCRIPTION:
+# Perform some basic tests and tasks during pkg_setup phase:
+#   die if FEATURES="test", USE="-minimal" and not using FEATURES="userpriv"
+#   check for conflicting use flags
+#   create new user and group for mysql
+#   warn about deprecated features
 mysql_pkg_setup() {
 	if hasq test ${FEATURES} ; then
 		if ! use minimal ; then
@@ -507,6 +534,9 @@ mysql_pkg_setup() {
 	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
 }
 
+# @FUNCTION: mysql_src_unpack
+# @DESCRIPTION:
+# Unpack the source code and call mysql_src_prepare for EAPI < 2.
 mysql_src_unpack() {
 	# Initialize the proper variables first
 	mysql_init_vars
@@ -518,11 +548,15 @@ mysql_src_unpack() {
 	mv -f "${WORKDIR}/${MY_SOURCEDIR}" "${S}"
 
 	# Be backwards compatible for now
-	if [[ $EAPI != 2 ]]; then
-		mysql_src_prepare
-	fi
+	case ${EAPI:-0} in
+        	2) : ;;
+        	0 | 1) mysql_src_prepare ;;
+	esac
 }
 
+# @FUNCTION: mysql_src_prepare
+# @DESCRIPTION:
+# Apply patches to the source code and remove unneeded bundled libs.
 mysql_src_prepare() {
 	cd "${S}"
 
@@ -594,6 +628,9 @@ mysql_src_prepare() {
 	fi
 }
 
+# @FUNCTION: mysql_src_configure
+# @DESCRIPTION:
+# Configure mysql to build the code for Gentoo respecting the use flags.
 mysql_src_configure() {
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
@@ -657,17 +694,24 @@ mysql_src_configure() {
 	fi
 }
 
+# @FUNCTION: mysql_src_compile
+# @DESCRIPTION:
+# Compile the mysql code.
 mysql_src_compile() {
 	# Be backwards compatible for now
-	if [[ $EAPI != 2 ]]; then
-		mysql_src_configure
-	fi
+        case ${EAPI:-0} in
+                2) : ;;
+                0 | 1) mysql_src_configure ;;
+        esac
 
 	emake || die "emake failed"
 
 	mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_compile
 }
 
+# @FUNCTION: mysql_src_install
+# @DESCRIPTION:
+# Install mysql.
 mysql_src_install() {
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
@@ -763,11 +807,22 @@ mysql_src_install() {
 	mysql_lib_symlinks "${D}"
 }
 
+# @FUNCTION: mysql_pkg_preinst
+# @DESCRIPTION:
+# Create the user and groups for mysql - die if that fails.
 mysql_pkg_preinst() {
 	enewgroup mysql 60 || die "problem adding 'mysql' group"
 	enewuser mysql 60 -1 /dev/null mysql || die "problem adding 'mysql' user"
 }
 
+# @FUNCTION: mysql_pkg_postinst
+# @DESCRIPTION:
+# Run post-installation tasks:
+#   create the dir for logfiles if non-existant
+#   touch the logfiles and secure them
+#   install scripts
+#   issue required steps for optional features
+#   issue deprecation warnings
 mysql_pkg_postinst() {
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
@@ -823,6 +878,9 @@ mysql_pkg_postinst() {
 	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
 }
 
+# @FUNCTION: mysql_pkg_config
+# @DESCRIPTION:
+# Configure mysql environment.
 mysql_pkg_config() {
 	local old_MY_DATADIR="${MY_DATADIR}"
 
@@ -967,6 +1025,9 @@ mysql_pkg_config() {
 	einfo "Done"
 }
 
+# @FUNCTION: mysql_pkg_postrm
+# @DESCRIPTION:
+# Remove mysql symlinks.
 mysql_pkg_postrm() {
 	: # mysql_lib_symlinks "${D}"
 }
