@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.348 2009/12/09 18:05:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.349 2009/12/09 20:07:06 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> emacs-23.1-r2.ebuild:
+  Marking emacs-23.1-r2 ppc64 for bug 296159
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> emacs-22.3-r3.ebuild:
   Marking emacs-22.3-r3 ppc64 for bug 296159
