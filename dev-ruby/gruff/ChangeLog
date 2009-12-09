@@ -1,9 +1,9 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.25 2009/12/09 21:03:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.26 2009/12/09 21:20:16 maekke Exp $
 
   09 Dec 2009; Markus Meier <maekke@gentoo.org> gruff-0.3.6.ebuild:
-  amd64/amd64 stable, bug #295801
+  amd64/x86 stable, bug #295801
 
   05 Dec 2009; Hans de Graaff <graaff@gentoo.org> -gruff-0.3.4.ebuild:
   Remove old version.
