@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.119 2009/12/09 18:45:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.120 2009/12/09 18:46:53 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -91,6 +91,16 @@ else
 	MYSQL_COMMUNITY_FEATURES=0
 fi
 
+# @ECLASS-VARIABLE: XTRADB_VER
+# @DESCRIPTION:
+# Version of the XTRADB storage engine
+XTRADB_VER="${XTRADB_VER}"
+
+# @ECLASS-VARIABLE: PERCONA_VER
+# @DESCRIPTION:
+# Designation by PERCONA for a MySQL version to apply an XTRADB release
+PERCONA_VER="${PERCONA_VER}"
+
 # Be warned, *DEPEND are version-dependant
 # These are used for both runtime and compiletime
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
@@ -141,9 +151,16 @@ SRC_URI="${SERVER_URI}"
 [[ ${MY_EXTRAS_VER} != live ]] && SRC_URI="${SRC_URI}
 		mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
+PBXT_SRC_URI="mirror://sourceforge/pbxt/pbxt-${PBXT_VERSION}.tar.gz"
 mysql_version_is_at_least "5.1.12" \
 && [[ -n "${PBXT_VERSION}" ]] \
-&& SRC_URI="${SRC_URI} pbxt? ( mirror://sourceforge/pbxt/pbxt-${PBXT_VERSION}.tar.gz )"
+&& SRC_URI="${SRC_URI} pbxt? ( ${PBXT_SRC_URIPBXT_SRC_URI} )"
+
+# Get the percona tarball if XTRADB_VER and PERCONA_VER are both set
+XTRADB_SRC_URI="http://www.percona.com/${PN}/xtradb/${PERCONA_VER}/source/percona-xtradb-${XTRADB_VER}.tar.gz"
+mysql_version_is_at_least "5.1.26" \
+&& [[ -n ${XTRADB_VER} && -n ${PERCONA_VER} ]] \
+&& SRC_URI="${SRC_URI} xtradb? ( ${XTRADB_SRC_URI} )"
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
@@ -169,9 +186,11 @@ mysql_version_is_at_least "5.1" \
 mysql_version_is_at_least "5.1.12" \
 && IUSE="${IUSE} pbxt"
 
+mysql_version_is_at_least "5.1.26" \
+&& IUSE="${IUSE} xtradb"
+
 [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ] \
 && IUSE="${IUSE} ${IUSE_DEFAULT_ON}community profiling"
-
 
 #
 # HELPER FUNCTIONS:
