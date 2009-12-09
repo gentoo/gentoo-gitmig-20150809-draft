@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.13.ebuild,v 1.1 2009/10/20 16:13:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.13.ebuild,v 1.2 2009/12/09 15:50:38 grozin Exp $
 
 EAPI=2
-inherit eutils python
+inherit eutils python flag-o-matic versionator
 
 MY_P="${P}_release"
 S="${WORKDIR}/${MY_P}"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="visual"
 
-RDEPEND="=dev-libs/boost-1.35*
+RDEPEND=">=dev-libs/boost-1.41.0[python]
 	dev-cpp/libglademm
 	>=dev-cpp/gtkglextmm-1.2
 	dev-python/numpy"
@@ -26,6 +26,17 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
+	BOOST_PKG="$(best_version ">=dev-libs/boost-1.41.0")"
+	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
+	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
+	BOOST_INC="/usr/include/boost-${BOOST_VER}"
+	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
+
+	#We have to use a hack here because the build system doesn't provide a way to specify
+	#the include and lib directory for boost
+	append-cxxflags -I${BOOST_INC}
+	append-ldflags  -L${BOOST_LIB}
+
 	econf \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--with-example-dir=/usr/share/doc/${PF}/examples \

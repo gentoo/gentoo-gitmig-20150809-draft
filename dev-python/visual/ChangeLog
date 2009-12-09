@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.33 2009/12/04 07:20:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.34 2009/12/09 15:50:38 grozin Exp $
+
+  09 Dec 2009; Andrey Grozin <grozin@gentoo.org> visual-5.12.ebuild,
+  visual-5.13.ebuild:
+  Now the correct boost version is always used (bug #271019, thanks to
+  Sebastian Mingramm <s.mingramm@gmx.de>)
 
   04 Dec 2009; Andrey Grozin <grozin@gentoo.org> -visual-5.03_rc1.ebuild:
   Cleaning an old version
