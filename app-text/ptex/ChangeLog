@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ptex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.88 2009/11/18 17:11:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.89 2009/12/09 19:37:26 nixnut Exp $
+
+  09 Dec 2009; nixnut <nixnut@gentoo.org> ptex-3.1.10_p20090610.ebuild:
+  ppc stable #289339
 
   18 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   ptex-3.1.10_p20090610.ebuild:
