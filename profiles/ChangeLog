@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3661 2009/12/08 19:51:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3662 2009/12/09 17:24:46 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask app-portage/g-ctan as upstream web content has been gone
 
   08 Dec 2009; Mark Loeser <halcy0n@gentoo.org> package.mask:
   xpvm should have been masked along with pvm
