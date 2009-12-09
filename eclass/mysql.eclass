@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.121 2009/12/09 18:54:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.122 2009/12/09 19:17:49 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -148,18 +148,24 @@ fi
 # Define correct SRC_URIs
 SRC_URI="${SERVER_URI}"
 
-[[ ${MY_EXTRAS_VER} != live ]] && SRC_URI="${SRC_URI}
+# Gentoo patches to MySQL
+[[ ${MY_EXTRAS_VER} != live ]] \
+&& SRC_URI="${SRC_URI}
 		mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
-PBXT_SRC_URI="mirror://sourceforge/pbxt/pbxt-${PBXT_VERSION}.tar.gz"
+
+# PBXT engine
 mysql_version_is_at_least "5.1.12" \
 && [[ -n "${PBXT_VERSION}" ]] \
+&& PBXT_P="pbxt-${PBXT_VERSION}" \
+&& PBXT_SRC_URI="mirror://sourceforge/pbxt/${PBXT_P}.tar.gz" \
 && SRC_URI="${SRC_URI} pbxt? ( ${PBXT_SRC_URIPBXT_SRC_URI} )"
 
 # Get the percona tarball if XTRADB_VER and PERCONA_VER are both set
-XTRADB_SRC_URI="http://www.percona.com/${PN}/xtradb/${PERCONA_VER}/source/percona-xtradb-${XTRADB_VER}.tar.gz"
 mysql_version_is_at_least "5.1.26" \
 && [[ -n "${XTRADB_VER}" && -n "${PERCONA_VER}" ]] \
+&& XTRADB_P="percona-xtradb-${XTRADB_VER}" \
+&& XTRADB_SRC_URI="http://www.percona.com/${PN}/xtradb/${PERCONA_VER}/source/${XTRADB_P}.tar.gz" \
 && SRC_URI="${SRC_URI} xtradb? ( ${XTRADB_SRC_URI} )"
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
@@ -602,6 +608,7 @@ mysql_src_prepare() {
 
 	if mysql_version_is_at_least "4.1" ; then
 		# Remove what needs to be recreated, so we're sure it's actually done
+		einfo "Cleaning up old buildscript files"
 		find . -name Makefile \
 			-o -name Makefile.in \
 			-o -name configure \
@@ -612,7 +619,21 @@ mysql_src_prepare() {
 
 	local rebuilddirlist d
 
+	if mysql_version_is_at_least "5.1.26" && use xtradb ; then
+		einfo "Replacing InnoDB with Percona XtraDB"
+		pushd "${S}"/storage
+		i="innobase"
+		o="${WORKDIR}/storage-${i}.mysql-upstream"
+		# Have we been here already?
+		[ -h "${i}" ] && rm -f "${i}"
+		# Or maybe we haven't
+		[ -d "${i}" -a ! -d "${o}" ] && mv "${i}" "${o}"
+		ln -s "${WORKDIR}/${XTRADB_P}" "${i}"
+		popd
+	fi
+
 	if mysql_version_is_at_least "5.1.12" ; then
+		einfo "Updating innobase cmake"
 		rebuilddirlist="."
 		# TODO: check this with a cmake expert
 		cmake \
@@ -632,6 +653,7 @@ mysql_src_prepare() {
 
 	if mysql_check_version_range "4.1 to 5.0.99.99" \
 	&& use berkdb ; then
+		einfo "Fixing up berkdb buildsystem"
 		[[ -w "bdb/dist/ltmain.sh" ]] && cp -f "ltmain.sh" "bdb/dist/ltmain.sh"
 		cp -f "/usr/share/aclocal/libtool.m4" "bdb/dist/aclocal/libtool.ac" \
 		|| die "Could not copy libtool.m4 to bdb/dist/"
