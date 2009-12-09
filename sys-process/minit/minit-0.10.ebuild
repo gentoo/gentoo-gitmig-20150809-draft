@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/minit-0.10.ebuild,v 1.4 2009/12/09 03:38:03 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/minit-0.10.ebuild,v 1.5 2009/12/09 14:00:34 vostorga Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	emake CFLAGS="${CFLAGS} -I/usr/include/libowfat" \
-		LDFLAGS="${LDFLAGS}" DIET="${DIET}" || die
+		LDFLAGS="${LDFLAGS}" DIET="diet" || die
 }
 
 src_install() {
