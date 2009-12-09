@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unfonts-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.21 2009/10/11 20:07:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.22 2009/12/09 20:12:10 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org>
+  unfonts-extra-1.0.2_pre080608-r1.ebuild:
+  Marking unfonts-extra-1.0.2_pre080608-r1 ppc64 for bug 287988
 
   11 Oct 2009; nixnut <nixnut@gentoo.org>
   unfonts-extra-1.0.2_pre080608-r1.ebuild:
