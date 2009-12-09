@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.108 2009/12/09 19:05:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.109 2009/12/09 21:32:53 maekke Exp $
+
+  09 Dec 2009; Markus Meier <maekke@gentoo.org> debootstrap-1.0.20.ebuild:
+  arm stable, bug #295481
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> debootstrap-1.0.20.ebuild:
   ppc stable #295481
