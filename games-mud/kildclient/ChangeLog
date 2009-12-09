@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/kildclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/ChangeLog,v 1.1 2009/11/02 23:03:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/ChangeLog,v 1.2 2009/12/09 22:36:33 fauli Exp $
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kildclient-2.9.0.ebuild:
+  stable x86, bug 295519
 
 *kildclient-2.9.0 (02 Nov 2009)
 

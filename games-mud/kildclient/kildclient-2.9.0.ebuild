@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.1 2009/11/02 23:03:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.2 2009/12/09 22:36:33 fauli Exp $
 
 EAPI=2
 inherit autotools games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/kildclient/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc gnutls spell"
 
 RDEPEND="x11-libs/gtk+:2
