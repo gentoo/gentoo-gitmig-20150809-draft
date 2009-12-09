@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gentoo-editor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.5 2009/11/30 14:44:47 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.6 2009/12/09 15:01:19 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> gentoo-editor-2.ebuild:
+  Marking gentoo-editor-2 ~ppc64 for bug 293985
 
   30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> gentoo-editor-2.ebuild:
   Keywording for ppc, bug 293985
