@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.26.1.ebuild,v 1.1 2009/05/11 23:21:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.28.0.ebuild,v 1.1 2009/12/09 21:40:59 eva Exp $
 
 GCONF_DEBUG="no"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="GNOME end user documentation"
 HOMEPAGE="http://www.gnome.org/"
@@ -28,17 +28,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
 }
 
-src_unpack() {
-	gnome2_src_unpack
-
-	# Fix parallel make, bug #252163
-	epatch "${FILESDIR}/${PN}-2.24.2-parallel-make.patch"
-	epatch "${FILESDIR}/${PN}-2.24.2-parallel-make-gdu.patch"
-
-	# Ugly ugly hack but gnome-doc-utils isn't actually
-	# parallel make safe.
-	sed "s/install-data-local/install-data-hook/" \
-		-i gnome-doc-utils.make || die "sed failed"
-
-	eautoreconf
+src_install () {
+	# FIXME: Parallel make is badly broken, bug #260827
+	gnome2_src_install -j1
 }
