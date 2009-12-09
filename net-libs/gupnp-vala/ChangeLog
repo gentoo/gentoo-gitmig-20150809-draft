@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/gupnp-vala
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.1 2009/12/09 04:14:07 ford_prefect Exp $
+
+*gupnp-vala-0.6.2 (09 Dec 2009)
+
+  09 Dec 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +gupnp-vala-0.6.2.ebuild, +metadata.xml:
+  Initial commit.
+
