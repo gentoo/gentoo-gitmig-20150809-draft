@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.202 2009/12/08 17:49:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.203 2009/12/09 15:02:25 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> sudo-1.7.2_p2-r2.ebuild:
+  Marking sudo-1.7.2_p2-r2 ~ppc64 for bug 293985
 
 *sudo-1.7.3_beta1 (08 Dec 2009)
 
