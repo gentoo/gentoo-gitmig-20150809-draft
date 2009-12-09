@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r2.ebuild,v 1.1 2009/12/09 14:12:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r2.ebuild,v 1.2 2009/12/09 15:56:20 scarabeus Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -37,7 +37,7 @@ src_unpack() {
 	cd "${S}"
 
 	[[ ${USERLAND} == *BSD ]] && epatch "${FILESDIR}/${PV}-fbsd.patch"
-	epatch "${FILESDIR}/${PV}-per5.10.patch"
+	epatch "${FILESDIR}/${PV}-perl5.10.patch"
 
 	# Multilib fix
 	sed -i \

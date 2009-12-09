@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/libconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.49 2009/12/09 14:12:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.50 2009/12/09 15:56:20 scarabeus Exp $
+
+  09 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  libconf-0.42.10-r2.ebuild:
+  Fix typo per!=perl
 
 *libconf-0.42.10-r2 (09 Dec 2009)
 
