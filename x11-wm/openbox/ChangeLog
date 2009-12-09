@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.179 2009/11/06 01:09:42 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.180 2009/12/09 01:24:02 yngwin Exp $
+
+*openbox-3.4.8 (09 Dec 2009)
+
+  09 Dec 2009; Ben de Groot <yngwin@gentoo.org> +openbox-3.4.8.ebuild:
+  Version bump, drop patch as per https://bugs.gentoo.org/275138#c7
 
 *openbox-3.4.8_rc1-r1 (06 Nov 2009)
 
@@ -608,9 +613,9 @@
   21 Mar 2003; Jason Wever <weeve@gentoo.org> openbox-2.3.0.ebuild:
   Added sparc to keywords.
 
-  13 Feb 2003; Mark Guertin <gerk@gentoo.org> openbox-2.2.0-r1.ebuild 
-  openbox-2.2.0.ebuild openbox-2.2.1-r1.ebuild openbox-2.2.1-r2.ebuild 
-  openbox-2.2.1.ebuild openbox-2.2.2-r1.ebuild openbox-2.2.2-r2.ebuild 
+  13 Feb 2003; Mark Guertin <gerk@gentoo.org> openbox-2.2.0-r1.ebuild
+  openbox-2.2.0.ebuild openbox-2.2.1-r1.ebuild openbox-2.2.1-r2.ebuild
+  openbox-2.2.1.ebuild openbox-2.2.2-r1.ebuild openbox-2.2.2-r2.ebuild
   openbox-2.2.2.ebuild openbox-2.2.3.ebuild openbox-2.3.0.ebuild :
   set ppc in keywords
 
@@ -645,7 +650,7 @@
   Openbox 2.2.2 now depends on x11-libs/xft for Xft2.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *openbox-2.2.2 (08 Dec 2002)
 
   08 Dec 2002; Matt Keadle <mkeadle@gentoo.org> openbox-2.2.2.ebuild
@@ -739,7 +744,7 @@
   files/digest-openbox-2.1.2-r1 :
 
   Fix bug 9541, issues with xfree 4.2.1
-    
+
 *openbox-2.2.0 (23 Oct 2002)
 
   23 Oct 2002; Matt Keadle <mkeadle@gentoo.org> openbox-2.2.0.ebuild
@@ -759,7 +764,7 @@
   25 Sep 2002; Matt Keadle <mkeadle@gentoo.org> openbox-2.1.1.ebuild
   files/digest-openbox-2.1.1 :
 
-  version bump, placed in slot "1" as this is the stable version now, also 
+  version bump, placed in slot "1" as this is the stable version now, also
   removed the -dev from the binary. Thanks for the ebuild Brad. New
   fieron theme has been merged into commonbox-styles.
 
@@ -803,7 +808,7 @@
   toolbar.xft.font:       arial
   toolbar.xft.size:       11
 
-  
+
 
 *openbox-0.99.3-r1 (14 Jul 2002)
 
@@ -815,7 +820,7 @@
 *openbox-1.2.4 (14 Jul 2002)
 
   14 Jul 2002; Seemant Kulleen <seemant@gentoo.org> openbox-1.2.4.ebuild
-  files/digest-openbox-1.2.4 : 
+  files/digest-openbox-1.2.4 :
 
   Version bump for newest stable.  No xft/antialiasing.
 
@@ -846,6 +851,6 @@
   29 Apr 2002; Seemant Kulleen <seemant@gentoo.org> openbox-0.99.1.ebuild
   ChangeLog files/digest-openbox-0.99.1 :
 
-  A window manager that is like blackbox, but more open with respect to 
+  A window manager that is like blackbox, but more open with respect to
   development.  It is, for the most part, compatible with blackbox
   applications.
