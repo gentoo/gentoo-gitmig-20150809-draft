@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/wtf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/ChangeLog,v 1.36 2009/11/19 12:21:32 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/ChangeLog,v 1.37 2009/12/09 17:41:32 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> wtf-20090924.ebuild:
+  Marking wtf-20090924 ppc64 for bug 293421
 
   19 Nov 2009; Dawid Węgliński <cla@gentoo.org> wtf-20090924.ebuild:
   Stable on amd64 (bug #293421)
