@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.163 2009/12/08 15:19:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.164 2009/12/09 14:38:17 jer Exp $
+
+  09 Dec 2009; Jeroen Roovers <jer@gentoo.org> libtool-2.2.6b.ebuild:
+  Stable for PPC (bug #295535).
 
   08 Dec 2009; Brent Baude <ranger@gentoo.org> libtool-2.2.6b.ebuild:
   Marking libtool-2.2.6b ppc64 for bug 295535
