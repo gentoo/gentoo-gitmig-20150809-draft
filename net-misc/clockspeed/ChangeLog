@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.24 2009/09/28 21:00:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.25 2009/12/09 21:56:25 maekke Exp $
+
+  09 Dec 2009; Markus Meier <maekke@gentoo.org> clockspeed-0.62-r6.ebuild:
+  amd64/x86 stable, bug #296067
 
   28 Sep 2009; Thilo Bangert <bangert@gentoo.org>
   -clockspeed-0.62-r3.ebuild, -clockspeed-0.62-r4.ebuild,
