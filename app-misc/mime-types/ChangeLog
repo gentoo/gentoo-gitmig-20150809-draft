@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.73 2009/12/08 19:27:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.74 2009/12/09 18:01:32 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> mime-types-8.ebuild:
+  Marking mime-types-8 ppc64 for bug 293895
 
   08 Dec 2009; nixnut <nixnut@gentoo.org> mime-types-8.ebuild:
   ppc stable #293895
