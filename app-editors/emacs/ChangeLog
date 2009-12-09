@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.346 2009/12/08 15:42:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.347 2009/12/09 15:51:09 jer Exp $
+
+  09 Dec 2009; Jeroen Roovers <jer@gentoo.org> emacs-22.3-r3.ebuild:
+  Remove obsolete replace-flags call. Stable for HPPA (bug #296159).
 
   08 Dec 2009; Jeroen Roovers <jer@gentoo.org> emacs-23.1-r2.ebuild:
   Stable for HPPA (bug #296159).
