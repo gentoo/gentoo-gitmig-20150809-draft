@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.4-r1.ebuild,v 1.1 2009/12/09 16:34:14 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.4-r1.ebuild,v 1.2 2009/12/09 16:38:09 dagger Exp $
 
 EAPI="2"
 
@@ -35,9 +35,8 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}"
 
 PATCHES=(
-        "${FILESDIR}/4.3.3-fix_no_opengl.patch"
+	"${FILESDIR}/4.3.3-fix_no_opengl.patch"
 )
-
 
 src_prepare() {
 # NOTE uncomment when enabled again by upstream

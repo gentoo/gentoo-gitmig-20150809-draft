@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.177 2009/12/09 16:34:14 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.178 2009/12/09 16:38:09 dagger Exp $
+
+  09 Dec 2009; Robert Piasek <dagger@gentoo.org> kwin-4.3.4-r1.ebuild:
+  Minor QA fix in last commit (some spaces)
 
 *kwin-4.3.4-r1 (09 Dec 2009)
 
