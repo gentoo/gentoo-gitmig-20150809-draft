@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.149 2009/11/09 17:21:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.150 2009/12/09 18:19:32 ali_bush Exp $
+
+*eclipse-sdk-3.5.1 (09 Dec 2009)
+
+  09 Dec 2009; Alistair Bush <ali_bush@gentoo.org> +files/3.5/eclipse-3.5,
+  +files/3.5/eclipserc-3.5, +eclipse-sdk-3.5.1.ebuild:
+  Version bump, moved eclipse 3.5 from overlay. Thanks to Matt Whitlock
+  <matt@whitlock.name> for all the great work.
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> eclipse-sdk-3.4-r2.ebuild:
   amd64/x86 stable, bug #292114
