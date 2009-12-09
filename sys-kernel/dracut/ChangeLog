@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.1 2009/09/29 05:17:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.2 2009/12/09 08:24:27 ramereth Exp $
+
+*dracut-003 (09 Dec 2009)
+*dracut-002-r1 (09 Dec 2009)
+
+  09 Dec 2009; Lance Albertson <ramereth@gentoo.org> +dracut-002-r1.ebuild,
+  +files/dracut-002-makefile-add-with_switch_root.patch, +dracut-003.ebuild:
+  Version bump, fix switch_root issues #293178, & remove system deps
+
+  Force package dep >=sys-apps/util-linux-2.16 which includes switch_root by
+  default. Otherwise dracut would have a file conflict with util-linux.
+  Backport upstream Makefile patch b3611b525 for version 002 instead of patch
+  included in the bug report. 
 
   29 Sep 2009; Lance Albertson <ramereth@gentoo.org> dracut-002.ebuild,
   +files/dracut-002-add-missing-functions.patch,
