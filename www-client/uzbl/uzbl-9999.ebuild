@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.6 2009/12/08 12:36:47 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.7 2009/12/09 08:02:58 wired Exp $
 
 EAPI="2"
 
@@ -18,10 +18,10 @@ KEYWORDS=""
 IUSE="+browser experimental helpers +tabbed"
 
 COMMON_DEPEND="
-	>=net-libs/webkit-gtk-1.1.15
-	>=net-libs/libsoup-2.24
-	>=x11-libs/gtk+-2.14
 	>=dev-libs/icu-4.0.1
+	>=net-libs/libsoup-2.24
+	>=net-libs/webkit-gtk-1.1.15
+	>=x11-libs/gtk+-2.14
 "
 
 DEPEND="
@@ -31,11 +31,13 @@ DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
+	x11-misc/xdg-utils
 	browser? (
 		x11-misc/xclip
 	)
 	helpers? (
 		dev-lang/perl
+		dev-perl/gtk2-perl
 		dev-python/pygtk
 		dev-python/pygobject
 		gnome-extra/zenity
@@ -53,6 +55,7 @@ pkg_setup() {
 		elog "uzbl's extra scripts use various optional applications:"
 		elog
 		elog "   dev-lang/perl"
+		elog "   dev-perl/gtk2-perl"
 		elog "   dev-python/pygtk"
 		elog "   dev-python/pygobject"
 		elog "   gnome-extra/zenity"
