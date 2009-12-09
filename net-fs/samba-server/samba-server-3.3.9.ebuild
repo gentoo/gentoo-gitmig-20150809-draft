@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.9.ebuild,v 1.3 2009/11/08 03:31:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.9.ebuild,v 1.4 2009/12/09 16:29:51 vostorga Exp $
 
 EAPI="2"
 
@@ -200,6 +200,8 @@ src_install() {
 	if use swat ; then
 		insinto /etc/xinetd.d
 		newins "${CONFDIR}/swat.xinetd" swat
+		script/installswat.sh "${D}" "${ROOT}/usr/share/doc/${PF}/swat" "${S}" \
+		|| die "installing swat failed"
 	fi
 
 	dodoc ../MAINTAINERS ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS

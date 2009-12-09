@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.27 2009/11/30 16:04:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.28 2009/12/09 16:29:51 vostorga Exp $
+
+  09 Dec 2009; Víctor Ostorga <vostorga@gentoo.org>
+  samba-server-3.3.9.ebuild, samba-server-3.4.3-r1.ebuild:
+  Fix to allow a working swat, patch thanks to Jared Hancock
+  <gravydish@gmail.com> bug #283532
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   samba-server-3.4.3-r1.ebuild:
