@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.66 2009/12/08 19:30:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.67 2009/12/09 15:55:50 fauli Exp $
+
+  09 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -monotone-0.40.ebuild, -monotone-0.44.ebuild:
+  clean up
 
   08 Dec 2009; nixnut <nixnut@gentoo.org> monotone-0.45.ebuild:
   ppc stable #291749
