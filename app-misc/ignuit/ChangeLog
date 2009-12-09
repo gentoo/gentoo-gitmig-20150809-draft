@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ignuit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.10 2009/12/03 20:34:04 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.11 2009/12/09 19:07:38 nixnut Exp $
+
+  09 Dec 2009; nixnut <nixnut@gentoo.org> ignuit-0.0.15.ebuild:
+  ppc stable #293198
 
 *ignuit-0.0.16 (03 Dec 2009)
 
