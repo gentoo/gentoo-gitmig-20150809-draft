@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/minit-0.10.ebuild,v 1.3 2009/08/30 17:53:38 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/minit-0.10.ebuild,v 1.4 2009/12/09 03:38:03 vostorga Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="dev-libs/libowfat
+DEPEND=">=dev-libs/libowfat-0.28-r1
 		dev-libs/dietlibc"
 RDEPEND="${DEPEND}"
 

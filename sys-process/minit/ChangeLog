@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/minit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.9 2009/12/07 17:26:17 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.10 2009/12/09 03:38:03 vostorga Exp $
+
+  09 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> minit-0.10.ebuild:
+  Modifying depend on >=dev-libs/libowfat-0.28-r1 to avoid breakage when
+  building with gcc 4.4
 
   07 Dec 2009; Víctor Ostorga <vostorga@gentoo.org>
   +files/minit-0.10-fixes.diff:
