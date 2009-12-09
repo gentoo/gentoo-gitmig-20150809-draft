@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.4.ebuild,v 1.1 2009/12/01 11:16:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.4-r1.ebuild,v 1.1 2009/12/09 16:34:14 dagger Exp $
 
 EAPI="2"
 
@@ -33,6 +33,11 @@ DEPEND="${COMMONDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 "
 RDEPEND="${COMMONDEPEND}"
+
+PATCHES=(
+        "${FILESDIR}/4.3.3-fix_no_opengl.patch"
+)
+
 
 src_prepare() {
 # NOTE uncomment when enabled again by upstream
