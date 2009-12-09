@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.10 2009/10/02 22:12:18 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.11 2009/12/09 00:41:09 ramereth Exp $
+
+  09 Dec 2009; Lance Albertson <ramereth@gentoo.org> ganeti-2.0.3.ebuild,
+  ganeti-2.0.4.ebuild:
+  Fix dep on app-emulation/kvm to app-emulation/qemu-kvm
 
 *ganeti-2.0.4 (02 Oct 2009)
 *ganeti-2.0.3 (02 Oct 2009)
