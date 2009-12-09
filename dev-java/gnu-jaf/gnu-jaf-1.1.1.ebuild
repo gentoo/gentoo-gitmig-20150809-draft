@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.1.1.ebuild,v 1.1 2009/11/07 12:17:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.1.1.ebuild,v 1.2 2009/12/09 21:54:37 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/classpathx/activation-${PV}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"
