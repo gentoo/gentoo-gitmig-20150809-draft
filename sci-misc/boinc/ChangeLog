@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.83 2009/12/03 20:04:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.84 2009/12/09 19:03:44 scarabeus Exp $
+
+  09 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/6.6.40-as-needed.patch, -files/6.6.40-cuda.patch,
+  -files/6.6.40-fcgi.patch, -files/6.6.40-gui01.patch,
+  -files/6.6.40-locale.patch, -boinc-6.6.40-r2.ebuild,
+  -files/6.6.40-xfersigseg.patch:
+  rm
 
   03 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> boinc-6.10.18.ebuild:
   Use correct function for users install.
