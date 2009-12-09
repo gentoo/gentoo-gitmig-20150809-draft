@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.43 2009/12/08 19:16:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.44 2009/12/09 15:04:33 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> libedit-20090923.3.0.ebuild:
+  Marking libedit-20090923.3.0 ppc64 for bug 293863
 
   08 Dec 2009; nixnut <nixnut@gentoo.org> libedit-20090923.3.0.ebuild:
   ppc stable #293863
