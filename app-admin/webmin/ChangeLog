@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.186 2009/11/09 11:20:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.187 2009/12/09 14:51:49 patrick Exp $
+
+*webmin-1.500 (09 Dec 2009)
+
+  09 Dec 2009; Patrick Lauer <patrick@gentoo.org> +webmin-1.500.ebuild:
+  Bump
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/webmin-1.140-apache2.patch,
