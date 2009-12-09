@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.13 2009/11/29 09:54:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.14 2009/12/09 21:26:07 maekke Exp $
+
+  09 Dec 2009; Markus Meier <maekke@gentoo.org> locale-2.0.4.ebuild:
+  amd64/x86 stable, bug #295944
 
   29 Nov 2009; Hans de Graaff <graaff@gentoo.org> Manifest:
   Update Manifest for the version on the gemcutter.org mirrors.

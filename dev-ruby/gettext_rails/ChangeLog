@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gettext_rails
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_rails/ChangeLog,v 1.3 2009/11/28 07:44:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_rails/ChangeLog,v 1.4 2009/12/09 21:29:31 maekke Exp $
+
+  09 Dec 2009; Markus Meier <maekke@gentoo.org> gettext_rails-2.0.4.ebuild:
+  amd64/x86 stable, bug #295944
 
 *gettext_rails-2.1.0 (28 Nov 2009)
 
