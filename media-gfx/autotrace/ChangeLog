@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.33 2009/09/18 23:17:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.34 2009/12/09 20:38:45 ranger Exp $
+
+  09 Dec 2009; Brent Baude <ranger@gentoo.org> autotrace-0.31.1-r3.ebuild:
+  Marking autotrace-0.31.1-r3 ppc64 for bug 291696
 
 *autotrace-0.31.1-r4 (18 Sep 2009)
 
