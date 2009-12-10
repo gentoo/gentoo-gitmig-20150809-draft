@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.2.8.ebuild,v 1.1 2009/12/10 18:11:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.2.8.ebuild,v 1.2 2009/12/10 21:22:32 idl0r Exp $
 
 DESCRIPTION="Security and system auditing tool"
 HOMEPAGE="http://www.rootkit.nl/projects/lynis.html"
@@ -19,7 +19,7 @@ src_install() {
 	doins -r db/ include/ plugins/ || die "failed to install lynis base files"
 
 	# Lynis will ignore plugins with permissions other than 0400.
-	fperms 0400 /usr/share/${PN}/plugins/{compliance_pci,files_permissions,webserver_data} || die
+	fperms 0400 /usr/share/${PN}/plugins/plugin_{access_files,compliance_pci,webserver_data} || die
 
 	dosbin lynis || die "dosbin failed"
 
