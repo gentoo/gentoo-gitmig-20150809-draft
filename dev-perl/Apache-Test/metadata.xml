@@ -6,7 +6,9 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription>Provides a suite of Apache tests, including tests for the
-		different mod_perls. Testing is disabled at this time - interactive,
-		requires interaction with the live filesystem.</longdescription>
+	<longdescription>The Apache::Test framework was designed for creating test
+		suites for products running on the Apache httpd webserver (not
+		necessarily mod_perl). Originally designed for the mod_perl Apache
+		module, it was extended to be used for any Apache
+		module.</longdescription>
 </pkgmetadata>

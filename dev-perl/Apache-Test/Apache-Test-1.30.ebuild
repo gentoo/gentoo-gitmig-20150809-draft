@@ -1,19 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.30.ebuild,v 1.3 2009/05/26 17:31:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.30.ebuild,v 1.4 2009/12/10 10:32:49 tove Exp $
 
+EAPI=2
+
+MODULE_AUTHOR=PHRED
 inherit depend.apache perl-module
 
 DESCRIPTION="Test.pm wrapper with helpers for testing Apache"
-SRC_URI="mirror://cpan/authors/id/P/PH/PHRED/${P}.tar.gz"
-HOMEPAGE="http://cpan.org/modules/by-module/Apache/"
-IUSE=""
-SLOT="0"
-LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-SRC_TEST="skip"
 
-DEPEND="dev-lang/perl"
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE=""
+
+# interactive, requires interaction with the live filesystem
+SRC_TEST="skip"
 
 need_apache
 
