@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.239 2009/11/22 23:45:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.240 2009/12/10 13:23:30 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> mesa-7.5.2.ebuild:
+  amd64 stable wrt #294958
 
   22 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/6.5.2-i965-wine-fix.patch:
