@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5084 2009/12/10 01:47:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5085 2009/12/10 23:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -436,6 +436,11 @@ app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home bank
 app-misc/tracker:applet - Build tracker monitor applet
 app-misc/tracker:deskbar - Build gnome-extra/deskbar-applet plugin 
 app-misc/tracker:gsf - Enable gnome-extra/libgsf based data extractor 
+app-misc/tracker:iptc - Enable extraction of IPTC data from pictures
+app-misc/tracker:kmail - Build kmail data miner
+app-misc/tracker:laptop - Make tracker power management aware
+app-misc/tracker:playlist - Add support for playlists
+app-misc/tracker:xmp - Adds support for XMP metadata extraction
 app-misc/worker:avfs - Enable support for sys-fs/avfs
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-mobilephone/gammu:irda - Enables infrared support
