@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r3.ebuild,v 1.16 2009/09/23 22:04:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r3.ebuild,v 1.17 2009/12/10 01:31:26 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1053,7 +1053,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-	DEPEND="${DEPEND} ${CATEGORY}/gcc"
+	DEPEND="${DEPEND} !crosscompile_opts_headers-only? ( ${CATEGORY}/gcc )"
 
 	if [[ ${CATEGORY} == *-linux* ]] ; then
 		if [[ ${CATEGORY} == cross-mips* ]] ; then
