@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.656 2009/12/10 02:18:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.657 2009/12/10 06:17:27 zmedico Exp $
+
+*portage-2.2_rc58 (10 Dec 2009)
+
+  10 Dec 2009; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc57.ebuild,
+  +portage-2.2_rc58.ebuild:
+  2.2_rc58 bump. This fixes a regression which triggers fetch failures.
+
+*portage-2.1.7.13 (10 Dec 2009)
+
+  10 Dec 2009; Zac Medico <zmedico@gentoo.org> -portage-2.1.7.12.ebuild,
+  +portage-2.1.7.13.ebuild:
+  2.1.7.13 bump. This fixes a regression which triggers fetch failures.
 
 *portage-2.2_rc57 (10 Dec 2009)
 
