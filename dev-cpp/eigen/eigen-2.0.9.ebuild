@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.9.ebuild,v 1.2 2009/11/29 16:15:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.9.ebuild,v 1.3 2009/12/10 17:37:08 abcd Exp $
 
 EAPI="2"
 
@@ -31,11 +31,11 @@ src_configure() {
 	# benchmarks (BTL) brings up damn load of external deps including fortran
 	# compiler
 	# library hangs up complete compilation proccess, test later
-	mycmakeargs="
+	mycmakeargs=(
 		-DEIGEN_BUILD_LIB=OFF
 		-DEIGEN_BUILD_BTL=OFF
 		$(cmake-utils_use examples EIGEN_BUILD_DEMOS)
-	"
+	)
 	cmake-utils_src_configure
 }
 
@@ -60,9 +60,10 @@ src_install() {
 }
 
 src_test() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs+=(
 		-DEIGEN_BUILD_TESTS=ON
-		-DEIGEN_TEST_NO_FORTRAN=ON"
+		-DEIGEN_TEST_NO_FORTRAN=ON
+	)
 	cmake-utils_src_configure
 	cmake-utils_src_compile
 	cmake-utils_src_test

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.5.ebuild,v 1.4 2009/11/30 06:07:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.5.ebuild,v 1.5 2009/12/10 17:37:08 abcd Exp $
 
 EAPI="2"
 
@@ -36,11 +36,11 @@ src_configure() {
 	# benchmarks (BTL) brings up damn load of external deps including fortran
 	# compiler
 	# library hangs up complete compilation proccess, test later
-	mycmakeargs="
+	mycmakeargs=(
 		-DEIGEN_BUILD_LIB=OFF
 		-DEIGEN_BUILD_BTL=OFF
 		$(cmake-utils_use examples EIGEN_BUILD_DEMOS)
-	"
+	)
 	cmake-utils_src_configure
 }
 
@@ -50,6 +50,16 @@ src_compile() {
 		cd "${CMAKE_BUILD_DIR}"
 		emake doc || die "building documentation failed"
 	fi
+}
+
+src_test() {
+	mycmakeargs+=(
+		-DEIGEN_BUILD_TESTS=ON
+		-DEIGEN_TEST_NO_FORTRAN=ON
+	)
+	cmake-utils_src_configure
+	cmake-utils_src_compile
+	cmake-utils_src_test
 }
 
 src_install() {
@@ -62,13 +72,4 @@ src_install() {
 		cd "${CMAKE_BUILD_DIR}"/demos
 		dobin mandelbrot/mandelbrot opengl/quaternion_demo || die "dobin failed"
 	fi
-}
-
-src_test() {
-	mycmakeargs="${mycmakeargs}
-		-DEIGEN_BUILD_TESTS=ON
-		-DEIGEN_TEST_NO_FORTRAN=ON"
-	cmake-utils_src_configure
-	cmake-utils_src_compile
-	cmake-utils_src_test
 }
