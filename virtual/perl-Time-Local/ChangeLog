@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.36 2009/12/07 23:18:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.37 2009/12/10 21:42:06 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org>
+  perl-Time-Local-1.19.01.ebuild:
+  Marking perl-Time-Local-1.19.01 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org>
   perl-Time-Local-1.19.01.ebuild:
