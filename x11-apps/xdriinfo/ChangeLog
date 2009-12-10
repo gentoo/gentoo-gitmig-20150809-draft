@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdriinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.37 2009/10/18 21:49:02 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.38 2009/12/10 12:45:31 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xdriinfo-1.0.3.ebuild:
+  amd64 stable wrt #294958
 
 *xdriinfo-1.0.3 (18 Oct 2009)
 

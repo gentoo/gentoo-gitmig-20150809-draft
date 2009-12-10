@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbprint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbprint/ChangeLog,v 1.18 2009/11/18 23:15:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbprint/ChangeLog,v 1.19 2009/12/10 12:51:47 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xkbprint-1.0.2.ebuild:
+  amd64 stable wrt #294958
 
 *xkbprint-1.0.2 (18 Nov 2009)
 

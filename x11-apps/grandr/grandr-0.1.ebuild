@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/grandr/grandr-0.1.ebuild,v 1.7 2009/05/19 21:06:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/grandr/grandr-0.1.ebuild,v 1.8 2009/12/10 12:30:15 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="GTK+-based tool to configure the X output using the RandR 1.2 extension"
-KEYWORDS="~arm ~amd64 ppc x86"
+KEYWORDS="~arm amd64 ppc x86"
 LICENSE="MIT"
 IUSE=""
 RDEPEND="=x11-libs/gtk+-2*
