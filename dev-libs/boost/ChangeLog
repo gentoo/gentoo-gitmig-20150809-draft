@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.179 2009/12/09 08:44:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.180 2009/12/10 21:36:22 aballier Exp $
+
+  10 Dec 2009; Alexis Ballier <aballier@gentoo.org> boost-1.41.0-r1.ebuild:
+  keyword ~x86-fbsd
 
   09 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> boost-1.41.0-r1.ebuild:
   Require threads use flag when depending on mpich2.
