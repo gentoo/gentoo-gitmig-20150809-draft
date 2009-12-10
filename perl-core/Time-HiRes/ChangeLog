@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.56 2009/12/07 23:16:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.57 2009/12/10 21:41:12 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> Time-HiRes-1.97.19.ebuild:
+  Marking Time-HiRes-1.97.19 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> Time-HiRes-1.97.19.ebuild:
   arm stable, bug #288026
