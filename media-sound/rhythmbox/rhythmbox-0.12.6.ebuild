@@ -1,23 +1,24 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r2.ebuild,v 1.2 2009/08/24 22:05:35 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.6.ebuild,v 1.1 2009/12/10 22:43:42 eva Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="1.10"
 
-inherit eutils gnome2 python multilib virtualx autotools
+inherit gnome2 python multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+brasero cdr daap doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp nsplugin python test"
+IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev"
 
 # FIXME: double check what to do with fm-radio plugin
+# TODO: watchout for udev use flag changes
 
 SLOT="0"
 
 COMMON_DEPEND=">=dev-libs/glib-2.16.0
+	dev-libs/libxml2
 	>=x11-libs/gtk+-2.16
 	>=dev-libs/dbus-glib-0.71
 	>=dev-libs/totem-pl-parser-2.26.0
@@ -35,6 +36,10 @@ COMMON_DEPEND=">=dev-libs/glib-2.16.0
 		!brasero? ( >=gnome-extra/nautilus-cd-burner-2.21.6 ) )
 	daap? ( >=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
+	udev? (
+		ipod? ( >=media-libs/libgpod-0.6 )
+		mtp? ( >=media-libs/libmtp-0.3.0 )
+		>=sys-fs/udev-145[extras] )
 	hal? (
 		ipod? ( >=media-libs/libgpod-0.6 )
 		mtp? ( >=media-libs/libmtp-0.3.0 )
@@ -67,9 +72,9 @@ RDEPEND="${COMMON_DEPEND}
 		www-client/mozilla-firefox ) )"
 
 # gtk-doc-am needed for eautoreconf
+#	dev-util/gtk-doc-am
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
-	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
@@ -80,19 +85,26 @@ DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
 	  MAINTAINERS MAINTAINERS.old NEWS README THANKS"
 
 pkg_setup() {
-	if ! use hal && use ipod; then
-		ewarn "ipod support requires hal support.  Please"
-		ewarn "re-emerge with USE=hal to enable ipod support"
+	if ! use hal && ! use udev; then
+		if use ipod; then
+			ewarn "ipod support requires hal or udev support.  Please"
+			ewarn "re-emerge with USE=udev to enable ipod support"
+		fi
+
+		if use mtp; then
+			ewarn "MTP support requires hal or udev support.  Please"
+			ewarn "re-emerge with USE=udev to enable MTP support"
+		fi
 	fi
 
-	if ! use hal && use mtp; then
-		ewarn "MTP support requires hal support.  Please"
-		ewarn "re-emerge with USE=hal to enable MTP support"
+	if use hal && use udev; then
+		einfo "udev support replaces hal support completely. You can disable"
+		einfo "hal on this package via /etc/portage/package.use."
 	fi
 
 	if ! use cdr ; then
 		ewarn "You have cdr USE flag disabled."
-		ewarn "You will not be able to play audio CDs."
+		ewarn "You will not be able to burn CDs."
 	fi
 
 	if use brasero; then
@@ -104,6 +116,8 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		MOZILLA_PLUGINDIR=/usr/$(get_libdir)/nsbrowser/plugins
 		$(use_with gnome-keyring)
+		$(use_with udev gudev)
+		$(use_with hal)
 		$(use_with ipod)
 		$(use_enable libnotify)
 		$(use_enable lirc)
@@ -128,16 +142,6 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
-
-	# Fix last.fm plugin linking, bug #276972
-	epatch "${FILESDIR}/${P}-lastfm.patch"
-
-	# Fix bug #282546, don't crash if there are no saveable types
-	# (upstream bug #590108)
-	epatch "${FILESDIR}/${P}-sigsegv-no-saveable-types.patch"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautomake
 }
 
 src_compile() {
