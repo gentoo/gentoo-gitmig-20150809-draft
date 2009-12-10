@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxkbfile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.51 2009/12/10 13:43:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.52 2009/12/10 19:28:08 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  libxkbfile-1.0.6.ebuild:
+  x86 stable, bug 294958
 
   10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   libxkbfile-1.0.6.ebuild:

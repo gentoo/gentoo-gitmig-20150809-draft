@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.117 2009/12/10 13:33:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.118 2009/12/10 19:17:51 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  libXfont-1.4.1.ebuild:
+  x86 stable, bug 294958
 
   10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> libXfont-1.4.1.ebuild:
   amd64 stable wrt #294958

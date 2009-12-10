@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXxf86misc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86misc/ChangeLog,v 1.32 2009/12/10 13:41:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86misc/ChangeLog,v 1.33 2009/12/10 19:25:36 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  libXxf86misc-1.0.2.ebuild:
+  x86 stable, bug 294958
 
   10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   libXxf86misc-1.0.2.ebuild:
