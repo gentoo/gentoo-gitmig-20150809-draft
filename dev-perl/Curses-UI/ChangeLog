@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.24 2009/11/22 22:42:48 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.25 2009/12/10 20:56:53 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> Curses-UI-0.96.07.ebuild:
+  Marking Curses-UI-0.96.07 ppc64 for bug 293380
 
   22 Nov 2009; Tiago Cunha <tcunha@gentoo.org> Curses-UI-0.96.07.ebuild:
   stable sparc, bug 293380
