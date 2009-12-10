@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-PodParser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.37 2009/12/07 23:11:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.38 2009/12/10 21:37:53 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-PodParser-1.38.ebuild:
+  Marking perl-PodParser-1.38 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> perl-PodParser-1.38.ebuild:
   arm stable, bug #288026
