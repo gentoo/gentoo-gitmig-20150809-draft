@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.55 2009/12/09 15:48:29 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.56 2009/12/10 22:08:10 aballier Exp $
+
+  10 Dec 2009; Alexis Ballier <aballier@gentoo.org> openmpi-1.4.ebuild:
+  keyword ~x86-fbsd
 
 *openmpi-1.4 (09 Dec 2009)
 
