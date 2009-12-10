@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.2 2009/12/09 22:53:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.3 2009/12/10 22:26:15 eva Exp $
+
+*libgdata-0.5.1 (10 Dec 2009)
+
+  10 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +libgdata-0.5.1.ebuild:
+  Version bump.
 
   09 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org> libgdata-0.5.0.ebuild:
   Add libsoup-gnome to RDEPEND explicitely, bug #293807.
