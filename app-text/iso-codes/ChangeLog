@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.82 2009/12/09 17:24:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.83 2009/12/10 15:46:17 jer Exp $
+
+  10 Dec 2009; Jeroen Roovers <jer@gentoo.org> iso-codes-3.10.ebuild:
+  Stable for HPPA (bug #291467).
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> iso-codes-3.10.ebuild:
   Marking iso-codes-3.10 ppc64 for bug 291467
