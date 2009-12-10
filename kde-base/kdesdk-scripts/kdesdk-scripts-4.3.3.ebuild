@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.3.3.ebuild,v 1.3 2009/11/30 06:55:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.3.3.ebuild,v 1.4 2009/12/10 15:20:09 fauli Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ KMMODULE="${PN/*-/}"
 inherit kde4-meta
 
 DESCRIPTION="KDE SDK Scripts"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 x86"
 IUSE="+handbook debug"
 
 src_prepare() {

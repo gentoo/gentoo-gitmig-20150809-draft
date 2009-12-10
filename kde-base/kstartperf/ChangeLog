@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstartperf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.30 2009/12/01 11:06:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.31 2009/12/10 16:49:11 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kstartperf-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kstartperf-4.3.4 (01 Dec 2009)
 

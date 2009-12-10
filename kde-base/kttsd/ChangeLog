@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.141 2009/12/01 11:11:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.142 2009/12/10 17:00:57 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kttsd-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kttsd-4.3.4 (01 Dec 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstyles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.43 2009/12/01 11:07:36 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.44 2009/12/10 16:50:49 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kstyles-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kstyles-4.3.4 (01 Dec 2009)
 

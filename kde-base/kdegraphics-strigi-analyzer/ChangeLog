@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-strigi-analyzer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.33 2009/12/01 10:21:46 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.34 2009/12/10 15:05:12 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kdegraphics-strigi-analyzer-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kdegraphics-strigi-analyzer-4.3.4 (01 Dec 2009)
 

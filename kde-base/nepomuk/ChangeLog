@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.47 2009/12/01 11:26:48 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.48 2009/12/10 17:36:42 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> nepomuk-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *nepomuk-4.3.4 (01 Dec 2009)
 

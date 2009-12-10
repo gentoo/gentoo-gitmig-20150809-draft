@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.29 2009/12/01 11:17:36 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.30 2009/12/10 17:16:07 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kwrited-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kwrited-4.3.4 (01 Dec 2009)
 

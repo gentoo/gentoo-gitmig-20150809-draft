@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.230 2009/12/01 10:56:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.231 2009/12/10 16:24:21 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kopete-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kopete-4.3.4 (01 Dec 2009)
 

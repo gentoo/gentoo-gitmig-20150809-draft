@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.28 2009/12/01 11:15:48 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.29 2009/12/10 17:11:40 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kwalletd-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kwalletd-4.3.4 (01 Dec 2009)
 

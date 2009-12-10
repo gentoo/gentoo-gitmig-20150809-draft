@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.34 2009/12/01 10:43:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.35 2009/12/10 15:53:45 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kleopatra-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kleopatra-4.3.4 (01 Dec 2009)
 

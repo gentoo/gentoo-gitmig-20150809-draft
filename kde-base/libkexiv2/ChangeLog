@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkexiv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.33 2009/12/01 11:20:25 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.34 2009/12/10 17:22:25 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  libkexiv2-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *libkexiv2-4.3.4 (01 Dec 2009)
 

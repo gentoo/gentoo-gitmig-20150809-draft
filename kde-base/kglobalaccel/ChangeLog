@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kglobalaccel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.17 2009/12/01 10:38:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.18 2009/12/10 15:40:16 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kglobalaccel-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kglobalaccel-4.3.4 (01 Dec 2009)
 

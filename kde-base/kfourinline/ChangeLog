@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfourinline
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.43 2009/12/01 10:36:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.44 2009/12/10 15:36:46 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kfourinline-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kfourinline-4.3.4 (01 Dec 2009)
 

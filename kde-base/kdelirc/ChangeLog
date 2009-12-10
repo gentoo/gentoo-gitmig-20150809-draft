@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.90 2009/12/01 10:23:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.91 2009/12/10 15:06:41 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kdelirc-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kdelirc-4.3.4 (01 Dec 2009)
 

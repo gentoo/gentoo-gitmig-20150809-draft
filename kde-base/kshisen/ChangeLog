@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.135 2009/12/01 11:03:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.136 2009/12/10 16:41:20 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kshisen-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kshisen-4.3.4 (01 Dec 2009)
 

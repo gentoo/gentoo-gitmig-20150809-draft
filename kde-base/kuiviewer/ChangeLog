@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.119 2009/12/01 11:14:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.120 2009/12/10 17:08:33 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kuiviewer-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kuiviewer-4.3.4 (01 Dec 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.17 2009/12/01 11:00:25 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.18 2009/12/10 16:33:08 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  krossjava-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *krossjava-4.3.4 (01 Dec 2009)
 

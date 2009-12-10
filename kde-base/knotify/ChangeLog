@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.44 2009/12/01 10:51:54 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.45 2009/12/10 16:12:12 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> knotify-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *knotify-4.3.4 (01 Dec 2009)
 

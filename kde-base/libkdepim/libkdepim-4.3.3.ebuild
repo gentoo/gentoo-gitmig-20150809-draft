@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.3.3.ebuild,v 1.4 2009/11/30 06:54:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.3.3.ebuild,v 1.5 2009/12/10 17:21:41 fauli Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="Common library for KDE PIM apps"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="debug"
 
 # @Since >4.2.65 kode removed from kdepim

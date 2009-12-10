@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.131 2009/12/01 10:44:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.132 2009/12/10 15:56:18 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  klinkstatus-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *klinkstatus-4.3.4 (01 Dec 2009)
 

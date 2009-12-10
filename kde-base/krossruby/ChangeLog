@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.25 2009/12/01 11:01:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.26 2009/12/10 16:34:41 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  krossruby-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *krossruby-4.3.4 (01 Dec 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.36 2009/12/01 11:34:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.37 2009/12/10 17:52:45 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> step-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *step-4.3.4 (01 Dec 2009)
 

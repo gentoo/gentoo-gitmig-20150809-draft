@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kurifilter-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.43 2009/12/01 11:14:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.44 2009/12/10 17:09:23 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kurifilter-plugins-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kurifilter-plugins-4.3.4 (01 Dec 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-apps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.35 2009/12/01 11:29:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.36 2009/12/10 17:42:47 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  plasma-apps-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *plasma-apps-4.3.4 (01 Dec 2009)
 

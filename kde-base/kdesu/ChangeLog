@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.135 2009/12/01 10:30:25 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.136 2009/12/10 15:22:24 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kdesu-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kdesu-4.3.4 (01 Dec 2009)
 

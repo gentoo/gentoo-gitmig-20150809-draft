@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/kbugbuster-4.3.3.ebuild,v 1.3 2009/11/30 06:54:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/kbugbuster-4.3.3.ebuild,v 1.4 2009/12/10 14:25:32 fauli Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdesdk"
 inherit kde4-meta
 
 DESCRIPTION="KBugBuster - A tool for checking and reporting KDE apps' bugs"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 x86"
 IUSE="debug +handbook"
 
 DEPEND="

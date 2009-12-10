@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-iconthemes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.131 2009/12/01 10:10:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-iconthemes/ChangeLog,v 1.132 2009/12/10 14:34:41 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  kdeaccessibility-iconthemes-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *kdeaccessibility-iconthemes-4.3.4 (01 Dec 2009)
 

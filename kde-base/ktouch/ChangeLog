@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.143 2009/12/01 11:10:55 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.144 2009/12/10 16:58:23 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> ktouch-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *ktouch-4.3.4 (01 Dec 2009)
 
