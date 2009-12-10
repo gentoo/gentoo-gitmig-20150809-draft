@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10.ebuild,v 1.6 2007/11/24 04:37:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.10.ebuild,v 1.7 2009/12/10 19:38:48 vostorga Exp $
 
 inherit autotools eutils
 
@@ -48,7 +48,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "Add the appropriate mdns into the hosts line in /etc/nsswitch.conf"
 	ewarn "An example line looks like:"
-	einfo "hosts:	files mdns4_minimal [NOTFOUND=return] dns mdns4"
+	ewarn "hosts:	files mdns4_minimal [NOTFOUND=return] dns mdns4"
 	ewarn
 	ewarn "If you want to perform mDNS lookups for domains other than the ones"
 	ewarn "ending in .local, add them to /etc/mdns.allow"
