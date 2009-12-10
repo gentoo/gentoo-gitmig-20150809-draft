@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.51 2009/12/09 19:29:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.52 2009/12/10 16:22:57 jer Exp $
+
+  10 Dec 2009; Jeroen Roovers <jer@gentoo.org> libnet-1.1.4.ebuild,
+  +files/libnet-1.1.4-zero-pointers-after-free.patch:
+  Apply Debian patch (bug #296417).
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> libnet-1.1.4.ebuild:
   ppc stable #289857

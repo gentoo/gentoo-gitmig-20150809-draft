@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.4.ebuild,v 1.6 2009/12/09 19:29:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.4.ebuild,v 1.7 2009/12/10 16:22:57 jer Exp $
+
+EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://libnet-dev.sourceforge.net/"
@@ -13,6 +17,10 @@ IUSE="doc"
 
 DEPEND="sys-devel/autoconf"
 RDEPEND=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-zero-pointers-after-free.patch
+}
 
 src_install(){
 	emake DESTDIR="${D}" install || die "Failed to install"
