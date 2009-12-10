@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9.ebuild,v 1.2 2009/12/09 19:52:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.1 2009/12/10 04:18:56 hwoarang Exp $
 
 EAPI="2"
 
@@ -30,14 +30,14 @@ src_prepare() {
 	if ! use opengl; then
 		sed -i "/QT += opengl/d" "${PN}.pro" || die "sed failed"
 	fi
-	if ! use webcam; then
-		 echo "CONFIG+=no-webcam" >> ${PN}.pro \
-			|| die "failed to disable webcam"
-	fi
 }
 
 src_configure() {
-	eqmake4
+	if ! use webcam; then
+		eqmake4 ${PN}.pro "CONFIG += no-webcam"
+	else
+		eqmake4
+	fi
 }
 
 src_install() {
