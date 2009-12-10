@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.95.ebuild,v 1.4 2009/11/30 06:32:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.95.ebuild,v 1.5 2009/12/10 18:25:05 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kdevelop.org/"
 SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~hppa ppc ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ppc ppc64 x86"
 SLOT="4"
 # Moved to playground for now
 # bazaar
