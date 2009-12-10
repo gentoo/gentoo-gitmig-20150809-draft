@@ -5,8 +5,13 @@
 <use>
   <flag name='applet'>Build tracker monitor applet</flag>
   <flag name='deskbar'>Build <pkg>gnome-extra/deskbar-applet</pkg> plugin
-    </flag>
+  </flag>
   <flag name='gsf'>Enable <pkg>gnome-extra/libgsf</pkg> based data extractor
-    </flag>
+  </flag>
+  <flag name="iptc">Enable extraction of IPTC data from pictures</flag>
+  <flag name="kmail">Build kmail data miner</flag>
+  <flag name="laptop">Make tracker power management aware</flag>
+  <flag name="playlist">Add support for playlists</flag>
+  <flag name="xmp">Adds support for XMP metadata extraction</flag>
 </use>
 </pkgmetadata>

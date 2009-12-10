@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.53 2009/03/30 02:02:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.54 2009/12/10 23:15:03 eva Exp $
+
+*tracker-0.7.10 (10 Dec 2009)
+
+  10 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -tracker-0.6.6-r1.ebuild, +tracker-0.7.10.ebuild, tracker-9999.ebuild,
+  metadata.xml:
+  Version bump. 0.7 series is API/ABI incompatible with 0.6 series. Sync
+  live ebuild and convert it to git.
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> tracker-0.6.3.ebuild,
   tracker-0.6.6.ebuild, tracker-0.6.6-r1.ebuild, tracker-9999.ebuild:
