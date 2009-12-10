@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.1 2009/11/09 13:33:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.2 2009/12/10 23:43:40 tcunha Exp $
 EAPI=2
 
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
 IUSE=""
 
 RDEPEND="!games-misc/wtf
