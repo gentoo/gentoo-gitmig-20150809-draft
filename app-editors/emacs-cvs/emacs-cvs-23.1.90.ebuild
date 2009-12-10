@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.1.90.ebuild,v 1.1 2009/12/09 18:09:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.1.90.ebuild,v 1.2 2009/12/10 10:39:30 ulm Exp $
 
 EAPI=2
 
@@ -90,10 +90,8 @@ src_prepare() {
 		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 		echo
-	fi
-
-	if [ -d "${WORKDIR}/patch" ]; then
-		EPATCH_SUFFIX=patch epatch
+	#else
+	#	EPATCH_SUFFIX=patch epatch
 	fi
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
