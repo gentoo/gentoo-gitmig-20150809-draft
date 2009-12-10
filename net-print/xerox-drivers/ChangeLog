@@ -1,6 +1,10 @@
 # ChangeLog for net-print/xerox-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xerox-drivers/ChangeLog,v 1.1 2009/11/08 11:19:44 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xerox-drivers/ChangeLog,v 1.2 2009/12/10 21:00:02 maekke Exp $
+
+  10 Dec 2009; Markus Meier <maekke@gentoo.org>
+  xerox-drivers-0_p20080123.ebuild:
+  amd64/x86 stable, bug #296150
 
 *xerox-drivers-0_p20080123 (08 Nov 2009)
 
