@@ -1,11 +1,11 @@
 # ChangeLog for media-libs/coin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.28 2009/12/10 17:20:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.29 2009/12/10 17:25:16 jer Exp $
 
 *coin-3.1.2 (10 Dec 2009)
 
   10 Dec 2009; Jeroen Roovers <jer@gentoo.org> +coin-3.1.2.ebuild:
-  Version bump (bug #296246).
+  Version bump thanks to Roelof Wobben (bug #296246).
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> coin-3.1.0.ebuild:
   x86 stable, bug #290801
