@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-MD5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.25 2009/12/07 22:47:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.26 2009/12/10 21:30:26 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking perl-Digest-MD5-2.39 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> perl-Digest-MD5-2.39.ebuild:
   arm stable, bug #288026
