@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.77 2009/12/10 15:28:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.78 2009/12/10 15:31:26 jer Exp $
+
+  10 Dec 2009; Jeroen Roovers <jer@gentoo.org> keychain-2.7.0.ebuild:
+  Stable for HPPA (bug #296404).
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   keychain-2.7.0.ebuild:
