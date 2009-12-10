@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/iceauth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.37 2009/12/10 12:31:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.38 2009/12/10 18:16:05 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> iceauth-1.0.3.ebuild:
+  x86 stable, bug 294958
 
   10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> iceauth-1.0.3.ebuild:
   amd64 stable wrt #294958
