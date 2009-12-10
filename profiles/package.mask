@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10954 2009/12/09 18:18:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10955 2009/12/10 20:08:01 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -460,11 +460,6 @@ app-text/kbibtex
 # support it anymore and it has been replaced by dazukofs
 # Pending removal in 30 days (bug #278414)
 sys-fs/dazuko
-
-# Víctor Ostorga <vostorga@gentoo.org> (09 Nov 2009)
-# Last version bump in 2004, allows buffer overflow bug #284747
-# Upstream not available
-net-misc/mmsclient
 
 # Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
 # beta/experimental drivers
