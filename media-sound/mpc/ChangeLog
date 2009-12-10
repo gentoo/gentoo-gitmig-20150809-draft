@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.63 2009/11/13 14:49:35 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.64 2009/12/10 13:58:43 angelos Exp $
+
+*mpc-0.19 (10 Dec 2009)
+
+  10 Dec 2009; Christoph Mende <angelos@gentoo.org> +mpc-0.19.ebuild:
+  Version bump, fixes bug 291702
 
   13 Nov 2009; Tiago Cunha <tcunha@gentoo.org> mpc-0.18.ebuild:
   keyworded ~arch for sparc, bug 291197
