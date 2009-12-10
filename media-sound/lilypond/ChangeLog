@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.102 2009/11/18 18:45:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.103 2009/12/10 19:02:18 ulm Exp $
+
+*lilypond-2.12.2-r1 (10 Dec 2009)
+
+  10 Dec 2009; Ulrich Mueller <ulm@gentoo.org> +lilypond-2.12.2-r1.ebuild,
+  +files/lilypond-2.12.2-dont-install-pyc.patch:
+  Don't install precompiled python object files, fixes bug 258129. Proxy
+  commit for Tomás Touceda (chiiph).
 
   18 Nov 2009; Raúl Porcel <armin76@gentoo.org> lilypond-2.12.2.ebuild:
   sparc stable wrt #288316
