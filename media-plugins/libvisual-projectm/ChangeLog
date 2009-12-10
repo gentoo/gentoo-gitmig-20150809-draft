@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/libvisual-projectm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.8 2009/04/29 19:49:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.9 2009/12/10 20:00:12 ssuominen Exp $
+
+*libvisual-projectm-2.0.1 (10 Dec 2009)
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +libvisual-projectm-2.0.1.ebuild:
+  Version bump.
 
   29 Apr 2009; Markus Meier <maekke@gentoo.org>
   libvisual-projectm-1.2.0.ebuild:
