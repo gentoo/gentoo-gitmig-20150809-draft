@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.60 2009/12/07 22:41:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.61 2009/12/10 21:27:23 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-CGI-3.48.ebuild:
+  Marking perl-CGI-3.48 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> perl-CGI-3.48.ebuild:
   arm stable, bug #288026
