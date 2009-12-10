@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-Modifier
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Modifier/ChangeLog,v 1.18 2009/11/19 16:54:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Modifier/ChangeLog,v 1.19 2009/12/10 20:58:38 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org>
+  Email-MIME-Modifier-1.444.ebuild:
+  Marking Email-MIME-Modifier-1.444 ppc64 for bug 293522
 
   19 Nov 2009; Markus Meier <maekke@gentoo.org>
   Email-MIME-Modifier-1.444.ebuild:
