@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.9 2009/12/07 23:22:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.10 2009/12/10 21:45:06 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-version-0.77.02.ebuild:
+  Marking perl-version-0.77.02 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> perl-version-0.77.02.ebuild:
   arm stable, bug #288026
