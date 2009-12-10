@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.122 2009/12/09 19:17:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.123 2009/12/10 01:27:59 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -159,7 +159,7 @@ mysql_version_is_at_least "5.1.12" \
 && [[ -n "${PBXT_VERSION}" ]] \
 && PBXT_P="pbxt-${PBXT_VERSION}" \
 && PBXT_SRC_URI="mirror://sourceforge/pbxt/${PBXT_P}.tar.gz" \
-&& SRC_URI="${SRC_URI} pbxt? ( ${PBXT_SRC_URIPBXT_SRC_URI} )"
+&& SRC_URI="${SRC_URI} pbxt? ( ${PBXT_SRC_URI} )"
 
 # Get the percona tarball if XTRADB_VER and PERCONA_VER are both set
 mysql_version_is_at_least "5.1.26" \
