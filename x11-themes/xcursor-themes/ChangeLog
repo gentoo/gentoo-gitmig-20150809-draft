@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xcursor-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.25 2009/10/03 11:39:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.26 2009/12/10 13:22:24 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xcursor-themes-1.0.2.ebuild:
+  amd64 stable wrt #294958
 
 *xcursor-themes-1.0.2 (03 Oct 2009)
 
