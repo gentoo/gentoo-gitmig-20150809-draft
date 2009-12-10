@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.67 2009/10/26 20:58:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.68 2009/12/10 13:28:07 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> libXaw-1.0.7.ebuild:
+  amd64 stable wrt #294958
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> libXaw-1.0.6.ebuild:
   Stable for HPPA (bug #282290).

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xtrans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.67 2009/10/18 20:20:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.68 2009/12/10 13:45:08 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xtrans-1.2.5.ebuild:
+  amd64 stable wrt #294958
 
 *xtrans-1.2.5 (18 Oct 2009)
 

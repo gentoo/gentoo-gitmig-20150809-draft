@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXmu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.51 2009/09/28 14:07:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.52 2009/12/10 13:35:58 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> libXmu-1.0.5.ebuild:
+  amd64 stable wrt #294958
 
 *libXmu-1.0.5 (28 Sep 2009)
 
