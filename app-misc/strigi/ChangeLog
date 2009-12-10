@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.42 2009/11/30 04:35:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.43 2009/12/10 17:36:37 abcd Exp $
+
+  10 Dec 2009; Jonathan Callen <abcd@gentoo.org> strigi-0.6.5.ebuild,
+  strigi-0.7.0.ebuild:
+  Convert mycmakeargs to an array (required due to usage in src_test)
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> strigi-0.7.0.ebuild:
   Marked ppc/ppc64 stable.

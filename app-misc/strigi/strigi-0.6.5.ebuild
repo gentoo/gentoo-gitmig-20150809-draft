@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.5.ebuild,v 1.3 2009/05/18 12:56:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.5.ebuild,v 1.4 2009/12/10 17:36:37 abcd Exp $
 
 EAPI="2"
 
@@ -55,29 +55,33 @@ src_configure() {
 	# is just silly, so we forcefully disable linking to expat.
 	# Enabled: POLLING (only reliable way to check for files changed.)
 
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DENABLE_EXPAT=OFF -DENABLE_POLLING=ON
 		-DFORCE_DEPS=ON -DENABLE_CPPUNIT=OFF
 		-DENABLE_REGENERATEXSD=OFF
-		$(cmake-utils_use_enable clucene CLUCENE)
-		$(cmake-utils_use_enable dbus DBUS)
+		$(cmake-utils_use_enable clucene)
+		$(cmake-utils_use_enable dbus)
 		$(cmake-utils_use_enable exif EXIV2)
-		$(cmake-utils_use_enable fam FAM)
-		$(cmake-utils_use_enable hyperestraier HYPERESTRAIER)
-		$(cmake-utils_use_enable inotify INOTIFY)
+		$(cmake-utils_use_enable fam)
+		$(cmake-utils_use_enable hyperestraier)
+		$(cmake-utils_use_enable inotify)
 		$(cmake-utils_use_enable log LOG4CXX)
-		$(cmake-utils_use_enable qt4 DBUS)
-		$(cmake-utils_use_enable qt4 QT4)"
+		$(cmake-utils_use_enable qt4)
+	)
+
+	if use qt4; then
+		mycmakeargs+=(-DENABLE_DBUS=ON)
+	fi
 
 	if ! use clucene && ! use hyperestraier; then
-		mycmakeargs="${mycmakeargs} -DENABLE_CLUCENE=ON"
+		mycmakeargs+=(-DENABLE_CLUCENE=ON)
 	fi
 
 	cmake-utils_src_configure
 }
 
 src_test() {
-	mycmakeargs="${mycmakeargs} -DENABLE_CPPUNIT=ON"
+	mycmakeargs+=(-DENABLE_CPPUNIT=ON)
 	cmake-utils_src_configure
 	cmake-utils_src_compile
 
