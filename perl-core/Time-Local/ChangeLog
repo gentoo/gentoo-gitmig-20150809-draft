@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.44 2009/12/07 23:17:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.45 2009/12/10 21:41:48 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> Time-Local-1.19.01.ebuild:
+  Marking Time-Local-1.19.01 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> Time-Local-1.19.01.ebuild:
   arm stable, bug #288026
