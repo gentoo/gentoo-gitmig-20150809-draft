@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-libnet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.25 2009/09/19 16:18:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.26 2009/12/10 21:43:53 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-libnet-1.22.ebuild:
+  Marking perl-libnet-1.22 ppc64 stable for bug 288026
 
   19 Sep 2009; nixnut <nixnut@gentoo.org> perl-libnet-1.22.ebuild:
   ppc stable #284390
