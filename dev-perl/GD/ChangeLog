@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.89 2009/10/16 17:19:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.90 2009/12/10 20:53:58 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> GD-2.44.ebuild:
+  Marking GD-2.44 ppc64 for bug 286799
 
   16 Oct 2009; Jeroen Roovers <jer@gentoo.org> GD-2.44.ebuild:
   Stable for HPPA (bug #286799).
