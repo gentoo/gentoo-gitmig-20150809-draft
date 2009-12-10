@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.145 2009/12/01 09:58:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.146 2009/12/10 13:59:47 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> drkonqi-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *drkonqi-4.3.4 (01 Dec 2009)
 

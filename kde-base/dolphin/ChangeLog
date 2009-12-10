@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.53 2009/12/01 09:58:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.54 2009/12/10 13:58:18 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> dolphin-4.3.3.ebuild:
+  x86 stable, bug 292455
 
 *dolphin-4.3.4 (01 Dec 2009)
 
