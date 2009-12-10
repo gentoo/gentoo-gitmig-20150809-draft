@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.4-r1.ebuild,v 1.1 2009/11/08 21:25:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.4-r1.ebuild,v 1.2 2009/12/10 20:05:30 maekke Exp $
 
 EAPI=2
 WANT_ANT_TASKS="ant-nodeps ant-trax"
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/ws/${PN}/${MY_PV}/${PN}-src-${MY_PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="
