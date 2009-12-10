@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.6 2009/12/10 17:36:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.7 2009/12/10 21:11:20 abcd Exp $
 
 EAPI="2"
 
@@ -70,7 +70,7 @@ src_configure() {
 	)
 
 	if use qt4; then
-		mycmakeargs+=(-DENABLE_DBUS)
+		mycmakeargs+=(-DENABLE_DBUS=ON)
 	fi
 
 	if ! use clucene && ! use hyperestraier; then
