@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.9 2009/12/04 13:56:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.10 2009/12/10 21:42:41 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-Time-Piece-1.15.ebuild:
+  Marking perl-Time-Piece-1.15 ppc64 stable for bug 288026
 
   04 Dec 2009; Torsten Veller <tove@gentoo.org> perl-Time-Piece-1.15.ebuild:
   Stable on amd64 (#288026)
