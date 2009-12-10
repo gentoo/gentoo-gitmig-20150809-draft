@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.67 2009/04/23 07:16:10 a3li Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.68 2009/12/10 20:09:50 maekke Exp $
+
+  10 Dec 2009; Markus Meier <maekke@gentoo.org> mysql-ruby-2.8.1.ebuild:
+  amd64/x86 stable, bug #296340
 
   23 Apr 2009; Alex Legler <a3li@gentoo.org> mysql-ruby-2.7.5,
   mysql-ruby-2.8:
