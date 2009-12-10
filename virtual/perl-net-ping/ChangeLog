@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-net-ping
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.11 2009/12/07 20:19:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.12 2009/12/10 21:44:29 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-net-ping-2.36.ebuild:
+  Marking perl-net-ping-2.36 ppc64 stable for bug 288026
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org> perl-net-ping-2.36.ebuild:
   Stable for HPPA (bug #288026).
