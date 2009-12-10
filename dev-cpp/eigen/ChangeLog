@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.25 2009/12/10 17:37:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.26 2009/12/10 21:46:46 spatz Exp $
+
+*eigen-2.0.10 (10 Dec 2009)
+
+  10 Dec 2009; Dror Levin <spatz@gentoo.org> -eigen-2.0.9.ebuild,
+  +eigen-2.0.10.ebuild:
+  Version bump and remove old, bug 296461.
 
   10 Dec 2009; Jonathan Callen <abcd@gentoo.org> eigen-2.0.5.ebuild,
   eigen-2.0.9.ebuild:

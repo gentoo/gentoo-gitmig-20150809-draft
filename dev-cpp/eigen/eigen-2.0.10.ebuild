@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.9.ebuild,v 1.3 2009/12/10 17:37:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.10.ebuild,v 1.1 2009/12/10 21:46:46 spatz Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="Lightweight C++ template library for vector and matrix math, a.k.a. linear algebra"
 HOMEPAGE="http://eigen.tuxfamily.org/"
-SRC_URI="http://bitbucket.org/eigen/eigen2/get/${PV}.tar.bz2"
+SRC_URI="http://bitbucket.org/eigen/eigen/get/${PV}.tar.bz2"
 
 LICENSE="GPL-3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 	!dev-cpp/eigen:0
 "
 
-S="${WORKDIR}/eigen2"
+S="${WORKDIR}/${PN}"
 
 src_configure() {
 	# benchmarks (BTL) brings up damn load of external deps including fortran
