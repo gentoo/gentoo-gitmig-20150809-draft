@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.35 2009/12/10 17:35:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.36 2009/12/10 19:58:42 abcd Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -248,6 +248,7 @@ _modify-cmakelists() {
 
 	# NOTE Append some useful summary here
 	cat >> CMakeLists.txt <<- _EOF_
+
 		MESSAGE(STATUS "<<< Gentoo configuration >>>
 		Build type: ${CMAKE_BUILD_TYPE}
 		Install path: ${CMAKE_INSTALL_PREFIX}\n")
@@ -315,7 +316,7 @@ enable_cmake-utils_src_configure() {
 	[[ -n ${CMAKE_NO_COLOR} ]] && echo 'SET (CMAKE_COLOR_MAKEFILE OFF CACHE BOOL "pretty colors during make" FORCE)' >> "${common_config}"
 
 	# Convert mycmakeargs to an array, for backwards compatibility
-	if [[ $(declare -p mycmakeargs) != "declare -a mycmakeargs="* ]]; then
+	if [[ $(declare -p mycmakeargs 2>&-) != "declare -a mycmakeargs="* ]]; then
 		mycmakeargs=(${mycmakeargs})
 	fi
 
