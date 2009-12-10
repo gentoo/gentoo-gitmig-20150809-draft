@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.11 2009/12/07 23:21:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.12 2009/12/10 21:44:47 ranger Exp $
+
+  10 Dec 2009; Brent Baude <ranger@gentoo.org> version-0.77.02.ebuild:
+  Marking version-0.77.02 ppc64 stable for bug 288026
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> version-0.77.02.ebuild:
   arm stable, bug #288026
