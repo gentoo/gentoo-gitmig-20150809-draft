@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1-r1.ebuild,v 1.1 2009/12/03 15:55:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1-r1.ebuild,v 1.2 2009/12/10 17:37:42 abcd Exp $
 
 EAPI="2"
 
@@ -78,7 +78,7 @@ src_configure() {
 	# NOTE: temporarily fix until a better cmake files patch will be provided.
 	use elibc_FreeBSD && append-flags -pthread
 
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DSOPRANO_BUILD_TESTS=OFF
 		-DCMAKE_SKIP_RPATH=OFF
 		$(cmake-utils_use !clucene SOPRANO_DISABLE_CLUCENE_INDEX)
@@ -87,7 +87,7 @@ src_configure() {
 		$(cmake-utils_use !redland SOPRANO_DISABLE_REDLAND_BACKEND)
 		$(cmake-utils_use !java SOPRANO_DISABLE_SESAME2_BACKEND)
 		$(cmake-utils_use doc SOPRANO_BUILD_API_DOCS)
-	"
+	)
 
 	cmake-utils_src_configure
 }
@@ -97,8 +97,7 @@ src_compile() {
 }
 
 src_test() {
-	mycmakeargs="${mycmakeargs}
-		-DSOPRANO_BUILD_TESTS=ON"
+	mycmakeargs+=(-DSOPRANO_BUILD_TESTS=ON)
 	cmake-utils_src_configure
 	cmake-utils_src_compile
 	ctest --extra-verbose || die "Tests failed."
