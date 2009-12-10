@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.85 2009/10/30 12:57:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.86 2009/12/10 17:19:26 armin76 Exp $
+
+  10 Dec 2009; Raúl Porcel <armin76@gentoo.org> libffi-3.0.8.ebuild,
+  +files/libffi-3.0.8-arm.patch:
+  Steal patch from debian to make it compile on armv6/armv7
 
 *libffi-3.0.9_rc3 (30 Oct 2009)
 
