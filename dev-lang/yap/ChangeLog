@@ -1,6 +1,20 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.30 2009/12/09 19:35:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.31 2009/12/10 05:24:03 keri Exp $
+
+  10 Dec 2009; <keri@gentoo.org> -yap-5.1.1.ebuild,
+  -files/yap-5.1.1-SONAME.patch, -files/yap-5.1.1-analyst.patch,
+  -files/yap-5.1.1-configure.patch, -files/yap-5.1.1-jpl.patch,
+  -files/yap-5.1.1-multilib.patch, -files/yap-5.1.1-myddas.patch,
+  -files/yap-5.1.1-parallel-make.patch, -files/yap-5.1.1-tabling.patch,
+  -files/yap-5.1.1-tkyap.patch, -yap-5.1.2.ebuild,
+  -files/yap-5.1.2-SONAME.patch, -files/yap-5.1.2-analyst.patch,
+  -files/yap-5.1.2-chr.patch, -files/yap-5.1.2-config.h.patch,
+  -files/yap-5.1.2-configure.patch, -files/yap-5.1.2-jpl.patch,
+  -files/yap-5.1.2-multilib.patch, -files/yap-5.1.2-parallel-make.patch,
+  -files/yap-5.1.2-tabling.patch, -files/yap-5.1.2-tkyap.patch,
+  -yap-5.1.3.ebuild, -yap-5.1.3-r1.ebuild:
+  Remove old versions
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> yap-5.1.3-r2.ebuild:
   ppc stable #295679
