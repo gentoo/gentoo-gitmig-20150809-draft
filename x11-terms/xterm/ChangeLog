@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.281 2009/12/10 13:47:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.282 2009/12/10 19:14:07 ssuominen Exp $
+
+*xterm-253 (10 Dec 2009)
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +xterm-253.ebuild:
+  Version bump.
 
   10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xterm-250.ebuild:
   amd64 stable wrt #294958
