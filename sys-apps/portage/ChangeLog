@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.655 2009/12/07 03:19:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.656 2009/12/10 02:18:41 zmedico Exp $
+
+*portage-2.2_rc57 (10 Dec 2009)
+
+  10 Dec 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc57.ebuild:
+  2.2_rc57 bump. This includes all fixes in 2.1.7.12.
+
+*portage-2.1.7.12 (10 Dec 2009)
+
+  10 Dec 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.12.ebuild:
+  2.1.7.12 bump. This fixes various issues including erroneous rounding up
+  of file mtime in rare cases, broken tests with python-2.7, and broken
+  binhost support with python3. Bug #288499 tracks all bugs fixed since
+  2.1.6.x.
 
 *portage-2.2_rc56 (07 Dec 2009)
 
