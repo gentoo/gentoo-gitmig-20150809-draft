@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkill
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkill/ChangeLog,v 1.19 2009/12/10 12:53:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkill/ChangeLog,v 1.20 2009/12/10 18:43:30 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> xkill-1.0.2.ebuild:
+  x86 stable, bug 294958
 
   10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xkill-1.0.2.ebuild:
   amd64 stable wrt #294958
