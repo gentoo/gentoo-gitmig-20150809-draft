@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.29 2009/12/02 17:07:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.30 2009/12/10 17:35:52 abcd Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -16,13 +16,11 @@ inherit kde4-base versionator
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm
 
-if [[ -z ${KMNAME} ]]; then
-	die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
-fi
+[[ -z ${KMNAME} ]] && die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
 
 # Add khelpcenter dependency when installing handbooks
 if [[ ${PN} != khelpcenter ]] && has handbook ${IUSE//+}; then
-       RDEPEND+=" handbook? ( $(add_kdebase_dep khelpcenter) )"
+	RDEPEND+=" handbook? ( $(add_kdebase_dep khelpcenter) )"
 fi
 
 # Add dependencies that all packages in a certain module share.
@@ -35,7 +33,7 @@ case ${KMNAME} in
 		case ${PN} in
 			akregator|kaddressbook|kjots|kmail|knode|knotes|korganizer|ktimetracker)
 				IUSE+=" +kontact"
-				if ! slot_is_at_least 4.4 ${SLOT} || [[ ${SLOT} == 4.4 && ${PV} < 4.3.68 ]]; then
+				if ! slot_is_at_least 4.4 ${SLOT}; then
 					RDEPEND+=" kontact? ( $(add_kdebase_dep kontactinterfaces) )"
 				fi
 				;;
@@ -355,7 +353,7 @@ kde4-meta_create_extractlists() {
 			if has kontact ${IUSE//+} && use kontact; then
 				KMEXTRA+="
 					kontact/plugins/${PLUGINNAME:-${PN}}/"
-				if ! slot_is_at_least 4.4 ${SLOT} || [[ ${SLOT} == 4.4 && ${PV} < 4.3.68 ]]; then
+				if ! slot_is_at_least 4.4 ${SLOT}; then
 					KMEXTRACTONLY+="
 						kontactinterfaces/"
 				fi
@@ -636,16 +634,22 @@ kde4-meta_change_cmakelists() {
 kde4-meta_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	# backwards-compatibility: make mycmakeargs an array, if it isn't already
+	if [[ $(declare -p mycmakeargs) != "declare -a mycmakeargs="* ]]; then
+		mycmakeargs=(${mycmakeargs})
+	fi
+
 	# Set some cmake default values here (usually workarounds for automagic deps)
 	case ${KMNAME} in
 		kdewebdev)
-			mycmakeargs="
+			mycmakeargs=(
 				-DWITH_KdepimLibs=OFF
 				-DWITH_LibXml2=OFF
 				-DWITH_LibXslt=OFF
 				-DWITH_Boost=OFF
 				-DWITH_LibTidy=OFF
-				${mycmakeargs}"
+				"${mycmakeargs[@]}"
+			)
 			;;
 	esac
 
@@ -664,12 +668,16 @@ kde4-meta_src_compile() {
 
 # @FUNCTION: kde4-meta_src_test
 # @DESCRIPTION:
-# Currently just calls its equivalent in kde4-base.eclass(5). Use this in split
-# ebuilds.
+# Currently just calls its equivalent in kde4-base.eclass(5) if
+# I_KNOW_WHAT_I_AM_DOING is set. Use this in split ebuilds.
 kde4-meta_src_test() {
 	debug-print-function $FUNCNAME "$@"
 
-	kde4-base_src_test
+	if [[ $I_KNOW_WHAT_I_AM_DOING ]]; then
+		kde4-base_src_test
+	else
+		einfo "Tests disabled"
+	fi
 }
 
 # @FUNCTION: kde4-meta_src_install
