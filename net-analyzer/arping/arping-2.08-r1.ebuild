@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.08-r1.ebuild,v 1.1 2009/12/10 17:51:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.08-r1.ebuild,v 1.2 2009/12/10 18:00:16 jer Exp $
 
 inherit toolchain-funcs
 
@@ -21,9 +21,15 @@ src_unpack() {
 	cd "${S}"
 	rm -f Makefile
 	# since we install as arping2, use arping2 in the man page
-	sed -i -e "s|\(${PN}\)|\12|g" ${PN}.8 || die "sed ${PN}.8 failed"
-	sed -i -e "s|\(${PN}\) |\12 |g" ${PN}-scan-net.sh || \
-		die "sed ${PN}-scan-net.sh failed"
+	sed \
+		-e "s|\(${PN}\)|\12|g" \
+		-e "s|\(${PN}\)\(\W\)|\12\2|g" \
+		-e "s|${PN}2-|${PN}-|g" \
+		-e "s|(${PN}2 2.*\.x only)||g" \
+		-i ${PN}.8 || die "sed ${PN}.8 failed"
+	sed \
+		-e "s|\(${PN}\) |\12 |g" \
+		-i ${PN}-scan-net.sh || die "sed ${PN}-scan-net.sh failed"
 }
 
 src_compile() {

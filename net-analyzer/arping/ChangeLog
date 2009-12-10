@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.39 2009/12/10 17:51:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.40 2009/12/10 18:00:16 jer Exp $
+
+  10 Dec 2009; Jeroen Roovers <jer@gentoo.org> arping-2.08-r1.ebuild:
+  Add yet more sed scripts (bug #257864).
 
 *arping-2.08-r1 (10 Dec 2009)
 
