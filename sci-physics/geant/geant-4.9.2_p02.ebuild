@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.5 2009/12/07 18:25:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.6 2009/12/10 17:14:10 bicatali Exp $
 
 EAPI=2
 
@@ -57,15 +57,22 @@ src_prepare() {
 	# fix bad zlib dependency
 	epatch "${FILESDIR}"/${PN}-4.9.2-zlib.patch
 
-	# propagate user's flags.
+	# propagate user's flags and compiler settings
 	sed -i -e 's/-o/$(LDFLAGS) -o/g' source/GNUmakefile || die
 	sed -i \
+		-e '/CXX.*:=.*g++/d' \
+		-e '/FC.*:=.*gfortran/d' \
+		-e 's/\(CXXFLAGS.*:=\).*/\1 -ansi/' \
+		-e '/CXXFLAGS.*+=.*pipe/d' \
 		-e "/CXXFLAGS.*=.*-O2/s:=.*:= ${CXXFLAGS}:" \
-		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FFLAGS:--O2}:" \
+		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FCFLAGS}:" \
 		-e "/CCFLAGS.*=.*-O2/s:=.*:= ${CFLAGS}:" \
 		-e "s:-Wl,-soname:${LDFLAGS} -Wl,-soname:g" \
 		-e "s/libq\*/lib\[q,Q\]t*/g" \
 		config/sys/Linux*gmk || die "flag substitution failed"
+	sed -i \
+		-e 's:g++:$(CXX):g' \
+		config/*.gmk || die "sed for forced g++ failed"
 
 	# fix forced lib directory
 	sed -i \
@@ -88,6 +95,11 @@ src_prepare() {
 	sed -i \
 		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
 		config/globlib.gmk || die "sed globlib.gmk failed"
+
+	# work around a non defined fortran compiler
+	use geant3 && export FC=$(tc-getFC)
+	# don't worry about the g++ name of the file, we remove all specific
+	export G4SYSTEM=Linux-g++
 }
 
 src_configure() {
@@ -96,10 +108,6 @@ src_configure() {
 	# we set env var G4LIB in src_install()
 	# to avoid confusing make
 	export GEANT4_LIBDIR=/usr/$(get_libdir)/${PN}${PV1}
-
-	# these should always to be set
-	[[ $(tc-getCXX) = ic*c ]] && export G4SYSTEM=Linux-icc \
-							  || export G4SYSTEM=Linux-g++
 	export G4INSTALL="${S}"
 	export G4WORKDIR="${S}"
 	export G4INCLUDE="${D}/usr/include/${PN}"
