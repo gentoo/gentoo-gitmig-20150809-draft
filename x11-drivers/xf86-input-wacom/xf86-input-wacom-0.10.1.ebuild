@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.10.1.ebuild,v 1.1 2009/11/20 13:03:52 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.10.1.ebuild,v 1.2 2009/12/10 08:51:37 zmedico Exp $
 
 EAPI="2"
 
@@ -15,9 +15,11 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/~whot/xf86-input-wacom"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="hal debug"
 
-RDEPEND=">=x11-base/xorg-server-1.6
+COMMON_DEPEND=">=x11-base/xorg-server-1.6
 	hal? ( sys-apps/hal )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	!x11-drivers/linuxwacom"
+DEPEND="${COMMON_DEPEND}
 	x11-proto/inputproto
 	x11-proto/xproto"
 
