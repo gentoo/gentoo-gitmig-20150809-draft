@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.90 2009/12/09 00:51:04 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.91 2009/12/10 14:44:54 fauli Exp $
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> diffstat-1.51.ebuild:
+  stable x86, bug 296265
 
   09 Dec 2009; Tiago Cunha <tcunha@gentoo.org> diffstat-1.51.ebuild:
   stable sparc, bug 296265
