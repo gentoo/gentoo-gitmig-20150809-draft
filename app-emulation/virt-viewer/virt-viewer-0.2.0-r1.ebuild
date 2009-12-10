@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.2.0.ebuild,v 1.1 2009/08/02 14:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.2.0-r1.ebuild,v 1.1 2009/12/10 17:28:00 flameeyes Exp $
 
 EAPI=2
 
@@ -22,4 +22,8 @@ DEPEND="${RDEPEND}"
 
 src_configure() {
 	econf $(use_enable nsplugin plugin)
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
 }

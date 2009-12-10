@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-viewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.4 2009/08/02 14:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.5 2009/12/10 17:28:00 flameeyes Exp $
+
+*virt-viewer-0.2.0-r1 (10 Dec 2009)
+
+  10 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -virt-viewer-0.2.0.ebuild, +virt-viewer-0.2.0-r1.ebuild:
+  Revision bump, create src_install so that the package actually installs
+  something.
 
 *virt-viewer-0.2.0 (02 Aug 2009)
 
