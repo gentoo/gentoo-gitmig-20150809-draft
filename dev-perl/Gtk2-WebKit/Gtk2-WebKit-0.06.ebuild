@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/Gtk2-WebKit-0.06.ebuild,v 1.1 2009/08/25 17:45:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/Gtk2-WebKit-0.06.ebuild,v 1.2 2009/12/10 20:06:17 armin76 Exp $
 
 MODULE_AUTHOR=FLORA
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Web content engine library for Gtk2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
