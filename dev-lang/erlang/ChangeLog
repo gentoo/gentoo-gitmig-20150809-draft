@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.174 2009/12/06 15:22:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.175 2009/12/10 21:58:07 fauli Exp $
+
+*erlang-13.2.3 (10 Dec 2009)
+
+  10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  +erlang-13.2.3.ebuild:
+  version bump, bug 295320; install man pages even if USE=doc is not set,
+  bug 296346 by Priit Laes <plaes AT plaes DOT org>
 
   06 Dec 2009; Tobias Klausmann <klausman@gentoo.org> erlang-13.2.2.ebuild:
   Stable on alpha, bug #291742
