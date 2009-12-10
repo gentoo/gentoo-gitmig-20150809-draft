@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.28 2009/10/14 21:18:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.29 2009/12/10 18:02:32 ssuominen Exp $
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  pavucontrol-0.9.4.ebuild, pavucontrol-0.9.5.ebuild,
+  pavucontrol-0.9.8-r1.ebuild, pavucontrol-0.9.9.ebuild,
+  pavucontrol-0.9.10.ebuild:
+  Raise libsigc++ depend to >= 2.2 wrt #296406.
 
 *pavucontrol-0.9.10 (14 Oct 2009)
 

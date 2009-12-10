@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.6.ebuild,v 1.8 2008/05/03 13:24:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.6.ebuild,v 1.9 2009/12/10 18:00:49 ssuominen Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="nls"
 RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/libglademm-2.4
 	>=dev-cpp/gconfmm-2.6
-	>=dev-libs/libsigc++-2
+	>=dev-libs/libsigc++-2.2
 	>=media-sound/pulseaudio-0.9.5
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}
