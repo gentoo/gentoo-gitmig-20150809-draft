@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.45 2009/11/13 19:19:01 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.46 2009/12/10 08:05:10 zmedico Exp $
+
+  10 Dec 2009; Zac Medico <zmedico@gentoo.org> linuxwacom-0.8.2.ebuild,
+  linuxwacom-0.8.3_p6.ebuild, linuxwacom-0.8.4_p1.ebuild:
+  Bug #296216 - Move blockers to RDEPEND so they work for binary and
+  installed packages.
 
   13 Nov 2009; Rémi Cardona <remi@gentoo.org> linuxwacom-0.8.2.ebuild,
   linuxwacom-0.8.3_p6.ebuild, linuxwacom-0.8.4_p1.ebuild:
