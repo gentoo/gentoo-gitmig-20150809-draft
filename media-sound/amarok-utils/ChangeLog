@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/ChangeLog,v 1.9 2009/11/15 00:32:04 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/ChangeLog,v 1.10 2009/12/11 01:12:57 jmbsvicetto Exp $
+
+*amarok-utils-2.2.1-r1 (11 Dec 2009)
+
+  11 Dec 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-utils-2.2.1-r1.ebuild:
+  Added bindist use flag and fixed dep on media-libs/taglib accordingly.
 
   15 Nov 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   -amarok-utils-2.1.ebuild, -amarok-utils-2.1.1.ebuild:
