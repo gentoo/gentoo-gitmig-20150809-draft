@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.657 2009/12/10 06:17:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.658 2009/12/11 17:43:13 arfrever Exp $
+
+  11 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  portage-2.1.7.13.ebuild, portage-2.2_rc58.ebuild:
+  Use python_convert_shebangs() instead of manually calling sed.
 
 *portage-2.2_rc58 (10 Dec 2009)
 
