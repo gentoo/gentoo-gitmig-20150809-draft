@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.0_beta2.ebuild,v 1.1 2009/12/08 00:52:35 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.0.ebuild,v 1.1 2009/12/11 00:06:39 tgurr Exp $
 
 EAPI="2"
 

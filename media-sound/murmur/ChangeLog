@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.19 2009/12/08 00:49:05 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.20 2009/12/11 00:03:20 tgurr Exp $
+
+*murmur-1.2.0 (11 Dec 2009)
+
+  11 Dec 2009; Timo Gurr <tgurr@gentoo.org> -murmur-1.2.0_beta2.ebuild,
+  +murmur-1.2.0.ebuild:
+  Version bump, remove old.
 
 *murmur-1.2.0_beta2 (08 Dec 2009)
 
