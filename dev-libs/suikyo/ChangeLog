@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/suikyo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.35 2007/12/25 17:07:09 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.36 2009/12/11 14:43:45 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> suikyo-2.1.0-r1.ebuild:
+  Marking suikyo-2.1.0-r1 ppc64 for bug 296469
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931.
