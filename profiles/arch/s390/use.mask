@@ -18,6 +18,7 @@ jpeg2k
 libnl
 autotrace
 lqr
+libproxy
 
 # This file contains a list of useflags that cannot be used on s390.
 bluetooth
