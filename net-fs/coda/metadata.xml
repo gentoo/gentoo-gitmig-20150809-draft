@@ -2,4 +2,18 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-fs</herd>
+<use>
+	<flag name='client'>Build and install the client components of coda
+		filesystem. At least one of client or server should be enabled.</flag>
+	<flag name='coda_layout'>Use legacy filesystem layout instead of FHS
+		compliant one. Note: /coda symlink is installed unconditionally
+		when FHS layout is used. Therefore the /coda namespace is preserved
+		with either layout.</flag>
+	<flag name='coda_symlinks'>Install legacy symlinks when FHS layout has been
+		selected (-coda_layout). You should only need this if you use local
+		scripts or 3rd party apps relying on precise layout. Note: /coda symlink
+		is installed unconditionally, so the namespace is preserved in any case.</flag>
+	<flag name='server'>Build and install the server components of coda
+		filesystem. Note: at least one of client/server flags must be enabled.</flag>
+</use>
 </pkgmetadata>

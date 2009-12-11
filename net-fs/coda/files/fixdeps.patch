@@ -1,0 +1,17 @@
+diff -Nuar coda-6.9.3.old/coda-src/auth2/Makefile.am coda-6.9.3/coda-src/auth2/Makefile.am
+--- coda-6.9.3.old/coda-src/auth2/Makefile.am	2007-12-17 09:20:25.000000000 -0800
++++ coda-6.9.3/coda-src/auth2/Makefile.am	2008-07-06 14:10:10.000000000 -0700
+@@ -20,11 +20,11 @@
+ if WANT_KERBEROS
+ if WANT_KRB4
+ KRBSRC += krb4.c
+-LIBKRB += $(LIBKRB4)
++LIBKRB += $(LIBKRB4) ../util/libutil.la
+ endif
+ if WANT_KRB5
+ KRBSRC += krb5.c
+-LIBKRB += $(LIBKRB5)
++LIBKRB += $(LIBKRB5) ../util/libutil.la
+ endif
+ KRBSRC += krbcommon.c krbcommon.h
+ endif

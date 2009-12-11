@@ -1,0 +1,27 @@
+diff -ruaN coda-6.9.3.old/coda-src/scripts/Makefile.am coda-6.9.3/coda-src/scripts/Makefile.am
+--- coda-6.9.3.old/coda-src/scripts/Makefile.am	2007-12-11 12:06:17.000000000 -0800
++++ coda-6.9.3/coda-src/scripts/Makefile.am	2008-07-06 22:44:57.000000000 -0700
+@@ -9,9 +9,7 @@
+ sbin_SCRIPTS += venus-setup
+ dist_sbin_SCRIPTS += volmunge
+ dist_man_MANS += venus-setup.8 volmunge.8
+-if SYSVINIT
+-init_SCRIPTS += venus.init
+-endif
++init_SCRIPTS += venus
+ endif
+ if BUILD_SERVER
+ sbin_SCRIPTS += bldvldb.sh createvol_rep purgevol_rep startserver vice-setup \
+@@ -21,11 +19,7 @@
+ 		     vice-setup-srvdir vice-setup-user
+ dist_man_MANS += bldvldb.sh.8 createvol_rep.8 maxgroupid.5 purgevol_rep.8 \
+ 		 startserver.8 vice-setup.8 volumelist.5
+-if SYSVINIT
+-dist_init_SCRIPTS += auth2.init codasrv.init update.init
+-else
+-init_SCRIPTS += rc.vice
+-endif
++init_SCRIPTS += codasrv
+ endif
+ EXTRA_DIST = findparents.sh volinfo.pl volsizes.pl
+ CLEANFILES = $(sbin_SCRIPTS) $(init_SCRIPTS)

@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/coda
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.32 2008/07/12 22:31:40 chtekk Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.33 2009/12/11 13:41:55 george Exp $
+
+*coda-6.9.4 (11 Dec 2009)
+
+  11 Dec 2009; George Shapovalov <george@gentoo.org> +coda-6.9.4.ebuild,
+  +files/fixdeps.patch, +files/gentoo-init.patch, +files/scripts.tar.bz2:
+  added new major version, heavily reworked. See bugs #193012 and #144234
+  fore related info/discussions. Also fixes #281029
 
   12 Jul 2008; Luca Longinotti <chtekk@gentoo.org> +files/6.0.15/auth2,
   +files/6.0.15/coda-update, +files/6.0.15/codasrv, -files/auth2,
