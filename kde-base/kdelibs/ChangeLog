@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.655 2009/12/10 23:03:32 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.656 2009/12/11 17:10:28 scarabeus Exp $
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdelibs-4.3.3-r2.ebuild:
+  Drop no-longer required ebuild.
 
   10 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   -files/kdelibs-4.3.1-crash-on-konqueror-tabs.patch,

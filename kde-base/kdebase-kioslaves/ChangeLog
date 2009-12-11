@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.177 2009/12/10 19:57:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.178 2009/12/11 17:08:43 scarabeus Exp $
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdebase-kioslaves-4.3.3-r1.ebuild:
+  Drop no-longer required ebuild.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdebase-kioslaves-4.3.1.ebuild:
