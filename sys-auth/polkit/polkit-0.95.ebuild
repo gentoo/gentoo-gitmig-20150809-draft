@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.95.ebuild,v 1.1 2009/11/14 16:16:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.95.ebuild,v 1.2 2009/12/11 17:25:46 nirbheek Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.36
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.10 )"
+PDEPEND=">=sys-auth/consolekit-0.4[policykit]"
 
 pkg_setup() {
 	enewgroup polkituser
