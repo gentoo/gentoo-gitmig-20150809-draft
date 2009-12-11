@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/zc-buildout-1.4.1.ebuild,v 1.1 2009/10/10 17:03:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zc-buildout/zc-buildout-1.4.3.ebuild,v 1.1 2009/12/11 01:55:25 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
