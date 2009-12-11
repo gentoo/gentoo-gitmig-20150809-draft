@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mr/ChangeLog,v 1.5 2009/12/09 13:14:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mr/ChangeLog,v 1.6 2009/12/11 05:49:58 tove Exp $
+
+*mr-0.46 (11 Dec 2009)
+
+  11 Dec 2009; Torsten Veller <tove@gentoo.org> +mr-0.46.ebuild:
+  Version bump
 
 *mr-0.45 (09 Dec 2009)
 
