@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.1 2009/12/11 10:19:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.2 2009/12/11 18:50:54 arfrever Exp $
 
 EAPI="2"
 
@@ -73,7 +73,7 @@ src_prepare() {
 		qconf || die "Failed to create ./configure."
 	else
 		if use webkit; then
-			ewarn "Webkit support disabled as it is only availalable in Psi+"
+			ewarn "Webkit support disabled as it is only available in Psi+"
 			ewarn "(USE='extras' enabled)."
 		fi
 	fi
