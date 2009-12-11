@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.33 2009/12/04 16:15:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.34 2009/12/11 14:56:50 armin76 Exp $
+
+  11 Dec 2009; Raúl Porcel <armin76@gentoo.org> phonon-4.3.1.ebuild:
+  sparc stable
 
 *phonon-4.3.50_pre20090520 (04 Dec 2009)
 
