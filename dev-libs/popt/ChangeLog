@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.77 2009/12/10 22:46:34 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.78 2009/12/11 14:41:18 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> popt-1.15.ebuild:
+  Marking popt-1.15 ppc64 for bug 296420
 
   10 Dec 2009; Tiago Cunha <tcunha@gentoo.org> popt-1.15.ebuild:
   stable sparc, bug 296420
