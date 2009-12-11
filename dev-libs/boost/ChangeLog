@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.180 2009/12/10 21:36:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.181 2009/12/11 18:27:54 djc Exp $
+
+  11 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> -boost-1.40.0.ebuild,
+  -files/remove-toolset-1.40.0.patch, -boost-1.41.0.ebuild:
+  Remove masked 1.40.0 and old 1.41.0 (superseded by -r1).
 
   10 Dec 2009; Alexis Ballier <aballier@gentoo.org> boost-1.41.0-r1.ebuild:
   keyword ~x86-fbsd
