@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.7 2009/09/29 21:51:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.8 2009/12/11 21:02:29 robbat2 Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -35,15 +35,21 @@ DEPEND="dev-util/mercurial"
 # between several ebuilds.
 [[ -z "${EHG_PROJECT}" ]] && EHG_PROJECT="${PN}"
 
+# @ECLASS-VARIABLE: EHG_QUIET
+# @DESCRIPTION:
+# Suppress some extra noise from mercurial, set it to 'OFF' to be louder.
+: ${EHG_QUIET:="ON"}
+[[ "${EHG_QUIET}" == "ON" ]] && EHG_QUIET_CMD_OPT="--quiet"
+
 # @ECLASS-VARIABLE: EHG_CLONE_CMD
 # @DESCRIPTION:
 # Command used to perform initial repository clone.
-[[ -z "${EHG_CLONE_CMD}" ]] && EHG_CLONE_CMD="hg clone --quiet --pull --noupdate"
+[[ -z "${EHG_CLONE_CMD}" ]] && EHG_CLONE_CMD="hg clone ${EHG_QUIET_CMD_OPT} --pull --noupdate"
 
 # @ECLASS-VARIABLE: EHG_PULL_CMD
 # @DESCRIPTION:
 # Command used to update repository.
-[[ -z "${EHG_PULL_CMD}" ]] && EHG_PULL_CMD="hg pull --quiet"
+[[ -z "${EHG_PULL_CMD}" ]] && EHG_PULL_CMD="hg pull ${EHG_QUIET_CMD_OPT}"
 
 # @ECLASS-VARIABLE: EHG_OFFLINE
 # @DESCRIPTION:
@@ -104,7 +110,7 @@ function mercurial_fetch {
 	# Checkout working copy:
 	einfo "Creating working directory in ${WORKDIR}/${module} (revision: ${EHG_REVISION})"
 	hg clone \
-		--quiet \
+		${EHG_QUIET_CMD_OPT} \
 		--rev="${EHG_REVISION}" \
 		"${hg_src_dir}/${EHG_PROJECT}/${module}" \
 		"${WORKDIR}/${module}" || die "hg clone failed"
