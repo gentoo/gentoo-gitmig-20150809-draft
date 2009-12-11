@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.2.ebuild,v 1.6 2009/12/06 15:22:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.2.ebuild,v 1.7 2009/12/11 14:54:33 ranger Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -29,7 +29,7 @@ SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc emacs hipe java kpoll odbc smp sctp ssl tk wxwindows"
 
 RDEPEND=">=dev-lang/perl-5.6.1
