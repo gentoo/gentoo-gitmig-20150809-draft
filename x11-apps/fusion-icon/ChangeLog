@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/fusion-icon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.4 2009/06/06 14:58:59 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.5 2009/12/11 17:23:07 scarabeus Exp $
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -fusion-icon-0.1.ebuild:
+  Drop no-longer required ebuild.
 
 *fusion-icon-0.1-r1 (06 Jun 2009)
 

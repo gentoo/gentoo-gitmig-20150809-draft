@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/ccsm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.15 2009/10/15 17:40:21 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.16 2009/12/11 17:24:27 scarabeus Exp $
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -ccsm-0.6.0.ebuild,
+  -ccsm-0.8.2.ebuild:
+  Drop no-longer required ebuild.
 
 *ccsm-0.8.4 (15 Oct 2009)
 
