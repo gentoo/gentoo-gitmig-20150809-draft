@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.350 2009/12/10 20:41:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.351 2009/12/11 15:54:33 tcunha Exp $
+
+  11 Dec 2009; Tiago Cunha <tcunha@gentoo.org> emacs-22.3-r3.ebuild:
+  stable sparc, bug 296159
 
   10 Dec 2009; Markus Meier <maekke@gentoo.org> emacs-22.3-r3.ebuild,
   emacs-23.1-r2.ebuild:
