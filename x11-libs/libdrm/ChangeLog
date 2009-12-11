@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.92 2009/12/11 09:50:22 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.93 2009/12/11 10:32:52 remi Exp $
+
+  11 Dec 2009; Rémi Cardona <remi@gentoo.org>
+  +files/2.4.15-0001-configure-Conditionally-build-libdrm_intel.patch,
+  libdrm-2.4.15.ebuild,
+  +files/2.4.15-0002-configure-Typo-in-error-message.patch,
+  +files/2.4.15-0003-intel-Fallback-to-atomic-ops.h-libatomic-ops-dev.patch:
+  fix build on !intel arches wrt atomic ops (see bug #296482)
 
   11 Dec 2009; Rémi Cardona <remi@gentoo.org> -libdrm-2.4.11.ebuild,
   -libdrm-2.4.12.ebuild, -libdrm-2.4.14.ebuild:
