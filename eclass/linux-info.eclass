@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.73 2009/10/11 11:48:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.74 2009/12/11 20:42:51 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -237,7 +237,7 @@ linux_config_src_exists() {
 # @DESCRIPTION:
 # It returns true if .config exists in /proc, otherwise false
 linux_config_bin_exists() {
-	[ -s "/proc/config.gz" ]
+	[ -n "${I_KNOW_WHAT_I_AM_DOING}" -a -s "/proc/config.gz" ]
 }
 
 # @FUNCTION: linux_config_exists
