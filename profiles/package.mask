@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10955 2009/12/10 20:08:01 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10956 2009/12/11 13:14:41 george Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# George Shapovalov <george@gentoo.org> (11 Dec 2009)
+# Initial testing of major update. Masked as core (filesystem) component
+# for 2 week testing.
+=net-fs/coda-6.9.4
 
 # Ulrich Mueller <ulm@gentoo.org> (09 Dec 2009)
 # Emacs live CVS ebuild. Use at your own risk.
