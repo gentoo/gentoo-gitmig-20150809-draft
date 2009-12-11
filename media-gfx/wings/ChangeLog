@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.28 2009/11/25 11:21:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.29 2009/12/11 19:53:28 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> wings-1.1.1.ebuild:
+  Marking wings-1.1.1 ppc64 for bug 284691
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> wings-1.1.1.ebuild:
   amd64 stable, bug #284691
