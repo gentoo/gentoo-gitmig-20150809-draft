@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r4.ebuild,v 1.1 2009/12/09 09:01:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r4.ebuild,v 1.2 2009/12/11 20:35:13 vapier Exp $
 
 inherit eutils
 
@@ -19,12 +19,6 @@ DEPEND="dev-lang/perl
 	sys-devel/gnuconfig"
 
 src_unpack() {
-eshopts_push -o noglob
-eshopts_push -o notify
-eshopts_pop
-eshopts_push -o notify
-eshopts_pop
-eshopts_pop
 	unpack ${A}
 	cd "${S}"
 	sed -i \
