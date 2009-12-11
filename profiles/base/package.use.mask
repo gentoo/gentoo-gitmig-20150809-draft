@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.109 2009/12/03 13:31:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.110 2009/12/11 15:07:21 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -189,3 +189,7 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2009)
 # Remove this once emul- linux has dropped the useless arts support.
 app-emulation/emul-linux-x86-soundlibs -arts
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2009)
+# Masked for QA, bugs #268134 and #296505.
+net-im/licq kde qt4
