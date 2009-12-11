@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.147 2009/11/19 08:02:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.148 2009/12/11 14:39:13 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> bugzilla-3.2.5.ebuild:
+  Marking bugzilla-3.2.5 ppc64 for bug 284824
 
   19 Nov 2009; Torsten Veller <tove@gentoo.org> bugzilla-3.0.5.ebuild,
   bugzilla-3.0.8.ebuild, bugzilla-3.0.10.ebuild, bugzilla-3.2.4.ebuild,
