@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.35 2009/12/10 23:59:28 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.36 2009/12/11 14:42:28 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> help2man-1.36.4-r1.ebuild:
+  Marking help2man-1.36.4-r1 ppc64 for bug 296432
 
   11 Dec 2009; Tiago Cunha <tcunha@gentoo.org> help2man-1.36.4-r1.ebuild:
   stable sparc, bug 296432
