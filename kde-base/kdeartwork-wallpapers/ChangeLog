@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-wallpapers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.129 2009/12/10 14:46:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.130 2009/12/10 19:52:23 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdeartwork-wallpapers-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   kdeartwork-wallpapers-4.3.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.49 2009/12/10 15:05:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.50 2009/12/10 20:15:05 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kde-l10n-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   kde-l10n-4.3.3.ebuild:

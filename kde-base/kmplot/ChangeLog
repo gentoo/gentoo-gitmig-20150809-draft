@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.139 2009/12/10 16:06:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.140 2009/12/10 21:39:07 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kmplot-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kmplot-4.3.3.ebuild:
   x86 stable, bug 292455

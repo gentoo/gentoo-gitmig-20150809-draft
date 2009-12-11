@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.107 2009/12/10 16:27:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.108 2009/12/10 22:08:54 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kpilot-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kpilot-4.3.3.ebuild:
   x86 stable, bug 292455

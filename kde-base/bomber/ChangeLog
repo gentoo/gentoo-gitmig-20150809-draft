@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bomber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.29 2009/12/10 13:55:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.30 2009/12/10 19:00:19 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -bomber-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> bomber-4.3.3.ebuild:
   x86 stable, bug 292455

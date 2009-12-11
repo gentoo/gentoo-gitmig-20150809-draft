@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.135 2009/12/10 16:37:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.136 2009/12/10 22:22:21 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -ksame-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> ksame-4.3.3.ebuild:
   x86 stable, bug 292455

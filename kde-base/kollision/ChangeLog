@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kollision
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.32 2009/12/10 16:13:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.33 2009/12/10 21:49:35 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kollision-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   kollision-4.3.3.ebuild:

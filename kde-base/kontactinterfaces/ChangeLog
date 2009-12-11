@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontactinterfaces
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontactinterfaces/ChangeLog,v 1.35 2009/12/10 16:22:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontactinterfaces/ChangeLog,v 1.36 2009/12/10 21:59:59 scarabeus Exp $
+
+  10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kontactinterfaces-4.3.1.ebuild:
+  Drop KDE SC-4.3.1.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   kontactinterfaces-4.3.3.ebuild:
