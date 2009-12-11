@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.190 2009/12/10 21:30:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.191 2009/12/10 23:05:07 abcd Exp $
+
+  10 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/kmail-4.3.1-fix-rename-folder-on-disconnected-IMAP.patch:
+  Drop old patch
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kmail-4.3.1-r1.ebuild:
