@@ -11,9 +11,6 @@ networkmanager
 
 hardened
 
-# dmidecode bios decoder
-dmi
-
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
@@ -43,6 +40,7 @@ fusion
 # Stuff that doesn't make sense on this arch
 3dfx
 dell
+dmi
 laptop
 
 # havent tested yet
@@ -82,6 +80,7 @@ libmms
 sid
 autotrace
 lqr
+musepack
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
