@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.118 2009/12/07 18:28:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.119 2009/12/11 15:05:01 ssuominen Exp $
+
+  11 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask net-im/licq[kde,qt4] wrt bugs #268134 and #296505.
 
   07 Dec 2009; Alex Legler <a3li@gentoo.org> use.mask:
   use.mask ruby_targets_ruby19 and ruby_targets_ree18
