@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.24 2009/12/05 21:22:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.25 2009/12/11 01:34:12 arfrever Exp $
+
+  11 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  snakeoil-0.3.3.ebuild:
+  Install for Python 3 (bug #295340).
 
   05 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   snakeoil-0.3.2.ebuild, snakeoil-0.3.3.ebuild:
