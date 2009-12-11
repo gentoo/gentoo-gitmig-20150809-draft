@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.6.20.1.ebuild,v 1.2 2009/12/07 10:30:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.6.20.1.ebuild,v 1.3 2009/12/11 01:10:54 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils versionator
+inherit distutils eutils versionator
 
 MY_PV="$(replace_version_separator 3 -r)"
 
@@ -23,6 +23,12 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+src_prepare() {
+	distutils_src_prepare
+
+	epatch "${FILESDIR}/${P}-fix_tests.patch"
+}
 
 src_compile() {
 	distutils_src_compile --omit=LOAD_EXTENSION
