@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.88.ebuild,v 1.15 2009/11/18 14:44:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.88.ebuild,v 1.16 2009/12/11 14:56:05 armin76 Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/stable/${MY_PN}/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/qt-core:4"
