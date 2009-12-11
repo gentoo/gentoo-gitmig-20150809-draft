@@ -1,32 +1,30 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.0.2.ebuild,v 1.1 2009/10/25 15:15:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.1.1.ebuild,v 1.1 2009/12/11 17:22:15 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
+KDE_LINGUAS="ar be bg ca cs da de el en_GB eo es et fi fr ga gl hi hne is it ja
+km lt nb nds nl nn pa pl pt pt_BR ro se sk sv tr uk vi zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDE Photo Album is a tool for indexing, searching, and viewing images."
 HOMEPAGE="http://www.kphotoalbum.org/"
-SRC_URI="http://www.${PN}.org/data/download/${P}.tar.bz2"
+SRC_URI="http://www.kphotoalbum.org/data/download/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 FDL-1.2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="debug +exif +geolocation +kipi +raw +semantic-desktop"
 
-DEPEND="
-	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]
+DEPEND=">=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]
 	media-libs/jpeg
 	>=x11-libs/qt-sql-4.4:4[sqlite]
 	exif? ( >=media-gfx/exiv2-0.17 )
 	geolocation? ( >=kde-base/marble-${KDE_MINIMAL} )
 	kipi? ( >=kde-base/libkipi-${KDE_MINIMAL} )
-	raw? ( >=kde-base/libkdcraw-${KDE_MINIMAL} )
-"
+	raw? ( >=kde-base/libkdcraw-${KDE_MINIMAL} )"
 RDEPEND="${DEPEND}
-	semantic-desktop? ( >=kde-base/nepomuk-${KDE_MINIMAL} )
-"
+	semantic-desktop? ( >=kde-base/nepomuk-${KDE_MINIMAL} )"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
@@ -39,3 +37,5 @@ src_configure() {
 
 	kde4-base_src_configure
 }
+
+DOCS="ChangeLog README TODO"
