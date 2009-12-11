@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.75 2009/12/11 20:54:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.76 2009/12/11 21:33:30 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -232,10 +232,10 @@ getfilevar_noexec() {
 _LINUX_CONFIG_EXISTS_DONE=
 
 linux_config_qa_check() {
-	local funcname="$1"
+	local f="$1"
 	if [ -z "${_LINUX_CONFIG_EXISTS_DONE}" ]; then
-		ewarn "QA: You called $1 before any linux_config_exists!"
-		ewarn "QA: The return value of $1 will NOT gaurenteed later!"
+		ewarn "QA: You called $f before any linux_config_exists!"
+		ewarn "QA: The return value of $f will NOT gaurenteed later!"
 	fi
 }
 
@@ -290,7 +290,7 @@ require_configured_kernel() {
 # If linux_config_exists returns false, the results of this are UNDEFINED. You
 # MUST call linux_config_exists first.
 linux_chkconfig_present() {
-	linux_config_qa_check
+	linux_config_qa_check linux_chkconfig_present
 	local	RESULT
 	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
@@ -308,7 +308,7 @@ linux_chkconfig_present() {
 # If linux_config_exists returns false, the results of this are UNDEFINED. You
 # MUST call linux_config_exists first.
 linux_chkconfig_module() {
-	linux_config_qa_check
+	linux_config_qa_check linux_chkconfig_module
 	local	RESULT
 	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
@@ -326,7 +326,7 @@ linux_chkconfig_module() {
 # If linux_config_exists returns false, the results of this are UNDEFINED. You
 # MUST call linux_config_exists first.
 linux_chkconfig_builtin() {
-	linux_config_qa_check
+	linux_config_qa_check linux_chkconfig_builtin
 	local	RESULT
 	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
@@ -344,7 +344,7 @@ linux_chkconfig_builtin() {
 # If linux_config_exists returns false, the results of this are UNDEFINED. You
 # MUST call linux_config_exists first.
 linux_chkconfig_string() {
-	linux_config_qa_check
+	linux_config_qa_check linux_chkconfig_string
 	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
 	config="${KV_OUT_DIR}/.config"
