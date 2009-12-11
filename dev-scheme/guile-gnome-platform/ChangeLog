@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-gnome-platform
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.8 2009/12/10 18:03:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.9 2009/12/11 22:02:53 ulm Exp $
+
+  11 Dec 2009; Ulrich Mueller <ulm@gentoo.org>
+  guile-gnome-platform-2.16.1.ebuild:
+  Doesn't build with parallel make, bug 288235.
 
   10 Dec 2009; Ulrich Mueller <ulm@gentoo.org>
   +files/2.16.1-conflicting-types.patch, guile-gnome-platform-2.16.1.ebuild:

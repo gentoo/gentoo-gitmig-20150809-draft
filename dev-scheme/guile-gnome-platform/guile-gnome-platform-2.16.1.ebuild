@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.4 2009/12/10 18:03:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.5 2009/12/11 22:02:53 ulm Exp $
 
 inherit eutils multilib
 
@@ -42,12 +42,12 @@ src_unpack() {
 
 src_compile() {
 	econf --disable-Werror
-	emake guilegnomedir=/usr/share/guile/site \
+	emake -j1 guilegnomedir=/usr/share/guile/site \
 		guilegnomelibdir=/usr/$(get_libdir) || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" \
+	emake -j1 DESTDIR="${D}" \
 		guilegnomedir=/usr/share/guile/site \
 		guilegnomelibdir=/usr/$(get_libdir) \
 		install || die "emake install failed."
