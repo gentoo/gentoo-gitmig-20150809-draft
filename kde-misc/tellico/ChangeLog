@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.86 2009/11/21 10:55:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.87 2009/12/11 17:12:59 scarabeus Exp $
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -tellico-2.0.ebuild:
+  Drop no-longer required ebuild.
 
 *tellico-2.1.1 (21 Nov 2009)
 
