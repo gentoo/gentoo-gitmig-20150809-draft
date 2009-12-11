@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/devicekit-power
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.5 2009/11/16 21:57:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.6 2009/12/11 19:12:05 nirbheek Exp $
+
+*devicekit-power-013 (11 Dec 2009)
+
+  11 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +devicekit-power-013.ebuild:
+  Bump to 013; NEWS says this is the last release since the project has been
+  renamed to 'upower'
 
 *devicekit-power-012-r1 (16 Nov 2009)
 
