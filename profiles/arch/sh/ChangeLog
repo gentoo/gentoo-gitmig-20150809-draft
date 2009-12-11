@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.40 2009/12/11 15:49:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.41 2009/12/11 15:55:44 armin76 Exp $
 
   11 Dec 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask musepack
+  Use.mask musepack, authdaemond
 
   21 Nov 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask bluetooth
