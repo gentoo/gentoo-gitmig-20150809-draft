@@ -1,6 +1,10 @@
 B1;1704;0c# ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.45 2009/12/03 21:12:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.46 2009/12/11 23:03:51 bicatali Exp $
+
+  11 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/hdf5-1.8.3-destdir.patch, hdf5-1.8.4-r1.ebuild:
+  Removed destdir patch, now done with sed's. This also solves bug #286492
 
 *hdf5-1.8.4-r1 (03 Dec 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.1 2009/12/03 21:12:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.2 2009/12/11 23:03:51 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -43,14 +43,16 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.3-as-needed.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3-includes.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3-noreturn.patch
-	epatch "${FILESDIR}"/${PN}-1.8.3-destdir.patch
 	epatch "${FILESDIR}"/${P}-gnutools.patch
 	epatch "${FILESDIR}"/${P}-scaleoffset.patch
 
-	# gentoo examples directory
+	# respect gentoo examples directory
 	sed -i \
-		-e 's:$(docdir)/hdf5:$(docdir):' \
+		-e 's:$(docdir)/hdf5:$(DESTDIR)/$(docdir):' \
 		$(find . -name Makefile.am) || die
+	sed -i \
+		-e '/docdir/d' \
+		config/commence.am || die
 	eautoreconf
 	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in \
