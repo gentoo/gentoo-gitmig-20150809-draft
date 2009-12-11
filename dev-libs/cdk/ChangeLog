@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.60 2009/12/09 19:13:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.61 2009/12/11 19:59:07 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> cdk-5.0.20081105.ebuild:
+  Marking cdk-5.0.20081105 ppc64 for bug 287511
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> cdk-5.0.20081105.ebuild:
   ppc stable #287511
