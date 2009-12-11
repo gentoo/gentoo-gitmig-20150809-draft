@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.37 2009/12/03 21:51:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.38 2009/12/11 14:27:40 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -16,7 +16,6 @@ musepack
 # Raúl Porcel <armin76@gentoo.org>
 # Stuff that sigbuses
 libburn
-webkit
 # bug #266193
 srtp
 # bug #290154
