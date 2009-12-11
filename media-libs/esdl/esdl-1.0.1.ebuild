@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-1.0.1.ebuild,v 1.4 2009/09/27 18:15:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-1.0.1.ebuild,v 1.5 2009/12/11 14:55:39 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/esdl/${P}.src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ppc ppc64 x86"
 IUSE="image truetype"
 
 RDEPEND=">=dev-lang/erlang-12b

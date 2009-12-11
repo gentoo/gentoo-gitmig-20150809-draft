@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/esdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.23 2009/09/28 21:52:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.24 2009/12/11 14:55:39 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> esdl-1.0.1.ebuild:
+  Marking esdl-1.0.1 ppc64 for bug 284691
 
   28 Sep 2009; Markus Meier <maekke@gentoo.org> -esdl-0.96.0626.ebuild:
   old
