@@ -1,6 +1,9 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.11 2009/12/09 08:02:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.12 2009/12/12 10:06:32 wired Exp $
+
+  12 Dec 2009; Alex Alexander <wired@gentoo.org> uzbl-9999.ebuild:
+  allow user set EGIT_REPO_URI
 
   09 Dec 2009; Alex Alexander <wired@gentoo.org>
   uzbl-0_pre20091130-r1.ebuild, uzbl-9999.ebuild:
