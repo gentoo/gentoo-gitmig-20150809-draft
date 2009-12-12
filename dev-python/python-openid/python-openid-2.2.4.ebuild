@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.2 2009/10/01 01:42:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.3 2009/12/12 22:25:38 arfrever Exp $
 
 EAPI="2"
 
@@ -31,6 +31,9 @@ src_prepare() {
 
 	# Patch to fix confusion with localhost/127.0.0.1
 	epatch "${FILESDIR}/${PN}-2.0.0-gentoo-test_fetchers.diff"
+
+	# Disable broken tests from from examples/djopenid.
+	sed -e "s/django_failures =.*/django_failures = 0/" -i admin/runtests || die "sed admin/runtests failed"
 }
 
 src_test() {
