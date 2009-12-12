@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.48 2009/09/18 12:52:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.49 2009/12/12 13:15:12 nelchael Exp $
+
+*mod_caucho-3.1.9 (12 Dec 2009)
+
+  12 Dec 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +mod_caucho-3.1.9.ebuild:
+  Version bump.
 
   18 Sep 2009; Benedikt Böhm <hollow@gentoo.org> files/88_mod_caucho.conf,
   mod_caucho-3.0.25.ebuild, mod_caucho-3.1.8.ebuild,
