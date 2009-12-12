@@ -1,0 +1,11 @@
+# ChangeLog for app-laptop/batterymon
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.1 2009/12/12 10:44:25 idl0r Exp $
+
+*batterymon-1.2.0 (12 Dec 2009)
+
+  12 Dec 2009; Christian Ruppert <idl0r@gentoo.org>
+  +batterymon-1.2.0.ebuild, +files/batterymon-1.2.0-import.patch,
+  +metadata.xml:
+  Initial import of app-laptop/batterymon.
+

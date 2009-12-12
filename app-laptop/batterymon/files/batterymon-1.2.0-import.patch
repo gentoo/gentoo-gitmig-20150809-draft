@@ -1,0 +1,22 @@
+iff -up batterymon.orig/batterymon.py batterymon/batterymon.py
+--- batterymon.orig/batterymon.py	2009-05-01 13:14:37.000000000 +0200
++++ batterymon/batterymon.py	2009-12-12 11:16:23.307705992 +0100
+@@ -9,9 +9,14 @@ from optparse import OptionParser
+ import os,sys
+ 
+ ## code modules
+-from preferences import prefs
+-from logger import logger_init
+-from settings import config
++try:
++    from preferences import prefs
++    from logger import logger_init
++    from settings import config
++except ImportError:
++    from batterymon.preferences import prefs
++    from batterymon.logger import logger_init
++    from batterymon.settings import config
+ 
+ #{{{ Desktop notifications init
+ try:
+Common subdirectories: batterymon.orig/icons and batterymon/icons
