@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.92 2009/12/09 18:52:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.93 2009/12/12 03:25:39 arfrever Exp $
+
+*setuptools-0.6.8-r1 (12 Dec 2009)
+
+  12 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -setuptools-0.6.8.ebuild, +setuptools-0.6.8-r1.ebuild,
+  files/distribute-0.6.8-fix_tests.patch:
+  Fix a bug in a patch and rename 0.6.8 to 0.6.8-r1 without changes in the
+  ebuild.
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> setuptools-0.6.8.ebuild:
   ppc stable #295696
