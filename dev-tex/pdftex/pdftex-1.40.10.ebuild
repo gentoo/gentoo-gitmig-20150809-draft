@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.10.ebuild,v 1.1 2009/12/12 12:21:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.10.ebuild,v 1.2 2009/12/12 12:27:23 aballier Exp $
 
 inherit libtool toolchain-funcs eutils multilib
 
@@ -31,7 +31,10 @@ src_unpack() {
 }
 
 src_compile() {
-	#tc-export CC CXX AR RANLIB
+	# Too many regexps use A-Z a-z constructs, what causes problems with locales
+	# that don't have the same alphabetical order than ascii. Bug #293199
+	# So we set LC_ALL to C in order to avoid problems.
+	export LC_ALL=C
 
 	econf \
 		--disable-cxx-runtime-hack	\
