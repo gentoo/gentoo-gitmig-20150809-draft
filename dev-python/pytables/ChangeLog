@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.30 2009/09/04 18:41:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.31 2009/12/12 16:26:37 bicatali Exp $
+
+*pytables-2.1.2 (12 Dec 2009)
+
+  12 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> -pytables-0.8.ebuild,
+  -pytables-1.4.ebuild, -pytables-2.1.1.ebuild, +pytables-2.1.2.ebuild,
+  +files/pytables-2.1.2-failingtests.patch, metadata.xml:
+  Version bump. Disable failing tests due to bad reference HDF5 files
+  (reported upstream), thanks Kacper Kowalik. Removed old version, even x86
+  stable 0.8 because depending on Numeric/numarray which are buggy and
+  obsolete with python > 2.5
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pytables-2.0.2.ebuild,
   -pytables-2.0.3.ebuild, -pytables-2.1.ebuild:
