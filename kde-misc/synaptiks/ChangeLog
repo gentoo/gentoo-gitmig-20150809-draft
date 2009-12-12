@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.4 2009/12/11 17:15:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.5 2009/12/12 09:30:43 abcd Exp $
+
+  12 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/synaptiks-0.1.0-Xi.patch:
+  Drop old patch
 
   11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -synaptiks-0.1.0.ebuild, -synaptiks-0.1.0-r1.ebuild:
