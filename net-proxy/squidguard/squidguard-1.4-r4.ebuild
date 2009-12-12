@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.4-r4.ebuild,v 1.4 2009/12/09 18:59:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.4-r4.ebuild,v 1.5 2009/12/12 11:05:41 mrness Exp $
 
 WANT_AUTOMAKE=none
 EAPI="2"
@@ -23,6 +23,11 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 S="${WORKDIR}/squidGuard-${PV}"
+
+pkg_setup() {
+	enewgroup squid 31
+	enewuser squid 31 -1 /var/cache/squid squid
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"

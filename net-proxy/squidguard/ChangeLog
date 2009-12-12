@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.39 2009/12/09 18:59:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.40 2009/12/12 11:05:41 mrness Exp $
+
+  12 Dec 2009; Alin Năstac <mrness@gentoo.org> -squidguard-1.4-r1.ebuild,
+  -squidguard-1.4-r3.ebuild, squidguard-1.4-r4.ebuild:
+  Remove obsolete revisions. Create squid user & group (#296339).
 
   09 Dec 2009; Jeroen Roovers <jer@gentoo.org> squidguard-1.4-r4.ebuild:
   Stable for PPC (bug #290623).
