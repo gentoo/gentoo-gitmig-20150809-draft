@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.22 2009/07/04 18:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.23 2009/12/12 18:09:30 robbat2 Exp $
+
+  12 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  grub-static-0.97-r9.ebuild:
+  Bug #296537: Increase the warnings and catch where the user does not have
+  IA32_EMULATION set, by trying to run the binary.
 
   04 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
   grub-static-0.97-r9.ebuild:

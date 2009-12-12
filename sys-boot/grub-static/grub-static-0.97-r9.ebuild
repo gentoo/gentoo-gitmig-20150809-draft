@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r9.ebuild,v 1.5 2009/07/04 18:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r9.ebuild,v 1.6 2009/12/12 18:09:30 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -25,12 +25,28 @@ PROVIDE="virtual/bootloader"
 pkg_setup() {
 	local arch="$(tc-arch)"
 	case ${arch} in
-		amd64) CONFIG_CHECK='~IA32_EMULATION' check_extra_config ;;
+		amd64) 
+			CONFIG_CHECK='~IA32_EMULATION'
+			WARNING_IA32_EMULATION="You will NOT be able to run grub unless you have IA32_EMULATION set!"
+			check_extra_config 
+			;;
 	esac
 }
 
 src_install() {
 	cp -a "${WORKDIR}"/* "${D}"/
+	run_test_grub "${D}"/sbin/grub && einfo "New grub can run on your system, good!"
+}
+
+run_test_grub() {
+	local grub="$1"
+	local version="$(${grub} \
+		--read-only --no-pager --no-floppy --no-curses \
+		--no-config-file --batch --version)"
+	local error="grub test-run failed"
+	use amd64 && error="${error} Is IA32_EMULATION set?"
+	[ "${version/${PV}}" != "${version}" ] || die "${error}"
+	return 0
 }
 
 #
@@ -41,6 +57,8 @@ src_install() {
 setup_boot_dir() {
 	local boot_dir=$1
 	local dir=${boot_dir}
+
+	run_test_grub /sbin/grub
 
 	mkdir -p "${dir}"
 	[[ ! -L ${dir}/boot ]] && ln -s . "${dir}/boot"
@@ -95,18 +113,24 @@ setup_boot_dir() {
 	grub_config=${dir}/grub.conf.install
 	[[ -e ${grub_config} ]] || grub_config=${dir}/grub.conf
 	if [[ -e ${grub_config} ]] ; then
+		local tmp="${TMPDIR}/${P}-setup_boot_dir-$$"
 		egrep \
 			-v '^[[:space:]]*(#|$|default|fallback|initrd|password|splashimage|timeout|title)' \
-			"${grub_config}" | \
+			"${grub_config}" >"${tmp}"
+		# Do NOT fail here, only warn.
 		/sbin/grub --batch \
 			--device-map="${dir}"/device.map \
-			> /dev/null
+			>/dev/null <"${tmp}"
+		rc=$?
+		[[ $rc -ne 0 ]] && ewarn "Grub failed to run!"
 	fi
 
 	# the grub default commands silently piss themselves if
 	# the default file does not exist ahead of time
 	if [[ ! -e ${dir}/default ]] ; then
+		# This may fail, don't worry about it.
 		grub-set-default --root-directory="${boot_dir}" default
+		:
 	fi
 	einfo "Grub has been installed to ${boot_dir} successfully."
 }
