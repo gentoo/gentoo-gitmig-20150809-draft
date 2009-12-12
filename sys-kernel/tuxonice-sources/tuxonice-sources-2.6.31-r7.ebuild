@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.29-r4.ebuild,v 1.2 2009/11/03 19:58:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.31-r7.ebuild,v 1.1 2009/12/12 13:00:04 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -14,16 +14,23 @@ DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/ http://www.tuxonice.net"
 IUSE=""
 
-TUXONICE_VERSION="3.0.1"
-TUXONICE_TARGET="2.6.29"
-TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
+TUXONICE_SNAPSHOT=""
+TUXONICE_VERSION="3.0.99.41"
+TUXONICE_TARGET="2.6.31"
+
+if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then
+	TUXONICE_SRC="current-tuxonice-for-${TUXONICE_TARGET}.patch-${TUXONICE_SNAPSHOT}"
+else
+	TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
+fi
+
 TUXONICE_URI="http://www.tuxonice.net/downloads/all/${TUXONICE_SRC}.bz2"
 
 UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2"
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TUXONICE_URI}"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="${RDEPEND}
 		>=sys-apps/tuxonice-userui-1.0
