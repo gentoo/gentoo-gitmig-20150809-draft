@@ -1,0 +1,44 @@
+Index: src/texk/web2c/pdftexdir/pdftoepdf.cc
+===================================================================
+--- src.orig/texk/web2c/pdftexdir/pdftoepdf.cc
++++ src/texk/web2c/pdftexdir/pdftoepdf.cc
+@@ -650,7 +650,7 @@ static void writeEncodings()
+     }
+     for (r = encodingList; r != 0; r = n) {
+         n = r->next;
+-        delete r->font;
++        r->font->decRefCnt();
+         delete r;
+     }
+ }
+@@ -690,7 +690,7 @@ read_pdf_info(char *image_name, char *pa
+     Page *page;
+     int rotate;
+     PDFRectangle *pagebox;
+-    float pdf_version_found, pdf_version_wanted;
++    int minor_pdf_version_found, major_pdf_version_found;
+     // initialize
+     if (!isInit) {
+         globalParams = new GlobalParams();
+@@ -705,15 +705,15 @@ read_pdf_info(char *image_name, char *pa
+     // this works only for PDF 1.x -- but since any versions of PDF newer
+     // than 1.x will not be backwards compatible to PDF 1.x, pdfTeX will
+     // then have to changed drastically anyway.
+-    pdf_version_found = pdf_doc->doc->getPDFVersion();
+-    pdf_version_wanted = 1 + (minor_pdf_version_wanted * 0.1);
+-    if (pdf_version_found > pdf_version_wanted) {
++    minor_pdf_version_found = pdf_doc->doc->getPDFMinorVersion();
++    major_pdf_version_found = pdf_doc->doc->getPDFMajorVersion();
++    if (major_pdf_version_found > 1 || ((major_pdf_version_found == 1) && (minor_pdf_version_found > minor_pdf_version_wanted))) {
+         char msg[] =
+-            "PDF inclusion: found PDF version <%.1f>, but at most version <%.1f> allowed";
++            "PDF inclusion: found PDF version <%d.%d>, but at most version <1.%d> allowed";
+         if (pdf_inclusion_errorlevel > 0) {
+-            pdftex_fail(msg, pdf_version_found, pdf_version_wanted);
++            pdftex_fail(msg, major_pdf_version_found, minor_pdf_version_found, minor_pdf_version_wanted);
+         } else {
+-            pdftex_warn(msg, pdf_version_found, pdf_version_wanted);
++            pdftex_warn(msg, major_pdf_version_found, minor_pdf_version_found, minor_pdf_version_wanted);
+         }
+     }
+     epdf_num_pages = pdf_doc->doc->getCatalog()->getNumPages();
