@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-pdftex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.14 2009/11/06 21:37:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.15 2009/12/12 12:18:13 aballier Exp $
+
+*eselect-pdftex-0.3 (12 Dec 2009)
+
+  12 Dec 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/pdftex.eselect-0.3, +eselect-pdftex-0.3.ebuild:
+  Fixup fmtutil-sys call and maintainer in the eselect file
 
 *eselect-pdftex-0.2 (06 Nov 2009)
 
