@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/scratchbox2-2.0.ebuild,v 1.2 2009/11/22 22:49:53 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/scratchbox2-2.0-r1.ebuild,v 1.1 2009/12/12 09:36:19 ayoy Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND=">=dev-lang/lua-5.1.4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -26,6 +26,8 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	# bug 296552
+	epatch "${FILESDIR}/${P}-use-system-lua.patch"
 
 	sed -e "s/^\(CC = \).*/\1$(tc-getCC)/" \
 		-e "s/^\(CXX = \).*/\1$(tc-getCXX)/" \
@@ -40,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake prefix="${D}/usr" install || die "emake install failed"
 
 	# List all the multilib libdirs
 	local libdirs=
@@ -53,5 +55,5 @@ src_install() {
 	EOF
 	doenvd "${T}/55scratchbox2" || die "doenvd failed"
 
-	dodoc AUTHORS README || die "dodoc failed"
+	dodoc AUTHORS README TODO || die "dodoc failed"
 }
