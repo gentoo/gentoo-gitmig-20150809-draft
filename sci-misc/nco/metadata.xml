@@ -3,13 +3,13 @@
 <pkgmetadata>
 <herd>sci</herd>
 <longdescription lang="en">
-Command-line operators to analyze netCDF files
-NetCDF Operator is a suite of programs known as operators. The
-operators are stand-alone, command-line programs executable in a POSIX
-shell. Operators take one or more netCDF files as input, perform an
-operation (e.g., averaging or hyperslabbing), and produce a netCDF
-output file. NCO was originally designed to manipulate and analyze
-climate data, though it works on any netCDF format datasets.
+  Command-line operators to analyze netCDF files
+  NetCDF Operator is a suite of programs known as operators. The
+  operators are stand-alone, command-line programs executable in a POSIX
+  shell. Operators take one or more netCDF files as input, perform an
+  operation (e.g., averaging or hyperslabbing), and produce a netCDF
+  output file. NCO was originally designed to manipulate and analyze
+  climate data, though it works on any netCDF format datasets.
 </longdescription>
 <use>
   <flag name='ncap2'>Build next generation netcdf arithmetic processor

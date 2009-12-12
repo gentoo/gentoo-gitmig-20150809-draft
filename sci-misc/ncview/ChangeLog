@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/ncview
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.14 2008/08/06 18:29:54 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.15 2009/12/12 18:30:02 bicatali Exp $
+
+*ncview-1.93g (12 Dec 2009)
+
+  12 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> +ncview-1.93g.ebuild:
+  Version bump
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
