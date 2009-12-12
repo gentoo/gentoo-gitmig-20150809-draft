@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2f.ebuild,v 1.3 2009/07/20 02:03:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2h.ebuild,v 1.1 2009/12/12 03:49:59 arfrever Exp $
 
 EAPI="2"
 
@@ -13,8 +13,8 @@ SRC_URI="mirror://sourceforge/loop-aes/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="keyscrub padlock"
-KEYWORDS="amd64 ~hppa ~ppc x86"
+IUSE="extra-ciphers keyscrub padlock"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 
 RDEPEND=">=sys-apps/util-linux-2.12r"
 RDEPEND="|| ( ${RDEPEND}[crypt] ${RDEPEND}[loop-aes] )"
@@ -35,6 +35,14 @@ pkg_setup() {
 		USE_KBUILD=y MODINST=n RUNDM=n"
 	use keyscrub && BUILD_PARAMS="${BUILD_PARAMS} KEYSCRUB=y"
 	use padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
+
+	if use extra-ciphers; then
+		MODULE_NAMES="${MODULE_NAMES}
+			loop_blowfish(block::tmp-d-kbuild)
+			loop_serpent(block::tmp-d-kbuild)
+			loop_twofish(block::tmp-d-kbuild)"
+		BUILD_PARAMS="${BUILD_PARAMS} EXTRA_CIPHERS=y"
+	fi
 }
 
 src_install() {
