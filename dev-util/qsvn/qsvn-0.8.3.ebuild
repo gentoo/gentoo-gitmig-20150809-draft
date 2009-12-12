@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsvn/qsvn-0.8.3.ebuild,v 1.1 2009/08/04 12:50:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsvn/qsvn-0.8.3.ebuild,v 1.2 2009/12/12 14:40:35 ayoy Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="GUI frontend to the Subversion revision system"
 HOMEPAGE="http://www.anrichter.net/projects/qsvn/"
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 	x11-libs/qt-test"
 
 S=${WORKDIR}/${P}/src
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-tests.patch"
+}
 
 src_install() {
 	cmake-utils_src_install
