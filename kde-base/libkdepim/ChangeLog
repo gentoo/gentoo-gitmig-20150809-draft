@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.145 2009/12/10 23:17:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.146 2009/12/12 09:29:10 abcd Exp $
+
+  12 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/libkdepim-4.3.1-ldap_crash.diff:
+  Drop old patch
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libkdepim-4.3.1.ebuild, -libkdepim-4.3.1-r1.ebuild:
