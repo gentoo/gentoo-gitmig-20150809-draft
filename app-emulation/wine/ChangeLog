@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.286 2009/12/07 11:08:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.287 2009/12/12 16:20:25 vapier Exp $
+
+  12 Dec 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
+  wine-1.1.14.ebuild, wine-1.1.15.ebuild, wine-1.1.16.ebuild,
+  wine-1.1.17.ebuild, wine-1.1.18.ebuild, wine-1.1.19.ebuild,
+  wine-1.1.20.ebuild, wine-1.1.21.ebuild, wine-1.1.22.ebuild,
+  wine-1.1.23.ebuild, wine-1.1.24.ebuild, wine-1.1.25.ebuild,
+  wine-1.1.26.ebuild, wine-1.1.27.ebuild, wine-1.1.28.ebuild,
+  wine-1.1.29.ebuild, wine-1.1.30.ebuild, wine-1.1.31.ebuild,
+  wine-1.1.32.ebuild, wine-1.1.33.ebuild, wine-1.1.34.ebuild,
+  wine-9999.ebuild:
+  Move win64 gcc-4.4 check from DEPEND to src_unpack to avoid problems with
+  stable systems and people changing the version on the fly.
 
 *wine-1.1.34 (07 Dec 2009)
 
