@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.50 2009/12/05 08:59:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.51 2009/12/12 18:19:23 aballier Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc139
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image seamonkey shine shout skins speex sqlite sse stream
 	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vcdinfo vcdx vlm
-	vorbis win32codecs wma-fixed X x264 xcb xml xosd xv zvbi"
+	vorbis win32codecs wma-fixed x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		!!<=media-video/vlc-1.0.99999
@@ -113,6 +113,7 @@ RDEPEND="
 			!seamonkey? ( >=net-libs/xulrunner-1.8 )
 		)
 		ogg? ( media-libs/libogg )
+		opengl? ( virtual/opengl )
 		png? ( media-libs/libpng sys-libs/zlib )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
@@ -141,10 +142,6 @@ RDEPEND="
 		vcdinfo? ( >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
-		X? (
-			x11-libs/libX11
-			opengl? ( virtual/opengl x11-libs/libXext )
-		)
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( x11-libs/libxcb x11-libs/xcb-util )
 		xml? ( dev-libs/libxml2 )
@@ -342,7 +339,6 @@ src_configure() {
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
 		$(use_enable wma-fixed) \
-		$(use_enable X x11) $(use_enable X screen) \
 		$(use_enable x264) \
 		$(use_enable xcb) \
 		$(use_enable xml libxml2) \

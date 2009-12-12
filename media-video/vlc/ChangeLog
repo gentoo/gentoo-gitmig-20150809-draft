@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.536 2009/12/10 19:06:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.537 2009/12/12 18:19:23 aballier Exp $
+
+  12 Dec 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  remove X useflag, only xcb is available now, enable xcb by default
 
 *vlc-1.0.4 (10 Dec 2009)
 
