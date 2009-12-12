@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r9.ebuild,v 1.6 2009/12/12 18:09:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r9.ebuild,v 1.7 2009/12/12 18:10:36 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -25,10 +25,10 @@ PROVIDE="virtual/bootloader"
 pkg_setup() {
 	local arch="$(tc-arch)"
 	case ${arch} in
-		amd64) 
+		amd64)
 			CONFIG_CHECK='~IA32_EMULATION'
 			WARNING_IA32_EMULATION="You will NOT be able to run grub unless you have IA32_EMULATION set!"
-			check_extra_config 
+			check_extra_config
 			;;
 	esac
 }
