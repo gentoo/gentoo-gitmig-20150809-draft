@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.19 2009/08/16 08:54:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.20 2009/12/12 10:09:02 mrness Exp $
+
+*p3nfs-5.19-r2 (12 Dec 2009)
+
+  12 Dec 2009; Alin Năstac <mrness@gentoo.org> -p3nfs-5.19-r1.ebuild,
+  +p3nfs-5.19-r2.ebuild:
+  Install entire documentation in /usr/share/doc/${PF} (#295124).
 
 *p3nfs-5.19-r1 (16 Aug 2009)
 
