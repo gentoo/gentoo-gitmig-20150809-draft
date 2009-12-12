@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-cairo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.5 2009/06/05 17:20:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.6 2009/12/12 14:18:52 ulm Exp $
+
+  12 Dec 2009; Ulrich Mueller <ulm@gentoo.org> guile-cairo-1.4.0.ebuild:
+  Disable -Werror and remove unnecessary inherit, bug 260890. Thanks to
+  vadimk and chiiph.
 
   01 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
   guile-cairo-1.4.0.ebuild:
