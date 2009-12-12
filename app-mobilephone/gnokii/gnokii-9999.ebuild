@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.4 2009/08/31 22:08:39 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.5 2009/12/12 10:37:53 mrness Exp $
 
 EAPI=2
 
@@ -47,14 +47,10 @@ MY_AVAILABLE_LINGUAS=" cs de et fi fr it nl pl pt sk sl sv zh_CN"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_prepare() {
-	if [ "$PV" != "9999" ]; then
-	    epatch "${FILESDIR}"/${P}-icon.patch
-	    epatch "${FILESDIR}"/${P}-disable-database.patch
-	    epatch "${FILESDIR}"/${P}-TP-PI.patch
-	else
-	    epatch "${FILESDIR}"/${P}-icon.patch
-	    epatch "${FILESDIR}"/${P}-translations.patch
-	    intltoolize --force --copy --automake || die "intltoolize error"
+	if [ "$PV" = "9999" ]; then
+		epatch "${FILESDIR}"/${P}-icon.patch
+		epatch "${FILESDIR}"/${P}-translations.patch
+		intltoolize --force --copy --automake || die "intltoolize error"
 	fi
 
 	eautoreconf
