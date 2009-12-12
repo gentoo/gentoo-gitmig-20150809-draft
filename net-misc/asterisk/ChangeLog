@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.233 2009/12/09 18:49:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.234 2009/12/12 15:05:34 chainsaw Exp $
+
+  12 Dec 2009; <chainsaw@gentoo.org> asterisk-1.6.1.11.ebuild:
+  Block net-misc/asterisk-chan_unistim as this channel driver is built into
+  this newer Asterisk version. File collision found and reported by Diego E.
+  "Flameeyes" Pettenò.
 
   09 Dec 2009; Raúl Porcel <armin76@gentoo.org> asterisk-1.2.37.ebuild:
   alpha/sparc stable wrt #295270

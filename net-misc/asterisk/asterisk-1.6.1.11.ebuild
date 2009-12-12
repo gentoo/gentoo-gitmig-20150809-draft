@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.11.ebuild,v 1.1 2009/12/01 10:39:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.11.ebuild,v 1.2 2009/12/12 15:05:34 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -42,6 +42,7 @@ RDEPEND="sys-libs/ncurses
 
 DEPEND="${RDEPEND}
 	!<net-misc/asterisk-addons-1.6
+	!net-misc/asterisk-chan_unistim
 	!net-misc/zaptel"
 
 S="${WORKDIR}/${MY_P}"
