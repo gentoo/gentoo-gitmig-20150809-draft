@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3665 2009/12/10 20:08:01 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3666 2009/12/12 14:22:41 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking sys-auth/nsvs for QA removal.
 
   10 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Removing entry for net-misc/mmsclient, since it was removed from tree
