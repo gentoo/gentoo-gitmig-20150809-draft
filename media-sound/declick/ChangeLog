@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/declick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/declick/ChangeLog,v 1.4 2009/01/06 22:07:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/declick/ChangeLog,v 1.5 2009/12/12 20:12:45 sbriesen Exp $
+
+  12 Dec 2009; Stefan Briesenick <sbriesen@gentoo.org> declick-0.6.5.ebuild:
+  added am64 keyword, switched to EAPI2, added utf-8 conversion for readme.
 
   06 Jan 2009; Stefan Briesenick <sbriesen@gentoo.org> declick-0.6.5.ebuild:
   removed strip from Makefile, solving bug #251957.
