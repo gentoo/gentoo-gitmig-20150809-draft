@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r2.ebuild,v 1.5 2009/11/30 14:09:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r2.ebuild,v 1.6 2009/12/12 22:35:38 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,7 +32,7 @@ src_prepare() {
 src_install () {
 	distutils_src_install
 
-	insinto /usr/share/doc/${P}/test
+	insinto /usr/share/doc/${PF}/tests
 	insopts -m 755
 	doins test/*
 }
