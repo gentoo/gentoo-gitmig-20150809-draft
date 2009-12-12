@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel-sqlbox/kannel-sqlbox-0.7.2.ebuild,v 1.1 2009/09/25 01:17:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel-sqlbox/kannel-sqlbox-0.7.2.ebuild,v 1.2 2009/12/12 10:20:57 mrness Exp $
 
 EAPI="2"
 
@@ -15,7 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl doc"
 
-RDEPEND=">=app-mobilephone/kannel-1.4.3-r1
+RDEPEND="|| (
+		>=app-mobilephone/kannel-1.4.3-r1[mysql]
+		>=app-mobilephone/kannel-1.4.3-r1[sqlite]
+		>=app-mobilephone/kannel-1.4.3-r1[postgres]
+	)
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	doc? ( media-gfx/transfig
