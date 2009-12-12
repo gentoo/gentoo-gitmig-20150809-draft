@@ -55,3 +55,34 @@ index 23a13b3..c5b26cc 100644
  	$(P)INSTALL
  	@if [ -d $(multilib_prefix)/lib$(bitness) ] ; \
  	then echo "$(prefix)/lib$(bitness) present" ; \
+diff --git a/utils/Makefile b/utils/Makefile
+index cf9b6c4..79304fc 100644
+--- a/utils/Makefile
++++ b/utils/Makefile
+@@ -1,7 +1,7 @@
+ # beware of namespace collisions, all subdir makefiles are included
+ # into the top-level Makefile
+ 
+-$(D)/sb2-show: CFLAGS := $(CFLAGS) -Wall -W -Werror \
++$(D)/sb2-show: CFLAGS := $(CFLAGS) -Wall -W \
+ 		-I$(SRCDIR)/preload -Ipreload/ $(PROTOTYPEWARNINGS) \
+ 		-I$(SRCDIR)/include
+ 
+@@ -12,7 +12,7 @@ $(D)/sb2-show: preload/libsb2.$(SHLIBEXT) $(D)/sb2-show.o
+ 	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+ 
+ 
+-$(D)/sb2-monitor: CFLAGS := $(CFLAGS) -Wall -W -Werror \
++$(D)/sb2-monitor: CFLAGS := $(CFLAGS) -Wall -W \
+ 		-I$(SRCDIR)/preload -Ipreload/ $(PROTOTYPEWARNINGS) \
+ 		-I$(SRCDIR)/include
+ 
+@@ -21,7 +21,7 @@ $(D)/sb2-monitor: $(D)/sb2-monitor.o
+ 	$(P)LD
+ 	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+ 
+-$(D)/sb2-interp-wrapper: CFLAGS := $(CFLAGS) -Wall -W -Werror \
++$(D)/sb2-interp-wrapper: CFLAGS := $(CFLAGS) -Wall -W \
+ 		-I$(SRCDIR)/preload -Ipreload/ $(PROTOTYPEWARNINGS) \
+ 		-I$(SRCDIR)/include
+ 

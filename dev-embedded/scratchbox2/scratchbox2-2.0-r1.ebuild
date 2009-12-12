@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/scratchbox2-2.0-r1.ebuild,v 1.1 2009/12/12 09:36:19 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox2/scratchbox2-2.0-r1.ebuild,v 1.2 2009/12/12 09:58:58 ayoy Exp $
 
 EAPI="2"
 
@@ -28,6 +28,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	# bug 296552
 	epatch "${FILESDIR}/${P}-use-system-lua.patch"
+	# bug 296550
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 
 	sed -e "s/^\(CC = \).*/\1$(tc-getCC)/" \
 		-e "s/^\(CXX = \).*/\1$(tc-getCXX)/" \
