@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.23 2009/12/12 18:09:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.24 2009/12/12 18:13:33 robbat2 Exp $
+
+  12 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  grub-static-0.97-r9.ebuild:
+  Suppress the pre-stripped warning.
 
   12 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
   grub-static-0.97-r9.ebuild:
