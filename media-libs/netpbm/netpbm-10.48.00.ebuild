@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.48.00.ebuild,v 1.4 2009/11/17 15:54:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.48.00.ebuild,v 1.5 2009/12/12 15:58:23 vapier Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -82,6 +82,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/netpbm-10.31-build.patch
+	epatch "${FILESDIR}"/netpbm-10.48.00-pnmtopng-zlib.patch #291987
 
 	# avoid ugly depend.mk warnings
 	touch $(find . -name Makefile | sed s:Makefile:depend.mk:g)
