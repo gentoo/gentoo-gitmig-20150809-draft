@@ -1,5 +1,6 @@
 https://bitbucket.org/tarek/distribute/issue/80/
 https://bitbucket.org/tarek/distribute/changeset/e2de9f1e9064/
+https://bitbucket.org/tarek/distribute/changeset/353a750786ee/
 
 --- setuptools/command/__init__.py
 +++ setuptools/command/__init__.py
