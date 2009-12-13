@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.204 2009/10/22 16:35:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.205 2009/12/13 22:09:26 ssuominen Exp $
+
+  13 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gnucash-2.2.9-r1.ebuild, gnucash-2.3.6.ebuild, gnucash-2.3.7.ebuild:
+  Change aqbanking depend to support also USE qt4 which will build
+  qt3-wizard application too.
 
   22 Oct 2009; Raúl Porcel <armin76@gentoo.org> gnucash-2.2.9-r1.ebuild:
   sparc stable wrt #275705
