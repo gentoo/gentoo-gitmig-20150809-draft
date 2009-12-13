@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-session
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-session/ChangeLog,v 1.1 2009/12/13 03:16:14 arfrever Exp $
+
+*zope-session-3.9.2 (13 Dec 2009)
+
+  13 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-session-3.9.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
