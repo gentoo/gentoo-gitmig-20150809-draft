@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.42 2009/11/17 22:35:37 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.43 2009/12/13 02:08:53 spatz Exp $
+
+  13 Dec 2009; Dror Levin <spatz@gentoo.org> keepassx-0.4.1.ebuild,
+  +files/keepassx-0.4.1-compile-with-qt-4.6.patch:
+  Backport patch from trunk to fix compilation with Qt-4.6, bug 295466.
 
   17 Nov 2009; Dror Levin <spatz@gentoo.org> keepassx-0.4.1.ebuild:
   Fix pch USE flag handling, bug 271658.
