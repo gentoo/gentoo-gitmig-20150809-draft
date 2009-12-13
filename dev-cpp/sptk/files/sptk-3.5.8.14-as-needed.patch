@@ -1,0 +1,16 @@
+This causes -lpthread to be added to the end of link list, after
+objects, as opposed to the middle. This way --as-needed linking
+is fixed.
+Thanks Kacper Kowalik <xarthisius.kk@gmail.com>
+
+--- sptk-3.5.8.14.orig/src/CMakeLists.txt	2009-12-13 12:39:36.408351609 +0100
++++ sptk-3.5.8.14/src/CMakeLists.txt	2009-12-13 12:54:14.591539074 +0100
+@@ -23,7 +23,7 @@
+     )
+ 
+ IF (NOT WIN32)
+- SET_TARGET_PROPERTIES (sputil3 PROPERTIES LINK_FLAGS "-lpthread")
++ TARGET_LINK_LIBRARIES (sputil3 pthread)
+ ENDIF (NOT WIN32)
+ 
+ IF (NOT NO_EXCEL)

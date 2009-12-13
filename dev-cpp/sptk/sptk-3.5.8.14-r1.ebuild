@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.14-r1.ebuild,v 1.2 2009/09/22 11:00:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.14-r1.ebuild,v 1.3 2009/12/13 12:09:39 iluxa Exp $
 
 EAPI=1
 
@@ -32,6 +32,7 @@ CMAKE_IN_SOURCE_BUILD=1
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/sptk-gcc-4.4.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
 
 src_compile() {
