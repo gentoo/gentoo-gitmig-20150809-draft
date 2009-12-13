@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/dcraw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.48 2008/05/26 12:25:32 wschlich Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.49 2009/12/13 08:54:29 pva Exp $
+
+*dcraw-8.98 (13 Dec 2009)
+
+  13 Dec 2009; Peter Volkov <pva@gentoo.org> +dcraw-8.98.ebuild,
+  +files/conversion-examples.txt, +files/dcwrap,
+  +files/update-dcparse-and-rawphoto-tarballs.sh, metadata.xml:
+  Version bump, #251665, thank lots of people there. Fixes build issue for
+  gimp plugin, #240648, thank Kerie for report and Andrew Savchenko for
+  work. Also should fix sandbox violation, #267119, thank GNUtoo@no-log.org
+  for report.
 
 *dcraw-8.86 (26 May 2008)
 
