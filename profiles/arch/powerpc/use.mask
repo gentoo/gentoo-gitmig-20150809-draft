@@ -153,7 +153,6 @@ video_cards_sis
 video_cards_tga
 video_cards_tseng
 video_cards_vesa
-video_cards_vga
 
 # net-libs/aqbanking and dev-libs/libofx don't have ppc64 KEYWORDS
 hbci

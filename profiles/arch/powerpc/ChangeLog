@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.41 2009/11/10 01:41:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.42 2009/12/13 21:45:28 remi Exp $
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> ppc64/make.defaults,
+  use.mask:
+  drop "vga" from VIDEO_CARDS in all profiles
 
   10 Nov 2009; Christian Faulhammer <fauli@gentoo.org> ppc64/use.mask:
   unmask ps3 USE flag for bug 244018

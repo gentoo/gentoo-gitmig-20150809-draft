@@ -39,7 +39,6 @@ video_cards_sis
 video_cards_tga
 video_cards_tseng
 video_cards_vesa
-video_cards_vga
 video_cards_via
 
 # Masked p2p for bug #155302 <josejx@gentoo.org>

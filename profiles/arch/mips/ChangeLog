@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.15 2009/10/19 13:22:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.16 2009/12/13 21:45:28 remi Exp $
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop "vga" from VIDEO_CARDS in all profiles
 
   19 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> use.mask:
   Mask graphite use flag on mips

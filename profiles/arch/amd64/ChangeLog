@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.63 2009/11/06 19:47:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.64 2009/12/13 21:45:25 remi Exp $
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
+  drop "vga" from VIDEO_CARDS in all profiles
 
   06 Nov 2009; Alexey Shvetsov <alexxy@gentoo.org> no-multilib/package.mask:
   Mask icm and icm-browser
