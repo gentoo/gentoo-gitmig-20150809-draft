@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10960 2009/12/13 16:32:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10961 2009/12/13 17:49:19 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (13 Dec 2009)
+#  on behalf of QA team
+#
+# Fails to build since at least November 2008 (bug #245506),
+# open bump request since January 2006! (bug #117892).
+#
+# Removal on 2010-02-11
+net-irc/ptlink-services
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (13 Dec 2009)
 #  on behalf of QA team
