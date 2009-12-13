@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-user-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/ChangeLog,v 1.29 2009/12/09 21:40:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/ChangeLog,v 1.30 2009/12/13 22:52:25 eva Exp $
+
+*gnome-user-docs-2.28.1 (13 Dec 2009)
+
+  13 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-user-docs-2.28.1.ebuild:
+  Version bump. Restrict compilation too, bug #296375.
 
 *gnome-user-docs-2.28.0 (09 Dec 2009)
 
