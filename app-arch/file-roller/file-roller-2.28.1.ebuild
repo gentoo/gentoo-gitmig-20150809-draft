@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.28.1.ebuild,v 1.1 2009/10/29 20:57:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.28.1.ebuild,v 1.2 2009/12/13 23:06:29 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -47,18 +47,9 @@ src_prepare() {
 	# options. On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
 	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
 
-	# use a local rpm2cpio script to avoid the dep
-	sed -e "s/rpm2cpio/rpm2cpio-file-roller/g" \
-		-i src/fr-command-rpm.c || die "sed failed"
-
 	# Fix intltoolize broken file, see upstream #577133 and #579464
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
-}
-
-src_install() {
-	gnome2_src_install
-	dobin "${FILESDIR}/rpm2cpio-file-roller" || die "dobin failed"
 }
 
 pkg_postinst() {
