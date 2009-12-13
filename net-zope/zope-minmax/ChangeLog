@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-minmax
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-minmax/ChangeLog,v 1.1 2009/12/13 03:08:52 arfrever Exp $
+
+*zope-minmax-1.1.1 (13 Dec 2009)
+
+  13 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-minmax-1.1.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
