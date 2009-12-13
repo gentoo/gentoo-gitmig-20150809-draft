@@ -1,0 +1,10 @@
+# ChangeLog for sys-process/wait_on_pid
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/wait_on_pid/ChangeLog,v 1.1 2009/12/13 10:04:32 zzam Exp $
+
+*wait_on_pid-0.0.1 (13 Dec 2009)
+
+  13 Dec 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +wait_on_pid-0.0.1.ebuild, +metadata.xml:
+  Moved this utility from gentoo-vdr-scripts into an extra package.
+
