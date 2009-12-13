@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_tablet/kcm_tablet-1.1.1.ebuild,v 1.1 2009/12/05 15:23:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_tablet/kcm_tablet-1.1.1.ebuild,v 1.2 2009/12/13 11:51:55 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -15,6 +15,8 @@ LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
+
+RDEPEND="x11-drivers/linuxwacom"
 
 S=${WORKDIR}/${MY_P}
 
