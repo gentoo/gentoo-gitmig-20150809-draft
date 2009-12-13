@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ptex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.89 2009/12/09 19:37:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.90 2009/12/13 15:30:47 ranger Exp $
+
+  11 Dec 2009; Brent Baude <ranger@gentoo.org> ptex-3.1.10_p20090610.ebuild:
+  Marking ptex-3.1.10_p20090610 ppc64 for bug 289339
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> ptex-3.1.10_p20090610.ebuild:
   ppc stable #289339
