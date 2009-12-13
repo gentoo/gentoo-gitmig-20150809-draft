@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.58 2009/12/08 19:18:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.59 2009/12/13 15:54:18 klausman Exp $
+
+  13 Dec 2009; Tobias Klausmann <klausman@gentoo.org> omniORB-4.0.5.ebuild,
+  omniORB-4.1.2.ebuild, omniORB-4.1.3.ebuild, omniORB-4.1.4.ebuild:
+  None of the version in portage builds on alpha and this has no keyworded
+  dependencies on that arch. Hence, remove all keywords. Also see bug 295965
 
   08 Dec 2009; nixnut <nixnut@gentoo.org> omniORB-4.1.4.ebuild:
   ppc stable #290199
