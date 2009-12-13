@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.25 2009/12/13 21:45:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.26 2009/12/13 23:27:19 remi Exp $
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop "vermilion" from VIDEO_CARDS in all profiles
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
   drop "vga" from VIDEO_CARDS in all profiles

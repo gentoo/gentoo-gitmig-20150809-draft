@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3674 2009/12/13 23:20:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3675 2009/12/13 23:27:08 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> base/use.mask,
+  desc/video_cards.desc:
+  drop "vermilion" from VIDEO_CARDS in all profiles
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> desc/video_cards.desc,
   hardened/amd64/use.mask, hardened/ppc64/use.mask:
