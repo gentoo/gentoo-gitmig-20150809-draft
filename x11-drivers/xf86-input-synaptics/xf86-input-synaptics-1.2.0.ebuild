@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.2.0.ebuild,v 1.4 2009/12/10 19:01:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.2.0.ebuild,v 1.5 2009/12/13 21:16:16 eva Exp $
 
 inherit linux-info x-modular
 
@@ -31,13 +31,16 @@ src_install() {
 
 pkg_postinst() {
 	x-modular_pkg_postinst
-	if ! linux_chkconfig_present INPUT_EVDEV; then
-		echo
-		ewarn "This driver requires event interface support in your kernel"
-		ewarn "  Device Drivers --->"
-		ewarn "    Input device support --->"
-		ewarn "      <*>     Event interface"
-		echo
+	# Just a friendly warning
+	if linux_chkconfig_exists; then
+		if ! linux_chkconfig_present INPUT_EVDEV; then
+			echo
+			ewarn "This driver requires event interface support in your kernel"
+			ewarn "  Device Drivers --->"
+			ewarn "    Input device support --->"
+			ewarn "      <*>     Event interface"
+			echo
+		fi
 	fi
 	if use hal ; then
 		elog "If you want to modify Synaptics settings, please create an fdi file in:"

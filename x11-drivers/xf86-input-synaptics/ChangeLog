@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.35 2009/12/10 19:01:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.36 2009/12/13 21:16:16 eva Exp $
+
+  13 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  xf86-input-synaptics-1.2.0.ebuild:
+  Don't die if .config is not present, bug #296578.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   xf86-input-synaptics-1.2.0.ebuild:
