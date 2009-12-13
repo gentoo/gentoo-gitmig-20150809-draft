@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.5 2009/08/16 22:09:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.6 2009/12/13 21:00:00 remi Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
@@ -13,7 +13,7 @@ USE="berkdb crypt hardened nptl nptlonly pam pic readline ssl tcpd zlib"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 i740 imstt intel \
+VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 i740 intel \
 	mach64 mga neomagic nsc nv r128 radeon rendition s3 s3virge savage \
 	siliconmotion sis sisusb tdfx tga trident tseng v4l vesa vga via vmware \
 	voodoo"

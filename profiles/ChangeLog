@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3671 2009/12/13 19:46:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3672 2009/12/13 20:59:59 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> hardened/ia64/make.defaults,
+  hardened/linux/x86/make.defaults, hardened/x86/make.defaults:
+  drop "imstt" from VIDEO_CARDS in hardened profiles
 
   13 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking x11-wm/ion for QA removal.
