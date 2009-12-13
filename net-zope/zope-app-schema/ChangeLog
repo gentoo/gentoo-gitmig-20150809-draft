@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-app-schema
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-schema/ChangeLog,v 1.1 2009/12/13 04:20:45 arfrever Exp $
+
+*zope-app-schema-3.5.0 (13 Dec 2009)
+
+  13 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-app-schema-3.5.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
