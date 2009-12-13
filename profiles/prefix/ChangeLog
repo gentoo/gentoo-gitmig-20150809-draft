@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.120 2009/12/04 16:52:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.121 2009/12/13 14:45:53 abcd Exp $
+
+  13 Dec 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Unmasking KDE 4.3, as the mask was never really needed anyway (not yet in
+  prefix tree)
 
   04 Dec 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/package.mask:
