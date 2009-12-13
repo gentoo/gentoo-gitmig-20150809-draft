@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14.ebuild,v 1.1 2009/12/02 14:44:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14.ebuild,v 1.2 2009/12/13 18:46:24 nirbheek Exp $
 
 EAPI="2"
 
@@ -44,7 +44,10 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 		 x86? ( >=sys-apps/dmidecode-2.7 )
 		 selinux? ( sys-libs/libselinux sec-policy/selinux-hal )
 		 consolekit?	(
-		 					sys-auth/consolekit[policykit=]
+		 					|| (
+									<sys-auth/consolekit-0.4[policykit=]
+		 							>=sys-auth/consolekit-0.4
+								)
 					)
 		 policykit?	(
 		 					sys-auth/consolekit[policykit]
