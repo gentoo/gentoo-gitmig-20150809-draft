@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.18 2009/08/29 07:18:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.19 2009/12/13 08:45:07 graaff Exp $
+
+*gnome-do-0.8.3.1 (13 Dec 2009)
+
+  13 Dec 2009; Hans de Graaff <graaff@gentoo.org> +gnome-do-0.8.3.1.ebuild:
+  Version bump with many bug fixes. Thanks to Jacob in #296358 for reporting.
 
   29 Aug 2009; Hans de Graaff <graaff@gentoo.org>
   -files/gnome-do-0.4.2.0-generic-gnome-desktop.patch,
