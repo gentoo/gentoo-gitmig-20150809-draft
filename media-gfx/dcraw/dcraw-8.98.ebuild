@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.98.ebuild,v 1.1 2009/12/13 08:54:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.98.ebuild,v 1.2 2009/12/13 17:42:22 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs
 DESCRIPTION="Converts the native (RAW) format of various digital cameras into netpbm portable pixmap (.ppm) image"
 HOMEPAGE="http://www.cybercom.net/~dcoffin/dcraw/"
 SRC_URI="http://www.cybercom.net/~dcoffin/dcraw/archive/${P}.tar.gz
-	mirror://gentoo/parse-1.69.tar.bz2 
+	mirror://gentoo/parse-1.69.tar.bz2
 	gimp? ( mirror://gentoo/rawphoto-1.32.tar.bz2 )"
 
 LICENSE="freedist GPL-2"
