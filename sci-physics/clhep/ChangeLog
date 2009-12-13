@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.13 2009/12/07 18:16:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.14 2009/12/13 17:51:06 bicatali Exp $
+
+*clhep-2.0.4.5 (13 Dec 2009)
+
+  13 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +clhep-2.0.4.5.ebuild:
+  Version bump and cosmetic fix (bug #296661)
 
   07 Dec 2009; Jeroen Roovers <jer@gentoo.org> clhep-2.0.4.3.ebuild:
   Stable for HPPA (bug #294442).
