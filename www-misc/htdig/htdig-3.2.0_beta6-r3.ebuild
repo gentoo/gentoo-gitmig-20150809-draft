@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r3.ebuild,v 1.7 2007/12/04 19:46:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r3.ebuild,v 1.8 2009/12/13 21:57:34 abcd Exp $
 
 inherit eutils autotools
 
@@ -8,40 +8,37 @@ MY_PV=${PV/_beta/b}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 DESCRIPTION="HTTP/HTML indexing and searching system"
-SRC_URI="http://www.htdig.org/files/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.htdig.org"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+SRC_URI="http://www.htdig.org/files/${PN}-${MY_PV}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE="ssl"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	app-arch/unzip
 	ssl? ( dev-libs/openssl )"
 
-IUSE="ssl"
-SLOT="0"
-
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc4.patch
-	epatch "${FILESDIR}/${P}"-as-needed.patch
-	epatch "${FILESDIR}/${P}"-quoting.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-quoting.patch
 	eautoreconf
 }
 
 src_compile() {
-	local conf="
+	econf \
 		--with-config-dir=/etc/${PN} \
 		--with-default-config-file=/etc/${PN}/${PN}.conf \
 		--with-database-dir=/var/lib/${PN}/db \
 		--with-cgi-bin-dir=/var/www/localhost/cgi-bin \
 		--with-search-dir=/var/www/localhost/htdocs/${PN} \
-		--with-image-dir=/var/www/localhost/htdocs/${PN}
-	"
-	use ssl && conf="${conf} --with-ssl"
-
-	econf ${conf} || die "configure failed"
+		--with-image-dir=/var/www/localhost/htdocs/${PN} \
+		$(use_with ssl)
 
 #		--with-image-url-prefix=file:///var/www/localhost/htdocs/${PN} \
 
@@ -54,9 +51,11 @@ src_install () {
 	dodoc ChangeLog README
 	dohtml -r htdoc
 
-	dosed /etc/${PN}/${PN}.conf
-	dosed /usr/bin/rundig
+	sed -i "s:${D}::g" \
+		"${D}"/etc/${PN}/${PN}.conf \
+		"${D}"/usr/bin/rundig \
+		|| die "sed failed (removing \${D} from installed files)"
 
 	# symlink htsearch so it can be easily found. see bug #62087
-	dosym /var/www/localhost/cgi-bin/htsearch /usr/bin/htsearch
+	dosym ../../var/www/localhost/cgi-bin/htsearch /usr/bin/htsearch
 }
