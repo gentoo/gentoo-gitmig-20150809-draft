@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.6.2.ebuild,v 1.1 2009/11/20 16:27:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.6.2.ebuild,v 1.2 2009/12/13 15:49:01 yngwin Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit python qt4 toolchain-funcs
 
 MY_P="PyQt-x11-gpl-${PV/_pre/-snapshot-}"
-QTVER="4.5.1"
+QTVER="4.5.3"
 
 DESCRIPTION="A set of Python bindings for the Qt toolkit"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/ http://pypi.python.org/pypi/PyQt"

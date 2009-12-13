@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4-r4.ebuild,v 1.8 2009/11/30 07:30:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4-r4.ebuild,v 1.9 2009/12/13 15:49:01 yngwin Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit python qt4 toolchain-funcs
 
 MY_P=PyQt-x11-gpl-${PV}
-QTVER="4.5.1"
+QTVER="4.5*"
 
 DESCRIPTION="A set of Python bindings for the Qt toolkit"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
@@ -19,25 +19,25 @@ LICENSE="|| ( GPL-2 GPL-3 )"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="X assistant +dbus debug doc examples kde opengl phonon sql svg webkit xmlpatterns"
 
-DEPEND=">=dev-python/sip-4.8.2
-	>=x11-libs/qt-core-${QTVER}:4
-	>=x11-libs/qt-script-${QTVER}:4
-	>=x11-libs/qt-test-${QTVER}:4
-	X? ( >=x11-libs/qt-gui-${QTVER}:4[dbus?] )
-	assistant? ( >=x11-libs/qt-assistant-${QTVER}:4 )
+DEPEND="=dev-python/sip-4.8*
+	=x11-libs/qt-core-${QTVER}:4
+	=x11-libs/qt-script-${QTVER}:4
+	=x11-libs/qt-test-${QTVER}:4
+	X? ( =x11-libs/qt-gui-${QTVER}:4[dbus?] )
+	assistant? ( =x11-libs/qt-assistant-${QTVER}:4 )
 	dbus? (
 		>=dev-python/dbus-python-0.80
-		>=x11-libs/qt-dbus-${QTVER}:4
+		=x11-libs/qt-dbus-${QTVER}:4
 	)
-	opengl? ( >=x11-libs/qt-opengl-${QTVER}:4 )
+	opengl? ( =x11-libs/qt-opengl-${QTVER}:4 )
 	phonon? (
-		!kde? ( || ( >=x11-libs/qt-phonon-${QTVER}:4 media-sound/phonon ) )
+		!kde? ( || ( =x11-libs/qt-phonon-${QTVER}:4 media-sound/phonon ) )
 		kde? ( media-sound/phonon )
 	)
-	sql? ( >=x11-libs/qt-sql-${QTVER}:4 )
-	svg? ( >=x11-libs/qt-svg-${QTVER}:4 )
-	webkit? ( >=x11-libs/qt-webkit-${QTVER}:4 )
-	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QTVER}:4 )"
+	sql? ( =x11-libs/qt-sql-${QTVER}:4 )
+	svg? ( =x11-libs/qt-svg-${QTVER}:4 )
+	webkit? ( =x11-libs/qt-webkit-${QTVER}:4 )
+	xmlpatterns? ( =x11-libs/qt-xmlpatterns-${QTVER}:4 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
