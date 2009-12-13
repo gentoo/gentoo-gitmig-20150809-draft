@@ -1,6 +1,12 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.49 2009/12/12 21:33:39 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.50 2009/12/13 23:25:21 matsuu Exp $
+
+*w3m-0.5.2-r3 (13 Dec 2009)
+
+  13 Dec 2009; MATSUU Takuto <matsuu@gentoo.org> +w3m-0.5.2-r3.ebuild,
+  +files/w3m-0.5.2-gc72.patch:
+  boehm-gc 7.2 support.
 
   12 Dec 2009; Tiago Cunha <tcunha@gentoo.org> w3m-0.5.2-r2.ebuild:
   stable sparc, bug 296051
