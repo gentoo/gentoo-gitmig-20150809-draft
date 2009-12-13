@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.26.4.ebuild,v 1.1 2009/10/22 22:25:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.26.5.ebuild,v 1.1 2009/12/13 11:43:00 nirbheek Exp $
 
 EAPI="2"
 
@@ -115,6 +115,8 @@ src_prepare() {
 
 	# Fix broken smclient option passing
 	epatch "${FILESDIR}/${PN}-2.26.1-smclient-target-detection.patch"
+	# YouTube plugin broken, when we try to load some videos, bug #292839
+	epatch "${FILESDIR}/${PN}-2.26.4-youtube-plug-play-vids.patch"
 
 	# FIXME: tarball generated with broken gtk-doc, revisit me.
 	if use doc; then
