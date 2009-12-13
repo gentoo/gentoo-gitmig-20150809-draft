@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.21 2009/12/13 21:45:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.22 2009/12/13 23:20:35 remi Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -146,7 +146,6 @@ video_cards_ark
 video_cards_cyrix
 video_cards_i128
 video_cards_i740
-video_cards_imstt
 video_cards_intel
 video_cards_neomagic
 video_cards_nsc

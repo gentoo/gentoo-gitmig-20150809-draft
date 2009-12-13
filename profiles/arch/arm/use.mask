@@ -115,7 +115,6 @@ video_cards_cyrix
 video_cards_glint
 video_cards_i128
 video_cards_i740
-video_cards_imstt
 video_cards_intel
 video_cards_mach64
 video_cards_mga

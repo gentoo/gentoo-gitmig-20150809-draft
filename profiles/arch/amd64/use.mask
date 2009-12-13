@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.9 2009/11/29 06:41:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.10 2009/12/13 23:20:33 remi Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -97,7 +97,6 @@ vidix
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_i740
-video_cards_imstt
 video_cards_newport
 video_cards_nsc
 

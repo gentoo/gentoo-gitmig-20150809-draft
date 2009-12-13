@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.42 2009/12/13 21:45:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.43 2009/12/13 23:20:35 remi Exp $
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> ppc64/64ul/use.mask:
+  drop "imstt" from VIDEO_CARDS in all profiles
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> ppc64/make.defaults,
   use.mask:

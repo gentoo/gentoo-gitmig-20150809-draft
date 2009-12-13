@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.32 2009/07/06 00:02:56 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.33 2009/12/13 23:20:38 remi Exp $
 
 multilib
 
@@ -36,7 +36,6 @@ plugin
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_i740
-video_cards_imstt
 video_cards_newport
 video_cards_nsc
 

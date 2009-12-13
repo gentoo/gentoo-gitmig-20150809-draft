@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.16 2009/12/13 21:45:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.17 2009/12/13 23:20:35 remi Exp $
+
+  13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop "imstt" from VIDEO_CARDS in all profiles
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
   drop "vga" from VIDEO_CARDS in all profiles

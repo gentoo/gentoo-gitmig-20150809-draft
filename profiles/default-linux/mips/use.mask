@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.121 2009/12/13 21:45:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.122 2009/12/13 23:20:37 remi Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.
@@ -143,7 +143,6 @@ video_cards_ark
 video_cards_cyrix
 video_cards_i128
 video_cards_i740
-video_cards_imstt
 video_cards_intel
 video_cards_neomagic
 video_cards_nsc
