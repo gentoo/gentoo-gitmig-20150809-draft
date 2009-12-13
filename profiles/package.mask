@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10961 2009/12/13 17:49:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10962 2009/12/13 18:10:41 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Dec 2009)
+# Masked for testing.
+=net-zope/zope-2.12*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (13 Dec 2009)
 #  on behalf of QA team
