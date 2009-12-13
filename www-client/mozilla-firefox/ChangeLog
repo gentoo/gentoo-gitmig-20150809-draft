@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.571 2009/11/20 18:23:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.572 2009/12/13 06:00:05 nirbheek Exp $
+
+  13 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mozilla-firefox-3.5.5.ebuild:
+  Bump sqlite dep to fix crasher issues; bug 281695 ; bug 280114 ; bug
+  207701
 
   20 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-3.5.4.ebuild, mozilla-firefox-3.5.5.ebuild:
@@ -18,6 +23,11 @@
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   mozilla-firefox-3.5.4.ebuild:
   stable x86, security bug 280393
+
+  13 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mozilla-firefox-3.5.5.ebuild:
+  Bump sqlite dep to fix crasher issues; bug 281695 ; bug 280114 ; bug
+  207701
 
 *mozilla-firefox-3.5.5 (07 Nov 2009)
 
