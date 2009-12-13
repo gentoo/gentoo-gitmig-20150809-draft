@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.6.0-r1.ebuild,v 1.1 2009/12/13 14:07:47 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.6.0-r1.ebuild,v 1.2 2009/12/13 17:01:20 ikelos Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF} --enable-unix-specific $(use_enable debug)"
+	G2CONF="${G2CONF} --enable-unix-specific $(use_enable debug) --docdir=/usr/share/doc/${PF}"
 
 	# Stolen from enlightenment.eclass
 	cp $(type -p gettextize) "${T}/" || die "Could not copy gettextize"
