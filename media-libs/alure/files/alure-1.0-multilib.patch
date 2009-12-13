@@ -1,0 +1,21 @@
+diff -ur alure-1.0.orig/CMakeLists.txt alure-1.0/CMakeLists.txt
+--- alure-1.0.orig/CMakeLists.txt	2009-01-16 10:29:52.000000000 +0200
++++ alure-1.0/CMakeLists.txt	2009-12-13 17:18:10.000000000 +0200
+@@ -27,7 +27,7 @@
+ SET(LIB_BUILD_VERSION "72")
+ SET(LIB_VERSION "${LIB_MAJOR_VERSION}.${LIB_MINOR_VERSION}.${LIB_BUILD_VERSION}")
+ IF(NOT DEFINED LIB_INSTALL_DIR)
+-    SET(LIB_INSTALL_DIR "lib")
++    SET(LIB_INSTALL_DIR "lib${LIB_SUFFIX}")
+ ENDIF(NOT DEFINED LIB_INSTALL_DIR)
+ 
+ 
+@@ -323,7 +323,7 @@
+         DESTINATION "include/${INCPATH}"
+ )
+ INSTALL(FILES "${ALURE_BINARY_DIR}/alure.pc"
+-        DESTINATION lib/pkgconfig
++        DESTINATION ${LIB_INSTALL_DIR}/pkgconfig
+ )
+ 
+ 

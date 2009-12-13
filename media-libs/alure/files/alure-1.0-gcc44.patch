@@ -1,0 +1,11 @@
+diff -ur alure-1.0.orig/src/stream.cpp alure-1.0/src/stream.cpp
+--- alure-1.0.orig/src/stream.cpp	2009-01-14 12:19:37.000000000 +0200
++++ alure-1.0/src/stream.cpp	2009-12-13 17:10:51.000000000 +0200
+@@ -4,6 +4,7 @@
+ 
+ #include "main.h"
+ 
++#include <stdio.h>
+ #include <string.h>
+ 
+ #include <algorithm>
