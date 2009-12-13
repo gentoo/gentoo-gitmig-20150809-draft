@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.5.6.ebuild,v 1.1 2009/11/13 01:28:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.5.6.ebuild,v 1.2 2009/12/13 00:56:33 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -48,8 +48,7 @@ src_prepare() {
 
 src_test() {
 	testing() {
-		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${T}/test-${PYTHON_ABI}" || return 1
-		PYTHONPATH="${T}/test-${PYTHON_ABI}" nosetests --with-sqlalchemy
+		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
 	}
 	python_execute_function testing
 }
