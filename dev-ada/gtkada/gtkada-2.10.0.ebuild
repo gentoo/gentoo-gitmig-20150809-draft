@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.5 2007/12/28 22:40:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.10.0.ebuild,v 1.6 2009/12/13 00:28:31 flameeyes Exp $
 
 inherit eutils gnat versionator
 
@@ -55,7 +55,8 @@ lib_compile() {
 
 	econf ${myconf} $(use_enable nls) || die "./configure failed"
 
-	make GNATFLAGS="${ADACFLAGS}" || die
+	# bug #279962
+	emake -j1 GNATFLAGS="${ADACFLAGS}" || die
 }
 
 lib_install() {

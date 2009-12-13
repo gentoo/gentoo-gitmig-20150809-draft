@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.31 2009/08/01 22:56:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.32 2009/12/13 00:28:31 flameeyes Exp $
+
+  13 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  gtkada-2.10.0.ebuild:
+  Add -j1 even to last release.
 
   01 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> gtkada-2.8.0.ebuild:
   Use -j1 for make. Bug #279962.
