@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.47 2009/12/04 21:18:36 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.48 2009/12/13 21:36:17 scarabeus Exp $
+
+  13 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libxcb-1.1.90.1.ebuild:
+  rm
 
   04 Dec 2009; Rémi Cardona <remi@gentoo.org> libxcb-1.5.ebuild:
   up dep on xcb-proto (fixes bug #295692)
