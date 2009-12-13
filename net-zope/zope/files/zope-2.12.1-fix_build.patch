@@ -1,0 +1,25 @@
+--- inst/Makefile.in
++++ inst/Makefile.in
+@@ -53,10 +53,10 @@
+ 	${RMRF} ${BUILD_BASE}
+ 
+ # install:     Install a software home.
+-install: build version_txt
+-	${PYTHON} "${BASE_DIR}/setup.py" ${DISTUTILS_OPTS} install \
+-	   --home="${PREFIX}" ${BUILD_FLAGS} ${INSTALL_FLAGS}
+-	[ -f ${PREFIX}/bin/python ] || ${LN} ${PYTHON} ${PREFIX}/bin/python
++install: version_txt
++	${PYTHON} "${BASE_DIR}/setup.py" ${DISTUTILS_OPTS} build \
++	   ${BUILD_FLAGS} install --home="${PREFIX}" --root="${DESTDIR}" ${INSTALL_FLAGS}
++	[ -f "${PREFIX}/bin/python" ] || ${LN} "${PYTHON}" "${DESTDIR}${PREFIX}/bin/python"
+ 	@echo
+ 	@echo Zope binaries installed successfully.
+ 	@echo Now run \'${PREFIX}/bin/mkzopeinstance.py\'
+@@ -111,6 +111,7 @@
+ 
+ # version_txt: create a version file in lib/python/version.txt
+ version_txt:
++	${MKDIR} "${BASE_DIR}/lib/python/Zope2"
+ 	printf "Zope ${MAJOR_VERSION}.${MINOR_VERSION}-${RELEASE_TAG}" >\
+           "${BASE_DIR}/lib/python/Zope2/version.txt"
+ 
