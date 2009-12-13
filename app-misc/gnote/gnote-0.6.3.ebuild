@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.6.1.ebuild,v 1.1 2009/08/02 22:42:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.6.3.ebuild,v 1.1 2009/12/13 21:51:45 eva Exp $
 
 EAPI="2"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://www.gnome.org/"
@@ -31,19 +31,10 @@ RDEPEND=">=x11-libs/gtk+-2.14
 DEPEND="${DEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0
-	app-text/gnome-doc-utils"
+	app-text/gnome-doc-utils
+	app-text/docbook-xml-dtd:4.1.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Fix dbus configure switch, upstream bug #590560
-	epatch "${FILESDIR}/${P}-dbus-switch.patch"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
-}
 
 pkg_setup() {
 	G2CONF="${G2CONF}
