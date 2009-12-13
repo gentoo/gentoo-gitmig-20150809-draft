@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10958 2009/12/13 11:15:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10959 2009/12/13 16:04:49 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (13 Dec 2009)
+# ttmkfdir had multiple QA issues and bugs (bugs #209616, #235354 and #262945)
+# xfs is completely useless, even on thin clients
+# and xfsinfo is useless if xfs goes
+x11-apps/ttmkfdir
+x11-apps/xfs
+x11-apps/xfsinfo
 
 # Torsten Veller <tove@gentoo.org> (13 Dec 2009)
 # missing deps (#294330)
