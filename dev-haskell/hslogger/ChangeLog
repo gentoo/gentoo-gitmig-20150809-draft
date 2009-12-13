@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hslogger
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.5 2007/12/15 16:33:12 dcoutts Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.6 2009/12/13 11:31:54 kolmodin Exp $
+
+*hslogger-1.0.7 (13 Dec 2009)
+
+  13 Dec 2009; Lennart Kolmodin <kolmodin@gentoo.org> +hslogger-1.0.7.ebuild:
+  Version bump. Should fix bug #296531.
 
   15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hslogger-1.0.2.ebuild:
   Added ~sparc.
