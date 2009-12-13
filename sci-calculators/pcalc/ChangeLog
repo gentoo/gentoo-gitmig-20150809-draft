@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/pcalc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.21 2008/05/11 00:15:58 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.22 2009/12/13 07:52:02 vapier Exp $
+
+  13 Dec 2009; Mike Frysinger <vapier@gentoo.org> pcalc-1.3.ebuild:
+  Stabilize for people.
 
   11 May 2008; <solar@gentoo.org> pcalc-1.3.ebuild:
   - cross compile fix
