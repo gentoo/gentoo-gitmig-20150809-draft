@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.5.ebuild,v 1.1 2009/11/10 10:27:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.5.ebuild,v 1.2 2009/12/13 11:54:12 tove Exp $
 
 EAPI=2
 
@@ -65,29 +65,19 @@ src_prepare() {
 
 src_install() {
 	perl-module_src_install
-	dodir /usr/share/doc/${PF}/html
-	eval `perl '-V:version'`
-	PERLVERSION=${version}
-	eval `perl '-V:archname'`
-	ARCHVERSION=${archname}
-	mv "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/HtmlDocs/PDL \
-		"${D}"/usr/share/doc/${PF}/html
 
-	mydir=${D}/usr/share/doc/${PF}/html/PDL
-
-	for i in "${mydir}"/* "${mydir}"/IO/* "${mydir}"/Fit/* "${mydir}"/Pod/* "${mydir}"/Graphics/*
-	do
-		dosed "${i/${D}}"
-	done
-	cp "${S}"/Doc/scantree.pl "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
-	cp "${S}"/Doc/mkhtmldoc.pl "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
+	cp "${S}"/Doc/{scantree.pl,mkhtmldoc.pl} "${D}"/${VENDOR_ARCH}/PDL/Doc/ || die
 }
 
 pkg_postinst() {
-	perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl
-	elog "Building perldl.db done. You can recreate this at any time"
-	elog "by running"
-	elog "perl /usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl"
+	if [[ ${ROOT} = / ]] ; then
+		perl ${VENDOR_ARCH}/PDL/Doc/scantree.pl
+		elog "Building perldl.db done. You can recreate this at any time"
+		elog "by running"
+	else
+		elog "You must create perldl.db by running"
+	fi
+	elog "perl ${VENDOR_ARCH}/PDL/Doc/scantree.pl"
 	epause 3
 	elog "PDL requires that glx and dri support be enabled in"
 	elog "your X configuration for certain parts of the graphics"
