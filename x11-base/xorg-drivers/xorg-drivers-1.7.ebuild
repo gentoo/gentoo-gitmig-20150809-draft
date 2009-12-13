@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.5 2009/11/15 22:05:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.6 2009/12/13 23:42:41 remi Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -143,13 +143,10 @@ PDEPEND="
 	!x11-drivers/xf86-input-penmount
 	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
-	!x11-drivers/xf86-video-imstt
 	!x11-drivers/xf86-video-nsc
 	!x11-drivers/xf86-video-sunbw2
 	!x11-drivers/xf86-video-suncg14
 	!x11-drivers/xf86-video-suncg3
 	!x11-drivers/xf86-video-suncg6
 	!x11-drivers/xf86-video-suntcx
-	!x11-drivers/xf86-video-vermilion
-	!x11-drivers/xf86-video-vga
 "
