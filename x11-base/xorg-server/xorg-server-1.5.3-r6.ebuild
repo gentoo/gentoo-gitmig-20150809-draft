@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.16 2009/11/28 09:14:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.17 2009/12/13 20:43:28 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -49,7 +49,6 @@ IUSE_VIDEO_CARDS="
 	video_cards_i740
 	video_cards_intel
 	video_cards_impact
-	video_cards_imstt
 	video_cards_mach64
 	video_cards_mga
 	video_cards_neomagic
@@ -77,7 +76,6 @@ IUSE_VIDEO_CARDS="
 	video_cards_trident
 	video_cards_tseng
 	video_cards_v4l
-	video_cards_vermilion
 	video_cards_vesa
 	video_cards_via
 	video_cards_virtualbox
