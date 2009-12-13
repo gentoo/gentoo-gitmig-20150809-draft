@@ -12,6 +12,7 @@
   <flag name="kmail">Build kmail data miner</flag>
   <flag name="laptop">Make tracker power management aware</flag>
   <flag name="playlist">Add support for playlists</flag>
+  <flag name="wv2">Build MS-Word .doc support.</flag>
   <flag name="xmp">Adds support for XMP metadata extraction</flag>
 </use>
 </pkgmetadata>

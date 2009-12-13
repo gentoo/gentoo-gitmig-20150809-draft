@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.10.ebuild,v 1.2 2009/12/13 21:27:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.11.ebuild,v 1.1 2009/12/13 21:27:15 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -13,7 +13,8 @@ HOMEPAGE="http://www.tracker-project.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 pdf playlist test +tiff xine +xml xmp +vorbis"
+# USE="doc" is managed by eclass.
+IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 pdf playlist test +tiff +vorbis wv2 xine +xml xmp"
 
 # Automagic, gconf, uuid, enca and probably more
 # TODO: quill and streamanalyzer support
@@ -55,6 +56,7 @@ RDEPEND="
 	playlist? ( dev-libs/totem-pl-parser )
 	tiff? ( media-libs/tiff )
 	vorbis? ( >=media-libs/libvorbis-0.22 )
+	wv2? ( >=app-text/wv2-0.3.1 )
 	xine? ( >=media-libs/xine-lib-1 )
 	xml? ( >=dev-libs/libxml2-2.6 )
 	xmp? ( >=media-libs/exempi-2.1 )"
@@ -132,9 +134,10 @@ pkg_setup() {
 		$(use_enable playlist)
 		$(use_enable test unit-tests)
 		$(use_enable tiff libtiff)
+		$(use_enable vorbis libvorbis)
+		$(use_enable wv2 libwv2)
 		$(use_enable xml libxml2)
-		$(use_enable xmp exempi)
-		$(use_enable vorbis libvorbis)"
+		$(use_enable xmp exempi)"
 		# FIXME: Missing files to run functional tests
 		# $(use_enable test functional-tests)
 		# FIXME: useless without quill (extract mp3 albumart...)

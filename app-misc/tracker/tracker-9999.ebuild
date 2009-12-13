@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.5 2009/12/10 23:15:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.6 2009/12/13 21:27:15 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -15,7 +15,8 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 pdf playlist test +tiff xine +xml xmp +vorbis"
+# USE="doc" is managed by eclass.
+IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 pdf playlist test +tiff +vorbis wv2 xine +xml xmp"
 
 # Automagic, gconf, uuid, enca and probably more
 # TODO: quill and streamanalyzer support
@@ -57,6 +58,7 @@ RDEPEND="
 	playlist? ( dev-libs/totem-pl-parser )
 	tiff? ( media-libs/tiff )
 	vorbis? ( >=media-libs/libvorbis-0.22 )
+	wv2? ( >=app-text/wv2-0.3.1 )
 	xine? ( >=media-libs/xine-lib-1 )
 	xml? ( >=dev-libs/libxml2-2.6 )
 	xmp? ( >=media-libs/exempi-2.1 )"
@@ -71,28 +73,30 @@ DEPEND="${RDEPEND}
 		dev-lang/vala
 		>=dev-libs/libgee-0.3 )
 	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1.8 )"
+	>=dev-util/gtk-doc-1.8"
 #	test? ( gcov )
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-function notify_inotify() {
-	ewarn
-	ewarn "You should enable the INOTIFY support in your kernel."
-	ewarn "Check the 'Inotify support for userland' under the 'File systems'"
-	ewarn "option. It is marked as CONFIG_INOTIFY_USER in the config"
-	ewarn
-	die 'missing CONFIG_INOTIFY'
-}
-
 function inotify_enabled() {
-	linux_chkconfig_present INOTIFY_USER
+	if linux_chkconfig_exists; then
+		if ! linux_chkconfig_present INOTIFY_USER; then
+			echo
+			ewarn "You should enable the INOTIFY support in your kernel."
+			ewarn "Check the 'Inotify support for userland' under the 'File systems'"
+			ewarn "option. It is marked as CONFIG_INOTIFY_USER in the config"
+			echo
+			die 'missing CONFIG_INOTIFY'
+		fi
+	else
+		einfo "Could not check for INOTIFY support in your kernel."
+	fi
 }
 
 pkg_setup() {
 	linux-info_pkg_setup
 
-	inotify_enabled || notify_inotify
+	inotify_enabled
 
 	if use gstreamer ; then
 		G2CONF="${G2CONF}
@@ -133,9 +137,10 @@ pkg_setup() {
 		$(use_enable playlist)
 		$(use_enable test unit-tests)
 		$(use_enable tiff libtiff)
+		$(use_enable vorbis libvorbis)
+		$(use_enable wv2 libwv2)
 		$(use_enable xml libxml2)
-		$(use_enable xmp exempi)
-		$(use_enable vorbis libvorbis)"
+		$(use_enable xmp exempi)"
 		# FIXME: Missing files to run functional tests
 		# $(use_enable test functional-tests)
 		# FIXME: useless without quill (extract mp3 albumart...)
