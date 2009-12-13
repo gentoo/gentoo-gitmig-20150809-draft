@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-hu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.23 2009/06/22 13:37:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.24 2009/12/13 19:41:39 halcy0n Exp $
+
+  13 Dec 2009; Mark Loeser <halcy0n@gentoo.org> myspell-hu-20060509.ebuild,
+  myspell-hu-20060531.ebuild, myspell-hu-20061117.ebuild,
+  myspell-hu-20080315.ebuild:
+  QA fixes; IUSE is not defined
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> myspell-hu-20080315.ebuild:
   Stable for HPPA too.

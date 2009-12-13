@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-es/myspell-es-20060316.ebuild,v 1.14 2009/06/22 13:32:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-es/myspell-es-20060316.ebuild,v 1.15 2009/12/13 19:32:11 halcy0n Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "es,AR,es_AR,Spanish (Argentina),es_AR.zip"
@@ -81,5 +81,6 @@ inherit myspell
 DESCRIPTION="Spanish and Galician dictionaries for myspell/hunspell"
 LICENSE="GPL-2 LGPL-2.1"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://sourceforge.net/projects/openoffice-es/ http://openoffice-es.sf.net/thesaurus/"
+IUSE=""
 
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"

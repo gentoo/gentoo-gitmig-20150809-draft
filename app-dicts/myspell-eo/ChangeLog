@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-eo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-eo/ChangeLog,v 1.14 2009/06/22 13:32:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-eo/ChangeLog,v 1.15 2009/12/13 19:30:53 halcy0n Exp $
+
+  13 Dec 2009; Mark Loeser <halcy0n@gentoo.org> myspell-eo-20060316.ebuild:
+  QA fixes; IUSE is not defined
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> myspell-eo-20060316.ebuild:
   Stable for HPPA too.
