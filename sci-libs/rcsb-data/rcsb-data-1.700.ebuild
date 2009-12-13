@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/rcsb-data-1.700.ebuild,v 1.5 2008/04/08 08:00:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/rcsb-data-1.700.ebuild,v 1.6 2009/12/13 17:37:24 flameeyes Exp $
 
 inherit eutils
 
@@ -32,9 +32,9 @@ src_compile() {
 
 src_install() {
 	insinto /usr/lib/rcsb/data/binary
-	doins data/binary/*
+	doins data/binary/* || die
 	insinto /usr/lib/rcsb/data/ascii
-	doins data/ascii/*
+	doins data/ascii/* || die
 
 	echo "RCSBROOT=\"/usr/lib/rcsb\"" > "${T}"/env.d
 	newenvd "${T}"/env.d 50validation

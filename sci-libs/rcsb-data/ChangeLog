@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/rcsb-data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.8 2008/04/08 08:00:25 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/ChangeLog,v 1.9 2009/12/13 17:37:24 flameeyes Exp $
+
+  13 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  rcsb-data-1.700.ebuild:
+  Add die clauses to install since emake does not die on failure.
 
   08 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   rcsb-data-1.700.ebuild:
