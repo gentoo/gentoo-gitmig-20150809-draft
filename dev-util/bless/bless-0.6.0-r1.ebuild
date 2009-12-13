@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.6.0.ebuild,v 1.3 2009/03/05 22:49:06 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.6.0-r1.ebuild,v 1.1 2009/12/13 14:07:47 ikelos Exp $
 
 EAPI=2
 
@@ -33,18 +33,10 @@ pkg_setup() {
 	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize"
 }
 
-src_unpack() {
-	gnome2_src_unpack
-
+src_prepare() {
 	einfo "Running gettextize -f --no-changelog..."
 	( "${T}/gettextize" -f --no-changelog > /dev/null ) || die "gettexize failed"
+	epatch "${FILESDIR}/${P}-pixmap.patch"
+	epatch "${FILESDIR}/${P}-docpath.patch"
 	eautoreconf
-}
-
-src_configure() {
-	gnome2_src_configure
-}
-
-src_compile() {
-	default
 }

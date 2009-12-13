@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.16 2009/03/05 22:49:06 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.17 2009/12/13 14:07:47 ikelos Exp $
+
+*bless-0.6.0-r1 (13 Dec 2009)
+
+  13 Dec 2009; Mike Auty <ikelos@gentoo.org> -bless-0.6.0.ebuild,
+  +bless-0.6.0-r1.ebuild, +files/bless-0.6.0-docpath.patch,
+  +files/bless-0.6.0-pixmap.patch:
+  Fix up documentation bug 296669 and an upstream bug affecting nvidia
+  users.
 
   05 Mar 2009; Mike Auty <ikelos@gentoo.org> bless-0.6.0.ebuild:
   Fix up bug 248852, thanks to Kevin.
