@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.15.12.ebuild,v 1.1 2009/09/29 14:51:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.15.12.ebuild,v 1.2 2009/12/13 14:06:04 flameeyes Exp $
 
 DESCRIPTION="Telepathy Python base classes for use in connection managers, and proxy classes for use in clients."
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -14,7 +14,10 @@ IUSE=""
 DEPEND="dev-libs/libxslt"
 RDEPEND=">=dev-python/dbus-python-0.80"
 
+# bug #288191
+MAKEOPTS="-j1"
+
 src_install() {
-	make install DESTDIR="${D}"
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS NEWS
 }

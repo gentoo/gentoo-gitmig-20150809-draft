@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/telepathy-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.18 2009/09/29 14:51:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.19 2009/12/13 14:06:04 flameeyes Exp $
+
+  13 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  telepathy-python-0.15.12.ebuild:
+  Add -j1 to build (bug #288191); also make sure that if install fails the
+  ebuild fails as well.
 
 *telepathy-python-0.15.12 (29 Sep 2009)
 
