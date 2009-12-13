@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.17 2009/12/13 20:43:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.18 2009/12/13 23:33:52 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -229,17 +229,14 @@ PDEPEND="
 		video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
 
 		!x11-drivers/xf86-video-impact
-		!x11-drivers/xf86-video-imstt
 		!x11-drivers/xf86-video-sunbw2
 		!x11-drivers/xf86-video-suncg14
 		!x11-drivers/xf86-video-suncg3
 		!x11-drivers/xf86-video-suncg6
 		!x11-drivers/xf86-video-suntcx
-		!x11-drivers/xf86-video-vermilion
 
 		!x11-drivers/xf86-video-cyrix
 		!x11-drivers/xf86-video-nsc
-		!x11-drivers/xf86-video-vga
 	)"
 LICENSE="${LICENSE} MIT"
 
