@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testbrowser/zope-testbrowser-3.7.0_alpha1.ebuild,v 1.1 2009/12/08 13:08:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testbrowser/zope-testbrowser-3.7.0_alpha1.ebuild,v 1.2 2009/12/13 03:59:34 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,6 +22,7 @@ IUSE=""
 RDEPEND="dev-python/clientform
 	dev-python/mechanize
 	dev-python/pytz
+	net-zope/zope-app-testing
 	net-zope/zope-interface
 	net-zope/zope-schema"
 DEPEND="${RDEPEND}
