@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r3.ebuild,v 1.4 2009/12/09 17:21:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r3.ebuild,v 1.5 2009/12/14 02:30:51 nixphoeni Exp $
 
 EAPI=2
 # desklets don't run with USE=debug
@@ -86,8 +86,8 @@ src_install() {
 	rm -rf 	"${D}usr/share/mime"
 
 	# Ensure the global Displays and Controls directories exist
-	dodir "/usr/lib/gdesklets/Displays"
-	dodir "/usr/lib/gdesklets/Controls"
+	dodir "/usr/$(get_libdir)/gdesklets/Displays"
+	dodir "/usr/$(get_libdir)/gdesklets/Controls"
 
 }
 

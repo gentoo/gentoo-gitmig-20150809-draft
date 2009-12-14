@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.116 2009/12/09 17:21:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.117 2009/12/14 02:30:51 nixphoeni Exp $
+
+  14 Dec 2009; Joe Sapp <nixphoeni@gentoo.org>
+  gdesklets-core-0.36.1-r3.ebuild:
+  Replaced "/usr/lib" with "/usr/$(get_libdir)" for the global desklet
+  installation directories
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org>
   gdesklets-core-0.36.1-r3.ebuild:
