@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.8.4.ebuild,v 1.1 2009/09/24 05:16:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.8.6.ebuild,v 1.1 2009/12/14 22:33:36 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -46,6 +46,10 @@ SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch
+	# fix parallel make
+	sed -i \
+		-e 's/make/$(MAKE)/g' \
+		$(find . -name Makefile.in) || die
 }
 
 src_configure() {
