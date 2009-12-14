@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ivtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.9 2009/04/05 22:17:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.10 2009/12/14 12:04:25 remi Exp $
+
+  14 Dec 2009; Rémi Cardona <remi@gentoo.org> xf86-video-ivtv-1.0.0.ebuild,
+  xf86-video-ivtv-1.0.1.ebuild:
+  change LICENSE to MIT
 
   05 Apr 2009; Markus Meier <maekke@gentoo.org>
   xf86-video-ivtv-1.0.1.ebuild:
