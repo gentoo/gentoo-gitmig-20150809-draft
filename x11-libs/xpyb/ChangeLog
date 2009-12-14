@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.7 2009/09/29 11:25:17 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.8 2009/12/14 11:15:52 remi Exp $
+
+  14 Dec 2009; Rémi Cardona <remi@gentoo.org> xpyb-1.0.ebuild:
+  change LICENSE to MIT
 
   29 Sep 2009; Rémi Cardona <remi@gentoo.org> -xpyb-0.9.ebuild:
   drop old ebuilds
