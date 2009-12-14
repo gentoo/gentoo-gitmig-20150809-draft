@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc7,v 1.2 2009/12/14 17:31:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc7,v 1.3 2009/12/14 22:10:20 voyageur Exp $
 
-ftpd_pidifle="/var/run/pure-ftpd.pid"
+ftpd_pidfile="/var/run/pure-ftpd.pid"
 script_pidfile="/var/run/pure-uploadscript.pid"
 
 depend() {
