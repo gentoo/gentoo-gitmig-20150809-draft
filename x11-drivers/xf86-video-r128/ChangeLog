@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-r128
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.15 2009/10/11 11:27:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.16 2009/12/14 12:45:18 remi Exp $
+
+  14 Dec 2009; Rémi Cardona <remi@gentoo.org> xf86-video-r128-6.8.0.ebuild,
+  xf86-video-r128-6.8.1.ebuild:
+  change LICENSE to MIT
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xf86-video-r128-6.8.1.ebuild:
   ppc stable #282290
