@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-ParseXS
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/ChangeLog,v 1.10 2009/12/10 21:31:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/ChangeLog,v 1.11 2009/12/14 19:00:31 armin76 Exp $
+
+  14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  perl-ExtUtils-ParseXS-2.20.0401.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #288026
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking perl-ExtUtils-ParseXS-2.20.0401 ppc64 stable for bug 288026
