@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/bnr2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/ChangeLog,v 1.11 2009/09/23 19:45:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/ChangeLog,v 1.12 2009/12/14 15:11:38 ssuominen Exp $
+
+  14 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> bnr2-0.14.6.ebuild,
+  bnr2-0.14.7.ebuild:
+  Missing libjpeg.so.62 depend wrt #296900, thanks to "clockhater" for
+  reporting.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> bnr2-0.14.6.ebuild,
   bnr2-0.14.7.ebuild:
