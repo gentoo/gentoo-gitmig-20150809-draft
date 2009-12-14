@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.3-r1.ebuild,v 1.1 2009/12/14 12:43:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.3-r1.ebuild,v 1.2 2009/12/14 12:45:41 jer Exp $
 
 EAPI="2"
 
@@ -19,16 +19,12 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	cp -va Makefile{,.org}
 	epatch "${FILESDIR}/${P}-Makefile.patch"
 	sed \
 		-e 's:$compiler -v\( 2>&1 | sed -e "/version/!d"\|\):$compiler -dumpversion:' \
 		-i sysinfo.sh || die "patching sysinfo.sh failed"
 	sed -e 's:inpath="NNET.DAT":inpath="/usr/share/nbench/NNET.DAT":' \
 		-i nbench1.h || die "patching nbench1.h failed"
-	#sed \
-	#	-e 's|./sysinfo.sh|sh sysinfo.sh|g' \
-	#	-i Makefile || die "patching Makefile failed"
 }
 
 src_compile() {
