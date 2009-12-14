@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/radare
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.10 2009/07/25 10:58:13 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.11 2009/12/14 21:33:39 deathwing00 Exp $
+
+*radare-1.5 (14 Dec 2009)
+
+  14 Dec 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> +radare-1.5.ebuild:
+  Version bump. Fixed website and download site.
 
 *radare-1.4.2 (25 Jul 2009)
 
