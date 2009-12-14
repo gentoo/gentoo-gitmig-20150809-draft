@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/matchbox-applet-volume-0.1.ebuild,v 1.6 2009/03/14 03:51:30 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/matchbox-applet-volume-0.1.ebuild,v 1.7 2009/12/14 15:10:50 yvasilev Exp $
 
 inherit versionator
 
@@ -33,5 +33,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
