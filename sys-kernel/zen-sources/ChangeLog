@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.13 2009/11/30 19:42:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.14 2009/12/14 07:23:05 wired Exp $
+
+*zen-sources-2.6.32_p1 (14 Dec 2009)
+*zen-sources-2.6.30_p11 (14 Dec 2009)
+
+  14 Dec 2009; Alex Alexander <wired@gentoo.org>
+  +zen-sources-2.6.30_p11.ebuild, +zen-sources-2.6.32_p1.ebuild:
+  version bumps: 2.6.30_p11 (final), 2.6.32_p1
 
 *zen-sources-2.6.31_p9 (30 Nov 2009)
 
