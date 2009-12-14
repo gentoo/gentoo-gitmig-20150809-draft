@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7_rc2.ebuild,v 1.2 2009/12/14 02:25:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7_rc2.ebuild,v 1.3 2009/12/14 17:39:15 scarabeus Exp $
 
 EAPI="2"
 
@@ -42,12 +42,10 @@ IUSE_VIDEO_CARDS="${IUSE_VIDEO_CARDS_UNSTABLE}
 	video_cards_r128
 	video_cards_radeon
 	video_cards_radeonhd
-	video_cards_s3virge
 	video_cards_savage
 	video_cards_sis
 	video_cards_sunffb
 	video_cards_tdfx
-	video_cards_trident
 	video_cards_via"
 IUSE="${IUSE_VIDEO_CARDS}
 	debug gallium motif +nptl pic +xcb kernel_FreeBSD"
@@ -124,12 +122,10 @@ src_configure() {
 	# ATI has two implementations as video_cards
 	driver_enable video_cards_radeon radeon r200 r300 r600
 	driver_enable video_cards_radeonhd r300 r600
-	driver_enable video_cards_s3virge s3v
 	driver_enable video_cards_savage savage
 	driver_enable video_cards_sis sis
 	driver_enable video_cards_sunffb ffb
 	driver_enable video_cards_tdfx tdfx
-	driver_enable video_cards_trident trident
 	driver_enable video_cards_via unichrome
 
 	# all live (experimental) stuff is wrapped around with experimental variable
