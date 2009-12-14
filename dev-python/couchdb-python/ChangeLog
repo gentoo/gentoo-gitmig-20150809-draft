@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.5 2009/09/19 11:27:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.6 2009/12/14 14:46:39 djc Exp $
+
+*couchdb-python-0.6.1 (14 Dec 2009)
+
+  14 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> couchdb-python-0.6.ebuild,
+  +couchdb-python-0.6.1.ebuild, metadata.xml:
+  Version bump to 0.6.1 (just released).
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> couchdb-python-0.6.ebuild:
   amd64/x86 stable, bug #285177
