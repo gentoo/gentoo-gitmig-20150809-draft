@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.6.1.ebuild,v 1.1 2009/12/14 14:46:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.6.1.ebuild,v 1.2 2009/12/14 16:17:34 arfrever Exp $
 
 EAPI="2"
 
@@ -20,18 +20,10 @@ RDEPEND="dev-python/httplib2
 		( dev-lang/python:2.5 dev-python/simplejson )
 		( dev-lang/python:2.4 dev-python/simplejson ) )
 	doc? ( dev-python/epydoc )"
-DEPEND=""
+DEPEND="dev-python/setuptools"
 
 PYTHON_MODNAME="couchdb"
-S=${WORKDIR}/CouchDB-${PV}
-
-src_prepare() {
-	distutils_src_prepare
-
-	# Delete debug print (bug #278561).
-	# Check if it is still needed in next version.
-	sed -e "/print 'Using stdlib json'/d" -i couchdb/json.py || die "sed failed"
-}
+S="${WORKDIR}/CouchDB-${PV}"
 
 src_install() {
 	distutils_src_install
