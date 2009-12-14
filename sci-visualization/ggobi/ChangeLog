@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/ggobi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.1 2009/03/20 19:40:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.2 2009/12/14 17:43:07 bicatali Exp $
+
+  14 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> ggobi-2.1.8.ebuild:
+  Changed plugin directory to libdir instead of datadir
 
 *ggobi-2.1.8 (20 Mar 2009)
 
