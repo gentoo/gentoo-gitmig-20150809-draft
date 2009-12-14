@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.89 2009/12/12 20:40:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.90 2009/12/14 18:12:06 ranger Exp $
+
+  14 Dec 2009; Brent Baude <ranger@gentoo.org> usbutils-0.86-r1.ebuild:
+  stable ppc64, bug 296426
 
   12 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   usbutils-0.86-r1.ebuild:
