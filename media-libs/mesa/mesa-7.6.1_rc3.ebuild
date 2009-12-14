@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.6.1_rc3.ebuild,v 1.1 2009/12/13 21:07:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.6.1_rc3.ebuild,v 1.2 2009/12/14 02:25:40 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -136,7 +136,7 @@ src_configure() {
 	# so the users cant get to this parts even with enabled useflags (downgrade
 	# from live to stable for example)
 	if [[ -n ${EXPERIMENTAL} ]]; then
-		# nouveau works only with gallium 
+		# nouveau works only with gallium
 		use gallium && myconf="${myconf} $(use_enable video_cards_nouveau gallium-nouveau)"
 		if use video_cards_nouveau && ! use gallium ; then
 			elog "Nouveau driver is available only via gallium interface."
