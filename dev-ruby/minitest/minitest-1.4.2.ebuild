@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.4.2.ebuild,v 1.1 2009/12/14 19:06:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.4.2.ebuild,v 1.2 2009/12/14 20:02:35 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -16,8 +16,8 @@ inherit ruby-fakegem
 
 ruby_add_bdepend test virtual/ruby-test-unit
 
-DESCRIPTION="Hoe extends rake to provide full project automation."
-HOMEPAGE="http://seattlerb.rubyforge.org/"
+DESCRIPTION="minitest/unit is a small and fast replacement for ruby's huge and slow test/unit."
+HOMEPAGE="http://rubyforge.org/projects/bfts"
 SRC_URI="mirror://rubygems/${P}.gem"
 
 LICENSE="MIT"
