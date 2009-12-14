@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2.4.ebuild,v 1.2 2009/12/09 21:47:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.2.4.ebuild,v 1.3 2009/12/14 19:05:15 ranger Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://jtds.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ppc64 x86"
 COMMON_DEPEND="
 	=dev-java/jcifs-1*
 	dev-java/junit:0"
