@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.8.ebuild,v 1.1 2009/12/14 14:22:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.8.ebuild,v 1.2 2009/12/14 14:23:16 ssuominen Exp $
 
 EAPI=2
 CMAKE_USE_DIR="${S}/plugins/qt4-gui"
 inherit cmake-utils
 
 DESCRIPTION="ICQ Client with v8 support"
-HOMEPAGE="http://www.licq.org/"         
+HOMEPAGE="http://www.licq.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -56,7 +56,7 @@ src_configure() {
 
 src_compile() {
 	emake || die
-	
+
 	local x
 	for x in ${licq_plugins}; do
 		cd "${S}"/plugins/${x}
