@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-applet-startup-monitor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/ChangeLog,v 1.8 2009/03/14 03:51:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-startup-monitor/ChangeLog,v 1.9 2009/12/14 14:48:04 yvasilev Exp $
+
+  14 Dec 2009; Yuri Vasilevski <yvasilev@gentoo.org>
+  matchbox-applet-startup-monitor-0.1.ebuild:
+  Fixed dodoc QA notice, fixes bug #296838. Thanks flameeyes.
 
   14 Mar 2009; <solar@gentoo.org>
   matchbox-applet-startup-monitor-0.1.ebuild:
