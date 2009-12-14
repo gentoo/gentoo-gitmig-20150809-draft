@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.9.ebuild,v 1.1 2009/12/12 18:25:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.9.ebuild,v 1.2 2009/12/14 17:45:32 bicatali Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -17,7 +17,6 @@ IUSE="doc mpi ncap2 udunits"
 
 RDEPEND="sci-libs/netcdf
 	mpi? ( virtual/mpi )
-	dap? ( sci-libs/netcdf )
 	udunits? ( >=sci-libs/udunits-2 )"
 
 DEPEND="${RDEPEND}
