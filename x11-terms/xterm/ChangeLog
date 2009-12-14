@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.283 2009/12/10 19:46:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.284 2009/12/14 11:42:25 remi Exp $
+
+  14 Dec 2009; Rémi Cardona <remi@gentoo.org> xterm-242.ebuild,
+  xterm-243.ebuild, xterm-250.ebuild, xterm-253.ebuild:
+  change LICENSE to MIT
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> xterm-250.ebuild:
   x86 stable, bug 294958
