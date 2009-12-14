@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-jstl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.21 2009/12/09 22:44:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.22 2009/12/14 19:14:04 ranger Exp $
+
+  14 Dec 2009; Brent Baude <ranger@gentoo.org> jakarta-jstl-1.1.2-r2.ebuild:
+  stable ppc64, bug 296226
 
   09 Dec 2009; Markus Meier <maekke@gentoo.org>
   jakarta-jstl-1.1.2-r2.ebuild:
