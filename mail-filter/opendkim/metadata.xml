@@ -17,6 +17,9 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 	queries</flag>
 	<flag name='multiplesigs'>Allow addition of multiple signatures when key
 	lists are in use.</flag>
+	<flag name='opendbx'>Use opendbx backend to faciliate dataset driven
+	OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide
+	variety of databse types</flag>
 
 </use>
 </pkgmetadata>
