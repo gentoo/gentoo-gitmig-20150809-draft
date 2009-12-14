@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3676 2009/12/14 09:17:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3677 2009/12/14 10:44:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Add mask for app-editors/emacs-vcs, preparing for package move.
 
   14 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking media-gfx/giram for QA removal.
