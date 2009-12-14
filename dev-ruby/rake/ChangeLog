@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.83 2009/12/09 20:47:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.84 2009/12/14 18:42:23 graaff Exp $
+
+*rake-0.8.7-r2 (14 Dec 2009)
+
+  14 Dec 2009; Hans de Graaff <graaff@gentoo.org> +rake-0.8.7-r2.ebuild:
+  Convert to ruby-fakegem eclass so that packages depending on it can be
+  bumped.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -rake-0.8.3.ebuild:
   Remove old version.
