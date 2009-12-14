@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libplist
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.3 2009/07/18 23:37:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.4 2009/12/14 23:20:45 chainsaw Exp $
+
+*libplist-1.1 (14 Dec 2009)
+
+  14 Dec 2009; <chainsaw@gentoo.org> +libplist-1.1.ebuild:
+  Version bump. With thanks to Tomas "scarabeus" Chvatal.
 
 *libplist-0.13 (18 Jul 2009)
 
