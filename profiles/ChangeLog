@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3675 2009/12/13 23:27:08 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3676 2009/12/14 09:17:50 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking media-gfx/giram for QA removal.
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> base/use.mask,
   desc/video_cards.desc:
