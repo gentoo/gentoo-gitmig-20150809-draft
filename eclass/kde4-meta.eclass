@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.30 2009/12/10 17:35:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.31 2009/12/14 19:44:15 abcd Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -635,7 +635,7 @@ kde4-meta_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	# backwards-compatibility: make mycmakeargs an array, if it isn't already
-	if [[ $(declare -p mycmakeargs) != "declare -a mycmakeargs="* ]]; then
+	if [[ $(declare -p mycmakeargs 2>&-) != "declare -a mycmakeargs="* ]]; then
 		mycmakeargs=(${mycmakeargs})
 	fi
 
