@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.32 2009/10/16 18:03:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.33 2009/12/14 15:15:08 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -161,6 +161,7 @@ media-video/binkplayer
 net-dialup/slmodem
 net-im/skype
 net-misc/icaclient
+net-nntp/bnr2
 net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
