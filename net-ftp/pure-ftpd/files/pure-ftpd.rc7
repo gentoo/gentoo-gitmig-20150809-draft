@@ -1,7 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc7,v 1.1 2009/11/23 12:59:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc7,v 1.2 2009/12/14 17:31:26 voyageur Exp $
+
+ftpd_pidifle="/var/run/pure-ftpd.pid"
+script_pidfile="/var/run/pure-uploadscript.pid"
 
 depend() {
 	need net
@@ -23,7 +26,7 @@ start() {
 		OKNODO="--oknodo"
 	fi
 	ebegin "Starting Pure-FTPd"
-	start-stop-daemon --start --quiet --pidfile /var/run/pure-ftpd.pid $OKNODO --exec /usr/sbin/pure-ftpd -- --pidfile /var/run/pure-ftpd.pid $SERVER $MAX_CONN $MAX_CONN_IP $DAEMON $DISK_FULL $USE_NAT $AUTH $LOG $TIMEOUT $CHARCONV $MISC_OTHER $UPSCRIPT
+	start-stop-daemon --start --quiet --pidfile ${ftpd_pidfile} $OKNODO --exec /usr/sbin/pure-ftpd -- --pidfile ${ftpd_pidfile} $SERVER $MAX_CONN $MAX_CONN_IP $DAEMON $DISK_FULL $USE_NAT $AUTH $LOG $TIMEOUT $CHARCONV $MISC_OTHER $UPSCRIPT
 	result=$?
 	if [ $result -ne 0 ] ; then
 		eend 1 "Could not launch Pure-FTPd"
@@ -31,7 +34,7 @@ start() {
 		eend $result
 		if [ -n "$UPLOADSCRIPT" ] ; then
 			ebegin "Starting Pure-FTPd upload script"
-			start-stop-daemon --start --quiet --make-pidfile --pidfile /var/run/pure-uploadscript.pid --exec /usr/sbin/pure-uploadscript -- -B -r $UPLOADSCRIPT
+			start-stop-daemon --start --quiet --make-pidfile --pidfile ${script_pidfile} --exec /usr/sbin/pure-uploadscript -- -B -r $UPLOADSCRIPT
 			eend $?
 		fi
 	fi
@@ -39,11 +42,11 @@ start() {
 
 stop() {
 	ebegin "Stopping Pure-FTPd"
-	start-stop-daemon --stop --retry 20 --quiet --pidfile /var/run/pure-ftpd.pid
+	start-stop-daemon --stop --retry 20 --quiet --pidfile ${ftpd_pidfile}
 	eend $?
 	if [ -n "$UPLOADSCRIPT" ] ; then
 		ebegin "Stopping Pure-FTPd upload script"
-		start-stop-daemon --stop --retry 20 --quiet --pidfile /var/run/pure-uploadscript.pid
+		start-stop-daemon --stop --retry 20 --quiet --pidfile ${script_pidfile}
 		eend $?
 	fi
 }

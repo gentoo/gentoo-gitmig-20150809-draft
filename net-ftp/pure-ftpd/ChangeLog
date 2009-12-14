@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.82 2009/11/23 12:59:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.83 2009/12/14 17:31:26 voyageur Exp $
+
+*pure-ftpd-1.0.27 (14 Dec 2009)
+
+  14 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +pure-ftpd-1.0.27.ebuild, files/pure-ftpd.rc7:
+  Version bump, use pid variables in init script by Polynomial-C in bug
+  #296864
 
 *pure-ftpd-1.0.26 (23 Nov 2009)
 
