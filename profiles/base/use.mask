@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.89 2009/12/13 23:27:20 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.90 2009/12/14 18:23:16 a3li Exp $
 
 # KDE4 specific enablefinal flag
 # Uses huge amounts of ram, and those ricers would be spamming bugzilla.
@@ -244,3 +244,4 @@ pvm
 # Ruby Enterprise Edition not yet in the tree
 ruby_targets_ruby19
 ruby_targets_ree18
+ruby_targets_jruby

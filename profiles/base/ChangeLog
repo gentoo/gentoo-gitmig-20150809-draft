@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.120 2009/12/11 15:07:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.121 2009/12/14 18:23:16 a3li Exp $
+
+  14 Dec 2009; Alex Legler <a3li@gentoo.org> use.mask:
+  Add ruby_targets_jruby to use.mask
 
   11 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask net-im/licq[kde,qt4] wrt bugs #268134 and #296505.
