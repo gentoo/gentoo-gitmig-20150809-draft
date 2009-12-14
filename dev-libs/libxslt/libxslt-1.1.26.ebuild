@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.5 2009/10/08 11:42:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.6 2009/12/14 16:31:06 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils toolchain-funcs
@@ -11,13 +11,12 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="crypt debug python"
 
-RDEPEND=">=dev-libs/libxml2-2.6.27
+DEPEND=">=dev-libs/libxml2-2.6.27
 	crypt?  ( >=dev-libs/libgcrypt-1.1.42 )
 	python? ( >=dev-lang/python-2.5 )"
-DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/libxslt.m4-${P}.patch \
