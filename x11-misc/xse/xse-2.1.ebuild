@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.11 2008/10/14 01:39:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.12 2009/12/14 11:36:32 remi Exp $
 
 inherit eutils
 
 DESCRIPTION="Command Line Interface to XSendEvent()"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/"
 SRC_URI="ftp://ftp.x.org/R5contrib/xsendevent-${PV}.tar.Z"
-LICENSE="X11"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

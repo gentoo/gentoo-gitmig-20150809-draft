@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.16 2008/10/14 01:39:40 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.17 2009/12/14 11:36:32 remi Exp $
+
+  14 Dec 2009; Rémi Cardona <remi@gentoo.org> xse-2.1.ebuild:
+  change LICENSE to MIT
 
   14 Oct 2008; Jeremy Olexa <darkside@gentoo.org> xse-2.1.ebuild:
   (non maintainer commit) pull imake out of RDEPEND, bug #221437
