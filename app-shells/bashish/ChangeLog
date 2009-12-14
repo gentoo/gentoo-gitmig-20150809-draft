@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bashish
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.19 2008/11/18 05:09:25 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.20 2009/12/14 12:03:01 jer Exp $
+
+*bashish-2.0.7-r1 (14 Dec 2009)
+
+  14 Dec 2009; Jeroen Roovers <jer@gentoo.org> +bashish-2.0.7-r1.ebuild:
+  Install docs into PF (bug #296553).
 
   18 Nov 2008; Jeroen Roovers <jer@gentoo.org> -bashish-1.9.23.ebuild
   -bashish-1.9.21.ebuild -files/1.9.23-fix-install.patch:
