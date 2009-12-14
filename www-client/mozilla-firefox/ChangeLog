@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.577 2009/12/13 17:54:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.578 2009/12/14 01:54:38 mr_bones_ Exp $
+
+  14 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  mozilla-firefox-3.5.5.ebuild:
+  fix logic error
 
   13 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   mozilla-firefox-3.5.5.ebuild:

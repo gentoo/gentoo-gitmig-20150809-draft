@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.5.ebuild,v 1.7 2009/12/13 17:54:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.5.ebuild,v 1.8 2009/12/14 01:54:38 mr_bones_ Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -257,9 +257,12 @@ src_install() {
 		|| die "failed to symlink"
 
 	# very ugly hack to make firefox not sigbus on sparc
-	use sparc && sed -e 's/Firefox/FirefoxGentoo/g' \
-					 -i "${D}/${MOZILLA_FIVE_HOME}/application.ini" || \
-					 die "sparc sed failed"
+	if use sparc ; then
+		sed -i \
+			-e 's/Firefox/FirefoxGentoo/g' \
+			"${D}/${MOZILLA_FIVE_HOME}/application.ini" \
+			|| die "sparc sed failed"
+	fi
 }
 
 pkg_postinst() {
