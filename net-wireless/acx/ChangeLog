@@ -1,6 +1,17 @@
 # ChangeLog for net-wireless/acx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.14 2008/04/28 15:41:22 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.15 2009/12/14 17:33:02 lxnay Exp $
+
+*acx-0.3.37_p20080210 (14 Dec 2009)
+
+  14 Dec 2009; Fabio Erculiani <lxnay@gentoo.org>
+  +files/2.6.31+-mepis/01_addRequestInfo.dpatch.gz,
+  -acx-0.3.37_p20080112.ebuild,
+  +files/2.6.31+-mepis/02_fix_irqreturn_t.dpatch.gz,
+  +acx-0.3.37_p20080210.ebuild, +files/2.6.31+-mepis/03_typo_fix.dpatch.gz,
+  +files/2.6.31+-mepis/04_pci_and_usb.dpatch.gz:
+  Fix compilation with latest kernels (2.6.31, 2.6.32), thanks everybody
+  involved, close bug #229459, #265000, #243392
 
   28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
