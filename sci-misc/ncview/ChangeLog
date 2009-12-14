@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/ncview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.15 2009/12/12 18:30:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.16 2009/12/14 19:12:55 bicatali Exp $
+
+  14 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> ncview-1.93g.ebuild:
+  Fixed ppm support and share/lib issues. Thanks Zak Kipling, bug #272266
 
 *ncview-1.93g (12 Dec 2009)
 
