@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.112 2009/12/13 22:26:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.113 2009/12/14 13:12:28 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -189,4 +189,4 @@ app-emulation/emul-linux-x86-soundlibs -arts
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2009)
 # Masked for QA, bugs #268134 and #296505.
-net-im/licq kde qt4
+<net-im/licq-1.3.8 kde qt4
