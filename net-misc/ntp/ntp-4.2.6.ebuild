@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6.ebuild,v 1.2 2009/12/14 18:39:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6.ebuild,v 1.3 2009/12/14 18:47:09 vapier Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic autotools
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P=${P/_p/p}
 DESCRIPTION="Network Time Protocol suite/programs"
@@ -40,10 +40,8 @@ src_prepare() {
 	#epatch "${FILESDIR}"/4.2.0.20040617-hostname.patch
 	epatch "${FILESDIR}"/${PN}-4.2.4_p5-adjtimex.patch #254030
 	epatch "${FILESDIR}"/${PN}-4.2.4_p7-nano.patch #270483
-	epatch "${FILESDIR}"/${PV}-as-needed.patch #296832
+	epatch "${FILESDIR}"/${P}-linking.patch #296832
 	append-cppflags -D_GNU_SOURCE #264109
-
-	eautoreconf
 }
 
 src_configure() {

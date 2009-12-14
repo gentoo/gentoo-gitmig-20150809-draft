@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.155 2009/12/14 18:39:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.156 2009/12/14 18:47:09 vapier Exp $
 
   14 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
-  +files/4.2.6-as-needed.patch, ntp-4.2.6.ebuild:
-  QA: Apply as-needed fix per bug #296832. Thanks to Martin von Gagern for
+  +files/ntp-4.2.6-as-needed.patch, ntp-4.2.6.ebuild:
+  Apply as-needed fix per bug #296832. Thanks to Martin von Gagern for
   patch.
 
 *ntp-4.2.6 (14 Dec 2009)
