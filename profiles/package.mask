@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10968 2009/12/14 17:25:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10969 2009/12/14 19:18:49 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -528,12 +528,6 @@ dev-lisp/cl-gcc-xml-ffi
 <media-sound/amarok-2
 <app-editors/kile-2.1_beta1
 app-text/kbibtex
-
-# Markos Chandras <hwoarang@gentoo.org> (12 Nov 2009)
-# Fails to build with recent kernels. Upstream doesn't
-# support it anymore and it has been replaced by dazukofs
-# Pending removal in 30 days (bug #278414)
-sys-fs/dazuko
 
 # Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
 # beta/experimental drivers
