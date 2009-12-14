@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.2-r2.ebuild,v 1.9 2009/12/14 16:44:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.2-r2.ebuild,v 1.10 2009/12/14 19:29:33 abcd Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ src_configure() {
 		--qtdir="${EPREFIX}"/usr \
 		--includedir="${EPREFIX}"/usr/include/qca2 \
 		--libdir="${EPREFIX}"/usr/${_libdir}/qca2 \
+		--certstore-path="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt \
 		--no-separate-debug-info \
 		--disable-tests \
 		--$(use debug && echo debug || echo release) \
