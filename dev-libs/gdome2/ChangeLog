@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.30 2008/04/21 17:09:36 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.31 2009/12/14 19:54:51 vostorga Exp $
+
+  14 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> gdome2-0.8.1-r3.ebuild:
+  Dropping doc USE flag because it is useless, bug 265176
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
