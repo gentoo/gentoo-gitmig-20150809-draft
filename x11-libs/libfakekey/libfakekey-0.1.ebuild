@@ -1,6 +1,6 @@
-# Copyright 2006-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1.ebuild,v 1.7 2008/07/13 07:33:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1.ebuild,v 1.8 2009/12/14 04:58:28 yvasilev Exp $
 
 DESCRIPTION="Helper library for the x11-misc/matchbox-keyboard package."
 HOMEPAGE="http://matchbox-project.org/"
@@ -29,6 +29,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 	use doc && dohtml doc/html/*
 }
