@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.49 2009/12/10 21:39:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.50 2009/12/14 19:25:10 armin76 Exp $
+
+  14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Test-Harness-3.17.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #288026
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> Test-Harness-3.17.ebuild:
   Marking Test-Harness-3.17 ppc64 stable for bug 288026
