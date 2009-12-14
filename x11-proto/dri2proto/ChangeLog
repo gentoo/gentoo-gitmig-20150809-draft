@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/dri2proto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.22 2009/10/26 20:48:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.23 2009/12/14 10:06:39 remi Exp $
+
+  14 Dec 2009; Rémi Cardona <remi@gentoo.org> dri2proto-1.99.3.ebuild,
+  dri2proto-2.1.ebuild:
+  change LICENSE to MIT
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org> dri2proto-2.1.ebuild:
   Stable for HPPA (bug #282290).
