@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10965 2009/12/14 10:44:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10966 2009/12/14 16:03:49 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -478,13 +478,6 @@ x11-drivers/xf86-video-vermilion
 # Keep pre-alpha development snapshot and live ebuild masked.
 =app-emacs/gnus-5.13_p*
 ~app-emacs/gnus-9999
-
-# Ulrich Mueller <ulm@gentoo.org> (15 Nov 2009)
-# Last release was in May 2008 which is a long time
-# for a development branch. Use app-emacs/gnus, or the
-# Gnus version included with app-editors/emacs instead.
-# Masked for removal in 30 days, bug 293302.
-app-emacs/ngnus
 
 # Peter Volkov <pva@gentoo.org> (15 Nov 2009)
 # Use net-analyzer/cacti-spine instead. It's the same package but newer.
