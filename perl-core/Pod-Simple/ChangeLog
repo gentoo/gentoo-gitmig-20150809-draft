@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Pod-Simple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.10 2009/12/10 21:36:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.11 2009/12/14 19:15:54 armin76 Exp $
+
+  14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Pod-Simple-3.07.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #288026
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> Pod-Simple-3.07.ebuild:
   Marking Pod-Simple-3.07 ppc64 stable for bug 288026
