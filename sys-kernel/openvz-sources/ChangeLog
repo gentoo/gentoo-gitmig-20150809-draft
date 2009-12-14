@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.122 2009/11/26 19:12:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.123 2009/12/14 08:26:49 pva Exp $
+
+*openvz-sources-2.6.18.028.066.10 (14 Dec 2009)
+
+  14 Dec 2009; Peter Volkov <pva@gentoo.org>
+  -openvz-sources-2.6.18.028.066.7.ebuild,
+  +openvz-sources-2.6.18.028.066.10.ebuild:
+  Version bump of RHEL5 based kernel.
 
 *openvz-sources-2.6.18.028.066.7 (26 Nov 2009)
 
