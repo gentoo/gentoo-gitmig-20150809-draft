@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.8.ebuild,v 1.2 2009/12/14 17:43:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.8.ebuild,v 1.3 2009/12/14 22:07:17 bicatali Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Visualization program for exploring high-dimensional data"
 HOMEPAGE="http://www.ggobi.org"
@@ -12,7 +12,7 @@ SRC_URI="http://www.ggobi.org/downloads/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="minimal"
+IUSE="minimal nls"
 
 RDEPEND=">=media-gfx/graphviz-2.6
 	>=x11-libs/gtk+-2.6
@@ -21,15 +21,22 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	# build with external system libltdl
+	rm -rf libltdl
+
 	has_version ">=media-gfx/graphviz-2.22" && \
 		epatch "${FILESDIR}"/${P}-graphviz.patch
-	# sedding directly in the Makefile.in instead of the Makefile.plugins
-	# to avoid rebuilding 10 autoreconf for such a simple fix
-	sed -i -e '/plugindir/s/datadir/libdir/g' plugins/*/Makefile.in || die
+	epatch "${FILESDIR}"/${P}-syslibltdl.patch
+	epatch "${FILESDIR}"/${P}-plugindir.patch
+	eautoreconf
 }
 
 src_configure() {
-	econf $(use_with !minimal all-plugins)
+	econf \
+		--disable-maintainer-mode \
+		--disable-rpath \
+		$(use_enable nls) \
+		$(use_with !minimal all-plugins)
 }
 
 src_compile() {
