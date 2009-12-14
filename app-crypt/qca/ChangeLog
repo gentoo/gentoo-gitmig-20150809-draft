@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.77 2009/11/13 12:40:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.78 2009/12/14 16:44:17 abcd Exp $
+
+  14 Dec 2009; Jonathan Callen <abcd@gentoo.org> -qca-2.0.0-r2.ebuild,
+  -files/qca-2.0.0-debug-same-pkgconfig-file.patch, -qca-2.0.2-r1.ebuild,
+  qca-2.0.2-r2.ebuild:
+  Add ~amd64-linux/~x86-linux; drop old versions
 
   13 Nov 2009; Joseph Jezak <josejx@gentoo.org> qca-2.0.2-r2.ebuild:
   Marked ppc64 stable for bug #272685.

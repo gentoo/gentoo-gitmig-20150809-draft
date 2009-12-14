@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.2-r2.ebuild,v 1.8 2009/11/13 12:40:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.2-r2.ebuild,v 1.9 2009/12/14 16:44:17 abcd Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://delta.affinix.com/download/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug doc examples"
 RESTRICT="test"
 
@@ -26,13 +26,15 @@ src_prepare() {
 }
 
 src_configure() {
+	use prefix || EPREFIX=
+
 	_libdir=$(get_libdir)
 
 	./configure \
-		--prefix=/usr \
-		--qtdir=/usr \
-		--includedir="/usr/include/qca2" \
-		--libdir="/usr/${_libdir}/qca2" \
+		--prefix="${EPREFIX}"/usr \
+		--qtdir="${EPREFIX}"/usr \
+		--includedir="${EPREFIX}"/usr/include/qca2 \
+		--libdir="${EPREFIX}"/usr/${_libdir}/qca2 \
 		--no-separate-debug-info \
 		--disable-tests \
 		--$(use debug && echo debug || echo release) \
@@ -46,7 +48,7 @@ src_install() {
 	dodoc README TODO || die "dodoc failed"
 
 	cat <<-EOF > "${WORKDIR}"/44qca2
-	LDPATH=/usr/${_libdir}/qca2
+	LDPATH="${EPREFIX}/usr/${_libdir}/qca2"
 	EOF
 	doenvd "${WORKDIR}"/44qca2 || die
 
