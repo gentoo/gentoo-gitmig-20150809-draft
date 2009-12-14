@@ -1,5 +1,5 @@
---- nbench-byte-2.2.3/Makefile.orig	2004-12-30 03:23:30.000000000 +0100
-+++ nbench-byte-2.2.3/Makefile	2008-10-29 06:13:34.000000000 +0100
+--- Makefile.org	2004-12-30 03:23:30.000000000 +0100
++++ Makefile	2009-12-14 13:31:18.000000000 +0100
 @@ -19,10 +19,10 @@
  # You should leave -static in the CFLAGS so that your sysinfo can be
  # compiled into the executable.
@@ -13,3 +13,12 @@
  
  # if your gcc lets you do it, then try this one
  #CFLAGS = -s -static -Wall -O3 -fomit-frame-pointer -funroll-loops
+@@ -126,7 +126,7 @@
+ 	if [ "4" = `./pointer` ] ; then touch pointer.h ;\
+ 	else echo "#define LONG64" >pointer.h ; fi
+ 
+-misc.o: misc.h misc.c Makefile
++misc.o: misc.h misc.c pointer.h Makefile
+ 	$(CC) $(MACHINE) $(DEFINES) $(CFLAGS)\
+ 		-c misc.c
+ 

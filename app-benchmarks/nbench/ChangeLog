@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/nbench
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.23 2009/04/01 14:56:27 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.24 2009/12/14 12:43:34 jer Exp $
+
+*nbench-2.2.3-r1 (14 Dec 2009)
+
+  14 Dec 2009; Jeroen Roovers <jer@gentoo.org> +nbench-2.2.3-r1.ebuild,
+  files/nbench-2.2.3-Makefile.patch:
+  Bump to hopefully fix missing pointer.h (bug #296860).
 
   01 Apr 2009; Jeroen Roovers <jer@gentoo.org> -nbench-2.2.2.ebuild,
   nbench-2.2.3.ebuild:
