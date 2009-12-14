@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.98.ebuild,v 1.2 2009/12/13 17:42:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.98-r1.ebuild,v 1.1 2009/12/14 14:06:35 pva Exp $
 
 EAPI="2"
 
@@ -63,12 +63,12 @@ src_compile() {
 	if use lcms; then
 		ELIBS="-llcms ${ELIBS}"
 	else
-		ECFLAGS+=" NO_LCMS=yes"
+		ECFLAGS+=" -DNO_LCMS=yes"
 	fi
 	if use jpeg; then
 		ELIBS="-ljpeg ${ELIBS}"
 	else
-		ECFLAGS+=" NO_JPEG=yes"
+		ECFLAGS+=" -DNO_JPEG=yes"
 	fi
 	if use nls; then
 		ECFLAGS+=" -DLOCALEDIR=\"/usr/share/locale/\""

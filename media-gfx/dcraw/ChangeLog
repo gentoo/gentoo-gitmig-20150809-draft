@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.49 2009/12/13 08:54:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.50 2009/12/14 14:06:35 pva Exp $
+
+*dcraw-8.98-r1 (14 Dec 2009)
+
+  14 Dec 2009; Peter Volkov <pva@gentoo.org> -dcraw-8.98.ebuild,
+  +dcraw-8.98-r1.ebuild:
+  Fixed lcms and jpeg USE flags handling, bug #296826, thank Piotr Radkowski
+  for report and fix.
 
 *dcraw-8.98 (13 Dec 2009)
 
