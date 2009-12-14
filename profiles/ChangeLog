@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3678 2009/12/14 16:03:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3679 2009/12/14 16:41:12 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Mask qca:1, qca-tls
 
   14 Dec 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for app-emacs/ngnus after removal of the package, bug 293302.
