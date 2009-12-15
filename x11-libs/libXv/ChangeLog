@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.51 2009/12/10 19:24:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.52 2009/12/15 19:39:38 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> libXv-1.0.5.ebuild:
+  Marking libXv-1.0.5 ppc64 stable for bug 294958
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> libXv-1.0.5.ebuild:
   x86 stable, bug 294958
