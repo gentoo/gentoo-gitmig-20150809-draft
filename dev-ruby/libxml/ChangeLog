@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.30 2009/12/09 19:33:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.31 2009/12/15 20:00:53 flameeyes Exp $
+
+*libxml-1.1.3-r1 (15 Dec 2009)
+
+  15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libxml-1.1.3-r1.ebuild:
+  Bump to ruby-fakegem (and yes, the tests crash Ruby here as well, but it's
+  not a regression).
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -libxml-0.5.4.ebuild:
   Remove old version.
