@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gimp-greycstoration
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-greycstoration/ChangeLog,v 1.7 2008/10/17 18:53:51 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-greycstoration/ChangeLog,v 1.8 2009/12/15 14:56:46 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
 
   17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   smp USE-flag is global now
