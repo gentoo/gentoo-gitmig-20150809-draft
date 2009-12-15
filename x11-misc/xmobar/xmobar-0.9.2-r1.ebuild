@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.9.2-r1.ebuild,v 1.1 2009/11/26 21:46:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.9.2-r1.ebuild,v 1.2 2009/12/15 21:41:37 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 inherit base haskell-cabal
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/ghc-6.6.1
 		xft?  ( dev-haskell/utf8-string
 				dev-haskell/x11-xft )
 		mail? ( dev-haskell/hinotify )"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.2"
 
 PATCHES=("${FILESDIR}/${P}-*")
