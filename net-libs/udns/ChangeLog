@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.15 2009/06/28 11:45:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.16 2009/12/15 14:46:07 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
 
   28 Jun 2009; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
