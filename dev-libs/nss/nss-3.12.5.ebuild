@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5.ebuild,v 1.1 2009/12/15 18:51:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5.ebuild,v 1.2 2009/12/15 22:59:34 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -21,13 +21,11 @@ DEPEND="dev-util/pkgconfig"
 RDEPEND=">=dev-libs/nspr-${NSPR_VER}
 	>=dev-db/sqlite-3.5"
 
-S="${WORKDIR}"
-
 src_unpack() {
 	unpack ${A}
 
 	# Custom changes for gentoo
-	epatch "${FILESDIR}"/"${PN}"-3.12.4-gentoo-fixups-1.diff
+	epatch "${FILESDIR}"/"${PN}"-3.12.5-gentoo-fixups.diff
 
 	cd "${S}"/mozilla/security/coreconf
 
