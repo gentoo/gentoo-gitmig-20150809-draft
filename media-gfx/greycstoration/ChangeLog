@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/greycstoration
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.4 2008/08/30 22:28:00 calchan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.5 2009/12/15 14:41:02 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: put required herd tag.
 
 *greycstoration-2.9 (30 Aug 2008)
 
