@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pmake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pmake/ChangeLog,v 1.5 2009/12/15 20:00:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pmake/ChangeLog,v 1.6 2009/12/15 23:02:31 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> pmake-0.ebuild:
+  kernel_Solaris -> kernel_SunOS
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> pmake-0.ebuild:
   QA: Add prefix keywords; fix deps for prefix
