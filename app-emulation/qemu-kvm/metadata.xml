@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>cardoe@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>lu_zero@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>jmbsvicetto@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>tommy@gentoo.org</email>
-</maintainer>
+<herd>qemu</herd>
 <use>
 		<flag name='alsa'>Enable alsa output for sound emulation</flag>
 		<flag name='esd'>Enable esound output for sound emulation</flag>

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.75 2009/12/06 22:00:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.76 2009/12/15 16:35:26 cardoe Exp $
+
+  15 Dec 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  change to qemu herd
 
 *qemu-0.11.1 (06 Dec 2009)
 
