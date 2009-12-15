@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.7.ebuild,v 1.2 2008/10/10 08:14:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.7.ebuild,v 1.3 2009/12/15 19:28:38 ssuominen Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ IUSE="cjk doc ncurses ssl tcl X"
 
 S="${WORKDIR}"
 DESCRIPTION="Complete 3270 access package"
-SRC_URI="http://x3270.bgp.nu/download/${PN}-${PV/_/}.tgz"
-HOMEPAGE="http://www.geocities.com/SiliconValley/Peaks/7814/"
+SRC_URI="mirror://gentoo/${PN}-${PV/_/}.tgz"
+HOMEPAGE="http://x3270.bgp.nu/"
 
 SLOT="0"
 LICENSE="GPL-2"
