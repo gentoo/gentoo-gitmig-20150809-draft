@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.3.ebuild,v 1.3 2009/12/13 15:54:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.3.ebuild,v 1.4 2009/12/15 19:19:43 armin76 Exp $
 
 inherit python eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://omniorb.sourceforge.net/"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl"
 
 RDEPEND="dev-lang/python
