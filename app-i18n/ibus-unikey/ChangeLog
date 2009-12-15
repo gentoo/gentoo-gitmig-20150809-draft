@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-unikey
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-unikey/ChangeLog,v 1.1 2009/12/15 17:50:14 matsuu Exp $
+
+*ibus-unikey-0.3 (15 Dec 2009)
+
+  15 Dec 2009; MATSUU Takuto <matsuu@gentoo.org> +ibus-unikey-0.3.ebuild,
+  +metadata.xml:
+  Initial import, bug #296447.
+
