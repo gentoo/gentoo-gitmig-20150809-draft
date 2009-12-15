@@ -1,6 +1,12 @@
 # ChangeLog for virtual/poppler-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-utils/ChangeLog,v 1.25 2009/10/19 19:36:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-utils/ChangeLog,v 1.26 2009/12/15 15:52:03 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> poppler-utils-0.8.7.ebuild,
+  poppler-utils-0.10.4.ebuild, poppler-utils-0.10.5.ebuild,
+  poppler-utils-0.12.0.ebuild, poppler-utils-0.12.1.ebuild:
+  Add prefix keywords (~x86-interix ~amd64-linux ~x86-linux ~ppc-macos
+  ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris)
 
   19 Oct 2009; Alexis Ballier <aballier@gentoo.org>
   poppler-utils-0.12.1.ebuild:
