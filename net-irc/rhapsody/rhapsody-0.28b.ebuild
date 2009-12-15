@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.28b.ebuild,v 1.4 2008/06/07 09:40:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.28b.ebuild,v 1.5 2009/12/15 19:16:19 armin76 Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="IRC client intended to be displayed on a text console"
 HOMEPAGE="http://rhapsody.sourceforge.net/"

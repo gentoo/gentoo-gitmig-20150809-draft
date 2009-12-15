@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/rhapsody
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.9 2008/06/07 09:40:20 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.10 2009/12/15 19:16:19 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org> rhapsody-0.28b.ebuild:
+  Add missing inherit, bug #297063
 
   07 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   +files/rhapsody-0.28b-uclibc.patch, rhapsody-0.28b.ebuild:
