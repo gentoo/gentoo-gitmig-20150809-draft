@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.6.ebuild,v 1.3 2009/12/09 21:20:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.6.ebuild,v 1.4 2009/12/15 18:58:28 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://rubyforge.org/projects/gruff/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="amd64 ia64 x86"
 IUSE=""
 USE_RUBY="ruby18"
 
