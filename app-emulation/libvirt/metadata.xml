@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>xen</herd>
+	<herd>virtualization</herd>
 	<maintainer>
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
 	<maintainer>
-		<email>marineam@gentoo.org</email>
-		<name>Michael Marineau</name>
+		<email>cardoe@gentoo.org</email>
+		<name>Doug Goldstein</name>
 	</maintainer>
 	<use>
 		<flag name='udev'>Use <pkg>sys-fs/udev</pkg> to determine available
