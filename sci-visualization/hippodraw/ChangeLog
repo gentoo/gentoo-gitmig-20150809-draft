@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.13 2009/11/13 03:45:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.14 2009/12/15 23:26:12 markusle Exp $
+
+  15 Dec 2009; Markus Dittrich <markusle@gentoo.org>
+  hippodraw-1.21.3-r1.ebuild, +files/hippodraw-1.21.3-autoconf-2.64.patch:
+  Added patch to fix configure issues with autoconf-2.64 and later (fixes
+  #294376).
 
   13 Nov 2009; Markus Dittrich <markusle@gentoo.org>
   hippodraw-1.21.3-r1.ebuild, +files/hippodraw-1.21.3-gcc4.4.patch:

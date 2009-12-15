@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r1.ebuild,v 1.8 2009/11/13 03:45:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r1.ebuild,v 1.9 2009/12/15 23:26:12 markusle Exp $
 
 EAPI=2
 
@@ -53,6 +53,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-minuit2.patch
 	epatch "${FILESDIR}"/${P}-wcslib.patch
 	epatch "${FILESDIR}"/${P}-qt4.patch
+	epatch "${FILESDIR}"/${P}-autoconf-2.64.patch
 
 	# fix the install doc directory to gentoo's one
 	local docdir=/usr/share/doc/${PF}
