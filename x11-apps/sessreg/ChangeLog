@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.60 2009/12/10 18:20:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.61 2009/12/15 15:00:08 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org> sessreg-1.0.4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #282290
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> sessreg-1.0.5.ebuild:
   x86 stable, bug 294958
