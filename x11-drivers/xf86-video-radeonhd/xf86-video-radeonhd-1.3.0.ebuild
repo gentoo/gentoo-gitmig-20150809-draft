@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/xf86-video-radeonhd-1.3.0.ebuild,v 1.3 2009/12/10 19:07:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/xf86-video-radeonhd-1.3.0.ebuild,v 1.4 2009/12/15 19:31:17 ranger Exp $
 
 XDPVER=-1
 inherit x-modular
@@ -10,7 +10,7 @@ HOMEPAGE="http://wiki.x.org/wiki/radeonhd"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-base/xorg-server-1.3.0
