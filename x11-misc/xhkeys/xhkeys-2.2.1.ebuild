@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/xhkeys-2.2.1.ebuild,v 1.5 2006/10/22 00:20:41 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/xhkeys-2.2.1.ebuild,v 1.6 2009/12/15 17:47:29 ssuominen Exp $
 
 DESCRIPTION="assign particular actions to any key or key combination"
-HOMEPAGE="http://www.geocities.com/wmalms/"
-SRC_URI="http://www.geocities.com/wmalms/${P}.tar.gz"
+HOMEPAGE="http://wmalms.tripod.com/#XHKEYS"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,6 +19,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_install() {
-	dobin xhkeys xhkconf
+	dobin xhkeys xhkconf || die
 	dodoc README VERSION
 }
