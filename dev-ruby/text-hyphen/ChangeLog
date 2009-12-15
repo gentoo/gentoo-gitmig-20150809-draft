@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/text-hyphen
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.10 2008/11/10 10:49:52 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.11 2009/12/15 14:54:25 flameeyes Exp $
+
+*text-hyphen-1.0.0-r1 (15 Dec 2009)
+
+  15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +text-hyphen-1.0.0-r1.ebuild, +files/text-hyphen-1.0.0+ruby-1.9.patch:
+  Bump to ruby-fakegem, drop ppc and ppc64 keywords for now.
 
   10 Nov 2008; Raúl Porcel <armin76@gentoo.org> text-hyphen-1.0.0.ebuild:
   ia64 stable wrt #244214
