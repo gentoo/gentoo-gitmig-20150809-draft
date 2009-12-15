@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0-r1.ebuild,v 1.1 2009/11/29 12:42:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0-r2.ebuild,v 1.1 2009/12/15 20:46:11 hwoarang Exp $
 
 EAPI="2"
 
@@ -47,7 +47,7 @@ src_prepare() {
 src_compile() {
 	# build main executable
 	cmake-utils_src_compile
-	local found=0
+	found=0
 	# build protocol support
 	if use jabber; then
 		found=1
