@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.429 2009/12/09 14:51:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.430 2009/12/15 02:05:27 jer Exp $
+
+  15 Dec 2009; Jeroen Roovers <jer@gentoo.org> opera-10.20_pre4744.ebuild:
+  Do not use escape sequences in elog messages (bug #296916).
 
   09 Dec 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.01.ebuild:
   Remove old.

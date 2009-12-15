@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.2 2009/11/29 17:00:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.3 2009/12/15 02:05:27 jer Exp $
 
 EAPI="2"
 
@@ -109,9 +109,13 @@ opera_linguas() {
 }
 
 pkg_setup() {
-	elog "${WARN}If you seek support, please file a bug report at${NORMAL}"
-	elog "${WARN}https://bugs.gentoo.org and post the output of${NORMAL}"
-	elog "${WARN} \`emerge --info =${CATEGORY}/${P}'${NORMAL}"
+	echo -e \
+		" ${GOOD}****************************************************${NORMAL}"
+	elog "If you seek support, please file a bug report at"
+	elog "https://bugs.gentoo.org and post the output of"
+	elog " \`emerge --info =${CATEGORY}/${P}'"
+	echo -e \
+		" ${GOOD}****************************************************${NORMAL}"
 }
 
 src_unpack() {
