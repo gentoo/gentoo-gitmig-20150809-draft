@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.71 2009/12/05 08:01:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.72 2009/12/15 14:49:44 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
 
 *openswan-2.6.23-r2 (05 Dec 2009)
 *openswan-2.4.15-r2 (05 Dec 2009)
