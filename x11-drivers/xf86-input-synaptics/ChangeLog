@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.37 2009/12/14 16:00:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.38 2009/12/15 11:34:49 scarabeus Exp $
+
+*xf86-input-synaptics-1.2.1 (15 Dec 2009)
+
+  15 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86-input-synaptics-1.2.1.ebuild:
+  Version bump.
 
   14 Dec 2009; Jeremy Olexa <darkside@gentoo.org>
   xf86-input-synaptics-1.2.0.ebuild:
