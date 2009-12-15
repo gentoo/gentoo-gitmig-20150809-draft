@@ -1,16 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r2.ebuild,v 1.1 2009/03/13 19:59:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/towitoko-2.0.7-r2.ebuild,v 1.2 2009/12/15 16:49:30 ssuominen Exp $
 
-IUSE="static moneyplex"
+IUSE="moneyplex"
 
 DESCRIPTION="This library provides a driver for using Towitoko smartcard readers under UNIX environment."
-SRC_URI="http://www.geocities.com/cprados/files/${P}.tar.gz"
-HOMEPAGE="http://www.geocities.com/cprados/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
+HOMEPAGE="http://www.gentoo.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 src_compile() {
 	local myconf
@@ -19,7 +19,6 @@ src_compile() {
 	use moneyplex && myconf="${myconf} --disable-atr-check"
 
 	econf \
-		`use_enable static` \
 		`use_enable moneyplex win32-com` \
 		${myconf} || die "econf failed"
 	emake || die

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/towitoko
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.15 2009/03/13 19:59:54 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/towitoko/ChangeLog,v 1.16 2009/12/15 16:49:30 ssuominen Exp $
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  towitoko-2.0.7-r2.ebuild:
+  Because only change to -r1 was disabling devfs, mark it stable for
+  ppc/x86. Remove USE static, which was misused. Remove geocities from
+  HOMEPAGE and SRC_URI wrt #297028.
 
 *towitoko-2.0.7-r2 (13 Mar 2009)
 
