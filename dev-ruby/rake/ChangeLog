@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.84 2009/12/14 18:42:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.85 2009/12/15 06:54:12 graaff Exp $
+
+  15 Dec 2009; Hans de Graaff <graaff@gentoo.org> rake-0.8.7-r2.ebuild:
+  Explicitly turn off the fakegem doc and test tasks since this will trigger
+  a circular dependency on rake itself.
 
 *rake-0.8.7-r2 (14 Dec 2009)
 
