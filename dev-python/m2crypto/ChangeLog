@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.56 2009/11/26 16:16:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.57 2009/12/15 19:25:52 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> m2crypto-0.20.2.ebuild:
+  Marking m2crypto-0.20.2 ppc64 for bug 292314
 
   26 Nov 2009; Raúl Porcel <armin76@gentoo.org> m2crypto-0.20.2.ebuild:
   ia64/s390/sh/sparc stable wrt #292314
