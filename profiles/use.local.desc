@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5094 2009/12/14 03:07:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5095 2009/12/15 05:47:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3165,12 +3165,9 @@ sys-kernel/mips-sources:ip32r10k - Enables experimental support for IP32 R10K ke
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/zen-sources:drm-next - Enable the drm-next patch
 sys-kernel/zen-sources:stable - Clone stable git tree
-sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:glibc-compat20 - Enable the glibc-compat addon
 sys-libs/glibc:glibc-omitfp - Configure glibc with --enable-omitfp which lets the build system determine when it is safe to use -fomit-frame-pointer
-sys-libs/glibc:linuxthreads-tls - Configure the linuxthreads glibc with --with-_thread if supported by your system. --with-tls is always enabled if supported and is NOT controlled by this switch. So the glibc built will always support TLS binaries. This toggle chooses whether or not glibc itself uses TLS. If you're concerned about backwards compatibility with old binaries, leave this off.
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthread and nptl
-sys-libs/glibc:userlocales - Build only the locales specified in /etc/locales.build
 sys-libs/libraw1394:juju - Use the new juju firewire stack in the Linux kernel
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
