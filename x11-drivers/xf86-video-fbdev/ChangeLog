@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.60 2009/10/26 21:16:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.61 2009/12/15 15:33:58 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-fbdev-0.4.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #282290
 
   26 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   xf86-video-fbdev-0.4.1.ebuild:
