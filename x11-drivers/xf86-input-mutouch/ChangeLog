@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-mutouch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mutouch/ChangeLog,v 1.41 2009/10/11 11:22:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mutouch/ChangeLog,v 1.42 2009/12/15 19:27:26 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org>
+  xf86-input-mutouch-1.2.1.ebuild:
+  Marking xf86-input-mutouch-1.2.1 ppc64 stable for bug 294958
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> xf86-input-mutouch-1.2.1.ebuild:
   ppc stable #282290
