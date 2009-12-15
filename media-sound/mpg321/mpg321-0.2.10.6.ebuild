@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10.6.ebuild,v 1.10 2009/09/06 16:59:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10.6.ebuild,v 1.11 2009/12/15 12:02:08 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -25,13 +25,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local myao=oss
-	use alsa && myao=alsa09
-
 	econf \
 		--disable-dependency-tracking \
-		--disable-mpg123-symlink \
-		--with-default-audio=${myao}
+		--disable-mpg123-symlink
 }
 
 src_install() {
