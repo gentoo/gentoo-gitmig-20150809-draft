@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.8.ebuild,v 1.1 2009/05/02 15:05:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.8.ebuild,v 1.2 2009/12/15 16:40:12 ssuominen Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
 
 DESCRIPTION="A guitar tuning program that uses Schmitt-triggering for quick feedback"
-HOMEPAGE="http://www.geocities.com/harpin_floh/kguitune_page.html"
-SRC_URI="http://www.geocities.com/harpin_floh/mysoft/${PN}-gtk2-${PV}.tar.gz"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${PN}-gtk2-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
 	make_desktop_entry ${PN} Guitune guitune_logo
 }
