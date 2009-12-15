@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.30 2009/11/30 19:12:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.31 2009/12/15 19:30:49 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> soappy-0.12.0.ebuild:
+  Marking soappy-0.12.0 ppc64 for bug 292422
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> soappy-0.12.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #292422
