@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/jarwizard-2.50.ebuild,v 1.2 2007/08/22 06:24:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/jarwizard-2.50.ebuild,v 1.3 2009/12/15 19:06:11 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Takes the hassle out of creating executable JAR files for your Java programs"
 SRC_URI="mirror://sourceforge/jarwizard/${PN}_${PV/./}_src.zip"
-HOMEPAGE="http://www.geocities.com/chir_geo/jarc/"
+HOMEPAGE="http://sourceforge.net/projects/jarwizard/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~ppc x86"
