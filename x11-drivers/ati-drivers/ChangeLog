@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.205 2009/12/15 12:10:33 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.206 2009/12/15 12:16:30 scarabeus Exp $
+
+  15 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.10.ebuild, ati-drivers-9.11.ebuild:
+  Stable. Tested with games-action/chromium.
 
   15 Dec 2009; Fabio Erculiani <lxnay@gentoo.org> ati-drivers-9.11.ebuild,
   +files/kernel/2.6.32-9.11-fix_compilation.patch:
