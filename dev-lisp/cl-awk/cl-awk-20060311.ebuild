@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-awk/cl-awk-20060311.ebuild,v 1.2 2009/12/15 19:37:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-awk/cl-awk-20060311.ebuild,v 1.3 2009/12/15 19:39:12 ssuominen Exp $
 
 inherit common-lisp eutils
-
-# Directory listing @ http://www.geocities.com/mparker762/tputils/
 
 DESCRIPTION="Common Lisp implementation of AWK"
 HOMEPAGE="http://www.cliki.net/RegEx-CLAWK-Lexer
