@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.25 2009/12/01 15:59:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.26 2009/12/15 14:35:17 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -13,13 +13,17 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="gnome-base/gconf
+RDEPEND="app-arch/bzip2
+	gnome-base/gconf
 	media-fonts/corefonts
 	>=media-libs/alsa-lib-1.0.19
+	media-libs/jpeg-compat
+	media-libs/libpng
 	>=sys-devel/gcc-4.2
 	>=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12.3
-	x11-libs/pango
+	sys-libs/zlib
+	>=x11-libs/gtk+-2.14.7
 	x11-themes/gnome-icon-theme"
 
 S=${WORKDIR}
@@ -55,8 +59,8 @@ src_install() {
 	cp -R chrome-linux/ "${D}"${CHROMIUM_HOME} || die "Unable to install chrome-linux folder"
 
 	# Man page (rename to prevent collision with chromium)
-	newman chrome-linux/chromium-browser.1 chromium-bin.1
-	rm "${D}"${CHROMIUM_HOME}/chrome-linux/chromium-browser.1
+	newman chrome-linux/chrome.1 chromium-bin.1
+	rm "${D}"${CHROMIUM_HOME}/chrome-linux/chrome.1
 
 	# Plugins symlink
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/chrome-linux/plugins
