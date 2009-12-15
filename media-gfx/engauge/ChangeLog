@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/engauge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.2 2009/10/21 14:58:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.3 2009/12/15 14:42:02 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org> engauge-4.1.ebuild:
   x86 stable, bug #286342
