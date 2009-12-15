@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/batterymon-1.2.0.ebuild,v 1.1 2009/12/12 10:44:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/batterymon-1.2.0.ebuild,v 1.2 2009/12/15 16:50:07 idl0r Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}
 	dev-python/dbus-python
 	dev-libs/dbus-glib
 	dev-python/pygtk:2
+	sys-apps/hal
 	libnotify? ( dev-python/notify-python )"
 
 S="${WORKDIR}/${PN}"

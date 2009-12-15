@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/batterymon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.1 2009/12/12 10:44:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.2 2009/12/15 16:50:07 idl0r Exp $
+
+  15 Dec 2009; Christian Ruppert <idl0r@gentoo.org> batterymon-1.2.0.ebuild:
+  Add sys-apps/hal runtime dependency, bug 296969, thanks to Andre
+  <andremuellerster@gmail.com>
 
 *batterymon-1.2.0 (12 Dec 2009)
 
