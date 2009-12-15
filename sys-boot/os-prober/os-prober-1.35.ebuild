@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.35.ebuild,v 1.1 2009/12/15 21:24:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.35.ebuild,v 1.2 2009/12/15 21:37:03 abcd Exp $
 
 EAPI="2"
 
@@ -63,4 +63,10 @@ src_install() {
 	fi
 
 	dodoc README TODO debian/changelog || die "dodoc failed"
+}
+
+pkg_postinst() {
+	elog "If you intend for os-prober to detect versions of Windows installed on"
+	elog "NTFS-formatted partitions, your system must be capable of reading the"
+	elog "NTFS filesystem. One way to do this is by installing sys-fs/ntfs3g"
 }

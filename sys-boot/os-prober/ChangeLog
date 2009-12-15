@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/os-prober
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.1 2009/12/15 21:24:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.2 2009/12/15 21:37:03 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> os-prober-1.35.ebuild:
+  Add elog about NTFS to postinst
 
 *os-prober-1.35 (15 Dec 2009)
 
