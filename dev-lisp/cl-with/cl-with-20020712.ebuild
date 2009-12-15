@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-with/cl-with-20020712.ebuild,v 1.1 2005/10/01 07:07:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-with/cl-with-20020712.ebuild,v 1.2 2009/12/15 19:38:28 ssuominen Exp $
 
 inherit common-lisp eutils
 
 DESCRIPTION="With -- The Bastard Son of Loop"
-HOMEPAGE="http://www.geocities.com/mparker762/with.html"
+HOMEPAGE="http://common-lisp.net/"
 SRC_URI="mirror://gentoo/with-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"

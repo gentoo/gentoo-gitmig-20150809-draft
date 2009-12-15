@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-awk
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-awk/ChangeLog,v 1.11 2008/03/27 16:26:22 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-awk/ChangeLog,v 1.12 2009/12/15 19:37:23 ssuominen Exp $
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> cl-awk-1-r1.ebuild,
+  cl-awk-20060311.ebuild:
+  Remove geocities from HOMEPAGE wrt #297028.
 
   27 Mar 2008; Raúl Porcel <armin76@gentoo.org> cl-awk-1-r1.ebuild:
   Fix debian HOMEPAGE
