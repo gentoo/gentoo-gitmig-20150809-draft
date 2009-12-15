@@ -1,6 +1,10 @@
 # ChangeLog for virtual/cblas
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.4 2008/11/09 16:45:28 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.5 2009/12/15 16:02:49 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> cblas-1.0.ebuild:
+  Add prefix keywords (~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux
+  ~ppc-macos ~x86-macos)
 
   09 Nov 2008; Raúl Porcel <armin76@gentoo.org> cblas-1.0.ebuild:
   ia64 stable

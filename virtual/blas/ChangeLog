@@ -1,6 +1,9 @@
 # ChangeLog for virtual/blas
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/blas/ChangeLog,v 1.1 2007/10/10 12:22:32 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/blas/ChangeLog,v 1.2 2009/12/15 16:01:18 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> blas-1.0.ebuild:
+  Add prefix keywords (~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos)
 
 *blas-1.0 (10 Oct 2007)
 
