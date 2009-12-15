@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.45 2009/11/25 14:00:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.46 2009/12/15 17:38:58 voyageur Exp $
+
+  15 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -nxserver-freeedition-3.3.0.8-r1.ebuild,
+  -nxserver-freeedition-3.3.0.22.ebuild,
+  -nxserver-freeedition-3.3.0.27.ebuild,
+  nxserver-freeedition-3.4.0.8.ebuild:
+  Drop first 3.3.0 versions, add xhost RDEPEND for shadow suppport, spotted
+  by Patrick <mail@patrick-nagel.net> in bug #296877
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org>
   nxserver-freeedition-3.4.0.8.ebuild:

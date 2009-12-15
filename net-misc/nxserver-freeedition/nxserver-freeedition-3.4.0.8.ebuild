@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.4.0.8.ebuild,v 1.4 2009/11/25 14:00:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.4.0.8.ebuild,v 1.5 2009/12/15 17:38:58 voyageur Exp $
 
 inherit eutils versionator
 
@@ -21,7 +21,8 @@ DEPEND="=net-misc/nxnode-${MAJOR_PV}*"
 RDEPEND="${DEPEND}
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
-	x11-apps/xauth"
+	x11-apps/xauth
+	x11-apps/xhost"
 
 S="${WORKDIR}"/NX
 
