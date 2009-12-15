@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.68 2009/11/25 14:00:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.69 2009/12/15 20:35:41 voyageur Exp $
+
+*nxserver-freenx-0.7.3_p104-r3 (15 Dec 2009)
+
+  15 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nxserver-freenx-0.7.2-exitstatus.patch,
+  -files/nxserver-freenx-0.7.2-nolistentcp.patch,
+  -files/nxserver-freenx-0.7.2-nxloadconfig.patch,
+  -nxserver-freenx-0.7.3-r2.ebuild, -nxserver-freenx-0.7.3-r3.ebuild,
+  -nxserver-freenx-0.7.3_p104-r1.ebuild,
+  +nxserver-freenx-0.7.3_p104-r3.ebuild,
+  -files/nxserver-freenx-0.7.3-cflags.patch,
+  -files/nxserver-freenx-0.7.3-nxloadconfig.patch,
+  -files/nxserver-freenx-0.7.3-roundrobin.patch,
+  +files/nxserver-freenx-0.7.3_p104-nxloadconfig.patch:
+  Clean some versions, EAPI2, fix Gnome start command for bug #292480
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org>
   nxserver-freenx-0.7.3_p104-r2.ebuild:

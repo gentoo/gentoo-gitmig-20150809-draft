@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r1.ebuild,v 1.2 2009/09/17 09:23:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r3.ebuild,v 1.1 2009/12/15 20:35:41 voyageur Exp $
 
-EAPI=1
+EAPI=2
 
 inherit multilib eutils toolchain-funcs versionator
 
@@ -46,12 +46,10 @@ pkg_setup () {
 	enewuser nx -1 -1 ${NX_HOME_DIR}
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-pam_ssh.patch
-	epatch "${FILESDIR}"/${PN}-0.7.3_p102-nxloadconfig.patch
+	epatch "${FILESDIR}"/${P}-nxnode_setup_samba.patch
+	epatch "${FILESDIR}"/${P}-nxloadconfig.patch
 	epatch "${FILESDIR}"/${PN}-0.7.3_p102-cflags.patch
 	epatch "${FILESDIR}"/${PN}-0.7.2-cups.patch
 
