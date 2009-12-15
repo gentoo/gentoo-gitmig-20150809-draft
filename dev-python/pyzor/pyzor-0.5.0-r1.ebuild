@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.5.0-r1.ebuild,v 1.5 2009/11/30 11:13:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.5.0-r1.ebuild,v 1.6 2009/12/15 18:41:52 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="pyzord"
 
 DEPEND="pyzord? ( dev-lang/python[gdbm] )"
