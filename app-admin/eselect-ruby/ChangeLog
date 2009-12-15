@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.23 2009/11/11 03:09:39 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.24 2009/12/15 19:29:30 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  eselect-ruby-20090909.ebuild:
+  ia64/s390/sh stable wrt #288699
 
   11 Nov 2009; Tiago Cunha <tcunha@gentoo.org> eselect-ruby-20090909.ebuild:
   stable sparc, bug 288699
