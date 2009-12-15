@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.35 2009/10/02 22:19:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.36 2009/12/15 14:03:15 matsuu Exp $
+
+*qterm-0.5.8 (15 Dec 2009)
+
+  15 Dec 2009; MATSUU Takuto <matsuu@gentoo.org> +qterm-0.5.8.ebuild:
+  Version bumped. Added qt3support, bug #296507.
 
 *qterm-0.5.7-r1 (02 Oct 2009)
 
