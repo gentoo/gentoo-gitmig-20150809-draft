@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.68 2009/12/10 20:09:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.69 2009/12/15 09:44:31 a3li Exp $
+
+*mysql-ruby-2.8.1-r1 (14 Dec 2009)
+
+  14 Dec 2009; Alex Legler <a3li@gentoo.org> +mysql-ruby-2.8.1-r1.ebuild:
+  revbump to use ruby-fakegem, fixing bug 261141
 
   10 Dec 2009; Markus Meier <maekke@gentoo.org> mysql-ruby-2.8.1.ebuild:
   amd64/x86 stable, bug #296340
