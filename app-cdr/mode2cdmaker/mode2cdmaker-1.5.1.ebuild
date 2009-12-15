@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mode2cdmaker/mode2cdmaker-1.5.1.ebuild,v 1.4 2008/06/15 16:30:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mode2cdmaker/mode2cdmaker-1.5.1.ebuild,v 1.5 2009/12/15 16:45:11 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Utility to create mode-2 CDs, for example XCDs."
-HOMEPAGE="http://es.geocities.com/dextstuff/mode2cdmaker.html"
-SRC_URI="http://dext.peque.org/xcd/${P}-src.zip"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${P}-src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,10 +26,10 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC
-	emake -f Makefile.linux || die "emake failed."
+	emake -f Makefile.linux || die
 }
 
 src_install() {
-	dobin mode2cdmaker || die "dobin failed."
+	dobin mode2cdmaker || die
 	dodoc {bugs,compatibility,readme}.txt
 }
