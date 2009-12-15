@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.1 2009/12/14 12:32:18 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.2 2009/12/15 15:32:27 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -17,6 +17,8 @@
 #
 
 inherit ruby-ng
+
+SRC_URI="mirror://rubygems/${P}.gem"
 
 # @ECLASS-VARIABLE: RUBY_FAKEGEM_NAME
 # @DESCRIPTION:
