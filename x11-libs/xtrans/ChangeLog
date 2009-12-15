@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xtrans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.69 2009/12/10 19:29:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.70 2009/12/15 19:43:02 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> xtrans-1.2.5.ebuild:
+  Marking xtrans-1.2.5 ppc64 stable for bug 294958
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> xtrans-1.2.5.ebuild:
   x86 stable, bug 294958
