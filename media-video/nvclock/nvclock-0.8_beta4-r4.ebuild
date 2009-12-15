@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.4 2009/09/27 10:50:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.5 2009/12/15 07:51:57 vapier Exp $
 
 EAPI="2"
 
@@ -28,6 +28,7 @@ src_prepare() {
 	# Bug #240846:
 	epatch "${FILESDIR}"/${P}-flags.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-headers.patch
 
 	sed -e 's:NV-CONROL:NV-CONTROL:g' -i configure.in
 	sed -i Makefile.in -e "s:/share/doc/nvclock:/share/doc/${PF}:g" || \
