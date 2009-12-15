@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r2.ebuild,v 1.3 2009/12/15 18:05:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r2.ebuild,v 1.4 2009/12/15 19:23:37 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Utility to patch VBIOS of Intel 855 / 865 / 915 chipsets"
-HOMEPAGE="http://www.gentoo.org/"
+HOMEPAGE="http://915resolution.mango-lang.org/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="public-domain"
