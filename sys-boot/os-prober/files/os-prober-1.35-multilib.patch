@@ -1,0 +1,120 @@
+--- os-prober.orig/common.sh
++++ os-prober/common.sh
+@@ -1,5 +1,5 @@
+ newns () {
+-  [ "$OS_PROBER_NEWNS" ] || exec /usr/lib/os-prober/newns "$0" "$@"
++  [ "$OS_PROBER_NEWNS" ] || exec /usr/libexec/os-prober/newns "$0" "$@"
+ }
+ 
+ require_tmpdir() {
+--- os-prober.orig/linux-boot-prober
++++ os-prober/linux-boot-prober
+@@ -15,7 +15,7 @@ if ! mapped="$(mapdevfs "$partition")"; 
+ fi
+ 
+ if ! grep -q "^$mapped " "$OS_PROBER_TMP/mounted-map"; then
+-	for test in /usr/lib/linux-boot-probes/*; do
++	for test in /usr/libexec/linux-boot-probes/*; do
+ 		debug "running $test"
+ 		if [ -x $test ] && [ -f $test ]; then
+ 			if $test "$partition"; then
+@@ -37,7 +37,7 @@ else
+ 			bootpart="$partition"
+ 			bootmounted=0
+ 		fi
+-		for test in /usr/lib/linux-boot-probes/mounted/*; do
++		for test in /usr/libexec/linux-boot-probes/mounted/*; do
+ 			if [ -f $test ] && [ -x $test ]; then
+ 				debug "running $test on mounted $partition"
+ 				if $test "$partition" "$bootpart" "$mpoint" "$type"; then
+--- os-prober.orig/linux-boot-probes/common/50mounted-tests
++++ os-prober/linux-boot-probes/common/50mounted-tests
+@@ -39,7 +39,7 @@ for type in $types; do
+ 		bootpart="${mountboot%% *}"
+ 		mounted="${mountboot#* }"
+ 		
+-		for test in /usr/lib/linux-boot-probes/mounted/*; do
++		for test in /usr/libexec/linux-boot-probes/mounted/*; do
+ 			if [ -f $test ] && [ -x $test ]; then
+ 				debug "running $test $partition $bootpart $tmpmnt $type"
+ 				if $test "$partition" "$bootpart" "$tmpmnt" "$type"; then
+--- os-prober.orig/os-prober
++++ os-prober/os-prober
+@@ -88,7 +88,7 @@ parse_proc_mdstat () {
+ # Needed for idempotency
+ rm -f /var/lib/os-prober/labels
+ 
+-for prog in /usr/lib/os-probes/init/*; do
++for prog in /usr/libexec/os-probes/init/*; do
+ 	if [ -x $prog ] && [ -f $prog ]; then
+ 		$prog || true
+ 	fi
+@@ -115,7 +115,7 @@ for partition in $(partitions); do
+ 	fi
+ 
+ 	if ! grep -q "^$mapped " "$OS_PROBER_TMP/mounted-map" ; then
+-		for test in /usr/lib/os-probes/*; do
++		for test in /usr/libexec/os-probes/*; do
+ 			if [ -f $test ] && [ -x $test ]; then
+ 				debug "running $test on $partition"
+ 				if $test "$partition"; then
+@@ -129,7 +129,7 @@ for partition in $(partitions); do
+ 		mpoint="$(unescape_mount "$mpoint")"
+ 		if [ "$mpoint" != "/target/boot" ] && [ "$mpoint" != "/target" ] && [ "$mpoint" != "/" ]; then
+ 			type=$(grep "^$mapped " "$OS_PROBER_TMP/mounted-map" | head -n1 | cut -d " " -f 3)
+-			for test in /usr/lib/os-probes/mounted/*; do
++			for test in /usr/libexec/os-probes/mounted/*; do
+ 				if [ -f $test ] && [ -x $test ]; then
+ 					debug "running $test on mounted $partition"
+ 					if $test "$partition" "$mpoint" "$type"; then
+--- os-prober.orig/os-probes/common/50mounted-tests
++++ os-prober/os-probes/common/50mounted-tests
+@@ -48,7 +48,7 @@ fi
+ for type in $types $delaytypes; do
+ 	if mount -o ro -t "$type" "$partition" "$tmpmnt" 2>/dev/null; then
+ 		debug "mounted as $type filesystem"
+-		for test in /usr/lib/os-probes/mounted/*; do
++		for test in /usr/libexec/os-probes/mounted/*; do
+ 			debug "running subtest $test"
+ 			if [ -f $test ] && [ -x $test ]; then
+ 				if $test "$partition" "$tmpmnt" "$type"; then
+--- os-prober.orig/os-probes/mounted/common/90linux-distro
++++ os-prober/os-probes/mounted/common/90linux-distro
+@@ -13,7 +13,7 @@ type="$3"
+ # better. Make sure this test has a high number so that more accurate tests
+ # can come first.
+ # TODO: look for ld-linux.so on arches that have it
+-if ls $dir/lib/ld*.so* >/dev/null 2>/dev/null; then
++if ls $dir/lib*/ld*.so* >/dev/null 2>/dev/null; then
+ 	if [ -e "$dir/etc/debian_version" ]; then
+ 		short="Debian"
+ 		long=$(printf "Debian GNU/Linux (%s)\n" "$(cat $dir/etc/debian_version)")
+--- os-prober.orig/README
++++ os-prober/README
+@@ -18,7 +18,7 @@ such as:
+                                     a chain one for other partitions
+                                     with their own boot sectors.
+ 
+-Tests are executable programs in the directory /usr/lib/os-probes/. Each
++Tests are executable programs in the directory /usr/libexec/os-probes/. Each
+ test is called once per partition, with the partiton to check as its
+ parameter, and may output a string as described above, or nothing if it does
+ not recognise an OS on that partition. Tests return an exit code of 0
+@@ -27,7 +27,7 @@ partition; or return an exit code of 1 t
+ and let the next test run.
+ 
+ Tests that require the partition to be mounted can be placed in
+-/usr/lib/os-probes/mounted/. These tests are passed the following
++/usr/libexec/os-probes/mounted/. These tests are passed the following
+ parameters: partition, mount point, filesystem.
+ 
+ Bootloader installer packages will then have to process this output (fairly
+@@ -62,7 +62,7 @@ short (or nonexistent), and may be inacc
+ TODO for other limitations.
+ 
+ The tests used by linux-boot-prober are in the directory
+-/usr/lib/linux-boot-probes/ and also in /usr/lib/linux-boot-probes/mounted,
++/usr/libexec/linux-boot-probes/ and also in /usr/libexec/linux-boot-probes/mounted,
+ and they are called in a similar way as the os-probes described above.
+ The mounted probes are passed parameters for the root partition, the boot
+ partition, and the directory the filesystems are mounted in.

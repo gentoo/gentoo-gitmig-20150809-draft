@@ -1,0 +1,10 @@
+# ChangeLog for sys-boot/os-prober
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.1 2009/12/15 21:24:11 abcd Exp $
+
+*os-prober-1.35 (15 Dec 2009)
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> +os-prober-1.35.ebuild,
+  +files/os-prober-1.35-multilib.patch, +metadata.xml:
+  New ebuild. Thanks to Wizzelby <wizzleby@gmail.com> for initial ebuild.
+
