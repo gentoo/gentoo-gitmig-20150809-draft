@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-xmpp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/ChangeLog,v 1.2 2009/11/03 17:50:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/ChangeLog,v 1.3 2009/12/15 14:43:02 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
 
   03 Nov 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   irssi-xmpp-0.50.ebuild:
