@@ -22,8 +22,8 @@ https://support.ntp.org/bugs/show_bug.cgi?id=1418
  # LDADD might need RESLIB and ADJLIB
 -ntpdc_LDADD = version.o @LCRYPTO@ @EDITLINE_LIBS@ $(LIBOPTS_LDADD) \
 -		../libntp/libntp.a
-+ntpdc_LDADD = version.o @EDITLINE_LIBS@ $(LIBOPTS_LDADD) \
-+		../libntp/libntp.a @LCRYPTO@
++ntpdc_LDADD = version.o $(LIBOPTS_LDADD) \
++		../libntp/libntp.a @LCRYPTO@ @EDITLINE_LIBS@
  
  # ntpdc-layout doesn't need any additional libraries at all
  ntpdc_layout_LDADD = 
@@ -35,8 +35,8 @@ https://support.ntp.org/bugs/show_bug.cgi?id=1418
  # LDADD might need RESLIB and ADJLIB
 -ntpq_LDADD = version.o @LCRYPTO@ @EDITLINE_LIBS@ $(LIBOPTS_LDADD) \
 -		../libntp/libntp.a
-+ntpq_LDADD = version.o @EDITLINE_LIBS@ $(LIBOPTS_LDADD) \
-+		../libntp/libntp.a @LCRYPTO@
++ntpq_LDADD = version.o $(LIBOPTS_LDADD) \
++		../libntp/libntp.a @LCRYPTO@ @EDITLINE_LIBS@
  
  noinst_HEADERS = ntpq.h
  noinst_LIBRARIES = libntpq.a
