@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/udunits
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.7 2009/12/07 03:41:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.8 2009/12/15 06:12:18 bicatali Exp $
+
+*udunits-2.1.11-r1 (15 Dec 2009)
+
+  15 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -udunits-2.1.11.ebuild, +udunits-2.1.11-r1.ebuild,
+  +files/udunits-2.1.11-autotools.patch:
+  Now use system expat library
 
 *udunits-2.1.11 (07 Dec 2009)
 

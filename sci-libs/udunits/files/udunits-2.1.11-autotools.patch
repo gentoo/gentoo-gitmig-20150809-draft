@@ -1,0 +1,63 @@
+--- Makefile.am.orig	2009-12-15 06:15:11.000000000 +0000
++++ Makefile.am	2009-12-15 06:17:07.000000000 +0000
+@@ -5,8 +5,8 @@
+ # redistribution conditions.
+ #
+ ## Process this file with automake to produce Makefile.in
+-DIST_SUBDIRS		= expat lib prog test
+-SUBDIRS			= expat lib prog
++DIST_SUBDIRS		= lib prog test
++SUBDIRS			= lib prog
+ info_TEXINFOS		= udunits2.texi
+ udunits2_TEXINFOS	= success.texi failure.texi make.texi
+ EXTRA_DIST = \
+--- configure.ac.orig	2009-12-15 06:15:21.000000000 +0000
++++ configure.ac	2009-12-15 06:16:32.000000000 +0000
+@@ -13,7 +13,7 @@
+ AC_CONFIG_AUX_DIR([.])
+ AC_CONFIG_SRCDIR([lib/converter.c])
+ AM_INIT_AUTOMAKE([foreign subdir-objects no-installinfo])
+-AC_CONFIG_HEADERS([config.h expat/expat_config.h])
++AC_CONFIG_HEADERS([config.h])
+ 
+ CFLAGS_COVERAGE=''
+ LIBS_COVERAGE=''
+@@ -37,7 +37,7 @@
+     CFLAGS="${CFLAGS:+$CFLAGS }-g -O0"
+     debug=true ;;
+   no)
+-    CFLAGS="${CFLAGS:+$CFLAGS }-O"
++    CFLAGS="${CFLAGS:+$CFLAGS }"
+     debug=false ;;
+   *) AC_MSG_ERROR([bad value ${enableval} for --enable-debug]) ;;
+ esac],
+@@ -125,18 +125,12 @@
+ AC_C_CONST
+ AC_TYPE_SIZE_T
+ 
+-# Needed for the Expat subpackage:
+-AC_C_BIGENDIAN([byteorder=4321],[byteorder=1234])
+-AC_DEFINE_UNQUOTED([BYTEORDER],[$byteorder], [Define to 4321 for big-endian and 1234 for little-endian])
+-AC_DEFINE([XML_CONTEXT_BYTES], 1024, [Define to specify how much context to retain around the current parse point.])
+-
+ # Checks for library functions.
+ AC_CHECK_FUNCS([floor memmove memset modf pow strcasecmp strdup strpbrk])
+ 
+ AC_PROG_LIBTOOL
+ 
+ AC_CONFIG_FILES([Makefile
+-		 expat/Makefile
+                  lib/Makefile
+                  lib/xmlFailures/Makefile
+                  lib/xmlSuccesses/Makefile
+--- lib/Makefile.am.orig	2009-12-15 06:30:11.000000000 +0000
++++ lib/Makefile.am	2009-12-15 06:31:10.000000000 +0000
+@@ -38,7 +38,7 @@
+ LFLAGS = -d -P$(lex_prefix)
+ 
+ LDADD = libudunits2.la @LIBS_CUNIT@ -lm @LIBS_COVERAGE@
+-libudunits2_la_LIBADD = ../expat/libexpat.la
++libudunits2_la_LIBADD = -lexpat
+ libudunits2_la_CFLAGS = @CFLAGS_COVERAGE@
+ include_HEADERS = udunits2.h converter.h
+ EXTRA_DIST = \
