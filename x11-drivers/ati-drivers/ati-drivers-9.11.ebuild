@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.11.ebuild,v 1.1 2009/11/19 19:09:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.11.ebuild,v 1.2 2009/12/15 12:10:33 lxnay Exp $
 
 EAPI="2"
 
@@ -99,12 +99,6 @@ _check_kernel_config() {
 		eerror "        [ ] Preemptible RCU"
 		eerror "in the 'menuconfig'"
 		die "CONFIG_PREEMT_RCU enabled"
-	fi
-
-	# kernel hook checking up latest allowed version
-	if kernel_is ge 2 6 32; then
-		eerror "Kernels newer then 2.6.31 are not supported by this driver"
-		die "Downgrade your kernel"
 	fi
 
 	if ! linux_chkconfig_present MTRR; then
@@ -222,6 +216,12 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/ati-drivers-xen.patch
+
+	# Upstream will support 2.6.32 Linux kernel from next version
+	# so this (and patch in FILESDIR) will be removed afterwards
+	if kernel_is ge 2 6 32; then
+		epatch "${FILESDIR}"/kernel/2.6.32-${PV}-fix_compilation.patch
+	fi
 
 	# All kernel options for prepare are ment to be in here
 	if use modules; then
