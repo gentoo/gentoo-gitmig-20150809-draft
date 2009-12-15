@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.107 2009/11/14 20:29:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.108 2009/12/15 16:27:23 ssuominen Exp $
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> libexif-0.6.19.ebuild:
+  amd64 stable wrt #297023
 
 *libexif-0.6.19 (14 Nov 2009)
 
