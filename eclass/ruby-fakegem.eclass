@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.2 2009/12/15 15:32:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.3 2009/12/15 16:27:46 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -17,8 +17,6 @@
 #
 
 inherit ruby-ng
-
-SRC_URI="mirror://rubygems/${P}.gem"
 
 # @ECLASS-VARIABLE: RUBY_FAKEGEM_NAME
 # @DESCRIPTION:
@@ -55,6 +53,8 @@ if [[ ${RUBY_FAKEGEM_TASK_TEST} != "" ]]; then
 	IUSE="$IUSE test"
 	ruby_add_bdepend test "dev-ruby/rake"
 fi
+
+SRC_URI="mirror://rubygems/${RUBY_FAKEGEM_NAME}-${RUBY_FAKEGEM_VERSION}.gem"
 
 ruby_add_rdepend virtual/rubygems
 
