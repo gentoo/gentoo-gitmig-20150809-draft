@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.36 2009/12/04 09:32:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.37 2009/12/15 12:41:33 vapier Exp $
+
+  15 Dec 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Regen libbdnav autotools when needed #296792 by Martin Berkemeier.
 
   04 Dec 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Install all webui styles #293093 by hal.
