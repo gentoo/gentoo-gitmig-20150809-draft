@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.31 2009/11/14 16:55:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.32 2009/12/15 19:22:07 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> fpconst-0.7.3.ebuild:
+  Marking fpconst-0.7.3 ppc64 for bug 290500
 
   14 Nov 2009; Raúl Porcel <armin76@gentoo.org> fpconst-0.7.3.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #290500
