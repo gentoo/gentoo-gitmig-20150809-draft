@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.2 2009/11/23 02:01:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.3 2009/12/15 10:59:40 scarabeus Exp $
+
+  15 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> qgis-1.3.0.ebuild:
+  Update deps to reflect reality bit more. Move to new cmake-utils syntax.
 
   23 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> qgis-1.3.0.ebuild:
   Fixed the plugins directory, thanks Chris Mayo, bug #294113

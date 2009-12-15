@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.3.0.ebuild,v 1.2 2009/11/23 02:01:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.3.0.ebuild,v 1.3 2009/12/15 10:59:40 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=sci-libs/gdal-1.6.1
 	gps? ( dev-libs/expat sci-geosciences/gpsbabel )
 	grass? ( >=sci-geosciences/grass-6 sci-geosciences/gdal-grass )
 	gsl? ( sci-libs/gsl )
-	postgres? ( >=virtual/postgresql-base-8 dev-db/postgis )
+	postgres? ( >=virtual/postgresql-base-8 )
 	python? ( dev-python/PyQt4[sql,svg] )
 	sqlite? ( dev-db/sqlite:3 )"
 
@@ -41,17 +41,18 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs
-	mycmakeargs="${mycmakeargs}
-		-D BUILD_SHARED_LIBS:BOOL=ON
-		-D BINDINGS_GLOBAL_INSTALL:BOOL=ON
-		-D QGIS_LIB_SUBDIR=$(get_libdir)
-		-D QGIS_PLUGIN_SUBDIR=$(get_libdir)/qgis
+	mycmakeargs+=(
+		"-DBUILD_SHARED_LIBS:BOOL=ON"
+		"-DBINDINGS_GLOBAL_INSTALL:BOOL=ON"
+		"-DQGIS_LIB_SUBDIR=$(get_libdir)"
+		"-DQGIS_PLUGIN_SUBDIR=$(get_libdir)/qgis"
 		$(cmake-utils_use_with postgres POSTGRESQL)
 		$(cmake-utils_use_with grass GRASS)
 		$(cmake-utils_use_with gps EXPAT)
 		$(cmake-utils_use_with gsl GSL)
 		$(cmake-utils_use_with python BINDINGS)
-		$(cmake-utils_use_with sqlite SPATIALITE)"
+		$(cmake-utils_use_with sqlite SPATIALITE)
+	)
 
 	if use grass; then
 		GRASS_ENVD="/etc/env.d/99grass /etc/env.d/99grass-6 /etc/env.d/99grass-cvs";
@@ -60,7 +61,9 @@ src_configure() {
 				GRASSPATH=$(sed -n 's/LDPATH="\(.*\)\/lib"$/\1/p' ${file});
 			fi
 		done
-		mycmakeargs="${mycmakeargs} -DGRASS_PREFIX=${GRASSPATH}"
+		mycmakeargs+=(
+			"-DGRASS_PREFIX=${GRASSPATH}"
+		)
 	fi
 	cmake-utils_src_configure
 }
@@ -75,5 +78,13 @@ src_install() {
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins "${WORKDIR}"/qgis_sample_data/* || die "Unable to install examples"
+	fi
+}
+
+pkg_postinst() {
+	if use postgres; then
+		elog "If you don't intend to use external PostGIS server"
+		elog "you should install:"
+		elog "   dev-db/postgis"
 	fi
 }
