@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.429 2009/11/11 03:11:25 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.430 2009/12/15 19:30:25 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org> ruby-1.8.7_p174-r1.ebuild:
+  ia64/s390/sh stable wrt #288699
 
   11 Nov 2009; Tiago Cunha <tcunha@gentoo.org> ruby-1.8.7_p174-r1.ebuild:
   stable sparc, bug 288699

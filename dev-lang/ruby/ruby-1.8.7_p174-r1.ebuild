@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p174-r1.ebuild,v 1.7 2009/11/11 03:11:25 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p174-r1.ebuild,v 1.8 2009/12/15 19:30:25 armin76 Exp $
 
 EAPI=1
 inherit autotools eutils flag-o-matic multilib versionator
@@ -17,7 +17,7 @@ SRC_URI="mirror://ruby/${SLOT}/${MY_P}.tar.bz2
 		 http://dev.a3li.info/gentoo/distfiles/${PN}-patches-${PV}.tar.bz2"
 
 LICENSE="|| ( Ruby GPL-2 )"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="+berkdb debug doc emacs examples +gdbm ipv6 rubytests socks5 ssl threads tk xemacs"
 
 RDEPEND="
