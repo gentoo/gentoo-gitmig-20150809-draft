@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/flickr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.7 2009/06/28 17:52:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.8 2009/12/15 15:31:07 flameeyes Exp $
+
+*flickr-1.0.2-r3 (15 Dec 2009)
+
+  15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +flickr-1.0.2-r3.ebuild:
+  Bump to ruby-fakegem.
 
 *flickr-1.0.2-r2 (28 Jun 2009)
 
