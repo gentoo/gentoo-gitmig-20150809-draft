@@ -1,6 +1,9 @@
 # ChangeLog for virtual/editor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.14 2009/08/09 08:40:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.15 2009/12/15 19:47:19 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> editor-0.ebuild:
+  QA: Add prefix keywords
 
   09 Aug 2009; Ulrich Mueller <ulm@gentoo.org> editor-0.ebuild:
   geresh and qe are gone, bugs 264174 and 275915. Remove them from RDEPEND.

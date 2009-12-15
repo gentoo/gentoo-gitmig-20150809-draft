@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libstdc++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.14 2009/05/02 02:03:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.15 2009/12/15 19:47:12 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> libstdc++-3.3.ebuild:
+  QA: Add prefix keywords
 
   02 May 2009; Mark Loeser <halcy0n@gentoo.org> libstdc++-3.3.ebuild:
   Remove gcc-3.3 from the RDEPEND since its likely to not work, and no one

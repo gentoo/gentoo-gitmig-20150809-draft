@@ -1,6 +1,9 @@
 # ChangeLog for virtual/tex-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.4 2009/05/05 07:19:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.5 2009/12/15 19:48:08 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> tex-base-0.ebuild:
+  QA: Add prefix keywords
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> tex-base-0.ebuild:
   remove app-text/tetex as a provider

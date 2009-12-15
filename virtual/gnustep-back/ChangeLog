@@ -1,6 +1,10 @@
 # ChangeLog for virtual/gnustep-back
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.28 2009/07/19 13:22:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.29 2009/12/15 19:47:06 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> gnustep-back-0.14.0.ebuild,
+  gnustep-back-0.16.0.ebuild:
+  QA: Add prefix keywords
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> gnustep-back-0.16.0.ebuild:
   ppc stable #272673

@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.46 2009/12/14 19:25:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.47 2009/12/15 19:47:47 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Test-Harness-2.64.ebuild, perl-Test-Harness-3.16.ebuild,
+  perl-Test-Harness-3.17.ebuild:
+  QA: Add prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Test-Harness-3.17.ebuild:

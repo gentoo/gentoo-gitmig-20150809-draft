@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Digest-MD5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.27 2009/12/14 18:56:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.28 2009/12/15 19:48:13 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Digest-MD5-2.36.ebuild, perl-Digest-MD5-2.38.ebuild,
+  perl-Digest-MD5-2.39.ebuild:
+  QA: Add prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Digest-MD5-2.39.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-cgi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/ChangeLog,v 1.5 2008/07/08 15:51:18 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/ChangeLog,v 1.6 2009/12/15 19:48:09 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> httpd-cgi-0.ebuild:
+  QA: Add prefix keywords
 
   08 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org> httpd-cgi-0.ebuild:
   clean out old, removed packages

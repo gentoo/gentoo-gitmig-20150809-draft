@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-libnet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.26 2009/12/10 21:43:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.27 2009/12/15 19:48:08 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> perl-libnet-1.21.ebuild,
+  perl-libnet-1.22.ebuild:
+  QA: Add prefix keywords
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> perl-libnet-1.22.ebuild:
   Marking perl-libnet-1.22 ppc64 stable for bug 288026

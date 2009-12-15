@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.24 2009/07/05 05:11:05 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.25 2009/12/15 19:47:44 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> jre-1.4.2.ebuild,
+  jre-1.5.0.ebuild, jre-1.6.0.ebuild:
+  QA: Add prefix keywords
 
   05 Jul 2009; Alistair Bush <ali_bush@gentoo.org> jre-1.6.0.ebuild:
   Keyword ~x86-fbsd and add diablo-jre-bin

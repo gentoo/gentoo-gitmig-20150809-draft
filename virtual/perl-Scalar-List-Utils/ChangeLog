@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.30 2009/12/14 19:21:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.31 2009/12/15 19:47:40 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Scalar-List-Utils-1.18.ebuild, perl-Scalar-List-Utils-1.19.ebuild,
+  perl-Scalar-List-Utils-1.21.ebuild, perl-Scalar-List-Utils-1.22.ebuild:
+  QA: Add prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Scalar-List-Utils-1.21.ebuild:

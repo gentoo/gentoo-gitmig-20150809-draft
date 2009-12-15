@@ -1,6 +1,10 @@
 # ChangeLog for virtual/poppler
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.25 2009/10/19 19:20:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.26 2009/12/15 19:47:33 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> poppler-0.10.5.ebuild,
+  poppler-0.10.6.ebuild, poppler-0.12.0.ebuild, poppler-0.12.1.ebuild:
+  QA: Add prefix keywords
 
   19 Oct 2009; Alexis Ballier <aballier@gentoo.org> poppler-0.12.1.ebuild:
   keyword ~sparc-fbsd

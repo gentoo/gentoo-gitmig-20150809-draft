@@ -1,6 +1,9 @@
 # ChangeLog for virtual/glu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.13 2007/01/26 06:51:31 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.14 2009/12/15 19:48:01 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> glu-7.0.ebuild:
+  QA: Add prefix keywords
 
   26 Jan 2007; Donnie Berkholz <dberkholz@gentoo.org>; -glu-6.8.ebuild:
   Pull monolithic Xorg. It's moved to the (new) x11 overlay, accessible via

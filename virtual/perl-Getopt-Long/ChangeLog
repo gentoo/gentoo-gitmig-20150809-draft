@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Getopt-Long
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.31 2009/12/14 19:05:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.32 2009/12/15 19:47:46 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Getopt-Long-2.36.ebuild, perl-Getopt-Long-2.37.ebuild,
+  perl-Getopt-Long-2.38.ebuild:
+  QA: Add prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Getopt-Long-2.38.ebuild:

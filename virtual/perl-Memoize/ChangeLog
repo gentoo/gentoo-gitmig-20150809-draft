@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Memoize
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.4 2006/10/25 02:37:28 mcummings Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.5 2009/12/15 19:48:00 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> perl-Memoize-1.01.ebuild:
+  QA: Add prefix keywords
 
   25 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   perl-Memoize-1.01.ebuild:

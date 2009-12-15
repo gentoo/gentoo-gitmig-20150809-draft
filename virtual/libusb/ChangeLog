@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.5 2009/11/11 07:45:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.6 2009/12/15 19:48:11 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> libusb-0.ebuild,
+  libusb-1.ebuild:
+  QA: Add prefix keywords
 
   11 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> libusb-1.ebuild:
   Raise the minimum version of libusb-1 used to resolve some issues with the

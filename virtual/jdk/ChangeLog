@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.23 2009/07/05 05:10:29 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.24 2009/12/15 19:47:05 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> jdk-1.4.2.ebuild,
+  jdk-1.5.0.ebuild, jdk-1.6.0.ebuild:
+  QA: Add prefix keywords, more jdks
 
   05 Jul 2009; Alistair Bush <ali_bush@gentoo.org> jdk-1.6.0.ebuild:
   Keyword ~x86-fbsd and add diablo-jdk
