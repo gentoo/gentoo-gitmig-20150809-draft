@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bera/bera-20040930.ebuild,v 1.2 2007/07/13 06:20:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bera/bera-20040930.ebuild,v 1.3 2009/12/15 00:23:44 rich0 Exp $
 
 inherit latex-package
 
@@ -14,33 +14,33 @@ LICENSE="LPPL-1.2"
 
 DEPEND="app-arch/unzip"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	unzip ${MY_P}.zip
 }
 
 src_install() {
 	DOCS="${S}/README ${S}/LICENSE ${S}/doc/fonts/bera/bera.txt"
 	# install sty and fonts
-	cd ${S}/tex/latex/${MY_P}
+	cd "${S}/tex/latex/${MY_P}"
 	latex-package_src_install
 
-	cd ${S}/fonts/vf/public/${MY_P}
+	cd "${S}/fonts/vf/public/${MY_P}"
 	latex-package_src_install
 
-	cd ${S}/fonts/tfm/public/${MY_P}
+	cd "${S}/fonts/tfm/public/${MY_P}"
 	latex-package_src_install
 
 	# install map
-	cd ${S}
+	cd "${S}"
 	dodir ${TEXMF}/fonts/map/dvips/${MY_P}
-	cp -pPR fonts/map/dvips/${MY_P}.map ${D}${TEXMF}/fonts/map/dvips/${MY_P}
+	cp -pPR fonts/map/dvips/${MY_P}.map "${D}${TEXMF}/fonts/map/dvips/${MY_P}"
 
 	latex-package_src_install
 }

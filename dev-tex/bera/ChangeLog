@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/bera
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bera/ChangeLog,v 1.4 2007/07/15 09:16:50 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bera/ChangeLog,v 1.5 2009/12/15 00:23:44 rich0 Exp $
+
+  15 Dec 2009; Richard Freeman <rich0@gentoo.org> bera-20040930.ebuild:
+  keywording ~amd64 - 296190
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to tex, as nattfodd is being retired (#108329).
