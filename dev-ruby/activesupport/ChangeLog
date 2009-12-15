@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.108 2009/11/30 18:06:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.109 2009/12/15 19:37:14 flameeyes Exp $
+
+*activesupport-2.3.5-r1 (15 Dec 2009)
+
+  15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +activesupport-2.3.5-r1.ebuild:
+  Bump to ruby-fakegem, unbundle builder and tzinfo.
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> activesupport-2.3.5.ebuild:
   ia64/sparc stable wrt #294797
