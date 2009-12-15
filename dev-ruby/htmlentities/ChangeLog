@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/htmlentities
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.8 2009/12/15 16:10:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.9 2009/12/15 18:57:22 flameeyes Exp $
+
+  15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  htmlentities-4.2.0-r2.ebuild:
+  Restore ~x86 keyword since the virtual is restored as well.
 
 *htmlentities-4.2.0-r2 (15 Dec 2009)
 
