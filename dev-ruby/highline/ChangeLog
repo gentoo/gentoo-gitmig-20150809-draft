@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.25 2009/12/09 18:33:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.26 2009/12/15 16:53:30 flameeyes Exp $
+
+*highline-1.5.1-r1 (15 Dec 2009)
+
+  15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +highline-1.5.1-r1.ebuild:
+  Bump to ruby-fakegem.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -highline-1.4.0.ebuild:
   Remove old version.
