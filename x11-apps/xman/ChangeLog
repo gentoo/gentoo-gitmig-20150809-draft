@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.35 2009/12/11 17:19:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.36 2009/12/15 19:18:15 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> xman-1.1.0.ebuild:
+  Marking xman-1.1.0 ppc64 stable for bug 294958
 
   11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -xman-1.0.3.ebuild:
   Drop no-longer required ebuild.
