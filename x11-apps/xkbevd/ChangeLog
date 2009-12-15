@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbevd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbevd/ChangeLog,v 1.29 2009/12/10 18:41:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbevd/ChangeLog,v 1.30 2009/12/15 15:05:35 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org> xkbevd-1.0.2.ebuild:
+  ia64/sparc stable
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> xkbevd-1.1.0.ebuild:
   x86 stable, bug 294958

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xpr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.27 2009/12/10 18:47:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.28 2009/12/15 15:08:29 armin76 Exp $
+
+  15 Dec 2009; Raúl Porcel <armin76@gentoo.org> xpr-1.0.2.ebuild:
+  ia64/sparc stable
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org> xpr-1.0.3.ebuild:
   x86 stable, bug 294958
