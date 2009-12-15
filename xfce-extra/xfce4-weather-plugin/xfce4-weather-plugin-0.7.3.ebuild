@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/xfce4-weather-plugin-0.7.3.ebuild,v 1.8 2009/10/08 17:48:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/xfce4-weather-plugin-0.7.3.ebuild,v 1.9 2009/12/15 18:24:13 angelos Exp $
 
 EINTLTOOLIZE=yes
 EAUTORECONF=yes
@@ -9,7 +9,7 @@ inherit xfconf
 
 DESCRIPTION="panel plugin that shows the current temperature and weather condition."
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin"
-SRC_URI="mirror://xfce/src/panel-plugins/${PN}-plugin/0.7/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.7/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

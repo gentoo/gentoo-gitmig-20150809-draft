@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.8 2009/10/08 17:48:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.9 2009/12/15 18:24:13 angelos Exp $
+
+  15 Dec 2009; Christoph Mende <angelos@gentoo.org>
+  xfce4-weather-plugin-0.7.3.ebuild:
+  Fixed SRC_URI (bug #295184)
 
   08 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-weather-plugin-0.7.3.ebuild:
