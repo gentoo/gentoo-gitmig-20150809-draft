@@ -1,0 +1,29 @@
+http://dev.mutt.org/trac/changeset/736b6af3c5f1
+http://dev.mutt.org/trac/ticket/3362
+
+Fix off-by-one errors in mailcap parser. Closes #3362
+
+
+Index: rfc1524.c
+===================================================================
+--- rfc1524.c (revision 5827:776ef9dbe4d2)
++++ rfc1524.c (revision 6033:736b6af3c5f1)
+@@ -69,7 +69,8 @@
+     mutt_sanitize_filename (type, 0);
+ 
+-  while (command[x] && x<clen && y<sizeof(buf)) 
+-  {
+-    if (command[x] == '\\') {
++  while (x < clen && command[x] && y < sizeof (buf) - 1)
++  {
++    if (command[x] == '\\')
++    {
+       x++;
+       buf[y++] = command[x++];
+@@ -86,5 +87,5 @@
+ 
+ 	x++;
+-	while (command[x] && command[x] != '}' && z<sizeof(param))
++	while (command[x] && command[x] != '}' && z < sizeof (param) - 1)
+ 	  param[z++] = command[x++];
+ 	param[z] = '\0';

@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.169 2009/12/08 13:36:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.170 2009/12/15 18:06:31 grobian Exp $
+
+*mutt-1.5.20-r9 (15 Dec 2009)
+
+  15 Dec 2009; Fabian Groffen <grobian@gentoo.org> -mutt-1.5.20-r8.ebuild,
+  +mutt-1.5.20-r9.ebuild,
+  +files/mutt-1.5.20-no-hcolor-in-hcache-b7d2cb7c7ce1.patch,
+  +files/mutt-1.5.20-off-by-one-mailcap-736b6af3c5f1.patch:
+  Bump to fix two bugs fixed upstream: don't store header colors in header
+  cache and fix off-by-one errors in mailcap parsing
 
   08 Dec 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r8.ebuild,
   +files/mutt-1.5.20-ssl-stack-compile-fix-1cf34ea1f128.patch:
