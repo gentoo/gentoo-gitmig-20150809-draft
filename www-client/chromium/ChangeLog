@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.30 2009/12/08 12:14:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.31 2009/12/15 14:05:25 voyageur Exp $
+
+  15 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-4.0.266.0.ebuild, chromium-9999.ebuild:
+  multilib cleanups, thanks to ferret <ferret@explodingferret.com> in bug
+  #296917
 
 *chromium-4.0.266.0 (08 Dec 2009)
 

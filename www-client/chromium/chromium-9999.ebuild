@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.11 2009/12/02 17:14:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.12 2009/12/15 14:05:25 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -34,8 +34,6 @@ RDEPEND="app-arch/bzip2
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23"
-
-export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 
 src_unpack() {
 	subversion_src_unpack
@@ -98,6 +96,8 @@ src_prepare() {
 }
 
 src_configure() {
+	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
+
 	# CFLAGS/LDFLAGS
 	mkdir -p "${S}"/.gyp
 	cat << EOF > "${S}"/.gyp/include.gypi
@@ -118,9 +118,14 @@ EOF
 	# Sandbox paths
 	myconf="${myconf} -Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox -Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	if use amd64; then
+	if [[ "$ABI" == "amd64" ]] ; then
 		myconf="${myconf} -Dtarget_arch=x64"
 	fi
+
+	if [[ "$ABI" == "x86" ]] ; then
+		myconf="${myconf} -Dtarget_arch=ia32"
+	fi
+
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
 	fi
@@ -140,6 +145,7 @@ src_compile() {
 
 src_install() {
 	# Chromium does not have "install" target in the build system.
+	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 
 	dodir ${CHROMIUM_HOME}
 
@@ -157,8 +163,8 @@ src_install() {
 	doins -r out/Release/resources
 
 	# chrome.1 is for chromium --help
-	newman out/Release/chromium-browser.1 chrome.1
-	newman out/Release/chromium-browser.1 chromium.1
+	newman out/Release/chrome.1 chrome.1
+	newman out/Release/chrome.1 chromium.1
 
 	if use ffmpeg; then
 		# Chromium looks for these in its folder
