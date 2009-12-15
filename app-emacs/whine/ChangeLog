@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/whine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/ChangeLog,v 1.4 2009/11/20 08:18:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/ChangeLog,v 1.5 2009/12/15 17:37:39 ulm Exp $
+
+  15 Dec 2009; Ulrich Mueller <ulm@gentoo.org> whine-20091120.ebuild:
+  Homepage is now on EmacsWiki.
 
 *whine-20091120 (20 Nov 2009)
 
