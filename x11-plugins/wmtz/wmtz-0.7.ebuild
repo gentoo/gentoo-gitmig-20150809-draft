@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.19 2008/11/26 00:08:08 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.20 2009/12/15 17:48:48 ssuominen Exp $
 
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="dockapp that shows the time in multiple timezones."
-HOMEPAGE="http://www.geocities.com/jl1n/wmtz/wmtz.html"
-SRC_URI="http://www.geocities.com/jl1n/wmtz/${P}.tar.gz"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

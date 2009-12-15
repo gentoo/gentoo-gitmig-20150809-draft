@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtz
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.18 2008/11/26 00:08:08 tcunha Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.19 2009/12/15 17:48:48 ssuominen Exp $
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> wmtz-0.7.ebuild:
+  Fix HOMEPAGE and SRC_URI wrt #297028.
 
   26 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmtz-0.7.ebuild:
   stable sparc, bug 215651

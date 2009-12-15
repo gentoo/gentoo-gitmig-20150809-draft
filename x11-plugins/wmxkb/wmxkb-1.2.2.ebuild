@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.7 2008/10/28 11:42:44 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.8 2009/12/15 17:46:13 ssuominen Exp $
 
 IUSE=""
 
 DESCRIPTION="Dockable keyboard layout switcher for Window Maker"
-HOMEPAGE="http://www.geocities.com/wmalms/#WMXKB"
-SRC_URI="http://www.geocities.com/wmalms/${P}.tar.gz"
+HOMEPAGE="http://wmalms.tripod.com/#WMXKB"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

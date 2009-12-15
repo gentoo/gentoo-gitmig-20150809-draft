@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/wmcdplay-1.0_beta1.ebuild,v 1.7 2008/06/29 13:19:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/wmcdplay-1.0_beta1.ebuild,v 1.8 2009/12/15 17:50:15 ssuominen Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${PN}
 
 DESCRIPTION="CD player applet for WindowMaker"
-SRC_URI="http://www.geocities.com/SiliconValley/Vista/2471/files/${MY_P}.tgz"
-HOMEPAGE="http://www.geocities.com/SiliconValley/Vista/2471/"
+SRC_URI="mirror://gentoo/${MY_P}.tgz"
+HOMEPAGE="http://www.gentoo.org/"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext

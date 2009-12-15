@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmalms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.16 2009/10/27 08:48:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.17 2009/12/15 17:44:56 ssuominen Exp $
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  wmalms-1.1.1-r1.ebuild:
+  Fix HOMEPAGE and SRC_URI wrt #297028.
 
   27 Oct 2009; Thilo Bangert <bangert@gentoo.org> wmalms-1.1.1.ebuild,
   wmalms-1.1.1-r1.ebuild:

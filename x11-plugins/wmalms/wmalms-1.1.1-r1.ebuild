@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.1.1-r1.ebuild,v 1.4 2009/10/27 08:48:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.1.1-r1.ebuild,v 1.5 2009/12/15 17:44:56 ssuominen Exp $
 
 inherit autotools eutils
 
 DESCRIPTION="lm_sensors monitoring docklet."
-HOMEPAGE="http://www.geocities.com/wmalms"
-SRC_URI="http://www.geocities.com/${PN}/${P}.tar.gz"
+HOMEPAGE="http://wmalms.tripod.com/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmxkb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.10 2008/10/28 11:42:44 s4t4n Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.11 2009/12/15 17:46:13 ssuominen Exp $
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> wmxkb-1.2.2.ebuild:
+  Fix HOMEPAGE and SRC_URI wrt #297028.
 
   28 Oct 2008; Michele Noberasco <s4t4n@gentoo.org>; wmxkb-1.2.2.ebuild:
   Trivial fix for bug #242188, plus minor QA fixes.
