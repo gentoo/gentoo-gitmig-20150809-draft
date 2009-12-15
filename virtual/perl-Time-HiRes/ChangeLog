@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Time-HiRes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.56 2009/12/14 19:32:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.57 2009/12/15 20:00:09 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Time-HiRes-1.97.07.ebuild, perl-Time-HiRes-1.97.15.ebuild,
+  perl-Time-HiRes-1.97.19.ebuild:
+  QA: Add prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Time-HiRes-1.97.19.ebuild:

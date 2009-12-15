@@ -1,6 +1,10 @@
 # ChangeLog for virtual/postgresql-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-server/ChangeLog,v 1.12 2009/12/03 19:52:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-server/ChangeLog,v 1.13 2009/12/15 20:00:06 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  postgresql-server-8.3.ebuild, postgresql-server-8.4.ebuild:
+  QA: Add prefix keywords
 
   03 Dec 2009; Jeroen Roovers <jer@gentoo.org> postgresql-server-8.1.ebuild,
   postgresql-server-8.2.ebuild, postgresql-server-8.3.ebuild:

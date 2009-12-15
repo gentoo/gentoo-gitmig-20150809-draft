@@ -1,6 +1,9 @@
 # ChangeLog for virtual/glut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glut/ChangeLog,v 1.8 2009/11/15 18:51:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glut/ChangeLog,v 1.9 2009/12/15 20:00:11 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> glut-1.0.ebuild:
+  QA: Add prefix keywords
 
   15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> glut-1.0.ebuild:
   No more media-libs/glut around. Per bug #293164.

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ghostscript
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ChangeLog,v 1.8 2009/05/26 05:59:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ChangeLog,v 1.9 2009/12/15 20:00:12 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> ghostscript-0.ebuild:
+  QA: Add prefix keywords
 
   26 May 2009; Peter Volkov <pva@gentoo.org> ghostscript-0.ebuild:
   Removing app-text/ghostscript-esp from dependecies, it'll be removed from

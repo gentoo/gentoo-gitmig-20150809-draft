@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Text-Balanced
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.22 2009/08/25 10:56:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.23 2009/12/15 20:00:07 abcd Exp $
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Text-Balanced-2.0.0.ebuild, perl-Text-Balanced-2.02.ebuild:
+  QA: Add prefix keywords
 
   25 Aug 2009; Torsten Veller <tove@gentoo.org>
   perl-Text-Balanced-2.0.0.ebuild:
