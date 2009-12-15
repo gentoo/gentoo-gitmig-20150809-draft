@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-3.0.ebuild,v 1.1 2009/12/08 21:39:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-3.0.ebuild,v 1.2 2009/12/15 15:03:01 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -20,7 +20,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="ldap crypt bindist mozdom replytolist lightning"
-PATCH="${PN}-3.0-patches-0.1"
+PATCH="${PN}-3.0-patches-0.3"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases"
 SRC_URI="${REL_URI}/${MY_PV2}/source/thunderbird-${MY_PV2}.source.tar.bz2
@@ -108,7 +108,6 @@ src_unpack() {
 
 src_prepare() {
 	# Apply our patches
-	EPATCH_EXCLUDE="104-fix_licence_file_preprocessor.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
