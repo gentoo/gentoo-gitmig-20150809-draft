@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r19.ebuild,v 1.9 2009/08/31 18:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r19.ebuild,v 1.10 2009/12/15 09:25:49 ulm Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
 	mirror://gentoo/${P}-patches-8.tar.bz2
 	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
 
-LICENSE="GPL-2 FDL-1.1 BSD as-is X11"
+LICENSE="GPL-2 FDL-1.1 BSD as-is MIT"
 SLOT="21"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X Xaw3d leim motif sendmail"
