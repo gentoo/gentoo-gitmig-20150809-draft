@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/encodings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.46 2009/12/10 18:02:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.47 2009/12/15 19:05:38 ranger Exp $
+
+  15 Dec 2009; Brent Baude <ranger@gentoo.org> encodings-1.0.3.ebuild:
+  Marking encodings-1.0.3 ppc64 stable for bug 294958
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   encodings-1.0.3.ebuild:
