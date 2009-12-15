@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif-compat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/ChangeLog,v 1.6 2009/11/18 20:07:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/ChangeLog,v 1.7 2009/12/15 09:23:41 ulm Exp $
+
+  15 Dec 2009; Ulrich Mueller <ulm@gentoo.org>
+  openmotif-compat-2.2.3.ebuild:
+  Change libXpm to MIT in LICENSE.
 
   18 Nov 2009; Ulrich Mueller <ulm@gentoo.org>
   openmotif-compat-2.2.3.ebuild:
