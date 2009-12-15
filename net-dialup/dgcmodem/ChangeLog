@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/dgcmodem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/ChangeLog,v 1.5 2009/08/31 22:34:09 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/ChangeLog,v 1.6 2009/12/15 14:57:06 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
 
   31 Aug 2009; Mike Auty <ikelos@gentoo.org> dgcmodem-1.07.ebuild,
   dgcmodem-1.08.ebuild, dgcmodem-1.09.ebuild, dgcmodem-1.10.ebuild:
