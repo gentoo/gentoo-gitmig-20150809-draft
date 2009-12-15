@@ -1,6 +1,12 @@
 # ChangeLog for net-print/poster
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.10 2009/12/15 18:02:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.11 2009/12/15 18:16:28 ssuominen Exp $
+
+*poster-20060221 (15 Dec 2009)
+
+  15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +poster-20060221.ebuild:
+  Version bump.
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> poster-0.1.ebuild:
   Fix HOMEPAGE and SRC_URI wrt #297028.
