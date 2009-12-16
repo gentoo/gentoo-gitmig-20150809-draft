@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-377-r1.ebuild,v 1.1 2009/11/02 21:06:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-377-r1.ebuild,v 1.2 2009/12/16 21:34:36 maekke Exp $
 
 inherit qt4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/unetbootin/${PN}-source-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S="${WORKDIR}"
