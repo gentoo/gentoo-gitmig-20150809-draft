@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/treetop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.5 2009/12/16 18:28:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.6 2009/12/16 18:49:51 graaff Exp $
+
+*treetop-1.4.3 (16 Dec 2009)
+
+  16 Dec 2009; Hans de Graaff <graaff@gentoo.org> +treetop-1.4.3.ebuild:
+  Version bump. Switch to use ruby-fakegem.
 
   16 Dec 2009; Hans de Graaff <graaff@gentoo.org> -treetop-1.3.0.ebuild:
   Remove old version.
