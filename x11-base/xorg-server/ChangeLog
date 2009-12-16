@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.475 2009/12/15 19:23:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.476 2009/12/16 21:52:49 lack Exp $
+
+*xorg-server-1.7.3.901-r1 (16 Dec 2009)
+
+  16 Dec 2009; Jim Ramsay <lack@gentoo.org>
+  +xorg-server-1.7.3.901-r1.ebuild,
+  +files/1.7.3.901-0001-dix-if-owner-events-is-true-for-passive-grabs-add-th
+  .patch:
+  Upstream patch fixes bug #296514
 
   15 Dec 2009; Brent Baude <ranger@gentoo.org> xorg-server-1.6.5-r1.ebuild:
   Marking xorg-server-1.6.5-r1 ppc64 stable for bug 294958
