@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/treetop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.4 2009/09/11 06:48:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.5 2009/12/16 18:28:44 graaff Exp $
+
+  16 Dec 2009; Hans de Graaff <graaff@gentoo.org> -treetop-1.3.0.ebuild:
+  Remove old version.
 
   11 Sep 2009; Hans de Graaff <graaff@gentoo.org> -treetop-1.4.1.ebuild:
   Remove broken version that extends Object with a label method.
