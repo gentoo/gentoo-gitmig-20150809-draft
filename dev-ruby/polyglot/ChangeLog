@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/polyglot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.4 2009/12/09 20:34:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.5 2009/12/16 18:39:53 graaff Exp $
+
+*polyglot-0.2.9-r1 (16 Dec 2009)
+
+  16 Dec 2009; Hans de Graaff <graaff@gentoo.org> +polyglot-0.2.9-r1.ebuild:
+  Bump to use ruby-fakegem.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -polyglot-0.2.6.ebuild,
   -polyglot-0.2.8.ebuild:
