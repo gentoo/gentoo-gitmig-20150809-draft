@@ -34,6 +34,6 @@
  	install -m755 uzbl-core    $(INSTALLDIR)/bin/uzbl-core
 -	install -m644 AUTHORS      $(INSTALLDIR)/share/uzbl/docs
 -	install -m644 README       $(INSTALLDIR)/share/uzbl/docs
- 	sed -i 's#^set prefix.*=.*#set prefix     = $(PREFIX)#' $(INSTALLDIR)/share/uzbl/examples/config/uzbl/config
+ 	sed -i 's#^set prefix.*=.*#set prefix     = $(RUN_PREFIX)#' $(INSTALLDIR)/share/uzbl/examples/config/uzbl/config
  
  install-uzbl-browser: all
