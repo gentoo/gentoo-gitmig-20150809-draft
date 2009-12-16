@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.45 2009/12/14 18:16:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.46 2009/12/16 19:38:31 jer Exp $
+
+  16 Dec 2009; Jeroen Roovers <jer@gentoo.org> gdbm-1.8.3-r4.ebuild:
+  Stable for HPPA (bug #296825).
 
   14 Dec 2009; Brent Baude <ranger@gentoo.org> gdbm-1.8.3-r4.ebuild:
   stable ppc64, bug 296825
