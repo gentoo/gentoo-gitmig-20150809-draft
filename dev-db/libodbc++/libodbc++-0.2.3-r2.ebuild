@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.7 2009/07/24 17:31:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.8 2009/12/16 11:06:40 ssuominen Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 KEYWORDS="~alpha amd64 ~hppa ppc x86"
 
@@ -41,9 +41,6 @@ src_compile() {
 	commonconf="--with-odbc=/usr --without-tests"
 	commonconf="${commonconf} --enable-static --enable-shared"
 	# " --enable-threads"
-	if ! has ccache FEATURES; then
-		einfo "ccache would really help you compiling this package..."
-	fi
 
 	export ECONF_SOURCE="${S}"
 	append-flags -DODBCXX_DISABLE_READLINE_HACK
