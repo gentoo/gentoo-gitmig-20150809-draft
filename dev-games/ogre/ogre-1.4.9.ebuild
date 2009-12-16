@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.5 2009/11/12 21:30:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.6 2009/12/16 21:17:34 tupone Exp $
 
 inherit multilib eutils autotools flag-o-matic
 
