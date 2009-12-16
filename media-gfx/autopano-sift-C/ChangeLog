@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autopano-sift-C
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/ChangeLog,v 1.8 2009/10/22 20:15:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/ChangeLog,v 1.9 2009/12/16 23:18:36 fauli Exp $
+
+  16 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  autopano-sift-C-2.5.1.ebuild:
+  stable x86, bug 294316
 
 *autopano-sift-C-2.5.1 (22 Oct 2009)
 
