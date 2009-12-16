@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.11 2009/05/10 21:49:10 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.12 2009/12/16 20:16:53 kolmodin Exp $
+
+*http-4000.0.8 (15 Dec 2009)
+
+  15 Dec 2009; <kolmodin@gentoo.org> +http-4000.0.8.ebuild:
+  Version bump.
 
 *http-4000.0.6 (10 May 2009)
 
