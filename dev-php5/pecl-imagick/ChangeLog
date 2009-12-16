@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-imagick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.24 2009/04/09 10:36:30 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.25 2009/12/16 20:22:56 hoffie Exp $
+
+*pecl-imagick-2.3.0 (16 Dec 2009)
+
+  16 Dec 2009; Christian Hoffmann <hoffie@gentoo.org>
+  +pecl-imagick-2.3.0.ebuild:
+  version bump per bug 288440, thanks to Daniel T. <dane.tschi@gmx.at>
 
 *pecl-imagick-2.3.0_beta1 (09 Apr 2009)
 *pecl-imagick-2.2.2 (09 Apr 2009)
