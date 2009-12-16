@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-apache
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.22 2009/08/14 21:19:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.23 2009/12/16 02:54:13 pebenito Exp $
+
+*selinux-apache-2.20091215 (16 Dec 2009)
+
+  16 Dec 2009; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-apache-2.20091215.ebuild:
+  New upstream release.
 
   14 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
   -selinux-apache-20070329.ebuild, -selinux-apache-20070928.ebuild,
