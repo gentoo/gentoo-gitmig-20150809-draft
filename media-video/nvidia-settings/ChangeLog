@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.78 2009/12/01 13:56:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.79 2009/12/16 22:46:56 peper Exp $
+
+*nvidia-settings-190.53 (16 Dec 2009)
+
+  16 Dec 2009; Piotr Jaroszyński <peper@gentoo.org>
+  +nvidia-settings-190.53.ebuild,
+  +files/nvidia-settings-190.53-xf86vidmodeproto.patch:
+  Add 190.53.
 
   01 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   files/nvidia-settings-190.42-xf86vidmodeproto.patch:
