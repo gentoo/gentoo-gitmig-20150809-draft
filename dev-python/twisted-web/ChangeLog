@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.48 2009/12/01 09:48:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.49 2009/12/16 00:35:23 ranger Exp $
+
+  16 Dec 2009; Brent Baude <ranger@gentoo.org> twisted-web-8.2.0.ebuild:
+  Marking twisted-web-8.2.0 ppc64 stable for bug 289680
 
   01 Dec 2009; Markus Meier <maekke@gentoo.org> twisted-web-8.2.0.ebuild:
   amd64/x86 stable, bug #289680
