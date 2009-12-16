@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/pecl-fileinfo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.22 2007/12/06 01:07:20 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.23 2009/12/16 16:56:22 hoffie Exp $
+
+*pecl-fileinfo-1.0.4-r1 (16 Dec 2009)
+
+  16 Dec 2009; Christian Hoffmann <hoffie@gentoo.org>
+  +pecl-fileinfo-1.0.4-r1.ebuild,
+  +files/fileinfo-1.0.4-file-5.0-compat.patch:
+  adding -r1 for >=file-5 compatibility per bug 288043, thanks to Cyril
+  Pascal <cyril.pascal_gentoobugs@m4x.org>
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-fileinfo-1.0.4.ebuild:
   LICENSE fix from project overlay
