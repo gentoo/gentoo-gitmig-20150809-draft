@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.16-r1.ebuild,v 1.1 2009/12/16 19:38:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.16-r1.ebuild,v 1.2 2009/12/16 21:15:57 robbat2 Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ SHAREDIR="/usr/share/mlmmj"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${PN}-1.2.16-requeue-unlink-fix.patch
+	epatch "${FILESDIR}"/${PN}-1.2.16-unsub-digest-text.patch
 	cd "${S}"
 	for i in "${S}" "${S}"/contrib/recievestrip ; do
 		pushd "${i}"
