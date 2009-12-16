@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.4 2009/08/02 01:43:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.5 2009/12/16 01:55:00 pebenito Exp $
+
+*sepolgen-1.0.17-r1 (16 Dec 2009)
+
+  16 Dec 2009; Chris PeBenito <pebenito@gentoo.org>
+  +sepolgen-1.0.17-r1.ebuild:
+  Fix build tests for #296737.
 
   02 Aug 2009; Chris PeBenito <pebenito@gentoo.org> sepolgen-1.0.13.ebuild,
   sepolgen-1.0.17.ebuild:
