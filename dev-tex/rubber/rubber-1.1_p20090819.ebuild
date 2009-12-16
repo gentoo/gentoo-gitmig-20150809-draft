@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/rubber-1.1_p20090819.ebuild,v 1.1 2009/10/03 09:09:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/rubber-1.1_p20090819.ebuild,v 1.2 2009/12/16 21:16:00 maekke Exp $
 
 EAPI="2"
 NEED_PYTHON="2.5"
@@ -17,7 +17,7 @@ SRC_URI="http://iml.univ-mrs.fr/~beffara/soft/rubber/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="virtual/latex-base"
 
