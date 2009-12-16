@@ -1,11 +1,26 @@
 http://bugs.gentoo.org/show_bug.cgi?id=295600
+http://bugs.gentoo.org/show_bug.cgi?id=296544
 
 http://websvn.kde.org/trunk/KDE/kdebase/workspace/solid/hal/halpower.cpp?r1=929945&r2=1035622&pathrev=1057980
 http://websvn.kde.org/trunk/KDE/kdebase/workspace/solid/hal/halpower.cpp?r1=1035622&r2=1057980&pathrev=1057980
+http://websvn.kde.org/trunk/KDE/kdebase/workspace/solid/hal/halpower.cpp?r1=1057980&r2=1062504&pathrev=1062504
+http://websvn.kde.org/trunk/KDE/kdebase/workspace/libs/solid/control/powermanager.cpp?r1=923760&r2=1062504&pathrev=1062504
 
+diff -ur kdebase-workspace-4.3.4.orig/libs/solid/control/powermanager.cpp kdebase-workspace-4.3.4/libs/solid/control/powermanager.cpp
+--- kdebase-workspace-4.3.4.orig/libs/solid/control/powermanager.cpp	2009-02-12 12:23:46.000000000 +0200
++++ kdebase-workspace-4.3.4/libs/solid/control/powermanager.cpp	2009-12-16 16:45:44.000000000 +0200
+@@ -196,7 +196,7 @@
+         else
+         {
+             return_SOLID_CALL(Ifaces::PowerManager *, globalPowerManager->managerBackend(),
+-                      false, brightness(controls.keys().at(0)));
++                      false, brightness(controls.keys(Solid::Control::PowerManager::Screen).at(0)));
+         }
+     }
+     else
 diff -ur kdebase-workspace-4.3.4.orig/solid/hal/halpower.cpp kdebase-workspace-4.3.4/solid/hal/halpower.cpp
 --- kdebase-workspace-4.3.4.orig/solid/hal/halpower.cpp	2009-02-26 11:12:20.000000000 +0200
-+++ kdebase-workspace-4.3.4/solid/hal/halpower.cpp	2009-12-07 17:28:24.000000000 +0200
++++ kdebase-workspace-4.3.4/solid/hal/halpower.cpp	2009-12-16 16:46:39.000000000 +0200
 @@ -361,13 +361,21 @@
  Solid::Control::PowerManager::BrightnessControlsList HalPower::brightnessControlsAvailable()
  {
@@ -43,7 +58,7 @@ diff -ur kdebase-workspace-4.3.4.orig/solid/hal/halpower.cpp kdebase-workspace-4
          QDBusInterface deviceInterface("org.freedesktop.Hal", device, "org.freedesktop.Hal.Device.LaptopPanel", QDBusConnection::systemBus());
 -        brightness = deviceInterface.call("GetBrightness").arguments().at(0).toDouble();
 -        if(deviceInterface.lastError().isValid())
-+        QDBusReply<double> brightnessReply = deviceInterface.call("GetBrightness");
++        QDBusReply<int> brightnessReply = deviceInterface.call("GetBrightness");
 +        if(!brightnessReply.isValid())
          {
 -            return 0;
@@ -71,7 +86,7 @@ diff -ur kdebase-workspace-4.3.4.orig/solid/hal/halpower.cpp kdebase-workspace-4
 -        brightness = deviceInterface.call("GetBrightness").arguments().at(0).toDouble();
 -        if(deviceInterface.lastError().isValid())
 +
-+        QDBusReply<double> brightnessReply = deviceInterface.call("GetBrightness");
++        QDBusReply<int> brightnessReply = deviceInterface.call("GetBrightness");
 +        if(!brightnessReply.isValid())
          {
 -            return 0;
