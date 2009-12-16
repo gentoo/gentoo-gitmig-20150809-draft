@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10971 2009/12/16 18:37:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10972 2009/12/16 22:18:14 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -672,8 +672,7 @@ sys-auth/pam_keystore
 =app-emulation/emul-linux-x86-baselibs-20091003_rc1
 
 # Markus Meier <maekke@gentoo.org> (03 Oct 2009)
-# mask hugin and deps beta/rc versions for testing
->=media-gfx/hugin-2009.4.0_rc1
+# mask libpano13 beta versions for testing
 >=media-libs/libpano13-2.9.15_beta3
 
 # Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
