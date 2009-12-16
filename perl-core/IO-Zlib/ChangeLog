@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/IO-Zlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/ChangeLog,v 1.8 2009/12/10 21:34:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/ChangeLog,v 1.9 2009/12/16 21:51:42 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> IO-Zlib-1.09.ebuild,
+  IO-Zlib-1.10.ebuild:
+  QA: Transfer prefix keywords
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> IO-Zlib-1.09.ebuild:
   Marking IO-Zlib-1.09 ppc64 stable for bug 288026

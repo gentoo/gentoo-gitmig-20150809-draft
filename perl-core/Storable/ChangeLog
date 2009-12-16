@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Storable
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.38 2009/12/14 19:22:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.39 2009/12/16 21:56:41 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Storable-2.16.ebuild,
+  Storable-2.18.ebuild, Storable-2.20.ebuild, Storable-2.21.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Storable-2.20.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #288026

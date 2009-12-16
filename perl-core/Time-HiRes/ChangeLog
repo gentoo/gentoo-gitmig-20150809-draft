@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.58 2009/12/14 19:31:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.59 2009/12/16 21:59:47 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Time-HiRes-1.97.07.ebuild,
+  Time-HiRes-1.97.15.ebuild, Time-HiRes-1.97.19.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Time-HiRes-1.97.19.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #288026

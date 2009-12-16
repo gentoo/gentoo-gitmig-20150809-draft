@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Archive-Tar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.21 2009/12/14 18:40:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.22 2009/12/16 21:45:02 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Archive-Tar-1.40.ebuild,
+  Archive-Tar-1.46.ebuild, Archive-Tar-1.48.ebuild, Archive-Tar-1.50.ebuild,
+  Archive-Tar-1.52.ebuild, Archive-Tar-1.54.ebuild:
+  QA: Add prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Archive-Tar-1.54.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #288026

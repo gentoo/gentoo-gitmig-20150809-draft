@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/MIME-Base64
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.23 2009/12/14 19:08:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.24 2009/12/16 21:53:22 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> MIME-Base64-3.08.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> MIME-Base64-3.08.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #288026

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Text-Balanced
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.29 2009/08/02 18:48:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.30 2009/12/16 21:58:59 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Text-Balanced-2.0.0.ebuild,
+  Text-Balanced-2.02.ebuild:
+  QA: Transfer prefix keywords
 
 *Text-Balanced-2.02 (02 Aug 2009)
 

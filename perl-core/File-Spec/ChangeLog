@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.68 2009/12/14 19:01:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.69 2009/12/16 21:48:50 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> File-Spec-3.25.ebuild,
+  File-Spec-3.29.ebuild, File-Spec-3.30.ebuild, File-Spec-3.31.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> File-Spec-3.30.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #288026

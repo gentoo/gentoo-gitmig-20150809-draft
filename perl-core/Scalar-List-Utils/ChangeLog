@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Scalar-List-Utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.29 2009/12/14 19:20:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.30 2009/12/16 21:56:18 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  Scalar-List-Utils-1.19.ebuild, Scalar-List-Utils-1.21.ebuild,
+  Scalar-List-Utils-1.22.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   Scalar-List-Utils-1.21.ebuild:

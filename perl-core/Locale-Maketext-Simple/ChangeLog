@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Locale-Maketext-Simple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/ChangeLog,v 1.3 2009/08/18 20:44:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/ChangeLog,v 1.4 2009/12/16 21:52:39 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  Locale-Maketext-Simple-0.21.ebuild:
+  QA: Transfer prefix keywords
 
 *Locale-Maketext-Simple-0.21 (18 Aug 2009)
 

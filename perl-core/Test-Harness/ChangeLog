@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.50 2009/12/14 19:25:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.51 2009/12/16 21:58:10 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Test-Harness-2.64.ebuild,
+  Test-Harness-3.16.ebuild, Test-Harness-3.17.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Test-Harness-3.17.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #288026

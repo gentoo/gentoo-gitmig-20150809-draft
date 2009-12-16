@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Term-ANSIColor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-ANSIColor/ChangeLog,v 1.10 2009/12/14 19:23:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-ANSIColor/ChangeLog,v 1.11 2009/12/16 21:57:27 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Term-ANSIColor-1.12.ebuild,
+  Term-ANSIColor-2.00.ebuild, Term-ANSIColor-2.01.ebuild,
+  Term-ANSIColor-2.02.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Term-ANSIColor-2.00.ebuild:
   alpha/ia64/sparc stable wrt #288026

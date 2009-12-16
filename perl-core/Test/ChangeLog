@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.11 2009/01/30 13:22:12 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.12 2009/12/16 21:57:48 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Test-1.25.ebuild:
+  QA: Transfer prefix keywords
 
   30 Jan 2009; Torsten Veller <tove@gentoo.org> metadata.xml,
   -Test-1.24.ebuild, Test-1.25.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.46 2009/12/14 19:33:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.47 2009/12/16 22:00:10 abcd Exp $
+
+  16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Time-Local-1.17.ebuild,
+  Time-Local-1.18.ebuild, Time-Local-1.19.01.ebuild:
+  QA: Transfer prefix keywords
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org> Time-Local-1.19.01.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #288026

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/CGI-3.47.ebuild,v 1.1 2009/09/10 20:40:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/CGI-3.47.ebuild,v 1.2 2009/12/16 21:45:30 abcd Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Simple Common Gateway Interface Class"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 #DEPEND="dev-lang/perl"
