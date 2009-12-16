@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.4 2009/12/15 17:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.5 2009/12/16 09:51:30 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -151,6 +151,7 @@ ruby_fakegem_binwrapper() {
 	(
 		local gembinary=$1
 		local newbinary=${2:-/usr/bin/$gembinary}
+		local relativegembinary=${RUBY_FAKEGEM_NAME}-${RUBY_FAKEGEM_VERSION}/bin/${gembinary}
 
 		cat - > "${T}"/gembin-wrapper-${gembinary} <<EOF
 #!/usr/bin/env ruby
@@ -160,7 +161,7 @@ ruby_fakegem_binwrapper() {
 
 require 'rubygems'
 
-load Gem::GemPathSearcher.new.find('$(tr [A-Z] [a-z] <<< ${RUBY_FAKEGEM_NAME})').full_gem_path + "/bin/${gembinary}"
+load Gem::default_path[-1] + "/gems/${relativegembinary}"
 
 EOF
 
