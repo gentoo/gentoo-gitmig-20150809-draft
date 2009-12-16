@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.109 2009/12/15 19:37:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.110 2009/12/16 19:19:59 jer Exp $
+
+  16 Dec 2009; Jeroen Roovers <jer@gentoo.org>
+  activesupport-2.3.5-r1.ebuild:
+  Marked ~hppa (bug #297086).
 
 *activesupport-2.3.5-r1 (15 Dec 2009)
 
