@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.7 2009/09/20 14:39:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.8 2009/12/16 12:54:11 maekke Exp $
+
+  16 Dec 2009; Markus Meier <maekke@gentoo.org> ruby-vte-0.19.1.ebuild:
+  amd64/x86 stable, bug #295942
 
   20 Sep 2009; Hans de Graaff <graaff@gentoo.org> ruby-vte-0.19.1.ebuild:
   Fix QA issue.
