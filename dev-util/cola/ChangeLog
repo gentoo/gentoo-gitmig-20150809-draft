@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cola
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/ChangeLog,v 1.5 2009/11/03 09:04:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/ChangeLog,v 1.6 2009/12/16 20:08:49 dev-zero Exp $
+
+*cola-1.4.1.1 (16 Dec 2009)
+
+  16 Dec 2009; Tiziano Müller <dev-zero@gentoo.org> +cola-1.4.1.1.ebuild:
+  Version bump.
 
 *cola-1.4.0.1 (03 Nov 2009)
 
