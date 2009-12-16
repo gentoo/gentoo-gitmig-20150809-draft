@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/gwydion-dylan-2.4.0-r1.ebuild,v 1.1 2008/03/09 23:56:19 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/gwydion-dylan-2.4.0-r1.ebuild,v 1.2 2009/12/16 10:14:21 flameeyes Exp $
 
 inherit eutils elisp-common
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install \
+	emake -j1 DESTDIR="${D}" install \
 		|| die "make failed"
 	if use emacs; then
 		elisp-install "${PN}" "${S}"/tools/elisp/*.el "${S}"/tools/elisp/*.elc

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gwydion-dylan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/ChangeLog,v 1.4 2008/03/09 23:56:19 araujo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/ChangeLog,v 1.5 2009/12/16 10:14:21 flameeyes Exp $
+
+  16 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  gwydion-dylan-2.4.0-r1.ebuild:
+  Use emake -j1 for install as well.
 
 *gwydion-dylan-2.4.0-r1 (09 Mar 2008)
 
