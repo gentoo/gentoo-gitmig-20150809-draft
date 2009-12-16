@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.24 2009/07/19 14:07:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.25 2009/12/16 19:45:18 fauli Exp $
+
+  16 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  servlet-api-2.2.ebuild, servlet-api-2.3.ebuild, servlet-api-2.5.ebuild:
+  QA: transfer Prefix keywords
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> servlet-api-2.2.ebuild:
   ppc stable #274798

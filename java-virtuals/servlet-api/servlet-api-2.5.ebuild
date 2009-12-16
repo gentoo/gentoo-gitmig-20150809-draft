@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-2.5.ebuild,v 1.9 2009/05/23 19:46:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-2.5.ebuild,v 1.10 2009/12/16 19:45:18 fauli Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="as-is"
 SLOT="${PV}"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="|| (
