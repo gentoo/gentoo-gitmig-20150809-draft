@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.5 2009/08/07 17:35:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.6 2009/12/16 15:23:15 a3li Exp $
+
+*test-spec-0.10.0-r1 (16 Dec 2009)
+
+  16 Dec 2009; Alex Legler <a3li@gentoo.org> +test-spec-0.10.0-r1.ebuild:
+  Revbump, move to ruby-fakegem
 
   07 Aug 2009; Hans de Graaff <graaff@gentoo.org> -test-spec-0.4.0.ebuild,
   -test-spec-0.9.0.ebuild:
