@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3681 2009/12/16 10:13:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3682 2009/12/16 18:37:01 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking sys-apps/compare for QA removal.
 
   16 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking dev-ruby/ruby-xlib for QA removal.
