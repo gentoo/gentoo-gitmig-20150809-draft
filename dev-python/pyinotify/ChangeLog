@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.18 2009/12/09 18:54:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.19 2009/12/16 21:10:12 maekke Exp $
+
+  16 Dec 2009; Markus Meier <maekke@gentoo.org> pyinotify-0.8.8.ebuild:
+  amd64/x86 stable, bug #295699
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> pyinotify-0.8.8.ebuild:
   ppc stable #295699
