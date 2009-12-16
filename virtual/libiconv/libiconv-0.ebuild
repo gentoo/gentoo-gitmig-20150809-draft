@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/libiconv-0.ebuild,v 1.5 2009/12/15 18:12:39 abcd Exp $
-
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/libiconv-0.ebuild,v 1.6 2009/12/16 20:33:47 abcd Exp $
 
 DESCRIPTION="Virtual for the GNU conversion library"
 HOMEPAGE="http://www.gentoo.org/proj/en/gentoo-alt/"
@@ -15,10 +13,4 @@ DEPEND=""
 
 # - Don't put elibc_glibc? ( sys-libs/glibc ) to avoid circular deps between
 # that and gcc
-RDEPEND="
-	elibc_uclibc? ( || (
-		sys-libs/uclibc[iconv]
-		dev-libs/libiconv
-	) )
-	!elibc_glibc? ( !elibc_uclibc? ( dev-libs/libiconv ) )
-"
+RDEPEND="!elibc_glibc? ( !elibc_uclibc? ( dev-libs/libiconv ) )"
