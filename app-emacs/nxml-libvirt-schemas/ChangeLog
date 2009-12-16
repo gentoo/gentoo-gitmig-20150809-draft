@@ -1,0 +1,13 @@
+# ChangeLog for app-emacs/nxml-libvirt-schemas
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/ChangeLog,v 1.1 2009/12/16 19:12:59 flameeyes Exp $
+
+*nxml-libvirt-schemas-0.7.4 (16 Dec 2009)
+
+  16 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/60nxml-libvirt-schemas-gentoo.el,
+  +nxml-libvirt-schemas-0.7.4.ebuild, +files/Makefile-trang,
+  +files/schemas.xml, +metadata.xml:
+  Initial import of nxml-mode schemas for libvirt; it requires patches
+  backported from the upstream tree for the files to properly validate.
+
