@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/comical
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.9 2009/11/25 22:16:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.10 2009/12/16 22:23:42 maekke Exp $
+
+*comical-0.8-r1 (16 Dec 2009)
+
+  16 Dec 2009; Markus Meier <maekke@gentoo.org> +comical-0.8-r1.ebuild,
+  +files/comical.desktop:
+  add .desktop file by Jared in bug #295611; general ebuild improvements
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> comical-0.8.ebuild:
   amd64 stable, bug #286321
