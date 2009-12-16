@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.152 2009/12/14 09:56:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.153 2009/12/16 17:17:28 chainsaw Exp $
+
+  16 Dec 2009; <chainsaw@gentoo.org> -audacious-plugins-2.2_beta2.ebuild,
+  -audacious-plugins-2.2-r1.ebuild, audacious-plugins-2.2-r2.ebuild:
+  Marked stable on AMD64 as it addresses bug #295051 (JACK plugin build
+  failure). Tested using MP3, AAC, LDS, SID & WMA files on a Lifebook S6420.
 
   14 Dec 2009; Tobias Klausmann <klausman@gentoo.org>
   audacious-plugins-2.2-r2.ebuild:
