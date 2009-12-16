@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.72 2009/12/09 18:51:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.73 2009/12/16 13:01:42 maekke Exp $
+
+  16 Dec 2009; Markus Meier <maekke@gentoo.org> python-ldap-2.3.10.ebuild:
+  amd64/x86 stable, bug #295694
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> python-ldap-2.3.10.ebuild:
   ppc stable #295694
