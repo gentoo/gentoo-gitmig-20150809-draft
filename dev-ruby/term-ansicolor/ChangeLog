@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/term-ansicolor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.1 2009/08/01 07:50:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.2 2009/12/16 18:24:05 graaff Exp $
+
+*term-ansicolor-1.0.4-r1 (16 Dec 2009)
+
+  16 Dec 2009; Hans de Graaff <graaff@gentoo.org>
+  +term-ansicolor-1.0.4-r1.ebuild:
+  Bump to use ruby-fakegem so that packages depending on this can be bumped.
 
 *term-ansicolor-1.0.4 (01 Aug 2009)
 
