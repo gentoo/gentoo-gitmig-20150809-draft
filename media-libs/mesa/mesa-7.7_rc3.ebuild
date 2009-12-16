@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7_rc3.ebuild,v 1.1 2009/12/16 17:58:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7_rc3.ebuild,v 1.2 2009/12/16 18:16:36 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ inherit autotools multilib flag-o-matic ${GIT_ECLASS} portability
 OPENGL_DIR="xorg-x11"
 
 MY_PN="${PN/m/M}"
-MY_P="${MY_PN}-${PV/_/-}"
+MY_P="${MY_PN}-${PV/_*}"
 MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
