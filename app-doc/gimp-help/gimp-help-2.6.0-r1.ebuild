@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-2.6.0.ebuild,v 1.1 2009/10/20 13:29:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-2.6.0-r1.ebuild,v 1.1 2009/12/16 06:51:01 pva Exp $
 
 inherit eutils
 
@@ -21,7 +21,11 @@ LANGS="de en es fr it ja ko nl nn pl ru sv zh_CN"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://gimp/help/${P}-html-${X}.tar.bz2 )"
+	EMPTY_LINGUAS_SRC_URI="mirror://gimp/help/${P}-html-${X}.tar.bz2 ${EMPTY_LINGUAS_SRC_URI}"
+	EMPTY_LINGUAS_SET="!linguas_${X}? ( ${EMPTY_LINGUAS_SET} "
+	EMPTY_LINGUAS_BRAKETS="${EMPTY_LINGUAS_BRAKETS} )"
 done
+SRC_URI="${SRC_URI} ${EMPTY_LINGUAS_SET} ${EMPTY_LINGUAS_SRC_URI} ${EMPTY_LINGUAS_BRAKETS}"
 
 DEPEND=""
 RDEPEND=">=media-gfx/gimp-2.4"

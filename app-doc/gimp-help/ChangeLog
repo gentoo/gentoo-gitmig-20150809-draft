@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.59 2009/10/20 13:29:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.60 2009/12/16 06:51:01 pva Exp $
+
+*gimp-help-2.6.0-r1 (16 Dec 2009)
+
+  16 Dec 2009; Peter Volkov <pva@gentoo.org> -gimp-help-2.6.0.ebuild,
+  +gimp-help-2.6.0-r1.ebuild:
+  Fixed installation with empty linguas, bug #297109 thank Diego E.
+  'Flameeyes' Pettenò for report.
 
 *gimp-help-2.6.0 (20 Oct 2009)
 
