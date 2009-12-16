@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/javamail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/ChangeLog,v 1.11 2009/07/05 21:27:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/ChangeLog,v 1.12 2009/12/16 19:29:24 fauli Exp $
+
+  16 Dec 2009; Christian Faulhammer <fauli@gentoo.org> javamail-1.0.ebuild,
+  javamail-1.0-r1.ebuild:
+  QA: transfer Prefix keywords
 
   05 Jul 2009; Alexis Ballier <aballier@gentoo.org> javamail-1.0-r1.ebuild:
   keyword ~x86-fbsd
