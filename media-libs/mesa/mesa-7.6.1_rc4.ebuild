@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.6.1_rc3.ebuild,v 1.2 2009/12/14 02:25:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.6.1_rc4.ebuild,v 1.1 2009/12/16 17:58:44 scarabeus Exp $
 
 EAPI="2"
 
