@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.0.ebuild,v 1.1 2009/12/15 10:44:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.1.ebuild,v 1.1 2009/12/17 18:15:35 pva Exp $
 
 EAPI="2"
 KDE_REQUIRED="never"
