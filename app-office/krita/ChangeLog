@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.103 2009/12/05 17:55:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.104 2009/12/17 10:34:34 ssuominen Exp $
+
+  17 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> krita-2.1.0.ebuild:
+  amd64 stable wrt #295327
 
   05 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> krita-2.1.0.ebuild,
   +files/krita-2.1.0-opengl.patch:

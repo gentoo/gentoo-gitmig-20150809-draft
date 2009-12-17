@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.93 2009/11/29 18:09:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.94 2009/12/17 10:40:16 ssuominen Exp $
+
+  17 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  koffice-meta-2.1.0.ebuild:
+  amd64 stable wrt #295327
 
   29 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   koffice-meta-2.1.0.ebuild:
