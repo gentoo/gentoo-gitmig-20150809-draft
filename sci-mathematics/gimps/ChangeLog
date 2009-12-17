@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gimps
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.28 2009/04/10 19:38:24 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.29 2009/12/17 11:31:03 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> gimps-25.9.ebuild:
+  stable x86, bug 295430
 
   10 Apr 2009; Michał Januszewski <spock@gentoo.org>
   +files/mprime-25.9.bpatch, gimps-25.9.ebuild:
