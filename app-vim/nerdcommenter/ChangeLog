@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/nerdcommenter
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdcommenter/ChangeLog,v 1.6 2008/09/21 12:07:34 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdcommenter/ChangeLog,v 1.7 2009/12/17 10:41:41 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  nerdcommenter-2.1.18.ebuild:
+  QA: add prefix keywords
 
 *nerdcommenter-2.1.18 (21 Sep 2008)
 
