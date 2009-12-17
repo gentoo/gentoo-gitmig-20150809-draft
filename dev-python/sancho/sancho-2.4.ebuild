@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.4.ebuild,v 1.8 2009/11/26 10:34:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.4.ebuild,v 1.9 2009/12/17 19:01:26 armin76 Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.mems-exchange.org/software/files/${PN}/${MY_P}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
 DEPEND=""
