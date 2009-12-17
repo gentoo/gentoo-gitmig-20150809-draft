@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.49 2009/11/03 17:10:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.50 2009/12/17 17:03:43 grozin Exp $
+
+*epydoc-3.0.1-r1 (17 Dec 2009)
+
+  17 Dec 2009; Andrey Grozin <grozin@gentoo.org>
+  +files/epydoc-docutils-0.6.patch, +files/epydoc-python-2.6.patch,
+  +epydoc-3.0.1-r1.ebuild:
+  bug #287546, thanks to Engelbert Gruber <grubert@users.sourceforge.net>
+  and Martin von Gagern <Martin.vGagern@gmx.net>; bug #288273, thanks to
+  Andre Malo <nd@perlig.de>
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> epydoc-3.0.1.ebuild:
   m68k/s390 stable wrt #241572
