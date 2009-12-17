@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10972 2009/12/16 22:18:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10973 2009/12/17 13:03:22 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,14 @@
 
 #--- END OF EXAMPLES ---
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (16 dic 2009)
+# Tomáš Chvátal <scarabeus@gentoo.org> (17 Dec 2009)
+# Mask xf86-video-via since it does not work for
+# xorg-server-1.6 and later.
+# use xf86-video-openchrome as replacement.
+# Kill in 30 days.
+x11-drivers/xf86-video-via
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (16 Dec 2009)
 #  on behalf of QA team
 #
 # Fails to build with glibc 2.10 (bug #297210), ignores flags
@@ -42,7 +49,7 @@
 # Removal on 2010-02-14
 sys-apps/compare
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (16 dic 2009)
+# Diego E. Pettenò <flameeyes@gentoo.org> (16 Dec 2009)
 #  on behalf of QA team
 #
 # No upstream release since 2005, unused in Gentoo, smaller
