@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.11.ebuild,v 1.5 2009/11/21 05:45:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-71.86.11.ebuild,v 1.6 2009/12/17 19:25:44 cardoe Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ IUSE="acpi custom-cflags gtk multilib kernel_FreeBSD kernel_linux userland_BSD"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.6.99
+COMMON="<x11-base/xorg-server-1.4.99
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	!app-emulation/emul-linux-x86-nvidia
