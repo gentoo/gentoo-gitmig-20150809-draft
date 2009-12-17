@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10.ebuild,v 1.1 2009/12/17 14:14:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10.ebuild,v 1.2 2009/12/17 14:16:10 ssuominen Exp $
 
 EAPI=2
 inherit libtool
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
-HOMEPAGE="http://librdf.org"
+HOMEPAGE="http://librdf.org/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
