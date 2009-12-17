@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20060909.ebuild,v 1.5 2009/04/04 14:25:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ooextras-20060909.ebuild,v 1.6 2009/12/17 10:53:02 ssuominen Exp $
 
 DESCRIPTION="OOExtras: Extra Templates for OpenOffice.org!"
 HOMEPAGE="http://ooextras.sourceforge.net/"
@@ -22,7 +22,7 @@ src_compile() {
 
 src_install() {
 	dodir ${INSTDIR}
-	cp -R -- ${S}/. ${D}/${INSTDIR}/
+	cp -R -- "${S}"/. "${D}"/${INSTDIR}/
 }
 
 pkg_postinst() {

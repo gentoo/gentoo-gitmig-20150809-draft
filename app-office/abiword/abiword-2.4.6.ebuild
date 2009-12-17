@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.15 2009/01/04 22:51:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.16 2009/12/17 10:54:05 ssuominen Exp $
 
 inherit alternatives eutils fdo-mime
 
@@ -44,8 +44,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/11_history_fullpath.dpatch
-	epatch ${FILESDIR}/freebsd_fix.patch
+	epatch "${FILESDIR}"/11_history_fullpath.dpatch
+	epatch "${FILESDIR}"/freebsd_fix.patch
 }
 
 src_compile() {
@@ -65,12 +65,12 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,lib}
-	make DESTDIR="${D}" icondir="/usr/share/pixmaps" install || die "install failed"
+	emake DESTDIR="${D}" icondir="/usr/share/pixmaps" install || die "install failed"
 
 	dosed "s:Exec=abiword:Exec=abiword-2.4:" /usr/share/applications/abiword.desktop
 
-	rm -f ${D}/usr/bin/abiword
-	rm -f ${D}/usr/bin/abiword-2.4
+	rm -f "${D}"/usr/bin/abiword
+	rm -f "${D}"/usr/bin/abiword-2.4
 	dosym AbiWord-2.4 /usr/bin/abiword-2.4
 
 	dodoc *.TXT user/wp/readme.txt
