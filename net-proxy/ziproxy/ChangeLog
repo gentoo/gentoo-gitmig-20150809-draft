@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.22 2009/09/22 15:51:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.23 2009/12/17 14:12:24 sbriesen Exp $
+
+*ziproxy-2.7.2 (17 Dec 2009)
+
+  17 Dec 2009; Stefan Briesenick <sbriesen@gentoo.org>
+  +ziproxy-2.7.2.ebuild, metadata.xml:
+  version bump, added russian docs with LINGUAS=ru
 
 *ziproxy-2.7.1 (22 Sep 2009)
 

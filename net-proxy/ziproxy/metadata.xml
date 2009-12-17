@@ -7,8 +7,8 @@
 		<name>Stefan Briesenick</name>
 	</maintainer>
 	<longdescription lang="en">
-		Ziproxy is forwarding, non-caching, compressing web proxy server. It
-		squeezes images by converting them to low quality JPEGs and optionally
-		can also compress (gzip) HTML and other text-like data.
+		Ziproxy is a http compression and optimizer, non-caching, fully configurable
+		proxy. Ziproxy features JPEG, GIF, PNG, JPEG2k and GZIP recompression for
+		lower HTTP traffic through low speed links, among other features.
 	</longdescription>
 </pkgmetadata>
