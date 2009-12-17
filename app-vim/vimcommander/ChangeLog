@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vimcommander
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.23 2009/12/17 11:00:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.24 2009/12/17 11:01:56 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -vimcommander-1.54.2.2.ebuild:
+  clean up
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   vimcommander-1.54.2.9.ebuild:
