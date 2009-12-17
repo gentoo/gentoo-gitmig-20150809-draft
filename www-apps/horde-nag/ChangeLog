@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-nag
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.34 2009/09/17 17:27:18 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.35 2009/12/17 20:23:52 a3li Exp $
+
+*horde-nag-2.3.4 (17 Dec 2009)
+
+  17 Dec 2009; Alex Legler <a3li@gentoo.org> -horde-nag-2.3.1.ebuild,
+  +horde-nag-2.3.4.ebuild, metadata.xml:
+  Version bump, remove old version, take over maintenance
 
 *horde-nag-2.3.3 (17 Sep 2009)
 
