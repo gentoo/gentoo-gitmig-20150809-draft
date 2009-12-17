@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-mnemo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.25 2009/09/17 17:20:25 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.26 2009/12/17 20:30:04 a3li Exp $
+
+*horde-mnemo-2.2.3 (17 Dec 2009)
+
+  17 Dec 2009; Alex Legler <a3li@gentoo.org> -horde-mnemo-2.2.ebuild,
+  +horde-mnemo-2.2.3.ebuild, metadata.xml:
+  Version bump, remove old version, take over maintenance
 
 *horde-mnemo-2.2.2 (17 Sep 2009)
 
