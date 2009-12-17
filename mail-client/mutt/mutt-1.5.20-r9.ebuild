@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r9.ebuild,v 1.1 2009/12/15 18:06:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r9.ebuild,v 1.2 2009/12/17 11:38:25 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r3"
+PATCHSET_REV="-r4"
 
 # note: latest sidebar patches can be found here:
 # http://www.lunar-linux.org/index.php?option=com_content&task=view&id=44
@@ -118,7 +118,7 @@ src_unpack() {
 
 	if use sidebar ; then
 		use vanilla || \
-			ewarn "The sidebar patch is only applied to a vanilla mutt tree."
+			ewarn "the sidebar patch is only applied to a vanilla mutt tree"
 		epatch "${DISTDIR}"/${SIDEBAR_PATCH_N}
 	fi
 
