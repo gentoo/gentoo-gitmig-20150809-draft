@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.221 2009/12/17 04:35:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.222 2009/12/17 04:37:13 robbat2 Exp $
+
+*genkernel-3.4.10.907 (17 Dec 2009)
+
+  17 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +genkernel-3.4.10.907.ebuild:
+  New release of genkernel, now with iscsi support.
 
   17 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
   Fix the MY_HOME variable in the live-sources ebuild.
