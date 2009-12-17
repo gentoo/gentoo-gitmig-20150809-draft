@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mimp/horde-mimp-1.0.2.ebuild,v 1.2 2008/05/31 05:13:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mimp/horde-mimp-1.1.3.ebuild,v 1.1 2009/12/17 17:47:09 a3li Exp $
 
 HORDE_PHP_FEATURES="imap"
 HORDE_MAJ="-h3"
