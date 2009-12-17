@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0.ebuild,v 1.7 2009/06/09 18:24:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0.ebuild,v 1.8 2009/12/17 10:54:31 ssuominen Exp $
 
 EAPI="1"
 
-inherit eutils gnome2 autotools
+inherit eutils gnome2
 
 DESCRIPTION="utility to track time spent on activities"
 HOMEPAGE="http://gttr.sourceforge.net/"
