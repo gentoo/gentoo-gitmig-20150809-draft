@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.69 2009/12/17 10:36:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.70 2009/12/17 20:46:39 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kplato-2.1.0.ebuild:
+  stable x86, bug 295327
 
   17 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> kplato-2.1.0.ebuild:
   amd64 stable wrt #295327
