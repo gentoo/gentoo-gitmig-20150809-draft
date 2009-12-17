@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/clozurecl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.1 2009/12/17 12:16:40 grozin Exp $
+
+*clozurecl-1.4 (17 Dec 2009)
+
+  17 Dec 2009; Andrey Grozin <grozin@gentoo.org> +clozurecl-1.4.ebuild,
+  +files/fix_user-homedir-pathname.patch, +metadata.xml:
+  Initial import (from the lisp overlay)
+
