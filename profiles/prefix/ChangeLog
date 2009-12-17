@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.121 2009/12/13 14:45:53 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.122 2009/12/17 20:00:43 darkside Exp $
+
+  17 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +linux/arm/make.defaults,
+  +linux/arm/parent:
+  Add experimental arm profiles for armv7
 
   13 Dec 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
   Unmasking KDE 4.3, as the mask was never really needed anyway (not yet in

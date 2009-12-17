@@ -1,0 +1,9 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/arm/make.defaults,v 1.1 2009/12/17 20:00:43 darkside Exp $
+
+ARCH="arm"
+# This is a pretty specific profile to the armv7 arch, we can change that later
+CHOST="armv7a-softfloat-linux-gnueabi"
+# The base profile sets ACCEPT_KEYWORDS=x86 and we don't have that in prefix.
+ACCEPT_KEYWORDS="-arm ~arm-linux"

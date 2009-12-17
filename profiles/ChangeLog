@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3684 2009/12/16 22:18:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3685 2009/12/17 20:00:42 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Dec 2009; Jeremy Olexa <darkside@gentoo.org> arch.list,
+  +prefix/linux/arm/make.defaults, +prefix/linux/arm/parent, profiles.desc:
+  Add experimental arm-linux profiles for Gentoo Prefix
 
   16 Dec 2009; Markus Meier <maekke@gentoo.org> package.mask:
   remove hugin from mask as final version is out, change mask to libpano13
