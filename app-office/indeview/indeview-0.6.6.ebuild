@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.6.ebuild,v 1.7 2006/10/16 15:49:20 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.6.ebuild,v 1.8 2009/12/17 10:52:07 ssuominen Exp $
 
 DESCRIPTION="Convert OpenOffice/KOffice to run independently on Linux, OSX, or Windows"
 HOMEPAGE="http://www.indeview.org/"
@@ -20,7 +20,7 @@ src_compile() {
 	make || die "make failed"
 
 	# Fix up the OpenOffice macro file
-	cd ${S}/../Creator/OpenOffice/
+	cd "${S}"/../Creator/OpenOffice/
 	cp IndeViewExport.bas IndeViewExport.mo.bas
 	sed -i -e 's:unknown:/usr/share/IndeView/ROOT_DATA:' IndeViewExport.mo.bas
 	# Convert special characters to &XXX; style
@@ -41,7 +41,7 @@ _EOF_
 </script:module>
 _EOF_
 
-	cd ${S}/../Creator/KPresenter
+	cd "${S}"/../Creator/KPresenter
 	sed -i -e 's:^ROOT_DATA=unknown:ROOT_DATA=/usr/share/IndeView/ROOT_DATA:' kpr2iv.sh
 }
 
@@ -49,16 +49,16 @@ src_install() {
 	dobin bin/indeview
 	dobin ../Creator/KPresenter/kpr2iv.sh
 
-	cd ${S}/..
+	cd "${S}"/..
 	dohtml -r doc/html/*
-	dodoc LICENSE README AUTHORS
+	dodoc README AUTHORS
 
 	dodir /usr/share/IndeView
-	cp -pPR ${S}/../ROOT_DATA ${D}/usr/share/IndeView/
+	cp -pPR "${S}"/../ROOT_DATA "${D}"/usr/share/IndeView/
 
 	dodir /opt/OpenOffice.org/share/basic/Tools
 	insinto /opt/OpenOffice.org/share/basic/Tools
-	cd ${S}/../Creator/OpenOffice/
+	cd "${S}"/../Creator/OpenOffice/
 
 	doins IndeViewExport.xba
 }
@@ -76,7 +76,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	# Delete script from OpenOffice macros list
-	if [ ! -e ${ROOT}/usr/bin/indeview ];
+	if [ ! -e "${ROOT}"/usr/bin/indeview ];
 	then
 		grep "IndeViewExport" /opt/OpenOffice.org/share/basic/Tools/script.xlb > /dev/null 2>&1 &&
 			sed -i -e '/^ <library:element library:name="IndeViewExport"\/>$/d' /opt/OpenOffice.org/share/basic/Tools/script.xlb
