@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.59 2009/11/08 19:16:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.60 2009/12/17 10:29:21 ssuominen Exp $
+
+  17 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> wv2-0.4.2.ebuild:
+  amd64 stable wrt #295327
 
   08 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/0.4.0-cmake.patch, -wv2-0.4.1.ebuild, wv2-0.4.2.ebuild,
