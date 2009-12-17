@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.6.ebuild,v 1.12 2008/11/08 19:50:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.6.ebuild,v 1.13 2009/12/17 18:24:02 ssuominen Exp $
 
 EAPI="1"
 inherit flag-o-matic cmake-utils
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="|| ( x11-libs/qt-gui:4 <x11-libs/qt-4.4:4 )"
+DEPEND="x11-libs/qt-gui:4"
 
 S="${WORKDIR}/${MY_P}"
 DOCS="ChangeLog README TODO"
