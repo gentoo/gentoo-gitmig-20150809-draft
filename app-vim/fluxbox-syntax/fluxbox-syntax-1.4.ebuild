@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/fluxbox-syntax-1.4.ebuild,v 1.6 2009/12/17 10:26:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/fluxbox-syntax-1.4.ebuild,v 1.7 2009/12/17 10:27:41 fauli Exp $
 
 inherit vim-plugin
 
@@ -20,7 +20,7 @@ set the filetype using :set filetype=fluxbox if necessary."
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# no ftdetect file provided. lame...
 	mkdir ftdetect
 	echo "au BufNewFile,BufRead /*/*fluxbox/menu set filetype=fluxbox" \
