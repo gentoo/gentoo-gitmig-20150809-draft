@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-  <email>net-mon@gentoo.org</email>
+  <email>netmon@gentoo.org</email>
     <name>Netmon herd</name>
 </maintainer>
 <longdescription>AirTraf 1.0 is a wireless sniffer that can detect and determine exactly 

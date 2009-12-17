@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1.ebuild,v 1.6 2006/02/20 22:25:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1.ebuild,v 1.7 2009/12/17 21:22:54 flameeyes Exp $
 
 inherit eutils  toolchain-funcs
 
@@ -33,7 +33,9 @@ src_compile() {
 		-e "s:c++:$(tc-getCXX):" \
 		-e "s:CXXFLAGS = -Wall -O2:CXXFLAGS = ${CXXFLAGS} -Wall:" \
 		${T}/Makefile.rules > Makefile.rules
-	make || die
+
+	# bug #297331
+	emake -j1 || die
 }
 
 src_install () {
