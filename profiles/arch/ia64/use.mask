@@ -41,6 +41,7 @@ jack
 lapack
 prolog
 lqr
+celt
 
 # Stuff we don't want
 antlr
