@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3685 2009/12/17 20:00:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3686 2009/12/17 21:37:08 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking media-video/cinepaint for QA removal.
 
   17 Dec 2009; Jeremy Olexa <darkside@gentoo.org> arch.list,
   +prefix/linux/arm/make.defaults, +prefix/linux/arm/parent, profiles.desc:

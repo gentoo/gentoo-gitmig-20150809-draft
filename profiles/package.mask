@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10974 2009/12/17 19:37:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10975 2009/12/17 21:37:08 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (17 Dec 2009)
+#  on behalf of QA team
+#
+# Multiple build failures (bug #246374, #259331, #285726,
+# #288124), no releases upstream.
+#
+# Removal on 2010-02-15
+media-video/cinepaint
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Dec 2009)
 # Mask nvidia-drivers-71.x.y since it will not work
