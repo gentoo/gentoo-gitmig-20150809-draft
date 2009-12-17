@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/hgview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/ChangeLog,v 1.3 2009/11/16 15:46:25 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/ChangeLog,v 1.4 2009/12/17 22:58:54 spatz Exp $
+
+  17 Dec 2009; Dror Levin <spatz@gentoo.org> -hgview-1.0.1.ebuild,
+  hgview-1.1.3.ebuild:
+  Add dev-python/docutils dep (bug 295311), remove old.
 
 *hgview-1.1.3 (16 Nov 2009)
 
