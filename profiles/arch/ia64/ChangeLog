@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.63 2009/12/17 16:36:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.64 2009/12/17 17:10:24 armin76 Exp $
 
   17 Dec 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask capi/celt
+  Use.mask capi/celt/lensfun
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
   drop "vga" from VIDEO_CARDS in all profiles
