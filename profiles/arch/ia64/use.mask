@@ -42,6 +42,7 @@ lapack
 prolog
 lqr
 celt
+capi
 
 # Stuff we don't want
 antlr

@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.67 2009/12/17 16:34:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.68 2009/12/17 16:36:06 armin76 Exp $
 
   17 Dec 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask celt
+  Use.mask capi/celt
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
   drop "imstt" from VIDEO_CARDS in all profiles
