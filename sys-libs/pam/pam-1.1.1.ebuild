@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.1.ebuild,v 1.1 2009/12/16 18:16:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.1.ebuild,v 1.2 2009/12/17 18:44:03 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
@@ -83,6 +83,10 @@ src_unpack() {
 	# we're concerned xtests are not even executed, so we should
 	# probably use EXTRA_PROGRAMS.
 	epatch "${FILESDIR}/${MY_PN}-0.99.8.1-xtests.patch"
+
+	# Fix building on uClibc; it is added since 1.1.1 but applies to
+	# 1.1.0 as well.
+	epatch "${FILESDIR}/${MY_PN}-1.1.0-uclibc.patch"
 
 	# Remove libtool-2 libtool macros, see bug 261167
 	rm m4/libtool.m4 m4/lt*.m4 || die "rm libtool macros failed."
