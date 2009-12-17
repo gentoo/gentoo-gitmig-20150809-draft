@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/frei0r-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.5 2009/12/04 14:19:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.6 2009/12/17 11:35:09 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  frei0r-plugins-1.1.22-r1.ebuild:
+  stable x86, bug 295662
 
   04 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   frei0r-plugins-1.1.22-r1.ebuild:
