@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc55.ebuild,v 1.1 2009/12/03 06:13:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.15.ebuild,v 1.1 2009/12/17 04:26:13 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -23,14 +23,13 @@ DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
-# Require sandbox-2.2 for bug #288863.
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
-	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
-	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
+	elibc_glibc? ( >=sys-apps/sandbox-1.6 )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.6 )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( sys-libs/libselinux )"
 PDEPEND="
@@ -54,7 +53,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=2.2_rc43
+TARBALL_PV=2.1.7
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -69,9 +68,29 @@ fi
 S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
+compatible_python_is_selected() {
+	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
+}
+
 pkg_setup() {
-	if [[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') != good ]] ; then
-		die "This version of portage requires at least python-2.6 to be selected as the default python interpreter (see \`eselect python --help\`)."
+	if ! use python3 && ! compatible_python_is_selected ; then
+		ewarn "Attempting to select a compatible default python interpreter"
+		local x success=0
+		for x in /usr/bin/python2.* ; do
+			x=${x#/usr/bin/python2.}
+			if [[ $x -ge 6 ]] 2>/dev/null ; then
+				eselect python set python2.$x
+				if compatible_python_is_selected ; then
+					elog "Default python interpreter is now set to python-2.$x"
+					success=1
+					break
+				fi
+			fi
+		done
+		if [ $success != 1 ] ; then
+			eerror "Unable to select a compatible default python interpreter!"
+			die "This version of portage requires at least python-2.6 to be selected as the default python interpreter (see \`eselect python --help\`)."
+		fi
 	fi
 }
 
@@ -88,7 +107,7 @@ src_prepare() {
 		die "Failed to patch portage.VERSION"
 
 	if use python3; then
-		sed -e '1s/\(^#!.*\)python\(.*$\)/\1python3\2/' -i $(find -perm /111 -type f) || die "Conversion of shebangs failed"
+		python_convert_shebangs -r 3 .
 	fi
 }
 
@@ -133,8 +152,9 @@ src_install() {
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf || die
 
+	dodir "${portage_share_config}"
 	insinto "${portage_share_config}"
-	doins "${S}/cnf/"{sets.conf,make.globals} || die
+	doins "${S}/cnf/make.globals" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
 		patch make.conf "make.conf.${ARCH}".diff || \
 			die "Failed to patch make.conf.example"
@@ -158,6 +178,13 @@ src_install() {
 	fi
 
 	local x symlinks
+
+	# current tarball contains outdated stuff
+	rm -rf "$S"/bin/ebuild-helpers/3
+	for x in dohard dosed ; do
+		dosym ../../banned-helper ${portage_base}/bin/ebuild-helpers/4/$x
+	done
+
 	for x in $(find "$S"/bin -type d) ; do
 		x=${x#$S/}
 		exeinto $portage_base/$x || die "exeinto failed"
@@ -240,19 +267,6 @@ pkg_preinst() {
 		rm "${ROOT}/etc/make.globals"
 	fi
 
-	has_version "<${CATEGORY}/${PN}-2.2_alpha"
-	MINOR_UPGRADE=$?
-
-	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
-	WORLD_MIGRATION_UPGRADE=$?
-
-	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
-	# assume that the NEEDED.ELF.2 files have already been generated.
-	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
-	NEEDED_REBUILD_UPGRADE=$?
-
 	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
 	REPO_LAYOUT_CONF_WARN=$?
 }
@@ -261,32 +275,6 @@ pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
-
-	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
-		einfo "moving set references from the worldfile into world_sets"
-		cd "${ROOT}/var/lib/portage/"
-		grep "^@" world >> world_sets
-		sed -i -e '/^@/d' world
-	fi
-
-	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
-		einfo "rebuilding NEEDED.ELF.2 files"
-		for cpv in "${ROOT}/var/db/pkg"/*/*; do
-			if [ -f "${cpv}/NEEDED" ]; then
-				rm -f "${cpv}/NEEDED.ELF.2"
-				while read line; do
-					filename=${line% *}
-					needed=${line#* }
-					needed=${needed//+/++}
-					needed=${needed//#/##}
-					needed=${needed//%/%%}
-					newline=$(scanelf -BF "%a;%F;%S;%r;${needed}" $filename)
-					newline=${newline//  -  }
-					echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
-				done < "${cpv}/NEEDED"
-			fi
-		done
-	fi
 
 	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
 		ewarn
@@ -302,20 +290,6 @@ pkg_postinst() {
 	einfo "For help with using portage please consult the Gentoo Handbook"
 	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
 	einfo
-
-	if [ $MINOR_UPGRADE = 0 ] ; then
-		elog "If you're upgrading from a pre-2.2 version of portage you might"
-		elog "want to remerge world (emerge -e world) to take full advantage"
-		elog "of some of the new features in 2.2."
-		elog "This is not required however for portage to function properly."
-		elog
-	fi
-
-	if [ -z "${PV/*_rc*}" ]; then
-		elog "If you always want to use the latest development version of portage"
-		elog "please read http://www.gentoo.org/proj/en/portage/doc/testing.xml"
-		elog
-	fi
 }
 
 pkg_postrm() {

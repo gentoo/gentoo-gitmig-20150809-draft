@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc54.ebuild,v 1.1 2009/11/28 23:28:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc60.ebuild,v 1.1 2009/12/17 04:26:13 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -69,9 +69,29 @@ fi
 S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
+compatible_python_is_selected() {
+	[[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
+}
+
 pkg_setup() {
-	if [[ $(/usr/bin/python -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') != good ]] ; then
-		die "This version of portage requires at least python-2.6 to be selected as the default python interpreter (see \`eselect python --help\`)."
+	if ! use python3 && ! compatible_python_is_selected ; then
+		ewarn "Attempting to select a compatible default python interpreter"
+		local x success=0
+		for x in /usr/bin/python2.* ; do
+			x=${x#/usr/bin/python2.}
+			if [[ $x -ge 6 ]] 2>/dev/null ; then
+				eselect python set python2.$x
+				if compatible_python_is_selected ; then
+					elog "Default python interpreter is now set to python-2.$x"
+					success=1
+					break
+				fi
+			fi
+		done
+		if [ $success != 1 ] ; then
+			eerror "Unable to select a compatible default python interpreter!"
+			die "This version of portage requires at least python-2.6 to be selected as the default python interpreter (see \`eselect python --help\`)."
+		fi
 	fi
 }
 
@@ -88,7 +108,7 @@ src_prepare() {
 		die "Failed to patch portage.VERSION"
 
 	if use python3; then
-		sed -e '1s/\(^#!.*\)python\(.*$\)/\1python3\2/' -i $(find -perm /111 -type f) || die "Conversion of shebangs failed"
+		python_convert_shebangs -r 3 .
 	fi
 }
 
@@ -158,6 +178,13 @@ src_install() {
 	fi
 
 	local x symlinks
+
+	# current tarball contains outdated stuff
+	rm -rf "$S"/bin/ebuild-helpers/3
+	for x in dohard dosed ; do
+		dosym ../../banned-helper ${portage_base}/bin/ebuild-helpers/4/$x
+	done
+
 	for x in $(find "$S"/bin -type d) ; do
 		x=${x#$S/}
 		exeinto $portage_base/$x || die "exeinto failed"
