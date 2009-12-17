@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.60 2009/12/17 10:29:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.61 2009/12/17 20:33:30 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> wv2-0.4.2.ebuild:
+  stable x86, bug 295327
 
   17 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> wv2-0.4.2.ebuild:
   amd64 stable wrt #295327
