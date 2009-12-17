@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.186 2009/12/16 17:14:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.187 2009/12/17 11:27:18 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> audacious-2.2.ebuild:
+  stable x86, bug 295051
 
   16 Dec 2009; <chainsaw@gentoo.org> -audacious-2.2_beta2.ebuild,
   audacious-2.2.ebuild:
