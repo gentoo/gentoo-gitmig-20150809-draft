@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/borg/borg-1.5.2.ebuild,v 1.3 2007/10/20 11:51:11 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/borg/borg-1.5.2.ebuild,v 1.4 2009/12/17 10:49:53 ssuominen Exp $
 
 inherit versionator java-pkg-2 java-ant-2
 
@@ -26,10 +26,10 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
-S="${WORKDIR}/${MY_PN}"
+S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	# Upstream is dead and we already have dev-java/jcalendar
 	# but it's not the same thing
