@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.1.0-r3.ebuild,v 1.2 2009/10/16 08:18:01 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.1.0-r3.ebuild,v 1.3 2009/12/17 09:06:48 mduft Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/confix/Confix-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86 ~ppc-aix ~x86-interix ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~ppc-aix ~ia64-hpux ~x86-interix ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="dev-lang/python"
