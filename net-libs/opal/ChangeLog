@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.58 2009/10/11 12:42:28 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.59 2009/12/17 16:38:09 armin76 Exp $
+
+  17 Dec 2009; Raúl Porcel <armin76@gentoo.org> opal-3.6.4.ebuild,
+  opal-3.6.4-r1.ebuild, opal-3.6.6.ebuild:
+  Add ~ia64/~sparc wrt #276355
 
   11 Oct 2009; Paul de Vrieze <pauldv@gentoo.org> opal-3.6.6.ebuild:
   Update version dependency for ptlib. Version 2.6.2 is certainly broken.
