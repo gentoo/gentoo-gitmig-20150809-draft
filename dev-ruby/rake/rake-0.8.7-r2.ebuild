@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.8.7-r2.ebuild,v 1.3 2009/12/16 17:51:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.8.7-r2.ebuild,v 1.4 2009/12/17 14:15:23 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -17,18 +17,20 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bash-completion"
+IUSE="bash-completion doc"
 
 #ruby_add_bdepend test dev-ruby/flexmock
 
 RESTRICT="test"
 
 all_ruby_compile() {
-	bin/rake rdoc || die "doc generation failed"
+	if use doc; then
+		ruby -Ilib bin/rake rdoc || die "doc generation failed"
+	fi
 }
 
 each_ruby_test() {
-	${RUBY} bin/rake test || die "tests failed"
+	${RUBY} -Ilib bin/rake test || die "tests failed"
 }
 
 all_ruby_install() {
