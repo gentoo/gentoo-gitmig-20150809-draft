@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.14 2009/11/14 13:44:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.15 2009/12/17 20:50:51 maekke Exp $
+
+  17 Dec 2009; Markus Meier <maekke@gentoo.org> gloox-1.0.ebuild:
+  amd64/x86 stable, bug #297316
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> gloox-1.0.ebuild:
   Drop not needed inherit.
