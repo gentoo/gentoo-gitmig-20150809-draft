@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.220 2009/12/17 04:01:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.221 2009/12/17 04:35:17 robbat2 Exp $
+
+  17 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
+  Fix the MY_HOME variable in the live-sources ebuild.
 
   17 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
   genkernel-3.4.10.906.ebuild:

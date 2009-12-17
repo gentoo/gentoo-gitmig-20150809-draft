@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.15 2009/11/21 19:21:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.16 2009/12/17 04:35:17 robbat2 Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -15,7 +15,7 @@ VERSION_ISCSI='2.0-871'
 VERSION_LVM='2.02.28'
 VERSION_UNIONFS_FUSE='0.22'
 
-MY_HOME="http://dev.gentoo.org/~wolf31o2"
+MY_HOME="http://wolf31o2.org"
 RH_HOME="ftp://sources.redhat.com/pub"
 DM_HOME="http://people.redhat.com/~heinzm/sw/dmraid/src"
 BB_HOME="http://www.busybox.net/downloads"
