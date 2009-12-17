@@ -1,0 +1,30 @@
+From 109407f04879ae997801ca0514c814d874ae4970 Mon Sep 17 00:00:00 2001
+From: Gilles Dartiguelongue <eva@gentoo.org>
+Date: Mon, 14 Dec 2009 20:39:15 +0100
+Subject: [PATCH 4/4] Gentoo: add ubuntu patch for sha512 compatibility
+
+  * Tell liboobs to use md5 if pam the pam config specifies sha* as well
+    as if it specifies md5. If we don't do this then the switch to sha512
+    means that adding a users with system-tools-backends gives them a
+    3DES password. (LP: #287134)
+
+ -- James Westby <james.westby@canonical.com>  Tue, 28 Oct 2008 21:06:26 +0000
+---
+ Users/Users.pm |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/Users/Users.pm b/Users/Users.pm
+index 2ec852d..578ad7e 100644
+--- a/Users/Users.pm
++++ b/Users/Users.pm
+@@ -293,6 +293,7 @@ sub do_get_use_md5
+       foreach $i (@line)
+       {
+         $use_md5 = 1 if ($i eq "md5");
++        $use_md5 = 1 if ($i =~ /^sha\d+/);
+       }
+     }
+   }
+-- 
+1.6.5.4
+

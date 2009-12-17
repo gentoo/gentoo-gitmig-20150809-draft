@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.6.1.ebuild,v 1.1 2009/04/16 22:13:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.8.3.ebuild,v 1.1 2009/12/17 23:17:01 eva Exp $
+
+EAPI="2"
+GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2
 
@@ -18,7 +21,7 @@ RDEPEND="!<app-admin/gnome-system-tools-1.1.91
 	>=dev-libs/glib-2.15.2
 	>=dev-perl/Net-DBus-0.33.4
 	dev-lang/perl
-	policykit? ( >=sys-auth/policykit-0.5 )
+	policykit? ( >=sys-auth/polkit-0.92 )
 	userland_GNU? ( sys-apps/shadow )"
 
 DEPEND="${RDEPEND}
@@ -33,31 +36,21 @@ pkg_setup() {
 	enewgroup stb-admin || die "Failed to create stb-admin group"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
-	# Fix a typo in services
-	epatch "${FILESDIR}/${PN}-2.6.0-services.patch"
-
-	# Fix a distro detection in users to use proper variant
-	# of useradd
-	epatch "${FILESDIR}/${PN}-2.6.0-users.patch"
-
-	# Fix automagic policykit dependency
-	epatch "${FILESDIR}/${PN}-2.6.0-automagic-polkit.patch"
-
-	# Fix service handling
-	epatch "${FILESDIR}/${PN}-2.6.0-handle-services.patch"
-
-	# Clean up pid file
-	epatch "${FILESDIR}/${PN}-2.6.0-cleanup-pid-file.patch"
+	# Fix automagic polkit dependency
+	epatch "${FILESDIR}/${PN}-2.8.2-automagic-polkit.patch"
 
 	# Change default permission, only people in stb-admin is allowed
 	# to speak to the dispatcher.
-	epatch "${FILESDIR}/${PN}-2.6.0-default-permissions.patch"
+	epatch "${FILESDIR}/${PN}-2.8.2-default-permissions.patch"
 
 	# Apply fix from ubuntu for CVE 2008 4311
-	epatch "${FILESDIR}/${PN}-2.6.0-cve-2008-4311.patch"
+	epatch "${FILESDIR}/${PN}-2.8.2-cve-2008-4311.patch"
+
+	# Apply fix from ubuntu for CVE 2008 6792, bug #270326
+	epatch "${FILESDIR}/${PN}-2.8.2-1ubuntu1.1.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
