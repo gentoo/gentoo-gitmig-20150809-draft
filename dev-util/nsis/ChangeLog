@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.34 2009/11/03 00:15:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.35 2009/12/17 12:30:56 vapier Exp $
+
+*nsis-2.46 (17 Dec 2009)
+
+  17 Dec 2009; Mike Frysinger <vapier@gentoo.org> +nsis-2.46.ebuild:
+  Version bump and include ExDLL plugin.
 
   03 Nov 2009; Mike Frysinger <vapier@gentoo.org> nsis-2.45.ebuild:
   Mark amd64 stable.
