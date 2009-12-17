@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.62 2009/11/10 11:35:11 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.63 2009/12/17 20:12:19 maekke Exp $
+
+  17 Dec 2009; Markus Meier <maekke@gentoo.org> qbittorrent-1.5.3.ebuild:
+  x86 stable, bug #290708
 
   10 Nov 2009; Dror Levin <spatz@gentoo.org> qbittorrent-1.5.5.ebuild:
   Fix pre-stripping of binaries, bug 265209.
