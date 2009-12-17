@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.9.ebuild,v 1.2 2009/03/15 20:44:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.9.ebuild,v 1.3 2009/12/17 18:40:35 ssuominen Exp $
 
 EAPI=1
 inherit eutils qt4
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86"
 IUSE="cli +qt4"
 
 DEPEND="net-misc/curl
-	qt4? ( || ( x11-libs/qt-gui:4 >=x11-libs/qt-4.3:4 ) )"
+	x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
