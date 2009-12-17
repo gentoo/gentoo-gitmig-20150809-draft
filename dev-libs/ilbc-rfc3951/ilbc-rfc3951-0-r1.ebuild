@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ilbc-rfc3951-0-r1.ebuild,v 1.9 2009/07/12 16:25:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ilbc-rfc3951-0-r1.ebuild,v 1.10 2009/12/17 16:33:17 armin76 Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://simon.morlat.free.fr/download/1.1.x/source/ilbc-rfc3951.tar.gz"
 # http://www.ilbcfreeware.org/documentation/gips_iLBClicense.pdf
 LICENSE="gips_iLBClicense.pdf"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 RESTRICT="bindist"
 
 IUSE=""
