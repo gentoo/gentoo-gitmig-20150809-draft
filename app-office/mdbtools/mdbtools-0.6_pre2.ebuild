@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2.ebuild,v 1.1 2009/01/01 10:22:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2.ebuild,v 1.2 2009/12/17 10:55:07 ssuominen Exp $
 
 WANT_AUTOMAKE="1.7"
 

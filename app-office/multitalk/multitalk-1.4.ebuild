@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/multitalk/multitalk-1.4.ebuild,v 1.2 2009/05/16 16:10:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/multitalk/multitalk-1.4.ebuild,v 1.3 2009/12/17 10:56:01 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
