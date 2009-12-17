@@ -18,7 +18,6 @@
 Boost is a free peer-reviewed portable C++ source libraries.
 </longdescription>
 <use>
-  <flag name='pyste'>Add support for the pyste frontend</flag>
   <flag name='tools'>Build and install the boost tools (bcp, quickbook,
     inspect, wave)</flag>
   <flag name='eselect'>Run "eselect boost update" even if version is
