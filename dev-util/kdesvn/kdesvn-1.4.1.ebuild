@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.4.1.ebuild,v 1.3 2009/11/18 22:42:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.4.1.ebuild,v 1.4 2009/12/17 17:17:11 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ IUSE="debug +handbook"
 DEPEND="
 	dev-db/sqlite
 	>=dev-util/subversion-1.4
+	!dev-util/qsvn
 "
 RDEPEND="${DEPEND}
 	!dev-util/kdesvn:1.2
