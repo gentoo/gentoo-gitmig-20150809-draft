@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.69 2009/12/16 23:20:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.70 2009/12/17 17:15:40 armin76 Exp $
+
+  17 Dec 2009; Raúl Porcel <armin76@gentoo.org> ufraw-0.15-r2.ebuild,
+  ufraw-0.16.ebuild:
+  Add ~ia64/~sh/~sparc wrt #272088
 
   16 Dec 2009; Jeroen Roovers <jer@gentoo.org> ufraw-0.16.ebuild:
   Stable for HPPA (bug #293850).
