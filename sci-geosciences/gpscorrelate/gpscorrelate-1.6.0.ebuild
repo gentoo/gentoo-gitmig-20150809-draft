@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.6.0.ebuild,v 1.1 2009/05/04 07:14:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.6.0.ebuild,v 1.2 2009/12/17 18:21:17 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool for adjusting EXIF tags of your photos with a recorded GPS trace"
 HOMEPAGE="http://freefoote.dview.net/linux_gpscorr.html"
@@ -24,6 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	emake gpscorrelate gpscorrelate.1 || die
 	if use gtk; then
 		emake gpscorrelate-gui || die

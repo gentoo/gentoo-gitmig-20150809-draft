@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpscorrelate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.6 2009/05/04 07:14:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.7 2009/12/17 18:21:17 jer Exp $
+
+  17 Dec 2009; Jeroen Roovers <jer@gentoo.org> gpscorrelate-1.5.6.ebuild,
+  gpscorrelate-1.5.8.ebuild, gpscorrelate-1.6.0.ebuild:
+  Export CC so that the makefile patch becomes useful (bug #268636).
 
 *gpscorrelate-1.6.0 (04 May 2009)
 
