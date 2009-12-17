@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-de
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.11 2008/09/17 16:42:12 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.12 2009/12/17 11:04:15 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  vim-spell-de-20051008.ebuild, vim-spell-de-20080213.ebuild:
+  QA: add prefix keywords
 
 *vim-spell-de-20080213 (17 Sep 2008)
 

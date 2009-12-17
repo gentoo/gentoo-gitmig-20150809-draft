@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-en
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-en/ChangeLog,v 1.15 2009/01/15 21:45:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-en/ChangeLog,v 1.16 2009/12/17 11:06:53 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  vim-spell-en-20060123.ebuild:
+  QA: add prefix keywords
 
   15 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   vim-spell-en-20060123.ebuild:

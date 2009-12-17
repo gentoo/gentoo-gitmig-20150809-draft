@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/vimcommander-75.ebuild,v 1.1 2008/03/26 08:06:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/vimcommander-75.ebuild,v 1.2 2009/12/17 11:03:00 fauli Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Total Commander style file explorer"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=808"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="vimcommander"

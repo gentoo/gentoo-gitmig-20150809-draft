@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vcscommand
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.8 2009/10/17 15:16:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.9 2009/12/17 10:59:17 fauli Exp $
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  vcscommand-1.99.31.ebuild:
+  QA: add prefix keywords
 
 *vcscommand-1.99.31 (17 Oct 2009)
 
