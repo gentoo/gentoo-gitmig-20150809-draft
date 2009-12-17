@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.1 2009/11/03 17:08:59 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.2 2009/12/17 09:53:31 mduft Exp $
 
 EAPI=2
 
@@ -45,9 +45,10 @@ src_prepare() {
 #	epatch "${FILESDIR}"/2.1.0/fast-install.patch
 
 	# need to store repos in exact versioned share/confix-PV/repo
-	sed -i -e "s,'confix2','confix-${PV}'," \
+	sed -i -e "s,\<confix2\>,confix-${PV}," \
 		libconfix/plugins/automake/repo_automake.py \
 		libconfix/core/machinery/repo.py \
+		libconfix/plugins/cmake/consts.py \
 	|| die "cannot adjust repo dir"
 
 	# adjust version-printing to have same version as share/confix-PV/repo,
