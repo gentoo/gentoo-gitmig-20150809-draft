@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.69 2009/12/17 20:08:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.70 2009/12/17 20:10:53 maekke Exp $
+
+  17 Dec 2009; Markus Meier <maekke@gentoo.org> rb_libtorrent-0.14.6.ebuild:
+  x86 stable, bug #290705
 
   17 Dec 2009; Markus Meier <maekke@gentoo.org> rb_libtorrent-0.14.6.ebuild:
   restrict test as they fail
