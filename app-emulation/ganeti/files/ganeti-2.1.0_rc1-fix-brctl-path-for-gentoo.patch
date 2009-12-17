@@ -1,0 +1,25 @@
+From 4c41d9025ddbc5d093d58b81bf9b31d735a4a162 Mon Sep 17 00:00:00 2001
+From: Lance Albertson <lance@osuosl.org>
+Date: Wed, 9 Dec 2009 00:42:53 -0800
+Subject: Fix brctl path for Gentoo
+
+---
+ lib/hypervisor/hv_kvm.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/lib/hypervisor/hv_kvm.py b/lib/hypervisor/hv_kvm.py
+index a153d36..5700034 100644
+--- a/lib/hypervisor/hv_kvm.py
++++ b/lib/hypervisor/hv_kvm.py
+@@ -181,7 +181,7 @@ class KVMHypervisor(hv_base.BaseHypervisor):
+     script.write("  /sbin/ifconfig $INTERFACE 0.0.0.0 up\n")
+     if nic.nicparams[constants.NIC_MODE] == constants.NIC_MODE_BRIDGED:
+       script.write("  # Connect the interface to the bridge\n")
+-      script.write("  /usr/sbin/brctl addif $BRIDGE $INTERFACE\n")
++      script.write("  /sbin/brctl addif $BRIDGE $INTERFACE\n")
+     elif nic.nicparams[constants.NIC_MODE] == constants.NIC_MODE_ROUTED:
+       script.write("  # Route traffic targeted at the IP to the interface\n")
+       if nic.nicparams[constants.NIC_LINK]:
+-- 
+1.6.2.5
+

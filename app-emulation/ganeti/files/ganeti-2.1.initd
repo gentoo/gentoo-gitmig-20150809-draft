@@ -1,0 +1,89 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.1 2009/12/17 00:47:16 ramereth Exp $
+
+depend() {
+    need localmount drbd
+    after bootmisc
+}
+
+NODED="ganeti-noded"
+MASTERD="ganeti-masterd"
+CONFD="ganeti-confd"
+RAPI="ganeti-rapi"
+DAEMON_UTIL="/usr/lib/ganeti/daemon-util"
+
+check_config() {
+    for fname in /var/lib/ganeti/server.pem
+    do
+        if [[ ! -f "$fname" ]]
+        then
+            eerror "Config file $fname not found, will not run."
+            return 1
+        fi
+    done
+
+    return 0
+}
+
+check_exitcode() {
+    RC=${1}
+    case ${RC} in
+        0)  
+            eend 0
+            ;;
+        11) 
+            eend 0 "not master"
+            ;;
+        *)  
+            eend 1 "exit code $RC"
+            ;;
+    esac
+}
+
+start_action() {
+    # called as start_action daemon-name
+    local daemon="${1}"
+    ebegin "Starting ${daemon}"
+    ${DAEMON_UTIL} start "${@}"
+    check_exitcode ${?}
+}
+
+stop_action() {
+    # called as stop_action daemon-name
+    local daemon="${1}"
+    ebegin "Stopping ${daemon}"
+    ${DAEMON_UTIL} stop "${@}"
+    check_exitcode ${?}
+}
+
+maybe_do() {
+    requested="${1}"; shift
+    action="${1}"; shift
+    target="${1}"
+    if [ -z "${requested}" -o "${requested}" = "${target}" ] ; then
+        ${action} "${@}"
+    fi
+}
+
+start_all() {
+    check_config
+    for i in ${NODED} ${MASTERD} ${CONFD} ${RAPI}; do \
+        maybe_do "${1}" start_action ${i}
+    done
+}
+
+stop_all() {
+    for i in ${RAPI} ${CONFD} ${MASTERD} ${NODED}; do \
+        maybe_do "${1}" stop_action ${i}
+    done
+}
+
+start() {
+    start_all
+}
+
+stop() {
+    stop_all
+}
