@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/psb-kmod/psb-kmod-4.41.1_p10-r1.ebuild,v 1.1 2009/12/04 08:19:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/psb-kmod/psb-kmod-4.41.1_p10-r1.ebuild,v 1.2 2009/12/17 22:40:45 zmedico Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit rpm linux-info linux-mod
 
 DESCRIPTION="kernel module for the intel gma500 (poulsbo)"
 HOMEPAGE="http://www.happyassassin.net/2009/09/26/gma-500-poulsbo-driver-for-fedora-11-soon-to-be-in-rpm-fusion/"
-SRC_URI="http://download1.rpmfusion.org/nonfree/fedora/updates/testing/11/SRPMS/psb-kmod-4.41.1-10.fc11.src.rpm"
+SRC_URI="http://download1.rpmfusion.org/nonfree/fedora/updates/11/SRPMS/psb-kmod-4.41.1-10.fc11.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
