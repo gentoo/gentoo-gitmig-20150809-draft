@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6-r2.ebuild,v 1.1 2009/12/18 03:42:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6-r2.ebuild,v 1.2 2009/12/18 16:04:49 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# The CLN test is buggy and will often fail though an 
+	# The CLN test is buggy and will often fail though an
 	# appropriate version
 	# of the library is installed.
 	econf $(use_with readline) || die "Configuration failed."
