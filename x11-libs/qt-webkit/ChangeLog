@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.72 2009/12/11 15:00:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.73 2009/12/18 15:25:11 yngwin Exp $
+
+  18 Dec 2009; Ben de Groot <yngwin@gentoo.org> qt-webkit-4.6.0.ebuild:
+  Add dependency on qt-xmlpatterns, bug 297291.
 
   11 Dec 2009; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.5.3-r1.ebuild:
   sparc stable

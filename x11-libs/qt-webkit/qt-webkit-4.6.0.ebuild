@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.6.0.ebuild,v 1.1 2009/12/01 15:02:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.6.0.ebuild,v 1.2 2009/12/18 15:25:11 yngwin Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -13,6 +13,7 @@ IUSE="kde"
 DEPEND="~x11-libs/qt-core-${PV}[debug=,ssl]
 	~x11-libs/qt-dbus-${PV}[debug=]
 	~x11-libs/qt-gui-${PV}[dbus,debug=]
+	~x11-libs/qt-xmlpatterns-${PV}[debug=]
 	!kde? ( || ( ~x11-libs/qt-phonon-${PV}:${SLOT}[dbus,debug=]
 		media-sound/phonon ) )
 	kde? ( media-sound/phonon )"
