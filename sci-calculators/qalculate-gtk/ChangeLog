@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/qalculate-gtk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.28 2008/11/30 21:17:43 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.29 2009/12/18 03:48:29 markusle Exp $
+
+  18 Dec 2009; Markus Dittrich <markusle@gentoo.org>
+  -qalculate-gtk-0.9.4.ebuild, -qalculate-gtk-0.9.5.ebuild,
+  -qalculate-gtk-0.9.6.ebuild:
+  Removed old versions.
 
   30 Nov 2008; Friedrich Oslage <bluebird@gentoo.org>
   qalculate-gtk-0.9.6-r1.ebuild:
