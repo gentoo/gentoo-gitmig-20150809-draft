@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwpg/ChangeLog,v 1.5 2009/11/27 16:51:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwpg/ChangeLog,v 1.6 2009/12/18 15:58:23 grobian Exp $
+
+  18 Dec 2009; Fabian Groffen <grobian@gentoo.org> libwpg-0.1.3.ebuild:
+  Marked ~x86-solaris and ~ppc-macos, new dependency for inkscape
 
   27 Nov 2009; Mark Loeser <halcy0n@gentoo.org> libwpg-0.1.3.ebuild:
   Mark ~ppc64 for bug #273966
