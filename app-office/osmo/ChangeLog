@@ -1,6 +1,11 @@
 # ChangeLog for app-office/osmo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.5 2009/03/01 18:25:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.6 2009/12/18 14:25:00 ssuominen Exp $
+
+*osmo-0.2.8 (18 Dec 2009)
+
+  18 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +osmo-0.2.8.ebuild:
+  Version bump.
 
 *osmo-0.2.4 (01 Mar 2009)
 
