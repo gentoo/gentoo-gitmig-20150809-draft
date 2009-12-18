@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.33 2009/12/17 12:52:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.34 2009/12/18 10:51:29 pva Exp $
+
+*hydra-5.4-r3 (18 Dec 2009)
+
+  18 Dec 2009; Peter Volkov <pva@gentoo.org> hydra-5.4-r2.ebuild,
+  +hydra-5.4-r3.ebuild, +files/hydra-5.4-libssh-0.4.0.patch:
+  Fixed compatibility issue with libssh-0.4, bug #296816, thank Willard
+  Dawson for report and Jonathan-Christofer Demay for ideas.
 
   17 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> hydra-5.4-r2.ebuild:
   Stable amd64. It was not CCed on stablebug.
