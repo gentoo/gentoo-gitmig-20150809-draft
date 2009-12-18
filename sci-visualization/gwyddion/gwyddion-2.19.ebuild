@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.14.ebuild,v 1.1 2009/04/13 16:01:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.19.ebuild,v 1.1 2009/12/18 03:05:13 markusle Exp $
 
 EAPI=2
 inherit fdo-mime gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="http://gwyddion.net/download/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc fftw gnome kde nls opengl perl python ruby sourceview tiff xml X"
+IUSE="doc fftw gnome kde nls opengl perl python ruby sourceview xml X"
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	x11-libs/cairo
@@ -26,7 +26,6 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	python? ( dev-python/pygtk )
 	ruby? ( dev-ruby/narray )
 	sourceview? ( >=x11-libs/gtksourceview-2 )
-	tiff? ( media-libs/tiff )
 	xml? ( dev-libs/libxml2 )"
 
 DEPEND="${RDEPEND}
@@ -48,7 +47,6 @@ src_configure() {
 		$(use_with fftw fftw3) \
 		$(use_with opengl gl) \
 		$(use_with sourceview gtksourceview) \
-		$(use_with tiff) \
 		$(use_with xml spml) \
 		$(use_with X x) \
 		$(use_with kde kde4-thumbnailer)
