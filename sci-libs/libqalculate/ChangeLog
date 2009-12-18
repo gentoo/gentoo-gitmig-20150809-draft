@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libqalculate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.34 2009/12/18 03:42:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.35 2009/12/18 03:54:10 markusle Exp $
+
+  18 Dec 2009; Markus Dittrich <markusle@gentoo.org>
+  -libqalculate-0.9.5.ebuild, -libqalculate-0.9.6.ebuild:
+  Removed unused versions.
 
 *libqalculate-0.9.6-r2 (18 Dec 2009)
 
