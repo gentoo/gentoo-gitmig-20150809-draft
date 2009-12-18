@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10975 2009/12/17 21:37:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10976 2009/12/18 11:37:43 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -405,10 +405,6 @@ dev-ruby/nitro
 dev-ruby/glue
 dev-ruby/gen
 dev-ruby/og
-
-# Markus Meier <maekke@gentoo.org> (30 Nov 2009)
-# mask rc versions of enblend for testing
->=media-gfx/enblend-4.0_rc2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Nov 2009)
 #  on behalf of QA team
