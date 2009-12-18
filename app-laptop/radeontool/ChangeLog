@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/radeontool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.22 2009/10/16 18:53:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.23 2009/12/18 00:26:41 robbat2 Exp $
+
+*radeontool-1.6.0 (18 Dec 2009)
+
+  18 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +radeontool-1.6.0.ebuild:
+  Follow the xorg fork instead of the old unmaintained version. Now useful
+  for ALL Radeon cards, not just laptops.
 
   16 Oct 2009; Thilo Bangert <bangert@gentoo.org> radeontool-1.5-r3.ebuild:
   respect LDFLAGS (bug #262889)
