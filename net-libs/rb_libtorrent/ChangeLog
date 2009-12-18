@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.70 2009/12/17 20:10:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.71 2009/12/18 15:24:42 armin76 Exp $
+
+*rb_libtorrent-0.14.7 (18 Dec 2009)
+
+  18 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  +rb_libtorrent-0.14.7.ebuild:
+  Version bump
 
   17 Dec 2009; Markus Meier <maekke@gentoo.org> rb_libtorrent-0.14.6.ebuild:
   x86 stable, bug #290705
