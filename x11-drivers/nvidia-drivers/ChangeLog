@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.209 2009/12/17 19:25:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.210 2009/12/18 00:27:33 cardoe Exp $
+
+  17 Dec 2009; Doug Goldstein <cardoe@gentoo.org>
+  -nvidia-drivers-190.53.ebuild:
+  as stated in bug #296947, this breaks VDPAU, but apparently peper, who's
+  not a maintainer knows better.
 
 *nvidia-drivers-190.53 (16 Dec 2009)
 
