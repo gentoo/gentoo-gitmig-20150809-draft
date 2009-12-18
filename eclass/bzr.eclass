@@ -1,18 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.6 2009/12/09 10:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.7 2009/12/18 07:08:19 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>,
 # Ulrich Mueller <ulm@gentoo.org>,
-# Christian Faulhammer <fauli@gentoo.org>
+# Christian Faulhammer <fauli@gentoo.org>,
 # Mark Lee <bzr-gentoo-overlay@lazymalevolence.com>,
 # and anyone who wants to help
-# @BLURB: This eclass provides support to use the Bazaar DSCM
+# @BLURB: This eclass provides support to use the Bazaar VCS
 # @DESCRIPTION:
-# The bzr.eclass provides support for apps using the bazaar DSCM
-# (distributed source control management system).
+# The bzr.eclass provides support for apps using the Bazaar VCS
+# (distributed version control system).
 # The eclass was originally derived from the git eclass.
 #
 # Note: Just set EBZR_REPO_URI to the URI of the branch and the src_unpack()
@@ -101,8 +101,10 @@ EBZR_PATCHES="${EBZR_PATCHES:-}"
 
 # @ECLASS-VARIABLE: EBZR_REVISION
 # @DESCRIPTION:
-# Revision to fetch, defaults to the latest (see
-# http://bazaar-vcs.org/BzrRevisionSpec or bzr help revisionspec)
+# Revision to fetch, defaults to the latest
+# (see http://bazaar-vcs.org/BzrRevisionSpec or bzr help revisionspec).
+# If you set this to a non-empty value, then it is recommended not to
+# use a lightweight checkout (see also EBZR_FETCH_CMD).
 EBZR_REVISION="${EBZR_REVISION:-}"
 
 # @ECLASS-VARIABLE: EBZR_CACHE_DIR
@@ -156,7 +158,6 @@ bzr_update() {
 	fi
 }
 
-
 # @FUNCTION: bzr_fetch
 # @DESCRIPTION:
 # Wrapper function to fetch sources from a Bazaar repository via bzr
@@ -189,13 +190,15 @@ bzr_fetch() {
 
 	if [[ ! -d ${EBZR_STORE_DIR} ]] ; then
 		debug-print "${FUNCNAME}: initial branch. Creating bzr directory"
+		local save_sandbox_write=${SANDBOX_WRITE}
 		addwrite /
 		mkdir -p "${EBZR_STORE_DIR}" \
 			|| die "${EBZR}: can't mkdir ${EBZR_STORE_DIR}."
-		export SANDBOX_WRITE="${SANDBOX_WRITE%%:/}"
+		SANDBOX_WRITE=${save_sandbox_write}
 	fi
 
-	pushd "${EBZR_STORE_DIR}" > /dev/null || die "${EBZR}: can't chdir to ${EBZR_STORE_DIR}"
+	pushd "${EBZR_STORE_DIR}" > /dev/null \
+		|| die "${EBZR}: can't chdir to ${EBZR_STORE_DIR}"
 
 	EBZR_BRANCH_DIR="${EBZR_STORE_DIR}/${EBZR_CACHE_DIR}"
 
@@ -209,7 +212,8 @@ bzr_fetch() {
 	# an older version of bzr.eclass)
 	if [[ ! -d ${EBZR_BRANCH_DIR} ]] ; then
 		bzr_initial_fetch "${EBZR_REPO_URI}" "${EBZR_BRANCH_DIR}"
-	elif [[ -d "${EBZR_BRANCH_DIR}"/.bzr/repository/ ]]; then
+	elif [[ ${EBZR_FETCH_CMD} == *lightweight* \
+		&& -d ${EBZR_BRANCH_DIR}/.bzr/repository ]]; then
 		einfo "Re-fetching the branch to save space..."
 		rm -rf "${EBZR_BRANCH_DIR}"
 		bzr_initial_fetch "${EBZR_REPO_URI}" "${EBZR_BRANCH_DIR}"
@@ -220,17 +224,17 @@ bzr_fetch() {
 	cd "${EBZR_BRANCH_DIR}"
 
 	einfo "exporting ..."
-	${EBZR_EXPORT_CMD} ${EBZR_REVISION:+-r ${EBZR_REVISION}} "${WORKDIR}/${P}" \
+
+	if [[ -z ${EBZR_REVISION} ]]; then
+		rsync -rlpgo --exclude=".bzr/" . "${WORKDIR}/${P}" \
 			|| die "${EBZR}: export failed"
-
-	local revision
-	if [[ -n "${EBZR_REVISION}" ]]; then
-		revision="${EBZR_REVISION}"
 	else
-		revision=$(${EBZR_REVNO_CMD} "${EBZR_BRANCH_DIR}")
+		# revisions of a lightweight checkout are only available when online
+		[[ -z ${EBZR_OFFLINE} || -d ${EBZR_BRANCH_DIR}/.bzr/repository ]] \
+			|| die "${EBZR}: No support for revisions when off-line"
+		${EBZR_EXPORT_CMD} -r "${EBZR_REVISION}" "${WORKDIR}/${P}" \
+			|| die "${EBZR}: export failed"
 	fi
-
-	einfo "Revision ${revision} is now in ${WORKDIR}/${P}"
 
 	popd > /dev/null
 }
