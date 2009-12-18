@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0_rc2.ebuild,v 1.1 2009/11/29 23:54:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.1 2009/12/18 11:35:10 maekke Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 		virtual/latex-base
 	)"
 
-S="${WORKDIR}/${PN}-enfuse-4.0-dd32463fe9de"
+S="${WORKDIR}/${PN}-enfuse-4.0-753b534c819d"
 
 pkg_setup() {
 	if use image-cache && use openmp; then
@@ -50,10 +50,12 @@ src_configure() {
 		myconf="$(use_enable image-cache) $(use_enable openmp)"
 	fi
 
+	use doc && myconf="${myconf} --with-gnuplot=$(type -p gnuplot)" \
+		|| myconf="${myconf} --with-gnuplot=false"
+
 	econf \
 		--with-x \
 		$(use_enable debug) \
-		$(use_with doc gnuplot $(type -p gnuplot)) \
 		$(use_enable gpu gpu-support) \
 		$(use_with openexr) \
 		${myconf}
