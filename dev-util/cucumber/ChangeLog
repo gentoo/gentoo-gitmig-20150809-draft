@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.12 2009/12/07 17:05:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.13 2009/12/18 08:42:41 graaff Exp $
+
+*cucumber-0.5.1 (18 Dec 2009)
+
+  18 Dec 2009; Hans de Graaff <graaff@gentoo.org> +cucumber-0.5.1.ebuild:
+  Version bump. Rails support has been split off to cucumber-rails.
+  Converted to use ruby-fakegem.
 
   07 Dec 2009; Hans de Graaff <graaff@gentoo.org> -cucumber-0.3.100.ebuild,
   -cucumber-0.3.101.ebuild, -cucumber-0.3.103.ebuild,
