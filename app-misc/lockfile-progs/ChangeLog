@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/lockfile-progs
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.1 2009/12/18 17:37:05 phajdan.jr Exp $
+
+  18 Dec 2009; Pawel Hajdan jr <phajdan.jr@gentoo.org> +files/Makefile,
+  +metadata.xml:
+  New ebuild for lockfile-progs. Bug 106393.
+
