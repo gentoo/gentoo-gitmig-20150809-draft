@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.10.ebuild,v 1.1 2009/12/17 15:13:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.10.ebuild,v 1.2 2009/12/18 16:24:47 hwoarang Exp $
 
 EAPI="2"
 
 inherit python distutils eutils
 
 DESCRIPTION="Qt4 relational algebra application"
-HOMEPAGE="http://qt-apps.org/content/show.php/Relational?content=86178"
+HOMEPAGE="http://galileo.dmi.unict.it/wiki/relational/"
 # upstream url is not static
 SRC_URI="http://dev.gentooexperimental.org/~hwoarang/distfiles/${PN}_${PV}.tar.gz"
 
