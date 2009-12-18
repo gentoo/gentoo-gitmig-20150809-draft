@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.48 2009/10/06 17:08:52 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.49 2009/12/18 06:27:26 darkside Exp $
+
+*mixxx-1.7.1 (18 Dec 2009)
+
+  18 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +mixxx-1.7.1.ebuild:
+  Proxy commit, version bump bug 286028, by Alex Barker
 
   06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> mixxx-1.6.0.ebuild,
   mixxx-1.6.0-r1.ebuild:
