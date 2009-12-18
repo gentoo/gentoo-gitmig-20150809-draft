@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/latencytop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/ChangeLog,v 1.5 2008/05/12 20:09:40 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/ChangeLog,v 1.6 2009/12/18 15:58:29 vapier Exp $
+
+*latencytop-0.5 (18 Dec 2009)
+
+  18 Dec 2009; Mike Frysinger <vapier@gentoo.org> +latencytop-0.5.ebuild,
+  +files/latencytop-0.5-01-mkdir-usr-sbin-as-well.patch,
+  +files/latencytop-0.5-03-clean-up-build-system.patch,
+  +files/latencytop-0.5-fsync-fix-implicit-decl.patch:
+  Version bump #297161 by Xake.
 
   12 May 2008; Markus Meier <maekke@gentoo.org> latencytop-0.4.ebuild:
   amd64/x86 stable, bug #218167
