@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.5 2009/12/15 16:36:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.6 2009/12/18 17:42:40 tommy Exp $
+
+  18 Dec 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  qemu-kvm-0.11.1.ebuild:
+  Comment out pie and stack-protector filtering, remove with next version,
+  if there are no complains
 
   15 Dec 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   change to qemu herd

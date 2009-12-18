@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.1.ebuild,v 1.1 2009/12/09 08:15:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.1.ebuild,v 1.2 2009/12/18 17:42:40 tommy Exp $
 
 EAPI="2"
 
@@ -94,7 +94,10 @@ src_prepare() {
 src_configure() {
 	local conf_opts audio_opts softmmu_targets user_targets
 
-	filter-flags -fpie -fstack-protector
+	#works fine for me without, drop with next version, if there are
+	#no complains
+	#Thomas Sachau <tommy@gentoo.org
+	#filter-flags -fpie -fstack-protector
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
