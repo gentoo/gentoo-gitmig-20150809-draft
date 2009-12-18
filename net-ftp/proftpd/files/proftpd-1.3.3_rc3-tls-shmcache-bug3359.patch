@@ -1,0 +1,18 @@
+Index: contrib/mod_tls_shmcache.c
+===================================================================
+RCS file: /cvsroot/proftp/proftpd/contrib/mod_tls_shmcache.c,v
+retrieving revision 1.5
+diff -u -r1.5 mod_tls_shmcache.c
+--- contrib/mod_tls_shmcache.c	7 Nov 2009 20:11:41 -0000	1.5
++++ contrib/mod_tls_shmcache.c	18 Dec 2009 17:34:47 -0000
+@@ -1240,6 +1240,10 @@
+   struct shmid_ds ds;
+   const char *cache_file;
+ 
++  if (shmcache_fh == NULL) {
++    return 0;
++  }
++
+   pr_trace_msg(trace_channel, 9, "removing shmcache cache %p", cache); 
+ 
+   cache_file = shmcache_fh->fh_path;

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc3.ebuild,v 1.1 2009/12/15 18:57:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc3-r1.ebuild,v 1.1 2009/12/18 23:13:25 voyageur Exp $
 
 EAPI="2"
 inherit eutils
@@ -74,6 +74,9 @@ src_prepare() {
 	fi
 	use deflate && __prepare_module mod_deflate
 	use vroot && __prepare_module mod_vroot
+
+	# Fix segfault on conf check, Gentoo bug #297310
+	epatch "${FILESDIR}"/${P}-tls-shmcache-bug3359.patch
 
 	# Fix MySQL includes
 	sed -i -e "s/<mysql.h>/<mysql\/mysql.h>/g" contrib/mod_sql_mysql.c
