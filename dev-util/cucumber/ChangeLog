@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.13 2009/12/18 08:42:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.14 2009/12/18 09:43:50 graaff Exp $
+
+*cucumber-0.5.1-r1 (18 Dec 2009)
+
+  18 Dec 2009; Hans de Graaff <graaff@gentoo.org> +cucumber-0.5.1-r1.ebuild:
+  Install cucumber binary.
 
 *cucumber-0.5.1 (18 Dec 2009)
 
