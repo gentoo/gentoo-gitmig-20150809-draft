@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.395 2009/12/10 15:59:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.396 2009/12/18 13:35:16 mrpouet Exp $
+
+*glib-2.22.3 (18 Dec 2009)
+
+  18 Dec 2009; Romain Perier <mrpouet@gentoo.org> +glib-2.22.3.ebuild:
+  Version bump
 
   10 Dec 2009; Raúl Porcel <armin76@gentoo.org> glib-2.22.2.ebuild:
   sparc stable
