@@ -1,20 +1,20 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.8.1.ebuild,v 1.4 2009/05/12 13:59:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1.ebuild,v 1.1 2009/12/19 18:57:25 ssuominen Exp $
 
 EAPI=2
-inherit multilib
+inherit flag-o-matic multilib
 
 DESCRIPTION="Language bindings for Redland"
-HOMEPAGE="http://librdf.org/"
+HOMEPAGE="http://librdf.org/bindings/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
-LICENSE="LGPL-2.1 MPL-1.1"
+LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl python php ruby"
 
-RDEPEND=">=dev-libs/redland-1.0.8
+RDEPEND=">=dev-libs/redland-1.0.10-r1
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
 	php? ( virtual/php )
@@ -25,12 +25,18 @@ DEPEND="${RDEPEND}
 	perl? ( sys-apps/findutils )"
 
 src_prepare() {
-	sed -i -e "s:lib/python:$(get_libdir)/python:" \
-		configure || die "sed failed"
+	sed -i \
+		-e "s:lib/python:$(get_libdir)/python:" \
+		configure || die
 }
 
 src_configure() {
+	# FIXME. Missing ref. to raptor_version_decimal in Python binding.
+	# Can be reproduced with FEATURES test.
+	use python && append-ldflags $(no-as-needed)
+
 	econf \
+		--disable-dependency-tracking \
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with php) \
@@ -39,13 +45,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 
 	if use perl; then
 		find "${D}" -type f -name perllocal.pod -delete
 		find "${D}" -depth -mindepth 1 -type d -empty -delete
 	fi
 
-	dodoc AUTHORS ChangeLog* NEWS README TODO
-	dohtml *.html
+	dodoc AUTHORS ChangeLog NEWS README TODO
+	dohtml {NEWS,README,RELEASE,TODO}.html
 }
