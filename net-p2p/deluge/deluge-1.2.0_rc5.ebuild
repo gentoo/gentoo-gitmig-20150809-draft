@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.2.0_rc2.ebuild,v 1.2 2009/11/05 22:30:28 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.2.0_rc5.ebuild,v 1.1 2009/12/19 19:24:38 armin76 Exp $
 
 EAPI="2"
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk libnotify webinterface"
 
 DEPEND=">=virtual/python-2.5
+	|| ( app-arch/xz-utils app-arch/lzma-utils )
 	>=net-libs/rb_libtorrent-0.14.5[python]
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
