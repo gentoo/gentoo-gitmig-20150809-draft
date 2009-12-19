@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-3.0.ebuild,v 1.2 2009/12/15 15:03:01 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-3.0.ebuild,v 1.3 2009/12/19 17:21:05 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools
 
-LANGS="af ar be ca cs de el en-US es-AR es-ES et eu fi fr fy-NL ga-IE hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR ro ru si sk sv-SE ta-LK uk"
+LANGS="af ar be ca cs de el en-US en-GB es-AR es-ES et eu fi fr fy-NL ga-IE hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR ro ru si sk sv-SE ta-LK uk"
 # Languages not rebuilt for beta3 "pt-PT he sr bg gl zn-CN vi"
-NOSHORTLANGS="es-AR pt-BR"
+NOSHORTLANGS="es-AR en-GB pt-BR"
 
 MY_PV2="${PV/_rc/rc}"
 MY_P="${P/_rc/rc}"
