@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/Class-MOP-0.95.ebuild,v 1.2 2009/12/19 11:25:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/Class-MOP-0.97.ebuild,v 1.1 2009/12/19 11:25:52 tove Exp $
 
 EAPI=2
 
-MODULE_AUTHOR=FLORA
+MODULE_AUTHOR=DROLSKY
 inherit perl-module
 
 DESCRIPTION="A Meta Object Protocol for Perl 5"
