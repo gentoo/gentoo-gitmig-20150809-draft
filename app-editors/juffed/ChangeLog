@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/juffed
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.16 2009/12/10 21:29:16 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.17 2009/12/19 20:30:03 pacho Exp $
+
+  19 Dec 2009; Pacho Ramos <pacho@gentoo.org> juffed-0.6.1.ebuild:
+  amd64 stable, bug 291853
 
   10 Dec 2009; Dror Levin <spatz@gentoo.org> juffed-0.6.1.ebuild:
   Fix multilib issues - install to proper libdir, bug 291853.
