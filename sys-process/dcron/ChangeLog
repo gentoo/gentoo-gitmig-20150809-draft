@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/dcron
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.14 2009/05/12 20:59:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.15 2009/12/19 14:47:28 vapier Exp $
+
+*dcron-3.2-r1 (19 Dec 2009)
+
+  19 Dec 2009; Mike Frysinger <vapier@gentoo.org> +dcron-3.2-r1.ebuild,
+  files/crontab:
+  Fix default crontab file and push it out #98189.
 
   12 May 2009; Thilo Bangert <bangert@gentoo.org> files/dcron.confd,
   files/dcron.init:
