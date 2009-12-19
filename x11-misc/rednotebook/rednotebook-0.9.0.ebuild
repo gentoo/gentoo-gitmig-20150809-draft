@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-0.9.0.ebuild,v 1.1 2009/12/18 16:13:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-0.9.0.ebuild,v 1.2 2009/12/19 13:35:41 hwoarang Exp $
 
 EAPI="2"
 
@@ -21,6 +21,6 @@ RDEPEND="dev-python/pyyaml[libyaml?]
 	spell? ( dev-python/gtkspell-python )"
 
 src_prepare() {
-	! use spell && epatch "${FILESDIR}/${P}_disable_spell.patch"
+	! use spell && epatch "${FILESDIR}/${PN}-0.8.9_disable_spell.patch"
 	distutils_src_prepare
 }
