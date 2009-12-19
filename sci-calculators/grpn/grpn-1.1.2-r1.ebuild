@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/grpn-1.1.2-r1.ebuild,v 1.3 2008/05/10 21:50:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/grpn-1.1.2-r1.ebuild,v 1.4 2009/12/19 19:38:44 ssuominen Exp $
 
 EAPI=1
 
@@ -19,10 +19,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc ~sparc x86"
 IUSE=""
 
+# There's no real test suite and it fails to compile with forced asneeded
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-implicit-declarations.patch
+	sed -i \
+		-e 's/$(CC) $(DFLAGS)/$(CC) $(LDFLAGS) $(DFLAGS)/g' \
+		Makefile || die
 }
 
 src_compile() {
