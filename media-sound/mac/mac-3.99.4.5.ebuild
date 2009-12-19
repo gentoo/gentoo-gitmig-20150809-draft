@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.ebuild,v 1.2 2009/10/06 16:41:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.ebuild,v 1.3 2009/12/19 21:43:45 elvanor Exp $
 
 EAPI=2
 inherit eutils multilib versionator
@@ -9,7 +9,8 @@ MY_P=${PN}-$(get_version_component_range 1-2)-u$(get_version_component_range 3)-
 
 DESCRIPTION="Monkey's Audio Codecs"
 HOMEPAGE="http://supermmx.org/linux/mac/"
-SRC_URI="http://supermmx.org/resources/linux/${PN}/${MY_P}.tar.gz"
+#SRC_URI="http://supermmx.org/resources/linux/${PN}/${MY_P}.tar.gz" # original URI seems down, below is a replacement backup one
+SRC_URI="http://members.iinet.net.au/~aidanjm/${MY_P}.tar.gz"
 
 LICENSE="mac"
 SLOT="0"
