@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.55 2009/09/24 04:10:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.56 2009/12/19 22:08:44 robbat2 Exp $
+
+*audit-1.7.17 (19 Dec 2009)
+
+  19 Dec 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/auditd-init.d-1.7.17, +audit-1.7.17.ebuild:
+  Version bump, also fix BL2 issue per bug #241884.
 
   24 Sep 2009; Jeremy Olexa <darkside@gentoo.org> -audit-1.6.8.ebuild:
   remove vuln version wrt bug 271746
