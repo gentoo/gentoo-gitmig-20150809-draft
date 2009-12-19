@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.6 2009/11/30 16:47:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.7 2009/12/19 19:08:29 arfrever Exp $
+
+*webob-0.9.7.1 (19 Dec 2009)
+
+  19 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +webob-0.9.7.1.ebuild:
+  Version bump.
 
   30 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> webob-0.9.6.1.ebuild:
   Keywording for ppc, bug 294905
