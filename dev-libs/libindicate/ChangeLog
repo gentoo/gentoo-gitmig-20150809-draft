@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.4 2009/11/23 22:34:22 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.5 2009/12/19 16:52:05 mrpouet Exp $
+
+*libindicate-0.2.3-r1 (19 Dec 2009)
+
+  19 Dec 2009; Romain Perier <mrpouet@gentoo.org>
+  +libindicate-0.2.3-r1.ebuild:
+  Fix bug #294279, put --docdir unconditionnally in my_conf (due to example
+  code installed all the time). thanks to Daniel Pielmeier.
 
   23 Nov 2009; Romain Perier <mrpouet@gentoo.org>
   libindicate-0.2.3.ebuild,
