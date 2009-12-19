@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/yiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.19 2009/05/10 08:25:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.20 2009/12/19 19:43:45 ssuominen Exp $
+
+  19 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> yiff-2.14.5-r1.ebuild,
+  +files/yiff-2.14.5-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #247470, thanks to Diego E.
+  'Flameeyes' Pettenò and Kacper Kowalik.
 
   10 May 2009; Samuli Suominen <ssuominen@gentoo.org> -yiff-2.14.5.ebuild,
   yiff-2.14.5-r1.ebuild, -files/yiff-2.14.5-build.patch:

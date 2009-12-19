@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/yiff-2.14.5-r1.ebuild,v 1.4 2009/05/10 08:25:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/yiff-2.14.5-r1.ebuild,v 1.5 2009/12/19 19:43:45 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="alsa"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )"
-DEPEND="${RDEPEND}"
+DEPEND="alsa? ( media-libs/alsa-lib )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build-2.patch
+	epatch "${FILESDIR}"/${P}-build-2.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 	sed -i -e "/^YLIB_DIR/s:/lib:/$(get_libdir):" \
 		*/Makefile* || die "sed	failed"
 }
@@ -26,12 +26,12 @@ src_prepare() {
 src_compile() {
 	tc-export CC CXX
 	use alsa && append-flags -DALSA_RUN_CONFORM
-	emake linux || die "emake failed"
+	emake linux || die
 }
 
 src_install() {
-	emake PREFIX="${D}"/usr install || die "emake install failed"
+	emake PREFIX="${D}"/usr install || die
 	dodoc AUTHORS README
 	insinto /etc
-	doins yiff/yiffrc || die "doins failed"
+	doins yiff/yiffrc || die
 }
