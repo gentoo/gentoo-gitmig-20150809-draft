@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.159 2009/12/09 18:52:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.160 2009/12/19 15:18:52 jer Exp $
+
+  19 Dec 2009; Jeroen Roovers <jer@gentoo.org> cacti-0.8.7e-r1.ebuild:
+  Stable for HPPA too.
 
   09 Dec 2009; Raúl Porcel <armin76@gentoo.org> cacti-0.8.7e-r1.ebuild:
   sparc stable wrt #294573
