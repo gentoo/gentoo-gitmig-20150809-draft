@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/bitstormlite-0.2p.ebuild,v 1.4 2009/07/25 19:53:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/bitstormlite-0.2p.ebuild,v 1.5 2009/12/19 21:56:17 ssuominen Exp $
 
 EAPI=2
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A light BitTorrent client based on c++ and gtk+."
 HOMEPAGE="http://sourceforge.net/projects/bbom/"
@@ -23,9 +23,11 @@ S=${WORKDIR}/BitStormLite-${PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 }
