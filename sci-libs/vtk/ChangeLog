@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.58 2009/12/17 23:43:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.59 2009/12/19 16:41:31 markusle Exp $
+
+*vtk-5.4.2-r1 (19 Dec 2009)
+
+  19 Dec 2009; Markus Dittrich <markusle@gentoo.org> +vtk-5.4.2-r1.ebuild:
+  New revision uses cmake-utils eclass and is significantly cleaned up.
+  This should have also fixed bugs #295053 and #287591.
+  Thanks much to Francois Bissey <f.r.bissey@massey.ac.nz> for his help.
 
   17 Dec 2009; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2.ebuild:
   Updated dependency on cmake to >=2.6 (fixes bug #295531).
