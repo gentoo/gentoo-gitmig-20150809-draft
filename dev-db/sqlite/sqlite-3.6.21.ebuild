@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.21.ebuild,v 1.3 2009/12/19 11:57:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.21.ebuild,v 1.4 2009/12/19 12:05:13 betelgeuse Exp $
 
 EAPI="2"
 
@@ -12,11 +12,11 @@ DOC_BASE="$(get_version_component_range 1-3)"
 DOC_PV="$(replace_all_version_separators _ ${DOC_BASE})"
 
 SRC_URI="
-    tcl? ( http://www.sqlite.org/${P}.tar.gz )
-    !tcl? (
+	tcl? ( http://www.sqlite.org/${P}.tar.gz )
+	!tcl? (
 		test? ( http://www.sqlite.org/${P}.tar.gz )
 		!test? ( http://www.sqlite.org/${PN}-amalgamation-${PV}.tar.gz )
-    )
+	)
 	doc? ( http://www.sqlite.org/${PN}_docs_${DOC_PV}.zip )"
 
 LICENSE="as-is"
@@ -26,9 +26,9 @@ IUSE="debug doc fts3 icu +readline soundex tcl +threadsafe test"
 
 RDEPEND="icu? ( dev-libs/icu )
 	readline? ( sys-libs/readline )
-	tcl? ( dev-lang/tcl )
-	test? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
+	test? ( dev-lang/tcl )
 	doc? ( app-arch/unzip )"
 
 src_prepare() {
@@ -72,7 +72,8 @@ src_configure() {
 	econf \
 		$(use_enable readline) \
 		$(use_enable threadsafe) \
-		$(use tcl && echo --enable-tcl)
+		$(use tcl && echo --enable-tcl) \
+		$(use !tcl && use test && echo --disable-tcl)
 }
 
 src_compile() {

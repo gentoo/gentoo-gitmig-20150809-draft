@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.300 2009/12/19 11:57:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.301 2009/12/19 12:05:13 betelgeuse Exp $
+
+  19 Dec 2009; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
+  Fix a couple QA issues with the last commit.
 
   19 Dec 2009; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
   Make building work without tcl installed using the amalgamation tarball
