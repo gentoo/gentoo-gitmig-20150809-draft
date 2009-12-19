@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.25 2009/12/19 16:19:53 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.26 2009/12/19 16:29:21 billie Exp $
+
+  19 Dec 2009; Daniel Pielmeier <billie@gentoo.org>
+  slim-themes-1.2.3a-r5.ebuild:
+  Re-add accidently removed ppc64 stable keywords.
 
 *slim-themes-1.2.3a-r5 (19 Dec 2009)
 
