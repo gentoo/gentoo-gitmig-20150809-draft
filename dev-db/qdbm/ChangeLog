@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.128 2009/08/16 07:52:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.129 2009/12/19 14:59:33 hattya Exp $
+
+  19 Dec 2009; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.77.ebuild:
+  fixes bug #297294.
 
   16 Aug 2009; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.75-r1.ebuild,
   qdbm-1.8.77.ebuild:
