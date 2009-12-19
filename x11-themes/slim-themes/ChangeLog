@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.24 2009/12/09 15:36:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.25 2009/12/19 16:19:53 billie Exp $
+
+*slim-themes-1.2.3a-r5 (19 Dec 2009)
+
+  19 Dec 2009; Daniel Pielmeier <billie@gentoo.org>
+  -slim-themes-1.2.3a-r4.ebuild, +slim-themes-1.2.3a-r5.ebuild:
+  Use fixed tarballs from bug #291736 to install the gentoo-ten themes
+  correct. Remove revision with the incorrect tarballs. Use doins instead
+  of cp.
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking slim-themes-1.2.3a-r3 ppc64 and -r4 ~ppc64 for bug 293332

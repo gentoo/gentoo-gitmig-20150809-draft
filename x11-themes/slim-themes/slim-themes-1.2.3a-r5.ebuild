@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r4.ebuild,v 1.4 2009/12/08 19:23:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r5.ebuild,v 1.1 2009/12/19 16:19:53 billie Exp $
 
 DESCRIPTION="SLiM (Simple Login Manager) themes pack"
 HOMEPAGE="http://slim.berlios.de"
@@ -22,9 +22,9 @@ SRC_URI="mirror://berlios/slim/slim-1.2.3-themepack1a.tar.gz
 	mirror://berlios/slim/slim-lake.tar.gz
 	mirror://gentoo/slim-gentoo-1.0.tar.bz2
 	http://www.xfce-look.org/CONTENT/content-files/48605-xfce-g-box-slim-0.1.tar.gz
-	http://slim.berlios.de/themes/gentoo_10_blue.tar.bz2
-	http://slim.berlios.de/themes/gentoo_10_purple.tar.bz2
-	http://slim.berlios.de/themes/gentoo_10_dark.tar.bz2"
+	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_purple/gentoo_10_purple.tar.bz2
+	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_blue/gentoo_10_blue.tar.bz2
+	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_dark/gentoo_10_dark.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,15 +43,16 @@ src_compile() {
 }
 
 src_install() {
-	for i in slim-archlinux capernoited flower2 mindlock lotus-{sage,midnight} \
-		Zenwalk	isolated subway xfce-g-box gentoo; do
-			rm ${i}/README
+	for i in capernoited flower2 gentoo isolated lotus-{sage,midnight} \
+		mindlock slim-archlinux subway xfce-g-box Zenwalk ; do
+			rm ${i}/README || die "rm README"
 	done
 
-	rm parallel-dimensions/{LICENSE*,COPY*} debian-moreblue/COPY* \
-		lotus-{sage,midnight}/{LICENSE*,COPY*} xfce-g-box/COPYRIGHT.panel
+	rm debian-moreblue/COPY* lotus-{sage,midnight}/{LICENSE*,COPY*} \
+		parallel-dimensions/{LICENSE*,COPY*} xfce-g-box/COPYRIGHT.panel \
+		|| die "rm LICENSE"
 
 	local themesdir="/usr/share/slim/themes"
-	dodir ${themesdir}
-	cp -R . "${D}"/${themesdir}
+	insinto ${themesdir}
+	doins -r .
 }
