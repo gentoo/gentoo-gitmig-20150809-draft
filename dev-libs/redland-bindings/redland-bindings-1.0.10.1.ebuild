@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1.ebuild,v 1.1 2009/12/19 18:57:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1.ebuild,v 1.2 2009/12/19 19:10:55 ssuominen Exp $
 
 EAPI=2
-inherit flag-o-matic multilib
+inherit multilib
 
 DESCRIPTION="Language bindings for Redland"
 HOMEPAGE="http://librdf.org/bindings/"
@@ -31,14 +31,11 @@ src_prepare() {
 }
 
 src_configure() {
-	# FIXME. Missing ref. to raptor_version_decimal in Python binding.
-	# Can be reproduced with FEATURES test.
-	use python && append-ldflags $(no-as-needed)
-
 	econf \
 		--disable-dependency-tracking \
 		$(use_with perl) \
 		$(use_with python) \
+		--with-python-ldflags="-shared -lrdf" \
 		$(use_with php) \
 		$(use_with ruby) \
 		--with-redland=system
