@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.20 2009/12/13 16:34:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.21 2009/12/19 21:16:36 arfrever Exp $
 
 EAPI="2"
 
@@ -149,9 +149,8 @@ src_configure() {
 
 	local dbmliborder
 	if use gdbm; then
-		dbmliborder+=":gdbm"
+		dbmliborder+="${dbmliborder:+:}gdbm"
 	fi
-	dbmliborder="${dbmliborder#:}"
 
 	econf \
 		--with-fpectl \
@@ -161,6 +160,7 @@ src_configure() {
 		$(use_with wide-unicode) \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
+		--with-computed-gotos \
 		--with-dbmliborder=${dbmliborder} \
 		--with-libc='' \
 		--with-system-ffi
