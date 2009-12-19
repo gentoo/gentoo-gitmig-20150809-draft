@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/log4py-1.3.ebuild,v 1.10 2009/02/15 22:28:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/log4py-1.3.ebuild,v 1.11 2009/12/19 21:39:56 arfrever Exp $
 
 inherit distutils
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/python"
+DEPEND=""
 RDEPEND=""
 
+DOCS="doc/AUTHORS doc/ChangeLog database/* log4py-test.py"
+PYTHON_MODNAME="log4py.py"
+
 src_install() {
-	DOCS="doc/*.* database/* log4py-test.py"
 	distutils_src_install
 	dohtml -r doc/html/*
 

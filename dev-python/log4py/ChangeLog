@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/log4py
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.17 2007/07/04 20:18:21 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.18 2009/12/19 21:39:56 arfrever Exp $
+
+  19 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  log4py-1.3.ebuild:
+  Fix DOCS (bug #296950).
 
   04 Jul 2007; Ali Polatel <hawking@gentoo.org> log4py-1.1.ebuild,
   log4py-1.3.ebuild:
