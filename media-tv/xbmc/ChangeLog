@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.38 2009/12/18 16:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.39 2009/12/19 20:44:11 vapier Exp $
+
+*xbmc-9.11_rc1 (19 Dec 2009)
+
+  19 Dec 2009; Mike Frysinger <vapier@gentoo.org> +xbmc-9.11_rc1.ebuild,
+  +files/xbmc-9.11_rc1-wavpack.patch, xbmc-9999.ebuild:
+  Version bump #297520.
 
   18 Dec 2009; Mike Frysinger <vapier@gentoo.org> -xbmc-9.04.ebuild,
   -xbmc-9.04.1.ebuild, -files/xbmc-9.04-gcc.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.44 2009/12/19 20:44:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11_rc1.ebuild,v 1.1 2009/12/19 20:44:11 vapier Exp $
 
 EAPI="2"
 
@@ -104,6 +104,11 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-wavpack.patch
+	# http://xbmc.org/trac/ticket/8218
+	sed -i \
+		-e 's: ftell64: dll_ftell64:' \
+		xbmc/cores/DllLoader/exports/wrapper.c || die
 	sed -i \
 		-e '1i#include <stdlib.h>\n#include <string.h>\n' \
 		xbmc/lib/libid3tag/libid3tag/metadata.c || die
@@ -111,6 +116,7 @@ src_prepare() {
 	# some dirs ship generated autotools, some dont
 	local d
 	for d in . xbmc/cores/dvdplayer/Codecs/libbdnav ; do
+		[[ -d ${d} ]] || continue
 		[[ -e ${d}/configure ]] && continue
 		pushd ${d} >/dev/null
 		einfo "Generating autotools in ${d}"
