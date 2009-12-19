@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.313 2009/12/03 12:41:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.314 2009/12/19 15:50:12 darkside Exp $
+
+*eix-0.19.1 (19 Dec 2009)
+
+  19 Dec 2009; Jeremy Olexa <darkside@gentoo.org> -eix-0.17.1.ebuild,
+  -eix-0.18.2.ebuild, -eix-0.18.3.ebuild, +eix-0.19.1.ebuild:
+  Version bump with minor bug fixes and enhancements. Ebuild by Martin Väth
 
 *eix-0.19.0-r1 (02 Dec 2009)
 

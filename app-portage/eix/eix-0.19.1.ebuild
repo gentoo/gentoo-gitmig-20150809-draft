@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.3.ebuild,v 1.1 2009/10/29 18:15:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.19.1.ebuild,v 1.1 2009/12/19 15:50:12 darkside Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit multilib autotools
+inherit multilib
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.sourceforge.net"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/eix/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
-IUSE="+bzip2 debug deprecated doc +hardened nls +optimization strong-optimization sqlite tools"
+IUSE="+bzip2 debug doc hardened nls optimization strong-optimization sqlite tools"
 
 RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )
@@ -43,20 +43,10 @@ src_configure() {
 		--with-portage-rootpath="${ROOTPATH}" \
 		--with-eprefix-default="${EPREFIX}" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		$(use_enable deprecated obsolete-reminder)
+		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	prepalldocs
-}
-
-pkg_postinst() {
-	if use deprecated; then
-		elog "ATTENTION: The old eix executable names will be going away soon"
-		elog "Update your scripts"
-	else
-		elog "ATTENTION: The eix executable names have changed. Update your"
-		elog "scripts, if needed. This message will go away soon."
-	fi
 }
