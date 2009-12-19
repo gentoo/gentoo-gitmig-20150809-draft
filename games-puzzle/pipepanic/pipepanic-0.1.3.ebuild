@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipepanic/pipepanic-0.1.3.ebuild,v 1.2 2009/11/16 14:52:25 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipepanic/pipepanic-0.1.3.ebuild,v 1.3 2009/12/19 17:41:51 pacho Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www.users.waitrose.com/~thunor/pipepanic/dload/${P}-source.tar.g
 
 LICENSE="GPL-2 FreeArt"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]"
