@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.71 2009/12/16 19:15:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.72 2009/12/19 17:51:47 flameeyes Exp $
+
+  19 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mysql-ruby-2.8.1-r1.ebuild:
+  Avoid rake tasks for tests and doc since this is not using rake. Closes
+  bug #297544. Use emake for install.
 
   16 Dec 2009; Jeroen Roovers <jer@gentoo.org> mysql-ruby-2.8.1.ebuild:
   Stable for HPPA (bug #296340).

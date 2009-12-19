@@ -1,11 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.8.1-r1.ebuild,v 1.1 2009/12/15 09:44:32 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.8.1-r1.ebuild,v 1.2 2009/12/19 17:51:47 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_NAME="mysql"
+
+RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
 
@@ -40,7 +43,7 @@ each_ruby_compile() {
 }
 
 each_ruby_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	ruby_fakegem_genspec
 }
 
