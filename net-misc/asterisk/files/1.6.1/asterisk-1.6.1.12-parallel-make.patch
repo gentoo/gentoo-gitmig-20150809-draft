@@ -1,0 +1,212 @@
+diff -uNr asterisk-1.6.1.12.ORIG/channels/Makefile asterisk-1.6.1.12/channels/Makefile
+--- asterisk-1.6.1.12.ORIG/channels/Makefile	2009-12-19 18:18:32.727000128 +0000
++++ asterisk-1.6.1.12/channels/Makefile	2009-12-19 18:18:42.016000126 +0000
+@@ -62,8 +62,8 @@
+ endif
+ 
+ clean::
+-	$(MAKE) -C misdn clean
+-	if [ -f h323/Makefile ]; then $(MAKE) -C h323 clean; fi
++	+$(MAKE) -C misdn clean
++	if [ -f h323/Makefile ]; then +$(MAKE) -C h323 clean; fi
+ 
+ dist-clean::
+ 	rm -f h323/Makefile
+@@ -99,7 +99,7 @@
+ chan_usbradio.so: LIBS+=-lusb -lasound
+ 
+ h323/Makefile.ast:
+-	$(CMD_PREFIX) $(MAKE) -C h323 Makefile.ast
++	$(CMD_PREFIX) +$(MAKE) -C h323 Makefile.ast
+ 
+ h323/libchanh323.a: h323/Makefile.ast
+-	$(CMD_PREFIX) $(MAKE) -C h323 libchanh323.a
++	$(CMD_PREFIX) +$(MAKE) -C h323 libchanh323.a
+diff -uNr asterisk-1.6.1.12.ORIG/codecs/gsm/Makefile asterisk-1.6.1.12/codecs/gsm/Makefile
+--- asterisk-1.6.1.12.ORIG/codecs/gsm/Makefile	2009-12-19 18:18:32.706000128 +0000
++++ asterisk-1.6.1.12/codecs/gsm/Makefile	2009-12-19 18:23:17.010000126 +0000
+@@ -359,12 +359,12 @@
+ 
+ gsminstall:
+ 		-if [ x"$(GSM_INSTALL_ROOT)" != x ] ; then	\
+-			$(MAKE) $(GSM_INSTALL_TARGETS) ;	\
++			+$(MAKE) $(GSM_INSTALL_TARGETS) ;	\
+ 		fi
+ 
+ toastinstall:
+ 		-if [ x"$(TOAST_INSTALL_ROOT)" != x ]; then	\
+-			$(MAKE) $(TOAST_INSTALL_TARGETS);	\
++			+$(MAKE) $(TOAST_INSTALL_TARGETS);	\
+ 		fi
+ 
+ gsmuninstall:
+diff -uNr asterisk-1.6.1.12.ORIG/codecs/Makefile asterisk-1.6.1.12/codecs/Makefile
+--- asterisk-1.6.1.12.ORIG/codecs/Makefile	2009-12-19 18:18:32.705000127 +0000
++++ asterisk-1.6.1.12/codecs/Makefile	2009-12-19 18:18:42.016000126 +0000
+@@ -30,22 +30,22 @@
+ endif
+ 
+ clean::
+-	$(MAKE) -C gsm clean
+-	$(MAKE) -C lpc10 clean
+-	$(MAKE) -C ilbc clean
++	+$(MAKE) -C gsm clean
++	+$(MAKE) -C lpc10 clean
++	+$(MAKE) -C ilbc clean
+ 	rm -f g722/*.[oa]
+ 
+ gsm/lib/libgsm.a:
+ 	@mkdir -p gsm/lib
+-	@$(MAKE) -C gsm lib/libgsm.a
++	@+$(MAKE) -C gsm lib/libgsm.a
+ 
+ $(LIBLPC10):
+-	@$(MAKE) -C lpc10 all
++	@+$(MAKE) -C lpc10 all
+ 
+ $(if $(filter codec_lpc10,$(EMBEDDED_MODS)),modules.link,codec_lpc10.so): $(LIBLPC10)
+ 
+ $(LIBILBC):
+-	@$(MAKE) -C ilbc all _ASTCFLAGS="$(filter-out -Wmissing-prototypes -Wmissing-declarations -Wshadow,$(_ASTCFLAGS)) $(AST_NO_STRICT_OVERFLOW)"
++	@+$(MAKE) -C ilbc all _ASTCFLAGS="$(filter-out -Wmissing-prototypes -Wmissing-declarations -Wshadow,$(_ASTCFLAGS)) $(AST_NO_STRICT_OVERFLOW)"
+ 
+ $(if $(filter codec_ilbc,$(EMBEDDED_MODS)),modules.link,codec_ilbc.so): $(LIBILBC)
+ 
+diff -uNr asterisk-1.6.1.12.ORIG/main/Makefile asterisk-1.6.1.12/main/Makefile
+--- asterisk-1.6.1.12.ORIG/main/Makefile	2009-12-19 18:18:32.695000126 +0000
++++ asterisk-1.6.1.12/main/Makefile	2009-12-19 18:18:42.016000126 +0000
+@@ -174,7 +174,7 @@
+ clean::
+ 	rm -f asterisk
+ 	rm -f db1-ast/.*.d
+-	@if [ -f editline/Makefile ]; then $(MAKE) -C editline distclean ; fi
+-	@$(MAKE) -C db1-ast clean
+-	@$(MAKE) -C stdtime clean
++	@if [ -f editline/Makefile ]; then +$(MAKE) -C editline distclean ; fi
++	@+$(MAKE) -C db1-ast clean
++	@+$(MAKE) -C stdtime clean
+ 	rm -f libresample/src/*.o
+diff -uNr asterisk-1.6.1.12.ORIG/Makefile asterisk-1.6.1.12/Makefile
+--- asterisk-1.6.1.12.ORIG/Makefile	2009-12-19 18:18:32.688000127 +0000
++++ asterisk-1.6.1.12/Makefile	2009-12-19 18:27:50.464000127 +0000
+@@ -449,14 +449,14 @@
+ 	rm -f include/asterisk/build.h
+ 	rm -f main/version.c
+ 	rm -f include/asterisk/version.h
+-	@$(MAKE) -C menuselect clean
++	@+$(MAKE) -C menuselect clean
+ 	cp -f .cleancount .lastclean
+ 
+ dist-clean: distclean
+ 
+ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+-	@$(MAKE) -C menuselect dist-clean
+-	@$(MAKE) -C sounds dist-clean
++	@+$(MAKE) -C menuselect dist-clean
++	@+$(MAKE) -C sounds dist-clean
+ 	rm -f menuselect.makeopts makeopts menuselect-tree menuselect.makedeps
+ 	rm -f makeopts.embed_rules
+ 	rm -f config.log config.status config.cache
+@@ -488,7 +488,7 @@
+ 		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTDATADIR)/images ; \
+ 	done
+ 	mkdir -p $(DESTDIR)$(AGI_DIR)
+-	$(MAKE) -C sounds install
++	+$(MAKE) -C sounds install
+ 
+ update: 
+ 	@if [ -d .svn ]; then \
+@@ -555,7 +555,7 @@
+ 	fi
+ 
+ $(SUBDIRS_INSTALL):
+-	@DESTDIR="$(DESTDIR)" ASTSBINDIR="$(ASTSBINDIR)" $(SUBMAKE) -C $(@:-install=) install
++	@+DESTDIR="$(DESTDIR)" ASTSBINDIR="$(ASTSBINDIR)" $(SUBMAKE) -C $(@:-install=) install
+ 
+ NEWMODS:=$(foreach d,$(MOD_SUBDIRS),$(notdir $(wildcard $(d)/*.so)))
+ OLDMODS=$(filter-out $(NEWMODS),$(notdir $(wildcard $(DESTDIR)$(MODULES_DIR)/*.so)))
+@@ -610,7 +610,7 @@
+ 	@echo " + **Note** This requires that you have      +"
+ 	@echo " + doxygen installed on your local system    +"
+ 	@echo " +-------------------------------------------+"
+-	@$(MAKE) -s oldmodcheck
++	@+$(MAKE) -s oldmodcheck
+ 
+ upgrade: bininstall
+ 
+@@ -794,14 +794,14 @@
+ 	fi
+ 
+ sounds:
+-	$(MAKE) -C sounds all
++	+$(MAKE) -C sounds all
+ 
+ # If the cleancount has been changed, force a make clean.
+ # .cleancount is the global clean count, and .lastclean is the 
+ # last clean count we had
+ 
+ cleantest:
+-	@cmp -s .cleancount .lastclean || $(MAKE) clean
++	@cmp -s .cleancount .lastclean || +$(MAKE) clean
+ 
+ $(SUBDIRS_UNINSTALL):
+ 	@$(SUBMAKE) -C $(@:-uninstall=) uninstall
+@@ -817,7 +817,7 @@
+ 	rm -f $(DESTDIR)$(ASTMANDIR)/man8/astgenkey.8
+ 	rm -f $(DESTDIR)$(ASTMANDIR)/man8/autosupport.8
+ 	rm -f $(DESTDIR)$(ASTMANDIR)/man8/safe_asterisk.8
+-	$(MAKE) -C sounds uninstall
++	+$(MAKE) -C sounds uninstall
+ 
+ uninstall: _uninstall
+ 	@echo " +--------- Asterisk Uninstall Complete -----+"  
+@@ -851,11 +851,11 @@
+ 
+ menuselect: menuselect/cmenuselect menuselect/nmenuselect menuselect/gmenuselect
+ 	@if [ -x menuselect/nmenuselect ]; then \
+-		$(MAKE) nmenuselect; \
++		+$(MAKE) nmenuselect; \
+ 	elif [ -x menuselect/cmenuselect ]; then \
+-		$(MAKE) cmenuselect; \
++		+$(MAKE) cmenuselect; \
+ 	elif [ -x menuselect/gmenuselect ]; then \
+-		$(MAKE) gmenuselect; \
++		+$(MAKE) gmenuselect; \
+ 	else \
+ 		echo "No menuselect user interface found. Install ncurses,"; \
+ 		echo "newt or GTK libraries to build one and re-rerun"; \
+@@ -906,7 +906,7 @@
+ 
+ pdf: asterisk.pdf
+ asterisk.pdf:
+-	$(MAKE) -C doc/tex asterisk.pdf
++	+$(MAKE) -C doc/tex asterisk.pdf
+ 
+ .PHONY: menuselect
+ .PHONY: main
+diff -uNr asterisk-1.6.1.12.ORIG/menuselect/Makefile asterisk-1.6.1.12/menuselect/Makefile
+--- asterisk-1.6.1.12.ORIG/menuselect/Makefile	2009-12-19 18:18:32.708000126 +0000
++++ asterisk-1.6.1.12/menuselect/Makefile	2009-12-19 18:18:42.017000127 +0000
+@@ -97,7 +97,7 @@
+ 
+ mxml/libmxml.a:
+ 	@if test ! -f mxml/Makefile ; then cd mxml && ./configure ; fi
+-	@$(MAKE) -C mxml libmxml.a
++	@+$(MAKE) -C mxml libmxml.a
+ 
+ test: menuselect
+ 	(cd test; ../$< menuselect.makeopts)
+@@ -113,11 +113,11 @@
+ 
+ clean:
+ 	rm -f menuselect cmenuselect gmenuselect nmenuselect $(OBJS) $(M_OBJS) $(C_OBJS) $(G_OBJS) $(N_OBJS)
+-	@if test -f mxml/Makefile ; then $(MAKE) -C mxml clean ; fi
++	@if test -f mxml/Makefile ; then +$(MAKE) -C mxml clean ; fi
+ 
+ dist-clean: distclean
+ 
+ distclean: clean
+-	@if test -f mxml/Makefile ; then $(MAKE) -C mxml distclean ; fi
++	@if test -f mxml/Makefile ; then +$(MAKE) -C mxml distclean ; fi
+ 	rm -f autoconfig.h config.status config.log makeopts
+ 	rm -rf autom4te.cache

@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.234 2009/12/12 15:05:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.235 2009/12/19 18:59:59 chainsaw Exp $
+
+*asterisk-1.6.1.12 (19 Dec 2009)
+
+  19 Dec 2009; <chainsaw@gentoo.org>
+  +files/1.6.1/asterisk-1.6.1.12-longer-sip-cid.patch,
+  +files/1.6.1/asterisk.initd2, +asterisk-1.6.1.12.ebuild,
+  +files/1.6.1/asterisk-1.6.1.12-parallel-make.patch:
+  Version bump. Improved permission handling in ebuild & initscript by
+  Patryk Rzadzinski, closes bugs #294601 & #296087. Set ASTLDFLAGS
+  environment variable to enforce LDFLAGS respect. Additional parallel make
+  fixes.
 
   12 Dec 2009; <chainsaw@gentoo.org> asterisk-1.6.1.11.ebuild:
   Block net-misc/asterisk-chan_unistim as this channel driver is built into
