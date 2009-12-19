@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.21.ebuild,v 1.2 2009/12/12 20:47:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.21.ebuild,v 1.3 2009/12/19 11:57:01 betelgeuse Exp $
 
 EAPI="2"
 
@@ -10,19 +10,25 @@ DESCRIPTION="an SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
 DOC_BASE="$(get_version_component_range 1-3)"
 DOC_PV="$(replace_all_version_separators _ ${DOC_BASE})"
-SRC_URI="http://www.sqlite.org/${P}.tar.gz
+
+SRC_URI="
+    tcl? ( http://www.sqlite.org/${P}.tar.gz )
+    !tcl? (
+		test? ( http://www.sqlite.org/${P}.tar.gz )
+		!test? ( http://www.sqlite.org/${PN}-amalgamation-${PV}.tar.gz )
+    )
 	doc? ( http://www.sqlite.org/${PN}_docs_${DOC_PV}.zip )"
 
 LICENSE="as-is"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="debug doc fts3 icu +readline soundex tcl +threadsafe"
+IUSE="debug doc fts3 icu +readline soundex tcl +threadsafe test"
 
 RDEPEND="icu? ( dev-libs/icu )
 	readline? ( sys-libs/readline )
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )
+	test? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
-	dev-lang/tcl
 	doc? ( app-arch/unzip )"
 
 src_prepare() {
@@ -55,12 +61,18 @@ src_configure() {
 		append-cppflags -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS
 	fi
 
+	# The amalgamation source doesn't have these via Makefile
+	if use debug; then
+		append-cppflags -DSQLITE_DEBUG=1
+	else
+		append-cppflags -DNDEBUG
+	fi
+
+	# amalgamation doesn't have tcl
 	econf \
-		$(use_enable debug) \
 		$(use_enable readline) \
 		$(use_enable threadsafe) \
-		$(use_enable threadsafe cross-thread-connections) \
-		$(use_enable tcl)
+		$(use tcl && echo --enable-tcl)
 }
 
 src_compile() {
