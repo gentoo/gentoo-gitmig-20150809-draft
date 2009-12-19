@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/ascii-invaders
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.16 2009/03/10 19:02:53 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.17 2009/12/19 21:10:23 grobian Exp $
+
+  19 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  ascii-invaders-0.1b.ebuild:
+  Marked ~ppc-macos, bug #296981
 
   10 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   ascii-invaders-0.1b.ebuild:
