@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/zope-testing-3.8.3.ebuild,v 1.3 2009/11/09 19:04:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/zope-testing-3.8.4.ebuild,v 1.1 2009/12/19 22:40:21 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
