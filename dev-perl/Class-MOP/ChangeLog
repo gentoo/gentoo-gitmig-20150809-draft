@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-MOP
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.31 2009/12/19 11:25:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.32 2009/12/19 11:46:53 tove Exp $
+
+  19 Dec 2009; Torsten Veller <tove@gentoo.org> Class-MOP-0.97.ebuild:
+  Drop ExtUtils-CBuilder dependency
 
 *Class-MOP-0.97 (19 Dec 2009)
 

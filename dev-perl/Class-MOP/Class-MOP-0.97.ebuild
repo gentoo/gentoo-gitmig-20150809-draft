@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/Class-MOP-0.97.ebuild,v 1.1 2009/12/19 11:25:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/Class-MOP-0.97.ebuild,v 1.2 2009/12/19 11:46:53 tove Exp $
 
 EAPI=2
 
@@ -21,7 +21,6 @@ RDEPEND="
 	>=dev-perl/MRO-Compat-0.05
 	dev-perl/Devel-GlobalDestruction"
 DEPEND="${RDEPEND}
-	virtual/perl-ExtUtils-CBuilder
 	test? ( >=virtual/perl-Test-Simple-0.88
 		>=dev-perl/Test-Exception-0.27
 		dev-perl/Test-Output )"
