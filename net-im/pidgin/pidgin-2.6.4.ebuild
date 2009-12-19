@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.9.ebuild,v 1.8 2009/08/30 23:33:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.4.ebuild,v 1.1 2009/12/19 15:49:08 scarabeus Exp $
 
 EAPI=2
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer meanwhile"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer idn meanwhile"
 IUSE="${IUSE} networkmanager nls perl silc tcl tk spell qq gadu"
 IUSE="${IUSE} +gtk sasl ncurses groupwise prediction zephyr" # mono"
 
@@ -25,13 +25,16 @@ RDEPEND="
 		>=dev-lang/python-2.4 )
 	gtk? (
 		spell? ( >=app-text/gtkspell-2.0.2 )
-		>=x11-libs/gtk+-2.0
+		>=x11-libs/gtk+-2.4
 		>=x11-libs/startup-notification-0.5
 		x11-libs/libXScrnSaver
 		eds? ( gnome-extra/evolution-data-server ) 	)
 	>=dev-libs/glib-2.0
 	gstreamer? ( =media-libs/gstreamer-0.10*
-		=media-libs/gst-plugins-good-0.10* )
+		=media-libs/gst-plugins-good-0.10*
+		>=net-libs/farsight2-0.0.14
+		media-plugins/gst-plugins-meta
+		media-plugins/gst-plugins-gconf )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	gadu?  ( net-libs/libgadu[-ssl] )
 	gnutls? ( net-libs/gnutls )
@@ -42,10 +45,11 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	dev-libs/libxml2
+	>=dev-libs/libxml2-2.6.18
 	networkmanager? ( net-misc/networkmanager )
 	prediction? ( =dev-db/sqlite-3* )
-	ncurses? ( sys-libs/ncurses[unicode] )"
+	ncurses? ( sys-libs/ncurses[unicode] )
+	idn? ( net-dns/libidn )"
 	# Mono support crashes pidgin
 	#mono? ( dev-lang/mono )"
 
@@ -82,6 +86,10 @@ pkg_setup() {
 		elog "will be built."
 		einfo
 	fi
+}
+
+src_prepare() {
+	intltoolize --automake --copy --force
 }
 
 src_configure() {
@@ -147,12 +155,14 @@ src_configure() {
 		$(use_enable meanwhile) \
 		$(use_enable eds gevolution) \
 		$(use_enable gstreamer) \
+		$(use_enable gstreamer vv) \
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
 		$(use_enable prediction cap) \
 		$(use_enable networkmanager nm) \
 		$(use_with zephyr krb4) \
 		$(use_enable bonjour avahi) \
+		$(use_enable idn) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		--x-includes=/usr/include/X11 \
