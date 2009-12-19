@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.579 2009/12/19 17:25:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.580 2009/12/19 18:09:02 anarchy Exp $
+
+  19 Dec 2009; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-3.5.6.ebuild:
+  remove restrict-javascript useflag for removal of noscript
 
 *mozilla-firefox-3.5.6 (19 Dec 2009)
 

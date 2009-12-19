@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.6.ebuild,v 1.1 2009/12/19 17:25:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.6.ebuild,v 1.2 2009/12/19 18:09:02 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa bindist java mozdevelop restrict-javascript -sqlite iceweasel" # qt-experimental
+IUSE="+alsa bindist java mozdevelop sqlite iceweasel" # qt-experimental
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2
@@ -67,8 +67,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-PDEPEND="restrict-javascript? ( >=www-plugins/noscript-1.9.6.6 )"
 
 S="${WORKDIR}/mozilla-1.9.1"
 
