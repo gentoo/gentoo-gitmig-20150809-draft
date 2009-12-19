@@ -1,6 +1,10 @@
 # ChangeLog for media-video/chaplin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/chaplin/ChangeLog,v 1.10 2007/02/12 14:35:16 blubb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/chaplin/ChangeLog,v 1.11 2009/12/19 21:59:26 ssuominen Exp $
+
+  19 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  chaplin-1.10-r1.ebuild, +files/chaplin-1.10-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #247871.
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org> chaplin-1.10-r1.ebuild:
   stable on amd64; bug 165375
