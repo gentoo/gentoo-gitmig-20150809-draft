@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/pidgin-encryption
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.7 2009/02/05 05:11:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.8 2009/12/19 13:42:30 pva Exp $
+
+*pidgin-encryption-3.0-r1 (19 Dec 2009)
+
+  19 Dec 2009; Peter Volkov <pva@gentoo.org>
+  +pidgin-encryption-3.0-r1.ebuild,
+  +files/pidgin-encryption-3.0-crash.patch:
+  Added patch from debian to fix crash, hopefully fixes bug #292321, thank
+  Phil Stracchino for good backtrace.
 
   05 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
   pidgin-encryption-3.0.ebuild:
