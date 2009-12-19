@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.86 2009/11/21 05:06:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.87 2009/12/19 15:48:21 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -237,7 +237,7 @@ toolchain-binutils_src_compile() {
 	# we have makeinfo (may not exist when we bootstrap)
 	if ! has noinfo ${FEATURES} ; then
 		if type -p makeinfo > /dev/null ; then
-			make info || die "make info failed"
+			emake info || die "make info failed"
 		fi
 	fi
 	# we nuke the manpages when we're left with junk
