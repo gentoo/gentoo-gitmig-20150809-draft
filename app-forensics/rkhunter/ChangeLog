@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.72 2009/12/20 15:27:21 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.73 2009/12/20 23:50:44 cla Exp $
+
+  20 Dec 2009; Dawid Węgliński <cla@gentoo.org> rkhunter-1.3.4-r3.ebuild:
+  Stable on x86 (bug #287269)
 
   20 Dec 2009; Richard Freeman <rich0@gentoo.org> rkhunter-1.3.4-r3.ebuild:
   amd64 stable - 287269
