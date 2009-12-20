@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.7 2009/10/11 08:26:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.8 2009/12/20 20:25:12 arfrever Exp $
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  paste-1.7.2.ebuild:
+  Add "test" USE flag and src_test().
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> paste-1.7.2.ebuild:
   Merge from Prefix
