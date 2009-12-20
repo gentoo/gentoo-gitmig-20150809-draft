@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.48 2009/12/12 12:10:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.49 2009/12/20 15:20:25 mrpouet Exp $
+
+  20 Dec 2009; Romain Perier <mrpouet@gentoo.org> -compiz-0.8.2.ebuild:
+  Clean up old version
 
   12 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> +compiz-0.8.2.ebuild:
   Revert wrongly removed ebuild
