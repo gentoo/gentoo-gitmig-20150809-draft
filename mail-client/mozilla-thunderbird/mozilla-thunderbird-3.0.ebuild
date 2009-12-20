@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-3.0.ebuild,v 1.3 2009/12/19 17:21:05 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-3.0.ebuild,v 1.4 2009/12/20 18:32:11 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -210,15 +210,6 @@ src_install() {
 	for X in ${linguas}; do
 		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
 	done
-
-	local LANG=${linguas%% *}
-	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
-		elog "Setting default locale to ${LANG}"
-		dosed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
-			${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js || \
-			die "sed failed to change locale"
-	fi
 
 	if ! use bindist; then
 		newicon "${S}"/other-licenses/branding/thunderbird/content/icon48.png thunderbird-icon.png
