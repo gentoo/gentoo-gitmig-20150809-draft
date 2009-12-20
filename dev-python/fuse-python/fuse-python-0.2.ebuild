@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/fuse-python-0.2.ebuild,v 1.7 2008/08/30 20:26:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/fuse-python-0.2.ebuild,v 1.8 2009/12/20 22:26:36 arfrever Exp $
 
-inherit eutils distutils multilib python
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit eutils distutils
 
 KEYWORDS="~amd64 x86"
 DESCRIPTION="Python FUSE bindings"
@@ -13,22 +16,13 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.3
-	>=sys-fs/fuse-2.0"
+DEPEND=">=sys-fs/fuse-2.0"
+RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
-src_unpack () {
-	distutils_src_unpack
-	epatch "${FILESDIR}"/fuse_python_accept_none.patch
-}
+PYTHON_MODNAME="fuse.py fuseparts"
 
-pkg_postinst() {
-	python_version
-	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/fuse.py
-	python_mod_optimize \
-		/usr/$(get_libdir)/python${PYVER}/site-packages/fuseparts
-}
-
-pkg_postrm() {
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+src_prepare () {
+	distutils_src_prepare
+	epatch "${FILESDIR}/fuse_python_accept_none.patch"
 }

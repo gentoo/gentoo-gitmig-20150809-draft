@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fuse-python
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.9 2008/08/30 20:26:27 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.10 2009/12/20 22:26:36 arfrever Exp $
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  fuse-python-0.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   30 Aug 2008; Markus Ullmann <jokey@gentoo.org> fuse-python-0.2.ebuild:
   Stable on x86
