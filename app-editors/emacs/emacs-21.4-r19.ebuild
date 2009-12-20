@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r19.ebuild,v 1.10 2009/12/15 09:25:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r19.ebuild,v 1.11 2009/12/20 10:34:43 ulm Exp $
 
 EAPI=2
 
@@ -167,13 +167,7 @@ emacs-infodir-rebuild() {
 
 pkg_postinst() {
 	emacs-infodir-rebuild
-
-	if [[ $(readlink "${ROOT}"/usr/bin/emacs) == emacs.emacs-${SLOT}* ]]; then
-		# transition from pre-eselect revision
-		eselect emacs set emacs-${SLOT}
-	else
-		eselect emacs update ifunset
-	fi
+	eselect emacs update ifunset
 
 	if ! use sendmail && ! has_version "virtual/mta"; then
 		elog "You disabled sendmail support for Emacs. If you later install"

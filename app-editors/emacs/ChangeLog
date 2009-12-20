@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.353 2009/12/15 09:25:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.354 2009/12/20 10:34:43 ulm Exp $
+
+  20 Dec 2009; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r19.ebuild,
+  emacs-22.3-r3.ebuild:
+  Remove old compatibility code.
 
   15 Dec 2009; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r19.ebuild,
   emacs-22.3-r2.ebuild, emacs-22.3-r3.ebuild, emacs-23.1.ebuild,
