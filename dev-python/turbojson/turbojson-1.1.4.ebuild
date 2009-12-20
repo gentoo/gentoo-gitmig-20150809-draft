@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/turbojson-1.1.4.ebuild,v 1.1 2009/04/01 11:47:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/turbojson-1.1.4.ebuild,v 1.2 2009/12/20 12:34:02 grobian Exp $
 
 NEED_PYTHON=2.4
 
 inherit distutils
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 MY_PN=TurboJson
 MY_P=${MY_PN}-${PV}
