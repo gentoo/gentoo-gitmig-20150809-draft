@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.414 2009/12/20 14:30:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.415 2009/12/20 19:06:55 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -974,6 +974,9 @@ gcc-compiler_pkg_postrm() {
 	[[ ${ROOT} != "/" ]] && return 0
 
 	if [[ ! -e ${LIBPATH}/libstdc++.so ]] ; then
+		# make sure the profile is sane during same-slot upgrade #289403
+		do_gcc_config
+
 		einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}'"
 		/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}
 		if [[ -n ${BRANCH_UPDATE} ]] ; then
