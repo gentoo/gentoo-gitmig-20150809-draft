@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.12 2009/09/04 15:03:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.13 2009/12/20 15:53:23 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> werkzeug-0.5.1.ebuild:
+  Merged keywords from Prefix
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -werkzeug-0.4.1.ebuild,
   -werkzeug-0.5.ebuild:

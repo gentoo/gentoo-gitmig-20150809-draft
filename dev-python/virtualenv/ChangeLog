@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.21 2009/11/21 02:53:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.22 2009/12/20 15:47:20 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> virtualenv-1.4.3.ebuild:
+  Merged keywords from Prefix
 
 *virtualenv-1.4.3 (21 Nov 2009)
 

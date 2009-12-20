@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.5.1.ebuild,v 1.2 2009/09/01 07:34:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.5.1.ebuild,v 1.3 2009/12/20 15:53:23 grobian Exp $
 
 NEED_PYTHON="2.4"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://werkzeug.pocoo.org/"
 SRC_URI="http://pypi.python.org/packages/source/W/Werkzeug/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND=""

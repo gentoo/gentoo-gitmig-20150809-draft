@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/webpy-0.32.ebuild,v 1.1 2009/09/04 15:09:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/webpy-0.32.ebuild,v 1.2 2009/12/20 15:50:54 grobian Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.webpy.org/static/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"

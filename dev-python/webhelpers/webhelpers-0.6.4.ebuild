@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-0.6.4.ebuild,v 1.2 2009/09/04 15:14:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-0.6.4.ebuild,v 1.3 2009/12/20 15:48:26 grobian Exp $
 
 NEED_PYTHON=2.3
 
 inherit distutils
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 MY_PN=WebHelpers
 MY_P=${MY_PN}-${PV}

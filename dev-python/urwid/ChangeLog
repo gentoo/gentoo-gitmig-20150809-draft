@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.34 2009/11/30 06:39:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.35 2009/12/20 15:46:06 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> urwid-0.9.9.ebuild:
+  Merged keywords from Prefix
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> urwid-0.9.8.4.ebuild:
   Marked ppc64 stable.
