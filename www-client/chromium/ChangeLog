@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.31 2009/12/15 14:05:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.32 2009/12/20 09:00:10 phajdan.jr Exp $
+
+*chromium-4.0.249.43 (19 Dec 2009)
+
+  19 Dec 2009; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-4.0.249.43.ebuild, metadata.xml:
+  Add ebuild for 4.0.249.43 beta release. Contains bugfixes and adds popup
+  support for page action extensions.
 
   15 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-4.0.266.0.ebuild, chromium-9999.ebuild:

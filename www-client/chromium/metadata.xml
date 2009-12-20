@@ -6,6 +6,10 @@
 		<email>voyageur@gentoo.org</email>
 		<name>Bernard Cafarelli</name>
 	</maintainer>
+	<maintainer>
+		<email>phajdan.je@gentoo.org</email>
+		<name>Pawel Hajdan</name>
+	</maintainer>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
 	<use>
 		<flag name='ffmpeg'>Add support for HTML5 audio/video tags via <pkg>media-video/ffmpeg</pkg></flag>
