@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12.ebuild,v 1.1 2009/12/20 17:54:10 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12.ebuild,v 1.2 2009/12/20 18:03:47 billie Exp $
 
-EAPI="2"
+EAPI=2
 
 inherit fdo-mime linux-info python autotools
 
@@ -111,12 +111,12 @@ src_prepare() {
 	# SYSFS deprecated but kept upstream for compatibility reasons
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
 	sed -i -e "s/SYSFS/ATTRS/g" -e "s/sysfs/attrs/g" data/rules/56-hpmud_support.rules \
-		data/rules/55-hpmud.rules || die "Sed 55-hpmud.rules 56-hpmud_support.rules failed"
+		data/rules/55-hpmud.rules || die
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
 		-e "s:file('/etc/issue', 'r').read():'Gentoo':" \
-		installer/core_install.py || die "Sed installer/core_install.py failed"
+		installer/core_install.py || die
 
 	# Use system foomatic-rip for hpijs driver instead of foomatic-rip-hplip
 	# The hpcups driver does not use foomatic-rip
@@ -124,7 +124,7 @@ src_prepare() {
 	for i in ppd/hpijs/*.ppd.gz
 	do
 		rm -f ${i}.temp
-		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | gzip > ${i}.temp || die "Sed *.ppd.gz failed"
+		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | gzip > ${i}.temp || die
 		mv ${i}.temp ${i}
 	done
 
@@ -135,10 +135,10 @@ src_prepare() {
 		sed -i \
 			-e "s/%s --force-startup/%s --force-startup --qt${qt_ver}/" \
 			-e "s/'--force-startup'/'--force-startup', '--qt${qt_ver}'/" \
-			base/device.py || die "Sed base/device.py failed"
+			base/device.py || die
 		sed -i \
 			-e "s/Exec=hp-systray/Exec=hp-systray --qt${qt_ver}/" \
-			hplip-systray.desktop.in || die "Sed hplip-systray.desktop.in failed"
+			hplip-systray.desktop.in || die
 	fi
 
 	eautoreconf
@@ -234,23 +234,23 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Emake install failed"
+	emake DESTDIR="${D}" install || die
 
 	# Installed by sane-backends
 	# Gentoo Bug: #201023
-	rm -f "${D}"/etc/sane.d/dll.conf
+	rm -f "${D}"/etc/sane.d/dll.conf || die
 
 	# kde3 autostart hack
 	if [[ -d /usr/kde/3.5/share/autostart ]] && use !minimal ; then
 		insinto /usr/kde/3.5/share/autostart
-		doins hplip-systray.desktop
+		doins hplip-systray.desktop || die
 	fi
 }
 
 pkg_preinst() {
 	# avoid collisions with cups-1.2 compat symlinks
 	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ] ; then
-		rm "${ROOT}"/usr/libexec/cups/backend/hp{,fax}
+		rm "${ROOT}"/usr/libexec/cups/backend/hp{,fax} || die
 	fi
 }
 
