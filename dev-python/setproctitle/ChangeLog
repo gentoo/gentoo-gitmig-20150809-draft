@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/setproctitle
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/ChangeLog,v 1.1 2009/12/20 04:40:48 arfrever Exp $
+
+*setproctitle-0.4 (20 Dec 2009)
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +setproctitle-0.4.ebuild, +metadata.xml:
+  Initial addition (bug #297288).
+
