@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.37 2009/11/14 16:40:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.38 2009/12/20 12:27:24 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> sphinx-0.6.3.ebuild:
+  Merged keywords from Prefix, added small Prefix changes, bug #295035
 
   14 Nov 2009; Raúl Porcel <armin76@gentoo.org> sphinx-0.6.3.ebuild:
   ia64/s390/sh/sparc stable wrt #287617
