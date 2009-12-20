@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/gearmand
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.1 2009/12/20 19:19:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.2 2009/12/20 21:49:38 flameeyes Exp $
+
+*gearmand-0.11-r2 (20 Dec 2009)
+
+  20 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -gearmand-0.11-r1.ebuild, +gearmand-0.11-r2.ebuild, metadata.xml:
+  Revision bump, add support for dev-db/libdrizzle, sqlite and write the
+  code to support postgresql (albeit non-working yet).
 
 *gearmand-0.11-r1 (20 Dec 2009)
 
