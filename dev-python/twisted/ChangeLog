@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.119 2009/12/20 15:25:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.120 2009/12/20 16:37:33 armin76 Exp $
+
+  20 Dec 2009; Raúl Porcel <armin76@gentoo.org> twisted-8.2.0-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #289680
 
   20 Dec 2009; Fabian Groffen <grobian@gentoo.org> twisted-9.0.0.ebuild:
   Merged keywords from Prefix, added small Prefix changes, bug #295035
