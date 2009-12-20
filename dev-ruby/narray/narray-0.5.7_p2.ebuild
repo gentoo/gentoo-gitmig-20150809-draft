@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.5.7_p2.ebuild,v 1.13 2009/08/22 22:16:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.5.7_p2.ebuild,v 1.14 2009/12/20 13:43:04 graaff Exp $
 
 inherit ruby
 
@@ -16,7 +16,6 @@ KEYWORDS="alpha hppa ia64 mips ppc sparc x86"
 
 IUSE=""
 USE_RUBY="ruby18"
-DEPEND="virtual/ruby"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nimage/nimage-0.5.9.ebuild,v 1.4 2009/06/13 09:08:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nimage/nimage-0.5.9.ebuild,v 1.5 2009/12/20 13:44:55 graaff Exp $
 
 DESCRIPTION="simple Ruby class for displaying 2-D Data as images on X11 display"
 HOMEPAGE="http://www.ir.isas.ac.jp/~masa/ruby/index-e.html"
@@ -9,9 +9,11 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~ppc64 ~sparc ~x86"
 IUSE=""
-DEPEND="virtual/ruby
+DEPEND="
 	>=dev-ruby/narray-0.3.1
 	x11-libs/libX11"
+RDEPEND="${DEPEND}"
+
 S="${WORKDIR}/narray-${PV}/${PN}"
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.164 2009/12/20 13:50:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.165 2009/12/20 13:51:19 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org> rmagick-2.12.2.ebuild,
+  rmagick-2.12.2-r1.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> -rmagick-2.9.0.ebuild,
   -rmagick-2.11.0.ebuild, -rmagick-2.12.1.ebuild:

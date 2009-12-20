@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.41 2009/10/31 21:46:27 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.42 2009/12/20 13:53:20 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-dbi-0.2.0-r1.ebuild,
+  ruby-dbi-0.4.2.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   31 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> ruby-dbi-0.4.2.ebuild:
   Re-Keywording for ppc, bug 283229

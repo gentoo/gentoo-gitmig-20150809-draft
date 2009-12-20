@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.5 2009/10/31 21:46:27 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.6 2009/12/20 13:53:21 graaff Exp $
 
 inherit "ruby"
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="examples odbc postgres mysql sqlite sqlite3 test"
 
 DEPEND="
-	virtual/ruby
 	dev-ruby/deprecated
 	test? ( dev-ruby/test-unit )"
 RDEPEND="${DEPEND}"

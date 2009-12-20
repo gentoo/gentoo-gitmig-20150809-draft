@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.2.0-r1.ebuild,v 1.8 2009/08/09 12:15:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.2.0-r1.ebuild,v 1.9 2009/12/20 13:53:20 graaff Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ~sparc x86"
 IUSE="examples firebird odbc oracle postgres mysql sqlite sqlite3"
 
-DEPEND="virtual/ruby
+DEPEND="
 	mysql? ( dev-ruby/mysql-ruby )
 	postgres? ( dev-ruby/ruby-postgres )
 	firebird? ( >=dev-db/firebird-1.0-r1 )

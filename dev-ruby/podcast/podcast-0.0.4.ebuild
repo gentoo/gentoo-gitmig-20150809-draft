@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/podcast-0.0.4.ebuild,v 1.5 2009/04/14 17:22:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/podcast-0.0.4.ebuild,v 1.6 2009/12/20 13:47:30 graaff Exp $
 
 inherit ruby gems
 
@@ -14,4 +14,4 @@ KEYWORDS="~amd64 ~ia64 ~x86"
 
 IUSE=""
 USE_RUBY="ruby18"
-DEPEND="virtual/ruby dev-ruby/ruby-mp3info"
+DEPEND="dev-ruby/ruby-mp3info"
