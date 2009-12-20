@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.36 2009/07/28 14:45:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.37 2009/12/20 04:13:49 arfrever Exp $
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  denyhosts-2.6-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   28 Jul 2009; Jeremy Olexa <darkside@gentoo.org> -denyhosts-2.6.ebuild:
   Remove vulnerable versions, bug 271694
