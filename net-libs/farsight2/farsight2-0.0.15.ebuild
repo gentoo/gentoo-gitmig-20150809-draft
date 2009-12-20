@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.15.ebuild,v 1.5 2009/10/26 21:16:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.15.ebuild,v 1.6 2009/12/20 13:25:00 tester Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="python test msn"
+IUSE="python test msn upnp"
 SLOT="0"
 
 COMMONDEPEND=">=media-libs/gstreamer-0.10.23
@@ -20,7 +20,8 @@ COMMONDEPEND=">=media-libs/gstreamer-0.10.23
 	python? (
 		|| ( >=dev-python/pygobject-2.16 >=dev-python/pygtk-2.12 )
 		>=dev-python/pygobject-2.12
-		>=dev-python/gst-python-0.10.10 )"
+		>=dev-python/gst-python-0.10.10 )
+	upnp? ( net-libs/gupnp-igd )"
 
 RDEPEND="${COMMONDEPEND}
 	>=media-libs/gst-plugins-good-0.10.11
@@ -37,7 +38,9 @@ DEPEND="${COMMONDEPEND}
 src_configure() {
 	plugins="fsrtpconference,funnel,rtcpfilter,videoanyrate"
 	use msn && plugins="${plugins},fsmsnconference"
-	econf $(use_enable python) --with-plugins=${plugins}
+	econf $(use_enable python) \
+		$(use_enable upnp gupnp) \
+		--with-plugins=${plugins}
 }
 
 src_install() {
