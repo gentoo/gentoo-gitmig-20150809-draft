@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nano-methods
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nano-methods/ChangeLog,v 1.6 2007/09/17 20:24:25 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nano-methods/ChangeLog,v 1.7 2009/12/20 13:35:42 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org> nano-methods-0.8.2.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing citizen428 from metadata.xml (see #56803 for reference).

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/imlib2-ruby
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imlib2-ruby/ChangeLog,v 1.1 2006/10/06 03:56:25 pclouds Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imlib2-ruby/ChangeLog,v 1.2 2009/12/20 13:33:23 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org> imlib2-ruby-0.5.2.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
 *imlib2-ruby-0.5.2 (06 Oct 2006)
 
