@@ -1,0 +1,12 @@
+Index: test-spec-0.10.0/lib/test/spec.rb
+===================================================================
+--- test-spec-0.10.0.orig/lib/test/spec.rb
++++ test-spec-0.10.0/lib/test/spec.rb
+@@ -6,6 +6,7 @@
+ # This work is licensed under the same terms as Ruby itself.
+ #
+ 
++gem 'test-unit'
+ require 'test/unit'
+ 
+ class Test::Unit::AutoRunner    # :nodoc:

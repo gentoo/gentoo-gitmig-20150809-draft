@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.6 2009/12/16 15:23:15 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.7 2009/12/20 21:20:41 flameeyes Exp $
+
+*test-spec-0.10.0-r2 (20 Dec 2009)
+
+  20 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -test-spec-0.10.0-r1.ebuild, +test-spec-0.10.0-r2.ebuild,
+  +files/test-spec-0.10.0-test-unit.patch:
+  Revision bump again, add a patch to use test-unit directly, fix
+  dependencies.
 
 *test-spec-0.10.0-r1 (16 Dec 2009)
 
