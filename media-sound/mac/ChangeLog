@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.6 2009/10/06 16:41:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.7 2009/12/20 17:02:48 billie Exp $
+
+*mac-3.99.4.5.4 (20 Dec 2009)
+
+  20 Dec 2009; Daniel Pielmeier <billie@gentoo.org> +mac-3.99.4.5.4.ebuild:
+  Add a newer patched version of mac. This one is recommended by the
+  developers of aqualung, an application which uses mac for decoding of
+  Monkey's Audio files.
 
   06 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> mac-3.99.4.5.ebuild:
   RESTRICT="mirror" because the license doesn't explicitely grant permission
