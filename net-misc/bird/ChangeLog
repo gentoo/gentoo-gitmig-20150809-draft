@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.9 2009/11/23 14:35:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.10 2009/12/20 15:49:33 chainsaw Exp $
+
+*bird-1.1.7 (20 Dec 2009)
+
+  20 Dec 2009; <chainsaw@gentoo.org> +files/1.1.7-nostrip.patch,
+  +files/initd-v4-bird-1.1.7, +files/initd-v6-bird-1.1.7,
+  +bird-1.1.7.ebuild:
+  Version bump. Now implements BGP route refresh (RFC2918) & route reload
+  command. Major changes & bugfixes in pipe protocol, OSPF link state
+  announcements no longer age prematurely.
 
 *bird-1.1.6 (23 Nov 2009)
 
