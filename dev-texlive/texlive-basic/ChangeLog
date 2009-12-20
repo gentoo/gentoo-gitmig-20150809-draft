@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.30 2009/12/19 20:26:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.31 2009/12/20 17:04:10 ranger Exp $
+
+  20 Dec 2009; Brent Baude <ranger@gentoo.org> texlive-basic-2008-r1.ebuild:
+  Marking texlive-basic-2008-r1 ppc64 for bug 297283
 
   19 Dec 2009; Pacho Ramos <pacho@gentoo.org> texlive-basic-2008-r1.ebuild:
   amd64 stable, bug 297283
