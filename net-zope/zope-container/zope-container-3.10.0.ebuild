@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-container/zope-container-3.9.1.ebuild,v 1.1 2009/11/22 01:47:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-container/zope-container-3.10.0.ebuild,v 1.1 2009/12/20 01:13:25 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
