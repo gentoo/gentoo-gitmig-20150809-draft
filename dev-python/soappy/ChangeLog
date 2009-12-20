@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.31 2009/12/15 19:30:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.32 2009/12/20 11:08:52 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> soappy-0.12.0.ebuild:
+  Merged keywords from Prefix overlay
 
   15 Dec 2009; Brent Baude <ranger@gentoo.org> soappy-0.12.0.ebuild:
   Marking soappy-0.12.0 ppc64 for bug 292422
