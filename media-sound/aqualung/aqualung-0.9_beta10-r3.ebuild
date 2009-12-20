@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta10-r3.ebuild,v 1.1 2009/12/20 17:44:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta10-r3.ebuild,v 1.2 2009/12/20 18:26:54 billie Exp $
 
 EAPI=2
 
@@ -69,7 +69,7 @@ src_configure() {
 		$(use_with vorbis ogg) \
 		$(use_with vorbis vorbisenc) \
 		$(use_with wavpack) \
-		--without-mpc
+		--without-mpc \
 		--with-loop
 }
 
