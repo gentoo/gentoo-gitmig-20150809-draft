@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.5 2009/12/16 09:51:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.6 2009/12/20 23:39:43 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -49,11 +49,18 @@ inherit ruby-ng
 # Extra documentation to install (readme, changelogs, …).
 # RUBY_FAKEGEM_EXTRADOC=""
 
+# @ECLASS-VARIABLE: RUBY_FAKEGEM_BINWRAP
+# @DESCRIPTION:
+# Binaries to wrap around (relative to the bin/ directory)
+# RUBY_FAKEGEM_BINWRAP="*"
+
 RUBY_FAKEGEM_NAME="${RUBY_FAKEGEM_NAME:-${PN}}"
 RUBY_FAKEGEM_VERSION="${RUBY_FAKEGEM_VERSION:-${PV}}"
 
 RUBY_FAKEGEM_TASK_DOC="${RUBY_FAKEGEM_TASK_DOC-rdoc}"
 RUBY_FAKEGEM_TASK_TEST="${RUBY_FAKEGEM_TASK_TEST-test}"
+
+RUBY_FAKEGEM_BINWRAP="${RUBY_FAKEGEM_BINWRAP-*}"
 
 if [[ ${RUBY_FAKEGEM_TASK_DOC} != "" ]]; then
 	IUSE="$IUSE doc"
@@ -267,6 +274,21 @@ all_fakegem_install() {
 
 	if [[ -n ${RUBY_FAKEGEM_EXTRADOC} ]]; then
 		dodoc ${RUBY_FAKEGEM_EXTRADOC} || die "failed to install further documentation"
+	fi
+
+	# binary wrappers; we assume that all the implementations get the
+	# same binaries, or something is wrong anyway, so...
+	if [[ -n ${RUBY_FAKEGEM_BINWRAP} ]]; then
+		local bindir=$(find "${D}" -type d -path "*/gems/${RUBY_FAKEGEM_NAME}-${RUBY_FAKEGEM_VERSION}/bin" -print -quit)
+
+		if [[ -d "${bindir}" ]]; then
+			pushd "${bindir}"
+			local binaries=$(eval ls ${RUBY_FAKEGEM_BINWRAP})
+			for binary in $binaries; do
+				ruby_fakegem_binwrapper $binary
+			done
+			popd
+		fi
 	fi
 }
 
