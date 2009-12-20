@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ruby-oci8-1.0.3.ebuild,v 1.3 2009/07/02 20:20:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ruby-oci8-1.0.3.ebuild,v 1.4 2009/12/20 14:20:34 graaff Exp $
 
 inherit ruby
 
@@ -16,8 +16,7 @@ IUSE=""
 USE_RUBY="ruby18 ruby19"
 
 RDEPEND="dev-db/oracle-instantclient-basic
-	dev-db/oracle-instantclient-sqlplus
-	virtual/ruby"
+	dev-db/oracle-instantclient-sqlplus"
 DEPEND="${RDEPEND}"
 
 src_compile() {

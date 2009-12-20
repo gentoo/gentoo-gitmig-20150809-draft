@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ruby-net-ldap-0.0.4.ebuild,v 1.1 2007/11/08 13:42:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ruby-net-ldap-0.0.4.ebuild,v 1.2 2009/12/20 14:16:01 graaff Exp $
 
 inherit ruby gems
 
@@ -11,5 +11,3 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
 IUSE=""
-
-DEPEND="virtual/ruby"

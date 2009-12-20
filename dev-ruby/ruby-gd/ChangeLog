@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.20 2009/08/22 22:30:05 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.21 2009/12/20 14:13:53 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-gd-0.7.4-r1.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   22 Aug 2009; Alex Legler <a3li@gentoo.org> ruby-gd-0.7.4-r1.ebuild:
   Remove ruby16 and ruby19 from USE_RUBY.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-net-ldap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ChangeLog,v 1.1 2007/11/08 13:42:03 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ChangeLog,v 1.2 2009/12/20 14:16:01 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org>
+  ruby-net-ldap-0.0.4.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
 *ruby-net-ldap-0.0.4 (08 Nov 2007)
 

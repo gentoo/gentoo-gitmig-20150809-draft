@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ruby-freedb-0.5.ebuild,v 1.15 2009/08/22 22:28:51 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ruby-freedb-0.5.ebuild,v 1.16 2009/12/20 14:12:36 graaff Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ~sparc x86"
 USE_RUBY="ruby18"
 IUSE="examples"
-DEPEND="virtual/ruby"
 
 src_compile() {
 	ruby extconf.rb || die
