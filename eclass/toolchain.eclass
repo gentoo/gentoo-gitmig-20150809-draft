@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.413 2009/12/14 21:14:13 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.414 2009/12/20 14:30:03 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2297,8 +2297,7 @@ do_gcc_config() {
 
 	local current_gcc_config="" current_specs="" use_specs=""
 
-	# We grep out any possible errors
-	current_gcc_config=$(env -i ROOT="${ROOT}" gcc-config -c ${CTARGET} | grep -v '^ ')
+	current_gcc_config=$(env -i ROOT="${ROOT}" gcc-config -c ${CTARGET} 2>/dev/null)
 	if [[ -n ${current_gcc_config} ]] ; then
 		# figure out which specs-specific config is active
 		current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
