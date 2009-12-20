@@ -1,13 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.4.1-r1.ebuild,v 1.2 2009/10/11 11:05:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.4.1-r1.ebuild,v 1.3 2009/12/20 23:00:08 arfrever Exp $
 
-EAPI=2
-NEED_PYTHON=2.3
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+
 inherit distutils
 
 DESCRIPTION="dateutil datetime math and logic library for python"
-HOMEPAGE="http://labix.org/python-dateutil"
+HOMEPAGE="http://labix.org/python-dateutil http://pypi.python.org/pypi/python-dateutil"
 SRC_URI="http://labix.org/download/python-dateutil/${P}.tar.gz"
 
 LICENSE="PSF-2.3"
@@ -17,11 +18,11 @@ IUSE=""
 
 DOCS="NEWS README"
 
-DEPEND=">=dev-python/setuptools-0.6_rc7-r1
-	      sys-libs/timezone-data"
-RDEPEND=""
+DEPEND=">=dev-python/setuptools-0.6_rc7-r1"
+RDEPEND="sys-libs/timezone-data"
+RESTRICT_PYTHON_ABIS="3.*"
 
-PYTHON_MODNAME=dateutil
+PYTHON_MODNAME="dateutil"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-locale.patch
@@ -30,11 +31,14 @@ src_prepare() {
 }
 
 src_test() {
-	PYTHONPATH=build/lib "${python}" test.py || die
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test.py
+	}
+	python_execute_function testing
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
+	[[ -z "${ED}" ]] && local ED="${D}"
 	distutils_src_install
 	insinto /usr/share/doc/${PF}/examples
 	doins example.py sandbox/*.py
