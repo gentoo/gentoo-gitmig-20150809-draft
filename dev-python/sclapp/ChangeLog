@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/sclapp
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.1 2009/12/20 20:43:41 sping Exp $
+
+*sclapp-0.5.3 (20 Dec 2009)
+
+  20 Dec 2009; Sebastian Pipping <sping@gentoo.org> +sclapp-0.5.3.ebuild,
+  +metadata.xml:
+  Initial ebuild, review by Arfrever (bug 220081)
+
