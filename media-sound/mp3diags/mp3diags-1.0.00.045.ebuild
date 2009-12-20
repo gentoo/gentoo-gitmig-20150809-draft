@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.0.00.045.ebuild,v 1.1 2009/11/29 22:27:21 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.0.00.045.ebuild,v 1.2 2009/12/20 19:38:19 ayoy Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 MY_PN=${PN/mp3d/MP3D}
 MY_P=${MY_PN}-${PV}
@@ -24,10 +24,6 @@ DEPEND="x11-libs/qt-gui:4[debug?]
 	>=dev-libs/boost-1.37"
 RDEPEND="${DEPEND}
 	x11-libs/qt-svg:4[debug?]"
-
-src_configure() {
-	eqmake4
-}
 
 src_install() {
 	dobin bin/${MY_PN} || die "installing binary failed"

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3diags
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/ChangeLog,v 1.7 2009/12/12 13:34:03 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/ChangeLog,v 1.8 2009/12/20 19:38:19 ayoy Exp $
+
+  20 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> mp3diags-1.0.00.045.ebuild,
+  mp3diags-1.0.01.046.ebuild:
+  Porting to qt4-r2.eclass
 
 *mp3diags-1.0.01.046 (12 Dec 2009)
 
