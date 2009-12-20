@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gentoo-editor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.6 2009/12/09 15:01:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.7 2009/12/20 16:47:31 armin76 Exp $
+
+  20 Dec 2009; Raúl Porcel <armin76@gentoo.org> gentoo-editor-2.ebuild:
+  Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #293985
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> gentoo-editor-2.ebuild:
   Marking gentoo-editor-2 ~ppc64 for bug 293985
