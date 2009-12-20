@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.21.ebuild,v 1.4 2009/12/19 12:05:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.21.ebuild,v 1.5 2009/12/20 15:34:47 arfrever Exp $
 
 EAPI="2"
 
@@ -48,7 +48,13 @@ src_configure() {
 
 	if use icu; then
 		append-cppflags -DSQLITE_ENABLE_ICU
-		sed -e "s/TLIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
+		if use tcl || use test; then
+			# Normal tarball.
+			sed -e "s/TLIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
+		else
+			# Amalgamation tarball.
+			sed -e "s/LIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
+		fi
 	fi
 
 	# Support soundex, bug #143794

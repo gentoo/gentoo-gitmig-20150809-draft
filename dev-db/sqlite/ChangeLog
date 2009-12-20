@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.303 2009/12/20 14:40:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.304 2009/12/20 15:34:47 arfrever Exp $
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sqlite-3.6.21.ebuild:
+  Fix building with USE="icu -tcl -test" (bug #297534).
 
   20 Dec 2009; Brent Baude <ranger@gentoo.org> sqlite-3.6.20-r1.ebuild:
   Marking sqlite-3.6.20-r1 ppc64 for bug 297532
