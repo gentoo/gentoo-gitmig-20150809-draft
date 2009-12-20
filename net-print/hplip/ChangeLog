@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.136 2009/12/02 19:27:06 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.137 2009/12/20 17:54:10 billie Exp $
+
+*hplip-3.9.12 (20 Dec 2009)
+
+  20 Dec 2009; Daniel Pielmeier <billie@gentoo.org> +hplip-3.9.12.ebuild,
+  +files/hplip-3.9.12-cupsddk.patch:
+  Version bump. Add new cupsddk patch, the old one failed although there are
+  no changes.
 
   02 Dec 2009; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.10.ebuild,
   +files/hplip-3.9.10-cupsddk.patch, +files/hplip-3.9.10-htmldir.patch:
