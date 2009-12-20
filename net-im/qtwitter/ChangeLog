@@ -1,6 +1,9 @@
 # ChangeLog for net-im/qtwitter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.22 2009/12/20 09:50:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.23 2009/12/20 20:16:37 ayoy Exp $
+
+  20 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> qtwitter-0.10.0.ebuild:
+  Porting to qt4-r2.eclass
 
   20 Dec 2009; Markos Chandras <hwoarang@gentoo.org> qtwitter-0.10.0.ebuild,
   metadata.xml:
