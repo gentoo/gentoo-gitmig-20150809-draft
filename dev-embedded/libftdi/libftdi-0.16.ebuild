@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.16.ebuild,v 1.5 2009/10/31 14:25:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.16.ebuild,v 1.6 2009/12/20 12:39:35 vapier Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.intra2net.com/en/developer/libftdi/download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc examples"
 
 RDEPEND="virtual/libusb:0"
