@@ -1,6 +1,15 @@
 # ChangeLog for app-text/migemo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.21 2009/04/13 14:35:10 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.22 2009/12/20 16:48:56 ulm Exp $
+
+*migemo-0.40-r4 (20 Dec 2009)
+
+  20 Dec 2009; Ulrich Mueller <ulm@gentoo.org> -migemo-0.40-r3.ebuild,
+  +migemo-0.40-r4.ebuild, +files/50migemo-gentoo-0.40.el,
+  files/50migemo-gentoo.el, -files/51migemo-gentoo.el,
+  migemo-0.40-r1.ebuild:
+  Depend on dev-lang/ruby instead of virtual/ruby, as requested by graaff.
+  Require migemo-dict built with USE=-unicode, bug 264289. Change EAPI to 2.
 
   13 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking migemo-0.40-r1 ppc for bug 246953
