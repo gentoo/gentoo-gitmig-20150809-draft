@@ -1,0 +1,13 @@
+# ChangeLog for sys-cluster/gearmand
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.1 2009/12/20 19:19:34 flameeyes Exp $
+
+*gearmand-0.11-r1 (20 Dec 2009)
+
+  20 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gearmand-0.11-r1.ebuild, +files/gearmand.conf.d, +files/gearmand.init.d,
+  +metadata.xml:
+  Initial import of gearmand, thanks to Pavel Stratil (who's co-maintaining
+  the package) who wrote the basic ebuild and init script. Closes bug
+  #279413, reported by Rob Peck (who also wrote an alternative ebuild).
+
