@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.7 2009/12/20 17:02:48 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.8 2009/12/20 20:31:00 billie Exp $
+
+  20 Dec 2009; Daniel Pielmeier <billie@gentoo.org> mac-3.99.4.5.4.ebuild:
+  Fix epatch.
 
 *mac-3.99.4.5.4 (20 Dec 2009)
 

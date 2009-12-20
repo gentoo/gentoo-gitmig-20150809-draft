@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.4.ebuild,v 1.1 2009/12/20 17:02:48 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.4.ebuild,v 1.2 2009/12/20 20:31:00 billie Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ S=${WORKDIR}/${MY_P}
 RESTRICT="mirror"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${PN}-3.99.4.5-gcc44.patch
 	sed -i -e 's:-O3::' configure || die
 }
 
