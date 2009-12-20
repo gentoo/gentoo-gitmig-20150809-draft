@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/pytagsfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pytagsfs/ChangeLog,v 1.1 2009/12/20 21:01:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pytagsfs/ChangeLog,v 1.2 2009/12/20 21:38:41 tove Exp $
+
+  20 Dec 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Fix metadata: maintainer-wanted herd does not exist
 
 *pytagsfs-0.9.2_rc2 (20 Dec 2009)
 
