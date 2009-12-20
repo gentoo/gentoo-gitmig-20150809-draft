@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/eruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.35 2009/08/22 22:10:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.36 2009/12/20 13:22:33 graaff Exp $
+
+  20 Dec 2009; Hans de Graaff <graaff@gentoo.org> eruby-1.0.5-r1.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   22 Aug 2009; Alex Legler <a3li@gentoo.org> eruby-1.0.5-r1.ebuild:
   Remove ruby16 from USE_RUBY.
