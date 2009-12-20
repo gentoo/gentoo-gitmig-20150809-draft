@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gpytage/gpytage-0.2.0_rc1.ebuild,v 1.1 2008/06/05 02:55:18 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gpytage/gpytage-0.3.0_rc1.ebuild,v 1.1 2009/12/20 02:51:58 ken69267 Exp $
 
-NEED_PYTHON="2.4"
+NEED_PYTHON="2.6"
 
 inherit distutils
 
@@ -15,5 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-python/pygtk
-	gnome-base/libglade"
+RDEPEND=">=dev-python/pygtk-2.14"
