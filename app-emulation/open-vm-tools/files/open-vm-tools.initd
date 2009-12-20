@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/files/open-vm-tools.initd,v 1.1 2009/06/07 20:51:57 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/files/open-vm-tools.initd,v 1.2 2009/12/20 14:05:43 vadimk Exp $
 
 DND_TMPDIR="/tmp/VMwareDnD"
 USER_GROUP="root:vmware"
@@ -41,7 +41,7 @@ start() {
 	fi
 	
 	ebegin "Starting vmtoolsd"
-	start-stop-daemon --chuid "${USER_GROUP}" --start --quiet --exec ${GUESTD_BIN} -- --background "${PIDFILE}"
+	start-stop-daemon --chuid "${USER_GROUP}" --start --quiet --background --make-pidfile --pidfile "${PIDFILE}" --exec ${GUESTD_BIN}
 	eend $?
 }
 
