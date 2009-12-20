@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/twisted-runner-8.2.0.ebuild,v 1.5 2009/12/16 00:35:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/twisted-runner-8.2.0.ebuild,v 1.6 2009/12/20 16:34:30 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,7 +10,7 @@ inherit twisted versionator
 
 DESCRIPTION="Twisted Runner is a process management library and inetd replacement."
 
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="=dev-python/twisted-$(get_version_component_range 1)*"
