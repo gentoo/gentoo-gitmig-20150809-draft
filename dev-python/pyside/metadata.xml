@@ -8,5 +8,9 @@
 	</maintainer>
 	<longdescription lang="en">
 	</longdescription>
+	<use>
+		<flag name='tools'>Install PySide development tools (pyside-rcc,
+			pyside-uic, etc.)</flag>
+	</use>
 </pkgmetadata>
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.2.ebuild,v 1.1 2009/12/20 16:29:10 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.2.ebuild,v 1.2 2009/12/20 16:51:14 ayoy Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.pyside.org/files/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug tools"
 
 DEPEND=">=dev-libs/boost-1.41.0[python]
 	>=dev-python/boostpythongenerator-0.3.2
@@ -29,7 +29,8 @@ DEPEND=">=dev-libs/boost-1.41.0[python]
 	>=x11-libs/qt-svg-4.5.0
 	>=x11-libs/qt-webkit-4.5.0
 	>=x11-libs/qt-xmlpatterns-4.5.0"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	tools? ( ~dev-python/pyside-tools-0.1.2 )"
 
 S="${WORKDIR}/${MY_P}"
 
