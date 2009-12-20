@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/compizconfig-backend-gconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.13 2009/10/15 20:30:44 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.14 2009/12/20 15:51:17 mrpouet Exp $
+
+  20 Dec 2009; Romain Perier <mrpouet@gentoo.org>
+  -compizconfig-backend-gconf-0.6.0.ebuild,
+  -compizconfig-backend-gconf-0.8.2.ebuild:
+  Clean up old versions
 
 *compizconfig-backend-gconf-0.8.4 (15 Oct 2009)
 
