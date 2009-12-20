@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0-r1.ebuild,v 1.1 2009/11/27 16:38:17 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0-r1.ebuild,v 1.2 2009/12/20 19:34:06 ayoy Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="A Qt-based library for OAuth support"
 HOMEPAGE="http://wiki.github.com/ayoy/qoauth"
@@ -22,7 +22,6 @@ RDEPEND="${COMMON_DEPEND}
 	app-crypt/qca-ossl:2[debug?]"
 
 src_prepare() {
-	qt4_src_prepare
 	sed -i -e '/^ *docs \\$/d' \
 		   -e '/^ *build_all \\$/d' \
 		   -e 's/^\#\(!macx\)/\1/' \
@@ -37,10 +36,6 @@ src_prepare() {
 	if ! use test; then
 		sed -i -e 's/^\(SUBDIRS.*\) tests/\1/' ${PN}.pro || die "sed failed"
 	fi
-}
-
-src_configure() {
-	eqmake4
 }
 
 src_compile() {
