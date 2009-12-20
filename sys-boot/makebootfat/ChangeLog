@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/makebootfat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/makebootfat/ChangeLog,v 1.1 2009/09/01 19:45:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/makebootfat/ChangeLog,v 1.2 2009/12/20 21:36:18 tove Exp $
+
+  20 Dec 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  From maintainer-wanted to maintainer-needed
 
 *makebootfat-1.4 (18 May 2009)
 
