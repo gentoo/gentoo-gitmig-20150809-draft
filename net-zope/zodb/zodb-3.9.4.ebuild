@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.2.ebuild,v 1.1 2009/10/18 16:31:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.4.ebuild,v 1.1 2009/12/20 00:59:22 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,8 +16,8 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
+IUSE="test"
 
 RDEPEND="net-zope/transaction
 	net-zope/zc-lockfile
@@ -26,9 +26,10 @@ RDEPEND="net-zope/transaction
 	net-zope/zope-event
 	net-zope/zope-interface
 	net-zope/zope-proxy
-	net-zope/zope-testing"
+	!media-libs/FusionSound"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools
+	test? ( net-zope/zope-testing )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
@@ -50,10 +51,6 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-
-	# Don't install tests.
-	rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/{BTrees,persistent,ZEO,ZODB}/tests
-	rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/{ZEO,ZODB}/scripts/manual_tests
 
 	# Don't install sources.
 	find "${D}"usr/$(get_libdir)/python*/site-packages -name "*.c" -o -name "*.h" | xargs rm -f

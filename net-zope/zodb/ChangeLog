@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.35 2009/11/09 19:08:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.36 2009/12/20 00:59:22 arfrever Exp $
+
+*zodb-3.9.4 (20 Dec 2009)
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zodb-3.9.2.ebuild, +zodb-3.9.4.ebuild:
+  Version bump. Block media-libs/FusionSound (bug #295847).
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org> zodb-3.9.3.ebuild:
   keyworded ~arch for x86, bug 288603
