@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.15 2009/09/05 13:17:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.16 2009/12/20 10:17:23 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> boto-1.8d.ebuild:
+  Marked ~x86-linux, ~x86-macos and ~ppc-macos, bug #296932
 
   05 Sep 2009; Patrick Lauer <patrick@gentoo.org> -boto-1.7a.ebuild:
   Remove old
