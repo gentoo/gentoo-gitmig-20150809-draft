@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3687 2009/12/18 11:37:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3688 2009/12/20 19:12:14 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Dec 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Drop net-analyzer/cacti-cactid mask since package was removed from the
+  tree.
 
   18 Dec 2009; Markus Meier <maekke@gentoo.org> package.mask:
   remove enblend-4.0 rc masking as final version is in tree

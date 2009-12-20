@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10976 2009/12/18 11:37:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10977 2009/12/20 19:12:14 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -529,10 +529,6 @@ x11-drivers/xf86-video-vermilion
 # Keep pre-alpha development snapshot and live ebuild masked.
 =app-emacs/gnus-5.13_p*
 ~app-emacs/gnus-9999
-
-# Peter Volkov <pva@gentoo.org> (15 Nov 2009)
-# Use net-analyzer/cacti-spine instead. It's the same package but newer.
-net-analyzer/cacti-cactid
 
 # Mike Frysinger <vapier@gentoo.org> (14 Nov 2009)
 # In-tree ebuilds are old, and newer upstream releases are simple GUIs
