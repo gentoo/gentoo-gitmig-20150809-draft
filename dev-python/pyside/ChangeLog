@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyside
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.1 2009/12/20 16:29:10 ayoy Exp $
+
+*pyside-0.2.2 (20 Dec 2009)
+
+  20 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> +pyside-0.2.2.ebuild,
+  +files/pyside-qtscripttools.patch, +metadata.xml:
+  Initial commit for pyside (bug #282138)
+
