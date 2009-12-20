@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyside-tools
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.1 2009/12/20 16:38:58 ayoy Exp $
+
+*pyside-tools-0.1.2 (20 Dec 2009)
+
+  20 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> +pyside-tools-0.1.2.ebuild,
+  +files/pyside-tools-0.1.2-qtgui.patch, +metadata.xml:
+  Initial commit for pyside-tools (bug #282138)
+
