@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/inotifyx
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/inotifyx/ChangeLog,v 1.1 2009/12/20 20:20:14 sping Exp $
+
+*inotifyx-0.1.1 (20 Dec 2009)
+
+  20 Dec 2009; Sebastian Pipping <sping@gentoo.org> +inotifyx-0.1.1.ebuild,
+  +metadata.xml:
+  Initial ebuild, review by Arfrever (bug 296821)
+
