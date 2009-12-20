@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5100 2009/12/18 14:27:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5101 2009/12/20 10:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2309,7 +2309,6 @@ net-im/psi:webkit - Enable chatlog rendering using webkit
 net-im/psimedia:demo -  build simple test application for the PsiMedia system. 
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface 
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface 
-net-im/qtwitter:oauth - Enables authorization using OAuth for Twitter accounts
 net-im/qutim:histman - Enable histman plugin
 net-im/qutim:irc - Enable irc support
 net-im/qutim:mrim - Enable mrim plugin
