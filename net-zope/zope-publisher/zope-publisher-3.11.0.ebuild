@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/zope-publisher-3.10.1.ebuild,v 1.1 2009/11/29 19:41:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/zope-publisher-3.11.0.ebuild,v 1.1 2009/12/20 01:24:02 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="The Zope publisher publishes Python objects on the web."
 HOMEPAGE="http://pypi.python.org/pypi/zope.publisher"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="ZPL"
 SLOT="0"
@@ -33,7 +33,8 @@ RDEPEND="dev-python/setuptools
 	net-zope/zope-proxy
 	net-zope/zope-schema
 	net-zope/zope-security"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
