@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/universalindentgui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.6 2009/11/30 11:43:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.7 2009/12/20 22:09:31 wired Exp $
+
+  20 Dec 2009; Alex Alexander <wired@gentoo.org>
+  universalindentgui-1.1.0-r2.ebuild:
+  switched qt4 eclass to qt4-r2
 
 *universalindentgui-1.1.0-r2 (30 Nov 2009)
 
