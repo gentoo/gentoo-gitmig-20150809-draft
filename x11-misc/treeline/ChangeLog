@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.38 2009/06/06 18:38:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.39 2009/12/20 19:56:48 hwoarang Exp $
+
+  20 Dec 2009; Markos Chandras <hwoarang@gentoo.org> treeline-1.2.3.ebuild:
+  Stable on amd64 wrt bug #297628
 
   06 Jun 2009; Ben de Groot <yngwin@gentoo.org> treeline-1.2.3.ebuild:
   Install documentation into /usr/share/doc/ and do not install LICENSE.
