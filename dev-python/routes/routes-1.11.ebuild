@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.11.ebuild,v 1.1 2009/09/29 02:24:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.11.ebuild,v 1.2 2009/12/20 10:31:25 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools

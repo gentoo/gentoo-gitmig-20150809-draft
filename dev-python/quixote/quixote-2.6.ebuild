@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-2.6.ebuild,v 1.2 2009/11/26 10:06:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-2.6.ebuild,v 1.3 2009/12/20 10:29:28 grobian Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://quixote.ca/releases/${MY_P}.tar.gz"
 
 LICENSE="CNRI-QUIXOTE-2.4"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"

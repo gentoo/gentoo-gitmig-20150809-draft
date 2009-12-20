@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2306-r1.ebuild,v 1.1 2009/07/25 13:42:30 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2306-r1.ebuild,v 1.2 2009/12/20 10:32:48 grobian Exp $
 
 EAPI="2"
 NEED_PYTHON=2.4
@@ -14,7 +14,7 @@ MY_P=${MY_P/pre/r}
 DESCRIPTION="Rule-based Dispatching and Generic Functions"
 HOMEPAGE="http://peak.telecommunity.com/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 LICENSE="|| ( PSF-2.4 ZPL )"
 SLOT="0"
 IUSE=""

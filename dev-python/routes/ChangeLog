@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/routes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.7 2009/09/29 02:24:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.8 2009/12/20 10:31:25 grobian Exp $
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> routes-1.11.ebuild:
+  Merged keywords from Prefix overlay
 
 *routes-1.11 (29 Sep 2009)
 
