@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.161 2009/12/20 16:59:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.162 2009/12/20 18:58:46 pva Exp $
+
+  20 Dec 2009; Peter Volkov <pva@gentoo.org> -cacti-0.8.7b-r3.ebuild,
+  -cacti-0.8.7e.ebuild:
+  Drop old.
 
   20 Dec 2009; Jeroen Roovers <jer@gentoo.org> cacti-0.8.7e-r1.ebuild:
   Stable for PPC (bug #294573).
