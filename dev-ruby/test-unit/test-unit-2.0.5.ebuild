@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.5.ebuild,v 1.2 2009/12/16 18:15:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.5.ebuild,v 1.3 2009/12/20 22:28:28 flameeyes Exp $
 
 EAPI=2
 # One test fails on jruby, might be a jruby bug
-USE_RUBY="ruby18 ruby19"
+# When enabled on ruby18 it breaks too many things, so don't enable it for that just yet
+USE_RUBY="ruby19"
 
 # Don't enable docs yet since this requires hoe
 RUBY_FAKEGEM_TASK_DOC="" # doc
