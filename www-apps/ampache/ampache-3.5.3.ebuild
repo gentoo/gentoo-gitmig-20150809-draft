@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3.ebuild,v 1.1 2009/12/20 22:01:06 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3.ebuild,v 1.2 2009/12/20 22:54:56 marineam Exp $
 
 inherit webapp depend.php
 
@@ -20,7 +20,7 @@ need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use pcre session unicode iconv xml mysql gd zlib
+	require_php_with_use pcre session unicode iconv xml mysql gd zlib hash
 }
 
 src_install() {

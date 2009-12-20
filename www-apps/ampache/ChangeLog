@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.45 2009/12/20 22:01:06 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.46 2009/12/20 22:54:56 marineam Exp $
+
+  20 Dec 2009; Michael Marineau <marineam@gentoo.org> ampache-3.5.3.ebuild:
+  Require php's hash use flag, bug #262764
 
 *ampache-3.5.3 (20 Dec 2009)
 
