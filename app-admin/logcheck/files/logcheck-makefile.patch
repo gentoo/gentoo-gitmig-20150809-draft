@@ -1,0 +1,11 @@
+--- Makefile.orig	2009-12-19 19:56:23.000000000 +0100
++++ Makefile	2009-12-19 19:56:32.000000000 +0100
+@@ -4,6 +4,8 @@
+ BINDIR = usr/sbin
+ SHAREDIR = usr/share/logtail/detectrotate
+ 
++all:
++
+ install:
+ 	# Create the directories
+ 	install -m 750 -d $(DESTDIR)/$(CONFDIR)

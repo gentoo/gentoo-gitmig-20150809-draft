@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Please uncomment the following if you want logcheck to run hourly.
+
+#su -s /bin/bash -c /usr/sbin/logcheck logcheck
