@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.45 2009/12/20 16:38:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.46 2009/12/20 16:52:59 jer Exp $
+
+  20 Dec 2009; Jeroen Roovers <jer@gentoo.org> pyopenssl-0.10.ebuild:
+  Stable for PPC (bug #296678).
 
   20 Dec 2009; Jeroen Roovers <jer@gentoo.org> pyopenssl-0.10.ebuild:
   Stable for HPPA (bug #296678).
