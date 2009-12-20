@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0.ebuild,v 1.2 2009/11/30 12:45:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0.ebuild,v 1.3 2009/12/20 15:25:35 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,7 +15,7 @@ SRC_URI="http://tmrc.mit.edu/mirror/${PN}/Core/$(get_version_component_range 1-2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="crypt gtk serial"
 
 DEPEND=">=net-zope/zope-interface-3.0.1
@@ -66,11 +66,11 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	python_convert_shebangs "" "${D}usr/bin/trial"
+	python_convert_shebangs "" "${D%/}${EPREFIX}/usr/bin/trial"
 
 	# get rid of this to prevent collision-protect from killing us. it
 	# is regenerated in pkg_postinst.
-	rm -f "${D}/usr/$(get_libdir)"/python*/site-packages/twisted/plugins/dropin.cache
+	rm -f "${D%/}${EPREFIX}/usr/$(get_libdir)"/python*/site-packages/twisted/plugins/dropin.cache
 
 	# weird pattern to avoid installing the index.xhtml page
 	doman doc/man/*.?
@@ -86,7 +86,7 @@ src_install() {
 }
 
 update_plugin_cache() {
-	local tpath="${ROOT}$(python_get_sitedir)/twisted"
+	local tpath="${ROOT%/}${EPREFIX}$(python_get_sitedir)/twisted"
 	# we have to remove the cache or removed plugins won't be removed
 	# from the cache (http://twistedmatrix.com/bugs/issue926)
 	[[ -e "${tpath}/plugins/dropin.cache" ]] && rm -f "${tpath}/plugins/dropin.cache"
