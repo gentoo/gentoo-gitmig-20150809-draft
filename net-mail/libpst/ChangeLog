@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.21 2009/10/27 10:24:27 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.22 2009/12/21 15:38:37 ssuominen Exp $
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> libpst-0.6.41.ebuild,
+  +files/libpst-0.6.41-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #277145 by Kacper Kowalik.
 
   27 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> libpst-0.6.41.ebuild:
   Keywording for ppc, bug 271000
