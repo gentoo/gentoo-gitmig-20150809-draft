@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.53.ebuild,v 1.1 2009/12/21 03:29:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.53.ebuild,v 1.2 2009/12/21 05:54:06 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -37,9 +37,8 @@ src_compile() {
 }
 
 src_test() {
-	cd Tests
-
 	testing() {
+		cd Tests
 		PYTHONPATH="$(ls -d ../build/lib.*)" "$(PYTHON)" run_tests.py
 	}
 	python_execute_function -s testing
