@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10979 2009/12/21 03:40:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10980 2009/12/21 13:34:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (21 Dec 2009)
+# Masked for QA.
+#
+# Doesn't compile wrt bugs 279334, 246875, 228241.
+# Qt3-only application with no development being done for Qt4-port.
+#
+# Removal on 2010-02-19
+app-dicts/vdict
+app-dicts/vdict-en-vi
+app-dicts/vdict-fr-vi
+app-dicts/vdict-vi-en
+app-dicts/vdict-vi-fr
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (20 Dec 2009)
 # Only needed and works for ruby 1.9 so for now no need to
