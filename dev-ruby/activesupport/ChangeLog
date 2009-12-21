@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.112 2009/12/20 11:19:05 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.113 2009/12/21 00:10:42 flameeyes Exp $
+
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  activesupport-2.3.5-r1.ebuild:
+  Restore keywords (test-unit recursion).
 
   20 Dec 2009; Alex Legler <a3li@gentoo.org> -activesupport-2.3.4.ebuild:
   Removing vulnerable version
