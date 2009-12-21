@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.1 2009/12/21 14:10:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.2 2009/12/21 20:40:12 cardoe Exp $
 
 EAPI="2"
 
@@ -14,7 +14,8 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa bluetooth esd gnutls hardened ncurses pulseaudio sasl +sdl vde"
+IUSE="+aio alsa bluetooth curl esd gnutls fdt hardened kvm-trace ncurses \
+pulseaudio sasl +sdl vde xen"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 
@@ -33,10 +34,14 @@ RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
 	sys-apps/pciutils
+	>=sys-apps/util-linux-2.16.0
+	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
+	curl? ( net-misc/curl )
 	esd? ( media-sound/esound )
 	gnutls? ( net-libs/gnutls )
+	fdt? ( sys-apps/dtc )
 	ncurses? ( sys-libs/ncurses )
 	pulseaudio? ( media-sound/pulseaudio )
 	sasl? ( dev-libs/cyrus-sasl )
@@ -51,20 +56,27 @@ DEPEND="${RDEPEND}
 	app-text/texi2html
 	>=sys-kernel/linux-headers-2.6.29
 	gnutls? ( dev-util/pkgconfig )"
+	
+kvm_kern_war() {
+	eerror "Please enable KVM support in your kernel, found at:"
+	eerror
+	eerror "  Virtualization"
+	eerror "    Kernel-based Virtual Machine (KVM) support"
+	eerror
+}
 
 pkg_setup() {
 	if kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
 		eerror "Either upgrade your kernel"
 		die "qemu-kvm version not compatible"
-	elif ! linux_chkconfig_present KVM; then
-		eerror "Please enable KVM support in your kernel, found at:"
-		eerror
-		eerror "  Virtualization"
-		eerror "    Kernel-based Virtual Machine (KVM) support"
-		eerror
-		eerror "or enable the 'modules' USE flag."
-		die "KVM support not detected!"
+	else
+		if ! linux_config_exists; then
+			eerror "Unable to check your kernel for KVM support"
+			kvm_kern_warn
+		elif ! linux_chkconfig_present KVM; then
+			kvm_kern_warn
+		fi
 	fi
 
 	enewgroup kvm
@@ -78,9 +90,9 @@ src_prepare() {
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
-	[[ -x /sbin/paxctl ]] && \
-		sed -i 's/^VL_LDFLAGS=$/VL_LDFLAGS=-Wl,-z,execheap/' \
-			Makefile.target || die
+#	[[ -x /sbin/paxctl ]] && \
+#		sed -i 's/^VL_LDFLAGS=$/VL_LDFLAGS=-Wl,-z,execheap/' \
+#			Makefile.target || die
 	# append CFLAGS while linking
 	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak || die
 
@@ -116,13 +128,18 @@ src_configure() {
 	fi
 
 	#config options
+	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
 	use bluetooth || conf_opts="${conf_opts} --disable-bluez"
+	conf_opts="${conf_opts} $(use_enable curl)"
 	use gnutls || conf_opts="${conf_opts} --disable-vnc-tls"
+	conf_opts="${conf_opts} $(use_enable fdt)"
 	use hardened && conf_opts="${conf_opts} --enable-user-pie"
+	use kvm-trace && conf_opts="${conf_opts} --with-kvm-trace"
 	use ncurses || conf_opts="${conf_opts} --disable-curses"
 	use sasl || conf_opts="${conf_opts} --disable-vnc-sasl"
 	use sdl || conf_opts="${conf_opts} --disable-sdl"
 	use vde || conf_opts="${conf_opts} --disable-vde"
+	conf_opts="${conf_opts} $(use_enable xen)"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
 
 	# audio options
@@ -134,12 +151,18 @@ src_configure() {
 	./configure --prefix=/usr \
 		--disable-strip \
 		--disable-xen \
+		--enable-kvm \
+		--enable-nptl \
+		--enable-uuid \
 		${conf_opts} \
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc=$(tc-getCC) \
 		--host-cc=$(tc-getCC) \
 		|| die "configure failed"
+
+		# we want to get this on at some point when it works
+#		--enable-io-thread \
 }
 
 src_install() {
@@ -155,6 +178,9 @@ src_install() {
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
 	dohtml qemu-doc.html qemu-tech.html || die
+
+	dobin "${FILESDIR}"/qemu-kvm
+	dosym /usr/bin/qemu-kvm /usr/bin/kvm
 }
 
 pkg_postinst() {
