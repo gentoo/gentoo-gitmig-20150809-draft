@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.26 2009/12/21 00:13:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.27 2009/12/21 14:47:18 flameeyes Exp $
+
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> haml-2.2.16.ebuild:
+  Fix test dependencies, drop ruby19 and jruby (tests require rack), install
+  VERSION and VERSION_NAME which are used at runtime.
 
 *haml-2.2.16 (21 Dec 2009)
 
