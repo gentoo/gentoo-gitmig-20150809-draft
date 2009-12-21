@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.6 2009/12/18 17:42:40 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.7 2009/12/21 14:10:27 tommy Exp $
+
+*qemu-kvm-0.12.1 (21 Dec 2009)
+
+  21 Dec 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -qemu-kvm-0.11.0.ebuild, +qemu-kvm-0.12.1.ebuild,
+  +files/qemu-kvm-0.12.1-kvm_save_mpstate-workaround.patch:
+  Version bump, drop old version
 
   18 Dec 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   qemu-kvm-0.11.1.ebuild:

@@ -1,0 +1,20 @@
+--- monitor.c	2009-12-20 17:21:40.000000000 +0100
++++ monitor.c.new	2009-12-21 11:47:30.000000000 +0100
+@@ -677,7 +677,7 @@
+         mon_set_cpu(0);
+     }
+     cpu_synchronize_state(cur_mon->mon_cpu);
+-    kvm_save_mpstate(cur_mon->mon_cpu);
++//    kvm_save_mpstate(cur_mon->mon_cpu);
+     return cur_mon->mon_cpu;
+ }
+ 
+@@ -780,7 +780,7 @@
+         QObject *obj;
+ 
+         cpu_synchronize_state(env);
+-        kvm_save_mpstate(env);
++//        kvm_save_mpstate(env);
+ 
+         obj = qobject_from_jsonf("{ 'CPU': %d, 'current': %i, 'halted': %i }",
+                                  env->cpu_index, env == mon->mon_cpu,

@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.0.ebuild,v 1.5 2009/11/22 23:58:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.1 2009/12/21 14:10:27 tommy Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
-SRC_URI="mirror://sourceforge/kvm/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
 HOMEPAGE="http://www.linux-kvm.org"
@@ -14,13 +14,12 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa bluetooth esd gnutls ncurses pulseaudio sasl +sdl vde"
+IUSE="alsa bluetooth esd gnutls hardened ncurses pulseaudio sasl +sdl vde"
 
-COMMON_TARGETS="i386 x86_64 arm cris m68k mips mipsel mips64 mips64el ppc \
-ppc64 sh4 sh4eb sparc"
+COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} ppcemb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc64 sparc32plus"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
+IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
 	IUSE="${IUSE} +qemu_softmmu_targets_${target}"
@@ -73,28 +72,27 @@ pkg_setup() {
 
 src_prepare() {
 	# avoid fdt till an updated release appears
-	sed -i -e 's:fdt="yes":fdt="no":' configure
+	sed -i -e 's:fdt="yes":fdt="no":' configure || die
 	# prevent docs to get automatically installed
-	sed -i '/$(DESTDIR)$(docdir)/d' Makefile
+	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
-		Makefile Makefile.target
+		Makefile Makefile.target || die
 	[[ -x /sbin/paxctl ]] && \
 		sed -i 's/^VL_LDFLAGS=$/VL_LDFLAGS=-Wl,-z,execheap/' \
-			Makefile.target
+			Makefile.target || die
 	# append CFLAGS while linking
-	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak
+	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak || die
 
 	# remove part to make udev happy
-	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules
+	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
-	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
+	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch" \
+		"${FILESDIR}"/${P}-kvm_save_mpstate-workaround.patch
 }
 
 src_configure() {
 	local conf_opts audio_opts softmmu_targets user_targets
-
-	filter-flags -fpie -fstack-protector
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
@@ -118,26 +116,26 @@ src_configure() {
 	fi
 
 	#config options
-	use gnutls || conf_opts="$conf_opts --disable-vnc-tls"
-	use ncurses || conf_opts="$conf_opts --disable-curses"
-	use sdl || conf_opts="$conf_opts --disable-sdl"
-	use vde || conf_opts="$conf_opts --disable-vde"
-	use bluetooth || conf_opts="$conf_opts --disable-bluez"
-	use sasl || conf_opts="$conf_opts --disable-vnc-sasl"
-	conf_opts="--disable-darwin-user --disable-bsd-user"
+	use bluetooth || conf_opts="${conf_opts} --disable-bluez"
+	use gnutls || conf_opts="${conf_opts} --disable-vnc-tls"
+	use hardened && conf_opts="${conf_opts} --enable-user-pie"
+	use ncurses || conf_opts="${conf_opts} --disable-curses"
+	use sasl || conf_opts="${conf_opts} --disable-vnc-sasl"
+	use sdl || conf_opts="${conf_opts} --disable-sdl"
+	use vde || conf_opts="${conf_opts} --disable-vde"
+	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
 
 	# audio options
 	audio_opts="oss"
-	use alsa && audio_opts="alsa $audio_opts"
-	use esd && audio_opts="esd $audio_opts"
-	use pulseaudio && audio_opts="pa $audio_opts"
-	use sdl && audio_opts="sdl $audio_opts"
-
+	use alsa && audio_opts="alsa ${audio_opts}"
+	use esd && audio_opts="esd ${audio_opts}"
+	use pulseaudio && audio_opts="pa ${audio_opts}"
+	use sdl && audio_opts="sdl ${audio_opts}"
 	./configure --prefix=/usr \
 		--disable-strip \
 		--disable-xen \
 		${conf_opts} \
-		--audio-drv-list="$audio_opts" \
+		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc=$(tc-getCC) \
 		--host-cc=$(tc-getCC) \
@@ -148,16 +146,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	insinto /etc/udev/rules.d/
-	doins kvm/scripts/65-kvm.rules
+	doins kvm/scripts/65-kvm.rules || die
 
 	insinto /etc/qemu/
 	insopts -m0755
-	doins kvm/scripts/qemu-ifup
-	doins kvm/scripts/qemu-ifdown
+	doins kvm/scripts/qemu-ifup || die
 
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
-	dohtml qemu-doc.html qemu-tech.html
+	dohtml qemu-doc.html qemu-tech.html || die
 }
 
 pkg_postinst() {
