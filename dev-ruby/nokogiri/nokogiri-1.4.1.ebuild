@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.1.ebuild,v 1.1 2009/12/21 18:50:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.1.ebuild,v 1.2 2009/12/21 18:55:33 flameeyes Exp $
 
 EAPI=2
 
@@ -25,3 +25,7 @@ RDEPEND="dev-libs/libxml2
 DEPEND="${RDEPEND}"
 
 ruby_add_bdepend dev-ruby/rake-compiler
+
+each_ruby_compile() {
+	${RUBY} -S rake compile || die "extension build failed"
+}
