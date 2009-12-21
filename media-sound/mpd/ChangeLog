@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.193 2009/12/09 14:54:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.194 2009/12/21 14:46:39 angelos Exp $
+
+  21 Dec 2009; Christoph Mende <angelos@gentoo.org> mpd-0.15.6.ebuild,
+  +files/mpd-0.15.6-wavpack-uchar.patch:
+  Added patch to fix compilation with USE=wavpack (bug #297599), thanks to
+  Darren Smith
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> mpd-0.15.5.ebuild:
   Marking mpd-0.15.5 ppc64 for bug 293975

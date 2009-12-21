@@ -1,0 +1,12 @@
+diff -ru mpd-0.15.6.orig/src/decoder/wavpack_plugin.c mpd-0.15.6/src/decoder/wavpack_plugin.c
+--- mpd-0.15.6.orig/src/decoder/wavpack_plugin.c	2009-11-18 20:47:54.000000000 -0600
++++ mpd-0.15.6/src/decoder/wavpack_plugin.c	2009-12-19 19:52:20.567325999 -0600
+@@ -72,7 +72,7 @@
+ 
+ 	switch (bytes_per_sample) {
+ 	case 1: {
+-		uchar *dst = buffer;
++		unsigned char *dst = buffer;
+ 		/*
+ 		 * The asserts like the following one are because we do the
+ 		 * formatting of samples within a single buffer. The size

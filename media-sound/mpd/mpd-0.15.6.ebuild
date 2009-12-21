@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.6.ebuild,v 1.1 2009/11/21 19:20:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.6.ebuild,v 1.2 2009/12/21 14:46:39 angelos Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -61,7 +61,8 @@ pkg_setup() {
 
 src_prepare() {
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
-	epatch "${FILESDIR}"/0.15.1-mpdconf.patch
+	epatch "${FILESDIR}"/0.15.1-mpdconf.patch \
+		"${FILESDIR}"/${P}-wavpack-uchar.patch
 }
 
 src_configure() {
