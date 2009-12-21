@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.23.ebuild,v 1.1 2009/12/21 03:49:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.23.ebuild,v 1.2 2009/12/21 03:53:53 vapier Exp $
 
 EAPI="2"
 
 inherit eutils autotools
 
 DESCRIPTION="A bash script for converting XML and DocBook formatted documents to a variety of output formats"
-HOMEPAGE="https://fedorahosted.org/xmlto/browser"
+HOMEPAGE="https://fedorahosted.org/xmlto/"
 SRC_URI="https://fedorahosted.org/releases/x/m/xmlto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
