@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sslsniff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.1 2009/10/01 00:51:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.2 2009/12/21 13:20:56 ssuominen Exp $
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> sslsniff-0.6.ebuild,
+  +files/sslsniff-0.6-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #294885 by Kacper Kowalik.
 
 *sslsniff-0.6 (01 Oct 2009)
 

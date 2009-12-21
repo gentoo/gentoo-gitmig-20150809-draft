@@ -1,21 +1,30 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/sslsniff-0.6.ebuild,v 1.1 2009/10/01 00:51:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/sslsniff-0.6.ebuild,v 1.2 2009/12/21 13:20:56 ssuominen Exp $
+
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="MITM all SSL connections on a LAN and dynamically generates certs"
 HOMEPAGE="http://thoughtcrime.org/software/sslsniff/"
 SRC_URI="http://thoughtcrime.org/software/sslsniff/${P}.tar.gz"
+
 LICENSE="GPL-3" # plus OpenSSL exception
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
+
 DEPEND="dev-libs/boost
-		dev-libs/log4cpp
-		dev-libs/openssl"
-RDEPEND="${DEPEND}"
+	dev-libs/log4cpp
+	dev-libs/openssl"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Failed emake install"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README
 
 	insinto /usr/share/sslsniff
