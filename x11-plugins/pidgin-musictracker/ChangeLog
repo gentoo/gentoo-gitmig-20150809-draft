@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-musictracker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/ChangeLog,v 1.10 2009/07/08 21:11:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/ChangeLog,v 1.11 2009/12/21 20:56:16 pva Exp $
+
+*pidgin-musictracker-0.4.20 (21 Dec 2009)
+
+  21 Dec 2009; Peter Volkov <pva@gentoo.org>
+  +pidgin-musictracker-0.4.20.ebuild,
+  +files/pidgin-musictracker-0.4.20-fortify-abort.patch:
+  Version bump, bug #297330, fixes crash with fortify enabled.
 
   08 Jul 2009; Markus Meier <maekke@gentoo.org>
   pidgin-musictracker-0.4.18.ebuild:
