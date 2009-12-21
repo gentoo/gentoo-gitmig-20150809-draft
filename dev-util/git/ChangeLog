@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.388 2009/12/17 07:36:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.389 2009/12/21 04:29:03 robbat2 Exp $
+
+*git-1.6.6_rc4 (21 Dec 2009)
+
+  21 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.6_rc4.ebuild:
+  Version bump.
 
 *git-1.6.6_rc3 (17 Dec 2009)
 
