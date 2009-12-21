@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.53.ebuild,v 1.3 2009/12/21 21:13:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.53.ebuild,v 1.4 2009/12/21 21:31:02 cardoe Exp $
 
 EAPI="2"
 
@@ -424,7 +424,7 @@ src_install-libs() {
 	fi
 
 	#vdpau
-	if [[ -f ${libdir}/libvdpau_nvidia.so.${sover} ]]; then
+	if [[ -f ${libdir}/vdpau/libvdpau_nvidia.so.${sover} ]]; then
 		dodir /usr/${inslibdir}/vdpau
 		dolib.so ${libdir}/vdpau/libvdpau_nvidia.so.${sover}
 		dosym libvdpau_nvidia.so.${sover} /usr/${inslibdir}/vdpau/libvdpau_nvidia.so
