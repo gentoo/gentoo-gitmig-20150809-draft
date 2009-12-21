@@ -1,6 +1,6 @@
 # Copyright 2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_user_targets.desc,v 1.1 2009/05/17 10:32:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_user_targets.desc,v 1.2 2009/12/21 14:09:24 tommy Exp $
 
 # This file contains descriptions of QEMU_SOFTMMU_TARGETS USE_EXPAND flags.
 
@@ -12,6 +12,7 @@ arm - userspace emulation target
 cris - userspace emulation target
 i386 - userspace emulation target
 m68k - userspace emulation target
+microblaze - userspace emulation target
 mips64el - userspace emulation target
 mips64 - userspace emulation target
 mipsel - userspace emulation target
