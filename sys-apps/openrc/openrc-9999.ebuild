@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.66 2009/12/07 09:09:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.67 2009/12/21 14:03:40 vapier Exp $
 
 EAPI="1"
 
@@ -68,6 +68,7 @@ src_unpack() {
 	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile #241342
 	sed -i '/^CFLAGS+=.*_CC_FLAGS_SH/d' mk/cc.mk #289264
 	epatch "${FILESDIR}"/openrc-9999-msg-style.patch
+	epatch "${FILESDIR}"/openrc-9999-pause.patch
 }
 
 src_compile() {
