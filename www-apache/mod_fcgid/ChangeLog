@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.40 2009/11/30 15:49:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.41 2009/12/21 15:15:26 hanno Exp $
+
+  21 Dec 2009; Hanno Boeck <hanno@gentoo.org> mod_fcgid-2.2.ebuild,
+  mod_fcgid-2.2-r1.ebuild, mod_fcgid-2.3.4.ebuild:
+  Fix HOMEPAGE (old one no longer exists) and use apache mirror.
 
   30 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   mod_fcgid-2.3.4.ebuild:

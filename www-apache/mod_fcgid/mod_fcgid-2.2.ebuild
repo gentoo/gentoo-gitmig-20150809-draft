@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.2.ebuild,v 1.4 2007/11/24 21:07:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.2.ebuild,v 1.5 2009/12/21 15:15:26 hanno Exp $
 
 inherit apache-module eutils multilib
 
 DESCRIPTION="mod_fcgid is a binary-compatible alternative to mod_fastcgi with better process management."
-HOMEPAGE="http://fastcgi.coremail.cn/"
+HOMEPAGE="http://httpd.apache.org/mod_fcgid/"
 SRC_URI="mirror://sourceforge/mod-fcgid/${PN}.${PV}.tar.gz"
 
 LICENSE="GPL-2"
