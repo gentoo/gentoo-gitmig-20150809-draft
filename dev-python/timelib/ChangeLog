@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/timelib
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.1 2009/12/21 00:47:00 arfrever Exp $
+
+*timelib-0.2.1 (21 Dec 2009)
+
+  21 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +timelib-0.2.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
