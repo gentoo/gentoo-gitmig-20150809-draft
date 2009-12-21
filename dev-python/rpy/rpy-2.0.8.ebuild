@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.0.8.ebuild,v 1.1 2009/12/14 17:50:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.0.8.ebuild,v 1.2 2009/12/21 03:37:08 arfrever Exp $
 
-EAPI=2
-NEED_PYTHON=2.4
+EAPI="2"
+
 inherit distutils eutils
 
 SLOT=2
@@ -11,7 +11,7 @@ MYPN=${PN}${SLOT}
 MYP=${MYPN}-${PV}
 
 DESCRIPTION="Python interface to the R Programming Language"
-HOMEPAGE="http://rpy.sourceforge.net/"
+HOMEPAGE="http://rpy.sourceforge.net/ http://pypi.python.org/pypi/rpy2"
 SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
