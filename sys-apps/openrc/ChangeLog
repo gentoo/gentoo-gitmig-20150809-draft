@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.103 2009/12/21 14:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.104 2009/12/21 15:11:17 williamh Exp $
+
+  21 Dec 2009; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  typo fixes
 
   21 Dec 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.3.ebuild,
   openrc-9999.ebuild, +files/openrc-9999-pause.patch:

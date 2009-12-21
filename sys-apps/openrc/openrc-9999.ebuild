@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.67 2009/12/21 14:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.68 2009/12/21 15:11:17 williamh Exp $
 
 EAPI="1"
 
@@ -119,8 +119,10 @@ src_install() {
 
 	# Stick with "old" net as the default for now
 	doconfd conf.d/net || die
-	rm -f "${D}"/usr/share/${PN}/network
-	ln -s /etc/init.d/net.lo "${D}"/usr/share/${PN}/net.lo
+	pushd "${D}"/usr/share/${PN}/runlevels/boot > /dev/null
+	rm -f network staticroute
+	ln -s /etc/init.d/net.lo net.lo
+	popd > /dev/null
 
 	# Setup unicode defaults for silly unicode users
 	set_config_yes_no /etc/rc.conf unicode use unicode
