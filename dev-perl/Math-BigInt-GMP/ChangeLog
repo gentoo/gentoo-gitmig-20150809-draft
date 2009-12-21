@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Math-BigInt-GMP
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.6 2009/09/30 18:14:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.7 2009/12/21 15:46:19 armin76 Exp $
+
+  21 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  Math-BigInt-GMP-1.24.ebuild:
+  Add ~sparc wrt #284740
 
   30 Sep 2009; Tobias Klausmann <klausman@gentoo.org>
   Math-BigInt-GMP-1.24.ebuild:
