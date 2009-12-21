@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1.ebuild,v 1.7 2009/12/20 23:41:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.1 2009/12/21 00:13:11 arfrever Exp $
 
 EAPI="2"
+NEED_PYTHON="3.0"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
@@ -15,31 +16,34 @@ HOMEPAGE="http://www.crummy.com/software/BeautifulSoup/"
 SRC_URI="http://www.crummy.com/software/${MY_PN}/download/${MY_P}.tar.gz"
 
 LICENSE="PSF-2.3"
-SLOT="0"
+SLOT="3.1"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="!dev-python/beautifulsoup:0"
+# Avoid collisions with 3.0 slot.
+RESTRICT_PYTHON_ABIS="2.*"
 
 S="${WORKDIR}/${MY_P}"
 
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 PYTHON_MODNAME="BeautifulSoup.py BeautifulSoupTests.py"
 
 src_prepare() {
-	python_copy_sources --no-link
-
-	conversion() {
-		[[ "${PYTHON_ABI}" == 2.* ]] && return
-		epatch "${FILESDIR}/${P}-python-3.patch"
-	}
-	python_execute_function --action-message 'Applying patches for Python ${PYTHON_ABI}' --failure-message 'Applying patches for Python ${PYTHON_ABI} failed' -s conversion
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-python-3.patch"
 }
 
 src_test() {
 	testing() {
-		PYTHONPATH="build/lib" "$(PYTHON)" BeautifulSoupTests.py
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" BeautifulSoupTests.py
 	}
-	python_execute_function -s testing
+	python_execute_function testing
+}
+
+src_install() {
+	distutils_src_install
+
+	# Delete useless files.
+	rm -fr "${D}usr/bin"
 }

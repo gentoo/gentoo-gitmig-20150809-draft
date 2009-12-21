@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.25 2009/11/22 19:00:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.26 2009/12/21 00:13:11 arfrever Exp $
+
+*beautifulsoup-3.1.0.1-r1 (21 Dec 2009)
+*beautifulsoup-3.0.8 (21 Dec 2009)
+
+  21 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +beautifulsoup-3.0.8.ebuild, -beautifulsoup-3.1.0.1.ebuild,
+  +beautifulsoup-3.1.0.1-r1.ebuild:
+  Version bump (3.0.8). Move 3.0 and 3.1 series to separate slots.
+  Rationale: http://www.crummy.com/software/BeautifulSoup/3.1-problems.html
 
   22 Nov 2009; Fabian Groffen <grobian@gentoo.org>
   beautifulsoup-3.1.0.1.ebuild:
