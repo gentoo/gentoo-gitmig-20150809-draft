@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/buzhug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.4 2009/04/24 14:59:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.5 2009/12/21 00:28:44 arfrever Exp $
+
+*buzhug-1.6 (21 Dec 2009)
+
+  21 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +buzhug-1.6.ebuild:
+  Version bump (bug #297505). Set SUPPORT_PYTHON_ABIS. Add src_test().
 
   24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -buzhug-1.0.ebuild,
   -buzhug-1.4.ebuild:
