@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.280.ebuild,v 1.2 2009/10/27 09:39:33 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.280.ebuild,v 1.3 2009/12/21 16:43:36 armin76 Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ inherit perl-module
 DESCRIPTION="A framework for creating multitasking programs in Perl"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="ipv6 libwww ncurses tk test"
 
 RDEPEND=">=dev-perl/Event-1.09
