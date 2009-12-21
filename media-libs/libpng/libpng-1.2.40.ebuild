@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.40.ebuild,v 1.2 2009/12/21 22:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.40.ebuild,v 1.3 2009/12/21 23:07:31 vapier Exp $
 
-inherit libtool multilib eutils
+inherit libtool
 
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
@@ -14,8 +14,7 @@ KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x8
 IUSE=""
 
 RDEPEND="sys-libs/zlib"
-DEPEND="${RDEPEND}
-	|| ( app-arch/xz-utils app-arch/lzma-utils )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
