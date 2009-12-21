@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.61 2009/12/16 21:17:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.62 2009/12/21 20:44:22 mr_bones_ Exp $
+
+  21 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.4.ebuild:
+  look in /opt for nvidia-cg-toolkit (bug #259169)
 
   16 Dec 2009; Tupone Alfredo <tupone@gentoo.org> ogre-1.6.4.ebuild,
   +files/ogre-1.6.4-automake.patch:
