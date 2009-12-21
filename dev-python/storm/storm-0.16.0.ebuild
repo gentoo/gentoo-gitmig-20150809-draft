@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.16.0.ebuild,v 1.1 2009/11/30 14:37:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.16.0.ebuild,v 1.2 2009/12/21 15:30:48 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,6 +24,13 @@ DEPEND="dev-python/setuptools
 RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="tests/tutorial.txt"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# This test will be fixed in next release.
+	sed -e "/self\.assertEquals(store\._cache\._size, 100)/s/100/1000/" -i tests/store/base.py || die "sed failed"
+}
 
 src_test() {
 	if use mysql; then
