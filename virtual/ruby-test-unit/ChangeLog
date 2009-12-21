@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.4 2009/12/16 18:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.5 2009/12/21 00:06:05 flameeyes Exp $
+
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-test-unit-0.ebuild:
+  Restore keywords now that test-unit-2 is masked.
 
   16 Dec 2009; Jeroen Roovers <jer@gentoo.org> ruby-test-unit-0.ebuild:
   Marked ~hppa (bug #297046).
