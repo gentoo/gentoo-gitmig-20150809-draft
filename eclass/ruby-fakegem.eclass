@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.6 2009/12/20 23:39:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.7 2009/12/21 19:07:38 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -267,9 +267,11 @@ each_ruby_install() {
 # Install files common to all ruby targets.
 all_fakegem_install() {
 	if [[ -n ${RUBY_FAKEGEM_DOCDIR} ]] && use doc; then
-		pushd ${RUBY_FAKEGEM_DOCDIR}
-		dohtml -r * || die "failed to install documentation"
-		popd
+		for dir in ${RUBY_FAKEGEM_DOCDIR}; do
+			pushd ${dir}
+			dohtml -r * || die "failed to install documentation"
+			popd
+		done
 	fi
 
 	if [[ -n ${RUBY_FAKEGEM_EXTRADOC} ]]; then
