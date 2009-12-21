@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.4 2009/12/21 20:47:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.5 2009/12/21 20:50:15 cardoe Exp $
 
 EAPI="2"
 
@@ -160,7 +160,10 @@ src_configure() {
 		--host-cc=$(tc-getCC) \
 		|| die "configure failed"
 
-		# we want to get this on at some point when it works
+		# this is for qemu upstream's threaded support which is
+		# in development and broken
+		# the kvm project has its own support for threaded IO
+		# which is always on and works
 #		--enable-io-thread \
 }
 
