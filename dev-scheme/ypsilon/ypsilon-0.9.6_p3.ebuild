@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ypsilon/ypsilon-0.9.6_p3.ebuild,v 1.1 2009/04/20 23:54:37 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ypsilon/ypsilon-0.9.6_p3.ebuild,v 1.2 2009/12/21 14:33:49 ssuominen Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,7 +17,13 @@ IUSE="examples threads"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
 
 src_compile() {
 	use threads && append-flags "-pthread"
