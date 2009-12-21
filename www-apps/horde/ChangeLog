@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.96 2009/12/21 09:58:27 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.97 2009/12/21 14:34:38 armin76 Exp $
+
+  21 Dec 2009; Raúl Porcel <armin76@gentoo.org> horde-3.3.6.ebuild:
+  alpha/sparc stable wrt #297306
 
   21 Dec 2009; Alex Legler <a3li@gentoo.org> horde-3.3.6.ebuild:
   amd64 stable, bug 297306
