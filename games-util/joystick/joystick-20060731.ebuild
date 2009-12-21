@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20060731.ebuild,v 1.5 2009/08/14 17:01:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20060731.ebuild,v 1.6 2009/12/21 15:47:29 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,7 +22,8 @@ S=${WORKDIR}/utils
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/joystick-MCS-defines.patch \
-		"${FILESDIR}"/joystick-jstest-segv.patch
+		"${FILESDIR}"/joystick-jstest-segv.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 	sed -i \
 		-e '/^CC/d' \
 		Makefile \
