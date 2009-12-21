@@ -1,0 +1,47 @@
+diff -Nuar mac-3.99-u4-b5-s4-orig/src/MACLib/APECompressCreate.cpp mac-3.99-u4-b5-s4/src/MACLib/APECompressCreate.cpp
+--- mac-3.99-u4-b5-s4-orig/src/MACLib/APECompressCreate.cpp	2008-03-12 16:25:54.000000000 +0100
++++ mac-3.99-u4-b5-s4/src/MACLib/APECompressCreate.cpp	2009-12-21 17:44:59.000000000 +0100
+@@ -279,14 +279,14 @@
+         nDataSize = (((nNumberOfFrames - 1) * m_nSamplesPerFrame + nFinalFrameBlocks) * m_wfeInput.nBlockAlign);
+         for (i = 0; i < nHeaderBytes; i++)
+         {
+-            if ((p = strstr((const char *)pHeaderData+i,"RIFF"))) {
++            if ((p = strstr((char *)pHeaderData+i,"RIFF"))) {
+                 ULONG_TO_UCHAR_LE((unsigned char *)p+4,nDataSize + nHeaderBytes - 8);
+                 break;
+             }
+         }
+         for (i = 0; i < nHeaderBytes; i++)
+         {
+-            if ((p = strstr((const char *)pHeaderData+i,"data"))) {
++            if ((p = strstr((char *)pHeaderData+i,"data"))) {
+                 ULONG_TO_UCHAR_LE((unsigned char *)p+4,nDataSize);
+                 break;
+             }
+diff -Nuar mac-3.99-u4-b5-s4-orig/src/MACLib/APELink.cpp mac-3.99-u4-b5-s4/src/MACLib/APELink.cpp
+--- mac-3.99-u4-b5-s4-orig/src/MACLib/APELink.cpp	2006-06-01 11:00:57.000000000 +0200
++++ mac-3.99-u4-b5-s4/src/MACLib/APELink.cpp	2009-12-21 17:38:52.000000000 +0100
+@@ -63,10 +63,10 @@
+     if (pData != NULL)
+     {
+         // parse out the information
+-        char * pHeader = strstr(pData, APE_LINK_HEADER);
+-        char * pImageFile = strstr(pData, APE_LINK_IMAGE_FILE_TAG);
+-        char * pStartBlock = strstr(pData, APE_LINK_START_BLOCK_TAG);
+-        char * pFinishBlock = strstr(pData, APE_LINK_FINISH_BLOCK_TAG);
++        const char * pHeader = strstr(pData, APE_LINK_HEADER);
++        const char * pImageFile = strstr(pData, APE_LINK_IMAGE_FILE_TAG);
++        const char * pStartBlock = strstr(pData, APE_LINK_START_BLOCK_TAG);
++        const char * pFinishBlock = strstr(pData, APE_LINK_FINISH_BLOCK_TAG);
+ 
+         if (pHeader && pImageFile && pStartBlock && pFinishBlock)
+         {
+@@ -81,7 +81,7 @@
+                 
+                 // get the path
+                 char cImageFile[MAX_PATH + 1]; int nIndex = 0;
+-                char * pImageCharacter = &pImageFile[strlen(APE_LINK_IMAGE_FILE_TAG)];
++                const char * pImageCharacter = &pImageFile[strlen(APE_LINK_IMAGE_FILE_TAG)];
+                 while ((*pImageCharacter != 0) && (*pImageCharacter != '\r') && (*pImageCharacter != '\n'))
+                     cImageFile[nIndex++] = *pImageCharacter++;
+                 cImageFile[nIndex] = 0;
