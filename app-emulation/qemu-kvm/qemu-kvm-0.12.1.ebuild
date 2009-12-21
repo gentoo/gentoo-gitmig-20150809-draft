@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.2 2009/12/21 20:40:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.3 2009/12/21 20:41:18 cardoe Exp $
 
 EAPI="2"
 
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 	app-text/texi2html
 	>=sys-kernel/linux-headers-2.6.29
 	gnutls? ( dev-util/pkgconfig )"
-	
+
 kvm_kern_war() {
 	eerror "Please enable KVM support in your kernel, found at:"
 	eerror
