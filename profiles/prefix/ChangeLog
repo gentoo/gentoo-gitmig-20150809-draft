@@ -1,6 +1,13 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.122 2009/12/17 20:00:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.123 2009/12/21 20:38:28 grobian Exp $
+
+  21 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  +bsd/freebsd/8.0/package.mask, +bsd/freebsd/8.0/package.provided,
+  +bsd/freebsd/8.0/parent, +bsd/freebsd/8.0/x64/make.defaults,
+  +bsd/freebsd/8.0/x64/parent, +bsd/freebsd/8.0/x86/make.defaults,
+  +bsd/freebsd/8.0/x86/parent:
+  Add FreeBSD 8.0 profiles for i686 and x86_64
 
   17 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +linux/arm/make.defaults,
   +linux/arm/parent:

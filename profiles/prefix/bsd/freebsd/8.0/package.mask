@@ -1,0 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/bsd/freebsd/8.0/package.mask,v 1.1 2009/12/21 20:38:28 grobian Exp $
+
+# Diego Pettenò <flameeyes@gentoo.org> (21 Oct 2006)
+# need a newer version of sandbox, as it's the only one working for us
+<sys-apps/sandbox-1.2.20_alpha2
