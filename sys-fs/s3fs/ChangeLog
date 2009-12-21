@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/s3fs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.3 2009/06/21 15:42:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.4 2009/12/21 14:18:39 ssuominen Exp $
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> s3fs-177-r1.ebuild,
+  +files/s3fs-177-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #278437 by Kacper Kowalik.
 
 *s3fs-177-r1 (21 Jun 2009)
 
