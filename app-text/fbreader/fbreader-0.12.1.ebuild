@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.0.ebuild,v 1.2 2009/12/21 11:49:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.1.ebuild,v 1.1 2009/12/21 12:06:49 scarabeus Exp $
 
 EAPI=2
 
@@ -14,20 +14,19 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="qt3 +qt4 gtk debug"
+IUSE="debug gtk +qt4"
 DEPEND="dev-libs/expat
-	>=dev-libs/liblinebreak-1.0
+	dev-libs/liblinebreak
 	net-misc/curl
 	dev-libs/fribidi
 	app-arch/bzip2
 	qt4? ( x11-libs/qt-gui:4 )
-	qt3? ( =x11-libs/qt-3* )
 	gtk? ( >=x11-libs/gtk+-2.4 )
 	"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	confutils_require_one qt3 qt4 gtk
+	confutils_require_one qt4 gtk
 }
 
 src_prepare() {
@@ -46,13 +45,6 @@ src_prepare() {
 
 		sed -i "s:MOC = moc-qt4:MOC = /usr/bin/moc:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
 		sed -i "s:UILIBS = -lQtGui:UILIBS = -L/usr/lib/qt4 -lQtGui:" makefiles/arch/desktop.mk
-	elif use qt3 ; then
-	# qt3
-		echo "UI_TYPE = qt" >> makefiles/target.mk
-
-		sed -i "s:MOC = moc-qt3:MOC = ${QTDIR}/bin/moc:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
-		sed -i "s:QTINCLUDE = -I /usr/include/qt3:QTINCLUDE = -I ${QTDIR}/include:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
-		sed -i "s:UILIBS = -lqt-mt:UILIBS = -L${QTDIR}/lib -lqt-mt:" makefiles/arch/desktop.mk
 	elif use gtk ; then
 	# gtk
 		echo "UI_TYPE = gtk" >> makefiles/target.mk
