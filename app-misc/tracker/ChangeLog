@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.55 2009/12/13 21:27:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.56 2009/12/21 22:28:02 eva Exp $
+
+*tracker-0.7.12 (21 Dec 2009)
+
+  21 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.7.10.ebuild,
+  tracker-0.7.11.ebuild, +tracker-0.7.12.ebuild, tracker-9999.ebuild,
+  metadata.xml:
+  Version bump. Add nautilus extension, various other improvments.
 
 *tracker-0.7.11 (13 Dec 2009)
 

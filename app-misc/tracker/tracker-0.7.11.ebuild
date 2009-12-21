@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.11.ebuild,v 1.1 2009/12/13 21:27:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.11.ebuild,v 1.2 2009/12/21 22:28:02 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -76,7 +76,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 function inotify_enabled() {
-	if linux_chkconfig_exists; then
+	if linux_config_exists; then
 		if ! linux_chkconfig_present INOTIFY_USER; then
 			echo
 			ewarn "You should enable the INOTIFY support in your kernel."

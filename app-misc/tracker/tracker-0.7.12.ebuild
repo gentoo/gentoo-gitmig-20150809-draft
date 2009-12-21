@@ -1,20 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.7 2009/12/21 22:28:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.12.ebuild,v 1.1 2009/12/21 22:28:02 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
 
-inherit autotools git gnome2 linux-info
+inherit gnome2 linux-info
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="http://www.tracker-project.org/"
-EGIT_REPO_URI="git://git.gnome.org/${PN}"
-SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 # USE="doc" is managed by eclass.
 IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 nautilus pdf playlist test +tiff +vorbis wv2 xine +xml xmp"
 
@@ -150,19 +148,8 @@ pkg_setup() {
 		# $(use_enable gtk gdkpixbuf)
 }
 
-src_unpack() {
-	git_src_unpack
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	gtkdocize || die "gtkdocize failed"
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
-}
-
 src_test() {
+	# checks might not be parallel safe but not evidence of flaw yet.
 	export XDG_CONFIG_HOME="${T}"
 	emake check || die "tests failed"
 }
