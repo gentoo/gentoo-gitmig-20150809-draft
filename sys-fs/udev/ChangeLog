@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.519 2009/12/11 16:03:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.520 2009/12/21 18:59:51 zzam Exp $
+
+  21 Dec 2009; Matthias Schwarzott <zzam@gentoo.org> udev-149.ebuild:
+  Fix glibc dependency, Bug #295989.
 
   11 Dec 2009; Raúl Porcel <armin76@gentoo.org> udev-146-r1.ebuild:
   m68k/s390/sh stable
