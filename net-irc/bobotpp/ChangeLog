@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bobotpp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.20 2008/04/18 16:37:46 cla Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.21 2009/12/21 15:33:35 ssuominen Exp $
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> bobotpp-2.2.2.ebuild,
+  +files/bobotpp-2.2.2-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #248013 by Kacper Kowalik.
 
   18 Apr 2008; Dawid Węgliński <cla@gentoo.org>
   +files/bobotpp-2.2.2-gcc43.patch, bobotpp-2.2.2.ebuild:

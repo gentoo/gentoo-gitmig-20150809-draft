@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.2.2.ebuild,v 1.5 2008/04/18 16:37:46 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.2.2.ebuild,v 1.6 2009/12/21 15:33:35 ssuominen Exp $
 
-inherit eutils
+WANT_AUTOMAKE=1.7
+
+inherit autotools eutils
 
 DESCRIPTION="A flexible IRC bot scriptable in scheme"
 HOMEPAGE="http://unknownlamer.org/code/bobot.html"
@@ -17,8 +19,9 @@ DEPEND="guile? ( dev-scheme/guile )"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/bobotpp-2.2.2-gcc43.patch"
+	epatch "${FILESDIR}"/bobotpp-2.2.2-gcc43.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }
 
 src_compile() {
