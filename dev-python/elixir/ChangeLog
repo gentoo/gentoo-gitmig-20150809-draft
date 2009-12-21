@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/elixir
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.5 2008/09/30 03:47:41 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.6 2009/12/21 06:37:53 arfrever Exp $
+
+*elixir-0.7.1 (21 Dec 2009)
+
+  21 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +elixir-0.7.1.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
 *elixir-0.6.1 (30 Sep 2008)
 
