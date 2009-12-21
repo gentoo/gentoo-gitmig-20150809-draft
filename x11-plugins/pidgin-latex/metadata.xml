@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <longdescription>
-Latex plugin for pidgin
+A plugin for Pidgin which translates LaTeX code into images in your IM and Chat
+conversations. 
 </longdescription>
 </pkgmetadata>
