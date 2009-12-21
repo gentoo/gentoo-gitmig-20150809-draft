@@ -17,3 +17,4 @@ slotmove dev-embedded/scratchbox2 2 0
 move app-emulation/kvm app-emulation/qemu-kvm
 move www-plugins/mozilla-weave www-plugins/weave
 move dev-ruby/mislav-will_paginate dev-ruby/will_paginate
+slotmove net-im/choqok 0 4
