@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3691 2009/12/21 18:43:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3692 2009/12/21 19:15:56 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask media-gfx/maya for removal.
+  Mask media-gfx/grender and media-gfx/maya for removal.
 
   21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask app-dicts/vdict* for removal.
