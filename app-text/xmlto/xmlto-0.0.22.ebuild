@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.22.ebuild,v 1.13 2009/09/26 14:39:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.22.ebuild,v 1.14 2009/12/21 03:48:20 vapier Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -35,9 +35,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-	has_version sys-apps/util-linux || myconf="--with-getopt=getopt-long"
-	econf --prefix=/usr ${myconf}
+	has_version sys-apps/util-linux || export GETOPT="getopt-long"
+	econf --prefix=/usr
 }
 
 src_install() {
