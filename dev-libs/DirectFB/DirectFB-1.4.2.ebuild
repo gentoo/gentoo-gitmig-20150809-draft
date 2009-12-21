@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.2.ebuild,v 1.2 2009/12/09 22:54:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.2.ebuild,v 1.3 2009/12/21 22:31:43 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -67,9 +67,10 @@ src_unpack() {
 }
 
 driver_list() {
+	local pfx=$1
 	use ${pfx}_none && echo none
 
-	local dev devs pfx=$1 map
+	local dev devs map
 	shift
 	for dev in "$@" ; do
 		use ${pfx}_${dev} || continue
