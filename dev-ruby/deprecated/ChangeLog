@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.6 2009/10/31 21:44:11 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.7 2009/12/21 14:13:21 flameeyes Exp $
+
+*deprecated-2.0.1-r1 (21 Dec 2009)
+
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -deprecated-2.0.1.ebuild, +deprecated-2.0.1-r1.ebuild:
+  Port to fakegem to fix the test-unit dependency. This time tests are
+  actually executed.
 
   31 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> deprecated-2.0.1.ebuild:
   Keywording for ppc, bug 283229
