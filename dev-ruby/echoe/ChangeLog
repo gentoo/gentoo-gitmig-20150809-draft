@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/echoe
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.1 2009/12/21 22:17:41 flameeyes Exp $
+
+*echoe-4.0 (21 Dec 2009)
+
+  21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> +echoe-4.0.ebuild,
+  +metadata.xml:
+  Initial import of echoe, an alternative to hoe.
+
