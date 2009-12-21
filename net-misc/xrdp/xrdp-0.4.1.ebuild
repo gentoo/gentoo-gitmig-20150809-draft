@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.4.1.ebuild,v 1.1 2009/03/01 15:09:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.4.1.ebuild,v 1.2 2009/12/21 14:09:33 ssuominen Exp $
 
 EAPI="2"
 
@@ -36,6 +36,8 @@ src_unpack() {
 	done
 
 	sed -i '/instfiles\/xrdp_control1.sh/ d' Makefile
+
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {

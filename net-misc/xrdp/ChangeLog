@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xrdp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.4 2009/03/01 15:09:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.5 2009/12/21 14:09:33 ssuominen Exp $
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xrdp-0.4.1.ebuild,
+  +files/xrdp-0.4.1-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #294682 by Kacper Kowalik.
 
 *xrdp-0.4.1 (01 Mar 2009)
 
