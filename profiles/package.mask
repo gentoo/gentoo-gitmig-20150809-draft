@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10978 2009/12/20 22:26:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10979 2009/12/21 03:40:53 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -114,10 +114,6 @@ media-gfx/giram
 #
 # Removal on 2010-02-11
 x11-wm/ion
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Dec 2009)
-# Masked for testing.
-=net-zope/zope-2.12*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (13 Dec 2009)
 #  on behalf of QA team
