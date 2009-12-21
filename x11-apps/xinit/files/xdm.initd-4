@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-4,v 1.1 2009/11/14 14:18:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-4,v 1.2 2009/12/21 11:29:45 scarabeus Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -132,21 +132,22 @@ setup_dm() {
 			PIDFILE=/var/run/gpe-dm.pid
 			;;
 		*)
-			EXE=
-			# Fix #65586, where MY_XDM is empty so EXE=somedir
-			[ -x "/usr/bin/${MY_XDM}" ] && [ -f "/usr/bin/${MY_XDM}" ] \
-				&& EXE="/usr/bin/${MY_XDM}"
-			if [ -z "${EXE}" ] ; then
-				EXE=/usr/bin/xdm
-				PIDFILE=/var/run/xdm.pid
+			# first find out if there is such executable
+			EXE="$(which ${MY_XDM} 2>/dev/null)"
+			PIDFILE="/var/run/${MY_XDM}.pid"
+
+			# warn user that he is doing sick things if the exe was not found
+			if [ "${EXE}" = "" ]; then
+				echo "ERROR: Your XDM value is invalid."
+				echo "  No ${MY_XDM} executable could be found on your system."
 			fi
 			;;
 	esac
 
-	if ! [ -x "${EXE}" ] ; then
+	if ! [ -x "${EXE}" ]; then
 		EXE=/usr/bin/xdm
 		PIDFILE=/var/run/xdm.pid
-		if ! [ -x "/usr/bin/xdm" ] ; then
+		if ! [ -x "/usr/bin/xdm" ]; then
 			echo "ERROR: Please set your DISPLAYMANAGER variable in /etc/conf.d/xdm,"
 			echo "	or install x11-apps/xdm package"
 			eend 255
