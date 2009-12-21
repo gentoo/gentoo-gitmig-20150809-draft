@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.87 2009/12/13 10:37:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.88 2009/12/21 22:51:42 eva Exp $
+
+*gvfs-1.4.3 (21 Dec 2009)
+
+  21 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org> -gvfs-1.4.1.ebuild,
+  +gvfs-1.4.3.ebuild:
+  Version bump. smb, ftp and gdu fixes. Plug in a leak in metadata handling.
 
 *gvfs-1.4.2 (13 Dec 2009)
 
