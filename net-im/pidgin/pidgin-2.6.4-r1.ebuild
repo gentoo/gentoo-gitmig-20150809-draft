@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.4-r1.ebuild,v 1.1 2009/12/20 20:25:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.4-r1.ebuild,v 1.2 2009/12/21 19:56:11 pva Exp $
 
 EAPI=2
 
@@ -71,6 +71,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   app-accessibility/pidgin-festival
 #   net-im/librvp
 #   x11-plugins/guifications
+#	x11-plugins/msn-pecan
 #   x11-plugins/pidgin-encryption
 #   x11-plugins/pidgin-extprefs
 #   x11-plugins/pidgin-hotkeys
