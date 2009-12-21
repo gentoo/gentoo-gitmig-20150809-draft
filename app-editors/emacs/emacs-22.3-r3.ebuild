@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r3.ebuild,v 1.8 2009/12/20 10:34:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r3.ebuild,v 1.9 2009/12/21 07:08:45 ulm Exp $
 
 EAPI=2
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
-	!<app-editors/emacs-vcs-22.1
+	!<app-editors/emacs-cvs-22.1
 	>=app-emacs/emacs-common-gentoo-1[X?]"
 
 # FULL_VERSION keeps the full version number, which is needed in order to

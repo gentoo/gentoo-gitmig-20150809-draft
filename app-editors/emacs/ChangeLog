@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.355 2009/12/20 13:12:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.356 2009/12/21 07:08:45 ulm Exp $
 
   20 Dec 2009; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r19.ebuild,
   emacs-22.3-r3.ebuild:
@@ -10,10 +10,6 @@
   emacs-22.3-r2.ebuild, emacs-22.3-r3.ebuild, emacs-23.1.ebuild,
   emacs-23.1-r2.ebuild:
   Change X11 to MIT in LICENSE.
-
-  14 Dec 2009; Ulrich Mueller <ulm@gentoo.org> emacs-22.3-r2.ebuild,
-  emacs-22.3-r3.ebuild, emacs-23.1.ebuild, emacs-23.1-r2.ebuild:
-  Update blockers after package move from emacs-cvs to emacs-vcs.
 
   11 Dec 2009; Tiago Cunha <tcunha@gentoo.org> emacs-23.1-r2.ebuild:
   stable sparc, bug 296159
