@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.11-r2.ebuild,v 1.1 2009/12/20 21:49:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.11-r2.ebuild,v 1.2 2009/12/21 05:28:09 mr_bones_ Exp $
 
 EAPI=2
 
@@ -21,8 +21,8 @@ RDEPEND="dev-libs/libevent
 	tcmalloc? ( dev-util/google-perftools )
 	memcache? ( dev-libs/libmemcached )
 	drizzle? ( dev-db/libdrizzle )
-	sqlite? ( dev-db/sqlite:3 )
-	postgres? ( dev-db/postgresql-base )"
+	sqlite? ( dev-db/sqlite:3 )"
+	#postgres? ( dev-db/postgresql-base )"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
@@ -48,14 +48,14 @@ src_configure() {
 	#	myconf="${myconf} --disable-assert"
 	fi
 
+		#$(use_enable postgres libpq)
 	econf \
 		--disable-dependency-tracking \
 		--disable-mtmalloc \
 		$(use_enable tcmalloc) \
 		$(use_enable memcache libmemcached) \
 		$(use_enable drizzle libdrizzle) \
-		$(use_enable sqlite libsqlite3) \
-		$(use_enable postgres libpq)
+		$(use_enable sqlite libsqlite3)
 }
 
 src_test() {
