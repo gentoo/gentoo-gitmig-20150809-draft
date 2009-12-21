@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.7 2009/04/07 15:08:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.8 2009/12/21 20:04:32 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools
@@ -25,7 +25,9 @@ RDEPEND="gif? ( media-libs/giflib )
 	allegro? ( media-libs/allegro )
 	opengl? ( virtual/glu )
 	sdl? ( media-libs/libsdl )
-	X? ( x11-libs/libXext )"
+	X? ( x11-libs/libXext
+		 x11-libs/libX11
+		 x11-libs/libXrender )"
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto )"
 

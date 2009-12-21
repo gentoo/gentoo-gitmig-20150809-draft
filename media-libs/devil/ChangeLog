@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.38 2009/04/07 15:08:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.39 2009/12/21 20:04:32 mr_bones_ Exp $
+
+  21 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org> devil-1.7.7.ebuild:
+  update USE=X deps (bug #297608)
 
   07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> devil-1.7.7.ebuild:
   correct parameters passed to configure (bug #265228)
