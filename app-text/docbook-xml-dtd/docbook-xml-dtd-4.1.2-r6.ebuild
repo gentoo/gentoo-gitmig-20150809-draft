@@ -1,16 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r6.ebuild,v 1.18 2009/08/23 16:04:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r6.ebuild,v 1.19 2009/12/21 03:06:37 vapier Exp $
 
 inherit sgml-catalog
 
 MY_P="docbkx412"
 DESCRIPTION="Docbook DTD for XML"
-HOMEPAGE="http://www.oasis-open.org/docbook/"
-SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
+HOMEPAGE="http://www.docbook.org/"
+SRC_URI="http://www.docbook.org/xml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
-SLOT="4.1.2"
+SLOT="${PV}"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
@@ -25,9 +25,9 @@ sgml-catalog_cat_include "/etc/sgml/xml-docbook-${PV}.cat" \
 sgml-catalog_cat_include "/etc/sgml/xml-docbook-${PV}.cat" \
 	"/usr/share/sgml/docbook/xml-dtd-${PV}/docbook.cat"
 
+S=${WORKDIR}
+
 src_unpack() {
-	mkdir "${S}"
-	cd "${S}"
 	unpack ${A}
 
 	# Prepend OVERRIDE directive
@@ -35,14 +35,12 @@ src_unpack() {
 }
 
 src_install() {
-
 	keepdir /etc/xml
 
 	insinto /usr/share/sgml/docbook/xml-dtd-${PV}
-	doins *.dtd *.mod
-	doins docbook.cat
+	doins *.cat *.dtd *.mod || die
 	insinto /usr/share/sgml/docbook/xml-dtd-${PV}/ent
-	doins ent/*.ent
+	doins ent/*.ent || die
 
 	dodoc ChangeLog *.txt
 }
