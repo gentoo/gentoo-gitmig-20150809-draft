@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.50 2009/12/20 16:40:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.51 2009/12/21 14:30:02 armin76 Exp $
+
+  21 Dec 2009; Raúl Porcel <armin76@gentoo.org> pytz-2009r.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #296686
 
   20 Dec 2009; Jeroen Roovers <jer@gentoo.org> pytz-2009r.ebuild:
   Stable for PPC (bug #296686).
