@@ -17,12 +17,4 @@
   Note that some extensions (e.g. imq and l7filter) are not included into
   official kernel sources so you have to patch the sources before installation.
 </longdescription>
-<use>
-	<flag name='extensions'>Enable support for 3rd party patch-o-matic
-		extensions</flag>
-	<flag name='imq'>Enable support for intermediate queueing devices
-		(http://www.linuximq.net)</flag>
-	<flag name='l7filter'>Enable support for layer 7 filtering
-		(http://l7-filter.sourceforge.net)</flag>
-</use>
 </pkgmetadata>
