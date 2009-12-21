@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/cwirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.24 2009/11/30 20:24:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.25 2009/12/21 13:57:56 ssuominen Exp $
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> cwirc-2.0.0.ebuild,
+  +files/cwirc-2.0.0-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #248016 by Kacper Kowalik.
 
   30 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   files/cwirc-1.7.1-gentoo.patch, cwirc-2.0.0.ebuild:

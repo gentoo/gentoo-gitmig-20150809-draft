@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-2.0.0.ebuild,v 1.5 2009/11/30 20:24:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-2.0.0.ebuild,v 1.6 2009/12/21 13:57:56 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -20,7 +20,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/cwirc-1.7.1-gentoo.patch
+	epatch "${FILESDIR}"/cwirc-1.7.1-gentoo.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {
