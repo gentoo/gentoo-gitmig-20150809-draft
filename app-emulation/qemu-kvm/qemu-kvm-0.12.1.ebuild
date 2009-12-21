@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.3 2009/12/21 20:41:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.4 2009/12/21 20:47:00 cardoe Exp $
 
 EAPI="2"
 
@@ -150,7 +150,6 @@ src_configure() {
 	use sdl && audio_opts="sdl ${audio_opts}"
 	./configure --prefix=/usr \
 		--disable-strip \
-		--disable-xen \
 		--enable-kvm \
 		--enable-nptl \
 		--enable-uuid \
