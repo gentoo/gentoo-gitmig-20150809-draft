@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0_beta.ebuild,v 1.1 2009/12/22 10:07:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0_beta.ebuild,v 1.2 2009/12/22 10:25:15 ulm Exp $
 
 inherit elisp eutils
 
@@ -16,7 +16,8 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="bbdb ssl"
 
 DEPEND="bbdb? ( app-emacs/bbdb )"
-RDEPEND="${DEPEND}
+RDEPEND="!app-emacs/u-vm-color
+	${DEPEND}
 	ssl? ( net-misc/stunnel )"
 
 S="${WORKDIR}/${MY_P}"
