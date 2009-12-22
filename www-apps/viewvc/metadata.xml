@@ -5,8 +5,6 @@
 	<use>
 		<flag name='cvsgraph'>Add <pkg>dev-util/cvsgraph</pkg> support to show
 			graphical views of revisions and branches</flag>
-		<flag name='highlight'>Add <pkg>app-text/highlight</pkg> support to
-			colourize code stored in the repository</flag>
 		<flag name='mod_python'>Add <pkg>www-apache/mod_python</pkg>
 			support</flag>
 		<flag name='pygments'>Add <pkg>dev-python/pygments</pkg> support
