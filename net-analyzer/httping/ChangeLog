@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.51 2009/10/31 14:34:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.52 2009/12/22 15:29:26 jer Exp $
+
+  22 Dec 2009; Jeroen Roovers <jer@gentoo.org> httping-1.3.1.ebuild:
+  Stable for HPPA too.
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org> httping-1.2.9-r1.ebuild:
   Marking httping-1.2.9-r1 ppc64 for bug 289521
