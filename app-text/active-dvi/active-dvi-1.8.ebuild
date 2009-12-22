@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.8.ebuild,v 1.2 2009/11/27 12:43:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.8.ebuild,v 1.3 2009/12/22 13:47:40 aballier Exp $
 
 EAPI="2"
 
@@ -11,8 +11,8 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A DVI previewer and a presenter for slides written in LaTeX"
-SRC_URI="http://pauillac.inria.fr/advi/${MY_P}.tar.gz"
-HOMEPAGE="http://pauillac.inria.fr/advi/"
+SRC_URI="http://gallium.inria.fr/advi/${MY_P}.tar.gz"
+HOMEPAGE="http://gallium.inria.fr/advi/"
 LICENSE="LGPL-2.1"
 
 IUSE="+ocamlopt tk"
