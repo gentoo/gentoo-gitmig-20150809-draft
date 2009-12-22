@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.158 2009/10/29 01:32:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.159 2009/12/22 11:22:35 ssuominen Exp $
+
+  22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  avidemux-2.5.1_p5428.ebuild:
+  amd64 stable wrt #297850
 
 *avidemux-2.5.1_p5428 (29 Oct 2009)
 
