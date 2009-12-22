@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8.ebuild,v 1.1 2009/12/10 18:05:08 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8-r1.ebuild,v 1.1 2009/12/22 17:16:10 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -667,12 +667,6 @@ src_compile() {
 		rm -fv "${BUILDDESTINATION}"/cnd3/bin/*-SunOS-*
 		rm -fv "${BUILDDESTINATION}"/cnd3/bin/*-Mac_OS_X-*
 	fi
-
-	# Removing external stuff. They are api docs from external libs.
-	rm -f "${BUILDDESTINATION}"/ide${IDE_VERSION}/docs/*.zip
-
-	# Remove zip files from generated javadocs.
-	rm -f "${BUILDDESTINATION}"/javadoc/*.zip
 
 	# Use the system ant
 	if use netbeans_modules_java ; then
