@@ -6,5 +6,9 @@
 		<email>voyageur@gentoo.org</email>
 		<name>Bernard Cafarelli</name>
 	</maintainer>
+	<maintainer>
+		<email>phajdan.jr@gentoo.org</email>
+		<name>Pawel Hajdan</name>
+	</maintainer>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome. This is a binary version, grabbed from chromium buildbot</longdescription>
 </pkgmetadata>
