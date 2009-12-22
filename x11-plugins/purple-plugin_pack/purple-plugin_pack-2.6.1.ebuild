@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.1.ebuild,v 1.1 2009/12/21 20:53:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.1.ebuild,v 1.2 2009/12/22 00:35:55 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -22,9 +22,9 @@ DEPEND="${RDEPEND}
 	dev-lang/python"
 
 src_prepare() {
-	# http://plugins.guifications.org/trac/ticket/597 
+	# http://plugins.guifications.org/trac/ticket/597
 	sed -e '/DEPENDENCIES=/{s:talkfilters:talkfiltersbin:}' \
-		-i configure* || die 
+		-i configure* || die
 	sed -e '/^depends/{s:$: talkfiltersbin:}' \
 		-i talkfilters/plugins.cfg || die
 	eautoreconf #Avoid maintainer mode
