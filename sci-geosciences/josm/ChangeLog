@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.30 2009/10/12 12:54:03 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.31 2009/12/22 20:57:12 hanno Exp $
+
+*josm-2.561 (21 Dec 2009)
+
+  21 Dec 2009; Hanno Boeck <hanno@gentoo.org> +josm-2.561.ebuild:
+  Version bump.
 
 *josm-2.255 (12 Oct 2009)
 
