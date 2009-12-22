@@ -1,6 +1,12 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.19 2009/01/03 13:41:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.20 2009/12/22 11:32:20 ssuominen Exp $
+
+*tovid-0.31-r2 (22 Dec 2009)
+
+  22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +tovid-0.31-r2.ebuild,
+  +files/tovid-0.31-transcode-1.1.5.patch:
+  Fix compability with Transcode 1.1.5 wrt #294492 by Salah Coronya.
 
   03 Jan 2009; Alexis Ballier <aballier@gentoo.org> tovid-0.31-r1.ebuild:
   dont install desktop entries when not installing the guis, by

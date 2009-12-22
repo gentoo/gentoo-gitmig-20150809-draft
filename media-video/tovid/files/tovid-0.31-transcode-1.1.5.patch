@@ -1,0 +1,22 @@
+http://bugs.gentoo.org/show_bug.cgi?id=294492
+
+--- src/todisc
++++ src/todisc
+@@ -3965,7 +3965,7 @@
+                 NAV_SEEK[i]="--nav_seek"
+                 NAVSEEK[i]=${IN_FILES[i]}.nav_log
+             fi
+-            TRANSCODE_CMD2=(nice transcode --print_status 10 \
++            TRANSCODE_CMD2=(nice transcode --progress_meter 1 --progress_rate 10 \
+             --write_pid $WORK_DIR/tcode$i.pid -q 1 -i "${IN_FILES[i]}" \
+             -c ${SEEK_FRAMES[i]}-$((${SEEK_FRAMES[i]} + $FRAMES)) ${NAV_SEEK[i]} "${NAVSEEK[i]}" \
+             -o "$WORK_DIR/pics/$i/" -f $FRAME_RATE  -Z $THUMB_SIZE $EXPORT)
+@@ -4438,7 +4438,7 @@
+         yecho "Creating $TOTAL_JPEGS chapter images for "${IN_FILES[i]}""
+         yecho
+         for t in "${cmd[@]}"; do
+-            TCODE_CMD=(nice transcode --print_status 10 --write_pid $WORK_DIR/tcode$i.pid \
++            TCODE_CMD=(nice transcode --progress_meter 1 --progress_rate 10 --write_pid $WORK_DIR/tcode$i.pid \
+             -q 1 -i "${IN_FILES[i]}"  ${NAV_SEEK[i]} "${NAVSEEK[i]}" \
+             -o "${PICS_OUT[@]}" -f $FRAME_RATE -Z ${GEO_ARRAY[C]},fast -c $t -y $SM_IMG_FMT,null)
+             echo "Running ${TCODE_CMD[@]}" |
