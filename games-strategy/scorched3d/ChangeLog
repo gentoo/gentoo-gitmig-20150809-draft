@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.65 2009/11/12 17:40:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.66 2009/12/22 04:22:38 mr_bones_ Exp $
+
+  22 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/scorched3d-42.1-win32.patch:
+  add patch for working around define issues again (bug #297227)
 
   12 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> scorched3d-42.1.ebuild:
   Stable for ppc, bug 285384
