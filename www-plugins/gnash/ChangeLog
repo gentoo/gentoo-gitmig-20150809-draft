@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.17 2009/10/27 14:19:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.18 2009/12/22 15:46:17 pva Exp $
+
+  22 Dec 2009; Peter Volkov <pva@gentoo.org> gnash-0.8.6.ebuild,
+  +files/gnash-0.8.6-libssh-0.4.patch:
+  Added patch to fix build with libssh-0.4, also updated deps, this package
+  depends on libssh[server], not libssh2.'
 
   27 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> gnash-0.8.5.ebuild,
   gnash-0.8.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.5 2009/10/27 14:19:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.6 2009/12/22 15:46:17 pva Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="false"
@@ -65,7 +65,7 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	mysql? ( dev-db/mysql )
 	lirc? ( app-misc/lirc )
 	dbus? ( sys-apps/dbus )
-	ssh?  ( net-libs/libssh2 )
+	ssh?  ( >=net-libs/libssh-0.4[server] )
 	ssl?  ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -123,6 +123,9 @@ src_prepare() {
 
 	# Adapted from Alt Linux to fix klash support properly
 	epatch "${FILESDIR}"/${PN}-0.8.5-klash.patch
+
+	# Patch to make gnash buildable with libssh-0.4
+	epatch "${FILESDIR}"/${PN}-0.8.6-libssh-0.4.patch
 
 	# Fix build failure due to missing headers sub-directory in libcore/asClass.h
 	# when AS3 support is enabled (as default)
