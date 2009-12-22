@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/desmume
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.15 2009/08/30 10:17:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.16 2009/12/22 01:46:04 hanno Exp $
+
+*desmume-0.9.5 (21 Dec 2009)
+
+  21 Dec 2009; Hanno Boeck <hanno@gentoo.org> +desmume-0.9.5.ebuild:
+  Version bump, add agg dependency.
 
   30 Aug 2009; Tristan Heaven <nyhm@gentoo.org> desmume-0.9.4.ebuild:
   Call egamesconf in src_configure, not src_compile
