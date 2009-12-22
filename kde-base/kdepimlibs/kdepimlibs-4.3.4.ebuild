@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.3.4.ebuild,v 1.1 2009/12/01 10:26:25 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.3.4.ebuild,v 1.2 2009/12/22 23:58:20 abcd Exp $
 
 EAPI="2"
 
@@ -33,9 +33,10 @@ add_blocker akonadi 4.1.50
 add_blocker libkholidays
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_build handbook doc)
-		$(cmake-utils_use_with ldap)"
+		$(cmake-utils_use_with ldap)
+	)
 
 	kde4-base_src_configure
 }

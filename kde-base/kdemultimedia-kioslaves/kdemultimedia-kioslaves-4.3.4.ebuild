@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-4.3.4.ebuild,v 1.1 2009/12/01 10:23:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-4.3.4.ebuild,v 1.2 2009/12/22 23:55:59 abcd Exp $
 
 EAPI="2"
 
@@ -37,12 +37,12 @@ KMLOADLIBS="libkcddb"
 
 src_configure() {
 	if use encode; then
-		mycmakeargs="${mycmakeargs}
+		mycmakeargs=(
 			$(cmake-utils_use_with flac)
-			$(cmake-utils_use_with vorbis OggVorbis)"
+			$(cmake-utils_use_with vorbis OggVorbis)
+		)
 	else
-		mycmakeargs="${mycmakeargs}
-			-DWITH_OggVorbis=OFF -DWITH_Flac=OFF"
+		mycmakeargs=(-DWITH_OggVorbis=OFF -DWITH_Flac=OFF)
 	fi
 
 	kde4-meta_src_configure
