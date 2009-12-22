@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/repodoc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/ChangeLog,v 1.4 2009/03/21 15:36:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/repodoc/ChangeLog,v 1.5 2009/12/22 20:49:00 flameeyes Exp $
+
+  22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  repodoc-0.1.0.ebuild:
+  Use emake -j1 for install, bug #297947.
 
   21 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
