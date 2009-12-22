@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.224 2009/12/02 17:37:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.225 2009/12/22 03:54:39 mr_bones_ Exp $
+
+*syslog-ng-3.0.5 (22 Dec 2009)
+
+  22 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +syslog-ng-3.0.5.ebuild, +files/syslog-ng.rc6.3.0-r1:
+  version bump; also addresses bug #293126
 
   02 Dec 2009; Raúl Porcel <armin76@gentoo.org> syslog-ng-3.0.4.ebuild:
   ia64/s390/sh/sparc stable wrt #289960
