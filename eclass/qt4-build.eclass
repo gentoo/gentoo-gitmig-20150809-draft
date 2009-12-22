@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.55 2009/12/22 16:04:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.56 2009/12/22 17:04:07 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -72,8 +72,8 @@ qt4-build_pkg_setup() {
 	if [[ ${EAPI} != 2 ]]; then
 		eerror "The qt4-build eclass requires EAPI=2, but this ebuild does not"
 		eerror "have EAPI=2 set. The ebuild author or editor failed. This ebuild needs"
-		eerror "to be fixed. Using qt4-build-edge eclass without EAPI=2 will fail."
-		die "qt4-build-edge eclass requires EAPI=2"
+		eerror "to be fixed. Using qt4-build eclass without EAPI=2 will fail."
+		die "qt4-build eclass requires EAPI=2"
 	fi
 
 	if ! version_is_at_least 4.1 $(gcc-version); then
