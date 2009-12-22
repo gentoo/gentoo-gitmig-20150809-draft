@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.3.4.ebuild,v 1.1 2009/12/01 09:56:25 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.3.4.ebuild,v 1.2 2009/12/22 22:32:15 abcd Exp $
 
 EAPI="2"
 
@@ -20,11 +20,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with archive LibArchive)
 		$(cmake-utils_use_with bzip2 BZip2)
 		$(cmake-utils_use_with lzma LibLZMA)
 		$(cmake-utils_use_with zip LibZip)
-	"
+	)
 	kde4-meta_src_configure
 }

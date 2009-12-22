@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.142 2009/12/11 17:03:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.143 2009/12/22 22:32:15 abcd Exp $
+
+  22 Dec 2009; Jonathan Callen <abcd@gentoo.org> ark-4.3.4.ebuild:
+  Pull in changes from overlay
 
   11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -ark-4.3.3-r1.ebuild:
   Drop no-longer required ebuild.
