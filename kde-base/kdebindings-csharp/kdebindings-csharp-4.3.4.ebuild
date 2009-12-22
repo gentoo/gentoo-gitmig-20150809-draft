@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/kdebindings-csharp-4.3.4.ebuild,v 1.1 2009/12/01 10:19:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/kdebindings-csharp-4.3.4.ebuild,v 1.2 2009/12/22 23:43:55 abcd Exp $
 
 EAPI="2"
 
@@ -13,13 +13,11 @@ DESCRIPTION="C# bindings for KDE and Qt"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="akonadi +phonon plasma qscintilla"
 
-COMMON_DEPEND="
+DEPEND="
 	dev-lang/mono
 	$(add_kdebase_dep smoke 'akonadi?,phonon?,qscintilla?,webkit?')
 "
-
-DEPEND="${COMMON_DEPEND}"
-RDEPEND="${COMMON_DEPEND}"
+RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY="smoke/"
 
@@ -44,14 +42,14 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs="
+	mycmakeargs=(
 		$(cmake-utils_use_enable webkit QTWEBKIT_SHARP)
 		$(cmake-utils_use_enable plasma PLASMA_SHARP)
 		$(cmake-utils_use_enable phonon PHONON_SHARP)
 		$(cmake-utils_use_enable qscintilla QSCINTILLA_SHARP)
 		$(cmake-utils_use_enable akonadi KdepimLibs)
 		$(cmake-utils_use_enable akonadi)
-	"
+	)
 	kde4-meta_src_configure
 }
 
