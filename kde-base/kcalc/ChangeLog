@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.138 2009/12/10 19:31:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.139 2009/12/22 23:02:35 abcd Exp $
+
+  22 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  +files/kcalc-4.3.2-solaris-knumber_priv.patch, kcalc-4.3.4.ebuild:
+  Add patch for prefix support (Solaris)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kcalc-4.3.1.ebuild:
   Drop KDE SC-4.3.1.
