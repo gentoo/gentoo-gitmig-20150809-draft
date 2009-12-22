@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.11.0.ebuild,v 1.7 2009/05/22 15:21:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.11.0.ebuild,v 1.8 2009/12/22 12:09:29 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://sourceforge/mediatomb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="curl debug exif expat ffmpeg javascript libextractor mysql taglib"
+IUSE="curl debug exif ffmpeg javascript libextractor mysql taglib"
 RDEPEND="
 	mysql? ( virtual/mysql )
 	!mysql? ( >=dev-db/sqlite-3 )
 	javascript? ( dev-lang/spidermonkey )
-	expat? ( dev-libs/expat )
+	dev-libs/expat
 	taglib? ( media-libs/taglib )
 	!taglib? ( media-libs/id3lib )
 	exif? ( media-libs/libexif )
@@ -67,7 +67,6 @@ src_compile() {
 		$(use_enable curl) \
 		$(use_enable debug tombdebug) \
 		$(use_enable exif libexif) \
-		$(use_enable expat) \
 		$(use_enable javascript libjs) \
 		$(use_enable mysql) $(use_enable !mysql sqlite3) \
 		$(use_enable taglib) $(use_enable !taglib id3lib) \

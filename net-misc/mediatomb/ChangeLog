@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.8 2009/05/22 15:21:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.9 2009/12/22 12:09:28 ssuominen Exp $
+
+  22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  mediatomb-0.11.0.ebuild:
+  Remove USE expat wrt #297864.
 
   22 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mediatomb-0.11.0.ebuild, +files/mediatomb-0.11.0+glibc-2.10.patch:
