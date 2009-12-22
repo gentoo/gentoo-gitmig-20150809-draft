@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3-r2.ebuild,v 1.1 2009/12/22 21:17:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3-r2.ebuild,v 1.2 2009/12/22 21:19:37 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,5 +47,6 @@ src_install () {
 	dosym /usr/sbin/hping2 /usr/sbin/hping
 
 	doman docs/hping2.8
-	dodoc INSTALL KNOWN-BUGS NEWS README TODO AUTHORS BUGS CHANGES COPYING docs/AS-BACKDOOR docs/HPING2-IS-OPEN docs/MORE-FUN-WITH-IPID docs/*.txt
+	dodoc INSTALL KNOWN-BUGS NEWS README TODO AUTHORS BUGS CHANGES \
+		docs/AS-BACKDOOR docs/HPING2-IS-OPEN docs/MORE-FUN-WITH-IPID docs/*.txt
 }
