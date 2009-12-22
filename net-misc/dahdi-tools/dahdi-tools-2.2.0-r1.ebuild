@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.2.0-r1.ebuild,v 1.1 2009/12/22 12:31:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.2.0-r1.ebuild,v 1.2 2009/12/22 13:55:21 chainsaw Exp $
 
 EAPI=1
 inherit eutils
@@ -24,7 +24,7 @@ src_unpack() {
 	cd "${S}"
 	# Work around broken 07_all_pull-libc-headers-linux.patch
 	# that seemingly nobody wants to fix.
-	if has_version ">sys-kernel/linux-headers-2.6.28-r1"; then
+	if has_version "!sys-kernel/linux-headers-2.6.29"; then
 		epatch "${FILESDIR}/${P}-ifreq.patch"
 	fi
 	epatch "${FILESDIR}/${P}-modprobe-suffix.patch"
