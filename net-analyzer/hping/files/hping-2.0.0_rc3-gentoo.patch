@@ -1,0 +1,20 @@
+--- Makefile.in.org	2004-05-03 11:29:39.000000000 +0200
++++ Makefile.in	2009-12-22 21:55:58.000000000 +0100
+@@ -6,7 +6,7 @@
+ # $date: Sun Jul 25 17:56:15 MET DST 1999$ 
+ # $rev: 3$ 
+ 
+-CC= gcc
++CC?= gcc
+ AR=/usr/bin/ar
+ RANLIB=/usr/bin/ranlib
+ CCOPT= -O2 -Wall @PCAP_INCLUDE@
+@@ -43,7 +43,7 @@
+ 	$(RANLIB) $@
+ 
+ hping2: byteorder.h $(OBJ)
+-	$(CC) -o hping2 $(CCOPT) $(DEBUG) $(OBJ) $(PCAP) @SOLARISLIB@
++	$(CC) -o hping2 $(CCOPT) $(LDFLAGS) $(DEBUG) $(OBJ) $(PCAP) @SOLARISLIB@
+ 	@echo
+ 	./hping2 -v
+ 	@echo "use \`make strip' to strip hping2 binary"
