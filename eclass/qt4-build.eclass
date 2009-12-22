@@ -1,6 +1,6 @@
-# Copyright 2007-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.54 2009/12/06 09:34:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.55 2009/12/22 16:04:13 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -14,7 +14,7 @@
 
 inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
-IUSE="${IUSE} debug pch"
+IUSE="debug pch"
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
 	!>x11-libs/qt-assistant-${PV}-r9999
@@ -45,66 +45,44 @@ RDEPEND="
 	!<x11-libs/qt-xmlpatterns-${PV}
 	!>x11-libs/qt-xmlpatterns-${PV}-r9999
 "
-case "${PV}" in
-	4.?.?_rc* | 4.?.?_beta* )
-		SRCTYPE="${SRCTYPE:-opensource-src}"
-		MY_PV="${PV/_/-}"
-		;;
-	*)
-		SRCTYPE="${SRCTYPE:-opensource-src}"
-		MY_PV="${PV}"
-		;;
-esac
+
+MY_PV=${PV/_/-}
 
 if version_is_at_least 4.5.99999999 ${PV} ; then
-	MY_P="qt-everywhere-${SRCTYPE}-${MY_PV}"
+	MY_P=qt-everywhere-opensource-src-${MY_PV}
 else
-	MY_P="qt-x11-${SRCTYPE}-${MY_PV}"
+	MY_P=qt-x11-opensource-src-${MY_PV}
 fi
+
 S=${WORKDIR}/${MY_P}
 
 HOMEPAGE="http://qt.nokia.com/"
-if version_is_at_least 4.5.3 ${PV} ; then
-	SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
-else
-	SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.bz2"
-fi
+SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
 
-case "${PV}" in
-	4.4.?) SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-headers.tar.bz2" ;;
-	*)     ;;
-esac
-
-if version_is_at_least 4.5 ${PV} ; then
-	LICENSE="|| ( LGPL-2.1 GPL-3 )"
-fi
+LICENSE="|| ( LGPL-2.1 GPL-3 )"
 
 # @FUNCTION: qt4-build_pkg_setup
 # @DESCRIPTION:
-# Sets up installation directories, PLATFORM, PATH, and LD_LIBRARY_PATH
+# Sets up PATH and LD_LIBRARY_PATH
 qt4-build_pkg_setup() {
-	# EAPI=2 ebuilds set use-deps, others need this:
-	if [[ $EAPI != 2 ]]; then
-		# Make sure debug setting corresponds with qt-core (bug 258512)
-		if [[ $PN != "qt-core" ]]; then
-			use debug && QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK}
-				~x11-libs/qt-core-${PV} debug"
-		fi
+	PATH="${S}/bin${PATH:+:}${PATH}"
+	LD_LIBRARY_PATH="${S}/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
 
-		# Check USE requirements
-		qt4-build_check_use
+	# Make sure ebuilds use the required EAPI
+	if [[ ${EAPI} != 2 ]]; then
+		eerror "The qt4-build eclass requires EAPI=2, but this ebuild does not"
+		eerror "have EAPI=2 set. The ebuild author or editor failed. This ebuild needs"
+		eerror "to be fixed. Using qt4-build-edge eclass without EAPI=2 will fail."
+		die "qt4-build-edge eclass requires EAPI=2"
 	fi
 
-	PATH="${S}/bin:${PATH}"
-	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
-
-	if ! version_is_at_least 4.1 $(gcc-version) ; then
+	if ! version_is_at_least 4.1 $(gcc-version); then
 		ewarn "Using a GCC version lower than 4.1 is not supported!"
 		echo
 		ebeep 3
 	fi
 
-	if [[ "${P}" == "qt-core-4.6.0_rc1" ]]; then
+	if [[ ${P} == qt-core-4.6.0_rc1 ]]; then
 		ewarn
 		ewarn "Binary compatibility broke between 4.6.0_beta1 and 4.6.0_rc1."
 		ewarn "If you are upgrading from 4.6.0_beta1, you'll have to"
@@ -114,12 +92,12 @@ qt4-build_pkg_setup() {
 		ewarn "   emerge -av1 \$(for i in \$(qlist -IC x11-libs/qt-);"
 		ewarn "   do equery -q d \$i | grep -v 'x11-libs/qt-' |"
 		ewarn "   sed \"s/^/=/\"; done)"
-		ewarn 
+		ewarn
 		ewarn "YOU'VE BEEN WARNED"
 		ewarn
 		ebeep 3
 	fi
-		
+
 }
 
 # @ECLASS-VARIABLE: QT4_TARGET_DIRECTORIES
@@ -137,39 +115,15 @@ qt4-build_pkg_setup() {
 # Unpacks the sources
 qt4-build_src_unpack() {
 	setqtenv
-	local target targets licenses tar_pkg tar_args
-	if version_is_at_least 4.5 ${PV} ; then
-		licenses="LICENSE.GPL3 LICENSE.LGPL"
-	else
-		licenses="LICENSE.GPL2 LICENSE.GPL3"
-	fi
-	for target in configure ${licenses} projects.pro \
+	local target targets=
+	for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
 		src/{qbase,qt_targets,qt_install}.pri bin config.tests mkspecs qmake \
 		${QT4_EXTRACT_DIRECTORIES}; do
-			targets="${targets} ${MY_P}/${target}"
+			targets+=" ${MY_P}/${target}"
 	done
 
-	tar_pkg=${MY_P}.tar.bz2
-	tar_args="xjpf"
-	if version_is_at_least 4.5.3 ${PV} ; then
-		tar_pkg=${tar_pkg/bz2/gz}
-		tar_args="xzpf"
-	fi
-
-	echo tar ${tar_args} "${DISTDIR}"/${tar_pkg} ${targets}
-	tar ${tar_args} "${DISTDIR}"/${tar_pkg} ${targets}
-
-	case "${PV}" in
-		4.4.?)
-			echo tar xjpf "${DISTDIR}"/${MY_P}-headers.tar.bz2
-			tar xjpf "${DISTDIR}"/${MY_P}-headers.tar.bz2
-			;;
-	esac
-
-	# Be backwards compatible for now
-	if [[ $EAPI != 2 ]]; then
-		qt4-build_src_prepare
-	fi
+	echo tar xzpf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
+	tar xzpf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
 }
 
 # @ECLASS-VARIABLE: PATCHES
@@ -202,13 +156,13 @@ qt4-build_src_prepare() {
 		-i config.tests/unix/compile.test || die "sed test compilers failed"
 
 	# Bug 178652
-	if [[ "$(gcc-major-version)" == "3" ]] && use amd64; then
+	if [[ $(gcc-major-version) == 3 ]] && use amd64; then
 		ewarn "Appending -fno-gcse to CFLAGS/CXXFLAGS"
 		append-flags -fno-gcse
 	fi
 
 	# Unsupported old gcc versions - hardened needs this :(
-	if [[ $(gcc-major-version) -lt "4" ]] ; then
+	if [[ $(gcc-major-version) -lt 4 ]] ; then
 		ewarn "Appending -fno-stack-protector to CXXFLAGS"
 		append-cxxflags -fno-stack-protector
 		# Bug 253127
@@ -253,12 +207,8 @@ qt4-build_src_configure() {
 # @DESCRIPTION: Actual compile phase
 qt4-build_src_compile() {
 	setqtenv
-	# Be backwards compatible for now
-	if [[ $EAPI != 2 ]]; then
-		qt4-build_src_configure
-	fi
 
-	build_directories "${QT4_TARGET_DIRECTORIES}"
+	build_directories ${QT4_TARGET_DIRECTORIES}
 }
 
 # @FUNCTION: qt4-build_src_install
@@ -266,7 +216,7 @@ qt4-build_src_compile() {
 # Perform the actual installation including some library fixes.
 qt4-build_src_install() {
 	setqtenv
-	install_directories "${QT4_TARGET_DIRECTORIES}"
+	install_directories ${QT4_TARGET_DIRECTORIES}
 	install_qconfigs
 	fix_library_files
 }
@@ -299,36 +249,33 @@ setqtenv() {
 # Sets up some standard configure options, like libdir (if necessary), whether
 # debug info is wanted or not.
 standard_configure_options() {
-	local myconf=""
+	local myconf=
 
-	[[ $(get_libdir) != "lib" ]] && myconf="${myconf} -L/usr/$(get_libdir)"
+	[[ $(get_libdir) != lib ]] && myconf+=" -L/usr/$(get_libdir)"
 
 	# Disable visibility explicitly if gcc version isn't 4
-	if [[ "$(gcc-major-version)" -lt "4" ]]; then
-		myconf="${myconf} -no-reduce-exports"
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		myconf+=" -no-reduce-exports"
 	fi
 
 	# precompiled headers doesn't work on hardened, where the flag is masked.
-	if use pch; then
-		myconf="${myconf} -pch"
-	else
-		myconf="${myconf} -no-pch"
-	fi
+	myconf+=" $(qt_use pch)"
 
 	if use debug; then
-		myconf="${myconf} -debug -no-separate-debug-info"
+		myconf+=" -debug"
 	else
-		myconf="${myconf} -release -no-separate-debug-info"
+		myconf+=" -release"
 	fi
+	myconf+=" -no-separate-debug-info"
 
 	# ARCH is set on Gentoo. Qt now falls back to generic on an unsupported
 	# $(tc-arch). Therefore we convert it to supported values.
 	case "$(tc-arch)" in
-		amd64) myconf="${myconf} -arch x86_64" ;;
-		ppc|ppc64) myconf="${myconf} -arch powerpc" ;;
-		x86|x86-*) myconf="${myconf} -arch i386" ;;
-		alpha|arm|ia64|mips|s390|sparc) myconf="${myconf} -arch $(tc-arch)" ;;
-		hppa|sh) myconf="${myconf} -arch generic" ;;
+		amd64) myconf+=" -arch x86_64" ;;
+		ppc|ppc64) myconf+=" -arch powerpc" ;;
+		x86|x86-*) myconf+=" -arch i386" ;;
+		alpha|arm|ia64|mips|s390|sparc) myconf+=" -arch $(tc-arch)" ;;
+		hppa|sh) myconf+=" -arch generic" ;;
 		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
 	esac
 
@@ -345,21 +292,14 @@ standard_configure_options() {
 		;;
 	esac
 
-	myconf="${myconf} -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license
+	myconf+=" -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
 		-datadir ${QTDATADIR} -docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR}
 		-plugindir ${QTPLUGINDIR} -sysconfdir ${QTSYSCONFDIR}
 		-translationdir ${QTTRANSDIR} -examplesdir ${QTEXAMPLESDIR}
-		-demosdir ${QTDEMOSDIR} -silent -fast
+		-demosdir ${QTDEMOSDIR} -silent -fast -opensource
 		${exceptions}
 		-reduce-relocations -nomake examples -nomake demos"
-
-	# Make eclass >= 4.5.x ready
-	case "${MY_PV}" in
-		4.5.* | 4.6.* )
-			myconf="${myconf} -opensource"
-			;;
-	esac
 
 	echo "${myconf}"
 }
@@ -369,8 +309,7 @@ standard_configure_options() {
 # @DESCRIPTION:
 # Compiles the code in $QT4_TARGET_DIRECTORIES
 build_directories() {
-	local dirs="$@"
-	for x in ${dirs}; do
+	for x in "$@"; do
 		cd "${S}"/${x}
 		sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:/usr/$(get_libdir)/qt4:g" $(find "${S}" -name '*.pr[io]') "${S}"/mkspecs/common/linux.conf || die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
@@ -385,8 +324,7 @@ build_directories() {
 # @DESCRIPTION:
 # run emake install in the given directories, which are separated by spaces
 install_directories() {
-	local dirs="$@"
-	for x in ${dirs}; do
+	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null || die "Can't pushd ${S}/${x}"
 		emake INSTALL_ROOT="${D}" install || die "emake install failed"
 		popd >/dev/null || die "Can't popd from ${S}/${x}"
@@ -396,17 +334,17 @@ install_directories() {
 # @ECLASS-VARIABLE: QCONFIG_ADD
 # @DESCRIPTION:
 # List options that need to be added to QT_CONFIG in qconfig.pri
-QCONFIG_ADD="${QCONFIG_ADD:-}"
+: ${QCONFIG_ADD:=}
 
 # @ECLASS-VARIABLE: QCONFIG_REMOVE
 # @DESCRIPTION:
 # List options that need to be removed from QT_CONFIG in qconfig.pri
-QCONFIG_REMOVE="${QCONFIG_REMOVE:-}"
+: ${QCONFIG_REMOVE:=}
 
 # @ECLASS-VARIABLE: QCONFIG_DEFINE
 # @DESCRIPTION:
 # List variables that should be defined at the top of QtCore/qconfig.h
-QCONFIG_DEFINE="${QCONFIG_DEFINE:-}"
+: ${QCONFIG_DEFINE:=}
 
 # @FUNCTION: install_qconfigs
 # @DESCRIPTION: Install gentoo-specific mkspecs configurations
@@ -436,8 +374,8 @@ generate_qconfigs() {
 		local x qconfig_add qconfig_remove qconfig_new
 		for x in "${ROOT}${QTDATADIR}"/mkspecs/gentoo/*-qconfig.pri; do
 			[[ -f ${x} ]] || continue
-			qconfig_add="${qconfig_add} $(sed -n 's/^QCONFIG_ADD=//p' "${x}")"
-			qconfig_remove="${qconfig_remove} $(sed -n 's/^QCONFIG_REMOVE=//p' "${x}")"
+			qconfig_add+=" $(sed -n 's/^QCONFIG_ADD=//p' "${x}")"
+			qconfig_remove+=" $(sed -n 's/^QCONFIG_REMOVE=//p' "${x}")"
 		done
 
 		# these error checks do not use die because dying in pkg_post{inst,rm}
@@ -454,7 +392,7 @@ generate_qconfigs() {
 			# including qconfig_add and excluding qconfig_remove
 			for x in $(sed -n 's/^QT_CONFIG +=//p' \
 				"${ROOT}${QTDATADIR}"/mkspecs/qconfig.pri) ${qconfig_add}; do
-					hasq ${x} ${qconfig_remove} || qconfig_new="${qconfig_new} ${x}"
+					hasq ${x} ${qconfig_remove} || qconfig_new+=" ${x}"
 			done
 
 			# replace the existing QT_CONFIG list with qconfig_new
@@ -560,7 +498,7 @@ fix_library_files() {
 		if [[ -e ${libfile} ]]; then
 			sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${libfile} || die "Sed failed"
 
-	# Move .pc files into the pkgconfig directory
+		# Move .pc files into the pkgconfig directory
 		dodir ${QTPCDIR}
 		mv ${libfile} "${D}"/${QTPCDIR}/ \
 			|| die "Moving ${libfile} to ${D}/${QTPCDIR}/ failed."
@@ -579,87 +517,17 @@ fix_library_files() {
 # will be used for that. If [enableval] is not specified, it omits the
 # assignment-part
 qt_use() {
-	local flag="${1}"
-	local feature="${1}"
+	local flag=$1
+	local feature=$1
 	local enableval=
 
-	[[ -n ${2} ]] && feature=${2}
-	[[ -n ${3} ]] && enableval="-${3}"
+	[[ -n $2 ]] && feature=$2
+	[[ -n $3 ]] && enableval=-$3
 
 	if use ${flag}; then
 		echo "${enableval}-${feature}"
 	else
 		echo "-no-${feature}"
-	fi
-}
-
-# @ECLASS-VARIABLE: QT4_BUILT_WITH_USE_CHECK
-# @DESCRIPTION:
-# The contents of $QT4_BUILT_WITH_USE_CHECK gets fed to built_with_use
-# (eutils.eclass), line per line.
-#
-# Example:
-# @CODE
-# pkg_setup() {
-# 	use qt3support && QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK}
-# 		~x11-libs/qt-gui-${PV} qt3support"
-# 	qt4-build_check_use
-# }
-# @CODE
-
-# Run built_with_use on each flag and print appropriate error messages if any
-# flags are missing
-
-_qt_built_with_use() {
-	local missing opt pkg flag flags
-
-	if [[ ${1} = "--missing" ]]; then
-		missing="${1} ${2}" && shift 2
-	fi
-	if [[ ${1:0:1} = "-" ]]; then
-		opt=${1} && shift
-	fi
-
-	pkg=${1} && shift
-
-	for flag in "${@}"; do
-		flags="${flags} ${flag}"
-		if ! built_with_use ${missing} ${opt} ${pkg} ${flag}; then
-			flags="${flags}*"
-		else
-			[[ ${opt} = "-o" ]] && return 0
-		fi
-	done
-	if [[ "${flags# }" = "${@}" ]]; then
-		return 0
-	fi
-	if [[ ${opt} = "-o" ]]; then
-		eerror "This package requires '${pkg}' to be built with any of the following USE flags: '$*'."
-	else
-		eerror "This package requires '${pkg}' to be built with the following USE flags: '${flags# }'."
-	fi
-	return 1
-}
-
-# @FUNCTION: qt4-build_check_use
-# @DESCRIPTION:
-# Check if the listed packages in $QT4_BUILT_WITH_USE_CHECK are built with the
-# USE flags listed.
-#
-# If any of the required USE flags are missing, an eerror will be printed for
-# each package with missing USE flags.
-qt4-build_check_use() {
-	local line missing
-	while read line; do
-		[[ -z ${line} ]] && continue
-		if ! _qt_built_with_use ${line}; then
-			missing=true
-		fi
-	done <<< "${QT4_BUILT_WITH_USE_CHECK}"
-	if [[ -n ${missing} ]]; then
-		echo
-		eerror "Flags marked with an * are missing."
-		die "Missing USE flags found"
 	fi
 }
 
@@ -673,35 +541,32 @@ qt_mkspecs_dir() {
 
 	case ${CHOST} in
 		*-freebsd*|*-dragonfly*)
-			spec="freebsd" ;;
+			spec=freebsd ;;
 		*-openbsd*)
-			spec="openbsd" ;;
+			spec=openbsd ;;
 		*-netbsd*)
-			spec="netbsd" ;;
+			spec=netbsd ;;
 		*-darwin*)
-			spec="darwin" ;;
+			spec=darwin ;;
 		*-linux-*|*-linux)
-			spec="linux" ;;
+			spec=linux ;;
 		*)
 			die "Unknown CHOST, no platform choosen."
 	esac
 
 	CXX=$(tc-getCXX)
-	if [[ ${CXX/g++/} != ${CXX} ]]; then
-		spec="${spec}-g++"
-	elif [[ ${CXX/icpc/} != ${CXX} ]]; then
-		spec="${spec}-icc"
+	if [[ ${CXX} == *g++* ]]; then
+		spec+=-g++
+	elif [[ ${CXX} == *icpc* ]]; then
+		spec+=-icc
 	else
 		die "Unknown compiler ${CXX}."
 	fi
-	if [[ -n "${LIBDIR/lib}" ]]; then
-		spec="${spec}-${LIBDIR/lib}"
+	if [[ -n ${LIBDIR/lib} ]]; then
+		spec+=-${LIBDIR/lib}
 	fi
 
 	echo "${spec}"
 }
 
-case ${EAPI:-0} in
-	0|1) EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postrm pkg_postinst ;;
-	2) EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_install pkg_postrm pkg_postinst ;;
-esac
+EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_install pkg_postrm pkg_postinst
