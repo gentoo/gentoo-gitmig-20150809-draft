@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5113 2009/12/21 22:47:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5114 2009/12/22 19:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -134,7 +134,6 @@ app-cdr/xfburn:thunar - Adds integration with Thunar file manager
 app-crypt/ccid:nousb - Disable USB support via sys-apps/pcsc-lite
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/ekeyd:usb -  Build the libusb-based userland daemon for accessing the entropykey (alternative to the CDC USB driver). 
-app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:openct - build using dev-libs/openct compat
 app-crypt/gnupg:pcsc-lite - build with sys-apps/pcsc-lite
