@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.3.4.ebuild,v 1.1 2009/12/01 10:16:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.3.4.ebuild,v 1.2 2009/12/22 23:31:47 abcd Exp $
 
 EAPI="2"
 
@@ -33,9 +33,9 @@ KMEXTRACTONLY="
 
 src_configure() {
 	# Remove remnants of hicolor-icon-theme
-	sed -i \
-		-e "s:add_subdirectory( hicolor ):#donotwant:g" \
-		pics/CMakeLists.txt
+	sed -e "s:add_subdirectory[[:space:]]*([[:space:]]*hicolor[[:space:]]*):#donotwant:g" \
+		-i pics/CMakeLists.txt \
+		|| die "failed to remove remnants of hicolor-icon-theme"
 
 	kde4-meta_src_configure
 }
