@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.26 2009/12/15 19:26:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.27 2009/12/22 19:04:26 ranger Exp $
+
+  22 Dec 2009; Brent Baude <ranger@gentoo.org> bluecloth-2.0.5.ebuild:
+  stable ppc64, bug 283020
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> bluecloth-2.0.5.ebuild:
   ia64 stable wrt #283020
