@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6-r1.ebuild,v 1.1 2009/03/03 09:04:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6-r1.ebuild,v 1.2 2009/12/22 14:47:38 pva Exp $
 
 # N.B. This is before inherit of autotools, as autotools.eclass adds the
 # relevant dependencies to DEPEND.
@@ -27,6 +27,8 @@ for l in \
 	"hr" "is" "it" "nl" "no" "pl" "pt" "ro" \
 	"ru" "sk" "sl" "sr" "sv" "uk" "vi"; do
 	dep="linguas_${l}? ( app-dicts/aspell-${l} )"
+	[[ ${l} = "de" ]] &&
+		dep="linguas_de? ( || ( app-dicts/aspell-de app-dicts/aspell-de-alt ) )"
 	[[ -z ${PDEPEND} ]] &&
 		PDEPEND="${dep}" ||
 		PDEPEND="${PDEPEND}
