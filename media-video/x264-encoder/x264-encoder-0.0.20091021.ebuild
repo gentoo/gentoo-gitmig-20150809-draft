@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20091021.ebuild,v 1.1 2009/10/22 15:03:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20091021.ebuild,v 1.2 2009/12/22 11:09:48 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs versionator
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug +mp4 +threads"
 
 RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
