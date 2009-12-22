@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.3.4.ebuild,v 1.1 2009/12/01 10:16:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.3.4.ebuild,v 1.2 2009/12/22 23:36:27 abcd Exp $
 
 EAPI="2"
 
@@ -16,17 +16,22 @@ IUSE="+bzip2 debug lzma +handbook openexr samba"
 RESTRICT="test"
 
 DEPEND="
-	x11-libs/libXcursor
+	!aqua? ( x11-libs/libXcursor )
 	bzip2? ( app-arch/bzip2 )
 	lzma? ( app-arch/xz-utils )
 	openexr? ( media-libs/openexr )
-	samba? ( || ( net-fs/samba >=net-fs/samba-libs-3.4[smbclient] ) )
+	samba? (
+		|| (
+			net-fs/samba
+			>=net-fs/samba-libs-3.4[smbclient]
+		)
+	)
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdelibs 'bzip2?,lzma?')
 	$(add_kdebase_dep kdialog)
-	virtual/eject
 	virtual/ssh
+	!aqua? ( !kernel_SunOS? ( virtual/eject ) )
 "
 
 KMEXTRA="
@@ -35,12 +40,12 @@ KMEXTRA="
 "
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with bzip2 BZip2)
 		$(cmake-utils_use_with lzma LibLZMA)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with samba)
-	"
+	)
 
 	kde4-meta_src_configure
 }
