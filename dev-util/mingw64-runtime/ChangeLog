@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mingw64-runtime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.1 2009/12/09 22:42:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.2 2009/12/22 13:49:35 vapier Exp $
+
+*mingw64-runtime-20091222 (22 Dec 2009)
+
+  22 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20091222.ebuild:
+  Version bump #297819 by Alon Bar-Lev.
 
 *mingw64-runtime-20090419 (09 Dec 2009)
 
