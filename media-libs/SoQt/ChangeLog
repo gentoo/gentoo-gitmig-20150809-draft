@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.26 2009/10/29 15:58:31 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.27 2009/12/22 16:23:12 tommy Exp $
+
+*SoQt-1.4.2_alpha1841 (22 Dec 2009)
+
+  22 Dec 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +SoQt-1.4.2_alpha1841.ebuild, metadata.xml:
+  Version bump, update metadata.xml for maintainer and proxy
 
   29 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> -SoQt-1.0.2.ebuild,
   -SoQt-1.3.0.ebuild:

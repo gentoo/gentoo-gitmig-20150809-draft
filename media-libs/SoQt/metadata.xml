@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>rwobben@hotmail.com</email>
+		<name>Roelof Wobben</name>
+		<description>Maintainer of ebuilds, assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>tommy@gentoo.org</email>
+		<name>Thomas Sachau</name>
+		<description>Proxy committer, CC bugs</description>
+	</maintainer>
 </pkgmetadata>
