@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.55 2009/11/23 20:56:28 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.56 2009/12/22 23:11:40 flameeyes Exp $
+
+  22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  geda-1.6.0-r1.ebuild:
+  Fix dependencies and avoid forkbomb in test phase (hopefully). Thanks to
+  Thomas Beierlein and Rafael G. Martins in bug #296654.
 
   23 Nov 2009; Denis Dupeyron <calchan@gentoo.org> geda-1.6.0-r1.ebuild:
   Fixed blockers, bug #294291.
