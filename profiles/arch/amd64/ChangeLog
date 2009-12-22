@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.65 2009/12/13 23:20:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.66 2009/12/22 12:33:19 ssuominen Exp $
+
+  22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE mmx for media-video/mjpegtools wrt #294909.
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
   drop "imstt" from VIDEO_CARDS in all profiles
