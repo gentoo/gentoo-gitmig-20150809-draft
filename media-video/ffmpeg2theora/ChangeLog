@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.36 2009/11/23 20:08:42 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.37 2009/12/22 12:12:38 ssuominen Exp $
+
+  22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ffmpeg2theora-0.25.ebuild:
+  Fix FFmpeg depend wrt #293820.
 
   23 Nov 2009; Dror Levin <spatz@gentoo.org> ffmpeg2theora-0.25.ebuild:
   Depend on newer version of media-video/ffmpeg, bug 294287.
