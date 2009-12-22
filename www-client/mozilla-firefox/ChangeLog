@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.582 2009/12/22 15:58:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.583 2009/12/22 21:25:48 jer Exp $
+
+  22 Dec 2009; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.5.6.ebuild:
+  Stable for PPC (bug #297532).
 
   22 Dec 2009; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.5.6.ebuild:
   Stable for HPPA (bug #297532).
