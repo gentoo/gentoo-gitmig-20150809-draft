@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/fuse
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.27 2009/03/10 05:12:15 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.28 2009/12/22 04:38:32 darkside Exp $
+
+*fuse-0.10.0.2-r3 (22 Dec 2009)
+
+  22 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +fuse-0.10.0.2-r3.ebuild:
+  New revision to fix dependancy issues. Ebuild by José Manuel Ferrer Ortiz
 
 *fuse-0.10.0.2-r2 (10 Mar 2009)
 
