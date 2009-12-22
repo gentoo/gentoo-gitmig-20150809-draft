@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.rc,v 1.7 2004/10/09 20:36:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.rc,v 1.8 2009/12/22 01:01:07 vostorga Exp $
 
 opts="reload start stop"
 
@@ -19,7 +19,7 @@ start() {
 
 stop() {
 	ebegin "Shutting down unrealircd"
-	killall unrealircd
+	start-stop-daemon --stop --quiet --exec /usr/bin/unrealircd
 	eend $?
 }
 
