@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.248 2009/12/16 18:16:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.249 2009/12/22 13:50:33 nirbheek Exp $
+
+*mesa-7.7 (22 Dec 2009)
+*mesa-7.6.1 (22 Dec 2009)
+
+  22 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/0001-st-xorg-Adopt-to-new-dirty-clip-rect-type.patch,
+  +mesa-7.6.1.ebuild, +mesa-7.7.ebuild:
+  Bump to 7.6.1 (with a patch to fix bug 297891) and 7.7 (fixes bug 297807)
 
   16 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.7_rc3.ebuild:
   Fix S location.
