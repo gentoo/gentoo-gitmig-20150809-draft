@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.4-r1.ebuild,v 1.2 2009/12/21 19:56:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.4-r1.ebuild,v 1.3 2009/12/22 09:19:11 pva Exp $
 
 EAPI=2
 
@@ -82,6 +82,14 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   x11-plugins/pidgin-rhythmbox
 #   x11-plugins/purple-plugin_pack
 #   x11-themes/pidgin-smileys
+# Plugins in Sunrise:
+#	x11-plugins/pidgimpd
+#	x11-plugins/pidgin-birthday
+#	x11-plugins/pidgin-botsentry
+#	x11-plugins/pidgin-convreverse
+#	x11-plugins/pidgin-extended-blist-sort
+#	x11-plugins/pidgin-lastfm
+#	x11-plugins/pidgin-mbpurple
 
 pkg_setup() {
 	if ! use gtk && ! use ncurses ; then
