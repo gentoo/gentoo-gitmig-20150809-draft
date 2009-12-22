@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.38 2009/12/18 10:49:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.39 2009/12/22 22:52:52 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -112,10 +112,6 @@ _use_me_now_inverted() {
 # @ECLASS-VARIABLE: CMAKE_IN_SOURCE_BUILD
 # @DESCRIPTION:
 # Set to enable in-source build.
-
-# @ECLASS-VARIABLE: CMAKE_NO_COLOR
-# @DESCRIPTION:
-# Set to disable cmake output coloring.
 
 # @ECLASS-VARIABLE: CMAKE_VERBOSE
 # @DESCRIPTION:
@@ -314,7 +310,7 @@ enable_cmake-utils_src_configure() {
 	cat > "${common_config}" <<- _EOF_
 		SET (LIB_SUFFIX ${libdir/lib} CACHE STRING "library path suffix" FORCE)
 	_EOF_
-	[[ -n ${CMAKE_NO_COLOR} ]] && echo 'SET (CMAKE_COLOR_MAKEFILE OFF CACHE BOOL "pretty colors during make" FORCE)' >> "${common_config}"
+	[[ -n ${NOCOLOR} ]] || echo 'SET (CMAKE_COLOR_MAKEFILE OFF CACHE BOOL "pretty colors during make" FORCE)' >> "${common_config}"
 
 	# Convert mycmakeargs to an array, for backwards compatibility
 	# Make the array a local variable since <=portage-2.1.6.x does not
