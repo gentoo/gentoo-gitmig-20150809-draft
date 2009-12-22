@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.3.4.ebuild,v 1.1 2009/12/01 09:59:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.3.4.ebuild,v 1.2 2009/12/22 22:41:32 abcd Exp $
 
 EAPI="2"
 
@@ -23,16 +23,15 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with semantic-desktop Soprano)
-		$(cmake-utils_use_with kipi)"
+		$(cmake-utils_use_with kipi)
+	)
 
 	if use semantic-desktop; then
-		mycmakeargs="${mycmakeargs}
-			-DGWENVIEW_SEMANTICINFO_BACKEND=Nepomuk"
+		mycmakeargs+=(-DGWENVIEW_SEMANTICINFO_BACKEND=Nepomuk)
 	else
-		mycmakeargs="${mycmakeargs}
-			-DGWENVIEW_SEMANTICINFO_BACKEND=None"
+		mycmakeargs+=(-DGWENVIEW_SEMANTICINFO_BACKEND=None)
 	fi
 
 	kde4-meta_src_configure

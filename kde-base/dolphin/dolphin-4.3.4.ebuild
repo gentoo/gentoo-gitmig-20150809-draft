@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.3.4.ebuild,v 1.1 2009/12/01 09:58:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.3.4.ebuild,v 1.2 2009/12/22 22:38:02 abcd Exp $
 
 EAPI="2"
 
@@ -25,9 +25,10 @@ PDEPEND="
 KMLOADLIBS="libkonq"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with semantic-desktop Soprano)"
+		$(cmake-utils_use_with semantic-desktop Soprano)
+	)
 
 	kde4-meta_src_configure
 }

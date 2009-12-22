@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-4.3.4.ebuild,v 1.1 2009/12/01 09:59:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-4.3.4.ebuild,v 1.2 2009/12/22 22:44:14 abcd Exp $
 
 EAPI="2"
 
@@ -18,8 +18,9 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with musicbrainz TunePimp)"
+	mycmakeargs=(
+		$(cmake-utils_use_with musicbrainz TunePimp)
+	)
 
 	kde4-meta_src_configure
 }

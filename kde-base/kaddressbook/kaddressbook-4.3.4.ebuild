@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.3.4.ebuild,v 1.1 2009/12/01 10:00:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.3.4.ebuild,v 1.2 2009/12/22 22:46:55 abcd Exp $
 
 EAPI="2"
 
@@ -29,8 +29,9 @@ KMEXTRACTONLY="
 KMLOADLIBS="libkdepim libkleo"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with gnokii)"
+	mycmakeargs=(
+		$(cmake-utils_use_with gnokii)
+	)
 
 	kde4-meta_src_configure
 }

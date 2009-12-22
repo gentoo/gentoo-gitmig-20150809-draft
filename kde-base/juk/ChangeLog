@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.153 2009/12/10 19:08:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.154 2009/12/22 22:44:14 abcd Exp $
+
+  22 Dec 2009; Jonathan Callen <abcd@gentoo.org> juk-4.3.4.ebuild:
+  Pull in changes from overlay
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -juk-4.3.1.ebuild:
   Drop KDE SC-4.3.1.
