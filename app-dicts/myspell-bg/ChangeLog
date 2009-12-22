@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-bg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.15 2009/10/18 22:13:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.16 2009/12/22 15:26:10 pva Exp $
+
+*myspell-bg-20071211 (22 Dec 2009)
+
+  22 Dec 2009; Peter Volkov <pva@gentoo.org> +myspell-bg-20071211.ebuild:
+  Version bump, bug #294129 thank Dragomir Penev for report
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> myspell-bg-20060316.ebuild:
   QA fixes; IUSE is not defined
