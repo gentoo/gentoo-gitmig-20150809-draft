@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/pidgin-knotify
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-knotify/ChangeLog,v 1.1 2009/12/22 20:21:06 spatz Exp $
+
+*pidgin-knotify-0.2.1 (22 Dec 2009)
+
+  22 Dec 2009; Dror Levin <spatz@gentoo.org> +pidgin-knotify-0.2.1.ebuild,
+  +metadata.xml:
+  Initial import, bug 291653. Thanks to Franz Glauber Vanderlinde.
+
