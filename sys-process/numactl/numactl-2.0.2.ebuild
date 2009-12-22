@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.2.ebuild,v 1.5 2009/09/03 06:50:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.2.ebuild,v 1.6 2009/12/22 23:24:25 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,10 +26,14 @@ src_compile() {
 }
 
 src_test() {
-	einfo "The only generically safe test is regress2."
-	einfo "The other test cases require 2 NUMA nodes."
-	cd test
-	./regress2 || die "regress2 failed!"
+	if [ -d /sys/devices/system/node ]; then
+		einfo "The only generically safe test is regress2."
+		einfo "The other test cases require 2 NUMA nodes."
+		cd test
+		./regress2 || die "regress2 failed!"
+	else
+		ewarn "You do not have baseline NUMA support in your kernel, skipping tests."
+	fi
 }
 
 src_install() {
