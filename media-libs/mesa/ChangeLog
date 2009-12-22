@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.250 2009/12/22 13:54:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.251 2009/12/22 20:46:21 scarabeus Exp $
+
+  22 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.7.ebuild:
+  Sync with in-overlay updates prepared for 7.7 final release.
 
   22 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   -mesa-7.6.1_rc4.ebuild, -mesa-7.7_rc3.ebuild:
