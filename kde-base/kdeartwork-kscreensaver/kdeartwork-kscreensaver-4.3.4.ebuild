@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.3.4.ebuild,v 1.1 2009/12/01 10:13:44 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.3.4.ebuild,v 1.2 2009/12/22 23:26:30 abcd Exp $
 
 EAPI="2"
 
@@ -36,11 +36,12 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DKSCREENSAVER_SOUND_SUPPORT=ON
 		$(cmake-utils_use_with eigen Eigen2)
 		$(cmake-utils_use_with opengl OpenGL)
-		$(cmake-utils_use_with xscreensaver)"
+		$(cmake-utils_use_with xscreensaver)
+	)
 
 	kde4-meta_src_configure
 }
