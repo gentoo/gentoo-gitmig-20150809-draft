@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36-r3.ebuild,v 1.4 2009/02/19 18:27:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36-r3.ebuild,v 1.5 2009/12/22 21:45:32 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,8 @@ src_compile() {
 	use kernel_linux && PEERCRED="-DHASPEERCRED=1"
 	echo "$(tc-getCC) ${CFLAGS} -I/usr/lib/bglibs/include ${PEERCRED} -D_GNU_SOURCE" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS} -L/usr/lib/bglibs/lib" > conf-ld
-	make || die  #don't use emake b/c of jobserver
+	# fails parallel build, bug #297986
+	emake -j1 || die
 }
 
 src_install() {

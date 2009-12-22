@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-unix
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.22 2009/02/19 18:27:46 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.23 2009/12/22 21:45:32 flameeyes Exp $
+
+  22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ucspi-unix-0.36-r3.ebuild:
+  Use emake -j1 for build, bug #297986.
 
   19 Feb 2009; nixnut <nixnut@gentoo.org> ucspi-unix-0.36-r3.ebuild:
   ppc stable #258261
