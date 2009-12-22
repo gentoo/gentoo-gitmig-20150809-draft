@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dchub
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.23 2008/04/13 21:48:15 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.24 2009/12/22 21:18:18 flameeyes Exp $
+
+  22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> dchub-0.5.2.ebuild:
+  Fix obvious typo.
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> dchub-0.5.2.ebuild:
   Remove RDEPEND on virtual/libc and fix quoting.
