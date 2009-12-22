@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.5.ebuild,v 1.2 2009/12/20 15:18:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.5.ebuild,v 1.3 2009/12/22 09:23:25 fauli Exp $
 
 inherit gnome2 ruby
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://rubyforge/${PN}/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="evo"
 
 DOCS="ChangeLog README TODO"
