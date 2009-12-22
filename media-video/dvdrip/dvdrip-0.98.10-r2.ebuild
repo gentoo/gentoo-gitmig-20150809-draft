@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.10-r2.ebuild,v 1.4 2009/03/11 08:22:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.10-r2.ebuild,v 1.5 2009/12/22 13:52:25 ssuominen Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.exit1.org/dvdrip/dist/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ffmpeg fping hal mplayer ogg subtitles vcd vorbis xine xvid"
 
 DEPEND=">=dev-perl/Event-ExecFlow-0.63
@@ -39,6 +39,8 @@ RDEPEND="${DEPEND}
 	xine? ( media-video/xine-ui )
 	xvid? ( media-video/xvid4conf )
 	>=media-video/lsdvd-0.15"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
 	filter-flags "-ftracer"
