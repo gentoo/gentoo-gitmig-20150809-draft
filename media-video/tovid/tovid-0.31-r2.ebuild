@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31-r2.ebuild,v 1.1 2009/12/22 11:32:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31-r2.ebuild,v 1.2 2009/12/22 11:36:42 ssuominen Exp $
 
 inherit eutils python
 
@@ -26,7 +26,7 @@ RDEPEND="media-video/mjpegtools
 	app-cdr/cdrdao
 	dev-python/imaging
 	sys-devel/bc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
