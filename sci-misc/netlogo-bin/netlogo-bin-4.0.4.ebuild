@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-4.0.4.ebuild,v 1.1 2009/11/03 20:36:14 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-4.0.4.ebuild,v 1.2 2009/12/22 23:58:23 caster Exp $
 
 inherit eutils java-pkg-2
 #RESTRICT="fetch"
@@ -13,10 +13,8 @@ SRC_URI="http://ccl.northwestern.edu/netlogo/${PV}/${MY_P}.tar.gz"
 LICENSE="netlogo"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-DEPEND="app-arch/unzip
-		>=virtual/jdk-1.4"
-
-RDEPEND=">=virtual/jre-1.4"
+DEPEND=""
+RDEPEND=">=virtual/jre-1.5"
 
 IUSE=""
 
