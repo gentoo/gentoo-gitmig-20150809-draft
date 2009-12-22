@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.3.4.ebuild,v 1.1 2009/12/01 10:01:04 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.3.4.ebuild,v 1.2 2009/12/22 22:57:55 abcd Exp $
 
 EAPI="2"
 
@@ -19,11 +19,16 @@ RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY="libkdeedu/kdeeduui"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.3.2-solaris-graph2d.patch
+)
+
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with readline)
 		$(cmake-utils_use_with plasma)
-		$(cmake-utils_use_with opengl OpenGL)"
+		$(cmake-utils_use_with opengl OpenGL)
+	)
 
 	kde4-meta_src_configure
 }
