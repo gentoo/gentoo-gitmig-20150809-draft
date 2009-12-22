@@ -1,0 +1,12 @@
+diff -uNr dahdi-tools-2.2.0.ORIG/xpp/Makefile dahdi-tools-2.2.0/xpp/Makefile
+--- dahdi-tools-2.2.0.ORIG/xpp/Makefile	2009-12-22 11:31:02.000000000 +0000
++++ dahdi-tools-2.2.0/xpp/Makefile	2009-12-22 11:32:59.000000000 +0000
+@@ -28,7 +28,7 @@
+ DATADIR		= $(datadir)/dahdi
+ MANDIR		= $(mandir)/man8
+ HOTPLUG_USB_DIR	= /etc/hotplug/usb
+-PERLLIBDIR	:= $(shell eval `perl -V:sitelib`; echo "$$sitelib")
++PERLLIBDIR	:= $(shell eval `perl -V:vendorlib`; echo "$$vendorlib")
+ PERL_DIRS	:= $(shell cd perl_modules; find * -name '[A-Z]*' -type d| xargs)
+ PERL_MODS_PAT	:= *.pm $(PERL_DIRS:%=%/*.pm)
+ PERL_MODS	:= $(shell cd perl_modules; echo $(PERL_MODS_PAT))
