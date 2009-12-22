@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.77 2009/12/07 08:03:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.78 2009/12/22 15:54:43 aballier Exp $
+
+*lablgtk-2.14.0-r1 (22 Dec 2009)
+
+  22 Dec 2009; Alexis Ballier <aballier@gentoo.org>
+  +lablgtk-2.14.0-r1.ebuild, +files/lablgtk-2.14.0-sourceview2.patch:
+  Add gtksourceview2 support and use it instead of 1.x versions; patch by
+  Rafał Mużyło <galtgendo@o2.pl>, bug #295515
 
   07 Dec 2009; Alexis Ballier <aballier@gentoo.org> -lablgtk-2.10.1.ebuild:
   remove old
