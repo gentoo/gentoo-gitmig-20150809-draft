@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.22 2009/12/20 15:47:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.23 2009/12/22 18:51:24 ranger Exp $
+
+  22 Dec 2009; Brent Baude <ranger@gentoo.org> virtualenv-1.4.3.ebuild:
+  Marking virtualenv-1.4.3 ppc64 for bug 296679
 
   20 Dec 2009; Fabian Groffen <grobian@gentoo.org> virtualenv-1.4.3.ebuild:
   Merged keywords from Prefix
