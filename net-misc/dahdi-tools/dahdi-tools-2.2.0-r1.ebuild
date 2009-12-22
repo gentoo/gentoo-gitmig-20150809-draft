@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.2.0-r1.ebuild,v 1.3 2009/12/22 13:58:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.2.0-r1.ebuild,v 1.4 2009/12/22 14:27:48 chainsaw Exp $
 
 EAPI=1
 inherit eutils
@@ -16,17 +16,15 @@ IUSE=""
 
 DEPEND="net-misc/dahdi
 	!net-misc/zaptel
+	>=sys-kernel/linux-headers-2.6.29
 	virtual/libusb:0"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# Work around broken 07_all_pull-libc-headers-linux.patch
-	# that seemingly nobody wants to fix.
-	if ! has_version "=sys-kernel/linux-headers-2.6.29"; then
-		epatch "${FILESDIR}/${P}-ifreq.patch"
-	fi
+
+	epatch "${FILESDIR}/${P}-ifreq.patch"
 	epatch "${FILESDIR}/${P}-modprobe-suffix.patch"
 	epatch "${FILESDIR}/${P}-vendorlib.patch"
 	epatch "${FILESDIR}/${P}-no-hardware-fiddling.patch"

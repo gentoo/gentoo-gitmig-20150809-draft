@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.4 2009/12/22 13:55:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.5 2009/12/22 14:27:48 chainsaw Exp $
 
   22 Dec 2009; <chainsaw@gentoo.org> dahdi-tools-2.2.0-r1.ebuild:
-  The broken/working mix of linux-headers available is more complicated then
-  initially expected.
+  I have stopped entertaining the notion that the 2.6.28-r1 linux-headers
+  are usable.
 
 *dahdi-tools-2.2.0-r1 (22 Dec 2009)
 
