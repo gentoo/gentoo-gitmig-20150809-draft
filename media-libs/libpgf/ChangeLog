@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libpgf
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.1 2009/12/22 17:53:48 ssuominen Exp $
+
+*libpgf-6.09.44 (22 Dec 2009)
+
+  22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +libpgf-6.09.44.ebuild:
+  Initial commit wrt #297914 by Azamat H. Hackimov (This will be required
+  for unbundling media-gfx/digikam libraries).
+
