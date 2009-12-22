@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.14 2006/12/01 20:57:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.15 2009/12/22 22:15:11 flameeyes Exp $
 
 inherit eutils games
 
@@ -39,7 +39,9 @@ src_compile() {
 		$(use_with X x) \
 		$(use_with X xshogi) || die
 	addpredict /usr/games/lib/gnushogi/gnushogi.hsh
-	emake || die "emake failed"
+
+	# bug #298017
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
