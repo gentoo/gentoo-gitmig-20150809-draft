@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.89 2009/11/13 00:37:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.90 2009/12/22 18:42:41 ranger Exp $
+
+  22 Dec 2009; Brent Baude <ranger@gentoo.org> psycopg-2.0.13.ebuild:
+  Marking psycopg-2.0.13 ppc64 for bug 296676
 
 *psycopg-2.0.13 (13 Nov 2009)
 
