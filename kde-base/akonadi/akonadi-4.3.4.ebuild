@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.4.ebuild,v 1.1 2009/12/01 09:55:21 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.4.ebuild,v 1.2 2009/12/22 22:31:03 abcd Exp $
 
 EAPI="2"
 
@@ -52,19 +52,20 @@ src_prepare() {
 }
 
 src_configure() {
-	# Set the dbus dirs, otherwise it searches in KDEDIR
-	mycmakeargs="${mycmakeargs}
-		-DAKONADI_DBUS_INTERFACES_INSTALL_DIR=/usr/share/dbus-1/interfaces
-		-DAKONADI_DBUS_SERVICES_INSTALL_DIR=/usr/share/dbus-1/services"
-	# replace with $(cmake-utils_use_with exchange OpenChange) when libmapi becomes available with an ebuild
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
+		# Set the dbus dirs, otherwise it searches in KDEDIR
+		-DAKONADI_DBUS_INTERFACES_INSTALL_DIR="${EPREFIX}/usr/share/dbus-1/interfaces"
+		-DAKONADI_DBUS_SERVICES_INSTALL_DIR="${EPREFIX}/usr/share/dbus-1/services"
+
 		-DWITH_LibXslt=ON
+		# replace with $(cmake-utils_use_with exchange OpenChange) when libmapi becomes available with an ebuild
 		-DWITH_OpenChange=OFF
 		-DWITH_GNOKII=OFF
 		-DWITH_GLIB2=OFF
 		-DWITH_OpenSync=OFF
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with semantic-desktop Soprano)"
+		$(cmake-utils_use_with semantic-desktop Soprano)
+	)
 
 	${eclass}_src_configure
 }
@@ -84,5 +85,5 @@ src_test() {
 src_install() {
 	${eclass}_src_install
 	# colliding files with nepomuk
-	rm -rf "${D}"/${KDEDIR}/share/apps/nepomuk/ontologies/n{m,c}o.{desktop,trig}
+	rm -rf "${ED}"/${KDEDIR}/share/apps/nepomuk/ontologies/n{m,c}o.{desktop,trig}
 }
