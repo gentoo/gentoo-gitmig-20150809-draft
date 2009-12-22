@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.12.0.ebuild,v 1.1 2009/10/15 06:16:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.12.0.ebuild,v 1.2 2009/12/22 01:05:51 mr_bones_ Exp $
 
 EAPI=2
-inherit games
+inherit eutils games
 
 DESCRIPTION="Client for the nethack-style but more in the line of UO"
 HOMEPAGE="http://crossfire.real-time.com/"
@@ -16,7 +16,7 @@ IUSE="alsa gtk oss sdl"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	gtk? ( x11-libs/gtk+:2
-		sdl? ( media-libs/libsdl
+		sdl? ( media-libs/libsdl[video]
 			media-libs/sdl-image ) )
 	virtual/glut
 	media-libs/libpng
@@ -29,6 +29,7 @@ src_prepare() {
 		-r '/^.TH/s:$: 6:' \
 		$(find . -name "*man") \
 		|| die "sed failed"
+	epatch "${FILESDIR}/${P}-lua.patch"
 }
 
 src_configure() {
