@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/vips
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.18 2009/09/29 11:48:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.19 2009/12/22 11:03:45 pva Exp $
+
+*vips-7.20.6 (22 Dec 2009)
+
+  22 Dec 2009; Peter Volkov <pva@gentoo.org> +vips-7.20.6.ebuild:
+  Version bump. Thank upstream (John) for helping us to fix test failures.
 
   29 Sep 2009; Markus Meier <maekke@gentoo.org> vips-7.18.2.ebuild:
   amd64/x86 stable, bug #284516
