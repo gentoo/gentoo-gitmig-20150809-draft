@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/aoi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.24 2009/11/01 14:08:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.25 2009/12/23 00:23:31 caster Exp $
+
+  23 Dec 2009; Vlastimil Babka <caster@gentoo.org> aoi-2.7.2.ebuild:
+  Raise jre dep to 1.5 as the jar contains 1.5 bytecode. Fixes bug #297462.
 
 *aoi-2.7.2 (01 Nov 2009)
 
