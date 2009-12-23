@@ -1,6 +1,0 @@
-#%PAM-1.0
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/files/uw-imap.pam-system-auth,v 1.3 2004/07/18 04:05:21 dragonheart Exp $
-auth       required     pam_nologin.so
-auth       required     pam_stack.so service=system-auth
-account    required     pam_stack.so service=system-auth
-session    required     pam_stack.so service=system-auth
