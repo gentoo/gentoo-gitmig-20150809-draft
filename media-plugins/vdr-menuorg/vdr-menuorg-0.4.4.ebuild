@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/vdr-menuorg-0.4.4.ebuild,v 1.2 2009/08/11 18:05:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/vdr-menuorg-0.4.4.ebuild,v 1.3 2009/12/23 20:56:20 hd_brummy Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit vdr-plugin
 
@@ -15,18 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.5.18
+DEPEND=">=media-video/vdr-1.5.18[menuorg]
 	dev-cpp/libxmlpp:2.6
 	dev-cpp/glibmm"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if [[ ! -f /usr/include/vdr/menuorgpatch.h ]]; then
-		eerror "please compile VDR with USE=\"menuorg\""
-		die "can not compile packet without menuorg-support from vdr"
-	fi
-	vdr-plugin_pkg_setup
-}
 
 src_install() {
 	vdr-plugin_src_install

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-menuorg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.8 2009/08/11 18:05:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.9 2009/12/23 20:56:20 hd_brummy Exp $
+
+  23 Dec 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-menuorg-0.4.4.ebuild:
+  eapi=2; bug #297976
 
   11 Aug 2009; Matthias Schwarzott <zzam@gentoo.org>
   -vdr-menuorg-0.3.ebuild, -vdr-menuorg-0.3.2.ebuild,
