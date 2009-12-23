@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.23 2009/12/23 17:16:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.24 2009/12/23 17:19:47 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop unused local flag.
 
   23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -virt-manager-0.7.0-r1.ebuild, -virt-manager-0.8.0.ebuild,
