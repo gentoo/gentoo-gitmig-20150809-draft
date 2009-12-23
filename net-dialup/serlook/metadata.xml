@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>kde</herd>
-<herd>net-dialup</herd>
-<longdescription>serlook is a tool aimed to inspect and debug serial line data traffic developed in a Linux+KDE environment.</longdescription>
-</pkgmetadata>
