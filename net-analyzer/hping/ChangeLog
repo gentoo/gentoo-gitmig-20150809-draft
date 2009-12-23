@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.47 2009/12/22 21:19:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.48 2009/12/23 14:02:25 jer Exp $
+
+  23 Dec 2009; Jeroen Roovers <jer@gentoo.org>
+  hping-3_pre20051105-r1.ebuild, +files/hping-3_pre20051105-libtcl.patch:
+  Build the Tcl linker arguments more reliably (bug #247282).
 
   22 Dec 2009; Jeroen Roovers <jer@gentoo.org> hping-2.0.0_rc3-r2.ebuild:
   Do not install COPYING. Break up long line.

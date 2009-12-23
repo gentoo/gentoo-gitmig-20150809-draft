@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r1.ebuild,v 1.2 2009/12/22 21:17:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r1.ebuild,v 1.3 2009/12/23 14:02:25 jer Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -27,7 +27,8 @@ src_unpack() {
 		"${FILESDIR}"/${P}.patch \
 		"${FILESDIR}"/bytesex.h.patch \
 		"${FILESDIR}"/${P}-tcl.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-libtcl.patch
 
 	# Correct hard coded values
 	sed -i Makefile.in \
