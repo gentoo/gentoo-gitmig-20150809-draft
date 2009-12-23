@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.4.ebuild,v 1.1 2009/12/01 10:56:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.4.ebuild,v 1.2 2009/12/23 00:37:38 abcd Exp $
 
 EAPI="2"
 
@@ -66,8 +66,8 @@ IUSE="${IUSE} ${PLUGINS} ${PROTOCOLS}"
 COMMONDEPEND="
 	dev-libs/libpcre
 	$(add_kdebase_dep kdepimlibs)
-	x11-libs/libXScrnSaver
 	>=x11-libs/qt-gui-4.4.0:4[mng]
+	!aqua? ( x11-libs/libXScrnSaver )
 	gadu? ( >=net-libs/libgadu-1.8.0[threads] )
 	groupwise? ( app-crypt/qca:2 )
 	jabber? (
@@ -90,7 +90,7 @@ RDEPEND="${COMMONDEPEND}
 "
 #	telepathy? ( net-libs/decibel )"
 DEPEND="${COMMONDEPEND}
-	x11-proto/scrnsaverproto
+	!aqua? ( x11-proto/scrnsaverproto )
 "
 PDEPEND="
 	facebook? ( net-im/kopete-facebook )
@@ -99,15 +99,15 @@ PDEPEND="
 src_configure() {
 	local x x2
 	# Disable old msn support.
-	mycmakeargs="${mycmakeargs} -DWITH_msn=OFF"
+	mycmakeargs=(-DWITH_msn=OFF)
 	# enable protocols
 	for x in ${PROTOCOLS}; do
 		[[ ${x/+/} = msn ]] && x2=wlm || x2=""
-		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with ${x/+/} ${x2})"
+		mycmakeargs+=($(cmake-utils_use_with ${x/+/} ${x2}))
 	done
 	# enable plugins
 	for x in ${PLUGINS}; do
-		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with ${x/+/})"
+		mycmakeargs+=($(cmake-utils_use_with ${x/+/}))
 	done
 
 	kde4-meta_src_configure
@@ -119,7 +119,7 @@ pkg_postinst() {
 	#if use telepathy; then
 	#	elog "To use kopete telepathy plugins, you need to start gabble first:"
 	#	elog "GABBLE_PERSIST=1 telepathy-gabble &"
-	#	elog "export TELEPATHY_DATA_PATH=/usr/share/telepathy/managers/"
+	#	elog "export TELEPATHY_DATA_PATH='${EPREFIX}/usr/share/telepathy/managers/'"
 	#fi
 
 	if ! use ssl; then
