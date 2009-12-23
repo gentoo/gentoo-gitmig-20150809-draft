@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.91 2009/12/11 11:45:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.92 2009/12/23 15:12:36 ssuominen Exp $
+
+*psmisc-22.8-r1 (23 Dec 2009)
+
+  23 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +psmisc-22.8-r1.ebuild, +files/psmisc-22.8-fuser-r159.patch:
+  Fix segmentation fault with false options e.g. "fuser --help" wrt #297423
+  and everything up to fuser.c Rev. 1.59, fuser.h Rev. 1.7.
 
 *psmisc-22.8 (11 Dec 2009)
 
