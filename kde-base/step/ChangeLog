@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.38 2009/12/11 00:01:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.39 2009/12/23 01:45:16 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  +files/step-4.3.2-solaris.patch, step-4.3.4.ebuild:
+  Pull in changes from overlay; add patch for prefix support (Solaris)
 
   11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -step-4.3.1.ebuild:
   Drop KDE SC-4.3.1.
