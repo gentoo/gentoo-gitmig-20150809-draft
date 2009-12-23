@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.282 2009/12/22 21:25:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.283 2009/12/23 18:27:22 pacho Exp $
+
+  23 Dec 2009; Pacho Ramos <pacho@gentoo.org> xulrunner-1.9.1.6.ebuild:
+  amd64 stable, bug 297532
 
   22 Dec 2009; Jeroen Roovers <jer@gentoo.org> xulrunner-1.9.1.6.ebuild:
   Stable for PPC (bug #297658).
