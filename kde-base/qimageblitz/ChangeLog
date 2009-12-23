@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.14 2009/11/30 04:50:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.15 2009/12/23 03:29:33 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> qimageblitz-0.0.4.ebuild:
+  Add prefix keywords from heiko overlay
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> qimageblitz-0.0.4.ebuild:
   Marked ppc/ppc64 stable.
