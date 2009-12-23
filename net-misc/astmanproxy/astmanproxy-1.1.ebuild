@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/astmanproxy-1.1.ebuild,v 1.5 2009/09/23 19:33:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/astmanproxy-1.1.ebuild,v 1.6 2009/12/23 12:52:19 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -29,7 +29,8 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	# bug #298082
+	emake -j1 DESTDIR="${D}" install || die
 
 	dodoc README README.* VERSIONS astmanproxy.conf
 

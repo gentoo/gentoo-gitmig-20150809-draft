@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/astmanproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/ChangeLog,v 1.7 2009/09/23 19:33:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/ChangeLog,v 1.8 2009/12/23 12:52:19 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  astmanproxy-1.1.ebuild:
+  Use emake -j1 for install, as per bug #298092.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> astmanproxy-1.1.ebuild:
   Remove virtual/libc
