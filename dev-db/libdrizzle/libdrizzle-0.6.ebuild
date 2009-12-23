@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdrizzle/libdrizzle-0.6.ebuild,v 1.1 2009/12/20 21:16:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdrizzle/libdrizzle-0.6.ebuild,v 1.2 2009/12/23 18:19:22 flameeyes Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/libdrizzle/trunk/${PV}/+download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="debug tcmalloc +sqlite"
+IUSE="debug tcmalloc +sqlite static-libs"
 
 RDEPEND="tcmalloc? ( dev-util/google-perftools )
 	sqlite? ( dev-db/sqlite:3 )"
@@ -33,6 +33,7 @@ src_configure() {
 	fi
 
 	econf \
+		--disable-static \
 		--disable-dependency-tracking \
 		--disable-mtmalloc \
 		$(use_enable tcmalloc) \
@@ -42,4 +43,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS PROTOCOL README || die
+
+	find "${D}" -name '*.la' -delete || die
 }

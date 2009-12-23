@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libdrizzle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdrizzle/ChangeLog,v 1.1 2009/12/20 21:16:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdrizzle/ChangeLog,v 1.2 2009/12/23 18:19:22 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  libdrizzle-0.6.ebuild:
+  Disable static libraries by default and remove .la files.
 
 *libdrizzle-0.6 (20 Dec 2009)
 
