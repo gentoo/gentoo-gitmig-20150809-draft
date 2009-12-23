@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virt-viewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.6 2009/12/15 16:41:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.7 2009/12/23 17:27:45 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -virt-viewer-0.0.3.ebuild:
+  Cleanup old versions.
 
   15 Dec 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   change to virtualization herd
