@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libidmef
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libidmef/ChangeLog,v 1.6 2008/04/21 17:11:10 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libidmef/ChangeLog,v 1.7 2009/12/23 16:53:51 vostorga Exp $
+
+  23 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> -libidmef-0.7.2.ebuild,
+  libidmef-1.0.2_beta1.ebuild:
+  Fixing repoman complaints, fixing missing documentation files , bug
+  #298001
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
