@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-4.3.4.ebuild,v 1.1 2009/12/01 10:27:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-4.3.4.ebuild,v 1.2 2009/12/23 00:03:47 abcd Exp $
 
 EAPI="2"
 
@@ -30,13 +30,13 @@ KMEXTRACTONLY="
 "
 
 src_prepare() {
-	ln -s "${PREFIX}"/include/kdepim-kresources/{kabc,kcal,knotes}_egroupwareprefs.h \
+	ln -s "${EKDEDIR}"/include/kdepim-kresources/{kabc,kcal,knotes}_egroupwareprefs.h \
 		kresources/egroupware/ \
 		|| die "Failed to link extra_headers."
-	ln -s "${PREFIX}"/include/kdepim-kresources/{kabcsloxprefs.h,kcalsloxprefs.h} \
+	ln -s "${EKDEDIR}"/include/kdepim-kresources/{kabcsloxprefs.h,kcalsloxprefs.h} \
 		kresources/slox/ \
 		|| die "Failed to link extra_headers."
-	ln -s "${PREFIX}"/include/kdepim-kresources/{kabc_groupwiseprefs,kcal_groupwiseprefsbase}.h \
+	ln -s "${EKDEDIR}"/include/kdepim-kresources/{kabc_groupwiseprefs,kcal_groupwiseprefsbase}.h \
 		kresources/groupwise/ \
 		|| die "Failed to link extra_headers."
 
