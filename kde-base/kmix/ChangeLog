@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.143 2009/12/10 21:35:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.144 2009/12/23 00:29:34 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  +files/kmix-4.3.2-solaris.patch, kmix-4.3.4.ebuild:
+  Pull in changes from overlay and patch for prefix support (Solaris)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kmix-4.3.1.ebuild:
   Drop KDE SC-4.3.1.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-4.3.4.ebuild,v 1.1 2009/12/01 10:48:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-4.3.4.ebuild,v 1.2 2009/12/23 00:29:34 abcd Exp $
 
 EAPI="2"
 
@@ -17,10 +17,13 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=( "${FILESDIR}"/${PN}-4.3.2-solaris.patch )
+
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with pulseaudio PulseAudio)
-		$(cmake-utils_use_with alsa)"
+		$(cmake-utils_use_with alsa)
+	)
 
 	kde4-meta_src_configure
 }
