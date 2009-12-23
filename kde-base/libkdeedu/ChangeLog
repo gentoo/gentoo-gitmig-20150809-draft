@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.135 2009/12/10 23:14:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.136 2009/12/23 01:10:13 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> libkdeedu-4.3.4.ebuild:
+  Fix prefix support
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libkdeedu-4.3.1.ebuild:
