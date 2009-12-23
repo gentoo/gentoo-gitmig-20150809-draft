@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.45 2009/12/23 16:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.46 2009/12/23 18:09:24 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  libvirt-0.7.5.ebuild:
+  Disable static libraries by default and remove .la files.
 
 *libvirt-0.7.5 (23 Dec 2009)
 

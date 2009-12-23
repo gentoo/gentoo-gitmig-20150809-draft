@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.5.ebuild,v 1.1 2009/12/23 16:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.5.ebuild,v 1.2 2009/12/23 18:09:24 flameeyes Exp $
 
 BACKPORTS=
 
@@ -117,6 +117,7 @@ src_configure() {
 
 	econf \
 		${myconf} \
+		--disable-static \
 		--docdir=/usr/share/doc/${PF} \
 		--with-remote \
 		--localstatedir=/var \
@@ -140,6 +141,8 @@ src_install() {
 	newconfd "${FILESDIR}/libvirtd.confd" libvirtd || die
 
 	keepdir /var/lib/libvirt/images
+
+	find "${D}" -name '*.la' -delete || die
 }
 
 pkg_preinst() {
