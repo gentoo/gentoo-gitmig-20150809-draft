@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.4-r2.ebuild,v 1.1 2009/12/11 12:33:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.4-r2.ebuild,v 1.2 2009/12/23 06:01:52 ramereth Exp $
 
 BACKPORTS=1
 
@@ -41,7 +41,7 @@ RDEPEND="sys-libs/readline
 	parted? ( >=sys-apps/parted-1.8 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/policykit-0.6 )
-	qemu? ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
+	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sys-libs/libselinux )
 	virtualbox? ( || ( >=app-emulation/virtualbox-ose-2.2.0 >=app-emulation/virtualbox-bin-2.2.0 ) )
