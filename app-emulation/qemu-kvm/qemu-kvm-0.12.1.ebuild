@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.5 2009/12/21 20:50:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.1.ebuild,v 1.6 2009/12/23 16:21:26 cardoe Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+aio alsa bluetooth curl esd gnutls fdt hardened kvm-trace ncurses \
-pulseaudio sasl +sdl vde xen"
+pulseaudio sasl +sdl vde"
+#xen
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 
@@ -139,7 +140,8 @@ src_configure() {
 	use sasl || conf_opts="${conf_opts} --disable-vnc-sasl"
 	use sdl || conf_opts="${conf_opts} --disable-sdl"
 	use vde || conf_opts="${conf_opts} --disable-vde"
-	conf_opts="${conf_opts} $(use_enable xen)"
+#	conf_opts="${conf_opts} $(use_enable xen)"
+	conf_opts="${conf_opts} --disable-xen"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
 
 	# audio options

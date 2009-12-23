@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.9 2009/12/22 13:51:33 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.10 2009/12/23 16:21:26 cardoe Exp $
+
+  23 Dec 2009; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.12.1.ebuild,
+  qemu-kvm-0.12.1.1.ebuild:
+  Xen backend support is broken in this release. Upstream is looking into
+  it.
 
 *qemu-kvm-0.12.1.1 (22 Dec 2009)
 
