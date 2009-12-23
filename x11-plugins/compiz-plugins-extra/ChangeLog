@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/compiz-plugins-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.9 2009/12/20 15:34:07 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.10 2009/12/23 02:48:15 jmbsvicetto Exp $
+
+  23 Dec 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compiz-plugins-extra-0.8.4.ebuild, compiz-plugins-extra-0.8.4-r1.ebuild:
+  Dropped block for old package name now that I've finally set the pkg move.
 
   20 Dec 2009; Romain Perier <mrpouet@gentoo.org>
   -compiz-plugins-extra-0.8.2.ebuild:

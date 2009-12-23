@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.4.ebuild,v 1.1 2009/10/15 17:16:55 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.4.ebuild,v 1.2 2009/12/23 02:48:15 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="gnome"
 
 RDEPEND="
-	!x11-plugins/compiz-fusion-plugins-extra
 	>=gnome-base/librsvg-2.14.0
 	media-libs/jpeg
 	~x11-libs/compiz-bcop-${PV}
