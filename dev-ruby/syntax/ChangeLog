@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.19 2009/12/21 00:07:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.20 2009/12/23 12:28:51 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  syntax-1.0.0-r1.ebuild:
+  Disable rake tasks for fakegem since the package does not ship a Rakefile.
+  Closes bug #298076.
 
 *syntax-1.0.0-r1 (21 Dec 2009)
 
