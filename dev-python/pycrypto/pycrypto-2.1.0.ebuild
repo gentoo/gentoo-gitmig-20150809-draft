@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0.ebuild,v 1.1 2009/12/13 21:29:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0.ebuild,v 1.2 2009/12/23 23:36:24 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -46,15 +46,7 @@ src_compile() {
 	if use doc; then
 		rst2html.py Doc/pycrypt.rst > Doc/index.html
 
-		# Build documentation only once.
-		documentation_built="0"
-		generate_documentation() {
-			[[ "${documentation_built}" == "1" ]] && return
-			PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" epydoc --config=Doc/epydoc-config --exclude-introspect="^Crypto\.(Random\.OSRNG\.nt|Util\.winrandom)$" || die "Generation of documentation failed"
-			documentation_built="1"
-		}
-		python_execute_function -q generate_documentation
-		unset documentation_built
+		PYTHONPATH="$(ls -d build-$(PYTHON -A -f)/lib.*)" epydoc --config=Doc/epydoc-config --exclude-introspect="^Crypto\.(Random\.OSRNG\.nt|Util\.winrandom)$" || die "Generation of documentation failed"
 	fi
 }
 
