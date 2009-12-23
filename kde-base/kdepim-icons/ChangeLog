@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-icons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.35 2009/12/22 23:51:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.36 2009/12/23 11:57:39 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  kdepim-icons-4.3.4.ebuild:
+  Fix accidential rm from root filesystem, ED is not defined in this EAPI.
 
   22 Dec 2009; Jonathan Callen <abcd@gentoo.org> kdepim-icons-4.3.4.ebuild:
   Fix prefix support
