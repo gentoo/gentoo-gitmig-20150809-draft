@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10990 2009/12/23 16:36:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10991 2009/12/23 17:47:44 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -450,11 +450,6 @@ sci-chemistry/coot
 # Removal on 2010-02-02
 x11-misc/seyon
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (04 Dec 2009)
-# Mask coreutils 8.1 because of broken rm that can cause major issues.
-# For more info see bug #295654.
-=sys-apps/coreutils-8.1
-
 # Joerg Bornkessel <hd_brummy@gentoo.org> (02 Dec 2009)
 # cvs ebuild vdr-xineliboutput-9999 masked for lifetime
 =media-plugins/vdr-xineliboutput-9999
@@ -565,81 +560,14 @@ sys-apps/inputd
 # kvm-kmod upstream package
 app-emulation/kvm-kmod
 
-# Torsten Veller <tove@gentoo.org> (22 Nov 2009)
-# Masked for removal. Probably vulnerable
-# GLSA 200502-02 and 200510-10
-net-mail/vimap
-
-# Tobias Scherbaum <dertobi123@gentoo.org> (22 Nov 2009)
-# Masked for removal in 30 days. Not of any use anymore.
-app-admin/eselect-oracle
-
-# Justin Bronder <jsbronder@gentoo.org> (20 Nov 2009)
-# Masked for removal in 30 days.  sys-cluster/osc-mpiexec
-# is a fully functional replacement.  Bug #293861
-sys-cluster/mpiexec
-
-# Peter Volkov <pva@gentoo.org> (17 Nov 2009)
-# Masked for removal. Use app-text/ghostscript-gpl - most up to date version
-# of ghostscipt. Bug #264614.
-app-text/ghostscript-gnu
-
-# Vlastimil Babka <caster@gentoo.org> (17 Nov 2009)
-# Removal for EOL and security, bug #287615
-=app-emulation/emul-linux-x86-java-1.4*
-=dev-java/sun-jdk-1.4*
-=dev-java/sun-jre-bin-1.4*
-=dev-java/ibm-jre-bin-1.4*
-dev-java/blackdown-jre
-dev-java/blackdown-jdk
-=java-virtuals/jdk-with-com-sun-1.4*
-
-# Rémi Cardona <remi@gentoo.org> (15 Nov 2009)
-# Tomáš Chvátal <scarabeus@gentoo.org> (18 Nov 2009)
-# Broken since xorg-server 1.5 stabilization
-# see bugs #248529 and #248531 and #275825
-# Masked for removal in 7 days
-x11-drivers/xf86-video-vga
-x11-drivers/xf86-video-imstt
-x11-drivers/xf86-video-vermilion
-
 # Ulrich Mueller <ulm@gentoo.org> (15 Nov 2009)
 # Keep pre-alpha development snapshot and live ebuild masked.
 =app-emacs/gnus-5.13_p*
 ~app-emacs/gnus-9999
 
-# Mike Frysinger <vapier@gentoo.org> (14 Nov 2009)
-# In-tree ebuilds are old, and newer upstream releases are simple GUIs
-# which download/install/update things for you.  And upstream isn't
-# interested in working with packagers.  Will punt in ~30 days.
-app-emulation/cedega
-app-emulation/transgaming-fontinstaller
-app-emulation/transgaming-mozctlinstaller
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (14 Nov 2009)
-# Mask all packages that fail to comply to cmake eclass
-# and where maintainers were not responsive.
-# Will be removed in 30 days
-# See bug #287583 and those added to it.
-<dev-libs/boost-1.35.0-r1
-net-p2p/museek+
-games-arcade/blinkensisters
-sys-apps/initng-ifiles
-sys-apps/initng
-games-rpg/mangos
-dev-lisp/cl-gcc-xml-ffi
-
 # Alexis Ballier <aballier@gentoo.org> (14 Nov 2009)
 # beta release
 >=dev-ml/ocamlnet-3.0_beta
-
-# Samuli Suominen <ssuominen@gentoo.org> (13 Nov 2009)
-# kde-base/kdelibs:3.5 reverse dependencies
-#
-# Masked for removal in 30 days, bug 292791.
-<media-sound/amarok-2
-<app-editors/kile-2.1_beta1
-app-text/kbibtex
 
 # Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
 # beta/experimental drivers
@@ -668,16 +596,6 @@ app-text/kbibtex
 >=media-plugins/mythweather-0.23_alpha1
 >=www-apps/mythweb-0.23_alpha1
 >=media-plugins/mythzoneminder-0.23_alpha1
-
-# Gilles Dartiguelongue <eva@gentoo.org> (08 Nov 2009)
-# Masked for removeal in 30 days. Discontinued upstream support, every user of
-# this library should move to 2.4 slot, bug #280906.
-<net-libs/libsoup-2.24
-
-# Víctor Ostorga <vostorga@gentoo.org> (07 Nov 2009)
-# Upstream dead, URL in package description is offline
-# security vulerability CVE-2008-5136 bug #247985
-net-misc/tkusr
 
 # Rémi Cardona <remi@gentoo.org> (05 Nov 2009)
 # Broken, will stay masked until fixed.
