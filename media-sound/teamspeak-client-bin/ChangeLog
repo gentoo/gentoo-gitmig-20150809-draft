@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/teamspeak-client-bin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.1 2009/12/23 11:31:49 trapni Exp $
+
+*teamspeak-client-bin-3.0.0_beta5 (23 Dec 2009)
+
+  23 Dec 2009; Christian Parpart <trapni@gentoo.org> +files/teamspeak3,
+  +teamspeak-client-bin-3.0.0_beta5.ebuild, +metadata.xml:
+  initial commit of TeamSpeak Client, version 3 (beta) - thanks to bug
+  #297577
+
