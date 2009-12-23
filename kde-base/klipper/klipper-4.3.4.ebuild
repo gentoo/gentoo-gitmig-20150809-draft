@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/klipper-4.3.4.ebuild,v 1.1 2009/12/01 10:45:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/klipper-4.3.4.ebuild,v 1.2 2009/12/23 00:20:16 abcd Exp $
 
 EAPI="2"
 
@@ -14,6 +14,6 @@ IUSE="debug +handbook"
 DEPEND="
 	$(add_kdebase_dep libkworkspace)
 	$(add_kdebase_dep libtaskmanager)
-	x11-libs/libXfixes
+	!aqua? ( x11-libs/libXfixes )
 "
 RDEPEND="${DEPEND}"

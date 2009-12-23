@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.142 2009/12/10 21:25:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.143 2009/12/23 00:20:16 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> klipper-4.3.4.ebuild:
+  Fix prefix support
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -klipper-4.3.1.ebuild:
