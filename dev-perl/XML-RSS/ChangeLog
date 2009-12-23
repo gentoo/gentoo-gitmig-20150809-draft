@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.77 2009/12/10 07:33:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.78 2009/12/23 19:44:23 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> XML-RSS-1.47.ebuild:
+  Marked ~x86-solaris, bug #296509
 
 *XML-RSS-1.47 (10 Dec 2009)
 

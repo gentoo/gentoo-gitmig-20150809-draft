@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-DBI
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.14 2008/12/13 12:51:53 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.15 2009/12/23 19:34:13 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> Template-DBI-2.64.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   13 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   Template-DBI-2.64.ebuild:
