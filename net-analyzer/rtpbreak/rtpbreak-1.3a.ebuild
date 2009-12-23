@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/rtpbreak-1.3a.ebuild,v 1.1 2009/02/05 13:56:41 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/rtpbreak-1.3a.ebuild,v 1.2 2009/12/23 16:16:08 vostorga Exp $
 
 EAPI=1
 
@@ -32,6 +32,6 @@ src_compile() {
 
 src_install() {
 	dobin src/rtpbreak || die "cannot install rtpbreak"
-	dodoc CHANGELOG THANKS
-	dohtml docs/*
+	dodoc CHANGELOG THANKS || die "Failed to install documentation"
+	dohtml doc/* || die "Failed to install documentation"
 }
