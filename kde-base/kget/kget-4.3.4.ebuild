@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.3.4.ebuild,v 1.1 2009/12/01 10:37:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.3.4.ebuild,v 1.2 2009/12/23 00:09:47 abcd Exp $
 
 EAPI="2"
 
@@ -23,12 +23,15 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		-DENABLE_EMBEDDED_TORRENT_SUPPORT=ON -DWITH_KdeWebKit=OFF -DWITH_WebKitPart=OFF
+	mycmakeargs=(
+		-DENABLE_EMBEDDED_TORRENT_SUPPORT=ON
+		-DWITH_KdeWebKit=OFF
+		-DWITH_WebKitPart=OFF
 		$(cmake-utils_use_with plasma)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
-		$(cmake-utils_use_with sqlite)"
+		$(cmake-utils_use_with sqlite)
+	)
 
 	kde4-meta_src_configure
 }
