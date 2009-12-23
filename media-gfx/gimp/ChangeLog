@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.302 2009/12/22 02:41:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.303 2009/12/23 01:19:06 maekke Exp $
+
+  23 Dec 2009; Markus Meier <maekke@gentoo.org> gimp-2.6.8.ebuild:
+  x86 stable, bug #293127
 
   22 Dec 2009; Jeroen Roovers <jer@gentoo.org> gimp-2.6.8.ebuild:
   Stable for HPPA (bug #293127).
