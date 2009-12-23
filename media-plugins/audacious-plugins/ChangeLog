@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.155 2009/12/17 11:27:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.156 2009/12/23 20:03:21 jer Exp $
+
+  23 Dec 2009; Jeroen Roovers <jer@gentoo.org>
+  audacious-plugins-2.2-r2.ebuild:
+  Marked ~hppa (bug #294508).
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   audacious-plugins-2.2-r2.ebuild:
