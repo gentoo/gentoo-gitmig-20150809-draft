@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.3.4.ebuild,v 1.2 2009/12/23 00:07:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.3.4.ebuild,v 1.3 2009/12/23 12:02:23 grobian Exp $
 
 EAPI="2"
 
@@ -65,11 +65,11 @@ src_install() {
 
 	# Customize the kdmrc configuration
 	sed -i -e "s:^.*SessionsDirs=.*$:#&\nSessionsDirs=${EPREFIX}/usr/share/xsessions:" \
-		"${ED}"/${PREFIX}/share/config/kdm/kdmrc \
+		"${D%/}${EPREFIX}"/${PREFIX}/share/config/kdm/kdmrc \
 		|| die "Failed to set SessionsDirs correctly."
 
 	# Don't install empty dir
-	rmdir "${ED}${KDEDIR}"/share/config/kdm/sessions
+	rmdir "${D}${EKDEDIR}"/share/config/kdm/sessions
 }
 
 pkg_postinst() {
@@ -77,15 +77,15 @@ pkg_postinst() {
 
 	# Set the default kdm face icon if it's not already set by the system admin
 	# because this is user-overrideable in that way, it's not in src_install
-	if [[ ! -e "${EROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon" ]]; then
-		mkdir -p "${EROOT}${KDEDIR}/share/apps/kdm/faces"
-		cp "${EROOT}${KDEDIR}/share/apps/kdm/pics/users/default1.png" \
-			"${EROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
+	if [[ ! -e "${ROOT}${EKDEDIR}/share/apps/kdm/faces/.default.face.icon" ]]; then
+		mkdir -p "${ROOT}${EKDEDIR}/share/apps/kdm/faces"
+		cp "${ROOT}${EKDEDIR}/share/apps/kdm/pics/users/default1.png" \
+			"${ROOT}${EKDEDIR}/share/apps/kdm/faces/.default.face.icon"
 	fi
-	if [[ ! -e "${EROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon" ]]; then
-		mkdir -p "${EROOT}${KDEDIR}/share/apps/kdm/faces"
-		cp "${EROOT}${KDEDIR}/share/apps/kdm/pics/users/root1.png" \
-			"${EROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon"
+	if [[ ! -e "${ROOT}${EKDEDIR}/share/apps/kdm/faces/root.face.icon" ]]; then
+		mkdir -p "${ROOT}${EKDEDIR}/share/apps/kdm/faces"
+		cp "${ROOT}${EKDEDIR}/share/apps/kdm/pics/users/root1.png" \
+			"${ROOT}${EKDEDIR}/share/apps/kdm/faces/root.face.icon"
 	fi
 
 	if use consolekit; then
