@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gcc-xml-ffi/cl-gcc-xml-ffi-0.1.3.20051115.ebuild,v 1.2 2006/01/02 17:09:59 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gcc-xml-ffi/cl-gcc-xml-ffi-0.1.3.20051115.ebuild,v 1.3 2009/12/23 17:13:49 scarabeus Exp $
 
 inherit common-lisp eutils
 
@@ -20,23 +20,22 @@ DEPEND="dev-lisp/cl-ch-util
 
 S=${WORKDIR}/${MY_PN}
 
-CLPACKAGE='gcc-xml-ffi gcc-xml-ffi-test'
+CLPACKAGE="gcc-xml-ffi gcc-xml-ffi-test"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-fasl-output-gentoo.patch || die
-	rm ${S}/Makefile
+	epatch "${FILESDIR}/${PV}-fasl-output-gentoo.patch"
+	rm "${S}"/Makefile
 }
 
 src_install() {
-	dodir $CLSYSTEMROOT
-	insinto $CLSOURCEROOT/gcc-xml-ffi
-	doins *.asd
-	insinto $CLSOURCEROOT/gcc-xml-ffi/src/
-	doins src/*.cl
-	insinto $CLSOURCEROOT/gcc-xml-ffi/test/
-	doins test/*.cl
-	dosym ${CLSOURCEROOT}/gcc-xml-ffi/gcc-xml-ffi.asd ${CLSYSTEMROOT}/gcc-xml-ffi.asd
-	dosym ${CLSOURCEROOT}/gcc-xml-ffi/gcc-xml-ffi-test.asd ${CLSYSTEMROOT}/gcc-xml-ffi-test.asd
-	dodoc ChangeLog README
+	insinto "${CLSOURCEROOT}"/gcc-xml-ffi
+	doins *.asd || die
+	insinto "${CLSOURCEROOT}"/gcc-xml-ffi/src/
+	doins src/*.cl || die
+	insinto "${CLSOURCEROOT}"/gcc-xml-ffi/test/
+	doins test/*.cl || die
+	dosym "${CLSOURCEROOT}"/gcc-xml-ffi/gcc-xml-ffi.asd "${CLSYSTEMROOT}"/gcc-xml-ffi.asd
+	dosym "${CLSOURCEROOT}"/gcc-xml-ffi/gcc-xml-ffi-test.asd "${CLSYSTEMROOT}"/gcc-xml-ffi-test.asd
+	dodoc ChangeLog README || die
 }
