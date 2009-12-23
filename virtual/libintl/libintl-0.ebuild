@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/libintl-0.ebuild,v 1.7 2009/12/15 18:18:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/libintl-0.ebuild,v 1.8 2009/12/23 04:13:46 solar Exp $
 
 DESCRIPTION="Virtual for the GNU Internationalization Library"
 HOMEPAGE="http://www.gentoo.org/proj/en/gentoo-alt/"
@@ -12,5 +12,5 @@ IUSE=""
 DEPEND=""
 
 # - Don't put elibc_glibc? ( sys-libs/glibc ) to avoid circular deps between
-# that and gcc
-RDEPEND="!elibc_glibc? ( sys-devel/gettext )"
+# that and gcc. And don't force uClibc to dep on this.
+RDEPEND="!elibc_glibc? ( !elibc_uclibc? ( sys-devel/gettext ) )"
