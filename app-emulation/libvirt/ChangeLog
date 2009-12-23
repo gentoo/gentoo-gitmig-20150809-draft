@@ -1,6 +1,26 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.44 2009/12/23 06:01:52 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.45 2009/12/23 16:58:55 flameeyes Exp $
+
+*libvirt-0.7.5 (23 Dec 2009)
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/libvirt-0.6.2-enable-qemu-0-10-migration.patch,
+  -files/libvirt-0.6.2-fix-nosource-label.patch,
+  -files/libvirt-0.6.2-shared-readonly-label.patch,
+  -files/libvirt-0.6.3-hostdev-managed.patch,
+  -files/libvirt-0.6.3-kvm-85-argv-detection.patch,
+  -files/libvirt-0.6.3-kvm-img.patch,
+  -files/libvirt-0.6.3-print-ascii-uuid.patch,
+  -files/libvirt-0.6.3-refresh-qemu-caps.patch,
+  -files/libvirt-0.6.4-kvm-img.patch,
+  -files/libvirt-0.6.4-qemu-img-logic-fix.patch, -libvirt-0.7.2.ebuild,
+  -libvirt-0.7.4.ebuild, -libvirt-0.7.4-r1.ebuild, -libvirt-0.7.4-r2.ebuild,
+  +libvirt-0.7.5.ebuild, metadata.xml:
+  Version bump, and overdue cleanup. Drop kvm USE flag (qemu will work with
+  both, no special support is needed for that). Bump libxml2 requirement to
+  2.7.6 so that Relax-NG schema validation is performed correctly. Restrict
+  tests as they seem to be broken especially in release.
 
   23 Dec 2009; Lance Albertson <ramereth@gentoo.org> libvirt-0.7.2.ebuild,
   libvirt-0.7.4.ebuild, libvirt-0.7.4-r1.ebuild, libvirt-0.7.4-r2.ebuild:
