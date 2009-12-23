@@ -1,0 +1,11 @@
+# ChangeLog for dev-php5/pecl-gearman
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gearman/ChangeLog,v 1.1 2009/12/23 22:33:19 flameeyes Exp $
+
+*pecl-gearman-0.6.0 (23 Dec 2009)
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pecl-gearman-0.6.0.ebuild, +metadata.xml:
+  Initial imprort of PHP support for gearman. Thanks to Pavel Stratil once
+  again for the ebuil.
+
