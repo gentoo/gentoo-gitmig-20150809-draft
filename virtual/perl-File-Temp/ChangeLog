@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.41 2009/12/15 19:48:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.42 2009/12/23 16:31:53 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  perl-File-Temp-0.22.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> perl-File-Temp-0.18.ebuild,
   perl-File-Temp-0.20.ebuild, perl-File-Temp-0.21.ebuild,
