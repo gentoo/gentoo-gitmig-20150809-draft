@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.3.4-r2.ebuild,v 1.1 2009/12/16 14:55:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.3.4-r2.ebuild,v 1.2 2009/12/23 01:43:16 abcd Exp $
 
 EAPI="2"
 
@@ -16,7 +16,6 @@ IUSE="bluetooth debug networkmanager wicd"
 # networkmanager-0.7, referring to a non-existant directory, restricted to =0.6*
 # for now.
 DEPEND="
-	>=sys-apps/hal-0.5.9
 	bluetooth? ( net-wireless/bluez )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	wicd? ( net-misc/wicd )
@@ -27,7 +26,10 @@ KMEXTRA="
 	libs/solid/
 "
 
-PATCHES=( "${FILESDIR}/${P}-hal.patch" )
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.3.1-darwin-compile-powermanager.patch
+	"${FILESDIR}/${P}-hal.patch"
+)
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
