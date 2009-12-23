@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.3.4.ebuild,v 1.1 2009/12/01 11:06:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.3.4.ebuild,v 1.2 2009/12/23 00:55:18 abcd Exp $
 EAPI="2"
 
 KMNAME="kdeedu"
@@ -17,10 +17,15 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.3.2-solaris.patch
+)
+
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with fits CFitsio)
-		$(cmake-utils_use_with indi INDI)"
+		$(cmake-utils_use_with indi)
+	)
 
 	kde4-meta_src_configure
 }
