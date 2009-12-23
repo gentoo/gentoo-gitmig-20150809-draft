@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.90 2009/12/10 20:53:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.91 2009/12/23 18:17:03 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> GD-2.44.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> GD-2.44.ebuild:
   Marking GD-2.44 ppc64 for bug 286799
