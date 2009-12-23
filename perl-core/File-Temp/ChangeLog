@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Temp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.49 2009/12/16 21:49:14 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.50 2009/12/23 16:30:19 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> File-Temp-0.21.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   16 Dec 2009; Jonathan Callen <abcd@gentoo.org> File-Temp-0.18.ebuild,
   File-Temp-0.20.ebuild, File-Temp-0.21.ebuild, File-Temp-0.22.ebuild:
