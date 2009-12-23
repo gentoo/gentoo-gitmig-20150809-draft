@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.46 2009/12/22 22:31:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.47 2009/12/23 11:45:19 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> akonadi-4.3.4.ebuild:
+  Fix accidential rm from root filesystem, ED is not defined here
 
   22 Dec 2009; Jonathan Callen <abcd@gentoo.org> akonadi-4.3.4.ebuild:
   Pull in changes from overlay and prefix support

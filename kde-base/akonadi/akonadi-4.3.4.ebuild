@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.4.ebuild,v 1.2 2009/12/22 22:31:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.4.ebuild,v 1.3 2009/12/23 11:45:19 grobian Exp $
 
 EAPI="2"
 
@@ -85,5 +85,5 @@ src_test() {
 src_install() {
 	${eclass}_src_install
 	# colliding files with nepomuk
-	rm -rf "${ED}"/${KDEDIR}/share/apps/nepomuk/ontologies/n{m,c}o.{desktop,trig}
+	rm -rf "${D}"/${EKDEDIR}/share/apps/nepomuk/ontologies/n{m,c}o.{desktop,trig}
 }
