@@ -1,0 +1,11 @@
+# ChangeLog for media-video/ushare
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.1 2009/12/23 22:27:33 darkside Exp $
+
+*ushare-1.1a (23 Dec 2009)
+
+  23 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +ushare-1.1a.ebuild,
+  +files/ushare.conf.d, +files/ushare.init.d, +metadata.xml:
+  Initial import. Many thanks to all the contributors on bug 192561. Moved
+  from sunrise overlay with modifications by myself
+
