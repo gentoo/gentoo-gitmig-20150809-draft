@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.139 2009/12/10 23:16:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.140 2009/12/23 01:11:54 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  +files/libkdegames-4.2.0-darwin.patch, libkdegames-4.3.4.ebuild:
+  Add patch for prefix support (Darwin)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libkdegames-4.3.1.ebuild:

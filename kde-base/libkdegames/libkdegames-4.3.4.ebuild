@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/libkdegames-4.3.4.ebuild,v 1.1 2009/12/01 11:19:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/libkdegames-4.3.4.ebuild,v 1.2 2009/12/23 01:11:54 abcd Exp $
 
 EAPI="2"
 
@@ -17,3 +17,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 KMSAVELIBS="true"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.2.0-darwin.patch
+)
