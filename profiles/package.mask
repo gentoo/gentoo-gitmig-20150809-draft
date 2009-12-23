@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10988 2009/12/23 12:10:09 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10989 2009/12/23 16:00:14 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (23 Dec 2009)
+# Doesn't compile, bug 294826, and not worth fixing 
+# imake based build system. Removed in 30 days.
+x11-misc/xplore
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
