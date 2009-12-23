@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.8 2009/08/03 13:10:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.9 2009/12/23 11:43:37 ssuominen Exp $
 
 IUSE=""
 
@@ -9,13 +9,17 @@ inherit eutils
 SVER=${PV//./}
 RESTRICT="mirror strip fetch"
 DESCRIPTION="A transcoder that provides a source for shoutcast-server-bin to stream from."
-HOMEPAGE="http://www.shoutcast.com"
+HOMEPAGE="http://www.shoutcast.com/"
 SRC_URI="http://www.shoutcast.com/downloads/sc_trans_posix_${SVER}.tgz"
 LICENSE="shoutcast"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 RDEPEND="media-sound/shoutcast-server-bin"
 S=${WORKDIR}/sc_trans_${SVER}
+
+pkg_nofetch() {
+	einfo "Download sc_trans_posix_${SVER}.tgz from ${HOMEPAGE}."
+}
 
 src_install() {
 	# install executable
