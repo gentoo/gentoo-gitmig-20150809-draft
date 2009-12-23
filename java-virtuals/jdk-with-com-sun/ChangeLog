@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.6 2008/09/13 18:31:42 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.7 2009/12/23 00:51:23 caster Exp $
+
+  23 Dec 2009; Vlastimil Babka <caster@gentoo.org>
+  -jdk-with-com-sun-1.4.ebuild:
+  Remove the 1.4 slot as 1.4 is going away.
 
   13 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   jdk-with-com-sun-20080505-r1.ebuild:
