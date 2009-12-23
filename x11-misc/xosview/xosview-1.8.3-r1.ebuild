@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.3.ebuild,v 1.12 2009/08/06 16:00:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.3-r1.ebuild,v 1.1 2009/12/23 16:16:17 ssuominen Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_install() {
 	exeinto /usr/bin
 	doexe xosview
-	insinto /etc/X11/app-defaults
+	insinto /usr/share/X11/app-defaults
 	newins Xdefaults XOsview
 	doman *.1
 	dodoc CHANGES README README.linux TODO

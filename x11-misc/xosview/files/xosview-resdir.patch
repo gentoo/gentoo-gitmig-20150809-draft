@@ -1,21 +1,34 @@
---- xosview-1.8.2.orig/Xrm.cc
-+++ xosview-1.8.2/Xrm.cc
-@@ -148,20 +148,26 @@
+diff -ur xosview-1.8.3.orig/config/Makefile.top.in xosview-1.8.3/config/Makefile.top.in
+--- xosview-1.8.3.orig/config/Makefile.top.in	2006-02-18 10:12:33.000000000 +0200
++++ xosview-1.8.3/config/Makefile.top.in	2009-12-23 18:14:52.000000000 +0200
+@@ -49,7 +49,7 @@
+ PREFIX_TO_USE=@prefix@
+ BINDIR=$(PREFIX_TO_USE)/bin
+ MANDIR=$(PREFIX_TO_USE)/share/man/man1
+-XAPPLOADDIR=$(PREFIX_TO_USE)/lib/X11/app-defaults
++XAPPLOADDIR=$(PREFIX_TO_USE)/share/X11/app-defaults
+ PACKAGENAME=xosview-$(VERS)
+ DISTRIBDIR=@top_srcdir@/../$(PACKAGENAME)
+ 
+diff -ur xosview-1.8.3.orig/Xrm.cc xosview-1.8.3/Xrm.cc
+--- xosview-1.8.3.orig/Xrm.cc	2006-02-18 06:33:04.000000000 +0200
++++ xosview-1.8.3/Xrm.cc	2009-12-23 18:14:26.000000000 +0200
+@@ -152,20 +152,26 @@
  
    //  Merge in the system resource database.
    char rfilename[2048];
 +  int result;
  
    // Get the app-defaults
-+  //  Check /usr/lib/X11 for when /usr/X11R6 compatibility symlink is removed
-+  result = snprintf(rfilename, sizeof rfilename, "/usr/lib/X11/app-defaults/%s",
-+      XrmQuarkToString(_class));
-+  if (result >= 0 && result < sizeof rfilename)
-+    XrmCombineFileDatabase (rfilename, &_db, 1);
 -  snprintf(rfilename, 2048, "/usr/X11R6/lib/X11/app-defaults/%s",
-+  result = snprintf(rfilename, sizeof rfilename, "/usr/X11R6/lib/X11/app-defaults/%s",
++  //  Check /usr/lib/X11 for when /usr/X11R6 compatibility symlink is removed
++  result = snprintf(rfilename, sizeof rfilename, "/etc/X11/app-defaults/%s",
        XrmQuarkToString(_class));
 -  if (rfilename != NULL)
++  if (result >= 0 && result < sizeof rfilename)
++    XrmCombineFileDatabase (rfilename, &_db, 1);
++  result = snprintf(rfilename, sizeof rfilename, "/usr/share/X11/app-defaults/%s",
++      XrmQuarkToString(_class));
 +  if (result >= 0 && result < sizeof rfilename)
      XrmCombineFileDatabase (rfilename, &_db, 1);
    //  Try a few more, for SunOS/Solaris folks.
@@ -26,10 +39,11 @@
 +  if (result >= 0 && result < sizeof rfilename)
      XrmCombineFileDatabase (rfilename, &_db, 1);
 -  snprintf(rfilename, 2048, "/usr/local/X11R6/lib/X11/app-defaults/%s",
-+  result = snprintf(rfilename, sizeof rfilename, "/usr/local/X11R6/lib/X11/app-defaults/%s",
++  result = snprintf(rfilename, sizeof rfilename, "/usr/local/share/X11/app-defaults/%s",
        XrmQuarkToString(_class));
 -  if (rfilename != NULL)
 +  if (result >= 0 && result < sizeof rfilename)
      XrmCombineFileDatabase (rfilename, &_db, 1);
  
    //  Now, check for an XOSView file in the XAPPLRESDIR directory...
+Only in xosview-1.8.3: Xrm.cc.orig
