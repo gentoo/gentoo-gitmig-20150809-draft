@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Module-Pluggable
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.11 2009/08/25 10:56:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.12 2009/12/23 16:58:50 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  perl-Module-Pluggable-3.9.ebuild:
+  Marked ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
+  ~x86-solaris, last arch for bug #296509
 
   25 Aug 2009; Torsten Veller <tove@gentoo.org>
   perl-Module-Pluggable-3.9.ebuild:
