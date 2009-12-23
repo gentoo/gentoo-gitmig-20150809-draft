@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.117 2009/09/28 10:31:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.118 2009/12/23 12:41:20 dertobi123 Exp $
+
+*nagios-plugins-1.4.14-r1 (23 Dec 2009)
+
+  23 Dec 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +nagios-plugins-1.4.14-r1.ebuild:
+  Add jabber use-flag, drop ~hppa keyword due to unsatisfied deps. (#295361)
 
   28 Sep 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   -files/nagios-plugins-1.4.13-mysqlpass-917fcc7.patch,
@@ -75,7 +81,7 @@
   nagios-plugins-1.4.13.ebuild:
   x86 stable, bug #252669
 
-  02 Jan 2009; Dawid Węgliński <cla@gentoo.org>
+  02 Jan 2009; Dawid WÄgliÅski <cla@gentoo.org>
   nagios-plugins-1.4.12-r101.ebuild, nagios-plugins-1.4.13.ebuild:
   Stable on amd64 (bug #252669)
 
@@ -135,7 +141,7 @@
   +nagios-plugins-1.4.12-r100.ebuild:
   Version bump
 
-  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  21 May 2008; Tiziano MÃ¼ller <dev-zero@gentoo.org>
   nagios-plugins-1.4.11-r102.ebuild:
   Changed dependency for postgresql from dev-db/postgresql to
   virtual/postgresql-server
@@ -146,7 +152,7 @@
   USE=postgres should set --with-pgsql, reported by Krzysztof Tomczyk
   (#222317)
 
-  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
+  19 May 2008; Tiziano MÃ¼ller <dev-zero@gentoo.org>
   nagios-plugins-1.4.11.ebuild, nagios-plugins-1.4.11-r1.ebuild:
   Changed dependency for postgresql to virtual/postgresql-base
 
