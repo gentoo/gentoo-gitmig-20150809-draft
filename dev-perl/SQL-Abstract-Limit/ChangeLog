@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SQL-Abstract-Limit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/ChangeLog,v 1.5 2009/08/19 15:13:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/ChangeLog,v 1.6 2009/12/23 19:26:18 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  SQL-Abstract-Limit-0.14.1-r1.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   19 Aug 2009; Torsten Veller <tove@gentoo.org>
   SQL-Abstract-Limit-0.14.1-r1.ebuild:
