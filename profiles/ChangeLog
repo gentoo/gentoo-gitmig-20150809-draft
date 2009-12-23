@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3697 2009/12/23 16:36:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3698 2009/12/23 20:25:16 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Prepare preventive mask for drizzle.
 
   23 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Masking net-dns/ldapdns for removal, bug #247956
