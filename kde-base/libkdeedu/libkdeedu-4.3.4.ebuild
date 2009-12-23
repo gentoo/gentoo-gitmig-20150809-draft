@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/libkdeedu-4.3.4.ebuild,v 1.2 2009/12/23 01:10:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/libkdeedu-4.3.4.ebuild,v 1.3 2009/12/23 12:07:00 grobian Exp $
 
 EAPI="2"
 
@@ -17,5 +17,5 @@ RESTRICT=test
 src_install() {
 	kde4-meta_src_install
 	# This is installed by kde-base/marble
-	rm "${ED}"/${KDEDIR}/share/apps/cmake/modules/FindMarbleWidget.cmake
+	rm "${D}"/${EKDEDIR}/share/apps/cmake/modules/FindMarbleWidget.cmake
 }

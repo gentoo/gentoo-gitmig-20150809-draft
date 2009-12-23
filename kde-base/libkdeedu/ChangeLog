@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.136 2009/12/23 01:10:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.137 2009/12/23 12:07:00 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> libkdeedu-4.3.4.ebuild:
+  Fix accidential rm from root filesystem, ED is not defined in this EAPI.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> libkdeedu-4.3.4.ebuild:
   Fix prefix support
