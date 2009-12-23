@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.22.ebuild,v 1.6 2009/09/27 14:37:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.22.ebuild,v 1.7 2009/12/23 19:41:45 grobian Exp $
 
 MODULE_AUTHOR=ABW
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="The Template Toolkit"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-solaris"
 IUSE="xml gd mysql postgres latex"
 
 DEPEND="dev-perl/text-autoformat
@@ -30,7 +30,7 @@ PDEPEND="dev-perl/text-autoformat
 # 2) perl Makefile.pl just uses reasonable defaults, and doesn't ask for input
 myconf="TT_XS_ENABLE=y TT_ACCEPT=y TT_QUIET=y
 	TT_DOCS=y TT_SPLASH_DOCS=y TT_EXAMPLES=y
-	TT_PREFIX=${D}/usr/share/template-toolkit2
+	TT_PREFIX=${D%/}${EPREFIX}/usr/share/template-toolkit2
 	TT_IMAGES=/usr/share/template-toolkit2/images"
 
 mydoc="README"
