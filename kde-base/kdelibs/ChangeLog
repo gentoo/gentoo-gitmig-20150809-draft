@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.657 2009/12/22 23:50:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.658 2009/12/23 11:54:25 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> kdelibs-4.3.4.ebuild:
+  Don't use ED in an EAPI that does not declare it, same for EROOT (though
+  kde4-base eclass sets it sneakily)
 
   22 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   +files/kdelibs-4.3.1-kdeui_util_kkeyserver_mac.patch,

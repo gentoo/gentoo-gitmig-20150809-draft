@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.4.ebuild,v 1.5 2009/12/22 23:50:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.4.ebuild,v 1.6 2009/12/23 11:54:25 grobian Exp $
 
 EAPI="2"
 
@@ -260,7 +260,7 @@ src_install() {
 		#sed -i -e \
 		#	"s:if (HAVE_XKB):if (HAVE_XKB AND NOT APPLE):g" \
 		echo -e "set(XKB_FOUND FALSE)\nset(HAVE_XKB FALSE)" > \
-			"${ED}"/${KDEDIR}/share/apps/cmake/modules/FindXKB.cmake \
+			"${D}"/${EKDEDIR}/share/apps/cmake/modules/FindXKB.cmake \
 			|| die "failed fixing FindXKB.cmake"
 	fi
 }
@@ -295,7 +295,7 @@ pkg_postinst() {
 
 pkg_prerm() {
 	# Remove ksycoca4 global database
-	rm -f "${EROOT}${PREFIX}"/share/kde4/services/ksycoca4
+	rm -f "${ROOT%/}${EPREFIX}${PREFIX}"/share/kde4/services/ksycoca4
 }
 
 pkg_postrm() {
