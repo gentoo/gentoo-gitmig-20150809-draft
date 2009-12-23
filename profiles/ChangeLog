@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3696 2009/12/23 16:00:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3697 2009/12/23 16:36:08 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Masking net-dns/ldapdns for removal, bug #247956
 
   23 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask x11-misc/xplore for removal.
