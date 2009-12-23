@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.49 2009/12/21 19:27:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.50 2009/12/23 01:20:29 jer Exp $
+
+  23 Dec 2009; Jeroen Roovers <jer@gentoo.org> rubyforge-2.0.3.ebuild:
+  Marked ~hppa (bug #297830).
 
 *rubyforge-2.0.3 (21 Dec 2009)
 
