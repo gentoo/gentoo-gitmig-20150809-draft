@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.1.ebuild,v 1.1 2009/11/11 16:55:04 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.3.ebuild,v 1.1 2009/12/23 04:26:18 nirbheek Exp $
 
 GCONF_DEBUG="no"
 
@@ -49,9 +49,6 @@ if [[ "${ARCH}" == "PPC" ]] ; then
 fi
 
 pkg_setup() {
-	# Installed for plugins, but they're dlopen()-ed
-	G2PUNT_LA="yes"
-
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--disable-updater
@@ -66,10 +63,16 @@ src_unpack() {
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "intltool rules fix failed"
 }
 
 src_install() {
 	gnome2_src_install
+
+	# Installed for plugins, but they're dlopen()-ed
 	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 }
 
