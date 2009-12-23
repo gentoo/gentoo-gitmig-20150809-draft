@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/srm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.13 2008/01/05 14:02:00 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.14 2009/12/23 10:15:33 dev-zero Exp $
+
+*srm-1.2.10 (23 Dec 2009)
+
+  23 Dec 2009; Tiziano Müller <dev-zero@gentoo.org> +srm-1.2.10.ebuild:
+  Version bump, EAPI=2 transition, blocker for dev-lang/sr (bug #247402).
 
   05 Jan 2008; Samuli Suominen <drac@gentoo.org> -srm-1.2.7.ebuild,
   srm-1.2.8-r1.ebuild:
