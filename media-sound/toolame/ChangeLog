@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.23 2009/11/18 17:50:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.24 2009/12/23 21:34:21 jer Exp $
+
+  23 Dec 2009; Jeroen Roovers <jer@gentoo.org> toolame-02l-r3.ebuild:
+  Stable for HPPA (bug #297846).
 
   18 Nov 2009; Raúl Porcel <armin76@gentoo.org> toolame-02l-r3.ebuild:
   Add ~ia64/~sparc
