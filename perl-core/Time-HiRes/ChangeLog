@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.59 2009/12/16 21:59:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.60 2009/12/23 16:42:34 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  Time-HiRes-1.97.19.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Time-HiRes-1.97.07.ebuild,
   Time-HiRes-1.97.15.ebuild, Time-HiRes-1.97.19.ebuild:
