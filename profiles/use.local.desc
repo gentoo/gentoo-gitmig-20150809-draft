@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5116 2009/12/23 11:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5117 2009/12/23 17:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -242,7 +242,6 @@ app-emulation/ganeti:drbd - Enable DRBD support
 app-emulation/ganeti:kvm - Enable KVM support
 app-emulation/ganeti:xen - Enable Xen support
 app-emulation/libvirt:iscsi - Add support for iSCSI (Internet SCSI) remote storage
-app-emulation/libvirt:kvm - Add support for app-emulation/kvm based virtual machines
 app-emulation/libvirt:libvirtd - Builds the libvirtd daemon as well as the client utilities instead of just the client utilities
 app-emulation/libvirt:lvm - Add support for the Logical Volume Manager sys-apps/lvm2
 app-emulation/libvirt:lxc - Add support for the Linux Containers
@@ -1121,11 +1120,6 @@ games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the o
 games-rpg/drascula:audio - Install optional audio files
 games-rpg/eternal-lands-data:music - Install optional music files (extra 30 meg)
 games-rpg/eternal-lands-data:sound - Install optional sound files (extra 40 meg)
-games-rpg/mangos:ahbot - include the AHBot-patch
-games-rpg/mangos:cli - compiles with support command line system
-games-rpg/mangos:ra - compiles with support remote console system
-games-rpg/mangos:sd2 - includes ScriptDev2 to distribution
-games-rpg/mangos:tools - include additional tools, such as the ad map extractor
 games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/nwn-cep:hou - Adds support for the Hordes of the Underdark expansion pack
@@ -2687,8 +2681,6 @@ net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
-net-p2p/museek+:qsa - Enable QSA scripting for museeq
-net-p2p/museek+:trayicon - Enable support for trayicon
 net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application" 
 net-p2p/transmission:dht - Enable Distributed Hash Tables support
 net-print/hplip:cupsddk - Add support for net-print/cupsddk which enables dynamic PPD files (recommended)
