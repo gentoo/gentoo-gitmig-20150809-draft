@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.4.ebuild,v 1.1 2009/12/01 11:31:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.4.ebuild,v 1.2 2009/12/23 01:37:37 abcd Exp $
 
 EAPI="2"
 
@@ -14,15 +14,15 @@ DESCRIPTION="Python bindings for KDE4"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="akonadi debug examples policykit semantic-desktop"
 
-COMMON_DEPEND="
-	>=dev-python/PyQt4-4.5[dbus,sql,svg,webkit,X]
+DEPEND="
 	$(add_kdebase_dep kdelibs 'opengl,semantic-desktop?')
+	aqua? ( >=dev-python/PyQt4-4.5[dbus,sql,svg,webkit,aqua] )
+	!aqua? ( >=dev-python/PyQt4-4.5[dbus,sql,svg,webkit,X] )
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
 	policykit? ( >=sys-auth/policykit-qt-0.9.2 )
 "
-DEPEND="${COMMON_DEPEND}"
 # blocker added due to compatibility issues and error during compile time
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${DEPEND}
 	!dev-python/pykde
 "
 
@@ -41,14 +41,14 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DWITH_QScintilla=OFF
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with akonadi)
 		$(cmake-utils_use_with akonadi KdepimLibs)
 		$(cmake-utils_use_with policykit PolkitQt)
-	"
+	)
 
 	kde4-meta_src_configure
 }
@@ -57,19 +57,19 @@ src_install() {
 	kde4-meta_src_install
 
 	rm -f \
-		"${D}$(python_get_sitedir)"/PyKDE4/*.py[co] \
-		"${D}${PREFIX}"/share/apps/"${PN}"/*.py[co]
+		"${ED}$(python_get_sitedir)"/PyKDE4/*.py[co] \
+		"${ED}${PREFIX}"/share/apps/"${PN}"/*.py[co]
 }
 
 pkg_postinst() {
 	kde4-meta_pkg_postinst
 
-	python_mod_optimize "${ROOT}$(python_get_sitedir)"/PyKDE4
+	python_mod_optimize "$(python_get_sitedir)"/PyKDE4
 
 	if use examples; then
 		echo
 		elog "PyKDE4 examples have been installed to"
-		elog "${PREFIX}/share/apps/${PN}/examples"
+		elog "${EKDEDIR}/share/apps/${PN}/examples"
 		echo
 	fi
 }
@@ -77,5 +77,5 @@ pkg_postinst() {
 pkg_postrm() {
 	kde4-meta_pkg_postrm
 
-	python_mod_cleanup "${ROOT}$(python_get_sitedir)"/PyKDE4
+	python_mod_cleanup "$(python_get_sitedir)"/PyKDE4
 }
