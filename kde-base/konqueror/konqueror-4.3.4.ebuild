@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.3.4.ebuild,v 1.1 2009/12/01 10:54:00 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.3.4.ebuild,v 1.2 2009/12/23 00:33:59 abcd Exp $
 
 EAPI="2"
 
 KMNAME="kdebase-apps"
-inherit kde4-meta
+inherit flag-o-matic kde4-meta
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -38,6 +38,8 @@ src_configure() {
 }
 
 src_prepare() {
+	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lmalloc
+
 	kde4-meta_src_prepare
 
 	# Do not install *.desktop files for kfmclient
