@@ -18,3 +18,7 @@ move app-emulation/kvm app-emulation/qemu-kvm
 move www-plugins/mozilla-weave www-plugins/weave
 move dev-ruby/mislav-will_paginate dev-ruby/will_paginate
 slotmove net-im/choqok 0 4
+move x11-plugins/compiz-fusion-plugins-main x11-plugins/compiz-fusion-main
+move x11-plugins/compiz-fusion-plugins-extra x11-plugins/compiz-fusion-extra
+move x11-plugins/compiz-fusion-plugins-unsupported x11-plugins/compiz-fusion-unsupported
+
