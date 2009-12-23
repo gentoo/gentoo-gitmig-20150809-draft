@@ -1,0 +1,12 @@
+diff -ur grun-0.9.3.orig/grun.c grun-0.9.3/grun.c
+--- grun-0.9.3.orig/grun.c	2008-01-14 08:28:10.000000000 +0200
++++ grun-0.9.3/grun.c	2009-12-23 17:34:34.000000000 +0200
+@@ -30,8 +30,6 @@
+ 
+ #if defined (HAVE_GETTEXT) || defined (HAVE_CATGETS)
+ #include <libintl.h>
+-#else
+-#include "intl/libintl.h"
+ #endif
+ 
+ #define PATH_CHAR	":"
