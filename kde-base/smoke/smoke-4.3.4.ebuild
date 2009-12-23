@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.4.ebuild,v 1.2 2009/12/04 17:58:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.4.ebuild,v 1.3 2009/12/23 01:41:30 abcd Exp $
 
 EAPI="2"
 
@@ -32,18 +32,18 @@ KMEXTRACTONLY="kalyptus/"
 PATCHES=( "${FILESDIR}"/${PN}-phonon-fix.patch )
 
 src_configure() {
-	local mycmakeargs="
-		$(cmake-utils_use_enable webkit QTWEBKIT_SMOKE)
-		$(cmake-utils_use_enable qwt QWT_SMOKE)
-		$(cmake-utils_use_enable qscintilla QSCI_SMOKE)
-		$(cmake-utils_use_enable phonon PHONON_SMOKE)
+	mycmakeargs=(
+		$(cmake-utils_use_enable akonadi)
+		$(cmake-utils_use_enable akonadi Kdepimlibs)
 		$(cmake-utils_use_enable kdevplatform KDEVPLATFORM_SMOKE)
+		$(cmake-utils_use_enable phonon PHONON_SMOKE)
+		# $(cmake-utils_use_enable okular)
+		-DENABLE_Okular=OFF
+		$(cmake-utils_use_enable qscintilla QSCI_SMOKE)
+		$(cmake-utils_use_enable qwt QWT_SMOKE)
 		$(cmake-utils_use_enable semantic-desktop Nepomuk)
 		$(cmake-utils_use_enable semantic-desktop Soprano)
-		$(cmake-utils_use_enable akonadi Kdepimlibs)
-		$(cmake-utils_use_enable akonadi)
-		-DENABLE_Okular=OFF
-	"
-		# $(cmake-utils_use_enable okular)
+		$(cmake-utils_use_enable webkit QTWEBKIT_SMOKE)
+	)
 	kde4-meta_src_configure
 }

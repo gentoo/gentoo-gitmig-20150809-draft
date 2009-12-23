@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.3.4.ebuild,v 1.1 2009/12/01 11:35:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.3.4.ebuild,v 1.2 2009/12/23 01:47:06 abcd Exp $
 
 EAPI="2"
 
@@ -70,12 +70,13 @@ src_prepare() {
 src_configure() {
 	# Old keyboard-detection code is unmaintained,
 	# so we force the new stuff, using libxklavier.
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DUSE_XKLAVIER=ON -DWITH_LibXKlavier=ON
 		-DWITH_GLIB2=ON -DWITH_GObject=ON
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with usb)
-		$(cmake-utils_use_with xinerama X11_Xinerama)"
+		$(cmake-utils_use_with xinerama X11_Xinerama)
+	)
 
 	kde4-meta_src_configure
 }
