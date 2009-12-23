@@ -1,6 +1,13 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.15 2009/12/23 08:08:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.16 2009/12/23 10:45:26 wired Exp $
+
+*uzbl-2009.12.22 (23 Dec 2009)
+
+  23 Dec 2009; Alex Alexander <wired@gentoo.org> -uzbl-0_pre20091222.ebuild,
+  +uzbl-2009.12.22.ebuild:
+  upstream plans to keep date-based versioning, modified our ebuild version
+  to follow that :)
 
 *uzbl-0_pre20091222 (23 Dec 2009)
 

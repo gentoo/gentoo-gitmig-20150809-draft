@@ -1,17 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-0_pre20091222.ebuild,v 1.1 2009/12/23 08:08:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2009.12.22.ebuild,v 1.1 2009/12/23 10:45:26 wired Exp $
 
 EAPI="2"
 
 inherit base
 
-MY_PV=${PV/*_pre}
-MY_PV=${MY_PV:0:4}.${MY_PV:4:2}.${MY_PV:6}
-
 DESCRIPTION="A keyboard controlled (modal vim-like bindings, or with modifierkeys) browser based on Webkit."
 HOMEPAGE="http://www.uzbl.org"
-SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${MY_PV} -> ${P}.tar.gz"
+SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
