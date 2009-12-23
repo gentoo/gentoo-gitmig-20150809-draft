@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.3.4.ebuild,v 1.2 2009/12/23 00:42:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.3.4.ebuild,v 1.3 2009/12/23 12:05:16 grobian Exp $
 
 EAPI="2"
 
@@ -43,9 +43,9 @@ src_compile() {
 
 src_install() {
 	kde4-meta_src_install
-	java-pkg_dojar "${ED}/${KDEDIR}/$(get_libdir)/kde4/kross/kross.jar"
+	java-pkg_dojar "${D}/${EKDEDIR}/$(get_libdir)/kde4/kross/kross.jar"
 
-	cd "${ED}${KDEDIR}/$(get_libdir)/kde4/kross/" || die
+	cd "${D}${EKDEDIR}/$(get_libdir)/kde4/kross/" || die
 	local path_prefix="../../../../"
 
 	if [[ ${KDEDIR} != /usr ]]; then
@@ -54,5 +54,5 @@ src_install() {
 
 	dosym "${path_prefix}usr/share/${PN}-${SLOT}/lib/kross.jar" \
 		"${KDEDIR}/$(get_libdir)/kde4/kross/kross.jar"
-	java-pkg_regso "${ED}/${KDEDIR}/$(get_libdir)/kde4/libkrossjava.so"
+	java-pkg_regso "${D}/${EKDEDIR}/$(get_libdir)/kde4/libkrossjava.so"
 }
