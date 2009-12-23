@@ -1,0 +1,15 @@
+fix gcc-4.4 compile issues
+https://bugs.gentoo.org/show_bug.cgi?id=297361
+--- cdda-0.1.0.orig/cdda_cddb.c	2005-12-24 11:17:06.000000000 +0100
++++ cdda-0.1.0/cdda_cddb.c	2009-12-22 21:44:55.688664502 +0100
+@@ -58,7 +58,8 @@
+ 
+     sscanf(key, "%a[^\n0-9]%d", &p_key, &track);
+ 
+-    char *p_value1 = NULL, *p_value2 = NULL, *p_idx = index(value, '/');
++    char *p_value1 = NULL, *p_value2 = NULL;
++    const char *p_idx = index(value, '/');
+     if (NULL != p_idx && 0x20 == *(p_idx-1) && 0x20 == *(p_idx+1) && 0x00 != *(p_idx+2))
+       sscanf(value, "%a[^/] / %a[^/]", &p_value1, &p_value2);
+     else
+
