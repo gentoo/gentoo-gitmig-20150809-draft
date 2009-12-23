@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fastthread
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.34 2009/12/21 22:18:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.35 2009/12/23 12:27:47 flameeyes Exp $
+
+  23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  fastthread-1.0.7-r1.ebuild:
+  Make echoe an unconditional dependency as it's needed for compile as well.
+  Thanks to Harris Landgarten in bug #298048.
 
 *fastthread-1.0.7-r1 (21 Dec 2009)
 
