@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.4.ebuild,v 1.2 2009/12/22 23:45:40 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.4.ebuild,v 1.3 2009/12/23 11:48:57 grobian Exp $
 
 EAPI="2"
 
@@ -33,8 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	use prefix || ED=$D
-
 	dodir /etc/env.d
 	dodir /etc/revdep-rebuild
 	dodir ${KDEDIR}/share/config
@@ -60,12 +58,12 @@ PKG_CONFIG_PATH="${EKDEDIR}/$(get_libdir)/pkgconfig"
 XDG_DATA_DIRS="${EKDEDIR}/share"
 EOF
 		doenvd "${T}/43kdepaths-${SLOT}"
-		cat <<-EOF > "${ED}/etc/revdep-rebuild/50-kde-${SLOT}"
+		cat <<-EOF > "${D%/}${EPREFIX}/etc/revdep-rebuild/50-kde-${SLOT}"
 SEARCH_DIRS="${EKDEDIR}/bin ${EKDEDIR}/lib*"
 EOF
 
 		# kdeglobals needed to make third party apps installed in /usr work
-		cat <<-EOF > "${ED}/${KDEDIR}/share/config/kdeglobals"
+		cat <<-EOF > "${D}/${EKDEDIR}/share/config/kdeglobals"
 [Directories][\$i]
 prefixes=${EPREFIX}/usr
 EOF
