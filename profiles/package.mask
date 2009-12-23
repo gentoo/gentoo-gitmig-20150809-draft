@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10986 2009/12/22 23:33:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10987 2009/12/23 00:34:22 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -678,10 +678,6 @@ games-fps/quake3-urbanterror
 # keeping rc and live ebuilds masked
 ~sys-kernel/zen-sources-9999
 =sys-kernel/zen-sources-2.6.32_rc*
-
-# Vlastimil Babka <caster@gentoo.org> (03 Nov 2009)
-# Obsolete, needs 1.4 JDK, nothing uses it.
-dev-java/jessie
 
 # Víctor Ostorga <vostorga@gentoo.org> (02 Nov 2009)
 # If you use a kernel >= 2.6.29 it is needed >=linux-headers-2.6.29
