@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.121 2009/12/14 18:23:16 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.122 2009/12/23 01:09:26 caster Exp $
+
+  23 Dec 2009; Vlastimil Babka <caster@gentoo.org> package.use.mask:
+  Mask nsplugin of 1.4 emul java due to security.
 
   14 Dec 2009; Alex Legler <a3li@gentoo.org> use.mask:
   Add ruby_targets_jruby to use.mask
