@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <!-- 
-$Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/metadata.xml,v 1.1 2009/12/23 12:13:48 trapni Exp $
+$Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/metadata.xml,v 1.2 2009/12/23 13:00:12 trapni Exp $
 
 This is the example metadata file.
 The root element of this file is <pkgmetadata>. Within this element a 
@@ -16,7 +16,7 @@ Before committing, please remove the comments from this file. They are
 not relevant for general metadata.xml files.
 -->
 <pkgmetadata>
-	<herd>media-sound</herd>
+	<herd>sound</herd>
 	<maintainer>
 		<email>trapni@gentoo.org</email>
 	</maintainer>
