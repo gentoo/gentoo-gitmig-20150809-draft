@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.3.4.ebuild,v 1.1 2009/12/01 10:27:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.3.4.ebuild,v 1.2 2009/12/23 00:05:00 abcd Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug desktopglobe exif semantic-desktop"
 
 # krunner is only needed to generate dbus interface for lancelot
-COMMON_DEPEND="
+RDEPEND="
 	$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
 	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep krunner)
@@ -26,10 +26,9 @@ COMMON_DEPEND="
 	desktopglobe? ( $(add_kdebase_dep marble) )
 	exif? ( $(add_kdebase_dep libkexiv2) )
 "
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	dev-cpp/eigen:2
 "
-RDEPEND="${COMMON_DEPEND}"
 
 # kdebase-data: some svg icons moved from data directly here.
 add_blocker kdebase-data '<4.2.88'
@@ -49,12 +48,13 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		-DDBUS_INTERFACES_INSTALL_DIR=${KDEDIR}/share/dbus-1/interfaces/
+	mycmakeargs=(
+		-DDBUS_INTERFACES_INSTALL_DIR="${EKDEDIR}/share/dbus-1/interfaces/"
 		$(cmake-utils_use_with exif Kexiv2)
 		$(cmake-utils_use_with desktopglobe Marble)
 		$(cmake-utils_use_with opengl OpenGL)
-		$(cmake-utils_use_with semantic-desktop Nepomuk)"
+		$(cmake-utils_use_with semantic-desktop Nepomuk)
+	)
 
 	kde4-base_src_configure
 }
