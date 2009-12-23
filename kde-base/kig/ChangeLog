@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.145 2009/12/10 21:10:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.146 2009/12/23 00:16:09 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> kig-4.3.4.ebuild:
+  Pull in changes from overlay
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kig-4.3.1.ebuild:
   Drop KDE SC-4.3.1.

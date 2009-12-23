@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/kinfocenter-4.3.4.ebuild,v 1.1 2009/12/01 10:41:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/kinfocenter-4.3.4.ebuild,v 1.2 2009/12/23 00:17:09 abcd Exp $
 
 EAPI="2"
 
@@ -26,9 +26,10 @@ KMEXTRACTONLY="
 "
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with ieee1394 RAW1394)
-		$(cmake-utils_use_with opengl OpenGL)"
+		$(cmake-utils_use_with opengl OpenGL)
+	)
 
 	kde4-meta_src_configure
 }

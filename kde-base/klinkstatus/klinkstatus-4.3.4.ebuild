@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/klinkstatus-4.3.4.ebuild,v 1.1 2009/12/01 10:44:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/klinkstatus-4.3.4.ebuild,v 1.2 2009/12/23 00:19:06 abcd Exp $
 
 EAPI="2"
 KMNAME="kdewebdev"
@@ -17,9 +17,10 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DWITH_KdepimLibs=ON
-		$(cmake-utils_use_with tidy LibTidy)"
+		$(cmake-utils_use_with tidy LibTidy)
+	)
 
 	kde4-meta_src_configure
 }
