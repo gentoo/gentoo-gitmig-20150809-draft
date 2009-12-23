@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-4.3.4.ebuild,v 1.1 2009/12/01 11:03:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-4.3.4.ebuild,v 1.2 2009/12/23 00:44:40 abcd Exp $
 
 EAPI="2"
 
@@ -28,9 +28,10 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}/kdebase-4.0.2-pam-optional.patch" )
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with opengl OpenGL)
-		$(cmake-utils_use_with pam)"
+		$(cmake-utils_use_with pam)
+	)
 
 	kde4-meta_src_configure
 }

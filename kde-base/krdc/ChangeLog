@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.147 2009/12/10 22:12:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.148 2009/12/23 00:40:06 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> krdc-4.3.4.ebuild:
+  Pull in changes from overlay
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -krdc-4.3.1.ebuild:
   Drop KDE SC-4.3.1.

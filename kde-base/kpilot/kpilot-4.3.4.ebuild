@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-4.3.4.ebuild,v 1.2 2009/12/05 05:11:30 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-4.3.4.ebuild,v 1.3 2009/12/23 00:39:22 abcd Exp $
 
 EAPI="2"
 
@@ -23,9 +23,10 @@ RDEPEND="${DEPEND}"
 RESTRICT="test"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with avantgo Mal)
-		$(cmake-utils_use_with crypt QCA2)"
+		$(cmake-utils_use_with crypt QCA2)
+	)
 
 	kde4-meta_src_configure
 }
