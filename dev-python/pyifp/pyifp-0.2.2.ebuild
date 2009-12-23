@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/pyifp-0.2.2.ebuild,v 1.4 2009/05/10 16:42:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/pyifp-0.2.2.ebuild,v 1.5 2009/12/23 18:55:31 ssuominen Exp $
 
+EAPI=2
 inherit eutils distutils
 
 DESCRIPTION="Python bindings for libifp library for accessing iRiver iFP devices"
@@ -18,10 +19,9 @@ RDEPEND="dev-lang/python
 DEPEND="${RDEPEND}
 	dev-lang/swig"
 
-DOCS="AUTHORS ChangeLog NEWS README"
+DOCS="README.txt"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-setup-fix.patch
+	distutils_src_prepare
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyifp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.5 2009/05/10 16:42:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.6 2009/12/23 18:55:31 ssuominen Exp $
+
+  23 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> pyifp-0.2.2.ebuild:
+  Fix DOCS variable.
 
   10 May 2009; Samuli Suominen <ssuominen@gentoo.org> pyifp-0.2.2.ebuild:
   Remove dev-lang/swig from rdepend, it's only a depend wrt #221475.
