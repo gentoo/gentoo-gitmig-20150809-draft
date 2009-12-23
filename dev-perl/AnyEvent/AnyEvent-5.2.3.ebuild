@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/AnyEvent-5.2.3.ebuild,v 1.1 2009/12/21 18:41:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/AnyEvent-5.2.3.ebuild,v 1.2 2009/12/23 17:21:37 grobian Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ DESCRIPTION="provide framework for multiple event loops"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
 IUSE=""
 
 RDEPEND="dev-perl/Event"

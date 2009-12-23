@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.35 2009/10/25 10:30:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.36 2009/12/23 17:29:13 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> Carp-Clan-6.04.ebuild:
+  Marked ~x86-solaris, bug #296509
 
 *Carp-Clan-6.04 (25 Oct 2009)
 
