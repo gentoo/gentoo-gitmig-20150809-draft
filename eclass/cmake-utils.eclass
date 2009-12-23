@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.39 2009/12/22 22:52:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.40 2009/12/23 00:32:02 abcd Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -231,7 +231,7 @@ cmake-utils_use_has() { _use_me_now HAVE_ "$@" ; }
 cmake-utils_use() { _use_me_now "" "$@" ; }
 
 # Internal function for modifying hardcoded definitions.
-# Removes dangerous definitionts that override Gentoo settings.
+# Removes dangerous definitions that override Gentoo settings.
 _modify-cmakelists() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -246,8 +246,8 @@ _modify-cmakelists() {
 	cat >> CMakeLists.txt <<- _EOF_
 
 		MESSAGE(STATUS "<<< Gentoo configuration >>>
-		Build type: ${CMAKE_BUILD_TYPE}
-		Install path: ${CMAKE_INSTALL_PREFIX}\n")
+		Build type: \${CMAKE_BUILD_TYPE}
+		Install path: \${CMAKE_INSTALL_PREFIX}\n")
 	_EOF_
 }
 
