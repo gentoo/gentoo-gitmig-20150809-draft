@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.134 2009/12/10 21:31:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.135 2009/12/23 00:27:26 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> kmenuedit-4.3.4.ebuild:
+  Fix prefix support
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kmenuedit-4.3.1.ebuild:

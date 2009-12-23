@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/kmenuedit-4.3.4.ebuild,v 1.1 2009/12/01 10:47:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/kmenuedit-4.3.4.ebuild,v 1.2 2009/12/23 00:27:26 abcd Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ KMEXTRACTONLY="
 
 src_configure() {
 	sed -i -e \
-		"s:\${CMAKE_CURRENT_BINARY_DIR}/../khotkeys/app/org.kde.khotkeys.xml:${KDEDIR}/share/dbus-1/interfaces/org.kde.khotkeys.xml:g" \
+		"s:\${CMAKE_CURRENT_BINARY_DIR}/../khotkeys/app/org.kde.khotkeys.xml:${EKDEDIR}/share/dbus-1/interfaces/org.kde.khotkeys.xml:g" \
 		kmenuedit/CMakeLists.txt \
 		|| die "sed failed"
 
