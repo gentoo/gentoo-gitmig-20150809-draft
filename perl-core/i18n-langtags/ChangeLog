@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/i18n-langtags
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/i18n-langtags/ChangeLog,v 1.5 2007/01/19 18:00:29 mcummings Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/i18n-langtags/ChangeLog,v 1.6 2009/12/23 16:55:39 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  i18n-langtags-0.35.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   i18n-langtags-0.35.ebuild:
