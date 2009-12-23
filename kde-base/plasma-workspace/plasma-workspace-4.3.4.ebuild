@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.3.4.ebuild,v 1.1 2009/12/01 11:30:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.3.4.ebuild,v 1.2 2009/12/23 01:21:50 abcd Exp $
 
 EAPI="2"
 
@@ -58,7 +58,7 @@ KMEXTRACTONLY="
 KMLOADLIBS="libkworkspace libplasmaclock libtaskmanager"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with google-gadgets Googlegadgets)
 		$(cmake-utils_use_with python SIP)
 		$(cmake-utils_use_with python PyQt4)
@@ -66,7 +66,8 @@ src_configure() {
 		$(cmake-utils_use_with rss KdepimLibs)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
-		-DWITH_Xmms=OFF"
+		-DWITH_Xmms=OFF
+	)
 
 	kde4-meta_src_configure
 }
@@ -75,8 +76,8 @@ src_install() {
 	kde4-meta_src_install
 
 	rm -f \
-		"${D}$(python_get_sitedir)"/PyKDE4/*.py[co] \
-		"${D}${KDEDIR}"/share/apps/plasma_scriptengine_python/*.py[co]
+		"${ED}$(python_get_sitedir)"/PyKDE4/*.py[co] \
+		"${ED}${KDEDIR}"/share/apps/plasma_scriptengine_python/*.py[co]
 }
 
 pkg_postinst() {
@@ -84,7 +85,7 @@ pkg_postinst() {
 
 	if use python; then
 		python_mod_optimize \
-			"${ROOT}$(python_get_sitedir)"/PyKDE4 \
+			"$(python_get_sitedir)"/PyKDE4 \
 			"${KDEDIR}"/share/apps/plasma_scriptengine_python
 	fi
 }
@@ -92,9 +93,9 @@ pkg_postinst() {
 pkg_postrm() {
 	kde4-meta_pkg_postrm
 
-	if [[ -d "${KDEDIR}"/share/apps/plasma_scriptengine_python ]]; then
+	if [[ -d ${EKDEDIR}/share/apps/plasma_scriptengine_python ]]; then
 		python_mod_cleanup \
-			"${ROOT}$(python_get_sitedir)"/PyKDE4 \
+			"$(python_get_sitedir)"/PyKDE4 \
 			"${KDEDIR}"/share/apps/plasma_scriptengine_python
 	fi
 }
