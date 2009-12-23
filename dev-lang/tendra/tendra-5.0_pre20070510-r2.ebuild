@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20070510-r2.ebuild,v 1.1 2008/12/14 20:59:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20070510-r2.ebuild,v 1.2 2009/12/23 19:53:47 truedfx Exp $
 
-inherit eutils flag-o-matic bsdmk
+inherit bsdmk eutils flag-o-matic multilib
 
 REV=1073
-PATCHVER=1.5
+PATCHVER=1.6
 
 DESCRIPTION="A C/C++ compiler initially developed by DERA"
 HOMEPAGE="http://www.tendra.org/"
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${PN}-${REV}.tbz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -26,7 +26,9 @@ RDEPEND="!dev-lang/tcc"
 S=${WORKDIR}/trunk
 
 pkg_setup() {
-	export MAKE=$(get_bmake)
+	export BMAKE="$(get_bmake) ${MAKEOPTS}"
+
+	use amd64 && multilib_toolchain_setup x86
 }
 
 src_unpack() {
@@ -38,12 +40,12 @@ src_unpack() {
 src_compile() {
 	replace-flags '-O*' '-O'
 
-	PREFIX=/usr sh makedefs || die "makedefs failed"
-	emake -DBOOTSTRAP || die "bootstrap failed"
-	emake || die "build failed"
+	HOSTARCH=i386 PREFIX=/usr sh makedefs || die "makedefs failed"
+	${BMAKE} -DBOOTSTRAP || die "bootstrap failed"
+	${BMAKE} || die "build failed"
 }
 
 src_install() {
-	emake PREFIX="${D}usr" \
+	${BMAKE} PREFIX="${D}usr" \
 		MAN_DIR='${PREFIX}/share/man' install || die "install failed"
 }

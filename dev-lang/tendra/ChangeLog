@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tendra
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/ChangeLog,v 1.8 2008/12/14 20:59:32 truedfx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/ChangeLog,v 1.9 2009/12/23 19:53:47 truedfx Exp $
+
+  23 Dec 2009; Harald van Dĳk <truedfx@gentoo.org>
+  tendra-5.0_pre20070510-r2.ebuild:
+  Don't abort with src_test, just because there is no testsuite (#297954);
+  allow building on amd64 multilib
 
 *tendra-5.0_pre20070510-r2 (14 Dec 2008)
 
