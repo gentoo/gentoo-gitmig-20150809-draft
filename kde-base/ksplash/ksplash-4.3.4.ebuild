@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.3.4.ebuild,v 1.1 2009/12/01 11:05:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.3.4.ebuild,v 1.2 2009/12/23 00:53:03 abcd Exp $
 
 EAPI="2"
 
@@ -21,13 +21,14 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_has 3dnow X86_3DNOW)
 		$(cmake-utils_use_has altivec PPC_ALTIVEC)
 		$(cmake-utils_use_has mmx X86_MMX)
 		$(cmake-utils_use_has sse X86_SSE)
 		$(cmake-utils_use_has sse2 X86_SSE2)
-		$(cmake-utils_use_with xinerama X11_Xinerama)"
+		$(cmake-utils_use_with xinerama X11_Xinerama)
+	)
 
 	kde4-meta_src_configure
 }

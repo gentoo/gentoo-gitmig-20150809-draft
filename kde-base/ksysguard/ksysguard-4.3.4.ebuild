@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-4.3.4.ebuild,v 1.1 2009/12/01 11:08:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-4.3.4.ebuild,v 1.2 2009/12/23 00:56:10 abcd Exp $
 
 EAPI="2"
 
@@ -27,8 +27,9 @@ KMEXTRA="
 "
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with lm_sensors Sensors)"
+	mycmakeargs=(
+		$(cmake-utils_use_with lm_sensors Sensors)
+	)
 
 	kde4-meta_src_configure
 }
