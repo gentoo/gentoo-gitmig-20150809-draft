@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.49 2009/12/23 01:21:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.50 2009/12/23 12:10:31 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  plasma-workspace-4.3.4.ebuild:
+  Don't use ED in an EAPI that does not declare it.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   plasma-workspace-4.3.4.ebuild:
