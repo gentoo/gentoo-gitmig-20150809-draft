@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.208 2009/12/23 17:27:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.209 2009/12/23 23:24:14 scarabeus Exp $
+
+  23 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libsoup-2.24.3.ebuild:
+  Restore latest stable on hppa.
 
   23 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/libsoup-2.2.105-dprintf.patch,
