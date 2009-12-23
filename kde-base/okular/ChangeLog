@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.55 2009/12/10 23:42:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.56 2009/12/23 01:16:51 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> okular-4.3.4.ebuild:
+  Pull in changes from overlay
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -okular-4.3.1.ebuild:
   Drop KDE SC-4.3.1.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-4.3.4.ebuild,v 1.1 2009/12/01 11:11:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-4.3.4.ebuild,v 1.2 2009/12/23 01:03:34 abcd Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 "
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		-DKDE4_KTTSD_COMMAND=ON
 		-DKDE4_KTTSD_PHONON=ON
 		$(cmake-utils_use alsa KDE4_KTTSD_ALSA)
@@ -33,7 +33,7 @@ src_configure() {
 		$(cmake-utils_use flite KDE4_KTTSD_FLITE)
 		$(cmake-utils_use freetts KDE4_KTTSD_FREETTS)
 		$(cmake-utils_use mbrola KDE4_KTTSD_HADIFIX)
-	"
+	)
 
 	kde4-meta_src_configure
 }

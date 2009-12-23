@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.4-r1.ebuild,v 1.2 2009/12/09 16:38:09 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.3.4-r1.ebuild,v 1.3 2009/12/23 01:05:17 abcd Exp $
 
 EAPI="2"
 
@@ -50,8 +50,9 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with opengl OpenGL)"
+	mycmakeargs=(
+		$(cmake-utils_use_with opengl OpenGL)
+	)
 
 	kde4-meta_src_configure
 }

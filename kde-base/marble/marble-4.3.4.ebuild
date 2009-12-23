@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.3.4.ebuild,v 1.1 2009/12/01 11:25:46 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.3.4.ebuild,v 1.2 2009/12/23 01:14:33 abcd Exp $
 
 EAPI="2"
 
@@ -27,18 +27,19 @@ RDEPEND="${DEPEND}
 "
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with designer-plugin DESIGNER_PLUGIN)
 		$(cmake-utils_use_with plasma)
 		$(cmake-utils_use_with python PyKDE4)
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PythonLibrary)
-		$(cmake-utils_use_with python SIP)"
+		$(cmake-utils_use_with python SIP)
+	)
 
 	find "${S}/marble/src/bindings/python/sip" -name "*.sip" | xargs -- sed -i 's/#include <marble\//#include </'
 
 	if use gps; then
-		mycmakeargs="${mycmakeargs} -DHAVE_LIBGPS=1"
+		mycmakeargs+=(-DHAVE_LIBGPS=1)
 	else
 		sed -i -e 's:FIND_LIBRARY(libgps_LIBRARIES gps):# LIBGPS DISABLED &:' \
 			marble/Findlibgps.cmake || die "sed to disable gpsd failed."

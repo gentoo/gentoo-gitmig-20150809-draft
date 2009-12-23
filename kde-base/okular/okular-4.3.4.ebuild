@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.3.4.ebuild,v 1.1 2009/12/01 11:27:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.3.4.ebuild,v 1.2 2009/12/23 01:16:51 abcd Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}"
 KMEXTRACTONLY="libs/mobipocket"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with chm)
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with djvu DjVuLibre)
@@ -43,7 +43,8 @@ src_configure() {
 		$(cmake-utils_use_with ps LibSpectre)
 		$(cmake-utils_use_with pdf PopplerQt4)
 		$(cmake-utils_use_with pdf Poppler)
-		$(cmake-utils_use_with tiff)"
+		$(cmake-utils_use_with tiff)
+	)
 
 	kde4-meta_src_configure
 }

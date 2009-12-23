@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/libkleo-4.3.4.ebuild,v 1.1 2009/12/01 11:21:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/libkleo-4.3.4.ebuild,v 1.2 2009/12/23 01:12:46 abcd Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 KMSAVELIBS="true"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs} -DWITH_QGPGME=ON"
+	mycmakeargs=(-DWITH_QGPGME=ON)
 
 	kde4-meta_src_configure
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/parley-4.3.4.ebuild,v 1.1 2009/12/01 11:28:48 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/parley-4.3.4.ebuild,v 1.2 2009/12/23 01:17:53 abcd Exp $
 
 EAPI="2"
 
@@ -23,8 +23,9 @@ KMEXTRACTONLY="
 "
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with plasma)"
+	mycmakeargs=(
+		$(cmake-utils_use_with plasma)
+	)
 
 	kde4-meta_src_configure
 }
