@@ -1,9 +1,0 @@
-diff -ur kbibtex-0_p95.orig/src/program/kbibtex.desktop kbibtex-0_p95/src/program/kbibtex.desktop
---- kbibtex-0_p95.orig/src/program/kbibtex.desktop	2009-11-08 15:10:40.000000000 +0200
-+++ kbibtex-0_p95/src/program/kbibtex.desktop	2009-11-08 16:01:32.000000000 +0200
-@@ -12,4 +12,4 @@
- # TODO X-DBUS-StartupType=Multi
- # TODO X-DBUS-ServiceName=org.kde.okteta
- # TODO Categories=Qt;KDE;Utility;X-KDE-Utilities-File;
--
-+Categories=Qt;KDE;Utility;
