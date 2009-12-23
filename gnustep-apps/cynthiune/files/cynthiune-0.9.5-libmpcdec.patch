@@ -1,0 +1,310 @@
+2009-05-19  Yavor Doganov  <yavor@gnu.org>
+
+	* Bundsles/Musepack/CNSFileHandle.h: Import <mpc/reader.h>.
+	(CNSFileHandleRetain, CNSFileHandleRelease): Remove prototypes.
+	(CNSFileHandleRead, CNSFileHandleTell, CNSFileHandleCanSeek)
+	(CNSFileHandleSeek, CNSFileHandleGetSize): Accept mpc_reader
+	type as first argument.
+	* Bundles/Musepack/CNSFileHandle.m (CNSFileHandleRetain)
+	(CNSFileHandleRelease): Delete; unused.
+	(CNSFileHandleRead, CNSFileHandleTell, CNSFileHandleCanSeek)
+	(CNSFileHandleSeek, CNSFileHandleGetSize): Adjust for the new
+	mpc_reader type.
+	* Bundles/Musepack/Musepack.h <mpcDecoder>: Declare of
+	mpc_demux type.
+	* Bundles/Musepack/Musepack.m: Import <mpc/mpcdec.h>.
+	(MPCReaderDelete): Use `mpc_reader_exit_stdio' instead of
+	`free'.
+	(MPCStreamInfoNew): Don't call `mpc_streaminfo_init'.
+	(MPCDecoderNew): Remove function.
+	([Musepack -streamOpen]): Initialize the decoder with the new
+	API function `mpc_demux_init'.
+	([Musepack +streamTestOpen]): Likewise.
+	([Musepack -readNextChunk:withSize:]): Adjust to use
+	`mpc_demux_decode'.
+	<frame, err>: New local variables.
+	<vbrAcc, vbrBits>: Remove.
+	([Musepack -readDuration]): Use `mpc_streaminfo_get_length' to
+	obtain the duration and return its result casted to unsigned int.
+	([Musepack -streamClose]): Use `mpc_demux_exit' as appropriate.
+	([Musepack +acceptedFileExtensions]): Recognize `.mpp'.
+	([Musepack -seek]): Use `mpc_demux_seek_second'.
+
+--- cynthiune.app-0.9.5.orig/Bundles/Musepack/CNSFileHandle.h
++++ cynthiune.app-0.9.5/Bundles/Musepack/CNSFileHandle.h
+@@ -23,20 +23,17 @@
+ #ifndef CNSFILEHANDLE_H
+ #define CNSFILEHANDLE_H
+ 
+-#include <mpcdec/config_types.h>
++#import <mpc/reader.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {
+ #endif /* __cplusplus */
+ 
+-void CNSFileHandleRetain (void *fileHandle);
+-void CNSFileHandleRelease (void *fileHandle);
+-
+-int CNSFileHandleRead (void *fileHandle, void *ptr, int size);
+-int CNSFileHandleTell (void *fileHandle);
+-mpc_bool_t CNSFileHandleCanSeek (void *fileHandle);
+-mpc_bool_t CNSFileHandleSeek (void *fileHandle, int offset);
+-int CNSFileHandleGetSize (void *fileHandle);
++int CNSFileHandleRead (mpc_reader *fileHandle, void *ptr, int size);
++int CNSFileHandleTell (mpc_reader *fileHandle);
++mpc_bool_t CNSFileHandleCanSeek (mpc_reader *fileHandle);
++mpc_bool_t CNSFileHandleSeek (mpc_reader *fileHandle, int offset);
++int CNSFileHandleGetSize (mpc_reader *fileHandle);
+ 
+ #ifdef __cplusplus
+ }
+--- cynthiune.app-0.9.5.orig/Bundles/Musepack/CNSFileHandle.m
++++ cynthiune.app-0.9.5/Bundles/Musepack/CNSFileHandle.m
+@@ -26,57 +26,45 @@
+ 
+ #import "CNSFileHandle.h"
+ 
+-void
+-CNSFileHandleRetain (void *fileHandle)
+-{
+-  [(NSFileHandle *) fileHandle retain];
+-}
+-
+-void
+-CNSFileHandleRelease (void *fileHandle)
+-{
+-  [(NSFileHandle *) fileHandle release];
+-}
+-
+ int
+-CNSFileHandleRead (void *fileHandle, void *ptr, int size)
++CNSFileHandleRead (mpc_reader *fileHandle, void *ptr, int size)
+ {
+   NSData *data;
+ 
+-  data = [(NSFileHandle *) fileHandle readDataOfLength: size];
++  data = [(NSFileHandle *) fileHandle->data readDataOfLength: size];
+   [data getBytes: ptr];
+ 
+   return [data length];
+ }
+ 
+ int
+-CNSFileHandleTell (void *fileHandle)
++CNSFileHandleTell (mpc_reader *fileHandle)
+ {
+-  return [(NSFileHandle *) fileHandle offsetInFile];
++  return [(NSFileHandle *) fileHandle->data offsetInFile];
+ }
+ 
+ mpc_bool_t
+-CNSFileHandleCanSeek (void *fileHandle)
++CNSFileHandleCanSeek (mpc_reader *fileHandle)
+ {
+   return YES;
+ }
+ 
+ mpc_bool_t
+-CNSFileHandleSeek (void *fileHandle, int offset)
++CNSFileHandleSeek (mpc_reader *fileHandle, int offset)
+ {
+-  [(NSFileHandle *) fileHandle seekToFileOffset: (long long) offset];
++  [(NSFileHandle *) fileHandle->data seekToFileOffset: (long long) offset];
+ 
+   return YES;
+ }
+ 
+ int
+-CNSFileHandleGetSize (void *fileHandle)
++CNSFileHandleGetSize (mpc_reader *fileHandle)
+ {
+   int size, where;
+ 
+-  where = [(NSFileHandle *) fileHandle offsetInFile];
+-  size = [(NSFileHandle *) fileHandle seekToEndOfFile];
+-  [(NSFileHandle *) fileHandle seekToFileOffset: (long long) where];
++  where = [(NSFileHandle *) fileHandle->data offsetInFile];
++  size = [(NSFileHandle *) fileHandle->data seekToEndOfFile];
++  [(NSFileHandle *) fileHandle->data seekToFileOffset: (long long) where];
+ 
+   return size;
+ }
+--- cynthiune.app-0.9.5.orig/Bundles/Musepack/Musepack.h
++++ cynthiune.app-0.9.5/Bundles/Musepack/Musepack.h
+@@ -31,7 +31,7 @@
+ 
+   mpc_reader *mpcReader;
+   mpc_streaminfo *mpcStreamInfo;
+-  mpc_decoder *mpcDecoder;
++  mpc_demux *mpcDecoder;
+ 
+   MPC_SAMPLE_FORMAT sampleBuffer[maxSamples];
+   unsigned char frameBuffer[maxSamples * 4];
+--- cynthiune.app-0.9.5.orig/Bundles/Musepack/Musepack.m
++++ cynthiune.app-0.9.5/Bundles/Musepack/Musepack.m
+@@ -30,7 +30,7 @@
+ #import <Cynthiune/Format.h>
+ #import <Cynthiune/utils.h>
+ 
+-#import <mpcdec/mpcdec.h>
++#import <mpc/mpcdec.h>
+ 
+ #import "Musepack.h"
+ #import "CNSFileHandle.h"
+@@ -75,7 +75,7 @@
+ MPCReaderDelete (mpc_reader *reader)
+ {
+   [(NSFileHandle *) reader->data release];
+-  free (reader);
++  mpc_reader_exit_stdio (reader);
+ }
+ 
+ static mpc_streaminfo *
+@@ -84,23 +84,10 @@
+   mpc_streaminfo *streamInfo;
+ 
+   streamInfo = malloc (sizeof (mpc_streaminfo));
+-  mpc_streaminfo_init (streamInfo);
+ 
+   return streamInfo;
+ }
+ 
+-static mpc_decoder *
+-MPCDecoderNew (mpc_reader *reader, mpc_streaminfo *streamInfo)
+-{
+-  mpc_decoder *decoder;
+-
+-  decoder = malloc (sizeof (mpc_decoder));
+-  mpc_decoder_setup (decoder, reader);
+-  mpc_decoder_initialize (decoder, streamInfo);
+-
+-  return decoder;
+-}
+-
+ static inline void
+ CopyBuffer (const MPC_SAMPLE_FORMAT *buffer, unsigned char *destBuffer,
+             unsigned int length)
+@@ -173,10 +160,13 @@
+     {
+       [fileHandle retain];
+       mpcReader = MPCReaderNew (fileHandle);
++      if (!mpcReader)
++      	return MPC_FALSE;
+       mpcStreamInfo = MPCStreamInfoNew ();
+-      mpc_streaminfo_read (mpcStreamInfo, mpcReader);
+-
+-      mpcDecoder = MPCDecoderNew (mpcReader, mpcStreamInfo);
++      mpcDecoder = mpc_demux_init (mpcReader);
++      if (!mpcDecoder)
++ 	return MPC_FALSE;
++      mpc_demux_get_info (mpcDecoder, mpcStreamInfo);
+ 
+       result = YES;
+     }
+@@ -196,6 +186,7 @@
+   NSFileHandle *testFileHandle;
+   mpc_reader *testReader;
+   mpc_streaminfo *testStreamInfo;
++  mpc_demux *testDecoder;
+   BOOL result;
+ 
+   testFileHandle = [NSFileHandle fileHandleForReadingAtPath: fileName];
+@@ -203,9 +194,14 @@
+     {
+       testReader = MPCReaderNew (testFileHandle);
+       testStreamInfo = MPCStreamInfoNew ();
+-      result = !mpc_streaminfo_read (testStreamInfo, testReader);
+-      free (testStreamInfo);
+-      MPCReaderDelete (testReader);
++      testDecoder = mpc_demux_init (testReader);
++      if (testDecoder)
++	{
++	  result = YES;
++	  mpc_demux_exit (testDecoder);
++	}
++      if (testReader)
++	MPCReaderDelete (testReader);
+     }
+   else
+     result = NO;
+@@ -222,21 +218,29 @@
+ 	     withSize: (unsigned int) bufferSize
+ {
+   int bytes, status;
+-  unsigned int vbrAcc, vbrBits;
++  mpc_frame_info frame;
++  mpc_status err;
+   unsigned long frames, samples;
+ 
+   status = 1;
++  frame.buffer = sampleBuffer;
+ 
+-  if (!remaining)
++  while (!remaining)
+     {
+-      samples = mpc_decoder_decode (mpcDecoder, sampleBuffer,
+-                                    &vbrAcc, &vbrBits);
+-      if (!samples)
+-        status = 0;
+-      else if (samples == (unsigned long) -1)
+-        status = -1;
++      err = mpc_demux_decode (mpcDecoder, &frame);
++      if (err != MPC_STATUS_OK)
++	{
++	  status = -1;
++	  break;
++	}
++      else if (frame.bits == -1)
++	{
++	  status = 0;
++	  break;
++	}
+       else
+         {
++	   samples = frame.samples;
+           frames = samples * mpcStreamInfo->channels;
+           CopyBuffer (sampleBuffer, frameBuffer, frames);
+           remaining = frames * 2;
+@@ -277,7 +281,7 @@
+ 
+ - (unsigned int) readDuration
+ {
+-  return mpcStreamInfo->pcm_samples / mpcStreamInfo->sample_freq;
++  return (unsigned int) mpc_streaminfo_get_length (mpcStreamInfo);
+ }
+ 
+ - (void) streamClose
+@@ -287,12 +291,10 @@
+       [fileHandle closeFile];
+       [fileHandle release];
+     }
++  if (mpcDecoder)
++    mpc_demux_exit (mpcDecoder);
+   if (mpcReader)
+     MPCReaderDelete (mpcReader);
+-  if (mpcStreamInfo)
+-    free (mpcStreamInfo);
+-  if (mpcDecoder)
+-    free (mpcDecoder);
+ 
+   [self _resetIVars];
+ }
+@@ -300,7 +302,7 @@
+ // Player Protocol
+ + (NSArray *) acceptedFileExtensions
+ {
+-  return [NSArray arrayWithObjects: @"mpc", @"mp+", nil];
++  return [NSArray arrayWithObjects: @"mpc", @"mp+", @"mpp", nil];
+ }
+ 
+ - (BOOL) isSeekable
+@@ -310,7 +312,7 @@
+ 
+ - (void) seek: (unsigned int) aPos
+ {
+-  mpc_decoder_seek_seconds (mpcDecoder, (double) aPos);
++  mpc_demux_seek_second (mpcDecoder, (double) aPos);
+ }
+ 
+ @end

@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.25 2009/11/10 21:51:47 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.26 2009/12/23 20:39:18 voyageur Exp $
+
+*cynthiune-0.9.5-r5 (23 Dec 2009)
+
+  23 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +cynthiune-0.9.5-r5.ebuild, +files/cynthiune-0.9.5-libmpcdec.patch:
+  Convert musepack support to SV8 api, thanks to ssuominen in bug #297910
 
   10 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   cynthiune-0.9.5-r4.ebuild:
