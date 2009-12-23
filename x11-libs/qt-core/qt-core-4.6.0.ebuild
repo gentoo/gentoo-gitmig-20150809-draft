@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.0.ebuild,v 1.2 2009/12/03 17:22:07 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.0.ebuild,v 1.3 2009/12/23 12:50:15 spatz Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -54,6 +54,7 @@ translations"
 
 PATCHES=(
 	"${FILESDIR}/qt-4.6-nolibx11.diff"
+	"${FILESDIR}/${P}-hebrew.patch"
 )
 
 pkg_setup() {
