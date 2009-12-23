@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/fsvs-1.2.1.ebuild,v 1.1 2009/10/27 19:04:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/fsvs-1.2.1.ebuild,v 1.2 2009/12/23 09:05:33 dertobi123 Exp $
+
+EAPI=2
+
+inherit eutils
 
 DESCRIPTION="Backup/restore for subversion backends"
 HOMEPAGE="http://fsvs.tigris.org/"
@@ -17,6 +21,10 @@ DEPEND=">=dev-util/subversion-1.2
 	>=dev-libs/apr-util-1.2
 	dev-util/ctags"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/fsvs-1.2.1-as-needed.patch"
+}
 
 src_install() {
 	dobin src/fsvs

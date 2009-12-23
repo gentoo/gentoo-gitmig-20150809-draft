@@ -1,0 +1,20 @@
+--- fsvs-1.2.1.orig/src/Makefile.in	2009-10-12 19:05:54.000000000 +0000
++++ fsvs-1.2.1/src/Makefile.in	2009-12-22 16:30:07.057583489 +0000
+@@ -18,7 +18,7 @@
+ CFLAGS	:= @CFLAGS@
+ CFLAGS	+= -Wall -funsigned-char -Os -DFSVS_VERSION='"$(VERSION)"' 
+ LDFLAGS	:= @LDFLAGS@
+-FSVS_LDFLAGS = $(LDFLAGS) -lsvn_subr-1 -lsvn_delta-1 -lsvn_ra-1 -lpcre -lgdbm
++FSVS_LIBS = -lsvn_subr-1 -lsvn_delta-1 -lsvn_ra-1 -lpcre -lgdbm
+ EXTRALIBS	:= @EXTRALIBS@
+ WAA_CHARS?= @WAA_WC_MD5_CHARS@
+ 
+@@ -152,7 +152,7 @@
+ # change, too.
+ $(DEST): $(C_FILES:%.c=%.o)
+ 	@echo "     Link $@"
+-	@$(CC) $(FSVS_LDFLAGS) $(LDLIBS) $(LIBS) $(EXTRALIBS) -o $@ $^
++	@$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS) $(LIBS) $(FSVS_LIBS) $(EXTRALIBS)
+ ifeq (@ENABLE_RELEASE@, 1)
+ 	-strip $@
+ endif
