@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.163 2009/11/05 21:28:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.164 2009/12/23 01:18:52 caster Exp $
+
+  23 Dec 2009; Vlastimil Babka <caster@gentoo.org>
+  -sun-jre-bin-1.4.2.19.ebuild, -files/sun-jre-bin-1.4.env:
+  Moved to java junkyard for security and EOL, bug #287615.
 
   05 Nov 2009; Markus Meier <maekke@gentoo.org> sun-jre-bin-1.5.0.22.ebuild,
   sun-jre-bin-1.6.0.17.ebuild:
