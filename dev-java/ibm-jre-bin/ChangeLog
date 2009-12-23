@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.139 2009/11/17 16:18:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.140 2009/12/23 17:41:42 scarabeus Exp $
+
+  23 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ibm-jre-bin-1.4.2.13.ebuild:
+  Drop old. Per bug #287615.
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> ibm-jre-bin-1.6.0.6.ebuild:
   Marking ibm-jre-bin-1.6.0.6 ppc64 for bug 287490
