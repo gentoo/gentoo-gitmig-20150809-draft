@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.3.4.ebuild,v 1.1 2009/12/01 11:29:09 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.3.4.ebuild,v 1.2 2009/12/23 01:20:32 abcd Exp $
 
 EAPI="2"
 
@@ -13,18 +13,24 @@ HOMEPAGE="http://phonon.kde.org"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
-IUSE="debug pulseaudio +xine"
+IUSE="alsa debug pulseaudio +xine"
 
 DEPEND="
-	media-libs/alsa-lib
 	media-sound/phonon[xine?]
+	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )
 "
 RDEPEND="${DEPEND}"
 
 add_blocker phonon-xine
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.3.4-optional-alsa.patch
+)
+
 src_prepare() {
+	kde4-meta_src_prepare
+
 	# Don't build tests - they require OpenGL
 	sed -e 's/add_subdirectory(tests)//' \
 		-i phonon/CMakeLists.txt || die "Failed to disable tests"
@@ -32,14 +38,14 @@ src_prepare() {
 	# Disable automagic
 	sed -e 's/find_package(Xine)/macro_optional_find_package(Xine)/' \
 		-i phonon/kcm/xine/CMakeLists.txt || die "Failed to make xine optional"
-
-	kde4-meta_src_prepare
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
+		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with pulseaudio PulseAudio)
-		$(cmake-utils_use_with xine)"
+		$(cmake-utils_use_with xine)
+	)
 
 	kde4-meta_src_configure
 }
