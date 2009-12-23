@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.61 2009/09/11 21:01:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.62 2009/12/23 15:37:48 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org> mysql++-3.0.9.ebuild:
+  Fix for Prefix, marked ~amd64-linux and ~ppc-macos, bug #294611
 
 *mysql++-3.0.9 (11 Sep 2009)
 

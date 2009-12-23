@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.0.9.ebuild,v 1.1 2009/09/11 21:01:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.0.9.ebuild,v 1.2 2009/12/23 15:37:48 grobian Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~amd64-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=virtual/mysql-4.0"
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--enable-thread-check"
+	myconf="--enable-thread-check --with-mysql=${EPREFIX}/usr"
 
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 	econf ${myconf} || die "econf failed"
@@ -47,6 +47,6 @@ src_install() {
 	# install the docs and HTML pages
 	dodoc README* CREDITS* ChangeLog HACKERS Wishlist
 	dodoc doc/*
-	cp -ra doc/html "${D}"/usr/share/doc/${PF}/html
+	cp -ra doc/html "${D%/}${EPREFIX}"/usr/share/doc/${PF}/html
 	prepalldocs
 }
