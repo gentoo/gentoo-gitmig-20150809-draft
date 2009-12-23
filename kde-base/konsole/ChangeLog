@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.151 2009/12/10 23:06:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.152 2009/12/23 00:36:24 abcd Exp $
+
+  23 Dec 2009; Jonathan Callen <abcd@gentoo.org> konsole-4.3.4.ebuild:
+  Fix prefix support
 
   10 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   -files/konsole-4.3.1-kpart-backport-fix.patch:
