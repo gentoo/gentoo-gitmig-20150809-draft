@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.29 2009/11/17 14:50:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.30 2009/12/23 00:18:49 caster Exp $
+
+  23 Dec 2009; Vlastimil Babka <caster@gentoo.org>
+  jdbc-postgresql-8.3_p605.ebuild:
+  Rewrite system classpath again so that tests compile, fixes bug #298008.
 
   17 Nov 2009; Vlastimil Babka <caster@gentoo.org>
   jdbc-postgresql-8.3_p603.ebuild, jdbc-postgresql-8.3_p603-r1.ebuild,

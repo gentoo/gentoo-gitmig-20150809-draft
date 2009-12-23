@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.3_p605.ebuild,v 1.2 2009/11/02 21:56:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.3_p605.ebuild,v 1.3 2009/12/23 00:18:49 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -37,6 +37,11 @@ RDEPEND="java6? ( >=virtual/jre-1.6 )
 S="${WORKDIR}/${MY_P}"
 
 EANT_DOC_TARGET="publicapi"
+
+java_prepare() {
+	# needed for src_test
+	java-ant_rewrite-classpath
+}
 
 src_compile() {
 	java-pkg-2_src_compile
