@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.82 2009/12/16 21:09:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.83 2009/12/23 21:56:41 grobian Exp $
+
+  23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  files/pycrypto-2.1.0-gmp.patch:
+  Inject the python conigured libdir to the library search path to avoid not
+  finding GMP, bug #291949
 
   16 Dec 2009; Markus Meier <maekke@gentoo.org> pycrypto-2.1.0_beta1.ebuild:
   amd64/arm/x86 stable, bug #295698
