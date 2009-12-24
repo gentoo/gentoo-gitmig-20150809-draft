@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-20091222.ebuild,v 1.1 2009/12/22 13:49:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-20091222.ebuild,v 1.2 2009/12/24 13:23:06 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -10,7 +10,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Free Win64 runtime and import library definitions"
 HOMEPAGE="http://mingw-w64.sourceforge.net/"
@@ -35,6 +35,12 @@ pkg_setup() {
 	if [[ ${CBUILD} == ${CHOST} ]] && [[ ${CHOST} == ${CTARGET} ]] ; then
 		die "Invalid configuration"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-mm_shuffle_ps-x86.patch #298087
 }
 
 src_compile() {
@@ -64,5 +70,4 @@ src_install() {
 	emake install DESTDIR="${D}" || die
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 	rm -rf "${D}"/usr/doc
-	dodoc ChangeLog
 }

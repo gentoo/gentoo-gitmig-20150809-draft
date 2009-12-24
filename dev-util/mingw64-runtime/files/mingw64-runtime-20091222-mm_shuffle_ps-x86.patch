@@ -1,0 +1,13 @@
+fix from upstream
+
+--- trunk/mingw-w64-headers/crt/intrin.h	2009/11/10 15:45:03	1517
++++ trunk/mingw-w64-headers/crt/intrin.h	2009/12/23 12:31:10	1672
+@@ -582,7 +582,7 @@
+     __MACHINEX86X_NOWIN64(__m64 _mm_cvtt_ps2pi(__m128))
+     __MACHINEX86X_NOIA64(__m128 _mm_cvt_si2ss(__m128,int))
+     __MACHINEX86X_NOWIN64(__m128 _mm_cvt_pi2ps(__m128,__m64))
+-    __MACHINEX86X_NOIA64(__m128 _mm_shuffle_ps(__m128,__m128,unsigned int))
++    __MACHINEX86X_NOIA64(__m128 _mm_shuffle_ps(__m128,__m128,int const))
+     __MACHINEX86X_NOIA64(__m128 _mm_unpackhi_ps(__m128,__m128))
+     __MACHINEX86X_NOIA64(__m128 _mm_unpacklo_ps(__m128,__m128))
+     __MACHINEX86X_NOIA64(__m128 _mm_loadh_pi(__m128,__m64 const*))
