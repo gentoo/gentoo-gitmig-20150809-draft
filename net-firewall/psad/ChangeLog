@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/psad
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.44 2008/09/12 05:03:41 battousai Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.45 2009/12/24 21:21:13 battousai Exp $
+
+*psad-2.1.5 (24 Dec 2009)
+
+  24 Dec 2009; Bryan Stine <battousai@gentoo.org> +psad-2.1.5.ebuild:
+  Version bump to 2.1.5. This version now includes SELinux policy which is
+  not yet in the refpol that I know of and will need a sec-policy package.
+  Happy holidays!
 
 *psad-2.1.4 (12 Sep 2008)
 
