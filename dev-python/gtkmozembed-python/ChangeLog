@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.15 2009/08/25 11:57:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.16 2009/12/24 16:33:30 nirbheek Exp $
+
+*gtkmozembed-python-2.19.1-r12 (24 Dec 2009)
+
+  24 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gtkmozembed-python-2.19.1-r12.ebuild,
+  +files/gtkmozembed-python-2.19.1-include-nspr.patch:
+  Add nspr includes, fixes bug 296924
 
   25 Aug 2009; Alexis Ballier <aballier@gentoo.org>
   gtkmozembed-python-2.19.1.ebuild:
