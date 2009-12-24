@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.251 2009/12/22 20:46:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.252 2009/12/24 13:17:50 scarabeus Exp $
+
+  24 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.7.ebuild:
+  Rdepend on xorg-server[-minimal]. Thx to Tommy for reporting.
 
   22 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.7.ebuild:
   Sync with in-overlay updates prepared for 7.7 final release.

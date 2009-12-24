@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7.ebuild,v 1.2 2009/12/22 20:46:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7.ebuild,v 1.3 2009/12/24 13:17:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -43,10 +43,11 @@ IUSE="${IUSE_VIDEO_CARDS}
 
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
-RDEPEND="!<x11-base/xorg-server-1.7
+RDEPEND="
 	!<=x11-proto/xf86driproto-2.0.3
 	>=app-admin/eselect-opengl-1.1.1-r2
 	dev-libs/expat
+	>=x11-base/xorg-server-1.7[-minimal]
 	>=x11-libs/libdrm-2.4.17
 	x11-libs/libICE
 	x11-libs/libX11[xcb?]
