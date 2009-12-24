@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.6.ebuild,v 1.2 2008/10/19 14:59:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/xmds-1.6.6.ebuild,v 1.3 2009/12/24 18:46:04 spock Exp $
 
 inherit eutils
 
@@ -47,5 +47,5 @@ src_install() {
 		done
 	fi
 
-	rm -rf "${D}/usr/share/doc/${PN}/examples"
+	rm -rf "${D}/usr/share/doc/${PN}"
 }
