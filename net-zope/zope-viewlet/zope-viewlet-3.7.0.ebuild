@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-viewlet/zope-viewlet-3.6.1.ebuild,v 1.1 2009/11/14 16:34:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-viewlet/zope-viewlet-3.7.0.ebuild,v 1.1 2009/12/24 17:16:13 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="net-zope/zope-app-pagetemplate
+RDEPEND="net-zope/zope-browserpage
 	net-zope/zope-component
 	net-zope/zope-configuration
 	net-zope/zope-contentprovider
