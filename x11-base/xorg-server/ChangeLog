@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.476 2009/12/16 21:52:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.477 2009/12/24 13:17:39 scarabeus Exp $
+
+  24 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xorg-server-1.7.3.ebuild, -xorg-server-1.7.3.901.ebuild,
+  xorg-server-1.7.3.901-r1.ebuild:
+  Pdepend on mesa instead of rdepend. Drop older versions.
 
 *xorg-server-1.7.3.901-r1 (16 Dec 2009)
 

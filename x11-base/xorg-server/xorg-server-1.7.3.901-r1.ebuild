@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.3.901-r1.ebuild,v 1.1 2009/12/16 21:52:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.3.901-r1.ebuild,v 1.2 2009/12/24 13:17:39 scarabeus Exp $
 
 EAPI="2"
 
@@ -52,7 +52,6 @@ RDEPEND="hal? ( sys-apps/hal )
 		>=x11-libs/libX11-1.1.5
 		>=x11-libs/libXext-1.0.5
 		>=x11-libs/libXres-1.0.3
-		>=media-libs/mesa-7.4[nptl=]
 	)
 	>=x11-libs/libxkbui-1.0.2
 	kdrive? (
@@ -113,7 +112,8 @@ DEPEND="${RDEPEND}
 		>=x11-libs/libdrm-2.3.0
 	)"
 
-PDEPEND="xorg? ( >=x11-base/xorg-drivers-$(get_version_component_range 1-2) )"
+PDEPEND="xorg? ( >=x11-base/xorg-drivers-$(get_version_component_range 1-2) )
+	!minimal? ( >=media-libs/mesa-7.4[nptl=] )"
 
 EPATCH_FORCE="yes"
 EPATCH_SUFFIX="patch"
