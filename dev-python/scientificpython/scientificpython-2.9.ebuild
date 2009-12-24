@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.2 2009/09/05 01:33:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.3 2009/12/24 22:44:51 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,16 +13,17 @@ DV="2372" # hardcoded download version
 DESCRIPTION="Scientific Module for Python"
 SRC_URI="http://sourcesup.cru.fr/frs/download.php/${DV}/${MY_PN}-${PV}.tar.gz"
 HOMEPAGE="http://sourcesup.cru.fr/projects/scientific-py/"
-SLOT="0"
+
 LICENSE="CeCILL-2"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE="doc mpi test"
 
-IUSE="doc mpi"
-
-DEPEND="dev-python/numpy
+RDEPEND="dev-python/numpy
 	sci-libs/netcdf
 	mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-python/nose )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_PN}-${PV}.0"
@@ -49,9 +50,7 @@ src_compile() {
 src_test() {
 	cd Tests
 	testing() {
-		for test in *tests.py; do
-			PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib*)" "$(PYTHON)" "${test}" || die "test ${test} failed with Python ${PYTHON_ABI}"
-		done
+		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" nosetests-${PYTHON_ABI}
 	}
 	python_execute_function testing
 }
@@ -62,13 +61,16 @@ src_install() {
 	dodoc README README.MPI Doc/CHANGELOG || die "dodoc failed"
 	insinto /usr/share/doc/${PF}
 	doins Examples/{demomodule.c,netcdf_demo.py} || die "doins examples failed"
+
 	if use mpi; then
 		installation_of_mpipython() {
 			dobin Src/MPI/mpipython-${PYTHON_ABI}
 		}
 		python_execute_function -q installation_of_mpipython
+		python_generate_wrapper_scripts "${D}usr/bin/mpipython"
 		doins Examples/mpi.py || die "doins mpi example failed failed"
 	fi
+
 	if use doc; then
 		dohtml Doc/Reference/* || die "dohtml failed"
 	fi
