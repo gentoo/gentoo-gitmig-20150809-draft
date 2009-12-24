@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.1 2009/09/29 20:33:09 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.2 2009/12/24 18:30:53 pacho Exp $
 
 EAPI=2
 inherit fortran eutils java-utils-2
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${PN%2}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="minimal fortran threads debug"
 
 COMMON_DEPEND="!minimal? ( x11-libs/libXtst
