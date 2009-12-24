@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.72 2009/12/17 12:24:57 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.73 2009/12/24 14:13:42 grozin Exp $
+
+  24 Dec 2009; Andrey Grozin <grozin@gentoo.org> maxima-5.20.1.ebuild:
+  Restored ~ppc ~sparc keywords
 
 *maxima-5.20.1 (17 Dec 2009)
 
