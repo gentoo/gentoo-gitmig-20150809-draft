@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10996 2009/12/24 11:03:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10997 2009/12/24 12:40:37 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -375,21 +375,8 @@ dev-util/cook
 app-office/kletterwizard
 app-editors/kxmleditor
 <app-text/bibletime-2
-dev-db/kpogre
-dev-util/kdbg
-dev-util/kprof
 sci-visualization/kpl
 sci-electronics/klogic
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
-#  on behalf of QA team
-#
-# Projects seem dead, hk_classes fails to build with autoconf
-# 2.64 (bug 279965).
-#
-# Removal on 2010-02-02
-dev-db/hk_classes
-dev-db/knoda
 
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Dec 2009)
 # The "game" part of the experience is missing.
