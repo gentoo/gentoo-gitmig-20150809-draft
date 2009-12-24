@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/kst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.25 2009/12/08 20:10:19 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.26 2009/12/24 22:28:05 ayoy Exp $
+
+*kst-2.0.0_beta2-r1 (24 Dec 2009)
+
+  24 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> -kst-2.0.0_beta2.ebuild,
+  +kst-2.0.0_beta2-r1.ebuild, +files/kst-cfitsio-includes.patch:
+  Updating [R]DEPEND with sci-libs/cfitsio and fixing a compilation error
+  (bug #298212)
 
 *kst-2.0.0_beta2 (08 Dec 2009)
 
