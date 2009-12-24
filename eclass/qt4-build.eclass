@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.56 2009/12/22 17:04:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.57 2009/12/24 21:40:23 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -14,7 +14,7 @@
 
 inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
-IUSE="debug pch"
+IUSE="debug pch aqua"
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
 	!>x11-libs/qt-assistant-${PV}-r9999
@@ -48,32 +48,55 @@ RDEPEND="
 
 MY_PV=${PV/_/-}
 
-if version_is_at_least 4.5.99999999 ${PV} ; then
-	MY_P=qt-everywhere-opensource-src-${MY_PV}
-else
-	MY_P=qt-x11-opensource-src-${MY_PV}
-fi
-
-S=${WORKDIR}/${MY_P}
-
 HOMEPAGE="http://qt.nokia.com/"
-SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
+if version_is_at_least 4.5.99999999 ${PV} ; then
+	SRC_URI="http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-${MY_PV}.tar.gz"
+else
+	SRC_URI="aqua? ( http://get.qt.nokia.com/qt/source/qt-mac-opensource-src-${MY_PV}.tar.gz )
+		!aqua? ( http://get.qt.nokia.com/qt/source/qt-x11-opensource-src-${MY_PV}.tar.gz )"
+fi
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 
 # @FUNCTION: qt4-build_pkg_setup
 # @DESCRIPTION:
-# Sets up PATH and LD_LIBRARY_PATH
+# Sets up S, MY_P, PATH, and LD_LIBRARY_PATH
 qt4-build_pkg_setup() {
+	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
+
+	local MY_GE
+	if version_is_at_least 4.5.99999999 ${PV} ; then
+		MY_P=qt-everywhere-opensource-src-${MY_PV}
+	else
+		use aqua \
+			&& MY_GE=mac \
+			|| MY_GE=x11
+		MY_P=qt-${MY_GE}-opensource-src-${MY_PV}
+	fi
+	S=${WORKDIR}/${MY_P}
+
 	PATH="${S}/bin${PATH:+:}${PATH}"
-	LD_LIBRARY_PATH="${S}/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
+	if [[ ${CHOST} != *-darwin* ]]; then
+		LD_LIBRARY_PATH="${S}/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
+	else
+		DYLD_LIBRARY_PATH="${S}/lib${DYLD_LIBRARY_PATH:+:}${DYLD_LIBRARY_PATH}"
+		# on mac we *need* src/gui/kernel/qapplication_mac.cpp for platfrom
+		# detection since the x11-headers package b0rkens the header
+		# installation, we have to extract src/ and include/ completely on mac
+		# tools is needed for qt-demo and some others
+		QT4_EXTRACT_DIRECTORIES+=" src include"
+
+		if [[ ${PN} == qt-demo || ${PN} == qt-qt3support || ${PN} == qt-webkit ]]; then
+			QT4_EXTRACT_DIRECTORIES+=" tools"
+		fi
+	fi
 
 	# Make sure ebuilds use the required EAPI
-	if [[ ${EAPI} != 2 ]]; then
-		eerror "The qt4-build eclass requires EAPI=2, but this ebuild does not"
-		eerror "have EAPI=2 set. The ebuild author or editor failed. This ebuild needs"
-		eerror "to be fixed. Using qt4-build eclass without EAPI=2 will fail."
-		die "qt4-build eclass requires EAPI=2"
+	if [[ ${EAPI} != [23] ]]; then
+		eerror "The qt4-build eclass requires EAPI=2 or EAPI=3, but this ebuild is using"
+		eerror "EAPI=${EAPI:-0}. The ebuild author or editor failed. This ebuild needs to be"
+		eerror "fixed. Using qt4-build eclass without EAPI=2 or EAPI=3 will fail."
+		die "qt4-build eclass requires EAPI=2 or EAPI=3"
 	fi
 
 	if ! version_is_at_least 4.1 $(gcc-version); then
@@ -143,10 +166,24 @@ qt4-build_src_prepare() {
 	setqtenv
 	cd "${S}"
 
+	if use aqua; then
+		# provide a proper macx-g++-64
+		use x64-macos && ln -s macx-g++ mkspecs/$(qt_mkspecs_dir)
+
+		sed -e '/^CONFIG/s:app_bundle::' \
+			-e '/^CONFIG/s:plugin_no_soname:plugin_with_soname absolute_library_soname:' \
+			-i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die "sed failed"
+	fi
+
 	if [[ ${PN} != qt-core ]]; then
 		skip_qmake_build_patch
 		skip_project_generation_patch
 		symlink_binaries_to_buildtree
+	fi
+
+	if [[ ${CHOST} == *86*-apple-darwin* ]] ; then
+		# qmake bus errors with -O2 but -O3 works
+		replace-flags -O2 -O3
 	fi
 
 	# Bug 282984 && Bug 295530
@@ -183,10 +220,61 @@ qt4-build_src_prepare() {
 		-e "s:X11R6/::" \
 		-i "${S}"/mkspecs/$(qt_mkspecs_dir)/qmake.conf || die "sed ${S}/mkspecs/$(qt_mkspecs_dir)/qmake.conf failed"
 
-	sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
-		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
-		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
-		-i "${S}"/mkspecs/common/g++.conf || die "sed ${S}/mkspecs/common/g++.conf failed"
+	if [[ ${CHOST} != *-darwin* ]]; then
+		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
+			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
+			-i mkspecs/common/g++.conf || die "sed mkspecs/common/g++.conf failed"
+	else
+		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
+		# crippled (by design) :/
+		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
+			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
+			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=-headerpad_max_install_names ${LDFLAGS}:" \
+			-e "s:-arch\s\w*::g" \
+			-i mkspecs/common/mac-g++.conf || die "sed mkspecs/common/mac-g++.conf failed"
+
+		# Fix configure's -arch settings that appear in qmake/Makefile and also
+		# fix arch handling (automagically duplicates our -arch arg and breaks
+		# pch). Additionally disable Xarch support.
+		sed \
+			-e "s:-arch i386::" \
+			-e "s:-arch ppc::" \
+			-e "s:-arch x86_64::" \
+			-e "s:-arch ppc64::" \
+			-e "s:-arch \$i::" \
+			-e "/if \[ ! -z \"\$NATIVE_64_ARCH\" \]; then/,/fi/ d" \
+			-e "s:CFG_MAC_XARCH=yes:CFG_MAC_XARCH=no:g" \
+			-e "s:-Xarch_x86_64::g" \
+			-e "s:-Xarch_ppc64::g" \
+			-i configure mkspecs/common/mac-g++.conf || die "sed configure failed"
+
+		# On Snow Leopard don't fall back to 10.5 deployment target.
+		if [[ ${CHOST} == *-apple-darwin10 ]] ; then
+			sed -e "s:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET.*:QMakeVar set QMAKE_MACOSX_DEPLOYMENT_TARGET 10.6:g" \
+				-e "s:-mmacosx-version-min=10.[0-9]:-mmacosx-version-min=10.6:g" \
+				-i configure mkspecs/common/mac-g++.conf || die "sed configure failed"
+		fi
+	fi
+
+	# this one is needed for all systems with a separate -liconv, apart from
+	# Darwin, for which the sources already cater for -liconv
+	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] ; then
+		sed \
+			-e "s|mac:LIBS += -liconv|LIBS += -liconv|g" \
+			-i config.tests/unix/iconv/iconv.pro \
+			|| die "sed on iconv.pro failed"
+	fi
+
+	# we need some patches for Solaris
+	sed -i \
+		-e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
+		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
+	# use GCC over SunStudio
+	sed -i -e '/PLATFORM=solaris-cc/s/cc/g++/' configure || die
+	# don't flirt with non-Prefix stuff, we're quite possessive
+	sed -i -e '/^QMAKE_\(LIB\|INC\)DIR\(_X11\|_OPENGL\|\)\t/s/=.*$/=/' \
+		mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 
 	base_src_prepare
 }
@@ -197,6 +285,42 @@ qt4-build_src_prepare() {
 qt4-build_src_configure() {
 	setqtenv
 	myconf="$(standard_configure_options) ${myconf}"
+
+	# this one is needed for all systems with a separate -liconv, apart from
+	# Darwin, for which the sources already cater for -liconv
+	use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] && \
+		myconf+=" -liconv"
+
+	if has glib ${IUSE//+} && use glib; then
+		# use -I, -L and -l from configure
+		local glibflags="$(pkg-config --cflags --libs glib-2.0 gthread-2.0)"
+		# avoid the -pthread argument
+		myconf+=" ${glibflags//-pthread}"
+		unset glibflags
+	fi
+
+	if use aqua ; then
+		# On (snow) leopard use the new (frameworked) cocoa code.
+		if [[ $(uname -r | cut -d . -f 1) -ge 9 ]] ; then
+			myconf+=" -cocoa -framework"
+
+			# We are crazy and build cocoa + qt3support :-)
+			if use qt3support; then
+				sed -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
+					-i configure
+			fi
+
+			# We need the source's headers, not the installed ones.
+			myconf+=" -I${S}/include"
+
+			# Add hint for the framework location.
+			myconf+=" -F${QTLIBDIR}"
+		fi
+	else
+		# freetype2 include dir is non-standard, thus include it on configure
+		# use -I from configure
+		myconf+=" $(pkg-config --cflags freetype2)"
+	fi
 
 	echo ./configure ${myconf}
 	./configure ${myconf} || die "./configure failed"
@@ -211,34 +335,62 @@ qt4-build_src_compile() {
 	build_directories ${QT4_TARGET_DIRECTORIES}
 }
 
+# @FUNCTION: fix_includes
+# @DESCRIPTION:
+# For MacOSX we need to add some symlinks when frameworks are
+# being used, to avoid complications with some more or less stupid packages.
+fix_includes() {
+	if use aqua && [[ $(uname -r | cut -d . -f 1) -ge 9 ]] ; then
+		# Some packages tend to include <Qt/...>
+		dodir "${QTHEADERDIR#${EPREFIX}}"/Qt
+
+		# Fake normal headers when frameworks are installed... eases life later on
+		local dest f
+		for frw in "${D}${QTLIBDIR}"/*.framework; do
+			[[ -e "${frw}"/Headers ]] || continue
+			f=$(basename ${frw})
+			dest="${QTHEADERDIR#${EPREFIX}}"/${f%.framework}
+			dosym "${QTLIBDIR#${EPREFIX}}"/${f}/Headers "${dest}"
+
+			# Link normal headers as well.
+			for hdr in "${D}/${QTLIBDIR}/${f}"/Headers/*; do
+				h=$(basename ${hdr})
+				dosym "${QTLIBDIR#${EPREFIX}}"/${f}/Headers/${h} "${QTHEADERDIR#${EPREFIX}}"/Qt/${h}
+			done
+		done
+	fi
+}
+
 # @FUNCTION: qt4-build_src_install
 # @DESCRIPTION:
 # Perform the actual installation including some library fixes.
 qt4-build_src_install() {
+	[[ ${EAPI} == 2 ]] && use !prefix && ED=${D}
 	setqtenv
 	install_directories ${QT4_TARGET_DIRECTORIES}
 	install_qconfigs
 	fix_library_files
+	fix_includes
 }
 
 # @FUNCTION: setqtenv
 setqtenv() {
 	# Set up installation directories
-	QTBASEDIR=/usr/$(get_libdir)/qt4
-	QTPREFIXDIR=/usr
-	QTBINDIR=/usr/bin
-	QTLIBDIR=/usr/$(get_libdir)/qt4
+	QTBASEDIR=${EPREFIX}/usr/$(get_libdir)/qt4
+	QTPREFIXDIR=${EPREFIX}/usr
+	QTBINDIR=${EPREFIX}/usr/bin
+	QTLIBDIR=${EPREFIX}/usr/$(get_libdir)/qt4
 	QMAKE_LIBDIR_QT=${QTLIBDIR}
-	QTPCDIR=/usr/$(get_libdir)/pkgconfig
-	QTDATADIR=/usr/share/qt4
-	QTDOCDIR=/usr/share/doc/qt-${PV}
-	QTHEADERDIR=/usr/include/qt4
+	QTPCDIR=${EPREFIX}/usr/$(get_libdir)/pkgconfig
+	QTDATADIR=${EPREFIX}/usr/share/qt4
+	QTDOCDIR=${EPREFIX}/usr/share/doc/qt-${PV}
+	QTHEADERDIR=${EPREFIX}/usr/include/qt4
 	QTPLUGINDIR=${QTLIBDIR}/plugins
-	QTSYSCONFDIR=/etc/qt4
+	QTSYSCONFDIR=${EPREFIX}/etc/qt4
 	QTTRANSDIR=${QTDATADIR}/translations
 	QTEXAMPLESDIR=${QTDATADIR}/examples
 	QTDEMOSDIR=${QTDATADIR}/demos
-	QT_INSTALL_PREFIX=/usr/$(get_libdir)/qt4
+	QT_INSTALL_PREFIX=${EPREFIX}/usr/$(get_libdir)/qt4
 	PLATFORM=$(qt_mkspecs_dir)
 
 	unset QMAKESPEC
@@ -251,6 +403,7 @@ setqtenv() {
 standard_configure_options() {
 	local myconf=
 
+	# Doesn't need ${EPREFIX} because get_libdir() is *always* lib on prefix
 	[[ $(get_libdir) != lib ]] && myconf+=" -L/usr/$(get_libdir)"
 
 	# Disable visibility explicitly if gcc version isn't 4
@@ -268,11 +421,16 @@ standard_configure_options() {
 	fi
 	myconf+=" -no-separate-debug-info"
 
+	use aqua && myconf+=" -no-framework"
+
 	# ARCH is set on Gentoo. Qt now falls back to generic on an unsupported
 	# $(tc-arch). Therefore we convert it to supported values.
 	case "$(tc-arch)" in
-		amd64) myconf+=" -arch x86_64" ;;
-		ppc|ppc64) myconf+=" -arch powerpc" ;;
+		amd64|x64-*) myconf+=" -arch x86_64" ;;
+		ppc-macos) myconf+=" -arch ppc" ;;
+		ppc|ppc64|ppc-*) myconf+=" -arch powerpc" ;;
+		sparc|sparc-*) myconf+=" -arch sparc" ;;
+		x86-macos) myconf+=" -arch x86" ;;
 		x86|x86-*) myconf+=" -arch i386" ;;
 		alpha|arm|ia64|mips|s390|sparc) myconf+=" -arch $(tc-arch)" ;;
 		hppa|sh) myconf+=" -arch generic" ;;
@@ -284,13 +442,28 @@ standard_configure_options() {
 	case "${PV}" in
 		4.6.*)
 			if [[ ${PN} != "qt-core" ]] && [[ ${PN} != "qt-xmlpatterns" ]]; then
-				exceptions="-no-exceptions"
+				case "${PV}:${CHOST}" in
+					4.6.0*:*-darwin*)
+					: # http://bugreports.qt.nokia.com/browse/QTBUG-5909
+					  # workaround for compilation error on OSX (qt-gui)
+					;;
+					*)
+						exceptions="-no-exceptions"
+					;;
+				esac
 			fi
 		;;
 		*)
 			[[ ${PN} == "qt-xmlpatterns" ]] || exceptions="-no-exceptions"
 		;;
 	esac
+
+	# note about -reduce-relocations:
+	# That flag seems to introduce major breakage to applications,
+	# mostly to be seen as a core dump with the message "QPixmap: Must
+	# construct a QApplication before a QPaintDevice" on Solaris
+	#   -- Daniel Vergien
+	[[ ${CHOST} != *-solaris* ]] && myconf+=" -reduce-relocations"
 
 	myconf+=" -platform $(qt_mkspecs_dir) -stl -verbose -largefile -confirm-license
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR}
@@ -299,7 +472,7 @@ standard_configure_options() {
 		-translationdir ${QTTRANSDIR} -examplesdir ${QTEXAMPLESDIR}
 		-demosdir ${QTDEMOSDIR} -silent -fast -opensource
 		${exceptions}
-		-reduce-relocations -nomake examples -nomake demos"
+		-nomake examples -nomake demos"
 
 	echo "${myconf}"
 }
@@ -310,12 +483,13 @@ standard_configure_options() {
 # Compiles the code in $QT4_TARGET_DIRECTORIES
 build_directories() {
 	for x in "$@"; do
-		cd "${S}"/${x}
-		sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:/usr/$(get_libdir)/qt4:g" $(find "${S}" -name '*.pr[io]') "${S}"/mkspecs/common/linux.conf || die
+		pushd "${S}"/${x} >/dev/null
+		sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:${EPREFIX}/usr/$(get_libdir)/qt4:g" $(find "${S}" -name '*.pr[io]') "${S}"/mkspecs/common/*.conf || die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
 		emake CC="@echo compiling \$< && $(tc-getCC)" \
 			CXX="@echo compiling \$< && $(tc-getCXX)" \
 			LINK="@echo linking \$@ && $(tc-getCXX)" || die "emake failed"
+		popd >/dev/null
 	done
 }
 
@@ -354,7 +528,7 @@ install_qconfigs() {
 		for x in QCONFIG_ADD QCONFIG_REMOVE; do
 			[[ -n ${!x} ]] && echo ${x}=${!x} >> "${T}"/${PN}-qconfig.pri
 		done
-		insinto ${QTDATADIR}/mkspecs/gentoo
+		insinto ${QTDATADIR#${EPREFIX}}/mkspecs/gentoo
 		doins "${T}"/${PN}-qconfig.pri || die "installing ${PN}-qconfig.pri failed"
 	fi
 
@@ -362,7 +536,7 @@ install_qconfigs() {
 		for x in ${QCONFIG_DEFINE}; do
 			echo "#define ${x}" >> "${T}"/gentoo-${PN}-qconfig.h
 		done
-		insinto ${QTHEADERDIR}/Gentoo
+		insinto ${QTHEADERDIR#${EPREFIX}}/Gentoo
 		doins "${T}"/gentoo-${PN}-qconfig.h || die "installing ${PN}-qconfig.h failed"
 	fi
 }
@@ -499,7 +673,7 @@ fix_library_files() {
 			sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${libfile} || die "Sed failed"
 
 		# Move .pc files into the pkgconfig directory
-		dodir ${QTPCDIR}
+		dodir ${QTPCDIR#${EPREFIX}}
 		mv ${libfile} "${D}"/${QTPCDIR}/ \
 			|| die "Moving ${libfile} to ${D}/${QTPCDIR}/ failed."
 		fi
@@ -547,7 +721,16 @@ qt_mkspecs_dir() {
 		*-netbsd*)
 			spec=netbsd ;;
 		*-darwin*)
-			spec=darwin ;;
+			if use aqua; then
+				# mac with carbon/cocoa
+				spec=macx
+			else
+				# darwin/mac with x11
+				spec=darwin
+			fi
+			;;
+		*-solaris*)
+			spec=solaris ;;
 		*-linux-*|*-linux)
 			spec=linux ;;
 		*)
@@ -564,6 +747,16 @@ qt_mkspecs_dir() {
 	fi
 	if [[ -n ${LIBDIR/lib} ]]; then
 		spec+=-${LIBDIR/lib}
+	fi
+
+	# Add -64 for 64bit profiles
+	if use x64-freebsd ||
+		use amd64-linux ||
+		use x64-macos ||
+		use x64-solaris ||
+		use sparc64-solaris
+	then
+		spec+=-64
 	fi
 
 	echo "${spec}"
