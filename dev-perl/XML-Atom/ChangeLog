@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Atom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Atom/ChangeLog,v 1.9 2009/05/06 14:35:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Atom/ChangeLog,v 1.10 2009/12/24 10:53:37 tove Exp $
+
+*XML-Atom-0.36 (24 Dec 2009)
+
+  24 Dec 2009; Torsten Veller <tove@gentoo.org> +XML-Atom-0.36.ebuild:
+  Version bump
 
   06 May 2009; Torsten Veller <tove@gentoo.org> -XML-Atom-0.32.ebuild,
   -XML-Atom-0.33.ebuild:
