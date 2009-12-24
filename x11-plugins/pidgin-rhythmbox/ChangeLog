@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.7 2009/09/11 11:35:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.8 2009/12/24 08:10:57 pva Exp $
+
+  24 Dec 2009; Peter Volkov <pva@gentoo.org> pidgin-rhythmbox-2.0.ebuild:
+  Updated HOMEPAGE and SRC_URI, bug #259617, thank Mr. Anderson for report.
 
   11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pidgin-rhythmbox-2.0.ebuild:
