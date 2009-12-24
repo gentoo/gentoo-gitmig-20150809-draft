@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.40.ebuild,v 1.4 2009/12/23 16:56:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.40.ebuild,v 1.5 2009/12/24 02:47:36 jer Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libpng/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="sys-libs/zlib"
