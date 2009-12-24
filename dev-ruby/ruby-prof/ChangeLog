@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.14 2009/12/09 18:38:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.15 2009/12/24 16:59:22 graaff Exp $
+
+  24 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-prof-0.7.3.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -ruby-prof-0.7.2.ebuild:
   Remove old version.
