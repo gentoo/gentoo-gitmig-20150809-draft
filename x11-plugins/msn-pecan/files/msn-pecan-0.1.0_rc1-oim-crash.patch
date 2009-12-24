@@ -1,0 +1,22 @@
+commit e0fa9a5bcc356ad20c359cf208bbc84f155cdb71
+Author: Simone Contini <s.contini@oltrelinux.com>
+Date:   Sun Dec 13 10:01:37 2009 +0100
+
+    oim: handle malformed data in process_body_receive
+    
+    Signed-off-by: Felipe Contreras <felipe.contreras@gmail.com>
+
+diff --git a/pn_oim.c b/pn_oim.c
+index 6faaabe..496e3c0 100644
+--- a/pn_oim.c
++++ b/pn_oim.c
+@@ -576,7 +576,8 @@ process_body_receive (OimRequest *oim_request,
+         gchar *end;
+         cur += 2;
+         end = strstr (cur, "\r\n\r\n");
+-        *end = '\0';
++        if (end)
++            *end = '\0';
+         message = (gchar *) purple_base64_decode (cur, NULL);
+     }
+ 

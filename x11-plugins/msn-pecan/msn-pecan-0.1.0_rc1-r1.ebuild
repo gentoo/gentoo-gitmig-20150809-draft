@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.0_rc1.ebuild,v 1.1 2009/07/19 20:12:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.0_rc1-r1.ebuild,v 1.1 2009/12/24 09:54:26 pva Exp $
 
-inherit toolchain-funcs multilib
+EAPI="2"
+
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Alternative MSN protocol plugin for libpurple"
 HOMEPAGE="http://code.google.com/p/msn-pecan/"
@@ -20,6 +22,10 @@ DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
 S=${WORKDIR}/${P/_/-}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-oim-crash.patch"
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"
