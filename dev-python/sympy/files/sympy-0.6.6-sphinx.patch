@@ -1,7 +1,7 @@
-Index: sympy-0.6.4/doc/Makefile
+Index: sympy-0.6.5/doc/Makefile
 ===================================================================
---- sympy-0.6.4.orig/doc/Makefile
-+++ sympy-0.6.4/doc/Makefile
+--- sympy-0.6.5.orig/doc/Makefile
++++ sympy-0.6.5/doc/Makefile
 @@ -1,14 +1,10 @@
  # Makefile for Sphinx documentation
  #
@@ -14,7 +14,7 @@ Index: sympy-0.6.4/doc/Makefile
 -SPHINXVER    = 0.5
 -#SPHINXBUILDpy  = sphinx/Sphinx-$(SPHINXVER)/sphinx-build.py
 -SPHINXBUILDpy  = sphinx-build
--SPHINXBUILD  = PYTHONPATH=.. $(SPHINXBUILDpy)
+-SPHINXBUILD  = PYTHONPATH=..:$(PYTHONPATH) $(SPHINXBUILDpy)
  PAPER        =
  
  ALLSPHINXOPTS = -d _build/doctrees -D latex_paper_size=$(PAPER) \

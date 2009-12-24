@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.6 2009/09/04 15:43:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.7 2009/12/24 16:06:18 grozin Exp $
+
+*sympy-0.6.6 (24 Dec 2009)
+
+  24 Dec 2009; Andrey Grozin <grozin@gentoo.org>
+  -files/sympy-0.6.4-sphinx.patch, +sympy-0.6.6.ebuild,
+  +files/sympy-0.6.6-sphinx.patch:
+  Version bump, bug #298131, thanks to Rafal Muzylo <galtgendo@o2.pl>
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -sympy-0.6.4.ebuild:
   Remove old
