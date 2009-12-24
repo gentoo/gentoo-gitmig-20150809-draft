@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/openipmi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.15 2009/10/24 11:37:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.16 2009/12/24 19:40:15 flameeyes Exp $
+
+  24 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  openipmi-2.0.11.ebuild:
+  Use emake -j1 for install, as per bug #298250.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> openipmi-2.0.11.ebuild:
   ppc stable #282446

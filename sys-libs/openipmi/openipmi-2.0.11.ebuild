@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.7 2009/10/24 11:37:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.8 2009/12/24 19:40:15 flameeyes Exp $
 
 DESCRIPTION="Library interface to IPMI"
 HOMEPAGE="http://sourceforge.net/projects/openipmi/"
@@ -63,7 +63,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	# bug #298250
+	emake -j1 DESTDIR="${D}" install || die
 	dodoc README* FAQ ChangeLog TODO doc/IPMI.pdf lanserv/README.emulator
 	newdoc cmdlang/README README.cmdlang
 }
