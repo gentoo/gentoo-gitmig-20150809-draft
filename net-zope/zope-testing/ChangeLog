@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-testing
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.4 2009/12/19 22:40:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.5 2009/12/24 16:04:59 arfrever Exp $
+
+*zope-testing-3.8.6 (24 Dec 2009)
+
+  24 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-testing-3.8.4.ebuild, +zope-testing-3.8.6.ebuild:
+  Version bump.
 
 *zope-testing-3.8.4 (19 Dec 2009)
 
