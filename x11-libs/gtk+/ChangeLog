@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.437 2009/12/13 09:51:41 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.438 2009/12/24 05:25:22 abcd Exp $
+
+  24 Dec 2009; Jonathan Callen <abcd@gentoo.org> gtk+-2.18.5.ebuild,
+  +files/gtk+-2.18.5-macosx-aqua.patch:
+  Add patch for Aqua on Mac OS X; move prefix keywords from overlay
 
 *gtk+-2.18.5 (13 Dec 2009)
 
