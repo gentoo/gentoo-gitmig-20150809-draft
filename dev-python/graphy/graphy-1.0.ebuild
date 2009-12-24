@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/graphy-1.0.ebuild,v 1.1 2009/12/24 12:50:28 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/graphy-1.0.ebuild,v 1.2 2009/12/24 15:37:30 arfrever Exp $
 
 EAPI="2"
-
 SUPPORT_PYTHON_ABIS="1"
 
 inherit python
@@ -16,12 +15,11 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples"
 
 DEPEND=""
 RDEPEND=""
-
 RESTRICT_PYTHON_ABIS="3.*"
 
 S=${WORKDIR}/${MY_P}
@@ -32,7 +30,7 @@ src_prepare() {
 
 src_test() {
 	testing() {
-		PYTHONPATH=. "$(PYTHON)" ${PN}/all_tests.pyy || die "tests failed"
+		PYTHONPATH=. "$(PYTHON)" ${PN}/all_tests.py
 	}
 	python_execute_function testing
 }
