@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/scratchbox-toolchain-cs2009q1
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1/ChangeLog,v 1.1 2009/12/24 12:49:31 ayoy Exp $
+
+*scratchbox-toolchain-cs2009q1-1.0.13 (24 Dec 2009)
+
+  24 Dec 2009; Dominik Kapusta <ayoy@gentoo.org>
+  +scratchbox-toolchain-cs2009q1-1.0.13.ebuild, +metadata.xml:
+  Initial commit for the cs2009q1 scratchbox toolchain
+
