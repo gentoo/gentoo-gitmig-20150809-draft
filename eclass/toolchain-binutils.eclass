@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.87 2009/12/19 15:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.88 2009/12/24 13:16:16 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -168,9 +168,6 @@ tc-binutils_apply_patches() {
 }
 
 toolchain-binutils_src_unpack() {
-	is_cross && [[ $(binutils-config -V) != binutils-config-1.9* ]] \
-		&& die "You need to upgrade your binutils-config to 1.9 or newer"
-
 	tc-binutils_unpack
 	tc-binutils_apply_patches
 }
