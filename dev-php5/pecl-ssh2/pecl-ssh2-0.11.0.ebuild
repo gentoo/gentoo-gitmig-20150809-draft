@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/pecl-ssh2-0.11.0.ebuild,v 1.2 2009/10/15 11:56:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/pecl-ssh2-0.11.0.ebuild,v 1.3 2009/12/24 12:13:12 hoffie Exp $
 
 PHP_EXT_NAME="ssh2"
 PHP_EXT_INI="yes"
@@ -18,3 +18,8 @@ DEPEND=">=net-libs/libssh2-0.18"
 RDEPEND="${DEPEND}"
 
 need_php_by_category
+
+src_unpack() {
+	php-ext-source-r1_src_unpack
+	epatch "${FILESDIR}"/${P}-php-5.3-compat.patch
+}

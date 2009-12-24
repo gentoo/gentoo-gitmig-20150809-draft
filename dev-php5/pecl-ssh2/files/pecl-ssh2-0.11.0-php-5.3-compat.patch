@@ -1,0 +1,31 @@
+Fixes compile failures due to behavior changes of php-5.3
+Christian Hoffmann <hoffie@gentoo.org>
+Inspired by http://osdir.com/ml/fedora-extras-commits/2009-07/msg03478.html
+and http://github.com/php/pecl-gearman/commit/e8e4579406d6b324caf0e0d4c0fcfffa0b68e8be
+
+diff -Naur ssh2-0.11.0.orig/ssh2.c ssh2-0.11.0/ssh2.c
+--- ssh2-0.11.0.orig/ssh2.c	2008-12-02 22:50:10.000000000 +0100
++++ ssh2-0.11.0/ssh2.c	2009-12-24 13:03:13.000000000 +0100
+@@ -48,7 +48,6 @@
+ #endif
+ 
+ #ifdef ZEND_ENGINE_2
+-static
+     ZEND_BEGIN_ARG_INFO(php_ssh2_first_arg_force_ref, 0)
+         ZEND_ARG_PASS_INFO(1)
+     ZEND_END_ARG_INFO()
+@@ -252,12 +251,13 @@
+ {
+ 	zval **handler, *copyval;
+ 	void *internal_handler;
++	TSRMLS_FETCH();
+ 
+ 	if (zend_hash_find(ht, callback, callback_len + 1, (void**)&handler) == FAILURE) {
+ 		return 0;
+ 	}
+ 
+-	if (!handler || !*handler || !zend_is_callable(*handler, 0, NULL)) {
++	if (!handler || !*handler || !zend_is_callable(*handler, 0, NULL TSRMLS_CC)) {
+ 		return -1;
+ 	}
+ 
