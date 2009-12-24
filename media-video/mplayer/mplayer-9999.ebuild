@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.17 2009/12/24 14:13:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.18 2009/12/24 15:26:30 scarabeus Exp $
 
 EAPI="2"
 
@@ -637,6 +637,8 @@ src_compile() {
 }
 
 src_install() {
+	local i
+
 	emake prefix="${D}/usr" \
 		BINDIR="${D}/usr/bin" \
 		LIBDIR="${D}/usr/$(get_libdir)" \
@@ -680,9 +682,8 @@ src_install() {
 		dodir /usr/share/mplayer/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
-		for i in $(find "${WORKDIR}/" -type d -name 'font-arial-*')
-		do
-			cp -pPR "${x}" "${D}/usr/share/mplayer/fonts"
+		for i in $(find "${WORKDIR}/" -type d -name 'font-arial-*'); do
+			cp -pPR "${i}" "${D}/usr/share/mplayer/fonts"
 		done
 		# Fix the font symlink ...
 		rm -rf "${D}/usr/share/mplayer/font"
