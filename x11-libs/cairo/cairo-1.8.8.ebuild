@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.12 2009/10/09 18:42:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.13 2009/12/24 05:09:56 abcd Exp $
 
 EAPI=2
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -12,8 +12,8 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="cleartype debug directfb doc glitz opengl svg X xcb"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="aqua cleartype debug directfb doc glitz opengl svg X xcb"
 
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
 RESTRICT="test"
@@ -54,11 +54,18 @@ src_prepare() {
 	# ClearType-like patches applied by ArchLinux
 	use cleartype && epatch "${FILESDIR}"/cairo-1.2.4-lcd-cleartype-like.diff
 
+	epatch "${FILESDIR}"/${P}-interix.patch
+
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
-	elibtoolize
+	# upgraded to an eautoreconf for the above interix patch.
+	eautoreconf
 }
 
 src_configure() {
+	[[ ${CHOST} == *-interix* ]] && append-flags -D_REENTRANT
+	# http://bugs.freedesktop.org/show_bug.cgi?id=15463
+	[[ ${CHOST} == *-solaris* ]] && append-flags -D_POSIX_PTHREAD_SEMANTICS
+
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
@@ -71,6 +78,7 @@ src_configure() {
 		$(use_enable svg) $(use_enable glitz) $(use_enable X xlib-xrender) \
 		$(use_enable debug test-surfaces) --enable-pdf  --enable-png \
 		--enable-ft --enable-ps \
+		$(use_enable aqua quartz) $(use_enable aqua quartz-image) \
 		|| die "configure failed"
 }
 
