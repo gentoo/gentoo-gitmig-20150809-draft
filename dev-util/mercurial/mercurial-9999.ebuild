@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-9999.ebuild,v 1.3 2009/07/25 10:38:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-9999.ebuild,v 1.4 2009/12/24 13:38:18 djc Exp $
 
 inherit bash-completion elisp-common flag-o-matic eutils distutils mercurial
 
@@ -77,8 +77,6 @@ EOF
 }
 
 src_test() {
-	local testdir="${T}/tests"
-	mkdir -p -m1777 "${testdir}" || die
 	cd "${S}/tests/"
 	rm -f *svn*		# Subversion tests fail with 1.5
 	rm -f test-convert-baz*		# GNU Arch baz
@@ -96,6 +94,8 @@ src_test() {
 		rm -f test-permissions		# Test is broken when run as root
 		rm -f test-pull-permission	# Test is broken when run as root
 	fi
+	local testdir="${T}/tests"
+	rm -rf "${testdir}"
 	einfo "Running Mercurial tests ..."
 	python run-tests.py --tmpdir="${testdir}" || die "test failed"
 }
