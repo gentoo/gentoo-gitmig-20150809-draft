@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/freesweep
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/ChangeLog,v 1.3 2009/12/19 20:53:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/freesweep/ChangeLog,v 1.4 2009/12/24 16:21:23 pacho Exp $
+
+  24 Dec 2009; Pacho Ramos <pacho@gentoo.org> freesweep-0.92.ebuild:
+  amd64 stable, bug 295709
 
   19 Dec 2009; Fabian Groffen <grobian@gentoo.org> freesweep-0.92.ebuild:
   Marked ~ppc-macos, bug #296991
