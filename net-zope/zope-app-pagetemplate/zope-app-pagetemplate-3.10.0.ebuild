@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-pagetemplate/zope-app-pagetemplate-3.8.0.ebuild,v 1.1 2009/12/20 02:36:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-pagetemplate/zope-app-pagetemplate-3.10.0.ebuild,v 1.1 2009/12/24 16:54:26 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,13 +19,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="net-zope/zope-component
+RDEPEND="net-zope/zope-browserpage
 	net-zope/zope-configuration
 	net-zope/zope-dublincore
 	net-zope/zope-i18nmessageid
 	net-zope/zope-interface
 	net-zope/zope-pagetemplate
-	net-zope/zope-publisher
 	net-zope/zope-schema
 	net-zope/zope-security
 	net-zope/zope-size
