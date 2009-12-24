@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-2.0.1b.ebuild,v 1.1 2008/11/30 16:01:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-2.0.1b.ebuild,v 1.2 2009/12/24 17:10:22 graaff Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
 IUSE="image mixer truetype mpeg sge"
 
-RDEPEND="virtual/ruby
+RDEPEND="dev-lang/ruby
 	>=media-libs/libsdl-1.2.5
 	truetype? ( >=media-libs/sdl-ttf-2.0.6 )
 	image? ( >=media-libs/sdl-image-1.2.2 )

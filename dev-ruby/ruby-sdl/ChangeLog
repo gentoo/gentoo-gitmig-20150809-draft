@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-sdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.25 2009/06/13 08:33:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.26 2009/12/24 17:10:22 graaff Exp $
+
+  24 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-sdl-1.2.0.ebuild,
+  ruby-sdl-2.0.1b.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org> -ruby-sdl-1.3.1.ebuild:
   Remove old version.

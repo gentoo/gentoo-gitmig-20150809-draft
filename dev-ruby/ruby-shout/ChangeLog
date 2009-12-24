@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shout
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.9 2009/07/14 18:40:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.10 2009/12/24 17:12:49 graaff Exp $
+
+  24 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-shout-2.1-r1.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   14 Jul 2009; Hans de Graaff <graaff@gentoo.org> -ruby-shout-2.0.ebuild,
   -ruby-shout-2.1.ebuild:

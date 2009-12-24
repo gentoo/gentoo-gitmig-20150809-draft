@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-svg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.16 2009/06/13 08:31:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.17 2009/12/24 17:16:04 graaff Exp $
+
+  24 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-svg-1.0.3-r1.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org> -ruby-svg-1.0.3.ebuild:
   Remove old version.

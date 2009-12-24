@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ruby-svg-1.0.3-r1.ebuild,v 1.6 2009/04/26 14:46:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ruby-svg-1.0.3-r1.ebuild,v 1.7 2009/12/24 17:16:04 graaff Exp $
 
 inherit ruby
 
@@ -12,9 +12,8 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc x86"
 USE_RUBY="ruby18"
 IUSE="examples"
-DEPEND="virtual/ruby
-	dev-ruby/rdtool"
-RDEPEND="virtual/ruby"
+DEPEND="dev-ruby/rdtool"
+RDEPEND=""
 
 src_install() {
 	ruby install.rb config --prefix="${D}"/usr || die
