@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.4.3.ebuild,v 1.3 2009/12/22 18:51:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.4.3.ebuild,v 1.4 2009/12/24 17:26:24 pacho Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ HOMEPAGE="http://pypi.python.org/pypi/virtualenv"
 SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 SLOT="0"
 IUSE=""
 
