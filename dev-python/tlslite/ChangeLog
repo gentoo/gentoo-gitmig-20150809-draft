@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.8 2009/10/25 15:44:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.9 2009/12/24 18:28:21 arfrever Exp $
+
+*tlslite-0.3.8-r2 (24 Dec 2009)
+
+  24 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -tlslite-0.3.8-r1.ebuild, +tlslite-0.3.8-r2.ebuild,
+  files/tlslite-0.3.8-python25.diff:
+  Fix some generator-related exceptions with Python >=2.5 (bug #262900).
 
   25 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tlslite-0.3.8-r1.ebuild:
