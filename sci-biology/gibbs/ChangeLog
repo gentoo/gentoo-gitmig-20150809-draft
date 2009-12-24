@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/gibbs
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/ChangeLog,v 1.6 2009/09/30 14:40:39 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/ChangeLog,v 1.7 2009/12/24 18:34:19 pacho Exp $
+
+  24 Dec 2009; Pacho Ramos <pacho@gentoo.org> gibbs-3.1.ebuild:
+  amd64 stable, bug 290933
 
   30 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> gibbs-1995.9.ebuild:
   Drop keyword for old version. Versions 3.1 and 1995.9 are different
