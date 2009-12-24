@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubytorrent
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytorrent/ChangeLog,v 1.8 2007/01/14 09:56:27 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytorrent/ChangeLog,v 1.9 2009/12/24 17:30:02 graaff Exp $
+
+  24 Dec 2009; Hans de Graaff <graaff@gentoo.org> rubytorrent-0.3.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   14 Jan 2007; Joseph Jezak <josejx@gentoo.org> rubytorrent-0.3.ebuild:
   Marked ~ppc for bug #159979.
