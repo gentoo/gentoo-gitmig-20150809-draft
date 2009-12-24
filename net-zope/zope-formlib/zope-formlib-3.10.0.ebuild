@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-formlib/zope-formlib-3.7.0.ebuild,v 1.1 2009/12/20 01:18:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-formlib/zope-formlib-3.10.0.ebuild,v 1.1 2009/12/24 17:02:19 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,8 +21,8 @@ IUSE=""
 
 RDEPEND="dev-python/pytz
 	net-zope/zope-app-form
-	net-zope/zope-app-pagetemplate
 	net-zope/zope-browser
+	net-zope/zope-browserpage
 	net-zope/zope-component
 	net-zope/zope-event
 	net-zope/zope-i18n
