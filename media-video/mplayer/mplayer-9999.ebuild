@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.16 2009/12/23 19:46:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.17 2009/12/24 14:13:03 scarabeus Exp $
 
 EAPI="2"
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 [[ ${PV} = *9999* ]] && SVN_ECLASS="subversion" || SVN_ECLASS=""
 
-inherit eutils flag-o-matic multilib ${SVN_ECLASS}
+inherit eutils flag-o-matic multilib base ${SVN_ECLASS}
 
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r29964
 
@@ -81,21 +81,15 @@ RDEPEND+="
 			media-libs/libpng
 			x11-libs/gtk+:2
 			x11-libs/libXi
-			${X_RDEPS}
 		)
 		opengl? ( virtual/opengl )
 		truetype? ( ${FONT_RDEPS} )
 		video_cards_nvidia? (
 			vdpau? ( >=x11-drivers/nvidia-drivers-180.60 )
 		)
-		vidix? ( ${X_RDEPS} )
-		xinerama? (
-			x11-libs/libXinerama
-			${X_RDEPS}
-		)
+		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? (
-			${X_RDEPS}
 			x11-libs/libXv
 			xvmc? ( x11-libs/libXvMC )
 		)
@@ -164,10 +158,9 @@ DEPEND="${RDEPEND}
 		${X_DEPS}
 		dga? ( x11-proto/xf86dgaproto )
 		dxr3? ( media-video/em8300-libraries )
-		gmplayer? ( ${X_DEPS} )
+		gmplayer? ( x11-proto/xextproto )
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
-		xv? ( ${X_DEPS} )
 	)
 	amd64? ( ${ASM_DEP} )
 	doc? ( dev-libs/libxslt )
@@ -183,6 +176,9 @@ if [[ ${PV} != *9999* ]]; then
 else
 	KEYWORDS=""
 fi
+
+PATCHES=(
+)
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
@@ -262,10 +258,13 @@ src_prepare() {
 
 		mv "${WORKDIR}/svgalib_helper" "${S}/libdha"
 	fi
+
+	base_src_prepare
 }
 
 src_configure() {
 	local myconf=""
+	local uses i
 
 	# set LINGUAS
 	[[ -n $LINGUAS ]] && LINGUAS="${LINGUAS/da/dk}"
@@ -275,20 +274,25 @@ src_configure() {
 	# because if --enable is used, it will force the build of that option,
 	# regardless of whether the dependency is available or not.
 
-	################
+	###################
 	#Optional features#
-	###############
+	###################
 	myconf+="
 		--disable-arts
 		$(use_enable network)
+		$(use_enable joystick)
 	"
-	use ass || myconf+=" --disable-ass"
+	uses="ass bl enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	myconf+=" --disable-nemesi" # nemesi automagic disable
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
+	done
 	use bidi || myconf+=" --disable-fribidi"
-	use bl && myconf+=" --enable-bl"
-	use enca || myconf+=" --disable-enca"
 	use encode || myconf+=" --disable-mencoder"
-	use ftp || myconf+=" --disable-ftp"
 	use ipv6 || myconf+=" --disable-inet6"
+	use nut || myconf+=" --disable-libnut"
+	use rar || myconf+=" --disable-unrarexec"
+	use samba || myconf+=" --disable-smb"
 	if ! use lirc; then
 		myconf+="
 			--disable-lirc
@@ -296,13 +300,6 @@ src_configure() {
 			--disable-apple-ir
 		"
 	fi
-	#use nemesi || myconf+=" --disable-nemesi"
-	myconf+=" --disable-nemesi"
-	use nut || myconf+=" --disable-libnut"
-	use rar || myconf+=" --disable-unrarexec"
-	use rtc || myconf+=" --disable-rtc"
-	use samba || myconf+=" --disable-smb"
-	myconf+=" $(use_enable joystick)"
 
 	# libcdio support: prefer libcdio over cdparanoia
 	# don't check for cddb w/cdio
@@ -314,9 +311,9 @@ src_configure() {
 		use cddb || myconf+=" --disable-cddb"
 	fi
 
-	###############
-	# DVD read, navigation support
-	###############
+	################################
+	# DVD read, navigation support #
+	################################
 	#
 	# dvdread - accessing a DVD
 	# dvdnav - navigation of menus
@@ -327,7 +324,7 @@ src_configure() {
 	# Only check for disabled a52 use flag inside the DVD check,
 	# since many users were getting confused why there was no
 	# audio stream.
-	#
+
 	if use dvd; then
 		use dvdnav || myconf+=" --disable-dvdnav"
 	else
@@ -340,13 +337,14 @@ src_configure() {
 		use a52 || myconf+=" --disable-liba52-internal"
 	fi
 
-	###############
-	# Subtitles
-	###############
+	#############
+	# Subtitles #
+	#############
 	#
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
+
 	if ! use ass; then
 		if ! use truetype; then
 			myconf+=" --disable-freetype"
@@ -360,9 +358,9 @@ src_configure() {
 	fi
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
 
-	###############
-	# DVB / Video4Linux / Radio support
-	###############
+	#####################################
+	# DVB / Video4Linux / Radio support #
+	#####################################
 	myconf+=" --disable-tv-bsdbt848"
 	# broken upstream, won't work with recent kernels
 	myconf+=" --disable-ivtv"
@@ -396,9 +394,9 @@ src_configure() {
 			--disable-pvr"
 	fi
 
-	#########
+	##########
 	# Codecs #
-	########
+	##########
 	# Won't work with external liba52
 	myconf+=" --disable-liba52"
 	# Use internal musepack codecs for SV7 and SV8 support
@@ -423,8 +421,10 @@ src_configure() {
 	if ! use png && ! use gmplayer; then
 		myconf+=" --disable-png"
 	fi
-	for x in gif jpeg live mad mng pnm speex tga theora xanim; do
-		use ${x} || myconf+=" --disable-${x}"
+
+	uses="gif jpeg live mad mng pnm speex tga theora xanim"
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
 	done
 	if use vorbis || use tremor; then
 		use tremor || myconf+=" --disable-tremor-internal"
@@ -438,12 +438,11 @@ src_configure() {
 	fi
 	# Encoding
 	if use encode; then
+		uses="faac x264 xvid toolame twolame"
+		for i in ${uses}; do
+			use ${i} || myconf+=" --disable-${i}"
+		done
 		use aac || myconf+=" --disable-faac-lavc"
-		use faac || myconf+=" --disable-faac"
-		use x264 || myconf+=" --disable-x264"
-		use xvid || myconf+=" --disable-xvid"
-		use toolame || myconf+=" --disable-toolame"
-		use twolame || myconf+=" --disable-twolame"
 	else
 		myconf+="
 			--disable-faac-lavc
@@ -455,30 +454,28 @@ src_configure() {
 			--disable-twolame
 			--disable-toolame
 		"
-		local i uses="aac faac x264 xvid toolame twolame"
+		uses="aac faac x264 xvid toolame twolame"
 		for i in uses; do
 			use ${i} && elog "Useflag \"${i}\" require \"encode\" useflag enabled to work."
 		done
 	fi
 
-	###############
-	# Binary codecs
-	###############
+	#################
+	# Binary codecs #
+	#################
 	# bug 213836
 	if ! use x86 || ! use win32codecs; then
 		use quicktime || myconf+=" --disable-qtx"
 	fi
 
-	###############
-	# RealPlayer support
-	###############
-	#
+	######################
+	# RealPlayer support #
+	######################
 	# Realplayer support shows up in four places:
 	# - libavcodec (internal)
 	# - win32codecs
 	# - realcodecs (win32codecs libs)
 	# - realcodecs (realplayer libs)
-	#
 
 	# internal
 	use real || myconf+=" --disable-real"
@@ -491,11 +488,12 @@ src_configure() {
 			myconf+=" $(use_enable win32codecs win32dll)"
 	fi
 
-	#############
+	################
 	# Video Output #
-	#############
-	for x in directfb md5sum sdl; do
-		use ${x} || myconf+=" --disable-${x}"
+	################
+	uses="directfb md5sum sdl"
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
 	done
 	use aalib || myconf+=" --disable-aa"
 	use fbcon || myconf+=" --disable-fbdev"
@@ -520,20 +518,21 @@ src_configure() {
 		"
 	fi
 
-	#############
+	################
 	# Audio Output #
-	#############
-	for x in alsa esd jack ladspa nas openal; do
-		use ${x} || myconf+=" --disable-${x}"
+	################
+	uses="alsa esd jack ladspa nas openal"
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
 	done
 	use pulseaudio || myconf+=" --disable-pulse"
 	if ! use radio; then
 		use oss || myconf+=" --disable-ossaudio"
 	fi
 
-	#################
+	####################
 	# Advanced Options #
-	#################
+	####################
 	# Platform specific flags, hardcoded on amd64 (see below)
 	if use cpudetection; then
 		myconf+=" --enable-runtime-cpudetection"
@@ -544,8 +543,9 @@ src_configure() {
 	# specify which ones to use.  If disabled, mplayer will automatically
 	# enable all CPU optimizations that the host build supports.
 	if use custom-cpuopts; then
-		for x in 3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3; do
-			myconf+=" $(use_enable $x)"
+		uses="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
+		for i in ${uses}; do
+			myconf+=" $(use_enable ${i})"
 		done
 	fi
 
@@ -558,19 +558,20 @@ src_configure() {
 		use debug || append-flags -fomit-frame-pointer
 	fi
 
-	#################
-	# X enabled configuration
-	#################
+	###########################
+	# X enabled configuration #
+	###########################
 	if use X; then
+		uses="dxr3 ggi xinerama"
+		for i in ${uses}; do
+			use ${i} || myconf+=" --disable-${i}"
+		done
 		use dga || myconf+=" --disable-dga1 --disable-dga2"
-		use dxr3 || myconf+=" --disable-dxr3"
-		use ggi || myconf+=" --disable-ggi"
 		use opengl || myconf+=" --disable-gl"
 		use osdmenu && myconf+=" --enable-menu"
 		use video_cards_nvidia && use vdpau || myconf+=" --disable-vdpau"
 		use video_cards_vesa || myconf+=" --disable-vesa"
 		use vidix || myconf+=" --disable-vidix --disable-vidix-pcidb"
-		use xinerama || myconf+=" --disable-xinerama"
 		use xscreensaver || myconf+=" --disable-xss"
 
 		# GTK gmplayer gui
@@ -605,19 +606,16 @@ src_configure() {
 		--disable-xv
 		--disable-xvmc
 		"
-		if use dga || use dxr3 || use ggi || use opengl \
-				|| use osdmenu || use vdpau || use vidix \
-				|| use xinerama || use xscreensaver || use xv \
-				; then
-			elog "Some Video output options wont be enabled because compiling without use X."
-			elog "We highly recommend you to enable X useflag if you expect xv or opengl outputs."
-		fi
+		uses="dga dxr3 ggi opengl osdmenu vdpau vidix xinerama xscreensaver xv"
+		for i in uses; do
+			use ${i} && elog "Useflag \"${i}\" require \"X\" useflag enabled to work."
+		done
 	fi
 
 	if [[ ${PV} == *9999* ]]; then
-		#################
+		###################
 		# External FFmpeg #
-		#################
+		###################
 		use external-ffmpeg && myconf+=" --disable-libavutil_a --disable-libavcodec_a --disable-libavformat_a --disable-libpostproc_a --disable-libswscale_a"
 	fi
 
@@ -633,6 +631,7 @@ src_configure() {
 }
 
 src_compile() {
+	base_src_compile
 	emake || die "Failed to build MPlayer!"
 	use doc && make -C DOCS/xml html-chunked
 }
@@ -647,22 +646,24 @@ src_install() {
 		INSTALLSTRIP="" \
 		install || die "emake install failed"
 
-	dodoc AUTHORS Changelog Copyright README etc/codecs.conf
+	dodoc AUTHORS Changelog Copyright README etc/codecs.conf || die
 
 	docinto tech/
-	dodoc DOCS/tech/{*.txt,MAINTAINERS,mpsub.sub,playtree,TODO,wishlist}
+	dodoc DOCS/tech/{*.txt,MAINTAINERS,mpsub.sub,playtree,TODO,wishlist} || die
 	docinto TOOLS/
-	dodoc TOOLS/*
+	dodoc TOOLS/* || die
 	if use real; then
 		docinto tech/realcodecs/
-		dodoc DOCS/tech/realcodecs/*
+		dodoc DOCS/tech/realcodecs/* || die
 		docinto TOOLS/realcodecs/
-		dodoc TOOLS/realcodecs/*
+		dodoc TOOLS/realcodecs/* || die
 	fi
 	docinto tech/mirrors/
-	dodoc DOCS/tech/mirrors/*
+	dodoc DOCS/tech/mirrors/* || die
 
-	use doc && dohtml -r "${S}"/DOCS/HTML/*
+	if use doc; then
+		dohtml -r "${S}"/DOCS/HTML/* || die
+	fi
 
 	# Install the default Skin and Gnome menu entry
 	if use gmplayer; then
@@ -677,10 +678,9 @@ src_install() {
 
 	if ! use ass && ! use truetype; then
 		dodir /usr/share/mplayer/fonts
-		local x=
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
-		for x in $(find "${WORKDIR}/" -type d -name 'font-arial-*')
+		for i in $(find "${WORKDIR}/" -type d -name 'font-arial-*')
 		do
 			cp -pPR "${x}" "${D}/usr/share/mplayer/fonts"
 		done
@@ -690,29 +690,29 @@ src_install() {
 	fi
 
 	insinto /etc/mplayer
-	newins "${S}/etc/example.conf" mplayer.conf
-	doins "${S}/etc/input.conf"
-	use osdmenu && doins "${S}/etc/menu.conf"
+	newins "${S}/etc/example.conf" mplayer.conf || die
+	doins "${S}/etc/input.conf" || die
+	if use osdmenu; then
+		doins "${S}/etc/menu.conf" || die
+	fi
 
 	if use ass || use truetype;	then
-		cat >> "${D}/etc/mplayer/mplayer.conf" << EOT
+		cat >> "${D}/etc/mplayer/mplayer.conf" << _EOF_
 fontconfig=1
 subfont-osd-scale=4
 subfont-text-scale=3
-EOT
+_EOF_
 	fi
 
 	# bug 256203
 	if use rar; then
-		cat >> "${D}/etc/mplayer/mplayer.conf" << EOT
+		cat >> "${D}/etc/mplayer/mplayer.conf" << _EOF_
 unrarexec=/usr/bin/unrar
-EOT
+_EOF_
 	fi
 
 	dosym ../../../etc/mplayer/mplayer.conf /usr/share/mplayer/mplayer.conf
-
-	newbin "${S}/TOOLS/midentify.sh" midentify
-
+	newbin "${S}/TOOLS/midentify.sh" midentify || die
 }
 
 pkg_preinst() {
@@ -722,15 +722,11 @@ pkg_preinst() {
 
 pkg_postrm() {
 	# Cleanup stale symlinks
-	if [ -L "${ROOT}/usr/share/mplayer/font" -a \
-		 ! -e "${ROOT}/usr/share/mplayer/font" ]
-	then
+	[ -L "${ROOT}/usr/share/mplayer/font" -a \
+			! -e "${ROOT}/usr/share/mplayer/font" ] && \
 		rm -f "${ROOT}/usr/share/mplayer/font"
-	fi
 
-	if [ -L "${ROOT}/usr/share/mplayer/subfont.ttf" -a \
-		 ! -e "${ROOT}/usr/share/mplayer/subfont.ttf" ]
-	then
+	[ -L "${ROOT}/usr/share/mplayer/subfont.ttf" -a \
+			! -e "${ROOT}/usr/share/mplayer/subfont.ttf" ] && \
 		rm -f "${ROOT}/usr/share/mplayer/subfont.ttf"
-	fi
 }
