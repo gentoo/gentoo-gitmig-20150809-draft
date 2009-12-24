@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.13 2009/11/28 18:45:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.14 2009/12/24 17:16:43 pacho Exp $
+
+  24 Dec 2009; Pacho Ramos <pacho@gentoo.org> bpython-0.9.5.2-r1.ebuild:
+  amd64 stable, bug 296671
 
   28 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bpython-0.9.5.2-r1.ebuild:
