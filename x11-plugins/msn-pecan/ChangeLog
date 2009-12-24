@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/msn-pecan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/ChangeLog,v 1.3 2009/12/24 09:54:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/ChangeLog,v 1.4 2009/12/24 11:28:33 pva Exp $
+
+*msn-pecan-0.1.0_rc2 (24 Dec 2009)
+
+  24 Dec 2009; Peter Volkov <pva@gentoo.org> -msn-pecan-0.1.0_rc1-r1.ebuild,
+  +msn-pecan-0.1.0_rc2.ebuild, -files/msn-pecan-0.1.0_rc1-oim-crash.patch:
+  Version bump. Respect CFLAGS and LDFLAGS.
 
 *msn-pecan-0.1.0_rc1-r1 (24 Dec 2009)
 

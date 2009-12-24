@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.0_rc1-r1.ebuild,v 1.1 2009/12/24 09:54:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.0_rc2.ebuild,v 1.1 2009/12/24 11:28:33 pva Exp $
 
 EAPI="2"
 
@@ -24,11 +24,14 @@ DEPEND="dev-util/pkgconfig
 S=${WORKDIR}/${P/_/-}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-oim-crash.patch"
+	sed -e "/^LDFLAGS/{s/$/ ${LDFLAGS}/;}" \
+		-e "/^CFLAGS/{s/$/ ${CFLAGS}/;}" -i Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS=${LDFLAGS} || die "emake failed"
 }
 
 src_install() {
