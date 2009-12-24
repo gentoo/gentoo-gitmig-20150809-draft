@@ -1,0 +1,41 @@
+diff -r -u -w pycuda-0.93-old/pycuda/compiler.py pycuda-0.93/pycuda/compiler.py
+--- pycuda-0.93-old/pycuda/compiler.py	2009-05-28 07:45:53.000000000 -0500
++++ pycuda-0.93/pycuda/compiler.py	2009-08-12 15:49:00.000000000 -0500
+@@ -115,14 +115,25 @@
+     file, pathname, descr = find_module("pycuda")
+
+     from os.path import join, exists
+-    installed_path = join(pathname, "..", "include", "cuda")
++    installed_path = join(pathname, "..", "include", "pycuda")
+     development_path = join(pathname, "..", "src", "cuda")
+
++    usr_path = "/usr/include/pycuda"
++    usr_local_path = "/usr/local/include/pycuda"
++
++    import sys
++
+     if exists(installed_path):
+         return installed_path
+     elif exists(development_path):
+         return development_path
+     else:
++        if sys.platform == "linux2":
++            if exists(usr_path):
++                return usr_path
++            elif exists(usr_local_path):
++                return usr_local_path
++
+         raise RuntimeError("could not find path PyCUDA's C header files")
+
+
+diff -r -u -w pycuda-0.93-old/setup.py pycuda-0.93/setup.py
+--- pycuda-0.93-old/setup.py	2009-08-10 08:17:18.000000000 -0500
++++ pycuda-0.93/setup.py	2009-08-12 15:47:22.000000000 -0500
+@@ -314,7 +314,7 @@
+                 ],
+                 
+             data_files=[
+-                ("include/cuda", glob.glob("src/cuda/*.hpp"))
++                ("include/pycuda", glob.glob("src/cuda/*.hpp"))
+                 ],
+             )
