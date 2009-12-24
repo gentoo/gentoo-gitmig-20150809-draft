@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5121 2009/12/23 22:47:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5122 2009/12/24 12:47:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -588,8 +588,6 @@ dev-db/drizzle:memcache -  Enable the memcache plugin for user-defined functions
 dev-db/drizzle:openssl -  Enable the MD5 plugin for user-defined functions (using dev-libs/openssl). Note: when enabling both this flag and the curl flag, net-misc/curl has to be built with the openssl USE flag or with no SSL support at all to avoid runtime linking conflicts. 
 dev-db/drizzle:pam -  Enable the PAM authentication plugin (using sys-libs/pam). Warning: currently the pam configuration file is missing so it will not work out of the box. 
 dev-db/drizzle:tcmalloc -  Use the dev-util/google-perftools libraries to replace the malloc() implementation with a possibly faster one. 
-dev-db/hk_classes:mdb - Enables Microsoft Access DB support
-dev-db/hk_classes:xbase - Enables support for xbase databases (dBase, FoxPro, etc.)
 dev-db/ingres:client - Disable dbms component
 dev-db/ingres:das - Enable das support
 dev-db/ingres:demodb - Install demo DB
