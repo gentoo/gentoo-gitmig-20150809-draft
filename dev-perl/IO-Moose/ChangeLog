@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Moose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Moose/ChangeLog,v 1.4 2009/11/22 21:05:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Moose/ChangeLog,v 1.5 2009/12/24 19:59:43 tove Exp $
+
+  24 Dec 2009; Torsten Veller <tove@gentoo.org> -IO-Moose-0.1003.ebuild:
+  Cleanup
 
   22 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> IO-Moose-0.1003.ebuild,
   IO-Moose-0.1004.ebuild:

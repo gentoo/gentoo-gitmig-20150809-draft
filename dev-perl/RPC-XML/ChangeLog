@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.50 2009/12/14 19:33:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.51 2009/12/24 19:35:41 tove Exp $
+
+  24 Dec 2009; Torsten Veller <tove@gentoo.org> -RPC-XML-0.69.ebuild:
+  Cleanup
 
 *RPC-XML-0.72 (14 Dec 2009)
 
