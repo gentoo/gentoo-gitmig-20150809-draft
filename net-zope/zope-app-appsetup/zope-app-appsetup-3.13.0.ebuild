@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-appsetup/zope-app-appsetup-3.12.0.ebuild,v 1.1 2009/12/13 03:27:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-appsetup/zope-app-appsetup-3.13.0.ebuild,v 1.1 2009/12/24 17:25:03 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,11 +28,11 @@ RDEPEND="net-zope/zodb
 	net-zope/zope-event
 	net-zope/zope-interface
 	net-zope/zope-lifecycleevent
-	net-zope/zope-location
 	net-zope/zope-processlifetime
 	net-zope/zope-security
 	net-zope/zope-session
 	net-zope/zope-site
+	net-zope/zope-testing
 	net-zope/zope-traversing"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
