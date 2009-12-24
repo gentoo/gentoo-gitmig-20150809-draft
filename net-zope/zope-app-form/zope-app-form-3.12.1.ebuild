@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/zope-app-form-3.11.0.ebuild,v 1.1 2009/12/20 02:29:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/zope-app-form-3.12.1.ebuild,v 1.1 2009/12/24 17:10:00 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,9 +20,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="net-zope/transaction
-	net-zope/zope-app-pagetemplate
 	net-zope/zope-browser
 	net-zope/zope-browsermenu
+	net-zope/zope-browserpage
 	net-zope/zope-component
 	net-zope/zope-configuration
 	net-zope/zope-datetime
