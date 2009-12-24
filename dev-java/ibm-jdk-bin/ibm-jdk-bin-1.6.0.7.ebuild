@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.5.ebuild,v 1.3 2009/09/06 20:04:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.7.ebuild,v 1.1 2009/12/24 17:43:56 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -81,7 +81,7 @@ SRC_URI="
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
 	)"
 LICENSE="IBM-J1.6"
-KEYWORDS="-* ~amd64 ppc ppc64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
@@ -95,7 +95,7 @@ RDEPEND="
 		x11-libs/libXp
 		x11-libs/libXtst
 		x11-libs/libX11
-		amd64? ( x11-libs/libXt )
+		x11-libs/libXt
 	)
 	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.6.0* )
@@ -146,6 +146,7 @@ opt/${P}/jre/lib/amd64/default/libj9dbg24.so
 opt/${P}/jre/lib/amd64/default/libj9shr24.so
 opt/${P}/jre/lib/amd64/default/libj9gc24.so
 opt/${P}/jre/lib/amd64/default/libj9bcv24.so
+opt/${P}/jre/lib/amd64/default/libj9ute24.so
 opt/${P}/jre/lib/amd64/compressedrefs/libjvm.so
 opt/${P}/jre/lib/amd64/compressedrefs/libj9jvmti24.so
 opt/${P}/jre/lib/amd64/compressedrefs/libj9hookable24.so
@@ -161,7 +162,8 @@ opt/${P}/jre/lib/amd64/compressedrefs/libj9trc24.so
 opt/${P}/jre/lib/amd64/compressedrefs/libj9dbg24.so
 opt/${P}/jre/lib/amd64/compressedrefs/libj9shr24.so
 opt/${P}/jre/lib/amd64/compressedrefs/libj9gc24.so
-opt/${P}/jre/lib/amd64/compressedrefs/libj9bcv24.so"
+opt/${P}/jre/lib/amd64/compressedrefs/libj9bcv24.so
+opt/${P}/jre/lib/amd64/compressedrefs/libj9ute24.so"
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"

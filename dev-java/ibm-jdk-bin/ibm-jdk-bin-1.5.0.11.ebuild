@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.9-r1.ebuild,v 1.4 2009/05/29 20:37:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.11.ebuild,v 1.1 2009/12/24 17:43:56 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -46,8 +46,7 @@ elif use ppc64; then
 	LINK_ARCH="ipseries64"
 fi
 
-#DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}&S_TACT=105AGX05&S_CMP=JDK"
-DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}-ssu&S_TACT=105AGX05&S_CMP=JDK"
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.5"
 DESCRIPTION="IBM Java SE Development Kit"
@@ -67,7 +66,7 @@ SRC_URI="x86? ( ${X86_JDK_DIST} )
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
 		)"
 LICENSE="IBM-J1.5"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
@@ -109,6 +108,7 @@ QA_EXECSTACK_amd64="opt/${P}/jre/bin/libjclscar_23.so
 	opt/${P}/jre/bin/libj9dmp23.so
 	opt/${P}/jre/bin/libj9dbg23.so
 	opt/${P}/jre/bin/libj9bcv23.so
+	opt/${P}/jre/bin/libj9ute23.so
 	opt/${P}/jre/bin/libiverel23.so
 	opt/${P}/jre/bin/classic/libjvm.so
 	opt/${P}/jre/bin/j9vm/libjvm.so"
@@ -189,8 +189,7 @@ pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
 	einfo "Please visit: ${DOWNLOADPAGE}"
 
-#	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE} for your arch:"
-	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE}-SSU for your arch:"
+	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE} for your arch:"
 	einfo "(note that we switched to tgz format because it's now versioned)"
 	einfo "${JDK_DIST}"
 	if use javacomm ; then
@@ -202,8 +201,7 @@ pkg_nofetch() {
 	einfo "Place the file(s) in: ${DISTDIR}"
 	einfo "Then restart emerge: 'emerge --resume'"
 
-#	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
-	einfo "Note: if SR${SERVICE_RELEASE}-SSU is not available at ${DOWNLOADPAGE}"
+	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link to arch download page. If it doesn't work, file a bug."

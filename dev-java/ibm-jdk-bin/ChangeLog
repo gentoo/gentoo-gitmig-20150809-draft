@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.215 2009/11/17 16:17:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.216 2009/12/24 17:43:56 caster Exp $
+
+*ibm-jdk-bin-1.6.0.7 (24 Dec 2009)
+*ibm-jdk-bin-1.5.0.11 (24 Dec 2009)
+
+  24 Dec 2009; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.5.0.9-r1.ebuild, +ibm-jdk-bin-1.5.0.11.ebuild,
+  -ibm-jdk-bin-1.6.0.5.ebuild, +ibm-jdk-bin-1.6.0.7.ebuild:
+  Version bump, security bug #287490.
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> ibm-jdk-bin-1.6.0.6.ebuild:
   Marking ibm-jdk-bin-1.6.0.6 ppc64 for bug 287490
