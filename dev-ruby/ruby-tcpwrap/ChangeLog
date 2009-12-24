@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-tcpwrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.14 2009/07/14 17:26:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.15 2009/12/24 17:22:02 graaff Exp $
+
+  24 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-tcpwrap-0.6.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
   14 Jul 2009; Hans de Graaff <graaff@gentoo.org> ruby-tcpwrap-0.6.ebuild:
   Remove ruby19 keyword: not compatible. See bug 276647, thanks to Kevin

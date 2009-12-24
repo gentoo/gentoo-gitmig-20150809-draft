@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ruby-tcpwrap-0.6.ebuild,v 1.14 2009/07/14 17:26:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ruby-tcpwrap-0.6.ebuild,v 1.15 2009/12/24 17:22:02 graaff Exp $
 
 inherit ruby
 
@@ -15,9 +15,10 @@ SLOT="0"
 USE_RUBY="ruby18"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~sparc x86"
 
-DEPEND="virtual/ruby
+DEPEND="
 	net-libs/libident
 	sys-apps/tcp-wrappers"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
