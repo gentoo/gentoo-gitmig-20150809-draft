@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.1.1-r1.ebuild,v 1.1 2009/12/24 04:34:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.1.1-r1.ebuild,v 1.2 2009/12/24 08:37:28 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,5 +22,5 @@ RDEPEND=""
 src_install() {
 	distutils_src_install
 
-	python_generate_wrapper_scripts -E -f -q "${D}usr/bin/py.test"
+	python_generate_wrapper_scripts -E -f -q "${D%/}${EPREFIX}/usr/bin/py.test"
 }
