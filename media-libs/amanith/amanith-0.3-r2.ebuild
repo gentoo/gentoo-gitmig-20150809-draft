@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.4 2009/07/19 19:18:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.5 2009/12/25 18:14:57 yngwin Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs qt4
@@ -19,7 +19,7 @@ DEPEND="
 	opengl? ( media-libs/glew )
 	png? ( >=media-libs/libpng-1.2.10 )
 	truetype? ( >=media-libs/freetype-2.2.1 )
-	|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )"
+	x11-libs/qt-gui:4"
 
 S=${WORKDIR}/${PN}
 
