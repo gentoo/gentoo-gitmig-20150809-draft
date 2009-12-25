@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.95.ebuild,v 1.1 2009/11/14 16:17:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.95.ebuild,v 1.2 2009/12/25 17:57:43 nirbheek Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="PolicyKit policies and configurations for the GNOME desktop"
 HOMEPAGE="http://hal.freedesktop.org/docs/PolicyKit"
@@ -35,4 +35,9 @@ pkg_setup() {
 		--disable-introspection
 		$(use_enable examples)"
 		#$(use_enable introspection)"
+}
+
+src_prepare() {
+	# Fix make check, bug 298345
+	epatch "${FILESDIR}/${P}-fix-make-check.patch"
 }
