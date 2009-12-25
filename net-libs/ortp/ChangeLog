@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.51 2009/08/20 19:33:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.52 2009/12/25 18:13:01 armin76 Exp $
+
+  25 Dec 2009; Raúl Porcel <armin76@gentoo.org> ortp-0.15.0.ebuild,
+  ortp-0.15.0_p1.ebuild, ortp-0.16.0.ebuild:
+  Add ~sparc wrt #266193
 
 *ortp-0.16.0 (20 Aug 2009)
 
