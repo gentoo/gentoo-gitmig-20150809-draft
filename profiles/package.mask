@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10998 2009/12/25 15:02:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10999 2009/12/25 15:58:26 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -864,6 +864,7 @@ sys-apps/baselayout-vserver
 # please use sys-devel/crossdev to install them.
 dev-libs/cygwin
 dev-util/mingw-runtime
+dev-util/mingw64-runtime
 dev-util/w32api
 
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3702 2009/12/25 04:26:23 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3703 2009/12/25 15:58:25 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Add mingw64-runtime to the crossdev mask.
 
   24 Dec 2009; Andrey Grozin <grozin@gentoo.org> base/package.use.mask,
   arch/amd64/package.use.mask, arch/x86/package.use.mask:
