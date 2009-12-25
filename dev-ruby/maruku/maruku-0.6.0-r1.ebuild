@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.6.0-r1.ebuild,v 1.1 2009/12/21 00:10:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.6.0-r1.ebuild,v 1.2 2009/12/25 02:09:44 flameeyes Exp $
 
 EAPI=2
 
@@ -8,7 +8,6 @@ USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
-RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="docs/changelog.md docs/div_syntax.md docs/entity_test.md
 	docs/markdown_syntax.md docs/maruku.md docs/math.md docs/other_stuff.md
