@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/hoe-seattlerb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.1 2009/12/25 16:32:21 flameeyes Exp $
+
+*hoe-seattlerb-1.2.1 (25 Dec 2009)
+
+  25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +hoe-seattlerb-1.2.1.ebuild, +metadata.xml:
+  Initial import of the seattlerb hoe plugin which is needed for hoe tests.
+
