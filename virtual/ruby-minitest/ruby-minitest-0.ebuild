@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ruby-minitest-0.ebuild,v 1.1 2009/12/25 16:39:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ruby-minitest-0.ebuild,v 1.2 2009/12/25 17:15:36 flameeyes Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19"
 
 inherit ruby-ng
 
