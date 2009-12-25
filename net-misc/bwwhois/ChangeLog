@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.19 2009/07/29 16:24:15 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.20 2009/12/25 08:53:10 tove Exp $
+
+*bwwhois-5.0-r1 (25 Dec 2009)
+
+  25 Dec 2009; Torsten Veller <tove@gentoo.org> +bwwhois-5.0-r1.ebuild:
+  Install perl-modules to VENDOR_LIB (#295899)
 
   29 Jul 2009; Gordon Malm <gengor@gentoo.org> bwwhois-5.0.ebuild:
   QA fixes/updates.
