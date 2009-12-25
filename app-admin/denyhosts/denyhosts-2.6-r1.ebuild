@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r1.ebuild,v 1.8 2009/12/20 04:13:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r1.ebuild,v 1.9 2009/12/25 21:54:16 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -45,9 +45,6 @@ src_install() {
 	newins denyhosts.cfg-dist denyhosts.conf
 
 	newinitd "${FILESDIR}"/denyhosts.init denyhosts
-
-	exeinto /usr/bin
-	newexe denyhosts.py denyhosts
 
 	dodoc CHANGELOG.txt README.txt
 
