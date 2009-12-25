@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.18 2009/12/24 15:26:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.19 2009/12/25 14:30:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -260,6 +260,7 @@ src_prepare() {
 	fi
 
 	base_src_prepare
+	epatch_user
 }
 
 src_configure() {
