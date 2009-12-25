@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.32 2009/08/07 06:12:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.33 2009/12/25 00:37:12 fauli Exp $
+
+*joomla-1.5.15 (25 Dec 2009)
+
+  25 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -joomla-1.5.13.ebuild, +joomla-1.5.15.ebuild:
+  version bump for bug 293648 and clean up
 
 *joomla-1.5.14 (07 Aug 2009)
 
