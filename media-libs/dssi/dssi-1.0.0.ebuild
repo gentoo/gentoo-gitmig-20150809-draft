@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-1.0.0.ebuild,v 1.1 2009/01/10 13:31:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-1.0.0.ebuild,v 1.2 2009/12/25 12:51:34 hwoarang Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/dssi/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND=">=media-libs/alsa-lib-1.0
 	>=media-libs/liblo-0.12
