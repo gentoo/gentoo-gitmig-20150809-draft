@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ispell-no-2.10.ebuild,v 1.5 2009/02/25 13:16:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ispell-no-2.10.ebuild,v 1.6 2009/12/25 14:47:01 flameeyes Exp $
 
 inherit multilib versionator
 
@@ -20,11 +20,12 @@ S=${WORKDIR}/${MY_PN}-$(get_major_version).0.$(get_version_component_range 2)
 
 src_compile() {
 	export LC_ALL=C #227055
-	make SED="sed" BUILDHASH="/usr/bin/buildhash" ispell || die
+	# bug #295830
+	emake -j1 SED="sed" BUILDHASH="/usr/bin/buildhash" ispell || die
 }
 
 src_install () {
-	    insinto /usr/$(get_libdir)/ispell
-	    doins {nb,nn}.{hash,aff} || die
+		insinto /usr/$(get_libdir)/ispell
+		doins {nb,nn}.{hash,aff} || die
 		dodoc NEWS
 }

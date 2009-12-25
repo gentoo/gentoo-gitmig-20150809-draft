@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-no
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ChangeLog,v 1.9 2009/02/25 13:16:01 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ChangeLog,v 1.10 2009/12/25 14:47:01 flameeyes Exp $
+
+  25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ispell-no-2.10.ebuild:
+  Use -j1 for build (bug #295830).
 
   25 Feb 2009; Joseph Jezak <josejx@gentoo.org> ispell-no-2.10.ebuild:
   Marked ~ppc for bug #245139.
