@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.58 2009/12/25 08:19:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.59 2009/12/25 15:27:22 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -14,7 +14,19 @@
 
 inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
+MY_PV=${PV/_/-}
+if version_is_at_least 4.5.99999999; then
+	MY_P=qt-everywhere-opensource-src-${MY_PV}
+else
+	MY_P=qt-x11-opensource-src-${MY_PV}
+fi
+
+HOMEPAGE="http://qt.nokia.com/"
+SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
+
+LICENSE="|| ( LGPL-2.1 GPL-3 )"
 IUSE="debug pch aqua"
+
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
 	!>x11-libs/qt-assistant-${PV}-r9999
@@ -46,17 +58,7 @@ RDEPEND="
 	!>x11-libs/qt-xmlpatterns-${PV}-r9999
 "
 
-MY_PV=${PV/_/-}
-
-HOMEPAGE="http://qt.nokia.com/"
-if version_is_at_least 4.5.99999999 ${PV} ; then
-	SRC_URI="http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-${MY_PV}.tar.gz"
-else
-	SRC_URI="aqua? ( http://get.qt.nokia.com/qt/source/qt-mac-opensource-src-${MY_PV}.tar.gz )
-		!aqua? ( http://get.qt.nokia.com/qt/source/qt-x11-opensource-src-${MY_PV}.tar.gz )"
-fi
-
-LICENSE="|| ( LGPL-2.1 GPL-3 )"
+S=${WORKDIR}/${MY_P}
 
 # @FUNCTION: qt4-build_pkg_setup
 # @DESCRIPTION:
@@ -64,16 +66,6 @@ LICENSE="|| ( LGPL-2.1 GPL-3 )"
 qt4-build_pkg_setup() {
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
-	local MY_GE
-	if version_is_at_least 4.5.99999999 ${PV} ; then
-		MY_P=qt-everywhere-opensource-src-${MY_PV}
-	else
-		use aqua \
-			&& MY_GE=mac \
-			|| MY_GE=x11
-		MY_P=qt-${MY_GE}-opensource-src-${MY_PV}
-	fi
-	S=${WORKDIR}/${MY_P}
 
 	PATH="${S}/bin${PATH:+:}${PATH}"
 	if [[ ${CHOST} != *-darwin* ]]; then
@@ -104,23 +96,6 @@ qt4-build_pkg_setup() {
 		echo
 		ebeep 3
 	fi
-
-	if [[ ${P} == qt-core-4.6.0_rc1 ]]; then
-		ewarn
-		ewarn "Binary compatibility broke between 4.6.0_beta1 and 4.6.0_rc1."
-		ewarn "If you are upgrading from 4.6.0_beta1, you'll have to"
-		ewarn "re-emerge everything that depends on Qt."
-		ewarn "Use the following command:"
-		ewarn
-		ewarn "   emerge -av1 \$(for i in \$(qlist -IC x11-libs/qt-);"
-		ewarn "   do equery -q d \$i | grep -v 'x11-libs/qt-' |"
-		ewarn "   sed \"s/^/=/\"; done)"
-		ewarn
-		ewarn "YOU'VE BEEN WARNED"
-		ewarn
-		ebeep 3
-	fi
-
 }
 
 # @ECLASS-VARIABLE: QT4_TARGET_DIRECTORIES
