@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.39 2009/05/21 00:09:33 tcunha Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.40 2009/12/25 15:01:37 kolmodin Exp $
+
+  25 Dec 2009; <kolmodin@gentoo.org> alex-2.3.1.ebuild:
+  Add ~ppc64, tested by trofi.
 
   20 May 2009; Tiago Cunha <tcunha@gentoo.org> alex-2.3.1.ebuild:
   stable sparc, bug 268074
