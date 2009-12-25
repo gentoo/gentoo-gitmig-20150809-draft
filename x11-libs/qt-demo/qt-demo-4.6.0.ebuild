@@ -1,28 +1,28 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.6.0.ebuild,v 1.1 2009/12/01 14:49:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.6.0.ebuild,v 1.2 2009/12/25 15:39:38 abcd Exp $
 
 EAPI="2"
 inherit qt4-build
 
 DESCRIPTION="Demonstration module of the Qt toolkit"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-DEPEND="~x11-libs/qt-assistant-${PV}:${SLOT}
-	~x11-libs/qt-core-${PV}:${SLOT}
-	~x11-libs/qt-dbus-${PV}:${SLOT}
-	~x11-libs/qt-gui-${PV}:${SLOT}
-	~x11-libs/qt-multimedia-${PV}:${SLOT}
-	~x11-libs/qt-opengl-${PV}:${SLOT}
-	|| ( ~x11-libs/qt-phonon-${PV}:${SLOT} media-sound/phonon )
-	~x11-libs/qt-script-${PV}:${SLOT}
-	~x11-libs/qt-sql-${PV}:${SLOT}
-	~x11-libs/qt-svg-${PV}:${SLOT}
-	~x11-libs/qt-test-${PV}:${SLOT}
-	~x11-libs/qt-webkit-${PV}:${SLOT}
-	~x11-libs/qt-xmlpatterns-${PV}:${SLOT}"
+DEPEND="~x11-libs/qt-assistant-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-core-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-dbus-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-gui-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-multimedia-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-opengl-${PV}:${SLOT}[aqua=]
+	|| ( ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=] media-sound/phonon[aqua=] )
+	~x11-libs/qt-script-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-sql-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-svg-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-test-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-webkit-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-xmlpatterns-${PV}:${SLOT}[aqua=]"
 
 RDEPEND="${DEPEND}"
 
@@ -39,7 +39,7 @@ PATCHES=(
 )
 
 src_install() {
-	insinto ${QTDOCDIR}/src
+	insinto "${QTDOCDIR#${EPREFIX}}"/src
 	doins -r "${S}"/doc/src/images || die "Installing images failed."
 
 	qt4-build_src_install
