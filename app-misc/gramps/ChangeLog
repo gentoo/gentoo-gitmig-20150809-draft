@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.113 2009/12/25 00:01:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.114 2009/12/25 00:07:00 fauli Exp $
+
+  25 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -gramps-3.1.1-r1.ebuild, -gramps-3.1.2.ebuild:
+  clean up
 
 *gramps-3.1.3 (24 Dec 2009)
 
