@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.204 2009/12/15 18:51:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.205 2009/12/25 02:32:43 darkside Exp $
+
+*bash-completion-1.1-r5 (25 Dec 2009)
+
+  25 Dec 2009; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.1-r4.ebuild, +bash-completion-1.1-r5.ebuild:
+  Fix rsync ssh completion, bug 297818
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   bash-completion-1.1-r4.ebuild:

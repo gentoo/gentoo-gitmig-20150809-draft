@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r4.ebuild,v 1.6 2009/12/15 18:51:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r5.ebuild,v 1.1 2009/12/25 02:32:43 darkside Exp $
 
 EAPI="2"
 inherit prefix
@@ -25,6 +25,8 @@ src_prepare() {
 	eprefixify "${T}/bash-completion.sh"
 	# On the roadmap to change in next release, "2.0"
 	sed -i -e 's/declare -r bash4/export bash4/' bash_completion || die
+	# Fix rsync ssh remote path completion bug 297818, committed upstream.
+	sed -i -e 's/cur=`_get_cword`/cur=`_get_cword ":"`/' contrib/rsync || die
 }
 
 src_install() {
