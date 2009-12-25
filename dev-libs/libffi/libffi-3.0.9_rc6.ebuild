@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9_rc4.ebuild,v 1.1 2009/12/24 10:05:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9_rc6.ebuild,v 1.1 2009/12/25 14:30:40 ssuominen Exp $
 
-inherit autotools eutils
+inherit libtool
 
 DESCRIPTION="a portable, high level programming interface to various calling conventions."
-HOMEPAGE="http://sourceware.org/libffi/"
+HOMEPAGE="http://sourceware.org/libffi"
 SRC_URI="ftp://sources.redhat.com/pub/${PN}/${P/_}.tar.gz"
 
 LICENSE="MIT"
@@ -21,10 +21,7 @@ S=${WORKDIR}/${P/_}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e '/ACLOCAL_AMFLAGS/d' Makefile.am || die
-	epatch "${FILESDIR}"/${P}-revert_includedir.patch \
-		"${FILESDIR}"/libffi-3.0.8-autoconf-2.64.patch
-	eautoreconf
+	elibtoolize
 }
 
 src_compile() {
