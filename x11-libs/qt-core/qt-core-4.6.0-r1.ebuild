@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.0.ebuild,v 1.3 2009/12/23 12:50:15 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.0-r1.ebuild,v 1.1 2009/12/25 15:35:13 abcd Exp $
 
 EAPI="2"
 inherit qt4-build
 
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="doc +glib iconv optimized-qmake qt3support ssl"
 
 RDEPEND="sys-libs/zlib
@@ -16,7 +16,7 @@ RDEPEND="sys-libs/zlib
 	!<x11-libs/qt-4.4.0:4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[qt3support] )"
+PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,qt3support] )"
 
 QT4_TARGET_DIRECTORIES="
 src/tools/bootstrap
@@ -171,9 +171,13 @@ src_install() {
 	fi
 
 	# use freshly built libraries
+	local DYLD_FPATH=
+	[[ -d "${S}"/lib/QtCore.framework ]] \
+		&& DYLD_FPATH=$(for x in "${S}/lib/"*.framework; do echo -n ":$x"; done)
+	DYLD_LIBRARY_PATH="${S}/lib${DYLD_FPATH}" \
 	LD_LIBRARY_PATH="${S}/lib" "${S}"/bin/lrelease translations/*.ts \
 		|| die "generating translations faied"
-	insinto ${QTTRANSDIR}
+	insinto ${QTTRANSDIR#${EPREFIX}}
 	doins translations/*.qm || die "doins translations failed"
 
 	setqtenv
@@ -182,22 +186,31 @@ src_install() {
 	# List all the multilib libdirs
 	local libdirs=
 	for libdir in $(get_all_libdirs); do
-		libdirs="${libdirs}:/usr/${libdir}/qt4"
+		libdirs+=:${EPREFIX}/usr/${libdir}/qt4
 	done
 
 	cat <<-EOF > "${T}/44qt4"
-	LDPATH=${libdirs:1}
+	LDPATH="${libdirs:1}"
 	EOF
 	doenvd "${T}/44qt4"
 
-	dodir /${QTDATADIR}/mkspecs/gentoo
+	dodir ${QTDATADIR#${EPREFIX}}/mkspecs/gentoo
 	mv "${D}"/${QTDATADIR}/mkspecs/qconfig.pri "${D}${QTDATADIR}"/mkspecs/gentoo \
 		|| die "Failed to move qconfig.pri"
 
-	sed -i -e '2a#include <Gentoo/gentoo-qconfig.h>\n' \
-			"${D}${QTHEADERDIR}"/QtCore/qconfig.h \
-			"${D}${QTHEADERDIR}"/Qt/qconfig.h \
-		|| die "sed for qconfig.h failed"
+	# Framework hacking
+	if use aqua && [[ ${CHOST#*-darwin} -ge 9 ]] ; then
+		#TODO do this better
+		sed -i -e '2a#include <QtCore/Gentoo/gentoo-qconfig.h>\n' \
+				"${D}${QTLIBDIR}"/QtCore.framework/Headers/qconfig.h \
+			|| die "sed for qconfig.h failed."
+		dosym "${QTHEADERDIR#${EPREFIX}}"/Gentoo "${QTLIBDIR#${EPREFIX}}"/QtCore.framework/Headers/Gentoo
+	else
+		sed -i -e '2a#include <Gentoo/gentoo-qconfig.h>\n' \
+				"${D}${QTHEADERDIR}"/QtCore/qconfig.h \
+				"${D}${QTHEADERDIR}"/Qt/qconfig.h \
+			|| die "sed for qconfig.h failed"
+	fi
 
 	if use glib; then
 		QCONFIG_DEFINE="$(use glib && echo QT_GLIB)
@@ -207,10 +220,12 @@ src_install() {
 
 	# remove some unnecessary headers
 	rm -f "${D}${QTHEADERDIR}"/{Qt,QtCore}/{\
-qatomic_macosx.h,\
 qatomic_windows.h,\
 qatomic_windowsce.h,\
 qt_windows.h}
 
-	keepdir "${QTSYSCONFDIR}"
+	keepdir "${QTSYSCONFDIR#${EPREFIX}}"
+
+	# Framework magic
+	fix_includes
 }

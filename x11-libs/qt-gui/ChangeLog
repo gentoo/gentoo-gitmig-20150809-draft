@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.87 2009/12/07 15:19:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.88 2009/12/25 15:40:44 abcd Exp $
+
+*qt-gui-4.6.0-r2 (25 Dec 2009)
+
+  25 Dec 2009; Jonathan Callen <abcd@gentoo.org> -qt-gui-4.6.0.ebuild,
+  -qt-gui-4.6.0-r1.ebuild, +qt-gui-4.6.0-r2.ebuild:
+  Add prefix support, revbump due to otherwise unresolvable USE deps
 
 *qt-gui-4.6.0-r1 (07 Dec 2009)
 

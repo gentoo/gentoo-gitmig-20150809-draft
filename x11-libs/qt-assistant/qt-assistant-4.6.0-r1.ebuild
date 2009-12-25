@@ -1,19 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.6.0.ebuild,v 1.1 2009/12/01 14:48:01 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.6.0-r1.ebuild,v 1.1 2009/12/25 15:33:39 abcd Exp $
 
 EAPI="2"
 inherit qt4-build
 
 DESCRIPTION="The assistant help module for the Qt toolkit."
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="
-	~x11-libs/qt-gui-${PV}
-	~x11-libs/qt-sql-${PV}[sqlite]
-	~x11-libs/qt-webkit-${PV}
+	~x11-libs/qt-gui-${PV}[aqua=]
+	~x11-libs/qt-sql-${PV}[aqua=,sqlite]
+	~x11-libs/qt-webkit-${PV}[aqua=]
 "
 RDEPEND="${DEPEND}"
 
@@ -46,7 +46,7 @@ src_configure() {
 
 src_compile() {
 	# help libQtHelp find freshly built libQtCLucene (bug #289811)
-	export LD_LIBRARY_PATH="${S}/lib"
+	export LD_LIBRARY_PATH="${S}/lib" DYLD_LIBRARY_PATH="${S}/lib"
 	qt4-build_src_compile
 	# ugly hack to build docs
 	cd "${S}"
@@ -60,7 +60,7 @@ src_install() {
 	# note that emake install_qchdocs fails for undefined reason so we use a
 	# workaround
 	cd "${S}"
-	insinto "${QTDOCDIR}"
+	insinto ${QTDOCDIR#${EPREFIX}}
 	doins -r "${S}"/doc/qch || die "doins qch documentation failed"
 	dobin "${S}"/bin/qdoc3 || die "Installing qdoc3 failed"
 	#emake INSTALL_ROOT="${D}" install_qchdocs || die "emake install_qchdocs	failed"

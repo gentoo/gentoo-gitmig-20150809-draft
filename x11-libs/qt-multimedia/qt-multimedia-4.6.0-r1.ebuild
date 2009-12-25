@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/qt-multimedia-4.6.0.ebuild,v 1.1 2009/12/01 14:51:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/qt-multimedia-4.6.0-r1.ebuild,v 1.1 2009/12/25 15:41:27 abcd Exp $
 
 EAPI="2"
 inherit qt4-build
 
 DESCRIPTION="The Qt multimedia module"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-DEPEND="~x11-libs/qt-core-${PV}[debug=]
-	~x11-libs/qt-gui-${PV}[debug=]
+DEPEND="~x11-libs/qt-core-${PV}[aqua=,debug=]
+	~x11-libs/qt-gui-${PV}[aqua=,debug=]
 "
 RDEPEND="${DEPEND}"
 

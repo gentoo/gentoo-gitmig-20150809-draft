@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.4 2009/12/01 18:07:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.5 2009/12/25 15:41:27 abcd Exp $
+
+*qt-multimedia-4.6.0-r1 (25 Dec 2009)
+
+  25 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  -qt-multimedia-4.6.0.ebuild, +qt-multimedia-4.6.0-r1.ebuild:
+  Add prefix support, revbump due to otherwise unresolvable USE deps
 
   01 Dec 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   -qt-multimedia-4.6.0_rc1.ebuild:

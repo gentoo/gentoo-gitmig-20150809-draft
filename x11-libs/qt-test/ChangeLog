@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.55 2009/12/03 17:24:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.56 2009/12/25 15:46:29 abcd Exp $
+
+*qt-test-4.6.0-r1 (25 Dec 2009)
+
+  25 Dec 2009; Jonathan Callen <abcd@gentoo.org> -qt-test-4.6.0.ebuild,
+  +qt-test-4.6.0-r1.ebuild:
+  Add prefix support, revbump due to otherwise unresolvable USE deps
 
   03 Dec 2009; Alex Alexander <wired@gentoo.org>
   +files/qt-4.6-nolibx11.diff, qt-test-4.6.0.ebuild:
