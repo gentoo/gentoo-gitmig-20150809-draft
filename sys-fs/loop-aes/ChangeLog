@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.47 2009/12/12 03:49:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.48 2009/12/25 18:04:45 armin76 Exp $
+
+  25 Dec 2009; Raúl Porcel <armin76@gentoo.org> loop-aes-3.2g.ebuild,
+  loop-aes-3.2h.ebuild:
+  Add ~sparc wrt #277776
 
 *loop-aes-3.2h (12 Dec 2009)
 
