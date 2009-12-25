@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3701 2009/12/24 11:03:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3702 2009/12/25 04:26:23 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Dec 2009; Andrey Grozin <grozin@gentoo.org> base/package.use.mask,
+  arch/amd64/package.use.mask, arch/x86/package.use.mask:
+  sci-mathematics/maxima USE flag openmcl is for amd64 and x86 only
 
   24 Dec 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Masking x11-plugins/msn-pecan release candidate. Upstream supposes that we
