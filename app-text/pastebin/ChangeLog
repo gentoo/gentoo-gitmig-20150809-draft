@@ -1,0 +1,11 @@
+# ChangeLog for app-text/pastebin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.1 2009/12/25 05:17:38 darkside Exp $
+
+*pastebin-0.5 (25 Dec 2009)
+
+  25 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +pastebin-0.5.ebuild,
+  +metadata.xml:
+  Initial import. Many thanks to all the contributors on bug 235377. Moved
+  from sunrise overlay
+
