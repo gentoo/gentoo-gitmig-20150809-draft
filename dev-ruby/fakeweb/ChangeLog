@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/fakeweb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.1 2009/12/25 02:07:34 flameeyes Exp $
+
+*fakeweb-1.2.7 (25 Dec 2009)
+
+  25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +fakeweb-1.2.7.ebuild, +metadata.xml:
+  Add fakeweb fakegem, needed for gemcutter tests.
+
