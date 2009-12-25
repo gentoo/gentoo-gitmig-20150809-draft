@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.57 2009/12/24 21:40:23 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.58 2009/12/25 08:19:38 grobian Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -403,8 +403,7 @@ setqtenv() {
 standard_configure_options() {
 	local myconf=
 
-	# Doesn't need ${EPREFIX} because get_libdir() is *always* lib on prefix
-	[[ $(get_libdir) != lib ]] && myconf+=" -L/usr/$(get_libdir)"
+	[[ $(get_libdir) != lib ]] && myconf+=" -L${EPREFIX}/usr/$(get_libdir)"
 
 	# Disable visibility explicitly if gcc version isn't 4
 	if [[ $(gcc-major-version) -lt 4 ]]; then
