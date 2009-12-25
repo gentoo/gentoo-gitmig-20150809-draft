@@ -65,6 +65,7 @@ lyx
 mpi
 lasi
 fusion
+debug-utils
 
 # havent tested yet
 cupsddk
