@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.12 2009/09/18 14:12:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.13 2009/12/25 14:08:01 graaff Exp $
+
+  25 Dec 2009; Hans de Graaff <graaff@gentoo.org> mod_ruby-1.2.6.ebuild,
+  mod_ruby-1.3.0.ebuild:
+  Remove obsolete virtual/ruby dependency.
 
 *mod_ruby-1.3.0 (18 Sep 2009)
 

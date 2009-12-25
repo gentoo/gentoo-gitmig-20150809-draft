@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.9 2008/01/31 19:31:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.2.6.ebuild,v 1.10 2009/12/25 14:08:01 graaff Exp $
 
 inherit apache-module
 
@@ -13,7 +13,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND="virtual/ruby"
+RDEPEND="dev-lang/ruby"
 DEPEND="${RDEPEND}
 		doc? ( dev-ruby/rdtool )"
 
