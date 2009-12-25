@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.11 2009/12/11 15:11:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.12 2009/12/25 20:20:05 ssuominen Exp $
 
 EAPI="1"
 
 CMAKE_USE_DIR="${S}/plugins/qt4-gui"
-inherit eutils kde-functions multilib cmake-utils
+inherit eutils qt3 multilib cmake-utils
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
@@ -14,13 +14,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
-IUSE="crypt debug kde msn ncurses nls qt3 qt4 socks5 ssl xosd"
+IUSE="crypt debug msn ncurses nls qt3 qt4 socks5 ssl xosd"
 
-# we use kde as KDE4
-RDEPEND="kde? (
-		qt3? ( kde-base/kdelibs:3.5 )
-	)
-	ssl? ( dev-libs/openssl )
+RDEPEND="ssl? ( dev-libs/openssl )
 	qt3? ( x11-libs/qt:3 )
 	qt4? ( x11-libs/qt-gui:4 )
 	nls? ( sys-devel/gettext )
@@ -65,9 +61,6 @@ src_compile() {
 		cd "${S}"/plugins/"${plugin}"
 		einfo "Compiling Licq: \"${plugin}\"."
 		if use qt3; then
-			set-qtdir 3
-			set-kdedir 3
-			use kde && myconf2="${myconf} --with-kde"
 			myconf2="${myconf2} --with-qt-libraries=${QTDIR}/$(get_libdir)"
 		fi
 		econf ${myconf} ${myconf2} || die "econf failed"
@@ -82,8 +75,6 @@ src_compile() {
 		# need to fix this later
 		# kde not yet workie
 		# use kde && myconf2="${myconf2} -DWITH_KDE=1"
-		use kde && ewarn "Sorry but kde4 support is duped and not working so not
-		enabling for now"
 		cmake-utils_src_compile
 	fi
 }
@@ -104,6 +95,9 @@ src_install() {
 		einfo "Installing Licq: \"qt4-gui\"."
 		cmake-utils_src_install
 		docinto plugins/qt4-gui
+		# Hack only for 1.3.6. Fixed in 1.3.8.
+		mv -f "${D}"/usr/lib/licq/licq_qt4-gui.so \
+			"${D}"/usr/$(get_libdir)/licq/licq_qt4-gui.so
 	fi
 
 	exeinto /usr/share/${PN}/upgrade
