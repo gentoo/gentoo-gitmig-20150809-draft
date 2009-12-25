@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre17.ebuild,v 1.1 2009/07/06 16:52:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3.ebuild,v 1.1 2009/12/25 01:34:48 caster Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
