@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/lanmap
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.1 2009/12/25 05:56:25 darkside Exp $
+
+*lanmap-81 (25 Dec 2009)
+
+  25 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +lanmap-81.ebuild,
+  +files/makefile.patch, +metadata.xml:
+  Initial import. Many thanks to Justin Lecher (jlec), bug 249631. Moved
+  from sunrise
+
