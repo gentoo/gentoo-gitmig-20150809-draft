@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.4 2009/08/07 14:02:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.5 2009/12/25 15:37:30 ssuominen Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -8,8 +8,7 @@ inherit eutils autotools
 DESCRIPTION="Nepenthes is a low interaction honeypot that captures worms by emulating known vulnerabilities"
 HOMEPAGE="http://nepenthes.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-gcc44.patch.bz2
-	mirror://gentoo/~ssuominen/${P}-gcc44.patch.bz2"
+	mirror://gentoo/${P}-gcc44.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
