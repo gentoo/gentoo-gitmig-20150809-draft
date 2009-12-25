@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsmbios
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.24 2009/11/21 19:18:46 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.25 2009/12/25 10:07:42 cedk Exp $
+
+  25 Dec 2009; Cédric Krier <cedk@gentoo.org> libsmbios-2.2.19.ebuild:
+  Replace flag -O3 for bug #290097
 
   21 Nov 2009; Cédric Krier <cedk@gentoo.org> -libsmbios-0.13.6.ebuild,
   -libsmbios-0.13.10.ebuild, -libsmbios-2.0.2.ebuild,

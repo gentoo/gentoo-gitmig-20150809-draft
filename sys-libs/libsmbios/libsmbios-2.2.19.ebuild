@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.19.ebuild,v 1.1 2009/11/21 19:14:51 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.19.ebuild,v 1.2 2009/12/25 10:07:42 cedk Exp $
 
 EAPI=2
 
-inherit python
+inherit python flag-o-matic
 
 DESCRIPTION="Provide access to (SM)BIOS information"
 HOMEPAGE="http://linux.dell.com/libsmbios/main/index.html"
@@ -32,6 +32,8 @@ src_prepare() {
 }
 
 src_configure() {
+	#Remove -O3 for bug #290097
+	replace-flags -O3 -O2
 	econf \
 		$(use_enable doc doxygen) \
 		$(use_enable graphviz) \
