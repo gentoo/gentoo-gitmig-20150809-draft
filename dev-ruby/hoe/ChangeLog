@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.63 2009/12/23 13:26:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.64 2009/12/25 16:42:02 flameeyes Exp $
+
+  25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> hoe-2.4.0.ebuild:
+  Depend on the minitest virtual, add ruby19 to the list of supported
+  implementations (even though it requires hoe-seattlerb for 1.9.
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> hoe-2.4.0.ebuild:
   Marked ~ppc (bug #297830).
