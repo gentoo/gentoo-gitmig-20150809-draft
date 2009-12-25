@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.32 2009/12/20 09:00:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.33 2009/12/25 18:10:23 armin76 Exp $
+
+  25 Dec 2009; Raúl Porcel <armin76@gentoo.org> chromium-4.0.266.0.ebuild,
+  chromium-9999.ebuild:
+  Add arm support, but don't keyword it as its still a big buggy
 
 *chromium-4.0.249.43 (19 Dec 2009)
 

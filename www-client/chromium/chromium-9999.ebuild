@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.13 2009/12/22 20:51:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.14 2009/12/25 18:10:23 armin76 Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -128,6 +128,10 @@ EOF
 
 	if [[ "$ABI" == "x86" ]] ; then
 		myconf="${myconf} -Dtarget_arch=ia32"
+	fi
+
+	if use arm; then
+		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dv8_use_snapshot=false -Dlinux_use_tcmalloc=0"
 	fi
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
