@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.12 2009/12/25 15:43:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.13 2009/12/25 17:01:02 flameeyes Exp $
+
+  25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  json-1.2.0-r1.ebuild:
+  Add support for JRuby (json_pure); make sure to test the new build rather
+  than the old one; avoid building the extensions twice.
 
   25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   json-1.2.0-r1.ebuild:
