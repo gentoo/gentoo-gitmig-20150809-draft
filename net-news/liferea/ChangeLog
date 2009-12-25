@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.181 2009/12/09 15:41:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.182 2009/12/25 13:00:10 armin76 Exp $
+
+  25 Dec 2009; Raúl Porcel <armin76@gentoo.org> liferea-1.6.0.ebuild,
+  liferea-1.7.1.ebuild:
+  Add ~sparc wrt #279241
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> liferea-1.4.28-r1.ebuild:
   Marking liferea-1.4.28-r1 ppc64 for bug 282801
