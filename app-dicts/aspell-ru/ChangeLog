@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/aspell-ru
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ru/ChangeLog,v 1.21 2009/10/18 20:44:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ru/ChangeLog,v 1.22 2009/12/25 18:09:54 pva Exp $
+
+*aspell-ru-0.99.1-r1 (25 Dec 2009)
+
+  25 Dec 2009; Peter Volkov <pva@gentoo.org> +aspell-ru-0.99.1-r1.ebuild:
+  Change default dictionary on yeyo, bug #280498, thank Nikoli, Jan
+  Aniŝĉuk and other guys there.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-ru-0.50.2.ebuild,
   aspell-ru-0.99.1.ebuild:
