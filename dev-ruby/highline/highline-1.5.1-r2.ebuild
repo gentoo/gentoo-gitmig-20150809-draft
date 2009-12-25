@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.5.1-r1.ebuild,v 1.1 2009/12/15 16:53:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.5.1-r2.ebuild,v 1.1 2009/12/25 13:57:27 a3li Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 ruby19 jruby"
 
-FAKEGEM_EXTRA_DOCS="CHANGELOG README TODO"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG README TODO"
+RUBY_FAKEGEM_DOCDIR="doc/html"
 
 inherit ruby-fakegem
 
@@ -17,3 +18,7 @@ IUSE=""
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+
+all_ruby_prepare() {
+	sed -i -e '/AUTHORS/s:^:#:' Rakefile || die "Fixing the Rakefile failed"
+}

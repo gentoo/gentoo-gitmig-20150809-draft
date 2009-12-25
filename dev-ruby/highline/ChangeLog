@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.26 2009/12/15 16:53:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.27 2009/12/25 13:57:27 a3li Exp $
+
+*highline-1.5.1-r2 (25 Dec 2009)
+
+  25 Dec 2009; Alex Legler <a3li@gentoo.org> -highline-1.5.1-r1.ebuild,
+  +highline-1.5.1-r2.ebuild:
+  Fix building with USE=docs and actually install the RDoc docs, bug 298313
 
 *highline-1.5.1-r1 (15 Dec 2009)
 
