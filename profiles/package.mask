@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10997 2009/12/24 12:40:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10998 2009/12/25 15:02:10 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -355,29 +355,6 @@ mail-filter/simscan
 # Removal on 2010-02-03
 dev-util/cook
 
-# Samuli Suominen <ssuominen@gentoo.org> (05 Dec 2009)
-# Doesn't compile with Autoconf >= 2.64 (#279482)
-#
-# Additional bugs include:
-# app-text/bibletime (#294863)
-# dev-util/kprof and kdbg (#292780)
-# sci-electronics/klogic (#277525)
-#
-# Unresolved security bugs affecting kdelibs-3 include:
-# Remote code execution (CVE-2009-1690), bug 274566
-# Remote code execution (CVE-2009-1725), bug 279027
-# SSL certificate spoofing (CVE-2009-2702), bug 285018
-#
-# You should uninstall kdelibs-3.5 soon as possible,
-# which will be masked after KOffice 2.1.0 is in stable.
-#
-# Masked for removal.
-app-office/kletterwizard
-app-editors/kxmleditor
-<app-text/bibletime-2
-sci-visualization/kpl
-sci-electronics/klogic
-
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Dec 2009)
 # The "game" part of the experience is missing.
 # Abandoned by upstream in 2002.  Removal on 20100103
@@ -446,18 +423,9 @@ x11-misc/seyon
 # cvs ebuild vdr-xineliboutput-9999 masked for lifetime
 =media-plugins/vdr-xineliboutput-9999
 
-# Samuli Suominen <ssuominen@gentoo.org> (01 Dec 2009)
-#
-# KDE3-only, segfaulting. Masked for removal in 30 days, bug 209757.
-#
-# Replaced by e.g. scidavis, qtiplot or gnuplot.
-#
-sci-visualization/labplot
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Nov 2009)
 #  on behalf of QA team
 #
-
 # patch-2.6 has incompatibilities with the way we use epatch; this
 # causes patches to “silently fail“ (they won't get applied, but
 # epatch reports all a-ok). See bug #293570 and blocked bugs.
