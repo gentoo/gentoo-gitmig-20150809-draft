@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml-psychiatrist/cl-xml-psychiatrist-0.4.ebuild,v 1.4 2005/11/02 20:21:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml-psychiatrist/cl-xml-psychiatrist-0.4.ebuild,v 1.5 2009/12/26 17:34:09 pva Exp $
 
 inherit common-lisp
 
@@ -14,7 +14,7 @@ IUSE="doc"
 
 DEPEND="dev-lisp/cl-xmls
 	dev-lisp/cl-ppcre
-	doc? ( dev-tex/latex2html virtual/ghostscript )"
+	doc? ( dev-tex/latex2html app-text/ghostscript-gpl )"
 
 CLPACKAGE=xml-psychiatrist
 

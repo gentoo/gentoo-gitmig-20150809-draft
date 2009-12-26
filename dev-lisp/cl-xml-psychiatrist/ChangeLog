@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-xml-psychiatrist
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml-psychiatrist/ChangeLog,v 1.6 2007/02/04 01:22:30 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml-psychiatrist/ChangeLog,v 1.7 2009/12/26 17:34:09 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> cl-xml-psychiatrist-0.4.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
