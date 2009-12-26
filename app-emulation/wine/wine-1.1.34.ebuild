@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.34.ebuild,v 1.2 2009/12/12 16:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.34.ebuild,v 1.3 2009/12/26 17:22:31 vapier Exp $
 
 EAPI="2"
 
@@ -86,7 +86,6 @@ src_unpack() {
 	if [[ $(( $(gcc-major-version) * 100 + $(gcc-minor-version) )) -lt 404 ]] ; then
 		use win64 && die "you need gcc-4.4+ to build 64bit wine"
 	fi
-einfo "$(gcc-major-version) * 100 + $(gcc-minor-version)"
 
 	if [[ ${PV} == "9999" ]] ; then
 		git_src_unpack
