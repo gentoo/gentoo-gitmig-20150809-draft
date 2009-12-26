@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20070501.ebuild,v 1.3 2007/05/11 11:37:04 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20070501.ebuild,v 1.4 2009/12/26 17:43:09 pva Exp $
 
 inherit eutils versionator autotools
 
@@ -24,7 +24,7 @@ RDEPEND="cups? ( >=net-print/cups-1.1.19 )
 		)
 	)
 	dev-lang/perl
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

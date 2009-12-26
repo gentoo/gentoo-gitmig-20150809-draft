@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.138 2009/12/20 18:03:47 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.139 2009/12/26 17:44:10 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> hplip-2.8.6b.ebuild,
+  hplip-3.9.4b-r1.ebuild, hplip-3.9.8-r3.ebuild, hplip-3.9.10.ebuild,
+  hplip-3.9.12.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   20 Dec 2009; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.12.ebuild:
   Cleanup. Add missing dies.

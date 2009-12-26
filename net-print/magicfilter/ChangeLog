@@ -1,6 +1,11 @@
 # ChangeLog for net-print/magicfilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.16 2009/11/23 14:11:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.17 2009/12/26 17:44:05 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> magicfilter-1.2-r4.ebuild,
+  magicfilter-2.3a.ebuild, magicfilter-2.3d.ebuild, magicfilter-2.3h.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> magicfilter-2.3h.ebuild:
   amd64/x86 stable, bug #294111

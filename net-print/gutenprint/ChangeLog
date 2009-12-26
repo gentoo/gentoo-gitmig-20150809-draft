@@ -1,6 +1,11 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.6 2009/09/14 19:11:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.7 2009/12/26 17:43:20 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> gutenprint-5.1.4.ebuild,
+  gutenprint-5.1.7.ebuild, gutenprint-5.2.3.ebuild, gutenprint-5.2.4.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
 *gutenprint-5.2.4 (14 Sep 2009)
 

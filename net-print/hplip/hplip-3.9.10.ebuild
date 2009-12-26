@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.6 2009/12/02 19:27:06 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.10.ebuild,v 1.7 2009/12/26 17:44:10 pva Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit 
 # Note : libusb-compat untested (calchan 20090516)
 
 COMMON_DEPEND="
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	media-libs/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )

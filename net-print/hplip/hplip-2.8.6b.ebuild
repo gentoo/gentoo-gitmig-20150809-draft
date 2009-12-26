@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.10 2009/11/30 18:20:27 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.11 2009/12/26 17:44:10 pva Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ IUSE="cupsddk dbus doc fax minimal parport ppds qt3 qt4 scanner snmp"
 
 DEPEND="!net-print/hpijs
 	!net-print/hpoj
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	>=media-libs/jpeg-6b
 	>=net-print/foomatic-filters-3.0.20080507
 	!minimal? (

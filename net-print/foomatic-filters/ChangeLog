@@ -1,6 +1,13 @@
 # ChangeLog for net-print/foomatic-filters
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.62 2008/08/12 15:50:37 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.63 2009/12/26 17:43:09 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org>
+  foomatic-filters-3.0.20060720.ebuild,
+  foomatic-filters-3.0.20070501.ebuild,
+  foomatic-filters-3.0.20080507.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   12 Aug 2008; Brent Baude <ranger@gentoo.org>
   foomatic-filters-3.0.20080507.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.1.4.ebuild,v 1.4 2008/04/05 20:57:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.1.4.ebuild,v 1.5 2009/12/26 17:43:20 pva Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 RESTRICT="test"
 
 RDEPEND="cups? ( >=net-print/cups-1.1.14 )
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	sys-libs/readline
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	gimp? ( >=media-gfx/gimp-2.2 >=x11-libs/gtk+-2.0 )

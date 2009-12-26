@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-pdf
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.42 2009/04/10 21:12:45 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.43 2009/12/26 17:42:38 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> cups-pdf-2.4.2.ebuild,
+  cups-pdf-2.4.5.ebuild, cups-pdf-2.4.8.ebuild, cups-pdf-2.5.0.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   10 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> cups-pdf-2.4.8.ebuild:
   Stable on sparc, bug #258851
