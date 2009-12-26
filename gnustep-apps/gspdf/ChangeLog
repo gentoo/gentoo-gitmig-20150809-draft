@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/gspdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gspdf/ChangeLog,v 1.2 2009/07/05 21:50:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gspdf/ChangeLog,v 1.3 2009/12/26 19:40:58 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> gspdf-0.2.ebuild,
+  gspdf-0.3.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
 *gspdf-0.3 (05 Jul 2009)
 
