@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.62.2.ebuild,v 1.2 2009/12/01 12:44:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.62.2.ebuild,v 1.3 2009/12/26 17:37:07 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="
 	>=sys-libs/gdbm-1.8.0
 	dev-libs/libpcre
 	app-misc/mime-types
-	fax? ( >=media-libs/netpbm-9.12 virtual/ghostscript >=net-dialup/mgetty-1.1.28 )
+	fax? ( >=media-libs/netpbm-9.12 app-text/ghostscript-gpl >=net-dialup/mgetty-1.1.28 )
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
 	ldap? ( >=net-nds/openldap-1.2.11 )

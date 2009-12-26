@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.120 2009/12/07 14:21:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.121 2009/12/26 17:37:07 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> courier-0.59.0.ebuild,
+  courier-0.60.0.ebuild, courier-0.61.1.ebuild, courier-0.61.2.ebuild,
+  courier-0.62.2.ebuild, courier-0.63.0.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
 *courier-0.63.0 (07 Dec 2009)
 
