@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.161.ebuild,v 1.1 2009/08/08 15:03:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.161.ebuild,v 1.2 2009/12/26 17:45:00 pva Exp $
 
 EAPI=2
 inherit autotools
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-RDEPEND="virtual/ghostscript
+RDEPEND="app-text/ghostscript-gpl
 	dev-lang/tk
 	x11-libs/libXt"
 DEPEND="${RDEPEND}"
