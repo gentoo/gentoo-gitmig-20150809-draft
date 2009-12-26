@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/peps-2.0.ebuild,v 1.1 2007/05/16 07:00:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/peps-2.0.ebuild,v 1.2 2009/12/26 17:38:35 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
-DEPEND="virtual/ghostscript
+DEPEND="app-text/ghostscript-gpl
 	app-arch/gzip"
 
 pkg_setup() {

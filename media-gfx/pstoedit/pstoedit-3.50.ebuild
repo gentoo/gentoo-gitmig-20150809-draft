@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.4 2009/11/30 15:37:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.5 2009/12/26 17:39:25 pva Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="emf imagemagick plotutils"
 
 RDEPEND="media-libs/libpng
 		media-libs/gd
-		virtual/ghostscript
+		app-text/ghostscript-gpl
 		emf?			( >=media-libs/libemf-1.0.3 )
 		imagemagick?	( media-gfx/imagemagick[-nocxx] )
 		plotutils?		( media-libs/plotutils )"

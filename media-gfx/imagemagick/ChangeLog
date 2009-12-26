@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.376 2009/12/10 18:14:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.377 2009/12/26 17:38:06 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> imagemagick-6.5.2.9.ebuild,
+  imagemagick-6.5.4.10.ebuild, imagemagick-6.5.7.0.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   10 Dec 2009; Raúl Porcel <armin76@gentoo.org> imagemagick-6.5.7.0.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #291696

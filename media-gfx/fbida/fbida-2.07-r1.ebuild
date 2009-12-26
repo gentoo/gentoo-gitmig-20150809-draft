@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.07-r1.ebuild,v 1.9 2009/10/31 14:40:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.07-r1.ebuild,v 1.10 2009/12/26 17:37:12 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="curl fbcon gif imagemagick lirc pdf png scanner tiff X"
 
 RDEPEND="png? ( media-libs/libpng )
 	gif? ( media-libs/giflib )
-	pdf? ( virtual/ghostscript media-libs/tiff )
+	pdf? ( app-text/ghostscript-gpl media-libs/tiff )
 	tiff? ( media-libs/tiff )
 	curl? ( net-misc/curl )
 	lirc? ( app-misc/lirc )

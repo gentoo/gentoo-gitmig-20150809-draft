@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.67 2009/10/31 14:40:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.68 2009/12/26 17:37:12 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> fbida-2.07-r1.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org> fbida-2.07-r1.ebuild:
   Marking fbida-2.07-r1 ppc64 for bug 286688
