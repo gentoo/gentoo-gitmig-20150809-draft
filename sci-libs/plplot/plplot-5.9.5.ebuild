@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.2 2009/12/03 21:50:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.3 2009/12/26 17:45:27 pva Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -24,7 +24,7 @@ RDEPEND="ada? ( virtual/gnat )
 	gnome? ( gnome-base/libgnomeui
 			 gnome-base/libgnomeprintui
 			 python? ( dev-python/gnome-python ) )
-	latex? ( virtual/latex-base virtual/ghostscript )
+	latex? ( virtual/latex-base app-text/ghostscript-gpl )
 	octave? ( >=sci-mathematics/octave-3 )
 	pdf? ( media-libs/libharu )
 	perl? ( dev-perl/PDL dev-perl/XML-DOM )
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 		   app-text/docbook-dsssl-stylesheets
 		   dev-perl/XML-DOM
 		   virtual/latex-base
-		   virtual/ghostscript
+		   app-text/ghostscript-gpl
 		   sys-apps/texinfo )
 	java? ( >=virtual/jdk-1.5 dev-lang/swig )
 	python? ( dev-lang/swig )
