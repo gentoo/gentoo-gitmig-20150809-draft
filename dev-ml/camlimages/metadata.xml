@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>ml</herd>
 <use>
-	<flag name="gs">Ghostscript support (virtual/ghostscript)</flag>
+	<flag name="gs">Ghostscript support (<pkg>app-text/ghostscript-gpl</pkg>)</flag>
 </use>
 </pkgmetadata>
