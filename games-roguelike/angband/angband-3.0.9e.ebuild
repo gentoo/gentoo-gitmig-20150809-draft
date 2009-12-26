@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.9e.ebuild,v 1.2 2009/11/26 19:53:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.9e.ebuild,v 1.3 2009/12/26 17:01:50 armin76 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="http://rephial.org/downloads/3.0/${P}.tar.gz"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="X gtk ncurses sdl"
 
 DEPEND="gtk? ( >=gnome-base/libglade-2.6 )
