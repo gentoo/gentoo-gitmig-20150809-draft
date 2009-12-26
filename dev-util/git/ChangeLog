@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.390 2009/12/24 19:34:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.391 2009/12/26 00:10:34 robbat2 Exp $
+
+*git-1.6.6-r1 (26 Dec 2009)
+
+  26 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.6-r1.ebuild,
+  +files/git-1.6.6-always-install-js.patch, git-9999.ebuild:
+  Bug #298277: Fixup JS install for Gitweb. Also port all recent fixes to
+  the live ebuild.
 
 *git-1.6.6 (24 Dec 2009)
 
