@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.2 2009/12/11 18:50:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.3 2009/12/26 18:57:30 armin76 Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86 ~x86-fbsd"
 IUSE="crypt dbus debug doc extras jingle spell ssl xscreensaver webkit"
 RESTRICT="test"
 
