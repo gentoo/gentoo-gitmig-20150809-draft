@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5124 2009/12/26 13:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5125 2009/12/26 19:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -489,7 +489,7 @@ app-office/openoffice:odk - Build the Office Development Kit
 app-office/openoffice:templates - Enable installation of Sun templates
 app-office/osmo:syncml - Enable syncML support
 app-office/rabbit:gnome-print - Gnome-Print support (gnome-base/libgnomeprint)
-app-office/rabbit:gs - Ghostscript support (virtual/ghostscript)
+app-office/rabbit:gs - Ghostscript support (app-text/ghostscript-gpl)
 app-office/rabbit:tgif - tgif support (media-gfx/tgif)
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
 app-office/tpp:figlet - Install app-misc/figlet to support the --huge command
@@ -869,7 +869,7 @@ dev-lisp/gcl:dlopen - Build a GCL which uses dlopen for linking
 dev-lisp/gcl:gprof - Build a GCL with profiling support
 dev-lisp/sbcl:cobalt - mips only: use mipsel binary instead of mips big endian binary to bootstrap
 dev-lisp/sbcl:ldb - Include support for the SBCL low level debugger
-dev-ml/camlimages:gs - Ghostscript support (virtual/ghostscript)
+dev-ml/camlimages:gs - Ghostscript support (app-text/ghostscript-gpl)
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
 dev-ml/lablgtk:sourceview - Enable GtkSourceView support
@@ -2887,7 +2887,7 @@ sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:patented - Build patented classes
 sci-mathematics/cgal:taucs - Add support for the sparse solver library sci-libs/taucs
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation)
-sci-mathematics/dataplot:gs - Add Ghostscript support (virtual/ghostscript) 
+sci-mathematics/dataplot:gs - Add Ghostscript support (app-text/ghostscript-gpl) 
 sci-mathematics/freemat:arpack - Add sparse eigen value support via sci-libs/arpack
 sci-mathematics/freemat:ffcall - Enable use of dev-libs/ffcall
 sci-mathematics/freemat:umfpack - Add sparse solving via sci-libs/umfpack
