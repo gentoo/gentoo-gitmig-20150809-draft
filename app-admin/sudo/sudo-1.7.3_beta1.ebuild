@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.3_beta1.ebuild,v 1.2 2009/12/20 16:50:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.3_beta1.ebuild,v 1.3 2009/12/26 20:07:19 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -207,4 +207,15 @@ pkg_postinst() {
 			ewarn
 		fi
 	fi
+
+	elog "To use the -A (askpass) option, you need to install a compatible"
+	elog "password program from the following list. Starred packages will"
+	elog "automatically register for the use with sudo (but will not force"
+	elog "the -A option):"
+	elog ""
+	elog " [*] net-misc/ssh-askpass-fullscreen"
+	elog "     net-misc/x11-ssh-askpass"
+	elog ""
+	elog "You can override the choice by setting the SUDO_ASKPASS environmnent"
+	elog "variable to the program you want to use."
 }
