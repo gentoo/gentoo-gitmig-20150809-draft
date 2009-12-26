@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.27 2009/05/30 08:19:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.28 2009/12/26 17:24:39 pva Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ RDEPEND=">=media-gfx/graphviz-2.6
 		dev-texlive/texlive-latexrecommended
 		dev-texlive/texlive-genericrecommended
 		dev-texlive/texlive-fontsrecommended )
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
 
