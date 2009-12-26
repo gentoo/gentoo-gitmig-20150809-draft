@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.7 2009/06/17 10:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.8 2009/12/26 20:26:19 armin76 Exp $
+
+*openocd-0.3.1 (26 Dec 2009)
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> +openocd-0.3.1.ebuild,
+  openocd-9999.ebuild:
+  Version bump wrt #281139, build without -Werror wrt #268238, update 9999
+  to git wrt #296139, fix building of docs in 9999 wrt #277358
 
   17 Jun 2009; Mike Frysinger <vapier@gentoo.org> openocd-0.1.0.ebuild,
   openocd-9999.ebuild, metadata.xml:
