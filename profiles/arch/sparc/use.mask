@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.46 2009/12/26 17:54:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.47 2009/12/26 18:05:59 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -90,6 +90,7 @@ google-gadgets
 celt
 capi
 lensfun
+jingle
 
 # No hardware to test
 ivtv
