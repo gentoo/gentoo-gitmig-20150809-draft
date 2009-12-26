@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.47 2009/12/03 21:51:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.48 2009/12/26 16:57:28 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> gnubg-0.14.3-r1.ebuild,
+  gnubg-20090817.ebuild:
+  Drop sparc keywords
 
   03 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gnubg-20090817.ebuild:

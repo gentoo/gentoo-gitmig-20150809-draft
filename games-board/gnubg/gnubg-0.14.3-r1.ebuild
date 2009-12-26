@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.15 2009/11/10 20:45:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.16 2009/12/26 16:57:28 armin76 Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -15,7 +15,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="esd gdbm gtk guile nas nls opengl python readline X"
 
 # test fail - bug #132002
