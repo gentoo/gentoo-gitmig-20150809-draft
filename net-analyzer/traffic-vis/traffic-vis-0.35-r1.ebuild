@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r1.ebuild,v 1.4 2009/09/23 18:25:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r1.ebuild,v 1.5 2009/12/26 17:40:55 pva Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="gif"
 DEPEND="net-libs/libpcap
 	gif? ( media-libs/netpbm
-		virtual/ghostscript
+		app-text/ghostscript-gpl
 		dev-lang/perl )
 	=dev-libs/glib-1.2*"
 
