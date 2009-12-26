@@ -1,6 +1,13 @@
 # ChangeLog for net-im/climm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/ChangeLog,v 1.12 2009/02/23 19:36:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/ChangeLog,v 1.13 2009/12/26 14:50:31 pva Exp $
+
+*climm-0.7 (26 Dec 2009)
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> +climm-0.7.ebuild,
+  +files/climm-0.7-gnutls.patch:
+  Version bump, bug 270336, thank Andreas Weber for report. Fixes build
+  issue with recent gnutls, bug #297323, thank Markus Meier for report.
 
 *climm-0.6.4 (23 Feb 2009)
 
