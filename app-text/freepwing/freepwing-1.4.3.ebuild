@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/freepwing-1.4.3.ebuild,v 1.6 2007/07/12 04:37:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/freepwing-1.4.3.ebuild,v 1.7 2009/12/26 18:52:28 tove Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="dev-lang/perl"
 
 src_install() {
 
-	einstall perllibdir=${D}/`perl -V:sitearch | cut -d\' -f2` \
+	einstall perllibdir=${D}/`perl -V:vendorlib | cut -d\' -f2` \
 		pkgdocdir=${D}/usr/share/doc/${PF} || die
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
