@@ -1,6 +1,8 @@
-diff -Naur a/x3270-3.3/screen.c b/x3270-3.3/screen.c
---- a/x3270-3.3/screen.c	2009-09-05 23:04:21.000000000 -0400
-+++ b/x3270-3.3/screen.c	2009-09-23 08:15:40.000000000 -0400
+# Patches were sent upstream to maintainer
+# as of 23 September 2009, by Jesse Farinacci <jieryn@gmail.com>
+
+--- x3270-3.3/screen.c
++++ x3270-3.3/screen.c
 @@ -2322,12 +2322,14 @@
  void
  screen_flip(void)
