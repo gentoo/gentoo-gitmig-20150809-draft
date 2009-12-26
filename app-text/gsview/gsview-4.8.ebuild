@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.13 2009/08/29 22:07:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.14 2009/12/26 19:38:59 pva Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 hppa ppc x86"
 RDEPEND="=x11-libs/gtk+-1.2*
 	app-text/epstool
 	app-text/pstotext
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*"
 

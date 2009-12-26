@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.8.ebuild,v 1.3 2009/12/22 13:47:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.8.ebuild,v 1.4 2009/12/26 19:39:04 pva Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~ppc x86"
 RDEPEND=">=dev-lang/ocaml-3.10.0[ocamlopt?,tk?]
 	>=dev-ml/camlimages-3.0.1[truetype,tiff,jpeg,gs]
 	virtual/latex-base
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	|| ( ( dev-texlive/texlive-pstricks dev-texlive/texlive-pictures )

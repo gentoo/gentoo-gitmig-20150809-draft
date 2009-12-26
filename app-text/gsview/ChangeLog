@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gsview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.30 2009/08/29 22:07:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.31 2009/12/26 19:38:59 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> gsview-4.8.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   29 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> gsview-4.8.ebuild:
   Use emake -j1 (bug #283165).
