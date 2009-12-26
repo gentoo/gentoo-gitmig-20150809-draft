@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.187 2009/12/16 17:02:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.188 2009/12/26 17:25:42 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> lyx-1.4.4.ebuild,
+  lyx-1.5.7.ebuild, lyx-1.6.3.ebuild, lyx-1.6.4.ebuild, lyx-1.6.5.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   16 Dec 2009; Brent Baude <ranger@gentoo.org> lyx-1.6.4.ebuild:
   Marking lyx-1.6.4 ppc64 for bug 288215

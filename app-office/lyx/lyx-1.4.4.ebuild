@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.12 2008/09/02 18:26:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.4.ebuild,v 1.13 2009/12/26 17:25:42 pva Exp $
 
 inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
@@ -27,7 +27,7 @@ RDEPEND="x11-libs/libXi
 	x11-libs/libXt
 	x11-libs/libXpm
 	x11-libs/libXft
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	virtual/aspell-dict
 	app-text/aiksaurus
 	dev-tex/latex2html

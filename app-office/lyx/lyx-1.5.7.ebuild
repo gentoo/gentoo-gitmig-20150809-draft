@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.7.ebuild,v 1.7 2009/10/06 18:47:58 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.7.ebuild,v 1.8 2009/12/26 17:25:42 pva Exp $
 
 EAPI=1
 
@@ -49,7 +49,7 @@ RDEPEND="x11-libs/qt-gui:4
 	cups? ( virtual/lpr )
 	latex? (
 		virtual/latex-base
-		virtual/ghostscript
+		app-text/ghostscript-gpl
 		app-text/noweb
 		dev-tex/dvipost
 		dev-tex/chktex
