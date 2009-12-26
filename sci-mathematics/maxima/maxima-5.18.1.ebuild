@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.18.1.ebuild,v 1.6 2009/10/07 16:22:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.18.1.ebuild,v 1.7 2009/12/26 16:05:56 armin76 Exp $
 EAPI=2
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 # Supported lisps with readline
 SUPP_RL="gcl clisp"
