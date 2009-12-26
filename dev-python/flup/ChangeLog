@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.9 2009/10/10 16:58:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.10 2009/12/26 17:19:56 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> flup-1.0.2.ebuild:
+  Add ~sparc wrt #295088
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> flup-1.0.2.ebuild:
   Merge from Prefix
