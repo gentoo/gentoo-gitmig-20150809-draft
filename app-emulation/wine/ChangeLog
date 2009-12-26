@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.288 2009/12/26 17:23:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.289 2009/12/26 17:25:38 vapier Exp $
+
+  26 Dec 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
+  wine-1.1.14.ebuild, wine-1.1.15.ebuild, wine-1.1.16.ebuild,
+  wine-1.1.17.ebuild, wine-1.1.18.ebuild, wine-1.1.19.ebuild,
+  wine-1.1.20.ebuild, wine-1.1.21.ebuild, wine-1.1.22.ebuild,
+  wine-1.1.23.ebuild, wine-1.1.24.ebuild, wine-1.1.25.ebuild,
+  wine-1.1.26.ebuild, wine-1.1.27.ebuild, wine-1.1.28.ebuild,
+  wine-1.1.29.ebuild, wine-1.1.30.ebuild, wine-1.1.31.ebuild,
+  wine-1.1.32.ebuild, wine-1.1.33.ebuild, wine-1.1.34.ebuild,
+  wine-1.1.35.ebuild, wine-9999.ebuild:
+  Add xinerama deps #296144 by Maciej Mrozowski.
 
 *wine-1.1.35 (26 Dec 2009)
 
