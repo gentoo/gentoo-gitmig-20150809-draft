@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.5.ebuild,v 1.1 2009/07/19 10:10:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.5.ebuild,v 1.2 2009/12/26 19:39:43 pva Exp $
 EAPI=2
 NEED_PYTHON=2.4
 inherit distutils
@@ -19,7 +19,7 @@ RDEPEND="mathml? ( dev-libs/libxml2[python]
 		gtk? ( x11-libs/gtkmathview[gtk] ) )
 	latex? ( virtual/latex-base
 		png? ( app-text/dvipng )
-		pdf? ( virtual/ghostscript ) )
+		pdf? ( app-text/ghostscript-gpl ) )
 	texmacs? ( app-office/texmacs )
 	ipython? ( dev-python/ipython )
 	opengl? ( dev-python/pyopengl )

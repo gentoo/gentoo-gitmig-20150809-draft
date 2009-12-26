@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.76 2009/11/12 19:14:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.77 2009/12/26 19:40:13 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> matplotlib-0.99.1.1.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   12 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
   matplotlib-0.99.1.1.ebuild:
