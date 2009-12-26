@@ -1,0 +1,18 @@
+diff -Naur a/x3270-3.3/screen.c b/x3270-3.3/screen.c
+--- a/x3270-3.3/screen.c	2009-09-05 23:04:21.000000000 -0400
++++ b/x3270-3.3/screen.c	2009-09-23 08:15:40.000000000 -0400
+@@ -2322,12 +2322,14 @@
+ void
+ screen_flip(void)
+ {
++#if defined(X3270_DBCS) /*[*/
+ 	/* Flip mode is broken in the DBCS version. */
+ 	if (!dbcs) {
+ 		flipped = !flipped;
+ 
+ 		action_internal(PA_Expose_action, IA_REDRAW, CN, CN);
+ 	}
++#endif /*]*/
+ }
+ 
+ /*
