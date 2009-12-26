@@ -1,6 +1,13 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.113 2009/12/22 14:47:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.114 2009/12/26 20:36:02 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> aspell-0.60.6.ebuild,
+  aspell-0.60.6-r1.ebuild:
+  Mention LINGUAS in pkg_postinst message, bug #286418, thank Dmitry Ivankov
+  for report. Drop ewarn: it was introduced in 0.50.5-r2 as a result of bug
+  #53801 and now is not useful anymore, fixes bug #268271, thank DEMAINE
+  Benoît-Pierre, aka DoubleHP for pointing my attention on this message.
 
   22 Dec 2009; Peter Volkov <pva@gentoo.org> aspell-0.60.6-r1.ebuild:
   Added alternative for lang=de, bug #297400 thank Ulrich Müller for
