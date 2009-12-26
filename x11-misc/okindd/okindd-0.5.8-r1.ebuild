@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/okindd-0.5.8.ebuild,v 1.1 2009/07/18 11:31:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/okindd-0.5.8-r1.ebuild,v 1.1 2009/12/26 14:13:28 wired Exp $
 
 EAPI="2"
 
@@ -29,6 +29,9 @@ src_prepare() {
 	sed -i "s:okind/:okindd/:g" "${S}"/conf/okinddrc.example ||
 		die "sed: fixing example paths failed"
 
+	sed -i "/^examples/d" "${S}"/src/src.pro ||
+		die "sed: doc patch failed"
+
 	qt4_src_prepare
 }
 
@@ -39,6 +42,11 @@ src_configure() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 	domenu "${S}"/okindd.desktop || die "domenu failed"
+
+	dodoc changelog INSTALL || die "dodoc failed"
+	docinto examples
+	dodoc scripts/* || die "dodoc failed"
+	dodoc conf/okinddrc.example || die "dodoc failed"
 
 	elog "You can find an example configuration file at"
 	elog "	/usr/share/doc/okindd/examples/okinddrc.example"
