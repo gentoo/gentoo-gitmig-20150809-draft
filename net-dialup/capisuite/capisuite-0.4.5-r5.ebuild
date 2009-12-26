@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r5.ebuild,v 1.2 2009/02/14 23:27:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r5.ebuild,v 1.3 2009/12/26 17:40:59 pva Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -21,7 +21,7 @@ DEPEND="virtual/python
 	>=media-libs/tiff-3.7.1
 	media-gfx/jpeg2ps
 	media-gfx/sfftobmp
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	net-dialup/capi4k-utils"
 RDEPEND="${DEPEND}
 	virtual/mta"
