@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.9-r2.ebuild,v 1.8 2007/06/21 15:24:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.9-r2.ebuild,v 1.9 2009/12/26 19:47:13 pva Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="app-arch/ncompress"
 
-RDEPEND="virtual/ghostscript"
+RDEPEND="app-text/ghostscript-gpl"
 
 src_unpack() {
 	unpack ${A}

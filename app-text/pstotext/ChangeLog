@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pstotext
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.32 2007/06/21 15:24:28 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.33 2009/12/26 19:47:13 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> pstotext-1.8g-r1.ebuild,
+  pstotext-1.9-r2.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   21 Jun 2007; Jeroen Roovers <jer@gentoo.org> pstotext-1.9-r2.ebuild:
   Stable for HPPA (bug #182403).
