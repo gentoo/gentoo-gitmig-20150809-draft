@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.30 2009/12/07 11:43:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.31 2009/12/26 19:30:43 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> mtools-3.9.11.ebuild:
+  alpha/sparc stable wrt #293308
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> mtools-3.9.11.ebuild:
   amd64 stable, bug #293308
