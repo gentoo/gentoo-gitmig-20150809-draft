@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.3.ebuild,v 1.1 2009/10/25 15:20:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.3.ebuild,v 1.2 2009/12/26 20:03:31 pacho Exp $
 
 EAPI="2"
 DISTUTILS_DISABLE_PYTHON_DEPENDENCY="1"
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.franken.de/pub/crypt/cryptlib/cl${MY_PV}.zip
 	doc? ( mirror://gentoo/${DOC_PREFIX}-manual.pdf.bz2 )"
 
 LICENSE="Sleepycat"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE="doc ldap odbc python"
 
