@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/aspell-ro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ro/ChangeLog,v 1.9 2009/10/18 20:43:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ro/ChangeLog,v 1.10 2009/12/26 21:05:52 pva Exp $
+
+*aspell-ro-3.3 (26 Dec 2009)
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> +aspell-ro-3.3.ebuild:
+  Version bump, bug 226937, thank rs for report and Balint SZENTE for this
+  work.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-ro-0.50.2.ebuild:
   QA fixes; IUSE is not defined
