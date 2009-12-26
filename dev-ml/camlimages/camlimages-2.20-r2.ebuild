@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20-r2.ebuild,v 1.3 2008/08/17 17:23:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-2.20-r2.ebuild,v 1.4 2009/12/26 17:34:19 pva Exp $
 
 inherit findlib eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/ocaml-3.09
 	media-libs/tiff
 	x11-libs/libXpm
 	>=media-libs/freetype-2
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 
 S="${WORKDIR}/${P/20/2}"
 
