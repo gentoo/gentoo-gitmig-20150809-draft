@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qt-declarative
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.1 2009/12/26 20:49:17 ayoy Exp $
+
+*qt-declarative-4.6.0 (26 Dec 2009)
+
+  26 Dec 2009; Dominik Kapusta <ayoy@gentoo.org>
+  +qt-declarative-4.6.0.ebuild, +metadata.xml:
+  Initial commit for Qt Declarative module (bug #297573)
+
