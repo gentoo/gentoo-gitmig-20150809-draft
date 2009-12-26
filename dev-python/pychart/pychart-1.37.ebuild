@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.3 2007/07/11 06:19:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.4 2009/12/26 17:34:46 pva Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.2
 	>=sys-apps/sed-4
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 
 S=${WORKDIR}/${MY_P}
 DOCS="README.txt"
