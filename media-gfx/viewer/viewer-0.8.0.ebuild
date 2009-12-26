@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/viewer-0.8.0.ebuild,v 1.1 2009/12/26 17:21:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/viewer-0.8.0.ebuild,v 1.2 2009/12/26 17:35:26 jer Exp $
 
 EAPI="2"
 
@@ -33,5 +33,5 @@ src_install() {
 	dobin viewer
 	doman viewer.1
 
-	dodoc AUTHORS ChangeLog COPYING README
+	dodoc AUTHORS ChangeLog README
 }
