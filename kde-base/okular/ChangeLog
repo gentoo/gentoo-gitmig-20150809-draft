@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.56 2009/12/23 01:16:51 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.57 2009/12/26 03:43:02 tampakrap Exp $
+
+  26 Dec 2009; Theo Chatzimichos <tampakrap@gentoo.org> okular-4.3.3.ebuild,
+  okular-4.3.4.ebuild:
+  Make it install FindOkular.cmake
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> okular-4.3.4.ebuild:
   Pull in changes from overlay

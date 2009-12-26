@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.3.3.ebuild,v 1.5 2009/12/10 17:39:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.3.3.ebuild,v 1.6 2009/12/26 03:43:02 tampakrap Exp $
 
 EAPI="2"
 
@@ -46,4 +46,11 @@ src_configure() {
 		$(cmake-utils_use_with tiff)"
 
 	kde4-meta_src_configure
+}
+
+src_install() {
+	insinto "${KDEDIR}"/share/apps/cmake/modules
+	doins "${S}"/cmake/modules/FindOkular.cmake
+
+	kde4-meta_src_install
 }
