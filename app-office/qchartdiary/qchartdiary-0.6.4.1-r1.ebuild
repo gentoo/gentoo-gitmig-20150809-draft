@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/qchartdiary-0.6.4.1.ebuild,v 1.1 2009/05/09 15:26:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/qchartdiary-0.6.4.1-r1.ebuild,v 1.1 2009/12/26 10:55:11 hwoarang Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 MY_PN="QChartDiary"
 
@@ -23,11 +23,10 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
 
-src_configure(){
-	eqmake4 ${MY_PN}.pro
-}
+DOCS="AUTHORS CHANGELOG README"
 
-src_install(){
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc AUTHORS CHANGELOG README || die "dodoc failed"
+src_prepare() {
+	sed -i "s/doc\/${MY_PN}/doc\/${PF}/" ${MY_PN}.pro \
+		|| die "failed to fix documentation path"
+	qt4-r2_src_prepare
 }
