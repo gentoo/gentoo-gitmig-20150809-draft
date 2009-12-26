@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.7 2009/12/21 19:07:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.8 2009/12/26 17:06:02 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -53,6 +53,11 @@ inherit ruby-ng
 # @DESCRIPTION:
 # Binaries to wrap around (relative to the bin/ directory)
 # RUBY_FAKEGEM_BINWRAP="*"
+
+# @ECLASS-VARIABLE: RUBY_FAKEGEM_REQUIRE_PATHS
+# @DESCRIPTION:
+# Extra require paths (beside lib) to add to the specification
+# RUBY_FAKEGEM_BINWRAP=""
 
 RUBY_FAKEGEM_NAME="${RUBY_FAKEGEM_NAME:-${PN}}"
 RUBY_FAKEGEM_VERSION="${RUBY_FAKEGEM_VERSION:-${PV}}"
@@ -128,8 +133,14 @@ ruby_fakegem_newins() {
 # In the gemspec, the following values are set: name, version, summary,
 # homepage, and require_paths=["lib"].
 # See RUBY_FAKEGEM_NAME and RUBY_FAKEGEM_VERSION for setting name and version.
+# See RUBY_FAKEGEM_REQUIRE_PATHS for setting extra require paths.
 ruby_fakegem_genspec() {
 	(
+		local required_paths="'lib'"
+		for path in ${RUBY_FAKEGEM_REQUIRE_PATHS}; do
+			required_paths="${required_paths}, '${path}'"
+		done
+
 		# We use the _ruby_implementation variable to avoid having stray
 		# copies with different implementations; while for now we're using
 		# the same exact content, we might have differences in the future,
@@ -140,7 +151,7 @@ Gem::Specification.new do |s|
   s.version = "${RUBY_FAKEGEM_VERSION}"
   s.summary = "${DESCRIPTION}"
   s.homepage = "${HOMEPAGE}"
-  s.require_paths = ["lib"]
+  s.require_paths = [${required_paths}]
 end
 EOF
 
