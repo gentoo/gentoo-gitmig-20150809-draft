@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.6 2009/12/08 17:16:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.7 2009/12/26 18:59:05 armin76 Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -15,7 +15,7 @@ HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/cernlib"
 SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"
 
-KEYWORDS="amd64 hppa ~sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 LICENSE="GPL-2 LGPL-2 BSD"
 
 SLOT="0"
