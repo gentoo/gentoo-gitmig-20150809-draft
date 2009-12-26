@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.73 2009/11/05 00:06:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.74 2009/12/26 15:39:37 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> gparted-0.4.5.ebuild,
+  gparted-0.4.6.ebuild, gparted-0.4.7.ebuild, gparted-0.4.8.ebuild:
+  Re-add ~sparc wrt #266811
 
 *gparted-0.4.8 (05 Nov 2009)
 
