@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/qconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.3 2009/12/11 07:11:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.4 2009/12/26 18:56:10 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> qconf-1.5_pre717.ebuild:
+  Add ~sparc wrt #279676
 
   11 Dec 2009; Jeroen Roovers <jer@gentoo.org> qconf-1.5_pre717.ebuild:
   Marked ~hppa (bug #295631).
