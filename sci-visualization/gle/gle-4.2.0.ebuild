@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.0.ebuild,v 1.2 2009/09/30 16:58:46 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.0.ebuild,v 1.3 2009/12/26 19:40:15 pva Exp $
 EAPI=1
 inherit eutils elisp-common qt4
 MY_P=GLE-${PV}
@@ -26,7 +26,7 @@ DEPEND="${CDEPEND}
 	app-arch/unzip"
 
 RDEPEND="${CDEPEND}
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	virtual/latex-base
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 

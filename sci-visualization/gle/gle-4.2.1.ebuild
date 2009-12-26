@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.1.ebuild,v 1.1 2009/09/15 13:43:00 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.1.ebuild,v 1.2 2009/12/26 19:40:15 pva Exp $
 EAPI=2
 inherit eutils elisp-common qt4
 DESCRIPTION="Graphics Layout Engine"
@@ -24,7 +24,7 @@ DEPEND="sys-libs/ncurses
 	emacs? ( virtual/emacs )"
 
 RDEPEND="${DEPEND}
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	virtual/latex-base
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
