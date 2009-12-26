@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.6_p1.ebuild,v 1.4 2008/12/20 01:18:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.6_p1.ebuild,v 1.5 2009/12/26 19:20:41 pva Exp $
 
 inherit eutils gnome2
 
@@ -31,7 +31,7 @@ COMMON_DEPS="=dev-cpp/libxmlpp-1*
 
 RDEPEND="${COMMON_DEPS}
 	dev-libs/libxslt
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 
 DEPEND="${COMMON_DEPS}
 	>=dev-util/pkgconfig-0.9"
