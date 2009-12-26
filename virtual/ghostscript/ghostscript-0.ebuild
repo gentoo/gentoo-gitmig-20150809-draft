@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ghostscript-0.ebuild,v 1.8 2009/12/15 20:00:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ghostscript-0.ebuild,v 1.9 2009/12/26 17:20:01 pva Exp $
 
 DESCRIPTION="Virtual for Ghostscript"
 HOMEPAGE="http://www.ghostscript.com"
@@ -12,5 +12,4 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| (
 		app-text/ghostscript-gpl
-		app-text/ghostscript-gnu
 	)"
