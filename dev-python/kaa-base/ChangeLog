@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.18 2009/11/19 09:22:08 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.19 2009/12/26 20:12:25 pacho Exp $
+
+  26 Dec 2009; Pacho Ramos <pacho@gentoo.org> kaa-base-0.6.0.ebuild:
+  amd64 stable, bug 287622
 
   19 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> kaa-base-0.6.0.ebuild:
   Stable for ppc, bug 287622

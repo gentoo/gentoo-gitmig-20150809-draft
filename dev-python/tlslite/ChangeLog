@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.9 2009/12/24 18:28:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.10 2009/12/26 20:09:55 pacho Exp $
+
+  26 Dec 2009; Pacho Ramos <pacho@gentoo.org> tlslite-0.3.8-r2.ebuild:
+  amd64 stable, bug 287622
 
 *tlslite-0.3.8-r2 (24 Dec 2009)
 
