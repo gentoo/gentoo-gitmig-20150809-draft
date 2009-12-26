@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-misc</herd>
-<maintainer>
-<email>smithj@gentoo.org</email>
-<name>Jonathan Smith</name>
-</maintainer>
 <longdescription lang="en">
 Utility for viewing ACPI data via X11
 </longdescription>
