@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.10 2009/08/21 16:05:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.11 2009/12/26 01:41:23 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -39,9 +39,10 @@ src_compile () {
 		myconf="--disable-mmx"
 	fi
 	econf ${myconf} || die "configure failed"
-	emake || die "emake failed"
+	# bug #285783
+	emake -j1 || die "emake failed"
 }
 
 src_install () {
-	make DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install || die
 }

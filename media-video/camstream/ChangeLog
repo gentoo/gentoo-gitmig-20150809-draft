@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camstream
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.25 2008/10/08 10:06:45 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.26 2009/12/26 01:41:23 flameeyes Exp $
+
+  26 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  camstream-20070315.ebuild:
+  Use -j1 for build (bug #285783). Add die clause to install.
 
   08 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   camstream-20070315.ebuild:
