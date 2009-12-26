@@ -1,6 +1,11 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.87 2009/12/14 17:00:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.88 2009/12/26 17:26:35 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> a2ps-4.13c-r5.ebuild,
+  a2ps-4.13c-r6.ebuild, a2ps-4.14.ebuild, a2ps-4.14-r1.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
 *a2ps-4.14-r1 (14 Dec 2009)
 

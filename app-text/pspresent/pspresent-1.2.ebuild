@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.2.ebuild,v 1.11 2009/09/23 16:37:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.2.ebuild,v 1.12 2009/12/26 17:32:04 pva Exp $
 
 IUSE="xinerama"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cse.unsw.edu.au/~matthewc/pspresent/"
 
 RDEPEND="x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	xinerama? ( x11-proto/xineramaproto )

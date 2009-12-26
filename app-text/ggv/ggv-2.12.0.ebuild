@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.12.0.ebuild,v 1.5 2008/05/24 12:26:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.12.0.ebuild,v 1.6 2009/12/26 17:30:21 pva Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/orbit-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/gconf-2
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	dev-libs/popt"
 
 DEPEND="${RDEPEND}

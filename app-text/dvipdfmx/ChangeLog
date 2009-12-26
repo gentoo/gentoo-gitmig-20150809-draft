@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.43 2009/12/15 19:32:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.44 2009/12/26 17:29:37 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> dvipdfmx-20050831.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   15 Dec 2009; Brent Baude <ranger@gentoo.org> dvipdfmx-20090708.ebuild:
   Marking dvipdfmx-20090708 ppc64 for bug 292808

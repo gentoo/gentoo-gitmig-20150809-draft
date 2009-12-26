@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.45.ebuild,v 1.7 2008/04/06 18:55:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.45.ebuild,v 1.8 2009/12/26 17:31:31 pva Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="doc tk"
 
 DEPEND=">=media-libs/netpbm-9.12
-	doc? ( >=media-gfx/transfig-3.2 virtual/ghostscript )
+	doc? ( >=media-gfx/transfig-3.2 app-text/ghostscript-gpl )
 	tk? ( dev-lang/tk )"
 
 DOCS="AUTHORS BUGS CREDITS HISTORY RE* TODO"

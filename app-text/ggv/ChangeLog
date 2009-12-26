@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ggv
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.111 2008/05/24 12:26:36 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.112 2009/12/26 17:30:21 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> ggv-2.8.3.ebuild,
+  ggv-2.8.5.ebuild, ggv-2.12.0.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   24 May 2008; Gilles Dartiguelongue <eva@gentoo.org> ggv-2.12.0.ebuild:
   remove unneeded src_unpack
