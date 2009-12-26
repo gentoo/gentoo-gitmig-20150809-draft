@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>php</herd>
-	<maintainer>
-		<email>yuval@gentoo.org</email>
-		<name>Yuval Yaari</name>
-	</maintainer>
 </pkgmetadata>
