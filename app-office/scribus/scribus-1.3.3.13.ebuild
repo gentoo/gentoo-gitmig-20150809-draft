@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.13.ebuild,v 1.1 2009/07/30 19:09:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.13.ebuild,v 1.2 2009/12/26 19:27:03 pva Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ DEPEND="x11-libs/qt:3
 	cairo? ( >=x11-libs/cairo-1.4.10[X,svg] )"
 
 RDEPEND="${DEPEND}
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-cheaders.diff" || die

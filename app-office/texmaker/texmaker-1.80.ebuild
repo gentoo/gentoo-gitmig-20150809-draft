@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.80.ebuild,v 1.6 2009/09/30 17:01:29 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.80.ebuild,v 1.7 2009/12/26 19:26:47 pva Exp $
 
 EAPI=1
 
@@ -40,7 +40,7 @@ COMMON_DEPEND="x11-libs/libX11
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/psutils
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	media-libs/netpbm"
 
 DEPEND="${COMMON_DEPEND}

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.4-r1.ebuild,v 1.3 2008/07/27 19:54:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.4-r1.ebuild,v 1.4 2009/12/26 19:27:03 pva Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ DEPEND="x11-libs/qt:3
 	>=x11-libs/cairo-1.4.0"
 
 RDEPEND="${DEPEND}
-	virtual/ghostscript"
+	app-text/ghostscript-gpl"
 
 pkg_setup() {
 	if ! built_with_use 'x11-libs/cairo' 'X' 'svg'; then
