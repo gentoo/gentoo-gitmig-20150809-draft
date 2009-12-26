@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.235 2009/11/17 19:57:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.236 2009/12/26 17:14:22 vapier Exp $
+
+*busybox-1.15.3 (26 Dec 2009)
+
+  26 Dec 2009; Mike Frysinger <vapier@gentoo.org> +busybox-1.15.3.ebuild:
+  Version bump #297112 by Peter Fry.
 
   17 Nov 2009; Brent Baude <ranger@gentoo.org> busybox-1.14.2.ebuild:
   Marking busybox-1.14.2 ppc64 for bug 291931
