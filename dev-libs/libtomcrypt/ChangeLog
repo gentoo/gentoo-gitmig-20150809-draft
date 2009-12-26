@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.37 2009/12/07 11:27:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.38 2009/12/26 17:33:08 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> libtomcrypt-1.06.ebuild,
+  libtomcrypt-1.17-r3.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   07 Dec 2009; Thilo Bangert <bangert@gentoo.org> libtomcrypt-1.06.ebuild,
   +files/libtomcrypt-1.06-makefile.diff,

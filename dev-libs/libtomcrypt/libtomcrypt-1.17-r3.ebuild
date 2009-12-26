@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r3.ebuild,v 1.2 2009/04/03 19:33:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r3.ebuild,v 1.3 2009/12/26 17:33:08 pva Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -17,7 +17,7 @@ RDEPEND="libtommath? ( dev-libs/libtommath )
 	tomsfastmath? ( >=dev-libs/tomsfastmath-0.12 )
 	!libtommath? ( !tomsfastmath? ( dev-libs/libtommath ) )"
 DEPEND="${RDEPEND}
-	doc? ( virtual/latex-base virtual/ghostscript )"
+	doc? ( virtual/latex-base app-text/ghostscript-gpl )"
 
 src_unpack() {
 	unpack ${A}
