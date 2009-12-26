@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.36 2009/12/26 01:28:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.37 2009/12/26 17:21:05 vapier Exp $
+
+*suite3270-3.3.10_p3-r1 (26 Dec 2009)
+
+  26 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +suite3270-3.3.10_p3-r1.ebuild:
+  Clean up ebuild and merge fixes from x3270 package #285917.
 
 *suite3270-3.3.10_p3 (26 Dec 2009)
 
