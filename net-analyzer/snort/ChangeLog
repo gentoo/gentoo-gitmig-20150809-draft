@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.158 2009/11/26 13:43:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.159 2009/12/26 12:20:33 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> snort-2.8.5.1.ebuild:
+  Add ~sparc wrt #268620
 
   26 Nov 2009; Joseph Jezak <josejx@gentoo.org> snort-2.8.5.1.ebuild:
   Marked ppc stable for bug #291357.
