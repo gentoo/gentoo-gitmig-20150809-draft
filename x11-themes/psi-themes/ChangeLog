@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/psi-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.22 2009/11/23 21:20:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.23 2009/12/26 16:58:51 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  psi-themes-0.9.3_p1-r2.ebuild:
+  sparc stable wrt #293884
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org>
   psi-themes-0.9.3_p1-r2.ebuild:

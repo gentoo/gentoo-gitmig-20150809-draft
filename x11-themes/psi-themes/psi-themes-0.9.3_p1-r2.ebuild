@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.9 2009/11/23 21:20:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.3_p1-r2.ebuild,v 1.10 2009/12/26 16:58:51 armin76 Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ HOMEPAGE="http://psi-im.org/ http://jisp.netflint.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=net-im/psi-0.9.2
 	!!net-im/psi[extras]"
