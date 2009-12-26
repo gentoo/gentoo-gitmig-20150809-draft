@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.14.2.ebuild,v 1.4 2009/07/27 08:25:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.14.2.ebuild,v 1.5 2009/12/26 17:40:27 pva Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="oss"
 
 RDEPEND=">=dev-lang/python-2.5
 	gnome-base/librsvg
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	>=dev-python/pygtk-2.12"
 DEPEND="${RDEPEND}
 	dev-lang/swig
