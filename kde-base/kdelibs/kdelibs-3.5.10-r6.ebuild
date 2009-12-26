@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.10 2009/11/20 18:47:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.11 2009/12/26 17:36:29 pva Exp $
 
 EAPI="2"
 ARTS_REQUIRED=never
@@ -52,7 +52,7 @@ RDEPEND="
 	media-libs/libart_lgpl
 	net-dns/libidn
 	>=sys-apps/portage-2.1.2.11
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	x11-libs/libXext
 	>=x11-libs/qt-3.3.3:3[doc?]
 	acl? (
