@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.65 2009/12/10 09:56:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.66 2009/12/26 19:03:48 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  logwatch-7.3.7_pre20091204.ebuild, logwatch-7.3.7_pre20091210.ebuild:
+  Add ~alpha/~sparc wrt #295639
 
 *logwatch-7.3.7_pre20091210 (10 Dec 2009)
 
