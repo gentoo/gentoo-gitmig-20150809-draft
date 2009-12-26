@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/aspell-es-1.9a.ebuild,v 1.1 2009/12/24 06:57:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/aspell-es-1.9a.ebuild,v 1.2 2009/12/26 20:06:30 pva Exp $
 
 ASPELL_LANG="Spanish"
+ASPOSTFIX="6"
 
 inherit aspell-dict
 
