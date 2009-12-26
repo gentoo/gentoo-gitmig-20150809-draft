@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11004 2009/12/26 14:21:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11005 2009/12/26 17:23:00 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -54,15 +54,6 @@ x11-misc/bbconf
 # Masking release candidate. Yes, upstream supposes that we keep such
 # packages away from users. See bug #292321
 =x11-plugins/msn-pecan-0.1*
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (24 Dec 2009)
-#  on behalf of QA team
-#
-# Fails to build if /usr/X11R6 is not present (bug #247737,
-# open November 2008).
-#
-# Removal on 2010-02-22
-media-gfx/viewer
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Dec 2009)
 # Several regressions over 22.7, bug 297423
