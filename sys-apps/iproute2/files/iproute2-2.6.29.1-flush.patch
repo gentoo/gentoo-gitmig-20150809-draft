@@ -1,6 +1,14 @@
-diff -Nru iproute2-2.6.29-1.orig/ip/ipaddress.c iproute2-2.6.29-1/ip/ipaddress.c
---- iproute2-2.6.29-1.orig/ip/ipaddress.c	2009-03-24 23:40:54.000000000 +0100
-+++ iproute2-2.6.29-1/ip/ipaddress.c	2009-07-11 09:00:32.000000000 +0200
+https://bugs.gentoo.org/274973
+
+If the routing table that I wanna flush has 60 entries or more, "ip route flush
+table foo" fails with the following error:
+  Failed to send flush request: Success
+  Flush terminated
+
+Patch by Alin Năstac <mrness@gentoo.org>
+
+--- iproute2-2.6.29-1/ip/ipaddress.c
++++ iproute2-2.6.29-1/ip/ipaddress.c
 @@ -37,6 +37,8 @@
  
  #define MAX_ROUNDS 10
@@ -52,9 +60,8 @@ diff -Nru iproute2-2.6.29-1.orig/ip/ipaddress.c iproute2-2.6.29-1/ip/ipaddress.c
  		return 1;
  	}
  
-diff -Nru iproute2-2.6.29-1.orig/ip/ipneigh.c iproute2-2.6.29-1/ip/ipneigh.c
---- iproute2-2.6.29-1.orig/ip/ipneigh.c	2009-03-24 23:40:54.000000000 +0100
-+++ iproute2-2.6.29-1/ip/ipneigh.c	2009-07-11 09:04:32.000000000 +0200
+--- iproute2-2.6.29-1/ip/ipneigh.c
++++ iproute2-2.6.29-1/ip/ipneigh.c
 @@ -32,6 +32,8 @@
  #define NUD_VALID	(NUD_PERMANENT|NUD_NOARP|NUD_REACHABLE|NUD_PROBE|NUD_STALE|NUD_DELAY)
  #define MAX_ROUNDS	10
@@ -107,9 +114,8 @@ diff -Nru iproute2-2.6.29-1.orig/ip/ipneigh.c iproute2-2.6.29-1/ip/ipneigh.c
  		return 1;
  	}
  
-diff -Nru iproute2-2.6.29-1.orig/ip/iproute.c iproute2-2.6.29-1/ip/iproute.c
---- iproute2-2.6.29-1.orig/ip/iproute.c	2009-03-24 23:40:54.000000000 +0100
-+++ iproute2-2.6.29-1/ip/iproute.c	2009-07-11 09:04:45.000000000 +0200
+--- iproute2-2.6.29-1/ip/iproute.c
++++ iproute2-2.6.29-1/ip/iproute.c
 @@ -37,6 +37,7 @@
  #define RTAX_RTTVAR RTAX_HOPS
  #endif
@@ -145,9 +151,8 @@ diff -Nru iproute2-2.6.29-1.orig/ip/iproute.c iproute2-2.6.29-1/ip/iproute.c
  				return 0;
  			}
  			round++;
-diff -Nru iproute2-2.6.29-1.orig/ip/xfrm_policy.c iproute2-2.6.29-1/ip/xfrm_policy.c
---- iproute2-2.6.29-1.orig/ip/xfrm_policy.c	2009-03-24 23:40:54.000000000 +0100
-+++ iproute2-2.6.29-1/ip/xfrm_policy.c	2009-07-11 08:59:34.000000000 +0200
+--- iproute2-2.6.29-1/ip/xfrm_policy.c
++++ iproute2-2.6.29-1/ip/xfrm_policy.c
 @@ -756,11 +756,15 @@
  		struct xfrm_buffer xb;
  		char buf[NLMSG_DELETEALL_BUF_SIZE];
@@ -182,9 +187,8 @@ diff -Nru iproute2-2.6.29-1.orig/ip/xfrm_policy.c iproute2-2.6.29-1/ip/xfrm_poli
  	} else {
  		if (rtnl_wilddump_request(&rth, preferred_family, XFRM_MSG_GETPOLICY) < 0) {
  			perror("Cannot send dump request");
-diff -Nru iproute2-2.6.29-1.orig/ip/xfrm_state.c iproute2-2.6.29-1/ip/xfrm_state.c
---- iproute2-2.6.29-1.orig/ip/xfrm_state.c	2009-03-24 23:40:54.000000000 +0100
-+++ iproute2-2.6.29-1/ip/xfrm_state.c	2009-07-11 09:03:37.000000000 +0200
+--- iproute2-2.6.29-1/ip/xfrm_state.c
++++ iproute2-2.6.29-1/ip/xfrm_state.c
 @@ -924,11 +924,15 @@
  		struct xfrm_buffer xb;
  		char buf[NLMSG_DELETEALL_BUF_SIZE];
