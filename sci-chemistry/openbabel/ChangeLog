@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.33 2009/11/30 06:06:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.34 2009/12/26 15:20:35 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> openbabel-2.2.1.ebuild:
+  sparc stable wrt #288413
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> openbabel-2.2.1.ebuild:
   Marked ppc64 stable.
