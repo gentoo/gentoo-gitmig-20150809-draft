@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.43 2009/12/17 17:10:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.44 2009/12/26 15:38:04 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -99,6 +99,7 @@ njb
 pkcs11
 openct
 bluetooth
+dmraid
 
 # Asterisk use flag masking
 bri

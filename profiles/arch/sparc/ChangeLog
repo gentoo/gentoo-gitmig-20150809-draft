@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.70 2009/12/22 15:38:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.71 2009/12/26 15:38:04 armin76 Exp $
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask dmraid as i don't have any hardware to test
 
   22 Dec 2009; Peter Volkov <pva@gentoo.org> package.use.mask:
   Masked ssh USE flag for www-plugins/gnash, see bug 297899 for details.
