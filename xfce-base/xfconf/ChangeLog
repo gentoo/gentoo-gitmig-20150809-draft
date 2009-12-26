@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.17 2009/10/06 21:33:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.18 2009/12/26 04:01:35 darkside Exp $
+
+*xfconf-4.6.1-r1 (26 Dec 2009)
+
+  26 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +xfconf-4.6.1-r1.ebuild:
+  Fix perl vendor-dir, bug 296903
 
   06 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> xfconf-4.6.1.ebuild:
   Don't build static libs.
