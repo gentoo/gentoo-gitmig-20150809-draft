@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/balance-3.40.ebuild,v 1.1 2007/12/25 23:12:12 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/balance-3.40.ebuild,v 1.2 2009/12/26 17:41:50 pva Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-DEPEND="doc? ( virtual/ghostscript )"
+DEPEND="doc? ( app-text/ghostscript-gpl )"
 RDEPEND=""
 
 src_compile() {

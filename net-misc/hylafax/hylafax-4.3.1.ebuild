@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.10 2008/12/21 18:22:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.1.ebuild,v 1.11 2009/12/26 17:41:57 pva Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ LICENSE="hylafax"
 KEYWORDS="~x86 ~sparc ~hppa ~amd64 ~ppc"
 
 DEPEND=">=sys-libs/zlib-1.1.4
-	virtual/ghostscript
+	app-text/ghostscript-gpl
 	>=media-libs/tiff-3.8.2
 	media-libs/jpeg
 	jbig? ( media-libs/jbigkit )
