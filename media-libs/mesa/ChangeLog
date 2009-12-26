@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.252 2009/12/24 13:17:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.253 2009/12/26 15:58:50 scarabeus Exp $
+
+  26 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.7.ebuild:
+  Do not depend on xorg-server.
 
   24 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.7.ebuild:
   Rdepend on xorg-server[-minimal]. Thx to Tommy for reporting.
