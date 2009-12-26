@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.165 2009/12/20 13:51:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.166 2009/12/26 17:35:00 pva Exp $
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> rmagick-2.12.2.ebuild,
+  rmagick-2.12.2-r1.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> rmagick-2.12.2.ebuild,
   rmagick-2.12.2-r1.ebuild:

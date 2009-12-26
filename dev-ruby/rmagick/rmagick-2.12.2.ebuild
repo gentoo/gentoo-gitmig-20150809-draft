@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.12.2.ebuild,v 1.8 2009/12/20 13:51:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.12.2.ebuild,v 1.9 2009/12/26 17:35:00 pva Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ IUSE="examples doc"
 # rmagick is not ready to deal with those, see bug 184356.
 RDEPEND=">=media-gfx/imagemagick-6.3.5.10[-hdri]"
 DEPEND="${RDEPEND}
-	doc? ( virtual/ghostscript media-libs/libwmf )"
+	doc? ( app-text/ghostscript-gpl media-libs/libwmf )"
 
 S="${WORKDIR}/RMagick-${PV}"
 
