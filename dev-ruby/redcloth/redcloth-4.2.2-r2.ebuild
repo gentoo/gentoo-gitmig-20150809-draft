@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r1.ebuild,v 1.1 2009/12/25 17:35:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r2.ebuild,v 1.1 2009/12/26 17:07:30 flameeyes Exp $
 
 EAPI=2
 
@@ -17,6 +17,8 @@ RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
 
 RUBY_FAKEGEM_EXTRADOC="README CHANGELOG"
+
+RUBY_FAKEGEM_REQUIRE_PATHS="lib/case_sensitive_require"
 
 inherit ruby-fakegem
 
