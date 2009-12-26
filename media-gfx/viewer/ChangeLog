@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/viewer
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/ChangeLog,v 1.6 2008/04/21 17:33:48 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/ChangeLog,v 1.7 2009/12/26 17:21:49 jer Exp $
+
+*viewer-0.8.0 (26 Dec 2009)
+
+  26 Dec 2009; Jeroen Roovers <jer@gentoo.org> -viewer-0.7.3.ebuild,
+  +viewer-0.8.0.ebuild:
+  Version bump.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
