@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conary
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.24 2008/11/15 14:55:15 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.25 2009/12/26 10:15:53 tove Exp $
+
+  26 Dec 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove smithj from metadata (#95385)
 
   15 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> conary-2.0.9.ebuild,
   conary-2.0.12.ebuild, conary-2.0.21.ebuild, conary-2.0.23.ebuild:

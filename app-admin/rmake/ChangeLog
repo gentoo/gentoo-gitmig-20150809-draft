@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rmake
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.17 2008/12/02 17:14:46 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.18 2009/12/26 10:17:21 tove Exp $
+
+  26 Dec 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove smithj from metadata (#95385)
 
   02 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   ChangeLog:
