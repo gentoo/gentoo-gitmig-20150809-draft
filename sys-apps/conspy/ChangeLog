@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/conspy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/conspy/ChangeLog,v 1.5 2008/11/30 17:21:57 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/conspy/ChangeLog,v 1.6 2009/12/26 14:28:03 ssuominen Exp $
+
+*conspy-1.7 (26 Dec 2009)
+
+  26 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +conspy-1.7.ebuild:
+  Version bump wrt #298435, thanks to Peter Volkov for reporting.
 
   30 Nov 2008; Markus Meier <maekke@gentoo.org> conspy-1.5.ebuild:
   x86 stable, requested by ssuominen
