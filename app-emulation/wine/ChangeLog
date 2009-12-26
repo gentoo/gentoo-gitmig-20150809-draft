@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.287 2009/12/12 16:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.288 2009/12/26 17:23:29 vapier Exp $
+
+*wine-1.1.35 (26 Dec 2009)
+
+  26 Dec 2009; Mike Frysinger <vapier@gentoo.org> +wine-1.1.35.ebuild:
+  Version bump #297538 by Jeroen Roovers.
 
   12 Dec 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
   wine-1.1.14.ebuild, wine-1.1.15.ebuild, wine-1.1.16.ebuild,
