@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.5.ebuild,v 1.1 2009/12/21 19:49:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.5.ebuild,v 1.2 2009/12/26 21:36:33 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -25,6 +25,7 @@ DEPEND="ruby_targets_ruby18? ( dev-lang/swig =dev-db/sqlite-3* )
 
 ruby_add_bdepend "dev-ruby/rake-compiler dev-ruby/hoe"
 ruby_add_bdepend test dev-ruby/mocha
+ruby_add_bdepend doc dev-ruby/redcloth
 
 all_ruby_prepare() {
 	# We remove the vendor_sqlite3 rake task because it's used to
