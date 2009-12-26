@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.6 2009/02/20 17:39:12 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.7 2009/12/26 17:45:37 pva Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs autotools fortran
@@ -22,7 +22,7 @@ IUSE="examples gd gs opengl X"
 
 COMMON_DEPEND="opengl? ( virtual/opengl )
 	gd? ( media-libs/gd[png,jpeg] )
-	gs? ( virtual/ghostscript media-libs/gd[png,jpeg] )"
+	gs? ( app-text/ghostscript-gpl media-libs/gd[png,jpeg] )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
