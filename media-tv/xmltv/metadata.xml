@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>media-tv</herd>
-  <maintainer>
-    <email>mattepiu@gentoo.org</email>
-    <name>Matteo Azzali </name>
-  </maintainer>
   <use>
     <flag name="ar">Argentina tv listing grabber</flag>
     <flag name="be">Belgium and Luxemburg tv listing grabber</flag>
