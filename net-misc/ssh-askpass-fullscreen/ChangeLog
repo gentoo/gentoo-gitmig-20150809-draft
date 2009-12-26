@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/ssh-askpass-fullscreen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.18 2009/12/10 13:57:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.19 2009/12/26 19:47:24 darkside Exp $
+
+*ssh-askpass-fullscreen-0.4-r4 (26 Dec 2009)
+
+  26 Dec 2009; Jeremy Olexa <darkside@gentoo.org> files/99ssh_askpass,
+  -ssh-askpass-fullscreen-0.4-r3.ebuild,
+  +ssh-askpass-fullscreen-0.4-r4.ebuild:
+  Attempt to let Gentoo's sudo package work with the -A flag. app-admin/sudo
+  still needs to depend on this package, otherwise it automagically works
+  for some Gentoo users. See bug 240620 for discussion.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   -ssh-askpass-fullscreen-0.4-r1.ebuild:
