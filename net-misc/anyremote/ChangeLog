@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/anyremote
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/anyremote/ChangeLog,v 1.4 2009/10/15 05:56:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/anyremote/ChangeLog,v 1.5 2009/12/26 13:25:21 hwoarang Exp $
+
+*anyremote-5.0-r1 (26 Dec 2009)
+
+  26 Dec 2009; Markos Chandras <hwoarang@gentoo.org> -anyremote-5.0.ebuild,
+  +anyremote-5.0-r1.ebuild:
+  Fixed documentation path wrt bug #298317
 
 *anyremote-5.0 (15 Oct 2009)
 
