@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.13 2009/12/24 05:09:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.14 2009/12/26 19:26:24 pva Exp $
 
 EAPI=2
 
@@ -38,7 +38,7 @@ RDEPEND="media-libs/fontconfig
 #	>=x11-libs/gtk+-2.0
 #	>=app-text/poppler-bindings-0.9.2[gtk]
 #	ps test
-#	virtual/ghostscript
+#	app-text/ghostscript-gpl
 #	svg test
 #	>=x11-libs/gtk+-2.0
 #	>=gnome-base/librsvg-2.15.0
