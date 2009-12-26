@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/quesoglc-0.7.2.ebuild,v 1.2 2009/11/14 20:40:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/quesoglc-0.7.2.ebuild,v 1.3 2009/12/26 16:08:38 armin76 Exp $
 
 EAPI=2
 DESCRIPTION="A free implementation of the OpenGL Character Renderer (GLC)"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-free.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="doc examples"
 
 RDEPEND="virtual/opengl
