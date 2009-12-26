@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r1.ebuild,v 1.1 2009/10/22 16:13:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r1.ebuild,v 1.2 2009/12/26 19:25:26 pva Exp $
 
 inherit latex-package toolchain-funcs java-pkg-opt-2
 
@@ -21,7 +21,7 @@ SLOT="0"
 DEPEND=">=sys-apps/sed-4
 	java? ( >=virtual/jdk-1.5 )"
 
-RDEPEND="virtual/ghostscript
+RDEPEND="app-text/ghostscript-gpl
 	media-gfx/imagemagick
 	java? ( >=virtual/jre-1.5 )"
 
