@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/flexmock-0.8.6.ebuild,v 1.2 2009/05/04 11:51:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/flexmock-0.8.6.ebuild,v 1.3 2009/12/27 19:20:28 graaff Exp $
 
 inherit ruby
 
@@ -18,6 +18,8 @@ DEPEND="doc? ( dev-ruby/rake )
 	test? ( dev-ruby/rake )"
 
 USE_RUBY="ruby18 ruby19"
+
+PATCHES=( "${FILESDIR}/${P}-rdoc-template.patch" )
 
 dofakegemspec() {
 	cat - > "${T}"/${P}.gemspec <<EOF
@@ -52,7 +54,7 @@ src_install() {
 	popd
 
 	if use doc; then
-		dohtml -r doc/* || die "dohtml failed"
+		dohtml -r html || die "dohtml failed"
 	fi
 
 	dodoc CHANGES README || die "dodoc failed"

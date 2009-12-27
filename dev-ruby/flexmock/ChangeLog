@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/flexmock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.5 2009/08/22 22:56:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.6 2009/12/27 19:20:28 graaff Exp $
+
+  27 Dec 2009; Hans de Graaff <graaff@gentoo.org> flexmock-0.8.6.ebuild,
+  +files/flexmock-0.8.6-rdoc-template.patch:
+  Fix building with USE=doc, bug 298486.
 
   22 Aug 2009; Hans de Graaff <graaff@gentoo.org> -flexmock-0.8.0.ebuild,
   -flexmock-0.8.3.ebuild:
