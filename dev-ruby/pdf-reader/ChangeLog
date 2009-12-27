@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pdf-reader
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.3 2009/12/27 17:18:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.4 2009/12/27 17:21:19 graaff Exp $
+
+  27 Dec 2009; Hans de Graaff <graaff@gentoo.org> pdf-reader-0.7.5.ebuild:
+  Fix building with USE=doc -test by always depending on rspec since it is
+  required in the Rakefile, fixing bug 298481.
 
   27 Dec 2009; Hans de Graaff <graaff@gentoo.org> -pdf-reader-0.7.4.ebuild:
   Remove old version.

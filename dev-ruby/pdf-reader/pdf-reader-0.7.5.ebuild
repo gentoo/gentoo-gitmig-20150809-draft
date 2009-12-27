@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-0.7.5.ebuild,v 1.1 2009/08/23 15:29:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-0.7.5.ebuild,v 1.2 2009/12/27 17:21:19 graaff Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/v${PV} -> ${P}.tgz"
 
 USE_RUBY="ruby18"
 
-DEPEND="doc? ( dev-ruby/rake )
+DEPEND="doc? ( dev-ruby/rake dev-ruby/rspec )
 	test? ( dev-ruby/rake dev-ruby/rspec )"
 RDEPEND=""
 
