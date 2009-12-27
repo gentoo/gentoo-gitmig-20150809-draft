@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.6 2009/11/25 11:26:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.7 2009/12/27 19:00:54 ulm Exp $
 
 EAPI=2
 
@@ -64,7 +64,7 @@ src_configure() {
 
 src_compile() {
 	# Do not use the sandbox, or the dumped Emacs will be twice as large
-	SANDBOX_ON=0
+	export SANDBOX_ON=0
 	emake --jobs=1 CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Demacs" || die
 }
 
