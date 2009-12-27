@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-0.0.20091216.217847.ebuild,v 1.1 2009/12/20 14:04:01 vadimk Exp $
-
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-0.0.20091216.217847.ebuild,v 1.2 2009/12/27 13:33:44 vadimk Exp $
 
 inherit linux-mod versionator
 
