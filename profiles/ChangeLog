@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3708 2009/12/26 17:23:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3709 2009/12/27 09:23:24 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Dec 2009; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/jcode_pl for removal (#298215)
 
   26 Dec 2009; Jeroen Roovers <jer@gentoo.org> default/linux/hppa/use.mask,
   package.mask:
