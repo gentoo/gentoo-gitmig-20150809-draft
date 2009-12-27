@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.668 2009/12/17 23:18:25 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.669 2009/12/27 18:06:00 mpagano Exp $
+
+*gentoo-sources-2.6.32-r1 (27 Dec 2009)
+
+  27 Dec 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.32-r1.ebuild:
+  Patches to correct sector size reads for EFI GPT. Linux patches 2.6.32.1
+  and 2.6.32.2
 
 *gentoo-sources-2.6.31-r8 (17 Dec 2009)
 
