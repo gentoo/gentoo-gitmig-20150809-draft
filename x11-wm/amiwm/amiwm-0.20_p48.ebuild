@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/amiwm-0.20_p48.ebuild,v 1.9 2007/12/09 18:05:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/amiwm-0.20_p48.ebuild,v 1.10 2009/12/27 13:33:41 flameeyes Exp $
 
 inherit eutils
 
@@ -27,6 +27,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-flex.patch #110169
+}
+
+src_compile() {
+	econf
+	# bug #248680
+	emake -j1 || die "build failed"
 }
 
 src_install() {
