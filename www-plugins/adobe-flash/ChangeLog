@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.12 2009/12/18 13:51:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.13 2009/12/27 22:59:15 fauli Exp $
+
+  27 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  adobe-flash-10.0.42.34.ebuild:
+  stable x86, security bug 296407
 
   18 Dec 2009; Pacho Ramos <pacho@gentoo.org> adobe-flash-10.0.42.34.ebuild:
   amd64 stable, bug 296407
