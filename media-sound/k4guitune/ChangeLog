@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/k4guitune
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k4guitune/ChangeLog,v 1.1 2009/12/27 14:08:45 ssuominen Exp $
+
+*k4guitune-1.1.0 (27 Dec 2009)
+
+  27 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +k4guitune-1.1.0.ebuild:
+  Initial commit (media-sound/k3guitune replacement).
+
