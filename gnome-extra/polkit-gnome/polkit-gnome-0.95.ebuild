@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.95.ebuild,v 1.2 2009/12/25 17:57:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.95.ebuild,v 1.3 2009/12/27 03:27:25 nirbheek Exp $
 
 EAPI="2"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="PolicyKit policies and configurations for the GNOME desktop"
 HOMEPAGE="http://hal.freedesktop.org/docs/PolicyKit"
@@ -40,4 +40,11 @@ pkg_setup() {
 src_prepare() {
 	# Fix make check, bug 298345
 	epatch "${FILESDIR}/${P}-fix-make-check.patch"
+
+	if use doc; then
+		# Fix parallel build failure, bug 293247
+		epatch "${FILESDIR}/${P}-parallel-build-failure.patch"
+
+		eautoreconf
+	fi
 }
