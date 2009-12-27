@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.8_rc1.ebuild,v 1.4 2009/03/16 13:06:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.9.ebuild,v 1.1 2009/12/27 02:03:19 yngwin Exp $
 
 EAPI="2"
 inherit eutils
@@ -32,6 +32,10 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-gnome-session-${PV}.patch
+}
 
 src_configure() {
 	econf \

@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.180 2009/12/09 01:24:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.181 2009/12/27 02:03:19 yngwin Exp $
+
+*openbox-3.4.9 (27 Dec 2009)
+
+  27 Dec 2009; Ben de Groot <yngwin@gentoo.org> -openbox-3.4.8_rc1.ebuild,
+  -openbox-3.4.8_rc1-r1.ebuild, +openbox-3.4.9.ebuild,
+  +files/openbox-gnome-session-3.4.9.patch:
+  Version bump. Adding patch submitted by Matt Michalowski to fix bug
+  291965.
 
 *openbox-3.4.8 (09 Dec 2009)
 
