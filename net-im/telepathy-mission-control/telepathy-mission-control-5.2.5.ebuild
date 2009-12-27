@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.2.5.ebuild,v 1.2 2009/09/19 04:54:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.2.5.ebuild,v 1.3 2009/12/27 08:12:15 josejx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/telepathy-mission-control/${P
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND=">=net-libs/telepathy-glib-0.7.32
