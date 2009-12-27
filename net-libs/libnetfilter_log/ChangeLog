@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_log
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.7 2009/09/08 16:55:09 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.8 2009/12/27 09:32:22 josejx Exp $
+
+  27 Dec 2009; Joseph Jezak <josejx@gentoo.org>
+  libnetfilter_log-0.0.15.ebuild, libnetfilter_log-0.0.16.ebuild:
+  Marked ~ppc for bug #281056.
 
   08 Sep 2009; Mike Auty <ikelos@gentoo.org> libnetfilter_log-0.0.13.ebuild,
   libnetfilter_log-0.0.15.ebuild, libnetfilter_log-0.0.16.ebuild:
