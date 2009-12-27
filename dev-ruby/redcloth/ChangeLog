@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.33 2009/12/26 17:07:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.34 2009/12/27 00:23:09 flameeyes Exp $
+
+  27 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  redcloth-4.2.2-r2.ebuild:
+  Move rspec to unconditional depend, this solves bug #298483 by keytoaster.
 
 *redcloth-4.2.2-r2 (26 Dec 2009)
 

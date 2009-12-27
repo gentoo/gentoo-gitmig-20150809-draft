@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r2.ebuild,v 1.1 2009/12/26 17:07:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r2.ebuild,v 1.2 2009/12/27 00:23:09 flameeyes Exp $
 
 EAPI=2
 
@@ -33,9 +33,11 @@ IUSE=""
 
 S="${WORKDIR}/${RUBY_FAKEGEM_NAME}-${PV}"
 
-ruby_add_bdepend '>=dev-ruby/echoe-3.0.1'
+# rspec is needed for the Rakefile to work if not patched; should
+# probably be reported upstream to fix
+ruby_add_bdepend '>=dev-ruby/echoe-3.0.1 dev-ruby/rspec'
 
-ruby_add_bdepend test "dev-ruby/diff-lcs dev-ruby/rspec"
+ruby_add_bdepend test "dev-ruby/diff-lcs"
 
 all_ruby_prepare() {
 	sed -i \
