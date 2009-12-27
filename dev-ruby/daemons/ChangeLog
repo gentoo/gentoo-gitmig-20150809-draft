@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.39 2009/12/09 17:38:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.40 2009/12/27 17:43:28 a3li Exp $
+
+*daemons-1.0.10-r1 (27 Dec 2009)
+
+  27 Dec 2009; Alex Legler <a3li@gentoo.org> +daemons-1.0.10-r1.ebuild:
+  Revbump, migrating to ruby-fakegem. Tested with ruby18 and ruby19.
 
   09 Dec 2009; Brent Baude <ranger@gentoo.org> daemons-1.0.10.ebuild:
   Marking daemons-1.0.10 ppc64 for bug 240375
