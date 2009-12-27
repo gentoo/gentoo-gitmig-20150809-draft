@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.162 2009/12/23 00:56:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.163 2009/12/27 15:01:18 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> ksysguard-4.3.4.ebuild:
+  alpha/ia64/sparc stable
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> ksysguard-4.3.4.ebuild:
   Pull in changes from overlay

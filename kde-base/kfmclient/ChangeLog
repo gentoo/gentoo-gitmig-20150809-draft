@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfmclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/ChangeLog,v 1.16 2009/12/10 20:55:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/ChangeLog,v 1.17 2009/12/27 15:00:24 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> kfmclient-4.3.4.ebuild:
+  alpha/ia64/sparc stable
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kfmclient-4.3.1.ebuild:

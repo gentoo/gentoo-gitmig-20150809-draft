@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.16 2009/12/23 03:33:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.17 2009/12/27 14:53:26 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> qimageblitz-0.0.4.ebuild:
+  alpha/ia64/sparc stable
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> qimageblitz-0.0.4.ebuild:
   Remove ~x64-freebsd from keywords - deps not keyworded

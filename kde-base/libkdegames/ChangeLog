@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.140 2009/12/23 01:11:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.141 2009/12/27 14:55:37 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> libkdegames-4.3.4.ebuild:
+  alpha/ia64/sparc stable
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   +files/libkdegames-4.2.0-darwin.patch, libkdegames-4.3.4.ebuild:

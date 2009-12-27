@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.37 2009/12/23 01:20:32 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.38 2009/12/27 15:07:09 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> phonon-kde-4.3.4.ebuild:
+  alpha/ia64/sparc stable
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> phonon-kde-4.3.4.ebuild,
   +files/phonon-kde-4.3.4-optional-alsa.patch:
