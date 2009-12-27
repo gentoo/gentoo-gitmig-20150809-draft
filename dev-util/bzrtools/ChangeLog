@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bzrtools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.74 2009/12/27 11:50:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.75 2009/12/27 14:47:14 fauli Exp $
+
+  27 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -bzrtools-1.15.0.ebuild, -bzrtools-1.18.0.ebuild, -bzrtools-2.0.0.ebuild:
+  clean up
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> bzrtools-2.0.1.ebuild:
   sparc stable wrt #294803
