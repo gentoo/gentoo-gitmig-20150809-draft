@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnotime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.44 2009/06/09 18:24:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.45 2009/12/27 15:05:05 mrpouet Exp $
+
+  27 Dec 2009; Romain Perier <mrpouet@gentoo.org> gnotime-2.3.0-r2.ebuild,
+  +files/gnotime-2.3.0-libgnomeui-typo.patch:
+  Fix typo in PKG_CHECK_MODULES for libgnomeui, which caused build failure,
+  per bug #298193.
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org> gnotime-2.3.0.ebuild,
   gnotime-2.3.0-r2.ebuild:
