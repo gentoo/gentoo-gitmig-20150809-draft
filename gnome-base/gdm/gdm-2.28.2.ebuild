@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2.ebuild,v 1.1 2009/12/17 22:21:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2.ebuild,v 1.2 2009/12/27 05:07:03 nirbheek Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
 
 # FIXME: gdm has a strange behaviour on reboot (from runlevel), especially when xdm tries to stop it (its blocks).
+# NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug 295686
 RDEPEND=">=sys-apps/devicekit-power-008
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.15.4
@@ -37,6 +38,7 @@ RDEPEND=">=sys-apps/devicekit-power-008
 	x11-libs/libXft
 	app-text/iso-codes
 
+	x11-base/xorg-server
 	x11-libs/libXi
 	x11-libs/libXau
 	x11-libs/libX11
