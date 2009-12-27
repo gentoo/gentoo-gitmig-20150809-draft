@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.3a.ebuild,v 1.1 2009/11/27 17:43:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.3a.ebuild,v 1.2 2009/12/27 08:54:08 josejx Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="${P}.tar.gz"
 
 LICENSE="truecrypt-2.8"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
 RESTRICT="bindist fetch mirror"
 
