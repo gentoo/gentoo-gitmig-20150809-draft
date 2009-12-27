@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/judy
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.29 2009/05/31 15:33:09 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.30 2009/12/27 11:06:41 pva Exp $
+
+*judy-1.0.5 (27 Dec 2009)
+
+  27 Dec 2009; Peter Volkov <pva@gentoo.org> -judy-1.0.3.ebuild,
+  +judy-1.0.5.ebuild, +files/judy-1.0.5-parallel-make.patch:
+  Version bump.
 
   31 May 2009; Brent Baude <ranger@gentoo.org> judy-1.0.4.ebuild:
   Marking judy-1.0.4 ppc64 for bug 271122
