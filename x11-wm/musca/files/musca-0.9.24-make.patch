@@ -1,11 +1,10 @@
---- musca-0.9.24/Makefile.orig	2009-11-03 03:20:21.000000000 +0100
-+++ musca-0.9.24/Makefile	2009-11-30 21:39:04.000000000 +0100
-@@ -1,9 +1,15 @@
+--- musca-0.9.24.orig/Makefile	2009-11-03 03:20:21.000000000 +0100
++++ musca-0.9.24/Makefile	2009-12-27 19:12:02.461539607 +0100
+@@ -1,9 +1,12 @@
 -CFLAGS?=-Wall -g
 +CFLAGS ?= -Wall -g
 +INCLUDES = $(shell pkg-config --cflags x11)
 +LIBS = $(shell pkg-config --libs x11) -lm
-+COMPILE = $(CC) $(CFLAGS) $(INCLUDES) $(LIBS) $(LDFLAGS)
 +BIN_DIST = musca apis xlisten
  
 -all:
@@ -15,7 +14,7 @@
 +all: $(BIN_DIST)
 +
 +$(BIN_DIST):
-+	$(COMPILE) -o $@ $@.c
++	$(CC) $(CFLAGS) $(INCLUDES) $@.c -o $@ $(LDFLAGS) $(LIBS)
  
  clean:
 -	rm -f musca apis
