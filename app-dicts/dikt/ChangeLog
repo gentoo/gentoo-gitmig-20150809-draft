@@ -1,0 +1,9 @@
+# ChangeLog for app-dicts/dikt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dikt/ChangeLog,v 1.1 2009/12/27 12:09:18 ssuominen Exp $
+
+*dikt-1l (27 Dec 2009)
+
+  27 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +dikt-1l.ebuild:
+  Initial commit wrt #296200 by Andrew Fedorov.
+
