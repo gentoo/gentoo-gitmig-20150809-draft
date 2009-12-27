@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.17 2009/12/15 19:47:19 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.18 2009/12/27 18:55:21 ulm Exp $
 
 DESCRIPTION="Virtual for editor"
 HOMEPAGE=""
@@ -23,7 +23,7 @@ RDEPEND="|| ( app-editors/nano
 	app-editors/efte
 	app-editors/elvis
 	app-editors/emacs
-	app-editors/emacs-cvs
+	app-editors/emacs-vcs
 	app-editors/emact
 	app-editors/ersatz-emacs
 	app-editors/fe

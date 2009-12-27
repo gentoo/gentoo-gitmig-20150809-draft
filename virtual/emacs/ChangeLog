@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.36 2009/12/15 19:47:26 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.37 2009/12/27 18:52:05 ulm Exp $
+
+  27 Dec 2009; Ulrich Mueller <ulm@gentoo.org> emacs-23.ebuild:
+  Update dependency after package move from emacs-cvs to emacs-vcs.
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> emacs-22.ebuild,
   emacs-23.ebuild:
