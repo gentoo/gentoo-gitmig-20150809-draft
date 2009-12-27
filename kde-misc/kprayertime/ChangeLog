@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kprayertime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kprayertime/ChangeLog,v 1.1 2009/12/21 13:05:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kprayertime/ChangeLog,v 1.2 2009/12/27 00:28:10 ssuominen Exp $
+
+*kprayertime-4.01 (27 Dec 2009)
+
+  27 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kprayertime-4.01.ebuild:
+  Version bump.
 
 *kprayertime-4 (21 Dec 2009)
 
