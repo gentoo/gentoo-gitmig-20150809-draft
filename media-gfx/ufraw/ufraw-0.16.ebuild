@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.16.ebuild,v 1.7 2009/12/23 17:41:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.16.ebuild,v 1.8 2009/12/27 11:49:56 maekke Exp $
 
 inherit fdo-mime gnome2-utils
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use gimp && ! use gtk; then
-		eerror "to enable gimp support, you must enable gtk support"
+		eerror "to enable gimp support, you must also enable gtk support for ${PN}"
 		die "emerge ${PN} with gtk support"
 	fi
 }
