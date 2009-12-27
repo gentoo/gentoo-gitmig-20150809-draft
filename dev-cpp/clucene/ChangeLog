@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.25 2009/12/27 12:38:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.26 2009/12/27 17:13:07 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> clucene-0.9.21b.ebuild:
+  Add ~arm
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> clucene-0.9.21b.ebuild:
   alpha/ia64 stable
