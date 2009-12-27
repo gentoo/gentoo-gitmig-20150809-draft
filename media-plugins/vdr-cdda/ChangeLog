@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-cdda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.9 2009/12/23 21:12:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.10 2009/12/27 16:40:24 hd_brummy Exp $
+
+  27 Dec 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/vdr-cdda-0.1.0_gcc-4.4.patch:
+  new gcc-4.4 patch
 
   23 Dec 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-cdda-0.1.0-r1.ebuild, +files/vdr-cdda-0.1.0_gcc-4.4.patch:
