@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/claws-mail-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/ChangeLog,v 1.10 2009/10/24 14:32:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/ChangeLog,v 1.11 2009/12/27 15:19:14 fauli Exp $
+
+  27 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-themes-20090605.ebuild:
+  clean up
 
   24 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-themes-20090920.ebuild:
