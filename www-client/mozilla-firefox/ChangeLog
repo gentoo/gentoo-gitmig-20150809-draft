@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.584 2009/12/23 18:29:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.585 2009/12/27 01:09:52 anarchy Exp $
+
+  27 Dec 2009; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-3.5.6.ebuild:
+  Fix qa warning about strip'd file
 
   23 Dec 2009; Pacho Ramos <pacho@gentoo.org> mozilla-firefox-3.5.6.ebuild:
   amd64 stable, bug 297532
