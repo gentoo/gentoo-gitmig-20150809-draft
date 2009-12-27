@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.28.1.0.ebuild,v 1.1 2009/10/29 23:38:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.28.1.0.ebuild,v 1.2 2009/12/27 04:26:07 nirbheek Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.anjuta.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug devhelp doc glade sourceview subversion +symbol-db test"
+IUSE="debug devhelp doc glade +sourceview subversion +symbol-db test"
 
 # FIXME: Anjuta has some CRITICAL and WARNINGS messages, that would be nice to fix them and/or report on upstream
 RDEPEND=">=dev-libs/glib-2.16
@@ -63,7 +63,11 @@ DOCS="AUTHORS ChangeLog FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
 
 pkg_setup() {
 	if ! use symbol-db; then
-		elog "You disabled symbol-db which will disallow using projects."
+		ewarn "You have disabled symbol-db, which will disallow using projects"
+	fi
+
+	if ! use sourceview; then
+		ewarn "You have disabled sourceview, which means you now have no editor"
 	fi
 
 	G2CONF="${G2CONF}

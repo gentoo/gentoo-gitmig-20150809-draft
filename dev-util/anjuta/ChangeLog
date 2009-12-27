@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.102 2009/10/29 23:38:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.103 2009/12/27 04:26:07 nirbheek Exp $
+
+  27 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  anjuta-2.28.1.0.ebuild:
+  Enable sourceview plugin by default so users get an IDE with an editor
+  out-of-the-box, bug 291958
 
 *anjuta-2.28.1.0 (29 Oct 2009)
 
