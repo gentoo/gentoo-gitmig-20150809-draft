@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.4.4.ebuild,v 1.1 2009/12/24 13:37:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.4.4.ebuild,v 1.2 2009/12/27 14:13:23 hanno Exp $
 
-inherit gnome2-utils
+inherit gnome2
 
 DESCRIPTION="A simple sound converter application for the GNOME environment."
 HOMEPAGE="http://soundconverter.berlios.de"
@@ -36,20 +36,4 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool"
 
-src_compile() {
-	econf --disable-dependency-tracking
-	emake || die "emake failed."
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog README TODO
-}
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}
+DOCS="AUTHORS ChangeLog README TODO"
