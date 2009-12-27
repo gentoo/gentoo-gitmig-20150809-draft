@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.27 2009/12/27 12:45:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.28 2009/12/27 17:23:47 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  akonadi-server-1.2.1.ebuild:
+  Add ~arm
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   akonadi-server-1.2.1.ebuild:
