@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.14.ebuild,v 1.1 2009/12/03 22:27:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.14.ebuild,v 1.2 2009/12/27 16:42:23 ulm Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/zile/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="test valgrind"
+IUSE="livecd test valgrind"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
@@ -26,4 +26,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	# FAQ is installed by the build system in /usr/share/zile
 	dodoc AUTHORS BUGS NEWS README THANKS || die
+}
+
+pkg_postinst() {
+	if use livecd; then
+		[ -e "${ROOT}"/usr/bin/emacs ] || ln -s zile "${ROOT}"/usr/bin/emacs
+	fi
 }
