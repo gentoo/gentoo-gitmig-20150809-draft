@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.60 2009/12/18 13:42:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.61 2009/12/27 17:16:29 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> redland-1.0.9-r1.ebuild,
+  redland-1.0.9-r2.ebuild, redland-1.0.10.ebuild, redland-1.0.10-r1.ebuild:
+  Add ~arm
 
 *redland-1.0.10-r1 (18 Dec 2009)
 
