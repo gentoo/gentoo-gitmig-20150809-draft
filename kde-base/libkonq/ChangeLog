@@ -1,9 +1,6 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.144 2009/12/27 14:56:56 armin76 Exp $
-
-  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> libkonq-4.3.4.ebuild:
-  alpha/ia64/sparc stable
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.145 2009/12/27 15:25:21 armin76 Exp $
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libkonq-4.3.1.ebuild:

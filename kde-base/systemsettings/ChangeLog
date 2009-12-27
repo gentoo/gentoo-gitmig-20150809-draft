@@ -1,10 +1,7 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.60 2009/12/27 15:08:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.61 2009/12/27 15:37:57 armin76 Exp $
 
-  27 Dec 2009; Raúl Porcel <armin76@gentoo.org>
-  systemsettings-4.3.4.ebuild:
-  alpha/ia64/sparc stable
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   systemsettings-4.3.4.ebuild:

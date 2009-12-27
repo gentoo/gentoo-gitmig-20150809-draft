@@ -1,10 +1,7 @@
 # ChangeLog for kde-base/libknotificationitem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.20 2009/12/27 14:55:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.21 2009/12/27 15:23:54 armin76 Exp $
 
-  27 Dec 2009; Raúl Porcel <armin76@gentoo.org>
-  libknotificationitem-4.3.4.ebuild:
-  alpha/ia64/sparc stable
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libknotificationitem-4.3.1.ebuild:

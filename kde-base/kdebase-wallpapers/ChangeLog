@@ -1,10 +1,7 @@
 # ChangeLog for kde-base/kdebase-wallpapers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.21 2009/12/27 15:03:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.22 2009/12/27 15:33:53 armin76 Exp $
 
-  27 Dec 2009; Raúl Porcel <armin76@gentoo.org>
-  kdebase-wallpapers-4.3.4.ebuild:
-  alpha/ia64/sparc stable
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdebase-wallpapers-4.3.1.ebuild:
