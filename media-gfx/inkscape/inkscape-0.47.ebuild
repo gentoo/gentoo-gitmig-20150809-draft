@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.3 2009/12/07 11:18:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.4 2009/12/27 12:04:00 armin76 Exp $
 
 EAPI=2
 inherit gnome2
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.inkscape.org/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dia gnome inkjar lcms mmx nls postscript spell wmf"
 RESTRICT="test"
 
