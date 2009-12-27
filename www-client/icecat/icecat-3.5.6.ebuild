@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.6.ebuild,v 1.1 2009/12/19 18:14:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.5.6.ebuild,v 1.2 2009/12/27 01:13:36 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -63,6 +63,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/${PN}"
 
 linguas() {
 	local LANG SLANG
