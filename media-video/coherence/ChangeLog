@@ -1,0 +1,12 @@
+# ChangeLog for media-video/coherence
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.1 2009/12/27 05:19:07 darkside Exp $
+
+*coherence-0.6.6.1 (27 Dec 2009)
+
+  27 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +coherence-0.6.6.1.ebuild,
+  +files/coherence-init, +metadata.xml:
+  Initial ebuild. Many thanks to all the contributors on bug 246166. This
+  ebuild is still in rough shape, needs to have the deps worked out and
+  minor fixes. Funtionality works
+
