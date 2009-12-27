@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.37 2008/01/20 19:20:18 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.38 2009/12/27 13:37:28 yngwin Exp $
+
+  27 Dec 2009; Ben de Groot <yngwin@gentoo.org> pypanel-2.4.ebuild:
+  Add usedep on imlib2[X] (bug 297796). Some minor cleanups.
 
   20 Jan 2008; Christoph Mende <angelos@gentoo.org> pypanel-2.4.ebuild:
   Stable on amd64 wrt bug #206723
