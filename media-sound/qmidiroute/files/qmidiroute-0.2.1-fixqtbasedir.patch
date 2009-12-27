@@ -1,8 +1,0 @@
---- make_qmidiroute	2004-09-21 06:38:55.000000000 -0700
-+++ make_qmidiroute	2006-05-10 03:16:31.000000000 -0700
-@@ -1,4 +1,4 @@
--QT_BASE_DIR=/usr/lib/qt3
-+QT_BASE_DIR=$(QTDIR)
- QT_LIB_DIR=$(QT_BASE_DIR)/lib
- QT_BIN_DIR=$(QT_BASE_DIR)/bin
- QT_INCLUDE_DIR=$(QT_BASE_DIR)/include
