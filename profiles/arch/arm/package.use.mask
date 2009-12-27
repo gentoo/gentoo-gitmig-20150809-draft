@@ -1,6 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.12 2009/09/27 13:26:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.13 2009/12/27 17:53:43 armin76 Exp $
+
+
+# Raul Porcel <armin76@gentoo.org> (27 Dec 2009)
+# Needs qt-3
+app-portage/cfg-update kde
 
 # Markus Meier <maekke@gentoo.org> (27 Sep 2009)
 # mask media-gfx/imagemagick[autotrace] as autotrace is not keyworded

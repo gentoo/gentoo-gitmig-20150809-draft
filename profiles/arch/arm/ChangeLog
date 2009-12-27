@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.52 2009/12/25 12:07:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.53 2009/12/27 17:53:43 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask app-portage/cfg-update kde
 
   25 Dec 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask debug-utils
