@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/avrdude
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.40 2008/07/30 07:00:31 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.41 2009/12/27 23:18:30 robbat2 Exp $
+
+*avrdude-5.8 (27 Dec 2009)
+
+  27 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> +avrdude-5.8.ebuild:
+  Version bump for the herd, bug #264822. Also fixes bugs #264821 and
+  #223245.
 
   30 Jul 2008; <solar@gentoo.org> avrdude-5.5.ebuild:
   - stable on x86/amd64 and keyworded ~arm
