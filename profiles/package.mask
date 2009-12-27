@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11007 2009/12/27 11:08:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11008 2009/12/27 12:57:48 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
+# KDE3-only, no porting being done for KDE4.
+# Replaced by e.g. gtkguitune, gtick, kmetronome
+# Masked for removal
+media-sound/k3guitune
+
+# Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
+# Doesn't compile (#298452). Orphaned library, was
+# used by KDE3 applications. Masked for removal.
+media-libs/akode
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
 # Last package using Qt3 libraries from,
