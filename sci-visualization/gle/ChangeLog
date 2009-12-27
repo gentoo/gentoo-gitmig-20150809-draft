@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.7 2009/12/26 19:40:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.8 2009/12/27 16:35:09 grozin Exp $
+
+  27 Dec 2009; Andrey Grozin <grozin@gentoo.org> -gle-4.2.0.ebuild,
+  gle-4.2.1.ebuild:
+  Bug #298519 fixed; old version removed
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> gle-4.2.0.ebuild,
   gle-4.2.1.ebuild:

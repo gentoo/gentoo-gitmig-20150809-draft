@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.1.ebuild,v 1.2 2009/12/26 19:40:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.1.ebuild,v 1.3 2009/12/27 16:35:09 grozin Exp $
 EAPI=2
 inherit eutils elisp-common qt4
 DESCRIPTION="Graphics Layout Engine"
@@ -52,6 +52,7 @@ src_compile() {
 src_install() {
 	# -jN failed to install some data files
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	rmdir "${D}"/usr/share/doc/gle-graphics || die "rmdir gle-graphics failed"
 	dodoc README.txt
 
 	if use qt4; then
