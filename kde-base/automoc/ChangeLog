@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/automoc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.18 2009/12/11 17:07:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.19 2009/12/27 17:10:37 armin76 Exp $
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> automoc-0.9.88.ebuild:
+  Add ~arm
 
   11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -automoc-0.9.84.ebuild:
