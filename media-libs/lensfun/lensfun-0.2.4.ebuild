@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.4.ebuild,v 1.5 2009/12/23 17:30:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.4.ebuild,v 1.6 2009/12/28 22:30:51 maekke Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://berlios/lensfun/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 x86"
 IUSE="debug doc"
 
 RDEPEND="
