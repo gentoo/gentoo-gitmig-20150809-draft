@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.20.7.ebuild,v 1.1 2009/12/22 11:11:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.20.7.ebuild,v 1.2 2009/12/28 02:51:05 maekke Exp $
 
 EAPI="2"
 inherit eutils autotools fdo-mime versionator
@@ -26,7 +26,7 @@ RDEPEND="
 	gsl? ( sci-libs/gsl )
 	fftw? ( sci-libs/fftw:3.0 )"
 DEPEND="${RDEPEND}
-	=sys-devel/bison-2.3*
+	sys-devel/bison
 	sys-devel/flex
 	test? ( media-libs/vips[lcms] )"
 
