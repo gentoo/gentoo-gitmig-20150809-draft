@@ -1,13 +1,19 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.70 2009/09/05 02:09:59 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.71 2009/12/28 07:22:26 nerdboy Exp $
+
+*grass-6.4.0_rc5 (28 Dec 2009)
+
+  28 Dec 2009; Steve Arnold <nerdboy@gentoo.org> +grass-6.4.0_rc5.ebuild:
+  Updated to latest upstream "stable" release; tested with additional real 
+  data sets (fixes import issues with certain shape files).
 
   04 Sep 2009; Steve Arnold <nerdboy@gentoo.org> grass-6.3.0.ebuild:
-  Updated to use postgresql virtual and verified it bvilds correctly from 
+  Updated to use postgresql virtual and verified it builds correctly from 
   libpq-8.0 all the way through postgres-8.3.7 (which means it can go 
   stable now). Yee-haw!  Also tested importing a bunch of old vector data
   using both postgres and sqlite with no issues (since it now defaults to
-  requiring a dull SQL backend).
+  requiring a full SQL backend).
 
   02 Aug 2009; Steve Arnold <nerdboy@gentoo.org> grass-6.3.0.ebuild:
   Updated desktop file and description (set terminal=false).
