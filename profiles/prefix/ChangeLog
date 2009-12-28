@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.128 2009/12/27 20:04:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.129 2009/12/28 18:32:41 grobian Exp $
+
+  28 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/5.10/sparc/package.mask,
+  +sunos/solaris/5.10/sparc64/package.mask:
+  Mask gcc-4.4.2 on sparcbased Solaris 10, fails to compile
 
   27 Dec 2009; Ulrich Mueller <ulm@gentoo.org>
   darwin/macos/package.use.mask:
