@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.12.ebuild,v 1.6 2007/12/30 08:56:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.12.ebuild,v 1.7 2009/12/28 16:48:39 ssuominen Exp $
 
-inherit kde-functions
+EAPI=2
+inherit qt3
 
-MY_P="${P}-1"
+MY_P=${P}-1
+
 DESCRIPTION="GUI frontend to the Subversion revision system"
 HOMEPAGE="http://sourceforge.net/projects/esvn/"
 SRC_URI="mirror://sourceforge/esvn/${MY_P}.tar.gz"
@@ -14,24 +16,24 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="dev-util/subversion"
+DEPEND="x11-libs/qt:3"
+RDEPEND="${DEPEND}
+	dev-util/subversion"
 
-need-qt 3
+S=${WORKDIR}/${PN}
 
-S="${WORKDIR}/${PN}"
-
-src_unpack() {
-	unpack ${A}
-
-	sed -i "s:qmake:${QTDIR}/bin/qmake:" "${S}"/Makefile && \
-		sed -i "s:/usr/share/doc/esvn/html-docs:/usr/share/doc/${PF}/html:" "${S}"/src/mainwindow.cpp || \
-			die "at least one sed has failed"
+src_prepare() {
+	sed -i \
+		-e "s:qmake:${QTDIR}/bin/qmake:" \
+		Makefile || die
+	sed -i \
+		-e "s:/usr/share/doc/esvn/html-docs:/usr/share/doc/${PF}/html:" \
+		src/mainwindow.cpp || die
 }
 
 src_install() {
-	emake -f esvn.mak INSTALL_ROOT="${D}" install || die "emake install failed"
-	dobin esvn esvn-diff-wrapper || die "failed to install bin files"
+	emake -f esvn.mak INSTALL_ROOT="${D}" install || die
+	dobin esvn esvn-diff-wrapper || die
 
 	dodoc AUTHORS ChangeLog README
 	dohtml -r html-docs/*
