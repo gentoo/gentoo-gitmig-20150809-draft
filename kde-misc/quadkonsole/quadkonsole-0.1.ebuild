@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/quadkonsole-0.1.ebuild,v 1.1 2009/11/20 20:48:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/quadkonsole-0.1.ebuild,v 1.2 2009/12/28 11:16:08 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -21,5 +21,7 @@ DEPEND="${RDEPEND}
 	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 
 DOCS="AUTHORS ChangeLog"
+
+PATCHES=( "${FILESDIR}/${P}-desktop_entry.patch" )
 
 S=${WORKDIR}/${MY_P}
