@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.5.7.ebuild,v 1.1 2009/12/24 12:04:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.5.7.ebuild,v 1.2 2009/12/28 21:04:07 mr_bones_ Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ src_test() {
 	local value
 
 	ewarn "Tests require internet connection in order to work."
-	
+
 	use offensive && value="true" || value="false"
 	ADULT_OK="${value}" emake check || die "emake test failed"
 }
