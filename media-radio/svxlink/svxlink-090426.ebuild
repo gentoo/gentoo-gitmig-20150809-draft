@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-090426.ebuild,v 1.3 2009/12/03 11:58:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-090426.ebuild,v 1.4 2009/12/28 16:21:24 ssuominen Exp $
 
-EAPI=1
-
-inherit kde-functions multilib
+EAPI=2
+inherit multilib qt3
 
 DESCRIPTION="Multi Purpose Voice Services System, including Qtel for EchoLink"
 HOMEPAGE="http://svxlink.sourceforge.net/"
@@ -25,22 +24,15 @@ RDEPEND="dev-lang/tcl
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+MAKEOPTS="${MAKEOPTS} -j1"
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-080730--as-needed.patch"
 	epatch "${FILESDIR}/${P}-gcc44.patch"
 
 	sed -i -e "s:/lib:/$(get_libdir):g" makefile.cfg || die
 }
 
-src_compile() {
-	set-kdedir
-	emake -j1 || die "emake failed"
-}
-
 src_install() {
-	emake -j1 \
-		INSTALL_ROOT="${D}" \
-		install || die "emake install failed"
+	emake INSTALL_ROOT="${D}" install || die
 }
