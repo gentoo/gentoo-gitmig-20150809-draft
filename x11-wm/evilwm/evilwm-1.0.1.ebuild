@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.0.1.ebuild,v 1.1 2009/09/23 15:37:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.0.1.ebuild,v 1.2 2009/12/28 20:50:28 maekke Exp $
 
 inherit toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://evilwm.sourceforge.net"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86 ~x86-fbsd"
 
 RDEPEND="x11-libs/libXext
 	x11-libs/libXrandr"
