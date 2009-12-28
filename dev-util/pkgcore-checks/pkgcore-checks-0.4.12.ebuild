@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.12.ebuild,v 1.1 2009/12/27 14:41:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.12.ebuild,v 1.2 2009/12/28 15:17:37 patrick Exp $
 
 inherit distutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=sys-apps/pkgcore-0.5.5
-	>=dev-python/snakeoil-0.3.3
+RDEPEND=">=sys-apps/pkgcore-0.5.8
+	>=dev-python/snakeoil-0.3.5
 	>=dev-lang/python-2.4"
 DEPEND="${RDEPEND}"
 
