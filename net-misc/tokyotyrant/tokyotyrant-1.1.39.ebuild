@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/tokyotyrant-1.1.36.ebuild,v 1.1 2009/10/20 18:48:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/tokyotyrant-1.1.39.ebuild,v 1.1 2009/12/28 20:51:44 patrick Exp $
 
 EAPI=2
 
