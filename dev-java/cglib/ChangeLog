@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.46 2009/11/20 10:51:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.47 2009/12/28 05:31:02 josejx Exp $
+
+  28 Dec 2009; Joseph Jezak <josejx@gentoo.org> cglib-2.2.ebuild:
+  Marked ppc/ppc64 stable for bug #284316.
 
   20 Nov 2009; Vlastimil Babka <caster@gentoo.org> cglib-2.2.ebuild,
   +files/cglib-2.2-no-leak-test.patch:
