@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.63 2009/12/28 05:29:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.64 2009/12/28 06:11:40 josejx Exp $
+
+  28 Dec 2009; Joseph Jezak <josejx@gentoo.org> asm-1.4.3-r3.ebuild,
+  asm-1.5.3.ebuild:
+  Marked ppc64 stable.
 
   28 Dec 2009; Joseph Jezak <josejx@gentoo.org> asm-3.1.ebuild:
   Marked ppc/ppc64 stable.
