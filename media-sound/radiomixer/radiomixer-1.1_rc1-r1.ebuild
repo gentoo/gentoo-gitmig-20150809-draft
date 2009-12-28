@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.5 2009/01/31 20:10:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.6 2009/12/28 16:42:17 ssuominen Exp $
 
 EAPI=2
-
-inherit kde-functions eutils
+inherit eutils qt3
 
 DESCRIPTION="Live Radio production software written by and used for open-radio.org"
 HOMEPAGE="http://sourceforge.net/projects/radiomixer"
@@ -15,13 +14,12 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="alsa debug hwmixer +jack +mad vorbis"
 
-DEPEND="media-libs/libsamplerate
+DEPEND="x11-libs/qt:3
+	media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	mad? ( media-libs/libmad )
 	vorbis? ( media-libs/libvorbis )"
-
-need-qt 3.3
 
 S=${WORKDIR}/${PN}-1.1RC1
 
