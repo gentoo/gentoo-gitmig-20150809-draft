@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.46 2009/11/21 17:32:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.47 2009/12/28 19:01:34 nixnut Exp $
+
+  28 Dec 2009; nixnut <nixnut@gentoo.org> ircservices-5.1.17.ebuild:
+  ppc stable #289539
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> ircservices-5.1.17.ebuild:
   x86 stable, bug #289539
