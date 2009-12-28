@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.10.ebuild,v 1.2 2009/12/28 11:54:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.10.ebuild,v 1.3 2009/12/28 12:00:12 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,15 +15,15 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="2"
 IUSE="debug doc examples"
 
-DEPEND="
+RDEPEND="
+	!dev-cpp/eigen:0
 	examples? (
 		x11-libs/qt-gui:4
 		x11-libs/qt-opengl:4
 	)
-	doc? ( app-doc/doxygen )
 "
-RDEPEND="${DEPEND}
-	!dev-cpp/eigen:0
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
 "
 
 S="${WORKDIR}/${PN}"
