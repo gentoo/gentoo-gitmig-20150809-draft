@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpe2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/ChangeLog,v 1.2 2009/12/24 18:30:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/ChangeLog,v 1.3 2009/12/28 23:48:35 maekke Exp $
+
+  28 Dec 2009; Markus Meier <maekke@gentoo.org> mpe2-1.0.6_p1.ebuild:
+  x86 stable, bug #290933
 
   24 Dec 2009; Pacho Ramos <pacho@gentoo.org> mpe2-1.0.6_p1.ebuild:
   amd64 stable, bug 290933
