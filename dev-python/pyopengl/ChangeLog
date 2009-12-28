@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.39 2009/11/21 03:27:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.40 2009/12/28 05:24:26 arfrever Exp $
+
+*pyopengl-3.0.1_beta2 (28 Dec 2009)
+
+  28 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyopengl-3.0.1_beta2.ebuild:
+  Version bump. Add optional dependency on dev-tcltk/togl (bug #285352).
 
 *pyopengl-3.0.1_beta1 (21 Nov 2009)
 
