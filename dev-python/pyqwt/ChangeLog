@@ -1,12 +1,13 @@
 # ChangeLog for dev-python/pyqwt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.14 2009/12/27 14:04:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.15 2009/12/28 05:07:28 yngwin Exp $
 
 *pyqwt-5.2.0 (27 Dec 2009)
 
   27 Dec 2009; Ben de Groot <yngwin@gentoo.org> pyqwt-5.1.0.ebuild,
   +pyqwt-5.2.0.ebuild:
-  Version bump (bug 248968). Change sip dep in version 5.1.0 (bug 294630).
+  Version bump, thanks to Rafael G. Martins (bug 248968). Adjust sip dep
+  in version 5.1.0 (bug 294630).
 
   21 Oct 2009; Dirkjan Ochtman <djc@gentoo.org> -pyqwt-4.2-r1.ebuild:
   Clean up old version that still depended upon numarray.
