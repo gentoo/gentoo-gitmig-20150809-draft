@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97.ebuild,v 1.1 2009/12/28 12:33:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.1 2009/12/28 13:14:57 scarabeus Exp $
 
 EAPI="2"
 
@@ -43,8 +43,8 @@ src_prepare() {
 
 	# FindKDevPlatform.cmake is installed by kdelibs
 	sed -i \
-		-e '/^add_subdirectory(modules)/s/^/#DONOTINSTALL/' \
-		cmake/CMakeLists.txt || die
+		-e '/cmakeFiles/s/^/#DONOTINSTALL/' \
+		cmake/modules/CMakeLists.txt || die
 }
 
 # Moved to playground for now
