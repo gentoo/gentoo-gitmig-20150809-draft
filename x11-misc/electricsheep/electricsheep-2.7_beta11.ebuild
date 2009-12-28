@@ -1,16 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.1 2009/09/17 21:56:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.2 2009/12/28 17:14:29 ssuominen Exp $
 
 EAPI=2
-
-inherit eutils flag-o-matic kde-functions autotools
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="realize the collective dream of sleeping computers from all over the internet"
 HOMEPAGE="http://electricsheep.org/"
 SRC_URI="http://dev.gentooexperimental.org/~dreeevil/electricsheep-2.7_beta11.tar.bz2"
 
-IUSE="kde" #gnome
+IUSE="" #kde gnome
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -26,8 +25,8 @@ RDEPEND="${DEPEND}
 	media-gfx/flam3
 	media-video/mplayer
 	net-misc/curl
-	x11-misc/xdg-utils
-	kde? ( kde-base/kscreensaver )"
+	x11-misc/xdg-utils"
+#	kde? ( kde-base/kscreensaver )
 #	gnome? ( gnome-extra/gnome-screensaver )
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0
@@ -46,13 +45,13 @@ src_install() {
 	insinto /usr/share/xscreensaver/config
 	doins ${PN}.xml || die "${PN}.xml failed"
 
-	if use kde; then
-		set-kdedir
-		insinto /usr/share/applications
-		newins ${PN}.desktop{.kde,} || die "${PN}.desktop.kde failed"
-		insinto "${KDEDIR}/share/applnk/System/ScreenSavers"
-		newins ${PN}.desktop{.kde,} || die "${PN}.desktop.kde failed"
-	fi
+	#if use kde; then
+	#	set-kdedir
+	#	insinto /usr/share/applications
+	#	newins ${PN}.desktop{.kde,} || die "${PN}.desktop.kde failed"
+	#	insinto "${KDEDIR}/share/applnk/System/ScreenSavers"
+	#	newins ${PN}.desktop{.kde,} || die "${PN}.desktop.kde failed"
+	#fi
 
 	#if use gnome; then
 	#	insinto /usr/share/applications/screensavers
