@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/freemarker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.25 2009/09/11 22:45:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.26 2009/12/28 14:42:05 betelgeuse Exp $
+
+  28 Dec 2009; Petteri Räty <betelgeuse@gentoo.org>
+  freemarker-2.3.13.ebuild:
+  Fix building with ecj-3.5 reported in bug #295678.
 
   11 Sep 2009; Markus Meier <maekke@gentoo.org> freemarker-2.3.13.ebuild:
   amd64/x86 stable, bug #284326

@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.4 2009/09/11 22:45:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.5 2009/12/28 14:42:05 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -30,23 +30,20 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
-src_unpack() {
-
-	unpack ${A}
-
-	cd "${S}"
+java_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	# for ecj-3.5
+	java-ant_rewrite-bootclasspath auto
 
 	cd "${S}/lib/"
 	rm -f *.jar
 
 	rm -f "${S}/src/freemarker/testcase/servlets/WEB-INF/taglib2.jar"
 	rm -f "${S}/src/freemarker/testcase/servlets/WEB-INF/lib/taglib-foo.jar"
-
 }
 
 src_compile() {
-
 	# BIG FAT WARNING:
 	# clean target removes lib/ directory!!
 	eant clean
@@ -65,15 +62,12 @@ src_compile() {
 
 	cd "${S}"
 	eant jar $(use_doc) -Djavacc.home=/usr/share/javacc/lib
-
 }
 
 src_install() {
-
 	java-pkg_dojar lib/${PN}.jar
 	dodoc README.txt || die
 
 	use doc && java-pkg_dojavadoc build/api
 	use source && java-pkg_dosrc src/*
-
 }
