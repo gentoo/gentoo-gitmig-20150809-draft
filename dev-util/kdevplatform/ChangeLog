@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.15 2009/12/10 18:25:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.16 2009/12/28 12:33:07 scarabeus Exp $
+
+*kdevplatform-0.9.97 (28 Dec 2009)
+
+  28 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdevplatform-0.9.96.ebuild, +kdevplatform-0.9.97.ebuild:
+  Version bump. Drop older.
 
   10 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   kdevplatform-0.9.95.ebuild:
