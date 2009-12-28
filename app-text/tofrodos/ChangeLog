@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tofrodos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tofrodos/ChangeLog,v 1.2 2009/07/17 14:34:31 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tofrodos/ChangeLog,v 1.3 2009/12/28 12:24:10 jer Exp $
+
+  28 Dec 2009; Jeroen Roovers <jer@gentoo.org> tofrodos-1.7.8.ebuild:
+  Marked ~hppa too.
 
   17 Jul 2009; Víctor Ostorga <vostorga@gentoo.org>
   +files/tofrodos-1.7.8-CFLAGS.patch, tofrodos-1.7.8.ebuild:
