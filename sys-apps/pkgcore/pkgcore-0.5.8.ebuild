@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.8.ebuild,v 1.1 2009/12/27 14:38:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.8.ebuild,v 1.2 2009/12/28 15:16:13 patrick Exp $
 
 inherit distutils eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.4
-	>=dev-python/snakeoil-0.3.3
+	>=dev-python/snakeoil-0.3.5
 	>=app-shells/bash-3.0
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
