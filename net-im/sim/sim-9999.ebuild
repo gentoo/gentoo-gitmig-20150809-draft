@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-9999.ebuild,v 1.4 2009/10/28 13:18:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-9999.ebuild,v 1.5 2009/12/28 16:58:55 ssuominen Exp $
 
 EAPI="1"
 
-inherit cmake-utils kde-functions eutils flag-o-matic subversion
+inherit cmake-utils eutils flag-o-matic subversion qt3
 
 ESVN_REPO_URI="svn://svn.berlios.de/sim-im/trunk"
 ESVN_PROJECT="sim-im"
