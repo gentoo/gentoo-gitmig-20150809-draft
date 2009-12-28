@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.26 2009/11/16 23:36:03 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.27 2009/12/28 20:35:44 armin76 Exp $
+
+  28 Dec 2009; Raúl Porcel <armin76@gentoo.org> znc-0.066.ebuild,
+  znc-0.074.ebuild, znc-0.076.ebuild:
+  Add ~arm wrt #298504
 
 *znc-0.076 (16 Nov 2009)
 
