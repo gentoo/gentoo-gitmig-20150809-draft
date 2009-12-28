@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.188 2009/11/12 15:57:56 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.189 2009/12/28 12:38:34 scarabeus Exp $
+
+*kdevelop-3.9.97 (28 Dec 2009)
+
+  28 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdevelop-3.9.95.ebuild, -kdevelop-3.9.96.ebuild, +kdevelop-3.9.97.ebuild,
+  metadata.xml:
+  Version bump. Drop old.
 
 *kdevelop-3.9.96 (12 Nov 2009)
 

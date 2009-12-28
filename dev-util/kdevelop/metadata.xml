@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>kde</herd>
-  <use>
-    <flag name="cmake">Support for the CMake Build System.</flag>
-    <flag name="qmake">Support for the QMake Build System.</flag>
-  </use>
+<herd>kde</herd>
+<use>
+	<flag name="cmake">Enable support for CMAKE build system</flag>
+	<flag name="qmake">Enable support for Qmake build system</flag>
+	<flag name="qthelp">Enable support for QtHelp documentation browsing</flag>
+</use>
 </pkgmetadata>
