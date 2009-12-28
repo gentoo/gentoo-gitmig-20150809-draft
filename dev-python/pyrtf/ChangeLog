@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrtf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.4 2007/02/22 00:42:59 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.5 2009/12/28 21:19:04 maekke Exp $
+
+  28 Dec 2009; Markus Meier <maekke@gentoo.org> pyrtf-0.45.ebuild:
+  amd64/x86 stable, bug #294499
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
