@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.42.34.ebuild,v 1.3 2009/12/27 22:59:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.42.34.ebuild,v 1.4 2009/12/28 15:33:04 lack Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -46,7 +46,8 @@ RDEPEND="x86? ( $NATIVE_DEPS )
 			32bit? ( $EMUL_DEPS )
 		)
 		!multilib? ( $NATIVE_DEPS )
-	)"
+	)
+	!www-plugins/libflashsupport"
 
 # Our new flash-libcompat suffers from the same EXESTACK problem as libcrypto
 # from app-text/acroread, so tell QA to ignore it.
