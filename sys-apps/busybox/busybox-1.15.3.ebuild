@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.15.3.ebuild,v 1.1 2009/12/26 17:14:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.15.3.ebuild,v 1.2 2009/12/28 22:33:28 solar Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -189,6 +189,7 @@ src_install() {
 	else
 		dobin bb || die
 	fi
+	dosym /bin/bb /sbin/mdev
 
 	insinto /$(get_libdir)/rcscripts/addons
 	doins "${FILESDIR}"/mdev-start.sh || die
