@@ -1,6 +1,9 @@
 # ChangeLog for virtual/eject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.1 2009/08/12 19:22:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.2 2009/12/28 23:30:08 abcd Exp $
+
+  28 Dec 2009; Jonathan Callen <abcd@gentoo.org> eject-0.ebuild:
+  Keyword ~amd64-linux ~x86-linux for prefix
 
 *eject-0 (12 Aug 2009)
 
