@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.6.ebuild,v 1.1 2009/12/27 02:57:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.6.ebuild,v 1.2 2009/12/28 13:40:14 nirbheek Exp $
 
 EAPI="2"
 
@@ -13,8 +13,9 @@ SLOT="2"
 IUSE="doc"
 KEYWORDS="~amd64 ~x86"
 
+# XXX: gtk+-2.18 required, configure.ac lies, bug 298534
 COMMON_DEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.15
+	>=x11-libs/gtk+-2.18
 	>=x11-libs/libnotify-0.4.3
 	>=gnome-base/gconf-2.6
 	>=dev-libs/dbus-glib-0.74
