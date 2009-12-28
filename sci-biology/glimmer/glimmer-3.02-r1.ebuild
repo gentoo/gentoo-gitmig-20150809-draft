@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02-r1.ebuild,v 1.1 2009/01/04 01:24:22 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02-r1.ebuild,v 1.2 2009/12/28 19:14:26 weaver Exp $
 
-inherit versionator
+EAPI="2"
 
-MY_PV=$(delete_all_version_separators)
+inherit eutils
+
+MY_PV=${PV//./}
 
 DESCRIPTION="An HMM-based microbial gene finding system from TIGR"
 HOMEPAGE="http://www.cbcb.umd.edu/software/glimmer/"
@@ -16,26 +18,33 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
-RDEPEND="!app-crypt/pkcrack
+RDEPEND="app-shells/tcsh
+	!app-crypt/pkcrack
 	!media-libs/libextractor"
 
 S="${WORKDIR}/${PN}${PV}"
 
-src_compile() {
+src_prepare() {
 	sed -i -e 's|\(set awkpath =\).*|\1 /usr/share/'${PN}'/scripts|' \
 		-e 's|\(set glimmerpath =\).*|\1 /usr/bin|' scripts/* || die "failed to rewrite paths"
-	sed -i 's/include  <string>/include  <string.h>/' src/Common/delcher.hh
-	cd src
-	emake || die "emake failed"
+	# Fix Makefile to die on failure
+	sed -i 's/$(MAKE) $(TGT)/$(MAKE) $(TGT) || exit 1/' src/c_make.gen || die
+	# GCC 4.3 include fix
+	sed -i 's/include  <string>/include  <string.h>/' src/Common/delcher.hh || die
+	epatch "${FILESDIR}/${PN}-${PV}-glibc210.patch"
+}
+
+src_compile() {
+	emake -C src || die
 }
 
 src_install() {
 	rm bin/test
-	dobin bin/*
+	dobin bin/* || die
 
 	dodir /usr/share/${PN}/scripts
 	insinto /usr/share/${PN}/scripts
-	doins scripts/*
+	doins scripts/* || die
 
 	dodoc glim302notes.pdf
 }
