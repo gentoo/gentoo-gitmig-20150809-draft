@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keynote
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.10 2008/12/30 18:37:26 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.11 2009/12/28 11:59:51 flameeyes Exp $
+
+  28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> keynote-2.3.ebuild:
+  Use -j1 for build (bug #298669).
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> keynote-2.3.ebuild:
   Added missing die

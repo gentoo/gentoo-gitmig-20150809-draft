@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.10 2008/12/30 18:37:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.11 2009/12/28 11:59:51 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -26,10 +26,11 @@ src_unpack() {
 src_compile() {
 	tc-export AR CC RANLIB
 	econf
+	# bug #298669
 	if use ssl; then
-		make || die
+		emake -j1 || die
 	else
-		make nocrypto || die
+		emake -j1 nocrypto || die
 	fi
 }
 
