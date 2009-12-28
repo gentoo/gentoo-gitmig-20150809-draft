@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convertlit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.16 2009/12/28 16:23:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.17 2009/12/28 22:50:49 yngwin Exp $
+
+  28 Dec 2009; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Taking up maintainership
 
   28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -convertlit-1.8.ebuild, metadata.xml:
