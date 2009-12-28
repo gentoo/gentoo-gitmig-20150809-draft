@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5128 2009/12/27 19:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5129 2009/12/28 12:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1006,8 +1006,9 @@ dev-util/git:ppcsha1 - Make use of a bundled routine that is optimized for the P
 dev-util/git:subversion - Include git-svn for dev-util/subversion support.
 dev-util/git:webdav - Adds support for push'ing to HTTP repositories via DAV.
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
-dev-util/kdevelop:cmake - Support for the CMake Build System.
-dev-util/kdevelop:qmake - Support for the QMake Build System.
+dev-util/kdevelop:cmake - Enable support for CMAKE build system
+dev-util/kdevelop:qmake - Enable support for Qmake build system
+dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
 dev-util/kdevplatform:git - Add suport for git VCS
 dev-util/kdevplatform:mercurial - Add suport for mercurial VCS
 dev-util/mercurial:bugzilla - Support bugzilla integration.
