@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.4-r1.ebuild,v 1.1 2009/12/26 17:49:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.4-r1.ebuild,v 1.2 2009/12/28 12:08:09 graaff Exp $
 
 EAPI=2
 
@@ -26,8 +26,7 @@ ruby_add_rdepend '>=dev-ruby/ruby-inline-3.7.0 >=dev-ruby/sexp-processor-3.0.0'
 ruby_add_bdepend test "dev-ruby/hoe dev-ruby/hoe-seattlerb virtual/ruby-minitest dev-ruby/ruby2ruby"
 ruby_add_bdepend doc "dev-ruby/hoe dev-ruby/hoe-seattlerb"
 
-src_test() {
+src_prepare() {
+	ruby-ng_src_prepare
 	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
-
-	ruby-ng_src_test
 }
