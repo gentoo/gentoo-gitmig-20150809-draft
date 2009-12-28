@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.16.ebuild,v 1.1 2009/12/28 00:14:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.16.ebuild,v 1.2 2009/12/28 01:37:06 robbat2 Exp $
 
 inherit autotools python
 
@@ -48,8 +48,13 @@ src_unpack() {
 	sed -r -i \
 		-e '/INSTALL.*\.py[oc] /d' \
 		-e '/install-exec-local/s,OpenIPMI.pyc OpenIPMI.pyo,,g' \
-		"${S}"/swig/python/Makefile.am \
-		"${S}"/swig/python/Makefile.in
+		"${S}"/swig/python/Makefile.{am,in}
+
+	# Bug #298250: parallel install fix.
+	sed -r -i \
+		-e '/^install-data-local:/s,$, install-exec-am,g' \
+		"${S}"/cmdlang/Makefile.{am,in}
+
 	# We touch the .in and .am above because if we use the below, the Perl stuff
 	# is very fragile, and often fails to link.
 	#cd "${S}"
@@ -82,8 +87,7 @@ src_compile() {
 }
 
 src_install() {
-	# bug #298250
-	emake -j1 DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc README* FAQ ChangeLog TODO doc/IPMI.pdf lanserv/README.emulator
 	newdoc cmdlang/README README.cmdlang
 }
