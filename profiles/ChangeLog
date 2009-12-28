@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3715 2009/12/28 00:53:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3716 2009/12/28 14:35:27 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask app-mobilephone/moto4lin and net-p2p/dc-qt for removal.
 
   28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking sys-apps/sdd for QA removal.
