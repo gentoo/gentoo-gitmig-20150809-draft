@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.18 2008/07/27 19:54:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.19 2009/12/28 17:00:49 ssuominen Exp $
 
 EAPI=1
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
 
-inherit kde-functions eutils autotools
+inherit qt3 eutils autotools
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
