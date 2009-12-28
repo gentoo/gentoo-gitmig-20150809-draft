@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.10 2009/03/29 17:48:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.11 2009/12/28 14:56:17 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc"
@@ -137,7 +137,7 @@ src_compile() {
 	unset DISPLAY
 
 	# Fails to compile
-	java-pkg_filter-compiler ecj-3.1 ecj-3.2 ecj-3.3
+	java-pkg_filter-compiler ecj-3.1 ecj-3.2 ecj-3.3 ecj-3.4 ecj-3.5
 
 	# Specify the build-nozip target otherwise it will build
 	# a zip file of the netbeans folder, which will copy directly.
