@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.129 2009/12/28 18:32:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.130 2009/12/28 19:35:25 grobian Exp $
+
+  28 Dec 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask =dev-python/beautifulsoup-3.1.0.1-r1 because it depends on python-3
 
   28 Dec 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/5.10/sparc/package.mask,

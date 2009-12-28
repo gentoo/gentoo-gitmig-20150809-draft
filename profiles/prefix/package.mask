@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.44 2009/12/27 16:13:39 grobian Exp $
+# $Id: package.mask,v 1.45 2009/12/28 19:35:25 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -46,7 +46,10 @@
 # Jeremy Olexa <darkside@gentoo.org> (21 Aug 2009)
 # python-3 will most certainly cause problems if it ever gets unleashed without
 # a look over from a prefix dev. (not me) ;)
+# Additionally mask packages requiring it
+dev-lang/python:3.0
 dev-lang/python:3.1
+=dev-python/beautifulsoup-3.1.0.1-r1
 
 # Fabian Groffen <grobian@gentoo.org> (26 Jul 2009)
 # util-linux doesn't work on non-Linux and doesn't work in Prefix.  This
