@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/matchbox-panel-manager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/ChangeLog,v 1.7 2009/03/14 03:51:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/ChangeLog,v 1.8 2009/12/28 03:30:21 miknix Exp $
+
+  28 Dec 2009; Angelo Arrifano <miknix@gentoo.org>
+  matchbox-panel-manager-0.1.ebuild:
+  QA: Fix dodoc on missing files (bug #298492).
 
   14 Mar 2009; <solar@gentoo.org> matchbox-panel-manager-0.1.ebuild:
   keyword ~amd64
