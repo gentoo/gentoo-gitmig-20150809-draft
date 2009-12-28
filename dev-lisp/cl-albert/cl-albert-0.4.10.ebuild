@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.10.ebuild,v 1.5 2005/09/08 21:55:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.10.ebuild,v 1.6 2009/12/28 13:58:46 flameeyes Exp $
 
 inherit common-lisp eutils
 
@@ -25,7 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	make -C expat all || die
+	# bug #298683
+	emake -j1 -C expat all || die
 }
 
 src_install() {
