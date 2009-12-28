@@ -1,30 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/waveselect-0.1.2.ebuild,v 1.7 2009/11/11 12:37:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/waveselect-0.1.2.ebuild,v 1.8 2009/12/28 17:22:38 ssuominen Exp $
 
-EAPI=1
-ARTS_REQUIRED=never
-inherit eutils kde
+EAPI=2
+inherit eutils qt3
 
 DESCRIPTION="Waveselect is wireless lan connection tool for Linux using QT and wireless-tools."
 HOMEPAGE="http://www.kde-apps.org/content/show.php?content=19152"
 SRC_URI="http://kernelpanic.no/waveselect/files/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
-S=${WORKDIR}/${PN}
 
 DEPEND="x11-libs/qt:3"
 RDEPEND="${DEPEND}
 	net-wireless/wireless-tools"
 
-src_unpack() {
-	kde_src_unpack
+S=${WORKDIR}/${PN}
 
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
