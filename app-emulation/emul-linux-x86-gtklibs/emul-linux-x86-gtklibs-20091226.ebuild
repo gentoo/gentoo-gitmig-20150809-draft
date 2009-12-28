@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20091226.ebuild,v 1.1 2009/12/26 21:47:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20091226.ebuild,v 1.2 2009/12/28 21:05:26 mr_bones_ Exp $
 
 inherit emul-linux-x86
 
