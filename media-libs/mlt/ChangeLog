@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.54 2009/12/17 11:37:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.55 2009/12/28 16:50:22 ssuominen Exp $
+
+  28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> mlt-0.4.6.ebuild,
+  mlt-0.4.6-r1.ebuild:
+  Stop using deprecated kde-functions.eclass.
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> mlt-0.4.6.ebuild:
   stable x86, bug 291947
