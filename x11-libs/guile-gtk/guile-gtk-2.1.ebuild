@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.1 2009/12/05 13:13:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.2 2009/12/28 23:34:11 flameeyes Exp $
 
 inherit virtualx eutils
 
@@ -37,7 +37,8 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	# bug #298803
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 	dodoc README AUTHORS ChangeLog NEWS TODO
 	insinto /usr/share/doc/${PF}/examples
 	doins -r examples/

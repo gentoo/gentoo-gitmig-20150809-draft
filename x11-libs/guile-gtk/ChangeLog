@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/guile-gtk
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.32 2009/12/05 13:13:50 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.33 2009/12/28 23:34:11 flameeyes Exp $
+
+  28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  guile-gtk-2.1.ebuild:
+  Use emake -j1 for install, as per bug #298803.
 
 *guile-gtk-2.1 (05 Dec 2009)
 
