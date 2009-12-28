@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/libflashsupport
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.2 2009/12/05 16:42:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.3 2009/12/28 15:18:27 lack Exp $
+
+  10 Dec 2009; Jim Ramsay <lack@gentoo.org> libflashsupport-1.2.ebuild:
+  Block >=www-plugins/adobe-flash-10, this is only needed for flash-9
 
   05 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   libflashsupport-1.2.ebuild, +files/libflashsupport-1.2-asneeded.patch:
