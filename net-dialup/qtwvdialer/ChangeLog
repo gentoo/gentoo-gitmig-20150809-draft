@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/qtwvdialer
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.16 2008/12/14 12:59:20 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.17 2009/12/28 11:50:57 ssuominen Exp $
+
+*qtwvdialer-0.4.4_p20091228 (28 Dec 2009)
+
+  28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +qtwvdialer-0.4.4_p20091228.ebuild:
+  Version bump to Qt4 port wrt #297513.
 
   14 Dec 2008; Alin Năstac <mrness@gentoo.org> qtwvdialer-0.4.4.ebuild:
   Fix build failure when qt-4 is installed (#247948).
