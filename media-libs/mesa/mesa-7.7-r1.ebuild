@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7-r1.ebuild,v 1.1 2009/12/28 21:38:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7-r1.ebuild,v 1.2 2009/12/28 23:47:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -130,7 +130,7 @@ src_configure() {
 		elog "    Svga: VMWare Virtual GPU driver. Hic sunt leones."
 		echo
 		myconf="${myconf}
-			--disablegallium-intel
+			--disable-gallium-intel
 			--with-state-trackers=glx,dri,egl
 			$(use_enable video_cards_svga gallium-svga)
 			$(use_enable video_cards_nouveau gallium-nouveau)"
