@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.16 2009/08/15 15:14:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.17 2009/12/28 16:27:22 ssuominen Exp $
 
 EAPI=2
-inherit eutils kde-functions
+inherit eutils qt3
 
 DESCRIPTION="Qt based front-end for the MusicBrainz Client Library"
 HOMEPAGE="http://qmbtagger.sourceforge.net/"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 
-RDEPEND="=x11-libs/qt-3*
+RDEPEND="x11-libs/qt:3
 	media-libs/flac[cxx]
 	media-libs/id3lib
 	=media-libs/musicbrainz-2*
@@ -43,6 +43,6 @@ src_configure() {
 }
 
 src_install () {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
-	dodoc CHANGELOG README || die "dodoc failed"
+	emake -j1 DESTDIR="${D}" install || die
+	dodoc CHANGELOG README || die
 }
