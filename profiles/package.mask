@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11016 2009/12/29 14:38:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11017 2009/12/29 18:37:34 abcd Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jonathan Callen <abcd@gentoo.org> (29 Dec 2009)
+# Project abandoned upstream (replaced by dev-util/schroot)
+# Collides with dev-util/schroot[dchroot]
+# Masked for removal in 30 days, bug 298874
+sys-apps/dchroot
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Dec 2009)
 #  on behalf of QA team
