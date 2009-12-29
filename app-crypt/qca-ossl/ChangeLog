@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-ossl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.21 2009/11/13 12:54:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.22 2009/12/29 18:11:28 armin76 Exp $
+
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  qca-ossl-2.0.0_beta3.ebuild, qca-ossl-2.0.0_beta3-r1.ebuild:
+  Add ~arm wrt #288000
 
   13 Nov 2009; Joseph Jezak <josejx@gentoo.org>
   qca-ossl-2.0.0_beta3-r1.ebuild:

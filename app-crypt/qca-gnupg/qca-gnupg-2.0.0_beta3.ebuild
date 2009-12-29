@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/qca-gnupg-2.0.0_beta3.ebuild,v 1.9 2009/08/19 14:04:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/qca-gnupg-2.0.0_beta3.ebuild,v 1.10 2009/12/29 18:12:34 armin76 Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://delta.affinix.com/download/qca/${QCA_VER}/plugins/${MY_P}.tar.bz
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND=">=app-crypt/qca-${QCA_VER}[debug?]
