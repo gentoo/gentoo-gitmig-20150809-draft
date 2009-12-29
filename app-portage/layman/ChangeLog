@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.79 2009/12/05 00:44:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.80 2009/12/29 00:29:40 sping Exp $
+
+*layman-9999 (29 Dec 2009)
+
+  29 Dec 2009; Sebastian Pipping <sping@gentoo.org> +layman-9999.ebuild:
+  Add live ebuild
 
   05 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   layman-1.2.4.ebuild:
