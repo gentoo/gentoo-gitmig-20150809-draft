@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a.ebuild,v 1.1 2009/12/23 22:27:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a.ebuild,v 1.2 2009/12/29 05:21:57 darkside Exp $
 
 inherit eutils
 
@@ -20,19 +20,17 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
-	# Configure need some tips
-	myconf="--prefix=/usr \
-		$(use_enable dlna ) \
-		$(use_enable nls ) \
-		 --disable-strip"
+	myconf="--prefix=/usr --disable-strip $(use_enable dlna)"
+	# nls can only be disabled, on by default.
+	use nls || myconf="${myconf} --disable-nls"
 
 	# remove original init.d
 	sed -i \
 		-e '/(INSTALL) -d $(sysconfdir)\/init\.d/d' \
 		-e '/$(INSTALL) -m 755 $(INITD_FILE) $(sysconfdir)\/init.d/d' \
-		scripts/Makefile
+		scripts/Makefile || die
 
-	# note: homegrown configure
+	# note: homegrown configure, careful.
 	./configure ${myconf} || die "Configure failed"
 
 	emake || die "Make failed"
