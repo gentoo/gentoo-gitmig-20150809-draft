@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.25 2009/12/04 21:23:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.26 2009/12/29 06:23:04 vapier Exp $
+
+  29 Dec 2009; Mike Frysinger <vapier@gentoo.org> mtd-utils-20080907.ebuild,
+  mtd-utils-20090630.ebuild, mtd-utils-99999999.ebuild:
+  Pull in util-linux for libuuid.
 
   04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mtd-utils-20090630.ebuild:

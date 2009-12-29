@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.2 2009/12/01 03:13:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.3 2009/12/29 06:23:04 vapier Exp $
 
 ECVS_USER="anoncvs"
 ECVS_PASS="anoncvs"
@@ -16,9 +16,11 @@ SLOT="0"
 KEYWORDS=""
 IUSE="xattr"
 
+# We need libuuid
 RDEPEND="!sys-fs/mtd
 	dev-libs/lzo
-	sys-libs/zlib"
+	sys-libs/zlib
+	>=sys-apps/util-linux-2.16"
 # ACL is only required for the <sys/acl.h> header file to build mkfs.jffs2
 # And ACL brings in Attr as well.
 DEPEND="xattr? ( sys-apps/acl )
