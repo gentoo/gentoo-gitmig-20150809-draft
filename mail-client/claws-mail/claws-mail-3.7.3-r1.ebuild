@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.3.ebuild,v 1.2 2009/11/18 10:07:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.3-r1.ebuild,v 1.1 2009/12/29 12:59:21 fauli Exp $
 
 inherit eutils multilib
 
@@ -71,6 +71,7 @@ src_compile() {
 		$(use_enable spamassassin spamassassin-plugin) \
 		$(use_enable bogofilter bogofilter-plugin) \
 		$(use_enable smime smime-plugin) \
+		--docdir=/usr/share/doc/${PF} \
 		--enable-trayicon-plugin \
 		--disable-maemo ${myconf} || die
 
