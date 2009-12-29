@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3718 2009/12/29 18:37:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3719 2009/12/29 18:47:48 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask metasploit and fe3d since they use SCMs to fetch sources.
 
   29 Dec 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
   Mask sys-apps/dchroot
