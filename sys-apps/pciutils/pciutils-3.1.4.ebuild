@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.4.ebuild,v 1.8 2009/12/28 18:27:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.4.ebuild,v 1.9 2009/12/29 06:08:33 vapier Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Various utilities dealing with the PCI bus"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html"
@@ -28,6 +28,7 @@ pemake() {
 	emake \
 		HOST="${CHOST}" \
 		CROSS_COMPILE="${CHOST}-" \
+		CC="$(tc-getCC)" \
 		DNS="yes" \
 		IDSDIR="/usr/share/misc" \
 		MANDIR="/usr/share/man" \
