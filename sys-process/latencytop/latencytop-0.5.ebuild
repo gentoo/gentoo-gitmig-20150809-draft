@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.5.ebuild,v 1.1 2009/12/18 15:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.5.ebuild,v 1.2 2009/12/29 06:31:34 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,11 +23,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-*.patch
+	sed -i \
+		-e "/^HAS_GTK_GUI/s:=.*:=$(use gtk && echo 1):" \
+		Makefile || die
 }
 
 src_compile() {
 	tc-export CC PKG_CONFIG
-	emake HAS_GTK_GUI=$(use gtk && echo 1) || die
+	emake || die
 }
 
 src_install() {

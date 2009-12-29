@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/latencytop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/ChangeLog,v 1.6 2009/12/18 15:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/ChangeLog,v 1.7 2009/12/29 06:31:34 vapier Exp $
+
+  29 Dec 2009; Mike Frysinger <vapier@gentoo.org> latencytop-0.5.ebuild:
+  Fix building when USE=-gtk #297461 by Andrei Slavoiu.
 
 *latencytop-0.5 (18 Dec 2009)
 
