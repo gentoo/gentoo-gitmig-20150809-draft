@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.35 2009/11/27 15:59:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.36 2009/12/29 17:24:00 armin76 Exp $
+
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org> cython-0.11.2.ebuild,
+  cython-0.11.2-r1.ebuild, cython-0.11.3.ebuild, cython-0.12_rc1.ebuild,
+  cython-0.12.ebuild:
+  Add ~arm
 
 *cython-0.12 (27 Nov 2009)
 
