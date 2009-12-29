@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.4 2009/09/07 19:12:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.5 2009/12/29 12:41:13 fauli Exp $
 
 inherit eutils multilib rpm
 
@@ -32,6 +32,8 @@ RDEPEND="x11-terms/xterm
 	media-fonts/font-adobe-100dpi
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
+	media-fonts/font-xfree86-type1
+	media-fonts/font-misc-ethiopic
 	x86? (
 		x11-libs/libXp
 		x11-libs/libXaw
@@ -39,8 +41,11 @@ RDEPEND="x11-terms/xterm
 		x11-libs/libSM
 		x11-libs/libICE
 		>=x11-libs/openmotif-2.3.1
-		)
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-20080316 )"
+	)
+	amd64? (
+		>=app-emulation/emul-linux-x86-xlibs-20080316
+		www-plugins/nspluginwrapper
+	)"
 DEPEND=""
 S="${WORKDIR}/usr/lib/ICAClient"
 

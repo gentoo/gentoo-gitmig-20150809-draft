@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.70 2009/09/07 19:12:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.71 2009/12/29 12:41:13 fauli Exp $
+
+  29 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  icaclient-11.0-r2.ebuild:
+  add missing dependencies for fonts and nspluginwrapper, spotted by
+  Sebastiaan <s DOT breedveld AT erasmusmc DOT nl> in bug 296182
 
   07 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   icaclient-11.0-r2.ebuild:
