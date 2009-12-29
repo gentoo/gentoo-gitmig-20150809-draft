@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/matchbox-desktop-image-browser-0.2.ebuild,v 1.4 2009/03/14 03:51:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/matchbox-desktop-image-browser-0.2.ebuild,v 1.5 2009/12/29 19:49:53 miknix Exp $
 
 inherit versionator eutils
 
@@ -16,8 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug"
 
-DEPEND=">=x11-libs/libmatchbox-1.1
-	x11-wm/matchbox-desktop"
+
+RDEPEND=">=x11-libs/libmatchbox-1.1"
+DEPEND="${RDEPEND} x11-wm/matchbox-desktop"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -37,5 +38,5 @@ src_compile () {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }

@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/matchbox-desktop-image-browser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.3 2009/03/14 03:51:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.4 2009/12/29 19:49:53 miknix Exp $
+
+  29 Dec 2009; Angelo Arrifano <miknix@gentoo.org>
+  matchbox-desktop-image-browser-0.2.ebuild:
+  QA: Fix dodoc of missing file (bug #298870).
+  Add missing RDEPEND.
 
   14 Mar 2009; <solar@gentoo.org> matchbox-desktop-image-browser-0.2.ebuild:
   keyword ~amd64
