@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-6.0.3.ebuild,v 1.5 2009/12/26 17:41:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-6.0.3.ebuild,v 1.6 2009/12/29 17:43:20 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="amd64 hppa ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 
 IUSE="jbig pam mgetty html"
 
