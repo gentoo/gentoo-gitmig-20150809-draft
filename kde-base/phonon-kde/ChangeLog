@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.39 2009/12/27 15:37:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.40 2009/12/29 03:19:56 abcd Exp $
+
+  29 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  files/phonon-kde-4.3.4-optional-alsa.patch:
+  Fix patch to actually disable ALSA
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> phonon-kde-4.3.4.ebuild,
   +files/phonon-kde-4.3.4-optional-alsa.patch:
