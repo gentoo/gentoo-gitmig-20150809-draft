@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/toluapp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.21 2009/08/28 15:20:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.22 2009/12/29 18:31:21 armin76 Exp $
+
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org> toluapp-1.0.93.ebuild:
+  Add ~sparc wrt #279734
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org> toluapp-1.0.93.ebuild:
   Keyworded on alpha, bug #279734
