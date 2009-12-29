@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.2 2009/11/02 16:30:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.3 2009/12/29 21:50:57 nirbheek Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ IUSE="doc examples libffi test"
 
 # FIXME: add introspection support
 RDEPEND=">=dev-lang/python-2.4.4-r5
-	>=dev-libs/glib-2.16
+	>=dev-libs/glib-2.20
 	!<dev-python/pygtk-2.13
 	libffi? ( virtual/libffi )"
 DEPEND="${RDEPEND}

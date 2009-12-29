@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.86 2009/11/02 16:30:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.87 2009/12/29 21:50:57 nirbheek Exp $
+
+  29 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  pygobject-2.18.0.ebuild, pygobject-2.18.0-r2.ebuild,
+  pygobject-2.20.0.ebuild:
+  Fix glib depends in all ebuilds; configure.ac lies, fixes bug 298823
 
   02 Nov 2009; Fabian Groffen <grobian@gentoo.org>
   pygobject-2.18.0-r2.ebuild, pygobject-2.20.0.ebuild:

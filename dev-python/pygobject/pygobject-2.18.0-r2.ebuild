@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0-r2.ebuild,v 1.4 2009/11/02 16:28:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0-r2.ebuild,v 1.5 2009/12/29 21:50:57 nirbheek Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc examples libffi test"
 
 RDEPEND=">=dev-lang/python-2.4.4-r5
-	>=dev-libs/glib-2.16
+	>=dev-libs/glib-2.18
 	!<dev-python/pygtk-2.13
 	libffi? ( virtual/libffi )"
 DEPEND="${RDEPEND}
