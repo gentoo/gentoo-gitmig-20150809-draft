@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.131 2009/12/29 17:49:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.132 2009/12/29 20:36:28 grobian Exp $
+
+  29 Dec 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask emacs-23.1 at last on Solaris, it's been broken way too long (bug
+  #294479)
 
   29 Dec 2009; Jonathan Callen <abcd@gentoo.org> linux/use.mask:
   Unmask acl on linux
