@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libextractor
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.57 2008/08/07 17:41:49 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.58 2009/12/29 17:43:47 armin76 Exp $
+
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  libextractor-0.5.19a.ebuild, libextractor-0.5.20a.ebuild,
+  libextractor-0.5.20b.ebuild, libextractor-0.5.20c.ebuild:
+  Add ~arm
 
 *libextractor-0.5.20c (07 Aug 2008)
 
