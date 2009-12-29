@@ -6,7 +6,7 @@
 		<flag name='aio'>Enables support for Linux's Async IO</flag>
 		<flag name='alsa'>Enable alsa output for sound emulation</flag>
 		<flag name='esd'>Enable esound output for sound emulation</flag>
-		<flag name='fdt'>Enables fdt support</flag>
+		<flag name='fdt'>Enables firmware device tree support</flag>
 		<flag name='gnutls'>Enable TLS support for the VNC console server</flag>
 		<flag name='kvm-trace'>Allows you to use KVM tracing</flag>
 		<flag name='ncurses'>Enable the ncurses-based console</flag>

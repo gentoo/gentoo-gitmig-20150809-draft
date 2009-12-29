@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.10 2009/12/23 16:21:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.11 2009/12/29 19:48:15 fauli Exp $
+
+  29 Dec 2009; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Write out acronym ftd, as requested on bug 298906 by Michael Orlitzky
+  <michael AT orlitzky DOT com>
 
   23 Dec 2009; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.12.1.ebuild,
   qemu-kvm-0.12.1.1.ebuild:
