@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4.3a.ebuild,v 1.1 2009/11/13 15:36:55 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4.3a.ebuild,v 1.2 2009/12/29 21:04:32 fauli Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://abacus.gene.ucl.ac.uk/software/${PN}${PV}.tar.gz"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=""
