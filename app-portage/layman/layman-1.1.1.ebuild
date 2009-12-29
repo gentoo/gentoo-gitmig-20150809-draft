@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.1.1.ebuild,v 1.14 2009/04/05 15:41:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.1.1.ebuild,v 1.15 2009/12/29 11:45:14 sping Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
@@ -16,8 +16,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="subversion test"
 
-DEPEND="test? ( dev-util/subversion )"
-RDEPEND="
+COMMON_DEPS="dev-python/pyxml"
+DEPEND="${COMMON_DEPS}
+	test? ( dev-util/subversion )"
+RDEPEND="${COMMON_DEPS}
 	subversion? (
 		|| (
 			>=dev-util/subversion-1.5.4[webdav-neon]
