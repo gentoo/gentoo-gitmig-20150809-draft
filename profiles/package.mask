@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11014 2009/12/28 14:35:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11015 2009/12/29 10:01:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -54,11 +54,16 @@ net-p2p/dc-qt
 sys-apps/sdd
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
-# Semi-abandoned upstream. 
-# Causes obscure segfaults, e.g. in Audacious
-# Firefox 3.5 and Thunderbird 3.0 doesn't exit.
-# Bug 277726. Use e.g. qtcurve as replacement.
-# Masked for removal in 30 days.
+# Semi-abandoned upstream. Installs broken Engine,
+# libqt4engine.so but a useful kcm_gtk4.so Theme
+# Selector. The engine is hanging Firefox and Thunderbird
+# at exit, and is segfaulting apps like Audacious.
+#
+# The Theme Selector could be split into it's own package.
+# Use qtcurve-qt4 gtk-engines-qtcurve for working Engine.
+#
+# See Bug 277726. Removed when the theme selector has
+# been split, or unmasked when the engine is fixed.
 x11-themes/gtk-engines-qt
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
