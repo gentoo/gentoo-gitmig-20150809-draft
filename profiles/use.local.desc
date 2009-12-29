@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5133 2009/12/29 18:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5134 2009/12/29 20:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -285,7 +285,7 @@ app-emulation/qemu:vde - Enable Virtual Distributed Ethernet (VDE) based network
 app-emulation/qemu-kvm:aio - Enables support for Linux's Async IO
 app-emulation/qemu-kvm:alsa - Enable alsa output for sound emulation
 app-emulation/qemu-kvm:esd - Enable esound output for sound emulation
-app-emulation/qemu-kvm:fdt - Enables fdt support
+app-emulation/qemu-kvm:fdt - Enables firmware device tree support
 app-emulation/qemu-kvm:gnutls - Enable TLS support for the VNC console server
 app-emulation/qemu-kvm:kvm-trace - Allows you to use KVM tracing
 app-emulation/qemu-kvm:ncurses - Enable the ncurses-based console
