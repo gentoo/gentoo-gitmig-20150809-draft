@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.3.0.ebuild,v 1.2 2009/12/15 18:07:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.3.0.ebuild,v 1.3 2009/12/29 20:34:24 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://meme.nbcr.net/downloads/${PN}_${PV}.tar.gz"
 LICENSE="meme"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 
 IUSE="mpi"
 
