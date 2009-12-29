@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/kunit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kunit/ChangeLog,v 1.8 2008/10/24 13:03:51 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kunit/ChangeLog,v 1.9 2009/12/29 18:58:28 ssuominen Exp $
+
+  29 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> kunit-0.5-r1.ebuild:
+  amd64/ppc/x86 stable
 
 *kunit-0.5-r1 (24 Oct 2008)
 
