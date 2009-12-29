@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-20091109.ebuild,v 1.1 2009/11/09 14:05:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grub-splashes/grub-splashes-20091109.ebuild,v 1.2 2009/12/29 19:45:59 fauli Exp $
 
 DESCRIPTION="Collection of grub splashes"
 HOMEPAGE="http://dev.gentoo.org/~welp/grub-splashes.xml"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PN}-0.1.tar.gz
 
 LICENSE="GPL-2 Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="|| ( sys-boot/grub sys-boot/grub-static )"
