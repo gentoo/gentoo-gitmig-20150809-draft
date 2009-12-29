@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r9.ebuild,v 1.2 2009/12/17 11:38:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r10.ebuild,v 1.1 2009/12/29 10:36:59 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -104,6 +104,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/mutt-1.5.20-ssl-stack-compile-fix-1cf34ea1f128.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-no-hcolor-in-hcache-b7d2cb7c7ce1.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-off-by-one-mailcap-736b6af3c5f1.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-subject-mistruncation-31881f38ca1e.patch
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \

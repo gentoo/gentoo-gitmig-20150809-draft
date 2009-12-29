@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.171 2009/12/17 11:38:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.172 2009/12/29 10:36:59 grobian Exp $
+
+*mutt-1.5.20-r10 (29 Dec 2009)
+
+  29 Dec 2009; Fabian Groffen <grobian@gentoo.org> -mutt-1.5.20-r9.ebuild,
+  +mutt-1.5.20-r10.ebuild,
+  +files/mutt-1.5.20-subject-mistruncation-31881f38ca1e.patch:
+  Bump for patch to fix subject not properly being truncated when there are
+  tree arrows on the same line
 
   17 Dec 2009; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r6,
   mutt-1.5.20-r9.ebuild:
