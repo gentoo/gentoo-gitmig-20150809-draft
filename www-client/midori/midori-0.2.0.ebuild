@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.0.ebuild,v 1.4 2009/11/07 19:15:28 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.0.ebuild,v 1.5 2009/12/29 18:00:16 armin76 Exp $
 
 EAPI=2
 inherit xfconf multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 IUSE="doc gnome html idn libnotify nls +sqlite +unique"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
