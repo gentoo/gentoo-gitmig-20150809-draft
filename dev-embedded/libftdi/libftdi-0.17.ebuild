@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.17.ebuild,v 1.1 2009/12/20 12:39:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.17.ebuild,v 1.2 2009/12/29 07:46:49 vapier Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ src_prepare() {
 	# don't bother building examples as we dont want the binaries
 	# installed and the Makefile has broken install targets
 	sed -i '/^SUBDIRS =/s:examples::' Makefile.in
+	sed -i 's:@top_buildir@:@top_builddir@:' bindings/python/setup.py.in #298607
 }
 
 src_configure() {
