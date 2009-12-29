@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.11.0.ebuild,v 1.8 2009/12/22 12:09:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.11.0.ebuild,v 1.9 2009/12/29 17:46:14 armin76 Exp $
 
 inherit eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mediatomb.cc/"
 SRC_URI="mirror://sourceforge/mediatomb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="curl debug exif ffmpeg javascript libextractor mysql taglib"
 RDEPEND="
 	mysql? ( virtual/mysql )
