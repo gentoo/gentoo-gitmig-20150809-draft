@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.11.ebuild,v 1.3 2009/11/11 19:30:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.11.ebuild,v 1.4 2009/12/29 14:13:59 maekke Exp $
 
 EAPI=2
 if [[ "${PV}" == "9999" ]]; then
 	ESVN_REPO_URI="http://linux-wbfs-manager.googlecode.com/svn/trunk/"
 	inherit toolchain-funcs subversion
 	SRC_URI=""
-	KEYWORDS=""
+	KEYWORDS="amd64 x86"
 else
 	inherit toolchain-funcs
 	SRC_URI="http://linux-wbfs-manager.googlecode.com/files/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi;
 
 DESCRIPTION="WBFS manager for Linux using GTK+"
