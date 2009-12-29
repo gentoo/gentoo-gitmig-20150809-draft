@@ -7,6 +7,6 @@
   <name>Jonathan Callen</name>
 </maintainer>
 <use>
-  <flag name="dchroot">Enables the building of a wrapper named "dchroot", replacing <pkg>dev-util/dchroot</pkg>.</flag>
+  <flag name="dchroot">Enables the building of a wrapper named "dchroot", replacing <pkg>sys-apps/dchroot</pkg>.</flag>
 </use>
 </pkgmetadata>

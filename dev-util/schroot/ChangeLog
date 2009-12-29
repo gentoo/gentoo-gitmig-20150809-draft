@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.10 2009/11/26 17:18:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.11 2009/12/29 17:54:42 abcd Exp $
+
+  29 Dec 2009; Jonathan Callen <abcd@gentoo.org> metadata.xml:
+  Fix package name in metadata
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> schroot-1.2.3-r4.ebuild:
   amd64 stable, bug #289430
