@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/sourcenav
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.22 2008/12/29 23:24:26 nerdboy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.23 2009/12/29 13:47:33 flameeyes Exp $
+
+  29 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  sourcenav-5.2_beta2.ebuild:
+  Use emake -j1 for install, as per bug #298858.
 
   29 Dec 2008; Steve Arnold <nerdboy@gentoo.org>
   +files/sourcenav_tk-8.3-lastevent.patch, sourcenav-5.2_beta2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.12 2008/12/29 23:24:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.13 2009/12/29 13:47:33 flameeyes Exp $
 
 inherit autotools flag-o-matic eutils toolchain-funcs fdo-mime
 
@@ -39,7 +39,7 @@ src_unpack() {
 	sed -i -e "s/relid'/relid/" tk/unix/configure
 	# Bug 131412
 	if [ $(gcc-major-version) -ge 4 ]; then
-	    epatch "${FILESDIR}"/${P}-gcc4.patch
+		epatch "${FILESDIR}"/${P}-gcc4.patch
 	fi
 
 	# update internal tk (see bugs 225999 and 252700
@@ -64,17 +64,18 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	# bug #298858
+	emake -j1 DESTDIR="${D}" install || die "install failed"
 
 	chmod -Rf 755 "${D}/${SN}/share/doc/${P}/demos"
 	dodir /etc/env.d
 	echo "PATH=${SN}/bin" > "${D}"/etc/env.d/10snavigator
 
 	make_desktop_entry \
-	    /opt/sourcenav/bin/snavigator \
-	    "Source Navigator ${PV}" \
-	    "/opt/sourcenav/share/bitmaps/ide_icon.xpm" \
-	    "Application;Development"
+		/opt/sourcenav/bin/snavigator \
+		"Source Navigator ${PV}" \
+		"/opt/sourcenav/share/bitmaps/ide_icon.xpm" \
+		"Application;Development"
 }
 
 pkg_postinst() {
