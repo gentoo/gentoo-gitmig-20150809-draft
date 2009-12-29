@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r2.ebuild,v 1.3 2008/05/04 17:49:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre3-r2.ebuild,v 1.4 2009/12/29 16:10:05 ssuominen Exp $
 
 inherit multilib eutils autotools libtool
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/x/${PN}/${MY_P}.orig.tar.gz
 
 LICENSE="XCIN GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="debug nls unicode"
 
 RDEPEND=">=sys-libs/db-4.5
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/${MY_P}-1.4.diff
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	rm -f configure
 	cd script
 	elibtoolize
