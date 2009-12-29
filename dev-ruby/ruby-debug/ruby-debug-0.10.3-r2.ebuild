@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.3-r1.ebuild,v 1.1 2009/12/28 08:07:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.3-r2.ebuild,v 1.1 2009/12/29 09:09:58 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -12,6 +12,7 @@ RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_EXTRADOC="AUTHORS ChangeLog CHANGES README"
 
 RUBY_FAKEGEM_EXTRAINSTALL="cli"
+RUBY_FAKEGEM_REQUIRE_PATHS="cli"
 
 inherit ruby-fakegem
 
