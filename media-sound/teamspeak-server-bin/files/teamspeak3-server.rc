@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/files/teamspeak3-server.rc,v 1.1 2009/12/29 22:55:37 trapni Exp $
+
+depend() {
+	need net
+	use mysql
+}
+
+start() {
+	ebegin "Starting TeamSpeak 3 Server"
+
+	# we currently cannot --chuid into teamspeak3 as there seems to be an EPERM-bug in ts3
+	start-stop-daemon --start --quiet \
+		--pidfile "/var/run/teamspeak3-server/server.pid" --make-pidfile \
+		--background \
+		--exec "/usr/sbin/ts3server" -- \
+		inifile="/etc/teamspeak3-server/server.conf"
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping TeamSpeak Server"
+	start-stop-daemon --stop --quiet \
+		--pidfile "/var/run/teamspeak3-server/server.pid"
+	eend $?
+}
+
+restart() {
+	svc_stop
+	sleep 3
+	svc_start
+}

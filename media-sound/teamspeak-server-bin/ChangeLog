@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teamspeak-server-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/ChangeLog,v 1.2 2009/12/24 13:27:42 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/ChangeLog,v 1.3 2009/12/29 22:55:37 trapni Exp $
+
+*teamspeak-server-bin-3.0.0_beta11 (29 Dec 2009)
+
+  29 Dec 2009; Christian Parpart <trapni@gentoo.org> +files/server.conf,
+  +files/teamspeak3-server.rc, +files/ts3server,
+  +teamspeak-server-bin-3.0.0_beta11.ebuild:
+  version bump
 
 *teamspeak-server-bin-3.0.0_beta6 (24 Dec 2009)
 
