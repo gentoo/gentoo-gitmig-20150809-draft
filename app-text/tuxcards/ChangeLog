@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tuxcards
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.20 2008/06/28 15:44:25 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.21 2009/12/29 22:45:05 ssuominen Exp $
+
+*tuxcards-2.2 (29 Dec 2009)
+
+  29 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +tuxcards-2.2.ebuild:
+  Version bump.
 
   28 Jun 2008; Peter Alfredsen <loki_val@gentoo.org> tuxcards-1.2.ebuild:
   inherit qt3 to get addwrite goodness for bug #229255
