@@ -1,31 +1,35 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-0.6.4.ebuild,v 1.3 2009/12/20 15:48:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-0.6.4.ebuild,v 1.4 2009/12/29 21:37:44 arfrever Exp $
 
-NEED_PYTHON=2.3
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-
-MY_PN=WebHelpers
-MY_P=${MY_PN}-${PV}
+MY_PN="WebHelpers"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A library of helper functions intended to make writing templates in web applications easier."
-HOMEPAGE="http://pylonshq.com/docs/en/0.9.7/thirdparty/webhelpers/"
-SRC_URI="http://cheeseshop.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+HOMEPAGE="http://pylonshq.com/docs/en/0.9.7/thirdparty/webhelpers/ http://pypi.python.org/pypi/WebHelpers"
+SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
-RDEPEND=">=dev-python/simplejson-1.4
-	>=dev-python/routes-1.8"
+RDEPEND=">=dev-python/routes-1.8"
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose dev-python/coverage )
-	dev-python/setuptools"
+	dev-python/setuptools
+	test? ( dev-python/nose dev-python/coverage )"
+RESTRICT_PYTHON_ABIS="3.*"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_test() {
-	PYTHONPATH=. "${python}" setup.py nosetests || die "tests failed"
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
+	}
+	python_execute_function testing
 }
