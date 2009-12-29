@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.12 2009/11/07 00:19:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.13 2009/12/29 20:50:03 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -13,12 +13,13 @@ SRC_URI="http://www.jumpbump.mine.nu/port/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="X fbcon kde svga tk"
+IUSE="X fbcon kde svga tk +music"
 
 DEPEND="X? ( x11-libs/libXext )
 	kde? ( kde-base/kdialog )
 	media-libs/sdl-mixer
-	media-libs/libsdl
+	music? ( media-libs/sdl-mixer[mikmod] )
+	media-libs/libsdl[audio,joystick,video]
 	media-libs/sdl-net"
 RDEPEND="${DEPEND}
 	tk? (
@@ -37,7 +38,7 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	# clean up a bit.  It leave a dep on Xdialog but ignore that.
+	# clean up a bit.  It leaves a dep on Xdialog but ignore that.
 	use fbcon || rm -f "${D}${GAMES_BINDIR}/jumpnbump.fbcon"
 	use kde || rm -f "${D}${GAMES_BINDIR}/jumpnbump-kdialog"
 	use svga || rm -f "${D}${GAMES_BINDIR}/jumpnbump.svgalib"
