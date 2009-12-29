@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mosaik/mosaik-1.0.1367.ebuild,v 1.1 2009/11/20 19:02:25 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mosaik/mosaik-1.0.1367.ebuild,v 1.2 2009/12/29 20:54:08 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://mosaik-aligner.googlecode.com/files/Mosaik-${PV}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND=""
 RDEPEND=""
