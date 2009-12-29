@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-fileinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.24 2009/12/16 22:53:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.25 2009/12/29 18:43:30 armin76 Exp $
+
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  pecl-fileinfo-1.0.4-r1.ebuild:
+  sparc stable wrt #288043
 
   16 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   pecl-fileinfo-1.0.4-r1.ebuild:
