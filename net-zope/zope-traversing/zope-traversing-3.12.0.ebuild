@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-traversing/zope-traversing-3.11.0.ebuild,v 1.1 2009/12/29 05:15:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-traversing/zope-traversing-3.12.0.ebuild,v 1.1 2009/12/29 21:51:35 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
