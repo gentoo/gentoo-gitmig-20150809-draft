@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.67 2009/12/23 10:15:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.68 2009/12/29 07:24:31 zmedico Exp $
+
+*calibre-0.6.31 (29 Dec 2009)
+
+  29 Dec 2009; Zac Medico <zmedico@gentoo.org> +calibre-0.6.31.ebuild:
+  0.6.31 version bump.
 
 *calibre-0.6.29 (23 Dec 2009)
 
