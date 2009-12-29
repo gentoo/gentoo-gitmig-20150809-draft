@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.9 2009/12/26 19:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.10 2009/12/29 06:06:42 vapier Exp $
 
 EAPI="2"
 
@@ -51,7 +51,6 @@ src_prepare() {
 	# build against system headers
 	rm -r include/netinet #include/linux include/ip{,6}tables{,_common}.h include/libiptc
 
-	epatch "${FILESDIR}"/${PN}-2.6.29.1-flush.patch #274973
 	epatch "${FILESDIR}"/${PN}-2.6.29.1-hfsc.patch #291907
 
 	epatch_user
