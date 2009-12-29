@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r4.ebuild,v 1.3 2009/11/26 17:18:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r4.ebuild,v 1.4 2009/12/29 21:39:32 abcd Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/debianutils
-	dchroot? ( !dev-util/dchroot )
+	dchroot? ( !sys-apps/dchroot )
 	nls? ( virtual/libintl )
 "
 
