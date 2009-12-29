@@ -1,6 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.90 2009/12/14 18:23:16 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.91 2009/12/29 22:50:27 nirbheek Exp $
+
+# gobject-introspection USE-flag
+# introspection is not mature yet. 
+# gir-repository especially is a big pile of junk
+introspection
 
 # KDE4 specific enablefinal flag
 # Uses huge amounts of ram, and those ricers would be spamming bugzilla.
