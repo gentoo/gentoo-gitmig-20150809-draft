@@ -1,6 +1,9 @@
 # ChangeLog for app-text/nfoview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.8 2009/08/16 17:40:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.9 2009/12/29 16:53:07 vapier Exp $
+
+  29 Dec 2009; Mike Frysinger <vapier@gentoo.org> nfoview-1.6.ebuild:
+  Stabilize for amd64/x86.
 
 *nfoview-1.6 (16 Aug 2009)
 
