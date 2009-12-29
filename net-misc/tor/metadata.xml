@@ -9,7 +9,4 @@
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
-  <use>
-    <flag name="bundledlibevent">USE bundled libevent for asynchronous DNS requests (provides a tiny bit more anonymity)</flag>
-  </use>
 </pkgmetadata>
