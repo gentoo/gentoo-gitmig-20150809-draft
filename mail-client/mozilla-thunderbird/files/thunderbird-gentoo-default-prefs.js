@@ -11,4 +11,4 @@ pref("mailnews.database.global.indexer.enabled", false);
 pref("mail.folder.views.version", "1");
 
 # Ensure we work with imap as expected
-pref("mail.server.default.use_condstore", true)
+pref("mail.server.default.use_condstore", false)
