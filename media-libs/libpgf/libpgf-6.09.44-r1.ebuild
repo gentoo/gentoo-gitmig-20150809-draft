@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/libpgf-6.09.44.ebuild,v 1.1 2009/12/22 17:53:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/libpgf-6.09.44-r1.ebuild,v 1.1 2009/12/29 19:19:52 ssuominen Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Library to load, handle and manipulate images in the PGF format"
 HOMEPAGE="http://www.libpgf.org/"
@@ -21,16 +21,11 @@ DEPEND="doc? ( app-doc/doxygen )
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	if use ! doc; then
-		sed -i \
-			-e "s/\(SUBDIRS = src include\) doc/\1/g" Makefile.am || die
+	if ! use doc; then
+		sed -i -e "s/\(SUBDIRS = src include\) doc/\1/g" Makefile.am || die
 	fi
 
-	sed -i \
-		-e "s/exec_prefix=@prefix@/exec_prefix=@exec_prefix@/" \
-		-e "s/libdir=@prefix@\/lib/libdir=@libdir@/" \
-		-e "s/includedir=@prefix@\/include/includedir=@includedir@/" \
-			libpgf.pc.in || die
+	epatch "${FILESDIR}"/${P}-pkg.patch
 
 	eautoreconf
 }
