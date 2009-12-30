@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.1 2009/12/29 00:29:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.2 2009/12/30 22:23:44 sping Exp $
 
 EAPI="2"
+NEED_PYTHON=2.5
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils git
@@ -17,10 +18,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE="git subversion test"
 
-DEPEND="dev-python/pyxml
+COMMON_DEPS="|| (
+	dev-lang/python[xml]
+	( dev-lang/python dev-python/pyxml ) )"
+DEPEND="${COMMON_DEPS}
 	test? ( dev-util/subversion )
 	app-text/xmlto"
-RDEPEND=">=dev-lang/python-2.5
+RDEPEND="${COMMON_DEPS}
 	git? ( dev-util/git )
 	subversion? (
 		|| (

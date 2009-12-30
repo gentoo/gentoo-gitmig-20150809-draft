@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.81 2009/12/29 11:45:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.82 2009/12/30 22:23:44 sping Exp $
+
+  30 Dec 2009; Sebastian Pipping <sping@gentoo.org> layman-1.1.1.ebuild,
+  layman-1.2.3.ebuild, layman-1.2.4.ebuild, layman-9999.ebuild:
+  Fix dependency for xml.dom.minidom imports
 
   29 Dec 2009; Sebastian Pipping <sping@gentoo.org> layman-1.1.1.ebuild:
   Add dependency on pyxml for xml.dom.minidom (bug #264263)
