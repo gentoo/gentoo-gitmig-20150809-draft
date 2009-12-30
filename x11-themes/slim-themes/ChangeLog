@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.26 2009/12/19 16:29:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.27 2009/12/30 13:15:35 armin76 Exp $
+
+  30 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  slim-themes-1.2.3a-r5.ebuild:
+  sparc stable wrt #293332
 
   19 Dec 2009; Daniel Pielmeier <billie@gentoo.org>
   slim-themes-1.2.3a-r5.ebuild:
