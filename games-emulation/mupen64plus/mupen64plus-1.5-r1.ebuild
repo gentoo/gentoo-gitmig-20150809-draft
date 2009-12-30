@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.1 2009/11/24 15:58:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.2 2009/12/30 23:07:43 joker Exp $
 
 EAPI="2"
 
@@ -57,6 +57,11 @@ src_prepare() {
 		-e "s:/usr/local/share/mupen64plus:${GAMES_DATADIR}/mupen64plus:" \
 		-e "s:%PUT_PLUGIN_PATH_HERE%:$(games_get_libdir)/${PN}/plugins/:" \
 		main/main.c || die "sed failed"
+
+	# Fix 010_all_fix-desktop-file.patch instead of using sed on the next major bump
+	sed -i \
+		-e "s:^Icon=mupen64plus-large.xpm:Icon=mupen64plus:" \
+		mupen64plus.desktop.in || die "sed failed"
 }
 
 get_opts() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.4 2009/11/24 15:58:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.5 2009/12/30 23:07:43 joker Exp $
+
+  30 Dec 2009; Christian Birchinger <joker@gentoo.org>
+  mupen64plus-1.5-r1.ebuild:
+  Fix the Icon entry in the desktop file
 
 *mupen64plus-1.5-r1 (24 Nov 2009)
 
