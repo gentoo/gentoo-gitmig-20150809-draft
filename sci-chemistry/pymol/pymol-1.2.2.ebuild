@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.5 2009/12/30 19:36:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2.ebuild,v 1.1 2009/12/30 19:36:34 flameeyes Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit distutils
 
 PYTHON_MODNAME="chempy pmg_tk pymol"
 APBS_PATCH="090618"
-REV="3825"
+REV="3859"
 
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
@@ -17,7 +17,7 @@ SRC_URI="apbs? ( mirror://gentoo/apbs_tools.py.${APBS_PATCH}.bz2 )
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="apbs shaders"
 
 DEPEND="dev-python/pmw
@@ -40,12 +40,12 @@ pkg_setup(){
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}/${P}-data-path.patch \
+	epatch "${FILESDIR}"/1.2.1/${PN}-1.2.1-data-path.patch \
 		|| die "Failed to apply data-path.patch"
 
 	# Turn off splash screen.  Please do make a project contribution
 	# if you are able though.
-	[[ -n ${WANT_SPLASH} ]] || epatch "${FILESDIR}"/${PV}/nosplash-gentoo.patch
+	[[ -n ${WANT_SPLASH} ]] || epatch "${FILESDIR}"/1.2.1/nosplash-gentoo.patch
 
 	# Respect CFLAGS
 	sed -i \
