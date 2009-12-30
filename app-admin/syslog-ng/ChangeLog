@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.225 2009/12/22 03:54:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.226 2009/12/30 08:41:05 mr_bones_ Exp $
+
+  30 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.rc6.3.0-r1:
+  give start-stop-daemon the pidfile so multiple syslog-ng processes can be
+  run (bug #295394)
 
 *syslog-ng-3.0.5 (22 Dec 2009)
 
