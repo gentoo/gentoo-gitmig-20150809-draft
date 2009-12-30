@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.46 2009/12/26 21:50:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.47 2009/12/30 19:52:47 pacho Exp $
+
+  30 Dec 2009; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-soundlibs-20081109.ebuild,
+  emul-linux-x86-soundlibs-20091226.ebuild:
+  Prevent people from mixing different emul packages versions, as it causes
+  multiple problems (like bug 298615, thanks to Russell for reporting) and
+  is not supported
 
 *emul-linux-x86-soundlibs-20091226 (26 Dec 2009)
 
