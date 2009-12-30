@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.5.ebuild,v 1.1 2009/12/27 14:31:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.5.ebuild,v 1.2 2009/12/30 01:12:05 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,7 +28,7 @@ pkg_setup() {
 	# pkgcore needs it to support upgrading to a different Python slot.
 	PYTHON_ABIS=""
 	local python_interpreter
-	for python_interpreter in /usr/bin/python{2.[4-9],3.[0-9]}; do
+	for python_interpreter in /usr/bin/python{2.[4-9],3.[1-9]}; do
 		if [[ -x "${python_interpreter}" ]]; then
 			PYTHON_ABIS+=" ${python_interpreter#/usr/bin/python}"
 		fi
