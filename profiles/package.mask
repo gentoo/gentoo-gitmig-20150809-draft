@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11020 2009/12/30 20:45:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11021 2009/12/30 21:29:17 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Dec 2009)
+# Masked for testing prior to 1.8 appearing.
+>=games-strategy/wesnoth-1.7
+
 # Samuli Suominen <ssuominen@gentoo.org> (30 Dec 2009)
 # Doesn't compile (#273407)
 # Crashes (#124767)
@@ -38,7 +42,7 @@
 #
 # Replaced by games-emulation/mupen64plus
 #
-# Removal in 30 days
+# Removal in 30 days (20100129)
 games-emulation/mupen64
 games-emulation/mupen64-alsasnd
 games-emulation/mupen64-blight-tr64gl
