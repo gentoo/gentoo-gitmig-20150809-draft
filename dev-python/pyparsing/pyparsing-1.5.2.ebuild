@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.2.ebuild,v 1.11 2009/11/14 16:56:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.2.ebuild,v 1.12 2009/12/30 00:59:22 arfrever Exp $
 
 EAPI="2"
 
@@ -21,6 +21,8 @@ IUSE="doc examples"
 DEPEND=""
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="2.4 2.5"
+
+PYTHON_MODNAME="pyparsing.py"
 
 src_prepare() {
 	distutils_src_prepare
@@ -46,8 +48,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize pyparsing.py
 }

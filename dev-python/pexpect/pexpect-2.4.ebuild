@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-2.4.ebuild,v 1.7 2009/12/16 16:09:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-2.4.ebuild,v 1.8 2009/12/30 00:56:21 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,6 +20,8 @@ DEPEND=""
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 
+PYTHON_MODNAME="ANSI.py fdpexpect.py FSM.py pexpect.py pxssh.py screen.py"
+
 src_install() {
 	distutils_src_install
 
@@ -29,12 +31,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize ANSI.py fdpexpect.py FSM.py pexpect.py pxssh.py screen.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup
 }
