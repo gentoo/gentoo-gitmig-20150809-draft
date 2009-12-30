@@ -1,6 +1,19 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.68 2009/11/25 11:20:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.69 2009/12/30 11:35:42 fauli Exp $
+
+  30 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  -files/1.1.4-missing-declaration.patch, -ejabberd-1.1.4-r1.ebuild,
+  -ejabberd-1.1.4-r2.ebuild, -files/ejabberd-1.1.4-erlang-12.patch,
+  -files/2.0.0-erlang12-s2s-in.patch, -files/ejabberd-1.1.4.confd,
+  -ejabberd-2.0.4.ebuild, -files/2.0.1-parallel-make.patch,
+  -files/ejabberd-1.1.4.initd, -files/ejabberd-2.0.4-fix-EJAB-890.patch,
+  -ejabberd-2.0.5.ebuild, -ejabberd-2.0.5-r1.ebuild,
+  -ejabberd-2.0.5-r2.ebuild, -files/ejabberdctl-wrapper-2.template,
+  -files/2.0.0-ejab-542-mod_proxy65.patch,
+  -files/2.0.0-missing-declaration.patch, -files/ejabberd,
+  -files/ejabberdctl, -files/inetrc, -files/self-cert.sh:
+  clean up
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> ejabberd-2.0.5-r3.ebuild:
   amd64 stable, bug #291744
