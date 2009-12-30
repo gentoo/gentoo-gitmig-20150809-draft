@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2009.1_rc10.ebuild,v 1.1 2009/10/04 00:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2009.1_rc10.ebuild,v 1.2 2009/12/30 04:47:33 vapier Exp $
 
 # this should skip pointless scanelf checks on the target libs
 CTARGET="bfin"
@@ -29,7 +29,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
