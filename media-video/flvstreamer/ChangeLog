@@ -1,6 +1,9 @@
 # ChangeLog for media-video/flvstreamer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/ChangeLog,v 1.5 2009/12/15 20:19:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/ChangeLog,v 1.6 2009/12/30 17:18:55 hwoarang Exp $
+
+  30 Dec 2009; Markos Chandras <hwoarang@gentoo.org> flvstreamer-1.9.ebuild:
+  Fix broken makefile wrt bug #298535
 
 *flvstreamer-1.9 (15 Dec 2009)
 
