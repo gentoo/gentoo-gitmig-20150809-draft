@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.7 2009/12/27 19:00:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.8 2009/12/30 14:24:57 ulm Exp $
 
 EAPI=2
 
@@ -15,15 +15,12 @@ SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 LICENSE="GPL-1 GPL-2 BSD as-is"
 SLOT="18"
 KEYWORDS="amd64 x86"
-IUSE="X"
+IUSE=""
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
-	X? ( x11-libs/libX11[-xcb] )
-	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		X? ( app-emulation/emul-linux-x86-xlibs )
-	)"
+	amd64? ( app-emulation/emul-linux-x86-baselibs )"
+#	X? ( x11-libs/libX11[-xcb] )
 DEPEND="${RDEPEND}"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
@@ -43,7 +40,7 @@ src_configure() {
 		*)	   die "Architecture ${arch} not supported" ;;
 	esac
 	local cmd="s/\"s-.*\.h\"/\"s-linux.h\"/;s/\"m-.*\.h\"/\"m-${arch}.h\"/"
-	use X && cmd="${cmd};s/.*\(#define HAVE_X_WINDOWS\).*/\1/"
+	#use X && cmd="${cmd};s/.*\(#define HAVE_X_WINDOWS\).*/\1/"
 	sed -e "${cmd}" src/config.h-dist >src/config.h
 
 	cat <<-END >src/paths.h
