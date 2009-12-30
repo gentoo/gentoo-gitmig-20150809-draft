@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/quadros-0.1.ebuild,v 1.8 2009/12/29 22:41:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadros/quadros-0.1.ebuild,v 1.9 2009/12/30 07:22:53 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt3 games
@@ -30,7 +30,7 @@ src_configure() {
 	# which are not required by game
 	echo "QMAKE_CXXFLAGS += ${CXXFLAGS}" >> quadros.pro
 	echo "CONFIG += qt thread warn_on release" >> quadros.pro
-	eqmake3 quadros.pro -o Makefile 
+	eqmake3 quadros.pro -o Makefile
 }
 
 src_install() {
