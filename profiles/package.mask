@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11019 2009/12/29 20:07:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11020 2009/12/30 20:45:43 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,21 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (30 Dec 2009)
+# Doesn't compile (#273407)
+# Crashes (#124767)
+# Has qt3 deps (#283429)
+#
+# Replaced by games-emulation/mupen64plus
+#
+# Removal in 30 days
+games-emulation/mupen64
+games-emulation/mupen64-alsasnd
+games-emulation/mupen64-blight-tr64gl
+games-emulation/mupen64-blight-uhleaudio
+games-emulation/mupen64-glide64
+games-emulation/mupen64-riceplugin
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Dec 2009)
 # Is using cmake without cmake-utils.eclass (#287583)
