@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.90.3-r1.ebuild,v 1.2 2009/12/28 20:18:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.90.3-r1.ebuild,v 1.3 2009/12/30 16:45:53 pacho Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="+themes animation-rtl"
 
 RDEPEND=">=x11-libs/gtk+-2.12"
