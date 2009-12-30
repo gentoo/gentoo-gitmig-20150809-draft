@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.8 2009/12/29 18:06:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.9 2009/12/30 08:18:03 graaff Exp $
+
+  30 Dec 2009; Hans de Graaff <graaff@gentoo.org> mime-types-1.16-r2.ebuild:
+  Fix USE=doc case by using proper rake task name.
 
 *mime-types-1.16-r2 (29 Dec 2009)
 
