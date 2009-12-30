@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.2 2009/12/21 18:59:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.3 2009/12/30 08:54:48 zzam Exp $
 
 EAPI="1"
 
@@ -303,7 +303,6 @@ src_install() {
 	cd docs/writing_udev_rules
 	mv index.html writing_udev_rules.html
 	dohtml *.html
-	cd "${S}"
 }
 
 pkg_preinst() {

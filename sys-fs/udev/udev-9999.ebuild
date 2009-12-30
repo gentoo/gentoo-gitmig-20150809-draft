@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.23 2009/11/19 08:17:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.24 2009/12/30 08:54:48 zzam Exp $
 
 EAPI="1"
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 		dev-libs/glib:2
 	)
 	>=sys-apps/util-linux-2.16
-	>=sys-libs/glibc-2.7"
+	>=sys-libs/glibc-2.9"
 
 DEPEND="${COMMON_DEPEND}
 	extras? ( dev-util/gperf )
@@ -295,10 +295,6 @@ src_install() {
 	cd docs/writing_udev_rules
 	mv index.html writing_udev_rules.html
 	dohtml *.html
-	cd "${S}"
-
-	echo "CONFIG_PROTECT_MASK=\"/etc/udev/rules.d\"" > 20udev
-	doenvd 20udev
 }
 
 pkg_preinst() {
