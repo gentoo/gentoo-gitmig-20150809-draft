@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.11.ebuild,v 1.1 2009/11/15 20:09:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.11.ebuild,v 1.2 2009/12/30 19:30:41 mr_bones_ Exp $
 
 EAPI=2
-
 inherit eutils
 
 MY_P=${P/sdl-/SDL_}
@@ -36,8 +35,7 @@ src_configure() {
 		$(use_enable vorbis music-ogg) \
 		$(use_enable flac music-flac) \
 		$(use mad && echo --disable-music-mp3 || use_enable mp3 music-mp3) \
-		$(use_enable mad music-mp3-mad-gpl) \
-		|| die
+		$(use_enable mad music-mp3-mad-gpl)
 }
 
 src_install() {
