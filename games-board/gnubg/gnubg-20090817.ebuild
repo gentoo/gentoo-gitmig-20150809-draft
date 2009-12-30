@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20090817.ebuild,v 1.5 2009/12/26 16:57:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20090817.ebuild,v 1.6 2009/12/30 07:56:56 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -41,6 +41,11 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_prepare() {
+	# use ${T} instead of /tmp for constructing credits (bug #298275)
+	sed -i \
+		-e 's:/tmp:${T}:' \
+		credits.sh \
+		|| die 'sed failed'
 	epatch "${FILESDIR}"/${P}-build.patch
 	eautoreconf
 }
