@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-99999999.ebuild,v 1.2 2009/09/14 18:42:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-99999999.ebuild,v 1.3 2009/12/30 21:49:53 arfrever Exp $
 
 EAPI="2"
 
-inherit flag-o-matic subversion
+inherit flag-o-matic subversion toolchain-funcs
 
 DESCRIPTION="Eselect module for management of multiple Python versions"
 HOMEPAGE="http://www.gentoo.org"
@@ -17,13 +17,18 @@ IUSE=""
 
 RDEPEND=">=app-admin/eselect-1.0.2"
 DEPEND="${RDEPEND}
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	>=sys-devel/gcc-3.4"
 
 ESVN_PROJECT="eselect-python"
 ESVN_REPO_URI="https://overlays.gentoo.org/svn/proj/python/projects/eselect-python/trunk"
 
 pkg_setup() {
 	append-flags -fno-PIC -fno-PIE
+
+	if [[ $(gcc-major-version) -lt 3 || ($(gcc-major-version) -eq 3 && $(gcc-minor-version) -lt 4) ]]; then
+		die "GCC >=3.4 is required"
+	fi
 }
 
 src_prepare() {
