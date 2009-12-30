@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.7 2009/06/06 17:49:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.8 2009/12/30 15:32:38 tupone Exp $
+EAPI=2
 
 DESCRIPTION="The backup tool and wonderful emulator's Swiss Army knife program"
 HOMEPAGE="http://ucon64.sourceforge.net/"
@@ -11,20 +12,19 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="sys-libs/zlib"
+RDEPEND=""
+DEPEND=""
 
-S=${WORKDIR}/${P}-src
+S=${WORKDIR}/${P}-src/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^CFLAGS/s/-O3/${CFLAGS}/" \
 		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
-		src/{,libdiscmage/}Makefile.in || die "sed failed"
+		{,libdiscmage/}Makefile.in || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if [[ ! -e /usr/include/sys/io.h ]] ; then
@@ -32,15 +32,13 @@ src_compile() {
 		myconf="${myconf} --disable-parallel"
 	fi
 
-	cd src
 	econf ${myconf} || die
-	emake || die "emake failed"
 }
 
 src_install() {
-	dobin src/ucon64 || die "dobin failed"
-	dolib.so src/libdiscmage/discmage.so || die "dolib.so failed"
-	dodoc GoodCodes.txt
+	dobin ucon64 || die "dobin failed"
+	dolib.so libdiscmage/discmage.so || die "dolib.so failed"
+	cd ..
 	dohtml -x src -r -A png,jpg *
 }
 
