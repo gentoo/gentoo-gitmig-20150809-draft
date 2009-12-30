@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.19 2007/11/07 17:55:58 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.20 2009/12/30 00:26:03 mr_bones_ Exp $
+
+  30 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org> tf-50_beta8.ebuild:
+  install unformatted man page (bug #297890)
 
   07 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org> tf-40-r2.ebuild,
   tf-50_beta8.ebuild:
