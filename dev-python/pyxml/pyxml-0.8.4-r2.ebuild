@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.4-r2.ebuild,v 1.11 2009/10/11 11:31:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.4-r2.ebuild,v 1.12 2009/12/30 01:40:59 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,7 +29,11 @@ PYTHON_MODNAME="_xmlplus"
 
 src_prepare(){
 	distutils_src_prepare
+
 	epatch "${FILESDIR}/${P}-python-2.6.patch"
+
+	# Delete internal copy of old version of unittest module.
+	rm -f test/unittest.py
 }
 
 src_compile() {
@@ -42,7 +46,7 @@ src_compile() {
 	fi
 
 	# use the already-installed shared copy of libexpat
-	distutils_src_compile --with-libexpat="${EPREFIX}"/usr ${myconf}
+	distutils_src_compile --with-libexpat="${EPREFIX}/usr" ${myconf}
 }
 src_test() {
 	cd test
@@ -53,7 +57,7 @@ src_test() {
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
+	[[ -z "${ED}" ]] && local ED="${D}"
 	distutils_src_install
 
 	doman doc/man/*
@@ -61,5 +65,5 @@ src_install() {
 		dohtml -A api,web -r doc/*
 		insinto /usr/share/doc/${PF} && doins doc/*.tex
 	fi
-	use examples && cp -r demo "${ED}"/usr/share/doc/${PF}
+	use examples && cp -r demo "${ED}usr/share/doc/${PF}"
 }
