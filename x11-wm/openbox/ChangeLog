@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.181 2009/12/27 02:03:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.182 2009/12/30 16:32:18 yngwin Exp $
+
+*openbox-3.4.9-r1 (30 Dec 2009)
+
+  30 Dec 2009; Ben de Groot <yngwin@gentoo.org> -openbox-3.4.8.ebuild,
+  +openbox-3.4.9-r1.ebuild, +files/obxprop.patch,
+  -files/openbox-gnomesession.patch:
+  Remove obsolete patch. Remove obsolete version, as 3.4.9 is a bugfix
+  release. Add upstream patch for obxprop rename (bug 298660).
 
 *openbox-3.4.9 (27 Dec 2009)
 

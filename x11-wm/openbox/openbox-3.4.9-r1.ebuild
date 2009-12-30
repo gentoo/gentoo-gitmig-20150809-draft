@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.8.ebuild,v 1.1 2009/12/09 01:24:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.9-r1.ebuild,v 1.1 2009/12/30 16:32:18 yngwin Exp $
 
 EAPI="2"
-inherit eutils
+inherit eutils autotools
 
 MY_P=${P/_/-}
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager."
@@ -32,6 +32,17 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-gnome-session-${PV}.patch
+
+	# The obxprop rename is scheduled for inclusion in the next release,
+	# so this upstream patch should be removed then. Fixes bug 298660.
+	mv "${S}"/tools/obprop "${S}"/tools/obxprop
+	mv "${S}"/tools/obxprop/obprop.c "${S}"/tools/obxprop/obxprop.c
+	epatch "${FILESDIR}"/obxprop.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
