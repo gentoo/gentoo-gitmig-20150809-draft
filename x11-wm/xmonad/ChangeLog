@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.14 2009/10/26 23:04:42 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.15 2009/12/31 16:16:10 fauli Exp $
+
+  31 Dec 2009; Christian Faulhammer <fauli@gentoo.org> xmonad-0.8.1.ebuild:
+  stable x86, bug 297347
 
 *xmonad-0.9 (26 Oct 2009)
 

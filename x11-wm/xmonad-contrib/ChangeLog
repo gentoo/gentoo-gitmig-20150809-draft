@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xmonad-contrib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.7 2009/10/27 08:01:05 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.8 2009/12/31 16:17:19 fauli Exp $
+
+  31 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  xmonad-contrib-0.8.1.ebuild:
+  stable x86, bug 297347
 
   27 Oct 2009; <kolmodin@gentoo.org> xmonad-contrib-0.9.ebuild:
   Add utf8-string as a mandatory dep
