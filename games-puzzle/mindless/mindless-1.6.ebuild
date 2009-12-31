@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.6 2007/03/12 17:12:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.7 2009/12/31 01:08:10 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 ORANAME="OracleAll_050523.txt"
@@ -16,7 +17,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="mirror" # for the card database
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	media-fonts/font-schumacher-misc"
 DEPEND="${RDEPEND}
 	gnome-base/librsvg
@@ -28,8 +29,12 @@ src_unpack() {
 	DATAFILE="${GAMES_DATADIR}/${PN}/${ORANAME}"
 }
 
-src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+src_prepare() {
+	sed -i \
+		-e '/^CC=/d' \
+		-e '/^CFLAGS=/d' \
+		Makefile \
+		|| die 'sed failed'
 }
 
 src_install() {
