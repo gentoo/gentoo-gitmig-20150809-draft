@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.362 2009/12/31 15:55:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.363 2009/12/31 16:08:29 fauli Exp $
+
+  31 Dec 2009; Christian Faulhammer <fauli@gentoo.org> php-5.2.12.ebuild:
+  stable x86, security bug 293888
 
   31 Dec 2009; Jeroen Roovers <jer@gentoo.org> php-5.2.12.ebuild:
   Stable for HPPA (bug #293888).
