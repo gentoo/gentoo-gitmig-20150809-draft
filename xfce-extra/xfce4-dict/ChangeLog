@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-dict
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.42 2009/10/08 17:32:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.43 2009/12/31 16:04:57 darkside Exp $
+
+*xfce4-dict-0.6.0 (31 Dec 2009)
+
+  31 Dec 2009; Jeremy Olexa <darkside@gentoo.org> +xfce4-dict-0.6.0.ebuild:
+  Version bump, reworked search results and new speed reader dialog
 
   08 Oct 2009; Jeremy Olexa <darkside@gentoo.org> xfce4-dict-0.5.3.ebuild:
   add prefix keywords - migrate from Gentoo Prefix
