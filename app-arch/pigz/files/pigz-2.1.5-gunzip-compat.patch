@@ -1,0 +1,22 @@
+--- ../pigz-2.1.5/pigz.c	2009-07-20 04:42:00.000000000 +0200
++++ pigz.c	2009-11-24 10:50:13.000000000 +0100
+@@ -3075,9 +3075,17 @@
+     if (argc < 2 && isatty(1))
+         help();
+ 
+-    /* decompress if named "unpigz" */
++    /* find program name */
+     p = strrchr(argv[0], '/');
+-    if (strcmp(p == NULL ? argv[0] : p + 1, "unpigz") == 0)
++    if (p == NULL) {
++        p = argv[0];
++    }
++    else {
++        ++p;
++    }    
++
++    /* decompress if named "unpigz" or "gunzip" */
++    if ((strcmp(p, "unpigz") == 0) || (strcmp(p, "gunzip") == 0))
+         decode = 1, headis = 0;
+ 
+     /* process command-line arguments */

@@ -1,0 +1,12 @@
+diff -u pigz-2.1.5/pigz.c pigz-2.1.5-fix/pigz.c
+--- pigz-2.1.5/pigz.c	2009-07-20 04:42:00.000000000 +0200
++++ pigz-2.1.5-fix/pigz.c	2009-10-25 15:52:22.000000000 +0100
+@@ -2498,7 +2498,7 @@
+                         in);
+             return;
+         }
+-        if ((st.st_mode & S_IFMT) == S_IFLNK && !force) {
++        if ((st.st_mode & S_IFMT) == S_IFLNK && !force && !pipeout) {
+             if (verbosity > 0)
+                 fprintf(stderr, "%s is a symbolic link -- skipping\n", in);
+             return;

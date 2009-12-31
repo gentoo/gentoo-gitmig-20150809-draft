@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
-<longdescription lang="en">
-A parallel implementation of gzip for modern
-multi-processor, multi-core machines.
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>spatz@gentoo.org</email>
+		<name>Dror Levin</name>
+	</maintainer>
+	<longdescription lang="en">
+		A parallel implementation of gzip for modern
+		multi-processor, multi-core machines.
+	</longdescription>
 </pkgmetadata>
