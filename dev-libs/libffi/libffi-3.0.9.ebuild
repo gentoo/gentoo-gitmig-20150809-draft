@@ -1,22 +1,20 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9_rc9.ebuild,v 1.2 2009/12/26 17:56:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9.ebuild,v 1.1 2009/12/31 16:19:57 ssuominen Exp $
 
 inherit libtool
 
 DESCRIPTION="a portable, high level programming interface to various calling conventions."
-HOMEPAGE="http://sourceware.org/libffi"
-SRC_URI="ftp://sources.redhat.com/pub/${PN}/${P/_}.tar.gz"
+HOMEPAGE="http://sourceware.org/libffi/"
+SRC_URI="ftp://sourceware.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug static-libs test"
 
 RDEPEND=""
 DEPEND="test? ( dev-util/dejagnu )"
-
-S=${WORKDIR}/${P/_}
 
 src_unpack() {
 	unpack ${A}
