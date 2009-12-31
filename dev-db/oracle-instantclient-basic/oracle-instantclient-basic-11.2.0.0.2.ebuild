@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.0.2.ebuild,v 1.1 2009/12/31 10:39:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.0.2.ebuild,v 1.2 2009/12/31 10:48:40 dertobi123 Exp $
 
 inherit eutils
 
@@ -63,11 +63,11 @@ src_install() {
 	dodir /usr/$(get_libdir)/oracle/${PV}/client/lib
 	cd "${S}"/instantclient_11_2
 	insinto /usr/$(get_libdir)/oracle/${PV}/client/lib
-	doins *.jar *.so *.so.11.1
+	doins *.jar *.so *.so.11.2
 
 	# fixes symlinks
-	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libocci.so.11.1 /usr/$(get_libdir)/oracle/${PV}/client/lib/libocci.so
-	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libclntsh.so.11.1 /usr/$(get_libdir)/oracle/${PV}/client/lib/libclntsh.so
+	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libocci.so.11.2 /usr/$(get_libdir)/oracle/${PV}/client/lib/libocci.so
+	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libclntsh.so.11.2 /usr/$(get_libdir)/oracle/${PV}/client/lib/libclntsh.so
 	dosym /usr/$(get_libdir)/oracle/${PV}/client/include /usr/$(get_libdir)/oracle/${PV}/client/rdbms/public
 
 	# includes

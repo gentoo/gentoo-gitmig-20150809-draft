@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.39 2009/12/31 10:39:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.40 2009/12/31 10:48:40 dertobi123 Exp $
+
+  31 Dec 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  oracle-instantclient-basic-11.2.0.0.2.ebuild:
+  Fix doins
 
 *oracle-instantclient-basic-11.2.0.1 (31 Dec 2009)
 *oracle-instantclient-basic-11.2.0.0.2 (31 Dec 2009)
