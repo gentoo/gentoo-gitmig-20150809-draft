@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.66 2009/12/26 19:03:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.67 2009/12/31 16:32:56 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org>
+  logwatch-7.3.7_pre20091204.ebuild:
+  Marking logwatch-7.3.7_pre20091204 ~ppc64 for bug 295639
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   logwatch-7.3.7_pre20091204.ebuild, logwatch-7.3.7_pre20091210.ebuild:
