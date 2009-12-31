@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.5 2009/12/26 19:03:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.6 2009/12/31 16:24:04 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> Sys-CPU-0.51.ebuild:
+  Marking Sys-CPU-0.51 ~ppc64 for bug 295639
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> Sys-CPU-0.51.ebuild:
   Add ~alpha/~sparc wrt #295639
