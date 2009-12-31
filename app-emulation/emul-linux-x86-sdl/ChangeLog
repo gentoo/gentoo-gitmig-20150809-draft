@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.38 2009/12/31 12:06:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.39 2009/12/31 13:49:51 pacho Exp $
+
+  31 Dec 2009; Pacho Ramos <pacho@gentoo.org> Manifest:
+  Fix Manifest
 
 *emul-linux-x86-sdl-20091231 (31 Dec 2009)
 
