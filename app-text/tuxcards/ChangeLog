@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.21 2009/12/29 22:45:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.22 2009/12/31 14:32:00 ssuominen Exp $
+
+  31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> tuxcards-2.2.ebuild:
+  amd64 stable wrt #299110
 
 *tuxcards-2.2 (29 Dec 2009)
 
