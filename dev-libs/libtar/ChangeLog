@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.7 2009/12/21 16:54:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.8 2009/12/31 17:25:38 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> libtar-1.2.11-r2.ebuild:
+  Marking libtar-1.2.11-r2 ~ppc64 for bug 283235
 
   21 Dec 2009; Raúl Porcel <armin76@gentoo.org> libtar-1.2.11-r1.ebuild,
   libtar-1.2.11-r2.ebuild:
