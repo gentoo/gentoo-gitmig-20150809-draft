@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.163 2009/12/31 14:28:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.164 2009/12/31 17:04:21 mr_bones_ Exp $
+
+  31 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  wesnoth-1.7.11.ebuild:
+  needs lua to build as well (bug #299068)
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> wesnoth-1.6.5.ebuild:
   Marking wesnoth-1.6.5 ppc64 for bug 288631
