@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.1 2008/02/11 01:44:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.2 2009/12/31 01:00:29 mr_bones_ Exp $
 
-inherit games
+EAPI=2
+inherit autotools games
 
 MY_P="${P/-server/}"
 DESCRIPTION="server for the crossfire clients"
@@ -22,15 +23,26 @@ DEPEND="
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_prepare() {
+	sed -i \
+		-e 's/make /$(MAKE) /' \
+		$(find . -name Makefile.am) \
+		|| die 'sed failed'
+	sed -i \
+		-e '/,2.5/s/,2.5/,2.6,2.5/' \
+		acinclude.m4 \
+		|| die 'sed failed'
+	eautoreconf
+}
+
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
-		$(use_with X x) || die
-	emake || die "emake failed"
+		$(use_with X x)
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	keepdir "${GAMES_STATEDIR}"/crossfire/{datafiles,maps,players,template-maps,unique-items}
 	dodoc AUTHORS ChangeLog DEVELOPERS NEWS README TODO
 	insinto "${GAMES_DATADIR}/crossfire"
