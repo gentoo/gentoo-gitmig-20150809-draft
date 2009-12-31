@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.10.2.ebuild,v 1.2 2009/12/10 08:51:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.10.3-r1.ebuild,v 1.1 2009/12/31 16:12:01 ikelos Exp $
 
 EAPI="2"
 
@@ -29,6 +29,11 @@ pkg_setup() {
 	CONFIGURE_OPTIONS="$(use_enable debug)"
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/0.10.3-protocol-4.patch"
+	x-modular_src_prepare
+}
+
 src_install() {
 	x-modular_src_install
 
@@ -41,7 +46,8 @@ src_install() {
 pkg_postinst() {
 	x-modular_pkg_postinst
 
-	if ! linux_chkconfig_present TABLET_USB_WACOM \
+	if ! linux_config_exists \
+	|| ! linux_chkconfig_present TABLET_USB_WACOM \
 	|| ! linux_chkconfig_present INPUT_EVDEV; then
 		echo
 		ewarn "If you use a USB Wacom tablet, you need to enable support in your kernel"
