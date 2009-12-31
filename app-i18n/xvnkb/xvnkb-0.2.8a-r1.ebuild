@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.8a-r1.ebuild,v 1.7 2009/01/07 15:33:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.8a-r1.ebuild,v 1.8 2009/12/31 21:01:52 ssuominen Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 	dolib xvnkb.so.${PV}
 	dosym /usr/lib/xvnkb.so.${PV} /usr/lib/xvnkb.so
 
-	dodoc LICENSE ChangeLog AUTHORS THANKS TODO INSTALL* README* doc/*
+	dodoc ChangeLog AUTHORS THANKS TODO INSTALL* README* doc/*
 	docinto scripts
 	dodoc scripts/*
 	docinto contrib
