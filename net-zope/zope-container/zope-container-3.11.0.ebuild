@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-container/zope-container-3.10.1.ebuild,v 1.1 2009/12/29 21:56:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-container/zope-container-3.11.0.ebuild,v 1.1 2009/12/31 23:54:53 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,7 +22,6 @@ IUSE=""
 RDEPEND="net-zope/zodb
 	net-zope/zope-app-dependable
 	net-zope/zope-broken
-	net-zope/zope-cachedescriptors
 	net-zope/zope-component
 	net-zope/zope-dottedname
 	net-zope/zope-event
