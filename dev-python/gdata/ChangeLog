@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.45 2009/12/19 19:59:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.46 2009/12/31 17:23:17 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> gdata-2.0.4.ebuild:
+  Marking gdata-2.0.4 ppc64 for bug 293296
 
 *gdata-2.0.6 (19 Dec 2009)
 
