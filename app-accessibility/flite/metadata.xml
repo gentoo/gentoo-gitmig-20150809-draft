@@ -3,8 +3,4 @@
 <pkgmetadata>
 <herd>accessibility</herd>
 <herd>sound</herd>
-<use>
-	<flag name = "alsa">use alsa for audio output.</flag>
-	<flag name = "oss">Use Open Sound System for audio output.</flag>
-</use>
 </pkgmetadata>
