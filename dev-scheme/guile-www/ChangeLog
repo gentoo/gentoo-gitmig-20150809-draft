@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-www
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.10 2009/10/22 16:34:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.11 2009/12/31 18:23:49 armin76 Exp $
+
+  31 Dec 2009; Raúl Porcel <armin76@gentoo.org> guile-www-2.23.ebuild:
+  alpha stable
 
   22 Oct 2009; Raúl Porcel <armin76@gentoo.org> guile-www-2.23.ebuild:
   sparc stable
