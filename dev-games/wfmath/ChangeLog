@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.8 2009/06/05 12:49:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.9 2009/12/31 13:39:22 tupone Exp $
+
+  31 Dec 2009; Tupone Alfredo <tupone@gentoo.org> wfmath-0.3.9.ebuild:
+  Fixing build with USE=doc. Bug #297122
 
 *wfmath-0.3.9 (05 Jun 2009)
 
