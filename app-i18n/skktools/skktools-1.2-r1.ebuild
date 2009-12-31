@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.2-r1.ebuild,v 1.4 2009/09/23 15:42:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.2-r1.ebuild,v 1.5 2009/12/31 21:17:19 ssuominen Exp $
 
 inherit elisp-common eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	use ruby && dobin saihenkan.rb
 	use emacs && elisp-site-file-install skk-xml.el

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2.ebuild,v 1.6 2007/04/22 10:37:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2.ebuild,v 1.7 2009/12/31 21:24:54 ssuominen Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-wnnrc-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-wnnrc-gentoo.diff
 }
 
 src_compile() {
@@ -30,14 +30,14 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
-	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	gtk-query-immodules-2.0 > "${ROOT}/etc/gtk-2.0/gtk.immodules"
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	gtk-query-immodules-2.0 > "${ROOT}/etc/gtk-2.0/gtk.immodules"
 }

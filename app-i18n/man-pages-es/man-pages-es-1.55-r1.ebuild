@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.8 2008/06/09 08:07:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/man-pages-es-1.55-r1.ebuild,v 1.9 2009/12/31 21:17:51 ssuominen Exp $
 
 manpagesextra=${PN}-extra-0.8a
 S2=${WORKDIR}/${manpagesextra}
@@ -41,7 +41,7 @@ src_install() {
 		file -i man?/* | while read f ; do
 			iconv -f ${f##*=} \
 				-t ${toencoding} ${d}/${f%%:*} \
-				-o ${D}/usr/share/man/es/${f%%:*}
+				-o "${D}"/usr/share/man/es/${f%%:*}
 		done
 	done
 }

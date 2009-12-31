@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.4 2008/09/26 17:47:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.5 2009/12/31 21:10:45 ssuominen Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${D}
+	cd "${D}"
 
 	local iiimgcf
 	if has_version '>=x11-libs/gtk+-2.4' ; then
@@ -57,19 +57,19 @@ src_install() {
 
 	for i in ${iiimgcf}
 	do
-		tar xzf ${WORKDIR}/${UPDATE_P}/bin/IIIMF/$i || die
+		tar xzf "${WORKDIR}"/${UPDATE_P}/bin/IIIMF/$i || die
 	done
 
 	# /etc files
-	newinitd ${FILESDIR}/iiim.initd iiim || die
-	newconfd ${FILESDIR}/iiim.confd iiim || die
+	newinitd "${FILESDIR}"/iiim.initd iiim || die
+	newconfd "${FILESDIR}"/iiim.confd iiim || die
 
 	tar xzf ${CDROM_ROOT}/bin/ATOK/atokx-${PV}-2.0.i386.tar.gz \
 		|| die "Failed to unpack atokx-${PV}-2.0.i386.tar.gz"
-	tar xzf ${WORKDIR}/${UPDATE_P}/bin/ATOK/atokx-${PV}-2.1.i386.patch.tar.gz \
+	tar xzf "${WORKDIR}"/${UPDATE_P}/bin/ATOK/atokx-${PV}-2.1.i386.patch.tar.gz \
 		|| die "Failed to unpack atokx-${PV}-2.1.i386.patch.tar.gz"
 
-	newinitd ${FILESDIR}/atokx2.initd atokx2 || die
+	newinitd "${FILESDIR}"/atokx2.initd atokx2 || die
 
 	dohtml -r ${CDROM_ROOT}/doc/* || die
 	insinto /usr/share/doc/${PF}
@@ -92,9 +92,9 @@ pkg_postinst() {
 	elog "# /sbin/rc-update add iiim default"
 	elog "Also, call /opt/atokx2/bin/atokx2_client.sh from appropriate file."
 	elog
-	gtk-query-immodules-2.0 > ${ROOT}/$(get_gtk_confdir)/gtk.immodules
+	gtk-query-immodules-2.0 > "${ROOT}/$(get_gtk_confdir)/gtk.immodules"
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > ${ROOT}/$(get_gtk_confdir)/gtk.immodules
+	gtk-query-immodules-2.0 > "${ROOT}/$(get_gtk_confdir)/gtk.immodules"
 }

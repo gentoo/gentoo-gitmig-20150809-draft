@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.9 2008/01/18 16:23:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.10 2009/12/31 21:23:13 ssuominen Exp $
 
 inherit gnome2 eutils
 
@@ -63,7 +63,7 @@ src_compile() {
 
 pkg_postinst() {
 	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
-		gtk-query-immodules-2.0 > ${ROOT}/$(get_gtk_confdir)/gtk.immodules
+		gtk-query-immodules-2.0 > "${ROOT}/$(get_gtk_confdir)/gtk.immodules"
 	fi
 	gnome2_pkg_postinst
 	elog
@@ -78,7 +78,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
-		gtk-query-immodules-2.0 > ${ROOT}/$(get_gtk_confdir)/gtk.immodules
+		gtk-query-immodules-2.0 > "${ROOT}/$(get_gtk_confdir)/gtk.immodules"
 	fi
 	gnome2_pkg_postrm
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canfep/canfep-1.0.ebuild,v 1.5 2005/01/01 14:25:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canfep/canfep-1.0.ebuild,v 1.6 2009/12/31 21:11:28 ssuominen Exp $
 
 inherit eutils
 
@@ -20,21 +20,17 @@ DEPEND="app-i18n/canna
 RDEPEND="app-i18n/canna"
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
-	cd ${S}
-	use unicode && epatch ${DISTDIR}/canfep_utf8.diff
+	cd "${S}"
+	use unicode && epatch "${DISTDIR}"/canfep_utf8.diff
 }
 
 src_compile() {
-
 	make CXX="${CXX}" LIBS="-lcanna -lncurses" CFLAGS="${CFLAGS}" \
 		|| die "make failed"
 }
 
 src_install() {
-
 	dobin canfep
-
 	dodoc 00changes 00readme
 }

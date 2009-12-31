@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/jless-358.254.ebuild,v 1.4 2009/09/23 15:40:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/jless-358.254.ebuild,v 1.5 2009/12/31 21:20:37 ssuominen Exp $
 
 inherit eutils
 
@@ -22,8 +22,8 @@ S=${WORKDIR}/${LESS_P}
 
 src_unpack() {
 	unpack ${LESS_P}.tar.gz
-	cd ${S}
-	epatch ${DISTDIR}/${LESS_P}-iso254.patch.gz
+	cd "${S}"
+	epatch "${DISTDIR}"/${LESS_P}-iso254.patch.gz
 }
 
 src_compile() {
@@ -41,15 +41,15 @@ src_compile() {
 src_install() {
 	einstall binprefix=j manprefix=j || die
 
-	newbin ${FILESDIR}/lesspipe.sh-r1 jlesspipe.sh
+	newbin "${FILESDIR}"/lesspipe.sh-r1 jlesspipe.sh
 
-	doenvd ${FILESDIR}/70jless
+	doenvd "${FILESDIR}"/70jless
 
 	dodoc NEWS README*
 }
 
 pkg_postinst() {
-	if [ ! -f ${ROOT}/usr/bin/lesspipe.sh ] ; then
-		ln -s /usr/bin/jlesspipe.sh ${ROOT}/usr/bin/lesspipe.sh
+	if [ ! -f "${ROOT}"/usr/bin/lesspipe.sh ] ; then
+		ln -s /usr/bin/jlesspipe.sh "${ROOT}"/usr/bin/lesspipe.sh
 	fi
 }

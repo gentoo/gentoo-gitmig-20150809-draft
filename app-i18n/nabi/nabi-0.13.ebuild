@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.13.ebuild,v 1.10 2007/01/05 16:22:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.13.ebuild,v 1.11 2009/12/31 21:13:55 ssuominen Exp $
 
 DESCRIPTION="Simple Hanguk X Input Method"
 HOMEPAGE="http://nabi.kldp.net/"
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog README NEWS
 }

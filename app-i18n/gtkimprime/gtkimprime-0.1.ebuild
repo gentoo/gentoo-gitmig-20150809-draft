@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.3 2006/03/16 13:41:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.4 2009/12/31 21:07:07 ssuominen Exp $
 
 DESCRIPTION="Yet another PRIME client for GTK+2"
 HOMEPAGE="http://gtkimprime.sourceforge.jp/"
@@ -23,15 +23,15 @@ get_gtk_confdir() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog README
 }
 
 pkg_postinst() {
-	gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
+	gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
+	gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
