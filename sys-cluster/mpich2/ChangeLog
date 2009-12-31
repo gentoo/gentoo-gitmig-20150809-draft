@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.47 2009/12/04 16:50:06 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.48 2009/12/31 17:12:04 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> mpich2-1.0.8.ebuild:
+  Marking mpich2-1.0.8 ppc64 for bug 266409
 
 *mpich2-1.2.1 (04 Dec 2009)
 
