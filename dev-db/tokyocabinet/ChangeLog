@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.14 2009/12/28 20:49:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.15 2009/12/31 16:05:21 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> tokyocabinet-1.4.41.ebuild:
+  Marking tokyocabinet-1.4.41 ~ppc64 for bug 290154
 
 *tokyocabinet-1.4.41 (28 Dec 2009)
 
