@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.9.6.ebuild,v 1.1 2009/12/30 14:06:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.9.6.1.ebuild,v 1.1 2009/12/31 06:49:38 grozin Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
