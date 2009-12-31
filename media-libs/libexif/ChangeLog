@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.110 2009/12/29 20:23:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.111 2009/12/31 14:08:53 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> libexif-0.6.19.ebuild:
+  Marking libexif-0.6.19 ppc64 for bug 297023
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   libexif-0.6.19.ebuild:
