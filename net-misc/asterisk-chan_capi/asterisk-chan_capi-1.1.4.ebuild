@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-1.1.1.ebuild,v 1.1 2008/10/26 22:42:29 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-1.1.4.ebuild,v 1.1 2009/12/31 18:59:28 tgurr Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.chan-capi.org/chan-capi/${P/asterisk-}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
 RDEPEND=">=net-misc/asterisk-1.2.0
 	net-dialup/capi4k-utils"
@@ -29,7 +30,7 @@ src_unpack() {
 		-e "s:^\(CFLAGS.*-O6.*\):# \1:g" \
 		-e "s:^\(CFLAGS.*-march=.*\):# \1:g" \
 		-e "s:/usr/lib/:/usr/$(get_libdir)/:g" \
-		-e "s:\(-shared\):\$(LDFLAGS) \1:g" Makefile
+		-e "s:\(-shared\):\$(LDFLAGS) \1:g" Makefile || die "sed failed"
 }
 
 src_compile() {
@@ -38,8 +39,8 @@ src_compile() {
 
 src_install() {
 	emake AVERSION="" INSTALL_PREFIX="${D}" install install_config || die "emake install failed"
-	newdoc libcapi20/README README.capi20
-	dodoc CHANGES README* capi.conf
+	newdoc libcapi20/README README.capi20 || die "newdoc failed"
+	dodoc CHANGES README* capi.conf || die "dodoc failed"
 
 	# fix permissions
 	if [ -n "$(egetent group asterisk)" ]; then

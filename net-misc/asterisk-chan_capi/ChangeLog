@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-chan_capi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.10 2008/10/26 22:42:29 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.11 2009/12/31 18:59:28 tgurr Exp $
+
+*asterisk-chan_capi-1.1.4 (31 Dec 2009)
+
+  31 Dec 2009; Timo Gurr <tgurr@gentoo.org>
+  -asterisk-chan_capi-0.7.1.ebuild, -asterisk-chan_capi-1.1.1.ebuild,
+  +asterisk-chan_capi-1.1.4.ebuild:
+  Version bump, remove older broken ones wrt bug #298872. Tested using
+  Asterisk 1.6.1.6 and a Dialogic Diva V-PRI/E1-30 PCI v3 card.
 
 *asterisk-chan_capi-1.1.1 (26 Oct 2008)
 
