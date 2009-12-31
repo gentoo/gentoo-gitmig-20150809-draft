@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.5.0.ebuild,v 1.8 2009/01/18 22:28:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.5.0.ebuild,v 1.9 2009/12/31 18:25:38 ssuominen Exp $
 
-inherit kde-functions eutils
+inherit eutils qt3
 
 manual_cs="2.0.4.0-1"
 manual_de="2.1.0.0-1"
@@ -29,8 +29,8 @@ SLOT="0"
 IUSE="doc"
 KEYWORDS="amd64 hppa ppc ppc64 x86"
 
-DEPEND=">=sys-apps/sed-4"
-need-qt 3.3
+DEPEND="=x11-libs/qt-3*
+	>=sys-apps/sed-4"
 
 LANGS="cs da de el en es et fr hu it nl no pa pl ru sk tr"
 for X in ${LANGS} ; do

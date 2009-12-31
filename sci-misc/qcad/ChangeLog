@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/qcad
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.34 2009/01/18 22:28:25 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.35 2009/12/31 18:25:38 ssuominen Exp $
+
+  31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> qcad-2.0.5.0.ebuild:
+  Stop using deprecated kde-functions.eclass.
 
   18 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
   +files/qcad-2.0.5.0-doc.patch, qcad-2.0.5.0.ebuild:
