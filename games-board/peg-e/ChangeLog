@@ -1,0 +1,9 @@
+# ChangeLog for games-board/peg-e
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.1 2009/12/31 23:02:06 ssuominen Exp $
+
+*peg-e-1.1.0 (31 Dec 2009)
+
+  31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +peg-e-1.1.0.ebuild:
+  Initial commit.
+
