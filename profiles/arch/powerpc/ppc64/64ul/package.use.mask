@@ -1,7 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/64ul/package.use.mask,v 1.7 2009/12/31 13:57:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/64ul/package.use.mask,v 1.8 2009/12/31 17:12:12 ranger Exp $
 
+
+
+# Brent Baude <ranger@gentoo.org> (31 Dec 2009)
+# masking for mpich2 stablization
+sys-cluster/mpich2 pvfs2
 
 # Brent Baude <ranger@gentoo.org> (31 Dec 2009)
 # Masking for bug 274847
