@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.4 2008/05/19 09:44:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.5 2009/12/31 10:19:23 dertobi123 Exp $
 
 DESCRIPTION="GTK frontend to proftpd"
 HOMEPAGE="http://mange.dynup.net/linux.html"
@@ -51,6 +51,8 @@ src_install () {
 	fi
 
 	dodoc AUTHORS ChangeLog README
+
+	rm -r "${D}/usr/share/doc/gproftpd"
 }
 
 pkg_postinst() {
