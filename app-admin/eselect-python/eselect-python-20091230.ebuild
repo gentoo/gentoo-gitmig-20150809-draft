@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20091230.ebuild,v 1.1 2009/12/30 22:17:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20091230.ebuild,v 1.2 2009/12/31 01:10:48 arfrever Exp $
 
 EAPI="1"
 
-inherit flag-o-matic toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Eselect module for management of multiple Python versions"
 HOMEPAGE="http://www.gentoo.org"
@@ -21,8 +21,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gcc-3.4"
 
 pkg_setup() {
-	append-flags -fno-PIC -fno-PIE
-
 	if [[ $(gcc-major-version) -lt 3 || ($(gcc-major-version) -eq 3 && $(gcc-minor-version) -lt 4) ]]; then
 		die "GCC >=3.4 is required"
 	fi
