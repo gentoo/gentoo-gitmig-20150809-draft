@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.32 2009/12/26 16:31:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.33 2009/12/31 21:31:39 williamh Exp $
+
+*flite-1.4 (31 Dec 2009)
+
+  31 Dec 2009; William Hubbs <williamh@gentoo.org> +flite-1.4.ebuild,
+  +files/flite-1.4-respect-destdir.patch:
+  version bump for #299032, thanks to Chris Bruner.
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> flite-1.3.ebuild:
   sparc stable wrt #289439
