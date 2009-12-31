@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.213 2009/12/31 14:07:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.214 2009/12/31 15:54:40 mr_bones_ Exp $
+
+  31 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org> +uim-1.4.2.ebuild:
+  resurrect uim-1.4.2.ebuild which is still in use
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> uim-1.5.7.ebuild:
   Marking uim-1.5.7 ppc64 for bug 298221
