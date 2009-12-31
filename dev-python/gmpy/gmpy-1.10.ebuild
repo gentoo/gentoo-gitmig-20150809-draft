@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.10.ebuild,v 1.2 2009/12/26 20:08:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.10.ebuild,v 1.3 2009/12/31 16:24:19 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/gmp"
