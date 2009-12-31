@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.73 2009/06/05 15:37:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.74 2009/12/31 14:15:30 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> t1lib-5.1.2.ebuild:
+  Marking t1lib-5.1.2 ppc64 for bug 297690
 
   05 Jun 2009; Peter Volkov <pva@gentoo.org> -t1lib-5.0.2.ebuild:
   Removed vulnerable version, bug #271692, thank Robert Buchholz for report.
