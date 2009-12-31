@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.73 2009/12/31 16:22:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.74 2009/12/31 16:25:22 ssuominen Exp $
+
+  31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> valknut-0.4.9.ebuild:
+  amd64 stable wrt #297186
 
   31 Dec 2009; Christian Faulhammer <fauli@gentoo.org> valknut-0.4.9.ebuild:
   stable x86, bug 297186
