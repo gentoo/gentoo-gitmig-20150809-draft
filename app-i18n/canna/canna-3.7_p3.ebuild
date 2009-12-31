@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3.ebuild,v 1.6 2009/09/23 15:40:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3.ebuild,v 1.7 2009/12/31 21:39:49 ssuominen Exp $
 
 inherit cannadic eutils multilib
 
@@ -25,15 +25,15 @@ S="${WORKDIR}/${MY_P/_/}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	find . -name '*.man' -o -name '*.jmn' | xargs sed -i.bak -e 's/1M/8/g'
 	sed -e "s%@cannapkgver@%${PF}%" \
-		${FILESDIR}/${P/_*/}-gentoo.diff.in > ${T}/${PF}-gentoo.diff
-	epatch ${T}/${PF}-gentoo.diff
+		"${FILESDIR}"/${P/_*/}-gentoo.diff.in > "${T}/${PF}-gentoo.diff"
+	epatch "${T}"/${PF}-gentoo.diff
 	cd dic/phono
-	epatch ${FILESDIR}/${PN}-kpdef-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-kpdef-gentoo.diff
 
-	cd ${S}
+	cd "${S}"
 	# Multilib-strict fix for amd64
 	sed -i -e "s:\(DefLibCannaDir.*\)/lib:\1/$(get_libdir):g" Canna.conf*
 	# fix deprecated sort syntax
@@ -66,8 +66,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	make DESTDIR=${D} install.man || die
+	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install.man || die
 
 	# install default.canna (removed from Canna36p4)
 	insinto /usr/share/canna
@@ -78,7 +78,7 @@ src_install() {
 
 	dodir /usr/share/man/man8 /usr/share/man/ja/man8
 	for man in cannaserver cannakill ; do
-		for mandir in ${D}/usr/share/man ${D}/usr/share/man/ja ; do
+		for mandir in "${D}"/usr/share/man "${D}"/usr/share/man/ja ; do
 			mv ${mandir}/man1/${man}.1 ${mandir}/man8/${man}.8
 		done
 	done
@@ -90,16 +90,16 @@ src_install() {
 		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
 	fi
 
-	newinitd ${FILESDIR}/canna.initd canna || die
-	newconfd ${FILESDIR}/canna.confd canna || die
-	insinto /etc/		; newins ${FILESDIR}/canna.hosts hosts.canna || die
+	newinitd "${FILESDIR}"/canna.initd canna || die
+	newconfd "${FILESDIR}"/canna.confd canna || die
+	insinto /etc/		; newins "${FILESDIR}"/canna.hosts hosts.canna || die
 	keepdir /var/log/canna/ || die
 
 	# for backward compatibility
-	dosbin ${FILESDIR}/update-canna-dics_dir
+	dosbin "${FILESDIR}"/update-canna-dics_dir
 
 	insinto /var/lib/canna/dic/dics.d/
-	newins ${D}/var/lib/canna/dic/canna/dics.dir 00canna.dics.dir
+	newins "${D}"/var/lib/canna/dic/canna/dics.dir 00canna.dics.dir
 
 	# fix permission for user dictionary
 	keepdir /var/lib/canna/dic/{user,group}
@@ -123,17 +123,17 @@ pkg_prerm() {
 		einfo "Stopping Canna for safe unmerge"
 		einfo
 		/etc/init.d/canna stop
-		touch ${T}/canna.cookie
+		touch "${T}"/canna.cookie
 	fi
 }
 
 pkg_postrm() {
-	if [ -f /usr/sbin/cannaserver -a -e ${T}/canna.cookie ] ; then
+	if [ -f /usr/sbin/cannaserver -a -e "${T}"/canna.cookie ] ; then
 		#update-cannadic-dir
 		einfo
 		einfo "Restarting Canna"
 		einfo
 		/etc/init.d/canna start
-		rm -f ${T}/canna.cookie
+		rm -f "${T}"/canna.cookie
 	fi
 }
