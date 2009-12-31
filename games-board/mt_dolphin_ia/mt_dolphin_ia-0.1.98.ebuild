@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/mt_dolphin_ia-0.1.98.ebuild,v 1.4 2004/06/24 22:19:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/mt_dolphin_ia-0.1.98.ebuild,v 1.5 2009/12/31 16:25:28 mr_bones_ Exp $
 
 inherit games
 
@@ -20,6 +20,6 @@ DEPEND="=dev-libs/glib-2*
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README
 	prepgamesdirs
 }
