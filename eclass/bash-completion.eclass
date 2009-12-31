@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.21 2009/02/21 20:17:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.22 2009/12/31 15:57:04 ulm Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -21,7 +21,10 @@ EXPORT_FUNCTIONS pkg_postinst
 
 IUSE="bash-completion"
 
-RDEPEND="bash-completion? (	app-admin/eselect )"
+# Allow eclass to be inherited by eselect without a circular dependency
+if [[ ${CATEGORY}/${PN} != app-admin/eselect ]]; then
+	RDEPEND="bash-completion? ( app-admin/eselect )"
+fi
 
 # @FUNCTION: dobashcompletion
 # @USAGE: < file > [ new_file ]
@@ -48,7 +51,8 @@ dobashcompletion() {
 # The bash-completion pkg_postinst function, which is exported
 bash-completion_pkg_postinst() {
 	if useq bash-completion ; then
-		elog "To enable command-line completion for ${PN}, run:"
+		elog "In the case that you haven't yet enabled command-line completion"
+		elog "for ${PN}, you can run:"
 		elog
 		elog "  eselect bashcomp enable ${BASH_COMPLETION_NAME:-${PN}}"
 		elog
