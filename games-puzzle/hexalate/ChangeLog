@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/hexalate
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexalate/ChangeLog,v 1.1 2009/12/31 22:03:36 ssuominen Exp $
+
+*hexalate-1.0.1 (31 Dec 2009)
+
+  31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +hexalate-1.0.1.ebuild:
+  Initial commit.
+
