@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.1.0.7.0.ebuild,v 1.4 2009/08/23 01:47:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.1.0.7.0.ebuild,v 1.5 2009/12/31 10:24:17 dertobi123 Exp $
 
 inherit eutils
 
@@ -23,8 +23,7 @@ RESTRICT="fetch"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="~virtual/libstdc++-3.3
-	dev-libs/libaio"
+RDEPEND="dev-libs/libaio"
 
 S="${WORKDIR}"
 
