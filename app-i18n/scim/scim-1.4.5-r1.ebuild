@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5-r1.ebuild,v 1.11 2008/08/10 16:16:52 matsuu Exp $
-
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5-r1.ebuild,v 1.12 2009/12/31 21:15:48 ssuominen Exp $
 
 inherit eutils flag-o-matic autotools
 
