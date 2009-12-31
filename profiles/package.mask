@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11021 2009/12/30 21:29:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11022 2009/12/31 20:26:52 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,58 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Dec 2009)
+# Doesn't compile anymore with Autoconf >= 2.64, wv2 >= 0.4.0,
+# several open security bugs, ...
+#
+# Replaced by app-office/koffice-meta-2.1.0
+#
+# See bugs 274566, 274918, 279027, 279482, 283429, 285018, 294676,
+# 287276, 292791, ...
+#
+# Masked for removal in 30 days
+#
+app-i18n/koffice-i18n
+=app-office/karbon-1.6*
+=app-office/kchart-1.6*
+=app-office/kexi-1.6*
+=app-office/kformula-1.6*
+=app-office/kivio-1.6*
+=app-office/koffice-data-1.6*
+=app-office/koffice-libs-1.6*
+=app-office/koffice-meta-1.6*
+=app-office/koshell-1.6*
+=app-office/kplato-1.6*
+=app-office/kpresenter-1.6*
+=app-office/krita-1.6*
+=app-office/kspread-1.6*
+=app-office/kugar-1.6*
+=app-office/kword-1.6*
+games-arcade/kamikaze
+games-board/hearts
+games-board/six
+games-board/slibo
+games-emulation/kvisualboyadvance
+games-mud/xpertmud
+games-simulation/kfreeflight
+games-strategy/boson
+=kde-base/kcminit-3.5*
+=kde-base/kcontrol-3.5*
+=kde-base/kde-i18n-3.5*
+=kde-base/kdebase-data-3.5*
+=kde-base/kdelibs-3.5*
+=kde-base/kdepasswd-3.5*
+=kde-base/kdesu-3.5*
+=kde-base/kdialog-3.5*
+=kde-base/kdnssd-3.5*
+=kde-base/kghostview-3.5*
+=kde-base/khotkeys-3.5*
+=kde-base/kicker-3.5*
+=kde-base/kmenuedit-3.5*
+=kde-base/libkonq-3.5*
+kde-misc/kdnssd-avahi
+~media-plugins/mythbrowser-0.21_p17105
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Dec 2009)
 # Masked for testing prior to 1.8 appearing.
