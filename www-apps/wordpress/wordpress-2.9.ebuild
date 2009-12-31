@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.9.ebuild,v 1.1 2009/12/31 10:55:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.9.ebuild,v 1.2 2009/12/31 10:57:15 dertobi123 Exp $
 
 inherit webapp depend.php
 
@@ -32,7 +32,7 @@ src_install() {
 	dohtml readme.html
 	rm -f readme.html license.txt
 
-	cp wp-config-sample.php wp-config.php
+	[ -f wp-config.php ] || cp wp-config-sample.php wp-config.php
 
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
