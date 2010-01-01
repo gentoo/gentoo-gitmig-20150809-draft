@@ -1,6 +1,10 @@
 # ChangeLog for www-client/httrack
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.27 2009/08/22 16:02:05 vanquirius Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.28 2010/01/01 21:26:19 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  httrack-3.43.7.ebuild:
+  Transfer Prefix keywords
 
 *httrack-3.43.7 (22 Aug 2009)
 

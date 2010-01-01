@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.43.7.ebuild,v 1.1 2009/08/22 16:02:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.43.7.ebuild,v 1.2 2010/01/01 21:26:19 fauli Exp $
 
 inherit versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.httrack.com/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 src_compile() {
