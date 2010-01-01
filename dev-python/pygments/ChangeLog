@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygments
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.46 2009/11/14 16:47:06 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.47 2010/01/01 20:14:04 djc Exp $
+
+*pygments-1.2 (01 Jan 2010)
+
+  01 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +pygments-1.2.ebuild:
+  Version bump to 1.2.
 
   14 Nov 2009; Raúl Porcel <armin76@gentoo.org> pygments-1.1.1.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #289434
