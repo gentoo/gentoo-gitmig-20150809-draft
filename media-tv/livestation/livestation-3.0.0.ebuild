@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-3.0.0.ebuild,v 1.1 2009/12/01 17:03:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-3.0.0.ebuild,v 1.2 2010/01/01 15:19:11 ssuominen Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-EMUL_VER=20081109
+EMUL_VER=20091231
 
 RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-baselibs-${EMUL_VER}
 	>=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
-	>=app-emulation/emul-linux-x86-sdl-${EMUL_VER} )"
+	>=app-emulation/emul-linux-x86-qtlibs-${EMUL_VER} )"
 DEPEND=""
 
 MY_PN=${PN/l/L}
@@ -44,7 +44,7 @@ src_install() {
 
 	dodir ${dest}
 	cp -dpR *.{bin,conf} plugins "${D}"/${dest} || die
-	rm -f lib/{libcrypto.so.0.9.8,libssl.so.0.9.8,libXtst.so.6} || die
+	rm -f lib/{libcrypto.so.0.9.8,libssl.so.0.9.8,libXtst.so.6,libQt*} || die
 	exeinto ${dest}/lib
 	doexe lib/* || die
 	dosym plugins/imageformats ${dest}/imageformats || die
