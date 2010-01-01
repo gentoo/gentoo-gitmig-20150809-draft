@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.17 2010/01/01 09:16:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.18 2010/01/01 15:52:39 flameeyes Exp $
+
+  01 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-prof-0.7.6.ebuild:
+  Enable ruby19 support as the tests now pass, there's only one minor
+  problem with threading in Ruby 1.9.
 
 *ruby-prof-0.7.6 (01 Jan 2010)
 

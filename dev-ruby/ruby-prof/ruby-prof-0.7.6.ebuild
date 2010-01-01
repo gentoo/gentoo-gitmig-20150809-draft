@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.6.ebuild,v 1.1 2010/01/01 09:16:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.6.ebuild,v 1.2 2010/01/01 15:52:39 flameeyes Exp $
 
 EAPI=2
 
-# ruby19 → not compatible as of 0.7.5 (upstream-provided information)
 # jruby → not compatible, since it uses an extension
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="README CHANGES"
 RUBY_FAKEGEM_DOCDIR="doc"
