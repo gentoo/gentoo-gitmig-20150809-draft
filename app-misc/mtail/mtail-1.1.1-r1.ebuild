@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r1.ebuild,v 1.14 2008/02/03 15:30:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r1.ebuild,v 1.15 2010/01/01 18:22:54 ssuominen Exp $
 
 inherit eutils
 
@@ -19,11 +19,11 @@ RDEPEND="dev-lang/python"
 
 src_unpack() {
 	unpack ${P}.tgz
-	cd ${S}
-	epatch ${FILESDIR}/${P}-remove-blanks.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-remove-blanks.patch
 }
 
 src_install() {
-	dobin mtail
-	dodoc CHANGES mtailrc.sample README ${DISTDIR}/mtailrc-syslog.sample
+	dobin mtail || die
+	dodoc CHANGES mtailrc.sample README "${DISTDIR}"/mtailrc-syslog.sample
 }

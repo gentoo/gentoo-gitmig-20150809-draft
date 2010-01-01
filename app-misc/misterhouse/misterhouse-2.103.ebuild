@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/misterhouse-2.103.ebuild,v 1.5 2007/07/12 03:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/misterhouse-2.103.ebuild,v 1.6 2010/01/01 18:18:01 ssuominen Exp $
 
 DESCRIPTION="Mister House, an open source home automation program with X10 support"
 HOMEPAGE="http://misterhouse.sf.net/"
@@ -30,7 +30,7 @@ src_install() {
 	cp -r "${S}/bin" "${D}/opt/misterhouse"
 	cp -r "${S}/code" "${D}/opt/misterhouse"
 	cp -r "${S}/data" "${D}/opt/misterhouse"
-	for a in ${S}/docs/*; do
+	for a in "${S}"/docs/*; do
 		dodoc ${a}
 	done
 	dosym /usr/share/doc/${PF} /opt/misterhouse/docs

@@ -1,27 +1,26 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.3a.ebuild,v 1.4 2008/10/27 05:48:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.3a.ebuild,v 1.5 2010/01/01 18:17:30 ssuominen Exp $
 
 DESCRIPTION="Console file manager with vi/vim-like keybindings"
 HOMEPAGE="http://vifm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/vifm/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="amd64 ~ppc s390 x86"
 IUSE=""
-DEPEND=">=sys-apps/sed-4.0"
 
-S="${WORKDIR}/${P}"
+DEPEND=">=sys-apps/sed-4.0"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
 	sed -i -e "s:(datadir)/@PACKAGE@:(datadir)/${P}:" \
 		Makefile.in
 
-	cd ${S}/src
+	cd "${S}"/src
 	sed -i -e "s:(datadir)/@PACKAGE@:(datadir)/${P}:" \
 		Makefile.in
 
@@ -31,9 +30,9 @@ src_unpack() {
 
 src_install() {
 	einstall || die
-
-	dodoc INSTALL AUTHORS TODO README
+	dodoc AUTHORS TODO README
 }
+
 pkg_postinst() {
 	elog "To use vim to view the vifm help, copy /usr/share/${P}/vifm.txt"
 	elog "to ~/.vim/doc/ and run ':helptags ~/.vim/doc' in vim"

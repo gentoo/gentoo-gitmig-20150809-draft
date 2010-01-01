@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.8 2009/09/23 16:00:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.9 2010/01/01 18:29:41 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,8 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND=""
 
 src_unpack() {
-	unpack ${A} && cd ${S}
+	unpack ${A}
+	cd "${S}"
 	sed -i 's|\(CWLIB=\)/usr/local/lib/cw|\1/usr/lib/cw|' bin/colorcfg || \
 		die "sed failed"
 }
@@ -38,7 +39,7 @@ src_install() {
 	doman man/*
 	dodoc CHANGES CONTRIB INSTALL README PLATFORM doc/README*
 
-	cd ${S}/bin
+	cd "${S}"/bin
 	dobin cw cwu colorcfg
 	# app-misc/color currently conflicts; hopefully 'colors' is safe
 	newbin color colors

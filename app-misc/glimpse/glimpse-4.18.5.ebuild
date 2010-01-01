@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.11 2008/01/11 21:00:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.12 2010/01/01 18:21:45 ssuominen Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,7 @@ RDEPEND="!dev-libs/tre
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:CC=.*:CC=$(tc-getCC):" \
 		-e 's:-O3 -fomit-frame-pointer:$(OPTIMIZEFLAGS):' \
