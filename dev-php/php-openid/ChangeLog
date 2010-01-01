@@ -1,0 +1,11 @@
+# ChangeLog for dev-php/php-openid
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.1 2010/01/01 21:38:07 yngwin Exp $
+
+*php-openid-2.1.3 (01 Jan 2010)
+
+  01 Jan 2010; Ben de Groot <yngwin@gentoo.org> +php-openid-2.1.3.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild based on the one by Nathan Phillip Brink in his
+  ohnobinki overlay.
+
