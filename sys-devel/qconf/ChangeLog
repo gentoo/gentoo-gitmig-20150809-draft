@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/qconf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.4 2009/12/26 18:56:10 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.5 2010/01/01 12:43:17 armin76 Exp $
+
+  01 Jan 2010; Raúl Porcel <armin76@gentoo.org> qconf-1.5_pre717.ebuild:
+  Add ~arm
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> qconf-1.5_pre717.ebuild:
   Add ~sparc wrt #279676
