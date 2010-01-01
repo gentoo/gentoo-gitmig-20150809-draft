@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.441 2010/01/01 17:23:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.442 2010/01/01 18:56:30 arfrever Exp $
+
+*python-2.5.4-r4 (01 Jan 2010)
+
+  01 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.5.4-r4.ebuild:
+  Use external libffi (bug #209673). Respect PYTHONDONTWRITEBYTECODE in
+  distutils. Check availability of nis headers before building of nis
+  module (bug #288110).
 
   01 Jan 2010; Brent Baude <ranger@gentoo.org> python-2.6.4.ebuild:
   Marking python-2.6.4 ppc64 for bug 295066
