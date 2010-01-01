@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.82 2009/10/16 16:48:45 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.83 2010/01/01 19:47:40 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> zip-3.0.ebuild:
+  Transfer Prefix keywords
 
   16 Oct 2009; Jeroen Roovers <jer@gentoo.org> zip-3.0.ebuild:
   Stable for HPPA (bug #287369).

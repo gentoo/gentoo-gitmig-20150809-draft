@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pigz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.7 2009/12/31 16:22:52 spatz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.8 2010/01/01 19:38:05 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pigz-2.1.5-r1.ebuild:
+  Transfer Prefix keywords
 
 *pigz-2.1.5-r1 (31 Dec 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzop
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.26 2008/11/26 21:01:10 gmsoft Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.27 2010/01/01 19:34:33 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  lzop-1.02_rc1-r1.ebuild:
+  Transfer Prefix keywords
 
   26 Nov 2008; Guy Martin <gmsoft@gentoo.org> lzop-1.02_rc1-r1.ebuild:
   hppa stable

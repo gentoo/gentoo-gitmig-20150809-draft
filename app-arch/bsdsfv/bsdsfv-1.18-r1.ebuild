@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.18-r1.ebuild,v 1.10 2008/01/26 18:42:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/bsdsfv-1.18-r1.ebuild,v 1.11 2010/01/01 19:29:20 fauli Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bsdsfv/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa m68k ppc s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa m68k ppc s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""

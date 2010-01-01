@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/unlzx-1.1.ebuild,v 1.27 2009/10/12 17:03:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/unlzx-1.1.ebuild,v 1.28 2010/01/01 19:43:52 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://us.aminet.net/pub/aminet/misc/unix/${PN}.c.gz.readme"
 SLOT="0"
 LICENSE="freedist"
 IUSE=""
-KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 
 src_unpack() {
 	mkdir "${S}"

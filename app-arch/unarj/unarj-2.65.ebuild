@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/unarj-2.65.ebuild,v 1.7 2008/04/13 22:54:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/unarj-2.65.ebuild,v 1.8 2010/01/01 19:51:02 fauli Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://freebsd/ports/local-distfiles/ache/${P}.tgz"
 
 LICENSE="arj"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_unpack() {

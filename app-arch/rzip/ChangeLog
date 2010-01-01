@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rzip
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.26 2008/05/23 23:12:17 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.27 2010/01/01 19:39:04 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> rzip-2.1.ebuild:
+  Transfer Prefix keywords
 
   23 May 2008; Jeremy Olexa <darkside@gentoo.org> rzip-2.1.ebuild:
   added a warning wrt to files larger than 4GB. see bug #217552

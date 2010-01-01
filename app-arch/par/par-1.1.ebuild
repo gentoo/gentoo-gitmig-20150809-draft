@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.26 2008/10/26 12:45:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.27 2010/01/01 19:37:12 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/parchive/par-v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="!app-text/par

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.26 2009/12/23 17:39:25 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.27 2010/01/01 19:44:42 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> unp-1.0.15-r2.ebuild:
+  Transfer Prefix keywords
 
 *unp-1.0.15-r2 (23 Dec 2009)
 
