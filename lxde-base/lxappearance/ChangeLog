@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxappearance
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.7 2009/11/21 18:28:08 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.8 2010/01/01 18:26:28 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  lxappearance-0.2.1.ebuild:
+  Transfer Prefix keywords
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> lxappearance-0.2.1.ebuild:
   ppc stable #292698
