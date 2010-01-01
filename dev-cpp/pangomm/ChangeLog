@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/pangomm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.13 2009/10/29 22:58:55 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.14 2010/01/01 18:00:34 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  pangomm-2.26.0.ebuild:
+  Transfer Prefix keywords
 
 *pangomm-2.26.0 (29 Oct 2009)
 
