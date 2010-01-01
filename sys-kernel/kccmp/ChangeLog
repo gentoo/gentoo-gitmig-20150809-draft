@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kccmp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.16 2009/12/23 01:26:55 mpagano Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.17 2010/01/01 10:34:16 hwoarang Exp $
+
+  01 Jan 2010; Markos Chandras <hwoarang@gentoo.org> kccmp-0.2-r2.ebuild:
+  Stable on amd64 wrt bug #299087
 
 *kccmp-0.2-r2 (23 Dec 2009)
 

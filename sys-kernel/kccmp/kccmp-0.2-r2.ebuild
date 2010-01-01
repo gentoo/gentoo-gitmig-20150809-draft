@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2-r2.ebuild,v 1.2 2009/12/23 11:26:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/kccmp-0.2-r2.ebuild,v 1.3 2010/01/01 10:34:16 hwoarang Exp $
 
 EAPI="1"
 inherit qt4
@@ -11,7 +11,7 @@ SRC_URI="http://stoopidsimple.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4
