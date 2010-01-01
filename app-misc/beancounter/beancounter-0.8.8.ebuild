@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/beancounter-0.8.8.ebuild,v 1.1 2008/06/07 06:56:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/beancounter-0.8.8.ebuild,v 1.2 2010/01/01 18:37:35 ssuominen Exp $
 
 inherit perl-app
 
-DESCRIPTION="Finance performance calculation engine with full data acquisition and SQL backend support"
+DESCRIPTION="Finance performance calculation engine with full data acquisition and SQL support"
 HOMEPAGE="http://dirk.eddelbuettel.com/code/beancounter.html"
 SRC_URI="http://eddelbuettel.com/dirk/code/beancounter/beancounter_${PV}.tar.gz"
 

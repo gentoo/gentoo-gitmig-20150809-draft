@@ -1,26 +1,19 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/interceptty/interceptty-0.6.ebuild,v 1.4 2007/06/14 01:56:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/interceptty/interceptty-0.6.ebuild,v 1.5 2010/01/01 18:40:35 ssuominen Exp $
 
-DESCRIPTION="interceptty is a program that can sit between a real (or fake!) serial port and an application, recording any communications between the application and the device."
+DESCRIPTION="a program that can sit between a serial port and an application"
 HOMEPAGE="http://www.suspectclass.com/~sgifford/interceptty/"
 SRC_URI="http://www.suspectclass.com/~sgifford/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-
 IUSE=""
-DEPEND=""
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
 
 src_install() {
 	into /usr
-	dobin interceptty interceptty-nicedump
+	dobin interceptty interceptty-nicedump || die
 	dodoc AUTHORS NEWS README TODO
 	doman interceptty.1
 }
