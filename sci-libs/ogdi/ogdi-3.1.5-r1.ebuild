@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.11 2006/05/25 09:09:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.12 2010/01/01 17:42:30 flameeyes Exp $
 
 inherit toolchain-funcs eutils
 
@@ -30,8 +30,10 @@ src_compile() {
 	export LD_LIBRARY_PATH=$TOPDIR/bin/${TARGET}
 
 	econf --with-projlib="-L/usr/$(get_libdir) -lproj" \
-	    --with-zlib --with-expat || die "econf failed"
-	make || die "make failed"
+		--with-zlib --with-expat || die "econf failed"
+
+	# bug #299239
+	emake -j1 || die "make failed"
 }
 
 src_install() {
