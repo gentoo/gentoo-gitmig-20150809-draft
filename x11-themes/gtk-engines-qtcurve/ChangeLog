@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.78 2009/12/26 17:29:47 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.79 2010/01/01 18:05:25 scarabeus Exp $
+
+  01 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  gtk-engines-qtcurve-0.65.2.ebuild, gtk-engines-qtcurve-0.68.1.ebuild,
+  gtk-engines-qtcurve-0.69.2.ebuild:
+  mozilla-firefox-bin -> firefox-bin
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   gtk-engines-qtcurve-0.69.2.ebuild:
