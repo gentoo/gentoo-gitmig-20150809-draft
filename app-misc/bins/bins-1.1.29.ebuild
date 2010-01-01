@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.13 2007/08/19 10:35:37 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.14 2010/01/01 17:56:37 ssuominen Exp $
 
 inherit eutils
 
@@ -36,18 +36,18 @@ DEPEND=">=dev-lang/perl-5.6.1-r6
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-install.patch
-	sed -i -e  's|MAN="\$PREFIX/man/man1"|MAN="${D}usr/share/man/man1"|' ${S}/install.sh
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-install.patch
+	sed -i -e  's|MAN="\$PREFIX/man/man1"|MAN="${D}usr/share/man/man1"|' "${S}"/install.sh
 }
 
 src_install() {
-	echo "" | DESTDIR=${D} PREFIX="/usr" ./install.sh || die
+	echo "" | DESTDIR="${D}" PREFIX="/usr" ./install.sh || die
 	# Fix for pathing
-	for i in `grep -l portage ${D}/usr/bin/*`; do
+	for i in `grep -l portage "${D}"/usr/bin/*`; do
 		sed -i -e  "s:${D}:/:" ${i}
 	done
-	for i in `grep -l "usr\/local\/share" ${D}/usr/bin/*`; do
+	for i in `grep -l "usr\/local\/share" "${D}"/usr/bin/*`; do
 		sed -i -e "s:usr\/local\/share:usr\/share:" ${i}
 	done
 

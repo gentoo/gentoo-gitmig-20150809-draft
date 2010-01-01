@@ -1,25 +1,23 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.11 2007/07/22 10:06:45 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.12 2010/01/01 17:55:10 ssuominen Exp $
 
 DESCRIPTION="A many featured astrology chart calculation program"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"
 SRC_URI="http://www.astrolog.org/ftp/ast54unx.shr"
+
 LICENSE="astrolog"
 SLOT="0"
-
-# works fine on x86 - runs probably on other architectures, too
 KEYWORDS="x86 ppc64 ppc amd64"
-
 IUSE="X"
 
 DEPEND="X? ( x11-libs/libX11 )"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
-	bash ${DISTDIR}/ast54unx.shr
-	cd ${S}
+	bash "${DISTDIR}"/ast54unx.shr
+	cd "${S}"
 
 	# remove stripping of created binary and substituce CFLAGS
 	sed -i -e "s:strip:#strip:" -e "s:= -O:= ${CFLAGS}:" Makefile
@@ -45,11 +43,10 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
-	cp astrolog ${D}/usr/bin/
+	dobin astrolog || die
 	dodoc Helpfile.540 README.1ST README.540 Update.540
-	dodir /usr/share/astrolog
-	cp astrolog.dat ${D}/usr/share/astrolog/
+	insinto /usr/share/astrolog
+	doins astrolog.dat || die
 }
 
 pkg_postinst() {
