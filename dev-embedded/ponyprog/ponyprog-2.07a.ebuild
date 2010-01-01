@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.7 2009/11/24 09:31:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.8 2010/01/01 17:58:10 scarabeus Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libXaw
 	x11-libs/libXext
 	x11-libs/libX11
 	epiphany? ( www-client/epiphany )
-	firefox? ( || ( www-client/mozilla-firefox www-client/mozilla-firefox-bin ) )
+	firefox? ( || ( www-client/mozilla-firefox www-client/firefox-bin ) )
 	seamonkey? ( || ( www-client/seamonkey www-client/seamonkey-bin ) )"
 DEPEND="${RDEPEND}
 	media-gfx/imagemagick"

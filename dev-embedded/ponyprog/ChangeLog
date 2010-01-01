@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/ponyprog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.18 2009/11/24 09:31:41 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.19 2010/01/01 17:58:10 scarabeus Exp $
+
+  01 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  ponyprog-2.07a.ebuild:
+  mozilla-firefox-bin -> firefox-bin
 
   24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ponyprog-2.07a.ebuild:
