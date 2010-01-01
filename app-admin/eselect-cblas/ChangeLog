@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-cblas
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.21 2008/11/09 16:44:29 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.22 2010/01/01 19:18:56 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  eselect-cblas-0.1.ebuild:
+  Transfer Prefix keywords
 
   09 Nov 2008; Raúl Porcel <armin76@gentoo.org> eselect-cblas-0.1.ebuild:
   ia64 stable

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-blas
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.20 2007/08/26 17:38:57 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.21 2010/01/01 19:17:10 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  eselect-blas-0.1.ebuild:
+  Transfer Prefix keywords
 
   26 Aug 2007; Raúl Porcel <armin76@gentoo.org> eselect-blas-0.1.ebuild:
   alpha/ia64 stable wrt #189725
