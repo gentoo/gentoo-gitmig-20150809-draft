@@ -1,11 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.1.ebuild,v 1.8 2009/06/03 12:41:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.1.ebuild,v 1.9 2010/01/01 18:36:04 ssuominen Exp $
 
 EAPI=2
 NEED_PYTHON="2.5"
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 inherit autotools eutils gnome2 python
 
@@ -40,8 +38,8 @@ pkg_setup() {
 	G2CONF="${G2CONF} --disable-mime-install"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 	eautoreconf
 	# This is for bug 215944, so .pyo/.pyc files don't get into the
 	# file system
