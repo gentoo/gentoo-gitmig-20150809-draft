@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/leafpad-0.8.17.ebuild,v 1.1 2009/11/04 15:07:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/leafpad-0.8.17.ebuild,v 1.2 2010/01/01 21:04:14 fauli Exp $
 
 EAPI=2
 inherit fdo-mime gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/leafpad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="emacs"
 
 RDEPEND=">=x11-libs/gtk+-2.10

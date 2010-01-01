@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/easyedit-1.4.7.ebuild,v 1.3 2009/06/16 17:54:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/easyedit-1.4.7.ebuild,v 1.4 2010/01/01 20:55:35 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mahon.cwx.net/"
 SRC_URI="http://mahon.cwx.net/sources/ee-${PV}.src.tgz"
 
 LICENSE="BSD-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
 
 DEPEND=">=sys-libs/ncurses-5.0"

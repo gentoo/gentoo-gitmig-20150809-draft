@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.58 2009/07/23 21:41:10 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.59 2010/01/01 20:58:18 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ghex-2.24.0.ebuild:
+  Transfer Prefix keywords
 
   23 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org> -ghex-2.20.0.ebuild,
   -ghex-2.22.0.ebuild, ghex-2.24.0.ebuild:

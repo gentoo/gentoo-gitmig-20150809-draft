@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8-r1.ebuild,v 1.9 2009/10/04 14:39:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8-r1.ebuild,v 1.10 2010/01/01 21:05:06 fauli Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.freespiders.org/projects/gmlview/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.11

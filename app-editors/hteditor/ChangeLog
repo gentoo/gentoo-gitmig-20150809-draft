@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/hteditor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.40 2009/06/28 09:31:40 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.41 2010/01/01 21:02:41 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  hteditor-2.0.17.ebuild:
+  Transfer Prefix keywords
 
   28 Jun 2009; Patrick Lauer <patrick@gentoo.org> -hteditor-2.0.ebuild,
   -hteditor-2.0.5.ebuild:

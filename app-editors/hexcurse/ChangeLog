@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexcurse
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.10 2008/01/26 15:46:15 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.11 2010/01/01 20:59:18 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hexcurse-1.55.ebuild:
+  Transfer Prefix keywords
 
   26 Jan 2008; Fabian Groffen <grobian@gentoo.org> hexcurse-1.55.ebuild:
   Dropped ppc-macos keyword, see you in prefix
