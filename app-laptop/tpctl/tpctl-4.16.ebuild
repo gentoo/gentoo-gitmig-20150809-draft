@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.16.ebuild,v 1.2 2005/08/30 01:18:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.16.ebuild,v 1.3 2010/01/01 21:12:27 ssuominen Exp $
 
 MY_P=${PN}_${PV}
 
@@ -34,9 +34,9 @@ src_install() {
 		doman tpctlir/tpctlir.8
 	fi
 
-	emake DEST=${D} install_libraries install_binaries install_man || die "emake install failed"
+	emake DEST="${D}" install_libraries install_binaries install_man || die "emake install failed"
 
-	newinitd ${FILESDIR}/apmiser.rc apmiser
+	newinitd "${FILESDIR}"/apmiser.rc apmiser
 
 	dodoc ChangeLog SUPPORTED-MODELS TROUBLESHOOTING AUTHORS README VGA-MODES
 	newdoc apmiser/README README.apmiser

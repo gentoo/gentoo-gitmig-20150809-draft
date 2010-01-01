@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.4-r1.ebuild,v 1.6 2007/04/28 17:49:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.4-r1.ebuild,v 1.7 2010/01/01 21:12:27 ssuominen Exp $
 
 inherit eutils
 
@@ -24,8 +24,8 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/tpctlir-cli-4.4-r1.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/tpctlir-cli-4.4-r1.diff
 }
 
 src_compile() {
@@ -57,7 +57,7 @@ src_install() {
 		mv apmiser/README README.apmiser
 		dodoc README.apmiser
 		dosbin apmiser/apmiser
-		newinitd ${FILESDIR}/apmiser.rc apmiser
+		newinitd "${FILESDIR}"/apmiser.rc apmiser
 	fi
 	doman man/{ntpctl,tpctl}.1 man/apmiser.8
 }
