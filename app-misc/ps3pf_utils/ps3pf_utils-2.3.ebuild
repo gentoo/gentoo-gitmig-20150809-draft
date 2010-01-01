@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ps3pf_utils/ps3pf_utils-2.3.ebuild,v 1.1 2008/11/03 20:26:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ps3pf_utils/ps3pf_utils-2.3.ebuild,v 1.2 2010/01/01 18:34:26 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -15,15 +15,8 @@ IUSE=""
 
 # fixme: depend on a version of sys-kernel/linux-headers that supports ps3
 
-DEPEND=""
-RDEPEND=""
-
-S=${WORKDIR}/ps3-utils-${PV}/
-src_compile() {
-	econf || die "Could not configure"
-	emake || die "compile failed, do you have up to date kernel sources?"
-}
+S=${WORKDIR}/ps3-utils-${PV}
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
+	emake DESTDIR="${D}" install || die
 }
