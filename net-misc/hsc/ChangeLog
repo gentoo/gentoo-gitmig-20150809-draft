@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hsc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.16 2009/09/23 19:37:23 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.17 2010/01/01 16:07:38 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hsc-1.0b.ebuild:
+  stable x86, bug 289441
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> hsc-0.935.ebuild,
   hsc-0.999.ebuild:
