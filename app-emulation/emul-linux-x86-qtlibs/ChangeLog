@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.52 2009/12/31 13:33:46 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.53 2010/01/01 21:29:55 pacho Exp $
+
+  01 Jan 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/45emul-linux-x86-qtlibs, -emul-linux-x86-qtlibs-20071114-r2.ebuild,
+  -emul-linux-x86-qtlibs-20080316.ebuild, -files/46emul-qt3,
+  -emul-linux-x86-qtlibs-20071210.ebuild,
+  emul-linux-x86-qtlibs-20081109.ebuild,
+  -emul-linux-x86-qtlibs-20091004_rc1.ebuild,
+  -emul-linux-x86-qtlibs-20091226.ebuild:
+  emul cleaning and make current stable repoman compliant
 
   31 Dec 2009; Pacho Ramos <pacho@gentoo.org> Manifest:
   Fix Manifest

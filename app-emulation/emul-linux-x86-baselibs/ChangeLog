@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.101 2009/12/31 13:25:18 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.102 2010/01/01 21:25:51 pacho Exp $
+
+  01 Jan 2010; Pacho Ramos <pacho@gentoo.org> -files/75emul-linux-x86-base,
+  -emul-linux-x86-baselibs-2.5.5-r3.ebuild,
+  -emul-linux-x86-baselibs-10.1.ebuild,
+  -emul-linux-x86-baselibs-10.2.ebuild,
+  -emul-linux-x86-baselibs-20071114.ebuild,
+  -emul-linux-x86-baselibs-20071118.ebuild,
+  -emul-linux-x86-baselibs-20071124.ebuild,
+  -emul-linux-x86-baselibs-20071128.ebuild,
+  -emul-linux-x86-baselibs-20071130.ebuild,
+  -emul-linux-x86-baselibs-20071215.ebuild,
+  -emul-linux-x86-baselibs-20071230.ebuild,
+  -emul-linux-x86-baselibs-20080316.ebuild,
+  emul-linux-x86-baselibs-20081109.ebuild,
+  -emul-linux-x86-baselibs-20091003_rc1.ebuild,
+  -emul-linux-x86-baselibs-20091004_rc1.ebuild,
+  -emul-linux-x86-baselibs-20091226.ebuild:
+  emul cleaning and make current stable repoman compliant
 
   31 Dec 2009; Pacho Ramos <pacho@gentoo.org> Manifest:
   Fix Manifest

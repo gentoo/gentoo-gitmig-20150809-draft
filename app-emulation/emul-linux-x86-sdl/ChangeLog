@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.39 2009/12/31 13:49:51 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.40 2010/01/01 21:30:47 pacho Exp $
+
+  01 Jan 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-sdl-2.3.ebuild, -emul-linux-x86-sdl-2.3-r1.ebuild,
+  -emul-linux-x86-sdl-10.1.ebuild, -emul-linux-x86-sdl-20071114.ebuild,
+  -emul-linux-x86-sdl-20071121.ebuild, -emul-linux-x86-sdl-20080316.ebuild,
+  emul-linux-x86-sdl-20081109.ebuild,
+  -emul-linux-x86-sdl-20091004_rc1.ebuild,
+  -emul-linux-x86-sdl-20091226.ebuild:
+  emul cleaning and make current stable repoman compliant
 
   31 Dec 2009; Pacho Ramos <pacho@gentoo.org> Manifest:
   Fix Manifest

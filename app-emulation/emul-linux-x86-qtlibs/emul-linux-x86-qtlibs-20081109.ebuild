@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20081109.ebuild,v 1.4 2009/12/30 19:50:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20081109.ebuild,v 1.5 2010/01/01 21:29:55 pacho Exp $
 
 EAPI="2"
 
@@ -8,6 +8,7 @@ inherit eutils emul-linux-x86
 
 LICENSE="|| ( QPL-1.0 GPL-2 ) GPL-2 LGPL-2"
 KEYWORDS="-* amd64"
+IUSE=""
 
 DEPEND=""
 RDEPEND="=app-emulation/emul-linux-x86-baselibs-${PV}
