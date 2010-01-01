@@ -4,7 +4,7 @@ dev-libs/openssl sse2
 media-libs/libsoundtouch sse
 
 # Gustavo Felisberto <humpback@gentoo.org> 19-06-2007
-net-im/skype qt-static
+<net-im/skype-2.1.0.47 qt-static
 
 # Santiago M. Mola <coldwind@gentoo.org> (17 Sep 2008)
 # x86emu is the only backend available for amd64 (bug #224987)
