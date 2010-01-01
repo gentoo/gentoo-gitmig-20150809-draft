@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.11 2010/01/01 18:56:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.12 2010/01/01 19:00:29 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,23 +46,23 @@ src_install() {
 	einstall
 
 	# remove //var/tmp/portage/jail-1.9/image//usr from files
-	FILES="/usr/bin/mkjailenv
-		/usr/bin/addjailsw
-		/usr/bin/addjailuser
-		/etc/jail.conf
-		/usr/lib/libjail.pm
-		/usr/lib/arch/generic/definitions
-		/usr/lib/arch/generic/functions
-		/usr/lib/arch/linux/definitions
-		/usr/lib/arch/linux/functions
-		/usr/lib/arch/freebsd/definitions
-		/usr/lib/arch/freebsd/functions
-		/usr/lib/arch/irix/definitions
-		/usr/lib/arch/irix/functions
-		/usr/lib/arch/solaris/definitions
-		/usr/lib/arch/solaris/functions"
+	FILES=( "${D}/usr/bin/mkjailenv"
+		"${D}/usr/bin/addjailsw"
+		"${D}/usr/bin/addjailuser"
+		"${D}/etc/jail.conf"
+		"${D}/usr/lib/libjail.pm"
+		"${D}/usr/lib/arch/generic/definitions"
+		"${D}/usr/lib/arch/generic/functions"
+		"${D}/usr/lib/arch/linux/definitions"
+		"${D}/usr/lib/arch/linux/functions"
+		"${D}/usr/lib/arch/freebsd/definitions"
+		"${D}/usr/lib/arch/freebsd/functions"
+		"${D}/usr/lib/arch/irix/definitions"
+		"${D}/usr/lib/arch/irix/functions"
+		"${D}/usr/lib/arch/solaris/definitions"
+		"${D}/usr/lib/arch/solaris/functions" )
 
-	for f in "${D}${FILES}"; do
+	for f in "${FILES}"; do
 		# documentation says funtion 'dosed' is supposed to do this, but didn't know how to make it work :'(
 		# dosed ${file} || die "error in dosed"
 		sed -i "s:/${D}/usr:/usr:g" ${f}
