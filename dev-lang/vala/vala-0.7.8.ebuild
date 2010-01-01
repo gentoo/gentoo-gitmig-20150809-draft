@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.7.8.ebuild,v 1.1 2009/11/12 22:47:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.7.8.ebuild,v 1.2 2010/01/01 12:47:18 armin76 Exp $
 
 EAPI=1
 GCONF_DEBUG=no
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 IUSE="test +vapigen +coverage"
 
 #FIXME: flex and bison are in "base" profile,
