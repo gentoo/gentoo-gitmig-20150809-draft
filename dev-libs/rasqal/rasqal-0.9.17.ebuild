@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.17.ebuild,v 1.2 2009/12/17 14:17:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.17.ebuild,v 1.3 2010/01/01 02:11:36 abcd Exp $
 
 EAPI=2
 inherit libtool
@@ -11,7 +11,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="gmp pcre test xml"
 
 RDEPEND=">=media-libs/raptor-1.4.18
@@ -29,6 +29,7 @@ src_prepare() {
 }
 
 src_configure() {
+	use prefix || EPREFIX=
 	local regex="posix"
 	local decimal="mpfr"
 
@@ -42,7 +43,7 @@ src_configure() {
 		$(use_enable xml xml2) \
 		--with-regex-library=${regex} \
 		--with-decimal=${decimal} \
-		--with-html-dir=/usr/share/doc/${PF}/html
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 }
 
 src_install() {
