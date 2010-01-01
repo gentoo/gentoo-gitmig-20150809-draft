@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.35 2009/12/31 22:43:41 williamh Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.36 2010/01/01 16:03:24 williamh Exp $
+
+  01 Jan 2010; William Hubbs <williamh@gentoo.org> flite-1.4.ebuild:
+  work around paralell make issue. #299032.
 
   31 Dec 2009; William Hubbs <williamh@gentoo.org> metadata.xml:
   removed use descriptions since the flags are global.
