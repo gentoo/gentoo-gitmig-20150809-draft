@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r3.ebuild,v 1.8 2009/12/13 21:57:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/htdig-3.2.0_beta6-r3.ebuild,v 1.9 2010/01/01 03:38:42 abcd Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.htdig.org/files/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="ssl"
 
 DEPEND=">=sys-libs/zlib-1.1.3
@@ -31,29 +31,33 @@ src_unpack() {
 }
 
 src_compile() {
+	use prefix || EPREFIX=
+
 	econf \
-		--with-config-dir=/etc/${PN} \
-		--with-default-config-file=/etc/${PN}/${PN}.conf \
-		--with-database-dir=/var/lib/${PN}/db \
-		--with-cgi-bin-dir=/var/www/localhost/cgi-bin \
-		--with-search-dir=/var/www/localhost/htdocs/${PN} \
-		--with-image-dir=/var/www/localhost/htdocs/${PN} \
+		--with-config-dir="${EPREFIX}"/etc/${PN} \
+		--with-default-config-file="${EPREFIX}"/etc/${PN}/${PN}.conf \
+		--with-database-dir="${EPREFIX}"/var/lib/${PN}/db \
+		--with-cgi-bin-dir="${EPREFIX}"/var/www/localhost/cgi-bin \
+		--with-search-dir="${EPREFIX}"/var/www/localhost/htdocs/${PN} \
+		--with-image-dir="${EPREFIX}"/var/www/localhost/htdocs/${PN} \
 		$(use_with ssl)
 
-#		--with-image-url-prefix=file:///var/www/localhost/htdocs/${PN} \
+#		--with-image-url-prefix="file://${EPREFIX}/var/www/localhost/htdocs/${PN}" \
 
 	emake || die "emake failed"
 }
 
 src_install () {
+	use prefix || ED="${D}"
+
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc ChangeLog README
 	dohtml -r htdoc
 
 	sed -i "s:${D}::g" \
-		"${D}"/etc/${PN}/${PN}.conf \
-		"${D}"/usr/bin/rundig \
+		"${ED}"/etc/${PN}/${PN}.conf \
+		"${ED}"/usr/bin/rundig \
 		|| die "sed failed (removing \${D} from installed files)"
 
 	# symlink htsearch so it can be easily found. see bug #62087
