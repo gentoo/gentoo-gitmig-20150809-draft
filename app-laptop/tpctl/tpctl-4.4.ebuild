@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.4.ebuild,v 1.5 2007/04/28 17:49:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.4.ebuild,v 1.6 2010/01/01 21:13:26 ssuominen Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
@@ -49,6 +49,6 @@ src_install() {
 		mv apmiser/README README.apmiser
 		dodoc README.apmiser
 		dosbin apmiser/apmiser
-		newinitd ${FILESDIR}/apmiser.rc apmiser
+		newinitd "${FILESDIR}"/apmiser.rc apmiser
 	fi
 }
