@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.5.0.ebuild,v 1.1 2009/12/07 17:36:37 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.5.0.ebuild,v 1.2 2010/01/01 12:48:14 armin76 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Libgee"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12"
