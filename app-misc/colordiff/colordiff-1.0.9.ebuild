@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.9.ebuild,v 1.6 2009/11/24 17:01:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.9.ebuild,v 1.7 2010/01/01 18:53:15 ssuominen Exp $
 
 EAPI=2
 inherit prefix
@@ -23,7 +23,7 @@ src_prepare() {
 	# set proper etcdir for Gentoo Prefix
 	sed -i -e "s:'/etc:'@GENTOO_PORTAGE_EPREFIX@/etc:" "${S}/colordiff.pl" \
 		|| die "sed etcdir failed"
-	eprefixify ${S}/colordiff.pl
+	eprefixify "${S}"/colordiff.pl
 }
 
 # This package has a makefile, but we don't want to run it
