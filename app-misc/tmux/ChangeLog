@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.31 2009/12/28 18:19:08 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.32 2010/01/01 21:26:41 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tmux-1.1.ebuild:
+  Transfer Prefix keywords
 
   28 Dec 2009; nixnut <nixnut@gentoo.org> tmux-1.1.ebuild:
   ppc stable #296241

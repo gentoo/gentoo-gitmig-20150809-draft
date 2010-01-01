@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.1.ebuild,v 1.4 2009/12/28 18:19:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.1.ebuild,v 1.5 2010/01/01 21:26:41 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tmux/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="vim-syntax"
 
 DEPEND=""

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/zisofs-tools
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.32 2008/10/31 21:17:58 dsd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.33 2010/01/01 21:23:27 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zisofs-tools-1.0.8.ebuild:
+  Transfer Prefix keywords
 
 *zisofs-tools-1.0.8 (31 Oct 2008)
 
