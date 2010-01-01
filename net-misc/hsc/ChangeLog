@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hsc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.17 2010/01/01 16:07:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.18 2010/01/01 16:11:34 ssuominen Exp $
+
+  01 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> hsc-1.0b.ebuild:
+  amd64 stable wrt #289441
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hsc-1.0b.ebuild:
   stable x86, bug 289441
