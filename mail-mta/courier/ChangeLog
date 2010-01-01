@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.121 2009/12/26 17:37:07 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.122 2010/01/01 16:13:13 armin76 Exp $
+
+  01 Jan 2010; Raúl Porcel <armin76@gentoo.org> courier-0.62.2.ebuild:
+  alpha/ia64/sparc stable wrt #292087
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> courier-0.59.0.ebuild,
   courier-0.60.0.ebuild, courier-0.61.1.ebuild, courier-0.61.2.ebuild,
