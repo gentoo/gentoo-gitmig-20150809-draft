@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r1.ebuild,v 1.2 2009/12/27 17:16:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r1.ebuild,v 1.3 2010/01/01 02:16:13 abcd Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="berkdb iodbc mysql postgres sqlite ssl threads xml"
 
 RDEPEND="mysql? ( virtual/mysql )
@@ -38,6 +38,7 @@ src_prepare() {
 }
 
 src_configure() {
+	use prefix || EPREFIX=
 	local parser="expat"
 
 	use xml && parser="libxml"
@@ -52,7 +53,7 @@ src_configure() {
 		$(use_with postgres postgresql) \
 		$(use_with iodbc virtuoso) \
 		$(use_with threads) \
-		--with-html-dir=/usr/share/doc/${PF}/html
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 }
 
 src_test() {
