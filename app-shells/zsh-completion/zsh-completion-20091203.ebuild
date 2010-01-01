@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20091203.ebuild,v 1.1 2009/12/04 01:49:31 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20091203.ebuild,v 1.2 2010/01/01 16:37:38 fauli Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.tuxfamily.org/gzc/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris"
 IUSE=""
 
 DEPEND=">=app-shells/zsh-4.3.5"
