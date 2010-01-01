@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/phpunit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.21 2008/10/18 20:30:15 hoffie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.22 2010/01/01 20:56:06 yngwin Exp $
+
+*phpunit-3.4.6 (01 Jan 2010)
+
+  01 Jan 2010; Ben de Groot <yngwin@gentoo.org> +phpunit-3.4.6.ebuild:
+  Version bump, fixes bug 254241.
 
 *phpunit-3.3.1 (18 Oct 2008)
 
