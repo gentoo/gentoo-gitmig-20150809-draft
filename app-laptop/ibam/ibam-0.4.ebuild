@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.4.ebuild,v 1.4 2007/03/04 20:05:22 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.4.ebuild,v 1.5 2010/01/01 20:56:59 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 	sed -i \
 		-e "s:^CFLAGS=-O3:CFLAGS=${CFLAGS}:" \
 		-e "s:^CC=g++:CC=$(tc-getCXX):" \
-		${S}/Makefile
+		"${S}"/Makefile || die
 }
 
 src_compile() {
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin ibam
+	dobin ibam || die
 
 	dodoc CHANGES README REPORT
 }
