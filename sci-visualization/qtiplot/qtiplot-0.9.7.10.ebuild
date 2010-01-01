@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7-r1.ebuild,v 1.1 2009/09/18 18:40:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.10.ebuild,v 1.1 2010/01/01 10:46:53 ssuominen Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -20,17 +20,23 @@ for l in ${LANGS}; do
 done
 
 # qwtplot3d much modified from original upstream
-CDEPEND=">=x11-libs/qwt-5.2
+# >=x11-libs/qwt-5.3 they are using trunk checkouts
+CDEPEND="
 	x11-libs/qt-opengl:4
 	x11-libs/qt-qt3support:4
 	x11-libs/qt-assistant:4
 	x11-libs/qt-svg:4
-	x11-libs/gl2ps
+	>=x11-libs/gl2ps-1.3.5
 	>=dev-cpp/muParser-1.30
 	>=dev-libs/boost-1.35.0
 	>=sci-libs/liborigin-20090406:2
 	!bindist? ( sci-libs/gsl )
-	bindist? ( <sci-libs/gsl-1.10 )"
+	bindist? ( <sci-libs/gsl-1.10 )
+	dev-libs/boost
+	dev-tex/qtexengine"
+# Still not working
+#	media-libs/libemf
+#	media-libs/emfengine"
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
@@ -44,13 +50,24 @@ RDEPEND="${CDEPEND}
 		dev-python/pygsl
 		sci-libs/scipy )"
 
+PATCHES=(
+	"${FILESDIR}/${P}-syslibs.patch"
+	"${FILESDIR}/${P}-docbuild.patch"
+	"${FILESDIR}/${P}-gcc44.patch"
+	"${FILESDIR}/${P}-build.conf.patch"
+	"${FILESDIR}/${P}-sip.patch"
+	"${FILESDIR}/${P}-gl2ps.patch"
+	"${FILESDIR}/${P}-dont-install-qwt.patch"
+	"${FILESDIR}/${P}-qtiplot.pro.patch"
+	)
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-syslibs.patch
-	epatch "${FILESDIR}"/${P}-docbuild.patch
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-	has_version ">=dev-python/sip-4.8" && epatch "${FILESDIR}"/${P}-sip.patch
+	qt4_src_prepare
+
+	rm -rf 3rdparty/{liborigin,QTeXEngine} 3rdparty/qwtplot3d/3rdparty/gl2ps/
 
 	python_version
+
 	sed -i \
 		-e "s:doc/${PN}/manual:doc/${PF}/html:" \
 		-e "s:local/${PN}:$(get_libdir)/python${PYVER}/site-packages:" \
@@ -82,6 +99,11 @@ src_prepare() {
 		fi
 	done
 	chmod -x qtiplot/qti_wordlist.txt
+
+	sed \
+		-e "s:GENTOOLIB:$(get_libdir):g" \
+		-e "/^EMF_ENGINE_LIBS/s:^:#:g" \
+		build.conf.example > build.conf
 }
 
 src_configure() {

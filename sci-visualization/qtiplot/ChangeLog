@@ -1,6 +1,19 @@
 # ChangeLog for sci-visualization/qtiplot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.46 2009/09/18 18:40:01 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.47 2010/01/01 10:46:53 ssuominen Exp $
+
+*qtiplot-0.9.7.10 (01 Jan 2010)
+
+  01 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +qtiplot-0.9.7.10.ebuild, +files/qtiplot-0.9.7.10-build.conf.patch,
+  +files/qtiplot-0.9.7.10-docbuild.patch,
+  +files/qtiplot-0.9.7.10-dont-install-qwt.patch,
+  +files/qtiplot-0.9.7.10-gcc44.patch, +files/qtiplot-0.9.7.10-gl2ps.patch,
+  +files/qtiplot-0.9.7.10-qtiplot.pro.patch,
+  +files/qtiplot-0.9.7.10-sip.patch, +files/qtiplot-0.9.7.10-sip2.patch,
+  +files/qtiplot-0.9.7.10-syslibs.patch:
+  Version bump wrt #275167, #292884 and 293095. Thanks to Justin Lecher for
+  ebuild.
 
 *qtiplot-0.9.7.7-r1 (18 Sep 2009)
 
