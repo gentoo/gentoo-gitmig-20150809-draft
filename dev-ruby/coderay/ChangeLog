@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/coderay
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.10 2009/12/15 15:43:03 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.11 2010/01/01 10:10:28 graaff Exp $
+
+*coderay-0.9.1 (01 Jan 2010)
+
+  01 Jan 2010; Hans de Graaff <graaff@gentoo.org> +coderay-0.9.1.ebuild:
+  Version bump.
 
 *coderay-0.8.357-r1 (15 Dec 2009)
 
