@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eclass-manpages
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.17 2009/12/09 10:15:56 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.18 2010/01/01 21:12:58 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  eclass-manpages-20091209.ebuild:
+  Transfer Prefix keywords
 
 *eclass-manpages-20091209 (09 Dec 2009)
 
