@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/ccd2iso
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.13 2007/04/01 07:28:53 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ccd2iso/ChangeLog,v 1.14 2010/01/01 19:57:05 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ccd2iso-0.3.ebuild:
+  Transfer Prefix keywords
 
 *ccd2iso-0.3 (01 Apr 2007)
 
