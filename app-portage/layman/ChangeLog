@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/layman
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.82 2009/12/30 22:23:44 sping Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.83 2010/01/01 00:58:18 sping Exp $
+
+*layman-1.2.4-r1 (01 Jan 2010)
+
+  01 Jan 2010; Sebastian Pipping <sping@gentoo.org> +layman-1.2.4-r1.ebuild,
+  +files/layman-1.2.4-peg-backport.patch:
+  Integrate 1.2.4 backport patch for bug #295018
 
   30 Dec 2009; Sebastian Pipping <sping@gentoo.org> layman-1.1.1.ebuild,
   layman-1.2.3.ebuild, layman-1.2.4.ebuild, layman-9999.ebuild:
