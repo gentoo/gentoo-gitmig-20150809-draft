@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arphicfonts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.53 2009/09/20 13:42:44 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.54 2010/01/01 17:54:08 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  arphicfonts-0.2.20080216.1.ebuild:
+  Transfer Prefix keywords
 
   20 Sep 2009; Mounir Lamouri <volkmar@gentoo.org>
   arphicfonts-0.2.20080216.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-bitstream-vera
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.23 2007/12/25 13:14:57 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.24 2010/01/01 18:13:26 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ttf-bitstream-vera-1.10-r3.ebuild:
+  Transfer Prefix keywords
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing foser from metadata.xml as per #120234.

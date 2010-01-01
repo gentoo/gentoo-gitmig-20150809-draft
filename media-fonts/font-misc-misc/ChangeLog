@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-misc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.33 2007/02/04 18:45:02 joshuabaergen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.34 2010/01/01 18:04:25 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  font-misc-misc-1.0.0.ebuild:
+  Transfer Prefix keywords
 
   04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   font-misc-misc-1.0.0.ebuild:

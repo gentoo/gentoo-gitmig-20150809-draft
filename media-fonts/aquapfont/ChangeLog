@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/aquapfont
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.37 2009/10/17 14:09:08 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.38 2010/01/01 17:52:49 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  aquapfont-2.6-r2.ebuild:
+  Transfer Prefix keywords
 
   17 Oct 2009; Raúl Porcel <armin76@gentoo.org> aquapfont-2.6-r2.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #286489
