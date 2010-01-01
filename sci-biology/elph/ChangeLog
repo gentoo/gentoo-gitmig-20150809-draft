@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/elph
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/ChangeLog,v 1.13 2008/06/29 08:25:29 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/ChangeLog,v 1.14 2010/01/01 21:33:28 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> elph-1.0.1.ebuild:
+  Transfer Prefix keywords
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> elph-0.1.5.ebuild,
   elph-1.0.1.ebuild:

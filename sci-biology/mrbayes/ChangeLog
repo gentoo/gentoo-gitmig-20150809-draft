@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mrbayes
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.19 2008/06/11 18:10:48 ken69267 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.20 2010/01/01 21:37:12 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> mrbayes-3.1.2.ebuild:
+  Transfer Prefix keywords
 
   11 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> mrbayes-3.1.2.ebuild:
   amd64 stable, bug #213362

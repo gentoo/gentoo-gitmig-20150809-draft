@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.32 2009/09/01 21:58:55 ribosome Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.33 2010/01/01 21:35:29 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> embassy-6.1.0.ebuild:
+  Transfer Prefix keywords
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Giving up maintainership of this package.

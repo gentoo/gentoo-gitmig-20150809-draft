@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/hmmer
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.26 2009/08/30 19:04:50 weaver Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.27 2010/01/01 21:52:57 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  hmmer-3.0_beta2.ebuild:
+  Transfer Prefix keywords
 
 *hmmer-3.0_beta2 (30 Aug 2009)
 

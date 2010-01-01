@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.69.ebuild,v 1.2 2009/10/31 17:59:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.69.ebuild,v 1.3 2010/01/01 21:38:17 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://evolution.gs.washington.edu/${PN}/download/${P}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 RDEPEND="x11-libs/libXaw"
 

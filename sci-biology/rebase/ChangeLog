@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.92 2009/09/01 21:04:48 ribosome Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.93 2010/01/01 21:41:53 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> rebase-909.ebuild:
+  Transfer Prefix keywords
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Giving up maintainership of this package.

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-domainatrix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.28 2009/09/01 22:00:01 ribosome Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.29 2010/01/01 21:48:13 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  embassy-domainatrix-0.1.0-r4.ebuild:
+  Transfer Prefix keywords
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Giving up maintainership of this package.
