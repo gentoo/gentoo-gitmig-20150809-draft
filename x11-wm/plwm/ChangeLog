@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/plwm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.13 2007/08/27 13:44:50 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.14 2010/01/01 21:41:57 djc Exp $
+
+*plwm-2.7_rc1 (01 Jan 2010)
+
+  01 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +plwm-2.7_rc1.ebuild,
+  +files/plwm-2.7_rc1-pep0263.patch:
+  Bump to 2.7rc1 (see bug 281415).
 
   27 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
   +files/plwm-2.5-pep0263.patch, +files/plwm-2.6_alpha-pep0263.patch,
