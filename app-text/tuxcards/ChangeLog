@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.22 2009/12/31 14:32:00 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.23 2010/01/01 17:41:34 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tuxcards-2.2.ebuild:
+  stable x86, bug 299110
 
   31 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> tuxcards-2.2.ebuild:
   amd64 stable wrt #299110
