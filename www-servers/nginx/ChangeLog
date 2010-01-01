@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.231 2009/12/08 14:49:37 djc Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.232 2010/01/01 20:33:10 djc Exp $
+
+  01 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> nginx-0.7.64.ebuild,
+  nginx-0.8.29.ebuild:
+  Fix problems with ssl requirements (see bug 293785 for discussion).
 
 *nginx-0.8.29 (08 Dec 2009)
 *nginx-0.7.64 (08 Dec 2009)
