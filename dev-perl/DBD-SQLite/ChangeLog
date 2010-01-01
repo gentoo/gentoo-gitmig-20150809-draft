@@ -1,9 +1,12 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.72 2010/01/01 18:21:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.73 2010/01/01 18:29:34 tove Exp $
 
-  01 Jan 2010; Torsten Veller <tove@gentoo.org> DBD-SQLite-1.27.ebuild:
-  Revert my last commit (#299237)
+*DBD-SQLite-1.27-r1 (01 Jan 2010)
+
+  01 Jan 2010; Torsten Veller <tove@gentoo.org> -DBD-SQLite-1.27.ebuild,
+  +DBD-SQLite-1.27-r1.ebuild:
+  Bump to revert my last commit (#299237)
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org> -DBD-SQLite-1.25.ebuild,
   DBD-SQLite-1.27.ebuild:
