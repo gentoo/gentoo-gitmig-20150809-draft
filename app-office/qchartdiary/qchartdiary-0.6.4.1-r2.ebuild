@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/qchartdiary-0.6.4.1-r1.ebuild,v 1.1 2009/12/26 10:55:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/qchartdiary-0.6.4.1-r2.ebuild,v 1.1 2010/01/01 11:32:52 hwoarang Exp $
 
 EAPI="2"
 
@@ -29,4 +29,9 @@ src_prepare() {
 	sed -i "s/doc\/${MY_PN}/doc\/${PF}/" ${MY_PN}.pro \
 		|| die "failed to fix documentation path"
 	qt4-r2_src_prepare
+}
+
+src_install() {
+	qt4-r2_src_install
+	dobin ${MY_PN} || die "dobin failed"
 }

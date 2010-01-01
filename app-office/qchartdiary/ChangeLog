@@ -1,6 +1,12 @@
 # ChangeLog for app-office/qchartdiary
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/ChangeLog,v 1.2 2009/12/26 10:55:11 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/ChangeLog,v 1.3 2010/01/01 11:32:52 hwoarang Exp $
+
+*qchartdiary-0.6.4.1-r2 (01 Jan 2010)
+
+  01 Jan 2010; <hwoarang@gentoo.org> -qchartdiary-0.6.4.1-r1.ebuild,
+  +qchartdiary-0.6.4.1-r2.ebuild:
+  Revbump to install binary correctly. Fixes bug #299187
 
 *qchartdiary-0.6.4.1-r1 (26 Dec 2009)
 
