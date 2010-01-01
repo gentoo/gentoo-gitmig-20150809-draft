@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/dvorakng-0.6.0.ebuild,v 1.10 2009/05/13 03:42:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/dvorakng-0.6.0.ebuild,v 1.11 2010/01/01 18:29:02 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -16,11 +16,6 @@ DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/dvorakng
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
