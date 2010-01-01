@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/noscript
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/ChangeLog,v 1.9 2009/11/12 14:59:21 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/ChangeLog,v 1.10 2010/01/01 18:03:23 scarabeus Exp $
+
+  01 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  noscript-1.8.8.ebuild, noscript-1.9.0.4.ebuild, noscript-1.9.6.6.ebuild,
+  noscript-1.9.8.86.ebuild:
+  mozilla-firefox-bin -> firefox-bin
 
   12 Nov 2009; Joseph Jezak <josejx@gentoo.org> noscript-1.9.6.6.ebuild:
   Marked ppc64 stable for bug #282466.

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/weave-1.0_beta2.ebuild,v 1.1 2009/11/25 20:35:36 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/weave-1.0_beta2.ebuild,v 1.2 2010/01/01 18:04:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ IUSE=""
 
 RDEPEND="|| (
 		>=www-client/mozilla-firefox-3.5
-		>=www-client/mozilla-firefox-bin-3.5
+		>=www-client/firefox-bin-3.5
 		>=www-client/seamonkey-2.0_alpha3
 		>=www-client/seamonkey-bin-2.0_alpha3
 		>=mail-client/mozilla-thunderbird-3.0_beta2
@@ -77,10 +77,10 @@ src_install() {
 		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version www-client/mozilla-firefox) ${mozillas}"
 	fi
-	if has_version '>=www-client/mozilla-firefox-bin-3.5'; then
+	if has_version '>=www-client/firefox-bin-3.5'; then
 		MOZILLA_FIVE_HOME="/opt/firefox"
 		xpi_install "${WORKDIR}/${xpiname}"
-		mozillas="$(best_version www-client/mozilla-firefox-bin) ${mozillas}"
+		mozillas="$(best_version www-client/firefox-bin) ${mozillas}"
 	fi
 	if has_version '>=www-client/seamonkey-2.0_alpha3'; then
 		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/seamonkey"

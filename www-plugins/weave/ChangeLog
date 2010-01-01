@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/weave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/ChangeLog,v 1.1 2009/11/25 20:35:36 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/ChangeLog,v 1.2 2010/01/01 18:04:08 scarabeus Exp $
+
+  01 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  weave-1.0_beta2.ebuild:
+  mozilla-firefox-bin -> firefox-bin
 
 *weave-1.0_beta2 (25 Nov 2009)
 
