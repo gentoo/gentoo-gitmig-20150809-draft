@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.2.2.ebuild,v 1.5 2008/06/02 22:39:34 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.2.2.ebuild,v 1.6 2010/01/01 17:33:41 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -30,7 +30,8 @@ src_unpack() {
 }
 
 src_compile() {
-	make \
+	# bug #299224
+	emake -j1 \
 		T="${D}" \
 		DEBUG="${CFLAGS}" \
 		CALCPAGER=less \
