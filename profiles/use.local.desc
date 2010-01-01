@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5140 2010/01/01 16:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5141 2010/01/01 17:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3232,6 +3232,7 @@ www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/epiphany:nss - Import passwords from older gecko based www-client/epiphany keyring.
+www-client/firefox-bin:restrict-javascript - Pull in x11-plugins/noscript extension to disable javascript globally, putting the user fully in control of the sites he/she visits
 www-client/icecat:custom-optimization - Fine-tune custom compiler optimizations
 www-client/icecat:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/icecat:restrict-javascript - Pull in www-plugins/noscript extension to disable javascript globally, putting the user fully in control of the sites he/she visits
@@ -3249,7 +3250,6 @@ www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g.
 www-client/mozilla-firefox:moznopango - Disable x11-libs/pango during runtime
 www-client/mozilla-firefox:restrict-javascript - Pull in www-plugins/noscript extension to disable javascript globally, putting the user fully in control of the sites he/she visits
 www-client/mozilla-firefox:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
-www-client/mozilla-firefox-bin:restrict-javascript - Pull in x11-plugins/noscript extension to disable javascript globally, putting the user fully in control of the sites he/she visits
 www-client/opera:qt-static - Install binaries statically linked to Qt
 www-client/seamonkey:custom-optimization - Fine-tune custom compiler optimizations
 www-client/seamonkey:mozdevelop - Enable features for web developers (e.g. Venkman)
