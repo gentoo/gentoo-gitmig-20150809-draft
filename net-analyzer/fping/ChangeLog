@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fping
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.26 2009/02/08 18:30:14 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.27 2010/01/01 18:32:34 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  fping-2.4_beta2-r2.ebuild:
+  Transfer Prefix keywords
 
   08 Feb 2009; Peter Volkov <pva@gentoo.org> -fping-2.4_beta2-r1.ebuild:
   Remove old.
