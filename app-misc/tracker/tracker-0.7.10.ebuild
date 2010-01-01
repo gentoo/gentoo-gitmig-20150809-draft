@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.10.ebuild,v 1.3 2009/12/21 22:28:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.10.ebuild,v 1.4 2010/01/01 12:54:39 armin76 Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.tracker-project.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 pdf playlist test +tiff xine +xml xmp +vorbis"
 
 # Automagic, gconf, uuid, enca and probably more
