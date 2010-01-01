@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.10.1.ebuild,v 1.1 2009/09/11 23:56:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.10.1.ebuild,v 1.2 2010/01/01 09:42:01 hwoarang Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gwenhywfar.sourceforge.net"
 SRC_URI="http://www2.aquamaniac.de/sites/download/download.php?package=01&release=27&file=01&dummy=${P}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="debug ssl doc"
 
