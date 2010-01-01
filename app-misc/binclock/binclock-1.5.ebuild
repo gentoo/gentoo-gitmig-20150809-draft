@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/binclock-1.5.ebuild,v 1.15 2008/03/26 18:17:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/binclock-1.5.ebuild,v 1.16 2010/01/01 17:57:55 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -17,8 +17,7 @@ DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	sed -i -e s/strip/true/ Makefile
 }
 
