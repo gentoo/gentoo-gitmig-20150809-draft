@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/myspell-en-20081002.ebuild,v 1.8 2009/03/30 14:51:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/myspell-en-20081002.ebuild,v 1.9 2010/01/01 20:11:31 fauli Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "en,AU,en_AU,English (Australian),en_AU.zip"
@@ -30,5 +30,5 @@ DESCRIPTION="English dictionaries for myspell/hunspell"
 LICENSE="GPL-2 LGPL-2.1 WordNet-2.1 myspell-en_CA-KevinAtkinson"
 HOMEPAGE="http://lingucomponent.openoffice.org/"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE=""

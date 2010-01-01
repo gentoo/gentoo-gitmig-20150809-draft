@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-sv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sv/ChangeLog,v 1.9 2009/10/18 21:52:46 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sv/ChangeLog,v 1.10 2010/01/01 20:08:18 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  aspell-sv-0.51.0.ebuild:
+  Transfer Prefix keywords
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-sv-0.50.2.ebuild,
   aspell-sv-0.51.0.ebuild:
