@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.440 2009/12/20 16:02:41 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.441 2010/01/01 17:23:45 ranger Exp $
+
+  01 Jan 2010; Brent Baude <ranger@gentoo.org> python-2.6.4.ebuild:
+  Marking python-2.6.4 ppc64 for bug 295066
 
   20 Dec 2009; Raúl Porcel <armin76@gentoo.org> python-2.6.4.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #295066
