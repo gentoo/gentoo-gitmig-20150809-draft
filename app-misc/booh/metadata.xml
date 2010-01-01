@@ -6,8 +6,4 @@
   <email>dams@gentoo.org</email>
   <name>dams</name>
 </maintainer>
-<use>
-  <flag name='transcode'>Use <pkg>media-video/transcode</pkg> to extract video
-    thumbnails</flag>
-</use>
 </pkgmetadata>
