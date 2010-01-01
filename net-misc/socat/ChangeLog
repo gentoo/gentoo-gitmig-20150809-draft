@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/socat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.68 2009/08/14 13:54:03 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.69 2010/01/01 12:28:33 armin76 Exp $
+
+  01 Jan 2010; Raúl Porcel <armin76@gentoo.org> socat-1.7.1.1.ebuild,
+  socat-2.0.0_beta3.ebuild:
+  Add ~arm wrt #289633
 
   14 Aug 2009; Jeroen Roovers <jer@gentoo.org> -socat-2.0.0_beta1.ebuild,
   -socat-2.0.0_beta2.ebuild:

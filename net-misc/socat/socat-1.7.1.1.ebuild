@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.1.1.ebuild,v 1.9 2009/07/13 17:56:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.1.1.ebuild,v 1.10 2010/01/01 12:28:33 armin76 Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.dest-unreach.org/socat/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc sparc x86"
 IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="
