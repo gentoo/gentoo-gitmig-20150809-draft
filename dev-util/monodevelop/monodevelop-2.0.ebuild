@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.0.ebuild,v 1.1 2009/03/30 18:56:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.0.ebuild,v 1.2 2010/01/01 18:01:23 scarabeus Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ RDEPEND="sys-apps/dbus[X]
 	||	(
 		net-libs/xulrunner
 		www-client/mozilla-firefox
-		www-client/mozilla-firefox-bin
+		www-client/firefox-bin
 		www-client/seamonkey
 	)
 	>=dev-dotnet/xsp-2
