@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ttcp-1.12.ebuild,v 1.14 2009/09/23 18:25:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ttcp-1.12.ebuild,v 1.15 2010/01/01 17:49:47 fauli Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc mips ~sparc"
+KEYWORDS="~amd64 mips ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 DEPEND=""
 

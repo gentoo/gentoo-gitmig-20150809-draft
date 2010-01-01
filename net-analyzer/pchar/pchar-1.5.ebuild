@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pchar/pchar-1.5.ebuild,v 1.5 2008/01/26 01:23:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pchar/pchar-1.5.ebuild,v 1.6 2010/01/01 17:45:35 fauli Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="2.1"
@@ -13,7 +13,7 @@ SRC_URI="http://www.kitchenlab.org/www/bmah/Software/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="ipv6 pcap snmp"
 
 DEPEND=">=dev-libs/openssl-0.9.7
