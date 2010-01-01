@@ -1,25 +1,28 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Phalanx/CPAN-Mini-Phalanx-0.01.ebuild,v 1.6 2006/08/04 22:48:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Phalanx/CPAN-Mini-Phalanx-0.01.ebuild,v 1.7 2010/01/01 22:54:03 tove Exp $
 
+EAPI=2
+
+MODULE_AUTHOR=SMPETERS
+MY_PN=${PN}100
+MY_P=${MY_PN}-${PV}
+S=${WORKDIR}/${MY_P}
 inherit perl-module
 
-MY_PN="${PN}100"
-MY_P=${MY_PN}-${PV}
-S="${WORKDIR}/$MY_P"
-
 DESCRIPTION="create a minimal mirror of CPAN containing the modules in the Phalanx 100"
-HOMEPAGE="http://search.cpan.org/~smpeters/${MY_P}/"
-SRC_URI="mirror://cpan/authors/id/S/SM/SMPETERS/${MY_P}.tar.gz"
 
-LICENSE="Artistic"
-#LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="ia64 sparc x86"
-IUSE=""
+KEYWORDS="~amd64 ia64 sparc x86"
+IUSE="test"
+
+RDEPEND="dev-perl/CPAN-Mini"
+DEPEND="test? ( dev-perl/Test-Pod
+		dev-perl/Test-Pod-Coverage )"
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/CPAN-Mini
-	dev-lang/perl"
-RDEPEND="${DEPEND}"
+src_prepare() {
+	perl-module_src_prepare
+	sed -i 's,^L<Phalanx Project|,L<,' "${S}"/lib/CPAN/Mini/Phalanx100.pm || die
+}

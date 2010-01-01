@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CPAN-Mini-Phalanx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Phalanx/ChangeLog,v 1.7 2007/02/22 01:44:21 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Phalanx/ChangeLog,v 1.8 2010/01/01 22:54:03 tove Exp $
+
+  01 Jan 2010; Torsten Veller <tove@gentoo.org>
+  CPAN-Mini-Phalanx-0.01.ebuild:
+  Fix pod test (#299280). Add ~amd64
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
