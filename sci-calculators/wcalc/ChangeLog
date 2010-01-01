@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/wcalc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/ChangeLog,v 1.13 2009/05/29 17:02:33 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/ChangeLog,v 1.14 2010/01/01 21:47:15 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> wcalc-2.4.ebuild:
+  Transfer Prefix keywords
 
   29 May 2009; Steve Dibb <beandog@gentoo.org> wcalc-2.4.ebuild:
   amd64 stable
