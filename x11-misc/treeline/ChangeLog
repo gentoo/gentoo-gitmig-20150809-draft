@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/treeline
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.39 2009/12/20 19:56:48 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.40 2010/01/01 16:17:46 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  treeline-1.2.3.ebuild:
+  stable x86, bug 297628
 
   20 Dec 2009; Markos Chandras <hwoarang@gentoo.org> treeline-1.2.3.ebuild:
   Stable on amd64 wrt bug #297628
