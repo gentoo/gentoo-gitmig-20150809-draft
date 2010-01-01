@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.4.ebuild,v 1.4 2007/07/01 13:29:04 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.4.ebuild,v 1.5 2010/01/01 20:55:36 ssuominen Exp $
 
 inherit linux-mod
 
@@ -23,7 +23,7 @@ pkg_setup() {
 
 src_install() {
 	linux-mod_src_install
-	dodoc README COPYING NEWS AUTHORS
+	dodoc README NEWS AUTHORS
 }
 
 pkg_postinst() {
