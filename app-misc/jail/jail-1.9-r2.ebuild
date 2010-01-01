@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.12 2010/01/01 19:00:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.13 2010/01/01 19:05:54 scarabeus Exp $
 
 inherit eutils flag-o-matic
 
@@ -62,7 +62,7 @@ src_install() {
 		"${D}/usr/lib/arch/solaris/definitions"
 		"${D}/usr/lib/arch/solaris/functions" )
 
-	for f in "${FILES}"; do
+	for f in "${FILES[@]}"; do
 		# documentation says funtion 'dosed' is supposed to do this, but didn't know how to make it work :'(
 		# dosed ${file} || die "error in dosed"
 		sed -i "s:/${D}/usr:/usr:g" ${f}
