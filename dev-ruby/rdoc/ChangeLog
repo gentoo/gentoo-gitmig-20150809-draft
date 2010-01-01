@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdoc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.17 2009/12/30 18:43:09 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.18 2010/01/01 13:56:05 a3li Exp $
+
+  01 Jan 2010; Alex Legler <a3li@gentoo.org> rdoc-2.4.3.ebuild:
+  Fix tests when rdoc is not yet installed (bug 298910), add test dependency
+  on minitest, s/$PN/rdoc/ in HOMEPAGE
 
   30 Dec 2009; Hans de Graaff <graaff@gentoo.org> rdoc-2.4.3.ebuild:
   Use proper task name for USE=doc, partially fixing #298910.

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.4.3.ebuild,v 1.4 2009/12/30 18:43:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.4.3.ebuild,v 1.5 2010/01/01 13:56:05 a3li Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_BINWRAP=""
 inherit ruby-fakegem
 
 DESCRIPTION="An extended version of the RDoc library from Ruby 1.8"
-HOMEPAGE="http://rubyforge.org/projects/${PN}/"
+HOMEPAGE="http://rubyforge.org/projects/rdoc/"
 SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="Ruby"
@@ -24,6 +24,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_bdepend test dev-ruby/hoe
+ruby_add_bdepend test virtual/ruby-minitest
 ruby_add_bdepend doc dev-ruby/hoe
 
 all_ruby_install() {
@@ -32,4 +33,13 @@ all_ruby_install() {
 	for bin in rdoc ri; do
 		ruby_fakegem_binwrapper $bin $bin-2
 	done
+}
+
+each_ruby_test() {
+	# `rake test' would fail when rdoc is not yet installed.
+	# Setting $rdoc_rakefile fixes this.
+	${RUBY} -w -Ilib:ext:bin:test \
+		-e 'require "rubygems"; require	"minitest/autorun"; \
+		$rdoc_rakefile = true; Dir.glob("test/test*.rb").each \
+		{|t| require t }' || die "Tests failed for ${RUBY}"
 }
