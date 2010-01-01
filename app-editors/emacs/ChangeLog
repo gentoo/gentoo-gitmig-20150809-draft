@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.360 2009/12/30 16:19:12 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.361 2010/01/01 15:07:03 klausman Exp $
+
+  01 Jan 2010; Tobias Klausmann <klausman@gentoo.org> emacs-22.3-r3.ebuild:
+  Stable on alpha, bug #296159
 
   30 Dec 2009; Ulrich Mueller <ulm@gentoo.org> emacs-18.59-r6.ebuild:
   Drop X support for Emacs 18, because libX11[-xcb] will go away.
