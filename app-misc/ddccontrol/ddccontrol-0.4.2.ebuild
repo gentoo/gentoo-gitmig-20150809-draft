@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2.ebuild,v 1.7 2008/03/09 16:32:54 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2.ebuild,v 1.8 2010/01/01 18:08:47 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-pciutils-libz.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-pciutils-libz.patch
 
 	# Fix sandbox violation
 	for i in Makefile.am Makefile.in; do

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.19 2009/09/23 16:02:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.20 2010/01/01 18:05:47 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,17 +13,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
-DEPEND=""
-
 S=${WORKDIR}/fixDos-${PV}
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	# Apply this patch to the makefile so that it builds with our
-	#  desired CFLAGS.
-	epatch ${FILESDIR}/${P}-gentoo-makefile.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo-makefile.diff
 }
 
 src_compile() {
@@ -32,5 +27,5 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALLDIR=${D}/usr/bin install || die
+	make INSTALLDIR="${D}/usr/bin" install || die
 }

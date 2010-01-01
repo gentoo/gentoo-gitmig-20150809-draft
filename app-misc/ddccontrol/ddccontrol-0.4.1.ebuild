@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.1.ebuild,v 1.3 2006/06/06 17:05:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.1.ebuild,v 1.4 2010/01/01 18:08:47 ssuominen Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="DDCControl allows control of monitor parameters via DDC"
 HOMEPAGE="http://ddccontrol.sourceforge.net/"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix sandbox violation
 	for i in Makefile.am Makefile.in; do

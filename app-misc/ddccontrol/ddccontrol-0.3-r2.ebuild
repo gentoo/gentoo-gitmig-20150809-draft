@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3-r2.ebuild,v 1.1 2006/02/27 00:17:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3-r2.ebuild,v 1.2 2010/01/01 18:08:47 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -27,12 +27,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	# Fix --as-needed errors
-	epatch ${FILESDIR}/${PN}-asneeded.patch
-	epatch ${FILESDIR}/${P}-u64-conflicting-types.patch
-	epatch ${FILESDIR}/${P}-fix-libpanelapplet-dep.patch
+	epatch "${FILESDIR}"/${PN}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-u64-conflicting-types.patch
+	epatch "${FILESDIR}"/${P}-fix-libpanelapplet-dep.patch
 
 	# Fix sandbox violation
 	for i in Makefile.am Makefile.in; do

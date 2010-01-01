@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.7 2009/09/23 16:05:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.8 2010/01/01 18:11:35 ssuominen Exp $
 
 DESCRIPTION="Make Album The Easy Way"
 HOMEPAGE="http://matew.sourceforge.net/"
@@ -19,13 +19,14 @@ RDEPEND="${DEPEND}
 "
 
 src_install() {
-	dobin ${S}/src/matew ${S}/src/matew-cleanup ${S}/src/matew-wizard
+	dobin "${S}"/src/matew "${S}"/src/matew-cleanup "${S}"/src/matew-wizard
 	insinto /etc/matew/styles
-	doins ${S}/src/styles/*
+	doins "${S}"/src/styles/*
 	insinto /etc/matew/languages
-	doins ${S}/src/languages/*
-	dodoc ${S}/doc/AUTHOR ${S}/doc/ChangeLog ${S}/doc/README ${S}/doc/THANKS ${S}/doc/TODO
-	doman ${S}/doc/man/matew.1.gz
+	doins "${S}"/src/languages/*
+	dodoc "${S}"/doc/AUTHOR "${S}"/doc/ChangeLog "${S}"/doc/README \
+		"${S}"/doc/THANKS "${S}"/doc/TODO
+	doman "${S}"/doc/man/matew.1.gz
 }
 
 pkg_postinst() {

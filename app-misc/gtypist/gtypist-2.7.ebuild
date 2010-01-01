@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.7.ebuild,v 1.10 2005/04/24 11:21:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.7.ebuild,v 1.11 2010/01/01 18:06:31 ssuominen Exp $
 
 DESCRIPTION="universal typing tutor"
 HOMEPAGE="http://www.gnu.org/software/gtypist/gtypist.html"
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO THANKS
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README TODO THANKS
 }
