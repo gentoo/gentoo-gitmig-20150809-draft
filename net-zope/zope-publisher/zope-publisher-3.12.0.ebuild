@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/zope-publisher-3.11.0.ebuild,v 1.1 2009/12/20 01:24:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/zope-publisher-3.12.0.ebuild,v 1.1 2010/01/01 00:17:38 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,6 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="dev-python/setuptools
-	net-zope/zope-authentication
 	net-zope/zope-browser
 	net-zope/zope-component
 	net-zope/zope-configuration
