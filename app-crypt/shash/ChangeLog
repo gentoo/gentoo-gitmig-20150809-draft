@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/shash
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.22 2008/06/07 22:08:49 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.23 2010/01/01 20:00:43 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  shash-0.2.6-r1.ebuild:
+  Transfer Prefix keywords
 
   07 Jun 2008; Sven Wegener <swegener@gentoo.org>
   +files/shash-0.2.6-binary-files.patch, shash-0.2.6-r1.ebuild:

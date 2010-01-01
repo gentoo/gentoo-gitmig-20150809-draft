@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aesutil
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/ChangeLog,v 1.8 2009/01/03 17:57:52 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/ChangeLog,v 1.9 2010/01/01 19:58:04 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> aesutil-1.0.7.ebuild:
+  Transfer Prefix keywords
 
   03 Jan 2009; Christoph Mende <angelos@gentoo.org> aesutil-1.0.7.ebuild:
   QA: Respect LDFLAGS

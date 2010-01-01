@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aespipe
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.27 2009/04/26 19:13:42 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.28 2010/01/01 19:56:57 fauli Exp $
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> aespipe-2.3e.ebuild:
+  Transfer Prefix keywords
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> aespipe-2.3e.ebuild:
   stable ppc, bug 266045
