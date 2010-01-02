@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.20 2009/12/20 17:35:26 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.21 2010/01/02 16:14:07 maekke Exp $
+
+  02 Jan 2010; Markus Meier <maekke@gentoo.org>
+  pyprotocols-1.0_pre2306.ebuild:
+  amd64/x86 stable, bug #297680
 
   20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyprotocols-1.0_pre2306.ebuild:
