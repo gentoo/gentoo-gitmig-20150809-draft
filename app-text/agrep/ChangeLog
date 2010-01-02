@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.22 2009/09/23 16:30:38 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.23 2010/01/02 10:52:53 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> agrep-2.04.ebuild:
+  Transfer Prefix keywords
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> agrep-2.04.ebuild:
   Remove virtual/libc

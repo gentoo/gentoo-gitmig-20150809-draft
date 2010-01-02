@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/convertlit-1.8-r1.ebuild,v 1.6 2008/02/27 11:32:35 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/convertlit-1.8-r1.ebuild,v 1.7 2010/01/02 10:58:43 fauli Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.convertlit.com/${MY_P}src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=dev-libs/libtommath-0.36-r1"
