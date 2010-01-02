@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3728 2010/01/02 20:04:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3729 2010/01/02 21:00:29 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Masking dev-php5/php-qt, bugs 220785, 273416, 277227
 
   02 Jan 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
   Mask old qscintilla, PyQt and dependencies (upcoming qt:3 removal, bug

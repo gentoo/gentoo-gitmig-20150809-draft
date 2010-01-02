@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11032 2010/01/02 20:55:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11033 2010/01/02 21:00:29 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (02 Jan 2010)
+# Masking pending removal in 30 days
+# Does not compile (bugs 220785, 273416, 277227)
+dev-php5/php-qt
 
 # Ben de Groot <yngwin@gentoo.org> (02 Jan 2010)
 # Masking pending removal in 30 days
@@ -71,7 +76,7 @@ dev-db/mysqlnavigator
 # See bugs 274566, 274918, 279027, 279482, 283429, 285018, 294676,
 # 287276, 292791, ...
 #
-# kamikaze, hearts, six, slibo, kvisualboyadvance, xpertmud, 
+# kamikaze, hearts, six, slibo, kvisualboyadvance, xpertmud,
 # kfreeflight and boson will be removed with kdelibs-3.
 #
 # Masked for removal in 30 days
