@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtkspell
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.77 2009/05/26 04:40:29 serkan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.78 2010/01/02 11:20:58 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  gtkspell-2.0.15-r1.ebuild:
+  Transfer Prefix keywords
 
 *gtkspell-2.0.15-r1 (26 May 2009)
 

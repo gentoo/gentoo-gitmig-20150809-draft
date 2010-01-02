@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2tags
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.36 2009/08/15 21:58:22 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.37 2010/01/02 11:42:11 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> txt2tags-2.5.ebuild:
+  Transfer Prefix keywords
 
   15 Aug 2009; Petteri Räty <betelgeuse@gentoo.org> txt2tags-2.5.ebuild:
   EAPI 2 to get rid of built_with_use.

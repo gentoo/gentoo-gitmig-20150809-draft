@@ -1,6 +1,10 @@
 # ChangeLog for app-text/unix2dos
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.26 2008/09/11 03:11:05 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.27 2010/01/02 11:43:10 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  unix2dos-2.2-r1.ebuild:
+  Transfer Prefix keywords
 
   11 Sep 2008; Mike Frysinger <vapier@gentoo.org>
   +files/unix2dos-2.2-headers.patch, unix2dos-2.2-r1.ebuild:

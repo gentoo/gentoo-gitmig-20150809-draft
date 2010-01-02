@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.5.ebuild,v 1.3 2009/08/15 21:58:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.5.ebuild,v 1.4 2010/01/02 11:42:11 fauli Exp $
 
 EAPI="2"
 PYTHON_USE_WITH="tk"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/txt2tags/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="emacs tk"
 
 DEPEND="virtual/python

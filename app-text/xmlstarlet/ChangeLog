@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmlstarlet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.16 2009/06/02 09:57:09 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.17 2010/01/02 11:46:37 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  xmlstarlet-1.0.1-r1.ebuild:
+  Transfer Prefix keywords
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -xmlstarlet-1.0.1.ebuild:

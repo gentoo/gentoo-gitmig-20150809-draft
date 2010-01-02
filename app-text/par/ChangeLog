@@ -1,6 +1,9 @@
 # ChangeLog for app-text/par
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.12 2008/04/21 17:04:16 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.13 2010/01/02 11:32:15 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> par-1.52.ebuild:
+  Transfer Prefix keywords
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

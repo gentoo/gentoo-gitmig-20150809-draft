@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.1-r1.ebuild,v 1.5 2007/12/26 07:54:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.1-r1.ebuild,v 1.6 2010/01/02 11:46:37 fauli Exp $
 
 DESCRIPTION="A set of tools to transform, query, validate, and edit XML documents"
 HOMEPAGE="http://xmlstar.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/xmlstar/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.12

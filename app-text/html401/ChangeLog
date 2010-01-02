@@ -1,6 +1,10 @@
 # ChangeLog for app-text/html401
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.18 2008/01/20 16:12:16 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.19 2010/01/02 11:23:31 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  html401-19991224-r2.ebuild:
+  Transfer Prefix keywords
 
   20 Jan 2008; Fabian Groffen <grobian@gentoo.org>
   html401-19991224-r2.ebuild:

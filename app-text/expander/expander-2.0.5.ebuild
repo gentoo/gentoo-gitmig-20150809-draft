@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.9 2008/12/30 21:43:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.10 2010/01/02 11:17:00 fauli Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.nedit.org/pub/contrib/misc/nedit_expander_kit_2.05.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""

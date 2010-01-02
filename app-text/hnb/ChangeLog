@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hnb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.22 2009/10/23 12:47:18 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.23 2010/01/02 11:21:57 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hnb-1.9.18-r1.ebuild:
+  Transfer Prefix keywords
 
   23 Oct 2009; Jeroen Roovers <jer@gentoo.org> hnb-1.9.18-r1.ebuild,
   +files/hnb-1.9.18-include.patch:

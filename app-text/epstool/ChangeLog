@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epstool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.26 2009/12/26 17:29:33 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.27 2010/01/02 11:16:21 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> epstool-3.08.ebuild:
+  Transfer Prefix keywords
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> epstool-3.08.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
