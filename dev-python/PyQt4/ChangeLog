@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.98 2009/12/13 15:49:01 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.99 2010/01/02 15:43:09 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> PyQt4-4.5.4-r4.ebuild,
+  PyQt4-4.6.2.ebuild:
+  Adding RESTRICT_PYTHON_ABIS for python3. Current PyQt4 versions only work
+  with python2. Fixes bug 292419.
 
   13 Dec 2009; Ben de Groot <yngwin@gentoo.org> -PyQt4-4.4.4-r2.ebuild,
   -PyQt4-4.4.4-r5.ebuild, -PyQt4-4.5.2.ebuild, -PyQt4-4.5.4-r3.ebuild,
