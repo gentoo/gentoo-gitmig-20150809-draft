@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/yafaray
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/ChangeLog,v 1.1 2009/09/21 15:55:39 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/ChangeLog,v 1.2 2010/01/02 13:48:09 maekke Exp $
+
+  02 Jan 2010; Markus Meier <maekke@gentoo.org> yafaray-0.1.1.ebuild:
+  respect $CXXFLAGS by Killian De Volder in bug #299185
 
 *yafaray-0.1.1 (21 Sep 2009)
 

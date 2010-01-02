@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/yafaray-0.1.1.ebuild,v 1.1 2009/09/21 15:55:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/yafaray-0.1.1.ebuild,v 1.2 2010/01/02 13:48:09 maekke Exp $
 
 EAPI=2
 MY_PN="YafaRay"
@@ -53,6 +53,7 @@ user_config() {
 }
 
 src_configure() {
+	user_config "CCFLAGS=\"${CXXFLAGS}\""
 	user_config "PREFIX=\"${D}/usr\""
 	user_config "BASE_LPATH=\"/usr/$(get_libdir)/\""
 	user_config "YF_LIBOUT=\"\${PREFIX}/$(get_libdir)/\""
