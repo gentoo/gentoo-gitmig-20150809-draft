@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.5.6.ebuild,v 1.2 2010/01/02 01:05:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.5.6.ebuild,v 1.3 2010/01/02 12:27:46 scarabeus Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -134,7 +134,7 @@ src_install() {
 		cat <<EOF >"${D}"/usr/bin/${PN}
 #!/bin/sh
 unset LD_PRELOAD
-exec /opt/${MY_P}/${MY_P} "\$@"
+exec /opt/${MY_PN}/${MY_PN} "\$@"
 EOF
 		fperms 0755 /usr/bin/${PN}
 
