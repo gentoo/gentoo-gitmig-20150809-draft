@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.139 2009/12/26 17:44:10 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.140 2010/01/02 19:38:07 pacho Exp $
+
+*hplip-3.9.12-r1 (02 Jan 2010)
+
+  02 Jan 2010; Pacho Ramos <pacho@gentoo.org> +hplip-3.9.12-r1.ebuild,
+  +files/hplip-3.9.12-systray.patch:
+  Let hp-systray wait longer time for system tray appearing even on slower
+  machines
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> hplip-2.8.6b.ebuild,
   hplip-3.9.4b-r1.ebuild, hplip-3.9.8-r3.ebuild, hplip-3.9.10.ebuild,
