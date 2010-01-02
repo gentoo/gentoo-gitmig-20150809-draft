@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ink-0.5.0.ebuild,v 1.1 2009/10/27 21:09:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ink-0.5.0.ebuild,v 1.2 2010/01/02 11:49:16 bangert Exp $
 
 EAPI="2"
 inherit eutils
@@ -17,9 +17,9 @@ IUSE=""
 DEPEND=">net-print/libinklevel-0.8"
 RDEPEND="${DEPEND}"
 
-#src_prepare() {
-#	epatch "${FILESDIR}"/${P}-asneeded.patch
-#}
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
 
 src_install () {
 	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed"
