@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.30 2010/01/02 14:32:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.31 2010/01/02 17:22:49 phosphan Exp $
+
+  02 Jan 2010; Patrick Kursawe <phosphan@gentoo.org> -libemf-1.0.3.ebuild,
+  -files/libemf-1.0.3-gcc4.3.patch:
+  Removed obsolete version.
 
   02 Jan 2010; Brent Baude <ranger@gentoo.org> libemf-1.0.4.ebuild:
   Marking libemf-1.0.4 ppc64 for bug 292610
