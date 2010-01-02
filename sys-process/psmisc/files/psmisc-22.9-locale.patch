@@ -1,0 +1,16 @@
+http://bugs.gentoo.org/show_bug.cgi?id=299316
+http://sourceforge.net/tracker/?func=detail&aid=2922163&group_id=15273&atid=115273
+
+--- psmisc-22.9/src/killall.c
++++ psmisc-22.9/src/killall.c
+@@ -44,6 +44,10 @@
+ #include <ctype.h>
+ #include <assert.h>
+ 
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
++
+ #ifdef WITH_SELINUX
+ #include <selinux/selinux.h>
+ #endif /*WITH_SELINUX*/
