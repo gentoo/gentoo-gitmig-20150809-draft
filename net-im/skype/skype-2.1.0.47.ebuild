@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.47.ebuild,v 1.2 2010/01/02 00:32:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.47.ebuild,v 1.3 2010/01/02 12:24:15 ssuominen Exp $
 
 EAPI=2
 
@@ -64,16 +64,16 @@ src_install() {
 	# pax-mark m "${S}"/skype
 
 	exeinto /opt/${PN}
-	doexe skype
+	doexe skype || die
 	fowners root:audio /opt/skype/skype
 	make_wrapper skype /opt/${PN}/skype /opt/${PN} /opt/${PN} /usr/bin
 
 	insinto /opt/${PN}/sounds
-	doins sounds/*.wav
+	doins sounds/*.wav || die
 
 	if ! use qt-static ; then
 		insinto /etc/dbus-1/system.d
-		newins "${FILESDIR}"/skype.debus.config skype.conf
+		doins ${PN}.conf || die
 	fi
 
 	insinto /opt/${PN}/lang
@@ -85,10 +85,10 @@ src_install() {
 		lrelease lang/*.ts
 	fi
 
-	doins lang/*.qm
+	doins lang/*.qm || die
 
 	insinto /opt/${PN}/avatars
-	doins avatars/*.png
+	doins avatars/*.png || die
 
 	insinto /opt/${PN}
 	for X in 16 32 48
