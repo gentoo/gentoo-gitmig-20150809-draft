@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0-r2.ebuild,v 1.2 2009/12/20 22:09:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0-r2.ebuild,v 1.3 2010/01/02 21:06:49 yngwin Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ done
 DEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-script:4
-	x11-libs/qscintilla[qt4]"
+	x11-libs/qscintilla"
 RDEPEND="${DEPEND}
 	dev-util/indent
 	dev-util/astyle
