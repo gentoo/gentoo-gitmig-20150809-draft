@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-fileinfo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.25 2009/12/29 18:43:30 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.26 2010/01/02 14:29:20 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org>
+  pecl-fileinfo-1.0.4-r1.ebuild:
+  Marking pecl-fileinfo-1.0.4-r1 ppc64 for bug 288043
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   pecl-fileinfo-1.0.4-r1.ebuild:
