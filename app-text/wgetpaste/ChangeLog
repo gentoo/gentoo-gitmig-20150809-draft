@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.101 2010/01/02 11:45:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.102 2010/01/02 14:55:20 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org> wgetpaste-2.14.ebuild:
+  Marking wgetpaste-2.14 ppc64 for bug 297545
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   wgetpaste-2.16.ebuild:
