@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.47.ebuild,v 1.1 2010/01/02 00:29:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.47.ebuild,v 1.2 2010/01/02 00:32:55 ssuominen Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RESTRICT="mirror"
 
 EMUL_VER=20091231
 
-DEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
+RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
 			>=app-emulation/emul-linux-x86-baselibs-${EMUL_VER}
 			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_VER}
 			!qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-${EMUL_VER} ) )
@@ -47,7 +47,9 @@ DEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
 			x11-libs/libX11
 			x11-libs/libXau
 			x11-libs/libXdmcp ) )"
-RDEPEND="${DEPEND}"
+# Required for lrelease command.
+DEPEND="${RDEPEND}
+	amd64? ( !qt-static? ( x11-libs/qt-core:4 ) )"
 
 QA_EXECSTACK="opt/skype/skype"
 QA_WX_LOAD="opt/skype/skype"
