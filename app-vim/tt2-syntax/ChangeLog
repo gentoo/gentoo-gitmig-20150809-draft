@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tt2-syntax
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.4 2009/10/04 22:08:40 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.5 2010/01/02 15:19:00 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org> tt2-syntax-1.13.ebuild:
+  Marking tt2-syntax-1.13 ~ppc64 for bug 191500
 
   04 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> tt2-syntax-1.13.ebuild:
   Keywording for ppc, bug 191500
