@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl/emacs-cl-0_pre20060526.ebuild,v 1.1 2008/01/30 21:02:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl/emacs-cl-0_pre20060526.ebuild,v 1.2 2010/01/02 11:27:13 ulm Exp $
 
 #ECVS_SERVER="cvs.nocrew.org:/usr/local/cvsroot"
 #ECVS_MODULE="emacs-cl"
@@ -18,17 +18,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-SITEFILE=50${PN}-gentoo.el
-DOCS="BUGS HACKING HOWTO README"
-
 S="${WORKDIR}/${PN}"
+SITEFILE="50${PN}-gentoo.el"
+DOCS="BUGS HACKING HOWTO README"
 
 src_compile() {
 	emake EMACS="${EMACS}" || die "emake failed"
 }
 
 src_test() {
+	# "make check" clears all *.elc files, so move them to a safe location
+	mkdir safe || dir "mkdir failed"
+	mv *.elc safe || die "mv failed"
 	emake -j1 check EMACSEN="${EMACS}" || die "emake check failed"
+	mv safe/*.elc . || die "mv failed"
 }
 
 src_install() {

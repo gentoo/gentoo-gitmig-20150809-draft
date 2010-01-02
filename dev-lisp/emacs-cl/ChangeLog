@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/emacs-cl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl/ChangeLog,v 1.1 2008/01/30 21:02:43 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl/ChangeLog,v 1.2 2010/01/02 11:27:13 ulm Exp $
+
+  02 Jan 2010; Ulrich Mueller <ulm@gentoo.org>
+  emacs-cl-0_pre20060526.ebuild:
+  Fix src_test, bug 299215.
 
 *emacs-cl-0_pre20060526 (30 Jan 2008)
 
