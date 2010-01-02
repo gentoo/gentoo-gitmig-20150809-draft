@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.3 2009/12/15 02:05:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.4 2010/01/02 16:54:58 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="A standards-compliant graphical Web browser"
 HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
-LICENSE="OPERA-10.00"
+LICENSE="OPERA-10.10"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror test"
