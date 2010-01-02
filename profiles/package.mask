@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11027 2010/01/02 14:50:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11028 2010/01/02 16:31:38 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,7 +40,7 @@ net-misc/ghamachi
 
 # Víctor Ostorga <vostorga@gentoo.org> (01 Jan 2010)
 # Masking for removal, qt3 package, has been segfaulting for 
-# 2 and half years, last release 6 years ago
+# 2 and half years, last release 6 years ago, bug #183103
 dev-db/mysqlnavigator
 
 # Samuli Suominen <ssuominen@gentoo.org> (31 Dec 2009)
