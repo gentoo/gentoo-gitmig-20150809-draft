@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.6.1.ebuild,v 1.5 2009/12/19 20:30:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.6.1.ebuild,v 1.6 2010/01/02 20:23:56 yngwin Exp $
 
 EAPI=2
 inherit multilib cmake-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 
-RDEPEND="x11-libs/qscintilla[qt4]
+RDEPEND="x11-libs/qscintilla
 	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/juffed
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.17 2009/12/19 20:30:03 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.18 2010/01/02 20:23:56 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> juffed-0.6.1.ebuild:
+  Remove no longer needed qt4 use dep
 
   19 Dec 2009; Pacho Ramos <pacho@gentoo.org> juffed-0.6.1.ebuild:
   amd64 stable, bug 291853
