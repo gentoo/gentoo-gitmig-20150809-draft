@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.25 2009/08/25 14:56:02 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.26 2010/01/02 10:50:17 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> orage-4.6.1.ebuild:
+  Transfer Prefix keywords
 
   25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> orage-4.6.1.ebuild:
   Use xfconf.eclass.
