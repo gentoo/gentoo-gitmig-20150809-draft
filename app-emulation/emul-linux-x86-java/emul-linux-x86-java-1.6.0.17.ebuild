@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.17.ebuild,v 1.2 2009/11/05 21:29:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.17.ebuild,v 1.3 2010/01/02 10:48:54 ssuominen Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -23,8 +23,7 @@ IUSE="X alsa nsplugin"
 JAVA_VM_NO_GENERATION1=true
 
 RDEPEND="alsa? ( app-emulation/emul-linux-x86-soundlibs )
-	X? ( app-emulation/emul-linux-x86-xlibs )
-	app-emulation/emul-linux-x86-compat"
+	X? ( app-emulation/emul-linux-x86-xlibs )"
 
 JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 
