@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0.ebuild,v 1.1 2009/12/20 19:21:16 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0.ebuild,v 1.2 2010/01/02 09:57:49 ssuominen Exp $
 EAPI="2"
 
 inherit eutils multilib mozextension
@@ -46,9 +46,8 @@ RDEPEND="x11-libs/libXrender
 		>=x11-libs/gtk+-2.2
 	)
 	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-1.0
-		>=app-emulation/emul-linux-x86-gtklibs-1.0
-		app-emulation/emul-linux-x86-compat
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-gtklibs
 	)"
 
 S="${WORKDIR}/thunderbird"
