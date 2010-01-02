@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smoke
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.88 2009/12/23 01:41:30 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.89 2010/01/02 21:09:44 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> smoke-4.3.3.ebuild,
+  smoke-4.3.4.ebuild:
+  Drop no longer needed use dep on qt4
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> smoke-4.3.4.ebuild:
   Pull in changes from overlay
