@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qscintilla
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.36 2009/11/09 10:53:36 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.37 2010/01/02 18:59:18 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> -qscintilla-1.5.1.ebuild,
+  qscintilla-2.3.2.ebuild, qscintilla-2.4.ebuild:
+  Adjust qscintilla-python dep which no longer has qt4 useflag (qt4 is
+  always enabled). Remove obsolete version.
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
   -files/qscintilla-2.1-qt.patch, -files/qscintilla-2.1-qt4.patch:
@@ -415,14 +420,14 @@
   Version bump
 
   09 May 2003; Luca Barbato <lu_zero@gentoo.org> qscintilla-1.52.ebuild :
-  Keyworded ~ppc 
+  Keyworded ~ppc
 
 *qscintilla-1.52 (29 Apr 2003)
 
   29 Apr 2003; Michele Balistreri <brain@gentoo.org> qscintilla-1.52.ebuild :
   Version bump
 
-*qscintilla-1.49-r1 (1 Feb 2003) 
+*qscintilla-1.49-r1 (1 Feb 2003)
 
   01 Feb 2003; Joachim Blaabjerg <styx@gentoo.org>
 
@@ -436,9 +441,9 @@
 
   Fixed the ebuild a little, sandbox violations etc.
 
-*qscintilla-1.49 (19 Dec 2002) 
+*qscintilla-1.49 (19 Dec 2002)
 
   19 Dec 2002; Bart Verwilst <verwilst@gentoo.org>
- 
+
   initial ebuild.
 

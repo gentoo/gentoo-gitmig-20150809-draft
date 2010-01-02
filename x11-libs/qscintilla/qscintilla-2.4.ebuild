@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.ebuild,v 1.6 2009/10/18 14:48:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.ebuild,v 1.7 2010/01/02 18:59:18 yngwin Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="qt4? ( x11-libs/qt-gui:4 )
 DEPEND="${RDEPEND}"
 # dev-python/PyQt needs qscintilla to build and qscintilla's python bindings
 # need dev-python/PyQt, bug 199543
-PDEPEND="python? ( ~dev-python/qscintilla-python-${PV}[qt4=] )"
+PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"
 
 S="${WORKDIR}"/${MY_P}
 
