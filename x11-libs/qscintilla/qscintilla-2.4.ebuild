@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.ebuild,v 1.7 2010/01/02 18:59:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.ebuild,v 1.8 2010/01/02 21:17:54 yngwin Exp $
 
 EAPI="2"
 
-inherit eutils multilib qt3 qt4
+inherit eutils multilib qt4
 
 MY_P="QScintilla-gpl-${PV/_pre/-snapshot-}"
 
@@ -15,13 +15,10 @@ SRC_URI="http://www.riverbankcomputing.co.uk/static/Downloads/QScintilla2/${MY_P
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc python +qt4"
+IUSE="doc python"
 
-RDEPEND="qt4? ( x11-libs/qt-gui:4 )
-	!qt4? ( x11-libs/qt:3 )"
+RDEPEND="x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}"
-# dev-python/PyQt needs qscintilla to build and qscintilla's python bindings
-# need dev-python/PyQt, bug 199543
 PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"
 
 S="${WORKDIR}"/${MY_P}
@@ -29,13 +26,8 @@ S="${WORKDIR}"/${MY_P}
 PATCHES=( "${FILESDIR}/${PN}-2.4-designer.patch" )
 
 src_configure() {
-	if use qt4; then
-		myqtver=4
-		myqtdir=/usr/share/qt4
-	else
-		myqtver=3
-		myqtdir=${QTDIR}
-	fi
+	myqtver=4
+	myqtdir=/usr/share/qt4
 
 	cd "${S}"/Qt${myqtver}
 	eqmake${myqtver} qscintilla.pro
@@ -83,10 +75,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use qt4; then
-		ewarn "Please remerge dev-python/PyQt4 if you have problems with eric or other"
-	else
-		ewarn "Please remerge dev-python/PyQt if you have problems with"
-	fi
+	ewarn "Please remerge dev-python/PyQt4 if you have problems with eric or other"
 	ewarn "qscintilla related packages before submitting bug reports."
 }
