@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.141 2009/12/31 16:37:08 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.142 2010/01/02 18:07:56 hwoarang Exp $
+
+  02 Jan 2010; Markos Chandras <hwoarang@gentoo.org> libevent-1.4.13.ebuild:
+  Stable on amd64 wrt bug #298173
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> libevent-1.4.13.ebuild:
   Marking libevent-1.4.13 ppc64 for bug 298173
