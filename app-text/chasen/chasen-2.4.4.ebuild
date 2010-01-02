@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.4.ebuild,v 1.1 2008/07/31 16:07:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.4.ebuild,v 1.2 2010/01/02 12:05:04 fauli Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp//chasen-legacy/32224/${P}.tar.gz"
 
 LICENSE="chasen"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~sparc-solaris"
 IUSE="perl"
 
 DEPEND=">=dev-libs/darts-0.32"
