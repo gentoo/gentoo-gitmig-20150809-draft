@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.182 2009/11/23 10:40:24 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.183 2010/01/02 15:38:49 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org> courier-imap-4.5.0.ebuild:
+  Marking courier-imap-4.5.0 ppc64 for bug 287933
 
   23 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   -files/gentoo-pop3d-1.7.3-r1.rc, -files/gentoo-pop3d-ssl-1.7.3-r1.rc,
