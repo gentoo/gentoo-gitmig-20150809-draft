@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.9 2009/12/26 19:40:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.10 2010/01/02 19:13:27 yngwin Exp $
 
 WX_GTK_VER=2.8
 EAPI=2
@@ -12,7 +12,7 @@ DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="http://matplotlib.sourceforge.net/ http://pypi.python.org/pypi/matplotlib"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="cairo doc excel examples fltk gtk latex qt3 qt4 traits tk wxwidgets"
+IUSE="cairo doc excel examples fltk gtk latex qt4 traits tk wxwidgets"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 LICENSE="PYTHON BSD"
@@ -48,7 +48,6 @@ RDEPEND="${CDEPEND}
 	cairo?  ( dev-python/pycairo )
 	excel?  ( dev-python/xlwt )
 	fltk?   ( dev-python/pyfltk )
-	qt3?    ( dev-python/PyQt )
 	qt4?    ( dev-python/PyQt4[X] )
 	traits? ( dev-python/traits dev-python/configobj )
 	latex?  (
@@ -93,7 +92,6 @@ src_prepare() {
 		$(use_setup gtk)
 		$(use_setup tk)
 		$(use_setup wxwidgets wx)
-		$(use_setup qt3 qt)
 		$(use_setup qt4)
 		$(use_setup fltk)
 		$(use_setup cairo)

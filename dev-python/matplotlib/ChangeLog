@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.77 2009/12/26 19:40:13 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.78 2010/01/02 19:13:27 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> matplotlib-0.99.1.1.ebuild:
+  Remove qt3 support
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> matplotlib-0.99.1.1.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
