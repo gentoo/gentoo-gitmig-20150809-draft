@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ncmpcpp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.22 2009/10/21 12:21:07 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.23 2010/01/02 14:38:55 yngwin Exp $
+
+*ncmpcpp-0.5 (02 Jan 2010)
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> -ncmpcpp-0.3.2.ebuild,
+  -ncmpcpp-0.3.4.ebuild, +ncmpcpp-0.5.ebuild:
+  Version bump. Add new dependency on libmpdclient. Force USE=visualizer on
+  for USE=fftw. Use dodoc to install documentation. Fixes bug 299283.
+  Remove obsolete versions.
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org> ncmpcpp-0.3.5.ebuild:
   x86 stable, bug #285872
