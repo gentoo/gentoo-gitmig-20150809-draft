@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.4 2007/02/24 01:28:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.5 2010/01/02 19:19:43 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -36,10 +37,9 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${WORKDIR}"/${P}-gcc3.patch
+src_prepare() {
+	epatch "${WORKDIR}"/${P}-gcc3.patch \
+		"${FILESDIR}"/${P}-sndsrv.patch
 	sed -i \
 		-e "/^KOULESDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^SOUNDDIR/s:=.*:=${GAMES_DATADIR}/${PN}:" Iconfig \
@@ -89,9 +89,8 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin koules bins/* || die "dogamesbin failed"
+	dogamesbin koules koules.sndsrv.linux bins/* || die "dogamesbin failed"
 	exeinto "${GAMES_DATADIR}/${PN}"
-	doexe koules.sndsrv.linux || die "doexe failed"
 	if use tk ; then
 		dogamesbin koules.tcl || die "dogamebin failed (tcl)"
 	fi
