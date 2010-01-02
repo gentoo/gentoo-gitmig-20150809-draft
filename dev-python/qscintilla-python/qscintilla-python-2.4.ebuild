@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.14 2010/01/02 16:45:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.15 2010/01/02 21:19:47 yngwin Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND=">=dev-python/sip-4.8
-	~x11-libs/qscintilla-${PV}[qt4]
+	~x11-libs/qscintilla-${PV}
 	dev-python/PyQt4[X]"
 RDEPEND="${DEPEND}"
 
