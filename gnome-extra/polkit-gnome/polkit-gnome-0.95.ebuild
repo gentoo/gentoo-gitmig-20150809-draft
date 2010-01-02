@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.95.ebuild,v 1.3 2009/12/27 03:27:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.95.ebuild,v 1.4 2010/01/02 12:34:02 eva Exp $
 
 EAPI="2"
 
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/intltool-0.35.0
 	>=app-text/scrollkeeper-0.3.14
+	gnome-base/gnome-common
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.3 )"
 
 DOCS="AUTHORS HACKING NEWS TODO"
