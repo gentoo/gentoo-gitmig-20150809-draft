@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.12 2010/01/02 19:49:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.13 2010/01/02 23:31:50 yngwin Exp $
 
 EAPI="1"
 
@@ -40,9 +40,8 @@ RDEPEND="${DEPEND}
 		!<sys-fs/udev-114
 		scanner? (
 			dev-python/imaging
-			qt3? ( >=media-gfx/xsane-0.89 )
 			qt4? ( >=media-gfx/xsane-0.89 )
-			!qt3? ( !qt4? ( >=media-gfx/sane-frontends-1.0.9 ) )
+			!qt4? ( >=media-gfx/sane-frontends-1.0.9 )
 		)
 		qt4? ( dev-python/PyQt4
 			dbus? ( >=dev-python/dbus-python-0.80 )
