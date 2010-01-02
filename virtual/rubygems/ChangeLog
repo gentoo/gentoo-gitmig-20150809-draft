@@ -1,6 +1,11 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.5 2010/01/01 16:26:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.6 2010/01/02 00:00:13 flameeyes Exp $
+
+  01 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> rubygems-0.ebuild,
+  rubygems-0-r1.ebuild:
+  Null out all the functions to avoid that those from ruby-ng will actually
+  be executed (waste time).
 
 *rubygems-0-r1 (01 Jan 2010)
 
