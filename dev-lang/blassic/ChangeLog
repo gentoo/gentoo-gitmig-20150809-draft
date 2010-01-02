@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/blassic
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.26 2009/04/24 18:26:59 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.27 2010/01/02 18:36:31 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  blassic-0.10.2.ebuild:
+  Transfer Prefix keywords
 
 *blassic-0.10.2 (24 Apr 2009)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pasm/pasm-1.7.ebuild,v 1.2 2004/06/24 22:53:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pasm/pasm-1.7.ebuild,v 1.3 2010/01/02 18:39:51 fauli Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://devnull.owl.de/~frank/pasm_e.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~ppc-macos"
 
 src_unpack() {
 	mkdir -p ${S}/LinuxPPC

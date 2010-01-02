@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.2.ebuild,v 1.1 2009/04/24 18:26:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.2.ebuild,v 1.2 2010/01/02 18:36:31 fauli Exp $
 
 EAPI=2
 inherit eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://blassic.org"
 SRC_URI="http://blassic.org/bin/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~hppa ~ppc ~x86"
+KEYWORDS="~hppa ~ppc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
 SLOT="0"
 IUSE="svga X"
 

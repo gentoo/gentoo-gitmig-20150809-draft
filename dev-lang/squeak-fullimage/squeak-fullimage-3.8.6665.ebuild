@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/squeak-fullimage-3.8.6665.ebuild,v 1.3 2007/02/06 09:05:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-fullimage/squeak-fullimage-3.8.6665.ebuild,v 1.4 2010/01/02 18:40:38 fauli Exp $
 
 MY_P="Squeak3.8-6665"
 DESCRIPTION="Squeak full image file"
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.squeak.org/current_stable/${MY_P}-full.zip
 
 LICENSE="Apple"
 SLOT="3.8"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~x86-linux ~ppc-macos"
 IUSE=""
 PROVIDE="virtual/squeak-image"
 
