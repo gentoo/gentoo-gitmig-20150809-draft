@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.6.2.ebuild,v 1.3 2010/01/02 15:43:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.6.2.ebuild,v 1.4 2010/01/02 17:03:41 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
 
 inherit python qt4 toolchain-funcs
 
@@ -40,6 +39,7 @@ DEPEND=">=dev-python/sip-4.9
 	webkit? ( >=x11-libs/qt-webkit-${QTVER}:4 )
 	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QTVER}:4 )"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.2"
 
 S="${WORKDIR}/${MY_P}"
 
