@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.165 2010/01/02 00:00:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.166 2010/01/02 06:37:05 tove Exp $
+
+*spamassassin-3.2.5-r2 (02 Jan 2010)
+
+  02 Jan 2010; Torsten Veller <tove@gentoo.org>
+  +spamassassin-3.2.5-r2.ebuild:
+  Apply FH_DATE_PAST_20XX to the testing version too
 
   01 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
   spamassassin-3.2.1-r2.ebuild:
