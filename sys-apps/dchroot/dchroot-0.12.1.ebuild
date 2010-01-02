@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/dchroot-0.12.1.ebuild,v 1.2 2009/11/18 16:58:35 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dchroot/dchroot-0.12.1.ebuild,v 1.3 2010/01/02 18:46:36 vostorga Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs
 
@@ -14,11 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-apps/help2man"
-RDEPEND=""
+RDEPEND="!dev-util/schroot[dchroot]"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^all:/s:$: docs:' \
 		-e '/^CFLAGS/s:-O2:@CFLAGS@:' \
@@ -27,7 +27,6 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
 	emake CC="$(tc-getCC)" || die
 }
 
