@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.28 2009/12/26 17:24:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.29 2010/01/02 22:22:09 yngwin Exp $
 
 EAPI=1
 
-inherit eutils flag-o-matic toolchain-funcs qt3
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages"
 HOMEPAGE="http://www.doxygen.org/"
@@ -14,10 +14,9 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="doc qt3 latex unicode"
+IUSE="doc latex unicode"
 
 RDEPEND=">=media-gfx/graphviz-2.6
-	qt3? ( x11-libs/qt:3 )
 	latex? ( app-text/texlive-core
 		dev-texlive/texlive-latexrecommended
 		dev-texlive/texlive-genericrecommended
@@ -63,16 +62,7 @@ src_compile() {
 	export ECFLAGS="${CFLAGS}" ECXXFLAGS="${CXXFLAGS}" ELDFLAGS="${LDFLAGS}"
 	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf="--prefix ${D}usr"
-	if use qt3; then
-		einfo "using QTDIR: '$QTDIR'."
-		export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
-		export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
-		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
-		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-		./configure ${my_conf} $(use_with qt3 doxywizard) || die 'configure failed'
-	else
-		./configure ${my_conf} || die 'configure failed'
-	fi
+	./configure ${my_conf} || die 'configure failed'
 
 	# and compile
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" \
@@ -118,7 +108,7 @@ src_install() {
 
 pkg_postinst() {
 	elog
-	elog "The USE flags qt3, doc, and tetex will enable doxywizard, or"
+	elog "The USE flags doc, and tetex will enable "
 	elog "the html and pdf documentation, respectively.  For examples"
 	elog "and other goodies, see the source tarball.  For some example"
 	elog "output, run doxygen on the doxygen source using the Doxyfile"
