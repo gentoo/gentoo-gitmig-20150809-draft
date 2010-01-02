@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/routes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.8 2009/12/20 10:31:25 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.9 2010/01/02 23:33:12 arfrever Exp $
+
+  02 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  routes-1.11.ebuild:
+  Use documentation already present in the tarball instead of generating it
+  in src_compile() to fix building wiht USE="doc" (bug #297795).
 
   20 Dec 2009; Fabian Groffen <grobian@gentoo.org> routes-1.11.ebuild:
   Merged keywords from Prefix overlay

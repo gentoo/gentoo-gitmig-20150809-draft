@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.11.ebuild,v 1.2 2009/12/20 10:31:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.11.ebuild,v 1.3 2010/01/02 23:33:12 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,20 +20,11 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools
-	doc? ( dev-python/buildutils dev-python/pudge )
 	test? ( dev-python/coverage dev-python/nose )"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
-
-src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		PYTHONPATH=. "${python}" setup.py pudge || die "Generation of documentation failed"
-	fi
-}
 
 src_test() {
 	testing() {
@@ -44,5 +35,8 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	use doc && dohtml -r docs/html/*
+
+	if use doc; then
+		dohtml -r docs/_build/html/* || die "dohtml failed"
+	fi
 }
