@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pydns
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.6 2009/02/15 11:54:35 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.7 2010/01/02 20:20:00 arfrever Exp $
+
+*pydns-2.3.4 (02 Jan 2010)
+
+  02 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pydns-2.3.4.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> pydns-2.3.3.ebuild:
   amd64/x86 stable, bug #258328
