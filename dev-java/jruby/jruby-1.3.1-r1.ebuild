@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.3.1-r1.ebuild,v 1.1 2009/12/29 21:55:32 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.3.1-r1.ebuild,v 1.2 2010/01/02 00:01:23 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -176,5 +176,5 @@ src_install() {
 	doins "${FILESDIR}/gentoo.rb" || die
 	doenvd "${FILESDIR}/10jruby" || die
 
-	keepdir "${GEMS}/1.8/{cache,doc}"
+	keepdir "${GEMS}"/1.8/{cache,doc}
 }
