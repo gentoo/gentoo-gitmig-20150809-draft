@@ -1,6 +1,10 @@
 # ChangeLog for net-im/qtwitter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.23 2009/12/20 20:16:37 ayoy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.24 2010/01/02 14:05:29 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  qtwitter-0.10.0.ebuild:
+  stable x86, bug 297615
 
   20 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> qtwitter-0.10.0.ebuild:
   Porting to qt4-r2.eclass

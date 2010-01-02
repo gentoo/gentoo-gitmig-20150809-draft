@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.10.0.ebuild,v 1.3 2009/12/20 20:16:37 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.10.0.ebuild,v 1.4 2010/01/02 14:05:29 fauli Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://files.ayoy.net/qtwitter/release/${PV}/src/${P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND=">=x11-libs/qt-gui-4.5:4
