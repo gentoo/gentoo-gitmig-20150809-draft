@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.0_alpha3.ebuild,v 1.1 2009/03/06 16:55:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.0_alpha3.ebuild,v 1.2 2010/01/02 10:03:18 ssuominen Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -28,10 +28,9 @@ RDEPEND="dev-libs/dbus-glib
 		>=media-libs/alsa-lib-1.0.16
 	)
 	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-1.0
-		>=app-emulation/emul-linux-x86-gtklibs-1.0
-		>=app-emulation/emul-linux-x86-soundlibs-20080418
-		app-emulation/emul-linux-x86-compat
+		>=app-emulation/emul-linux-x86-baselibs-20081109
+		>=app-emulation/emul-linux-x86-gtklibs-20081109
+		>=app-emulation/emul-linux-x86-soundlibs-20081109
 	)"
 
 S="${WORKDIR}/seamonkey"

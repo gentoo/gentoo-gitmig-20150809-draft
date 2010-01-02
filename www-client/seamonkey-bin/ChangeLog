@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.72 2009/09/29 22:23:41 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.73 2010/01/02 10:03:18 ssuominen Exp $
+
+  02 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  seamonkey-bin-2.0_alpha3.ebuild:
+  Remove app-emulation/emul-linux-x86-compat (libstdc++.so.5) from RDEPEND.
 
   29 Sep 2009; Markus Meier <maekke@gentoo.org> seamonkey-bin-1.1.18.ebuild:
   amd64 stable, bug #286721
