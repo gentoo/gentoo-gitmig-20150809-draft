@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r3.ebuild,v 1.5 2008/03/07 23:54:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r3.ebuild,v 1.6 2010/01/02 16:16:16 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="a bloody 2D action deathmatch-like game in ASCII-ART"
@@ -15,9 +16,7 @@ IUSE="X"
 
 DEPEND="X? ( x11-libs/libXpm )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-docs.patch \
 		"${FILESDIR}"/${P}-home-overflow.patch \
@@ -36,9 +35,8 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	egamesconf $(use_with X x) || die
-	emake || die "emake failed"
+src_configure() {
+	egamesconf $(use_with X x)
 }
 
 src_install() {
