@@ -1,12 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/Term-ProgressBar-2.09.ebuild,v 1.15 2009/05/19 21:03:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/Term-ProgressBar-2.09.ebuild,v 1.16 2010/01/02 14:46:11 tove Exp $
 
+MODULE_AUTHOR=FLUFFY
 inherit perl-module
 
 DESCRIPTION="Perl module for Term-ProgressBar"
-SRC_URI="mirror://cpan/authors/id/F/FL/FLUFFY/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~fluffy/"
 
 SLOT="0"
 LICENSE="Artistic"
@@ -20,3 +19,8 @@ RDEPEND="dev-perl/Class-MethodMaker
 	dev-lang/perl"
 DEPEND="${RDEPEND}
 		>=virtual/perl-Module-Build-0.28"
+
+src_test() {
+	rm "${S}"/t/0-signature.t || die
+	perl-module_src_test
+}
