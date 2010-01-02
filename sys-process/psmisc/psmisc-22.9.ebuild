@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.8-r1.ebuild,v 1.1 2009/12/23 15:12:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.9.ebuild,v 1.1 2010/01/02 10:35:46 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-fuser-r159.patch
 	use nls || epatch "${FILESDIR}"/${PN}-22.5-no-nls.patch #193920
+	sed -i -e '/ACLOCAL_AMFLAGS/d' Makefile.am || die
 	eautoreconf
 }
 
