@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11030 2010/01/02 18:48:45 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11031 2010/01/02 20:04:22 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Ben de Groot <yngwin@gentoo.org> (02 Jan 2010)
+# Masking pending removal in 30 days
+# qt:3 removal (bug 283429), qscintilla-python already dropped qt3 support
+=x11-libs/qscintilla-1*
+=dev-db/tora-1*
+dev-python/PyQt
+app-misc/releaseforge
+dev-util/kodos
+media-gfx/imgseek
+media-sound/albumart
+media-video/quickrip
+net-nds/luma
+net-p2p/qtorrent
+net-wireless/gerix
+x11-misc/icecursorscfg
+x11-misc/iceiconcvt
+x11-misc/icemergeprefs
+=x11-misc/treeline-1.0.2
+
 # Samuli Suominen <ssuominen@gentoo.org> (02 Jan 2009)
 # mirror restricted and distfile can't be downloaded
 # anymore wrt bug #288442. missing deps wrt bug #200085.
@@ -39,7 +58,7 @@
 net-misc/ghamachi
 
 # Víctor Ostorga <vostorga@gentoo.org> (01 Jan 2010)
-# Masking for removal, qt3 package, has been segfaulting for 
+# Masking for removal, qt3 package, has been segfaulting for
 # 2 and half years, last release 6 years ago, bug #183103
 dev-db/mysqlnavigator
 
@@ -251,7 +270,7 @@ dev-db/drizzle
 net-dns/ldapdns
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Dec 2009)
-# Doesn't compile, bug 294826, and not worth fixing 
+# Doesn't compile, bug 294826, and not worth fixing
 # imake based build system. Removed in 30 days.
 x11-misc/xplore
 
@@ -448,7 +467,7 @@ sys-auth/nsvs
 # for 2 week testing.
 =net-fs/coda-6.9.4
 
-# Christian Faulhammer <fauli@gentoo.org> (09 Dec 2009) 
+# Christian Faulhammer <fauli@gentoo.org> (09 Dec 2009)
 # Fails on runtime due to gone web contents, has to wait for 2009
 # version.
 app-portage/g-ctan
