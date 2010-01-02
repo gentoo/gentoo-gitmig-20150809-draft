@@ -1,7 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/curlftpfs-0.9.2-r1.ebuild,v 1.2 2010/01/01 21:17:53 fauli Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/curlftpfs-0.9.2-r1.ebuild,v 1.3 2010/01/02 08:21:50 mr_bones_ Exp $
 
 EAPI=2
 
