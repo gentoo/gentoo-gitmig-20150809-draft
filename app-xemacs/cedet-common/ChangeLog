@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/cedet-common
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cedet-common/ChangeLog,v 1.4 2009/12/26 16:29:25 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cedet-common/ChangeLog,v 1.5 2010/01/02 14:56:05 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org> cedet-common-1.01.ebuild:
+  Marking cedet-common-1.01 ~ppc64 for bug 278914
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> cedet-common-1.01.ebuild:
   Add ~sparc wrt #278914
