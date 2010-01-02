@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook2X
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.35 2009/12/02 16:47:58 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.36 2010/01/02 14:49:28 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org> docbook2X-0.8.8-r2.ebuild:
+  Marking docbook2X-0.8.8-r2 ppc64 for bug 290161
 
   02 Dec 2009; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r2.ebuild:
   Add ~s390/~sh
