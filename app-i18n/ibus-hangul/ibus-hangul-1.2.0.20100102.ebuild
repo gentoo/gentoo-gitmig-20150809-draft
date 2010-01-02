@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.1.0.20090211.ebuild,v 1.1 2009/02/12 14:49:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.2.0.20100102.ebuild,v 1.1 2010/01/02 15:59:01 matsuu Exp $
 
 DESCRIPTION="The Hangul engine for IBus input platform"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -11,12 +11,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-RDEPEND=">=app-i18n/ibus-1.1
-	app-i18n/libhangul
+RDEPEND=">=dev-lang/python-2.5
+	>=app-i18n/ibus-1.2
+	>=app-i18n/libhangul-0.0.10
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( >=sys-devel/gettext-0.16.1 )"
+	nls? ( >=sys-devel/gettext-0.17 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	mv py-compile py-compile.orig || die
+	ln -s "$(type -P true)" py-compile || die
+}
 
 src_compile() {
 	econf $(use_enable nls) || die
