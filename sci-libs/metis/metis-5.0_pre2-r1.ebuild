@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.1 2008/03/27 19:04:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.2 2010/01/02 18:14:15 fauli Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="A package for unstructured serial graph partitioning"
 HOMEPAGE="http://www-users.cs.umn.edu/~karypis/metis/metis/index.html"
 SRC_URI="http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-${MY_PV}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 LICENSE="free-noncomm"
 
 IUSE="pcre openmp int64 threads"

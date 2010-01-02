@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.39 2009/11/17 07:23:15 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.40 2010/01/02 18:12:19 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> geos-3.1.1.ebuild:
+  Transfer Prefix keywords
 
   17 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> -geos-2.2.1.ebuild,
   -files/geos-2.2.1-gcc-41.patch, -geos-2.2.3.ebuild,

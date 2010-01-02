@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.16 2009/11/21 07:47:21 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.17 2010/01/02 18:19:03 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> umfpack-5.4.0.ebuild:
+  Transfer Prefix keywords
 
 *umfpack-5.4.0 (21 Nov 2009)
 

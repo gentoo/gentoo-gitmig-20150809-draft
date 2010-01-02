@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.44 2009/11/20 21:00:08 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.45 2010/01/02 18:16:49 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> scipy-0.7.1.ebuild:
+  Transfer Prefix keywords
 
   20 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -scipy-0.6.0-r6.ebuild, -files/scipy-0.6.0-cdf.patch,

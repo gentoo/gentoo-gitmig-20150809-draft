@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ufconfig
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.16 2009/11/21 08:00:12 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.17 2010/01/02 18:18:13 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ufconfig-3.4.0.ebuild:
+  Transfer Prefix keywords
 
 *ufconfig-3.4.0 (21 Nov 2009)
 
