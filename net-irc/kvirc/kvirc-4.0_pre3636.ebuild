@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3636.ebuild,v 1.2 2009/12/29 19:53:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3636.ebuild,v 1.3 2010/01/02 11:17:46 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="kvirc"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86"
 IUSE="audiofile +crypt +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl +transparency"
 
 RDEPEND="
