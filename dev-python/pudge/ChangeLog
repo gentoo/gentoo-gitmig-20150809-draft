@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pudge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/ChangeLog,v 1.6 2009/10/01 23:16:44 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/ChangeLog,v 1.7 2010/01/02 22:49:03 arfrever Exp $
+
+  02 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pudge-0.1.3.ebuild:
+  Fix dependencies (bug #297810).
 
   02 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pudge-0.1.3.ebuild:

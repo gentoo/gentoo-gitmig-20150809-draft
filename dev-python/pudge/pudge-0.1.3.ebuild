@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.4 2009/10/01 23:16:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.5 2010/01/02 22:49:03 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-python/docutils
-	>=dev-python/kid-0.9.5"
+	>=dev-python/kid-0.9.5
+	dev-python/pygments"
 DEPEND="dev-python/setuptools
 	doc? ( ${RDEPEND} )"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
