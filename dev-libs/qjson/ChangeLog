@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qjson
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.8 2009/12/20 12:31:41 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.9 2010/01/02 14:07:13 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> qjson-0.6.3.ebuild:
+  stable x86, bug 297613
 
   20 Dec 2009; Markos Chandras <hwoarang@gentoo.org> qjson-0.6.3.ebuild:
   Stable on amd64 wrt bug #297613
