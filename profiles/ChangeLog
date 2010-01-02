@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3726 2010/01/02 16:53:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3727 2010/01/02 18:48:45 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jan 2010; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Removing mask for sys-apps/dchroot
 
   02 Jan 2010; Jeroen Roovers <jer@gentoo.org> default/linux/hppa/use.mask,
   package.mask:

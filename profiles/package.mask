@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11029 2010/01/02 16:53:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11030 2010/01/02 18:48:45 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -132,12 +132,6 @@ games-emulation/mupen64-riceplugin
 # remaining packages (no dependencies for them.
 net-analyzer/fe3d
 net-analyzer/metasploit
-
-# Jonathan Callen <abcd@gentoo.org> (29 Dec 2009)
-# Project abandoned upstream (replaced by dev-util/schroot)
-# Collides with dev-util/schroot[dchroot]
-# Masked for removal in 30 days, bug 298874
-sys-apps/dchroot
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Dec 2009)
 #  on behalf of QA team
