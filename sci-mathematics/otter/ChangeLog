@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/otter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.11 2009/12/24 14:27:10 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.12 2010/01/02 18:20:20 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> otter-3.3-r1.ebuild:
+  Transfer Prefix keywords
 
   24 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> otter-3.3-r1.ebuild:
   Use -j1 for build (bug #298208).
