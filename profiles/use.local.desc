@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5142 2010/01/01 18:07:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5143 2010/01/02 20:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2700,8 +2700,7 @@ net-print/hplip:new-hpcups - Build the new hpcups driver for cups which is no lo
 net-print/hplip:parport - Enable parallel port for devices which require it
 net-print/hplip:policykit - Enable sys-auth/policykit authentication support
 net-print/hplip:ppds - Use precompiled PPD files (obsolete, use cupsddk instead)
-net-print/hplip:qt3 - Enable graphical interface using Qt 3; when both qt3 and qt4 USE flags are enabled then qt4 has priority over qt3
-net-print/hplip:qt4 - Enable graphical interface using Qt 4; when both qt3 and qt4 USE flags are enabled then qt4 has priority over qt3
+net-print/hplip:qt4 - Enable graphical interface using Qt 4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
 net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. This is deprecated, and this USE flag is thus suggested to stay turned off
