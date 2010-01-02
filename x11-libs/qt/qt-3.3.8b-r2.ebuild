@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b-r2.ebuild,v 1.7 2009/12/03 18:25:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b-r2.ebuild,v 1.8 2010/01/02 16:01:22 yngwin Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -52,6 +52,13 @@ S="${WORKDIR}/qt-x11-${SRCTYPE}-${PV}"
 QTBASE="/usr/qt/3"
 
 pkg_setup() {
+	ewarn
+	ewarn "===== WARNING ====="
+	ewarn "Qt3 is deprecated and unsupported, both upstream and by the Gentoo Qt"
+	ewarn "Project. x11-libs/qt:3 will be removed from portage soon. See"
+	ewarn "http://archives.gentoo.org/gentoo-dev/msg_f988855f798764822704bbbd743ab6f7.xml"
+	ewarn "You are encouraged to use Qt4 instead."
+	ewarn
 	if use immqt && use immqt-bc ; then
 		ewarn
 		ewarn "immqt and immqt-bc are exclusive. You cannot set both."
