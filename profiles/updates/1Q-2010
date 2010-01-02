@@ -1,1 +1,2 @@
 move www-client/mozilla-firefox-bin www-client/firefox-bin
+move kde-misc/bilbo kde-misc/blogilo
