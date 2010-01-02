@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Attribute-Handlers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.3 2009/12/26 17:42:31 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.4 2010/01/02 14:13:01 ranger Exp $
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Marking ~ppc64 for bug 294206
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Attribute-Handlers-0.87.ebuild:
