@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.16-r1.ebuild,v 1.2 2009/10/05 19:19:05 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.16-r1.ebuild,v 1.3 2010/01/02 22:40:39 yngwin Exp $
 
 EAPI="2"
 
-inherit autotools eutils multilib qt3
+inherit autotools eutils multilib
 
 DESCRIPTION="Yet another IM-client of SCIM"
 HOMEPAGE="http://www.scim-im.org/projects/scim_bridge"
@@ -13,20 +13,13 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc64 ~sparc ~x86"
-IUSE="doc gtk qt3 qt4"
+IUSE="doc gtk qt4"
 
 RESTRICT="test"
 
 RDEPEND=">=app-i18n/scim-1.4.6
 	gtk? (
 		>=x11-libs/gtk+-2.2
-		>=x11-libs/pango-1.1
-	)
-	qt3? (
-		|| (
-			>=x11-libs/qt-3.3:3[immqt-bc]
-			>=x11-libs/qt-3.3:3[immqt]
-		)
 		>=x11-libs/pango-1.1
 	)
 	qt4? (
@@ -68,11 +61,8 @@ src_configure() {
 		myconf="${myconf} --enable-gtk2-immodule=no"
 	fi
 
-	if use qt3 ; then
-		myconf="${myconf} --enable-qt3-immodule=yes"
-	else
-		myconf="${myconf} --enable-qt3-immodule=no"
-	fi
+	# Qt3 is no longer supported, bug 283429
+	myconf="${myconf} --enable-qt3-immodule=no"
 
 	if use qt4 ; then
 		myconf="${myconf} --enable-qt4-immodule=yes"
