@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/time
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.17 2009/04/19 09:19:37 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.18 2010/01/02 12:33:17 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> time-1.1.2.4.ebuild:
+  Transfer Prefix keywords
 
 *time-1.1.2.4 (19 Apr 2009)
 

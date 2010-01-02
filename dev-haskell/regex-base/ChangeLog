@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-base
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.22 2009/04/19 11:41:53 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.23 2010/01/02 12:35:36 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  regex-base-0.93.1.ebuild:
+  Transfer Prefix keywords
 
   19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org>
   -regex-base-0.91.ebuild:

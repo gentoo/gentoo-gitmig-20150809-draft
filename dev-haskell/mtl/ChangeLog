@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mtl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.32 2009/04/19 10:00:32 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.33 2010/01/02 12:26:23 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> mtl-1.1.0.2.ebuild:
+  Transfer Prefix keywords
 
 *mtl-1.1.0.2 (19 Apr 2009)
 

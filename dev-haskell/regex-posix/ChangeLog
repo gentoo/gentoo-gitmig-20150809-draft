@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-posix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.21 2009/04/19 11:37:12 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.22 2010/01/02 12:39:12 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  regex-posix-0.93.1.ebuild:
+  Transfer Prefix keywords
 
   19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org>
   -regex-posix-0.92.ebuild:
