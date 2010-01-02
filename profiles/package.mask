@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11031 2010/01/02 20:04:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11032 2010/01/02 20:55:32 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -70,6 +70,9 @@ dev-db/mysqlnavigator
 #
 # See bugs 274566, 274918, 279027, 279482, 283429, 285018, 294676,
 # 287276, 292791, ...
+#
+# kamikaze, hearts, six, slibo, kvisualboyadvance, xpertmud, 
+# kfreeflight and boson will be removed with kdelibs-3.
 #
 # Masked for removal in 30 days
 #
