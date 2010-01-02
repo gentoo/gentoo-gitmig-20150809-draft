@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.93 2009/03/02 18:48:01 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.94 2010/01/02 12:19:36 fauli Exp $
+
+  02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  scrollkeeper-9999-r1.ebuild:
+  Transfer Prefix keywords
 
   02 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   scrollkeeper-9999-r1.ebuild:
