@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/sqliteman-1.2.1.ebuild,v 1.3 2009/09/06 16:26:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/sqliteman-1.2.1.ebuild,v 1.4 2010/01/02 20:27:11 yngwin Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-sql:4[sqlite]
-	>=x11-libs/qscintilla-2.1-r1[qt4]"
+	x11-libs/qscintilla"
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS README"
