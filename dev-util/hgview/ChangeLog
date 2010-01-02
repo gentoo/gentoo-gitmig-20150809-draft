@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hgview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/ChangeLog,v 1.5 2009/12/27 03:05:41 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/ChangeLog,v 1.6 2010/01/02 16:49:21 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org> hgview-1.1.3.ebuild:
+  qscintilla-python no longer has a qt4 useflag (it is the only option now)
 
   27 Dec 2009; Ben de Groot <yngwin@gentoo.org> hgview-1.1.3.ebuild:
   Add usedep on qscintilla-python[qt4]. Fixes bug 297916.

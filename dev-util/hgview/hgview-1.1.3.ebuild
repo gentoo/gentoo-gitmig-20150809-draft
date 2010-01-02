@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/hgview-1.1.3.ebuild,v 1.3 2009/12/27 03:05:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/hgview-1.1.3.ebuild,v 1.4 2010/01/02 16:49:21 yngwin Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="doc"
 DEPEND="dev-util/mercurial
 	dev-python/egenix-mx-base
 	dev-python/PyQt4[X]
-	dev-python/qscintilla-python[qt4]
+	dev-python/qscintilla-python
 	dev-python/docutils
 	doc? ( app-text/asciidoc )"
 RDEPEND="${DEPEND}"
