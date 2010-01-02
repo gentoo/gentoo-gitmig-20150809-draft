@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.11 2009/12/26 17:44:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.12 2010/01/02 19:49:06 yngwin Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 
-IUSE="cupsddk dbus doc fax minimal parport ppds qt3 qt4 scanner snmp"
+IUSE="cupsddk dbus doc fax minimal parport ppds qt4 scanner snmp"
 
 # Note : libusb-compat untested (calchan 20090516)
 
@@ -44,14 +44,7 @@ RDEPEND="${DEPEND}
 			qt4? ( >=media-gfx/xsane-0.89 )
 			!qt3? ( !qt4? ( >=media-gfx/sane-frontends-1.0.9 ) )
 		)
-		qt4? ( !qt3? (
-			dev-python/PyQt4
-			dbus? ( >=dev-python/dbus-python-0.80 )
-			fax? ( dev-python/reportlab )
-		) )
-		qt3? (
-			>=dev-python/PyQt-3.14
-			dev-python/ctypes
+		qt4? ( dev-python/PyQt4
 			dbus? ( >=dev-python/dbus-python-0.80 )
 			fax? ( dev-python/reportlab )
 		)
@@ -101,7 +94,6 @@ src_unpack() {
 	# Qt4 is still undocumented by upstream, so use with caution
 	local QT_VER
 	use qt4 && QT_VER="4"
-	use qt3 && QT_VER="3"
 	sed -i \
 		-e "s/%s --force-startup/%s --force-startup --qt${QT_VER}/" \
 		-e "s/'--force-startup'/'--force-startup', '--qt${QT_VER}'/" \
@@ -112,7 +104,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use qt3 || use qt4 ; then
+	if use qt4 ; then
 		local GUI_BUILD="--enable-gui-build"
 	else
 		local GUI_BUILD="--disable-gui-build"
@@ -143,7 +135,7 @@ src_install() {
 	rm -f "${D}"/etc/sane.d/dll.conf
 
 	# bug 106035
-	use qt3 || use qt4 || rm -Rf "${D}"/usr/share/applications
+	use qt4 || rm -Rf "${D}"/usr/share/applications
 
 	use minimal && rm -rf "${D}"/usr/lib
 }

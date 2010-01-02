@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r3.ebuild,v 1.5 2009/12/26 17:44:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r3.ebuild,v 1.6 2010/01/02 19:49:06 yngwin Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt3 qt4 scanner snmp static-ppds -udev-acl"
+IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt4 scanner snmp static-ppds -udev-acl"
 
 # Note : libusb-compat untested (calchan 20090516)
 
@@ -51,9 +51,6 @@ RDEPEND="${COMMON_DEPEND}
 			sys-apps/dbus
 			dev-python/dbus-python
 		)
-		qt3? ( !qt4? (
-			dev-python/PyQt
-		) )
 		qt4? (
 			dev-python/PyQt4[dbus,X]
 			dev-python/pygobject
@@ -70,7 +67,7 @@ CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure parallel port support is enabled in your kernel (PARPORT and PPDEV)."
 
 pkg_setup() {
-	! use qt3 && ! use qt4 && ewarn "You need USE=qt4 or USE=qt3 for the hplip GUI."
+	! use qt4 && ewarn "You need USE=qt4 for the hplip GUI."
 
 	use scanner && ! use gtk && ewarn "You need USE=gtk for the scanner GUI."
 
@@ -119,9 +116,8 @@ src_prepare() {
 	done
 
 	local qt_ver
-	if use qt3 || use qt4 ; then
-		use qt3 && qt_ver="3"
-		use qt4 && qt_ver="4"
+	if use qt4 ; then
+		qt_ver="4"
 		sed -i \
 			-e "s/%s --force-startup/%s --force-startup --qt${qt_ver}/" \
 			-e "s/'--force-startup'/'--force-startup', '--qt${qt_ver}'/" \
@@ -143,17 +139,12 @@ src_prepare() {
 src_configure() {
 	local drv_build gui_build myconf
 
-	if use qt3 || use qt4 ; then
-		gui_build="--enable-gui-build"
-		if use qt4 ; then
-			gui_build="${gui_build} --enable-qt4 --disable-qt3"
-			if use policykit ; then
-				myconf="--enable-policykit"
-			else
-				myconf="--disable-policykit"
-			fi
+	if use qt4 ; then
+		gui_build="--enable-gui-build --enable-qt4 --disable-qt3"
+		if use policykit ; then
+			myconf="--enable-policykit"
 		else
-			use qt3 && gui_build="${gui_build} --enable-qt3 --disable-qt4"
+			myconf="--disable-policykit"
 		fi
 	else
 		gui_build="--disable-gui-build --disable-qt3 --disable-qt4"
@@ -223,7 +214,7 @@ src_install() {
 	rm -f "${D}"/etc/sane.d/dll.conf
 
 	# bug 106035/259763
-	if ! use qt3 && ! use qt4 ; then
+	if ! use qt4 ; then
 		rm -r "${D}"/usr/share/applications "${D}"/etc/xdg
 	fi
 

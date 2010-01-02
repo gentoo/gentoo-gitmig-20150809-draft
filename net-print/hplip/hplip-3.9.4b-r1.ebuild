@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.7 2009/12/26 17:44:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.8 2010/01/02 19:49:06 yngwin Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
-IUSE="cupsddk dbus doc fax gtk minimal parport policykit ppds qt3 qt4 scanner snmp"
+IUSE="cupsddk dbus doc fax gtk minimal parport policykit ppds qt4 scanner snmp"
 
 # Note : libusb-compat untested (calchan 20090516)
 
@@ -52,9 +52,6 @@ RDEPEND="${DEPEND}
 		fax? (
 			dev-python/reportlab
 		)
-		qt3? ( !qt4? (
-			dev-python/PyQt
-		) )
 		qt4? (
 			dev-python/PyQt4[X]
 		)
@@ -69,7 +66,7 @@ CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure parallel port support is enabled in your kernel (PARPORT and PPDEV)."
 
 pkg_setup() {
-	! use qt3 && ! use qt4 && ewarn "You need USE=qt3 or USE=qt4 for the hplip GUI."
+	! use qt4 && ewarn "You need USE=qt4 for the hplip GUI."
 
 	use scanner && ! use gtk && ewarn "You need USE=gtk for the scanner GUI."
 
@@ -126,9 +123,8 @@ src_prepare() {
 
 	# Qt4 is still undocumented by upstream, so use with caution
 	local qt_ver
-	use qt3 && qt_ver="3"
 	use qt4 && qt_ver="4"
-	if use qt3 || use qt4 ; then
+	if use qt4 ; then
 		sed -i \
 			-e "s/%s --force-startup/%s --force-startup --qt${qt_ver}/" \
 			-e "s/'--force-startup'/'--force-startup', '--qt${qt_ver}'/" \
@@ -144,13 +140,8 @@ src_prepare() {
 }
 
 src_configure() {
-	if use qt3 || use qt4 ; then
-		local gui_build="--enable-gui-build"
-		if use qt4; then
-			gui_build="${gui_build} --enable-qt4 --disable-qt3"
-		else
-			use qt3 && gui_build="${gui_build} --enable-qt3 --disable-qt4"
-		fi
+	if use qt4 ; then
+		local gui_build="--enable-gui-build --enable-qt4 --disable-qt3"
 	else
 		local gui_build="--disable-gui-build"
 	fi
@@ -181,7 +172,7 @@ src_install() {
 	use minimal && rm -r "${D}"/usr/$(get_libdir)
 
 	# bug 106035/259763
-	if ! use qt3 && ! use qt4; then
+	if ! use qt4; then
 		rm -r "${D}"/usr/share/applications "${D}"/etc/xdg
 	fi
 
