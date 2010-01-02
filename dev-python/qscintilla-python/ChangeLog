@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.45 2009/10/18 14:47:12 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.46 2010/01/02 16:45:07 yngwin Exp $
+
+  02 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  qscintilla-python-2.3.2-r2.ebuild, qscintilla-python-2.4.ebuild:
+  Removing qt3 support, dropping qt4 useflag as it is now the only option.
 
   18 Oct 2009; Raúl Porcel <armin76@gentoo.org>
   qscintilla-python-2.4.ebuild:
