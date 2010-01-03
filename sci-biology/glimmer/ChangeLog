@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/glimmer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.5 2009/12/29 20:37:48 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.6 2010/01/03 14:17:04 pacho Exp $
+
+  03 Jan 2010; Pacho Ramos <pacho@gentoo.org> glimmer-3.02-r1.ebuild:
+  amd64 stable, bug 298762
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   glimmer-3.02-r1.ebuild:
