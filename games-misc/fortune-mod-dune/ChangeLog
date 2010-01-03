@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-dune
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dune/ChangeLog,v 1.6 2006/07/19 19:45:58 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dune/ChangeLog,v 1.7 2010/01/03 11:57:36 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  fortune-mod-dune-2.0.1.ebuild:
+  Transfer Prefix keywords
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-dune-2.0.1.ebuild:
