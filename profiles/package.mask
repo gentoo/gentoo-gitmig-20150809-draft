@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11038 2010/01/03 16:40:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11039 2010/01/03 20:13:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2009)
+# Orphaned libraries with several open bugs, see
+# 299365 and depending bugs.
+# Masked for removal
+=x11-libs/qwtplot3d-0.2.6*
+x11-libs/qwtplot3d-qt3
+x11-libs/qwt-qt3
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2009)
 # Masked for Security bug #253822. Other bugs 195614,
