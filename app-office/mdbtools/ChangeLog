@@ -1,6 +1,14 @@
 # ChangeLog for app-office/mdbtools
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.42 2009/01/01 10:22:07 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.43 2010/01/03 14:50:37 graaff Exp $
+
+*mdbtools-0.6_pre2-r1 (03 Jan 2010)
+
+  03 Jan 2010; Hans de Graaff <graaff@gentoo.org>
+  +mdbtools-0.6_pre2-r1.ebuild,
+  +files/mdbtools-0.6_pre2-haveiconv-fix.patch:
+  Fix bug 297662 thanks to oc666. Convert to EAPI=2. Remove unsupported
+  configure option.
 
 *mdbtools-0.6_pre2 (30 Dec 2008)
 
