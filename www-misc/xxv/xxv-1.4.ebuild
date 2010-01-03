@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.4.ebuild,v 1.1 2009/08/16 18:27:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.4.ebuild,v 1.2 2010/01/03 23:09:35 hd_brummy Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ RDEPEND=">=media-video/vdr-1.2.6
 	dev-perl/Template-Toolkit
 	dev-perl/SOAP-Lite
 	dev-perl/XML-RSS
-	themes? ( >=x11-themes/${PN}-skins-1.3 )"
+	themes? ( >=x11-themes/${PN}-skins-${PV} )"
 
 PDEPEND="mplayer? ( media-video/mplayer )"
 
