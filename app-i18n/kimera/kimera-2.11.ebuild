@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-2.11.ebuild,v 1.3 2009/05/15 21:36:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-2.11.ebuild,v 1.4 2010/01/03 11:15:10 ssuominen Exp $
 
 EAPI=1
 inherit eutils multilib qt4
@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 KEYWORDS="amd64 x86"
 IUSE="+anthy"
 
-DEPEND="|| ( x11-libs/qt-core:4 x11-libs/qt:4 )
+DEPEND="x11-libs/qt-core:4
 	anthy? ( app-i18n/anthy )
 	!anthy? ( app-i18n/canna )"
 RDEPEND="${DEPEND}"
