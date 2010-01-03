@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/xpyb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.8 2009/12/14 11:15:52 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.9 2010/01/03 21:32:55 scarabeus Exp $
+
+*xpyb-1.2 (03 Jan 2010)
+
+  03 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0001-.la-file-is-totaly-useless-for-python-bindings-and-c.patch,
+  -xpyb-1.0.ebuild, -xpyb-1.1.ebuild, +xpyb-1.2.ebuild:
+  Version bump. Drop old. Fix bug #299517
 
   14 Dec 2009; Rémi Cardona <remi@gentoo.org> xpyb-1.0.ebuild:
   change LICENSE to MIT
