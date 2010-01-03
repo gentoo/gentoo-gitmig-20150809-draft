@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.73 2009/12/26 10:18:11 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.74 2010/01/03 22:01:01 sping Exp $
+
+*webalizer-2.01.10-r17 (03 Jan 2010)
+
+  03 Jan 2010; Sebastian Pipping <sping@gentoo.org>
+  +webalizer-2.01.10-r17.ebuild:
+  Remove --{en,dis}able-geoip from configure call as a fix to bug #228137
 
   26 Dec 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove smithj from metadata (#95385)
