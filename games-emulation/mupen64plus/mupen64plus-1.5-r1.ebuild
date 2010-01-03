@@ -1,6 +1,6 @@
-d # Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.4 2010/01/01 18:36:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.5 2010/01/03 21:16:06 mr_bones_ Exp $
 
 EAPI="2"
 
