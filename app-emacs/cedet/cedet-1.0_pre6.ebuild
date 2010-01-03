@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre6.ebuild,v 1.8 2009/11/24 20:52:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre6.ebuild,v 1.9 2010/01/03 17:55:09 ulm Exp $
 
 NEED_EMACS=22
 
@@ -26,11 +26,17 @@ ELISP_PATCHES="${P}-fix-eieio-comp.patch"
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
-	emake -j1 EMACS="${EMACS}" || die "emake failed"
+	emake -j1 \
+		EMACS="${EMACS}" \
+		EMACSFLAGS="${EMACSFLAGS}" \
+		|| die "emake failed"
 }
 
 src_test() {
-	make utest || die "make utest failed"
+	emake -j1 \
+		EMACS="${EMACS}" \
+		EMACSFLAGS="${EMACSFLAGS} -L srecode" \
+		utest || die "make utest failed"
 }
 
 src_install() {
