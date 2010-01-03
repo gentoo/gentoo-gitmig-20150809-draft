@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-live
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.19 2009/11/18 21:05:31 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.20 2010/01/03 20:13:02 hd_brummy Exp $
+
+  03 Jan 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-live-0.2.0.ebuild:
+  added info for login:pass on first install
 
   18 Nov 2009; Matthias Schwarzott <zzam@gentoo.org> vdr-live-0.2.0.ebuild:
   boost is no RDEPEND, Bug #293073.
