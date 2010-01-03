@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r4.ebuild,v 1.1 2008/10/06 20:24:45 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.4.3-r5.ebuild,v 1.1 2010/01/03 06:56:05 truedfx Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -60,7 +60,7 @@ src_compile() {
 	echo "#define EventMon 1" >> src/h/define.h
 	echo "#define Eve 1" >> src/h/define.h
 
-	append-flags $(test-flags -fwrapv)
+	append-flags $(test-flags -fno-strict-aliasing -fwrapv)
 
 	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "Make Failed"
 }
