@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liblist
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.2 2009/12/05 22:32:30 nerdboy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.3 2010/01/03 05:27:01 nerdboy Exp $
+
+  03 Jan 2010; Steve Arnold <nerdboy@gentoo.org> liblist-2.1-r1.ebuild,
+  files/liblist-2.1-sharedlib.patch:
+  Updated patch and converted to EAPI2.
 
 *liblist-2.1-r1 (05 Dec 2009)
 

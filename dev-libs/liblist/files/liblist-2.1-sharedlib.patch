@@ -7,7 +7,7 @@
 +CC	= cc
 +LD	= cc
  MANDIR	= /usr/share/man
- LIBDIR	= /usr/lib64
+ LIBDIR	= /usr/lib
  INCDIR	= /usr/include
  
  #add macro for ranlib 4/96 *kob* - ranlib doesn't exist on solaris

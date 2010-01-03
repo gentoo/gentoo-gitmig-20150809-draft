@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/liblist-2.1-r1.ebuild,v 1.1 2009/12/05 22:32:30 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/liblist-2.1-r1.ebuild,v 1.2 2010/01/03 05:27:01 nerdboy Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -13,12 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc examples"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-sharedlib.patch
 	sed -i -e "s:/usr/lib:/usr/$(get_libdir):g" Makefile \
 	    examples/cache/Makefile || die "sed 1 failed"
-	epatch "${FILESDIR}"/${P}-sharedlib.patch
 }
 
 src_compile() {
