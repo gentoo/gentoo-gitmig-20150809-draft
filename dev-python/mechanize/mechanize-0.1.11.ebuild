@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.11.ebuild,v 1.6 2009/10/30 12:27:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.11.ebuild,v 1.7 2010/01/03 02:26:42 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Stateful programmatic web browsing in Python"
 HOMEPAGE="http://wwwsearch.sourceforge.net/mechanize/ http://pypi.python.org/pypi/mechanize"
@@ -30,6 +30,8 @@ src_prepare() {
 	# We don't run coverage tests or functional_tests
 	# which access the network, just doctests and unit tests
 	sed -e '/import coverage/d' -i test.py || die "sed in test.py failed"
+
+	epatch "${FILESDIR}/${P}-python-2.7.patch"
 }
 
 src_test() {

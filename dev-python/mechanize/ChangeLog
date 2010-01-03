@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mechanize
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.16 2009/10/18 19:37:44 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.17 2010/01/03 02:26:42 arfrever Exp $
+
+  03 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mechanize-0.1.11.ebuild, +files/mechanize-0.1.11-python-2.7.patch:
+  Fix a part of tests with Python 2.7 (bug #299001).
 
   18 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mechanize-0.1.11.ebuild:
