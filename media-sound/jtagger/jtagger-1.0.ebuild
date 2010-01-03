@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0.ebuild,v 1.2 2009/08/03 13:06:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0.ebuild,v 1.3 2010/01/03 19:02:40 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source test"
@@ -24,15 +24,17 @@ DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.5
 	app-arch/unzip"
 
+S="${S}/src"
+
 src_unpack() {
-	mkdir -p "${S}/src" || die
-	cd "${S}/src" || die
+	mkdir -p "${S}" || die
+	cd "${S}" || die
 
 	unpack ${A}
 	unzip -q ${PN}.jar || die
 }
 
-src_prepare() {
+java_prepare() {
 	# Fix for bug #231571 comment #2. This removes real @Override annotations but safer.
 	sed -i -e "s/@Override//g" $(find . -name "*.java") || die "failed fixing for Java 5."
 
@@ -43,7 +45,6 @@ src_prepare() {
 src_compile() {
 	local classpath="$(java-pkg_getjars jid3,jlayer)"
 
-	cd "${S}/src"
 	find . -name '*.java' > sources.list
 	ejavac -encoding latin1 -cp "${classpath}" @sources.list
 
@@ -53,11 +54,11 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar src/${PN}.jar
+	java-pkg_dojar ${PN}.jar
 	java-pkg_dolauncher jtagger --main com.googlepages.dronten.jtagger.JTagger
 
-	use source && java-pkg_dosrc src/com
+	use source && java-pkg_dosrc com
 
-	newicon src/com/googlepages/dronten/jtagger/resource/jTagger.icon.png ${PN}.png
+	newicon com/googlepages/dronten/jtagger/resource/jTagger.icon.png ${PN}.png
 	make_desktop_entry jtagger "jTagger MP3 tag editor"
 }
