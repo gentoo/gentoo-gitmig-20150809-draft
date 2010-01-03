@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.4-r1.ebuild,v 1.4 2009/03/20 12:59:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.4-r1.ebuild,v 1.5 2010/01/03 23:16:16 eva Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="beagle gnome +libburn totem cdrkit cdrtools +nautilus"
+IUSE="beagle gnome +libburn playlist cdrkit cdrtools +nautilus"
 
 RDEPEND=">=dev-libs/glib-2.15.6
 	>=x11-libs/gtk+-2.12.0
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.15.6
 	cdrkit? ( app-cdr/cdrkit )
 	gnome? ( >=gnome-base/libgnome-2.22.0
 		>=gnome-base/libgnomeui-2.22.0 )
-	totem? ( >=dev-libs/totem-pl-parser-2.20 )
+	playlist? ( >=dev-libs/totem-pl-parser-2.20 )
 	beagle? ( >=dev-libs/libbeagle-0.3.0 )
 	libburn? ( >=dev-libs/libburn-0.4.0
 		>=dev-libs/libisofs-0.6.4 )
@@ -51,7 +51,7 @@ pkg_setup() {
 		$(use cdrtools|| printf %s --disable-cdrtools)
 		$(use_enable cdrkit)
 		$(use_enable nautilus)
-		$(use_enable totem playlist)
+		$(use_enable playlist)
 		$(use_enable beagle search)
 		$(use_enable libburn libburnia)
 		$(use_enable gnome gnome2)"
