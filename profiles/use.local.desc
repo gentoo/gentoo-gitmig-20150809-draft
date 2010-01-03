@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5150 2010/01/03 21:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5151 2010/01/03 23:27:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -121,7 +121,7 @@ app-cdr/brasero:cdrtools - Enable app-cdr/cdrtools backend
 app-cdr/brasero:gnome - Enable integration with the gnome-base/gnome desktop (help, session management, etc.)
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
 app-cdr/brasero:nautilus -  Build gnome-base/nautilus extension
-app-cdr/brasero:totem - Enable support for media-video/totem playlists
+app-cdr/brasero:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 app-cdr/cdrdao:gcdmaster - Enable building of gcdmaster application
 app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution
 app-cdr/cdrkit:hfs - Provide building of HFS (Apple) CD-images
