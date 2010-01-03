@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mosaik
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mosaik/ChangeLog,v 1.2 2009/12/29 20:54:08 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mosaik/ChangeLog,v 1.3 2010/01/03 14:25:26 pacho Exp $
+
+  03 Jan 2010; Pacho Ramos <pacho@gentoo.org> mosaik-1.0.1367.ebuild:
+  amd64 stable, bug 298766
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   mosaik-1.0.1367.ebuild:
