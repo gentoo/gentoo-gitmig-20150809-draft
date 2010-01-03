@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.5-r1.ebuild,v 1.3 2008/03/18 19:37:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-0.5-r1.ebuild,v 1.4 2010/01/03 05:29:15 wormo Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Linux german man page translations"
 HOMEPAGE="http://www.infodrom.org/projects/manpages-de/"
@@ -26,4 +26,8 @@ src_install() {
 	rm "${D}"/usr/share/man/de/man1/{chsh,groups,login,passwd,newgrp,su}.1*
 	#  - man
 	rm "${D}"/usr/share/man/de/man1/{apropos,man,whatis}.1*
+	#  - man-db
+	rm "${D}"/usr/share/man/de/man1/{manpath,zsoelim}.1*
+	rm "${D}"/usr/share/man/de/man5/manpath.5*
+	rm "${D}"/usr/share/man/de/man8/{catman,mandb}.8*
 }

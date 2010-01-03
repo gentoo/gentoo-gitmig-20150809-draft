@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-de
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.8 2008/03/18 19:37:26 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.9 2010/01/03 05:29:15 wormo Exp $
+
+  03 Jan 2010; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  man-pages-de-0.5-r1.ebuild:
+  Fix file collisions with sys-apps/man-db, thanks to David Voge (bug
+  299311)
 
   18 Mar 2008; Raúl Porcel <armin76@gentoo.org> man-pages-de-0.5-r1.ebuild:
   RDEPEND on virtual/man, bug 213112
