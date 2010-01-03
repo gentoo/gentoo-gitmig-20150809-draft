@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11035 2010/01/02 22:48:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11036 2010/01/03 11:26:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2010)
+# Doesn't compile wrt bug #269724, and is using Qt3
+# wrt bug #283429. Masked for removal in 30 days.
+media-gfx/lprof
 
 # Ben de Groot <yngwin@gentoo.org> (02 Jan 2010)
 # Masking pending removal in 30 days
