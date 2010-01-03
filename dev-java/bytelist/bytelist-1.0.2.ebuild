@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/bytelist-1.0.2.ebuild,v 1.4 2009/10/25 21:23:02 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/bytelist-1.0.2.ebuild,v 1.5 2010/01/03 20:18:59 fauli Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source test"
@@ -11,7 +11,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4

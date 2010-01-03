@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swarmcache/swarmcache-1.0_pre20050106-r1.ebuild,v 1.5 2008/03/23 12:26:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swarmcache/swarmcache-1.0_pre20050106-r1.ebuild,v 1.6 2010/01/03 21:40:07 fauli Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://swarmcache.sourceforge.net"
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 COMMON_DEP=">=dev-java/commons-collections-3

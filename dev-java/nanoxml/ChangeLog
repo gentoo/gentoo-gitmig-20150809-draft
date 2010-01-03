@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/nanoxml
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.16 2007/08/15 05:49:19 wltjr Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.17 2010/01/03 21:25:18 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  nanoxml-2.2.3-r2.ebuild:
+  Transfer Prefix keywords
 
   15 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   nanoxml-2.2.3-r2.ebuild:

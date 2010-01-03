@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/hamcrest-core-1.1.ebuild,v 1.8 2008/09/10 18:19:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/hamcrest-core-1.1.ebuild,v 1.9 2010/01/03 20:39:41 fauli Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://code.google.com/p/${MY_PN}/"
 SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tgz"
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~amd64-linux ~x86-macos ~x64-solaris"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5

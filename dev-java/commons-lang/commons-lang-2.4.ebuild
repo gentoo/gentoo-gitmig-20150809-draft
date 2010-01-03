@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.4.ebuild,v 1.4 2008/10/27 23:18:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.4.ebuild,v 1.5 2010/01/03 20:29:31 fauli Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/jre-1.4"
 
 LICENSE="Apache-2.0"
 SLOT="2.1"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 S="${WORKDIR}/${P}-src"
 

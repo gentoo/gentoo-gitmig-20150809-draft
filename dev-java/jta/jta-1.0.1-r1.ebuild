@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1-r1.ebuild,v 1.7 2007/11/02 00:00:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1-r1.ebuild,v 1.8 2010/01/03 21:11:18 fauli Exp $
 
 inherit java-pkg-2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://java.sun.com/products/jta/"
 SRC_URI="${At}"
 LICENSE="sun-bcla-jta"
 SLOT=0
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 DEPEND=">=app-arch/unzip-5.50-r1
 	>=virtual/jdk-1.3"

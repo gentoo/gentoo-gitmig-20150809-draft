@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jmx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.19 2008/08/17 17:09:05 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.20 2010/01/03 20:57:10 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  sun-jmx-1.2.1-r3.ebuild:
+  Transfer Prefix keywords
 
   17 Aug 2008; Markus Meier <maekke@gentoo.org> sun-jmx-1.2.1-r3.ebuild:
   x86 stable, bug #232267

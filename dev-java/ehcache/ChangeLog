@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ehcache
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.10 2009/09/11 22:19:07 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.11 2010/01/03 20:36:26 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ehcache-1.2.4-r2.ebuild:
+  Transfer Prefix keywords
 
   11 Sep 2009; Markus Meier <maekke@gentoo.org> ehcache-1.1-r1.ebuild:
   amd64/x86 stable, bug #284320

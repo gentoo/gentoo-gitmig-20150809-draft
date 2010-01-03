@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/junit-addons-1.4.ebuild,v 1.3 2008/10/08 04:16:54 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit-addons/junit-addons-1.4.ebuild,v 1.4 2010/01/03 21:14:23 fauli Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-linux ~x86-macos"
 
 COMMON_DEP="
 	=dev-java/junit-3.8*

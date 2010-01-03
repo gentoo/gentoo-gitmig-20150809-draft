@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jacc-api/sun-jacc-api-20070102.ebuild,v 1.3 2009/09/11 22:17:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jacc-api/sun-jacc-api-20070102.ebuild,v 1.4 2010/01/03 21:35:27 fauli Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 COMMON_DEP="=dev-java/servletapi-2.4*"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jzlib
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.30 2007/05/30 17:00:07 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.31 2010/01/03 21:19:12 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  jzlib-1.0.7-r1.ebuild:
+  Transfer Prefix keywords
 
   30 May 2007; Petteri Räty <betelgeuse@gentoo.org> -jzlib-1.0.5.ebuild:
   Remove generation 1 ebuild.

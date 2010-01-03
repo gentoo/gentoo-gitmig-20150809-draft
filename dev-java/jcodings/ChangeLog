@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jcodings
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.4 2009/10/25 12:15:41 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.5 2010/01/03 20:53:36 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  jcodings-1.0.2.ebuild:
+  Transfer Prefix keywords
 
   25 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> jcodings-1.0.2.ebuild:
   Keywording for ppc, bug 270910

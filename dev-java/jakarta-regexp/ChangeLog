@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-regexp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.26 2007/05/12 18:02:54 wltjr Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.27 2010/01/03 20:43:41 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  jakarta-regexp-1.4-r1.ebuild:
+  Transfer Prefix keywords
 
   12 May 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   jakarta-regexp-1.4-r1.ebuild:

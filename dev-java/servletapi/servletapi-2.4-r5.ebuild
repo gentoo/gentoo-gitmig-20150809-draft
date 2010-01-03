@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.7 2008/01/06 19:04:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.8 2010/01/03 21:33:43 fauli Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/jakarta/tomcat-5/v${TC_VERSION}/src/apache-tomcat-${TC_
 
 LICENSE="Apache-1.1"
 SLOT="2.4"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4

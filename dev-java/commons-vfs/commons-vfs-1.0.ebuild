@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/commons-vfs-1.0.ebuild,v 1.10 2009/09/06 16:44:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/commons-vfs-1.0.ebuild,v 1.11 2010/01/03 20:32:30 fauli Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/jakarta/${PN/-//}/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEP="
 	dev-java/commons-logging

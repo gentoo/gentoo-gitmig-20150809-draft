@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/tomcat-servlet-api
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.69 2009/11/02 21:52:53 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.70 2010/01/03 21:39:54 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  tomcat-servlet-api-3.ebuild, tomcat-servlet-api-4.1.36.ebuild,
+  tomcat-servlet-api-5.5.27-r1.ebuild, tomcat-servlet-api-6.0.20.ebuild:
+  Transfer Prefix keywords
 
   02 Nov 2009; Markus Meier <maekke@gentoo.org>
   tomcat-servlet-api-5.5.27-r1.ebuild:

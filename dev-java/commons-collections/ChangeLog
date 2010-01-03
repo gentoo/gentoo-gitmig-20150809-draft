@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.54 2008/12/20 17:39:47 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.55 2010/01/03 20:23:30 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  commons-collections-3.2.1.ebuild:
+  Transfer Prefix keywords
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org>
   commons-collections-3.2.1.ebuild:

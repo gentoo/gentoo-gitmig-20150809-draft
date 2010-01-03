@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bytelist
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.7 2009/12/14 12:25:10 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.8 2010/01/03 20:18:59 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  bytelist-1.0.2.ebuild:
+  Transfer Prefix keywords
 
   14 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
   Fixed invalid metadata.xml (no DTD found)

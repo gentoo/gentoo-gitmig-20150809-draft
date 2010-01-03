@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-commons-logging
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.15 2009/05/15 22:22:23 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.16 2010/01/03 20:25:57 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ant-commons-logging-1.7.1.ebuild:
+  Transfer Prefix keywords
 
   15 May 2009; Vlastimil Babka <caster@gentoo.org>
   -ant-commons-logging-1.7.0.ebuild:

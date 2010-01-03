@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/javahelp-2.0.02_p46.ebuild,v 1.9 2009/05/01 15:14:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/javahelp-2.0.02_p46.ebuild,v 1.10 2010/01/03 20:48:07 fauli Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc examples source"
@@ -16,7 +16,7 @@ SRC_URI="https://${PN}.dev.java.net/files/documents/5985/47404/${MY_PN}-src-${MY
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 COMMON_DEP="
 	=dev-java/servletapi-2.4*"

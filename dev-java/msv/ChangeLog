@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/msv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.25 2008/05/14 00:40:07 ken69267 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.26 2010/01/03 21:22:52 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  msv-20050627-r2.ebuild:
+  Transfer Prefix keywords
 
   14 May 2008; Kenneth Prugh <ken69267@gentoo.org> msv-20050627-r2.ebuild:
   amd64 stable, bug #219661

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jta
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.19 2007/11/04 02:35:43 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.20 2010/01/03 21:11:18 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> jta-1.0.1-r1.ebuild:
+  Transfer Prefix keywords
 
   04 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -jta-1.0.1.ebuild:
   Delete generation 1 ebuild.

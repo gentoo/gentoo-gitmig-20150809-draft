@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-codec
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.35 2008/10/27 23:16:34 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.36 2010/01/03 20:22:21 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  commons-codec-1.3-r2.ebuild:
+  Transfer Prefix keywords
 
   27 Oct 2008; Brent Baude <ranger@gentoo.org> commons-codec-1.3-r2.ebuild:
   stable ppc64, bug 242962

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.14 2009/05/01 15:14:38 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.15 2010/01/03 20:48:07 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  javahelp-2.0.02_p46.ebuild:
+  Transfer Prefix keywords
 
   01 May 2009; Brent Baude <ranger@gentoo.org> javahelp-2.0.02_p46.ebuild:
   stable ppc64, bug 267737

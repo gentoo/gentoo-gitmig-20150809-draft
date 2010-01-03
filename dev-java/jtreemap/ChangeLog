@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jtreemap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtreemap/ChangeLog,v 1.2 2009/01/05 22:56:07 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtreemap/ChangeLog,v 1.3 2010/01/03 21:13:18 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  jtreemap-1.1.0.ebuild:
+  Transfer Prefix keywords
 
   05 Jan 2009; Markus Meier <maekke@gentoo.org> jtreemap-1.1.0.ebuild:
   amd64/x86 stable, bug #253359

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r2.ebuild,v 1.4 2008/10/27 23:16:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3-r2.ebuild,v 1.5 2010/01/03 20:22:21 fauli Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/jakarta/commons/codec/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"

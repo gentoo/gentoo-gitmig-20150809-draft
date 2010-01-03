@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/jsr173-1.0-r1.ebuild,v 1.9 2007/05/09 15:08:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/jsr173-1.0-r1.ebuild,v 1.10 2010/01/03 21:10:13 fauli Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftpna2.bea.com/pub/downloads/${PN}.jar"
 
 LICENSE="bea.ri.jsr173"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.3

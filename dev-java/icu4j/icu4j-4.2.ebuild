@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.2.ebuild,v 1.1 2009/05/16 22:21:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.2.ebuild,v 1.2 2010/01/03 20:45:49 fauli Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ SRC_URI="http://download.icu-project.org/files/${PN}/${PV}/${PN}-${MY_PV}-src.ja
 HOMEPAGE="http://www.icu-project.org/"
 LICENSE="icu"
 SLOT="4.2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"

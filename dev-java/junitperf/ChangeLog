@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/junitperf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.20 2009/04/24 01:58:01 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.21 2010/01/03 21:15:11 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  junitperf-1.9.1-r1.ebuild:
+  Transfer Prefix keywords
 
   24 Apr 2009; Brent Baude <ranger@gentoo.org> junitperf-1.9.1-r1.ebuild:
   Marking junitperf-1.9.1-r1 ppc64 for bug 242970

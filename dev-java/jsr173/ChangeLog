@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.19 2007/06/03 22:40:01 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.20 2010/01/03 21:10:13 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> jsr173-1.0-r1.ebuild:
+  Transfer Prefix keywords
 
   03 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> -jsr173-1.0.ebuild:
   Remove generation 1 ebuild.

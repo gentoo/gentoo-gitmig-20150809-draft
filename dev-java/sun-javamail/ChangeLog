@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-javamail
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.18 2009/05/07 19:29:50 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.19 2010/01/03 21:38:03 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  sun-javamail-1.4.2.ebuild:
+  Transfer Prefix keywords
 
 *sun-javamail-1.4.2 (07 May 2009)
 

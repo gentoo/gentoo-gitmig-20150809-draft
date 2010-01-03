@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.23 2007/07/29 19:16:19 tgall Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.24 2010/01/03 20:00:42 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  avalon-framework-4.2.0-r1.ebuild:
+  Transfer Prefix keywords
 
   29 Jul 2007; Tom Gall <tgall@gentoo.org>
   avalon-framework-4.1.5-r1.ebuild:

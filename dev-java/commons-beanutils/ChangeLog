@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.45 2009/02/15 19:46:57 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.46 2010/01/03 20:21:34 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  commons-beanutils-1.8.0.ebuild:
+  Transfer Prefix keywords
 
 *commons-beanutils-1.8.0 (15 Feb 2009)
 

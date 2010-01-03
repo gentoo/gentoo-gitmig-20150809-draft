@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-nodeps
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.17 2009/05/15 22:25:24 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.18 2010/01/03 20:37:58 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ant-nodeps-1.7.1.ebuild:
+  Transfer Prefix keywords
 
   15 May 2009; Vlastimil Babka <caster@gentoo.org> -ant-nodeps-1.7.0.ebuild:
   Removing ant 1.7.0, bug #261563.

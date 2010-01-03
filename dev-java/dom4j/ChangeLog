@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dom4j
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.49 2009/04/24 01:59:37 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.50 2010/01/03 20:35:28 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  dom4j-1.6.1-r3.ebuild:
+  Transfer Prefix keywords
 
   24 Apr 2009; Brent Baude <ranger@gentoo.org> dom4j-1.6.1-r3.ebuild:
   Marking dom4j-1.6.1-r3 ppc64 for bug 242970

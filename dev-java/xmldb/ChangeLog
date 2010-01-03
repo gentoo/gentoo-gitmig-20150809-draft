@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmldb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.26 2007/05/09 15:07:00 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.27 2010/01/03 21:51:29 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  xmldb-20011111-r1.ebuild:
+  Transfer Prefix keywords
 
   09 May 2007; Raúl Porcel <armin76@gentoo.org> xmldb-20011111-r1.ebuild:
   Add ~ia64 wrt #160813

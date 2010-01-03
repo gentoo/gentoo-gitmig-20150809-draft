@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bcmail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.25 2008/12/08 01:54:19 jmbsvicetto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.26 2010/01/03 20:13:32 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  bcmail-1.38-r1.ebuild:
+  Transfer Prefix keywords
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:

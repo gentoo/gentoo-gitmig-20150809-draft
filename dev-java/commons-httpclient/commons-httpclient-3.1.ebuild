@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.1.ebuild,v 1.6 2008/03/11 21:45:05 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.1.ebuild,v 1.7 2010/01/03 20:25:49 fauli Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ HOMEPAGE="http://hc.apache.org/"
 SRC_URI="mirror://apache/httpcomponents/${PN}/source/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 # doesn't work on IBM JDK, bug #176133
 RESTRICT="test"

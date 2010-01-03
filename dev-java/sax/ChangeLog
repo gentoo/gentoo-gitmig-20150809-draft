@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sax
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.17 2007/08/29 13:58:15 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.18 2010/01/03 21:32:36 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> sax-2.2.1-r2.ebuild:
+  Transfer Prefix keywords
 
   29 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> -sax-2.2.1.ebuild,
   -sax-2.2.1-r1.ebuild:

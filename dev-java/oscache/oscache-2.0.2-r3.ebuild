@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r3.ebuild,v 1.2 2009/09/11 22:16:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2-r3.ebuild,v 1.3 2010/01/03 21:26:24 fauli Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc"
@@ -12,7 +12,7 @@ SRC_URI="https://oscache.dev.java.net/files/documents/629/2653/${P}-full.zip"
 HOMEPAGE="http://www.opensymphony.com/oscache/"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 COMMON_DEP="
 		dev-java/commons-collections
 		dev-java/commons-logging
