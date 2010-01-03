@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.171 2010/01/03 15:19:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.172 2010/01/03 15:23:37 ssuominen Exp $
+
+  03 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  avahi-0.6.24-r2.ebuild, avahi-0.6.25.ebuild:
+  Raise intltool depend to >= 0.40.5 wrt #265542.
 
   03 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   avahi-0.6.24-r2.ebuild, avahi-0.6.25.ebuild:
