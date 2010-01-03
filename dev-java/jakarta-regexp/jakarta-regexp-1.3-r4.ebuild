@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/jakarta-regexp-1.3-r4.ebuild,v 1.5 2007/01/09 08:00:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/jakarta-regexp-1.3-r4.ebuild,v 1.6 2010/01/03 21:32:39 fauli Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jakarta.apache.org/"
 SLOT="1.3"
 IUSE="doc source"
 LICENSE="Apache-1.1"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
 	source? ( app-arch/zip )"

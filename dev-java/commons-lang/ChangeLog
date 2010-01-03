@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.58 2010/01/03 20:29:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.59 2010/01/03 21:36:29 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  commons-lang-2.0-r2.ebuild:
+  Transfer Prefix keywords for all SLOTs
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-lang-2.4.ebuild:
