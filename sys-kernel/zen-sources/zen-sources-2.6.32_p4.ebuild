@@ -28,6 +28,8 @@ SRC_URI="${KERNEL_URI} ${ZEN_URI}"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
+DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )"
+
 KV_FULL="${PVR/_p/-zen}"
 S="${WORKDIR}"/linux-"${KV_FULL}"
 
