@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portpeek
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.43 2009/12/12 17:38:57 mpagano Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.44 2010/01/03 15:45:46 mpagano Exp $
+
+*portpeek-1.9.20 (03 Jan 2010)
+
+  03 Jan 2010; Mike Pagano <mpagano@gentoo.org> -portpeek-1.9.14.ebuild,
+  +portpeek-1.9.20.ebuild:
+  Files were not being cleaned from package.mask. Remove old version
 
   12 Dec 2009; Mike Pagano <mpagano@gentoo.org> -portpeek-1.8.0.ebuild,
   -portpeek-1.8.1.ebuild, -portpeek-1.8.5.ebuild, -portpeek-1.8.6.ebuild,
