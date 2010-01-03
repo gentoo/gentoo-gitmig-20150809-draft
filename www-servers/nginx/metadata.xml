@@ -18,6 +18,7 @@
 	<flag name='securelink'>Enable HTTP secure link module</flag>
 	<flag name='status'>Enables stub_status module</flag>
 	<flag name='sub'>Enables sub_filter module</flag>
+	<flag name='realip'>Enables realip module</flag>
 	<flag name='webdav'>Enable webdav support</flag>
   </use>
 </pkgmetadata>
