@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.6 2009/12/26 19:42:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.7 2010/01/03 00:23:17 flameeyes Exp $
 
 EAPI=1
 inherit toolchain-funcs flag-o-matic eutils
@@ -61,7 +61,8 @@ src_compile() {
 	use fidonet && append-flags "-DFIDO"
 	append-flags "-DAUTO_PPP"
 
-	VARTEXFONTS="${T}"/fonts emake prefix=/usr \
+	# bug #299421
+	VARTEXFONTS="${T}"/fonts emake -j1 prefix=/usr \
 		CC="$(tc-getCC)" \
 		CONFDIR=/etc/mgetty+sendfax \
 		CFLAGS="${CFLAGS}" \
