@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20091231.ebuild,v 1.1 2009/12/31 12:07:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20091231.ebuild,v 1.2 2010/01/03 13:25:12 pacho Exp $
 
 EAPI=1
 inherit emul-linux-x86
@@ -16,14 +16,12 @@ QA_DT_HASH="usr/lib32/.*"
 
 src_unpack() {
 	_ALLOWED="${S}/etc/env.d"
-
-	if use alsa; then
-		_ALLOWED="${_ALLOWED}|${S}/usr/bin/aoss"
-	fi
-
+	use alsa && _ALLOWED="${_ALLOWED}|${S}/usr/bin/aoss"
 	ALLOWED="(${_ALLOWED})"
 
 	emul-linux-x86_src_unpack
 
-	mv -f "${S}"/usr/bin/aoss{,32} || die
+	if use alsa; then
+		mv -f "${S}"/usr/bin/aoss{,32} || die
+	fi
 }
