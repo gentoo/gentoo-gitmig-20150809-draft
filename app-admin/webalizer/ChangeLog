@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.74 2010/01/03 22:01:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.75 2010/01/03 22:24:59 sping Exp $
+
+  03 Jan 2010; Sebastian Pipping <sping@gentoo.org>
+  webalizer-2.01.10-r17.ebuild:
+  Fix case with USE="xtended geoip" that I broke with r17 before
 
 *webalizer-2.01.10-r17 (03 Jan 2010)
 
