@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xmahjongg
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/ChangeLog,v 1.12 2008/10/30 08:55:56 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/ChangeLog,v 1.13 2010/01/03 11:46:07 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xmahjongg-3.7.ebuild:
+  Transfer Prefix keywords
 
   30 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org> xmahjongg-3.7.ebuild:
   add a desktop entry for bug #244420
