@@ -1,6 +1,19 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.27 2007/01/30 04:39:27 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.28 2010/01/03 21:47:20 zmedico Exp $
+
+*emerge-delta-webrsync-3.5.1-r3 (03 Jan 2010)
+
+  03 Jan 2010; Zac Medico <zmedico@gentoo.org>
+  +emerge-delta-webrsync-3.5.1-r3.ebuild:
+  Bug #299443 - Fix for 2010. Stable revbump since this is the only change
+  and older versions are broken now.
+
+  03 Jan 2010; Zac Medico <zmedico@gentoo.org>
+  -emerge-delta-webrsync-3.3.ebuild, -emerge-delta-webrsync-3.5.1.ebuild,
+  -emerge-delta-webrsync-3.5.1-r1.ebuild,
+  -emerge-delta-webrsync-3.5.1-r2.ebuild:
+  Remove older versions which do not work after 2010.
 
   30 Jan 2007; Steve Dibb <beandog@gentoo.org>
   emerge-delta-webrsync-3.5.1-r2.ebuild:

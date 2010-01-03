@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r2.ebuild,v 1.6 2007/03/10 14:51:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r3.ebuild,v 1.1 2010/01/03 21:47:20 zmedico Exp $
 
 inherit eutils
 
@@ -25,6 +25,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/3.5.1-metadata.patch
 	epatch "${FILESDIR}"/3.5.1-md5sum.patch
 	epatch "${FILESDIR}"/3.5.1-post_sync.patch
+	# Support years after 2010.
+	sed 's/portage-200\*/portage-2[[:digit:]][[:digit:]][[:digit:]][[:digit:]][[:digit:]][[:digit:]][[:digit:]]/g' \
+		-i $P || die "sed failed"
 }
 
 src_compile() { :; }
