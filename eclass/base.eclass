@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.39 2010/01/03 19:13:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.40 2010/01/03 21:07:32 mr_bones_ Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -153,7 +153,7 @@ base_src_compile() {
 
 # placeholder for future api so eclasses can be migrated now.
 base_src_make() {
-	debug-print-fucntion $FUNCNAME "$@"
+	debug-print-function $FUNCNAME "$@"
 	base_src_work make
 }
 
