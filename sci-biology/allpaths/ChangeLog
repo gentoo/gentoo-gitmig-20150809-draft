@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/allpaths
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.4 2009/11/24 20:48:06 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.5 2010/01/03 14:08:56 pacho Exp $
+
+  03 Jan 2010; Pacho Ramos <pacho@gentoo.org> allpaths-2.0.ebuild:
+  amd64 stable, bug 290927
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org> allpaths-2.0.ebuild:
   stable x86, bug 290927
