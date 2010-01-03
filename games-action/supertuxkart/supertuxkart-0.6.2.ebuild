@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.2.ebuild,v 1.4 2009/10/25 21:34:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.2.ebuild,v 1.5 2010/01/03 21:57:03 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -13,9 +13,9 @@ SRC_URI="mirror://sourceforge/supertuxkart/files/SuperTuxKart/${PV}/${P}-src.tar
 LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0 CCPL-Attribution-2.0 CCPL-Sampling-Plus-1.0 public-domain as-is"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE=""
+IUSE="nls"
 
-DEPEND=">=media-libs/plib-1.8.4
+RDEPEND=">=media-libs/plib-1.8.4
 	virtual/opengl
 	virtual/glut
 	virtual/glu
@@ -23,7 +23,10 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libmikmod
 	media-libs/libvorbis
 	media-libs/openal
-	media-libs/libsdl[X,video,audio,joystick]"
+	media-libs/libsdl[X,video,audio,joystick]
+	virtual/libintl"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	esvn_clean
@@ -51,6 +54,12 @@ src_prepare() {
 		|| die "sed failed"
 	rm -rf src/enet
 	eautoreconf
+}
+
+src_configure() {
+	egamesconf \
+		--disable-dependency-tracking \
+		$(use_enable nls)
 }
 
 src_install() {
