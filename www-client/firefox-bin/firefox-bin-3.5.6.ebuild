@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.5.6.ebuild,v 1.3 2010/01/02 12:27:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.5.6.ebuild,v 1.4 2010/01/03 21:16:10 anarchy Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -124,8 +124,8 @@ src_install() {
 	if [[ -n ${LANG} && ${LANG} != "en" ]]; then
 		elog "Setting default locale to ${LANG}"
 		sed -e "s:general.useragent.locale\", \"en-US\":general.useragent.locale\", \"${LANG}\":" \
-			-i "${MOZILLA_FIVE_HOME}"/defaults/pref/${MY_PN}.js \
-			-i "${MOZILLA_FIVE_HOME}"/defaults/pref/${MY_PN}-l10n.js || \
+			-i "${D}${MOZILLA_FIVE_HOME}"/defaults/pref/${MY_PN}.js \
+			-i "${D}${MOZILLA_FIVE_HOME}"/defaults/pref/${MY_PN}-l10n.js || \
 			die "sed failed to change locale"
 	fi
 
