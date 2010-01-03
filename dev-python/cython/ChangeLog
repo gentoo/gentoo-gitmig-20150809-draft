@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.36 2009/12/29 17:24:00 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.37 2010/01/03 21:37:59 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cython-0.12.ebuild:
+  stable x86, bug 298794
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org> cython-0.11.2.ebuild,
   cython-0.11.2-r1.ebuild, cython-0.11.3.ebuild, cython-0.12_rc1.ebuild,
