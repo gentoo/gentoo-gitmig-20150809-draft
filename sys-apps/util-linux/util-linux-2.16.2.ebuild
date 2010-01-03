@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.2.ebuild,v 1.2 2009/12/01 04:52:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.2.ebuild,v 1.3 2010/01/03 20:38:03 solar Exp $
 
 EAPI="2"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs libtool
 [[ ${PV} == "9999" ]] && inherit git autotools
 
 MY_PV=${PV/_/-}
@@ -47,6 +47,7 @@ src_prepare() {
 		use loop-aes && epatch "${WORKDIR}"/${PN}-2.16.1-loop-aes.patch
 	fi
 	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
+	elibtoolize
 }
 
 src_configure() {
