@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/aspectwerkz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.28 2009/05/20 16:03:46 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.29 2010/01/03 19:55:16 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  aspectwerkz-2.0.ebuild:
+  Transfer Prefix keywords
 
   20 May 2009; Vlastimil Babka <caster@gentoo.org>
   -aspectwerkz-2.0_rc2-r2.ebuild, +aspectwerkz-2.0.ebuild,

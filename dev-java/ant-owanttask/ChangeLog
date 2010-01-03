@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.29 2008/09/10 18:16:26 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.30 2010/01/03 19:53:01 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ant-owanttask-1.1-r12.ebuild:
+  Transfer Prefix keywords
 
   10 Sep 2008; Brent Baude <ranger@gentoo.org> ant-owanttask-1.1-r12.ebuild:
   Marking ant-owanttask-1.1-r12 ppc64 for bug 235747
