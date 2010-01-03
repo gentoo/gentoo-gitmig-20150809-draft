@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.58 2010/01/02 00:43:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.59 2010/01/03 16:49:27 scarabeus Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -199,7 +199,7 @@ sys-apps/memtest86+
 sys-block/hpacucli
 sys-libs/lib-compat-loki
 <www-client/opera-9.62
-www-client/mozilla-firefox-bin
+www-client/firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
 www-plugins/nspluginwrapper
