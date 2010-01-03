@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.6 2010/01/03 16:46:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.7 2010/01/03 16:47:05 ssuominen Exp $
 
 inherit eutils versionator
 
@@ -182,7 +182,7 @@ src_unpack() {
 		"${S}/etc/MailScanner.conf"
 
 	# update spam.assassin.prefs.conf
-	sed -i -e "s#YOURDOMAIN-COM#${YOURSITE}#" ${S}/etc/spam.assassin.prefs.conf
+	sed -i -e "s#YOURDOMAIN-COM#${YOURSITE}#" "${S}"/etc/spam.assassin.prefs.conf
 
 	# net-mail/clamav net-mail/f-prot package compatibility
 	sed -i \
