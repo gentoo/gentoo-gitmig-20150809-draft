@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6177.ebuild,v 1.2 2010/01/03 18:57:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6177.ebuild,v 1.3 2010/01/03 19:07:18 jer Exp $
 
 EAPI="2"
 
@@ -40,23 +40,25 @@ SRC_URI="
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="
+	=x11-libs/gtk+-2*
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/glib
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/gst-plugins-base
 	media-libs/glitz
+	media-libs/gst-plugins-ogg
+	media-libs/gst-plugins-theora
+	media-libs/gst-plugins-vorbis
 	media-libs/libpng
 	sys-apps/util-linux
 	sys-libs/zlib
+	virtual/opengl
 	x11-libs/cairo
-	=x11-libs/gtk+-2*
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXau
-	x11-libs/libxcb
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
 	x11-libs/libXdamage
@@ -68,10 +70,10 @@ RDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libXt
+	x11-libs/libxcb
 	x11-libs/pango
 	x11-libs/pixman
 	x11-libs/xcb-util
-	virtual/opengl
 	"
 
 opera_linguas() {
