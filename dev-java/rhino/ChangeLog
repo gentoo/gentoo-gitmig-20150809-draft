@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.61 2010/01/03 21:30:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.62 2010/01/03 21:42:36 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  rhino-1.5.5-r5.ebuild, rhino-1.6.5.ebuild:
+  Transfer Prefix keywords for all SLOTs
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> rhino-1.6.5.ebuild:
   Transfer Prefix keywords
