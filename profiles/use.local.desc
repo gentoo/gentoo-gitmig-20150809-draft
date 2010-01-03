@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5146 2010/01/03 16:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5147 2010/01/03 19:07:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3278,8 +3278,10 @@ www-servers/lighttpd:rrdtool - Enable rrdtool support via mod_rrdtool
 www-servers/lighttpd:webdav - Enable webdav properties
 www-servers/nginx:addition - Enables HTTP addition filter module
 www-servers/nginx:flv - Enables special processing module for flv files
+www-servers/nginx:pop - Enables POP3 proxy support
 www-servers/nginx:random-index - Enables HTTP random index module
 www-servers/nginx:securelink - Enable HTTP secure link module
+www-servers/nginx:smtp - Enables SMTP proxy support
 www-servers/nginx:status - Enables stub_status module
 www-servers/nginx:sub - Enables sub_filter module
 www-servers/nginx:webdav - Enable webdav support
