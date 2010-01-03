@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.3 2010/01/03 01:25:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.4 2010/01/03 13:30:08 pacho Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc examples mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
