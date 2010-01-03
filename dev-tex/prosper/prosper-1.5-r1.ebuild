@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5-r1.ebuild,v 1.7 2008/02/05 20:32:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5-r1.ebuild,v 1.8 2010/01/03 11:41:56 fauli Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://sourceforge/prosper/${CONTRIB}.tar.gz"
 LICENSE="LPPL-1.2"	# has been changed since 1.5
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 S=${WORKDIR}/${PN}
 IUSE=""
 

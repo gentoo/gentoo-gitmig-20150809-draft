@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexdiff
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.9 2008/11/03 19:11:39 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.10 2010/01/03 11:38:14 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> latexdiff-0.5.ebuild:
+  Transfer Prefix keywords
 
   03 Nov 2008; Alexis Ballier <aballier@gentoo.org> -latexdiff-0.2.ebuild,
   -latexdiff-0.3.ebuild:

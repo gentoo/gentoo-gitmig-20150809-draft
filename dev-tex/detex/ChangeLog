@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.29 2009/03/18 19:06:35 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.30 2010/01/03 11:29:07 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> detex-2.8-r1.ebuild:
+  Transfer Prefix keywords
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org> detex-2.8-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #253551

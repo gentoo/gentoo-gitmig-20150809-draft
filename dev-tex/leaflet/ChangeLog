@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/leaflet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.26 2009/05/30 07:59:39 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.27 2010/01/03 11:39:06 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  leaflet-20041222.ebuild:
+  Transfer Prefix keywords
 
   30 May 2009; Ulrich Mueller <ulm@gentoo.org> leaflet-20041222.ebuild:
   Remove app-text/tetex from dependencies, bug 227443.

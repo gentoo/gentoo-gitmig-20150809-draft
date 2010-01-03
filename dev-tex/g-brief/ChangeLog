@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/g-brief
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.27 2009/08/05 06:41:09 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.28 2010/01/03 11:32:41 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> g-brief-4.0.2.ebuild:
+  Transfer Prefix keywords
 
   05 Aug 2009; Alexis Ballier <aballier@gentoo.org> -g-brief-4.0.1.ebuild:
   remove old
