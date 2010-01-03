@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6177.ebuild,v 1.4 2010/01/03 23:01:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6177.ebuild,v 1.5 2010/01/03 23:04:58 jer Exp $
 
 EAPI="2"
 
@@ -47,7 +47,7 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/glitz
-	media-libs/gst-plugins-meta
+	media-plugins/gst-plugins-meta
 	media-libs/libpng
 	sys-apps/util-linux
 	sys-libs/zlib
