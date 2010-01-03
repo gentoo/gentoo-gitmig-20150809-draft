@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/ibus-qt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.4 2009/12/16 14:14:05 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.5 2010/01/03 01:45:54 matsuu Exp $
+
+*ibus-qt-1.2.0.20091217 (03 Jan 2010)
+
+  03 Jan 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-qt-1.2.0.20090822.ebuild, -ibus-qt-1.2.0.20091014.ebuild,
+  -ibus-qt-1.2.0.20091206.ebuild, +ibus-qt-1.2.0.20091217.ebuild,
+  +files/ibus-qt-1.2.0.20091217-doc.patch:
+  Version bumped. Added doc USE flag, bug #297567. Fixed doc path, bug
+  #297955. Removed old versions.
 
 *ibus-qt-1.2.0.20091216 (16 Dec 2009)
 
