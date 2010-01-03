@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flup
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.10 2009/12/26 17:19:56 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.11 2010/01/03 21:41:58 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> flup-1.0.2.ebuild:
+  stable x86, bug 298902
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> flup-1.0.2.ebuild:
   Add ~sparc wrt #295088
