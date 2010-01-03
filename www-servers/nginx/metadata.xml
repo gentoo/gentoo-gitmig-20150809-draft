@@ -11,6 +11,7 @@
   <use>
 	<flag name='addition'>Enables HTTP addition filter module</flag>
 	<flag name='flv'>Enables special processing module for flv files</flag>
+	<flag name='static-gzip'>Enables support for gzipping static content</flag>
 	<flag name='pop'>Enables POP3 proxy support</flag>
 	<flag name='random-index'>Enables HTTP random index module</flag>
 	<flag name='smtp'>Enables SMTP proxy support</flag>
