@@ -2,22 +2,24 @@ diff --git a/layman/overlays/overlay.py b/layman/overlays/overlay.py
 index e10f562..99aadad 100644
 --- a/layman/overlays/overlay.py
 +++ b/layman/overlays/overlay.py
-@@ -29,5 +29,6 @@ __version__ = "$Id: layman-1.2.4-non-ascii-backport.patch,v 1.1 2010/01/02 03:36:47 sping Exp $"
+@@ -29,5 +29,7 @@ __version__ = "$Id: layman-1.2.4-non-ascii-backport.patch,v 1.2 2010/01/03 23:59:17 sping Exp $"
  #-------------------------------------------------------------------------------
  
  import sys, types, re, os, os.path, shutil, subprocess
 +import codecs
++import locale
  
  from   layman.utils             import node_to_dict, dict_to_node, path
-@@ -226,6 +227,15 @@ class Overlay:
+@@ -226,6 +227,16 @@ class Overlay:
              result = cmd.wait()
              return result
  
 +    def _get_encoding(self):
-+        if hasattr(sys.stdout, 'encoding'):
++        if hasattr(sys.stdout, 'encoding') \
++                and sys.stdout.encoding != None:
 +            return sys.stdout.encoding
 +        else:
-+            return 'ascii'
++            return locale.getpreferredencoding()
 +
 +    def _encode(self, unicode_text):
 +        return codecs.encode(unicode_text, self._get_encoding(), 'replace')
