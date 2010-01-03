@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39.ebuild,v 1.4 2009/08/01 19:30:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.1 2010/01/03 07:29:03 nerdboy Exp $
+
+EAPI="2"
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -12,7 +14,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="dbus garmin minimal ntp ocean tntc usb X"
+IUSE="dbus garmin +gpsd_user -minimal ntp ocean pl2303 tntc usb X"
 
 RDEPEND="X? (
 		x11-libs/libXmu
@@ -42,17 +44,26 @@ DEPEND="${RDEPEND}
 		dev-libs/libxslt
 	)"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	# Run the gpsd daemon as user gpsd and group uucp, see bug #282130
+	if use gpsd_user; then
+		enewuser gpsd -1 -1 -1 "uucp"
+	else
+		einfo "USE=gpsd_user is dsiabled; no gpsd user added."
+	fi
+}
+
+src_prepare() {
 	# add -lm to setup.py again (see bug #250757)
 	sed -i \
 	    -e "s:, gpspacket_sources:, gpspacket_sources, libraries=['m']:g" \
 	    -e "s:geoid.c\"]:geoid.c\"], libraries=['m']:g" \
 	    setup.py || die "sed 1 failed"
+
 	# fix Garmin text struct
 	sed -i -e "s:RTCM2_PACKET;:RTCM2_PACKET,:g" \
 	    drivers.c || die "sed 2 failed"
+
 	# add missing include file (see bug #162361)
 	sed -i -e "s:gps.h libgpsmm.h:gps.h libgpsmm.h gpsd_config.h:g" \
 	    Makefile.am || die "sed 3 failed"
@@ -60,10 +71,13 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 
 	local my_conf="--enable-shared --with-pic --enable-static"
 		# --enable-superstar2 is missing a header file
+
+	# Drop privs to user gpsd, see bug #282130
+	use gpsd_user && my_conf="${my_conf} --enable-gpsd-user=gpsd"
 
 	distutils_python_version
 
@@ -88,7 +102,9 @@ src_compile() {
 		$(use_enable garmin garmintxt) \
 		|| die "econf failed"
 	fi
+}
 
+src_compile() {
 	# still needs an explicit link flag (bug #250757)
 	append-ldflags -Wl,-z,-defs -Wl,--no-undefined
 
@@ -110,6 +126,10 @@ src_install() {
 		doexe gpsd.hotplug
 		insinto /etc/udev/rules.d
 		doins "${FILESDIR}"/99-gpsd-usb.rules
+		if use pl2303; then
+			dosed "s:#SYSFS:SYSFS:g" \
+			    /etc/udev/rules.d/99-gpsd-usb.rules
+		fi
 		keepdir /var/run/usb # needed for REMOVER
 	else
 		newconfd "${FILESDIR}"/gpsd.conf gpsd
