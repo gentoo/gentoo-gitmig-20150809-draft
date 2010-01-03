@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.23 2010/01/02 14:04:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.24 2010/01/03 14:14:51 ssuominen Exp $
+
+  03 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> dssi-1.0.0.ebuild:
+  Remove USE="qt3" (x11-libs/qt:3) support.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> dssi-1.0.0.ebuild:
   stable x86, bug 297652
