@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.234 2010/01/02 14:03:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.235 2010/01/03 11:32:08 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> nginx-0.8.29.ebuild:
+  revert to testing for x86
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> nginx-0.8.29.ebuild:
   stable x86, security bug 293785
