@@ -1,3 +1,4 @@
+have rake &&
 _rake()
 {
     local cur prev rakef i
@@ -50,5 +51,5 @@ _rake()
             command grep "^$cur" ))
 
     fi
-}
-[ -n "${have:-}" ] && complete -F _rake $filenames rake
+} &&
+complete -F _rake $filenames rake

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rake
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.87 2009/12/17 14:15:23 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.88 2010/01/03 16:46:46 graaff Exp $
+
+*rake-0.8.7-r3 (03 Jan 2010)
+
+  03 Jan 2010; Hans de Graaff <graaff@gentoo.org> +rake-0.8.7-r3.ebuild,
+  files/rake.bash-completion:
+  Change bash-completion file to follow same pattern as other
+  bash-completion files, should fix #298281.
 
   17 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   rake-0.8.7-r2.ebuild:
