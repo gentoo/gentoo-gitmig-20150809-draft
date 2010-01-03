@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/its4/its4-1.1.1.ebuild,v 1.6 2009/09/23 17:45:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/its4/its4-1.1.1.ebuild,v 1.7 2010/01/03 20:01:04 robbat2 Exp $
 
 DESCRIPTION="ITS4: Software Security Tool"
 HOMEPAGE="http://www.cigital.com/its4/"
@@ -17,6 +17,13 @@ S="${WORKDIR}/${PN}"
 pkg_nofetch() {
 	einfo "Please visit ${HOMEPAGE} to download the source, and place it in"
 	einfo "${DISTDIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	sed -i \
+		-e 's,iostream.h,iostream,g'\
+		"${S}"/configure
 }
 
 src_compile() {
