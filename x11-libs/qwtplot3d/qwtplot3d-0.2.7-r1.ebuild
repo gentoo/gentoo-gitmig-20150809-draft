@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.3 2009/10/06 17:59:44 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.4 2010/01/03 19:53:16 ssuominen Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="ZLIB"
 SLOT="0"
 IUSE="doc examples"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/qt-gui:4
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-profile.patch
