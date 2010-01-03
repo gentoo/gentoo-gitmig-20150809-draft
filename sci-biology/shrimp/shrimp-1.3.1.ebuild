@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-1.3.1.ebuild,v 1.2 2009/12/29 20:42:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-1.3.1.ebuild,v 1.3 2010/01/03 14:19:01 pacho Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://compbio.cs.toronto.edu/shrimp/releases/SHRiMP_${MY_PV}.src.tar.g
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND=""
