@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/clusterssh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.28 2009/09/27 14:52:09 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.29 2010/01/03 21:09:07 vostorga Exp $
+
+*clusterssh-3.28 (03 Jan 2010)
+
+  03 Jan 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +clusterssh-3.28.ebuild:
+  Version bumpo to 3.28 , bug #297527
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> clusterssh-3.26.ebuild:
   ppc stable #281406
