@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.7 2009/09/04 19:31:06 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.8 2010/01/03 21:39:15 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pyasn1-0.0.9a.ebuild:
+  stable x86, bug 298797
 
 *pyasn1-0.0.9a (04 Sep 2009)
 

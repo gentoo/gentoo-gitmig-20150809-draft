@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysnmp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.30 2009/11/28 17:46:23 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.31 2010/01/03 21:40:11 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  pysnmp-4.1.12a.ebuild:
+  stable x86, bug 298797
 
 *pysnmp-4.1.12a (28 Nov 2009)
 
