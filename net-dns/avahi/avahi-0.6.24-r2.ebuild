@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.24-r2.ebuild,v 1.11 2009/10/06 17:19:57 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.24-r2.ebuild,v 1.12 2010/01/03 15:19:50 ssuominen Exp $
 
 EAPI="1"
 
@@ -13,13 +13,12 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt3 qt4 autoipd kernel_linux test ipv6"
+IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt4 autoipd kernel_linux test ipv6"
 
 RDEPEND=">=dev-libs/libdaemon-0.11-r1
 	dev-libs/expat
 	>=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
-	qt3? ( x11-libs/qt:3 )
 	qt4? ( x11-libs/qt-core:4 )
 	gtk? (
 		>=x11-libs/gtk+-2.4.0
@@ -152,7 +151,7 @@ src_compile() {
 		$(use_enable dbus) \
 		$(use_enable python) \
 		$(use_enable gtk) \
-		$(use_enable qt3) \
+		--disable-qt3 \
 		$(use_enable qt4) \
 		$(use_enable gdbm) \
 		${myconf} \
