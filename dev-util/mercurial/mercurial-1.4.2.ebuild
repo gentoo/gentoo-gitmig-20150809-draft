@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.4.2.ebuild,v 1.1 2010/01/02 09:16:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.4.2.ebuild,v 1.2 2010/01/03 17:16:39 djc Exp $
 
 EAPI=2
 
@@ -56,6 +56,7 @@ src_install() {
 	dodoc CONTRIBUTORS PKG-INFO README doc/*.txt
 	cp hgweb*.cgi "${D}"/usr/share/doc/${PF}/
 
+	dobin hgeditor
 	dobin contrib/hgk
 	dobin contrib/hg-ssh
 
