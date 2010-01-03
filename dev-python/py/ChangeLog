@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.24 2009/12/24 08:37:28 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.25 2010/01/03 21:43:03 fauli Exp $
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> py-1.1.1-r1.ebuild:
+  stable x86, bug 298795
 
   24 Dec 2009; Fabian Groffen <grobian@gentoo.org> py-1.1.1-r1.ebuild:
   Fix for Prefix
