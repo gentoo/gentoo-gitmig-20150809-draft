@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/nzbget
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.27 2009/12/13 18:39:13 klausman Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.28 2010/01/03 15:05:29 swegener Exp $
+
+  03 Jan 2010; Sven Wegener <swegener@gentoo.org> -nzbget-0.4.0.ebuild,
+  -nzbget-0.4.0-r1.ebuild, -files/nzbget-0.4.0-gcc-4.3.patch,
+  -nzbget-0.4.1.ebuild, -nzbget-0.5.1.ebuild:
+  Cleanup.
 
   13 Dec 2009; Tobias Klausmann <klausman@gentoo.org> nzbget-0.6.0.ebuild:
   Stable on alpha, bug #292370
