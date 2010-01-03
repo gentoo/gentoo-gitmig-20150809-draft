@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6177.ebuild,v 1.1 2010/01/02 16:54:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6177.ebuild,v 1.2 2010/01/03 18:57:35 jer Exp $
 
 EAPI="2"
 
@@ -108,8 +108,9 @@ src_unpack() {
 
 src_prepare() {
 	sed -i opera \
-		-e 's|=usr/lib/opera|=/usr/lib/opera|g' || \
-		die "sed opera script failed"
+		-e 's|=usr/lib/opera|=/usr/lib/opera|g' \
+		-e '6a\OPERA_DIR=/usr/share/opera' \
+		|| die "sed opera script failed"
 }
 
 src_install() {
@@ -138,10 +139,6 @@ src_install() {
 		done
 		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
 	fi
-
-	# Special for this build, otherwise opera won't find its files
-	dodir /etc/env.d
-	echo "OPERA_DIR=\"/usr/share/${PN}\"" >> "${D}"/etc/env.d/90opera
 
 	[[ -z MY_LINGUAS ]] || opera_linguas
 }
