@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.539 2009/12/26 22:55:41 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.540 2010/01/03 19:42:42 aballier Exp $
+
+  03 Jan 2010; Alexis Ballier <aballier@gentoo.org> vlc-1.0.9999.ebuild,
+  vlc-9999.ebuild:
+  Fix fetching of git repositories, by Paul Mulders <info@mld.demon.nl>, bug
+  #299139, plus some modifications by me to allow switching branches easily.
 
   26 Dec 2009; Brent Baude <ranger@gentoo.org> vlc-1.0.4.ebuild:
   Marking vlc-1.0.4 ppc64 for bug 297849

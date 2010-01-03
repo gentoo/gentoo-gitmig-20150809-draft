@@ -1,18 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.51 2009/12/12 18:19:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.52 2010/01/03 19:42:42 aballier Exp $
 
 EAPI="2"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
 	SCM=git
-	EGIT_REPO_URI="git://git.videolan.org/vlc.git"
 	EGIT_BOOTSTRAP="bootstrap"
+	EGIT_BRANCH=master
+	EGIT_PROJECT=${P}
 	if [ "${PV%.9999}" != "${PV}" ] ; then
-		EGIT_BRANCH=${PV%.9999}-bugfix
+		EGIT_REPO_URI="git://git.videolan.org/vlc/vlc-${PV%.9999}.git"
 	else
-		EGIT_BRANCH=master
+		EGIT_REPO_URI="git://git.videolan.org/vlc.git"
 	fi
 fi
 
