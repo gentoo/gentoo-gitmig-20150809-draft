@@ -1,7 +1,7 @@
-Index: asymptote-1.89/settings.cc
+Index: asymptote-1.91/settings.cc
 ===================================================================
---- asymptote-1.89.orig/settings.cc
-+++ asymptote-1.89/settings.cc
+--- asymptote-1.91.orig/settings.cc
++++ asymptote-1.91/settings.cc
 @@ -86,14 +86,14 @@ mode_t mask;
  bool msdos=false;
  string HOME="HOME";
