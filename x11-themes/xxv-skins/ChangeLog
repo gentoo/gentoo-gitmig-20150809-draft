@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/xxv-skins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/ChangeLog,v 1.9 2009/08/16 18:30:05 hd_brummy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/ChangeLog,v 1.10 2010/01/03 23:03:17 hd_brummy Exp $
+
+*xxv-skins-1.5 (03 Jan 2010)
+
+  03 Jan 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -xxv-skins-1.0.1.ebuild, -xxv-skins-1.2.ebuild,
+  -xxv-skins-1.2.1402.ebuild, +xxv-skins-1.5.ebuild:
+  version bump; xxv-1.5 testing version; clean up
 
 *xxv-skins-1.4 (16 Aug 2009)
 
