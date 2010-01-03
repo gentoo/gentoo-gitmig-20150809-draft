@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.5 2009/12/15 07:51:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.6 2010/01/03 15:57:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,16 +15,11 @@ SRC_URI="http://www.linuxhardware.org/nvclock/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="gtk qt3"
+IUSE="gtk"
 
-RDEPEND="gtk? ( =x11-libs/gtk+-2* )
-	qt3? ( =x11-libs/qt-3* )"
+RDEPEND="gtk? ( =x11-libs/gtk+-2* )"
 
 src_prepare() {
-	# Patch to fix broken autoconf macro "--with-qt-libs" needed below
-	# Submitted upstream, hopefully fixed in a later version
-	use qt3 && epatch "${FILESDIR}"/nvclock_acinclude_qtlibs.patch
-
 	# Bug #240846:
 	epatch "${FILESDIR}"/${P}-flags.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
@@ -39,24 +34,18 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC CXX
-	# Needed to ensure it compiles against Qt3 rather than Qt4
-	export QTDIR=/usr/qt/3
-	export MOC=${QTDIR}/bin/moc
 
 	local myconf
 
 	myconf="--bindir=/usr/bin"
 
-	# Qt3 package doesn't install symlinks from ${QTDIR}/lib64 to ${QTDIR}/lib
-	use amd64 && myconf="${myconf} --with-qt-libs=${QTDIR}/lib64"
-
-	if use gtk || use qt3; then
+	if use gtk; then
 		myconf="${myconf} --enable-nvcontrol"
 	else
 		myconf="${myconf} --disable-nvcontrol"
 	fi
 
-	econf $(use_enable qt3 qt) $(use_enable gtk) ${myconf} || die
+	econf --disable-qt $(use_enable gtk) ${myconf} || die
 }
 
 src_compile() {

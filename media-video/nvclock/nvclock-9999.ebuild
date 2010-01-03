@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-9999.ebuild,v 1.1 2009/07/28 17:14:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-9999.ebuild,v 1.2 2010/01/03 15:57:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,11 +17,10 @@ HOMEPAGE="http://www.linuxhardware.org/nvclock/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk qt3"
+IUSE="gtk"
 
 RDEPEND="
 	gtk? ( x11-libs/gtk+:2 )
-	qt3? ( x11-libs/qt:3 )
 "
 DEPEND="${RDEPEND}"
 
@@ -32,11 +31,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# Needed to ensure it compiles against Qt3 rather than Qt4
-	export QTDIR=/usr/qt/3
-	export MOC=${QTDIR}/bin/moc
-
-	econf $(use_enable qt3 qt) $(use_enable gtk) || die "econf failed"
+	econf --disable-qt $(use_enable gtk) || die "econf failed"
 }
 
 src_compile() {
