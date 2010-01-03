@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.239 2010/01/03 20:29:40 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.240 2010/01/03 20:56:46 djc Exp $
+
+*nginx-0.8.31 (03 Jan 2010)
+
+  03 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +nginx-0.8.31.ebuild,
+  metadata.xml:
+  Bump to 0.8.31, adding the aio use flag.
 
 *nginx-0.7.64-r3 (03 Jan 2010)
 

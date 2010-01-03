@@ -10,6 +10,7 @@
   </maintainer>
   <use>
 	<flag name='addition'>Enables HTTP addition filter module</flag>
+	<flag name='aio'>Enables file AIO support</flag>
 	<flag name='flv'>Enables special processing module for flv files</flag>
 	<flag name='static-gzip'>Enables support for gzipping static content</flag>
 	<flag name='pop'>Enables POP3 proxy support</flag>
