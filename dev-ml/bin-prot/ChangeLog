@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/bin-prot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.2 2009/09/26 12:21:20 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.3 2010/01/03 15:20:54 aballier Exp $
+
+*bin-prot-1.2.21 (03 Jan 2010)
+
+  03 Jan 2010; Alexis Ballier <aballier@gentoo.org> +bin-prot-1.2.21.ebuild:
+  version bump
 
 *bin-prot-1.2.20 (26 Sep 2009)
 
