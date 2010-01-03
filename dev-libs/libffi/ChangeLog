@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.93 2009/12/31 16:19:56 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.94 2010/01/03 06:17:17 jer Exp $
+
+  03 Jan 2010; Jeroen Roovers <jer@gentoo.org> libffi-3.0.9.ebuild:
+  Marked ~ppc (bug #298322).
 
 *libffi-3.0.9 (31 Dec 2009)
 
