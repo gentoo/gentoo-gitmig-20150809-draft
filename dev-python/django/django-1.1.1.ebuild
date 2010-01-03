@@ -1,17 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.2 2009/10/10 15:29:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.3 2010/01/03 01:25:39 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit bash-completion distutils multilib versionator webapp
 
-MY_P="${P/#d/D}"
+MY_PN="Django"
+MY_P="${MY_PN}-${PV}"
 WEBAPP_MANUAL_SLOT="yes"
 
 DESCRIPTION="High-level python web framework"
-HOMEPAGE="http://www.djangoproject.com/"
+HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
 SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -32,8 +33,7 @@ DEPEND="${RDEPEND}
 		>=dev-lang/python-2.5[sqlite]
 		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
 	) )"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -41,10 +41,15 @@ PYTHON_MODNAME="django"
 
 DOCS="docs/* AUTHORS"
 
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-fix_tests.patch"
+}
+
 src_compile() {
 	distutils_src_compile
 
-	if use doc ; then
+	if use doc; then
 		pushd docs > /dev/null
 		emake html || die "Generation of HTML documentation failed"
 		popd > /dev/null
@@ -59,36 +64,38 @@ DATABASE_NAME='test.db'
 ROOT_URLCONF='tests/urls.py'
 SITE_ID=1
 __EOF__
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" tests/runtests.py --settings=settings -v1
+		# Tests have non-standard assumptions about PYTHONPATH and
+		# don't work with usual "build-${PYTHON_ABI}/lib".
+		PYTHONPATH="." "$(PYTHON)" tests/runtests.py --settings=settings -v1
 	}
 	python_execute_function testing
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
-	distutils_python_version
-	site_pkgs="$(python_get_sitedir)"
-	export PYTHONPATH="${PYTHONPATH}:${ED}/${site_pkgs}"
-	dodir ${site_pkgs}
+	[[ -z "${ED}" ]] && local ED="${D}"
+
+	python_set_active_version 2
+	local sitedir="$(python_get_sitedir)"
+	export PYTHONPATH="${PYTHONPATH}${PYTHONPATH:+:}${ED}/${sitedir}"
+	dodir "${sitedir}"
 
 	distutils_src_install
 
 	dobashcompletion extras/django_bash_completion
 
-	if use examples ; then
+	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
 
-	if use doc ; then
+	if use doc; then
 		mv docs/_build/html/{_,.}sources
 		dohtml txt -r docs/_build/html/*
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
-	doins -r "${ED}/${site_pkgs}"/django/contrib/admin/media/*
+	doins -r "${ED}/${sitedir}/django/contrib/admin/media/"* || die "doins failed"
 
-	#webapp_postinst_txt en "${WORKDIR}"/postinstall-en.txt
 	webapp_src_install
 }
 
