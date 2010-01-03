@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/meme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.12 2009/12/29 20:34:24 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.13 2010/01/03 14:12:59 pacho Exp $
+
+  03 Jan 2010; Pacho Ramos <pacho@gentoo.org> meme-4.3.0.ebuild:
+  amd64 stable, bug 298760
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org> meme-4.3.0.ebuild:
   stable x86, bug 298760
