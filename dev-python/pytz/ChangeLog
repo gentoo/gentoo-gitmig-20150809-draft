@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.53 2009/12/24 17:28:49 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.54 2010/01/04 18:28:00 patrick Exp $
+
+*pytz-2009u (04 Jan 2010)
+
+  04 Jan 2010; Patrick Lauer <patrick@gentoo.org> +pytz-2009u.ebuild:
+  Bump, fixes #299617
 
   24 Dec 2009; Pacho Ramos <pacho@gentoo.org> pytz-2009r.ebuild:
   amd64 stable, bug 296686
