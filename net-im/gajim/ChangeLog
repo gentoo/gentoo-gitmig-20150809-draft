@@ -1,6 +1,16 @@
 # ChangeLog for net-im/gajim
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.82 2009/10/25 17:41:10 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.83 2010/01/04 19:36:50 pva Exp $
+
+*gajim-0.13.1 (04 Jan 2010)
+
+  04 Jan 2010; Peter Volkov <pva@gentoo.org> +gajim-0.13.1.ebuild,
+  +files/gajim-0.13.1-define-exception.patch,
+  +files/gajim-0.13-autotools--enable-site-packages_option.patch:
+  Version bump, bug #273351, thank Bruno 'brubru' Tarquini for this work.
+  Fixes bug #261130, missed dependency on libbonobo-python
+  (gnome-python-desktop dep), thank Zhang Weiwu for report; bug #244304, use
+  modules gnome python dependencies,thank Yu Yuwei for report.
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove welp from metadata.xml (#141007)

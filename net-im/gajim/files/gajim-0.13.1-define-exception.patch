@@ -1,0 +1,39 @@
+=== modified file 'src/common/dbus_support.py'
+--- src/common/dbus_support.py	2010-01-04 16:15:54 +0000
++++ src/common/dbus_support.py	2010-01-04 16:16:12 +0000
+@@ -60,7 +60,7 @@
+ 			raise exceptions.DbusNotSupported
+ 
+ 		if not self.present():
+-				raise exceptions.SystemBusNotPresent
++			raise exceptions.SystemBusNotPresent
+ 		return self.system_bus
+ 
+ 	def bus(self):
+
+=== modified file 'src/common/exceptions.py'
+--- src/common/exceptions.py	2010-01-04 16:15:54 +0000
++++ src/common/exceptions.py	2010-01-04 16:19:55 +0000
+@@ -68,7 +68,20 @@
+ 		Exception.__init__(self)
+ 
+ 	def __str__(self):
+-		return _('Session bus is not available.\nTry reading http://trac.gajim.org/wiki/GajimDBus')
++		return _('Session bus is not available.\nTry reading %(url)s') % \
++			{'url': 'http://trac.gajim.org/wiki/GajimDBus'}
++
++class SystemBusNotPresent(Exception):
++	"""
++	This exception indicates that there is no session daemon
++	"""
++
++	def __init__(self):
++		Exception.__init__(self)
++
++	def __str__(self):
++		return _('System bus is not available.\nTry reading %(url)s') % \
++			{'url': 'http://trac.gajim.org/wiki/GajimDBus'}
+ 
+ class NegotiationError(Exception):
+ 	'''A session negotiation failed'''
+
