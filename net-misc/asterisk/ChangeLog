@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.237 2009/12/27 09:41:51 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.238 2010/01/04 12:56:16 chainsaw Exp $
+
+*asterisk-1.6.1.12-r1 (04 Jan 2010)
+
+  04 Jan 2010; <chainsaw@gentoo.org> -asterisk-1.6.1.11.ebuild,
+  -asterisk-1.6.1.12.ebuild, +asterisk-1.6.1.12-r1.ebuild,
+  -files/1.6.1/asterisk-1.6.1.12-parallel-make.patch,
+  +files/1.6.1/asterisk-1.6.1.12-parallel-make-v2.patch:
+  Update parallel make patchset as it broke for USE=keepsrc with make clean.
+  An anonymous source on IRC pointed this out.
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> asterisk-1.2.36.ebuild:
   Marked ppc stable for bug #284892.

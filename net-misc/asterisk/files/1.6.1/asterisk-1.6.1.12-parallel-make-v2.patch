@@ -1,17 +1,6 @@
 diff -uNr asterisk-1.6.1.12.ORIG/channels/Makefile asterisk-1.6.1.12/channels/Makefile
 --- asterisk-1.6.1.12.ORIG/channels/Makefile	2009-12-19 18:18:32.727000128 +0000
 +++ asterisk-1.6.1.12/channels/Makefile	2009-12-19 18:18:42.016000126 +0000
-@@ -62,8 +62,8 @@
- endif
- 
- clean::
--	$(MAKE) -C misdn clean
--	if [ -f h323/Makefile ]; then $(MAKE) -C h323 clean; fi
-+	+$(MAKE) -C misdn clean
-+	if [ -f h323/Makefile ]; then +$(MAKE) -C h323 clean; fi
- 
- dist-clean::
- 	rm -f h323/Makefile
 @@ -99,7 +99,7 @@
  chan_usbradio.so: LIBS+=-lusb -lasound
  
