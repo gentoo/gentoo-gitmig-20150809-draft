@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.16 2010/01/04 11:56:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.17 2010/01/04 23:34:24 maekke Exp $
+
+  04 Jan 2010; Markus Meier <maekke@gentoo.org> ruby-inline-3.8.4.ebuild:
+  add ~x86, bug #298368
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   ruby-inline-3.8.4.ebuild:
