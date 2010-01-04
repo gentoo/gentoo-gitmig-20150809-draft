@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.1 2010/01/04 14:15:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.2 2010/01/04 22:27:20 flameeyes Exp $
 
 EAPI="2"
 inherit eutils multilib autotools
@@ -79,7 +79,7 @@ src_compile() {
 	# regenerating Pixie shaders - see upstream bug report:
 	# https://sf.net/tracker/?func=detail&aid=2923407&group_id=59462&atid=491094
 	einfo "Re-building Pixie Shaders for v${PV} format"
-	emake -f "${FILESDIR}/Makefile.shaders" -C "${S}/shaders"
+	emake -f "${FILESDIR}/Makefile.shaders" -C "${S}/shaders" || die "shaders rebuild failed"
 }
 
 src_install() {
