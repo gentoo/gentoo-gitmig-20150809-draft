@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.90 2009/12/31 17:43:32 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.91 2010/01/04 15:38:14 matsuu Exp $
+
+*awesome-3.4.3 (04 Jan 2010)
+
+  04 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> +awesome-3.4.3.ebuild:
+  Version bumped.
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> awesome-3.3.4.ebuild:
   Marking awesome-3.3.4 ppc64 for bug 287208
