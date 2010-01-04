@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.8 2007/02/08 22:44:02 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.9 2010/01/04 10:09:16 hwoarang Exp $
+
+  04 Jan 2010; <hwoarang@gentoo.org> pip-1.2.ebuild:
+  Keyworded for amd64 wrt bug #299336
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

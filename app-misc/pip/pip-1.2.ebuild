@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2.ebuild,v 1.7 2005/11/28 12:08:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2.ebuild,v 1.8 2010/01/04 10:09:16 hwoarang Exp $
 
 inherit eutils perl-app
 
@@ -10,5 +10,5 @@ SRC_URI="http://membled.com/work/apps/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 x86 ppc"
 IUSE=""
