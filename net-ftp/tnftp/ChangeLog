@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/tnftp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.33 2009/11/22 21:52:48 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.34 2010/01/04 21:34:37 swegener Exp $
+
+*tnftp-20091122 (04 Jan 2010)
+
+  04 Jan 2010; Sven Wegener <swegener@gentoo.org>
+  files/tnftp-20090606-glibc-2.8-ARG_MAX.patch, +tnftp-20091122.ebuild,
+  +files/tnftp-20091122-as-needed.patch,
+  +files/tnftp-20091122-glibc-2.8-ARG_MAX.patch:
+  Version bump.
 
 *tnftp-20090606 (22 Nov 2009)
 
