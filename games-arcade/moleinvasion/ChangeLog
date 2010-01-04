@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/moleinvasion
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/ChangeLog,v 1.4 2009/12/28 14:20:26 rich0 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/ChangeLog,v 1.5 2010/01/04 22:20:09 maekke Exp $
+
+  04 Jan 2010; Markus Meier <maekke@gentoo.org> moleinvasion-0.4-r1.ebuild:
+  x86 stable, bug #297869
 
   28 Dec 2009; Richard Freeman <rich0@gentoo.org>
   moleinvasion-0.4-r1.ebuild:
