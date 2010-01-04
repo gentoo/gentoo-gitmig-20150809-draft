@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r2.ebuild,v 1.3 2010/01/04 11:47:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r2.ebuild,v 1.4 2010/01/04 23:26:41 maekke Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ SRC_URI="mirror://rubyforge/redcloth/${RUBY_FAKEGEM_NAME}-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}/${RUBY_FAKEGEM_NAME}-${PV}"
