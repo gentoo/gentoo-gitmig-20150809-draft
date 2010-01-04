@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/koules
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.15 2010/01/02 19:19:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.16 2010/01/04 16:16:00 tupone Exp $
+
+  04 Jan 2010; Tupone Alfredo <tupone@gentoo.org> koules-1.4-r2.ebuild,
+  +files/koules-1.4-io_h.patch:
+  Fix build wih svga USE flag
 
   02 Jan 2010; Tupone Alfredo <tupone@gentoo.org> koules-1.4-r2.ebuild,
   +files/koules-1.4-sndsrv.patch:

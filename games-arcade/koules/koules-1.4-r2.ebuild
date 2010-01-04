@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.5 2010/01/02 19:19:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.6 2010/01/04 16:16:00 tupone Exp $
 EAPI=2
 
 inherit eutils games
@@ -39,7 +39,8 @@ S=${WORKDIR}/${PN}${PV}
 
 src_prepare() {
 	epatch "${WORKDIR}"/${P}-gcc3.patch \
-		"${FILESDIR}"/${P}-sndsrv.patch
+		"${FILESDIR}"/${P}-sndsrv.patch \
+		"${FILESDIR}"/${P}-io_h.patch
 	sed -i \
 		-e "/^KOULESDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^SOUNDDIR/s:=.*:=${GAMES_DATADIR}/${PN}:" Iconfig \
@@ -77,13 +78,11 @@ src_compile() {
 			-e '/SYSDEFS =/d' \
 			-e "/^ *CFLAGS =/s:$: ${CFLAGS}:" Makefile \
 				|| die "sed Makefile failed"
-		emake -j1 || die "emake X failed"
+		emake || die "emake X failed"
 		mv xkoules bins/
 	fi
 	if use svga ; then
-		make clean
-		ln -s ../init.o svgalib/
-		emake -j1 -f Makefile.svgalib || die "emake svga failed"
+		emake -f Makefile.svgalib || die "emake svga failed"
 		mv koules.svga bins/
 	fi
 }
