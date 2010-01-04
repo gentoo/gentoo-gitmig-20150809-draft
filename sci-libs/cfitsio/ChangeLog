@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.40 2009/10/11 16:18:58 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.41 2010/01/04 18:25:56 bicatali Exp $
+
+*cfitsio-3.210 (04 Jan 2010)
+
+  04 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -cfitsio-2.510-r1.ebuild, -cfitsio-2.510-r2.ebuild,
+  -files/cfitsio-2.510-autotools.patch,
+  -files/cfitsio-2.510-configure.patch, -cfitsio-3.100-r1.ebuild,
+  -files/cfitsio-3.100-autotools.patch,
+  -files/cfitsio-3.100-null-protect.patch, +cfitsio-3.210.ebuild,
+  +files/cfitsio-3.210-autotools.patch:
+  Version bump. Cleaning old versions
 
   11 Oct 2009; Raúl Porcel <armin76@gentoo.org> cfitsio-3.140.ebuild:
   sparc stable wrt #285500
