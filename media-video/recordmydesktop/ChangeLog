@@ -1,6 +1,13 @@
 # ChangeLog for media-video/recordmydesktop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.28 2009/03/07 09:08:13 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.29 2010/01/04 14:29:40 ssuominen Exp $
+
+*recordmydesktop-0.3.8.1-r1 (04 Jan 2010)
+
+  04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +recordmydesktop-0.3.8.1-r1.ebuild:
+  Fix building with >=xextproto-7.1.1 wrt #291111, thanks to Kyle Milz for
+  reporting.
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   -recordmydesktop-0.3.7.3.ebuild:
