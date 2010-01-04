@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.44 2009/12/11 09:06:12 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.45 2010/01/04 22:28:17 darkside Exp $
+
+  04 Jan 2010; Jeremy Olexa <darkside@gentoo.org> terminal-0.4.2.ebuild,
+  terminal-0.4.3.ebuild:
+  Respect EPREFIX, bug 299557
 
 *terminal-0.4.3 (11 Dec 2009)
 

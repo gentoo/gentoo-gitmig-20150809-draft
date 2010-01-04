@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.3.ebuild,v 1.1 2009/12/11 09:06:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.3.ebuild,v 1.2 2010/01/04 22:28:17 darkside Exp $
 
 EAPI=2
 MY_P=${P/t/T}
@@ -31,7 +31,7 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
-		--docdir=/usr/share/doc/${PF}
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 		$(use_enable dbus)
 		$(use_enable debug)
 		$(use_enable doc gen-doc)"
