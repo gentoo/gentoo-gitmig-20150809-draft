@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubyforge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.52 2009/12/26 17:49:20 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.53 2010/01/04 03:54:48 flameeyes Exp $
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  rubyforge-2.0.3.ebuild:
+  Add support for JRuby (although it has a possibly cyclic dependency over
+  jruby-openssl).
 
   26 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   rubyforge-2.0.3.ebuild:
