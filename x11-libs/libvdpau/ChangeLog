@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.7 2010/01/04 08:19:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.8 2010/01/04 17:28:07 cardoe Exp $
+
+*libvdpau-0.3-r2 (04 Jan 2010)
+
+  04 Jan 2010; Doug Goldstein <cardoe@gentoo.org> -libvdpau-0.3-r1.ebuild,
+  +libvdpau-0.3-r2.ebuild:
+  revision bump for bug #299599
 
 *libvdpau-0.3-r1 (04 Jan 2010)
 
