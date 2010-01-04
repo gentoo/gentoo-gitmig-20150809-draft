@@ -1,6 +1,10 @@
 # ChangeLog for media-video/binkplayer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.20 2009/12/02 10:53:34 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.21 2010/01/04 12:11:05 ssuominen Exp $
+
+  04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  binkplayer-1.9p.ebuild:
+  Set QA_DT_HASH and QA_PRESTRIPPED instead of using RESTRICT="strip".
 
   02 Dec 2009; Markus Meier <maekke@gentoo.org> binkplayer-1.9p.ebuild:
   amd64/x86 stable, bug #295238
