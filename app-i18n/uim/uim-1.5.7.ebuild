@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7.ebuild,v 1.5 2009/12/31 14:07:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7.ebuild,v 1.6 2010/01/04 03:58:18 yngwin Exp $
 
 EAPI="2"
-inherit autotools eutils qt3 multilib elisp-common flag-o-matic
+inherit autotools eutils multilib elisp-common flag-o-matic
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
@@ -12,7 +12,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 ~sparc ~x86"
-IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RDEPEND="X? (
 		x11-libs/libX11
@@ -39,7 +39,6 @@ RDEPEND="X? (
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
 	prime? ( app-i18n/prime )
-	qt3? ( || ( >=x11-libs/qt-3.2.0:3[immqt-bc] >=x11-libs/qt-3.2.0:3[immqt] ) )
 	qt4? ( x11-libs/qt-gui:4[qt3support] )
 	!app-i18n/uim-svn
 	!<app-i18n/prime-0.9.4"
@@ -102,11 +101,7 @@ src_configure() {
 		myconf="${myconf} --disable-dict"
 	fi
 
-	if use qt3 ; then
-		append-flags -DQT_THREAD_SUPPORT
-	fi
-
-	if use gtk || use qt3 || use qt4 ; then
+	if use gtk || use qt4 ; then
 		myconf="${myconf} --enable-pref"
 	else
 		myconf="${myconf} --disable-pref"
@@ -140,12 +135,12 @@ src_configure() {
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \
 		$(use_with prime) \
-		$(use_with qt3 qt) \
-		$(use_with qt3 qt-immodule) \
+		--without-qt \
+		--without-qt-immodule \
 		$(use_with qt4 qt4) \
 		$(use_with qt4 qt4-immodule) \
 		$(use_with xft) \
-		${myconf} || die "econf failed"
+		${myconf}
 }
 
 src_compile() {
@@ -184,7 +179,7 @@ pkg_postinst() {
 	elog "to your ~/.uim."
 	elog
 	elog "All input methods can be found by running uim-im-switcher-gtk, "
-	elog "uim-im-switcher-qt or uim-im-switcher-qt4."
+	elog "or uim-im-switcher-qt4."
 	elog
 	elog "If you upgrade from a version of uim older than 1.4.0,"
 	elog "you should run revdep-rebuild."

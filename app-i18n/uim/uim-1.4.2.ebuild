@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.2.ebuild,v 1.12 2009/12/31 15:54:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.2.ebuild,v 1.13 2010/01/04 03:58:18 yngwin Exp $
 
 EAPI=1
-inherit eutils qt3 multilib elisp-common flag-o-matic
+inherit eutils multilib elisp-common flag-o-matic
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
@@ -32,7 +32,6 @@ RDEPEND="X? ( x11-libs/libX11
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
 	prime? ( app-i18n/prime )
-	qt3? ( x11-libs/qt:3 )
 	!app-i18n/uim-svn
 	!<app-i18n/prime-0.9.4"
 
@@ -52,12 +51,6 @@ RDEPEND="${RDEPEND}
 SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
-	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
-		eerror "To support qt3 in this package is required to have"
-		eerror "=x11-libs/qt-3* compiled with immqt-bc(recommended) or immqt USE flag."
-		die "Please reemerge =x11-libs/qt-3* with USE=\"immqt-bc\" or USE=\"immqt\"."
-
-	fi
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
@@ -72,11 +65,7 @@ src_compile() {
 		myconf="${myconf} --disable-dict"
 	fi
 
-	if use qt3 ; then
-		append-flags -DQT_THREAD_SUPPORT
-	fi
-
-	if use gtk || use qt3 ; then
+	if use gtk; then
 		myconf="${myconf} --enable-pref"
 	else
 		myconf="${myconf} --disable-pref"
@@ -95,9 +84,9 @@ src_compile() {
 		$(use_with m17n-lib m17nlib) \
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \
-		$(use_with qt3 qt) \
-		$(use_with qt3 qt-immodule) \
-		${myconf} || die "econf failed"
+		--without-qt \
+		--without-qt-immodule \
+		${myconf}
 	emake -j1 || die "emake failed"
 
 	if use emacs; then
@@ -126,7 +115,6 @@ pkg_postinst() {
 	elog "New input method switcher has been introduced. You need to set"
 	elog
 	elog "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
-	elog "% QT_IM_MODULE=uim ; export QT_IM_MODULE"
 	elog "% XMODIFIERS=@im=uim ; export XMODIFIERS"
 	elog
 	elog "If you would like to use uim-anthy as default input method, put"
@@ -134,7 +122,6 @@ pkg_postinst() {
 	elog "to your ~/.uim."
 	elog
 	elog "All input methods can be found by running uim-im-switcher-gtk"
-	elog "or uim-im-switcher-qt."
 	elog
 	elog "If you upgrade from a version of uim older than 1.4.0,"
 	elog "you should run revdep-rebuild."
