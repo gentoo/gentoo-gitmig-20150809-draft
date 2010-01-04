@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.308 2010/01/04 05:24:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.309 2010/01/04 05:40:46 cardoe Exp $
+
+  04 Jan 2010; Doug Goldstein <cardoe@gentoo.org> mythtv-0.22_p23069.ebuild,
+  +files/mythtv.logrotate.d-r1:
+  fix logrotate file for MythTV when the backend isn't running. bug #293464
 
 *mythtv-0.22_p23069 (04 Jan 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p23069.ebuild,v 1.1 2010/01/04 05:24:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p23069.ebuild,v 1.2 2010/01/04 05:40:46 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -230,7 +230,7 @@ src_install() {
 	fowners -R mythtv "${D}"/var/log/mythtv
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/mythtv.logrotate.d mythtv
+	newins "${FILESDIR}"/mythtv.logrotate.d-r1 mythtv
 
 	insinto /usr/share/mythtv/contrib
 	doins -r contrib/*
