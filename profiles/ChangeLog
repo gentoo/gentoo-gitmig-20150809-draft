@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3739 2010/01/04 11:38:07 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3740 2010/01/04 14:33:39 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking sys-fs/archfs for QA removal.
 
   04 Jan 2010; Alex Legler <a3li@gentoo.org> package.mask:
   Remove www-apps/xoops mask. Package is gone
