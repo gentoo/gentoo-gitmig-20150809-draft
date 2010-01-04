@@ -1,0 +1,9 @@
+# ChangeLog for xfce-base/tumbler
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/ChangeLog,v 1.1 2010/01/04 19:58:36 ssuominen Exp $
+
+*tumbler-0.1.0 (04 Jan 2010)
+
+  04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +tumbler-0.1.0.ebuild:
+  Initial commit wrt #297355, thanks to Andrew for this work.
+
