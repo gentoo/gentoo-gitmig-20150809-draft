@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/markaby
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.12 2009/07/12 07:17:32 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.13 2010/01/04 11:29:24 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> markaby-0.5.ebuild:
+  Transfer Prefix keywords
 
   12 Jul 2009; Hans de Graaff <graaff@gentoo.org> markaby-0.5.ebuild:
   Fix builder dependency to match the gem dependency. Fixes #227059.

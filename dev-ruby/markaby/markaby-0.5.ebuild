@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/markaby-0.5.ebuild,v 1.4 2009/07/12 07:17:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/markaby-0.5.ebuild,v 1.5 2010/01/04 11:29:24 fauli Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://rubyforge.org/projects/markaby/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc64 ~x86"
+KEYWORDS="amd64 ~ia64 ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.2

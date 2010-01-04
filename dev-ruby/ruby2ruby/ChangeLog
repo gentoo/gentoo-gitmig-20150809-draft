@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby2ruby
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.14 2009/12/26 17:51:38 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.15 2010/01/04 11:51:30 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ruby2ruby-1.2.4-r1.ebuild:
+  Transfer Prefix keywords
 
 *ruby2ruby-1.2.4-r1 (26 Dec 2009)
 
