@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.17 2010/01/04 11:36:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.18 2010/01/04 23:22:09 maekke Exp $
+
+  04 Jan 2010; Markus Meier <maekke@gentoo.org> nokogiri-1.4.1.ebuild:
+  add ~x86, bug #297822
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   nokogiri-1.4.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.1.ebuild,v 1.3 2010/01/04 11:36:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.1.ebuild,v 1.4 2010/01/04 23:22:09 maekke Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ DESCRIPTION="Nokogiri is an HTML, XML, SAX, and Reader parser."
 HOMEPAGE="http://nokogiri.rubyforge.org/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 SLOT="0"
 IUSE=""
 
