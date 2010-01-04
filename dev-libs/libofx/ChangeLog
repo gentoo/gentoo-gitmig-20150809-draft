@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.47 2009/09/29 17:59:49 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.48 2010/01/04 13:38:00 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libofx-0.9.1.ebuild:
+  stable x86, bug 299533
 
 *libofx-0.9.1 (29 Sep 2009)
 
