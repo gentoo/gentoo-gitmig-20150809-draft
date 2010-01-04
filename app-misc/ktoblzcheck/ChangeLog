@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ktoblzcheck
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.64 2009/12/14 18:38:55 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.65 2010/01/04 13:42:24 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ktoblzcheck-1.24.ebuild:
+  stable x86, bug 299535
 
 *ktoblzcheck-1.24 (14 Dec 2009)
 
