@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.7.0.ebuild,v 1.1 2009/10/20 13:47:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.7.2.ebuild,v 1.1 2010/01/04 08:12:40 djc Exp $
 
 NEED_PYTHON=2.4
 
