@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0_beta.ebuild,v 1.2 2009/12/22 10:25:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0_beta.ebuild,v 1.3 2010/01/04 22:45:42 ulm Exp $
 
 inherit elisp eutils
 
@@ -26,6 +26,8 @@ SITEFILE="50${PN}-gentoo.el"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-submake-errors.patch"
 
 	if ! use bbdb; then
 		elog "Excluding vm-pcrisis.el since the \"bbdb\" USE flag is not set."

@@ -1,0 +1,30 @@
+http://bugs.gentoo.org/299108
+
+--- Makefile.in	2009-12-04 17:39:55 +0000
++++ Makefile.in	2009-12-31 15:32:51 +0000
+@@ -12,7 +12,7 @@
+ 
+ ##############################################################################
+ all: vm-load.el
+-	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i); done
++	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i) || exit 1; done
+ 
+ Makefile vm-load.el: %: config.status @srcdir@/%.in
+ 	./config.status $@
+@@ -25,13 +25,13 @@
+ 	./config.status --recheck
+ 
+ install:
+-	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i install); done
++	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i install) || exit 1; done
+ 
+ clean:
+-	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i clean); done
++	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i clean) || exit 1; done
+ 
+ distclean:
+-	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i distclean); done
++	@for i in $(SUBDIRS) ; do ($(MAKE) -C $$i distclean) || exit 1; done
+ 
+ push:
+ 	$(BZR) push
