@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/gemcutter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.1 2009/12/25 14:20:01 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.2 2010/01/04 04:20:30 flameeyes Exp $
+
+*gemcutter-0.3.0_pre (04 Jan 2010)
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gemcutter-0.3.0_pre.ebuild:
+  Version bump, tests are shipped but fail, waiting on upstream.
 
 *gemcutter-0.2.1 (25 Dec 2009)
 
