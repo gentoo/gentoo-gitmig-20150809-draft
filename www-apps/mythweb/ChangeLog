@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.71 2009/11/19 01:34:51 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.72 2010/01/04 05:43:09 cardoe Exp $
+
+  04 Jan 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.22_p22763.ebuild, mythweb-0.22_p22763-r1.ebuild:
+  add USE=spl as required from PHP. bug #297487
 
 *mythweb-0.22_p22763-r1 (19 Nov 2009)
 
