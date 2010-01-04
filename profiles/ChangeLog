@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3737 2010/01/04 09:48:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3738 2010/01/04 11:35:01 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jan 2010; Alex Legler <a3li@gentoo.org> package.mask:
+  Remove nitro/glue/gen/og mask. The packages are gone.
 
   04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask net-p2p/qtella for removal.
