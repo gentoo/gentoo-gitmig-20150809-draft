@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.14 2007/03/12 20:08:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.15 2010/01/04 12:04:35 ssuominen Exp $
 
 inherit eutils games
 
@@ -13,7 +13,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RESTRICT="strip"
 
 RDEPEND="media-libs/sdl-mixer
 	media-libs/libsdl
@@ -21,6 +20,9 @@ RDEPEND="media-libs/sdl-mixer
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}/${MY_P}
+
+QA_PRESTRIPPED="opt/phobiaii/linuxphobia"
+QA_DT_HASH="opt/phobiaii/linuxphobia"
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
