@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/softgun
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/ChangeLog,v 1.8 2009/01/03 16:31:31 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/ChangeLog,v 1.9 2010/01/04 03:33:11 flameeyes Exp $
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> softgun-0.16.ebuild:
+  Die when make fails.
 
 *softgun-0.16 (03 Jan 2009)
 
