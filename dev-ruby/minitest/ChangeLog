@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/minitest
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.5 2009/12/23 13:25:56 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.6 2010/01/04 03:52:45 flameeyes Exp $
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  minitest-1.4.2.ebuild:
+  Enable on JRuby since the test failures seem minimal. Reported upstream.
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> minitest-1.4.2.ebuild:
   Marked ~ppc (bug #297830).
