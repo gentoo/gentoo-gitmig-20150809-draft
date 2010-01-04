@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/webmock
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.1 2010/01/04 04:13:38 flameeyes Exp $
+
+*webmock-0.8.0 (04 Jan 2010)
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +webmock-0.8.0.ebuild, +metadata.xml:
+  Initial import of webmock, needed for 0.3 series of dev-ruby/gemcutter.
+
