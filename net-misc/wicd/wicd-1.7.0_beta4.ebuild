@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0_alpha3.ebuild,v 1.1 2009/12/24 03:03:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0_beta4.ebuild,v 1.1 2010/01/04 14:09:07 darkside Exp $
 
 EAPI=2
 
-MY_P=${P/_alpha/a}
+MY_P=${P/_beta/b}
 inherit distutils
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
@@ -14,7 +14,7 @@ SRC_URI="http://downloads.wicd.net/src/testing/1.7.x/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="+gtk ioctl libnotify ncurses +pm-utils"
+IUSE="X +gtk ioctl libnotify ncurses nls +pm-utils"
 
 DEPEND=""
 # Maybe virtual/dhcp would work, but there are enough problems with
@@ -22,7 +22,14 @@ DEPEND=""
 # first if none are installed.
 RDEPEND="
 	dev-python/dbus-python
-	gtk? ( dev-python/pygtk )
+	X? ( gtk? ( dev-python/pygtk
+		|| (
+			x11-misc/ktsuss
+			x11-libs/gksu
+			kde-base/kdesu
+			)
+		)
+	)
 	|| (
 		net-misc/dhcpcd
 		net-misc/dhcp
@@ -33,11 +40,6 @@ RDEPEND="
 	|| (
 		sys-apps/net-tools
 		sys-apps/ethtool
-	)
-	|| (
-		x11-misc/ktsuss
-		x11-libs/gksu
-		kde-base/kdesu
 	)
 	ioctl? ( dev-python/python-iwscan dev-python/python-wpactrl )
 	libnotify? ( dev-python/notify-python )
@@ -64,6 +66,9 @@ src_install() {
 		|| die "keepdir failed, critical for this app"
 	keepdir /etc/wicd/scripts/{postconnect,disconnect,preconnect} \
 		|| die "keepdir failed, critical for this app"
+	keepdir /var/log/wicd \
+		|| die "keepdir failed, critical for this app"
+	use nls || rm -rf ${D}/usr/share/locale
 }
 
 pkg_postinst() {
