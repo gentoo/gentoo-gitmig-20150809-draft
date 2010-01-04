@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.54 2010/01/04 11:22:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.55 2010/01/04 22:58:38 maekke Exp $
+
+  04 Jan 2010; Markus Meier <maekke@gentoo.org> rubyforge-2.0.3.ebuild:
+  add ~x86, bug #297828
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   rubyforge-2.0.3.ebuild:
