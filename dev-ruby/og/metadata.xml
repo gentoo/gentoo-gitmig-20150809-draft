@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>ruby</herd>
-  <use>
-    <flag name='kirbybase'>Enable <pkg>dev-ruby/kirbybase</pkg> support</flag>
-  </use>
-</pkgmetadata>
