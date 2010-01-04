@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-applet-input-manager
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/ChangeLog,v 1.8 2009/03/14 03:51:10 solar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/ChangeLog,v 1.9 2010/01/04 15:02:55 yvasilev Exp $
+
+  04 Jan 2010; Yuri Vasilevski <yvasilev@gentoo.org>
+  matchbox-applet-input-manager-0.6.ebuild:
+  Fixed dodoc QA notice, fixes bug #299609. Thanks flameeyes.
 
   14 Mar 2009; <solar@gentoo.org> matchbox-applet-input-manager-0.6.ebuild:
   keyword ~amd64

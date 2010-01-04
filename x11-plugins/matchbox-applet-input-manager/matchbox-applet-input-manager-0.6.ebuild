@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/matchbox-applet-input-manager-0.6.ebuild,v 1.7 2009/03/14 03:51:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-input-manager/matchbox-applet-input-manager-0.6.ebuild,v 1.8 2010/01/04 15:02:55 yvasilev Exp $
 
 inherit versionator eutils
 
@@ -38,5 +38,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
