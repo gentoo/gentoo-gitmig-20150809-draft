@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.52 2010/01/03 19:42:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.53 2010/01/04 21:31:24 aballier Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS=""
-IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc1394
+IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt ggi gnome gnutls httpd id3tag ieee1394 jack kate libass libcaca
 	libnotify libproxy libsysfs libtiger libv4l libv4l2 lirc live lua matroska mmx
@@ -66,7 +66,6 @@ RDEPEND="
 		avahi? ( >=net-dns/avahi-0.6 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		cdda? (	cddb? ( >=media-libs/libcddb-1.2.0 ) )
-		cddax? ( cddb? ( >=media-libs/libcddb-1.2.0 ) )
 		cdio? ( >=dev-libs/libcdio-0.78.2 )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1
@@ -188,7 +187,6 @@ pkg_setup() {
 	fi
 	vlc_use_needs skins truetype
 	vlc_use_force skins qt4
-	vlc_use_needs cddax cdio
 	vlc_use_needs vcdx cdio
 	vlc_use_needs vcdx vcdinfo
 	vlc_use_needs vcdinfo cdio
@@ -199,7 +197,7 @@ pkg_setup() {
 	vlc_use_needs libv4l v4l
 	vlc_use_needs libtiger kate
 	vlc_use_needs xv xcb
-	use cddb && use !cdda && use !cddax && ewarn "USE=cddb requires either cdda or cddax, cddb will be disabled."
+	vlc_use_needs cddb cdda
 	if use qt4 || use skins ; then
 		qt4_pkg_setup
 	else
@@ -256,7 +254,6 @@ src_configure() {
 		$(use_enable avahi bonjour) \
 		$(use_enable bidi fribidi) \
 		$(use_enable cdda vcd) \
-		$(use_enable cddax)\
 		$(use_enable cddb libcddb) \
 		$(use_enable cdio libcdio) \
 		$(use_enable dbus) $(use_enable dbus dbus-control) \
