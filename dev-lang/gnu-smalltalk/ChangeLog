@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnu-smalltalk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.39 2009/06/01 21:34:04 araujo Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.40 2010/01/04 04:55:54 araujo Exp $
+
+*gnu-smalltalk-3.1 (04 Jan 2010)
+
+  04 Jan 2010; Luis F. Araujo <araujo@gentoo.org> +gnu-smalltalk-3.1.ebuild:
+  Version bump. Fixing bugs #252253 , #251007
 
 *gnu-smalltalk-3.0.5 (01 Jun 2009)
 
