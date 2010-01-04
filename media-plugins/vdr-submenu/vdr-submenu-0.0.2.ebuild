@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.6 2008/04/28 09:05:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-submenu/vdr-submenu-0.0.2.ebuild,v 1.7 2010/01/04 22:51:49 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin
 
@@ -14,21 +16,7 @@ LICENSE="GPL-2"
 
 KEYWORDS="~amd64 x86"
 
-DEPEND=">=media-video/vdr-1.3.20"
+DEPEND=">=media-video/vdr-1.3.20[submenu]"
+RDEPEND="${DEPEND}"
 
 PATCHES=("${FILESDIR}/${P}-asprintf.patch")
-
-pkg_setup() {
-	vdr-plugin_pkg_setup
-
-	local header=/usr/include/vdr/submenu.h
-	if [[ -e ${header} ]] && grep -q "class cSubMenuItemInfo" ${header} 2>/dev/null; then
-		einfo "Patched vdr found"
-	else
-		elog "Unpatched vdr found"
-		echo
-		ewarn "You have to reemerge vdr with USE=submenu set"
-		echo
-		die "need to have patched vdr"
-	fi
-}
