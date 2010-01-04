@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.97.ebuild,v 1.1 2009/12/28 12:38:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.97.ebuild,v 1.2 2010/01/04 19:13:31 leio Exp $
 
 EAPI="2"
 
@@ -66,7 +66,7 @@ pkg_postinst() {
 	kde4-base_pkg_postinst
 
 	echo
-	elog "For extra functionality you shuold look at following packages:"
+	elog "For extra functionality you should look at following packages:"
 	elog "dev-util/valgrind          allows you to do memory leak check."
 	elog ">=sys-devel/gdb-7.0        (RECOMMENDED) required by debugger frontend."
 	echo
