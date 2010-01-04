@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/ChangeLog,v 1.18 2008/12/20 21:17:19 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/ChangeLog,v 1.19 2010/01/04 10:39:39 ssuominen Exp $
+
+  04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xulrunner-bin-1.8.1.19.ebuild:
+  Remove app-emulation/emul-linux-x86-compat (libstdc++.so.5) from RDEPEND
+  since libstdc++.so.6 is used. Missing media-libs/jpeg-compat RDEPEND for
+  x86 wrt #299570.
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org>
   xulrunner-bin-1.8.1.19.ebuild:

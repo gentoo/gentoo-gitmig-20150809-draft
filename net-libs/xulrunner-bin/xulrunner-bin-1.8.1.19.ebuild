@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/xulrunner-bin-1.8.1.19.ebuild,v 1.2 2008/12/20 21:17:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner-bin/xulrunner-bin-1.8.1.19.ebuild,v 1.3 2010/01/04 10:39:39 ssuominen Exp $
 
 inherit eutils multilib mozilla-launcher
 
@@ -21,11 +21,11 @@ RDEPEND="x11-libs/libXrender
 	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
+		|| ( media-libs/jpeg-compat <media-libs/jpeg-7 )
 	)
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-compat
 	)"
 
 S="${WORKDIR}/usr/lib/xulrunner/"
