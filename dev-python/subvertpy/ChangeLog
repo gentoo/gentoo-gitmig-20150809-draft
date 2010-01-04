@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.5 2009/11/09 12:59:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.6 2010/01/04 08:06:51 djc Exp $
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   -subvertpy-0.6.9.ebuild:
@@ -18,6 +18,9 @@
   metadata.xml:
   Version bump, thank jbergstroem for report. Moved maintenance to bazaar
   herd.
+
+  07 Oct 2009; <djc@gentoo.org> metadata.xml:
+  Add python herd.
 
   06 Oct 2009; Peter Volkov <pva@gentoo.org> subvertpy-0.6.9.ebuild:
   Test dependencies are not RDEPENDencies.
