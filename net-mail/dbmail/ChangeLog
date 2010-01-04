@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dbmail
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.36 2009/10/04 20:06:46 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.37 2010/01/04 02:55:30 flameeyes Exp $
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> dbmail-2.2.9.ebuild,
+  dbmail-2.2.10.ebuild, dbmail-2.2.11_rc3.ebuild,
+  dbmail-2.2.11_rc3-r1.ebuild, dbmail-2.2.11.ebuild, dbmail-2.3.4.ebuild:
+  Fix obvious typos in USE flag checks.
 
   04 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   dbmail-2.2.11_rc3-r1.ebuild, dbmail-2.2.11.ebuild:

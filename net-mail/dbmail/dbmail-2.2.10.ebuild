@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.10.ebuild,v 1.5 2009/07/11 17:00:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.10.ebuild,v 1.6 2010/01/04 02:55:30 flameeyes Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ pkg_setup() {
 
 src_compile() {
 	use sqlite3 && myconf="--with-sqlite"
-	if !use postgres && !use mysql && !use sqlite3; then myconf="${myconf} --with-sqlite" ; fi
+	if ! use postgres && ! use mysql && ! use sqlite3; then myconf="${myconf} --with-sqlite" ; fi
 	use ldap && myconf=${myconf}" --with-auth-ldap"
 
 	econf \
