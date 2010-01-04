@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6.ebuild,v 1.1 2009/12/28 20:58:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.1 2010/01/04 14:15:28 flameeyes Exp $
 
 EAPI="2"
 inherit eutils multilib autotools
@@ -17,8 +17,7 @@ IUSE="X static-libs"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-RDEPEND="!mail-client/nmh
-	media-libs/jpeg
+RDEPEND="media-libs/jpeg
 	media-libs/tiff
 	media-libs/libpng
 	x11-libs/fltk:1.1[opengl]
@@ -43,11 +42,20 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# FIX: missing @includedir@
+	# https://sf.net/tracker/?func=detail&aid=2923415&group_id=59462&atid=491094
 	epatch "${FILESDIR}/${P}-autotools.patch"
 	eautoreconf
+
+	# FIX: removing pre-compiled shaders
+	# shaders must be removed before of their compilation or make
+	# parallelism can break the regeneration process, with resulting
+	# missing shaders.
+	rm "${S}"/shaders/*.sdr
 }
 
 src_configure() {
+	# NOTE: the option program-transform-name is used to avoid binary name
+	# conflict with package: mail-client/nmh (see #295996)
 	econf \
 		$(use_with X x) \
 		$(use_enable static-libs static) \
@@ -61,13 +69,15 @@ src_configure() {
 		--with-modulesdir=/usr/$(get_libdir)/pixie/modules \
 		--enable-openexr-threads \
 		--mandir=/usr/share/man \
-		--bindir=/usr/bin
+		--bindir=/usr/bin \
+		--program-transform-name="s/show/pixie-show/"
 }
 
 src_compile() {
 	emake || die "emake failed"
 
-	# regenerating Pixie shaders
+	# regenerating Pixie shaders - see upstream bug report:
+	# https://sf.net/tracker/?func=detail&aid=2923407&group_id=59462&atid=491094
 	einfo "Re-building Pixie Shaders for v${PV} format"
 	emake -f "${FILESDIR}/Makefile.shaders" -C "${S}/shaders"
 }
@@ -75,8 +85,11 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "installation failed."
 
+	insinto /usr/share/Pixie/textures
+	doins "${S}"/textures/*
+
 	# remove useless .la files
-	find "${D}" -name '*.la' -delete || die
+	find "${D}" -name '*.la' -delete || die "removal of libtool archive files failed"
 
 	dodoc README AUTHORS ChangeLog || die
 }
