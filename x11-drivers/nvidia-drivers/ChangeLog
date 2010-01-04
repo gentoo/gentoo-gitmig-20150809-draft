@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.212 2009/12/21 22:10:27 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.213 2010/01/04 08:23:54 cardoe Exp $
+
+*nvidia-drivers-190.53-r1 (04 Jan 2010)
+
+  04 Jan 2010; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-190.53-r1.ebuild:
+  revert the change to install VDPAU drivers to /usr/lib/vdpau since
+  libvdpau's dlopen() usage is incorrect. Stop gap ebuild until the issue is
+  discussed further with upstream.
 
   21 Dec 2009; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-190.42-r2.ebuild:
