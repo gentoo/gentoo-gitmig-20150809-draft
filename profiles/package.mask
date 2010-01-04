@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11040 2010/01/04 03:32:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11041 2010/01/04 09:48:29 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,12 +31,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Samuli Suominen <ssuominen@gentoo.org> (04 Jan 2010)
+# Bundles a copy of libyahoo2, and then collides with
+# it. Qt3 only. Masked for removal in 30 days.
+net-p2p/qtella
+
 # Ben de Groot <yngwin@gentoo.org> (04 Jan 2010)
 # Masking pending removal in 30 days
 # Qt3 app, bug 283429, last release almost 8 years ago
 app-doc/dox
 
-# Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2009)
+# Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2010)
 # Orphaned libraries with several open bugs, see
 # 299365 and depending bugs.
 # Masked for removal
@@ -44,7 +49,7 @@ app-doc/dox
 x11-libs/qwtplot3d-qt3
 x11-libs/qwt-qt3
 
-# Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2009)
+# Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2010)
 # Masked for Security bug #253822. Other bugs 195614,
 # 251543, 251852. Removal in 30 days.
 app-antivirus/bitdefender-console
