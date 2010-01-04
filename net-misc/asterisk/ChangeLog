@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.238 2010/01/04 12:56:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.239 2010/01/04 15:11:51 chainsaw Exp $
+
+*asterisk-1.6.2.0 (04 Jan 2010)
+
+  04 Jan 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.0.ebuild,
+  +files/1.6.2/asterisk-1.6.2.0-bt-line-test.patch:
+  Version bump to new branch. Rundir patch no longer required, upstream now
+  follows our convention. ODBC disable flag has vanished, dropped USE-flag.
+  BT line test patch rebased as it it still not upstream.
 
 *asterisk-1.6.1.12-r1 (04 Jan 2010)
 
