@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.18 2010/01/01 13:56:05 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.19 2010/01/04 23:02:09 maekke Exp $
+
+  04 Jan 2010; Markus Meier <maekke@gentoo.org> rdoc-2.4.3.ebuild:
+  add ~x86, bug #297041
 
   01 Jan 2010; Alex Legler <a3li@gentoo.org> rdoc-2.4.3.ebuild:
   Fix tests when rdoc is not yet installed (bug 298910), add test dependency
