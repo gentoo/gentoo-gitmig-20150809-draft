@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/pecl-memcache-3.0.1.ebuild,v 1.1 2008/02/11 21:26:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/pecl-memcache-3.0.1.ebuild,v 1.2 2010/01/04 18:33:16 robbat2 Exp $
 
 EAPI="1"
 PHP_EXT_NAME="memcache"
@@ -19,6 +19,9 @@ IUSE="+session"
 
 DEPEND="sys-libs/zlib"
 RDEPEND="${DEPEND}"
+
+# upstream does not ship any testsuite, so the PHPize test-runner fails.
+RESTRICT='test'
 
 need_php_by_category
 
