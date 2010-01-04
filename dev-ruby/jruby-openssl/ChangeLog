@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/jruby-openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/ChangeLog,v 1.3 2010/01/01 03:41:21 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/ChangeLog,v 1.4 2010/01/04 03:57:38 flameeyes Exp $
+
+*jruby-openssl-0.6-r1 (04 Jan 2010)
+
+  04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -jruby-openssl-0.2.3.ebuild, -jruby-openssl-0.6.ebuild,
+  +jruby-openssl-0.6-r1.ebuild:
+  Bump jruby-openssl to fakegem, and drop older version that polluted Ruby
+  1.8 space.
 
 *jruby-openssl-0.6 (01 Jan 2010)
 
