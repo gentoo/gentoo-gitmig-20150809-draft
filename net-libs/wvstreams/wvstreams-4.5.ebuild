@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.5.ebuild,v 1.3 2009/06/28 08:58:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.5.ebuild,v 1.4 2010/01/04 16:10:51 ssuominen Exp $
 
 EAPI=2
 
-inherit autotools toolchain-funcs qt3 versionator
+inherit autotools toolchain-funcs versionator
 
 DESCRIPTION="A network programming library in C++"
 HOMEPAGE="http://alumnit.ca/wiki/?WvStreams"
@@ -13,7 +13,7 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="qt3 pam doc +ssl +dbus debug"
+IUSE="pam doc +ssl +dbus debug"
 
 #Tests fail if openssl is not compiled with -DPURIFY. Gentoo's isn't. FAIL!
 RESTRICT="test"
@@ -26,7 +26,6 @@ RDEPEND="sys-libs/readline
 	sys-libs/zlib
 	dbus? (  sys-apps/dbus )
 	dev-libs/openssl
-	qt3? ( x11-libs/qt:3 )
 	pam? ( sys-libs/pam )
 	virtual/c++-tr1-functional"
 DEPEND="${RDEPEND}
@@ -66,7 +65,7 @@ src_configure() {
 	export CXX=$(tc-getCXX)
 
 	econf	$(use_with pam) \
-		$(use_with qt3 qt) \
+		--without-qt \
 		$(use_enable debug) \
 		$(use_with dbus) \
 		--without-valgrind \
