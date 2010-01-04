@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.2 2009/12/27 19:35:36 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.3 2010/01/04 23:32:34 maekke Exp $
+
+  04 Jan 2010; Markus Meier <maekke@gentoo.org> hoe-seattlerb-1.2.1.ebuild:
+  add ~x86, bug #298367
 
   27 Dec 2009; Jeroen Roovers <jer@gentoo.org> hoe-seattlerb-1.2.1.ebuild:
   Marked ~hppa (bug #298350).
