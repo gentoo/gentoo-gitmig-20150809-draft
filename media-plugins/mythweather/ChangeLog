@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythweather
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.59 2009/11/18 00:23:26 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.60 2010/01/04 05:58:18 cardoe Exp $
+
+*mythweather-0.22_p22991 (04 Jan 2010)
+
+  04 Jan 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythweather-0.22_p22991.ebuild:
+  version bump. fixes some grabbers
 
   18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   replace media-tv herd for MythTV
