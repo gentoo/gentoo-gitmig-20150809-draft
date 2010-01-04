@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.0.ebuild,v 1.1 2009/06/09 18:38:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.1.ebuild,v 1.1 2010/01/04 13:31:29 fauli Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="A Query Object Framework"
 HOMEPAGE="http://qof.alioth.debian.org/"
-SRC_URI="https://alioth.debian.org/frs/download.php/3029/${P}.tar.gz"
+SRC_URI="https://alioth.debian.org/frs/download.php/3059/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="2"
@@ -28,7 +28,7 @@ DEPEND="${DEPEND}
 
 src_prepare() {
 	# Upstream not willing to remove those stupid flags...
-	epatch "${FILESDIR}/${P}-remove_spurious_CFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-0.8.0-remove_spurious_CFLAGS.patch"
 }
 
 src_configure() {
