@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.3-r1.ebuild,v 1.1 2010/01/04 08:19:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.3-r1.ebuild,v 1.2 2010/01/04 16:15:26 cardoe Exp $
 
 EAPI="2"
+
+inherit multilib
 
 DESCRIPTION="VDPAU wrapper and trace libraries"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/VDPAU"
