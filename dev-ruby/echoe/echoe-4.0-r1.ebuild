@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/echoe-4.0-r1.ebuild,v 1.1 2009/12/25 14:39:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/echoe-4.0-r1.ebuild,v 1.2 2010/01/04 11:15:44 fauli Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://blog.evanweaver.com/files/doc/fauna/echoe/files/"
 
 LICENSE="AFL-3.0 MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~amd64-linux ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/highline"

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/actionwebservice-2.3.4.ebuild,v 1.1 2009/10/12 22:13:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/actionwebservice-2.3.4.ebuild,v 1.2 2010/01/04 11:05:10 fauli Exp $
 
 MY_OWNER="dougbarth"
 
@@ -14,7 +14,7 @@ SRC_URI="http://gems.github.com/gems/${MY_P}.gem"
 
 LICENSE="MIT"
 SLOT="2.3"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND="=dev-ruby/actionpack-2.3*

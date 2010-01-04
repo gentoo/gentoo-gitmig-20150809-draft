@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fastthread
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.36 2009/12/26 08:30:01 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.37 2010/01/04 11:19:57 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  fastthread-1.0.7-r1.ebuild:
+  Transfer Prefix keywords
 
   26 Dec 2009; Hans de Graaff <graaff@gentoo.org>
   fastthread-1.0.7-r1.ebuild:

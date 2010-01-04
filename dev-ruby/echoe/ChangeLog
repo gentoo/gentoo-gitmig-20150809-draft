@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/echoe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.2 2009/12/25 14:39:02 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.3 2010/01/04 11:15:44 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> echoe-4.0-r1.ebuild:
+  Transfer Prefix keywords
 
 *echoe-4.0-r1 (25 Dec 2009)
 

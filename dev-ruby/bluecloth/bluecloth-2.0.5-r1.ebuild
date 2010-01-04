@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.5-r1.ebuild,v 1.1 2009/12/15 15:09:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.5-r1.ebuild,v 1.2 2010/01/04 11:06:25 fauli Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -13,7 +13,7 @@ SRC_URI="http://www.deveiate.org/code/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend ">=dev-ruby/rdoc-2.4.1"

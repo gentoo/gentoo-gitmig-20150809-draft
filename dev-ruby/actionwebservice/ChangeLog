@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionwebservice
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.74 2009/10/22 08:10:58 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.75 2010/01/04 11:05:10 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  actionwebservice-2.3.4.ebuild:
+  Transfer Prefix keywords
 
   22 Oct 2009; Alex Legler <a3li@gentoo.org> -actionwebservice-1.2.6.ebuild:
   Removing rails-1 version

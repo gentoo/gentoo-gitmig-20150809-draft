@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/highline
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.27 2009/12/25 13:57:27 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.28 2010/01/04 11:22:17 fauli Exp $
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  highline-1.5.1-r2.ebuild:
+  Transfer Prefix keywords
 
 *highline-1.5.1-r2 (25 Dec 2009)
 
