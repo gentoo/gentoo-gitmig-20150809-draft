@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.73 2009/12/22 19:05:35 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.74 2010/01/05 19:42:49 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org> mysql-ruby-2.8.1.ebuild:
+  ppc stable #296340
 
   22 Dec 2009; Brent Baude <ranger@gentoo.org> mysql-ruby-2.8.1.ebuild:
   stable ppc64, bug 296340
