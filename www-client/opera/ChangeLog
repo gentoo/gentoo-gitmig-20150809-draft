@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.435 2010/01/03 23:04:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.436 2010/01/05 18:15:54 jer Exp $
+
+  05 Jan 2010; Jeroen Roovers <jer@gentoo.org> opera-10.50_pre6177.ebuild:
+  LINGUAS=en should not be optional (bug #299444).
 
   03 Jan 2010; Jeroen Roovers <jer@gentoo.org> opera-10.50_pre6177.ebuild:
   Fix category: media-plugins.
