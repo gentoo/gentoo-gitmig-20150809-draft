@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/papyon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.5 2009/10/19 16:26:40 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.6 2010/01/05 04:24:22 josejx Exp $
+
+  05 Jan 2010; Joseph Jezak <josejx@gentoo.org> papyon-0.4.2.ebuild:
+  Marked ~ppc.
 
   19 Oct 2009; Raúl Porcel <armin76@gentoo.org> papyon-0.4.2.ebuild:
   Add ~ia64/~sparc wrt #283065

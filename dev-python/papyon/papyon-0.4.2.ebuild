@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/papyon-0.4.2.ebuild,v 1.4 2009/10/19 16:26:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/papyon-0.4.2.ebuild,v 1.5 2010/01/05 04:24:22 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libxslt"
