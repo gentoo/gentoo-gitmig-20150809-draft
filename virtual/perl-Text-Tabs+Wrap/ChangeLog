@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Text-Tabs+Wrap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Tabs+Wrap/ChangeLog,v 1.7 2009/12/14 19:31:01 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Tabs+Wrap/ChangeLog,v 1.8 2010/01/05 19:24:46 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org>
+  perl-Text-Tabs+Wrap-2009.0305.ebuild:
+  ppc stable #288026
 
   14 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   perl-Text-Tabs+Wrap-2009.0305.ebuild:
