@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.4.1.ebuild,v 1.6 2009/10/29 11:02:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.4.1.ebuild,v 1.7 2010/01/05 01:57:36 yngwin Exp $
 
 EAPI="2"
 
@@ -13,15 +13,12 @@ HOMEPAGE="http://www.coin3d.org/"
 SLOT="0"
 LICENSE="|| ( GPL-2 PEL )"
 KEYWORDS="~amd64 x86"
-IUSE="doc qt4"
+IUSE="doc"
 
 RDEPEND=">=media-libs/coin-2.4.4
-	qt4? (
-		x11-libs/qt-gui:4[qt3support]
-		x11-libs/qt-opengl:4[qt3support]
-		x11-libs/qt-qt3support:4
-	)
-	!qt4? ( x11-libs/qt:3[opengl] )"
+	x11-libs/qt-gui:4[qt3support]
+	x11-libs/qt-opengl:4[qt3support]
+	x11-libs/qt-qt3support:4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
@@ -31,11 +28,9 @@ src_prepare() {
 }
 
 src_configure() {
-	if use qt4; then
-		export PATH="/usr/bin/:${PATH}"
-		export QTDIR="/usr"
-		export CONFIG_QTLIBS="$(pkg-config --libs QtGui)"
-	fi
+	export PATH="/usr/bin/:${PATH}"
+	export QTDIR="/usr"
+	export CONFIG_QTLIBS="$(pkg-config --libs QtGui)"
 
 	append-ldflags $(no-as-needed)
 
