@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/rr
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.1 2010/01/05 17:47:51 flameeyes Exp $
+
+*rr-0.10.5 (05 Jan 2010)
+
+  05 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> +rr-0.10.5.ebuild,
+  +metadata.xml:
+  Initial import of rr as needed by the gemcutter testsuite. Warning:
+  license unknown.
+
