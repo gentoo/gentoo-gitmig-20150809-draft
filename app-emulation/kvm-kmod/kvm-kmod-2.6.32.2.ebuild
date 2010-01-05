@@ -1,17 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-85.ebuild,v 1.2 2009/04/28 14:23:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.32.2.ebuild,v 1.1 2010/01/05 22:35:12 cardoe Exp $
 
 EAPI="2"
 
 inherit eutils linux-mod
 
-MY_PN="${PN}-devel"
-MY_P="${MY_PN}-${PV}"
-
-# Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
-PATCHSET="kvm-patches-20090218"
-SRC_URI="mirror://sourceforge/kvm/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/kvm/${P}.tar.bz2"
 
 DESCRIPTION="Kernel-based Virtual Machine kernel modules"
 HOMEPAGE="http://www.linux-kvm.org"
@@ -23,10 +18,8 @@ IUSE=""
 RESTRICT="test"
 
 RDEPEND=""
-DEPEND="${RDEPEND}
-	!<app-emulation/kvm-85"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	linux-info_pkg_setup
 	if ! linux_chkconfig_present KVM; then
@@ -40,9 +33,9 @@ pkg_setup() {
 		die "KVM support not detected!"
 	fi
 	BUILD_TARGETS="all"
-	MODULE_NAMES="kvm(kvm:${S}:${S}/x86)"
-	MODULE_NAMES="${MODULE_NAMES} kvm-intel(kvm:${S}:${S}/x86)"
-	MODULE_NAMES="${MODULE_NAMES} kvm-amd(kvm:${S}:${S}/x86)"
+	MODULE_NAMES="kvm(kernel/arch/x86/kvm/:${S}:${S}/x86)"
+	MODULE_NAMES="${MODULE_NAMES} kvm-intel(kernel/arch/x86/kvm/:${S}:${S}/x86)"
+	MODULE_NAMES="${MODULE_NAMES} kvm-amd(kernel/arch/x86/kvm/:${S}:${S}/x86)"
 	linux-mod_pkg_setup
 }
 
@@ -65,3 +58,10 @@ src_compile() {
 src_install() {
 	linux-mod_src_install
 }
+
+pkg_preinst() {
+	find /lib/modules/${KV_FULL} -name 'kvm*.ko' -type f -delete
+
+	linux-mod_pkg_preinst
+}
+

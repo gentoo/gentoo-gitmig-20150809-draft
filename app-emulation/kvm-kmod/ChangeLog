@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/kvm-kmod
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.5 2009/09/21 14:59:42 dang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.6 2010/01/05 22:35:12 cardoe Exp $
+
+*kvm-kmod-2.6.32.2 (05 Jan 2010)
+
+  05 Jan 2010; Doug Goldstein <cardoe@gentoo.org> +kvm-kmod-2.6.32.2.ebuild,
+  -kvm-kmod-85.ebuild, -kvm-kmod-86.ebuild, -kvm-kmod-88-r1.ebuild,
+  metadata.xml:
+  change to new style kvm-kmod upstream package
 
   21 Sep 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Remove myself as maintainer
