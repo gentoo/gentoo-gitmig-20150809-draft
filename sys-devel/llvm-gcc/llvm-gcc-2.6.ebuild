@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.6.ebuild,v 1.2 2009/10/27 22:59:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.6.ebuild,v 1.3 2010/01/05 10:19:26 voyageur Exp $
 
 EAPI=2
 inherit multilib
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/binutils-2.18
 	>=sys-devel/bison-1.875
-	test? ( dev-util/dejagnu )"
+	test? ( dev-util/dejagnu
+		sys-devel/autogen )"
 
 S=${WORKDIR}/llvm-gcc${MY_PV}.source/obj
 
