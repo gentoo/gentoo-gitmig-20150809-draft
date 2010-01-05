@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.47 2010/01/03 12:35:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.48 2010/01/05 04:05:23 josejx Exp $
+
+  05 Jan 2010; Joseph Jezak <josejx@gentoo.org> cppunit-1.12.1.ebuild:
+  Marked ppc/ppc64 stable for bug #299403.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   cppunit-1.12.1.ebuild:
