@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/hyphen
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.1 2010/01/05 20:41:55 ssuominen Exp $
+
+*hyphen-2.4 (05 Jan 2010)
+
+  05 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +hyphen-2.4.ebuild:
+  Initial commit.
+
