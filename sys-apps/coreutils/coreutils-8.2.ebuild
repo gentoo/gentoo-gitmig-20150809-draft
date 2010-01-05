@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.2.ebuild,v 1.1 2009/12/11 20:21:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.2.ebuild,v 1.2 2010/01/05 05:01:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCH_VER="1"
+PATCH_VER="2"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.gz
@@ -16,7 +16,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl caps gmp nls selinux static vanilla xattr"
+IUSE="acl caps gmp nls selinux static unicode vanilla xattr"
 
 RDEPEND="caps? ( sys-libs/libcap )
 	gmp? ( dev-libs/gmp )
@@ -40,6 +40,7 @@ src_unpack() {
 	cd "${S}"
 
 	if ! use vanilla ; then
+		use unicode || rm -f "${WORKDIR}"/patch/000_all_coreutils-i18n.patch
 		EPATCH_SUFFIX="patch" \
 		PATCHDIR="${WORKDIR}/patch" \
 		EPATCH_EXCLUDE="001_all_coreutils-gen-progress-bar.patch" \
