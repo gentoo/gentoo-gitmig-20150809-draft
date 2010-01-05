@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.24.1.ebuild,v 1.5 2009/09/14 21:26:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.24.1.ebuild,v 1.6 2010/01/05 04:38:50 josejx Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Empathy"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="applet python spell test"
 
 RDEPEND=">=dev-libs/dbus-glib-0.51
