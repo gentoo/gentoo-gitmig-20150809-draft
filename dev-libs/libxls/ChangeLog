@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libxls
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxls/ChangeLog,v 1.1 2010/01/05 23:42:56 ssuominen Exp $
+
+*libxls-0.2.0 (05 Jan 2010)
+
+  05 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +libxls-0.2.0.ebuild:
+  Initial commit.
+
