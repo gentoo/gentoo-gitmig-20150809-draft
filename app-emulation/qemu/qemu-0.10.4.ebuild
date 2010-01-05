@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.10.4.ebuild,v 1.3 2009/05/19 18:13:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.10.4.ebuild,v 1.4 2010/01/05 23:58:40 flameeyes Exp $
 
 EAPI="2"
 
@@ -105,7 +105,7 @@ src_configure() {
 		conf_opts="$conf_opts --enable-linux-user"
 	else
 		einfo "Disabling usermode emulation (no usermode targets specified)"
-		conf_opts="--disable-linux-user"
+		conf_opts="$conf_opts --disable-linux-user"
 	fi
 
 #	use fdt || conf_opts="$conf_opts --disable-fdt"

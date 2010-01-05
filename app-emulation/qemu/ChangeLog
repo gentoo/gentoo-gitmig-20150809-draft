@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.76 2009/12/15 16:35:26 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.77 2010/01/05 23:58:40 flameeyes Exp $
+
+  05 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
+  qemu-0.10.4.ebuild, qemu-0.10.5.ebuild, qemu-0.10.6.ebuild,
+  qemu-0.11.0.ebuild, qemu-0.11.1.ebuild:
+  Fix trivial mistake. Closes bug #280121 by Kerin Millar.
 
   15 Dec 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   change to qemu herd
