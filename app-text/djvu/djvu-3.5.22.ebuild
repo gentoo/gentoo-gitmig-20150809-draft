@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.22.ebuild,v 1.3 2010/01/05 03:08:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.22.ebuild,v 1.4 2010/01/05 11:17:24 ssuominen Exp $
 
 EAPI=1
 inherit fdo-mime flag-o-matic eutils multilib toolchain-funcs
@@ -46,8 +46,9 @@ src_compile() {
 	fi
 
 	# We install all desktop files by hand and Qt3 is deprecated
-	econf --disable-desktopfiles \
-		--without- qt \
+	econf \
+		--disable-desktopfiles \
+		--without-qt \
 		$(use_enable xml xmltools) \
 		$(use_with jpeg) \
 		$(use_with tiff) \
