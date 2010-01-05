@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.0.ebuild,v 1.3 2010/01/01 14:59:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.0.ebuild,v 1.4 2010/01/05 02:38:30 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 
-PATCH_VER="1"
+PATCH_VER="2"
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://ftp.gnu.org/gnu/gdb/${P}.tar.bz2
