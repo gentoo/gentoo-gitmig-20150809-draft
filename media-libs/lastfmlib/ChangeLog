@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lastfmlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/ChangeLog,v 1.7 2009/11/03 19:32:35 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/ChangeLog,v 1.8 2010/01/05 14:45:56 ssuominen Exp $
+
+*lastfmlib-0.4.0 (05 Jan 2010)
+
+  05 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +lastfmlib-0.4.0.ebuild:
+  Version bump wrt #299686, thanks to BT for reporting.
 
   03 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   lastfmlib-0.3.0.ebuild:
