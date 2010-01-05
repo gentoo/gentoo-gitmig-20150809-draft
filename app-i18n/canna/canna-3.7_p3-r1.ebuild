@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3-r1.ebuild,v 1.1 2009/09/21 02:55:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3-r1.ebuild,v 1.2 2010/01/05 13:28:09 hwoarang Exp $
 
 inherit cannadic eutils multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp/canna/9565/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=sys-apps/sed-4
