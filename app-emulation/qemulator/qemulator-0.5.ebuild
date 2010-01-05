@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/qemulator-0.5.ebuild,v 1.3 2010/01/05 12:51:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/qemulator-0.5.ebuild,v 1.4 2010/01/05 12:58:43 fauli Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A gtk/glade front-end for Qemu"
 HOMEPAGE="http://qemulator.createweb.de/"
-SRC_URI="http://qemulator.createweb.de/phocadownload/qemulator-0.5.tar.gz"
+SRC_URI="http://qemulator.createweb.de/phocadownload/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
