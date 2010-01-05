@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Validate
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.43 2008/11/09 11:51:28 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.44 2010/01/05 06:00:40 yngwin Exp $
+
+*PEAR-Validate-0.8.3 (05 Jan 2010)
+
+  05 Jan 2010; Ben de Groot <yngwin@gentoo.org> +PEAR-Validate-0.8.3.ebuild:
+  Version bump
 
   09 Nov 2008; Mike Frysinger <vapier@gentoo.org>
   PEAR-Validate-0.8.1.ebuild:
