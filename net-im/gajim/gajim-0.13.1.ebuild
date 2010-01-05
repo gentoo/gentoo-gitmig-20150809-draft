@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.1.ebuild,v 1.1 2010/01/04 19:36:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.1.ebuild,v 1.2 2010/01/05 07:22:35 pva Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="avahi crypt dbus gnome idle libnotify nls spell srv trayicon X xhtml"
 COMMON_DEPEND=">=dev-python/pygtk-2.12.0"
 
 DEPEND="${COMMON_DEPEND}
-	sys-devel/gettext
+	>=sys-devel/gettext-0.17-r1
 	>=dev-util/intltool-0.40.1
 	dev-util/pkgconfig"
 
