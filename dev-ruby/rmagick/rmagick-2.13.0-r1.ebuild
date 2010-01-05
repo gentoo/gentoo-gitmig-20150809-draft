@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.1 2010/01/05 19:41:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.2 2010/01/05 20:02:22 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -19,7 +19,7 @@ SRC_URI="mirror://rubyforge/rmagick/RMagick-${PV}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="doc"
 
 # hdri causes extensive changes in the imagemagick internals, and
 # rmagick is not ready to deal with those, see bug 184356.
@@ -32,6 +32,8 @@ each_ruby_configure() {
 	pushd ext/RMagick
 	${RUBY} extconf.rb || die "extconf.rb failed"
 	popd
+
+
 }
 
 each_ruby_compile() {
@@ -50,4 +52,8 @@ all_ruby_install() {
 
 	docinto examples
 	dodoc examples/* || die "failed to install examples"
+
+	if use doc ; then
+		dohtml -r doc || die "failed to install documentation"
+	fi
 }
