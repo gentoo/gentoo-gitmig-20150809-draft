@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmldiff
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.5 2009/10/25 17:07:58 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.6 2010/01/05 04:32:20 josejx Exp $
+
+  05 Jan 2010; Joseph Jezak <josejx@gentoo.org> xmldiff-0.6.8.ebuild,
+  xmldiff-0.6.9.ebuild:
+  Marked ~ppc.
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove coldwind from metadata.xml (#181764)
