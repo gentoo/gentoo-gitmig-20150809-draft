@@ -1,31 +1,32 @@
---- src/scusibot.cpp.old        2009-01-27 15:22:39.000000000 +0100
-+++ src/scusibot.cpp    2009-01-27 15:23:10.000000000 +0100
+--- src/scusibot.cpp.old	2010-01-05 15:41:23.000000000 +0100
++++ src/scusibot.cpp	2010-01-05 15:41:46.000000000 +0100
 @@ -5,6 +5,7 @@
  #include "stationarygun.hpp"
  #include "global.hpp"
  #include <vector>
 +#include <algorithm>
-
+ 
  ScusiBot::ScusiBot()
-        : m_event( Event::EMPTY ), m_count( 0 ), m_state( IDLE ) {
---- src/spriteset.cpp.old       2009-01-27 15:26:39.000000000 +0100
-+++ src/spriteset.cpp   2009-01-27 15:27:51.000000000 +0100
-@@ -2,6 +2,7 @@
-
- #include  "spriteset.hpp"
- #include  "global.hpp"
-+#include "sprite.hpp"
-
+ 	: m_event( Event::EMPTY ), m_count( 0 ), m_state( IDLE ) {
+--- src/gameinfowindow.cpp.old	2010-01-05 15:45:09.000000000 +0100
++++ src/gameinfowindow.cpp	2010-01-05 15:46:08.000000000 +0100
+@@ -10,6 +10,8 @@
+ #include "avatarworm.hpp"
+ #include "wopsprites.hpp"
+ #include "wopsprites.cpp"
++#include "spriteset.cpp"
++#include "spritesequence.cpp"
+ #include "scorekeeper.hpp"
+ #include "wopgui.hpp"
+ 
+--- src/map.cpp.old	2010-01-05 15:46:35.000000000 +0100
++++ src/map.cpp	2010-01-05 15:47:06.000000000 +0100
+@@ -9,6 +9,8 @@
+ #include "world.hpp"
+ #include "wopsettings.hpp"
+ #include "objectpaths.hpp"
++#include "spriteset.cpp"
++#include "spritesequence.cpp"
+ 
  /**********************************************************/
-
-@@ -17,6 +18,9 @@
- #endif // SUPPRESS_COLORING
- #endif // BLACK_
-
-+/* force creation of an implementation of SpriteSet<Sprite> */
-+static SpriteSet<Sprite> foo;
-+
- /**********************************************************/
-
- template <class T>
-
+ 
