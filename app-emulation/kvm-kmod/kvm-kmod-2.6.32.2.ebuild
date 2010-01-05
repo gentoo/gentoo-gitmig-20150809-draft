@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.32.2.ebuild,v 1.1 2010/01/05 22:35:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.32.2.ebuild,v 1.2 2010/01/05 23:02:58 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -64,4 +64,3 @@ pkg_preinst() {
 
 	linux-mod_pkg_preinst
 }
-
