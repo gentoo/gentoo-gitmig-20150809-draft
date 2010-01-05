@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/tmw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.34 2009/09/30 19:50:14 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.35 2010/01/05 17:28:24 mr_bones_ Exp $
+
+  05 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org> tmw-0.0.29.1.ebuild,
+  files/tmw-0.0.29.1-desktop.patch:
+  apply desktop file patch; rerolled desktop file patch to quiet patch
+  and quiet desktop-file-validate
 
   30 Sep 2009; Tristan Heaven <nyhm@gentoo.org> tmw-0.0.29.1.ebuild:
   Add dependencies for USE=nls
