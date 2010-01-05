@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemulator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/ChangeLog,v 1.2 2008/10/12 16:51:37 lu_zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/ChangeLog,v 1.3 2010/01/05 12:51:07 fauli Exp $
+
+  05 Jan 2010; Christian Faulhammer <fauli@gentoo.org> qemulator-0.5.ebuild:
+  Change RDEPEND to something more sensible, bug 240906. Fix SRC_URI, bug
+  275206 and some minor tweaks (EAPI 2)
 
   12 Oct 2008; Luca Barbato <lu_zero@gentoo.org> qemulator-0.5.ebuild:
   fix dep and minor retouches

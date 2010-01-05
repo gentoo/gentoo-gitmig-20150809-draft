@@ -1,15 +1,17 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/qemulator-0.5.ebuild,v 1.2 2008/10/12 16:51:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/qemulator-0.5.ebuild,v 1.3 2010/01/05 12:51:07 fauli Exp $
+
+EAPI=2
 
 inherit eutils python
 
 MY_PN="${PN/q/Q}"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="a gtk/glade front-end for Qemu"
+DESCRIPTION="A gtk/glade front-end for Qemu"
 HOMEPAGE="http://qemulator.createweb.de/"
-SRC_URI="http://qemulator.createweb.de/plugins/downloads/dodownload.php?file=${MY_P}.tar.gz"
+SRC_URI="http://qemulator.createweb.de/phocadownload/qemulator-0.5.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,15 +20,13 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=dev-python/pygtk-2.8.6
-		 >=app-emulation/qemu-softmmu-0.8.1"
+		 || ( >=app-emulation/qemu-softmmu-0.8.1 app-emulation/qemu app-emulation/qemu-kvm )"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
+src_prepare() {
 	#for good directory
-	epatch ${FILESDIR}/basedir.patch
+	epatch "${FILESDIR}"/basedir.patch
 }
 
 src_install() {
