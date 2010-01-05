@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.239 2010/01/04 15:11:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.240 2010/01/05 03:59:58 josejx Exp $
+
+  05 Jan 2010; Joseph Jezak <josejx@gentoo.org> -asterisk-1.2.35.ebuild,
+  asterisk-1.2.37.ebuild:
+  Marked ppc stable for bug #295270. Removed 1.2.35 as directed by the same
+  bug.
 
 *asterisk-1.6.2.0 (04 Jan 2010)
 
