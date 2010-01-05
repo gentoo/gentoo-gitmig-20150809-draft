@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.3 2009/12/26 18:57:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.4 2010/01/05 07:54:06 pva Exp $
 
 EAPI="2"
 
@@ -90,7 +90,7 @@ src_configure() {
 			--disable-bundled-qca
 			--disable-growl
 			$(use dbus || echo '--disable-qdbus')
-			$(use debug && echo '--enable-debug')
+			$(use debug && echo '--debug')
 			$(use spell || echo '--disable-aspell')
 			$(use spell || echo '--disable-enchant')
 			$(use xscreensaver || echo '--disable-xss')
