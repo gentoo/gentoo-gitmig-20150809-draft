@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/pecl-fileinfo-1.0.4-r1.ebuild,v 1.5 2010/01/02 14:29:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/pecl-fileinfo-1.0.4-r1.ebuild,v 1.6 2010/01/05 16:24:13 jer Exp $
 
 PHP_EXT_NAME="fileinfo"
 PHP_EXT_PECL_PKG="Fileinfo"
@@ -9,7 +9,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="~amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ~ppc ppc64 sparc x86"
 
 DESCRIPTION="libmagic bindings for PHP."
 LICENSE="PHP-3"
