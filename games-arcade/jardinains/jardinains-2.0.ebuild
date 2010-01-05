@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.7 2009/10/29 07:13:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.8 2010/01/05 19:56:50 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -30,11 +30,16 @@ src_unpack() {
 	mv "Jardinains 2!" ${P}
 }
 
+src_prepare() {
+	# clean Mac fork files (bug #295782)
+	find . -type f -name "._*" -exec rm -f '{}' +
+}
+
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	exeinto "${dir}"
-	doexe jardinains
+	doexe jardinains || die
 	insinto "${dir}"
 	doins -r LICENSE.txt data help || die "doins failed"
 
