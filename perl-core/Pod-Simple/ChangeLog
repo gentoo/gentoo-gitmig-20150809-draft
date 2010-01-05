@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Pod-Simple
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.13 2009/12/18 11:54:30 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.14 2010/01/05 19:15:50 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org> Pod-Simple-3.07.ebuild:
+  ppc stable #288026
 
 *Pod-Simple-3.13 (18 Dec 2009)
 

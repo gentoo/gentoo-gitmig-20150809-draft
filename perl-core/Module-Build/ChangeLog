@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Build
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.21 2009/12/24 16:32:55 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.22 2010/01/05 19:11:09 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org> Module-Build-0.34.0201.ebuild:
+  ppc stable #288026
 
   24 Dec 2009; Jeroen Roovers <jer@gentoo.org> Module-Build-0.36.01.ebuild:
   Marked ~hppa (bug #298183).

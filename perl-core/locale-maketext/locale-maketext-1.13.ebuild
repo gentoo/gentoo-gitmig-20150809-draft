@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/locale-maketext-1.13.ebuild,v 1.7 2009/12/14 19:49:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/locale-maketext-1.13.ebuild,v 1.8 2010/01/05 19:29:44 nixnut Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/F/FE/FERREIRA/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sh sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl

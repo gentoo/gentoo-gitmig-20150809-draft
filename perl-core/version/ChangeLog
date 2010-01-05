@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/version
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.15 2009/12/18 20:01:23 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.16 2010/01/05 19:32:27 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org> version-0.77.02.ebuild:
+  ppc stable #288026
 
   18 Dec 2009; Fabian Groffen <grobian@gentoo.org> version-0.78.ebuild:
   Marked ~x86-freebsd and ~ia64-linux, bug #297410
