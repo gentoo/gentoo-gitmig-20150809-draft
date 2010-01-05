@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.2.ebuild,v 1.1 2010/01/04 17:59:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.2.ebuild,v 1.2 2010/01/05 02:01:47 mr_bones_ Exp $
 
 inherit eutils autotools multilib
 
@@ -87,7 +87,6 @@ src_unpack() {
 	einfo "Applying documentation fix."
 	sed -i -e 's:src doc etc:src etc:g' \
 		"${WORKDIR}/${P}/Makefile.am" || die "Doc fix Failed"
-
 
 	# Fix to allow parallel building.
 	# Thanks to Natanael Copa #291558
