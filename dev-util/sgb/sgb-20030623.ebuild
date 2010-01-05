@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.8 2009/09/28 21:53:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.9 2010/01/05 23:43:04 flameeyes Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake \
+	# bug #299028
+	emake -j1 \
 	CFLAGS="${CFLAGS}" \
 	SGBDIR=/usr/share/${PN} \
 	INCLUDEDIR=/usr/include/sgb \
