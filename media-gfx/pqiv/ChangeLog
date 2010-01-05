@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pqiv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.24 2009/12/25 10:54:10 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.25 2010/01/05 07:38:54 maekke Exp $
+
+  05 Jan 2010; Markus Meier <maekke@gentoo.org> pqiv-0.10.1.ebuild:
+  x86 stable, bug #298091
 
   25 Dec 2009; <hwoarang@gentoo.org> pqiv-0.10.1.ebuild:
   Stable for amd64 wrt bug #298091
