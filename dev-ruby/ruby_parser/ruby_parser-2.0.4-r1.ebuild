@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.0.4-r1.ebuild,v 1.2 2010/01/04 11:57:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.0.4-r1.ebuild,v 1.3 2010/01/05 07:00:59 graaff Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://parsetree.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/sexp-processor-3.0.1"

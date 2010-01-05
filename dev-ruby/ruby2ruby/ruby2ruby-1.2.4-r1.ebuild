@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-1.2.4-r1.ebuild,v 1.2 2010/01/04 11:51:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-1.2.4-r1.ebuild,v 1.3 2010/01/05 07:04:22 graaff Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://seattlerb.rubyforge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend "=dev-ruby/parsetree-3.0*
