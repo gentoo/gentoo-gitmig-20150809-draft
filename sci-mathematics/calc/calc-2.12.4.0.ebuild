@@ -1,31 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.11.9.3.ebuild,v 1.4 2008/01/28 20:01:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.4.0.ebuild,v 1.1 2010/01/05 21:35:27 bicatali Exp $
+
+EAPI=2
+inherit eutils
 
 DESCRIPTION="An arbitrary precision C-like arithmetic system"
 HOMEPAGE="http://www.isthe.com/chongo/tech/comp/calc/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="alpha ~amd64 ~ppc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.2"
-
-RDEPEND=">=sys-apps/less-348"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-	make \
-		T="${D}" \
+	# parallel compilation hard to fix. better to leave upstream.
+	emake -j1 \
 		DEBUG="${CFLAGS}" \
-		CALCPAGER=less \
+		CALCPAGER=${PAGER} \
 		USE_READLINE="-DUSE_READLINE" \
 		READLINE_LIB="-lreadline -lhistory -lncurses" \
-		all \
-	|| die
+		all || die "emake failed"
+
 	if echo "${LD_PRELOAD}" | grep -q "sandbox"; then
 		ewarn "Can't run check when running in sandbox - see bug #59676"
 	else
@@ -34,6 +36,6 @@ src_compile() {
 }
 
 src_install() {
-	make T="${D}" install || die
-	dodoc BUGS CHANGES COPYING COPYING-LGPL LIBRARY README
+	emake T="${D}" LIBDIR="/usr/$(get_libdir)" install || die "emake install failed"
+	dodoc BUGS CHANGES LIBRARY README
 }
