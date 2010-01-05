@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ncmpcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.23 2010/01/02 14:38:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.24 2010/01/05 02:50:48 yngwin Exp $
+
+*ncmpcpp-0.5-r1 (05 Jan 2010)
+
+  05 Jan 2010; Ben de Groot <yngwin@gentoo.org> +ncmpcpp-0.5-r1.ebuild,
+  +files/ncmpcpp-0.5-fix-toggle-command.patch:
+  Add upstream patch for bug 299463
 
 *ncmpcpp-0.5 (02 Jan 2010)
 
