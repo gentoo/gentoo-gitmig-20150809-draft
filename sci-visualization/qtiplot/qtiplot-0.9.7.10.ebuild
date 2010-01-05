@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.10.ebuild,v 1.1 2010/01/01 10:46:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.10.ebuild,v 1.2 2010/01/05 11:08:39 ssuominen Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python doc bindist"
+IUSE="bindist doc"
 
 LANGS="de es fr ja ru sv"
 for l in ${LANGS}; do
@@ -40,15 +40,15 @@ CDEPEND="
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	python? ( dev-python/sip )
+	dev-python/sip
 	doc? ( app-text/docbook-sgml-utils
 		   app-text/docbook-xml-dtd:4.2 )"
 
 RDEPEND="${CDEPEND}
-	python? ( >=dev-lang/python-2.5
-		dev-python/PyQt4[X]
-		dev-python/pygsl
-		sci-libs/scipy )"
+	>=dev-lang/python-2.5
+	dev-python/PyQt4[X]
+	dev-python/pygsl
+	sci-libs/scipy"
 
 PATCHES=(
 	"${FILESDIR}/${P}-syslibs.patch"
@@ -73,12 +73,6 @@ src_prepare() {
 		-e "s:local/${PN}:$(get_libdir)/python${PYVER}/site-packages:" \
 		qtiplot/qtiplot.pro || die " sed for qtiplot/qtiplot.pro failed"
 
-	if ! use python; then
-		sed -i \
-			-e '/^SCRIPTING_LANGS += Python/d' \
-			-e '/sipcmd/d' \
-			qtiplot/qtiplot.pro || die "sed for python option failed"
-	fi
 	sed -i \
 		-e '/INSTALLS.*.*documentation/d' \
 		-e '/manual/d' \
