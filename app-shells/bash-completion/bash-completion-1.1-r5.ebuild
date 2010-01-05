@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r5.ebuild,v 1.1 2009/12/25 02:32:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.1-r5.ebuild,v 1.2 2010/01/05 01:59:45 josejx Exp $
 
 EAPI="2"
 inherit prefix
@@ -11,7 +11,7 @@ SRC_URI="http://bash-completion.alioth.debian.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~m68k-mint"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~m68k-mint"
 IUSE=""
 
 DEPEND=""
