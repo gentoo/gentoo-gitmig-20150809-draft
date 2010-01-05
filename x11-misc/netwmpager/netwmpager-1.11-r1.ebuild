@@ -1,12 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.11-r1.ebuild,v 1.2 2009/01/09 14:16:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.11-r1.ebuild,v 1.3 2010/01/05 04:52:08 yngwin Exp $
 
 inherit eutils
 
 DESCRIPTION="EWMH (NetWM) compatible pager. Works with Openbox and other EWMH
 compliant window managers."
-HOMEPAGE="http://onion.dynserv.net/~timo/netwmpager.html"
+#HOMEPAGE="http://onion.dynserv.net/~timo/netwmpager.html" # bug 237240
+HOMEPAGE="http://packages.gentoo.org/package/x11-misc/netwmpager"
 SRC_URI="http://onion.dynserv.net/~timo/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
