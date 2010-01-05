@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/neatx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.6 2009/11/25 13:58:58 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.7 2010/01/05 14:39:32 voyageur Exp $
+
+*neatx-0.3.1_p43-r2 (05 Jan 2010)
+
+  05 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +neatx-0.3.1_p43-r2.ebuild:
+  Fix documentation install path, bug #297971
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> neatx-0.3.1_p43-r1.ebuild:
   x86 stable, bug #291619
