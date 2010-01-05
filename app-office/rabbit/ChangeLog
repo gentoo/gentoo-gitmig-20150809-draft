@@ -1,6 +1,9 @@
 # ChangeLog for app-office/rabbit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.8 2009/12/26 19:20:29 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.9 2010/01/05 16:37:24 graaff Exp $
+
+  05 Jan 2010; Hans de Graaff <graaff@gentoo.org> -rabbit-0.6.1.ebuild:
+  Remove old version.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> rabbit-0.6.1.ebuild,
   rabbit-0.6.3.ebuild:
