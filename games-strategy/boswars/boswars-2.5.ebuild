@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.5.ebuild,v 1.3 2009/06/21 00:59:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.5.ebuild,v 1.4 2010/01/05 08:39:25 mr_bones_ Exp $
 
-inherit eutils games
+EAPI=2
+inherit toolchain-funcs eutils games
 
 DESCRIPTION="Futuristic real-time strategy game"
 HOMEPAGE="http://www.boswars.org/"
@@ -15,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/lua
-	media-libs/libsdl
+	media-libs/libsdl[audio,video]
 	media-libs/libpng
 	media-libs/libvorbis
 	media-libs/libtheora
@@ -27,9 +28,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}-src
 
-src_unpack() {
-	unpack ${A/bos.png}
-	cd "${S}"
+src_prepare() {
 	rm -f doc/{README-SDL.txt,guichan-copyright.txt}
 	epatch \
 		"${FILESDIR}"/${P}-gentoo.patch \
@@ -46,7 +45,9 @@ src_unpack() {
 }
 
 src_compile() {
-	scons || die "scons failed"
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[:space:]*[0-9]\+\).*/\1/; p }")
+
+	scons CXX=$(tc-getCXX) ${sconsopts} || die "scons failed"
 }
 
 src_install() {
