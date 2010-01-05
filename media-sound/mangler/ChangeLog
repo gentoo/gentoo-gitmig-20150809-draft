@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mangler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/ChangeLog,v 1.4 2009/12/02 19:09:39 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/ChangeLog,v 1.5 2010/01/05 04:35:47 yngwin Exp $
+
+*mangler-1.0.1 (05 Jan 2010)
+
+  05 Jan 2010; Ben de Groot <yngwin@gentoo.org> +mangler-1.0.1.ebuild:
+  Version bump
 
   02 Dec 2009; Ben de Groot <yngwin@gentoo.org> mangler-1.0.0.ebuild:
   Force the use of the newer upstream tarball, so we can drop the maintainer
