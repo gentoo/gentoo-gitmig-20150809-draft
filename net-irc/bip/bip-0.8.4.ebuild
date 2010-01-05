@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.1.ebuild,v 1.2 2009/08/27 18:44:57 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.4.ebuild,v 1.1 2010/01/05 10:30:42 a3li Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://bip.t1r.net/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug ssl vim-syntax oidentd"
+IUSE="debug noctcp ssl vim-syntax oidentd"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
@@ -22,16 +22,15 @@ RDEPEND="${DEPEND}
 	oidentd? ( >=net-misc/oidentd-2.0 )"
 
 src_prepare() {
-	# configure broken: --disable-oidentd enables it, too
-	epatch "${FILESDIR}/${PN}-configure-oidentd.patch"
+	use noctcp || return
 
-	eautoreconf
+	sed -i -e '/irc_privmsg_check_ctcp(server, line);/s:^://:' src/irc.c || die
 }
 
 src_configure() {
 	econf \
-		$(use_enable ssl openssl)\
-		$(use_enable debug)\
+		$(use_with ssl openssl) \
+		$(use_enable debug) \
 		$(use_enable oidentd)
 }
 

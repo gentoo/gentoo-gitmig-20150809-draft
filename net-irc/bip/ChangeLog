@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/bip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.8 2009/08/27 18:44:57 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.9 2010/01/05 10:30:42 a3li Exp $
+
+*bip-0.8.4 (05 Jan 2010)
+
+  05 Jan 2010; Alex Legler <a3li@gentoo.org> -bip-0.8.1.ebuild,
+  +bip-0.8.4.ebuild, metadata.xml:
+  Version bump, add 'noctcp' option to disable automatic CTCP VERSION
+  replies. Remove old version
 
 *bip-0.8.2 (27 Aug 2009)
 
