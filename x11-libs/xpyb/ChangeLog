@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.9 2010/01/03 21:32:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.10 2010/01/05 16:43:09 scarabeus Exp $
+
+*xpyb-1.2-r1 (05 Jan 2010)
+
+  05 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xpyb-1.2-r1.ebuild:
+  Revision bump since the patch was bad idea.
 
 *xpyb-1.2 (03 Jan 2010)
 
