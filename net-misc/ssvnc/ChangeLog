@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ssvnc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.6 2009/12/04 08:19:54 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.7 2010/01/05 16:24:59 vapier Exp $
+
+  05 Jan 2010; Mike Frysinger <vapier@gentoo.org> ssvnc-1.0.24.ebuild:
+  Mark amd64/x86 stable.
 
 *ssvnc-1.0.24 (04 Dec 2009)
 
