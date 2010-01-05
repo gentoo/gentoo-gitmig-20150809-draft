@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.0.ebuild,v 1.1 2010/01/05 20:09:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.0.ebuild,v 1.2 2010/01/05 23:03:16 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -29,7 +29,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/patches-0.6.0/cflags.diff
 	epatch "${FILESDIR}"/patches-0.6.0/hangcheck.diff
 	epatch "${FILESDIR}"/patches-0.7.x/noad-0.7.0_gcc-4.4.diff
-
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
 		sed -e "s:include/ffmpeg:include/libavcodec:g" -i configure.ac
@@ -94,4 +93,3 @@ pkg_postinst() {
 	elog "up from this version, noad works with .ts file structur"
 	elog "used in comming up version >=vdr-1.7.4"
 }
-
