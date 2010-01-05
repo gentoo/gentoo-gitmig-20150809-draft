@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.63 2009/12/15 19:47:37 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.64 2010/01/05 18:45:38 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org> perl-CGI-3.48.ebuild:
+  ppc stable #288026
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> perl-CGI-3.42.ebuild,
   perl-CGI-3.43.ebuild, perl-CGI-3.44.ebuild, perl-CGI-3.45.ebuild,
