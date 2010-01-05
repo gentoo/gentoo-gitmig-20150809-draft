@@ -1,19 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.1 2009/09/23 03:19:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.2 2010/01/05 03:44:21 vapier Exp $
 
 EAPI="2"
 
+inherit flag-o-matic
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://smartmontools.svn.sourceforge.net/svnroot/smartmontools/trunk/smartmontools"
 	ESVN_PROJECT="smartmontools"
-	ECLASS_NEED='subversion autotools'
+	inherit subversion autotools
 	SRC_URI=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 fi
-inherit flag-o-matic ${ECLASS_NEED}
 
 DESCRIPTION="control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.)"
 HOMEPAGE="http://smartmontools.sourceforge.net/"
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	if [[ ${PV} == "9999" ]]; then
+	if [[ ${PV} == "9999" ]] ; then
 		#./autogen.sh
 		eautoreconf
 	fi
@@ -43,28 +43,19 @@ src_prepare() {
 src_configure() {
 	use minimal && einfo "Skipping the monitoring daemon for minimal build."
 	use static && append-ldflags -static
-	econf || die
-}
-
-src_compile() {
-	emake || die
+	econf \
+		--with-docdir="/usr/share/doc/${PF}" \
+		--with-initscriptdir="/toss-it-away" \
+		|| die
 }
 
 src_install() {
-	dosbin smartctl || die "dosbin smartctl"
-	dodoc AUTHORS CHANGELOG NEWS README TODO WARNINGS
-	doman smartctl.8
-	if ! use minimal; then
-		dosbin smartd || die "dosbin smartd"
-		doman smartd*.[58]
-		newdoc smartd.conf smartd.conf.example
-		docinto examplescripts
-		dodoc examplescripts/*
-		rm -f "${D}"/usr/share/doc/${PF}/examplescripts/Makefile*
-
-		insinto /etc
-		doins smartd.conf
-
+	if use minimal ; then
+		dosbin smartctl || die
+		doman smartctl.8
+	else
+		emake install DESTDIR="${D}" || die
+		rm -rf "${D}"/toss-it-away
 		newinitd "${FILESDIR}"/smartd.rc smartd
 		newconfd "${FILESDIR}"/smartd.confd smartd
 	fi
