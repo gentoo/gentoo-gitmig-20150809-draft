@@ -1,6 +1,14 @@
 # ChangeLog for sci-calculators/transcalc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/transcalc/ChangeLog,v 1.4 2007/02/09 05:22:33 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/transcalc/ChangeLog,v 1.5 2010/01/05 22:53:40 bicatali Exp $
+
+*transcalc-0.14-r1 (05 Jan 2010)
+
+  05 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -transcalc-0.14.ebuild, +transcalc-0.14-r1.ebuild,
+  +files/transcalc-0.14-fd-perm.patch, metadata.xml:
+  Added a patch from Debian on file permission, fixed some syntax errors,
+  and cleaned up
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
