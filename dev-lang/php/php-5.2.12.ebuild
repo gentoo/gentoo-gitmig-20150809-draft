@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.12.ebuild,v 1.7 2010/01/05 02:24:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.12.ebuild,v 1.8 2010/01/05 19:56:43 armin76 Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
 IUSE="cli cgi ${CGI_SAPI_USE} ${APACHE2_SAPI_USE} fastbuild"
 
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
