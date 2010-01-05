@@ -1,6 +1,13 @@
 # ChangeLog for www-client/uzbl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.16 2009/12/23 10:45:26 wired Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.17 2010/01/05 20:35:59 wired Exp $
+
+*uzbl-2010.01.05 (05 Jan 2010)
+
+  05 Jan 2010; Alex Alexander <wired@gentoo.org> -uzbl-2009.12.22.ebuild,
+  +uzbl-2010.01.05.ebuild:
+  version bump, fixes security issue with javascript. for more details read
+  http://www.uzbl.org/news.php?id=22
 
 *uzbl-2009.12.22 (23 Dec 2009)
 
