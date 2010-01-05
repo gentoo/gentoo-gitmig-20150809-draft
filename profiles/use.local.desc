@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5153 2010/01/05 06:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5154 2010/01/05 10:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2321,6 +2321,7 @@ net-im/skype:qt-static - Installs binaries statically linked to Qt
 net-im/tkabber:extras - Enables extra non official patches
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-irc/atheme:largenet - Enable support/tweaks for large networks
+net-irc/bip:noctcp - Disable the automatic CTCP VERSION reply which is often exploited by malicious people to cause a DoS (reconnect due to flooding). 
 net-irc/bip:oidentd - Enable oidentd support
 net-irc/ezbounce:boost - Compile against dev-libs/boost libraries
 net-irc/inspircd:openssl - Build dev-libs/openssl module
