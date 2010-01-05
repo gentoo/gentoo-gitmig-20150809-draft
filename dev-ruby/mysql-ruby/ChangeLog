@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.74 2010/01/05 19:42:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.75 2010/01/05 20:04:39 graaff Exp $
+
+  05 Jan 2010; Hans de Graaff <graaff@gentoo.org> -mysql-ruby-2.7.5.ebuild,
+  -mysql-ruby-2.8.ebuild:
+  Remove old versions.
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> mysql-ruby-2.8.1.ebuild:
   ppc stable #296340
