@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.74 2009/12/29 18:19:33 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.75 2010/01/05 18:36:15 nixnut Exp $
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org> gst-python-0.10.16.ebuild:
+  ppc stable #290343
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org> gst-python-0.10.16.ebuild:
   ia64/sparc stable wrt #290343
