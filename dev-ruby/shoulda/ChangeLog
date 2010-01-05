@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/shoulda
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.1 2010/01/05 17:51:44 flameeyes Exp $
+
+*shoulda-2.10.2 (05 Jan 2010)
+
+  05 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +shoulda-2.10.2.ebuild, +metadata.xml:
+  Initial import of shoulda as needed by the gemcutter testsuite.
+
