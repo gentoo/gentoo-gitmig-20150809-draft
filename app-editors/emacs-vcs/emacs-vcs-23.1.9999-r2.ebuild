@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.1.9999-r2.ebuild,v 1.2 2010/01/04 20:31:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.1.9999-r2.ebuild,v 1.3 2010/01/05 08:17:40 ulm Exp $
 
 EAPI=2
 
@@ -8,9 +8,9 @@ inherit autotools elisp-common eutils flag-o-matic
 
 if [ "${PV##*.}" = "9999" ]; then
 	inherit bzr
-	EMACS_BRANCH="emacs-23"
+	EMACS_BRANCH="trunk"
 	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/emacs/${EMACS_BRANCH}/"
-	EBZR_CACHE_DIR="emacs-${EMACS_BRANCH#emacs-}"
+	EBZR_CACHE_DIR="emacs-${EMACS_BRANCH}"
 	SRC_URI=""
 else
 	SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
@@ -82,13 +82,6 @@ pkg_setup() {
 		ewarn "GNU Emacs upstream has moved from CVS to Bazaar."
 		ewarn "Therefore, you may remove the old CVS directory:"
 		ewarn "rm -rf ${cvsdir}"
-	fi
-
-	local olddir="${EBZR_STORE_DIR}/emacs-trunk"
-	if [ -d "${EBZR_STORE_DIR}/emacs-trunk" ]; then
-		ewarn "GNU Emacs upstream has renamed the \"trunk\" to \"emacs-23\"."
-		ewarn "Therefore, you may remove the old BZR directory:"
-		ewarn "rm -rf ${olddir}"
 	fi
 }
 
