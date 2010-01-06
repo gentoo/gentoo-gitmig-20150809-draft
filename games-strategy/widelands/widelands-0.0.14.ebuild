@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.4 2009/12/04 17:04:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.5 2010/01/06 22:44:35 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils versionator games
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[video]
-	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/sdl-image[png]
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-net
 	media-libs/sdl-ttf
 	media-libs/sdl-gfx
