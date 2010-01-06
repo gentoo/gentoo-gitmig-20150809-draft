@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.56 2010/01/02 16:30:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.57 2010/01/06 20:16:25 ranger Exp $
+
+  06 Jan 2010; Brent Baude <ranger@gentoo.org> ming-0.4.0_rc2.ebuild:
+  Marking ming-0.4.0_rc2 ppc64 for bug 297476
 
   02 Jan 2010; Markus Meier <maekke@gentoo.org> ming-0.4.0_rc2.ebuild:
   arm stable, bug #297476
