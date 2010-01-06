@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.2.1.ebuild,v 1.2 2009/09/30 16:53:17 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.2.1.ebuild,v 1.3 2010/01/06 02:48:07 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4 versionator
@@ -25,6 +25,7 @@ src_prepare() {
 	sed -i \
 		-e "s:qApp->applicationDirPath() + \"/../docs\":\"/usr/share/doc/${PF}/html\":" \
 		xyscanWindow.cpp || die "Failed to fix docs path"
+	rm -f moc_xyscanAbout.cpp moc_xyscanHelpBrowser.cpp moc_xyscanWindow.cpp
 }
 
 src_configure() {
