@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/socnetv-0.70.ebuild,v 1.1 2009/06/29 22:20:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/socnetv-0.70.ebuild,v 1.2 2010/01/06 10:29:36 hwoarang Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 MY_PN="SocNetV"
 MY_P="${MY_PN}-${PV}"
