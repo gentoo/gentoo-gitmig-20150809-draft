@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.2.1.ebuild,v 1.2 2009/12/16 12:25:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.2.1.ebuild,v 1.3 2010/01/06 10:52:04 hwoarang Exp $
 
 EAPI=2
 MY_P=${PN}_${PV}
 
-inherit flag-o-matic qt4
+inherit flag-o-matic qt4-r2
 
 DESCRIPTION="a feature-rich and complete software application to manage CD/DVD images"
 HOMEPAGE="http://www.acetoneteam.org/"
@@ -24,16 +24,14 @@ DEPEND="x11-libs/qt-gui:4
 
 S=${WORKDIR}/${MY_P}/${PN}
 
+DOCS="AUTHORS CHANGELOG FEATURES README"
+DOCSDIR="${WORKDIR}"
+
 src_prepare() {
 	sed -i -e 's:unrar-nonfree:unrar:g' sources/compress.h locale/*.ts || die
 }
 
 src_configure() {
 	append-flags -I/usr/include/KDE
-	eqmake4
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die
-	dodoc ../{AUTHORS,CHANGELOG,FEATURES,README}
+	qt4-r2_src_configure
 }
