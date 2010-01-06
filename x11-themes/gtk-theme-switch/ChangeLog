@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-theme-switch
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.37 2008/04/20 15:29:14 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.38 2010/01/06 19:37:58 fauli Exp $
+
+  06 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  gtk-theme-switch-2.0.0_rc2-r2.ebuild:
+  Transfer Prefix keywords
 
   20 Apr 2008; Samuli Suominen <drac@gentoo.org>
   gtk-theme-switch-2.0.0_rc2-r2.ebuild:

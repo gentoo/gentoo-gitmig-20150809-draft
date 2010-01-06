@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.57 2009/12/13 17:22:33 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.58 2010/01/06 19:39:44 fauli Exp $
+
+  06 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  hicolor-icon-theme-0.11.ebuild:
+  Transfer Prefix keywords
 
   13 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   hicolor-icon-theme-0.11.ebuild:
