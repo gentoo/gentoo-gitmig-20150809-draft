@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.3.ebuild,v 1.3 2010/01/03 20:42:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.3.ebuild,v 1.4 2010/01/06 02:42:13 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python"
+IUSE=""
 
 LANGS="de es fr ja ru sv"
 for l in ${LANGS}; do
@@ -31,12 +31,12 @@ CDEPEND="sys-libs/zlib
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	python? ( >=dev-python/sip-4.7 )"
+	>=dev-python/sip-4.7"
 
 RDEPEND="${CDEPEND}
-	python? ( >=dev-python/PyQt4-4.4[X]
-		dev-python/pygsl
-		sci-libs/scipy )"
+	>=dev-python/PyQt4-4.4[X]
+	dev-python/pygsl
+	sci-libs/scipy"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-profile.patch
@@ -50,11 +50,9 @@ src_prepare() {
 		-e "s|/usr/lib\$\${libsuff}|/usr/$(get_libdir)|g" \
 		-i fit*/*/*.pro || die "sed plugins failed"
 
-	if use python; then
-		sed -i \
-			-e '/^include( python.pri )$/d' \
-			${PN}/${PN}.pro || die "sed python failed"
-	fi
+	sed -i \
+		-e '/^include( python.pri )$/d' \
+		${PN}/${PN}.pro || die "sed python failed"
 }
 
 src_configure() {
