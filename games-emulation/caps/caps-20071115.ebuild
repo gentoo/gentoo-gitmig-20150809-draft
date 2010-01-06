@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20071115.ebuild,v 1.4 2009/10/25 12:56:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20071115.ebuild,v 1.5 2010/01/06 13:01:28 josejx Exp $
 
 inherit eutils multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/ipfdevlib_linux-20060612.tgz
 
 LICENSE="CAPS"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 RESTRICT="strip"
 
