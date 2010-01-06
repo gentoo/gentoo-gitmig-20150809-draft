@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11054 2010/01/05 22:37:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11055 2010/01/06 06:20:25 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -559,12 +559,6 @@ app-portage/g-ctan
 # Upstream dead.
 # Masking for removal in 30 days, bug #294759.
 app-i18n/jless
-
-# Michael Sterrett <mr_bones_@gentoo.org> (07 Dec 2009)
-# Last release in 2002; writes to GAMES_DATADIR;
-# unmaintained by upstream.
-# Removal on 20100106
-games-fps/nprquake-sdl
 
 # Luca Barbato <lu_zero@gentoo.org (07 Dec 2009)
 # bad regression https://bugs.gentoo.org/287725
