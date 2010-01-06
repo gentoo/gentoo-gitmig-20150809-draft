@@ -156,7 +156,6 @@ video_cards_vesa
 
 # net-libs/aqbanking and dev-libs/libofx don't have ppc64 KEYWORDS
 hbci
-ofx
 
 # Doug Goldstein <cardoe@gentoo.org> (3 Apr 2008)
 # nvidia-drivers specific feature which don't exist for ppc
