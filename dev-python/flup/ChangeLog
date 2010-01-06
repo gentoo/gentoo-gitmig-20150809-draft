@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/flup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.12 2010/01/05 09:06:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.13 2010/01/06 07:59:53 tove Exp $
 
   05 Jan 2010; <hwoarang@gentoo.org> flup-1.0.2.ebuild:
   Stable on amd64 wrt bug #298902 
@@ -8,7 +8,7 @@
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> flup-1.0.2.ebuild:
   stable x86, bug 298902
 
-  26 Dec 2009; RaΓΊl Porcel <armin76@gentoo.org> flup-1.0.2.ebuild:
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> flup-1.0.2.ebuild:
   Add ~sparc wrt #295088
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> flup-1.0.2.ebuild:
@@ -30,7 +30,7 @@
 
 *flup-1.0 (25 Oct 2007)
 
-  25 Oct 2007; Tiziano MΓΌller <dev-zero@gentoo.org> +flup-1.0.ebuild:
+  25 Oct 2007; Tiziano Müller <dev-zero@gentoo.org> +flup-1.0.ebuild:
   Version bump
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> flup-0.5_p2307.ebuild:
@@ -39,12 +39,12 @@
   09 Apr 2007; Matti Bickel <mabi@gentoo.org> flup-0.5_p2307.ebuild:
   ~ppc added (bug #100784)
 
-  27 Mar 2007; RaΓΊl Porcel <armin76@gentoo.org> flup-0.5_p2307.ebuild:
+  27 Mar 2007; Raúl Porcel <armin76@gentoo.org> flup-0.5_p2307.ebuild:
   Add ~ia64 wrt bug 100784
 
 *flup-0.5_p2307 (13 Jan 2007)
 
-  13 Jan 2007; Tiziano MΓΌller <dev-zero@gentoo.org> +metadata.xml,
+  13 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
   +flup-0.5_p2307.ebuild:
   New ebuild for bug #100784.
 
