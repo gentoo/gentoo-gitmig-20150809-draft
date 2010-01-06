@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.4-r1.ebuild,v 1.2 2009/10/06 17:54:59 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.4-r1.ebuild,v 1.3 2010/01/06 13:03:49 hwoarang Exp $
 
 EAPI=2
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="The Qt eXTension library provides cross-platform utility classes for the Qt toolkit"
 HOMEPAGE="http://libqxt.org/"
@@ -29,6 +29,8 @@ RDEPEND="x11-libs/qt-gui:4
 DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"
 
+DOCS="AUTHORS README LICENSE cpl1.0.txt"
+
 src_configure() {
 	local myconf
 	myconf="-prefix /usr \
@@ -53,9 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc {AUTHORS,README,LICENSE,cpl1.0.txt}
-
+	qt4-r2_src_install
 	if use doc; then
 		doxygen Doqsyfile
 		dohtml -r deploy/docs/*

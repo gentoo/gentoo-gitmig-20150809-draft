@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5-r1.ebuild,v 1.3 2009/10/06 19:08:40 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5-r1.ebuild,v 1.4 2010/01/06 13:03:49 hwoarang Exp $
 
-EAPI="1"
-inherit eutils qt4
+EAPI="2"
+inherit eutils qt4-r2
 
 DESCRIPTION="The Qt eXTension library provides cross-platform utility classes for the Qt toolkit"
 HOMEPAGE="http://libqxt.org/"
@@ -22,7 +22,7 @@ DEPEND="x11-libs/qt-gui:4
 	fastcgi? ( >=dev-libs/fcgi-2.4 )"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	use debug && myconf="${myconf} -debug"
@@ -33,11 +33,9 @@ src_compile() {
 		sed -i "s/qxtbuild/nostrip\ qxtbuild/" "${S}"/src/${i}/${i}.pro
 	done
 	./configure -prefix /usr ${myconf}
-
-	# fails with parallel build, bug 194730
-	emake -j1 || die "emake failed"
 }
 
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+src_compile() {
+	# fails with parallel build, bug 194730
+	emake -j1 || die "emake failed"
 }
