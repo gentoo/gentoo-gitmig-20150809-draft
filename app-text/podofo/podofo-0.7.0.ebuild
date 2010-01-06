@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.7.0.ebuild,v 1.1 2009/10/03 20:58:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.7.0.ebuild,v 1.2 2010/01/06 22:40:38 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/podofo/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="+boost debug test"
 
 DEPEND="dev-lang/lua
