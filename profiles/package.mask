@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11055 2010/01/06 06:20:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11056 2010/01/06 06:22:00 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -633,11 +633,6 @@ mail-filter/simscan
 #
 # Removal on 2010-02-03
 dev-util/cook
-
-# Michael Sterrett <mr_bones_@gentoo.org> (04 Dec 2009)
-# The "game" part of the experience is missing.
-# Abandoned by upstream in 2002.  Removal on 20100103
-games-action/glaxium
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
 #  on behalf of QA team
