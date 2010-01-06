@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.47.ebuild,v 1.3 2010/01/02 12:24:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.47-r1.ebuild,v 1.1 2010/01/06 16:39:51 ssuominen Exp $
 
 EAPI=2
 
@@ -18,7 +18,9 @@ LICENSE="skype-eula"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="qt-static"
-RESTRICT="mirror"
+
+# http://bugs.gentoo.org/show_bug.cgi?id=299368
+RESTRICT="mirror strip"
 
 EMUL_VER=20091231
 
@@ -26,8 +28,7 @@ RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
 			>=app-emulation/emul-linux-x86-baselibs-${EMUL_VER}
 			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_VER}
 			!qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-${EMUL_VER} ) )
-	x86? ( >=sys-libs/glibc-2.4
-		>=media-libs/alsa-lib-1.0.11
+	x86? ( >=media-libs/alsa-lib-1.0.11
 		x11-libs/libXScrnSaver
 		x11-libs/libXv
 		qt-static? ( media-libs/fontconfig
@@ -47,9 +48,9 @@ RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
 			x11-libs/libX11
 			x11-libs/libXau
 			x11-libs/libXdmcp ) )"
-# Required for lrelease command.
-DEPEND="${RDEPEND}
-	amd64? ( !qt-static? ( x11-libs/qt-core:4 ) )"
+
+# Required for lrelease command at buildtime
+DEPEND="!qt-static? ( x11-libs/qt-core:4 )"
 
 QA_EXECSTACK="opt/skype/skype"
 QA_WX_LOAD="opt/skype/skype"
