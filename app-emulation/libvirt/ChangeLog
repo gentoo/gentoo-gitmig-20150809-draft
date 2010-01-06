@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.46 2009/12/23 18:09:24 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.47 2010/01/06 17:02:33 cardoe Exp $
+
+  06 Jan 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.7.5.ebuild:
+  avahi support requires avahi to be built with USE=dbus, adding it as a USE
+  depend
 
   23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   libvirt-0.7.5.ebuild:

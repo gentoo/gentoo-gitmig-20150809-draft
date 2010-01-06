@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.5.ebuild,v 1.2 2009/12/23 18:09:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.5.ebuild,v 1.3 2010/01/06 17:02:33 cardoe Exp $
 
 BACKPORTS=
 
@@ -32,7 +32,7 @@ RDEPEND="sys-libs/readline
 	sys-fs/sysfsutils
 	sys-apps/util-linux
 	>=net-analyzer/netcat6-1.0-r2
-	avahi? ( >=net-dns/avahi-0.6 )
+	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	iscsi? ( sys-block/open-iscsi )
 	libvirtd? ( net-misc/bridge-utils )
