@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qgit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.47 2009/12/29 20:08:20 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/ChangeLog,v 1.48 2010/01/06 16:44:20 ranger Exp $
+
+  06 Jan 2010; Brent Baude <ranger@gentoo.org> qgit-2.3.ebuild:
+  Marking qgit-2.3 ppc64 for bug 298414
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org> qgit-2.3.ebuild:
   stable x86, bug 298414
