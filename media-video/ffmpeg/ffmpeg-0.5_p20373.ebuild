@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.5_p20373.ebuild,v 1.5 2010/01/04 22:13:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.5_p20373.ebuild,v 1.6 2010/01/06 19:06:50 ranger Exp $
 
 EAPI=2
 SCM=""
@@ -24,7 +24,7 @@ FFMPEG_REVISION="${PV#*_p}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+3dnow +3dnowext alsa altivec cpudetection custom-cflags debug dirac
 	  doc ieee1394 +encode faac faad gsm ipv6 jack +mmx +mmxext vorbis test
 	  theora threads x264 xvid network zlib sdl X mp3 opencore-amr
