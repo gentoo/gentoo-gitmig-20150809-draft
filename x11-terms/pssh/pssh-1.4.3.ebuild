@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/pssh-1.4.3.ebuild,v 1.3 2009/05/14 07:18:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/pssh-1.4.3.ebuild,v 1.4 2010/01/06 19:28:26 fauli Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.theether.org/pssh/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="net-misc/openssh
