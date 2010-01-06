@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20090817.ebuild,v 1.6 2009/12/30 07:56:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20090817.ebuild,v 1.7 2010/01/06 19:52:41 ranger Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www.gnubg.org/media/sources/${PN}-source-SNAPSHOT-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="gtk opengl python threads"
 
 GTK_DEPS="
