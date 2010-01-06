@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.43 2009/12/13 23:20:35 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.44 2010/01/06 23:53:09 josejx Exp $
+
+  06 Jan 2010; Joseph Jezak <josejx@gentoo.org> package.use.mask:
+  Removed mask on frei0r-plugins.
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> ppc64/64ul/use.mask:
   drop "imstt" from VIDEO_CARDS in all profiles

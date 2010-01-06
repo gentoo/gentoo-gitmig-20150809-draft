@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.30 2009/11/07 09:45:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.31 2010/01/06 23:53:09 josejx Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -12,10 +12,6 @@ sys-block/gparted kde
 # Brent Baude <ranger@gentoo.org>
 # Masking off video cards and input devices for xorg-1.5.3 stablization
 x11-base/xorg-server input_devices_spaceorb input_devices_mutouch input_devices_hyperpen input_devices_fpit input_devices_dynapro input_devices_calcomp input_devices_summa input_devices_elographics input_devices_citron input_devices_microtouch input_devices_jamstudio input_devices_elo2300 input_devices_penmount input_devices_tek4957 input_devices_dmc input_devices_digitaledge input_devices_palmax input_devices_magellan video_cards_v4l video_cards_cirrus video_cards_voodoo video_cards_sisusb video_cards_s3 video_cards_mach64 video_cards_s3virge
-
-# Ben de Groot <yngwin@gentoo.org> (05 Jun 2009)
-# media-plugins/frei0r-plugins is not yet keyworded, bug 276679
-media-libs/mlt frei0r
 
 # Joseph Jezak <josejx@gentoo.org> (Mar 20 2009)
 # Mask Ruby -> Oracle bindings
