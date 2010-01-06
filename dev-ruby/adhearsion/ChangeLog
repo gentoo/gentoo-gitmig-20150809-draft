@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/adhearsion
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.8 2009/12/09 18:55:37 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.9 2010/01/06 21:05:02 ranger Exp $
+
+  06 Jan 2010; Brent Baude <ranger@gentoo.org> adhearsion-0.8.2.ebuild:
+  Marking adhearsion-0.8.2 ~ppc64 for bug 276701
 
 *adhearsion-0.8.3 (09 Dec 2009)
 
