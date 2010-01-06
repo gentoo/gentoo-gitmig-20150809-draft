@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ruby-minitest-0.ebuild,v 1.5 2010/01/06 18:47:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ruby-minitest-0.ebuild,v 1.6 2010/01/06 21:09:17 a3li Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -8,7 +8,7 @@ USE_RUBY="ruby18 ruby19 jruby"
 inherit ruby-ng
 
 DESCRIPTION="Virtual ebuild for the Ruby minitest library"
-HOMEPAGE="http://www.ruby.org/"
+HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
 LICENSE="as-is"

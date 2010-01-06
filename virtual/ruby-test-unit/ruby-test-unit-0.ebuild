@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ruby-test-unit-0.ebuild,v 1.5 2009/12/21 00:06:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ruby-test-unit-0.ebuild,v 1.6 2010/01/06 21:11:08 a3li Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -8,7 +8,7 @@ USE_RUBY="ruby18 ruby19 jruby"
 inherit ruby-ng
 
 DESCRIPTION="Virtual ebuild for the Ruby test/unit library"
-HOMEPAGE="http://www.ruby.org/"
+HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
 LICENSE="as-is"

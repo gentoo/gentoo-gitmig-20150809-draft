@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.5 2010/01/06 18:47:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.6 2010/01/06 21:09:17 a3li Exp $
+
+  06 Jan 2010; Alex Legler <a3li@gentoo.org> ruby-minitest-0.ebuild:
+  Fix HOMEPAGE
 
   06 Jan 2010; Raúl Porcel <armin76@gentoo.org> ruby-minitest-0.ebuild:
   Add ~ia64/~sparc
