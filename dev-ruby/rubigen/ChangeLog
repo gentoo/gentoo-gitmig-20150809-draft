@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubigen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.2 2009/07/08 14:49:50 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.3 2010/01/06 21:03:34 ranger Exp $
+
+  06 Jan 2010; Brent Baude <ranger@gentoo.org> rubigen-1.5.2.ebuild:
+  Marking rubigen-1.5.2 ~ppc64 for bug 276701
 
   08 Jul 2009; Christian Faulhammer <fauli@gentoo.org> rubigen-1.5.2.ebuild:
   keyworded ~arch for x86, bug 276701
