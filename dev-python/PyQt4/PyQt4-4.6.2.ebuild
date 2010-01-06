@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.6.2.ebuild,v 1.4 2010/01/02 17:03:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.6.2.ebuild,v 1.5 2010/01/06 09:59:22 hwoarang Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit python qt4 toolchain-funcs
+inherit python qt4-r2 toolchain-funcs
 
 MY_P="PyQt-x11-gpl-${PV/_pre/-snapshot-}"
 QTVER="4.5.3"
@@ -53,7 +53,7 @@ src_prepare() {
 		sed -i -e 's,^\([[:blank:]]\+\)check_dbus(),\1pass,' \
 			"${S}"/configure.py || die
 	fi
-	qt4_src_prepare
+	qt4-r2_src_prepare
 
 	python_copy_sources
 
