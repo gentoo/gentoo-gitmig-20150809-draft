@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/apiextractor-0.3.2.ebuild,v 1.1 2009/12/20 16:22:32 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/apiextractor-0.3.2.ebuild,v 1.2 2010/01/06 19:18:07 ayoy Exp $
 
 EAPI="2"
 
@@ -27,7 +27,11 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed -e 's:share/cmake-2.6/Modules:share/cmake/Modules:' \
 		-e '/^install/s/lib/lib${LIB_SUFFIX}/' \
-		-i "${S}/CMakeLists.txt" || die "sed failed"
+		-i CMakeLists.txt || die "sed failed"
+
+	# bug 299766 - portage can't execute QApplication-based tests
+	sed -e '/declare_test(testmodifydocumentation)/d' \
+		-i tests/CMakeLists.txt || die "patching tests failed"
 }
 
 src_install() {
