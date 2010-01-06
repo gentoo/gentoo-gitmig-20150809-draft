@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.6 2007/07/16 21:40:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.7 2010/01/06 00:18:35 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="a DDR clone for linux written in Python"
@@ -18,9 +19,7 @@ DEPEND="dev-python/pygame
 	media-libs/sdl-mixer"
 PDEPEND="games-arcade/pydance-songs"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:1\.0\.1:1.0.2:" \
 		-e "s:/etc/:${GAMES_SYSCONFDIR}/:" \
@@ -43,7 +42,7 @@ src_install() {
 	games_make_wrapper pydance "python ./pydance.py" "${dir}"
 
 	dodoc BUGS CREDITS ChangeLog HACKING README TODO
-	dohtml docs/README.html
+	dohtml -r docs/manual.html docs/images
 	doman docs/man/*
 	prepgamesdirs
 }
