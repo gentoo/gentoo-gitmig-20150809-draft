@@ -7,8 +7,6 @@ K_USEPV="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
 
-RESTRICT="binchecks strip primaryuri mirror"
-
 CKV="${PV/_p[0-9]*}"
 ETYPE="sources"
 inherit kernel-2

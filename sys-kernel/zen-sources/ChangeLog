@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.22 2010/01/06 12:45:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.23 2010/01/06 18:47:13 wired Exp $
+
+  06 Jan 2010; Alex Alexander <wired@gentoo.org>
+  zen-sources-2.6.30_p11.ebuild, zen-sources-2.6.31_p8.ebuild,
+  zen-sources-2.6.31_p9.ebuild, zen-sources-2.6.31_p10.ebuild,
+  zen-sources-2.6.32_p1.ebuild, zen-sources-2.6.32_p2.ebuild,
+  zen-sources-2.6.32_p3.ebuild, zen-sources-2.6.32_p4.ebuild,
+  zen-sources-2.6.33_rc2_p1-r1.ebuild, zen-sources-9999.ebuild:
+  dropped useless RESTRICTs, fixed bug 299906
 
 *zen-sources-2.6.33_rc2_p1-r1 (06 Jan 2010)
 

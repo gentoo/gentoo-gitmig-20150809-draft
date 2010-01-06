@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -8,8 +8,6 @@ COMPRESSTYPE=".lzma"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
-
-RESTRICT="binchecks strip primaryuri mirror"
 
 ETYPE="sources"
 
