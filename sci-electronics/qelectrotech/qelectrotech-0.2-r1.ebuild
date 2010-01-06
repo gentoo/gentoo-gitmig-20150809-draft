@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-0.2-r1.ebuild,v 1.1 2009/08/29 23:41:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-0.2-r1.ebuild,v 1.2 2010/01/06 13:36:20 hwoarang Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 MY_P="${PN}-${PV}-src"
 
@@ -23,16 +23,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}"/${MY_P}
+DOCS="CREDIT ChangeLog README"
 
 PATCHES=( "${FILESDIR}/${P}-fix-paths.patch" )
 
-src_configure() {
-	eqmake4
-}
-
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc CREDIT ChangeLog README || die "dodoc failed"
+	qt4-r2_src_install
 	if use doc; then
 		doxygen Doxyfile
 		dohtml -r doc/html/* || die "dohtml failed"
