@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.109 2010/01/02 15:56:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.110 2010/01/06 18:32:01 jer Exp $
+
+  06 Jan 2010; Jeroen Roovers <jer@gentoo.org> mpfr-2.4.1_p5.ebuild:
+  Stable for PPC (bug #297297).
 
   02 Jan 2010; Markus Meier <maekke@gentoo.org> mpfr-2.4.1_p5.ebuild:
   amd64 stable, bug #297297
