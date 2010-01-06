@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/matchbox-desktop-image-browser-0.2.ebuild,v 1.6 2009/12/29 20:50:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/matchbox-desktop-image-browser-0.2.ebuild,v 1.7 2010/01/06 00:25:05 yvasilev Exp $
 
-inherit versionator eutils
+inherit versionator eutils autotools
 
 MY_PN=${PN/matchbox/mb}
 MY_P=${MY_PN}-${PV}
@@ -26,6 +26,9 @@ src_unpack () {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/$P-include_fix.patch
+	epatch "${FILESDIR}"/$P-noexec-matchbox-desktop.patch
+
+	eautoreconf
 }
 
 src_compile () {
