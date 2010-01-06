@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.117 2010/01/03 17:16:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.118 2010/01/06 19:52:31 jer Exp $
+
+  06 Jan 2010; Jeroen Roovers <jer@gentoo.org> mercurial-1.4.1.ebuild:
+  Stable for HPPA (bug #299312).
 
   03 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> mercurial-1.4.1.ebuild,
   mercurial-1.4.2.ebuild:
