@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.1.1.ebuild,v 1.1 2009/07/07 15:11:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.1.1.ebuild,v 1.2 2010/01/06 13:59:57 hwoarang Exp $
 
 EAPI="2"
 
-inherit versionator qt4
+inherit versionator qt4-r2
 MY_PN="PLCEdit"
 
 DESCRIPTION="Qt4 notepad for PLC programming"
@@ -17,12 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"
 
-RDEPEND="x11-libs/qt-gui:4[debug?]"
+RDEPEND="x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}"
-
-src_configure(){
-	eqmake4 ${MY_PN}.pro
-}
 
 src_install(){
 	newbin release/${MY_PN} ${PN} || die "dobin failed"
