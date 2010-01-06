@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.4.2.ebuild,v 1.8 2010/01/04 23:00:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.4.2.ebuild,v 1.9 2010/01/06 18:49:27 armin76 Exp $
 
 EAPI=2
 # jruby → tests fail, reported upstream
@@ -21,7 +21,7 @@ HOMEPAGE="http://rubyforge.org/projects/bfts"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/hoe"
