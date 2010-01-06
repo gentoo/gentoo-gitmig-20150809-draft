@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.8 2009/10/28 18:16:14 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.9 2010/01/06 17:59:57 ulm Exp $
+
+  06 Jan 2010; Ulrich Mueller <ulm@gentoo.org> use.mask:
+  Use.mask bash-completion, bug 299051.
 
   28 Oct 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask policykit
