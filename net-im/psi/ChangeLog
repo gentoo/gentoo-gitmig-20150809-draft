@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.185 2010/01/05 07:54:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.186 2010/01/06 20:59:00 ranger Exp $
+
+  06 Jan 2010; Brent Baude <ranger@gentoo.org> psi-0.13-r1.ebuild:
+  Marking psi-0.13-r1 ~ppc64 for bug 279676
 
   05 Jan 2010; Peter Volkov <pva@gentoo.org> psi-0.14-r1.ebuild:
   Fixed build issue with debug USE flag enabled, bug #29118, thank Daniel
