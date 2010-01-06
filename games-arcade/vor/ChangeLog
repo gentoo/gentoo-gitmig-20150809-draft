@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/vor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.5 2009/10/29 14:34:51 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.6 2010/01/06 13:03:38 josejx Exp $
+
+  06 Jan 2010; Joseph Jezak <josejx@gentoo.org> vor-0.5.4.ebuild:
+  Marked ppc stable for bug #288964.
 
   29 Oct 2009; Markus Meier <maekke@gentoo.org> vor-0.5.4.ebuild:
   amd64/x86 stable, bug #288964
