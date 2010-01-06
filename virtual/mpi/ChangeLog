@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mpi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.9 2009/07/10 20:37:17 jsbronder Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.10 2010/01/06 22:44:09 jsbronder Exp $
+
+  06 Jan 2010; Justin Bronder <jsbronder@gentoo.org> mpi-2.0.ebuild:
+  All deps are stable, so the virtual should be too.
 
   10 Jul 2009; Justin Bronder <jsbronder@gentoo.org> mpi-2.0.ebuild:
   Add romio USE flag.
