@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.0.ebuild,v 1.3 2009/12/01 20:11:15 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.0.ebuild,v 1.4 2010/01/06 10:05:22 hwoarang Exp $
 
 EAPI="2"
+LANGS="de es fr it ja pl ru sl"
 
-inherit qt4 multilib
+inherit qt4-r2 multilib
 MY_PN="${PN/-/}"
 
 DESCRIPTION="Lightweight IDE for C++ development centering around Qt"
@@ -36,12 +37,6 @@ RDEPEND="${DEPEND}
 	subversion? ( dev-util/subversion )"
 
 PLUGINS="bookmarks bineditor cmake cvs debugger designer fakevim git mercurial perforce qtscript subversion"
-
-LANGS="de es fr it ja pl ru sl"
-
-for x in ${LANGS}; do
-	IUSE="${IUSE} linguas_${x}"
-done
 
 src_prepare() {
 	qt4_src_prepare
