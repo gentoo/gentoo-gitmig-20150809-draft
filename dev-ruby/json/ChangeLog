@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.15 2010/01/04 11:23:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.16 2010/01/06 18:25:27 armin76 Exp $
+
+  06 Jan 2010; Raúl Porcel <armin76@gentoo.org> json-1.2.0-r1.ebuild:
+  Add ~ia64/~sparc wrt #297622
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> json-1.2.0-r1.ebuild:
   Transfer Prefix keywords
