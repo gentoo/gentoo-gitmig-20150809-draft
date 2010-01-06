@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.9.ebuild,v 1.3 2010/01/06 03:15:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.0.ebuild,v 1.1 2010/01/06 03:15:22 bicatali Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -15,9 +15,10 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples gnuplot python readline wxwidgets"
+IUSE="doc examples gnuplot lua python readline wxwidgets"
 
-CDEPEND=">=sci-libs/xylib-0.4
+CDEPEND=">=sci-libs/xylib-0.5
+	lua? ( dev-lang/lua )
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )"
@@ -39,7 +40,9 @@ src_configure() {
 	econf  \
 		--docdir="/usr/share/doc/${PF}" \
 		--disable-3rdparty \
+		--disable-xyconvert \
 		--without-xylib \
+		$(use_enable lua) \
 		$(use_enable python) \
 		$(use_enable wxwidgets GUI) \
 		$(use_with doc) \
