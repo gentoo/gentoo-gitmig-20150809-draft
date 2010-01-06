@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/tilda-0.9.6.ebuild,v 1.4 2009/03/24 22:45:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/tilda-0.9.6.ebuild,v 1.5 2010/01/06 19:32:58 fauli Exp $
 
 DESCRIPTION="A drop down terminal, similar to the consoles found in first person shooters"
 HOMEPAGE="http://tilda.sourceforge.net"
@@ -13,7 +13,8 @@ IUSE=""
 
 RDEPEND="x11-libs/vte
 	>=dev-libs/glib-2.8.4
-	dev-libs/confuse"
+	dev-libs/confuse
+	gnome-base/libglade"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
