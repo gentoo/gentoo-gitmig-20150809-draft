@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/matchbox-desktop-image-browser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.5 2010/01/06 00:25:05 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-desktop-image-browser/ChangeLog,v 1.6 2010/01/06 01:24:12 yvasilev Exp $
+
+*matchbox-desktop-image-browser-0.2-r1 (06 Jan 2010)
+
+  06 Jan 2010; Yuri Vasilevski <yvasilev@gentoo.org>
+  +matchbox-desktop-image-browser-0.2-r1.ebuild,
+  +files/matchbox-desktop-image-browser-0.2-plugin-location-fix.patch:
+  Fixed the installation path for the dynamically loadable mb-desktop
+  module. Bug #298871, thanks flameeyes for reporting.
 
   06 Jan 2010; Yuri Vasilevski <yvasilev@gentoo.org>
   matchbox-desktop-image-browser-0.2.ebuild,
