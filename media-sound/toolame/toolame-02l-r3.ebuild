@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r3.ebuild,v 1.5 2009/12/23 21:34:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r3.ebuild,v 1.6 2010/01/06 18:58:31 ranger Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/toolame/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 src_prepare() {
