@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2009.06.02.ebuild,v 1.7 2009/08/09 12:50:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2009.06.02.ebuild,v 1.8 2010/01/06 16:55:17 ranger Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.live555.com/liveMedia/public/${P/-/.}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}"
