@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/frei0r-plugins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.6 2009/12/17 11:35:09 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.7 2010/01/06 23:51:04 josejx Exp $
+
+  06 Jan 2010; Joseph Jezak <josejx@gentoo.org>
+  frei0r-plugins-1.1.22-r1.ebuild:
+  Marked ~ppc/~ppc64 for bug #276679.
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   frei0r-plugins-1.1.22-r1.ebuild:
