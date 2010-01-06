@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.95.ebuild,v 1.2 2009/12/11 17:25:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.95.ebuild,v 1.3 2010/01/06 17:59:03 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug doc examples expat nls"
 # building w/o pam is broken, bug 291116
 # introspection pam
