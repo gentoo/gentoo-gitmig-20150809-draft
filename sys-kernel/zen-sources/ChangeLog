@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.21 2010/01/03 22:00:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.22 2010/01/06 12:45:14 hwoarang Exp $
+
+*zen-sources-2.6.33_rc2_p1-r1 (06 Jan 2010)
+
+  06 Jan 2010; <hwoarang@gentoo.org> -zen-sources-2.6.33_rc2_p1.ebuild,
+  +zen-sources-2.6.33_rc2_p1-r1.ebuild,
+  +files/zen-sources-2.6.33_rc2_p1-kernel-sysctl.c.patch:
+  Bump to fix a kernel configuration issue which is not fixed on zen-sources
+  git
+  repository
+  Related commit:
+  http://git.zen-kernel.org/?p=kernel/zen.git;a=commitdiff;h=3764e86df27a810
+  77ed043ce5c659c7970541371
 
   03 Jan 2010; Alex Alexander <wired@gentoo.org>
   zen-sources-2.6.30_p11.ebuild, zen-sources-2.6.31_p8.ebuild,
