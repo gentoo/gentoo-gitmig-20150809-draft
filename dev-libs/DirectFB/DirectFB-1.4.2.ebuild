@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.2.ebuild,v 1.8 2010/01/05 19:38:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.2.ebuild,v 1.9 2010/01/06 19:07:57 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,14 +13,14 @@ I_TO_D_s3="unichrome"
 I_TO_D_sis="sis315"
 I_TO_D_via="cle266"
 # cyber5k davinci ep9x gl omap pxa3xx sh772x
-IUSE_VIDEO_CARDS=" intel mach64 mga neomagic nsc none nvidia r128 radeon s3 savage sis tdfx via vmware"
+IUSE_VIDEO_CARDS=" intel mach64 mga neomagic nsc nvidia r128 radeon s3 savage sis tdfx via vmware"
 IUV=${IUSE_VIDEO_CARDS// / video_cards_}
 # echo `sed -n '/Possible inputdrivers are:/,/^$/{/\(Possible\|^input\)/d;s:\[ *::;s:\].*::;s:,::g;p}' configure.in`
 I_TO_D_elo2300="elo-input"
 I_TO_D_evdev="linuxinput"
 I_TO_D_mouse="ps2mouse serialmouse"
 # dbox2remote dreamboxremote gunze h3600_ts penmount sonypijogdial ucb1x00 wm97xx zytronic
-IUSE_INPUT_DEVICES=" dynapro elo2300 evdev joystick keyboard lirc mouse mutouch none tslib"
+IUSE_INPUT_DEVICES=" dynapro elo2300 evdev joystick keyboard lirc mouse mutouch tslib"
 IUD=${IUSE_INPUT_DEVICES// / input_devices_}
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
@@ -68,8 +68,6 @@ src_unpack() {
 
 driver_list() {
 	local pfx=$1
-	use ${pfx}_none && echo none
-
 	local dev devs map
 	shift
 	for dev in "$@" ; do
