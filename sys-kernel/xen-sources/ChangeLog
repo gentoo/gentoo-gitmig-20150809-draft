@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.62 2010/01/06 22:07:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.63 2010/01/06 22:18:43 patrick Exp $
+
+*xen-sources-2.6.31-r10 (06 Jan 2010)
+
+  06 Jan 2010; Patrick Lauer <patrick@gentoo.org>
+  +xen-sources-2.6.31-r10.ebuild:
+  Bump to 2.6.31, based on the work by Andrew Lyon at
+  http://code.google.com/p/gentoo-xen-kernel/ May not work, use at your own
+  peril. Good luck.
 
   06 Jan 2010; Patrick Lauer <patrick@gentoo.org>
   -xen-sources-2.6.20-r7.ebuild, -xen-sources-2.6.21.ebuild:
