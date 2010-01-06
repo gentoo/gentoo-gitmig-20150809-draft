@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tokyotyrant
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.4 2009/12/28 20:51:44 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.5 2010/01/06 23:26:59 patrick Exp $
+
+  06 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/fix_testsuite.patch:
+  Fixing patch for #299901, thanks to Johan Bergstroem
 
 *tokyotyrant-1.1.39 (28 Dec 2009)
 
