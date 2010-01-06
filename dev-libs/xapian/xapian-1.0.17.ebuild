@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.0.17.ebuild,v 1.2 2009/12/28 18:11:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.0.17.ebuild,v 1.3 2010/01/06 22:31:57 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
