@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.98 2009/12/28 18:54:16 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.99 2010/01/06 13:34:00 a3li Exp $
+
+  06 Jan 2010; Alex Legler <a3li@gentoo.org> -horde-3.3.5.ebuild:
+  Removing vulnerable ebuild, bug 297306
 
   28 Dec 2009; nixnut <nixnut@gentoo.org> horde-3.3.6.ebuild:
   ppc stable #297306
