@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/blockrage
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blockrage/ChangeLog,v 1.8 2009/11/21 19:25:09 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blockrage/ChangeLog,v 1.9 2010/01/06 13:59:12 josejx Exp $
+
+  06 Jan 2010; Joseph Jezak <josejx@gentoo.org> blockrage-0.2.3.ebuild:
+  Marked ppc stable for bug #289091.
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> blockrage-0.2.3.ebuild:
   x86 stable, bug #289091
