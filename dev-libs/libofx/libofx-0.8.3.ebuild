@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.8.3.ebuild,v 1.8 2008/07/14 00:07:42 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.8.3.ebuild,v 1.9 2010/01/06 20:31:36 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libofx/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=app-text/opensp-1.5
