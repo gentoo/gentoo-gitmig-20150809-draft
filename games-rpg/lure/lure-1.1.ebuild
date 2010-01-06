@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/lure-1.1.ebuild,v 1.4 2009/11/20 12:54:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/lure-1.1.ebuild,v 1.5 2010/01/06 20:53:59 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -94,6 +94,8 @@ src_install() {
 				doins -r ${PN}-${lang}/*
 				games_make_wrapper ${PN}-${lang} "scummvm -q ${lang} -f -p \"${GAMES_DATADIR}/${PN}-${lang}\" lure" .
 				make_desktop_entry ${PN}-${lang} "Lure of the Temptress (${lang})" ${PN}
+				docinto linguas_${lang}
+				dodoc docs/linguas_${lang}/*
 			fi
 		done
 	else
@@ -103,6 +105,5 @@ src_install() {
 		games_make_wrapper ${PN} "scummvm -f -p \"${GAMES_DATADIR}/${PN}\" lure" .
 		make_desktop_entry ${PN} "Lure of the Temptress"
 	fi
-	dodoc -r docs/*
 	prepgamesdirs
 }
