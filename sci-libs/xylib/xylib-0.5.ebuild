@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/xylib-0.3.ebuild,v 1.1 2008/07/07 08:46:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/xylib-0.5.ebuild,v 1.1 2010/01/06 02:59:15 bicatali Exp $
 
 DESCRIPTION="Experimental x-y data reading library"
 HOMEPAGE="http://www.unipress.waw.pl/fityk/xylib/"
@@ -12,8 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/boost"
-RDEPEND=""
+RDEPEND="sys-libs/zlib
+	app-arch/bzip2"
+DEPEND="${RDEPEND}
+	dev-libs/boost"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
