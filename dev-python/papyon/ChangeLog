@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.6 2010/01/05 04:24:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.7 2010/01/06 19:38:52 ranger Exp $
+
+  06 Jan 2010; Brent Baude <ranger@gentoo.org> papyon-0.4.2.ebuild:
+  Marking papyon-0.4.2 ~ppc64 for bug 245949
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> papyon-0.4.2.ebuild:
   Marked ~ppc.
