@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.16-r1.ebuild,v 1.2 2009/12/16 21:15:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.16-r1.ebuild,v 1.3 2010/01/06 19:22:37 fauli Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mlmmj.mmj.dk/"
 SRC_URI="http://mlmmj.mmj.dk/files/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND="virtual/mta"
 #RDEPEND=""

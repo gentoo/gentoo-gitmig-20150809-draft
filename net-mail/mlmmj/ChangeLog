@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mlmmj
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.31 2009/12/16 21:15:57 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.32 2010/01/06 19:22:37 fauli Exp $
+
+  06 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  mlmmj-1.2.16-r1.ebuild:
+  Transfer Prefix keywords
 
   16 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> mlmmj-1.2.16-r1.ebuild,
   +files/mlmmj-1.2.16-unsub-digest-text.patch:
