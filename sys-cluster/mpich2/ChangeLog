@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/mpich2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.48 2009/12/31 17:12:04 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.49 2010/01/06 22:32:14 jsbronder Exp $
+
+  06 Jan 2010; Justin Bronder <jsbronder@gentoo.org> -mpich2-1.0.3.ebuild,
+  -mpich2-1.0.3-r1.ebuild, -files/mpich2-1.0.3-make.patch,
+  -files/mpich2-1.0.3-make-test.patch,
+  -files/mpich2-1.0.3-mpe-install.patch, -files/mpich2-1.0.3-soname.patch,
+  -mpich2-1.0.6.ebuild, -files/mpich2-1.0.6-cxx.patch,
+  -files/mpich2-1.0.6-fPIC.patch, -files/mpich2-1.0.6-makefile.patch,
+  -files/mpich2-1.0.6-no-pvfs2.patch, -files/mpich2-1.0.6-shlib.patch:
+  cleanup old versions.
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> mpich2-1.0.8.ebuild:
   Marking mpich2-1.0.8 ppc64 for bug 266409
