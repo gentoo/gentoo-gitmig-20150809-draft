@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exif
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.37 2009/12/31 14:10:21 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.38 2010/01/07 15:37:53 josejx Exp $
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org> exif-0.6.19.ebuild:
+  Marked ppc stable for bug #297023.
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> exif-0.6.19.ebuild:
   Marking exif-0.6.19 ppc64 for bug 297023
