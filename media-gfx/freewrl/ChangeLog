@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.19 2009/10/05 19:59:33 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.20 2010/01/07 16:58:21 patrick Exp $
+
+*freewrl-1.22.6 (07 Jan 2010)
+
+  07 Jan 2010; Patrick Lauer <patrick@gentoo.org> +freewrl-1.22.6.ebuild:
+  Bump
 
   05 Oct 2009; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Taking over package from hanno with ian as proxy maintainer
