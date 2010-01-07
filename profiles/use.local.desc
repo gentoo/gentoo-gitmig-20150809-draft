@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5165 2010/01/07 22:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5166 2010/01/07 23:47:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -651,8 +651,6 @@ dev-games/crystalspace:ode - include support for Open Dynamics Engine
 dev-games/guichan:allegro - Build the Allegro frontend
 dev-games/ode:double-precision - more precise calculations at the expense of speed
 dev-games/ode:gyroscopic - enable gyroscopic term (may cause instability)
-dev-games/ode:nogyroscopic - disable gyroscopic term maybe improving stability
-dev-games/ode:noopcode - disable OPCODE (trimesh support)
 dev-games/ogre:cegui - build the CEGUI samples
 dev-games/ogre:cg - NVIDIA toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
