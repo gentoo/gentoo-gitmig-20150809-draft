@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.20 2008/07/27 17:43:35 bluebird Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.21 2010/01/07 16:01:06 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  wakeonlan-0.41-r1.ebuild:
+  Transfer Prefix keywords
 
   27 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
   wakeonlan-0.41-r1.ebuild:

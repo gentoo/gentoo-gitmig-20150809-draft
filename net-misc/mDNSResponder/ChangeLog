@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.52 2009/11/21 19:59:13 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.53 2010/01/07 15:54:35 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  mDNSResponder-212.1.ebuild:
+  Transfer Prefix keywords
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> mDNSResponder-212.1.ebuild:
   ppc stable #290822

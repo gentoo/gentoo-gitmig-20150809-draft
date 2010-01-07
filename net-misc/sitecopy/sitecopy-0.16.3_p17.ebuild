@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3_p17.ebuild,v 1.5 2009/12/01 10:32:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3_p17.ebuild,v 1.6 2010/01/07 15:58:41 fauli Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="mirror://debian/pool/main/s/${PN}/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/s/${PN}/${MY_P}-${DEB_PL}.diff.gz"
 HOMEPAGE="http://packages.debian.org/unstable/sitecopy http://www.lyra.org/sitecopy/"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 LICENSE="GPL-2"
 SLOT="0"
