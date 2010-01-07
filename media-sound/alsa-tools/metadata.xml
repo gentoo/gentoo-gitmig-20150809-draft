@@ -5,7 +5,4 @@
   <maintainer>
     <email>alsa-bugs@gentoo.org</email>
   </maintainer>
-  <use>
-    <flag name="midi">Build the sequencer (midi) utilities</flag>
-  </use>
 </pkgmetadata>
