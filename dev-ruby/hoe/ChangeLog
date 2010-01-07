@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.68 2010/01/06 18:48:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.69 2010/01/07 20:06:57 flameeyes Exp $
+
+*hoe-2.5.0 (07 Jan 2010)
+
+  07 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> +hoe-2.5.0.ebuild,
+  +files/hoe-2.5.0-tests.patch:
+  Version bump, rubyforge is no longer needed at runtime either. Tests
+  needed some fixing though.
 
   06 Jan 2010; Raúl Porcel <armin76@gentoo.org> hoe-2.4.0.ebuild:
   Add ~ia64/~sparc
