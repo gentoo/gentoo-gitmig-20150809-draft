@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-7.3.21.ebuild,v 1.3 2009/06/05 22:49:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-7.3.21.ebuild,v 1.4 2010/01/07 18:15:12 beandog Exp $
 
 inherit versionator
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DESCRIPTION="PostgreSQL documentation"
 HOMEPAGE="http://www.postgresql.org/"
