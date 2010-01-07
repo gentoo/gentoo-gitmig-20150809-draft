@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.29 2010/01/07 13:51:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.30 2010/01/07 20:37:38 patrick Exp $
+
+*samba-server-3.4.4-r1 (07 Jan 2010)
+
+  07 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/3.4/samba.confd,
+  +samba-server-3.4.4-r1.ebuild:
+  Adding pam support for #297284, fixing init scripts to kill multiple
+  instances. Thanks to Lars Wendler and kerframil.
 
 *samba-server-3.4.4 (07 Jan 2010)
 
