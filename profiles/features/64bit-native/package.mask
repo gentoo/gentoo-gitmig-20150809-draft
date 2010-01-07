@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.35 2010/01/03 16:49:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.36 2010/01/07 11:57:48 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -20,7 +20,6 @@ app-emulation/vmware-player
 app-emulation/vmware-server
 app-emulation/vmware-server-console
 <app-emulation/vmware-workstation-6.5
-app-i18n/kurso-de-esperanto
 app-office/mozilla-sunbird-bin
 app-office/ooextras
 app-office/openoffice-bin
@@ -147,14 +146,10 @@ games-strategy/x2
 games-strategy/x2-demo
 mail-client/mozilla-thunderbird-bin
 media-fonts/acroread-asianfonts
-media-gfx/grender
-media-gfx/maya
 media-gfx/picasa
 media-libs/win32codecs
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
-media-sound/teamspeak2-client-bin
-media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
 media-video/binkplayer
 net-dialup/slmodem
