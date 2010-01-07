@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.311 2009/12/13 18:46:24 nirbheek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.312 2010/01/07 13:28:04 dang Exp $
+
+*hal-0.5.14-r1 (07 Jan 2010)
+
+  07 Jan 2010; Daniel Gryniewicz <dang@gentoo.org> +hal-0.5.14-r1.ebuild:
+  Fix MAX_PATH to be the same as the system. Bug #299385
+
 
   13 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org> hal-0.5.14.ebuild:
   Fix blockers due to a combination of hal[consolekit,-policykit] and polkit
