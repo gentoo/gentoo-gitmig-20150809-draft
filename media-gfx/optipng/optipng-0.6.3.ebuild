@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.3.ebuild,v 1.2 2009/05/19 12:06:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.3.ebuild,v 1.3 2010/01/07 22:31:42 fauli Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND="media-libs/libpng"
