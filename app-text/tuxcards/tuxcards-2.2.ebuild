@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-2.2.ebuild,v 1.3 2010/01/01 17:41:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-2.2.ebuild,v 1.4 2010/01/07 20:34:36 ranger Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -11,7 +11,7 @@ SRC_URI="http://www.tuxcards.de/src/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
