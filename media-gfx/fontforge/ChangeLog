@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fontforge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.118 2009/12/15 18:16:30 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.119 2010/01/07 22:04:35 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  fontforge-20090923.ebuild:
+  Transfer Prefix keywords
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> fontforge-20090622.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #288261
