@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgsf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.148 2009/12/27 04:07:52 nirbheek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.149 2010/01/07 21:41:36 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libgsf-1.14.16.ebuild:
+  Transfer Prefix keywords
 
   27 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org> libgsf-1.14.16.ebuild,
   +files/libgsf-1.14.16-gconf-automagic.patch:
