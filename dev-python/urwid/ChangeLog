@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.38 2010/01/03 14:26:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.39 2010/01/07 15:55:09 josejx Exp $
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org> urwid-0.9.9.ebuild:
+  Marked ppc stable for bug #297715.
 
   03 Jan 2010; Markus Meier <maekke@gentoo.org> urwid-0.9.9.ebuild:
   x86 stable, bug #297715
