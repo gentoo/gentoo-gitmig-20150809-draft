@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.46 2009/11/07 22:45:40 billie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.47 2010/01/07 09:37:08 hwoarang Exp $
+
+  07 Jan 2010; <hwoarang@gentoo.org> tea-26.0.1.ebuild:
+  replace qt4 eclass with qt4-r2
 
 *tea-26.0.1 (07 Nov 2009)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-26.0.1.ebuild,v 1.1 2009/11/07 22:45:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-26.0.1.ebuild,v 1.2 2010/01/07 09:37:08 hwoarang Exp $
 
 EAPI="2"
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="Small, lightweight Qt text editor"
 HOMEPAGE="http://tea-editor.sourceforge.net"
