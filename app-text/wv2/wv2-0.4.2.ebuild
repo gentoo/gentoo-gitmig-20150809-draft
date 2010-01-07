@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.2.ebuild,v 1.5 2010/01/06 16:42:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.2.ebuild,v 1.6 2010/01/07 20:27:47 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="zlib"
 
 RDEPEND=">=gnome-extra/libgsf-1.8

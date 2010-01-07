@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.62 2010/01/06 16:42:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.63 2010/01/07 20:27:47 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> wv2-0.4.2.ebuild:
+  stable ppc, bug 299156
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> wv2-0.4.2.ebuild:
   Marking wv2-0.4.2 ppc64 for bug 299156
