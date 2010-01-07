@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.1.ebuild,v 1.1 2010/01/07 16:05:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.1.ebuild,v 1.2 2010/01/07 16:12:13 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Anti-spam bayesian filter"
@@ -32,17 +33,19 @@ RDEPEND="virtual/perl-Digest-MD5
 
 DEPEND="app-arch/unzip"
 
+src_prepare() {
+	local f
+	for f in `find ./ -type f`; do
+		edos2unix "${f}"
+	done
+}
+
 src_install() {
 	dodoc *.change*
 	rm -rf *.change* license
 
 	insinto /usr/share/${PN}
 	doins -r * || die
-
-	local f
-	for f in `find "${D}"/usr/share/${PN} -type f`; do
-		edos2unix "${f}"
-	done
 
 	fperms 755 /usr/share/${PN}/*.pl
 
