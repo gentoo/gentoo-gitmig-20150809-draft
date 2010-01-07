@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.134 2009/07/27 01:40:20 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.135 2010/01/07 15:50:10 jer Exp $
+
+*parted-2.1 (07 Jan 2010)
+
+  07 Jan 2010; Jeroen Roovers <jer@gentoo.org> +parted-2.1.ebuild:
+  Version bump thanks to Arfrever Frehtes Taifersar Arahesis (bug #288582).
 
   27 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> parted-1.9.0.ebuild:
   Move econf to src_configure() where it belongs w/ EAPI=2 to prevent it
