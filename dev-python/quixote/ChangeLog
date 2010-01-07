@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/quixote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.28 2010/01/04 13:35:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.29 2010/01/07 06:32:40 beandog Exp $
+
+  07 Jan 2010; Steve Dibb <beandog@gentoo.org> quixote-2.6.ebuild:
+  amd64 stable, bug 294696
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> quixote-2.6.ebuild:
   stable x86, bug 294696
