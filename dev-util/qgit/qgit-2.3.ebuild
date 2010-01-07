@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.3.ebuild,v 1.5 2010/01/06 16:44:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.3.ebuild,v 1.6 2010/01/07 20:23:03 ranger Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
