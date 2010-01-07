@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_passwdqc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.27 2009/11/03 17:50:11 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.28 2010/01/07 15:54:56 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  pam_passwdqc-1.0.5.ebuild:
+  Transfer Prefix keywords
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> pam_passwdqc-1.0.5.ebuild:
   m68k/s390/sh stable wrt #284091
