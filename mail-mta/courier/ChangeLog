@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.122 2010/01/01 16:13:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.123 2010/01/07 20:05:10 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> courier-0.62.2.ebuild:
+  Marking courier-0.62.2 ppc for bug 292087
 
   01 Jan 2010; Raúl Porcel <armin76@gentoo.org> courier-0.62.2.ebuild:
   alpha/ia64/sparc stable wrt #292087
