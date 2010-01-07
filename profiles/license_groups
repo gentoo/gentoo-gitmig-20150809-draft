@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.19 2010/01/07 11:09:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.20 2010/01/07 11:27:45 hanno Exp $
 
 # GLEP-0023
 # http://www.gentoo.org/proj/en/glep/glep-0023.html
@@ -13,11 +13,11 @@ OSI-APPROVED AFL-3.0 APL-1.0 Apache-2.0 Artistic Artistic-2 BSD BSD-2 Boost-1.0 
 
 # Misc licenses that are probably free software but not approved by either FSF or OSI
 # Preferrably on the long term these should be cleared up and moved to other sets
-MISC-FREE BZIP2 w3m CRACKLIB FLEX LGPL-2 libgcc libstdc++ PAM popt SMAIL tcp_wrappers_license cryptopp JamesClark Subversion
+MISC-FREE BZIP2 w3m CRACKLIB FLEX LGPL-2 libgcc libstdc++ PAM popt SMAIL tcp_wrappers_license cryptopp JamesClark Subversion DSNIFF wxWinLL-3 MaxMind PDFLite gcc-runtime-library-exception-3.1 GPL-1 GPL-2-with-linking-exception GPL-2-with-exceptions imagemagick ElementTree OpenSoftware LLGPL-2.1 DB LPPL-1.3 Info-ZIP gnuplot CMake TeX WordNet-2.1 PHP-3 LPPL-1.3c gsm JNIC
 
 # Licenses for free documents, following the definition at
 # http://freedomdefined.org/
-FREE-DOCUMENTS FDL-1.1 FDL-1.2 FDL-1.3 CCPL-Attribution-2.0 CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CC-PD
+FREE-DOCUMENTS FDL-1.1 FDL-1.2 FDL-1.3 CCPL-Attribution-2.0 CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CC-PD BitstreamVera myspell-en_CA-KevinAtkinson
 
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
