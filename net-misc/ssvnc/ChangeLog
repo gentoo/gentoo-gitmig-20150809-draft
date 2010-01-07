@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ssvnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.8 2010/01/05 16:26:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.9 2010/01/07 00:07:07 vapier Exp $
+
+  07 Jan 2010; Mike Frysinger <vapier@gentoo.org> ssvnc-1.0.22.ebuild,
+  ssvnc-1.0.24.ebuild, ssvnc-1.0.25.ebuild:
+  Fix by Marcel Pennewiß for sed error when USE=-java #299888.
 
 *ssvnc-1.0.25 (05 Jan 2010)
 

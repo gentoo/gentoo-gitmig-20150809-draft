@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.22.ebuild,v 1.3 2009/06/29 20:55:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.22.ebuild,v 1.4 2010/01/07 00:07:07 vapier Exp $
 
 inherit eutils multilib
 
@@ -42,7 +42,7 @@ src_unpack() {
 		vnc_unixsrc/vncviewer/Makefile
 	sed -i \
 		-e "/^LIB/s:lib/:$(get_libdir)/:" \
-		-e $(use java || echo '/^JSRC/s:=.*:=:') \
+		-e "$(use java || echo '/^JSRC/s:=.*:=:')" \
 		Makefile
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.24.ebuild,v 1.2 2010/01/05 16:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.24.ebuild,v 1.3 2010/01/07 00:07:07 vapier Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -37,7 +37,7 @@ src_prepare() {
 
 	sed -i \
 		-e "/^LIB/s:lib/:$(get_libdir)/:" \
-		-e $(use java || echo '/^JSRC/s:=.*:=:') \
+		-e "$(use java || echo '/^JSRC/s:=.*:=:')" \
 		Makefile
 	sed -i \
 		-e '/^CC/s:=.*:+= $(CFLAGS) $(CPPFLAGS) $(LDFLAGS):' \
