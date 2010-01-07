@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.4.ebuild,v 1.1 2010/01/07 15:21:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.4.ebuild,v 1.2 2010/01/07 17:16:20 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -40,20 +40,20 @@ src_configure() {
 	then
 		sed -i -e"s/# -DEVIL_INSIDE/-DEVIL_INSIDE/" src/Makefile.in
 	fi
-	
+
 	if use forgery
 	then
 		sed -i -e"s/^CPPFLAGS.*/& -DFORGERY/" src/Makefile.in
 	fi
-	
+
 	local screen="ncurses"
 	use unicode && screen="ncursesw"
-	
+
 	if ! use etiquette; then
 		myconf="${myconf} --disable-etiquette"
 	fi
-	
-	if ! use evil && use cancel-locks; then 
+
+	if ! use evil && use cancel-locks; then
 		die "USE=cancel-locks requires also USE=evil to generate MIDs and the Cancel-Lock:-Header."
 	fi
 
