@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.7.ebuild,v 1.6 2009/09/23 18:35:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.7.ebuild,v 1.7 2010/01/07 20:11:01 patrick Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -14,15 +16,14 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-fs/fuse-2.3
-		>=net-fs/samba-3.0"
+		|| ( net-fs/samba-libs[smbclient]
+			<=net-fs/samba-3.3 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool
 	sys-devel/make"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i "s:\(FUSE_USE_VERSION.\)23:\122:" config* || die "sed failed"
 }
 
