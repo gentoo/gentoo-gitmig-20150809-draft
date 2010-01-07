@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.78 2010/01/02 23:12:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.79 2010/01/07 17:15:03 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tora-2.1.1.ebuild:
+  stable x86, bug 298855
 
   02 Jan 2010; Ben de Groot <yngwin@gentoo.org> tora-2.1.0.ebuild,
   tora-2.1.1.ebuild:
