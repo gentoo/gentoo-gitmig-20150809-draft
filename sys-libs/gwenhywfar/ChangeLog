@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.76 2010/01/04 13:45:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.77 2010/01/07 10:12:26 ssuominen Exp $
+
+*gwenhywfar-3.11.3 (07 Jan 2010)
+
+  07 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gwenhywfar-3.11.3.ebuild:
+  Version bump.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gwenhywfar-3.10.1.ebuild:
