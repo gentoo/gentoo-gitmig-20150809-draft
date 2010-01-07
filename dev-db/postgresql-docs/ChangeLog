@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.33 2010/01/07 16:53:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.34 2010/01/07 16:53:57 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  postgresql-docs-8.3.8.ebuild:
+  stable x86, bug 285475
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   postgresql-docs-8.2.14.ebuild:
