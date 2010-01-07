@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.4.0.ebuild,v 1.1 2010/01/05 21:35:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.4.0.ebuild,v 1.2 2010/01/07 17:21:15 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -23,7 +23,7 @@ src_compile() {
 	# parallel compilation hard to fix. better to leave upstream.
 	emake -j1 \
 		DEBUG="${CFLAGS}" \
-		CALCPAGER=${PAGER} \
+		CALCPAGER="${PAGER}" \
 		USE_READLINE="-DUSE_READLINE" \
 		READLINE_LIB="-lreadline -lhistory -lncurses" \
 		all || die "emake failed"

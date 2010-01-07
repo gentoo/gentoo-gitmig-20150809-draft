@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/calc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.19 2010/01/05 21:35:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/ChangeLog,v 1.20 2010/01/07 17:21:15 bicatali Exp $
+
+  07 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> calc-2.12.4.0.ebuild:
+  Added quotes
 
 *calc-2.12.4.0 (05 Jan 2010)
 
