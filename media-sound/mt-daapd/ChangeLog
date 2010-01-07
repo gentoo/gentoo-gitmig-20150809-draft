@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mt-daapd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.65 2009/05/11 20:38:06 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.66 2010/01/07 14:39:07 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  mt-daapd-0.2.4.2.ebuild:
+  Transfer Prefix keywords
 
   11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   mt-daapd-0.2.4.2.ebuild, files/mt-daapd.init.2:

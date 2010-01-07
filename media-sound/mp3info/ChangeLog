@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3info
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.25 2008/10/27 15:02:21 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.26 2010/01/07 14:39:29 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  mp3info-0.8.5a.ebuild:
+  Transfer Prefix keywords
 
   27 Oct 2008; Jeroen Roovers <jer@gentoo.org> mp3info-0.8.5a.ebuild:
   Marked ~hppa thanks to Dakon. Fixed quoting issues.

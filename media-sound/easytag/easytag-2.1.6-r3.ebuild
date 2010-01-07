@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r3.ebuild,v 1.1 2009/12/21 15:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r3.ebuild,v 1.2 2010/01/07 14:36:15 fauli Exp $
 
 EAPI=2
 inherit eutils fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="flac mp3 mp4 speex vorbis wavpack"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2

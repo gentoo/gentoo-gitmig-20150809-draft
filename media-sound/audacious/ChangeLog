@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.188 2009/12/23 20:02:51 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.189 2010/01/07 14:37:15 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> audacious-2.2.ebuild:
+  Transfer Prefix keywords
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> audacious-2.2.ebuild:
   Marked ~hppa (bug #294508).
