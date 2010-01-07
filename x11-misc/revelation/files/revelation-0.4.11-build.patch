@@ -32,7 +32,7 @@
 --- src/wrap/crack/Makefile.am
 +++ src/wrap/crack/Makefile.am
 @@ -5,19 +5,9 @@
- # $Id: revelation-0.4.11-build.patch,v 1.1 2009/01/22 18:12:53 nyhm Exp $
+ # $Id: revelation-0.4.11-build.patch,v 1.2 2010/01/07 20:30:17 nyhm Exp $
  #
  
 -module_PROGRAMS	= crack.so
@@ -55,4 +55,4 @@
 +crack_la_SOURCES	= crack.c
 +crack_la_CFLAGS	= -Wall
 +crack_la_CPPFLAGS	= -I$(PYTHON_INCLUDE) -DDEFAULT_DICTPATH="\"$(CRACK_DICTPATH)\""
-+crack_la_LDFLAGS	= -module
++crack_la_LDFLAGS	= -avoid-version -module -shared
