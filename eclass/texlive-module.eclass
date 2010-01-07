@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.26 2009/11/12 19:04:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.27 2010/01/07 18:17:35 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -51,21 +51,28 @@ HOMEPAGE="http://www.tug.org/texlive/"
 
 COMMON_DEPEND=">=app-text/texlive-core-${PV}"
 
-IUSE=""
+IUSE="source"
 
-# TeX Live 2007 was providing .zip files of CTAN packages. For 2008 they are now
-# .tar.lzma
+# TeX Live 2008 was providing .tar.lzma files of CTAN packages. For 2009 they are now
+# .tar.xz
+if [ "${PV#2008}" != "${PV}" ]; then
+	PKGEXT=tar.lzma
+	DEPEND="${COMMON_DEPEND}
+		|| ( app-arch/xz-utils app-arch/lzma-utils )"
+else
+	PKGEXT=tar.xz
+	DEPEND="${COMMON_DEPEND}
+		app-arch/xz-utils"
+fi
+
 for i in ${TEXLIVE_MODULE_CONTENTS}; do
-	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.tar.lzma"
+	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.${PKGEXT}"
 done
-DEPEND="${COMMON_DEPEND}
-	|| ( app-arch/xz-utils app-arch/lzma-utils )"
-IUSE="${IUSE} source"
 
 # Forge doc SRC_URI
 [ -n "${PN##*documentation*}" ] && [ -n "${TEXLIVE_MODULE_DOC_CONTENTS}" ] && SRC_URI="${SRC_URI} doc? ("
 for i in ${TEXLIVE_MODULE_DOC_CONTENTS}; do
-	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.tar.lzma"
+	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.${PKGEXT}"
 done
 [ -n "${PN##*documentation*}" ] && [ -n "${TEXLIVE_MODULE_DOC_CONTENTS}" ] && SRC_URI="${SRC_URI} )"
 
@@ -73,7 +80,7 @@ done
 if [ -n "${TEXLIVE_MODULE_SRC_CONTENTS}" ] ; then
 	SRC_URI="${SRC_URI} source? ("
 	for i in ${TEXLIVE_MODULE_SRC_CONTENTS}; do
-		SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.tar.lzma"
+		SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.${PKGEXT}"
 	done
 	SRC_URI="${SRC_URI} )"
 fi
