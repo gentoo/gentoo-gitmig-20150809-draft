@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.4.6.ebuild,v 1.2 2009/12/26 15:39:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.5.0.ebuild,v 1.1 2010/01/07 22:42:34 eva Exp $
 
 EAPI="1"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Gnome Partition Editor"
 HOMEPAGE="http://gparted.sourceforge.net/"
@@ -15,10 +15,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="dmraid fat gnome hfs jfs kde ntfs reiserfs reiser4 xfs xfce"
+IUSE="dmraid fat gnome hfs jfs kde mdadm ntfs reiserfs reiser4 xfs xfce"
 
 common_depends=">=sys-apps/parted-1.7.1
-	>=dev-cpp/gtkmm-2.8.0"
+	>=dev-cpp/gtkmm-2.14.0"
 
 RDEPEND="${common_depends}
 	gnome? ( x11-libs/gksu )
@@ -26,6 +26,7 @@ RDEPEND="${common_depends}
 	kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 
 	>=sys-fs/e2fsprogs-1.41.0
+	mdadm? ( sys-fs/mdadm )
 	dmraid? ( || (
 			>=sys-fs/lvm2-2.02.45
 			sys-fs/device-mapper )

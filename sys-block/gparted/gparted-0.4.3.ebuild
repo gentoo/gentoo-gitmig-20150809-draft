@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.4.3.ebuild,v 1.6 2009/11/07 09:47:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.4.3.ebuild,v 1.7 2010/01/07 22:42:34 eva Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="sparc"
 IUSE="fat gnome hfs jfs ntfs reiserfs reiser4 xfs xfce"
 
 common_depends=">=sys-apps/parted-1.7.1
