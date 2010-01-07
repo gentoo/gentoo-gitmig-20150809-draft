@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.4 2009/09/04 06:24:52 mescalinum Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.5 2010/01/07 13:14:27 aballier Exp $
+
+  07 Jan 2010; Alexis Ballier <aballier@gentoo.org> togl-2.0-r1.ebuild:
+  keyword ~x86-fbsd, bug #298612
 
   04 Sep 2009; Federico Ferri <mescalinum@gentoo.org> -togl-2.0.ebuild:
   remove old
