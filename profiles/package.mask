@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11060 2010/01/06 22:25:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11061 2010/01/07 00:08:13 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (07 Jan 2010)
+# requires KMS and needs kernel patches before it can be unmasked
+# see bug #299907
+=x11-drivers/xf86-video-intel-2.10.0
 
 # Patrick Lauer <patrick@gentoo.org> (06 Jan 2010)
 # New xen kernel needs more testing. Use 2.6.18 if you can.
