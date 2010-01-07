@@ -11,7 +11,5 @@ advanced joints, contact with friction, and built-in collision detection.
   <use>
     <flag name="double-precision">more precise calculations at the expense of speed</flag>
     <flag name="gyroscopic">enable gyroscopic term (may cause instability)</flag>
-    <flag name="nogyroscopic">disable gyroscopic term maybe improving stability</flag>
-    <flag name="noopcode">disable OPCODE (trimesh support)</flag>
   </use>
 </pkgmetadata>
