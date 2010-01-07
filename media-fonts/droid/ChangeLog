@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/droid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.14 2009/09/27 09:39:54 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.15 2010/01/07 19:54:16 spatz Exp $
+
+*droid-112_p1-r1 (07 Jan 2010)
+
+  07 Jan 2010; Dror Levin <spatz@gentoo.org> +droid-112_p1-r1.ebuild,
+  metadata.xml:
+  Add new USE flags for slashed and dotted versions of the monotyped font,
+  bug 293701.
 
   27 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> droid-112_p1.ebuild:
   Stable for ppc. Fix bug 283910
