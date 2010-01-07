@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.40 2010/01/01 16:17:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.41 2010/01/07 15:58:32 josejx Exp $
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org> treeline-1.2.3.ebuild:
+  Marked ppc stable for bug #297476.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   treeline-1.2.3.ebuild:
