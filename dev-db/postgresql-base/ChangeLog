@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.36 2010/01/07 06:19:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.37 2010/01/07 11:05:46 patrick Exp $
+
+  07 Jan 2010; Patrick Lauer <patrick@gentoo.org>
+  postgresql-base-8.4.2-r1.ebuild:
+  pg_legacytimestamp logic got inverted. Fixing it to work as expected.
 
   07 Jan 2010; Steve Dibb <beandog@gentoo.org>
   postgresql-base-8.4.2-r1.ebuild:
