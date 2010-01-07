@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.86 2010/01/06 22:33:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.87 2010/01/07 19:39:37 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> hydrogen-0.9.4.ebuild:
+  Marking hydrogen-0.9.4 ppc64 for bug 298363
 
   06 Jan 2010; Markus Meier <maekke@gentoo.org> hydrogen-0.9.4.ebuild:
   x86 stable, bug #298363
