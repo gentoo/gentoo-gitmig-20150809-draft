@@ -6,8 +6,4 @@
     <email>yngwin@gentoo.org</email>
     <name>Ben de Groot</name>
   </maintainer>
-  <use>
-    <flag name="slashed">Changes zero character in monotyped font to be slashed</flag>
-    <flag name="dotted">Changes zero character in monotyped font to be dotted</flag>
-  </use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.15 2010/01/07 19:54:16 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.16 2010/01/07 20:12:38 spatz Exp $
+
+  07 Jan 2010; Dror Levin <spatz@gentoo.org> droid-112_p1-r1.ebuild,
+  metadata.xml:
+  Install all monotyped versions instead of using USE flags.
 
 *droid-112_p1-r1 (07 Jan 2010)
 
