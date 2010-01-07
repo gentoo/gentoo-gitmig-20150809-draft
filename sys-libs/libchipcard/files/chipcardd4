@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/files/chipcardd4,v 1.1 2008/06/11 14:10:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/files/chipcardd4,v 1.2 2010/01/07 10:36:23 ssuominen Exp $
 
 start() {
     ebegin "Starting chipcard4 daemon"
