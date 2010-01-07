@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kst
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.26 2009/12/24 22:28:05 ayoy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.27 2010/01/07 13:35:27 hwoarang Exp $
+
+  07 Jan 2010; <hwoarang@gentoo.org> kst-2.0.0_beta2-r1.ebuild:
+  replace qt4 eclass with qt4-r2
 
 *kst-2.0.0_beta2-r1 (24 Dec 2009)
 

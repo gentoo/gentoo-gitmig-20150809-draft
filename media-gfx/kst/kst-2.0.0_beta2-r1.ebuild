@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta2-r1.ebuild,v 1.1 2009/12/24 22:28:05 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta2-r1.ebuild,v 1.2 2010/01/07 13:35:27 hwoarang Exp $
 
 EAPI=2
 
-inherit qt4 multilib
+inherit qt4-r2 multilib
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -32,7 +32,7 @@ PATCHES=( "${FILESDIR}/${PN}-cfitsio-includes.patch" )
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	qt4_src_prepare
+	qt4-r2_src_prepare
 	sed -e "s:\(INSTALL_DIR/\)lib:\1$(get_libdir):" \
 		-i src/libkst/libkst.pro src/libkstapp/libkstapp.pro \
 		src/libkstmath/libkstmath.pro || die "sed libdir failed"
