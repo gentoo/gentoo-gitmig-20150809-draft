@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.30 2010/01/07 19:16:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.31 2010/01/07 20:31:15 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -121,6 +121,25 @@ texlive-module_src_unpack() {
 
 fi
 
+# @FUNCTION: texlive-module_add_format
+# @DESCRIPTION:
+# Creates/appends to a format.${PN}.cnf file for fmtutil.
+# This will make fmtutil generate the formats when asked and allow the remaining
+# src_compile phase to build the formats
+
+texlive-module_add_format() {
+	local name engine mode patterns options
+	eval $@
+	einfo "Appending to format.${PN}.cnf for $@"
+	[ -d texmf/fmtutil ] || mkdir -p texmf/fmtutil
+	[ -f texmf/fmtutil/format.${PN}.cnf ] || { echo "# Generated for ${PN} by texlive-module.eclass" > texmf/fmtutil/format.${PN}.cnf; }
+	if [ "${mode}" == "disabled" ]; then
+		printf "#! " >> texmf/fmtutil/format.${PN}.cnf
+	fi
+	[ -z "${patterns}" ] && patterns="-"
+	printf "${name}\t${engine}\t${patterns}\t${options}\n" >> texmf/fmtutil/format.${PN}.cnf
+}
+
 # @FUNCTION: texlive-module_make_language_def_lines
 # @DESCRIPTION:
 # Creates a language.${PN}.def entry to put in /etc/texmf/language.def.d
@@ -196,6 +215,8 @@ texlive-module_src_compile() {
 			AddHyphen)
 				texlive-module_make_language_def_lines "$parameter"
 				texlive-module_make_language_dat_lines "$parameter";;
+			AddFormat)
+				texlive-module_add_format "$parameter";;
 			BuildFormat)
 				einfo "Format $parameter already built.";;
 			BuildLanguageDat)
