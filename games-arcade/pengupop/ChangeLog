@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pengupop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.16 2009/12/05 17:48:07 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.17 2010/01/07 17:39:35 josejx Exp $
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org> pengupop-2.2.5.ebuild:
+  Marked ppc stable for bug #299705.
 
 *pengupop-2.2.5 (05 Dec 2009)
 
