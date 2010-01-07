@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/henplus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.23 2009/09/11 22:08:57 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.24 2010/01/07 21:33:16 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> henplus-0.9.8.ebuild:
+  stable ppc, bug 284300
 
   11 Sep 2009; Markus Meier <maekke@gentoo.org> henplus-0.9.8.ebuild:
   amd64/x86 stable, bug #284300
