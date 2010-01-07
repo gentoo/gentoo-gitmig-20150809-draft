@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.51 2010/01/06 20:31:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.52 2010/01/07 20:35:36 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> libofx-0.9.1.ebuild:
+  stable ppc, bug 299533
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> libofx-0.8.3.ebuild:
   Marking libofx-0.8.3 ppc64 for bug 289543
