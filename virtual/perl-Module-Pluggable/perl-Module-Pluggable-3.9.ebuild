@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/perl-Module-Pluggable-3.9.ebuild,v 1.10 2010/01/07 20:26:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/perl-Module-Pluggable-3.9.ebuild,v 1.11 2010/01/07 21:12:35 tove Exp $
 
 DESCRIPTION="automatically give your module the ability to have plugins"
 HOMEPAGE=""
+SRC_URI=""
 
 LICENSE=""
 SLOT="0"
