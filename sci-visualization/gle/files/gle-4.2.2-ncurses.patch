@@ -1,0 +1,27 @@
+--- configure.ac.orig	2010-01-07 04:37:57.000000000 +0000
++++ configure.ac	2010-01-07 04:42:01.000000000 +0000
+@@ -621,12 +621,12 @@
+    LIBS=$SIMPLE_LIBS
+    LDFLAGS=$SIMPLE_LDFLAGS
+ 
+-   AC_SEARCH_LIBS(wbkgdset,ncurses curses,
++   AC_SEARCH_LIBS(wbkgdset,ncurses,
+    [
+       MAKE_MANIP=1
+    ],
+-   [],[-ltinfo])
+-   AC_SEARCH_LIBS(keypad,tinfo,[],[],[])
++   [],[-lncurses])
++   AC_SEARCH_LIBS(keypad,ncurses,[],[],[])
+    AC_CHECK_HEADER([ncurses.h],
+    [
+       HAVE_NCURSES_H=1
+@@ -649,7 +649,7 @@
+    MANIP_LIBS=$LIBS
+    MANIP_LDFLAGS=$LDFLAGS
+    if test "x$with_staticlink" = "xyes"; then
+-      MANIP_LIBS="$SIMPLE_LIBS -Wl,-Bstatic -lncurses -ltinfo -lm -Wl,-Bdynamic -ldl"
++      MANIP_LIBS="$SIMPLE_LIBS -Wl,-Bstatic -lncurses -lm -Wl,-Bdynamic -ldl"
+       #MANIP_LIBS="$SIMPLE_LIBS -Wl,-Bstatic -lncurses -lm -Wl,-Bdynamic -ldl"
+    else
+       MANIP_LIBS="$MANIP_LIBS -lm"
