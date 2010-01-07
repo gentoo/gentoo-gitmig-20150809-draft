@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.69 2009/07/19 13:20:36 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.70 2010/01/07 15:19:40 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  gnustep-back-art-0.16.0.ebuild:
+  Transfer Prefix keywords
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> gnustep-back-art-0.16.0.ebuild:
   ppc stable #272673

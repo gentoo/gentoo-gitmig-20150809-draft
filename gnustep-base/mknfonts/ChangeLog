@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/mknfonts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.23 2008/12/03 14:42:28 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.24 2010/01/07 15:24:43 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  mknfonts-0.5-r1.ebuild:
+  Transfer Prefix keywords
 
   03 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
   mknfonts-0.5-r1.ebuild:
