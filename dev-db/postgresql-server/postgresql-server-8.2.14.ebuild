@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.14.ebuild,v 1.3 2009/12/03 19:51:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.14.ebuild,v 1.4 2010/01/07 17:00:24 fauli Exp $
 
 EAPI="1"
 
@@ -8,7 +8,7 @@ WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="none"
 inherit eutils multilib toolchain-funcs versionator autotools
 
-KEYWORDS="~amd64 hppa ppc ~x86"
+KEYWORDS="~amd64 hppa ppc x86"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
