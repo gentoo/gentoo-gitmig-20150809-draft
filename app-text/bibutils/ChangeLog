@@ -1,6 +1,11 @@
 # ChangeLog for app-text/bibutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/ChangeLog,v 1.7 2009/11/08 12:59:44 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/ChangeLog,v 1.8 2010/01/07 02:21:24 bicatali Exp $
+
+*bibutils-4.7 (07 Jan 2010)
+
+  07 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> +bibutils-4.7.ebuild:
+  Version bump
 
 *bibutils-4.6 (08 Nov 2009)
 
