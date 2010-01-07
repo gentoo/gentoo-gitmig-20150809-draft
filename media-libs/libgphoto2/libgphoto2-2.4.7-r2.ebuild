@@ -1,12 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.4.ebuild,v 1.4 2009/05/16 08:03:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.7-r2.ebuild,v 1.1 2010/01/07 00:28:42 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1643870&group_id=8874&atid=108874
-# 3. Track upstream bug regarding rpm usage.
-#	http://sourceforge.net/tracker/index.php?func=detail&aid=1643813&group_id=8874&atid=358874
 
 EAPI="2"
 
@@ -19,8 +17,9 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="bonjour doc examples exif hal nls kernel_linux"
 
-IUSE="bonjour doc exif hal nls kernel_linux"
+# ???
 RESTRICT="test"
 
 # By default, drivers for all supported cameras will be compiled.
@@ -44,15 +43,14 @@ for camera in ${IUSE_CAMERAS}; do
 done
 
 # libgphoto2 actually links to libtool
-RDEPEND="=virtual/libusb-0*
+RDEPEND="virtual/libusb:0
 	bonjour? ( || (
 		net-dns/avahi[mdnsresponder-compat]
 		net-misc/mDNSResponder ) )
 	exif? ( >=media-libs/libexif-0.5.9 )
 	hal? (
 		>=sys-apps/hal-0.5
-		>=sys-apps/dbus-1 )
-	sys-devel/libtool"
+		>=sys-apps/dbus-1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/flex
@@ -62,14 +60,14 @@ DEPEND="${RDEPEND}
 #		>=dev-util/gtk-doc-1.10 )"
 
 RDEPEND="${RDEPEND}
-	!<sys-fs/udev-114"
+	!<sys-fs/udev-136"
 
 pkg_setup() {
 	if ! echo "${USE}" | grep "cameras_" > /dev/null 2>&1; then
 		einfo "libgphoto2 supports: all ${IUSE_CAMERAS}"
 		einfo "All camera drivers will be built since you did not specify"
 		einfo "via the CAMERAS variable what camera you use."
-		ewarn "NOTICE: Upstream will not support you if you do not compile all camera drivers first"
+		einfo "NOTICE: Upstream will not support you if you do not compile all camera drivers first"
 	fi
 
 	if use cameras_template || use cameras_sipix_blink; then
@@ -80,22 +78,32 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.4.0-rpm.patch
+	# Handle examples ourselves
+	sed 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
+		|| die "examples sed failed"
 
 	# Fix pkgconfig file when USE="-exif"
-	use exif || sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in || die " libgphoto2.pc sed failed"
+	if ! use exif; then
+		sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in || die " libgphoto2.pc sed failed"
+	fi
+
+	# Fix USE=bonjour, bug #283332
+	epatch "${FILESDIR}/${PN}-2.4.7-respect-bonjour.patch"
+
+	# Fix a typo in automake rules
+	epatch "${FILESDIR}/${PN}-2.4.7-extra-dist.patch"
+
+	# Do not build test if not running make check, bug #226241
+	epatch "${FILESDIR}/${PN}-2.4.7-no-test-build.patch"
+
+	cd "${S}/libgphoto2_port"
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	cd "${S}"
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 
 	# Fix bug #216206, libusb detection
 	sed -i "s:usb_busses:usb_find_busses:g" libgphoto2_port/configure || die "libusb sed failed"
-
-	# Fix building on alpha, bug #221853 comment #6
-	epatch "${FILESDIR}/gphoto2-ixany.patch"
-
-	# Fix automagic dependencies, bug #242470
-	epatch "${FILESDIR}/${PN}-2.4.3-automagic.patch"
-
-	cd "${S}/libgphoto2_port"
-	eautoreconf
 }
 
 src_configure() {
@@ -116,10 +124,10 @@ src_configure() {
 	econf \
 		--disable-docs \
 		--disable-gp2ddb \
-		$(use_enable bonjour) \
-		$(use_enable hal) \
+		$(use_with bonjour) \
+		$(use_with hal) \
 		$(use_enable nls) \
-		$(use_with exif libexif) \
+		$(use_with exif libexif auto) \
 		--with-drivers=${cameras} \
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-html-dir=/usr/share/doc/${PF}/html \
@@ -142,13 +150,20 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
+	# Clean up unwanted files
+	rm "${D}/usr/share/doc/${PF}/"{ABOUT-NLS,COPYING} || die "rm failed"
+	dodoc ChangeLog NEWS* README* AUTHORS TESTERS MAINTAINERS HACKING || die "dodoc failed"
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins examples/README examples/*.c examples/*.h || die "examples installation failed"
+	fi
+
 	# FIXME: fixup autoconf bug
 	if ! use doc && [ -d "${D}/usr/share/doc/${PF}/apidocs.html" ]; then
 		rm -fr "${D}/usr/share/doc/${PF}/apidocs.html"
 	fi
 	# end fixup
-
-	dodoc ChangeLog NEWS* README AUTHORS TESTERS MAINTAINERS HACKING
 
 	HAL_FDI="/usr/share/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi"
 	UDEV_RULES="/etc/udev/rules.d/70-libgphoto2.rules"
@@ -165,7 +180,7 @@ src_install() {
 				mkdir -p "${D}"/${HAL_FDI%/*}
 				"${D}"${CAM_LIST} hal-fdi >> "${D}"/${HAL_FDI} \
 					|| die "failed to create hal-fdi"
-		else
+		elif use hal; then
 			ewarn "No HAL FDI file generated because no real camera driver enabled"
 		fi
 
@@ -173,13 +188,13 @@ src_install() {
 		mkdir -p "${D}"/${UDEV_RULES%/*}
 		echo -e "# do not edit this file, it will be overwritten on update\n#" \
 			> "${D}"/${UDEV_RULES}
-		"${D}"${CAM_LIST} udev-rules version 0.98 group plugdev >> "${D}"/${UDEV_RULES} \
+		"${D}"${CAM_LIST} udev-rules version 136 group plugdev >> "${D}"/${UDEV_RULES} \
 			|| die "failed to create udev-rules"
 	else
 		eerror "Unable to find print-camera-list"
 		eerror "and therefore unable to generate hotplug usermap or HAL FDI files."
 		eerror "You will have to manually generate it by running:"
-		eerror " ${CAM_LIST} udev-rules version 0.98 group plugdev > ${UDEV_RULES}"
+		eerror " ${CAM_LIST} udev-rules version 136 group plugdev > ${UDEV_RULES}"
 		eerror " ${CAM_LIST} hal-fdi > ${HAL_FDI}"
 	fi
 
