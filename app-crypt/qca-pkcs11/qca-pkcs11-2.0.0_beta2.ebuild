@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.7 2010/01/07 09:01:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.8 2010/01/07 17:16:03 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -36,5 +36,5 @@ src_configure() {
 		$(use debug && echo "--debug" || echo "--release") \
 		--no-separate-debug-info \
 		|| die "configure failed"
-	qt4-r2_src_configure	
+	qt4-r2_src_configure
 }
