@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.61 2010/01/06 18:22:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.62 2010/01/07 16:29:46 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> canna-3.7_p3-r1.ebuild:
+  Marking canna-3.7_p3-r1 ppc64 for bug 297441
 
   06 Jan 2010; Jeroen Roovers <jer@gentoo.org> canna-3.7_p3-r1.ebuild:
   Stable for HPPA (bug #297441).
