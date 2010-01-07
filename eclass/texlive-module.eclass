@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.27 2010/01/07 18:17:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.28 2010/01/07 18:42:47 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -91,10 +91,28 @@ RDEPEND="${COMMON_DEPEND}"
 
 S="${WORKDIR}"
 
+if [ "${PV#2008}" == "${PV}" ]; then
+
+# @FUNCTION: texlive-module_src_unpack
+# @DESCRIPTION:
+# Only for TeX Live 2009.
+# Gives tar.xz unpack support until we can use an EAPI with that support.
+
+texlive-module_src_unpack() {
+	local i s
+	for i in ${A}
+	do
+		s="${DISTDIR%/}/${i}"
+		einfo "Unpacking ${s} to ${PWD}"
+		test -s "${s}" || die "${s} does not exist"
+		xz -dc -- "${s}" | tar xof - || die "Unpacking ${s} failed"
+	done
+}
+
+fi
 
 # @FUNCTION: texlive-module_make_language_def_lines
 # @DESCRIPTION:
-# Only valid for TeXLive 2008.
 # Creates a language.${PN}.def entry to put in /etc/texmf/language.def.d
 # It parses the AddHyphen directive of tlpobj files to create it.
 
@@ -270,4 +288,8 @@ texlive-module_pkg_postrm() {
 	fi
 }
 
+if [ "${PV#2008}" != "${PV}" ]; then
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+else
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_postrm
+fi
