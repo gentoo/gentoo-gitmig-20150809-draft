@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.119 2009/10/04 17:43:13 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.120 2010/01/07 19:09:07 pacho Exp $
+
+  07 Jan 2010; Pacho Ramos <pacho@gentoo.org> glade-3.6.7.ebuild:
+  amd64 stable, bug 298204
 
   04 Oct 2009; Raúl Porcel <armin76@gentoo.org> glade-3.4.5.ebuild:
   sh stable wrt #284713
