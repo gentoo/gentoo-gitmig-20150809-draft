@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-LocalDelivery
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-LocalDelivery/ChangeLog,v 1.5 2008/02/23 19:18:54 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-LocalDelivery/ChangeLog,v 1.6 2010/01/07 14:23:52 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  Email-LocalDelivery-0.217.ebuild:
+  Fix dependencies, especially missing Email-Simple (#300015)
 
   23 Feb 2008; nixnut <nixnut@gentoo.org> Email-LocalDelivery-0.217.ebuild:
   Added ~ppc wrt bug 204036
