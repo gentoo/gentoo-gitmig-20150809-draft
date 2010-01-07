@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/alsa-plugins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.114 2009/09/19 13:55:50 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.115 2010/01/07 17:22:18 beandog Exp $
+
+*alsa-plugins-1.0.22 (07 Jan 2010)
+
+  07 Jan 2010; Steve Dibb <beandog@gentoo.org> +alsa-plugins-1.0.22.ebuild,
+  +files/alsa-plugins-1.0.22-automagic.patch:
+  Version bump, bug 297304
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.20.ebuild:
   arm stable, bug #280464
