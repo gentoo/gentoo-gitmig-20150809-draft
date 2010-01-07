@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-ExtUtils-ParseXS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/ChangeLog,v 1.13 2010/01/05 18:51:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/ChangeLog,v 1.14 2010/01/07 20:11:00 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-ExtUtils-ParseXS-2.18.ebuild, perl-ExtUtils-ParseXS-2.19.ebuild,
+  perl-ExtUtils-ParseXS-2.20.ebuild, perl-ExtUtils-ParseXS-2.20.0401.ebuild,
+  perl-ExtUtils-ParseXS-2.21.ebuild:
+  Empty HOMEPAGE and LICENSE
 
   05 Jan 2010; nixnut <nixnut@gentoo.org>
   perl-ExtUtils-ParseXS-2.20.0401.ebuild:

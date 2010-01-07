@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Text-Balanced
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.23 2009/12/15 20:00:07 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.24 2010/01/07 20:37:52 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-Text-Balanced-2.0.0.ebuild, perl-Text-Balanced-2.02.ebuild:
+  Set empty HOMEPAGE and LICENSE
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   perl-Text-Balanced-2.0.0.ebuild, perl-Text-Balanced-2.02.ebuild:

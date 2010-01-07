@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/perl-Digest-SHA-5.47.ebuild,v 1.9 2009/09/19 16:15:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/perl-Digest-SHA-5.47.ebuild,v 1.10 2010/01/07 20:07:49 tove Exp $
 
 DESCRIPTION="Perl extension for SHA-1/224/256/384/512"
-HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
+HOMEPAGE=""
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""

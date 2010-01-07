@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Math-BigInt-FastCalc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.8 2010/01/05 19:05:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.9 2010/01/07 20:22:20 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-Math-BigInt-FastCalc-0.15.ebuild,
+  perl-Math-BigInt-FastCalc-0.19.ebuild:
+  Set empty HOMEPAGE and LICENSE
 
   05 Jan 2010; nixnut <nixnut@gentoo.org>
   perl-Math-BigInt-FastCalc-0.19.ebuild:

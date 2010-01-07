@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.49 2010/01/05 19:13:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.50 2010/01/07 20:36:14 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-Test-Harness-2.64.ebuild, perl-Test-Harness-3.10.ebuild,
+  perl-Test-Harness-3.16.ebuild, perl-Test-Harness-3.17.ebuild:
+  Set empty HOMEPAGE and LICENSE
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> perl-Test-Harness-3.17.ebuild:
   ppc stable #288026

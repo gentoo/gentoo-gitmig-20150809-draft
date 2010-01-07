@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-net-ping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.15 2010/01/05 19:32:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.16 2010/01/07 20:43:49 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> perl-net-ping-2.31.ebuild,
+  perl-net-ping-2.35.ebuild, perl-net-ping-2.36.ebuild:
+  Set empty HOMEPAGE and LICENSE
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> perl-net-ping-2.36.ebuild:
   ppc stable #288026

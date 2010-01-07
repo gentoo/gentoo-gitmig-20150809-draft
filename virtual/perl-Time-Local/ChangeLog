@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.40 2010/01/05 19:26:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.41 2010/01/07 20:39:52 tove Exp $
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> perl-Time-Local-1.17.ebuild,
+  perl-Time-Local-1.18.ebuild, perl-Time-Local-1.19.01.ebuild:
+  Set empty HOMEPAGE and LICENSE
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> perl-Time-Local-1.19.01.ebuild:
   ppc stable #288026
