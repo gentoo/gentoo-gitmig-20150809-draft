@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/sokoban
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.1 2010/01/07 19:22:42 ulm Exp $
+
+*sokoban-1.04_p20030614 (07 Jan 2010)
+
+  07 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +files/50sokoban-gentoo.el,
+  +sokoban-1.04_p20030614.ebuild, +metadata.xml:
+  Initial import, from Emacs overlay. Ebuild contributed by me.
+
