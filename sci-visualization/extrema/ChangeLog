@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/extrema
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/ChangeLog,v 1.6 2010/01/06 04:13:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/ChangeLog,v 1.7 2010/01/07 02:06:02 bicatali Exp $
+
+  07 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> extrema-4.4.2.ebuild:
+  Fixed possible sandbox violation (bug #299954)
 
 *extrema-4.4.2 (06 Jan 2010)
 

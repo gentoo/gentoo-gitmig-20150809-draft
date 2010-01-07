@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.4.2.ebuild,v 1.1 2010/01/06 04:13:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.4.2.ebuild,v 1.2 2010/01/07 02:06:02 bicatali Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -19,6 +19,12 @@ RDEPEND="!sci-chemistry/psi
 	>=x11-libs/wxGTK-2.8.7
 	dev-util/desktop-file-utils"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	sed -i \
+		-e 's/$(pkgdatadir)/$(DESTDIR)$(pkgdatadir)/g' \
+		src/Makefile.in || die
+}
 
 src_configure() {
 	# extrema cannot be compiled with versions of minuit
