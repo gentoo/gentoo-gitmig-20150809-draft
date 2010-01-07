@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/znotes-0.3.6.ebuild,v 1.1 2009/11/23 20:15:02 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/znotes-0.3.6.ebuild,v 1.2 2010/01/07 11:55:30 hwoarang Exp $
 
 EAPI="2"
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="Simple Notes"
 HOMEPAGE="http://www.qt-apps.org/content/show.php/zNotes?content=113117"
@@ -19,9 +19,5 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	lrelease znotes.pro || die "lrelease failed"
-	eqmake4
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "make install failed"
+	qt4-r2_src_configure
 }
