@@ -1,0 +1,11 @@
+# ChangeLog for app-text/teckit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.1 2010/01/07 17:19:14 aballier Exp $
+
+*teckit-2.5.1 (07 Jan 2010)
+
+  07 Jan 2010; Alexis Ballier <aballier@gentoo.org> +teckit-2.5.1.ebuild,
+  +files/teckit-2.5.1-gcc43.patch, +files/teckit-2.5.1-rc.patch,
+  +metadata.xml:
+  Initial import, will be needed for TL 2009, ebuild by me
+
