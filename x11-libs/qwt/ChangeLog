@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.69 2010/01/03 19:55:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.70 2010/01/07 16:17:17 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> qwt-5.2.0.ebuild:
+  Marking qwt-5.2.0 ppc64 for bug 299365
 
   03 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> qwt-5.2.0.ebuild:
   amd64 stable wrt #299365
