@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.29 2010/01/07 19:13:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.30 2010/01/07 19:16:52 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -172,16 +172,6 @@ texlive-module_make_language_dat_lines() {
 # files for different packages in a single one used by the whole tex installation.
 
 texlive-module_src_compile() {
-	# Build format files
-	for i in texmf/fmtutil/format*.cnf; do
-		if [ -f "${i}" ]; then
-			einfo "Building format ${i}"
-			VARTEXFONTS="${T}/fonts" TEXMFHOME="${S}/texmf:${S}/texmf-dist:${S}/texmf-var"\
-				env -u TEXINPUTS fmtutil --cnffile "${i}" --fmtdir "${S}/texmf-var/web2c" --all\
-				|| die "failed to build format ${i}"
-		fi
-	done
-
 	# Generate config files
 	# TeX Live 2007 was providing lists. For 2008 they are now tlpobj.
 	for i in "${S}"/tlpkg/tlpobj/*;
@@ -213,6 +203,16 @@ texlive-module_src_compile() {
 			*)
 				die "No rule to proccess ${command}. Please file a bug."
 		esac
+	done
+
+	# Build format files
+	for i in texmf/fmtutil/format*.cnf; do
+		if [ -f "${i}" ]; then
+			einfo "Building format ${i}"
+			VARTEXFONTS="${T}/fonts" TEXMFHOME="${S}/texmf:${S}/texmf-dist:${S}/texmf-var"\
+				env -u TEXINPUTS fmtutil --cnffile "${i}" --fmtdir "${S}/texmf-var/web2c" --all\
+				|| die "failed to build format ${i}"
+		fi
 	done
 
 	# Delete ls-R files, these should not be created but better be certain they
