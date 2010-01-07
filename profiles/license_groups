@@ -1,23 +1,30 @@
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.20 2010/01/07 11:27:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.21 2010/01/07 18:26:18 ulm Exp $
 
 # GLEP-0023
 # http://www.gentoo.org/proj/en/glep/glep-0023.html
 # http://www.fsf.org/licensing/licenses/index_html
 
 EULA BCS Broadcom dlj-1.1 DOOM3 ETQW ETQW IBM-J1.4 IBM-J1.5 IBM-J1.6 Introversion jrockit Livestation-EULA LOKI-EULA LOKI-EULA LOKI-EULA LOKI-EULA LRCTF MARBLEBLAST Nero-EULA-US Pando-EULA POMPOM POMPOM postal2 PUEL Q3AEULA QUAKE4 RTCW RTCW-ETEULA sun-bcla-java-vm sun-prerelease-jdk6 sun-prerelease-jdk7 THINKTANKS ut2003 ut2003 ut2003-demo
+
 FSF-APPROVED @GPL-COMPATIBLE AFL-2.0 AFL-2.1 AFL-3.0 Apache-1.1 APSL-2 BitTorrent BSD-4 CDDL CPL-1.0 EPL-1.0 IBM LPPL-1.2 Ms-PL MPL-1.0 MPL-1.1 NPL-1.1 OSL-1.1 OSL-2.0 OSL-2.1 openssl PHP-3.01 QPL QPL-1.0 SPL
-GPL-COMPATIBLE Apache-2.0 Artistic Artistic-2 as-is BSD BSD-2 Boost-1.0 CeCILL-2 FTL GPL-2 GPL-3 Intel ISC libX11 LGPL-2.1 LGPL-3 lsof MIT OPENLDAP OracleDB PYTHON PSF-2.2 PSF-2.3 PSF-2.4 SGI-B-2.0 Ruby unicode vim W3C W3C-document WTFPL-2 X11 ZLIB public-domain ZPL
+
+GPL-COMPATIBLE Apache-2.0 Artistic Artistic-2 as-is BSD BSD-2 Boost-1.0 CeCILL-2 FTL GPL-1 GPL-2 GPL-3 Intel ISC libX11 LGPL-2 LGPL-2.1 LGPL-3 lsof MIT OPENLDAP OracleDB PYTHON PSF-2.2 PSF-2.3 PSF-2.4 SGI-B-2.0 Ruby unicode vim W3C W3C-document WTFPL-2 X11 ZLIB public-domain ZPL
+
 OSI-APPROVED AFL-3.0 APL-1.0 Apache-2.0 Artistic Artistic-2 BSD BSD-2 Boost-1.0 CDDL CPL-1.0 EPL EPL-1.0 GPL-2 GPL-3 LGPL-2.1 LGPL-3 IPL-1 IBM ISC MIT Ms-PL MPL-1.1 nethack OGTSL PHP PSF-2.2 PSF-2.3 PSF-2.4 PYTHON QPL SPL wxWinLL-3 ZPL ZLIB
 
 # Misc licenses that are probably free software but not approved by either FSF or OSI
 # Preferrably on the long term these should be cleared up and moved to other sets
-MISC-FREE BZIP2 w3m CRACKLIB FLEX LGPL-2 libgcc libstdc++ PAM popt SMAIL tcp_wrappers_license cryptopp JamesClark Subversion DSNIFF wxWinLL-3 MaxMind PDFLite gcc-runtime-library-exception-3.1 GPL-1 GPL-2-with-linking-exception GPL-2-with-exceptions imagemagick ElementTree OpenSoftware LLGPL-2.1 DB LPPL-1.3 Info-ZIP gnuplot CMake TeX WordNet-2.1 PHP-3 LPPL-1.3c gsm JNIC
+MISC-FREE BZIP2 w3m CRACKLIB FLEX libgcc libstdc++ SMAIL tcp_wrappers_license cryptopp JamesClark Subversion DSNIFF wxWinLL-3 MaxMind PDFLite gcc-runtime-library-exception-3.1 GPL-2-with-linking-exception GPL-2-with-exceptions imagemagick ElementTree OpenSoftware LLGPL-2.1 DB LPPL-1.3 Info-ZIP gnuplot CMake TeX WordNet-2.1 PHP-3 LPPL-1.3c gsm JNIC
+
+# FSF-approved licenses for "free documentation" and "works of
+# practical use besides software and documentation" (including fonts)
+FSF-APPROVED-OTHER Arphic CCPL-Attribution-2.0 CCPL-Attribution-ShareAlike-2.0 DSL FDL-1.1 FDL-1.2 FDL-1.3 FreeArt GPL-1 GPL-2 GPL-3 OFL-1.1 OPL
 
 # Licenses for free documents, following the definition at
 # http://freedomdefined.org/
-FREE-DOCUMENTS FDL-1.1 FDL-1.2 FDL-1.3 CCPL-Attribution-2.0 CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CC-PD BitstreamVera myspell-en_CA-KevinAtkinson
+FREE-DOCUMENTS @FSF-APPROVED-OTHER CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CC-PD BitstreamVera myspell-en_CA-KevinAtkinson
 
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
