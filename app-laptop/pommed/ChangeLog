@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.48 2010/01/07 16:01:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.49 2010/01/07 16:07:28 josejx Exp $
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org> pommed-1.30.ebuild:
+  Fix for x86/amd64 kernel check not needed on ppc.
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> pommed-1.30.ebuild:
   Marked ppc stable for bug #297779.
