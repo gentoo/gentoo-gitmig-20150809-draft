@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wstx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.3 2009/10/15 08:35:15 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.4 2010/01/07 20:14:47 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> wstx-3.2.8.ebuild:
+  Marking wstx-3.2.8 ppc for bug 287619
 
   15 Oct 2009; Markus Meier <maekke@gentoo.org> wstx-3.2.8.ebuild:
   amd64/x86 stable, bug #287619
