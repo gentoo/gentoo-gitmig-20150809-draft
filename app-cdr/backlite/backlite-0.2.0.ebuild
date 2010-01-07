@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-0.2.0.ebuild,v 1.1 2009/12/07 20:55:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-0.2.0.ebuild,v 1.2 2010/01/07 08:44:07 hwoarang Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="backlite is a pure QT4 version of k9copy"
 HOMEPAGE="http://k9copy.sourceforge.net/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/k9copy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="mplayer"
 
 # According to the author of backlite/k9copy libdvdread and libdvdnav are
