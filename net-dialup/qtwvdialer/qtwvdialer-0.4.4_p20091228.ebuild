@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.4_p20091228.ebuild,v 1.1 2009/12/28 11:50:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.4_p20091228.ebuild,v 1.2 2010/01/07 13:15:54 hwoarang Exp $
 
 EAPI=2
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="Qt4 frontend for wvdial"
 HOMEPAGE="http://github.com/schuay/qt4wvdialer/"
