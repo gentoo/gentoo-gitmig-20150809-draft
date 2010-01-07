@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/smile-1.0.ebuild,v 1.1 2009/10/05 09:43:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/smile-1.0.ebuild,v 1.2 2010/01/07 12:17:50 hwoarang Exp $
 
 EAPI="2"
+LANGS="de en it pl pt ru"
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="Slideshow Maker In Linux Environement"
 HOMEPAGE="http://smile.tuxfamily.org/"
@@ -27,23 +28,14 @@ PATCHES=(
 	"${FILESDIR}/fix_installation.patch"
 	"${FILESDIR}/fix_docs-0.9.10.patch"
 )
-LANGS="de en it pl pt ru"
-
-for x in ${LANGS};do
-	IUSE="${IUSE} linguas_${x}"
-done
 
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	qt4_src_prepare
+	qt4-r2_src_prepare
 	# fix version string on applied patch
 	sed -i "s/${PN}-0.9.10/${P}/" "${S}"/helpfrm.cpp \
 		|| die "failed to fix docs path"
-}
-
-src_configure() {
-	eqmake4 ${PN}.pro
 }
 
 src_install() {
