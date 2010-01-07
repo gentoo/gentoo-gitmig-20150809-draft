@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/fricas
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/ChangeLog,v 1.1 2010/01/07 17:07:46 grozin Exp $
+
+*fricas-1.0.8 (07 Jan 2010)
+
+  07 Jan 2010; Andrey Grozin <grozin@gentoo.org> +files/64fricas-gentoo.el,
+  +fricas-1.0.8.ebuild, +metadata.xml:
+  Initial import
+
