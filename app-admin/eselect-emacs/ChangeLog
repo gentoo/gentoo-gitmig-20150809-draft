@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-emacs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.84 2009/12/09 22:00:43 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.85 2010/01/07 16:47:36 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  eselect-emacs-1.13.ebuild:
+  stable x86, bug 299974
 
 *eselect-emacs-1.13 (09 Dec 2009)
 
