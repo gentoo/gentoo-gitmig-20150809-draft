@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-puri
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-puri/ChangeLog,v 1.14 2007/02/22 01:29:56 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-puri/ChangeLog,v 1.15 2010/01/07 15:16:38 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cl-puri-1.5.ebuild:
+  Transfer Prefix keywords
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

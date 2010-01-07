@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-pipes
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pipes/ChangeLog,v 1.12 2008/03/27 16:18:45 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pipes/ChangeLog,v 1.13 2010/01/07 15:11:29 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  cl-pipes-1.2.1.ebuild:
+  Transfer Prefix keywords
 
   27 Mar 2008; Raúl Porcel <armin76@gentoo.org> cl-pipes-1.2.1.ebuild:
   Fix debian HOMEPAGE
