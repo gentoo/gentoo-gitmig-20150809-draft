@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.118 2010/01/07 17:12:25 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.119 2010/01/07 18:10:56 grozin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
 # Andrey Grozin <grozin@gentoo.org> (7 Jan 2010)
 # gcl is, unfortunately, masked
-# I have problems with clisp and and cmucl, masked for investigation
-sci-mathematics/fricas gcl clisp cmucl
+# I have problems with cmucl, masked for investigation
+sci-mathematics/fricas gcl cmucl
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (6 Jan 2010)
 # Still not really functional, upstream requires not building it.
