@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.14 2009/08/16 17:18:38 gentoofan23 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.15 2010/01/07 15:59:31 fauli Exp $
+
+  07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> wmdf-0.1.6-r1.ebuild:
+  Transfer Prefix keywords
 
   16 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org>
   wmdf-0.1.6-r1.ebuild:
