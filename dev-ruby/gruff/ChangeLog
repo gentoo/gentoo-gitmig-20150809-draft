@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/gruff
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.27 2009/12/15 18:58:28 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.28 2010/01/07 07:28:48 graaff Exp $
+
+*gruff-0.3.6-r1 (07 Jan 2010)
+
+  07 Jan 2010; Hans de Graaff <graaff@gentoo.org> +gruff-0.3.6-r1.ebuild,
+  +files/gruff-0.3.6-fix-tests.patch,
+  +files/gruff-0.3.6-sort-filenames.patch, +files/gruff-0.3.6-spider.patch:
+  Move here from ruby-ng testbed, including two patches. Add additional
+  patch for broken spider graph label.
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> gruff-0.3.6.ebuild:
   ia64 stable wrt #295801
