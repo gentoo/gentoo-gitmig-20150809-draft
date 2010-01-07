@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5163 2010/01/07 20:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5164 2010/01/07 20:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1428,8 +1428,6 @@ mail-mta/ssmtp:maxsysuid - Allow to define a MinUserId
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/culmus-ancient:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/dejavu:fontforge - Use media-gfx/fontforge to build fonts from source
-media-fonts/droid:dotted - Changes zero character in monotyped font to be dotted
-media-fonts/droid:slashed - Changes zero character in monotyped font to be slashed
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
 media-fonts/sil-charis:compact - Use more compactly spaced font
