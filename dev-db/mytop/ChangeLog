@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.24 2009/12/29 14:08:25 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.25 2010/01/07 20:20:07 ranger Exp $
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> mytop-1.6-r3.ebuild:
+  Marking mytop-1.6-r3 ppc for bug 296990
 
   29 Dec 2009; Markus Meier <maekke@gentoo.org> mytop-1.6-r3.ebuild:
   x86 stable, bug #296990
