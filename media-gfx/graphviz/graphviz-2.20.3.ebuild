@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.20.3.ebuild,v 1.12 2009/02/07 21:09:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.20.3.ebuild,v 1.13 2010/01/07 16:06:33 armin76 Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -13,7 +13,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="cairo cgraph doc examples gnome gtk java jpeg nls perl png python ruby tcl"
 
 # Requires ksh
