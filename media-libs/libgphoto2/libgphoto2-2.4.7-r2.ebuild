@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.7-r2.ebuild,v 1.1 2010/01/07 00:28:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.7-r2.ebuild,v 1.2 2010/01/07 22:31:13 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -96,10 +96,6 @@ src_prepare() {
 	# Do not build test if not running make check, bug #226241
 	epatch "${FILESDIR}/${PN}-2.4.7-no-test-build.patch"
 
-	cd "${S}/libgphoto2_port"
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	cd "${S}"
-	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 
 	# Fix bug #216206, libusb detection
