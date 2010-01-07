@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyalsa
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.3 2009/08/31 16:05:07 chainsaw Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.4 2010/01/07 17:24:05 beandog Exp $
+
+*pyalsa-1.0.22 (07 Jan 2010)
+
+  07 Jan 2010; Steve Dibb <beandog@gentoo.org> +pyalsa-1.0.22.ebuild:
+  Version bump, bug 297304
 
 *pyalsa-1.0.21 (31 Aug 2009)
 
