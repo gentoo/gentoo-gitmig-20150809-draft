@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.36 2010/01/06 23:36:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.37 2010/01/07 00:28:12 patrick Exp $
+
+*postgresql-server-8.4.2-r1 (07 Jan 2010)
+
+  07 Jan 2010; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-server-8.4.2-r1.ebuild:
+  Fix autovacuum message and do a revision bump to force rebuilding against
+  changed postgresql-base ebuild
 
   06 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/postgresql.init-7.3,
   files/postgresql.init-7.4, files/postgresql.init-8.0,
