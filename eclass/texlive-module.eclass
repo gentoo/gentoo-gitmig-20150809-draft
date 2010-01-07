@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.28 2010/01/07 18:42:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.29 2010/01/07 19:13:01 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -98,6 +98,8 @@ if [ "${PV#2008}" == "${PV}" ]; then
 # Only for TeX Live 2009.
 # Gives tar.xz unpack support until we can use an EAPI with that support.
 
+RELOC_TARGET=texmf-dist
+
 texlive-module_src_unpack() {
 	local i s
 	for i in ${A}
@@ -106,6 +108,14 @@ texlive-module_src_unpack() {
 		einfo "Unpacking ${s} to ${PWD}"
 		test -s "${s}" || die "${s} does not exist"
 		xz -dc -- "${s}" | tar xof - || die "Unpacking ${s} failed"
+	done
+	grep RELOC tlpkg/tlpobj/* | awk '{print $2}' | sed 's#^RELOC/##' > "${T}/reloclist"
+	{ for i in $(<"${T}/reloclist"); do  dirname $i; done; } | uniq | sort -r > "${T}/dirlist"
+	for i in $(<"${T}/dirlist"); do
+		[ -d "${RELOC_TARGET}/${i}" ] || mkdir -p "${RELOC_TARGET}/${i}"
+	done
+	for i in $(<"${T}/reloclist"); do
+		mv "${i}" "${RELOC_TARGET}"/$(dirname "${i}") || die "failed to relocate ${i} to ${RELOC_TARGET}/$(dirname ${i})"
 	done
 }
 
