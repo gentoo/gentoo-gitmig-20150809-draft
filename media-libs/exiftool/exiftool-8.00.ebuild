@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-8.00.ebuild,v 1.1 2009/11/24 12:47:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-8.00.ebuild,v 1.2 2010/01/07 06:00:37 beandog Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.sno.phy.queensu.ca/~phil/exiftool/ ${HOMEPAGE}"
 SRC_URI="${SRC_URI} http://www.sno.phy.queensu.ca/~phil/exiftool/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
