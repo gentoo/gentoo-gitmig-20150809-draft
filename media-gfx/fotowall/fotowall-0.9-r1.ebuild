@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.1 2009/12/10 04:18:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.2 2010/01/07 13:29:26 hwoarang Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 MY_P="${P/f/F}"
 
@@ -24,8 +24,10 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
+DOCS="README.markdown"
+
 src_prepare() {
-	qt4_src_prepare
+	qt4-r2_src_prepare
 
 	if ! use opengl; then
 		sed -i "/QT += opengl/d" "${PN}.pro" || die "sed failed"
@@ -38,9 +40,4 @@ src_configure() {
 	else
 		eqmake4
 	fi
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc "README.markdown" || die
 }

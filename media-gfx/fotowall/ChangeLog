@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fotowall
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.7 2009/12/10 04:18:56 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.8 2010/01/07 13:29:26 hwoarang Exp $
+
+  07 Jan 2010; <hwoarang@gentoo.org> fotowall-0.8.2.ebuild,
+  fotowall-0.9-r1.ebuild:
+  migrate to qt4-r2 eclass
 
 *fotowall-0.9-r1 (10 Dec 2009)
 
