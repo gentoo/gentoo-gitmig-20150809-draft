@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.29-r4.ebuild,v 1.1 2010/01/06 22:36:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.29-r4.ebuild,v 1.2 2010/01/07 05:00:03 mr_bones_ Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="1"
@@ -20,7 +20,6 @@ XENPATCHES="xen-patches-${PV}-${XENPATCHES_VER}.tar.bz2"
 XENPATCHES_URI="http://gentoo-xen-kernel.googlecode.com/files/${XENPATCHES}"
 
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${XENPATCHES_URI}"
-
 
 UNIPATCH_LIST="${DISTDIR}/${XENPATCHES}"
 
