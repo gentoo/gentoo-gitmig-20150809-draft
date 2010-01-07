@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.31 2010/01/07 20:31:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.32 2010/01/07 20:36:23 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -110,7 +110,7 @@ texlive-module_src_unpack() {
 		xz -dc -- "${s}" | tar xof - || die "Unpacking ${s} failed"
 	done
 	grep RELOC tlpkg/tlpobj/* | awk '{print $2}' | sed 's#^RELOC/##' > "${T}/reloclist"
-	{ for i in $(<"${T}/reloclist"); do  dirname $i; done; } | uniq | sort -r > "${T}/dirlist"
+	{ for i in $(<"${T}/reloclist"); do  dirname $i; done; } | uniq > "${T}/dirlist"
 	for i in $(<"${T}/dirlist"); do
 		[ -d "${RELOC_TARGET}/${i}" ] || mkdir -p "${RELOC_TARGET}/${i}"
 	done
