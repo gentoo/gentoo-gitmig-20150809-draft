@@ -1,6 +1,12 @@
 # ChangeLog for media-video/kffmpegthumbnailer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/ChangeLog,v 1.2 2009/12/28 11:28:08 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/ChangeLog,v 1.3 2010/01/07 09:43:06 ssuominen Exp $
+
+*kffmpegthumbnailer-1.1.0 (07 Jan 2010)
+
+  07 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +kffmpegthumbnailer-1.1.0.ebuild:
+  Version bump.
 
 *kffmpegthumbnailer-1.0.1 (28 Dec 2009)
 
