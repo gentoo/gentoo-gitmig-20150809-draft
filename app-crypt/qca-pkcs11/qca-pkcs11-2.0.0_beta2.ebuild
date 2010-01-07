@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.6 2009/08/19 13:55:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.7 2010/01/07 09:01:10 hwoarang Exp $
 
 EAPI="2"
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 MY_P="${P/_/-}"
 QCA_VER="${PV%.*}"
@@ -23,6 +23,7 @@ DEPEND=">=app-crypt/qca-${QCA_VER}[debug?]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+DOCS="README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
@@ -35,11 +36,5 @@ src_configure() {
 		$(use debug && echo "--debug" || echo "--release") \
 		--no-separate-debug-info \
 		|| die "configure failed"
-
-	eqmake4 ${PN}.pro
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "make install failed"
-	dodoc README || die
+	qt4-r2_src_configure	
 }
