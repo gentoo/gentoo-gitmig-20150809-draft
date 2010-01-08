@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.95.0.ebuild,v 1.1 2010/01/08 16:54:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.95.0.ebuild,v 1.2 2010/01/08 17:23:16 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic kde4-base
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug quotes test"
 
 # Next alpha will have configure opts to make some of these optional.
-RDEPEND=">=dev-libs/boost-1.33.1
+COMMON_DEPEND=">=dev-libs/boost-1.33.1
 	>=net-libs/aqbanking-4.2[qt4]
 	>=sys-libs/gwenhywfar-3.10
 	dev-libs/libxml2
@@ -23,9 +23,10 @@ RDEPEND=">=dev-libs/boost-1.33.1
 	dev-libs/libgpg-error
 	app-crypt/gpgme
 	>=dev-libs/libofx-0.9
-	>=kde-base/kdepimlibs-${KDE_MINIMAL}
+	>=kde-base/kdepimlibs-${KDE_MINIMAL}"
+RDEPEND="${COMMON_DEPEND}
 	quotes? ( dev-perl/Finance-Quote )"
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-util/cppunit-1.12 )"
 
 DOCS="AUTHORS BUGS ChangeLog* README* TODO"
