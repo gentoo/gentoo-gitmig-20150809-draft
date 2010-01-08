@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.30.ebuild,v 1.1 2009/11/23 07:15:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.30.ebuild,v 1.2 2010/01/08 04:41:08 bicatali Exp $
 
 EAPI=2
 
@@ -39,9 +39,9 @@ src_test() {
 	cd "${S}"/examples
 	# use emake for parallel instead of long runmains
 	emake \
-		$(ls main0{1..9}*.cc main1{0..5}*.cc | sed -e 's/.cc//') \
+		$(ls main0{1..9}*.cc | sed -e 's/.cc//') \
 		|| die "emake tests failed"
-	for i in main0{1..9}*.exe main1{0..5}*.exe; do
+	for i in main0{1..9}*.exe; do
 		./${i} > ${i}.out || die "test ${i} failed"
 	done
 	if use hepmc; then
