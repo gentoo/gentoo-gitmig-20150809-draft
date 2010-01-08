@@ -1,6 +1,12 @@
 # ChangeLog for games-util/gslist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.5 2010/01/06 18:17:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.6 2010/01/08 06:28:53 mr_bones_ Exp $
+
+*gslist-0.8.8a (08 Jan 2010)
+
+  08 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +gslist-0.8.8a.ebuild, +files/gslist-0.8.8a-build.patch:
+  version bump (bug #299926)
 
   06 Jan 2010; Jeroen Roovers <jer@gentoo.org> gslist-0.8.8.ebuild:
   Marked ~hppa too.
