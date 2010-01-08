@@ -1,15 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.22.ebuild,v 1.1 2010/01/07 17:16:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.22-r1.ebuild,v 1.1 2010/01/08 02:18:56 beandog Exp $
 
 EAPI=2
 inherit eutils
 
 MY_P=${P/_rc/rc}
+ALSA_DRIVER_VER="1.0.22.1"
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2"
+SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2 
+	mirror://alsaproject/driver/alsa-driver-${ALSA_DRIVER_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
@@ -26,7 +28,7 @@ RDEPEND=">=sys-libs/ncurses-5.1
 	virtual/modutils
 	!minimal? ( sys-apps/pciutils )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if [[ -e "${ROOT}etc/modules.d/alsa" ]]; then
@@ -60,6 +62,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc ${ALSA_UTILS_DOCS} || die
+
+	newbin "${WORKDIR}/alsa-driver-${ALSA_DRIVER_VER}/utils/alsa-info.sh" \
+		alsa-info
 
 	newinitd "${FILESDIR}/alsasound.initd-r4" alsasound
 	newconfd "${FILESDIR}/alsasound.confd-r3" alsasound

@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.285 2010/01/07 17:16:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.286 2010/01/08 02:18:55 beandog Exp $
+
+*alsa-utils-1.0.22-r1 (08 Jan 2010)
+
+  08 Jan 2010; Steve Dibb <beandog@gentoo.org> -alsa-utils-1.0.22.ebuild,
+  +alsa-utils-1.0.22-r1.ebuild:
+  Install alsa-info shell script for debugging from alsa-driver package,
+  thanks to Robert R. Russell <nahoy_kbiki@hushmail.com> for suggestion; bug
+  251701
 
 *alsa-utils-1.0.22 (07 Jan 2010)
 
