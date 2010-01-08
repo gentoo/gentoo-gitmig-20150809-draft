@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20090801.ebuild,v 1.1 2009/08/22 09:32:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20090801.ebuild,v 1.2 2010/01/08 15:05:33 ssuominen Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="A tool for OpenGL debugging"
 HOMEPAGE="http://www.opengl.org/sdk/tools/BuGLe/"
@@ -22,6 +22,11 @@ DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5 )
 	media-libs/glew
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
