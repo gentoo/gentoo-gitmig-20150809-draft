@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.5 2009/01/29 08:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.6 2010/01/08 20:28:15 tupone Exp $
 
 EAPI=2
 inherit games
@@ -54,6 +54,7 @@ do_statefile() {
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_STATEDIR}" /usr/share/man/man{1,6}
 	make DESTDIR="${D}" install || die "make install failed"
+	rm -rf "${D}"/usr/share/doc/bsd-games || die "Remove failed"
 
 	dodoc AUTHORS BUGS ChangeLog ChangeLog.0 NEWS \
 		  PACKAGING README README.non-free SECURITY THANKS TODO YEAR2000 \

@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games-non-free
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.14 2009/01/29 08:46:09 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.15 2010/01/08 20:28:15 tupone Exp $
+
+  08 Jan 2010; Tupone Alfredo <tupone@gentoo.org>
+  bsd-games-non-free-2.17.ebuild:
+  Removing duplicate docs. Fix bug #297967 by flameeyes@gentoo.org
 
   29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   bsd-games-non-free-2.17.ebuild:
