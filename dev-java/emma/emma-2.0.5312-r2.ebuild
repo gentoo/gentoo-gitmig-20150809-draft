@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/emma-2.0.5312-r2.ebuild,v 1.6 2008/08/31 13:32:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/emma-2.0.5312-r2.ebuild,v 1.7 2010/01/08 19:04:26 caster Exp $
 
 # No support for javadocs in build.xml
-EAPI=1
+EAPI=2
 JAVA_PKG_IUSE="source"
 
 inherit base java-pkg-2 java-ant-2
@@ -24,9 +24,13 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip"
 
-PATCHES=( "${FILESDIR}/${P}-java15api.patch" )
-
 EANT_BUILD_TARGET="build"
+
+java_prepare() {
+	epatch "${FILESDIR}/${P}-java15api.patch"
+	# bcp mangling unneccessary for 1.4+ and breaks with IBM 1.6 - bug #220463
+	sed -e '/bootclasspathref/d' -e '/extdirs/d' -i build.xml
+}
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar

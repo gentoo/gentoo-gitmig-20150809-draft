@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/emma
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.19 2008/08/31 13:32:47 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.20 2010/01/08 19:04:26 caster Exp $
+
+  08 Jan 2010; Vlastimil Babka <caster@gentoo.org> -emma-2.0.5312-r1.ebuild,
+  emma-2.0.5312-r2.ebuild:
+  Fix building with ibm-jdk-bin-1.6 on 64bits - bug #220463.
 
   31 Aug 2008; Markus Meier <maekke@gentoo.org> emma-2.0.5312-r2.ebuild:
   amd64 stable, bug #212344
