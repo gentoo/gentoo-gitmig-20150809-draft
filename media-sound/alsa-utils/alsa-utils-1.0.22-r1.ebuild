@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.22-r1.ebuild,v 1.1 2010/01/08 02:18:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.22-r1.ebuild,v 1.2 2010/01/08 02:19:41 beandog Exp $
 
 EAPI=2
 inherit eutils
@@ -10,7 +10,7 @@ ALSA_DRIVER_VER="1.0.22.1"
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2 
+SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2
 	mirror://alsaproject/driver/alsa-driver-${ALSA_DRIVER_VER}.tar.bz2"
 
 LICENSE="GPL-2"
