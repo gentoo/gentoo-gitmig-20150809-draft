@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.36 2010/01/03 11:52:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.37 2010/01/08 21:55:53 tupone Exp $
+
+  08 Jan 2010; Tupone Alfredo <tupone@gentoo.org>
+  files/snes9x-1.51-config.patch:
+  Build with autoconf-2.65. Bug #294366 by flameeyes@gentoo.org
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> snes9x-1.51.ebuild:
   Transfer Prefix keywords

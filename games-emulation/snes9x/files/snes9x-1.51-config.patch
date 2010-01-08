@@ -1,5 +1,17 @@
 --- configure.in.old
 +++ configure.in
+@@ -20,9 +20,9 @@
+ 
+ SYSDEFINES=''
+ 
+-AC_DEFUN([AC_S9X_DEFINE],
++AC_DEFUN([AC_S9X_DEFINE],[
+   AC_DEFINE($1, $2, $3)
+-  SYSDEFINES="$SYSDEFINES"' -D$1')
++  SYSDEFINES="$SYSDEFINES"' -D$1'])
+ 
+ AC_DEFUN([AC_SYS_COMPILER_FLAG],
+ [
 @@ -506,9 +506,9 @@
    fi
  ])
