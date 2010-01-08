@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.74 2010/01/04 08:36:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.75 2010/01/08 07:47:30 djc Exp $
+
+  08 Jan 2010; Dirkjan Ochtman <djc@gentoo.org>
+  scons-1.2.0_p20091224.ebuild:
+  Replace incorrect usage of P by PN-PV (bug 300076).
 
 *scons-1.2.0_p20091224 (04 Jan 2010)
 

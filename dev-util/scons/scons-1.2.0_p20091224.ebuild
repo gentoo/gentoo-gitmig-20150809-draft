@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.2.0_p20091224.ebuild,v 1.1 2010/01/04 08:36:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.2.0_p20091224.ebuild,v 1.2 2010/01/08 07:47:30 djc Exp $
 
 EAPI=2
 
@@ -41,9 +41,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/$(get_libdir)/${P}
+	python_mod_optimize /usr/$(get_libdir)/${PN}-${MY_PV}
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/${P}
+	python_mod_cleanup /usr/$(get_libdir)/${PN}-${MY_PV}
 }
