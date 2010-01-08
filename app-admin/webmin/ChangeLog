@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.187 2009/12/09 14:51:49 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.188 2010/01/08 17:50:14 a3li Exp $
+
+  08 Jan 2010; Alex Legler <a3li@gentoo.org> -webmin-1.490.ebuild:
+  Non-maintainer commit: Removing vulnerable ebuild, bug 300208.
 
 *webmin-1.500 (09 Dec 2009)
 
