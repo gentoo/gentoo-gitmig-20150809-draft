@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pngnq
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.4 2008/10/25 19:15:38 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.5 2010/01/08 13:34:34 patrick Exp $
+
+*pngnq-1.0 (08 Jan 2010)
+
+  08 Jan 2010; Patrick Lauer <patrick@gentoo.org> +pngnq-1.0.ebuild:
+  Bump for #293837
 
   25 Oct 2008; Hanno Boeck <hanno@gentoo.org> pngnq-0.5.ebuild:
   Respect CC variable, fixes #244164.
