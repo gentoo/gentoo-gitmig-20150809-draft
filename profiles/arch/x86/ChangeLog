@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.27 2010/01/08 10:45:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.28 2010/01/08 15:14:28 ssuominen Exp $
+
+  08 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +package.use.force:
+  Force USE="qt-static" enabled for net-im/skype wrt #295525.
 
   08 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> use.mask:
   Unmask JRuby target.

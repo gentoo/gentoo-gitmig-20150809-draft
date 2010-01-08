@@ -1,0 +1,12 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.force,v 1.1 2010/01/08 15:14:28 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org> (08 Jan 2009)
+# Skype doesn't support Qt 4.6.0. Force static linking.
+# http://bugs.gentoo.org/show_bug.cgi?id=295525
+# https://developer.skype.com/jira/browse/SCL-533
+# This will have to be cloned into arch/amd64 when
+# emul-linux-x86-qtlibs include Qt 4.6.0
+# http://amd64.gentoo.org/emul/content.xml
+<=net-im/skype-2.1.0.47-r9999 qt-static
