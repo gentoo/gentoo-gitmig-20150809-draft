@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.134 2010/01/07 22:18:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.135 2010/01/08 11:35:37 fauli Exp $
+
+  08 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  bsd/freebsd/8.0/package.mask:
+  mask GCC 4.4 and onwards, does not compile currently on FreeBSD
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   bsd/freebsd/8.0/package.mask:
