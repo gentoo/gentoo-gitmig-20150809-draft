@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.23 2009/12/22 15:41:44 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.24 2010/01/08 00:44:41 abcd Exp $
+
+  08 Jan 2010; Jonathan Callen <abcd@gentoo.org> libssh-0.4.0.ebuild:
+  Fix installation of examples when ROOT != /; add prefix keywords
 
   22 Dec 2009; Jeroen Roovers <jer@gentoo.org> libssh-0.4.0.ebuild:
   Marked ~hppa (bug #297899).
