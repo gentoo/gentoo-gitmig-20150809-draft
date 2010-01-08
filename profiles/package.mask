@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11071 2010/01/08 13:05:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11072 2010/01/08 14:34:11 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -522,12 +522,6 @@ dev-ruby/ruby-xlib
 # One and only release in 2008-05, in tree since 09-01
 # Never stable
 sys-boot/sysload
-
-# Jonathan Callen <abcd@gentoo.org> (14 Dec 2009)
-# Old Qt3-only version of qca, unused in tree
-# Removal on 2010-01-14
-=app-crypt/qca-1*
-app-crypt/qca-tls
 
 # Ulrich Mueller <ulm@gentoo.org> (14 Dec 2009)
 # Emacs live ebuild. Use at your own risk.
