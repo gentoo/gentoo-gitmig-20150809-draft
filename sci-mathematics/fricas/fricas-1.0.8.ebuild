@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.0.8.ebuild,v 1.1 2010/01/07 17:07:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.0.8.ebuild,v 1.2 2010/01/08 16:49:45 grozin Exp $
 EAPI=2
 inherit elisp-common
 
@@ -43,7 +43,7 @@ done
 
 DEPEND="${RDEPEND}"
 
-# necessary for gcl
+# necessary for clisp and gcl
 RESTRICT="strip"
 
 src_configure() {
@@ -64,11 +64,19 @@ src_configure() {
 	econf --disable-aldor --with-lisp=${LISP} $(use_with X x)
 }
 
+src_compile() {
+	# bug #300132
+	emake -j1 || die "emake failed"
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die 'emake install failed'
 	dodoc README FAQ || die "dodoc failed"
 
 	if use emacs; then
+		sed -e 's|(setq load-path (cons (quote "/usr/lib/fricas/emacs") load-path)) ||' \
+			-i "${D}"/usr/bin/efricas \
+			|| die "sed efricas failed"
 		elisp-install ${PN} "${D}"/usr/lib/${PN}/emacs/*.el
 		elisp-site-file-install "${FILESDIR}"/64${PN}-gentoo.el
 	else
