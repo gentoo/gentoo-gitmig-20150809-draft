@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.22.ebuild,v 1.2 2010/01/08 02:48:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20-r2.ebuild,v 1.1 2010/01/08 02:48:26 beandog Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -74,7 +74,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# bug 273129
+	epatch "${FILESDIR}"/${P}+glibc-2.10.patch
+	epatch "${FILESDIR}"/${P}-hdspconf-asneeded.patch
 	epatch "${FILESDIR}"/envy24control-config-dir.patch
 
 	# This block only deals with the tools that still use GTK and the
