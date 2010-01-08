@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.9 2009/12/27 17:20:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.10 2010/01/08 06:33:14 abcd Exp $
 
 EAPI="2"
 
@@ -92,8 +92,8 @@ src_test() {
 
 pkg_postinst() {
 	if ! use clucene && ! use hyperestraier; then
-		elog "Because you didn't enable any of the supported backends:"
-		elog "clucene, hyperestraier and sqlite"
+		elog "Because you didn't enable either of the supported backends:"
+		elog "clucene or hyperestraier"
 		elog "clucene support was silently installed."
 		elog "If you prefer another backend, be sure to reinstall strigi"
 		elog "and to enable that backend use flag"

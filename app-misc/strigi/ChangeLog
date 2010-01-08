@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.46 2009/12/27 17:20:31 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.47 2010/01/08 06:33:14 abcd Exp $
+
+  08 Jan 2010; Jonathan Callen <abcd@gentoo.org> strigi-0.6.5.ebuild,
+  strigi-0.7.0.ebuild:
+  Drop mention of old sqlite backend in elog
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> strigi-0.6.5.ebuild,
   strigi-0.7.0.ebuild:
