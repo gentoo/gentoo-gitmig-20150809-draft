@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.11.3.ebuild,v 1.1 2010/01/07 10:12:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.11.3.ebuild,v 1.2 2010/01/08 19:20:52 ssuominen Exp $
 
 EAPI=2
 
@@ -11,16 +11,16 @@ SRC_URI="http://www.aquamaniac.de/sites/download/download.php?package=01&release
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug ssl doc"
+IUSE="debug doc"
 
-RDEPEND="ssl? ( net-libs/gnutls )"
+RDEPEND="net-libs/gnutls"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable ssl) \
+		--enable-ssl \
 		--enable-visibility \
 		$(use_enable debug) \
 		$(use_enable doc full-doc) \
