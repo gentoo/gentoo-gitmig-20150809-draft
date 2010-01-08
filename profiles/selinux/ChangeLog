@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.13 2009/10/28 02:12:08 pebenito Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.14 2010/01/08 18:00:27 pebenito Exp $
+
+  08 Jan 2010; Chris PeBenito <pebenito@gentoo.org> package.mask:
+  Update SELinux sysvinit masking.
 
   28 Oct 2009; Chris PeBenito <pebenito@gentoo.org> package.mask:
   Mask sysvinit for selinux patch update.
