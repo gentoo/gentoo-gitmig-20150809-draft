@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/rakudo
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.1 2010/01/08 20:45:18 patrick Exp $
+
+*rakudo-2009.12 (08 Jan 2010)
+
+  08 Jan 2010; Patrick Lauer <patrick@gentoo.org> +rakudo-2009.12.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by Christian Ludwig based on earlier work by David
+  Abbott and D W. Fixes #271167
+
