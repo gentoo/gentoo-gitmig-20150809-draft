@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1.ebuild,v 1.2 2009/12/19 19:10:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1-r1.ebuild,v 1.1 2010/01/08 19:04:52 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -31,6 +31,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# --with-python-ldflags line can be dropped from next release
+	# as it's been fixed in trunk
 	econf \
 		--disable-dependency-tracking \
 		$(use_with perl) \
@@ -42,7 +44,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" INSTALLDIRS=vendor install || die
 
 	if use perl; then
 		find "${D}" -type f -name perllocal.pod -delete
