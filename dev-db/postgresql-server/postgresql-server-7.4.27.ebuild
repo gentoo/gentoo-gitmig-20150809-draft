@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.4.27.ebuild,v 1.3 2010/01/08 01:25:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.4.27.ebuild,v 1.4 2010/01/08 01:26:21 beandog Exp $
 
 EAPI="1"
 
@@ -224,9 +224,9 @@ pkg_config() {
 
 src_test() {
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-        if [[ $UID -eq 0 ]]; then
-            die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
-        fi
+	if [[ $UID -eq 0 ]]; then
+		die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
+	fi
 	PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 		emake -j1 check \
 			PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
