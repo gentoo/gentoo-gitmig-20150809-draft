@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/accessx
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.27 2008/02/09 01:04:43 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.28 2010/01/08 14:56:34 ssuominen Exp $
+
+  08 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  accessx-0951-r1.ebuild:
+  Fix building with -Wl,--as-needed wrt #248546, thanks to Kacper Kowalik
+  for patch.
 
   09 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> -accessx-0951.ebuild:
   Remove unused version.
