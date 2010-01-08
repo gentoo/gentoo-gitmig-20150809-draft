@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-9999.ebuild,v 1.1 2010/01/06 12:53:09 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-9999.ebuild,v 1.2 2010/01/08 15:31:21 wired Exp $
 
 EAPI="2"
 
@@ -16,12 +16,16 @@ ESVN_PROJECT="uget"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls"
+IUSE="gstreamer libnotify nls"
 
-RDEPEND=">=net-misc/curl-7.10
-	>=x11-libs/gtk+-2.4
+RDEPEND="
+	dev-libs/libpcre
 	>=dev-libs/glib-2
-	dev-libs/libpcre"
+	>=net-misc/curl-7.10
+	>=x11-libs/gtk+-2.4
+	gstreamer? ( media-libs/gstreamer )
+	libnotify? ( x11-libs/libnotify )
+	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
@@ -37,7 +41,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable nls) || die "econf failed"
+	econf $(use_enable nls) \
+		  $(use_enable gstreamer) \
+		  $(use_enable libnotify notify) || die "econf failed"
 }
 
 src_compile() {
