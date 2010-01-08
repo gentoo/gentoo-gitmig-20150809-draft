@@ -1,6 +1,17 @@
 # ChangeLog for sci-physics/hepmc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.11 2009/12/28 18:54:23 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.12 2010/01/08 03:38:33 bicatali Exp $
+
+  08 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -hepmc-2.04.00.ebuild, -hepmc-2.04.01.ebuild, +hepmc-2.05.01.ebuild:
+  Version bump and skip the buggy tests in the case when MeV and cm are
+  chosen units
+
+*hepmc-2.05.01 (08 Jan 2010)
+
+  08 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -hepmc-2.04.00.ebuild, -hepmc-2.04.01.ebuild, +hepmc-2.05.01.ebuild:
+  Version bump
 
   28 Dec 2009; Raúl Porcel <armin76@gentoo.org> hepmc-2.05.00.ebuild:
   sparc stable wrt #294444
