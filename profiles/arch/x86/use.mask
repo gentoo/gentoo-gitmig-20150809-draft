@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.12 2009/12/13 23:27:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.13 2010/01/08 10:45:32 flameeyes Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -8,6 +8,10 @@
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
 # profile have a USE flag associated with (such as altivec, mmx, etc).
+
+# 2010/01/08 - Diego E. Pettenò <flameeyes@gentoo.org>
+# Add support for JRuby targets where jruby is available
+-ruby_targets_jruby
 
 # pbbuttonsd and macbook for KDE and pbuttonsd it
 #-pbbuttonsd

@@ -1,11 +1,15 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.10 2009/12/13 23:20:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.11 2010/01/08 10:45:30 flameeyes Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# 2010/01/08 - Diego E. Pettenò <flameeyes@gentoo.org>
+# Add support for JRuby targets where jruby is available
+-ruby_targets_jruby
 
 # Lilo works on amd64, so ...
 -lilo
