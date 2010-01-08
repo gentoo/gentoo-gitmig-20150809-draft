@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SNMP_Session
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.16 2009/01/30 08:02:06 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.17 2010/01/08 21:23:23 patrick Exp $
+
+*SNMP_Session-1.13 (08 Jan 2010)
+
+  08 Jan 2010; Patrick Lauer <patrick@gentoo.org> +SNMP_Session-1.13.ebuild:
+  Bump for #281501, changed homepage and src_uri
 
 *SNMP_Session-1.12 (30 Jan 2009)
 
