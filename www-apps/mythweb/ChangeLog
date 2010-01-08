@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.73 2010/01/04 05:45:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.74 2010/01/08 22:32:44 tanderson Exp $
+
+  08 Jan 2010; Thomas Anderson <tanderson@gentoo.org>
+  mythweb-0.22_p22763.ebuild, mythweb-0.22_p22763-r1.ebuild:
+  Add missing dependency on dev-perl/Net-UPnP for flash player to function.
 
   04 Jan 2010; Doug Goldstein <cardoe@gentoo.org>
   -mythweb-0.21_p17573.ebuild, mythweb-0.21_p20323.ebuild:
