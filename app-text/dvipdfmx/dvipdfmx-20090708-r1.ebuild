@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20090708.ebuild,v 1.3 2009/12/15 19:32:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20090708-r1.ebuild,v 1.1 2010/01/08 17:44:02 scarabeus Exp $
 
 EAPI="2"
 
@@ -45,6 +45,9 @@ src_install() {
 	# Symlink poppler-data cMap, bug #201258
 	dosym /usr/share/poppler/cMap /usr/share/texmf/fonts/cmap/cMap || die
 	dodoc AUTHORS ChangeLog README || die
+
+# Remove symlink conflicting with app-text/dvipdfm (bug #295235)
+	rm "${D}"/usr/bin/ebb
 }
 
 pkg_postinst() {

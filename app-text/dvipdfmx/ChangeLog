@@ -1,6 +1,12 @@
 # ChangeLog for app-text/dvipdfmx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.44 2009/12/26 17:29:37 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.45 2010/01/08 17:44:02 scarabeus Exp $
+
+*dvipdfmx-20090708-r1 (08 Jan 2010)
+
+  08 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -dvipdfmx-20090708.ebuild, +dvipdfmx-20090708-r1.ebuild:
+  Revision bump to fix bug #295235.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> dvipdfmx-20050831.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
