@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.4 2009/09/30 10:19:52 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.5 2010/01/08 21:04:50 darkside Exp $
 
 # Michael Haubenwallner <haubi@gentoo.org> (30 Sep 2009)
 # Most prefix platforms do/can not have an uuid implementation (#230981).
@@ -14,9 +14,10 @@ x11-libs/libSM uuid
 # it currently causes failures on linux. It can be made a "less global" mask.
 dev-lang/python berkdb
 
-# Fabian Groffen <grobian@gentoo.org> (02 Sep 2009)
-# these don't work, proxying for darkside
-xfce-base/xfce-settings keyboard
+# Jeremy Olexa <darkside@gentoo.org> (02 Sep 2009)
+# these don't work, because they rely on the host having sufficient xorg-server
+# version.
+xfce-base/xfce4-settings keyboard
 xfce-base/xfce4-meta session
 
 # Jeremy Olexa <darkside@gentoo.org> (13 Feb 2009)

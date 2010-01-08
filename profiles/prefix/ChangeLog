@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.136 2010/01/08 11:45:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.137 2010/01/08 21:04:50 darkside Exp $
+
+  08 Jan 2010; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
+  Fix typo and add more comment description
 
   08 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   +bsd/freebsd/8.0/x86/use.mask:
