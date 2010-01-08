@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.95.0.ebuild,v 1.2 2010/01/08 17:23:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.95.0.ebuild,v 1.3 2010/01/08 22:05:23 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic kde4-base
@@ -23,6 +23,7 @@ COMMON_DEPEND=">=dev-libs/boost-1.33.1
 	dev-libs/libgpg-error
 	app-crypt/gpgme
 	>=dev-libs/libofx-0.9
+	>=kde-base/libkleo-${KDE_MINIMAL}
 	>=kde-base/kdepimlibs-${KDE_MINIMAL}"
 RDEPEND="${COMMON_DEPEND}
 	quotes? ( dev-perl/Finance-Quote )"
