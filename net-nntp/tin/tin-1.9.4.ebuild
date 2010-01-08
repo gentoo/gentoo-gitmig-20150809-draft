@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.4.ebuild,v 1.2 2010/01/07 17:16:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.4.ebuild,v 1.3 2010/01/08 17:44:53 patrick Exp $
 
 EAPI="2"
 
@@ -19,20 +19,14 @@ DEPEND="sys-libs/ncurses
 	dev-libs/libpcre
 	dev-libs/uulib
 	idn? ( net-dns/libidn )
-	unicode? ( dev-libs/icu )
+	unicode? ( dev-libs/icu
+		sys-libs/ncurses[unicode] )
 	nls? ( sys-devel/gettext )
 	crypt? ( app-crypt/gnupg )
 	socks5? ( net-proxy/dante )"
 
 RDEPEND="${DEPEND}
 	net-misc/urlview"
-
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode
-	then
-		die "For unicode support you need sys-libs/ncurses compiled with unicode support!"
-	fi
-}
 
 src_configure() {
 
