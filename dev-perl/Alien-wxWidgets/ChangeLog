@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.23 2009/12/26 07:34:56 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.24 2010/01/08 20:16:08 fauli Exp $
+
+  08 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  Alien-wxWidgets-0.47.ebuild:
+  stable x86, bug 298178
 
 *Alien-wxWidgets-0.48 (26 Dec 2009)
 
