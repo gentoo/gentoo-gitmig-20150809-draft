@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.2.13.ebuild,v 1.2 2009/10/07 06:48:18 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.2.13.ebuild,v 1.3 2010/01/08 15:01:06 ssuominen Exp $
 
 inherit eutils apache-module multilib
 
@@ -29,6 +29,12 @@ cppserv_build_flags() {
 	local CPPSERV_DBG_FLAG
 	use debug && CPPSERV_DBG_FLAG="CPPFLAGS=-DMODCSERV_DEBUG"
 	echo PREFIX=/usr LIB=/$(get_libdir) ADON_VERBOSE=1 ADON_BUILD=release APRCFG_PATH=/usr/bin/apr-1-config  ${CPPSERV_DBG_FLAG}
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/cppserv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.49 2009/10/07 06:48:18 iluxa Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.50 2010/01/08 15:01:06 ssuominen Exp $
+
+  08 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> cppserv-0.2.13.ebuild,
+  +files/cppserv-0.2.13-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #296656, thanks to Kacper Kowalik
+  for patch.
 
   07 Oct 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   cppserv-0.1.119.ebuild, cppserv-0.2.13.ebuild:
