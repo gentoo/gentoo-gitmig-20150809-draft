@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11069 2010/01/07 20:36:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11070 2010/01/08 09:41:31 george Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -585,11 +585,6 @@ x11-apps/xfsinfo
 #
 # Removal on 2010-02-10
 sys-auth/nsvs
-
-# George Shapovalov <george@gentoo.org> (11 Dec 2009)
-# Initial testing of major update. Masked as core (filesystem) component
-# for 2 week testing.
-=net-fs/coda-6.9.4
 
 # Christian Faulhammer <fauli@gentoo.org> (09 Dec 2009)
 # Fails on runtime due to gone web contents, has to wait for 2009
