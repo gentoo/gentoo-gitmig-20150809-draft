@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/darwin-miscutils/darwin-miscutils-7.ebuild,v 1.3 2009/09/05 14:40:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/darwin-miscutils/darwin-miscutils-7.ebuild,v 1.4 2010/01/08 08:54:34 grobian Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,6 +20,12 @@ KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 S=${WORKDIR}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"/shell_cmds-${SHELL_VER}
+	epatch "${FILESDIR}"/${PN}-6-w64.patch
+}
 
 src_compile() {
 	local flags=(
