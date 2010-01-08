@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.173 2009/12/31 16:06:52 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.174 2010/01/08 19:32:58 ranger Exp $
+
+  08 Jan 2010; Brent Baude <ranger@gentoo.org> mutt-1.5.20-r10.ebuild:
+  Marking mutt-1.5.20-r10 ppc64 and ppc for bug 290660
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> mutt-1.5.20-r10.ebuild:
   Marking mutt-1.5.20-r10 ~ppc64 for bug 290154
