@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.1 2010/01/07 18:15:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.2 2010/01/08 19:47:59 grobian Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib versionator
+inherit eutils flag-o-matic multilib versionator toolchain-funcs
 
 DESCRIPTION="an SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -21,7 +21,7 @@ SRC_URI="
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~ppc-aix ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug doc +fts3 icu +readline soundex tcl +threadsafe test"
 
 RDEPEND="icu? ( dev-libs/icu )
@@ -77,13 +77,15 @@ src_configure() {
 	# amalgamation doesn't have tcl
 	econf \
 		$(use_enable readline) \
+		--with-readline-inc=-I"${EPREFIX}"/usr/include/readline \
 		$(use_enable threadsafe) \
 		$(use tcl && echo --enable-tcl) \
-		$(use !tcl && use test && echo --disable-tcl)
+		$(use !tcl && use test && echo --disable-tcl) \
+		$(tc-is-static-only && echo --enable-dynamic-extensions=no)
 }
 
 src_compile() {
-	emake TCLLIBDIR="/usr/$(get_libdir)/${P}" || die "emake failed"
+	emake TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" || die "emake failed"
 }
 
 src_test() {
@@ -100,7 +102,7 @@ src_test() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		TCLLIBDIR="/usr/$(get_libdir)/${P}" \
+		TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" \
 		install \
 		|| die "emake install failed"
 
