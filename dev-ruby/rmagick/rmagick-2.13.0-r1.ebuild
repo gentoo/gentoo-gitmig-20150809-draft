@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.2 2010/01/05 20:02:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.3 2010/01/08 23:49:55 mr_bones_ Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -32,7 +32,6 @@ each_ruby_configure() {
 	pushd ext/RMagick
 	${RUBY} extconf.rb || die "extconf.rb failed"
 	popd
-
 
 }
 
