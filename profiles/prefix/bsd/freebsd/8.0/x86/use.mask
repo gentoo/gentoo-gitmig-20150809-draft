@@ -1,0 +1,2 @@
+# No X support on FreeBSD due to missing keywords
+X

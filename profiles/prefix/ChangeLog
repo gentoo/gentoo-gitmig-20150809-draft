@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.135 2010/01/08 11:35:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.136 2010/01/08 11:45:17 fauli Exp $
+
+  08 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  +bsd/freebsd/8.0/x86/use.mask:
+  Mask X USE flag on FreeBSD due to missing keywords
 
   08 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   bsd/freebsd/8.0/package.mask:
