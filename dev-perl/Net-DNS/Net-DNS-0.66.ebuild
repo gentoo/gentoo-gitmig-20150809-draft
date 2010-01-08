@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.66.ebuild,v 1.2 2010/01/08 21:25:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.66.ebuild,v 1.3 2010/01/08 21:33:17 tove Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Perl Net::DNS - Perl DNS Resolver Module"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6 test"
 
 RDEPEND="virtual/perl-Digest-MD5
