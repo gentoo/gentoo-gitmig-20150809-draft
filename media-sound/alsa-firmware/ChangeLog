@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-firmware
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.93 2009/09/05 18:54:20 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.94 2010/01/08 01:51:30 beandog Exp $
+
+*alsa-firmware-1.0.20-r1 (08 Jan 2010)
+
+  08 Jan 2010; Steve Dibb <beandog@gentoo.org>
+  +alsa-firmware-1.0.20-r1.ebuild:
+  Add emu10k1 use flag, bug 283516
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> alsa-firmware-1.0.20.ebuild:
   Marking alsa-firmware-1.0.20 ppc64 stable for bug 280464
