@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.2.0.ebuild,v 1.1 2009/12/14 03:05:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.2.1.ebuild,v 1.1 2010/01/08 13:12:45 dragonheart Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable db bodylengthdb) \
+	econf $(use_enable db bodylength_db) \
 		$(use_enable db popauth) \
 		$(use_enable db query_cache) \
 		$(use_enable db report_intervals) \
@@ -61,14 +61,13 @@ src_configure() {
 		--enable-vbr \
 		--enable-ztags
 #		$(use_enable diffheaders) \
-	# post release error found.
-	use db && sed -i -e 's/_FFR_BODYLENGTHDB/_FFR_BODYLENGTH_DB/' build-config.h
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
 	# file collision
 	rm "${D}"/usr/share/man/man3/ar.3
+	mv "${D}"/usr/share/doc/opendkim "${D}"/usr/share/doc/${PF}
 
 	newinitd "${FILESDIR}/opendkim.init" opendkim
 	dodir /etc/opendkim /var/run/opendkim /var/lib/opendkim
@@ -124,7 +123,7 @@ pkg_config() {
 
 		# generate the private and public keys
 		opendkim-genkey.sh -b ${keysize} -D "${ROOT}"etc/opendkim/ \
-			-s ${selector} && \
+			-s ${selector} -d '(your domain)' && \
 			chown milter:milter \
 			"${ROOT}"etc/opendkim/"${selector}".private || \
 				{ eerror "Failed to create private and public keys." ; return 1; }
@@ -133,7 +132,7 @@ pkg_config() {
 
 	# opendkim selector configuration
 	echo
-	einfo "Make sure you have the following settings in your dkim-filter.conf:"
+	einfo "Make sure you have the following settings in your /etc/opendkim/opendkim.conf:"
 	einfo "  Keyfile /etc/opendkim/${selector}.private"
 	einfo "  Selector ${selector}"
 

@@ -1,6 +1,19 @@
 # ChangeLog for mail-filter/opendkim
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.4 2009/12/14 03:05:11 dragonheart Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.5 2010/01/08 13:12:45 dragonheart Exp $
+
+*opendkim-1.2.1 (08 Jan 2010)
+
+  08 Jan 2010; Daniel Black <dragonheart@gentoo.org> -opendkim-1.1.0.ebuild,
+  -files/opendkim-1.1.0-autoconf-automake.patch,
+  -files/opendkim-1.1.0-flockinclude.patch,
+  -files/opendkim-1.1.0-rep-querycache.patch,
+  -files/opendkim-1.1.0-vbr-booliscpp.patch, -opendkim-1.2.0.ebuild,
+  +opendkim-1.2.1.ebuild:
+  remove 1.2.0 - few too many bugs. remove old 1.1.0 version too. Thanks
+  Diego for QA bug 299881. Petteri for bugs 297703 and 297698 related to
+  emerge --config section and 297700 released to a broken statistics
+  function upstream.
 
 *opendkim-1.2.0 (14 Dec 2009)
 
