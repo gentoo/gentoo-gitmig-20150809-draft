@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.9 2008/11/06 19:51:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.10 2010/01/08 15:19:20 aballier Exp $
 
 # @ECLASS: texlive-common.eclass
 # @MAINTAINER:
@@ -35,6 +35,7 @@ texlive-common_handle_config_files() {
 			continue
 		fi
 		dodir /etc/texmf/$(dirname ${f}).d
+		einfo "Moving (and symlinking) ${TEXMF_PATH}/${f} to /etc/texmf/$(dirname ${f}).d"
 		mv "${D}/${TEXMF_PATH}/${f}" "${D}/etc/texmf/$(dirname ${f}).d" || die "mv ${f} failed."
 		dosym /etc/texmf/$(dirname ${f}).d/$(basename ${f}) ${TEXMF_PATH}/${f}
 	done
