@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/pidgintex-1.1.1.ebuild,v 1.2 2010/01/08 09:11:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/pidgintex-1.1.1.ebuild,v 1.3 2010/01/08 17:08:51 mr_bones_ Exp $
 
 EAPI="2"
 inherit toolchain-funcs multilib
@@ -43,7 +43,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog 'Note, to see formulas either disable "Conversation Colors" plugin or'  
+	elog 'Note, to see formulas either disable "Conversation Colors" plugin or'
 	elog 'switch off "ignore incoming format" option in plugin configuration.'
 	elog 'For details, take a look (and vote) at http://developer.pidgin.im/ticket/2772'
 }
