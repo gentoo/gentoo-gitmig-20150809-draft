@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.3.ebuild,v 1.1 2009/11/03 18:36:47 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.3.ebuild,v 1.2 2010/01/08 02:26:01 abcd Exp $
 
-inherit libtool
+inherit autotools eutils
 
 DESCRIPTION="Library to render Postscript documents."
 HOMEPAGE="http://libspectre.freedesktop.org/wiki/"
@@ -10,7 +10,7 @@ SRC_URI="http://libspectre.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 SLOT="0"
 IUSE="debug doc test"
 
@@ -22,7 +22,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	elibtoolize
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-0.2.0-interix.patch
+
+	eautoreconf # need new libtool for interix
 }
 
 src_compile() {
