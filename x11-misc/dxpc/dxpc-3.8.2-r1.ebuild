@@ -1,11 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.8.2-r1.ebuild,v 1.5 2009/09/18 16:34:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.8.2-r1.ebuild,v 1.6 2010/01/09 15:06:25 ssuominen Exp $
 
 inherit eutils
 
-DESCRIPTION="an X protocol compressor designed to improve the speed of X11
-applications run over low-bandwidth links"
+DESCRIPTION="Differential X Protocol Compressor"
 SRC_URI="http://www.vigor.nu/dxpc/3.8.2/${P}.tar.gz"
 HOMEPAGE="http://www.vigor.nu/dxpc/"
 
@@ -25,7 +24,7 @@ src_unpack() {
 }
 
 src_install () {
-	make prefix="${D}"/usr man1dir="${D}"/usr/share/man/man1 install \
+	emake -j1 prefix="${D}"/usr man1dir="${D}"/usr/share/man/man1 install \
 		|| die "make install failed"
 	dodoc CHANGES README TODO
 }
