@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iwl3945-ucode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.13 2009/06/07 18:15:41 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.14 2010/01/09 11:11:57 hanno Exp $
+
+  09 Jan 2010; Hanno Boeck <hanno@gentoo.org> iwl3945-ucode-2.14.1.5.ebuild,
+  iwl3945-ucode-15.28.1.6.ebuild, iwl3945-ucode-15.28.1.8.ebuild,
+  iwl3945-ucode-15.28.2.8.ebuild, iwl3945-ucode-15.32.2.9.ebuild:
+  Changing to correct license, the Intel-license is for free Intel software,
+  not for binary firmwares.
 
   07 Jun 2009; Markus Meier <maekke@gentoo.org>
   iwl3945-ucode-15.32.2.9.ebuild:
