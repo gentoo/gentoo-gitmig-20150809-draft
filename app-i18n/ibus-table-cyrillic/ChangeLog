@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-cyrillic
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cyrillic/ChangeLog,v 1.1 2010/01/09 17:04:57 matsuu Exp $
+
+*ibus-table-cyrillic-1.2.0.20100107 (09 Jan 2010)
+
+  09 Jan 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-cyrillic-1.2.0.20100107.ebuild, +metadata.xml:
+  Initial import.
+
