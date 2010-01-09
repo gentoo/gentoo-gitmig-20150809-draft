@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.2-r1.ebuild,v 1.4 2010/01/09 17:26:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.2-r1.ebuild,v 1.5 2010/01/09 19:04:31 patrick Exp $
 
 EAPI="2"
 
@@ -140,6 +140,11 @@ pkg_postinst() {
 	elog "The autovacuum function, which was in contrib, has been moved to the main"
 	elog "PostgreSQL functions starting with 8.1 and starting with 8.4 is now"
 	elog "enabled by default. You can disable it in the cluster's postgresql.conf."
+	elog
+	elog "The timestamp format is 64bit integers now. If you upgrade from older databases"
+	elog "this may force you to either do a dump and reload or enable pg_legacytimestamp"
+	elog "until you find time to do so. If the database can't start please try enabling"
+	elog "pg_legacytimestamp and rebuild."
 }
 
 pkg_postrm() {
