@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-Object
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.17 2007/01/15 23:02:03 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.18 2010/01/09 00:57:19 patrick Exp $
+
+*HTML-Object-2.29 (09 Jan 2010)
+
+  09 Jan 2010; Patrick Lauer <patrick@gentoo.org> +HTML-Object-2.29.ebuild:
+  Bump for #281497, thanks to David Abbott
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -HTML-Object-2.15.ebuild, HTML-Object-2.15-r1.ebuild:
