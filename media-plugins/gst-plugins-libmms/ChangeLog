@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libmms
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.28 2009/12/30 13:14:25 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.29 2010/01/09 14:15:09 ranger Exp $
+
+  09 Jan 2010; Brent Baude <ranger@gentoo.org>
+  gst-plugins-libmms-0.10.14.ebuild:
+  Marking gst-plugins-libmms-0.10.14 ppc to satisfy broken dep in rhytmbox
 
   30 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-libmms-0.10.14.ebuild:
