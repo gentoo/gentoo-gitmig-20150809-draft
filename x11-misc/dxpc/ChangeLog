@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dxpc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.13 2009/09/18 16:34:29 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.14 2010/01/09 14:57:15 patrick Exp $
+
+*dxpc-3.9.2 (09 Jan 2010)
+
+  09 Jan 2010; Patrick Lauer <patrick@gentoo.org> +dxpc-3.9.2.ebuild:
+  Bump, add ~amd64 keyword, fix src_uri #296774
 
   18 Sep 2009; Torsten Veller <tove@gentoo.org> dxpc-3.8.2-r1.ebuild,
   dxpc-3.9.1.ebuild:
