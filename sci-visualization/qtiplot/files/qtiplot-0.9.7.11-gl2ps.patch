@@ -1,0 +1,26 @@
+diff --git a/3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp b/3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp
+index 3fbcf9f..8ce3c8c 100755
+--- a/3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp
++++ b/3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp
+@@ -6,7 +6,7 @@
+ #include <locale.h>
+ 
+ #include "qwt3d_openglhelper.h"
+-#include "../3rdparty/gl2ps/gl2ps.h"
++#include <gl2ps.h>
+ #include "qwt3d_io_gl2ps.h"
+ #include "qwt3d_plot.h"
+ 
+diff --git a/3rdparty/qwtplot3d/src/qwt3d_label.cpp b/3rdparty/qwtplot3d/src/qwt3d_label.cpp
+index 46380a9..8b6aaf0 100755
+--- a/3rdparty/qwtplot3d/src/qwt3d_label.cpp
++++ b/3rdparty/qwtplot3d/src/qwt3d_label.cpp
+@@ -1,7 +1,7 @@
+ #include <qbitmap.h>
+ #include "qwt3d_label.h"
+ #include "qwt3d_plot.h"
+-#include "../3rdparty/gl2ps/gl2ps.h"
++#include <gl2ps.h>
+ 
+ using namespace Qwt3D;
+ 

@@ -5,6 +5,10 @@
   <maintainer>
     <email>cryos@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="xls">Import support for Microsoft office excel sheets</flag>
+    <flag name="ods">Import support for OpenOffice .ods sheets</flag>
+  </use>
   <longdescription>
     Data analysis and scientific plotting package. This is a clone of the
 	popular Origin software available on another well known platform implemented
