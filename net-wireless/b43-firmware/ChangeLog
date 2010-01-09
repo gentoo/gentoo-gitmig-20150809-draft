@@ -1,0 +1,15 @@
+# ChangeLog for net-wireless/b43-firmware
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.1 2010/01/09 21:30:37 vapier Exp $
+
+*b43-firmware-4.174.64.19 (09 Jan 2010)
+*b43-firmware-4.150.10.5 (09 Jan 2010)
+*b43-firmware-4.80.53.0 (09 Jan 2010)
+*b43-firmware-3.130.20.0 (09 Jan 2010)
+
+  09 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  +b43-firmware-3.130.20.0.ebuild, +b43-firmware-4.80.53.0.ebuild,
+  +b43-firmware-4.150.10.5.ebuild, +b43-firmware-4.174.64.19.ebuild,
+  +metadata.xml:
+  Initial ebuild by me.
+
