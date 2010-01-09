@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kword
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.140 2009/12/17 20:44:03 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.141 2010/01/09 09:57:59 ssuominen Exp $
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -kword-1.6.3_p20090204.ebuild, -files/kword-1.6.3-gcc44.patch:
+  Remove KOffice 1.6.3.
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kword-2.1.0.ebuild:
   stable x86, bug 295327

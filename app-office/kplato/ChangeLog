@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.70 2009/12/17 20:46:39 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.71 2010/01/09 10:03:08 ssuominen Exp $
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -kplato-1.6.3_p20090204.ebuild:
+  Remove KOffice 1.6.3.
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> kplato-2.1.0.ebuild:
   stable x86, bug 295327
