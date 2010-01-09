@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/chardet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.10 2009/11/05 22:26:48 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.11 2010/01/09 20:52:46 armin76 Exp $
+
+  09 Jan 2010; Raúl Porcel <armin76@gentoo.org> chardet-1.0.ebuild,
+  chardet-1.0.1.ebuild:
+  Add ~arm
 
   05 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> chardet-1.0.1.ebuild:
   Keywording for ppc, bug 291423

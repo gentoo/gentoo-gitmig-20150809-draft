@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.10 2009/11/08 20:04:18 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.11 2010/01/09 20:47:13 armin76 Exp $
+
+  09 Jan 2010; Raúl Porcel <armin76@gentoo.org> mako-0.2.5.ebuild:
+  Add ~arm
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> mako-0.2.5.ebuild:
   ppc stable #290608
