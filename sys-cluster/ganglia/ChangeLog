@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/ganglia
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.33 2009/07/13 18:53:12 jsbronder Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.34 2010/01/09 18:37:03 jsbronder Exp $
+
+*ganglia-3.1.2-r1 (09 Jan 2010)
+
+  09 Jan 2010; Justin Bronder <jsbronder@gentoo.org>
+  +ganglia-3.1.2-r1.ebuild:
+  EAPI bump. Depend on a font when installing the web interface as rrdtool
+  no longer includes one. Use-deps on dev-lang/php.
 
   13 Jul 2009; Justin Bronder <jsbronder@gentoo.org> files/gmetad.rc,
   files/gmond.rc:
