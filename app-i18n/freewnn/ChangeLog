@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/freewnn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.36 2009/12/31 14:54:59 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.37 2010/01/09 10:24:34 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  freewnn-1.1.1_alpha21-r1.ebuild:
+  Fix stripping of binaries, bug 299754 with patch from Kacper Kowalik
+  <xarthisius.kk AT gmail DOT com>
 
 *freewnn-1.1.1_alpha21-r1 (31 Dec 2009)
 
