@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3.ebuild,v 1.1 2009/09/11 17:18:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3.ebuild,v 1.2 2010/01/09 23:20:49 vostorga Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -152,6 +152,8 @@ src_unpack() {
 	sed -i 's:#include <sys/sysctl.h>::' src/racoon/pfkey.c src/setkey/setkey.c
 	# fix for bug #124813
 	sed -i 's:-Werror::g' "${S}"/configure.ac
+	# Fixing duplicate specification of vmbuf.h #300161
+	epatch "${FILESDIR}"/${PN}-duplicate-header.patch
 
 	AT_M4DIR="${S}" eautoreconf
 	epunt_cxx

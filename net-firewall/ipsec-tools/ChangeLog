@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.73 2009/09/11 17:18:45 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.74 2010/01/09 23:20:49 vostorga Exp $
+
+  09 Jan 2010; Víctor Ostorga <vostorga@gentoo.org>
+  ipsec-tools-0.7.3.ebuild, +files/ipsec-tools-duplicate-header.patch:
+  Fixing duplicate filename in automake.am include header, patch thanks to
+  Martin Väth <vaeth@mathematik.uni-wuerzburg.de> , bug #300161
 
 *ipsec-tools-0.7.3 (11 Sep 2009)
 
