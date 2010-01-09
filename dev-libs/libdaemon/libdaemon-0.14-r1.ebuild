@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.14.ebuild,v 1.2 2009/11/30 14:13:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.14-r1.ebuild,v 1.1 2010/01/09 19:04:59 pva Exp $
 
 inherit libtool eutils
 
@@ -18,7 +18,7 @@ DEPEND="doc? ( app-doc/doxygen )"
 
 src_compile() {
 	econf \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} \
 		--localstatedir=/var \
 		--disable-examples \
 		--disable-lynx
