@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.4 2010/01/07 17:24:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.5 2010/01/09 01:34:45 arfrever Exp $
+
+  09 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyalsa-1.0.22.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Fix dependencies.
 
 *pyalsa-1.0.22 (07 Jan 2010)
 
