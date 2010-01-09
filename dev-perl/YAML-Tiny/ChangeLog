@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Tiny
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.10 2010/01/09 14:48:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.11 2010/01/09 14:57:27 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> YAML-Tiny-1.41.ebuild:
+  Add back Prefix keywords, bug #298183
 
   09 Jan 2010; Alexis Ballier <aballier@gentoo.org> YAML-Tiny-1.41.ebuild:
   keyword ~sparc-fbsd, bug #298183
