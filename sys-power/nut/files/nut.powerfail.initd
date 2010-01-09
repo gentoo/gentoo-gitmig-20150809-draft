@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut.powerfail.initd,v 1.1 2010/01/09 20:17:32 robbat2 Exp $
+
+description='Signal the UPS to kill power in a power failure condition'
+
+depend() {
+	need mount-ro
+	keyword -jail -lxc -openvz -prefix -uml -vserver -xenu -timeout
+}
+
+start() {
+	local UPS_CTL UPS_POWERDOWN
+
+	if [ -f /etc/killpower ]; then
+		UPS_CTL=/usr/sbin/upsdrvctl
+		UPS_POWERDOWN="${UPS_CTL} shutdown"
+	elif [ -f /etc/apcupsd/powerfail ]; then
+		UPS_CTL=/sbin/apcupsd
+		UPS_POWERDOWN="${UPS_CTL} --killpower"
+	else
+		ewarn "UPS powerfail script scheduled, but no poweroff commands found."
+		return 0
+	fi
+
+	if [ "$(runlevel | cut -d' ' -f2)" = "0" -a  -f "${UPS_CTL}" -a -x "${UPS_CTL}" ]; then
+		ebegin 'Signaling UPS to kill power'
+		${UPS_POWERDOWN}
+		eend $?
+
+		ebegin 'Halt system and wait for the UPS to kill our power'
+		/sbin/halt -id
+		# If the sleep gets hit, something is wrong...
+		# do NOT restart the system.
+		while [ 1 ]; do sleep 60; done
+
+	fi
+}
+

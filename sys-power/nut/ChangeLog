@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.69 2010/01/09 19:58:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.70 2010/01/09 20:17:32 robbat2 Exp $
+
+*nut-2.4.1-r2 (09 Jan 2010)
+
+  09 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> +nut-2.4.1-r2.ebuild,
+  +files/nut.powerfail.initd:
+  Bug #266804: Powerfail init script so that we work on the latest openrc
+  where 'halt -id'/halt.sh are no longer called.
 
   09 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> nut-2.4.1-r1.ebuild:
   Bug #283754: missing builddep on pkgconfig.
