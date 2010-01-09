@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.1 2008/11/23 13:57:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.2 2010/01/09 16:57:41 pva Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ inherit gnome2 mono versionator
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="LDAP Administration Tool, allows you to browse LDAP-based directories and add/edit/delete entries."
-HOMEPAGE="http://dev.mmgsecurity.com/projects/lat"
+HOMEPAGE="http://sourceforge.net/projects/ldap-at/"
 SRC_URI="mirror://sourceforge/ldap-at/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="avahi"
