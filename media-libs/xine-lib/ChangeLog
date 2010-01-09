@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.615 2010/01/07 19:04:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.616 2010/01/09 15:42:52 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  xine-lib-1.1.17.ebuild:
+  stable x86, bug 297903
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> xine-lib-1.1.17.ebuild:
   Marking xine-lib-1.1.17 ppc for bug 297903
