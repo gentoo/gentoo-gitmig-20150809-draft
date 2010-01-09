@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/zenburn
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenburn/ChangeLog,v 1.1 2010/01/09 08:42:23 ulm Exp $
+
+*zenburn-20090708 (09 Jan 2010)
+
+  09 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +files/50zenburn-gentoo.el,
+  +zenburn-20090708.ebuild, +metadata.xml:
+  Initial import, from lisp overlay. Ebuild contributed by Tomás Touceda
+  <chiiph@gmail.com>, with modifications by me.
+
