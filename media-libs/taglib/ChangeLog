@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.79 2009/12/15 00:27:20 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.80 2010/01/09 04:03:22 abcd Exp $
+
+  09 Jan 2010; Jonathan Callen <abcd@gentoo.org> taglib-1.6.1-r1.ebuild:
+  Add prefix keywords
 
 *taglib-1.6.1-r1 (15 Dec 2009)
 
