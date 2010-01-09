@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.1 2009/12/22 14:57:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.2 2010/01/09 22:37:46 robbat2 Exp $
 
 EAPI=1
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-libs/popt-1.7-r1
 
 pkg_setup() {
 	linux-info_pkg_setup
-	if ! linux_chkconfig_present OPROFILE; then
+	if ! linux_config_exists || ! linux_chkconfig_present OPROFILE; then
 		elog "In order for oprofile to work, you need to configure your kernel"
 		elog "with CONFIG_OPROFILE set to 'm' or 'y'."
 	fi
