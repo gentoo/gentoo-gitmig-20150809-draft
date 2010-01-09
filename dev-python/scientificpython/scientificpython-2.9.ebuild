@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.4 2009/12/28 18:03:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.5 2010/01/09 15:55:00 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ HOMEPAGE="http://sourcesup.cru.fr/projects/scientific-py/"
 
 LICENSE="CeCILL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc x86"
 IUSE="doc mpi test"
 
 RDEPEND="dev-python/numpy
