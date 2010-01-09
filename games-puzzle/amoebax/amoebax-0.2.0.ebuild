@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.6 2009/06/13 18:13:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.7 2010/01/09 18:59:58 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,14 +14,16 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-glibc2.10.patch
+		"${FILESDIR}"/${P}-glibc2.10.patch \
+		"${FILESDIR}"/${P}-aclocal.patch
 	sed -i \
 		-e "/^SUBDIRS/s:doc ::" \
 		Makefile.am \
