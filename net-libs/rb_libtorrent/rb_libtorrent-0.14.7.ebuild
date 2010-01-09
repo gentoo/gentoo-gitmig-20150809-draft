@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.7.ebuild,v 1.2 2009/12/19 22:33:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.7.ebuild,v 1.3 2010/01/09 20:30:52 armin76 Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic
@@ -17,11 +17,11 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="debug doc examples python test"
+RESTRICT="test"
 
 DEPEND="|| ( >=dev-libs/boost-1.35
 		( ~dev-libs/boost-1.34.1 dev-cpp/asio ) )
-	python? ( || ( >=dev-libs/boost-1.35.0-r5[python]
-		=dev-libs/boost-1.35.0-r2 ) )
+	python? ( >=dev-libs/boost-1.35.0-r5[python] dev-lang/python:2.6[threads] )
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
