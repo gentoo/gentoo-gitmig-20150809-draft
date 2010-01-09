@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.50.0.ebuild,v 1.1 2010/01/04 19:34:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.50.0.ebuild,v 1.2 2010/01/09 14:47:34 aballier Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ IUSE="doc"
 RDEPEND="dev-libs/zziplib
 	media-libs/libpng
 	virtual/poppler
-	sys-libs/zlib"
+	sys-libs/zlib
+	virtual/tex-base"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2.6
 	dev-util/pkgconfig"
@@ -43,6 +44,11 @@ src_configure() {
 	# that don't have the same alphabetical order than ascii. Bug #244619
 	# So we set LC_ALL to C in order to avoid problems.
 	export LC_ALL=C
+
+	local myconf
+	myconf=""
+	has_version '>=app-text/texlive-core-2009' && myconf="--with-system-kpathsea"
+
 	cd "${S}/texk/web2c"
 	econf \
 		--disable-cxx-runtime-hack \
@@ -108,7 +114,9 @@ src_configure() {
 		--with-system-xpdf \
 	    --disable-largefile \
 	    --disable-multiplatform \
-		--disable-shared
+		--disable-shared \
+		${myconf}
+
 	for i in ${PRELIBS} ; do
 		einfo "Configuring $i"
 		local j=$(basename $i)_extraconf
