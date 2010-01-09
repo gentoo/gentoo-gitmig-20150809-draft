@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/longrun
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.21 2009/11/20 14:44:33 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.22 2010/01/09 22:25:44 robbat2 Exp $
+
+  09 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> -longrun-0.9-r3.ebuild:
+  Cleanup old ebuilds for progress on bug #283320 for linux-info changes.
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> longrun-0.9-r4.ebuild:
   x86 stable, bug #287893
