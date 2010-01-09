@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkonq
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.145 2009/12/27 15:25:21 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.146 2010/01/09 10:16:43 ssuominen Exp $
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -libkonq-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libkonq-4.3.1.ebuild:

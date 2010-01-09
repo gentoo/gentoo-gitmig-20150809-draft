@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.146 2009/12/22 23:31:47 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.147 2010/01/09 10:15:35 ssuominen Exp $
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -kdebase-data-3.5.10.ebuild:
+  Remove KDE 3.5.10.
 
   22 Dec 2009; Jonathan Callen <abcd@gentoo.org> kdebase-data-4.3.4.ebuild:
   Pull in changes from overlay

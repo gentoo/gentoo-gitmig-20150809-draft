@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcontrol
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.173 2009/12/10 19:35:51 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.174 2010/01/09 10:12:55 ssuominen Exp $
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -kcontrol-3.5.10.ebuild, -files/kcontrol-3.5.10-gcc44.patch:
+  Remove KDE 3.5.10.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kcontrol-4.3.1.ebuild:
