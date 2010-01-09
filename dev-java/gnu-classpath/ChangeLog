@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.99 2010/01/09 14:12:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.100 2010/01/09 14:24:31 betelgeuse Exp $
+
+  09 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -gnu-classpath-0.98.ebuild:
+  Remove old revision.
 
 *gnu-classpath-0.98-r2 (09 Jan 2010)
 
