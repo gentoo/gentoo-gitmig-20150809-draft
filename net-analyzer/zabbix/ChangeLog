@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.18 2010/01/09 12:54:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.19 2010/01/09 12:56:29 patrick Exp $
+
+  09 Jan 2010; Patrick Lauer <patrick@gentoo.org> zabbix-1.8.ebuild:
+  Fixing php dep #300280
 
 *zabbix-1.8 (09 Jan 2010)
 
