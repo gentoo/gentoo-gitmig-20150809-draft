@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.438 2009/12/24 05:25:22 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.439 2010/01/09 21:16:33 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gtk+-2.18.5.ebuild:
+  keyword ~x86-freebsd
 
   24 Dec 2009; Jonathan Callen <abcd@gentoo.org> gtk+-2.18.5.ebuild,
   +files/gtk+-2.18.5-macosx-aqua.patch:
