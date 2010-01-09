@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.5.1.ebuild,v 1.1 2010/01/09 12:17:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.5.1.ebuild,v 1.2 2010/01/09 12:22:21 ssuominen Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
@@ -23,10 +23,8 @@ RDEPEND="dev-libs/boost
 	sys-libs/zlib
 	x11-libs/libX11
 	virtual/opengl
-	gmp? (
-		dev-libs/gmp
-		cxx? ( dev-libs/gmp[-nocxx] )
-	)
+	gmp? ( dev-libs/gmp
+		cxx? ( dev-libs/gmp[-nocxx] ) )
 	lapack? ( virtual/lapack )
 	qt4? ( x11-libs/qt-gui:4
 		x11-libs/qt-opengl:4 )"
