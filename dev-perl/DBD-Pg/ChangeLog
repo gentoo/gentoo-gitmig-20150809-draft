@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-Pg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.73 2009/12/18 03:23:14 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.74 2010/01/09 19:15:57 grobian Exp $
+
+*DBD-Pg-2.16.0-r1 (09 Jan 2010)
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> +DBD-Pg-2.16.0-r1.ebuild:
+  Revision bump for Prefix fix and transfer of Prefix keywords, bug #294758
 
 *DBD-Pg-2.16.0 (18 Dec 2009)
 
