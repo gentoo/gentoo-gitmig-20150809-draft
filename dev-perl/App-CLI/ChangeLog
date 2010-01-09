@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/App-CLI
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-CLI/ChangeLog,v 1.5 2009/05/02 12:08:45 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-CLI/ChangeLog,v 1.6 2010/01/09 16:25:26 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> App-CLI-0.08.ebuild:
+  Transfer Prefix keywords
 
   02 May 2009; Torsten Veller <tove@gentoo.org> -App-CLI-0.07.ebuild:
   Cleanup

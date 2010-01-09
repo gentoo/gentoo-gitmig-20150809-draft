@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Audio-FLAC-Header
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/ChangeLog,v 1.15 2009/11/16 11:18:30 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/ChangeLog,v 1.16 2010/01/09 16:29:18 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Audio-FLAC-Header-2.3.ebuild:
+  Transfer Prefix keywords
 
   16 Nov 2009; Torsten Veller <tove@gentoo.org>
   -Audio-FLAC-Header-1.7.ebuild, Audio-FLAC-Header-2.3.ebuild:
