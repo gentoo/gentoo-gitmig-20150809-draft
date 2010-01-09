@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/yafray
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.52 2009/12/31 17:10:38 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.53 2010/01/09 16:35:30 ssuominen Exp $
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  yafray-0.0.9-r1.ebuild, +files/yafray-0.0.9-gcc44.patch:
+  Fix building with GCC 4.4+ wrt #278216.
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> yafray-0.0.9-r1.ebuild:
   Marking yafray-0.0.9-r1 ~ppc64 for bug 285846
