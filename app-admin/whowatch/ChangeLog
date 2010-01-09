@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/whowatch
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.33 2009/04/14 14:59:05 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.34 2010/01/09 17:42:12 jer Exp $
+
+*whowatch-1.6.0-r1 (09 Jan 2010)
+
+  09 Jan 2010; Jeroen Roovers <jer@gentoo.org> -whowatch-1.6.0.ebuild,
+  +whowatch-1.6.0-r1.ebuild, +files/whowatch-1.6.0-submenus.patch:
+  Bump to stable to fix segfault on amd64 (bug #291638).
 
   14 Apr 2009; Jeroen Roovers <jer@gentoo.org> -whowatch-1.5.2-r1.ebuild:
   Remove old.
