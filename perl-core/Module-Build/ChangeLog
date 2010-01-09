@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.24 2010/01/07 13:30:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.25 2010/01/09 14:50:39 aballier Exp $
+
+  09 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  Module-Build-0.36.01.ebuild:
+  keyword ~sparc-fbsd, bug #298183
 
   07 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   Module-Build-0.36.01.ebuild:
