@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiserfsprogs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.49 2009/01/17 16:04:51 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.50 2010/01/09 17:57:24 armin76 Exp $
+
+  09 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  reiserfsprogs-3.6.21.ebuild:
+  Mark -sparc
 
 *reiserfsprogs-3.6.21 (17 Jan 2009)
 
