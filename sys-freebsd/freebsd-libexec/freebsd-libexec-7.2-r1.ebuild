@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-7.2-r1.ebuild,v 1.1 2009/12/05 09:48:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-7.2-r1.ebuild,v 1.2 2010/01/09 16:38:20 aballier Exp $
 
 EAPI=2
 
@@ -31,7 +31,8 @@ S="${WORKDIR}/libexec"
 PATCHES=( "${FILESDIR}/${PN}-setXid.patch"
 	"${FILESDIR}/${PN}-nossp.patch"
 	"${FILESDIR}/${PN}-7.0-libfallback.patch"
-	"${FILESDIR}/${P}-rtld7.patch" )
+	"${FILESDIR}/${P}-rtld7.patch" 
+	"${FILESDIR}/${P}-pic.patch" )
 
 # Remove sendmail, tcp_wrapper and other useless stuff
 REMOVE_SUBDIRS="smrsh mail.local tcpd telnetd rshd rlogind lukemftpd ftpd"
