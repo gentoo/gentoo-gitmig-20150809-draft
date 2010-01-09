@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/echoe-4.1.ebuild,v 1.1 2010/01/09 09:00:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/echoe-4.1.ebuild,v 1.2 2010/01/09 20:35:48 flameeyes Exp $
 
 EAPI=2
 
@@ -27,5 +27,5 @@ IUSE=""
 ruby_add_rdepend "dev-ruby/highline dev-ruby/rubyforge"
 
 all_ruby_prepare() {
-	epatch "${FILESDIR}"/${P}-optional-gemcutter.patch
+	epatch "${FILESDIR}"/${PN}-4.0-optional-gemcutter.patch
 }
