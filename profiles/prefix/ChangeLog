@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.137 2010/01/08 21:04:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.138 2010/01/09 00:58:47 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org> package.use.mask:
+  mask m17n-lib and hesiod USE flags for GNU Emacs
 
   08 Jan 2010; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
   Fix typo and add more comment description
