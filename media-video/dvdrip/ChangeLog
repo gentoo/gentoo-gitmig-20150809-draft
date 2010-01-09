@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.122 2010/01/07 19:04:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.123 2010/01/09 15:41:07 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  dvdrip-0.98.10-r2.ebuild:
+  stable x86, bug 297897
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> dvdrip-0.98.10-r2.ebuild:
   Marking dvdrip-0.98.10-r2 ppc for bug 297897
