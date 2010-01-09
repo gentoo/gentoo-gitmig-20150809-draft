@@ -1,6 +1,12 @@
 # ChangeLog for games-action/btanks
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.20 2009/05/23 22:09:59 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.21 2010/01/09 17:39:33 tupone Exp $
+
+*btanks-0.9.8083 (09 Jan 2010)
+
+  09 Jan 2010; Tupone Alfredo <tupone@gentoo.org> +btanks-0.9.8083.ebuild,
+  +files/btanks-0.9.8083-scons-blows.patch:
+  Version bump to 0.9.8083 Bug #300053 by Arseny Solokha
 
   23 May 2009; Tristan Heaven <nyhm@gentoo.org> btanks-0.8.7686.ebuild,
   files/btanks-0.8.7686-scons-blows.patch:
