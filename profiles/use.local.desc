@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5172 2010/01/09 10:07:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5173 2010/01/09 10:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1222,7 +1222,6 @@ kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via app-mobilephone/gnokii
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-base/kalzium:solver - Enable the equation solver
-kde-base/kcontrol:logitech-mouse -  Build the Control Center module to configure logitech mice 
 kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot loader
 kde-base/kdeartwork-kscreensaver:eigen - Enable various aritmethic screensavers which use Eigen2 for computations.
 kde-base/kdebase-kioslaves:lzma - Enable lzma support
@@ -1231,9 +1230,7 @@ kde-base/kdebindings-csharp:phonon - Compile bindings for media-sound/phonon.
 kde-base/kdebindings-csharp:plasma - Compile bindings for kde's plasma.
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/webkit.
-kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it
 kde-base/kdelibs:lzma - Enable lzma support
-kde-base/kdelibs:utempter - Records user logins. Useful on multi-user systems
 kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble.
 kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
