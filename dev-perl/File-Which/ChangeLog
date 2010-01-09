@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Which
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.16 2009/11/25 12:34:18 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.17 2010/01/09 21:09:52 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> File-Which-1.09.ebuild:
+  Transfer Prefix keywords
 
   25 Nov 2009; Torsten Veller <tove@gentoo.org> -File-Which-1.08.ebuild,
   File-Which-1.09.ebuild:

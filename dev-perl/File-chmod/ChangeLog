@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chmod
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chmod/ChangeLog,v 1.8 2009/07/02 18:42:47 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chmod/ChangeLog,v 1.9 2010/01/09 21:13:39 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> File-chmod-0.32.ebuild:
+  Transfer Prefix keywords
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> File-chmod-0.32.ebuild:
   Stable for HPPA too.
