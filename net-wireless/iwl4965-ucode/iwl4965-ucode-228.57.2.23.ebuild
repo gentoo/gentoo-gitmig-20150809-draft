@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/iwl4965-ucode-228.57.2.23.ebuild,v 1.5 2009/10/03 10:31:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/iwl4965-ucode-228.57.2.23.ebuild,v 1.6 2010/01/09 11:16:36 hanno Exp $
 
 MY_P=iwlwifi-4965-ucode-${PV}
 
@@ -8,7 +8,7 @@ DESCRIPTION="Intel (R) Wireless WiFi Link 4965AGN ucode"
 HOMEPAGE="http://intellinuxwireless.org/?p=iwlwifi"
 SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_P}.tgz"
 
-LICENSE="Intel"
+LICENSE="ipw3945"
 SLOT="1"
 KEYWORDS="amd64 x86"
 IUSE=""
