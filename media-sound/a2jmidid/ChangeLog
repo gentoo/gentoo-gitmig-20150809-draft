@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/a2jmidid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.3 2009/06/17 07:09:14 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.4 2010/01/09 18:49:56 aballier Exp $
+
+*a2jmidid-6 (09 Jan 2010)
+
+  09 Jan 2010; Alexis Ballier <aballier@gentoo.org> +a2jmidid-6.ebuild:
+  version bump
 
 *a2jmidid-5 (17 Jun 2009)
 
