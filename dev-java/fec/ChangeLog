@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/fec
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.6 2009/03/09 22:34:52 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.7 2010/01/09 12:50:45 tommy Exp $
+
+*fec-1.0.4 (09 Jan 2010)
+
+  09 Jan 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +fec-1.0.4.ebuild, +files/fec-1.0.4-libfec8path.patch:
+  Version bump
 
   09 Mar 2009; Markus Meier <maekke@gentoo.org> fec-1.0.3-r1.ebuild:
   amd64/x86 stable, bug #260958
