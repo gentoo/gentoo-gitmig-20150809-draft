@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/telepathy-idle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.15 2010/01/09 15:58:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.16 2010/01/09 22:16:10 pacho Exp $
+
+  09 Jan 2010; Pacho Ramos <pacho@gentoo.org> telepathy-idle-0.1.5.ebuild:
+  amd64 stable, bug 286877
 
   09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   telepathy-idle-0.1.5.ebuild:
