@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.6 2009/05/19 07:17:53 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.7 2010/01/09 03:18:57 abcd Exp $
+
+  09 Jan 2010; Jonathan Callen <abcd@gentoo.org> unifdef-1.23.ebuild:
+  Remove unneeded sed; add prefix keywords
 
 *unifdef-1.23 (19 May 2009)
 
