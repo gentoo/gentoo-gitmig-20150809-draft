@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.48 2010/01/08 01:26:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.49 2010/01/09 17:26:01 patrick Exp $
+
+  09 Jan 2010; Patrick Lauer <patrick@gentoo.org>
+  postgresql-server-8.4.2-r1.ebuild, metadata.xml:
+  Adding pg_legacytimestamp useflag so server gets rebuilt when it changes
+  in -base. This way some user errors can be avoided. Bump to EAPI2
 
   08 Jan 2010; Steve Dibb <beandog@gentoo.org>
   postgresql-server-7.4.27.ebuild:
