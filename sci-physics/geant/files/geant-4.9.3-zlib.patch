@@ -1,0 +1,14 @@
+diff --git a/config/binmake.gmk b/config/binmake.gmk
+index 75bbaf2..c31ed3d 100644
+--- a/config/binmake.gmk
++++ b/config/binmake.gmk
+@@ -234,7 +234,7 @@ ifdef GLOBALLIBS
+              -lG4intercoms \
+              -lG4global
+ 
+-  ifdef G4LIB_USE_ZLIB
++  ifdef G4LIB_BUILD_ZLIB
+     LDLIBS2 += -lG4zlib
+   endif
+ 
+

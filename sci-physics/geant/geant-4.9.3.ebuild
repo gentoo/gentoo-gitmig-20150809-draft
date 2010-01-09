@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.7 2009/10/06 17:41:33 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3.ebuild,v 1.1 2010/01/09 18:27:42 bicatali Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit eutils fortran versionator toolchain-funcs
+inherit eutils versionator toolchain-funcs
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
@@ -20,14 +20,15 @@ GEANT4_DATA="G4NDL.3.13
 	G4EMLOW.6.2
 	G4RadioactiveDecay.3.2
 	PhotonEvaporation.2.0
-	G4ABLA.3.0"
+	G4ABLA.3.0
+	RealSurface.1.0"
 for d in ${GEANT4_DATA}; do
 	SRC_URI="${SRC_URI} data? ( ${SRC_COM}/${d}.tar.gz )"
 done
 
 LICENSE="geant4"
 SLOT="4"
-KEYWORDS="amd64 ~hppa sparc x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="athena +data dawn debug examples gdml geant3 global minimal +motif
 	+opengl openinventor qt4 +raytracerx static +vrml zlib"
 
@@ -50,23 +51,29 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	FORTRAN="gfortran g77 ifc"
-	use geant3 && fortran_pkg_setup
 	eval unset ${!G4*}
 }
 
 src_prepare() {
 	# fix bad zlib dependency
-	epatch "${FILESDIR}"/${P}-zlib.patch
+	epatch "${FILESDIR}"/${PN}-${PV}-zlib.patch
 
-	# propagate user's flags.
+	# propagate user's flags and compiler settings
 	sed -i -e 's/-o/$(LDFLAGS) -o/g' source/GNUmakefile || die
 	sed -i \
+		-e '/CXX.*:=.*g++/d' \
+		-e '/FC.*:=.*gfortran/d' \
+		-e 's/\(CXXFLAGS.*:=\).*/\1 -ansi/' \
+		-e '/CXXFLAGS.*+=.*pipe/d' \
 		-e "/CXXFLAGS.*=.*-O2/s:=.*:= ${CXXFLAGS}:" \
-		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FFLAGS:--O2}:" \
+		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FCFLAGS}:" \
 		-e "/CCFLAGS.*=.*-O2/s:=.*:= ${CFLAGS}:" \
 		-e "s:-Wl,-soname:${LDFLAGS} -Wl,-soname:g" \
+		-e "s/libq\*/lib\[q,Q\]t*/g" \
 		config/sys/Linux*gmk || die "flag substitution failed"
+	sed -i \
+		-e 's:g++:$(CXX):g' \
+		config/*.gmk || die "sed for forced g++ failed"
 
 	# fix forced lib directory
 	sed -i \
@@ -89,6 +96,11 @@ src_prepare() {
 	sed -i \
 		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
 		config/globlib.gmk || die "sed globlib.gmk failed"
+
+	# work around a non defined fortran compiler
+	use geant3 && export FC=$(tc-getFC)
+	# don't worry about the g++ name of the file, we remove all specific
+	export G4SYSTEM=Linux-g++
 }
 
 src_configure() {
@@ -97,10 +109,6 @@ src_configure() {
 	# we set env var G4LIB in src_install()
 	# to avoid confusing make
 	export GEANT4_LIBDIR=/usr/$(get_libdir)/${PN}${PV1}
-
-	# these should always to be set
-	[[ $(tc-getCXX) = ic*c ]] && export G4SYSTEM=Linux-icc \
-							  || export G4SYSTEM=Linux-g++
 	export G4INSTALL="${S}"
 	export G4WORKDIR="${S}"
 	export G4INCLUDE="${D}/usr/include/${PN}"
@@ -115,23 +123,22 @@ src_configure() {
 	use athena              && export G4UI_BUILD_XAW_SESSION=y
 	if use qt4; then
 		export G4UI_BUILD_QT_SESSION=y
-		export QTLIBS="-L/usr/$(get_libdir)/qt4  -lQtCore -lQtGui"
-		if use opengl; then
+		export QTLIBS="-L/usr/$(get_libdir)/qt4 -lQtCore -lQtGui"
+		export QTFLAGS="-I/usr/include/qt4 -I/usr/include/qt4/Qt"
+		use opengl && \
 			export GLQTLIBS="${QTLIBS} -lQtOpenGL"
-			export G4VIS_BUILD_OPENGLQT_DRIVER=y
-		fi
+		#export QTFLAGS="${QTFLAGS} -I/usr/include/qt4/QtOpenGL"
 	fi
 	use dawn                && export G4VIS_BUILD_DAWN_DRIVER=y
 	use raytracerx          && export G4VIS_BUILD_RAYTRACERX_DRIVER=y
 	use openinventor        && export G4VIS_BUILD_OI_DRIVER=y
 	use opengl              && export G4VIS_BUILD_OPENGLX_DRIVER=y
 	use opengl && use motif && export G4VIS_BUILD_OPENGLXM_DRIVER=y
-
+	use gdml                && export G4LIB_BUILD_GDML=y
 	use geant3              && export G4LIB_BUILD_G3TOG4=y
 	use zlib                && export G4LIB_USE_ZLIB=y
 	use vrml                && export G4VIS_BUILD_VRML_DRIVER=y \
 							&& export G4VIS_BUILD_VRMLFILE_DRIVER=y
-
 	use data                && export G4DATA="${GEANT4_DIR}/data"
 	use debug               && export G4DEBUG=y || export G4OPTIMIZE=y
 
@@ -185,8 +192,9 @@ g4_create_env_script() {
 		G4LEDATA="${G4DATA}/$(basename ${WORKDIR}/G4EMLOW*)"
 		G4ABLADATA="${G4DATA}/$(basename ${WORKDIR}/G4ABLA*)"
 		G4NEUTRONHPCROSSSECTIONS="${G4DATA}/$(basename ${WORKDIR}/G4NDL*)"
+		G4REALSURFACEDATA="${G4DATA}/$(basename ${WORKDIR}/G4REALSURFACEDATA*)"
 		export G4LEVELGAMMADATA G4RADIOACTIVEDATA G4LEDATA \
-			G4ABLADATA G4NEUTRONHPCROSSSECTIONS
+			G4ABLADATA G4NEUTRONHPCROSSSECTIONS G4REALSURFACEDATA
 	fi
 
 	# read env variables defined upto now
@@ -243,11 +251,13 @@ src_install() {
 		dodoc ReleaseNotes/Patch${mypv}-*.txt
 
 	use examples && doins -r examples
-
 	# TODO: * momo with momo or java flag, and check java stuff
 }
 
 pkg_postinst() {
 	elog "Geant4 projects are by default build in \$HOME/geant4."
 	elog "If you want to change, set \$G4WORKDIR to another directory."
+
+	elog "To use Aida you have to explicitly set G4ANALYSIS_USE=y for"
+	elog "your environment."
 }
