@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.7 2010/01/01 18:36:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.8 2010/01/09 21:53:39 pacho Exp $
+
+  09 Jan 2010; Pacho Ramos <pacho@gentoo.org> mupen64plus-1.5-r1.ebuild:
+  amd64 stable, bug 299033
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mupen64plus-1.5-r1.ebuild:
