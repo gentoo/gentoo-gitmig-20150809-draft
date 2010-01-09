@@ -1,11 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.22 2009/12/13 23:20:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.23 2010/01/09 09:43:05 redhatter Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
-
-# Alexey Shvetsov <alexxy@gentoo.org>
-# Graphite feature of gcc-4.4.x didnt tested on mips at the moment
-graphite
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.
@@ -146,6 +142,7 @@ video_cards_ark
 video_cards_cyrix
 video_cards_i128
 video_cards_i740
+video_cards_imstt
 video_cards_intel
 video_cards_neomagic
 video_cards_nsc
@@ -154,6 +151,7 @@ video_cards_siliconmotion
 video_cards_tga
 video_cards_tseng
 video_cards_vesa
+video_cards_vga
 video_cards_radeonhd
 video_cards_ast
 

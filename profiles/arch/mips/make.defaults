@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/make.defaults,v 1.2 2008/04/10 19:53:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/make.defaults,v 1.3 2010/01/09 09:43:05 redhatter Exp $
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
@@ -9,7 +9,7 @@ VIDEO_CARDS="fbdev impact newport"
 ARCH="mips"
 ACCEPT_KEYWORDS="${ARCH} ~mips"
 
-PROFILE_ARCH="mips64"
+PROFILE_ARCH="mips"
 
 FEATURES="ccache"
 
@@ -17,5 +17,5 @@ USE="-unicode"
 
 STAGE1_USE="nptl nptlonly"
 
-CHOST="mips64-unknown-linux-gnu"
+CHOST="mips-unknown-linux-gnu"
 

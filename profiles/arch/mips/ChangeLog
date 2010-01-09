@@ -1,6 +1,33 @@
 # ChangeLog for Gentoo/MIPS profile directory
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.17 2009/12/13 23:20:35 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.18 2010/01/09 09:43:05 redhatter Exp $
+
+  09 Jan 2010; Stuart Longland <redhatter@gentoo.org> -cobalt/make.defaults,
+  -cobalt/parent, -cobalt/virtuals, make.defaults, +mips64/make.defaults,
+  +mips64/n32/parent, +mips64/n32/use.force, +mips64/n64/parent,
+  +mips64/n64/use.force, +mips64/parent, +mipsel/make.defaults,
+  +mipsel/mips64el/make.defaults, +mipsel/mips64el/n32/parent,
+  +mipsel/mips64el/n32/use.force, +mipsel/mips64el/n64/parent,
+  +mipsel/mips64el/n64/use.force, +mipsel/mips64el/parent, +mipsel/parent,
+  package.use.mask, parent, +sys/README, +sys/cobalt/make.defaults,
+  +sys/cobalt/virtuals, +sys/lemote/lm2e/fulong/make.defaults,
+  +sys/lemote/lm2e/fulong/parent, +sys/lemote/lm2e/parent,
+  +sys/lemote/lm2e/use.force, +sys/lemote/lm2f/parent,
+  +sys/lemote/lm2f/use.force, +sys/lemote/lm2f/yeeloong/make.defaults,
+  +sys/lemote/lm2f/yeeloong/parent, +sys/sgi/ip22/make.defaults,
+  +sys/sgi/ip22/parent, +sys/sgi/ip27/make.defaults, +sys/sgi/ip27/parent,
+  +sys/sgi/ip27/use.force, +sys/sgi/ip28/make.defaults,
+  +sys/sgi/ip28/parent, +sys/sgi/ip28/use.force,
+  +sys/sgi/ip30/make.defaults, +sys/sgi/ip30/parent,
+  +sys/sgi/ip30/use.force, +sys/sgi/ip32/make.defaults,
+  +sys/sgi/ip32/parent, +sys/sgi/ip32/r10k/make.defaults,
+  +sys/sgi/ip32/r10k/parent, +sys/sgi/ip32/r10k/use.force,
+  +sys/sgi/make.defaults, use.mask, virtuals:
+  Profile shake-up for MIPS. This adds in all profiles for each supported
+  platform within Gentoo/MIPS. Everything should work as per normal, the
+  profiles have seen some testing, so there shouldn't be too many issues.
+  Fingers crossed, this is the case for everyone, but let me know if it
+  isn't.
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
   drop "imstt" from VIDEO_CARDS in all profiles

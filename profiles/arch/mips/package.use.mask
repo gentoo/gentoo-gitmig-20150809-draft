@@ -1,10 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.9 2009/10/11 19:01:05 pva Exp $
-
-# Peter Volkov <pva@gentoo.org> (10 Nov 2009)
-# fontforge is not yet keyworded on ~mips
-media-fonts/dejavu fontforge
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.10 2010/01/09 09:43:05 redhatter Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
