@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/openresolv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.52 2009/12/28 18:34:57 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.53 2010/01/09 23:56:18 darkside Exp $
+
+*openresolv-3.3.4 (09 Jan 2010)
+
+  09 Jan 2010; Jeremy Olexa <darkside@gentoo.org> -openresolv-2.0.ebuild,
+  -openresolv-2.0-r1.ebuild, -openresolv-2.0.1.ebuild,
+  -openresolv-3.0.ebuild, -openresolv-3.1.1.ebuild, -openresolv-3.2.ebuild,
+  +openresolv-3.3.4.ebuild, metadata.xml:
+  Version bump, fixes gentoo bug 295467. Remove old versions & add myself to
+  maintainer
 
   28 Dec 2009; Raúl Porcel <armin76@gentoo.org> openresolv-3.3.2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #294510
