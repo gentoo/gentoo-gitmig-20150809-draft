@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fastcgi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.9 2009/10/10 06:16:32 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.10 2010/01/09 16:48:06 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  mod_fastcgi-2.4.7_pre0910052141.ebuild:
+  stable x86, bug 300234
 
 *mod_fastcgi-2.4.7_pre0910052141 (10 Oct 2009)
 
