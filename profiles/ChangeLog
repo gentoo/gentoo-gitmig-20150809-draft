@@ -1,10 +1,29 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3761 2010/01/09 14:10:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3762 2010/01/09 15:04:59 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  default/linux/mips/10.0/lemote/lm2e/fulong/n32/desktop/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n32/developer/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n32/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n32/server/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n64/desktop/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n64/developer/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n64/parent,
+  default/linux/mips/10.0/lemote/lm2e/fulong/n64/server/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n32/desktop/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n32/developer/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n32/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n32/server/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n64/desktop/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n64/developer/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n64/parent,
+  default/linux/mips/10.0/lemote/lm2f/yeeloong/n64/server/parent:
+  Fixup default/linux/mips/10.0/lemote subprofiles inheritance
 
   09 Jan 2010; Ulrich Mueller <ulm@gentoo.org> license_groups:
   Remove GPL exceptions, as they can only be used together with GPL itself.
