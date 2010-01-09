@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.50 2009/06/07 18:36:52 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.51 2010/01/09 16:43:00 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Cairo-1.06.1.ebuild:
+  Transfer Prefix keywords
 
 *Cairo-1.06.1 (07 Jun 2009)
 
