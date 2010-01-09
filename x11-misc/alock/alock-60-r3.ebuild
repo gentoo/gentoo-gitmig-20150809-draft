@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.6 2009/08/16 09:29:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.7 2010/01/09 15:22:25 patrick Exp $
 
 EAPI="2"
 
@@ -19,6 +19,8 @@ IUSE="imlib pam"
 DEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm
+	x11-libs/libXrender
+	x11-libs/libXcursor
 	imlib? ( media-libs/imlib2[X] )
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}"
