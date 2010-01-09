@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tovid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.21 2009/12/22 11:36:42 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.22 2010/01/09 15:39:39 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tovid-0.31-r2.ebuild:
+  stable x86, bug 297888
 
   22 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> tovid-0.31-r2.ebuild:
   amd64 stable wrt #297888
