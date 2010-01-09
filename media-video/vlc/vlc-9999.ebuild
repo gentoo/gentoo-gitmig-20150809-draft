@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.53 2010/01/04 21:31:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.54 2010/01/09 11:55:40 aballier Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ RDEPEND="
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		kate? ( >=media-libs/libkate-0.1.1 )
 		libass? ( >=media-libs/libass-0.9.6 media-libs/fontconfig )
-		libcaca? ( media-libs/libcaca )
+		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 		libnotify? ( x11-libs/libnotify )
 		libproxy? ( net-libs/libproxy )
 		libsysfs? ( sys-fs/sysfsutils )
@@ -102,7 +102,7 @@ RDEPEND="
 		matroska? (
 			>=dev-libs/libebml-0.7.6
 			>=media-libs/libmatroska-0.8.0 )
-		modplug? ( media-libs/libmodplug )
+		modplug? ( >=media-libs/libmodplug-0.8 )
 		mp3? ( media-libs/libmad )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
 		mtp? ( >=media-libs/libmtp-0.3.0 )
@@ -127,7 +127,7 @@ RDEPEND="
 		shout? ( media-libs/libshout )
 		skins? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libXext x11-libs/libX11 )
 		speex? ( media-libs/speex )
-		sqlite? ( dev-db/sqlite:3 )
+		sqlite? ( >=dev-db/sqlite-3.6.0:3 )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		svga? ( media-libs/svgalib )
 		taglib? ( >=media-libs/taglib-1.5 sys-libs/zlib )
