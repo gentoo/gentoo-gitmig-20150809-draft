@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.10.ebuild,v 1.3 2010/01/09 14:30:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.10.ebuild,v 1.4 2010/01/09 14:37:42 aballier Exp $
 
 inherit libtool toolchain-funcs eutils multilib
 
@@ -17,6 +17,7 @@ IUSE=""
 RDEPEND=">=virtual/poppler-0.11.3
 	media-libs/libpng
 	sys-libs/zlib
+	virtual/tex-base
 	app-admin/eselect-pdftex"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
