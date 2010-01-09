@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.4.ebuild,v 1.3 2010/01/08 17:44:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.4.ebuild,v 1.4 2010/01/09 19:11:02 jer Exp $
 
 EAPI="2"
 
@@ -15,23 +15,31 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 IUSE="cancel-locks crypt debug evil forgery idn ipv6 nls unicode socks5 +etiquette"
 
-DEPEND="sys-libs/ncurses
+DEPEND="
+	crypt? ( app-crypt/gnupg )
+	idn? ( net-dns/libidn )
+	nls? ( sys-devel/gettext )
+	socks5? ( net-proxy/dante )
+	unicode? ( dev-libs/icu )
 	dev-libs/libpcre
 	dev-libs/uulib
-	idn? ( net-dns/libidn )
-	unicode? ( dev-libs/icu
-		sys-libs/ncurses[unicode] )
-	nls? ( sys-devel/gettext )
-	crypt? ( app-crypt/gnupg )
-	socks5? ( net-proxy/dante )"
+	sys-libs/ncurses[unicode?]
+"
 
 RDEPEND="${DEPEND}
 	net-misc/urlview"
 
-src_configure() {
+src_prepare() {
+	# Do not strip
+	sed -i src/Makefile.in -e '388s|-s ||g' || die "sed src/Makefile.in failed"
+}
 
-	if use evil
-	then
+src_compile() {
+	emake build || die "emake failed"
+}
+
+src_configure() {
+	if use evil || use cancel-locks; then
 		sed -i -e"s/# -DEVIL_INSIDE/-DEVIL_INSIDE/" src/Makefile.in
 	fi
 
@@ -43,13 +51,7 @@ src_configure() {
 	local screen="ncurses"
 	use unicode && screen="ncursesw"
 
-	if ! use etiquette; then
-		myconf="${myconf} --disable-etiquette"
-	fi
-
-	if ! use evil && use cancel-locks; then
-		die "USE=cancel-locks requires also USE=evil to generate MIDs and the Cancel-Lock:-Header."
-	fi
+	use etiquette || myconf="${myconf} --disable-etiquette"
 
 	econf \
 		--with-pcre=/usr \
@@ -66,15 +68,12 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable cancel-locks) \
 		$(use_with socks5) \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 }
 
 src_install() {
-	if has_version mail-client/mutt; then
-		rm doc/mmdf.5 doc/mbox.5
-	fi
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
+	rm -f "${D}"/usr/share/man/man5/{mbox,mmdf}.5
 
 	dodoc doc/{CHANGES{,.old},CREDITS,TODO,WHATSNEW,*.sample,*.txt} || die "dodoc failed"
 	insinto /etc/tin
