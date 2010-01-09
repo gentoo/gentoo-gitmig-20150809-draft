@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iwl5000-ucode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.7 2009/10/21 12:17:39 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.8 2010/01/09 11:18:39 hanno Exp $
+
+  09 Jan 2010; Hanno Boeck <hanno@gentoo.org> iwl5000-ucode-5.4.0.11.ebuild,
+  iwl5000-ucode-8.24.2.12.ebuild:
+  Changing to correct license, the Intel-license is for free Intel software,
+  not for binary firmwares.
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org>
   iwl5000-ucode-8.24.2.12.ebuild:
