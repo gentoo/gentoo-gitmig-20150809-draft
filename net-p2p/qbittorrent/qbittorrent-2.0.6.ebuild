@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.0.2.ebuild,v 1.2 2009/12/21 05:26:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.0.6.ebuild,v 1.1 2010/01/09 17:19:58 armin76 Exp $
 
 EAPI="2"
 inherit eutils qt4 multilib
@@ -13,18 +13,16 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="geoip"
+IUSE="geoip libnotify"
 
 # boost version so that we always have thread support
 DEPEND=" x11-libs/qt-gui:4
 	>=net-libs/rb_libtorrent-0.14.7
-	>=dev-libs/boost-1.34.1
-	dev-libs/zziplib
-	net-misc/curl
-	dev-cpp/commoncpp2"
+	>=dev-libs/boost-1.34.1"
 RDEPEND="${DEPEND}
 	>=dev-lang/python-2.3
-	geoip? ( dev-libs/geoip )"
+	geoip? ( dev-libs/geoip )
+	libnotify? ( x11-libs/libnotify )"
 
 S="${WORKDIR}/${MY_P}"
 
