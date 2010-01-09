@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencore-amr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.15 2010/01/07 19:01:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.16 2010/01/09 15:25:41 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  opencore-amr-0.1.2.ebuild:
+  stable x86, bug 297855
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> opencore-amr-0.1.2.ebuild:
   Marking opencore-amr-0.1.2 ppc for bug 297855
