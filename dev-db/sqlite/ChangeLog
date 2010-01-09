@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.313 2010/01/08 19:47:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.314 2010/01/09 22:08:47 fauli Exp $
+
+  09 Jan 2010; Christian Faulhammer <fauli@gentoo.org> sqlite-3.6.22.ebuild:
+  keyword ~x86-freebsd
 
   08 Jan 2010; Fabian Groffen <grobian@gentoo.org> sqlite-3.6.22.ebuild:
   Transfer Prefix keywords, make ebuild Prefix aware, fix compilation on
