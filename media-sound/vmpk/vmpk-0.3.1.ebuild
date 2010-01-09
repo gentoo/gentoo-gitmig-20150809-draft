@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.3.1.ebuild,v 1.1 2009/12/15 22:39:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.3.1.ebuild,v 1.2 2010/01/09 17:57:33 maekke Exp $
 
 inherit cmake-utils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vmpk/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-core
