@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1-r1.ebuild,v 1.6 2009/09/05 15:26:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1-r1.ebuild,v 1.7 2010/01/09 19:58:48 robbat2 Exp $
 
 EAPI="2"
 
@@ -29,7 +29,8 @@ RDEPEND="cgi? ( >=media-libs/gd-2[png] )
 		>=sys-fs/udev-114"
 DEPEND="$RDEPEND
 		>=sys-apps/sed-4
-		>=sys-devel/autoconf-2.58"
+		>=sys-devel/autoconf-2.58
+		dev-util/pkgconfig"
 
 # public files should be 644 root:root
 NUT_PUBLIC_FILES="/etc/nut/{ups,upssched}.conf"
