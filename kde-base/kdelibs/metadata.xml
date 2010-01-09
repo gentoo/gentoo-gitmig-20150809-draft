@@ -3,8 +3,6 @@
 <pkgmetadata>
   <herd>kde</herd>
   <use>
-    <flag name="legacyssl">Support for some deprecated ciphers. Don't use this flag unless you really need it</flag>
-    <flag name="utempter">Records user logins. Useful on multi-user systems</flag>
 	<flag name="lzma">Enable lzma support</flag>
   </use>
 </pkgmetadata>
