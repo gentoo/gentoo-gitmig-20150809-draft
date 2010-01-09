@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.4.ebuild,v 1.4 2009/12/28 16:53:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.4.ebuild,v 1.5 2010/01/09 15:46:51 ssuominen Exp $
 
 inherit eutils qt3
 
@@ -13,10 +13,12 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/qt-3*
+COMMON_DEPEND="=x11-libs/qt-3*"
+RDEPEND="${COMMON_DEPEND}
+	net-dialup/wvdial"
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/tmake-1.6
 	sys-apps/which"
-RDEPEND="net-dialup/wvdial"
 
 S="${WORKDIR}/QtWvDialer-${PV}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.4_p20091228.ebuild,v 1.3 2010/01/07 13:21:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.4_p20091228.ebuild,v 1.4 2010/01/09 15:46:51 ssuominen Exp $
 
 EAPI=2
 inherit eutils qt4-r2
@@ -27,6 +27,6 @@ src_configure() {
 src_install() {
 	dobin bin/qtwvdialer || die
 	doicon src/qtwvdialer.png
-	make_desktop_entry ${PN} ${PN}
+	make_desktop_entry ${PN} QtWvDialer
 	dodoc AUTHORS CHANGELOG README
 }
