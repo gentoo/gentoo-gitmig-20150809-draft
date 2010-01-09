@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-depends
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.50 2009/12/24 19:08:49 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.51 2010/01/09 19:57:23 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  extutils-depends-0.302.ebuild:
+  Transfer Prefix keywords
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org>
   -extutils-depends-0.300.ebuild:

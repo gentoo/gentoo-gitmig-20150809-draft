@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.41 2009/12/10 08:44:31 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.42 2010/01/09 19:27:31 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> DateManip-6.05.ebuild:
+  Transfer Prefix keywords
 
 *DateManip-6.05 (10 Dec 2009)
 

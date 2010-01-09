@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-SHA1
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.46 2009/05/24 09:15:55 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-SHA1/ChangeLog,v 1.47 2010/01/09 19:46:10 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Digest-SHA1-2.12.ebuild:
+  Transfer Prefix keywords
 
 *Digest-SHA1-2.12 (24 May 2009)
 

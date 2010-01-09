@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/Encode-Detect-1.01.ebuild,v 1.3 2009/07/20 07:50:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/Encode-Detect-1.01.ebuild,v 1.4 2010/01/09 19:52:32 grobian Exp $
 
 MODULE_AUTHOR=JGMYERS
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Encode::Detect - An Encode::Encoding subclass that detects the enco
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND=""

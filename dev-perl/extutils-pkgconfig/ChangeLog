@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-pkgconfig
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.31 2009/06/29 20:03:23 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.32 2010/01/09 19:59:13 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  extutils-pkgconfig-1.12.ebuild:
+  Transfer Prefix keywords
 
   29 Jun 2009; Jeroen Roovers <jer@gentoo.org>
   extutils-pkgconfig-1.11.ebuild:

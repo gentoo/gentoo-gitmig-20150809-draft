@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Symdump
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.60 2009/07/02 19:31:12 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.61 2010/01/09 19:39:37 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Devel-Symdump-2.08.ebuild:
+  Transfer Prefix keywords
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> Devel-Symdump-2.08.ebuild:
   Stable for HPPA too.

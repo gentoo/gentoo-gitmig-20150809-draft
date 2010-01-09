@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/digest-md2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.14 2007/01/15 17:28:36 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.15 2010/01/09 19:48:44 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> digest-md2-2.03.ebuild:
+  Transfer Prefix keywords
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   digest-md2-2.03.ebuild:

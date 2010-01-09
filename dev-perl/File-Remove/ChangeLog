@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Remove
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.59 2009/07/02 19:34:26 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.60 2010/01/09 20:07:22 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> File-Remove-1.42.ebuild:
+  Transfer Prefix keywords
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> File-Remove-1.42.ebuild:
   Stable for HPPA too.

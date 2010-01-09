@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Flat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.53 2009/07/06 20:47:52 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.54 2010/01/09 20:04:24 grobian Exp $
+
+  09 Jan 2010; Fabian Groffen <grobian@gentoo.org> File-Flat-1.04.ebuild:
+  Transfer Prefix keywords
 
   06 Jul 2009; Jeroen Roovers <jer@gentoo.org> File-Flat-1.04.ebuild:
   Stable for HPPA too.
