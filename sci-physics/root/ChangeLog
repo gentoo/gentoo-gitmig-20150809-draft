@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.59 2009/11/24 06:59:53 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.60 2010/01/09 17:31:14 bicatali Exp $
+
+*root-5.26.00 (09 Jan 2010)
+
+  09 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> +root-5.26.00.ebuild:
+  Version bump. Thanks Andrew Savchenko for his input, bug #298284
 
   24 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
   root-5.24.00-r1.ebuild:
