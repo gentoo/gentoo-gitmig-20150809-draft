@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mikmod
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.15 2007/08/12 16:06:58 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.16 2010/01/09 19:55:01 jer Exp $
+
+  09 Jan 2010; Jeroen Roovers <jer@gentoo.org> mikmod-3.2.2_beta1.ebuild:
+  Marked ~hppa too.
 
 *mikmod-3.2.2_beta1 (12 Aug 2007)
 
