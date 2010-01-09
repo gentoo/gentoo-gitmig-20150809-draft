@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.9 2009/01/05 17:26:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.10 2010/01/09 16:50:14 pva Exp $
 
 #WANT_AUTOCONF="latest"
 #WANT_AUTOMAKE="1.8"
@@ -9,7 +9,7 @@
 inherit gnome2 mono eutils
 
 DESCRIPTION="Sussen is a tool that checks for vulnerabilities and configuration issues on computer systems"
-HOMEPAGE="http://dev.mmgsecurity.com/projects/sussen/"
+HOMEPAGE="http://www.lbtechservices.com/software/oss/sussen/"
 SRC_URI="http://dev.mmgsecurity.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="doc gnome"
