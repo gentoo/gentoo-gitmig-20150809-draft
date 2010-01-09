@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3758 2010/01/09 10:37:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3759 2010/01/09 10:53:35 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Change KDE 3.5.10, KOffice 1.6.3 mask into a single placeholder.
 
   09 Jan 2010; Hanno Boeck <hanno@gentoo.org> license_groups:
   Creating two more metasets of licenses, FREE-SOFTWARE and FREE, also
