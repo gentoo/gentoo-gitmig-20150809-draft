@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786-r1.ebuild,v 1.6 2010/01/10 14:53:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786-r1.ebuild,v 1.7 2010/01/10 15:19:16 fauli Exp $
 
 EAPI="2"
 inherit multilib autotools flag-o-matic
@@ -10,7 +10,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org/"
 SRC_URI="mirror://easysw/fltk/snapshots/${MY_P}.tar.bz2"
 
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 x86"
 LICENSE="FLTK LGPL-2"
 SLOT="2"
 IUSE="cairo debug doc +jpeg +png opengl +xft xinerama zlib"
