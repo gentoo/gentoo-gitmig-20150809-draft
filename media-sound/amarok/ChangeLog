@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.353 2010/01/08 15:53:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.354 2010/01/10 17:15:34 jmbsvicetto Exp $
+
+  10 Jan 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  files/amarok-2.2.2-nodebug.patch:
+  Added updated patch by Jeff Mitchell.
 
 *amarok-2.2.2 (08 Jan 2010)
 
