@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfnetlink
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.29 2009/09/08 17:03:42 ikelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.30 2010/01/10 09:17:59 robbat2 Exp $
+
+  10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org>
+  libnfnetlink-1.0.0.ebuild:
+  Refactor warnings and add warning for other case of kernel config name.
 
   08 Sep 2009; Mike Auty <ikelos@gentoo.org> libnfnetlink-0.0.25.ebuild,
   libnfnetlink-0.0.30.ebuild, libnfnetlink-0.0.33.ebuild,
