@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnome
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.184 2009/12/03 16:59:50 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.185 2010/01/10 16:51:44 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libgnome-2.28.0.ebuild:
+  Transfer Prefix keywords
 
   03 Dec 2009; Brent Baude <ranger@gentoo.org> libgnome-2.26.0.ebuild:
   Marking libgnome-2.26.0 ppc64 stable for bug 281427

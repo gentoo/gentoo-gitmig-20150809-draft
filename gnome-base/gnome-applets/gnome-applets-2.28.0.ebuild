@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.28.0.ebuild,v 1.2 2009/11/12 22:38:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.28.0.ebuild,v 1.3 2010/01/10 16:49:59 fauli Exp $
 
 inherit eutils gnome2 python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="acpi apm doc gnome gstreamer hal ipv6 networkmanager policykit"
 
 # TODO: configure says python stuff is optional
