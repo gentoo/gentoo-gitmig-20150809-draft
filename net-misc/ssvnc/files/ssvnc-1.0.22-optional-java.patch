@@ -1,5 +1,16 @@
 --- a/Makefile
 +++ b/Makefile
+@@ -44,8 +44,10 @@
+ 
+ config:
+ 	sh -c 'type xmkmf'
++ifneq ($(JSRC),)
+ 	sh -c 'type javac'
+ 	sh -c 'type jar'
++endif
+ 	@echo
+ 	cd $(VSRC)/libvncauth; pwd; xmkmf
+ 	cd $(VSRC)/vncviewer;  pwd; xmkmf
 @@ -55,13 +55,17 @@ config:
  all:
  	cd $(VSRC)/libvncauth; $(MAKE)
