@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/picocontainer
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.26 2008/03/18 01:38:01 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.27 2010/01/10 12:15:57 ulm Exp $
+
+  10 Jan 2010; Ulrich Mueller <ulm@gentoo.org> picocontainer-1.1-r1.ebuild:
+  Fix LICENSE, PicoContainer is identical with BSD, bug 300390.
 
   18 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   picocontainer-1.1-r1.ebuild:

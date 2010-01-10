@@ -1,16 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1-r1.ebuild,v 1.7 2008/03/18 01:38:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.1-r1.ebuild,v 1.8 2010/01/10 12:15:56 ulm Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Small footprint Dependency Injection container"
 HOMEPAGE="http://www.picocontainer.org"
 SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}-src.tar.gz"
-LICENSE="PicoContainer"
+
+LICENSE="BSD"
 SLOT="1"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc source"
+
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.5
