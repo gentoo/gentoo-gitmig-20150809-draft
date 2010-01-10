@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.120 2010/01/10 01:59:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.121 2010/01/10 11:45:41 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -20,22 +20,21 @@ sci-mathematics/fricas gcl cmucl
 # Still not really functional, upstream requires not building it.
 <media-libs/mesa-7.9 gallium
 
-# Vlastimil Babka <caster@gentoo.org> (23 Dec 2009)
-# Package now in java-overlay but (security) mask has to be here.
-=app-emulation/emul-linux-x86-java-1.4* nsplugin
-
 # Alexey Shvetsov <alexxy@gentoo.org> (3 Dec 2009)
 # Mask very experimental mpi use flag dfor gamess
 sci-chemistry/gamess mpi
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Nov 2009)
-# Not ready for stable.
+# Waiting for bug 298561 to be completed.
 <kde-base/ark-4.3.4 lzma
 <kde-base/kdebase-kioslaves-4.3.4 lzma
 <kde-base/kdelibs-4.3.4 lzma
-<kde-base/kdeadmin-meta-4.3.4 cups
-<kde-base/kdeutils-meta-4.3.4 cups
-<kde-base/plasma-workspace-4.3.4 google-gadgets
+
+# Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2009)
+# Not ready for stable anytime soon.
+<kde-base/kdeadmin-meta-4.4.0 cups
+<kde-base/kdeutils-meta-4.4.0 cups
+<kde-base/plasma-workspace-4.4.0 google-gadgets
 
 # Alexey Shvetsov <alexxy@gentoo.org> (25 Nov 2009)
 # mask infiniband use flag for some packages since infiniband software
