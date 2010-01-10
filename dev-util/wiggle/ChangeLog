@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wiggle
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.18 2008/05/15 23:51:12 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.19 2010/01/10 22:30:18 abcd Exp $
+
+  10 Jan 2010; Jonathan Callen <abcd@gentoo.org> wiggle-0.6-r3.ebuild:
+  QA: die on failure, spelling fix; add prefix keywords
 
   15 May 2008; Samuli Suominen <drac@gentoo.org> wiggle-0.6-r3.ebuild:
   Because we get more warnings with GCC 4.3, disable -Werror from Makefile
