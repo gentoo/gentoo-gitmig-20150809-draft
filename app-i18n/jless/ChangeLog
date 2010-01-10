@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/jless
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/ChangeLog,v 1.6 2009/09/23 15:40:56 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/ChangeLog,v 1.7 2010/01/10 17:55:17 ulm Exp $
+
+  10 Jan 2010; Ulrich Mueller <ulm@gentoo.org> jless-358.254.ebuild,
+  jless-382.258.ebuild, jless-382.262.ebuild:
+  Fix LICENSE, less is the same as BSD-2.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> jless-358.254.ebuild,
   jless-382.258.ebuild:
