@@ -1,0 +1,10 @@
+# ChangeLog for games-action/openlierox
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.1 2010/01/10 00:52:11 sping Exp $
+
+*openlierox-0.58_beta9-r1 (10 Jan 2010)
+
+  10 Jan 2010; Sebastian Pipping <sping@gentoo.org>
+  +openlierox-0.58_beta9-r1.ebuild, +metadata.xml:
+  New package (fixes bug #164009)
+
