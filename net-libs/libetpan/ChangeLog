@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.80 2010/01/08 21:27:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.81 2010/01/10 18:50:26 a3li Exp $
+
+  10 Jan 2010; Alex Legler <a3li@gentoo.org> libetpan-0.57-r1.ebuild:
+  Keyword ~x86-macos
 
 *libetpan-0.57-r1 (08 Jan 2010)
 
