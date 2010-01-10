@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quesoglc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.12 2009/12/26 16:08:38 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.13 2010/01/10 17:46:59 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> quesoglc-0.7.2.ebuild:
+  ppc stable #292854
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> quesoglc-0.7.2.ebuild:
   sparc stable wrt #292854
