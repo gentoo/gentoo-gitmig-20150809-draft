@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.7.2.ebuild,v 1.1 2010/01/08 07:25:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.7.2.ebuild,v 1.2 2010/01/10 12:09:13 fauli Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="lua"
 
 DEPEND="lua? ( >=dev-lang/lua-5.1 )"
