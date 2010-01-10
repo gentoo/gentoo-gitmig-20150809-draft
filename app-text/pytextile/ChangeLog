@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.19 2009/12/05 16:35:09 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.20 2010/01/10 17:34:47 ranger Exp $
+
+  10 Jan 2010; Brent Baude <ranger@gentoo.org> pytextile-2.1.4.ebuild:
+  stable ppc64, bug 300240
 
 *pytextile-2.1.4 (05 Dec 2009)
 
