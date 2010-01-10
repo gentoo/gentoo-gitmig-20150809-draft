@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libmsn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.16 2009/11/30 14:21:09 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.17 2010/01/10 15:18:27 ssuominen Exp $
+
+*libmsn-4.0 (10 Jan 2010)
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +libmsn-4.0.ebuild:
+  Version bump.
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> libmsn-4.0_beta6.ebuild,
   libmsn-4.0_beta8.ebuild:
