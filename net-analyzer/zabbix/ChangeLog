@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.20 2010/01/09 13:03:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.21 2010/01/10 00:22:48 patrick Exp $
+
+*zabbix-1.8-r1 (10 Jan 2010)
+
+  10 Jan 2010; Patrick Lauer <patrick@gentoo.org> +zabbix-1.8-r1.ebuild:
+  Enable ipv6 support #300340, fix php dep some more #300338
 
   09 Jan 2010; Patrick Lauer <patrick@gentoo.org> -zabbix-1.4.6.ebuild,
   -zabbix-1.6.5.ebuild, -zabbix-1.6.5-r1.ebuild, -zabbix-1.6.6.ebuild,
