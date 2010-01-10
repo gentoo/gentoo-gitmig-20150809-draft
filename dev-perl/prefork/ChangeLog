@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.38 2009/12/24 18:58:05 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.39 2010/01/10 20:01:31 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> prefork-1.04.ebuild:
+  Transfer Prefix keywords
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org> -prefork-1.01.ebuild:
   Cleanup
