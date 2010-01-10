@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/solid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.55 2009/12/27 15:26:24 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.56 2010/01/10 09:36:49 ssuominen Exp $
+
+*solid-4.3.4-r3 (10 Jan 2010)
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +solid-4.3.4-r3.ebuild, +files/solid-4.3.4-hal-2.patch:
+  make Solid::Control::PowerManager::brightness check if a control for the
+  screen is available wrt upstream #219333.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   +files/solid-4.3.1-darwin-compile-powermanager.patch,
