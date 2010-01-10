@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ucsc-genome-browser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ChangeLog,v 1.1 2009/10/28 20:47:27 weaver Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ChangeLog,v 1.2 2010/01/10 19:52:26 weaver Exp $
+
+*ucsc-genome-browser-221 (10 Jan 2010)
+
+  10 Jan 2010; Andrey Kislyuk <weaver@gentoo.org>
+  -ucsc-genome-browser-217.ebuild, +ucsc-genome-browser-221.ebuild:
+  Version bump
 
 *ucsc-genome-browser-217 (28 Oct 2009)
 

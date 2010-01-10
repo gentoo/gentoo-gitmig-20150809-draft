@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ucsc-genome-browser-217.ebuild,v 1.1 2009/10/28 20:47:27 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ucsc-genome-browser-221.ebuild,v 1.1 2010/01/10 19:52:26 weaver Exp $
 
 EAPI="2"
 
