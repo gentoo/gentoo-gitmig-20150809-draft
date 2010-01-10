@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/plowshare
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.5 2010/01/01 12:07:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.6 2010/01/10 15:27:39 volkmar Exp $
+
+*plowshare-0.8.1-r1 (10 Jan 2010)
+
+  10 Jan 2010; Mounir Lamouri <volkmar@gentoo.org> -plowshare-0.8-r2.ebuild,
+  +plowshare-0.8.1-r1.ebuild:
+  Add linguas_en as a USE dep for tesseract. Workaround for bug 287373 and
+  bug 297991
 
   01 Jan 2010; <hwoarang@gentoo.org> plowshare-0.8.1.ebuild:
   Added ~amd64 keyword wrt bug #298036
