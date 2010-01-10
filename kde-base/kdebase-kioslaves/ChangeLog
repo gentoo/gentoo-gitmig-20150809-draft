@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.179 2009/12/22 23:36:27 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.180 2010/01/10 11:09:35 scarabeus Exp $
+
+  10 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdebase-kioslaves-4.3.4.ebuild:
+  Use proper samba deps.
 
   22 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   kdebase-kioslaves-4.3.4.ebuild:

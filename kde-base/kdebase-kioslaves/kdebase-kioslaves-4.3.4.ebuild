@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.3.4.ebuild,v 1.2 2009/12/22 23:36:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.3.4.ebuild,v 1.3 2010/01/10 11:09:35 scarabeus Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ DEPEND="
 	openexr? ( media-libs/openexr )
 	samba? (
 		|| (
-			net-fs/samba
+			=net-fs/samba-3.0*
 			>=net-fs/samba-libs-3.4[smbclient]
 		)
 	)
