@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.142 2009/12/20 16:25:46 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.143 2010/01/10 20:35:24 abcd Exp $
+
+  10 Jan 2010; Jonathan Callen <abcd@gentoo.org> tiff-3.9.2.ebuild:
+  Add prefix keywords
 
   20 Dec 2009; Raúl Porcel <armin76@gentoo.org> tiff-3.9.2.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #291612
