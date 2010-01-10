@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.2 2009/03/23 22:40:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.3 2010/01/10 08:17:42 robbat2 Exp $
 
 inherit eutils linux-info
 
@@ -82,7 +82,8 @@ pkg_postinst() {
 	elog "x11-misc/keytouch-editor can be used to create"
 	elog "your own keyboard files"
 	echo
-	if use acpi && ! linux_chkconfig_present INPUT_EVDEV ; then
+	if use acpi; then
+	if ! linux_config_exists || ! linux_chkconfig_present INPUT_EVDEV; then
 		ewarn "To enable support for ACPI hotkeys, CONFIG_INPUT_EVDEV"
 		ewarn "must be enabled in your kernel config."
 		ewarn
@@ -90,5 +91,6 @@ pkg_postinst() {
 		ewarn "    Input device support"
 		ewarn "      <*>/<M> Event interface"
 		echo
+	fi
 	fi
 }

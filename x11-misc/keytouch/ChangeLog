@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/keytouch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.17 2009/03/23 22:40:55 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.18 2010/01/10 08:17:42 robbat2 Exp $
+
+  10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> keytouch-2.4.1.ebuild:
+  Bug #283320 cleanup: linux_config_exists before linux_chkconfig*.
 
   23 Mar 2009; Markus Meier <maekke@gentoo.org> keytouch-2.4.1.ebuild:
   amd64/x86 stable, bug #263405
