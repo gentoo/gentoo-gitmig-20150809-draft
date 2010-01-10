@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r2.ebuild,v 1.6 2009/06/07 23:57:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r2.ebuild,v 1.7 2010/01/10 18:34:15 truedfx Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Vi clone"
 HOMEPAGE="http://www.bostic.com/vi/"
 SRC_URI="http://www.kotnet.org/~skimo/nvi/devel/${P}.tar.bz2"
 
-LICENSE="Sleepycat"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="perl tcl unicode"

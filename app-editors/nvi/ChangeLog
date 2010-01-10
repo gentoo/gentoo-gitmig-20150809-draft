@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.74 2009/10/10 22:48:34 truedfx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.75 2010/01/10 18:34:15 truedfx Exp $
+
+  10 Jan 2010; Harald van Dĳk <truedfx@gentoo.org> nvi-1.81.6-r2.ebuild,
+  nvi-1.81.6-r3.ebuild:
+  "Sleepycat" license is identical to BSD, update ebuilds (#300426)
 
   10 Oct 2009; Harald van Dĳk <truedfx@gentoo.org> nvi-1.81.6-r3.ebuild,
   +files/nvi-1.81.6-perl-shortnames.patch:
