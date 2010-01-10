@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.7.ebuild,v 1.3 2009/11/02 15:40:02 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.7.ebuild,v 1.4 2010/01/10 01:22:39 robbat2 Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info
@@ -46,7 +46,7 @@ pkg_setup() {
 			elog "    Torque support for cpusets is still in development, you may"
 			elog "wish to disable it for production use."
 			einfo
-			if ! linux_chkconfig_present CPUSETS; then
+			if ! linux_config_exists || ! linux_chkconfig_present CPUSETS; then
 				einfo
 				elog "    Torque support for cpusets will require that you recompile"
 				elog "your kernel with CONFIG_CPUSETS enabled."
