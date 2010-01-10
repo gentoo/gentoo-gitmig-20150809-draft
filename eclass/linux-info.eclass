@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.79 2010/01/10 09:01:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.80 2010/01/10 09:25:12 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -366,7 +366,7 @@ kernel_is() {
 	# if we haven't determined the version yet, we need to.
 	linux-info_get_any_version
 
-	local operator test value x=0 y=0 z=0
+	local operator testagainst value x=0 y=0 z=0
 
 	case ${1} in
 	  -lt|lt) operator="-lt"; shift;;
@@ -383,17 +383,17 @@ kernel_is() {
 		z=$((${z} + 1))
 
 		case ${z} in
-		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do test="${test}0"; done;
-		     test="${test}${KV_MAJOR}";;
-		  2) for((y=0; y<$((3 - ${#KV_MINOR})); y++)); do test="${test}0"; done;
-		     test="${test}${KV_MINOR}";;
-		  3) for((y=0; y<$((3 - ${#KV_PATCH})); y++)); do test="${test}0"; done;
-		     test="${test}${KV_PATCH}";;
+		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do testagainst="${testagainst}0"; done;
+		     testagainst="${testagainst}${KV_MAJOR}";;
+		  2) for((y=0; y<$((3 - ${#KV_MINOR})); y++)); do testagainst="${testagainst}0"; done;
+		     testagainst="${testagainst}${KV_MINOR}";;
+		  3) for((y=0; y<$((3 - ${#KV_PATCH})); y++)); do testagainst="${testagainst}0"; done;
+		     testagainst="${testagainst}${KV_PATCH}";;
 		  *) die "Error in kernel-2_kernel_is(): Too many parameters.";;
 		esac
 	done
 
-	[ ${test} ${operator} ${value} ] && return 0 || return 1
+	[ "${testagainst}" ${operator} "${value}" ] && return 0 || return 1
 }
 
 get_localversion() {
