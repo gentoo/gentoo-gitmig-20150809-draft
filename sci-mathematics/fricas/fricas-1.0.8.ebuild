@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.0.8.ebuild,v 1.2 2010/01/08 16:49:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.0.8.ebuild,v 1.3 2010/01/10 08:20:59 grozin Exp $
 EAPI=2
-inherit elisp-common
+inherit multilib elisp-common
 
 DESCRIPTION="FriCAS is a fork of Axiom computer algebra system"
 HOMEPAGE="http://${PN}.sourceforge.net/"
@@ -12,12 +12,11 @@ SLOT="0"
 KEYWORDS="~x86"
 
 # Supported lisps, number 0 is the default
-LISPS=(   sbcl cmucl gcl ecl    clisp clozurecl )
-# . means just dev-lisp/${LISP}
-# package-x.y.z means >=dev-lisp/package-x.y.z
-DEPS=(    .    .     .   ecls-9 .     .         )
+LISPS=( sbcl cmucl gcl ecl    clisp clozurecl )
+# . means just dev-lisp/${LISP}; foo-x.y.z means >=dev-lisp/foo-x.y.z
+DEPS=(  .    .     .   ecls-9 .     .         )
 # command name: . means just ${LISP}
-COMMAND=( .    lisp  .   .      .     ccl       )
+COMS=(  .    lisp  .   .      .     ccl       )
 
 IUSE="${LISPS[*]} X emacs"
 RDEPEND="X? ( x11-libs/libXpm x11-libs/libICE )
@@ -52,7 +51,7 @@ src_configure() {
 	n=${#LISPS[*]}
 	for ((n--; n > 0; n--)); do
 		if use ${LISPS[$n]}; then
-			LISP=${COMMAND[$n]}
+			LISP=${COMS[$n]}
 			if [ "${LISP}" = "." ]; then
 				LISP=${LISPS[$n]}
 			fi
@@ -69,20 +68,24 @@ src_compile() {
 	emake -j1 || die "emake failed"
 }
 
+src_test() {
+	emake -j1 all-input
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die 'emake install failed'
+	emake -j1 DESTDIR="${D}" install || die 'emake install failed'
 	dodoc README FAQ || die "dodoc failed"
 
 	if use emacs; then
-		sed -e 's|(setq load-path (cons (quote "/usr/lib/fricas/emacs") load-path)) ||' \
+		sed -e "s|(setq load-path (cons (quote \"/usr/$(get_libdir)/fricas/emacs\") load-path)) ||" \
 			-i "${D}"/usr/bin/efricas \
 			|| die "sed efricas failed"
-		elisp-install ${PN} "${D}"/usr/lib/${PN}/emacs/*.el
+		elisp-install ${PN} "${D}"/usr/$(get_libdir)/${PN}/emacs/*.el
 		elisp-site-file-install "${FILESDIR}"/64${PN}-gentoo.el
 	else
 		rm "${D}"/usr/bin/efricas || die "rm efricas failed"
 	fi
-	rm -r "${D}"/usr/lib/${PN}/emacs || die "rm -r emacs failed"
+	rm -r "${D}"/usr/$(get_libdir)/${PN}/emacs || die "rm -r emacs failed"
 }
 
 pkg_postinst() {
