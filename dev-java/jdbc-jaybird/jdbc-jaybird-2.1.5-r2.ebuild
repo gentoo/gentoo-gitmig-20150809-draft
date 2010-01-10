@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.5-r2.ebuild,v 1.1 2009/11/01 20:35:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.1.5-r2.ebuild,v 1.2 2010/01/10 10:12:42 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source examples test"
 
@@ -40,6 +40,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/archive-xml-2.1.0.patch"
 	epatch "${FILESDIR}/compile_xml-2.1.2.patch"
+
+	# JAVA_ANT_ENCODING doesn't work because it doesn't like entities
+	java-ant_xml-rewrite -f build.xml -c -e javac -a encoding -v ISO-8859-1
 
 	cd "${S}/lib/"
 	rm -v *.jar

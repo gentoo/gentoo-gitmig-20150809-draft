@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-jaybird
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.30 2009/11/10 19:53:37 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.31 2010/01/10 10:12:42 betelgeuse Exp $
+
+  10 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
+  jdbc-jaybird-2.1.5-r2.ebuild:
+  Fix compiling with java6 and non ISO-8859-1 locales.
 
   10 Nov 2009; Vlastimil Babka <caster@gentoo.org>
   -jdbc-jaybird-2.0.1.ebuild, -files/archive-xml-2.0.1.patch,
