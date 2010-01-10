@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/Log-Log4perl-1.26.ebuild,v 1.1 2009/11/26 07:59:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/Log-Log4perl-1.26.ebuild,v 1.2 2010/01/10 13:32:26 grobian Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Log::Log4perl is a Perl port of the widely popular log4j logging pa
 HOMEPAGE="http://log4perl.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="test"
 
 RDEPEND="virtual/perl-Time-HiRes"

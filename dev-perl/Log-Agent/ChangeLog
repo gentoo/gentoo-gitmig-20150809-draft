@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-Agent
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.22 2007/06/03 04:59:03 kumba Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.23 2010/01/10 13:31:08 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> Log-Agent-0.307.ebuild:
+  Transfer Prefix keywords
 
   07 Jun 2007; Joshua Kinard <kumba@gentoo.org> Log-Agent-0.307.ebuild:
   Stable on mips.

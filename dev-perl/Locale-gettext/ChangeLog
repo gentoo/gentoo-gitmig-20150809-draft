@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Locale-gettext
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.39 2009/12/10 20:55:09 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.40 2010/01/10 13:29:57 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Locale-gettext-1.05-r1.ebuild:
+  Transfer Prefix keywords
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org>
   Locale-gettext-1.05-r1.ebuild:
