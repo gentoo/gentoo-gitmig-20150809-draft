@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.26 2010/01/09 14:59:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.27 2010/01/10 15:37:50 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> Module-Build-0.36.01.ebuild:
+  add ~arm, bug #298183
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Module-Build-0.36.01.ebuild:
