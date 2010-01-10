@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-termios
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.18 2009/10/23 14:21:39 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.19 2010/01/10 20:57:25 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> ruby-termios-0.9.6.ebuild:
+  amd64/x86 stable, bug #298237
 
 *ruby-termios-0.9.6 (23 Oct 2009)
 
