@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r1.ebuild,v 1.3 2010/01/01 02:16:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r1.ebuild,v 1.4 2010/01/10 09:56:29 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="berkdb iodbc mysql postgres sqlite ssl threads xml"
+IUSE="berkdb iodbc mysql odbc postgres sqlite ssl xml"
 
 RDEPEND="mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-3* )
@@ -23,7 +23,8 @@ RDEPEND="mysql? ( virtual/mysql )
 	>=media-libs/raptor-1.4.17
 	>=dev-libs/rasqal-0.9.16
 	postgres? ( virtual/postgresql-base )
-	iodbc? ( dev-db/libiodbc )"
+	iodbc? ( dev-db/libiodbc )
+	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2
 	dev-util/gtk-doc-am
@@ -43,6 +44,14 @@ src_configure() {
 
 	use xml && parser="libxml"
 
+	local myconf="--without-virtuoso"
+
+	if use iodbc; then
+		myconf="--with-virtuoso --with-iodbc --without-unixodbc"
+	elif use odbc; then
+		myconf="--with-virtuoso --with-unixodbc --without-iodbc"
+	fi
+
 	econf \
 		--disable-dependency-tracking \
 		$(use_with berkdb bdb) \
@@ -51,18 +60,9 @@ src_configure() {
 		$(use_with mysql) \
 		$(use_with sqlite) \
 		$(use_with postgres postgresql) \
-		$(use_with iodbc virtuoso) \
-		$(use_with threads) \
-		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
-}
-
-src_test() {
-	# Remove this hack from next release.
-	if use threads; then
-		ewarn "Test suite is known to be broken with USE threads, skipping."
-	else
-		emake check || die
-	fi
+		--without-threads \
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		${myconf}
 }
 
 src_install() {

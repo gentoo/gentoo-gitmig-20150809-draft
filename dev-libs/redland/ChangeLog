@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.62 2010/01/01 02:16:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.63 2010/01/10 09:56:29 ssuominen Exp $
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  redland-1.0.10-r1.ebuild:
+  Disable threading as it's not supported (upstream) and add dev-db/unixODBC
+  support for virtuoso storage backend.
 
   01 Jan 2010; Jonathan Callen <abcd@gentoo.org> redland-1.0.10-r1.ebuild:
   Add prefix keywords
