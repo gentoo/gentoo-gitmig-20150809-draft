@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.4-r1.ebuild,v 1.5 2010/01/01 16:09:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.4-r1.ebuild,v 1.6 2010/01/10 16:20:21 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/project/libnet-dev/libnet-dev/${P}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.1"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc"
 
 DEPEND="sys-devel/autoconf"

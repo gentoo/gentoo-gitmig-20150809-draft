@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/farsight2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.22 2009/12/20 13:26:56 tester Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.23 2010/01/10 16:22:55 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  farsight2-0.0.16.ebuild:
+  Transfer Prefix keywords
 
 *farsight2-0.0.16 (20 Dec 2009)
 
