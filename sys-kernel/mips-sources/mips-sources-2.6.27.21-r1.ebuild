@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.27.21-r1.ebuild,v 1.2 2009/04/13 01:06:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.27.21-r1.ebuild,v 1.3 2010/01/10 09:48:34 scarabeus Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -137,24 +137,32 @@ eblit-pkg() {
 
 #//------------------------------------------------------------------------------
 
-# All are in ${FILESDIR}/eblits
-# If a message for a given machine needs to change,
-# then we create a new eblit and increment the
-# version and reference it here.
-eblit-include err_disabled_mach v1
-eblit-include err_only_one_mach_allowed v1
-eblit-include show_ip22_info v1
-eblit-include show_ip27_info v1
-eblit-include show_ip28_info v1
-eblit-include show_ip30_info v1
-eblit-include show_ip32_info v1
-eblit-include show_cobalt_info v1
+load_eblit_funcs() {
+    # All are in ${FILESDIR}/eblits
+    # If a message for a given machine needs to change,
+    # then we create a new eblit and increment the
+    # version and reference it here.
+    [ -n "${MIPS_SOURCES_EBLITS_LOADED}" ] && return;
+    eblit-include err_disabled_mach v1
+    eblit-include err_only_one_mach_allowed v1
+    eblit-include show_ip22_info v1
+    eblit-include show_ip27_info v1
+    eblit-include show_ip28_info v1
+    eblit-include show_ip30_info v1
+    eblit-include show_ip32_info v1
+    eblit-include show_cobalt_info v1
 
-# This makes sure pkg_setup & pkg_postinst gets into any binpkg.
-# Neccessary because we can't guarantee FILESDIR is around for binpkgs.
-eblit-pkg setup v1
-eblit-pkg postinst v1
+    # This makes sure pkg_setup & pkg_postinst gets into any binpkg.
+    # Neccessary because we can't guarantee FILESDIR is around for binpkgs.
+    eblit-pkg setup v1
+    eblit-pkg postinst v1
+    MIPS_SOURCES_EBLITS_LOADED=1
+}
 
+pkg_setup() {
+    load_eblit_funcs
+    pkg_setup
+}
 src_unpack() { eblit-run src_unpack v1 ; }
 
 #//------------------------------------------------------------------------------
