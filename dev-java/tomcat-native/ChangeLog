@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/tomcat-native
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.22 2009/01/16 17:48:36 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.23 2010/01/10 13:32:16 betelgeuse Exp $
+
+*tomcat-native-1.1.18 (10 Jan 2010)
+
+  10 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
+  +tomcat-native-1.1.18.ebuild:
+  Version bump using EAPI 2. Resolves bug #296163.
 
 *tomcat-native-1.1.16 (16 Jan 2009)
 
