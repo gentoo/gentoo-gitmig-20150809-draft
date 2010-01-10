@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/murrine-themes-0.90.0-r1.ebuild,v 1.5 2009/12/30 16:46:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/murrine-themes-0.90.0-r1.ebuild,v 1.6 2010/01/10 18:55:25 nixnut Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ ${URI_PREFIX}/MurrineXfwm.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-themes/gtk-engines-murrine-0.90.3-r1"
