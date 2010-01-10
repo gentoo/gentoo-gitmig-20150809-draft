@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/pms
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.18 2009/05/31 19:03:19 gentoofan23 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.19 2010/01/10 15:13:59 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pms-99999999.ebuild,
+  metadata.xml:
+  remove kdebuild and all-options USE flags as trunk has no support for them
+  anymore; remove KEYWORDS for live ebuild and clean up a bit
 
   31 May 2009; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml,
   pms-99999999.ebuild:
