@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.67 2009/12/08 00:04:54 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.68 2010/01/10 16:36:36 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gnet-2.0.8-r1.ebuild:
+  Transfer Prefix keywords
 
 *gnet-2.0.8-r1 (08 Dec 2009)
 
