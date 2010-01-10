@@ -1,6 +1,9 @@
 # ChangeLog for app-text/teckit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.3 2010/01/09 17:46:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.4 2010/01/10 15:49:19 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> teckit-2.5.1.ebuild:
+  add ~arm, bug #300063
 
   09 Jan 2010; Markus Meier <maekke@gentoo.org> teckit-2.5.1.ebuild:
   add ~x86, bug #300063
