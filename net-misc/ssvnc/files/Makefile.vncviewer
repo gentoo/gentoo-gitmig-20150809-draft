@@ -1,4 +1,5 @@
-CPPFLAGS += -I. -I../include -D_GNU_SOURCE
+CFLAGS += -fno-strength-reduce -fno-strict-aliasing
+CPPFLAGS += -I. -I../include -D_GNU_SOURCE -DMITSHM
 LDLIBS += ../libvncauth/libvncauth.a -lz -ljpeg -lX11 -lXt -lXaw
 include Makefile.in
 all: vncviewer
