@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.35 2010/01/09 16:38:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.36 2010/01/10 23:04:53 aballier Exp $
+
+*freebsd-libexec-7.2-r2 (10 Jan 2010)
+
+  10 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-libexec-7.2-r2.ebuild,
+  +files/freebsd-libexec-7.2-rtldnoload.patch:
+  backport RTLD_NOLOAD support from 8.0; code part
 
   09 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   freebsd-libexec-7.2-r1.ebuild, +files/freebsd-libexec-7.2-pic.patch:
