@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-chasen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.7 2009/12/28 18:06:13 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.8 2010/01/10 21:02:37 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> ruby-chasen-1.7.ebuild:
+  amd64/x86 stable, bug #298234
 
   28 Dec 2009; nixnut <nixnut@gentoo.org> ruby-chasen-1.7.ebuild:
   ppc stable #298234
