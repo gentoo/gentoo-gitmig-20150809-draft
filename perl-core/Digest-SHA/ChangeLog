@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.12 2010/01/09 09:27:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.13 2010/01/10 16:12:10 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> Digest-SHA-5.48.ebuild:
+  add ~arm, bug #300221
 
 *Digest-SHA-5.48 (09 Jan 2010)
 
