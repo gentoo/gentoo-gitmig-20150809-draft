@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/math-pari
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.51 2009/12/23 21:39:39 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.52 2010/01/10 17:16:31 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  math-pari-2.01080603.ebuild:
+  Transfer Prefix keywords
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> math-pari-2.010801.ebuild:
   Stable for HPPA (bug #289144).
