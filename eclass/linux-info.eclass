@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.76 2009/12/11 21:33:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.77 2010/01/10 08:25:55 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -674,7 +674,13 @@ check_extra_config() {
 			ewarn "to absence of any configured kernel sources or compiled"
 			ewarn "config:"
 			for config in ${CONFIG_CHECK}; do
-				ewarn " - ${config#\~}"
+				local_error="ERROR_${config#\~}"
+				msg="${!local_error}"
+				if [[ "x${msg}" == "x" ]]; then
+					local_error="WARNING_${config#\~}"
+					msg="${!local_error}"
+				fi
+				ewarn " - ${config#\~}${msg:+ - }${msg}"
 			done
 			ewarn "You're on your own to make sure they are set if needed."
 			export LINUX_CONFIG_EXISTS_DONE="${old_LINUX_CONFIG_EXISTS_DONE}"
