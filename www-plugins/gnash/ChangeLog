@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.18 2009/12/22 15:46:17 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.19 2010/01/10 15:43:32 scarabeus Exp $
+
+  10 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> gnash-0.8.6.ebuild:
+  QA: non-maint. commit: Fix build issues per bug #286491.
 
   22 Dec 2009; Peter Volkov <pva@gentoo.org> gnash-0.8.6.ebuild,
   +files/gnash-0.8.6-libssh-0.4.patch:

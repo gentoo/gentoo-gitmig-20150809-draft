@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.6 2009/12/22 15:46:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.7 2010/01/10 15:43:32 scarabeus Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="false"
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="agg cairo cygnal dbus doc +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin +opengl python +sdl +speex ssh ssl test video_cards_intel"
+IUSE="agg cairo cygnal dbus doc +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin +opengl python +sdl ssh ssl test video_cards_intel"
 
 RDEPEND=">=dev-libs/boost-1.35.0
 	dev-libs/expat
@@ -59,7 +59,7 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	)
 	sdl? ( media-libs/libsdl[X] )
 	nsplugin? ( net-libs/xulrunner:1.9 )
-	speex? ( media-libs/speex[ogg] )
+	media-libs/speex[ogg]
 	sys-libs/zlib
 	>=sys-devel/libtool-2.2
 	mysql? ( dev-db/mysql )
@@ -145,16 +145,6 @@ src_configure() {
 
 	# Set nsplugin install directory.
 	use nsplugin && myconf="${myconf} --with-npapi-plugindir=/opt/netscape/plugins"
-	# Set kde and konqueror plugin directories.
-	if use kde; then
-		myconf="${myconf}
-			--with-kde4-incl=${KDEDIR}/include
-			--with-kde4-configdir=${KDEDIR}/share/config
-			--with-kde4-prefix=${KDEDIR}
-			--with-kde4-lib=${KDEDIR}/$(get_libdir)
-			--with-kde-appsdatadir=${KDEDIR}/share/apps/klash
-			--with-kde4-servicesdir=${KDEDIR}/share/services"
-		 fi
 	# Set rendering engine.
 	if use agg; then
 		myconf="${myconf} --enable-renderer=agg"
@@ -163,6 +153,19 @@ src_configure() {
 	else
 		myconf="${myconf} --enable-renderer=cairo"
 	fi
+	# Set kde and konqueror plugin directories.
+	if use kde; then
+		myconf="${myconf}
+			--with-plugins-install=system
+			--with-kde4-incl=${KDEDIR}/include
+			--with-kde4-configdir=${KDEDIR}/share/config
+			--with-kde4-prefix=${KDEDIR}
+			--with-kde4-lib=${KDEDIR}/$(get_libdir)
+			--with-kde-appsdatadir=${KDEDIR}/share/apps/klash
+			--with-kde4-servicesdir=${KDEDIR}/share/kde4/services
+			--with-kde4-plugindir=${KDEDIR}/$(get_libdir)/kde4/plugins"
+	fi
+
 	# Set media handler.
 	if use ffmpeg; then
 		myconf="${myconf} --enable-media=ffmpeg"
@@ -189,7 +192,7 @@ src_configure() {
 	if [ -z "$gui" ]; then
 		gui="sdl"
 	fi
-
+	
 	# Strip extra comma from gui and myext.
 	gui=$( echo $gui | sed -e 's/,//' )
 	myext=$( echo $myext | sed -e 's/,//' )
@@ -197,12 +200,6 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--disable-kparts3 \
-		--enable-nspr \
-		--enable-expat \
-		--enable-jpeg \
-		--enable-png \
-		--enable-gif \
-		--enable-ungif \
 		--enable-avm2 \
 		$(use_enable cygnal) \
 		$(use_enable cygnal cgibins) \
@@ -215,13 +212,10 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable nsplugin npapi) \
 		$(use_enable python) \
-		$(use_enable speex) \
-		$(use_enable speex speexdsp) \
 		$(use_enable ssh) \
 		$(use_enable ssl) \
 		$(use_enable test testsuite) \
 		$(use_enable video_cards_intel i810-lod-bias) \
-		--enable-z \
 		--enable-gui=${gui} \
 		--enable-extensions=${myext} \
 		${myconf}
