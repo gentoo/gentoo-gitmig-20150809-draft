@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.4.ebuild,v 1.8 2009/12/27 15:23:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.4.ebuild,v 1.9 2010/01/10 09:09:49 ssuominen Exp $
 
 EAPI="2"
 
@@ -95,7 +95,8 @@ RDEPEND="${COMMONDEPEND}
 "
 PDEPEND="
 	$(add_kdebase_dep kde-env)
-	$(add_kdebase_dep kdebase-runtime-meta 'handbook?,semantic-desktop?')
+	$(add_kdebase_dep kdebase-data)
+	$(add_kdebase_dep ktimezoned)
 "
 
 # Blockers added due to packages from old versions, removed in the meanwhile
