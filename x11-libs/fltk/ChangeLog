@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.136 2010/01/10 15:19:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.137 2010/01/10 17:50:46 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> fltk-2.0_pre6786-r1.ebuild:
+  ~ppc'd #294147
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> fltk-1.1.9-r1.ebuild,
   fltk-2.0_pre6786-r1.ebuild:
