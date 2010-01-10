@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.77 2010/01/10 08:25:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.78 2010/01/10 08:47:01 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -490,17 +490,32 @@ get_version() {
 	# do we pass KBUILD_OUTPUT on the CLI?
 	OUTPUT_DIR="${OUTPUT_DIR:-${KBUILD_OUTPUT}}"
 
+	# keep track of it
+	KERNEL_MAKEFILE="${KV_DIR}/Makefile"
+
+	# Check if the Makefile is valid for direct parsing.
+	# Check status results:
+	# - PASS, use 'getfilevar' to extract values
+	# - FAIL, use 'getfilevar_noexec' to extract values
+	# The check may fail if:
+	# - make is not present
+	# - corruption exists in the kernel makefile
+	local a='' b='' mkfunc='getfilevar'
+	a="$(getfilevar VERSION ${KERNEL_MAKEFILE})"
+	b="$(getfilevar_noexec VERSION ${KERNEL_MAKEFILE})"
+	[[ "${a}" != "${b}" ]] && mkfunc='getfilevar_noexec'
+
 	# And if we didn't pass it, we can take a nosey in the Makefile
-	kbuild_output="$(getfilevar_noexec KBUILD_OUTPUT ${KV_DIR}/Makefile)"
+	kbuild_output="$(${mkfunc} KBUILD_OUTPUT ${KERNEL_MAKEFILE})"
 	OUTPUT_DIR="${OUTPUT_DIR:-${kbuild_output}}"
 
 	# And contrary to existing functions I feel we shouldn't trust the
 	# directory name to find version information as this seems insane.
-	# so we parse ${KV_DIR}/Makefile
-	KV_MAJOR="$(getfilevar_noexec VERSION ${KV_DIR}/Makefile)"
-	KV_MINOR="$(getfilevar_noexec PATCHLEVEL ${KV_DIR}/Makefile)"
-	KV_PATCH="$(getfilevar_noexec SUBLEVEL ${KV_DIR}/Makefile)"
-	KV_EXTRA="$(getfilevar_noexec EXTRAVERSION ${KV_DIR}/Makefile)"
+	# so we parse ${KERNEL_MAKEFILE}
+	KV_MAJOR="$(${mkfunc} VERSION ${KERNEL_MAKEFILE})"
+	KV_MINOR="$(${mkfunc} PATCHLEVEL ${KERNEL_MAKEFILE})"
+	KV_PATCH="$(${mkfunc} SUBLEVEL ${KERNEL_MAKEFILE})"
+	KV_EXTRA="$(${mkfunc} EXTRAVERSION ${KERNEL_MAKEFILE})"
 
 	if [ -z "${KV_MAJOR}" -o -z "${KV_MINOR}" -o -z "${KV_PATCH}" ]
 	then
