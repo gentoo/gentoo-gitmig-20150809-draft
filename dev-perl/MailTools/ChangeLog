@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.65 2009/12/19 11:19:51 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.66 2010/01/10 17:08:46 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> MailTools-2.05.ebuild:
+  Transfer Prefix keywords
 
 *MailTools-2.05 (19 Dec 2009)
 
