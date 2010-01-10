@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.74 2010/01/09 23:20:49 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.75 2010/01/10 01:12:10 robbat2 Exp $
+
+*ipsec-tools-0.7.3-r1 (10 Jan 2010)
+
+  10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +ipsec-tools-0.7.3-r1.ebuild:
+  Bug #283320: linux-info changes require that linux_config_exists is called
+  before linux_chkconfig*. Bug #284810: ensure HAVE_PFKEY_POLICY_PRIORITY
+  and HAVE_POLICY_FWD are always available. Bug #264233: Avoid reference to
+  missing swab.h from mixing header/kernel sources versions - by not mixing
+  the versions at all anymore.
 
   09 Jan 2010; Víctor Ostorga <vostorga@gentoo.org>
   ipsec-tools-0.7.3.ebuild, +files/ipsec-tools-duplicate-header.patch:
