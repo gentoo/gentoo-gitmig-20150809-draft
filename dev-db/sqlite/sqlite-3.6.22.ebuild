@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.5 2010/01/10 21:55:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.6 2010/01/10 22:03:08 arfrever Exp $
 
 EAPI="2"
 
@@ -75,6 +75,7 @@ src_configure() {
 		append-cppflags -DNDEBUG
 	fi
 
+	local extensions_option
 	if use tcl || use test; then
 		extensions_option="load-extension"
 	else
