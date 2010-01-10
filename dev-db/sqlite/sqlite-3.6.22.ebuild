@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.4 2010/01/10 21:26:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.5 2010/01/10 21:55:07 grobian Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib versionator
+inherit eutils flag-o-matic multilib versionator libtool
 
 DESCRIPTION="an SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -37,6 +37,7 @@ src_prepare() {
 	fi
 
 	epunt_cxx
+	elibtoolize # for MiNT
 }
 
 src_configure() {

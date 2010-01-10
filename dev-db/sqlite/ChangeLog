@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.316 2010/01/10 21:26:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.317 2010/01/10 21:55:07 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> sqlite-3.6.22.ebuild:
+  Run elibtoolize for FreeMiNT
 
   10 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sqlite-3.6.22.ebuild, metadata.xml:
