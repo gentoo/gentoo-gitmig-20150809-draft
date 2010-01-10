@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.480 2009/12/27 23:42:03 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.481 2010/01/10 22:51:21 scarabeus Exp $
+
+*xorg-server-1.7.4 (10 Jan 2010)
+
+  10 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xorg-server-1.7.3.901-r1.ebuild, -xorg-server-1.7.3.902.ebuild,
+  +xorg-server-1.7.4.ebuild:
+  Version bump. Drop older.
 
 *xorg-server-1.7.3.902 (27 Dec 2009)
 
