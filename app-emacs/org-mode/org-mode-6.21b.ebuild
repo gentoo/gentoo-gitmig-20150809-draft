@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.21b.ebuild,v 1.6 2009/03/18 15:09:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.21b.ebuild,v 1.7 2010/01/10 10:57:27 ulm Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/org-${PV}"
-SITEFILE="51${PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	# remove autoload file to make sure that it is regenerated with
