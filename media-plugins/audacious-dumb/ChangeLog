@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-dumb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.29 2009/10/04 15:10:46 sping Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.30 2010/01/10 19:57:35 joker Exp $
+
+*audacious-dumb-0.60 (10 Jan 2010)
+
+  10 Jan 2010; Christian Birchinger <joker@gentoo.org>
+  +audacious-dumb-0.60.ebuild:
+  New version with Audacious 2.2 support
 
   04 Oct 2009; Sebastian Pipping <sping@gentoo.org> ChangeLog:
   Add blocker on Audacious 2.2 series (permission by joker)
