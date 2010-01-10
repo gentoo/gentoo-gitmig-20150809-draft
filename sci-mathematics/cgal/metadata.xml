@@ -15,7 +15,4 @@
   * the Support Library which offers interfaces to other packages,
     e.g., for visualisation, and I/O, and other support facilities.
 </longdescription>
-<use>
-  <flag name='taucs'>Add support for the sparse solver library <pkg>sci-libs/taucs</pkg></flag>
-</use>
 </pkgmetadata>
