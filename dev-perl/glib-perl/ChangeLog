@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.110 2009/08/25 17:28:22 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.111 2010/01/10 09:43:38 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> glib-perl-1.222.ebuild:
+  Transfer Prefix keywords
 
 *glib-perl-1.222 (25 Aug 2009)
 

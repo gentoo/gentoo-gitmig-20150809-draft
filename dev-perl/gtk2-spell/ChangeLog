@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-spell
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.18 2009/07/02 20:08:11 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.19 2010/01/10 09:48:35 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> gtk2-spell-1.03.ebuild:
+  Transfer Prefix keywords
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> gtk2-spell-1.03.ebuild:
   Stable for HPPA too.
