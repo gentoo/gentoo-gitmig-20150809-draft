@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.7 2010/01/10 15:43:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.8 2010/01/10 15:46:07 scarabeus Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="false"
@@ -192,7 +192,7 @@ src_configure() {
 	if [ -z "$gui" ]; then
 		gui="sdl"
 	fi
-	
+
 	# Strip extra comma from gui and myext.
 	gui=$( echo $gui | sed -e 's/,//' )
 	myext=$( echo $myext | sed -e 's/,//' )
