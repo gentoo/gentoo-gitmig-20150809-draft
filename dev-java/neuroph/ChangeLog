@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/neuroph
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/neuroph/ChangeLog,v 1.7 2009/12/29 19:30:35 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/neuroph/ChangeLog,v 1.8 2010/01/10 21:23:02 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> neuroph-2.3.ebuild:
+  amd64 stable, bug #298726
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org> neuroph-2.3.ebuild:
   stable x86, bug 298726
