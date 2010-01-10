@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/htbinit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.13 2007/04/28 16:54:36 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.14 2010/01/10 08:13:42 robbat2 Exp $
+
+*htbinit-0.8.5-r2 (10 Jan 2010)
+
+  10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +htbinit-0.8.5-r2.ebuild:
+  Bug #283320 cleanup. This package is actually installing just a script and
+  should bring in only linux-info for warnings, not linux-mod.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> htbinit-0.8.5.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)
