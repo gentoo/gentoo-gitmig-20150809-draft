@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-6.0-r1.ebuild,v 1.9 2009/10/18 18:46:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-6.0-r1.ebuild,v 1.10 2010/01/10 00:28:54 jer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/infozip/${MY_P}.tar.gz"
 
 LICENSE="Info-ZIP"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k ~ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 m68k ~ppc ppc64 s390 sh ~sparc x86"
 IUSE="bzip2 unicode"
 
 DEPEND="bzip2? ( app-arch/bzip2 )"
