@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.00-r2.ebuild,v 1.8 2010/01/01 14:24:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.00-r2.ebuild,v 1.9 2010/01/10 18:28:24 nixnut Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.insecure.org/nmap/dist/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="gtk lua ssl"
 
 DEPEND="dev-libs/libpcre
