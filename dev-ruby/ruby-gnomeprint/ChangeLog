@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnomeprint
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprint/ChangeLog,v 1.15 2009/12/18 15:10:49 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprint/ChangeLog,v 1.16 2010/01/10 18:06:49 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> ruby-gnomeprint-0.19.1.ebuild:
+  ppc stable #295942
 
   18 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   ruby-gnomeprint-0.19.1.ebuild:

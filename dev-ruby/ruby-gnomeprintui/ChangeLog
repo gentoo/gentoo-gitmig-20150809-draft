@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnomeprintui
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprintui/ChangeLog,v 1.14 2009/12/16 12:46:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomeprintui/ChangeLog,v 1.15 2010/01/10 18:08:05 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> ruby-gnomeprintui-0.19.1.ebuild:
+  ppc stable #295942
 
   16 Dec 2009; Markus Meier <maekke@gentoo.org>
   ruby-gnomeprintui-0.19.1.ebuild:

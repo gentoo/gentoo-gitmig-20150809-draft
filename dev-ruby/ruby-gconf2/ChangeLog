@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gconf2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.44 2009/12/18 15:09:33 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.45 2010/01/10 18:02:16 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> ruby-gconf2-0.19.1.ebuild:
+  ppc stable #295942
 
   18 Dec 2009; Raúl Porcel <armin76@gentoo.org> ruby-gconf2-0.19.1.ebuild:
   alpha/ia64/sparc stable wrt #295942
