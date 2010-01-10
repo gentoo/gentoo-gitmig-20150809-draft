@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.36 2010/01/06 10:45:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.37 2010/01/10 15:26:44 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> builder-2.1.2-r1.ebuild:
+  add ~arm, bug #297081
 
   06 Jan 2010; Fabian Groffen <grobian@gentoo.org> builder-2.1.2-r1.ebuild:
   Marked ~x64-solaris

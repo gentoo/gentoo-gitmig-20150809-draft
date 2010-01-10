@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.89 2010/01/04 11:46:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.90 2010/01/10 15:24:32 maekke Exp $
+
+  10 Jan 2010; Markus Meier <maekke@gentoo.org> rake-0.8.7-r3.ebuild:
+  add ~arm, bug #297081
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> rake-0.8.7-r3.ebuild:
   Transfer Prefix keywords
