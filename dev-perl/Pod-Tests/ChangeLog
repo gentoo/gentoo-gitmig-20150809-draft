@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Tests
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.15 2008/08/01 10:07:57 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/ChangeLog,v 1.16 2010/01/10 19:43:17 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> Pod-Tests-1.19.ebuild:
+  Transfer Prefix keywords
 
 *Pod-Tests-1.19 (01 Aug 2008)
 
