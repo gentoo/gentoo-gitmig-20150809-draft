@@ -5,6 +5,10 @@
   <maintainer>
     <email>cryos@gentoo.org</email>
   </maintainer>
+  <maintainer>
+  	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
+</maintainer>
   <use>
     <flag name="xls">Import support for Microsoft office excel sheets</flag>
     <flag name="ods">Import support for OpenOffice .ods sheets</flag>
