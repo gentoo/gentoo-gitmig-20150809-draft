@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/time
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.4 2006/11/13 15:14:41 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.5 2010/01/10 22:31:41 abcd Exp $
+
+  10 Jan 2010; Jonathan Callen <abcd@gentoo.org> time-1.7-r1.ebuild:
+  Add prefix keywords
 
   13 Nov 2006; Sven Wegener <swegener@gentoo.org> time-1.7-r1.ebuild:
   Fix mirror:// SRC_URI.
