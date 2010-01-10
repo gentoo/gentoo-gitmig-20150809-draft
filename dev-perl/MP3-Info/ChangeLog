@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Info
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.61 2008/11/21 10:11:13 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.62 2010/01/10 16:57:32 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> MP3-Info-1.24.ebuild:
+  Transfer Prefix keywords
 
 *MP3-Info-1.24 (21 Nov 2008)
 

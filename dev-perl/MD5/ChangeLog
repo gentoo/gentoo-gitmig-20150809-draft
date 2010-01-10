@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MD5
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.22 2007/01/19 14:07:18 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.23 2010/01/10 16:56:16 grobian Exp $
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org> MD5-2.03.ebuild:
+  Transfer Prefix keywords
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org> MD5-2.03.ebuild:
   Ebuild maintenance
