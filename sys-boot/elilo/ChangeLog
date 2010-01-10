@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/elilo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.23 2009/06/02 15:56:44 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.24 2010/01/10 16:37:29 armin76 Exp $
+
+*elilo-3.12 (10 Jan 2010)
+
+  10 Jan 2010; Raúl Porcel <armin76@gentoo.org> elilo-3.10.ebuild,
+  +elilo-3.12.ebuild:
+  ia64 stable, version bump
 
 *elilo-3.10 (02 Jun 2009)
 

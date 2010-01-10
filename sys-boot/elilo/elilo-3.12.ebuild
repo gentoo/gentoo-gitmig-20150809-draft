@@ -1,17 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.10.ebuild,v 1.2 2010/01/10 16:37:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.12.ebuild,v 1.1 2010/01/10 16:37:29 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
 HOMEPAGE="http://elilo.sourceforge.net/"
-SRC_URI="mirror://sourceforge/elilo/${P}.tar.gz"
-SRC_URI="${SRC_URI} mirror://debian/pool/main/e/elilo/elilo_3.10-1.diff.gz"
+SRC_URI="mirror://sourceforge/elilo/${P}-source.tar.gz"
+SRC_URI="${SRC_URI} mirror://debian/pool/main/e/elilo/elilo_3.12-1.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~x86"
+KEYWORDS="~ia64 ~x86 ~amd64"
 IUSE=""
 
 # gnu-efi contains only static libs, so there's no run-time dep on it
@@ -39,7 +39,7 @@ src_unpack() {
 		s/Debian GNU\//Gentoo /g;
 		s/Debian/Gentoo/g;
 		s/debian/gentoo/g;
-		s/dpkg --print-installation-architecture/uname -m/" debian/elilo.sh
+		s/dpkg --print-architecture/uname -m/" debian/elilo.sh
 }
 
 src_compile() {
