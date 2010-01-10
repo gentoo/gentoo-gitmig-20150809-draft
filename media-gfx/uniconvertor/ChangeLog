@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/uniconvertor
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.1 2010/01/10 14:17:36 ssuominen Exp $
+
+*uniconvertor-1.1.0 (10 Jan 2010)
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +uniconvertor-1.1.0.ebuild:
+  Initial commit wrt #199280, thanks to Tomáš Chvátal for ebuild.
+
