@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.29 2010/01/08 11:13:46 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.30 2010/01/10 13:54:13 flameeyes Exp $
+
+  10 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> haml-2.2.16.ebuild:
+  Depend on rack-1.0.x series, doesn't work with 1.1.0.
 
   08 Jan 2010; Alex Legler <a3li@gentoo.org> haml-2.2.15.ebuild,
   haml-2.2.16.ebuild:

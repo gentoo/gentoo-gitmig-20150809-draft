@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-2.2.16.ebuild,v 1.4 2010/01/08 11:13:46 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-2.2.16.ebuild,v 1.5 2010/01/10 13:54:13 flameeyes Exp $
 
 EAPI=2
 
@@ -35,5 +35,5 @@ each_ruby_install() {
 }
 
 # It could use merb during testing as well, but it's not mandatory
-ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/rack"
+ruby_add_bdepend test "virtual/ruby-test-unit =dev-ruby/rack-1.0*"
 ruby_add_bdepend doc "dev-ruby/yard dev-ruby/maruku"
