@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gettext_activerecord
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_activerecord/ChangeLog,v 1.7 2009/12/15 18:59:26 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_activerecord/ChangeLog,v 1.8 2010/01/10 18:40:34 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> gettext_activerecord-2.0.4.ebuild:
+  ppc stable #295944
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   gettext_activerecord-2.0.4.ebuild:
