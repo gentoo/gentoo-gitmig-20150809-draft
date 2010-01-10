@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libesmtp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.43 2009/03/13 02:20:09 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.44 2010/01/10 16:31:16 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libesmtp-1.0.4.ebuild:
+  Transfer Prefix keywords
 
   13 Mar 2009; Jeroen Roovers <jer@gentoo.org> libesmtp-1.0.4.ebuild:
   Marked ~hppa (bug #260777).
