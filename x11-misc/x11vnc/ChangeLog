@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.76 2009/12/22 10:47:48 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.77 2010/01/10 18:45:29 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> x11vnc-0.9.9.ebuild:
+  Transfer Prefix keywords
 
 *x11vnc-0.9.9 (22 Dec 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.69 2009/10/27 12:02:53 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.70 2010/01/10 18:43:58 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  notification-daemon-0.4.0-r1.ebuild:
+  Transfer Prefix keywords
 
   27 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   notification-daemon-0.4.0-r1.ebuild:
