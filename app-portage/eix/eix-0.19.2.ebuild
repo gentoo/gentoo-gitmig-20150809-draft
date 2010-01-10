@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.19.0-r1.ebuild,v 1.1 2009/12/02 21:31:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.19.2.ebuild,v 1.1 2010/01/10 00:11:54 darkside Exp $
 
 EAPI=2
 
-inherit multilib eutils
+inherit multilib
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.sourceforge.net"
@@ -34,9 +34,6 @@ src_unpack() {
 	done
 }
 
-# Fixed in next release.
-src_prepare() { epatch "${FILESDIR}/${P}-security.patch"; }
-
 src_configure() {
 	econf $(use_with bzip2) $(use_with sqlite) $(use_with doc rst) \
 		$(use_enable nls) $(use_enable tools separate-tools) \
@@ -45,7 +42,8 @@ src_configure() {
 		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
 		--with-eprefix-default="${EPREFIX}" \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}"
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html"
 }
 
 src_install() {
