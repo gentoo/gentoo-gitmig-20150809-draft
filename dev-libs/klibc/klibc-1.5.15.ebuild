@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.15.ebuild,v 1.3 2009/09/25 10:34:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.15.ebuild,v 1.4 2010/01/10 09:50:36 robbat2 Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -150,7 +150,7 @@ src_compile() {
 	cd "${S}"
 
 	use debug && myargs="${myargs} V=1"
-	has test $FEATURES && myargs="${myargs} test"
+	use test && myargs="${myargs} test"
 
 	emake \
 		EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
