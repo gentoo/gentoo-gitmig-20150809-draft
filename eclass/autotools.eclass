@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.88 2010/01/10 18:36:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.89 2010/01/10 18:39:16 scarabeus Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -30,7 +30,7 @@ if [[ -n ${WANT_AUTOMAKE} ]]; then
 	case ${WANT_AUTOMAKE} in
 		none)   _automake_atom="" ;; # some packages don't require automake at all
 		# if you change the “latest” version here, change also autotools_run_tool
-		latest) _automake_atom=">=sys-devel/automake-1.10.0" ;;
+		latest) _automake_atom="=sys-devel/automake-1.10*" ;;
 		*)      _automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
 	esac
 	export WANT_AUTOMAKE
@@ -243,7 +243,7 @@ autotools_run_tool() {
 
 	# We do the “latest” → version switch here because it solves
 	# possible order problems, see bug #270010 as an example.
-	[[ ${WANT_AUTOMAKE} == "latest" ]] && export WANT_AUTOMAKE=1.11
+	[[ ${WANT_AUTOMAKE} == "latest" ]] && export WANT_AUTOMAKE=1.10
 	[[ ${WANT_AUTOCONF} == "latest" ]] && export WANT_AUTOCONF=2.5
 
 	local STDERR_TARGET="${T}/$1.out"
