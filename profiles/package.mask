@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11084 2010/01/09 18:10:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11085 2010/01/10 14:27:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -352,16 +352,10 @@ net-p2p/dc-qt
 sys-apps/sdd
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
-# Semi-abandoned upstream. Installs broken Engine,
-# libqt4engine.so but a useful kcm_gtk4.so Theme
-# Selector. The engine is hanging Firefox and Thunderbird
-# at exit, and is segfaulting apps like Audacious.
+# Broken engine, see bug 277726. Replaced by
+# kde-misc/kcm_gtk
 #
-# The Theme Selector could be split into it's own package.
-# Use qtcurve-qt4 gtk-engines-qtcurve for working Engine.
-#
-# See Bug 277726. Removed when the theme selector has
-# been split, or unmasked when the engine is fixed.
+# Masked for removal
 x11-themes/gtk-engines-qt
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
