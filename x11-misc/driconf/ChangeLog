@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/driconf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.21 2009/04/06 18:45:17 bluebird Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.22 2010/01/10 23:11:27 scarabeus Exp $
+
+  10 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> driconf-0.9.1.ebuild:
+  Fix python dep per bug #299198.
 
   06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> driconf-0.9.1.ebuild:
   Add ~sparc keyword, bug #251832
