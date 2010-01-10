@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.33 2010/01/03 19:42:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.34 2010/01/10 17:04:46 aballier Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc139
 	libnotify libproxy libsysfs libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	pda png pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba schroedinger
-	sdl sdl-image seamonkey shine shout skins speex sse stream svg svga taglib
+	sdl sdl-image shine shout skins speex sse stream svg svga taglib
 	theora truetype twolame udev upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs
 	wma-fixed X x264 xcb xinerama xml xosd xv zvbi"
 
@@ -113,10 +113,7 @@ RDEPEND="
 		mtp? ( >=media-libs/libmtp-0.3.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
-		nsplugin? (
-			seamonkey?  ( =www-client/seamonkey-1* )
-			!seamonkey? ( >=net-libs/xulrunner-1.8 )
-		)
+		nsplugin? ( >=net-libs/xulrunner-1.8 )
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
@@ -245,14 +242,10 @@ src_configure() {
 	local MOZILLA_PC
 
 	if use nsplugin; then
-		if use seamonkey; then
-			MOZILLA_PC=seamonkey-plugin
+		if has_version 'net-libs/xulrunner:1.9' ; then
+			MOZILLA_PC=libxul
 		else
-			if has_version 'net-libs/xulrunner:1.9' ; then
-				MOZILLA_PC=libxul
-			else
-				MOZILLA_PC=xulrunner-plugin
-			fi
+			MOZILLA_PC=xulrunner-plugin
 		fi
 	fi
 
