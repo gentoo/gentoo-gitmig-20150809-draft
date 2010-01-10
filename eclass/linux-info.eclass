@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.78 2010/01/10 08:47:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.79 2010/01/10 09:01:38 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -101,10 +101,6 @@
 # A read-only variable. It's a string containing the kernel object directory, will be KV_DIR unless
 # KBUILD_OUTPUT is used. This should be used for referencing .config.
 
-# @ECLASS-VARIABLE: I_KNOW_WHAT_I_AM_DOING
-# @DESCRIPTION:
-# Temporary variable for the migration to making linux-info non-fatal.
-
 # And to ensure all the weirdness with crosscompile
 inherit toolchain-funcs versionator
 
@@ -112,9 +108,6 @@ EXPORT_FUNCTIONS pkg_setup
 
 DEPEND=""
 RDEPEND=""
-
-[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && \
-DEPEND="kernel_linux? ( virtual/linux-sources )"
 
 # Overwritable environment Var's
 # ---------------------------------------
@@ -254,7 +247,7 @@ linux_config_src_exists() {
 # It returns true if .config exists in /proc, otherwise false
 linux_config_bin_exists() {
 	export _LINUX_CONFIG_EXISTS_DONE=1
-	[ -n "${I_KNOW_WHAT_I_AM_DOING}" -a -s "/proc/config.gz" ]
+	[ -s "/proc/config.gz" ]
 }
 
 # @FUNCTION: linux_config_exists
@@ -292,7 +285,6 @@ require_configured_kernel() {
 linux_chkconfig_present() {
 	linux_config_qa_check linux_chkconfig_present
 	local	RESULT
-	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
 	config="${KV_OUT_DIR}/.config"
 	[ ! -f "${config}" ] && config="/proc/config.gz"
@@ -310,7 +302,6 @@ linux_chkconfig_present() {
 linux_chkconfig_module() {
 	linux_config_qa_check linux_chkconfig_module
 	local	RESULT
-	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
 	config="${KV_OUT_DIR}/.config"
 	[ ! -f "${config}" ] && config="/proc/config.gz"
@@ -328,7 +319,6 @@ linux_chkconfig_module() {
 linux_chkconfig_builtin() {
 	linux_config_qa_check linux_chkconfig_builtin
 	local	RESULT
-	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
 	config="${KV_OUT_DIR}/.config"
 	[ ! -f "${config}" ] && config="/proc/config.gz"
@@ -345,7 +335,6 @@ linux_chkconfig_builtin() {
 # MUST call linux_config_exists first.
 linux_chkconfig_string() {
 	linux_config_qa_check linux_chkconfig_string
-	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	local config
 	config="${KV_OUT_DIR}/.config"
 	[ ! -f "${config}" ] && config="/proc/config.gz"
@@ -678,13 +667,11 @@ check_extra_config() {
 		fi
 	done
 
-	# TODO: After we enable the new code for /proc/config.gz, we need to
-	# change this back to linux_config_exists.
 	if [[ ${config_required} == 0 ]]; then
 		# In the case where we don't require a .config, we can now bail out
 		# if the user has no .config as there is nothing to do. Otherwise
 		# code later will cause a failure due to missing .config.
-		if ! linux_config_src_exists; then
+		if ! linux_config_exists; then
 			ewarn "Unable to check for the following kernel config options due"
 			ewarn "to absence of any configured kernel sources or compiled"
 			ewarn "config:"
@@ -702,7 +689,7 @@ check_extra_config() {
 			return 0
 		fi
 	else
-		[ -n "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
+		require_configured_kernel
 	fi
 
 	einfo "Checking for suitable kernel configuration options..."
