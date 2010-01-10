@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1-r2.ebuild,v 1.1 2010/01/09 20:17:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1-r2.ebuild,v 1.2 2010/01/10 14:22:08 flameeyes Exp $
 
 EAPI="2"
 
@@ -133,7 +133,7 @@ src_install() {
 		|| die "newinitd failed"
 	newinitd "${FILESDIR}"/nut-2.2.2-init.d-upsmon upsmon \
 		|| die "newinitd failed"
-	newinitd "${FILESDIR}"/nut.powerfail.init nut.powerfail \
+	newinitd "${FILESDIR}"/nut.powerfail.initd nut.powerfail \
 		|| die "newinitd failed"
 
 	# This sets up permissions for nut to access a UPS
@@ -175,7 +175,7 @@ src_install() {
 		insinto /usr/libexec
 		insopts -m 755
 		doins drivers/hald-addon-*
-	    rm "${D}"/lib/nut/hald-addon-*
+		rm "${D}"/lib/nut/hald-addon-*
 	fi
 
 	dobashcompletion "${S}"/scripts/misc/nut.bash_completion
