@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.136 2010/01/10 00:20:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.137 2010/01/10 12:01:58 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> parted-1.9.0.ebuild:
+  stable x86, bug 300058
 
   10 Jan 2010; Jeroen Roovers <jer@gentoo.org> parted-1.9.0.ebuild:
   Stable for HPPA PPC (bug #300058).
