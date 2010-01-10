@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.23 2010/01/10 13:32:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.24 2010/01/10 13:33:02 betelgeuse Exp $
+
+  10 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -tomcat-native-1.1.13-r1.ebuild, -tomcat-native-1.1.14.ebuild:
+  Remove old versions.
 
 *tomcat-native-1.1.18 (10 Jan 2010)
 
