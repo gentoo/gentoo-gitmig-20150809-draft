@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/libwww-perl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.121 2009/12/24 19:08:03 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.122 2010/01/10 14:03:19 grobian Exp $
+
+*libwww-perl-5.834-r1 (10 Jan 2010)
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  +libwww-perl-5.834-r1.ebuild:
+  Revision bump for Prefix fix and transfer of Prefix keywords, bug #294758
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org> -libwww-perl-5.833.ebuild:
   Cleanup
