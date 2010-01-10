@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.62 2010/01/05 18:19:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.63 2010/01/10 18:29:45 fauli Exp $
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-gconf-0.10.17.ebuild:
+  Transfer Prefix keywords
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> gst-plugins-gconf-0.10.16.ebuild:
   ppc stable #290343
