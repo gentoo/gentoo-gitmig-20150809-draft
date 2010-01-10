@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/bzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.120 2010/01/10 00:46:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.121 2010/01/10 11:26:26 pva Exp $
+
+*bzr-2.1.0_beta4 (10 Jan 2010)
+
+  10 Jan 2010; Peter Volkov <pva@gentoo.org> -bzr-2.1.0_beta1.ebuild,
+  +bzr-2.1.0_beta4.ebuild, +files/bzr-2.1-no-pyrex-citon.patch:
+  Version bump, bug #300350, thank Jeroen Roovers for report. Added missed
+  patch, bug #297268, thank Christian Faulhammer for report.
 
   10 Jan 2010; Jeroen Roovers <jer@gentoo.org> bzr-2.0.1.ebuild:
   Stable for HPPA too.
