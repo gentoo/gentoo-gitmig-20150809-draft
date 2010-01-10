@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1.ebuild,v 1.1 2008/01/30 08:16:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1.ebuild,v 1.2 2010/01/10 08:28:48 robbat2 Exp $
 
-inherit eutils multilib linux-info
+inherit eutils multilib
 
 DESCRIPTION="A library for applications dealing with netlink socket"
 HOMEPAGE="http://people.suug.ch/~tgr/libnl/"
