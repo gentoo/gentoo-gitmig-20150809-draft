@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.34 2010/01/01 02:11:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.35 2010/01/10 12:05:06 armin76 Exp $
+
+  10 Jan 2010; Raúl Porcel <armin76@gentoo.org> rasqal-0.9.16.ebuild,
+  rasqal-0.9.17.ebuild:
+  Add ~arm
 
   01 Jan 2010; Jonathan Callen <abcd@gentoo.org> rasqal-0.9.17.ebuild:
   Add prefix keywords
