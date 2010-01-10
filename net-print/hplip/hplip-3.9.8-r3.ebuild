@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r3.ebuild,v 1.6 2010/01/02 19:49:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r3.ebuild,v 1.7 2010/01/10 15:21:40 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt4 scanner snmp static-ppds -udev-acl"
 
