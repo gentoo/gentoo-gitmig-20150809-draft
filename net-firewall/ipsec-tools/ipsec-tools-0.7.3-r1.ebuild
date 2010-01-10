@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.1 2010/01/10 01:12:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.2 2010/01/10 05:10:27 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -53,7 +53,7 @@ pkg_setup() {
 				CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
 				eval "export WARNING_${i}='IPv4 tunnels will not be available'"
 			done
-			
+
 			for i in INET6_IPCOMP INET6_AH INET6_ESP \
 				INET6_XFRM_MODE_TRANSPORT \
 				INET6_XFRM_MODE_TUNNEL \
@@ -65,7 +65,7 @@ pkg_setup() {
 			CONFIG_CHECK="${CONFIG_CHECK} ~CRYPTO_NULL"
 			export WARNING_CRYPTO_NULL="Unencrypted tunnels will not be available"
 			export CONFIG_CHECK
-			
+
 			check_extra_config
 		else
 			eerror "You must have a kernel >=2.6.19 to run ipsec-tools."
