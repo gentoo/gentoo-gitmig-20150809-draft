@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.23 2009/12/16 12:49:40 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.24 2010/01/10 18:13:15 nixnut Exp $
+
+  10 Jan 2010; nixnut <nixnut@gentoo.org> ruby-gtkhtml2-0.19.1.ebuild:
+  ppc stable #295942
 
   16 Dec 2009; Markus Meier <maekke@gentoo.org> ruby-gtkhtml2-0.19.1.ebuild:
   amd64/x86 stable, bug #295942
