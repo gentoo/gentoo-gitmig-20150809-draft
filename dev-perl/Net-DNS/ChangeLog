@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.144 2010/01/10 16:14:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.145 2010/01/10 18:58:12 grobian Exp $
+
+*Net-DNS-0.66-r1 (10 Jan 2010)
+
+  10 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  +files/Net-DNS-0.64-ar.patch, +Net-DNS-0.66-r1.ebuild:
+  Revision bump for Prefix fix and transfer of Prefix keywords, bug #294758
 
   10 Jan 2010; Markus Meier <maekke@gentoo.org> Net-DNS-0.66.ebuild:
   add ~arm, bug #300221
