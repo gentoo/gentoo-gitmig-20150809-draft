@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.5 2008/09/01 04:49:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.6 2010/01/10 01:19:49 robbat2 Exp $
 
-inherit eutils toolchain-funcs linux-info
+inherit eutils toolchain-funcs linux-mod
 
 MY_P=${PN}.14-Jun-05
 S=${WORKDIR}/${PN}-${PV/_pre*/}
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	linux-info_pkg_setup
+	linux-mod_pkg_setup
 
 	if kernel_is lt 2 5 && linux_chkconfig_present PCMCIA; then
 		ewarn

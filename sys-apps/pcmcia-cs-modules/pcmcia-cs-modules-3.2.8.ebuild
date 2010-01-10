@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/pcmcia-cs-modules-3.2.8.ebuild,v 1.3 2005/05/27 19:21:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/pcmcia-cs-modules-3.2.8.ebuild,v 1.4 2010/01/10 01:20:24 robbat2 Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-info
+inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 MY_P=${P/-modules/}
 S=${WORKDIR}/${MY_P}
@@ -23,7 +23,7 @@ DEPEND="virtual/linux-sources
 RDEPEND=""
 
 pkg_setup() {
-	linux-info_pkg_setup
+	linux-mod_pkg_setup
 
 	if kernel_is gt 2 4; then
 		eerror

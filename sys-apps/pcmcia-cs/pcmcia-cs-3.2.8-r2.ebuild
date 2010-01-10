@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.17 2009/07/27 19:37:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.18 2010/01/10 01:19:49 robbat2 Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-info
+inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 DESCRIPTION="PCMCIA tools for Linux"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	linux-info_pkg_setup
+	linux-mod_pkg_setup
 
 	if kernel_is lt 2 5 && linux_chkconfig_present PCMCIA; then
 		ewarn

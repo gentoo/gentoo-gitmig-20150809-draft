@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/i2c
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.48 2007/11/04 10:31:29 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.49 2010/01/10 01:18:04 robbat2 Exp $
+
+  10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> i2c-2.9.2.ebuild,
+  i2c-2.10.0.ebuild:
+  Bug #283320 cleanup. This package is actually building kernel modules, and
+  should bring in linux-mod, not just linux-info.
 
   04 Nov 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing myself as the maintainer.

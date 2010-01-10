@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.9.2.ebuild,v 1.4 2006/07/13 18:48:59 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.9.2.ebuild,v 1.5 2010/01/10 01:18:04 robbat2 Exp $
 
-inherit eutils toolchain-funcs linux-info
+inherit eutils toolchain-funcs linux-mod
 
 DESCRIPTION="I2C Bus kernel modules for linux-2.4.x"
 HOMEPAGE="http://www.lm-sensors.org/"
@@ -15,7 +15,7 @@ KEYWORDS="-amd64 -ppc x86"
 IUSE=""
 
 pkg_setup() {
-	linux-info_pkg_setup
+	linux-mod_pkg_setup
 
 	if kernel_is lt 2 4 10; then
 		eerror "${P} requires kernel 2.4.10 or later"

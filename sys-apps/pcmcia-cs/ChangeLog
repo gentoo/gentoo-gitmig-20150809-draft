@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmcia-cs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.117 2009/07/27 19:37:16 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.118 2010/01/10 01:19:49 robbat2 Exp $
+
+  10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org>
+  pcmcia-cs-3.2.8-r2.ebuild, pcmcia-cs-3.2.9_pre20050614.ebuild:
+  Bug #283320 cleanup. This package is actually building kernel modules, and
+  should bring in linux-mod, not just linux-info.
 
   27 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   pcmcia-cs-3.2.8-r2.ebuild:

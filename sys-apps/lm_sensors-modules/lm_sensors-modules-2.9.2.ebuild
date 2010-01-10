@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors-modules/lm_sensors-modules-2.9.2.ebuild,v 1.4 2006/07/13 18:44:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors-modules/lm_sensors-modules-2.9.2.ebuild,v 1.5 2010/01/10 01:19:01 robbat2 Exp $
 
-inherit eutils toolchain-funcs linux-info
+inherit eutils toolchain-funcs linux-mod
 
 MY_P=${P/-modules/}
 S=${WORKDIR}/${MY_P}
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="sys-apps/i2c"
 
 pkg_setup() {
-	linux-info_pkg_setup
+	linux-mod_pkg_setup
 
 	if kernel_is lt 2 4 10; then
 		eerror "${P} requires kernel 2.4.10 or later"
