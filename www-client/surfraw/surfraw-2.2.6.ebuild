@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.2.6.ebuild,v 1.5 2009/12/28 19:19:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.2.6.ebuild,v 1.6 2010/01/10 20:25:08 maekke Exp $
 
 inherit bash-completion eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.alioth.debian.org/dist/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="amd64 hppa ppc sparc ~x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 RESTRICT="test"
 
