@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.326 2010/01/10 05:53:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.327 2010/01/10 15:49:01 scarabeus Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -265,12 +265,14 @@ epatch() {
 			# let people use globs in the exclude
 			eshopts_push -o noglob
 
-			local ex
+			local ex skip
 			for ex in ${EPATCH_EXCLUDE} ; do
-				[[ ${patchname} == ${ex} ]] && continue
+				[[ ${patchname} == ${ex} ]] && skip=1
 			done
 
 			eshopts_pop
+
+			[[ ${skip} = 1 ]] && continue
 		fi
 
 		if [[ ${SINGLE_PATCH} == "yes" ]] ; then
