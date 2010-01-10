@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.7.ebuild,v 1.3 2010/01/07 22:09:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.7-r1.ebuild,v 1.1 2010/01/10 23:39:09 bicatali Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs flag-o-matic perl-app
+inherit eutils toolchain-funcs flag-o-matic perl-app
 
 MY_P=${P/graphicsm/GraphicsM}
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="bzip2 cxx debug fpx -gs imagemagick jbig +jpeg +jpeg2k lcms openmp
+IUSE="bzip2 cxx debug doc fpx -gs imagemagick jbig +jpeg +jpeg2k lcms openmp
 	perl +png q16 q32 +svg +threads tiff +truetype X wmf zlib"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
@@ -40,6 +40,13 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-CVE-2009-1882.patch"
+	"${FILESDIR}/${P}-CVE-2009-3736.patch"
+	"${FILESDIR}/${P}-perl-ldflags.patch"
+)
+#	"${FILESDIR}/${P}-perl-link.patch"
 
 pkg_setup() {
 	if use openmp &&
@@ -67,6 +74,8 @@ src_configure() {
 	use debug && filter-flags -fomit-frame-pointer
 
 	econf \
+		--docdir=/usr/share/doc/${PF} \
+		--htmldir=/usr/share/doc/${PF}/html \
 		--enable-shared \
 		--enable-largefile \
 		--without-included-ltdl \
@@ -97,16 +106,25 @@ src_configure() {
 		$(use_with zlib)
 }
 
+src_compile() {
+	emake || die "emake failed"
+	if use perl; then
+		emake perl-build || die "emake perl failed"
+	fi
+}
+
 src_test() {
 	emake check || die "tests failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
-	dodoc README.txt ChangeLog* NEWS.txt TODO.txt
-
-	# Fix perllocal.pod file collision
-	use perl && fixlocalpod
+	emake DESTDIR="${D}" install || die "emake install failed"
+	if use perl; then
+		perl -MExtUtils::MakeMaker -e 'MY->fixin(@ARGV)' PerlMagick/demo/*.pl
+		emake -C PerlMagick  DESTDIR="${D}" install || die "emake perl install failed"
+		fixlocalpod
+	fi
+	use doc || rm -rf "${D}"usr/share/doc/${PF}/html
 }
 
 pkg_postinst() {
