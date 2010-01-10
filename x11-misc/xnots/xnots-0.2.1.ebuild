@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/xnots-0.2.1.ebuild,v 1.1 2009/01/13 00:58:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/xnots-0.2.1.ebuild,v 1.2 2010/01/10 08:18:52 robbat2 Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! linux_chkconfig_present INOTIFY; then
+	if ! linux_config_exists || ! linux_chkconfig_present INOTIFY; then
 		ewarn "Your kernel is compiled without INOTIFY support."
 		ewarn "xNots requires INOTIFY support to run."
 		ewarn "Please enable CONFIG_INOTIFY in your kernel config."

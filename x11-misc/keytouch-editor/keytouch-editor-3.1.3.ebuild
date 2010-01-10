@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/keytouch-editor-3.1.3.ebuild,v 1.3 2008/07/21 20:25:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/keytouch-editor-3.1.3.ebuild,v 1.4 2010/01/10 08:18:01 robbat2 Exp $
 
 inherit eutils linux-info
 
@@ -41,7 +41,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! linux_chkconfig_present INPUT_EVDEV ; then
+	if ! linux_config_exists || ! linux_chkconfig_present INPUT_EVDEV; then
 		ewarn "To use ${PN}, CONFIG_INPUT_EVDEV must"
 		ewarn "be enabled in your kernel config."
 		ewarn
