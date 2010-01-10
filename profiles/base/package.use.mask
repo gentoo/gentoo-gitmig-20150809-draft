@@ -1,9 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.119 2010/01/07 18:10:56 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.120 2010/01/10 01:59:44 darkside Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Jeremy Olexa <darkside@gentoo.org> (10 Jan 2010)
+# Upsteam doesn't support ioctl backend and neither does Gentoo. ioctl USE flag
+# will eventually be removed unless the backend is re-written by upstream. bug
+# 299674
+>net-misc/wicd-1.6.2.2 ioctl
 
 # Andrey Grozin <grozin@gentoo.org> (7 Jan 2010)
 # gcl is, unfortunately, masked
