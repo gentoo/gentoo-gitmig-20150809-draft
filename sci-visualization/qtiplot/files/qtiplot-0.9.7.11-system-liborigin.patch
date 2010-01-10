@@ -1,0 +1,44 @@
+--- qtiplot/qtiplot.pro	2010-01-06 18:38:38 +0000
++++ qtiplot/qtiplot.pro	2010-01-06 18:40:20 +0000
+@@ -10,7 +10,6 @@
+ 
+ # local copy included
+ INCLUDEPATH       += ../3rdparty/qwtplot3d/include
+-INCLUDEPATH       += ../3rdparty/liborigin
+ INCLUDEPATH       += ../3rdparty/zlib
+ 
+ # configurable
+@@ -18,12 +17,14 @@
+ INCLUDEPATH       += $$QWT_INCLUDEPATH
+ INCLUDEPATH       += $$GSL_INCLUDEPATH
+ INCLUDEPATH       += $$BOOST_INCLUDEPATH
++INCLUDEPATH       += $$LIB_ORIGIN_INCLUDEPATH
+ 
+ # configurable libs
+ LIBS         += $$MUPARSER_LIBS
+ LIBS         += $$QWT_LIBS
+ LIBS         += $$GSL_LIBS
+ LIBS         += $$BOOST_LIBS
++LIBS         += $$LIB_ORIGIN_LIBS
+ 
+ #############################################################################
+ ###################### BASIC PROJECT PROPERTIES #############################
+
+--- qtiplot/src/origin/origin.pri	2010-01-06 10:51:53 +0000
++++ qtiplot/src/origin/origin.pri	2010-01-06 18:18:58 +0000
+@@ -4,14 +4,5 @@
+ INCLUDEPATH += src/origin/
+ 
+ HEADERS += src/origin/importOPJ.h
+-HEADERS += ../3rdparty/liborigin/OriginObj.h
+-HEADERS += ../3rdparty/liborigin/OriginFile.h
+-HEADERS += ../3rdparty/liborigin/OriginParser.h
+-HEADERS += ../3rdparty/liborigin/OriginDefaultParser.h
+-HEADERS += ../3rdparty/liborigin/Origin750Parser.h
+ 
+ SOURCES += src/origin/importOPJ.cpp
+-SOURCES += ../3rdparty/liborigin/OriginFile.cpp
+-SOURCES += ../3rdparty/liborigin/OriginParser.cpp
+-SOURCES += ../3rdparty/liborigin/OriginDefaultParser.cpp
+-SOURCES += ../3rdparty/liborigin/Origin750Parser.cpp
+

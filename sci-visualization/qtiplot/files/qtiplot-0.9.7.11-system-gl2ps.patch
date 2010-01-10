@@ -1,0 +1,63 @@
+--- 3rdparty/qwtplot3d/qwtplot3d.pri	2010-01-06 10:51:53 +0000
++++ 3rdparty/qwtplot3d/qwtplot3d.pri	2010-01-06 18:18:19 +0000
+@@ -57,11 +57,11 @@
+            ../3rdparty/qwtplot3d/include/qwt3d_multiplot.h
+ 
+ # gl2ps support
+-HEADERS += ../3rdparty/qwtplot3d/3rdparty/gl2ps/gl2ps.h \
+-         ../3rdparty/qwtplot3d/include/qwt3d_io_gl2ps.h
+-
+-SOURCES += ../3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp \
+-         ../3rdparty/qwtplot3d/3rdparty/gl2ps/gl2ps.c
++HEADERS += ../3rdparty/qwtplot3d/include/qwt3d_io_gl2ps.h
++
++SOURCES += ../3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp
++
++LIBS+=-lgl2ps
+ 
+ # zlib support for gl2ps
+ zlib {
+
+--- 3rdparty/qwtplot3d/qwtplot3d.pro	2010-01-06 10:51:53 +0000
++++ 3rdparty/qwtplot3d/qwtplot3d.pro	2010-01-06 18:18:19 +0000
+@@ -82,11 +82,11 @@
+            include/qwt3d_multiplot.h
+ 
+ # gl2ps support
+-HEADERS+=3rdparty/gl2ps/gl2ps.h \
+-         include/qwt3d_io_gl2ps.h
++HEADERS+=include/qwt3d_io_gl2ps.h
+          
+-SOURCES+=src/qwt3d_io_gl2ps.cpp \
+-         3rdparty/gl2ps/gl2ps.c
++SOURCES+=src/qwt3d_io_gl2ps.cpp
++
++LIBS+=-lgl2ps
+ 
+ # zlib support for gl2ps
+ zlib {
+
+--- 3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp	2010-01-06 10:51:53 +0000
++++ 3rdparty/qwtplot3d/src/qwt3d_io_gl2ps.cpp	2010-01-06 18:32:28 +0000
+@@ -6,7 +6,7 @@
+ #include <locale.h>
+ 
+ #include "qwt3d_openglhelper.h"
+-#include "../3rdparty/gl2ps/gl2ps.h"
++#include <gl2ps.h>
+ #include "qwt3d_io_gl2ps.h"
+ #include "qwt3d_plot.h"
+ 
+
+--- 3rdparty/qwtplot3d/src/qwt3d_label.cpp	2010-01-06 10:51:53 +0000
++++ 3rdparty/qwtplot3d/src/qwt3d_label.cpp	2010-01-06 18:33:52 +0000
+@@ -1,7 +1,7 @@
+ #include <qbitmap.h>
+ #include "qwt3d_label.h"
+ #include "qwt3d_plot.h"
+-#include "../3rdparty/gl2ps/gl2ps.h"
++#include <gl2ps.h>
+ 
+ using namespace Qwt3D;
+ 
+

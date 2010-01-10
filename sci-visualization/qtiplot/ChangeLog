@@ -1,6 +1,23 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.49 2010/01/09 08:45:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.50 2010/01/10 07:46:14 pva Exp $
+
+*qtiplot-0.9.7.11-r1 (10 Jan 2010)
+
+  10 Jan 2010; Peter Volkov <pva@gentoo.org>
+  -files/qtiplot-0.9.7.10-sip2.patch, -qtiplot-0.9.7.11.ebuild,
+  +qtiplot-0.9.7.11-r1.ebuild, -files/qtiplot-0.9.7.11-build.conf.patch,
+  -files/qtiplot-0.9.7.11-docbuild.patch,
+  -files/qtiplot-0.9.7.11-dont-install-qwt.patch,
+  -files/qtiplot-0.9.7.11-gl2ps.patch,
+  -files/qtiplot-0.9.7.11-qtiplot.pro.patch,
+  -files/qtiplot-0.9.7.11-sip48.patch,
+  -files/qtiplot-0.9.7.11-syslibs.patch,
+  +files/qtiplot-0.9.7.11-system-QTeXEngine.patch,
+  +files/qtiplot-0.9.7.11-system-gl2ps.patch,
+  +files/qtiplot-0.9.7.11-system-liborigin.patch:
+  Revision bump: dropped USE bindist, see bug #199451; python USE flag back;
+  Fixed path to manual (no need for elog), fixed installation of languages.
 
 *qtiplot-0.9.7.11 (09 Jan 2010)
 
