@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.128 2009/11/22 17:34:52 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.129 2010/01/10 06:13:21 vapier Exp $
+
+  10 Jan 2010; Mike Frysinger <vapier@gentoo.org> grub-1.97.1.ebuild,
+  grub-9999.ebuild:
+  Only build grub-mkfont when USE=truetype #275654 by Cameron Tacklind.
 
   22 Nov 2009; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
   Switch from svn to bzr repo #294001 by Robin Kauffman.
