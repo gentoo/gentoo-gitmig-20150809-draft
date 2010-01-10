@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.16 2009/11/22 17:34:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.17 2010/01/10 06:09:56 vapier Exp $
 
-inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
+inherit mount-boot eutils flag-o-matic toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub"
-	inherit bzr
+	inherit autotools bzr
 	SRC_URI=""
 else
 	SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
@@ -41,8 +41,10 @@ src_unpack() {
 	epatch_user
 
 	# autogen.sh does more than just run autotools
-	sed -i -e 's:^auto:eauto:' autogen.sh
-	(. ./autogen.sh) || die
+	if [[ ${PV} == "9999" ]] ; then
+		sed -i -e '/^\(auto\|ac\)/s:^:e:' autogen.sh
+		(. ./autogen.sh) || die
+	fi
 }
 
 src_compile() {
