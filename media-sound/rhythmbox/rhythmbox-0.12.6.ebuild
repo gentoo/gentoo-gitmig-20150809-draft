@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.6.ebuild,v 1.1 2009/12/10 22:43:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.6.ebuild,v 1.2 2010/01/11 14:29:33 mrpouet Exp $
 
 EAPI="2"
 
@@ -66,10 +66,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-plugins/gst-plugins-cdio-0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-taglib-0.10.6
-	nsplugin? ( || (
-		net-libs/xulrunner
-		www-client/seamonkey
-		www-client/mozilla-firefox ) )"
+	nsplugin? ( net-libs/xulrunner )"
 
 # gtk-doc-am needed for eautoreconf
 #	dev-util/gtk-doc-am
