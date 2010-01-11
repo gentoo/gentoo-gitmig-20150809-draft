@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.8.2-r1.ebuild,v 1.3 2009/11/10 17:33:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.8.2-r1.ebuild,v 1.4 2010/01/11 17:37:55 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -52,8 +52,6 @@ src_compile() {
 }
 
 src_install() {
-	python_need_rebuild
-
 	python_execute_function -d -s
 
 	dodoc ChangeLog NEWS || die

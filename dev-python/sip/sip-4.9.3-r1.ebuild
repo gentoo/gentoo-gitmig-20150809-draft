@@ -1,11 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.9.3-r1.ebuild,v 1.1 2009/12/20 10:53:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.9.3-r1.ebuild,v 1.2 2010/01/11 17:37:55 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit python toolchain-funcs eutils
+inherit eutils python toolchain-funcs
 
 MY_P=${P/_pre/-snapshot-}
 
@@ -47,14 +48,8 @@ src_configure() {
 	python_execute_function -s configuration
 }
 
-src_compile() {
-	python_execute_function -d -s
-}
-
 src_install() {
-	python_need_rebuild
-
-	python_execute_function -d -s
+	python_src_install
 
 	dodoc ChangeLog NEWS || die
 
