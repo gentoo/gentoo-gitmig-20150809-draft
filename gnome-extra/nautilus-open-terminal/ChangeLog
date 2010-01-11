@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/nautilus-open-terminal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.44 2009/12/26 16:53:16 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.45 2010/01/11 21:58:57 eva Exp $
+
+*nautilus-open-terminal-0.18 (11 Jan 2010)
+
+  11 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -nautilus-open-terminal-0.9.ebuild, -nautilus-open-terminal-0.9-r2.ebuild,
+  -nautilus-open-terminal-0.13.ebuild, -nautilus-open-terminal-0.16.ebuild,
+  +nautilus-open-terminal-0.18.ebuild:
+  Version bump. Small fixes and translation updates. Drop *.la files since
+  nautilus does not use it. Remove old revisions.
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   nautilus-open-terminal-0.17.ebuild:
