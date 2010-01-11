@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.73 2010/01/11 21:59:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.74 2010/01/11 22:38:57 jer Exp $
+
+  11 Jan 2010; Jeroen Roovers <jer@gentoo.org> pari-2.3.4-r1.ebuild:
+  Reintroduce CC so for instance distcc will not say "...gcc is
+  /usr/lib/distcc/bin/gcc" and quit.
 
   11 Jan 2010; Brent Baude <ranger@gentoo.org> pari-2.3.4-r1.ebuild:
   stable ppc64, bug 289327
