@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5179 2010/01/11 00:14:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5180 2010/01/11 03:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -565,6 +565,7 @@ app-text/texlive:graphics - Add support for several graphics packages (pgf, tikz
 app-text/texlive:humanities - Add LaTeX support for the humanities (dev-texlive/texlive-humanities)
 app-text/texlive:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/texlive:latex3 - Add support for LaTeX3 (dev-texlive/texlive-latex3)
+app-text/texlive:luatex - Add extra support for luatex
 app-text/texlive:music - Add support for music typesetting (dev-texlive/texlive-music)
 app-text/texlive:omega - Add omega packages (dev-texlive/texlive-omega)
 app-text/texlive:pstricks - Add pstricks packages (dev-texlive/texlive-pstricks)
