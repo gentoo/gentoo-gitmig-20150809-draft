@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.314 2010/01/11 02:20:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.315 2010/01/11 03:33:31 vapier Exp $
+
+*openssl-1.0.0_beta4 (11 Jan 2010)
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  +openssl-1.0.0_beta4.ebuild:
+  Add testing version #269482 by Daniel Black.
 
   11 Jan 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8l-r2.ebuild:
   Drop gcc-3 flag munging, add -fno-strict-aliasing for everyone, and use
