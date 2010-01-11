@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-web-photo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.1 2009/08/05 10:36:11 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.2 2010/01/11 13:53:45 mrpouet Exp $
+
+  11 Jan 2010; Romain Perier <mrpouet@gentoo.org>
+  gnome-web-photo-0.8.ebuild:
+  Drop seamonkey dep necessary for seamonkey p.mask removal, and drop
+  firefox dep since only xulrunner must be used for xul apps, bug 300446.
 
 *gnome-web-photo-0.8 (05 Aug 2009)
 

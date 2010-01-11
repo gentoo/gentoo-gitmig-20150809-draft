@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.8.ebuild,v 1.1 2009/08/05 10:36:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.8.ebuild,v 1.2 2010/01/11 13:53:45 mrpouet Exp $
 
 inherit gnome2
 
@@ -19,9 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 		media-libs/libpng
 		gnome-base/gconf
 		jpeg? ( media-libs/jpeg )
-		|| ( www-client/mozilla-firefox
-			net-libs/xulrunner
-			www-client/seamonkey )"
+		net-libs/xulrunner"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"
 
