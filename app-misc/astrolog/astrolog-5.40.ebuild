@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.13 2010/01/01 17:56:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.14 2010/01/11 16:41:19 bicatali Exp $
+
+EAPI=2
+
+inherit toolchain-funcs
 
 DESCRIPTION="A many featured astrology chart calculation program"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"
@@ -8,19 +12,23 @@ SRC_URI="http://www.astrolog.org/ftp/ast54unx.shr"
 
 LICENSE="astrolog"
 SLOT="0"
-KEYWORDS="x86 ppc64 ppc amd64"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="X"
 
 DEPEND="X? ( x11-libs/libX11 )"
+RDEPEND="${DEPEND}"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
-	bash "${DISTDIR}"/ast54unx.shr
-	cd "${S}"
+	sh "${DISTDIR}"/ast54unx.shr
+}
 
-	# remove stripping of created binary and substituce CFLAGS
-	sed -i -e "s:strip:#strip:" -e "s:= -O:= ${CFLAGS}:" Makefile
+src_prepare() {
+	# remove stripping of created binary, dump hardcoded CFLAGS,
+	# respect CC (bug #243606), and CFLAGS (bug #240057)
+	sed -i -e 's:strip:#strip:' -e 's:^CFLAGS = :#CFLAGS = :' \
+		-e 's:\tcc :\t$(CC) $(CFLAGS) :' Makefile
 
 	# we use /usr/share/astrolog for config and (optional) ephemeris-data-files
 	sed -i -e "s:~/astrolog:/usr/share/astrolog:g" astrolog.h
@@ -39,7 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
