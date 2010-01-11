@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/apachetop
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.43 2008/02/23 20:26:07 hollow Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.44 2010/01/11 08:15:27 hollow Exp $
+
+*apachetop-0.12.6-r1 (11 Jan 2010)
+
+  11 Jan 2010; Benedikt Böhm <hollow@gentoo.org>
+  +apachetop-0.12.6-r1.ebuild, +files/apachetop-0.12.6-maxpathlen.patch:
+  fix buffer overflow wrt #287332
 
   23 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
   +files/apachetop-0.12.6-configure.patch, -files/CAN-2005-2660.patch,
