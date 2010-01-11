@@ -1,10 +1,10 @@
 # ChangeLog for virtual/gnustep-back
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.30 2010/01/11 10:59:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.31 2010/01/11 11:03:14 ulm Exp $
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> gnustep-back-0.14.0.ebuild,
   gnustep-back-0.16.0.ebuild:
-  Set empty HOMEPAGE and LICENSE.
+  Set empty HOMEPAGE and LICENSE. Add missing IUSE.
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> gnustep-back-0.14.0.ebuild,
   gnustep-back-0.16.0.ebuild:
