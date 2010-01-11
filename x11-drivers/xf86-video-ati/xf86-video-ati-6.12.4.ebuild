@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.4.ebuild,v 1.6 2009/12/15 19:28:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.4.ebuild,v 1.7 2010/01/11 15:14:18 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -21,7 +21,6 @@ SRC_URI="${SRC_URI}
 RDEPEND=">=x11-base/xorg-server-1.2[-minimal]"
 DEPEND="${RDEPEND}
 	>=x11-libs/libdrm-2
-	>=x11-misc/util-macros-1.1.3
 	x11-proto/fontsproto
 	x11-proto/glproto
 	x11-proto/randrproto
@@ -33,8 +32,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 "
 CONFIGURE_OPTIONS="--enable-dri"
-
-#PATCHES=""
 
 src_prepare() {
 	x-modular_src_prepare
@@ -54,6 +51,4 @@ pkg_postinst() {
 	ewarn "xf86-video-mach64 and xf86-video-r128. If these weren't installed"
 	ewarn "automatically by xorg-server and you have one of these cards,"
 	ewarn "check your VIDEO_CARDS settings."
-	ebeep
-	epause
 }
