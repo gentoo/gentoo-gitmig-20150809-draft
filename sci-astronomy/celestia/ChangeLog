@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.59 2009/12/26 18:04:39 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.60 2010/01/11 22:13:49 ranger Exp $
+
+  11 Jan 2010; Brent Baude <ranger@gentoo.org> celestia-1.6.0.ebuild:
+  stable ppc64, bug 292956
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> celestia-1.6.0.ebuild:
   sparc stable wrt #292956
