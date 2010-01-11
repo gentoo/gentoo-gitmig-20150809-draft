@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.15 2009/11/10 20:21:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.16 2010/01/11 17:39:11 abcd Exp $
 
 EAPI=2
-ARTS_REQUIRED=never
-inherit eutils qt3 kde games
+inherit eutils qt3 games
 
 DESCRIPTION="An implementation of the classical chinese game Mah Jongg with 3D OpenGL graphics"
 HOMEPAGE="http://www.reto-schoelly.de/mahjongg3d/"
@@ -40,11 +39,6 @@ src_prepare() {
 
 src_configure() {
 	eqmake3 mahjongg3d.pro
-}
-
-src_compile() {
-	kde_src_compile none
-	emake || die "emake failed"
 }
 
 src_install () {
