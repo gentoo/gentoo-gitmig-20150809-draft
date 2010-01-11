@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.64 2010/01/10 18:48:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.65 2010/01/11 17:00:46 matsuu Exp $
+
+*canna-3.7_p3-r2 (11 Jan 2010)
+
+  11 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> +canna-3.7_p3-r2.ebuild:
+  Added locale elog, bug #300055. Added CC, CFLAGS and LDFLAGS.
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> canna-3.7_p3-r1.ebuild:
   ppc stable #297441
