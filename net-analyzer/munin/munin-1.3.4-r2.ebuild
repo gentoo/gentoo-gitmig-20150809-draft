@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.8 2009/10/10 15:05:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.9 2010/01/11 07:41:55 hollow Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ DEPEND_COM="dev-lang/perl
 			postgres? ( dev-perl/DBD-Pg virtual/postgresql-base )
 			irc? ( dev-perl/Net-IRC )
 			dev-perl/DateManip
+			dev-perl/Net-CIDR
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
 			dev-perl/libwww-perl
