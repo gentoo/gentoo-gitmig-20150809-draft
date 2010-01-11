@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9-r1.ebuild,v 1.5 2009/11/11 00:09:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9-r1.ebuild,v 1.6 2010/01/11 17:23:07 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
@@ -21,11 +21,9 @@ RDEPEND=">=x11-libs/libsexy-${PV}
 	>=dev-python/pygtk-2.6.2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
-	python_need_rebuild
-	python_execute_function -d -s
+	python_src_install
 	dodoc AUTHORS ChangeLog NEWS README
 }
