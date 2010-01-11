@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.43 2010/01/03 14:50:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.44 2010/01/11 18:09:30 graaff Exp $
+
+  11 Jan 2010; Hans de Graaff <graaff@gentoo.org>
+  mdbtools-0.6_pre2-r1.ebuild, +files/mdbtools-0.6_pre2-parallel-make.patch:
+  Fix parallel make issue #253584. Patch by Nico Roeser.
 
 *mdbtools-0.6_pre2-r1 (03 Jan 2010)
 

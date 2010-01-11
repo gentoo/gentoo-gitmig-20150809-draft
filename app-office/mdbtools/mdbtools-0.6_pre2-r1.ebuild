@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r1.ebuild,v 1.1 2010/01/03 14:50:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r1.ebuild,v 1.2 2010/01/11 18:09:30 graaff Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.7"
@@ -35,6 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc34.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-haveiconv-fix.patch
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
 
 	# This is necessary since the upstream tarball was created with a
 	# buggy libtool, and the .so suffix in library names is lost in
@@ -53,7 +54,7 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 	dodoc COPYING* NEWS README* TODO AUTHORS HACKING ChangeLog
 
 	# add a compat symlink (gmdb2 is not compiled if gnome USE flag is disabled)
