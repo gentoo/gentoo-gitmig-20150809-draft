@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5181 2010/01/11 08:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5182 2010/01/11 10:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2328,12 +2328,13 @@ net-irc/bip:oidentd - Enable oidentd support
 net-irc/ezbounce:boost - Compile against dev-libs/boost libraries
 net-irc/inspircd:openssl - Build dev-libs/openssl module
 net-irc/ircd-hybrid:contrib - Build contrib modules (eg. cloaking)
-net-irc/kvirc:dcc_voice - Support voice over DCC chats
-net-irc/kvirc:ipc - add support for IPC between kvirc processes
-net-irc/kvirc:phonon - use phonon instead of command-based sound
-net-irc/kvirc:qt-dbus - enable use of Qt's DBUS interface for IPC
-net-irc/kvirc:qt-webkit - enable use of Qt's WebKit
-net-irc/kvirc:transparency - compile in fake-transparency
+net-irc/kvirc:dcc_video - Support video connections over DCC protocol
+net-irc/kvirc:dcc_voice - Support voice connections over DCC protocol
+net-irc/kvirc:ipc - Support inter-process communication between KVIrc processes
+net-irc/kvirc:phonon - Support Phonon for audio output
+net-irc/kvirc:qt-dbus - Support Qt-DBus
+net-irc/kvirc:qt-webkit - Support Qt-WebKit
+net-irc/kvirc:transparency - Support pseudo-transparency
 net-irc/ngircd:ident - Enables support for net-libs/libident
 net-irc/psybnc:multinetwork - Adds support for multiple networks
 net-irc/psybnc:oidentd - Adds support for oidentd
