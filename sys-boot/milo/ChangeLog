@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/milo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/ChangeLog,v 1.7 2007/12/25 16:06:58 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/ChangeLog,v 1.8 2010/01/11 18:00:31 armin76 Exp $
+
+  11 Jan 2010; Raúl Porcel <armin76@gentoo.org> milo-2.4.18.ebuild:
+  Remove functions from ccc.eclass as its going to be removed
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471.
