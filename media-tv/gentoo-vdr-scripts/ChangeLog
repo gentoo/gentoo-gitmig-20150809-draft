@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.102 2009/12/28 13:10:01 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.103 2010/01/11 20:21:37 zzam Exp $
+
+  11 Jan 2010; Matthias Schwarzott <zzam@gentoo.org>
+  gentoo-vdr-scripts-0.4.6-r1.ebuild:
+  Added ~amd64 keyword.
 
 *gentoo-vdr-scripts-0.4.6-r1 (28 Dec 2009)
 
