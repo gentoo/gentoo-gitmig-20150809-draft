@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.6 2010/01/09 21:53:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.7 2010/01/11 13:08:58 fauli Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://mupen64plus.googlecode.com/files/${MY_P}.tar.gz mirror://gentoo/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+gtk libsamplerate lirc qt4 sse"
 
 # GTK+ is currently required by plugins even if no GUI support is enabled
