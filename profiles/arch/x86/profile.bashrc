@@ -1,7 +1,7 @@
 if [[ ${EBUILD_PHASE} == "setup" ]] ; then
 
 	# on x86, -pg requires the frame pointer, so turning it off makes no sense
-	if hasq profile ${IUSE} && \
+	if hasq profile ${IUSE} && useq profile && \
 	   hasq -fomit-frame-pointer ${CFLAGS} ${CXXFLAGS}
 	then
 		eerror "\nUSE=profile and -fomit-frame-pointer make no sense"
