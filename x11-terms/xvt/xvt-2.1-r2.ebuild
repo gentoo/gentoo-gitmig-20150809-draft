@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r2.ebuild,v 1.1 2009/09/04 13:59:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r2.ebuild,v 1.2 2010/01/11 17:58:35 armin76 Exp $
 
 EAPI="2"
 
-inherit ccc eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A tiny vt100 terminal emulator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/xvt-1.0.README"
