@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.5 2010/01/11 16:14:27 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.6 2010/01/11 18:57:19 fuzzyray Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -49,8 +49,8 @@ src_install() {
 	fperms 0700 /var/cache/revdep-rebuild
 
 	# Can distutils handle this?
-	dosym-$(PYTHON --ABI -f) eclean /usr/bin/eclean-dist
-	dosym-$(PYTHON --ABI -f) eclean /usr/bin/eclean-pkg
+	dosym eclean-$(PYTHON --ABI -f) /usr/bin/eclean-dist
+	dosym eclean-$(PYTHON --ABI -f) /usr/bin/eclean-pkg
 }
 
 pkg_postinst() {
