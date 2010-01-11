@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Name
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.7 2009/12/02 09:43:19 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.8 2010/01/11 20:17:58 grobian Exp $
+
+  11 Jan 2010; Fabian Groffen <grobian@gentoo.org> Sub-Name-0.04.ebuild:
+  Transfer Prefix keywords
 
   02 Dec 2009; Torsten Veller <tove@gentoo.org> Sub-Name-0.04.ebuild:
   Stable on amd64 and x86 (#293622)

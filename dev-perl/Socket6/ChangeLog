@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.32 2009/06/29 23:35:59 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.33 2010/01/11 20:12:26 grobian Exp $
+
+  11 Jan 2010; Fabian Groffen <grobian@gentoo.org> Socket6-0.23.ebuild:
+  Transfer Prefix keywords
 
   29 Jun 2009; Jeroen Roovers <jer@gentoo.org> Socket6-0.20.ebuild:
   Stable for HPPA too.
