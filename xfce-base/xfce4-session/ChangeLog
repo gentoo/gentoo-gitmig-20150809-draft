@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-session
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.101 2009/10/24 12:04:51 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.102 2010/01/11 04:17:34 vapier Exp $
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  xfce4-session-4.6.1.ebuild, xfce4-session-4.6.1-r1.ebuild:
+  Drop -fomit-frame-pointer filter for USE=profile.
 
   24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-session-4.6.1-r1.ebuild:

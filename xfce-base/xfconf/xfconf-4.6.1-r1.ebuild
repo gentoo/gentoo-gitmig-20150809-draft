@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1-r1.ebuild,v 1.1 2009/12/26 04:01:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1-r1.ebuild,v 1.2 2010/01/11 04:19:45 vapier Exp $
 
 EAPI=2
-inherit flag-o-matic xfconf
+inherit xfconf
 
 DESCRIPTION="Xfce configuration daemon and utilities"
 HOMEPAGE="http://www.xfce.org"
@@ -35,11 +35,6 @@ pkg_setup() {
 		$(use_enable debug checks)"
 	use profile && XFCONF="${XFCONF} --enable-profiling"
 	DOCS="AUTHORS ChangeLog NEWS TODO"
-}
-
-src_configure() {
-	use profile && filter-flags -fomit-frame-pointer
-	xfconf_src_configure
 }
 
 src_compile() {
