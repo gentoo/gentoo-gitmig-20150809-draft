@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.55 2009/10/31 14:20:19 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.56 2010/01/11 16:49:22 arfrever Exp $
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild:
+  Don't call python_need_rebuild() (bug #300523).
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org> dbus-python-0.83.0-r1.ebuild:
   Marking dbus-python-0.83.0-r1 ppc64 for bug 287548
