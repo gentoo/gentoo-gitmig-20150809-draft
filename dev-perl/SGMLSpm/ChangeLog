@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.33 2008/08/23 15:55:05 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.34 2010/01/11 19:27:11 grobian Exp $
+
+  11 Jan 2010; Fabian Groffen <grobian@gentoo.org> SGMLSpm-1.03-r6.ebuild:
+  Transfer Prefix keywords
 
 *SGMLSpm-1.03-r6 (23 Aug 2008)
 
