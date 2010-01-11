@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.0.ebuild,v 1.2 2010/01/05 04:43:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.0.ebuild,v 1.3 2010/01/11 22:46:20 eva Exp $
 
 EAPI="2"
 
-inherit gnome2 eutils autotools
+inherit gnome2
 
 DESCRIPTION="A nautilus extension for sending files to locations"
 HOMEPAGE="http://www.gnome.org"
@@ -63,12 +63,6 @@ src_prepare() {
 
 	# FIXME: skip evolution, it does not build properly
 	sed 's/evolution//g' -i Makefile.{am,in} || die "sed failed"
-
-	# Fix plugin versioning for pidgin plugin
-	epatch "${FILESDIR}/${PN}-1.1.5-pidgin-plugin-versioning.patch"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
 }
 
 pkg_postinst() {
