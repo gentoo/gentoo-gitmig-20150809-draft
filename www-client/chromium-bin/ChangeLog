@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.50 2010/01/11 16:52:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.51 2010/01/11 23:04:44 voyageur Exp $
+
+  11 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-bin-4.0.295.0_p35884.ebuild:
+  Sync deps with -9999 ebuild, as these new builds use more external
+  libraries
 
 *chromium-bin-4.0.295.0_p35884 (11 Jan 2010)
 
