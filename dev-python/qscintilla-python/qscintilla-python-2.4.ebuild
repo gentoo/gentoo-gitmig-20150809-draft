@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.16 2010/01/06 21:11:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.17 2010/01/11 17:17:00 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils multilib python toolchain-funcs
@@ -50,10 +51,4 @@ src_compile() {
 		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)"
 	}
 	python_execute_function -s building
-}
-
-src_install() {
-	python_need_rebuild
-
-	python_execute_function -d -s
 }

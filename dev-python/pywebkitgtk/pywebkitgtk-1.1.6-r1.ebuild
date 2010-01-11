@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.6-r1.ebuild,v 1.4 2009/12/10 19:29:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.6-r1.ebuild,v 1.5 2010/01/11 17:13:05 arfrever Exp $
 
 EAPI="2"
 
@@ -40,8 +40,6 @@ src_prepare() {
 }
 
 src_install() {
-	python_need_rebuild
-
 	python_execute_function -d -s
 
 	# Fix importing of webkit (bug #283271).

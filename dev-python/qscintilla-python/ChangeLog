@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.48 2010/01/06 21:11:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.49 2010/01/11 17:17:00 arfrever Exp $
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  qscintilla-python-2.4.ebuild:
+  Don't call python_need_rebuild().
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> qscintilla-python-2.4.ebuild:
   Marking qscintilla-python-2.4 ppc64 for bug 284707
