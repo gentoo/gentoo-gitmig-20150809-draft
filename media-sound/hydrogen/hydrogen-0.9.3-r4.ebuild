@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.10 2009/12/27 09:34:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.11 2010/01/11 18:50:00 abcd Exp $
 
 EAPI=2
 
-inherit eutils kde-functions autotools multilib
+inherit eutils autotools multilib
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://www.hydrogen-music.org/"
@@ -18,6 +18,7 @@ IUSE="alsa debug doc +flac jack ladspa oss"
 RDEPEND="dev-libs/libxml2
 	media-libs/libsndfile
 	media-libs/audiofile
+	x11-libs/qt:3
 	flac? ( media-libs/flac[cxx] )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -26,12 +27,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-sgml-utils )
 	dev-util/pkgconfig"
 
-need-qt 3
-
 src_prepare() {
 	if use ppc; then
 		cd "${S}/src"
-		epatch "${FILESDIR}/0.9.1-OSS.patch" || die "patching failed"
+		epatch "${FILESDIR}/0.9.1-OSS.patch"
 	fi
 	cd "${S}"
 
@@ -60,16 +59,14 @@ src_configure() {
 	# export PORTMIDIPATH="/usr"
 
 	# Disable portaudio v18 support wrt #222841
-	local myconf="$(use_enable jack jack-support) \
-			--disable-portaudio \
-			$(use_enable alsa) \
-			$(use_enable debug) \
-			$(use_enable flac flac_support) \
-			$(use_enable ladspa) \
-			$(use_enable ladspa lrdf-support) \
-			$(use_enable oss oss-support)"
-
-	econf ${myconf} || die "Failed configuring hydrogen!"
+	econf $(use_enable jack jack-support) \
+		--disable-portaudio \
+		$(use_enable alsa) \
+		$(use_enable debug) \
+		$(use_enable flac flac_support) \
+		$(use_enable ladspa) \
+		$(use_enable ladspa lrdf-support) \
+		$(use_enable oss oss-support)
 }
 
 src_compile() {

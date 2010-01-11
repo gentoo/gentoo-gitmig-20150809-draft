@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.88 2010/01/07 19:43:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.89 2010/01/11 18:50:00 abcd Exp $
+
+  11 Jan 2010; Jonathan Callen <abcd@gentoo.org> hydrogen-0.9.3-r4.ebuild:
+  Remove usage of kde-functions.eclass; clean up ebuild a bit
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> hydrogen-0.9.4.ebuild:
   Marking hydrogen-0.9.4 ppc for bug 298363
