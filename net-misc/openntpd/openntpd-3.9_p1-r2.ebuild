@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r2.ebuild,v 1.1 2009/10/14 08:04:18 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r2.ebuild,v 1.2 2010/01/11 00:21:22 flameeyes Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ IUSE="ssl selinux"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )
-	!<=net-misc/ntp-4.2.0-r2"
+	!<=net-misc/ntp-4.2.0-r2
+	!net-misc/ntp[-openntpd]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -29,10 +30,6 @@ pkg_setup() {
 
 	#make sure user has correct HOME
 	usermod -d /var/lib/openntpd/chroot ntp
-
-	if has_version net-misc/ntp && ! built_with_use net-misc/ntp openntpd ; then
-		die "you need to emerge ntp with USE=openntpd"
-	fi
 }
 
 src_prepare() {
