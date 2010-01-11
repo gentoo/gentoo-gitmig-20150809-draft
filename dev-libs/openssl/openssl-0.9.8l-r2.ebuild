@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.5 2010/01/11 02:18:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.6 2010/01/11 02:20:56 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -53,13 +53,10 @@ src_unpack() {
 		&& sed -i '/^install:/s:install_docs::' Makefile.org \
 		|| sed -i '/^MANDIR=/s:=.*:=/usr/share/man:' Makefile.org
 
-	# Try to derice users and work around broken ass toolchains
-	if [[ $(gcc-major-version) == "3" ]] ; then
-		filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
-		[[ $(tc-arch) == "ppc64" ]] && replace-flags -O? -O
-	fi
-	[[ $(tc-arch) == ppc* ]] && append-flags -fno-strict-aliasing
+	append-flags -fno-strict-aliasing
 	append-flags -Wa,--noexecstack
+	# show the actual commands in the log
+	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
 
 	# using a library directory other than lib requires some magic
 	sed -i \
