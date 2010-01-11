@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.150 2009/12/31 16:41:07 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.151 2010/01/11 17:31:49 armin76 Exp $
+
+  11 Jan 2010; Raúl Porcel <armin76@gentoo.org> eselect-1.2.8.ebuild:
+  alpha/arm/ia64/m68k/s390/sh stable wrt #297496
 
   31 Dec 2009; Ulrich Mueller <ulm@gentoo.org> eselect-1.2.9.ebuild:
   Inherit bash-completion.eclass, bug 299051.
