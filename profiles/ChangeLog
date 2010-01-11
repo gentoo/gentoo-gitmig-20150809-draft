@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3771 2010/01/10 23:51:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3772 2010/01/11 01:52:53 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Add mask entry for TeX Live 2009
 
   10 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking net-misc/gfax for QA removal.
