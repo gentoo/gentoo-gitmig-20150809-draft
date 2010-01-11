@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.12 2009/07/22 14:04:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.13 2010/01/11 07:53:52 hollow Exp $
+
+EAPI="2"
 
 inherit apache-module perl-module eutils multilib
 
@@ -16,7 +18,11 @@ SLOT="1"
 DEPEND=">=dev-perl/Apache-Test-1.27
 	>=virtual/perl-CGI-3.08
 	>=virtual/perl-IO-Compress-1.09
-	!=www-servers/apache-2.2.11-r1"
+	!=www-servers/apache-2.2.11-r1
+	|| (
+		( www-servers/apache[threads] dev-lang/perl[ithreads] )
+		( www-servers/apache[-threads] dev-lang/perl[-ithreads] )
+	)"
 RDEPEND="${DEPEND}"
 PDEPEND="dev-perl/Apache-Reload"
 
@@ -28,14 +34,7 @@ DOCFILES="Changes INSTALL LICENSE README STATUS"
 
 need_apache2
 
-pkg_setup() {
-	has_apache_threads_in dev-lang/perl ithreads
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# I am not entirely happy with this solution, but here's what's
 	# going on here if someone wants to take a stab at another
 	# approach.  When userpriv compilation is off, then the make
@@ -73,7 +72,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/CVE-2009-0796.patch
 }
 
-src_compile() {
+src_configure() {
 	perl Makefile.PL \
 		PREFIX="${D}"/usr \
 		MP_TRACE=1 \
@@ -81,7 +80,9 @@ src_compile() {
 		MP_USE_DSO=1 \
 		MP_APXS=${APXS}  \
 		INSTALLDIRS=vendor </dev/null || die
+}
 
+src_compile() {
 	# reported that parallel make is broken in bug 30257
 	emake -j1 || die
 }

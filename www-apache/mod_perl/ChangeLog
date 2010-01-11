@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.83 2009/09/18 14:05:07 hollow Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.84 2010/01/11 07:53:52 hollow Exp $
+
+  11 Jan 2010; Benedikt Böhm <hollow@gentoo.org> mod_perl-2.0.4-r1.ebuild:
+  convert to EAPI2 wrt #296219
 
   18 Sep 2009; Benedikt Böhm <hollow@gentoo.org> -mod_perl-2.0.3-r2.ebuild,
   -mod_perl-2.0.4.ebuild, -files/RegistryCooker.patch:
