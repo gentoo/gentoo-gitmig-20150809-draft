@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.42 2010/01/10 22:17:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.43 2010/01/11 17:02:49 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -29,7 +29,7 @@
 WANT_CMAKE="${WANT_CMAKE:-always}"
 CMAKEDEPEND=""
 case ${WANT_CMAKE} in
-	    always)
+		always)
 			;;
 		*)
 			IUSE+=" ${WANT_CMAKE}"
