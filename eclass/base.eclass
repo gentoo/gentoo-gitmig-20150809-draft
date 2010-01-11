@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.41 2010/01/11 16:57:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.42 2010/01/11 17:23:04 scarabeus Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -23,24 +23,28 @@ esac
 EXPORT_FUNCTIONS ${BASE_EXPF}
 
 # @ECLASS-VARIABLE: DOCS
-# @USAGE: DOCS=( "${S}/doc/document.txt" "${S}/doc/doc_folder/" )
 # @DESCRIPTION:
 # Array containing documents passed to dodoc command.
+#
+# DOCS=( "${S}/doc/document.txt" "${S}/doc/doc_folder/" )
 
 # @ECLASS-VARIABLE: HTML_DOCS
-# @USAGE: HTML_DOCS=( "${S}/doc/document.html" "${S}/doc/html_folder/" )
 # @DESCRIPTION:
 # Array containing documents passed to dohtml command.
+#
+# HTML_DOCS=( "${S}/doc/document.html" "${S}/doc/html_folder/" )
 
 # @ECLASS-VARIABLE: PATCHES
-# @USAGE: PATCHES=( "${FILESDIR}/mypatch.patch" "${FILESDIR}/patches_folder/" )
 # @DESCRIPTION:
 # PATCHES array variable containing all various patches to be applied.
 # This variable is expected to be defined in global scope of ebuild.
 # Make sure to specify the full path. This variable is utilised in
 # src_unpack/src_prepare phase based on EAPI.
+#
 # NOTE: if using patches folders with special file suffixes you have to
 # define one additional variable EPATCH_SUFFIX="something"
+#
+# PATCHES=( "${FILESDIR}/mypatch.patch" "${FILESDIR}/patches_folder/" )
 
 
 # @FUNCTION: base_src_unpack
@@ -103,7 +107,8 @@ base_src_prepare() {
 # @FUNCTION: base_src_configure
 # @DESCRIPTION:
 # The base src_configure function, which is exported when
-# EAPI is greater or equal to 2. Runs basic econf.
+# EAPI is greater or equal to 2. Runs basic econf. Here the PATCHES array is
+# evaluated.
 base_src_configure() {
 	debug-print-function $FUNCNAME "$@"
 
