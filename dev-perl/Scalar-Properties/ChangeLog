@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Scalar-Properties
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-Properties/ChangeLog,v 1.13 2008/08/02 11:14:39 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-Properties/ChangeLog,v 1.14 2010/01/11 19:37:01 grobian Exp $
+
+  11 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Scalar-Properties-0.13.ebuild:
+  Transfer Prefix keywords
 
 *Scalar-Properties-0.13 (02 Aug 2008)
 
