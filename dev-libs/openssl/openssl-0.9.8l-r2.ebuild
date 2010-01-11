@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.7 2010/01/11 03:30:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.8 2010/01/11 03:32:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -57,6 +57,7 @@ src_unpack() {
 	append-flags -Wa,--noexecstack
 	# show the actual commands in the log
 	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
+	sed -i '/^MAKEDEPPROG/s:=.*:=$(CC):' Makefile.org
 
 	# using a library directory other than lib requires some magic
 	sed -i \
