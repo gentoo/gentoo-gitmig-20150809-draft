@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.4 2010/01/11 02:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.5 2010/01/11 02:18:54 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -153,6 +153,8 @@ src_install() {
 		[[ ${m} == openssl.1* ]] && continue
 		[[ -n $(find -L ${d} -type l) ]] && die "erp, broken links already!"
 		mv ${d}/{,ssl-}${m}
+		# fix up references to renamed man pages
+		sed -i '/^[.]SH "SEE ALSO"/,/^[.]/s:\([^(, ]*(1)\):ssl-\1:g' ${d}/ssl-${m}
 		ln -s ssl-${m} ${d}/openssl-${m}
 		# locate any symlinks that point to this man page ... we assume
 		# that any broken links are due to the above renaming

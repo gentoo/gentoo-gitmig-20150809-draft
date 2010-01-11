@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.312 2010/01/11 02:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.313 2010/01/11 02:18:54 vapier Exp $
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8l-r2.ebuild:
+  Handle renamed man pages in SEE ALSO #287783 by Guido Winkelmann.
 
   11 Jan 2010; Mike Frysinger <vapier@gentoo.org>
   files/openssl-0.9.8h-ldflags.patch, openssl-0.9.8l-r2.ebuild:
