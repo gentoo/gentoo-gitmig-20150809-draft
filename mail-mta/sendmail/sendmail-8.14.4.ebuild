@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.4.ebuild,v 1.2 2010/01/10 12:04:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.4.ebuild,v 1.3 2010/01/11 16:02:27 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="ssl ldap sasl tcpd mbox mailwrapper ipv6 nis sockets"
 
 DEPEND="net-mail/mailbase
