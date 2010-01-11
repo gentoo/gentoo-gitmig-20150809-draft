@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/texlive-luatex-2009.ebuild,v 1.1 2010/01/11 03:31:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/texlive-luatex-2009.ebuild,v 1.2 2010/01/11 14:04:54 fauli Exp $
 
 TEXLIVE_MODULE_CONTENTS="luainputenc luamplib luaotfload luatextra collection-luatex
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive LuaTeX packages"
 
 LICENSE="GPL-2 as-is public-domain "
 SLOT="0"
-KEYWORDS="~amd64 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 >=dev-tex/luatex-0.45

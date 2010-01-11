@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langlatvian
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.1 2010/01/11 03:25:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.2 2010/01/11 14:03:36 fauli Exp $
+
+  11 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  texlive-langlatvian-2009.ebuild:
+  ~x86 added, bug 300526
 
 *texlive-langlatvian-2009 (11 Jan 2010)
 
