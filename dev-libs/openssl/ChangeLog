@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.309 2009/11/27 22:00:12 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.310 2010/01/11 00:45:43 vapier Exp $
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8l-r2.ebuild:
+  Link in gmp when USE=gmp #276557 by Justin Lecher.
 
 *openssl-0.9.8l-r2 (27 Nov 2009)
 

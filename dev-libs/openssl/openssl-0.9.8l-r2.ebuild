@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.1 2009/11/27 22:00:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.2 2010/01/11 00:45:43 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -104,7 +104,7 @@ src_compile() {
 		enable-mdc2 \
 		$(use_ssl !bindist rc5) \
 		enable-tlsext \
-		$(use_ssl gmp) \
+		$(use_ssl gmp gmp -lgmp) \
 		$(use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
 		$(use_ssl zlib) \
 		--prefix=/usr \
