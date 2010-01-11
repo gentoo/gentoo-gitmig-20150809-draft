@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.310 2010/01/11 00:45:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.311 2010/01/11 00:46:43 vapier Exp $
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8l-r2.ebuild,
+  files/openssl-0.9.8e-bsd-sparc64.patch:
+  Update the bsd-sparc patch to apply again.
 
   11 Jan 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8l-r2.ebuild:
   Link in gmp when USE=gmp #276557 by Justin Lecher.

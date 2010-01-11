@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.2 2010/01/11 00:45:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8l-r2.ebuild,v 1.3 2010/01/11 00:46:43 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,14 +27,13 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
-	#Forward port of the -b patch. Parallel make fails though.
 	epatch "${FILESDIR}"/${PN}-0.9.8j-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8k-toolchain.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8b-doc-updates.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-makedepend.patch #149583
 	epatch "${FILESDIR}"/${PN}-0.9.8e-make.patch #146316
-	#epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
+	epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8g-sslv3-no-tlsext.patch
 	#epatch "${FILESDIR}"/${PN}-0.9.8h-ldflags.patch #181438
 	epatch "${FILESDIR}"/${PN}-0.9.8l-CVE-2009-137{7,8,9}.patch #270305
