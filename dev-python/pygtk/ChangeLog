@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.224 2009/10/11 10:42:20 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.225 2010/01/11 16:59:58 arfrever Exp $
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygtk-2.14.1-r2.ebuild, pygtk-2.16.0.ebuild, pygtk-2.16.0-r1.ebuild:
+  Don't call python_need_rebuild().
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pygtk-2.16.0-r1.ebuild:
   Merge from Prefix

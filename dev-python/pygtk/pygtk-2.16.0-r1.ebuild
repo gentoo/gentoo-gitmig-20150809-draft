@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.2 2009/10/11 10:42:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.3 2010/01/11 16:59:58 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,8 +30,7 @@ DEPEND="${RDEPEND}
 		dev-libs/libxslt
 		>=app-text/docbook-xsl-stylesheets-1.70.1 )
 	>=dev-util/pkgconfig-0.9"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
 	# Fix declaration of codegen in .pc
@@ -88,7 +87,6 @@ src_test() {
 }
 
 pkg_postinst() {
-	python_need_rebuild
 	python_mod_optimize gtk-2.0
 
 	create_symlinks() {
