@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.1 2009/12/27 14:04:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.2 2010/01/11 17:07:12 arfrever Exp $
 
 EAPI=2
-SUPPORT_PYTHON_ABIS="1"
+
 inherit python flag-o-matic
 
 MY_P="PyQwt-${PV}"
