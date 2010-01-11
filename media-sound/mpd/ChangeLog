@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.194 2009/12/21 14:46:39 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.195 2010/01/11 04:15:56 vapier Exp $
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org> mpd-0.15.ebuild,
+  mpd-0.15.3.ebuild, mpd-0.15.5.ebuild, mpd-0.15.6.ebuild:
+  Drop -fomit-frame-pointer filter for USE=profile.
 
   21 Dec 2009; Christoph Mende <angelos@gentoo.org> mpd-0.15.6.ebuild,
   +files/mpd-0.15.6-wavpack-uchar.patch:

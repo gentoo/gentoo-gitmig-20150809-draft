@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.6.ebuild,v 1.2 2009/12/21 14:46:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.6.ebuild,v 1.3 2010/01/11 04:15:56 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -66,8 +66,6 @@ src_prepare() {
 }
 
 src_configure() {
-	use profile && filter-flags -fomit-frame-pointer
-
 	local mpdconf="--enable-tcp --enable-un --disable-wildmidi
 		--disable-libOggFLACtest --disable-documentation"
 
