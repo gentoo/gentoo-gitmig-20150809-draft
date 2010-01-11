@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xboard
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.24 2009/12/31 14:24:09 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.25 2010/01/11 17:34:52 armin76 Exp $
+
+  11 Jan 2010; Raúl Porcel <armin76@gentoo.org> xboard-4.2.7-r1.ebuild,
+  xboard-4.4.1.ebuild, xboard-4.4.2.ebuild:
+  Drop alpha keyword
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> xboard-4.4.1.ebuild:
   Marking xboard-4.4.1 ppc64 for bug 295707
