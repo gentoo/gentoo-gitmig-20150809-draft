@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.25 2010/01/10 15:51:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.26 2010/01/11 19:19:35 ulm Exp $
 
 # GLEP-0023
 # http://www.gentoo.org/proj/en/glep/glep-0023.html
@@ -25,12 +25,12 @@ FSF-APPROVED-OTHER Arphic CCPL-Attribution-2.0 CCPL-Attribution-ShareAlike-2.0 D
 
 # Licenses for free documents, following the definition at
 # http://freedomdefined.org/
-FREE-DOCUMENTS @FSF-APPROVED-OTHER CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 CC-PD BitstreamVera myspell-en_CA-KevinAtkinson
+FREE-DOCUMENTS @FSF-APPROVED-OTHER BitstreamVera CC-PD CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 man-pages-posix myspell-en_CA-KevinAtkinson
 
 # Collection of all licenses with the freedom to use, share, modify and share modifications
 FREE @FREE-SOFTWARE @FREE-DOCUMENTS
 
-EULA BCS Broadcom dlj-1.1 DOOM3 ETQW ETQW IBM-J1.4 IBM-J1.5 IBM-J1.6 Introversion jrockit Livestation-EULA LOKI-EULA LOKI-EULA LOKI-EULA LOKI-EULA LRCTF MARBLEBLAST Nero-EULA-US Pando-EULA POMPOM POMPOM postal2 PUEL Q3AEULA QUAKE4 RTCW RTCW-ETEULA skype-eula sun-bcla-java-vm sun-prerelease-jdk6 sun-prerelease-jdk7 THINKTANKS ut2003 ut2003 ut2003-demo
+EULA BCS Broadcom dlj-1.1 DOOM3 ETQW IBM-J1.4 IBM-J1.5 IBM-J1.6 Introversion jrockit Livestation-EULA LOKI-EULA LRCTF MARBLEBLAST Nero-EULA-US Pando-EULA POMPOM postal2 PUEL Q3AEULA QUAKE4 RTCW RTCW-ETEULA skype-eula sun-bcla-java-vm sun-prerelease-jdk6 sun-prerelease-jdk7 THINKTANKS ut2003 ut2003-demo
 
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
@@ -42,4 +42,4 @@ EULA BCS Broadcom dlj-1.1 DOOM3 ETQW ETQW IBM-J1.4 IBM-J1.5 IBM-J1.6 Introversio
 # - IFF there is an explicit inclusion requirement, USE=bindist
 #   MUST cause a copy of the license to be installed in a file
 #   location compliant with the license,
-BINARY-REDISTRIBUTABLE @FSF-APPROVED @GPL-COMPATIBLE @OSI-APPROVED NVIDIA qlogic-fibre-channel-firmware intel-psb Intel atheros-hal adobe-ps ipw2100-fw ipw2200-fw ralink-firmware Adaptec
+BINARY-REDISTRIBUTABLE @FREE Adaptec adobe-ps atheros-hal Intel intel-psb ipw2100-fw ipw2200-fw NVIDIA qlogic-fibre-channel-firmware ralink-firmware

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3774 2010/01/11 10:20:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3775 2010/01/11 19:19:35 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Add man-pages-posix to FREE-DOCUMENTS. Remove duplicate entries from EULA.
+  Replace expanded groups in BINARY-REDISTRIBUTABLE by @FREE.
 
   11 Jan 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   g-ctan works again because upstream provides historic archives
