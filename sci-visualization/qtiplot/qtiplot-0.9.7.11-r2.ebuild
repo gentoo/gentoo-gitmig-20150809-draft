@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.11-r1.ebuild,v 1.2 2010/01/10 23:04:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.11-r2.ebuild,v 1.1 2010/01/11 19:13:52 pva Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -104,7 +104,7 @@ src_prepare() {
 		echo "QUAZIP_LIBS = -lquazip" >> build.conf
 	fi
 
-	# Fails to build...
+	# Fails to build... 
 	#if use emf; then
 	#	echo "EMF_ENGINE_INCLUDEPATH = /usr/include/libEMF" >> build.conf
 	#	echo "EMF_ENGINE_LIBS = -lEMF" >> build.conf
@@ -118,7 +118,6 @@ src_prepare() {
 
 	sed -e '/INSTALLS.*documentation/d' \
 		-e '/INSTALLS.*manual/d' \
-		-e 's:\(^RESOURCES.*manual/html/icons.*\):#\1:' \
 			-i qtiplot/qtiplot.pro || die
 	sed -e '/manual/d' -i qtiplot.pro || die
 
@@ -142,6 +141,7 @@ src_prepare() {
 }
 
 src_configure() {
+	use amd64 && export QMAKESPEC="linux-g++-64"
 	eqmake4
 }
 
