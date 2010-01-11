@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.23 2009/10/23 19:02:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.24 2010/01/11 10:36:41 arfrever Exp $
 
 EAPI="2"
 
-inherit cmake-utils multilib subversion
+inherit cmake-utils multilib python subversion
 
 DESCRIPTION="Advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
@@ -15,13 +15,19 @@ ESVN_PROJECT="kvirc"
 LICENSE="kvirc"
 SLOT="4"
 KEYWORDS=""
-IUSE="audiofile +crypt +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl +transparency"
+IUSE="audiofile +crypt dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl theora +transparency"
 
 RDEPEND="
+	>=dev-libs/crypto++-5.6.0-r1
 	sys-libs/zlib
+	x11-libs/libX11
 	>=x11-libs/qt-core-4.5
 	>=x11-libs/qt-gui-4.5
 	>=x11-libs/qt-sql-4.5
+	dcc_video? (
+		media-libs/libv4l
+		theora? ( media-libs/libogg media-libs/libtheora )
+	)
 	kde? ( >=kde-base/kdelibs-4 )
 	oss? ( audiofile? ( media-libs/audiofile ) )
 	perl? ( dev-lang/perl )
@@ -32,6 +38,8 @@ RDEPEND="
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.4
+	dev-util/pkgconfig
+	x11-proto/scrnsaverproto
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
@@ -42,6 +50,14 @@ DOCS="ChangeLog TODO"
 pkg_setup() {
 	if use audiofile && ! use oss; then
 		die "USE=\"audiofile\" requires USE=\"oss\""
+	fi
+
+	if use theora && ! use dcc_video; then
+		die "USE=\"theora\" requires USE=\"dcc_video\""
+	fi
+
+	if use python; then
+		python_set_active_version 2
 	fi
 }
 
@@ -61,8 +77,10 @@ src_configure() {
 		-DMANUAL_REVISION=${VERSIO_PRAESENS}
 		-DUSE_ENV_FLAGS=1
 		-DVERBOSE=1
+		-DWANT_NO_EMBEDDED_CODE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
 		$(cmake-utils_use_want crypt CRYPT)
+		$(cmake-utils_use_want dcc_video DCC_VIDEO)
 		$(cmake-utils_use_want dcc_voice DCC_VOICE)
 		$(cmake-utils_use_want debug DEBUG)
 		$(cmake-utils_use_want doc DOXYGEN)
@@ -79,15 +97,8 @@ src_configure() {
 		$(cmake-utils_use_want qt-dbus QTDBUS)
 		$(cmake-utils_use_want qt-webkit QTWEBKIT)
 		$(cmake-utils_use_want ssl OPENSSL)
+		$(cmake-utils_use_want theora OGG_THEORA)
 		$(cmake-utils_use_want transparency TRANSPARENCY)"
 
 	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	mv "${D}"usr/share/man/man1/kvirc.1 "${D}"usr/share/man/man1/kvirc4.1 || die "mv kvirc.1 failed"
-
-	elog "In order to keep KVIrc 4 and KVIrc3 working both side-by-side"
-	elog "man page for ${P} is under \"man kvirc4\""
 }
