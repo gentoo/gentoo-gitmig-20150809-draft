@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/configobj
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.16 2009/11/08 19:56:00 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.17 2010/01/11 09:15:19 arfrever Exp $
+
+*configobj-4.7.0 (11 Jan 2010)
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +configobj-4.7.0.ebuild:
+  Version bump.
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> configobj-4.6.0.ebuild:
   ppc stable #290607
