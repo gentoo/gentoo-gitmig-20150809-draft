@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.31 2009/12/14 19:44:15 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.32 2010/01/11 17:27:35 scarabeus Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -490,9 +490,9 @@ _change_cmakelists_parent_dirs() {
 	done
 }
 
-# FIXME: add description
 # @FUNCTION: kde4-meta_change_cmakelists
 # @DESCRIPTION:
+# Adjust CMakeLists.txt to comply to our splitting.
 kde4-meta_change_cmakelists() {
 	debug-print-function ${FUNCNAME} "$@"
 
