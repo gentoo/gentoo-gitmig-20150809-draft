@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r7.ebuild,v 1.10 2009/05/13 12:30:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r7.ebuild,v 1.11 2010/01/11 18:00:37 armin76 Exp $
 
-inherit flag-o-matic ccc eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.openbsd.org/faq/faq8.html#SKey"
@@ -117,3 +117,4 @@ pkg_postinst() {
 	elog "For an introduction into using s/key authentication, take"
 	elog "a look at the EXAMPLES section from the skey(1) manpage."
 }
+
