@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.87 2009/12/29 21:50:57 nirbheek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.88 2010/01/11 16:56:25 arfrever Exp $
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygobject-2.18.0-r2.ebuild, pygobject-2.20.0.ebuild:
+  Don't call python_need_rebuild() (bug #300587).
 
   29 Dec 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   pygobject-2.18.0.ebuild, pygobject-2.18.0-r2.ebuild,
