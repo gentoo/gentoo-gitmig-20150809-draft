@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>net-irc</herd>
-  <maintainer>
-    <email>arfrever@gentoo.org</email>
-    <name>Arfrever Frehtes Taifersar Arahesis</name>
-  </maintainer>
-  <use>
-    <flag name="dcc_voice">Support voice over DCC chats</flag>
-    <flag name="ipc">add support for IPC between kvirc processes</flag>
-    <flag name="phonon">use phonon instead of command-based sound</flag>
-    <flag name="qt-dbus">enable use of Qt's DBUS interface for IPC</flag>
-    <flag name="qt-webkit">enable use of Qt's WebKit</flag>
-    <flag name="transparency">compile in fake-transparency</flag>
-  </use>
+	<herd>net-irc</herd>
+	<maintainer>
+		<email>arfrever@gentoo.org</email>
+		<name>Arfrever Frehtes Taifersar Arahesis</name>
+	</maintainer>
+	<use>
+		<flag name="dcc_video">Support video connections over DCC protocol</flag>
+		<flag name="dcc_voice">Support voice connections over DCC protocol</flag>
+		<flag name="ipc">Support inter-process communication between KVIrc processes</flag>
+		<flag name="phonon">Support Phonon for audio output</flag>
+		<flag name="qt-dbus">Support Qt-DBus</flag>
+		<flag name="qt-webkit">Support Qt-WebKit</flag>
+		<flag name="transparency">Support pseudo-transparency</flag>
+	</use>
 </pkgmetadata>
