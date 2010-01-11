@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/gnat-4.1.ebuild,v 1.5 2007/05/27 18:13:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/gnat-4.1.ebuild,v 1.6 2010/01/11 10:59:29 ulm Exp $
 
 DESCRIPTION="Virtual for the gnat compiler selection"
-HOMEPAGE="http://www.gentoo.org/proj/en/glep/glep-0037.html"
+HOMEPAGE=""
 SRC_URI=""
-LICENSE="GMGPL"
+LICENSE=""
 SLOT="4.1"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""

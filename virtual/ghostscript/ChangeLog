@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ghostscript
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ChangeLog,v 1.10 2009/12/26 17:20:00 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ghostscript/ChangeLog,v 1.11 2010/01/11 10:58:17 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> ghostscript-0.ebuild:
+  Set empty HOMEPAGE and LICENSE.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> ghostscript-0.ebuild:
   app-text/ghostscript-gnu no longer in the tree.

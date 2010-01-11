@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jdk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.24 2009/12/15 19:47:05 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.25 2010/01/11 11:03:08 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> jdk-1.4.1.ebuild,
+  jdk-1.4.2.ebuild, jdk-1.5.0.ebuild, jdk-1.6.0.ebuild:
+  Set empty HOMEPAGE and LICENSE.
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> jdk-1.4.2.ebuild,
   jdk-1.5.0.ebuild, jdk-1.6.0.ebuild:

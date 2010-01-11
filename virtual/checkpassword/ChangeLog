@@ -1,6 +1,9 @@
 # ChangeLog for virtual/checkpassword
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.1 2007/09/16 12:48:33 hollow Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.2 2010/01/11 10:56:34 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> checkpassword-0.ebuild:
+  Set empty HOMEPAGE and LICENSE.
 
 *checkpassword-0 (16 Sep 2007)
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-basic
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.5 2008/07/08 15:51:18 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.6 2010/01/11 11:00:30 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> httpd-basic-0.ebuild:
+  Set empty HOMEPAGE and LICENSE.
 
   08 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org> httpd-basic-0.ebuild:
   clean out old, removed packages

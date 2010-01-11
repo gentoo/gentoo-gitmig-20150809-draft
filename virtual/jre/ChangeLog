@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jre
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.25 2009/12/15 19:47:44 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.26 2010/01/11 11:03:47 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> jre-1.4.1.ebuild,
+  jre-1.4.2.ebuild, jre-1.5.0.ebuild, jre-1.6.0.ebuild:
+  Set empty HOMEPAGE and LICENSE.
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> jre-1.4.2.ebuild,
   jre-1.5.0.ebuild, jre-1.6.0.ebuild:

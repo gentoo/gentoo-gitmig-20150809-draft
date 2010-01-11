@@ -1,6 +1,11 @@
 # ChangeLog for virtual/poppler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.26 2009/12/15 19:47:33 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.27 2010/01/11 11:09:37 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> poppler-0.8.7.ebuild,
+  poppler-0.10.4.ebuild, poppler-0.10.5.ebuild, poppler-0.10.6.ebuild,
+  poppler-0.10.7.ebuild, poppler-0.12.0.ebuild, poppler-0.12.1.ebuild:
+  Set empty HOMEPAGE and LICENSE.
 
   15 Dec 2009; Jonathan Callen <abcd@gentoo.org> poppler-0.10.5.ebuild,
   poppler-0.10.6.ebuild, poppler-0.12.0.ebuild, poppler-0.12.1.ebuild:
