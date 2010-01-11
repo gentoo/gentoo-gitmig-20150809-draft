@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gcdemu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.7 2009/10/23 18:35:27 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.8 2010/01/11 21:19:58 pva Exp $
+
+  11 Jan 2010; Peter Volkov <pva@gentoo.org> gcdemu-1.2.0.ebuild:
+  Updated deps for dev-python/gnome-python-desktop, bug #292967, thank Morse
+  for report.
 
 *gcdemu-1.2.0 (23 Oct 2009)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.2.0.ebuild,v 1.1 2009/10/23 18:35:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.2.0.ebuild,v 1.2 2010/01/11 21:19:58 pva Exp $
 
 inherit gnome2
 
@@ -17,7 +17,8 @@ COMMON_DEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygtk-2.6
 	>=dev-python/pygobject-2.6
 	>=dev-python/gnome-python-2.6
-	>=dev-python/gnome-python-desktop-2.6
+	>=dev-python/libgnome-python-2.6
+	>=dev-python/gnome-applets-python-2.6
 	>=dev-python/dbus-python-0.71
 	>=app-cdr/cdemud-1.0.0"
 DEPEND="${COMMON_DEPEND}
