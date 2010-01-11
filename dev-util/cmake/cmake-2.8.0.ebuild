@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0.ebuild,v 1.2 2009/11/29 18:01:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0.ebuild,v 1.3 2010/01/11 01:25:08 abcd Exp $
 
 EAPI="2"
 
-inherit elisp-common toolchain-funcs eutils versionator flag-o-matic cmake-utils
+inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils
 
 MY_P="${PN}-$(replace_version_separator 3 - ${MY_PV})"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cmake.org/"
 SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${MY_P}.tar.gz"
 
 LICENSE="CMake"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE="emacs qt4 vim-syntax"
 
@@ -46,13 +46,28 @@ S="${WORKDIR}/${MY_P}"
 CMAKE_IN_SOURCE_BUILD=1
 
 PATCHES=(
-	"${FILESDIR}/${PN}-FindPythonLibs.patch"
-	"${FILESDIR}/${PN}-FindPythonInterp.patch"
+	"${FILESDIR}"/${PN}-FindPythonLibs.patch
+	"${FILESDIR}"/${PN}-FindPythonInterp.patch
+	"${FILESDIR}"/${PN}-2.6.0-interix.patch
+	"${FILESDIR}"/${P}-more-no_host_paths.patch
+	"${FILESDIR}"/${PN}-2.6.3-darwin-bundle.patch
+	"${FILESDIR}"/${PN}-2.6.3-no-duplicates-in-rpath.patch
+	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
 )
 
-src_configure() {
-	local qt_arg par_arg
+src_prepare() {
+	base_src_prepare
 
+	use prefix || EPREFIX=
+
+	# Add gcc libs to the default link paths
+	sed -i \
+		-e "s|@GENTOO_PORTAGE_GCCLIBDIR@|${EPREFIX}/usr/${CHOST}/lib|g" \
+		-e "s|@GENTOO_PORTAGE_EPREFIX@|${EPREFIX}/|g" \
+		Modules/Platform/{UnixPaths,Darwin}.cmake || die "sed failed"
+}
+
+src_configure() {
 	if [[ "$(gcc-major-version)" -eq "3" ]] ; then
 		append-flags "-fno-stack-protector"
 	fi
@@ -61,13 +76,11 @@ src_configure() {
 	has_version ">=dev-util/cmake-2.6.1" || bootstrap=1
 	if [[ ${bootstrap} = 0 ]]; then
 		# Required version of CMake found, now test if it works
-		cmake --version &> /dev/null
-		if ! [[ $? = 0 ]]; then
-			bootstrap=1
-		fi
+		cmake --version &> /dev/null || bootstrap=1
 	fi
 
 	if [[ ${bootstrap} = 1 ]]; then
+		local qt_arg par_arg
 		tc-export CC CXX LD
 
 		if use qt4; then
@@ -86,22 +99,24 @@ src_configure() {
 
 		./bootstrap \
 			--system-libs \
-			--prefix=/usr \
+			--prefix="${EPREFIX}"/usr \
 			--docdir=/share/doc/${PF} \
 			--datadir=/share/${PN} \
 			--mandir=/share/man \
 			"$qt_arg" \
 			"$par_arg" || die "./bootstrap failed"
 	else
-		# this is way much faster so we should preffer it if some cmake is
+		# this is way much faster so we should prefer it if some cmake is
 		# around.
-		use qt4 && qt_arg="ON" || qt_arg="OFF"
-		mycmakeargs="-DCMAKE_USE_SYSTEM_LIBRARIES=ON
+		local mycmakeargs=(
+			-DCMAKE_USE_SYSTEM_LIBRARIES=ON
+			-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
 			-DCMAKE_DOC_DIR=/share/doc/${PF}
 			-DCMAKE_MAN_DIR=/share/man
 			-DCMAKE_DATA_DIR=/share/${PN}
 			-DBUILD_CursesDialog=ON
-			-DBUILD_QtDialog=${qt_arg}"
+			$(cmake-utils_use_build qt4 QtDialog)
+		)
 		cmake-utils_src_configure
 	fi
 }
@@ -125,10 +140,10 @@ src_install() {
 	fi
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
-		doins "${S}"/Docs/cmake-syntax.vim
+		doins Docs/cmake-syntax.vim
 
 		insinto /usr/share/vim/vimfiles/indent
-		doins "${S}"/Docs/cmake-indent.vim
+		doins Docs/cmake-indent.vim
 
 		insinto /usr/share/vim/vimfiles/ftdetect
 		doins "${FILESDIR}/${VIMFILE}"

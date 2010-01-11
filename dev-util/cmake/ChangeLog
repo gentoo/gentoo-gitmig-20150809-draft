@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cmake
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.123 2009/12/05 06:46:00 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.124 2010/01/11 01:25:08 abcd Exp $
+
+  11 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  +files/cmake-2.6.0-interix.patch, +files/cmake-2.6.3-darwin-bundle.patch,
+  +files/cmake-2.6.3-fix_broken_lfs_on_aix.patch,
+  +files/cmake-2.6.3-no-duplicates-in-rpath.patch, cmake-2.8.0.ebuild,
+  +files/cmake-2.8.0-more-no_host_paths.patch:
+  Add prefix keywords, patches
 
   05 Dec 2009; Jonathan Callen <abcd@gentoo.org> -cmake-2.6.4.ebuild,
   -cmake-2.6.4-r1.ebuild:
