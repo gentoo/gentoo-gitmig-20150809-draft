@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.208 2009/12/22 15:40:26 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.209 2010/01/11 04:19:50 vapier Exp $
+
+  11 Jan 2010; Mike Frysinger <vapier@gentoo.org> wireshark-1.2.3.ebuild,
+  wireshark-1.2.4.ebuild, wireshark-1.2.5.ebuild:
+  Drop -fomit-frame-pointer filter for USE=profile.
 
   22 Dec 2009; Jeroen Roovers <jer@gentoo.org> wireshark-1.2.5.ebuild:
   Stable for PPC (bug #297388).

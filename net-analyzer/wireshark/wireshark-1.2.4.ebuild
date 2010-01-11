@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.4.ebuild,v 1.1 2009/11/17 13:43:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.4.ebuild,v 1.2 2010/01/11 04:19:50 vapier Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -87,9 +87,8 @@ src_configure() {
 	# our hardened toolchain bug
 	filter-flags -fstack-protector
 
-	# profile and -fomit-frame-pointer or pie are incompatible #215806, #292991
+	# profile and pie are incompatible #215806, #292991
 	if use profile; then
-		filter-flags -fomit-frame-pointer
 		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
 		append-flags $(test-flags-CC -nopie)
 	fi
