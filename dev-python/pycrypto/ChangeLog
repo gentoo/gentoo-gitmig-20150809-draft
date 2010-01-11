@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.84 2010/01/01 14:19:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.85 2010/01/11 16:53:06 arfrever Exp $
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycrypto-2.0.1-r8.ebuild:
+  Don't call python_need_rebuild().
 
   01 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
   pycrypto-2.1.0_beta1.ebuild:
