@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20050715.ebuild,v 1.1 2005/07/30 12:00:28 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20050715.ebuild,v 1.2 2010/01/11 17:57:56 armin76 Exp $
 
-inherit ccc eutils flag-o-matic
+inherit eutils flag-o-matic
 
 IUSE=""
 MX_MAJ_VER=${PV%.*}
@@ -35,7 +35,6 @@ src_unpack() {
 }
 
 src_compile() {
-	is-ccc && replace-cc-hardcode
 	make EXTRAFLAGS="${CFLAGS}" || die
 }
 
