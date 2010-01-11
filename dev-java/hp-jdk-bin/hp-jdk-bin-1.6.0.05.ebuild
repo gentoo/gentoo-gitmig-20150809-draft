@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hp-jdk-bin/hp-jdk-bin-1.6.0.05.ebuild,v 1.1 2009/12/16 14:46:22 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hp-jdk-bin/hp-jdk-bin-1.6.0.05.ebuild,v 1.2 2010/01/11 16:06:20 haubi Exp $
 
 EAPI="2"
 
@@ -113,10 +113,12 @@ depot-arch() {
 }
 
 src_install() {
-	doins -r Jre*/JRE*-{COM,$(depot-arch){,-HS}}/opt || die
-	doins -r Jdk*/JDK*-{COM,$(depot-arch)}/opt       || die
-	! use doc      || doins -r Jre*/JRE*-COM-DOC/opt || die
-	! use examples || doins -r Jdk*/JDK*-DEMO/opt    || die
+	use prefix || local EPREFIX= ED=${D}
+	dodir / || die
+	cp -pR Jre*/JRE*-{COM,$(depot-arch){,-HS}}/opt "${ED}" || die
+	cp -pR Jdk*/JDK*-{COM,$(depot-arch)}/opt       "${ED}" || die
+	! use doc      || cp -pR Jre*/JRE*-COM-DOC/opt "${ED}" || die
+	! use examples || cp -pR Jdk*/JDK*-DEMO/opt    "${ED}" || die
 
 	mv "${ED}"/opt/java$(get_version_component_range 2) "${ED}"/opt/${P} || die "rename failed"
 
@@ -127,9 +129,9 @@ src_install() {
 
 	local desktop_in="${ED}/opt/${P}/jre/plugin/desktop/sun_java.desktop"
 	if [[ -f "${desktop_in}" ]]; then
-		local desktop_out="${T}/hp_jdk-${SLOT}.desktop"
+		local desktop_out="${T}/ibm_jdk-${SLOT}.desktop"
 		# install control panel for Gnome/KDE
-		sed -e "s,\(Name=\)Java,\1Java Control Panel for HP JDK/JRE ${SLOT}," \
+		sed -e "s#\(Name=\)Java#\1Java Control Panel for HP JDK/JRE ${SLOT}#" \
 			-e "s#Exec=.*#Exec=${EPREFIX}/opt/${P}/jre/bin/jcontrol#" \
 			-e "s#Icon=.*#Icon=${EPREFIX}/opt/${P}/jre/plugin/desktop/sun_java.png#" \
 			"${desktop_in}" > \
