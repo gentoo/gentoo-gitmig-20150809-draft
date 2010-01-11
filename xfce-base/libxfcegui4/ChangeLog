@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.139 2010/01/05 17:12:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.140 2010/01/11 16:23:44 darkside Exp $
+
+  11 Jan 2010; Jeremy Olexa <darkside@gentoo.org> libxfcegui4-4.6.2.ebuild:
+  Add prefix keywords, somehow I forgot to do this one a long time ago
 
 *libxfcegui4-4.6.2 (05 Jan 2010)
 
