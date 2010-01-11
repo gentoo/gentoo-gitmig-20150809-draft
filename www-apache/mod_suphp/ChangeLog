@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_suphp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.22 2009/09/17 10:16:44 hollow Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/ChangeLog,v 1.23 2010/01/11 08:01:46 hollow Exp $
+
+  11 Jan 2010; Benedikt Böhm <hollow@gentoo.org> -mod_suphp-0.6.3.ebuild,
+  files/suphp.conf:
+  fix suphp.conf wrt #289694
 
 *mod_suphp-0.7.1 (17 Sep 2009)
 
