@@ -1,6 +1,9 @@
 # ChangeLog for virtual/tdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/tdb/ChangeLog,v 1.3 2009/10/22 18:08:42 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/tdb/ChangeLog,v 1.4 2010/01/11 11:20:09 ulm Exp $
+
+  11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> tdb-1.0.0.ebuild:
+  Set empty HOMEPAGE.
 
   22 Oct 2009; Patrick Lauer <patrick@gentoo.org> tdb-1.0.0.ebuild:
   Fixing deps for #288543

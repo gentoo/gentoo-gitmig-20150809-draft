@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cdrtools/cdrtools-0.ebuild,v 1.2 2009/12/15 16:04:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/cdrtools/cdrtools-0.ebuild,v 1.3 2010/01/11 11:18:33 ulm Exp $
 
 DESCRIPTION="Virtual for command-line recorders cdrtools and cdrkit"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE=""
 SRC_URI=""
 
 LICENSE=""
