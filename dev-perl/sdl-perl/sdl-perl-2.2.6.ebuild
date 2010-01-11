@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.2.6.ebuild,v 1.4 2010/01/05 00:35:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.2.6.ebuild,v 1.5 2010/01/11 17:21:52 armin76 Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://sdl.perl.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="truetype mpeg"
 
 # Only enable this if you are confirming a bug in this module. The testsrequire
