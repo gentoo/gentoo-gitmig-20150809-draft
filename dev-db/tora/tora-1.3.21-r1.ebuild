@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.12 2009/11/11 16:47:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.21-r1.ebuild,v 1.13 2010/01/11 18:43:17 abcd Exp $
 
-inherit eutils kde-functions
+inherit eutils
 
 IUSE="oracle debug oci8-instant-client xinerama"
 DESCRIPTION="TOra - Toolkit For Oracle"
@@ -44,9 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-	set-qtdir 3
-	set-kdedir 3
-
 	# Need to fake out Qt or we'll get sandbox problems
 	REALHOME="$HOME"
 	mkdir -p "$T"/fakehome/.kde
@@ -54,28 +51,22 @@ src_compile() {
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 
-	local myconf
-	myconf="${myconf} --without-kde"
-	myconf="${myconf} $(use_with oracle)"
-	myconf="${myconf} $(use_with xinerama)"
+	econf \
+		--without-kde \
+		$(use_with oracle) \
+		$(use_with xinerama) \
+		$(use oci8-instant-client && echo --with-instant-client) \
+		--with-qt-dir=/usr/qt/3
 
-	if use oci8-instant-client; then
-		myconf="$myconf --with-instant-client"
-	fi
-
-	myconf="$myconf --with-qt-dir=/usr/qt/3"
-
-	#./configure $myconf || die "configure failed"
-	econf $myconf || die "configure failed"
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}"
+	emake -j1 install DESTDIR="${D}" || die "install failed"
 	dodoc BUGS INSTALL NEWS README TODO
 
 	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
+	doins "${FILESDIR}"/${PN}.desktop || die
 	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/${PN}.png
+	doins "${FILESDIR}"/${PN}.png || die
 }

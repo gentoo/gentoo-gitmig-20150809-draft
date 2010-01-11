@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.4 2010/01/07 18:21:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.5 2010/01/11 18:43:17 abcd Exp $
 
 EAPI=2
 
@@ -50,22 +50,21 @@ src_prepare() {
 }
 
 src_configure() {
+	local mycmakeargs=()
 	if use oracle || use oci8-instant-client ; then
-		mycmakeargs+=" -DENABLE_ORACLE=ON"
+		mycmakeargs=(-DENABLE_ORACLE=ON)
 	else
-		mycmakeargs+=" -DENABLE_ORACLE=OFF"
+		mycmakeargs=(-DENABLE_ORACLE=OFF)
 	fi
-	mycmakeargs+="
+	mycmakeargs+=(
 		-DWANT_RPM=OFF
 		-DWANT_BUNDLE=OFF
 		-DWANT_BUNDLE_STANDALONE=OFF
 		-DWANT_INTERNAL_QSCINTILLA=OFF
 		$(cmake-utils_use_enable postgres PGSQL)
 		$(cmake-utils_use_want debug)
-	"
-	# path variables
-	mycmakeargs+="
+		# path variables
 		-DTORA_DOC_DIR=share/doc/${PF}
-	"
+	)
 	cmake-utils_src_configure
 }
