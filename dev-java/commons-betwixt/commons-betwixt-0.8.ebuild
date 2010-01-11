@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.8.ebuild,v 1.4 2009/03/18 14:59:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.8.ebuild,v 1.5 2010/01/11 22:04:15 betelgeuse Exp $
 
-EAPI=1
+EAPI=2
 JAVA_PKG_IUSE="doc test source"
 
 inherit java-pkg-2 eutils java-ant-2
@@ -35,6 +35,10 @@ JAVA_ANT_REWRITE_CLASSPATH="true"
 JAVA_ANT_IGNORE_SYSTEM_CLASSES="true"
 EANT_GENTOO_CLASSPATH="commons-beanutils-1.7,commons-collections,commons-digester,commons-logging"
 EANT_BUILD_TARGET="init jar"
+
+java_prepare() {
+	epatch "${FILESDIR}/${PN}-0.8-test-dtd.patch"
+}
 
 src_test() {
 	java-pkg_jar-from --into target/lib xerces-2,junit
