@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.6 2010/01/05 22:35:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.7 2010/01/12 06:12:24 cardoe Exp $
+
+*kvm-kmod-2.6.32.3 (12 Jan 2010)
+
+  12 Jan 2010; Doug Goldstein <cardoe@gentoo.org> +kvm-kmod-2.6.32.3.ebuild:
+  version bump. fixes migration issues. fixes Windows 2008 R2
 
 *kvm-kmod-2.6.32.2 (05 Jan 2010)
 
