@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.13.1.206.ebuild,v 1.1 2010/01/12 18:30:47 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.13.1.206.ebuild,v 1.2 2010/01/12 18:38:56 billie Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE=""
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
-	sed -i -e "/^\(MANDIR=\|SBINDIR=\)/s|usr/local|/usr|" $(find ./ -name Makefile)
+	sed -i -e "/^\(MANDIR=\|SBINDIR=\)/s|/usr/local|/usr|" $(find ./ -name Makefile)
 }
 
 src_compile() {
