@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5183 2010/01/11 22:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5184 2010/01/12 10:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -143,7 +143,6 @@ app-crypt/heimdal:X -  Building X applications
 app-crypt/heimdal:berkdb -  Berkeley DB is preferred before NDBM, but if you for some reason want to use NDBM instead, you can disable this USE flag. 
 app-crypt/heimdal:hdb-ldap -  Enable support for LDAP as database backend (not suggested to use) 
 app-crypt/heimdal:ipv6 -  Enable/Disable ipv6 support. No magic here. 
-app-crypt/heimdal:ldap -  DEPRECATED (because produces circualar dependencies): global USE which enable/disable LDAP as database backend -> see 'hd-ldap' 
 app-crypt/heimdal:otp -  Enable support for one-time passwords (OTP) in some heimdal apps 
 app-crypt/heimdal:pkinit -  Enable pkinit support to get the initial ticket 
 app-crypt/heimdal:ssl -  Enable usage of openssl 
