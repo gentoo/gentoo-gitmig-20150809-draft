@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.89 2010/01/11 23:17:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.90 2010/01/12 21:49:02 yngwin Exp $
+
+*qtcurve-qt4-1.0.1-r1 (12 Jan 2010)
+
+  12 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  +qtcurve-qt4-1.0.1-r1.ebuild:
+  Add windeco useflag for more finegrained control over dependencies. Fixes
+  bug 297426. Thanks to Jesús Guerrero.
 
 *qtcurve-qt4-1.0.1 (11 Jan 2010)
 
