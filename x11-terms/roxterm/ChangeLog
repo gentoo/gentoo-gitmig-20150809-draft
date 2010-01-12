@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.34 2009/12/10 15:57:16 lack Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.35 2010/01/12 16:13:14 lack Exp $
+
+  12 Jan 2010; Jim Ramsay <lack@gentoo.org> roxterm-1.16.3.ebuild,
+  +files/roxterm-1.16.3-docdir.patch:
+  Fix documentation location (Bug #297969)
 
 *roxterm-1.16.3 (10 Dec 2009)
 

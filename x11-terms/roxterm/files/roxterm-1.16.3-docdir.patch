@@ -1,0 +1,19 @@
+diff --git a/configure.ac b/configure.ac
+index 647325d..1551c13 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -175,9 +175,12 @@ AC_DEFINE_UNQUOTED(DATA_DIR, "$dir", [datadir])
+ m4_pattern_allow(PKG_DATA_DIR)
+ AC_DEFINE_UNQUOTED([PKG_DATA_DIR], "$dir/$PACKAGE", [pkgdatadir])
+ m4_pattern_allow(PKG_DOC_DIR)
+-AC_DEFINE_UNQUOTED([PKG_DOC_DIR], "$dir/doc/$PACKAGE",
++
++expanded_docdir=`eval echo ${docdir}`
++TH_EXPAND_VARS(expanded_docdir)
++AC_DEFINE_UNQUOTED([PKG_DOC_DIR], "$expanded_docdir",
+            [Where package's documentation is installed])
+-AC_SUBST(pkgdocdir, ["$dir/doc/$PACKAGE"])
++AC_SUBST(pkgdocdir, ["$expanded_docdir"])
+ m4_pattern_allow(ICON_DIR)
+ pkgicondir="$dir/icons/hicolor/scalable/apps"
+ AC_DEFINE_UNQUOTED([ICON_DIR], "$pkgicondir", [Icon dir])

@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.16.3.ebuild,v 1.1 2009/12/10 15:57:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.16.3.ebuild,v 1.2 2010/01/12 16:13:14 lack Exp $
 
-inherit eutils
+EAPI=2
+inherit eutils autotools
 
 DESCRIPTION="A terminal emulator designed to integrate with the ROX environment"
 HOMEPAGE="http://roxterm.sourceforge.net/"
@@ -20,6 +21,15 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=gnome-base/libglade-2"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.20"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-docdir.patch"
+	eautoreconf
+}
+
+src_configure() {
+	econf --docdir="/usr/share/doc/${PF}"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
