@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libgksu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.68 2009/12/15 19:25:17 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.69 2010/01/12 12:39:33 dang Exp $
+
+*libgksu-2.0.12-r1 (12 Jan 2010)
+
+  12 Jan 2010; Daniel Gryniewicz <dang@gentoo.org>
+  +libgksu-2.0.12-r1.ebuild, +files/libgksu-2.0.12-revert-forkpty.patch:
+  Bump to libgksu-2.0.12-r1
+
+  - Don't forkpty; it can cause spurious failures. Bug #298289
+
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> libgksu-2.0.12.ebuild:
   ia64/sh/sparc stable wrt #290733
