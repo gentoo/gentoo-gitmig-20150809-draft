@@ -1,6 +1,6 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.26 2010/01/12 02:08:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.27 2010/01/12 02:10:53 jer Exp $
 
 *inn-2.5.1 (12 Jan 2010)
 
@@ -12,7 +12,7 @@
   default ones). Fix python.m4 failure because it greps LDFLAGS (which we do
   not use to pass libraries to the linker). Fix biff/comsat service test.
   Fix doexe error in doinitd. Do not enable libtool (not the upstream
-  default).
+  default). Unrestricting tests. Enable parallel make.
 
 *inn-2.4.3-r2 (08 Nov 2009)
 
