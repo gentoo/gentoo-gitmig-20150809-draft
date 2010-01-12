@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/twisted
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.120 2009/12/20 16:37:33 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.121 2010/01/12 10:49:13 arfrever Exp $
+
+*twisted-9.0.0-r1 (12 Jan 2010)
+
+  12 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +twisted-9.0.0-r1.ebuild,
+  +files/twisted-9.0.0-respect_TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE.patch:
+  Install Twisted egg-info (bug #299736). Respect
+  TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE variable, which should be set in
+  ebuilds of some other packages to avoid permission errors.
 
   20 Dec 2009; Raúl Porcel <armin76@gentoo.org> twisted-8.2.0-r2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #289680
