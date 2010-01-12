@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.ebuild,v 1.2 2010/01/09 12:56:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.ebuild,v 1.3 2010/01/12 13:11:58 patrick Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ DEPEND="snmp? ( net-analyzer/net-snmp )
 	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )
 	openipmi? ( sys-libs/openipmi )"
-RDEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
 	proxy? ( net-analyzer/fping )
 	server? ( net-analyzer/fping
 		app-admin/webapp-config )
