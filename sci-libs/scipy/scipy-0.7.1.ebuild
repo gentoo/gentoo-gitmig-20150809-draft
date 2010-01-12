@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.1.ebuild,v 1.6 2010/01/05 19:50:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.1.ebuild,v 1.7 2010/01/12 15:24:38 fauli Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -23,7 +23,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc umfpack"
 #IUSE="test umfpack"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND=">=dev-python/numpy-1.2
 	virtual/cblas
