@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.13 2010/01/06 07:59:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.14 2010/01/12 18:22:55 nixnut Exp $
+
+  12 Jan 2010; nixnut <nixnut@gentoo.org> flup-1.0.2.ebuild:
+  ppc stable #298902
 
   05 Jan 2010; <hwoarang@gentoo.org> flup-1.0.2.ebuild:
   Stable on amd64 wrt bug #298902 
