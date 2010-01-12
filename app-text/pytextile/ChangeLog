@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.21 2010/01/11 21:05:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.22 2010/01/12 19:15:00 nixnut Exp $
+
+  12 Jan 2010; nixnut <nixnut@gentoo.org> pytextile-2.1.4.ebuild:
+  ppc stable #300240
 
   11 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   pytextile-2.1.4.ebuild:
