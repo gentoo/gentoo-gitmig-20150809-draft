@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.1 2009/11/30 12:46:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.2 2010/01/12 11:08:53 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -60,7 +60,7 @@ src_install() {
 
 update_axiom_plugin_cache() {
 	einfo "Updating axiom plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugIns;from axiom import plugins; list(getPlugIns(IPlugin, plugins))'
+	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from axiom import plugins; list(getPlugins(IPlugin, plugins))'
 }
 
 pkg_postrm() {
