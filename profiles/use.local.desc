@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5184 2010/01/12 10:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5185 2010/01/12 19:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2699,7 +2699,7 @@ net-print/hplip:ppds - Use precompiled PPD files (obsolete, use cupsddk instead)
 net-print/hplip:qt4 - Enable graphical interface using Qt 4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
-net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. This is deprecated, and this USE flag is thus suggested to stay turned off
+net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file
 net-print/hplip:udev-acl - Install udev acl rules which needs sys-fs/udev with acl support
 net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
