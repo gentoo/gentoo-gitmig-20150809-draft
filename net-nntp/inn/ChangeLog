@@ -1,6 +1,18 @@
 # ChangeLog for net-nntp/inn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.25 2009/11/08 22:34:33 rich0 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.26 2010/01/12 02:08:14 jer Exp $
+
+*inn-2.5.1 (12 Jan 2010)
+
+  12 Jan 2010; Jeroen Roovers <jer@gentoo.org> inn-2.5.0.ebuild,
+  +inn-2.5.1.ebuild:
+  Version bump, and backporting to 2.5.0 fixing the following issues: Depend
+  on dev-perl/MIME-tools thanks to Raphaël Barrois (bug #298160). Fix
+  configure options (remove obsolete ones, replace changed options, add
+  default ones). Fix python.m4 failure because it greps LDFLAGS (which we do
+  not use to pass libraries to the linker). Fix biff/comsat service test.
+  Fix doexe error in doinitd. Do not enable libtool (not the upstream
+  default).
 
 *inn-2.4.3-r2 (08 Nov 2009)
 
