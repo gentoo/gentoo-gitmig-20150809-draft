@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libreplaygain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.15 2010/01/09 13:12:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.16 2010/01/12 00:47:56 abcd Exp $
+
+  12 Jan 2010; Jonathan Callen <abcd@gentoo.org> libreplaygain-458.ebuild:
+  Add ~x86-linux keyword
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> libreplaygain-458.ebuild:
   Marked ~amd64-linux (bug #300037). Fixed for and marked ~ppc-macos.
