@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0.ebuild,v 1.1 2009/11/30 03:10:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0.ebuild,v 1.2 2010/01/12 11:01:10 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,7 +32,7 @@ PYTHON_MODNAME="formless nevow"
 src_test() {
 	testing() {
 		PYTHONPATH="build-${PYTHON_ABI}/lib" trial formless || die "formless trial failed with Python ${PYTHON_ABI}"
-		PYTHONPATH="build-${PYTHON_ABI}/lib" trial nevow || die "nevow trial failed with Python ${PYTHON_ABI}"
+		PYTHONPATH="build-${PYTHON_ABI}/lib" TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE="1" trial nevow || die "nevow trial failed with Python ${PYTHON_ABI}"
 	}
 	python_execute_function testing
 }
@@ -50,7 +50,7 @@ src_install() {
 
 update_nevow_plugin_cache() {
 	einfo "Updating nevow plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugIns;from nevow import plugins; list(getPlugIns(IPlugin, plugins))'
+	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from nevow import plugins; list(getPlugins(IPlugin, plugins))'
 }
 
 pkg_postrm() {

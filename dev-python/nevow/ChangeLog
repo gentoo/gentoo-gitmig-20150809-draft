@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nevow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.36 2009/11/30 03:10:32 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.37 2010/01/12 11:01:10 arfrever Exp $
+
+  12 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nevow-0.10.0.ebuild:
+  Fix tests (bug #297470).
 
 *nevow-0.10.0 (30 Nov 2009)
 
