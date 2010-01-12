@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.3.1.ebuild,v 1.1 2008/10/18 20:30:15 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.3.1.ebuild,v 1.2 2010/01/12 15:47:23 fauli Exp $
 
 inherit php-pear-lib-r1
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc x86"
 
 DESCRIPTION="Unit Testing framework for PHP 5."
 HOMEPAGE="http://www.phpunit.de/"
