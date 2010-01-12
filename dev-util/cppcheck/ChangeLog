@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.8 2010/01/12 17:07:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.9 2010/01/12 17:09:19 patrick Exp $
+
+  12 Jan 2010; Patrick Lauer <patrick@gentoo.org> -cppcheck-1.32.ebuild,
+  -cppcheck-1.33.ebuild, -cppcheck-1.34.ebuild:
+  Old
 
 *cppcheck-1.39 (12 Jan 2010)
 
