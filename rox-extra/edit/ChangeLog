@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/edit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/ChangeLog,v 1.18 2008/08/30 20:00:43 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/ChangeLog,v 1.19 2010/01/12 14:09:55 lack Exp $
+
+*edit-2.1 (12 Jan 2010)
+
+  12 Jan 2010; Jim Ramsay <lack@gentoo.org> +edit-2.1.ebuild:
+  Version bump: 2.1 is released
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> edit-2.0-r1.ebuild:
   Marking edit-2.0-r1 ppc stable for bug 236057
