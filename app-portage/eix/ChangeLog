@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.315 2010/01/10 00:11:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.316 2010/01/12 06:22:05 darkside Exp $
+
+  12 Jan 2010; Jeremy Olexa <darkside@gentoo.org> eix-0.17.0.ebuild:
+  Add dep on xz-utils or lzma-utils since xz is in the stable tree now.
+  Confirmed non-issue with this change and no rev-bump needed. bug 300617
 
 *eix-0.19.2 (10 Jan 2010)
 

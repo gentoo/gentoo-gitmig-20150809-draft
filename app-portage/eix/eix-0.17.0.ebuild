@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.17.0.ebuild,v 1.10 2009/09/12 17:42:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.17.0.ebuild,v 1.11 2010/01/12 06:22:05 darkside Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
-	app-arch/lzma-utils
+	|| ( app-arch/xz-utils app-arch/lzma-utils )
 	doc? ( dev-python/docutils )
 	nls? ( sys-devel/gettext )"
 
