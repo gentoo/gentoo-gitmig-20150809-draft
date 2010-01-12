@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.16 2010/01/11 21:11:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.17 2010/01/12 19:16:13 nixnut Exp $
+
+  12 Jan 2010; nixnut <nixnut@gentoo.org> coverage-3.2.ebuild:
+  ppc stable #300241
 
   11 Jan 2010; Christian Faulhammer <fauli@gentoo.org> coverage-3.2.ebuild:
   stable x86, bug 300241
