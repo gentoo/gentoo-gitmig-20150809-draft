@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.9.9.ebuild,v 1.1 2009/11/26 15:55:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.9.9.ebuild,v 1.2 2010/01/12 19:09:18 nixnut Exp $
 
 EAPI="1"
 inherit eutils wxwidgets flag-o-matic qt4 autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="wxwindows flac bzip2 lzo qt4 debug"
 
 DEPEND=">=dev-libs/libebml-0.7.7
