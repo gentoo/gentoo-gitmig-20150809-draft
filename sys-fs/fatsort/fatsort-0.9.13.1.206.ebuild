@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.10.187-r1.ebuild,v 1.1 2009/05/29 17:17:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.13.1.206.ebuild,v 1.1 2010/01/12 18:30:47 billie Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs versionator
 
-MY_PV=$(replace_version_separator 3 '-')
+MY_PV=$(replace_version_separator 4 '-')
 
 DESCRIPTION="Sorts files on FAT16/32 partitions, ideal for basic audio players."
 HOMEPAGE="http://fatsort.berlios.de/"
@@ -20,7 +20,7 @@ IUSE=""
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
-	sed -i -e 's:/usr/local/sbin:/usr/sbin:g' src/Makefile || die "sed failed!"
+	sed -i -e "/^\(MANDIR=\|SBINDIR=\)/s|usr/local|/usr|" $(find ./ -name Makefile)
 }
 
 src_compile() {
@@ -30,6 +30,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	doman man/fatsort.8 || die "doman failed"
 	dodoc CHANGES README TODO || die "dodoc failed"
 }
