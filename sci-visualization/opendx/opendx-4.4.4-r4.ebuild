@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.1 2009/12/03 20:13:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.2 2010/01/12 19:00:12 nixnut Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://opendx.sdsc.edu/source/${P/open}.tar.gz"
 LICENSE="IPL-1"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 IUSE="hdf cdf netcdf tiff imagemagick szip smp"
 
