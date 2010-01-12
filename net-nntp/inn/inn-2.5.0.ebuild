@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.0.ebuild,v 1.4 2010/01/12 02:27:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.0.ebuild,v 1.5 2010/01/12 17:50:06 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ src_prepare() {
 	# Do not treat LDFLAGS as if it contained libraries to link to
 	sed -i m4/python.m4 -e 's|LDFLAGS||g' || die "sed python.m4 failed"
 
-	# We do not have the biff service, but we do have comsat 
+	# We do not have the biff service, but we do have comsat
 	sed -i tests/lib/getnameinfo-t.c \
 		-e 's|"biff"|"comsat"|g' \
 		|| die "sed getnameinfo-t.c failed"
