@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.2.ebuild,v 1.4 2009/04/03 16:52:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.2.ebuild,v 1.5 2010/01/12 17:56:26 ulm Exp $
 
 inherit elisp
 
@@ -16,12 +16,12 @@ RESTRICT="test"
 
 RDEPEND="ssl? ( net-misc/stunnel )"
 
-SITEFILE="51${PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	econf \
 		--with-elispdir=${SITELISP}/${PN} \
-		--with-etcdir=${SITEETC}/${PN} || die "econf failed"
+		--with-etcdir=${SITEETC}/${PN}
 	emake || die "emake failed"
 
 	if use linguas_ja; then
