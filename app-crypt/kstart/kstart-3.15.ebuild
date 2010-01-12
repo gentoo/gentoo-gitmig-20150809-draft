@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-3.14.ebuild,v 1.1 2008/07/25 16:58:27 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-3.15.ebuild,v 1.1 2010/01/12 12:25:42 mueli Exp $
 
 inherit eutils
 
@@ -19,8 +19,7 @@ RDEPEND="$DEPEND
 
 src_compile() {
 	myconf="--disable-k4start \
-		--with-kerberos \
-		$(use_with afs afs /usr/bin/aklog)"
+		$(use_enable afs setpag)"
 	econf $myconf || die "econf failed"
 	emake || die "emake failed"
 }
