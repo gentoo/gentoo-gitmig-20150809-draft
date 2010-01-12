@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r4.ebuild,v 1.2 2009/10/19 21:25:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r4.ebuild,v 1.3 2010/01/12 09:59:19 mueli Exp $
 
 EAPI=1
 VIRTUALX_REQUIRED="manual"

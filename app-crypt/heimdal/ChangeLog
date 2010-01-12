@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.142 2009/10/19 21:25:16 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.143 2010/01/12 09:59:19 mueli Exp $
+
+  12 Jan 2010; Michael Hammer <mueli@gentoo.org> -heimdal-0.7.2-r3.ebuild,
+  -heimdal-1.2.1.ebuild, -heimdal-1.2.1-r2.ebuild, -heimdal-1.2.1-r3.ebuild,
+  metadata.xml:
+  removed really outdated releases
 
   19 Oct 2009; Jonathan Callen <abcd@gentoo.org> heimdal-0.7.2-r3.ebuild,
   heimdal-1.2.1.ebuild, heimdal-1.2.1-r1.ebuild, heimdal-1.2.1-r2.ebuild,

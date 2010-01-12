@@ -15,11 +15,6 @@
 	<flag name='ipv6'>
 		Enable/Disable ipv6 support. No magic here.
 	</flag>
-	<flag name='ldap'>
-		DEPRECATED (because produces circualar dependencies):
-		global USE which enable/disable LDAP as database
-		backend -> see 'hd-ldap'
-	</flag>
 	<flag name='X'>
 		Building X applications
 	</flag>
