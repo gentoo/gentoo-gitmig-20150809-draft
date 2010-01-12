@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libxcrypt
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.7 2007/09/01 11:58:58 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.8 2010/01/12 11:42:33 phajdan.jr Exp $
+
+*libxcrypt-2.4 (12 Jan 2010)
+
+  12 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +libxcrypt-2.4.ebuild:
+  Version bump (bug #298540). Also install into /lib to make it safe for tcb
+  and others to use libxcrypt.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing method from metadata due to his retirement (see #175298 for
