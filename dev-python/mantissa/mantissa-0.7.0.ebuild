@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.7.0.ebuild,v 1.2 2009/11/30 16:20:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.7.0.ebuild,v 1.3 2010/01/12 11:15:01 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -57,17 +57,17 @@ src_install() {
 
 update_axiom_plugin_cache() {
 	einfo "Updating axiom plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugIns;from axiom import plugins; list(getPlugIns(IPlugin, plugins))'
+	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from axiom import plugins; list(getPlugins(IPlugin, plugins))'
 }
 
 update_mantissa_plugin_cache() {
 	einfo "Updating mantissa plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugIns;from xmantissa import plugins; list(getPlugIns(IPlugin, plugins))'
+	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from xmantissa import plugins; list(getPlugins(IPlugin, plugins))'
 }
 
 update_nevow_plugin_cache() {
 	einfo "Updating nevow plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugIns;from nevow import plugins; list(getPlugIns(IPlugin, plugins))'
+	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from nevow import plugins; list(getPlugins(IPlugin, plugins))'
 }
 
 pkg_postinst() {
