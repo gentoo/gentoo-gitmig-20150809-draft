@@ -1,6 +1,12 @@
 # ChangeLog for rox-base/zeroinstall-injector
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.18 2009/07/27 09:44:00 tcunha Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.19 2010/01/12 13:33:58 lack Exp $
+
+*zeroinstall-injector-0.43 (12 Jan 2010)
+
+  12 Jan 2010; Jim Ramsay <lack@gentoo.org>
+  +zeroinstall-injector-0.43.ebuild:
+  Version bump - 0.43 is released
 
   27 Jul 2009; Tiago Cunha <tcunha@gentoo.org>
   zeroinstall-injector-0.40.ebuild:
