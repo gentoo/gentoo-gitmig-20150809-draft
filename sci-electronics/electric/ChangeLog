@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.35 2010/01/12 18:49:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.36 2010/01/12 19:56:58 calchan Exp $
+
+*electric-8.10 (12 Jan 2010)
+
+  12 Jan 2010; Denis Dupeyron <calchan@gentoo.org> -electric-8.04.ebuild,
+  -electric-8.05.ebuild, -electric-8.06.ebuild, +electric-8.10.ebuild:
+  Version bump, see bug #300535. Cleanup.
 
   12 Jan 2010; nixnut <nixnut@gentoo.org> electric-8.09.ebuild:
   ppc stable #299455
