@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.7-r1.ebuild,v 1.2 2010/01/12 09:32:42 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.7-r1.ebuild,v 1.3 2010/01/12 09:51:25 mueli Exp $
 
-inherit eutils flag-o-matic versionator
+inherit eutils flag-o-matic versionator autotools
 
 PATCHV="0.6"
 MY_P=${P/mit-}
@@ -30,10 +30,19 @@ src_unpack() {
 	unpack ${A}
 	unpack ./${MY_P}.tar.gz
 	cd "${S}"
-	EPATCH_EXCLUDE="0001_all_lazyldflags.patch" EPATCH_SUFFIX="patch" \
-		epatch "${PATCHDIR}"
+	EPATCH_SOURCE="${WORKDIR}/patch" \
+		EPATCH_EXCLUDE="0001_all_lazyldflags.patch" \
+		EPATCH_SUFFIX="patch" epatch
 	einfo "Regenerating configure scripts (be patient)"
-	./util/reconf --force
+	local subdir
+	for subdir in $(find . -name configure.in \
+		| xargs grep -l 'AC_CONFIG_SUBDIRS' \
+		| sed 's@/configure\.in$@@'); do
+		ebegin "Regenerating configure script in ${subdir}"
+		cd "${S}"/${subdir}
+		eautoconf --force -I "${S}"
+		eend $?
+	done
 }
 
 src_compile() {
