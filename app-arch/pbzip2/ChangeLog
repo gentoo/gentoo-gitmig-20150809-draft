@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.76 2010/01/12 15:09:51 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.77 2010/01/12 19:12:00 nixnut Exp $
+
+  12 Jan 2010; nixnut <nixnut@gentoo.org> pbzip2-1.0.5-r2.ebuild:
+  ppc stable #300113
 
   12 Jan 2010; Tiago Cunha <tcunha@gentoo.org> pbzip2-1.0.5-r2.ebuild:
   stable sparc, bug 300113
