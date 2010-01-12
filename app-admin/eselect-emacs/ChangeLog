@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.86 2010/01/11 17:33:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.87 2010/01/12 19:07:34 nixnut Exp $
+
+  12 Jan 2010; nixnut <nixnut@gentoo.org> eselect-emacs-1.13.ebuild:
+  ppc stable #299974
 
   11 Jan 2010; Raúl Porcel <armin76@gentoo.org> eselect-emacs-1.13.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #299974
