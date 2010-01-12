@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.2.8.ebuild,v 1.1 2009/12/28 12:13:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.2.8.ebuild,v 1.2 2010/01/12 14:08:32 flameeyes Exp $
 
 EAPI=2
 
@@ -19,4 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_bdepend test '>=dev-ruby/mocha-0.9.5 virtual/ruby-test-unit'
+ruby_add_bdepend test '>=dev-ruby/mocha-0.9.5 virtual/ruby-test-unit
+	dev-ruby/samuel dev-ruby/right_http_connection'
+
+all_ruby_prepare() {
+	# The package bundles samuel and right_http_connection, remove
+	# them and use the packages instead.
+	rm -r test/vendor || die "failed to remove bundled gems"
+}
