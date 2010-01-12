@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vde
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.21 2009/10/21 09:43:46 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.22 2010/01/12 12:58:37 dang Exp $
+
+  12 Jan 2010; Daniel Gryniewicz <dang@gentoo.org> files/vde.conf,
+  files/vde.init:
+  Make it possible to change the options to vde_switch; bug #300282
 
 *vde-2.2.3 (21 Oct 2009)
 
