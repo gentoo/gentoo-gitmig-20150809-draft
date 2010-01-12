@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20090708-r1.ebuild,v 1.1 2010/01/08 17:44:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20090708-r1.ebuild,v 1.2 2010/01/12 19:13:48 nixnut Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 ~sparc ~x86"
 
 DEPEND="
 	app-text/libpaper
