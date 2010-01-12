@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.0.ebuild,v 1.1 2009/11/23 23:47:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.0.ebuild,v 1.2 2010/01/12 03:12:19 bicatali Exp $
 
 EAPI="2"
-inherit eutils cmake-utils fdo-mime virtualx
+inherit eutils cmake-utils fdo-mime
 
 MY_PN=FreeMat
 MY_P=${MY_PN}-${PV}
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}.1-Source"
 
 src_configure() {
-	rm -f CMakeCache.txt
+	rm -f CMakeCache.txt libs/lib*/*.moc.* src/*.moc.*
 	mycmakeargs="${mycmakeargs}
 		-DUSE_LLVM=OFF
 		-DFORCE_BUNDLED_PCRE=OFF
