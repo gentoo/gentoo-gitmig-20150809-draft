@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/extensionclass/extensionclass-2.11.3.ebuild,v 1.1 2009/12/05 03:07:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/extensionclass/extensionclass-2.11.3.ebuild,v 1.2 2010/01/12 14:30:01 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-DEPEND="test? ( dev-python/nose )"
+DEPEND="test? ( dev-python/nose net-zope/zope-testing )"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 

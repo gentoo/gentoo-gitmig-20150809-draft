@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/persistence/persistence-2.11.1.ebuild,v 1.1 2009/12/06 00:53:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/persistence/persistence-2.11.1.ebuild,v 1.2 2010/01/12 14:32:52 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,7 +22,7 @@ IUSE="test"
 RDEPEND="net-zope/extensionclass
 	net-zope/zodb"
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose )"
+	test? ( dev-python/nose net-zope/zope-testing )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
