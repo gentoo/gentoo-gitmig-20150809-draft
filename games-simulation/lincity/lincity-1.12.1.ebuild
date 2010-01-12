@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.1.ebuild,v 1.8 2008/02/05 21:16:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.1.ebuild,v 1.9 2010/01/12 23:40:13 mr_bones_ Exp $
 
-inherit games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="city/country simulation game for X and Linux SVGALib"
 HOMEPAGE="http://lincity.sourceforge.net/"
@@ -25,8 +26,16 @@ RDEPEND="nls? ( virtual/libintl )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
-	local myconf=
+src_prepare() {
+	sed -i \
+		-e '/^localedir/s:$(datadir):/usr/share:' \
+		po/Makefile.in.in \
+		intl/Makefile.in \
+		|| die 'sed failed'
+}
+
+src_configure() {
+	local myconf
 
 	if ! use X && ! use svga ; then
 		myconf="--with-x"
@@ -37,17 +46,14 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_with svga) \
 		$(use_with X x) \
-		${myconf} \
-		|| die
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc Acknowledgements CHANGES README* TODO || die "dodoc failed"
-	if use nls ; then
-		cd "${D}/${GAMES_DATADIR}"
-		mv locale "${D}/usr/share/"
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc Acknowledgements CHANGES README* TODO
+	if use X || ! use svga ; then
+		make_desktop_entry xlincity Lincity
 	fi
 	prepgamesdirs
 }

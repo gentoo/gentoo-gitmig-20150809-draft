@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/lincity
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.17 2008/02/05 21:16:49 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.18 2010/01/12 23:40:13 mr_bones_ Exp $
+
+  12 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  lincity-1.12.1.ebuild:
+  EAPI=2
 
   05 Feb 2008; Fabian Groffen <grobian@gentoo.org> lincity-1.12.1.ebuild:
   Dropped ppc-macos keyword, see you in prefix
