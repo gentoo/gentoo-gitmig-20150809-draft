@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/restrictedpython-3.5.1.ebuild,v 1.1 2009/10/25 18:15:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/restrictedpython-3.5.1.ebuild,v 1.2 2010/01/12 14:28:10 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 DEPEND="dev-python/setuptools
-	test? ( dev-python/nose )"
+	test? ( dev-python/nose net-zope/zope-testing )"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 

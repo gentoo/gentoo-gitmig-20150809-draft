@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/restrictedpython
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.1 2009/10/25 18:15:26 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.2 2010/01/12 14:28:10 arfrever Exp $
+
+  12 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  restrictedpython-3.5.1.ebuild:
+  Fix dependencies (bug #299910).
 
 *restrictedpython-3.5.1 (25 Oct 2009)
 
