@@ -1,6 +1,10 @@
 # ChangeLog for www-client/kazehakase
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.77 2009/11/12 17:38:31 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.78 2010/01/12 16:34:56 matsuu Exp $
+
+  11 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.5.6.ebuild,
+  kazehakase-0.5.6-r1.ebuild:
+  Removed www-client/seamonkey dependency, bug #300461.
 
 *kazehakase-0.5.8 (12 Nov 2009)
 
