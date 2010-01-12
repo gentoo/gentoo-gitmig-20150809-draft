@@ -1,0 +1,50 @@
+--- pam_tcb/support.c.orig	2009-12-27 16:33:28.000000000 +0100
++++ pam_tcb/support.c	2009-12-27 16:34:03.000000000 +0100
+@@ -10,7 +10,7 @@
+ #include <signal.h>
+ #include <pwd.h>
+ #include <shadow.h>
+-#include <crypt.h>
++#include <xcrypt.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <rpcsvc/ypclnt.h>
+@@ -481,11 +481,11 @@
+ 
+ 	/* This exists because of timing attacks. */
+ 	memset(input, 0x55, sizeof(input));
+-	fake_salt = crypt_gensalt_ra(pam_unix_param.crypt_prefix,
++	fake_salt = xcrypt_gensalt_ra(pam_unix_param.crypt_prefix,
+ 	    pam_unix_param.count, input, sizeof(input));
+ 
+ 	if (!fake_salt) {
+-		pam_syslog(pamh, LOG_CRIT, "crypt_gensalt_ra: %m");
++		pam_syslog(pamh, LOG_CRIT, "xcrypt_gensalt_ra: %m");
+ 		return PAM_BUF_ERR;
+ 	}
+ 
+@@ -823,11 +823,11 @@
+ 	void *data = NULL;
+ 	int size = 0;
+ 
+-	retval = crypt_ra(key, salt, &data, &size);
++	retval = xcrypt_ra(key, salt, &data, &size);
+ 	if (retval)
+ 		retval = strdup(retval); /* we return NULL if strdup fails */
+ 	else
+-		pam_syslog(pamh, LOG_CRIT, "crypt_ra: %m");
++		pam_syslog(pamh, LOG_CRIT, "xcrypt_ra: %m");
+ 	if (data) {
+ 		memset(data, 0, size);
+ 		free(data);
+--- pam_tcb/Makefile.orig	2009-12-27 16:38:53.000000000 +0100
++++ pam_tcb/Makefile	2009-12-27 16:39:10.000000000 +0100
+@@ -13,7 +13,7 @@
+ 
+ $(PAM_TCB): $(LIBOBJ) $(PAM_MAP)
+ 	$(CC) $(LDFLAGS) -shared -o $@ -Wl,--version-script=$(PAM_MAP) \
+-		$(LIBOBJ) -lnsl -lcrypt -lpam -ltcb
++		$(LIBOBJ) -lnsl -lxcrypt -lpam -ltcb
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -fPIC -c $< -o $@

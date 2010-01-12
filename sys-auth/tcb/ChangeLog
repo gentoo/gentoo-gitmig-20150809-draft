@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/tcb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/ChangeLog,v 1.3 2009/12/29 11:03:39 phajdan.jr Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/ChangeLog,v 1.4 2010/01/12 17:59:48 phajdan.jr Exp $
+
+*tcb-1.0.3-r1 (12 Jan 2010)
+
+  12 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> -tcb-1.0-r1.ebuild,
+  -tcb-1.0.2.ebuild, -tcb-1.0.3.ebuild, +tcb-1.0.3-r1.ebuild,
+  -files/tcb-1.0-build.patch, +files/tcb-xcrypt.patch, metadata.xml:
+  Link with libxcrypt to satisfy runtime dependency (bug #298539). Remove
+  old, broken versions. Add myself as the maintainer.
 
 *tcb-1.0.3 (29 Dec 2009)
 
