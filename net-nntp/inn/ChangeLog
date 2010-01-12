@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.27 2010/01/12 02:10:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.28 2010/01/12 02:27:45 jer Exp $
+
+  12 Jan 2010; Jeroen Roovers <jer@gentoo.org> inn-2.5.0.ebuild,
+  inn-2.5.1.ebuild:
+  Fix HOMEPAGE.
 
 *inn-2.5.1 (12 Jan 2010)
 
