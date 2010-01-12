@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.65 2010/01/08 22:48:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.66 2010/01/12 19:41:53 tommy Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -13,19 +13,7 @@
 # No hardened >=sys-devel/gcc-4.4 available.
 >=sys-devel/gcc-4.4
 
-# Requires gcc-4*, unmask when stable. Bug #217927.
-media-libs/libopenraw
-media-gfx/raw-thumbnailer
-media-gfx/gnome-raw-thumbnailer
-
-# net-im/skype requires gcc-4* runtime.
-net-im/skype
-# Jeremy Olexa <darkside@gentoo.org> (20 Aug 2009)
-# Depends on skype. Remove this block when the skype block is removed.
-dev-python/skype4py
-net-im/skysentials
-
-# >=sci-libs/acml-3.6 requires gcc-4*.
+# >=sci-libs/acml-3.6 requires gcc-4.2.
 >=sci-libs/acml-3.6
 
 
@@ -36,16 +24,5 @@ net-im/skysentials
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
 
-# Requires >=sys-libs/glibc-2.10
-=x11-libs/fltk-1.1.9-r1
-=x11-libs/fltk-2.0_pre6786-r1
-
-
-# These packages do more harm than good w/ hardened.
-# Users must now the opensource xorg nv driver with nvidia cards
-# by placing Driver "nv" in xorg.conf.
-# 2006-06-29 solar
-# 2009-08-07 chainsaw
-x11-drivers/nvidia-drivers
-media-video/nvidia-settings
-dev-util/nvidia-cuda-sdk
+# >=sys-devel/gdb-7 is not hardened-ready according to xake & Zorry.
+>=sys-devel/gdb-7
