@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.7-r1.ebuild,v 1.1 2010/01/10 23:39:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.7-r2.ebuild,v 1.1 2010/01/12 20:51:25 bicatali Exp $
 
 EAPI="2"
 
@@ -15,12 +15,12 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="bzip2 cxx debug doc fpx -gs imagemagick jbig +jpeg +jpeg2k lcms openmp
+IUSE="bzip2 cxx debug doc fpx imagemagick jbig +jpeg +jpeg2k lcms openmp
 	perl +png q16 q32 +svg +threads tiff +truetype X wmf zlib"
 
-RDEPEND="bzip2? ( app-arch/bzip2 )
+RDEPEND="app-text/ghostscript-gpl
+	bzip2? ( app-arch/bzip2 )
 	fpx? ( media-libs/libfpx )
-	gs? ( app-text/ghostscript-gpl )
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( media-libs/jpeg )
 	jpeg2k? ( >=media-libs/jasper-1.701.0 )
@@ -41,13 +41,6 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=(
-	"${FILESDIR}/${P}-CVE-2009-1882.patch"
-	"${FILESDIR}/${P}-CVE-2009-3736.patch"
-	"${FILESDIR}/${P}-perl-ldflags.patch"
-)
-#	"${FILESDIR}/${P}-perl-link.patch"
-
 pkg_setup() {
 	if use openmp &&
 		[[ $(tc-getCC)$ == *gcc* ]] &&
@@ -59,6 +52,13 @@ pkg_setup() {
 		ewarn "and switch CC to an OpenMP capable compiler"
 		epause 5
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-CVE-2009-1882.patch"
+	epatch "${FILESDIR}/${P}-CVE-2009-3736.patch"
+	epatch "${FILESDIR}/${P}-perl-ldflags.patch"
+	epatch "${FILESDIR}/${P}-debian-fixed.patch"
 }
 
 src_configure() {
@@ -80,8 +80,11 @@ src_configure() {
 		--enable-largefile \
 		--without-included-ltdl \
 		--without-frozenpaths \
+		--without-gslib \
 		--with-modules \
 		--with-quantum-depth=${quantumDepth} \
+		--with-fontpath="/usr/share/fonts" \
+		--with-gs-font-dir="/usr/share/fonts/default/ghostscript" \
 		$(use_enable debug ccmalloc) \
 		$(use_enable debug prof) \
 		$(use_enable debug gcov) \
@@ -90,7 +93,6 @@ src_configure() {
 		$(use_with bzip2 bzlib) \
 		$(use_with cxx magick-plus-plus) \
 		$(use_with fpx) \
-		$(use_with gs gslib) \
 		$(use_with jbig) \
 		$(use_with jpeg) \
 		$(use_with jpeg2k jp2) \
