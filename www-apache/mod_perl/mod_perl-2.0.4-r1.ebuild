@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.13 2010/01/11 07:53:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.14 2010/01/12 14:52:18 hollow Exp $
 
 EAPI="2"
 
@@ -18,11 +18,9 @@ SLOT="1"
 DEPEND=">=dev-perl/Apache-Test-1.27
 	>=virtual/perl-CGI-3.08
 	>=virtual/perl-IO-Compress-1.09
-	!=www-servers/apache-2.2.11-r1
-	|| (
-		( www-servers/apache[threads] dev-lang/perl[ithreads] )
-		( www-servers/apache[-threads] dev-lang/perl[-ithreads] )
-	)"
+	www-servers/apache
+	dev-lang/perl
+	|| ( www-servers/apache[-threads] dev-lang/perl[ithreads] )"
 RDEPEND="${DEPEND}"
 PDEPEND="dev-perl/Apache-Reload"
 
