@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.92 2009/09/24 18:40:23 ramereth Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.93 2010/01/12 23:33:01 maekke Exp $
+
+  12 Jan 2010; Markus Meier <maekke@gentoo.org> cfengine-2.2.10.ebuild:
+  arm stable, bug #300483
 
   24 Sep 2009; Lance Albertson <ramereth@gentoo.org> cfengine-2.2.10.ebuild:
   Stable on x86/amd64
