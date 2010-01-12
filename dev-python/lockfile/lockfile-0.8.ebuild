@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.8.ebuild,v 1.1 2009/12/21 02:33:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.8.ebuild,v 1.2 2010/01/12 13:40:11 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://smontanaro.dyndns.org/python/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND=""
