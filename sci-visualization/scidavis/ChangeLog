@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/scidavis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.11 2010/01/06 02:42:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.12 2010/01/12 15:34:31 fauli Exp $
+
+  12 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  scidavis-0.2.3.ebuild:
+  stable x86, bug 300267
 
   06 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
   scidavis-0.2.3.ebuild:
