@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/quodlibet-trayicon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.8 2010/01/09 16:02:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.9 2010/01/12 20:00:23 hwoarang Exp $
+
+  12 Jan 2010; <hwoarang@gentoo.org> quodlibet-trayicon-4351.ebuild:
+  Stable on amd64 wrt bug #299214
 
   09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   quodlibet-trayicon-4351.ebuild:
