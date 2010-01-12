@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.11-r2.ebuild,v 1.1 2010/01/11 19:13:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.11-r2.ebuild,v 1.2 2010/01/12 17:50:26 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -104,7 +104,7 @@ src_prepare() {
 		echo "QUAZIP_LIBS = -lquazip" >> build.conf
 	fi
 
-	# Fails to build... 
+	# Fails to build...
 	#if use emf; then
 	#	echo "EMF_ENGINE_INCLUDEPATH = /usr/include/libEMF" >> build.conf
 	#	echo "EMF_ENGINE_LIBS = -lEMF" >> build.conf
