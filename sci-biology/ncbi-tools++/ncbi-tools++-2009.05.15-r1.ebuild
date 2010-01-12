@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r1.ebuild,v 1.4 2009/12/29 21:19:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r1.ebuild,v 1.5 2010/01/12 14:46:33 weaver Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ LICENSE="public-domain"
 SLOT="0"
 #IUSE="X unicode opengl gnutls test"
 IUSE="sqlite"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 # wxGTK: must run eselect wxwindows after installing wxgtk or build will fail. Check and abort here.
 # dev-libs/xalan-c - problems detecting, api mismatch?
