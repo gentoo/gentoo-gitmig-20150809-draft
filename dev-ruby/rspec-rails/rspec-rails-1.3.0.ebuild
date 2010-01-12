@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-1.3.0.ebuild,v 1.1 2010/01/12 16:22:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-1.3.0.ebuild,v 1.2 2010/01/12 16:23:03 flameeyes Exp $
 
 EAPI=2
 
@@ -14,6 +14,8 @@ RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="Contribute.rdoc History.rdoc README.rdoc Upgrade.rdoc TODO.txt"
+
+RUBY_FAKEGEM_EXTRAINSTALL="generators"
 
 inherit ruby-fakegem
 
