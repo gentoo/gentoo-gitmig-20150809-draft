@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.0.1.ebuild,v 1.7 2010/01/12 05:16:13 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0.ebuild,v 1.1 2010/01/12 05:16:13 markusle Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 FORTRAN="gfortran ifc g77"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.0.1-makefile.patch
 
 	local BLAS_LIBS="$(pkg-config --libs blas)"
 	local LAPACK_LIBS="$(pkg-config --libs lapack)"

@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/qrupdate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.6 2009/12/26 15:43:45 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.7 2010/01/12 05:16:13 markusle Exp $
+
+*qrupdate-1.1.0 (12 Jan 2010)
+
+  12 Jan 2010; Markus Dittrich <markusle@gentoo.org> +qrupdate-1.1.0.ebuild:
+  Version bump.
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> qrupdate-1.0.1.ebuild:
   Add ~sparc wrt #285149
