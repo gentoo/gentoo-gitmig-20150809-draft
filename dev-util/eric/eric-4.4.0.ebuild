@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.0.ebuild,v 1.1 2010/01/12 15:58:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.0.ebuild,v 1.2 2010/01/12 18:11:55 arfrever Exp $
 
 EAPI="2"
 NEED_PYTHON="2.6"
@@ -23,10 +23,11 @@ DEPEND="dev-python/PyQt4[assistant,svg,webkit,X]
 	dev-python/qscintilla-python
 	kde? ( kde-base/pykde4 )"
 RDEPEND="${DEPEND}
-	>=dev-python/chardet-1.0.1
+	>=dev-python/chardet-2.0
 	>=dev-python/pygments-1.1"
 PDEPEND="spell? ( dev-python/pyenchant )"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.2"
+# 2.4 and 2.5 are restricted to avoid conditional dependency on dev-python/simplejson.
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 
 LANGS="cs de es fr it ru tr zh_CN"
 for L in ${LANGS}; do
@@ -35,7 +36,7 @@ for L in ${LANGS}; do
 	IUSE="${IUSE} linguas_${L}"
 done
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/eric-4.4-no-interactive.patch
@@ -46,8 +47,6 @@ src_prepare() {
 }
 
 src_install() {
-	python_version
-
 	installation() {
 		"$(PYTHON)" install.py \
 			-z \
@@ -67,7 +66,7 @@ pkg_postinst() {
 
 	elog
 	elog "If you want to use eric4 with mod_python, have a look at"
-	elog "\"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric4/patch_modpython.py\"."
+	elog "\"${ROOT}usr/$(get_libdir)/python$(PYTHON -f --ABI)/site-packages/eric4/patch_modpython.py\"."
 	elog
 	elog "The following packages will give eric extended functionality:"
 	elog "  dev-python/pylint"
