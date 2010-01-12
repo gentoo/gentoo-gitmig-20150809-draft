@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.8 2010/01/04 10:33:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.9 2010/01/12 19:34:03 hwoarang Exp $
+
+  12 Jan 2010; <hwoarang@gentoo.org> subvertpy-0.7.1.ebuild:
+  Stable on amd64 wrt bug #299559
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   subvertpy-0.7.1.ebuild:
@@ -40,5 +43,5 @@
   06 Oct 2009; Peter Volkov <pva@gentoo.org> +subvertpy-0.6.9.ebuild,
   +metadata.xml:
   Initial import, ebuild initially from bazaar overlay. Fixes bug #270201,
-  thank Johan Bergström and Mark Lee.
+  thank Johan BergstrΓΆm and Mark Lee.
 
