@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib-extras
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.9 2009/10/29 12:35:57 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.10 2010/01/12 21:33:12 ranger Exp $
+
+  12 Jan 2010; Brent Baude <ranger@gentoo.org> taglib-extras-1.0.1.ebuild:
+  Marking taglib-extras-1.0.1 ~ppc64 for bug 280552
 
   29 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   taglib-extras-1.0.1.ebuild:
