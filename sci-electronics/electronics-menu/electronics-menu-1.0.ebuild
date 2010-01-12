@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/electronics-menu-1.0.ebuild,v 1.2 2010/01/07 22:10:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/electronics-menu-1.0.ebuild,v 1.3 2010/01/12 18:48:24 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://geda.seul.org/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
