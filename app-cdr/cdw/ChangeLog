@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.29 2009/12/19 13:04:36 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.30 2010/01/12 19:10:45 nixnut Exp $
+
+  12 Jan 2010; nixnut <nixnut@gentoo.org> cdw-0.3.94.ebuild:
+  ppc stable #300004
 
   19 Dec 2009; Pacho Ramos <pacho@gentoo.org> cdw-0.3.93.ebuild:
   amd64 stable, bug 286348
