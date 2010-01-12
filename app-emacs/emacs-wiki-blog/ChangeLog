@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wiki-blog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki-blog/ChangeLog,v 1.8 2009/01/29 01:32:43 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki-blog/ChangeLog,v 1.9 2010/01/12 21:21:33 ulm Exp $
+
+  12 Jan 2010; Ulrich Mueller <ulm@gentoo.org> emacs-wiki-blog-0.5.ebuild:
+  Update HOMEPAGE.
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -emacs-wiki-blog-0.4-r1.ebuild:
