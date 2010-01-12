@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0.ebuild,v 1.1 2010/01/07 02:50:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0.ebuild,v 1.2 2010/01/12 20:09:21 bicatali Exp $
 
 EAPI=2
 
@@ -19,6 +19,14 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	ruby?  ( dev-lang/swig )
 	python? ( dev-lang/swig )"
+
+src_prepare() {
+	# quick fix not worth for eautoreconf
+	sed -i \
+		-e 's|\/lib\/python|$libdir\/python|g' \
+		-e 's|.get_python_lib(0|.get_python_lib(1|g' \
+		configure || die
+}
 
 src_configure() {
 	econf $(use_enable python) $(use_enable ruby)
