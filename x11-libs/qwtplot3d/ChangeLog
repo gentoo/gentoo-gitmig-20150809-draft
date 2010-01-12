@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.19 2010/01/03 19:53:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.20 2010/01/12 15:33:50 fauli Exp $
+
+  12 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  qwtplot3d-0.2.7-r1.ebuild:
+  stable x86, bug 300267
 
   03 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   qwtplot3d-0.2.7-r1.ebuild:

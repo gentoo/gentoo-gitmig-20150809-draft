@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.4 2010/01/03 19:53:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.5 2010/01/12 15:33:50 fauli Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="ZLIB"
 SLOT="0"
 IUSE="doc examples"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 RDEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
