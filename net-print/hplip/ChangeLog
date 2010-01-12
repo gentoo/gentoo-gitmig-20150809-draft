@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.143 2010/01/10 15:21:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.144 2010/01/12 18:52:16 billie Exp $
+
+  12 Jan 2010; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
+  Rephrase USE flag description for static-ppds.
 
   10 Jan 2010; Markus Meier <maekke@gentoo.org> hplip-3.9.8-r3.ebuild:
   add ~arm, bug #289063

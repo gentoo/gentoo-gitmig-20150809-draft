@@ -49,8 +49,9 @@
     enables this driver to work over networks (both for server and
     client)</flag>
     <flag name="static-ppds">Use statically-generated PPDs instead of Dynamic
-    PPDs. This is deprecated, and this USE flag is thus suggested to stay
-    turned off</flag>
+    PPDs. Although this is deprecated some printers may still need it to work
+	properly. Use this flag if hp-setup fails to find/create a valid PPD
+	file</flag>
     <flag name="udev-acl">Install udev acl rules which needs
     <pkg>sys-fs/udev</pkg> with acl support</flag>
   </use>
