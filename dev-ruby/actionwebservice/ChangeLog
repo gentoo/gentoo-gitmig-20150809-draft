@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/actionwebservice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.75 2010/01/04 11:05:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.76 2010/01/13 12:22:38 flameeyes Exp $
+
+*actionwebservice-2.3.5 (13 Jan 2010)
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +actionwebservice-2.3.5.ebuild:
+  Version bump, switch to panztel gem. We really need to get some
+  compatibility support as the las three versions have different authors
+  (and gem names).
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   actionwebservice-2.3.4.ebuild:
