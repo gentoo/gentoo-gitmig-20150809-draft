@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/fastercsv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.4 2009/08/22 22:50:36 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.5 2010/01/13 17:07:14 flameeyes Exp $
+
+*fastercsv-1.5.0-r1 (13 Jan 2010)
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +fastercsv-1.5.0-r1.ebuild:
+  Port to ruby-fakegem.
 
   22 Aug 2009; Hans de Graaff <graaff@gentoo.org> -fastercsv-1.2.3.ebuild,
   -fastercsv-1.4.0.ebuild:
