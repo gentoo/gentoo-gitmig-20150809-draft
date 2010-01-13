@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.2.ebuild,v 1.1 2010/01/13 19:42:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.2.ebuild,v 1.2 2010/01/13 19:46:13 flameeyes Exp $
 
 EAPI=2
 
@@ -17,6 +17,7 @@ HOMEPAGE="http://wiki.github.com/why/hpricot"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE=""
 
 # Probably needs the same jdk as JRuby but I'm not sure how to express
 # that just yet.

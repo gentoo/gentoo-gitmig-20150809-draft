@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.17 2010/01/13 19:42:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.18 2010/01/13 19:46:13 flameeyes Exp $
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  hpricot-0.8.2.ebuild:
+  Define IUSE.
 
 *hpricot-0.8.2 (13 Jan 2010)
 
