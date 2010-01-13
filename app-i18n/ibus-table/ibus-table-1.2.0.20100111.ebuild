@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.2.0.20090804.ebuild,v 1.1 2009/08/04 14:24:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.2.0.20100111.ebuild,v 1.1 2010/01/13 13:29:00 matsuu Exp $
 
 EAPI="2"
-inherit eutils python
+inherit python
 
 DESCRIPTION="The Table Engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -12,10 +12,10 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="minimal nls"
+IUSE="nls"
 
-RDEPEND=">=app-i18n/ibus-1.1
-	>=dev-lang/python-2.5[sqlite]
+RDEPEND=">=app-i18n/ibus-1.2
+	=dev-lang/python-2*[sqlite]
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.16.1 )
@@ -27,9 +27,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		$(use_enable !minimal additional) \
-		$(use_enable nls) || die
+	econf $(use_enable nls) --disable-additional || die
 }
 
 src_install() {
