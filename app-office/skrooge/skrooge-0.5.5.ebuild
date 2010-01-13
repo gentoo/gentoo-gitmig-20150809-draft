@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.5.5.ebuild,v 1.1 2009/12/01 19:39:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.5.5.ebuild,v 1.2 2010/01/13 12:27:09 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca da de en_GB es et fr gl it lt ms nds nl pl pt pt_BR ro sk sv
@@ -14,7 +14,7 @@ SRC_URI="http://websvn.kde.org/*checkout*/tags/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug +handbook test"
 
 DEPEND="dev-libs/libofx
@@ -22,6 +22,9 @@ DEPEND="dev-libs/libofx
 	x11-libs/qt-sql[sqlite]"
 RDEPEND="${DEPEND}
 	>=kde-base/kdesdk-scripts-${KDE_MINIMAL}"
+
+# Opens X11 display and hangs forever with test 26.
+RESTRICT="test"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
