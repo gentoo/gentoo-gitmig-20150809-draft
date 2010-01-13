@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.150 2010/01/09 21:23:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.151 2010/01/13 22:57:48 eva Exp $
+
+  13 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgsf-1.14.11.ebuild, libgsf-1.14.16.ebuild,
+  +files/libgsf-1.14.16-automake-fixes.patch,
+  files/libgsf-1.14.16-gconf-automagic.patch, metadata.xml:
+  Restore gnome-vfs support, move thumbnail support to its own USE flag, fix
+  missing autoreconf dependencies, fix missing intltoolize call, rework
+  automagic patch, bug #289856 and fix bug #298813. Clean up old revision.
 
   09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libgsf-1.14.16.ebuild:
