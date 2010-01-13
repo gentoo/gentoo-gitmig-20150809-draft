@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/arrayprobe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/arrayprobe/ChangeLog,v 1.4 2010/01/13 12:13:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/arrayprobe/ChangeLog,v 1.5 2010/01/13 17:53:57 klausman Exp $
+
+*arrayprobe-2.0-r2 (13 Jan 2010)
+
+  13 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
+  +files/2.0-ida_headers.patch, -arrayprobe-2.0-r1.ebuild,
+  +arrayprobe-2.0-r2.ebuild:
+  Added 2.0-r2 inclduing a patch to make arrayprobe independent of the
+  kernel sources.
 
 *arrayprobe-2.0-r1 (13 Jan 2010)
 
