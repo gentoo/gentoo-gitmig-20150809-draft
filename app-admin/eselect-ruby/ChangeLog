@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.31 2010/01/13 19:25:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.32 2010/01/13 19:33:05 a3li Exp $
+
+  13 Jan 2010; Alex Legler <a3li@gentoo.org> eselect-ruby-20091225.ebuild:
+  amd64 stable, security bug 300468
 
   13 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   eselect-ruby-20091225.ebuild:
