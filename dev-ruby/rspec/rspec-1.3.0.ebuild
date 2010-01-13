@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.1 2010/01/12 15:53:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.2 2010/01/13 16:54:11 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -16,7 +16,7 @@ HOMEPAGE="http://rspec.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~ppc64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend doc dev-ruby/hoe
