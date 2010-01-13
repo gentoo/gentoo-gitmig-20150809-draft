@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.59 2009/12/25 15:27:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.60 2010/01/13 19:35:01 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -315,7 +315,7 @@ qt4-build_src_compile() {
 # For MacOSX we need to add some symlinks when frameworks are
 # being used, to avoid complications with some more or less stupid packages.
 fix_includes() {
-	if use aqua && [[ $(uname -r | cut -d . -f 1) -ge 9 ]] ; then
+	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
 		# Some packages tend to include <Qt/...>
 		dodir "${QTHEADERDIR#${EPREFIX}}"/Qt
 
@@ -458,7 +458,11 @@ standard_configure_options() {
 build_directories() {
 	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null
-		sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:${EPREFIX}/usr/$(get_libdir)/qt4:g" $(find "${S}" -name '*.pr[io]') "${S}"/mkspecs/common/*.conf || die
+		# avoid running over the maximum argument number, bug #299810
+		{
+			echo "${S}"/mkspecs/common/*.conf
+			find "${S}" -name '*.pr[io]'
+		} | xargs sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:${EPREFIX}/usr/$(get_libdir)/qt4:g" || die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
 		emake CC="@echo compiling \$< && $(tc-getCC)" \
 			CXX="@echo compiling \$< && $(tc-getCXX)" \
