@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.5-r1.ebuild,v 1.1 2010/01/11 00:16:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.5-r1.ebuild,v 1.2 2010/01/13 13:16:42 vapier Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib xfs"
+IUSE="cracklib cups debug kerberos krb4 pam slp ssl tcpd xfs"
 
 RDEPEND=">=sys-libs/db-4.2.52
 	cracklib? ( sys-libs/cracklib )
@@ -50,6 +50,7 @@ src_configure() {
 
 	# Ignore --enable-gentoo, we install the init.d by hand and we avoid having
 	# to sed the Makefiles to not do rc-update.
+	# --enable-shadow: let build system detect shadow.h in toolchain
 	econf \
 		$(use_with pam) \
 		$(use_enable cups) \
@@ -61,7 +62,6 @@ src_configure() {
 		$(use_with ssl ssl-dir) \
 		$(use_with cracklib) \
 		$(use_with slp srvloc) \
-		$(use_with elibc_glibc shadow) \
 		--disable-afs \
 		--enable-fhs \
 		--with-bdb=/usr
