@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.38 2009/03/26 09:56:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.39 2010/01/13 15:06:11 scarabeus Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -328,7 +328,7 @@ gnat_pkg_postinst() {
 # standard lib_compile plug. Adapted from base.eclass
 lib_compile() {
 	debug-print-function $FUNCNAME $*
-	[ -z "$1" ] && base_src_compile all
+	[ -z "$1" ] && lib_compile all
 
 	cd ${SL}
 
