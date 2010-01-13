@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-xingma
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-xingma/ChangeLog,v 1.1 2010/01/13 13:35:04 matsuu Exp $
+
+*ibus-table-xingma-1.2.0.20100111 (13 Jan 2010)
+
+  13 Jan 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-xingma-1.2.0.20100111.ebuild, +metadata.xml:
+  Initial import.
+

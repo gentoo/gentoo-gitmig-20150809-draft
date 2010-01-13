@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-code
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-code/ChangeLog,v 1.1 2010/01/13 13:30:59 matsuu Exp $
+
+*ibus-table-code-1.2.0.20100108 (13 Jan 2010)
+
+  13 Jan 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-code-1.2.0.20100108.ebuild, +metadata.xml:
+  Initial import.
+
