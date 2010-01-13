@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.69 2010/01/01 12:28:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.70 2010/01/13 21:58:40 jer Exp $
+
+*socat-1.7.1.2 (13 Jan 2010)
+
+  13 Jan 2010; Jeroen Roovers <jer@gentoo.org> +socat-1.7.1.2.ebuild:
+  Version bump. Remove filter-flags -Wall.
 
   01 Jan 2010; Raúl Porcel <armin76@gentoo.org> socat-1.7.1.1.ebuild,
   socat-2.0.0_beta3.ebuild:
