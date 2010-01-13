@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.4.0.ebuild,v 1.8 2010/01/06 18:48:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.4.0.ebuild,v 1.9 2010/01/13 16:20:50 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -19,7 +19,7 @@ HOMEPAGE="http://seattlerb.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 # also requires dev-ruby/hoe-seattlerb for 1.9
