@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11097 2010/01/12 20:31:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11098 2010/01/13 12:31:22 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -357,7 +357,6 @@ dev-php5/php-qt
 # Masking pending removal in 30 days
 # qt:3 removal (bug 283429), qscintilla-python already dropped qt3 support
 =x11-libs/qscintilla-1*
-=dev-db/tora-1*
 dev-python/PyQt
 app-misc/releaseforge
 dev-util/kodos
