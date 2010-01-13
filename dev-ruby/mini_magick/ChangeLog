@@ -1,0 +1,13 @@
+# ChangeLog for dev-ruby/mini_magick
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.1 2010/01/13 13:10:18 flameeyes Exp $
+
+*mini_magick-1.2.5 (13 Jan 2010)
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +mini_magick-1.2.5.ebuild, +files/mini_magick-1.2.5-tests-tempdir.patch,
+  +metadata.xml:
+  Initial import of mini_magick, needed by Typo master. Tests currently fail
+  (at least with ImageMagick 6.5.8.8), and the two changes are sent upstream
+  for merging.
+
