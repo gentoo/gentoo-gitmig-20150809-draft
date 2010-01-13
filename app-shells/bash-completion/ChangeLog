@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.210 2010/01/11 17:39:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.211 2010/01/13 19:56:10 grobian Exp $
+
+  13 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  bash-completion-1.1-r5.ebuild:
+  Marked ~sparc-solaris, ~sparc64-solaris, bug #300813
 
   11 Jan 2010; Jeremy Olexa <darkside@gentoo.org> files/bash-completion.sh:
   Style changes and fix for trying to source a file outside of the EPREFIX.
