@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.33 2010/01/13 09:42:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.34 2010/01/13 15:16:49 fauli Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -45,11 +45,17 @@
 # texmf tree and that we want to be available directly. They will be installed in
 # /usr/bin.
 
+# @ECLASS-VARIABLE: TL_PV
+# @DESCRIPTION:
+# Normally the module's PV reflects the TeXLive release it belongs to.
+# If this is not the case, TL_PV takes the version number for the
+# needed app-text/texlive-core.
+
 inherit texlive-common
 
 HOMEPAGE="http://www.tug.org/texlive/"
 
-COMMON_DEPEND=">=app-text/texlive-core-${PV}"
+COMMON_DEPEND=">=app-text/texlive-core-${TL_PV:-${PV}}"
 
 IUSE="source"
 
