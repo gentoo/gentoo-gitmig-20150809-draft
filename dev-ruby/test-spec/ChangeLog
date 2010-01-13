@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-spec
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.10 2009/12/30 13:27:54 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.11 2010/01/13 16:31:20 ranger Exp $
+
+  13 Jan 2010; Brent Baude <ranger@gentoo.org> test-spec-0.10.0-r2.ebuild:
+  Marking test-spec-0.10.0-r2 ~ppc64 for bug 300739
 
   30 Dec 2009; Raúl Porcel <armin76@gentoo.org> test-spec-0.10.0-r2.ebuild:
   Add ~ia64/~sparc
