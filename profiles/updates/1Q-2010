@@ -11,3 +11,4 @@ move app-i18n/ibus-table-wu app-i18n/ibus-table-yinma
 move app-i18n/ibus-table-yong app-i18n/ibus-table-yinma
 move app-i18n/ibus-table-zhuyin app-i18n/ibus-table-yinma
 move app-i18n/ibus-table-ziranma app-i18n/ibus-table-yinma
+move net-im/pyotr net-im/python-otr
