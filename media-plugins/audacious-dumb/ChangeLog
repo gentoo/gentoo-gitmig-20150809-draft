@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-dumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.30 2010/01/10 19:57:35 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.31 2010/01/13 02:07:06 joker Exp $
+
+*audacious-dumb-0.62 (13 Jan 2010)
+
+  13 Jan 2010; Christian Birchinger <joker@gentoo.org>
+  +audacious-dumb-0.62.ebuild:
+  Version bump. Fixes an issue that can be triggered by the recent ALSA
+  output plugin.
 
 *audacious-dumb-0.60 (10 Jan 2010)
 
