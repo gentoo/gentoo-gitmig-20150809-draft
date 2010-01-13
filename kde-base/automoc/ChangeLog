@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/automoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.21 2010/01/09 06:44:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.22 2010/01/13 17:28:09 abcd Exp $
+
+  13 Jan 2010; Jonathan Callen <abcd@gentoo.org> automoc-0.9.88.ebuild,
+  +files/automoc-0.9.88-objc++.patch:
+  Add more keywords; add patch for objc++ support
 
   09 Jan 2010; Jonathan Callen <abcd@gentoo.org> automoc-0.9.88.ebuild:
   Add prefix keywords
