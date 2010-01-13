@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0-r1.ebuild,v 1.1 2010/01/12 10:49:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0-r1.ebuild,v 1.2 2010/01/13 10:36:02 mduft Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -79,7 +79,7 @@ src_install() {
 	python_generate_wrapper_scripts -E -f -q "${D%/}${EPREFIX}/usr/bin/trial"
 
 	create_twisted_egg-info() {
-		touch "${D}$(python_get_sitedir)/Twisted-${PV}-py${PYTHON_ABI}.egg-info"
+		touch "${D%/}${EPREFIX}/$(python_get_sitedir)/Twisted-${PV}-py${PYTHON_ABI}.egg-info"
 	}
 	python_execute_function create_twisted_egg-info
 
