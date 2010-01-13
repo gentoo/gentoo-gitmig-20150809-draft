@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.47 2010/01/10 18:07:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.48 2010/01/13 19:13:23 graaff Exp $
+
+  13 Jan 2010; Hans de Graaff <graaff@gentoo.org>
+  -ruby-gnomecanvas2-0.16.0.ebuild, -ruby-gnomecanvas2-0.19.0.ebuild:
+  Remove old versions.
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> ruby-gnomecanvas2-0.19.1.ebuild:
   ppc stable #296263
