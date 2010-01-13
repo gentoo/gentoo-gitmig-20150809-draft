@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/bglibs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.49 2009/09/23 17:16:03 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.50 2010/01/13 08:12:08 bangert Exp $
+
+*bglibs-1.106 (13 Jan 2010)
+
+  13 Jan 2010; Thilo Bangert <bangert@gentoo.org> +bglibs-1.106.ebuild,
+  +files/bglibs-1.106-parallel-fix.patch:
+  version bump - also fix bug #248441
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> bglibs-1.041.ebuild,
   bglibs-1.104.ebuild:
