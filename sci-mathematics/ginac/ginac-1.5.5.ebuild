@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.5.ebuild,v 1.2 2010/01/12 15:30:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.5.ebuild,v 1.3 2010/01/13 16:50:55 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -29,12 +29,13 @@ src_prepare() {
 src_compile() {
 	emake || die "emake failed"
 	if use doc; then
+		export VARTEXFONTS="${T}"/fonts
 		cd "${S}/doc/reference"
 		#pdf generation for reference failed (1.5.1), bug #264774
 		#emake html pdf || die "emake doc reference failed"
 		emake html || die "emake ref failed"
 		cd "${S}/doc/tutorial"
-		emake ginac.pdf ginac.html || die "emake doc tutorial failed"
+	   emake ginac.pdf ginac.html || die "emake doc tutorial failed"
 	fi
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.5 2009/12/26 17:46:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.6 2010/01/13 16:48:53 bicatali Exp $
 
 inherit eutils toolchain-funcs
 
@@ -87,7 +87,7 @@ src_compile() {
 		--enable-psl || die "econf failed"
 	emake || die "emake failed"
 
-	emake docs
+	VARTEXFONTS="${T}"/fonts emake docs
 }
 
 src_install() {
