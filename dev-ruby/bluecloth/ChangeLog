@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.29 2010/01/04 23:03:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.30 2010/01/13 17:47:41 ranger Exp $
+
+  13 Jan 2010; Brent Baude <ranger@gentoo.org> bluecloth-2.0.5-r1.ebuild:
+  Marking bluecloth-2.0.5-r1 ~ppc64 for bug 297041
 
   04 Jan 2010; Markus Meier <maekke@gentoo.org> bluecloth-2.0.5-r1.ebuild:
   add ~x86, bug #297041
