@@ -1,7 +1,10 @@
 # ChangeLog for kde-base/libknotificationitem
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.21 2009/12/27 15:23:54 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.22 2010/01/13 23:47:21 jer Exp $
 
+  13 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  libknotificationitem-4.3.3.ebuild:
+  Stable for HPPA too.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libknotificationitem-4.3.1.ebuild:

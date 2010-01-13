@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.17 2009/12/27 14:53:26 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.18 2010/01/13 23:46:39 jer Exp $
+
+  13 Jan 2010; Jeroen Roovers <jer@gentoo.org> qimageblitz-0.0.4.ebuild:
+  Stable for HPPA too.
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> qimageblitz-0.0.4.ebuild:
   alpha/ia64/sparc stable
