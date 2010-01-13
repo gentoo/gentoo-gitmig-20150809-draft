@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3780 2010/01/13 14:52:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3781 2010/01/13 16:20:00 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> use.desc:
+  Remove unused USE="kdehiddenvisibility" from use.desc.
 
   13 Jan 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
   Mask unused poppler Qt3 bindings (bug #300162).
