@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.36 2009/08/09 13:18:19 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.37 2010/01/13 01:01:12 lavajoe Exp $
+
+  13 Jan 2010; Joe Peterson <lavajoe@gentoo.org> xtrs-4.9d.ebuild:
+  Change SRC_URI of LS-DOS disk image (the old one no longer exists)
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> xtrs-4.9d.ebuild:
   ppc stable #278051

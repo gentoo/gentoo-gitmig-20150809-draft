@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.4 2009/08/09 13:18:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.5 2010/01/13 01:01:12 lavajoe Exp $
 
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Radio Shack TRS-80 emulator"
 HOMEPAGE="http://www.tim-mann.org/xtrs.html"
 SRC_URI="http://www.tim-mann.org/trs80/${P}.tar.gz
-	http://home.gwi.net/~plemon/support/disks/xtrs/ld4-631.tar.gz"
+	http://www.tim-mann.org/trs80/ld4-631.zip"
 
 LICENSE="as-is"
 SLOT="0"
@@ -18,11 +18,6 @@ DEPEND="sys-libs/ncurses
 	sys-libs/readline
 	>=x11-libs/libX11-1.0.0"
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack ${P}.tar.gz
-	tar xzf	"${DISTDIR}/ld4-631.tar.gz" disks || die "tar failed"
-}
 
 src_compile() {
 	use ppc && append-flags -Dbig_endian
@@ -40,7 +35,7 @@ src_install() {
 
 	insopts -m0444
 	insinto /usr/share/xtrs/disks
-	doins cpmutil.dsk utility.dsk "${WORKDIR}"/disks/ld4-631.dsk
+	doins cpmutil.dsk utility.dsk "${WORKDIR}"/ld4-631.dsk
 	dosym disks/ld4-631.dsk /usr/share/xtrs/disk4p-0
 	dosym disks/utility.dsk /usr/share/xtrs/disk4p-1
 
