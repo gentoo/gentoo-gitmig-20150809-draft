@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.7 2010/01/05 07:00:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.8 2010/01/13 16:42:36 ranger Exp $
+
+  13 Jan 2010; Brent Baude <ranger@gentoo.org> ruby_parser-2.0.4-r1.ebuild:
+  Marking ruby_parser-2.0.4-r1 ~ppc64 for bug 280631
 
   05 Jan 2010; Hans de Graaff <graaff@gentoo.org>
   ruby_parser-2.0.4-r1.ebuild:
