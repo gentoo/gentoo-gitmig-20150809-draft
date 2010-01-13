@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.288.1.ebuild,v 1.1 2010/01/07 16:30:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.288.1.ebuild,v 1.2 2010/01/13 12:15:45 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -28,6 +28,7 @@ RDEPEND="app-arch/bzip2
 	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
+	x11-misc/xdg-utils
 	|| (
 		x11-themes/gnome-icon-theme
 		x11-themes/tango-icon-theme

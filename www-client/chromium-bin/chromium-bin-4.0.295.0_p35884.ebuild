@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.295.0_p35884.ebuild,v 1.2 2010/01/11 23:04:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.295.0_p35884.ebuild,v 1.3 2010/01/13 12:17:35 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -30,6 +30,7 @@ RDEPEND="app-arch/bzip2
 	>=dev-libs/nss-3.12.3
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
+	x11-misc/xdg-utils
 	|| (
 		x11-themes/gnome-icon-theme
 		x11-themes/tango-icon-theme
