@@ -1,6 +1,10 @@
 # ChangeLog for games-action/openlierox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.2 2010/01/12 16:32:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.3 2010/01/13 22:32:34 sping Exp $
+
+  13 Jan 2010; Sebastian Pipping <sping@gentoo.org>
+  openlierox-0.58_beta9-r1.ebuild:
+  Move to media-libs/gd[png] for bug #300901
 
   12 Jan 2010; Sebastian Pipping <sping@gentoo.org>
   openlierox-0.58_beta9-r1.ebuild,
