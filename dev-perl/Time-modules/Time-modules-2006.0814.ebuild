@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/Time-modules-2006.0814.ebuild,v 1.9 2008/09/10 19:22:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/Time-modules-2006.0814.ebuild,v 1.10 2010/01/13 09:31:33 tove Exp $
 
 MODULE_AUTHOR=MUIR
+MODULE_SECTION=modules
 inherit perl-module
 
 DESCRIPTION="A Date/Time Parsing Perl Module"
