@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.0.ebuild,v 1.2 2010/01/12 18:11:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.0.ebuild,v 1.3 2010/01/13 17:37:53 jer Exp $
 
 EAPI="2"
 NEED_PYTHON="2.6"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/eric-ide/${MY_P}.tar.gz"
 
 SLOT="4"
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="kde spell"
 
 DEPEND="dev-python/PyQt4[assistant,svg,webkit,X]
