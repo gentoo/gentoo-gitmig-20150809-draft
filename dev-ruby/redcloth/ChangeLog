@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.36 2010/01/04 23:26:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.37 2010/01/13 21:10:51 flameeyes Exp $
+
+*redcloth-4.2.2-r3 (13 Jan 2010)
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -redcloth-4.2.2-r2.ebuild, +redcloth-4.2.2-r3.ebuild:
+  Use a git snapshot that actually works with PPC/PPC64. All older 4.2.2
+  revisions (if not all older versions) are broken where char is unsigned by
+  default.
 
   04 Jan 2010; Markus Meier <maekke@gentoo.org> redcloth-4.2.2-r2.ebuild:
   add ~x86, bug #298356
