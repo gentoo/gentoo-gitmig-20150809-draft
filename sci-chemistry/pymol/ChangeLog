@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.47 2009/12/30 19:36:34 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.48 2010/01/13 20:55:57 flameeyes Exp $
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> pymol-1.2.2.ebuild:
+  Fix path to patch, bug #300399, thanks to Priit Laes for reporting and
+  jlec for warning me.
 
 *pymol-1.2.2 (30 Dec 2009)
 

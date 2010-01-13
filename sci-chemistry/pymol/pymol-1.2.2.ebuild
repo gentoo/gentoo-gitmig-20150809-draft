@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2.ebuild,v 1.1 2009/12/30 19:36:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2.ebuild,v 1.2 2010/01/13 20:55:57 flameeyes Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ src_prepare() {
 		-e "s:\(ext_comp_args=\).*:\1[]:g" \
 		"${S}"/setup.py || die "Failed running sed on setup.py"
 
-	use shaders && epatch "${FILESDIR}"/${PV}/${P}-shaders.patch
+	use shaders && epatch "${FILESDIR}"/${P}-shaders.patch
 
 	if use apbs; then
 		cp -f "${WORKDIR}"/apbs_tools.py.${APBS_PATCH} modules/pmg_tk/startup/apbs_tools.py \
