@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.18 2010/01/03 15:17:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.19 2010/01/13 17:16:17 flameeyes Exp $
+
+  13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  cucumber-0.6.1.ebuild:
+  Tests require nokogiri present, thanks to Brent Baude (ranger) for
+  reporting in bug #300739.
 
 *cucumber-0.6.1 (03 Jan 2010)
 
