@@ -1,3 +1,13 @@
 move www-client/mozilla-firefox-bin www-client/firefox-bin
 move kde-misc/bilbo kde-misc/blogilo
 move app-i18n/ibus-table-jyutping app-i18n/ibus-table-cantonese
+move app-i18n/ibus-table-additional app-i18n/ibus-table-code
+move app-i18n/ibus-table-stroke5 app-i18n/ibus-table-xingma
+move app-i18n/ibus-table-wubi app-i18n/ibus-table-xingma
+move app-i18n/ibus-table-xinhua app-i18n/ibus-table-xingma
+move app-i18n/ibus-table-zhengma app-i18n/ibus-table-xingma
+move app-i18n/ibus-table-erbi app-i18n/ibus-table-yinma
+move app-i18n/ibus-table-wu app-i18n/ibus-table-yinma
+move app-i18n/ibus-table-yong app-i18n/ibus-table-yinma
+move app-i18n/ibus-table-zhuyin app-i18n/ibus-table-yinma
+move app-i18n/ibus-table-ziranma app-i18n/ibus-table-yinma
