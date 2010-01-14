@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.26.2-r1.ebuild,v 1.1 2009/05/31 12:40:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.1 2010/01/14 23:02:16 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
-WANT_AUTOMAKE="1.10"
+WANT_AUTOMAKE="1.11"
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -16,38 +16,38 @@ HOMEPAGE="http://live.gnome.org/GnomeGames/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="artworkextra guile opengl test +gstreamer"
+IUSE="artworkextra guile opengl sdl test" # introspection
 
-RDEPEND=">=dev-python/pygtk-2.10
-	dev-python/pygobject
-	>=x11-libs/gtk+-2.14
-	>=dev-libs/dbus-glib-0.75
-
-	>=dev-python/gconf-python-2.17.3
-	!sh? ( >=dev-python/bug-buddy-python-2.17.3 )
-	>=dev-python/libgnomeprint-python-2.17.3
-
-	>=x11-libs/cairo-1
-	>=dev-python/pycairo-1
-	>=gnome-base/gconf-2
-	>=dev-libs/libxml2-2.4.0
-	>=gnome-base/librsvg-2.14
-	gstreamer? ( >=media-libs/gstreamer-0.10.11 )
-	!gstreamer? (
-		media-libs/libsdl
-		media-libs/sdl-mixer[vorbis] )
-	>=gnome-base/libglade-2
-	>=dev-libs/glib-2.6.3
+# Introspection support needs
+#	media-libs/clutter
+#	>=dev-libs/gobject-introspection 0.6.3
+# and generates GnomeGames...gir
+RDEPEND="
 	>=dev-games/libggz-0.0.14
 	>=dev-games/ggz-client-libs-0.0.14
+	>=dev-libs/dbus-glib-0.75
+	>=dev-libs/glib-2.6.3
+	>=dev-libs/libxml2-2.4.0
+	>=dev-python/gconf-python-2.17.3
+	>=dev-python/pygobject-2
+	>=dev-python/pygtk-2.14
+	>=dev-python/pycairo-1
+	>=gnome-base/gconf-2
+	>=gnome-base/librsvg-2.14
+	>=x11-libs/cairo-1
+	>=x11-libs/gtk+-2.16
+	x11-libs/libSM
 
+	!sdl? ( media-libs/libcanberra[gtk] )
+	sdl? (
+		media-libs/libsdl
+		media-libs/sdl-mixer[vorbis] )
 	guile? ( >=dev-scheme/guile-1.6.5[deprecated,regex] )
 	artworkextra? ( gnome-extra/gnome-games-extra-data )
 	opengl? (
 		dev-python/pygtkglext
 		>=dev-python/pyopengl-3 )
-	!games-board/glchess
-	x11-libs/libSM"
+	!games-board/glchess"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.53
@@ -75,16 +75,19 @@ pkg_setup() {
 	games_pkg_setup
 
 	# Decide the sound backend to use - GStreamer gets preference over SDL
-	if use gstreamer; then
-		G2CONF="${G2CONF} --with-sound=gstreamer"
-	else
+	if use sdl; then
 		G2CONF="${G2CONF} --with-sound=sdl_mixer"
+	else
+		G2CONF="${G2CONF} --with-sound=libcanberra"
 	fi
 
 	# Needs "seed", which needs gobject-introspection, libffi, etc.
 	#$(use_enable clutter)
 	#$(use_enable clutter staging)
+	#$(use_enable introspection)
 	G2CONF="${G2CONF}
+		$(use_enable test tests)
+		--disable-introspection
 		--disable-card-themes-installer
 		--with-scores-group=${GAMES_GROUP}
 		--enable-noregistry=\"${GGZ_MODDIR}\"
@@ -96,6 +99,8 @@ pkg_setup() {
 	# Needs clutter, always disable till we can have that
 	#if ! use clutter; then
 		_omitgame lightsoff
+		_omitgame gnometris
+		_omitgame same-gnome-clutter
 	#fi
 
 	if ! use guile; then
@@ -116,8 +121,15 @@ src_prepare() {
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
 
-	# Fix parallel make install issue for setgid, bug #267041
-	epatch "${FILESDIR}/${PN}-2.26.2-parallel-make.patch"
+	# Fix implicit declaration of yylex.
+	epatch "${FILESDIR}/${PN}-2.26.3-implicit-declaration.patch"
+
+	# Fix bug #281718 -- *** glibc detected *** gtali: free(): invalid pointer
+	epatch "${FILESDIR}/${PN}-2.26.3-gtali-invalid-pointer.patch"
+
+	# Fix build failure, conflicting types for 'games_sound_init',
+	# in libgames-support/games_sound.c.
+	epatch "${FILESDIR}/${PN}-2.28.1-conflicting-types-libgames-support.patch"
 
 	# If calling eautoreconf, this ebuild uses libtool-2
 	eautomake
