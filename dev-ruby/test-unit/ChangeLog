@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.14 2010/01/09 21:04:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.15 2010/01/14 23:48:10 flameeyes Exp $
+
+*test-unit-1.2.3 (14 Jan 2010)
+
+  14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +test-unit-1.2.3.ebuild, test-unit-2.0.5.ebuild, test-unit-2.0.6.ebuild:
+  Add test-unit-1.2.3 (classic API), and de-keyword version 2, so that it
+  doesn't get installed. Too many packages actually fail to build with the
+  interface from version 2 (and we force it enabled as it is).
 
 *test-unit-2.0.6 (09 Jan 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.5.ebuild,v 1.3 2009/12/20 22:28:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.5.ebuild,v 1.4 2010/01/14 23:48:10 flameeyes Exp $
 
 EAPI=2
 # One test fails on jruby, might be a jruby bug
@@ -22,7 +22,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE=""
 
 each_ruby_test() {
