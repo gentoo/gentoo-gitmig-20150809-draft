@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obex-data-server
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.23 2009/11/21 15:16:19 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.24 2010/01/14 01:27:49 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  obex-data-server-0.4.4.ebuild:
+  Stable for HPPA (bug #284661).
 
   21 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   obex-data-server-0.3.ebuild, obex-data-server-0.3.2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.55 2009/10/24 11:11:11 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.56 2010/01/14 01:27:17 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> obexftp-0.23-r1.ebuild:
+  Stable for HPPA (bug #284661).
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> obexftp-0.23-r1.ebuild:
   ppc stable #284661
