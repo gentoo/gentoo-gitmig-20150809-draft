@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/text-autoformat
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/ChangeLog,v 1.27 2009/05/02 08:55:11 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/ChangeLog,v 1.28 2010/01/14 16:08:11 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  text-autoformat-1.666.0.ebuild:
+  Transfer Prefix keywords
 
   02 May 2009; Torsten Veller <tove@gentoo.org>
   -text-autoformat-1.12.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/tie-encryptedhash
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.15 2008/08/23 21:15:13 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.16 2010/01/14 16:11:41 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  tie-encryptedhash-1.24.ebuild:
+  Transfer Prefix keywords
 
 *tie-encryptedhash-1.24 (23 Aug 2008)
 
