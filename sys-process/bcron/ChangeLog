@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/bcron
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.13 2009/09/23 21:06:51 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.14 2010/01/14 18:26:42 bangert Exp $
+
+*bcron-0.09-r1 (14 Jan 2010)
+
+  14 Jan 2010; Thilo Bangert <bangert@gentoo.org> +bcron-0.09-r1.ebuild,
+  +files/bcron-0.09-fix-parallel-build.patch:
+  EAPI2, fix parallel build (bug #278459), multilib ready
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> bcron-0.09.ebuild:
   Remove virtual/libc
