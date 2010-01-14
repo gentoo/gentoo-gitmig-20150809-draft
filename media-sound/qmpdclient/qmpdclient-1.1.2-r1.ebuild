@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.2-r1.ebuild,v 1.1 2010/01/07 12:48:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.2-r1.ebuild,v 1.2 2010/01/14 11:25:36 yngwin Exp $
 
 EAPI="2"
 
@@ -73,7 +73,7 @@ src_install() {
 	insinto /usr/share/${PN}/translations/
 	local LANG=
 	for LANG in ${LINGUAS};do
-	    for X in ${LANGSNOLONG};do
+	    for X in ${LANGSLONG};do
 			if [[ ${LANG} == ${X%_*} ]];then
 		    	doins -r lang/${X}.qm || die "failed to install translations"
 			fi
