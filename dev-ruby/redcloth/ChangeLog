@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.37 2010/01/13 21:10:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.38 2010/01/14 01:05:38 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> redcloth-4.2.2-r3.ebuild:
+  Marking redcloth-4.2.2-r3 ~ppc64 for bug 298356
 
 *redcloth-4.2.2-r3 (13 Jan 2010)
 
