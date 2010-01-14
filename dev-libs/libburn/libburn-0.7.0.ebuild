@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.7.0.ebuild,v 1.5 2009/12/09 19:18:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.7.0.ebuild,v 1.6 2010/01/14 02:32:17 jer Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 hppa ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=""
