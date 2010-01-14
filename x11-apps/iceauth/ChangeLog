@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/iceauth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.41 2010/01/14 16:57:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.42 2010/01/14 21:05:47 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> iceauth-1.0.3.ebuild:
+  Transfer Prefix keywords
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> iceauth-1.0.3.ebuild:
   Stable for HPPA (bug #294958).

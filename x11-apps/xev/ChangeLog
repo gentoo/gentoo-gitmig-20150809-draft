@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xev
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xev/ChangeLog,v 1.37 2009/12/27 17:45:00 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xev/ChangeLog,v 1.38 2010/01/14 21:06:39 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xev-1.0.4.ebuild:
+  Transfer Prefix keywords
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> xev-1.0.4.ebuild:
   Marked ppc stable for bug #294958.
