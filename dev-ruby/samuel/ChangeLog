@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.2 2010/01/13 09:18:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.3 2010/01/14 15:59:28 flameeyes Exp $
+
+  14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> samuel-0.3.2.ebuild:
+  Enable jruby support.
 
 *samuel-0.3.2 (13 Jan 2010)
 
