@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Deep
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.38 2009/10/12 11:31:22 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.39 2010/01/14 14:23:31 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org> Test-Deep-0.106.ebuild:
+  Transfer Prefix keywords
 
   12 Oct 2009; Torsten Veller <tove@gentoo.org> -Test-Deep-0.098.ebuild,
   -Test-Deep-0.100.ebuild, -Test-Deep-0.103.ebuild, -Test-Deep-0.104.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-LongString
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.24 2010/01/12 12:25:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.25 2010/01/14 14:36:42 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Test-LongString-0.11.ebuild, Test-LongString-0.12.ebuild:
+  Transfer Prefix keywords
 
 *Test-LongString-0.12 (12 Jan 2010)
 

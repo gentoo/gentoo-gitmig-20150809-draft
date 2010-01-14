@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Iconv
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Iconv/ChangeLog,v 1.32 2008/03/28 09:06:09 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Iconv/ChangeLog,v 1.33 2010/01/14 15:33:52 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org> Text-Iconv-1.7.ebuild:
+  Transfer Prefix keywords
 
   28 Mar 2008; Jeroen Roovers <jer@gentoo.org> Text-Iconv-1.7.ebuild:
   Stable for HPPA too.

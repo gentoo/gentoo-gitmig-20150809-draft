@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-WWW-Mechanize
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/ChangeLog,v 1.28 2009/09/13 15:03:11 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/ChangeLog,v 1.29 2010/01/14 15:06:59 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Test-WWW-Mechanize-1.24.ebuild:
+  Transfer Prefix keywords
 
   13 Sep 2009; Raúl Porcel <armin76@gentoo.org>
   Test-WWW-Mechanize-1.16.ebuild, Test-WWW-Mechanize-1.20.ebuild,

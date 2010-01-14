@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Task-Weaken
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/ChangeLog,v 1.14 2009/06/30 06:17:38 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/ChangeLog,v 1.15 2010/01/14 14:10:44 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org> Task-Weaken-1.03.ebuild:
+  Transfer Prefix keywords
 
 *Task-Weaken-1.03 (30 Jun 2009)
 

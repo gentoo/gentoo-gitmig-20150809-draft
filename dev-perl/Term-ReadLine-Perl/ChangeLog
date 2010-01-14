@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadLine-Perl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.29 2009/11/10 10:27:54 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.30 2010/01/14 14:13:48 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Term-ReadLine-Perl-1.03.03.ebuild:
+  Transfer Prefix keywords
 
 *Term-ReadLine-Perl-1.03.03 (10 Nov 2009)
 
