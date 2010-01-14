@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.126 2010/01/02 00:09:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.127 2010/01/14 17:19:33 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> activerecord-2.3.5-r1.ebuild:
+  Marking activerecord-2.3.5-r1 ~ppc for bug 297718
 
 *activerecord-2.3.5-r1 (02 Jan 2010)
 
