@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Handler-YAWriter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.20 2009/07/02 20:32:48 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.21 2010/01/14 16:41:51 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  XML-Handler-YAWriter-0.23-r1.ebuild:
+  Transfer Prefix keywords
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org>
   XML-Handler-YAWriter-0.23-r1.ebuild:
