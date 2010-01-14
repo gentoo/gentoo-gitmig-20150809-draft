@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/ucspi-unix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.23 2009/12/22 21:45:32 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.24 2010/01/14 18:20:45 bangert Exp $
+
+*ucspi-unix-0.36-r4 (14 Jan 2010)
+
+  14 Jan 2010; Thilo Bangert <bangert@gentoo.org>
+  +ucspi-unix-0.36-r4.ebuild,
+  +files/ucspi-unix-0.36-fix-parallel-build.patch:
+  EAPI2 - multilib ready - use local var - use newstyle bglibs paths - fix
+  parallel build (bug #297986)
 
   22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ucspi-unix-0.36-r3.ebuild:
