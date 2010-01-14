@@ -1,6 +1,6 @@
 # Copyright 2005-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.60 2009/11/21 11:44:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.61 2010/01/14 21:15:22 abcd Exp $
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
@@ -203,6 +203,8 @@ qt4_src_prepare() {
 # right arguments on every directory specified inside the top-level
 # project file by the SUBDIRS variable.
 eqmake4() {
+	has "${EAPI:-0}" 0 1 2 && use !prefix && EPREFIX=
+
 	local projectfile="${1:-${PN}.pro}"
 	shift
 
@@ -264,9 +266,9 @@ eqmake4() {
 		fi
 	done < <(find "$(dirname "${projectfile}")" -type f -name "*.pr[io]" 2>/dev/null)
 
-	/usr/bin/qmake -makefile -nocache \
-		QTDIR=/usr/$(get_libdir) \
-		QMAKE=/usr/bin/qmake \
+	"${EPREFIX}"/usr/bin/qmake -makefile -nocache \
+		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
+		QMAKE="${EPREFIX}"/usr/bin/qmake \
 		QMAKE_CC=$(tc-getCC) \
 		QMAKE_CXX=$(tc-getCXX) \
 		QMAKE_LINK=$(tc-getCXX) \
@@ -294,7 +296,7 @@ eqmake4() {
 }
 
 case ${EAPI:-0} in
-	2)
+	2|3)
 		EXPORT_FUNCTIONS pkg_setup src_prepare
 		;;
 	0|1)
