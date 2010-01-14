@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5192 2010/01/14 15:07:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5193 2010/01/14 18:07:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1471,9 +1471,7 @@ media-gfx/gimp:webkit -  Enable the webkit rendering engine
 media-gfx/graphicsmagick:fpx - Enable FlashPix support
 media-gfx/graphicsmagick:q16 - Set quantum depth to 16
 media-gfx/graphicsmagick:q32 - Set quantum depth to 32
-media-gfx/graphviz:cgraph -  Enables cgraph (PostScript plotting library in C) library 
 media-gfx/graphviz:lasi -  Enables PostScript output via media-libs/lasi library 
-media-gfx/graphviz:pango -  Enables the rendering of the graphs using pango & cairo (with antialiasing support) 
 media-gfx/gthumb:iptc -  Add support for IPTC metadata 
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift or media-gfx/autopano-sift-C
 media-gfx/imagemagick:autotrace -  use media-gfx/autotrace to convert bitmaps into vector graphics 
