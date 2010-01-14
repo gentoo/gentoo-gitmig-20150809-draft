@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/constantine/constantine-0.6.ebuild,v 1.4 2010/01/07 17:52:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/constantine/constantine-0.6.ebuild,v 1.5 2010/01/14 21:28:31 maekke Exp $
 
 JAVA_PKG_IUSE="source test"
 inherit base java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ HOMEPAGE="http://kenai.com/projects/constantine"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5"
