@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.11 2010/01/11 13:05:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.12 2010/01/14 20:58:55 maekke Exp $
+
+  14 Jan 2010; Markus Meier <maekke@gentoo.org>
+  xz-utils-4.999.9_beta.ebuild:
+  arm stable, bug #298561
 
   11 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xz-utils-4.999.9_beta.ebuild:
