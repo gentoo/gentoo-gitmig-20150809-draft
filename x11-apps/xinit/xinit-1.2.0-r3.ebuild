@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.2.0-r3.ebuild,v 1.6 2010/01/14 17:11:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.2.0-r3.ebuild,v 1.7 2010/01/14 22:15:26 maekke Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit x-modular pam
 DESCRIPTION="X Window System initializer"
 
 LICENSE="${LICENSE} GPL-2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="+minimal pam"
 
 RDEPEND="
