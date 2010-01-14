@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.2.ebuild,v 1.3 2010/01/12 18:44:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.2.ebuild,v 1.4 2010/01/14 23:14:57 maekke Exp $
 
 EAPI=2
 inherit gnome2 eutils versionator
@@ -19,7 +19,7 @@ SRC_URI="mirror://gnome/sources/network-manager-applet/0.7/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~x86"
+KEYWORDS="amd64 ~arm ppc x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/dbus-1.2
