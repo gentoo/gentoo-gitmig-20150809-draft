@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.11 2010/01/13 16:31:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.12 2010/01/14 15:40:52 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> test-spec-0.10.0-r2.ebuild:
+  Marking test-spec-0.10.0-r2 ~ppc for bug 297711
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> test-spec-0.10.0-r2.ebuild:
   Marking test-spec-0.10.0-r2 ~ppc64 for bug 300739

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/test-spec-0.10.0-r2.ebuild,v 1.5 2010/01/13 16:31:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/test-spec-0.10.0-r2.ebuild,v 1.6 2010/01/14 15:40:52 ranger Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://chneukirchen.org/blog/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 ruby_add_rdepend virtual/ruby-test-unit
