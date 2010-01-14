@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.1.0.ebuild,v 1.5 2009/12/17 20:39:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.1.0.ebuild,v 1.6 2010/01/14 02:06:11 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 DEPEND="sys-devel/gettext"
 RDEPEND=""
 
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE="doc"
 
 MY_LANGS="ca da de el en_GB es et fr fy gl hne it ja kk nb nds nl pl pt pt_BR
