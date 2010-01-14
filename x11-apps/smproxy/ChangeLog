@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/smproxy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.31 2009/12/27 17:40:42 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.32 2010/01/14 18:12:00 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> smproxy-1.0.3.ebuild:
+  Stable for HPPA (bug #294958).
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> smproxy-1.0.3.ebuild:
   Marked ppc stable for bug #294958.
