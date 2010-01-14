@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.125 2010/01/10 01:59:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.126 2010/01/14 23:12:52 a3li Exp $
+
+  14 Jan 2010; Alex Legler <a3li@gentoo.org> package.use.force:
+  Fix ruby package.use.force entries
 
   10 Jan 2010; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
   mask wicd[ioctl] wrt bug 299674
