@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/braincurses-0.5b.ebuild,v 1.7 2009/02/09 15:26:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/braincurses-0.5b.ebuild,v 1.8 2010/01/14 22:33:53 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,6 +19,11 @@ DEPEND=""
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-as-needed.patch
+	# fix buffer overflow (bug #301033)
+	sed -i \
+		-e 's/guessLabel\[2/guessLabel[3/' \
+		curses/windows.cpp \
+		|| die 'sed failed'
 }
 
 src_install() {
