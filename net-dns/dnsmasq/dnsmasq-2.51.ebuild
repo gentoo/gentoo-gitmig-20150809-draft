@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.51.ebuild,v 1.2 2009/12/07 22:05:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.51.ebuild,v 1.3 2010/01/14 18:46:16 chutzpah Exp $
 
 EAPI=2
 
@@ -27,6 +27,17 @@ DEPEND="${RDEPEND}
 	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+pkg_setup() {
+	# quick-and-dirty workaround for bug #296204 until 2.52 comes out.
+	if use dbus; then
+		if ! use dhcp; then
+			eerror "Currently DBus support requires DHCP to be enabled. Please"
+			eerror "enable DHCP or disable DBUS (see bug #296204)."
+			die "DHCP required for DBUS support"
+		fi
+	fi
+}
 
 src_prepare() {
 	sed -i '/^AWK/s:nawk:gawk:' Makefile #214865

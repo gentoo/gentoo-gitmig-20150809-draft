@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnsmasq
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.188 2009/12/07 22:05:24 chutzpah Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.189 2010/01/14 18:46:16 chutzpah Exp $
+
+  14 Jan 2010; Patrick McLean <chutzpah@gentoo.org> dnsmasq-2.51.ebuild:
+  Add a die call if DBUS USE flag is enable with DHCP off, this is a
+  workaround for bug #296204 until 2.52 is out.
 
   07 Dec 2009; Patrick McLean <chutzpah@gentoo.org> dnsmasq-2.51.ebuild:
   Add dep on net-dns/libidn with USE=nls.
