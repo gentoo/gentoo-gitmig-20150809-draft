@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtester
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.32 2010/01/07 17:37:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.33 2010/01/14 12:48:24 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  memtester-4.0.8.ebuild:
+  stable x86, bug 299691
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> memtester-4.0.8.ebuild:
   Marked ppc stable for bug #299691.
