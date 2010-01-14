@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.45 2010/01/14 09:01:40 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.46 2010/01/14 14:43:26 flameeyes Exp $
+
+*jruby-1.4.0-r1 (14 Jan 2010)
+
+  14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +jruby-1.4.0-r1.ebuild, +files/auto_gem.rb:
+  Fix (again) cache and doc directories creation for gems. Avoid installing
+  gentoo.rb at all, instead install auto_gem.rb like it's done for the other
+  Ruby packages (this finally completes the break-up of MRI 1.8 and JRuby
+  libraries). Install 1.9 mode libraries as well as 1.8, remove rake and
+  rspec symlinks (the bundled gems are not installed for either). Avoid
+  removing the yecht jar as it's currently not packaged in Gentoo.
 
 *jruby-1.4.0 (14 Jan 2010)
 
