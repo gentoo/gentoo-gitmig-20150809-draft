@@ -6,7 +6,7 @@ diff -ur wbar-1.3.3.orig/Makefile wbar-1.3.3/Makefile
 -CXXFLAGS=`imlib2-config --cflags` -Wall -O2 #-DCOS_ZOOM #-DLINEAR_TRASL -DNO_EXPAND #-DAVGFILTER
 -LDFLAGS=`imlib2-config --libs`  -Wl,-O2
 +CXXFLAGS+=`imlib2-config --cflags` -Wall #-DCOS_ZOOM #-DLINEAR_TRASL -DNO_EXPAND #-DAVGFILTER
-+LIBS=`imlib2-config --libs`
++LIBS=`imlib2-config --libs` -lX11
  PREFIX=/usr/share/wbar
  
  	
