@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/stgit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.36 2009/11/11 16:09:34 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.37 2010/01/14 20:02:16 carlo Exp $
+
+*stgit-0.15-r1 (14 Jan 2010)
+
+  14 Jan 2010; Carsten Lohrke <carlo@gentoo.org> +stgit-0.15-r1.ebuild:
+   Add missing files for a complete run of the test-suite.
 
 *stgit-0.15 (11 Nov 2009)
 
