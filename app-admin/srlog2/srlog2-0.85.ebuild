@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/srlog2-0.85.ebuild,v 1.3 2010/01/14 11:21:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/srlog2-0.85.ebuild,v 1.4 2010/01/14 12:25:05 bangert Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-libs/bglibs-1.104
+DEPEND=">=dev-libs/bglibs-1.106
 		app-crypt/nistp224
 		>=dev-libs/libtomcrypt-1.03"
 RDEPEND="${DEPEND}"

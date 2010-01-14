@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/srlog2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/ChangeLog,v 1.5 2010/01/14 11:21:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/srlog2/ChangeLog,v 1.6 2010/01/14 12:25:05 bangert Exp $
+
+  14 Jan 2010; Thilo Bangert <bangert@gentoo.org> srlog2-0.85.ebuild:
+  dep on correct version
 
   14 Jan 2010; Thilo Bangert <bangert@gentoo.org> -srlog2-0.80.ebuild,
   -files/srlog2-0.80-fix-execstacks-curve25519.patch, srlog2-0.85.ebuild,
