@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-phonon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.56 2009/12/25 15:42:34 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.57 2010/01/14 15:50:54 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  qt-phonon-4.6.0-r1.ebuild:
+  mark ~x86-freebsd
 
 *qt-phonon-4.6.0-r1 (25 Dec 2009)
 
