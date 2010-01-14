@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.663 2010/01/10 09:09:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.664 2010/01/14 00:31:58 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> kdelibs-4.3.3-r1.ebuild:
+  Stable for HPPA too.
 
   10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> kdelibs-4.3.4.ebuild:
   Remove kde-base/kdebase-runtime-meta from PDEPEND wrt #295456.

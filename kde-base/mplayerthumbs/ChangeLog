@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mplayerthumbs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.18 2009/12/23 01:15:56 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.19 2010/01/14 00:33:40 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> mplayerthumbs-4.3.3.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> mplayerthumbs-4.3.4.ebuild:
   Pull in changes from overlay

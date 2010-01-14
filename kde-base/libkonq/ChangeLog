@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.146 2010/01/09 10:16:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.147 2010/01/14 00:34:33 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> libkonq-4.3.3.ebuild:
+  Stable for HPPA too.
 
   09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   -libkonq-3.5.10.ebuild:
