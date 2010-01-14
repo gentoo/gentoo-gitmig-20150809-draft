@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r2.ebuild,v 1.16 2007/06/12 13:07:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r2.ebuild,v 1.17 2010/01/14 15:24:08 bangert Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
 DESCRIPTION="SMTP Relaying Control designed for qmail & tcpserver."
 HOMEPAGE="http://untroubled.org/relay-ctrl/"
-SRC_URI="http://untroubled.org/relay-ctrl/${P}.tar.gz"
+SRC_URI="http://untroubled.org/relay-ctrl/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,8 +25,8 @@ RELAYCTRL_BINDIR="/usr/bin"
 
 src_unpack() {
 	unpack ${A}
-	ht_fix_file ${S}/Makefile
-	epatch ${FILESDIR}/authenticated.c-relayfixup.diff
+	ht_fix_file "${S}"/Makefile
+	epatch "${FILESDIR}"/authenticated.c-relayfixup.diff
 }
 
 src_compile() {

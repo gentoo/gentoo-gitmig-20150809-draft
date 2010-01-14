@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.10 2009/09/23 19:10:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.11 2010/01/14 15:22:02 bangert Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Delayed delivery notification for qmail."
-SRC_URI="http://untroubled.org/qmail-notify/${P}.tar.gz"
+SRC_URI="http://untroubled.org/qmail-notify/archive/${P}.tar.gz"
 HOMEPAGE="http://untroubled.org/qmail-notify/"
 
 SLOT="0"
@@ -21,7 +21,6 @@ RDEPEND="
 "
 
 src_compile() {
-	cd ${S}
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	emake || die
@@ -32,7 +31,7 @@ src_install () {
 	doexe qmail-notify
 
 	exeinto /etc/cron.hourly
-	doexe ${FILESDIR}/qmail-notify.cron
+	doexe "${FILESDIR}"/qmail-notify.cron
 
 	dodoc README ANNOUNCEMENT TODO cron.hourly NEWS VERSION
 }
