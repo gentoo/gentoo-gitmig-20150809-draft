@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.35 2010/01/11 03:05:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.36 2010/01/14 07:05:45 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> texlive-basic-2008-r1.ebuild:
+  Stable for HPPA (bug #297283).
 
 *texlive-basic-2009 (11 Jan 2010)
 
