@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/dumb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.35 2009/06/06 16:41:54 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.36 2010/01/14 05:48:08 joker Exp $
+
+  14 Jan 2010; Christian Birchinger <joker@gentoo.org> dumb-0.9.3-r1.ebuild,
+  +files/dumb-0.9.3-as-needed.patch:
+  Added an as-needed patch from bug #300515
 
   06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> dumb-0.9.3-r1.ebuild:
   Don't hardcode ecompress --suffix in postinst msg wrt #272915, thanks to

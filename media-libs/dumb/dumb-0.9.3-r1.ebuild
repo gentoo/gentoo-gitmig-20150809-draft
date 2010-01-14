@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3-r1.ebuild,v 1.10 2009/06/06 16:41:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3-r1.ebuild,v 1.11 2010/01/14 05:48:08 joker Exp $
 
 EAPI=2
 inherit eutils
@@ -26,6 +26,7 @@ EOF
 
 	epatch "${FILESDIR}"/${PN}-0.9.2-PIC.patch
 	epatch "${FILESDIR}"/${P}_CVE-2006-3668.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 	sed -i '/= -s/d' Makefile || die "sed failed"
 	cp -f Makefile Makefile.rdy
 }
