@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.17 2010/01/13 16:50:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.18 2010/01/14 16:00:06 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> ruby2ruby-1.2.4-r1.ebuild:
+  Marking ruby2ruby-1.2.4-r1 ~ppc for bug 300739
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> ruby2ruby-1.2.4-r1.ebuild:
   Marking ruby2ruby-1.2.4-r1 ~ppc64 for bug 280631
