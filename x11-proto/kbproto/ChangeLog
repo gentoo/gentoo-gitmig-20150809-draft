@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/kbproto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.43 2009/12/27 18:15:31 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.44 2010/01/14 16:49:54 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> kbproto-1.0.4.ebuild:
+  Transfer Prefix keywords
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> kbproto-1.0.4.ebuild:
   Marked ppc stable for bug #294958.

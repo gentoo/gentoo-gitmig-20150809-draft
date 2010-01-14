@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/inputproto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.90 2009/12/15 19:47:18 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.91 2010/01/14 16:48:34 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  inputproto-2.0.ebuild:
+  Transfer Prefix keywords
 
   15 Dec 2009; Brent Baude <ranger@gentoo.org> inputproto-1.5.1.ebuild:
   Marking inputproto-1.5.1 ppc64 stable for bug 294958
