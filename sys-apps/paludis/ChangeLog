@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.149 2010/01/09 16:50:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.150 2010/01/14 22:04:00 peper Exp $
+
+  14 Jan 2010; Piotr Jaroszyński <peper@gentoo.org> paludis-0.44.0.ebuild,
+  +files/paludis-0.44.0-gcc41-fix.patch:
+  Add a patch fixing gcc 4.1 compile time error.
 
 *paludis-0.44.0 (09 Jan 2010)
 

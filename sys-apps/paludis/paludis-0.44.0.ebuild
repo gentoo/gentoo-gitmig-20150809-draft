@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.44.0.ebuild,v 1.1 2010/01/09 16:50:09 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.44.0.ebuild,v 1.2 2010/01/14 22:04:00 peper Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -62,6 +62,12 @@ pkg_setup() {
 	fi
 
 	create-paludis-user
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc41-fix.patch"
 }
 
 src_compile() {
