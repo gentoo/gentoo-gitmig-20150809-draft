@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.122 2010/01/14 17:36:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.123 2010/01/14 22:41:35 maekke Exp $
+
+  14 Jan 2010; Markus Meier <maekke@gentoo.org> libXfont-1.4.1.ebuild:
+  arm stable, bug #294958
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> libXfont-1.4.1.ebuild:
   Stable for HPPA (bug #294958).

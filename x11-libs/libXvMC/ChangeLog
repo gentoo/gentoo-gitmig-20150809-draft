@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.46 2010/01/14 17:42:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.47 2010/01/14 22:49:36 maekke Exp $
+
+  14 Jan 2010; Markus Meier <maekke@gentoo.org> libXvMC-1.0.5.ebuild:
+  arm stable, bug #294958
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> libXvMC-1.0.5.ebuild:
   Stable for HPPA (bug #294958).
