@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86rushproto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.27 2009/05/05 15:39:41 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.28 2010/01/14 17:21:21 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  xf86rushproto-1.1.2.ebuild:
+  Transfer Prefix keywords
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   xf86rushproto-1.1.2.ebuild:
