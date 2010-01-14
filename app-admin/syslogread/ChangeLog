@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslogread
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.5 2009/07/13 00:22:46 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.6 2010/01/14 13:05:57 bangert Exp $
+
+  14 Jan 2010; Thilo Bangert <bangert@gentoo.org> syslogread-0.92.ebuild,
+  +files/syslogread-0.92-fix-parallel-build.patch:
+  EAPI2 - fix parallel build (bug #277586) - multilib ready - create user in
+  pkg_setup
 
   13 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   syslogread-0.92.ebuild:

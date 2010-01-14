@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.6 2009/07/13 00:22:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.7 2010/01/14 13:05:57 bangert Exp $
 
-inherit eutils toolchain-funcs
+EAPI="2"
+
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Syslog message handling tools"
 HOMEPAGE="http://untroubled.org/syslogread/"
@@ -13,24 +15,26 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/bglibs-1.019-r1"
+DEPEND=">=dev-libs/bglibs-1.106"
 RDEPEND="sys-process/daemontools"
 PROVIDE="virtual/logger"
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup syslog
 	enewuser syslog -1 -1 /nonexistent syslog
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/syslogread-0.92-fix-parallel-build.patch
+}
+
+src_configure() {
 	echo "/usr/include/bglibs/" > conf-bgincs
-	echo "/usr/lib/bglibs/" > conf-bglibs
+	echo "/usr/$(get_libdir)/bglibs/" > conf-bglibs
 	echo "${D}/usr/bin" > conf-bin
 	echo "${D}/usr/share/man" > conf-man
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
-	# See bug #277586
-	emake -j1 || die
 }
 
 src_install() {
