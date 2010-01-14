@@ -1,9 +1,0 @@
---- RenderSystems/GL/src/Makefile.am.old	2009-12-16 12:12:56.000000000 +0100
-+++ RenderSystems/GL/src/Makefile.am	2009-12-16 12:14:43.000000000 +0100
-@@ -42,4 +42,5 @@
-     $(top_builddir)/RenderSystems/GL/src/GLSL/src/libGLSL.la \
-     $(top_builddir)/RenderSystems/GL/src/nvparse/libnvparse.la \
-     $(top_builddir)/RenderSystems/GL/src/atifs/src/libatifs.la \
--    $(GL_LIBS) $(GLSUPPORT_LIBS) -lOgreMain $(OGRE_THREAD_LIBS)
-+    $(top_builddir)/OgreMain/src/libOgreMain.la \
-+    $(GL_LIBS) $(GLSUPPORT_LIBS) $(OGRE_THREAD_LIBS)
