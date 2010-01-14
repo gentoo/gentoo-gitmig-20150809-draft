@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.66 2009/12/24 12:16:55 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.67 2010/01/14 15:06:06 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gpa-0.9.0.ebuild:
+  stable x86, bug 279367
 
   24 Dec 2009; Pacho Ramos <pacho@gentoo.org> gpa-0.9.0.ebuild:
   amd64 stable, bug 279367
