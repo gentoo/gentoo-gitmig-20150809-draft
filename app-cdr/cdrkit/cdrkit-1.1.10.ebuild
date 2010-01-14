@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.10.ebuild,v 1.4 2010/01/07 17:06:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.10.ebuild,v 1.5 2010/01/14 02:30:56 jer Exp $
 
 inherit cmake-utils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug hfs unicode"
 
 RDEPEND="unicode? ( virtual/libiconv )
