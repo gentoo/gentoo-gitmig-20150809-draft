@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.0.ebuild,v 1.1 2009/12/14 12:50:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.0.ebuild,v 1.2 2010/01/14 15:07:09 gurligebis Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim madwifi ps3 qt3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
 
 DEPEND="dev-libs/libnl
 	dbus? ( sys-apps/dbus )
@@ -37,6 +37,10 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}/${PN}"
 
 pkg_setup() {
+	if use fasteap && (use gnutls || use ssl) ; then
+		die "If you use fasteap, you must build with wpa_supplicant's internal TLS implementation.  That is, both 'gnutls' and 'ssl' USE flags must be disabled"
+	fi
+
 	if use gnutls && use ssl ; then
 		einfo "You have both 'gnutls' and 'ssl' USE flags enabled: defaulting to USE=\"ssl\""
 	fi
@@ -108,6 +112,10 @@ src_configure() {
 		echo "CONFIG_EAP_AKA=y"       >> .config
 		echo "CONFIG_EAP_AKA_PRIME=y" >> .config
 		echo "CONFIG_PCSC=y"          >> .config
+	fi
+
+	if use fasteap ; then
+		echo "CONFIG_EAP_FAST=y" >> .config
 	fi
 
 	if use readline ; then

@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-9999.ebuild,v 1.2 2009/05/22 08:11:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-9999.ebuild,v 1.3 2010/01/14 15:07:09 gurligebis Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs qt3 qt4
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="http://w1.fi/hostap.git"
+	EGIT_REPO_URI="git://w1.fi/srv/git/hostap.git"
 	inherit git
 	SRC_URI=""
 	S="${WORKDIR}/${P}/${PN}/${PN}"
@@ -23,7 +23,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="-*"
-IUSE="dbus debug gnutls eap-sim madwifi ps3 qt3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
 
 DEPEND="dev-libs/libnl
 	dbus? ( sys-apps/dbus )
@@ -58,6 +58,10 @@ src_unpack() {
 }
 
 pkg_setup() {
+	if use fasteap && (use gnutls || use ssl) ; then
+		die "If you use fasteap, you must build with wpa_supplicant's internal TLS implementation.  That is, both 'gnutls' and 'ssl' USE flags must be disabled"
+	fi
+
 	if use gnutls && use ssl ; then
 		einfo "You have both 'gnutls' and 'ssl' USE flags enabled: defaulting to USE=\"ssl\""
 	fi
@@ -88,7 +92,7 @@ src_prepare() {
 		-e "s:/usr/lib/pkcs11:/usr/$(get_libdir):" \
 		wpa_supplicant.conf || die
 
-	epatch "${FILESDIR}"/dbus_path_fix.patch
+	epatch "${FILESDIR}"/${P}-dbus_path_fix.patch
 }
 
 src_configure() {
@@ -132,6 +136,10 @@ src_configure() {
 		echo "CONFIG_EAP_AKA=y"       >> .config
 		echo "CONFIG_EAP_AKA_PRIME=y" >> .config
 		echo "CONFIG_PCSC=y"          >> .config
+	fi
+
+	if use fasteap ; then
+		echo "CONFIG_EAP_FAST=y" >> .config
 	fi
 
 	if use readline ; then

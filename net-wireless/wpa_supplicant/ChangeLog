@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/wpa_supplicant
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.126 2009/12/14 12:50:27 gurligebis Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.127 2010/01/14 15:07:09 gurligebis Exp $
+
+  14 Jan 2010; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  wpa_supplicant-0.6.9.ebuild, wpa_supplicant-0.7.0.ebuild,
+  wpa_supplicant-9999.ebuild, metadata.xml:
+  Adding support for FAST-EAP, fixing bug #300215
+
+  14 Jan 2010; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  wpa_supplicant-9999.ebuild,
+  +files/wpa_supplicant-9999-dbus_path_fix.patch:
+  Fixing bugs #300633 and #300305
 
 *wpa_supplicant-0.7.0 (14 Dec 2009)
 
