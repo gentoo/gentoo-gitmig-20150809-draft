@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Unaccent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unaccent/ChangeLog,v 1.14 2006/08/25 15:00:47 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unaccent/ChangeLog,v 1.15 2010/01/14 15:49:00 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Text-Unaccent-1.08.ebuild:
+  Transfer Prefix keywords
 
   25 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Text-Unaccent-1.08.ebuild:

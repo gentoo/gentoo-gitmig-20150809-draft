@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-WikiFormat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.26 2008/11/22 11:26:02 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.27 2010/01/14 15:51:57 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Text-WikiFormat-0.79.ebuild:
+  Transfer Prefix keywords
 
   22 Nov 2008; Torsten Veller <tove@gentoo.org> Text-WikiFormat-0.79.ebuild:
   Remove Module-Build from RDEPEND

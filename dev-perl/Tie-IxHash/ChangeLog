@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-IxHash
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.21 2007/08/21 13:53:58 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.22 2010/01/14 15:57:53 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  Tie-IxHash-1.21-r1.ebuild:
+  Transfer Prefix keywords
 
   21 Aug 2007; Jeroen Roovers <jer@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
   Stable for HPPA (bug #153189).
