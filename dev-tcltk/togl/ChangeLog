@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.7 2010/01/10 17:22:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.8 2010/01/14 19:28:11 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> togl-2.0-r1.ebuild:
+  Marking togl-2.0-r1 ~ppc for bug 298612
 
   10 Jan 2010; Brent Baude <ranger@gentoo.org> togl-2.0-r1.ebuild:
   Marking togl-2.0-r1 ~ppc64 for bug 298612
