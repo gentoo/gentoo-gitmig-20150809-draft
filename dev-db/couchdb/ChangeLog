@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.15 2009/12/24 15:27:52 djc Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.16 2010/01/14 09:59:48 djc Exp $
+
+  14 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> couchdb-0.10.1.ebuild:
+  Fix bugs 300010 and 296609.
 
   24 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.9.0.ebuild,
   -couchdb-0.9.1.ebuild:

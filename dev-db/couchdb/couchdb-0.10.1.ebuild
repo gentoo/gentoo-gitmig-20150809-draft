@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.10.1.ebuild,v 1.1 2009/12/03 20:44:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.10.1.ebuild,v 1.2 2010/01/14 09:59:48 djc Exp $
 
 EAPI="2"
 
@@ -33,7 +33,10 @@ pkg_setup() {
 src_configure() {
 	econf \
 		--with-erlang=/usr/lib/erlang/usr/include \
-		--localstatedir=/var
+		--localstatedir=/var \
+		--with-js-lib=/usr/lib
+	# bug 296609, upstream bug #COUCHDB-621
+	sed -e "s#localdocdir = /usr/share/doc/couchdb#localdocdir = /usr/share/doc/couchdb-0.10.1#" -i Makefile || die "sed failed"
 }
 
 src_install() {
