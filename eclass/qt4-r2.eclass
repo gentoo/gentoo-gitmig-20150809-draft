@@ -1,6 +1,6 @@
-# Copyright 2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.1 2009/12/15 16:32:43 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.2 2010/01/14 21:25:17 abcd Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -242,9 +242,11 @@ eqmake4() {
 		fi
 	done < <(find . -type f -name "*.pr[io]" -printf '%P\n' 2>/dev/null)
 
-	/usr/bin/qmake -makefile -nocache \
-		QTDIR=/usr/$(get_libdir) \
-		QMAKE=/usr/bin/qmake \
+	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
+
+	"${EPREFIX}"/usr/bin/qmake -makefile -nocache \
+		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
+		QMAKE="${EPREFIX}"/usr/bin/qmake \
 		QMAKE_CC=$(tc-getCC) \
 		QMAKE_CXX=$(tc-getCXX) \
 		QMAKE_LINK=$(tc-getCXX) \
