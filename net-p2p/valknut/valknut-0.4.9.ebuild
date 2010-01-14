@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.4.9.ebuild,v 1.5 2010/01/10 18:44:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.4.9.ebuild,v 1.6 2010/01/14 02:37:31 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/wxdcgui/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 x86"
 IUSE="gnome kde"
 
 RDEPEND="x11-libs/qt-gui:4[qt3support]
