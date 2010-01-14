@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XPath
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.28 2007/01/19 17:48:21 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.29 2010/01/14 18:38:23 grobian Exp $
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org> XML-XPath-1.13.ebuild:
+  Transfer Prefix keywords
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -XML-XPath-1.12.ebuild, -XML-XPath-1.12-r1.ebuild, XML-XPath-1.13.ebuild:
