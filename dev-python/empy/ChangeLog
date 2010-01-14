@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/empy
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.13 2008/07/30 21:59:51 pythonhead Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.14 2010/01/14 19:54:26 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> empy-3.3.ebuild:
+  Marking empy-3.3 ppc for bug 299383
 
   30 Jul 2008; Rob Cakebread <pythonhead@gentoo.org> -empy-3.2.ebuild,
   empy-3.3.ebuild:

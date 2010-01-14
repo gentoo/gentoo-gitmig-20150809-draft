@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.11 2008/08/01 22:27:14 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.12 2010/01/14 19:54:26 ranger Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.alcyone.com/software/empy/"
 SRC_URI="http://www.alcyone.com/software/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc x86"
+KEYWORDS="amd64 ia64 ppc x86"
 IUSE="doc"
 DEPEND="dev-lang/python"
 PYTHON_MODNAME="em.py"
