@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/peksystray
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.18 2007/08/08 10:08:17 omp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.19 2010/01/14 16:22:47 ssuominen Exp $
+
+  14 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  peksystray-0.4.0.ebuild, +files/peksystray-0.4.0-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #248577, thanks to Kacper Kowalik
+  for patch.
 
   08 Aug 2007; David Shakaryan <omp@gentoo.org>
   +files/peksystray-0.4.0-ldadd.patch, peksystray-0.4.0.ebuild:
