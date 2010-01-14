@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/echoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.6 2010/01/09 20:35:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.7 2010/01/14 01:04:33 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> echoe-4.1.ebuild:
+  Marking echoe-4.1 ~ppc64 for bug 298356
 
   09 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> echoe-4.1.ebuild,
   -files/echoe-4.1-optional-gemcutter.patch:
