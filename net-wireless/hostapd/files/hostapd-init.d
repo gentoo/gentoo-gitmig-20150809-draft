@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.6.9-init.d,v 1.2 2009/05/17 10:18:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-init.d,v 1.1 2010/01/14 14:36:18 gurligebis Exp $
 
 opts="start stop reload"
 

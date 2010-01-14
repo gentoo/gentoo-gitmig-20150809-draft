@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.9.ebuild,v 1.5 2009/09/11 11:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.9.ebuild,v 1.6 2010/01/14 14:36:18 gurligebis Exp $
 
 EAPI="2"
 
@@ -129,8 +129,8 @@ src_install() {
 	use ssl && dobin nt_password_hash
 	use ssl && dobin hlr_auc_gw
 
-	newinitd "${FILESDIR}"/${P}-init.d hostapd
-	newconfd "${FILESDIR}"/${P}-conf.d hostapd
+	newinitd "${FILESDIR}"/${PN}-init.d hostapd
+	newconfd "${FILESDIR}"/${PN}-conf.d hostapd
 
 	doman hostapd.8 hostapd_cli.1
 
