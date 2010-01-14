@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.75 2010/01/11 18:40:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.76 2010/01/14 12:27:02 yngwin Exp $
+
+*rb_libtorrent-0.14.8-r1 (14 Jan 2010)
+
+  14 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  -rb_libtorrent-0.14.7.ebuild, -rb_libtorrent-0.14.8.ebuild,
+  +rb_libtorrent-0.14.8-r1.ebuild:
+  Fix boost detection, thanks to Sebastian Mingramm in bug 295474. Remove
+  previous version. 0.14.8-r1 is next stable candidate.
 
 *rb_libtorrent-0.14.8 (11 Jan 2010)
 
