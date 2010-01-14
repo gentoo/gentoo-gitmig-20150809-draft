@@ -1,6 +1,14 @@
 # ChangeLog for dev-games/irrlicht
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.33 2009/10/25 15:46:18 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.34 2010/01/14 22:17:35 mr_bones_ Exp $
+
+*irrlicht-1.6.1 (14 Jan 2010)
+
+  14 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +irrlicht-1.6.1.ebuild, +files/irrlicht-1.6.1-config.patch,
+  +files/irrlicht-1.6.1-demoMake.patch,
+  +files/irrlicht-1.6.1-fix-directory.patch:
+  version bump - additional patching from Sven Eden via bug #300038
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> irrlicht-1.5.1.ebuild:
   amd64/x86 stable, bug #288907

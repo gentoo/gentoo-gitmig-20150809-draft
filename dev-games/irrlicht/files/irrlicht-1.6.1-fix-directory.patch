@@ -1,0 +1,1736 @@
+--- examples/01.HelloWorld/main.cpp
++++ examples/01.HelloWorld/main.cpp
+@@ -165,7 +165,7 @@
+ 	other supported file format. By the way, that cool Quake 2 model
+ 	called sydney was modelled by Brian Collins.
+ 	*/
+-	IAnimatedMesh* mesh = smgr->getMesh("../../media/sydney.md2");
++	IAnimatedMesh* mesh = smgr->getMesh("../media/sydney.md2");
+ 	if (!mesh)
+ 	{
+ 		device->drop();
+@@ -185,7 +185,7 @@
+ 	{
+ 		node->setMaterialFlag(EMF_LIGHTING, false);
+ 		node->setMD2Animation(scene::EMAT_STAND);
+-		node->setMaterialTexture( 0, driver->getTexture("../../media/sydney.bmp") );
++		node->setMaterialTexture( 0, driver->getTexture("../media/sydney.bmp") );
+ 	}
+ 
+ 	/*
+--- examples/01.HelloWorld/tutorial.html
++++ examples/01.HelloWorld/tutorial.html
+@@ -18,7 +18,7 @@
+                       with it. The program will show how to use the basics of 
+                       the VideoDriver, the GUIEnvironment and the SceneManager.<br>
+                       The result of this example will look like this:</p>
+-                    <p align="center"><img src="../../media/001shot.jpg" width="259" height="204"><br>
++                    <p align="center"><img src="../media/001shot.jpg" width="259" height="204"><br>
+                     </p>
+                   </div></td>
+ 
+@@ -52,7 +52,7 @@
+                           of irrlicht.lib to be listed, so select the 'Libraries' 
+                           tab and add the \lib\VisualStudio directory.<br>
+                           <br>
+-                          <img src="../../media/vc6optionsdir.jpg" width="231" height="172" align="middle">&nbsp;&nbsp;<img src="../../media/vc6include.jpg" width="231" height="159" align="middle"><br>
++                          <img src="../media/vc6optionsdir.jpg" width="231" height="172" align="middle">&nbsp;&nbsp;<img src="../media/vc6include.jpg" width="231" height="159" align="middle"><br>
+                           &nbsp; <br>
+ 
+                         </div>
+@@ -66,7 +66,7 @@
+                         need the irrlicht.lib to be found, so select 'show directories 
+                         for Library files' and add the \lib\VisualStudio directory.<br>
+                         <br>
+-                        <img src="../../media/vcnetinclude.jpg" width="256" height="160"> 
++                        <img src="../media/vcnetinclude.jpg" width="256" height="160"> 
+                         <br>
+                       </li>
+                     </ul>
+@@ -228,7 +228,7 @@
+                           was modelled by Brian Collins.</p>
+                         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+                           <tr> 
+-                            <td> <pre>IAnimatedMesh* mesh = smgr-&gt;getMesh(&quot;../../media/sydney.md2&quot;);<br>IAnimatedMeshSceneNode* node = smgr-&gt;addAnimatedMeshSceneNode( mesh );</pre> </td>
++                            <td> <pre>IAnimatedMesh* mesh = smgr-&gt;getMesh(&quot;../media/sydney.md2&quot;);<br>IAnimatedMeshSceneNode* node = smgr-&gt;addAnimatedMeshSceneNode( mesh );</pre> </td>
+ 
+                           </tr>
+                         </table>
+@@ -242,7 +242,7 @@
+                           color.</p>
+                         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+                           <tr> 
+-                            <td> <pre>if (node)<br>{<br>	node-&gt;setMaterialFlag(EMF_LIGHTING, false);<br>	node-&gt;setFrameLoop(0, 310);	<br>	node-&gt;setMaterialTexture( 0, driver-&gt;getTexture(&quot;../../media/sydney.bmp&quot;) );<br>}</pre> 
++                            <td> <pre>if (node)<br>{<br>	node-&gt;setMaterialFlag(EMF_LIGHTING, false);<br>	node-&gt;setFrameLoop(0, 310);	<br>	node-&gt;setMaterialTexture( 0, driver-&gt;getTexture(&quot;../media/sydney.bmp&quot;) );<br>}</pre> 
+                             </td>
+ 
+                           </tr>
+--- examples/02.Quake3Map/main.cpp
++++ examples/02.Quake3Map/main.cpp
+@@ -95,7 +95,7 @@
+ 	we are able to read from the files in that archive as if they are
+ 	directly stored on the disk.
+ 	*/
+-	device->getFileSystem()->addZipFileArchive("../../media/map-20kdm2.pk3");
++	device->getFileSystem()->addZipFileArchive("../media/map-20kdm2.pk3");
+ 
+ 	/*
+ 	Now we can load the mesh by calling
+--- examples/02.Quake3Map/tutorial.html
++++ examples/02.Quake3Map/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%"> <div align="center"><b><font color="#FFFFFF"></font></b></div>
+       <b><font color="#FFFFFF">Tutorial 2.Quake3Map</font></b></td>
+   </tr>
+@@ -20,7 +20,7 @@
+           of the engine before starting this tutorial, just take a short look 
+           at the first tutorial, 1.HelloWorld, if you haven't done this yet.<br>
+           The result of this example will look like this:</p>
+-        <p align="center"><img src="../../media/002shot.jpg" width="259" height="202"><br>
++        <p align="center"><img src="../media/002shot.jpg" width="259" height="202"><br>
+         </p>
+       </div></td>
+   </tr>
+@@ -96,7 +96,7 @@
+         from the files in that archive as they would directly be stored on disk.</p>
+       <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+         <tr> 
+-          <td> <pre>device-&gt;getFileSystem()-&gt;addZipFileArchive(&quot;../../media/map-20kdm2.pk3&quot;);</pre> </td>
++          <td> <pre>device-&gt;getFileSystem()-&gt;addZipFileArchive(&quot;../media/map-20kdm2.pk3&quot;);</pre> </td>
+         </tr>
+       </table>
+       <p>Now we can load the mesh by calling getMesh(). We get a pointer returned 
+--- examples/03.CustomSceneNode/tutorial.html
++++ examples/03.CustomSceneNode/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+ <div align="center"></div>
+@@ -33,7 +33,7 @@
+           At the end of the tutorial, the result will look like the image below. 
+           This looks not very exciting, but it is a complete customized scene 
+           node and a good point to start from creating you own scene nodes.</p>
+-        <p align="center"><img src="../../media/003shot.jpg" width="259" height="204"><br>
++        <p align="center"><img src="../media/003shot.jpg" width="259" height="204"><br>
+         </p>
+       </div>
+     </td>
+--- examples/04.Movement/main.cpp
++++ examples/04.Movement/main.cpp
+@@ -116,7 +116,7 @@
+ 	if (node)
+ 	{
+ 		node->setPosition(core::vector3df(0,0,30));
+-		node->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
++		node->setMaterialTexture(0, driver->getTexture("../media/wall.bmp"));
+ 		node->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	}
+ 
+@@ -133,7 +133,7 @@
+ 
+ 	if (n)
+ 	{
+-		n->setMaterialTexture(0, driver->getTexture("../../media/t351sml.jpg"));
++		n->setMaterialTexture(0, driver->getTexture("../media/t351sml.jpg"));
+ 		n->setMaterialFlag(video::EMF_LIGHTING, false);
+ 		scene::ISceneNodeAnimator* anim =
+ 			smgr->createFlyCircleAnimator(core::vector3df(0,0,30), 20.0f);
+@@ -149,7 +149,7 @@
+ 	a md2 model, which uses a 'fly straight' animator to run between to points.
+ 	*/
+ 	scene::IAnimatedMeshSceneNode* anms =
+-		smgr->addAnimatedMeshSceneNode(smgr->getMesh("../../media/ninja.b3d"));
++		smgr->addAnimatedMeshSceneNode(smgr->getMesh("../media/ninja.b3d"));
+ 
+ 	if (anms)
+ 	{
+@@ -182,7 +182,7 @@
+ 
+ 		anms->setScale(core::vector3df(2.f,2.f,2.f));
+ 		anms->setRotation(core::vector3df(0,-90,0));
+-//		anms->setMaterialTexture(0, driver->getTexture("../../media/sydney.bmp"));
++//		anms->setMaterialTexture(0, driver->getTexture("../media/sydney.bmp"));
+ 
+ 	}
+ 
+@@ -198,7 +198,7 @@
+ 	Add a colorful irrlicht logo
+ 	*/
+ 	device->getGUIEnvironment()->addImage(
+-		driver->getTexture("../../media/irrlichtlogoalpha2.tga"),
++		driver->getTexture("../media/irrlichtlogoalpha2.tga"),
+ 		core::position2d<s32>(10,20));
+ 
+ 	gui::IGUIStaticText* diagnostics = device->getGUIEnvironment()->addStaticText(
+--- examples/04.Movement/tutorial.html
++++ examples/04.Movement/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+ <div align="center"></div>
+@@ -23,7 +23,7 @@
+           of SceneNodeAnimators is shown as well as manual movement of nodes using 
+           the keyboard.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/004shot.jpg" width="259" height="204"><br>
++        <p align="center"><img src="../media/004shot.jpg" width="259" height="204"><br>
+         </p>
+       </div>
+     </td>
+@@ -101,7 +101,7 @@
+           <td><pre>node = smgr-&gt;addSphereSceneNode();
+ node-&gt;setPosition(core::vector3df(0,0,30));
+ node-&gt;setMaterialFlag(video::EMF_LIGHTING, false);
+-node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/wall.bmp&quot;));</pre></td>
++node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/wall.bmp&quot;));</pre></td>
+         </tr>
+       </table>
+       <p>Now we create another node, moving using a scene node animator. Scene 
+@@ -116,7 +116,7 @@
+       <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+         <tr> 
+           <td><pre>scene::ISceneNode* n = smgr-&gt;addCubeSceneNode();
+-n-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/t351sml.jpg&quot;));
++n-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/t351sml.jpg&quot;));
+ n-&gt;setMaterialFlag(video::EMF_LIGHTING, false);
+ scene::ISceneNodeAnimator* anim = 
+ 	smgr-&gt;createFlyCircleAnimator(core::vector3df(0,0,30), 20.0f);
+@@ -129,7 +129,7 @@
+         points.</p>
+       <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+         <tr> 
+-          <td> <pre>scene::IAnimatedMeshSceneNode* anms = smgr-&gt;addAnimatedMeshSceneNode(<br>		smgr-&gt;getMesh(&quot;../../media/sydney.md2&quot;));
++          <td> <pre>scene::IAnimatedMeshSceneNode* anms = smgr-&gt;addAnimatedMeshSceneNode(<br>		smgr-&gt;getMesh(&quot;../media/sydney.md2&quot;));
+ 
+ if (n)<br>	{<br>		anim = smgr-&gt;createFlyStraightAnimator(core::vector3df(100,0,60), <br>			core::vector3df(-100,0,60), 10000, true);<br>		anms-&gt;addAnimator(anim);<br>		anim-&gt;drop();</pre>
+             </td>
+@@ -146,7 +146,7 @@
+       <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+         <tr> 
+           <td> <pre>   anms-&gt;setMaterialFlag(video::EMF_LIGHTING, false);<br>   anms-&gt;setFrameLoop(320, 360);
+-   anms-&gt;setAnimationSpeed(30);<br>   anms-&gt;setRotation(core::vector3df(0,180.0f,0));<br>   anms-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/sydney.bmp&quot;));<br>}<br></pre></td>
++   anms-&gt;setAnimationSpeed(30);<br>   anms-&gt;setRotation(core::vector3df(0,180.0f,0));<br>   anms-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/sydney.bmp&quot;));<br>}<br></pre></td>
+         </tr>
+       </table>
+       <p>To be able to look at and move around in this scene, we create a first 
+--- examples/05.UserInterface/main.cpp
++++ examples/05.UserInterface/main.cpp
+@@ -205,7 +205,7 @@
+ 	*/
+ 
+ 	IGUISkin* skin = env->getSkin();
+-	IGUIFont* font = env->getFont("../../media/fonthaettenschweiler.bmp");
++	IGUIFont* font = env->getFont("../media/fonthaettenschweiler.bmp");
+ 	if (font)
+ 		skin->setFont(font);
+ 
+@@ -261,7 +261,7 @@
+ 	/*
+ 	And at last, we create a nice Irrlicht Engine logo in the top left corner. 
+ 	*/
+-	env->addImage(driver->getTexture("../../media/irrlichtlogo2.png"),
++	env->addImage(driver->getTexture("../media/irrlichtlogo2.png"),
+ 			position2d<int>(10,10));
+ 
+ 
+--- examples/05.UserInterface/tutorial.html
++++ examples/05.UserInterface/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+ <div align="center"></div>
+@@ -23,7 +23,7 @@
+           Engine. It will give a brief overview and show how to create and use 
+           windows, buttons, scroll bars, static texts and list boxes. </p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/005shot.jpg" width="259" height="204"><br>
++        <p align="center"><img src="../media/005shot.jpg" width="259" height="204"><br>
+         </p>
+       </div>
+     </td>
+@@ -197,8 +197,8 @@
+       <br>
+       <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+         <tr> 
+-          <td> <pre>IGUISkin* skin = env-&gt;getSkin();<br>IGUIFont* font = env-&gt;getFont(&quot;../../media/fonthaettenschweiler.bmp&quot;);<br>if (font)<br>	skin-&gt;setFont(font);</pre>
+-            <pre>IGUIImage* img = env-&gt;addImage(<br>		driver-&gt;getTexture(&quot;../../media/irrlichtlogoalpha.tga&quot;),<br>		position2d&lt;int&gt;(10,10));</pre></td>
++          <td> <pre>IGUISkin* skin = env-&gt;getSkin();<br>IGUIFont* font = env-&gt;getFont(&quot;../media/fonthaettenschweiler.bmp&quot;);<br>if (font)<br>	skin-&gt;setFont(font);</pre>
++            <pre>IGUIImage* img = env-&gt;addImage(<br>		driver-&gt;getTexture(&quot;../media/irrlichtlogoalpha.tga&quot;),<br>		position2d&lt;int&gt;(10,10));</pre></td>
+         </tr>
+       </table>
+       <p>That's all, we only have to draw everything.</p>
+--- examples/06.2DGraphics/main.cpp
++++ examples/06.2DGraphics/main.cpp
+@@ -72,7 +72,7 @@
+ 	e.g. all black pixels transparent. Please note that
+ 	makeColorKeyTexture just creates an alpha channel based on the color.
+ 	*/
+-	video::ITexture* images = driver->getTexture("../../media/2ddemo.png");
++	video::ITexture* images = driver->getTexture("../media/2ddemo.png");
+ 	driver->makeColorKeyTexture(images, core::position2d<s32>(0,0));
+ 
+ 	/*
+@@ -84,7 +84,7 @@
+ 	*/
+ 	gui::IGUIFont* font = device->getGUIEnvironment()->getBuiltInFont();
+ 	gui::IGUIFont* font2 =
+-		device->getGUIEnvironment()->getFont("../../media/fonthaettenschweiler.bmp");
++		device->getGUIEnvironment()->getFont("../media/fonthaettenschweiler.bmp");
+ 
+ 	core::rect<s32> imp1(349,15,385,78);
+ 	core::rect<s32> imp2(387,15,423,78);
+--- examples/06.2DGraphics/tutorial.html
++++ examples/06.2DGraphics/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+ <div align="center"></div>
+@@ -25,7 +25,7 @@
+           make a 2d game with the engine, or if you want to draw a cool interface 
+           or head up display for your 3d game.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/006shot.jpg" width="259" height="204"><br>
++        <p align="center"><img src="../media/006shot.jpg" width="259" height="204"><br>
+         </p>
+       </div>
+     </td>
+@@ -73,7 +73,7 @@
+           based on the color. </p>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td> <pre>video::ITexture* images = driver-&gt;getTexture(&quot;../../media/2ddemo.bmp&quot;);<br>driver-&gt;makeColorKeyTexture(images, core::position2d&lt;s32&gt;(0,0));</pre></td>
++            <td> <pre>video::ITexture* images = driver-&gt;getTexture(&quot;../media/2ddemo.bmp&quot;);<br>driver-&gt;makeColorKeyTexture(images, core::position2d&lt;s32&gt;(0,0));</pre></td>
+           </tr>
+         </table>
+         <p>To be able to draw some text with two different fonts, we load them. 
+@@ -84,7 +84,7 @@
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+             <td> <pre>gui::IGUIFont* font = device-&gt;getGUIEnvironment()-&gt;getBuiltInFont();<br>gui::IGUIFont* font2 = device-&gt;getGUIEnvironment()-&gt;getFont(
+-  &quot;../../media/fonthaettenschweiler.bmp&quot;);</pre>
++  &quot;../media/fonthaettenschweiler.bmp&quot;);</pre>
+               <pre>core::rect&lt;s32&gt; imp1(349,15,385,78);
+ core::rect&lt;s32&gt; imp2(387,15,423,78);</pre></td>
+           </tr>
+--- examples/07.Collision/main.cpp
++++ examples/07.Collision/main.cpp
+@@ -71,7 +71,7 @@
+ 	video::IVideoDriver* driver = device->getVideoDriver();
+ 	scene::ISceneManager* smgr = device->getSceneManager();
+ 
+-	device->getFileSystem()->addZipFileArchive("../../media/map-20kdm2.pk3");
++	device->getFileSystem()->addZipFileArchive("../media/map-20kdm2.pk3");
+ 
+ 	scene::IAnimatedMesh* q3levelmesh = smgr->getMesh("20kdm2.bsp");
+ 	scene::IMeshSceneNode* q3node = 0;
+@@ -171,7 +171,7 @@
+ 	// Add the billboard.
+ 	scene::IBillboardSceneNode * bill = smgr->addBillboardSceneNode();
+ 	bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR );
+-	bill->setMaterialTexture(0, driver->getTexture("../../media/particle.bmp"));
++	bill->setMaterialTexture(0, driver->getTexture("../media/particle.bmp"));
+ 	bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	bill->setMaterialFlag(video::EMF_ZBUFFER, false);
+ 	bill->setSize(core::dimension2d<f32>(20.0f, 20.0f));
+@@ -183,14 +183,14 @@
+ 	scene::IAnimatedMeshSceneNode* node = 0;
+ 
+ 	// Add an MD2 node, which uses vertex-based animation.
+-	node = smgr->addAnimatedMeshSceneNode(smgr->getMesh("../../media/faerie.md2"),
++	node = smgr->addAnimatedMeshSceneNode(smgr->getMesh("../media/faerie.md2"),
+ 						0, IDFlag_IsPickable | IDFlag_IsHighlightable);
+ 	node->setPosition(core::vector3df(-70,-15,-120)); // Put its feet on the floor.
+ 	node->setScale(core::vector3df(2, 2, 2)); // Make it appear realistically scaled
+ 	node->setMD2Animation(scene::EMAT_POINT);
+ 	node->setAnimationSpeed(20.f);
+ 	video::SMaterial material;
+-	material.setTexture(0, driver->getTexture("../../media/faerie2.bmp"));
++	material.setTexture(0, driver->getTexture("../media/faerie2.bmp"));
+ 	material.Lighting = true;
+ 	material.NormalizeNormals = true;
+ 	node->getMaterial(0) = material;
+@@ -202,7 +202,7 @@
+ 	selector->drop(); // We're done with this selector, so drop it now.
+ 
+ 	// This X files uses skeletal animation, but without skinning.
+-	node = smgr->addAnimatedMeshSceneNode(smgr->getMesh("../../media/dwarf.x"),
++	node = smgr->addAnimatedMeshSceneNode(smgr->getMesh("../media/dwarf.x"),
+ 						0, IDFlag_IsPickable | IDFlag_IsHighlightable);
+ 	node->setPosition(core::vector3df(-70,-66,0)); // Put its feet on the floor.
+ 	node->setRotation(core::vector3df(0,-90,0)); // And turn it towards the camera.
+@@ -212,7 +212,7 @@
+ 	selector->drop();
+ 
+ 	// And this B3D file uses skinned skeletal animation.
+-	node = smgr->addAnimatedMeshSceneNode(smgr->getMesh("../../media/ninja.b3d"),
++	node = smgr->addAnimatedMeshSceneNode(smgr->getMesh("../media/ninja.b3d"),
+ 						0, IDFlag_IsPickable | IDFlag_IsHighlightable);
+ 	node->setScale(core::vector3df(10, 10, 10));
+ 	node->setPosition(core::vector3df(-70,-66,-60));
+--- examples/07.Collision/tutorial.html
++++ examples/07.Collision/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+ <div align="center"></div>
+@@ -25,7 +25,7 @@
+           moving through 3d worlds with stair climbing and sliding, manual triangle 
+           picking and manual scene node picking.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/007shot.jpg" width="259" height="204"><br>
++        <p align="center"><img src="../media/007shot.jpg" width="259" height="204"><br>
+         </p>
+       </div>
+     </td>
+@@ -61,7 +61,7 @@
+ <font color="#008000">  // create device</font></font></pre> 
+                 <pre>  IrrlichtDevice *device = createDevice(driverType,
+      core::dimension2d&lt;s32&gt;(640, 480), 16, false);<br>
+-  if (device == 0)<br>    return 1; // could not create selected driver.<br><br>  video::IVideoDriver* driver = device-&gt;getVideoDriver();<br>  scene::ISceneManager* smgr = device-&gt;getSceneManager();<br><br>  <font size="2">device-&gt;getFileSystem()-&gt;addZipFileArchive<br>      (<font color="#FF0000">&quot;../../media/map-20kdm2.pk3&quot;</font>);
++  if (device == 0)<br>    return 1; // could not create selected driver.<br><br>  video::IVideoDriver* driver = device-&gt;getVideoDriver();<br>  scene::ISceneManager* smgr = device-&gt;getSceneManager();<br><br>  <font size="2">device-&gt;getFileSystem()-&gt;addZipFileArchive<br>      (<font color="#FF0000">&quot;../media/map-20kdm2.pk3&quot;</font>);
+ 
+ 	
+ 	scene::IAnimatedMesh* q3levelmesh = smgr-&gt;getMesh(<font color="#FF0000">&quot;20kdm2.bsp&quot;</font>);
+@@ -161,18 +161,18 @@
+ 
+ </i></font>	scene::IBillboardSceneNode * bill = smgr-&gt;addBillboardSceneNode();
+ 	bill-&gt;setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR );
+-	bill-&gt;setMaterialTexture(<font color="#800080">0</font>, driver-&gt;getTexture(<br>         <font color="#FF0000">&quot;../../media/particle.bmp&quot;</font>));
++	bill-&gt;setMaterialTexture(<font color="#800080">0</font>, driver-&gt;getTexture(<br>         <font color="#FF0000">&quot;../media/particle.bmp&quot;</font>));
+ 	bill-&gt;setMaterialFlag(video::EMF_LIGHTING, <b>false</b>);
+ 	bill-&gt;setSize(core::dimension2d&lt;f32&gt;(<font color="#800080">20.0f</font>, <font color="#800080">20.0f</font>));
+ 
+ 	<font color="#0A246A"><i>// add 3 animated faeries.
+ 
+ </i></font>	video::SMaterial material;
+-	material.Texture1 = driver-&gt;getTexture(<font color="#FF0000"><br>         &quot;../../media/faerie2.bmp&quot;</font>);
++	material.Texture1 = driver-&gt;getTexture(<font color="#FF0000"><br>         &quot;../media/faerie2.bmp&quot;</font>);
+ 	material.Lighting = <b>true</b>;
+ 
+ 	scene::IAnimatedMeshSceneNode* node = <font color="#800080">0</font>;
+-	scene::IAnimatedMesh* faerie = smgr-&gt;getMesh(<br>        <font color="#FF0000">&quot;../../media/faerie.md2&quot;</font>);
++	scene::IAnimatedMesh* faerie = smgr-&gt;getMesh(<br>        <font color="#FF0000">&quot;../media/faerie.md2&quot;</font>);
+ 
+ 	<b>if </b>(faerie)
+ 	{
+--- examples/08.SpecialFX/main.cpp
++++ examples/08.SpecialFX/main.cpp
+@@ -83,14 +83,14 @@
+ 	off too with this code.
+ 	*/
+ 
+-	scene::IAnimatedMesh* mesh = smgr->getMesh("../../media/room.3ds");
++	scene::IAnimatedMesh* mesh = smgr->getMesh("../media/room.3ds");
+ 
+ 	smgr->getMeshManipulator()->makePlanarTextureMapping(mesh->getMesh(0), 0.004f);
+ 
+ 	scene::ISceneNode* node = 0;
+ 
+ 	node = smgr->addAnimatedMeshSceneNode(mesh);
+-	node->setMaterialTexture(0, driver->getTexture("../../media/wall.jpg"));
++	node->setMaterialTexture(0, driver->getTexture("../media/wall.jpg"));
+ 	node->getMaterial(0).SpecularColor.set(0,0,0,0);
+ 
+ 	/*
+@@ -113,8 +113,8 @@
+ 	node = smgr->addWaterSurfaceSceneNode(mesh->getMesh(0), 3.0f, 300.0f, 30.0f);
+ 	node->setPosition(core::vector3df(0,7,0));
+ 
+-	node->setMaterialTexture(0, driver->getTexture("../../media/stones.jpg"));
+-	node->setMaterialTexture(1, driver->getTexture("../../media/water.jpg"));
++	node->setMaterialTexture(0, driver->getTexture("../media/stones.jpg"));
++	node->setMaterialTexture(1, driver->getTexture("../media/water.jpg"));
+ 
+ 	node->setMaterialType(video::EMT_REFLECTION_2_LAYER);
+ 
+@@ -139,7 +139,7 @@
+ 	node = smgr->addBillboardSceneNode(node, core::dimension2d<f32>(50, 50));
+ 	node->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	node->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-	node->setMaterialTexture(0, driver->getTexture("../../media/particlewhite.bmp"));
++	node->setMaterialTexture(0, driver->getTexture("../media/particlewhite.bmp"));
+ 
+ 	/*
+ 	The next special effect is a lot more interesting: A particle system.
+@@ -203,7 +203,7 @@
+ 	ps->setScale(core::vector3df(2,2,2));
+ 	ps->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	ps->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
+-	ps->setMaterialTexture(0, driver->getTexture("../../media/fire.bmp"));
++	ps->setMaterialTexture(0, driver->getTexture("../media/fire.bmp"));
+ 	ps->setMaterialType(video::EMT_TRANSPARENT_VERTEX_ALPHA);
+ 
+ 	/*
+@@ -228,7 +228,7 @@
+ 		for (s32 g=7; g > 0; --g)
+ 		{
+ 			core::stringc tmp;
+-			tmp = "../../media/portal";
++			tmp = "../media/portal";
+ 			tmp += g;
+ 			tmp += ".bmp";
+ 			video::ITexture* t = driver->getTexture( tmp.c_str() );
+@@ -263,7 +263,7 @@
+ 
+ 	// add animated character
+ 
+-	mesh = smgr->getMesh("../../media/dwarf.x");
++	mesh = smgr->getMesh("../media/dwarf.x");
+ 	scene::IAnimatedMeshSceneNode* anode = 0;
+ 
+ 	anode = smgr->addAnimatedMeshSceneNode(mesh);
+--- examples/08.SpecialFX/tutorial.html
++++ examples/08.SpecialFX/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+ <div align="left"><b><font color="#FFFFFF">Tutorial 8. Special Effects</font></b></div>
+@@ -22,7 +22,7 @@
+           use stencil buffer shadows, the particle system, billboards, dynamic 
+           light and the water surface scene node. </p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/008shot.jpg" width="259" height="204"><br>
++        <p align="center"><img src="../media/008shot.jpg" width="259" height="204"><br>
+         </p>
+       </div>
+     </td>
+@@ -82,7 +82,7 @@
+           <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+             <tr> 
+               <td> <pre><font  size=2>	scene::IAnimatedMesh* mesh = smgr-&gt;getMesh(
+-		<font color="#FF0000">&quot;../../media/room.3ds&quot;</font>);
++		<font color="#FF0000">&quot;../media/room.3ds&quot;</font>);
+ 
+ 	smgr-&gt;getMeshManipulator()-&gt;makePlanarTextureMapping(
+ 		mesh-&gt;getMesh(<font color="#800080">0</font>), <font color="#800080">0.008f</font>);
+@@ -90,7 +90,7 @@
+ 	scene::ISceneNode* node = <font color="#800080">0</font>;
+ 
+ 	node = smgr-&gt;addAnimatedMeshSceneNode(mesh);
+-	node-&gt;setMaterialTexture(<font color="#800080">0</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../../media/wall.jpg&quot;</font>));
++	node-&gt;setMaterialTexture(<font color="#800080">0</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../media/wall.jpg&quot;</font>));
+ 	node-&gt;getMaterial(0).SpecularColor.set(0,0,0,0);</font></pre></td>
+             </tr>
+           </table>
+@@ -113,8 +113,8 @@
+ 	node = smgr-&gt;addWaterSurfaceSceneNode(mesh-&gt;getMesh(<font color="#800080">0</font>), <font color="#800080">3.0f</font>, <font color="#800080">300.0f</font>, <font color="#800080">30.0f</font>);
+ 	node-&gt;setPosition(core::vector3df(<font color="#800080">0</font>,<font color="#800080">7</font>,<font color="#800080">0</font>));
+ 
+-	node-&gt;setMaterialTexture(<font color="#800080">0</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../../media/stones.jpg&quot;</font>));
+-	node-&gt;setMaterialTexture(<font color="#800080">1</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../../media/water.jpg&quot;</font>));
++	node-&gt;setMaterialTexture(<font color="#800080">0</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../media/stones.jpg&quot;</font>));
++	node-&gt;setMaterialTexture(<font color="#800080">1</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../media/water.jpg&quot;</font>));
+ 
+ 	node-&gt;setMaterialType(video::EMT_REFLECTION_2_LAYER<font  size=3 face="Courier New">);
+ </font></pre></td>
+@@ -141,7 +141,7 @@
+ </i></font>	node = smgr-&gt;addBillboardSceneNode(node, core::dimension2d&lt;f32&gt;(<font color="#800080">50</font>, <font color="#800080">50</font>));
+ 	node-&gt;setMaterialFlag(video::EMF_LIGHTING, <b>false</b>);
+ 	node-&gt;setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-	node-&gt;setMaterialTexture(<font color="#800080">0</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../../media/particlewhite.bmp&quot;</font>));
++	node-&gt;setMaterialTexture(<font color="#800080">0</font>,	driver-&gt;getTexture(<font color="#FF0000">&quot;../media/particlewhite.bmp&quot;</font>));
+ 
+ </font></pre></td>
+             </tr>
+@@ -201,7 +201,7 @@
+ 	paf-&gt;drop();
+ 
+ 	ps-&gt;setMaterialFlag(video::EMF_LIGHTING, <b>false</b>);
+-	ps-&gt;setMaterialTexture(<font color="#800080">0</font>, driver-&gt;getTexture(<font color="#FF0000">&quot;../../media/particle.bmp&quot;</font>));
++	ps-&gt;setMaterialTexture(<font color="#800080">0</font>, driver-&gt;getTexture(<font color="#FF0000">&quot;../media/particle.bmp&quot;</font>));
+ 	ps-&gt;setMaterialType(video::EMT_TRANSPARENT_VERTEX_ALPHA)<font size="2">;</font></font></pre></td>
+           </tr>
+         </table>
+@@ -219,7 +219,7 @@
+           because the normals will be scaled too.</p>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre><font  size=2>	mesh = smgr-&gt;getMesh(<font color="#FF0000">&quot;../../media/dwarf.x&quot;</font>);
++            <td><pre><font  size=2>	mesh = smgr-&gt;getMesh(<font color="#FF0000">&quot;../media/dwarf.x&quot;</font>);
+ 	scene::IAnimatedMeshSceneNode* anode = <font color="#800080">0</font>;
+ 
+ 	anode = smgr-&gt;addAnimatedMeshSceneNode(mesh);
+--- examples/09.Meshviewer/main.cpp
++++ examples/09.Meshviewer/main.cpp
+@@ -611,7 +611,7 @@
+ 	smgr->addLightSceneNode(0, core::vector3df(200,200,200),
+ 		video::SColorf(1.0f,1.0f,1.0f),2000);
+ 	// add our media directory as "search path"
+-	Device->getFileSystem()->addFolderFileArchive("../../media/");
++	Device->getFileSystem()->addFolderFileArchive("../media/");
+ 
+ 	/*
+ 	The next step is to read the configuration file. It is stored in the xml
+--- examples/09.Meshviewer/tutorial.html
++++ examples/09.Meshviewer/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+         <div align="left"><b><font color="#FFFFFF">Tutorial 9. Mesh Viewer</font></b></div>
+@@ -25,7 +25,7 @@
+           Menus, ComboBoxes, Tabcontrols, Editboxes, Images, MessageBoxes, SkyBoxes, 
+           and how to parse XML files with the integrated XML reader of the engine.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/009shot.jpg" width="260" height="203"><br>
++        <p align="center"><img src="../media/009shot.jpg" width="260" height="203"><br>
+         </p>
+       </div>
+     </td>
+@@ -122,7 +122,7 @@
+           Irrlicht Engine integrated XML parser: </p>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre>	<font color="#006600">// read configuration from xml file</font><br>	io::IXMLReader* xml =<br>		Device-&gt;getFileSystem()-&gt;createXMLReader(&quot;../../media/config.xml&quot;);<br>	while(xml &amp;&amp; xml-&gt;read())<br>	{<br>		switch(xml-&gt;getNodeType())<br>		{<br>		case io::EXN_TEXT:<br>			<font color="#006600">// in this xml file, the only text which occurs is the messageText</font><br>			MessageText = xml-&gt;getNodeData();<br>			break;<br>		case io::EXN_ELEMENT:<br>			{<br>				if (core::stringw(&quot;startUpModel&quot;) == xml-&gt;getNodeName())<br>					StartUpModelFile = xml-&gt;getAttributeValue(L&quot;file&quot;);<br>				else<br>				if (core::stringw(&quot;messageText&quot;) == xml-&gt;getNodeName())<br>					Caption = xml-&gt;getAttributeValue(L&quot;caption&quot;);<br>			}<br>			break;<br>		}<br>	}<br>	if (xml)<br>		xml-&gt;drop(); <font color="#006600">// don't forget to delete the xml reader </font><br>
++            <td><pre>	<font color="#006600">// read configuration from xml file</font><br>	io::IXMLReader* xml =<br>		Device-&gt;getFileSystem()-&gt;createXMLReader(&quot;../media/config.xml&quot;);<br>	while(xml &amp;&amp; xml-&gt;read())<br>	{<br>		switch(xml-&gt;getNodeType())<br>		{<br>		case io::EXN_TEXT:<br>			<font color="#006600">// in this xml file, the only text which occurs is the messageText</font><br>			MessageText = xml-&gt;getNodeData();<br>			break;<br>		case io::EXN_ELEMENT:<br>			{<br>				if (core::stringw(&quot;startUpModel&quot;) == xml-&gt;getNodeName())<br>					StartUpModelFile = xml-&gt;getAttributeValue(L&quot;file&quot;);<br>				else<br>				if (core::stringw(&quot;messageText&quot;) == xml-&gt;getNodeName())<br>					Caption = xml-&gt;getAttributeValue(L&quot;caption&quot;);<br>			}<br>			break;<br>		}<br>	}<br>	if (xml)<br>		xml-&gt;drop(); <font color="#006600">// don't forget to delete the xml reader </font><br>
+ </pre></td>
+           </tr>
+         </table>
+@@ -135,7 +135,7 @@
+           &quot;File&quot; entry is the menu item with index 0. </p>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre>	<font color="#006600">// set a nicer font</font><br>	IGUISkin* skin = env-&gt;getSkin();<br>	IGUIFont* font = env-&gt;getFont(&quot;../../media/fonthaettenschweiler.bmp&quot;);<br>	if (font)<br>		skin-&gt;setFont(font);<br><br><font color="#006600">	// create menu</font><br>	gui::IGUIContextMenu* menu = env-&gt;addMenu();<br>	menu-&gt;addItem(L&quot;File&quot;, -1, true, true);<br>	menu-&gt;addItem(L&quot;View&quot;, -1, true, true);<br>	menu-&gt;addItem(L&quot;Help&quot;, -1, true, true);<br><br>	gui::IGUIContextMenu* submenu;<br>	submenu = menu-&gt;getSubMenu(0);<br>	submenu-&gt;addItem(L&quot;Open Model File...&quot;, 100);<br>	submenu-&gt;addSeparator();<br>	submenu-&gt;addItem(L&quot;Quit&quot;, 200);<br><br>	submenu = menu-&gt;getSubMenu(1);<br>	submenu-&gt;addItem(L&quot;toggle sky box visibility&quot;, 300);<br>	submenu-&gt;addItem(L&quot;toggle model debug information&quot;, 400);<br>	submenu-&gt;addItem(L&quot;model material&quot;, -1, true, true );<br><br>	submenu = submenu-&gt;getSubMenu(2);<br>	submenu-&gt;addItem(L&quot;Solid&quot;, 610);<br>	submenu-&gt;addItem(L&quot;Transparent&quot;, 620);<br>	submenu-&gt;addItem(L&quot;Reflection&quot;, 630);<br><br>	submenu = menu-&gt;getSubMenu(2);<br>	submenu-&gt;addItem(L&quot;About&quot;, 500);
++            <td><pre>	<font color="#006600">// set a nicer font</font><br>	IGUISkin* skin = env-&gt;getSkin();<br>	IGUIFont* font = env-&gt;getFont(&quot;../media/fonthaettenschweiler.bmp&quot;);<br>	if (font)<br>		skin-&gt;setFont(font);<br><br><font color="#006600">	// create menu</font><br>	gui::IGUIContextMenu* menu = env-&gt;addMenu();<br>	menu-&gt;addItem(L&quot;File&quot;, -1, true, true);<br>	menu-&gt;addItem(L&quot;View&quot;, -1, true, true);<br>	menu-&gt;addItem(L&quot;Help&quot;, -1, true, true);<br><br>	gui::IGUIContextMenu* submenu;<br>	submenu = menu-&gt;getSubMenu(0);<br>	submenu-&gt;addItem(L&quot;Open Model File...&quot;, 100);<br>	submenu-&gt;addSeparator();<br>	submenu-&gt;addItem(L&quot;Quit&quot;, 200);<br><br>	submenu = menu-&gt;getSubMenu(1);<br>	submenu-&gt;addItem(L&quot;toggle sky box visibility&quot;, 300);<br>	submenu-&gt;addItem(L&quot;toggle model debug information&quot;, 400);<br>	submenu-&gt;addItem(L&quot;model material&quot;, -1, true, true );<br><br>	submenu = submenu-&gt;getSubMenu(2);<br>	submenu-&gt;addItem(L&quot;Solid&quot;, 610);<br>	submenu-&gt;addItem(L&quot;Transparent&quot;, 620);<br>	submenu-&gt;addItem(L&quot;Reflection&quot;, 630);<br><br>	submenu = menu-&gt;getSubMenu(2);<br>	submenu-&gt;addItem(L&quot;About&quot;, 500);
+ </pre></td>
+           </tr>
+         </table>
+@@ -145,7 +145,7 @@
+         <br>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre><font color="#006600">	// create toolbar</font><br>	gui::IGUIToolBar* bar = env-&gt;addToolBar();<br>	bar-&gt;addButton(1102, 0, driver-&gt;getTexture(&quot;../../media/open.bmp&quot;));<br>	bar-&gt;addButton(1103, 0, driver-&gt;getTexture(&quot;../../media/help.bmp&quot;));<br>	bar-&gt;addButton(1104, 0, driver-&gt;getTexture(&quot;../../media/tools.bmp&quot;));<br><br><font color="#006600">	// create a combobox with some senseless texts</font><br>	gui::IGUIComboBox* box = env-&gt;addComboBox(core::rect&lt;s32&gt;(100,5,200,25), bar);<br>	box-&gt;addItem(L&quot;Bilinear&quot;);<br>	box-&gt;addItem(L&quot;Trilinear&quot;);<br>	box-&gt;addItem(L&quot;Anisotropic&quot;);<br>	box-&gt;addItem(L&quot;Isotropic&quot;);<br>	box-&gt;addItem(L&quot;Psychedelic&quot;);<br>	box-&gt;addItem(L&quot;No filtering&quot;);</pre></td>
++            <td><pre><font color="#006600">	// create toolbar</font><br>	gui::IGUIToolBar* bar = env-&gt;addToolBar();<br>	bar-&gt;addButton(1102, 0, driver-&gt;getTexture(&quot;../media/open.bmp&quot;));<br>	bar-&gt;addButton(1103, 0, driver-&gt;getTexture(&quot;../media/help.bmp&quot;));<br>	bar-&gt;addButton(1104, 0, driver-&gt;getTexture(&quot;../media/tools.bmp&quot;));<br><br><font color="#006600">	// create a combobox with some senseless texts</font><br>	gui::IGUIComboBox* box = env-&gt;addComboBox(core::rect&lt;s32&gt;(100,5,200,25), bar);<br>	box-&gt;addItem(L&quot;Bilinear&quot;);<br>	box-&gt;addItem(L&quot;Trilinear&quot;);<br>	box-&gt;addItem(L&quot;Anisotropic&quot;);<br>	box-&gt;addItem(L&quot;Isotropic&quot;);<br>	box-&gt;addItem(L&quot;Psychedelic&quot;);<br>	box-&gt;addItem(L&quot;No filtering&quot;);</pre></td>
+           </tr>
+         </table>
+         <br>
+@@ -156,7 +156,7 @@
+         <br>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre>	<font color="#006600">// disable alpha</font><br>	for (s32 i=0; i&lt;gui::EGDC_COUNT ; ++i)<br>	{<br>		video::SColor col = env-&gt;getSkin()-&gt;getColor((gui::EGUI_DEFAULT_COLOR)i);<br>		col.setAlpha(255);<br>		env-&gt;getSkin()-&gt;setColor((gui::EGUI_DEFAULT_COLOR)i, col);<br>	}<br><br><font color="#006600">	// add a tabcontrol</font><br>	createToolBox();<br><br>	<font color="#006600">// add the irrlicht engine logo</font><br>	IGUIImage* img = env-&gt;addImage(core::rect&lt;s32&gt;(22,429,108,460), 0, 666);<br>	img-&gt;setImage(driver-&gt;getTexture(&quot;../../media/irrlichtlogoaligned.jpg&quot;));<br><br>	<font color="#006600">// create fps text </font><br>	IGUIStaticText* fpstext =<br>		env-&gt;addStaticText(L&quot;&quot;, core::rect&lt;s32&gt;(210,26,270,41), true);<br><br>	<font color="#006600">// set window caption</font><br>	Caption += &quot; - [&quot;;<br>	Caption += driver-&gt;getName();<br>	Caption += &quot;]&quot;;<br>	Device-&gt;setWindowCaption(Caption.c_str());</pre></td>
++            <td><pre>	<font color="#006600">// disable alpha</font><br>	for (s32 i=0; i&lt;gui::EGDC_COUNT ; ++i)<br>	{<br>		video::SColor col = env-&gt;getSkin()-&gt;getColor((gui::EGUI_DEFAULT_COLOR)i);<br>		col.setAlpha(255);<br>		env-&gt;getSkin()-&gt;setColor((gui::EGUI_DEFAULT_COLOR)i, col);<br>	}<br><br><font color="#006600">	// add a tabcontrol</font><br>	createToolBox();<br><br>	<font color="#006600">// add the irrlicht engine logo</font><br>	IGUIImage* img = env-&gt;addImage(core::rect&lt;s32&gt;(22,429,108,460), 0, 666);<br>	img-&gt;setImage(driver-&gt;getTexture(&quot;../media/irrlichtlogoaligned.jpg&quot;));<br><br>	<font color="#006600">// create fps text </font><br>	IGUIStaticText* fpstext =<br>		env-&gt;addStaticText(L&quot;&quot;, core::rect&lt;s32&gt;(210,26,270,41), true);<br><br>	<font color="#006600">// set window caption</font><br>	Caption += &quot; - [&quot;;<br>	Caption += driver-&gt;getName();<br>	Caption += &quot;]&quot;;<br>	Device-&gt;setWindowCaption(Caption.c_str());</pre></td>
+           </tr>
+         </table>
+         <br>
+@@ -168,7 +168,7 @@
+         <br>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre>	<font color="#006600">// show about message box and load default model</font><br>	showAboutText();<br>	loadModel(StartUpModelFile.c_str());<br><font color="#006600"><br>	// add skybox</font> <br>	SkyBox = smgr-&gt;addSkyBoxSceneNode(<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_up.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_dn.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_lf.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_rt.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_ft.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_bk.bmp&quot;));<br><br><font color="#006600">	// add a camera scene node </font><br>	smgr-&gt;addCameraSceneNodeMaya();<br>	<br>	<font color="#006600">// draw everything</font><br>	while(Device-&gt;run() &amp;&amp; driver)<br>		if (Device-&gt;isWindowActive())<br>		{<br>			driver-&gt;beginScene(true, true, video::SColor(150,50,50,50));<br>			smgr-&gt;drawAll();<br>			env-&gt;drawAll();<br>		<br>			driver-&gt;endScene();<br><br>			core::stringw str = L&quot;FPS: &quot;;<br>			str += driver-&gt;getFPS();<br>			fpstext-&gt;setText(str.c_str());<br>		}<br>	Device-&gt;drop();<br>	return 0;<br>}<br></pre></td>
++            <td><pre>	<font color="#006600">// show about message box and load default model</font><br>	showAboutText();<br>	loadModel(StartUpModelFile.c_str());<br><font color="#006600"><br>	// add skybox</font> <br>	SkyBox = smgr-&gt;addSkyBoxSceneNode(<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_up.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_dn.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_lf.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_rt.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_ft.bmp&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_bk.bmp&quot;));<br><br><font color="#006600">	// add a camera scene node </font><br>	smgr-&gt;addCameraSceneNodeMaya();<br>	<br>	<font color="#006600">// draw everything</font><br>	while(Device-&gt;run() &amp;&amp; driver)<br>		if (Device-&gt;isWindowActive())<br>		{<br>			driver-&gt;beginScene(true, true, video::SColor(150,50,50,50));<br>			smgr-&gt;drawAll();<br>			env-&gt;drawAll();<br>		<br>			driver-&gt;endScene();<br><br>			core::stringw str = L&quot;FPS: &quot;;<br>			str += driver-&gt;getFPS();<br>			fpstext-&gt;setText(str.c_str());<br>		}<br>	Device-&gt;drop();<br>	return 0;<br>}<br></pre></td>
+           </tr>
+         </table>
+         <br>
+--- examples/10.Shaders/main.cpp
++++ examples/10.Shaders/main.cpp
+@@ -177,32 +177,32 @@
+ 	switch(driverType)
+ 	{
+ 	case video::EDT_DIRECT3D8:
+-		psFileName = "../../media/d3d8.psh";
+-		vsFileName = "../../media/d3d8.vsh";
++		psFileName = "../media/d3d8.psh";
++		vsFileName = "../media/d3d8.vsh";
+ 		break;
+ 	case video::EDT_DIRECT3D9:
+ 		if (UseHighLevelShaders)
+ 		{
+-			psFileName = "../../media/d3d9.hlsl";
++			psFileName = "../media/d3d9.hlsl";
+ 			vsFileName = psFileName; // both shaders are in the same file
+ 		}
+ 		else
+ 		{
+-			psFileName = "../../media/d3d9.psh";
+-			vsFileName = "../../media/d3d9.vsh";
++			psFileName = "../media/d3d9.psh";
++			vsFileName = "../media/d3d9.vsh";
+ 		}
+ 		break;
+ 
+ 	case video::EDT_OPENGL:
+ 		if (UseHighLevelShaders)
+ 		{
+-			psFileName = "../../media/opengl.frag";
+-			vsFileName = "../../media/opengl.vert";
++			psFileName = "../media/opengl.frag";
++			vsFileName = "../media/opengl.vert";
+ 		}
+ 		else
+ 		{
+-			psFileName = "../../media/opengl.psh";
+-			vsFileName = "../../media/opengl.vsh";
++			psFileName = "../media/opengl.psh";
++			vsFileName = "../media/opengl.vsh";
+ 		}
+ 		break;
+ 	}
+@@ -311,7 +311,7 @@
+ 
+ 	scene::ISceneNode* node = smgr->addCubeSceneNode(50);
+ 	node->setPosition(core::vector3df(0,0,0));
+-	node->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
++	node->setMaterialTexture(0, driver->getTexture("../media/wall.bmp"));
+ 	node->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	node->setMaterialType((video::E_MATERIAL_TYPE)newMaterialType1);
+ 
+@@ -332,7 +332,7 @@
+ 
+ 	node = smgr->addCubeSceneNode(50);
+ 	node->setPosition(core::vector3df(0,-10,50));
+-	node->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
++	node->setMaterialTexture(0, driver->getTexture("../media/wall.bmp"));
+ 	node->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	node->setMaterialType((video::E_MATERIAL_TYPE)newMaterialType2);
+ 
+@@ -353,7 +353,7 @@
+ 
+ 	node = smgr->addCubeSceneNode(50);
+ 	node->setPosition(core::vector3df(0,50,25));
+-	node->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
++	node->setMaterialTexture(0, driver->getTexture("../media/wall.bmp"));
+ 	node->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	smgr->addTextSceneNode(gui->getBuiltInFont(), L"NO SHADER",
+ 		video::SColor(255,255,255,255), node);
+@@ -369,12 +369,12 @@
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);
+ 
+ 	smgr->addSkyBoxSceneNode(
+-		driver->getTexture("../../media/irrlicht2_up.jpg"),
+-		driver->getTexture("../../media/irrlicht2_dn.jpg"),
+-		driver->getTexture("../../media/irrlicht2_lf.jpg"),
+-		driver->getTexture("../../media/irrlicht2_rt.jpg"),
+-		driver->getTexture("../../media/irrlicht2_ft.jpg"),
+-		driver->getTexture("../../media/irrlicht2_bk.jpg"));
++		driver->getTexture("../media/irrlicht2_up.jpg"),
++		driver->getTexture("../media/irrlicht2_dn.jpg"),
++		driver->getTexture("../media/irrlicht2_lf.jpg"),
++		driver->getTexture("../media/irrlicht2_rt.jpg"),
++		driver->getTexture("../media/irrlicht2_ft.jpg"),
++		driver->getTexture("../media/irrlicht2_bk.jpg"));
+ 
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
+ 
+--- examples/10.Shaders/tutorial.html
++++ examples/10.Shaders/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+         <div align="left"><b><font color="#FFFFFF">Tutorial 10. Shaders</font></b></div>
+@@ -26,7 +26,7 @@
+           to read the D3D or OpenGL documentation, to search a tutorial, or to 
+           read a book about this.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/010shot.jpg" width="260" height="203"><br>
++        <p align="center"><img src="../media/010shot.jpg" width="260" height="203"><br>
+         </p>
+       </div>
+     </td>
+@@ -91,7 +91,7 @@
+             and use later addShaderMaterial() instead of addShaderMaterialFromFiles().</p>
+           <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+             <tr> 
+-              <td> <pre>	c8* vsFileName = 0<font color="#006600">; // filename for the vertex shader</font><br>	c8* psFileName = 0<font color="#006600">; // filename for the pixel shader</font><br><br>	switch(driverType)<br>	{<br>	case video::EDT_DIRECT3D8:<br>		psFileName = &quot;../../media/d3d8.psh&quot;;<br>		vsFileName = &quot;../../media/d3d8.vsh&quot;;<br>		break;<br>	case video::EDT_DIRECT3D9:<br>		if (UseHighLevelShaders)<br>		{<br>			psFileName = &quot;../../media/d3d9.hlsl&quot;;<br>			vsFileName = psFileName; <font color="#006600">// both shaders are in the same file</font><br>		}<br>		else<br>		{<br>			psFileName = &quot;../../media/d3d9.psh&quot;;<br>			vsFileName = &quot;../../media/d3d9.vsh&quot;;<br>		}<br>		break;<br>	case video::EDT_OPENGL:<br>		if (UseHighLevelShaders)<br>		{<br>			psFileName = &quot;../../media/opengl.frag&quot;;<br>			vsFileName = &quot;../../media/opengl.vert&quot;;<br>		}<br>		else<br>		{<br>			psFileName = &quot;../../media/opengl.psh&quot;;<br>			vsFileName = &quot;../../media/opengl.vsh&quot;;<br>		}<br>		break;<br>	}<br></pre> 
++              <td> <pre>	c8* vsFileName = 0<font color="#006600">; // filename for the vertex shader</font><br>	c8* psFileName = 0<font color="#006600">; // filename for the pixel shader</font><br><br>	switch(driverType)<br>	{<br>	case video::EDT_DIRECT3D8:<br>		psFileName = &quot;../media/d3d8.psh&quot;;<br>		vsFileName = &quot;../media/d3d8.vsh&quot;;<br>		break;<br>	case video::EDT_DIRECT3D9:<br>		if (UseHighLevelShaders)<br>		{<br>			psFileName = &quot;../media/d3d9.hlsl&quot;;<br>			vsFileName = psFileName; <font color="#006600">// both shaders are in the same file</font><br>		}<br>		else<br>		{<br>			psFileName = &quot;../media/d3d9.psh&quot;;<br>			vsFileName = &quot;../media/d3d9.vsh&quot;;<br>		}<br>		break;<br>	case video::EDT_OPENGL:<br>		if (UseHighLevelShaders)<br>		{<br>			psFileName = &quot;../media/opengl.frag&quot;;<br>			vsFileName = &quot;../media/opengl.vert&quot;;<br>		}<br>		else<br>		{<br>			psFileName = &quot;../media/opengl.psh&quot;;<br>			vsFileName = &quot;../media/opengl.vsh&quot;;<br>		}<br>		break;<br>	}<br></pre> 
+               </td>
+             </tr>
+           </table>
+@@ -147,7 +147,7 @@
+ 
+ 	scene::ISceneNode* node = smgr-&gt;addCubeSceneNode(50);
+ 	node-&gt;setPosition(core::vector3df(0,0,0));
+-	node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/wall.bmp&quot;));
++	node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/wall.bmp&quot;));
+ 	node-&gt;setMaterialFlag(video::EMF_LIGHTING, false);
+ 	node-&gt;setMaterialType((video::E_MATERIAL_TYPE)newMaterialType1);
+ 
+@@ -168,7 +168,7 @@
+ 
+ 	node = smgr-&gt;addCubeSceneNode(50);
+ 	node-&gt;setPosition(core::vector3df(0,-10,50));
+-	node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/wall.bmp&quot;));
++	node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/wall.bmp&quot;));
+ 	node-&gt;setMaterialFlag(video::EMF_LIGHTING, false);
+ 	node-&gt;setMaterialType((video::E_MATERIAL_TYPE)newMaterialType2);
+ 
+@@ -191,7 +191,7 @@
+ 
+ 	node = smgr-&gt;addCubeSceneNode(50);
+ 	node-&gt;setPosition(core::vector3df(0,50,25));
+-	node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/wall.bmp&quot;));
++	node-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/wall.bmp&quot;));
+ 	node-&gt;setMaterialFlag(video::EMF_LIGHTING, false);
+ 	smgr-&gt;addTextSceneNode(gui-&gt;getBuiltInFont(), L&quot;NO SHADER&quot;,
+ 		video::SColor(255,255,255,255), node);
+@@ -205,7 +205,7 @@
+         <br>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre>	<font color="#006600">// add a nice skybox</font><br><br>	driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);<br><br>	smgr-&gt;addSkyBoxSceneNode(<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_up.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_dn.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_lf.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_rt.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_ft.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../../media/irrlicht2_bk.jpg&quot;));<br><br>	driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);<br><br><font color="#006600">	// add a camera and disable the mouse curso</font>r<br><br>	scene::ICameraSceneNode* cam = smgr-&gt;addCameraSceneNodeFPS(0, 100.0f, 100.0f);<br>	cam-&gt;setPosition(core::vector3df(-100,50,100));<br>	cam-&gt;setTarget(core::vector3df(0,0,0));<br>	device-&gt;getCursorControl()-&gt;setVisible(false);</pre></td>
++            <td><pre>	<font color="#006600">// add a nice skybox</font><br><br>	driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);<br><br>	smgr-&gt;addSkyBoxSceneNode(<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_up.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_dn.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_lf.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_rt.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_ft.jpg&quot;),<br>		driver-&gt;getTexture(&quot;../media/irrlicht2_bk.jpg&quot;));<br><br>	driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);<br><br><font color="#006600">	// add a camera and disable the mouse curso</font>r<br><br>	scene::ICameraSceneNode* cam = smgr-&gt;addCameraSceneNodeFPS(0, 100.0f, 100.0f);<br>	cam-&gt;setPosition(core::vector3df(-100,50,100));<br>	cam-&gt;setTarget(core::vector3df(0,0,0));<br>	device-&gt;getCursorControl()-&gt;setVisible(false);</pre></td>
+           </tr>
+         </table>
+         <br>
+--- examples/11.PerPixelLighting/main.cpp
++++ examples/11.PerPixelLighting/main.cpp
+@@ -37,7 +37,7 @@
+ 
+ 		// set a nicer font
+ 		gui::IGUISkin* skin = env->getSkin();
+-		gui::IGUIFont* font = env->getFont("../../media/fonthaettenschweiler.bmp");
++		gui::IGUIFont* font = env->getFont("../media/fonthaettenschweiler.bmp");
+ 		if (font)
+ 			skin->setFont(font);
+ 
+@@ -203,7 +203,7 @@
+ 	driver->setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, true);
+ 
+ 	// add irrlicht logo
+-	env->addImage(driver->getTexture("../../media/irrlichtlogo2.png"),
++	env->addImage(driver->getTexture("../media/irrlichtlogo2.png"),
+ 		core::position2d<s32>(10,10));
+ 
+ 	// add camera
+@@ -234,7 +234,7 @@
+ 	*/
+ 
+ 	scene::IAnimatedMesh* roomMesh = smgr->getMesh(
+-		"../../media/room.3ds");
++		"../media/room.3ds");
+ 	scene::ISceneNode* room = 0;
+ 
+ 	if (roomMesh)
+@@ -259,7 +259,7 @@
+ 		*/
+ 
+ 		video::ITexture* normalMap =
+-			driver->getTexture("../../media/rockwall_height.bmp");
++			driver->getTexture("../media/rockwall_height.bmp");
+ 
+ 		if (normalMap)
+ 			driver->makeNormalMapTexture(normalMap, 9.0f);
+@@ -282,7 +282,7 @@
+ 
+ 		room = smgr->addMeshSceneNode(tangentMesh);
+ 		room->setMaterialTexture(0,
+-				driver->getTexture("../../media/rockwall.jpg"));
++				driver->getTexture("../media/rockwall.jpg"));
+ 		room->setMaterialTexture(1, normalMap);
+ 
+ 		room->getMaterial(0).SpecularColor.set(0,0,0,0);
+@@ -308,7 +308,7 @@
+ 
+ 	// add earth sphere
+ 
+-	scene::IAnimatedMesh* earthMesh = smgr->getMesh("../../media/earth.x");
++	scene::IAnimatedMesh* earthMesh = smgr->getMesh("../media/earth.x");
+ 	if (earthMesh)
+ 	{
+ 		//perform various task with the mesh manipulator
+@@ -331,7 +331,7 @@
+ 		sphere->setPosition(core::vector3df(-70,130,45));
+ 
+ 		// load heightmap, create normal map from it and set it
+-		video::ITexture* earthNormalMap = driver->getTexture("../../media/earthbump.jpg");
++		video::ITexture* earthNormalMap = driver->getTexture("../media/earthbump.jpg");
+ 		if (earthNormalMap)
+ 		{
+ 			driver->makeNormalMapTexture(earthNormalMap, 20.0f);
+@@ -381,7 +381,7 @@
+ 	bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	bill->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
+ 	bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-	bill->setMaterialTexture(0, driver->getTexture("../../media/particlered.bmp"));
++	bill->setMaterialTexture(0, driver->getTexture("../media/particlered.bmp"));
+ 
+ 	/*
+ 	Now the same again, with the second light. The difference is that we
+@@ -412,7 +412,7 @@
+ 	bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	bill->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
+ 	bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-	bill->setMaterialTexture(0, driver->getTexture("../../media/particlewhite.bmp"));
++	bill->setMaterialTexture(0, driver->getTexture("../media/particlewhite.bmp"));
+ 
+ 	// add particle system
+ 	scene::IParticleSystemSceneNode* ps =
+@@ -439,7 +439,7 @@
+ 	// adjust some material settings
+ 	ps->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	ps->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
+-	ps->setMaterialTexture(0, driver->getTexture("../../media/fireball.bmp"));
++	ps->setMaterialTexture(0, driver->getTexture("../media/fireball.bmp"));
+ 	ps->setMaterialType(video::EMT_TRANSPARENT_VERTEX_ALPHA);
+ 
+ 
+--- examples/11.PerPixelLighting/tutorial.html
++++ examples/11.PerPixelLighting/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+         <div align="left"><b><font color="#FFFFFF">Tutorial 11. Per pixel lighting</font></b></div>
+@@ -24,7 +24,7 @@
+           And don't panic: You dont need any experience with shaders to use these 
+           materials in Irrlicht.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/011shot.jpg" width="258" height="202"><br>
++        <p align="center"><img src="../media/011shot.jpg" width="258" height="202"><br>
+         </p>
+       </div>
+     </td>
+@@ -65,7 +65,7 @@
+ 
+ 		// set a nicer font
+ 		gui::IGUISkin* skin = env->getSkin();
+-		gui::IGUIFont* font = env->getFont("../../media/fonthaettenschweiler.bmp");
++		gui::IGUIFont* font = env->getFont("../media/fonthaettenschweiler.bmp");
+ 		if (font)
+ 			skin->setFont(font);
+ 
+@@ -224,7 +224,7 @@
+ 	driver->setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, true);
+ 
+ 	// add irrlicht logo
+-	env->addImage(driver->getTexture("../../media/irrlichtlogoalpha.tga"),
++	env->addImage(driver->getTexture("../media/irrlichtlogoalpha.tga"),
+ 		core::position2d<s32>(10,10));
+ 		
+ 	// add camera
+@@ -262,7 +262,7 @@
+           <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+             <tr> 
+               <td> <pre>	scene::IAnimatedMesh* roomMesh = smgr->getMesh(
+-		"../../media/room.3ds");
++		"../media/room.3ds");
+ 	scene::ISceneNode* room = 0;
+ 
+ 	if (roomMesh)
+@@ -286,8 +286,8 @@
+           <br>
+           <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+             <tr> 
+-              <td> <pre>		video::ITexture* colorMap = driver->getTexture("../../media/rockwall.bmp");
+-		video::ITexture* normalMap = driver->getTexture("../../media/rockwall_height.bmp");
++              <td> <pre>		video::ITexture* colorMap = driver->getTexture("../media/rockwall.bmp");
++		video::ITexture* normalMap = driver->getTexture("../media/rockwall_height.bmp");
+ 		
+ 		driver->makeNormalMapTexture(normalMap, 9.0f);</pre></td>
+             </tr>
+@@ -324,7 +324,7 @@
+             <tr> 
+               <td> <pre>// add earth sphere
+ 
+-	scene::IAnimatedMesh* earthMesh = smgr->getMesh("../../media/earth.x");
++	scene::IAnimatedMesh* earthMesh = smgr->getMesh("../media/earth.x");
+ 	if (earthMesh)
+ 	{
+ 		// create mesh copy with tangent informations from original earth.x mesh
+@@ -343,7 +343,7 @@
+ 		sphere->setPosition(core::vector3df(-70,130,45));
+ 
+ 		// load heightmap, create normal map from it and set it
+-		video::ITexture* earthNormalMap = driver->getTexture("../../media/earthbump.bmp");
++		video::ITexture* earthNormalMap = driver->getTexture("../media/earthbump.bmp");
+ 		driver->makeNormalMapTexture(earthNormalMap, 20.0f);
+ 		sphere->setMaterialTexture(1, earthNormalMap);
+ 
+@@ -388,7 +388,7 @@
+ 
+ 	bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-	bill->setMaterialTexture(0, driver->getTexture("../../media/particlered.bmp"));</pre></td>
++	bill->setMaterialTexture(0, driver->getTexture("../media/particlered.bmp"));</pre></td>
+             </tr>
+           </table>
+           <br>
+@@ -420,7 +420,7 @@
+ 	bill = smgr->addBillboardSceneNode(light2, core::dimension2d<f32>(120, 120));
+ 	bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-	bill->setMaterialTexture(0, driver->getTexture("../../media/particlewhite.bmp"));
++	bill->setMaterialTexture(0, driver->getTexture("../media/particlewhite.bmp"));
+ 
+ 	// add particle system
+ 	scene::IParticleSystemSceneNode* ps = 
+@@ -445,7 +445,7 @@
+ 
+ 	// adjust some material settings
+ 	ps->setMaterialFlag(video::EMF_LIGHTING, false);
+-	ps->setMaterialTexture(0, driver->getTexture("../../media/fireball.bmp"));
++	ps->setMaterialTexture(0, driver->getTexture("../media/fireball.bmp"));
+ 	ps->setMaterialType(video::EMT_TRANSPARENT_VERTEX_ALPHA);
+ 
+ 
+--- examples/12.TerrainRendering/main.cpp
++++ examples/12.TerrainRendering/main.cpp
+@@ -131,11 +131,11 @@
+ 	driver->setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, true);
+ 
+ 	// add irrlicht logo
+-	env->addImage(driver->getTexture("../../media/irrlichtlogo2.png"),
++	env->addImage(driver->getTexture("../media/irrlichtlogo2.png"),
+ 		core::position2d<s32>(10,10));
+ 
+ 	//set other font
+-	env->getSkin()->setFont(env->getFont("../../media/fontlucida.png"));
++	env->getSkin()->setFont(env->getFont("../media/fontlucida.png"));
+ 
+ 	// add some help text
+ 	env->addStaticText(
+@@ -172,7 +172,7 @@
+ 
+ 	// add terrain scene node
+ 	scene::ITerrainSceneNode* terrain = smgr->addTerrainSceneNode(
+-		"../../media/terrain-heightmap.bmp",
++		"../media/terrain-heightmap.bmp",
+ 		0,					// parent node
+ 		-1,					// node id
+ 		core::vector3df(0.f, 0.f, 0.f),		// position
+@@ -187,9 +187,9 @@
+ 	terrain->setMaterialFlag(video::EMF_LIGHTING, false);
+ 
+ 	terrain->setMaterialTexture(0,
+-			driver->getTexture("../../media/terrain-texture.jpg"));
++			driver->getTexture("../media/terrain-texture.jpg"));
+ 	terrain->setMaterialTexture(1,
+-			driver->getTexture("../../media/detailmap3.jpg"));
++			driver->getTexture("../media/detailmap3.jpg"));
+ 	
+ 	terrain->setMaterialType(video::EMT_DETAIL_MAP);
+ 
+@@ -239,13 +239,13 @@
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);
+ 
+ 	scene::ISceneNode* skybox=smgr->addSkyBoxSceneNode(
+-		driver->getTexture("../../media/irrlicht2_up.jpg"),
+-		driver->getTexture("../../media/irrlicht2_dn.jpg"),
+-		driver->getTexture("../../media/irrlicht2_lf.jpg"),
+-		driver->getTexture("../../media/irrlicht2_rt.jpg"),
+-		driver->getTexture("../../media/irrlicht2_ft.jpg"),
+-		driver->getTexture("../../media/irrlicht2_bk.jpg"));
+-	scene::ISceneNode* skydome=smgr->addSkyDomeSceneNode(driver->getTexture("../../media/skydome.jpg"),16,8,0.95f,2.0f);
++		driver->getTexture("../media/irrlicht2_up.jpg"),
++		driver->getTexture("../media/irrlicht2_dn.jpg"),
++		driver->getTexture("../media/irrlicht2_lf.jpg"),
++		driver->getTexture("../media/irrlicht2_rt.jpg"),
++		driver->getTexture("../media/irrlicht2_ft.jpg"),
++		driver->getTexture("../media/irrlicht2_bk.jpg"));
++	scene::ISceneNode* skydome=smgr->addSkyDomeSceneNode(driver->getTexture("../media/skydome.jpg"),16,8,0.95f,2.0f);
+ 
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
+ 
+--- examples/12.TerrainRendering/tutorial.html
++++ examples/12.TerrainRendering/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+         <div align="left"><b><font color="#FFFFFF">Tutorial 12. Terrain Rendering</font></b></div>
+@@ -22,7 +22,7 @@
+           Irrlicht. It will also show the terrain renderer triangle selector to 
+           be able to do collision detection with terrain.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/012shot.jpg" width="258" height="202"></p>
++        <p align="center"><img src="../media/012shot.jpg" width="258" height="202"></p>
+         <p align="left"><br>
+           Note that the terrain renderer in Irrlicht is based the terrain renderer 
+           by Soconne and the GeoMipMapSceneNode developed by Spinz, lots of thanks 
+@@ -60,7 +60,7 @@
+             the mouse cursor.</p>
+           <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+             <tr> 
+-              <td> <pre>video::IVideoDriver* driver = device-&gt;getVideoDriver();<br>scene::ISceneManager* smgr = device-&gt;getSceneManager();<br>gui::IGUIEnvironment* env = device-&gt;getGUIEnvironment();<br><br>driver-&gt;setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, true);<br><br><font color="#006600">// add irrlicht logo<br></font>env-&gt;addImage(driver-&gt;getTexture(&quot;../../media/irrlichtlogoalpha.tga&quot;),<br>    core::position2d&lt;s32&gt;(10,10));<br>
++              <td> <pre>video::IVideoDriver* driver = device-&gt;getVideoDriver();<br>scene::ISceneManager* smgr = device-&gt;getSceneManager();<br>gui::IGUIEnvironment* env = device-&gt;getGUIEnvironment();<br><br>driver-&gt;setTextureCreationFlag(video::ETCF_ALWAYS_32_BIT, true);<br><br><font color="#006600">// add irrlicht logo<br></font>env-&gt;addImage(driver-&gt;getTexture(&quot;../media/irrlichtlogoalpha.tga&quot;),<br>    core::position2d&lt;s32&gt;(10,10));<br>
+ <font color="#006600">// add some help text<br></font>gui::IGUIStaticText* text = env-&gt;addStaticText(<br>	L&quot;Press 'W' to change wireframe mode\nPress 'D' to toggle detail map&quot;,<br>	core::rect&lt;s32&gt;(10,453,200,475), true, true, 0, -1, true);<br>
+ <font color="#006600">// add camera<br></font>scene::ICameraSceneNode* camera = <br>    smgr-&gt;addCameraSceneNodeFPS(0,100.0f,1200.0f);<br>camera-&gt;setPosition(core::vector3df(1900*2,255*2,3700*2));<br>camera-&gt;setTarget(core::vector3df(2397*2,343*2,2700*2));<br>camera-&gt;setFarValue(12000.0f);<br><br><font color="#006600">// disable mouse cursor<br></font>device-&gt;getCursorControl()-&gt;setVisible(false);</pre></td>
+             </tr>
+@@ -79,7 +79,7 @@
+             and the second one (detail map) 20 times. </p>
+           <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+             <tr> 
+-              <td> <pre><font color="#006600">// add terrain scene node<br></font>scene::ITerrainSceneNode* terrain = smgr-&gt;addTerrainSceneNode( <br>      &quot;../../media/terrain-heightmap.bmp&quot;);<br><br>terrain-&gt;setScale(core::vector3df(40, 4.4f, 40));<br>terrain-&gt;setMaterialFlag(video::EMF_LIGHTING, false);<br><br>terrain-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../../media/terrain-texture.jpg&quot;));<br>terrain-&gt;setMaterialTexture(1, driver-&gt;getTexture(&quot;../../media/detailmap3.jpg&quot;));<br>	<br>terrain-&gt;setMaterialType(video::EMT_DETAIL_MAP);<br>terrain-&gt;scaleTexture(1.0f, 20.0f);<font color="#006600"><br></font></pre></td>
++              <td> <pre><font color="#006600">// add terrain scene node<br></font>scene::ITerrainSceneNode* terrain = smgr-&gt;addTerrainSceneNode( <br>      &quot;../media/terrain-heightmap.bmp&quot;);<br><br>terrain-&gt;setScale(core::vector3df(40, 4.4f, 40));<br>terrain-&gt;setMaterialFlag(video::EMF_LIGHTING, false);<br><br>terrain-&gt;setMaterialTexture(0, driver-&gt;getTexture(&quot;../media/terrain-texture.jpg&quot;));<br>terrain-&gt;setMaterialTexture(1, driver-&gt;getTexture(&quot;../media/detailmap3.jpg&quot;));<br>	<br>terrain-&gt;setMaterialType(video::EMT_DETAIL_MAP);<br>terrain-&gt;scaleTexture(1.0f, 20.0f);<font color="#006600"><br></font></pre></td>
+             </tr>
+           </table>
+           <p> To be able to do collision with the terrain, we create a triangle 
+@@ -100,7 +100,7 @@
+           in lots of Irrlicht examples.</p>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre><font color="#006600">// create event receiver<br></font>MyEventReceiver receiver(terrain);<br>device-&gt;setEventReceiver(&amp;receiver);<br><br><font color="#006600">// create skybox<br></font>driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);<br><br>smgr-&gt;addSkyBoxSceneNode(<br>	driver-&gt;getTexture(&quot;../../media/irrlicht2_up.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../../media/irrlicht2_dn.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../../media/irrlicht2_lf.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../../media/irrlicht2_rt.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../../media/irrlicht2_ft.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../../media/irrlicht2_bk.jpg&quot;));<br>
++            <td><pre><font color="#006600">// create event receiver<br></font>MyEventReceiver receiver(terrain);<br>device-&gt;setEventReceiver(&amp;receiver);<br><br><font color="#006600">// create skybox<br></font>driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);<br><br>smgr-&gt;addSkyBoxSceneNode(<br>	driver-&gt;getTexture(&quot;../media/irrlicht2_up.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../media/irrlicht2_dn.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../media/irrlicht2_lf.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../media/irrlicht2_rt.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../media/irrlicht2_ft.jpg&quot;),<br>	driver-&gt;getTexture(&quot;../media/irrlicht2_bk.jpg&quot;));<br>
+ driver-&gt;setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);<br></pre></td>
+           </tr>
+         </table>
+--- examples/13.RenderToTexture/main.cpp
++++ examples/13.RenderToTexture/main.cpp
+@@ -66,12 +66,12 @@
+ 	// load and display animated fairy mesh
+ 
+ 	scene::IAnimatedMeshSceneNode* fairy = smgr->addAnimatedMeshSceneNode(
+-		smgr->getMesh("../../media/faerie.md2"));
++		smgr->getMesh("../media/faerie.md2"));
+ 
+ 	if (fairy)
+ 	{
+ 		fairy->setMaterialTexture(0,
+-				driver->getTexture("../../media/faerie2.bmp")); // set diffuse texture
++				driver->getTexture("../media/faerie2.bmp")); // set diffuse texture
+ 		fairy->setMaterialFlag(video::EMF_LIGHTING, true); // enable dynamic lighting
+ 		fairy->getMaterial(0).Shininess = 20.0f; // set size of specular highlights
+ 		fairy->setPosition(core::vector3df(-10,0,-100));
+@@ -151,7 +151,7 @@
+ 	{
+ 		// create problem text
+ 		gui::IGUISkin* skin = env->getSkin();
+-		gui::IGUIFont* font = env->getFont("../../media/fonthaettenschweiler.bmp");
++		gui::IGUIFont* font = env->getFont("../media/fonthaettenschweiler.bmp");
+ 		if (font)
+ 			skin->setFont(font);
+ 
+--- examples/13.RenderToTexture/tutorial.html
++++ examples/13.RenderToTexture/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+         <div align="left"><b><font color="#FFFFFF">Tutorial 13. Render to Texture</font></b></div>
+@@ -22,7 +22,7 @@
+           to texture is a feature with which it is possible to create nice special 
+           effects. In addition, this tutorial shows how to enable specular highlights.</p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/013shot.jpg" width="256" height="200"><br>
++        <p align="center"><img src="../media/013shot.jpg" width="256" height="200"><br>
+         </p>
+       </div>
+     </td>
+@@ -84,11 +84,11 @@
+               <td><pre>// load and display animated fairy mesh
+ 
+ 	scene::IAnimatedMeshSceneNode* fairy = smgr->addAnimatedMeshSceneNode(
+-		smgr->getMesh("../../media/faerie.md2"));
++		smgr->getMesh("../media/faerie.md2"));
+ 
+ 	if (fairy)
+ 	{
+-		fairy->setMaterialTexture(0, driver->getTexture("../../media/faerie2.bmp")); // set diffuse texture
++		fairy->setMaterialTexture(0, driver->getTexture("../media/faerie2.bmp")); // set diffuse texture
+ 		fairy->setMaterialFlag(video::EMF_LIGHTING, true); // enable dynamic lighting
+ 		fairy->getMaterial(0).Shininess = 20.0f; // set size of specular highlights
+ 		fairy->setPosition(core::vector3df(-10,0,-100));
+@@ -169,7 +169,7 @@
+ 	{
+ 		// create problem text
+ 		gui::IGUISkin* skin = env->getSkin();
+-		gui::IGUIFont* font = env->getFont("../../media/fonthaettenschweiler.bmp");
++		gui::IGUIFont* font = env->getFont("../media/fonthaettenschweiler.bmp");
+ 		if (font)
+ 			skin->setFont(font);
+ 
+--- examples/14.Win32Window/main.cpp
++++ examples/14.Win32Window/main.cpp
+@@ -135,18 +135,18 @@
+ 
+ 	scene::ISceneNode* cube = smgr->addCubeSceneNode(20);
+ 
+-	cube->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
+-	cube->setMaterialTexture(1, driver->getTexture("../../media/water.jpg"));
++	cube->setMaterialTexture(0, driver->getTexture("../media/wall.bmp"));
++	cube->setMaterialTexture(1, driver->getTexture("../media/water.jpg"));
+ 	cube->setMaterialFlag( video::EMF_LIGHTING, false );
+ 	cube->setMaterialType( video::EMT_REFLECTION_2_LAYER );
+ 
+ 	smgr->addSkyBoxSceneNode(
+-	driver->getTexture("../../media/irrlicht2_up.jpg"),
+-	driver->getTexture("../../media/irrlicht2_dn.jpg"),
+-	driver->getTexture("../../media/irrlicht2_lf.jpg"),
+-	driver->getTexture("../../media/irrlicht2_rt.jpg"),
+-	driver->getTexture("../../media/irrlicht2_ft.jpg"),
+-	driver->getTexture("../../media/irrlicht2_bk.jpg"));
++	driver->getTexture("../media/irrlicht2_up.jpg"),
++	driver->getTexture("../media/irrlicht2_dn.jpg"),
++	driver->getTexture("../media/irrlicht2_lf.jpg"),
++	driver->getTexture("../media/irrlicht2_rt.jpg"),
++	driver->getTexture("../media/irrlicht2_ft.jpg"),
++	driver->getTexture("../media/irrlicht2_bk.jpg"));
+ 
+ 	// show and execute dialog
+ 
+--- examples/14.Win32Window/tutorial.html
++++ examples/14.Win32Window/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%">
+ <div align="center">
+         <div align="left"><b><font color="#FFFFFF">Tutorial 14. Win32 Window</font></b></div>
+@@ -22,7 +22,7 @@
+           run inside a win32 window. MFC and .NET Windows.Forms windows are possible 
+           too. </p>
+         <p>The program which is described here will look like this:</p>
+-        <p align="center"><img src="../../media/014shot.jpg" width="256" height="200"><br>
++        <p align="center"><img src="../media/014shot.jpg" width="256" height="200"><br>
+         </p>
+       </div>
+     </td>
+@@ -170,15 +170,15 @@
+ 	scene::ISceneNode* cube = smgr->addCubeSceneNode(25);
+ 	cube->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	
+-	cube->setMaterialTexture(0, driver->getTexture("../../media/rockwall.bmp"));
++	cube->setMaterialTexture(0, driver->getTexture("../media/rockwall.bmp"));
+ 
+ 	smgr->addSkyBoxSceneNode(
+-	driver->getTexture("../../media/irrlicht2_up.jpg"),
+-	driver->getTexture("../../media/irrlicht2_dn.jpg"),
+-	driver->getTexture("../../media/irrlicht2_lf.jpg"),
+-	driver->getTexture("../../media/irrlicht2_rt.jpg"),
+-	driver->getTexture("../../media/irrlicht2_ft.jpg"),
+-	driver->getTexture("../../media/irrlicht2_bk.jpg"));
++	driver->getTexture("../media/irrlicht2_up.jpg"),
++	driver->getTexture("../media/irrlicht2_dn.jpg"),
++	driver->getTexture("../media/irrlicht2_lf.jpg"),
++	driver->getTexture("../media/irrlicht2_rt.jpg"),
++	driver->getTexture("../media/irrlicht2_ft.jpg"),
++	driver->getTexture("../media/irrlicht2_bk.jpg"));
+ 
+ <font color="#006600">	// show and execute dialog</font>
+ 
+--- examples/15.LoadIrrFile/main.cpp
++++ examples/15.LoadIrrFile/main.cpp
+@@ -71,7 +71,7 @@
+ 	if (argc>1)
+ 		smgr->loadScene(argv[1]);
+ 	else
+-		smgr->loadScene("../../media/example.irr");
++		smgr->loadScene("../media/example.irr");
+ 
+ 	/*
+ 	Now we'll create a camera, and give it a collision response animator
+--- examples/15.LoadIrrFile/tutorial.html
++++ examples/15.LoadIrrFile/tutorial.html
+@@ -8,7 +8,7 @@
+ <br>
+ <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+   <tr> 
+-    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
++    <td bgcolor="#666699" width="10"><b><a href="http://irrlicht.sourceforge.net" target="_blank"><img src="../media/irrlichtlogo.jpg" width="88" height="31" border="0"></a></b></td>
+     <td bgcolor="#666699" width="100%"> <div align="center"><b><font color="#FFFFFF"></font></b></div>
+       <b><font color="#FFFFFF">Tutorial 15. Load .irr File</font></b></td>
+   </tr>
+@@ -19,7 +19,7 @@
+           available to edit those files, named irrEdit on <a href="http://www.ambiera.com/irredit" target="_blank">http://www.ambiera.com/irredit</a>, 
+           which can also be used as world and particle editor. This tutorial shows 
+           how to use .irr files.</p>
+-        <p align="center"><img src="../../media/015shot.jpg" width="256" height="200"><br>
++        <p align="center"><img src="../media/015shot.jpg" width="256" height="200"><br>
+         </p>
+       </div></td>
+   </tr>
+@@ -90,7 +90,7 @@
+           we only need a single call to loadScene().</p>
+         <table width="95%" border="0" cellspacing="2" cellpadding="0" bgcolor="#CCCCCC" align="center">
+           <tr> 
+-            <td><pre>// load the scene<br>smgr-&gt;loadScene(&quot;../../media/example.irr&quot;); </pre></td>
++            <td><pre>// load the scene<br>smgr-&gt;loadScene(&quot;../media/example.irr&quot;); </pre></td>
+           </tr>
+         </table>
+         <p>That was it already. Now add a camera and draw the scene.</p>
+--- examples/16.Quake3MapShader/main.cpp
++++ examples/16.Quake3MapShader/main.cpp
+@@ -32,7 +32,7 @@
+ 
+ #ifdef IRRLICHT_QUAKE3_ARENA
+ 	#define QUAKE3_STORAGE_FORMAT	addZipFileArchive
+-	#define QUAKE3_STORAGE_1	"../../media/map-20kdm2.pk3"
++	#define QUAKE3_STORAGE_1	"../media/map-20kdm2.pk3"
+ 	#define QUAKE3_MAP_NAME			"maps/20kdm2.bsp"
+ #endif
+ 
+@@ -172,7 +172,7 @@
+ 	gui::IGUIEnvironment* gui = device->getGUIEnvironment();
+ 
+ 	//! add our private media directory to the file system
+-	device->getFileSystem()->addFolderFileArchive("../../media/");
++	device->getFileSystem()->addFolderFileArchive("../media/");
+ 
+ 	/*
+ 	To display the Quake 3 map, we first need to load it. Quake 3 maps
+@@ -241,7 +241,7 @@
+ 		scene::IMesh * additional_mesh = mesh->getMesh ( quake3::E_Q3_MESH_ITEMS );
+ 
+ #ifdef SHOW_SHADER_NAME
+-		gui::IGUIFont *font = device->getGUIEnvironment()->getFont("../../media/fontlucida.png");
++		gui::IGUIFont *font = device->getGUIEnvironment()->getFont("../media/fontlucida.png");
+ 		u32 count = 0;
+ #endif
+ 
+--- examples/17.HelloWorld_Mobile/main.cpp
++++ examples/17.HelloWorld_Mobile/main.cpp
+@@ -146,7 +146,7 @@
+ 	guienv->addButton(core::rect<int>(200,10,238,30), 0, 2, L"Quit");
+ 
+ 	// add irrlicht logo
+-	guienv->addImage(driver->getTexture("../../media/irrlichtlogo3.png"),
++	guienv->addImage(driver->getTexture("../media/irrlichtlogo3.png"),
+ 					core::position2d<s32>(0,-2));
+ 	return device;
+ }
+@@ -310,7 +310,7 @@
+ 
+ 
+ 	//set other font
+-	//env->getSkin()->setFont(env->getFont("../../media/fontlucida.png"));
++	//env->getSkin()->setFont(env->getFont("../media/fontlucida.png"));
+ 
+ 	// add some help text
+ 	env->addStaticText(
+@@ -347,7 +347,7 @@
+ 
+ 	// add terrain scene node
+ 	scene::ITerrainSceneNode* terrain = smgr->addTerrainSceneNode(
+-		"../../media/terrain-heightmap.bmp",
++		"../media/terrain-heightmap.bmp",
+ 		0,					// parent node
+ 		-1,					// node id
+ 		core::vector3df(0.f, 0.f, 0.f),		// position
+@@ -364,9 +364,9 @@
+ 		terrain->setMaterialFlag(video::EMF_LIGHTING, false);
+ 
+ 		terrain->setMaterialTexture(0,
+-				driver->getTexture("../../media/terrain-texture.jpg"));
++				driver->getTexture("../media/terrain-texture.jpg"));
+ 		terrain->setMaterialTexture(1,
+-				driver->getTexture("../../media/detailmap3.jpg"));
++				driver->getTexture("../media/detailmap3.jpg"));
+ 		
+ 		terrain->setMaterialType(video::EMT_DETAIL_MAP);
+ 
+@@ -417,13 +417,13 @@
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);
+ 
+ 	scene::ISceneNode* skybox=smgr->addSkyBoxSceneNode(
+-		driver->getTexture("../../media/irrlicht2_up.jpg"),
+-		driver->getTexture("../../media/irrlicht2_dn.jpg"),
+-		driver->getTexture("../../media/irrlicht2_lf.jpg"),
+-		driver->getTexture("../../media/irrlicht2_rt.jpg"),
+-		driver->getTexture("../../media/irrlicht2_ft.jpg"),
+-		driver->getTexture("../../media/irrlicht2_bk.jpg"));
+-	scene::ISceneNode* skydome=smgr->addSkyDomeSceneNode(driver->getTexture("../../media/skydome.jpg"),16,8,0.95f,2.0f);
++		driver->getTexture("../media/irrlicht2_up.jpg"),
++		driver->getTexture("../media/irrlicht2_dn.jpg"),
++		driver->getTexture("../media/irrlicht2_lf.jpg"),
++		driver->getTexture("../media/irrlicht2_rt.jpg"),
++		driver->getTexture("../media/irrlicht2_ft.jpg"),
++		driver->getTexture("../media/irrlicht2_bk.jpg"));
++	scene::ISceneNode* skydome=smgr->addSkyDomeSceneNode(driver->getTexture("../media/skydome.jpg"),16,8,0.95f,2.0f);
+ 
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
+ 
+@@ -447,7 +447,7 @@
+ 	ISceneManager* smgr = device->getSceneManager();
+ 	IGUIEnvironment* guienv = device->getGUIEnvironment();
+ 
+-	IAnimatedMesh* mesh = smgr->getMesh("../../media/sydney.md2");
++	IAnimatedMesh* mesh = smgr->getMesh("../media/sydney.md2");
+ 	if (!mesh)
+ 	{
+ 		device->drop();
+@@ -467,7 +467,7 @@
+ 	{
+ 		node->setMaterialFlag(EMF_LIGHTING, false);
+ 		node->setMD2Animation(scene::EMAT_STAND);
+-		node->setMaterialTexture( 0, driver->getTexture("../../media/sydney.bmp") );
++		node->setMaterialTexture( 0, driver->getTexture("../media/sydney.bmp") );
+ 	}
+ 
+ 	/*
+--- examples/18.SplitScreen/main.cpp
++++ examples/18.SplitScreen/main.cpp
+@@ -110,14 +110,14 @@
+ 	IVideoDriver *driver = device->getVideoDriver();
+ 
+ 	//Load model
+-	IAnimatedMesh *model = smgr->getMesh("../../media/sydney.md2");
++	IAnimatedMesh *model = smgr->getMesh("../media/sydney.md2");
+ 	if (!model)
+ 		return 1;
+ 	IAnimatedMeshSceneNode *model_node = smgr->addAnimatedMeshSceneNode(model);
+ 	//Load texture
+ 	if (model_node)
+ 	{
+-		ITexture *texture = driver->getTexture("../../media/sydney.bmp");
++		ITexture *texture = driver->getTexture("../media/sydney.bmp");
+ 		model_node->setMaterialTexture(0,texture);
+ 		model_node->setMD2Animation(scene::EMAT_RUN);
+ 		//Disable lighting (we've got no light)
+@@ -125,7 +125,7 @@
+ 	}
+ 
+ 	//Load map
+-	device->getFileSystem()->addZipFileArchive("../../media/map-20kdm2.pk3");
++	device->getFileSystem()->addZipFileArchive("../media/map-20kdm2.pk3");
+ 	IAnimatedMesh *map = smgr->getMesh("20kdm2.bsp");
+ 	if (map)
+ 	{
+--- examples/20.ManagedLights/main.cpp
++++ examples/20.ManagedLights/main.cpp
+@@ -319,7 +319,7 @@
+ 	if (skin)
+ 	{
+ 		skin->setColor(EGDC_BUTTON_TEXT, SColor(255, 255, 255, 255));
+-		gui::IGUIFont* font = guienv->getFont("../../media/fontlucida.png");
++		gui::IGUIFont* font = guienv->getFont("../media/fontlucida.png");
+ 		if(font)
+ 			skin->setFont(font);
+ 	}
+@@ -348,21 +348,21 @@
+ 			IBillboardSceneNode * billboard = smgr->addBillboardSceneNode(node);
+ 			billboard->setPosition(vector3df(0, -14, 30));
+ 			billboard->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR );
+-			billboard->setMaterialTexture(0, driver->getTexture("../../media/particle.bmp"));
++			billboard->setMaterialTexture(0, driver->getTexture("../media/particle.bmp"));
+ 			billboard->setMaterialFlag(video::EMF_LIGHTING, false);
+ 			ILightSceneNode * light = smgr->addLightSceneNode(billboard, vector3df(0, 0, 0), SColorf(1, 0, 0), lightRadius);
+ 
+ 			billboard = smgr->addBillboardSceneNode(node);
+ 			billboard->setPosition(vector3df(-21, -14, -21));
+ 			billboard->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR );
+-			billboard->setMaterialTexture(0, driver->getTexture("../../media/particle.bmp"));
++			billboard->setMaterialTexture(0, driver->getTexture("../media/particle.bmp"));
+ 			billboard->setMaterialFlag(video::EMF_LIGHTING, false);
+ 			light = smgr->addLightSceneNode(billboard, vector3df(0, 0, 0), SColorf(0, 1, 0), lightRadius);
+ 
+ 			billboard = smgr->addBillboardSceneNode(node);
+ 			billboard->setPosition(vector3df(21, -14, -21));
+ 			billboard->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR );
+-			billboard->setMaterialTexture(0, driver->getTexture("../../media/particle.bmp"));
++			billboard->setMaterialTexture(0, driver->getTexture("../media/particle.bmp"));
+ 			billboard->setMaterialFlag(video::EMF_LIGHTING, false);
+ 			light = smgr->addLightSceneNode(billboard, vector3df(0, 0, 0), SColorf(0, 0, 1), lightRadius);
+ 
+--- examples/21.Quake3Explorer/main.cpp
++++ examples/21.Quake3Explorer/main.cpp
+@@ -113,14 +113,14 @@
+ 	CurrentArchiveList.clear ();
+ 
+ 	//! Explorer Media directory
+-	CurrentArchiveList.push_back ( StartupDir + "../../media/" );
++	CurrentArchiveList.push_back ( StartupDir + "../media/" );
+ 
+ 	//! Add the original quake3 files before you load your custom map
+ 	//! Most mods are using the original shaders, models&items&weapons
+ 	CurrentArchiveList.push_back ( "/q/baseq3/" );
+ 
+ 
+-	CurrentArchiveList.push_back ( StartupDir + "../../media/map-20kdm2.pk3" );
++	CurrentArchiveList.push_back ( StartupDir + "../media/map-20kdm2.pk3" );
+ 
+ }
+ 
+--- examples/21.Quake3Explorer/q3factory.cpp
++++ examples/21.Quake3Explorer/q3factory.cpp
+@@ -672,7 +672,7 @@
+ 		background_music ( group->get ( "music" ).c_str () );
+ 	}
+ 
+-	//IAnimatedMesh* mesh = smgr->getMesh("../../media/sydney.md2");
++	//IAnimatedMesh* mesh = smgr->getMesh("../media/sydney.md2");
+ 	//IAnimatedMeshSceneNode* node = smgr->addAnimatedMeshSceneNode( mesh );
+ 
+ }
+--- examples/Demo/CDemo.cpp
++++ examples/Demo/CDemo.cpp
+@@ -62,11 +62,11 @@
+ 	if (device->getFileSystem()->existFile("irrlicht.dat"))
+ 		device->getFileSystem()->addZipFileArchive("irrlicht.dat");
+ 	else
+-		device->getFileSystem()->addZipFileArchive("../../media/irrlicht.dat");
++		device->getFileSystem()->addZipFileArchive("../media/irrlicht.dat");
+ 	if (device->getFileSystem()->existFile("map-20kdm2.pk3"))
+ 		device->getFileSystem()->addZipFileArchive("map-20kdm2.pk3");
+ 	else
+-		device->getFileSystem()->addZipFileArchive("../../media/map-20kdm2.pk3");
++		device->getFileSystem()->addZipFileArchive("../media/map-20kdm2.pk3");
+ 
+ 	video::IVideoDriver* driver = device->getVideoDriver();
+ 	scene::ISceneManager* smgr = device->getSceneManager();
+@@ -416,13 +416,13 @@
+ 	// load sydney model and create 2 instances
+ 
+ 	scene::IAnimatedMesh* mesh = 0;
+-	mesh = sm->getMesh("../../media/sydney.md2");
++	mesh = sm->getMesh("../media/sydney.md2");
+ 	if (mesh)
+ 	{
+ 		model1 = sm->addAnimatedMeshSceneNode(mesh);
+ 		if (model1)
+ 		{
+-			model1->setMaterialTexture(0, driver->getTexture("../../media/spheremap.jpg"));
++			model1->setMaterialTexture(0, driver->getTexture("../media/spheremap.jpg"));
+ 			model1->setPosition(core::vector3df(100,40,-80));
+ 			model1->setScale(core::vector3df(2,2,2));
+ 			model1->setMD2Animation(scene::EMAT_STAND);
+@@ -438,7 +438,7 @@
+ 			model2->setPosition(core::vector3df(180,15,-60));
+ 			model2->setScale(core::vector3df(2,2,2));
+ 			model2->setMD2Animation(scene::EMAT_RUN);
+-			model2->setMaterialTexture(0, device->getVideoDriver()->getTexture("../../media/sydney.bmp"));
++			model2->setMaterialTexture(0, device->getVideoDriver()->getTexture("../media/sydney.bmp"));
+ 			model2->setMaterialFlag(video::EMF_LIGHTING, true);
+ 			model2->addShadowVolumeSceneNode();
+ 			model2->setAutomaticCulling ( scene::EAC_BOX );
+@@ -450,12 +450,12 @@
+ 	// create sky box
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);
+ 	skyboxNode = sm->addSkyBoxSceneNode(
+-		driver->getTexture("../../media/irrlicht2_up.jpg"),
+-		driver->getTexture("../../media/irrlicht2_dn.jpg"),
+-		driver->getTexture("../../media/irrlicht2_lf.jpg"),
+-		driver->getTexture("../../media/irrlicht2_rt.jpg"),
+-		driver->getTexture("../../media/irrlicht2_ft.jpg"),
+-		driver->getTexture("../../media/irrlicht2_bk.jpg"));
++		driver->getTexture("../media/irrlicht2_up.jpg"),
++		driver->getTexture("../media/irrlicht2_dn.jpg"),
++		driver->getTexture("../media/irrlicht2_lf.jpg"),
++		driver->getTexture("../media/irrlicht2_rt.jpg"),
++		driver->getTexture("../media/irrlicht2_ft.jpg"),
++		driver->getTexture("../media/irrlicht2_bk.jpg"));
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
+ 
+ 	//driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
+@@ -479,7 +479,7 @@
+ 	core::array<video::ITexture*> textures;
+ 	for (s32 g=1; g<8; ++g)
+ 	{
+-		core::stringc tmp("../../media/portal");
++		core::stringc tmp("../media/portal");
+ 		tmp += g;
+ 		tmp += ".bmp";
+ 		video::ITexture* t = driver->getTexture( tmp );
+@@ -497,7 +497,7 @@
+ 		bill = sm->addBillboardSceneNode(0, core::dimension2d<f32>(100,100),
+ 			waypoint[r]+ core::vector3df(0,20,0));
+ 		bill->setMaterialFlag(video::EMF_LIGHTING, false);
+-		bill->setMaterialTexture(0, driver->getTexture("../../media/portal1.bmp"));
++		bill->setMaterialTexture(0, driver->getTexture("../media/portal1.bmp"));
+ 		bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+ 		bill->addAnimator(anim);
+ 	}
+@@ -520,7 +520,7 @@
+ 	bill = device->getSceneManager()->addBillboardSceneNode(
+ 		light, core::dimension2d<f32>(40,40));
+ 	bill->setMaterialFlag(video::EMF_LIGHTING, false);
+-	bill->setMaterialTexture(0, driver->getTexture("../../media/particlewhite.bmp"));
++	bill->setMaterialTexture(0, driver->getTexture("../media/particlewhite.bmp"));
+ 	bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+ 
+ 	// create meta triangle selector with all triangles selectors in it.
+@@ -550,7 +550,7 @@
+ 
+ 	campFire->setMaterialFlag(video::EMF_LIGHTING, false);
+ 	campFire->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
+-	campFire->setMaterialTexture(0, driver->getTexture("../../media/fireball.bmp"));
++	campFire->setMaterialTexture(0, driver->getTexture("../media/fireball.bmp"));
+ 	campFire->setMaterialType(video::EMT_TRANSPARENT_VERTEX_ALPHA);
+ 
+ 	// load music
+@@ -584,7 +584,7 @@
+ 	inOutFader->setColor(backColor,	video::SColor ( 0, 230, 230, 230 ));
+ 
+ 	// irrlicht logo
+-	device->getGUIEnvironment()->addImage(device->getVideoDriver()->getTexture("../../media/irrlichtlogo2.png"),
++	device->getGUIEnvironment()->addImage(device->getVideoDriver()->getTexture("../media/irrlichtlogo2.png"),
+ 		core::position2d<s32>(5,5));
+ 
+ 	// loading text
+@@ -601,7 +601,7 @@
+ 	// load bigger font
+ 
+ 	device->getGUIEnvironment()->getSkin()->setFont(
+-		device->getGUIEnvironment()->getFont("../../media/fonthaettenschweiler.bmp"));
++		device->getGUIEnvironment()->getFont("../media/fonthaettenschweiler.bmp"));
+ 
+ 	// set new font color
+ 
+@@ -663,7 +663,7 @@
+ 		core::dimension2d<f32>(25,25), start);
+ 
+ 	node->setMaterialFlag(video::EMF_LIGHTING, false);
+-	node->setMaterialTexture(0, device->getVideoDriver()->getTexture("../../media/fireball.bmp"));
++	node->setMaterialTexture(0, device->getVideoDriver()->getTexture("../media/fireball.bmp"));
+ 	node->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+ 
+ 	f32 length = (f32)(end - start).getLength();
+@@ -730,7 +730,7 @@
+ 			paf->drop();
+ 
+ 			pas->setMaterialFlag(video::EMF_LIGHTING, false);
+-			pas->setMaterialTexture(0, device->getVideoDriver()->getTexture("../../media/smoke.bmp"));
++			pas->setMaterialTexture(0, device->getVideoDriver()->getTexture("../media/smoke.bmp"));
+ 			pas->setMaterialType(video::EMT_TRANSPARENT_VERTEX_ALPHA);
+ 
+ 			scene::ISceneNodeAnimator* anim = sm->createDeleteAnimator(2000);
+@@ -776,7 +776,7 @@
+ 
+ 	// play music
+ 
+-	irrklang::ISound* snd = irrKlang->play2D("../../media/IrrlichtTheme.ogg", true, false, true);
++	irrklang::ISound* snd = irrKlang->play2D("../media/IrrlichtTheme.ogg", true, false, true);
+ 	if ( !snd )
+ 		snd = irrKlang->play2D("IrrlichtTheme.ogg", true, false, true);
+ 
+@@ -788,8 +788,8 @@
+ 
+ 	// preload both sound effects
+ 
+-	ballSound = irrKlang->getSoundSource("../../media/ball.wav");
+-	impactSound = irrKlang->getSoundSource("../../media/impact.wav");
++	ballSound = irrKlang->getSoundSource("../media/ball.wav");
++	impactSound = irrKlang->getSoundSource("../media/impact.wav");
+ }
+ #endif
+ 
+@@ -806,12 +806,12 @@
+ 	if (Mix_OpenAudio(22050, AUDIO_S16, 2, 128))
+ 		return;
+ 
+-	stream = Mix_LoadMUS("../../media/IrrlichtTheme.ogg");
++	stream = Mix_LoadMUS("../media/IrrlichtTheme.ogg");
+ 	if (stream)
+ 		Mix_PlayMusic(stream, -1);
+ 
+-	ballSound = Mix_LoadWAV("../../media/ball.wav");
+-	impactSound = Mix_LoadWAV("../../media/impact.wav");
++	ballSound = Mix_LoadWAV("../media/ball.wav");
++	impactSound = Mix_LoadWAV("../media/impact.wav");
+ }
+ 
+ void CDemo::playSound(Mix_Chunk *sample)
+--- examples/Demo/CMainMenu.cpp
++++ examples/Demo/CMainMenu.cpp
+@@ -27,7 +27,7 @@
+ 	if (MenuDevice->getFileSystem()->existFile("irrlicht.dat"))
+ 		MenuDevice->getFileSystem()->addZipFileArchive("irrlicht.dat");
+ 	else
+-		MenuDevice->getFileSystem()->addZipFileArchive("../../media/irrlicht.dat");
++		MenuDevice->getFileSystem()->addZipFileArchive("../media/irrlicht.dat");
+ 
+ 	video::IVideoDriver* driver = MenuDevice->getVideoDriver();
+ 	scene::ISceneManager* smgr = MenuDevice->getSceneManager();
+@@ -43,7 +43,7 @@
+ 	newskin->drop();
+ 
+ 	// load font
+-	gui::IGUIFont* font = guienv->getFont("../../media/fonthaettenschweiler.bmp");
++	gui::IGUIFont* font = guienv->getFont("../media/fonthaettenschweiler.bmp");
+ 	if (font)
+ 		guienv->getSkin()->setFont(font);
+ 
+@@ -103,12 +103,12 @@
+ 
+ 	// add md2 model
+ 
+-	scene::IAnimatedMesh* mesh = smgr->getMesh("../../media/faerie.md2");
++	scene::IAnimatedMesh* mesh = smgr->getMesh("../media/faerie.md2");
+ 	scene::IAnimatedMeshSceneNode* modelNode = smgr->addAnimatedMeshSceneNode(mesh);
+ 	if (modelNode)
+ 	{
+ 		modelNode->setPosition( core::vector3df(0.f, 0.f, -5.f) );
+-		modelNode->setMaterialTexture(0, driver->getTexture("../../media/faerie2.bmp"));
++		modelNode->setMaterialTexture(0, driver->getTexture("../media/faerie2.bmp"));
+ 		modelNode->setMaterialFlag(video::EMF_LIGHTING, true);
+ 		modelNode->getMaterial(0).Shininess = 50.f;
+ 		modelNode->getMaterial(0).NormalizeNormals = true;
+@@ -169,7 +169,7 @@
+ 				{
+ 					bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 					bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-					bill->setMaterialTexture(0, driver->getTexture("../../media/particlered.bmp"));
++					bill->setMaterialTexture(0, driver->getTexture("../media/particlered.bmp"));
+ 				}
+ 				// add fly circle animator to the light
+ 				anim = smgr->createFlyCircleAnimator(core::vector3df(0.f,0.f,-5.f),20.f,
+@@ -187,7 +187,7 @@
+ 				{
+ 					bill->setMaterialFlag(video::EMF_LIGHTING, false);
+ 					bill->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+-					bill->setMaterialTexture(0, driver->getTexture("../../media/portal1.bmp"));
++					bill->setMaterialTexture(0, driver->getTexture("../media/portal1.bmp"));
+ 				}
+ 				// add fly circle animator to the light
+ 				anim = smgr->createFlyCircleAnimator(core::vector3df(0.f,0.f,-5.f),20.f,
+@@ -210,10 +210,10 @@
+ 	bool oldMipMapState = driver->getTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS);
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, false);
+ 
+-	guienv->addImage(driver->getTexture("../../media/irrlichtlogo3.png"),
++	guienv->addImage(driver->getTexture("../media/irrlichtlogo3.png"),
+ 		core::position2d<s32>(5,5));
+ 
+-	video::ITexture* irrlichtBack = driver->getTexture("../../media/demoback.jpg");
++	video::ITexture* irrlichtBack = driver->getTexture("../media/demoback.jpg");
+ 
+ 	driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, oldMipMapState);
+ 
