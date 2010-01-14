@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-murrine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.41 2010/01/10 18:55:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.42 2010/01/14 21:04:00 maekke Exp $
+
+  14 Jan 2010; Markus Meier <maekke@gentoo.org>
+  gtk-engines-murrine-0.90.3-r1.ebuild:
+  x86 stable, bug #298566
 
   10 Jan 2010; nixnut <nixnut@gentoo.org>
   gtk-engines-murrine-0.90.3-r1.ebuild:

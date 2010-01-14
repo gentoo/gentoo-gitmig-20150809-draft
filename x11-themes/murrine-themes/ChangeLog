@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/murrine-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/ChangeLog,v 1.8 2010/01/10 18:55:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/ChangeLog,v 1.9 2010/01/14 21:03:18 maekke Exp $
+
+  14 Jan 2010; Markus Meier <maekke@gentoo.org>
+  murrine-themes-0.90.0-r1.ebuild:
+  x86 stable, bug #298566
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> murrine-themes-0.90.0-r1.ebuild:
   ppc stable #298566
