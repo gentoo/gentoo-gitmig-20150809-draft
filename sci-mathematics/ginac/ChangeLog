@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.39 2010/01/13 16:50:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.40 2010/01/14 18:07:24 hwoarang Exp $
+
+  14 Jan 2010; <hwoarang@gentoo.org> ginac-1.5.5.ebuild:
+  Stable on amd64 wrt bug #300557
 
   13 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> ginac-1.5.5.ebuild:
   Added VARTEXFONTS, bug #223077
