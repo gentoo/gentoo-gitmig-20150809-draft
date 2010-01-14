@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.97-r2.ebuild,v 1.1 2010/01/14 13:32:08 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.98.ebuild,v 1.1 2010/01/14 13:35:21 bangert Exp $
 
 EAPI="2"
 
