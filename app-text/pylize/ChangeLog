@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pylize
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.10 2007/02/09 01:05:31 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.11 2010/01/14 20:35:10 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> pylize-1.3b.ebuild:
+  Marking pylize-1.3b ppc for bug 299383
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
