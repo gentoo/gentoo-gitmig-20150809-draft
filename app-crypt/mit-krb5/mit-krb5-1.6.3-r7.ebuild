@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.7-r1.ebuild,v 1.3 2010/01/12 09:51:25 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.6.3-r7.ebuild,v 1.1 2010/01/14 09:12:31 mueli Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
-PATCHV="0.6"
+PATCHV="0.5"
 MY_P=${P/mit-}
 P_DIR=$(get_version_component_range 1-2)
 DESCRIPTION="MIT Kerberos V"
@@ -15,7 +15,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc"
+IUSE="krb4 doc"
 
 RDEPEND="!virtual/krb5
 	>=sys-libs/e2fsprogs-libs-1.41.0"
@@ -30,9 +30,10 @@ src_unpack() {
 	unpack ${A}
 	unpack ./${MY_P}.tar.gz
 	cd "${S}"
-	EPATCH_SOURCE="${WORKDIR}/patch" \
-		EPATCH_EXCLUDE="0001_all_lazyldflags.patch" \
-		EPATCH_SUFFIX="patch" epatch
+	EPATCH_SOURCE="${WORKDIR}/patch" EPATCH_SUFFIX="patch" epatch
+	epatch "${FILESDIR}/CVE-2009-0844+CVE-2009-0847.patch"
+	epatch "${FILESDIR}/CVE-2009-0846.patch"
+	epatch "${FILESDIR}/1.6-CVE-2009-4212.patch"
 	einfo "Regenerating configure scripts (be patient)"
 	local subdir
 	for subdir in $(find . -name configure.in \
@@ -46,13 +47,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# needed to work with sys-libs/e2fsprogs-libs <- should be removed!!
 	append-flags "-I/usr/include/et"
 	econf \
-		--without-krb4 \
+		$(use_with krb4) \
 		--enable-shared \
 		--with-system-et --with-system-ss \
 		--enable-dns-for-realm \
 		--enable-kdc-replay-cache || die
+
 	emake -j1 || die
 
 	if use doc ; then
@@ -64,7 +67,7 @@ src_compile() {
 }
 
 src_test() {
-	einfo "Tests do not run in sandbox, they need mit-krb5 to be already installed to test it."
+	einfo "Tests do not run in sandbox, have a lot of dependencies and are therefore completely disabled."
 }
 
 src_install() {
@@ -99,4 +102,8 @@ src_install() {
 	insinto /etc
 	newins "${D}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
 	newins "${D}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
+}
+
+pkg_postinst() {
+	elog "See /usr/share/doc/${PF}/html/krb5-admin.html for documentation."
 }
