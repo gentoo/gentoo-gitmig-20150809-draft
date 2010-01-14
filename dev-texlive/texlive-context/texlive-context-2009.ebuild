@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2009.ebuild,v 1.1 2010/01/11 03:06:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2009.ebuild,v 1.2 2010/01/14 08:47:02 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="context jmn lmextra context-account context-algorithmic context-bnf context-chromato context-construction-plan context-degrade context-fixme context-french context-games context-gnuplot context-letter context-lettrine context-lilypond context-mathsets context-notes-zh-cn context-simplefonts context-simpleslides context-top-ten context-typearea context-typescripts context-vim collection-context
 "
@@ -24,3 +24,15 @@ TEXLIVE_MODULE_BINSCRIPTS="texmf-dist/scripts/context/lua/luatools.lua texmf-dis
 for i in ${TL_CONTEXT_UNIX_STUBS} ; do
 TEXLIVE_MODULE_BINSCRIPTS="${TEXLIVE_MODULE_BINSCRIPTS} texmf-dist/scripts/context/stubs/unix/$i"
 done
+
+# This small hack is needed in order to have a sane upgrade path:
+# the new TeX Live 2009 metapost produces this file but it is not recorded in
+# any package; when running fmtutil (like texmf-update does) this file will be
+# created and cause collisions.
+
+pkg_setup() {
+	if [ -f "${ROOT}/var/lib/texmf/web2c/metapost/metafun.log" ]; then
+		einfo "Removing ${ROOT}/var/lib/texmf/web2c/metapost/metafun.log"
+		rm -f "${ROOT}/var/lib/texmf/web2c/metapost/metafun.log"
+	fi
+}
