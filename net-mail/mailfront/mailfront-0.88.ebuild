@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.13 2009/09/23 19:07:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.14 2010/01/14 15:15:26 bangert Exp $
 
 inherit fixheadtails toolchain-funcs
 
 DESCRIPTION="Mail server network protocol front-ends"
 HOMEPAGE="http://untroubled.org/mailfront/"
-SRC_URI="http://untroubled.org/mailfront/${P}.tar.gz"
+SRC_URI="http://untroubled.org/mailfront/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

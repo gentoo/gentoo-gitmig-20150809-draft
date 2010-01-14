@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qlogtools
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/ChangeLog,v 1.9 2008/08/19 12:22:52 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/ChangeLog,v 1.10 2010/01/14 15:16:48 bangert Exp $
+
+  14 Jan 2010; Thilo Bangert <bangert@gentoo.org> qlogtools-3.1.ebuild:
+  fix SRC_URI
 
   19 Aug 2008; Peter Volkov <pva@gentoo.org> qlogtools-3.1.ebuild:
   Added blocker for app-text/multitail, bug #205330, thank Wicher Minnaard

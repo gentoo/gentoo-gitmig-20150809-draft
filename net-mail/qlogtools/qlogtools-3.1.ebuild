@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.8 2008/08/19 12:22:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.9 2010/01/14 15:16:48 bangert Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Qmail Log processing tools"
 HOMEPAGE="http://untroubled.org/qlogtools/"
-SRC_URI="http://untroubled.org/qlogtools/${P}.tar.gz"
+SRC_URI="http://untroubled.org/qlogtools/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
