@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/guiloader-c++
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.13 2009/06/17 10:17:47 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.14 2010/01/14 12:42:27 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  guiloader-c++-2.15.0.ebuild:
+  stable x86, bug 254638
 
 *guiloader-c++-2.15.0 (17 Jun 2009)
 
