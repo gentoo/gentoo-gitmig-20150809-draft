@@ -1,19 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.7.1.ebuild,v 1.1 2009/12/29 19:29:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.7.1.ebuild,v 1.2 2010/01/14 19:25:57 flameeyes Exp $
 
 EAPI=2
 
-# jruby → is supported but there is something strange, maybe we need a
-# newer version of it.
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="test_rcovrt"
 
 RUBY_FAKEGEM_DOCDIR="rdoc"
 RUBY_FAKEGEM_EXTRADOC="THANKS BLURB"
 
-inherit ruby-fakegem versionator
+inherit ruby-fakegem versionator eutils
 
 DESCRIPTION="A ruby code coverage analysis tool"
 HOMEPAGE="http://eigenclass.org/hiki.rb?rcov"
@@ -34,6 +32,8 @@ IUSE=""
 RESTRICT=test
 
 all_ruby_prepare() {
+	epatch "${FILESDIR}"/${P}-jruby.patch
+
 	# Without this change, testing will always cause the extension to
 	# be rebuilt, and we don't want that.
 	sed -i -e '/:test_rcovrt =>/s| => \[.*\]||' Rakefile || "Rakefile fix failed"
