@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1-r1.ebuild,v 1.3 2010/01/14 12:15:26 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1-r1.ebuild,v 1.4 2010/01/14 12:37:09 bangert Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND} virtual/qmail"
 
 QMAIL_BINDIR="/var/qmail/bin/"
 
-src_prepare() {
+src_configure() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}${QMAIL_BINDIR}" > conf-bin
