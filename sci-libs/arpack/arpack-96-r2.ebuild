@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.11 2009/11/12 18:29:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.12 2010/01/14 00:56:42 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
 	doc? ( http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz
 		http://www.caam.rice.edu/software/ARPACK/DOCS/tutorial.ps.gz )"
 
-LICENSE="RiceBSD"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mpi doc examples"
