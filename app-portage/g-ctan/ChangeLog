@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/g-ctan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.10 2010/01/11 10:17:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.11 2010/01/14 12:17:29 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  -files/g-ctan-2008.1-fix-overlay-detection.patch:
+  clean up stray patch
 
 *g-ctan-2008.2 (11 Jan 2010)
 
