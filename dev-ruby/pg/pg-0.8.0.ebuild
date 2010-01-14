@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.8.0.ebuild,v 1.2 2010/01/14 16:57:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.8.0.ebuild,v 1.3 2010/01/14 17:13:51 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -19,7 +19,7 @@ HOMEPAGE="http://bitbucket.org/ged/ruby-pg/"
 
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 RDEPEND="dev-db/postgresql-base"
