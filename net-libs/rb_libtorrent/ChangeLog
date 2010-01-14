@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.76 2010/01/14 12:27:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.77 2010/01/14 16:02:17 yngwin Exp $
+
+  14 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  rb_libtorrent-0.14.8-r1.ebuild,
+  +files/rb_libtorrent-0.14.8-as-needed-fix.patch:
+  Add a patch to fix as-needed issues (bug 276873).
 
 *rb_libtorrent-0.14.8-r1 (14 Jan 2010)
 

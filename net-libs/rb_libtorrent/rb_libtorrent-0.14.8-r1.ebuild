@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.8-r1.ebuild,v 1.1 2010/01/14 12:27:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.8-r1.ebuild,v 1.2 2010/01/14 16:02:17 yngwin Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic versionator
@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.14.6-configure-ldflags-fix.patch  #290756
+	epatch "${FILESDIR}"/${P}-as-needed-fix.patch            #276873
 	eautoreconf
 }
 
