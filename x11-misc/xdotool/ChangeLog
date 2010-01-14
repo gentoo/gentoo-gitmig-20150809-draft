@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xdotool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.5 2009/10/30 11:05:37 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.6 2010/01/14 05:32:46 joker Exp $
+
+*xdotool-20091231.02 (14 Jan 2010)
+
+  14 Jan 2010; Christian Birchinger <joker@gentoo.org>
+  +xdotool-20091231.02.ebuild, +files/xdotool-20091231.02_as-needed.patch,
+  +files/xdotool-20091231.02_install-D.patch:
+  Version bump and ebuild cleanups.
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> xdotool-20090609.ebuild:
   amd64/x86 stable, bug #289978
