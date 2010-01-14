@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20091231.02.ebuild,v 1.2 2010/01/14 07:30:32 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20091231.02.ebuild,v 1.3 2010/01/14 07:33:26 joker Exp $
 
 EAPI=2
 
@@ -22,8 +22,8 @@ RDEPEND="${DEPEND}"
 
 # The test want to manualy start Xvfb an wont use VirtualX and
 # it tries to run a full gnome-session. For such a tiny application
-# i consider it overkill to rewrite the test scripts to use it's own     
-# X server and add a full blown gnome just to run the tests.
+# i consider it overkill to rewrite the test scripts to not use it's
+# own X server and add a full blown gnome just to run the tests.
 RESTRICT="test"
 
 src_prepare() {
