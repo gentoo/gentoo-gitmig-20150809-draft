@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.1.0.ebuild,v 1.3 2009/12/17 20:40:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.1.0.ebuild,v 1.4 2010/01/14 01:47:29 jer Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ CPPUNIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="Shared KOffice libraries."
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 hppa x86"
 IUSE="crypt openexr"
 
 RDEPEND="
