@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-1.0.0-r1.ebuild,v 1.2 2010/01/13 16:01:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-1.0.0-r1.ebuild,v 1.3 2010/01/14 15:34:28 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -16,7 +16,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/text-hyphen-1.0.0'
