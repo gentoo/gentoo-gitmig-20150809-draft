@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11100 2010/01/14 08:57:45 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11101 2010/01/14 13:52:32 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (14 Jan 2010)
+# Qt3 only application. bug #291878 and bug #283429
+# Will be moved to kde-sunset overlay on 2010-02-14
+media-video/qdvdauthor
 
 # Alistair Bush <ali_bush@gentoo.org> (14 Jan 2010)
 # Masked for testing and awaiting keywording of new
