@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.18 2010/01/13 16:49:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.19 2010/01/14 15:59:15 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> parsetree-3.0.4-r1.ebuild:
+  Marking parsetree-3.0.4-r1 ~ppc for bug 280631
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> parsetree-3.0.4-r1.ebuild:
   Marking parsetree-3.0.4-r1 ~ppc64 for bug 280631
