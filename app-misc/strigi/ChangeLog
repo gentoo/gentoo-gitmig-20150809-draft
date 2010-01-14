@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.47 2010/01/08 06:33:14 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.48 2010/01/14 00:20:45 jer Exp $
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> strigi-0.7.0.ebuild:
+  Stable for HPPA too.
 
   08 Jan 2010; Jonathan Callen <abcd@gentoo.org> strigi-0.6.5.ebuild,
   strigi-0.7.0.ebuild:
