@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.3 2010/01/14 15:44:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.4 2010/01/14 16:07:23 flameeyes Exp $
+
+  14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> fakefs-0.2.1.ebuild:
+  Improve jruby failure comment.
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> fakefs-0.2.1.ebuild:
   Marking fakefs-0.2.1 ~ppc for bug 300739
