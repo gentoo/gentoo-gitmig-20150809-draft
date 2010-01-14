@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.7 2009/09/23 18:06:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.8 2010/01/14 15:00:35 bangert Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 DEBIAN_PV="1"
 DEBIAN_SRC="${MY_P/-/_}-${DEBIAN_PV}.diff.gz"
 DESCRIPTION="Simple relay-only local mail transport agent"
-SRC_URI="http://untroubled.org/${PN}/${MY_P}.tar.gz
+SRC_URI="http://untroubled.org/${PN}/archive/${MY_P}.tar.gz
 		mirror://debian/pool/main/n/${PN}/${DEBIAN_SRC}"
 HOMEPAGE="http://untroubled.org/nullmailer/"
 
