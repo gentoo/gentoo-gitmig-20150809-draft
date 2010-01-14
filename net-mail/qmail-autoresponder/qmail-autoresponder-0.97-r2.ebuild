@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.97.ebuild,v 1.5 2009/09/23 19:09:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.97-r2.ebuild,v 1.1 2010/01/14 12:40:40 bangert Exp $
 
-inherit toolchain-funcs
+EAPI="2"
+
+inherit toolchain-funcs eutils multilib
 
 DESCRIPTION="Rate-limited autoresponder for qmail."
 HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
@@ -10,10 +12,10 @@ SRC_URI="http://untroubled.org/qmail-autoresponder/archive/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="mysql"
 
-DEPEND=">=dev-libs/bglibs-1.022
+DEPEND=">=dev-libs/bglibs-1.106
 	mysql? ( virtual/mysql )"
 RDEPEND="
 	${DEPEND}
@@ -21,12 +23,18 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 "
 
-src_compile() {
+src_prepare() {
+	use mysql || epatch	"${FILESDIR}/${PN}-0.97-remove-mysql.h.diff"
+}
+
+src_configure() {
 	echo "/usr/include/bglibs" > conf-bgincs
-	echo "/usr/lib/bglibs" > conf-bglibs
+	echo "/usr/$(get_libdir)/bglibs" > conf-bglibs
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
+}
 
+src_compile() {
 	# fails on parallel builds!
 	make qmail-autoresponder || die "Failed to make qmail-autoresponder"
 	if use mysql; then
