@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ucspi-proxy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.13 2009/11/20 12:42:35 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.14 2010/01/14 13:32:08 bangert Exp $
+
+*ucspi-proxy-0.97-r2 (14 Jan 2010)
+
+  14 Jan 2010; Thilo Bangert <bangert@gentoo.org>
+  +ucspi-proxy-0.97-r2.ebuild:
+  multilib ready - EAPI2
 
   20 Nov 2009; Thilo Bangert <bangert@gentoo.org> ucspi-proxy-0.97.ebuild,
   ucspi-proxy-0.97-r1.ebuild:
