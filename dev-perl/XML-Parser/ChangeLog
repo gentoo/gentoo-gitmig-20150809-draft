@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-Parser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.38 2009/05/07 10:32:00 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.39 2010/01/14 18:15:37 grobian Exp $
+
+*XML-Parser-2.36-r1 (14 Jan 2010)
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  +XML-Parser-2.36-r1.ebuild:
+  Revbump to include fix for Prefix, bug #294758, transfer Prefix keywords
 
   07 May 2009; Torsten Veller <tove@gentoo.org> -XML-Parser-2.34.ebuild,
   -XML-Parser-2.34-r1.ebuild:
