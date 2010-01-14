@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.2.ebuild,v 1.7 2009/09/05 19:06:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.2.ebuild,v 1.8 2010/01/14 21:39:14 fauli Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://pyyaml.org/download/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-linux ~x86-macos"
 IUSE="doc examples test"
 
 S="${WORKDIR}/${MY_P}"

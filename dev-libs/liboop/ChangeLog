@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.13 2009/03/09 02:31:55 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.14 2010/01/14 21:37:35 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> liboop-1.0.ebuild:
+  Transfer Prefix keywords
 
   09 Mar 2009; Mike Frysinger <vapier@gentoo.org> liboop-1.0.ebuild:
   Cleanup a bit and do not run ldconfig.

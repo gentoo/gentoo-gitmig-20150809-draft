@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigsegv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.35 2009/09/14 18:31:00 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.36 2010/01/14 21:21:53 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libsigsegv-2.6.ebuild:
+  Transfer Prefix keywords
 
   14 Sep 2009; Raúl Porcel <armin76@gentoo.org> libsigsegv-2.6.ebuild:
   Add ~arm/~s390/~sh

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.11 2008/08/09 21:35:20 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.12 2010/01/14 21:41:05 fauli Exp $
 
 inherit flag-o-matic distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://whytheluckystiff.net/syck/"
 SRC_URI="http://rubyforge.org/frs/download.php/4492/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 DEPEND="python? ( dev-lang/python !dev-python/pysyck )"
 RDEPEND="${DEPEND}"
 PDEPEND="php? ( dev-php5/pecl-syck

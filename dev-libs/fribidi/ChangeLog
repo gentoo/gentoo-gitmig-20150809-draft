@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fribidi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.37 2009/10/12 16:36:38 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.38 2010/01/14 21:22:55 fauli Exp $
+
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  fribidi-0.19.1.ebuild:
+  Transfer Prefix keywords
 
   12 Oct 2009; Raúl Porcel <armin76@gentoo.org> fribidi-0.10.4.ebuild,
   fribidi-0.10.7.ebuild:
