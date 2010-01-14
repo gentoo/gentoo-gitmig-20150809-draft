@@ -1,11 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-2.4.0.ebuild,v 1.2 2010/01/11 17:58:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-2.4.0.ebuild,v 1.3 2010/01/14 22:13:34 flameeyes Exp $
 
 EAPI=2
 
-# jruby → “fork is unsafe and disabled by default on JRuby“
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -31,6 +30,14 @@ all_ruby_prepare() {
 	# needed to void a collision with the Timeout::Error alias in Ruby
 	# 1.8.7 at least.
 	sed -i -e 's:TimeoutError:SessionTimeoutError:' test/session.rb || die
+}
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*jruby)
+			epatch "${FILESDIR}"/${P}-jruby.patch
+			;;
+	esac
 }
 
 each_ruby_test() {

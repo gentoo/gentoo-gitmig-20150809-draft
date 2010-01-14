@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.2 2010/01/11 17:58:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.3 2010/01/14 22:13:34 flameeyes Exp $
+
+  14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  session-2.4.0.ebuild, +files/session-2.4.0-jruby.patch:
+  Add a patch for JRuby compatibility by Charles Nutter (headius), and
+  enable for JRuby target.
 
   11 Jan 2010; Hans de Graaff <graaff@gentoo.org> session-2.4.0.ebuild:
   Update license.
