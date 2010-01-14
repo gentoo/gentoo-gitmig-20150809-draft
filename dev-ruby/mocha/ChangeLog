@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.15 2010/01/13 16:30:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.16 2010/01/14 15:40:11 ranger Exp $
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> mocha-0.9.8-r2.ebuild:
+  Marking mocha-0.9.8-r2 ~ppc for bug 297711
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> mocha-0.9.8-r2.ebuild:
   Marking mocha-0.9.8-r2 ~ppc64 for bug 300739
