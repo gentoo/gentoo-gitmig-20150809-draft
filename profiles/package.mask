@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11107 2010/01/15 08:13:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11108 2010/01/15 13:27:35 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -339,11 +339,6 @@ app-office/qtstalker
 # Removal on 2010-03-05
 sys-fs/archfs
 
-# Samuli Suominen <ssuominen@gentoo.org> (04 Jan 2010)
-# Bundles a copy of libyahoo2, and then collides with
-# it. Qt3 only. Masked for removal in 30 days.
-net-p2p/qtella
-
 # Ben de Groot <yngwin@gentoo.org> (04 Jan 2010)
 # Masking pending removal in 30 days
 # Qt3 app, bug 283429, last release almost 8 years ago
@@ -454,12 +449,6 @@ sys-apps/count
 # Masked for removal in 60 days, bug 297657.
 app-mobilephone/moto4lin
 
-# Samuli Suominen <ssuominen@gentoo.org> (28 Dec 2009)
-# Doesn't compile (#248152). Qt3-only package.
-# Use linuxdcpp or valknut as replacement.
-# Masked for removal in 60 days.
-net-p2p/dc-qt
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (28 Dec 2009)
 #  on behalf of QA team
 #
@@ -476,13 +465,6 @@ sys-apps/sdd
 #
 # Masked for removal
 x11-themes/gtk-engines-qt
-
-# Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
-# Pre-stripped files (#252082)
-# Internal copies of zlib and libpng (#251737)
-# Qt2, Qt3 package. Unmaintained orphaned binary-only library.
-# Masked for removal in 60 days.
-x11-libs/kylixlibs3-borqt
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
 # Doesn't compile (#298452). Orphaned library, was
@@ -580,19 +562,6 @@ games-strategy/freelords
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Dec 2009)
 # Masked for testing.
 =app-admin/syslog-ng-3.0.5
-
-# Samuli Suominen <ssuominen@gentoo.org> (21 Dec 2009)
-# Masked for QA.
-#
-# Doesn't compile wrt bugs 279334, 246875, 228241.
-# Qt3-only application with no development being done for Qt4-port.
-#
-# Removal on 2010-02-19
-app-dicts/vdict
-app-dicts/vdict-en-vi
-app-dicts/vdict-fr-vi
-app-dicts/vdict-vi-en
-app-dicts/vdict-vi-fr
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (20 Dec 2009)
 # Only needed and works for ruby 1.9 so for now no need to
@@ -820,18 +789,6 @@ app-emacs/aspectj4emacs
 #
 # Removal on 2010-02-02
 dev-dotnet/mono-fuse
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
-#  on behalf of QA team
-#
-# qsa fails to build with Qt4 installed (bug #204537, open
-# January 2008); museek+ uses it and also misplaces man pages
-# (bug #250310) and use cmake directly rather than through
-# eclass (bug #287588).
-#
-# Removal on 2010-02-02
-dev-libs/qsa
-net-p2p/museek+
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Dec 2009)
 #  on behalf of QA team
