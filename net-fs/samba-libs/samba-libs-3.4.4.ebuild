@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.4.ebuild,v 1.3 2010/01/14 22:45:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.4.ebuild,v 1.4 2010/01/15 00:50:58 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -65,7 +65,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/samba-3.4.2-missing_includes.patch" \
 		"${FILESDIR}/samba-3.4.2-fix-samba4-automake.patch" \
-		"${FILESDIR}/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch" 
+		"${FILESDIR}/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch"
 		#"${FILESDIR}/samba-3.4.4-version.h.patch"
 
 	cp "${FILESDIR}/samba-3.4.2-lib.tevent.python.mk" "lib/tevent/python.mk"
