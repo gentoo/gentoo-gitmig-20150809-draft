@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/unixtop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/unixtop/ChangeLog,v 1.1 2009/09/26 14:08:50 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/unixtop/ChangeLog,v 1.2 2010/01/15 19:55:39 ulm Exp $
+
+  15 Jan 2010; Ulrich Mueller <ulm@gentoo.org> unixtop-3.8_beta1-r1.ebuild:
+  LICENSE is identical with BSD, bug 301123.
 
 *unixtop-3.8_beta1-r1 (05 Apr 2009)
 

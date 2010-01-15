@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/unixtop/unixtop-3.8_beta1-r1.ebuild,v 1.1 2009/09/26 14:08:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/unixtop/unixtop-3.8_beta1-r1.ebuild,v 1.2 2010/01/15 19:55:39 ulm Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="top for UNIX systems"
 HOMEPAGE="http://unixtop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/unixtop/top-${PV/_/}.tar.bz2"
 
-LICENSE="unixtop"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
