@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-science
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.30 2010/01/11 03:34:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.31 2010/01/15 09:41:40 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  texlive-science-2009.ebuild:
+  Transfer Prefix keywords
 
 *texlive-science-2009 (11 Jan 2010)
 

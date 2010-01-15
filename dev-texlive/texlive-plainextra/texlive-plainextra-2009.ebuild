@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-plainextra/texlive-plainextra-2009.ebuild,v 1.1 2010/01/11 03:33:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-plainextra/texlive-plainextra-2009.ebuild,v 1.2 2010/01/15 09:38:11 fauli Exp $
 
 TEXLIVE_MODULE_CONTENTS="figflow fixpdfmag font-change fontch graphics-pln hyplain js-misc mkpattern newsletr placeins-plain plnfss resumemac timetable treetex typespec varisize collection-plainextra
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Plain TeX supplementary packages"
 
 LICENSE="GPL-2 as-is freedist LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 !<dev-texlive/texlive-langvietnamese-2009

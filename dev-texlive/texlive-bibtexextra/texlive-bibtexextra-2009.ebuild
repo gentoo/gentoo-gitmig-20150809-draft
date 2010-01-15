@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-bibtexextra/texlive-bibtexextra-2009.ebuild,v 1.1 2010/01/11 03:06:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-bibtexextra/texlive-bibtexextra-2009.ebuild,v 1.2 2010/01/15 09:11:38 fauli Exp $
 
 TEXLIVE_MODULE_CONTENTS="aichej amsrefs apacite apalike2 beebe bibarts bibexport bibhtml biblist bibtopic bibtopicprefix bibunits cell chicago chicago-annote chembst collref compactbib custom-bib din1505 dk-bib doipubmed elsevier-bib fbs figbib footbib harvard harvmac ijqc inlinebib iopart-num jneurosci jurabib listbib margbib multibib munich notes2bib perception pnas2009 rsc sort-by-letters splitbib urlbst collection-bibtexextra
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Extra BibTeX styles"
 
 LICENSE="GPL-2 as-is GPL-1 LPPL-1.3 "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-latex-2009
 !=dev-texlive/texlive-latexextra-2007*

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/texlive-fontsextra-2009.ebuild,v 1.1 2010/01/11 03:15:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/texlive-fontsextra-2009.ebuild,v 1.2 2010/01/15 09:14:53 fauli Exp $
 
 TEXLIVE_MODULE_CONTENTS="Asana-Math albertus allrunes antiqua antp antt apl ar archaic arev ascii astro atqolive augie auncial-new aurical barcodes bayer bbding bbm bbm-macros bbold belleek bera blacklettert1 boisik bookhands braille brushscr calligra carolmin-ps ccicons cherokee clarendo cm-lgc cm-super cmbright cmll cmpica coronet courier-scaled cryst cyklop dancers dice dictsym dingbat doublestroke dozenal duerer duerer-latex ean ecc eco eiad eiad-ltx elvish epigrafica epsdice esvect eulervm euxm feyn fge foekfont fonetika fourier fouriernc frcursive garamond genealogy gentium gfsartemisia gfsbodoni gfscomplutum gfsdidot gfsneohellenic gfssolomos gnu-freefont gothic greenpoint groff grotesq hands hfbright hfoldsty ifsym inconsolata initials iwona jablantile junicode kixfont knuthotherfonts kpfonts kurier lettrgth lfb libertine libris linearA logic lxfonts ly1 marigold mathabx mathdesign mnsymbol nkarta ocherokee ogham oinuit optima orkhun osmanian pacioli pclnfss phaistos phonetic pigpen psafm punk recycle sauter sauterfonts semaphor simpsons skull staves tapir tengwarscript tpslifonts trajan umtypewriter univers universa venturisadf wsuipa yfonts zefonts collection-fontsextra
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Extra fonts"
 
 LICENSE="GPL-2 as-is BSD freedist GPL-1 GPL-2 GPL-3 LPPL-1.3 OFL public-domain TeX "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 !=dev-texlive/texlive-langpolish-2007*

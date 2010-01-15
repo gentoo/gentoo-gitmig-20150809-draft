@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontsextra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.37 2010/01/11 03:15:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.38 2010/01/15 09:14:53 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  texlive-fontsextra-2009.ebuild:
+  Transfer Prefix keywords
 
 *texlive-fontsextra-2009 (11 Jan 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-humanities/texlive-humanities-2009.ebuild,v 1.1 2010/01/11 03:18:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-humanities/texlive-humanities-2009.ebuild,v 1.2 2010/01/15 09:22:37 fauli Exp $
 
 TEXLIVE_MODULE_CONTENTS="alnumsec arydshln bibleref covington dramatist ecltree ednotes gb4e gmverse jura juraabbrev juramisc jurarsp ledmac lexikon lineno linguex liturg parallel parrun plari play poemscol qobitree qtree rtklage screenplay sides stage tree-dvips verse xyling collection-humanities
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Humanities packages"
 
 LICENSE="GPL-2 freedist GPL-1 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-latex-2009
 !dev-tex/lineno
