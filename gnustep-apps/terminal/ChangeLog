@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/terminal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.21 2009/05/26 09:36:19 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.22 2010/01/15 13:51:35 voyageur Exp $
+
+*terminal-0.9.6 (15 Jan 2010)
+
+  15 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +terminal-0.9.6.ebuild:
+  Bump, bugfixes and support for reversed colors
 
 *terminal-0.9.5 (26 May 2009)
 
