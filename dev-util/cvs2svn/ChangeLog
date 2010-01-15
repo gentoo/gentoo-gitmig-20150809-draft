@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs2svn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.25 2009/05/28 20:35:59 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.26 2010/01/15 21:13:47 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cvs2svn-2.2.0.ebuild:
+  Transfer Prefix keywords
 
   28 May 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   give up the package to some people that want it

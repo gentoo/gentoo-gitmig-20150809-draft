@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.22 2008/10/27 20:05:20 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.23 2010/01/15 21:11:02 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> byacc-1.9-r2.ebuild:
+  Transfer Prefix keywords
 
   27 Oct 2008; Brent Baude <ranger@gentoo.org> byacc-1.9-r2.ebuild:
   Marking byacc-1.9-r2 ppc64 for bug 232005

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intltool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.126 2009/09/16 21:32:59 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.127 2010/01/15 21:23:27 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  intltool-0.40.6-r1.ebuild:
+  Transfer Prefix keywords
 
   16 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -intltool-0.40.6.ebuild:

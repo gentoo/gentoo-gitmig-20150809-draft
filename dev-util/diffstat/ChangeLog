@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.98 2009/12/16 13:56:11 tcunha Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.99 2010/01/15 21:19:52 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> diffstat-1.51.ebuild:
+  Transfer Prefix keywords
 
   16 Dec 2009; Tiago Cunha <tcunha@gentoo.org> -diffstat-1.48.ebuild,
   -diffstat-1.49.ebuild, -diffstat-1.50.ebuild:

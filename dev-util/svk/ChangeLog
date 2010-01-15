@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.39 2009/09/05 00:08:47 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.40 2010/01/15 21:55:55 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> svk-2.0.2.ebuild:
+  Transfer Prefix keywords
 
   05 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   -files/svk-1.07-xxdiff.patch:

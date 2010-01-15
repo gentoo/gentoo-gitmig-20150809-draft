@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/huc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/ChangeLog,v 1.13 2009/09/23 17:44:55 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/ChangeLog,v 1.14 2010/01/15 21:45:56 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> huc-0.1.ebuild:
+  Transfer Prefix keywords
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> huc-0.1.ebuild:
   Remove virtual/libc

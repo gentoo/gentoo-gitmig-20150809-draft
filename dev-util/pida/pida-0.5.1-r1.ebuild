@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.1-r1.ebuild,v 1.2 2009/04/27 17:35:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.5.1-r1.ebuild,v 1.3 2010/01/15 21:49:24 fauli Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://pida.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="gnome"
 
 RDEPEND=">=dev-python/pygtk-2.8

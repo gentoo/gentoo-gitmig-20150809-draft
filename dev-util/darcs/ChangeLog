@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/darcs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.104 2009/08/30 09:55:34 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.105 2010/01/15 21:16:33 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> darcs-2.2.1.ebuild:
+  Transfer Prefix keywords
 
   30 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org> darcs-2.0.2.ebuild:
   Fix build system so that it builds with ghc 6.10, as this is the latest

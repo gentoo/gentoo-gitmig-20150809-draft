@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dejagnu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.17 2009/09/23 17:44:09 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.18 2010/01/15 21:30:53 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  dejagnu-1.4.4-r1.ebuild:
+  Transfer Prefix keywords
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> dejagnu-1.4.4-r1.ebuild:
   Remove virtual/libc

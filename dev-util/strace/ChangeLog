@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.139 2009/12/29 19:42:44 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.140 2010/01/15 21:54:08 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> strace-4.5.19.ebuild:
+  Transfer Prefix keywords
 
   29 Dec 2009; Christian Faulhammer <fauli@gentoo.org> strace-4.5.19.ebuild:
   stable x86, bug 297079

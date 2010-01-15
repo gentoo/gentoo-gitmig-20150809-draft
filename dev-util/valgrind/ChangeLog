@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valgrind
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.109 2009/11/16 20:49:18 griffon26 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.110 2010/01/15 22:00:13 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  valgrind-3.5.0.ebuild:
+  Transfer Prefix keywords
 
   16 Nov 2009; Maurice van der Pot <griffon26@gentoo.org>
   files/valgrind-3.5.0-non-exec-stack.patch:

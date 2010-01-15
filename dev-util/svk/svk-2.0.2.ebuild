@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-2.0.2.ebuild,v 1.6 2009/07/19 17:49:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-2.0.2.ebuild,v 1.7 2010/01/15 21:55:55 fauli Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://svk.elixus.org/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="crypt nls pager patch log4p bash-completion"
 
 DEPEND="

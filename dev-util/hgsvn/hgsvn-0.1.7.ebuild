@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgsvn/hgsvn-0.1.7.ebuild,v 1.1 2009/09/11 23:32:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgsvn/hgsvn-0.1.7.ebuild,v 1.2 2010/01/15 21:45:00 fauli Exp $
 
 NEED_PYTHON=2.4
 
@@ -12,7 +12,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/h/hgsvn/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="dev-python/setuptools"

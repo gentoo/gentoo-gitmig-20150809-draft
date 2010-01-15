@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/gitosis-gentoo-0.2_p20090515.ebuild,v 1.1 2009/05/15 09:50:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/gitosis-gentoo-0.2_p20090515.ebuild,v 1.2 2010/01/15 21:37:55 fauli Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ MY_P="${PN}-${MY_PV}"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE=""
 DEPEND_GIT=">=dev-util/git-1.5.6.4"
 DEPEND="${DEPEND_GIT}
