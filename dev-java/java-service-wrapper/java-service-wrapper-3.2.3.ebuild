@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.2.3.ebuild,v 1.3 2008/02/27 09:36:13 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.2.3.ebuild,v 1.4 2010/01/15 20:12:10 ulm Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -12,7 +12,7 @@ DESCRIPTION="A wrapper that makes it possible to install a Java Application as d
 HOMEPAGE="http://wrapper.tanukisoftware.org/"
 SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 
-LICENSE="java-service-wrapper"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
