@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.2-r2.ebuild,v 1.8 2009/08/23 16:02:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.2-r2.ebuild,v 1.9 2010/01/15 03:54:33 abcd Exp $
 
 inherit sgml-catalog eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.oasis-open.org/docbook/sgml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="4.2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.41"
@@ -26,13 +26,13 @@ sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-catalog.diff || die
+	epatch "${FILESDIR}"/${P}-catalog.diff
 }
 
-src_install () {
+src_install() {
 	insinto /usr/share/sgml/docbook/sgml-dtd-${PV}
-	doins *.dcl *.dtd *.mod
-	newins docbook.cat catalog
+	doins *.dcl *.dtd *.mod || die "doins failed"
+	newins docbook.cat catalog || die "newins failed"
 
 	dodoc ChangeLog README
 }
