@@ -1,6 +1,9 @@
 B1;1704;0c# ChangeLog for sci-libs/hdf5
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.46 2009/12/11 23:03:51 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.47 2010/01/15 23:03:18 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hdf5-1.8.4-r1.ebuild:
+  stable x86, bug 299710
 
   11 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
   files/hdf5-1.8.3-destdir.patch, hdf5-1.8.4-r1.ebuild:
