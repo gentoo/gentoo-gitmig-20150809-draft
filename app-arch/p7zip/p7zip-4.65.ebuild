@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.65.ebuild,v 1.8 2009/11/06 17:46:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.65.ebuild,v 1.9 2010/01/15 01:26:03 abcd Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1 rar? ( unRAR )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc kde rar static wxwidgets"
 
 RDEPEND="kde? ( x11-libs/wxGTK:2.8[X,-odbc] kde-base/konqueror )
@@ -53,6 +53,9 @@ src_prepare() {
 	elif [[ ${CHOST} == *-darwin* ]] ; then
 		# Mac OS X needs this special makefile, because it has a non-GNU linker
 		cp -f makefile.macosx makefile.machine
+		# bundles have extension .bundle
+		sed -i -e '/^PROG=/s/\.so/.bundle/' \
+			CPP/7zip/Bundles/Format7zFree/makefile || die
 	elif use x86-fbsd; then
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine
@@ -111,10 +114,10 @@ src_install() {
 
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe bin/7z bin/7za bin/7zr bin/7zCon.sfx || die "doexe bins"
-	doexe bin/*.so || die "doexe *.so files"
+	doexe bin/*$(get_modname) || die "doexe *$(get_modname) files"
 	if use rar; then
 		exeinto /usr/$(get_libdir)/${PN}/Codecs/
-		doexe bin/Codecs/*.so || die "doexe Codecs/*.so files"
+		doexe bin/Codecs/*$(get_modname) || die "doexe Codecs/*$(get_modname) files"
 	fi
 
 	doman man1/7z.1 man1/7za.1 man1/7zr.1
