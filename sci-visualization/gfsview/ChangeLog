@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/gfsview
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.4 2007/02/22 01:08:35 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.5 2010/01/15 19:35:06 bicatali Exp $
+
+*gfsview-20091219 (15 Jan 2010)
+
+  15 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -gfsview-0.4.ebuild,
+  -gfsview-0.4.2.ebuild, +gfsview-20091219.ebuild,
+  -files/gtk-client-events-handling.patch:
+  Version bump, now builds, and stay in main tree. Batch mode disabled
+  because libOSmesa is forced disabled in media-libs/mesa
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
