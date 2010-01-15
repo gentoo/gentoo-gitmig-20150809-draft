@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.89 2010/01/10 18:39:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.90 2010/01/15 03:19:03 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -233,6 +233,13 @@ eautomake() {
 
 	# --force-missing seems not to be recognized by some flavours of automake
 	autotools_run_tool automake --add-missing --copy ${extra_opts} "$@"
+}
+
+# @FUNCTION: eautopoint
+# @DESCRIPTION:
+# Runs autopoint (from the gettext package).
+eautopoint() {
+	autotools_run_tool autopoint "$@"
 }
 
 # Internal function to run an autotools' tool
