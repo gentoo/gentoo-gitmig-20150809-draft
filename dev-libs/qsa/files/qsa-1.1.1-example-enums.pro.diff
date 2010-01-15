@@ -1,5 +1,0 @@
---- examples/enums/enums.pro.orig	2004-09-23 12:20:14.000000000 +0200
-+++ examples/enums/enums.pro	2004-09-23 16:25:35.000000000 +0200
-@@ -1,1 +1,1 @@
--load(qsa)
-+load(../qsa)

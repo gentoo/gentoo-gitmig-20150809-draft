@@ -1,5 +1,0 @@
---- examples/examples.pro.orig
-+++ examples/examples.pro
-@@ -3,1 +3,1 @@
--	 	  console game filter wrappers enums
-+	 	  console game filter wrappers
