@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.9 2010/01/15 17:15:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.2.ebuild,v 1.1 2010/01/15 17:15:37 hwoarang Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -30,7 +30,12 @@ RDEPEND=">=dev-cpp/gtkmm-2.16
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
+	dev-libs/libxdg-basedir
 	>=sys-devel/automake-1.11"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}_64bit_fix.patch
+}
 
 src_configure() {
 	econf \
