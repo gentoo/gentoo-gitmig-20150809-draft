@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.2.ebuild,v 1.2 2009/10/06 17:49:26 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.2.ebuild,v 1.3 2010/01/15 23:04:21 fauli Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 IUSE=""
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 
 RDEPEND="x11-libs/qt-gui:4
