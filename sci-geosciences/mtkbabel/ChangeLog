@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mtkbabel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/ChangeLog,v 1.2 2009/09/18 18:53:36 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/ChangeLog,v 1.3 2010/01/15 14:58:17 bangert Exp $
+
+  15 Jan 2010; Thilo Bangert <bangert@gentoo.org> mtkbabel-0.8.ebuild:
+  die on dobin
 
   18 Sep 2009; Sven Wegener <swegener@gentoo.org> mtkbabel-0.8.ebuild:
   Add ~amd64 keyword.

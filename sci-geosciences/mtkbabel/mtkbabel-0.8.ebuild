@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/mtkbabel-0.8.ebuild,v 1.2 2009/09/18 18:53:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/mtkbabel-0.8.ebuild,v 1.3 2010/01/15 14:58:17 bangert Exp $
 
 EAPI="2"
 
@@ -20,6 +20,6 @@ RDEPEND="dev-lang/perl
 
 src_install() {
 	doman mtkbabel.1
-	dobin mtkbabel
+	dobin mtkbabel || die
 	dodoc MtkExtensionsv1.xsd README
 }
