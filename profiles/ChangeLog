@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3787 2010/01/14 16:47:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3788 2010/01/15 00:38:07 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> use.desc:
+  Remove almost unused kde-base/arts:3.5 USE="arts" from global flags.
 
   14 Jan 2010; Andreas Proschofsky <suka@gentoo.org> desc/linguas.desc:
   Add om and ug locales
