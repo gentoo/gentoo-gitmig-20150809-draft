@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatomic_ops
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.15 2007/12/31 16:19:37 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.16 2010/01/15 18:09:38 grobian Exp $
+
+  15 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  libatomic_ops-1.2-r1.ebuild:
+  Fix for Prefix and marked ~ppc-macos
 
   31 Dec 2007; Brent Baude <ranger@gentoo.org> libatomic_ops-1.2-r1.ebuild:
   Marking libatomic_ops-1.2-r1 ppc64 for bug 197126
