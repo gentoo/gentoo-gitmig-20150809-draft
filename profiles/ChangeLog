@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3789 2010/01/15 08:13:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3790 2010/01/15 17:52:20 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jan 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Qt3 only application. Bug #299746
 
   15 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Add package.mask entry for www-client/chromium-4.0.295.0 dev channel
