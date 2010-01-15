@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.9 2008/10/04 10:33:09 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.10 2010/01/15 07:14:10 bicatali Exp $
+
+*gts-20090909 (15 Jan 2010)
+
+  15 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -gts-0.7.4.ebuild,
+  -gts-0.7.6.ebuild, +gts-20090909.ebuild,
+  +files/gts-20090909-examples.patch, metadata.xml:
+  Version bump, now do not compile examples. Restricted test as still buggy
 
 *gts-20081607 (03 Oct 2008)
 
