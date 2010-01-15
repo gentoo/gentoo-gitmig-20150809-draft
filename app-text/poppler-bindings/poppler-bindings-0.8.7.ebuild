@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.8.7.ebuild,v 1.19 2010/01/13 14:48:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.8.7.ebuild,v 1.20 2010/01/15 04:20:26 abcd Exp $
 
 EAPI="1"
 
@@ -22,7 +22,7 @@ SRC_URI="http://poppler.freedesktop.org/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="gtk cairo qt4 test"
 
 RDEPEND="
@@ -66,10 +66,12 @@ src_unpack(){
 }
 
 src_compile() {
+	[[ ${CHOST} == *-interix* ]] && append-flags -D_REENTRANT
+
 	econf	$(use_enable cairo cairo-output) \
 		$(use_enable gtk poppler-glib) \
 		--disable-poppler-qt \
-		$(use_enable qt4 poppler-qt4) \
+		$(use_enable qt4 poppler-qt4)
 	pushd poppler
 	if use cairo; then
 		emake libpoppler-cairo.la || die "cairo failed"

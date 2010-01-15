@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.140 2010/01/13 14:48:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.141 2010/01/15 04:20:26 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  poppler-bindings-0.8.7.ebuild, poppler-bindings-0.10.5-r1.ebuild:
+  Add prefix keywords
 
   13 Jan 2010; Ben de Groot <yngwin@gentoo.org>
   poppler-bindings-0.8.7.ebuild, -poppler-bindings-0.10.4.ebuild,
