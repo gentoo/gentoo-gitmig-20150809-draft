@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.20 2010/01/14 16:15:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.21 2010/01/15 14:05:49 flameeyes Exp $
+
+*nokogiri-1.4.1-r1 (15 Jan 2010)
+
+  15 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nokogiri-1.4.1-r1.ebuild, +files/nokogiri-1.4.1-ruby19.patch:
+  Add a new revision of nokogiri that works with Ruby 1.9, but which depends
+  on newly-added rexical.
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> nokogiri-1.4.1.ebuild:
   Marking nokogiri-1.4.1 ~ppc for bug 297822
