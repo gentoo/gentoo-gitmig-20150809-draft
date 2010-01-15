@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.671 2010/01/14 00:58:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.672 2010/01/15 07:43:12 vapier Exp $
+
+  15 Jan 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild:
+  Mark ia64 stable #289342.
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> glibc-2.10.1-r1.ebuild:
   Stable for HPPA (bug #289342).
