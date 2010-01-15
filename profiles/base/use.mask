@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.92 2009/12/29 22:53:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.93 2010/01/15 00:42:48 ssuominen Exp $
 
 # KDE4 specific enablefinal flag
 # Uses huge amounts of ram, and those ricers would be spamming bugzilla.
@@ -229,10 +229,6 @@ i6fork
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2009)
 # RealMagic Hollywood+/Creative DXR3 support
 dxr3
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2009)
-# Mask USE arts. Deprecated. Remove this entry when kdelibs-3 is out of tree.
-arts
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Dec 2009)
 #  on behalf of QA Team
