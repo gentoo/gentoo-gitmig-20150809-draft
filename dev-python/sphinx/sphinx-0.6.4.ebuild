@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.4.ebuild,v 1.1 2010/01/12 21:40:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.4.ebuild,v 1.2 2010/01/15 17:15:20 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,30 +21,27 @@ IUSE="doc test"
 RDEPEND=">=dev-python/pygments-0.8
 	>=dev-python/jinja2-2.1
 	>=dev-python/docutils-0.4"
-
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/nose )"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
+DOCS="CHANGES"
+
 src_compile() {
-	DOCS="CHANGES"
 	distutils_src_compile
 
 	if use doc; then
 		cd doc
-		PYTHONPATH="../" emake \
-			SPHINXBUILD="${python} ../sphinx-build.py" \
-			html || die "making docs failed"
+		PYTHONPATH="../" emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die "Generation of documentation failed"
 	fi
 }
 
 src_test() {
 	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests
+		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
 	}
 	python_execute_function testing
 }
@@ -53,7 +50,7 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -A txt -r doc/_build/html/* || die
+		dohtml -A txt -r doc/_build/html/* || die "dohtml failed"
 	fi
 }
 
