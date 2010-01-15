@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/version-0.79.ebuild,v 1.1 2010/01/12 13:04:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/version-0.79-r1.ebuild,v 1.1 2010/01/15 15:05:22 tove Exp $
 
 EAPI=2
 
@@ -21,3 +21,4 @@ DEPEND="${RDEPEND}
 	>=virtual/perl-Module-Build-0.33.05"
 
 SRC_TEST="do"
+PATCHES=( "${FILESDIR}/0.79-assert.patch" )
