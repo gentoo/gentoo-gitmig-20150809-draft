@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.32 2009/08/23 01:23:52 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.33 2010/01/15 22:35:42 arfrever Exp $
+
+  15 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kudzu-1.2.83.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Disable installation for Python 3 (bug #300990).
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -files/sunlance.patch:
   remove unused patches

@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.4 2008/07/20 06:28:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.5 2010/01/15 22:35:42 arfrever Exp $
 
-inherit eutils python rpm multilib toolchain-funcs
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit eutils multilib python rpm toolchain-funcs
 
 # Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
 # tarball out of it
@@ -21,13 +24,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/popt
+RDEPEND="dev-lang/python
+	dev-libs/popt
 	sys-apps/hwdata-redhat
 	!sys-libs/libkudzu"
 DEPEND="dev-libs/popt
 	>=sys-apps/pciutils-2.2.4"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	PYTHON_VERSIONS=
+	validate_PYTHON_ABIS
+	local python_version
+	for python_version in ${PYTHON_ABIS}; do
+		PYTHON_VERSIONS+="${PYTHON_VERSIONS:+ }python${python_version}"
+	done
+}
 
 src_compile() {
 	emake \
@@ -37,6 +51,7 @@ src_compile() {
 		RANLIB=$(tc-getRANLIB) \
 		RPM_OPT_FLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
+		PYTHONVERS="${PYTHON_VERSIONS}" \
 		|| die "emake failed"
 }
 
@@ -47,21 +62,17 @@ src_install() {
 		DESTDIR="${D}" \
 		libdir="${D}/usr/$(get_libdir)" \
 		CC=$(tc-getCC) \
-		|| die "install failed"
+		PYTHONVERS="${PYTHON_VERSIONS}" \
+		|| die "emake install failed"
 
 	# don't install incompatible init scripts
-	rm -rf \
-		"${D}"/etc/rc.d \
-		|| die "removing rc.d files failed"
+	rm -fr "${D}etc/rc.d" || die "removing rc.d files failed"
 }
 
 pkg_postinst() {
-	python_version
-
-	python_mod_compile \
-		/usr/$(get_libdir)/python${PYVER}/site-packages/kudzu.py
+	python_mod_optimize kudzu.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup kudzu.py
 }
