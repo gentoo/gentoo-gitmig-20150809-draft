@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.5.ebuild,v 1.13 2008/12/22 14:24:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.5.ebuild,v 1.14 2010/01/15 12:02:48 scarabeus Exp $
 
 inherit flag-o-matic eutils base
 
@@ -38,7 +38,7 @@ PATCHES=(	"${PD}/offset.patch"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	base_src_unpack autopatch
+	base_src_prepare
 	sed -i \
 		-e 's,ffmpeg/avformat.h,libavformat/avformat.h,'		\
 		-e 's,ffmpeg/avcodec.h,libavcodec/avcodec.h,'			\
