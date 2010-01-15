@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.65 2009/12/14 11:49:26 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.66 2010/01/15 09:24:46 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  freeglut-2.6.0.ebuild:
+  Transfer Prefix keywords
 
   14 Dec 2009; Rémi Cardona <remi@gentoo.org> freeglut-2.4.0-r1.ebuild,
   freeglut-2.4.0-r2.ebuild, freeglut-2.6.0.ebuild:

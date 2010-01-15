@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.133 2009/12/15 18:34:35 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.134 2010/01/15 09:38:36 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  openal-1.10.622.ebuild:
+  Transfer Prefix keywords
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> openal-1.9.563.ebuild:
   ia64/sparc stable wrt #287653

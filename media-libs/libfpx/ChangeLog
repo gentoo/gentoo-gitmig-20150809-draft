@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfpx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.19 2009/08/28 09:16:25 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.20 2010/01/15 09:32:29 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libfpx-1.3.0.ebuild:
+  Transfer Prefix keywords
 
 *libfpx-1.3.0 (28 Aug 2009)
 

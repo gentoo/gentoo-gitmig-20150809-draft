@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.22 2009/04/04 20:10:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.23 2010/01/15 09:34:16 fauli Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://developers.videolan.org/libdvdplay/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~arm alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 
 DEPEND=">=media-libs/libdvdread-0.9.3"
 RDEPEND="${DEPEND}"

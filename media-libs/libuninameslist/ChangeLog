@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.31 2009/03/15 18:17:39 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.32 2010/01/15 09:43:44 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libuninameslist-20080409.ebuild:
+  Transfer Prefix keywords
 
   15 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   libuninameslist-20080409.ebuild:

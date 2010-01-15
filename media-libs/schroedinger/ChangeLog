@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/schroedinger
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.44 2009/12/15 18:44:00 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.45 2010/01/15 09:39:57 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  schroedinger-1.0.8.ebuild:
+  Transfer Prefix keywords
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> schroedinger-1.0.8.ebuild:
   ia64/sparc stable wrt #290761

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.36 2009/01/04 15:42:10 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.37 2010/01/15 09:42:07 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libsvg-0.1.4.ebuild:
+  Transfer Prefix keywords
 
   04 Jan 2009; Christoph Mende <angelos@gentoo.org>
   +files/libsvg-0.1.4-asneeded.patch, libsvg-0.1.4.ebuild:

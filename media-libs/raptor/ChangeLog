@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.74 2009/12/27 17:14:24 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.75 2010/01/15 09:46:47 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> raptor-1.4.20.ebuild:
+  Transfer Prefix keywords
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> raptor-1.4.19.ebuild,
   raptor-1.4.20.ebuild:
