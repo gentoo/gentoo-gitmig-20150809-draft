@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.2.ebuild,v 1.5 2009/09/24 18:55:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.2.ebuild,v 1.6 2010/01/15 14:54:15 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -37,8 +37,7 @@ RDEPEND="
 	mysql? ( >=dev-python/mysql-python-0.9.0 )
 	pygments? ( dev-python/pygments )
 "
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -48,7 +47,7 @@ pkg_setup() {
 
 src_prepare() {
 	find bin/ -type f -print0 | xargs -0 sed -i \
-		-e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"$(python_get_sitedir)/${PN}\"|g" \
+		-e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"$(python_get_sitedir -f)/${PN}\"|g" \
 		-e "s|\(^CONF_PATHNAME\)\(.*\$\)|\1 = \"../conf/viewvc.conf\"|g"
 
 	sed -i -e "s|\(self\.options\.template_dir\)\(.*\$\)|\1 = \"${MY_APPDIR}/templates\"|" \
@@ -107,5 +106,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup viewvc
 }
