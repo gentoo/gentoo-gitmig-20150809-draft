@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.5.4.ebuild,v 1.1 2009/11/15 21:14:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-0.5.4.ebuild,v 1.2 2010/01/15 00:38:27 eva Exp $
 
 EAPI="2"
 
@@ -43,12 +43,17 @@ pkg_setup() {
 src_configure() {
 	local mycmakeargs="
 		-DHAVE_LIBSOUP22=OFF
-		$(cmake-utils_use_build doc DOCUMENTATION)
+		-DDOC_INSTALL_DIR=/usr/share/doc/${PF}
 		$(cmake-utils_use_enable debug TRACE)
 		$(cmake-utils_use_enable http HTTP)
 		$(cmake-utils_use_enable obex OBEX)
 		$(cmake-utils_use_enable obex BLUETOOTH)
 		$(cmake-utils_use_enable test UNIT_TEST)"
+
+	if use http && use obex; then
+		# Doc builds with those previous USE flags only
+		mycmakeargs="${mycmakeargs} $(cmake-utils_use_build doc DOCUMENTATION)"
+	fi
 
 	cmake-utils_src_configure
 }
