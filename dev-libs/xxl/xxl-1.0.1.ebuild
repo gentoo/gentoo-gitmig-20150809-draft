@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/xxl-1.0.1.ebuild,v 1.4 2008/01/17 19:33:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xxl/xxl-1.0.1.ebuild,v 1.5 2010/01/15 19:50:02 ulm Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="C/C++ library that provides exception handling and asset management
 HOMEPAGE="http://www.zork.org/xxl/"
 SRC_URI="http://www.zork.org/software/${P}.tar.gz"
 
-LICENSE="ZORK"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
