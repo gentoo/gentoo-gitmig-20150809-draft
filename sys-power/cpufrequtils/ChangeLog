@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.47 2010/01/15 07:41:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.48 2010/01/15 19:50:27 vapier Exp $
+
+  15 Jan 2010; Mike Frysinger <vapier@gentoo.org> cpufrequtils-006.ebuild,
+  -files/cpufrequtils-006-modprobe-gov.patch:
+  Drop the modprobe patch since the kernel handles this for us
+  automatically.
 
 *cpufrequtils-006 (15 Jan 2010)
 

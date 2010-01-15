@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-006.ebuild,v 1.1 2010/01/15 07:41:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-006.ebuild,v 1.2 2010/01/15 19:50:27 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -20,7 +20,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-005-build.patch
 	epatch "${FILESDIR}"/${PN}-006-nls.patch #205576 #292246
-	epatch "${FILESDIR}"/${PN}-006-modprobe-gov.patch #204069
 }
 
 ft() { use $1 && echo true || echo false ; }
