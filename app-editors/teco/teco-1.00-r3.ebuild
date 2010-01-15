@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.8 2009/09/11 11:20:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.9 2010/01/15 02:12:22 abcd Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.ibiblio.org/pub/linux/apps/editors/tty/teco.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc x86"
+KEYWORDS="alpha ~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc"
 
 RDEPEND="sys-libs/ncurses"
@@ -24,9 +24,10 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e 's:-ltermcap:-lncurses:' ${S}/Makefile
+	sed -i -e 's:-ltermcap:-lncurses:' Makefile
 	# bug 103257
-	epatch ${FILESDIR}/teco-double-free.diff
+	epatch "${FILESDIR}"/${PN}-double-free.diff
+	epatch "${FILESDIR}"/${PN}-gcc4.patch
 }
 
 src_compile() {
