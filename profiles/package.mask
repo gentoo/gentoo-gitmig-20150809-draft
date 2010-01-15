@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11110 2010/01/15 14:14:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11111 2010/01/15 14:44:28 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (15 Jan 2010)
+# Masked for testing, see bug #tobeopened
+>=dev-python/sip-4.10
+>=dev-python/PyQt4-4.7
 
 # Andreas Proschofsky <suka@gentoo.org> (14 Jan 2010)
 # New release Candidate for openoffice-bin, needs testing
