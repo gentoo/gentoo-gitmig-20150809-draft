@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5.ebuild,v 1.6 2010/01/09 15:38:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5.ebuild,v 1.7 2010/01/15 05:51:38 aballier Exp $
 
 EAPI="2"
 
@@ -48,6 +48,28 @@ RDEPEND="aac? ( media-libs/faac )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
+
+# Notify the user that some useflag have been forced on
+tc_use_force() {
+	use $1 && use !$2 && ewarn "USE=$1 requires $2, $2 will be enabled."
+}
+
+# Use when $2 depends strictly on $3
+# if use $1 then enable $2 and $3, otherwise disable $2
+tc_use_enable_force() {
+	if use $1 ; then
+		echo "--enable-$2 --enable-$3"
+	else
+		echo "--disable-$2"
+	fi
+}
+
+pkg_setup() {
+	tc_use_force sse mmx
+	tc_use_force 3dnow mmx
+	tc_use_force sse2 mmx
+	tc_use_force sse2 sse
+}
 
 src_prepare() {
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
@@ -97,7 +119,12 @@ src_configure() {
 		$(use_with X x) \
 		--enable-deprecated \
 		--enable-experimental \
-		--with-mod-path=/usr/$(get_libdir)/transcode"
+		--with-mod-path=/usr/$(get_libdir)/transcode \
+		$(tc_use_enable_force sse sse mmx) \
+		$(tc_use_enable_force 3dnow 3dnow mmx) \
+		$(tc_use_enable_force sse2 sse2 mmx) \
+		$(tc_use_enable_force sse2 sse2 sse) \
+		"
 
 	econf ${myconf} || die "econf failed"
 }
