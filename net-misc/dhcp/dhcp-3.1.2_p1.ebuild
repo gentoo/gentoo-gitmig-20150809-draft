@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.2_p1.ebuild,v 1.8 2009/07/26 12:45:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.2_p1.ebuild,v 1.9 2010/01/15 19:00:22 ulm Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -13,7 +13,7 @@ DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 
-LICENSE="isc-dhcp"
+LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="doc minimal static selinux kernel_linux"
