@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.64 2010/01/10 00:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.65 2010/01/15 19:07:54 armin76 Exp $
+
+  15 Jan 2010; Raúl Porcel <armin76@gentoo.org> wv2-0.4.2.ebuild:
+  alpha/ia64/sparc stable wrt #299156
 
   10 Jan 2010; Jeroen Roovers <jer@gentoo.org> wv2-0.4.2.ebuild:
   Stable for HPPA (bug #299156).
