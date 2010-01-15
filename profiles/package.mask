@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11109 2010/01/15 13:29:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11110 2010/01/15 14:14:31 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -321,11 +321,6 @@ x11-plugins/gkrellm-wifi
 
 # Ben de Groot <yngwin@gentoo.org> (05 Jan 2010)
 # Masking pending removal in 30 days
-# Qt3 app, bug 283429
-app-text/kbedic
-
-# Ben de Groot <yngwin@gentoo.org> (05 Jan 2010)
-# Masking pending removal in 30 days
 # Qt3 app, bug 283429, upgrade problems, bug 267553
 app-office/qtstalker
 
@@ -338,11 +333,6 @@ app-office/qtstalker
 #
 # Removal on 2010-03-05
 sys-fs/archfs
-
-# Ben de Groot <yngwin@gentoo.org> (04 Jan 2010)
-# Masking pending removal in 30 days
-# Qt3 app, bug 283429, last release almost 8 years ago
-app-doc/dox
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Jan 2010)
 # Masked for Security bug #253822. Other bugs 195614,
