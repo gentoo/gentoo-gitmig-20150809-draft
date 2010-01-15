@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.8 2010/01/14 23:14:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22.ebuild,v 1.9 2010/01/15 08:16:21 mduft Exp $
 
 EAPI="2"
 
@@ -36,8 +36,11 @@ src_prepare() {
 		rm -f test/like.test
 	fi
 
-#	epatch "${FILESDIR}"/${P}-interix-no-estale.patch
-#	epatch "${FILESDIR}"/${P}-interix-utime-s.patch
+	if use tcl || use test; then
+		epatch "${FILESDIR}"/${P}-interix-fixes.patch
+	else
+		epatch "${FILESDIR}"/${P}-interix-fixes-amalgamation.patch
+	fi
 
 	epunt_cxx
 	elibtoolize # for MiNT

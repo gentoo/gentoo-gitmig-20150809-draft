@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.319 2010/01/14 23:14:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.320 2010/01/15 08:16:21 mduft Exp $
+
+  15 Jan 2010; Markus Duft <mduft@gentoo.org> sqlite-3.6.22.ebuild,
+  +files/sqlite-3.6.22-interix-fixes.patch,
+  +files/sqlite-3.6.22-interix-fixes-amalgamation.patch,
+  -files/sqlite-3.6.22-interix-no-estale.patch,
+  -files/sqlite-3.6.22-interix-utime-s.patch:
+  fixed interix patches for non-amalgamation builds - completely missed
+  those before.
 
   14 Jan 2010; Jeremy Olexa <darkside@gentoo.org> sqlite-3.6.22.ebuild:
   Disable interix patches until bug 300940 is resolved. Sorry.
