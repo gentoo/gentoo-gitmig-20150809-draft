@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/gerris
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.8 2008/10/04 10:35:46 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.9 2010/01/15 18:19:13 bicatali Exp $
+
+*gerris-20100114 (15 Jan 2010)
+
+  15 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +gerris-20100114.ebuild, +files/gerris-20100114-autotools.patch,
+  metadata.xml:
+  Version bump. Added a patch that correct some autotools minor errors and
+  allow parallel building
 
 *gerris-20080929 (03 Oct 2008)
 
