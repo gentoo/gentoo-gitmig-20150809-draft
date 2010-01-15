@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.120 2009/05/15 22:13:31 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.121 2010/01/15 20:15:18 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org> ant-1.7.1.ebuild:
+  Add prefix keywords
 
   15 May 2009; Vlastimil Babka <caster@gentoo.org> -ant-1.7.0.ebuild:
   Removing ant 1.7.0, bug #261563.
