@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/915resolution
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.15 2009/12/15 18:05:58 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.16 2010/01/15 13:48:22 bangert Exp $
+
+*915resolution-0.5.3-r3 (15 Jan 2010)
+
+  15 Jan 2010; Thilo Bangert <bangert@gentoo.org>
+  +915resolution-0.5.3-r3.ebuild, +files/915resolution-0.5.3-945GME.patch:
+  add support for 945GME (#238349)
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   915resolution-0.5.3-r2.ebuild:
