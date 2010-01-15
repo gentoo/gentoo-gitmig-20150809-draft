@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0.ebuild,v 1.2 2009/12/26 19:20:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0.ebuild,v 1.3 2010/01/15 12:22:21 scarabeus Exp $
 
 EAPI=2
 
@@ -67,12 +67,12 @@ pkg_setup() {
 }
 
 src_unpack() {
-	default
+	base_src_unpack
 }
 
 src_prepare() {
 	gnome2_omf_fix
-	base_src_util autopatch
+	base_src_prepare
 	eautoreconf
 	elibtoolize
 }
@@ -82,7 +82,7 @@ src_configure() {
 }
 
 src_compile() {
-	default
+	base_src_compile
 }
 
 src_install() {
