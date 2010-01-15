@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.229 2009/12/04 23:26:34 lxnay Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.230 2010/01/15 02:58:27 vapier Exp $
+
+*shadow-4.1.4.2-r2 (15 Jan 2010)
+
+  15 Jan 2010; Mike Frysinger <vapier@gentoo.org> +shadow-4.1.4.2-r2.ebuild,
+  +files/shadow-4.1.4.2-groupmod-pam-check.patch:
+  Add fix from upstream for groupmod pam check #300790 by Esther Dalhuisen
+  and drop old adduser symlink #301027 by Vicente Olivert.
 
 *shadow-4.1.4.2-r1 (04 Dec 2009)
 
@@ -700,7 +707,7 @@
   02 Nov 2004; Lars Weiler <pylon@gentoo.org> shadow-4.0.5.ebuild:
   Stable on ppc.  Bug #69212.
 
-  01 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5.ebuild, 
+  01 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5.ebuild,
   +files/shadow-4.0.5-skey.patch:
   Add patch by Mark Wagner to fix skey support #69741 by Thomas Matthijs.
 
@@ -909,9 +916,7 @@
 
   24 Feb 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r4.ebuild :
   Remove the patch again, as it could be a security risk.  Users can use:
-
      # sudo -u nobody ls
-
   If they need to run commands as user with '/bin/false' as login ...
 
   23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r4.ebuild :
@@ -925,10 +930,8 @@
   Added hppa to keywords.
 
   19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r3.ebuild :
-  
   Patch the useradd manpage to be a bit more clear, closing bug #13203.
   Thanks to Guy <guycad@mindspring.com>.
-
 
 *shadow-4.0.3-r3 (25 Dec 2002)
 
@@ -939,19 +942,15 @@
   added selinux support, thanks sindian
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
-
   Added mips to keywords
 
   25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r3.ebuild :
-
   Added /etc/default/useradd with default shell of /bin/bash, closing bug #5629.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> :
-  
   Changed sparc ~sparc keywords.
- 
-  03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r2.ebuild :
 
+  03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r2.ebuild :
   Mark as stable.  Update pam.d/su to use pam_filelist.so if uncommented.
   This can be used as a type of /etc/suauth.  Should close bug #4210.
 
@@ -960,22 +959,18 @@
 *shadow-4.0.3-r1 (20 Oct 2002)
 
   20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r2.ebuild :
-
   Update the su-pam_open_session.patch, as the old one did not export
   XAUTHORITY, or call pam_close_session().
 
 *shadow-4.0.3-r1 (19 Oct 2002)
 
   19 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r1.ebuild :
-
   Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
   else the session entries in /etc/pam.d/su never get executed, and
   pam_xauth for one, is then never used.  This should close bug #8831.
 
-
   12 Oct 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3.ebuild :
-
-  Fix bug #9031 (add /etc/default/ to fix adduser -D).
+  Fix bug #9031 (add /etc/default/ to fix useradd -D).
 
 *shadow-4.0.2-r4.ebuild (14 July 2002)
 
@@ -997,11 +992,9 @@
   Added KEYWORDS.
 
   28 Apr 2002; M.Schlemmer <azarah@gentoo.org>
-
   Remove /etc/login.defs.
 
   8 Apr 2002; M.Schlemmer <azarah@gentoo.org>
-
   Removed /bin/login in favour of the one in util-linux, as the one
   included here have a root exploit if pam_limits is in use.
 
@@ -1014,29 +1007,25 @@
   Added KEYWORDS.
 
   3 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org>
-
   Added new shadow version, currently masked out until it's been
   tested better.
-	
+
 *shadow-4.0.2-r3 (3 Apr 2002)
 
   3 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org>
-
   Cleaned up earlier fix to account for all possibilities, such as
   binary packages, different ROOT's, and an already existing good
   system-auth file.
-	
+
 *shadow-4.0.2-r2 (3 Apr 2002)
 
   3 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org>
-
   Fixed /etc/pam.d/system-auth to use pam_unix instead of pam_pwdb due
   to security bug.
-  
+
 *shadow-4.0.2-r1 (25 Mar 2002)
 
   25 Mar 2002; M.Schlemmer <azarah@gentoo.org>
-
   Fix the "libdir" in /usr/lib/libmisc.la.
 
 *shadow-20001016-r10 (12 Mar 2002)
@@ -1044,8 +1033,7 @@
   14 Jul 2002; phoen][x <phoenix@gentoo.org> shadow-20001016-r10.ebuild :
   Added KEYWORDS, SLOT.
 
-  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> 
-
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org>
   Added USE dependent nls compilation.
 
 *shadow-20001016-r9 (26 Feb 2002)
@@ -1054,17 +1042,16 @@
   Added KEYWORDS, SLOT.
 
   26 Feb 2002; T.Neidt <tod@gentoo.org> shadow-20001016-r9.ebuild, login.defs
-
   Changed 'CREATE_HOME yes' to 'CREATE_HOME no' in login.defs.
   CREATE_HOME is a RedHat'ism and is not supported by the stock shadow
   package (see src/useradd.c).  When CREATE_HOME is set to 'yes',
-  adduser generates a warning meassage. 
+  useradd generates a warning meassage.
 
   Bumped ebuild revision so login.defs will be updated by emerge updates.
-  
+
   Note to users:  'useradd -m <user>' will create the home directory and
-  add any files in /etc/skel (see 'man adduser')
-  
+  add any files in /etc/skel (see 'man useradd')
+
 
 *shadow-20001016-r8 (25 Feb 2002)
 
@@ -1072,7 +1059,6 @@
   Added KEYWORDS, SLOT.
 
   25 Feb 2002; M.Schlemmer <azarah@gentoo.org> shadow-20001016-r8.ebuild
-
   Added a 'rm -rf ${D}/usr/share/man/*' to Chris's man fix to clean the
   Polish pages.  Added the line for installing /etc/pam.d/chage again, which
   should close bug #837.
@@ -1092,7 +1078,6 @@
 *shadow-20001016-r6 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
