@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.439 2010/01/09 21:16:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.440 2010/01/15 14:18:16 mrpouet Exp $
+
+*gtk+-2.18.6 (15 Jan 2010)
+
+  15 Jan 2010; Romain Perier <mrpouet@gentoo.org> +gtk+-2.18.6.ebuild:
+  Version bump, various bugs fixes and translation update.
 
   09 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gtk+-2.18.5.ebuild:
   keyword ~x86-freebsd
