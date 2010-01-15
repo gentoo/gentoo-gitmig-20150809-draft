@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.21.ebuild,v 1.7 2009/02/04 21:13:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.21.ebuild,v 1.8 2010/01/15 02:33:27 ssuominen Exp $
 
 inherit fdo-mime gnome2-utils
 
@@ -17,7 +17,7 @@ RDEPEND="media-libs/libexif
 	>=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.12
 	dev-libs/dbus-glib
-	xfce-base/thunar
+	<xfce-base/thunar-1.1.0
 	>=xfce-base/libxfce4util-4.4
 	>=xfce-base/libxfcegui4-4.4"
 DEPEND="${RDEPEND}
