@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.3.ebuild,v 1.2 2009/12/26 17:26:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.3.ebuild,v 1.3 2010/01/15 03:06:45 abcd Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.texmacs.org/"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="imlib jpeg netpbm -qt4 svg spell"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-scheme/guile[deprecated]
 	virtual/latex-base
@@ -43,6 +43,8 @@ pkg_setup() {
 src_prepare() {
 	# don't strip
 	epatch "${FILESDIR}"/${P}-strip.patch
+
+	epatch "${FILESDIR}"/${PN}-1.0.6.14-interix.patch
 
 	eautoreconf
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.78 2009/12/26 17:26:26 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.79 2010/01/15 03:06:45 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  +files/texmacs-1.0.6.14-interix.patch, texmacs-1.0.7.3.ebuild:
+  Add prefix keywords, patch for interix
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> texmacs-1.0.7.2.ebuild,
   texmacs-1.0.7.2-r1.ebuild, texmacs-1.0.7.3.ebuild:
