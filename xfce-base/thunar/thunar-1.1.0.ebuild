@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.0.ebuild,v 1.1 2010/01/14 23:39:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.0.ebuild,v 1.2 2010/01/15 02:22:28 ssuominen Exp $
 
 EAPI=2
 inherit virtualx xfconf
@@ -34,8 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
-	sys-devel/gettext
-	test? ( x11-base/xorg-server )"
+	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}
 
