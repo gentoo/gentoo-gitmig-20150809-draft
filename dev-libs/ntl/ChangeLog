@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ntl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.17 2009/11/30 10:34:26 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.18 2010/01/15 22:54:44 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ntl-5.5.2.ebuild:
+  stable x86, bug 300655
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> ntl-5.5.2.ebuild:
   Marked ~ppc for bug #294338.
