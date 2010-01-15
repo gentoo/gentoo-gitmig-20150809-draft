@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.3.80.ebuild,v 1.10 2009/09/05 15:32:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.3.80.ebuild,v 1.11 2010/01/15 02:53:20 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -16,7 +16,8 @@ IUSE="debug"
 
 RDEPEND=">=dev-libs/dbus-glib-0.34
 	>=xfce-base/exo-0.3.8[hal]
-	>=xfce-base/thunar-0.5.1
+	<xfce-base/exo-0.5
+	<xfce-base/thunar-1.1.0
 	sys-apps/hal"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
