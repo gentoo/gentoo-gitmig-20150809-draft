@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/batterymon-1.2.0.ebuild,v 1.2 2009/12/15 16:50:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/batterymon-1.2.0.ebuild,v 1.3 2010/01/15 19:09:20 idl0r Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -31,19 +31,22 @@ src_prepare() {
 }
 
 src_install() {
-	newbin batterymon.py batterymon || die
+	install_batterymon() {
+		newbin batterymon.py batterymon || die
 
-	insinto $(python_get_sitedir)/${PN}
-	doins {logger,preferences,settings}.py || die
+		insinto $(python_get_sitedir)/${PN}
+		doins {logger,preferences,settings}.py || die
 
-	# Create missing __init__.py
-	touch "${D}/$(python_get_sitedir)/${PN}/__init__.py"
+		# Create missing __init__.py
+		touch "${D}/$(python_get_sitedir)/${PN}/__init__.py"
 
-	# Upstream forgot an svn dir
-	rm -rf icons/.svn
+		# Upstream forgot an svn dir
+		rm -rf icons/.svn
 
-	insinto /usr/share/${PN}/
-	doins -r icons/ batterymon.rc || die
+		insinto /usr/share/${PN}/
+		doins -r icons/ batterymon.rc || die
+	}
+	python_execute_function install_batterymon
 }
 
 pkg_postinst() {
