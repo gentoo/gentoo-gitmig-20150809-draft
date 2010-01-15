@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.45 2009/07/11 23:37:21 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.46 2010/01/15 06:04:47 vapier Exp $
+
+  15 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  cpufrequtils-005-r1.ebuild:
+  add ia64 love.
 
   11 Jul 2009; Joseph Jezak <josejx@gentoo.org> cpufrequtils-005-r1.ebuild:
   Marked ppc/ppc64 stable for bug #256599.
