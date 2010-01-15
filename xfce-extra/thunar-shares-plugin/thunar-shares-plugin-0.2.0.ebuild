@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0.ebuild,v 1.4 2010/01/15 02:40:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0.ebuild,v 1.5 2010/01/15 02:45:39 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	>=x11-libs/gtk+-2.10:2
-	<xfce-base/thunar-1.1.0"
+	<=xfce-base/thunar-1.1.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
