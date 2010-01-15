@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apg
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.25 2008/03/02 13:39:37 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.26 2010/01/15 01:06:53 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org> apg-2.3.0b-r4.ebuild:
+  Add prefix keywords
 
   02 Mar 2008; Sven Wegener <swegener@gentoo.org> apg-2.3.0b-r4.ebuild:
   Force own CFLAGS and CC.
