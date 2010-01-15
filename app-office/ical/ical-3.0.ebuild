@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0.ebuild,v 1.1 2010/01/15 17:20:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0.ebuild,v 1.2 2010/01/15 17:21:09 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -29,7 +29,7 @@ src_prepare() {
 		-e "/LIBDIR =/s:lib:$(get_libdir):" \
 		-e '/MANDIR =/s:man:share/man:' \
 		Makefile.in || die
-	
+
 	eautoconf
 }
 
