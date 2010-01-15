@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.62 2010/01/14 15:49:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.63 2010/01/15 00:53:52 flameeyes Exp $
+
+  15 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  zentest-4.2.1.ebuild:
+  Add support for JRuby, make sure to enable extended ObjectSpace though.
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> zentest-4.2.1.ebuild:
   Marking zentest-4.2.1 ~ppc for bug 298367
