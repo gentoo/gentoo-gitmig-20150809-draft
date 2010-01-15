@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.209 2009/12/20 17:40:13 anarchy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.210 2010/01/15 01:18:57 anarchy Exp $
+
+*seamonkey-2.0.2 (15 Jan 2010)
+
+  15 Jan 2010; <anarchy@gentoo.org> +seamonkey-2.0.2.ebuild,
+  +files/all-gentoo.js:
+  update for version 2.0.2 for polynomial-c
 
   20 Dec 2009; Jory A. Pratt <anarchy@gentoo.org> -seamonkey-1.1.17.ebuild,
   -seamonkey-1.1.17-r1.ebuild, -files/seamonkey-rebuild-databases.pl:
