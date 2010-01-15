@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.183 2010/01/07 20:05:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.184 2010/01/15 22:51:19 yngwin Exp $
+
+  15 Jan 2010; Ben de Groot <yngwin@gentoo.org> -openbox-3.4.9.ebuild,
+  -openbox-3.4.9-r1.ebuild:
+  Remove obsoleted versions
 
 *openbox-3.4.10 (07 Jan 2010)
 
