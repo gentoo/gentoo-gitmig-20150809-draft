@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.5-r1.ebuild,v 1.1 2009/12/21 03:16:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.5-r1.ebuild,v 1.2 2010/01/15 03:59:18 abcd Exp $
 
 inherit sgml-catalog
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.docbook.org/xml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND=""
@@ -43,8 +43,8 @@ src_install() {
 	doins ent/*.ent || die
 
 	# work around unicode parser issues #238785
-	ln -sf ../../../xml-iso-entities-8879.1986/ISOgrk4.ent \
-		"${D}"/usr/share/sgml/docbook/xml-dtd-${PV}/ent/isogrk4.ent || die
+	dosym ../../../xml-iso-entities-8879.1986/ISOgrk4.ent \
+		/usr/share/sgml/docbook/xml-dtd-${PV}/ent/isogrk4.ent || die
 
 	cp ent/README README.ent
 	dodoc ChangeLog README*

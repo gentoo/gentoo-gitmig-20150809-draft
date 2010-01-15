@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.39 2009/12/28 18:43:55 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.40 2010/01/15 04:02:22 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org> dos2unix-3.1-r2.ebuild:
+  Add prefix keywords
 
   28 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> dos2unix-3.1-r2.ebuild:
   The COPYRIGHT file for dos2unix contains the 2-clause BSD license.

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.83 2009/12/10 15:46:17 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.84 2010/01/15 04:10:04 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org> iso-codes-3.11.1.ebuild:
+  Add prefix keywords
 
   10 Dec 2009; Jeroen Roovers <jer@gentoo.org> iso-codes-3.10.ebuild:
   Stable for HPPA (bug #291467).
