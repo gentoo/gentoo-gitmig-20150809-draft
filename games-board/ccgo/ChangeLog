@@ -1,6 +1,11 @@
 # ChangeLog for games-board/ccgo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.7 2009/03/13 04:40:53 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.8 2010/01/15 16:15:12 tupone Exp $
+
+*ccgo-0.3.6.4 (15 Jan 2010)
+
+  15 Jan 2010; Tupone Alfredo <tupone@gentoo.org> +ccgo-0.3.6.4.ebuild:
+  Version bump to 0.3.6.4 Bug #301021 by Petr Pisar
 
   13 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> ccgo-0.3.6.3.ebuild:
   stable for x86
