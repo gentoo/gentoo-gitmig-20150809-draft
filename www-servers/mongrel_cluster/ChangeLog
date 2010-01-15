@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/mongrel_cluster
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.4 2009/08/18 11:10:30 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.5 2010/01/15 07:20:12 dev-zero Exp $
+
+  15 Jan 2010; Tiziano Müller <dev-zero@gentoo.org>
+  mongrel_cluster-1.0.5.ebuild:
+  Keyworded ~sparc.
 
   18 Aug 2009; Alex Legler <a3li@gentoo.org> mongrel_cluster-0.2.2.ebuild,
   mongrel_cluster-1.0.5.ebuild:
