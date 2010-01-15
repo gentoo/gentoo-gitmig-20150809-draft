@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/thunar-media-tags-plugin-0.1.2.ebuild,v 1.3 2009/10/28 22:16:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/thunar-media-tags-plugin-0.1.2.ebuild,v 1.4 2010/01/15 03:00:54 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="debug"
 
-RDEPEND=">=xfce-base/exo-0.3
-	xfce-base/thunar
+RDEPEND="<xfce-base/exo-0.5
+	<xfce-base/thunar-1.1.0
 	>=media-libs/taglib-1.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
