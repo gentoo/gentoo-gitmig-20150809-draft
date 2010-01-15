@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r19.ebuild,v 1.12 2009/12/20 13:12:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r19.ebuild,v 1.13 2010/01/15 07:55:27 ulm Exp $
 
 EAPI=2
 
@@ -159,7 +159,6 @@ emacs-infodir-rebuild() {
 			&& install-info --info-dir="${ROOT}"${infodir} "${f}" &>/dev/null
 	done
 	rmdir "${ROOT}"${infodir} 2>/dev/null	# remove dir if it is empty
-	echo
 }
 
 pkg_postinst() {
