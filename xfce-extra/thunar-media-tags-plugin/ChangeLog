@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/thunar-media-tags-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/ChangeLog,v 1.4 2010/01/15 03:00:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/ChangeLog,v 1.5 2010/01/15 04:42:58 ssuominen Exp $
+
+*thunar-media-tags-plugin-0.1.2-r1 (15 Jan 2010)
+
+  15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +thunar-media-tags-plugin-0.1.2-r1.ebuild,
+  +files/thunar-media-tags-plugin-0.1.2-exo_and_thunarx.patch:
+  Backport upstream patch for >= exo 0.5.1.
 
   15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   thunar-media-tags-plugin-0.1.2.ebuild:
