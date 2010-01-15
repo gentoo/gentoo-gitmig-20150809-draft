@@ -1,0 +1,50 @@
+if a gov isnt loaded, try to modprobe it first
+
+http://bugs.gentoo.org/204069
+
+--- a/lib/sysfs.c
++++ b/lib/sysfs.c
+@@ -12,6 +12,7 @@
+ #include <limits.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/wait.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+ 
+@@ -539,8 +540,23 @@ static int verify_gov(char *new_gov, char *passed_gov)
+ 	return 0;
+ }
+ 
++static int modprobe(const char *module)
++{
++	char new_module[strlen(module) + 10];
++	int status;
++	pid_t child;
++
++	sprintf(new_module, "cpufreq_%s", module);
++	child = vfork();
++	if (child == 0)
++		_exit(execlp("modprobe", "modprobe", "-q", new_module, NULL));
++	waitpid(child, &status, 0);
++	return (WIFEXITED(status) && WEXITSTATUS(status) == 0 ? 0 : 1);
++}
++
+ int sysfs_modify_policy_governor(unsigned int cpu, char *governor)
+ {
++	int ret;
+ 	char new_gov[SYSFS_PATH_MAX];
+ 
+ 	if (!governor)
+@@ -549,7 +565,10 @@ int sysfs_modify_policy_governor(unsigned int cpu, char *governor)
+ 	if (verify_gov(new_gov, governor))
+ 		return -EINVAL;
+ 
+-	return sysfs_write_one_value(cpu, WRITE_SCALING_GOVERNOR, new_gov, strlen(new_gov));
++	ret = sysfs_write_one_value(cpu, WRITE_SCALING_GOVERNOR, new_gov, strlen(new_gov));
++	if (ret == -ENODEV && modprobe(new_gov) == 0)
++		return sysfs_write_one_value(cpu, WRITE_SCALING_GOVERNOR, new_gov, strlen(new_gov));
++	return ret;
+ };
+ 
+ int sysfs_modify_policy_max(unsigned int cpu, unsigned long max_freq)
