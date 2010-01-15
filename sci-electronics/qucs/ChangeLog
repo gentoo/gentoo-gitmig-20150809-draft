@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/qucs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.22 2009/08/01 20:10:53 cryos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.23 2010/01/15 17:46:42 hwoarang Exp $
+
+*qucs-0.0.15_p20100115 (15 Jan 2010)
+
+  15 Jan 2010; Markos Chandras <hwoarang@gentoo.org> -qucs-0.0.14.ebuild,
+  -qucs-0.0.15.ebuild, +qucs-0.0.15_p20100115.ebuild:
+  Version bump to Qt4 snapshot. Thanks to Samuli Suominen
+  <ssuominen@gentoo.org>. Fixes bug #300043 . Older versions were removed
 
   01 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> qucs-0.0.15.ebuild:
   Tightened the freehdl dependency, closes bug 276611.
