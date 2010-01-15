@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/gnome-mag
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.166 2009/12/03 17:24:30 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.167 2010/01/15 12:39:46 mrpouet Exp $
+
+*gnome-mag-0.15.9-r1 (15 Jan 2010)
+
+  15 Jan 2010; Romain Perier <mrpouet@gentoo.org>
+  +gnome-mag-0.15.9-r1.ebuild,
+  +files/gnome-mag-0.15.9-magnifier-fix-warnings.patch:
+  Fix some ugly warnings, originally per upstream bug #578798.
 
   03 Dec 2009; Brent Baude <ranger@gentoo.org> gnome-mag-0.15.9.ebuild:
   Marking gnome-mag-0.15.9 ppc64 stable for bug 281427
