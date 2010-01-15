@@ -1,15 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0_beta5.ebuild,v 1.1 2010/01/10 01:54:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.1 2010/01/15 15:03:46 darkside Exp $
 
 EAPI=2
 
-MY_P=${P/_beta/b}
 inherit distutils
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="http://wicd.sourceforge.net/"
-SRC_URI="http://downloads.wicd.net/src/testing/1.7.x/${MY_P}.tar.bz2"
+SRC_URI="http://downloads.wicd.net/src/stable/1.7.x/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -46,8 +45,6 @@ RDEPEND="
 	ncurses? ( dev-python/urwid )
 	pm-utils? ( >=sys-power/pm-utils-1.1.1 )
 	"
-
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	local myconf
