@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.2.ebuild,v 1.1 2009/11/15 22:16:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.2.ebuild,v 1.2 2010/01/15 02:44:43 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug git subversion"
 
-RDEPEND=">=xfce-base/thunar-0.4
+RDEPEND="<=xfce-base/thunar-1.1.0
 	>=x11-libs/gtk+-2.6:2
 	>=dev-libs/glib-2.6:2
 	git? ( dev-util/git )

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0.ebuild,v 1.3 2009/09/06 04:24:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0.ebuild,v 1.4 2010/01/15 02:40:14 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 inherit xfconf
 
 DESCRIPTION="Thunar plugin to share files using Samba"
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	>=x11-libs/gtk+-2.10:2
-	xfce-base/thunar"
+	<xfce-base/thunar-1.1.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
