@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.103 2010/01/06 16:12:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.104 2010/01/15 02:20:48 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  emul-linux-x86-baselibs-20081109.ebuild,
+  emul-linux-x86-baselibs-20091231.ebuild:
+  Add prefix keywords
 
   06 Jan 2010; Ulrich Mueller <ulm@gentoo.org>
   emul-linux-x86-baselibs-20081109.ebuild,

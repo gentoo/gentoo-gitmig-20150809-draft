@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-20091231.ebuild,v 1.2 2009/12/31 22:51:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-20091231.ebuild,v 1.3 2010/01/15 02:23:23 abcd Exp $
 
 inherit emul-linux-x86
 
 LICENSE="BSD FTL GPL-2 LGPL-2 MIT MOTIF"
 
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~amd64-linux"
 IUSE="opengl"
 
 DEPEND="opengl? ( app-admin/eselect-opengl )"

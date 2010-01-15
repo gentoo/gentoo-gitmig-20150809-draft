@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20091231.ebuild,v 1.2 2010/01/06 16:12:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20091231.ebuild,v 1.3 2010/01/15 02:20:48 abcd Exp $
 
 inherit emul-linux-x86
 
@@ -8,7 +8,7 @@ LICENSE="|| ( Artistic GPL-2 ) || ( BSD GPL-2 ) BZIP2 CRACKLIB DB
 		GPL-2 || ( GPL-2 AFL-2.1 ) LGPL-2 LGPL-2.1 GPL-3 LGPL-3
 		MIT MPL-1.1 OPENLDAP OpenSoftware openssl OracleDB ZLIB
 		tcp_wrappers_license as-is"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~amd64-linux"
 IUSE=""
 
 DEPEND=""
