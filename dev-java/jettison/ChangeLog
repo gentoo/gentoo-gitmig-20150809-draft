@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jettison
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/ChangeLog,v 1.7 2009/12/28 08:18:55 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/ChangeLog,v 1.8 2010/01/15 20:31:53 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org> jettison-1.0.ebuild:
+  Add prefix keywords
 
   28 Dec 2009; Joseph Jezak <josejx@gentoo.org> jettison-1.0.ebuild:
   Marked ppc stable for bug #279728.

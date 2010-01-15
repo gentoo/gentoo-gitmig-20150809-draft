@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-cli
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.45 2009/10/08 12:00:14 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.46 2010/01/15 20:23:05 abcd Exp $
+
+  15 Jan 2010; Jonathan Callen <abcd@gentoo.org> commons-cli-1.2.ebuild:
+  Add prefix keywords
 
   08 Oct 2009; Vlastimil Babka <caster@gentoo.org>
   -commons-cli-1.0-r5.ebuild, -files/commons-cli-1.0-build.xml.patch,

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2-r1.ebuild,v 1.7 2009/12/28 17:26:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2-r1.ebuild,v 1.8 2010/01/15 20:40:39 abcd Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/trove4j/${P}.tar.gz"
 HOMEPAGE="http://trove4j.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4"
 
