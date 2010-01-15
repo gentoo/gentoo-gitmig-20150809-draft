@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.7.0.ebuild,v 1.1 2009/09/12 00:18:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.7.0.ebuild,v 1.2 2010/01/15 20:41:23 ramereth Exp $
 
 DESCRIPTION="CVS/RCS repository grapher"
 HOMEPAGE="http://www.akhphd.au.dk/~bertho/cvsgraph"
@@ -35,6 +35,6 @@ src_install () {
 	insinto /etc
 	doins cvsgraph.conf
 	doman cvsgraph.1 cvsgraph.conf.5
-	dodoc ChangeLog README contrib/*.php3
+	dodoc ChangeLog README AUTHORS contrib/*.php
 	docinto automatic_documentation ; dodoc contrib/automatic_documentation/*
 }

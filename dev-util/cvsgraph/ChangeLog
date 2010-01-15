@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsgraph
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.23 2009/09/12 00:18:00 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.24 2010/01/15 20:41:23 ramereth Exp $
+
+  15 Jan 2010; Lance Albertson <ramereth@gentoo.org> cvsgraph-1.7.0.ebuild:
+  fix dodoc, resolves #298400
 
 *cvsgraph-1.7.0 (12 Sep 2009)
 
