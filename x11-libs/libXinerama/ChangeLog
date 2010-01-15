@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXinerama
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.50 2009/11/01 20:26:30 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.51 2010/01/15 21:47:40 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libXinerama-1.1.ebuild:
+  Transfer Prefix keywords
 
   01 Nov 2009; Zac Medico <zmedico@gentoo.org> libXinerama-1.1.ebuild:
   Block older versions of xineramaproto, in order to avoid file collisions

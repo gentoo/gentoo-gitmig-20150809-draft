@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libsexy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.39 2009/05/31 18:52:33 serkan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.40 2010/01/15 21:40:57 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libsexy-0.1.11-r1.ebuild:
+  Transfer Prefix keywords
 
   31 May 2009; Serkan Kaba <serkan@gentoo.org> libsexy-0.1.11-r1.ebuild:
   Add missing eutils inherit for epatch.

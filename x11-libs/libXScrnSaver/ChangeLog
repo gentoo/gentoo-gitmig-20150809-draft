@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXScrnSaver
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.60 2009/11/01 20:42:35 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.61 2010/01/15 21:52:23 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libXScrnSaver-1.2.0.ebuild:
+  Transfer Prefix keywords
 
   01 Nov 2009; Zac Medico <zmedico@gentoo.org> libXScrnSaver-1.2.0.ebuild:
   Block older versions of scrnsaverproto, in order to avoid file collisions

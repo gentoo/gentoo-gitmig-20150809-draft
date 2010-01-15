@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.55 2010/01/14 22:48:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.56 2010/01/15 22:01:42 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libXv-1.0.5.ebuild:
+  Transfer Prefix keywords
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> libXv-1.0.5.ebuild:
   arm stable, bug #294958

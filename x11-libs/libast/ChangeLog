@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libast
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.31 2008/06/04 18:18:19 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.32 2010/01/15 21:37:42 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libast-0.7.ebuild:
+  Transfer Prefix keywords
 
   04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> libast-9999.ebuild:
   Use eautoreconf, not the bootstrap script.

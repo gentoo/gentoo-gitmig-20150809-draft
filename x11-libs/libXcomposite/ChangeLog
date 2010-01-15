@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.60 2010/01/14 22:36:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.61 2010/01/15 21:45:41 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libXcomposite-0.4.1.ebuild:
+  Transfer Prefix keywords
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> libXcomposite-0.4.1.ebuild:
   arm stable, bug #294958

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.47 2010/01/14 22:49:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.48 2010/01/15 22:03:03 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libXvMC-1.0.5.ebuild:
+  Transfer Prefix keywords
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> libXvMC-1.0.5.ebuild:
   arm stable, bug #294958
