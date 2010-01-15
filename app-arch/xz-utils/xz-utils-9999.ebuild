@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.4 2009/12/06 00:02:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.5 2010/01/15 03:19:43 vapier Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -36,10 +36,9 @@ DEPEND="${RDEPEND}
 	${EXTRA_DEPEND}"
 
 if [[ ${PV} == "9999" ]] ; then
-src_unpack() {
-	git_src_unpack
-	cd "${S}"
-	./autogen.sh || die
+src_prepare() {
+	eautopoint
+	eautoreconf
 }
 fi
 
