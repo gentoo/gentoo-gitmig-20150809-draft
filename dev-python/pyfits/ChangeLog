@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyfits
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.14 2009/11/19 16:22:36 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.15 2010/01/15 19:08:22 bicatali Exp $
+
+  15 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -pyfits-2.1.1.ebuild,
+  -pyfits-2.2.1.ebuild, pyfits-2.2.2.ebuild:
+  Removed old, and set license to BSD (bug #301123)
 
   19 Nov 2009; Markus Meier <maekke@gentoo.org> pyfits-2.2.2.ebuild:
   amd64/x86 stable, bug #293252
