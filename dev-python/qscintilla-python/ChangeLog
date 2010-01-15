@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.50 2010/01/15 16:23:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.51 2010/01/15 20:18:37 hwoarang Exp $
+
+  15 Jan 2010; Markos Chandras <hwoarang@gentoo.org>
+  qscintilla-python-2.4.1.ebuild:
+  Adjust sip and PyQt4 dependencies. Bug #301130
 
 *qscintilla-python-2.4.1 (15 Jan 2010)
 
