@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.59 2010/01/14 16:22:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.60 2010/01/15 00:39:55 flameeyes Exp $
+
+  15 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> rspec-1.3.0.ebuild:
+  Actually run tests, at least for MRI 1.8 and 1.9, now that webmock works.
+  JRuby is still missing, and nokogiri tests need to be checked for good.
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> rspec-1.3.0.ebuild:
   Marking rspec-1.3.0 ~ppc for bug 300739

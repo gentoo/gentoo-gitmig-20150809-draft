@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.3 2010/01/14 16:22:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.4 2010/01/15 00:39:55 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
+
+RUBY_FAKEGEM_TASK_TEST="spec"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -21,22 +23,40 @@ IUSE=""
 
 ruby_add_bdepend doc dev-ruby/hoe
 
-# Only require the test packages for ruby18 as we _really_ won't be
-# running tests for Ruby 1.9 and JRuby just yet :(
-USE_RUBY=ruby18 \
-	ruby_add_bdepend test "dev-ruby/hoe dev-ruby/zentest dev-ruby/heckle dev-ruby/fakefs"
+# don't require test dependencies for jruby since we cannot run them
+# for now (fakefs doesn't work).
+#
+# We should add nokogiri here to make sure that we test as much as
+# possible, but since it's yet unported to 1.9 and the nokogiri-due
+# tests fail for sure, we'll be waiting on it.
+USE_RUBY="ruby18 ruby19" \
+	ruby_add_bdepend test "dev-ruby/hoe dev-ruby/zentest dev-ruby/fakefs"
+
+# the testsuite skips over heckle for Ruby 1.9 so we only request it for 1.8
+USE_RUBY="ruby18" \
+	ruby_add_bdepend test "dev-ruby/heckle"
+
+all_ruby_prepare() {
+	# Replace reference to /tmp to our temporary directory to avoid
+	# sandbox-related failure.
+	sed -i \
+		-e "s:/tmp:${T}:" \
+		spec/spec/runner/command_line_spec.rb || die
+}
+
+src_test() {
+	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
+	ruby-ng_src_test
+}
 
 each_ruby_test() {
-	if [[ $(basename ${RUBY}) == "ruby19" ]]; then
-		ewarn "Tests for Ruby 1.9 fail, among the other reasons because interop only works"
-		ewarn "for test-unit-1.2.3 (and not test-unit-2.x). Since we know about those failures"
-		ewarn "as well as upstream, we won't be proceeding with this for now."
-		return 0
-	fi
-
-	if [[ $(basename ${RUBY}) == "jruby" ]]; then
-		ewarn "Tests for JRuby are disabled because dev-ruby/fakefs does not currently support"
-		ewarn "JRuby properly and it's needed to run the tests."
-		return 0
-	fi
+	case ${RUBY} in
+		*jruby)
+			ewarn "Tests for JRuby are disabled because dev-ruby/fakefs does not currently support"
+			ewarn "JRuby properly and it's needed to run the tests."
+			;;
+		*)
+			each_fakegem_test
+			;;
+	esac
 }
