@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.8.ebuild,v 1.1 2009/12/20 22:36:45 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.9_rc1.ebuild,v 1.1 2010/01/15 20:28:15 idl0r Exp $
 
 EAPI="2"
 
+MY_P="${PN}-${PV/_rc/-rc}"
+
 DESCRIPTION="A lightweight panel/taskbar"
 HOMEPAGE="http://code.google.com/p/tint2/"
-SRC_URI="http://tint2.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://tint2.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +26,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xineramaproto
 	>=sys-devel/autoconf-2.61"
+
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	econf --docdir=/usr/share/doc/${PF} \
