@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.2 2009/05/26 15:44:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.3 2010/01/15 12:04:32 scarabeus Exp $
 
 EAPI="2"
 
@@ -41,7 +41,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	base_src_unpack unpack
+	base_src_unpack
 }
 
 src_prepare() {
@@ -61,8 +61,7 @@ src_configure() {
 		$(use_enable server owserver) \
 		$(use_enable tcl owtcl) \
 		$(use_enable zeroconf zero) \
-		$(use_enable usb) \
-		|| die "econf failed"
+		$(use_enable usb)
 }
 
 src_compile() {

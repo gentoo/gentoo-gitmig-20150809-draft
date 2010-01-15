@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/owfs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.13 2009/05/26 15:44:19 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.14 2010/01/15 12:04:32 scarabeus Exp $
+
+  15 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> owfs-2.7_p21.ebuild:
+  Use base_src_unpack without arguments.
 
   26 May 2009; Raúl Porcel <armin76@gentoo.org> owfs-2.7_p21.ebuild:
   Add ~arm wrt #270463
