@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.20 2010/01/03 21:10:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.21 2010/01/15 17:37:46 grobian Exp $
+
+  15 Jan 2010; Fabian Groffen <grobian@gentoo.org> jsr173-1.0-r1.ebuild:
+  Marked ~x64-solaris
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> jsr173-1.0-r1.ebuild:
   Transfer Prefix keywords

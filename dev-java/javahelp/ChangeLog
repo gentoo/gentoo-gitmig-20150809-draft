@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.15 2010/01/03 20:48:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.16 2010/01/15 17:32:51 grobian Exp $
+
+  15 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  javahelp-2.0.02_p46.ebuild:
+  Marked ~x64-solaris
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   javahelp-2.0.02_p46.ebuild:

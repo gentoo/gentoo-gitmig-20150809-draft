@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.59 2010/01/03 21:36:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.60 2010/01/15 17:31:01 grobian Exp $
+
+  15 Jan 2010; Fabian Groffen <grobian@gentoo.org> commons-lang-2.4.ebuild:
+  Marked ~x64-solaris
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-lang-2.0-r2.ebuild:

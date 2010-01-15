@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.24 2010/01/03 21:55:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.25 2010/01/15 17:34:51 grobian Exp $
+
+  15 Jan 2010; Fabian Groffen <grobian@gentoo.org> xpp3-1.1.4c-r1.ebuild:
+  Marked ~x64-solaris
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xpp3-1.1.4c-r1.ebuild:
