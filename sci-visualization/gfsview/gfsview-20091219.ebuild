@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20091219.ebuild,v 1.1 2010/01/15 19:35:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20091219.ebuild,v 1.2 2010/01/15 19:43:50 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -14,10 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""
-DEPEND=">=x11-libs/gtkglext-1.0.6
+RDEPEND=">=x11-libs/gtkglext-1.0.6
 	>=x11-libs/gtk+-2.4.0
+	x11-libs/startup-notification
 	>=sci-libs/gerris-${PV}"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}-snapshot-091219"
