@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.7 2010/01/09 03:18:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.8 2010/01/15 03:15:06 vapier Exp $
+
+  15 Jan 2010; Mike Frysinger <vapier@gentoo.org> unifdef-1.23.ebuild:
+  Pull in xz-utils for $A #299988 by Matt Turner.
 
   09 Jan 2010; Jonathan Callen <abcd@gentoo.org> unifdef-1.23.ebuild:
   Remove unneeded sed; add prefix keywords
@@ -21,7 +24,7 @@
   03 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> unifdef-1.20.ebuild:
   Add ~x86-fbsd keyword.
 
-*unifdef-1.0 (08 Oct 2006)
+*unifdef-1.20 (08 Oct 2006)
 
   08 Oct 2006; Mike Frysinger <vapier@gentoo.org> +unifdef-1.20.ebuild:
   Initial import.  Ebuild submitted by me.
