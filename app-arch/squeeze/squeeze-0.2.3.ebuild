@@ -1,14 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/squeeze-0.2.3.ebuild,v 1.2 2008/05/11 13:50:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/squeeze-0.2.3.ebuild,v 1.3 2010/01/15 03:58:41 ssuominen Exp $
 
-EAPI=1
-
+EAPI=2
 inherit eutils fdo-mime gnome2-utils
 
 DESCRIPTION="a GTK+ based and advanced archive manager for use with Thunar file manager."
-HOMEPAGE="http://squeeze.xfce.org"
-SRC_URI="http://${PN}.xfce.org/downloads/${P}.tar.bz2"
+HOMEPAGE="http://squeeze.xfce.org/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,23 +18,28 @@ IUSE="debug +pathbar +toolbar"
 RDEPEND="x11-libs/gtk+:2
 	dev-libs/dbus-glib
 	>=xfce-base/libxfce4util-4.4
-	xfce-base/thunar"
+	<xfce-base/thunar-1.1.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 
-src_compile() {
-	econf --disable-gtk-doc --disable-dependency-tracking \
-		$(use_enable pathbar) $(use_enable toolbar) \
+src_configure() {
+	econf \
+		--disable-gtk-doc \
+		--disable-dependency-tracking \
+		$(use_enable pathbar) \
+		$(use_enable toolbar) \
 		$(use_enable debug)
-
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS TODO
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {

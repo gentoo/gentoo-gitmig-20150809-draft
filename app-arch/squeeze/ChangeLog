@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/squeeze
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/ChangeLog,v 1.4 2009/08/01 19:41:07 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/ChangeLog,v 1.5 2010/01/15 03:58:41 ssuominen Exp $
+
+  15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> squeeze-0.2.3.ebuild:
+  Restrict deps to old xfce-base/thunar.
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   fix metadata newline
