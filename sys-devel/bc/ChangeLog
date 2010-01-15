@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.35 2008/06/09 15:16:18 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.36 2010/01/15 22:40:55 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> bc-1.06.95.ebuild:
+  Transfer Prefix keywords
 
   09 Jun 2008; Jeroen Roovers <jer@gentoo.org> bc-1.06.95.ebuild:
   Stable for HPPA (bug #224863).

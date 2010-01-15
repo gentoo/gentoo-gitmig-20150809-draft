@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/automake-wrapper
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.35 2009/05/17 21:36:03 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.36 2010/01/15 22:39:31 fauli Exp $
+
+  15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  automake-wrapper-4.ebuild:
+  Transfer Prefix keywords
 
 *automake-wrapper-4 (17 May 2009)
 
