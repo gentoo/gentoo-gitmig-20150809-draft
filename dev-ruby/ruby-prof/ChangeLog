@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.19 2010/01/15 01:01:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.20 2010/01/16 13:42:08 flameeyes Exp $
+
+*ruby-prof-0.7.9 (16 Jan 2010)
+
+  16 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ruby-prof-0.7.3.ebuild, -ruby-prof-0.7.5.ebuild, -ruby-prof-0.7.6.ebuild,
+  +ruby-prof-0.7.9.ebuild:
+  Version bump, remove older versions.
 
 *ruby-prof-0.7.7 (15 Jan 2010)
 

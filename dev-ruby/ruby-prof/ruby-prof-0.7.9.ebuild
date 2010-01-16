@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.6.ebuild,v 1.2 2010/01/01 15:52:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.9.ebuild,v 1.1 2010/01/16 13:42:08 flameeyes Exp $
 
 EAPI=2
 
