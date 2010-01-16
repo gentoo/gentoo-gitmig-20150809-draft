@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.30 2010/01/13 17:47:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.31 2010/01/16 14:21:25 flameeyes Exp $
+
+*bluecloth-2.0.6_pre120 (16 Jan 2010)
+
+  16 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +bluecloth-2.0.6_pre120.ebuild:
+  Version bump; use rake-compiler this time. Simplify ebuild with the
+  ruby-fakegem variables.
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> bluecloth-2.0.5-r1.ebuild:
   Marking bluecloth-2.0.5-r1 ~ppc64 for bug 297041
