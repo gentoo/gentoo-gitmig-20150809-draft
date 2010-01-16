@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3793 2010/01/16 07:04:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3794 2010/01/16 08:05:11 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jan 2010; Peter Volkov <pva@gentoo.org> license_groups:
+  DSNIFF license was dropped from the tree, update license_groups, #301123
 
   16 Jan 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/ruby-libgda which has been discontinued as part of
