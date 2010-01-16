@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.32 2009/11/09 09:22:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.33 2010/01/16 17:47:24 yngwin Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
+# qt-multimedia is not keyworded, bug 293671
+dev-python/PyQt4 multimedia
 
 # Mask media-gfx/imagemagick[openmp] until we have a stable
 # sys-devel/gcc-4.3[openmp] (bug #225917).
@@ -23,7 +27,7 @@ kde-base/kalzium solver
 net-libs/libproxy webkit
 
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
-# build fails (bug #210880):	 
+# build fails (bug #210880):
 <sys-devel/gcc-4.3 libffi
 
 # Jeroen Roovers <jer@gentoo.org> (15 Apr 2008)

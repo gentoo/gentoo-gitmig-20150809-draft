@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.21 2009/10/18 16:27:16 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.22 2010/01/16 17:47:21 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
+# qt-multimedia is not keyworded, bug 293671
+dev-python/PyQt4 multimedia
 
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
@@ -13,10 +17,6 @@ kde-base/juk musicbrainz
 # Raúl Porcel <armin76@gentoo.org> (11 Apr 2009)
 # Keep kde4 deps minimal
 kde-base/kalzium editor solver
-
-# Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
-# needs kde4 keyworded
-x11-themes/qtcurve-qt4 kde
 
 # Raúl Porcel <armin76@gentoo.org> (07 Jul 2008)
 # Make clisp deps minimal
