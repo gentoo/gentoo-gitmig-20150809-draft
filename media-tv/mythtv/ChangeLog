@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.309 2010/01/04 05:40:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.310 2010/01/16 04:49:38 beandog Exp $
+
+  16 Jan 2010; Steve Dibb <beandog@gentoo.org>
+  mythtv-0.23_alpha22857.ebuild:
+  Drop disabling arts
 
   04 Jan 2010; Doug Goldstein <cardoe@gentoo.org> mythtv-0.22_p23069.ebuild,
   +files/mythtv.logrotate.d-r1:

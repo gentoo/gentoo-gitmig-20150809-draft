@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23_alpha22857.ebuild,v 1.1 2009/11/19 06:51:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23_alpha22857.ebuild,v 1.2 2010/01/16 04:49:38 beandog Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -120,7 +120,6 @@ src_configure() {
 		$(use_enable dvb)
 		$(use_enable ieee1394 firewire)
 		$(use_enable lirc)
-		--disable-audio-arts
 		--disable-directfb
 		--dvb-path=/usr/include
 		--enable-opengl-vsync
