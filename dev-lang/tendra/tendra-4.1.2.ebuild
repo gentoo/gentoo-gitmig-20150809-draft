@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-4.1.2.ebuild,v 1.2 2010/01/16 10:38:29 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-4.1.2.ebuild,v 1.3 2010/01/16 10:43:30 truedfx Exp $
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A C/C++ compiler initially developed by DERA"
 HOMEPAGE="http://www.tendra.org/
@@ -10,12 +10,12 @@ HOMEPAGE="http://www.tendra.org/
 SRC_URI="ftp://ftp.allbsd.org/pub/TenDRA/releases/tendra/TenDRA-${PV}.tar.bz2
 	mirror://gentoo/${P}-misc.patch.bz2
 	mirror://gentoo/${P}-minix.patch.bz2
-	http://dev.gentoo.org/~truedfx/${P}-r1-misc.patch.bz2
+	http://dev.gentoo.org/~truedfx/${P}-misc.patch.bz2
 	http://dev.gentoo.org/~truedfx/${P}-minix.patch.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 DEPEND=""
@@ -24,14 +24,10 @@ RDEPEND="!dev-lang/tcc"
 
 S=${WORKDIR}/TenDRA-${PV}
 
-pkg_setup() {
-	use amd64 && multilib_toolchain_setup x86
-}
-
 src_unpack() {
 	unpack TenDRA-${PV}.tar.bz2
 	cd "${S}"
-	epatch "${DISTDIR}"/${P}-r1-misc.patch.bz2
+	epatch "${DISTDIR}"/${P}-misc.patch.bz2
 	epatch "${DISTDIR}"/${P}-minix.patch.bz2
 }
 

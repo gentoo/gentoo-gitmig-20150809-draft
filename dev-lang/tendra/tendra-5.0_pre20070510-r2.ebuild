@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20070510-r2.ebuild,v 1.3 2010/01/16 10:38:29 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20070510-r2.ebuild,v 1.4 2010/01/16 10:43:30 truedfx Exp $
 
 inherit bsdmk eutils flag-o-matic multilib
 
@@ -40,8 +40,7 @@ src_unpack() {
 src_compile() {
 	replace-flags '-O*' '-O'
 
-	HOSTARCH=i386 PREFIX=/usr SYSTEM=Linux VERSION=2.6 \
-		sh makedefs || die "makedefs failed"
+	HOSTARCH=i386 PREFIX=/usr sh makedefs || die "makedefs failed"
 	${BMAKE} -DBOOTSTRAP || die "bootstrap failed"
 	${BMAKE} || die "build failed"
 }
