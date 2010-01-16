@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.14 2010/01/16 06:23:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.15 2010/01/16 06:26:44 graaff Exp $
+
+*ruby-poppler-0.19.3 (16 Jan 2010)
+
+  16 Jan 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-poppler-0.19.3.ebuild:
+  Version bump. Now uses ruby-ng-gnome2 eclass.
 
   16 Jan 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-poppler-0.19.0.ebuild:
