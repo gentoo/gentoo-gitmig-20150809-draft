@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5198 2010/01/16 13:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5199 2010/01/16 20:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2950,7 +2950,11 @@ sci-visualization/hippodraw:wcs -  Adds 10 built-in transforms to HippoDraw via 
 sci-visualization/opendx:cdf - Add support for sci-libs/cdf data exchange format
 sci-visualization/opendx:hdf - Add support for the Hierarchical Data Format (sci-libs/hdf)
 sci-visualization/paraview:boost - Enable the usage of dev-libs/boost
+sci-visualization/paraview:cg - Add support for nvidia's cg shaders
+sci-visualization/paraview:gui - Build paraview's gui not just the server
+sci-visualization/paraview:overview - Enable the OverView plugin framework
 sci-visualization/paraview:plugins - Build and install additional plugins
+sci-visualization/paraview:streaming - Enable streaming paraview application
 sci-visualization/qtiplot:ods - Import support for OpenOffice .ods sheets
 sci-visualization/qtiplot:xls - Import support for Microsoft office excel sheets
 sci-visualization/veusz:fits - Add FITS format via dev-python/pyfits
