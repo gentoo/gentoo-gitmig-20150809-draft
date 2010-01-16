@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.45 2009/12/27 15:27:05 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.46 2010/01/16 11:28:43 hwoarang Exp $
+
+  16 Jan 2010; <hwoarang@gentoo.org> pykde4-4.3.4.ebuild,
+  +files/pykde4-4.3.4-typedefs.sip.patch:
+  Add patch to build against latest sip and PyQt4 releases. Bug #301106
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> pykde4-4.3.4.ebuild:
   Pull in changes from overlay and prefix support
