@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.132 2009/11/24 23:09:26 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.133 2010/01/16 03:43:46 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  libpcap-1.0.1_pre20090812.ebuild:
+  Add prefix keywords
 
   24 Nov 2009; Mike Frysinger <vapier@gentoo.org>
   libpcap-1.0.1_pre20090812.ebuild, +files/libpcap-1.0.1-autoconf.patch:
