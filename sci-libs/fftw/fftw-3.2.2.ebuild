@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2.ebuild,v 1.10 2009/10/16 03:51:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2.ebuild,v 1.11 2010/01/16 06:20:45 abcd Exp $
 
 EAPI=2
 inherit flag-o-matic eutils toolchain-funcs autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.fftw.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3.0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="altivec doc fortran openmp sse sse2 threads"
 
 pkg_setup() {
@@ -23,6 +23,7 @@ pkg_setup() {
 	fi
 	if use openmp &&
 		[[ $(tc-getCC)$ == *gcc* ]] &&
+		[[ $(tc-getCC)$ != *apple* ]] &&
 		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
 			! built_with_use sys-devel/gcc openmp )
 	then
