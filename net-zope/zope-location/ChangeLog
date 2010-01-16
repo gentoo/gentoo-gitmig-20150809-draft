@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-location
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/ChangeLog,v 1.4 2009/12/30 02:05:59 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/ChangeLog,v 1.5 2010/01/16 19:50:23 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-location-3.9.0.ebuild:
+  added ~x86
 
 *zope-location-3.9.0 (30 Dec 2009)
 
