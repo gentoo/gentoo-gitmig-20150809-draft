@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-75dpi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-75dpi/ChangeLog,v 1.26 2007/02/04 18:41:47 joshuabaergen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-75dpi/ChangeLog,v 1.27 2010/01/16 01:11:58 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  font-adobe-75dpi-1.0.0.ebuild:
+  Add prefix keywords
 
   04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   font-adobe-75dpi-1.0.0.ebuild:
