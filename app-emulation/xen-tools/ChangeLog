@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.57 2010/01/16 15:01:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.58 2010/01/16 17:25:45 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  xen-tools-3.4.2.ebuild:
+  stable x86, bug 293714
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xen-tools-3.4.2.ebuild, +files/xen-tools-3.4.2-as-needed.patch:
