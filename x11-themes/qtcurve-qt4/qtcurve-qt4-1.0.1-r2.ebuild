@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.0.1-r1.ebuild,v 1.1 2010/01/12 21:49:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.0.1-r2.ebuild,v 1.1 2010/01/16 12:48:16 yngwin Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -27,6 +27,7 @@ DOCS="ChangeLog README TODO"
 
 pkg_setup() {
 	confutils_use_depend_all windeco kde
+	use kde && kde4-base_pkg_setup
 }
 
 src_configure() {
