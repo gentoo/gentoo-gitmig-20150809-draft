@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.9.5.ebuild,v 1.1 2009/12/22 01:46:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.9.5.ebuild,v 1.2 2010/01/16 18:07:07 hanno Exp $
 
 EAPI="2"
 
@@ -24,6 +24,10 @@ DEPEND=">=x11-libs/gtk+-2.8.0
 	media-libs/libsdl[joystick]
 	x11-libs/agg"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-sse2-fix.diff"
+}
 
 src_configure() {
 	egamesconf --datadir=/usr/share || die "egamesconf failed"
