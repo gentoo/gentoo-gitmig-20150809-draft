@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.11.ebuild,v 1.1 2009/12/31 03:25:37 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.11.ebuild,v 1.2 2010/01/16 05:59:07 abcd Exp $
 
 EAPI=2
 
@@ -10,13 +10,13 @@ SRC_URI="http://www.tinc-vpn.org/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.7c
-	virtual/linux-sources
 	>=dev-libs/lzo-2
-	>=sys-libs/zlib-1.1.4-r2"
+	>=sys-libs/zlib-1.1.4-r2
+	kernel_linux? ( virtual/linux-sources )"
 
 src_configure() {
 	econf --enable-jumbograms

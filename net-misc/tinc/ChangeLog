@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tinc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.18 2009/12/31 03:25:37 rbu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.19 2010/01/16 05:59:07 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org> tinc-1.0.11.ebuild:
+  Add prefix keywords, only depend on linux-sources on linux
 
 *tinc-1.0.11 (31 Dec 2009)
 
