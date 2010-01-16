@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.42 2010/01/14 01:12:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.43 2010/01/16 17:13:26 armin76 Exp $
+
+  16 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  gnome-settings-daemon-2.26.1-r2.ebuild:
+  sh stable
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   gnome-settings-daemon-2.26.1-r2.ebuild:
