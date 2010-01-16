@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.18 2010/01/13 19:46:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.19 2010/01/16 08:33:22 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hpricot-0.8.2.ebuild:
+  Transfer Prefix keywords
 
   13 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   hpricot-0.8.2.ebuild:
