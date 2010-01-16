@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.59 2009/12/19 16:41:31 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.60 2010/01/16 20:16:29 markusle Exp $
+
+  16 Jan 2010; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2-r1.ebuild:
+  Updated handling of mycmakeargs from cmake-utils.eclass.
 
 *vtk-5.4.2-r1 (19 Dec 2009)
 

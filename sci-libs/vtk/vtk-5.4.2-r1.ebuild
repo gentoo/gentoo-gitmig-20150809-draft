@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.1 2009/12/19 16:41:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.2 2010/01/16 20:16:29 markusle Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4 cmake-utils
@@ -80,11 +80,11 @@ src_prepare() {
 
 src_configure() {
 	# general configuration
-	local mycmakeargs="
+	local mycmakeargs=(
 		-Wno-dev
 		-DVTK_INSTALL_PACKAGE_DIR=/$(get_libdir)/${PN}-${SPV}
 		-DCMAKE_SKIP_RPATH=YES
-		-DVTK_DIR=${S}
+		-DVTK_DIR="${S}"
 		-DVTK_INSTALL_LIB_DIR=/$(get_libdir)/
 		-DVTK_DATA_ROOT:PATH=/usr/share/${PN}/data
 		-DCMAKE_INSTALL_PREFIX=/usr
@@ -100,10 +100,10 @@ src_configure() {
 		-DBUILD_EXAMPLES=OFF
 		-DVTK_USE_HYBRID=ON
 		-DVTK_USE_GL2PS=ON
-		-DVTK_USE_RENDERING=ON"
+		-DVTK_USE_RENDERING=ON)
 
 	# use flag triggered options
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs+=(
 		$(cmake-utils_use boost VTK_USE_BOOST)
 		$(cmake-utils_use cg VTK_USE_CG_SHADERS)
 		$(cmake-utils_use tcl VTK_WRAP_TCL)
@@ -112,70 +112,67 @@ src_configure() {
 		$(cmake-utils_use patented VTK_USE_PATENTED)
 		$(cmake-utils_use doc DOCUMENTATION_HTML_HELP)
 		$(cmake-utils_use_build doc DOCUMENTATION)
-		$(cmake-utils_use mpi VTK_USE_MPI)"
+		$(cmake-utils_use mpi VTK_USE_MPI))
 
 	# mpi needs the parallel framework
 	if use mpi && use !threads; then
-		mycmakeargs="${mycmakeargs}
-			-DVTK_USE_PARALLEL=ON"
+		mycmakeargs+=(-DVTK_USE_PARALLEL=ON)
 	fi
 
 	if use java; then
-		mycmakeargs="${mycmakeargs}
+		mycmakeargs+=(
 			-DVTK_WRAP_JAVA=ON
 			-DJAVA_AWT_INCLUDE_PATH=`java-config -O`/include
 			-DJAVA_INCLUDE_PATH:PATH=`java-config -O`/include
-			-DJAVA_INCLUDE_PATH2:PATH=`java-config -O`/include/linux"
+			-DJAVA_INCLUDE_PATH2:PATH=`java-config -O`/include/linux)
 
 		if [ "${ARCH}" == "amd64" ]; then
-			mycmakeargs="${mycmakeargs}
-				-DJAVA_AWT_LIBRARY=`java-config -O`/jre/lib/${ARCH}/libjawt.so"
+			mycmakeargs+=(-DJAVA_AWT_LIBRARY=`java-config -O`/jre/lib/${ARCH}/libjawt.so)
 		else
-			mycmakeargs="${mycmakeargs}
-				-DJAVA_AWT_LIBRARY:PATH=`java-config -O`/jre/lib/i386/libjawt.so"
+			mycmakeargs+=(-DJAVA_AWT_LIBRARY:PATH=`java-config -O`/jre/lib/i386/libjawt.so)
 		fi
 	fi
 
 	if use python; then
 		python_version
-		mycmakeargs="${mycmakeargs}
+		mycmakeargs+=(
 			-DVTK_WRAP_PYTHON=ON
 			-DPYTHON_INCLUDE_PATH=/usr/include/python${PYVER}
 			-DPYTHON_LIBRARY=/usr/$(get_libdir)/libpython${PYVER}.so
-			-DVTK_PYTHON_SETUP_ARGS:STRING=--root=${D}"
+			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
 
 	if use qt3 || use qt4 ; then
-		mycmakeargs="${mycmakeargs}
+		mycmakeargs+=(
 			-DVTK_USE_GUISUPPORT=ON
 			-DVTK_USE_QVTK=ON
 			-DVTK_USE_QVTK_QTOPENGL=ON
 			-DQT_WRAP_CPP=ON
-			-DQT_WRAP_UI=ON"
+			-DQT_WRAP_UI=ON)
 	fi
 
 	# these options we only enable if the use request qt3
 	# only. In case of qt3 && qt4 or qt4 only qt4 always
 	# overrides qt3
 	if use qt3 && use !qt4; then
-		mycmakeargs="${mycmakeargs}
+		mycmakeargs+=(
 			-DVTK_INSTALL_QT_DIR=/qt/3/plugins/${PN}
 			-DDESIRED_QT_VERSION=3
 			-DQT_MOC_EXECUTABLE=/usr/qt/3/bin/moc
 			-DQT_UIC_EXECUTABLE=/usr/qt/3/bin/uic
 			-DQT_INCLUDE_DIR=/usr/qt/3/include
 			-DQT_QT_LIBRARY=/usr/qt/3/$(get_libdir)/libqt.so
-			-DQT_QMAKE_EXECUTABLE=/usr/qt/3/bin/qmake"
+			-DQT_QMAKE_EXECUTABLE=/usr/qt/3/bin/qmake)
 	fi
 
 	if use qt4; then
-		mycmakeargs="${mycmakeargs}
+		mycmakeargs+=(
 			-DVTK_INSTALL_QT_DIR=/$(get_libdir)/qt4/plugins/${PN}
 			-DDESIRED_QT_VERSION=4
 			-DQT_MOC_EXECUTABLE=/usr/bin/moc
 			-DQT_UIC_EXECUTABLE=/usr/bin/uic
 			-DQT_INCLUDE_DIR=/usr/include/qt4
-			-DQT_QMAKE_EXECUTABLE=/usr/bin/qmake"
+			-DQT_QMAKE_EXECUTABLE=/usr/bin/qmake)
 	fi
 
 	cmake-utils_src_configure
