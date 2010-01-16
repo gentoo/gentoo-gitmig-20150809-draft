@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r1.ebuild,v 1.2 2010/01/16 20:45:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r1.ebuild,v 1.3 2010/01/16 21:02:51 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -181,4 +181,12 @@ src_install() {
 	doins "${FILESDIR}/auto_gem.rb" || die
 
 	keepdir "${GEMS}"/1.8/{cache,doc}
+}
+
+pkg_postinst() {
+	ewarn "If you're updating from <=jruby-1.4.0, you're going to get errors related"
+	ewarn "to gentoo.rb load failure."
+	ewarn "This is due to a stray definition of JRUBY_OPTS variable from the previous ebuilds."
+	ewarn "To solve the problem, either login in a new shell, use 'env -i ${SHELL} --login'"
+	ewarn "or explicitly unset the variable before running jruby."
 }
