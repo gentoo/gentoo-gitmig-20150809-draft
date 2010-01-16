@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-multimedia
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.5 2009/12/25 15:41:27 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.6 2010/01/16 17:35:32 yngwin Exp $
+
+  16 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  qt-multimedia-4.6.0-r1.ebuild:
+  Adding alsa-lib dependency, adding iconv useflag, dropping non-linux
+  keywords (bug 293671).
 
 *qt-multimedia-4.6.0-r1 (25 Dec 2009)
 
