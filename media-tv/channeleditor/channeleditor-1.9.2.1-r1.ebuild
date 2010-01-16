@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.1-r1.ebuild,v 1.1 2009/06/19 17:39:11 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.1-r1.ebuild,v 1.2 2010/01/16 17:33:21 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/_}_src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="java5 java6 source"
 
 RDEPEND="java6? ( >=virtual/jre-1.6 )
