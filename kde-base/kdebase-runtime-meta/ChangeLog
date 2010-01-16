@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.3 2009/12/02 17:13:15 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.4 2010/01/16 18:46:28 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  kdebase-runtime-meta-4.3.4-r1.ebuild:
+  Add missing aqua USE flag (used by eclass)
 
 *kdebase-runtime-meta-4.3.4-r1 (02 Dec 2009)
 
