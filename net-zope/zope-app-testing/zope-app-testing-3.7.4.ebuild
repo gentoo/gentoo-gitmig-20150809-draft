@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/zope-app-testing-3.7.3.ebuild,v 1.1 2009/12/13 03:51:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/zope-app-testing-3.7.4.ebuild,v 1.1 2010/01/16 15:35:34 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,7 +28,6 @@ RDEPEND="net-zope/zope-annotation
 	net-zope/zope-container
 	net-zope/zope-i18n
 	net-zope/zope-interface
-	net-zope/zope-location
 	net-zope/zope-password
 	net-zope/zope-publisher
 	net-zope/zope-schema
