@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.140 2010/01/06 00:32:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.141 2010/01/16 08:25:58 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  actionpack-2.3.5-r1.ebuild:
+  Transfer Prefix keywords
 
 *actionpack-2.3.5-r1 (06 Jan 2010)
 
