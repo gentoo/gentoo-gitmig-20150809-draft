@@ -1,0 +1,39 @@
+From: Jouni Malinen <j@w1.fi>
+Date: Sat, 16 Jan 2010 08:38:53 +0000 (+0200)
+Subject: Fix linking of nt_password_hash
+X-Git-Url: http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=commitdiff_plain;h=73b217570c2dabcf409a19e746c6a929f88a5781
+
+Fix linking of nt_password_hash
+
+Need to use conditional linking of some crypto functionality and add
+couple of additional object files. [Bug 343]
+---
+
+diff --git a/hostapd/Makefile b/hostapd/Makefile
+index d94ceb9..6594df0 100644
+--- a/hostapd/Makefile
++++ b/hostapd/Makefile
+@@ -749,11 +749,22 @@ endif
+ hostapd_cli: $(OBJS_c)
+ 	$(CC) $(LDFLAGS) -o hostapd_cli $(OBJS_c) $(LIBS_c)
+ 
+-NOBJS = nt_password_hash.o ../src/crypto/ms_funcs.o $(SHA1OBJS) ../src/crypto/rc4.o ../src/crypto/md5.o
++NOBJS = nt_password_hash.o ../src/crypto/ms_funcs.o $(SHA1OBJS) ../src/crypto/md5.o
++ifdef NEED_RC4
++ifdef CONFIG_INTERNAL_RC4
++NOBJS += ../src/crypto/rc4.o
++endif
++endif
+ ifdef CONFIG_INTERNAL_MD5
+ NOBJS += ../src/crypto/md5-internal.o
+ endif
+ NOBJS += ../src/crypto/crypto_openssl.o ../src/utils/os_$(CONFIG_OS).o
++NOBJS += ../src/utils/wpa_debug.o
++NOBJS += ../src/utils/wpabuf.o
++ifdef CONFIG_WPA_TRACE
++NOBJS += ../src/utils/trace.o
++LIBS_n += -lbfd
++endif
+ ifdef TLS_FUNCS
+ LIBS_n += -lcrypto
+ endif

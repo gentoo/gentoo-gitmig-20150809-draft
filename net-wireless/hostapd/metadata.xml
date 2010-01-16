@@ -12,6 +12,7 @@
 		RADIUS Authentication client, RADIUS Accounting client
 	</longdescription>
 	<use>
+		<flag name='debug'>Enables debuggin</flag>
 		<flag name='logwatch'>Install support files for
 			<pkg>sys-app/logwatch</pkg></flag>
 		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
