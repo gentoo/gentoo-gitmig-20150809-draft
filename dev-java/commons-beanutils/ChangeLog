@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.48 2010/01/16 18:47:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.49 2010/01/16 19:48:42 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  commons-beanutils-1.8.0.ebuild:
+  stable x86, bug 262529
 
   16 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
   commons-beanutils-1.8.0.ebuild:
