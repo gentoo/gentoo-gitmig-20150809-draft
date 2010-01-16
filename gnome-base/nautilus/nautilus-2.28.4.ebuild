@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.28.4.ebuild,v 1.1 2009/12/17 23:26:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.28.4.ebuild,v 1.2 2010/01/16 00:36:28 abcd Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~sh ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~sh ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="beagle doc gnome tracker xmp"
 
 # not adding gnome-base/gail because it is in >=gtk+-2.13
