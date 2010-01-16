@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-9.11.ebuild,v 1.3 2009/12/27 08:50:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-9.11.ebuild,v 1.4 2010/01/16 01:50:14 abcd Exp $
 
 inherit multilib eutils versionator
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ccrma-ftp.stanford.edu/pub/Lisp/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="alsa cairo esd fam fftw gsl gtk guile jack ladspa motif nls opengl oss ruby xpm"
 
 RDEPEND="media-libs/audiofile
