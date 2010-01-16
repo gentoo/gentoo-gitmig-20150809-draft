@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libopendaap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.22 2007/04/20 15:28:04 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.23 2010/01/16 22:18:59 ulm Exp $
+
+  16 Jan 2010; Ulrich Mueller <ulm@gentoo.org> libopendaap-0.2.3.ebuild,
+  libopendaap-0.3.0.ebuild, libopendaap-0.4.0.ebuild:
+  Fix LICENSE. Don't install empty or useless doc files. Quote some variables.
 
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org>
   +files/libopendaap-0.4.0-freebsd.patch, libopendaap-0.4.0.ebuild:
