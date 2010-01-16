@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/broadcom-sta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.17 2009/12/07 15:47:15 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.18 2010/01/16 02:49:05 matsuu Exp $
+
+*broadcom-sta-5.10.91.9.3-r3 (16 Jan 2010)
+
+  16 Jan 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +broadcom-sta-5.10.91.9.3-r3.ebuild,
+  +files/broadcom-sta-5.10.91.9.3-linux-2.6.33.patch:
+  changed CONFIG_CHECK from ~!SSB ~!B43 to !SSB !B43, bug #300570. 2.6.33
+  support.
 
 *broadcom-sta-5.10.91.9.3-r2 (07 Dec 2009)
 
