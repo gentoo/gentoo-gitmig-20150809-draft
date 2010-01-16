@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r2.ebuild,v 1.1 2010/01/16 21:14:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r3.ebuild,v 1.1 2010/01/16 23:34:28 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://jruby.kenai.com/downloads/${PV}/${PN}-src-${MY_PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="bsf java6 ssl"
 
 CDEPEND=">=dev-java/bytelist-1.0.2:0
@@ -24,7 +24,7 @@ CDEPEND=">=dev-java/bytelist-1.0.2:0
 	>=dev-java/jvyamlb-0.2.5:0
 	>=dev-java/asm-3.2:3
 	dev-java/jcodings:0
-	dev-java/jffi:0.4
+	>=dev-java/jffi-0.6.0.2-r1:0.4
 	dev-java/jna:0
 	dev-java/joda-time:0
 	dev-util/jay:0[java]
@@ -97,7 +97,7 @@ pkg_setup() {
 java_prepare() {
 	epatch "${FILESDIR}/ftype-test-fixes.patch"
 	epatch "${FILESDIR}/user-test-fixes.patch"
-	epatch "${FILESDIR}"/${P}-system-nailgun.patch
+	epatch "${FILESDIR}"/${P}-system-jars.patch
 
 	# We don't need to use Retroweaver. There is a jarjar and a regular jar
 	# target but even with jarjarclean, both are a pain. The latter target
