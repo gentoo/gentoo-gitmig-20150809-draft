@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-traversing
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-traversing/ChangeLog,v 1.4 2009/12/29 21:51:35 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-traversing/ChangeLog,v 1.5 2010/01/16 19:13:45 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-traversing-3.12.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-traversing-3.12.0 (29 Dec 2009)
 

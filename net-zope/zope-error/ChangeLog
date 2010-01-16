@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-error
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-error/ChangeLog,v 1.1 2009/11/28 22:12:01 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-error/ChangeLog,v 1.2 2010/01/16 19:10:41 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-error-3.7.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-error-3.7.0 (28 Nov 2009)
 

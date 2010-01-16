@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-app-schema
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-schema/ChangeLog,v 1.1 2009/12/13 04:20:45 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-schema/ChangeLog,v 1.2 2010/01/16 19:06:59 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-app-schema-3.5.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-app-schema-3.5.0 (13 Dec 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-testbrowser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testbrowser/ChangeLog,v 1.2 2009/12/20 02:51:09 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testbrowser/ChangeLog,v 1.3 2010/01/16 19:31:08 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-testbrowser-3.7.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-testbrowser-3.7.0 (20 Dec 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-app-debug
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-debug/ChangeLog,v 1.1 2009/12/13 03:47:02 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-debug/ChangeLog,v 1.2 2010/01/16 19:28:14 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-app-debug-3.4.1.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-app-debug-3.4.1 (13 Dec 2009)
 

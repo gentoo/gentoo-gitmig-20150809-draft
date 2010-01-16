@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-site/zope-site-3.9.0.ebuild,v 1.1 2009/12/30 02:12:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-site/zope-site-3.9.0.ebuild,v 1.2 2010/01/16 19:23:57 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.zi
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-zope/zope-annotation
