@@ -1,6 +1,21 @@
 # ChangeLog for sci-visualization/paraview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.43 2009/11/24 04:05:41 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.44 2010/01/16 19:58:32 markusle Exp $
+
+*paraview-3.6.2 (16 Jan 2010)
+
+  16 Jan 2010; Markus Dittrich <markusle@gentoo.org> +paraview-3.6.2.ebuild,
+  +files/paraview-3.6.2-assistant.patch,
+  +files/paraview-3.6.2-findcg-cmake.patch,
+  +files/paraview-3.6.2-hdf-1.8.3.patch,
+  +files/paraview-3.6.2-no-doc-finder.patch,
+  +files/paraview-3.6.2-pointsprite-disable.patch,
+  +files/paraview-3.6.2-about.html.patch,
+  +files/paraview-3.6.2-qt.patch, metadata.xml:
+  Version bump. This new ebuild fully utilizes the cmake-utils eclass and
+  adds desktop entries for both paraview and OverView (this fixes bugs 
+  #299627, #287589, #273117). Thanks much to Francois Bissey 
+  <f.r.bissey@massey.ac.nz> for his great help with the ebuild.
 
   24 Nov 2009; Markus Dittrich <markusle@gentoo.org>
   paraview-3.6.1-r1.ebuild:
