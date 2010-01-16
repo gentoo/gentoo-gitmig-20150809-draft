@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.131 2010/01/13 11:40:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.132 2010/01/16 08:30:36 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  actionmailer-2.3.5-r1.ebuild:
+  move Prefix KEYWORDS over
 
 *actionmailer-2.3.5-r1 (13 Jan 2010)
 
