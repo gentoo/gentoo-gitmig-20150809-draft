@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.194 2009/12/03 17:10:48 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.195 2010/01/16 17:17:44 armin76 Exp $
+
+  16 Jan 2010; Raúl Porcel <armin76@gentoo.org> at-spi-1.26.0.ebuild:
+  sh stable
 
   03 Dec 2009; Brent Baude <ranger@gentoo.org> at-spi-1.26.0.ebuild:
   Marking at-spi-1.26.0 ppc64 stable for bug 281427
