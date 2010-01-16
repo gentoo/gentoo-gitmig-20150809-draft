@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.84 2010/01/05 07:22:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.85 2010/01/16 13:42:46 pva Exp $
+
+*gajim-0.13.2 (16 Jan 2010)
+
+  16 Jan 2010; Peter Volkov <pva@gentoo.org> +gajim-0.13.2.ebuild:
+  Version bump, bug #301173, thank Justin Lecher (jlec) for report.
 
   05 Jan 2010; Peter Volkov <pva@gentoo.org> gajim-0.13.1.ebuild:
   Up gettext version as it's required for tests to pass.
