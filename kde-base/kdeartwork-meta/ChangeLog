@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.141 2009/12/10 19:49:02 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.142 2010/01/16 18:27:26 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  kdeartwork-meta-4.3.3.ebuild, kdeartwork-meta-4.3.4.ebuild:
+  Add missing aqua USE flag (used by eclass)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdeartwork-meta-4.3.1.ebuild:
