@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-liquid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-liquid/ChangeLog,v 1.4 2009/10/23 14:29:59 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-liquid/ChangeLog,v 1.5 2010/01/16 19:02:51 graaff Exp $
+
+  16 Jan 2010; Hans de Graaff <graaff@gentoo.org> -ruby-liquid-1.0.ebuild:
+  Remove old version.
 
 *ruby-liquid-2.0.0 (23 Oct 2009)
 
