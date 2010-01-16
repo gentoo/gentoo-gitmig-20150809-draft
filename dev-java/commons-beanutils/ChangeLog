@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.47 2010/01/03 21:23:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.48 2010/01/16 18:47:19 betelgeuse Exp $
+
+  16 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
+  commons-beanutils-1.8.0.ebuild:
+  rm MemoryLeakTestCase.java because upstream acknowledges it failing.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-beanutils-1.6.1-r3.ebuild, commons-beanutils-1.7.0-r2.ebuild,

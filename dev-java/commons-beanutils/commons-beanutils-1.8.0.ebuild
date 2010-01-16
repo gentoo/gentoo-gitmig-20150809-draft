@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.8.0.ebuild,v 1.2 2010/01/03 20:21:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.8.0.ebuild,v 1.3 2010/01/16 18:47:19 betelgeuse Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -33,10 +33,13 @@ DEPEND=">=virtual/jdk-1.4
 
 S="${WORKDIR}/${P}-src"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+java_prepare() {
 	rm -vr src/java/org/apache/commons/collections/ || die
+	# from pom.xml:
+	# <!-- This test case is known to fail, and there isn't any proposed fix
+	#   -  so we will just exclude it until someone comes up with a solution.
+	# -->
+	rm -v ./src/test/org/apache/commons/beanutils/memoryleaktests/MemoryLeakTestCase.java || die
 	JAVA_ANT_CLASSPATH_TAGS="javac java" java-ant_rewrite-classpath
 }
 
