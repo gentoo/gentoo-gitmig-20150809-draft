@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5197 2010/01/16 12:27:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5198 2010/01/16 13:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2740,6 +2740,7 @@ net-wireless/bluez:old-daemons - Install old daemons like hidd and sdpd that are
 net-wireless/bluez:test-programs - Install l2test and rctest
 net-wireless/bluez-utils:old-daemons - Install old daemons like hidd and sdpd that are deprecated by the new Service framework
 net-wireless/bluez-utils:test-programs - Install l2test and rctest
+net-wireless/hostapd:debug - Enables debuggin
 net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
