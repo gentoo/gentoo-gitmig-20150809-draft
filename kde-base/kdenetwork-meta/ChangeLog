@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.144 2009/12/10 20:20:39 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.145 2010/01/16 19:04:10 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  kdenetwork-meta-4.3.3.ebuild, kdenetwork-meta-4.3.4.ebuild:
+  Add missing aqua USE flag (used by eclass)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdenetwork-meta-4.3.1.ebuild:
