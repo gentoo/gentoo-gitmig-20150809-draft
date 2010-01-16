@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/fpc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.49 2009/07/22 20:24:39 truedfx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.50 2010/01/16 10:38:29 truedfx Exp $
+
+*fpc-2.4.0 (16 Jan 2010)
+
+  16 Jan 2010; Harald van Dĳk <truedfx@gentoo.org> +fpc-2.4.0.ebuild:
+  Version bump, bug #299525
 
 *fpc-2.2.4-r2 (22 Jul 2009)
 
