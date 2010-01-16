@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.40 2010/01/16 14:36:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.41 2010/01/16 20:09:19 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libkate-0.3.7.ebuild:
+  stable x86, bug 300697
 
   16 Jan 2010; Tobias Klausmann <klausman@gentoo.org> libkate-0.3.7.ebuild:
   Stable on alpha, bug #300697
