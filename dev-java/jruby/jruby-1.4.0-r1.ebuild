@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r1.ebuild,v 1.1 2010/01/14 14:43:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r1.ebuild,v 1.2 2010/01/16 20:45:36 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -10,7 +10,7 @@ MY_PV="${PV/_rc1/RC1}"
 
 DESCRIPTION="Java-based Ruby interpreter implementation"
 HOMEPAGE="http://jruby.codehaus.org/"
-SRC_URI="http://dist.codehaus.org/${PN}/${MY_PV}/${PN}-src-${MY_PV}.tar.gz"
+SRC_URI="http://jruby.kenai.com/downloads/${PV}/${PN}-src-${MY_PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
