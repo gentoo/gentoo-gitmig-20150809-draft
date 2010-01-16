@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-cs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.15 2009/10/18 22:16:20 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.16 2010/01/16 14:15:37 ulm Exp $
+
+  16 Jan 2010; Ulrich Mueller <ulm@gentoo.org> myspell-cs-20060316.ebuild:
+  Fix LICENSE, myspell-th_cs_CZ-PavelRychlySmrz is identical with MIT, bug
+  301168.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> myspell-cs-20060316.ebuild:
   QA fixes; IUSE is not defined
