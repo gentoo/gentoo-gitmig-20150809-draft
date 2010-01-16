@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11118 2010/01/16 23:03:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11119 2010/01/16 23:44:56 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -50,11 +50,6 @@ app-i18n/qimhangul
 # Use media-video/2mandvd as a good Qt4 alternative
 media-video/qdvdauthor
 media-video/qdvdauthor-templates
-
-# Alistair Bush <ali_bush@gentoo.org> (14 Jan 2010)
-# Masked for testing and awaiting keywording of new
-# dependencies
-=dev-java/jruby-1.4.0*
 
 # Ben de Groot <yngwin@gentoo.org> (13 Jan 2010)
 # Masked pending removal in 30 days. Unused Qt3 bindings (bug #300162).
