@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.3.ebuild,v 1.4 2009/11/21 18:33:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.3.ebuild,v 1.5 2010/01/16 00:59:59 abcd Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -10,7 +10,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="+X +alsa"
 RESTRICT="test"  # bug 249598
@@ -33,9 +33,13 @@ src_prepare() {
 }
 
 src_configure() {
+	local plugins=all
+
+	[[ ${CHOST} == *-interix* ]] && plugins=deskno,kbled,xkb
+
 	econf $(use_enable alsa) \
 		$(use_with X x) \
-		--with-plugins=all
+		--with-plugins="${plugins}"
 }
 
 src_install () {
