@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.6 2010/01/13 16:35:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.7 2010/01/16 17:29:25 flameeyes Exp $
+
+  16 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  hoe-seattlerb-1.2.2.ebuild:
+  Add jruby to the usable targets.
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> hoe-seattlerb-1.2.2.ebuild:
   Marking hoe-seattlerb-1.2.2 ~ppc64 for bug 298367
