@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-sk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sk/ChangeLog,v 1.14 2009/06/22 13:45:00 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sk/ChangeLog,v 1.15 2010/01/16 14:19:16 ulm Exp $
+
+  16 Jan 2010; Ulrich Mueller <ulm@gentoo.org> myspell-sk-20060316.ebuild:
+  Fix LICENSE, myspell-hyph_sk_SK-TiborBako is identical with MIT, bug 301168.
+  Define IUSE.
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> myspell-sk-20060316.ebuild:
   Stable for HPPA too.
