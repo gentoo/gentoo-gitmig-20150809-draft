@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-processlifetime
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-processlifetime/ChangeLog,v 1.1 2009/11/21 20:10:32 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-processlifetime/ChangeLog,v 1.2 2010/01/16 18:09:41 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-processlifetime-1.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-processlifetime-1.0 (21 Nov 2009)
 

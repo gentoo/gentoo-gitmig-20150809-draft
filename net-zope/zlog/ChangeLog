@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zlog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zlog/ChangeLog,v 1.1 2009/12/13 04:10:11 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zlog/ChangeLog,v 1.2 2010/01/16 18:20:55 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> zlog-2.11.1.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zlog-2.11.1 (13 Dec 2009)
 

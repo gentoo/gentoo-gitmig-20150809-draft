@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-filerepresentation
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-filerepresentation/ChangeLog,v 1.1 2009/10/24 19:09:07 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-filerepresentation/ChangeLog,v 1.2 2010/01/16 18:07:23 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-filerepresentation-3.6.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-filerepresentation-3.6.0 (24 Oct 2009)
 
