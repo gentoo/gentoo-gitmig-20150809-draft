@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.21 2009/12/20 14:13:53 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.22 2010/01/16 18:06:21 graaff Exp $
+
+*ruby-gd-0.8.0 (16 Jan 2010)
+
+  16 Jan 2010; Hans de Graaff <graaff@gentoo.org> +ruby-gd-0.8.0.ebuild:
+  Overdue version bump, made possible since we can now easily patch gems.
+  Converted to ruby-fakegem.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> ruby-gd-0.7.4-r1.ebuild:
   Remove obsolete virtual/ruby dependency.
