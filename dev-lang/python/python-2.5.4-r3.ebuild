@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.30 2010/01/12 16:08:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.31 2010/01/16 14:34:44 arfrever Exp $
 
 EAPI="1"
 
@@ -277,7 +277,7 @@ eselect_python_update() {
 pkg_postinst() {
 	eselect_python_update
 
-	EPYTHON="$(PYTHON)" python_mod_optimize -x "(site-packages|test)" /usr/$(get_libdir)/python${PYVER}
+	python_mod_optimize -x "(site-packages|test)" /usr/$(get_libdir)/python${PYVER}
 
 	if [[ "${python_updater_warning}" == "1" ]]; then
 		ewarn
