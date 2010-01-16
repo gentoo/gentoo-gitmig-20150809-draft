@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dsniff
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.48 2009/03/23 19:39:39 rbu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.49 2010/01/16 07:42:33 pva Exp $
+
+  16 Jan 2010; Peter Volkov <pva@gentoo.org> dsniff-2.4_beta1-r3.ebuild,
+  dsniff-2.4_beta1-r4.ebuild:
+  Update license on BSD, bug #301123 thank Ulrich Müller for report.
 
 *dsniff-2.4_beta1-r4 (23 Mar 2009)
 
