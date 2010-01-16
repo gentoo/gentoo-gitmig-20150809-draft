@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemud
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.10 2009/10/23 18:31:23 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.11 2010/01/16 17:38:10 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cdemud-1.2.0.ebuild:
+  stable x86, bug 296868
 
 *cdemud-1.2.0 (23 Oct 2009)
 
