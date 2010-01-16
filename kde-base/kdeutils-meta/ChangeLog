@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils-meta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.139 2009/12/10 20:39:34 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.140 2010/01/16 19:33:08 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdeutils-meta-4.3.3.ebuild,
+  kdeutils-meta-4.3.4.ebuild:
+  Add missing aqua USE flag (used by eclass)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdeutils-meta-4.3.1.ebuild:

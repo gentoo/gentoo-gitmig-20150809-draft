@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev-meta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.124 2009/12/10 20:40:40 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.125 2010/01/16 19:34:33 abcd Exp $
+
+  16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  kdewebdev-meta-4.3.3.ebuild, kdewebdev-meta-4.3.4.ebuild:
+  Add missing aqua USE flag (used by eclass)
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdewebdev-meta-4.3.1.ebuild:
