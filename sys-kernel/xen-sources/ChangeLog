@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.64 2010/01/06 22:36:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.65 2010/01/16 17:30:06 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  xen-sources-2.6.18-r12.ebuild:
+  stable x86, bug 293714
 
 *xen-sources-2.6.29-r4 (06 Jan 2010)
 
