@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-broken
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-broken/ChangeLog,v 1.1 2009/11/22 01:22:07 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-broken/ChangeLog,v 1.2 2010/01/16 15:09:28 arfrever Exp $
+
+*zope-broken-3.6.0 (16 Jan 2010)
+
+  16 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-broken-3.5.0.ebuild, +zope-broken-3.6.0.ebuild:
+  Version bump.
 
 *zope-broken-3.5.0 (22 Nov 2009)
 
