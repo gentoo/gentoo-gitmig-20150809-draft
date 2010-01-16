@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.25 2010/01/07 20:20:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.26 2010/01/16 15:25:08 klausman Exp $
+
+  16 Jan 2010; Tobias Klausmann <klausman@gentoo.org> mytop-1.6-r3.ebuild:
+  Stable on alpha, bug #296990
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> mytop-1.6-r3.ebuild:
   Marking mytop-1.6-r3 ppc for bug 296990
