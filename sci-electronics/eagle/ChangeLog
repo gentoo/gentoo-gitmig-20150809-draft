@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.30 2009/10/10 16:25:01 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.31 2010/01/16 21:25:30 nixphoeni Exp $
+
+*eagle-5.7.0 (16 Jan 2010)
+
+  16 Jan 2010; Joe Sapp <nixphoeni@gentoo.org> +eagle-5.7.0.ebuild:
+  Version bump (bug #301165)
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> eagle-5.6.0.ebuild:
   jpeg-compat RDEPEND because /opt/eagle-5.6.0/bin/eagle is linked against
