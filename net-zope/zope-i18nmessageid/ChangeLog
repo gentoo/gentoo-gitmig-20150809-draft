@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-i18nmessageid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/ChangeLog,v 1.1 2009/10/24 21:28:42 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/ChangeLog,v 1.2 2010/01/16 17:46:56 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  zope-i18nmessageid-3.5.0.ebuild:
+  keyworded ~arch for x86, bug 297734
 
 *zope-i18nmessageid-3.5.0 (24 Oct 2009)
 
