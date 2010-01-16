@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r8.ebuild,v 1.11 2007/07/08 11:39:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r8.ebuild,v 1.12 2010/01/16 02:08:11 abcd Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/nc110/${MY_P}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x64-solaris"
 IUSE="crypt ipv6 static"
 
 DEPEND="crypt? ( dev-libs/libmix )"
@@ -34,6 +34,7 @@ src_compile() {
 	use ipv6 && XFLAGS="${XFLAGS} -DINET6"
 	use static && export STATIC="-static"
 	use crypt && XFLAGS="${XFLAGS} -DAESCRYPT" && XLIBS="${XLIBS} -lmix"
+	[[ ${CHOST} == *-solaris* ]] && XLIBS="${XLIBS} -lnsl -lsocket"
 	make -e CC="$(tc-getCC) ${CFLAGS}" nc || die
 }
 
