@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.3.4.ebuild,v 1.3 2009/12/27 15:23:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.3.4.ebuild,v 1.4 2010/01/16 19:46:02 abcd Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.oxygen-icons.org/"
 
 LICENSE="LGPL-3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="aqua"
 
 # Block conflicting packages
 add_blocker kdebase-data '<4.2.67'
