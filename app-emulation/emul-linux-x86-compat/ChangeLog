@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.39 2010/01/15 02:22:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.40 2010/01/16 21:44:59 pacho Exp $
+
+*emul-linux-x86-compat-20091231-r1 (16 Jan 2010)
+
+  16 Jan 2010; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-compat-20091231-r1.ebuild:
+  Be sure libstdc++.so.5 is finally present in all systems since other
+  packages expect to get it when RDEPEND on emul-linux-x86-compat
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   emul-linux-x86-compat-20081109.ebuild,
