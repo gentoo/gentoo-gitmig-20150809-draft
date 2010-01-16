@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lt/myspell-lt-20060316.ebuild,v 1.15 2010/01/16 07:39:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lt/myspell-lt-20060316.ebuild,v 1.16 2010/01/16 07:41:05 pva Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "lt,LT,lt_LT,Lithuanian (Lithuania),lt_LT.zip"
@@ -18,5 +18,6 @@ inherit myspell
 DESCRIPTION="Lithuanian dictionaries for myspell/hunspell"
 LICENSE="BSD LPPL-1.3b"
 HOMEPAGE="http://lingucomponent.openoffice.org/ ftp://ftp.akl.lt/ispell-lt/"
+IUSE=""
 
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"

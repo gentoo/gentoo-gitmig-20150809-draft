@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-lt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lt/ChangeLog,v 1.15 2010/01/16 07:40:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lt/ChangeLog,v 1.16 2010/01/16 07:41:05 pva Exp $
+
+  16 Jan 2010; Peter Volkov <pva@gentoo.org> myspell-lt-20060316.ebuild:
+  Define IUSE.
 
   16 Jan 2010; Peter Volkov <pva@gentoo.org> myspell-lt-20060316.ebuild:
   Update license on BSD, bug #301123 thank Ulrich Müller for report.
