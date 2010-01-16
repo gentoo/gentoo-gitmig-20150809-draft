@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.20.5.ebuild,v 1.8 2010/01/14 01:38:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.20.5.ebuild,v 1.9 2010/01/16 17:14:19 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="debug doc glade python"
 
 RDEPEND=">=dev-libs/glib-2.18.0
