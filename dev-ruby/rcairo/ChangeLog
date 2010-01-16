@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rcairo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.35 2009/12/09 20:51:04 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.36 2010/01/16 06:52:26 graaff Exp $
+
+*rcairo-1.8.1 (16 Jan 2010)
+
+  16 Jan 2010; Hans de Graaff <graaff@gentoo.org> +rcairo-1.8.1.ebuild:
+  Version bump. Conversion to ruby-fakegem. Use gem again, Makefile now
+  works on tmpfs.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -rcairo-1.4.1.ebuild:
   Remove old version.
