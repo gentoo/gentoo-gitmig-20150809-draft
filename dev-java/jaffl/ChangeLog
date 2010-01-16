@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaffl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.1 2009/12/31 11:16:14 ali_bush Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.2 2010/01/16 21:02:00 betelgeuse Exp $
+
+  16 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> jaffl-0.3.ebuild:
+  Keyword ~x86.
 
 *jaffl-0.3 (31 Dec 2009)
 

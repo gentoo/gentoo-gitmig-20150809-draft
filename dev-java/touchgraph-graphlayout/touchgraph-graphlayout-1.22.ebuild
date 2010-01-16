@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/touchgraph-graphlayout/touchgraph-graphlayout-1.22.ebuild,v 1.1 2009/01/25 19:31:01 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/touchgraph-graphlayout/touchgraph-graphlayout-1.22.ebuild,v 1.2 2010/01/16 21:00:14 betelgeuse Exp $
 
 MY_PN="TGGraphLayout"
 JAVA_PKG_IUSE="source"
@@ -12,7 +12,7 @@ HOMEPAGE="http://touchgraph.sourceforge.net"
 SRC_URI="mirror://sourceforge/touchgraph/TGGL_${PV//./}_jre11.zip"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"
