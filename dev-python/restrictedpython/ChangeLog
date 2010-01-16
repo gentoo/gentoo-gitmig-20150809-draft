@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/restrictedpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.2 2010/01/12 14:28:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.3 2010/01/16 18:10:53 fauli Exp $
+
+  16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  restrictedpython-3.5.1.ebuild:
+  keyworded ~arch for x86, bug 297734
 
   12 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   restrictedpython-3.5.1.ebuild:
