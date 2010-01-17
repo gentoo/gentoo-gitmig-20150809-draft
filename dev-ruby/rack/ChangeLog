@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.26 2010/01/14 15:41:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.27 2010/01/17 19:39:51 flameeyes Exp $
+
+  17 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  rack-1.0.1-r1.ebuild, rack-1.1.0.ebuild:
+  Disable unreliable tests from both 1.0.1 and 1.1.0 ebuilds, and add jruby
+  support for both now that it works.
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> rack-1.0.1-r1.ebuild:
   Marking rack-1.0.1-r1 ~ppc for bug 297711
