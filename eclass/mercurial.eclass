@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.9 2010/01/17 11:21:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.10 2010/01/17 12:03:48 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -92,7 +92,7 @@ function mercurial_fetch {
 	mkdir -p "${hg_src_dir}/${EHG_PROJECT}" || \
 		die "failed to create ${hg_src_dir}/${EHG_PROJECT}"
 	chmod -f g+rw "${hg_src_dir}/${EHG_PROJECT}" || \
-		die "failed to chwon ${EHG_PROJECT}"
+		echo "Warning: failed to chmod g+rw ${EHG_PROJECT}"
 	cd "${hg_src_dir}/${EHG_PROJECT}" || \
 		die "failed to cd to ${hg_src_dir}/${EHG_PROJECT}"
 
