@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.0-r2.ebuild,v 1.2 2010/01/14 15:48:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.0-r2.ebuild,v 1.3 2010/01/17 19:13:31 yngwin Exp $
 
 EAPI="2"
-inherit eutils qt4-build
+inherit confutils eutils qt4-build
 
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
@@ -78,6 +78,8 @@ pkg_setup() {
 		ewarn "filling a bug on gentoo bugzilla."
 		ebeep 5
 	fi
+
+	confutils_use_depend_all gtk glib
 	qt4-build_pkg_setup
 }
 
