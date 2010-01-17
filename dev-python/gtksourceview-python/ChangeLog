@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtksourceview-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.27 2010/01/16 17:25:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.28 2010/01/17 23:49:06 jer Exp $
+
+  17 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  gtksourceview-python-2.26.0.ebuild:
+  Stable for HPPA (bug #281427).
 
   16 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   gtksourceview-python-2.26.0.ebuild:

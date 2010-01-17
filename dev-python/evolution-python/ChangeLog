@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/evolution-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.24 2009/12/03 17:20:34 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.25 2010/01/17 23:46:45 jer Exp $
+
+  17 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  evolution-python-2.26.0.ebuild:
+  Stable for HPPA (bug #281427).
 
   03 Dec 2009; Brent Baude <ranger@gentoo.org>
   evolution-python-2.26.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.68 2009/10/11 10:51:00 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.69 2010/01/17 23:43:06 jer Exp $
+
+  17 Jan 2010; Jeroen Roovers <jer@gentoo.org> pyorbit-2.24.0.ebuild:
+  Stable for HPPA (bug #281427).
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyorbit-2.24.0.ebuild:
   Merge from Prefix
