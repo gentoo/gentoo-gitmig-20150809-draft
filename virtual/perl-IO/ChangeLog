@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.21 2010/01/17 13:42:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.22 2010/01/17 13:47:15 tove Exp $
+
+  17 Jan 2010; Torsten Veller <tove@gentoo.org> perl-IO-1.23.01.ebuild,
+  perl-IO-1.25.ebuild:
+  Add missing prefix keywords
 
   17 Jan 2010; Torsten Veller <tove@gentoo.org> -perl-IO-1.20.ebuild:
   Cleanup
