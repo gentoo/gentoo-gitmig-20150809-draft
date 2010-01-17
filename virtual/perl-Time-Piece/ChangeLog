@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.14 2010/01/12 13:11:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.15 2010/01/17 15:13:06 tove Exp $
+
+  17 Jan 2010; Torsten Veller <tove@gentoo.org>
+  -perl-Time-Piece-1.11.ebuild, -perl-Time-Piece-1.13.ebuild,
+  -perl-Time-Piece-1.14.ebuild:
+  Cleanup
 
 *perl-Time-Piece-1.16 (12 Jan 2010)
 
