@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-formlib/zope-formlib-3.10.0.ebuild,v 1.2 2010/01/16 19:28:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-formlib/zope-formlib-4.0.ebuild,v 1.1 2010/01/17 18:32:21 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Form generation and validation library for Zope"
 HOMEPAGE="http://pypi.python.org/pypi/zope.formlib"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
+SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="ZPL"
 SLOT="0"
@@ -20,10 +20,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/pytz
-	net-zope/zope-app-form
 	net-zope/zope-browser
 	net-zope/zope-browserpage
 	net-zope/zope-component
+	net-zope/zope-datetime
 	net-zope/zope-event
 	net-zope/zope-i18n
 	net-zope/zope-i18nmessageid
@@ -33,7 +33,6 @@ RDEPEND="dev-python/pytz
 	net-zope/zope-schema
 	net-zope/zope-security"
 DEPEND="${RDEPEND}
-	app-arch/unzip
 	dev-python/setuptools"
 RESTRICT_PYTHON_ABIS="3.*"
 
