@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3800 2010/01/17 10:09:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3801 2010/01/17 19:15:43 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask jpeg-8.
 
   17 Jan 2010; Thilo Bangert <bangert@gentoo.org> package.mask:
   mask app-arch/rzip - silently creates broken archives (bug #217552)
