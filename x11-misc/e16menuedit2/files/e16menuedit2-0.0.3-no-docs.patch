@@ -3,7 +3,8 @@
 @@ -220,14 +220,7 @@
  yelphelpdir = @yelphelpdir@
  SUBDIRS = src po pixmaps help
- e16menuedit2docdir = ${prefix}/${packagedocdir}
+-e16menuedit2docdir = ${prefix}/${packagedocdir}
++e16menuedit2docdir = ${prefix}
 -e16menuedit2doc_DATA = \
 -		README\
 -		COPYING\
