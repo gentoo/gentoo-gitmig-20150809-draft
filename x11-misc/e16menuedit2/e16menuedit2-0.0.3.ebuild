@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.8 2008/06/28 15:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.9 2010/01/17 21:07:13 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}"/${P}-no-docs.patch
+	sed -i '1i#include <glib/gstdio.h>' src/e16menuedit2.c
 }
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
