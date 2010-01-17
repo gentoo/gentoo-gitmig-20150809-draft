@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.119 2009/11/08 21:26:18 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.120 2010/01/17 20:23:12 vapier Exp $
+
+  17 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  enlightenment-1.0.1.ebuild:
+  Switch to eautotools and trim empty doc dir #294456 by Diego E. Pettenò.
 
   08 Nov 2009; Mark Loeser <halcy0n@gentoo.org>
   enlightenment-0.16.8.15.ebuild:
