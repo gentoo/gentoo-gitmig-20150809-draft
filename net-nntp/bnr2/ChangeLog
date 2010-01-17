@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/bnr2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/ChangeLog,v 1.12 2009/12/14 15:11:38 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/ChangeLog,v 1.13 2010/01/17 21:32:05 ssuominen Exp $
+
+  17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> bnr2-0.14.6.ebuild,
+  bnr2-0.14.7.ebuild:
+  Replace jpeg-compat with slotted <jpeg-7.
 
   14 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> bnr2-0.14.6.ebuild,
   bnr2-0.14.7.ebuild:
