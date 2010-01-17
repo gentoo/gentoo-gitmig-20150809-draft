@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.5.1.ebuild,v 1.1 2010/01/17 17:05:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.5.1.ebuild,v 1.2 2010/01/17 22:13:41 mr_bones_ Exp $
 
 EAPI=2
 KDE_LINGUAS="de es fr ja lt nl pt_BR ro ru"
@@ -33,7 +33,7 @@ src_configure() {
 src_install() {
 	kde4-base_src_install
 
-	# Remove kio svn service types - provided by kdesdk-kioslaves. 
+	# Remove kio svn service types - provided by kdesdk-kioslaves.
 	# Last version checked: 1.5.1
 	rm -f "${D}/${PREFIX}"/share/kde4/services/svn{,+ssh,+https,+file,+http}.protocol
 }
