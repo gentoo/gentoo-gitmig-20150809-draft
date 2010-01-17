@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.28-r11.ebuild,v 1.1 2009/05/15 21:23:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.31-r9.ebuild,v 1.1 2010/01/17 22:56:51 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="10"
 
 inherit kernel-2
 detect_version
@@ -14,9 +14,16 @@ DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/ http://www.tuxonice.net"
 IUSE=""
 
-TUXONICE_VERSION="3.0.1"
-TUXONICE_TARGET="2.6.28"
-TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
+TUXONICE_SNAPSHOT=""
+TUXONICE_VERSION="3.0.99.44"
+TUXONICE_TARGET="2.6.31"
+
+if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then
+	TUXONICE_SRC="current-tuxonice-for-${TUXONICE_TARGET}.patch-${TUXONICE_SNAPSHOT}"
+else
+	TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
+fi
+
 TUXONICE_URI="http://www.tuxonice.net/downloads/all/${TUXONICE_SRC}.bz2"
 
 UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2"
