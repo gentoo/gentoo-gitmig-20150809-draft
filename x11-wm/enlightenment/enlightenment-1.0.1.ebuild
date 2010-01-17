@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.1.ebuild,v 1.2 2010/01/17 20:23:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.1.ebuild,v 1.3 2010/01/17 22:30:16 vapier Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
@@ -78,5 +78,5 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	rmdir "${D}"/usr/share/doc/e16 || die #294456
-	dodoc AUTHORS ChangeLog COMPLIANCE README* docs/README* TODO
+	dodoc AUTHORS ChangeLog COMPLIANCE docs/README TODO
 }
