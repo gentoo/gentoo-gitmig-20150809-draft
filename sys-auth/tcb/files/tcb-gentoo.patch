@@ -1,0 +1,126 @@
+--- pam_tcb/support.c.orig	2010-01-17 12:22:29.000000000 +0100
++++ pam_tcb/support.c	2010-01-17 15:47:38.000000000 +0100
+@@ -466,6 +466,39 @@
+ 	return retval;
+ }
+ 
++static char i64c(int i)
++{
++	if (i < 0)
++		return '.';
++	if (i > 63)
++		return 'z';
++	
++	if (i == 0)
++		return '.';
++	if (i == 1)
++		return '/';
++	if (i >= 2 && i <= 11)
++		return ('0' - 2 + i);
++	if (i >= 12 && i <= 37)
++		return ('A' - 12 + i);
++	if (i >= 38 && i <= 63)
++		return ('a' - 38 + i);
++	
++	return '\0';
++}
++
++static char *make_salt(const char *prefix, const char *entropy,
++    int entropy_size)
++{
++	char salt[64];
++	char *sp = stpcpy(salt, prefix);
++	int i;
++	for (i = 0; i < entropy_size / 2; i++)
++		*sp++ = i64c(entropy[i] & 077);
++	*sp = '\0';
++	return strdup(salt);
++}
++
+ static int check_crypt(pam_handle_t *pamh, const char *pass,
+     const char *stored_hash)
+ {
+@@ -481,11 +514,11 @@
+ 
+ 	/* This exists because of timing attacks. */
+ 	memset(input, 0x55, sizeof(input));
+-	fake_salt = crypt_gensalt_ra(pam_unix_param.crypt_prefix,
+-	    pam_unix_param.count, input, sizeof(input));
++	fake_salt = make_salt(pam_unix_param.crypt_prefix,
++	    input, sizeof(input));
+ 
+ 	if (!fake_salt) {
+-		pam_syslog(pamh, LOG_CRIT, "crypt_gensalt_ra: %m");
++		pam_syslog(pamh, LOG_CRIT, "make_salt: %m");
+ 		return PAM_BUF_ERR;
+ 	}
+ 
+@@ -816,22 +849,21 @@
+ 	return PAM_SUCCESS;
+ }
+ 
+-static char *crypt_wrapper_ra(pam_handle_t *pamh, const char *key,
++static char *crypt_wrapper_r(pam_handle_t *pamh, const char *key,
+     const char *salt)
+ {
+-	char *retval;
+-	void *data = NULL;
+-	int size = 0;
++	char *retval = NULL;
++	struct crypt_data *cdata = malloc(sizeof(*cdata));
+ 
+-	retval = crypt_ra(key, salt, &data, &size);
+-	if (retval)
+-		retval = strdup(retval); /* we return NULL if strdup fails */
+-	else
+-		pam_syslog(pamh, LOG_CRIT, "crypt_ra: %m");
+-	if (data) {
+-		memset(data, 0, size);
+-		free(data);
++	if (cdata != NULL) {
++		cdata->initialized = 0;
++		retval = strdup(crypt_r(key, salt, cdata));
++		if (!retval)
++			pam_syslog(pamh, LOG_CRIT, "crypt_r: %m");
++		memset(cdata, '\0', sizeof(*cdata));
++		free(cdata);
+ 	}
++
+ 	return retval;
+ }
+ 
+@@ -841,7 +873,7 @@
+ 	char *retval;
+ 
+ 	if (off(UNIX_PLAIN_CRYPT))
+-		return crypt_wrapper_ra(pamh, key, salt);
++		return crypt_wrapper_r(pamh, key, salt);
+ 
+ 	errno = 0;
+ 	retval = crypt(key, salt);
+@@ -873,13 +905,13 @@
+ 	}
+ 	close(fd);
+ 
+-	salt = crypt_gensalt_ra(pam_unix_param.crypt_prefix,
+-	    pam_unix_param.count, entropy, sizeof(entropy));
++	salt = make_salt(pam_unix_param.crypt_prefix,
++	    entropy, sizeof(entropy));
+ 
+ 	memset(entropy, 0, sizeof(entropy));
+ 
+ 	if (!salt) {
+-		pam_syslog(pamh, LOG_CRIT, "crypt_gensalt_ra: %m");
++		pam_syslog(pamh, LOG_CRIT, "make_salt: %m");
+ 		return NULL;
+ 	}
+ 
+@@ -1019,7 +1051,7 @@
+ 		if (!parse_opt(pamh, *argv, the_cmdline_opts))
+ 			return 0;
+ 	param = get_optval("prefix=", the_cmdline_opts);
+-	pam_unix_param.crypt_prefix = param ?: "$2a$";
++	pam_unix_param.crypt_prefix = param ?: "$6$";
+ 
+ 	param = get_optval("helper=", the_cmdline_opts);
+ 	pam_unix_param.helper = param ?: CHKPWD_HELPER;
