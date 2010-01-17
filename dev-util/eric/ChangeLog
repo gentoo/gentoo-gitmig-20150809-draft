@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.109 2010/01/16 18:04:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.110 2010/01/17 08:28:11 tove Exp $
 
 *eric-4.4.0-r1 (16 Jan 2010)
 
@@ -129,7 +129,7 @@
   09 May 2009; Patrick Lauer <patrick@gentoo.org> +eric-4.3.3.ebuild:
   Bump to 4.3.3, homepage changed again
 
-  03 May 2009; RaΓΊl Porcel <armin76@gentoo.org> eric-4.3.1.ebuild:
+  03 May 2009; Raúl Porcel <armin76@gentoo.org> eric-4.3.1.ebuild:
   sparc stable wrt #267331
 
   28 Apr 2009; Jeroen Roovers <jer@gentoo.org> eric-4.3.1.ebuild:
@@ -232,7 +232,7 @@
   +eric-4.1.1.ebuild:
   Version bump
 
-  21 Feb 2008; RaΓΊl Porcel <armin76@gentoo.org> eric-4.0.4.ebuild:
+  21 Feb 2008; Raúl Porcel <armin76@gentoo.org> eric-4.0.4.ebuild:
   sparc stable
 
   09 Feb 2008; Markus Ullmann <jokey@gentoo.org> eric-4.0.4.ebuild:
@@ -252,7 +252,7 @@
   01 Jan 2008; Markus Ullmann <jokey@gentoo.org> +eric-4.0.4.ebuild:
   Version bump as  keeps notifying the user that a new version is out
 
-  01 Jan 2008; RaΓΊl Porcel <armin76@gentoo.org> eric-4.0.3.ebuild:
+  01 Jan 2008; Raúl Porcel <armin76@gentoo.org> eric-4.0.3.ebuild:
   Readd ~sparc, keywords were dropped for no reason
 
   20 Nov 2007; Ali Polatel <hawking@gentoo.org> eric-3.7.2-r1.ebuild,
@@ -272,10 +272,10 @@
   07 Sep 2007; Ali Polatel <hawking@gentoo.org> +eric-4.0.1.ebuild:
   version bump, thanks to everyone on bug 158117 and jokey
 
-  25 Jun 2007; Piotr JaroszyΕski <peper@gentoo.org> eric-3.7.2-r1.ebuild:
+  25 Jun 2007; Piotr Jaroszyński <peper@gentoo.org> eric-3.7.2-r1.ebuild:
   (QA) Fix ${ROOT} abuse. bug #167271.
 
-  24 Jun 2007; Tiziano MΓΌller <dev-zero@gentoo.org> eric-3.7.2-r1.ebuild,
+  24 Jun 2007; Tiziano Müller <dev-zero@gentoo.org> eric-3.7.2-r1.ebuild,
   -eric-3.9.4.ebuild, eric-3.9.5.ebuild:
   Fixed $ROOT abuse (bug #167271)
 
@@ -284,32 +284,32 @@
 
 *eric-3.9.5 (23 Jun 2007)
 
-  23 Jun 2007; Tiziano MΓΌller <dev-zero@gentoo.org>
+  23 Jun 2007; Tiziano Müller <dev-zero@gentoo.org>
   +files/3.9.5-disable_compilation.patch, +eric-3.9.5.ebuild:
   Version bump, cleanup & ebuild rework.
 
-  22 Feb 2007; Piotr JaroszyΕski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
 *eric-3.9.4 (30 Dec 2006)
 
-  30 Dec 2006; Tiziano MΓΌller <dev-zero@gentoo.org> -eric-3.9.3.ebuild,
+  30 Dec 2006; Tiziano Müller <dev-zero@gentoo.org> -eric-3.9.3.ebuild,
   +eric-3.9.4.ebuild:
   Version bump.
 
-  30 Dec 2006; Tiziano MΓΌller <dev-zero@gentoo.org> eric-3.7.2-r1.ebuild,
+  30 Dec 2006; Tiziano Müller <dev-zero@gentoo.org> eric-3.7.2-r1.ebuild,
   eric-3.9.3.ebuild:
   Added qscintilla dependency (bug #117945)
 
 *eric-3.9.3 (26 Dec 2006)
 
-  26 Dec 2006; Tiziano MΓΌller <dev-zero@gentoo.org> -eric-3.8.1.ebuild,
+  26 Dec 2006; Tiziano Müller <dev-zero@gentoo.org> -eric-3.8.1.ebuild,
   -eric-3.8.2.ebuild, -eric-3.9.1.ebuild, +eric-3.9.3.ebuild:
   Version bump with some cleanups. Dropped old versions.
 
 *eric-3.9.1 (14 Oct 2006)
 
-  14 Oct 2006; Bryan Γstergaard <kloeri@gentoo.org> +eric-3.9.1.ebuild:
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> +eric-3.9.1.ebuild:
   Bump version, bug 137883.
 
 *eric-3.8.2 (23 Apr 2006)
@@ -345,7 +345,7 @@
 
 *eric-3.7.2 (30 Sep 2005)
 
-  30 Sep 2005; Bryan Γstergaard <kloeri@gentoo.org> +eric-3.7.2.ebuild:
+  30 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> +eric-3.7.2.ebuild:
   Version bump, fixes PyQt problem, bug 107716.
 
 *eric-3.7.0 (06 Jun 2005)
@@ -389,7 +389,7 @@
 
 *eric-3.5.1 (05 Dec 2004)
 
-  05 Dec 2004; Bryan Γstergaard <kloeri@gentoo.org> +eric-3.5.1.ebuild:
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> +eric-3.5.1.ebuild:
   Version bump.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> eric-3.5.0.ebuild:
@@ -427,7 +427,7 @@
 
 *eric-3.4.2 (25 May 2004)
 
-  25 May 2004; Bryan Γstergaard <kloeri@gentoo.org> +eric-3.4.2.ebuild:
+  25 May 2004; Bryan Østergaard <kloeri@gentoo.org> +eric-3.4.2.ebuild:
   Version bump.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> eric-3.3.1.ebuild:
