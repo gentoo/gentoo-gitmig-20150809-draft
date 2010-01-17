@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.110 2010/01/17 08:28:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.111 2010/01/17 18:11:33 jer Exp $
+
+  17 Jan 2010; Jeroen Roovers <jer@gentoo.org> eric-4.4.0-r1.ebuild:
+  Marked ~hppa (bug #300741).
 
 *eric-4.4.0-r1 (16 Jan 2010)
 
