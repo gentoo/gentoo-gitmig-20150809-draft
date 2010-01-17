@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.82 2010/01/17 21:34:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.83 2010/01/17 21:46:55 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -412,6 +412,21 @@ get_localversion() {
 	echo ${x}
 }
 
+# Check if the Makefile is valid for direct parsing.
+# Check status results:
+# - PASS, use 'getfilevar' to extract values
+# - FAIL, use 'getfilevar_noexec' to extract values
+# The check may fail if:
+# - make is not present
+# - corruption exists in the kernel makefile
+get_makefile_extract_function() {
+	local a='' b='' mkfunc='getfilevar'
+	a="$(getfilevar VERSION ${KERNEL_MAKEFILE})"
+	b="$(getfilevar_noexec VERSION ${KERNEL_MAKEFILE})"
+	[[ "${a}" != "${b}" ]] && mkfunc='getfilevar_noexec'
+	echo "${mkfunc}"
+}
+
 # internal variable, so we know to only print the warning once
 get_version_warning_done=
 
@@ -426,7 +441,7 @@ get_version_warning_done=
 # KBUILD_OUTPUT (in a decreasing priority list, we look for the env var, makefile var or the
 # symlink /lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}/build).
 get_version() {
-	local kbuild_output
+	local kbuild_output mkfunc
 
 	# no need to execute this twice assuming KV_FULL is populated.
 	# we can force by unsetting KV_FULL
@@ -482,18 +497,9 @@ get_version() {
 
 	# keep track of it
 	KERNEL_MAKEFILE="${KV_DIR}/Makefile"
-
-	# Check if the Makefile is valid for direct parsing.
-	# Check status results:
-	# - PASS, use 'getfilevar' to extract values
-	# - FAIL, use 'getfilevar_noexec' to extract values
-	# The check may fail if:
-	# - make is not present
-	# - corruption exists in the kernel makefile
-	local a='' b='' mkfunc='getfilevar'
-	a="$(getfilevar VERSION ${KERNEL_MAKEFILE})"
-	b="$(getfilevar_noexec VERSION ${KERNEL_MAKEFILE})"
-	[[ "${a}" != "${b}" ]] && mkfunc='getfilevar_noexec'
+	
+	# Decide the function used to extract makefile variables.
+	mkfunc="$(get_makefile_extract_function "${KERNEL_MAKEFILE}")"
 
 	# And if we didn't pass it, we can take a nosey in the Makefile
 	kbuild_output="$(${mkfunc} KBUILD_OUTPUT ${KERNEL_MAKEFILE})"
