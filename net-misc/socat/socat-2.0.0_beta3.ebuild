@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta3.ebuild,v 1.3 2010/01/01 12:28:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta3.ebuild,v 1.4 2010/01/17 20:24:33 jer Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -25,6 +25,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
+	filter-flags -Wall -Wno-error*
 	econf \
 		$(use_enable ssl openssl) \
 		$(use_enable readline) \

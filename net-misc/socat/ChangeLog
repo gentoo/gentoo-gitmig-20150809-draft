@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.70 2010/01/13 21:58:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.71 2010/01/17 20:24:33 jer Exp $
+
+  17 Jan 2010; Jeroen Roovers <jer@gentoo.org> socat-1.7.1.1.ebuild,
+  socat-1.7.1.2.ebuild, socat-2.0.0_beta3.ebuild:
+  Filter -Wno-error thanks to Didier Barvaux (bug #293324).
 
 *socat-1.7.1.2 (13 Jan 2010)
 
