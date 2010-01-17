@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.4.ebuild,v 1.3 2010/01/15 15:41:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.4.ebuild,v 1.4 2010/01/17 13:55:22 fauli Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ DESCRIPTION="Rexical is a lexical scanner generator"
 HOMEPAGE="http://github.com/tenderlove/rexical/tree/master"
 LICENSE="LGPL-2" # plus exception
 
-KEYWORDS="~amd64 ~ppc ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE=""
 

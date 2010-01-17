@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.3 2010/01/15 15:41:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.4 2010/01/17 13:55:22 fauli Exp $
+
+  17 Jan 2010; Christian Faulhammer <fauli@gentoo.org> rexical-1.0.4.ebuild:
+  add ~x86, bug 297822
 
   15 Jan 2010; Brent Baude <ranger@gentoo.org> rexical-1.0.4.ebuild:
   Marking rexical-1.0.4 ~ppc64 for bug 297822
