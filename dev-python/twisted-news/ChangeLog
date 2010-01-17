@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-news
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.35 2009/12/20 16:42:02 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.36 2010/01/17 18:55:10 fauli Exp $
+
+  17 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  twisted-news-9.0.0.ebuild:
+  stable x86, bug 300702
 
   20 Dec 2009; Raúl Porcel <armin76@gentoo.org> twisted-news-8.2.0.ebuild:
   alpha/ia64/sparc stable wrt #289680
