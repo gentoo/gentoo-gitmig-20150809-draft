@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.18 2010/01/15 09:43:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.19 2010/01/17 21:40:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -45,12 +45,4 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc change.log example.c README *.txt
-}
-
-pkg_preinst() {
-	has_version media-libs/jpeg-compat || preserve_old_lib /usr/$(get_libdir)/libjpeg.so.62
-}
-
-pkg_postinst() {
-	has_version media-libs/jpeg-compat || preserve_old_lib_notify /usr/$(get_libdir)/libjpeg.so.62
 }
