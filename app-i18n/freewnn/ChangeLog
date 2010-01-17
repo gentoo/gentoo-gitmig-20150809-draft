@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.39 2010/01/10 15:42:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.40 2010/01/17 18:50:10 armin76 Exp $
+
+  17 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  freewnn-1.1.1_alpha21-r1.ebuild:
+  alpha/ia64/sparc stable wrt #300258
 
   10 Jan 2010; Brent Baude <ranger@gentoo.org>
   freewnn-1.1.1_alpha21-r1.ebuild:
