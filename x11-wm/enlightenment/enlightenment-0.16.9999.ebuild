@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.33 2009/03/08 19:34:16 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.34 2010/01/17 20:22:17 vapier Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
 	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
 	inherit subversion
 	SRC_URI=""
-	KEYWORDS=""
+	#KEYWORDS=""
 	S=${WORKDIR}/e16/e
 else
 	SRC_URI="mirror://sourceforge/enlightenment/e16-${PV/_/-}.tar.gz"
@@ -21,10 +21,12 @@ HOMEPAGE="http://www.enlightenment.org/"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc dbus esd nls xcomposite xinerama xrandr"
+IUSE="doc dbus esd nls pango pulseaudio xcomposite xinerama xrandr"
 
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
+	pulseaudio? ( media-sound/pulseaudio )
 	dbus? ( sys-apps/dbus )
+	pango? ( x11-libs/pango )
 	=media-libs/freetype-2*
 	>=media-libs/imlib2-1.3.0[X]
 	x11-libs/libSM
@@ -52,13 +54,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( app-doc/edox-data )"
 
-src_unpack() {
-	if [[ ${PV} == *9999 ]] ; then
-		subversion_src_unpack
-		cd "${S}"
-		NOCONFIGURE=blah ./autogen.sh
-	else
-		unpack ${A}
+src_prepare() {
+	if [[ ! -e configure ]] ; then
+		eautopoint
+		eautoreconf
 	fi
 }
 
@@ -66,18 +65,18 @@ src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable dbus) \
-		$(use_enable esd sound) \
+		$(use_enable pulseaudio sound-pulse) \
+		$(use_enable esd sound-esound) \
+		$(use_enable pango) \
 		$(use_enable xinerama) \
 		$(use_enable xrandr) \
 		$(use_enable xcomposite composite) \
-		--enable-upgrade \
-		--enable-hints-ewmh \
-		--enable-fsstd \
-		--enable-zoom \
-		--with-imlib2
+		--disable-docs \
+		--enable-zoom
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	rmdir "${D}"/usr/share/doc/e16 || die #294456
 	dodoc AUTHORS ChangeLog COMPLIANCE README* docs/README* TODO
 }
