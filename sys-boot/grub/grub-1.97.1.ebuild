@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.97.1.ebuild,v 1.3 2010/01/10 06:13:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.97.1.ebuild,v 1.4 2010/01/17 01:25:28 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -42,8 +42,12 @@ src_unpack() {
 	epatch_user
 
 	# autogen.sh does more than just run autotools
+	# need to eautomake due to weirdness #296013
 	if [[ ${PV} == "9999" ]] ; then
-		sed -i -e 's:^auto:eauto:' autogen.sh
+		sed -i \
+			-e '/^\(auto\|ac\)/s:^:e:' \
+			-e "s:^eautomake:`which automake`:" \
+			autogen.sh
 		(. ./autogen.sh) || die
 	fi
 }
