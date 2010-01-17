@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs-fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.1 2010/01/12 00:44:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.2 2010/01/17 20:23:12 a3li Exp $
+
+  17 Jan 2010; Alex Legler <a3li@gentoo.org> unionfs-fuse-0.23.ebuild:
+  Keyword ~amd64, bug 301207 by Martin Väth.
 
 *unionfs-fuse-0.23 (12 Jan 2010)
 
