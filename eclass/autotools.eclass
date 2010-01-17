@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.90 2010/01/15 03:19:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.91 2010/01/17 01:09:04 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -80,22 +80,22 @@ AT_GNUCONF_UPDATE="no"
 # Should do a full autoreconf - normally what most people will be interested in.
 # Also should handle additional directories specified by AC_CONFIG_SUBDIRS.
 eautoreconf() {
-	local pwd=$(pwd) x auxdir g=
+	local x auxdir g
 
 	if [[ -z ${AT_NO_RECURSIVE} ]]; then
 		# Take care of subdirs
 		for x in $(autotools_get_subdirs); do
 			if [[ -d ${x} ]] ; then
-				cd "${x}"
+				pushd "${x}" >/dev/null
 				AT_NOELIBTOOLIZE="yes" eautoreconf
-				cd "${pwd}"
+				popd >/dev/null
 			fi
 		done
 	fi
 
 	auxdir=$(autotools_get_auxdir)
 
-	einfo "Running eautoreconf in '$(pwd)' ..."
+	einfo "Running eautoreconf in '${PWD}' ..."
 	[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
 	eaclocal
 	[[ ${CHOST} == *-darwin* ]] && g=g
@@ -112,7 +112,7 @@ eautoreconf() {
 
 	# Call it here to prevent failures due to elibtoolize called _before_
 	# eautoreconf.  We set $S because elibtoolize runs on that #265319
-	S=${pwd} elibtoolize
+	S=${PWD} elibtoolize
 
 	return 0
 }
@@ -188,7 +188,7 @@ eautoheader() {
 eautoconf() {
 	if [[ ! -f configure.ac && ! -f configure.in ]] ; then
 		echo
-		eerror "No configure.{ac,in} present in '$(pwd | sed -e 's:.*/::')'!"
+		eerror "No configure.{ac,in} present in '${PWD}'!"
 		echo
 		die "No configure.{ac,in} present!"
 	fi
