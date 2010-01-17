@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.ebuild,v 1.1 2010/01/17 23:36:37 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.ebuild,v 1.2 2010/01/17 23:45:01 cla Exp $
 
 inherit eutils elisp-common
 
@@ -23,7 +23,7 @@ SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P/8/7}-xemacs-compat.patch
+	epatch "${FILESDIR}"/${P}-xemacs-compat.patch
 }
 
 src_compile() {
