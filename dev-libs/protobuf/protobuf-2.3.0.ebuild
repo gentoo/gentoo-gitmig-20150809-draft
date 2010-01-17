@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.2.0.ebuild,v 1.1 2009/08/21 17:41:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.1 2010/01/17 11:50:32 nelchael Exp $
 
 EAPI="2"
 
@@ -22,11 +22,6 @@ DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
 	emacs? ( virtual/emacs )"
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )
 	emacs? ( virtual/emacs )"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-decoder_test_64bit_fix.patch"
-	epatch "${FILESDIR}/${P}-fix-emacs-byte-compile.patch"
-}
 
 src_compile() {
 	emake || die
