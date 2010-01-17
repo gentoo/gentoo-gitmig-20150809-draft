@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.8 2009/12/11 21:02:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.9 2010/01/17 11:21:12 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -25,6 +25,9 @@ DEPEND="dev-util/mercurial"
 # @ECLASS-VARIABLE: EHG_REVISION
 # @DESCRIPTION:
 # Create working directory for specified revision, defaults to tip.
+#
+# EHG_REVISION is passed as a value for --rev parameter, so it can be more than
+# just a revision, please consult `hg help revisions' for more details.
 [[ -z "${EHG_REVISION}" ]] && EHG_REVISION="tip"
 
 # @ECLASS-VARIABLE: EHG_PROJECT
