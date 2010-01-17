@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xstdcmap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xstdcmap/ChangeLog,v 1.19 2009/12/27 17:55:26 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xstdcmap/ChangeLog,v 1.20 2010/01/17 22:55:37 jer Exp $
+
+  17 Jan 2010; Jeroen Roovers <jer@gentoo.org> xstdcmap-1.0.1.ebuild:
+  Stable for HPPA (bug #294958).
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> xstdcmap-1.0.1.ebuild:
   Marked ppc stable for bug #294958.
