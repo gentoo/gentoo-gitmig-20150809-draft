@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/rzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.28 2010/01/10 00:36:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.29 2010/01/17 19:30:05 bangert Exp $
+
+*rzip-2.1-r2 (17 Jan 2010)
+*rzip-2.1-r1 (17 Jan 2010)
+
+  17 Jan 2010; Thilo Bangert <bangert@gentoo.org> +rzip-2.1-r1.ebuild,
+  +rzip-2.1-r2.ebuild, +files/rzip-2.1-darwin.patch,
+  +files/rzip-2.1-handle-broken-archive.patch:
+  add updated darwin.patch (-r1), also include ability to read broken
+  archives (-r2) (#217552)
 
   10 Jan 2010; Jeroen Roovers <jer@gentoo.org> rzip-2.1.ebuild:
   Stable for HPPA too.

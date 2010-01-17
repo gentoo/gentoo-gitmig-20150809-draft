@@ -1,0 +1,81 @@
+diff -ur rzip-2.1/main.c rzip-2.1-patched/main.c
+--- rzip-2.1/main.c	2006-02-14 01:38:23.000000000 +0100
++++ rzip-2.1-patched/main.c	2008-07-30 19:29:49.426926726 +0200
+@@ -35,6 +35,7 @@
+ 	printf("     -k            keep existing files\n");
+ 	printf("     -P            show compression progress\n");
+ 	printf("     -L level      set compression level\n");
++	printf("     -l nr         set higher bits of the expected file length to nr\n");
+ 	printf("     -V            show version\n");
+ #if 0
+ 	/* damn, this will be quite hard to do */
+@@ -172,6 +173,13 @@
+ 
+ 	
+ 	read_magic(fd_in, fd_out, &expected_size);
++
++#ifdef HAVE_LARGE_FILES
++	if (control->nr) {
++		expected_size = ( ((off_t)(control->nr))<<32) | (expected_size & 0xFFFFFFFF);
++	}
++#endif
++
+ 	runzip_fd(fd_in, fd_out, fd_hist, expected_size);	
+ 	
+ 	if ((control->flags & FLAG_TEST_ONLY) == 0) {
+@@ -267,7 +275,7 @@
+ 		control.flags |= FLAG_DECOMPRESS;
+ 	}
+ 
+-	while ((c = getopt(argc, argv, "h0123456789dS:tVvkfPo:L:")) != -1) {
++	while ((c = getopt(argc, argv, "h0123456789dS:tVvkl:fPo:L:")) != -1) {
+ 		if (isdigit(c)) {
+ 			control.compression_level = c - '0';
+ 			continue;
+@@ -295,6 +303,12 @@
+ 		case 'k':
+ 			control.flags |= FLAG_KEEP_FILES;
+ 			break;
++		case 'l':
++#ifndef HAVE_LARGE_FILES
++			fatal("You used the -l option, but this rzip doesn't support large files.");
++#endif
++			control.nr = atoi(optarg);
++			break;
+ 		case 'v':
+ 			control.verbosity++;
+ 			break;
+diff -ur rzip-2.1/runzip.c rzip-2.1-patched/runzip.c
+--- rzip-2.1/runzip.c	2003-10-08 00:08:28.000000000 +0200
++++ rzip-2.1-patched/runzip.c	2008-07-30 19:34:03.803564086 +0200
+@@ -179,10 +179,16 @@
+  */
+ off_t runzip_fd(int fd_in, int fd_out, int fd_hist, off_t expected_size)
+ {
+-	off_t total = 0;
+-	while (total < expected_size) {
+-		total += runzip_chunk(fd_in, fd_out, fd_hist);
++	off_t total = 0, fin=1;
++	while (fin && total < expected_size) {
++		fin = runzip_chunk(fd_in, fd_out, fd_hist);
++		total += fin;
+ 	}
++
++	if (total < expected_size) {
++		fprintf(stderr, "Warning: The uncompressed size does not equal the expected file size.\nHowever if you used the -l option, this may be okay.\n");
++	}
++
+ 	return total;
+ }
+ 
+diff -ur rzip-2.1/rzip.h rzip-2.1-patched/rzip.h
+--- rzip-2.1/rzip.h	2006-02-14 01:38:23.000000000 +0100
++++ rzip-2.1-patched/rzip.h	2008-07-30 19:29:49.426926726 +0200
+@@ -113,6 +113,7 @@
+ 	unsigned compression_level;
+ 	unsigned flags;
+ 	unsigned verbosity;
++	unsigned nr;
+ };
+ 
+ void fatal(const char *format, ...);
