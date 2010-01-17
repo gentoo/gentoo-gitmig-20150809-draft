@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/pylize-1.3b.ebuild,v 1.2 2010/01/14 20:35:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/pylize-1.3b.ebuild,v 1.3 2010/01/17 13:44:51 fauli Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.chrisarndt.de/en/software/pylize/download/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~x86"
+KEYWORDS="ppc x86"
 
 DEPEND="virtual/python
 	dev-python/empy
