@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.2 2007/04/30 13:23:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.3 2010/01/17 20:25:05 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND=""
+DEPEND="virtual/editor"
 PROVIDE="virtual/m3"
 
 S=${WORKDIR}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cm3-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.8 2007/04/30 13:23:14 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.9 2010/01/17 20:25:05 vapier Exp $
+
+  17 Jan 2010; Mike Frysinger <vapier@gentoo.org> cm3-bin-5.4.0.ebuild:
+  Depend on virtual/editor for $EDITOR #294760 by Ulrich Müller.
 
   30 Apr 2007; Raúl Porcel <armin76@gentoo.org> cm3-bin-5.4.0.ebuild:
   x86 stable wrt #176400
