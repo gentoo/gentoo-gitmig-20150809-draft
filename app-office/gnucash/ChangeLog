@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.207 2009/12/31 18:27:36 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.208 2010/01/17 19:39:42 ssuominen Exp $
+
+  17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gnucash-2.2.9-r1.ebuild, gnucash-2.3.8.ebuild:
+  Fix aqbanking deps wrt #299144.
 
   31 Dec 2009; Raúl Porcel <armin76@gentoo.org> gnucash-2.2.9-r1.ebuild:
   alpha stable

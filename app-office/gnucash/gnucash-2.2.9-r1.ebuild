@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r1.ebuild,v 1.11 2009/12/31 18:27:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r1.ebuild,v 1.12 2010/01/17 19:39:42 ssuominen Exp $
 
 EAPI=2
 
@@ -33,8 +33,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=dev-libs/libxml2-2.5.10
 	>=gnome-base/gconf-2
 	>=x11-libs/goffice-0.6[gnome]
-	ofx? ( >=dev-libs/libofx-0.7.0 )
-	hbci? ( || ( net-libs/aqbanking[qt4] net-libs/aqbanking[qt3] )
+	ofx? ( >=dev-libs/libofx-0.8.3 )
+	hbci? ( >=net-libs/aqbanking-4.2[qt4]
 		chipcard? ( sys-libs/libchipcard )
 	)
 	quotes? ( dev-perl/DateManip
