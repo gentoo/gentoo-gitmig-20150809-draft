@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.27 2010/01/10 21:11:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.28 2010/01/17 18:51:16 armin76 Exp $
+
+  17 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  scientificpython-2.9.ebuild:
+  alpha/ia64/sparc stable wrt #298274
 
   10 Jan 2010; Markus Meier <maekke@gentoo.org> scientificpython-2.9.ebuild:
   amd64 stable, bug #298274
