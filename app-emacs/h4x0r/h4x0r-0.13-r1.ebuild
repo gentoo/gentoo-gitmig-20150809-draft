@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/h4x0r-0.13-r1.ebuild,v 1.5 2007/10/15 20:03:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/h4x0r-0.13-r1.ebuild,v 1.6 2010/01/17 19:11:14 ulm Exp $
 
 inherit elisp
 
@@ -13,4 +13,4 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-SITEFILE=51${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
