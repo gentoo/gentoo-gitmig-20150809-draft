@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publisher/zope-app-publisher-3.10.0.ebuild,v 1.2 2010/01/16 19:27:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publisher/zope-app-publisher-3.10.1.ebuild,v 1.1 2010/01/17 18:22:18 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,7 +30,7 @@ RDEPEND="net-zope/zope-browsermenu
 	net-zope/zope-interface
 	net-zope/zope-location
 	net-zope/zope-ptresource
-	net-zope/zope-publisher
+	>=net-zope/zope-publisher-3.12
 	net-zope/zope-schema
 	net-zope/zope-security"
 DEPEND="${RDEPEND}
