@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.79 2010/01/12 18:34:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.80 2010/01/17 19:10:32 armin76 Exp $
+
+  17 Jan 2010; Raúl Porcel <armin76@gentoo.org> gwenhywfar-3.10.1.ebuild:
+  sparc stable
 
   12 Jan 2010; nixnut <nixnut@gentoo.org> gwenhywfar-3.10.1.ebuild:
   ppc stable #299125
