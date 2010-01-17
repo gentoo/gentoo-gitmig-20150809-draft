@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-1.ebuild,v 1.2 2009/09/10 15:53:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-1.ebuild,v 1.3 2010/01/17 20:16:25 vapier Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -11,17 +13,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.lzma"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="unicode"
 
 RDEPEND=">=dev-libs/libpcre-3.4"
 DEPEND="${RDEPEND}
 	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 PROVIDE="virtual/logger"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9-metalog-conf.patch
+}
+
+src_configure() {
+	econf $(use_with unicode)
 }
 
 src_install() {
