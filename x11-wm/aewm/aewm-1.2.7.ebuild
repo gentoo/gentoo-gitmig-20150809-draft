@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.8 2008/09/15 09:04:50 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.9 2010/01/17 16:16:45 ulm Exp $
 
 DESCRIPTION="A minimalistic X11 window manager."
 HOMEPAGE="http://www.red-bean.com/~decklin/software/aewm/"
 SRC_URI="http://www.red-bean.com/~decklin/software/aewm/${P}.tar.gz"
 
-LICENSE="aewm"
+LICENSE="MIT 9wm"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
