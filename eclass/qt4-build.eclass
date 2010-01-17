@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.60 2010/01/13 19:35:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.61 2010/01/17 20:28:17 abcd Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -276,7 +276,7 @@ qt4-build_src_configure() {
 
 	if use aqua ; then
 		# On (snow) leopard use the new (frameworked) cocoa code.
-		if [[ $(uname -r | cut -d . -f 1) -ge 9 ]] ; then
+		if [[ ${CHOST##*-darwin} -ge 9 ]] ; then
 			myconf+=" -cocoa -framework"
 
 			# We are crazy and build cocoa + qt3support :-)
