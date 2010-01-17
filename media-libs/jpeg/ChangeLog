@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.92 2010/01/17 21:40:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.93 2010/01/17 21:58:31 ssuominen Exp $
+
+  17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> jpeg-7.ebuild,
+  jpeg-7-r1.ebuild:
+  Missing blockers for libjpeg.so.7.
 
   17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> jpeg-7.ebuild:
   Drop old preserve_old_lib logic, it's moved to jpeg-8 ebuild.

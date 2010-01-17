@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7-r1.ebuild,v 1.1 2010/01/17 19:14:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7-r1.ebuild,v 1.2 2010/01/17 21:58:31 ssuominen Exp $
 
 # this ebuild is only for the libjpeg.so.7 SONAME for ABI compat
 
@@ -17,6 +17,8 @@ LICENSE="as-is"
 SLOT="7"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
+
+DEPEND="!=media-libs/jpeg-7*:0"
 
 src_prepare() {
 	epatch "${WORKDIR}"/patch/60_all_jpeg-maxmem-sysconf.patch
