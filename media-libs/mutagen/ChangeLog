@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.79 2010/01/15 09:44:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.80 2010/01/17 19:13:49 armin76 Exp $
+
+  17 Jan 2010; Raúl Porcel <armin76@gentoo.org> mutagen-1.18.ebuild:
+  alpha/sparc stable wrt #299212
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> mutagen-1.18.ebuild:
   Transfer Prefix keywords
