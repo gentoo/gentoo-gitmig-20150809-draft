@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.1.ebuild,v 1.1 2010/01/15 16:23:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.1.ebuild,v 1.2 2010/01/17 23:11:45 yngwin Exp $
 
 EAPI="2"
 
@@ -27,17 +27,21 @@ PATCHES=( "${FILESDIR}/${PN}-2.4-designer.patch" )
 
 src_configure() {
 	cd "${S}"/Qt4
+	einfo "Configuring qscintilla"
 	eqmake4 qscintilla.pro
 
 	cd "${S}"/designer-Qt4
+	einfo "Configuring designer plugin"
 	eqmake4 designer.pro
 }
 
 src_compile() {
 	cd "${S}"/Qt4
+	einfo "Building qscintilla"
 	emake all staticlib || die "emake failed"
 
 	cd "${S}"/designer-Qt4
+	einfo "Building designer plugin"
 	emake || die "failed to build designer plugin"
 }
 
