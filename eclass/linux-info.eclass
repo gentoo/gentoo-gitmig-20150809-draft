@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.81 2010/01/10 09:26:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.82 2010/01/17 21:34:52 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -148,6 +148,7 @@ qout() {
 }
 
 qeinfo() { qout einfo "${@}" ; }
+qewarn() { qout ewarn "${@}" ; }
 qeerror() { qout eerror "${@}" ; }
 
 # File Functions
@@ -208,7 +209,7 @@ getfilevar_noexec() {
 	else
 		${mycat} "${2}" | \
 		sed -n \
-		-e "/^[[:space:]]*${1}[[:space:]]*=[[:space:]]*\(.*\)\$/{ 
+		-e "/^[[:space:]]*${1}[[:space:]]*:\\?=[[:space:]]*\(.*\)\$/{ 
 			s,^[^=]*[[:space:]]*=[[:space:]]*,,g ;
 			s,[[:space:]]*\$,,g ;
 			p
