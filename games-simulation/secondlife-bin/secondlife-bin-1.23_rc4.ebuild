@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc4.ebuild,v 1.5 2009/09/13 13:10:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc4.ebuild,v 1.6 2010/01/17 21:37:16 ssuominen Exp $
 
 inherit eutils multilib games versionator
 
@@ -45,7 +45,7 @@ RDEPEND="sys-libs/glibc
 	media-libs/gstreamer
 	media-plugins/gst-plugins-meta
 	media-libs/fmod
-	x86? ( || ( media-libs/jpeg-compat <media-libs/jpeg-7 ) )
+	x86? ( <media-libs/jpeg-7 )
 	media-libs/openjpeg
 	net-libs/gnutls
 	net-misc/curl
