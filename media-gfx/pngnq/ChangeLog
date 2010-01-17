@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngnq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.5 2010/01/08 13:34:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.6 2010/01/17 22:32:13 hanno Exp $
+
+  17 Jan 2010; Hanno Boeck <hanno@gentoo.org> pngnq-1.0.ebuild,
+  +files/pngnq-1.0-as-needed.patch:
+  Fix for --as-needed thanks to Kacper Kowalik in #301002. Cleanup.
 
 *pngnq-1.0 (08 Jan 2010)
 
