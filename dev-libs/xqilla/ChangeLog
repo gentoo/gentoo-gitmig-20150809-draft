@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xqilla
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.7 2009/11/14 14:01:23 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.8 2010/01/17 06:54:40 ulm Exp $
+
+  17 Jan 2010; Ulrich Mueller <ulm@gentoo.org> xqilla-2.1.3-r1.ebuild:
+  Fix LICENSE, bug 300426.
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> -xqilla-9999.ebuild:
   QA: Drop live version that has lots its purpose and is heavily out of
