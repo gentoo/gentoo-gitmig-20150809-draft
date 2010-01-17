@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.61 2009/12/08 17:14:53 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.62 2010/01/17 05:58:21 abcd Exp $
+
+  17 Jan 2010; Jonathan Callen <abcd@gentoo.org> pybugz-0.8.0.ebuild:
+  Transfer prefix keywords
 
   08 Dec 2009; Brent Baude <ranger@gentoo.org> pybugz-0.8.0.ebuild:
   Marking pybugz-0.8.0 ppc64 for bug 289863
