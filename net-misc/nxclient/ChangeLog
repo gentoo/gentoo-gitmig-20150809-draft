@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.82 2009/12/15 17:33:40 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.83 2010/01/17 21:27:19 ssuominen Exp $
+
+  17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  nxclient-3.3.0.6.ebuild, nxclient-3.4.0.5.ebuild:
+  Replace jpeg-compat with slotted <jpeg-7.
 
   15 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
   -nxclient-3.3.0.3.ebuild:

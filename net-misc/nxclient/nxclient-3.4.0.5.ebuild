@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.4.0.5.ebuild,v 1.3 2009/11/25 13:55:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-3.4.0.5.ebuild,v 1.4 2010/01/17 21:27:19 ssuominen Exp $
 
 inherit eutils versionator
 
@@ -20,7 +20,7 @@ DEPEND=""
 RDEPEND="dev-libs/expat
 	>=dev-libs/openssl-0.9.8e
 	media-libs/audiofile
-	|| ( media-libs/jpeg-compat <media-libs/jpeg-7 )
+	<media-libs/jpeg-7
 	media-libs/libpng
 	media-libs/freetype
 	media-libs/fontconfig
