@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.97 2010/01/17 03:54:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.98 2010/01/17 04:00:07 robbat2 Exp $
 
 # Author(s): John Mylchreest <johnm@gentoo.org>,
 #            Stefan Schweizer <genstef@gentoo.org>
@@ -603,8 +603,11 @@ linux-mod_pkg_setup_binary() {
 	debug-print-function ${FUNCNAME} $*
 	local new_CONFIG_CHECK
 	for config in $CONFIG_CHECK ; do
-		optional=${config:0:1}
-		new_CONFIG_CHECK="${new_CONFIG_CHECK} ${optional:-~}${config}"
+		case ${config:0:1} in
+			~) optional="" ;;
+			*) optional="~" ;;
+		esac
+		new_CONFIG_CHECK="${new_CONFIG_CHECK} ${optional}${config}"
 	done
 	export CONFIG_CHECK="${new_CONFIG_CHECK}"
 	linux-info_pkg_setup;
