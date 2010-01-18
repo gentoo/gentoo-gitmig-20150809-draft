@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ark
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.36 2009/12/15 15:27:04 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.37 2010/01/18 19:37:39 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-ark-0.7.2.ebuild:
+  ia64 stable wrt #294958
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   xf86-video-ark-0.7.1.ebuild:
