@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.4 2009/09/23 19:55:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.5 2010/01/18 19:17:56 armin76 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic fortran
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~x86"
+KEYWORDS="alpha amd64 ia64 x86"
 IUSE="opengl"
 
 RDEPEND="opengl? ( virtual/glut

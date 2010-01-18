@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molden
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.30 2009/09/23 19:55:12 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.31 2010/01/18 19:17:56 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> molden-4.7.ebuild:
+  alpha/ia64/x86 stable
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> molden-4.4.ebuild,
   molden-4.6.ebuild, molden-4.7.ebuild:
