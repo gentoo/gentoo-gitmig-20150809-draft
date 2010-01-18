@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-cputransp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-cputransp/ChangeLog,v 1.5 2010/01/18 05:42:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-cputransp/ChangeLog,v 1.6 2010/01/18 13:01:12 flameeyes Exp $
+
+  18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  scratchbox-devkit-cputransp-1.0.7.ebuild,
+  scratchbox-devkit-cputransp-1.0.9.ebuild:
+  Repeat after me: the next person using binchecks to sidestep QA tests will
+  be asked to refrain from ever committing to the tree.
 
   18 Jan 2010; Olivier Crête <tester@gentoo.org>
   scratchbox-devkit-cputransp-1.0.7.ebuild,

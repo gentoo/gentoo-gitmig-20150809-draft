@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-apt-https
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-apt-https/ChangeLog,v 1.5 2010/01/18 05:41:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-apt-https/ChangeLog,v 1.6 2010/01/18 13:00:54 flameeyes Exp $
+
+  18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  scratchbox-devkit-apt-https-1.0.10.ebuild:
+  Repeat after me: the next person using binchecks to sidestep QA tests will
+  be asked to refrain from ever committing to the tree.
 
   18 Jan 2010; Olivier Crête <tester@gentoo.org>
   scratchbox-devkit-apt-https-1.0.10.ebuild:
