@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/echoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.7 2010/01/14 01:04:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.8 2010/01/18 20:33:19 ranger Exp $
+
+  18 Jan 2010; Brent Baude <ranger@gentoo.org> echoe-4.1.ebuild:
+  Marking echoe-4.1 ~ppc for bug 298356
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> echoe-4.1.ebuild:
   Marking echoe-4.1 ~ppc64 for bug 298356
