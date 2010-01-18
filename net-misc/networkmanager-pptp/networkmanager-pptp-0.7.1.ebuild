@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.7.1.ebuild,v 1.2 2009/12/02 11:39:42 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.7.1.ebuild,v 1.3 2010/01/18 15:32:56 rbu Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -20,7 +20,6 @@ IUSE="gnome"
 
 RDEPEND="
 	=net-misc/networkmanager-${MYPV_MINOR}*
-	net-dialup/pptpclient
 	gnome? (
 		>=gnome-base/gconf-2.20
 		>=gnome-base/gnome-keyring-2.20
