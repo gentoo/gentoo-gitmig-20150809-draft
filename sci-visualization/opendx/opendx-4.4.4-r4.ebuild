@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.3 2010/01/17 18:40:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.4 2010/01/18 05:55:09 bicatali Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A 3D data visualization tool"
 HOMEPAGE="http://www.opendx.org/"
 SRC_URI="http://opendx.sdsc.edu/source/${P/open}.tar.gz"
 
-LICENSE="IPL-1"
+LICENSE="IBM"
 SLOT="0"
 
 KEYWORDS="~amd64 ppc x86"
@@ -22,6 +22,8 @@ DEPEND="x11-libs/libXmu
 	x11-libs/libXp
 	x11-libs/libXpm
 	x11-libs/openmotif
+	virtual/opengl
+	virtual/glu
 	szip? ( sci-libs/szip )
 	hdf? ( sci-libs/hdf )
 	cdf? ( sci-libs/cdf )

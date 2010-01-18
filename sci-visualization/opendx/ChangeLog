@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.20 2010/01/17 18:40:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.21 2010/01/18 05:55:09 bicatali Exp $
+
+  18 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  opendx-4.3.2-r1.ebuild, opendx-4.4.4-r4.ebuild:
+  Added dependencies for OpenGL (bug #299835). Replaced IPL-1 license to IBM
+  since they are the same (bug #301180)
 
   17 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   opendx-4.4.4-r4.ebuild:
