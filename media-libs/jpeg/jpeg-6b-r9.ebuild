@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r9.ebuild,v 1.2 2010/01/17 21:21:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r9.ebuild,v 1.3 2010/01/18 15:35:38 ssuominen Exp $
 
 # this ebuild is only for the libjpeg.so.62 SONAME for ABI compat
 
@@ -42,10 +42,4 @@ src_compile() {
 src_install() {
 	exeinto /usr/$(get_libdir)
 	doexe .libs/libjpeg.so.62 || die
-}
-
-pkg_preinst() {
-	if [ "${ROOT}"usr/$(get_libdir)/libjpeg.so.62.0.0 ] ; then
-		rm -f "${ROOT}"usr/$(get_libdir)/libjpeg.so.62.0.0
-	fi
 }
