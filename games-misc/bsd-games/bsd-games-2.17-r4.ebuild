@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.4 2010/01/15 23:06:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.5 2010/01/18 11:11:02 tupone Exp $
 EAPI=2
 
 inherit eutils games
@@ -39,7 +39,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-headers.patch \
 		"${FILESDIR}"/${P}-bg.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
-		"${FILESDIR}"/${P}-glibc2.10.patch
+		"${FILESDIR}"/${P}-glibc2.10.patch \
+		"${FILESDIR}"/${P}-doc.patch
 
 	sed -i \
 		-e "s:/usr/games:${GAMES_BINDIR}:" \
@@ -49,6 +50,7 @@ src_prepare() {
 	cp "${FILESDIR}"/config.params-gentoo config.params
 	echo bsd_games_cfg_usrlibdir=\"$(games_get_libdir)\" >> ./config.params
 	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params
+	echo bsd_games_cfg_docdir=\"/usr/share/doc/${PF}\" >> ./config.params
 }
 
 src_compile() {
@@ -106,7 +108,6 @@ src_install() {
 	build_game hack && { docinto hack ; dodoc hack/{OWNER,Original_READ_ME,READ_ME,help}; }
 	build_game hunt && { docinto hunt ; dodoc hunt/README; }
 	build_game phantasia && { docinto phantasia ; dodoc phantasia/{OWNER,README}; }
-	build_game trek && { docinto trek ; dodoc trek/USD.doc/trek.me; }
 
 	# Since factor is usually not installed, and primes.6 is a symlink to
 	# factor.6, make sure that primes.6 is ok ...
