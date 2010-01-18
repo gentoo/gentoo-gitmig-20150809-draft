@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/bitmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.37 2010/01/14 22:00:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.38 2010/01/18 18:40:54 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> bitmap-1.0.4.ebuild:
+  alpha/ia64/sh/sparc stable wrt #294958
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> bitmap-1.0.4.ebuild:
   arm stable, bug #294958
