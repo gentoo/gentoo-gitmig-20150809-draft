@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.37 2010/01/16 17:47:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.38 2010/01/18 19:09:48 armin76 Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qt-multimedia is not keyworded, bug 293671
@@ -22,9 +22,7 @@ gnome-base/gnome-applets networkmanager
 
 # Romain Perier <mrpouet@gentoo.org> (06 Sep 2009)
 # depends on >=kde-base/kdebase-startkde-4.2
-# Peter Volkov <pva@gentoo.org> (22 Dec 2009)
-# Masked dependency on libssh (bug 297899)
-www-plugins/gnash kde ssh
+www-plugins/gnash kde
 
 # Raúl Porcel <armin76@gentoo.org> (09 Jun 2009)
 # Needs qt-assistant
