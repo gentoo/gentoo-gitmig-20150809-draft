@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r3.ebuild,v 1.2 2010/01/14 01:05:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.2-r3.ebuild,v 1.3 2010/01/18 20:34:00 ranger Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ SRC_URI="http://github.com/Flameeyes/redcloth/tarball/9e1025baf6bde57658d6794ec7
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND="dev-util/ragel"
