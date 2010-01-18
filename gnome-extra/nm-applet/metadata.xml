@@ -7,10 +7,6 @@
 		<name>Stephen Klimaszewski</name>
 	</maintainer>
         <maintainer>
-                <email>rbu@gentoo.org</email>
-                <name>Robert Buchholz</name>
-        </maintainer>
-        <maintainer>
                 <email>dagger@gentoo.org</email>
                 <name>Robert Piasek</name>
         </maintainer>
