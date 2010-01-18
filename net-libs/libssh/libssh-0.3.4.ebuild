@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.3.4.ebuild,v 1.4 2009/12/13 22:18:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.3.4.ebuild,v 1.5 2010/01/18 19:02:09 armin76 Exp $
 
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.libssh.org/"
 SRC_URI="http://www.libssh.org/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 ppc ~s390 x86"
+KEYWORDS="amd64 ppc ~s390 ~sparc x86"
 SLOT="0"
 IUSE="debug gcrypt examples +sftp ssh1 server static-libs zlib"
 
