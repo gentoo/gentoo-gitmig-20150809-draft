@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.138 2010/01/10 15:52:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.139 2010/01/18 19:18:31 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> parted-1.9.0.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #300058
 
   10 Jan 2010; Brent Baude <ranger@gentoo.org> parted-1.9.0.ebuild:
   stable ppc64, bug 300058
