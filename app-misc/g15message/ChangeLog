@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15message
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/ChangeLog,v 1.4 2008/02/21 23:53:57 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/ChangeLog,v 1.5 2010/01/18 15:55:12 rbu Exp $
+
+  18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Dropping maintenance
 
   21 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
   g15message-1.0.0.ebuild:
