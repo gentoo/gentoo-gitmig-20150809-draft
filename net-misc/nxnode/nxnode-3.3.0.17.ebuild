@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.17.ebuild,v 1.3 2009/09/07 21:16:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.17.ebuild,v 1.4 2010/01/18 15:05:53 voyageur Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ DEPEND="!net-misc/nxserver-freenx
 	!<net-misc/nxserver-freeedition-3.0.0"
 
 RDEPEND="=net-misc/nxclient-3.3*
+	sys-process/lsof
 	x11-libs/libICE
 	x11-libs/libXmu
 	x11-libs/libSM
