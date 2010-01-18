@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.115 2010/01/04 10:50:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.116 2010/01/18 19:04:49 flameeyes Exp $
+
+*activesupport-2.3.5-r3 (18 Jan 2010)
+
+  18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -activesupport-2.3.5-r2.ebuild, +activesupport-2.3.5-r3.ebuild,
+  +files/activesupport-2.3.5-unvendorize.patch:
+  Bump revision to properly fix support to use the unbundled i18n gem (with
+  the proper slot).
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   activesupport-2.3.5-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.5-r2.ebuild,v 1.2 2010/01/04 10:50:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.5-r3.ebuild,v 1.1 2010/01/18 19:04:49 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -20,10 +20,15 @@ SLOT="2.3"
 KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/builder-2.1.2 >=dev-ruby/tzinfo-0.3.12 dev-ruby/i18n"
+ruby_add_rdepend ">=dev-ruby/builder-2.1.2 >=dev-ruby/tzinfo-0.3.12 >=dev-ruby/i18n-0.1.3:0.1"
 
 all_ruby_prepare() {
 	# Remove the bundled packages!
 	rm -r lib/active_support/vendor/{tzinfo,builder,i18n}-* \
 		|| die "failed to remove vendor packages"
+
+	# This patch removes the fallback to local vendorized gems, as
+	# well as fixing the dependencies for i18n to use only the 0.1
+	# slot.
+	epatch "${FILESDIR}"/${P}-unvendorize.patch
 }
