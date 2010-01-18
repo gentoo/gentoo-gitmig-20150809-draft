@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.3 2010/01/15 18:01:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.4 2010/01/18 17:47:20 flameeyes Exp $
+
+  18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> -i18n-0.3.2.ebuild,
+  i18n-0.3.3.ebuild:
+  Slot 0.3.3 ebuild as 0.3, remove 0.3.2 ebuild.
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org> i18n-0.3.3.ebuild:
   Marked ~x64-solaris and ~ppc-macos
