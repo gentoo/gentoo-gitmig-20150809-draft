@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.6_pre120.ebuild,v 1.1 2010/01/16 14:21:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.6.ebuild,v 1.1 2010/01/18 02:22:24 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
