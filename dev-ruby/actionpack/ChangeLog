@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.142 2010/01/18 19:09:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.143 2010/01/18 20:13:24 ranger Exp $
+
+  18 Jan 2010; Brent Baude <ranger@gentoo.org> actionpack-2.2.3-r1.ebuild:
+  Marking actionpack-2.2.3-r1 ~ppc for bug 301007
 
   18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   actionpack-2.3.5-r1.ebuild:
