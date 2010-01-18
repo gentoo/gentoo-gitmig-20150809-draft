@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-metadata
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.18 2009/12/31 16:35:57 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.19 2010/01/18 15:51:14 rbu Exp $
+
+  18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Dropping maintenance
 
   31 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   kaa-metadata-0.7.7.ebuild:

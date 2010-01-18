@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pynotifier
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.15 2009/10/10 10:05:25 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.16 2010/01/18 15:51:51 rbu Exp $
+
+  18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Dropping maintenance
 
   10 Oct 2009; Markus Meier <maekke@gentoo.org> pynotifier-0.7.0-r1.ebuild:
   amd64/x86 stable, bug #287578
