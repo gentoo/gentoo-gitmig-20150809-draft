@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.5.ebuild,v 1.4 2010/01/15 21:38:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.5.ebuild,v 1.5 2010/01/18 12:22:47 grobian Exp $
 
 EAPI=2
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="OpenGL to PostScript printing library"
 HOMEPAGE="http://www.geuz.org/gl2ps/"
@@ -32,4 +32,12 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 	prepalldocs
+
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# CMake produces an invalid dylib here, but I have no clue how to fix it
+		# hmm, it's also unversioned :(
+		install_name_tool \
+			-id "${EPREFIX}"/usr/$(get_libdir)/libgl2ps.dylib \
+			"${D%/}${EPREFIX}"/usr/$(get_libdir)/libgl2ps.dylib || die
+	fi
 }
