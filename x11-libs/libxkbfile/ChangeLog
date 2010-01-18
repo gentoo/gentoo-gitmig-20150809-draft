@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.57 2010/01/15 21:57:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.58 2010/01/18 20:00:36 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> libxkbfile-1.0.6.ebuild:
+  alpha/ia64/sh/sparc stable wrt #294958
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libxkbfile-1.0.6.ebuild:
