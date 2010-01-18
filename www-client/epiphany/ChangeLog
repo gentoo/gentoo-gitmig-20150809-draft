@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.225 2010/01/11 12:46:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.226 2010/01/18 00:49:43 jer Exp $
+
+  18 Jan 2010; Jeroen Roovers <jer@gentoo.org> epiphany-2.26.3-r2.ebuild:
+  Stable for HPPA (bug #282177).
 
 *epiphany-2.26.3-r3 (11 Jan 2010)
 
