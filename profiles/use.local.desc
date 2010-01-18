@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5200 2010/01/18 02:14:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5201 2010/01/18 15:47:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2363,6 +2363,12 @@ net-irc/unrealircd:shunnotices - Enable notifying a user when un-shunned
 net-irc/unrealircd:spoof - Enable the spoof protection
 net-irc/unrealircd:topicisnuhost - Enable displaying nick!user@host as topic setter
 net-irc/unrealircd:usermod - Enable /set* and /chg* commands
+net-irc/weechat:charset - Enable encoding conversions.
+net-irc/weechat:fifo - Enable FIFO support (sh pipes).
+net-irc/weechat:irc - Enable IRC protocol support.
+net-irc/weechat:logger - Enable support for logging.
+net-irc/weechat:relay - Enable relay plugin (experimental)
+net-irc/weechat:scripts - Build infrastructure for scripting.
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat-gnome:sound - Enable sound event support with media-libs/libcanberra
