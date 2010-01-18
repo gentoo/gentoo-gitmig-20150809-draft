@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/audacious-g15-spectrum
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.8 2008/09/13 23:07:11 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-g15-spectrum/ChangeLog,v 1.9 2010/01/18 15:55:17 rbu Exp $
+
+  18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Dropping maintenance
 
 *audacious-g15-spectrum-2.5.5 (13 Sep 2008)
 
