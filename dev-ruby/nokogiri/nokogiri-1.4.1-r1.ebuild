@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.1-r1.ebuild,v 1.5 2010/01/18 12:40:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.1-r1.ebuild,v 1.6 2010/01/18 17:28:01 a3li Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/libxml2
 	dev-libs/libxslt"
 DEPEND="${RDEPEND}"
 
-ruby_add_bdepend "dev-ruby/rake-compiler dev-ruby/rexical"
+ruby_add_bdepend "dev-ruby/rake-compiler dev-ruby/rexical dev-ruby/hoe"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${P}-ruby19.patch
