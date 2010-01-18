@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.5 2010/01/18 11:11:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.6 2010/01/18 20:27:29 tupone Exp $
 EAPI=2
 
 inherit eutils games
@@ -39,8 +39,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-headers.patch \
 		"${FILESDIR}"/${P}-bg.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
-		"${FILESDIR}"/${P}-glibc2.10.patch \
-		"${FILESDIR}"/${P}-doc.patch
+		"${FILESDIR}"/${P}-glibc2.10.patch
 
 	sed -i \
 		-e "s:/usr/games:${GAMES_BINDIR}:" \
