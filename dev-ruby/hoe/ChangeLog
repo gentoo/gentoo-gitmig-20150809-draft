@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.70 2010/01/13 16:20:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.71 2010/01/18 17:11:56 ranger Exp $
+
+  18 Jan 2010; Brent Baude <ranger@gentoo.org> hoe-2.5.0.ebuild:
+  Marking hoe-2.5.0 ~ppc64 for bug 297830
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> hoe-2.4.0.ebuild:
   Marking hoe-2.4.0 ~ppc64 for bug 297830
