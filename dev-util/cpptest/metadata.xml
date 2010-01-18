@@ -3,13 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>webmaster@hartwork.org</email>
+		<email>sping@gentoo.org</email>
 		<name>Sebastian Pipping</name>
-	</maintainer>
-	<maintainer>
-		<email>rbu@gentoo.org</email>
-		<name>Robert Buchholz</name>
-		<description>proxy maintainer</description>
 	</maintainer>
 	<longdescription lang="en">
 		CppTest is a portable and powerful, yet simple, unit testing framework for handling
