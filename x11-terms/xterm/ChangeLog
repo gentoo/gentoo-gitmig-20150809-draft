@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.289 2010/01/14 23:09:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.290 2010/01/18 20:44:16 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> xterm-250.ebuild:
+  alpha/ia64/sh/sparc stable wrt #294958
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> xterm-250.ebuild:
   arm stable, bug #294958
