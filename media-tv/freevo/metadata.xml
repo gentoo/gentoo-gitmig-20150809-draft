@@ -2,15 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>media-tv</herd>
-  <maintainer>
-    <email>ian@syndicated-productions.com</email>
-    <name>Ian Stakenvicius</name>
-    <description>Proxy maintaining through rbu</description>
-  </maintainer>
-  <maintainer>
-    <email>rbu@gentoo.org</email>
-    <name>Robert Buchholz</name>
-  </maintainer>
   <longdescription>Freevo is an open-source home theatre PC platform based
 		on Linux and a number of open-source audio/video tools. MPlayer
 		and/or Xine can be used to play audio and video files in most
