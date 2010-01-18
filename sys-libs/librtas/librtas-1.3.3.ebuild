@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.3.ebuild,v 1.3 2009/10/13 13:42:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.3.ebuild,v 1.4 2010/01/18 14:56:02 ranger Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://librtas.ozlabs.org/releases/librtas-${PV}.tar.gz"
 HOMEPAGE="http://librtas.ozlabs.org/"
 
 SLOT="0"
-LICENSE="IPL-1"
+LICENSE="IBM"
 KEYWORDS="ppc ppc64"
 IUSE=""
 
