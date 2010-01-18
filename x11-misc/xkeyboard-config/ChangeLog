@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.87 2010/01/14 22:55:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.88 2010/01/18 20:07:03 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  xkeyboard-config-1.7.ebuild:
+  alpha/ia64/sh/sparc stable wrt #294958
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> xkeyboard-config-1.7.ebuild:
   arm stable, bug #294958

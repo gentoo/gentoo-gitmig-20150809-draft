@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbitmaps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.32 2010/01/14 22:54:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.33 2010/01/18 20:06:12 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> xbitmaps-1.1.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #294958
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> xbitmaps-1.1.0.ebuild:
   arm stable, bug #294958
