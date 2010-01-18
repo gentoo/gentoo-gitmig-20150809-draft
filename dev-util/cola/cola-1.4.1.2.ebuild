@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/cola-1.3.8.ebuild,v 1.3 2009/06/30 20:47:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/cola-1.4.1.2.ebuild,v 1.1 2010/01/18 21:17:45 dev-zero Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit distutils eutils
 
 DESCRIPTION="A sweet, carbonated git gui known for its sugary flavour and caffeine-inspired features."
 HOMEPAGE="http://cola.tuxfamily.org/"
-SRC_URI="http://cola.tuxfamily.org/releases/${P}-src.tar.gz"
+SRC_URI="http://cola.tuxfamily.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -20,7 +20,9 @@ RDEPEND="dev-python/PyQt4
 	dev-python/jsonpickle
 	dev-util/git"
 DEPEND="${RDEPEND}
-	doc? ( app-text/asciidoc )
+	doc? ( app-text/asciidoc
+		dev-python/sphinx
+		app-text/xmlto )
 	test? ( dev-python/nose )"
 
 src_prepare() {
@@ -28,10 +30,16 @@ src_prepare() {
 	sed -i \
 		-e '/doc/d' \
 		setup.py || die "sed failed"
+
+	sed -i \
+		-e  "s|'doc', 'git-cola'|'doc', '${PF}', 'html'|" \
+		-e 's|git-cola.html|index.html|' \
+		cola/resources.py || die "sed failed"
+
 	# don't prefix install path with homedir
 	rm setup.cfg
 
-	epatch "${FILESDIR}/${PV}-disable-tests.patch"
+	epatch "${FILESDIR}/1.3.8-disable-tests.patch"
 }
 
 src_compile() {
@@ -39,7 +47,7 @@ src_compile() {
 
 	if use doc ; then
 		cd share/doc/git-cola/
-		emake || die "building docs failed"
+		emake all || die "building docs failed"
 	fi
 }
 
@@ -53,8 +61,10 @@ src_install() {
 	dodoc *.txt
 
 	if use doc ; then
-		dohtml *.html
+		dohtml -r _build/html/*
 		doman *.1
+	else
+		dohtml "${FILESDIR}/index.html"
 	fi
 }
 
