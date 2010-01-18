@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.23 2010/01/14 01:09:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.24 2010/01/18 02:14:21 flameeyes Exp $
+
+*ruby-progressbar-0.0.9 (18 Jan 2010)
+
+  18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-progressbar-0.0.9.ebuild:
+  Add an updated ruby-progressbar (even though the version results older),
+  and port to fakegem.
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> ruby-progressbar-0.9.ebuild:
   Marking ruby-progressbar-0.9 ppc64 for bug 298236
