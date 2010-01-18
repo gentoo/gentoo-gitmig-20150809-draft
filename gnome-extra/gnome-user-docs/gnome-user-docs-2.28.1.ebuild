@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.28.1.ebuild,v 1.2 2010/01/18 00:14:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.28.1.ebuild,v 1.3 2010/01/18 23:33:00 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -25,7 +25,7 @@ DEPEND="app-text/scrollkeeper
 DOCS="AUTHORS ChangeLog NEWS README"
 
 # FIXME: Parallel make is badly broken, bug #260827 and #296375
-#MAKEOPTS="${MAKEOPTS} -j1"
+MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
