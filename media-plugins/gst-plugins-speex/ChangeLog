@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-speex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.70 2010/01/05 18:24:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.71 2010/01/18 18:38:58 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-speex-0.10.14.ebuild, gst-plugins-speex-0.10.16.ebuild,
+  gst-plugins-speex-0.10.17.ebuild:
+  Add ~arm
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> gst-plugins-speex-0.10.16.ebuild:
   ppc stable #290343
