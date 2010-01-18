@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-qemu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-qemu/ChangeLog,v 1.4 2010/01/07 21:38:23 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-qemu/ChangeLog,v 1.5 2010/01/18 05:44:36 tester Exp $
+
+  18 Jan 2010; Olivier Crête <tester@gentoo.org>
+  -scratchbox-devkit-qemu-0.10.0.0.5.ebuild,
+  scratchbox-devkit-qemu-0.10.0.0.10.ebuild:
+  Restore strip/binchecks RESTRICT, it does NOT work without them, bug
+  #296294
 
 *scratchbox-devkit-qemu-0.10.0.0.10 (07 Jan 2010)
 

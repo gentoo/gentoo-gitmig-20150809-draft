@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/ChangeLog,v 1.1 2010/01/17 18:36:02 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/ChangeLog,v 1.2 2010/01/18 05:46:18 tester Exp $
+
+  18 Jan 2010; Olivier Crête <tester@gentoo.org>
+  scratchbox-toolchain-cs2009q1-eglibc2_8-1.0.14.ebuild:
+  Restore strip/binchecks RESTRICT, it does NOT work without them, bug
+  #296294
 
 *scratchbox-toolchain-cs2009q1-eglibc2_8-1.0.14 (17 Jan 2010)
 
