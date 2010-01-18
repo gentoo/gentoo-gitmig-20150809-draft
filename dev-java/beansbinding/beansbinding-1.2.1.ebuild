@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.4 2008/12/31 06:28:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.5 2010/01/18 19:12:30 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -24,7 +24,7 @@ S="${WORKDIR}"
 
 # https://bugs.gentoo.org/show_bug.cgi?id=249740
 # Quite weird. Should look into why this is happening.
-JAVA_PKG_FILTER_COMPILER="ecj-3.4 ecj-3.3 ecj-3.2"
+JAVA_PKG_FILTER_COMPILER="ecj-3.5 ecj-3.4 ecj-3.3 ecj-3.2"
 
 src_install() {
 	java-pkg_dojar "dist/${PN}.jar"
