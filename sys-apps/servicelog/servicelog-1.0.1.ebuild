@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/servicelog/servicelog-1.0.1.ebuild,v 1.4 2009/09/23 20:26:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/servicelog/servicelog-1.0.1.ebuild,v 1.5 2010/01/18 14:54:06 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linux-diag/${P}.tar.gz"
 HOMEPAGE="http://linux-diag.sourceforge.net/servicelog/"
 
 SLOT="0"
-LICENSE="IPL-1"
+LICENSE="IBM"
 KEYWORDS="ppc ~ppc64"
 IUSE=""
 
