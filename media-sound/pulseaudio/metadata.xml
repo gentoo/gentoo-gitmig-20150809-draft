@@ -34,6 +34,12 @@
       this replaces the deprecated <pkg>sys-apps/hal</pkg>
       autodiscovery code.
     </flag>
+    <flag name="system-wide" restrict="&gt;=media-sound/pulseaudio-0.9.21.1">
+      Allow preparation and installation of the system-wide init
+      script for PulseAudio. Since this support is only supported for
+      embedded situations, do not enable without reading the upstream
+      instructions at http://pulseaudio.org/wiki/WhatIsWrongWithSystemMode .
+    </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
     <flag name="glib">Enable glib eventloop support</flag>
     <flag name="doc">Build the doxygen-described API documentation.</flag>
