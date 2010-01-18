@@ -1,6 +1,11 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.40 2010/01/02 11:35:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.41 2010/01/18 15:18:33 tove Exp $
+
+*po4a-0.38 (18 Jan 2010)
+
+  18 Jan 2010; Torsten Veller <tove@gentoo.org> +po4a-0.38.ebuild:
+  Version bump
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> po4a-0.37.1.ebuild:
   Transfer Prefix keywords
