@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.1.0.ebuild,v 1.2 2008/07/09 19:44:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.1.0.ebuild,v 1.3 2010/01/18 14:53:01 ranger Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://powerpc-utils.ozlabs.org/"
 S="${WORKDIR}/${MY_P}"
 
 SLOT="0"
-LICENSE="IPL-1"
+LICENSE="IBM"
 KEYWORDS="ppc ppc64"
 IUSE=""
 RDEPEND=">=sys-apps/ibm-powerpc-utils-1.1.0
