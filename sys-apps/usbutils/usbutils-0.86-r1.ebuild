@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.86-r1.ebuild,v 1.9 2010/01/01 15:05:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.86-r1.ebuild,v 1.10 2010/01/18 08:18:43 vapier Exp $
 
 EAPI="2"
 
@@ -34,8 +34,8 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
+	mv "${D}"/usr/sbin/update-usbids{.sh,} || die
 	newbin "${FILESDIR}"/usbmodules.sh usbmodules || die
-	newsbin update-usbids.sh update-usbids || die "update-usbids failed"
 	dodoc AUTHORS ChangeLog NEWS README
 
 	use network-cron || return 0

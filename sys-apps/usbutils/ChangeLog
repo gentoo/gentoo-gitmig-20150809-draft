@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.95 2010/01/01 15:05:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.96 2010/01/18 08:18:43 vapier Exp $
+
+  18 Jan 2010; Mike Frysinger <vapier@gentoo.org> usbutils-0.86-r1.ebuild:
+  Only install update-usbids and not also update-usbids.sh.
 
   01 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
   usbutils-0.86-r1.ebuild:
