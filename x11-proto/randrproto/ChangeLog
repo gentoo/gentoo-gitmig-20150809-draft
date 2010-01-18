@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/randrproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.72 2010/01/14 23:01:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.73 2010/01/18 20:21:55 armin76 Exp $
+
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> randrproto-1.3.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #294958
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> randrproto-1.3.1.ebuild:
   arm stable, bug #294958
