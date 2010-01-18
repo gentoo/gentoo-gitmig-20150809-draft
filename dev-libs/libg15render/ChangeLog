@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libg15render
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.11 2007/05/01 10:33:05 corsair Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.12 2010/01/18 15:55:18 rbu Exp $
+
+  18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Dropping maintenance
 
   01 May 2007; Markus Rothe <corsair@gentoo.org> libg15render-1.2-r1.ebuild:
   Stable on ppc64; bug #175120
