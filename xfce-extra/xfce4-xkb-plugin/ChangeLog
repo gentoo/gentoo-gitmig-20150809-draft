@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-xkb-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/ChangeLog,v 1.17 2009/12/03 17:00:45 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/ChangeLog,v 1.18 2010/01/18 00:34:55 jer Exp $
+
+  18 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  xfce4-xkb-plugin-0.5.3.3-r1.ebuild:
+  Stable for HPPA (bug #281427).
 
   03 Dec 2009; Brent Baude <ranger@gentoo.org>
   xfce4-xkb-plugin-0.5.3.3-r1.ebuild:
