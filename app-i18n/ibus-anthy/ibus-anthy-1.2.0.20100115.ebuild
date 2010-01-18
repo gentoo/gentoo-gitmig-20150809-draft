@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20090917.ebuild,v 1.1 2009/09/17 16:18:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20100115.ebuild,v 1.1 2010/01/18 14:47:43 matsuu Exp $
 
 inherit eutils python
 
@@ -37,14 +37,14 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bugs to"
-	ewarn "http://ibus.googlecode.com/issues/list"
 	elog
-	elog "You should run ibus-setup and enable IM Engines you want to use!"
+	elog "app-dicts/kasumi is not required but probably useful for you."
+	elog
+	elog "# emerge app-dicts/kasumi"
 	elog
 
 	python_mod_optimize /usr/share/${PN}
