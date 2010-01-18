@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.ebuild,v 1.9 2009/11/11 00:06:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.ebuild,v 1.10 2010/01/18 06:20:42 bicatali Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit eutils distutils elisp-common
 
 DESCRIPTION="An advanced interactive shell for Python."
 HOMEPAGE="http://ipython.scipy.org/"
-SRC_URI="http://ipython.scipy.org/dist/${P}.tar.gz"
+SRC_URI="http://ipython.scipy.org/dist/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
