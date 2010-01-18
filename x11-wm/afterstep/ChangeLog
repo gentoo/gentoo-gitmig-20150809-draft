@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.84 2009/11/03 15:21:55 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.85 2010/01/18 15:24:12 voyageur Exp $
+
+  18 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  afterstep-2.2.4.ebuild, afterstep-2.2.9.ebuild:
+  Fix license, bug #301210
 
   03 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
   afterstep-2.2.9.ebuild:

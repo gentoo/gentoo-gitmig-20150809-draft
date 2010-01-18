@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.15 2009/08/03 10:39:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.16 2010/01/18 15:24:12 voyageur Exp $
 
 inherit flag-o-matic eutils
 
@@ -8,7 +8,8 @@ DESCRIPTION="AfterStep is a feature rich NeXTish window manager"
 HOMEPAGE="http://www.afterstep.org"
 SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 
-LICENSE="AFTERSTEP"
+# libAfterBase/libAfterImage are LGPL
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="debug gif jpeg mmx nls png tiff xinerama"
