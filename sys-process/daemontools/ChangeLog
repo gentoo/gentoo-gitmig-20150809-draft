@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/daemontools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.13 2010/01/12 18:52:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.14 2010/01/18 22:22:13 maekke Exp $
+
+  18 Jan 2010; Markus Meier <maekke@gentoo.org> daemontools-0.76-r7.ebuild:
+  arm/x86 stable, bug #299625
 
   12 Jan 2010; nixnut <nixnut@gentoo.org> daemontools-0.76-r7.ebuild:
   ppc stable #299625
