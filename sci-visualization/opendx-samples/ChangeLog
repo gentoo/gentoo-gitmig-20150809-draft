@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/opendx-samples
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/ChangeLog,v 1.10 2010/01/12 19:01:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/ChangeLog,v 1.11 2010/01/18 05:57:43 bicatali Exp $
+
+  18 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  opendx-samples-4.3.2.ebuild, -opendx-samples-4.4.0.ebuild,
+  opendx-samples-4.4.0-r1.ebuild:
+  Replaced IPL-1 license to IBM since they are the same (bug #301180)
 
   12 Jan 2010; nixnut <nixnut@gentoo.org> opendx-samples-4.4.0-r1.ebuild:
   ppc stable #299841

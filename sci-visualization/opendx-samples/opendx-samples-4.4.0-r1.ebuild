@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.4.0-r1.ebuild,v 1.2 2010/01/12 19:01:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.4.0-r1.ebuild,v 1.3 2010/01/18 05:57:43 bicatali Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ DESCRIPTION="Samples for IBM Data Explorer"
 HOMEPAGE="http://www.opendx.org/"
 SRC_URI="http://opendx.sdsc.edu/source/${MY_P}.tar.gz
 	mirror://gentoo/${P}-install.patch.bz2"
-LICENSE="IPL-1"
+LICENSE="IBM"
 SLOT="0"
 
 S="${WORKDIR}/${MY_P}"
