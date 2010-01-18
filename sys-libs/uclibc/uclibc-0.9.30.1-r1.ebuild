@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1-r1.ebuild,v 1.7 2009/11/04 16:25:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1-r1.ebuild,v 1.8 2010/01/18 23:39:51 solar Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -180,6 +180,7 @@ src_unpack() {
 		alpha) target="alpha";   config_target="no cpu-specific options";;
 		amd64) target="x86_64";  config_target="no cpu-specific options";;
 		arm)   target="arm";     config_target="GENERIC_ARM";;
+		avr)   target="avr32";   config_target="no cpu-specific options";;
 		ia64)  target="ia64";    config_target="no cpu-specific options";;
 		m68k)  target="m68k";    config_target="no cpu-specific options";;
 		mips)  target="mips";    config_target="MIPS_ISA_1";;
