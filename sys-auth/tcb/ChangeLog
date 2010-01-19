@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/tcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/ChangeLog,v 1.5 2010/01/17 14:55:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/ChangeLog,v 1.6 2010/01/19 14:37:41 phajdan.jr Exp $
+
+  19 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  files/tcb-1.0.2-build.patch:
+  Do not pass CFLAGS to make link rules. Thanks to Dmitry V. Levin <ldv at
+  altlinux org>.
 
 *tcb-1.0.3-r2 (17 Jan 2010)
 

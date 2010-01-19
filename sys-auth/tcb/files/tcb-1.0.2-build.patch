@@ -5,14 +5,14 @@
  
  $(LIBTCB_LONG): libtcb.o $(LIB_MAP)
 -	$(CC) $(DBGFLAG) -shared -o $@ -Wl,-soname,$(LIBTCB) \
-+	$(CC) $(CFLAGS) $(LDFLAGS) $(DBGFLAG) -shared -o $@ -Wl,-soname,$(LIBTCB) \
++	$(CC) $(LDFLAGS) $(DBGFLAG) -shared -o $@ -Wl,-soname,$(LIBTCB) \
  		-Wl,--version-script=$(LIB_MAP) $< -lc
  	ln -sf $@ $(LIBTCB)
  	ln -sf $(LIBTCB) libtcb.so
  
  $(LIBNSS): nss.o $(NSS_MAP) $(LIBTCB_LONG)
 -	$(CC) $(DBGFLAG) -shared -o $@ -Wl,--version-script=$(NSS_MAP) \
-+	$(CC) $(CFLAGS) $(LDFLAGS) $(DBGFLAG) -shared -o $@ -Wl,-soname,$@ -Wl,--version-script=$(NSS_MAP) \
++	$(CC) $(LDFLAGS) $(DBGFLAG) -shared -o $@ -Wl,-soname,$@ -Wl,--version-script=$(NSS_MAP) \
  		$< -L. $(LIBNSL) -ltcb
  
  .c.o:
