@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.44 2010/01/03 15:45:46 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.45 2010/01/19 16:30:40 mpagano Exp $
+
+*portpeek-1.5.7.3 (19 Jan 2010)
+
+  19 Jan 2010; Mike Pagano <mpagano@gentoo.org> +portpeek-1.5.7.3.ebuild:
+  Version bump to fix PORTAGE_CONFIGROOT outlined in bug #296573
 
 *portpeek-1.9.20 (03 Jan 2010)
 
