@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.4.5.ebuild,v 1.1 2009/12/13 17:51:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.4.5.ebuild,v 1.2 2010/01/19 20:22:38 bicatali Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="High Energy Physics C++ library"
 HOMEPAGE="http://www.cern.ch/clhep"
@@ -29,6 +29,14 @@ src_prepare() {
 		# need to rebuild because original configurations
 		# have buggy detection
 	done
+	for d in $(find . -name Makefile.am | xargs grep -l ": %\.cc"); do
+		sed -i \
+			-e 's|: %\.cc|: %\.cc \$(shareddir)|' \
+			-e 's|all-local: \$(shareddir)|all-local: |' \
+			${d} || die
+		# fixing parallel build
+	done
+	epatch "${FILESDIR}/${P}-gcc4.3.patch"
 	eautoreconf
 }
 

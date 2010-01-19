@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/clhep
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.14 2009/12/13 17:51:06 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.15 2010/01/19 20:22:38 bicatali Exp $
+
+  19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> clhep-2.0.4.5.ebuild,
+  +files/clhep-2.0.4.5-gcc4.3.patch:
+  Added patch for tests and gcc 4.3, and a fix for random parallel build
+  failures, thanks Xarthisius for his work , bug #301491
 
 *clhep-2.0.4.5 (13 Dec 2009)
 
