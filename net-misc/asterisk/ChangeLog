@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.240 2010/01/05 03:59:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.241 2010/01/19 13:12:46 chainsaw Exp $
+
+*asterisk-1.6.2.1 (19 Jan 2010)
+
+  19 Jan 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.1.ebuild,
+  +files/1.6.2/asterisk-1.6.2.1-parallel-make.patch:
+  Version bump, upstream bugfix release. New & improved parallel make fixes
+  by Federico "Freddy" Santulli and Diego E. "FlameEyes" Pettenò close bug
+  #300832. Warn about SIP (NAT) connection tracking as suggested by Jaco
+  Kroon in bug #300644. Thanks also to Kerin "kerframil" Miller for bug
+  triage.
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> -asterisk-1.2.35.ebuild,
   asterisk-1.2.37.ebuild:
