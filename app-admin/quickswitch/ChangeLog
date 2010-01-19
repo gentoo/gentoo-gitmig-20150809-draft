@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/quickswitch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.26 2009/10/11 23:45:38 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.27 2010/01/19 11:38:21 cla Exp $
+
+  19 Jan 2010; Dawid Węgliński <cla@gentoo.org> quickswitch-1.05.ebuild:
+  Remove dosed call on missing file, #299637
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> quickswitch-1.05.ebuild:
   QA fixes; remove useless dodoc LICENSE
