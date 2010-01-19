@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.6 2010/01/18 20:27:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.7 2010/01/19 06:13:47 mr_bones_ Exp $
 EAPI=2
 
 inherit eutils games
@@ -46,14 +46,18 @@ src_prepare() {
 		wargames/wargames \
 		|| die "sed wargames failed"
 
+	sed -i \
+		-e '/^CC :=/d' \
+		-e '/^CXX :=/d' \
+		-e '/^CFLAGS/s/OPTIMIZE/CFLAGS/' \
+		-e '/^CXXFLAGS/s/OPTIMIZE/CXXFLAGS/' \
+		Makeconfig.in \
+		|| die 'sed failed'
+
 	cp "${FILESDIR}"/config.params-gentoo config.params
 	echo bsd_games_cfg_usrlibdir=\"$(games_get_libdir)\" >> ./config.params
 	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params
 	echo bsd_games_cfg_docdir=\"/usr/share/doc/${PF}\" >> ./config.params
-}
-
-src_compile() {
-	emake OPTIMIZE="${CFLAGS}" || die "emake failed"
 }
 
 src_test() {
@@ -72,7 +76,7 @@ do_statefile() {
 
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_STATEDIR}" /usr/share/man/man{1,6}
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS BUGS ChangeLog ChangeLog.0 \
 		README PACKAGING SECURITY THANKS TODO YEAR2000
@@ -98,8 +102,6 @@ src_install() {
 	build_game sail && do_statefile saillog
 	build_game snake && do_statefile snake.log && do_statefile snakerawscores
 	build_game tetris && do_statefile tetris-bsd.scores
-	# state dirs
-	chmod -R ug+rw "${D}/${GAMES_STATEDIR}"/*
 
 	# extra docs
 	build_game atc && { docinto atc ; dodoc atc/BUGS; }
@@ -117,4 +119,7 @@ src_install() {
 
 	prepalldocs
 	prepgamesdirs
+
+	# state dirs
+	chmod -R ug+rw "${D}/${GAMES_STATEDIR}"/*
 }

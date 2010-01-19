@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.42 2010/01/18 11:11:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.43 2010/01/19 06:13:47 mr_bones_ Exp $
+
+  19 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  bsd-games-2.17-r4.ebuild:
+  Honor CFLAGS, CXXFLAGS, CC and CXX; fix perms on GAMES_STATEDIR
 
   18 Jan 2010; Tupone Alfredo <tupone@gentoo.org> bsd-games-2.17-r4.ebuild:
   Documentation installed in /usr/share/doc/${PF}
