@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.36 2009/09/27 19:56:50 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.37 2010/01/19 07:04:15 mr_bones_ Exp $
+
+*crafty-23.1 (19 Jan 2010)
+
+  19 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org> +crafty-23.1.ebuild:
+  version bump (bug #301461)
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> crafty-23.0.ebuild:
   ppc stable #286430
