@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.61 2010/01/14 07:03:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.62 2010/01/19 18:24:08 nixnut Exp $
+
+  19 Jan 2010; nixnut <nixnut@gentoo.org> dmapi-2.2.10.ebuild:
+  ppc stable #300252
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> dmapi-2.2.10.ebuild:
   Stable for HPPA (bug #300252).
