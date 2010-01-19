@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.199 2010/01/11 19:27:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.200 2010/01/19 17:51:41 nixnut Exp $
+
+  19 Jan 2010; nixnut <nixnut@gentoo.org> lvm2-2.02.56-r2.ebuild:
+  ppc stable #297439
 
   11 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.56-r2.ebuild,
   lvm2-2.02.56-r3.ebuild:
