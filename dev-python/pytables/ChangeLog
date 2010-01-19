@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytables
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.31 2009/12/12 16:26:37 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.32 2010/01/19 16:49:23 bicatali Exp $
+
+  19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  pytables-2.1.2.ebuild, +files/pytables-2.1.2-no-old-num.patch:
+  Now skip tests for numarray and numeric, obsoleted
 
 *pytables-2.1.2 (12 Dec 2009)
 
