@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.7 2008/08/31 04:36:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.4.ebuild,v 1.8 2010/01/19 23:17:24 cla Exp $
 
 inherit toolchain-funcs eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 		-e "s:COPYING::" \
 		-e "s:\-mcpu:\-march:" Makefile \
 		|| die "sed failed"
+	sed -r /^DOCDIR/s:packages/.*:${PF}: -i Makefile || die "sed failed"
 
 	#apply modifications to CFLAGS to fix for gcc 3.4: bug #64049
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]

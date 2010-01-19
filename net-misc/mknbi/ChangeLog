@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mknbi
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.21 2008/08/31 04:36:02 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.22 2010/01/19 23:17:24 cla Exp $
+
+  19 Jan 2010; Dawid Węgliński <cla@gentoo.org> mknbi-1.4.4.ebuild:
+  Make sure documentation installs inside /usr/share/doc/${PF} (bug #296620)
 
   31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> mknbi-1.4.4.ebuild:
   fix bug #221449 and tidy ebuild
