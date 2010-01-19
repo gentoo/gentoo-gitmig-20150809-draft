@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv-firmware
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-firmware/ChangeLog,v 1.1 2008/10/21 18:10:11 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-firmware/ChangeLog,v 1.2 2010/01/19 04:29:43 cardoe Exp $
+
+  19 Jan 2010; Doug Goldstein <cardoe@gentoo.org>
+  -ivtv-firmware-20070217.ebuild, ivtv-firmware-20080701.ebuild:
+  stabilize to bring us up to date with reality. Remove old version since
+  you really don't want to use those with newer cards
 
 *ivtv-firmware-20080701 (21 Oct 2008)
 *ivtv-firmware-20070217 (21 Oct 2008)
