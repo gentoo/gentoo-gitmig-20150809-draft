@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.148 2010/01/13 23:49:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.149 2010/01/19 04:59:29 abcd Exp $
+
+  19 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdebase-data-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   13 Jan 2010; Jeroen Roovers <jer@gentoo.org> kdebase-data-4.3.3.ebuild:
   Stable for HPPA too.
