@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.6.1.ebuild,v 1.1 2010/01/19 14:47:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.6.1.ebuild,v 1.2 2010/01/19 17:15:30 yngwin Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -15,7 +15,7 @@ DEPEND="~x11-libs/qt-gui-${PV}[aqua=]
 	~x11-libs/qt-webkit-${PV}[aqua=]"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}_rc1-tools.patch" )
+PATCHES=( "${FILESDIR}/${PN}-4.6.0_rc1-tools.patch" )
 
 # Pixeltool isn't really assistant related, but it relies on
 # the assistant libraries. doc/qch/

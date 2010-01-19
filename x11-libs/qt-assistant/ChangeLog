@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.66 2010/01/19 14:47:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.67 2010/01/19 17:15:30 yngwin Exp $
+
+  19 Jan 2010; Ben de Groot <yngwin@gentoo.org> qt-assistant-4.6.1.ebuild:
+  Fix patch filename
 
 *qt-assistant-4.6.1 (19 Jan 2010)
 
