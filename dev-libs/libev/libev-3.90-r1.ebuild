@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-3.70.ebuild,v 1.1 2009/07/22 22:12:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-3.90-r1.ebuild,v 1.1 2010/01/19 16:15:56 matsuu Exp $
 
 inherit autotools eutils
 
@@ -12,8 +12,12 @@ SRC_URI="http://dist.schmorp.de/libev/${MY_P}.tar.gz
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="elibc_glibc"
+
+# Bug #283558
+DEPEND="elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
