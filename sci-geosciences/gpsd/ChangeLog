@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.45 2010/01/03 09:33:01 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.46 2010/01/19 00:50:35 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> gpsd-2.38.ebuild:
+  Stable for HPPA too.
 
   03 Jan 2010; Steve Arnold <nerdboy@gentoo.org> files/99-gpsd-usb.rules:
   Oh yeah, also updated the udev rules to conform to the new syntax.
