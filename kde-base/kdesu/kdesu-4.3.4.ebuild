@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/kdesu-4.3.4.ebuild,v 1.3 2009/12/27 15:34:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/kdesu-4.3.4.ebuild,v 1.4 2010/01/19 08:31:02 abcd Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 # FIXME: Is default command ( su/sudo ) still configurable,
 # if not, USE-flag ?
 DESCRIPTION="KDE: gui for su(1)"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 src_configure() {
