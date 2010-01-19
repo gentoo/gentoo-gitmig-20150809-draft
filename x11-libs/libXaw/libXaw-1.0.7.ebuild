@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.7.ebuild,v 1.9 2010/01/18 19:49:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.7.ebuild,v 1.10 2010/01/19 20:03:57 armin76 Exp $
 
 EAPI="2"
 
 inherit x-modular flag-o-matic
 
 DESCRIPTION="X.Org Xaw library"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
