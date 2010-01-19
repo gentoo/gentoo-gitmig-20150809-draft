@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/iulib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.5 2009/12/16 11:39:24 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.6 2010/01/19 15:15:55 cla Exp $
+
+  19 Jan 2010; Dawid Węgliński <cla@gentoo.org> iulib-0.4.ebuild:
+  Add dev-util/scons as dependency (bug #297792)
 
 *iulib-0.4 (16 Dec 2009)
 
