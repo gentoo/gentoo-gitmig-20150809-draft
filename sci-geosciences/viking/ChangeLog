@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/viking
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.8 2009/09/11 22:18:54 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.9 2010/01/19 11:10:01 hanno Exp $
+
+*viking-0.9.9 (19 Jan 2010)
+
+  19 Jan 2010; Hanno Boeck <hanno@gentoo.org> +viking-0.9.9.ebuild:
+  Version bump.
 
   11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> viking-0.9.8.ebuild:
   Keywording for ppc. Fix bug 275134
