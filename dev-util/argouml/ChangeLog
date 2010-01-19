@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/argouml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.27 2010/01/15 21:10:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.28 2010/01/19 18:27:22 nixnut Exp $
+
+  19 Jan 2010; nixnut <nixnut@gentoo.org> argouml-0.29.2.ebuild:
+  ppc stable #300395
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   argouml-0.29.2-r1.ebuild:
