@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.56 2010/01/12 21:48:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.57 2010/01/19 11:11:14 aballier Exp $
 
 EAPI="2"
 
@@ -325,7 +325,7 @@ src_configure() {
 		$(use_enable upnp) \
 		$(use_enable v4l) \
 		$(use_enable v4l2) \
-		$(use_enable vcdinfo) \
+		$(use_enable vcdinfo libvcdinfo) \
 		$(use_enable vcdx) \
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
