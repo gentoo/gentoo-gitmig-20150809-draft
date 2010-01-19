@@ -1,16 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.4.ebuild,v 1.3 2009/12/23 11:48:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.4.ebuild,v 1.4 2010/01/19 04:55:20 abcd Exp $
 
 EAPI="2"
 
+KDE_REQUIRED="never"
 inherit kde4-base
 
 DESCRIPTION="Environment setting required for all KDE4 apps to run."
 HOMEPAGE="http://kde.org"
 [[ ${PV} = *9999* ]] && ESVN_REPO_URI="" || SRC_URI=""
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="as-is"
 IUSE=""
 
@@ -33,18 +34,13 @@ src_compile() {
 }
 
 src_install() {
-	dodir /etc/env.d
-	dodir /etc/revdep-rebuild
-	dodir ${KDEDIR}/share/config
-
-	# List all the multilib libdirs
-	local _libdir _libdirs
-	for _libdir in $(get_all_libdirs); do
-		_libdirs+=":${EKDEDIR}/${_libdir}"
-	done
-	_libdirs=${_libdirs#:}
-
 	if use kdeprefix; then
+		# List all the multilib libdirs
+		local _libdir _libdirs
+		for _libdir in $(get_all_libdirs); do
+			_libdirs+=":${EKDEDIR}/${_libdir}"
+		done
+		_libdirs=${_libdirs#:}
 
 		# number goes down with version
 		cat <<-EOF > "${T}/43kdepaths-${SLOT}"
@@ -58,18 +54,20 @@ PKG_CONFIG_PATH="${EKDEDIR}/$(get_libdir)/pkgconfig"
 XDG_DATA_DIRS="${EKDEDIR}/share"
 EOF
 		doenvd "${T}/43kdepaths-${SLOT}"
-		cat <<-EOF > "${D%/}${EPREFIX}/etc/revdep-rebuild/50-kde-${SLOT}"
+		cat <<-EOF > "${T}/50-kde-${SLOT}"
 SEARCH_DIRS="${EKDEDIR}/bin ${EKDEDIR}/lib*"
 EOF
+		insinto /etc/revdep-rebuild
+		doins "${T}/50-kde-${SLOT}"
 
 		# kdeglobals needed to make third party apps installed in /usr work
-		cat <<-EOF > "${D}/${EKDEDIR}/share/config/kdeglobals"
+		cat <<-EOF > "${T}/kdeglobals"
 [Directories][\$i]
 prefixes=${EPREFIX}/usr
 EOF
-
+		insinto ${KDEDIR}/share/config
+		doins "${T}/kdeglobals"
 	else
-
 		# Much simpler for the FHS compliant -kdeprefix install
 		# number goes down with version
 		cat <<-EOF > "${T}/43kdepaths"
@@ -77,7 +75,6 @@ CONFIG_PROTECT="${EPREFIX}/usr/share/config"
 #KDE_IS_PRELINKED=1
 EOF
 		doenvd "${T}/43kdepaths"
-
 	fi
 }
 
