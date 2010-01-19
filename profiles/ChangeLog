@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3807 2010/01/19 17:22:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3808 2010/01/19 18:20:24 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jan 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking latest release of qt-creator
 
   19 Jan 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
   Revert qt unmask
