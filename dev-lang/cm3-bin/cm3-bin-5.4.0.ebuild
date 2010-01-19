@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.3 2010/01/17 20:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.4 2010/01/19 15:54:58 ulm Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="virtual/editor"
+DEPEND=""
+RDEPEND="app-editors/gentoo-editor"
 PROVIDE="virtual/m3"
 
 S=${WORKDIR}
@@ -37,7 +38,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cm3-cfg.patch
 	sed -i \
-		-e "s:@GENTOO_INITIAL_REACTOR_EDITOR@:${EDITOR:-/usr/bin/nano}:" \
+		-e "s:@GENTOO_INITIAL_REACTOR_EDITOR@:/usr/libexec/gentoo-editor:" \
 		-e "s:@GENTOO_INSTALL_ROOT@:/usr/$(get_libdir)/cm3/:" \
 		-e "s:@GENTOO_CC@:$(tc-getCC):" \
 		-e "s:@GENTOO_AR@:$(tc-getAR):" \

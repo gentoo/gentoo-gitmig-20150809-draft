@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cm3-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.9 2010/01/17 20:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.10 2010/01/19 15:54:58 ulm Exp $
+
+  18 Jan 2010; Ulrich Mueller <ulm@gentoo.org> cm3-bin-5.4.0.ebuild:
+  Use gentoo-editor as default editor, fixes bug 294760.
 
   17 Jan 2010; Mike Frysinger <vapier@gentoo.org> cm3-bin-5.4.0.ebuild:
   Depend on virtual/editor for $EDITOR #294760 by Ulrich Müller.
