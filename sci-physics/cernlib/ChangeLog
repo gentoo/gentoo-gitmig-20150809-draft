@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/cernlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.21 2009/12/26 18:59:05 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.22 2010/01/19 06:17:52 bicatali Exp $
+
+  19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -cernlib-2006.ebuild,
+  -files/cernlib-2006-maketest.patch, -files/cernlib-2006-test64.patch,
+  -files/cernlib-2006-testlink.patch:
+  Removed old
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> cernlib-2006-r3.ebuild:
   sparc stable wrt #294439
