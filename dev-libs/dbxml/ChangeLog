@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dbxml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.6 2009/03/25 11:40:54 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.7 2010/01/19 09:28:44 dev-zero Exp $
+
+*dbxml-2.5.16 (19 Jan 2010)
+
+  19 Jan 2010; Tiziano Müller <dev-zero@gentoo.org> +dbxml-2.5.16.ebuild:
+  Version bump (bug #286283), added fixlocalpod to fix bug #256572.
 
   25 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> dbxml-2.4.16.1.ebuild:
   Fix dos line-endings, bug 263712. Thanks to Guido Jäkel
