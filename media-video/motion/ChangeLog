@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motion
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.27 2009/10/23 13:00:57 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.28 2010/01/19 19:17:15 ssuominen Exp $
+
+  19 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  motion-3.2.11.1.ebuild:
+  Rename conflicting type of jpeg_mem_dest for jpeg-8.
 
   23 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   motion-3.2.11.1.ebuild:
