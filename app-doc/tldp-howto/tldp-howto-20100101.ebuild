@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20100101.ebuild,v 1.1 2010/01/01 07:40:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20100101.ebuild,v 1.2 2010/01/19 00:32:02 dirtyepic Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ SRC_URI="
 	pdf? ( mirror://gentoo/Linux-pdf-HOWTOs-${PV}.tar.bz2 )
 	text? ( mirror://gentoo/Linux-HOWTOs-${PV}.tar.bz2 )"
 
-LICENSE="LDP FDL-1.2"
+LICENSE="FDL-1.2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc"
 IUSE="+html htmlsingle pdf text"

@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/tldp-howto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.1 2010/01/01 07:40:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.2 2010/01/19 00:32:02 dirtyepic Exp $
+
+  19 Jan 2010; Ryan Hill <dirtyepic@gentoo.org> tldp-howto-20100101.ebuild:
+  Drop LDP license, bug #301030.
 
 *tldp-howto-20100101 (01 Jan 2010)
 
