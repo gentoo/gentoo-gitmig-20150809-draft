@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.35 2010/01/10 12:05:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.36 2010/01/19 00:29:10 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> rasqal-0.9.17.ebuild:
+  Stable for HPPA (bug #301306).
 
   10 Jan 2010; Raúl Porcel <armin76@gentoo.org> rasqal-0.9.16.ebuild,
   rasqal-0.9.17.ebuild:
