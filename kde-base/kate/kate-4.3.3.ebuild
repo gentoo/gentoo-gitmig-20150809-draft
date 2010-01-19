@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.3.3.ebuild,v 1.5 2009/12/10 14:17:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.3.3.ebuild,v 1.6 2010/01/19 03:01:15 jer Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdesdk"
 inherit kde4-meta
 
 DESCRIPTION="Kate is an MDI texteditor."
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="debug +handbook +plasma"
 
 DEPEND="

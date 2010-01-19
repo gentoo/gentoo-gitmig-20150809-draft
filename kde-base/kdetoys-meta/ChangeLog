@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.140 2010/01/16 19:31:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.141 2010/01/19 02:49:46 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kdetoys-meta-4.3.3.ebuild:
+  Stable for HPPA too.
 
   16 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdetoys-meta-4.3.3.ebuild,
   kdetoys-meta-4.3.4.ebuild:

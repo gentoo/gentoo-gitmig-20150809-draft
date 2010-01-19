@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmahjongg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.138 2009/12/10 21:28:04 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.139 2010/01/19 02:00:22 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kmahjongg-4.3.3.ebuild:
+  Stable for HPPA too.
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kmahjongg-4.3.3.ebuild:
+  Stable for HPPA too.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kmahjongg-4.3.1.ebuild:

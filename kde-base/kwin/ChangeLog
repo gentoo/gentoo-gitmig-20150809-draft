@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.181 2009/12/23 01:05:17 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.182 2010/01/19 01:17:30 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kwin-4.3.3-r1.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> kwin-4.3.4-r1.ebuild:
   Pull in changes from overlay

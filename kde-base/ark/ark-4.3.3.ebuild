@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.3.3.ebuild,v 1.5 2009/12/10 13:52:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.3.3.ebuild,v 1.6 2010/01/19 02:51:49 jer Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdeutils"
 inherit kde4-meta
 
 DESCRIPTION="KDE Archiving tool"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="+archive +bzip2 debug +handbook lzma zip"
 
 DEPEND="

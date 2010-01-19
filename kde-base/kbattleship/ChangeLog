@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.139 2010/01/13 17:41:39 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.140 2010/01/19 01:54:38 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kbattleship-4.3.3.ebuild:
+  Stable for HPPA too.
 
   13 Jan 2010; Jonathan Callen <abcd@gentoo.org> kbattleship-4.3.4.ebuild:
   Use insinto/newins instead of mkdir/cp

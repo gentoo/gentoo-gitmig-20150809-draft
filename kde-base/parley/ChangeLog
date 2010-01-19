@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/parley
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.50 2009/12/23 01:17:53 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.51 2010/01/19 00:50:01 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> parley-4.3.3-r1.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> parley-4.3.4.ebuild:
   Pull in changes from overlay

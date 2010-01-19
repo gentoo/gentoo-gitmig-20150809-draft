@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.35 2009/12/23 01:35:57 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.36 2010/01/19 01:33:50 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> powerdevil-4.3.3.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> powerdevil-4.3.4.ebuild:
   Fix prefix support

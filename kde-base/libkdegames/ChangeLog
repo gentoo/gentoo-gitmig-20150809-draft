@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdegames
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.142 2009/12/27 15:24:14 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.143 2010/01/19 01:52:32 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> libkdegames-4.3.3.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org>
   +files/libkdegames-4.2.0-darwin.patch, libkdegames-4.3.4.ebuild:

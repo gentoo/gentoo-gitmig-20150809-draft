@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-4.3.3.ebuild,v 1.6 2009/12/10 16:27:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-4.3.3.ebuild,v 1.7 2010/01/19 02:46:25 jer Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="KPilot is software for syncing PalmOS based handhelds."
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="avantgo crypt debug +handbook"
 
 DEPEND="

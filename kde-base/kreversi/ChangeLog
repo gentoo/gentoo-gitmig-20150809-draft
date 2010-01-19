@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.138 2010/01/13 17:43:23 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.139 2010/01/19 02:03:50 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kreversi-4.3.3.ebuild:
+  Stable for HPPA too.
 
   13 Jan 2010; Jonathan Callen <abcd@gentoo.org> kreversi-4.3.4.ebuild:
   Use insinto/newins instead of mkdir/cp

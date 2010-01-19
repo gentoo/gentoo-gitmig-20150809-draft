@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.48 2009/12/10 23:09:17 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.49 2010/01/19 01:32:23 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kwrite-4.3.3.ebuild:
+  Stable for HPPA too.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kwrite-4.3.1.ebuild:
   Drop KDE SC-4.3.1.

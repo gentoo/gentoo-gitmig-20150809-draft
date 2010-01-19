@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkexiv2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.37 2009/12/27 15:36:03 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.38 2010/01/19 02:15:03 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> libkexiv2-4.3.3.ebuild:
+  Stable for HPPA too.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -libkexiv2-4.3.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.144 2009/12/23 01:03:34 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.145 2010/01/19 01:40:22 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kttsd-4.3.3.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> kttsd-4.3.4.ebuild:
   Pull in changes from overlay

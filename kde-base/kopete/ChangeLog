@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.233 2009/12/23 00:37:38 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.234 2010/01/19 02:28:58 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kopete-4.3.3.ebuild:
+  Stable for HPPA too.
 
   23 Dec 2009; Jonathan Callen <abcd@gentoo.org> kopete-4.3.4.ebuild:
   Pull in changes from overlay and prefix support

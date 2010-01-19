@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.163 2009/12/10 23:40:16 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.164 2010/01/19 01:33:17 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> nsplugins-4.3.3.ebuild:
+  Stable for HPPA too.
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -nsplugins-4.3.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.138 2010/01/16 18:20:51 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.139 2010/01/19 01:40:41 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  kdeaccessibility-meta-4.3.3.ebuild:
+  Stable for HPPA too.
 
   16 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   kdeaccessibility-meta-4.3.3.ebuild, kdeaccessibility-meta-4.3.4.ebuild:
