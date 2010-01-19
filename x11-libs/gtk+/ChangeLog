@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.440 2010/01/15 14:18:16 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.441 2010/01/19 18:52:39 ssuominen Exp $
+
+  19 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> gtk+-2.18.5.ebuild,
+  gtk+-2.18.6.ebuild:
+  Require SLOT="0" of media-libs/jpeg wrt #301551.
 
 *gtk+-2.18.6 (15 Jan 2010)
 
