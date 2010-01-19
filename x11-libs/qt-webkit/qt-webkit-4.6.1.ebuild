@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.6.1.ebuild,v 1.1 2010/01/19 14:59:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.6.1.ebuild,v 1.2 2010/01/19 16:03:27 yngwin Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -32,8 +32,7 @@ src_prepare() {
 	if use sparc; then
 		epatch "${FILESDIR}"/sparc-qt-webkit-sigbus.patch
 	fi
-	epatch "${FILESDIR}"/${P}-solaris-jsvalue.patch
-	epatch "${FILESDIR}"/${P}-solaris-strnstr.patch
+	epatch "${FILESDIR}"/${PN}-4.6.0-solaris-strnstr.patch
 	qt4-build_src_prepare
 }
 

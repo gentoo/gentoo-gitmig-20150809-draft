@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.76 2010/01/19 14:59:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.77 2010/01/19 16:03:27 yngwin Exp $
+
+  19 Jan 2010; Ben de Groot <yngwin@gentoo.org> qt-webkit-4.6.1.ebuild:
+  Drop no longer needed patch, fix filename of other solaris patch.
 
 *qt-webkit-4.6.1 (19 Jan 2010)
 
