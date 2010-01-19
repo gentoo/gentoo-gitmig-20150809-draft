@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/flphoto/flphoto-1.3.1.ebuild,v 1.3 2008/11/23 20:25:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/flphoto/flphoto-1.3.1.ebuild,v 1.4 2010/01/19 12:14:06 cla Exp $
 
 EAPI=1
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-docdir=/usr/share/doc/${P} || die
+	econf --with-docdir=/usr/share/doc/${PF} || die
 	emake -j1 || die
 }
 
