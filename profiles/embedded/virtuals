@@ -28,3 +28,4 @@ virtual/tftp			sys-apps/busybox
 virtual/wine			app-emulation/wine
 virtual/utempter 		sys-apps/utempter
 virtual/dev-manager		sys-apps/busybox
+virtual/libiconv		virtual/libc
