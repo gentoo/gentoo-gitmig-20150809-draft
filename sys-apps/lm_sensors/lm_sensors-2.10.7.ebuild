@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.7.ebuild,v 1.5 2008/10/18 18:07:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.10.7.ebuild,v 1.6 2010/01/19 10:47:57 bangert Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -91,9 +91,13 @@ src_compile()  {
 	einfo
 
 	filter-flags -fstack-protector
-
-	emake CC=$(tc-getCC) LINUX=${KV_DIR} I2C_HEADERS=${KV_DIR}/include user \
-		|| die "emake user failed"
+	if kernel_is lt 2 6 31; then
+		emake CC=$(tc-getCC) LINUX=${KV_DIR} I2C_HEADERS=${KV_DIR}/include user \
+			|| die "emake user failed"
+	else
+		emake CC=$(tc-getCC) LINUX=${KV_DIR} user \
+			|| die "emake user failed"
+	fi
 }
 
 src_install() {
@@ -114,7 +118,7 @@ src_install() {
 	dodoc doc/donations doc/fancontrol.txt doc/fan-divisors doc/FAQ \
 		doc/progs doc/temperature-sensors doc/vid
 
-	dohtml doc/lm_sensors-FAQ.html doc/useful_addresses.html
+	dohtml doc/lm_sensors-FAQ.html
 
 	docinto busses
 	dodoc doc/busses/*
