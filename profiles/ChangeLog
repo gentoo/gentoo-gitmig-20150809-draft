@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3805 2010/01/19 13:43:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3806 2010/01/19 16:17:49 spatz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jan 2010; Dror Levin <spatz@gentoo.org> package.mask:
+  Remove Qt 4.6.1 mask, all packages updated.
 
   19 Jan 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
   Mask Qt 4.6.1 for testing before adding the ebuilds
