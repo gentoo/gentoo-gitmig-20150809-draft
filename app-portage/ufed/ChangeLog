@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.72 2010/01/14 12:37:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.73 2010/01/19 00:24:42 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> ufed-0.40.1.ebuild:
+  Stable for HPPA (bug #300519).
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ufed-0.40.1.ebuild:
   stable x86, bug 300519
