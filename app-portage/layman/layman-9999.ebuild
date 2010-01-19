@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.3 2010/01/04 20:20:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.4 2010/01/19 18:12:36 sping Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils distutils git
+inherit distutils git
 
 DESCRIPTION="A python script for retrieving gentoo overlays."
 HOMEPAGE="http://layman.sourceforge.net"
@@ -69,7 +69,7 @@ src_install() {
 	doman doc/layman.8
 	dohtml doc/layman.8.html
 
-	keepdir /usr/local/portage/layman
+	keepdir /var/lib/layman
 }
 
 pkg_postinst() {
@@ -77,25 +77,25 @@ pkg_postinst() {
 
 	einfo "You are now ready to add overlays into your system."
 	einfo
-	einfo "layman -L"
+	einfo "  layman -L"
 	einfo
 	einfo "will display a list of available overlays."
 	einfo
 	elog  "Select an overlay and add it using"
-	einfo
-	elog  "layman -a overlay-name"
-	einfo
+	elog
+	elog  "  layman -a overlay-name"
+	elog
 	elog  "If this is the very first overlay you add with layman,"
 	elog  "you need to append the following statement to your"
 	elog  "/etc/make.conf file:"
 	elog
-	elog  "source /usr/local/portage/layman/make.conf"
+	elog  "  source /var/lib/layman/make.conf"
 	elog
 	elog  "If you modify the 'storage' parameter in the layman"
 	elog  "configuration file (/etc/layman/layman.cfg) you will"
 	elog  "need to adapt the path given above to the new storage"
 	elog  "directory."
-	einfo
+	elog
 	ewarn "Please add the 'source' statement to make.conf only AFTER "
 	ewarn "you added your first overlay. Otherwise portage will fail."
 	epause 5
