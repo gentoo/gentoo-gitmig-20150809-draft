@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.0.1.ebuild,v 1.4 2008/12/31 04:54:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.0.1.ebuild,v 1.5 2010/01/19 16:23:00 cla Exp $
 
 DESCRIPTION="Anti-spam bayesian filter"
 HOMEPAGE="http://getpopfile.org"
@@ -32,7 +32,6 @@ DEPEND="app-arch/unzip"
 
 src_install() {
 	dodoc *.change
-	dohtml -r manual/*
 	rm -rf manual *.change license
 	insinto /usr/share/${PN}
 	doins -r *
