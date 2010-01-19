@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.68 2010/01/14 15:44:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.69 2010/01/19 14:56:46 yngwin Exp $
+
+*qt-sql-4.6.1 (19 Jan 2010)
+
+  19 Jan 2010; Ben de Groot <yngwin@gentoo.org> +qt-sql-4.6.1.ebuild:
+  Version bump
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   qt-sql-4.6.0-r1.ebuild:

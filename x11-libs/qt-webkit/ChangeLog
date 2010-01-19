@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.75 2010/01/14 15:52:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.76 2010/01/19 14:59:39 yngwin Exp $
+
+*qt-webkit-4.6.1 (19 Jan 2010)
+
+  19 Jan 2010; Ben de Groot <yngwin@gentoo.org> +qt-webkit-4.6.1.ebuild:
+  Version bump
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   qt-webkit-4.6.0-r1.ebuild:
