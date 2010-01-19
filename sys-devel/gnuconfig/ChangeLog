@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.41 2010/01/15 22:47:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.42 2010/01/19 20:46:40 haubi Exp $
+
+  19 Jan 2010; Michael Haubenwallner <haubi@gentoo.org>
+  gnuconfig-20090819.ebuild, gnuconfig-99999999.ebuild:
+  add ~ppc-aix keyword (prefix)
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> gnuconfig-20090819.ebuild:
   Add prefix keywords to non-live ebuild
