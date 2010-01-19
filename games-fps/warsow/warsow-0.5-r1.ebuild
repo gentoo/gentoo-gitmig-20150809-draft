@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5-r1.ebuild,v 1.2 2010/01/19 15:38:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5-r1.ebuild,v 1.3 2010/01/19 15:39:29 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator games
@@ -45,7 +45,7 @@ src_prepare() {
 		-e "/fs_basepath =/ s:\.:${GAMES_DATADIR}/${PN}:" \
 		qcommon/files.c \
 		|| die "sed files.c failed"
-	
+
 	sed -i \
 		-e "s:jpeg_mem_src:_&:" \
 		ref_gl/r_image.c || die
