@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.21 2010/01/16 20:07:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.22 2010/01/19 18:35:58 nixnut Exp $
+
+  19 Jan 2010; nixnut <nixnut@gentoo.org> liboggz-1.1.0.ebuild:
+  ppc stable #300697
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> liboggz-1.1.0.ebuild:
   stable x86, bug 300697
