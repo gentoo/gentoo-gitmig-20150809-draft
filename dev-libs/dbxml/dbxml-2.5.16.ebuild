@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16.ebuild,v 1.1 2010/01/19 09:28:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16.ebuild,v 1.2 2010/01/19 09:31:03 dev-zero Exp $
 
 EAPI="2"
 
@@ -94,9 +94,7 @@ src_prepare() {
 		src/perl/config.in || die "sed failed"
 
 	# avoid the automake/autoconf run in src_{configure,compile}
-	ln -sf /usr/share/libtool/config/ltmain.sh dist/ltmain.sh || die "replacing ltmain.sh failed"
-	elibtoolize
-	autoreconf
+	eautoreconf
 }
 
 src_configure() {
