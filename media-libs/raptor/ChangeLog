@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.75 2010/01/15 09:46:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.76 2010/01/19 00:29:51 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org> raptor-1.4.20.ebuild:
+  Stable for HPPA (bug #301306).
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> raptor-1.4.20.ebuild:
   Transfer Prefix keywords
