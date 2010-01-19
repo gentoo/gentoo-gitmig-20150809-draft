@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gdal-grass
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.1 2009/11/21 20:06:52 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.2 2010/01/19 04:53:34 bicatali Exp $
+
+  19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  gdal-grass-1.4.3.ebuild:
+  Multilib proof, thanks Tim Harder bug #301348
 
 *gdal-grass-1.4.3 (21 Nov 2009)
 

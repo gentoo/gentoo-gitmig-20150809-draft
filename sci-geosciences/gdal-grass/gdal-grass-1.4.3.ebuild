@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/gdal-grass-1.4.3.ebuild,v 1.1 2009/11/21 20:06:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/gdal-grass-1.4.3.ebuild,v 1.2 2010/01/19 04:53:34 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -17,7 +17,6 @@ IUSE=""
 
 RDEPEND="sci-libs/gdal
 	sci-geosciences/grass"
-
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -38,6 +37,6 @@ src_install() {
 	#pass the right variables to 'make install' to prevent a sandbox access violation
 	emake DESTDIR="${D}" \
 		GRASSTABLES_DIR="${D}$(gdal-config --prefix)/share/gdal/grass" \
-		AUTOLOAD_DIR="${D}/usr/lib/gdalplugins" \
+		AUTOLOAD_DIR="${D}/usr/$(get_libdir)/gdalplugins" \
 		install || die "emake install failure"
 }
