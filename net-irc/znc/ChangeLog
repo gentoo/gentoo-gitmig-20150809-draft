@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/znc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.27 2009/12/28 20:35:44 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.28 2010/01/19 14:23:53 cla Exp $
+
+*znc-0.078 (19 Jan 2010)
+
+  19 Jan 2010; Dawid Węgliński <cla@gentoo.org> +znc-0.078.ebuild,
+  metadata.xml:
+  Version bump, add extras useflag for extra modules set to be build
 
   28 Dec 2009; Raúl Porcel <armin76@gentoo.org> znc-0.066.ebuild,
   znc-0.074.ebuild, znc-0.076.ebuild:

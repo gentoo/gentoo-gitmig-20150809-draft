@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>net-irc</herd>
 <use>
+	<flag name="extras">Enable some additional modules</flag>
 	<flag name="nomodules">Don't build modules</flag>
 	<flag name="ares">Enables support for asynchronous DNS using the c-ares library</flag>
 </use>
