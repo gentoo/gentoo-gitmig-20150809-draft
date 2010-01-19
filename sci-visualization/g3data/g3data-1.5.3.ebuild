@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.3.ebuild,v 1.2 2010/01/12 15:47:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.3.ebuild,v 1.3 2010/01/19 05:02:57 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -12,20 +12,27 @@ SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE="examples"
+IUSE="doc examples"
 
 RDEPEND=">=x11-libs/gtk+-2.6.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	~app-text/docbook-sgml-utils-0.6.14"
+	doc? ( ~app-text/docbook-sgml-utils-0.6.14 )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
+src_compile() {
+	emake || die "emake failed"
+	# although doc is only 1 man file, it pulls lots of deps
+	if use doc; then
+		emake g3data.1 || die "emake doc failed"
+	fi
+}
+
 src_install() {
 	dobin g3data || die "dobin failed - no binary!"
-	doman g3data.1 || die "doman failed"
 	dodoc README.SOURCE
 	# xpm image is really a png file
 	newicon g3data-icon.xpm g3data.png
@@ -35,5 +42,8 @@ src_install() {
 		dodoc README.TEST
 		insinto /usr/share/doc/${PF}/examples
 		doins test1.png test1.values test2.png test2.values
+	fi
+	if use doc; then
+		doman g3data.1 || die "doman failed"
 	fi
 }

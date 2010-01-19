@@ -15,7 +15,7 @@
 -g3data: main.o sort.o points.o drawing.o g3data.1.gz
 -	$(CC) $(CFLAGS) -o g3data main.o sort.o points.o drawing.o $(LIBS)
 -	strip g3data
-+g3data: main.o sort.o points.o drawing.o g3data.1
++g3data: main.o sort.o points.o drawing.o
 +	$(CC) $(LDFLAGS) -o g3data main.o sort.o points.o drawing.o $(LIBS)
  
  main.o: main.c main.h strings.h vardefs.h
