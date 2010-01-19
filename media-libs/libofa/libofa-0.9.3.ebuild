@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.18 2009/04/27 15:25:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.19 2010/01/19 02:20:18 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://musicip-libofa.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( APL-1.0 GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-libs/expat
