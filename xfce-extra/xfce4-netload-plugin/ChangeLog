@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-netload-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/ChangeLog,v 1.9 2009/12/03 20:37:23 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/ChangeLog,v 1.10 2010/01/19 00:20:05 jer Exp $
+
+  19 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  xfce4-netload-plugin-0.4.0-r1.ebuild:
+  Stable for HPPA (bug #289179).
 
   03 Dec 2009; Brent Baude <ranger@gentoo.org>
   xfce4-netload-plugin-0.4.0-r1.ebuild:
