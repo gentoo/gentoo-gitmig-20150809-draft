@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.88 2010/01/18 12:53:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.89 2010/01/19 15:38:26 fauli Exp $
+
+  19 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  ntop-3.3.10-r2.ebuild:
+  stable x86, security bug 281956
 
 *ntop-3.3.10-r2 (18 Jan 2010)
 
