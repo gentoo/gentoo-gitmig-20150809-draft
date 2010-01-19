@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo-ai
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.21 2009/08/10 00:35:30 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.22 2010/01/19 14:41:41 ssuominen Exp $
+
+  19 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> ufo-ai-2.2.1.ebuild:
+  Fix building (conflicting type of jpeg_mem_src) with jpeg-8 wrt #301450 by
+  Jimmy Jazz.
 
   10 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> ufo-ai-2.2.1.ebuild:
   EAPI=2
