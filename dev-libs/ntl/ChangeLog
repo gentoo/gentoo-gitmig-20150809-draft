@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ntl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.18 2010/01/15 22:54:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.19 2010/01/19 18:55:13 nixnut Exp $
+
+  19 Jan 2010; nixnut <nixnut@gentoo.org> ntl-5.5.2.ebuild:
+  ppc stable #300655
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ntl-5.5.2.ebuild:
   stable x86, bug 300655
