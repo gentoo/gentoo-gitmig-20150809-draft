@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmgtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.13 2007/07/22 05:05:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.14 2010/01/19 11:18:26 s4t4n Exp $
+
+  19 Jan 2010; Michele Noberasco <s4t4n@gentoo.org>; wmgtemp-0.1.ebuild:
+  Restrict lm_sensors version to <3.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmgtemp-0.7.ebuild:
   Drop virtual/x11 references.
