@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/culmus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.40 2009/11/03 09:22:22 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.41 2010/01/20 09:26:38 pva Exp $
+
+*culmus-0.104 (20 Jan 2010)
+
+  20 Jan 2010; Peter Volkov <pva@gentoo.org> +culmus-0.104.ebuild:
+  Version bump.
 
 *culmus-0.103-r1 (03 Nov 2009)
 
