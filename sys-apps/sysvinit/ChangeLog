@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.67 2010/01/08 18:41:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.68 2010/01/20 02:09:05 williamh Exp $
+
+  20 Jan 2010; William Hubbs <williamh@gentoo.org>
+  -sysvinit-2.86-r12.ebuild, -sysvinit-2.87.ebuild,
+  -sysvinit-2.87-r1.ebuild, -sysvinit-2.87-r2.ebuild:
+  removed old versions
 
 *sysvinit-2.87-r3 (08 Jan 2010)
 
