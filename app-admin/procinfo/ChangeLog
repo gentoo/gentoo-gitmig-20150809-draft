@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/procinfo
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.22 2008/05/20 11:47:41 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.23 2010/01/20 17:04:03 cla Exp $
+
+  20 Jan 2010; Dawid Węgliński <cla@gentoo.org> procinfo-18-r1.ebuild,
+  +files/procinfo-18-stat.patch:
+  Don't segfault when /proc/stat exceeds 1024 characters (bug #300611)
 
   20 May 2008; Raúl Porcel <armin76@gentoo.org> procinfo-18-r1.ebuild:
   Add ~ia64

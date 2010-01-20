@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.11 2008/05/20 11:47:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.12 2010/01/20 17:04:03 cla Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,6 +18,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/kernel-2.6.patch
 	epatch "${FILESDIR}"/cpu-usage-fix.patch
 	epatch "${FILESDIR}"/${PN}-flags.patch
+	epatch "${FILESDIR}"/${P}-stat.patch
 }
 
 src_compile() {
