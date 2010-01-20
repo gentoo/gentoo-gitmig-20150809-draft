@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.3.ebuild,v 1.5 2009/12/21 15:45:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.3.ebuild,v 1.6 2010/01/20 21:15:41 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="alsa dvdr gpac lame gstreamer quicktime sox vorbis"
 
 # This ebuild would benefit a lot of USE dependencies but that has to wait for
