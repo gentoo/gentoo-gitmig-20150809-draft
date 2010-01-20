@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-2.0.2.ebuild,v 1.8 2009/08/30 09:55:34 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-2.0.2.ebuild,v 1.9 2010/01/20 07:56:38 kolmodin Exp $
 
 inherit base autotools eutils ghc-package
 
@@ -45,6 +45,7 @@ pkg_setup() {
 src_unpack() {
 	base_src_unpack
 
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.0.2-add-dummy-base-dependency.diff"
 	cd "${S}/tools"
 	epatch "${FILESDIR}/${PN}-1.0.9-bashcomp.patch"
