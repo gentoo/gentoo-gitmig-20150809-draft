@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.8.3.ebuild,v 1.1 2009/12/17 23:17:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.8.3.ebuild,v 1.2 2010/01/20 22:30:15 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -31,7 +31,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable policykit polkit)"
+	G2CONF="${G2CONF}
+		$(use_enable policykit polkit)
+		--localstatedir=/var"
 
 	enewgroup stb-admin || die "Failed to create stb-admin group"
 }
@@ -54,11 +56,6 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
-}
-
-src_compile() {
-	# Autotools insanity, localstatedir gets set to /usr/local/var by default
-	gnome2_src_compile --localstatedir="${ROOT}"/var
 }
 
 src_install() {
