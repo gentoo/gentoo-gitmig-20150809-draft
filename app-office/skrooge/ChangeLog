@@ -1,6 +1,9 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.4 2010/01/13 12:27:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.5 2010/01/20 20:43:30 maekke Exp $
+
+  20 Jan 2010; Markus Meier <maekke@gentoo.org> skrooge-0.5.5.ebuild:
+  x86 stable, bug #300204
 
   13 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> skrooge-0.5.5.ebuild:
   amd64 stable wrt #300204
