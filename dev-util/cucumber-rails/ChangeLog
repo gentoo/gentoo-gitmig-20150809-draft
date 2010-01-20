@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cucumber-rails
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.4 2010/01/15 09:57:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.5 2010/01/20 07:23:04 graaff Exp $
+
+*cucumber-rails-0.2.4 (20 Jan 2010)
+
+  20 Jan 2010; Hans de Graaff <graaff@gentoo.org>
+  +cucumber-rails-0.2.4.ebuild:
+  Version bump.
 
 *cucumber-rails-0.2.3-r1 (15 Jan 2010)
 
