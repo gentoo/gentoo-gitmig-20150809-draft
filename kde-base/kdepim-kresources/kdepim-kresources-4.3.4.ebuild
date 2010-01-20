@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.3.4.ebuild,v 1.1 2009/12/01 10:26:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.3.4.ebuild,v 1.2 2010/01/20 17:47:03 abcd Exp $
 
 EAPI="2"
 
@@ -28,11 +28,11 @@ KMEXTRACTONLY="
 KMLOADLIBS="libkdepim"
 
 src_prepare() {
-	local kconfig_compiler="${KDEDIR}/bin/kconfig_compiler"
+	local kconfig_compiler="${EKDEDIR}/bin/kconfig_compiler"
 
 	pushd kaddressbook/common
 	# create the kabprefs_base.h file
-	${kconfig_compiler} kaddressbook.kcfg kabprefs_base.kcfgc
+	"${kconfig_compiler}" kaddressbook.kcfg kabprefs_base.kcfgc
 	popd
 
 	kde4-meta_src_prepare
@@ -42,7 +42,7 @@ src_install() {
 	kde4-meta_src_install
 
 	# Install headers needed by kdepim-wizards
-	insinto "${PREFIX}"/include/${PN}
+	insinto "${KDEDIR}"/include/${PN}
 	doins "${CMAKE_BUILD_DIR}"/${KMMODULE}/{groupwise,egroupware,slox}/*.h || \
 			die "Failed to install extra header files"
 }
