@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.85 2010/01/19 14:47:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.86 2010/01/20 12:25:01 spatz Exp $
+
+  20 Jan 2010; Dror Levin <spatz@gentoo.org> qt-core-4.6.1.ebuild,
+  +files/qt-core-4.6.1-nolibx11.patch:
+  Remake nolibx11 patch for 4.6.1 and remove hebrew patch as it was included
+  upstream.
 
 *qt-core-4.6.1 (19 Jan 2010)
 
