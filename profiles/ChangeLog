@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3810 2010/01/20 15:38:29 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3811 2010/01/20 17:07:06 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jan 2010; Peter Volkov <pva@gentoo.org> thirdpartymirrors:
+  Drop broken mirrors: efair.ru and smudge-it.co.uk for imagemagick and
+  apache.
 
   20 Jan 2010; Dror Levin <spatz@gentoo.org> package.mask:
   Unmask Qt 4.6.1 after patch review and mask x11-libs/qt-declarative-4.6.0
