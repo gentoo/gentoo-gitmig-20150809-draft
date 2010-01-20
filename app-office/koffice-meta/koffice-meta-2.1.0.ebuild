@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.1.0.ebuild,v 1.5 2010/01/14 02:06:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.1.0.ebuild,v 1.6 2010/01/20 21:52:55 ranger Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2"
 
 SLOT="2"
-KEYWORDS="amd64 hppa x86"
+KEYWORDS="amd64 hppa ~ppc64 x86"
 IUSE="nls"
 
 RDEPEND="
