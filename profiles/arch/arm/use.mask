@@ -96,7 +96,6 @@ fluidsynth
 gnomecd
 lapack
 cblas
-webkit
 prolog
 sid
 libmms

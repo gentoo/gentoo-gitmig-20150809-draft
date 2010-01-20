@@ -1,13 +1,13 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.56 2010/01/20 18:44:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.57 2010/01/20 19:01:24 armin76 Exp $
 
   20 Jan 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Package.use.mask thumbnail for konqueror and dolphin since it needs
   mplayer
 
   20 Jan 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask pm-utils, wicd
+  Use.mask pm-utils, wicd and unmask webkit
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask app-portage/cfg-update kde
