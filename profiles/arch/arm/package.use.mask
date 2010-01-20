@@ -1,6 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.14 2010/01/16 17:47:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.15 2010/01/20 18:44:40 armin76 Exp $
+
+
+# Raúl Porcel <armin76@gentoo.org> (20 Jan 2010)
+# Needs mplayer
+kde-base/dolphin thumbnail
+kde-base/konqueror thumbnail
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qt-multimedia is not keyworded, bug 293671
