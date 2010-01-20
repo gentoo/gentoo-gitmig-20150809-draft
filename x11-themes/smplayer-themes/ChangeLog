@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/smplayer-themes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.23 2009/04/13 21:32:20 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.24 2010/01/20 18:43:12 yngwin Exp $
+
+*smplayer-themes-0.1.20 (20 Jan 2010)
+
+  20 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  -smplayer-themes-0.1.15.ebuild, -smplayer-themes-0.1.16.ebuild,
+  -smplayer-themes-0.1.17.ebuild, +smplayer-themes-0.1.20.ebuild:
+  Remove obsolete versions. Version bump.
 
   13 Apr 2009; Brent Baude <ranger@gentoo.org>
   smplayer-themes-0.1.18.ebuild:
