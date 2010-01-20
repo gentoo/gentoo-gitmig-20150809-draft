@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.24 2009/12/29 18:00:16 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.25 2010/01/20 17:56:04 darkside Exp $
+
+  20 Jan 2010; Jeremy Olexa <darkside@gentoo.org> midori-0.2.2.ebuild:
+  Add missing bdep on dev-util/intltool, mandatory according to the build
+  system
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org> midori-0.2.0.ebuild,
   midori-0.2.1.ebuild, midori-0.2.2.ebuild:

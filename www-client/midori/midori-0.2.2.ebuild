@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.2.ebuild,v 1.2 2009/12/29 18:00:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.2.ebuild,v 1.3 2010/01/20 17:56:04 darkside Exp $
 
 EAPI=2
 inherit xfconf multilib
@@ -26,6 +26,7 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 
 DEPEND="${RDEPEND}
 	dev-lang/python
+	dev-util/intltool
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
 	html? ( dev-python/docutils )
