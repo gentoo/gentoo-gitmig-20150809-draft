@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5204 2010/01/20 18:50:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5205 2010/01/20 23:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -86,6 +86,7 @@ app-admin/ulogd:sqlite - Build SQLITE3 output plugin to save packets in an sqlit
 app-admin/webalizer:xtended - Include the 404 extension
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-arch/cabextract:extra-tools - Install experimental tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
+app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/dump:ermt - encrypted rmt support
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu.
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
