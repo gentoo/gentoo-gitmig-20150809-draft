@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2_p1-r1.ebuild,v 1.5 2009/12/27 11:55:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2_p1-r1.ebuild,v 1.6 2010/01/20 19:49:15 bicatali Exp $
 
 EAPI="2"
 
@@ -23,7 +23,10 @@ RDEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]
 	gtk? ( >=dev-ml/lablgtk-2.10.1[ocamlopt?] )"
 DEPEND="${RDEPEND}
 	doc? (
-		dev-tex/hevea virtual/latex-base
+		virtual/latex-base
+		dev-tex/hevea
+		dev-tex/xcolor
+		|| ( dev-texlive/texlive-pictures app-text/ptex )
 		|| ( dev-texlive/texlive-mathextra app-text/ptex )
 		)"
 
