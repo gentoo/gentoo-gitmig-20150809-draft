@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.4 2009/01/29 08:31:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.5 2010/01/20 20:09:05 maekke Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/fteqw/qclibsrc${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="test"
 
