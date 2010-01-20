@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.1.ebuild,v 1.2 2010/01/19 18:55:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.1.ebuild,v 1.3 2010/01/20 12:27:23 spatz Exp $
 
 EAPI="2"
 inherit confutils eutils qt4-build
@@ -57,10 +57,6 @@ src
 tools/linguist/phrasebooks
 tools/linguist/shared
 tools/shared"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-fix-qgraphicsscence.patch
-)
 
 pkg_setup() {
 	if ! use qt3support; then
