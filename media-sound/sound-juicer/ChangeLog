@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.176 2010/01/18 00:25:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.177 2010/01/20 21:37:27 eva Exp $
+
+  20 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -sound-juicer-2.24.0.ebuild, sound-juicer-2.26.1.ebuild,
+  sound-juicer-2.26.2.ebuild, -sound-juicer-2.28.0.ebuild,
+  sound-juicer-2.28.1.ebuild:
+  Require a non minimal libcdio, bug #301392. Clean up old revisions.
 
   18 Jan 2010; Jeroen Roovers <jer@gentoo.org> sound-juicer-2.26.1.ebuild,
   sound-juicer-2.26.2.ebuild, sound-juicer-2.28.0.ebuild,
