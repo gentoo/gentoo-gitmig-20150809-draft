@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.45 2010/01/20 12:57:13 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.46 2010/01/20 19:21:19 scarabeus Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -87,8 +87,11 @@ base_src_prepare() {
 				EPATCH_SOURCE=${x}
 				epatch
 				EPATCH_SOURCE=${oldval}
-			else
+			elif [[ -f "${x}" ]]; then
 				epatch "${x}"
+			else
+				eqawarn "File or directory \"${x}\" does not exist."
+				eqawarn "Check your PATCHES array or add missing file/directory."
 			fi
 		done
 	else
