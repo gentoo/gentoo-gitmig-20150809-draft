@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.10.ebuild,v 1.3 2009/12/28 12:00:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.10.ebuild,v 1.4 2010/01/20 23:45:12 abcd Exp $
 
 EAPI="2"
 
@@ -11,19 +11,21 @@ HOMEPAGE="http://eigen.tuxfamily.org/"
 SRC_URI="http://bitbucket.org/eigen/eigen/get/${PV}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="2"
 IUSE="debug doc examples"
 
-RDEPEND="
-	!dev-cpp/eigen:0
+COMMON_DEPEND="
 	examples? (
 		x11-libs/qt-gui:4
 		x11-libs/qt-opengl:4
 	)
 "
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
+"
+RDEPEND="${COMMON_DEPEND}
+	!dev-cpp/eigen:0
 "
 
 S="${WORKDIR}/${PN}"
@@ -61,7 +63,7 @@ src_install() {
 }
 
 src_test() {
-	mycmakeargs+=(
+	mycmakeargs=(
 		-DEIGEN_BUILD_TESTS=ON
 		-DEIGEN_TEST_NO_FORTRAN=ON
 	)
