@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/net-sftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.36 2010/01/04 10:52:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.37 2010/01/20 19:15:30 graaff Exp $
+
+*net-sftp-2.0.4-r1 (11 Jan 2010)
+
+  11 Jan 2010; Hans de Graaff <graaff@gentoo.org> +net-sftp-2.0.4-r1.ebuild:
+  Converted to ruby-fakegem. Restricted tests for now since they don't work
+  yet. Dropped ia64 keyword due to new echoe dependency: #301657.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   net-sftp-1.1.1.ebuild, net-sftp-2.0.4.ebuild:

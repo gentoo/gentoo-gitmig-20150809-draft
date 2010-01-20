@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.11 2010/01/04 11:13:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.12 2010/01/20 19:14:00 graaff Exp $
+
+*net-scp-1.0.2-r1 (20 Jan 2010)
+
+  20 Jan 2010; Hans de Graaff <graaff@gentoo.org> +net-scp-1.0.2-r1.ebuild:
+  Convert to ruby-fakegem. Drop ia64 keyword due to new echoe dependency:
+  #301657.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> net-scp-1.0.2.ebuild:
   Transfer Prefix keywords
