@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.46.ebuild,v 1.2 2009/11/23 17:51:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.46.ebuild,v 1.3 2010/01/20 19:41:50 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.logiqx.com/Tools/DatUtil/dutil${PV//.}.zip
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-arch/unzip"
