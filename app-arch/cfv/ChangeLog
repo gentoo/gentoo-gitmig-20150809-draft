@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/cfv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.35 2010/01/01 19:31:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.36 2010/01/20 23:35:48 swegener Exp $
+
+  20 Jan 2010; Sven Wegener <swegener@gentoo.org> cfv-1.18.3.ebuild,
+  metadata.xml:
+  Allow checking .torrent files by pulling in net-p2p/bittorrent or
+  net-p2p/bittornado, bug #294768.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cfv-1.18.3.ebuild:
   Transfer Prefix keywords
