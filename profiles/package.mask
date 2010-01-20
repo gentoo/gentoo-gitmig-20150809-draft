@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11133 2010/01/20 23:15:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11134 2010/01/20 23:21:47 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1269,12 +1269,6 @@ app-text/gtranslator
 # Masked until somebody picks it up
 dev-cpp/bakery
 
-# Gilles Dartiguelongue <eva@gentoo.org> (12 Apr 2008)
-# Masking gnome-system-tools because it is broken,
-# to help fix it, see bug #214265
-=app-admin/gnome-system-tools-2.14*
-=app-admin/system-tools-backends-1.4*
-
 # Raúl Porcel <armin76@gentoo.org> (8 Apr 2008)
 # Masked for testing
 #>=mail-client/mozilla-thunderbird-3.0_alpha1
@@ -1326,13 +1320,6 @@ sys-fs/redirfs
 # Sebastien Fabbro <bicatali@gentoo.org> (05 Feb 2008)
 # sci-libs/metis-5.* still experimental
 >=sci-libs/metis-4.99
-
-# Gilles Dartiguelongue <eva@gentoo.org> (24 Jan 2008)
-# add masked gnome-system-tools-2.20 and dependencies
-# for testing purpose
-dev-libs/liboobs
->=app-admin/system-tools-backends-2
->=app-admin/gnome-system-tools-2.20
 
 # Raúl Porcel <armin76@gentoo.org> (12 Dec 2007)
 # Segfaults with IMAP
