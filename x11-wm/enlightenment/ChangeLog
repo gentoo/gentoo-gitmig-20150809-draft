@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.122 2010/01/18 18:53:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.123 2010/01/20 02:13:21 ranger Exp $
+
+  20 Jan 2010; Brent Baude <ranger@gentoo.org> enlightenment-1.0.1.ebuild:
+  stable ppc64, bug 301308
 
   18 Jan 2010; Jeroen Roovers <jer@gentoo.org> enlightenment-1.0.1.ebuild:
   Stable for HPPA (bug #301308).
