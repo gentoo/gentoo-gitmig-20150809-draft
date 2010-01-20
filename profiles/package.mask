@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11132 2010/01/20 19:28:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11133 2010/01/20 23:15:41 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -943,11 +943,6 @@ games-fps/quake3-urbanterror
 # 0.7 is API/ABI incompatible but is the way to go.
 # Masking to lower maintainance headache, bug #291501.
 =app-misc/tracker-0.6*
-
-# Gilles Dartiguelongue <eva@gentoo.org> (01 Nov 2009)
-# Old gnome component superseeded by seahorse.
-# See bug #291456 for details.
-gnome-extra/gnome-keyring-manager
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # Masked for testing. Waiting for xfdesktop release.
