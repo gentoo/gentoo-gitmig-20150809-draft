@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.22.ebuild,v 1.1 2009/09/02 17:45:43 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.26.ebuild,v 1.1 2010/01/20 17:56:13 billie Exp $
 
 EAPI=2
 
@@ -12,23 +12,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="acl xattr zlib"
-#IUSE="test"
-
-# http://libburnia-project.org/ticket/147#comment:4
-# Currently the tests are outdated. The time needed to repair the problematic code
-# in test_rockridge.c would be better invested in re-arranging the test suit
-# around the official libisofs API. Everybody seems busy with other things,
-# though.
-#
-# So it is best to disable test/test until its fate is decided.
-RESTRICT="test"
 
 RDEPEND="acl? ( virtual/acl )
 	xattr? ( sys-apps/attr )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-#	test? ( >=dev-util/cunit-2.1 )"
 
 src_configure() {
 	econf --disable-static \
@@ -37,13 +26,14 @@ src_configure() {
 	$(use_enable zlib)
 }
 
-src_test() {
-	emake check || die "building tests failed"
-	test/test || die "running tests failed"
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README NEWS Roadmap TODO
+
+	dodoc AUTHORS NEWS README Roadmap TODO || die "dodoc failed"
+
+	cd "${S}"/doc
+	dodoc checksums.txt susp_aaip_2_0.txt susp_aaip_isofs_names.txt Tutorial \
+		zisofs_format.txt || die "dodoc failed"
+
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }

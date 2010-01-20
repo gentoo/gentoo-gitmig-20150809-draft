@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.50 2010/01/14 02:32:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.51 2010/01/20 17:56:13 billie Exp $
+
+*libisofs-0.6.26 (20 Jan 2010)
+
+  20 Jan 2010; Daniel Pielmeier <billie@gentoo.org> -libisofs-0.6.12.ebuild,
+  -libisofs-0.6.22.ebuild, +libisofs-0.6.26.ebuild:
+  Version bump. Remove old.
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> libisofs-0.6.24.ebuild:
   Stable for HPPA (bug #287526).
