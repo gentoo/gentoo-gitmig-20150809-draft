@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5203 2010/01/19 18:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5204 2010/01/20 18:50:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1144,7 +1144,6 @@ games-sports/xmoto:editor - Depend on inkscape, scripts to convert svg to level 
 games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:auth - Add authentication capability
-games-strategy/freelords:editor - Installs optional map editor
 games-strategy/glest:editor - Also install a level editor
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
