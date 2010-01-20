@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.56 2010/01/11 16:49:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.57 2010/01/20 00:11:09 abcd Exp $
+
+  20 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild:
+  Add prefix keywords, support
 
   11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   dbus-python-0.83.0-r1.ebuild:

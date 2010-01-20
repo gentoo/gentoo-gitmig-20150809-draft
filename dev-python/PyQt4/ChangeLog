@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.103 2010/01/15 15:15:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.104 2010/01/20 00:13:26 abcd Exp $
+
+  20 Jan 2010; Jonathan Callen <abcd@gentoo.org> PyQt4-4.7.ebuild:
+  Add prefix keywords, support
 
 *PyQt4-4.7 (15 Jan 2010)
 
