@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.25 2010/01/19 13:50:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.26 2010/01/20 13:18:56 hwoarang Exp $
+
+  20 Jan 2010; Markos Chandras <hwoarang@gentoo.org>
+  zen-sources-2.6.33_rc4_p1.ebuild:
+  Remove obsolete patch. Fixes bug #301517
 
 *zen-sources-2.6.32_p5 (19 Jan 2010)
 *zen-sources-2.6.31_p11 (19 Jan 2010)

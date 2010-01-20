@@ -46,7 +46,6 @@ src_unpack(){
 	kernel-2_src_unpack
 	cd "${S}"
 	epatch "${DISTDIR}"/"${ZEN_FILE}"
-	epatch "${FILESDIR}"/"${P}-kernel-sysctl.c.patch"
 }
 
 K_EXTRAEINFO="For more info on zen-sources and details on how to report problems, see: \
