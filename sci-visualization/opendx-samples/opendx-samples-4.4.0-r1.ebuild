@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.4.0-r1.ebuild,v 1.3 2010/01/18 05:57:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.4.0-r1.ebuild,v 1.4 2010/01/20 20:07:53 maekke Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SLOT="0"
 
 S="${WORKDIR}/${MY_P}"
 
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=sci-visualization/opendx-4.4.4-r2"
