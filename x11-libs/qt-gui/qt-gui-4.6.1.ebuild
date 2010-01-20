@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.1.ebuild,v 1.3 2010/01/20 12:27:23 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.1.ebuild,v 1.4 2010/01/20 16:27:20 spatz Exp $
 
 EAPI="2"
 inherit confutils eutils qt4-build
@@ -61,15 +61,6 @@ tools/shared"
 pkg_setup() {
 	if ! use qt3support; then
 		ewarn "WARNING: if you need 'qtconfig', you _must_ enable qt3support."
-	fi
-
-	if use raster; then
-		ewarn "WARNING: You have enabled raster backend rendering engine."
-		ewarn "This is a new feature and may lead to composite problems"
-		ewarn "screen corruption and broken qt4 or kde4 applications. "
-		ewarn "If you encounter such problems please"
-		ewarn "remove 'raster' use flag and re-compile qt-gui before"
-		ewarn "filling a bug on gentoo bugzilla."
 	fi
 
 	confutils_use_depend_all gtk glib
