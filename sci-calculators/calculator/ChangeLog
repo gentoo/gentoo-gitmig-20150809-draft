@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/calculator
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.27 2009/04/10 15:08:44 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.28 2010/01/20 19:37:44 ranger Exp $
+
+  20 Jan 2010; Brent Baude <ranger@gentoo.org> calculator-1.6.36.ebuild:
+  Marking calculator-1.6.36 ppc64 for bug 276854
 
   10 Apr 2009; Raúl Porcel <armin76@gentoo.org> calculator-1.6.34.ebuild,
   calculator-1.6.35.ebuild, calculator-1.6.36.ebuild:
