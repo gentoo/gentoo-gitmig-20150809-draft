@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/defcon-demo/defcon-demo-1.42.ebuild,v 1.2 2008/12/08 02:50:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/defcon-demo/defcon-demo-1.42.ebuild,v 1.3 2010/01/20 18:28:29 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils toolchain-funcs games
@@ -13,7 +13,7 @@ DESCRIPTION="Global thermonuclear war simulation with multiplayer support"
 HOMEPAGE="http://www.introversion.co.uk/defcon/"
 SRC_URI="http://download.introversion.co.uk/defcon/linux/${MY_P}.tar.gz"
 
-LICENSE="defcon"
+LICENSE="Introversion"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+system-libs"
