@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ttcut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.21 2009/05/29 18:33:30 billie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.22 2010/01/20 18:23:14 billie Exp $
+
+*ttcut-0.19.6-r2 (20 Jan 2010)
+
+  20 Jan 2010; Daniel Pielmeier <billie@gentoo.org> +ttcut-0.19.6-r2.ebuild,
+  +files/ttcut-0.19.6-deprecated.patch,
+  +files/ttcut-0.19.6-transcode-compat.patch:
+  Revison bump. This fixes encoding mode with current stable transcode.
 
   29 May 2009; Pielmeier Daniel <billie@gentoo.org> metadata.xml,
   ttcut-0.19.6-r1.ebuild, ttcut-9999.ebuild:
