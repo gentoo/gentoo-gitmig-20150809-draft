@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r4.ebuild,v 1.4 2010/01/14 06:47:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r4.ebuild,v 1.5 2010/01/20 20:03:15 ranger Exp $
 
 EAPI=1
 VIRTUALX_REQUIRED="manual"
@@ -18,7 +18,7 @@ SRC_URI="http://www.h5l.org/dist/src/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="afs +berkdb hdb-ldap ipv6 otp pkinit ssl test threads X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
