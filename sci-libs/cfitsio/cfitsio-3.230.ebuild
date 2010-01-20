@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.200.ebuild,v 1.1 2009/09/24 05:00:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.230.ebuild,v 1.1 2010/01/20 01:48:34 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -31,7 +31,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable threads reentrant) \
+		$(use_enable threads) \
 		$(use_enable fortran)
 }
 
