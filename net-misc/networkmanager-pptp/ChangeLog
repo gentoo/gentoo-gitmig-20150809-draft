@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-pptp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.8 2010/01/18 15:32:56 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.9 2010/01/20 17:56:17 armin76 Exp $
+
+  20 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  networkmanager-pptp-0.7.1.ebuild, networkmanager-pptp-0.7.2.ebuild:
+  Drop arm keyword
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org>
   networkmanager-pptp-0.7.1.ebuild, networkmanager-pptp-0.7.2.ebuild,
