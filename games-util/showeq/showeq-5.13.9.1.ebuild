@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.13.7.0.ebuild,v 1.3 2010/01/20 11:33:32 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.13.9.1.ebuild,v 1.1 2010/01/20 11:33:32 tupone Exp $
 
 EAPI=2
 inherit eutils qt3 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/seq/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="virtual/libpcap
