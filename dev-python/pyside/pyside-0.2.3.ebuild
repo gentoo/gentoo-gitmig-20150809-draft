@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.2.ebuild,v 1.4 2010/01/20 23:41:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.3.ebuild,v 1.1 2010/01/20 23:41:39 ayoy Exp $
 
 EAPI="2"
 
 inherit cmake-utils
 
-MY_P="${PN}-qt4.5+${PV}"
+MY_P="${PN}-qt4.6+${PV}"
 
 DESCRIPTION="Python bindings for the Qt framework"
 HOMEPAGE="http://www.pyside.org/"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-libs/boost-1.41.0[python]
-	~dev-python/boostpythongenerator-0.3.2
+	~dev-python/boostpythongenerator-0.3.3
 	>=x11-libs/qt-core-4.5.0
 	>=x11-libs/qt-assistant-4.5.0
 	>=x11-libs/qt-gui-4.5.0
@@ -35,7 +35,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-qtscripttools.patch"
-	sed -e 's/-2.6//' -i data/CMakeLists.txt || die "sed failed"
+	sed -e 's:cmake-${CMAKE_MAJOR_VERSION}\.${CMAKE_MINOR_VERSION}:cmake:' \
+	    -i data/CMakeLists.txt || die "sed failed"
 }
 
 src_install() {
