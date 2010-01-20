@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.129 2010/01/19 01:02:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.130 2010/01/20 18:23:59 abcd Exp $
+
+  20 Jan 2010; Jonathan Callen <abcd@gentoo.org> kcminit-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kcminit-4.3.3.ebuild:
   Stable for HPPA too.

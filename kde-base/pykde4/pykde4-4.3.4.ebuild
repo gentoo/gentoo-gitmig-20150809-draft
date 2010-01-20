@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.4.ebuild,v 1.5 2010/01/16 11:28:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.4.ebuild,v 1.6 2010/01/20 18:32:11 abcd Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ PYTHON_USE_WITH="threads"
 inherit python kde4-meta
 
 DESCRIPTION="Python bindings for KDE4"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="akonadi debug examples policykit semantic-desktop"
 
 DEPEND="
