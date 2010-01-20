@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r2.ebuild,v 1.3 2009/02/08 14:00:03 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.1 2010/01/20 22:30:23 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -25,6 +25,8 @@ DEPEND=">=dev-lang/python-2.4
 	>=gnome-base/gnome-desktop-2.10"
 RDEPEND="${DEPEND}"
 
+RESTRICT="test"
+
 DOCS="AUTHORS ChangeLog NEWS"
 
 src_unpack() {
@@ -33,6 +35,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-binary-data.patch
 	epatch "${FILESDIR}"/${P}-transparent.patch
+	epatch "${FILESDIR}"/${P}-pkgconfig.patch
 }
 
 src_install() {
