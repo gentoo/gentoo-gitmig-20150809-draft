@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11131 2010/01/20 18:37:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11132 2010/01/20 19:28:12 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Dror Levin <spatz@gentoo.org> (20 January 2010)
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
+# Last release in 2003.  Doesn't work with latest zlib.
+# masked for removal on 20100219
+games-util/dzip
+
+# Dror Levin <spatz@gentoo.org> (20 Jan 2010)
 # Not compatible with Qt 4.6.1 and newer version not
 # yet available.
 ~x11-libs/qt-declarative-4.6.0
