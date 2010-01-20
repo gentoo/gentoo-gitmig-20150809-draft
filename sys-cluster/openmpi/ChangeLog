@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.57 2010/01/06 22:40:44 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.58 2010/01/20 02:24:37 jsbronder Exp $
+
+*openmpi-1.4.1 (20 Jan 2010)
+
+  20 Jan 2010; Justin Bronder <jsbronder@gentoo.org> +openmpi-1.4.1.ebuild:
+  Bump sys-cluster/openmpi-1.4.1 and workaround bad wrapper include path
 
   06 Jan 2010; Justin Bronder <jsbronder@gentoo.org>
   -openmpi-1.2.6-r1.ebuild:
