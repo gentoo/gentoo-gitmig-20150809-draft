@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.49 2010/01/14 00:50:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.50 2010/01/20 20:30:15 abcd Exp $
+
+  20 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  keditbookmarks-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> keditbookmarks-4.3.3.ebuild:
   Stable for HPPA too.
