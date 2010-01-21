@@ -1,0 +1,48 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.1 2010/01/21 10:55:23 flameeyes Exp $
+
+EAPI=2
+
+USE_RUBY="ruby18"
+
+RUBY_FAKEGEM_TASK_TEST="spec"
+
+inherit ruby-fakegem
+
+DESCRIPTION="A fast and very simple Ruby web server"
+HOMEPAGE="http://code.macournoyer.com/thin/"
+
+LICENSE="Ruby"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE=""
+
+DEPEND="dev-util/ragel"
+RDEPEND=""
+
+ruby_add_rdepend ">=dev-ruby/daemons-1.0.9
+					>=dev-ruby/rack-1.0.0
+					>=dev-ruby/eventmachine-0.12.6"
+
+all_ruby_prepare() {
+	# Fix Ragel-based parser generation (uses a *very* old syntax that
+	# is not supported in Gentoo)
+	sed -i -e 's: | rlgen-cd::' Rakefile || die
+
+	# Fix specs' dependencies so that the extension is not rebuilt
+	# when running tests
+	sed -i -e '/:spec =>/s:^:#:' tasks/spec.rake || die
+
+	# Disable a test that is known for freezing the testsuite,
+	# reported upstream.
+	sed -i \
+		-e '/should force kill process in pid file/,/^  end/ s:^:#:' \
+		spec/daemonizing_spec.rb || die
+
+	epatch "${FILESDIR}"/${P}-tests.patch
+}
+
+each_ruby_compile() {
+	${RUBY} -S rake compile || die "rake compile failed"
+}

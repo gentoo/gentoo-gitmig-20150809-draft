@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/thin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.8 2009/11/28 09:57:38 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.9 2010/01/21 10:55:23 flameeyes Exp $
+
+*thin-1.2.5-r1 (21 Jan 2010)
+
+  21 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +thin-1.2.5-r1.ebuild, +files/thin-1.2.5-tests.patch:
+  Port to fakegem, add a patch to fix partly-broken tests.
 
 *thin-1.2.5 (28 Nov 2009)
 
