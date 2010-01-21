@@ -6,20 +6,6 @@ retrieving revision 1.6.4.1
 diff -u -r1.6 -r1.6.4.1
 --- dkim-rep.c	22 Nov 2009 08:15:50 -0000	1.6
 +++ dkim-rep.c	20 Jan 2010 21:59:36 -0000	1.6.4.1
-@@ -4,11 +4,11 @@
- **
- **  Copyright (c) 2009, The OpenDKIM Project.  All rights reserved.
- **
--**  $Id: opendkim-1.2.2-repcalc.patch,v 1.1 2010/01/21 01:53:35 dragonheart Exp $
-+**  $Id: opendkim-1.2.2-repcalc.patch,v 1.1 2010/01/21 01:53:35 dragonheart Exp $
- */
- 
- #ifndef lint
--static char dkim_rep_c_id[] = "@(#)$Id: opendkim-1.2.2-repcalc.patch,v 1.1 2010/01/21 01:53:35 dragonheart Exp $";
-+static char dkim_rep_c_id[] = "@(#)$Id: opendkim-1.2.2-repcalc.patch,v 1.1 2010/01/21 01:53:35 dragonheart Exp $";
- #endif /* !lint */
- 
- #include "build-config.h"
 @@ -87,7 +87,7 @@
  		snprintf((char *) cvt, len, "%02x", digest[c]);
  		cvt += 2;
