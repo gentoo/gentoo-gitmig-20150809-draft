@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11134 2010/01/20 23:21:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11135 2010/01/21 09:42:51 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -100,7 +100,11 @@ app-dicts/qvortaro
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing
-
+# g-ctan can be unmasked for all arches (only ~amd64 and ~x86)
+>=app-portage/g-ctan-2009.1
+# texmfind has some more keywords
+>=dev-tex/texmfind-2009.1
+#
 >=app-text/texlive-core-2009
 >=app-text/texlive-2009
 >=dev-texlive/texlive-basic-2009

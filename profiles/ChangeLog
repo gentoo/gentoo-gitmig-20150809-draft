@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3815 2010/01/21 00:53:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3816 2010/01/21 09:42:51 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jan 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask g-ctan and texmfind in their 2009.1 versions along with TeXLive 2009
 
   21 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> updates/1Q-2010:
   Do slotmove for i18n.
