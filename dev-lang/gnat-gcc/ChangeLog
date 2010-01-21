@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gnat-gcc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.31 2009/03/28 15:47:25 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.32 2010/01/21 11:27:31 george Exp $
+
+*gnat-gcc-4.3.3-r1 (21 Jan 2010)
+
+  21 Jan 2010; George Shapovalov <george@gentoo.org>
+  +gnat-gcc-4.3.3-r1.ebuild:
+  new revision, uses new bootstrap, based on gcc-4.3
 
   28 Mar 2009; nixnut <nixnut@gentoo.org> gnat-gcc-4.3.2.ebuild:
   ppc stable #257800
