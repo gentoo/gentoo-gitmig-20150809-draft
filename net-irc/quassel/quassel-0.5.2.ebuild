@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.2.ebuild,v 1.1 2010/01/19 12:10:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.2.ebuild,v 1.2 2010/01/21 11:32:01 scarabeus Exp $
 
 EAPI="2"
 
 MY_P="${P/_/-}"
 
-inherit cmake-utils eutils
+inherit base cmake-utils eutils
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
@@ -53,6 +53,8 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS ChangeLog README"
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}/0.5.2-fix_x11_detection.patch" )
 
 pkg_setup() {
 	if ! use monolithic && ! use server && ! use X ; then

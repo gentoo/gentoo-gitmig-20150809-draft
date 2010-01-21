@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.77 2010/01/19 12:10:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.78 2010/01/21 11:32:01 scarabeus Exp $
+
+  21 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.5.2-fix_x11_detection.patch, quassel-0.5.2.ebuild:
+  Fix the X11 detection.
 
 *quassel-0.5.2 (19 Jan 2010)
 
