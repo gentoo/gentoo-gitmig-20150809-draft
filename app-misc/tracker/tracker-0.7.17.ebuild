@@ -1,20 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.8 2010/01/21 23:51:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.17.ebuild,v 1.1 2010/01/21 23:51:30 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
 
-inherit autotools git gnome2 linux-info
+inherit gnome2 linux-info
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="http://www.tracker-project.org/"
-EGIT_REPO_URI="git://git.gnome.org/${PN}"
-SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 # USE="doc" is managed by eclass.
 IUSE="applet deskbar doc eds exif gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 nautilus pdf playlist test +tiff +vorbis xine +xml xmp"
 
@@ -78,6 +76,10 @@ DEPEND="${RDEPEND}
 #	test? ( gcov )
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+# FIXME: find if it is a tracker or gtester bug and report
+# Tests fail when run in sequence, but succeed when called individually
+RESTRICT="test"
 
 function inotify_enabled() {
 	if linux_config_exists; then
@@ -146,18 +148,6 @@ pkg_setup() {
 		# $(use_enable test functional-tests)
 		# FIXME: useless without quill (extract mp3 albumart...)
 		# $(use_enable gtk gdkpixbuf)
-}
-
-src_unpack() {
-	git_src_unpack
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	gtkdocize || die "gtkdocize failed"
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
 }
 
 src_test() {
