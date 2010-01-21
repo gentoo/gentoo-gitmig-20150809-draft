@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libplist
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.4 2009/12/14 23:20:45 chainsaw Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.5 2010/01/21 22:37:39 chainsaw Exp $
+
+*libplist-1.2 (21 Jan 2010)
+
+  21 Jan 2010; <chainsaw@gentoo.org> +libplist-1.2.ebuild:
+  Version bump, contains support for XML entities and carries warning fixes.
 
 *libplist-1.1 (14 Dec 2009)
 
