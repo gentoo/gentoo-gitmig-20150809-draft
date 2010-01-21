@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.70 2010/01/20 12:32:37 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.71 2010/01/21 12:55:39 spatz Exp $
+
+  21 Jan 2010; Dror Levin <spatz@gentoo.org> qt-sql-4.6.1.ebuild:
+  Don't extract src/sql twice, bug 301694.
 
   20 Jan 2010; Dror Levin <spatz@gentoo.org> qt-sql-4.6.1.ebuild,
   +files/qt-4.6.1-nolibx11.patch:
