@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.9 2009/07/15 19:55:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.10 2010/01/21 22:46:49 abcd Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic libtool toolchain-funcs versionator
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${MY_P}.src.tgz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
