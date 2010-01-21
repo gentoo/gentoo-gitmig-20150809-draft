@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.2 2010/01/04 11:44:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.3 2010/01/21 11:23:46 flameeyes Exp $
 
 EAPI=2
 
+# jruby → testsuite uses fork (incompatible with JRuby), and patched
+# one crashes JRuby 1.4.0.
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
@@ -26,6 +28,8 @@ all_ruby_prepare() {
 	sed -i -e '/tasks\/email/s:^:#:' Rakefile || die "rakefile fix failed"
 	sed -i -e '/prerequisites/s:^:#:' tasks/test.rb || die "test task fix failed"
 	sed -i -e 's|/tmp/out|${TMPDIR:-/tmp}/out|' test/helper.rb || die "tests fix failed"
+
+	epatch "${FILESDIR}"/${P}-test-unit.patch
 }
 
 each_ruby_prepare() {
@@ -36,12 +40,19 @@ each_ruby_prepare() {
 }
 
 each_ruby_compile() {
-	${RUBY} -S rake build || die "build failed"
-}
-
-each_ruby_install() {
-	each_fakegem_install
-	ruby_fakegem_newins ext/racc/cparse/cparse.so lib/racc/cparse.so
+	case ${RUBY} in
+		*jruby)
+			einfo "Under JRuby, racc cannot use the shared object parser, so instead"
+			einfo "you have to rely on the pure Ruby implementation."
+			;;
+		*)
+			${RUBY} -S rake build || die "build failed"
+			# Copy over the file here so that we don't have to do
+			# special ruby install for JRuby and the other
+			# implementations.
+			cp -l ext/racc/cparse/cparse.so lib/racc/cparse.so || die
+			;;
+	esac
 }
 
 all_ruby_install() {

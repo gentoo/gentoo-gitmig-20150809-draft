@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.45 2010/01/04 11:44:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.46 2010/01/21 11:23:46 flameeyes Exp $
+
+  21 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> racc-1.4.6.ebuild,
+  +files/racc-1.4.6-test-unit.patch:
+  While JRuby does not work yet, predispose the ebuild to support it; also
+  add a patch to work with test-unit-1.2.3 on Ruby 1.9.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> racc-1.4.6.ebuild:
   Transfer Prefix keywords
