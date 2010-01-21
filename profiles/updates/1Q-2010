@@ -15,3 +15,4 @@ move net-im/pyotr net-im/python-otr
 move dev-embedded/scratchbox-toolchain-cs2009q1 dev-embedded/scratchbox-toolchain-cs2009q1-203sb1
 move app-i18n/ibus-table-easy app-i18n/ibus-table-cangjie
 move app-i18n/ibus-table-quick app-i18n/ibus-table-cangjie
+slotmove =dev-ruby/i18n-0.3* 0 0.3
