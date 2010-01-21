@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.28 2010/01/10 19:01:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.29 2010/01/21 12:29:32 tove Exp $
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> Net-IP-1.25-r1.ebuild:
+  Ebuild maintenance. EAPI=2. Fix LICENSE. mips -> ~mips
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> Net-IP-1.25-r1.ebuild:
   Transfer Prefix keywords
