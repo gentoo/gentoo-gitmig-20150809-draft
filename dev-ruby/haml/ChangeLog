@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.32 2010/01/18 20:34:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.33 2010/01/21 11:13:14 flameeyes Exp $
+
+*haml-2.2.17 (21 Jan 2010)
+
+  21 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> +haml-2.2.17.ebuild:
+  Version bump, remove Ruby 1.9 support as it's not testable right now
+  (actionpack is needed rather than just rack), add hpricot to the runtime
+  dependencies.
 
   18 Jan 2010; Brent Baude <ranger@gentoo.org> haml-2.2.16.ebuild:
   Marking haml-2.2.16 ~ppc for bug 297718
