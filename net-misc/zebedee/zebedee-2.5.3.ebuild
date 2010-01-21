@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.3.ebuild,v 1.7 2007/10/31 03:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.3.ebuild,v 1.8 2010/01/21 22:58:03 cla Exp $
 
 DESCRIPTION="A simple, free, secure TCP and UDP tunnel program"
 HOMEPAGE="http://www.winton.org.uk/zebedee/"
@@ -15,6 +15,12 @@ DEPEND="dev-lang/perl
 	dev-libs/openssl
 	sys-libs/zlib
 	app-arch/bzip2"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -r '/^CFLAGS/s:=:+=:' -i Makefile
+}
 
 src_compile() {
 	emake \

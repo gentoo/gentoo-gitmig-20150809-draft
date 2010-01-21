@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebedee
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.21 2008/06/14 03:35:44 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.22 2010/01/21 22:58:03 cla Exp $
+
+  21 Jan 2010; Dawid Węgliński <cla@gentoo.org> zebedee-2.5.3.ebuild:
+  Fix Makefile to respect user CFLAGS
 
   14 Jun 2008; Jeremy Olexa <darkside@gentoo.org> files/zebedee,
   zebedee-2.4.1-r1.ebuild:
