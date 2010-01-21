@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5205 2010/01/20 23:47:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5206 2010/01/21 02:08:30 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1369,6 +1369,7 @@ mail-filter/opendkim:db - Include features like stats, querycache, popauth, repo
 mail-filter/opendkim:diffheaders - On verification failure, compare the original and the received headers to look for possible munging
 mail-filter/opendkim:multiplesigs - Allow addition of multiple signatures when key lists are in use.
 mail-filter/opendkim:opendbx - Use opendbx backend to faciliate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of databse types
+mail-filter/opendkim:unbound - Use the unbound dnssec libary to perform DKIM DNS queries.
 mail-filter/postgrey:targrey - Enables the targrey patch
 mail-filter/qmail-scanner:spamassassin - Build faster mail-filter/spamassassin checks into qmail-scanner
 mail-filter/simscan:attachment - Enable attachment scanning
