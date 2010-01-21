@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.32 2010/01/20 18:01:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.33 2010/01/21 18:17:27 billie Exp $
+
+  21 Jan 2010; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
+  Add myself to maintainers.
 
   20 Jan 2010; Daniel Pielmeier <billie@gentoo.org>
   -libisoburn-0.4.2_p02.ebuild, -libisoburn-0.4.4_p00.ebuild:
