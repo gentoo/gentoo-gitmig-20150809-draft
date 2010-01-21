@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.60 2010/01/16 20:16:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.61 2010/01/21 23:38:26 markusle Exp $
+
+  21 Jan 2010; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2-r1.ebuild,
+  +files/vtk-5.4.2-boost-property_map.patch:
+  Added patch to allow compilation against boost-1.42 (fixes #301684).
 
   16 Jan 2010; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2-r1.ebuild:
   Updated handling of mycmakeargs from cmake-utils.eclass.

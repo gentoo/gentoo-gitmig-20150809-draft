@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.2 2010/01/16 20:16:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.3 2010/01/21 23:38:26 markusle Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4 cmake-utils
@@ -44,7 +44,7 @@ RDEPEND="mpi? ( || (
 
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
-		boost? ( dev-libs/boost )
+		boost? ( >=dev-libs/boost-1.40.0 )
 		>=dev-util/cmake-2.6"
 
 S="${WORKDIR}"/VTK
@@ -73,6 +73,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cg-path.patch
 	epatch "${FILESDIR}"/${PN}-5.2.0-tcl-install.patch
+	epatch "${FILESDIR}"/${P}-boost-property_map.patch
 	sed -e "s:@VTK_TCL_LIBRARY_DIR@:/usr/$(get_libdir):" \
 		-i Wrapping/Tcl/pkgIndex.tcl.in \
 		|| die "Failed to fix tcl pkgIndex file"
