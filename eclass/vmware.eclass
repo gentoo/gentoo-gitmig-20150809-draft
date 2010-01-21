@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.31 2008/04/26 13:51:40 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.32 2010/01/21 06:07:02 vapier Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -107,7 +107,7 @@ vmware_src_unpack() {
 	then
 		if [[ -e "${CDROM_ROOT}"/${MY_P}.tar.gz ]]
 		then
-			tar xzf "${CDROM_ROOT}"/${MY_P}.tar.gz
+			tar xzf "${CDROM_ROOT}"/${MY_P}.tar.gz || die
 		else
 			unpack "${MY_P}".tar.gz
 		fi
