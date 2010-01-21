@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.2 2010/01/14 21:25:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.3 2010/01/21 19:11:31 spatz Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -14,7 +14,7 @@
 # dealing with packages using Qt4 libraries. Requires EAPI=2.
 
 case ${EAPI} in
-	2) : ;;
+	2|3) : ;;
 	*) DEPEND="EAPI-INCOMPATIBLE" ;;
 esac
 
