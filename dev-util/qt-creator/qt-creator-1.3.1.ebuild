@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.2 2010/01/20 17:37:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.3 2010/01/21 19:24:39 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -42,7 +42,7 @@ PLUGINS="bookmarks bineditor cmake cvs debugger designer fakevim git mercurial p
 S="${WORKDIR}"/"${P}"-src
 
 src_prepare() {
-	qt4_src_prepare
+	qt4-r2_src_prepare
 
 	# bug 263087
 	for plugin in ${PLUGINS};do
