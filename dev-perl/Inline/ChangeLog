@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.35 2009/12/18 08:25:06 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.36 2010/01/21 13:21:57 tove Exp $
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> Inline-0.44-r1.ebuild:
+  mips -> ~mips
 
   18 Dec 2009; Torsten Veller <tove@gentoo.org> Inline-0.45.ebuild:
   Ebuild maintenance (#297133)
