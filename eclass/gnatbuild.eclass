@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.48 2009/08/30 09:09:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.49 2010/01/21 11:05:54 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -363,10 +363,11 @@ gnatbuild_src_unpack() {
 				eend $?
 			done
 
-			# regenerate some configures tp fix ACT's omissions
-			pushd "${S}"/gnattools &> /dev/null
-				eautoconf
-			popd &> /dev/null
+#			this is only needed for gnat-gpl-4.1 and breaks for gnat-gcc, so
+#			this block was moved to corresponding ebuild
+#			pushd "${S}"/gnattools &> /dev/null
+#				eautoconf
+#			popd &> /dev/null
 		;;
 
 		common_prep)
