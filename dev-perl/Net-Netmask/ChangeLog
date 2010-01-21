@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Netmask
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.41 2008/09/30 14:42:03 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.42 2010/01/21 13:09:19 tove Exp $
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> Net-Netmask-1.9015.ebuild:
+  Ebuild maintenance. EAPI=2. mips -> ~mips. Fix LICENSE: more "as-is" than
+  "Artistic"
 
   30 Sep 2008; Torsten Veller <tove@gentoo.org> -Net-Netmask-1.9012.ebuild,
   -Net-Netmask-1.9013.ebuild, Net-Netmask-1.9015.ebuild:
