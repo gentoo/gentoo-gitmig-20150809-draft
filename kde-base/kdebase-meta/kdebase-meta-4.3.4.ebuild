@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.3.4.ebuild,v 1.2 2010/01/16 18:30:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.3.4.ebuild,v 1.3 2010/01/21 00:11:31 abcd Exp $
 
 EAPI="2"
 inherit kde4-functions
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="4.3"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="aqua kdeprefix policykit"
 
 RDEPEND="
@@ -24,7 +24,6 @@ RDEPEND="
 	$(add_kdebase_dep kdebase-wallpapers)
 	$(add_kdebase_dep kdepasswd)
 	$(add_kdebase_dep kdialog)
-	$(add_kdebase_dep kdm)
 	$(add_kdebase_dep keditbookmarks)
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep kfind)
@@ -55,6 +54,7 @@ RDEPEND="
 	$(add_kdebase_dep powerdevil)
 	$(add_kdebase_dep solid)
 	$(add_kdebase_dep systemsettings)
+	!prefix? ( $(add_kdebase_dep kdm) )
 	policykit? ( $(add_kdebase_dep policykit-kde) )
 	$(block_other_slots)
 "
