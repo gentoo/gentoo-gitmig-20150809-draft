@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/jmol-acme-1.0.ebuild,v 1.3 2007/09/02 07:36:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/jmol-acme/jmol-acme-1.0.ebuild,v 1.4 2010/01/21 11:12:09 markusle Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ DESCRIPTION="Portions of the Acme collection required for jMol. Courtesy of ACME
 HOMEPAGE="http://www.acme.com/"
 SRC_URI="http://www.acme.com/resources/classes/${MY_P}.tar.gz"
 
-LICENSE="ACME"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
