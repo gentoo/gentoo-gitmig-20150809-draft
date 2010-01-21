@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.2.1.ebuild,v 1.1 2010/01/08 13:12:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.2.2-r1.ebuild,v 1.1 2010/01/21 01:53:34 dragonheart Exp $
 
 EAPI="2"
 
@@ -13,15 +13,15 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+db asyncdns opendbx"
+IUSE="+db asyncdns opendbx unbound"
 
-# FUTURE: unbound (dnssec lib) - bug #223103
 # FUTURE: diffheaders (libtre error) - bug #296813
 
 DEPEND="dev-libs/openssl
 	db? ( >=sys-libs/db-3.2 )
 	|| ( mail-filter/libmilter mail-mta/sendmail )
-	opendbx? ( >=dev-db/opendbx-1.4.0 )"
+	opendbx? ( >=dev-db/opendbx-1.4.0 )
+	unbound? ( >=net-dns/unbound-1.4.1 )"
 #	diffheaders? ( dev-libs/tre )
 RDEPEND="${DEPEND}"
 
@@ -37,17 +37,28 @@ src_prepare() {
 	sed -i -e 's:/var/db/dkim:/etc/opendkim:g' \
 	       -e 's:/etc/mail:/etc/opendkim:g' \
 		   opendkim/opendkim.conf.sample
+	cd "${S}"/libopendkim
+	epatch "${FILESDIR}"/${P}-repcalc.patch
 }
 
 src_configure() {
+	local conf
+	if use asyncdns ; then
+		if use unbound; then
+			conf=$(use_with unbound)
+		else
+			conf="$(use_enable asyncdns arlib) $(use_enable asyncdns dnsupgrade)"
+		fi
+	else
+		conf="$(use_with unbound) $(use_enable asyncdns arlib) $(use_enable asyncdns dnsupgrade)"
+	fi
 	econf $(use_enable db bodylength_db) \
 		$(use_enable db popauth) \
 		$(use_enable db query_cache) \
 		$(use_enable db report_intervals) \
 		$(use_enable db stats) \
-		$(use_enable asyncdns arlib) \
-		$(use_enable asyncdns dnsupgrade) \
 		$(use_with opendbx odbx) \
+		${conf} \
 		--without-domainkeys \
 		--enable-capture_unknown_errors \
 		--enable-dkim_reputation \

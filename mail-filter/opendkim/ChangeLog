@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.6 2010/01/20 05:28:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.7 2010/01/21 01:53:34 dragonheart Exp $
+
+*opendkim-1.2.2-r1 (21 Jan 2010)
+
+  21 Jan 2010; Daniel Black <dragonheart@gentoo.org> -opendkim-1.2.1.ebuild,
+  -opendkim-1.2.2.ebuild, +opendkim-1.2.2-r1.ebuild,
+  +files/opendkim-1.2.2-repcalc.patch, metadata.xml:
+  fix buffer overflow error as per bug #301499. Thanks Tilman Giese. Thanks
+  Murray for the patch. Added dnssec support.
 
 *opendkim-1.2.2 (20 Jan 2010)
 
