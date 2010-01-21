@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/bfast
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.1 2010/01/21 18:25:31 weaver Exp $
+
+*bfast-0.6.2a (21 Jan 2010)
+
+  21 Jan 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +bfast-0.6.2a.ebuild:
+  New package, ebuild written by me
+
