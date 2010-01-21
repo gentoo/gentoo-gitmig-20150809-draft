@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.2005.ebuild,v 1.5 2008/07/06 13:14:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.5.2005.ebuild,v 1.6 2010/01/21 11:20:13 george Exp $
 
 inherit gnatbuild
 
@@ -20,6 +20,8 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCCVER}/gcc-core-${GCCVER}.tar
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
+
+IUSE=""
 
 GNATSOURCE="${WORKDIR}/${P}-src"
 

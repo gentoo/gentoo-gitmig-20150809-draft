@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.8 2008/07/06 13:14:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2007.ebuild,v 1.9 2010/01/21 11:20:13 george Exp $
 
 inherit gnatbuild
 
@@ -21,6 +21,8 @@ SRC_URI="mirror://gentoo/gcc-branch-${GCCVER}.tar.bz2
 KEYWORDS="amd64 ppc x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
+
+IUSE=""
 
 QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind
 	${BINPATH:1}/gnatmake ${LIBEXECPATH:1}/gnat1

@@ -1,11 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2008-r1.ebuild,v 1.3 2010/01/21 11:20:13 george Exp $
-
-# NOTE: gnat-gpl-2007 and 2008 have "incompatible bugs"
-# so, we separate them in different slots
-SLOT="4.1-2008"
-BOOT_SLOT="4.1"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2008-r2.ebuild,v 1.1 2010/01/21 11:20:13 george Exp $
 
 inherit gnatbuild
 
@@ -36,7 +31,11 @@ QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind
 GNATSOURCE="${S}/${PN}-2008-src"
 
 src_unpack() {
-	gnatbuild_src_unpack base_unpack common_prep
+	gnatbuild_src_unpack base_unpack
+	pushd "${S}"/gnattools &> /dev/null
+		eautoconf
+	popd &> /dev/null
+	gnatbuild_src_unpack common_prep
 
 	# one of the converted gcc->gnatgcc in common_prep needs to stay gcc in
 	# fact in this version
@@ -72,9 +71,5 @@ pkg_postinst() {
 	ewarn "Please note!!!"
 	ewarn "gnat-gpl is distributed under the GPL-2 license, without the GMGPL provision!!"
 	ewarn "For the GMGPL version you may look at the gnat-gcc compiler."
-	einfo
-	ewarn "ATTN!!"
-	ewarn "This version is SLOTted differently than gnat-gpl-2007, since they"
-	ewarn "incompatible bugs. So, you can have both of these installed in parallel."
 	einfo
 }
