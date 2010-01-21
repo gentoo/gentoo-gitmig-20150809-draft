@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.58 2010/01/10 18:59:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.59 2010/01/21 12:34:16 tove Exp $
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> Net-Daemon-0.43.ebuild:
+  Ebuild maintenance. EAPI=2. mips -> ~mips
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> Net-Daemon-0.43.ebuild:
   Transfer Prefix keywords
