@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.1.ebuild,v 1.1 2010/01/21 20:22:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.1.ebuild,v 1.2 2010/01/21 20:52:16 jer Exp $
 
 EAPI="2"
 
@@ -59,4 +59,8 @@ src_install() {
 	# mail.rc stolen from mailx, resolve bug #37302.
 	insinto /etc
 	doins "${FILESDIR}/mail.rc"
+}
+
+pkg_postinst() {
+	python_mod_optimize "$(python_get_libdir)/site-packages/mailutils"
 }
