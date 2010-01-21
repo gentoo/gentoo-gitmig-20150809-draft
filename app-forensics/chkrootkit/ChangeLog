@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/chkrootkit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.56 2009/04/30 17:49:26 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.57 2010/01/21 16:56:16 pva Exp $
+
+  21 Jan 2010; Peter Volkov <pva@gentoo.org> chkrootkit-0.48-r1.ebuild:
+  Fix LICENSE: should be BSD-2, bug #301121, thank Ulrich Müller for this
+  work.
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -chkrootkit-0.47.ebuild:
   Remove old
