@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.42 2010/01/19 18:36:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.43 2010/01/21 19:54:54 armin76 Exp $
+
+  21 Jan 2010; Raúl Porcel <armin76@gentoo.org> libkate-0.3.7.ebuild:
+  sparc stable wrt #300697
 
   19 Jan 2010; nixnut <nixnut@gentoo.org> libkate-0.3.7.ebuild:
   ppc stable #300697
