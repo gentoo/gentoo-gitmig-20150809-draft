@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.3.ebuild,v 1.5 2010/01/15 14:54:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.3.ebuild,v 1.6 2010/01/21 16:55:06 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ DESCRIPTION="ViewVC, a web interface to CVS and Subversion"
 HOMEPAGE="http://viewvc.org/"
 SRC_URI="http://viewvc.tigris.org/files/documents/3330/47194/${P}.tar.gz"
 
-LICENSE="viewcvs"
+LICENSE="BSD-2"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="cvs cvsgraph mod_python mysql pygments +subversion"
 SLOT="0"
