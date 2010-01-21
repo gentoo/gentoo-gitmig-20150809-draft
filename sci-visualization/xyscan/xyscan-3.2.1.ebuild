@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.2.1.ebuild,v 1.3 2010/01/06 02:48:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.2.1.ebuild,v 1.4 2010/01/21 13:53:59 fauli Exp $
 
 EAPI=2
 inherit eutils qt4 versionator
@@ -13,7 +13,7 @@ SRC_URI="http://star.physics.yale.edu/~ullrich/${PN}DistributionPage/${MY_PV}/${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
