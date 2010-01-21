@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.87 2010/01/09 05:03:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.88 2010/01/21 14:38:42 tove Exp $
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> PDL-2.4.4.ebuild,
+  PDL-2.4.5.ebuild:
+  Drop mips (#267990)
 
   09 Jan 2010; Torsten Veller <tove@gentoo.org> +PDL-2.4.4.ebuild:
   Readd accidentally dropped PDL-2.4.4
