@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/qrupdate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.7 2010/01/12 05:16:13 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.8 2010/01/21 19:04:57 grobian Exp $
+
+*qrupdate-1.1.0-r1 (21 Jan 2010)
+
+  21 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  +qrupdate-1.1.0-r1.ebuild, +files/qrupdate-1.1.0-darwin-dylib.patch,
+  +files/qrupdate-1.1.0-destdir.patch:
+  Revbump to add Prefix awareness, fix up buildsystem to properly support
+  DESTDIR installs, fix shared libs install for Darwin hosts. Both patches
+  got accepted and committed upstream.
 
 *qrupdate-1.1.0 (12 Jan 2010)
 
