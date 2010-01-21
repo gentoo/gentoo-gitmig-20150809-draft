@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-ASN1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.45 2010/01/09 18:22:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.46 2010/01/21 13:34:23 tove Exp $
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> Convert-ASN1-0.21.ebuild:
+  mips -> ~mips
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Convert-ASN1-0.22.ebuild:
   Transfer Prefix keywords
