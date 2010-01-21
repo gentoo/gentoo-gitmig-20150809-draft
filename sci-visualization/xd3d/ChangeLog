@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xd3d
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.9 2009/12/04 19:05:23 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.10 2010/01/21 14:05:57 fauli Exp $
+
+  21 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xd3d-8.3.1.ebuild:
+  stable x86, bug 301489
 
   04 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> xd3d-8.3.1.ebuild,
   files/xd3d-8.3.1-gentoo.diff, +files/xd3d-8.3.1-parallel.patch,

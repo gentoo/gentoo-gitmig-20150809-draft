@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.3 2009/12/04 19:05:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.4 2010/01/21 14:05:57 fauli Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cmap.polytechnique.fr/~jouve/xd3d/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXpm"
