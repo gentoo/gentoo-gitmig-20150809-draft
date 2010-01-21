@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.5.3.ebuild,v 1.7 2009/11/10 22:35:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.5.3.ebuild,v 1.8 2010/01/21 20:52:37 spatz Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -27,7 +27,6 @@ include/QtScript/
 src/src.pro
 src/corelib/
 src/plugins
-src/sql
 src/3rdparty
 src/tools"
 
