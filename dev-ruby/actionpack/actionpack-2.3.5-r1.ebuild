@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.5-r1.ebuild,v 1.5 2010/01/18 20:56:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.5-r1.ebuild,v 1.6 2010/01/21 11:08:55 flameeyes Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ IUSE=""
 ruby_add_rdepend "~dev-ruby/activesupport-${PV}
 	>=dev-ruby/rack-1.0.1 <dev-ruby/rack-1.1.0"
 
-ruby_add_bdepend test "~dev-ruby/activerecord-${PV}"
+ruby_add_bdepend test "dev-ruby/activerecord:${SLOT} dev-ruby/actionmailer:${SLOT}"
 
 all_ruby_prepare() {
 	# Custom template not found in package
