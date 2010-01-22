@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.27 2009/09/23 15:19:13 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.28 2010/01/22 00:51:52 cla Exp $
+
+  22 Jan 2010; Dawid Węgliński <cla@gentoo.org> doc++-3.4.10-r3.ebuild:
+  Respect user C(XX)FLAGS (bug #240002)
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> doc++-3.4.10-r3.ebuild:
   Remove virtual/libc
