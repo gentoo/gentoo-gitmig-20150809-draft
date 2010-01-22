@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.7.0.ebuild,v 1.1 2010/01/15 03:34:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.7.0.ebuild,v 1.2 2010/01/22 15:49:58 darkside Exp $
 
 EAPI=2
 inherit xfconf
@@ -37,7 +37,7 @@ pkg_setup() {
 		--disable-gtk-doc-pdf
 		$(use_enable debug)
 		$(use_enable debug checks)
-		--with-html-dir=/usr/share/doc/${PF}/html"
+		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 
 	use profile && XFCONF="${XFCONF} --enable-profiling"
 
