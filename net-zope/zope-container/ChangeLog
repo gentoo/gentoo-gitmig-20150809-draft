@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-container
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-container/ChangeLog,v 1.5 2010/01/16 19:20:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-container/ChangeLog,v 1.6 2010/01/22 19:16:39 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> zope-container-3.11.0.ebuild:
+  Marking zope-container-3.11.0 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   zope-container-3.11.0.ebuild:
