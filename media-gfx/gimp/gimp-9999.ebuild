@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.22 2009/11/27 00:06:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.23 2010/01/22 21:05:57 ssuominen Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ RDEPEND=">=dev-libs/glib-2.18.1
 	hal? ( sys-apps/hal )
 	gnome? ( gnome-base/gvfs )
 	webkit? ( net-libs/webkit-gtk )
-	jpeg? ( >=media-libs/jpeg-6b-r2 )
+	jpeg? ( >=media-libs/jpeg-6b-r2:0 )
 	exif? ( >=media-libs/libexif-0.6.15 )
 	lcms? ( media-libs/lcms )
 	mng? ( media-libs/libmng )

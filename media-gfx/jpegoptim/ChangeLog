@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/jpegoptim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.11 2010/01/07 22:14:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.12 2010/01/22 21:01:51 ssuominen Exp $
+
+  22 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  jpegoptim-1.2.2.ebuild:
+  Require SLOT="0" of media-libs/jpeg for headers.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   jpegoptim-1.2.2.ebuild:
