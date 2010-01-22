@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/restrictedpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.3 2010/01/16 18:10:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.4 2010/01/22 18:59:47 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org>
+  restrictedpython-3.5.1.ebuild:
+  Marking restrictedpython-3.5.1 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   restrictedpython-3.5.1.ebuild:
