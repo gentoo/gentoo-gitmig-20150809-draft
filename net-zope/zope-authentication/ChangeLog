@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-authentication
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-authentication/ChangeLog,v 1.2 2010/01/16 19:12:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-authentication/ChangeLog,v 1.3 2010/01/22 19:13:50 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking zope-authentication-3.7.0 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   zope-authentication-3.7.0.ebuild:
