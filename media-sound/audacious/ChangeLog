@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.192 2010/01/20 14:14:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.193 2010/01/22 20:45:13 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> audacious-2.2.ebuild:
+  Marking audacious-2.2 ppc for bug 295051
 
   20 Jan 2010; Brent Baude <ranger@gentoo.org> audacious-2.2.ebuild:
   Marking audacious-2.2 ppc64 for bug 295051
