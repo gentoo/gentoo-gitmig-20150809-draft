@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r1.ebuild,v 1.5 2010/01/20 02:53:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r1.ebuild,v 1.6 2010/01/22 11:08:38 caster Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -28,6 +28,8 @@ COMMON_DEPS="
 	dev-java/jettison:0
 	java-virtuals/stax-api
 	test? (
+		dev-java/ant-junit
+		dev-java/ant-trax
 		dev-java/junit:0
 		dev-java/xml-writer:0
 		dev-java/commons-lang:2.1
