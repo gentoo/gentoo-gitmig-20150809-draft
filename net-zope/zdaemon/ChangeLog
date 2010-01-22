@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zdaemon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zdaemon/ChangeLog,v 1.2 2009/11/09 19:00:51 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zdaemon/ChangeLog,v 1.3 2010/01/22 18:41:38 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> zdaemon-2.0.4.ebuild:
+  Marking zdaemon-2.0.4 ~ppc for bug 288603
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org> zdaemon-2.0.4.ebuild:
   keyworded ~arch for x86, bug 288603

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zdaemon/zdaemon-2.0.4.ebuild,v 1.2 2009/11/09 19:00:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zdaemon/zdaemon-2.0.4.ebuild,v 1.3 2010/01/22 18:41:38 ranger Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="net-zope/zconfig"
