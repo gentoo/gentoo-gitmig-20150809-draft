@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-publisher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/ChangeLog,v 1.5 2010/01/16 19:08:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/ChangeLog,v 1.6 2010/01/22 19:22:35 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> zope-publisher-3.12.0.ebuild:
+  Marking zope-publisher-3.12.0 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   zope-publisher-3.12.0.ebuild:
