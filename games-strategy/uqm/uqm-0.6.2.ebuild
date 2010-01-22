@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.9 2008/08/11 19:17:09 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.10 2010/01/22 16:55:03 ssuominen Exp $
 
+EAPI=1
 inherit eutils multilib games
 
 DESCRIPTION="The Ur-Quan Masters: Port of Star Control 2"
@@ -20,7 +21,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="music opengl remix voice"
 
 RDEPEND="media-libs/libvorbis
-	media-libs/jpeg
+	media-libs/jpeg:0
 	media-libs/libpng
 	media-libs/libsdl
 	media-libs/sdl-image

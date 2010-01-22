@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.24 2008/08/11 19:17:09 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.25 2010/01/22 16:55:03 ssuominen Exp $
+
+  22 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> uqm-0.6.2.ebuild:
+  Require SLOT="0" of media-libs/jpeg for headers.
 
   11 Aug 2008; Santiago M. Mola <coldwind@gentoo.org> uqm-0.6.2.ebuild:
   amd64 stable wrt bug #234465
