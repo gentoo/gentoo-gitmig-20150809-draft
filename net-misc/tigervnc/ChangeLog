@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.32 2010/01/22 14:26:23 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.33 2010/01/22 18:45:12 armin76 Exp $
+
+  22 Jan 2010; Raúl Porcel <armin76@gentoo.org> -tigervnc-0.0.90.ebuild,
+  -tigervnc-1.0.0.ebuild, tigervnc-1.0.0-r2.ebuild:
+  alpha/ia64/sh stable wrt #288685
 
   22 Jan 2010; Tiago Cunha <tcunha@gentoo.org> tigervnc-1.0.0-r2.ebuild:
   stable sparc, bug 288685
