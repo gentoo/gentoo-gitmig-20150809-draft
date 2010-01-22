@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.36 2010/01/13 22:14:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.37 2010/01/22 09:32:57 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -145,7 +145,7 @@ fi
 # @FUNCTION: git_submodules
 # @DESCRIPTION:
 # Internal function wrapping the submodule initialisation and update
-git_sumbodules() {
+git_submodules() {
 	debug-print "git submodule init"
 	git submodule init
 	debug-print "git submodule update"
@@ -191,8 +191,8 @@ git_fetch() {
 	#	EGIT_FETCH_CMD="${EGIT_FETCH_CMD} --depth 1"
 	if [[ ! -z ${EGIT_TREE} ]] ; then
 		EGIT_COMMIT=${EGIT_TREE}
-		eqawarn "Usage of deprecated EGIT_TREE variable detected."
-		eqawarn "Use EGIT_COMMIT variable instead."
+		ewarn "QA: Usage of deprecated EGIT_TREE variable detected."
+		ewarn "QA: Use EGIT_COMMIT variable instead."
 	fi
 
 	# EGIT_REPO_URI is empty.
@@ -228,7 +228,6 @@ git_fetch() {
 	debug-print "${FUNCNAME}: EGIT_OPTIONS = \"${EGIT_OPTIONS}\""
 
 	GIT_DIR="${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}"
-	pushd ${EGIT_STORE_DIR} &> /dev/null
 	# we also have to remove all shallow copied repositories
 	# and fetch them again
 	if [[ -e "${GIT_DIR}/shallow" ]]; then
@@ -254,8 +253,7 @@ git_fetch() {
 		cursha1=$(git rev-parse origin/${EGIT_BRANCH})
 		${elogcmd} "   at the commit:		${cursha1}"
 
-		git_branch
-		git_sumbodules
+		git_submodules
 		popd &> /dev/null
 	elif [[ -n ${EGIT_OFFLINE} ]] ; then
 		pushd "${GIT_DIR}" &> /dev/null
@@ -276,11 +274,15 @@ git_fetch() {
 		oldsha1=$(git rev-parse origin/${EGIT_BRANCH})
 
 		debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
+		# fix branching
+		git checkout master
+		for x in $(git branch |grep -v "* master" |tr '\n' ' '); do
+			git branch -D ${x}
+		done
 		${EGIT_UPDATE_CMD} ${EGIT_OPTIONS} \
 			|| die "${EGIT}: can't update from ${EGIT_REPO_URI}."
 
-		git_branch
-		git_sumbodules
+		git_submodules
 		cursha1=$(git rev-parse origin/${EGIT_BRANCH})
 
 		# write out message based on the revisions
@@ -315,14 +317,21 @@ git_fetch() {
 	# export the git version
 	export EGIT_VERSION="${cursha1}"
 
+	# log the repo state
 	[[ ${EGIT_COMMIT} != ${EGIT_BRANCH} ]] && elog "   commit:			${EGIT_COMMIT}"
 	${elogcmd} "   branch: 			${EGIT_BRANCH}"
 	${elogcmd} "   storage directory: 	\"${GIT_DIR}\""
 
-	# unpack to the ${S}
+	pushd "${GIT_DIR}" &> /dev/null
+	debug-print "rsync -rlpgo . \"${S}\""
+	time rsync -rlpgo . "${S}"
 	popd &> /dev/null
-	debug-print "git clone -l -s \"${GIT_DIR}\" \"${S}\""
-	git clone -l -s "${GIT_DIR}" "${S}"
+
+	pushd "${S}" &> /dev/null
+	git_branch
+	# submodules always reqire net (thanks to branches changing)
+	[[ -n ${EGIT_OFFLINE} ]] || git_submodules
+	popd &> /dev/null
 
 	echo ">>> Unpacked to ${S}"
 }
