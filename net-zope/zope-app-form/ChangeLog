@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-app-form
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/ChangeLog,v 1.5 2010/01/17 18:56:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/ChangeLog,v 1.6 2010/01/22 19:12:09 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking zope-app-form-4.0.1 ~ppc for bug 297734
 
 *zope-app-form-4.0.1 (17 Jan 2010)
 
