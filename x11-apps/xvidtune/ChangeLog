@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xvidtune
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.25 2009/07/07 01:52:39 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.26 2010/01/22 09:02:26 scarabeus Exp $
+
+*xvidtune-1.0.2 (22 Jan 2010)
+
+  22 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xvidtune-1.0.2.ebuild:
+  Version bump.
 
   07 Jul 2009; Jeroen Roovers <jer@gentoo.org> xvidtune-1.0.1-r1.ebuild:
   Stable for HPPA too.
