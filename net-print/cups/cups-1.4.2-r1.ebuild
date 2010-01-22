@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.1 2009/11/30 22:00:56 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.2 2010/01/22 16:53:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	dbus? ( sys-apps/dbus )
 	gnutls? ( net-libs/gnutls )
 	java? ( >=virtual/jre-1.4 )
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( >=media-libs/jpeg-6b:0 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam )
