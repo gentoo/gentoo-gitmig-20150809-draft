@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11136 2010/01/22 15:40:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11137 2010/01/22 20:26:06 hanno Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,11 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
-# Last release in 2003.  Doesn't work with latest zlib.
-# masked for removal on 20100219
-games-util/dzip
 
 # Dror Levin <spatz@gentoo.org> (20 Jan 2010)
 # Not compatible with Qt 4.6.1 and newer version not
