@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.7.0.ebuild,v 1.3 2010/01/20 14:26:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.7.0.ebuild,v 1.4 2010/01/22 16:47:05 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ DEPEND="dev-lang/lua
 	>=dev-libs/STLport-5.1.5
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/jpeg
+	media-libs/jpeg:0
 	media-libs/tiff
 	sys-libs/zlib
 	boost? ( dev-util/boost-build )
