@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.3.4.ebuild,v 1.2 2009/12/23 01:14:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.3.4.ebuild,v 1.3 2010/01/22 21:40:22 abcd Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ CPPUNIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="Generic geographical map widget"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug designer-plugin gps +handbook plasma python"
 
 # tests fail / segfault. Last checked for 4.2.88
