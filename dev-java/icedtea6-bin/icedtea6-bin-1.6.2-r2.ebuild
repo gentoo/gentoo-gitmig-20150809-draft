@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.6.1.ebuild,v 1.2 2010/01/17 19:19:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.6.2-r2.ebuild,v 1.1 2010/01/22 10:25:17 caster Exp $
 
 EAPI="1"
 
@@ -8,18 +8,19 @@ inherit java-vm-2
 
 dist="mirror://gentoo/"
 DESCRIPTION="A Gentoo-made binary build of the icedtea6 JDK"
-SRC_URI="amd64? ( ${dist}/${PN}-core-${PVR}-amd64.tar.bz2 )
-	x86? ( ${dist}/${PN}-core-${PVR}-x86.tar.bz2 )
-	doc? ( ${dist}/${PN}-doc-${PVR}.tar.bz2 )
+TARBALL_VERSION="${PVR}"
+SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2 )
+	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2 )
+	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.bz2 )
 	examples? (
-		amd64? ( ${dist}/${PN}-examples-${PVR}-amd64.tar.bz2 )
-		x86? ( ${dist}/${PN}-examples-${PVR}-x86.tar.bz2 )
+		amd64? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-amd64.tar.bz2 )
+		x86? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-x86.tar.bz2 )
 	)
 	nsplugin? (
-		amd64? ( ${dist}/${PN}-nsplugin-${PVR}-amd64.tar.bz2 )
-		x86? ( ${dist}/${PN}-nsplugin-${PVR}-x86.tar.bz2 )
+		amd64? ( ${dist}/${PN}-nsplugin-${TARBALL_VERSION}-amd64.tar.bz2 )
+		x86? ( ${dist}/${PN}-nsplugin-${TARBALL_VERSION}-x86.tar.bz2 )
 	)
-	source? ( ${dist}/${PN}-src-${PVR}.tar.bz2 )"
+	source? ( ${dist}/${PN}-src-${TARBALL_VERSION}.tar.bz2 )"
 HOMEPAGE="http://icedtea.classpath.org"
 
 IUSE="X alsa doc examples nsplugin source"
@@ -29,12 +30,12 @@ LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-S="${WORKDIR}/${PF}"
+S="${WORKDIR}/${PN}-${TARBALL_VERSION}"
 
 RDEPEND=">=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.9
 	>=media-libs/giflib-4.1.6-r1
-	=media-libs/jpeg-7*
+	=media-libs/jpeg-8*
 	>=media-libs/libpng-1.2.38
 	>=sys-libs/zlib-1.2.3-r1
 	alsa? ( >=media-libs/alsa-lib-1.0.20 )
@@ -45,6 +46,7 @@ RDEPEND=">=sys-devel/gcc-4.3
 		>=x11-libs/libXi-1.2.1
 		>=x11-libs/libXtst-1.0.3
 		>=x11-libs/libX11-1.2.2
+		x11-libs/libXt
 	)
 	nsplugin? (
 		>=dev-libs/atk-1.26.0
@@ -86,8 +88,6 @@ src_install() {
 	if use nsplugin ; then
 		use x86 && arch=i386
 		install_mozilla_plugin "${dest}/jre/lib/${arch}/IcedTeaPlugin.so"
-		install_mozilla_plugin \
-			"${dest}/jre/lib/${arch}/IcedTeaPlugin-xul191-ff35.so" xul191-ff35
 	fi
 
 	set_java_env
@@ -100,11 +100,8 @@ pkg_postinst() {
 
 	if use nsplugin; then
 		elog "The icedtea6-bin browser plugin can be enabled using eselect java-nsplugin"
-		elog "Note that the there are two plugins for different versions of xulrunner"
-		elog "and you have to select the right one according to your browser."
-		elog "The 'icedtea6-bin' plugin works only in browsers based on xulrunner-1.9.0"
-		elog "such as Firefox 3.0 or Epiphany 2.24 and not in older versions!"
-		elog "The 'icedtea6-bin-xul191-ff35' plugin works only in browsers based on"
-		elog "xulrunner-1.9.1 such as Firefox 3.5."
+		elog "Note that the plugin works only in browsers based on xulrunner-1.9.1"
+		elog "such as Firefox 3.5, and not in other versions! xulrunner-1.9.2 (Firefox 3.6)"
+		elog "is not supported by upstream yet."
 	fi
 }
