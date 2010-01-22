@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.49 2010/01/21 11:05:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.50 2010/01/22 13:27:36 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -673,13 +673,8 @@ EOF
 		rm -f "${D}${BINPATH}/${CTARGET}-gcc-${GCCRELEASE}"
 
 		# remove duplicate docs
-		cd "${D}${DATAPATH}"
-		has noinfo ${FEATURES} \
-			&& rm -rf info \
-			|| rm -f info/{dir,gcc,cpp}*
-		has noman  ${FEATURES} \
-			&& rm -rf man \
-			|| rm -rf man/man7/
+		rm -f  "${D}${DATAPATH}"/info/{dir,gcc,cpp}*
+		rm -rf "${D}${DATAPATH}"/man/man7/
 		;;
 
 	prep_env)
