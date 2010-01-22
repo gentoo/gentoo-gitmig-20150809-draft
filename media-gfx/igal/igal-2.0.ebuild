@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-2.0.ebuild,v 1.7 2010/01/07 22:07:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-2.0.ebuild,v 1.8 2010/01/22 20:57:08 ssuominen Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	media-libs/jpeg
+	media-libs/jpeg:0
 	media-gfx/imagemagick"
 DEPEND=""
 
