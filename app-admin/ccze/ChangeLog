@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ccze
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.25 2008/10/23 16:55:07 joker Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.26 2010/01/22 17:04:33 jer Exp $
+
+*ccze-0.2.1-r3 (22 Jan 2010)
+
+  22 Jan 2010; Jeroen Roovers <jer@gentoo.org> +ccze-0.2.1-r3.ebuild,
+  +files/ccze-ldflags.patch:
+  Respect LDFLAGS.
 
   23 Oct 2008; Christian Birchinger <joker@gentoo.org> ccze-0.2.1-r2.ebuild:
   Added tc-export CC. See bug #243314
