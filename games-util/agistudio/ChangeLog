@@ -1,6 +1,9 @@
 # ChangeLog for games-util/agistudio
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.13 2009/10/20 13:01:44 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.14 2010/01/22 20:17:00 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> agistudio-1.2.4.ebuild:
+  stable ppc, bug 285394
 
   20 Oct 2009; Markus Meier <maekke@gentoo.org> agistudio-1.2.4.ebuild:
   x86 stable, bug #285394
