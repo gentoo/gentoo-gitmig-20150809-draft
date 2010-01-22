@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3817 2010/01/22 20:26:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3818 2010/01/22 20:51:06 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jan 2010; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Mask media-tv/vdr-dvd-scripts and media-tv/vdrplugin-rebuild. Both are
+  already included im media-tv/gentoo-vdr-scripts.
 
   22 Jan 2010; Hanno Boeck <hanno@gentoo.org> package.mask:
   Remove dzip mask, have just committed dzip-2.9-r3 which fixes all known
