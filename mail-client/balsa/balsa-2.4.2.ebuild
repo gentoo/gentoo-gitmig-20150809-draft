@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.0.ebuild,v 1.2 2009/05/31 18:30:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.2.ebuild,v 1.1 2010/01/22 00:04:56 eva Exp $
 
 EAPI="2"
+GCONF_DEBUG="no"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Email client for GNOME"
 HOMEPAGE="http://pawsa.fedorapeople.org/balsa/"
@@ -14,13 +15,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 # Doesn't currently build with -gnome
-IUSE="crypt doc gnome gtkhtml +gtkspell kerberos ldap libnotify rubrica sqlite ssl xface"
+IUSE="crypt doc gnome gtkhtml +gtkspell kerberos ldap libnotify networkmanager rubrica sqlite ssl xface"
 
+# TODO: esmtp can be optional, webkit/canberra support
 RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.18
 	dev-libs/gmime:2.4
 	>=net-libs/libesmtp-1.0.3
 	x11-themes/hicolor-icon-theme
+	x11-themes/gnome-icon-theme
 	net-mail/mailbase
 	dev-libs/libunique
 	crypt? ( >=app-crypt/gpgme-1.0 )
@@ -39,6 +42,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	!gtkspell? ( virtual/aspell-dict )
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
+	networkmanager? ( net-misc/networkmanager )
 	rubrica? ( dev-libs/libxml2 )
 	ssl? ( dev-libs/openssl )
 	xface? ( >=media-libs/compface-1.5.1 )"
@@ -65,11 +69,13 @@ pkg_setup() {
 		G2CONF="${G2CONF} --without-gtkhtml"
 	fi
 
+	# canberra support is considered experimental
 	G2CONF="${G2CONF}
 		--disable-pcre
 		--enable-gregex
 		--enable-threads
 		--with-unique
+		--without-canberra
 		$(use_with gnome)
 		$(use_with gnome gtksourceview)
 		$(use_with gtkspell)
@@ -80,14 +86,4 @@ pkg_setup() {
 		$(use_with sqlite)
 		$(use_with ssl)
 		$(use_with xface compface)"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Remove disable deprecated statement
-	sed -i -e '/DISABLE_DEPRECATED/d' \
-		libinit_balsa/Makefile.am libinit_balsa/Makefile.in \
-		libbalsa/Makefile.am libbalsa/Makefile.in \
-		src/Makefile.am src/Makefile.in || die "sed failed"
 }
