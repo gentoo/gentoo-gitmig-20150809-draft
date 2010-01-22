@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ftnchek
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftnchek/ChangeLog,v 1.8 2007/05/15 09:10:31 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftnchek/ChangeLog,v 1.9 2010/01/22 12:08:22 cla Exp $
+
+  22 Jan 2010; Dawid Węgliński <cla@gentoo.org> ftnchek-3.2.2.ebuild,
+  ftnchek-3.3.1.ebuild:
+  Respect users CFLAGS (bug #240279)
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
