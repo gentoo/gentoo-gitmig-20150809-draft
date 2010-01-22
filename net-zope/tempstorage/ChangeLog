@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/tempstorage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/ChangeLog,v 1.2 2010/01/16 18:56:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/ChangeLog,v 1.3 2010/01/22 19:10:44 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> tempstorage-2.11.2.ebuild:
+  Marking tempstorage-2.11.2 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   tempstorage-2.11.2.ebuild:
