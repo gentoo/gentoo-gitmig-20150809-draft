@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.7.ebuild,v 1.2 2009/11/21 10:18:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.7.ebuild,v 1.3 2010/01/22 04:46:24 abcd Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://libvncserver.sourceforge.net/LibVNCServer-${PV/_}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="no24bpp +jpeg test threads +zlib"
 
 DEPEND="jpeg? ( media-libs/jpeg )
