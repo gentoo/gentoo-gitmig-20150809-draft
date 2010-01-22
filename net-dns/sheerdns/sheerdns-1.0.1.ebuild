@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/sheerdns-1.0.1.ebuild,v 1.5 2010/01/22 16:03:02 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/sheerdns-1.0.1.ebuild,v 1.6 2010/01/22 16:03:55 cla Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${DISTDIR}/${P}-${PR}.patch || die "failed to apply patch"
+	epatch "${DISTDIR}"/${P}-${PR}.patch || die "failed to apply patch"
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-makefile.patch
 }
