@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poppler/poppler-0.12.3.ebuild,v 1.1 2010/01/15 22:34:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poppler/poppler-0.12.3.ebuild,v 1.2 2010/01/22 16:56:30 ssuominen Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ DEPEND="
 	lcms? ( >=media-libs/lcms-1.18 )
 	>=media-libs/freetype-2.3.7
 	>=media-libs/fontconfig-2
-	>=media-libs/jpeg-6b
+	>=media-libs/jpeg-6b:0
 	>=media-libs/openjpeg-1.3-r2
 	sys-libs/zlib
 	"
