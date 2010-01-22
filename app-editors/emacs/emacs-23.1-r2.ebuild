@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1-r2.ebuild,v 1.13 2010/01/16 18:48:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1-r2.ebuild,v 1.14 2010/01/22 17:50:19 ulm Exp $
 
 EAPI=2
 
@@ -49,7 +49,7 @@ RDEPEND="!=app-editors/emacs-vcs-23.0*
 		x11-libs/libXt
 		x11-misc/xbitmaps
 		gif? ( media-libs/giflib )
-		jpeg? ( media-libs/jpeg )
+		jpeg? ( media-libs/jpeg:0 )
 		png? ( media-libs/libpng )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
