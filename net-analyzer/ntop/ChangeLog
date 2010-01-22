@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.91 2010/01/19 17:15:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.92 2010/01/22 18:37:17 armin76 Exp $
+
+  22 Jan 2010; Raúl Porcel <armin76@gentoo.org> ntop-3.3.10-r2.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #281956
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> ntop-3.3.10-r2.ebuild:
   Stable for HPPA (bug #281956).
