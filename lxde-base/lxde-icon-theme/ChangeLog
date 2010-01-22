@@ -1,0 +1,11 @@
+# ChangeLog for lxde-base/lxde-icon-theme
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.1 2010/01/22 20:17:55 vostorga Exp $
+
+*lxde-icon-theme-0.0.1 (22 Jan 2010)
+
+  22 Jan 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +lxde-icon-theme-0.0.1.ebuild:
+  New package lxde-icon-theme , which was splitted from lxde-common and
+  contains nuoveXT2 iconset
+
