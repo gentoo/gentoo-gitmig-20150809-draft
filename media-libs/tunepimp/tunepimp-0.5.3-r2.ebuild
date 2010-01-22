@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r2.ebuild,v 1.9 2010/01/19 02:20:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r2.ebuild,v 1.10 2010/01/22 00:26:27 abcd Exp $
 
 EAPI=2
-inherit autotools eutils distutils
+inherit autotools eutils distutils multilib
 
 MY_P=lib${P}
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="python"
 
 RDEPEND="sys-libs/zlib
@@ -44,6 +44,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-new_libmp4v2.patch
 
 	sed -i -e "s: tta::" configure.in || die "sed failed"
+
+	# Don't hardcode ".so", use get_modname instead
+	sed -e "s|.so \$(top_srcdir)|$(get_modname) \$(top_srcdir)|g" \
+		-i plugins/*/Makefile.*
 
 	eautoreconf
 }
