@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0-r1.ebuild,v 1.1 2010/01/21 19:04:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0-r1.ebuild,v 1.2 2010/01/22 14:09:12 markusle Exp $
 
 EAPI="2"
 
@@ -37,6 +37,7 @@ src_prepare() {
 		-e "s:BLAS=.*:BLAS=${BLAS_LIBS}:" \
 		-e "s:LAPACK=.*:LAPACK=${LAPACK_LIBS}:" \
 		-e "/^LIBDIR=/a\PREFIX=${EPREFIX}/usr" \
+		-e "s:LIBDIR=lib:LIBDIR=$(get_libdir):" \
 		|| die "Failed to set up Makeconf"
 }
 
