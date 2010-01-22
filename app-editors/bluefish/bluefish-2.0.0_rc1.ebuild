@@ -1,17 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.3.7.ebuild,v 1.1 2009/09/23 12:31:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.0_rc1.ebuild,v 1.1 2010/01/22 23:57:50 billie Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit eutils fdo-mime
+inherit autotools eutils fdo-mime
 
 IUSE="nls spell gnome python"
 
-MY_P="${PN}-unstable-${PV}"
+MY_P=${P/_/-}
 
 DESCRIPTION="A GTK HTML editor for the experienced web designer or programmer."
-SRC_URI="http://www.bennewitz.com/bluefish/devel/source/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 
 LICENSE="GPL-2"
@@ -32,7 +32,14 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext dev-util/intltool )
 	python? ( dev-lang/python )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_prepare () {
+	# Fixes automagic installation of charmap plugin
+	# Upstream bug: https://bugzilla.gnome.org/show_bug.cgi?id=570990
+	epatch "${FILESDIR}"/${P}-gucharmap-automagic.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
@@ -41,6 +48,7 @@ src_configure() {
 		--disable-xml-catalog-update \
 		$(use_enable nls) \
 		$(use_enable spell spell-check) \
+		$(use_enable gnome charmap) \
 		$(use_enable python)
 }
 
