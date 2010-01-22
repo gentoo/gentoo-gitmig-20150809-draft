@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.66 2009/09/03 20:41:18 mrpouet Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.67 2010/01/22 16:44:02 ssuominen Exp $
+
+  22 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  abiword-plugins-2.6.8.ebuild:
+  Require SLOT="0" of media-libs/jpeg for headers.
 
   03 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   abiword-plugins-2.6.8.ebuild:
