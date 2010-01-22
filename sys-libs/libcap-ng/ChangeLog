@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap-ng
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.3 2009/10/26 07:44:56 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.4 2010/01/22 20:35:25 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> libcap-ng-0.6.1.ebuild:
+  keyworded ~arch for ppc, bug 284655
 
 *libcap-ng-0.6.2 (26 Oct 2009)
 
