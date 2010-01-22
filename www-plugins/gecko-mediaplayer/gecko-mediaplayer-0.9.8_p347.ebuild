@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8_p347.ebuild,v 1.1 2010/01/22 11:08:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8_p347.ebuild,v 1.2 2010/01/22 14:01:39 yngwin Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -32,14 +32,12 @@ S=${WORKDIR}/${MY_P}
 pkg_setup() {
 	G2CONF="--disable-dependency-tracking
 		$(use_enable gnome schemas-install)
-		--with-xulrunner-sdk
 		$(use_with gnome gconf)
 		--with-gio"
 	DOCS="ChangeLog DOCS/tech/javascript.txt"
 }
 
 src_configure() {
-	append-flags "$(pkg-config --cflags-only-I libxul)"
 	gnome2_src_configure
 }
 

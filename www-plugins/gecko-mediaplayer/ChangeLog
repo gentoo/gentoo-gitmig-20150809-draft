@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.25 2010/01/22 11:08:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.26 2010/01/22 14:01:39 yngwin Exp $
+
+  22 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  gecko-mediaplayer-0.9.8_p347.ebuild:
+  Drop xulrunner-sdk flag to force proper xulrunner detection, thanks to
+  Anarchy
 
 *gecko-mediaplayer-0.9.8_p347 (22 Jan 2010)
 
