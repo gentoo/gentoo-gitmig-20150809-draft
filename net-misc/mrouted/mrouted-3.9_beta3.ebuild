@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.14 2008/09/20 22:59:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.15 2010/01/22 16:26:58 cla Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/mrouted_${PV/_/-}-${DEB_PVER}.diff
-	sed -i "/^CFLAGS/s:-O:${CFLAGS}:" Makefile
+	sed -i "/^CFLAGS/s:=:+=:" Makefile
 }
 
 src_install() {
