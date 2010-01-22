@@ -1,14 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.14.0-r1.ebuild,v 1.9 2009/05/15 14:37:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.17.4.ebuild,v 1.1 2010/01/22 09:24:07 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
 
 inherit x-modular toolchain-funcs versionator
 
+EGIT_REPO_URI="git://anongit.freedesktop.org/git/pixman"
 DESCRIPTION="Low-level pixel manipulation routines"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="altivec mmx sse2"
 
 pkg_setup() {
@@ -41,14 +43,4 @@ pkg_setup() {
 	'0,0')
 		CONFIGURE_OPTIONS="${CONFIGURE_OPTIONS} --disable-mmx --disable-sse2" ;;
 	esac
-}
-
-src_unpack() {
-	x-modular_src_unpack
-	cd "${S}"
-
-	epatch "${FILESDIR}"/pixman-0.12.0-sse.patch
-
-	eautoreconf
-	elibtoolize
 }
