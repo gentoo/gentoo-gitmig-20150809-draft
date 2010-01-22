@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.3.4.ebuild,v 1.2 2009/12/22 23:02:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.3.4.ebuild,v 1.3 2010/01/22 20:58:48 abcd Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ CPPUNIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="KDE calculator"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 DEPEND="
