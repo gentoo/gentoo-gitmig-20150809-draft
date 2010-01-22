@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.18 2007/03/06 00:04:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.19 2010/01/22 13:47:11 cla Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	# <dougg@ufl.edu> (Cardoe)
 	epatch "${FILESDIR}"/${P}-sqrt.patch
 	epatch "${FILESDIR}"/${P}-gcc41.patch
+	sed -r -e /^CXXFLAGS/s:=.*:="${CXXFLAGS}": -i lib/Makefile.in
 }
 
 src_install() {
