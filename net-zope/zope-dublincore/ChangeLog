@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-dublincore
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-dublincore/ChangeLog,v 1.2 2009/12/05 00:51:28 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-dublincore/ChangeLog,v 1.3 2010/01/22 19:18:37 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> zope-dublincore-3.6.0.ebuild:
+  Marking zope-dublincore-3.6.0 ~ppc for bug 297734
 
 *zope-dublincore-3.6.0 (05 Dec 2009)
 
