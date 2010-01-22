@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.8 2010/01/21 23:51:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.9 2010/01/22 16:45:14 ssuominen Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -41,7 +41,7 @@ RDEPEND="
 		>=gnome-extra/evolution-data-server-2.25.5 )
 	exif? ( >=media-libs/libexif-0.6 )
 	iptc? ( media-libs/libiptcdata )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( media-libs/jpeg:0 )
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? ( >=media-libs/gstreamer-0.10.12 )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )

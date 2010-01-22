@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.59 2010/01/21 23:51:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.60 2010/01/22 16:45:14 ssuominen Exp $
+
+  22 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> tracker-0.7.17.ebuild,
+  tracker-9999.ebuild:
+  Require SLOT="0" of media-libs/jpeg for headers.
 
 *tracker-0.7.17 (21 Jan 2010)
 
