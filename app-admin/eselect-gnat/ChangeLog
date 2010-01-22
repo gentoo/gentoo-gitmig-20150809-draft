@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-gnat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.28 2008/05/17 06:26:51 george Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnat/ChangeLog,v 1.29 2010/01/22 12:50:14 george Exp $
+
+*eselect-gnat-1.5 (22 Jan 2010)
+
+  22 Jan 2010; George Shapovalov <george@gentoo.org>
+  +files/gnat.eselect-1.5, +eselect-gnat-1.5.ebuild:
+  new version, supporting brief output mode (#292105)
 
   16 May 2008; George Shapovalov <george@gentoo.org>
   -files/gnat.eselect-1.2, -files/gnat-common-1.2.bash,
