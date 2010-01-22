@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.39 2010/01/18 19:41:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.40 2010/01/22 18:14:04 armin76 Exp $
+
+  22 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  -files/chromium-drop_armel_m32.patch, chromium-9999.ebuild:
+  Drop unneded arm patch
 
   18 Jan 2010; Raúl Porcel <armin76@gentoo.org> chromium-4.0.266.0.ebuild,
   chromium-4.0.288.1.ebuild, chromium-4.0.295.0.ebuild:
