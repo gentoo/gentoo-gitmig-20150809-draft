@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5.ebuild,v 1.7 2010/01/15 05:51:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5.ebuild,v 1.8 2010/01/22 17:09:43 ssuominen Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ RDEPEND="aac? ( media-libs/faac )
 	vorbis? ( media-libs/libvorbis )
 	ogg? ( media-libs/libogg )
 	theora? ( media-libs/libtheora )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( media-libs/jpeg:0 )
 	truetype? ( >=media-libs/freetype-2 )
 	>=media-video/ffmpeg-0.4.9_p20081014
 	|| ( sys-libs/glibc dev-libs/libiconv )
