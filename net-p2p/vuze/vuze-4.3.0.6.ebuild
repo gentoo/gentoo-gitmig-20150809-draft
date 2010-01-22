@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.4-r1.ebuild,v 1.2 2009/09/29 05:36:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.0.6.ebuild,v 1.1 2010/01/22 22:21:53 caster Exp $
 
 EAPI=2
 
 JAVA_PKG_IUSE="source"
 
-PATCHSET_VER="4.2.0.0"
-
 inherit eutils fdo-mime java-pkg-2 java-ant-2
+
+PATCHSET_VER="4.2.0.8"
 
 DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"
@@ -44,11 +44,6 @@ src_unpack() {
 }
 
 java_prepare() {
-	# build.xml disappeared from 4.1.0.0 although it was there in 4.0.0.4
-	# hopefully that's just a packaging mistake
-	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
-	cp "${FILESDIR}/build.xml" . || die "failed to copy build.xml"
-
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${S}/${PN}-${PATCHSET_VER}-gentoo-patches/"
 
 	### Removes OS X files and entries.
@@ -136,6 +131,12 @@ pkg_postinst() {
 	elog
 	elog "If you have problems starting Vuze, try starting it"
 	elog "from the command line to look at debugging output."
+	elog
+	elog "If vuze crashes with sun-jdk or icedtea and crash log includes CompileTask"
+	elog "add this line to the end of your ~/.axureus/gentoo.config file:"
+	local opts='-XX:CompileCommand=exclude,com/aelitis/net/udp/uc/impl/PRUDPPacketHandlerImpl$5,runSupport'
+	elog "JAVA_OPTIONS='${opts}'"
+	elog "This is a workaround for a bug in the JDK, see https://bugs.gentoo.org/show_bug.cgi?id=259884"
 
 	fdo-mime_desktop_database_update
 }

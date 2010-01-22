@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/vuze-coreplugins-4.2.0.4.ebuild,v 1.1 2009/07/13 22:44:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/vuze-coreplugins-4.3.0.6.ebuild,v 1.1 2010/01/22 22:20:40 caster Exp $
 
 # eventually this should be built from source...
 
@@ -14,8 +14,8 @@ UPDATER_N=azupdater
 UPNPAV_N=azupnpav
 PLUGINS_V=2.1.6
 RATING_V=1.3.1
-UPDATER_V=1.8.8
-UPNPAV_V=0.2.21
+UPDATER_V=1.8.13
+UPNPAV_V=0.2.23
 PLUGINS_DIST=${PLUGINS_N}_${PLUGINS_V}.jar
 RATING_DIST=${RATING_N}_${RATING_V}.jar
 UPDATER_DIST=${UPDATER_N}_${UPDATER_V}.zip
