@@ -1,18 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.10.ebuild,v 1.5 2010/01/19 18:52:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.10.ebuild,v 1.6 2010/01/22 19:36:14 vostorga Exp $
 
 EAPI="2"
 inherit eutils
 
 MY_P=${P/_/-}
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager."
-HOMEPAGE="http://icculus.org/openbox/"
-SRC_URI="http://icculus.org/openbox/releases/${MY_P}.tar.gz"
+HOMEPAGE="http://openbox.org/"
+SRC_URI="http://openbox.org/dist/openbox/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha amd64 ~arm ~hppa ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="nls startup-notification xinerama"
 
 RDEPEND=">=dev-libs/glib-2.6
