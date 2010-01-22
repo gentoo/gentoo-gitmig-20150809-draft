@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.0.ebuild,v 1.1 2010/01/22 20:30:06 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.0.ebuild,v 1.2 2010/01/22 21:02:02 yngwin Exp $
 
 DESCRIPTION="Meta ebuild for LXDE, the Lightweight X11 Desktop Environment"
 HOMEPAGE="http://lxde.sf.net/"
@@ -28,7 +28,6 @@ RDEPEND="=lxde-base/lxappearance-0.4*
 	x11-misc/obconf"
 
 pkg_postinst() {
-	elog "For your convenience you can review the LXDE"
-	elog "Configuration HOWTO at"
+	elog "For your convenience you can review the LXDE Configuration HOWTO at"
 	elog "http://www.gentoo.org/proj/en/desktop/lxde/lxde-howto.xml"
 }
