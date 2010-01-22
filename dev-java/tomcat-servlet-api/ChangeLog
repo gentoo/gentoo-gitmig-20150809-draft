@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.71 2010/01/15 17:47:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.72 2010/01/22 11:12:00 caster Exp $
+
+  22 Jan 2010; Vlastimil Babka <caster@gentoo.org>
+  -tomcat-servlet-api-5.5.26.ebuild, -tomcat-servlet-api-5.5.27.ebuild,
+  tomcat-servlet-api-5.5.27-r1.ebuild:
+  Stable ppc #291480. Remove old.
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   tomcat-servlet-api-3.ebuild, tomcat-servlet-api-4.1.36.ebuild,
