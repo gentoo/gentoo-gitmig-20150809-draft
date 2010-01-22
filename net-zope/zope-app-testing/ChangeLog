@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-app-testing
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/ChangeLog,v 1.3 2010/01/16 19:31:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/ChangeLog,v 1.4 2010/01/22 19:13:33 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking zope-app-testing-3.7.4 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   zope-app-testing-3.7.4.ebuild:
