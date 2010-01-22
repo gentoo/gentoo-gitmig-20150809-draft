@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.0.1-r2.ebuild,v 1.1 2010/01/16 12:48:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.0.1-r2.ebuild,v 1.2 2010/01/22 08:25:30 wired Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -18,6 +18,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="kde windeco"
 
 DEPEND="x11-libs/qt-gui:4[dbus]
+	x11-libs/qt-svg:4
 	kde? ( >=kde-base/systemsettings-${KDE_MINIMAL}
 		windeco? ( >=kde-base/kwin-${KDE_MINIMAL} ) )"
 RDEPEND="${DEPEND}"
