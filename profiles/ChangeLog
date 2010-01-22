@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3819 2010/01/22 21:29:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3820 2010/01/22 21:33:00 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask www-client/chromium-4.0.302.2 dev channel release.
 
   22 Jan 2010; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Mask media-tv/vdr-dvd-scripts and media-tv/vdrplugin-rebuild. Both are
