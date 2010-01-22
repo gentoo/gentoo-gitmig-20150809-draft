@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-password
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-password/ChangeLog,v 1.2 2010/01/16 19:06:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-password/ChangeLog,v 1.3 2010/01/22 19:21:44 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> zope-password-3.5.1.ebuild:
+  Marking zope-password-3.5.1 ~ppc for bug 297734
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   zope-password-3.5.1.ebuild:
