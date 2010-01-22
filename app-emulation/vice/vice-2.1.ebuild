@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.1.ebuild,v 1.5 2009/11/12 07:59:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.1.ebuild,v 1.6 2010/01/22 16:41:32 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -38,7 +38,7 @@ RDEPEND="
 	resid? ( media-libs/resid )
 	sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( media-libs/jpeg:0 )
 	xv? ( x11-libs/libXv )
 	dga? ( x11-libs/libXxf86dga )
 	xrandr? ( x11-libs/libXrandr )"
