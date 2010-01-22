@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.40 2010/01/22 18:14:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.41 2010/01/22 21:38:44 phajdan.jr Exp $
+
+*chromium-4.0.302.2 (22 Jan 2010)
+
+  22 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-4.0.260.0.ebuild, -chromium-4.0.288.1.ebuild,
+  +chromium-4.0.302.2.ebuild:
+  Version bump for dev channel release. Remove old.
 
   22 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   -files/chromium-drop_armel_m32.patch, chromium-9999.ebuild:

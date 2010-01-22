@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.288.1.ebuild,v 1.3 2010/01/18 19:41:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.302.2.ebuild,v 1.1 2010/01/22 21:38:44 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -47,8 +47,6 @@ src_prepare() {
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-	# Add configuration flag to use system libevent
-	epatch "${FILESDIR}"/${PN}-use_system_libevent-1.4.13.patch
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \
