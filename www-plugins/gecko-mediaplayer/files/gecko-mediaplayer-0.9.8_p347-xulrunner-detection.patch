@@ -1,0 +1,46 @@
+--- gecko-mediaplayer-r347/configure.in-orig	2010-01-22 08:08:06.672212390 -0600
++++ gecko-mediaplayer-r347/configure.in	2010-01-22 08:09:11.427185920 -0600
+@@ -40,6 +40,21 @@
+ 	],
+         [])
+ 
++
++if test "$GECKO_CFLAGS" = ""; then
++PKG_CHECK_MODULES(GECKO, [libxul < 1.9.2],[ AC_MSG_NOTICE([libxul < 1.9.2 found])
++    ],[AC_MSG_WARN([libxul < 1.9.2 not found, trying another])])
++fi
++if test "$GECKO_CFLAGS" = ""; then
++PKG_CHECK_MODULES(GECKO, [libxul >= 1.9.2],[ AC_DEFINE([HAVE_NEW_XULRUNNER],[1],[Define to 1 if using libxul 1.9.2 or higher]) AC_MSG_NOTICE([libxul >= 1.9.2 found])
++    ],[AC_MSG_NOTICE([libxul >= 1.9.2 not found, trying another])])
++fi
++
++if test "$GECKO_CFLAGS" = ""; then
++PKG_CHECK_MODULES(GECKO, [libxul-unstable],[
++    ],[AC_MSG_WARN([libxul-unstable not found, trying another])])
++fi
++
+ if test "$GECKO_CFLAGS" = ""; then
+ PKG_CHECK_MODULES(GECKO, [mozilla-plugin mozilla-xpcom],[
+     ],[AC_MSG_WARN([mozilla-plugin not found, trying another])])
+@@ -61,21 +76,6 @@
+ fi
+ 
+ if test "$GECKO_CFLAGS" = ""; then
+-PKG_CHECK_MODULES(GECKO, [libxul < 1.9.2],[ AC_MSG_NOTICE([libxul < 1.9.2 found])
+-    ],[AC_MSG_WARN([libxul < 1.9.2 not found, trying another])])
+-fi
+-if test "$GECKO_CFLAGS" = ""; then
+-PKG_CHECK_MODULES(GECKO, [libxul >= 1.9.2],[ AC_DEFINE([HAVE_NEW_XULRUNNER],[1],[Define to 1 if using libxul 1.9.2 or higher]) AC_MSG_NOTICE([libxul >= 1.9.2 found])
+-    ],[AC_MSG_NOTICE([libxul >= 1.9.2 not found, trying another])])
+-fi
+-
+-if test "$GECKO_CFLAGS" = ""; then
+-PKG_CHECK_MODULES(GECKO, [libxul-unstable],[
+-    ],[AC_MSG_WARN([libxul-unstable not found, trying another])])
+-fi
+-
+-
+-if test "$GECKO_CFLAGS" = ""; then
+ PKG_CHECK_MODULES(GECKO, [iceape-plugin iceape-xpcom],[
+     ],[AC_MSG_WARN([iceape-plugin not found, trying another])])
+ fi

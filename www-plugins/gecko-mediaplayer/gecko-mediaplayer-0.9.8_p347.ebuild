@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8_p347.ebuild,v 1.2 2010/01/22 14:01:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8_p347.ebuild,v 1.3 2010/01/22 14:25:11 yngwin Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit eutils flag-o-matic gnome2 multilib
+inherit autotools eutils flag-o-matic gnome2 multilib
 
 MY_P=${PN}-r${PV##*p}
 
@@ -35,6 +35,12 @@ pkg_setup() {
 		$(use_with gnome gconf)
 		--with-gio"
 	DOCS="ChangeLog DOCS/tech/javascript.txt"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+	epatch "${FILESDIR}"/${P}-xulrunner-detection.patch
+	eautoreconf
 }
 
 src_configure() {
