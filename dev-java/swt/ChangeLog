@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/swt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.119 2009/12/09 21:30:26 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.120 2010/01/22 22:18:27 caster Exp $
+
+*swt-3.5.2_rc1 (22 Jan 2010)
+
+  22 Jan 2010; Vlastimil Babka <caster@gentoo.org> swt-3.3.1.1-r1.ebuild,
+  -swt-3.5.ebuild, +swt-3.5.2_rc1.ebuild:
+  Version bump that should fix button clicking problems with gtk+-2.18.*.
+  Remove seamonkey support from 3.3.1.1 for bug #300433.
 
   09 Dec 2009; Markus Meier <maekke@gentoo.org> swt-3.5.1.ebuild:
   amd64/x86 stable, bug #295893

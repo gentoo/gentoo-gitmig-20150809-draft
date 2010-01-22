@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.8 2009/11/11 22:56:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.9 2010/01/22 22:18:27 caster Exp $
 
 EAPI="1"
 
@@ -29,7 +29,7 @@ SLOT="3"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
-IUSE="cairo firefox gnome seamonkey opengl xulrunner"
+IUSE="cairo firefox gnome opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6
 		>=x11-libs/gtk+-2.6.8
 		>=dev-libs/atk-1.10.2
@@ -39,10 +39,6 @@ COMMON=">=dev-libs/glib-2.6
 					=gnome-base/gnome-vfs-2*
 					=gnome-base/libgnomeui-2*
 				)
-		seamonkey? ( !firefox? ( !xulrunner? (
-			=www-client/seamonkey-1*
-			>=dev-libs/nspr-4.6.2
-		) ) )
 		firefox? ( !xulrunner? (
 			=www-client/mozilla-firefox-2*
 			>=dev-libs/nspr-4.6.2
@@ -95,7 +91,6 @@ get_gecko() {
 	local gecko
 
 	# order here match the logic in DEPEND and USE flag descriptions
-	use seamonkey && gecko="seamonkey"
 	use firefox && gecko="firefox"
 	use xulrunner && gecko="xulrunner"
 
