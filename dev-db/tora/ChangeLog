@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.82 2010/01/12 18:21:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.83 2010/01/22 17:06:50 jer Exp $
+
+  22 Jan 2010; Jeroen Roovers <jer@gentoo.org> tora-2.1.1.ebuild:
+  Stable for HPPA (bug #298855).
 
   12 Jan 2010; nixnut <nixnut@gentoo.org> tora-2.1.1.ebuild:
   ppc stable #298855
