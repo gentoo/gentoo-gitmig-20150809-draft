@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.99 2010/01/15 21:19:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.100 2010/01/22 03:47:39 jer Exp $
+
+  22 Jan 2010; Jeroen Roovers <jer@gentoo.org> diffstat-1.51.ebuild:
+  Stable for HPPA (bug #296265).
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> diffstat-1.51.ebuild:
   Transfer Prefix keywords
