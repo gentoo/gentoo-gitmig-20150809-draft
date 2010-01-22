@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.192 2010/01/22 10:42:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.193 2010/01/22 18:35:01 ranger Exp $
+
+  22 Jan 2010; Brent Baude <ranger@gentoo.org> tor-0.2.1.22.ebuild:
+  Marking tor-0.2.1.22 ppc64 for bug 301701
 
   22 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tor-0.2.1.22.ebuild:
   stable x86, bug 301701
