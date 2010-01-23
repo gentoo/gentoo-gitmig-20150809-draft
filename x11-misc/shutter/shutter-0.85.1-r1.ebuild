@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.85.1.ebuild,v 1.1 2010/01/04 10:03:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.85.1-r1.ebuild,v 1.1 2010/01/23 13:38:06 hwoarang Exp $
 
 EAPI="2"
 
@@ -51,7 +51,7 @@ src_install() {
 	dodoc README || die "dodoc failed"
 	domenu share/applications/${PN}.desktop
 	doman share/man/man1/${PN}.1.gz || die "doman failed"
-	doicon share/pixmaps/${PN}.svg
+	doicon share/pixmaps/${PN}.png
 	doins -r share/locale || die "doins failed"
 	find "${D}"/usr/share/shutter/resources/system/plugins/ -type f ! -name '*.*' -exec chmod 755 {} \; \
 		|| die "failed to make plugins executables"
