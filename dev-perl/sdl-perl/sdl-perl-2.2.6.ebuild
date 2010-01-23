@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.2.6.ebuild,v 1.5 2010/01/11 17:21:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.2.6.ebuild,v 1.6 2010/01/23 11:07:50 tove Exp $
 
 EAPI=2
 
@@ -28,12 +28,15 @@ RDEPEND="virtual/opengl
 	>=media-libs/sdl-gfx-2.0.3
 	>=media-libs/sdl-net-1.2.4
 	mpeg? ( media-libs/smpeg )
-	truetype? ( >=media-libs/sdl-ttf-2.0.5 )
-	dev-lang/perl"
+	truetype? ( >=media-libs/sdl-ttf-2.0.5 )"
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-CBuilder
 	>=virtual/perl-Module-Build-0.28"
 
 S=${WORKDIR}/${MY_P}
 
-myconf="--extra_linker_flags='${LDFLAGS}'"
+src_prepare() {
+	# YAML is not used
+	sed -i "/^use YAML/d" "${S}"/Build.PL || die
+	perl-module_src_prepare
+}
