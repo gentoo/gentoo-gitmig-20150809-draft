@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r3.ebuild,v 1.1 2010/01/16 23:34:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r4.ebuild,v 1.1 2010/01/23 23:02:15 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -45,7 +45,8 @@ DEPEND="${CDEPEND}
 	test? (
 		dev-java/ant-junit
 		dev-java/ant-trax
-	)"
+	)
+	!!<dev-ruby/jruby-1.3.1-r1"
 
 PDEPEND="dev-ruby/rubygems
 	>=dev-ruby/rake-0.7.3
@@ -76,17 +77,12 @@ pkg_setup() {
 
 	local fail
 
-	if [[ ! -d "${GEMS}" && -L "${GEMS}" ]]; then
-		eerror "${GEMS} is a symlink. Please remove this symlink."
-		fail="true"
-	fi
-
-	# the symlink creates a collision with rubygems, bug #270953
-	# cannot be currently solved by removing in pkg_preinst, bug #233278
-	if [[ -L "${SITE_RUBY}" ]]; then
-		eerror "${SITE_RUBY} is a symlink. Please remove this symlink."
-		fail="true"
-	fi
+	for directory in "${GEMS}" "${SITE_RUBY}"; do
+		if [[ -L ${directory} ]]; then
+			eerror "${directory} is a symlink. Please remove this symlink."
+			fail="true"
+		fi
+	done
 
 	if [[ -n ${fail} ]]; then
 		eerror "Unmerging the old jruby version should also fix the problem(s)."
@@ -112,9 +108,6 @@ java_prepare() {
 
 	# Delete the bundled JARs but keep invokedynamic.jar.
 	# No source is available and it's only a dummy anyway.
-	#
-	# yecht should be packaged standalone; for now keep it around
-	# http://github.com/olabini/yecht
 	find build_lib -name "*.jar" ! -name "jsr292-mock.jar" -delete || die
 	rm lib/profile.jar || die
 
@@ -163,17 +156,14 @@ src_install() {
 	use doc && java-pkg_dojavadoc docs/api
 	use source && java-pkg_dosrc src/org
 
-	dobin "${FILESDIR}/jruby" || die
-	exeinto "/usr/share/${PN}/bin"
-	doexe "${S}/bin/jruby" || die
+	# We run the sed here in install so that we don't get the wrong
+	# data during the test phase!
+	sed \
+		-e '/++ebuild-cut-here++/, /--ebuild-cut-here--/ d' \
+		-e '/^JRUBY_HOME=/s:=:=/usr/share/jruby:' \
+		bin/jruby > "${T}"/jruby
 
-	# Install some jruby tools.
-	dobin "${S}"/bin/j{gem,irb{,_swing},rubyc} || die
-
-	# Symlink some common tools so that jruby can launch them internally.
-	for bin in {j,}gem jirb jrubyc rdoc ri ; do
-		dosym "/usr/bin/${bin}" "/usr/share/${PN}/bin/${bin}" || die
-	done
+	dobin "${T}"/jruby "${S}"/bin/j{gem,irb{,_swing},rubyc} || die
 
 	insinto "${RUBY_HOME}"
 	doins -r "${S}"/lib/ruby/{1.8,1.9,site_ruby} || die
