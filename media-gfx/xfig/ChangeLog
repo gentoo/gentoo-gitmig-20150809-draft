@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.60 2010/01/23 15:14:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.61 2010/01/23 17:24:58 jer Exp $
+
+  23 Jan 2010; Jeroen Roovers <jer@gentoo.org> xfig-3.2.5b.ebuild:
+  Stable for HPPA (bug #264575).
 
   23 Jan 2010; Tobias Klausmann <klausman@gentoo.org> xfig-3.2.5b.ebuild:
   Stable on alpha, bug #264575

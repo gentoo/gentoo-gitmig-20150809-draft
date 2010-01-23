@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b.ebuild,v 1.3 2010/01/23 15:14:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b.ebuild,v 1.4 2010/01/23 17:24:58 jer Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mcj/${MY_P}.full.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXaw
