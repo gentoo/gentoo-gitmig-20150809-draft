@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/h264enc/h264enc-8.9.7.ebuild,v 1.1 2009/08/02 12:43:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/h264enc/h264enc-9.1.4.ebuild,v 1.1 2010/01/23 02:07:56 spatz Exp $
 
 EAPI=2
 
@@ -25,7 +25,8 @@ RDEPEND="media-video/mplayer[encode,x264]
 	mp4? ( >=media-video/gpac-0.4.5[a52] )
 	sys-apps/coreutils
 	sys-process/time
-	sys-devel/bc"
+	sys-devel/bc
+	sys-apps/pv"
 DEPEND=""
 
 src_install() {
