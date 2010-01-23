@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.21.ebuild,v 1.2 2010/01/23 16:26:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.21.ebuild,v 1.3 2010/01/23 16:43:01 markusle Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -47,6 +47,10 @@ pkg_setup() {
 	ewarn "option might also result in much better performance"
 	ewarn "than using then sse instruction set depending on your"
 	ewarn "CPU."
+	echo
+	ewarn "If blas-atlas fails during linking with a message"
+	ewarn "'relocation R_X86_64_32 .... recompile with -fPIC.'"
+	ewarn "please re-emerge libtool and then try again."
 	echo
 	epause 5
 }

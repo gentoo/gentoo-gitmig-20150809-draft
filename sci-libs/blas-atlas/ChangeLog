@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.92 2010/01/23 16:26:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.93 2010/01/23 16:43:01 markusle Exp $
+
+  23 Jan 2010; Markus Dittrich <markusle@gentoo.org>
+  blas-atlas-3.9.21.ebuild:
+  Added a short message regarding libtool (see bug #279920).
 
   23 Jan 2010; Markus Dittrich <markusle@gentoo.org>
   blas-atlas-3.9.21.ebuild:
@@ -12,20 +16,20 @@
   blas-atlas-3.9.3.ebuild, +blas-atlas-3.9.21.ebuild:
   Version bump (fixes bug #281688).
 
-  22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  22 Dec 2009; Diego E. PettenÃ² <flameeyes@gentoo.org>
   blas-atlas-3.9.3.ebuild:
   Use emake -j1 for build, bug #294172.
 
-  14 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> files/blas.pc.in,
+  14 Jan 2009; SÃ©bastien Fabbro <bicatali@gentoo.org> files/blas.pc.in,
   files/cblas.pc.in, blas-atlas-3.9.3.ebuild:
   Now pkg-config files link to the atlas dirs, also fixed cblas and blas
   requires
 
-  23 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  23 Sep 2008; SÃ©bastien Fabbro <bicatali@gentoo.org>
   files/eselect.cblas.threaded-atlas:
   Fixed a cblas link in the threaded-atlas profile
 
-  05 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  05 Sep 2008; SÃ©bastien Fabbro <bicatali@gentoo.org>
   -files/3.7.11-allow-any-gcc-version.patch,
   -files/blas-atlas-3.9.1-Core2Duo-detect.patch,
   -files/3.6.0-ppc-configure.patch, -files/3.7.11-ppc-configure.patch,
@@ -38,7 +42,7 @@
   -blas-atlas-3.9.2.ebuild:
   Removed old versions
 
-  28 Aug 2008; Raúl Porcel <armin76@gentoo.org> blas-atlas-3.8.0.ebuild,
+  28 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> blas-atlas-3.8.0.ebuild,
   blas-atlas-3.9.3.ebuild:
   Add fix to compile on alpha, alpha stable wrt #200336
 
@@ -111,7 +115,7 @@
   blas-atlas-3.8.0.ebuild:
   Added fix to enable proper arch detection for pentium M chips.
 
-  12 Dec 2007; Raúl Porcel <armin76@gentoo.org> blas-atlas-3.8.0.ebuild:
+  12 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> blas-atlas-3.8.0.ebuild:
   sparc stable wrt #200336, thanks to Aaron Mavrinac
 
   12 Dec 2007; Markus Meier <maekke@gentoo.org> blas-atlas-3.8.0.ebuild:
@@ -132,7 +136,7 @@
   -blas-atlas-3.7.34.ebuild, +blas-atlas-3.8.0.ebuild:
   Version bump and removed old version.
 
-  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  11 Oct 2007; SÃ©bastien Fabbro <bicatali@gentoo.org>
   blas-atlas-3.6.0-r1.ebuild, blas-atlas-3.6.0-r2.ebuild,
   blas-atlas-3.7.11.ebuild, blas-atlas-3.7.11-r1.ebuild,
   blas-atlas-3.7.34.ebuild, blas-atlas-3.7.39.ebuild:
@@ -308,7 +312,7 @@
 
   22 Aug 2006; Markus Dittrich <markusle@gentoo.org>
   +blas-atlas-3.7.15.ebuild:
-  Version bump. Thanks much to Adam Piątyszek <ediap@et.put.poznan.pl>
+  Version bump. Thanks much to Adam PiÄtyszek <ediap@et.put.poznan.pl>
   for his ebuild and patches. This closes bug #144314.
 
   20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
@@ -389,7 +393,7 @@
   Switched from blas-config to eselect in pkg_postinst(). This fixes
   bug #121284.
 
-  30 Jan 2006; Bryan Østergaard <kloeri@gentoo.org
+  30 Jan 2006; Bryan Ãstergaard <kloeri@gentoo.org
   blas-atlas-3.6.0-r1.ebuild:
   Stable on alpha, bug 114587.
 
@@ -461,7 +465,7 @@
   +files/f77-threaded-ATLAS, +files/war, +blas-atlas-3.6.0.ebuild:
   Moved from app-sci/blas-atlas to sci-libs/blas-atlas.
 
-  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   blas-atlas-3.6.0.ebuild:
   Stable on alpha.
 
