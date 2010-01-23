@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3824 2010/01/23 13:00:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3825 2010/01/23 16:07:17 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -default-linux/make.defaults, -default-linux/mips/ChangeLog,
+  -default-linux/mips/make.defaults, -default-linux/mips/package.mask,
+  -default-linux/mips/package.use.mask, -default-linux/mips/packages,
+  -default-linux/mips/parent, -default-linux/mips/use.mask,
+  -default-linux/mips/virtuals, -default-linux/package.use.mask,
+  -default-linux/packages, -default-linux/packages.build,
+  -default-linux/parent, -default-linux/use.mask, -default-linux/virtuals:
+  Remove stray default-linux/ wrt #287976.
 
   23 Jan 2010; Raúl Porcel <armin76@gentoo.org> package.mask:
   Unmask mozilla-thunderbird-bin-3.0
