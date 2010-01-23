@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-3.2.ebuild,v 1.4 2010/01/17 18:11:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-3.2.ebuild,v 1.5 2010/01/23 16:30:45 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="test"
 
-RDEPEND=""
-DEPEND="dev-python/setuptools
+RDEPEND="dev-python/setuptools"
+DEPEND="${RDEPEND}
 	test? ( >=dev-python/nose-0.10.3 )"
 
 PYTHON_MODNAME="coverage"
