@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.19 2010/01/05 02:18:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.20 2010/01/23 18:40:28 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> roundcube-0.2.2.ebuild,
+  roundcube-0.3.ebuild, roundcube-0.3.1.ebuild:
+  Add ~arm wrt #301090
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> roundcube-0.3.1.ebuild:
   Marked ppc stable for bug #294679.
