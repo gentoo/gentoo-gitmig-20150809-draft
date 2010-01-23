@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.3 2010/01/21 19:24:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.4 2010/01/23 13:39:18 grobian Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -14,7 +14,7 @@ SRC_URI="http://get.qt.nokia.com/${MY_PN}/${P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux"
 IUSE="bineditor bookmarks +cmake cvs debug +debugger +designer doc examples fakevim git kde mercurial perforce qml qtscript subversion"
 
 DEPEND=">=x11-libs/qt-assistant-4.6.0:4
@@ -79,11 +79,12 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}/usr" install_subtargets || die "emake install failed"
+	emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_subtargets || die "emake install failed"
 	# fix binary name bug 275859
-	mv "${D}"/usr/bin/${MY_PN}.bin "${D}"/usr/bin/${MY_PN} || die "failed to rename executable"
+	mv "${D%/}${EPREFIX}"/usr/bin/${MY_PN}.bin \
+		"${D%/}${EPREFIX}"/usr/bin/${MY_PN} || die "failed to rename executable"
 	if use doc;then
-		emake INSTALL_ROOT="${D}/usr" install_qch_docs || die "emake install qch_docs failed"
+		emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_qch_docs || die "emake install qch_docs failed"
 	fi
 	make_desktop_entry ${MY_PN} QtCreator qtcreator_logo_48 \
 		'Qt;Development;IDE' || die "make_desktop_entry failed"
