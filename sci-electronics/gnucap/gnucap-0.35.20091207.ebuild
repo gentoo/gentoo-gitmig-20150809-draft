@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20090202.ebuild,v 1.1 2009/04/18 18:13:25 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20091207.ebuild,v 1.1 2010/01/23 17:54:29 calchan Exp $
+
+EAPI="2"
 
 inherit multilib
 
@@ -25,10 +27,7 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_PV}"
 
-src_unpack() {
-	unpack ${A} || die "Failed to unpack!"
-	cd "${S}"
-
+src_prepare() {
 	# No need to install COPYING and INSTALL
 	sed -i \
 		-e 's: COPYING INSTALL::' \
@@ -48,10 +47,12 @@ src_unpack() {
 		-e 's:CCFLAGS:CXXFLAGS:' \
 		-e "s:../Gnucap:${S}/src:" \
 		models-*/Make2 || die "sed failed"
+
+	sed -i -e "s:strchr(str2, '|'):const_cast<char*>(strchr(str2, '|')):" \
+		{src,modelgen}/ap_match.cc || die "sed failed"
 }
 
 src_compile () {
-	econf --disable-dependency-tracking
 	emake || die "Compilation failed"
 	for PLUGIN_DIR in models-* ; do
 		cd "${S}/${PLUGIN_DIR}"
