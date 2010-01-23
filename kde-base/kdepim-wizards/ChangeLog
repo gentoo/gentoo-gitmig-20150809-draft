@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.132 2010/01/19 02:37:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.133 2010/01/23 20:22:04 abcd Exp $
+
+  23 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  kdepim-wizards-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kdepim-wizards-4.3.3.ebuild:
   Stable for HPPA too.

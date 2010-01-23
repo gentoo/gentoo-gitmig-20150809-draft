@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.133 2010/01/19 02:42:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.134 2010/01/23 20:17:55 abcd Exp $
+
+  23 Jan 2010; Jonathan Callen <abcd@gentoo.org> knotes-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> knotes-4.3.3.ebuild:
   Stable for HPPA too.
