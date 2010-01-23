@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.124 2010/01/20 17:54:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.125 2010/01/23 05:35:04 matsuu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -67,7 +67,7 @@ media-video/totem tracker
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
 # Broken on so many setups it is just insane.
 # Unmask if you really know what you are doing.
-sys-apps/groff linguas_ja
+<sys-apps/groff-1.20.1-r2 linguas_ja
 
 # Samuli Suominen <ssuominen@gentoo.org) (14 Oct 2009)
 # Conflict with dev-libs/libffi in ld.so.conf.
