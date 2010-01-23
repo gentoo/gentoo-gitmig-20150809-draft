@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.125 2010/01/23 05:35:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.126 2010/01/23 12:31:24 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -34,12 +34,6 @@ sci-mathematics/fricas gcl cmucl
 # Alexey Shvetsov <alexxy@gentoo.org> (3 Dec 2009)
 # Mask very experimental mpi use flag dfor gamess
 sci-chemistry/gamess mpi
-
-# Samuli Suominen <ssuominen@gentoo.org> (29 Nov 2009)
-# Waiting for bug 298561 to be completed.
-<kde-base/ark-4.3.4 lzma
-<kde-base/kdebase-kioslaves-4.3.4 lzma
-<kde-base/kdelibs-4.3.4 lzma
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2009)
 # Not ready for stable anytime soon.
