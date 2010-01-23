@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.85 2009/10/31 15:42:28 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.86 2010/01/23 17:13:30 swegener Exp $
+
+*systemtap-1.1 (23 Jan 2010)
+
+  23 Jan 2010; Sven Wegener <swegener@gentoo.org> +systemtap-1.1.ebuild:
+  Version bump.
 
   31 Oct 2009; Sven Wegener <swegener@gentoo.org> -systemtap-0.7.ebuild,
   -systemtap-0.8.ebuild, -files/systemtap-0.8-gcc-4.3.3-warnings.patch,
