@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r2.ebuild,v 1.5 2009/07/01 09:42:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r2.ebuild,v 1.6 2010/01/23 09:35:08 abcd Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 IUSE="perl java python png readline threads bluetooth usb debug"
 
@@ -65,9 +65,10 @@ src_prepare() {
 }
 
 src_configure() {
+	use prefix || EPREFIX=
 	# tcl/tk support is disabled as per upstream request.
 	econf \
-		--includedir=/usr/include/libpisock \
+		--includedir="${EPREFIX}"/usr/include/libpisock \
 		--enable-conduits \
 		--with-tcl=no \
 		--without-included-popt \
@@ -75,13 +76,12 @@ src_configure() {
 		$(use_enable threads) \
 		$(use_enable usb libusb) \
 		$(use_enable debug) \
-		$(use_with png libpng $(libpng-config --prefix)) \
+		$(use_with png libpng "${EPREFIX}"/usr) \
 		$(use_with bluetooth bluez) \
 		$(use_with readline) \
 		$(use_with perl) \
 		$(use_with java) \
-		$(use_with python) \
-		|| die "econf failed"
+		$(use_with python)
 }
 
 src_compile() {
