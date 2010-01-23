@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.49 2010/01/23 15:57:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.50 2010/01/23 17:22:29 jer Exp $
+
+  23 Jan 2010; Jeroen Roovers <jer@gentoo.org> gdata-2.0.6.ebuild:
+  Stable for HPPA (bug #301401).
 
   23 Jan 2010; Brent Baude <ranger@gentoo.org> gdata-2.0.6.ebuild:
   stable ppc, bug 301401
