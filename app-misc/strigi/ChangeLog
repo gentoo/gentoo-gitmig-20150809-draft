@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.49 2010/01/18 21:14:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.50 2010/01/23 15:06:53 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -strigi-0.6.5.ebuild:
+  rm
 
   18 Jan 2010; Jonathan Callen <abcd@gentoo.org> strigi-0.7.0.ebuild:
   Keyword ~amd64-linux/~x86-linux
