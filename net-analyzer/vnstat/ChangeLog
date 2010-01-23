@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.38 2010/01/03 18:24:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.39 2010/01/23 18:31:26 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> vnstat-1.6.ebuild,
+  vnstat-1.7.ebuild, vnstat-1.7-r1.ebuild, vnstat-1.7-r2.ebuild,
+  vnstat-1.9.ebuild, vnstat-1.10.ebuild:
+  Add ~arm wrt #300831
 
   03 Jan 2010; Jeroen Roovers <jer@gentoo.org> vnstat-1.9.ebuild,
   vnstat-1.10.ebuild:
