@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.3-r1.ebuild,v 1.1 2010/01/05 19:41:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.3-r1.ebuild,v 1.2 2010/01/23 23:08:14 flameeyes Exp $
 
 EAPI="2"
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
@@ -24,5 +24,5 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-
 IUSE=""
 
 each_fakegem_test() {
-	${RUBY} test/test_plugins.rb
+	${RUBY} -Ilib test/test_plugins.rb || die "tests failed"
 }
