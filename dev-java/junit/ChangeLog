@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.55 2010/01/03 20:52:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.56 2010/01/23 12:54:46 aballier Exp $
+
+  23 Jan 2010; Alexis Ballier <aballier@gentoo.org> junit-4.6.ebuild:
+  keyword ~x86-fbsd, bug #129773 and fix find call to be bsd-compatible
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   junit-3.8.2-r1.ebuild, junit-4.6.ebuild:
