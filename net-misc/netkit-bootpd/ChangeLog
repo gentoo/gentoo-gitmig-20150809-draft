@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-bootpd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.19 2008/11/11 02:10:40 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.20 2010/01/23 10:01:11 cla Exp $
+
+  23 Jan 2010; Dawid Węgliński <cla@gentoo.org> netkit-bootpd-2.4.ebuild:
+  Respect user CFLAGS (bug #241072)
 
   11 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
   netkit-bootpd-2.4.ebuild:

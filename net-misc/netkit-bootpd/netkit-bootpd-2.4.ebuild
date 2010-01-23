@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-2.4.ebuild,v 1.7 2008/11/11 02:10:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-2.4.ebuild,v 1.8 2010/01/23 10:01:11 cla Exp $
 
 inherit eutils
 
@@ -21,7 +21,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-misc.patch
+	sed -r -e /^CFLAGS=/s:=:+=:g -i Makefile
 }
 
 src_compile() {
