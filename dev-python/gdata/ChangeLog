@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.48 2010/01/22 20:58:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.49 2010/01/23 15:57:47 ranger Exp $
+
+  23 Jan 2010; Brent Baude <ranger@gentoo.org> gdata-2.0.6.ebuild:
+  stable ppc, bug 301401
 
   22 Jan 2010; Tom Gall <tgall@gentoo.org> gdata-2.0.6.ebuild:
   stable on ppc64, bug 301401
