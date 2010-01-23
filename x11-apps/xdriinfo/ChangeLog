@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xdriinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.45 2010/01/18 19:10:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.46 2010/01/23 18:52:33 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xdriinfo-1.0.2.ebuild:
+  rm
 
   18 Jan 2010; Raúl Porcel <armin76@gentoo.org> xdriinfo-1.0.3.ebuild:
   alpha/ia64/sh/sparc stable wrt #294958
