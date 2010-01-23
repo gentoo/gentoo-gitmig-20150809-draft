@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.7.0.ebuild,v 1.1 2010/01/18 17:17:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.7.0.ebuild,v 1.2 2010/01/23 09:15:40 graaff Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18"
+
+RUBY_FAKEGEM_TASK_DOC=""
 
 RUBY_FAKEGEM_TASK_TEST="spec:integration:rack spec:integration:sinatra spec:integration:mechanize"
 
