@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.39 2010/01/14 17:10:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.40 2010/01/23 21:21:28 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xcb-proto-1.1.ebuild:
+  rm
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xcb-proto-1.6.ebuild:
   Transfer Prefix keywords
