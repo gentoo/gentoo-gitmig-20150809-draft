@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.58 2010/01/23 10:57:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.59 2010/01/23 14:19:44 aballier Exp $
 
 EAPI="2"
 
@@ -45,14 +45,14 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS=""
-IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb cdio dbus dc1394
+IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt ggi gnome gnutls httpd id3tag ieee1394 jack kate libass libcaca
 	libnotify libproxy libsysfs libtiger libv4l libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
-	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vcdinfo vcdx vlm
+	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vcdx vlm
 	vorbis win32codecs wma-fixed x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -66,7 +66,6 @@ RDEPEND="
 		avahi? ( >=net-dns/avahi-0.6 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		cdda? (	cddb? ( >=media-libs/libcddb-1.2.0 ) )
-		cdio? ( >=dev-libs/libcdio-0.78.2 )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1
 			>=media-libs/libdc1394-2.0.2 )
@@ -136,7 +135,7 @@ RDEPEND="
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
 		v4l? ( libv4l? ( media-libs/libv4l ) )
-		vcdinfo? ( >=media-video/vcdimager-0.7.22 )
+		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
 		x264? ( >=media-libs/x264-0.0.20090923 )
@@ -184,9 +183,6 @@ pkg_setup() {
 	fi
 	vlc_use_needs skins truetype
 	vlc_use_force skins qt4
-	vlc_use_needs vcdx cdio
-	vlc_use_needs vcdx vcdinfo
-	vlc_use_needs vcdinfo cdio
 	vlc_use_needs bidi truetype
 	vlc_use_force remoteosd gcrypt
 	vlc_use_needs fontconfig truetype
@@ -248,7 +244,6 @@ src_configure() {
 		$(use_enable bidi fribidi) \
 		$(use_enable cdda vcd) \
 		$(use_enable cddb libcddb) \
-		$(use_enable cdio libcdio) \
 		$(use_enable dbus) $(use_enable dbus dbus-control) \
 		$(use_enable dirac) \
 		$(use_enable directfb) \
@@ -325,7 +320,6 @@ src_configure() {
 		$(use_enable upnp) \
 		$(use_enable v4l) \
 		$(use_enable v4l2) \
-		$(use_enable vcdinfo libvcdinfo) \
 		$(use_enable vcdx) \
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
