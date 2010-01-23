@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/editra
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.8 2009/12/19 02:09:06 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.9 2010/01/23 00:15:12 billie Exp $
+
+*editra-0.5.32 (23 Jan 2010)
+
+  23 Jan 2010; Daniel Pielmeier <billie@gentoo.org> +editra-0.5.32.ebuild:
+  Version bump. Fixes bug #298270 reported by Arfrever.
 
 *editra-0.5.25 (19 Dec 2009)
 
