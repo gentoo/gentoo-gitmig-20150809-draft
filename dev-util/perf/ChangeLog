@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.10 2010/01/22 12:21:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.11 2010/01/23 17:22:22 flameeyes Exp $
+
+  23 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  perf-2.6.33_rc2.ebuild, perf-2.6.33_rc5.ebuild:
+  Fix (again) bug #291801.
 
 *perf-2.6.33_rc5 (22 Jan 2010)
 

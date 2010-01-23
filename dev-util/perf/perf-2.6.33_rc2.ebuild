@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.33_rc2.ebuild,v 1.1 2009/12/28 00:47:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.33_rc2.ebuild,v 1.2 2010/01/23 17:22:22 flameeyes Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ IUSE="+demangle +doc"
 RDEPEND="demangle? ( sys-devel/binutils )
 	dev-libs/elfutils"
 DEPEND="${RDEPEND}
-	${LINUX_PATH+dev-util/patchutils}
+	${LINUX_PATCH+dev-util/patchutils}
 	doc? ( app-text/asciidoc app-text/xmlto )"
 
 S="${WORKDIR}/linux-${LINUX_VER}/tools/perf"
