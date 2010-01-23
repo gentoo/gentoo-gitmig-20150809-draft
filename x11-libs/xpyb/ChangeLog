@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.10 2010/01/05 16:43:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.11 2010/01/23 21:08:44 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0001-.la-file-is-totaly-useless-for-python-bindings-and-c.patch,
+  -xpyb-1.2.ebuild:
+  rm
 
 *xpyb-1.2-r1 (05 Jan 2010)
 

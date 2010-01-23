@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.69 2010/01/15 21:46:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.70 2010/01/23 20:45:33 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libXext-1.0.4.ebuild:
+  rm
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libXext-1.1.1.ebuild:
   Transfer Prefix keywords

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.41 2010/01/18 20:00:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.42 2010/01/23 21:02:54 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libpciaccess-0.10.5.ebuild, -libpciaccess-0.10.6.ebuild:
+  rm
 
   18 Jan 2010; Raúl Porcel <armin76@gentoo.org> libpciaccess-0.10.9.ebuild:
   alpha/ia64/sh/sparc stable wrt #294958

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.68 2010/01/19 20:03:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.69 2010/01/23 20:38:52 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -libICE-1.0.3.ebuild,
+  -libICE-1.0.4.ebuild, -libICE-1.0.5.ebuild:
+  rm
 
   19 Jan 2010; Raúl Porcel <armin76@gentoo.org> libICE-1.0.6.ebuild:
   s390 stable wrt #294958
