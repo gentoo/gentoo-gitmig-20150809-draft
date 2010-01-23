@@ -1,6 +1,10 @@
 # ChangeLog for games-util/linux-wbfs-manager
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/ChangeLog,v 1.5 2009/12/29 14:13:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/ChangeLog,v 1.6 2010/01/23 15:43:19 ranger Exp $
+
+  23 Jan 2010; Brent Baude <ranger@gentoo.org>
+  linux-wbfs-manager-0.1.11.ebuild:
+  keyworded ~arch for ppc, bug 296690
 
   29 Dec 2009; Markus Meier <maekke@gentoo.org>
   linux-wbfs-manager-0.1.11.ebuild:

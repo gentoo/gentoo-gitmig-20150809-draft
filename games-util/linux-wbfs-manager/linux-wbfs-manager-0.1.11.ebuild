@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.11.ebuild,v 1.5 2010/01/05 15:53:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.11.ebuild,v 1.6 2010/01/23 15:43:19 ranger Exp $
 
 EAPI=2
 if [[ "${PV}" == "9999" ]]; then
@@ -11,7 +11,7 @@ if [[ "${PV}" == "9999" ]]; then
 else
 	inherit toolchain-funcs
 	SRC_URI="http://linux-wbfs-manager.googlecode.com/files/${P}.tar.gz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="amd64 ~ppc x86"
 fi;
 
 DESCRIPTION="WBFS manager for Linux using GTK+"
