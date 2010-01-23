@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/goldendict
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/goldendict/ChangeLog,v 1.1 2010/01/23 13:04:13 hwoarang Exp $
+
+*goldendict-0.9.0 (23 Jan 2010)
+
+  23 Jan 2010; Markos Chandras <hwoarang@gentoo.org>
+  +goldendict-0.9.0.ebuild, +files/goldendict-0.9.0-gcc4.4.patch,
+  +metadata.xml:
+  Initial ebuild of goldendict. Bug #264631
+
