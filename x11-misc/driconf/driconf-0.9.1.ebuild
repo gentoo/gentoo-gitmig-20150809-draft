@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1.ebuild,v 1.9 2010/01/10 23:11:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1.ebuild,v 1.10 2010/01/23 21:12:19 scarabeus Exp $
 
 EAPI="2"
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="driconf is a GTK+2 GUI configurator for DRI."
 HOMEPAGE="http://dri.freedesktop.org/wiki/DriConf"
@@ -37,6 +37,5 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 
-	insinto /usr/share/applications
-	doins driconf.desktop || die
+	domenu driconf.desktop
 }
