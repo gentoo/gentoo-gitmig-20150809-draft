@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.37 2010/01/22 09:32:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.38 2010/01/23 15:46:50 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -63,6 +63,12 @@ EGIT_DIFFSTAT_CMD="git --no-pager diff --stat"
 # @DESCRIPTION:
 # This variable value is passed to clone and fetch.
 : ${EGIT_OPTIONS:=}
+
+# @ECLASS-VARIABLE: EGIT_MASTER
+# @DESCRIPTION:
+# Variable for specifying master branch.
+# Usefull when upstream don't have master branch.
+: ${EGIT_MASTER:=master}
 
 # @ECLASS-VARIABLE: EGIT_REPO_URI
 # @DESCRIPTION:
@@ -275,7 +281,7 @@ git_fetch() {
 
 		debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
 		# fix branching
-		git checkout master
+		git checkout ${EGIT_MASTER}
 		for x in $(git branch |grep -v "* master" |tr '\n' ' '); do
 			git branch -D ${x}
 		done
