@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.21 2010/01/19 09:30:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.22 2010/01/23 17:28:21 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  plasma-runtime-4.3.4.ebuild:
+  Add ~arm
 
   19 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   plasma-runtime-4.3.4.ebuild:

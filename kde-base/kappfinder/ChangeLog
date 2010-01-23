@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.145 2010/01/20 20:19:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.146 2010/01/23 17:43:38 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> kappfinder-4.3.4.ebuild:
+  Add ~arm
 
   20 Jan 2010; Jonathan Callen <abcd@gentoo.org> kappfinder-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

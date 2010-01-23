@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solid-hardware
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.37 2010/01/19 09:34:39 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.38 2010/01/23 17:27:30 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  solid-hardware-4.3.4.ebuild:
+  Add ~arm
 
   19 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   solid-hardware-4.3.4.ebuild:

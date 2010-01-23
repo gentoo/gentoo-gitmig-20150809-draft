@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.148 2010/01/20 18:54:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.149 2010/01/23 17:44:03 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> kfind-4.3.4.ebuild:
+  Add ~arm
 
   20 Jan 2010; Jonathan Callen <abcd@gentoo.org> kfind-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

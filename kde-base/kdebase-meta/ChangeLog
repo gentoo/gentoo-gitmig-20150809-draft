@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.153 2010/01/21 00:11:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.154 2010/01/23 17:48:25 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> kdebase-meta-4.3.4.ebuild:
+  Add ~arm
 
   21 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdebase-meta-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux; drop kdm dep on prefix (at least for now)
