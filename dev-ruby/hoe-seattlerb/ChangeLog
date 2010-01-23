@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.7 2010/01/16 17:29:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.8 2010/01/23 15:11:38 flameeyes Exp $
+
+  23 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -hoe-seattlerb-1.2.1.ebuild, hoe-seattlerb-1.2.2.ebuild:
+  Add minitest as runtime dependency, otherwise the Rakefiles using
+  hoe-seattlerb will fail. Closes bug #301929.
 
   16 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   hoe-seattlerb-1.2.2.ebuild:
