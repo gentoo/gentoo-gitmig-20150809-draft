@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/tokyotyrant-1.1.39.ebuild,v 1.1 2009/12/28 20:51:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/tokyotyrant-1.1.39.ebuild,v 1.2 2010/01/23 15:33:46 grobian Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc-macos ~x86-macos"
 IUSE="debug lua"
 
 DEPEND="dev-db/tokyocabinet
@@ -22,8 +22,10 @@ DEPEND="dev-db/tokyocabinet
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	enewgroup tyrant
-	enewuser tyrant -1 -1 /var/lib/${PN} tyrant
+	if use !prefix ; then
+		enewgroup tyrant
+		enewuser tyrant -1 -1 /var/lib/${PN} tyrant
+	fi
 }
 
 src_prepare() {
@@ -43,7 +45,7 @@ src_install() {
 
 	for x in /var/{lib,run,log}/${PN}; do
 		dodir "${x}" || die "Install failed"
-		fowners tyrant:tyrant "${x}"
+		use prefix || fowners tyrant:tyrant "${x}"
 	done
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die "Install failed"

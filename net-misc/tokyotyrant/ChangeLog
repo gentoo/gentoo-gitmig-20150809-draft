@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tokyotyrant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.5 2010/01/06 23:26:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.6 2010/01/23 15:33:46 grobian Exp $
+
+  23 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  tokyotyrant-1.1.39.ebuild:
+  Don't user stuff in Prefix, marked ~ppc-macos and ~x86-macos, bug #298814
 
   06 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/fix_testsuite.patch:
   Fixing patch for #299901, thanks to Johan Bergstroem
