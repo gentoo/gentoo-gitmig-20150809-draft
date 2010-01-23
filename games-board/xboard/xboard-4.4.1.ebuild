@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.1.ebuild,v 1.5 2010/01/11 17:34:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.1.ebuild,v 1.6 2010/01/23 15:50:46 ranger Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/xboard/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 x86"
+KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE="Xaw3d zippy"
 RESTRICT="test" #124112
 
