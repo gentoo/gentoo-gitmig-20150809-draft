@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.1 2010/01/23 13:48:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.2 2010/01/23 13:50:52 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils eutils qt4 pax-utils
@@ -56,8 +56,8 @@ QA_DT_HASH="opt/skype/skype"
 # QA_PRESTRIPPED="opt/skype/skype"
 
 src_install() {
-	local MY_S=${S}
-	use qt-static && MY_S=${WORKDIR}/${PN}_static-${PV}
+	local MY_S="${S}"
+	use qt-static && MY_S="${WORKDIR}/${PN}_static-${PV}"
 	cd "${MY_S}"
 
 	exeinto /opt/skype
