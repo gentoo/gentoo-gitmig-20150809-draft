@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1.ebuild,v 1.13 2009/12/31 21:03:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1.ebuild,v 1.14 2010/01/23 10:18:30 matsuu Exp $
 
 inherit ruby
 
@@ -29,7 +29,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install install-etc || die
+	emake DESTDIR="${D}" install install-etc || die
 
-	erubydoc
+	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	dohtml -r doc/* || die
 }
