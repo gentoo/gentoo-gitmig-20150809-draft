@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-component/zope-component-3.8.0.ebuild,v 1.3 2010/01/22 19:15:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-component/zope-component-3.9.1.ebuild,v 1.1 2010/01/23 21:17:21 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
