@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-misc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.110 2009/12/10 20:32:59 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.111 2010/01/23 22:37:32 abcd Exp $
+
+  23 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdesdk-misc-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   10 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdesdk-misc-4.3.1.ebuild:
