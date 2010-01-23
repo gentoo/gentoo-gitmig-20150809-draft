@@ -1,12 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/daemons-1.0.10-r1.ebuild,v 1.2 2010/01/04 11:13:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/daemons-1.0.10-r1.ebuild,v 1.3 2010/01/23 23:40:06 flameeyes Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="Releases README TODO"
 RUBY_FAKEGEM_DOCDIR="html"
+
+# There are no tests :( the gem is shipped with some tests but so
+# commented they make no sense, so we cannot run them, too bad.
+RAKE_FAKEGEM_TASK_TEST=""
 
 inherit ruby-fakegem
 

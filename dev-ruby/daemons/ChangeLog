@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.42 2010/01/08 11:00:30 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.43 2010/01/23 23:40:06 flameeyes Exp $
+
+  23 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  daemons-1.0.10-r1.ebuild:
+  Disable tests, but enable support for JRuby as it seems to work fine.
 
   08 Jan 2010; Alex Legler <a3li@gentoo.org> -daemons-0.4.2.ebuild:
   remove old version
