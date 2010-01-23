@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5c.ebuild,v 1.1 2010/01/14 19:02:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5c.ebuild,v 1.2 2010/01/23 15:03:50 ranger Exp $
 
 EAPI="2"
 inherit toolchain-funcs eutils flag-o-matic
@@ -14,7 +14,7 @@ SRC_URI="http://xfig.org/software/xfig/${PV/[a-z]}/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXpm
