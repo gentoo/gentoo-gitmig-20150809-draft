@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xbomb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.20 2010/01/16 17:29:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.21 2010/01/23 15:40:48 ranger Exp $
+
+  23 Jan 2010; Brent Baude <ranger@gentoo.org> xbomb-2.2a.ebuild:
+  stable ppc, bug 299037
 
   16 Jan 2010; Raúl Porcel <armin76@gentoo.org> xbomb-2.2.ebuild,
   xbomb-2.2a.ebuild:
