@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klettres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.141 2010/01/19 00:45:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.142 2010/01/23 06:47:56 abcd Exp $
+
+  23 Jan 2010; Jonathan Callen <abcd@gentoo.org> klettres-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> klettres-4.3.3.ebuild:
   Stable for HPPA too.

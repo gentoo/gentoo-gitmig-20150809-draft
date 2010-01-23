@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwordquiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.142 2010/01/19 00:49:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.143 2010/01/23 06:54:51 abcd Exp $
+
+  23 Jan 2010; Jonathan Callen <abcd@gentoo.org> kwordquiz-4.3.4.ebuild:
+  Keyword ~amd64-linux/~x86-linux
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> kwordquiz-4.3.3-r1.ebuild:
   Stable for HPPA too.
