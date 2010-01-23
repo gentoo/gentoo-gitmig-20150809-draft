@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r1.ebuild,v 1.1 2010/01/23 11:53:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r1.ebuild,v 1.2 2010/01/23 11:56:52 ssuominen Exp $
 
 EAPI="2"
 
@@ -76,6 +76,8 @@ src_prepare() {
 		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
 		"${S}"/docs/pvm3/Makefile.am "${S}"/docs/tech/html/Makefile.am \
 		"${S}"/docs/tech/Makefile.am
+
+	epatch "${FILESDIR}"/${P}-jpeg-7.patch
 
 	eautoreconf
 }
