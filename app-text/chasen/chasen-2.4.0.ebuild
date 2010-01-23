@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0.ebuild,v 1.7 2008/01/15 05:33:19 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0.ebuild,v 1.8 2010/01/23 08:16:04 matsuu Exp $
 
 inherit perl-app
 
@@ -11,7 +11,7 @@ DESCRIPTION="Japanese Morphological Analysis System, ChaSen"
 HOMEPAGE="http://chasen-legacy.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp//chasen-legacy/24693/${MY_P}.tar.gz"
 
-LICENSE="chasen"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="perl"

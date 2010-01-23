@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chasen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.35 2010/01/02 12:05:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.36 2010/01/23 08:16:04 matsuu Exp $
+
+  23 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> chasen-2.4.0.ebuild,
+  -chasen-2.4.2.ebuild, chasen-2.4.4.ebuild:
+  Fixed LICENSE, bug #301123. Removed old version.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> chasen-2.4.4.ebuild:
   Transfer Prefix keywords
