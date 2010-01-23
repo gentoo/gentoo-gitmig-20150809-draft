@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.54 2009/12/28 21:18:01 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.55 2010/01/23 15:18:58 grobian Exp $
+
+*botan-1.8.8-r1 (23 Jan 2010)
+
+  23 Jan 2010; Fabian Groffen <grobian@gentoo.org> +botan-1.8.8-r1.ebuild,
+  +files/botan-1.8.8-darwin-install_name-fix.patch:
+  Revbump for Prefix/OSX fixes. I changed the ebuild in such a way that
+  needs less sedding/fixing afterwards basically because I had to to get a
+  correct install_name on Darwin. Also support case-insensitive filesystems
+  for the docs installation. Marked ~ppc-macos, fixes bug #299620.
 
   28 Dec 2009; Markus Meier <maekke@gentoo.org> botan-1.8.8.ebuild:
   x86 stable, bug #295701
