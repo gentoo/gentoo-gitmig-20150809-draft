@@ -1,6 +1,9 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.107 2010/01/23 13:48:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.108 2010/01/23 14:01:08 ssuominen Exp $
+
+  23 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> skype-2.1.0.81.ebuild:
+  Missing check_license for Skype End User License Agreement.
 
 *skype-2.1.0.81 (23 Jan 2010)
 

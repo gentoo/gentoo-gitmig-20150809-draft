@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.2 2010/01/23 13:50:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.3 2010/01/23 14:01:08 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils eutils qt4 pax-utils
@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="qt-static"
 
+PROPERTIES="interactive"
 RESTRICT="mirror strip" # Bug 299368
 EMUL_VER=20091231
 
@@ -54,6 +55,10 @@ QA_EXECSTACK="opt/skype/skype"
 QA_WX_LOAD="opt/skype/skype"
 QA_DT_HASH="opt/skype/skype"
 # QA_PRESTRIPPED="opt/skype/skype"
+
+pkg_setup() {
+	 check_license
+}
 
 src_install() {
 	local MY_S="${S}"
