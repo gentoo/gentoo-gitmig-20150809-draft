@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ksquares-4.3.4.ebuild,v 1.1 2009/12/01 11:05:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ksquares-4.3.4.ebuild,v 1.2 2010/01/23 02:09:38 abcd Exp $
 
 EAPI="2"
 
@@ -23,8 +23,8 @@ src_prepare() {
 src_install() {
 	kde4-meta_src_install
 	# and also we have to prepare the ggz dir
-	mkdir -p "${D}"/usr/share/ggz/modules
-	cp ${PN}/src/module.dsc "${D}"/usr/share/ggz/modules/${P}.dsc
+	insinto /usr/share/ggz/modules
+	newins ${PN}/src/module.dsc ${P}.dsc || die
 }
 
 pkg_postinst() {
