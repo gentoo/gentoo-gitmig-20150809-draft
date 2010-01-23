@@ -1,0 +1,109 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.1 2010/01/23 13:48:06 ssuominen Exp $
+
+EAPI=2
+inherit gnome2-utils eutils qt4 pax-utils
+
+SFILENAME=${PN}_static-${PV}.tar.bz2
+DFILENAME=${P}.tar.bz2
+
+DESCRIPTION="A P2P-VoiceIP client."
+HOMEPAGE="http://www.skype.com/"
+SRC_URI="!qt-static? ( http://download.skype.com/linux/${DFILENAME} )
+	qt-static? ( http://download.skype.com/linux/${SFILENAME} )"
+
+LICENSE="skype-eula"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="qt-static"
+
+RESTRICT="mirror strip" # Bug 299368
+EMUL_VER=20091231
+
+RDEPEND="
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
+			>=app-emulation/emul-linux-x86-baselibs-${EMUL_VER}
+			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_VER}
+			!qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-${EMUL_VER} ) )
+	x86? ( >=media-libs/alsa-lib-1.0.11
+		x11-libs/libXScrnSaver
+		x11-libs/libXv
+		qt-static? ( media-libs/fontconfig
+			media-libs/freetype
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXcursor
+			x11-libs/libXext
+			x11-libs/libXfixes
+			x11-libs/libXi
+			x11-libs/libXinerama
+			x11-libs/libXrandr
+			x11-libs/libXrender
+			x11-libs/libX11 )
+		!qt-static? ( x11-libs/qt-gui:4[accessibility,dbus]
+			x11-libs/qt-dbus:4
+			x11-libs/libX11
+			x11-libs/libXau
+			x11-libs/libXdmcp ) )"
+
+# Required for lrelease command at buildtime
+DEPEND="!qt-static? ( x11-libs/qt-core:4 )"
+
+QA_EXECSTACK="opt/skype/skype"
+QA_WX_LOAD="opt/skype/skype"
+QA_DT_HASH="opt/skype/skype"
+# QA_PRESTRIPPED="opt/skype/skype"
+
+src_install() {
+	local MY_S=${S}
+	use qt-static && MY_S=${WORKDIR}/${PN}_static-${PV}
+	cd "${MY_S}"
+
+	exeinto /opt/skype
+	doexe skype || die
+	fowners root:audio /opt/skype/skype
+	make_wrapper skype ./skype /opt/skype /opt/skype
+
+	insinto /opt/skype/sounds
+	doins sounds/*.wav || die
+
+	if ! use qt-static; then
+		insinto /etc/dbus-1/system.d
+		doins skype.conf || die
+	fi
+
+	if ! use qt-static; then
+		lrelease lang/*.ts
+	fi
+
+	insinto /opt/skype/lang
+	doins lang/*.qm || die
+
+	insinto /opt/skype/avatars
+	doins avatars/*.png || die
+
+	local res
+	for res in 16 32 48; do
+		insinto /usr/share/icons/hicolor/${res}x${res}/apps
+		newins icons/SkypeBlue_${res}x${res}.png skype.png || die
+	done
+
+	dodoc README
+
+	make_desktop_entry skype "Skype VoIP" skype "Network;InstantMessaging;Telephony"
+
+	dosym /opt/skype /usr/share/skype #Fix for disabled sound notification
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+}
