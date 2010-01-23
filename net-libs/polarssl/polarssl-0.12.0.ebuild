@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.12.0.ebuild,v 1.2 2009/09/23 18:50:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.12.0.ebuild,v 1.3 2010/01/23 09:21:25 cla Exp $
+
+inherit eutils
 
 DESCRIPTION="Cryptographic library for embedded systems"
 HOMEPAGE="http://polarssl.org/"
@@ -21,6 +23,7 @@ src_compile() {
 	else
 		sed -i '15iCFLAGS += -fPIC' Makefile
 	fi
+	epatch "${FILESDIR}"/${P}-makefile.patch
 	emake libpolarssl.a || die "emake failed"
 	emake libpolarssl.so || die "emake failed"
 
@@ -44,7 +47,7 @@ src_install() {
 
 	if use examples ; then
 		for p in programs/*/* ; do
-			if [ -x "${p}" ] ; then
+			if [[ -x "${p}" && ! -d "${p}" ]] ; then
 				f=polarssl_`basename "${p}"`
 				newbin "${p}" "${f}" || die
 			fi
