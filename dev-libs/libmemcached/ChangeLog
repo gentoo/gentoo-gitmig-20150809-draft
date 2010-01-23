@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.22 2010/01/14 21:34:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.23 2010/01/23 15:11:17 ranger Exp $
+
+  23 Jan 2010; Brent Baude <ranger@gentoo.org> libmemcached-0.31.ebuild:
+  Marking libmemcached-0.31 ppc64 for bug 288166
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libmemcached-0.35.ebuild:
