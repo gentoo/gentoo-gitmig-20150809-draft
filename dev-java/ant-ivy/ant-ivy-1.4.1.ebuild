@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ant-ivy-1.4.1.ebuild,v 1.2 2009/06/14 14:07:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ant-ivy-1.4.1.ebuild,v 1.3 2010/01/23 14:26:58 aballier Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 # registers as split-ant task
@@ -19,7 +19,7 @@ SRC_URI="http://www.jaya.free.fr/downloads/ivy/${PV}/${MY_P}-src.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="
