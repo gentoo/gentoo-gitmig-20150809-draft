@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.18.ebuild,v 1.1 2010/01/21 12:54:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.18.ebuild,v 1.2 2010/01/23 22:23:07 caster Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -21,9 +21,11 @@ SLOT="1.6"
 LICENSE="dlj-1.1"
 KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip"
-IUSE="X alsa nsplugin odbc"
+IUSE="X alsa jce nsplugin odbc"
 
-RDEPEND="sys-libs/glibc
+DEPEND="jce? ( =dev-java/sun-jce-bin-1.6.0* )"
+RDEPEND="${DEPEND}
+	sys-libs/glibc
 	x86? ( =virtual/libstdc++-3.3 )
 	alsa? ( media-libs/alsa-lib )
 	X? (
@@ -35,7 +37,6 @@ RDEPEND="sys-libs/glibc
 		x11-libs/libX11
 	)
 	odbc? ( dev-db/unixODBC )"
-DEPEND=""
 
 JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 
@@ -78,6 +79,17 @@ src_install() {
 	dodoc README THIRDPARTYLICENSEREADME.txt || die
 	dohtml Welcome.html || die
 	dodir /opt/${P}/share/
+
+	if use jce; then
+		cd "${D}/opt/${P}/lib/security"
+		dodir /opt/${P}/lib/security/strong-jce
+		mv "${D}"/opt/${P}/lib/security/US_export_policy.jar \
+			"${D}"/opt/${P}/lib/security/strong-jce || die
+		mv "${D}"/opt/${P}/lib/security/local_policy.jar \
+			"${D}"/opt/${P}/lib/security/strong-jce || die
+		dosym /opt/sun-jce-bin-1.6.0/jre/lib/security/unlimited-jce/US_export_policy.jar /opt/${P}/lib/security/
+		dosym /opt/sun-jce-bin-1.6.0/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/lib/security/
+	fi
 
 	if use nsplugin; then
 		local plugin_dir="ns7-gcc29"

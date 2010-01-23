@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>java</herd>
 	<longdescription>Sun Java Resource Package, also known as J2SE</longdescription>
+	<use>
+		<flag name="jce">Enable Java Cryptographic Extension Unlimited Strength Policy files</flag>
+	</use>
 </pkgmetadata>
