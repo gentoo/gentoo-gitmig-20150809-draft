@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.20.ebuild,v 1.1 2010/01/22 20:41:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.20.ebuild,v 1.2 2010/01/23 09:07:14 spock Exp $
 
 EAPI="2"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.75-include.patch"
 	epatch "${FILESDIR}/${PN}-4.75-nolua.patch"
 	epatch "${FILESDIR}/${PN}-5.10_beta1-string.patch"
+	epatch "${FILESDIR}/${PN}-5.20-nolua.patch"
 	sed -i -e 's/-m 755 -s ncat/-m 755 ncat/' ncat/Makefile.in
 }
 
