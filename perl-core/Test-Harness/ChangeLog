@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.53 2010/01/17 14:57:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.54 2010/01/23 09:24:24 tove Exp $
+
+*Test-Harness-3.20 (23 Jan 2010)
+
+  23 Jan 2010; Torsten Veller <tove@gentoo.org> +Test-Harness-3.20.ebuild:
+  Version bump
 
   17 Jan 2010; Torsten Veller <tove@gentoo.org> -Test-Harness-2.64.ebuild,
   -Test-Harness-3.10.ebuild, -Test-Harness-3.16.ebuild:
