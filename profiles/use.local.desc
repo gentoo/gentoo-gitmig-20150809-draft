@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5206 2010/01/21 02:08:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5207 2010/01/23 14:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1930,8 +1930,6 @@ media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
-media-video/qdvdauthor:plugins -  Install additional plugins. 
-media-video/qdvdauthor:templates -  Install various templates. 
 media-video/totem:bluetooth - Enable support for user-presence detection via the user's bluetooth handset using net-wireless/bluez-libs
 media-video/totem:galago - Enable the galago plugin
 media-video/totem:iplayer - Enable BBC player support
