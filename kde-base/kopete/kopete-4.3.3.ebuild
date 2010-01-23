@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.3.ebuild,v 1.6 2010/01/19 02:28:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.3.ebuild,v 1.7 2010/01/23 12:36:46 ssuominen Exp $
 
 EAPI="2"
 
@@ -75,7 +75,7 @@ COMMONDEPEND="
 		net-dns/libidn
 	)
 	meanwhile? ( net-libs/meanwhile )
-	msn? ( net-libs/libmsn )
+	msn? ( <net-libs/libmsn-4.0 )
 	otr? ( >=net-libs/libotr-3.2.0 )
 	statistics? ( dev-db/sqlite:3 )
 	webpresence? ( dev-libs/libxml2 dev-libs/libxslt )
