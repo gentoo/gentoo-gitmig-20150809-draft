@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r1.ebuild,v 1.7 2009/07/26 15:37:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r1.ebuild,v 1.8 2010/01/23 13:39:10 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
 # -nopie flag in CFLAGS or help fix bug #75028.
+
+EAPI="1"
 
 export WANT_AUTOCONF="2.1"
 inherit autotools eutils
