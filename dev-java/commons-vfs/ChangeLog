@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-vfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.11 2010/01/03 20:32:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.12 2010/01/23 14:19:53 aballier Exp $
+
+  23 Jan 2010; Alexis Ballier <aballier@gentoo.org> commons-vfs-1.0.ebuild:
+  keyword ~x86-fbsd
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-vfs-1.0.ebuild:
