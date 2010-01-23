@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.137 2010/01/18 19:33:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.138 2010/01/23 19:39:27 scarabeus Exp $
+
+  23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xf86-input-evdev-2.3.1.ebuild, xf86-input-evdev-2.3.2.ebuild:
+  There is no such package mips-headers.
 
   18 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   xf86-input-evdev-2.3.1.ebuild:
