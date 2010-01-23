@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.21.ebuild,v 1.1 2010/01/21 22:37:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.21.ebuild,v 1.2 2010/01/23 16:26:36 markusle Exp $
 
 inherit eutils toolchain-funcs fortran multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
 MY_PN=${PN/blas-/}
 SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
-	mirror://gentoo/${MY_PN}-${PV}-shared-libs.patch.bz2"
+	mirror://gentoo/${MY_PN}-${PV}-shared-libs.1.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -55,7 +55,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.patch.bz2
+	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.1.patch.bz2
 	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 
 	BLD_DIR="${S}"/gentoo-build

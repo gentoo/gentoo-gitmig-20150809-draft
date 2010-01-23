@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.74 2010/01/21 22:39:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.75 2010/01/23 16:27:33 markusle Exp $
+
+  23 Jan 2010; Markus Dittrich <markusle@gentoo.org>
+  lapack-atlas-3.9.21.ebuild:
+  Fixed bug in libtoolized Makefile (fixes #301827).
 
 *lapack-atlas-3.9.21 (21 Jan 2010)
 
