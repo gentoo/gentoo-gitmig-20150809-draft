@@ -1,6 +1,9 @@
 # ChangeLog for virtual/editor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.16 2009/12/27 18:55:21 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.17 2010/01/23 11:16:50 ulm Exp $
+
+  23 Jan 2010; Ulrich Mueller <ulm@gentoo.org> editor-0.ebuild:
+  Add sys-apps/busybox.
 
   27 Dec 2009; Ulrich Mueller <ulm@gentoo.org> editor-0.ebuild:
   Update dependency after package move from emacs-cvs to emacs-vcs.
