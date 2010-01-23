@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/aespipe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.28 2010/01/01 19:56:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.29 2010/01/23 18:39:03 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> aespipe-2.3b.ebuild,
+  aespipe-2.3e.ebuild:
+  Add ~arm wrt #301097
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> aespipe-2.3e.ebuild:
   Transfer Prefix keywords
