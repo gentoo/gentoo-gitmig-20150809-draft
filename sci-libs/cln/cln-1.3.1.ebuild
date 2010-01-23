@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.3.1.ebuild,v 1.7 2010/01/14 18:16:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.3.1.ebuild,v 1.8 2010/01/23 03:58:59 abcd Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 DEPEND="dev-libs/gmp
@@ -32,9 +32,11 @@ src_prepare() {
 }
 
 src_configure () {
+	use prefix || EPREFIX=
+
 	econf  \
-		--libdir=/usr/$(get_libdir) \
-		--datadir=/usr/share/doc/${PF}
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--datadir="${EPREFIX}"/usr/share/doc/${PF}
 }
 src_compile() {
 	emake || die "emake failed"
