@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.65 2010/01/11 17:00:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.66 2010/01/23 16:12:05 klausman Exp $
+
+  23 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
+  canna-3.7_p3-r1.ebuild:
+  Stable on alpha, bug #297441
 
 *canna-3.7_p3-r2 (11 Jan 2010)
 
