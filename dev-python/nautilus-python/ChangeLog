@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nautilus-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.1 2009/08/20 08:25:24 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.2 2010/01/23 19:01:09 pva Exp $
+
+*nautilus-python-0.6.1 (23 Jan 2010)
+
+  23 Jan 2010; Peter Volkov <pva@gentoo.org> +nautilus-python-0.6.1.ebuild:
+  Version bump, bug #301922, thank Christian Faulhammer for report.
 
 *nautilus-python-0.5.1-r1 (20 Aug 2009)
 
