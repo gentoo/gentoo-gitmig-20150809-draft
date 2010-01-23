@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3826 2010/01/23 19:13:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3827 2010/01/23 21:47:34 ikelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jan 2010; Mike Auty <ikelos@gentoo.org> package.mask:
+  Mask mozilla-firefox-3.6 and xulrunner-1.9.2 pending the investigation of
+  bug 301389.
 
   23 Jan 2010; Peter Volkov <pva@gentoo.org> package.mask:
   Update bzr/bzrtools mask to really mask all beta versions.
