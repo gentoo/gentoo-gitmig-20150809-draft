@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.42 2010/01/20 18:30:24 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.43 2010/01/23 17:08:25 armin76 Exp $
+
+  23 Jan 2010; Raúl Porcel <armin76@gentoo.org> phonon-kde-4.3.4.ebuild:
+  Add ~arm
 
   20 Jan 2010; Jonathan Callen <abcd@gentoo.org> phonon-kde-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux
