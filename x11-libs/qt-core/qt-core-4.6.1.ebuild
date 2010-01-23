@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.1.ebuild,v 1.2 2010/01/20 12:25:01 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.1.ebuild,v 1.3 2010/01/23 15:45:37 tommy Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -17,40 +17,6 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,qt3support] )"
-
-QT4_TARGET_DIRECTORIES="
-src/tools/bootstrap
-src/tools/moc
-src/tools/rcc
-src/tools/uic
-src/corelib
-src/xml
-src/network
-src/plugins/codecs
-tools/linguist/lconvert
-tools/linguist/lrelease
-tools/linguist/lupdate"
-
-# Most ebuilds include almost everything for testing
-# Will clear out unneeded directories after everything else works OK
-QT4_EXTRACT_DIRECTORIES="
-include/Qt
-include/QtCore
-include/QtNetwork
-include/QtScript
-include/QtXml
-src/plugins/plugins.pro
-src/plugins/qpluginbase.pri
-src/src.pro
-src/3rdparty/des
-src/3rdparty/harfbuzz
-src/3rdparty/md4
-src/3rdparty/md5
-src/3rdparty/sha1
-src/3rdparty/easing
-src/script
-tools/linguist/shared
-translations"
 
 PATCHES=(
 	"${FILESDIR}/${P}-nolibx11.patch"
@@ -100,6 +66,40 @@ pkg_setup() {
 }
 
 src_unpack() {
+	QT4_TARGET_DIRECTORIES="
+		src/tools/bootstrap
+		src/tools/moc
+		src/tools/rcc
+		src/tools/uic
+		src/corelib
+		src/xml
+		src/network
+		src/plugins/codecs
+		tools/linguist/lconvert
+		tools/linguist/lrelease
+		tools/linguist/lupdate"
+
+	# Most ebuilds include almost everything for testing
+	# Will clear out unneeded directories after everything else works OK
+	QT4_EXTRACT_DIRECTORIES="
+		include/Qt
+		include/QtCore
+		include/QtNetwork
+		include/QtScript
+		include/QtXml
+		src/plugins/plugins.pro
+		src/plugins/qpluginbase.pri
+		src/src.pro
+		src/3rdparty/des
+		src/3rdparty/harfbuzz
+		src/3rdparty/md4
+		src/3rdparty/md5
+		src/3rdparty/sha1
+		src/3rdparty/easing
+		src/script
+		tools/linguist/shared
+		translations"
+
 	if use doc; then
 		QT4_EXTRACT_DIRECTORIES="${QT4_EXTRACT_DIRECTORIES}
 					doc/"

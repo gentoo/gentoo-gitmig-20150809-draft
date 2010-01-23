@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.94 2010/01/20 16:27:20 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.95 2010/01/23 15:50:24 tommy Exp $
+
+  23 Jan 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  qt-gui-4.6.1.ebuild:
+  Move vars into src_unpack to work with current multilib-portage with ok
+  from yngwin
 
   20 Jan 2010; Dror Levin <spatz@gentoo.org> qt-gui-4.6.1.ebuild:
   Remove warning with USE=raster as it seems more stable now.
