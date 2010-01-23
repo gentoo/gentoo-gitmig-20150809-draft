@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.6 2010/01/09 16:45:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.7 2010/01/23 15:39:30 ranger Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils versionator games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/build-${MY_PV}/Widelands-Build${MY_PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[video]
