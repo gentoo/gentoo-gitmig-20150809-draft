@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.66 2010/01/03 20:42:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.67 2010/01/23 12:14:24 aballier Exp $
+
+  23 Jan 2010; Alexis Ballier <aballier@gentoo.org> asm-2.0-r1.ebuild:
+  keyword ~x86-fbsd
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> asm-1.4.3-r3.ebuild,
   asm-1.5.3.ebuild, asm-2.0-r1.ebuild, asm-2.2.3-r1.ebuild, asm-3.0.ebuild,

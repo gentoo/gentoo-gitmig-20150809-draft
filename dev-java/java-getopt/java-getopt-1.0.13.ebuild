@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.13.ebuild,v 1.8 2010/01/03 20:47:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.13.ebuild,v 1.9 2010/01/23 12:17:29 aballier Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ SLOT="1"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="doc source"
 
 S=${WORKDIR}
