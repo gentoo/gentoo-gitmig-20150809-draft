@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20090505.ebuild,v 1.2 2010/01/24 19:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20090505.ebuild,v 1.3 2010/01/24 21:51:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -38,9 +38,11 @@ src_unpack() {
 	# INIT provides the basic tools to start building.
 	unpack INIT.${INIT_RELEASE}.tgz
 
-	# `package read` will unpack any tarballs put in place.
 	# run through /bin/sh due to #141906
-	/bin/sh "${S}"/bin/package read || die
+	sed -i '1i#!/bin/sh' "${S}"/bin/package || die
+
+	# `package read` will unpack any tarballs put in place.
+	"${S}"/bin/package read || die
 }
 
 src_compile() {
