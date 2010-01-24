@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-0.6.0.2-r1.ebuild,v 1.1 2010/01/16 23:20:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-0.6.0.2-r1.ebuild,v 1.2 2010/01/24 20:56:13 betelgeuse Exp $
 
 # Probably best to leave the CFLAGS as they are here. See...
 # http://weblogs.java.net/blog/kellyohair/archive/2006/01/compilation_of_1.html
@@ -26,6 +26,7 @@ DEPEND=">=virtual/jdk-1.5
 	test? ( dev-java/ant-junit4 )"
 
 JAVA_PKG_BSFIX_NAME="build-impl.xml"
+JAVA_PKG_FILTER_COMPILER="ecj-3.3 ecj-3.4 ecj-3.5"
 
 java_prepare() {
 	# Delete the bundled JARs.
