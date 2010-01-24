@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.1.ebuild,v 1.1 2010/01/24 11:10:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.1.ebuild,v 1.2 2010/01/24 11:21:06 scarabeus Exp $
 
 EAPI="2"
 
@@ -46,6 +46,11 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.6.5-gcc4.4-missing-headers.patch"
 	"${FILESDIR}/${PN}-disable_java.patch"
 )
+
+src_prepare() {
+	base_src_prepare
+	rm cmake/FindQt4.cmake || die "unable to remove obsolete FindQt4 macro."
+}
 
 src_configure() {
 	# Strigi needs either expat or libxml2.
