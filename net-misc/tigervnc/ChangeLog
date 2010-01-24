@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.34 2010/01/24 17:57:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.35 2010/01/24 18:08:43 armin76 Exp $
+
+  24 Jan 2010; Raúl Porcel <armin76@gentoo.org> tigervnc-1.0.0-r2.ebuild:
+  Fix deps wrt #294596
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> tigervnc-1.0.0-r2.ebuild:
   Move dev-lang/nasm to DEPEND
