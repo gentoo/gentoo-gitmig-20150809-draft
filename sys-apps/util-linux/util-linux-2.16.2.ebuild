@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.2.ebuild,v 1.3 2010/01/03 20:38:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.2.ebuild,v 1.4 2010/01/24 17:44:48 tgall Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
 		loop-aes? ( http://dev.gentoo.org/~ssuominen/${PN}-2.16.1-loop-aes.patch.bz2 )"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
 LICENSE="GPL-2"
