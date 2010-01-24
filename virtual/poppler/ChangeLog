@@ -1,6 +1,9 @@
 # ChangeLog for virtual/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.29 2010/01/24 01:15:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.30 2010/01/24 01:38:41 abcd Exp $
+
+  24 Jan 2010; Jonathan Callen <abcd@gentoo.org> poppler-0.10.5.ebuild:
+  Drop prefix keywords on older version, to avoid breaking the deptree
 
 *poppler-0.12.3-r1 (24 Jan 2010)
 
