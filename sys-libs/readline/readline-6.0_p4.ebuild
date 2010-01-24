@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.0_p4.ebuild,v 1.10 2010/01/06 22:31:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.0_p4.ebuild,v 1.11 2010/01/24 16:47:12 klausman Exp $
 
 inherit autotools eutils multilib toolchain-funcs flag-o-matic
 
@@ -31,7 +31,7 @@ SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 # We must be certain that we have a bash that is linked
