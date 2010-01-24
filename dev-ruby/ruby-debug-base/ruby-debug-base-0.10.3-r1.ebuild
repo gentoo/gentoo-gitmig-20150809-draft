@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ruby-debug-base-0.10.3-r1.ebuild,v 1.3 2010/01/16 16:02:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ruby-debug-base-0.10.3-r1.ebuild,v 1.4 2010/01/24 16:43:37 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -21,13 +21,13 @@ ruby_add_rdepend ">=dev-ruby/linecache-0.3"
 
 each_ruby_configure() {
 	pushd ext
-	${RUBY} extconf.rb
+	${RUBY} extconf.rb || die "extconf.rb failed"
 	popd
 }
 
 each_ruby_compile() {
 	pushd ext
-	emake
+	emake || die "emake failed"
 	popd
 }
 
