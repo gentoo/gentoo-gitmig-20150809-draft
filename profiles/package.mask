@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11152 2010/01/24 17:36:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11153 2010/01/24 18:50:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -113,16 +113,6 @@ dev-ruby/ruby-libgda
 # Andreas Proschofsky <suka@gentoo.org> (14 Jan 2010)
 # New release Candidate for openoffice-bin, needs testing
 >=app-office/openoffice-bin-3.2.0_rc2
-
-# Ben de Groot <yngwin@gentoo.org> (13 Jan 2010)
-# Masked pending removal in 30 days. Unused Qt3 bindings (bug #300162).
-dev-libs/poppler-qt3
-virtual/poppler-qt3
-
-# Markos Chandras <hwoarang@gentoo.org> (11 Jan 2010)
-# Qt3 application, doesn't have a maintainer and has a few open bugs.
-# bug #299083. Removal in 30 days
-app-dicts/qvortaro
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (11 Jan 2010)
 # libassuan 2 is incompatible with previous versions. Masked for testing.
@@ -370,11 +360,6 @@ app-emulation/uae
 # Remove in 7 days.
 x11-plugins/gkrellm-wifi
 
-# Ben de Groot <yngwin@gentoo.org> (05 Jan 2010)
-# Masking pending removal in 30 days
-# Qt3 app, bug 283429, upgrade problems, bug 267553
-app-office/qtstalker
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Jan 2010)
 #  on behalf of QA team
 #
@@ -423,29 +408,9 @@ x11-misc/icemergeprefs
 # removal in 60 days
 net-misc/ghamachi
 
-# Víctor Ostorga <vostorga@gentoo.org> (01 Jan 2010)
-# Masking for removal, qt3 package, has been segfaulting for
-# 2 and half years, last release 6 years ago, bug #183103
-dev-db/mysqlnavigator
-
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Dec 2009)
 # Masked for testing prior to 1.8 appearing.
 >=games-strategy/wesnoth-1.7
-
-# Samuli Suominen <ssuominen@gentoo.org> (30 Dec 2009)
-# Doesn't compile (#273407)
-# Crashes (#124767)
-# Has qt3 deps (#283429)
-#
-# Replaced by games-emulation/mupen64plus
-#
-# Removal in 30 days (20100129)
-games-emulation/mupen64
-games-emulation/mupen64-alsasnd
-games-emulation/mupen64-blight-tr64gl
-games-emulation/mupen64-blight-uhleaudio
-games-emulation/mupen64-glide64
-games-emulation/mupen64-riceplugin
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Dec 2009)
 #  on behalf of QA team
