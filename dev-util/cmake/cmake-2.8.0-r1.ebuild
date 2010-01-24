@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0-r1.ebuild,v 1.1 2010/01/24 18:52:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0-r1.ebuild,v 1.2 2010/01/24 22:12:29 scarabeus Exp $
 
 EAPI="2"
 
@@ -114,7 +114,7 @@ src_configure() {
 			-DCMAKE_DOC_DIR=/share/doc/${PF}
 			-DCMAKE_MAN_DIR=/share/man
 			-DCMAKE_DATA_DIR=/share/${PN}
-			$(cmake_utils_use_build ncurses CursesDialog)
+			$(cmake-utils_use_build ncurses CursesDialog)
 			$(cmake-utils_use_build qt4 QtDialog)
 		)
 		cmake-utils_src_configure
