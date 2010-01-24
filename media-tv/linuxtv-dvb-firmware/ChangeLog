@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/linuxtv-dvb-firmware
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.28 2009/11/12 18:18:55 billie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.29 2010/01/24 22:07:56 billie Exp $
+
+  24 Jan 2010; Daniel Pielmeier <billie@gentoo.org> Manifest:
+  Re-create Manifest.
 
   12 Nov 2009; Daniel Pielmeier <billie@gentoo.org>
   linuxtv-dvb-firmware-2009.09.19.ebuild:
