@@ -1,6 +1,9 @@
 # ChangeLog for media-video/elltube
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/ChangeLog,v 1.5 2009/06/25 11:42:06 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/ChangeLog,v 1.6 2010/01/24 22:59:27 ranger Exp $
+
+  24 Jan 2010; Brent Baude <ranger@gentoo.org> elltube-0.3-r1.ebuild:
+  stable ppc, bug 301906
 
   25 Jun 2009; Markos Chandras <hwoarang@gentoo.org> -elltube-0.3.ebuild,
   elltube-0.3-r1.ebuild:
