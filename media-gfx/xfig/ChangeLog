@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.62 2010/01/23 21:46:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.63 2010/01/24 17:51:51 armin76 Exp $
+
+  24 Jan 2010; Raúl Porcel <armin76@gentoo.org> xfig-3.2.5b.ebuild:
+  sparc stable wrt #264575
 
   23 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xfig-3.2.5b.ebuild:
   stable x86, security bug 264575
