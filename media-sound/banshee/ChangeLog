@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.102 2010/01/16 22:18:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.103 2010/01/24 14:04:16 ranger Exp $
+
+  24 Jan 2010; Brent Baude <ranger@gentoo.org> banshee-1.4.3-r2.ebuild:
+  Marking banshee-1.4.3-r2 ppc for bug 264568
 
 *banshee-1.5.2 (16 Jan 2010)
 
