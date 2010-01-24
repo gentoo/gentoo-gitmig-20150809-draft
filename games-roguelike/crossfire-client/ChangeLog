@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/crossfire-client
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.21 2009/12/22 01:05:51 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.22 2010/01/24 23:01:37 ranger Exp $
+
+  24 Jan 2010; Brent Baude <ranger@gentoo.org>
+  crossfire-client-1.12.0.ebuild:
+  stable ppc, bug 301869
 
   22 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
   crossfire-client-1.12.0.ebuild, +files/crossfire-client-1.12.0-lua.patch:
