@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/pm-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.28 2009/11/30 06:36:23 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.29 2010/01/24 21:49:56 eva Exp $
+
+*pm-utils-1.2.6.1 (24 Jan 2010)
+
+  24 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -pm-utils-1.1.1.ebuild, -pm-utils-1.1.2.1.ebuild, -pm-utils-1.2.3.ebuild,
+  -pm-utils-1.2.3-r1.ebuild, -files/pm-utils-1.2.3-service-status.patch,
+  -pm-utils-1.2.4.ebuild, +pm-utils-1.2.6.1.ebuild:
+  Version bump, bug #295867. Clean up old revisions.
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> pm-utils-1.2.5.ebuild:
   Marked ppc64 stable.
