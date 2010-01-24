@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.80 2010/01/23 16:46:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.81 2010/01/24 13:09:20 swegener Exp $
+
+  24 Jan 2010; Sven Wegener <swegener@gentoo.org> exiv2-0.19.ebuild,
+  +files/exiv2-0.19-syntax-fix.patch:
+  Include a syntax fix from upstream, bug #302026.
 
 *exiv2-0.19 (23 Jan 2010)
 
