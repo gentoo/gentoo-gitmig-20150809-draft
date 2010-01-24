@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-viewer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.7 2009/12/23 17:27:45 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.8 2010/01/24 20:16:57 bangert Exp $
+
+*virt-viewer-0.2.0-r2 (24 Jan 2010)
+
+  24 Jan 2010; Thilo Bangert <bangert@gentoo.org>
+  +virt-viewer-0.2.0-r2.ebuild,
+  +files/virt-viewer-0.2.0-xulrunner-1.9.1.patch:
+  fix building against xulrunner-1.9.1 (#280167)
 
   23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -virt-viewer-0.0.3.ebuild:
