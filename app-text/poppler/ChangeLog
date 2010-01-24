@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.202 2010/01/24 01:13:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.203 2010/01/24 01:44:03 abcd Exp $
+
+  24 Jan 2010; Jonathan Callen <abcd@gentoo.org> poppler-0.12.3.ebuild:
+  Add prefix keywords
 
 *poppler-0.12.3 (24 Jan 2010)
 
