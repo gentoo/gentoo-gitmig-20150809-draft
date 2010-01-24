@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3828 2010/01/24 12:11:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3829 2010/01/24 13:37:20 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/activerecord-jdbc.
 
   24 Jan 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask capistrano-1.x and its dependencies.
