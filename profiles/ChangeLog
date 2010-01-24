@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3832 2010/01/24 19:15:57 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3833 2010/01/24 20:46:20 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2010; Pacho Ramos <pacho@gentoo.org> arch/amd64/package.use.mask:
+  Mask esd USE flag for wine since esound is not longer provided in emul-
+  set
 
   24 Jan 2010; Mike Auty <ikelos@gentoo.org> package.mask:
   Remove the mozilla-firefox-3.6 and xulrunner-1.9.2 mask now that
