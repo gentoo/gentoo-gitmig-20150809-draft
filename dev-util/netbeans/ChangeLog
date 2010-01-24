@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.131 2009/12/28 14:56:17 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.132 2010/01/24 21:33:56 betelgeuse Exp $
+
+  24 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> netbeans-6.8-r1.ebuild:
+  Filter ecj-3.5
 
   28 Dec 2009; Petteri Räty <betelgeuse@gentoo.org>
   netbeans-5.5.1-r1.ebuild:

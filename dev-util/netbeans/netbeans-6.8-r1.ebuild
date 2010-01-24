@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8-r1.ebuild,v 1.1 2009/12/22 17:16:10 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8-r1.ebuild,v 1.2 2010/01/24 21:33:56 betelgeuse Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -615,7 +615,7 @@ src_compile() {
 	fi
 
 	# Fails to compile
-	java-pkg_filter-compiler ecj-3.2 ecj-3.3 ecj-3.4
+	java-pkg_filter-compiler ecj-3.2 ecj-3.3 ecj-3.4 ecj-3.5
 
 	# Build the clusters
 	local heap=""
