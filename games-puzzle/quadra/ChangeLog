@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/quadra
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.21 2009/11/20 12:58:03 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.22 2010/01/24 23:07:40 ranger Exp $
+
+  24 Jan 2010; Brent Baude <ranger@gentoo.org> quadra-1.2.0.ebuild:
+  keyworded ~arch for ppc, bug 296290
 
   20 Nov 2009; Christian Faulhammer <fauli@gentoo.org> quadra-1.2.0.ebuild:
   stable x86, bug 285402
