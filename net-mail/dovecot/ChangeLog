@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.226 2010/01/04 18:57:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.227 2010/01/24 01:43:25 ranger Exp $
+
+  24 Jan 2010; Brent Baude <ranger@gentoo.org> dovecot-1.2.8.ebuild:
+  keyworded ~arch for ppc, bug 289885
 
 *dovecot-1.2.9 (04 Jan 2010)
 
