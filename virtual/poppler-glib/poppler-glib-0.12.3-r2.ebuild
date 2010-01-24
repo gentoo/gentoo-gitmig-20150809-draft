@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-glib/poppler-glib-0.12.3-r1.ebuild,v 1.1 2010/01/24 01:16:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-glib/poppler-glib-0.12.3-r2.ebuild,v 1.1 2010/01/24 22:22:28 yngwin Exp $
 
 EAPI=2
 
@@ -15,5 +15,5 @@ IUSE="+cairo"
 
 PROPERTIES="virtual"
 
-RDEPEND="~app-text/poppler-${PV}[cairo?,glib]"
+RDEPEND="~app-text/poppler-${PV}[cairo]"
 DEPEND="${RDEPEND}"

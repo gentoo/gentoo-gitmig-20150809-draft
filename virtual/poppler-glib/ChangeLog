@@ -1,6 +1,13 @@
 # ChangeLog for virtual/poppler-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-glib/ChangeLog,v 1.31 2010/01/24 01:39:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-glib/ChangeLog,v 1.32 2010/01/24 22:22:28 yngwin Exp $
+
+*poppler-glib-0.12.3-r2 (24 Jan 2010)
+
+  24 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  -poppler-glib-0.12.3-r1.ebuild, +poppler-glib-0.12.3-r2.ebuild:
+  Always require cairo useflag as glib got included in cairo useflag in
+  app-text/poppler-0.12.3-r2.
 
   24 Jan 2010; Jonathan Callen <abcd@gentoo.org> poppler-glib-0.10.5.ebuild:
   Drop prefix keywords on older version, to avoid breaking the deptree
