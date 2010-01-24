@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/xmp
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.13 2010/01/24 15:25:00 ssuominen Exp $
+
+*xmp-3.1.0 (24 Jan 2010)
+
+  24 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +xmp-3.1.0.ebuild:
+  Initial commit wrt #236825 by Andrew Church.
+
