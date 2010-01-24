@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.5.2.ebuild,v 1.1 2010/01/22 13:10:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.5.2.ebuild,v 1.2 2010/01/24 14:22:49 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,11 +19,13 @@ IUSE=""
 DEPEND="dev-python/setuptools
 		test? ( dev-python/minimock )"
 RDEPEND="dev-python/lockfile"
-
 RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="ChangeLog"
 
 src_test() {
-	PYTHONPATH=. ${python} setup.py test
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+	}
+	python_execute_function testing
 }
