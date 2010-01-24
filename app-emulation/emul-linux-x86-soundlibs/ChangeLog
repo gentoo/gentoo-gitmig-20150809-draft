@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.52 2010/01/15 00:35:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.53 2010/01/24 20:54:52 pacho Exp $
+
+*emul-linux-x86-soundlibs-20091231-r1 (24 Jan 2010)
+
+  24 Jan 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-soundlibs-20091231.ebuild,
+  +emul-linux-x86-soundlibs-20091231-r1.ebuild:
+  pulseaudio USE flag added per bug 302003, thanks to Marcel for reporting;
+  cleaning old testing to force people to test this revision
 
   15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Move USE arts here, and remove from use.desc.
