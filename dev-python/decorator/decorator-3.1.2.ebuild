@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.1.2.ebuild,v 1.3 2009/11/11 14:32:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.1.2.ebuild,v 1.4 2010/01/24 16:54:44 jer Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/d/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="doc"
 
 DEPEND=""
