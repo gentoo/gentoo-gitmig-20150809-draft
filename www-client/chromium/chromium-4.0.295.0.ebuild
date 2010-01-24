@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.295.0.ebuild,v 1.2 2010/01/18 19:41:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.295.0.ebuild,v 1.3 2010/01/24 23:40:49 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -41,12 +41,16 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# Gentoo uses .kde4, not .kde
+	# TODO: this does not work with kdeprefix, fixing http:/crbug.com/29927
+	# would be better
 	sed -e 's/\.kde/.kde4/' -i net/proxy/proxy_config_service_linux.cc \
 		|| die "kde proxy sed failed"
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
+	# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
+	epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \
