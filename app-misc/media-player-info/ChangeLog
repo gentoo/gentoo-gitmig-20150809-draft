@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/media-player-info
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.1 2010/01/24 23:53:33 eva Exp $
+
+*media-player-info-4 (24 Jan 2010)
+
+  24 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +media-player-info-4.ebuild, +metadata.xml:
+  Initial ebuild, closes bug #291417. Thanks to Giacomo Perale.
+
