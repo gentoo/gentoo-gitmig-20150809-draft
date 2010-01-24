@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-IMAPClient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.42 2010/01/23 10:27:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.43 2010/01/24 18:57:05 tove Exp $
+
+  24 Jan 2010; Torsten Veller <tove@gentoo.org> Mail-IMAPClient-3.21.ebuild,
+  Mail-IMAPClient-3.22.ebuild:
+  Drop perl-libnet dependency. Thanks to Kerin Millar (#301836)
 
 *Mail-IMAPClient-3.22 (23 Jan 2010)
 
