@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.17.ebuild,v 1.1 2010/01/22 11:54:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.17-r1.ebuild,v 1.1 2010/01/24 10:18:17 grobian Exp $
 
 inherit eutils flag-o-matic autotools prefix
 
@@ -15,13 +15,13 @@ SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="perl catalogs"
+IUSE="catalogs doc"
 RESTRICT="test"
 
 # we need gettext because we run autoconf
 DEPEND=">=sys-libs/ncurses-5.1
 	sys-devel/gettext
-	perl? ( dev-lang/perl )"
+	doc? ( dev-lang/perl )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -67,14 +67,17 @@ src_compile() {
 	append-flags -D_PATH_USRBIN="'"'"${EPREFIX}/usr/bin"'"'"
 	append-flags -D_PATH_BIN="'"'"${EPREFIX}/bin"'"'"
 
-	econf --prefix="${EPREFIX:-/}" || die "econf failed"
+	econf \
+		--prefix="${EPREFIX:-/}" \
+		--datarootdir='${prefix}/usr/share' \
+		|| die "econf failed"
 	emake || die "compile problem"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install install.man || die
 
-	if use perl ; then
+	if use doc ; then
 		perl tcsh.man2html tcsh.man || die
 		dohtml tcsh.html/*.html
 	fi
