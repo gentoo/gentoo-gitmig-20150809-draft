@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.189 2010/01/22 19:36:14 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.190 2010/01/24 18:10:47 armin76 Exp $
+
+  24 Jan 2010; Raúl Porcel <armin76@gentoo.org> openbox-3.4.10.ebuild:
+  alpha/arm/sparc stable wrt #301147
 
   22 Jan 2010; Víctor Ostorga <vostorga@gentoo.org> openbox-3.4.10.ebuild:
   Fixing homepage and SRC_URI, thanks to Niko Hämäläinen <milo@meelo.org>
