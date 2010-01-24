@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxrandr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.9 2009/12/17 17:41:37 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.10 2010/01/24 18:27:46 armin76 Exp $
+
+  24 Jan 2010; Raúl Porcel <armin76@gentoo.org> lxrandr-0.1.1.ebuild:
+  Add ~arm
 
   17 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> lxrandr-0.1.1.ebuild:
   Adding x11-apps/xrandr as RDEPEND, bug #297115
