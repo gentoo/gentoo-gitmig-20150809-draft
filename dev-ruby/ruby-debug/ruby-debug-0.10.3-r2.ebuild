@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.3-r2.ebuild,v 1.3 2010/01/16 16:00:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.3-r2.ebuild,v 1.4 2010/01/24 16:43:02 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -25,13 +25,3 @@ IUSE=""
 SLOT="0"
 
 ruby_add_rdepend "~dev-ruby/ruby-debug-base-0.10.3 >=dev-ruby/columnize-0.1"
-
-each_ruby_compile() {
-	# No compilation needed but Rakefile has targets anyway.
-	local noop=true;
-}
-
-all_ruby_compile() {
-	# No compilation needed but Rakefile has targets anyway.
-	local noop=true;
-}

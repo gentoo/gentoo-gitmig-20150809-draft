@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-debug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.10 2010/01/16 16:00:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.11 2010/01/24 16:43:02 flameeyes Exp $
+
+  24 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-debug-0.10.3-r2.ebuild:
+  Remove functions' definitions where unneeded.
 
   16 Jan 2010; Hans de Graaff <graaff@gentoo.org> ruby-debug-0.10.3.ebuild,
   ruby-debug-0.10.3-r2.ebuild:
