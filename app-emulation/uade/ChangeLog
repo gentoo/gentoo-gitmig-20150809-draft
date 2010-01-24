@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.55 2010/01/20 19:39:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.56 2010/01/24 01:41:25 ranger Exp $
+
+  23 Jan 2010; Brent Baude <ranger@gentoo.org> uade-2.13.ebuild:
+  stable ppc, bug 299699
 
   20 Jan 2010; Markus Meier <maekke@gentoo.org> uade-2.13.ebuild:
   amd64/x86 stable, bug #299699
