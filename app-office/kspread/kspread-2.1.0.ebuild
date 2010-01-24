@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-2.1.0.ebuild,v 1.5 2010/01/20 21:52:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-2.1.0.ebuild,v 1.6 2010/01/24 13:42:04 ranger Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KOffice spreadsheet application."
 
-KEYWORDS="amd64 hppa ~ppc64 x86"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE="solver"
 
 DEPEND="
