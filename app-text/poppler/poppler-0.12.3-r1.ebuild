@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r1.ebuild,v 1.1 2010/01/24 16:06:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r1.ebuild,v 1.2 2010/01/24 17:24:05 yngwin Exp $
 
 EAPI="2"
 
@@ -39,6 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-cmake-disable-tests.patch"
+	epatch "${FILESDIR}/${P}-fix-headers-installation.patch"
 }
 
 src_configure() {
@@ -67,15 +68,9 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	if use glib; then
-		# install missing header
-		insinto /usr/include/poppler/glib/
-		doins "${S}"/glib/poppler-layer.h
-
-		if use doc; then
-			# For now install gtk-doc there
-			insinto /usr/share/gtk-doc/html/poppler
-			doins -r "${S}"/glib/reference/html/* || die 'failed to install API documentation'
-		fi
+	if use glib && use doc; then
+		# For now install gtk-doc there
+		insinto /usr/share/gtk-doc/html/poppler
+		doins -r "${S}"/glib/reference/html/* || die 'failed to install API documentation'
 	fi
 }

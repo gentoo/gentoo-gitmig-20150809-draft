@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.204 2010/01/24 16:06:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.205 2010/01/24 17:24:05 yngwin Exp $
+
+  24 Jan 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r1.ebuild,
+  +files/poppler-0.12.3-fix-headers-installation.patch:
+  Add proper patch instead of workaround for missing headers installation.
+  Thanks to Maciej Mrozowski.
 
 *poppler-0.12.3-r1 (24 Jan 2010)
 
