@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.12 2010/01/21 10:18:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-fakegem.eclass,v 1.13 2010/01/24 00:00:40 flameeyes Exp $
 #
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:
@@ -240,20 +240,17 @@ all_ruby_compile() {
 # Run tests for the package for each ruby target if the test task is defined.
 each_fakegem_test() {
 	local rubyflags=
-
-	if [[ ${RUBY_FAKEGEM_TASK_TEST} != "" ]]; then
-		${RUBY} ${rubyflags} -S rake ${RUBY_FAKEGEM_TASK_TEST} || die "tests failed"
-	else
-		echo "No test task defined, skipping tests."
-	fi
+	${RUBY} ${rubyflags} -S rake ${RUBY_FAKEGEM_TASK_TEST} || die "tests failed"
 }
 
-# @FUNCTION: each_ruby_test
-# @DESCRIPTION:
-# Run the tests for this package.
-each_ruby_test() {
-	each_fakegem_test
-}
+if [[ ${RUBY_FAKEGEM_TASK_TEST} != "" ]]; then
+	# @FUNCTION: each_ruby_test
+	# @DESCRIPTION:
+	# Run the tests for this package.
+	each_ruby_test() {
+		each_fakegem_test
+	}
+fi
 
 # @FUNCTION: each_fakegem_install
 # @DESCRIPTION:
