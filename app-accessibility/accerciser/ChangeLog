@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/accerciser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.6 2009/11/01 18:35:31 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.7 2010/01/24 23:59:14 eva Exp $
+
+  24 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  accerciser-1.6.1.ebuild, accerciser-1.8.0.ebuild:
+  Add scrollkeeper to DEPEND, bug #292617.
 
 *accerciser-1.8.0 (29 Oct 2009)
 

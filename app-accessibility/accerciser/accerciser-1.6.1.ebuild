@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.6.1.ebuild,v 1.5 2009/11/01 18:35:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.6.1.ebuild,v 1.6 2010/01/24 23:59:14 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -29,8 +29,9 @@ RDEPEND=">=dev-lang/python-2.4
 	>=gnome-extra/at-spi-1.7
 	>=dev-libs/glib-2"
 DEPEND="${RDEPEND}
-	  sys-devel/gettext
+	sys-devel/gettext
 	>=dev-util/intltool-0.35
+	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.12"
 
 pkg_setup() {
