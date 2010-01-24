@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3.ebuild,v 1.2 2010/01/24 01:44:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r2.ebuild,v 1.1 2010/01/24 22:20:04 yngwin Exp $
 
 EAPI="2"
 
@@ -13,17 +13,17 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="+abiword cairo cjk debug doc exceptions glib jpeg +lcms openjpeg png qt4 +utils +xpdf-headers"
+IUSE="+abiword cairo cjk debug doc exceptions jpeg jpeg2k +lcms png qt4 +utils +xpdf-headers"
 
 COMMON_DEPEND=">=media-libs/fontconfig-2.6.0
 	>=media-libs/freetype-2.3.9
 	sys-libs/zlib
 	abiword? ( dev-libs/libxml2:2 )
-	glib? (	dev-libs/glib:2
-			cairo? ( >=x11-libs/cairo-1.8.4
-					 >=x11-libs/gtk+-2.14.0:2 ) )
+	cairo? ( dev-libs/glib:2
+			 >=x11-libs/cairo-1.8.4
+			 >=x11-libs/gtk+-2.14.0:2 )
 	jpeg? ( >=media-libs/jpeg-7:0 )
-	openjpeg? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg )
 	png? ( media-libs/libpng )
 	qt4? ( x11-libs/qt-core:4
 		   x11-libs/qt-gui:4 )"
@@ -39,6 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-cmake-disable-tests.patch"
+	epatch "${FILESDIR}/${P}-fix-headers-installation.patch"
 }
 
 src_configure() {
@@ -50,11 +51,11 @@ src_configure() {
 		-DENABLE_ZLIB=ON
 		$(cmake-utils_use_enable abiword)
 		$(cmake-utils_use_enable lcms)
-		$(cmake-utils_use_enable openjpeg LIBOPENJPEG)
+		$(cmake-utils_use_enable jpeg2k LIBOPENJPEG)
 		$(cmake-utils_use_enable utils)
 		$(cmake-utils_use_enable xpdf-headers XPDF_HEADERS)
 		$(cmake-utils_use_with cairo)
-		$(cmake-utils_use_with glib GTK)
+		$(cmake-utils_use_with cairo GTK)
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_with qt4)
@@ -67,8 +68,8 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	# For now install gtk-doc there
-	if use glib && use doc; then
+	if use cairo && use doc; then
+		# For now install gtk-doc there
 		insinto /usr/share/gtk-doc/html/poppler
 		doins -r "${S}"/glib/reference/html/* || die 'failed to install API documentation'
 	fi

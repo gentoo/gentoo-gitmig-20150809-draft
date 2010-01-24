@@ -1,6 +1,14 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.205 2010/01/24 17:24:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.206 2010/01/24 22:20:04 yngwin Exp $
+
+*poppler-0.12.3-r2 (24 Jan 2010)
+
+  24 Jan 2010; Ben de Groot <yngwin@gentoo.org> -poppler-0.12.3.ebuild,
+  -poppler-0.12.3-r1.ebuild, +poppler-0.12.3-r2.ebuild,
+  files/poppler-0.12.3-fix-headers-installation.patch, metadata.xml:
+  Join glib and cairo useflags into one, rename openjpeg useflag to jpeg2k.
+  Update patch. Remove older revisions.
 
   24 Jan 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r1.ebuild,
   +files/poppler-0.12.3-fix-headers-installation.patch:
