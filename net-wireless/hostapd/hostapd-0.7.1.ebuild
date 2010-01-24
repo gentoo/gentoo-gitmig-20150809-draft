@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.7.0.ebuild,v 1.1 2010/01/16 13:08:58 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.7.1.ebuild,v 1.1 2010/01/24 20:49:34 gurligebis Exp $
 
 EAPI="2"
 
@@ -20,12 +20,11 @@ DEPEND="ssl? ( dev-libs/openssl )
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
 		net-wireless/madwifi-old ) )"
-RDEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 S="${S}/hostapd"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix_linking.patch"
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf"
 }
