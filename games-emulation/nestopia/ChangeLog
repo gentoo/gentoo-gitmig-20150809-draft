@@ -1,0 +1,12 @@
+# ChangeLog for games-emulation/nestopia
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/ChangeLog,v 1.1 2010/01/24 07:49:21 mr_bones_ Exp $
+
+*nestopia-1.40 (24 Jan 2010)
+
+  24 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +nestopia-1.40.ebuild, +files/nestopia-1.40-makefile.patch,
+  +files/nestopia, +metadata.xml:
+  Initial commit - files submitted by Michał Ziąbkowski and Jared via bug
+  #254479
+
