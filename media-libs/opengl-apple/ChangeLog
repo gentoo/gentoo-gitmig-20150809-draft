@@ -1,0 +1,39 @@
+# ChangeLog for media-libs/opengl-apple
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Id: ChangeLog,v 1.1 2010/01/24 18:58:57 grobian Exp $
+
+*opengl-apple-3 (24 Jan 2010)
+
+  24 Jan 2010; Fabian Groffen <grobian@gentoo.org> +opengl-apple-3.ebuild,
+  +metadata.xml:
+  Renamed to opengl-apple for consistency with other -apple packages,
+  imported in gentoo-x86.
+
+*apple-opengl-3 (14 Dec 2009)
+
+  14 Dec 2009; Fabian Groffen <grobian@gentoo.org> +apple-opengl-3.ebuild:
+  Version bump, drop Apple OpenGL Framework stuff, and only link to X11
+  stuff. This fixes freeglut-2.6 compilation, but most importantly, it seems
+  opengl is always meant to be the X11/Xorg variant, since otherwise the
+  framework will be used instead.
+
+  11 Apr 2009; Fabian Groffen <grobian@gentoo.org> +metadata.xml,
+  apple-opengl-2.ebuild:
+  Removed EAPI="prefix", added metadata.xml
+
+*apple-opengl-2 (09 Nov 2008)
+
+  09 Nov 2008; Fabian Groffen <grobian@gentoo.org> -apple-opengl-1.ebuild,
+  +apple-opengl-2.ebuild:
+  Bump, heiko_ complains that we conflict with x11-proto/glproto, so depend on
+  it, and remove the conflicting files
+
+  09 Nov 2008; Fabian Groffen <grobian@gentoo.org> apple-opengl-1.ebuild:
+  also add GLw
+
+  09 Nov 2008; Fabian Groffen <grobian@gentoo.org> apple-opengl-1.ebuild:
+  Include glx.h and versioned libraries from /usr/X11R6
+
+  09 Nov 2008; Fabian Groffen <grobian@gentoo.org> ChangeLog:
+  initial version of opengl wrapper around the Apple Framework
+
