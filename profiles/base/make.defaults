@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.48 2009/12/03 16:04:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.49 2010/01/24 17:58:52 dev-zero Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -66,3 +66,8 @@ RUBY_TARGETS="ruby18"
 # instead of USE nocxx.
 # http://archives.gentoo.org/gentoo-dev/msg_a181cd0d36600067b599f4b996c6989f.xml
 USE="${USE} cxx"
+
+# Tiziano Müller <dev-zero@gentoo.org> (24 Jan 2010)
+# We usually don't want python to (re)write .py[co] files during phase runs
+# since it could cause sandbox violations
+PYTHONDONTWRITEBYTECODE="1"
