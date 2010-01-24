@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.1 2010/01/03 07:29:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.2 2010/01/24 01:48:18 nerdboy Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ pkg_setup() {
 	if use gpsd_user; then
 		enewuser gpsd -1 -1 -1 "uucp"
 	else
-		einfo "USE=gpsd_user is dsiabled; no gpsd user added."
+		einfo "USE=gpsd_user is disabled; no gpsd user added."
 	fi
 }
 
@@ -127,7 +127,7 @@ src_install() {
 		insinto /etc/udev/rules.d
 		doins "${FILESDIR}"/99-gpsd-usb.rules
 		if use pl2303; then
-			dosed "s:#SYSFS:SYSFS:g" \
+			dosed "s:#ATTRS:ATTRS:g" \
 			    /etc/udev/rules.d/99-gpsd-usb.rules
 		fi
 		keepdir /var/run/usb # needed for REMOVER
