@@ -1,17 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.26.1-r1.ebuild,v 1.1 2010/01/16 21:54:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.26.1-r1.ebuild,v 1.2 2010/01/24 22:56:15 eva Exp $
 
 inherit eutils gnome2 multilib
 
 DESCRIPTION="Replaces xscreensaver, integrating with the desktop."
 HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
+SRC_URI="${SRC_URI}
+	branding? ( http://www.gentoo.org/images/gentoo-logo.svg )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 KERNEL_IUSE="kernel_linux"
-IUSE="debug doc libnotify opengl pam $KERNEL_IUSE"
+IUSE="branding debug doc libnotify opengl pam $KERNEL_IUSE"
 
 RDEPEND=">=gnome-base/gconf-2.6.1
 	>=x11-libs/gtk+-2.14.0
@@ -84,6 +86,13 @@ src_install() {
 	# is fixed.
 	if ! use pam ; then
 		fperms u+s /usr/libexec/gnome-screensaver-dialog
+	fi
+
+	if use branding ; then
+		insinto /usr/share/pixmaps/
+		doins "${DISTDIR}/gentoo-logo.svg" || die "doins 1 failed"
+		insinto /usr/share/applications/screensavers/
+		doins "${FILESDIR}/gentoologo-floaters.desktop" || die "doins 2 failed"
 	fi
 }
 
