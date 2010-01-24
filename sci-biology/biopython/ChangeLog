@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.39 2009/12/21 03:29:14 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.40 2010/01/24 22:57:17 ranger Exp $
+
+  24 Jan 2010; Brent Baude <ranger@gentoo.org> biopython-1.53.ebuild:
+  stable ppc, bug 301964
 
 *biopython-1.53 (21 Dec 2009)
 
