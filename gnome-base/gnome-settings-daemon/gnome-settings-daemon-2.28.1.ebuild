@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.28.1.ebuild,v 1.2 2010/01/10 16:55:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.28.1.ebuild,v 1.3 2010/01/24 18:55:55 eva Exp $
 
 EAPI="2"
 
@@ -21,11 +21,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=x11-libs/gtk+-2.16
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/libgnomekbd-2.21.4
-
-	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-desktop-2.26.3
-
-	libnotify? ( >=x11-libs/libnotify-0.4.3 )
 
 	x11-libs/libX11
 	x11-libs/libXi
@@ -35,6 +31,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=x11-libs/libxklavier-4.0
 	media-libs/fontconfig
 
+	libnotify? ( >=x11-libs/libnotify-0.4.3 )
 	pulseaudio? (
 		>=media-sound/pulseaudio-0.9.15
 		media-libs/libcanberra[gtk] )
