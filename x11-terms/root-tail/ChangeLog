@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/root-tail
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.42 2008/06/03 15:06:16 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.43 2010/01/24 18:58:27 jer Exp $
+
+  24 Jan 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove redundant <name> tag.
 
   03 Jun 2008; Raúl Porcel <armin76@gentoo.org> root-tail-1.2-r2.ebuild:
   sparc stable, quotes, thanks to Tiago Cunha, bug #224757
