@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.14 2010/01/07 19:02:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.15 2010/01/24 15:49:12 klausman Exp $
+
+  24 Jan 2010; Tobias Klausmann <klausman@gentoo.org> libnut-661.ebuild:
+  Stable on alpha, bug #297845
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org> libnut-661.ebuild:
   Marking libnut-661 ppc for bug 297846
