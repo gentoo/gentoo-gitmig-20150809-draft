@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.52 2010/01/23 23:02:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.53 2010/01/24 00:54:52 flameeyes Exp $
+
+  24 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  jruby-1.4.0-r4.ebuild, +files/jruby-1.4.0-bindir.patch:
+  Add patch to fix one further issue (don't revbump just yet).
 
 *jruby-1.4.0-r4 (23 Jan 2010)
 

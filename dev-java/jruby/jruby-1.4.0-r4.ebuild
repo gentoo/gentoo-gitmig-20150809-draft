@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r4.ebuild,v 1.1 2010/01/23 23:02:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r4.ebuild,v 1.2 2010/01/24 00:54:52 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -94,6 +94,7 @@ java_prepare() {
 	epatch "${FILESDIR}/ftype-test-fixes.patch"
 	epatch "${FILESDIR}/user-test-fixes.patch"
 	epatch "${FILESDIR}"/${P}-system-jars.patch
+	epatch "${FILESDIR}"/${P}-bindir.patch
 
 	# We don't need to use Retroweaver. There is a jarjar and a regular jar
 	# target but even with jarjarclean, both are a pain. The latter target
