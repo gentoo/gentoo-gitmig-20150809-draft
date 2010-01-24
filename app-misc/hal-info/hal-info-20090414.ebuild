@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20090414.ebuild,v 1.7 2009/07/19 12:57:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/hal-info-20090414.ebuild,v 1.8 2010/01/24 23:55:11 eva Exp $
 
 inherit eutils
 
@@ -15,6 +15,9 @@ IUSE=""
 
 RDEPEND=">=sys-apps/hal-0.5.10"
 DEPEND="${RDEPEND}"
+
+# This ebuild does not install any binaries
+RESTRICT="binchecks strip"
 
 src_compile() {
 	econf
