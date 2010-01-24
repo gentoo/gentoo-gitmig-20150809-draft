@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1-r1.ebuild,v 1.2 2010/01/15 09:34:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1-r1.ebuild,v 1.3 2010/01/24 15:59:57 armin76 Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -11,7 +11,7 @@ SRC_URI="http://libmpeg2.sourceforge.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="sdl X"
 
 RDEPEND="sdl? ( media-libs/libsdl )
@@ -24,7 +24,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-arm-private-symbols.patch \
-		"${FILESDIR}"/${P}-global-symbol-test.patch
+		"${FILESDIR}"/${P}-global-symbol-test.patch \
+		"${FILESDIR}"/${P}-armv4l.patch
 	elibtoolize
 }
 
