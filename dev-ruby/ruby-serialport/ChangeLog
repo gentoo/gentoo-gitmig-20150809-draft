@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-serialport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ChangeLog,v 1.10 2010/01/23 07:36:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ChangeLog,v 1.11 2010/01/24 00:02:35 flameeyes Exp $
+
+  24 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-serialport-1.0.1.ebuild:
+  Cleanup, set the fakegem name, so that the spec file is generated
+  correctly, also add ruby19 support and install also the .rb glue file.
 
 *ruby-serialport-1.0.1 (23 Jan 2010)
 
