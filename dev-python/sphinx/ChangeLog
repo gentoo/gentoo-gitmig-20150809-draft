@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.39 2010/01/12 21:40:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.40 2010/01/24 15:14:45 djc Exp $
+
+  24 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> sphinx-0.6.4.ebuild:
+  Added conditional dep on dev-texlive/texlive-latexextra (bug 302071).
 
 *sphinx-0.6.4 (12 Jan 2010)
 
