@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5209 2010/01/24 01:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5210 2010/01/24 15:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1781,6 +1781,7 @@ media-sound/squeezecenter:bonjour - Enable support for bonjour
 media-sound/teamspeak-client-bin:builtin-qt - use bundled builtin Qt instead of system-installed x11-libs/qt-gui.
 media-sound/traverso:lv2 - Add support for Ladspa V2
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
+media-sound/xmp:audacious - Enable audacious support
 media-sound/xwax:alsa - Enable ALSA support.
 media-tv/freevo:ivtv - Enables ivtv support
 media-tv/freevo:mixer - Enable support for adjusting volume via media-sound/aumix
