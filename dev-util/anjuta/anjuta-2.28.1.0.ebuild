@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.28.1.0.ebuild,v 1.2 2009/12/27 04:26:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.28.1.0.ebuild,v 1.3 2010/01/24 23:21:28 eva Exp $
 
 EAPI="2"
 
@@ -22,12 +22,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/vte-0.13.1
 	>=dev-libs/libxml2-2.4.23
 	>=dev-libs/gdl-2.27.1
-	>=app-text/gnome-doc-utils-0.3.2
-	>=x11-libs/libwnck-2.12
 	>=dev-libs/libunique-1
-	symbol-db? (
-		gnome-extra/libgda:4
-		dev-util/ctags )
 
 	dev-libs/libxslt
 	>=dev-lang/perl-5
@@ -38,21 +33,22 @@ RDEPEND=">=dev-libs/glib-2.16
 		>=dev-util/devhelp-0.22
 		>=net-libs/webkit-gtk-1 )
 	glade? ( >=dev-util/glade-3.6.0 )
-	sourceview? (
-		>=x11-libs/gtk+-2.10
-		>=gnome-base/libgnome-2.14
-		>=x11-libs/gtksourceview-2.4 )
 	subversion? (
 		>=dev-util/subversion-1.5.0
 		>=net-misc/neon-0.28.2
 		>=dev-libs/apr-1
-		>=dev-libs/apr-util-1 )"
+		>=dev-libs/apr-util-1 )
+	sourceview? ( >=x11-libs/gtksourceview-2.4 )
+	symbol-db? (
+		gnome-extra/libgda:4
+		dev-util/ctags )"
 DEPEND="${RDEPEND}
 	!!dev-libs/gnome-build
 	>=sys-devel/gettext-0.14
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.20
 	>=app-text/scrollkeeper-0.3.14-r2
+	>=app-text/gnome-doc-utils-0.3.2
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? (
