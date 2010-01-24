@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5210 2010/01/24 15:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5211 2010/01/24 22:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -553,8 +553,6 @@ app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an own
 app-text/podofo:boost - Add support for boost
 app-text/poppler:abiword - Enable support for app-office/abiword output. Requires dev-libs/libxml2.
 app-text/poppler:exceptions - Enable exceptions throwing.
-app-text/poppler:glib - Enable glib bindings.
-app-text/poppler:openjpeg - Use openjpeg for JPX streams. Requires media-libs/openjpeg.
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/poppler:xpdf-headers - Install xpdf headers.
 app-text/poppler-utils:abiword -  Enable support for app-office/abiword output. Requires dev-libs/libxml2. 
