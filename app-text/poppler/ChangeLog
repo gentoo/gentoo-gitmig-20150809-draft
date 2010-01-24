@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.201 2009/04/22 11:10:59 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.202 2010/01/24 01:13:32 yngwin Exp $
+
+*poppler-0.12.3 (24 Jan 2010)
+
+  24 Jan 2010; Ben de Groot <yngwin@gentoo.org> +poppler-0.12.3.ebuild,
+  +files/poppler-0.12.3-cmake-disable-tests.patch:
+  New ebuild for monolithic poppler based on cmake buildsystem, as preferred
+  by upstream. Thanks to Maciej Mrozowski.
 
   22 Apr 2009; Raúl Porcel <armin76@gentoo.org> poppler-0.10.5-r1.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #263028

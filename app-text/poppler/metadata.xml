@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>printing</herd>
-<maintainer>
-	<email>loki_val@gentoo.org</email>
-	<name>Peter Alfredsen</name>
-</maintainer>
+  <herd>desktop-misc</herd>
+  <herd>kde</herd>
+  <herd>printing</herd>
+  <use>
+    <flag name='abiword'>Enable support for <pkg>app-office/abiword</pkg> output. Requires <pkg>dev-libs/libxml2</pkg>.</flag>
+    <flag name='xpdf-headers'>Install xpdf headers.</flag>
+    <flag name='exceptions'>Enable exceptions throwing.</flag>
+    <flag name='glib'>Enable glib bindings.</flag>
+    <flag name='openjpeg'>Use openjpeg for JPX streams. Requires <pkg>media-libs/openjpeg</pkg>.</flag>
+    <flag name='utils'>Install command-line PDF converters and various utilities.</flag>
+  </use>
 </pkgmetadata>
