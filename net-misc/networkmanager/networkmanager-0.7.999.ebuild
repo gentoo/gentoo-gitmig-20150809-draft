@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.999.ebuild,v 1.1 2010/01/25 06:31:01 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.999.ebuild,v 1.2 2010/01/25 17:48:26 nirbheek Exp $
 
 EAPI="2"
 
@@ -49,7 +49,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	net-dialup/ppp
-	>=dev-util/gtk-doc-1.8
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
 S=${WORKDIR}/${MY_P}
