@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.61 2009/12/27 09:33:39 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.62 2010/01/25 18:56:12 armin76 Exp $
+
+  25 Jan 2010; Raúl Porcel <armin76@gentoo.org> ulogd-2.0.0_beta3.ebuild:
+  Add ~ia64 wrt #281056
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> ulogd-2.0.0_beta3.ebuild:
   Marked ~ppc for bug #281056.
