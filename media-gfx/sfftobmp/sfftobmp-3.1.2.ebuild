@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.2.ebuild,v 1.1 2009/06/20 09:10:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.2.ebuild,v 1.2 2010/01/25 14:45:18 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="dev-libs/boost
 	media-libs/tiff
-	media-libs/jpeg"
+	media-libs/jpeg:0"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
