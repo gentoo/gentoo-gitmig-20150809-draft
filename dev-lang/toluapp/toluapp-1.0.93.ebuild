@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.93.ebuild,v 1.5 2009/12/31 14:04:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.93.ebuild,v 1.6 2010/01/25 04:47:03 jer Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/lua-5.1.1"
+RDEPEND=">=dev-lang/lua-5.1.1[deprecated]"
 DEPEND="${RDEPEND}
 	dev-util/scons"
 
