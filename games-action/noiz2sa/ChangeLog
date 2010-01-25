@@ -1,6 +1,9 @@
 # ChangeLog for games-action/noiz2sa
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/ChangeLog,v 1.7 2007/03/12 13:20:37 genone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/ChangeLog,v 1.8 2010/01/25 20:46:25 mr_bones_ Exp $
+
+  25 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org> noiz2sa-0.51a.ebuild:
+  EAPI=2; tidy
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> noiz2sa-0.51a.ebuild:
   Replacing einfo with elog
