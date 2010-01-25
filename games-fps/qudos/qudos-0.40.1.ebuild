@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.9 2007/11/20 02:14:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.10 2010/01/25 22:50:52 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 FILE_STEM="QuDos-${PV}-src"
@@ -97,8 +98,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack "${FILE_STEM}.tar.bz2"
-	cd "${S}"
+}
 
+src_prepare() {
 	rm docs/gnu.txt
 
 	# Change default sound driver and its location
@@ -180,7 +182,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	if use demo && ! built_with_use "games-fps/quake2-demodata" symlink ; then
+	if use demo && ! has_version "games-fps/quake2-demodata[symlink]" ; then
 		ewarn "To play the Quake 2 demo,"
 		ewarn "emerge games-fps/quake2-demodata with the 'symlink' USE flag."
 		echo
