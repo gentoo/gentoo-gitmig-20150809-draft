@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.40 2010/01/22 21:10:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.41 2010/01/25 17:29:07 scarabeus Exp $
+
+*okteta-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +okteta-4.3.5.ebuild:
+  Version bump
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org> okteta-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

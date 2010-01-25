@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.135 2010/01/23 20:14:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.136 2010/01/25 14:27:33 scarabeus Exp $
+
+*kalarm-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +kalarm-4.3.5.ebuild:
+  Version bump
 
   23 Jan 2010; Jonathan Callen <abcd@gentoo.org> kalarm-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

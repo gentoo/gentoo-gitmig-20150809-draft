@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.143 2010/01/22 19:22:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.144 2010/01/25 16:40:40 scarabeus Exp $
+
+*krfb-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +krfb-4.3.5.ebuild:
+  Version bump
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org> krfb-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

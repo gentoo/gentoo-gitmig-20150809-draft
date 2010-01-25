@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.52 2010/01/21 09:56:26 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.53 2010/01/25 14:25:06 scarabeus Exp $
+
+*gwenview-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +gwenview-4.3.5.ebuild:
+  Version bump
 
   21 Jan 2010; Jonathan Callen <abcd@gentoo.org> gwenview-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

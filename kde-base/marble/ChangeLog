@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.57 2010/01/22 21:40:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.58 2010/01/25 17:26:00 scarabeus Exp $
+
+*marble-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +marble-4.3.5.ebuild:
+  Version bump
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org> marble-4.3.4.ebuild:
   Keyword ~amd64-linux/~x86-linux

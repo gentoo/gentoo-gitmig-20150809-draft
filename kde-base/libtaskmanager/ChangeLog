@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libtaskmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.51 2010/01/23 17:06:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.52 2010/01/25 17:23:32 scarabeus Exp $
+
+*libtaskmanager-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libtaskmanager-4.3.5.ebuild:
+  Version bump
 
   23 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   libtaskmanager-4.3.4.ebuild:

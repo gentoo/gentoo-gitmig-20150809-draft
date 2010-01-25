@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.121 2010/01/23 17:30:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.122 2010/01/25 16:52:22 scarabeus Exp $
+
+*kstart-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +kstart-4.3.5.ebuild:
+  Version bump
 
   23 Jan 2010; Raúl Porcel <armin76@gentoo.org> kstart-4.3.4.ebuild:
   Add ~arm

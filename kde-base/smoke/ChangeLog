@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.89 2010/01/02 21:09:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.90 2010/01/25 17:37:24 scarabeus Exp $
+
+*smoke-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +smoke-4.3.5.ebuild:
+  Version bump
 
   02 Jan 2010; Ben de Groot <yngwin@gentoo.org> smoke-4.3.3.ebuild,
   smoke-4.3.4.ebuild:

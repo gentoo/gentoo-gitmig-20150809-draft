@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.184 2010/01/23 17:08:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.185 2010/01/25 17:09:44 scarabeus Exp $
+
+*kwin-4.3.5 (25 Jan 2010)
+
+  25 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> +kwin-4.3.5.ebuild:
+  Version bump
 
   23 Jan 2010; Raúl Porcel <armin76@gentoo.org> kwin-4.3.4-r1.ebuild:
   Add ~arm
