@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.77 2010/01/10 18:45:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.78 2010/01/25 14:41:13 ssuominen Exp $
+
+  25 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> x11vnc-0.9.9.ebuild:
+  Require SLOT="0" of media-libs/jpeg for headers.
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> x11vnc-0.9.9.ebuild:
   Transfer Prefix keywords
