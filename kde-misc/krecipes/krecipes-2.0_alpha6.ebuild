@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_alpha5.ebuild,v 1.1 2010/01/14 15:28:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_alpha6.ebuild,v 1.1 2010/01/25 17:41:05 scarabeus Exp $
 
 EAPI=2
 # FIXME. What is ca@valencia in po/ ?
@@ -18,15 +18,14 @@ SLOT="4"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug +handbook"
 
-DEPEND="dev-libs/soprano"
+DEPEND="
+	dev-db/sqlite:3
+	dev-libs/libxml2
+	dev-libs/libxslt
+	kde-base/qimageblitz
+	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop]
+"
 
 S=${WORKDIR}/${P/_/-}
 
-DOCS="AUTHORS BUGS ChangeLog README TODO"
-
-src_configure() {
-	# -DWITH_Soprano=OFF doesn't compile
-	mycmakeargs="${mycmakeargs}
-		-DWITH_Soprano=ON"
-	kde4-base_src_configure
-}
+DOCS="AUTHORS BUGS README TODO"
