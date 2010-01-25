@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.6 2010/01/25 18:14:23 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0_rc2.ebuild,v 1.1 2010/01/25 18:14:23 billie Exp $
 
 EAPI="2"
-
-inherit eutils
 
 DESCRIPTION="An advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sourceforge.net/"
@@ -13,9 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="alsa apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
-# currently removed openmp, see
-# http://git.omp.am/?p=conky.git;a=commit;h=670e9a0eb15ed3bc384ae0154d3c09de691e390c
+IUSE="apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax ncurses nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
 
 DEPEND_COMMON="
 	X? (
@@ -28,20 +24,18 @@ DEPEND_COMMON="
 		x11-libs/libXdamage
 		x11-libs/libXext
 	)
-	alsa? ( media-libs/alsa-lib )
-	audacious? ( >=media-sound/audacious-1.5 )
+	audacious? ( >=media-sound/audacious-1.5 dev-libs/glib )
 	curl? ( net-misc/curl )
 	eve? ( net-misc/curl dev-libs/libxml2 )
 	portmon? ( dev-libs/glib )
 	lua? ( >=dev-lang/lua-5.1 )
+	ncurses? ( sys-libs/ncurses )
 	rss? ( dev-libs/libxml2 net-misc/curl dev-libs/glib )
 	wifi? ( net-wireless/wireless-tools )
 	weather-metar? ( net-misc/curl )
 	weather-xoap? ( dev-libs/libxml2 net-misc/curl )
-	sys-libs/zlib
 	virtual/libiconv
 	"
-#	openmp? ( >=sys-devel/gcc-4.3[openmp] )
 RDEPEND="
 	${DEPEND_COMMON}
 	apcupsd? ( sys-power/apcupsd )
@@ -58,20 +52,19 @@ DEPEND="
 src_configure() {
 	local myconf
 	if use X; then
-		myconf="--enable-x11 --enable-double-buffer --enable-xdamage"
+		myconf="--enable-x11 --enable-double-buffer --enable-xdamage --enable-argb"
 		myconf="${myconf} --enable-own-window"
 		myconf="${myconf} $(use_enable imlib imlib2) $(use_enable lua-cairo)"
 		myconf="${myconf} $(use_enable lua-imlib lua-imlib2)"
 		myconf="${myconf}  $(use_enable nvidia) $(use_enable truetype xft)"
 	else
-		myconf="--disable-x11 --disable-own-window"
+		myconf="--disable-x11 --disable-own-window --disable-argb"
 		myconf="${myconf} --disable-imlib --disable-lua-cairo --disable-lua-imlib"
 		myconf="${myconf} --disable-nvidia --disable-xft"
 	fi
 
 	econf \
 		${myconf} \
-		$(use_enable alsa) \
 		$(use_enable apcupsd) \
 		$(use_enable audacious) \
 		$(use_enable curl) \
@@ -84,12 +77,12 @@ src_configure() {
 		$(use_enable math) \
 		$(use_enable moc) \
 		$(use_enable mpd) \
+		$(use_enable ncurses) \
 		$(use_enable portmon) \
 		$(use_enable rss) \
 		$(use_enable weather-metar) \
 		$(use_enable weather-xoap) \
 		$(use_enable wifi wlan)
-#		$(use_enable openmp) \
 }
 
 src_install() {
@@ -113,18 +106,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You can find a sample configuration file at"
-	elog "${ROOT%/}/etc/conky/conky.conf. To customize, copy"
-	elog "it to ~/.conkyrc and edit it to your liking."
+	elog "You can find a sample configuration file at ${ROOT%/}/etc/conky/conky.conf."
+	elog "To customize, copy it to ~/.conkyrc and edit it to your liking."
 	elog
-	elog "For more info on Conky's new features please look at"
-	elog "the Changelog in ${ROOT%/}/usr/share/doc/${PF}"
-	elog "There are also pretty html docs available"
-	elog "on Conky's site or in ${ROOT%/}/usr/share/doc/${PF}/html"
+	elog "For more info on Conky's features please look at the Changelog in"
+	elog "${ROOT%/}/usr/share/doc/${PF}. There are also pretty html docs available"
+	elog "on Conky's site or in ${ROOT%/}/usr/share/doc/${PF}/html."
 	elog
 	elog "Also see http://www.gentoo.org/doc/en/conky-howto.xml"
-	elog
-	elog "Vim syntax highlighting for conkyrc now enabled with"
-	elog "USE=vim-syntax, for Nano with USE=nano-syntax"
 	elog
 }
