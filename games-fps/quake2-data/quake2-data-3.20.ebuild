@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.24 2008/09/26 18:36:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.25 2010/01/25 22:34:52 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="iD Software's Quake 2 ... the data files"
@@ -21,8 +22,7 @@ S=${WORKDIR}
 
 pkg_setup() {
 	games_pkg_setup
-	if has_version games-fps/quake2-demodata && \
-	   built_with_use "games-fps/quake2-demodata" symlink ; then
+	if has_version "games-fps/quake2-demodata[symlink]" ; then
 		eerror "The symlink for the demo data conflicts with the cdinstall data"
 		die "Unmerge games-fps/quake2-demodata to remove the conflict"
 	fi
