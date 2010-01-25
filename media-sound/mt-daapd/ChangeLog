@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.66 2010/01/07 14:39:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.67 2010/01/25 16:27:24 patrick Exp $
+
+  25 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/mt-daapd.init.2:
+  Fixing init script for #230917
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mt-daapd-0.2.4.2.ebuild:

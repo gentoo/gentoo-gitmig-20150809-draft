@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/files/mt-daapd.init.2,v 1.3 2009/05/11 20:38:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/files/mt-daapd.init.2,v 1.4 2010/01/25 16:27:26 patrick Exp $
 # Somehow based on init.d file shipped with mt-daapd itself.
 #
 # You can run multiple copies of this service just symlinking them to
@@ -10,6 +10,11 @@
 # Remember to give them different logs and cache directories.
 #
 # The main instance (with no <name>) uses /etc/mt-daapd.conf
+
+# Check for OpenRC/Baselayout 2 -- see bug #230917
+if [ -f /lib/librc.so -o -f /etc/init.d/sysfs -o -f /lib/rc/version ]; then
+	myservice=$RC_SVCNAME
+fi
 
 CONF="${myservice##*.}"
 if [[ -n ${CONF} && ${myservice} != "mt-daapd" ]]; then
