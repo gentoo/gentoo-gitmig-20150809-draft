@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.37 2008/07/28 17:41:41 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.38 2010/01/25 01:19:57 calchan Exp $
+
+*nwn-data-1.29-r4 (25 Jan 2010)
+
+  25 Jan 2010; Denis Dupeyron <calchan@gentoo.org> +nwn-data-1.29-r4.ebuild:
+  Now installs the premium modules from the Diamond edition (bug #157595).
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
