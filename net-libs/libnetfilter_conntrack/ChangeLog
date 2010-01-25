@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.30 2009/12/28 22:41:08 wschlich Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.31 2010/01/25 18:39:10 armin76 Exp $
+
+  25 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  libnetfilter_conntrack-0.0.50.ebuild,
+  libnetfilter_conntrack-0.0.75.ebuild,
+  libnetfilter_conntrack-0.0.80.ebuild,
+  libnetfilter_conntrack-0.0.81.ebuild,
+  libnetfilter_conntrack-0.0.82.ebuild,
+  libnetfilter_conntrack-0.0.89.ebuild,
+  libnetfilter_conntrack-0.0.94.ebuild,
+  libnetfilter_conntrack-0.0.96.ebuild,
+  libnetfilter_conntrack-0.0.97.ebuild,
+  libnetfilter_conntrack-0.0.98.ebuild,
+  libnetfilter_conntrack-0.0.99.ebuild,
+  libnetfilter_conntrack-0.0.100.ebuild,
+  libnetfilter_conntrack-0.0.101.ebuild:
+  Add ~ia64 wrt #281056
 
 *libnetfilter_conntrack-0.0.101 (28 Dec 2009)
 
