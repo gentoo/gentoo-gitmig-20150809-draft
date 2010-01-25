@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.38 2010/01/23 15:46:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.39 2010/01/25 17:15:18 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -282,7 +282,7 @@ git_fetch() {
 		debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
 		# fix branching
 		git checkout ${EGIT_MASTER}
-		for x in $(git branch |grep -v "* master" |tr '\n' ' '); do
+		for x in $(git branch |grep -v "* ${EGIT_MASTER}" |tr '\n' ' '); do
 			git branch -D ${x}
 		done
 		${EGIT_UPDATE_CMD} ${EGIT_OPTIONS} \
