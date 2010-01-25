@@ -1,6 +1,9 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/use.mask,v 1.1 2009/01/19 22:15:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/use.mask,v 1.2 2010/01/25 13:55:38 williamh Exp $
+
+# Espeak does not run on bsd
+espeak
 
 # Beagle needs these patches #176668, 176670.
 beagle
