@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: opengl-apple-3.ebuild,v 1.1 2010/01/24 18:58:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-3.ebuild,v 1.2 2010/01/25 02:52:15 mr_bones_ Exp $
 
 #EAPI="3"
 
@@ -11,7 +11,7 @@ KEYWORDS="-* ~ppc-macos ~x64-macos ~x86-macos"
 SLOT=0
 IUSE="doc"
 
-DEPEND=">=app-admin/eselect-opengl-1.0.6-r01.1
+DEPEND=">=app-admin/eselect-opengl-1.0.6-r1
 	doc? ( app-doc/opengl-manpages )
 	x11-proto/glproto"
 RDEPEND="${DEPEND}"
