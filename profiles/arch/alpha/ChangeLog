@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.50 2009/12/13 23:20:33 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.51 2010/01/25 12:22:47 aballier Exp $
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Move TeX Live 2009 mask here from global package.mask, remove it once
+  keyworded, bug #300526
 
   13 Dec 2009; Rémi Cardona <remi@gentoo.org> use.mask:
   drop "imstt" from VIDEO_CARDS in all profiles

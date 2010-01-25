@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.64 2009/12/17 17:10:24 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.65 2010/01/25 12:22:50 aballier Exp $
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org> +package.mask:
+  Move TeX Live 2009 mask here from global package.mask, remove it once
+  keyworded, bug #300526
 
   17 Dec 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask capi/celt/lensfun

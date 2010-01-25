@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3835 2010/01/25 06:46:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3836 2010/01/25 12:22:45 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org> arch/alpha/ChangeLog,
+  arch/alpha/package.mask, arch/arm/ChangeLog, +arch/arm/package.mask,
+  arch/hppa/ChangeLog, arch/hppa/package.mask, arch/ia64/ChangeLog,
+  +arch/ia64/package.mask, arch/mips/ChangeLog, arch/mips/package.mask,
+  arch/powerpc/ChangeLog, arch/powerpc/package.mask, arch/s390/ChangeLog,
+  +arch/s390/package.mask, arch/sh/ChangeLog, +arch/sh/package.mask,
+  arch/sparc/ChangeLog, arch/sparc/package.mask, package.mask:
+  Move TeX Live 2009 mask to per arch profiles that they will remove once
+  properly keyworded, bug #300526
 
   25 Jan 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Remove masks for older snapshots of networkmanager-0.8 & nm-applet-0.8,

@@ -1,30 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.16 2010/01/25 12:22:54 aballier Exp $
-
-# Jason Wever <weeve@gentoo.org>
-# gradm requires 64 bit support, which doesn't exist in this profile
->sys-apps/gradm-2.0.1-r1
-
-# Gustavo Zacarias <gustavoz@gentoo.org>
-# Broken, no way to test it, see bug #155887 and bug #186958
-app-accessibility/brltty
-
-# Gustavo Zacarias <gustavoz@gentoo.org> 14 Feb 2007
-# Mask mono stuff since it requires gcc4 and it's just ~sparc yet
-dev-dotnet/art-sharp
-dev-dotnet/gconf-sharp
-dev-dotnet/glade-sharp
-dev-dotnet/gnome-sharp
-dev-dotnet/gnomevfs-sharp
-dev-dotnet/gtk-sharp
-dev-dotnet/gtkhtml-sharp
-dev-dotnet/libgdiplus
-dev-dotnet/pe-format
-dev-lang/mono
-dev-util/mono-tools
-dev-util/monodoc
-virtual/monodoc
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.mask,v 1.6 2010/01/25 12:22:53 aballier Exp $
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing
@@ -115,4 +91,6 @@ virtual/monodoc
 >=dev-texlive/texlive-science-2009
 >=dev-texlive/texlive-texinfo-2009
 >=dev-texlive/texlive-xetex-2009
+
+
 
