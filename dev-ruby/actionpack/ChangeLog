@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.147 2010/01/21 11:08:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.148 2010/01/25 17:12:02 flameeyes Exp $
+
+  25 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  actionpack-2.3.5-r1.ebuild:
+  Add ~x86 keyword, tested on a development container.
 
   21 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   actionpack-2.3.5-r1.ebuild:
