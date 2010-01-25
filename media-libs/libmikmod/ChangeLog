@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.68 2010/01/16 10:00:43 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.69 2010/01/25 19:26:54 armin76 Exp $
+
+  25 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  libmikmod-3.2.0_beta2-r1.ebuild:
+  arm/ia64/sh/sparc stable wrt #255363
 
   16 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
   libmikmod-3.2.0_beta2-r1.ebuild:
