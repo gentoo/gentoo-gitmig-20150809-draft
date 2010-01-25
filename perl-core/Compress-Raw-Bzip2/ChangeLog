@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Compress-Raw-Bzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Compress-Raw-Bzip2/ChangeLog,v 1.23 2010/01/25 10:18:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Compress-Raw-Bzip2/ChangeLog,v 1.24 2010/01/25 10:24:12 tove Exp $
+
+  25 Jan 2010; Torsten Veller <tove@gentoo.org>
+  Compress-Raw-Bzip2-2.021.ebuild:
+  Remove Test-Pod causing circular dependencies
 
   25 Jan 2010; Torsten Veller <tove@gentoo.org>
   -Compress-Raw-Bzip2-2.020.ebuild, -Compress-Raw-Bzip2-2.023.ebuild,
