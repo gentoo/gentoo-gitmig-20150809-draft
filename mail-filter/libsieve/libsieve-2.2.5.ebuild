@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/libsieve-2.2.5.ebuild,v 1.6 2009/09/23 17:53:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/libsieve-2.2.5.ebuild,v 1.7 2010/01/25 19:28:58 bangert Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="!net-mail/mailutils"
+RDEPEND="!<net-mail/mailutils-2.1"
 
 src_compile() {
 	cd "${S}"/src

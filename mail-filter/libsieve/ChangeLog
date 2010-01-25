@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libsieve
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.15 2009/09/23 17:53:57 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.16 2010/01/25 19:28:58 bangert Exp $
+
+  25 Jan 2010; Thilo Bangert <bangert@gentoo.org> libsieve-2.2.5.ebuild,
+  -libsieve-2.2.6.ebuild, libsieve-2.2.7.ebuild:
+  relax blocker (#248097) - remove old
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libsieve-2.2.5.ebuild,
   libsieve-2.2.6.ebuild, libsieve-2.2.7.ebuild:
