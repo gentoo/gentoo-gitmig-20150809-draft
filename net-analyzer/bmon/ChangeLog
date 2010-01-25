@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bmon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.42 2009/10/17 07:47:56 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.43 2010/01/25 12:54:23 jer Exp $
+
+  25 Jan 2010; Jeroen Roovers <jer@gentoo.org> bmon-2.1.0-r3.ebuild,
+  bmon-2.1.1_pre1.ebuild:
+  Correct license thanks to Luke-Jr (bug #301973).
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   remove dbi description as it is global now

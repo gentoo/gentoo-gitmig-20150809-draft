@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.1 2009/01/20 17:14:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.2 2010/01/25 12:54:23 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ DESCRIPTION="interface bandwidth monitor"
 HOMEPAGE="http://people.suug.ch/~tgr/bmon/"
 SRC_URI="http://people.suug.ch/~tgr/bmon/files/${PN}-${MY_PV}.tar.gz"
 
-LICENSE="Artistic"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="dbi rrdtool"
