@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.3 2008/02/29 19:30:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.4 2010/01/25 21:47:00 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 MY_P="twind-${PV}"
@@ -14,15 +15,13 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer
-	media-libs/sdl-image"
+	media-libs/sdl-image[png]"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^CC/s:gcc:$(tc-getCC):" \
 		-e "/^CFLAGS/s:-g:${CFLAGS}:" \
@@ -50,7 +49,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+	if ! has_version "media-libs/sdl-mixer[vorbis]" ; then
 		ewarn "Music support will be disabled since sdl-mixer"
 		ewarn "wasn't built with USE=vorbis"
 	fi
