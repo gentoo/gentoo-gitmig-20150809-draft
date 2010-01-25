@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.4 2009/10/25 12:48:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.5 2010/01/25 22:04:51 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
 
 DESCRIPTION="An exciting Brick Breaker"
 HOMEPAGE="http://linux.tlk.fr/games/TecnoballZ/"
-SRC_URI="${HOMEPAGE}download/${P}.tgz"
+SRC_URI="http://linux.tlk.fr/games/TecnoballZ/download/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -35,7 +35,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	built_with_use "media-libs/sdl-mixer" mikmod \
+	has_version "media-libs/sdl-mixer[mikmod]" \
 		|| ewarn "To have background music, emerge sdl-mixer with USE=mikmod"
 	games_pkg_postinst
 }
