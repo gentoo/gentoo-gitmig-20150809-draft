@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.365 2010/01/25 18:43:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.366 2010/01/25 20:52:41 ulm Exp $
+
+  25 Jan 2010; Ulrich Mueller <ulm@gentoo.org> -emacs-22.3-r2.ebuild,
+  -emacs-23.1.ebuild:
+  Remove old.
 
   25 Jan 2010; Raúl Porcel <armin76@gentoo.org> emacs-22.3-r3.ebuild,
   emacs-23.1-r2.ebuild:
