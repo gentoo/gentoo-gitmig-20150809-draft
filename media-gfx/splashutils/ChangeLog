@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.165 2009/12/07 19:58:11 spock Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.166 2010/01/25 14:43:21 ssuominen Exp $
+
+  25 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  splashutils-1.5.4.3.ebuild:
+  Require SLOT=0 of media-libs/jpeg for headers.
 
   07 Dec 2009; Michał Januszewski <spock@gentoo.org>
   splashutils-1.5.4.3.ebuild:
