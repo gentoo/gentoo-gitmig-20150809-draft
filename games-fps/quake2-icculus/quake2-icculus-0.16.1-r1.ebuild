@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.19 2009/12/07 21:20:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.20 2010/01/25 22:36:36 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -192,7 +192,7 @@ pkg_postinst() {
 	elog "right now! It's important - This install is just the engine, you still need"
 	elog "the data paks. Go read."
 
-	if use demo && ! built_with_use "games-fps/quake2-demodata" symlink ; then
+	if use demo && ! has_version "games-fps/quake2-demodata[symlink]" ; then
 		ewarn "To play the Quake 2 demo,"
 		ewarn "emerge games-fps/quake2-demodata with the 'symlink' USE flag."
 		echo
