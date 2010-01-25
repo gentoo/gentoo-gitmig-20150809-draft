@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.40 2010/01/18 15:23:46 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.41 2010/01/25 06:39:28 nirbheek Exp $
+
+*nm-applet-0.7.999 (25 Jan 2010)
+
+  25 Jan 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +nm-applet-0.7.999.ebuild:
+  Add 0.7.999 -- final rc of nm-applet-0.8; goes with networkmanager-0.7.999
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance
