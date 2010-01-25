@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.74 2010/01/24 15:59:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.75 2010/01/25 17:29:42 armin76 Exp $
+
+  25 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  -files/libmpeg-0.5.1-armv4l.patch, +files/libmpeg2-0.5.1-armv4l.patch:
+  Fix patch name+patch
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> libmpeg2-0.5.1-r1.ebuild,
   +files/libmpeg-0.5.1-armv4l.patch:
