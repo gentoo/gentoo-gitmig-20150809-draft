@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.6 2009/04/20 20:15:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.7 2010/01/25 18:53:40 armin76 Exp $
 
 inherit eutils sgml-catalog
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="KenMacLeod SGMLUG"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd"
 IUSE="latex"
 
 DEPEND="app-text/openjade
