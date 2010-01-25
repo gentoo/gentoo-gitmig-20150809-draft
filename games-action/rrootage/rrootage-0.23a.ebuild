@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.8 2007/03/12 13:21:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.9 2010/01/25 22:15:23 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_PN="rRootage"
@@ -22,11 +23,9 @@ DEPEND="virtual/opengl
 	media-libs/sdl-mixer
 	>=dev-libs/libbulletml-0.0.3"
 
-S="${WORKDIR}/${MY_PN}/src"
+S=${WORKDIR}/${MY_PN}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -e "s/-lglut/-lGL -lGLU/" makefile.lin > Makefile || die "sed failed"
 
@@ -50,7 +49,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+	if ! has_version "media-libs/sdl-mixer[vorbis]" ; then
 		elog "${PN} will not have sound since sdl-mixer"
 		elog "is built with USE=-vorbis"
 		elog "Please emerge sdl-mixer with USE=vorbis"
