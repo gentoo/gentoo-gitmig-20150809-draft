@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2009.ebuild,v 1.2 2010/01/15 09:37:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2009.ebuild,v 1.3 2010/01/25 13:08:16 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="asyfig autoarea bardiag cachepic combinedgraphics circuitikz curve curve2e curves dcpic diagmac2 doc-pictex dottex dot2texi dratex eepic epspdf epspdfconversion fig4latex gnuplottex here hvfloat miniplot pb-diagram petri-nets  pgf-soroban pgfopts pgfplots picinpar pict2e pictex pictex2 pinlabel pmgraph randbild schemabloc swimgraf texdraw tikz-inet tikz-qtree tikz-timing tkz-doc tkz-linknodes tkz-tab tufte-latex xypic collection-pictures
 "
@@ -9,7 +9,7 @@ TEXLIVE_MODULE_SRC_CONTENTS="asyfig.source combinedgraphics.source curve.source 
 inherit texlive-module
 DESCRIPTION="TeXLive Graphics packages and programs"
 
-LICENSE="GPL-2 Apache-2.0 as-is freedist GPL-1 GPL-3 LPPL-1.3 public-domain "
+LICENSE="GPL-2 Apache-2.0 as-is GPL-1 GPL-3 LPPL-1.3 public-domain "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
