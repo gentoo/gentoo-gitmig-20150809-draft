@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.41 2010/01/25 06:39:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.42 2010/01/25 06:41:18 nirbheek Exp $
+
+  25 Jan 2010; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  metadata.xml: add myself, fix indentation
 
 *nm-applet-0.7.999 (25 Jan 2010)
 
