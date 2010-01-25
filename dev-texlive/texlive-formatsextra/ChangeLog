@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-formatsextra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.32 2010/01/15 10:25:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.33 2010/01/25 14:05:04 aballier Exp $
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-formatsextra-2009.ebuild:
+  license update
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   texlive-formatsextra-2008.ebuild:

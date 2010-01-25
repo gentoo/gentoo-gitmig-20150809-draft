@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langcjk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.32 2010/01/11 03:20:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.33 2010/01/25 14:01:10 aballier Exp $
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-langcjk-2009.ebuild:
+  license update
 
 *texlive-langcjk-2009 (11 Jan 2010)
 

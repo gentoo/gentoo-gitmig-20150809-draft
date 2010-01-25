@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langcyrillic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/ChangeLog,v 1.29 2010/01/11 03:20:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/ChangeLog,v 1.30 2010/01/25 13:56:16 aballier Exp $
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-langcyrillic-2009.ebuild:
+  license update
 
 *texlive-langcyrillic-2009 (11 Jan 2010)
 

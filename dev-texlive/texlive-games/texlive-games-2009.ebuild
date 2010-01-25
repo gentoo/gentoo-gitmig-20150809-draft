@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/texlive-games-2009.ebuild,v 1.1 2010/01/11 03:17:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/texlive-games-2009.ebuild,v 1.2 2010/01/25 14:04:18 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="cchess chess chess-problem-diagrams chessboard chessfss crossword crosswrd egameps go hexgame jeopardy othello psgo sgame skak skaknew sudoku sudokubundle xq xskak collection-games
 "
@@ -9,7 +9,7 @@ TEXLIVE_MODULE_SRC_CONTENTS="chess-problem-diagrams.source chessboard.source che
 inherit texlive-module
 DESCRIPTION="TeXLive Games typesetting"
 
-LICENSE="GPL-2 as-is freedist GPL-1 LPPL-1.3 public-domain "
+LICENSE="GPL-2 as-is GPL-1 LPPL-1.3 public-domain "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
