@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/texlive-latex-2009.ebuild,v 1.2 2010/01/15 09:14:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/texlive-latex-2009.ebuild,v 1.3 2010/01/25 13:27:44 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="ae amscls amsmath babel babelbib carlisle colortbl fancyhdr geometry graphics hyperref latex latex-bin latex-fonts latexconfig ltxmisc mfnfss natbib oberdiek pdftex-def pslatex psnfss pspicture supp-pdf tools collection-latex
 "
@@ -9,7 +9,7 @@ TEXLIVE_MODULE_SRC_CONTENTS="ae.source amscls.source amsmath.source babel.source
 inherit texlive-module
 DESCRIPTION="TeXLive Basic LaTeX packages"
 
-LICENSE="GPL-2 freedist GPL-1 LPPL-1.3 "
+LICENSE="GPL-2 GPL-1 GPL-2 LPPL-1.3 "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""

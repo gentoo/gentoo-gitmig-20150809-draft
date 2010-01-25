@@ -1,6 +1,14 @@
 # ChangeLog for dev-texlive/texlive-latex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/ChangeLog,v 1.40 2010/01/15 10:22:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/ChangeLog,v 1.41 2010/01/25 13:27:44 aballier Exp $
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-latex-2009.ebuild:
+  license update
+
+  25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-latex-2009.ebuild:
+  license update
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   texlive-latex-2008-r2.ebuild:
