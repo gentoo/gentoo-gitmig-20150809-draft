@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtksourceview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.18 2010/01/16 06:10:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.19 2010/01/25 19:22:16 armin76 Exp $
+
+  25 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  ruby-gtksourceview-0.19.1.ebuild:
+  sparc stable wrt #295942
 
 *ruby-gtksourceview-0.19.3 (16 Jan 2010)
 
