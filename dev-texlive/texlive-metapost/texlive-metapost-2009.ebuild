@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/texlive-metapost-2009.ebuild,v 1.2 2010/01/25 13:14:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/texlive-metapost-2009.ebuild,v 1.3 2010/01/25 14:43:55 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="automata bbcard blockdraw_mp bpolynomial cmarrows drv dviincl emp epsincl expressg exteps featpost garrigues hatching latexmp metago metaobj metaplot metapost metauml mfpic mfpic4ode mp3d mpattern piechartmp roex slideshow splines suanpan textpath collection-metapost
 "
@@ -23,8 +23,10 @@ RDEPEND="${DEPEND} "
 # created and cause collisions.
 
 pkg_setup() {
-	if [ -f "${ROOT}/var/lib/texmf/web2c/metapost/mplib-luatex.mem" ]; then
-		einfo "Removing ${ROOT}/var/lib/texmf/web2c/metapost/mplib-luatex.mem"
-		rm -f "${ROOT}/var/lib/texmf/web2c/metapost/mplib-luatex.mem"
+	use prefix || EPREFIX=
+
+	if [ -f "${ROOT%/}${EPREFIX}/var/lib/texmf/web2c/metapost/mplib-luatex.mem" ]; then
+		einfo "Removing ${ROOT%/}${EPREFIX}/var/lib/texmf/web2c/metapost/mplib-luatex.mem"
+		rm -f "${ROOT%/}${EPREFIX}/var/lib/texmf/web2c/metapost/mplib-luatex.mem"
 	fi
 }
