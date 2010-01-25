@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.8.ebuild,v 1.4 2009/10/31 14:37:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.8.ebuild,v 1.5 2010/01/25 22:11:31 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -47,7 +47,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if ! built_with_use media-libs/sdl-mixer mikmod ; then
+	if ! has_version "media-libs/sdl-mixer[mikmod]" ; then
 		ewarn
 		ewarn "To hear music, you will have to rebuild media-libs/sdl-mixer"
 		ewarn "with the \"mikmod\" USE flag turned on."
