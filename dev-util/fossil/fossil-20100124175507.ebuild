@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fossil/fossil-20100124175507.ebuild,v 1.1 2010/01/24 20:21:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fossil/fossil-20100124175507.ebuild,v 1.2 2010/01/25 21:12:36 mr_bones_ Exp $
 
 EAPI="2"
 inherit toolchain-funcs
@@ -26,7 +26,6 @@ src_prepare() {
 		-e "/^BCC/s:gcc:$(tc-getBUILD_CC):" \
 		Makefile || die
 }
-
 
 src_install() {
 	dobin fossil || die
