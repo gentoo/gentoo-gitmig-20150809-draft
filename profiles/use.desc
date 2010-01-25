@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.430 2010/01/15 00:38:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.431 2010/01/25 21:18:04 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -395,7 +395,6 @@ xml - Add support for XML files
 xmlrpc - Support for xml-rpc library
 xosd - Sends display using the X On Screen Display library
 xpm - Adds support for XPM graphics format
-xprint - Support for xprint, http://www.mozilla.org/projects/xprint/
 xscreensaver - Adds support for XScreenSaver extension
 xsl - Check/Support flag for XSL library (version 1)
 xulrunner - Build native browser integration against xulrunner instead of firefox or seamonkey
