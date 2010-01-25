@@ -1,0 +1,9 @@
+# ChangeLog for games-rpg/nwn-penultima
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-penultima/ChangeLog,v 1.1 2010/01/25 02:03:45 calchan Exp $
+
+*nwn-penultima-1 (25 Jan 2010)
+
+  25 Jan 2010; Denis Dupeyron <calchan@gentoo.org> +nwn-penultima-1.ebuild:
+  Initial commit.
+
