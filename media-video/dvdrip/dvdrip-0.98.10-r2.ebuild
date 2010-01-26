@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.10-r2.ebuild,v 1.8 2010/01/09 15:41:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.10-r2.ebuild,v 1.9 2010/01/26 11:42:52 spatz Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="dvd::rip is a graphical frontend for transcode"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 SRC_URI="http://www.exit1.org/dvdrip/dist/${P}.tar.gz"
 
-LICENSE="Artistic GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="ffmpeg fping hal mplayer ogg subtitles vcd vorbis xine xvid"
