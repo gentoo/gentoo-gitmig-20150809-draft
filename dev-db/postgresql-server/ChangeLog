@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.53 2010/01/26 21:22:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.54 2010/01/26 22:01:20 patrick Exp $
+
+  26 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/postgresql.init-8.4:
+  Fixing init script for extra opts
 
   26 Jan 2010; Patrick Lauer <patrick@gentoo.org> files/postgresql.conf-8.4:
   Fixing conf.d documentation
