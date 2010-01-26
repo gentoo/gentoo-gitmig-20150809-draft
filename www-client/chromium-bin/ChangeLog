@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.53 2010/01/17 21:33:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.54 2010/01/26 08:09:05 phajdan.jr Exp $
+
+  26 Jan 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-bin-4.0.266.0_p33995.ebuild,
+  chromium-bin-4.0.295.0_p35884.ebuild, chromium-bin-9999.ebuild:
+  Drop dependency on media-fonts/corefonts, bug #302231 by Andrew John
+  Hughes <gnu_andrew@member.fsf.org>
 
   17 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   chromium-bin-4.0.295.0_p35884.ebuild, chromium-bin-9999.ebuild:
