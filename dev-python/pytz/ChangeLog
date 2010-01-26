@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.54 2010/01/04 18:28:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.55 2010/01/26 19:27:55 arfrever Exp $
+
+*pytz-2010b (26 Jan 2010)
+
+  26 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytz-2010b.ebuild:
+  Version bump.
 
 *pytz-2009u (04 Jan 2010)
 
