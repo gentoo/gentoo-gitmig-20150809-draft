@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/allpaths
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.5 2010/01/03 14:08:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.6 2010/01/26 20:43:21 weaver Exp $
+
+*allpaths-3.1 (26 Jan 2010)
+
+  26 Jan 2010; Andrey Kislyuk <weaver@gentoo.org> +allpaths-3.1.ebuild:
+  Version bump
 
   03 Jan 2010; Pacho Ramos <pacho@gentoo.org> allpaths-2.0.ebuild:
   amd64 stable, bug 290927
