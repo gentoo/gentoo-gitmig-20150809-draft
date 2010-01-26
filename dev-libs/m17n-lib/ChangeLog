@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/m17n-lib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.48 2009/10/12 16:35:33 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.49 2010/01/26 15:27:44 matsuu Exp $
+
+*m17n-lib-1.5.5 (26 Jan 2010)
+
+  26 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> +m17n-lib-1.5.5.ebuild:
+  Version bumped.
 
   12 Oct 2009; Raúl Porcel <armin76@gentoo.org> m17n-lib-1.5.2.ebuild:
   sh stable
