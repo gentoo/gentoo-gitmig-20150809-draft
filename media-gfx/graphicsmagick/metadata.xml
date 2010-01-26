@@ -3,6 +3,10 @@
 <pkgmetadata>
 <maintainer>
   <email>bicatali@gentoo.org</email>
+  <description>
+    Not really a maitainer, just helping out. Feel free to do anything
+    with the package.
+  </description>
 </maintainer>
 <herd>graphics</herd>
 <longdescription lang='en'>
