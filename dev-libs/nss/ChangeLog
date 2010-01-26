@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.164 2010/01/23 15:42:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.165 2010/01/26 16:20:59 darkside Exp $
+
+  26 Jan 2010; Jeremy Olexa <darkside@gentoo.org> nss-3.12.5.ebuild:
+  Fix dynamic linking issues with surfaced in Gentoo Prefix env. Tested on
+  Gentoo Linux system and Gentoo Prefix in bug 301649. Proxy commit approved
+  by the mozilla team
 
   23 Jan 2010; Brent Baude <ranger@gentoo.org> nss-3.12.5.ebuild:
   stable ppc, bug 300606
