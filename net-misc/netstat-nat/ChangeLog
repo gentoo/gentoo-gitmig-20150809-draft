@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netstat-nat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.32 2009/09/23 19:41:41 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.33 2010/01/26 01:19:43 jer Exp $
+
+*netstat-nat-1.4.10 (26 Jan 2010)
+
+  26 Jan 2010; Jeroen Roovers <jer@gentoo.org> -netstat-nat-1.4.7.ebuild,
+  -netstat-nat-1.4.8.ebuild, +netstat-nat-1.4.10.ebuild:
+  Remove old. Version bump thanks to Dmitry Karasik (bug #302219).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> netstat-nat-1.4.7.ebuild:
   Remove virtual/libc
