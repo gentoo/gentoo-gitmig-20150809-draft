@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.26 2009/10/11 23:20:35 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.27 2010/01/26 09:25:19 robbat2 Exp $
+
+*cronolog-1.6.2-r4 (26 Jan 2010)
+
+  26 Jan 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +cronolog-1.6.2-r4.ebuild, +files/cronolog-1.6.2-umask.patch:
+  Add umask support to cronolog. Patch by Mike Doty <kingtaco@gentoo.org>,
+  confirmed by myself.
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> cronolog-1.6.2-r2.ebuild,
   cronolog-1.6.2-r3.ebuild:
