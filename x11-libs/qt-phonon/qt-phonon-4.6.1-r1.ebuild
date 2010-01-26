@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.6.1-r1.ebuild,v 1.1 2010/01/25 23:49:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.6.1-r1.ebuild,v 1.2 2010/01/26 16:28:27 spatz Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -31,7 +31,7 @@ pkg_setup() {
 	QCONFIG_ADD="phonon"
 	use aqua || QCONFIG_DEFINE="QT_GSTREAMER"
 
-	qt4-build_src_prepare
+	qt4-build_pkg_setup
 }
 
 src_configure() {
