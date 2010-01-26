@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11161 2010/01/26 19:08:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11162 2010/01/26 19:15:54 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrick Lauer <patrick@gentoo.org> (26 Jan 2010)
+# Masking alpha for testing
+=dev-db/postgresql-base-8.5_alpha3
+=dev-db/postgresql-server-8.5_alpha3
+=dev-db/postgresql-docs-8.5_alpha3
+
 # Lennart Kolmodin <kolmodin@gentoo.org> (26 Jan 2010)
 # Masked GHC and friends for testing.
 >=dev-lang/ghc-6.12
@@ -38,6 +44,7 @@
 =app-admin/haskell-updater-1*
 
 # Patrick Lauer <patrick@gentoo.org> (26 Jan 2010)
+# Masking release candidates
 =net-fs/samba-3.5.0_rc2
 =net-fs/samba-libs-3.5.0_rc2
 =net-fs/samba-server-3.5.0_rc2
