@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.50_pre20090520.ebuild,v 1.4 2010/01/13 23:58:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.50_pre20090520.ebuild,v 1.5 2010/01/26 18:37:36 yngwin Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="
 	>=x11-libs/qt-opengl-4.4.0:4
 	gstreamer? (
 		media-libs/gstreamer
-		media-libs/gst-plugins-base
+		media-plugins/gst-plugins-meta
 	)
 	xine? (
 		>=media-libs/xine-lib-1.1.15-r1[xcb?]

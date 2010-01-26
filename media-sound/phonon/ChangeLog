@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.38 2010/01/13 23:58:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.39 2010/01/26 18:37:36 yngwin Exp $
+
+  26 Jan 2010; Ben de Groot <yngwin@gentoo.org> phonon-4.3.1.ebuild,
+  phonon-4.3.50_pre20090520.ebuild, phonon-4.3.80-r1.ebuild:
+  Depend on gst-plugins-meta when gstreamer useflag is enabled. Fixes bug
+  289692.
 
   13 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   phonon-4.3.50_pre20090520.ebuild:
