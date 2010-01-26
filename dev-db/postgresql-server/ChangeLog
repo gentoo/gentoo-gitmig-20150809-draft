@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.50 2010/01/09 19:04:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.51 2010/01/26 19:26:32 patrick Exp $
+
+*postgresql-server-8.5_alpha3 (26 Jan 2010)
+
+  26 Jan 2010; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-server-8.5_alpha3.ebuild, +files/postgresql.conf-8.5,
+  +files/postgresql.init-8.5, +files/postgresql-8.5-common.patch,
+  +files/postgresql-8.5-makefile.patch, +files/postgresql-8.5-server.patch:
+  Adding 8.5_alpha
 
   09 Jan 2010; Patrick Lauer <patrick@gentoo.org>
   postgresql-server-8.4.2-r1.ebuild:
