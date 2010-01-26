@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.26 2010/01/19 11:41:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.27 2010/01/26 15:00:41 spatz Exp $
 
 EAPI=2
 SCM=""
@@ -105,6 +105,13 @@ src_configure() {
 		use theora && myconf="${myconf} --enable-libtheora"
 		use x264 && myconf="${myconf} --enable-libx264"
 		use xvid && myconf="${myconf} --enable-libxvid"
+		if use bindist
+		then
+			use faac && ewarn "faac is nonfree and cannot be distributed;
+			disabling faac support."
+		else
+			use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
+		fi
 	else
 		myconf="${myconf} --disable-encoders"
 	fi
@@ -135,14 +142,6 @@ src_configure() {
 		myconf="${myconf} --enable-libgsm"
 		# Crappy detection or our installation is weird, pick one (FIXME)
 		append-flags -I/usr/include/gsm
-	fi
-	if use bindist
-	then
-		use faac && ewarn "faac is nonfree and cannot be distributed; disabling
-		faac support."
-	else
-		use faac && myconf="${myconf} --enable-libfaac"
-		{ use faac ; } && myconf="${myconf} --enable-nonfree"
 	fi
 
 	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
