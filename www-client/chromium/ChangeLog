@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.44 2010/01/26 10:11:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.45 2010/01/26 11:02:17 voyageur Exp $
+
+  26 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +chromium-4.0.249.43.ebuild:
+  Pawel just reminded me that the beta channel latest version is 4.0.249.43,
+  not 4.0.266.0
 
   26 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -chromium-4.0.249.43.ebuild, chromium-4.0.266.0-r1.ebuild,
