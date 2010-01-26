@@ -1,18 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.10.ebuild,v 1.1 2010/01/26 20:10:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.10-r1.ebuild,v 1.1 2010/01/26 20:43:51 patrick Exp $
 
 EAPI="2"
 
 inherit eutils versionator
 
 major_minor="$( get_version_component_range 1-2 )"
-sieve_version="0.1.14"
-managesieve_version="0.11.10"
+sieve_version="0.1.15"
+managesieve_version="0.11.11"
 SRC_URI="http://dovecot.org/releases/${major_minor}/${P}.tar.gz
 	sieve? ( http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-sieve-${sieve_version}.tar.gz )
 	managesieve? (
-		http://www.rename-it.nl/dovecot/${major_minor}/dovecot-1.2.9-managesieve-${managesieve_version}.diff.gz
+		http://www.rename-it.nl/dovecot/${major_minor}/dovecot-1.2.10-managesieve-${managesieve_version}.diff.gz
 		http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-managesieve-${managesieve_version}.tar.gz
 	)"
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
