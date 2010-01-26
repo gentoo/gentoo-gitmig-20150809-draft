@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.19 2010/01/26 08:02:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.20 2010/01/26 10:11:39 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -84,12 +84,16 @@ src_unpack() {
 
 src_prepare() {
 	# Gentoo uses .kde4, not .kde
+	# TODO: this does not work with kdeprefix, fixing http:/crbug.com/29927
+	# would be better
 	sed -e 's/\.kde/.kde4/' -i net/proxy/proxy_config_service_linux.cc \
 		|| die "kde proxy sed failed"
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
+	# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
+	epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \
@@ -120,11 +124,11 @@ EOF
 	# Sandbox paths
 	myconf="${myconf} -Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox -Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	if [[ "$ABI" == "amd64" ]] ; then
+	if use amd64 ; then
 		myconf="${myconf} -Dtarget_arch=x64"
 	fi
 
-	if [[ "$ABI" == "x86" ]] ; then
+	if use x86 ; then
 		myconf="${myconf} -Dtarget_arch=ia32"
 	fi
 
