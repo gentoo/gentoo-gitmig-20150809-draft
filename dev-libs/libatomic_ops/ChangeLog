@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.17 2010/01/19 10:36:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.18 2010/01/26 18:27:02 grobian Exp $
+
+  26 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  libatomic_ops-1.2-r1.ebuild:
+  Marked ~amd64-linux (bug #302290) and ~x86-solaris
 
   19 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   libatomic_ops-1.2-r1.ebuild:
