@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.3.ebuild,v 1.1 2010/01/20 23:41:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.3.ebuild,v 1.2 2010/01/26 20:32:22 ayoy Exp $
 
 EAPI="2"
 
@@ -37,6 +37,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-qtscripttools.patch"
 	sed -e 's:cmake-${CMAKE_MAJOR_VERSION}\.${CMAKE_MINOR_VERSION}:cmake:' \
 	    -i data/CMakeLists.txt || die "sed failed"
+
+	# bug 301747
+	sed -e 's:Boost 1\.38:Boost 1\.41:' \
+		-i CMakeLists.txt || die "sed failed"
+	sed -e 's:${QTVERSION} GREATER 4\.5\.0:EXISTS ${QT_LIBRARY_DIR}/libQtMultimedia.so:' \
+		-i PySide/CMakeLists.txt || die "sed failed"
 }
 
 src_install() {

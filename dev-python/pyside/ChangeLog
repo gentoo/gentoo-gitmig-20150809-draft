@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.4 2010/01/20 23:41:39 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.5 2010/01/26 20:32:22 ayoy Exp $
+
+  26 Jan 2010; Dominik Kapusta <ayoy@gentoo.org> pyside-0.2.3.ebuild:
+  Update Boost deps in CMakeLists.txt and perform better check for
+  QtMultimedia module (bug #301747).
 
 *pyside-0.2.3 (20 Jan 2010)
 
