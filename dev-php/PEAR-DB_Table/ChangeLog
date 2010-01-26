@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_Table
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.34 2007/10/22 16:37:11 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.35 2010/01/26 22:09:29 ulm Exp $
+
+  26 Jan 2010; Ulrich Mueller <ulm@gentoo.org>
+  PEAR-DB_Table-0.21.2-r1.ebuild, PEAR-DB_Table-1.5.0.ebuild:
+  Fix LICENSE, bug 258316.
 
   22 Oct 2007; Raúl Porcel <armin76@gentoo.org> PEAR-DB_Table-1.5.0.ebuild:
   ia64 stable wrt #192247

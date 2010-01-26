@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/PEAR-MIME_Type-1.0.0.ebuild,v 1.9 2007/12/01 12:27:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/PEAR-MIME_Type-1.0.0.ebuild,v 1.10 2010/01/26 22:09:48 ulm Exp $
 
 inherit php-pear-r1
 
 DESCRIPTION="Utility class for dealing with MIME types."
-LICENSE="PHP"
+LICENSE="PHP-3"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE=""
