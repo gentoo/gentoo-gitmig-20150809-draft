@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.60 2010/01/25 19:36:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.61 2010/01/26 00:38:14 ranger Exp $
+
+  26 Jan 2010; Brent Baude <ranger@gentoo.org> libnet-1.1.4-r1.ebuild:
+  Marking libnet-1.1.4-r1 ppc64 for bug 289857
 
   25 Jan 2010; Raúl Porcel <armin76@gentoo.org> libnet-1.1.4.ebuild,
   libnet-1.1.4-r1.ebuild:
