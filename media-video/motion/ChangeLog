@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.28 2010/01/19 19:17:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.29 2010/01/26 20:28:25 patrick Exp $
+
+  26 Jan 2010; Patrick Lauer <patrick@gentoo.org> motion-3.2.11.1.ebuild:
+  Fixing postgres dep for #300908
 
   19 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   motion-3.2.11.1.ebuild:

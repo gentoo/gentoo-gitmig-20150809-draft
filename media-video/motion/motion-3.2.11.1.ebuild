@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.11.1.ebuild,v 1.3 2010/01/19 19:17:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.11.1.ebuild,v 1.4 2010/01/26 20:28:25 patrick Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND="sys-libs/zlib
 	media-libs/jpeg
 	ffmpeg? ( media-video/ffmpeg )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )"
+	postgres? ( virtual/postgresql-base )"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
