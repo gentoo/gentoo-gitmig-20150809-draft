@@ -1,6 +1,12 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.27 2010/01/25 16:09:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.28 2010/01/26 22:39:42 caster Exp $
+
+  26 Jan 2010; Vlastimil Babka <caster@gentoo.org> jdk-1.5.0.ebuild,
+  jdk-1.6.0.ebuild:
+  Make dependencies on icedtea6-bin and sun-jdk apply only on x86/amd64 so
+  that ppc(64) users get more meaningful error for masked licenses of
+  ibm-jdk-bin, as pointed out in #287615.
 
   25 Jan 2010; Vlastimil Babka <caster@gentoo.org> jdk-1.4.2.ebuild,
   jdk-1.5.0.ebuild:
