@@ -1,0 +1,11 @@
+--- makefile.in.old	2009-01-24 15:51:07.000000000 +0100
++++ makefile.in	2009-06-21 16:05:23.000000000 +0200
+@@ -27,7 +27,7 @@
+ mandir = @mandir@
+ man1dir = $(mandir)/man1
+ 
+-installdirs = $(DESTDIR)$(mandir) $(DESTDIR)$(man1dir)
++installdirs = $(DESTDIR)$(man1dir)
+ 
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
