@@ -1,6 +1,9 @@
 # ChangeLog for www-client/netrik
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.8 2008/04/21 18:20:22 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.9 2010/01/26 11:46:22 cla Exp $
+
+  26 Jan 2010; Dawid Węgliński <cla@gentoo.org> netrik-1.15.6.ebuild:
+  Respect user CFLAGS (bug #2414600)
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
