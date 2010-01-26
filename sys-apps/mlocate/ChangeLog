@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.54 2010/01/22 20:32:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.55 2010/01/26 23:06:19 tcunha Exp $
+
+  26 Jan 2010; Tiago Cunha <tcunha@gentoo.org> mlocate-0.22.2-r1.ebuild:
+  stable sparc, bug 301400
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org> mlocate-0.22.2-r1.ebuild:
   stable ppc, bug 301400
