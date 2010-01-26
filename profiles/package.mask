@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11162 2010/01/26 19:15:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11163 2010/01/26 21:43:39 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -674,11 +674,6 @@ sys-apps/sdd
 #
 # Masked for removal
 x11-themes/gtk-engines-qt
-
-# Torsten Veller <tove@gentoo.org> (27 Dec 2009)
-# Mask for removal
-# - old, perl4, superseded by Jcode and Encode, (#298215)
-dev-perl/jcode_pl
 
 # Markos Chandras <hwoarang@gentoo.org> (26 Dec 2009)
 # keeping rc ebuilds masked
