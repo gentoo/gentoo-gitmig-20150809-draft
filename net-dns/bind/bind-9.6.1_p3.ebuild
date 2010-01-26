@@ -1,40 +1,49 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.3_p3.ebuild,v 1.7 2009/08/01 19:08:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3.ebuild,v 1.1 2010/01/26 18:53:53 idl0r Exp $
 
-inherit eutils libtool autotools toolchain-funcs flag-o-matic
+EAPI="2"
 
-DLZ_VERSION="9.3.3"
-MY_PV="${PV/_p3/-P3}"
+inherit eutils autotools toolchain-funcs flag-o-matic
+
+MY_PV="${PV/_p/-P}"
+MY_P="${PN}-${MY_PV}"
+
+SDB_LDAP_VER="1.1.0"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
-HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
+HOMEPAGE="http://www.isc.org/software/bind"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
+	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
+	resolvconf urandom sdb-ldap xml"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )
-	idn? ( net-dns/idnkit )"
+	idn? ( net-dns/idnkit )
+	postgres? ( virtual/postgresql-base )
+	threads? ( >=sys-libs/libcap-2.1.0 )
+	xml? ( dev-libs/libxml2 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
 	resolvconf? ( net-dns/openresolv )"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	use threads && {
-		echo
+		ewarn
 		ewarn "If you're in vserver enviroment, you're probably want to"
 		ewarn "disable threads support because of linux capabilities dependency"
-		echo
+		ewarn
 	}
 
 	ebegin "Creating named group and user"
@@ -43,9 +52,9 @@ pkg_setup() {
 	eend ${?}
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# bug 278364 (workaround)
+	epatch "${FILESDIR}/${PN}-9.6.1-parallel.patch"
 
 	# Adjusting PATHs in manpages
 	for i in bin/{named/named.8,check/named-checkconf.8,rndc/rndc.8} ; do
@@ -53,36 +62,37 @@ src_unpack() {
 			-e 's:/etc/named.conf:/etc/bind/named.conf:g' \
 			-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
 			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
-			"${i}"
+			"${i}" || die "sed failed, ${i} doesn't exist"
 	done
 
 	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
 	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
-	use dlz && use mysql && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+	use dlz && use mysql && has_version ">=dev-db/mysql-5" && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
 
 	# should be installed by bind-tools
-	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
+	sed -i -e "s:nsupdate ::g" bin/Makefile.in || die
+
+	# sdb-ldap patch as per  bug #160567
+	# Upstream URL: http://bind9-ldap.bayour.com/
+	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
 
 	# bug #220361
-	rm "${S}"/aclocal.m4 "${S}"/libtool.m4
+	rm {aclocal,libtool}.m4
 	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf
 
 	# bug #151839
-	sed -e \
+	sed -i -e \
 		's:struct isc_socket {:#undef SO_BSDCOMPAT\n\nstruct isc_socket {:' \
-		-i lib/isc/unix/socket.c
+		lib/isc/unix/socket.c || die
 
 	# remove useless c++ checks
 	epunt_cxx
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
-
-	use ssl && myconf="${myconf} --with-openssl"
-	use idn && myconf="${myconf} --with-idn"
 
 	use dlz && {
 		myconf="${myconf} --with-dlz-filesystem --with-dlz-stub"
@@ -95,7 +105,6 @@ src_compile() {
 
 	if use threads; then
 		if use dlz && use mysql; then
-			echo
 			ewarn
 			ewarn "MySQL uses thread local storage in its C api. Thus MySQL"
 			ewarn "requires that each thread of an application execute a MySQL"
@@ -130,64 +139,74 @@ src_compile() {
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
-		`use_enable ipv6` \
-		${myconf} || die "econf failed"
-
-	emake -j1 || die "failed to compile bind"
+		$(use_with ssl openssl) \
+		$(use_with idn) \
+		$(use_enable ipv6) \
+		$(use_with xml libxml2) \
+		${myconf}
 }
 
 src_install() {
-	einstall || die "failed to install bind"
+	emake DESTDIR="${D}" install || die
 
-	dodoc CHANGES COPYRIGHT FAQ README
+	dodoc CHANGES FAQ KNOWN-DEFECTS README || die
 
-	use doc && {
+	if use idn; then
+		dodoc README.idnkit || die
+	fi
+
+	if use doc; then
+		dodoc doc/arm/Bv9ARM.pdf || die
+
 		docinto misc
-		dodoc doc/misc/*
+		dodoc doc/misc/* || die
 
+		# might a 'html' useflag make sense?
 		docinto html
-		dohtml doc/arm/*
+		dohtml -r doc/arm/* || die
 
 		docinto	draft
-		dodoc doc/draft/*
+		dodoc doc/draft/* || die
 
 		docinto rfc
-		dodoc doc/rfc/*
+		dodoc doc/rfc/* || die
 
 		docinto contrib
 		dodoc contrib/named-bootconf/named-bootconf.sh \
-			contrib/nanny/nanny.pl
+			contrib/nanny/nanny.pl || die
 
 		# some handy-dandy dynamic dns examples
 		cd "${D}"/usr/share/doc/${PF}
-		tar pjxf ${DISTFILES}/dyndns-samples.tbz2
-	}
+		tar xf "${DISTDIR}"/dyndns-samples.tbz2 || die
+	fi
 
-	newenvd "${FILESDIR}"/10bind.env 10bind
+	newenvd "${FILESDIR}"/10bind.env 10bind || die
 
-	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec
 
-	insinto /etc/bind ; newins "${FILESDIR}"/named.conf-r3 named.conf
+	insinto /etc/bind
+	newins "${FILESDIR}"/named.conf-r3 named.conf || die
 
 	# ftp://ftp.rs.internic.net/domain/named.ca:
-	insinto /var/bind ; doins "${FILESDIR}"/named.ca
+	insinto /var/bind
+	doins "${FILESDIR}"/named.ca || die
 
 	insinto /var/bind/pri
-	newins "${FILESDIR}"/127.zone-r1 127.zone
-	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
+	newins "${FILESDIR}"/127.zone-r1 127.zone || die
+	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
 
-	newinitd "${FILESDIR}"/named.init-r5 named
-	newconfd "${FILESDIR}"/named.confd-r2 named
+	newinitd "${FILESDIR}"/named.init-r7 named || die
+	newconfd "${FILESDIR}"/named.confd-r3 named || die
 
-	dosym ../../var/bind/named.ca /var/bind/root.cache
-	dosym ../../var/bind/pri /etc/bind/pri
-	dosym ../../var/bind/sec /etc/bind/sec
+	dosym /var/bind/named.ca /var/bind/root.cache
+	dosym /var/bind/pri /etc/bind/pri
+	dosym /var/bind/sec /etc/bind/sec
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
-	rm -f "${D}"/usr/share/man/man1/{dig.1,host.1,nslookup.1,nsupdate.1}
-	rm -f "${D}"/usr/share/man/man8/dnssec-keygen.8
+	rm -f "${D}"/usr/share/man/man1/{dig,host,nslookup}.1*
+	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen,nsupdate}.8*
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
+	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 }
 
 pkg_postinst() {
@@ -204,40 +223,36 @@ pkg_postinst() {
 	fi
 
 	install -d -o named -g named "${ROOT}"/var/run/named \
-		"${ROOT}"/var/bind/pri "${ROOT}"/var/bind/sec
+		"${ROOT}"/var/bind/{pri,sec} "${ROOT}"/var/log/named
 	chown -R named:named "${ROOT}"/var/bind
 
-	elog "The default zone files are now installed as *.zone,"
-	elog "be careful merging config files if you have modified"
-	elog "/var/bind/pri/127 or /var/bind/pri/localhost"
-	elog
-	elog "You can edit /etc/conf.d/named to customize named settings"
-	elog
-	elog "The BIND ebuild now includes chroot support."
-	elog "If you like to run bind in chroot AND this is a new install OR"
-	elog "your bind doesn't already run in chroot, simply run:"
-	elog "\`emerge --config '=${CATEGORY}/${PF}'\`"
-	elog "Before running the above command you might want to change the chroot"
-	elog "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
-	elog
-	elog "Recently verisign added a wildcard A record to the .COM and .NET TLD"
-	elog "zones making all .com and .net domains appear to be registered"
-	elog "This causes many problems such as breaking important anti-spam checks"
-	elog "which verify source domains exist. ISC released a patch for BIND which"
-	elog "adds 'delegation-only' zones to allow admins to return the .com and .net"
-	elog "domain resolution to their normal function."
-	elog
-	elog "There is no need to create a com or net data file. Just the"
-	elog "entries to the named.conf file is enough."
-	elog
-	elog "	zone "com" IN { type delegation-only; };"
-	elog "	zone "net" IN { type delegation-only; };"
+	einfo "The default zone files are now installed as *.zone,"
+	einfo "be careful merging config files if you have modified"
+	einfo "/var/bind/pri/127 or /var/bind/pri/localhost"
+	einfo
+	einfo "You can edit /etc/conf.d/named to customize named settings"
+	einfo
+	einfo "The BIND ebuild now includes chroot support."
+	einfo "If you like to run bind in chroot AND this is a new install OR"
+	einfo "your bind doesn't already run in chroot, simply run:"
+	einfo "\`emerge --config '=${CATEGORY}/${PF}'\`"
+	einfo "Before running the above command you might want to change the chroot"
+	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
+	einfo
+	einfo "Recently verisign added a wildcard A record to the .COM and .NET TLD"
+	einfo "zones making all .com and .net domains appear to be registered"
+	einfo "This causes many problems such as breaking important anti-spam checks"
+	einfo "which verify source domains exist. ISC released a patch for BIND which"
+	einfo "adds 'delegation-only' zones to allow admins to return the .com and .net"
+	einfo "domain resolution to their normal function."
+	einfo
+	einfo "There is no need to create a com or net data file. Just the"
+	einfo "entries to the named.conf file is enough."
+	einfo
+	einfo "	zone "com" IN { type delegation-only; };"
+	einfo "	zone "net" IN { type delegation-only; };"
 
-	echo
-	ewarn "BIND >=9.2.5 makes the priority argument to MX records mandatory"
-	ewarn "when it was previously optional.  If the priority is missing, BIND"
-	ewarn "won't load the zone file at all."
-	echo
+	ewarn "NOTE: as of 'bind-9.6.1' the chroot part of the init-script got some major changes."
 }
 
 pkg_config() {
@@ -252,16 +267,17 @@ pkg_config() {
 
 	if [ ! "$EXISTS" = yes ]; then
 		einfo ; einfon "Setting up the chroot directory..."
-		mkdir -m 700 -p ${CHROOT}
-		mkdir -p ${CHROOT}/{dev,etc,var/run/named}
-		chown -R named:named ${CHROOT}/var/run/named
-		cp -R /etc/bind ${CHROOT}/etc/
+
+		mkdir -m 750 -p ${CHROOT}
+		mkdir -p ${CHROOT}/{dev,proc,etc/bind,var/{run,log}/named,var/bind}
+		chown -R named:named ${CHROOT}
+		chown root:named ${CHROOT}
+
 		cp /etc/localtime ${CHROOT}/etc/localtime
-		chown named:named ${CHROOT}/etc/bind/rndc.key
-		cp -R /var/bind ${CHROOT}/var/
-		chown -R named:named ${CHROOT}/var/
+
 		mknod ${CHROOT}/dev/zero c 1 5
 		chmod 666 ${CHROOT}/dev/zero
+
 		if use urandom; then
 			mknod ${CHROOT}/dev/urandom c 1 9
 			chmod 666 ${CHROOT}/dev/urandom
@@ -269,27 +285,16 @@ pkg_config() {
 			mknod ${CHROOT}/dev/random c 1 8
 			chmod 666 ${CHROOT}/dev/random
 		fi
-		echo "none    ${CHROOT}/proc    proc    defaults    0 0" >>/etc/fstab
-		mkdir ${CHROOT}/proc
-		mount -t proc none ${CHROOT}/proc
+
 		if [ -f '/etc/syslog-ng/syslog-ng.conf' ]; then
 			echo "source jail { unix-stream(\"${CHROOT}/dev/log\"); };" >>/etc/syslog-ng/syslog-ng.conf
 		fi
-		chown root:named ${CHROOT}
-		chmod 0750 ${CHROOT}
 
 		grep -q "^#[[:blank:]]\?CHROOT" /etc/conf.d/named ; RETVAL=$?
 		if [ $RETVAL = 0 ]; then
-			sed 's/^# \?\(CHROOT.*\)$/\1/' /etc/conf.d/named > /etc/conf.d/named.orig 2>/dev/null
-			mv --force /etc/conf.d/named.orig /etc/conf.d/named
+			sed -i 's/^# \?\(CHROOT.*\)$/\1/' /etc/conf.d/named 2>/dev/null
 		fi
-
-		sleep 1; echo " Done."; sleep 1
-		einfo
-		einfo "Add the following to your root .bashrc or .bash_profile: "
-		einfo "   alias rndc='rndc -k ${CHROOT}/etc/bind/rndc.key'"
-		einfo "Then do the following: "
-		einfo "   source /root/.bashrc or .bash_profile"
-		einfo
+	else
+		ewarn "NOTE: as of 'bind-9.6.1' the chroot part of the init-script got some major changes."
 	fi
 }

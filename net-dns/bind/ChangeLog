@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.255 2009/12/09 18:51:32 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.256 2010/01/26 18:53:53 idl0r Exp $
+
+*bind-9.6.1_p3 (26 Jan 2010)
+*bind-9.4.3_p5 (26 Jan 2010)
+
+  26 Jan 2010; Christian Ruppert <idl0r@gentoo.org> -bind-9.4.3_p3.ebuild,
+  +bind-9.4.3_p5.ebuild, -bind-9.6.1_p2.ebuild, +bind-9.6.1_p3.ebuild:
+  Version bump, bug 301548. Clean up.
 
   09 Dec 2009; Raúl Porcel <armin76@gentoo.org> bind-9.4.3_p4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #294497
