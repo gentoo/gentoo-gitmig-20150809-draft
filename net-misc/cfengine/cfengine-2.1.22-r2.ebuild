@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.22-r2.ebuild,v 1.2 2009/08/23 23:22:18 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.22-r2.ebuild,v 1.3 2010/01/26 11:00:16 robbat2 Exp $
 
 inherit eutils
 
@@ -24,6 +24,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-package-fix.patch
 	epatch "${FILESDIR}"/${PN}-2.1-package-locking-fixup.patch
+	# DB4.8 uses 'ENV' as a typedef, and it conflicts with symbols in cfengine
+	# on the same name. Change the cfengine ones.
+	epatch "${FILESDIR}"/${PN}-2.1.22-db48-namespace-fix.patch
 }
 
 src_compile() {
