@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.27 2010/01/26 15:00:41 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.28 2010/01/26 15:56:13 spatz Exp $
 
 EAPI=2
 SCM=""
@@ -174,6 +174,7 @@ src_configure() {
 	# will just ignore it.
 	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
 		[ "${i}" = "native" ] && i="host" # bug #273421
+		[[ ${i} = *-sse3 ]] && i="${i%-sse3}" # bug 283968
 		myconf="${myconf} --cpu=$i"
 		break
 	done
@@ -235,7 +236,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install Failed"
+	emake DESTDIR="${D}" install install-man || die "Install Failed"
 
 	dodoc Changelog README INSTALL
 	dodoc doc/*
