@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.444 2010/01/12 13:52:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.445 2010/01/26 18:52:04 arfrever Exp $
+
+*python-2.6.4-r1 (26 Jan 2010)
+
+  26 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.6.4-r1.ebuild:
+  Respect PYTHONDONTWRITEBYTECODE / sys.dont_write_bytecode in distutils.
+  Check availability of nis headers before building of nis module (bug #288110).
+  Use pkg-config found by AC_PATH_TOOL() to avoid problem during crosscompilation
+  (bug #299044). Don't ignore __cmp__() of metaclasses.
 
   12 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.4.6.ebuild, python-2.5.4-r3.ebuild, python-2.5.4-r4.ebuild,
