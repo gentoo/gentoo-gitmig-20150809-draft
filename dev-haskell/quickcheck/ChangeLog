@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.34 2010/01/02 12:30:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.35 2010/01/26 21:17:53 kolmodin Exp $
+
+  26 Jan 2010; <kolmodin@gentoo.org> quickcheck-1.1.0.0.ebuild:
+  Write explicit patch name in PATCHES variable.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   quickcheck-1.2.0.0.ebuild:
