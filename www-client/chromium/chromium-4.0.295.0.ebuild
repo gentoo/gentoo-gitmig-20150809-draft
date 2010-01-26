@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.295.0.ebuild,v 1.3 2010/01/24 23:40:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.295.0.ebuild,v 1.4 2010/01/26 08:02:46 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -21,7 +21,6 @@ RDEPEND="app-arch/bzip2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
-	media-fonts/corefonts
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg
 	media-libs/libpng
