@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8_p347.ebuild,v 1.3 2010/01/22 14:25:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8_p347.ebuild,v 1.4 2010/01/26 21:55:52 yngwin Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -38,8 +38,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
+	epatch "${FILESDIR}"/${P}-gconf-2.m4.patch
 	epatch "${FILESDIR}"/${P}-xulrunner-detection.patch
+	gnome2_src_prepare
 	eautoreconf
 }
 

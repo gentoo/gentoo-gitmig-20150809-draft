@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.28 2010/01/22 18:08:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.29 2010/01/26 21:55:52 yngwin Exp $
+
+  26 Jan 2010; Ben de Groot <yngwin@gentoo.org>
+  gecko-mediaplayer-0.9.8_p347.ebuild,
+  +files/gecko-mediaplayer-0.9.8_p347-gconf-2.m4.patch:
+  Add patch for configuration without gconf. Fixes bug 301932.
 
   22 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   files/gecko-mediaplayer-0.9.8_p347-xulrunner-detection.patch:
