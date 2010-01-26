@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.50.0.ebuild,v 1.6 2010/01/26 03:36:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.50.0.ebuild,v 1.7 2010/01/26 09:20:31 aballier Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ kpathsea_extraconf="--disable-shared"
 
 src_prepare() {
 	local EPATCH_EXCLUDE=""
-	has_version '>=dev-libs/poppler-0.11.3' || EPATCH_EXCLUDE="040_all_poppler-0.11.3.patch"
+	has_version '>=virtual/poppler-0.11.3' || EPATCH_EXCLUDE="040_all_poppler-0.11.3.patch"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	eautoreconf
 	elibtoolize
