@@ -1,6 +1,11 @@
 # ChangeLog for virtual/poppler-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-qt4/ChangeLog,v 1.31 2010/01/24 01:17:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-qt4/ChangeLog,v 1.32 2010/01/26 00:12:49 yngwin Exp $
+
+  26 Jan 2010; Ben de Groot <yngwin@gentoo.org> -poppler-qt4-0.10.5.ebuild,
+  -poppler-qt4-0.10.6.ebuild, -poppler-qt4-0.12.0.ebuild,
+  -poppler-qt4-0.12.1.ebuild, -poppler-qt4-0.12.3.ebuild:
+  Remove obsoleted versions
 
 *poppler-qt4-0.12.3-r1 (24 Jan 2010)
 
