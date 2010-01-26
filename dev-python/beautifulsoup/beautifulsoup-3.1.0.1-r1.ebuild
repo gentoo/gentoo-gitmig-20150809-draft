@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.2 2009/12/21 02:12:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.3 2010/01/26 18:30:10 grobian Exp $
 
 EAPI="2"
 NEED_PYTHON="3.0"
@@ -46,5 +46,5 @@ src_install() {
 	distutils_src_install
 
 	# Delete useless files.
-	rm -fr "${D}usr/bin"
+	rm -fr "${D%/}${EPREFIX}/usr/bin"
 }

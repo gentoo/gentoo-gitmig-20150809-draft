@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.28 2010/01/24 08:03:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.29 2010/01/26 18:30:10 grobian Exp $
+
+  26 Jan 2010; Fabian Groffen <grobian@gentoo.org>
+  beautifulsoup-3.0.8.ebuild, beautifulsoup-3.1.0.1-r1.ebuild:
+  Marked ~amd64-linux (bug #302290) fix for Prefix
 
   24 Jan 2010; Jeroen Roovers <jer@gentoo.org> beautifulsoup-3.0.8.ebuild:
   Stable for HPPA (bug #301955).
