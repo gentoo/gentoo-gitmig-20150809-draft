@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.5.ebuild,v 1.1 2010/01/25 17:37:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.3.5.ebuild,v 1.2 2010/01/27 03:15:09 abcd Exp $
 
 EAPI="2"
 
@@ -18,8 +18,8 @@ COMMON_DEPEND="
 	>=kde-base/qimageblitz-0.0.4
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
 	kdevplatform? ( dev-util/kdevplatform:4 )
-	phonon? ( >=media-sound/phonon-4.4_pre[xcb] )
-	qscintilla? ( x11-libs/qscintilla[qt4] )
+	phonon? ( >=media-sound/phonon-4.3.49[xcb] )
+	qscintilla? ( x11-libs/qscintilla )
 	qwt? ( x11-libs/qwt:5 )
 "
 # okular? ( kde-base/okular)  -- it can't find it anyway
