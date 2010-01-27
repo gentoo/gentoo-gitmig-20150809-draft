@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/main
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/main/ChangeLog,v 1.4 2009/12/09 19:39:33 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/main/ChangeLog,v 1.5 2010/01/27 07:55:29 graaff Exp $
+
+*main-4.2.0-r1 (27 Jan 2010)
+
+  27 Jan 2010; Hans de Graaff <graaff@gentoo.org> +main-4.2.0-r1.ebuild:
+  Convert to ruby-fakegem.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -main-2.8.4.ebuild,
   -main-4.0.0.ebuild:
