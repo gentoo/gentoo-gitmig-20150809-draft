@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5.ebuild,v 1.7 2010/01/26 16:20:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5.ebuild,v 1.8 2010/01/27 02:12:00 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -42,11 +42,6 @@ src_unpack() {
 
 src_compile() {
 	strip-flags
-
-	# Prefix compat. In Gentoo Linux, defaults to ${ROOT} (can be changed with
-	# EAPI-3). bug 301649
-	[[ -z ${EROOT} ]] && local EROOT=${ROOT}
-	append-ldflags -Wl,-R,"${EROOT}"/usr/$(get_libdir)/nspr
 
 	echo > "${T}"/test.c
 	$(tc-getCC) -c "${T}"/test.c -o "${T}"/test.o
