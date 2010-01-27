@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/qvortaro
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/ChangeLog,v 1.15 2010/01/27 11:50:51 ssuominen Exp $
+
+*qvortaro-0.4.1 (27 Jan 2010)
+
+  27 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +qvortaro-0.4.1.ebuild:
+  Initial commit wrt #299083 (committing for maintainer-needed and restoring
+  removed ebuild).
+
