@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/medusa-0.5.2.ebuild,v 1.11 2007/07/04 20:29:12 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/medusa-0.5.2.ebuild,v 1.12 2010/01/27 19:01:34 armin76 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://oedipus.sourceforge.net/medusa/"
 SRC_URI="http://www.amk.ca/files/python/${P}.tar.gz"
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~alpha ~arm x86"
 DEPEND="virtual/python"
 
 src_install () {
