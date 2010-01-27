@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0-r1.ebuild,v 1.1 2010/01/23 11:49:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0-r1.ebuild,v 1.2 2010/01/27 18:35:15 ranger Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="gtk dv quicktime sdl X yv12 v4l dga png mmx"
 
 RDEPEND="media-libs/jpeg:0
