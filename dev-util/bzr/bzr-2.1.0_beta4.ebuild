@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.1.0_beta4.ebuild,v 1.1 2010/01/10 11:26:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.1.0_beta4.ebuild,v 1.2 2010/01/27 19:16:15 armin76 Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ SRC_URI="http://launchpad.net/bzr/${SERIES}/${MY_PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="curl doc emacs +sftp test"
 
 RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/celementtree )
