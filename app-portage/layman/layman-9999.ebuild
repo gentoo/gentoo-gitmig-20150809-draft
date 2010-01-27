@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.4 2010/01/19 18:12:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.5 2010/01/27 21:58:26 sping Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
@@ -16,14 +16,18 @@ EGIT_REPO_URI="git://layman.git.sourceforge.net/gitroot/layman/layman"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="git subversion test"
+IUSE="bazaar cvs darcs git mercurial subversion test"
 
 COMMON_DEPS="dev-lang/python[xml]"
 DEPEND="${COMMON_DEPS}
 	test? ( dev-util/subversion )
 	app-text/xmlto"
 RDEPEND="${COMMON_DEPS}
+	bazaar? ( dev-util/bzr )
+	cvs? ( dev-util/cvs )
+	darcs? ( dev-util/darcs )
 	git? ( dev-util/git )
+	mercurial? ( dev-util/mercurial )
 	subversion? (
 		|| (
 			>=dev-util/subversion-1.5.4[webdav-neon]
