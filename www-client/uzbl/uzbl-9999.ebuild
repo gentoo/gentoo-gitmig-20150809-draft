@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.8 2009/12/12 10:06:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.9 2010/01/27 15:33:08 wired Exp $
 
 EAPI="2"
 
@@ -89,7 +89,7 @@ src_prepare() {
 
 	# adjust path in default config file to /usr/share
 	sed -i "s:/usr/local/share/uzbl:/usr/share/uzbl:g" \
-		examples/config/uzbl/config ||
+		examples/config/config ||
 		die "config path sed failed"
 }
 
