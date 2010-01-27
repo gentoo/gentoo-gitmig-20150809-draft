@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.14 2010/01/24 19:08:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.15 2010/01/27 18:58:04 armin76 Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -137,11 +137,6 @@ mozconfig_init() {
 		if [[ $(gcc-major-version).$(gcc-minor-version) == 3.3 ]]; then
 			append-flags -fno-strict-aliasing
 		fi
-		;;
-
-	sparc)
-		# Sparc support ...
-		replace-sparc64-flags
 		;;
 
 	x86)
