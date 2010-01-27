@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.1.2.ebuild,v 1.1 2009/11/08 21:47:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.3.0.ebuild,v 1.1 2010/01/27 10:31:37 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -17,3 +17,10 @@ IUSE="debug"
 DEPEND="dev-libs/uulib"
 
 DOCS="README.txt"
+
+src_prepare() {
+	sed -i \
+		-e 's:${KDE4WORKSPACE_SOLIDCONTROL_LIBS}:solidcontrol:' \
+		src/CMakeLists.txt || die
+	kde4-base_src_prepare
+}
