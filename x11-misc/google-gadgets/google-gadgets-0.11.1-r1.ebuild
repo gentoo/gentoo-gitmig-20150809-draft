@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.1-r1.ebuild,v 1.1 2009/11/23 14:04:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.1-r1.ebuild,v 1.2 2010/01/27 12:44:22 voyageur Exp $
 
 EAPI=2
 
@@ -83,6 +83,11 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${DISTDIR}"/${P}-gtk+-2.18.patch.bz2
+
+	# http://code.google.com/p/google-gadgets-for-linux/issues/detail?id=352
+	# recommends CXXFLAGS="-Wno-invalid-offsetof", apparently we do not
+	# need it on Gentoo
+	epatch "${FILESDIR}"/${P}-xulrunner-1.9.2.patch
 
 	sed -i -r \
 		-e '/^GGL_SYSDEPS_INCLUDE_DIR/ c\GGL_SYSDEPS_INCLUDE_DIR=$GGL_INCLUDE_DIR' \
