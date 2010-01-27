@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.5_alpha3.ebuild,v 1.1 2010/01/26 19:26:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.5_alpha3.ebuild,v 1.2 2010/01/27 04:11:34 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -47,7 +47,6 @@ DEPEND="${RDEPEND}
 	xml? ( dev-util/pkgconfig )"
 PDEPEND="doc? ( dev-db/postgresql-docs:${SLOT} )"
 
-
 pkg_setup() {
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
@@ -58,13 +57,12 @@ src_prepare() {
 		"${FILESDIR}/postgresql-${SLOT}-server.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-makefile.patch"
 
-
 	if hasq test ${FEATURES}; then
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source
 	else
 		echo "all install:" > "${S}/src/test/regress/GNUmakefile"
 	fi
-	
+
 	eautoconf
 }
 

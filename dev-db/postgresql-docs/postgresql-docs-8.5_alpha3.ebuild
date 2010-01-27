@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.5_alpha3.ebuild,v 1.1 2010/01/26 19:26:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.5_alpha3.ebuild,v 1.2 2010/01/27 04:11:12 mr_bones_ Exp $
 
 EAPI=2
 
@@ -17,7 +17,6 @@ HOMEPAGE="http://www.postgresql.org/"
 MY_PV=${PV/_/}
 SRC_URI="mirror://postgresql/source/${MY_PV}/postgresql-${MY_PV}.tar.bz2"
 S=${WORKDIR}/postgresql-${MY_PV}
-
 
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
