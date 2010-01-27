@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.83 2009/05/03 20:03:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.84 2010/01/27 20:41:27 grobian Exp $
 #
 # Maintainer: base-system@gentoo.org
 #
@@ -174,11 +174,26 @@ elibtoolize() {
 	[[ ${do_uclibc} == "yes" ]] && \
 		elt_patches="${elt_patches} uclibc-conf uclibc-ltconf"
 
-	[[ ${CHOST} == *"-freebsd"* ]] && \
-		elt_patches="${elt_patches} fbsd-conf fbsd-ltconf"
-
-	[[ ${CHOST} == *"-darwin"* ]] && \
-		elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
+	case "${CHOST}" in
+		*-aix*)
+			elt_patches="${elt_patches} hardcode aixrtl"
+		;;
+		*-darwin*)
+			elt_patches="${elt_patches} darwin-ltconf darwin-ltmain darwin-conf"
+		;;
+		*-freebsd*)
+			elt_patches="${elt_patches} fbsd-conf fbsd-ltconf"
+		;;
+		*-hpux*)
+			elt_patches="${elt_patches} hpux-conf deplibs hc-flag-ld hardcode hardcode-relink relink-prog no-lc"
+		;;
+		*-irix*)
+			elt_patches="${elt_patches} irix-ltmain"
+		;;
+		*-mint*)
+			elt_patches="${elt_patches} mint-conf"
+		;;
+	esac
 
 	for x in ${my_dirlist} ; do
 		local tmp=$(echo "${x}" | sed -e "s|${WORKDIR}||")
@@ -260,11 +275,49 @@ elibtoolize() {
 						ret=$?
 					fi
 					;;
+				"darwin-conf")
+					if [[ -e ${x}/configure && \
+					      -n $(grep '&& echo \.so ||' "${x}/configure") ]] ; then
+						ELT_walk_patches "${x}/configure" "${y}"
+						ret=$?
+					# ltmain.sh and co might be in a subdirectory ...
+					elif [[ ! -e ${x}/configure && -e ${x}/../configure && \
+					        -n $(grep '&& echo \.so ||' "${x}/../configure") ]] ; then
+						ELT_walk_patches "${x}/../configure" "${y}"
+						ret=$?
+					fi
+					;;
 				"darwin-ltconf")
 					# Newer libtoolize clears ltconfig, as not used anymore
 					if [[ -s ${x}/ltconfig ]] ; then
 						ELT_walk_patches "${x}/ltconfig" "${y}"
 						ret=$?
+					fi
+					;;
+				"darwin-ltmain")
+					# special case to avoid false positives (failing to apply
+					# ltmain.sh path message), newer libtools have this patch
+					# built in, so not much to patch around then
+					if [[ -e ${x}/ltmain.sh && \
+					      -z $(grep 'verstring="-compatibility_version' "${x}/ltmain.sh") ]] ; then
+						ELT_walk_patches "${x}/ltmain.sh" "${y}"
+						ret=$?
+					fi
+					;;
+				"aixrtl" | "hpux-conf" | "mint-conf" )
+					ret=1
+					local subret=1
+					if [[ -e ${x}/configure ]]; then
+						ELT_walk_patches "${x}/configure" "${y}"
+						subret=$?
+					# ltmain.sh and co might be in a subdirectory ...
+					elif [[ ! -e ${x}/configure && -e ${x}/../configure ]] ; then
+						ELT_walk_patches "${x}/../configure" "${y}"
+						subret=$?
+					fi
+					if [[ $subret -eq 0 ]]; then
+						# have at least one patch succeeded.
+						ret=0
 					fi
 					;;
 				"install-sh")
