@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.63 2010/01/25 18:32:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.64 2010/01/27 16:37:19 williamh Exp $
+
+  27 Jan 2010; William Hubbs <williamh@gentoo.org> -pybugz-0.7.4.ebuild:
+  removed old version
 
   25 Jan 2010; Raúl Porcel <armin76@gentoo.org> pybugz-0.8.0.ebuild:
   ia64 stable wrt #289863
