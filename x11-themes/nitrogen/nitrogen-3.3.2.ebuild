@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nitrogen/nitrogen-3.3.0.ebuild,v 1.1 2009/11/06 19:35:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nitrogen/nitrogen-3.3.2.ebuild,v 1.1 2010/01/27 14:47:29 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="de pl"
