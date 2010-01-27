@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-5.1.0.ebuild,v 1.1 2009/03/21 15:46:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-5.3.1.ebuild,v 1.1 2010/01/27 07:00:53 bicatali Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -8,8 +8,9 @@ inherit eutils versionator
 MYP="${PN}-$(replace_version_separator 2 '-')"
 
 DESCRIPTION="Library for handling World Coordinate Systems in astronomy"
-HOMEPAGE="http://www.starlink.ac.uk/~dsb/ast/ast.html"
-SRC_URI="http://www.starlink.ac.uk/~dsb/${PN}/${MYP}.tar.gz"
+HOMEPAGE="http://starlink.jach.hawaii.edu/starlink/AST"
+SRC_URI="${HOMEPAGE}?action=AttachFile&do=get&target=${MYP}.tar.gz -> ${MYP}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -22,12 +23,8 @@ S="${WORKDIR}/${MYP}"
 src_prepare() {
 	# dont patch/sed Makefile.am because it requires special upstream automake
 	# not shipped
-	epatch "${FILESDIR}"/${P}-makefile.in.patch
+	epatch "${FILESDIR}"/${PN}-5.1.0-makefile.in.patch
 }
-
-#src_configure() {
-#	PATH=".:${PATH}" econf
-#}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
