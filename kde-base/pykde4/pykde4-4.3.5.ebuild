@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.5.ebuild,v 1.1 2010/01/25 17:36:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.5.ebuild,v 1.2 2010/01/27 07:28:04 abcd Exp $
 
 EAPI="2"
 
@@ -25,6 +25,10 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!dev-python/pykde
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.3.4-typedefs.sip.patch
+)
 
 pkg_setup() {
 	python_pkg_setup
