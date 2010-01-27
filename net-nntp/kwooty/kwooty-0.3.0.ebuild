@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.3.0.ebuild,v 1.1 2010/01/27 10:31:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-0.3.0.ebuild,v 1.2 2010/01/27 17:16:01 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -13,8 +13,6 @@ LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
-
-DEPEND="dev-libs/uulib"
 
 DOCS="README.txt"
 
