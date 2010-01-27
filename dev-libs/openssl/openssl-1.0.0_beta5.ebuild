@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0_beta5.ebuild,v 1.1 2010/01/21 04:54:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0_beta5.ebuild,v 1.2 2010/01/27 00:10:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -35,23 +35,28 @@ src_unpack() {
 	#epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
 	#epatch "${FILESDIR}"/${PN}-0.9.8h-ldflags.patch #181438
 	epatch "${FILESDIR}"/${PN}-0.9.8l-binutils.patch #289130
-	sed -i -e '/DIRS/ s/ fips / /g' Makefile{,.org} \
-		|| die "Removing fips from openssl failed."
+
+	# disable fips in the build
+	# make sure the man pages are suffixed #302165
+	# don't bother building man pages if they're disabled
+	sed -i \
+		-e '/DIRS/s: fips : :g' \
+		-e '/^MANSUFFIX/s:=.*:=ssl:' \
+		-e '/^MAKEDEPPROG/s:=.*:=$(CC):' \
+		-e $(has noman FEATURES \
+			&& echo '/^install:/s:install_docs::' \
+			|| echo '/^MANDIR=/s:=.*:=/usr/share/man:') \
+		Makefile{,.org} \
+		|| die
+	# show the actual commands in the log
+	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.8 gentoo.config || die "cp cross-compile failed"
 	chmod a+rx gentoo.config
 
-	# Don't build manpages if we don't want them
-	has noman FEATURES \
-		&& sed -i '/^install:/s:install_docs::' Makefile.org \
-		|| sed -i '/^MANDIR=/s:=.*:=/usr/share/man:' Makefile.org
-
 	append-flags -fno-strict-aliasing
 	append-flags -Wa,--noexecstack
-	# show the actual commands in the log
-	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
-	sed -i '/^MAKEDEPPROG/s:=.*:=$(CC):' Makefile.org
 
 	sed -i '1s,^:$,#!/usr/bin/perl,' Configure #141906
 	./config --test-sanity || die "I AM NOT SANE"
