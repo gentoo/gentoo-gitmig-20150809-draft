@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.3.5.ebuild,v 1.1 2010/01/25 14:59:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.3.5.ebuild,v 1.2 2010/01/27 21:15:10 abcd Exp $
 
 EAPI="2"
 inherit kde4-functions
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="4.3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="aqua +handbook kdeprefix +semantic-desktop"
+IUSE="aqua +handbook kdeprefix semantic-desktop"
 
 RDEPEND="
 	$(add_kdebase_dep drkonqi)
