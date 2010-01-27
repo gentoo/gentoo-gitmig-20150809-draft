@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmobar
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.6 2009/12/15 21:41:37 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.7 2010/01/27 19:13:26 kolmodin Exp $
+
+  27 Jan 2010; <kolmodin@gentoo.org> xmobar-0.9.2-r1.ebuild:
+  Use explicit patch name in PATHCHES. Reported in bug #302225.
 
   15 Dec 2009; <kolmodin@gentoo.org> xmobar-0.9.2-r1.ebuild:
   Fix mixup with DEPEND / RDEPEND flags.
