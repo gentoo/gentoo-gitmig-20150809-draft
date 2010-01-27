@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.242 2010/01/19 13:45:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.243 2010/01/27 15:14:38 chainsaw Exp $
+
+*asterisk-1.6.1.13 (27 Jan 2010)
+
+  27 Jan 2010; <chainsaw@gentoo.org> +asterisk-1.6.1.13.ebuild:
+  Last version bump in the 1.6.1 branch for jkroon. Please prepare for 1.6.2
+  if you haven't already, the 1.6.1 ebuilds are to disappear from portage
+  soon.
 
 *asterisk-1.6.2.1 (19 Jan 2010)
 
