@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.16.ebuild,v 1.2 2009/12/28 01:37:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.16.ebuild,v 1.3 2010/01/27 04:51:32 robbat2 Exp $
 
 inherit autotools python
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="crypt snmp perl tcl python"
 S="${WORKDIR}/${MY_P}"
+RESTRICT='test'
 
 RDEPEND="dev-libs/glib
 	sys-libs/gdbm
