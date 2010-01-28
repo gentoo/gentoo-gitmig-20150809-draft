@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.436 2010/01/05 18:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.437 2010/01/28 21:42:13 jer Exp $
+
+  28 Jan 2010; Jeroen Roovers <jer@gentoo.org> opera-10.20_pre4744.ebuild:
+  Do not run the md5check in install.sh since we already check the entire
+  tarball ourselves. Do not advise not to worry about it either.
 
   05 Jan 2010; Jeroen Roovers <jer@gentoo.org> opera-10.50_pre6177.ebuild:
   LINGUAS=en should not be optional (bug #299444).

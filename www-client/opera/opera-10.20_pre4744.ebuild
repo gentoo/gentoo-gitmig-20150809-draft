@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.4 2010/01/02 16:54:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.5 2010/01/28 21:42:13 jer Exp $
 
 EAPI="2"
 
@@ -139,11 +139,12 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-10.00-pluginpath.patch"
 	fi
 
-	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
-		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
-		-e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
-		-e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
-		install.sh || die "sed failed"
+	sed -e "s|config_dir=\"/etc\"|config_dir=\"${D}/etc/\"|g" \
+		-e "s|\(str_localdirplugin=\).*$|\1/opt/opera/lib/opera/plugins|" \
+		-e 's|#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\)|\1|' \
+		-e 's|#\(OPERA_FORCE_JAVA_ENABLED=\)|\1|' \
+		-e 's|md5sum|:|g' \
+		-i install.sh || die "sed failed"
 }
 
 # These workarounds are sadly needed because gnome2.eclass doesn't check
@@ -158,8 +159,7 @@ src_install() {
 	# Opera's native installer.
 	./install.sh --prefix="${D}"/opt/opera || die "install.sh failed"
 
-	einfo "It is safe to ignore warnings about failed checksums"
-	einfo "and about files that would be ignored ..."
+	einfo "It is safe to ignore warnings about files that would be ignored."
 	einfo "Completing the installation where install.sh abandoned us ..."
 
 	# java workaround
