@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10-r1.ebuild,v 1.1 2010/01/28 21:46:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10-r1.ebuild,v 1.2 2010/01/28 21:52:44 jer Exp $
 
 EAPI="2"
 
@@ -138,7 +138,7 @@ src_prepare() {
 		-e "s|\(str_localdirplugin=\).*$|\1/opt/opera/lib/opera/plugins|" \
 		-e 's|#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\)|\1|' \
 		-e 's|#\(OPERA_FORCE_JAVA_ENABLED=\)|\1|' \
-		-e 's|md5sum|:|g' \
+		-e '/md5check Manifest.md5/d' \
 		-i install.sh || die "sed failed"
 }
 
