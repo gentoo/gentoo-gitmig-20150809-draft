@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/abcde
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.42 2009/07/25 15:34:22 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.43 2010/01/28 15:05:26 beandog Exp $
+
+*abcde-2.3.99.7_p235-r3 (28 Jan 2010)
+
+  28 Jan 2010; Steve Dibb <beandog@gentoo.org> +files/m4a-tagging.patch,
+  -abcde-2.3.99.7_p235-r2.ebuild, +abcde-2.3.99.7_p235-r3.ebuild:
+  Fix m4a tagging, bug 292315
 
   25 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   abcde-2.3.99.7_p235.ebuild, abcde-2.3.99.7_p235-r2.ebuild:

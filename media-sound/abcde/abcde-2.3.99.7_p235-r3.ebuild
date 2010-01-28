@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.99.7_p235-r2.ebuild,v 1.3 2009/07/25 15:34:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.99.7_p235-r3.ebuild,v 1.1 2010/01/28 15:05:26 beandog Exp $
+
+inherit eutils
 
 DESCRIPTION="A Better CD Encoder"
 HOMEPAGE="http://code.google.com/p/abcde/"
@@ -34,6 +36,8 @@ RDEPEND="
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# bug 292315
+	epatch "${FILESDIR}"/m4a-tagging.patch
 	sed -i 's:/etc/abcde.conf:/etc/abcde/abcde.conf:g' abcde
 	sed -i 's:/etc:/etc/abcde/:g' Makefile
 }
