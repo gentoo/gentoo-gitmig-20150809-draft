@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Annotate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/ChangeLog,v 1.15 2010/01/09 16:21:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/ChangeLog,v 1.16 2010/01/28 17:36:40 tove Exp $
+
+  28 Jan 2010; Torsten Veller <tove@gentoo.org>
+  Algorithm-Annotate-0.10.ebuild:
+  Fix LICENSE: same terms as perl (#301969)
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Algorithm-Annotate-0.10.ebuild:
