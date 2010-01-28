@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.76 2010/01/10 18:36:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.77 2010/01/28 15:22:20 fauli Exp $
+
+  28 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-x-0.10.25.ebuild:
+  mark ~x86-freebsd
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-x-0.10.25.ebuild:
