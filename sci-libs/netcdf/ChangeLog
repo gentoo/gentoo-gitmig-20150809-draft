@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/netcdf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.63 2009/12/07 17:53:00 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.64 2010/01/28 22:19:50 bicatali Exp $
+
+*netcdf-4.0.1-r1 (28 Jan 2010)
+
+  28 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -netcdf-4.0.1.ebuild,
+  +netcdf-4.0.1-r1.ebuild, +files/netcdf-4.0.1-cfortran.patch,
+  +files/netcdf-4.0.1-pkgconfig.patch:
+  Fixed for mpi, now uses exclusively system cfortran, and cleaned the
+  pkg-config files. Thanks Xarthisius for his help.
 
   07 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -files/netcdf-3.6.2-as-needed.patch, -files/netcdf-3.6.2-gcc43.patch,
