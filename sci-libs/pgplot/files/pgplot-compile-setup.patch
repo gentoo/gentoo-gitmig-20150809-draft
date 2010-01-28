@@ -77,9 +77,9 @@
  # How to create a shared library from a trailing list of object files.
   
 -   SHARED_LD="gcc -shared  -o $SHARED_LIB"
-+   SHARED_LD_PGPLOT_OPTS="-o $SHARED_LIB -Wl,-soname,$SHARED_LIB $LDFLAGS"
++   SHARED_LD_PGPLOT_OPTS="$LDFLAGS -Wl,-soname,$SHARED_LIB"
 +
-+   SHARED_LD_CPGPLOT_OPTS="-o $SHARED_CLIB -Wl,-soname,$SHARED_CLIB -L. -lpgplot $LDFLAGS"
++   SHARED_LD_CPGPLOT_OPTS="$LDFLAGS -Wl,-soname,$SHARED_CLIB"
 +  
 +   SHARED_LD="$FCOMPL -shared"
  

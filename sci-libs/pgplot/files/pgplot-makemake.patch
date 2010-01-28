@@ -1,5 +1,5 @@
---- makemake.orig	2008-11-07 12:53:03.000000000 +0000
-+++ makemake	2008-11-07 12:52:33.000000000 +0000
+--- makemake.orig	2010-01-28 18:57:25.000000000 +0000
++++ makemake	2010-01-28 18:59:06.000000000 +0000
 @@ -73,7 +73,7 @@
  
  # List the default make targets.
@@ -81,7 +81,7 @@
 +	$(GR_ROUTINES) $(DISPATCH_ROUTINE) $(DRIVERS) $(SYSTEM_ROUTINES)
 +	$(SHARED_LD) $(SHARED_LD_PGPLOT_OPTS) `ls $(PG_ROUTINES) \
 +	$(PG_NON_STANDARD) $(GR_ROUTINES) $(DISPATCH_ROUTINE) \
-+	$(DRIVERS) $(SYSTEM_ROUTINES) | sort | uniq` $(SHARED_LIB_LIBS)
++	$(DRIVERS) $(SYSTEM_ROUTINES) | sort | uniq` -o $(SHARED_LIB) $(SHARED_LIB_LIBS)
 +	ln -s $(SHARED_LIB) libpgplot.so
  EOD
  
@@ -134,7 +134,7 @@
 +	./pgbind $(PGBIND_FLAGS) -w $(PG_SOURCE)
 +	$(CCOMPL) -c $(CFLAGC) cpg*.c
 +	rm -f cpg*.c
-+	$(SHARED_LD) $(SHARED_LD_CPGPLOT_OPTS) cpg*.o -lpgplot  $(SHARED_LIB_LIBS)
++	$(SHARED_LD) $(SHARED_LD_CPGPLOT_OPTS) cpg*.o -o $(SHARED_CLIB) -L. -lpgplot $(SHARED_LIB_LIBS)
 +	ln -s $(SHARED_CLIB) libcpgplot.so
 +	rm -f cpg*.o
 +
