@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.7.999.ebuild,v 1.1 2010/01/28 14:51:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.7.999.ebuild,v 1.2 2010/01/28 15:31:10 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome"
+IUSE="gnome test"
 
 RDEPEND="
 	>=net-misc/networkmanager-${PV}
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_configure() {
-	ECONF="--disable-more-warnings \
+	ECONF="--disable-more-warnings
+		$(use_with test tests)
 		$(use_with gnome)"
 
 	econf ${ECONF}
