@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.156 2010/01/27 02:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.157 2010/01/28 06:21:12 vapier Exp $
+
+  28 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  files/man-1.6f-parallel-build.patch:
+  Fix building with all linguas #302423 by Ooblick.
 
 *man-1.6f-r4 (27 Jan 2010)
 

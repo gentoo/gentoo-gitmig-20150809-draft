@@ -62,7 +62,7 @@ avoid:
 -		cd $$i; SLANG=/$$i; if test $$SLANG = /en; then SLANG= ; fi; \
 -		export SLANG; make -f ../Makefile install; cd ..; \
 -		else echo "==== No $$i man pages found. ===="; fi; done
-+MAN_LANGS = @languages@
++MAN_LANGS = $(wildcard @languages@)
 +subdirs: $(MAN_LANGS:=_lang_subdir)
 +%_lang_subdir:
 +	@echo "==== Making the `cat $(@:_lang_subdir=).txt` man pages. ===="
