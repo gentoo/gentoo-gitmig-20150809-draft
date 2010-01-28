@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.3.ebuild,v 1.9 2010/01/11 04:19:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.6.ebuild,v 1.1 2010/01/28 17:59:05 pva Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="http://www.wireshark.org/download/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns ares gtk ipv6 lua portaudio gnutls gcrypt geoip zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND=">=dev-libs/glib-2.4.0:2
@@ -87,7 +87,7 @@ src_configure() {
 	# our hardened toolchain bug
 	filter-flags -fstack-protector
 
-	# profile and pie are incompatible #292991
+	# profile and pie are incompatible #215806, #292991
 	if use profile; then
 		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
 		append-flags $(test-flags-CC -nopie)
