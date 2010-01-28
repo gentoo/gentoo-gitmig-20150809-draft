@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/abstract
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.1 2010/01/28 23:44:56 flameeyes Exp $
+
+*abstract-1.0.0 (28 Jan 2010)
+
+  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +abstract-1.0.0.ebuild, +metadata.xml:
+  Initial import of abstract, not to be confused with the copy previously in
+  the Ruby overlay, based on the old eclasses.
+
