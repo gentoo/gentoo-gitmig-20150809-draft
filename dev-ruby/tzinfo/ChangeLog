@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.47 2010/01/11 11:42:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.48 2010/01/28 01:33:21 flameeyes Exp $
+
+  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -tzinfo-0.3.15-r1.ebuild:
+  Remove old version.
 
   11 Jan 2010; Fabian Groffen <grobian@gentoo.org> tzinfo-0.3.16.ebuild:
   Marked ~x64-solaris
