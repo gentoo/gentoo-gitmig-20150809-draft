@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5218 2010/01/28 04:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5219 2010/01/28 20:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2982,6 +2982,8 @@ sec-policy/selinux-base-policy:open_perms - Enable the open permissions for file
 sec-policy/selinux-base-policy:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
 sys-apps/acl:nfs -  add support for NFS acls 
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
+sys-apps/flashrom:ftdi - Enable flashing through FTDI/SPI USB interface
+sys-apps/flashrom:serprog - Enable Serial Flasher support
 sys-apps/gawk:libsigsegv - Support segfault recovery/debugging
 sys-apps/gnome-disk-utility:nautilus - enable gnome-base/nautilus extension.
 sys-apps/hal:acpi - Enables HAL to attempt to read from /proc/acpi/event, if unavailable, HAL will read events from sys-power/acpid. If you need multiple acpi readers, ensure acpid is in your default runlevel (rc-update add acpid default) along with HAL. This will also enable HAL to read Toshiba and IBM acpi events which do not get sent via /proc/acpi/event
