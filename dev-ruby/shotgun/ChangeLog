@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/shotgun
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/ChangeLog,v 1.1 2010/01/25 18:55:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/ChangeLog,v 1.2 2010/01/28 16:27:38 flameeyes Exp $
+
+*shotgun-0.6 (28 Jan 2010)
+
+  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> -shotgun-0.5.ebuild,
+  -files/shotgun-0.5-optional-launchy.patch, +shotgun-0.6.ebuild:
+  Version bump, remove now-obsoleted patch. Now use gem for packaging. Add
+  ~x86 as it's tested in a development guest.
 
 *shotgun-0.5 (25 Jan 2010)
 
