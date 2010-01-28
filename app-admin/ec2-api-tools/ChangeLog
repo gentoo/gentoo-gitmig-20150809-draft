@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/ec2-api-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.3 2009/09/27 12:36:32 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.4 2010/01/28 13:34:26 flameeyes Exp $
+
+*ec2-api-tools-1.3.46266 (28 Jan 2010)
+
+  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ec2-api-tools-1.3.46266.ebuild:
+  Version bump, also don't use version for the install path and don't use
+  symlinks to /usr/bin. This means that you won't need to re-source the
+  profile at each upgrade, but just after the first install. And it won't
+  pollute your inode space.
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org>
   ec2-api-tools-1.3.36506.ebuild:
