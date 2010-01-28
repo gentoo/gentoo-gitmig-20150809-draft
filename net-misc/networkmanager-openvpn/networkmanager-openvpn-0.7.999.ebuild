@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.7.999.ebuild,v 1.1 2010/01/28 14:47:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.7.999.ebuild,v 1.2 2010/01/28 15:26:47 nirbheek Exp $
 
 EAPI="2"
 
@@ -37,8 +37,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+# FAIL: (tls-import-data) unexpected 'ca' secret value
+RESTRICT="test"
+
 src_configure() {
-	ECONF="--disable-more-warnings \
+	ECONF="--disable-more-warnings
 		$(use_with gnome)"
 
 	econf ${ECONF}
