@@ -1,0 +1,20 @@
+Index: matchy-0.4.2/test/test_operator_expectations.rb
+===================================================================
+--- matchy-0.4.2.orig/test/test_operator_expectations.rb
++++ matchy-0.4.2/test/test_operator_expectations.rb
+@@ -156,12 +156,13 @@ class TestOperatorExpectations < Test::U
+   end
+   
+   def test_fail_message_for_hash
+-    obj = Matchy::Expectations::OperatorExpectation.new({:foo => 'bar', :baz => 'quux'}, true)
++    hash = {:foo => 'bar', :baz => 'quux'}
++    obj = Matchy::Expectations::OperatorExpectation.new(hash, true)
+     
+     def obj.flunk(msg)
+       msg
+     end
+     
+-    (obj == {:foo => 'bar'}).should == "Expected {:baz=>\"quux\", :foo=>\"bar\"} to == {:foo=>\"bar\"} (diff: {:baz=>\"quux\"})."
++    (obj == {:foo => 'bar'}).should == "Expected #{hash.inspect} to == {:foo=>\"bar\"} (diff: {:baz=>\"quux\"})."
+   end
+ end
