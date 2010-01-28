@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.66 2008/09/10 13:52:58 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.67 2010/01/28 11:48:07 patrick Exp $
+
+*gnunet-0.8.1 (28 Jan 2010)
+
+  28 Jan 2010; Patrick Lauer <patrick@gentoo.org> +gnunet-0.8.1.ebuild:
+  Bump for #300533
 
   10 Sep 2008; Raúl Porcel <armin76@gentoo.org> gnunet-0.7.3-r1.ebuild,
   gnunet-0.8.0.ebuild:
