@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/kreversi-4.3.5.ebuild,v 1.2 2010/01/28 13:59:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/kreversi-4.3.5.ebuild,v 1.3 2010/01/28 19:46:29 abcd Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ src_install() {
 	kde4-meta_src_install
 	# and also we have to prepare the ggz dir
 	insinto /usr/share/ggz/modules
-	doins ${PN}/module.dsc ${P}.dsc
+	newins ${PN}/module.dsc ${P}.dsc
 }
 
 pkg_postinst() {
