@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.59 2010/01/23 20:58:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.60 2010/01/28 15:18:08 fauli Exp $
+
+  28 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libXv-1.0.5.ebuild:
+  mark ~x86-freebsd
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -libXv-1.0.4.ebuild:
   rm
