@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.7 2010/01/11 12:21:57 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.8 2010/01/28 01:21:39 flameeyes Exp $
+
+*crack-0.1.5 (28 Jan 2010)
+
+  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> +crack-0.1.5.ebuild:
+  Version bump, introduce tests and enable for jruby.
 
 *crack-0.1.4-r1 (11 Jan 2010)
 
