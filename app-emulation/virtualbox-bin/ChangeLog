@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.71 2010/01/28 11:57:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.72 2010/01/28 13:11:47 patrick Exp $
+
+*virtualbox-bin-3.1.2 (28 Jan 2010)
+
+  28 Jan 2010; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-bin-3.1.2.ebuild, files/vboxwebsrv-initd:
+  Bump to 3.1.2
 
   28 Jan 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Taking over maintenance from Jokey
