@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.4 2009/12/07 23:28:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.5 2010/01/28 00:32:05 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -86,7 +86,7 @@ src_compile() {
 src_test() {
 	cd "${S}"/tools/clang || die "cd clang failed"
 
-	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	if ! emake -j1 VERBOSE=1 test; then
 		hasq test $FEATURES && die "Make test failed. See above for details."
 		hasq test $FEATURES || eerror "Make test failed. See above for details."
