@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.295.0.ebuild,v 1.5 2010/01/26 10:11:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.295.0.ebuild,v 1.6 2010/01/28 10:26:04 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -36,7 +36,8 @@ RDEPEND="app-arch/bzip2
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
-	>=dev-util/pkgconfig-0.23"
+	>=dev-util/pkgconfig-0.23
+	sys-devel/flex"
 
 src_prepare() {
 	# Gentoo uses .kde4, not .kde
