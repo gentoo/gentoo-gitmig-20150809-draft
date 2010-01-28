@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/bundler
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.1 2010/01/28 00:50:48 flameeyes Exp $
+
+*bundler-0.8.1 (28 Jan 2010)
+
+  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +bundler-0.8.1.ebuild, +metadata.xml:
+  Initial import of bundler, that might not be too nice for us but it's
+  still a decent tool for developers.
+
