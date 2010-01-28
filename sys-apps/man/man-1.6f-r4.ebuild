@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r4.ebuild,v 1.1 2010/01/27 02:35:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r4.ebuild,v 1.2 2010/01/28 06:20:37 vapier Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -45,6 +45,7 @@ src_prepare() {
 	sed -i -e '/^DEFAULTLESSOPT=/s:"$:R":' configure
 }
 
+echoit() { echo "$@" ; "$@" ; }
 src_configure() {
 	strip-linguas $(eval $(grep ^LANGUAGES= configure) ; echo ${LANGUAGES//,/ })
 
@@ -62,12 +63,13 @@ src_configure() {
 	else
 		mylang="none"
 	fi
-	if use lzma; then
-		mycompress=/usr/bin/lzma
+	export COMPRESS
+	if use lzma ; then
+		COMPRESS=/usr/bin/xz
 	else
-		mycompress=/bin/bzip2
+		COMPRESS=/bin/bzip2
 	fi
-	COMPRESS=$mycompress \
+	echoit \
 	./configure \
 		-confdir=/etc \
 		+sgid +fhs \
