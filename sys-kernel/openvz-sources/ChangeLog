@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.124 2010/01/09 10:58:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.125 2010/01/28 18:56:11 pva Exp $
+
+*openvz-sources-2.6.18.028.067.4 (28 Jan 2010)
+
+  28 Jan 2010; Peter Volkov <pva@gentoo.org>
+  -files/openvz-sources-2.6.18.028.064.7-cifs-buildfix.patch,
+  -files/openvz-sources-2.6.18.028.064.7-syscall.patch,
+  -openvz-sources-2.6.18.028.064.8.ebuild,
+  +openvz-sources-2.6.18.028.067.4.ebuild, openvz-sources-2.6.27.3.1.ebuild:
+  Version bump. Dropped old. amd64/x86 stable, bug #198632.
 
 *openvz-sources-2.6.27.3.1 (09 Jan 2010)
 
