@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Array-RefElem
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-RefElem/ChangeLog,v 1.11 2007/01/14 22:22:01 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-RefElem/ChangeLog,v 1.12 2010/01/28 18:47:49 tove Exp $
+
+  28 Jan 2010; Torsten Veller <tove@gentoo.org> Array-RefElem-1.00.ebuild:
+  Fix LICENSE: same terms as perl (#301969)
 
   14 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Array-RefElem-1.00.ebuild:
