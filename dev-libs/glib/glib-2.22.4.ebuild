@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.5.ebuild,v 1.10 2009/10/26 18:04:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.22.4.ebuild,v 1.1 2010/01/28 23:54:51 eva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug doc fam hardened selinux xattr"
 
 RDEPEND="virtual/libiconv
@@ -46,6 +46,10 @@ src_prepare() {
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
+
+	# Do not try to remove files on live filesystem, bug #XXX ?
+	sed 's:^\(.*"/desktop-app-info/delete".*\):/*\1*/:' \
+		-i "${S}"/gio/tests/desktop-app-info.c || die "sed failed"
 
 	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
@@ -88,5 +92,6 @@ src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	export XDG_CONFIG_DIRS=/etc/xdg
 	export XDG_DATA_DIRS=/usr/local/share:/usr/share
+	export XDG_DATA_HOME="${T}"
 	emake check || die "tests failed"
 }
