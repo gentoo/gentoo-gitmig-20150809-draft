@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.2.ebuild,v 1.1 2009/11/25 21:12:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.2.ebuild,v 1.2 2010/01/28 13:42:58 ssuominen Exp $
 
 EAPI="2"
 
@@ -26,7 +26,8 @@ DEPEND="media-video/dvdauthor
 	media-video/mjpegtools
 	|| ( app-cdr/cdrkit app-cdr/cdrtools )
 	media-libs/xine-lib
-	x11-libs/qt-gui:4"
+	x11-libs/qt-gui:4
+	x11-libs/qt-webkit:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
