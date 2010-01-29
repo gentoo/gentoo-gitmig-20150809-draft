@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.522 2010/01/19 22:12:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.523 2010/01/29 21:14:45 zzam Exp $
+
+*udev-151 (29 Jan 2010)
+
+  29 Jan 2010; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-151-readd-hd-rules.diff, +files/151/shell-compat-KV.sh,
+  +files/151/shell-compat-addon.sh, +files/151/udev.confd,
+  +files/151/udev.initd, +files/151/udev-dev-tarball.initd,
+  +files/151/udev-mount.initd, +files/151/udev-postmount.initd,
+  +udev-151.ebuild, +files/151/udev-start.sh, +files/151/udev-stop.sh,
+  metadata.xml:
+  Version bumped. Fix selinux, Bug #297317. Add use-flag old-hd-rules to
+  control re-adding of rules for /dev/hd*, Bug #300627.
 
 *udev-150 (19 Jan 2010)
 

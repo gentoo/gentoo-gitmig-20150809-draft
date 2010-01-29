@@ -8,5 +8,6 @@
 <use>
   <flag name="devfs-compat">Install rules for devfs compatible device names</flag>
   <flag name="extras">Compile udev-extras requiring external dependencies</flag>
+  <flag name="old-hd-rules">Install rules for /dev/hd* devices, removed upstream at udev-148</flag>
 </use>
 </pkgmetadata>
