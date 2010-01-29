@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.2.ebuild,v 1.4 2007/07/11 05:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.2.ebuild,v 1.5 2010/01/29 18:40:27 armin76 Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/ruby"
