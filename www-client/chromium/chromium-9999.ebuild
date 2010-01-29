@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.21 2010/01/28 10:26:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.22 2010/01/29 09:48:40 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -28,6 +28,7 @@ RDEPEND="app-arch/bzip2
 	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
+	x11-libs/libXScrnSaver
 	x11-misc/xdg-utils
 	|| (
 		x11-themes/gnome-icon-theme
@@ -98,7 +99,7 @@ src_prepare() {
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \
-		-i third_party/{,WebKit/WebCore/platform/image-decoders}/zlib/zconf.h \
+		-i third_party/zlib/zconf.h \
 		|| die "zlib sed failed"
 }
 
