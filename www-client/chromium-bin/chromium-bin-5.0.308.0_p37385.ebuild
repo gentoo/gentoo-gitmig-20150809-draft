@@ -1,15 +1,21 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.31 2010/01/29 10:03:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.308.0_p37385.ebuild,v 1.1 2010/01/29 10:03:20 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
 
+# Latest revision id can be found at
+# http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST
+MY_PV="${PV/[0-9.]*\_p}"
+
 DESCRIPTION="Open-source version of Google Chrome web browser (binary version)"
 HOMEPAGE="http://code.google.com/chromium/"
+SRC_URI="x86? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/${MY_PV}/chrome-linux.zip -> ${PN}-x86-${MY_PV}.zip )
+	amd64? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux-64/${MY_PV}/chrome-linux.zip -> ${PN}-amd64-${MY_PV}.zip )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
@@ -44,17 +50,6 @@ pkg_setup() {
 	if [[ ${ROOT} == "/" ]] && ! grep -q sse2 /proc/cpuinfo; then
 		die "This binary requires SSE2 support, it will not work on older processors"
 	fi
-}
-
-src_unpack() {
-	if use amd64; then
-		arch_path="-64"
-	fi
-	LV=`curl --silent http://build.chromium.org/buildbot/snapshots/chromium-rel-linux${arch_path}/LATEST`
-	elog "Installing/updating to version ${LV}"
-	wget -c "http://build.chromium.org/buildbot/snapshots/chromium-rel-linux${arch_path}/${LV}/chrome-linux.zip" -O "${T}"/${PN}-${LV}.zip
-	unzip -qo "${T}"/${PN}-${LV}.zip || die "Unpack failed"
-	chmod -fR a+rX,u+w,g-w,o-w chrome-linux/ || die "chmod failed"
 }
 
 src_install() {
