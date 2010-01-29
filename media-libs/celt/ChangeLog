@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/celt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.7 2009/12/08 00:41:32 tgurr Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.8 2010/01/29 17:51:07 tgurr Exp $
+
+*celt-0.7.1 (29 Jan 2010)
+
+  29 Jan 2010; Timo Gurr <tgurr@gentoo.org> -celt-0.7.0-r2.ebuild,
+  +celt-0.7.1.ebuild:
+  Version bump, remove old. Bit-stream compatible with previous version this
+  time.
 
 *celt-0.7.0-r2 (08 Dec 2009)
 

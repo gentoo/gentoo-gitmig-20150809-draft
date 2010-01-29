@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.7.0-r2.ebuild,v 1.1 2009/12/08 00:41:32 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.7.1.ebuild,v 1.1 2010/01/29 17:51:07 tgurr Exp $
 
 EAPI="2"
 
