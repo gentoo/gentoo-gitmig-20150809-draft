@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ruby-odbc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.13 2009/08/24 19:45:06 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.14 2010/01/29 12:49:21 flameeyes Exp $
+
+*ruby-odbc-0.9998 (29 Jan 2010)
+
+  29 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-odbc-0.9998.ebuild:
+  Version bump, port to ruby-fakegem, drop unicode USE flag and instead
+  always build both ascii and utf8 extensions as they are neither exclusive
+  nor optional.
 
 *ruby-odbc-0.9997 (24 Aug 2009)
 
