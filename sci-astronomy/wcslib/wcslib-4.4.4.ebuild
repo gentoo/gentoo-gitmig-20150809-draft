@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.4.2.ebuild,v 1.1 2009/08/17 19:55:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.4.4.ebuild,v 1.1 2010/01/29 03:04:27 bicatali Exp $
 
 EAPI=2
-inherit eutils versionator virtualx flag-o-matic
+inherit eutils virtualx flag-o-matic
 
 DESCRIPTION="Astronomical World Coordinate System transformations library"
 HOMEPAGE="http://www.atnf.csiro.au/people/mcalabre/WCS/"
@@ -21,15 +21,9 @@ DEPEND="${RDEPEND}
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )"
 
-WCSV=$(get_version_component_range 1-2)
-S="${WORKDIR}/${PN}-${WCSV}"
-
 src_prepare() {
-	sed -i \
-		-e 's/$(SHRLD)/$(SHRLD) $(LDFLAGS)/' \
-		C/GNUmakefile || die
-	epatch "${FILESDIR}"/${P}-flibs.patch
-	epatch "${FILESDIR}"/${P}-destdir.patch
+	epatch "${FILESDIR}"/${PN}-4.4.2-flibs.patch
+	epatch "${FILESDIR}"/${PN}-4.4.4-destdir.patch
 	append-flags -U_FORTIFY_SOURCE
 }
 
