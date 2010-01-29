@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.154 2010/01/27 07:05:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.155 2010/01/29 04:48:10 jer Exp $
+
+  29 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  +files/rxvt-unicode-9.05_no-MOTIF-WM-INFO.patch:
+  Reinstate erroneously removed patch thanks to toomore_such (bug #302566).
 
   27 Jan 2010; Jeroen Roovers <jer@gentoo.org> -rxvt-unicode-9.05-r3.ebuild,
   -files/rxvt-unicode-9.05_no-MOTIF-WM-INFO.patch,
