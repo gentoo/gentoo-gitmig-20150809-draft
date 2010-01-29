@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.668 2010/01/26 16:16:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.669 2010/01/29 21:28:32 zmedico Exp $
+
+*portage-2.2_rc62 (29 Jan 2010)
+
+  29 Jan 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc62.ebuild:
+  2.2_rc62 bump. This includes all fixes in 2.1.7.17.
+
+*portage-2.1.7.17 (29 Jan 2010)
+
+  29 Jan 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.17.ebuild:
+  2.1.7.17 bump. This fixes bug #269225 (repoman check for virtual HOMEPAGE
+  and LICENSE), bug #296700 (EAPI 3 support), bug #298310 (AttributeError
+  when generating manifest on selinux systems), bug #299248 (fix doins to
+  fail in more cases), bug #300378 (don't export FILESDIR during depend
+  phase), bug #300388 (handle TERM=dumb), bug #300744 (make quickpkg exclude
+  CONTENTS from xpak), bug #301926 (ValueError triggered by corrupt manifest),
+  and bug #302005 (remove broken __main__ code from sets module). Bug #302803
+  tracks all bugs fixed since portage-2.1.7.16. Note that this is the first
+  release with support for EAPI 3.
 
   26 Jan 2010; Jeremy Olexa <darkside@gentoo.org> portage-2.1.7.16.ebuild:
   amd64 stable, bug 302001
