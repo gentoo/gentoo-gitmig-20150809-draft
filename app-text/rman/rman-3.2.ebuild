@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/rman-3.2.ebuild,v 1.18 2010/01/02 11:37:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/rman-3.2.ebuild,v 1.19 2010/01/29 09:50:57 pva Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="PolyGlotMan man page translator AKA RosettaMan"
-HOMEPAGE="http://polyglotman.sourceforge.net/"
+HOMEPAGE="http://sourceforge.net/projects/polyglotman/"
 SRC_URI="mirror://sourceforge/polyglotman/${P}.tar.gz"
 
 LICENSE="Artistic"
