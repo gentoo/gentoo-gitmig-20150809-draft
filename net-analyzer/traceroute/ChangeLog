@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.72 2010/01/16 14:50:35 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.73 2010/01/29 18:37:27 armin76 Exp $
+
+  29 Jan 2010; Raúl Porcel <armin76@gentoo.org> traceroute-2.0.12.ebuild:
+  alpha/arm/ia64/m68k/s390/sh stable wrt #299971
 
   16 Jan 2010; Dawid Węgliński <cla@gentoo.org> traceroute-2.0.12.ebuild:
   Stable on amd64 (bug #299971)
