@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opengl-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.1 2010/01/24 18:58:57 grobian Exp $
+# $Id: ChangeLog,v 1.2 2010/01/29 21:18:46 grobian Exp $
+
+  29 Jan 2010; Fabian Groffen <grobian@gentoo.org> opengl-apple-3.ebuild:
+  Bump to EAPI=3, fix eselect-opengl dependency got 'fixed' previously
 
 *opengl-apple-3 (24 Jan 2010)
 
