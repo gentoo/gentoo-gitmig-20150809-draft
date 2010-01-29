@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/python-updater
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.43 2009/10/17 19:22:40 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.44 2010/01/29 17:17:00 arfrever Exp $
+
+*python-updater-0.8 (29 Jan 2010)
+
+  29 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-updater-0.8.ebuild:
+  Version bump. Fixed bugs: #281692, #283284, #289253.
 
   17 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-updater-0.7.ebuild:
