@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.13 2010/01/26 18:36:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.14 2010/01/29 18:23:16 dertobi123 Exp $
+
+  29 Jan 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  pnp4nagios-0.6.2.ebuild:
+  Require php built with reflection use-flag
 
 *pnp4nagios-0.6.2 (26 Jan 2010)
 
