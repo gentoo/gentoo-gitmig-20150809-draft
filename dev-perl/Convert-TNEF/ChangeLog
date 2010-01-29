@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-TNEF
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.18 2008/11/26 21:03:58 gmsoft Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.19 2010/01/29 07:51:37 tove Exp $
+
+  29 Jan 2010; Torsten Veller <tove@gentoo.org> Convert-TNEF-0.17-r2.ebuild:
+  Fix LICENSE: same terms as perl (#301969). Maintenance
 
   26 Nov 2008; Guy Martin <gmsoft@gentoo.org> Convert-TNEF-0.17-r2.ebuild:
   hppa stable
