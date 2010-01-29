@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.2.ebuild,v 1.2 2010/01/29 18:23:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.2.ebuild,v 1.3 2010/01/29 19:28:01 dertobi123 Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/php-4.3[gd-external,pcre,filter,reflection,xml,zlib]
+DEPEND=">=dev-lang/php-4.3[gd-external,pcre,filter,reflection,spl,simplexml,xml,zlib]
 	>=net-analyzer/rrdtool-1.2
 	net-analyzer/nagios-core"
 RDEPEND="${DEPEND}
