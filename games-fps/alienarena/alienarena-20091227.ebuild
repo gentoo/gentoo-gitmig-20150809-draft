@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20091227.ebuild,v 1.1 2009/12/29 05:09:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20091227.ebuild,v 1.2 2010/01/29 11:57:39 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -37,6 +37,7 @@ S=${WORKDIR}/${MY_PN}/source
 
 src_prepare() {
 	rm -f ../*/*.so
+	epatch "${FILESDIR}"/${P}-jpeg8.patch
 	sed -i \
 		-e 's:\($(SHLIBLDFLAGS)\):$(LDFLAGS) \1:' \
 		Makefile \

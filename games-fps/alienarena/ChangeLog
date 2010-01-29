@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/alienarena
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.17 2009/12/29 05:09:13 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.18 2010/01/29 11:57:39 tupone Exp $
+
+  29 Jan 2010; Tupone Alfredo <tupone@gentoo.org>
+  -files/alienarena-20090616-path-overflows.patch,
+  alienarena-20091227.ebuild, +files/alienarena-20091227-jpeg8.patch:
+  Fix build with >=media-libs/jpeg-8 Bug #302093 by Xake
 
 *alienarena-20091227 (29 Dec 2009)
 
