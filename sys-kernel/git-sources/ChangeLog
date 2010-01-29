@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.724 2010/01/29 01:22:52 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.725 2010/01/29 23:26:33 mpagano Exp $
+
+*git-sources-2.6.33_rc6 (29 Jan 2010)
+
+  29 Jan 2010; Michael Pagano <mpagano@gentoo.org>
+  -git-sources-2.6.33_rc4.ebuild, -git-sources-2.6.33_rc4-r1.ebuild,
+  -git-sources-2.6.33_rc4-r2.ebuild, -git-sources-2.6.33_rc4-r3.ebuild,
+  -git-sources-2.6.33_rc4-r4.ebuild, -git-sources-2.6.33_rc4-r5.ebuild,
+  -git-sources-2.6.33_rc4-r6.ebuild, -git-sources-2.6.33_rc4-r7.ebuild,
+  +git-sources-2.6.33_rc6.ebuild:
+  Version bump and old version cleanup
 
 *git-sources-2.6.33_rc5-r5 (29 Jan 2010)
 
