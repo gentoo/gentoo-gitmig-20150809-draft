@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.3 2009/12/26 17:45:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.4 2010/01/29 18:11:49 bicatali Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -15,7 +15,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ada cairo doc examples fortran gd gnome java jpeg latex octave
-	 pdf perl png python qhull svg svga tcl threads tk truetype wxwidgets X"
+	 pdf perl png python qhull qt4 svg svga tcl threads tk truetype wxwidgets X"
 
 RDEPEND="ada? ( virtual/gnat )
 	cairo? ( x11-libs/cairo[svg?,X?] )
@@ -29,6 +29,7 @@ RDEPEND="ada? ( virtual/gnat )
 	pdf? ( media-libs/libharu )
 	perl? ( dev-perl/PDL dev-perl/XML-DOM )
 	python? ( dev-python/numpy )
+	qt4? ( x11-libs/qt-svg )
 	svga? ( media-libs/svgalib )
 	tcl? ( dev-lang/tcl dev-tcltk/itcl )
 	tk? ( dev-lang/tk dev-tcltk/itk )
@@ -110,10 +111,12 @@ src_configure() {
 		$(cmake-utils_use_enable octave octave)
 		$(cmake-utils_use_enable perl pdl)
 		$(cmake-utils_use_enable python python)
+		$(cmake-utils_use_enable qt4 qt)
 		$(cmake-utils_use_enable tcl tcl)
 		$(cmake-utils_use_enable tcl itcl)
 		$(cmake-utils_use_enable tk tk)
 		$(cmake-utils_use_enable tk itk)
+		$(cmake-utils_pld qt4 _svgqt)
 		$(cmake-utils_pld wxwidgets _wxwidgets)
 		$(cmake-utils_pld wxwidgets _wxpng)
 		$(cmake-utils_pld pdf pdf)
