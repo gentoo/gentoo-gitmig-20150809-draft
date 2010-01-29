@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20061014.ebuild,v 1.5 2007/07/17 07:22:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20061014.ebuild,v 1.6 2010/01/29 05:57:21 jer Exp $
 
 DESCRIPTION="DDCControl monitor database"
 HOMEPAGE="http://ddccontrol.sourceforge.net/"
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}
 		dev-perl/XML-Parser"
 
 src_compile() {
-	econf `enable_with nls` || die "econf failed"
+	econf $(use_with nls) || die "econf failed"
 	# Touch db/options.xml.h, so it is not rebuilt
 	touch db/options.xml.h
 	emake # doesn't really build anything, but there for safety
