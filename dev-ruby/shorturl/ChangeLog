@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/shorturl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.11 2009/12/24 17:33:37 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.12 2010/01/29 10:12:37 flameeyes Exp $
+
+*shorturl-0.8.7-r1 (29 Jan 2010)
+
+  29 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +shorturl-0.8.7-r1.ebuild, +files/shorturl-0.8.7+ruby-1.9.patch:
+  Bump to fakegem, add patch to work with Ruby 1.9 similar to the one in
+  overlay.
 
   24 Dec 2009; Hans de Graaff <graaff@gentoo.org> shorturl-0.8.7.ebuild:
   Remove obsolete virtual/ruby dependency.
