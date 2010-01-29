@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.94 2010/01/24 08:11:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.95 2010/01/29 04:44:54 markusle Exp $
+
+  29 Jan 2010; Markus Dittrich <markusle@gentoo.org>
+  blas-atlas-3.9.21.ebuild:
+  Updated version of shared libs patch to make sure we don't use
+  libtool for linking executables (fixes #302235).
 
   23 Jan 2010; Markus Dittrich <markusle@gentoo.org>
   blas-atlas-3.9.21.ebuild:
