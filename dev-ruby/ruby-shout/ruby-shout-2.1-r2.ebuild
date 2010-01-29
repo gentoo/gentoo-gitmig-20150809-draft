@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ruby-shout-2.1-r2.ebuild,v 1.1 2010/01/29 11:58:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ruby-shout-2.1-r2.ebuild,v 1.2 2010/01/29 12:38:42 flameeyes Exp $
 
 EAPI=2
 
@@ -41,7 +41,9 @@ each_ruby_compile() {
 }
 
 each_ruby_install() {
+	each_fakegem_install
+
 	pushd ext &>/dev/null
-	ruby_fakegem_doins ${PN#ruby-}.so
+	ruby_fakegem_newins ${PN#ruby-}.so lib/${PN#ruby-}.so
 	popd &>/dev/null
 }
