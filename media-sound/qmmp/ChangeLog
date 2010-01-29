@@ -1,9 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.29 2010/01/29 17:10:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.30 2010/01/29 17:31:01 ssuominen Exp $
 
   29 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> qmmp-0.3.1.ebuild:
-  Fix projectm depend to <media-libs/projectm-2 in 0.3.1 wrt #302771, thanks
+  Fix depend to <media-libs/libprojectm-2 wrt #302771, thanks
   to Paul Tobias for reporting.
 
   20 Jan 2010; Markus Meier <maekke@gentoo.org> qmmp-0.3.1.ebuild:
