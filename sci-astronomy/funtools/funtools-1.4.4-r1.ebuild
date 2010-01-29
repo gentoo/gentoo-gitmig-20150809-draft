@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4.ebuild,v 1.1 2010/01/29 02:15:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r1.ebuild,v 1.1 2010/01/29 18:27:33 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefiles.patch
 	sed -i \
 		-e "s:\${LINK}:\${LINK} ${LDFLAGS}:" \
 		mklib || die "sed for ldflags failed"
