@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/net-ssh-gateway-1.0.1-r1.ebuild,v 1.1 2010/01/23 12:56:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/net-ssh-gateway-1.0.1-r1.ebuild,v 1.2 2010/01/30 17:40:45 armin76 Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -16,7 +16,7 @@ HOMEPAGE="http://net-ssh.rubyforge.org/gateway"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/net-ssh-2.0.0"
