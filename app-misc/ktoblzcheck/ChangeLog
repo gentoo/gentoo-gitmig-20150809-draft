@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.67 2010/01/12 18:32:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.68 2010/01/30 18:23:54 armin76 Exp $
+
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> ktoblzcheck-1.24.ebuild:
+  sparc stable wrt #299535
 
   12 Jan 2010; nixnut <nixnut@gentoo.org> ktoblzcheck-1.24.ebuild:
   ppc stable #299535
