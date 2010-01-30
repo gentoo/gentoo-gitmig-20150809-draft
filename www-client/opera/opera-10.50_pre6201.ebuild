@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.1 2010/01/30 15:05:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.2 2010/01/30 17:33:53 jer Exp $
 
 EAPI="2"
 
@@ -22,7 +22,10 @@ QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
 IUSE="elibc_FreeBSD"
 
-MY_LINGUAS="zh-CN zh-HK zh-TW"
+MY_LINGUAS="
+	be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka
+	ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk zh-CN zh-HK zh-TW
+"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
