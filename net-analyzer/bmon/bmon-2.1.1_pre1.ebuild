@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.2 2010/01/25 12:54:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.3 2010/01/30 22:18:23 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,7 +30,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.1.0-nostrip.patch
 	# libnl crap, bug 176378
 	epatch "${FILESDIR}"/${PN}-2.1.0-libnl-1.0.patch
-
+	# newer sysfs has symlinks for net class
+	epatch "${FILESDIR}"/${PN}-2.1.0-sysfs-symlink.patch
 }
 
 src_compile() {
