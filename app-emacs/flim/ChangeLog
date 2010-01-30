@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/flim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.43 2010/01/11 18:54:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.44 2010/01/30 22:41:48 ulm Exp $
+
+*flim-1.14.9-r2 (30 Jan 2010)
+
+  30 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +flim-1.14.9-r2.ebuild:
+  Add prefix keywords, change EAPI to 3.
 
   11 Jan 2010; Christian Faulhammer <fauli@gentoo.org> -flim-1.14.9.ebuild:
   clean up
