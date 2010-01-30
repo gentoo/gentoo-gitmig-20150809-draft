@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS-Resolver-Programmable
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.3 2009/06/10 06:01:32 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.4 2010/01/30 18:16:41 jer Exp $
+
+  30 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  Net-DNS-Resolver-Programmable-0.003.ebuild:
+  Marked ~hppa (bug #302880).
 
   10 Jun 2009; Torsten Veller <tove@gentoo.org>
   Net-DNS-Resolver-Programmable-0.003.ebuild:
