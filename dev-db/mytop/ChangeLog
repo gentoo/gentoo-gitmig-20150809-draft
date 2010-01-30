@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.26 2010/01/16 15:25:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.27 2010/01/30 18:34:42 armin76 Exp $
+
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> mytop-1.6-r3.ebuild:
+  sparc stable wrt #296990
 
   16 Jan 2010; Tobias Klausmann <klausman@gentoo.org> mytop-1.6-r3.ebuild:
   Stable on alpha, bug #296990
