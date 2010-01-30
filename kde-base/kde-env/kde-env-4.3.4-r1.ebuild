@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.4.ebuild,v 1.5 2010/01/23 17:47:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.4-r1.ebuild,v 1.1 2010/01/30 03:33:33 abcd Exp $
 
 EAPI="2"
 
@@ -48,7 +48,7 @@ PATH="${EKDEDIR}/bin"
 ROOTPATH="${EKDEDIR}/sbin:${EKDEDIR}/bin"
 LDPATH="${_libdirs}"
 MANPATH="${EKDEDIR}/share/man"
-CONFIG_PROTECT="${EKDEDIR}/share/config ${EKDEDIR}/env ${EKDEDIR}/shutdown ${EPREFIX}/usr/share/config"
+CONFIG_PROTECT="${KDEDIR}/share/config ${KDEDIR}/env ${KDEDIR}/shutdown /usr/share/config"
 #KDE_IS_PRELINKED=1
 PKG_CONFIG_PATH="${EKDEDIR}/$(get_libdir)/pkgconfig"
 XDG_DATA_DIRS="${EKDEDIR}/share"
@@ -71,7 +71,7 @@ EOF
 		# Much simpler for the FHS compliant -kdeprefix install
 		# number goes down with version
 		cat <<-EOF > "${T}/43kdepaths"
-CONFIG_PROTECT="${EPREFIX}/usr/share/config"
+CONFIG_PROTECT="/usr/share/config"
 #KDE_IS_PRELINKED=1
 EOF
 		doenvd "${T}/43kdepaths"

@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.63 2010/01/25 15:10:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.64 2010/01/30 03:33:33 abcd Exp $
+
+*kde-env-4.3.5-r1 (30 Jan 2010)
+*kde-env-4.3.4-r1 (30 Jan 2010)
+
+  30 Jan 2010; Jonathan Callen <abcd@gentoo.org> -kde-env-4.3.4.ebuild,
+  +kde-env-4.3.4-r1.ebuild, -kde-env-4.3.5.ebuild, +kde-env-4.3.5-r1.ebuild:
+  Don't add prefix to CONFIG_PROTECT (added by portage automatically); add
+  prefix changes to 4.3.5
 
 *kde-env-4.3.5 (25 Jan 2010)
 

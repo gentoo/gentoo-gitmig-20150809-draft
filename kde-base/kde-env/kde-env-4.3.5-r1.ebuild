@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.5.ebuild,v 1.1 2010/01/25 15:10:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.5-r1.ebuild,v 1.1 2010/01/30 03:33:33 abcd Exp $
 
 EAPI="2"
 
+KDE_REQUIRED="never"
 inherit kde4-base
 
 DESCRIPTION="Environment setting required for all KDE4 apps to run."
@@ -33,20 +34,13 @@ src_compile() {
 }
 
 src_install() {
-	use prefix || ED=$D
-
-	dodir /etc/env.d
-	dodir /etc/revdep-rebuild
-	dodir ${KDEDIR}/share/config
-
-	# List all the multilib libdirs
-	local _libdir _libdirs
-	for _libdir in $(get_all_libdirs); do
-		_libdirs+=":${EKDEDIR}/${_libdir}"
-	done
-	_libdirs=${_libdirs#:}
-
 	if use kdeprefix; then
+		# List all the multilib libdirs
+		local _libdir _libdirs
+		for _libdir in $(get_all_libdirs); do
+			_libdirs+=":${EKDEDIR}/${_libdir}"
+		done
+		_libdirs=${_libdirs#:}
 
 		# number goes down with version
 		cat <<-EOF > "${T}/43kdepaths-${SLOT}"
@@ -54,32 +48,33 @@ PATH="${EKDEDIR}/bin"
 ROOTPATH="${EKDEDIR}/sbin:${EKDEDIR}/bin"
 LDPATH="${_libdirs}"
 MANPATH="${EKDEDIR}/share/man"
-CONFIG_PROTECT="${EKDEDIR}/share/config ${EKDEDIR}/env ${EKDEDIR}/shutdown ${EPREFIX}/usr/share/config"
+CONFIG_PROTECT="${KDEDIR}/share/config ${KDEDIR}/env ${KDEDIR}/shutdown /usr/share/config"
 #KDE_IS_PRELINKED=1
 PKG_CONFIG_PATH="${EKDEDIR}/$(get_libdir)/pkgconfig"
 XDG_DATA_DIRS="${EKDEDIR}/share"
 EOF
 		doenvd "${T}/43kdepaths-${SLOT}"
-		cat <<-EOF > "${ED}/etc/revdep-rebuild/50-kde-${SLOT}"
+		cat <<-EOF > "${T}/50-kde-${SLOT}"
 SEARCH_DIRS="${EKDEDIR}/bin ${EKDEDIR}/lib*"
 EOF
+		insinto /etc/revdep-rebuild
+		doins "${T}/50-kde-${SLOT}"
 
 		# kdeglobals needed to make third party apps installed in /usr work
-		cat <<-EOF > "${ED}/${KDEDIR}/share/config/kdeglobals"
+		cat <<-EOF > "${T}/kdeglobals"
 [Directories][\$i]
 prefixes=${EPREFIX}/usr
 EOF
-
+		insinto ${KDEDIR}/share/config
+		doins "${T}/kdeglobals"
 	else
-
 		# Much simpler for the FHS compliant -kdeprefix install
 		# number goes down with version
 		cat <<-EOF > "${T}/43kdepaths"
-CONFIG_PROTECT="${EPREFIX}/usr/share/config"
+CONFIG_PROTECT="/usr/share/config"
 #KDE_IS_PRELINKED=1
 EOF
 		doenvd "${T}/43kdepaths"
-
 	fi
 }
 
