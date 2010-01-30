@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.668 2010/01/25 15:17:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.669 2010/01/30 03:37:06 abcd Exp $
+
+  30 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdelibs-4.3.5.ebuild:
+  Move kde-env dep to RDEPEND (no longer a circular dep)
 
 *kdelibs-4.3.5 (25 Jan 2010)
 

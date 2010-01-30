@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.5.ebuild,v 1.1 2010/01/25 15:17:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.5.ebuild,v 1.2 2010/01/30 03:37:06 abcd Exp $
 
 EAPI="2"
 
@@ -87,14 +87,12 @@ RDEPEND="${COMMONDEPEND}
 	!<=kde-misc/kdnssd-avahi-0.1.2:0
 	!x11-libs/qt-phonon
 	>=app-crypt/gnupg-2.0.11
+	$(add_kdebase_dep kde-env)
 	!aqua? (
 		x11-apps/iceauth
 		x11-apps/rgb
 		>=x11-misc/xdg-utils-1.0.2-r3
 	)
-"
-PDEPEND="
-	$(add_kdebase_dep kde-env)
 "
 
 # Blockers added due to packages from old versions, removed in the meanwhile
@@ -294,7 +292,7 @@ pkg_postinst() {
 
 pkg_prerm() {
 	# Remove ksycoca4 global database
-	rm -f "${EROOT}${PREFIX}"/share/kde4/services/ksycoca4
+	rm -f "${EROOT}${KDEDIR}"/share/kde4/services/ksycoca4
 }
 
 pkg_postrm() {
