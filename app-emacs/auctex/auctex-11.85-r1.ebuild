@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.85-r1.ebuild,v 1.1 2010/01/30 18:03:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.85-r1.ebuild,v 1.2 2010/01/30 21:58:51 ulm Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 
 TEXMF="/usr/share/texmf-site"
 
-src_compile() {
+src_configure() {
 	# Remove broken Info file (will be recreated by the build system)
 	rm doc/auctex.info
 
@@ -35,6 +35,9 @@ src_compile() {
 		--with-texmf-dir="${EPREFIX}${TEXMF}" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable preview-latex preview) || die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 	cd doc; emake tex-ref.pdf || die "creation of tex-ref.pdf failed"
 }
