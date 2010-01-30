@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20090210.ebuild,v 1.4 2009/10/26 13:30:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20090210-r1.ebuild,v 1.1 2010/01/30 14:37:16 ssuominen Exp $
 
 inherit autotools multilib eutils
 
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-libavutil50.patch"
 	epatch "${FILESDIR}/${PN}-pkgconfig-x264.patch"
 	epatch "${FILESDIR}/${PN}-x264.patch"
+	epatch "${FILESDIR}/${PN}-jpeg-7.patch"
 	AT_M4DIR="m4" eautoreconf
 }
 
