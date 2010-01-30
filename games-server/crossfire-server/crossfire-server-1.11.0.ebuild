@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.2 2009/12/31 01:00:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.3 2010/01/30 08:08:06 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -32,6 +32,7 @@ src_prepare() {
 		-e '/,2.5/s/,2.5/,2.6,2.5/' \
 		acinclude.m4 \
 		|| die 'sed failed'
+	rm -f "${WORKDIR}"/maps/Info/combine.pl # bug #236205
 	eautoreconf
 }
 
