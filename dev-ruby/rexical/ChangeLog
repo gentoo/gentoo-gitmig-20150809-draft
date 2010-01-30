@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.4 2010/01/17 13:55:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.5 2010/01/30 18:31:44 armin76 Exp $
+
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> rexical-1.0.4.ebuild:
+  Add ~sparc
 
   17 Jan 2010; Christian Faulhammer <fauli@gentoo.org> rexical-1.0.4.ebuild:
   add ~x86, bug 297822
