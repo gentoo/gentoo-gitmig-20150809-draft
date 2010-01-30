@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.3.0.ebuild,v 1.1 2010/01/30 16:44:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.3.0.ebuild,v 1.2 2010/01/30 16:49:00 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="da de en_GB ru tr"
@@ -24,5 +24,5 @@ src_configure() {
 		mycmakeargs+=( -DHAVE_XINPUT2=ON )
 	fi
 
-	cmake-utils_src_configure
+	kde4-base_src_configure
 }
