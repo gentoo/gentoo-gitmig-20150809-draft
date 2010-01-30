@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/lzip-1.8.ebuild,v 1.1 2009/09/26 17:04:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/lzip-1.8.ebuild,v 1.2 2010/01/30 18:48:40 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.gnu.org/releases-noredirect/lzip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE=""
 
 src_unpack() {

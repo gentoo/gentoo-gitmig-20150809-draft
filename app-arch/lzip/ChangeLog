@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.4 2009/09/27 12:05:17 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.5 2010/01/30 18:48:40 armin76 Exp $
+
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> lzip-1.4.ebuild,
+  lzip-1.8.ebuild:
+  Add ~alpha/~sparc wrt #300562
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> lzip-1.4.ebuild:
   amd64/x86 stable, bug #286328
