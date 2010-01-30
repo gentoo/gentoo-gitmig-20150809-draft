@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/veusz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.18 2010/01/16 20:04:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.19 2010/01/30 08:56:21 grozin Exp $
+
+*veusz-1.6 (30 Jan 2010)
+
+  30 Jan 2010; Andrey Grozin <grozin@gentoo.org> +veusz-1.6.ebuild:
+  Version bump
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> veusz-1.5.ebuild:
   stable x86, bug 299842
