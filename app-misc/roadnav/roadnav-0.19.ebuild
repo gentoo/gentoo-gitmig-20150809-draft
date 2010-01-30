@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/roadnav-0.19.ebuild,v 1.1 2009/07/01 05:22:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/roadnav-0.19.ebuild,v 1.2 2010/01/30 06:06:16 dirtyepic Exp $
 
 EAPI=2
 
-inherit wxwidgets
+inherit eutils wxwidgets
 
 DESCRIPTION="Roadnav is a street map application with routing and GPS support"
 HOMEPAGE="http://roadnav.sourceforge.net"
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	WX_GTK_VER=2.8
 	need-wxwidgets gtk2
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
