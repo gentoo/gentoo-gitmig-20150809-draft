@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.2 2010/01/30 17:33:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.3 2010/01/30 17:46:39 jer Exp $
 
 EAPI="2"
 
@@ -117,7 +117,7 @@ src_prepare() {
 
 src_install() {
 	# This alpha build hardcodes /usr as prefix
-	mv -v etc/ usr/ "${D}"/ || die "mv etc/ usr/ failed"
+	doins -r etc/ usr/
 
 	make_desktop_entry ${PN} Opera ${PN} # TODO
 
