@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.124 2010/01/26 11:42:52 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.125 2010/01/30 18:18:47 armin76 Exp $
+
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> dvdrip-0.98.10-r2.ebuild:
+  sparc stable wrt #297897
 
   26 Jan 2010; Dror Levin <spatz@gentoo.org> dvdrip-0.98.8.ebuild,
   dvdrip-0.98.9-r1.ebuild, dvdrip-0.98.10-r2.ebuild:
