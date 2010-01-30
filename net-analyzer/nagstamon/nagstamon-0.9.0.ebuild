@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.8.2.ebuild,v 1.1 2009/08/26 16:27:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.0.ebuild,v 1.1 2010/01/30 22:57:20 dertobi123 Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-sharedir.patch"
+	epatch "${FILESDIR}/${P}-import.patch"
 }
 
 src_install() {
