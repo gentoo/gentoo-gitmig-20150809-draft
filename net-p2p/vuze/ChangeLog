@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.25 2010/01/22 22:21:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.26 2010/01/30 23:51:28 caster Exp $
+
+*vuze-4.3.1.0 (30 Jan 2010)
+
+  30 Jan 2010; Vlastimil Babka <caster@gentoo.org> +vuze-4.3.1.0.ebuild:
+  Version bump.
 
 *vuze-4.3.0.6 (22 Jan 2010)
 
