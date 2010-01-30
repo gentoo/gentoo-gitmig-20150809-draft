@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/auctex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.96 2009/12/26 17:24:25 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.97 2010/01/30 18:03:35 ulm Exp $
+
+*auctex-11.85-r1 (30 Jan 2010)
+
+  30 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +auctex-11.85-r1.ebuild:
+  Add prefix keywords, change EAPI to 3.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> auctex-11.85.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
