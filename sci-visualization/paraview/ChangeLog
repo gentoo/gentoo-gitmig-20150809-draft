@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.45 2010/01/22 03:40:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.46 2010/01/30 18:01:05 markusle Exp $
+
+  30 Jan 2010; Markus Dittrich <markusle@gentoo.org> paraview-3.6.2.ebuild,
+  +files/paraview-3.6.2-h5part.patch:
+  Add temporary fix for broken h5part plugin (see bug #301538).
+  Also changed hdf5 dependency to hd5[mpi=] per bug #302621.
 
   21 Jan 2010; Markus Dittrich <markusle@gentoo.org> paraview-3.6.2.ebuild,
   +files/paraview-3.6.2-boost-property_map.patch,
