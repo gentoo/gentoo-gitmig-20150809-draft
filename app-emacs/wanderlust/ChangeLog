@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/wanderlust
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.80 2009/11/14 15:12:51 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.81 2010/01/30 23:28:10 ulm Exp $
+
+*wanderlust-2.15.9_pre20100125 (30 Jan 2010)
+*wanderlust-2.14.0-r6 (30 Jan 2010)
+
+  30 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +wanderlust-2.14.0-r6.ebuild,
+  +wanderlust-2.15.9_pre20100125.ebuild:
+  New snapshot from CVS. Add prefix keywords, change EAPI to 3.
+  Compress patch file for stable version.
 
 *wanderlust-2.15.7_pre20090820 (14 Nov 2009)
 

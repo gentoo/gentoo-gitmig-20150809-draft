@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r5.ebuild,v 1.5 2010/01/30 23:28:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r6.ebuild,v 1.1 2010/01/30 23:28:10 ulm Exp $
+
+EAPI=3
 
 inherit elisp eutils
 
 MY_P="wl-${PV/_/}"
-
 DESCRIPTION="Yet Another Message Interface on Emacsen"
 HOMEPAGE="http://www.gohome.org/wl/"
 SRC_URI="ftp://ftp.gohome.org/wl/stable/${MY_P}.tar.gz
@@ -14,7 +15,7 @@ SRC_URI="ftp://ftp.gohome.org/wl/stable/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="bbdb ssl linguas_ja"
 
 DEPEND=">=app-emacs/apel-10.6
@@ -25,31 +26,27 @@ RDEPEND="!app-emacs/wanderlust-cvs
 	${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+ELISP_PATCHES="${P}-20050405.patch
+	${P}-smtp-end-of-line.patch
+	${P}-texinfo-garbage.patch"
 SITEFILE="50${PN}-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${WORKDIR}/${P}-20050405.patch"
-	epatch "${FILESDIR}/${P}-smtp-end-of-line.patch"
-	epatch "${FILESDIR}/${P}-texinfo-garbage.patch"
-}
-
-src_compile() {
+src_configure() {
 	local lang="\"en\""
 	use linguas_ja && lang="${lang} \"ja\""
 	echo "(setq wl-info-lang '(${lang}) wl-news-lang '(${lang}))" >>WL-CFG
 	use ssl && echo "(setq wl-install-utils t)" >>WL-CFG
+}
 
+src_compile() {
 	emake || die "emake failed"
 	emake info || die "emake info failed"
 }
 
 src_install() {
 	emake \
-		LISPDIR="${D}${SITELISP}" \
-		PIXMAPDIR="${D}${SITEETC}/wl/icons" \
+		LISPDIR="${ED}${SITELISP}" \
+		PIXMAPDIR="${ED}${SITEETC}/wl/icons" \
 		install || die "emake install failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" wl || die
