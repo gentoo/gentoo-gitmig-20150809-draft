@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quarter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.1 2009/11/24 17:21:02 ayoy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.2 2010/01/30 04:18:11 reavertm Exp $
+
+  30 Jan 2010; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
+  Updated my email
 
 *quarter-1.0.0 (24 Nov 2009)
 
