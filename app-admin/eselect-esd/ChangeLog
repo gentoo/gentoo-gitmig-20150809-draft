@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-esd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-esd/ChangeLog,v 1.20 2009/11/06 20:58:33 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-esd/ChangeLog,v 1.21 2010/01/30 18:16:39 ulm Exp $
+
+*eselect-esd-20100127 (30 Jan 2010)
+
+  30 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +eselect-esd-20100127.ebuild:
+  Version bump and add prefix keywords, fixes bug 302134.
 
 *eselect-esd-20091106 (06 Nov 2009)
 
