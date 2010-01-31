@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4_rc2.ebuild,v 1.2 2009/11/12 11:02:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4_rc2.ebuild,v 1.3 2010/01/31 17:06:01 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="da de en_GB es et fr gl km lt nds pt pt_BR ro ru sv tr uk zh_CN zh_TW"
@@ -16,7 +16,7 @@ SRC_URI="http://kde-apps.org/CONTENT/content-files/112110-${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +semantic-desktop"
+IUSE="debug semantic-desktop"
 
 COMMON_DEPEND=">=kde-base/solid-${KDE_MINIMAL}[bluetooth]
 	>=kde-base/libkworkspace-${KDE_MINIMAL}
