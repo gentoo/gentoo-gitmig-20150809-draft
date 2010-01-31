@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.58 2010/01/31 18:12:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.59 2010/01/31 21:54:53 maekke Exp $
+
+  31 Jan 2010; Markus Meier <maekke@gentoo.org> -tuxpaint-0.9.20.ebuild:
+  old
 
   31 Jan 2010; Markos Chandras <hwoarang@gentoo.org>
   tuxpaint-0.9.20-r1.ebuild:
