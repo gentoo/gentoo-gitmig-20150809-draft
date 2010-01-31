@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/httparty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.10 2010/01/10 08:58:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.11 2010/01/31 11:33:35 flameeyes Exp $
+
+*httparty-0.5.1 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +httparty-0.5.1.ebuild:
+  Version bump, port to fakegem ppc and x86 need to re-keyword crack for
+  this to work.
 
   10 Jan 2010; Hans de Graaff <graaff@gentoo.org> -httparty-0.4.3.ebuild,
   -httparty-0.4.4.ebuild:
