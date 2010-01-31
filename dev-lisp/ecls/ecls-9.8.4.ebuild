@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-9.8.4.ebuild,v 1.1 2009/08/22 06:58:08 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-9.8.4.ebuild,v 1.2 2010/01/31 17:33:18 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X c++ +threads +unicode"
 
 RDEPEND="dev-libs/gmp
-		dev-libs/libffi
+		virtual/libffi
 		>=dev-libs/boehm-gc-7.1[threads?]
 		c++? ( dev-libs/boehm-gc[-nocxx] )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/ecls
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.30 2009/12/17 12:04:22 grozin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.31 2010/01/31 17:33:18 ssuominen Exp $
+
+  31 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> ecls-9.8.4.ebuild,
+  ecls-9.12.3.ebuild:
+  Change libffi depend from dev-libs to virtual.
 
 *ecls-9.12.3 (17 Dec 2009)
 
