@@ -8,5 +8,6 @@
 </maintainer>
 <use>
   <flag name="dchroot">Enables the building of a wrapper named "dchroot", replacing <pkg>sys-apps/dchroot</pkg>.</flag>
+  <flag name="lvm">Enable support for chroots on LVM.</flag>
 </use>
 </pkgmetadata>
