@@ -1,14 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.8.ebuild,v 1.5 2009/01/09 22:41:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.12.ebuild,v 1.1 2010/01/31 21:33:45 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="Messaging system providing communication between programs"
 HOMEPAGE="http://hea-www.harvard.edu/RD/xpa"
-SRC_URI="http://hea-www.harvard.edu/saord/download/${PN}/${P}.tar.gz
-	mirror://gentoo/${P}-ds9-5.4.patch.bz2"
+SRC_URI="http://hea-www.harvard.edu/saord/download/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -20,8 +19,7 @@ RDEPEND="dev-lang/tcl
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-ds9-5.4.patch
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-2.1.8-makefile.patch
 	sed -i -e "s:\${LINK}:\${LINK} ${LDFLAGS}:" mklib
 	eautoconf
 }
