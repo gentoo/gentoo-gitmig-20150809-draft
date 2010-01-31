@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.32 2010/01/23 17:16:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.33 2010/01/31 14:18:59 angelos Exp $
+
+  25 Jan 2010; Christoph Mende <angelos@gentoo.org> mpdscribble-0.19.ebuild:
+  Added missing libmpdclient dependency (bug #302024)
 
 *mpdscribble-0.19 (23 Jan 2010)
 

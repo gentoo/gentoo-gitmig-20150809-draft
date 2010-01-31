@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.19.ebuild,v 1.1 2010/01/23 17:16:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.19.ebuild,v 1.2 2010/01/31 14:18:59 angelos Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,10 +11,11 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="+curl"
 
 RDEPEND=">=dev-libs/glib-2.16:2
+	media-libs/libmpdclient
 	curl? ( net-misc/curl )
 	!curl? ( net-libs/libsoup:2.4 )"
 DEPEND="${RDEPEND}
