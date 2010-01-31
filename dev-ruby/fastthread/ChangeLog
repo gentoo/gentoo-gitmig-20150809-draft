@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fastthread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.40 2010/01/18 20:36:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.41 2010/01/31 15:34:46 armin76 Exp $
+
+  31 Jan 2010; Raúl Porcel <armin76@gentoo.org> fastthread-1.0.7-r1.ebuild:
+  Add ~sparc
 
   18 Jan 2010; Brent Baude <ranger@gentoo.org> fastthread-1.0.7-r1.ebuild:
   Marking fastthread-1.0.7-r1 ~ppc for bug 297843
