@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.123 2009/12/10 01:27:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.124 2010/01/31 03:05:54 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -152,7 +152,8 @@ SRC_URI="${SERVER_URI}"
 [[ ${MY_EXTRAS_VER} != live ]] \
 && SRC_URI="${SRC_URI}
 		mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
-		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
+		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
+		http://dev.gentoo.org/~robbat2/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
 
 # PBXT engine
 mysql_version_is_at_least "5.1.12" \
