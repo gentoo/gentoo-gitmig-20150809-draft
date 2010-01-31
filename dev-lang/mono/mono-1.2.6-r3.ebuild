@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.6-r3.ebuild,v 1.1 2008/05/31 11:25:25 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.6-r3.ebuild,v 1.2 2010/01/31 19:54:46 tove Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -108,7 +108,7 @@ src_compile() {
 }
 
 src_test() {
-	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 
 	mkdir -p "${T}/home/mono" || die "mkdir home failed"
 
