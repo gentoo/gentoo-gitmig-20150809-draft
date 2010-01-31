@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.5 2009/12/30 19:36:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.6 2010/01/31 22:11:44 jlec Exp $
 
 EAPI="2"
 
@@ -21,6 +21,7 @@ KEYWORDS="amd64 x86"
 IUSE="apbs shaders"
 
 DEPEND="dev-python/pmw
+		media-libs/freetype:2
 		dev-python/numpy
 		>=dev-lang/python-2.4[tk]
 		media-libs/libpng
