@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.33_rc2.ebuild,v 1.2 2010/01/23 17:22:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.33_rc6.ebuild,v 1.1 2010/01/31 10:27:21 flameeyes Exp $
 
 EAPI=2
 
@@ -30,9 +30,10 @@ SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+demangle +doc"
+IUSE="+demangle +doc perl"
 
 RDEPEND="demangle? ( sys-devel/binutils )
+	perl? ( || ( >=dev-lang/perl-5.10 sys-devel/libperl ) )
 	dev-libs/elfutils"
 DEPEND="${RDEPEND}
 	${LINUX_PATCH+dev-util/patchutils}
@@ -57,7 +58,7 @@ src_unpack() {
 	eend $? || die "tar failed"
 
 	ebegin "Filtering partial source patch"
-	filterdiff ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
+	filterdiff -p1 ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
 	eend $? || die "filterdiff failed"
 
 	MY_A=
@@ -70,6 +71,11 @@ src_unpack() {
 }
 
 src_prepare() {
+		if [[ -n ${LINUX_PATCH} ]]; then
+				cd "${WORKDIR}"/linux-"${LINUX_VER}"
+				epatch "${WORKDIR}"/${P}.patch
+		fi
+
 	# Drop some upstream too-developer-oriented flags and fix the
 	# Makefile in general
 	sed -i \
@@ -77,20 +83,18 @@ src_prepare() {
 		-e 's:-ggdb3::' \
 		-e 's:-fstack-protector-all::' \
 		-e 's:^LDFLAGS =:EXTLIBS +=:' \
+		-e '/PERL_EMBED_LDOPTS/s:ALL_LDFLAGS +=:EXTLIBS +=:' \
 		-e '/-x c - /s:\$(ALL_LDFLAGS):\0 $(EXTLIBS):' \
 		-e '/^ALL_CFLAGS =/s:$: $(CFLAGS_OPTIMIZE):' \
 		-e '/^ALL_LDFLAGS =/s:$: $(LDFLAGS_OPTIMIZE):' \
 		"${S}"/Makefile
-
-	if [[ -n ${LINUX_PATCH} ]]; then
-		epatch "${WORKDIR}"/${P}.patch
-	fi
 }
 
 src_compile() {
 	local makeargs=
 
 	use demangle || makeargs="${makeargs} NO_DEMANGLE= "
+	use perl || makeargs="${makeargs} NO_LIBPERL= "
 
 	emake ${makeargs} \
 		CC="$(tc-getCC)" AR="$(tc-getAR)" \

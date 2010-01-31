@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.11 2010/01/23 17:22:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.12 2010/01/31 10:27:21 flameeyes Exp $
+
+*perf-2.6.33_rc6 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -perf-2.6.33_rc2.ebuild, -perf-2.6.33_rc5.ebuild, +perf-2.6.33_rc6.ebuild,
+  metadata.xml:
+  Bump to rc6 (instead of revbumping) so that the RC patch is actually
+  applied. Huge thanks to Zeev Tarantov in bug #302387 for reporting and
+  providing the fix. Also introduce perl USE flag for the Perl scripting in
+  perf, and fix building with USE=perl and --as-needed (patch to be sent
+  upstream).
 
   23 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   perf-2.6.33_rc2.ebuild, perf-2.6.33_rc5.ebuild:
