@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.50.ebuild,v 1.2 2007/01/10 17:40:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.50.ebuild,v 1.3 2010/01/31 04:53:57 mr_bones_ Exp $
 
-inherit autotools eutils games
+inherit eutils games
 
 # DV is the Descent version. Used because the d2x-rebirth ebuild is similar.
 DV="1"
