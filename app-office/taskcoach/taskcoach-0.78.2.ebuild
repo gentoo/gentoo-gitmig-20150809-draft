@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.77.0.ebuild,v 1.1 2009/12/24 18:35:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.78.2.ebuild,v 1.1 2010/01/31 00:51:14 caster Exp $
 
 EAPI=1
 
@@ -29,10 +29,8 @@ src_unpack() {
 	distutils_src_unpack
 
 	cd "${S}"
-	if ! use x86; then
-		elog "Removing Funambol support, works only on x86."
-		rm -fv taskcoachlib/bin.in/linux/*.so || die
-	fi
+	elog "Removing Funambol support, works only on x86 and python 2.5."
+	rm -fv taskcoachlib/bin.in/linux/*.so || die
 }
 
 src_compile() {
