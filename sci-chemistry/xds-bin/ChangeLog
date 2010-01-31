@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/xds-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.2 2008/10/17 18:54:41 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.3 2010/01/31 23:13:28 jlec Exp $
+
+*xds-bin-20091228 (31 Jan 2010)
+
+  31 Jan 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  -xds-bin-20080602.ebuild, +xds-bin-20091228.ebuild:
+  Version bump, fixing bug 247788
+  Adding new Viewer as RDEPEND
 
   17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   smp USE-flag is global now
