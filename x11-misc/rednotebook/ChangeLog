@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rednotebook
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.23 2009/12/19 13:35:41 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.24 2010/01/31 16:48:45 hwoarang Exp $
+
+  31 Jan 2010; <hwoarang@gentoo.org> rednotebook-0.9.0.ebuild:
+  Stable on amd64 wrt bug #302352
 
   19 Dec 2009; Markos Chandras <hwoarang@gentoo.org>
   rednotebook-0.9.0.ebuild:
