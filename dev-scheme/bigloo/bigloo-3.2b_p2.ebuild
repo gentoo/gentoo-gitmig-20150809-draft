@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.2b_p2.ebuild,v 1.1 2009/06/04 12:21:37 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.2b_p2.ebuild,v 1.2 2010/01/31 19:46:55 tove Exp $
 
 inherit elisp-common multilib eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 
 # default thinks that target doesn't exist
 src_test() {
-	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	emake test || die
 }
 

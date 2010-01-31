@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/elk/elk-3.99.7.ebuild,v 1.1 2007/01/17 15:19:00 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/elk/elk-3.99.7.ebuild,v 1.2 2010/01/31 19:48:01 tove Exp $
 
 DESCRIPTION="Scheme implementation designed to be embeddable extension to C/C++ applications"
 HOMEPAGE="http://sam.zoy.org/elk"
@@ -22,7 +22,7 @@ src_compile() {
 
 # tests are run automatically during make and fail with default src_test
 src_test() {
-	vecho "Tests already run during compile"
+	echo "Tests already run during compile"
 }
 
 src_install() {
