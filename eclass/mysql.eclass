@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.124 2010/01/31 03:05:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.125 2010/01/31 05:00:43 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -551,6 +551,14 @@ mysql_pkg_setup() {
 	&& use minimal ; then
 		eerror "USE flags 'cluster' and 'extraengine' conflict with 'minimal' USE flag!"
 		die "USE flags 'cluster' and 'extraengine' conflict with 'minimal' USE flag!"
+	fi
+
+	# Bug #290570 fun. Upstream made us need a fairly new GCC4.
+	if mysql_version_is_at_least "5.0.83" ; then
+		GCC_VER=$(gcc_version)
+		case ${GCC_VER} in
+			2*|3*|4.0|4.1|4.2) die "Active GCC too old! Must have at least GCC4.3" ;;
+		esac
 	fi
 
 	# This should come after all of the die statements
