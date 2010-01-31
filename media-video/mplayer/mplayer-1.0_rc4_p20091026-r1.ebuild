@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.12 2010/01/31 17:47:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.13 2010/01/31 17:57:38 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -216,6 +216,8 @@ src_prepare() {
 
 		mv "${WORKDIR}/svgalib_helper" "${S}/libdha"
 	fi
+
+	epatch "${FILESDIR}"/${P}-arm_neon.patch
 }
 
 src_configure() {

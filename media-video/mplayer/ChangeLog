@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.704 2010/01/31 17:47:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.705 2010/01/31 17:57:38 ssuominen Exp $
+
+  31 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.0_rc4_p20091026-r1.ebuild,
+  +files/mplayer-1.0_rc4_p20091026-arm_neon.patch:
+  Fix building with ARM NEON wrt #302073 by Raúl Porcel.
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   mplayer-1.0_rc4_p20091026-r1.ebuild:
