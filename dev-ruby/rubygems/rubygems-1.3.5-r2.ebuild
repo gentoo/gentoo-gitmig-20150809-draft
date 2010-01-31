@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.5-r2.ebuild,v 1.1 2010/01/31 17:20:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.5-r2.ebuild,v 1.2 2010/01/31 23:11:51 flameeyes Exp $
 
 EAPI="2"
 
@@ -39,15 +39,14 @@ each_ruby_install() {
 	export RUBYOPT="${GENTOO_RUBYOPT}"
 	ewarn "RUBYOPT=${RUBYOPT}"
 
-	local ver=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["ruby_version"]')
 	local gemsitedir=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]' | sed -e 's:site_ruby:gems:')
 
 	# rubygems tries to create GEM_HOME if it doesn't exist, upsetting sandbox,
 	# bug #202109. Since 1.2.0 we also need to set GEM_PATH
 	# for this reason, bug #230163.
-	export GEM_HOME="${D}${gemsitedir}/${ver}"
+	export GEM_HOME="${D}${gemsitedir}"
 	export GEM_PATH="${GEM_HOME}/"
-	keepdir ${gemsitedir}/$ver/{doc,gems,cache,specifications}
+	keepdir ${gemsitedir}/{doc,gems,cache,specifications}
 
 	myconf=""
 	if ! use doc; then
@@ -72,7 +71,8 @@ all_ruby_install() {
 }
 
 pkg_postinst() {
-	SOURCE_CACHE="/usr/$(get_libdir)/ruby/gems/$ver/source_cache"
+	local gemsitedir=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]' | sed -e 's:site_ruby:gems:')
+	SOURCE_CACHE="${gemsitedir}/source_cache"
 	if [[ -e "${SOURCE_CACHE}" ]]; then
 		rm "${SOURCE_CACHE}"
 	fi
