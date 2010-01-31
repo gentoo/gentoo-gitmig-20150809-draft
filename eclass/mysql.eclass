@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.125 2010/01/31 05:00:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.126 2010/01/31 05:47:21 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -19,6 +19,17 @@ WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator
+
+# Shorten the path because the socket path length must be shorter than 107 chars
+# and we will run a mysql server during test phase
+S="${WORKDIR}/mysql"
+
+[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20090228-0714Z"
+if [[ "${MY_EXTRAS_VER}" == "live" ]]; then
+	EGIT_PROJECT=mysql-extras
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
+	inherit git
+fi
 
 case "${EAPI:-0}" in
 	2)
@@ -41,17 +52,6 @@ case "${EAPI:-0}" in
 	*)
 		die "Unsupported EAPI: ${EAPI}" ;;
 esac
-
-# Shorten the path because the socket path length must be shorter than 107 chars
-# and we will run a mysql server during test phase
-S="${WORKDIR}/mysql"
-
-[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20090228-0714Z"
-if [[ "${MY_EXTRAS_VER}" == "live" ]]; then
-	EGIT_PROJECT=mysql-extras
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
-	inherit git
-fi
 
 # @ECLASS-VARIABLE: MYSQL_VERSION_ID
 # @DESCRIPTION:
