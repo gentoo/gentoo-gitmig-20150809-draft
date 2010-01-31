@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.30 2010/01/02 14:20:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.31 2010/01/31 11:53:29 armin76 Exp $
+
+  31 Jan 2010; Raúl Porcel <armin76@gentoo.org> emacs-daemon-0.15.ebuild:
+  arm stable wrt #285525
 
   02 Jan 2010; Brent Baude <ranger@gentoo.org> emacs-daemon-0.15.ebuild:
   Marking emacs-daemon-0.15 ppc64 for bug 285525
