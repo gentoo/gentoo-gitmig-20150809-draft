@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/xc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.21 2008/10/18 09:15:32 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.22 2010/01/31 06:21:08 vapier Exp $
+
+*xc-4.3.2-r2 (31 Jan 2010)
+
+  31 Jan 2010; Mike Frysinger <vapier@gentoo.org> +xc-4.3.2-r2.ebuild,
+  files/xc-4.3.2-add-115200.patch, files/xc-4.3.2-gentoo.patch,
+  files/xc-4.3.2-implicit-decl.patch:
+  Fix multilib handling, more implicit decls, and improve crc output.
 
   18 Oct 2008; Alin Năstac <mrness@gentoo.org> -files/xc-4.3.2-gentoo.diff,
   +files/xc-4.3.2-gentoo.patch, xc-4.3.2-r1.ebuild:

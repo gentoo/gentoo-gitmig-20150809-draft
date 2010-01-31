@@ -1,7 +1,6 @@
-diff -ur xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
---- xc-4.3.2.orig/Makefile	1996-11-24 06:56:14.000000000 +0000
-+++ xc-4.3.2/Makefile	2008-10-18 09:06:12.000000000 +0000
-@@ -5,21 +5,23 @@
+--- xc-4.3.2/Makefile
++++ xc-4.3.2/Makefile
+@@ -5,21 +5,24 @@
  
  SHELL	= /bin/sh
  
@@ -15,7 +14,8 @@ diff -ur xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
 +#CC	= gcc 
 +GCCOPT	= -fno-strength-reduce 
  #GCCOPT	= -O -g
- CDEFS	= -D_POSIX_SOURCE=1
+-CDEFS	= -D_POSIX_SOURCE=1
++CDEFS	= -D_XOPEN_SOURCE
 -CFLAGS	= $(WARN) $(CDEFS) $(GCCOPT)
 +CFLAGS	+= $(WARN) $(CDEFS) $(GCCOPT)
  
@@ -25,6 +25,7 @@ diff -ur xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
  libdir	= $(prefix)/lib/xc 
 -mandir	= /usr/man/man1
 +mandir	= /usr/share/man
++man1dir = $(mandir)/man1
  catdir	= /var/catman/cat1
 -manown	= -o root -g man
 +manown	= -o root -g root
@@ -45,11 +46,11 @@ diff -ur xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
  
  xc:	$(OBJS) eline
 -	$(CC) $(CFLAGS) $(OBJS) -o xc $(LDFLAGS) 
-+	$(CC) $(LDFLAGS) $(OBJS) -o xc $(LIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o xc $(LIBS) 
  
  uninstall:
  	rm -f $(bindir)/xc $(mandir)/xc.1 $(catdir)/xc.1.*
-@@ -64,10 +66,10 @@
+@@ -64,10 +66,9 @@
  
  install: ./bin/xc ./bin/crc xc.1 crc.1
  	@echo " "
@@ -57,39 +58,46 @@ diff -ur xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
 -	$(INSTALL) $(binown) -m 755 -s ./bin/crc $(bindir) 
 -	$(INSTALL) $(manown) -m 644 xc.1 $(mandir)
 -	$(INSTALL) $(manown) -m 644 crc.1 $(mandir)
-+	$(INSTALL) $(binown) -m 755 ./bin/xc $(DESTDIR)$(bindir) 
-+	$(INSTALL) $(binown) -m 755 ./bin/crc $(DESTDIR)$(bindir) 
-+	$(INSTALL) $(manown) -m 644 xc.1 $(DESTDIR)$(mandir)/man1
-+	$(INSTALL) $(manown) -m 644 crc.1 $(DESTDIR)$(mandir)/man1
++	$(INSTALL) -d -m755 $(DESTDIR)$(bindir) $(DESTDIR)$(man1dir)
++	$(INSTALL) $(binown) -m 755 xc crc $(DESTDIR)$(bindir)
++	$(INSTALL) $(manown) -m 644 xc.1 crc.1 $(DESTDIR)$(man1dir)
  	@echo " "
  	@echo " "
  	@echo "You will want to manually install 'phonelist' and"
-@@ -113,7 +115,6 @@
- bin: xc crc
- 	cp  ./xc ./bin
- 	cp  ./crc ./bin
--	strip ./bin/xc ./bin/crc
- 
- #########################################
- ##  mostly unused stuff below here ... ##
-diff -ur xc-4.3.2.orig/xcsubs.c xc-4.3.2/xcsubs.c
---- xc-4.3.2.orig/xcsubs.c	1996-09-21 08:22:17.000000000 +0000
-+++ xc-4.3.2/xcsubs.c	2008-10-18 09:04:32.000000000 +0000
-@@ -23,7 +23,7 @@
+--- xc-4.3.2/xcsubs.c
++++ xc-4.3.2/xcsubs.c
+@@ -23,7 +23,6 @@
  	 *tgetstr(), *tgoto();
  int	LI,	/* One less than screen length in termcap entry */
  	CO;	/* Screen width */
 -speed_t ospeed; /* Used by termcap lib */
-+//speed_t ospeed; /* Used by termcap lib */
  static char tc[LG_BUFF];	/* termcap buffer */
  static char tbuf[LG_BUFF], *CD, *CF, *CL, *CM, *CN, *AE, *SE, *SO, *ME;
  char *CE, PC; /* used by termcap -- padding character */
-@@ -410,7 +410,7 @@
- {
- 	struct stat statbuf;
+
+limit the 32bit crc to 32bits
+
+add simple usage
+
+--- xc-4.3.2/crc.c
++++ xc-4.3.2/crc.c
+@@ -152,7 +152,7 @@ char *name;
+ 		}
+ 		crc32 = oldcrc32;  oldcrc = oldcrc32 = ~oldcrc32;
  
--	if (stat(pathname,&statbuf) || (statbuf.st_mode & S_IFMT) != S_IFREG)
-+	if (stat(pathname,&statbuf) || (statbuf.st_mode & __S_IFMT) != __S_IFREG)
- 		return NIL(FILE);
- 	return fopen(pathname, "r");
- }
+-		printf("%08lx %7ld ", oldcrc, charcnt);
++		printf("%08lx %7ld ", oldcrc & 0xffffffff, charcnt);
+ 		if (Block == 128)
+ 			printf("%5ld+%3ld ", charcnt/Block, charcnt%Block);
+ 		if (Block == 1024)
+@@ -170,6 +170,10 @@ char **argv;
+ {
+     register errors = 0;
+ 
++    if (argc == 1) {
++	puts("Usage: crc [-x|-k] <files>\n  -x  pad to 128 bytes\n  -k  pad to 1024 bytes");
++	exit(0);
++    }
+     if (argc > 1) {
+ 	if (!strcmp(argv[1], "-x")) {
+ 	    Block = 128;
