@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.124 2010/01/31 19:04:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.125 2010/01/31 19:49:45 tove Exp $
+
+  31 Jan 2010; Torsten Veller <tove@gentoo.org> courier-0.59.0.ebuild,
+  courier-0.60.0.ebuild, courier-0.61.1.ebuild, courier-0.61.2.ebuild:
+  Change vecho to echo
 
 *courier-0.64.0 (31 Jan 2010)
 

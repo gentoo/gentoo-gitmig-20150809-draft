@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.60.0.ebuild,v 1.3 2009/12/26 17:37:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.60.0.ebuild,v 1.4 2010/01/31 19:49:45 tove Exp $
 
 inherit eutils flag-o-matic
 
@@ -241,7 +241,7 @@ src_install() {
 
 src_test() {
 	addpredict /
-	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	if hasq userpriv "${FEATURES}" ; then
 		if ! emake -j1 check; then
 			hasq test "${FEATURES}" && die "Make check failed. See above for details."
