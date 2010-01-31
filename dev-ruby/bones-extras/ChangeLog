@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/bones-extras
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones-extras/ChangeLog,v 1.1 2010/01/31 13:56:05 flameeyes Exp $
+
+*bones-extras-1.2.2 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +bones-extras-1.2.2.ebuild, +metadata.xml:
+  Initial import of bones and related dependencies.
+
