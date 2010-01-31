@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.40.ebuild,v 1.5 2010/01/31 11:45:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.40-r1.ebuild,v 1.1 2010/01/31 11:45:10 ulm Exp $
+
+EAPI=3
 
 inherit elisp eutils
 
@@ -10,7 +12,7 @@ SRC_URI="mirror://sourceforge/ecb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java"
 
 DEPEND=">=app-emacs/cedet-1.0_pre6
@@ -19,21 +21,18 @@ RDEPEND="${DEPEND}"
 
 SITEFILE="70${PN}-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.32-gentoo.patch"
 	sed -i -e "s:@PF@:${PF}:" ecb-help.el || die "sed failed"
 }
 
 src_compile() {
-	local loadpath=""
+	local loadpath="" sl=${EPREFIX}${SITELISP}
 	if use java; then
-		loadpath="${SITELISP}/elib ${SITELISP}/jde ${SITELISP}/jde/lisp"
+		loadpath="${sl}/elib ${sl}/jde ${sl}/jde/lisp"
 	fi
 
-	emake CEDET="${SITELISP}/cedet" LOADPATH="${loadpath}" \
-		|| die "emake failed"
+	emake CEDET="${sl}/cedet" LOADPATH="${loadpath}" || die "emake failed"
 }
 
 src_install() {
