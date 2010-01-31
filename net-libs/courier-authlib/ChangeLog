@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.106 2010/01/07 19:52:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.107 2010/01/31 19:00:25 hanno Exp $
+
+*courier-authlib-0.63.0 (31 Jan 2010)
+
+  31 Jan 2010; Hanno Boeck <hanno@gentoo.org>
+  +courier-authlib-0.63.0.ebuild:
+  Version bump, don't call install-migrate (there shouldn't be any
+  pre-authlib installations around any more and it causes access
+  violations), depend on postgresql 8.4 to avoid amd64 compilation issues
+  within the libpq-headers.
 
   07 Jan 2010; Brent Baude <ranger@gentoo.org>
   courier-authlib-0.62.4.ebuild:
