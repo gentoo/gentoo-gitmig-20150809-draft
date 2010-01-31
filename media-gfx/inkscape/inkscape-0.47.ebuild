@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.8 2010/01/14 06:58:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.9 2010/01/31 12:32:21 maekke Exp $
 
 EAPI=2
-inherit gnome2
+inherit eutils gnome2
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -74,6 +74,12 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable mmx)"
 	G2CONF="${G2CONF} $(use_enable nls)"
 	DOCS="AUTHORS ChangeLog NEWS README*"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-poppler.patch
+
+	gnome2_src_prepare
 }
 
 pkg_postinst() {
