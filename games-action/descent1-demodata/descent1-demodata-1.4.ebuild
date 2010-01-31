@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.3 2007/02/22 05:16:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.4 2010/01/31 05:08:20 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ DEMO="desc${MY_PV}sw.exe"
 DESCRIPTION="Demo data files for Descent 1"
 HOMEPAGE="http://en.wikipedia.org/wiki/Descent_%28computer_game%29"
 SRC_URI="http://icculus.org/d2x/data/${DEMO}
-	ftp://ftp.planetmirror.com/pub/3dgamers/games/descent/${DEMO}
+	mirror://3dgamers/descent/${DEMO}
 	ftp://ftp.funet.fi/pub/msdos/games/interplay/${DEMO}"
 
 # See readme.txt
