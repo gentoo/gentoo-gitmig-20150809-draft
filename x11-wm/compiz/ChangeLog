@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/compiz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.49 2009/12/20 15:20:25 mrpouet Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.50 2010/01/31 16:49:44 mrpouet Exp $
+
+*compiz-0.8.4-r1 (31 Jan 2010)
+
+  31 Jan 2010; Romain Perier <mrpouet@gentoo.org> +compiz-0.8.4-r1.ebuild,
+  +files/compiz-0.8.4-crash-on-opening-windows.patch,
+  +files/compiz-0.8.4-place-plugin.patch:
+  Fix crash on opening windows, and placement mode. Replace URI per a bziped
+  tarball, per bug #302308. Many thanks to Denilson.
 
   20 Dec 2009; Romain Perier <mrpouet@gentoo.org> -compiz-0.8.2.ebuild:
   Clean up old version
