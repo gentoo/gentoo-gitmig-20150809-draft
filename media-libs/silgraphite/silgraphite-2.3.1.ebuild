@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.3 2010/01/27 04:24:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.4 2010/01/31 02:51:13 abcd Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="|| ( CPL-0.5 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="pango truetype xft"
 
 RDEPEND="xft? ( x11-libs/libXft )
