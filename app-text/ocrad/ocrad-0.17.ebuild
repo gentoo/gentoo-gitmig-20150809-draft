@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.17.ebuild,v 1.5 2009/09/23 16:36:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.17.ebuild,v 1.6 2010/01/31 20:43:27 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU Ocrad is an OCR (Optical Character Recognition) program"
 HOMEPAGE="http://www.gnu.org/software/ocrad/ocrad.html"
 SRC_URI="http://savannah.nongnu.org/download/ocrad/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86"
 IUSE=""

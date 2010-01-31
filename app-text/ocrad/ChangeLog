@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ocrad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.31 2010/01/30 18:50:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.32 2010/01/31 20:43:27 jer Exp $
+
+  31 Jan 2010; Jeroen Roovers <jer@gentoo.org> ocrad-0.17.ebuild,
+  ocrad-0.18.ebuild:
+  Correct LICENSE.
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> ocrad-0.18.ebuild:
   Add ~alpha/~sparc wrt #300562
