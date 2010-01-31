@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0.ebuild,v 1.2 2010/01/02 09:57:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0.1.ebuild,v 1.1 2010/01/31 01:37:42 anarchy Exp $
 EAPI="2"
 
 inherit eutils multilib mozextension
@@ -44,6 +44,7 @@ RDEPEND="x11-libs/libXrender
 	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
+		net-misc/curl[nss]
 	)
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
@@ -128,18 +129,10 @@ pkg_postinst() {
 	#elog "  http://enigmail.mozdev.org/"
 
 	if use x86; then
-		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
-			|| ! has_version 'net-misc/curl'; then
+		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' ; then
 			einfo
 			einfo "For using the crashreporter, you need gnome-base/gconf,"
 			einfo "gnome-base/orbit and net-misc/curl emerged."
-			einfo
-		fi
-		if has_version 'net-misc/curl' && built_with_use --missing \
-			true 'net-misc/curl' nss; then
-			einfo
-			einfo "Crashreporter won't be able to send reports"
-			einfo "if you have curl emerged with the nss USE-flag"
 			einfo
 		fi
 	else
@@ -151,8 +144,8 @@ pkg_postinst() {
 	fi
 
 	einfo
-	elog "We have moved away from mozilla-launcher, as it has major design flaws."
-	elog "You will need to update your symlinks to use thunderbird-bin as the executable"
-	elog "to launch thunderbird-bin. If you are used to just typing thunderbird to start, you"
-	elog "can create an alias in your ${HOME}/.bashrc. Example: alias thunderbird="thunderbird-bin""
+	elog 'We have moved away from mozilla-launcher, as it has major design flaws.'
+	elog 'You will need to update your symlinks to use thunderbird-bin as the executable'
+	elog 'to launch thunderbird-bin. If you are used to just typing thunderbird to start, you'
+	elog 'can create an alias in your ${HOME}/.bashrc. Example: alias thunderbird="thunderbird-bin"'
 }
