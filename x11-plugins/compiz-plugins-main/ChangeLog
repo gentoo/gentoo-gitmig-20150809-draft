@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.9 2009/12/23 02:47:00 jmbsvicetto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.10 2010/01/31 17:00:45 mrpouet Exp $
+
+*compiz-plugins-main-0.8.4-r1 (31 Jan 2010)
+
+  31 Jan 2010; Romain Perier <mrpouet@gentoo.org>
+  +compiz-plugins-main-0.8.4-r1.ebuild,
+  +files/compiz-plugins-main-0.8.4-put-plugin.patch:
+  Handle windows that have server border set properly (put plugin),
+  per bug #302308. Many thanks to Denilson.
 
   23 Dec 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   compiz-plugins-main-0.8.4.ebuild:
