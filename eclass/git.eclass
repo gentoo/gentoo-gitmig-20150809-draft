@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.39 2010/01/25 17:15:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.40 2010/01/31 10:05:57 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -20,8 +20,8 @@ EGIT="git.eclass"
 
 EXPORTED_FUNCTIONS="src_unpack"
 case "${EAPI:-0}" in
-	2) EXPORTED_FUNCTIONS="${EXPORTED_FUNCTIONS} src_prepare" ;;
-	0|1) ;;
+	3|2) EXPORTED_FUNCTIONS="${EXPORTED_FUNCTIONS} src_prepare" ;;
+	1|0) ;;
 	*) die "Unknown EAPI, Bug eclass maintainers." ;;
 esac
 EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
