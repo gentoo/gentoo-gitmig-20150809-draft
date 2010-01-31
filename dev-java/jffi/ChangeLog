@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.9 2010/01/24 20:56:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.10 2010/01/31 16:32:07 flameeyes Exp $
+
+*jffi-0.7_pre20100131 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +jffi-0.7_pre20100131.ebuild, +files/jffi-0.7-makefile-flags.patch:
+  Add a snapshot from upstream, this time the path to the library is
+  injected at build-time so that it does not have to be defined at runtime.
 
   24 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> jffi-0.6.0.2-r1.ebuild:
   Filter ecj.
