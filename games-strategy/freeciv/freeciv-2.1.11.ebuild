@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.11.ebuild,v 1.1 2010/01/31 07:27:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.11.ebuild,v 1.2 2010/01/31 21:19:36 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -60,16 +60,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# install locales in /usr/share/locale
-	#sed -i \
-		#-e 's:^\(localedir = \).*:\1/usr/share/locale:' \
-		#intl/Makefile.in po/Makefile.in.in \
-		#|| die "sed failed"
-	#sed -i \
-		#-e 's:$datadir/locale:/usr/share/locale:' \
-		#configure \
-		#|| die "sed failed"
-
 	# change .desktop category so it's freedesktop complient
 	sed -i \
 		-e '/Icon/ s:\.png::' \
