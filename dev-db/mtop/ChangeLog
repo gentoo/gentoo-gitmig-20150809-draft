@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mtop
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/ChangeLog,v 1.9 2007/02/22 01:06:26 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/ChangeLog,v 1.10 2010/01/31 07:51:18 robbat2 Exp $
+
+*mtop-0.6.6-r1 (31 Jan 2010)
+
+  31 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> +mtop-0.6.6-r1.ebuild,
+  +files/mtop-0.6.6-globalstatusfix.patch:
+  Bug #296186: Revbump with fix to use SHOW GLOBAL STATUS for QPS count,
+  like similar patch in mytop. Upstream no longer maintains mtop, you should
+  probably move to mytop instead.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
