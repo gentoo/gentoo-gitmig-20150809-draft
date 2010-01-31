@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.49 2010/01/31 22:11:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.50 2010/01/31 22:30:16 jlec Exp $
+
+  31 Jan 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  -files/1.1/pymol-1.1-r2-data-path.patch,
+  -files/1.1/pymol-1.1-r2-shaders.patch, -files/1.1/apbs-070604.patch.bz2,
+  -files/1.1/nosplash-gentoo.patch:
+  Cleanup of forgotten files, fixes bug 274865
+  Added myself as maintainer
 
   31 Jan 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> pymol-1.2.1.ebuild,
   pymol-1.2.2.ebuild, metadata.xml:
