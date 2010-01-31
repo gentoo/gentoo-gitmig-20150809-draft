@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.10.91.9.3-r3.ebuild,v 1.2 2010/01/23 17:15:02 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.10.91.9.3-r3.ebuild,v 1.3 2010/01/31 18:12:45 lxnay Exp $
 
 inherit eutils linux-mod
 
@@ -30,7 +30,10 @@ pkg_setup() {
 	check_license
 
 	# bug #300570
-	CONFIG_CHECK="!B43 !SSB"
+	# NOTE<lxnay>: module builds correctly anyway with b43 and SSB enabled
+	# make checks non-fatal. The correct fix is blackisting ssb and, perhaps
+	# b43 via udev rules. Moreover, previous fix broke binpkgs support.
+	CONFIG_CHECK="~!B43 ~!SSB"
 	if kernel_is ge 2 6 33; then
 		#CONFIG_CHECK="${CONFIG_CHECK} LIB80211 CFG80211_WEXT WEXT_PRIV ~!MAC80211"
 		CONFIG_CHECK="${CONFIG_CHECK} LIB80211 WIRELESS_EXT CFG80211_WEXT WEXT_PRIV ~!MAC80211"
