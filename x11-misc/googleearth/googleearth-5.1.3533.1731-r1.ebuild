@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.2 2009/11/22 10:54:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.3 2010/01/31 02:24:40 caster Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror strip"
-IUSE=""
+IUSE="qt-bundled"
 
 GCC_NEEDED="4.2"
 
@@ -36,14 +36,17 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 		x11-libs/libXdmcp
 		sys-libs/zlib
 		dev-libs/glib:2
+		!qt-bundled? (
+			>=x11-libs/qt-core-4.5.3
+			>=x11-libs/qt-gui-4.5.3
+			>=x11-libs/qt-webkit-4.5.3
+		)
 	)
 	amd64? (
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-baselibs
-		|| (
-			>=app-emulation/emul-linux-x86-xlibs-7.0
-			x11-drivers/nvidia-drivers
-			<x11-drivers/ati-drivers-8.28.8
+		>=app-emulation/emul-linux-x86-xlibs-20081109
+		>=app-emulation/emul-linux-x86-baselibs-20081109
+		!qt-bundled? (
+			>=app-emulation/emul-linux-x86-qtlibs-20091231
 		)
 	)
 	|| (
@@ -113,6 +116,10 @@ src_install() {
 
 	cd "${D}"/opt/${PN}
 	tar xf "${WORKDIR}"/${PN}-data.tar
+
+	if ! use qt-bundled; then
+		rm -rvf libQt{Core,Gui,Network,WebKit}.so.4 plugins/imageformats qt.conf || die
+	fi
 
 	fowners -R root:root /opt/${PN}
 	fperms -R a-x,a+X /opt/googleearth/resources
