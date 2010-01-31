@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.28.ebuild,v 1.2 2009/05/05 23:35:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.28.ebuild,v 1.3 2010/01/31 19:51:20 tove Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_install() {
 }
 
 src_test() {
-	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	emake test || die "tests failed"
-	vecho ">>> Test phase [none]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [none]: ${CATEGORY}/${PF}"
 }
