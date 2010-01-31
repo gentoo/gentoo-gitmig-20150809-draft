@@ -1,6 +1,12 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.7 2010/01/11 11:13:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.8 2010/01/31 17:21:26 flameeyes Exp $
+
+*rubygems-0-r2 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +rubygems-0-r2.ebuild:
+  New virtual that uses rubygems[jruby] to provide RubyGems on JRuby.
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> rubygems-0.ebuild,
   rubygems-0-r1.ebuild:
