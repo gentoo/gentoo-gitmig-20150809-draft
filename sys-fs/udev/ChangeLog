@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.523 2010/01/29 21:14:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.524 2010/01/31 21:38:17 zzam Exp $
+
+  31 Jan 2010; Matthias Schwarzott <zzam@gentoo.org> udev-151.ebuild:
+  Fix install error, bug #302903. Removed old code for multilib-installs.
 
 *udev-151 (29 Jan 2010)
 
