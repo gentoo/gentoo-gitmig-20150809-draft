@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.443 2010/02/01 18:40:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.444 2010/02/01 19:14:45 jer Exp $
+
+  01 Feb 2010; Jeroen Roovers <jer@gentoo.org> opera-10.50_pre6201.ebuild,
+  opera-10.50_pre6204.ebuild:
+  Add die() when dobin fails. Use mv again instead of doins to preserve
+  filename permissions thanks to Jochen (bug #303066).
 
 *opera-10.50_pre6204 (01 Feb 2010)
 

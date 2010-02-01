@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.4 2010/02/01 18:40:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.5 2010/02/01 19:14:45 jer Exp $
 
 EAPI="2"
 
@@ -117,12 +117,12 @@ src_prepare() {
 
 src_install() {
 	# This alpha build hardcodes /usr as prefix
-	doins -r etc/ usr/
+	mv etc/ usr/ "${D}"/ || die "mv etc/ usr/ failed"
 
 	make_desktop_entry ${PN} Opera ${PN} # TODO
 
 	# Install startup script
-	dobin ${PN}
+	dobin ${PN} || die "dobin failed"
 
 	# Stop revdep-rebuild from checking opera binaries
 	dodir /etc/revdep-rebuild
