@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/putty
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.44 2009/08/18 15:22:47 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.45 2010/02/01 00:55:50 jer Exp $
+
+*putty-0.60_p20100131 (01 Feb 2010)
+
+  01 Feb 2010; Jeroen Roovers <jer@gentoo.org> +putty-0.60_p20100131.ebuild,
+  metadata.xml:
+  Snapshot version bump for GTK+ v2 support thanks to Iskren Slavov (bug
+  #302860). Maintain it too.
 
   18 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> putty-0.60.ebuild:
   Adding die to helper functions, bug #281323
