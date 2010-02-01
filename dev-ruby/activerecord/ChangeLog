@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.129 2010/01/25 17:10:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.130 2010/02/01 16:45:59 flameeyes Exp $
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  activerecord-2.3.5-r1.ebuild:
+  Add JRuby support, and yes the dependencies here are quite… funny.
 
   25 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   activerecord-2.3.5-r1.ebuild:
