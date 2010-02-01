@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hwinfo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.10 2008/07/16 12:59:19 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.11 2010/02/01 06:58:56 robbat2 Exp $
+
+*hwinfo-16.0 (01 Feb 2010)
+
+  01 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> +hwinfo-16.0.ebuild,
+  +files/hwinfo-16.0-parallel-fixes.patch:
+  Version bump per bug #266745. Avoid kernel header issues per bug #236449.
+  I know the last part of the build is forced non-parallel. It is not
+  trivially fixable. Tell repoman to get lost.
 
   16 Jul 2008; nixnut <nixnut@gentoo.org> hwinfo-13.28.ebuild:
   Stable on ppc wrt bug 231667
