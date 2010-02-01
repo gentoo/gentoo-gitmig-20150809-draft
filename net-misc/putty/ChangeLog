@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.45 2010/02/01 00:55:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.46 2010/02/01 13:08:05 jer Exp $
+
+  01 Feb 2010; Jeroen Roovers <jer@gentoo.org> putty-0.60_p20100131.ebuild:
+  Remove default CFLAGS (bug #303077).
 
 *putty-0.60_p20100131 (01 Feb 2010)
 
