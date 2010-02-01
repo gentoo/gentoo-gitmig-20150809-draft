@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea6-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.13 2010/01/22 10:25:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.14 2010/02/01 09:13:41 caster Exp $
+
+*icedtea6-bin-1.7 (01 Feb 2010)
+
+  01 Feb 2010; Vlastimil Babka <caster@gentoo.org> +icedtea6-bin-1.7.ebuild:
+  Version bump. Contains new IcedTeaNPPlugin compatible with xulrunner 1.9.1
+  and 1.9.2, Firefox 3.5+, Chromium. Also compatible with both jpeg-7 and
+  jpeg-8 - the ebuild detects the installed version in src_unpack().
 
 *icedtea6-bin-1.6.2-r2 (22 Jan 2010)
 
