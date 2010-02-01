@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-391.ebuild,v 1.1 2010/02/01 18:36:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-391.ebuild,v 1.2 2010/02/01 22:37:52 jer Exp $
 
 inherit qt4
 
@@ -23,15 +23,14 @@ RDEPEND="${DEPEND}
 		 app-arch/p7zip"
 
 src_compile() {
-	lupdate unetbootin.pro
-	lrelease unetbootin.pro
-	eqmake4 unetbootin.pro
+	lupdate unetbootin.pro || die "lupdate failed"
+	lrelease unetbootin.pro || die "lrelease failed"
+	eqmake4 unetbootin.pro || die "eqmake4 failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	dodoc README.TXT
 	dobin unetbootin || die "dobin failed"
 	insinto /usr/share/applications
-	doins unetbootin.desktop
+	doins unetbootin.desktop || die "doins failed"
 }
