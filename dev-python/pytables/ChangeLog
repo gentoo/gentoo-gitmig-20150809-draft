@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.32 2010/01/19 16:49:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.33 2010/02/01 20:40:05 bicatali Exp $
+
+  01 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  pytables-2.1.2.ebuild:
+  Added an mpi keyword to actually use mpi wrappers when hdf5 was compiled
+  with mpi support
 
   19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org>
   pytables-2.1.2.ebuild, +files/pytables-2.1.2-no-old-num.patch:
