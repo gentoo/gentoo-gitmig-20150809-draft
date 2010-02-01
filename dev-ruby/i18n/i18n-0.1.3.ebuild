@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.1.3.ebuild,v 1.1 2010/01/18 18:40:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.1.3.ebuild,v 1.2 2010/02/01 16:44:37 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 

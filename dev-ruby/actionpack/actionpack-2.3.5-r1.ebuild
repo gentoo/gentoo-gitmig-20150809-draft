@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.5-r1.ebuild,v 1.7 2010/01/25 17:12:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.5-r1.ebuild,v 1.8 2010/02/01 16:41:04 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 jruby"
 
 # The default test task tries to test activerecord with SQLite as well.
 RUBY_FAKEGEM_TASK_TEST="test_action_pack"
