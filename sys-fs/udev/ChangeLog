@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.524 2010/01/31 21:38:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.525 2010/02/01 20:53:59 zzam Exp $
+
+*udev-151-r1 (01 Feb 2010)
+*udev-150-r1 (01 Feb 2010)
+
+  01 Feb 2010; Matthias Schwarzott <zzam@gentoo.org> -udev-150.ebuild,
+  +udev-150-r1.ebuild, +files/udev-150-fix-missing-firmware-timeout.diff,
+  -udev-151.ebuild, +udev-151-r1.ebuild:
+  Fix missing firmware timeout, to stop modprobe from waiting 60s for no
+  file stretching boot very long, Bug #301667.
 
   31 Jan 2010; Matthias Schwarzott <zzam@gentoo.org> udev-151.ebuild:
   Fix install error, bug #302903. Removed old code for multilib-installs.
