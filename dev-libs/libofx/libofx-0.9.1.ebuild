@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.1.ebuild,v 1.7 2010/01/19 14:35:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.1.ebuild,v 1.8 2010/02/01 09:06:47 ssuominen Exp $
 
-EAPI="1"
-
+EAPI=1
 inherit eutils
 
 DESCRIPTION="Library to support the Open Financial eXchange XML Format"
@@ -19,7 +18,6 @@ DEPEND=">=app-text/opensp-1.5
 	 >=net-misc/curl-7.9.7
 	dev-cpp/libxmlpp:0
 	dev-libs/libxml2"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -41,18 +39,11 @@ src_unpack() {
 			"${S}/Makefile.in" || die "sed failed"
 	fi
 
-	# Fix compilation with gcc 4.3, see bug #218782
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.9.0-gcc43.patch"
+	epatch "${FILESDIR}"/${PN}-0.9.0-gcc43.patch
 }
 
 src_install() {
 	dodir /usr/share/doc/${PF}
-	emake install DESTDIR="${D}" docdir="/usr/share/doc/${PF}" || die 'install failed'
-}
-
-pkg_postinst() {
-	elog "Please run"
-	elog "  revdep-rebuild --library libofx.so.3"
-	elog "to rebuild packages linked against an older version of libofx."
+	emake install DESTDIR="${D}" docdir="/usr/share/doc/${PF}" || die
 }
