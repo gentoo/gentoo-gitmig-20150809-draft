@@ -1,6 +1,14 @@
 # ChangeLog for app-text/unrtf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.38 2010/01/02 11:44:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.39 2010/02/01 06:40:31 robbat2 Exp $
+
+*unrtf-0.21.1 (01 Feb 2010)
+
+  01 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> +unrtf-0.21.1.ebuild,
+  +files/unrtf-0.21.1-automake-fix.patch:
+  Bug #302284 version bump. Include patch to fix upstream putting config
+  files in /usr/local/lib, and fix the testsuite to use the non-installed
+  copy of them as well.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> unrtf-0.20.5.ebuild:
   Transfer Prefix keywords
