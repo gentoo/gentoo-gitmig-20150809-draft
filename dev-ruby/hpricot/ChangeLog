@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.19 2010/01/16 08:33:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.20 2010/02/01 16:39:24 flameeyes Exp $
+
+*hpricot-0.8.2-r1 (01 Feb 2010)
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +hpricot-0.8.2-r1.ebuild, +files/hpricot-0.8.2-jruby.patch:
+  Add a patch to fix a big bug on JRuby.
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org> hpricot-0.8.2.ebuild:
   Transfer Prefix keywords
