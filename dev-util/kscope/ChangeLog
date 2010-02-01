@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.49 2010/01/02 21:05:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.50 2010/02/01 17:48:01 hwoarang Exp $
+
+  01 Feb 2010; Markos Chandras <hwoarang@gentoo.org> kscope-1.9.4.ebuild:
+  Various clean up and installation fixes based on new qscintilla
+  installation paths
 
   02 Jan 2010; Ben de Groot <yngwin@gentoo.org> kscope-1.9.4.ebuild:
   Drop no longer needed use dep on qt4
