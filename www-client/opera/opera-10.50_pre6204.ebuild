@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6201.ebuild,v 1.4 2010/02/01 18:40:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6204.ebuild,v 1.1 2010/02/01 18:40:33 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.10 LGPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 RESTRICT="mirror test"
 
@@ -37,7 +37,8 @@ O_P="${P/_pre/-}"
 SRC_URI="
 	amd64? ( ${O_U}${O_P}.linux.x86_64.tar.bz2 )
 	x86? ( ${O_U}${O_P}.linux.i386.tar.bz2 )
-	"
+	x86-fbsd? ( ${O_U}${O_P}.freebsd.i386.tar.bz2 )
+"
 
 DEPEND=">=sys-apps/sed-4"
 

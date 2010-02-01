@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.442 2010/01/30 17:46:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.443 2010/02/01 18:40:33 jer Exp $
+
+*opera-10.50_pre6204 (01 Feb 2010)
+
+  01 Feb 2010; Jeroen Roovers <jer@gentoo.org> opera-10.50_pre6201.ebuild,
+  +opera-10.50_pre6204.ebuild:
+  Version bump <http://my.opera.com/desktopteam/blog/new-snapshot>.
 
   30 Jan 2010; Jeroen Roovers <jer@gentoo.org> opera-10.50_pre6201.ebuild:
   Use canonical install function instead of mv.
