@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.501 2010/01/31 22:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.502 2010/02/01 01:19:32 robbat2 Exp $
+
+*mysql-5.1.43 (01 Feb 2010)
+*mysql-5.1.42 (01 Feb 2010)
+*mysql-5.1.41 (01 Feb 2010)
+*mysql-5.1.39 (01 Feb 2010)
+
+  01 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.39.ebuild,
+  +mysql-5.1.41.ebuild, +mysql-5.1.42.ebuild, +mysql-5.1.43.ebuild:
+  Bring in 5.1 series again from the overlay. 5.1.39 includes working
+  Percona XtraDB. 5.1.42 should have XtraDB, but it does not compile. 5.1.43
+  is the latest from upstream, for security vulns. MANY thanks to
+  jmbsvicetto for all the work he has put in helping on 5.1 updates.
 
   31 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.54.ebuild,
   mysql-5.0.70-r1.ebuild, mysql-5.0.72.ebuild, mysql-5.0.72-r1.ebuild,
