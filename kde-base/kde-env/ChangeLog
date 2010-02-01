@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.64 2010/01/30 03:33:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.65 2010/02/01 01:14:00 abcd Exp $
+
+  01 Feb 2010; Jonathan Callen <abcd@gentoo.org> kde-env-4.3.5-r1.ebuild:
+  Remove dep on cmake, port changes from kde overlay
 
 *kde-env-4.3.5-r1 (30 Jan 2010)
 *kde-env-4.3.4-r1 (30 Jan 2010)

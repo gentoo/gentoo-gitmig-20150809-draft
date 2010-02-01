@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.5-r1.ebuild,v 1.1 2010/01/30 03:33:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.3.5-r1.ebuild,v 1.2 2010/02/01 01:14:00 abcd Exp $
 
 EAPI="2"
 
+CMAKE_REQUIRED="never"
 KDE_REQUIRED="never"
 inherit kde4-base
 
@@ -17,21 +18,10 @@ IUSE=""
 
 add_blocker kdelibs 4.2.2-r1 '<3.5.10-r3:3.5' 4.2.70:4.3
 
-src_unpack() {
-	:
-}
+S=${WORKDIR}
 
-src_prepare() {
-	:
-}
-
-src_configure() {
-	:
-}
-
-src_compile() {
-	:
-}
+src_unpack() { :; }
+src_prepare() { :; }
 
 src_install() {
 	if use kdeprefix; then
@@ -43,7 +33,7 @@ src_install() {
 		_libdirs=${_libdirs#:}
 
 		# number goes down with version
-		cat <<-EOF > "${T}/43kdepaths-${SLOT}"
+		cat <<-EOF > 43kdepaths-${SLOT}
 PATH="${EKDEDIR}/bin"
 ROOTPATH="${EKDEDIR}/sbin:${EKDEDIR}/bin"
 LDPATH="${_libdirs}"
@@ -53,35 +43,27 @@ CONFIG_PROTECT="${KDEDIR}/share/config ${KDEDIR}/env ${KDEDIR}/shutdown /usr/sha
 PKG_CONFIG_PATH="${EKDEDIR}/$(get_libdir)/pkgconfig"
 XDG_DATA_DIRS="${EKDEDIR}/share"
 EOF
-		doenvd "${T}/43kdepaths-${SLOT}"
-		cat <<-EOF > "${T}/50-kde-${SLOT}"
+		doenvd 43kdepaths-${SLOT}
+		cat <<-EOF > 50-kde-${SLOT}
 SEARCH_DIRS="${EKDEDIR}/bin ${EKDEDIR}/lib*"
 EOF
 		insinto /etc/revdep-rebuild
-		doins "${T}/50-kde-${SLOT}"
+		doins 50-kde-${SLOT}
 
 		# kdeglobals needed to make third party apps installed in /usr work
-		cat <<-EOF > "${T}/kdeglobals"
+		cat <<-EOF > kdeglobals
 [Directories][\$i]
 prefixes=${EPREFIX}/usr
 EOF
 		insinto ${KDEDIR}/share/config
-		doins "${T}/kdeglobals"
+		doins kdeglobals
 	else
 		# Much simpler for the FHS compliant -kdeprefix install
 		# number goes down with version
-		cat <<-EOF > "${T}/43kdepaths"
+		cat <<-EOF > 43kdepaths
 CONFIG_PROTECT="/usr/share/config"
 #KDE_IS_PRELINKED=1
 EOF
-		doenvd "${T}/43kdepaths"
+		doenvd 43kdepaths
 	fi
-}
-
-pkg_preinst() {
-	:
-}
-
-src_test() {
-	:
 }
