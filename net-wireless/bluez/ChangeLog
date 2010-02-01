@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.21 2010/01/14 01:24:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.22 2010/02/01 19:47:45 pacho Exp $
+
+*bluez-4.60 (01 Feb 2010)
+
+  01 Feb 2010; Pacho Ramos <pacho@gentoo.org> +files/4.60/bluetooth-conf.d,
+  +files/4.60/bluetooth-init.d, +files/4.60/cups-location.patch,
+  +bluez-4.60.ebuild:
+  Version bump (bug 270859), includes lots of bugfixes, thanks to Gustavo F.
+  Padovan, Davide Pesavento, James Le Cuirot, Matthew Schultz, rg b,
+  emerald, Eric Smith... and probably more people I forgot. Dropped keywords
+  for some arches due new depend on sys-libs/libcap-ng (bug 284655)
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> bluez-4.39-r2.ebuild:
   Stable for HPPA (bug #284661).
