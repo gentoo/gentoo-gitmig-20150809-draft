@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.40 2010/01/30 08:29:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.41 2010/02/01 11:24:28 flameeyes Exp $
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  fcgi-2.4.1_pre0910052249.ebuild,
+  +files/fcgi-2.4.1_pre0910052249-link.patch:
+  Properly link and install libfcgi++. Closes bug #157821 after over three
+  years. Rejoice.
 
 *fcgi-2.4.1_pre0910052249 (30 Jan 2010)
 
