@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5227 2010/02/01 01:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5228 2010/02/01 05:29:02 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1914,13 +1914,11 @@ media-video/mplayer:external-ffmpeg - Use shared FFmpeg libraries instead of sta
 media-video/mplayer:faac - Use external faac library for AAC encoding
 media-video/mplayer:faad - Use external faad library for AAC decoding
 media-video/mplayer:gmplayer - Build gmplayer, a GTK+ MPlayer gui (UNSUPPORTED)
-media-video/mplayer:gtk - Build gmplayer, a GTK+ MPlayer gui (UNSUPPORTED)
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
 media-video/mplayer:mng - MNG input support
 media-video/mplayer:mp2 - Enables support for twolame, an MP2 audio library
-media-video/mplayer:nemesi - Enable Nemesi Streaming Media support
 media-video/mplayer:network - Enables network streaming support
 media-video/mplayer:nut - Enables support for the NUT container format
 media-video/mplayer:opencore-amr - Enables Adaptive Multi-Rate format support
