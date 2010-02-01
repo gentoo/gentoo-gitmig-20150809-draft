@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.127 2010/02/01 01:07:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.128 2010/02/01 19:16:06 hanno Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -85,7 +85,7 @@ elif [ "${PV#5.0}" != "${PV}" ] && mysql_version_is_at_least "5.0.82"; then
 	MYSQL_COMMUNITY_FEATURES=1
 elif [ "${PV#5.1}" != "${PV}" ] && mysql_version_is_at_least "5.1.28"; then
 	MYSQL_COMMUNITY_FEATURES=1
-elif [ "${PV#5.4}" != "${PV}" ]; then
+elif [ "${PV#5.4}" != "${PV}" ] || [ "${PV#5.4}" != "${PV}" ]; then
 	MYSQL_COMMUNITY_FEATURES=1
 else
 	MYSQL_COMMUNITY_FEATURES=0
@@ -504,7 +504,7 @@ configure_51() {
 		myconf="${myconf} --with-ndb-binlog"
 	fi
 
-	if mysql_version_is_at_least "5.2" ; then
+	if [ -e "${S}/storage/falcon" ] ; then
 		plugins="${plugins},falcon"
 	fi
 
