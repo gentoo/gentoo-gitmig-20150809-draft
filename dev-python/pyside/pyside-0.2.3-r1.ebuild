@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.3.ebuild,v 1.2 2010/01/26 20:32:22 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.2.3-r1.ebuild,v 1.1 2010/02/01 20:34:42 ayoy Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-qtscripttools.patch"
-	sed -e 's:cmake-${CMAKE_MAJOR_VERSION}\.${CMAKE_MINOR_VERSION}:cmake:' \
+	sed -e 's:cmake-2\.6:cmake:' \
 	    -i data/CMakeLists.txt || die "sed failed"
 
 	# bug 301747
