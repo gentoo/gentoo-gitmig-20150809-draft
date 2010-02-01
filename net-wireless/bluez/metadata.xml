@@ -22,6 +22,7 @@
 			logged in locally or remotely</flag>
 		<flag name='old-daemons'>Install old daemons like hidd and sdpd that are
 			deprecated by the new Service framework</flag>
-		<flag name='test-programs'>Install l2test and rctest</flag>
+		<flag name='test-programs'>Install tools for testing of
+			various Bluetooth functions</flag>
 	</use>
 </pkgmetadata>
