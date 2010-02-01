@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-debug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.12 2010/01/28 02:18:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.13 2010/02/01 17:56:59 darkside Exp $
+
+  01 Feb 2010; Jeremy Olexa <darkside@gentoo.org>
+  ruby-debug-0.10.3-r3.ebuild:
+  Add prefix keywords, bug 302563
 
 *ruby-debug-0.10.3-r3 (28 Jan 2010)
 
