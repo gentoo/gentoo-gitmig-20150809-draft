@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.119.ebuild,v 1.1 2010/02/01 08:39:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.119.ebuild,v 1.2 2010/02/01 17:42:36 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -61,7 +61,7 @@ src_compile() {
 	fi
 
 	einfo "Using config: ${myconf}"
-	
+
 	# This is NOT a normal configure script.
 	./configure ${myconf} || die "configure failed!"
 	#make -C homedir
