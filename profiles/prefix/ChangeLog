@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.140 2010/01/10 21:49:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.141 2010/02/01 17:55:05 darkside Exp $
+
+  01 Feb 2010; Jeremy Olexa <darkside@gentoo.org> use.mask:
+  Mask ruby_targets_jruby, bug 302563
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> +mint/package.use.mask:
   package.use.mask extensions for MiNT, bug #299294
