@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.14 2010/02/01 20:02:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.15 2010/02/01 20:03:32 pva Exp $
+
+  01 Feb 2010; Peter Volkov <pva@gentoo.org> -vhba-1.0.0.ebuild,
+  -vhba-1.1.0.ebuild:
+  Drop old.
 
   01 Feb 2010; Peter Volkov <pva@gentoo.org> vhba-1.2.1.ebuild:
   amd64 stable, bug #296868
