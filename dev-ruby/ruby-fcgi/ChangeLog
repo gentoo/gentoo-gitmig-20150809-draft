@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.31 2010/02/01 10:51:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.32 2010/02/01 11:29:40 flameeyes Exp $
+
+*ruby-fcgi-0.8.7-r3 (01 Feb 2010)
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-fcgi-0.8.7-r3.ebuild, -ruby-fcgi-0.8.9.ebuild:
+  Don't trust what upstream states, ruby-fcgi-0.8.9 does not work with Ruby
+  1.9, so prefer the original fcgi gem, and port that to fakegem.
 
 *ruby-fcgi-0.8.9 (01 Feb 2010)
 
