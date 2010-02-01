@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.30 2010/01/04 11:55:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.31 2010/02/01 10:51:20 flameeyes Exp $
+
+*ruby-fcgi-0.8.9 (01 Feb 2010)
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-fcgi-0.8.9.ebuild:
+  Bump to fakegem and use a newer, forked version that works on Ruby 1.9.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   ruby-fcgi-0.8.7-r2.ebuild:
