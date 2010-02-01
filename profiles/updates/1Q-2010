@@ -19,3 +19,4 @@ slotmove =dev-ruby/i18n-0.3* 0 0.3
 move app-i18n/ibus-table-thai app-i18n/ibus-table-tv
 move app-i18n/ibus-table-viqr app-i18n/ibus-table-tv
 move media-libs/apple-opengl media-libs/opengl-apple
+move dev-ruby/ruby-mmap dev-ruby/mmap
