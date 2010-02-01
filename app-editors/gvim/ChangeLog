@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.301 2010/02/01 21:46:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.302 2010/02/01 22:39:03 ranger Exp $
+
+  01 Feb 2010; Brent Baude <ranger@gentoo.org> gvim-7.2.303.ebuild:
+  Marking gvim-7.2.303 ppc for bug 301975
 
   01 Feb 2010; Brent Baude <ranger@gentoo.org> gvim-7.2.303.ebuild:
   Marking gvim-7.2.303 ppc64 for bug 301975
