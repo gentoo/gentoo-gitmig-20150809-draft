@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.84.ebuild,v 1.5 2010/01/31 22:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.84.ebuild,v 1.6 2010/02/01 00:55:52 mr_bones_ Exp $
 
 MY_EXTRAS_VER="20090904-0939Z"
 EAPI=2
@@ -115,7 +115,7 @@ src_test() {
 				done
 			;;
 		esac
-		
+
 		# The entire 5.0 series has pre-generated SSL certificates, they have
 		# mostly expired now. ${S}/mysql-tests/std-data/*.pem
 		# The certs really SHOULD be generated for the tests, so that they are

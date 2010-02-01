@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70-r1.ebuild,v 1.8 2010/01/31 22:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70-r1.ebuild,v 1.9 2010/02/01 00:55:52 mr_bones_ Exp $
 
 MY_EXTRAS_VER="20081129-1041Z"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -86,7 +86,7 @@ src_test() {
 					"$t" \
 					"OpenSSL tests broken on 5.0.56"
 			done
-		
+
 		# The entire 5.0 series has pre-generated SSL certificates, they have
 		# mostly expired now. ${S}/mysql-tests/std-data/*.pem
 		# The certs really SHOULD be generated for the tests, so that they are

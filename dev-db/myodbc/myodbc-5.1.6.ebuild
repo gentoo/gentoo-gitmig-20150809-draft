@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.1.6.ebuild,v 1.1 2010/01/31 06:26:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.1.6.ebuild,v 1.2 2010/02/01 00:55:25 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator autotools
@@ -46,7 +46,7 @@ src_configure() {
 	#myconf="${myconf} --disable-gui"
 	#TODO: the configure test against qt 4 enter in an endless loop
 	myconf="${myconf}
-			$(use_enable qt4 gui) 
+			$(use_enable qt4 gui)
 			$(use_with qt4 qt-libraries /usr/$(get_libdir)/qt4/)"
 
 	econf \
