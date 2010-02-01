@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.24 2010/01/31 19:51:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.25 2010/02/01 06:22:16 robbat2 Exp $
+
+*libmemcached-0.37 (01 Feb 2010)
+
+  01 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +libmemcached-0.37.ebuild:
+  Bug #302284: version bump. Patch from Johan Bergström
+  <bugs@bergstroem.nu>.
 
   31 Jan 2010; Torsten Veller <tove@gentoo.org> libmemcached-0.28.ebuild,
   libmemcached-0.30.ebuild:
