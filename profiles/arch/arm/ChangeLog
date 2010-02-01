@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.60 2010/01/27 19:18:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.61 2010/02/01 19:12:30 armin76 Exp $
+
+  01 Feb 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask bs2b toolame ladspa ggi nut xanim
 
   27 Jan 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask darcs
