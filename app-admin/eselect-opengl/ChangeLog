@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.67 2010/01/31 10:49:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.68 2010/02/01 22:45:06 fauli Exp $
+
+  01 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  eselect-opengl-1.1.1-r2.ebuild:
+  stable x86, bug 301271
 
   31 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   eselect-opengl-1.1.1-r2.ebuild:
