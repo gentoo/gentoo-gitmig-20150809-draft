@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/linecache-0.43-r1.ebuild,v 1.3 2010/01/04 11:28:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/linecache-0.43-r1.ebuild,v 1.4 2010/02/01 18:50:41 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
+ruby_add_bdepend dev-ruby/rake
 ruby_add_bdepend test virtual/ruby-test-unit
 
 each_ruby_compile() {
