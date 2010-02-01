@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/wammu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.41 2009/10/24 11:03:45 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.42 2010/02/01 21:55:28 fauli Exp $
+
+*wammu-0.32.1 (01 Feb 2010)
+
+  01 Feb 2010; Christian Faulhammer <fauli@gentoo.org> +wammu-0.32.1.ebuild:
+  version bump for bug 297729
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> wammu-0.30.1.ebuild:
   ppc stable #283672
