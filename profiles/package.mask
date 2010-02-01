@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11168 2010/01/30 17:49:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11169 2010/02/01 07:00:17 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -672,17 +672,6 @@ x11-misc/seyon
 # Joerg Bornkessel <hd_brummy@gentoo.org> (02 Dec 2009)
 # cvs ebuild vdr-xineliboutput-9999 masked for lifetime
 =media-plugins/vdr-xineliboutput-9999
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (29 Nov 2009)
-#  on behalf of QA team
-#
-# Fails to build with recent kernel headers (bug #236449,
-# September 2008); ignores LDFLAGS (bug #231934); has
-# parallel make issues (bug #264671) and is pending version
-# bump since at least April 2009 (bug #266745).
-#
-# Removal on 2010-01-28
-sys-apps/hwinfo
 
 # Torsten Veller <tove@gentoo.org> (26 Nov 2009)
 # Complete reorganization (and almost complete rewrite),

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3845 2010/01/30 17:49:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3846 2010/02/01 07:00:17 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Remove hwinfo from package.mask.
 
   30 Jan 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Add opera-10.50_pre6201 mask.
