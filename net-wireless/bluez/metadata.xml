@@ -9,6 +9,13 @@
 	<maintainer>
 		<email>betelgeuse@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>pacho@gentoo.org</email>
+		<description>
+			Taking care of this until Petteri and Tiziano have
+			enough time for maintaing bluez.
+		</description>
+	</maintainer>
 	<use>
 		<flag name='consolekit'>Use <pkg>sys-auth/pambase[consolekit]</pkg> to
 			determine access to bluetooth devices based on whether a user is
