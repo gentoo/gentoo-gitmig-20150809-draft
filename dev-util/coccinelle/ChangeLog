@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.1 2010/01/24 18:07:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.2 2010/02/01 10:30:23 aballier Exp $
+
+*coccinelle-0.2.1 (01 Feb 2010)
+
+  01 Feb 2010; Alexis Ballier <aballier@gentoo.org>
+  +coccinelle-0.2.1.ebuild:
+  version bump
 
 *coccinelle-0.2.0 (24 Jan 2010)
 
