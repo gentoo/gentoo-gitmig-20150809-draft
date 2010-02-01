@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.4 2010/01/23 17:17:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.5 2010/02/01 17:04:37 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils eutils qt4 pax-utils
@@ -30,23 +30,26 @@ RDEPEND="
 	x86? ( >=media-libs/alsa-lib-1.0.11
 		x11-libs/libXScrnSaver
 		x11-libs/libXv
-		qt-static? ( media-libs/fontconfig
-			media-libs/freetype
-			x11-libs/libICE
+		qt-static? ( media-libs/alsa-lib
+			x11-libs/libXv
+			x11-libs/libXScrnSaver
 			x11-libs/libSM
-			x11-libs/libXcursor
-			x11-libs/libXext
-			x11-libs/libXfixes
+			x11-libs/libICE
 			x11-libs/libXi
-			x11-libs/libXinerama
-			x11-libs/libXrandr
 			x11-libs/libXrender
-			x11-libs/libX11 )
-		!qt-static? ( x11-libs/qt-gui:4[accessibility,dbus]
-			x11-libs/qt-dbus:4
+			x11-libs/libXrandr
+			media-libs/freetype
+			media-libs/fontconfig
+			x11-libs/libXext
 			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp ) )"
+			dev-libs/glib:2 )
+		!qt-static? ( media-libs/alsa-lib
+			x11-libs/libXv
+			x11-libs/libXScrnSaver
+			x11-libs/qt-gui:4[accessibility,dbus]
+			x11-libs/qt-dbus:4
+			x11-libs/libXext
+			x11-libs/libX11 ) )"
 
 # Required for lrelease command at buildtime
 DEPEND="!qt-static? ( x11-libs/qt-core:4 )"
