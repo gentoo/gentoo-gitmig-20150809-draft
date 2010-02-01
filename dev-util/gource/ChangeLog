@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.1 2010/01/31 15:39:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.2 2010/02/01 11:34:51 flameeyes Exp $
+
+*gource-0.24_beta2 (01 Feb 2010)
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gource-0.24_beta2.ebuild, -gource-0.24_p20100126.ebuild:
+  Bump to official beta2 release, yes this causes a downgrade, my mistake
+  earlier.
 
 *gource-0.24_p20100126 (31 Jan 2010)
 

@@ -1,17 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.24_p20100126.ebuild,v 1.1 2010/01/31 15:39:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.24_beta2.ebuild,v 1.1 2010/02/01 11:34:51 flameeyes Exp $
 
 EAPI=2
 
-inherit autotools
+inherit versionator
 
-GITHUB_USER="acaudwell"
-TREE_HASH="820a2a53df407a97ede32c6b814b869aea58def0"
+MY_P=${P/_/-}
 
 DESCRIPTION="A software version control visualization tool"
 HOMEPAGE="http://code.google.com/p/gource/"
-SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${TREE_HASH} -> ${PN}-git-${PV}.tgz"
+SRC_URI="http://gource.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -33,12 +32,7 @@ DEPEND="
 	dev-util/pkgconfig
 	media-libs/freetype:2
 	"
-
-S="${WORKDIR}/${GITHUB_USER}-Gource-${TREE_HASH:0:7}"
-
-src_prepare() {
-	eautoreconf
-}
+S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
 
 src_configure() {
 	econf --enable-ttf-font-dir=/usr/share/fonts/freefont-ttf/
