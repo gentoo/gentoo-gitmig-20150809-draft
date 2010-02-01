@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.210.ebuild,v 1.1 2010/01/04 18:25:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.240.ebuild,v 1.1 2010/02/01 22:10:50 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools

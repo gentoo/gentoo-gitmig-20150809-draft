@@ -11,7 +11,7 @@
 -Name: cfitsio
 +Name: @PACKAGE_NAME@
  Description: FITS File Subroutine Library
--Version: 3.21
+-Version: 3.24
 +Version: @PACKAGE_VERSION@
  Libs: -L${libdir} -lcfitsio @LIBS@
  Libs.private: -lm
@@ -20,7 +20,7 @@
 +++ configure.ac	2010-01-04 18:39:51.000000000 +0000
 @@ -0,0 +1,195 @@
 +AC_PREREQ(2.62)
-+AC_INIT([cfitsio], [3.210], [pence@tetra.gsfc.nasa.gov])
++AC_INIT([cfitsio], [3.230], [pence@tetra.gsfc.nasa.gov])
 +AC_CONFIG_SRCDIR([fitscore.c])
 +AM_INIT_AUTOMAKE([foreign])
 +
