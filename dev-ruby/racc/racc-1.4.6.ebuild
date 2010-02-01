@@ -1,12 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.3 2010/01/21 11:23:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.4 2010/02/01 16:42:04 flameeyes Exp $
 
 EAPI=2
 
-# jruby → testsuite uses fork (incompatible with JRuby), and patched
-# one crashes JRuby 1.4.0.
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.en.rdoc README.ja.rdoc TODO ChangeLog"
@@ -51,6 +49,19 @@ each_ruby_compile() {
 			# special ruby install for JRuby and the other
 			# implementations.
 			cp -l ext/racc/cparse/cparse.so lib/racc/cparse.so || die
+			;;
+	esac
+}
+
+each_ruby_test() {
+	case ${RUBY} in
+		*jruby)
+			ewarn "Using JRuby 1.4.0 the tests are currently badly broken,"
+			ewarn "so they are disabled until a new racc or a new JRuby is"
+			ewarn "released."
+			;;
+		*)
+			each_fakegem_test
 			;;
 	esac
 }
