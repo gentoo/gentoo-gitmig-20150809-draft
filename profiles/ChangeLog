@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3849 2010/02/01 17:16:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3850 2010/02/01 18:39:41 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Tweak www-client/opera mask again.
 
   01 Feb 2010; Zac Medico <zmedico@gentoo.org> info_pkgs:
   Bug #303119 - Add gcc to info_pkgs, so specific revision is shown in
