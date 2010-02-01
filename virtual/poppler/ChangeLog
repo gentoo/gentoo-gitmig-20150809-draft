@@ -1,6 +1,10 @@
 # ChangeLog for virtual/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.32 2010/01/26 00:26:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.33 2010/02/01 22:53:28 fauli Exp $
+
+  01 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  poppler-0.12.3-r1.ebuild:
+  stable x86, security bug 290464
 
   26 Jan 2010; Ben de Groot <yngwin@gentoo.org> -poppler-0.10.4.ebuild,
   -poppler-0.10.5.ebuild, -poppler-0.10.6.ebuild, -poppler-0.12.0.ebuild,
