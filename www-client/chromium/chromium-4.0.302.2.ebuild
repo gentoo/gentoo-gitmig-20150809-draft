@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.302.2.ebuild,v 1.5 2010/01/28 10:26:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.302.2.ebuild,v 1.6 2010/02/01 18:47:45 armin76 Exp $
 
 EAPI="2"
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -90,7 +90,8 @@ EOF
 	fi
 
 	if use arm; then
-		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dv8_use_snapshot=false -Dlinux_use_tcmalloc=0"
+		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
+		append-flags -fno-tree-sink
 	fi
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
