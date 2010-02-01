@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.51 2010/02/01 20:42:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.52 2010/02/01 21:48:57 jlec Exp $
+
+*pymol-1.2.2-r1 (01 Feb 2010)
+
+  01 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +pymol-1.2.2-r1.ebuild, +files/pymol-1.2.2-vmd.patch, metadata.xml:
+  vmd and numpy added to IUSE
+  apbs plugin support now depends on sci-chemistry/pymol-apbs-plugin
 
   01 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> pymol-1.2.1.ebuild,
   pymol-1.2.2.ebuild:
