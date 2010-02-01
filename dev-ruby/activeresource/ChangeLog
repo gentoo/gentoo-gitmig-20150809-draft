@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.60 2010/01/18 20:42:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.61 2010/02/01 16:49:42 flameeyes Exp $
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  activeresource-2.3.5-r1.ebuild:
+  Add support for JRuby.
 
   18 Jan 2010; Brent Baude <ranger@gentoo.org>
   activeresource-2.3.5-r1.ebuild:
