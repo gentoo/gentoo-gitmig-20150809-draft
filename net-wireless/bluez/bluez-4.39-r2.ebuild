@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.39-r2.ebuild,v 1.8 2010/01/14 01:24:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.39-r2.ebuild,v 1.9 2010/02/01 20:18:32 pacho Exp $
 
 EAPI="2"
 
@@ -15,7 +15,9 @@ KEYWORDS="amd64 arm hppa ppc ppc64 x86"
 
 IUSE="alsa +consolekit cups debug doc gstreamer old-daemons test-programs usb"
 
-CDEPEND="alsa? ( media-libs/alsa-lib )
+CDEPEND="alsa? (
+		media-libs/alsa-lib[alsa_pcm_plugins_extplug,alsa_pcm_plugins_ioplug]
+	)
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
