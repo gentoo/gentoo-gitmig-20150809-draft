@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.116 2010/01/18 19:04:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.117 2010/02/01 16:40:29 flameeyes Exp $
+
+*activesupport-2.3.5-r4 (01 Feb 2010)
+
+  01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -activesupport-2.3.5-r3.ebuild, +activesupport-2.3.5-r4.ebuild,
+  +files/activesupport-2.3.5-mocha-0.9.5.patch:
+  Add patch to force support for mocha 0.9.5 or later, and adds support for
+  JRuby.
 
 *activesupport-2.3.5-r3 (18 Jan 2010)
 

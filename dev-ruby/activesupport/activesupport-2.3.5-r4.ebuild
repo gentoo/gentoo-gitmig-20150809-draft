@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.5-r3.ebuild,v 1.1 2010/01/18 19:04:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.5-r4.ebuild,v 1.1 2010/02/01 16:40:29 flameeyes Exp $
 
 EAPI=2
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -31,4 +31,8 @@ all_ruby_prepare() {
 	# well as fixing the dependencies for i18n to use only the 0.1
 	# slot.
 	epatch "${FILESDIR}"/${P}-unvendorize.patch
+
+	# don't support older mocha versions as the optional codepath
+	# breaks JRuby
+	epatch "${FILESDIR}"/${P}-mocha-0.9.5.patch
 }
