@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.21 2010/01/14 17:49:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.22 2010/02/01 20:14:09 maekke Exp $
+
+  01 Feb 2010; Markus Meier <maekke@gentoo.org> freewrl-1.22.5.ebuild:
+  x86 stable, bug #300602
 
   14 Jan 2010; <hwoarang@gentoo.org> freewrl-1.22.5.ebuild:
   Stable on amd64 wrt bug #300602
