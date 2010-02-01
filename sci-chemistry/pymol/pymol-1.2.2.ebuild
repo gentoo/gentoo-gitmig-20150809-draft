@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2.ebuild,v 1.3 2010/01/31 22:11:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2.ebuild,v 1.4 2010/02/01 20:42:43 jlec Exp $
 
 EAPI="2"
 
@@ -45,8 +45,8 @@ src_prepare() {
 		|| die "Failed to apply data-path.patch"
 
 	# Turn off splash screen.  Please do make a project contribution
-	# if you are able though.
-	[[ -n ${WANT_SPLASH} ]] || epatch "${FILESDIR}"/1.2.1/nosplash-gentoo.patch
+	# if you are able though. #299020
+	epatch "${FILESDIR}"/1.2.1/nosplash-gentoo.patch
 
 	# Respect CFLAGS
 	sed -i \
