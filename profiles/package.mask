@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11169 2010/02/01 07:00:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11170 2010/02/01 15:07:22 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -165,11 +165,6 @@ net-misc/gfax
 ~net-libs/libmsn-4.1
 
 # Jeremy Olexa <darkside@gentoo.org> (09 Jan 2009)
-# Upstream dead, fails to unpack. Removed in 30 days by treecleaners as
-# requested by maintainer. bug 298592
-sys-devel/gcc-nios2
-
-# Jeremy Olexa <darkside@gentoo.org> (09 Jan 2009)
 # Builds against running kernel instead of /usr/src/linux. Removed in 60 days by
 # treecleaners. bug 239773
 net-misc/noarp
@@ -178,16 +173,6 @@ net-misc/noarp
 # Not loved package, missing files and doesn't respect LDFLAGS. Remvoed in 60
 # days by treecleaners, bug 248678
 x11-wm/aewm++-goodies
-
-# Jeremy Olexa <darkside@gentoo.org> (09 Jan 2009)
-# Orphaned library with broken build system. Removed in 30 days by treecleaners,
-# maintainer request. bug 284374
-media-libs/libdsp
-
-# Jeremy Olexa <darkside@gentoo.org> (09 Jan 2009)
-# Collides with suite3270. Use suite3270 instead since it has all the
-# functionality. Removed in 30 days by treecleaners, maintainer req. bug 285917
-x11-terms/x3270
 
 # Jeremy Olexa <darkside@gentoo.org> (09 Jan 2009)
 # Causes issues for users if in the wrong runlevel, (won't boot). No love,

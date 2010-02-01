@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3847 2010/02/01 10:27:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3848 2010/02/01 15:07:22 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2010; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Removing entries for media-libs/libdsp x11-terms/x3270 and
+  sys-devel/gcc-nios2 because they were removed from portage
 
   01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> updates/1Q-2010:
   Properly rename dev-ruby/ruby-mmap to dev-ruby/mmap.
