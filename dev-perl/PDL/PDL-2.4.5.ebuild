@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.5.ebuild,v 1.3 2010/01/21 14:38:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.5.ebuild,v 1.4 2010/02/01 17:38:27 ssuominen Exp $
 
 EAPI=2
 
@@ -17,6 +17,7 @@ IUSE="badval fftw gsl opengl"
 DEPEND=">=sys-libs/ncurses-5.2
 	virtual/perl-Filter
 	virtual/perl-File-Spec
+	virtual/perl-PodParser
 	dev-perl/Inline
 	dev-perl/Astro-FITS-Header
 	>=dev-perl/ExtUtils-F77-1.13
