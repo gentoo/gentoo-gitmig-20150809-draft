@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11.ebuild,v 1.1 2010/02/02 18:19:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11.ebuild,v 1.2 2010/02/02 18:26:12 ssuominen Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ RDEPEND="alsa? ( virtual/alsa )
 	mac? ( media-sound/mac )
 	modplug? ( media-libs/libmodplug )
 	mp3? ( media-libs/libmad )
-	musepack? ( media-sound/musepack-tools )
+	musepack? ( >=media-sound/musepack-tools-444 )
 	pulseaudio? ( media-sound/pulseaudio )
 	sndfile? ( media-libs/libsndfile )
 	speex? ( media-libs/speex media-libs/liboggz )
