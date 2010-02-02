@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3850 2010/02/01 18:39:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3851 2010/02/02 06:04:54 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Add a seperate mask for MySQL5.4/5.5/6.0 since 5.1 will be unmasked at the
+  end of the week.
 
   01 Feb 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera mask again.
