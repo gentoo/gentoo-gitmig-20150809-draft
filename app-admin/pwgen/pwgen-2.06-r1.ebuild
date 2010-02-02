@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.06-r1.ebuild,v 1.1 2010/02/01 23:15:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.06-r1.ebuild,v 1.2 2010/02/02 15:39:55 jlec Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
-	econf --sysconfdir=${EPREFIX}/etc/pwgen
+	econf --sysconfdir="${EPREFIX}"/etc/pwgen
 }
 
 src_install() {
