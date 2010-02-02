@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.13.ebuild,v 1.1 2010/01/27 15:14:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.14.ebuild,v 1.1 2010/02/02 22:54:51 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -327,7 +327,7 @@ src_install() {
 	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.6.1/asterisk.initd2 asterisk
+	newinitd "${FILESDIR}"/1.6.1/asterisk.initd3 asterisk
 	newconfd "${FILESDIR}"/1.6.0/asterisk.confd asterisk
 
 	# some people like to keep the sources around for custom patching

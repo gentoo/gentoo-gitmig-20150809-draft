@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.245 2010/02/02 22:48:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.246 2010/02/02 22:54:51 chainsaw Exp $
+
+*asterisk-1.6.1.14 (02 Feb 2010)
+
+  02 Feb 2010; <chainsaw@gentoo.org> -asterisk-1.6.1.12-r1.ebuild,
+  -asterisk-1.6.1.13.ebuild, +asterisk-1.6.1.14.ebuild:
+  Security update for AST-2010-001; remote T.38 over SIP crash by setting
+  FaxMaxDatagram to a negative or exceptionally large value. Init script
+  update by Jaco Kroon closes bug #303265. Remove vulnerable 1.6.1 branch
+  ebuilds.
 
 *asterisk-1.6.2.2 (02 Feb 2010)
 
