@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3852 2010/02/02 06:21:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3853 2010/02/02 15:36:37 hanno Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Feb 2010; Hanno Boeck <hanno@gentoo.org> license_groups:
+  Add some GPL-2 with exception licenses to GPL-compatible.
 
   02 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Mask all of dev-db/mysql-community for security vulnerabilities that are
