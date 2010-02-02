@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.503 2010/02/01 19:54:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.504 2010/02/02 05:52:20 robbat2 Exp $
+
+*mysql-5.4.3_beta (02 Feb 2010)
+
+  02 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-5.4.3_beta.ebuild:
+  Add 5.4 series beta, based on hanno's overlay work. Testsuite false
+  positives/known failures updated for 5.4/5.5.
 
   01 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.39.ebuild,
   mysql-5.1.41.ebuild, mysql-5.1.42.ebuild, mysql-5.1.43.ebuild:
