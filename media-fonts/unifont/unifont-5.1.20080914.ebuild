@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-5.1.20080914.ebuild,v 1.1 2008/12/31 15:12:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-5.1.20080914.ebuild,v 1.2 2010/02/02 17:04:39 scarabeus Exp $
 
 inherit eutils font toolchain-funcs
 
@@ -26,7 +26,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	font_xfont_config
-	font_xft_config
 	font_fontconfig
 
 	dodoc README unifont-intro.txt

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unifont
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.31 2008/12/31 15:12:28 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.32 2010/02/02 17:04:39 scarabeus Exp $
+
+  02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  unifont-5.1.20080914.ebuild:
+  Drop removed command from ebuild.
 
 *unifont-5.1.20080914 (31 Dec 2008)
 
