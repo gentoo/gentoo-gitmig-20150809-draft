@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2-r1.ebuild,v 1.1 2010/02/01 21:48:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2-r1.ebuild,v 1.2 2010/02/02 17:51:00 jlec Exp $
 
 EAPI="2"
 
@@ -54,15 +54,6 @@ src_prepare() {
 		"${S}"/setup.py || die "Failed running sed on setup.py"
 
 	use shaders && epatch "${FILESDIR}"/${P}-shaders.patch
-
-	if use apbs; then
-		cp -f "${WORKDIR}"/apbs_tools.py.${APBS_PATCH} modules/pmg_tk/startup/apbs_tools.py \
-			|| die "Failed to copy apbs_tools.py"
-
-		sed "s:LIBANDPYTHON:$(python_get_libdir):g" \
-			-i modules/pmg_tk/startup/apbs_tools.py \
-				|| die "Failed running sed on apbs_tools.py"
-	fi
 
 	use vmd && epatch "${FILESDIR}"/${P}-vmd.patch
 
