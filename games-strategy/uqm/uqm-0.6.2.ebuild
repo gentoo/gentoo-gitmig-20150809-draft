@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.10 2010/01/22 16:55:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.11 2010/02/02 17:29:06 mr_bones_ Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils multilib games
 
 DESCRIPTION="The Ur-Quan Masters: Port of Star Control 2"
@@ -32,10 +32,11 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 src_unpack() {
-	local myopengl
-
 	unpack ${P}-source.tgz
-	cd "${S}"
+}
+
+src_prepare() {
+	local myopengl
 
 	# Because the new 0.6.* source archives have
 	# everything in a subdir called "sc2". This,
