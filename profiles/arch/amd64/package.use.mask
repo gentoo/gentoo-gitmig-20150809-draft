@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.52 2010/01/24 20:48:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.53 2010/02/02 21:34:33 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -18,13 +18,14 @@
 
 #--- END OF EXAMPLES ---
 
-# Pacho Ramos <pacho@gentoo.org> (24 Jan 2010)
-# esd support was dropped from emul- packages, bug 301824
-app-emulation/wine esd
-
-# Pacho Ramos <pacho@gentoo.org> (01 Jan 2010)
-# No capi support in any emul- package, bug 292938
-app-emulation/wine capi
+# Samuli Suominen <ssuominen@gentoo.org> (02 Feb 2009)
+# esd, bug 301824
+# mp3, bug 283860
+# jpeg, bug 283089, 303255, 299149
+# capi, 292938
+# ghoto2, 286563
+# scanner, 299505
+app-emulation/wine capi esd gphoto2 hal jpeg mp3 scanner
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka closurecl) is only available on x86 and amd64
@@ -34,22 +35,9 @@ sci-mathematics/maxima -openmcl
 # Masked in base, unmak for amd64/x86. Bug 267264
 media-gfx/k3d -cuda
 
-# Samuli Suominen <ssuominen@gentoo.org> (01 Oct 2009)
-# No support in emul-linux-x86-sdl, bug 286625
-app-emulation/wine openal
-
-# Samuli Suominen <ssuominen@gentoo.org> (30 Sep 2009)
-# No support in emul-linux-x86-baselibs, bug 283089
-app-emulation/wine jpeg
-
 # Jean-Noël Rivasseau <elvanor@gentoo.org> (23 Sep 2009)
 # X use flag only for amd64/x86, bug 285951.
 media-gfx/iscan -X
-
-# Jeremy Olexa <darkside@gentoo.org> (06 Sep 2009)
-# Mask wine[mp3] because it fails to build. bug 283860
-# Mask wine[gsm] because it fails to build. bug 283875
-app-emulation/wine gsm mp3
 
 # Dawid Węgliński <cla@gentoo.org>                                       
 # Mask amarok2 useflag for net-im/kadu
@@ -140,19 +128,8 @@ media-libs/mlt mmx
 # run javadoc target.  see #177585
 >=dev-java/fop-0.93 doc
 
-# 31 Dec 2007: Peter Weller <welp@gentoo.org>
-# Mask dbus, hal, nas and scanner USE flags;
-# Bug 203680
-# 28 Oct 2008: Diego Pettenò <flameeyes@gentoo.org>
-# Mask GnuTLS (not available as 32-bit library)
-app-emulation/wine dbus hal ldap nas scanner gnutls gphoto2
-
 # missing the necessary linux-headers dep
 >=net-fs/netatalk-2.0.3-r3 xfs
-
-# 28 Jan 2008: Wulf Krueger <philantrop@gentoo.org>
-# Mask bluetooth for the KDE 3.5.8 stabilisation.
-app-pda/pilot-link bluetooth
 
 # 10 Jul 2008: Thomas Anderson <gentoofan23@gentoo.org>
 # Unmask ia32 flag for amd64 arches.
