@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vdpauinfo/vdpauinfo-0.0.6.ebuild,v 1.1 2009/10/22 15:56:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vdpauinfo/vdpauinfo-0.0.6.ebuild,v 1.2 2010/02/02 03:34:08 cardoe Exp $
 
 EAPI="2"
 
@@ -16,6 +16,7 @@ IUSE=""
 RDEPEND="x11-libs/libX11
 		x11-libs/libvdpau"
 DEPEND="${RDEPEND}
+		dev-util/pkgconfig
 		x11-proto/xproto"
 
 src_install() {
