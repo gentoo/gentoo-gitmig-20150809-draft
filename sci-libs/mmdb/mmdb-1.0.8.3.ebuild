@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.0.8.3.ebuild,v 1.1 2007/12/21 23:23:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.0.8.3.ebuild,v 1.2 2010/02/02 19:17:56 jlec Exp $
 
 inherit versionator
 
@@ -14,7 +14,7 @@ LICENSE="ccp4"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-RDEPEND=""
+RDEPEND="!sci-biology/ncbi-tools++"
 DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
 
