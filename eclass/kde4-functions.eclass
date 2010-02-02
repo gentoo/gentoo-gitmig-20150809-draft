@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.29 2009/12/14 19:44:15 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.30 2010/02/02 14:20:16 reavertm Exp $
 
 inherit versionator
 
@@ -41,7 +41,7 @@ fi
 # @DESCRIPTION:
 # The slots used by all KDE versions later than 4.0. The live KDE releases use
 # KDE_LIVE_SLOTS instead. Values should be ordered.
-KDE_SLOTS=( "4.1" "4.2" "4.3" "4.4" )
+KDE_SLOTS=( "4.1" "4.2" "4.3" "4.4" "4.5" )
 
 # @ECLASS-VARIABLE: KDE_LIVE_SLOTS
 # @DESCRIPTION:
@@ -518,6 +518,6 @@ add_kdebase_dep() {
 
 	local use=${2:+,${2}}
 
-	echo " !kdeprefix? ( >=kde-base/${1}-${PV}[-kdeprefix${use}] )"
-	echo " kdeprefix? ( >=kde-base/${1}-${PV}:${SLOT}[kdeprefix${use}] )"
+	echo " !kdeprefix? ( >=kde-base/${1}-${PV}[aqua=,-kdeprefix${use}] )"
+	echo " kdeprefix? ( >=kde-base/${1}-${PV}:${SLOT}[aqua=,kdeprefix${use}] )"
 }

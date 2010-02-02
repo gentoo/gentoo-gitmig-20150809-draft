@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.57 2009/12/14 19:44:15 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.58 2010/02/02 14:20:16 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -121,9 +121,9 @@ case ${KDEBASE} in
 		# Determine SLOT from PVs
 		case ${PV} in
 			*.9999*) SLOT="${PV/.9999*/}" ;; # stable live
+			4.5* | 4.4.[6-9]*) SLOT="4.5" ;;
 			4.4* | 4.3.[6-9]*) SLOT="4.4" ;;
 			4.3*) SLOT="4.3" ;;
-			4.2*) SLOT="4.2" ;;
 			9999*) SLOT="live" ;; # regular live
 			*) die "Unsupported ${PV}" ;;
 		esac
@@ -386,10 +386,10 @@ case ${BUILD_TYPE} in
 			case ${KDEBASE} in
 				kde-base)
 					case ${PV} in
-						4.3.8[05] | 4.3.9[0568])
+						4.[34].8[05] | 4.[34].9[0568])
 							# block for normally packed unstable releases
 							SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
-						4.3.[6-9]*)
+						4.[34].[6-9]*)
 							# Repacked tarballs: need to depend on xz-utils to ensure that they can be unpacked
 							SRC_URI="http://dev.gentooexperimental.org/~alexxy/kde/${PV}/${_kmname_pv}.tar.xz"
 							DEPEND+=" app-arch/xz-utils"
@@ -493,10 +493,10 @@ kde4-base_src_unpack() {
 	if [[ ${BUILD_TYPE} = live ]]; then
 		migrate_store_dir
 		subversion_src_unpack
-	elif [[ ${EAPI} == [23] ]]; then
+	elif [[ ${EAPI} == 2 ]]; then
 		local file
 		for file in ${A}; do
-			# This setup is because EAPI <= 3 cannot unpack *.tar.xz files
+			# This setup is because EAPI <= 2 cannot unpack *.tar.xz files
 			# directly, so we do it ourselves (using the exact same code as portage)
 			case ${file} in
 				*.tar.xz)
@@ -510,7 +510,7 @@ kde4-base_src_unpack() {
 			esac
 		done
 	else
-		# For EAPI >= 4, we can just use unpack() directly
+		# For EAPI >= 3, we can just use unpack() directly
 		unpack ${A}
 	fi
 }
@@ -537,7 +537,10 @@ kde4-base_src_prepare() {
 	fi
 
 	[[ ${BUILD_TYPE} = live ]] && subversion_src_prepare
+
+	# Apply patches
 	base_src_prepare
+	epatch_user
 
 	# Save library dependencies
 	if [[ -n ${KMSAVELIBS} ]] ; then
@@ -675,16 +678,6 @@ kde4-base_src_make_doc() {
 			fi
 		done
 	fi
-
-	[[ -z ${ED} ]] && ED=${D}
-
-	if [[ -n ${KDEBASE} ]] && [[ -d ${ED}usr/share/doc/${PF} ]]; then
-		# work around bug #97196
-		dodir /usr/share/doc/KDE4 && \
-			cp -r "${ED}usr/share/doc/${PF}" "${ED}usr/share/doc/KDE4/" || \
-			die "Failed to move docs to KDE4/."
-			rm -rf "${ED}usr/share/doc/${PF}"
-	fi
 }
 
 # @FUNCTION: kde4-base_pkg_postinst
@@ -710,6 +703,16 @@ kde4-base_pkg_postinst() {
 		ewarn "You are using this setup at your own risk and the kde team does not"
 		ewarn "take responsibilities for dead kittens."
 		echo
+	fi
+	if [[ -z ${I_KNOW_WHAT_I_AM_DOING} ]] && ! has_version 'kde-base/kdebase-runtime-meta' && ! has_version 'kde-base/kdebase-startkde'; then
+		# warn about not supported approach
+		if [[ ${KDE_REQUIRED} == always ]] || ( [[ ${KDE_REQUIRED} == optional ]] && use kde ); then
+			echo
+			ewarn "WARNING! Your system configuration contains neither \"kde-base/kdebase-runtime-meta\""
+			ewarn "nor \"kde-base/kdebase-startkde\". You need one of above."
+			ewarn "With this setting you are unsupported by KDE team."
+			ewarn "All missing features you report for misc packages will be probably ignored or closed as INVALID."
+		fi
 	fi
 }
 

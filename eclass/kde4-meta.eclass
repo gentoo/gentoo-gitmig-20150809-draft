@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.32 2010/01/11 17:27:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.33 2010/02/02 14:20:16 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -18,24 +18,17 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_
 
 [[ -z ${KMNAME} ]] && die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
 
-# Add khelpcenter dependency when installing handbooks
-if [[ ${PN} != khelpcenter ]] && has handbook ${IUSE//+}; then
-	RDEPEND+=" handbook? ( $(add_kdebase_dep khelpcenter) )"
-fi
-
 # Add dependencies that all packages in a certain module share.
 case ${KMNAME} in
 	kdebase|kdebase-apps|kdebase-workspace|kdebase-runtime|kdegraphics)
 		COMMONDEPEND+=" >=kde-base/qimageblitz-0.0.4"
 		;;
 	kdepim|kdepim-runtime)
-		COMMONDEPEND+="	$(add_kdebase_dep kdepimlibs)"
+		! slot_is_at_least 4.4 ${SLOT} && COMMONDEPEND+=" $(add_kdebase_dep kdepimlibs)"
 		case ${PN} in
 			akregator|kaddressbook|kjots|kmail|knode|knotes|korganizer|ktimetracker)
 				IUSE+=" +kontact"
-				if ! slot_is_at_least 4.4 ${SLOT}; then
-					RDEPEND+=" kontact? ( $(add_kdebase_dep kontactinterfaces) )"
-				fi
+				RDEPEND+=" kontact? ( $(add_kdebase_dep kontact) )"
 				;;
 		esac
 		;;
@@ -211,12 +204,12 @@ kde4-meta_src_extract() {
 	else
 		local abort tarball tarfile f extractlist moduleprefix postfix
 		case ${PV} in
-			4.3.8[05] | 4.3.9[0568])
+			4.[34].8[05] | 4.[34].9[0568])
 				# block for normally packed upstream unstable snapshots
 				KMTARPARAMS+=" --bzip2" # bz2
 				postfix="bz2"
 				;;
-			4.3.[6-9]*)
+			4.[34].[6-9]*)
 				# Not passing --xz, as it doesn't work with stable tar
 				KMTARPARAMS+=" --use-compress-program=xz" # xz
 				postfix="xz"
@@ -334,6 +327,7 @@ kde4-meta_create_extractlists() {
 			if [[ ${PN} != libkdegames ]]; then
 				KMEXTRACTONLY+="
 					libkdegames/"
+				KMLOADLIBS="${KMLOADLIBS} libkdegames"
 			fi
 			;;
 		kdepim)
@@ -341,15 +335,16 @@ kde4-meta_create_extractlists() {
 				KMEXTRACTONLY+="
 					libkdepim/"
 			fi
-			case ${SLOT} in
-				4.3|4.4|live)
-					KMEXTRACTONLY+="
-						kdepim-version.h
-						config-enterprise.h.cmake"
-					;;
-			esac
 			KMEXTRACTONLY+="
+				config-enterprise.h.cmake
 				kleopatra/ConfigureChecks.cmake"
+			if slot_is_at_least 4.5 ${SLOT}; then
+				KMEXTRACTONLY+="
+					kdepim-version.h.cmake"
+			else
+				KMEXTRACTONLY+="
+					kdepim-version.h"
+			fi
 			if has kontact ${IUSE//+} && use kontact; then
 				KMEXTRA+="
 					kontact/plugins/${PLUGINNAME:-${PN}}/"
@@ -360,12 +355,8 @@ kde4-meta_create_extractlists() {
 			fi
 			;;
 		kdeutils)
-			case ${SLOT} in
-				4.3|4.4|live)
-					KMEXTRACTONLY+="
-						kdeutils-version.h"
-					;;
-			esac
+			KMEXTRACTONLY+="
+				kdeutils-version.h"
 			;;
 		koffice)
 			KMEXTRACTONLY+="
@@ -385,16 +376,6 @@ kde4-meta_create_extractlists() {
 	esac
 	# Don't install cmake modules for split ebuilds, to avoid collisions.
 	case ${KMNAME} in
-		kdepim)
-			# No need for unpack since 4.2.86
-			# Remove when 4.2 is wiped out from the tree
-			case ${PV} in
-				4.2.[0-4])
-					KMCOMPILEONLY+="
-						cmake/modules/"
-					;;
-			esac
-			;;
 		kdebase-runtime|kdebase-workspace|kdeedu|kdegames|kdegraphics)
 			case ${PN} in
 				libkdegames|libkdeedu|libkworkspace)
@@ -588,17 +569,24 @@ kde4-meta_change_cmakelists() {
 				-i CMakeLists.txt || die "failed to disable hardcoded checks"
 			;;
 		kdepim)
-			case ${PN} in
-				kaddressbook|kalarm|kmailcvt|kontact|korganizer|korn)
-					sed -n -e '/qt4_generate_dbus_interface(.*org\.kde\.kmail\.\(kmail\|mailcomposer\)\.xml/p' \
-						-e '/add_custom_target(kmail_xml /,/)/p' \
-						-i kmail/CMakeLists.txt || die "uncommenting xml failed"
-					_change_cmakelists_parent_dirs kmail
-				;;
-			esac
+			# Disable hardcoded checks
+			sed -r -e '/find_package\(KdepimLibs/s/REQUIRED//' \
+				-e '/find_package\((KdepimLibs|Boost|QGpgme|Akonadi|ZLIB|Strigi|SharedDesktopOntologies|Soprano|Nepomuk)/{/macro_optional_/!s/find/macro_optional_&/}' \
+				-e '/macro_log_feature\((Boost|QGPGME|Akonadi|ZLIB|STRIGI|SHAREDDESKTOPONTOLOGIES|Soprano|Nepomuk)_FOUND/s/ TRUE / FALSE /' \
+				-i CMakeLists.txt || die "failed to disable hardcoded checks"
+			if ! slot_is_at_least 4.5 ${SLOT}; then
+				case ${PN} in
+					kalarm|kmailcvt|kontact|korganizer|korn)
+						sed -n -e '/qt4_generate_dbus_interface(.*org\.kde\.kmail\.\(kmail\|mailcomposer\)\.xml/p' \
+							-e '/add_custom_target(kmail_xml /,/)/p' \
+							-i kmail/CMakeLists.txt || die "uncommenting xml failed"
+						_change_cmakelists_parent_dirs kmail
+					;;
+				esac
+			fi
 			;;
 		kdewebdev)
-			# Disable hardcoded kdepimlibs check
+			# Disable hardcoded checks
 			sed -e 's/find_package(KdepimLibs REQUIRED)/macro_optional_find_package(KdepimLibs)/' \
 				-e 's/find_package(LibXml2 REQUIRED)/macro_optional_find_package(LibXml2)/' \
 				-e 's/find_package(LibXslt REQUIRED)/macro_optional_find_package(LibXslt)/' \
@@ -606,7 +594,7 @@ kde4-meta_change_cmakelists() {
 				-i CMakeLists.txt || die "failed to disable hardcoded checks"
 			;;
 		koffice)
-			# prevent collisions
+			# Prevent collisions
 			if [[ ${PN} != koffice-data ]]; then
 				sed -e '/install(.*FindKOfficeLibs.cmake/,/)/ d' \
 					-i cmake/modules/CMakeLists.txt || die "${LINENO}: sed died in collision prevention section"
