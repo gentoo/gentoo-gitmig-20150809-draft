@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/sazanami-20040629.ebuild,v 1.13 2010/01/01 18:10:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/sazanami-20040629.ebuild,v 1.14 2010/02/02 16:58:55 scarabeus Exp $
 
 inherit font
 
@@ -17,7 +17,7 @@ IUSE=""
 
 FONT_SUFFIX="ttf"
 
-DOCS="docs/README"
+DOCS="README"
 
 # Only installs fonts
 RESTRICT="strip binchecks"

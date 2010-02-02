@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/sazanami
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/ChangeLog,v 1.17 2010/01/01 18:10:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/ChangeLog,v 1.18 2010/02/02 16:58:55 scarabeus Exp $
+
+  02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  sazanami-20040629.ebuild:
+  Fix install of non-existant doc.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   sazanami-20040629.ebuild:
