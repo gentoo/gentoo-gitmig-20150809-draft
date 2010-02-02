@@ -1,6 +1,13 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.11 2010/01/11 11:07:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.12 2010/02/02 22:06:11 robbat2 Exp $
+
+*mysql-5.5 (02 Feb 2010)
+*mysql-5.4 (02 Feb 2010)
+
+  02 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.ebuild,
+  +mysql-5.4.ebuild, +mysql-5.5.ebuild:
+  Add virtuals for new mysql versions.
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> mysql-4.0.ebuild,
   mysql-4.1.ebuild, mysql-5.0.ebuild, mysql-5.1.ebuild:
