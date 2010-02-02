@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/libjwc_c
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libjwc_c/ChangeLog,v 1.1 2010/02/02 20:58:46 jlec Exp $
+
+*libjwc_c-1.1-r1 (02 Feb 2010)
+
+  02 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/612-gentoo.patch, +libjwc_c-1.1-r1.ebuild, +metadata.xml:
+  First need split xlib from ccp4
+
