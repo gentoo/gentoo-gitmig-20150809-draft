@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/DBD-SQLite-1.29-r1.ebuild,v 1.1 2010/01/12 11:51:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/DBD-SQLite-1.29-r2.ebuild,v 1.1 2010/02/02 12:19:33 mduft Exp $
 
 EAPI=2
 
@@ -23,4 +23,6 @@ SRC_TEST="do"
 src_prepare() {
 	perl-module_src_prepare
 	sed -i 's/^if ( 0 )/if ( 1 )/' "${S}"/Makefile.PL || die
+
+	myconf="SQLITE_LOCATION=${EPREFIX}/usr"
 }
