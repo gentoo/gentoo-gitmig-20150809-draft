@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.129 2010/02/02 02:46:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.130 2010/02/02 02:59:03 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -497,17 +497,17 @@ configure_51() {
 		elog "http://dev.mysql.com/doc/refman/5.1/en/federated-limitations.html"
 	fi
 
-	# Upstream specifically requests that InnoDB always be built.
-	plugins="${plugins},innobase,innodb_plugin"
+	# Upstream specifically requests that InnoDB always be built:
+	# - innobase, innodb_plugin
+	# Build falcon if available for 6.x series.
+	for i in innobase innodb_plugin falcon ; do
+		[ -e "${S}"/storage/${i} ] && plugins="${plugins},${i}"
+	done
 
 	# like configuration=max-no-ndb
 	if use cluster ; then
 		plugins="${plugins},ndbcluster"
 		myconf="${myconf} --with-ndb-binlog"
-	fi
-
-	if [ -e "${S}/storage/falcon" ] ; then
-		plugins="${plugins},falcon"
 	fi
 
 	myconf="${myconf} --with-plugins=${plugins}"
