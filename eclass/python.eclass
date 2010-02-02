@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.86 2010/01/15 14:46:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.87 2010/02/02 18:55:00 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -11,35 +11,161 @@
 
 inherit multilib
 
-if ! has "${EAPI:-0}" 0 1 2; then
+if ! has "${EAPI:-0}" 0 1 2 3; then
 	die "API of python.eclass in EAPI=\"${EAPI}\" not established"
 fi
 
-if [[ -n "${NEED_PYTHON}" ]]; then
-	PYTHON_ATOM=">=dev-lang/python-${NEED_PYTHON}"
-	DEPEND="${PYTHON_ATOM}"
-	RDEPEND="${DEPEND}"
-else
-	PYTHON_ATOM="dev-lang/python"
-fi
+_PYTHON2_SUPPORTED_VERSIONS=(2.4 2.5 2.6 2.7)
+_PYTHON3_SUPPORTED_VERSIONS=(3.0 3.1 3.2)
 
-DEPEND+=" >=app-admin/eselect-python-20090804"
+# @ECLASS-VARIABLE: PYTHON_DEPEND
+# @DESCRIPTION:
+# Specification of dependency on dev-lang/python.
+# Syntax:
+#   PYTHON_DEPEND:             [[!]USE_flag? ]<version_components_group>[ version_components_group]
+#   version_components_group:  <major_version[:[minimal_version][:maximal_version]]>
+#   major_version:             <2|3|*>
+#   minimal_version:           <minimal_major_version.minimal_minor_version>
+#   maximal_version:           <maximal_major_version.maximal_minor_version>
+
+_parse_PYTHON_DEPEND() {
+	local accepted_version accepted_versions=() major_version maximal_version minimal_version python_all="0" python_atoms= python_maximal_version python_minimal_version python_versions=() python2="0" python2_maximal_version python2_minimal_version python3="0" python3_maximal_version python3_minimal_version USE_flag= version_components_group version_components_group_regex version_components_groups
+
+	version_components_group_regex="(2|3|\*)(:([[:digit:]]+\.[[:digit:]]+)?(:([[:digit:]]+\.[[:digit:]]+)?)?)?"
+	version_components_groups="${PYTHON_DEPEND}"
+
+	if [[ "${version_components_groups}" =~ ^((\!)?[[:alnum:]_-]+\?\ )?${version_components_group_regex}(\ ${version_components_group_regex})?$ ]]; then
+		if [[ "${version_components_groups}" =~ ^(\!)?[[:alnum:]_-]+\? ]]; then
+			USE_flag="${version_components_groups%\? *}"
+			version_components_groups="${version_components_groups#* }"
+		fi
+		if [[ "${version_components_groups}" =~ ("*".*" "|" *"|^2.*\ (2|\*)|^3.*\ (3|\*)) ]]; then
+			die "Invalid syntax of PYTHON_DEPEND: Incorrectly specified groups of versions"
+		fi
+
+		version_components_groups="${version_components_groups// /$'\n'}"
+		while read version_components_group; do
+			major_version="${version_components_group:0:1}"
+			minimal_version="${version_components_group:2}"
+			minimal_version="${minimal_version%:*}"
+			maximal_version="${version_components_group:$((3 + ${#minimal_version}))}"
+
+			if [[ "${major_version}" =~ ^(2|3)$ ]]; then
+				if [[ -n "${minimal_version}" && "${major_version}" != "${minimal_version:0:1}" ]]; then
+					die "Invalid syntax of PYTHON_DEPEND: Minimal version '${minimal_version}' not in specified group of versions"
+				fi
+				if [[ -n "${maximal_version}" && "${major_version}" != "${maximal_version:0:1}" ]]; then
+					die "Invalid syntax of PYTHON_DEPEND: Maximal version '${maximal_version}' not in specified group of versions"
+				fi
+			fi
+
+			if [[ "${major_version}" == "2" ]]; then
+				python2="1"
+				python_versions=("${_PYTHON2_SUPPORTED_VERSIONS[@]}")
+				python2_minimal_version="${minimal_version}"
+				python2_maximal_version="${maximal_version}"
+			elif [[ "${major_version}" == "3" ]]; then
+				python3="1"
+				python_versions=("${_PYTHON3_SUPPORTED_VERSIONS[@]}")
+				python3_minimal_version="${minimal_version}"
+				python3_maximal_version="${maximal_version}"
+			else
+				python_all="1"
+				python_versions=("${_PYTHON2_SUPPORTED_VERSIONS[@]}" "${_PYTHON3_SUPPORTED_VERSIONS[@]}")
+				python_minimal_version="${minimal_version}"
+				python_maximal_version="${maximal_version}"
+			fi
+
+			if [[ -n "${minimal_version}" ]] && ! has "${minimal_version}" "${python_versions[@]}"; then
+				die "Invalid syntax of PYTHON_DEPEND: Unrecognized minimal version '${minimal_version}'"
+			fi
+			if [[ -n "${maximal_version}" ]] && ! has "${maximal_version}" "${python_versions[@]}"; then
+				die "Invalid syntax of PYTHON_DEPEND: Unrecognized maximal version '${maximal_version}'"
+			fi
+
+			if [[ -n "${minimal_version}" && -n "${maximal_version}" && "${minimal_version}" > "${maximal_version}" ]]; then
+				die "Invalid syntax of PYTHON_DEPEND: Minimal version '${minimal_version}' greater than maximal version '${maximal_version}'"
+			fi
+		done <<< "${version_components_groups}"
+
+		_create_accepted_versions_range() {
+			local accepted_version="0" i
+			for ((i = "${#python_versions[@]}"; i >= 0; i--)); do
+				if [[ "${python_versions[${i}]}" == "${python_maximal_version}" ]]; then
+					accepted_version="1"
+				fi
+				if [[ "${accepted_version}" == "1" ]]; then
+					accepted_versions+=("${python_versions[${i}]}")
+				fi
+				if [[ "${python_versions[${i}]}" == "${python_minimal_version}" ]]; then
+					accepted_version="0"
+				fi
+			done
+		}
+
+		if [[ "${python_all}" == "1" ]]; then
+			python_versions=("${_PYTHON2_SUPPORTED_VERSIONS[@]}" "${_PYTHON3_SUPPORTED_VERSIONS[@]}")
+			python_minimal_version="${python_minimal_version:-${python_versions[0]}}"
+			python_maximal_version="${python_maximal_version:-${python_versions[${#python_versions[@]}-1]}}"
+			_create_accepted_versions_range
+		else
+			if [[ "${python3}" == "1" ]]; then
+				python_versions=("${_PYTHON3_SUPPORTED_VERSIONS[@]}")
+				python_minimal_version="${python3_minimal_version:-${python_versions[0]}}"
+				python_maximal_version="${python3_maximal_version:-${python_versions[${#python_versions[@]}-1]}}"
+				_create_accepted_versions_range
+			fi
+			if [[ "${python2}" == "1" ]]; then
+				python_versions=("${_PYTHON2_SUPPORTED_VERSIONS[@]}")
+				python_minimal_version="${python2_minimal_version:-${python_versions[0]}}"
+				python_maximal_version="${python2_maximal_version:-${python_versions[${#python_versions[@]}-1]}}"
+				_create_accepted_versions_range
+			fi
+		fi
+
+		for accepted_version in "${accepted_versions[@]}"; do
+			python_atoms+="${python_atoms:+ }=dev-lang/python-${accepted_version}*"
+		done
+
+		_PYTHON_ATOMS="${python_atoms// /$'\n'}"
+		DEPEND+="${DEPEND:+ }${USE_flag}${USE_flag:+? ( }|| ( ${python_atoms} )${USE_flag:+ )}"
+		RDEPEND+="${RDEPEND:+ }${USE_flag}${USE_flag:+? ( }|| ( ${python_atoms} )${USE_flag:+ )}"
+	else
+		die "Invalid syntax of PYTHON_DEPEND"
+	fi
+}
+
+DEPEND=">=app-admin/eselect-python-20090804"
+RDEPEND="${DEPEND}"
+
+if [[ -n "${PYTHON_DEPEND}" && -n "${NEED_PYTHON}" ]]; then
+	die "PYTHON_DEPEND and NEED_PYTHON cannot be set simultaneously"
+elif [[ -n "${PYTHON_DEPEND}" ]]; then
+	_parse_PYTHON_DEPEND
+elif [[ -n "${NEED_PYTHON}" ]]; then
+	if ! has "${EAPI:-0}" 0 1 2; then
+		eerror "Use PYTHON_DEPEND instead of NEED_PYTHON."
+		die "NEED_PYTHON cannot be used in this EAPI"
+	fi
+	_PYTHON_ATOMS=">=dev-lang/python-${NEED_PYTHON}"
+	DEPEND+="${DEPEND:+ }${_PYTHON_ATOMS}"
+	RDEPEND+="${RDEPEND:+ }${_PYTHON_ATOMS}"
+else
+	_PYTHON_ATOMS="dev-lang/python"
+fi
 
 # @ECLASS-VARIABLE: PYTHON_USE_WITH
 # @DESCRIPTION:
-# Set this to a space separated list of use flags
-# the python slot in use must be built with.
+# Set this to a space separated list of USE flags the Python slot in use must be built with.
 
 # @ECLASS-VARIABLE: PYTHON_USE_WITH_OR
 # @DESCRIPTION:
-# Set this to a space separated list of use flags
-# of which one must be turned on for the slot of
-# in use.
+# Set this to a space separated list of USE flags of which one must be turned on for the slot in use.
 
 # @ECLASS-VARIABLE: PYTHON_USE_WITH_OPT
 # @DESCRIPTION:
-# Set this if you need to make either PYTHON_USE_WITH or
-# PYTHON_USE_WITH_OR atoms conditional under a use flag.
+# Set this to a name of a USE flag if you need to make either PYTHON_USE_WITH or
+# PYTHON_USE_WITH_OR atoms conditional under a USE flag.
 
 # @FUNCTION: python_pkg_setup
 # @DESCRIPTION:
@@ -88,22 +214,30 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR
 
 	EXPORT_FUNCTIONS pkg_setup
 
+	_PYTHON_USE_WITH_ATOM=""
 	if [[ -n "${PYTHON_USE_WITH}" ]]; then
-		PYTHON_USE_WITH_ATOM="${PYTHON_ATOM}[${PYTHON_USE_WITH/ /,}]"
+		while read _PYTHON_ATOM; do
+			_PYTHON_USE_WITH_ATOM+="${_PYTHON_USE_WITH_ATOM:+ }${_PYTHON_ATOM}[${PYTHON_USE_WITH/ /,}]"
+		done <<< "${_PYTHON_ATOMS}"
+		_PYTHON_USE_WITH_ATOM="|| ( ${_PYTHON_USE_WITH_ATOM} )"
 	elif [[ -n "${PYTHON_USE_WITH_OR}" ]]; then
-		PYTHON_USE_WITH_ATOM="|| ( "
-		for use in ${PYTHON_USE_WITH_OR}; do
-			PYTHON_USE_WITH_ATOM+=" ${PYTHON_ATOM}[${use}]"
+		for _USE_flag in ${PYTHON_USE_WITH_OR}; do
+			while read _PYTHON_ATOM; do
+				_PYTHON_USE_WITH_ATOM+="${_PYTHON_USE_WITH_ATOM:+ }${_PYTHON_ATOM}[${_USE_flag}]"
+			done <<< "${_PYTHON_ATOMS}"
 		done
-		unset use
-		PYTHON_USE_WITH_ATOM+=" )"
+		unset _USE_flag
+		_PYTHON_USE_WITH_ATOM="|| ( ${_PYTHON_USE_WITH_ATOM} )"
 	fi
 	if [[ -n "${PYTHON_USE_WITH_OPT}" ]]; then
-		PYTHON_USE_WITH_ATOM="${PYTHON_USE_WITH_OPT}? ( ${PYTHON_USE_WITH_ATOM} )"
+		_PYTHON_USE_WITH_ATOM="${PYTHON_USE_WITH_OPT}? ( ${_PYTHON_USE_WITH_ATOM} )"
 	fi
-	DEPEND+=" ${PYTHON_USE_WITH_ATOM}"
-	RDEPEND+=" ${PYTHON_USE_WITH_ATOM}"
+	DEPEND+=" ${_PYTHON_USE_WITH_ATOM}"
+	RDEPEND+=" ${_PYTHON_USE_WITH_ATOM}"
+	unset _PYTHON_ATOM _PYTHON_USE_WITH_ATOM
 fi
+
+unset _PYTHON_ATOMS
 
 # ================================================================================================
 # ======== FUNCTIONS FOR PACKAGES SUPPORTING INSTALLATION FOR MULTIPLE VERSIONS OF PYTHON ========
@@ -145,23 +279,21 @@ validate_PYTHON_ABIS() {
 	fi
 
 	# Ensure that /usr/bin/python and /usr/bin/python-config are valid.
-	if [[ "$(readlink /usr/bin/python)" != "python-wrapper" ]]; then
-		eerror "'/usr/bin/python' is not valid symlink."
+	if [[ "$(readlink "${EPREFIX}/usr/bin/python")" != "python-wrapper" ]]; then
+		eerror "'${EPREFIX}/usr/bin/python' is not valid symlink."
 		eerror "Use \`eselect python set \${python_interpreter}\` to fix this problem."
-		die "'/usr/bin/python' is not valid symlink"
+		die "'${EPREFIX}/usr/bin/python' is not valid symlink"
 	fi
-	if [[ "$(</usr/bin/python-config)" != *"Gentoo python-config wrapper script"* ]]; then
-		eerror "'/usr/bin/python-config' is not valid script"
+	if [[ "$(<"${EPREFIX}/usr/bin/python-config")" != *"Gentoo python-config wrapper script"* ]]; then
+		eerror "'${EPREFIX}/usr/bin/python-config' is not valid script"
 		eerror "Use \`eselect python set \${python_interpreter}\` to fix this problem."
-		die "'/usr/bin/python-config' is not valid script"
+		die "'${EPREFIX}/usr/bin/python-config' is not valid script"
 	fi
 
 	# USE_${ABI_TYPE^^} and RESTRICT_${ABI_TYPE^^}_ABIS variables hopefully will be included in EAPI >= 5.
 	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3 4; then
-		local PYTHON_ABI python2_supported_versions python3_supported_versions restricted_ABI support_ABI supported_PYTHON_ABIS=
-		PYTHON_ABI_SUPPORTED_VALUES="2.4 2.5 2.6 2.7 3.0 3.1 3.2"
-		python2_supported_versions="2.4 2.5 2.6 2.7"
-		python3_supported_versions="3.0 3.1 3.2"
+		local PYTHON_ABI restricted_ABI support_ABI supported_PYTHON_ABIS=
+		PYTHON_ABI_SUPPORTED_VALUES="${_PYTHON2_SUPPORTED_VERSIONS[@]} ${_PYTHON3_SUPPORTED_VERSIONS[@]}"
 
 		if [[ "$(declare -p USE_PYTHON 2> /dev/null)" == "declare -x USE_PYTHON="* ]]; then
 			local python2_enabled="0" python3_enabled="0"
@@ -175,10 +307,10 @@ validate_PYTHON_ABIS() {
 					die "USE_PYTHON variable contains invalid value '${PYTHON_ABI}'"
 				fi
 
-				if has "${PYTHON_ABI}" ${python2_supported_versions}; then
+				if has "${PYTHON_ABI}" "${_PYTHON2_SUPPORTED_VERSIONS[@]}"; then
 					python2_enabled="1"
 				fi
-				if has "${PYTHON_ABI}" ${python3_supported_versions}; then
+				if has "${PYTHON_ABI}" "${_PYTHON3_SUPPORTED_VERSIONS[@]}"; then
 					python3_enabled="1"
 				fi
 
@@ -205,16 +337,16 @@ validate_PYTHON_ABIS() {
 		else
 			local python_version python2_version= python3_version= support_python_major_version
 
-			python_version="$(/usr/bin/python -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
+			python_version="$("${EPREFIX}/usr/bin/python" -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
 
 			if has_version "=dev-lang/python-2*"; then
-				if [[ "$(readlink /usr/bin/python2)" != "python2."* ]]; then
-					die "'/usr/bin/python2' is not valid symlink"
+				if [[ "$(readlink "${EPREFIX}/usr/bin/python2")" != "python2."* ]]; then
+					die "'${EPREFIX}/usr/bin/python2' is not valid symlink"
 				fi
 
-				python2_version="$(/usr/bin/python2 -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
+				python2_version="$("${EPREFIX}/usr/bin/python2" -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
 
-				for PYTHON_ABI in ${python2_supported_versions}; do
+				for PYTHON_ABI in "${_PYTHON2_SUPPORTED_VERSIONS[@]}"; do
 					support_python_major_version="1"
 					for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
 						if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
@@ -235,13 +367,13 @@ validate_PYTHON_ABIS() {
 			fi
 
 			if has_version "=dev-lang/python-3*"; then
-				if [[ "$(readlink /usr/bin/python3)" != "python3."* ]]; then
-					die "'/usr/bin/python3' is not valid symlink"
+				if [[ "$(readlink "${EPREFIX}/usr/bin/python3")" != "python3."* ]]; then
+					die "'${EPREFIX}/usr/bin/python3' is not valid symlink"
 				fi
 
-				python3_version="$(/usr/bin/python3 -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
+				python3_version="$("${EPREFIX}/usr/bin/python3" -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
 
-				for PYTHON_ABI in ${python3_supported_versions}; do
+				for PYTHON_ABI in "${_PYTHON3_SUPPORTED_VERSIONS[@]}"; do
 					support_python_major_version="1"
 					for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
 						if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
@@ -262,12 +394,12 @@ validate_PYTHON_ABIS() {
 			fi
 
 			if [[ -n "${python2_version}" && "${python_version}" == "2."* && "${python_version}" != "${python2_version}" ]]; then
-				eerror "Python wrapper is configured incorrectly or /usr/bin/python2 symlink"
+				eerror "Python wrapper is configured incorrectly or '${EPREFIX}/usr/bin/python2' symlink"
 				eerror "is set incorrectly. Use \`eselect python\` to fix configuration."
 				die "Incorrect configuration of Python"
 			fi
 			if [[ -n "${python3_version}" && "${python_version}" == "3."* && "${python_version}" != "${python3_version}" ]]; then
-				eerror "Python wrapper is configured incorrectly or /usr/bin/python3 symlink"
+				eerror "Python wrapper is configured incorrectly or '${EPREFIX}/usr/bin/python3' symlink"
 				eerror "is set incorrectly. Use \`eselect python\` to fix configuration."
 				die "Incorrect configuration of Python"
 			fi
@@ -307,7 +439,7 @@ validate_PYTHON_ABIS() {
 # Execute specified function for each value of PYTHON_ABIS, optionally passing additional
 # arguments. The specified function can use PYTHON_ABI and BUILDDIR variables.
 python_execute_function() {
-	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function nonfatal="0" previous_directory previous_directory_stack previous_directory_stack_length PYTHON_ABI quiet="0" separate_build_dirs="0" source_dir=
+	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function i nonfatal="0" previous_directory previous_directory_stack previous_directory_stack_length PYTHON_ABI quiet="0" separate_build_dirs="0" source_dir=
 
 	while (($#)); do
 		case "$1" in
@@ -336,6 +468,7 @@ python_execute_function() {
 				shift
 				;;
 			--)
+				shift
 				break
 				;;
 			-*)
@@ -363,7 +496,7 @@ python_execute_function() {
 			die "${FUNCNAME}(): '${function}' function is not defined"
 		fi
 	else
-		if [[ "$#" -ne "0" ]]; then
+		if [[ "$#" -ne 0 ]]; then
 			die "${FUNCNAME}(): '--default-function' option and function name cannot be specified simultaneously"
 		fi
 		if has "${EAPI:-0}" 0 1; then
@@ -401,6 +534,12 @@ python_execute_function() {
 		fi
 		function="python_default_function"
 	fi
+
+	for ((i = 1; i < "${#FUNCNAME[@]}"; i++)); do
+		if [[ "${FUNCNAME[${i}]}" == "python_execute_function" ]]; then
+			die "${FUNCNAME}(): Invalid call stack"
+		fi
+	done
 
 	if [[ "${quiet}" == "0" ]]; then
 		[[ "${EBUILD_PHASE}" == "setup" ]] && action="Setting up"
@@ -526,7 +665,7 @@ python_execute_function() {
 # @FUNCTION: python_copy_sources
 # @USAGE: [--no-link] [--] [directory]
 # @DESCRIPTION:
-# Copy unpacked sources of given package for each Python ABI.
+# Copy unpacked sources of given package to separate build directory for each Python ABI.
 python_copy_sources() {
 	local dir dirs=() no_link="0" PYTHON_ABI
 
@@ -536,6 +675,7 @@ python_copy_sources() {
 				no_link="1"
 				;;
 			--)
+				shift
 				break
 				;;
 			-*)
@@ -591,9 +731,9 @@ python_set_build_dir_symlink() {
 # If --respect-EPYTHON option is specified, then generated wrapper scripts will
 # respect EPYTHON variable at run time.
 python_generate_wrapper_scripts() {
-	local eselect_python_option file force="0" quiet="0" PYTHON_ABI python2_enabled="0" python2_supported_versions python3_enabled="0" python3_supported_versions respect_EPYTHON="0"
-	python2_supported_versions="2.4 2.5 2.6 2.7"
-	python3_supported_versions="3.0 3.1 3.2"
+	_python_initialize_prefix_variables
+
+	local eselect_python_option file force="0" quiet="0" PYTHON_ABI python2_enabled="0" python3_enabled="0" respect_EPYTHON="0"
 
 	while (($#)); do
 		case "$1" in
@@ -607,6 +747,7 @@ python_generate_wrapper_scripts() {
 				quiet="1"
 				;;
 			--)
+				shift
 				break
 				;;
 			-*)
@@ -624,12 +765,12 @@ python_generate_wrapper_scripts() {
 	fi
 
 	validate_PYTHON_ABIS
-	for PYTHON_ABI in ${python2_supported_versions}; do
+	for PYTHON_ABI in "${_PYTHON2_SUPPORTED_VERSIONS[@]}"; do
 		if has "${PYTHON_ABI}" ${PYTHON_ABIS}; then
 			python2_enabled="1"
 		fi
 	done
-	for PYTHON_ABI in ${python3_supported_versions}; do
+	for PYTHON_ABI in "${_PYTHON3_SUPPORTED_VERSIONS[@]}"; do
 		if has "${PYTHON_ABI}" ${PYTHON_ABIS}; then
 			python3_enabled="1"
 		fi
@@ -681,7 +822,7 @@ if EPYTHON:
 		sys.exit(1)
 else:
 	try:
-		eselect_process = subprocess.Popen(["/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], stdout=subprocess.PIPE)
+		eselect_process = subprocess.Popen(["${EPREFIX}/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], stdout=subprocess.PIPE)
 		if eselect_process.wait() != 0:
 			raise ValueError
 	except (OSError, ValueError):
@@ -706,7 +847,7 @@ EOF
 		else
 			cat << EOF >> "${file}"
 try:
-	eselect_process = subprocess.Popen(["/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], stdout=subprocess.PIPE)
+	eselect_process = subprocess.Popen(["${EPREFIX}/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], stdout=subprocess.PIPE)
 	if eselect_process.wait() != 0:
 		raise ValueError
 except (OSError, ValueError):
@@ -742,7 +883,7 @@ EOF
 		if [[ "$?" != "0" ]]; then
 			die "${FUNCNAME}(): Generation of '$1' failed"
 		fi
-		fperms +x "${file#${D%/}}" || die "fperms '${file}' failed"
+		fperms +x "${file#${ED%/}}" || die "fperms '${file}' failed"
 	done
 }
 
@@ -755,7 +896,7 @@ EOF
 # @DESCRIPTION:
 # Set active version of Python.
 python_set_active_version() {
-	if [[ "$#" -ne "1" ]]; then
+	if [[ "$#" -ne 1 ]]; then
 		die "${FUNCNAME}() requires 1 argument"
 	fi
 
@@ -782,6 +923,9 @@ python_set_active_version() {
 	# so it does not need to be exported to subprocesses.
 	PYTHON_ABI="${EPYTHON#python}"
 	PYTHON_ABI="${PYTHON_ABI%%-*}"
+
+	# python-updater checks PYTHON_REQUESTED_ACTIVE_VERSION variable.
+	PYTHON_REQUESTED_ACTIVE_VERSION="$1"
 }
 
 # @FUNCTION: python_need_rebuild
@@ -800,7 +944,7 @@ python_need_rebuild() {
 # @FUNCTION: PYTHON
 # @USAGE: [-2] [-3] [--ABI] [-A|--active] [-a|--absolute-path] [-f|--final-ABI] [--] <Python_ABI="${PYTHON_ABI}">
 # @DESCRIPTION:
-# Get Python interpreter filename for specified Python ABI. If Python_ABI argument
+# Print Python interpreter filename for specified Python ABI. If Python_ABI argument
 # is ommitted, then PYTHON_ABI environment variable must be set and is used.
 # If -2 option is specified, then active version of Python 2 is used.
 # If -3 option is specified, then active version of Python 3 is used.
@@ -835,6 +979,7 @@ PYTHON() {
 				final_ABI="1"
 				;;
 			--)
+				shift
 				break
 				;;
 			-*)
@@ -860,7 +1005,7 @@ PYTHON() {
 			if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 				die "${FUNCNAME}(): '--active' option cannot be used in ebuilds of packages supporting installation for multiple versions of Python"
 			fi
-			slot="$(/usr/bin/python -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
+			slot="$("${EPREFIX}/usr/bin/python" -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
 		elif [[ "${final_ABI}" == "1" ]]; then
 			if has "${EAPI:-0}" 0 1 2 3 4 && [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
 				die "${FUNCNAME}(): '--final-ABI' option cannot be used in ebuilds of packages not supporting installation for multiple versions of Python"
@@ -910,7 +1055,7 @@ PYTHON() {
 		echo -n "${slot}"
 		return
 	elif [[ "${absolute_path_output}" == "1" ]]; then
-		echo -n "/usr/bin/python${slot}"
+		echo -n "${EPREFIX}/usr/bin/python${slot}"
 	else
 		echo -n "python${slot}"
 	fi
@@ -923,7 +1068,7 @@ PYTHON() {
 # @FUNCTION: python_get_includedir
 # @USAGE: [-f|--final-ABI]
 # @DESCRIPTION:
-# Print Python include directory.
+# Print path to Python include directory.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
 python_get_includedir() {
 	local final_ABI="0"
@@ -955,7 +1100,7 @@ python_get_includedir() {
 # @FUNCTION: python_get_libdir
 # @USAGE: [-f|--final-ABI]
 # @DESCRIPTION:
-# Print Python library directory.
+# Print path to Python library directory.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
 python_get_libdir() {
 	local final_ABI="0"
@@ -987,7 +1132,7 @@ python_get_libdir() {
 # @FUNCTION: python_get_sitedir
 # @USAGE: [-f|--final-ABI]
 # @DESCRIPTION:
-# Print Python site-packages directory.
+# Print path to Python site-packages directory.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
 python_get_sitedir() {
 	local options=()
@@ -1010,6 +1155,103 @@ python_get_sitedir() {
 	echo "$(python_get_libdir "${options[@]}")/site-packages"
 }
 
+# @FUNCTION: python_get_library
+# @USAGE: [-f|--final-ABI] [-l|--linker-option]
+# @DESCRIPTION:
+# Print path to Python library.
+# If --linker-option is specified, then "-l${library}" linker option is printed.
+# If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
+python_get_library() {
+	local final_ABI="0" linker_option="0" python_version
+
+	while (($#)); do
+		case "$1" in
+			-f|--final-ABI)
+				final_ABI="1"
+				;;
+			-l|--linker-option)
+				linker_option="1"
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				die "${FUNCNAME}(): Invalid usage"
+				;;
+		esac
+		shift
+	done
+
+	if [[ "${final_ABI}" == "1" ]]; then
+		python_version="$(PYTHON -f --ABI)"
+	elif [[ -n "${PYTHON_ABI}" ]]; then
+		python_version="${PYTHON_ABI}"
+	else
+		python_version="$(PYTHON -A --ABI)"
+	fi
+
+	if [[ "${linker_option}" == "1" ]]; then
+		echo "-lpython${python_version}"
+	else
+		echo "/usr/$(get_libdir)/libpython${python_version}$(get_libname)"
+	fi
+}
+
+# @FUNCTION: python_get_version
+# @USAGE: [-f|--final-ABI] [--major] [--minor] [--micro]
+# @DESCRIPTION:
+# Print Python version.
+# --major, --minor and --micro options cannot be specified simultaneously.
+# If --major, --minor and --micro options are not specified, then "${major_version}.${minor_version}" is printed.
+# If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
+python_get_version() {
+	local final_ABI="0" major="0" minor="0" micro="0" python_command
+
+	while (($#)); do
+		case "$1" in
+			-f|--final-ABI)
+				final_ABI="1"
+				;;
+			--major)
+				major="1"
+				;;
+			--minor)
+				minor="1"
+				;;
+			--micro)
+				micro="1"
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				die "${FUNCNAME}(): Invalid usage"
+				;;
+		esac
+		shift
+	done
+
+	if [[ "$((${major} + ${minor} + ${micro}))" -gt 1 ]]; then
+		die "${FUNCNAME}(): '--major', '--minor' or '--micro' options cannot be specified simultaneously"
+	fi
+
+	if [[ "${major}" == "1" ]]; then
+		python_command="from sys import version_info; print(version_info[0])"
+	elif [[ "${minor}" == "1" ]]; then
+		python_command="from sys import version_info; print(version_info[1])"
+	elif [[ "${micro}" == "1" ]]; then
+		python_command="from sys import version_info; print(version_info[2])"
+	else
+		python_command="from sys import version_info; print('.'.join([str(x) for x in version_info[:2]]))"
+	fi
+
+	if [[ "${final_ABI}" == "1" ]]; then
+		"$(PYTHON -f)" -c "${python_command}"
+	else
+		"$(PYTHON "${PYTHON_ABI--A}")" -c "${python_command}"
+	fi
+}
+
 # ================================================================================================
 # =================================== MISCELLANEOUS FUNCTIONS ====================================
 # ================================================================================================
@@ -1019,6 +1261,17 @@ _python_implementation() {
 		return 0
 	else
 		return 1
+	fi
+}
+
+_python_initialize_prefix_variables() {
+	if has "${EAPI:-0}" 0 1 2; then
+		if [[ -n "${ROOT}" && -z "${EROOT}" ]]; then
+			EROOT="${ROOT%/}${EPREFIX}/"
+		fi
+		if [[ -n "${D}" && -z "${ED}" ]]; then
+			ED="${D%/}${EPREFIX}/"
+		fi
 	fi
 }
 
@@ -1041,6 +1294,7 @@ python_convert_shebangs() {
 				only_executables="1"
 				;;
 			--)
+				shift
 				break
 				;;
 			-*)
@@ -1101,8 +1355,8 @@ python_convert_shebangs() {
 # @FUNCTION: python_mod_exists
 # @USAGE: <module>
 # @DESCRIPTION:
-# Run with the module name as an argument. it will check if a
-# python module is installed and loadable. it will return
+# Run with the module name as an argument. It will check if a
+# Python module is installed and loadable. It will return
 # TRUE(0) if the module exists, and FALSE(1) if the module does
 # not exist.
 #
@@ -1111,21 +1365,210 @@ python_convert_shebangs() {
 #             echo "gtk support enabled"
 #         fi
 python_mod_exists() {
-	[[ "$1" ]] || die "${FUNCNAME} requires an argument!"
-	python -c "import $1" &>/dev/null
+	if [[ "$#" -ne 1 ]]; then
+		die "${FUNCNAME}() requires 1 argument"
+	fi
+	"$(PYTHON "${PYTHON_ABI--A}")" -c "import $1" &> /dev/null
 }
 
 # @FUNCTION: python_tkinter_exists
 # @DESCRIPTION:
-# Run without arguments, checks if python was compiled with Tkinter
+# Run without arguments, checks if Python was compiled with Tkinter
 # support.  If not, prints an error message and dies.
 python_tkinter_exists() {
-	if ! python -c "import Tkinter" >/dev/null 2>&1; then
-		eerror "You need to recompile python with Tkinter support."
-		eerror "Try adding: 'dev-lang/python tk'"
-		eerror "in to /etc/portage/package.use"
-		echo
-		die "missing tkinter support with installed python"
+	if ! "$(PYTHON "${PYTHON_ABI--A}")" -c "from sys import version_info
+if version_info[0] == 3:
+	import tkinter
+else:
+	import Tkinter" &> /dev/null; then
+		eerror "Python needs to be rebuilt with tkinter support enabled."
+		eerror "Add the following line to '${EPREFIX}/etc/portage/package.use' and rebuild Python"
+		eerror "dev-lang/python tk"
+		die "Python installed without support for tkinter"
+	fi
+}
+
+# ================================================================================================
+# ================================ FUNCTIONS FOR RUNNING OF TESTS ================================
+# ================================================================================================
+
+# @ECLASS-VARIABLE: PYTHON_TEST_VERBOSITY
+# @DESCRIPTION:
+# User-configurable verbosity of tests of Python modules.
+# Supported values: 0, 1, 2, 3, 4.
+PYTHON_TEST_VERBOSITY="${PYTHON_TEST_VERBOSITY:-1}"
+
+# @FUNCTION: python_execute_nosetests
+# @USAGE: [-P|--PYTHONPATH PYTHONPATH] [-s|--separate-build-dirs] [--] [arguments]
+# @DESCRIPTION:
+# Execute nosetests for all enabled versions of Python.
+python_execute_nosetests() {
+	local PYTHONPATH_template= separate_build_dirs=
+
+	while (($#)); do
+		case "$1" in
+			-P|--PYTHONPATH)
+				PYTHONPATH_template="$2"
+				shift
+				;;
+			-s|--separate-build-dirs)
+				separate_build_dirs="1"
+				;;
+			--)
+				shift
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
+
+	python_test_function() {
+		local evaluated_PYTHONPATH=
+
+		if [[ -n "${PYTHONPATH_template}" ]]; then
+			evaluated_PYTHONPATH="$(eval echo -n "${PYTHONPATH_template}")"
+			if [[ ! -e "${evaluated_PYTHONPATH}" ]]; then
+				unset evaluated_PYTHONPATH
+			fi
+		fi
+
+		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
+			echo PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+			PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+		else
+			echo nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+			nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+		fi
+	}
+	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
+	else
+		if [[ -n "${separate_build_dirs}" ]]; then
+			die "${FUNCNAME}(): Invalid usage"
+		fi
+		python_test_function "$@"
+	fi
+}
+
+# @FUNCTION: python_execute_py.test
+# @USAGE: [-P|--PYTHONPATH PYTHONPATH] [-s|--separate-build-dirs] [--] [arguments]
+# @DESCRIPTION:
+# Execute py.test for all enabled versions of Python.
+python_execute_py.test() {
+	local PYTHONPATH_template= separate_build_dirs=
+
+	while (($#)); do
+		case "$1" in
+			-P|--PYTHONPATH)
+				PYTHONPATH_template="$2"
+				shift
+				;;
+			-s|--separate-build-dirs)
+				separate_build_dirs="1"
+				;;
+			--)
+				shift
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
+
+	python_test_function() {
+		local evaluated_PYTHONPATH=
+
+		if [[ -n "${PYTHONPATH_template}" ]]; then
+			evaluated_PYTHONPATH="$(eval echo -n "${PYTHONPATH_template}")"
+			if [[ ! -e "${evaluated_PYTHONPATH}" ]]; then
+				unset evaluated_PYTHONPATH
+			fi
+		fi
+
+		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
+			echo PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"
+			PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"
+		else
+			echo py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"
+			py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"
+		fi
+	}
+	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
+	else
+		if [[ -n "${separate_build_dirs}" ]]; then
+			die "${FUNCNAME}(): Invalid usage"
+		fi
+		python_test_function "$@"
+	fi
+}
+
+# @FUNCTION: python_execute_trial
+# @USAGE: [-P|--PYTHONPATH PYTHONPATH] [-s|--separate-build-dirs] [--] [arguments]
+# @DESCRIPTION:
+# Execute trial for all enabled versions of Python.
+python_execute_trial() {
+	local PYTHONPATH_template= separate_build_dirs=
+
+	while (($#)); do
+		case "$1" in
+			-P|--PYTHONPATH)
+				PYTHONPATH_template="$2"
+				shift
+				;;
+			-s|--separate-build-dirs)
+				separate_build_dirs="1"
+				;;
+			--)
+				shift
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
+
+	python_test_function() {
+		local evaluated_PYTHONPATH=
+
+		if [[ -n "${PYTHONPATH_template}" ]]; then
+			evaluated_PYTHONPATH="$(eval echo -n "${PYTHONPATH_template}")"
+			if [[ ! -e "${evaluated_PYTHONPATH}" ]]; then
+				unset evaluated_PYTHONPATH
+			fi
+		fi
+
+		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
+			echo PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+			PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+		else
+			echo trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+			trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+		fi
+	}
+	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
+	else
+		if [[ -n "${separate_build_dirs}" ]]; then
+			die "${FUNCNAME}(): Invalid usage"
+		fi
+		python_test_function "$@"
 	fi
 }
 
@@ -1165,14 +1608,16 @@ python_disable_pyc() {
 # Example:
 #         python_mod_optimize ctypesgencore
 python_mod_optimize() {
+	_python_initialize_prefix_variables
+
 	# Check if phase is pkg_postinst().
-	[[ ${EBUILD_PHASE} != "postinst" ]] && die "${FUNCNAME} should only be run in pkg_postinst()"
+	[[ ${EBUILD_PHASE} != "postinst" ]] && die "${FUNCNAME}() should only be run in pkg_postinst()"
 
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		local dir file options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" PYTHON_ABI return_code root site_packages_absolute_dirs=() site_packages_dirs=() site_packages_absolute_files=() site_packages_files=()
 
 		# Strip trailing slash from ROOT.
-		root="${ROOT%/}"
+		root="${EROOT%/}"
 
 		# Respect ROOT and options passed to compileall.py.
 		while (($#)); do
@@ -1185,11 +1630,11 @@ python_mod_optimize() {
 					shift
 					;;
 				-*)
-					ewarn "${FUNCNAME}: Ignoring option '$1'"
+					ewarn "${FUNCNAME}(): Ignoring option '$1'"
 					;;
 				*)
-					if ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
-						die "${FUNCNAME} does not support absolute paths of directories/files in site-packages directories"
+					if ! _python_implementation && [[ "$1" =~ ^"${EPREFIX}"/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
+						die "${FUNCNAME}() does not support absolute paths of directories/files in site-packages directories"
 					elif [[ "$1" =~ ^/ ]]; then
 						if [[ -d "${root}/$1" ]]; then
 							other_dirs+=("${root}/$1")
@@ -1270,7 +1715,7 @@ python_mod_optimize() {
 		local myroot mydirs=() myfiles=() myopts=() return_code="0"
 
 		# strip trailing slash
-		myroot="${ROOT%/}"
+		myroot="${EROOT%/}"
 
 		# respect ROOT and options passed to compileall.py
 		while (($#)); do
@@ -1283,7 +1728,7 @@ python_mod_optimize() {
 					shift
 					;;
 				-*)
-					ewarn "${FUNCNAME}: Ignoring option '$1'"
+					ewarn "${FUNCNAME}(): Ignoring option '$1'"
 					;;
 				*)
 					if [[ -d "${myroot}"/$1 ]]; then
@@ -1330,19 +1775,21 @@ python_mod_optimize() {
 #
 # This function should only be run in pkg_postrm().
 python_mod_cleanup() {
+	_python_initialize_prefix_variables
+
 	local path py_file PYTHON_ABI SEARCH_PATH=() root
 
 	# Check if phase is pkg_postrm().
-	[[ ${EBUILD_PHASE} != "postrm" ]] && die "${FUNCNAME} should only be run in pkg_postrm()"
+	[[ ${EBUILD_PHASE} != "postrm" ]] && die "${FUNCNAME}() should only be run in pkg_postrm()"
 
 	# Strip trailing slash from ROOT.
-	root="${ROOT%/}"
+	root="${EROOT%/}"
 
 	if (($#)); then
 		if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 			while (($#)); do
-				if ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
-					die "${FUNCNAME} does not support absolute paths of directories/files in site-packages directories"
+				if ! _python_implementation && [[ "$1" =~ ^"${EPREFIX}"/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
+					die "${FUNCNAME}() does not support absolute paths of directories/files in site-packages directories"
 				elif [[ "$1" =~ ^/ ]]; then
 					SEARCH_PATH+=("${root}/${1#/}")
 				else
@@ -1409,9 +1856,14 @@ python_mod_cleanup() {
 # Run without arguments and it will export the version of python
 # currently in use as $PYVER; sets PYVER/PYVER_MAJOR/PYVER_MINOR
 python_version() {
+	if ! has "${EAPI:-0}" 0 1 2; then
+		eerror "Use PYTHON() and/or python_get_*() instead of python_version()."
+		die "${FUNCNAME}() cannot be used in this EAPI"
+	fi
+
 	[[ -n "${PYVER}" ]] && return 0
 	local tmpstr
-	python="${python:-/usr/bin/python}"
+	python="${python:-${EPREFIX}/usr/bin/python}"
 	tmpstr="$(EPYTHON= ${python} -V 2>&1 )"
 	export PYVER_ALL="${tmpstr#Python }"
 	export PYVER_MAJOR="${PYVER_ALL:0:1}"
@@ -1433,17 +1885,19 @@ python_version() {
 #
 python_mod_compile() {
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		eerror "Use python_mod_optimize() instead of python_mod_compile()."
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
+
+	_python_initialize_prefix_variables
 
 	local f myroot myfiles=()
 
 	# Check if phase is pkg_postinst()
-	[[ ${EBUILD_PHASE} != postinst ]] &&\
-		die "${FUNCNAME} should only be run in pkg_postinst()"
+	[[ ${EBUILD_PHASE} != postinst ]] && die "${FUNCNAME}() should only be run in pkg_postinst()"
 
 	# strip trailing slash
-	myroot="${ROOT%/}"
+	myroot="${EROOT%/}"
 
 	# respect ROOT
 	for f in "$@"; do
