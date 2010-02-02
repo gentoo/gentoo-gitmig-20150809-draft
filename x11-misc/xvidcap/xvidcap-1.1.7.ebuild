@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.7.ebuild,v 1.2 2009/03/11 22:43:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.7.ebuild,v 1.3 2010/02/02 18:45:37 ssuominen Exp $
 
-GCONF_DEBUG="no"
-
+GCONF_DEBUG=no
 inherit eutils autotools gnome2
 
 MY_P=${P/_rc/rc}
@@ -22,6 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	mp3? ( media-sound/lame )
 	theora? ( media-libs/libtheora )"
 DEPEND="${RDEPEND}
+	>=x11-proto/xextproto-7.1.1 
 	dev-util/pkgconfig
 	dev-util/intltool
 	virtual/libintl
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-shmproto.patch
 	epatch "${FILESDIR}"/${P}-ffmpeg-headers.patch
 	# bug 242680
 	epatch "${FILESDIR}"/${P}-ffmpeg-trellis.patch
