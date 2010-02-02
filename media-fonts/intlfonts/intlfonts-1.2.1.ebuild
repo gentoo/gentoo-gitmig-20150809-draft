@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.17 2009/09/15 22:15:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.18 2010/02/02 14:22:30 scarabeus Exp $
 
 inherit font
 
@@ -18,15 +18,14 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 DEPEND="x11-apps/bdftopcf"
 
 src_compile() {
-	econf --with-fontdir=/usr/share/fonts/${PN} || die
+	econf --with-fontdir=/usr/share/fonts/${PN}
 }
 
 src_install() {
-	make install fontdir="${D}/usr/share/fonts/${PN}" || die
+	emake install fontdir="${D}/usr/share/fonts/${PN}" || die
 	find "${D}/usr/share/fonts/${PN}" -name '*.pcf' | xargs gzip -9
 	use bdf || rm -rf "${D}/usr/share/fonts/${PN}/bdf"
 	dodoc ChangeLog NEWS README
 	dodoc Emacs.ap
 	font_xfont_config
-	font_xft_config
 }

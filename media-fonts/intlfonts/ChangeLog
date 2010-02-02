@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/intlfonts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.19 2009/09/15 22:15:14 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.20 2010/02/02 14:22:30 scarabeus Exp $
+
+  02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  intlfonts-1.2.1.ebuild:
+  Accomodate needs of future font.eclass.
 
   15 Sep 2009; Jeroen Roovers <jer@gentoo.org> intlfonts-1.2.1.ebuild:
   Stable for HPPA (bug #268190).
