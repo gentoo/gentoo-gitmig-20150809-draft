@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.11.ebuild,v 1.2 2010/01/31 21:19:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.11.ebuild,v 1.3 2010/02/02 17:31:35 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -60,11 +60,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# change .desktop category so it's freedesktop complient
-	sed -i \
-		-e '/Icon/ s:\.png::' \
-		bootstrap/freeciv.desktop.in \
-		|| die "sed failed"
 	# install the .desktop in /usr/share/applications
 	# install the icons in /usr/share/pixmaps
 	sed -i \
