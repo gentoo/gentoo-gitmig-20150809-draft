@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-002.ebuild,v 1.1 2009/09/29 05:17:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-004.ebuild,v 1.1 2010/02/02 16:32:32 ramereth Exp $
 
 EAPI=2
 
-inherit eutils mount-boot
+inherit mount-boot
 
 DESCRIPTION="Generic initramfs generation tool"
 HOMEPAGE="http://sourceforge.net/projects/dracut/"
@@ -20,19 +20,7 @@ NETWORK_DEPS="sys-apps/iproute2 net-misc/dhcp net-misc/bridge-utils"
 
 RDEPEND="app-shells/dash
 	>=sys-apps/module-init-tools-3.6
-	app-arch/cpio
-	sys-apps/coreutils
-	sys-apps/findutils
-	sys-devel/binutils
-	sys-apps/grep
-	sys-apps/which
-	sys-apps/util-linux
-	app-shells/bash
-	app-arch/gzip
-	app-arch/tar
-	sys-fs/e2fsprogs
-	sys-apps/file
-	app-arch/bzip2
+	>=sys-apps/util-linux-2.16
 	crypt? ( sys-fs/cryptsetup )
 	dmraid? ( sys-fs/dmraid )
 	lvm? ( >=sys-fs/lvm2-2.02.33 )
@@ -43,22 +31,16 @@ RDEPEND="app-shells/dash
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-unmount.patch"
-	epatch "${FILESDIR}/${P}-custom-paths.patch"
-	epatch "${FILESDIR}/${P}-dir-symlinks.patch"
-	epatch "${FILESDIR}/${P}-add-missing-functions.patch"
-	epatch "${FILESDIR}/${P}-gencmdline-check-for-keyboard-i18n-files.patch"
-}
-
 src_compile() {
-	emake prefix=/usr sysconfdir=/etc || die "emake failed"
+	emake WITH_SWITCH_ROOT=0 prefix=/usr sysconfdir=/etc || die "emake failed"
 }
 
 src_install() {
 	local modules_dir="${D}/usr/share/dracut/modules.d"
 
-	emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install || die "emake install failed"
+	emake WITH_SWITCH_ROOT=0 \
+		prefix=/usr sysconfdir=/etc \
+		DESTDIR="${D}" install || die "emake install failed"
 	echo "${PF}" > "${modules_dir}"/10rpmversion/dracut-version
 	dodir /boot/dracut /var/lib/dracut/overlay
 	dodoc HACKING TODO AUTHORS NEWS README*
