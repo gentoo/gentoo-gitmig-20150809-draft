@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.35 2010/01/25 14:11:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.36 2010/02/02 21:02:42 abcd Exp $
+
+  02 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  texlive-context-2009.ebuild:
+  Add ~amd64-linux/~x86-linux keywords, prefix support
 
   25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   texlive-context-2009.ebuild:
