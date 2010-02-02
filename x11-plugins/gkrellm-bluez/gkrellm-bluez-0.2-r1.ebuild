@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/gkrellm-bluez-0.2-r1.ebuild,v 1.6 2009/12/02 11:53:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/gkrellm-bluez-0.2-r1.ebuild,v 1.7 2010/02/02 08:27:42 pacho Exp $
 
 inherit gkrellm-plugin
 
@@ -20,6 +20,11 @@ PLUGIN_DOCS="THEMING NEWS"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	# Be a bit more future proof, bug #260948
+	sed "s/-Werror//" -i src/Makefile.am src/Makefile.in || die "sed failed"
+
 	epatch "${FILESDIR}"/${P}-notheme.patch || die "Patch failed"
 }
 
