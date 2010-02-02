@@ -1,6 +1,9 @@
 # ChangeLog for games-util/xgamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.3 2010/01/23 15:37:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.4 2010/02/02 06:02:02 mr_bones_ Exp $
+
+  02 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> xgamer-0.2.1.ebuild:
+  Add dev-perl/XML-Simple dep (bug #303106)
 
   23 Jan 2010; Brent Baude <ranger@gentoo.org> xgamer-0.2.1.ebuild:
   stable ppc, bug 299701

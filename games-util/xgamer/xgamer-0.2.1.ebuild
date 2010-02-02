@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/xgamer-0.2.1.ebuild,v 1.3 2010/01/23 15:37:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/xgamer-0.2.1.ebuild,v 1.4 2010/02/02 06:02:02 mr_bones_ Exp $
 
 EAPI=2
 inherit perl-module
@@ -20,6 +20,7 @@ RDEPEND=">=dev-lang/perl-5.8
 	>=x11-wm/openbox-3.0.0
 	virtual/perl-File-Spec
 	dev-perl/File-BaseDir
+	dev-perl/XML-Simple
 	dev-perl/glib-perl
 	x11-misc/numlockx
 	media-gfx/feh"
