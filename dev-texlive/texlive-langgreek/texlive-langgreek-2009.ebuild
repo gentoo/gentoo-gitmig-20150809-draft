@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langgreek/texlive-langgreek-2009.ebuild,v 1.2 2010/01/25 13:52:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langgreek/texlive-langgreek-2009.ebuild,v 1.3 2010/02/02 21:17:54 abcd Exp $
 
 TEXLIVE_MODULE_CONTENTS="betababel bgreek cbfonts gfsbaskerville gfsporson greek-inputenc greekdates greektex grverb ibycus-babel ibygrk kerkis levy lgreek mkgrkindex teubner xgreek yannisgr hyphen-greek hyphen-ancientgreek collection-langgreek
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Greek"
 
 LICENSE="GPL-2 as-is GPL-1 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 "

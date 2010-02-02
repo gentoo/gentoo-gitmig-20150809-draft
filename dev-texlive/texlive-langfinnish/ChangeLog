@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langfinnish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfinnish/ChangeLog,v 1.29 2010/01/11 03:22:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfinnish/ChangeLog,v 1.30 2010/02/02 21:16:53 abcd Exp $
+
+  02 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  texlive-langfinnish-2009.ebuild:
+  Add ~amd64-linux/~x86-linux keywords
 
 *texlive-langfinnish-2009 (11 Jan 2010)
 

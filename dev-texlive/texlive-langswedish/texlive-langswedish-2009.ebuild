@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langswedish/texlive-langswedish-2009.ebuild,v 1.1 2010/01/11 03:27:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langswedish/texlive-langswedish-2009.ebuild,v 1.2 2010/02/02 21:24:20 abcd Exp $
 
 TEXLIVE_MODULE_CONTENTS="swebib hyphen-swedish collection-langswedish
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Swedish"
 
 LICENSE="GPL-2 LPPL-1.2 "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 "
