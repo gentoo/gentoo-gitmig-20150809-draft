@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.131 2010/02/02 03:01:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.132 2010/02/02 22:16:04 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -85,7 +85,11 @@ elif [ "${PV#5.0}" != "${PV}" ] && mysql_version_is_at_least "5.0.82"; then
 	MYSQL_COMMUNITY_FEATURES=1
 elif [ "${PV#5.1}" != "${PV}" ] && mysql_version_is_at_least "5.1.28"; then
 	MYSQL_COMMUNITY_FEATURES=1
-elif [ "${PV#5.4}" != "${PV}" ] || [ "${PV#5.4}" != "${PV}" ]; then
+elif [ "${PV#5.4}" != "${PV}" ] ; then
+	MYSQL_COMMUNITY_FEATURES=1
+elif [ "${PV#5.5}" != "${PV}" ] ; then
+	MYSQL_COMMUNITY_FEATURES=1
+elif [ "${PV#6.0}" != "${PV}" ] ; then
 	MYSQL_COMMUNITY_FEATURES=1
 else
 	MYSQL_COMMUNITY_FEATURES=0
@@ -136,12 +140,13 @@ PDEPEND="${PDEPEND} =virtual/mysql-$(get_version_component_range 1-2 ${PV})"
 
 # Work out the default SERVER_URI correctly
 if [ -z "${SERVER_URI}" ]; then
+	[ -z "${MY_PV}" ] && MY_PV="${PV//_/-}"
 	# The community build is on the mirrors
 	if [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ]; then
-		SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
+		SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${MY_PV}.tar.gz"
 	# The (old) enterprise source is on the primary site only
 	elif [ "${PN}" == "mysql" ]; then
-		SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
+		SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${MY_PV}.tar.gz"
 	fi
 fi
 
