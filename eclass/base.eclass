@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.48 2010/01/24 13:43:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.49 2010/02/02 10:20:25 scarabeus Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -172,7 +172,7 @@ base_src_install_docs() {
 	if [[ "$(declare -p DOCS 2>/dev/null 2>&1)" == "declare -a"* ]]; then
 		for x in "${DOCS[@]}"; do
 			debug-print "$FUNCNAME: docs: creating document from ${x}"
-			dodoc -r "${x}" || die "dodoc failed"
+			dodoc "${x}" || die "dodoc failed"
 		done
 	fi
 	if [[ "$(declare -p HTML_DOCS 2>/dev/null 2>&1)" == "declare -a"* ]]; then
