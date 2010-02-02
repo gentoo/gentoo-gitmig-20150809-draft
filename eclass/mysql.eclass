@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.128 2010/02/01 19:16:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.129 2010/02/02 02:46:52 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -489,14 +489,16 @@ configure_51() {
 	local plugins="csv,myisam,myisammrg,heap"
 	if use extraengine ; then
 		# like configuration=max-no-ndb, archive and example removed in 5.1.11
-		plugins="${plugins},archive,blackhole,example,federated,partition"
+		# not added yet: ibmdb2i
+		# Not supporting as examples: example,daemon_example,ftexample 
+		plugins="${plugins},archive,blackhole,federated,partition"
 
 		elog "Before using the Federated storage engine, please be sure to read"
 		elog "http://dev.mysql.com/doc/refman/5.1/en/federated-limitations.html"
 	fi
 
 	# Upstream specifically requests that InnoDB always be built.
-	plugins="${plugins},innobase"
+	plugins="${plugins},innobase,innodb_plugin"
 
 	# like configuration=max-no-ndb
 	if use cluster ; then
