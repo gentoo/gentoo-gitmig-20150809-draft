@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.7 2010/01/17 18:51:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.8 2010/02/02 17:02:19 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="doc mpi test"
 
 RDEPEND="dev-python/numpy
-	sci-libs/netcdf
+	sci-libs/netcdf[mpi=]
 	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose )"
@@ -33,6 +33,7 @@ PYTHON_MODNAME="Scientific"
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-mpi.patch"
+	use mpi && epatch "${FILESDIR}/${P}-mpi-netcdf.patch"
 }
 
 src_compile() {
