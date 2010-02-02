@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.218 2010/02/01 23:47:54 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.219 2010/02/02 19:11:21 ranger Exp $
+
+  02 Feb 2010; Brent Baude <ranger@gentoo.org> lighttpd-1.4.25-r1.ebuild:
+  Marking lighttpd-1.4.25-r1 ppc64 for bug 303213
 
 *lighttpd-1.4.25-r1 (01 Feb 2010)
 
