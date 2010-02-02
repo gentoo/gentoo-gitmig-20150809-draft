@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/solve-resolve-bin
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/ChangeLog,v 1.1 2010/02/02 22:23:45 jlec Exp $
+
+*solve-resolve-bin-2.13 (02 Feb 2010)
+
+  02 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +solve-resolve-bin-2.13.ebuild, +metadata.xml:
+  Automated crystallographic structure solution for MIR, SAD, and MAD
+
