@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r3.ebuild,v 1.14 2010/02/02 17:45:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r3.ebuild,v 1.15 2010/02/02 18:01:54 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
+
 DESCRIPTION="Nail is an enhanced mailx-compatible mail client"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://nail.sourceforge.net/"
@@ -27,6 +28,8 @@ remove_sockets() {
 }
 
 src_compile() {
+	tc-export CC
+
 	# Do not strip the binary
 	sed -i -e 's:-s nail:nail:' Makefile
 
