@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.105 2010/01/31 16:30:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.106 2010/02/02 08:10:12 wired Exp $
+
+  02 Feb 2010; Alex Alexander <wired@gentoo.org> PyQt4-4.5.4-r4.ebuild,
+  PyQt4-4.6.2.ebuild:
+  updated SRC_URI to use gentoo mirrors, upstream doesn't provide these
+  versions anymore
 
   31 Jan 2010; <hwoarang@gentoo.org> PyQt4-4.6.2.ebuild:
   Stable on amd64 wrt bug #300713
