@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r2.ebuild,v 1.8 2009/12/15 14:54:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r2.ebuild,v 1.9 2010/02/02 15:24:54 scarabeus Exp $
 
 inherit font
 
@@ -37,6 +37,5 @@ src_install() {
 	done
 
 	font_xfont_config
-	font_xft_config
 	font_fontconfig
 }
