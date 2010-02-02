@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/electricsheep
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.46 2009/12/31 18:34:58 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.47 2010/02/02 13:00:44 klausman Exp $
+
+  02 Feb 2010; Tobias Klausmann <klausman@gentoo.org>
+  electricsheep-2.7_beta11.ebuild:
+  Stable on amd64, bug #303207
 
   31 Dec 2009; Markus Meier <maekke@gentoo.org>
   electricsheep-2.7_beta11.ebuild:
