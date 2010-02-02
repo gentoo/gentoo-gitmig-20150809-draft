@@ -1,6 +1,11 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.109 2010/02/01 17:04:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.110 2010/02/02 07:25:23 ssuominen Exp $
+
+  02 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -skype-2.0.0.72.ebuild, -files/skype.debus.config,
+  -files/skype-callto-handler:
+  Remove last stable version wrt #301924 and #303112.
 
   01 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> skype-2.1.0.81.ebuild:
   Fix x86 runtime deps, thanks to Kacper Kowalik for noticing.
