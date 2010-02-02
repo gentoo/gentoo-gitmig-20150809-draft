@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-langcjk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.33 2010/01/25 14:01:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.34 2010/02/02 08:49:29 aballier Exp $
+
+  02 Feb 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-langcjk-2009.ebuild:
+  Remove dep on dev-texlive/texlive-documentation-chinese, again, by Olaf
+  Freyer <aaron@cs.tu-berlin.de>, bug #302876
 
   25 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   texlive-langcjk-2009.ebuild:
