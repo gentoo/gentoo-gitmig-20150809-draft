@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.50 2010/01/31 16:49:44 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.51 2010/02/02 12:59:36 mrpouet Exp $
+
+*compiz-0.8.4-r2 (02 Feb 2010)
+
+  02 Feb 2010; Romain Perier <mrpouet@gentoo.org> +compiz-0.8.4-r2.ebuild,
+  +files/compiz-0.8.4-window-region-calculation.patch:
+  Fix window region calculation for windows that have border width set,
+  patch imported from upstream, per bug #302308.
 
 *compiz-0.8.4-r1 (31 Jan 2010)
 
