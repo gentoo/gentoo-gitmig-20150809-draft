@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11172 2010/02/02 06:04:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11173 2010/02/02 06:21:41 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
+# Upstream discontinued the split of -community and -enterprise specific
+# tarballs of source. You must move to dev-db/mysql as the -community split has
+# security vulnerabilities only fixed in the main package.
+# To be removed 2010/07/01.
+dev-db/mysql-community
 
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
 # Mask 5.4 series that is nearly a release candidate upstream (expected within the next 6 months)
@@ -1205,7 +1212,6 @@ app-benchmarks/ltp
 # Luca Longinotti <chtekk@gentoo.org> (12 Jan 2007)
 # Mask MySQL 5.1.* and the alpha versions
 >=dev-db/mysql-5.1
->=dev-db/mysql-community-5.1
 >=virtual/mysql-5.1
 
 # Fernando J. Pereda <ferdy@gentoo.org> (25 April 2005)
