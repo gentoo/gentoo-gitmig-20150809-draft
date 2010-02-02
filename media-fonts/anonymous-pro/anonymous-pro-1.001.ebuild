@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/anonymous-pro/anonymous-pro-1.001.ebuild,v 1.1 2010/01/17 22:55:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/anonymous-pro/anonymous-pro-1.001.ebuild,v 1.2 2010/02/02 09:02:56 scarabeus Exp $
 
 EAPI="2"
 inherit font
@@ -18,6 +18,8 @@ IUSE=""
 FONT_SUFFIX="ttf"
 FONT_S="${WORKDIR}/${MY_PN}"
 DOCS="FONTLOG.txt README.txt"
+
+S=${FONT_S}
 
 # Only installs fonts.
 RESTRICT="strip binchecks"
