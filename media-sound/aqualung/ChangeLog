@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/aqualung
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.8 2009/12/20 18:26:54 billie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.9 2010/02/02 18:19:40 billie Exp $
+
+*aqualung-0.9_beta11 (02 Feb 2010)
+
+  02 Feb 2010; Daniel Pielmeier <billie@gentoo.org>
+  +aqualung-0.9_beta11.ebuild:
+  Version bump.
 
   20 Dec 2009; Daniel Pielmeier <billie@gentoo.org>
   aqualung-0.9_beta10-r3.ebuild:
