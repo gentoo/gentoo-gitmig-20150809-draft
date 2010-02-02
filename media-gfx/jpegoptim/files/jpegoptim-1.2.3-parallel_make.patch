@@ -1,5 +1,7 @@
---- Makefile.in.orig	2010-02-02 22:45:50.000000000 +0200
-+++ Makefile.in	2010-02-02 22:46:33.000000000 +0200
+http://bugs.gentoo.org/show_bug.cgi?id=303263
+
+--- Makefile.in
++++ Makefile.in
 @@ -79,7 +79,7 @@
  	groff -Tps -mandoc ./$(PKGNAME).1 >$(PKGNAME).ps
  	groff -Tascii -mandoc ./$(PKGNAME).1 | tee $(PKGNAME).prn | sed 's/.//g' >$(PKGNAME).txt
