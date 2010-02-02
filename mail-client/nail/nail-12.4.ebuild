@@ -1,19 +1,31 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r3.ebuild,v 1.14 2010/02/02 17:45:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.1 2010/02/02 17:45:35 jer Exp $
+
+EAPI="2"
 
 inherit eutils
-DESCRIPTION="Nail is an enhanced mailx-compatible mail client"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-HOMEPAGE="http://nail.sourceforge.net/"
-PROVIDE="virtual/mailx"
-DEPEND="ssl? ( dev-libs/openssl )
-	!virtual/mailx"
 
-SLOT="0"
+HOMEPAGE="http://heirloom.sourceforge.net/"
+DESCRIPTION="an enhanced mailx-compatible mail client"
 LICENSE="BSD"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="ssl net"
+
+MY_PN="mailx"
+MY_P="${MY_PN}-${PV}"
+SRC_URI="mirror://sourceforge/project/heirloom/heirloom-${MY_PN}/${PV}/${MY_P}.tar.bz2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="ssl net kerberos"
+
+PROVIDE="virtual/mailx"
+RDEPEND="
+	ssl? ( dev-libs/openssl )
+	kerberos? ( virtual/krb5 )
+	!virtual/mailx
+"
+DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${MY_P}
 
 remove_ssl() {
 	elog "Disabling SSL support"
@@ -26,15 +38,14 @@ remove_sockets() {
 	sed -i -e 's~#define HAVE_SOCKETS~#undef HAVE_SOCKETS~' config.h
 }
 
-src_compile() {
+src_prepare() {
 	# Do not strip the binary
-	sed -i -e 's:-s nail:nail:' Makefile
+	sed -i -e '/STRIP/d' Makefile
+}
 
+src_configure() {
 	# Build config.h and LIBS, neccesary to tweak the config
-	make config.h
-
-	# Fix nail to allow it to be built without sockets
-	epatch "${FILESDIR}/${PN}-nosocket.patch"
+	make config.h LIBS
 
 	# Logic to 'configure' the package
 	if use net && ! use ssl ; then
@@ -44,9 +55,16 @@ src_compile() {
 		remove_ssl
 		remove_sockets
 	fi
+}
 
-	# Now really build it
-	emake PREFIX=/usr MAILSPOOL='/var/spool/mail' || die "emake failed"
+src_compile() {
+	# No configure script to check for and set this
+	tc-export CC
+
+	emake \
+		PREFIX=/usr \
+		MAILSPOOL='/var/spool/mail' \
+		|| die "emake failed"
 }
 
 src_install () {
@@ -63,8 +81,7 @@ src_install () {
 		PREFIX=/usr install || die "install failed"
 	dodoc AUTHORS INSTALL README
 	dodir /bin
-	dosym /usr/bin/nail /bin/mail
-	dosym /usr/bin/nail /usr/bin/mailx
-	dosym /usr/bin/nail /usr/bin/mail
-	dosym /usr/bin/nail /usr/bin/Mail
+	dosym /usr/bin/mailx /bin/mail
+	dosym /usr/bin/mailx /usr/bin/mail
+	dosym /usr/bin/mailx /usr/bin/Mail
 }
