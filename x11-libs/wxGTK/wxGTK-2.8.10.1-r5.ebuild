@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r3.ebuild,v 1.1 2009/08/06 04:56:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.1 2010/02/02 19:10:58 dirtyepic Exp $
 
 EAPI="2"
 
@@ -63,6 +63,7 @@ src_prepare() {
 	# this version only:
 	epatch "${FILESDIR}"/${P}-CVE-2009-2369.patch              # Bug #277722
 	epatch "${FILESDIR}"/${P}-gsocket.patch                    # Bug #278778
+	epatch "${FILESDIR}"/${P}-wxTimer-unbounded-hook.patch     # Bug #301143
 }
 
 src_configure() {
