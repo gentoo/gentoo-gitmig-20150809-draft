@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.2 2010/02/02 18:01:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.3 2010/02/02 18:14:19 jer Exp $
 
 EAPI="2"
 
@@ -39,6 +39,7 @@ remove_sockets() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-debian.patch
 	# Do not strip the binary
 	sed -i -e '/STRIP/d' Makefile
 }
@@ -62,6 +63,7 @@ src_compile() {
 	tc-export CC
 
 	emake \
+		CPPFLAGS="${CPPFLAGS} -D_GNU_SOURCE"
 		PREFIX=/usr \
 		MAILSPOOL='/var/spool/mail' \
 		|| die "emake failed"
