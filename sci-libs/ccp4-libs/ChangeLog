@@ -1,0 +1,14 @@
+# ChangeLog for sci-libs/ccp4-libs
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.1 2010/02/02 20:38:16 jlec Exp $
+
+*ccp4-libs-6.1.3 (02 Feb 2010)
+
+  02 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/6.0.2-ppc-double-define-gerror.patch,
+  +files/6.1.3-ccif-shared.patch, +files/6.1.3-dont-build-mmdb.patch,
+  +files/6.1.3-dont-make-dirs-in-configure.patch,
+  +files/6.1.3-glibc2.10.patch, +files/6.1.3-link-proberly.patch,
+  +ccp4-libs-6.1.3.ebuild, +metadata.xml:
+  Splitted libraries from sci-chemistry/ccp4
+
