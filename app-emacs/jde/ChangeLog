@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/jde
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.36 2009/04/06 21:00:11 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.37 2010/02/02 17:55:13 ulm Exp $
+
+*jde-2.4.0.1 (02 Feb 2010)
+
+  02 Feb 2010; Ulrich Mueller <ulm@gentoo.org> jde-2.3.5.1-r2.ebuild,
+  +files/70jde-gentoo-2.3.5.1.el, files/70jde-gentoo.el,
+  jde-2.3.6_pre20081208.ebuild, -files/70jde-gentoo-2.3.6_pre20081208.el,
+  +jde-2.4.0.1.ebuild, +files/jde-2.4.0.1-classpath-gentoo.patch,
+  +files/jde-2.4.0.1-fix-paths-gentoo.patch:
+  Version bump. Add prefix keywords, change EAPI to 3.
 
   06 Apr 2009; Ulrich Mueller <ulm@gentoo.org> -jde-2.3.5.1.ebuild:
   Remove old.
