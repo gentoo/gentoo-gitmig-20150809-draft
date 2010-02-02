@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.210 2010/02/01 23:08:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.211 2010/02/02 19:03:34 ranger Exp $
+
+  02 Feb 2010; Brent Baude <ranger@gentoo.org> poppler-0.12.3-r3.ebuild:
+  Marking poppler-0.12.3-r3 ppc64 for bug 290464
 
   01 Feb 2010; Jeroen Roovers <jer@gentoo.org> poppler-0.12.3-r3.ebuild:
   Stable for HPPA (bug #290464).
