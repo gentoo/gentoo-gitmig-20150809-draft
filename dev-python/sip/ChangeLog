@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.155 2010/01/31 16:20:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.156 2010/02/02 08:04:19 wired Exp $
+
+  02 Feb 2010; Alex Alexander <wired@gentoo.org> sip-4.9.3-r1.ebuild:
+  updated SRC_URI to use gentoo mirrors, upstream doesn't provide this
+  version anymore
 
   31 Jan 2010; <hwoarang@gentoo.org> sip-4.9.3-r1.ebuild:
   Stable on amd64 wrt bug #300713
