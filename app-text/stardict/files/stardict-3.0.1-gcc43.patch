@@ -1,0 +1,406 @@
+=== modified file 'src/config_file.hpp'
+--- src/config_file.hpp	2008-04-26 21:05:23 +0000
++++ src/config_file.hpp	2008-04-26 21:05:29 +0000
+@@ -5,7 +5,7 @@
+ #include <list>
+ #include <string>
+ 
+-#include "sigc++/sigc++.h"
++#include <sigc++/sigc++.h>
+ 
+ class config_file;
+ 
+
+=== modified file 'src/gconf_file.cpp'
+--- src/gconf_file.cpp	2008-04-26 21:05:23 +0000
++++ src/gconf_file.cpp	2008-04-26 21:05:29 +0000
+@@ -22,6 +22,7 @@
+ #  include "config.h"
+ #endif
+ 
++#include <memory>
+ #include <glib/gi18n.h>
+ 
+ #include "gconf_file.hpp"
+
+=== modified file 'src/inifile.cpp'
+--- src/inifile.cpp	2008-04-26 21:05:23 +0000
++++ src/inifile.cpp	2008-04-26 21:05:29 +0000
+@@ -28,6 +28,7 @@
+ #include <cstdio>
+ #include <glib/gi18n.h>
+ #include <glib/gstdio.h>
++#include <stdlib.h>
+ 
+ #include "utils.h"
+ 
+
+=== modified file 'src/lib/common.cpp'
+--- src/lib/common.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/common.cpp	2008-04-26 21:05:29 +0000
+@@ -24,6 +24,8 @@
+ #  include "config.h"
+ #endif
+ 
++#include <cstring>
++#include <stdlib.h>
+ #include "common.hpp"
+ 
+ static void parse_description(const char *p, long len, std::string &description)
+
+=== modified file 'src/lib/data.cpp'
+--- src/lib/data.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/data.cpp	2008-04-26 21:05:29 +0000
+@@ -26,6 +26,7 @@
+ 
+ #include "data.hpp"
+ #include "getuint32.h"
++#include <cstring>
+ 
+ 
+ DictBase::DictBase()
+
+=== modified file 'src/lib/http_client.cpp'
+--- src/lib/http_client.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/http_client.cpp	2008-04-26 21:05:29 +0000
+@@ -4,6 +4,7 @@
+ 
+ #include "http_client.h"
+ #include "sockets.hpp"
++#include <cstring>
+ 
+ sigc::signal<void, HttpClient *, const char *> HttpClient::on_error_;
+ sigc::signal<void, HttpClient *> HttpClient::on_response_;
+
+=== modified file 'src/lib/pluginmanager.cpp'
+--- src/lib/pluginmanager.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/pluginmanager.cpp	2008-04-26 21:05:29 +0000
+@@ -1,6 +1,7 @@
+ #include "pluginmanager.h"
+ #include "file.hpp"
+ #include <string>
++#include <cstring>
+ 
+ StarDictPluginBaseObject::StarDictPluginBaseObject(const char *filename, GModule *module_, plugin_configure_func_t configure_func_):
+ 	plugin_filename(filename), module(module_), configure_func(configure_func_)
+
+=== modified file 'src/lib/stardict_client.cpp'
+--- src/lib/stardict_client.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/stardict_client.cpp	2008-04-26 21:05:29 +0000
+@@ -25,6 +25,8 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ 
++#include <cstring>
++#include <stdlib.h>
+ #include "sockets.hpp"
+ #include "md5.h"
+ #include "getuint32.h"
+
+=== modified file 'src/lib/stddict.cpp'
+--- src/lib/stddict.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/stddict.cpp	2008-04-26 21:05:29 +0000
+@@ -28,6 +28,7 @@
+ #  include "config.h"
+ #endif
+ 
++#include <cstring>
+ #include <glib/gi18n.h>
+ #include <glib/gstdio.h>
+ 
+
+=== modified file 'src/lib/treedict.cpp'
+--- src/lib/treedict.cpp	2008-04-26 21:05:23 +0000
++++ src/lib/treedict.cpp	2008-04-26 21:05:29 +0000
+@@ -25,6 +25,7 @@
+ #  include "config.h"
+ #endif
+ 
++#include <cstring>
+ #include "file.hpp"
+ #include "getuint32.h"
+ 
+
+=== modified file 'src/pangoview.cpp'
+--- src/pangoview.cpp	2008-04-26 21:05:23 +0000
++++ src/pangoview.cpp	2008-04-26 21:05:29 +0000
+@@ -22,6 +22,7 @@
+ #  include "config.h"
+ #endif
+ 
++#include <cstring>
+ #include "gtktextviewpango.h"
+ #include "utils.h"
+ #include "skin.h"//for SkinCursor definition
+
+=== modified file 'src/prefsdlg.cpp'
+--- src/prefsdlg.cpp	2008-04-26 21:05:23 +0000
++++ src/prefsdlg.cpp	2008-04-26 21:07:58 +0000
+@@ -34,6 +34,7 @@
+ #include "utils.h"
+ #include "iskeyspressed.hpp"
+ #include "lib/md5.h"
++#include <cstdlib>
+ 
+ #include "prefsdlg.h"
+ 
+
+=== modified file 'src/readword.cpp'
+--- src/readword.cpp	2008-04-26 21:05:23 +0000
++++ src/readword.cpp	2008-04-26 21:08:42 +0000
+@@ -4,6 +4,7 @@
+ 
+ #include <cstring>
+ #include <string>
++#include <cstdlib>
+ 
+ #include <glib/gi18n.h>
+ 
+
+=== modified file 'src/sigc++/signal.h'
+--- src/sigc++/signal.h	2008-04-26 21:05:23 +0000
++++ src/sigc++/signal.h	2008-04-26 21:06:11 +0000
+@@ -18,7 +18,7 @@
+   //Compilers, such as older versions of SUN Forte C++, that do not allow this also often
+   //do not allow a typedef to have the same name as a class in the typedef's definition.
+   //For Sun Forte CC 5.7 (SUN Workshop 10), comment this out to fix the build.
+-  #define SIGC_TYPEDEF_REDEFINE_ALLOWED 1
++  //#define SIGC_TYPEDEF_REDEFINE_ALLOWED 1
+ #endif
+ 
+ namespace sigc {
+
+=== modified file 'src/utils.cpp'
+--- src/utils.cpp	2008-04-26 21:05:23 +0000
++++ src/utils.cpp	2008-04-26 21:05:29 +0000
+@@ -22,6 +22,7 @@
+ #  include "config.h"
+ #endif
+ 
++#include <cstring>
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <cstdlib>
+
+=== modified file 'src/x11_iskeyspressed.hpp'
+--- src/x11_iskeyspressed.hpp	2008-04-26 21:05:23 +0000
++++ src/x11_iskeyspressed.hpp	2008-04-26 21:05:29 +0000
+@@ -5,6 +5,8 @@
+ #include <X11/keysym.h>
+ #include <gtk/gtk.h>
+ 
++#include <memory>
++
+ #include "iskeyspressed.hpp"
+ 
+ typedef enum { SYM, CODE, BUTTON } KeyType_t;
+
+=== modified file 'stardict-plugins/stardict-advertisement-plugin/advertisement.cpp'
+--- stardict-plugins/stardict-advertisement-plugin/advertisement.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-advertisement-plugin/advertisement.cpp	2008-04-26 21:05:29 +0000
+@@ -2,6 +2,7 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <glib/gstdio.h>
++#include <cstring>
+ #include <string>
+ #include <map>
+ #include <list>
+
+=== modified file 'stardict-plugins/stardict-dictdotcn-plugin/stardict_dictdotcn.cpp'
+--- stardict-plugins/stardict-dictdotcn-plugin/stardict_dictdotcn.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-dictdotcn-plugin/stardict_dictdotcn.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,6 @@
+ #include "stardict_dictdotcn.h"
+ #include <glib/gi18n.h>
++#include <cstring>
+ #include <string>
+ #include <list>
+ 
+
+=== modified file 'stardict-plugins/stardict-espeak-tts-plugin/stardict_espeak.cpp'
+--- stardict-plugins/stardict-espeak-tts-plugin/stardict_espeak.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-espeak-tts-plugin/stardict_espeak.cpp	2008-04-26 21:05:29 +0000
+@@ -1,6 +1,7 @@
+ #include "stardict_espeak.h"
+ #include <espeak/speak_lib.h>
+ #include <glib/gi18n.h>
++#include <cstring>
+ 
+ static const StarDictPluginSystemInfo *plugin_info = NULL;
+ static std::string voice_engine;
+
+=== modified file 'stardict-plugins/stardict-gucharmap-plugin/stardict_gucharmap.cpp'
+--- stardict-plugins/stardict-gucharmap-plugin/stardict_gucharmap.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-gucharmap-plugin/stardict_gucharmap.cpp	2008-04-26 21:05:29 +0000
+@@ -1,6 +1,8 @@
+ #include "stardict_gucharmap.h"
+ #include <glib/gi18n.h>
+ #include <gucharmap/gucharmap.h>
++#include <stdlib.h>
++#include <cstring>
+ #include <string>
+ 
+ static char *build_dictdata(char type, const char *definition)
+
+=== modified file 'stardict-plugins/stardict-html-parsedata-plugin/stardict_html_parsedata.cpp'
+--- stardict-plugins/stardict-html-parsedata-plugin/stardict_html_parsedata.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-html-parsedata-plugin/stardict_html_parsedata.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,7 @@
+ #include "stardict_html_parsedata.h"
+ #include <glib/gi18n.h>
++#include <cstring>
++#include <stdlib.h>
+ 
+ #ifdef _WIN32
+ #include <windows.h>
+
+=== modified file 'stardict-plugins/stardict-man-plugin/stardict_man.cpp'
+--- stardict-plugins/stardict-man-plugin/stardict_man.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-man-plugin/stardict_man.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,6 @@
+ #include "stardict_man.h"
+ #include <glib/gi18n.h>
++#include <cstring>
+ #include <string>
+ 
+ static const StarDictPluginSystemInfo *plugin_info = NULL;
+
+=== modified file 'stardict-plugins/stardict-powerword-parsedata-plugin/stardict_powerword_parsedata.cpp'
+--- stardict-plugins/stardict-powerword-parsedata-plugin/stardict_powerword_parsedata.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-powerword-parsedata-plugin/stardict_powerword_parsedata.cpp	2008-04-26 21:05:29 +0000
+@@ -1,4 +1,5 @@
+ #include "stardict_powerword_parsedata.h"
++#include <cstring>
+ #include <glib/gi18n.h>
+ 
+ #ifdef _WIN32
+
+=== modified file 'stardict-plugins/stardict-qqwry-plugin/stardict_qqwry.cpp'
+--- stardict-plugins/stardict-qqwry-plugin/stardict_qqwry.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-qqwry-plugin/stardict_qqwry.cpp	2008-04-26 21:05:29 +0000
+@@ -1,6 +1,8 @@
+ #include "stardict_qqwry.h"
+ #include <glib/gi18n.h>
+ #include <glib/gstdio.h>
++#include <cstring>
++#include <stdlib.h>
+ #include <string>
+ 
+ #ifdef _WIN32
+
+=== modified file 'stardict-plugins/stardict-spell-plugin/stardict_spell.cpp'
+--- stardict-plugins/stardict-spell-plugin/stardict_spell.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-spell-plugin/stardict_spell.cpp	2008-04-26 21:05:29 +0000
+@@ -3,6 +3,7 @@
+ #include <glib/gi18n.h>
+ #include <enchant.h>
+ #include <pango/pango.h>
++#include <cstring>
+ #include <string>
+ #include <vector>
+ 
+
+=== modified file 'stardict-plugins/stardict-update-info-plugin/stardict_update_info.cpp'
+--- stardict-plugins/stardict-update-info-plugin/stardict_update_info.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-update-info-plugin/stardict_update_info.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,7 @@
+ #include "stardict_update_info.h"
+ #include <glib/gi18n.h>
++#include <cstring>
++#include <stdlib.h>
+ 
+ #ifdef _WIN32
+ #include <windows.h>
+
+=== modified file 'stardict-plugins/stardict-wiki-parsedata-plugin/stardict_wiki2xml.cpp'
+--- stardict-plugins/stardict-wiki-parsedata-plugin/stardict_wiki2xml.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-wiki-parsedata-plugin/stardict_wiki2xml.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,6 @@
+ #include "stardict_wiki2xml.h"
+ #include "WIKI2XML.h"
++#include <cstring>
+ #include <glib.h>
+ 
+ std::string wiki2xml(std::string &str)
+
+=== modified file 'stardict-plugins/stardict-wiki-parsedata-plugin/stardict_wiki_parsedata.cpp'
+--- stardict-plugins/stardict-wiki-parsedata-plugin/stardict_wiki_parsedata.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-wiki-parsedata-plugin/stardict_wiki_parsedata.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,6 @@
+ #include "stardict_wiki_parsedata.h"
+ #include "stardict_wiki2xml.h"
++#include <cstring>
+ #include <glib/gi18n.h>
+ 
+ #ifdef _WIN32
+
+=== modified file 'stardict-plugins/stardict-wordnet-plugin/court_widget.cpp'
+--- stardict-plugins/stardict-wordnet-plugin/court_widget.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-wordnet-plugin/court_widget.cpp	2008-04-26 21:05:29 +0000
+@@ -1,6 +1,7 @@
+ #include "court_widget.h"
+ #include <math.h>
+ #include <list>
++#include <cstring>
+ 
+ 
+ wnobj::wnobj(partic_t & p, unsigned int t) : _p(p), _t(t), highlight(false)
+
+=== modified file 'stardict-plugins/stardict-wordnet-plugin/stardict_wordnet.cpp'
+--- stardict-plugins/stardict-wordnet-plugin/stardict_wordnet.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-wordnet-plugin/stardict_wordnet.cpp	2008-04-26 21:05:29 +0000
+@@ -1,6 +1,7 @@
+ #include "stardict_wordnet.h"
+ #include "court_widget.h"
+ #include <glib/gi18n.h>
++#include <cstring>
+ 
+ #ifdef _WIN32
+ #include <windows.h>
+
+=== modified file 'stardict-plugins/stardict-wordnet-plugin/stardict_wordnet_parsedata.cpp'
+--- stardict-plugins/stardict-wordnet-plugin/stardict_wordnet_parsedata.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-wordnet-plugin/stardict_wordnet_parsedata.cpp	2008-04-26 21:05:29 +0000
+@@ -1,4 +1,5 @@
+ #include "stardict_wordnet_parsedata.h"
++#include <cstring>
+ #include <glib/gi18n.h>
+ 
+ #ifdef _WIN32
+
+=== modified file 'stardict-plugins/stardict-xdxf-parsedata-plugin/stardict_xdxf_parsedata.cpp'
+--- stardict-plugins/stardict-xdxf-parsedata-plugin/stardict_xdxf_parsedata.cpp	2008-04-26 21:05:23 +0000
++++ stardict-plugins/stardict-xdxf-parsedata-plugin/stardict_xdxf_parsedata.cpp	2008-04-26 21:05:29 +0000
+@@ -1,5 +1,6 @@
+ #include "stardict_xdxf_parsedata.h"
+ #include <glib/gi18n.h>
++#include <cstring>
+ 
+ #ifdef _WIN32
+ #include <windows.h>
+
+=== modified file 'tests/t_config_file.cpp'
+--- tests/t_config_file.cpp	2008-04-26 21:05:23 +0000
++++ tests/t_config_file.cpp	2008-04-26 21:05:29 +0000
+@@ -2,6 +2,7 @@
+ #  include "config.h"
+ #endif
+ 
++#include <memory>
+ #include <cerrno>
+ #include <cstdio>
+ #include <cstdlib>
+
+=== modified file 'tests/t_xml.cpp'
+--- tests/t_xml.cpp	2008-04-26 21:05:23 +0000
++++ tests/t_xml.cpp	2008-04-26 21:05:29 +0000
+@@ -3,6 +3,7 @@
+ #endif
+ 
+ #include <glib.h>
++#include <cstring>
+ #include <cstdlib>
+ #include <string>
+ 
+
