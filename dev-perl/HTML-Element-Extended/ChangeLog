@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Element-Extended
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.27 2010/02/03 14:30:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.28 2010/02/03 14:34:26 tove Exp $
+
+  03 Feb 2010; Torsten Veller <tove@gentoo.org>
+  -HTML-Element-Extended-1.16.ebuild:
+  Cleanup. Drop m68k (#293719)
 
   03 Feb 2010; Torsten Veller <tove@gentoo.org>
   HTML-Element-Extended-1.17.ebuild:
