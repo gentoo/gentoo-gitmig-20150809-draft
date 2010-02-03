@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.0.ebuild,v 1.2 2010/02/03 15:48:01 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.0.ebuild,v 1.3 2010/02/03 15:57:25 weaver Exp $
 
 EAPI="2"
 
@@ -26,8 +26,7 @@ RDEPEND="${CDEPEND}"
 
 src_prepare() {
 	find -name 'configure*' -or -name 'Makefile*' | xargs sed -i 's/flex++/flex -+/' || die
-	# sed -i -e 's/AC_CXX_HAVE_STL/AX_CXX_HAVE_STL/' -e 's/AC_CXX_HAVE_STD/AX_CXX_HAVE_STD/' configure.in || die
-	# FIXME: eautoreconf
+	AT_M4DIR="config/m4" eautoreconf
 }
 
 src_compile() {
