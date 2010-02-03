@@ -28,4 +28,7 @@ systems such Emacs Lisp and ILISP. Feature highlights include:
 
   * Inspector: Interactive object-inspector in an Emacs buffer.
 </longdescription>
+<use>
+  <flag name='xref'>Install xref.lisp cross-referencing tool</flag>
+</use>
 </pkgmetadata>
