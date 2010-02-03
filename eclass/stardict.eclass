@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.15 2008/12/09 16:36:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.16 2010/02/03 13:16:39 pva Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -31,7 +31,7 @@ IUSE="gzip"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=app-dicts/stardict-2.4.2
+DEPEND=">=app-text/stardict-2.4.2
 		gzip? ( app-arch/gzip
 				app-text/dictd )"
 
