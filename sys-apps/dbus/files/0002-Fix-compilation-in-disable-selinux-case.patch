@@ -1,0 +1,182 @@
+From 3dac125d61ebc4f614a1723580043e2f1c811f59 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Tue, 2 Feb 2010 14:57:47 -0500
+Subject: [PATCH 2/2] Fix compilation in --disable-selinux case
+
+_dbus_change_to_daemon_user moved into selinux.c for the --with-selinux
+(and audit) case because that's where all of the relevant libcap headers
+were being used.  However in the --disable-selinux case this didn't
+compile and wasn't very clean.
+
+If we don't have libaudit, use the legacy direct setgid/setuid bits
+we had before in dbus-sysdeps-util-unix.c.
+---
+ bus/selinux.c                 |   35 ++---------------------
+ bus/selinux.h                 |    2 -
+ dbus/dbus-sysdeps-util-unix.c |   62 +++++++++++++++++++++++++++++++++++++++++
+ dbus/dbus-sysdeps.h           |    3 ++
+ 4 files changed, 68 insertions(+), 34 deletions(-)
+
+diff --git a/bus/selinux.c b/bus/selinux.c
+index 456723a..e61efc5 100644
+--- a/bus/selinux.c
++++ b/bus/selinux.c
+@@ -1017,6 +1017,8 @@ bus_selinux_shutdown (void)
+ #endif /* HAVE_SELINUX */
+ }
+ 
++/* The !HAVE_LIBAUDIT case lives in dbus-sysdeps-util-unix.c */
++#ifdef HAVE_LIBAUDIT
+ /**
+  * Changes the user and group the bus is running as.
+  *
+@@ -1042,7 +1044,6 @@ _dbus_change_to_daemon_user  (const char    *user,
+       return FALSE;
+     }
+ 
+-#ifdef HAVE_LIBAUDIT
+   /* If we were root */
+   if (_dbus_geteuid () == 0)
+     {
+@@ -1083,38 +1084,8 @@ _dbus_change_to_daemon_user  (const char    *user,
+           return FALSE;
+         }
+     }
+-#else
+-  /* setgroups() only works if we are a privileged process,
+-   * so we don't return error on failure; the only possible
+-   * failure is that we don't have perms to do it.
+-   *
+-   * not sure this is right, maybe if setuid()
+-   * is going to work then setgroups() should also work.
+-   */
+-  if (setgroups (0, NULL) < 0)
+-    _dbus_warn ("Failed to drop supplementary groups: %s\n",
+-                _dbus_strerror (errno));
+-
+-  /* Set GID first, or the setuid may remove our permission
+-   * to change the GID
+-   */
+-  if (setgid (gid) < 0)
+-    {
+-      dbus_set_error (error, _dbus_error_from_errno (errno),
+-                      "Failed to set GID to %lu: %s", gid,
+-                      _dbus_strerror (errno));
+-      return FALSE;
+-    }
+-
+-  if (setuid (uid) < 0)
+-    {
+-      dbus_set_error (error, _dbus_error_from_errno (errno),
+-                      "Failed to set UID to %lu: %s", uid,
+-                      _dbus_strerror (errno));
+-      return FALSE;
+-    }
+-#endif /* !HAVE_LIBAUDIT */
+ 
+  return TRUE;
+ }
++#endif
+ 
+diff --git a/bus/selinux.h b/bus/selinux.h
+index f208fbe..3bab36d 100644
+--- a/bus/selinux.h
++++ b/bus/selinux.h
+@@ -68,7 +68,5 @@ BusSELinuxID* bus_selinux_init_connection_id (DBusConnection *connection,
+ 
+ 
+ void bus_selinux_audit_init(void);
+-dbus_bool_t _dbus_change_to_daemon_user (const char *user,
+-                                         DBusError  *error);
+ 
+ #endif /* BUS_SELINUX_H */
+diff --git a/dbus/dbus-sysdeps-util-unix.c b/dbus/dbus-sysdeps-util-unix.c
+index 27cdbb0..74e8d88 100644
+--- a/dbus/dbus-sysdeps-util-unix.c
++++ b/dbus/dbus-sysdeps-util-unix.c
+@@ -303,6 +303,68 @@ _dbus_verify_daemon_user (const char *user)
+   return _dbus_get_user_id_and_primary_group (&u, NULL, NULL);
+ }
+ 
++
++/* The HAVE_LIBAUDIT case lives in selinux.c */
++#ifndef HAVE_LIBAUDIT
++/**
++ * Changes the user and group the bus is running as.
++ *
++ * @param user the user to become
++ * @param error return location for errors
++ * @returns #FALSE on failure
++ */
++dbus_bool_t
++_dbus_change_to_daemon_user  (const char    *user,
++                              DBusError     *error)
++{
++  dbus_uid_t uid;
++  dbus_gid_t gid;
++  DBusString u;
++
++  _dbus_string_init_const (&u, user);
++
++  if (!_dbus_get_user_id_and_primary_group (&u, &uid, &gid))
++    {
++      dbus_set_error (error, DBUS_ERROR_FAILED,
++                      "User '%s' does not appear to exist?",
++                      user);
++      return FALSE;
++    }
++
++  /* setgroups() only works if we are a privileged process,
++   * so we don't return error on failure; the only possible
++   * failure is that we don't have perms to do it.
++   *
++   * not sure this is right, maybe if setuid()
++   * is going to work then setgroups() should also work.
++   */
++  if (setgroups (0, NULL) < 0)
++    _dbus_warn ("Failed to drop supplementary groups: %s\n",
++                _dbus_strerror (errno));
++
++  /* Set GID first, or the setuid may remove our permission
++   * to change the GID
++   */
++  if (setgid (gid) < 0)
++    {
++      dbus_set_error (error, _dbus_error_from_errno (errno),
++                      "Failed to set GID to %lu: %s", gid,
++                      _dbus_strerror (errno));
++      return FALSE;
++    }
++
++  if (setuid (uid) < 0)
++    {
++      dbus_set_error (error, _dbus_error_from_errno (errno),
++                      "Failed to set UID to %lu: %s", uid,
++                      _dbus_strerror (errno));
++      return FALSE;
++    }
++
++  return TRUE;
++}
++#endif /* !HAVE_LIBAUDIT */
++
+ void 
+ _dbus_init_system_log (void)
+ {
+diff --git a/dbus/dbus-sysdeps.h b/dbus/dbus-sysdeps.h
+index b154f01..80f0ba2 100644
+--- a/dbus/dbus-sysdeps.h
++++ b/dbus/dbus-sysdeps.h
+@@ -512,6 +512,9 @@ unsigned long _dbus_pid_for_log (void);
+  */
+ dbus_pid_t    _dbus_getpid (void);
+ 
++dbus_bool_t _dbus_change_to_daemon_user (const char *user,
++                                         DBusError  *error);
++
+ void _dbus_flush_caches (void);
+ 
+ /** @} */
+-- 
+1.6.2.5
+
