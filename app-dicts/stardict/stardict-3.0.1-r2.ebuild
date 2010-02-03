@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r2.ebuild,v 1.4 2009/08/19 14:20:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r2.ebuild,v 1.5 2010/02/03 07:39:16 pva Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		app-text/scrollkeeper )
 	spell? ( app-text/enchant )
 	gucharmap? ( >=gnome-extra/gucharmap-1.4.0 )
+	dev-libs/libsigc++
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.12"
 
