@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.5 2010/01/29 19:03:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.6 2010/02/03 20:28:04 maekke Exp $
+
+  03 Feb 2010; Markus Meier <maekke@gentoo.org> fakefs-0.2.1.ebuild:
+  add ~x86, bug #300739
 
   29 Jan 2010; Raúl Porcel <armin76@gentoo.org> fakefs-0.2.1.ebuild:
   Add ~ia64
