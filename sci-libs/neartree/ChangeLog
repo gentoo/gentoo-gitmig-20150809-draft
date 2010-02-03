@@ -1,0 +1,13 @@
+# ChangeLog for sci-libs/neartree
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.1 2010/02/03 20:23:57 jlec Exp $
+
+*neartree-2.1.4 (03 Feb 2010)
+
+  03 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/2.1.4-FLAGS.patch, +files/2.1.4-gcc4.3.patch,
+  +files/2.1.4-iterator.patch, +files/2.1.4-test.patch,
+  +neartree-2.1.4.ebuild, +metadata.xml:
+  function library efficiently solving the Nearest Neighbor Problem(known as
+  the post office problem)
+
