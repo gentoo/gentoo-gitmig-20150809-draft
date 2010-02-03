@@ -1,6 +1,9 @@
 # ChangeLog for app-text/teckit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.8 2010/01/31 14:27:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.9 2010/02/03 09:55:40 grobian Exp $
+
+  03 Feb 2010; Fabian Groffen <grobian@gentoo.org> teckit-2.5.1.ebuild:
+  Marked ~x86-macos
 
   31 Jan 2010; Fabian Groffen <grobian@gentoo.org> teckit-2.5.1.ebuild:
   Marked ~ppc-macos
