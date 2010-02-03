@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5235 2010/02/03 07:27:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5236 2010/02/03 08:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -562,6 +562,11 @@ app-text/poppler:utils - Install command-line PDF converters and various utiliti
 app-text/poppler:xpdf-headers - Install xpdf headers.
 app-text/poppler-utils:abiword -  Enable support for app-office/abiword output. Requires dev-libs/libxml2. 
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
+app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
+app-text/stardict:festival - Enable text to speech synthesizer using festival engine
+app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
+app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
+app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
 app-text/sword:lucene - Enable lucene support for faster searching (dev-cpp/clucene)
 app-text/texlive:context - Add support for the ConTeXt format (dev-texlive/texlive-context)
 app-text/texlive:cyrillic - Add support for Cyrillic (dev-texlive/texlive-langcyrillic)
