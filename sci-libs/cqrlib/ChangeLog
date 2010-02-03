@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/cqrlib
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.1 2010/02/03 22:12:21 jlec Exp $
+
+*cqrlib-1.0.3 (03 Feb 2010)
+
+  03 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/1.0.3-LDFLAGS.patch, +cqrlib-1.0.3.ebuild, +metadata.xml:
+  An ANSI C implementation of a utility library for quaternion arithmetic
+  and quaternion rotation math
+
