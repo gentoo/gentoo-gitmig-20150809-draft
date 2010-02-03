@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.9.9_p0.ebuild,v 1.8 2009/09/27 10:25:26 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-0.9.9_p0.ebuild,v 1.9 2010/02/03 13:49:50 scarabeus Exp $
 
 inherit font
 
@@ -20,7 +20,7 @@ FONT_S=${S}
 FONT_CONF=( "85-wqy-bitmapsong.conf" )
 
 FONT_SUFFIX="pcf"
-DOCS="AUTHORS ChangeLog Logo.PNG README"
+DOCS="AUTHORS ChangeLog README"
 
 # Only installs fonts
 RESTRICT="strip binchecks"
