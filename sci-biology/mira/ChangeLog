@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mira
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.1 2010/02/03 03:06:22 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.2 2010/02/03 15:48:01 weaver Exp $
+
+  03 Feb 2010; Andrey Kislyuk <weaver@gentoo.org> mira-3.0.0.ebuild:
+  Install 3rd party files
 
 *mira-3.0.0 (02 Feb 2010)
 

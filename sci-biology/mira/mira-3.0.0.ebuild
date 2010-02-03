@@ -1,14 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.0.ebuild,v 1.1 2010/02/03 03:06:22 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.0.ebuild,v 1.2 2010/02/03 15:48:01 weaver Exp $
 
 EAPI="2"
 
-inherit base
+MIRA_3RDPARTY_PV="31-01-2010"
+
+inherit base autotools
 
 DESCRIPTION="Whole Genome Shotgun and EST Sequence Assembler for Sanger, 454 and Solexa / Illumina"
 HOMEPAGE="http://www.chevreux.org/projects_mira.html"
-SRC_URI="mirror://sourceforge/mira-assembler/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/mira-assembler/${P}.tar.bz2
+	mirror://sourceforge/mira-assembler/mira_3rdparty_${MIRA_3RDPARTY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,7 +25,9 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}"
 
 src_prepare() {
-	find -name configure -or -name 'Makefile*' | xargs sed -i 's/flex++/flex -+/' || die
+	find -name 'configure*' -or -name 'Makefile*' | xargs sed -i 's/flex++/flex -+/' || die
+	# sed -i -e 's/AC_CXX_HAVE_STL/AX_CXX_HAVE_STL/' -e 's/AC_CXX_HAVE_STD/AX_CXX_HAVE_STD/' configure.in || die
+	# FIXME: eautoreconf
 }
 
 src_compile() {
@@ -35,4 +40,5 @@ src_install() {
 	dodoc AUTHORS GETTING_STARTED NEWS README* HELP_WANTED THANKS INSTALL
 	find doc/docs/man -type f | xargs doman
 	find doc/docs/texinfo -type f | xargs doinfo
+	dobin "${WORKDIR}"/3rdparty/{sff_extract,*.pl}
 }
