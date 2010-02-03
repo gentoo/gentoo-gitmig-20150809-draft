@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.21.ebuild,v 1.2 2010/01/29 01:44:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.21.ebuild,v 1.3 2010/02/03 10:27:24 fauli Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://alsaproject/plugins/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}[alsa_pcm_plugins_ioplug]
