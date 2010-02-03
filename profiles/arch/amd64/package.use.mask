@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.54 2010/02/02 21:41:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.55 2010/02/03 11:05:54 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,11 +39,6 @@ media-gfx/k3d -cuda
 # Jean-Noël Rivasseau <elvanor@gentoo.org> (23 Sep 2009)
 # X use flag only for amd64/x86, bug 285951.
 media-gfx/iscan -X
-
-# Dawid Węgliński <cla@gentoo.org>                                       
-# Mask amarok2 useflag for net-im/kadu
-# See bug #238487 for references
-net-im/kadu amarok2
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 May 2009)
 # Broken SSE2 detection for x86_64 wrt #262405
