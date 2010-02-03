@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.74 2010/01/31 15:15:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.75 2010/02/03 20:56:55 hwoarang Exp $
+
+  03 Feb 2010; Markos Chandras <hwoarang@gentoo.org> grass-6.3.0.ebuild:
+  Stable on amd64 wrt bug #250850
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> grass-6.3.0.ebuild:
   sparc stable wrt #250850
