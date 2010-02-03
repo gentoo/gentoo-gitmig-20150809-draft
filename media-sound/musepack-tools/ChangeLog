@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.51 2010/01/14 07:15:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.52 2010/02/03 09:59:26 grobian Exp $
+
+  03 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  musepack-tools-458.ebuild:
+  Marked ~x86-macos and ~ppc-macos
 
   14 Jan 2010; Jonathan Callen <abcd@gentoo.org> musepack-tools-458.ebuild:
   Add prefix keywords
