@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-458.ebuild,v 1.5 2010/02/03 10:07:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-458.ebuild,v 1.6 2010/02/03 10:14:51 grobian Exp $
 
 inherit cmake-utils
 
@@ -21,13 +21,4 @@ src_install() {
 	cmake-utils_src_install
 	insinto /usr/include
 	doins -r include/replaygain || die
-
-	# cmake seems to think it is installing an application bundle, which is
-	# wrong, but I can't seem to figure out how to fix it, so I use a laymans
-	# approach instead
-	if [[ ${CHOST} == *-darwin* ]] ; then
-		install_name_tool \
-			-id "${EPREFIX}"/usr/$(get_libdir)/libreplaygain.1.dylib \
-			"${D%/}${EPREFIX}"/usr/$(get_libdir)/libreplaygain.1.0.0.dylib || die
-	fi
 }
