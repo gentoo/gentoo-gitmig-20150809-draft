@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-Agent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.24 2010/01/21 12:24:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.25 2010/02/03 00:29:05 hanno Exp $
+
+  03 Feb 2010; Hanno Boeck <hanno@gentoo.org> Log-Agent-0.307.ebuild:
+  Remove LICENSE so it takes the correct from perl-module.eclass.
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org> Log-Agent-0.307.ebuild:
   Ebuild maintenance. Fix LICENSE. mips -> ~mips. EAPI=2
