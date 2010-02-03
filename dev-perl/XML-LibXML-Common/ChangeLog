@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML-Common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Common/ChangeLog,v 1.22 2010/01/21 12:26:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Common/ChangeLog,v 1.23 2010/02/03 00:27:13 hanno Exp $
+
+  03 Feb 2010; Hanno Boeck <hanno@gentoo.org> XML-LibXML-Common-0.13.ebuild:
+  Remove LICENSE so it takes the correct from perl-module.eclass.
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org>
   XML-LibXML-Common-0.13.ebuild:
