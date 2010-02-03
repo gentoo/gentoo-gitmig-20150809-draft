@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3854 2010/02/03 06:48:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3855 2010/02/03 08:19:09 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Feb 2010; Peter Volkov <pva@gentoo.org> updates/1Q-2010:
+  Moved from app-dicts/stardict to app-text/stardict, bug #289475, thank
+  Ihar Hrachyshka for report.
 
   03 Feb 2010; Peter Volkov <pva@gentoo.org> updates/1Q-2010:
   move app-doc/gimp-user-manual to app-doc/gimp-help. The latter is updated

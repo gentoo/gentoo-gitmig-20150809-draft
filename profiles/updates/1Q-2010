@@ -21,3 +21,4 @@ move app-i18n/ibus-table-viqr app-i18n/ibus-table-tv
 move media-libs/apple-opengl media-libs/opengl-apple
 move dev-ruby/ruby-mmap dev-ruby/mmap
 move app-doc/gimp-user-manual app-doc/gimp-help
+move app-dicts/stardict app-text/stardict
