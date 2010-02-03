@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731-r1.ebuild,v 1.1 2010/02/03 19:24:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731-r1.ebuild,v 1.2 2010/02/03 19:27:34 ulm Exp $
 
 EAPI=3
 
@@ -59,7 +59,7 @@ src_install() {
 	## install core
 	elisp-install ${PN} *.el{,c} "${FILESDIR}"/swank-loader.lisp \
 		|| die "Cannot install SLIME core"
-	sed "s:/usr/:${EPREFIX}&:" "${FILESDIR}"/${PV}/${SITEFILE} \
+	sed "s:/usr/:${EPREFIX}&:g" "${FILESDIR}"/${PV}/${SITEFILE} \
 		>"${T}"/${SITEFILE} || die "sed failed"
 	elisp-site-file-install "${T}"/${SITEFILE} || die
 	cp "${FILESDIR}"/${PV}/swank.asd "${S}"
