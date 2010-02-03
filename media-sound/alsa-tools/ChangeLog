@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.185 2010/01/08 02:48:26 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.186 2010/02/03 10:25:03 fauli Exp $
+
+  03 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  alsa-tools-1.0.21.ebuild:
+  stable x86, bug 300064
 
 *alsa-tools-1.0.21-r1 (08 Jan 2010)
 *alsa-tools-1.0.20-r2 (08 Jan 2010)
