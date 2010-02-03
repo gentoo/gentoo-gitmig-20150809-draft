@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r2.ebuild,v 1.12 2009/11/04 12:37:54 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r2.ebuild,v 1.13 2010/02/03 00:15:25 hanno Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -67,7 +67,7 @@ SRC_URI="mirror://cpan/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org"
 SLOT="${PERLSLOT}"
 LIBPERL="libperl$(get_libname ${PERLSLOT}.${SHORT_PV})"
-LICENSE="|| ( Artistic GPL-2 )"
+LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 
 # rac 2004.08.06
