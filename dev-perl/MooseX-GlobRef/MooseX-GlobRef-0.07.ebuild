@@ -1,22 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-GlobRef/MooseX-GlobRef-0.07.ebuild,v 1.2 2009/08/10 21:46:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-GlobRef/MooseX-GlobRef-0.07.ebuild,v 1.3 2010/02/03 17:37:51 tove Exp $
 
 EAPI=2
-MODULE_AUTHOR="DEXTER"
 
+MODULE_AUTHOR="DEXTER"
 inherit perl-module
 
 DESCRIPTION="Store a Moose object in glob reference"
 
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-SLOT="0"
-LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~x86"
-
-DEPEND=">=dev-perl/Test-Unit-Lite-0.12
-	virtual/perl-parent
-	dev-perl/Test-Assert
-	dev-perl/Moose"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-perl/Moose"
+DEPEND="${RDEPEND}
+	virtual/perl-Module-Build"
+#	test? ( >=dev-perl/Test-Unit-Lite-0.12
+#		dev-perl/Test-Assert
+#		virtual/perl-parent )"
