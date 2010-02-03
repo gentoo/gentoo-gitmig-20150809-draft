@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-HTMLDoc
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-HTMLDoc/ChangeLog,v 1.13 2006/10/15 17:00:03 kloeri Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-HTMLDoc/ChangeLog,v 1.14 2010/02/03 14:44:18 tove Exp $
+
+  03 Feb 2010; Torsten Veller <tove@gentoo.org> HTML-HTMLDoc-0.10.ebuild:
+  Fix LICENSE: same terms as perl (#301969). Maintenance
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   HTML-HTMLDoc-0.10.ebuild:
