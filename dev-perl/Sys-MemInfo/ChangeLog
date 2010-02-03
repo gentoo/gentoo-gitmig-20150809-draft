@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-MemInfo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/ChangeLog,v 1.5 2009/12/31 16:25:12 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-MemInfo/ChangeLog,v 1.6 2010/02/03 11:32:41 aballier Exp $
+
+  03 Feb 2010; Alexis Ballier <aballier@gentoo.org> Sys-MemInfo-0.91.ebuild:
+  keyword ~x86-fbsd thanks to Johan Hattne
+  <johan.hattne@utsouthwestern.edu>, bug #303291
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> Sys-MemInfo-0.91.ebuild:
   Marking Sys-MemInfo-0.91 ~ppc64 for bug 295639

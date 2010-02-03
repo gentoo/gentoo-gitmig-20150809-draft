@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/Date-Calc-6.3.ebuild,v 1.1 2009/11/10 10:00:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/Date-Calc-6.3.ebuild,v 1.2 2010/02/03 11:30:39 aballier Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Gregorian calendar date calculations"
 
 LICENSE="${LICENSE} LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-perl/Bit-Vector-6.6
