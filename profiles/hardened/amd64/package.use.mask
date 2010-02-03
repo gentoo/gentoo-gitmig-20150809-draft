@@ -21,11 +21,6 @@ dev-java/eclipse-ecj gcj
 # https://bugs.gentoo.org/show_bug.cgi?id=213882
 dev-java/jamvm libffi
 
-# Dawid Węgliński <cla@gentoo.org>
-# Mask amarok2 useflag for net-im/kadu
-# See bug #238487 for references
-net-im/kadu amarok2
-
 # Following is taken from arch/amd64/package.use.mask
 
 # Vlastimil Babka <caster@gentoo.org> (12 Dec 2008)
@@ -35,7 +30,6 @@ net-im/kadu amarok2
 # Serkan Kaba <serkan@gentoo.org> (5 Feb 2009)
 # finally a 64bit java plugin
 >=dev-java/sun-jre-bin-1.6.0.12 -nsplugin
-
 
 # Following is x86-32-only SIMD, etc. (some taken from arch/amd64/package.use.mask)
 
