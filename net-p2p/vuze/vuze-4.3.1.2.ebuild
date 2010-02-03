@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.0.4.ebuild,v 1.1 2009/11/21 13:57:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.1.2.ebuild,v 1.1 2010/02/03 23:06:24 caster Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="source"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
-PATCHSET_VER="4.2.0.8"
+PATCHSET_VER="4.3.1.2"
 
 DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"

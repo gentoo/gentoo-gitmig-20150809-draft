@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.26 2010/01/30 23:51:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.27 2010/02/03 23:06:24 caster Exp $
+
+*vuze-4.3.1.2 (03 Feb 2010)
+
+  03 Feb 2010; Vlastimil Babka <caster@gentoo.org> -vuze-4.3.0.4.ebuild,
+  +vuze-4.3.1.2.ebuild:
+  Version bump. Adds a patch to correct path to xfs_io for bug #188875.
 
 *vuze-4.3.1.0 (30 Jan 2010)
 
