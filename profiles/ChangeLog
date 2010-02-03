@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3855 2010/02/03 08:19:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3856 2010/02/03 13:10:11 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Update www-client/chromium dev channel releases mask
 
   03 Feb 2010; Peter Volkov <pva@gentoo.org> updates/1Q-2010:
   Moved from app-dicts/stardict to app-text/stardict, bug #289475, thank
