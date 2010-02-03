@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.186 2010/01/28 11:28:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.187 2010/02/03 20:32:51 scarabeus Exp $
+
+*kwin-4.3.5-r1 (03 Feb 2010)
+
+  03 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.3.5-magiclamp-minimize.patch, -kwin-4.3.5.ebuild,
+  +kwin-4.3.5-r1.ebuild:
+  Fix bug #295511. This time proper package.
 
   28 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> kwin-4.3.5.ebuild:
   Kwin needs opengl patch even for 4.3.5. Per bug #302548
