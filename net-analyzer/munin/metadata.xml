@@ -18,10 +18,5 @@
 	</longdescription>
 	<use>
 		<flag name='irc'>installs deps for monitoring IRC</flag>
-		<flag name='munin-apache'>installs deps for monitoring apache</flag>
-		<flag name='munin-dhcp'>installs deps for monitoring DHCP</flag>
-		<flag name='munin-irc'>installs deps for monitoring IRC</flag>
-		<flag name='munin-squid'>installs deps for monitoring squid</flag>
-		<flag name='munin-surfboard'>installs deps for monitoring a Motoro Surfboard Cable modem</flag>
 	</use>
 </pkgmetadata>
