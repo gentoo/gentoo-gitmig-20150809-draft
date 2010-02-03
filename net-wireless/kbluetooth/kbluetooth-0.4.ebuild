@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4.ebuild,v 1.2 2010/02/02 07:08:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4.ebuild,v 1.3 2010/02/03 21:12:48 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="cs da de en_GB eo es et fr ga gl it km lt nds nl pa pt pt_BR ro
@@ -18,7 +18,7 @@ IUSE="debug semantic-desktop"
 
 COMMON_DEPEND=">=kde-base/solid-${KDE_MINIMAL}[bluetooth]
 	>=kde-base/libkworkspace-${KDE_MINIMAL}
-	>=kde-base/libknotificationitem-${KDE_MINIMAL}
+	|| ( >=kde-base/kdelibs-4.4 =kde-base/libknotificationitem-4.3* )
 	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]"
 RDEPEND="${COMMON_DEPEND}
 	app-mobilephone/obex-data-server
