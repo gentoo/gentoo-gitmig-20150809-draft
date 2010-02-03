@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.6 2007/07/22 07:26:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.7 2010/02/03 22:35:31 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Hack required for build
 	cd src
@@ -56,7 +56,7 @@ src_compile() {
 }
 
 src_install () {
-	newbin ${FILESDIR}/rasmol.sh.debian rasmol
+	newbin "${FILESDIR}"/rasmol.sh.debian rasmol
 	insinto /usr/lib/${PN}
 	doins doc/rasmol.hlp
 	exeinto /usr/lib/${PN}

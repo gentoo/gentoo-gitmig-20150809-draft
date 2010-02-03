@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/rasmol
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.13 2007/07/22 07:26:04 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.14 2010/02/03 22:35:31 jlec Exp $
+
+*rasmol-2.7.5 (03 Feb 2010)
+
+  03 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/2.7.5-bundled-lib.patch, rasmol-2.7.2.1.1-r1.ebuild,
+  +rasmol-2.7.5.ebuild, +files/ldflags.patch:
+  Version Bump
+  Only providing 32bit colordepth gtk interface now
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   rasmol-2.7.2.1.1-r1.ebuild:
