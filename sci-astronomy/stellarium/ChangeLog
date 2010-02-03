@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/stellarium
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.54 2009/11/13 18:04:08 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.55 2010/02/03 07:08:14 mr_bones_ Exp $
+
+*stellarium-0.10.3 (03 Feb 2010)
+
+  03 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +stellarium-0.10.3.ebuild, metadata.xml:
+  version bump; adds star catalog install (bug #280246) and works with newer
+  QT (bug #297247)
 
   13 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
   stellarium-0.10.2.ebuild:
