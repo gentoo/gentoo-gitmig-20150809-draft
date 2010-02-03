@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.220 2010/02/03 09:39:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.221 2010/02/03 20:39:51 armin76 Exp $
+
+  03 Feb 2010; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.25-r1.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #303213
 
   03 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   lighttpd-1.4.25-r1.ebuild:
