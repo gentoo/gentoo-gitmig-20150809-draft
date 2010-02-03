@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmodplug
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.46 2009/05/04 15:48:23 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.47 2010/02/03 10:03:13 grobian Exp $
+
+  03 Feb 2010; Fabian Groffen <grobian@gentoo.org> libmodplug-0.8.7.ebuild:
+  Transferred Prefix keywords
 
   04 May 2009; Raúl Porcel <armin76@gentoo.org> libmodplug-0.8.7.ebuild:
   arm/ia64/sh stable wrt #266913
