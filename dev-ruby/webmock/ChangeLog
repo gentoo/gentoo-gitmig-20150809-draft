@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.4 2010/02/01 06:51:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.5 2010/02/03 07:18:35 graaff Exp $
+
+*webmock-0.9.1 (03 Feb 2010)
+
+  03 Feb 2010; Hans de Graaff <graaff@gentoo.org> +webmock-0.9.1.ebuild:
+  Version bump with bug fix. Fix installation of EXTRADOC.
 
 *webmock-0.9.0 (01 Feb 2010)
 
