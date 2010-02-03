@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.243 2010/02/03 16:07:35 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.244 2010/02/03 19:34:32 steev Exp $
+
+*dbus-1.2.20 (03 Feb 2010)
+
+  03 Feb 2010; <steev@gentoo.org> -files/0001-Fix-inotify-shutdown.patch,
+  -dbus-1.2.18.ebuild,
+  -files/0002-Fix-compilation-in-disable-selinux-case.patch,
+  +dbus-1.2.20.ebuild:
+  New upstream release, includes the 2 patches we had applied to 1.2.18
 
 *dbus-1.2.18 (03 Feb 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.18.ebuild,v 1.1 2010/02/03 16:07:35 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.20.ebuild,v 1.1 2010/02/03 19:34:32 steev Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -26,9 +26,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/0001-Fix-inotify-shutdown.patch"
-	epatch "${FILESDIR}/0002-Fix-compilation-in-disable-selinux-case.patch"
 
 	# Tests were restricted because of this
 	sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
