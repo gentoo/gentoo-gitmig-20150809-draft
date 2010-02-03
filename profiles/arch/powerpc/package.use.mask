@@ -1,6 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.33 2010/01/16 17:47:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.34 2010/02/03 11:12:46 ssuominen Exp $
+
+# Dominik Kapusta <ayoy@gentoo.org> (01 Dec 2009)
+# QA: This entry is moved from INVALID location from default/linux/powerpc.
+# qt-demo-4.6.0, required by examples is  not keyworded on ppc and ppc64 yet
+dev-util/qt-creator examples
+
+# QA: This entry is moved from INVALID location from default/linux/powerpc.
+# Not keyworded
+media-plugins/gst-plugins-meta mythtv
+
+# QA: This entry is moved from INVALID location from default/linux/powerpc.
+# VDPAU is currently not keyworded on PPC since its a nvidia-drivers feature
+# only presently. If other drivers support it in the future, then this can
+# get unmasked
+media-tv/mythtv vdpau
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qt-multimedia is not keyworded, bug 293671
