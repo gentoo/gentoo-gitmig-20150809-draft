@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.124 2010/01/23 16:08:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.125 2010/02/03 21:33:22 maekke Exp $
+
+  03 Feb 2010; Markus Meier <maekke@gentoo.org> enlightenment-1.0.1.ebuild:
+  arm stable, bug #301308
 
   23 Jan 2010; Brent Baude <ranger@gentoo.org> enlightenment-1.0.1.ebuild:
   stable ppc, bug 301308
