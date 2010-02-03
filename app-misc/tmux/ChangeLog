@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.33 2010/01/05 22:12:33 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.34 2010/02/03 11:36:17 aballier Exp $
+
+  03 Feb 2010; Alexis Ballier <aballier@gentoo.org> tmux-1.1.ebuild:
+  keyword ~x86-fbsd thanks to Naohiro Aota <naota@elisp.net>, bug #303072
 
   05 Jan 2010; Tiago Cunha <tcunha@gentoo.org> -tmux-1.0.ebuild:
   Remove old.
