@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1.ebuild,v 1.4 2009/08/10 07:53:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1-r1.ebuild,v 1.1 2010/02/03 10:39:56 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -15,15 +15,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-db/sqlite:3
-	sys-libs/readline"
+	sys-libs/readline
+	>=sys-devel/libtool-2.2.6"
 DEPEND="${RDEPEND}
 	media-tv/linuxtv-dvb-headers"
 
 src_prepare() {
-	# delete unneeded linking against libtermcap
-	sed -i -e 's:-ltermcap::' src/Makefile.am || die "sed failed"
-	epatch "${FILESDIR}"/${P}-Werror.patch
-	AT_NO_RECURSIVE="yes" eautoreconf
+	rm -rf libltdl
+	epatch "${FILESDIR}"/${P}-Werror.patch \
+		"${FILESDIR}"/${P}-libtool.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -32,8 +33,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -rf "${D}"/usr/doc/
+	emake DESTDIR="${D}" install || die
+	rm -rf "${D}"/usr/doc
 
 	dodoc doc/*.txt ChangeLog README AUTHORS NEWS TODO
 }
