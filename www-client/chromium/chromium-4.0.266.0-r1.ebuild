@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.266.0-r1.ebuild,v 1.4 2010/01/28 10:26:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.266.0-r1.ebuild,v 1.5 2010/02/03 13:11:38 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -146,9 +146,15 @@ src_install() {
 	# Plugins symlink
 	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
 
+	# Icon and desktop entry
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
 	dosym ${CHROMIUM_HOME}/chromium-launcher.sh /usr/bin/chromium
 	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
 		|| die "desktop file sed failed"
+	# Gnome default application entry
+	dodir /usr/share/gnome-control-center/default-apps
+	insinto /usr/share/gnome-control-center/default-apps
+	doins "${FILESDIR}"/chromium.xml
+
 }

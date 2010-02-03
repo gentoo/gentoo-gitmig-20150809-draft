@@ -1,19 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.24 2010/02/03 13:11:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.1.ebuild,v 1.1 2010/02/03 13:11:38 voyageur Exp $
 
 EAPI="2"
-inherit eutils multilib toolchain-funcs subversion flag-o-matic
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-# subversion eclass fetches gclient, which will then fetch chromium itself
-ESVN_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
-EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
+#SRC_URI="http://build.chromium.org/buildbot/archives/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+ffmpeg"
 
 RDEPEND="app-arch/bzip2
@@ -40,49 +39,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
-
-src_unpack() {
-	subversion_src_unpack
-	mv "${S}" "${WORKDIR}"/depot_tools
-
-	# Most subversion checks and configurations were already run
-	EGCLIENT="${WORKDIR}"/depot_tools/gclient
-	cd "${ESVN_STORE_DIR}" || die "gclient: can't chdir to ${ESVN_STORE_DIR}"
-
-	if [[ ! -d ${PN} ]]; then
-		mkdir -p "${PN}" || die "gclient: can't mkdir ${PN}."
-	fi
-
-	cd "${PN}" || die "gclient: can't chdir to ${PN}"
-
-	if [[ ! -f .gclient ]]; then
-		einfo "gclient config -->"
-		${EGCLIENT} config ${EGCLIENT_REPO_URI} || die "gclient: error creating config"
-	fi
-
-	einfo "gclient sync start -->"
-	einfo "     repository: ${EGCLIENT_REPO_URI}"
-	${EGCLIENT} sync || die "gclient: can't fetch to ${PN} from ${EGCLIENT_REPO_URI}."
-	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
-
-	mkdir -p "${S}"
-	# From export_tarball.py
-	CHROMIUM_EXCLUDES="--exclude=src/chrome/test/data
-	--exclude=src/chrome/tools/test/reference_build
-	--exclude=src/chrome_frame --exclude=src/gears/binaries
-	--exclude=src/net/data/cache_tests --exclude=src/o3d/documentation
-	--exclude=src/o3d/samples --exclude=src/third_party/lighttpd
-	--exclude=src/third_party/WebKit/LayoutTests
-	--exclude=src/webkit/data/layout_tests
-	--exclude=src/webkit/tools/test/reference_build"
-	rsync -rlpgo --exclude=".svn/" ${CHROMIUM_EXCLUDES} src/ "${S}" || die "gclient: can't export to ${S}."
-
-	# Display correct svn revision in about box, and log new version
-	CREV=$(subversion__svn_info "src" "Revision")
-	echo ${CREV} > "${S}"/build/LASTCHANGE.in || die "setting revision failed"
-	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH}_p${CREV} "
-}
 
 src_prepare() {
 	# Gentoo uses .kde4, not .kde
