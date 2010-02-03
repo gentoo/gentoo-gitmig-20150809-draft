@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.3-r1.ebuild,v 1.4 2010/02/03 10:48:25 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.3-r2.ebuild,v 1.1 2010/02/03 10:48:25 reavertm Exp $
 
 EAPI="2"
 
@@ -11,14 +11,15 @@ HOMEPAGE="http://www.kadu.net"
 SRC_URI="http://www.kadu.net/download/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE="alsa ao kde oss phonon speech spell +ssl"
 
-DEPEND="
+COMMON_DEPEND="
 	>=app-crypt/qca-2.0.0-r2
 	>=media-libs/libsndfile-1.0
 	>=net-libs/libgadu-1.8[threads]
+	x11-libs/libXScrnSaver
 	>=x11-libs/qt-dbus-4.4:4
 	>=x11-libs/qt-gui-4.4:4[qt3support]
 	>=x11-libs/qt-webkit-4.4:4
@@ -35,7 +36,10 @@ DEPEND="
 	)
 	spell? ( app-text/aspell )
 "
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	x11-proto/scrnsaverproto
+"
+RDEPEND="${COMMON_DEPEND}
 	speech? ( app-accessibility/powiedz )
 	ssl? ( app-crypt/qca-ossl:2 )
 "
@@ -94,7 +98,7 @@ src_prepare() {
 	config_enable module_sms m
 	config_enable module_sound m
 	config_enable module_voice m
-	config_enable module_waather m
+	config_enable module_weather m
 	config_enable module_window_notify m
 	config_enable module_word_fix m
 
@@ -170,11 +174,4 @@ src_configure() {
 	"
 
 	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-
-	# delete unneeded .a files from modules directory
-	rm -f "${D}"/usr/lib*/kadu/modules/*.a
 }
