@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.47 2010/01/12 15:24:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.48 2010/02/03 20:39:05 hwoarang Exp $
+
+  03 Feb 2010; Markos Chandras <hwoarang@gentoo.org> scipy-0.7.1.ebuild:
+  Stable on amd64 wrt bug #270478
 
   12 Jan 2010; Christian Faulhammer <fauli@gentoo.org> scipy-0.7.1.ebuild:
   stable x86, bug 270478
