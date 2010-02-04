@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22-r1.ebuild,v 1.1 2010/01/22 11:33:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.22-r1.ebuild,v 1.2 2010/02/04 09:55:22 mduft Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib versionator libtool autotools
+inherit eutils flag-o-matic multilib versionator autotools
 
 DESCRIPTION="A SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -44,8 +44,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${P}-interix-fixes-amalgamation.patch
 	fi
 
+	eautoreconf  # for MiNT and interix
 	epunt_cxx
-	elibtoolize # for MiNT
 }
 
 src_configure() {
@@ -98,7 +98,7 @@ src_configure() {
 		$({ use tcl || use test; } && echo --with-readline-inc="-I${EPREFIX}/usr/include/readline") \
 		$(use_enable threadsafe) \
 		$(use tcl && echo --enable-tcl) \
-		$(use !tcl && use test && echo --disable-tcl)
+		$(use !tcl && use test && echo --enable-tcl)
 }
 
 src_compile() {
