@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krecipes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.35 2010/01/25 17:41:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.36 2010/02/04 21:27:39 ssuominen Exp $
+
+  04 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  krecipes-2.0_alpha6.ebuild:
+  ca@valencia is now listed in linguas.desc
 
 *krecipes-2.0_alpha6 (25 Jan 2010)
 
