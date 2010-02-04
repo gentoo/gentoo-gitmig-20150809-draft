@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/lbreakout2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.23 2010/01/30 14:01:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.24 2010/02/04 17:23:23 hwoarang Exp $
+
+  04 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  lbreakout2-2.6.1.ebuild:
+  Stable on amd64 wrt bug #302842
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> lbreakout2-2.5.2.ebuild,
   lbreakout2-2.6.1.ebuild:
