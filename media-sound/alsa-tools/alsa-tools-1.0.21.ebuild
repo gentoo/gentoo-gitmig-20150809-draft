@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.21.ebuild,v 1.2 2010/02/03 10:25:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.21.ebuild,v 1.3 2010/02/04 21:45:36 maekke Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc x86"
 
 ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20
 alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
