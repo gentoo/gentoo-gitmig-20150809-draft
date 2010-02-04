@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.25 2010/02/04 17:48:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.26 2010/02/04 19:26:07 cardoe Exp $
+
+  04 Feb 2010; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.8.2.ebuild,
+  virt-manager-0.8.2-r1.ebuild:
+  add missing dependency on dev-python/urlgrabber
 
 *virt-manager-0.8.2-r1 (04 Feb 2010)
 
