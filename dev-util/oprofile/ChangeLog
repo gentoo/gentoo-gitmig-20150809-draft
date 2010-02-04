@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.62 2010/02/01 19:57:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.63 2010/02/04 03:05:29 jer Exp $
+
+  04 Feb 2010; Jeroen Roovers <jer@gentoo.org> oprofile-0.9.6.ebuild:
+  Stable for HPPA PPC (bug #297610).
 
   01 Feb 2010; Markus Meier <maekke@gentoo.org> oprofile-0.9.6.ebuild:
   amd64/x86 stable, bug #297610
