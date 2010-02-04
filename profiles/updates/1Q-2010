@@ -22,3 +22,7 @@ move media-libs/apple-opengl media-libs/opengl-apple
 move dev-ruby/ruby-mmap dev-ruby/mmap
 move app-doc/gimp-user-manual app-doc/gimp-help
 move app-dicts/stardict app-text/stardict
+move app-i18n/ibus-table-cantonhk app-i18n/ibus-table-cantonese
+move app-i18n/ibus-table-cns11643 app-i18n/ibus-table-code
+move app-i18n/ibus-table-rustrad app-i18n/ibus-table-cyrillic
+move app-i18n/ibus-table-translit app-i18n/ibus-table-cyrillic
