@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.140.ebuild,v 1.1 2009/03/15 11:29:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.144.ebuild,v 1.1 2010/02/04 08:12:04 dirtyepic Exp $
 
 inherit eutils
 
@@ -10,16 +10,17 @@ HOMEPAGE="http://people.redhat.com/drepper/"
 #SRC_URI="mirror://debian/pool/main/e/elfutils/elfutils_${PV}.orig.tar.gz"
 SRC_URI="https://fedorahosted.org/releases/e/l/elfutils/${P}.tar.bz2"
 
-LICENSE="OpenSoftware"
+LICENSE="GPL-2-with-exceptions"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="bzip2 nls zlib test"
+IUSE="bzip2 lzma nls test zlib"
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
 # gets pulled in as a dep since this package does not respect virtual/libc
 RDEPEND="zlib? ( >=sys-libs/zlib-1.2.2.3 )
-	bzip2? ( app-arch/bzip2 )"
+	bzip2? ( app-arch/bzip2 )
+	lzma? ( app-arch/xz-utils )"
 DEPEND="${RDEPEND}
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )
 	nls? ( sys-devel/gettext )
@@ -33,6 +34,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.118-PaX-support.patch
+	epatch "${FILESDIR}"/${PN}-0.143-configure.patch #287130
+	epatch "${FILESDIR}"/${P}-sloppy-include.patch
 	find . -name Makefile.in -print0 | xargs -0 sed -i -e 's:-W\(error\|extra\)::g'
 	use test || sed -i -e 's: tests::' Makefile.in #226349
 }
@@ -42,13 +45,15 @@ src_compile() {
 		$(use_enable nls) \
 		--program-prefix="eu-" \
 		$(use_with zlib) \
-		$(use_with bzip2 bzlib)
+		$(use_with bzip2 bzlib) \
+		$(use_with lzma)
+
 	emake || die
 }
 
 src_test() {
 	env LD_LIBRARY_PATH="${S}/libelf:${S}/libebl:${S}/libdw:${S}/libasm" \
-		make check || die "test failed"
+		emake -j1 check || die "test failed"
 }
 
 src_install() {
