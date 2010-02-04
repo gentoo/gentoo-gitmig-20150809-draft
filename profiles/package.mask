@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11175 2010/02/04 12:39:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11176 2010/02/04 13:05:03 alexxy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -297,7 +297,7 @@
 ~kde-base/policykit-kde-4.4.0
 ~kde-base/powerdevil-4.4.0
 ~kde-base/printer-applet-4.4.0
-~kde-base/pykde4.4.0.4
+~kde-base/pykde4-4.4.0
 ~kde-base/qguiplatformplugin_kde-4.4.0
 ~kde-base/renamedlg-plugins-4.4.0
 ~kde-base/rocs-4.4.0
