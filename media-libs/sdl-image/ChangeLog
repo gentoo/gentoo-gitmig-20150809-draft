@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.64 2010/01/26 00:35:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.65 2010/02/04 17:15:11 hwoarang Exp $
+
+  04 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  sdl-image-1.2.10.ebuild:
+  Stable on amd64 wrt bug #299012
 
   26 Jan 2010; Jeroen Roovers <jer@gentoo.org> sdl-image-1.2.10.ebuild:
   Stable for HPPA (bug #299012).
