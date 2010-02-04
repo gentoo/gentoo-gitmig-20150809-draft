@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.20.ebuild,v 1.1 2010/01/03 15:45:46 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.20.ebuild,v 1.2 2010/02/04 20:25:32 mpagano Exp $
 
 DESCRIPTION="A helper program for maintaining the package.keyword and package.unmask files"
 HOMEPAGE="http://www.mpagano.com/blog/?page_id=3"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=app-portage/gentoolkit-0.3.0_rc7
+RDEPEND="=app-portage/gentoolkit-0.3.0_rc7
 	>=sys-apps/portage-2.2_rc61"
 
 src_install() {

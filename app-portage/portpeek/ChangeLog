@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.47 2010/01/29 01:18:28 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.48 2010/02/04 20:25:32 mpagano Exp $
+
+*portpeek-1.9.30 (04 Feb 2010)
+
+  04 Feb 2010; Mike Pagano <mpagano@gentoo.org> -portpeek-1.9.17.ebuild,
+  portpeek-1.9.20.ebuild, portpeek-1.9.25.ebuild, +portpeek-1.9.30.ebuild:
+  portpeek 1.9.30 now works with the changes done in gentoolkit
+  0.3.0_rc8-r1. portpeek < 1.9.30 should rdepend on 0.3.0_rc7. Remove old
+  version
 
 *portpeek-1.5.7.4 (29 Jan 2010)
 
