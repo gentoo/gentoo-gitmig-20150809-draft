@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/HTML-TableParser
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableParser/ChangeLog,v 1.1 2010/02/04 22:33:44 jlec Exp $
+
+*HTML-TableParser-0.34 (04 Feb 2010)
+
+  04 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +HTML-TableParser-0.34.ebuild, +metadata.xml:
+  Imported from sunrise
+
