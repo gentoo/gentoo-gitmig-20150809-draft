@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6.ebuild,v 1.1 2010/02/03 19:57:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.1 2010/02/04 07:05:48 cardoe Exp $
 
 BACKPORTS=
 
@@ -57,6 +57,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" epatch
+
+	epatch "${FILESDIR}"/${P}-virt-pki-validate-sysconfdir.patch
 }
 
 src_configure() {
@@ -155,9 +157,12 @@ pkg_preinst() {
 pkg_postinst() {
 	use python && python_mod_optimize $(python_get_sitedir)/libvirt.py
 
+	elog
 	if use policykit; then
-		elog "You must have run the following at least once"
-		elog "polkit-auth --grant org.libvirt.unix.manage --user \"USERNAME\""
+		elog "You must have run the following at least once:"
+		elog
+		elog "$ polkit-auth --grant org.libvirt.unix.manage --user \"USERNAME\""
+		elog
 		elog "to grant USERNAME access to libvirt when using USE=policykit"
 	else
 		elog "To allow normal users to connect to libvirtd you must change the"
@@ -173,12 +178,14 @@ pkg_postinst() {
 	elog "	net-firewall/iptables"
 	elog "	net-firewall/ebtables"
 	elog
-	ewarn "If you have a DNS server setup on your machine, you will have"
-	ewarn "to configure /etc/dnsmasq.conf to enable the following settings: "
-	ewarn " bind-interfaces"
-	ewarn " interface or except-interface"
-	elog
-	ewarn "Otherwise you might have issues with your existing DNS server."
+	if has_version net-dns/dnsmasq; then
+		ewarn "If you have a DNS server setup on your machine, you will have"
+		ewarn "to configure /etc/dnsmasq.conf to enable the following settings: "
+		ewarn " bind-interfaces"
+		ewarn " interface or except-interface"
+		ewarn
+		ewarn "Otherwise you might have issues with your existing DNS server."
+	fi
 }
 
 pkg_postrm() {

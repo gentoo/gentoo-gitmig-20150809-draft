@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.48 2010/02/03 19:57:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.49 2010/02/04 07:05:48 cardoe Exp $
+
+*libvirt-0.7.6-r1 (04 Feb 2010)
+
+  04 Feb 2010; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.7.6.ebuild,
+  +libvirt-0.7.6-r1.ebuild,
+  +files/libvirt-0.7.6-virt-pki-validate-sysconfdir.patch:
+  fix virt-pki-validate. clean up some elog/ewarn messages
 
 *libvirt-0.7.6 (03 Feb 2010)
 
