@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.3.ebuild,v 1.4 2010/01/17 06:46:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.3.ebuild,v 1.5 2010/02/04 18:18:04 arfrever Exp $
 
 EAPI="2"
-DISTUTILS_DISABLE_PYTHON_DEPENDENCY="1"
+PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils flag-o-matic multilib toolchain-funcs
@@ -27,7 +27,6 @@ S="${WORKDIR}"
 RDEPEND="sys-libs/zlib
 	ldap? ( net-nds/openldap )
 	odbc? ( dev-db/unixODBC )
-	python? ( virtual/python )
 	!dev-python/cryptlib_py"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
