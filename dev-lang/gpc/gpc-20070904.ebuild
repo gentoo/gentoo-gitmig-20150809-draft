@@ -1,12 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20070904.ebuild,v 1.3 2009/09/23 16:51:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20070904.ebuild,v 1.4 2010/02/04 18:02:35 truedfx Exp $
 
 inherit eutils flag-o-matic versionator toolchain-funcs
 
 strip-flags
 filter-flags "-pipe"
-replace-cpu-flags "native" ""
 
 #due to cache requirements we cannot dynamically match gcc version
 #so sticking to a particular (and working) one
