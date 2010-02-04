@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-m17n
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.10 2009/12/17 15:50:27 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.11 2010/02/04 11:30:53 matsuu Exp $
+
+*ibus-m17n-1.2.99.20100202 (04 Feb 2010)
+
+  04 Feb 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-m17n-1.2.99.20100202.ebuild:
+  Version bumped.
 
 *ibus-m17n-1.2.0.20091217 (17 Dec 2009)
 
