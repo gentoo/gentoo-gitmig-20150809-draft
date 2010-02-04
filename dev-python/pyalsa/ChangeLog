@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.7 2010/02/03 10:26:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.8 2010/02/04 21:46:18 maekke Exp $
+
+  04 Feb 2010; Markus Meier <maekke@gentoo.org> pyalsa-1.0.21.ebuild:
+  amd64 stable, bug #300064
 
   03 Feb 2010; Christian Faulhammer <fauli@gentoo.org> pyalsa-1.0.21.ebuild:
   keyworded ~arch for x86, bug 300064
