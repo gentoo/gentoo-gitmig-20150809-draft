@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.1.0.ebuild,v 1.1 2010/02/04 21:20:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.1.0.ebuild,v 1.2 2010/02/04 21:26:51 ssuominen Exp $
 
 EAPI=2
 OPENGL_REQUIRED=optional
 
-# FIXME. What is ca@valencia in po/ ?
-KDE_LINGUAS="ar ast be ca cs da de el en_GB eo es et fi fr ga gl hi hne hr is
+KDE_LINGUAS="ar ast be ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hi hne hr is
 it ja km lt lv ms nb nds nl nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zh_CN
 zh_TW"
 
