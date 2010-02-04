@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-gnutls
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.3 2009/09/04 18:20:04 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.4 2010/02/04 21:05:15 arfrever Exp $
+
+*python-gnutls-1.2.0 (04 Feb 2010)
+
+  04 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-gnutls-1.2.0.ebuild:
+  Version bump.
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -python-gnutls-1.1.8.ebuild:
