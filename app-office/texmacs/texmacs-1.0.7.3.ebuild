@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.3.ebuild,v 1.3 2010/01/15 03:06:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.3.ebuild,v 1.4 2010/02/04 18:13:42 abcd Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
@@ -44,7 +44,8 @@ src_prepare() {
 	# don't strip
 	epatch "${FILESDIR}"/${P}-strip.patch
 
-	epatch "${FILESDIR}"/${PN}-1.0.6.14-interix.patch
+	# Patch does not apply - disable for now
+	#epatch "${FILESDIR}"/${PN}-1.0.6.14-interix.patch
 
 	eautoreconf
 }
