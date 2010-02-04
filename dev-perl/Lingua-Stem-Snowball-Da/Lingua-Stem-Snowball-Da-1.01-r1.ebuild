@@ -1,35 +1,26 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/Lingua-Stem-Snowball-Da-1.01-r1.ebuild,v 1.3 2007/07/10 23:33:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/Lingua-Stem-Snowball-Da-1.01-r1.ebuild,v 1.4 2010/02/04 14:30:02 tove Exp $
 
+EAPI=2
+
+MODULE_AUTHOR=CINE
 inherit perl-module multilib
 
 DESCRIPTION="Porters stemming algorithm for Denmark"
-HOMEPAGE="http://search.cpan.org/~cine/"
-SRC_URI="mirror://cpan/authors/id/C/CI/CINE/${P}.tar.gz"
 
-LICENSE="Artistic"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-lang/perl"
-
 src_install() {
 	perl-module_src_install
-	local version
-	eval `perl '-V:version'`
-	perl_version=${version}
-	local myarch
-	eval `perl '-V:archname'`
-	myarch=${archname}
 
-	if [ -f ${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl ]; then
-		mv \
-		${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/stemmer.pl \
-		${D}/usr/$(get_libdir)/perl5/vendor_perl/${perl_version}/Lingua/Stem/Snowball/da-stemmer.pl
+	if [[ -f ${D}/${VENDOR_LIB}/Lingua/Stem/Snowball/stemmer.pl ]] ; then
+		mv "${D}"/${VENDOR_LIB}/Lingua/Stem/Snowball/{,da-}stemmer.pl || die
 	fi
 }
 
