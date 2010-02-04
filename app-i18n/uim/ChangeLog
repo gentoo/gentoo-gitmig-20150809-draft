@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.218 2010/01/19 03:52:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.219 2010/02/04 16:33:10 matsuu Exp $
+
+*uim-1.5.7-r1 (04 Feb 2010)
+
+  04 Feb 2010; MATSUU Takuto <matsuu@gentoo.org> +uim-1.5.7-r1.ebuild,
+  +files/uim-1.5.7-kde4-applet.patch, +files/uim-1.5.7-kde4.patch:
+  Fixed kde4 issue, https://bugs.freedesktop.org/show_bug.cgi?id=24728
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> uim-1.5.7.ebuild:
   Stable for HPPA (bug #298221).
