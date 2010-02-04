@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.55 2010/01/23 15:18:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.56 2010/02/04 04:20:51 hwoarang Exp $
+
+  04 Feb 2010; Markos Chandras <hwoarang@gentoo.org> botan-1.8.8.ebuild:
+  Stable on amd64 wrt bug #295701
 
 *botan-1.8.8-r1 (23 Jan 2010)
 
