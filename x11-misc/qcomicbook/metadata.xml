@@ -5,4 +5,10 @@
   <maintainer>
     <email>desktop-misc@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="7zip">Support 7zip compressed archives</flag>
+    <flag name="ace">Support ace compressed archives</flag>
+    <flag name="rar">Support rar compressed archives</flag>
+    <flag name="zip">Support zip compressed archives</flag>
+  </use>
 </pkgmetadata>
