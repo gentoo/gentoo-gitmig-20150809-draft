@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tee
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.10 2007/01/15 23:14:44 mcummings Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.11 2010/02/04 13:07:52 tove Exp $
+
+  04 Feb 2010; Torsten Veller <tove@gentoo.org> IO-Tee-0.64.ebuild:
+  Fix LICENSE: same terms as perl (#301969). Maintenance
 
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org> IO-Tee-0.64.ebuild:
   Ebuild maintenance
