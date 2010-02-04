@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.316 2010/01/12 06:22:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.317 2010/02/04 14:58:04 darkside Exp $
+
+*eix-0.20.0 (04 Feb 2010)
+
+  04 Feb 2010; Jeremy Olexa <darkside@gentoo.org> +eix-0.20.0.ebuild:
+  Version bump to 0.20.0. Minor changes of which most are internal coding
+  styles. Intorduce brace command line parsing.
 
   12 Jan 2010; Jeremy Olexa <darkside@gentoo.org> eix-0.17.0.ebuild:
   Add dep on xz-utils or lzma-utils since xz is in the stable tree now.
