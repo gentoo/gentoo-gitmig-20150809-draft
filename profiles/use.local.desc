@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5241 2010/02/04 14:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5242 2010/02/04 23:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -990,6 +990,7 @@ dev-scheme/kawa:xqtests - Support XQuery Test Suite
 dev-scheme/plt-scheme:backtrace -  Support GC backtrace dumps 
 dev-scheme/plt-scheme:cgc -  Compile and install additional executables which use the conservative garbage collector 
 dev-scheme/plt-scheme:llvm -  Add support for compiling to the low-level virtual machine (llvm) 
+dev-tcltk/tktreectrl:shellicon - shellicon extension
 dev-tex/dot2texi:pgf - Enable support for dev-tex/pgf (The TeX Portable Graphic Format)
 dev-tex/dot2texi:pstricks - Enable pstricks support
 dev-tex/latex-beamer:lyx - Install with app-office/lyx layouts
