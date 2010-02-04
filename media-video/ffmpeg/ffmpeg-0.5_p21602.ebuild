@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.5_p21602.ebuild,v 1.1 2010/02/02 08:37:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.5_p21602.ebuild,v 1.2 2010/02/04 19:54:28 aballier Exp $
 
 EAPI=2
 SCM=""
@@ -26,7 +26,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+3dnow +3dnowext alsa altivec cpudetection custom-cflags debug dirac
-	  doc ieee1394 +encode faac faad gsm ipv6 jack +mmx +mmxext vorbis test
+	  doc ieee1394 +encode faac faad gsm jack +mmx +mmxext vorbis test
 	  theora threads x264 xvid network zlib sdl X mp3 opencore-amr
 	  oss pic schroedinger +hardcoded-tables bindist v4l v4l2
 	  speex +ssse3 jpeg2k vdpau"
@@ -87,12 +87,7 @@ src_configure() {
 	use debug || myconf="${myconf} --disable-debug"
 	use zlib || myconf="${myconf} --disable-zlib"
 	use sdl || myconf="${myconf} --disable-ffplay"
-
-	if use network; then
-		use ipv6 || myconf="${myconf} --disable-ipv6"
-	else
-		myconf="${myconf} --disable-network"
-	fi
+	use network || myconf="${myconf} --disable-network"
 
 	use custom-cflags && myconf="${myconf} --disable-optimizations"
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
