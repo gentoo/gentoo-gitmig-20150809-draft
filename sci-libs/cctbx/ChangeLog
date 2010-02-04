@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/cctbx
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.1 2010/02/04 22:56:26 jlec Exp $
+
+*cctbx-2009.11.01.0123 (04 Feb 2010)
+
+  04 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +cctbx-2009.11.01.0123.ebuild, +metadata.xml:
+  New ebuild, initialy written by dberkholz
+
