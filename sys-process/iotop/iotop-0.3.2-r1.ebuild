@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.3.2-r1.ebuild,v 1.5 2010/02/04 02:49:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.3.2-r1.ebuild,v 1.6 2010/02/05 15:49:32 darkside Exp $
 
 EAPI=2
 
-inherit distutils linux-info
+inherit eutils distutils linux-info
 
 DESCRIPTION="Iotop has a top-like UI used to show which process is using the I/O"
 HOMEPAGE="http://guichaz.free.fr/iotop/"
