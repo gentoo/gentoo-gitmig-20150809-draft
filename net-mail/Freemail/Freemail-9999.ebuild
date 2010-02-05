@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.4 2009/06/26 14:57:39 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.5 2010/02/05 14:37:35 tommy Exp $
 
 EAPI="2"
 
@@ -35,7 +35,6 @@ src_install() {
 	java-pkg_dojar dist/Freemail.jar
 	dodir /var/freenet/plugins
 	fperms freenet:freenet /var/freenet/plugins
-	dosym ../../../usr/share/Freemail/lib/Freemail.jar /var/freenet/plugins/Freemail.jar
 	dodoc README || die "installation of documentation failed"
 }
 
@@ -44,7 +43,8 @@ pkg_postinst () {
 	[[ $(stat --format="%U" /var/freenet/plugins) == "freenet" ]] || chown \
 		freenet:freenet /var/freenet/plugins
 	elog "To load Freemail, go to the plugin page of freenet and enter at"
-	elog "Plugin-URL: plugins/Freemail.jar. This should load the Freemail plugin."
+	elog "Plugin-URL: /usr/share/Freemail/lib/Freemail.jar"
+	elog " This should load the Freemail plugin."
 	elog "Set your email client to IMAP port 3143 and SMTP port 3025 on localhost."
 	elog "To bind freemail to different ports, or to a different freenet node, edit"
 	elog "/var/freenet/globalconfig."
