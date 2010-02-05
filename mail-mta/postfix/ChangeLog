@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.201 2009/12/08 18:43:55 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.202 2010/02/05 22:15:04 ulm Exp $
+
+  05 Feb 2010; Ulrich Mueller <ulm@gentoo.org> postfix-2.5.5.ebuild,
+  postfix-2.5.7.ebuild, postfix-2.5.9.ebuild, postfix-2.6.5.ebuild:
+  Fix LICENSE: IPL-1 is a duplicate of IBM, bug 301180.
 
   08 Dec 2009; Brent Baude <ranger@gentoo.org> postfix-2.6.5.ebuild:
   Marking postfix-2.6.5 ppc64 for bug 288521
