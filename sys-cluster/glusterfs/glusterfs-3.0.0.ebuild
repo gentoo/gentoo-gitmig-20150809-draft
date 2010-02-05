@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.0.0.ebuild,v 1.1 2009/12/14 09:42:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.0.0.ebuild,v 1.2 2010/02/05 21:32:53 alexxy Exp $
 
 EAPI="2"
 
@@ -61,7 +61,7 @@ src_install() {
 	fi
 
 	if use extras ; then
-		newbin extras/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
+		newbin extras/volgen/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
 		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die "Failed to install bins"
 		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die "Failed to install bins"
 	fi
