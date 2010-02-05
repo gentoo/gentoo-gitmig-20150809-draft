@@ -3,4 +3,13 @@
 <pkgmetadata>
   <herd>desktop-wm</herd>
   <herd>lxde</herd>
+  <upstream>
+  	<maintainer status='active'>
+		<email>danakj@orodu.net</email>
+		<name>Dana Jansens</name>
+	</maintainer>
+	<changelog>http://openbox.org/wiki/Openbox:News</changelog>
+	<doc>http://openbox.org/wiki/Help:Contents</doc>
+	<bugs-to>http://openbox.org/wiki/Openbox:Contribut</bugs-to>
+   </upstream>
 </pkgmetadata>
