@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.4.2-r1.ebuild,v 1.1 2009/07/27 22:16:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.4.2-r1.ebuild,v 1.2 2010/02/05 09:52:13 aballier Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ IUSE=""
 
 # Binutils is needed for libbfd
 RDEPEND="!!=dev-lang/mono-2.2
-	|| ( sys-freebsd/freebsd-lib >=dev-libs/libedit-20090111 )
+	>=dev-libs/libedit-20090111
 	sys-devel/binutils
 	dev-libs/glib:2"
 DEPEND="${RDEPEND}
