@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/Snowball-Norwegian-1.2.ebuild,v 1.9 2010/02/05 22:16:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/Snowball-Norwegian-1.2.ebuild,v 1.10 2010/02/05 22:39:27 tove Exp $
 
 EAPI=2
 
 MODULE_AUTHOR=ASKSH
-inherit perl-module multilib
+inherit perl-module
 
 DESCRIPTION="Porters stemming algorithm for Norwegian"
 
