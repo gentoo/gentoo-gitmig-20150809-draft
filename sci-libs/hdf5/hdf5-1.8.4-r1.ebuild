@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.6 2010/01/21 13:38:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.7 2010/02/05 19:01:27 armin76 Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -45,6 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.3-noreturn.patch
 	epatch "${FILESDIR}"/${P}-gnutools.patch
 	epatch "${FILESDIR}"/${P}-scaleoffset.patch
+	epatch "${FILESDIR}"/${P}-sigbus.patch
 
 	# respect gentoo examples directory
 	sed -i \
