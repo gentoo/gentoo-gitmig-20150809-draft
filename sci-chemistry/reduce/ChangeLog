@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/reduce
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.12 2009/05/29 00:43:56 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.13 2010/02/05 23:41:04 jlec Exp $
+
+*reduce-3.13.080428-r1 (05 Feb 2010)
+
+  05 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/3.13.080428-LDFLAGS.patch, -reduce-2.21.030604.ebuild,
+  -reduce-3.02.060709.ebuild, +reduce-3.13.080428-r1.ebuild:
+  Clean old versions, fix for 280857 & 280858
 
   29 May 2009; Donnie Berkholz <dberkholz@gentoo.org>;
   reduce-3.13.080428.ebuild:
