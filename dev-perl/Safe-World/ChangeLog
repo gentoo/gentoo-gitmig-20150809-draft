@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Safe-World
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe-World/ChangeLog,v 1.1 2010/02/05 16:14:26 weaver Exp $
+
+*Safe-World-0.14 (05 Feb 2010)
+
+  05 Feb 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +Safe-World-0.14.ebuild:
+  New package, dependency of sci-biology/gbrowse
+
