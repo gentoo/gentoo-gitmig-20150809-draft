@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.1.0.ebuild,v 1.1 2010/02/05 17:55:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.1.0.ebuild,v 1.2 2010/02/05 18:05:22 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="ar be bg ca ca@valencia cs da de el en_GB eo es et eu fa fi fr ga
@@ -46,7 +46,6 @@ PATCHES=( "${FILESDIR}/${P}-libpgf.patch" )
 src_configure() {
 	mycmakeargs+=( "-DENABLE_THEMEDESIGNER=OFF"
 		$(cmake-utils_use_enable thumbnails THUMBS_DB)
-		$(cmake-utils_use_with doc Doxygen)
 		$(cmake-utils_use_with glib GLIB2)
 		$(cmake-utils_use_with gphoto2 Gphoto2)
 		$(cmake-utils_use_with addressbook KdepimLibs)
@@ -54,7 +53,8 @@ src_configure() {
 		"-DWITH_Lqr-1=ON"
 		$(cmake-utils_use_with geolocation MarbleWidget)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with semantic-desktop Soprano) )
+		$(cmake-utils_use_with semantic-desktop Soprano)
+		$(cmake-utils_use_build doc) )
 
 	kde4-base_src_configure
 }
