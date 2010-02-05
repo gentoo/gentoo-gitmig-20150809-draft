@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.36 2010/01/15 22:40:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.37 2010/02/05 09:55:02 aballier Exp $
+
+  05 Feb 2010; Alexis Ballier <aballier@gentoo.org> bc-1.06.95.ebuild:
+  freebsd-lib does not ship libedit anymore
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> bc-1.06.95.ebuild:
   Transfer Prefix keywords
