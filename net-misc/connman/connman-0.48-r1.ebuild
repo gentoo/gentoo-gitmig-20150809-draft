@@ -34,18 +34,18 @@ src_configure() {
 		--enable-fake \
 		--enable-datafiles \
 		--enable-loopback=builtin \
-		$(use_enable ethernet ethernet =builtin) \
-		$(use_enable wifi wifi =builtin) \
-		$(use_enable bluetooth bluetooth =builtin) \
-		$(use_enable ofono ofono =builtin) \
-		$(use_enable dhclient dhclient =builtin) \
-		$(use_enable resolvconf resolvconf =builtin) \
-		$(use_enable dnsproxy dnsproxy =builtin) \
-		$(use_enable google google =builtin) \
-		$(use_enable moblin moblin =builtin) \
-		$(use_enable 3G hso =builtin) \
-		$(use_enable 3G mbm =builtin) \
-		$(use_enable policykit polkit =builtin) \
+		$(use_enable ethernet ethernet builtin) \
+		$(use_enable wifi wifi builtin) \
+		$(use_enable bluetooth bluetooth builtin) \
+		$(use_enable ofono ofono builtin) \
+		$(use_enable dhclient dhclient builtin) \
+		$(use_enable resolvconf resolvconf builtin) \
+		$(use_enable dnsproxy dnsproxy builtin) \
+		$(use_enable google google builtin) \
+		$(use_enable moblin moblin builtin) \
+		$(use_enable 3G hso builtin) \
+		$(use_enable 3G mbm builtin) \
+		$(use_enable policykit polkit builtin) \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable threads) \
