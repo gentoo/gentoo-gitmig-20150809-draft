@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.0.2.ebuild,v 1.4 2008/03/08 22:14:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.0.2.ebuild,v 1.5 2010/02/05 09:49:32 aballier Exp $
 
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
@@ -16,7 +16,7 @@ IUSE="libedit"
 
 S="${WORKDIR}/xdebug-${MY_PV}/debugclient"
 
-DEPEND="libedit? ( || ( dev-libs/libedit sys-freebsd/freebsd-lib ) )"
+DEPEND="libedit? ( dev-libs/libedit )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
