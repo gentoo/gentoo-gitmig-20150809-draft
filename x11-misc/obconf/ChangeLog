@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.62 2010/01/24 18:19:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.63 2010/02/05 15:37:39 hwoarang Exp $
+
+*obconf-9999 (05 Feb 2010)
+
+  05 Feb 2010; Markos Chandras <hwoarang@gentoo.org> +obconf-9999.ebuild:
+  Adding live ebuild for obconf
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> obconf-2.0.3.ebuild:
   Add ~arm
