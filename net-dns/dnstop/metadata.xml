@@ -6,4 +6,8 @@
   <email>rajiv@gentoo.org</email>
   <name>Rajiv Aaron Manglani</name>
 </maintainer>
+<upstream>
+  <changelog>http://dns.measurement-factory.com/tools/dnstop/src/CHANGES</changelog>
+  <doc>http://dns.measurement-factory.com/tools/dnstop/dnstop.8.html</doc>
+</upstream>
 </pkgmetadata>
