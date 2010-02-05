@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DB_File-Lock
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File-Lock/ChangeLog,v 1.1 2010/02/05 16:24:36 weaver Exp $
+
+*DB_File-Lock-0.05 (05 Feb 2010)
+
+  05 Feb 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +DB_File-Lock-0.05.ebuild:
+  New package, dependency of sci-biology/gbrowse
+
