@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.6.ebuild,v 1.1 2010/01/27 16:50:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.6.ebuild,v 1.2 2010/02/05 11:47:36 phajdan.jr Exp $
 
 EAPI=2
 
@@ -19,6 +19,7 @@ DEPEND=""
 RDEPEND="!app-admin/logsentry
 	app-misc/lockfile-progs
 	dev-lang/perl
+	dev-perl/mime-construct
 	virtual/mailx
 	${DEPEND}"
 
