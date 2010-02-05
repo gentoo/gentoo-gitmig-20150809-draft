@@ -1,22 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.25.ebuild,v 1.8 2009/01/09 18:07:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.25.ebuild,v 1.9 2010/02/05 21:45:07 tove Exp $
 
+EAPI=2
+
+MODULE_AUTHOR=TMTM
 inherit perl-module
 
 DESCRIPTION="Plucene - the Perl lucene port"
-HOMEPAGE="http://search.cpan.org/~tmtm/"
-SRC_URI="mirror://cpan/authors/id/T/TM/TMTM/${P}.tar.gz"
 
-LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
-SRC_TEST="do"
-
-RDEPEND=">=dev-lang/perl-5.8.4
-		virtual/perl-Memoize
+RDEPEND="virtual/perl-Memoize
 		dev-perl/Tie-Array-Sorted
 		dev-perl/Encode-compat
 		dev-perl/File-Slurp
@@ -31,3 +28,5 @@ RDEPEND=">=dev-lang/perl-5.8.4
 DEPEND="${RDEPEND}
 		>=virtual/perl-Test-Harness-2.30
 		>=virtual/perl-Module-Build-0.28"
+
+SRC_TEST="do"
