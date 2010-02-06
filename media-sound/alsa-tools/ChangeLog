@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.187 2010/02/04 21:45:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.188 2010/02/06 18:16:27 tcunha Exp $
+
+  06 Feb 2010; Tiago Cunha <tcunha@gentoo.org> alsa-tools-1.0.21.ebuild:
+  stable sparc, bug 300064
 
   04 Feb 2010; Markus Meier <maekke@gentoo.org> alsa-tools-1.0.21.ebuild:
   amd64 stable, bug #300064
