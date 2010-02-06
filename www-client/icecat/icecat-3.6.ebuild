@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.ebuild,v 1.1 2010/02/05 18:43:04 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.ebuild,v 1.2 2010/02/06 13:18:13 truedfx Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -9,7 +9,9 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib pax-ut
 LANGS="af ar as be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR
 es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it ja
 ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
-ru si sk sl sq sr sv-SE ta-LK ta te th tr uk vi zh-CN zh-TW"
+ru si sk sl sq sr sv-SE ta te th tr uk vi zh-CN zh-TW"
+# Malformed install.rdf: ta-LK
+
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
 XUL_PV="1.9.2"
@@ -29,22 +31,22 @@ SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa java libnotify wifi"
 
-FIREFOX_REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2
 	http://svn.savannah.gnu.org/viewvc/trunk/icecat/browser/app/profile/firefox.js?root=gnuzilla&r1=86&r2=94&view=patch -> icecat-3.6-prefs.patch"
+LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${FIREFOX_REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${FIREFOX_P}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${LANGPACK_URI}/${MY_PV}/${X}.xpi -> ${P}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${FIREFOX_REL_URI}/${PV}/linux-i686/xpi/${X}.xpi -> ${FIREFOX_P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${LANGPACK_URI}/${MY_PV}/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -54,9 +56,9 @@ RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.4
 	>=dev-libs/nspr-4.8
+	>=app-text/hunspell-1.2
 	>=dev-db/sqlite-3.6.20-r1[fts3]
 	alsa? ( media-libs/alsa-lib )
-	>=app-text/hunspell-1.2
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]
 	wifi? ( net-wireless/wireless-tools )
@@ -99,7 +101,7 @@ src_unpack() {
 	linguas
 	for X in ${linguas}; do
 		# FIXME: Add support for unpacking xpis to portage
-		[[ ${X} != "en" ]] && xpi_unpack "${FIREFOX_P}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
 }
 
@@ -110,27 +112,6 @@ src_prepare() {
 
 	# Fix preferences location
 	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
-
-	for X in ${linguas}; do
-		# replace any linguas-provided branding with official branding
-		if [ ${X} != "en" ]; then
-			cd "${WORKDIR}"/${FIREFOX_P}-${X}/chrome/
-			unzip -q ${X}.jar
-
-			# Ensure branding is copied directly from icecat
-			cp "${S}"/browser/branding/unofficial/brand\.* locale/branding/
-
-			# Any variable being set should be changed
-			find . -type f -exec sed -i 's/\(.*=.*\)Firefox/\1IceCat/g' {} +
-
-			rm ${X}.jar
-			zip -q -r ${X}.jar .
-
-			rm -r locale/
-
-			cd "${S}"
-		fi
-	done
 
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
@@ -251,7 +232,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${FIREFOX_P}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
 	done
 
 	# Install icon and .desktop for menu entry

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.13 2010/02/05 18:43:04 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.14 2010/02/06 13:18:13 truedfx Exp $
+
+  06 Feb 2010; Harald van Dĳk <truedfx@gentoo.org> icecat-3.6.ebuild:
+  Use rebranded translation files: modifying the Firefox ones in the ebuild
+  broke the About window (#289108)
 
 *icecat-3.6 (05 Feb 2010)
 
