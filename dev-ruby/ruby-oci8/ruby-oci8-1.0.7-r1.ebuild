@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ruby-oci8-1.0.6.ebuild,v 1.2 2009/12/20 14:20:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ruby-oci8-1.0.7-r1.ebuild,v 1.1 2010/02/06 16:29:46 graaff Exp $
 
 inherit ruby
 
@@ -20,9 +20,9 @@ RDEPEND="dev-db/oracle-instantclient-basic
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	emake -j1 CONFIG_OPT="--prefix=${D}usr" config.save setup || die $!
+	ruby_econf || die $!
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	ruby_einstall || die $1
 }
