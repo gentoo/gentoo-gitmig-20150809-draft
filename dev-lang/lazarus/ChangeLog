@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/lazarus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.30 2009/07/22 20:24:39 truedfx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.31 2010/02/06 09:15:14 truedfx Exp $
+
+*lazarus-0.9.28.2 (06 Feb 2010)
+
+  06 Feb 2010; Harald van Dĳk <truedfx@gentoo.org>
+  +lazarus-0.9.28.2.ebuild:
+  Version bump (#292561)
 
 *lazarus-0.9.26-r4 (22 Jul 2009)
 
