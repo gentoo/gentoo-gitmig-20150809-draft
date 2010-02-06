@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.301 2010/02/04 22:10:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.302 2010/02/06 18:12:23 tcunha Exp $
+
+  06 Feb 2010; Tiago Cunha <tcunha@gentoo.org> alsa-lib-1.0.21a.ebuild:
+  stable sparc, bug 300064
 
   04 Feb 2010; Markus Meier <maekke@gentoo.org> alsa-lib-1.0.21a.ebuild:
   arm stable, bug #300064
