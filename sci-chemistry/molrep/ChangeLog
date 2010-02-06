@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/molrep
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.1 2010/02/06 00:45:50 jlec Exp $
+
+*molrep-10.2.35 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/10.2.35-respect-FLAGS.patch, +molrep-10.2.35.ebuild:
+  molrep splitted from ccp4
+
