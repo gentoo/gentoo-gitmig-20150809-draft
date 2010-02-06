@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.76 2010/01/29 04:44:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.77 2010/02/06 17:09:49 markusle Exp $
+
+*lapack-atlas-3.9.21-r1 (06 Feb 2010)
+
+  06 Feb 2010; Markus Dittrich <markusle@gentoo.org>
+  +lapack-atlas-3.9.21-r1.ebuild, files/lapack.pc.in:
+  Updated pkgconfig file to include atlas headers (see bug #302951).
 
   29 Jan 2010; Markus Dittrich <markusle@gentoo.org>
   lapack-atlas-3.9.21.ebuild:

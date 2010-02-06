@@ -11,3 +11,4 @@ Requires: blas cblas
 Libs: -L${libdir} -llapack -latlas
 Libs.private: @EXTLIBS@
 Include: -I${includedir}
+Cflags: -I${includedir}/atlas
