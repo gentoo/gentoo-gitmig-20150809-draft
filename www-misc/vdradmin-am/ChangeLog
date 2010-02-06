@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.5 2010/02/06 19:14:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.6 2010/02/06 19:34:10 zzam Exp $
+
+  06 Feb 2010; Matthias Schwarzott <zzam@gentoo.org>
+  vdradmin-am-3.6.4-r1.ebuild:
+  Fix creating user and group
 
   06 Feb 2010; Matthias Schwarzott <zzam@gentoo.org>
   vdradmin-am-3.6.4-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.4-r1.ebuild,v 1.3 2010/02/06 19:14:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.4-r1.ebuild,v 1.4 2010/02/06 19:34:10 zzam Exp $
 
 EAPI="1"
 
@@ -37,7 +37,8 @@ TMP_DIR=/var/tmp/vdradmin
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	enewuser ${VDRADMIN_USER} -1 /bin/bash ${TMP_DIR}
+	enewgroup ${VDRADMIN_GROUP}
+	enewuser ${VDRADMIN_USER} -1 /bin/bash ${TMP_DIR} ${VDRADMIN_GROUP}
 
 	if ! use vdr; then
 		elog "You can run vdradmin-am outside a vdr install"
