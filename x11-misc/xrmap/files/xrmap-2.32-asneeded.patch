@@ -1,0 +1,11 @@
+--- Makefile.noimake
++++ Makefile.noimake
+@@ -19,7 +19,7 @@
+ ## LDOPTIONS=-O6 -g -Wall libxpm/libXpm.a -lX11 -lz -lm -L/usr/X11R6/lib
+ 
+ all: explorer.o xrmap.o
+-	gcc $(LDOPTIONS) -o xrmap explorer.o xrmap.o  
++	gcc -o xrmap explorer.o xrmap.o $(LDOPTIONS)
+ 	cd editkit ; make -f Makefile.kit DESTDIR=$(DESTDIR)
+ 	cd earthview ; make DESTDIR=$(DESTDIR)	
+ 	@cat EXTRADATA
