@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.37.ebuild,v 1.2 2010/02/05 23:16:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.37.ebuild,v 1.3 2010/02/06 18:37:49 zmedico Exp $
 
 EAPI=2
-PYTHON_DEPEND=2
+PYTHON_DEPEND=2:2.6
 
 inherit python distutils eutils fdo-mime bash-completion
 
