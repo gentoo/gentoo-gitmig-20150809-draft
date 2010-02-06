@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.2.ebuild,v 1.1 2009/07/16 11:41:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.2.ebuild,v 1.2 2010/02/06 13:08:04 ssuominen Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Network Audio System"
 HOMEPAGE="http://radscan.com/nas.html"
@@ -25,6 +25,12 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	app-text/rman
 	x11-proto/xproto"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
 
 src_compile() {
 	xmkmf || die "xmkmf failed"
