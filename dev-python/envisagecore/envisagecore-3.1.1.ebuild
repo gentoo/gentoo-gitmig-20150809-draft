@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.1.1.ebuild,v 1.1 2009/09/06 15:39:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.1.1.ebuild,v 1.2 2010/02/06 14:45:53 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -39,8 +40,7 @@ src_prepare() {
 src_compile() {
 	distutils_src_compile
 	if use doc; then
-		"${python}" setup.py build_docs --formats=html,pdf \
-			|| die "doc building failed"
+		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
 	fi
 }
 

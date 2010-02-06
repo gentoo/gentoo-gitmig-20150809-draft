@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/buildutils-0.3.ebuild,v 1.3 2009/10/10 11:58:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/buildutils-0.3.ebuild,v 1.4 2010/02/06 14:39:48 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
@@ -32,7 +33,7 @@ src_compile() {
 	distutils_src_compile
 	if use doc; then
 		einfo "Generation of documentation"
-		"${python}" setup.py pudge || die "Generation of documentation failed"
+		"$(PYTHON -f)" setup.py pudge || die "Generation of documentation failed"
 	fi
 }
 

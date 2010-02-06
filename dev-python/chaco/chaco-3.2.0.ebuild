@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.2.0.ebuild,v 1.2 2009/09/05 23:26:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.2.0.ebuild,v 1.3 2010/02/06 14:41:49 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -43,9 +44,9 @@ src_prepare() {
 src_compile() {
 	find "${S}" -name \*LICENSE.txt -delete
 	distutils_src_compile
+
 	#if use doc; then
-	#	${python} setup.py build_docs --formats=html,pdf \
-	#		|| die "doc building failed"
+	#	"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
 	#fi
 }
 
