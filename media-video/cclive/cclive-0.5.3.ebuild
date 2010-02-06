@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.5.3.ebuild,v 1.3 2010/01/06 19:10:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.5.3.ebuild,v 1.4 2010/02/06 13:26:17 hwoarang Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://cclive.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 ~x86"
 IUSE="test"
 
 RDEPEND=">=net-misc/curl-7.18.0
