@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.1 2010/01/29 15:47:55 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.2 2010/02/06 02:54:15 sping Exp $
 
 EAPI="2"
 
@@ -84,8 +84,17 @@ src_install() {
 
 	# fix bins and make links for /usr/bin
 	dodir /usr/bin
-	for cmd in blockhost cjob drqman jobfinfo \
-			jobinfo master requeue sendjob slave ; do
+	local commands=( blockhost cjob jobfinfo \
+			jobinfo master requeue sendjob slave )
+	if use X ; then
+		commands=( ${commands[@]} drqman )
+	else
+		# Remove drqman leftovers
+		for i in etc/drqman.rc etc/drqman.conf bin/drqman ; do
+			rm -v "${D}"/var/lib/drqueue/$i || die "rm failed"
+		done
+	fi
+	for cmd in ${commands[@]} ; do
 		dosed 's|SHLIB=\$DRQUEUE_ROOT/bin/shlib|SHLIB=/var/lib/drqueue/bin/shlib|' \
 				/var/lib/drqueue/bin/${cmd} || die "dosed failed"
 		dosym /var/lib/drqueue/bin/${cmd} /usr/bin/ \
