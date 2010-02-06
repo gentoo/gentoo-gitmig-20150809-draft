@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.6.2.ebuild,v 1.1 2009/11/07 07:07:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.6.2.ebuild,v 1.2 2010/02/06 15:36:35 ssuominen Exp $
 
 EAPI=2
-
-inherit flag-o-matic
+inherit autotools eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -19,13 +18,18 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXt
+	x11-libs/libXtst
+	x11-libs/libXext
 	x11-libs/libXft"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_configure() {
-	append-ldflags $(no-as-needed)
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
 
+src_configure() {
 	# --disable-xft doesn't work
 	# econf $(use_enable xft) || die
 	econf || die
