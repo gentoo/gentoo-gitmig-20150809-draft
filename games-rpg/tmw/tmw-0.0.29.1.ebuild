@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.29.1.ebuild,v 1.3 2010/01/05 17:28:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.29.1.ebuild,v 1.4 2010/02/06 02:29:17 rich0 Exp $
 
 EAPI=2
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/themanaworld/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="nls opengl"
 
 RDEPEND=">=dev-games/physfs-1.0.0
