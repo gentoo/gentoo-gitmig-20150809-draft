@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lockfile-progs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.2 2010/02/05 18:06:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.3 2010/02/06 11:40:25 hwoarang Exp $
+
+  06 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  lockfile-progs-0.1.13.ebuild:
+  Stable on amd64 wrt bug #302470
 
   05 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   lockfile-progs-0.1.13.ebuild:
