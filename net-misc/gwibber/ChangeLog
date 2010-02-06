@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwibber
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.5 2009/10/07 14:56:19 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.6 2010/02/06 14:44:57 pva Exp $
+
+  06 Feb 2010; Peter Volkov <pva@gentoo.org> gwibber-1.2.0_pre340.ebuild:
+  Added missed inherit eutils, bug #303709, thank Dan W. for report.
 
   07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
   gwibber-1.2.0_pre340.ebuild:

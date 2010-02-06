@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-1.2.0_pre340.ebuild,v 1.3 2009/10/07 14:56:19 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-1.2.0_pre340.ebuild,v 1.4 2010/02/06 14:44:57 pva Exp $
 
 EAPI="2"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
 with Python and GTK."
