@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.13 2009/01/09 14:24:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.14 2010/02/06 20:52:14 ssuominen Exp $
 
-inherit eutils
-
-IUSE=""
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A full-screen task-switcher providing Apple Expose-like functionality with various WMs"
 HOMEPAGE="http://thegraveyard.org/skippy.php"
@@ -13,43 +12,38 @@ SRC_URI="http://thegraveyard.org/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
+IUSE=""
 
-RDEPEND="x11-libs/libXext
+RDEPEND="media-libs/imlib2[X]
+	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXinerama
 	x11-libs/libXmu
 	x11-libs/libXft"
-
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xineramaproto
-	dev-util/pkgconfig
-	>=media-libs/imlib2-1.1.0"
+	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-pointer-size.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-pointer-size.patch \
+		"${FILESDIR}"/${P}-Makefile.patch
 }
 
 src_compile() {
-	emake || die "emake failed"
+	tc-export CC
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} BINDIR=/usr/bin install || die
-
-	insinto /usr/share/${P}
-	doins skippyrc-default
-
-	dodoc CHANGELOG
+	emake DESTDIR="${D}" install || die
+	dodoc CHANGELOG skippyrc-default
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You should copy /usr/share/${P}/skippyrc-default to ~/.skippyrc"
-	einfo "and edit the keysym used to invoke skippy"
-	einfo "(Find out the keysym name using 'xev')"
-	einfo
+	echo
+	elog "You should copy skippyrc-default from /usr/share/doc/${PF} to"
+	elog "~/.skippyrc and edit the keysym used to invoke skippy."
+	elog "Use x11-apps/xev to find out the keysym."
 	echo
 }
