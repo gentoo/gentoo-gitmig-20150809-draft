@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r1.ebuild,v 1.1 2010/02/06 15:47:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r1.ebuild,v 1.2 2010/02/06 15:51:36 ulm Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples jpeg png unicode xft"
 # License allows usage only on "open source operating systems"
-RESTRICT="!kernel_linuxx? (
+RESTRICT="!kernel_linux? (
 	!kernel_FreeBSD? (
 	!kernel_Darwin? (
 	!kernel_SunOS? (
