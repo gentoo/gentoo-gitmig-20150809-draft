@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.60 2010/01/26 16:28:27 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.61 2010/02/06 11:49:20 hwoarang Exp $
+
+*qt-phonon-4.6.1-r2 (06 Feb 2010)
+
+  06 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  -qt-phonon-4.6.1.ebuild, -qt-phonon-4.6.1-r1.ebuild,
+  +qt-phonon-4.6.1-r2.ebuild:
+  Install phonon widgets wrt bug #297593. Thanks to Coy Barnes 
+  <cybrenurd@lycos.com>. Remove old ebuilds
 
   26 Jan 2010; Dror Levin <spatz@gentoo.org> qt-phonon-4.6.1-r1.ebuild:
   Call correct eclass function, bug 302289.
@@ -27,7 +35,7 @@
   +qt-phonon-4.6.0-r1.ebuild:
   Add prefix support, revbump due to otherwise unresolvable USE deps
 
-  11 Dec 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.3.ebuild:
+  11 Dec 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.3.ebuild:
   sparc stable
 
   01 Dec 2009; Theo Chatzimichos <tampakrap@gentoo.org>
@@ -46,7 +54,7 @@
   -qt-phonon-4.6.0_beta1.ebuild, +qt-phonon-4.6.0_rc1.ebuild:
   added 4.6.0_rc1, removed 4.6.0_beta1
 
-  17 Nov 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.3.ebuild,
+  17 Nov 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.3.ebuild,
   qt-phonon-4.6.0_beta1.ebuild:
   Add ~sparc
 
@@ -60,7 +68,7 @@
   09 Nov 2009; Joseph Jezak <josejx@gentoo.org> qt-phonon-4.5.3.ebuild:
   Marked ppc/ppc64 stable for bug #290922.
 
-  09 Nov 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.3.ebuild:
+  09 Nov 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.3.ebuild:
   alpha stable wrt #290922
 
   09 Nov 2009; Jonathan Callen <abcd@gentoo.org>
@@ -91,7 +99,7 @@
   +qt-phonon-4.6.0_beta1.ebuild:
   added version 4.6.0_beta1
 
-  11 Oct 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.2.ebuild:
+  11 Oct 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.2.ebuild:
   alpha stable wrt #286653
 
   09 Oct 2009; Markus Meier <maekke@gentoo.org> qt-phonon-4.5.2.ebuild:
@@ -139,17 +147,17 @@
   +qt-phonon-4.5.1.ebuild:
   Version bump to 4.5.1
 
-  21 Mar 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.0.ebuild:
+  21 Mar 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.0.ebuild:
   Re-add ~alpha/~ia64 since qt-webkit needs it
 
-  20 Mar 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.0.ebuild:
+  20 Mar 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.0.ebuild:
   We don't want phonon on alpha/ia64
 
   18 Mar 2009; Markos Chandras <hwoarang@gentoo.org>
   -qt-phonon-4.5.0_rc1.ebuild:
   Dropping 4.5.0_rc1
 
-  18 Mar 2009; Raúl Porcel <armin76@gentoo.org> qt-phonon-4.5.0.ebuild:
+  18 Mar 2009; RaΓΊl Porcel <armin76@gentoo.org> qt-phonon-4.5.0.ebuild:
   Add ~alpha/~arm/~ia64
 
   16 Mar 2009; Alexis Ballier <aballier@gentoo.org> qt-phonon-4.5.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.6.1.ebuild,v 1.1 2010/01/19 14:53:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.6.1-r2.ebuild,v 1.1 2010/02/06 11:49:20 hwoarang Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -14,21 +14,26 @@ DEPEND="~x11-libs/qt-gui-${PV}[aqua=,debug=,glib,qt3support]
 	!kde-base/phonon-kde
 	!kde-base/phonon-xine
 	!media-sound/phonon
-	media-libs/gstreamer
-	media-libs/gst-plugins-base
+	!aqua? ( media-libs/gstreamer
+			 media-plugins/gst-plugins-meta )
 	aqua? ( ~x11-libs/qt-opengl-${PV}[aqua] )
 	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )"
 RDEPEND="${DEPEND}"
 
-QT4_TARGET_DIRECTORIES="
-src/phonon
-src/plugins/phonon"
-QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
-include/
-src"
+pkg_setup() {
+	QT4_TARGET_DIRECTORIES="
+		src/phonon
+		src/plugins/phonon
+		tools/designer/src/plugins/phononwidgets"
+	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
+		include/
+		src"
 
-QCONFIG_ADD="phonon"
-QCONFIG_DEFINE="QT_GSTREAMER"
+	QCONFIG_ADD="phonon"
+	use aqua || QCONFIG_DEFINE="QT_GSTREAMER"
+
+	qt4-build_pkg_setup
+}
 
 src_configure() {
 	myconf="${myconf} -phonon -phonon-backend -no-opengl -no-svg
