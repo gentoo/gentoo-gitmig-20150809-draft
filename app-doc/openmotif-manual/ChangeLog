@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/openmotif-manual
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/ChangeLog,v 1.1 2010/02/06 15:28:17 ulm Exp $
+
+*openmotif-manual-2.3.0 (06 Feb 2010)
+
+  06 Feb 2010; Ulrich Mueller <ulm@gentoo.org>
+  +openmotif-manual-2.3.0.ebuild, +metadata.xml:
+  Initial import, split off from x11-libs/openmotif.
+
