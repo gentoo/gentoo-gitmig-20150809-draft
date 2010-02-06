@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.2.4.ebuild,v 1.1 2010/02/06 19:42:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.2.4.ebuild,v 1.2 2010/02/06 19:43:21 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -30,7 +30,7 @@ src_prepare() {
 	sed -i \
 		-e 's/$(ADD_ACLOCAL_FLAGS)//' \
 		Makefile.am || die
-	
+
 	epatch "${FILESDIR}"/${P}-gcc_detection.patch
 	eautoreconf
 }
