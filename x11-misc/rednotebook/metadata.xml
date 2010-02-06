@@ -4,6 +4,7 @@
 <herd>no-herd</herd>
 <use>
 	<flag name='libyaml'>enable libyaml support</flag>
+	<flag name='webkit'>enable previews using webkit engine</flag>
 </use>
 <maintainer>
 <email>hwoarang@gentoo.org</email>
