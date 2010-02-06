@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.9 2009/12/15 09:23:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.10 2010/02/06 15:58:04 ulm Exp $
 
 WANT_AUTOMAKE="1.6"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib autotools
 
 MY_P=openMotif-${PV}
 DESCRIPTION="Legacy Open Motif libraries for old binaries"
-HOMEPAGE="http://www.motifzone.org/"
+HOMEPAGE="http://www.motifzone.net/"
 SRC_URI="ftp://ftp.ics.com/openmotif/2.2/${PV}/src/${MY_P}.tar.gz
 	mirror://gentoo/openmotif-${PV}-patches-3.tar.bz2"
 
