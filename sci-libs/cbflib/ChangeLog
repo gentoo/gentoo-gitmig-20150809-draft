@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.1 2010/02/03 21:35:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.2 2010/02/06 13:43:12 jlec Exp $
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  cbflib-0.8.1-r4.ebuild:
+  Fixed missing installation of headers
 
 *cbflib-0.8.1-r4 (03 Feb 2010)
 
