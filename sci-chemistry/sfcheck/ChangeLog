@@ -1,0 +1,16 @@
+# ChangeLog for sci-chemistry/sfcheck
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/ChangeLog,v 1.1 2010/02/06 22:13:13 jlec Exp $
+
+*sfcheck-7.03.17 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/7.03.17-ldflags.patch, +sfcheck-7.03.17.ebuild, +metadata.xml:
+  Splitted sfcheck from ccp4
+
+*sfcheck-7.03.16 (22 Dec 2009)
+
+  22 Dec 2009; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  +files/7.03.16-ldflags.patch, +sfcheck-7.03.16.ebuild, +metadata.xml:
+  Initial commit
+
