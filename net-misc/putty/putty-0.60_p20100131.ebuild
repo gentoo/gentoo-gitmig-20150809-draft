@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20100131.ebuild,v 1.2 2010/02/01 13:08:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20100131.ebuild,v 1.3 2010/02/06 16:55:32 jer Exp $
 
 EAPI="2"
 
@@ -50,7 +50,7 @@ src_compile() {
 
 src_install() {
 	if use doc; then
-		dodoc puttydoc.txt || die "dodoc failed"
+		dodoc doc/puttydoc.txt || die "dodoc failed"
 		dohtml doc/*.html || die "dohtml failed"
 	fi
 
