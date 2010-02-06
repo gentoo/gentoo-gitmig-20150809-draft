@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.2 2010/01/06 23:49:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.3 2010/02/06 11:05:42 ulm Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -11,7 +11,7 @@ DESCRIPTION="A collection of algorithms and sample code for various computer vis
 HOMEPAGE="http://opencv.willowgarage.com"
 SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 
-LICENSE="v4l? ( GPL-2 ) xine? ( GPL-2 ) Intel"
+LICENSE="v4l? ( GPL-2 ) xine? ( GPL-2 ) BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug +deprecated examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k

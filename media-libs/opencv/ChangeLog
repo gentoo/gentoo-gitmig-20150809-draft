@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.17 2010/01/06 23:49:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.18 2010/02/06 11:05:42 ulm Exp $
+
+  06 Feb 2010; Ulrich Mueller <ulm@gentoo.org> opencv-2.0.0.ebuild,
+  opencv-2.0.0-r1.ebuild:
+  Fix LICENSE, bug 301123.
 
   06 Jan 2010; Joseph Jezak <josejx@gentoo.org> opencv-2.0.0-r1.ebuild:
   Marked ~ppc64.
