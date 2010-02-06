@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/openmotif-manual-2.3.0.ebuild,v 1.2 2010/02/06 15:30:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/openmotif-manual-2.3.0.ebuild,v 1.3 2010/02/06 15:41:21 ulm Exp $
 
 DESCRIPTION="Manual for Open Motif"
 HOMEPAGE="http://www.motifzone.net/"
-SRC_URI="http://www.motifzone.net/files/documents/openmotif-${PV}-manual.pdf.tgz"
+SRC_URI="ftp://ftp.ics.com/openmotif/openmotif-${PV}-manual.pdf.tgz"
 
 LICENSE="OPL"
 SLOT="0"
