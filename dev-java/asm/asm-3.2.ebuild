@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-3.2.ebuild,v 1.1 2009/12/31 09:29:39 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-3.2.ebuild,v 1.2 2010/02/06 13:19:47 hwoarang Exp $
 
 WANT_ANT_TASKS="ant-owanttask"
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ SRC_URI="http://download.forge.objectweb.org/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="3"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
