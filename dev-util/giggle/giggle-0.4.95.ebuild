@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.95.ebuild,v 1.1 2010/02/05 21:43:43 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.95.ebuild,v 1.2 2010/02/06 12:29:44 ikelos Exp $
 
 EAPI="1"
 
@@ -33,6 +33,5 @@ G2CONF="$(use_enable eds evolution-data-server)"
 src_unpack() {
 	gnome2_src_unpack
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-libgiggle.patch"
 	eautoreconf
 }
