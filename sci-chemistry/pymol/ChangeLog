@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.52 2010/02/01 21:48:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.53 2010/02/06 15:26:35 pva Exp $
+
+  06 Feb 2010; Peter Volkov <pva@gentoo.org> pymol-1.2.1.ebuild,
+  pymol-1.2.2.ebuild, pymol-1.2.2-r1.ebuild:
+  added missed inherit eutils, bug #303693, thank Christian Becke for
+  report.
 
 *pymol-1.2.2-r1 (01 Feb 2010)
 

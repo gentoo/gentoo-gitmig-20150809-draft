@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2-r1.ebuild,v 1.2 2010/02/02 17:51:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.2-r1.ebuild,v 1.3 2010/02/06 15:26:35 pva Exp $
 
 EAPI="2"
 
-inherit distutils
+inherit eutils distutils
 
 PYTHON_MODNAME="chempy pmg_tk pymol"
 REV="3859"
