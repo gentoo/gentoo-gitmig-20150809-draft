@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.6-r1.ebuild,v 1.13 2009/11/14 17:01:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.6-r1.ebuild,v 1.14 2010/02/06 14:50:12 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -58,7 +58,7 @@ src_compile() {
 
 src_test() {
 	tests() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "${python}" selftest.py
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" selftest.py
 	}
 	python_execute_function tests
 }
