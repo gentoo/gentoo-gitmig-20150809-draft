@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.12-r1.ebuild,v 1.1 2009/06/11 16:49:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.14.ebuild,v 1.1 2010/02/06 08:21:44 grozin Exp $
 
 EAPI=2
 NEED_PYTHON=2.4
@@ -15,14 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gmp test"
 
+RDEPEND="gmp? ( dev-python/gmpy )"
 DEPEND="doc? ( dev-python/sphinx )
-	gmp? ( dev-python/gmpy )
 	test? ( dev-python/py )"
-
-src_prepare() {
-	distutils_src_prepare
-	epatch "${FILESDIR}"/${P}-test.patch
-}
 
 src_compile() {
 	distutils_src_compile
