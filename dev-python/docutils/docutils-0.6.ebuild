@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.4 2010/01/09 00:29:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.5 2010/02/06 15:58:17 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -54,7 +54,7 @@ src_compile() {
 	# generated reference to it is correct.
 	cp ../docutils/writers/html4css1/html4css1.css ..
 
-	PYTHONPATH=.. ${python} ./buildhtml.py --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
+	PYTHONPATH=.. "$(PYTHON -f)" ./buildhtml.py --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
 
 	popd > /dev/null
 
@@ -122,5 +122,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup docutils roman.py
 }

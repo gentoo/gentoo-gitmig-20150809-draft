@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6_pre6148.ebuild,v 1.3 2009/10/13 17:20:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6_pre6148.ebuild,v 1.4 2010/02/06 15:58:17 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils multilib
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc..."
-HOMEPAGE="http://docutils.sourceforge.net/"
+HOMEPAGE="http://docutils.sourceforge.net/ http://pypi.python.org/pypi/docutils"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	glep? ( mirror://gentoo/glep-0.4-r1.tbz2 )"
 #mirror://sourceforge/docutils/${P}.tar.gz
@@ -55,19 +55,12 @@ src_compile() {
 	# generated reference to it is correct.
 	cp ../docutils/writers/html4css1/html4css1.css ..
 
-	PYTHONPATH=.. ${python} ./buildhtml.py --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
+	PYTHONPATH=.. "$(PYTHON -f)" ./buildhtml.py --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
 
 	popd > /dev/null
 
 	# clean up after the doc building
 	rm roman.py html4css1.css
-}
-
-install_txt_doc() {
-	local doc=${1}
-	local dir="txt/$(dirname ${doc})"
-	docinto ${dir}
-	dodoc ${doc}
 }
 
 src_test() {
@@ -82,6 +75,13 @@ src_test() {
 	python_execute_function -s testing
 }
 
+install_txt_doc() {
+	local doc="${1}"
+	local dir="txt/$(dirname ${doc})"
+	docinto "${dir}"
+	dodoc "${doc}"
+}
+
 src_install() {
 	DOCS="*.txt"
 	distutils_src_install
@@ -89,7 +89,7 @@ src_install() {
 	# Tools
 	cd tools
 	for tool in *.py; do
-		dobin ${tool}
+		dobin "${tool}"
 	done
 
 	# Docs
@@ -98,13 +98,13 @@ src_install() {
 	# Manually install the stylesheet file
 	insinto /usr/share/doc/${PF}/html
 	doins docutils/writers/html4css1/html4css1.css
-	for doc in $(find docs tools -name '*.txt'); do
-		install_txt_doc $doc
+	for doc in $(find docs tools -name "*.txt"); do
+		install_txt_doc "${doc}"
 	done
 
 	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
 	if use glep; then
-		dobin ${GLEP_SRC}/glep.py || die "newbin failed"
+		dobin ${GLEP_SRC}/glep.py || die "dobin failed"
 
 		installation_of_glep_tools() {
 			insinto $(python_get_sitedir)/docutils/readers
@@ -123,5 +123,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup docutils roman.py
 }

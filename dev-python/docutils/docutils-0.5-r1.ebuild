@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.5-r1.ebuild,v 1.10 2009/11/14 16:45:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.5-r1.ebuild,v 1.11 2010/02/06 15:58:17 arfrever Exp $
 
 EAPI="2"
-
-NEED_PYTHON="2.4"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils multilib
@@ -23,8 +22,7 @@ DEPEND="dev-python/setuptools"
 RDEPEND=""
 # Emacs support is in PDEPEND to avoid a dependency cycle (bug #183242)
 PDEPEND="emacs? ( || ( >=app-emacs/rst-0.4 >=virtual/emacs-23 ) )"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 EMP="${PN}-0.3.7"
 
@@ -49,30 +47,22 @@ src_compile() {
 	# make roman.py available for the doc building process
 	ln -s extras/roman.py
 
-	pushd tools
+	pushd tools > /dev/null
 
 	# Place html4css1.css in base directory. This makes sure the
 	# generated reference to it is correct.
 	cp ../docutils/writers/html4css1/html4css1.css ..
 
-	PYTHONPATH=.. ${python} ./buildhtml.py --stylesheet-path=../html4css1.css --traceback .. \
-		|| die "buildhtml"
+	PYTHONPATH=.. "$(PYTHON -f)" ./buildhtml.py --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
 
-	popd
+	popd > /dev/null
 
 	# clean up after the doc building
 	rm roman.py html4css1.css
 }
 
-install_txt_doc() {
-	local doc=${1}
-	local dir="txt/$(dirname ${doc})"
-	docinto ${dir}
-	dodoc ${doc}
-}
-
 src_test() {
-	cd "${S}/test"
+	cd test
 
 	testing() {
 		PYTHONPATH="../build-${PYTHON_ABI}/lib" ./alltests.py
@@ -80,14 +70,21 @@ src_test() {
 	python_execute_function testing
 }
 
+install_txt_doc() {
+	local doc="${1}"
+	local dir="txt/$(dirname ${doc})"
+	docinto "${dir}"
+	dodoc "${doc}"
+}
+
 src_install() {
 	DOCS="*.txt"
 	distutils_src_install
 
 	# Tools
-	cd "${S}"/tools
+	cd tools
 	for tool in *.py; do
-		dobin ${tool}
+		dobin "${tool}"
 	done
 
 	# Docs
@@ -96,13 +93,13 @@ src_install() {
 	# Manually install the stylesheet file
 	insinto /usr/share/doc/${PF}/html
 	doins docutils/writers/html4css1/html4css1.css
-	for doc in $(find docs tools -name '*.txt'); do
-		install_txt_doc $doc
+	for doc in $(find docs tools -name "*.txt"); do
+		install_txt_doc "${doc}"
 	done
 
 	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
 	if use glep; then
-		dobin ${GLEP_SRC}/glep.py || die "newbin failed"
+		dobin ${GLEP_SRC}/glep.py || die "dobin failed"
 
 		installation_of_glep_tools() {
 			insinto $(python_get_sitedir)/docutils/readers
@@ -121,5 +118,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup docutils roman.py
 }
