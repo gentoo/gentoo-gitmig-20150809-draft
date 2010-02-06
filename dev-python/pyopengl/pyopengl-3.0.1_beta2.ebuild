@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1_beta2.ebuild,v 1.6 2010/01/25 19:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1_beta2.ebuild,v 1.7 2010/02/06 14:58:24 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -41,10 +42,9 @@ src_compile() {
 
 	# upstream does not include docs in the tarball.
 	#if use doc ; then
-	#	einfo "Generating API docs as requested..."
 	#	mkdir "${S}/api"
 	#	cd "${S}/api"
-	#	PYTHONPATH="${S}" "${python}" "${S}/documentation/pydoc/builddocs.py" || die "generating docs failed"
+	#	PYTHONPATH="${S}" "$(PYTHON -f)" "${S}/documentation/pydoc/builddocs.py" || die "Generation of documentation failed"
 	#fi
 }
 
