@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ipager/ipager-1.1.0.ebuild,v 1.3 2008/09/09 03:58:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ipager/ipager-1.1.0.ebuild,v 1.4 2010/02/06 20:14:38 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="A themable desktop pager for fluxbox and other window managers"
@@ -10,18 +11,16 @@ SRC_URI="http://www.useperl.ru/ipager/src/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="xinerama"
 
-RDEPEND="media-libs/imlib2
-		x11-libs/libXmu
-		xinerama? ( x11-libs/libXinerama )"
-DEPEND="dev-util/scons
-	${RDEPEND}"
+RDEPEND="media-libs/imlib2[X]
+	x11-libs/libXmu
+	xinerama? ( x11-libs/libXinerama )"
+DEPEND="${RDEPEND}
+	dev-util/scons"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-scons_imlib2.patch
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	epatch "${FILESDIR}"/${P}-scons_flags.patch
