@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.4.ebuild,v 1.1 2010/01/23 21:06:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.4.ebuild,v 1.2 2010/02/06 21:35:27 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils versionator
+inherit distutils eutils versionator
 
 MY_PN="ReportLab"
 MY_PV="$(replace_all_version_separators _)"

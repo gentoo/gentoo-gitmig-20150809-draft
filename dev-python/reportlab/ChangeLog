@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.63 2010/01/23 21:06:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.64 2010/02/06 21:35:27 arfrever Exp $
+
+  06 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  reportlab-2.3-r1.ebuild, reportlab-2.4.ebuild:
+  Inherit eutils eclass (bug #303769).
 
 *reportlab-2.4 (23 Jan 2010)
 
