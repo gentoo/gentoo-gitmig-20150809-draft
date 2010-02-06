@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r1.ebuild,v 1.1 2009/07/27 06:26:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r1.ebuild,v 1.2 2010/02/06 12:02:19 jlec Exp $
 
 EAPI="2"
 
@@ -50,12 +50,12 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
 
-	append-fflags -fopenmp
+	use openmp && append-fflags -fopenmp
 
 	# the code uses Intel-compiler-specific directives
 	epatch "${FILESDIR}"/${PV}-allow-gcc-openmp.patch
 
-	OMPLIB="-lgomp"
+	use openmp && OMPLIB="-lgomp"
 
 	use amd64 && \
 		append-cflags "-DINTEGER='long long int'" && \
@@ -118,7 +118,7 @@ src_install() {
 	sed -i \
 		-e "s:${S}:usr:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT /usr:g" \
-		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DATA \$CNS_ROOT/share/data:g" \
+		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DATA \$CNS_ROOT/share/cns:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DOC \$CNS_ROOT/share/doc/${PF}:g" \
 		-e "s:CNS_LIB \$CNS_SOLVE/libraries:CNS_LIB \$CNS_DATA/libraries:g" \
 		-e "s:CNS_MODULE \$CNS_SOLVE/modules:CNS_MODULE \$CNS_DATA/modules:g" \
@@ -180,9 +180,11 @@ src_install() {
 }
 
 pkg_info() {
+	if use openmp; then
 		elog "Set OMP_NUM_THREADS to the number of threads you want."
 		elog "If you get segfaults on large structures, set the GOMP_STACKSIZE"
 		elog "variable if using gcc (16384 should be good)."
+	fi
 }
 
 pkg_postinst() {
