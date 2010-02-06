@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r4.ebuild,v 1.11 2010/02/06 01:34:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r4.ebuild,v 1.12 2010/02/06 06:33:26 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -52,6 +52,10 @@ pkg_postinst() {
 	ewarn "LFS changes in the gdbm format.  You can either delete the db"
 	ewarn "and regenerate it from scratch, or use the converter:"
 	ewarn "http://bugs.gentoo.org/attachment.cgi?id=215326"
+	ewarn
+	ewarn "See this comment for information on how to use it:"
+	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=299390#c15"
+	ewarn
 	ewarn "You should be able to locate most gdbm db's on your system with:"
 	ewarn "find /etc /var -type f -exec file {} + | grep 'GNU dbm 1.x or ndbm database'"
 }
