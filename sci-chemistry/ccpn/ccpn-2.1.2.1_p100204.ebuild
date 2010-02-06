@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.2.1_p100204.ebuild,v 1.1 2010/02/06 21:30:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.2.1_p100204.ebuild,v 1.2 2010/02/06 22:35:39 jlec Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,13 +24,13 @@ IUSE="+opengl"
 
 RDEPEND="
 	dev-lang/tk
-	dev-python/elementtree
 	dev-python/numpy
 	dev-tcltk/tix
 	opengl? ( virtual/glut )"
 DEPEND="${RDEPEND}"
-RESTRICT="mirror"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
+RESTRICT="mirror"
 S="${WORKDIR}"/${MY_PN}/${MY_PN}$(get_version_component_range 1-2 ${PV})
 
 src_prepare() {
