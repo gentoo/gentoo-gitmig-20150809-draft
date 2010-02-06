@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3864 2010/02/06 12:03:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3865 2010/02/06 20:04:26 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask AqBanking 4.2.4 pending on new KMyMoney 3.96.0 release.
 
   06 Feb 2010; Ulrich Mueller <ulm@gentoo.org> license_groups:
   Remove Intel license, duplicate of BSD, bug 301123.
