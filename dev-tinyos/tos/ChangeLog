@@ -1,6 +1,9 @@
 # ChangeLog for dev-tinyos/tos
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos/ChangeLog,v 1.6 2008/09/03 12:04:48 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos/ChangeLog,v 1.7 2010/02/06 11:58:14 ulm Exp $
+
+  06 Feb 2010; Ulrich Mueller <ulm@gentoo.org> tos-1.1.15-r1.ebuild:
+  Fix LICENSE, bug 301123.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> tos-1.1.15-r1.ebuild:
   replace virtual/tetex with virtual/latex-base and quote variables

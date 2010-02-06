@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/channelgen/channelgen-1.1.15.ebuild,v 1.2 2006/11/14 21:09:11 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/channelgen/channelgen-1.1.15.ebuild,v 1.3 2010/02/06 11:55:12 ulm Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ DESCRIPTION="Verify channel for CC1000Control, generate preset for given frequen
 
 HOMEPAGE="http://www.tinyos.net/"
 SRC_URI="http://www.tinyos.net/dist-1.1.0/tinyos/source/${MY_P}-${PV}${CVS_MONTH}${CVS_YEAR}cvs.tar.gz"
-LICENSE="Intel"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
@@ -27,5 +27,5 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin
-	make prefix=${D}/usr install  || die "install failed"
+	make prefix="${D}"/usr install  || die "install failed"
 }

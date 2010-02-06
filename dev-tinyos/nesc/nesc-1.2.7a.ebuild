@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.7a.ebuild,v 1.3 2006/11/14 21:32:58 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.7a.ebuild,v 1.4 2010/02/06 11:56:50 ulm Exp $
 
 inherit eutils java-pkg-2
 
 DESCRIPTION="An extension to gcc that knows how to compile nesC applications"
 HOMEPAGE="http://nescc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/nescc/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tinyos/nesc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/ChangeLog,v 1.15 2007/03/05 22:36:56 sanchan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/ChangeLog,v 1.16 2010/02/06 11:56:50 ulm Exp $
+
+  06 Feb 2010; Ulrich Mueller <ulm@gentoo.org> nesc-1.2.7a.ebuild,
+  nesc-1.2.8.ebuild, nesc-1.2.8a.ebuild:
+  Fix LICENSE, bug 301123.
 
   05 Mar 2007; Sandro Bonazzola <sanchan@gentoo.org> ChangeLog:
   Removing myself from metadata.xml as I'm stepping back.
