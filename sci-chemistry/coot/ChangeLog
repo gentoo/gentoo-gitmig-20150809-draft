@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/coot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.19 2009/10/10 00:10:29 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.20 2010/02/06 00:15:00 jlec Exp $
+
+*coot-0.6 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> -coot-0.1.2.ebuild,
+  -coot-0.3.1.ebuild, -coot-0.3.3.ebuild, -coot-0.4_pre2-r549.ebuild,
+  +coot-0.6.ebuild, +files/glib.m4, +files/gtk.m4:
+  Version BUmp, removed broken versions
 
   10 Oct 2009; Patrick Lauer <patrick@gentoo.org> coot-0.1.2.ebuild,
   coot-0.3.1.ebuild, coot-0.3.3.ebuild, coot-0.4_pre2-r549.ebuild:

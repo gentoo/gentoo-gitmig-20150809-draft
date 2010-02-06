@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-chemistry</herd>
-<use>
-  <flag name='new-interface'>Build with the experimental GTK+-2 interface
-    instead of GTK+-1</flag>
-</use>
 </pkgmetadata>
