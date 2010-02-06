@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/mosflm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.1 2010/02/06 22:59:27 jlec Exp $
+
+*mosflm-7.0.6 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/7.0.6-Makefile.patch, +files/7.0.6-parallel.patch,
+  +mosflm-7.0.6.ebuild, +metadata.xml:
+  Splitted mosflm from ccp4
+
