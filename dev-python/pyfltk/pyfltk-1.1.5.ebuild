@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.5.ebuild,v 1.1 2010/01/21 01:33:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.5.ebuild,v 1.2 2010/02/06 15:08:30 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils
@@ -22,14 +23,13 @@ IUSE="doc"
 RDEPEND=">=x11-libs/fltk-1.1.9:1.1[opengl]"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
-
-RESTRICT_PYTHON_ABIS="3*"
-
-PYTHON_MODNAME="fltk"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES"
+
+PYTHON_MODNAME="fltk"
 
 src_prepare() {
 	rm -f python/fltk*
@@ -38,9 +38,10 @@ src_prepare() {
 }
 
 src_compile() {
-	cd "${S}"/python
-	${python} MakeSwig.py || die "swigging wrappers failed"
-	cd "${S}"
+	pushd python > /dev/null
+	"$(PYTHON -f)" MakeSwig.py || die "swigging wrappers failed"
+	popd > /dev/null
+
 	distutils_src_compile
 }
 
