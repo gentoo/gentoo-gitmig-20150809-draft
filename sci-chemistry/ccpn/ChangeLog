@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/ccpn
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.1 2010/02/06 21:30:16 jlec Exp $
+
+*ccpn-2.1.2.1_p100204 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +files/analysis,
+  +files/dangle, +files/dataShifter, +files/eci, +files/formatConverter,
+  +files/pipe2azara, +ccpn-2.1.2.1_p100204.ebuild, +metadata.xml:
+  Initial commit
+
