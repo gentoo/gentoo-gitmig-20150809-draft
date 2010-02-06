@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.37.ebuild,v 1.3 2010/02/06 18:37:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.37.ebuild,v 1.4 2010/02/06 18:56:51 zmedico Exp $
 
 EAPI=2
 PYTHON_DEPEND=2:2.6
+PYTHON_USE_WITH=sqlite
 
 inherit python distutils eutils fdo-mime bash-completion
 
@@ -20,8 +21,7 @@ SLOT="0"
 IUSE=""
 
 # libusb-compat is untested
-SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
-	>=dev-python/setuptools-0.6_rc5
+SHARED_DEPEND=">=dev-python/setuptools-0.6_rc5
 	>=dev-python/imaging-1.1.6
 	>=dev-libs/libusb-0.1.12:0
 	>=dev-python/PyQt4-4.5[X,svg,webkit]
