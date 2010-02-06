@@ -1,0 +1,9 @@
+# ChangeLog for sci-biology/fasta
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.1 2010/02/06 20:00:24 jlec Exp $
+
+*fasta-35.4.10 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/35.4.10-ldflags.patch, +fasta-35.4.10.ebuild, +metadata.xml:
+  Initial import, thanks to Jose Maria Fernandez Gonzalez
