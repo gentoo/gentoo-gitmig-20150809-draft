@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.112 2010/01/17 19:09:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.113 2010/02/06 14:49:02 hwoarang Exp $
+
+*eric-4.4.1 (06 Feb 2010)
+
+  06 Feb 2010; Markos Chandras <hwoarang@gentoo.org> +eric-4.4.1.ebuild:
+  Version bump
 
   17 Jan 2010; Raúl Porcel <armin76@gentoo.org> eric-4.3.9.ebuild:
   sparc stable wrt #296580
