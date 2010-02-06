@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.5 2010/02/06 21:49:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r2.ebuild,v 1.1 2010/02/06 21:49:39 jlec Exp $
+
+EAPI="2"
 
 inherit eutils fortran toolchain-funcs versionator flag-o-matic
 
@@ -10,22 +12,27 @@ MY_P="${MY_PN}_${MY_PV}"
 
 DESCRIPTION="Crystallography and NMR System"
 HOMEPAGE="http://cns.csb.yale.edu/"
-SRC_URI="!openmp? ( ${MY_P}_all.tar.gz )
-	openmp? ( ${MY_P}_all-mp.tar.gz )"
-RESTRICT="fetch"
-LICENSE="cns"
+SRC_URI="${MY_P}_all-mp.tar.gz
+	aria? ( aria2.2.tar.gz )"
+
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
-IUSE="openmp"
+LICENSE="cns"
+KEYWORDS="~amd64 ~x86"
+IUSE="aria openmp"
+
 RDEPEND="app-shells/tcsh
 	!app-text/dos2unix"
 DEPEND="${RDEPEND}"
+PDEPEND="aria? ( sci-chemistry/aria )"
+
+RESTRICT="fetch"
 S="${WORKDIR}/${MY_P}"
 
 FORTRAN="g77 gfortran"
 
 pkg_nofetch() {
 	elog "Fill out the form at http://cns.csb.yale.edu/cns_request/"
+	use aria && elog "and http://aria.pasteur.fr/"
 	elog "and place these files:"
 	elog ${A}
 	elog "in ${DISTDIR}."
@@ -34,28 +41,38 @@ pkg_nofetch() {
 pkg_setup() {
 	fortran_pkg_setup
 
-	if use openmp; then
-		if [[ gcc-major-version < 4 ]] \
-			|| ( [[ gcc-major-version < 4 ]] && [[ gcc-minor-version < 2 ]] ); then
-			local msg="Sorry, you need gcc 4.2 or newer to use OpenMP."
-			eerror "$msg"
-			die "$msg"
-		fi
+	if [[ $(tc-getCC)$ == *gcc* ]] &&
+		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
+		! built_with_use sys-devel/gcc openmp )
+	then
+		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
+		ewarn "Switch CC to an OpenMP capable compiler"
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-gentoo.patch
+
+	cd "${WORKDIR}"
+	if use aria; then
+		# Update the cns sources in aria for version 1.2.1
+		epatch "${FILESDIR}"/1.2.1-aria.patch
+
+		# Update the code with aria specific things
+		cp -rf aria2.2/cns/src/* "${S}"/source/
+	fi
 	cd "${S}"
 
 	use openmp && append-fflags -fopenmp
-	use openmp && append-ldflags -lgomp
-
-	# Someone already did the same in the openmp version, apparently
-	use openmp || epatch "${FILESDIR}"/1.2-allow-unknown-architectures.patch
 
 	# the code uses Intel-compiler-specific directives
-	use openmp && epatch "${FILESDIR}"/${PV}-allow-gcc-openmp.patch
+	epatch "${FILESDIR}"/${PV}-allow-gcc-openmp.patch
+
+	use openmp && OMPLIB="-lgomp"
+
+	use amd64 && \
+		append-cflags "-DINTEGER='long long int'" && \
+		append-fflags -fdefault-integer-8
 
 	# Set up location for the build directory
 	# Uses obsolete `sort` syntax, so we set _POSIX2_VERSION
@@ -72,7 +89,7 @@ src_unpack() {
 
 src_compile() {
 	local GLOBALS
-	local MALIGN=
+	local MALIGN
 	if [[ ${FORTRANC} = g77 ]]; then
 		GLOBALS="-fno-globals"
 		MALIGN='\$(CNS_MALIGN_I86)'
@@ -92,8 +109,10 @@ src_compile() {
 		LDFLAGS="${LDFLAGS}" \
 		F77OPT="${FFLAGS:- -O2} ${MALIGN}" \
 		F77STD="${GLOBALS}" \
+		OMPLIB="${OMPLIB}" \
 		g77install \
 		|| die "emake failed"
+
 }
 
 src_test() {
@@ -101,7 +120,7 @@ src_test() {
 	# when we source in a -c
 	einfo "Running tests ..."
 	sh -c \
-		"export CNS_G77=ON; source .cns_solve_env_sh; make run_tests" \
+		"export CNS_G77=ON; source ${T}/cns_solve_env_sh; make run_tests" \
 		|| die "tests failed"
 	einfo "Displaying test results ..."
 	cat "${S}"/*_g77/test/*.diff-test
@@ -111,8 +130,8 @@ src_install() {
 	# Install to locations resembling FHS
 	sed -i \
 		-e "s:${S}:usr:g" \
-		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT usr:g" \
-		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DATA \$CNS_ROOT/share/data:g" \
+		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT /usr:g" \
+		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DATA \$CNS_ROOT/share/cns:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DOC \$CNS_ROOT/share/doc/${PF}:g" \
 		-e "s:CNS_LIB \$CNS_SOLVE/libraries:CNS_LIB \$CNS_DATA/libraries:g" \
 		-e "s:CNS_MODULE \$CNS_SOLVE/modules:CNS_MODULE \$CNS_DATA/modules:g" \
@@ -155,30 +174,29 @@ src_install() {
 
 	sed -i \
 		-e "s:\$CNS_SOLVE/doc/:\$CNS_SOLVE/share/doc/${PF}/:g" \
-		"${S}"/bin/cns_web
+		"${S}"/bin/cns_web || die
 
 	dobin "${S}"/bin/cns_{edit,header,transfer,web} || die "install bin failed"
 
 	insinto /usr/share/cns
-	doins -r "${S}"/libraries "${S}"/modules "${S}"/helplib
-	doins "${S}"/bin/cns_info
+	doins -r "${S}"/libraries "${S}"/modules "${S}"/helplib || die
+	doins "${S}"/bin/cns_info || die
 
 	insinto /etc/profile.d
-	newins "${S}"/cns_solve_env cns_solve_env.csh
-	newins "${T}"/cns_solve_env_sh cns_solve_env.sh
+	newins "${S}"/cns_solve_env cns_solve_env.csh || die
+	newins "${T}"/cns_solve_env_sh cns_solve_env.sh || die
 
 	dohtml \
 		-A iq,cgi,csh,cv,def,fm,gif,hkl,inp,jpeg,lib,link,list,mask,mtf,param,pdb,pdf,pl,ps,sc,sca,sdb,seq,tbl,top \
 		-f all_cns_info_template,omac,def \
-		-r doc/html/*
+		-r doc/html/* || die
 }
 
 pkg_info() {
 	if use openmp; then
 		elog "Set OMP_NUM_THREADS to the number of threads you want."
 		elog "If you get segfaults on large structures, set the GOMP_STACKSIZE"
-		elog "variable if using gcc (16384 should be good). Also run"
-		elog "ulimit -s 16384."
+		elog "variable if using gcc (16384 should be good)."
 	fi
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.18 2010/02/06 12:02:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.19 2010/02/06 21:49:39 jlec Exp $
+
+*cns-1.2.1-r2 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/1.2.1-aria.patch, +cns-1.2.1-r2.ebuild:
+  Added aria support per 220905
+  Some QA fixes to make repoman happy
 
   06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> cns-1.2.1-r1.ebuild:
   We have to repect selection of USE="-openmp", fixed path in setup file.
