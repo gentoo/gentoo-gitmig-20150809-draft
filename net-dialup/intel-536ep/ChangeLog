@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/intel-536ep
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.9 2007/02/09 04:11:00 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.10 2010/02/06 11:12:37 ulm Exp $
+
+  06 Feb 2010; Ulrich Mueller <ulm@gentoo.org> intel-536ep-4.71.ebuild:
+  Fix LICENSE, bug 301123.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

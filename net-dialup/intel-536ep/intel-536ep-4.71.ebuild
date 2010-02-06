@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.71.ebuild,v 1.4 2006/03/28 23:04:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.71.ebuild,v 1.5 2010/02/06 11:12:37 ulm Exp $
 
 inherit linux-mod
 
@@ -8,7 +8,7 @@ DESCRIPTION="Driver for Intel 536EP modem"
 HOMEPAGE="http://developer.intel.com/design/modems/products/536ep.htm"
 SRC_URI="ftp://aiedownload.intel.com/df-support/9266/eng/${P}.tgz"
 
-LICENSE="Intel"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
