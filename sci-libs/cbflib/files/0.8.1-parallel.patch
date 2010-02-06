@@ -1,0 +1,14 @@
+diff --git a/Makefile_LINUX_gcc42 b/Makefile_LINUX_gcc42
+index e5912ce..be4a28a 100644
+--- a/Makefile_LINUX_gcc42
++++ b/Makefile_LINUX_gcc42
+@@ -648,7 +648,8 @@ all::	$(BIN)/test_xds_binary   \
+ 		$(BIN)/test_fcb_read_image
+ endif
+ 
+-shared:	$(SOLIB)/libcbf.so $(SOLIB)/libfcb.so $(SOLIB)/libimg.so
++shared:	$(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB) \
++		$(SOLIB)/libcbf.so $(SOLIB)/libfcb.so $(SOLIB)/libimg.so
+ 
+ javawrapper: shared $(JAVADIR) $(JAVADIR)/cbflib-$(VERSION).jar $(SOLIB)/libcbf_wrap.so
+ 

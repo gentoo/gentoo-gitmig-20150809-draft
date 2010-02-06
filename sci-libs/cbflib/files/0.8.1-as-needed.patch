@@ -1,0 +1,31 @@
+diff --git a/Makefile_LINUX_gcc42 b/Makefile_LINUX_gcc42
+index e5912ce..20f8a4d 100644
+--- a/Makefile_LINUX_gcc42
++++ b/Makefile_LINUX_gcc42
+@@ -844,7 +845,7 @@ endif
+ 
+ $(SOLIB)/libcbf.so: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
+ 	$(CC) $(CFLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(SOURCE)
+-	$(CC) -o $@ *.o $(SOLDFLAGS)
++	$(CC) $(SOLDFLAGS) -o $@ *.o
+ 	rm *.o
+ 
+ #
+@@ -860,7 +861,7 @@ endif
+ 	
+ $(SOLIB)/libimg.so: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
+ 	$(CC) $(CFLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(EXAMPLES)/img.c
+-	$(CC) -o $@ *.o $(SOLDFLAGS)
++	$(CC) $(SOLDFLAGS) -o $@ *.o
+ 	rm *.o
+ 
+ #
+@@ -887,7 +888,7 @@ endif
+ $(SOLIB)/libfcb.so: $(F90SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
+ ifneq ($(F90C),)
+ 	$(F90C) $(F90FLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(F90SOURCE)
+-	$(F90C) -o $@ *.o $(SOLDFLAGS)
++	$(F90C) $(SOLDFLAGS) -o $@ *.o
+ 	rm *.o
+ else
+ 	echo "Define F90C to build $(SOLIB)/libfcb.so"
