@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.0.3.ebuild,v 1.2 2009/12/09 00:41:09 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.0.6.ebuild,v 1.1 2010/02/06 22:51:21 ramereth Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 RDEPEND="${DEPEND}"
 
 src_prepare () {
-	epatch "${FILESDIR}/${P}-gentoo-brctl-path.patch"
+	epatch "${FILESDIR}/${PN}-2.0.3-gentoo-brctl-path.patch"
 }
 
 pkg_setup () {
