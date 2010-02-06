@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2.ebuild,v 1.12 2009/12/15 09:22:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2.ebuild,v 1.13 2010/02/06 15:47:55 ulm Exp $
 
 inherit autotools eutils flag-o-matic multilib
 
 DOC_P=${PN}-2.3.0
 DESCRIPTION="Open Motif"
-HOMEPAGE="http://www.motifzone.org/"
+HOMEPAGE="http://www.motifzone.net/"
 SRC_URI="ftp://ftp.ics.com/openmotif/${PV%.*}/${PV}/${P}.tar.gz
 	doc? ( http://www.motifzone.net/files/documents/${DOC_P}-manual.pdf.tgz )"
 
