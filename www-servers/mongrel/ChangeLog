@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.35 2010/01/23 23:42:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.36 2010/02/07 15:59:33 armin76 Exp $
+
+  07 Feb 2010; Raúl Porcel <armin76@gentoo.org> mongrel-1.1.5-r2.ebuild:
+  Add ~sparc wrt #301925
 
 *mongrel-1.1.5-r2 (23 Jan 2010)
 
