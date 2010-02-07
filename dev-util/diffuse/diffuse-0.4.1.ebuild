@@ -1,13 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.1.ebuild,v 1.1 2009/10/13 15:57:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.1.ebuild,v 1.2 2010/02/07 21:13:48 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 
-inherit distutils fdo-mime
+inherit fdo-mime python
 
 DESCRIPTION="A graphical tool to compare and merge text files"
-HOMEPAGE="http://${PN}.sourceforge.net/"
+HOMEPAGE="http://diffuse.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -19,12 +20,16 @@ RDEPEND="dev-python/pygtk"
 # file collision, bug #279018
 DEPEND="!sci-chemistry/tinker"
 
-src_compile() {
-	:
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	python_convert_shebangs 2 src/usr/bin/diffuse
 }
 
 src_install() {
-	${python} install.py \
+	"$(PYTHON -A)" install.py \
 		--prefix=/usr \
 		--files-only \
 		--destdir="${D}" \
@@ -33,11 +38,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
 	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
-	distutils_pkg_postrm
 	fdo-mime_desktop_database_update
 }
