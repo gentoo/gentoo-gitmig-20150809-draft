@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-195.30.ebuild,v 1.1 2010/02/07 16:04:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-195.30.ebuild,v 1.2 2010/02/07 22:11:36 spock Exp $
 
 EAPI="2"
 
@@ -258,6 +258,9 @@ src_prepare() {
 			-e 's:-Wpointer-arith::g' \
 			-e 's:-Wsign-compare::g' \
 			"${NV_SRC}"/Makefile.kbuild
+
+		# Add support for the 'x86' unified kernel arch in conftest.sh
+		epatch "${FILESDIR}"/195.30-unified-arch.patch
 
 		# If you set this then it's your own fault when stuff breaks :)
 		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
