@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5252 2010/02/07 02:22:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5253 2010/02/07 10:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2807,6 +2807,8 @@ sci-biology/ucsc-genome-browser:server - Install genome browser Web application.
 sci-chemistry/apbs:arpack - Include support for arpack libs
 sci-chemistry/avogadro:glsl - Enable glsl features via GLEW.
 sci-chemistry/caver:pymol - Install the PyMol plugin (sci-chemistry/pymol) 
+sci-chemistry/ccp4:arpwarp - Add binary arp-warp for molecular replacement
+sci-chemistry/ccp4:balbes-db - install the additional balbes database
 sci-chemistry/cns:aria -  Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
 sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
