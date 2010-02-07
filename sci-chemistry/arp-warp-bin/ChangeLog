@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.1 2008/08/04 00:11:54 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.2 2010/02/07 22:04:14 jlec Exp $
+
+  07 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  arp-warp-bin-7.0.1-r1.ebuild:
+  Updated RDEP to >ccp4-6.1.3 to have things in profile.d sorted correctly
 
 *arp-warp-bin-7.0.1-r1 (04 Aug 2008)
 

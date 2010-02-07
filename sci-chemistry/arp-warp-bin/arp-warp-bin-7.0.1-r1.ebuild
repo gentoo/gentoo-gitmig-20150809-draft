@@ -1,23 +1,27 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.0.1-r1.ebuild,v 1.1 2008/08/04 00:11:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.0.1-r1.ebuild,v 1.2 2010/02/07 22:04:14 jlec Exp $
 
 inherit eutils python
 
 MY_P="arp_warp_${PV}"
+
 DESCRIPTION="ARP/wARP is a software for improvement and interpretation of crystallographic electron density maps"
 SRC_URI="${MY_P}.tar.gz"
 HOMEPAGE="http://www.embl-hamburg.de/ARP/"
+
 LICENSE="ArpWarp"
 RESTRICT="fetch"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
+
 RDEPEND="app-shells/tcsh
-	 >=sci-chemistry/ccp4-6
+	 >=sci-chemistry/ccp4-6.1.3
 	 sys-apps/gawk
 	 >=dev-lang/python-2.4"
 DEPEND=""
+
 S="${WORKDIR}/${MY_P}"
 
 pkg_nofetch(){
