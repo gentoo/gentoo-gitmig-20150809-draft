@@ -7,6 +7,5 @@
   </maintainer>
   <use>
     <flag name="stars">Install extra star catalogs</flag>
-    <flag name="sound">Build with support for sound</flag>
   </use>
 </pkgmetadata>
