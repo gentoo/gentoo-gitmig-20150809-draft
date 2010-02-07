@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/vuze-coreplugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/ChangeLog,v 1.19 2010/02/03 23:02:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/ChangeLog,v 1.20 2010/02/07 10:37:04 hwoarang Exp $
+
+  07 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  vuze-coreplugins-4.3.0.6.ebuild:
+  Stable on amd64 wrt bug #302919
 
 *vuze-coreplugins-4.3.1.2 (03 Feb 2010)
 
