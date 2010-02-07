@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.0.ebuild,v 1.2 2009/12/28 21:19:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.0.ebuild,v 1.3 2010/02/07 20:24:05 pva Exp $
 
 EAPI="2"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Recipe Organizer and Shopping List Generator for Gnome"
 HOMEPAGE="http://grecipe-manager.sourceforge.net/"
