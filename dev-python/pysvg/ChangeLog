@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysvg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/ChangeLog,v 1.4 2009/10/01 03:18:10 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/ChangeLog,v 1.5 2010/02/07 21:05:34 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> pysvg-0.1.6.ebuild,
+  pysvg-0.2.0.ebuild:
+  Add inherit eutils: ebeep is defined there.
 
 *pysvg-0.2.0 (01 Oct 2009)
 

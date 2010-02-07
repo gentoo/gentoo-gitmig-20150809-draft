@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/pysvg-0.2.0.ebuild,v 1.1 2009/10/01 03:18:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/pysvg-0.2.0.ebuild,v 1.2 2010/02/07 21:05:34 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 MY_PN="pySVG"
 MY_P="${MY_PN}-${PV}"

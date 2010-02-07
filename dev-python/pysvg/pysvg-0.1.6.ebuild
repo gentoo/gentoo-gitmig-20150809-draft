@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/pysvg-0.1.6.ebuild,v 1.1 2009/07/18 21:47:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/pysvg-0.1.6.ebuild,v 1.2 2010/02/07 21:05:34 pva Exp $
 
 EAPI="2"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Python SVG document creation library"
 HOMEPAGE="http://codeboje.de/pysvg/"
