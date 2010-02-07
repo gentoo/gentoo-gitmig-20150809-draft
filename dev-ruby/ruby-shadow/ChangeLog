@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-shadow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.7 2009/08/09 12:22:17 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.8 2010/02/07 13:34:14 graaff Exp $
+
+*ruby-shadow-1.4.1-r1 (07 Feb 2010)
+
+  07 Feb 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-shadow-1.4.1-r1.ebuild, +files/ruby-shadow-1.4.1-debian.patch:
+  Convert to ruby-ng. Add Debian patch to fix #302798.
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> ruby-shadow-1.4.1.ebuild:
   ppc stable #274170
