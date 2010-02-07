@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-memcache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.32 2010/01/18 22:15:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.33 2010/02/07 15:57:39 armin76 Exp $
+
+  07 Feb 2010; Raúl Porcel <armin76@gentoo.org> pecl-memcache-2.2.5.ebuild:
+  sparc stable wrt #299655
 
   18 Jan 2010; Markus Meier <maekke@gentoo.org> pecl-memcache-2.2.5.ebuild:
   x86 stable, bug #299655
