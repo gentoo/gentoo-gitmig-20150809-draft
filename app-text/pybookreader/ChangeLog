@@ -1,10 +1,14 @@
 # ChangeLog for app-text/pybookreader
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pybookreader/ChangeLog,v 1.1 2009/07/19 11:38:25 grozin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pybookreader/ChangeLog,v 1.2 2010/02/07 20:11:15 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> pybookreader-0.5.0.ebuild:
+  Cleanup: indentation, HOMEPAGE should be static.
 
 *pybookreader-0.5.0 (19 Jul 2009)
 
   19 Jul 2009; Andrey Grozin <grozin@gentoo.org> +pybookreader-0.5.0.ebuild,
   +metadata.xml:
-  Initial import
+  Initial import.
+  Initially this package was requested in bug #102086.
 
