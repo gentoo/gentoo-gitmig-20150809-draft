@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.1.ebuild,v 1.1 2010/02/06 14:49:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.1.ebuild,v 1.2 2010/02/07 01:04:39 arfrever Exp $
 
 EAPI="2"
-NEED_PYTHON="2.6"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils python
@@ -36,6 +36,7 @@ for L in ${LANGS}; do
 		linguas_${L}? ( mirror://sourceforge/eric-ide/${MY_PN}-i18n-${L/zh_CN/zh_CN.GB2312}-${PV}.tar.gz )"
 	IUSE="${IUSE} linguas_${L}"
 done
+unset L
 
 S="${WORKDIR}/${MY_P}"
 
@@ -70,7 +71,7 @@ pkg_postinst() {
 
 	elog
 	elog "If you want to use eric4 with mod_python, have a look at"
-	elog "\"${ROOT}usr/$(get_libdir)/python$(PYTHON -f --ABI)/site-packages/eric4/patch_modpython.py\"."
+	elog "\"${ROOT%/}$(python_get_sitedir -f)/eric4/patch_modpython.py\"."
 	elog
 	elog "The following packages will give eric extended functionality:"
 	elog "  dev-python/pylint"
