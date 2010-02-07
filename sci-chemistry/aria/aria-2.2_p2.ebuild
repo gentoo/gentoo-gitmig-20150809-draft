@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.2_p2.ebuild,v 1.1 2010/02/06 21:50:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.2_p2.ebuild,v 1.2 2010/02/07 01:28:53 arfrever Exp $
 
 EAPI="3"
-
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_USE_WITH="tk"
 
@@ -28,7 +28,7 @@ RDEPEND="
 	>=dev-python/scientificpython-2.7.3
 	>=sci-chemistry/ccpn-2.0.5
 	>=dev-tcltk/tix-8.1.4"
-DEPEND="${RDEPENED}"
+DEPEND="${RDEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 
 RESTRICT="fetch"
@@ -39,7 +39,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/sa_ls_cool2.patch
 	epatch "${FILESDIR}"/${PV}-numpy.patch
 	epatch "${FILESDIR}"/${PV}-test.patch
-	python_copy_sources --no-link
 }
 
 pkg_nofetch(){
@@ -53,7 +52,7 @@ src_test(){
 		export PYTHONPATH=.:${CCPNMR_TOP_DIR}/ccpn/python
 		$(PYTHON) check.py || die
 	}
-	python_execute_function -s test
+	python_execute_function test
 }
 
 src_install(){
@@ -63,7 +62,7 @@ src_install(){
 		insinto "$(python_get_sitedir)/${PN}"/cns
 		doins -r cns/{protocols,toppar,src/helplib} || die "failed to install cns part"
 	}
-	python_execute_function -s installation
+	python_execute_function installation
 
 	if use examples; then
 		insinto /usr/share/${P}/
