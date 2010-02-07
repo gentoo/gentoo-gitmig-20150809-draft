@@ -23,6 +23,7 @@ ffmpeg
 
 # No hardware to test
 bluetooth
+dvd
 
 # Stuff we don't want
 chicken
