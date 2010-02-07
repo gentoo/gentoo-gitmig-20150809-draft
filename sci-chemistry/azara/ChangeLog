@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/azara
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.1 2010/02/07 19:51:02 jlec Exp $
+
+*azara-2.7 (07 Feb 2010)
+
+  07 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +azara-2.7.ebuild,
+  +files/help-makefile.patch, +metadata.xml:
+  New Ebuild
+
