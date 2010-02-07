@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/pythoncad
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.2 2008/10/30 18:29:49 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.3 2010/02/07 20:18:09 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> pythoncad-1.36.ebuild:
+  Add inherit eutils: domenu is defined there.
 
   30 Oct 2008; Christoph Mende <angelos@gentoo.org> pythoncad-1.36.ebuild:
   Added ~amd64

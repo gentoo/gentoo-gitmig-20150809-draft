@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.36.ebuild,v 1.2 2008/10/30 18:29:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.36.ebuild,v 1.3 2010/02/07 20:18:09 pva Exp $
 
 NEED_PYTHON=2.3
 
-inherit distutils versionator
+inherit eutils distutils versionator
 
 MY_PN="PythonCAD"
 MY_PV="DS$(get_major_version)-R$(get_after_major_version)"
