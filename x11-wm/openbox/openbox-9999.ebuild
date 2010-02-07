@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.1 2010/02/05 15:37:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.2 2010/02/07 13:40:50 hwoarang Exp $
 
 EAPI="2"
-inherit eutils git
+WANT_AUTOMAKE="1.9"
+inherit autotools eutils git
 
-DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager."
+DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
 HOMEPAGE="http://openbox.org/"
 EGIT_REPO_URI="git://git.openbox.org/dana/openbox"
 
@@ -14,7 +15,7 @@ SLOT="3"
 KEYWORDS=""
 IUSE="imlib nls startup-notification xinerama"
 
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND="dev-libs/glib:2
 	>=dev-libs/libxml2-2.0
 	>=media-libs/fontconfig-2
 	x11-libs/libXft
@@ -26,6 +27,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	dev-util/cvs
 	dev-util/pkgconfig
 	x11-proto/xextproto
@@ -34,10 +36,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
+	eautopoint
+	eautoreconf
 }
 
 src_configure() {
-	./bootstrap || die "boostrap failed"
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable imlib imlib2) \
