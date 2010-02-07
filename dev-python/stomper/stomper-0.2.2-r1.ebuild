@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/stomper-0.2.2-r1.ebuild,v 1.3 2009/11/25 09:50:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/stomper-0.2.2-r1.ebuild,v 1.4 2010/02/07 21:01:51 pva Exp $
 
 EAPI="2"
 #SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="This is a transport neutral client implementation of the STOMP protocol."
 HOMEPAGE="http://pypi.python.org/pypi/stomper"

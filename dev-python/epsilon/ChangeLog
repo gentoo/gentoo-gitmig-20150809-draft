@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/epsilon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.16 2009/11/30 02:46:35 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.17 2010/02/07 20:58:42 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> epsilon-0.5.12.ebuild,
+  epsilon-0.6.0.ebuild:
+  Add inherit eutils: epatch is defined there.
 
 *epsilon-0.6.0 (30 Nov 2009)
 

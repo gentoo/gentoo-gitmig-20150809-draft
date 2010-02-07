@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.6.ebuild,v 1.2 2009/12/26 19:39:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.6.ebuild,v 1.3 2010/02/07 20:41:31 pva Exp $
 EAPI=2
 NEED_PYTHON=2.4
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Computer algebra system (CAS) in Python"
 HOMEPAGE="http://code.google.com/p/sympy/"

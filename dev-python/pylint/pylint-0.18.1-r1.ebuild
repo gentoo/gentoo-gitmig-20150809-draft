@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.18.1-r1.ebuild,v 1.6 2009/12/05 11:44:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.18.1-r1.ebuild,v 1.7 2010/02/07 20:51:49 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="a tool to check if a Python module satisfies a coding standard"
 HOMEPAGE="http://www.logilab.org/projects/pylint/"

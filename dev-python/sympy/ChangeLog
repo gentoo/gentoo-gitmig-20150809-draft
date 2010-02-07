@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sympy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.8 2009/12/26 19:39:43 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.9 2010/02/07 20:41:31 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> sympy-0.6.5.ebuild,
+  sympy-0.6.6.ebuild:
+  Add inherit eutils: epatch is defined there.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> sympy-0.6.5.ebuild,
   sympy-0.6.6.ebuild:

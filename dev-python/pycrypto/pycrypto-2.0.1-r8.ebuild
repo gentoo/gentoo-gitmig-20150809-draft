@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r8.ebuild,v 1.11 2010/01/11 16:53:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r8.ebuild,v 1.12 2010/02/07 20:32:46 pva Exp $
 
 EAPI="2"
 NEED_PYTHON="2.5"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils flag-o-matic toolchain-funcs
+inherit eutils distutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Python Cryptography Toolkit"
 HOMEPAGE="http://www.amk.ca/python/code/crypto.html"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.24 2010/01/16 14:54:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.25 2010/02/07 20:37:15 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> fonttools-2.2-r1.ebuild:
+  Add inherit eutils: epatch is defined there.
 
   16 Jan 2010; Raúl Porcel <armin76@gentoo.org> fonttools-2.3.ebuild:
   ia64 stable wrt #296582

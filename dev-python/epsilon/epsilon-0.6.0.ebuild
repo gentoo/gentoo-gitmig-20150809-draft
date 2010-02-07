@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.6.0.ebuild,v 1.2 2009/11/30 02:51:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.6.0.ebuild,v 1.3 2010/02/07 20:58:42 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 # build-${PYTHON_ABI} directories as packages.
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
-inherit distutils twisted
+inherit eutils distutils twisted
 
 MY_PN="Epsilon"
 MY_P="${MY_PN}-${PV}"

@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.12.ebuild,v 1.1 2009/05/17 01:18:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.12.ebuild,v 1.2 2010/02/07 20:58:42 pva Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.4"
 
-inherit twisted distutils
+inherit eutils twisted distutils
 
 DESCRIPTION="Epsilon is a Python utilities package, most famous for its Time class."
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodEpsilon"

@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.15 2009/11/11 00:00:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.16 2010/02/07 20:55:36 pva Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.6"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils multilib
+inherit eutils distutils multilib
 
 DESCRIPTION="Python wrapper for cairo vector graphics library"
 HOMEPAGE="http://cairographics.org/pycairo/ http://pypi.python.org/pypi/pycairo"

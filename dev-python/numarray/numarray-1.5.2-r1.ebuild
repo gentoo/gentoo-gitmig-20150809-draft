@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.12 2008/12/24 17:35:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.13 2010/02/07 20:43:52 pva Exp $
 
 NEED_PYTHON=2.3
 
-inherit distutils
+inherit eutils distutils
 
 DOC_PV=1.5
 DESCRIPTION="Large array processing extension module for Python"

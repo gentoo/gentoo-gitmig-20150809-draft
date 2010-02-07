@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0.ebuild,v 1.3 2010/01/10 17:08:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0.ebuild,v 1.4 2010/02/07 20:32:46 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils flag-o-matic
+inherit eutils distutils flag-o-matic
 
 DESCRIPTION="Python Cryptography Toolkit"
 HOMEPAGE="http://www.dlitz.net/software/pycrypto/"

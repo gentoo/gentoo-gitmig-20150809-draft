@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.20.ebuild,v 1.2 2009/09/19 05:38:48 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.20.ebuild,v 1.3 2010/02/07 20:50:53 pva Exp $
 
 EAPI="2"
 NEED_PYTHON=2.3
 
-inherit distutils
+inherit eutils distutils
 
 MY_PV=${PV//./}
 MY_P=${PN/-py/}-${MY_PV}

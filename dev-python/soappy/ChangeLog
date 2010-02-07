@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.32 2009/12/20 11:08:52 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.33 2010/02/07 21:06:59 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> soappy-0.12.0.ebuild:
+  Add inherit eutils: epatch is defined there.
 
   20 Dec 2009; Fabian Groffen <grobian@gentoo.org> soappy-0.12.0.ebuild:
   Merged keywords from Prefix overlay

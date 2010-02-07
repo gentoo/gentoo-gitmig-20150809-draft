@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/adodb-py
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.25 2009/09/19 05:38:48 neurogeek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.26 2010/02/07 20:50:53 pva Exp $
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> adodb-py-2.00.ebuild,
+  adodb-py-2.20.ebuild:
+  Add inherit eutils: epatch is defined there.
 
   19 Sep 2009; Jesus Rivero <neurogeek@gentoo.org> adodb-py-2.00.ebuild,
   adodb-py-2.20.ebuild, +files/adodb-py_sandbox_violation.patch:
