@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.11.ebuild,v 1.2 2010/02/05 17:57:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.11.ebuild,v 1.3 2010/02/07 20:18:40 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -31,7 +32,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "As a non privileged user! (not root)"
 	ewarn "Run 'roundup-admin install' to set up a roundup instance"
-	ewarn "Then edit your config.py file in the tracker home you setup"
+	ewarn "Then edit your config.ini file in the tracker home you setup"
 	ewarn "Run 'roundup-admin initialise' to setup the admin pass"
 	ewarn "run /usr/bin/roundup start port host \"your tracker name\" [your tracker home], and all should work!"
 	ewarn "run /usr/bin/roundup stop [your tracker home] to stop the server"
