@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.17.ebuild,v 1.1 2010/01/29 21:28:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.17.ebuild,v 1.2 2010/02/07 02:11:42 arfrever Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -91,6 +91,10 @@ pkg_setup() {
 			eerror "Unable to select a compatible default python interpreter!"
 			die "This version of portage requires at least python-2.6 to be selected as the default python interpreter (see \`eselect python --help\`)."
 		fi
+	fi
+
+	if use python3; then
+		python_set_active_version 3
 	fi
 }
 
