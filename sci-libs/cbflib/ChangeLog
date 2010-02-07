@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.4 2010/02/06 19:35:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.5 2010/02/07 21:01:56 jlec Exp $
+
+*cbflib-0.8.1-r6 (07 Feb 2010)
+
+  07 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  files/0.8.1-Makefile.patch, -cbflib-0.8.1-r5.ebuild,
+  -files/0.8.1-as-needed.patch, +cbflib-0.8.1-r6.ebuild,
+  -files/0.8.1-parallel.patch, -cbflib-0.8.1-r4.ebuild:
+  Its not possible to compile in parallel
 
 *cbflib-0.8.1-r5 (06 Feb 2010)
 
