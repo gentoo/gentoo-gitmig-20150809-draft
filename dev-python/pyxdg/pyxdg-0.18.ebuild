@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.18.ebuild,v 1.4 2010/01/27 04:29:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.18.ebuild,v 1.5 2010/02/07 20:10:02 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A Python module to deal with freedesktop.org specifications"
 SRC_URI="http://people.freedesktop.org/~lanius/${P}.tar.gz"
