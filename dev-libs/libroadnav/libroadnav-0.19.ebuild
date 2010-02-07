@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/libroadnav-0.19.ebuild,v 1.1 2009/07/01 05:19:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/libroadnav-0.19.ebuild,v 1.2 2010/02/07 09:10:25 dirtyepic Exp $
 
 EAPI=2
+WX_GTK_VER=2.8
 
 inherit wxwidgets
 
@@ -17,11 +18,6 @@ IUSE=""
 
 DEPEND="x11-libs/wxGTK:2.8[X]"
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	WX_GTK_VER=2.8
-	need-wxwidgets gtk2
-}
 
 src_configure() {
 	econf \
