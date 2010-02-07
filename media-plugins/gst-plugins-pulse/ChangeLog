@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.28 2010/01/28 20:50:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.29 2010/02/07 19:24:54 armin76 Exp $
+
+  07 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-pulse-0.10.14.ebuild, gst-plugins-pulse-0.10.16.ebuild,
+  gst-plugins-pulse-0.10.17.ebuild:
+  Add ~arm/~ia64/~sh/~sparc
 
   28 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-pulse-0.10.17.ebuild:
