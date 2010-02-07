@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.66 2010/02/07 19:19:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.67 2010/02/07 19:28:01 armin76 Exp $
+
+  07 Feb 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  package.use.mask lame, taglib
 
   07 Feb 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask dvd
