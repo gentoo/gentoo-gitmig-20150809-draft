@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145.ebuild,v 1.5 2009/10/02 11:30:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145.ebuild,v 1.6 2010/02/07 20:32:51 zzam Exp $
 
 EAPI="1"
 
@@ -470,7 +470,7 @@ pkg_postinst() {
 
 	if use devfs-compat; then
 		ewarn
-		ewarn "You have devfs-compat use flag enabled."
+		ewarn "devfs-compat use flag is enabled (by default)."
 		ewarn "This enables devfs compatible device names."
 		ewarn "If you use /dev/md/*, /dev/loop/* or /dev/rd/*,"
 		ewarn "then please migrate over to using the device names"

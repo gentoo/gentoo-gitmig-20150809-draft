@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.525 2010/02/01 20:53:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.526 2010/02/07 20:32:51 zzam Exp $
+
+  07 Feb 2010; Matthias Schwarzott <zzam@gentoo.org> udev-141-r1.ebuild,
+  udev-145.ebuild, udev-145-r1.ebuild, udev-145-r2.ebuild,
+  udev-145-r3.ebuild, udev-146.ebuild, udev-146-r1.ebuild,
+  udev-146-r2.ebuild, udev-147-r1.ebuild, udev-149.ebuild,
+  udev-150-r1.ebuild, udev-151-r1.ebuild, udev-9999.ebuild:
+  Improve wording of devfs-compat message, Bug #301141. Sync udev-9999 to
+  latest udev-151-r1.
 
 *udev-151-r1 (01 Feb 2010)
 *udev-150-r1 (01 Feb 2010)

@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.24 2009/12/30 08:54:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.25 2010/02/07 20:32:51 zzam Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+
+#PATCHSET=${P}-gentoo-patchset-v1
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
@@ -12,6 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git autotools
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
+	[[ -n "${PATCHSET}" ]] && SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -19,7 +22,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="selinux +devfs-compat -extras test"
+IUSE="selinux +devfs-compat +old-hd-rules -extras test"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	extras? (
@@ -52,7 +55,8 @@ if [[ ${PV} == "9999" ]]; then
 fi
 
 # required kernel options
-CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
+	~!IDE"
 
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
@@ -132,6 +136,13 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
+
+	# backport some patches
+	if [[ -n "${PATCHSET}" ]]; then
+		EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
+	  	      EPATCH_FORCE="yes" epatch
+	fi
+
 	if ! use devfs-compat; then
 		# see Bug #269359
 		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
@@ -151,9 +162,13 @@ src_unpack() {
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
-			eerror "md5sum=${MD5}"
+			eerror "md5sum: ${MD5}"
 			die "50-udev-default.rules has been updated, please validate!"
 		fi
+	fi
+
+	if use old-hd-rules; then
+		epatch "${FILESDIR}"/udev-151-readd-hd-rules.diff
 	fi
 
 	sed_libexec_dir \
@@ -188,24 +203,10 @@ src_compile() {
 }
 
 src_install() {
-	local scriptdir="${FILESDIR}/147"
+	local scriptdir="${FILESDIR}/151"
 
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
-	# without this code, multilib-strict is angry
-	if [[ "$(get_libdir)" != "lib" ]]; then
-		# check if this code is needed, bug #281338
-		if [[ -d "${D}/lib" ]]; then
-			# we can not just rename /lib to /lib64, because
-			# make install creates /lib64 and /lib
-			einfo "Moving lib to $(get_libdir)"
-			mkdir -p "${D}/$(get_libdir)"
-			mv "${D}"/lib/* "${D}/$(get_libdir)/"
-			rmdir "${D}"/lib
-		else
-			einfo "There is no ${D}/lib, move code can be deleted."
-		fi
-	fi
 
 	exeinto "${udev_libexec_dir}"
 	newexe "${FILESDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
@@ -291,10 +292,6 @@ src_install() {
 	if use extras; then
 		dodoc extras/keymap/README.keymap.txt || die "failed installing docs"
 	fi
-
-	cd docs/writing_udev_rules
-	mv index.html writing_udev_rules.html
-	dohtml *.html
 }
 
 pkg_preinst() {
@@ -542,13 +539,21 @@ pkg_postinst() {
 
 	if use devfs-compat; then
 		ewarn
-		ewarn "You have devfs-compat use flag enabled."
+		ewarn "devfs-compat use flag is enabled (by default)."
 		ewarn "This enables devfs compatible device names."
 		ewarn "If you use /dev/md/*, /dev/loop/* or /dev/rd/*,"
 		ewarn "then please migrate over to using the device names"
 		ewarn "/dev/md*, /dev/loop* and /dev/ram*."
 		ewarn "The devfs-compat rules will be removed in the future."
 		ewarn "For reference see Bug #269359."
+	fi
+
+	if use old-hd-rules; then
+		ewarn
+		ewarn "old-hd-rules use flag is enabled (by default)."
+		ewarn "This adds the removed rules for /dev/hd* devices"
+		ewarn "Please migrate to the new libata."
+		ewarn "These rules will be removed in the future"
 	fi
 
 	elog
