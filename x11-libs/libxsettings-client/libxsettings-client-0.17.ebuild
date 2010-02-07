@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.17.ebuild,v 1.3 2009/06/01 19:58:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.17.ebuild,v 1.4 2010/02/07 16:22:26 jer Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 	sed -i -e \
 		's;INCLUDES = -I $(includedir);INCLUDES = -I '$ROOT'/$(includedir);' \
-		Makefile.am || die "Sed failed"
+		Makefile.am || die "sed failed"
+	sed -i -e '/^CFLAGS="-Os -Wall"/d' configure.ac || die "sed failed"
 	eautoreconf
 }
