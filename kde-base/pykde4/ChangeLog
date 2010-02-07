@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.52 2010/01/28 06:13:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.53 2010/02/07 21:24:45 abcd Exp $
+
+*pykde4-4.3.4-r1 (07 Feb 2010)
+*pykde4-4.3.3-r1 (07 Feb 2010)
+
+  07 Feb 2010; Jonathan Callen <abcd@gentoo.org> pykde4-4.3.3.ebuild,
+  +pykde4-4.3.3-r1.ebuild, -pykde4-4.3.4.ebuild, +pykde4-4.3.4-r1.ebuild,
+  pykde4-4.3.5-r1.ebuild:
+  Backport pykdeuic4 patch to 4.3.3 and 4.3.4; add blocker to DEPEND as well
+  as RDEPEND (compile-time errors)
 
 *pykde4-4.3.5-r1 (28 Jan 2010)
 
