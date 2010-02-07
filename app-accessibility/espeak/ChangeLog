@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.81 2010/02/01 19:45:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.82 2010/02/07 14:37:27 armin76 Exp $
+
+  07 Feb 2010; Raúl Porcel <armin76@gentoo.org> espeak-1.42.04.ebuild:
+  alpha/ia64/sparc stable wrt #301793
 
   01 Feb 2010; Brent Baude <ranger@gentoo.org> espeak-1.42.04.ebuild:
   stable ppc64, bug 301793
