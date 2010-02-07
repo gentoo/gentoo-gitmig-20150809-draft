@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.77 2010/02/03 10:37:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.78 2010/02/07 12:45:13 hwoarang Exp $
+
+  07 Feb 2010; Markos Chandras <hwoarang@gentoo.org> rox-2.10.ebuild:
+  Stable on amd64 wrt bug #300732
 
   03 Feb 2010; Christian Faulhammer <fauli@gentoo.org> rox-2.10.ebuild:
   stable x86, bug 300732
