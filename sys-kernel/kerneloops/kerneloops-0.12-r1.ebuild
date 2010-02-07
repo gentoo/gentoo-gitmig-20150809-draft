@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/kerneloops-0.12.ebuild,v 1.2 2010/02/07 19:31:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/kerneloops-0.12-r1.ebuild,v 1.1 2010/02/07 19:31:52 jlec Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to automatically collect and submit Linux kernel crash signatures"
 HOMEPAGE="http://www.kerneloops.org/"
@@ -20,14 +22,14 @@ DEPEND="net-misc/curl
 		dev-util/desktop-file-utils"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${WORKDIR}"
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-FLAGS.patch
 }
 
 src_compile() {
-	emake kerneloops || die "Compile deamon failed"
-	emake kerneloops-applet || die "Compile applet failed"
+	emake \
+		CC=$(tc-getCC) \
+		kerneloops kerneloops-applet || die
 }
 
 src_install() {
@@ -37,6 +39,14 @@ src_install() {
 
 	doinitd "${FILESDIR}"/kerneloops || die "doinitd failed"
 
+	dosed 's:\(nodaemon\):\1 --file "${LOGFILE}":g' /etc/init.d/${PN}
+
+	cat >> "${T}"/kerneloops <<- EOF
+	# Change this according to your syslogger
+	LOGFILE="/var/log/messages"
+	EOF
+
+	doconfd "${T}"/kerneloops
 }
 
 pkg_postinst() {
