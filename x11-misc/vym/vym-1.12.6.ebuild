@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.12.6.ebuild,v 1.1 2010/02/07 15:00:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.12.6.ebuild,v 1.2 2010/02/07 15:03:23 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4-r2
@@ -26,7 +26,7 @@ src_prepare() {
 	# Change installation directory and demo path
 	sed -i \
 		-e "s@/usr/local@/usr@g" \
-		-e "s@doc/packages/vym@doc/${P}@g" \
+		-e "s@doc/packages/vym@doc/${PF}@g" \
 		vym.pro || die "sed failed"
 }
 
