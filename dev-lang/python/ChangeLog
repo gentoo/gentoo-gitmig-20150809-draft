@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.447 2010/02/04 16:42:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.448 2010/02/07 19:39:20 maekke Exp $
+
+  07 Feb 2010; Markus Meier <maekke@gentoo.org> python-2.5.4-r4.ebuild:
+  arm/x86 stable, bug #303005
 
   04 Feb 2010; Brent Baude <ranger@gentoo.org> python-2.5.4-r4.ebuild:
   Marking python-2.5.4-r4 ppc64 for bug 303005
