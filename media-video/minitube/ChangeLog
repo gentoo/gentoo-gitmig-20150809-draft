@@ -1,6 +1,9 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.18 2010/01/28 16:11:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.19 2010/02/07 19:48:46 maekke Exp $
+
+  07 Feb 2010; Markus Meier <maekke@gentoo.org> minitube-0.8.1.ebuild:
+  x86 stable, bug #301904
 
   28 Jan 2010; <hwoarang@gentoo.org> minitube-0.8.1.ebuild:
   Stable on amd64 wrt bug #301904
