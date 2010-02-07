@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.52 2009/08/26 23:57:15 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.53 2010/02/07 17:20:48 jer Exp $
+
+  07 Feb 2010; Jeroen Roovers <jer@gentoo.org> htmldoc-1.8.27-r1.ebuild:
+  Stable for HPPA (bug #294147).
 
   26 Aug 2009; Alex Legler <a3li@gentoo.org> -htmldoc-1.8.27.ebuild:
   Non-maintainer commit: Removing vulnerable version. Bug 278186.
