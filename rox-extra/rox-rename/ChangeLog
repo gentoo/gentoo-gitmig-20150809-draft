@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/rox-rename
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-rename/ChangeLog,v 1.7 2010/02/03 10:41:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-rename/ChangeLog,v 1.8 2010/02/07 12:52:35 hwoarang Exp $
+
+  07 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  rox-rename-1.0.1.ebuild:
+  Stable on amd64 wrt bug #300732
 
   03 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   rox-rename-1.0.1.ebuild:
