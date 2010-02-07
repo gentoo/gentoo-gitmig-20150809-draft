@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.2_p2.ebuild,v 1.2 2010/02/07 01:28:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.2_p2.ebuild,v 1.3 2010/02/07 01:35:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -88,4 +88,12 @@ src_install(){
 	dosym aria /usr/bin/aria2
 
 	dodoc README || die
+}
+
+pkg_postinst() {
+	python_mod_optimize ${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup ${PN}
 }
