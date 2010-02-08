@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.8.3-r1.ebuild,v 1.2 2009/05/24 23:53:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.8.3-r1.ebuild,v 1.3 2010/02/08 08:53:32 pva Exp $
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="commandline tool to sync directory services to local cache."
 HOMEPAGE="http://code.google.com/p/nsscache/"
