@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-0.7.4.ebuild,v 1.5 2008/05/13 17:27:46 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-0.7.4.ebuild,v 1.6 2010/02/08 08:38:35 pva Exp $
 
 NEED_PYTHON=2.4
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Simple MSSQL python extension module"
 HOMEPAGE="http://pymssql.sourceforge.net/"
