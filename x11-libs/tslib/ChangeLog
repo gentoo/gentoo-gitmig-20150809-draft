@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/tslib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.14 2009/06/23 19:19:35 klausman Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.15 2010/02/08 20:16:54 solar Exp $
+
+  08 Feb 2010; <solar@gentoo.org> tslib-1.0-r1.ebuild:
+  - tslib is not glib. it does not need to have versioned .pc files.
+  Upstream will make this change as well
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> tslib-1.0-r1.ebuild:
   Stable on alpha for xorg-server-1.5/xorg-x11-7.4

@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.11 2009/06/23 19:19:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.12 2010/02/08 20:16:54 solar Exp $
 
 inherit eutils toolchain-funcs autotools
 
-PATCH_VER=3
+PATCH_VER=4
 DESCRIPTION="Touchscreen Access Library"
 HOMEPAGE="http://tslib.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${PN}-${PV}.tar.bz2
