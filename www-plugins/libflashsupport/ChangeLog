@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/libflashsupport
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.3 2009/12/28 15:18:27 lack Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.4 2010/02/08 20:38:25 jer Exp $
+
+  08 Feb 2010; Jeroen Roovers <jer@gentoo.org> libflashsupport-1.2.ebuild,
+  +files/libflashsupport-1.2-gentoo.patch:
+  Respect CC, LDFLAGS (bug #268493). Change HOMEPAGE.
 
   10 Dec 2009; Jim Ramsay <lack@gentoo.org> libflashsupport-1.2.ebuild:
   Block >=www-plugins/adobe-flash-10, this is only needed for flash-9

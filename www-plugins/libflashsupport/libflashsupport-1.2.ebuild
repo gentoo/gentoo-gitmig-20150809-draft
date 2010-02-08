@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/libflashsupport-1.2.ebuild,v 1.3 2009/12/28 15:18:27 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/libflashsupport-1.2.ebuild,v 1.4 2010/02/08 20:38:25 jer Exp $
 
-inherit multilib eutils
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Adds pulseaudio/esd/oss audio output and HTTPS/RTMPS support to
 Adobe Flash 9"
-HOMEPAGE="http://pulseaudio.revolutionlinux.com/PulseAudio"
+HOMEPAGE="http://pulseaudio.org/wiki/FlashPlayer9Solution"
 SRC_URI="https://svn.revolutionlinux.com/MILLE/XTERM/trunk/libflashsupport/Tarballs/${P}.tar.bz2"
 
 LICENSE="Adobe-SourceCode"
@@ -32,9 +32,11 @@ src_unpack() {
 		README flashsupport.c || die "sed failed"
 
 	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
+	tc-export CC
 	if use pulseaudio; then
 		export LIBPULSEPATH="-DLIBPULSEPATH='\"libpulse-simple.so.0\"'"
 		export PULSE="-DPULSEAUDIO"
