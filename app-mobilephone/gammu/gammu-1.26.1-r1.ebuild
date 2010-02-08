@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.26.1-r1.ebuild,v 1.1 2009/09/21 04:38:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.26.1-r1.ebuild,v 1.2 2010/02/08 09:03:15 pva Exp $
 
 EAPI="2"
 
-inherit cmake-utils distutils
+inherit eutils cmake-utils distutils
 
 DESCRIPTION="a fork of the gnokii project, a tool to handle your cellular phone"
 HOMEPAGE="http://www.gammu.org"
