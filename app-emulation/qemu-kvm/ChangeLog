@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.16 2010/02/03 05:41:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.17 2010/02/08 22:17:01 ramereth Exp $
+
+*qemu-kvm-0.11.1-r1 (08 Feb 2010)
+
+  08 Feb 2010; Lance Albertson <ramereth@gentoo.org>
+  +qemu-kvm-0.11.1-r1.ebuild:
+  Add 'kvm' symlink so that other applications can still use it for
+  portability
 
 *qemu-kvm-0.12.2-r1 (03 Feb 2010)
 
