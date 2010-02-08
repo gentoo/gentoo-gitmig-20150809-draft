@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117-r3.ebuild,v 1.5 2007/07/11 19:58:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117-r3.ebuild,v 1.6 2010/02/08 19:57:37 ulm Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Partial port of the C++ Standard Template Library."
 SRC_URI="http://vigna.dsi.unimi.it/jal/${P}-src.tar.gz"
 HOMEPAGE="http://vigna.dsi.unimi.it/jal/"
 
-LICENSE="X11"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc source"
@@ -21,9 +21,9 @@ DEPEND=">=virtual/jdk-1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/buildxml.patch
+	epatch "${FILESDIR}"/buildxml.patch
 
 	# we have to generate the sources first
 	./instantiate -n byte bytes
@@ -42,5 +42,5 @@ src_unpack() {
 src_install() {
 	java-pkg_dojar ${PN}.jar
 	use doc && java-pkg_dojavadoc docs
-	use source && java-pkg_dosrc ${S}/src/jal
+	use source && java-pkg_dosrc "${S}"/src/jal
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jal
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.15 2007/04/12 18:08:19 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.16 2010/02/08 19:57:37 ulm Exp $
+
+  08 Feb 2010; Ulrich Mueller <ulm@gentoo.org> jal-20031117-r3.ebuild:
+  Fix LICENSE. Add some quotes to make repoman happy.
 
   12 Apr 2007; Petteri Räty <betelgeuse@gentoo.org>
   -jal-20031117-r2.ebuild:
