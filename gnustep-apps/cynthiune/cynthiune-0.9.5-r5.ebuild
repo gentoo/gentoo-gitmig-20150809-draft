@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r5.ebuild,v 1.2 2010/02/03 21:57:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r5.ebuild,v 1.3 2010/02/08 18:11:05 nixnut Exp $
 
 inherit gnustep-2
 
@@ -12,7 +12,7 @@ SRC_URI="http://organact.mine.nu/~wolfgang/cynthiune/${P/c/C}.tar.gz"
 
 IUSE="flac mad modplug musepack timidity vorbis"
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 

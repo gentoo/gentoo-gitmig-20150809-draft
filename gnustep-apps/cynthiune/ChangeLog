@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.27 2010/02/03 21:57:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.28 2010/02/08 18:11:05 nixnut Exp $
+
+  08 Feb 2010; nixnut <nixnut@gentoo.org> cynthiune-0.9.5-r5.ebuild:
+  ppc stable #301304
 
   03 Feb 2010; Markus Meier <maekke@gentoo.org> cynthiune-0.9.5-r5.ebuild:
   amd64/x86 stable, bug #301304
