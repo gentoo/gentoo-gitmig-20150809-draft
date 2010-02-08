@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.37 2010/01/22 18:43:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.38 2010/02/08 09:01:24 pva Exp $
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> zodb-3.3.1.ebuild,
+  zodb-3.3.1-r1.ebuild, zodb-3.6.0-r1.ebuild, zodb-3.9.3.ebuild:
+  Add inherit eutils for epatch.
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org> zodb-3.9.4.ebuild:
   Marking zodb-3.9.4 ~ppc for bug 288603
