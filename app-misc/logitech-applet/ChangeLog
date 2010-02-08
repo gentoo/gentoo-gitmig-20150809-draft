@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/logitech-applet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.11 2009/09/23 16:04:45 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.12 2010/02/08 13:08:33 ssuominen Exp $
+
+*logitech-applet-0.4_pre1-r3 (08 Feb 2010)
+
+  08 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +logitech-applet-0.4_pre1-r3.ebuild, +files/logitech_applet-mx518-2.patch:
+  Missing Logitech MX518 device ID wrt #278077.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   logitech-applet-0.4_pre1-r2.ebuild:
