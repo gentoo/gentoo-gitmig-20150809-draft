@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/goog-sitemapgen-1.4.ebuild,v 1.4 2009/05/03 13:16:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/goog-sitemapgen-1.4.ebuild,v 1.5 2010/02/08 08:52:31 pva Exp $
 
-inherit distutils
+inherit eutils distutils
 
 # Upstream version is sitemap_gen
 MY_PN="sitemap_gen"

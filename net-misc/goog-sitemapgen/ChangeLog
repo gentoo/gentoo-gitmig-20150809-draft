@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/goog-sitemapgen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.7 2009/05/03 13:16:28 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.8 2010/02/08 08:52:31 pva Exp $
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> goog-sitemapgen-1.4.ebuild:
+  Add inherit eutils for epatch.
 
   03 May 2009; Markus Meier <maekke@gentoo.org> goog-sitemapgen-1.4.ebuild:
   amd64/x86 stable, bug #267820

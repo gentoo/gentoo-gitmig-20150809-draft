@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.8 2009/01/05 18:17:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.9 2010/02/08 08:51:38 pva Exp $
 
-inherit versionator distutils
+inherit eutils versionator distutils
 
 MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="A nice GNOME GUI for making IP address based calculations"
