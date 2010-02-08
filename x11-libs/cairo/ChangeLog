@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.235 2010/02/08 05:19:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.236 2010/02/08 15:59:02 cardoe Exp $
+
+  08 Feb 2010; Doug Goldstein <cardoe@gentoo.org> cairo-1.8.8.ebuild:
+  remove xcb-proto DEPEND as per bug #285606
 
   08 Feb 2010; Doug Goldstein <cardoe@gentoo.org> cairo-1.8.8.ebuild:
   Enable svg as a USE default since most usages depend on it, and those that

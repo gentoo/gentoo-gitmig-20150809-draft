@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.16 2010/02/08 05:19:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.17 2010/02/08 15:59:02 cardoe Exp $
 
 EAPI=2
 
@@ -48,8 +48,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2
 	doc? (	>=dev-util/gtk-doc-1.6
 		~app-text/docbook-xml-dtd-4.2 )
-	X? ( x11-proto/renderproto )
-	xcb? ( x11-proto/xcb-proto )"
+	X? ( x11-proto/renderproto )"
 
 src_prepare() {
 	# ClearType-like patches applied by ArchLinux
