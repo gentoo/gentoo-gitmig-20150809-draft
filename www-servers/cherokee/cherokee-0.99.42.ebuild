@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.24.ebuild,v 1.1 2009/10/22 08:01:02 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.42.ebuild,v 1.1 2010/02/08 08:35:27 bass Exp $
 
 inherit eutils pam versionator libtool
 
