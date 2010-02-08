@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/colubrid-0.10-r1.ebuild,v 1.2 2008/07/14 03:32:08 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/colubrid-0.10-r1.ebuild,v 1.3 2010/02/08 08:50:27 pva Exp $
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Colubrid is a set of tools around the WSGI standard."
 HOMEPAGE="http://wsgiarea.pocoo.org/colubrid/"

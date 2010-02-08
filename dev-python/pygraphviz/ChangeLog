@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygraphviz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.1 2009/02/27 20:49:23 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.2 2010/02/08 08:38:38 pva Exp $
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> pygraphviz-0.99.1.ebuild:
+  Add inherit eutils for epatch.
 
 *pygraphviz-0.99.1 (27 Feb 2009)
 

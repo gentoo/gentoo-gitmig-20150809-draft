@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/py-freebsd-0.9.3-r1.ebuild,v 1.1 2008/06/08 19:25:43 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/py-freebsd-0.9.3-r1.ebuild,v 1.2 2010/02/08 08:44:13 pva Exp $
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Python interface to FreeBSD-specific system libraries"
 HOMEPAGE="http://www.freebsd.org/cgi/cvsweb.cgi/ports/devel/py-freebsd/"

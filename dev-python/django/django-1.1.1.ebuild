@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.5 2010/01/03 21:45:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.6 2010/02/08 08:43:13 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit bash-completion distutils multilib versionator webapp
+inherit eutils bash-completion distutils multilib versionator webapp
 
 MY_PN="Django"
 MY_P="${MY_PN}-${PV}"

@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.4.1-r1.ebuild,v 1.7 2010/01/17 18:37:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.4.1-r1.ebuild,v 1.8 2010/02/08 08:39:46 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="dateutil datetime math and logic library for python"
 HOMEPAGE="http://labix.org/python-dateutil http://pypi.python.org/pypi/python-dateutil"

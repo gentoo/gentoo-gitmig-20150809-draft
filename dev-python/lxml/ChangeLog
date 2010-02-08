@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.74 2010/02/07 19:57:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.75 2010/02/08 08:41:28 pva Exp $
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> lxml-2.2.2.ebuild,
+  lxml-2.2.3.ebuild:
+  Add inherit eutils for epatch.
 
   07 Feb 2010; Markus Meier <maekke@gentoo.org> lxml-2.2.4.ebuild:
   amd64/x86 stable, bug #301955

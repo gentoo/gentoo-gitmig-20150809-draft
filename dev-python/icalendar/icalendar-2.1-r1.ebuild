@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.1-r1.ebuild,v 1.2 2010/02/03 22:05:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.1-r1.ebuild,v 1.3 2010/02/08 08:48:54 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Package used for parsing and generating iCalendar files (RFC 2445)."
 HOMEPAGE="http://codespeak.net/icalendar/ http://pypi.python.org/pypi/icalendar"

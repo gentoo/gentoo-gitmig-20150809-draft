@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.2.ebuild,v 1.8 2009/10/10 17:35:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.2.ebuild,v 1.9 2010/02/08 08:41:28 pva Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.3"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils flag-o-matic
+inherit eutils distutils flag-o-matic
 
 DESCRIPTION="A Pythonic binding for the libxml2 and libxslt libraries"
 HOMEPAGE="http://codespeak.net/lxml/"

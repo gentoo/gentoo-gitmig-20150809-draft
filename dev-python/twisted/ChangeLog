@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.123 2010/01/17 18:42:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.124 2010/02/08 08:41:18 pva Exp $
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> twisted-8.2.0-r2.ebuild,
+  twisted-9.0.0-r1.ebuild:
+  Add inherit eutils for epatch.
 
   17 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   twisted-9.0.0-r1.ebuild:

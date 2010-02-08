@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.3 2009/12/12 22:25:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.4 2010/02/08 08:49:17 pva Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.5"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="OpenID support for servers and consumers."
 HOMEPAGE="http://www.openidenabled.com/openid/libraries/python/"

@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.1 2009/12/17 17:03:43 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.2 2010/02/08 08:50:03 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Tool for generating API documentation for Python modules, based on their docstrings"
 HOMEPAGE="http://epydoc.sourceforge.net/"

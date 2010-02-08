@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0-r1.ebuild,v 1.3 2010/01/17 18:42:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-9.0.0-r1.ebuild,v 1.4 2010/02/08 08:41:18 pva Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils versionator
+inherit eutils distutils versionator
 
 MY_P="TwistedCore-${PV}"
 

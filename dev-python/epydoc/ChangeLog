@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.50 2009/12/17 17:03:43 grozin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.51 2010/02/08 08:50:03 pva Exp $
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> epydoc-3.0.1-r1.ebuild:
+  Add inherit eutils for epatch.
 
 *epydoc-3.0.1-r1 (17 Dec 2009)
 

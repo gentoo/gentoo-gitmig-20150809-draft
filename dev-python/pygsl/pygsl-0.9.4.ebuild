@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.4.ebuild,v 1.4 2010/01/12 15:33:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.4.ebuild,v 1.5 2010/02/08 08:39:42 pva Exp $
 
 EAPI=2
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="A Python interface for the GNU scientific library (gsl)."
 HOMEPAGE="http://pygsl.sourceforge.net/"

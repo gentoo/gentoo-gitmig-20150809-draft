@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2306-r1.ebuild,v 1.2 2009/12/20 10:32:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2306-r1.ebuild,v 1.3 2010/02/08 08:48:35 pva Exp $
 
 EAPI="2"
 NEED_PYTHON=2.4
 
-inherit distutils versionator
+inherit eutils distutils versionator
 
 MY_PN=RuleDispatch
 MY_P=${MY_PN}-$(get_version_component_range 1-2)a0.dev-$(get_version_component_range 3-)

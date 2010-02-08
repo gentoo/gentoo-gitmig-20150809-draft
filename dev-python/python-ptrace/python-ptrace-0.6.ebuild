@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/python-ptrace-0.6.ebuild,v 1.2 2009/09/18 12:19:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/python-ptrace-0.6.ebuild,v 1.3 2010/02/08 08:44:19 pva Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.5"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="python-ptrace is a debugger using ptrace (Linux, BSD and Darwin system call to trace processes)."
 HOMEPAGE="http://bitbucket.org/haypo/python-ptrace/wiki/Home http://pypi.python.org/pypi/python-ptrace"
