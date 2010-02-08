@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.4-r1.ebuild,v 1.1 2010/02/07 21:24:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.4-r1.ebuild,v 1.2 2010/02/08 11:50:03 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-fix-pykdeuic4.patch
+	"${FILESDIR}"/${PN}-4.3.5-fix-pykdeuic4.patch
 )
 
 pkg_setup() {
