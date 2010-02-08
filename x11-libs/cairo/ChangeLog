@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.234 2010/02/08 05:17:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.235 2010/02/08 05:19:16 cardoe Exp $
+
+  08 Feb 2010; Doug Goldstein <cardoe@gentoo.org> cairo-1.8.8.ebuild:
+  Enable svg as a USE default since most usages depend on it, and those that
+  don't depend on the same depends if it was enabled
 
   08 Feb 2010; Doug Goldstein <cardoe@gentoo.org> -cairo-1.4.14.ebuild,
   -cairo-1.6.4-r1.ebuild, -files/cairo-1.6.4-libpng-api-change.patch,
