@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.5.ebuild,v 1.2 2010/02/06 20:18:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.5.ebuild,v 1.3 2010/02/08 11:28:31 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+ffmpeg"
+IUSE="+ffmpeg +plugins-symlink"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
@@ -143,8 +143,10 @@ src_install() {
 		dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
 	fi
 
-	# Plugins symlink
-	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
+	# Plugins symlink, optional wrt bug #301911
+	if use plugins-symlink; then
+		dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
+	fi
 
 	# Icon and desktop entry
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
