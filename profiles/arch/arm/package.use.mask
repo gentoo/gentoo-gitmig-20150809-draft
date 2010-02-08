@@ -1,7 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.15 2010/01/20 18:44:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.16 2010/02/08 23:04:57 alexxy Exp $
 
+# Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
+# need dev-db/virtuoso-* keyworded
+dev-libs/soprano virtuoso
 
 # Raúl Porcel <armin76@gentoo.org> (20 Jan 2010)
 # Needs mplayer
