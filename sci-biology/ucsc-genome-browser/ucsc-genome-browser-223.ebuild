@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ucsc-genome-browser-221.ebuild,v 1.1 2010/01/10 19:52:26 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ucsc-genome-browser-223.ebuild,v 1.1 2010/02/08 18:36:30 weaver Exp $
 
 EAPI="2"
 
@@ -11,11 +11,13 @@ HOMEPAGE="http://genome.ucsc.edu"
 SRC_URI="http://hgdownload.cse.ucsc.edu/admin/jksrc.v${PV}.zip"
 
 LICENSE="blat"
-# webapp ebuilds do not set SLOT
+SLOT="0"
+WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS="~amd64 ~x86"
 IUSE="+mysql +server"
 
 DEPEND="app-arch/unzip
+	!<sci-biology/ucsc-genome-browser-223
 	mysql? ( virtual/mysql )
 	server? ( virtual/httpd-cgi )" # TODO: test with other webservers
 RDEPEND="${DEPEND}"
@@ -57,12 +59,12 @@ src_compile() {
 	emake -C src/utils/stringify || die
 	emake -C src blatSuite || die
 	if use mysql; then
-		emake -j1 -C src/hg utils || die
-		emake -j1 -C src utils || die
+		emake -C src/hg utils || die
+		emake -C src utils || die
 		emake -C src libs userApps || die
 		if use server; then
-			emake -j1 -C src/hg || die
-			emake -j1 -C src || die
+			emake -C src/hg || die
+			emake -C src || die
 		fi
 	fi
 }
