@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss-glx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.72 2009/10/10 15:45:41 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.73 2010/02/08 09:13:50 cla Exp $
+
+*rss-glx-0.9.1 (08 Feb 2010)
+
+  08 Feb 2010; Dawid Węgliński <cla@gentoo.org> +rss-glx-0.9.1.ebuild:
+  Version bump (bug #301188)
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> rss-glx-0.9.0.ebuild:
   sparc stable wrt #279638
