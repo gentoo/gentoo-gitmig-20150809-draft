@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ipset
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.33 2009/11/15 17:34:19 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.34 2010/02/08 18:39:26 pva Exp $
+
+*ipset-4.2 (08 Feb 2010)
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> -ipset-2.2.9.20070401.ebuild,
+  -files/ipset-2.4.2-glibc28-fix.patch,
+  -files/ipset-2.4.9-gethostbyname-align.patch, -ipset-3.0.ebuild,
+  +ipset-4.2.ebuild:
+  Version bump, drop old.
 
   15 Nov 2009; Peter Volkov <pva@gentoo.org> ipset-4.1.ebuild:
   USE='modules' support.
