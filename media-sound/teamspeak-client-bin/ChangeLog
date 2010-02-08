@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.6 2010/02/08 13:54:15 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.7 2010/02/08 13:56:10 trapni Exp $
+
+  08 Feb 2010; Christian Parpart <trapni@gentoo.org>
+  -teamspeak-client-bin-3.0.0_beta5.ebuild,
+  -teamspeak-client-bin-3.0.0_beta9.ebuild,
+  -teamspeak-client-bin-3.0.0_beta11.ebuild,
+  -teamspeak-client-bin-3.0.0_beta12.ebuild,
+  -teamspeak-client-bin-3.0.0_beta13.ebuild:
+  cleanup
 
   08 Feb 2010; Christian Parpart <trapni@gentoo.org>
   +teamspeak-client-bin-3.0.0_beta15.ebuild:
