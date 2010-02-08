@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/balance
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.16 2009/12/26 17:41:50 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.17 2010/02/08 09:22:22 cla Exp $
+
+*balance-3.48 (08 Feb 2010)
+
+  08 Feb 2010; Dawid Węgliński <cla@gentoo.org> +balance-3.48.ebuild:
+  Version bump (bug #303801)
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> balance-3.35.ebuild,
   balance-3.40.ebuild:
