@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/shared-desktop-ontologies
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.1 2010/02/08 22:06:49 alexxy Exp $
+
+*shared-desktop-ontologies-0.2 (08 Feb 2010)
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  +shared-desktop-ontologies-0.2.ebuild, +metadata.xml:
+  Initial import
+
