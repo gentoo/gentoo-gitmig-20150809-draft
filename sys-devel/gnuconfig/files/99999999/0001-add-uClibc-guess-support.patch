@@ -1,24 +1,24 @@
-From d5a10be0ad318f44d81c147033359e487e918ffd Mon Sep 17 00:00:00 2001
+From 8498f76fe6131577ce3e90af58a6be958b3795be Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Thu, 9 Oct 2008 15:51:09 -0400
 Subject: [PATCH 1/2] add uClibc guess support
 
 ---
- config.guess |   77 +++++++++++++++++++++++++++++++++++++---------------------
- 1 files changed, 49 insertions(+), 28 deletions(-)
+ config.guess |   89 ++++++++++++++++++++++++++++++++++------------------------
+ 1 files changed, 52 insertions(+), 37 deletions(-)
 
 diff --git a/config.guess b/config.guess
-index bb0b03e..12734a7 100755
+index c2246a4..bf48496 100755
 --- a/config.guess
 +++ b/config.guess
-@@ -139,6 +139,25 @@ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
+@@ -140,6 +140,29 @@ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
  UNAME_SYSTEM=`(uname -s) 2>/dev/null`  || UNAME_SYSTEM=unknown
  UNAME_VERSION=`(uname -v) 2>/dev/null` || UNAME_VERSION=unknown
  
 +case "${UNAME_SYSTEM}" in
 +Linux|GNU/*)
 +	eval $set_cc_for_build
-+	cat << EOF > $dummy.c
++	cat <<-EOF > $dummy.c
 +	#include <features.h>
 +	#ifdef __UCLIBC__
 +	# ifdef __UCLIBC_CONFIG_VERSION__
@@ -27,17 +27,26 @@ index bb0b03e..12734a7 100755
 +	LIBC=uclibc
 +	# endif
 +	#else
++	# ifdef __dietlibc__
++	LIBC=dietlibc
++	# else
 +	LIBC=gnu
++	# endif
 +	#endif
-+EOF
-+	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep LIBC= | sed -e 's: ::g'`
++	EOF
++	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^LIBC'`
 +	;;
 +esac
 +
  # Note: order is significant - the case branches are not exclusive.
  
  case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
-@@ -849,7 +868,7 @@ EOF
+@@ -849,11 +872,11 @@ EOF
+ 	exit ;;
+     *:GNU:*:*)
+ 	# the GNU system
+-	echo `echo ${UNAME_MACHINE}|sed -e 's,[-/].*$,,'`-unknown-gnu`echo ${UNAME_RELEASE}|sed -e 's,/.*$,,'`
++	echo `echo ${UNAME_MACHINE}|sed -e 's,[-/].*$,,'`-unknown-${LIBC}`echo ${UNAME_RELEASE}|sed -e 's,/.*$,,'`
  	exit ;;
      *:GNU/*:*:*)
  	# other systems with GNU libc and userland
@@ -46,7 +55,17 @@ index bb0b03e..12734a7 100755
  	exit ;;
      i*86:Minix:*:*)
  	echo ${UNAME_MACHINE}-pc-minix
-@@ -859,31 +878,31 @@ EOF
+@@ -869,50 +892,42 @@ EOF
+ 	  EV68*) UNAME_MACHINE=alphaev68 ;;
+         esac
+ 	objdump --private-headers /bin/sh | grep -q ld.so.1
+-	if test "$?" = 0 ; then LIBC="libc1" ; else LIBC="" ; fi
+-	echo ${UNAME_MACHINE}-unknown-linux-gnu${LIBC}
++	if test "$?" = 0 ; then LIBC="gnulibc1" ; fi
++	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
+ 	exit ;;
+     arm*:Linux:*:*)
+ 	eval $set_cc_for_build
  	if echo __ARM_EABI__ | $CC_FOR_BUILD -E - 2>/dev/null \
  	    | grep -q __ARM_EABI__
  	then
@@ -73,6 +92,18 @@ index bb0b03e..12734a7 100755
 -    	echo frv-unknown-linux-gnu
 +    	echo frv-unknown-linux-${LIBC}
  	exit ;;
+     i*86:Linux:*:*)
+-	LIBC=gnu
+-	eval $set_cc_for_build
+-	sed 's/^	//' << EOF >$dummy.c
+-	#ifdef __dietlibc__
+-	LIBC=dietlibc
+-	#endif
+-EOF
+-	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^LIBC'`
+-	echo "${UNAME_MACHINE}-pc-linux-${LIBC}"
++	echo ${UNAME_MACHINE}-pc-linux-${LIBC}
+ 	exit ;;
      ia64:Linux:*:*)
 -	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
@@ -87,10 +118,10 @@ index bb0b03e..12734a7 100755
  	exit ;;
      mips:Linux:*:* | mips64:Linux:*:*)
  	eval $set_cc_for_build
-@@ -906,16 +925,16 @@ EOF
- 		s: ::g
- 		p
- 	    }'`"
+@@ -931,51 +946,51 @@ EOF
+ 	#endif
+ EOF
+ 	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^CPU'`
 -	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-gnu"; exit; }
 +	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-${LIBC}"; exit; }
  	;;
@@ -98,28 +129,13 @@ index bb0b03e..12734a7 100755
 -	echo or32-unknown-linux-gnu
 +	echo or32-unknown-linux-${LIBC}
  	exit ;;
-     ppc:Linux:*:*)
--	echo powerpc-unknown-linux-gnu
-+	echo powerpc-unknown-linux-${LIBC}
- 	exit ;;
-     ppc64:Linux:*:*)
--	echo powerpc64-unknown-linux-gnu
-+	echo powerpc64-unknown-linux-${LIBC}
- 	exit ;;
-     alpha:Linux:*:*)
- 	case `sed -n '/^cpu model/s/^.*: \(.*\)/\1/p' < /proc/cpuinfo` in
-@@ -928,43 +947,43 @@ EOF
- 	  EV68*) UNAME_MACHINE=alphaev68 ;;
-         esac
- 	objdump --private-headers /bin/sh | grep -q ld.so.1
--	if test "$?" = 0 ; then LIBC="libc1" ; else LIBC="" ; fi
--	echo ${UNAME_MACHINE}-unknown-linux-gnu${LIBC}
-+	if test "$?" = 0 ; then LIBC="gnulibc1" ; fi
-+	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
- 	exit ;;
      padre:Linux:*:*)
 -	echo sparc-unknown-linux-gnu
 +	echo sparc-unknown-linux-${LIBC}
+ 	exit ;;
+     parisc64:Linux:*:* | hppa64:Linux:*:*)
+-	echo hppa64-unknown-linux-gnu
++	echo hppa64-unknown-linux-${LIBC}
  	exit ;;
      parisc:Linux:*:* | hppa:Linux:*:*)
  	# Look for CPU level
@@ -132,9 +148,13 @@ index bb0b03e..12734a7 100755
 +	  *)    echo hppa-unknown-linux-${LIBC} ;;
  	esac
  	exit ;;
-     parisc64:Linux:*:* | hppa64:Linux:*:*)
--	echo hppa64-unknown-linux-gnu
-+	echo hppa64-unknown-linux-${LIBC}
+     ppc64:Linux:*:*)
+-	echo powerpc64-unknown-linux-gnu
++	echo powerpc64-unknown-linux-${LIBC}
+ 	exit ;;
+     ppc:Linux:*:*)
+-	echo powerpc-unknown-linux-gnu
++	echo powerpc-unknown-linux-${LIBC}
  	exit ;;
      s390:Linux:*:* | s390x:Linux:*:*)
  	echo ${UNAME_MACHINE}-ibm-linux
@@ -163,21 +183,8 @@ index bb0b03e..12734a7 100755
 -    	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +    	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
  	exit ;;
-     i*86:Linux:*:*)
- 	# The BFD linker knows what the default object file format is, so
-@@ -979,9 +998,11 @@ EOF
- 				    p'`
-         case "$ld_supported_targets" in
- 	  elf32-i386)
--		TENTATIVE="${UNAME_MACHINE}-pc-linux-gnu"
-+		TENTATIVE="${UNAME_MACHINE}-pc-linux-${LIBC}"
- 		;;
- 	esac
-+	# This should get integrated into the C code below, but now we hack
-+	if [ "$LIBC" != "gnu" ] ; then echo "$TENTATIVE" && exit 0 ; fi
- 	# Determine whether the default compiler is a.out or elf
- 	eval $set_cc_for_build
- 	sed 's/^	//' << EOF >$dummy.c
+     i*86:DYNIX/ptx:4*:*)
+ 	# ptx 4.0 does uname -s correctly, with DYNIX/ptx in there.
 -- 
-1.6.4
+1.6.6.1
 
