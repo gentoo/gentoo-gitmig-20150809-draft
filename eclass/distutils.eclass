@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.71 2010/02/07 21:17:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.72 2010/02/08 09:35:38 pva Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -11,7 +11,7 @@
 # @DESCRIPTION:
 # The distutils eclass defines phase functions for packages with build systems using Distutils
 
-inherit eutils multilib python
+inherit multilib python
 
 case "${EAPI:-0}" in
 	0|1)
