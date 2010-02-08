@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-0.93.ebuild,v 1.1 2009/12/24 19:27:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-0.93.ebuild,v 1.2 2010/02/08 17:24:43 spock Exp $
 
 EAPI="2"
 
@@ -13,12 +13,13 @@ SRC_URI="http://pypi.python.org/packages/source/p/pycuda/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples"
+IUSE="examples opengl"
 
 RDEPEND="dev-python/pytools
 	dev-libs/boost[python]
 	>=dev-util/nvidia-cuda-toolkit-2.0
-	>=dev-python/numpy-1.0.4"
+	>=dev-python/numpy-1.0.4
+	virtual/opengl"
 DEPEND="${RDEPEND}"
 
 src_prepare()
@@ -28,9 +29,13 @@ src_prepare()
 
 src_configure()
 {
+	local myopts=""
+	use opengl && myopts="${myopts} --cuda-enable-gl"
+
 	./configure.py --cuda-root="${ROOT}opt/cuda" \
 		--boost-python-libname=boost_python-mt \
-		--boost-thread-libname=boost_thread-mt
+		--boost-thread-libname=boost_thread-mt \
+		${myopts}
 }
 
 src_install()
