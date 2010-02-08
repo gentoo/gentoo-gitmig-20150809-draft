@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.6.ebuild,v 1.3 2006/10/21 21:25:52 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.6.ebuild,v 1.4 2010/02/08 11:10:28 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A utility that displays its input in a text box on your root window"
 HOMEPAGE="http://de-fac.to/book/view/17"
@@ -27,6 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	emake || die "emake failed"
 }
 
@@ -34,7 +35,9 @@ src_install() {
 	dodir /usr/bin
 
 	make \
-		MANDIR="${D}usr/man/man1" \
+		MANDIR="${D}usr/share/man/man1" \
 		BINDIR="${D}usr/bin/" \
 		install || die "make install failed"
+	
+	dodoc TODO NEWS CREDITS
 }
