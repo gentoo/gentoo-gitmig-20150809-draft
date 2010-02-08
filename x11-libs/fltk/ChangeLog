@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.147 2010/02/08 20:12:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.148 2010/02/08 20:29:12 jer Exp $
+
+*fltk-2.0_pre6786-r2 (08 Feb 2010)
+
+  08 Feb 2010; Jeroen Roovers <jer@gentoo.org> +files/fltk2-fluid2.patch,
+  +fltk-2.0_pre6786-r2.ebuild:
+  Respect LDFLAGS when linking fluid2 too thanks to Arfrever Frehtes
+  Taifersar Arahesis (bug #282472).
 
 *fltk-1.1.10 (08 Feb 2010)
 
