@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.67 2010/02/07 19:28:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.68 2010/02/08 21:52:43 alexxy Exp $
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  mask app-admin/system-config-printer-common[policykit] since it needs
+  sys-auth/polkit keyworded
 
   07 Feb 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   package.use.mask lame, taglib

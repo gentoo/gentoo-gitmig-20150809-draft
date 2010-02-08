@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.78 2010/02/07 21:32:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.79 2010/02/08 21:53:58 alexxy Exp $
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  mask app-admin/system-config-printer-common[policykit] since it needs
+  sys-auth/polkit keyworded
 
   25 Jan 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
   Move TeX Live 2009 mask here from global package.mask, remove it once
