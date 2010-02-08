@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.22 2010/02/01 20:14:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.23 2010/02/08 23:50:53 patrick Exp $
+
+*freewrl-1.22.6-r1 (08 Feb 2010)
+
+  08 Feb 2010; Patrick Lauer <patrick@gentoo.org> +freewrl-1.22.6-r1.ebuild,
+  +files/freewrl-1.22.6-xulrunner192-fixes.patch:
+  Fix for xulrunner-1.9.2 by Ian Stakenvicius, fixes #303183
 
   01 Feb 2010; Markus Meier <maekke@gentoo.org> freewrl-1.22.5.ebuild:
   x86 stable, bug #300602
