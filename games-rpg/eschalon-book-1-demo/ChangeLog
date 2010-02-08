@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eschalon-book-1-demo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/ChangeLog,v 1.1 2009/11/23 17:21:06 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/ChangeLog,v 1.2 2010/02/08 14:54:42 fauli Exp $
+
+  08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  eschalon-book-1-demo-105.ebuild:
+  stable x86, bug 299708
 
 *eschalon-book-1-demo-105 (23 Nov 2009)
 

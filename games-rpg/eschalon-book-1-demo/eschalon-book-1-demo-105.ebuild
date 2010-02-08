@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/eschalon-book-1-demo-105.ebuild,v 1.1 2009/11/23 17:21:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/eschalon-book-1-demo-105.ebuild,v 1.2 2010/02/08 14:54:42 fauli Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="${P//-/_}.tar.gz"
 
 LICENSE="eschalon-book-1-demo"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RESTRICT="fetch strip"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/Eschalon Book I Demo"
