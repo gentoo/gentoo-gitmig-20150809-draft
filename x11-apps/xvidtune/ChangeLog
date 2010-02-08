@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xvidtune
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.27 2010/01/30 18:34:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.28 2010/02/08 15:38:46 fauli Exp $
+
+  08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  xvidtune-1.0.2.ebuild:
+  stable x86, bug 302046
 
   30 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> xvidtune-1.0.2.ebuild:
   amd64 stable wrt #302046
