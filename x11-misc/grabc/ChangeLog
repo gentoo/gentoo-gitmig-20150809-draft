@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/grabc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grabc/ChangeLog,v 1.11 2007/02/21 23:39:05 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grabc/ChangeLog,v 1.12 2010/02/08 11:25:33 jer Exp $
+
+*grabc-1.1-r1 (08 Feb 2010)
+
+  08 Feb 2010; Jeroen Roovers <jer@gentoo.org> +grabc-1.1-r1.ebuild,
+  +files/grabc-1.1-makefile.patch:
+  Respect CC, LDFLAGS, CFLAGS (bug #241544). Use pkg-config.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
