@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmoe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.19 2009/09/23 17:23:01 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.20 2010/02/08 15:19:33 fauli Exp $
+
+  08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  libmoe-1.5.8-r2.ebuild:
+  stable x86, bug 302326
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libmoe-1.5.8.ebuild,
   libmoe-1.5.8-r1.ebuild:
