@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r6.ebuild,v 1.1 2009/05/26 01:26:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r7.ebuild,v 1.1 2010/02/08 12:27:19 jer Exp $
 
 WANT_AUTOMAKE="1.6"
 WANT_AUTOCONF="latest"
