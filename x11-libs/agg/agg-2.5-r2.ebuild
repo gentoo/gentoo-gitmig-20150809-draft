@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.1 2009/04/07 10:34:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.2 2010/02/08 22:15:35 ulm Exp $
 
 EAPI="2"
 
@@ -9,7 +9,8 @@ inherit eutils autotools base
 DESCRIPTION="Anti-Grain Geometry - A High Quality Rendering Engine for C++"
 HOMEPAGE="http://antigrain.com/"
 SRC_URI="http://antigrain.com/${P}.tar.gz"
-LICENSE="X11"
+
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="+gpc +truetype +X"

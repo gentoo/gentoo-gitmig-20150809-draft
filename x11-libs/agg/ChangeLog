@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/agg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.17 2009/04/07 10:34:58 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.18 2010/02/08 22:15:35 ulm Exp $
+
+  08 Feb 2010; Ulrich Mueller <ulm@gentoo.org> agg-2.5.ebuild,
+  agg-2.5-r2.ebuild:
+  Fix LICENSE, bug 298556.
 
 *agg-2.5-r2 (07 Apr 2009)
 
