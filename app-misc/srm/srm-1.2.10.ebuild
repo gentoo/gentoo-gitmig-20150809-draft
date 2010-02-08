@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.10.ebuild,v 1.1 2009/12/23 10:15:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.10.ebuild,v 1.2 2010/02/08 19:42:41 ulm Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ DESCRIPTION="A command-line compatible rm which destroys file contents before un
 HOMEPAGE="http://sourceforge.net/projects/srm/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="X11"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
