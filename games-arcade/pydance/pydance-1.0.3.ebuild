@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.7 2010/01/06 00:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.0.3.ebuild,v 1.8 2010/02/08 21:57:42 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -9,7 +9,7 @@ DESCRIPTION="a DDR clone for linux written in Python"
 HOMEPAGE="http://www.icculus.org/pyddr/"
 SRC_URI="http://www.icculus.org/pyddr/${P}.tar.gz"
 
-LICENSE="X11"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
