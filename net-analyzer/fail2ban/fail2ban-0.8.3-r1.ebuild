@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.3-r1.ebuild,v 1.4 2009/08/26 23:40:06 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.3-r1.ebuild,v 1.5 2010/02/08 08:35:18 pva Exp $
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://fail2ban.sourceforge.net/"
