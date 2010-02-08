@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.32 2010/01/21 19:58:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.33 2010/02/08 20:56:48 grobian Exp $
+
+  08 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  perl-Module-Build-0.36.03.ebuild:
+  Marked ~ppc-aix, bug #298183
 
 *perl-Module-Build-0.36.03 (21 Jan 2010)
 
