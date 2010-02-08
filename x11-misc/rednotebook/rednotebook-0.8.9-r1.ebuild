@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-0.8.9-r1.ebuild,v 1.2 2009/11/21 04:52:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-0.8.9-r1.ebuild,v 1.3 2010/02/08 08:54:03 pva Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.6"
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="A graphical journal with calendar, templates, tags, keyword searching, and export functionality"
 HOMEPAGE="http://rednotebook.sourceforge.net"
