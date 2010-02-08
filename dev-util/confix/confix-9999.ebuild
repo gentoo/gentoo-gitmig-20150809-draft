@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.2 2009/12/17 09:53:31 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.3 2010/02/08 08:56:51 pva Exp $
 
 EAPI=2
 
-inherit distutils subversion
+inherit eutils distutils subversion
 
 DESCRIPTION="Confix: A Build Tool on Top of GNU Automake"
 HOMEPAGE="http://confix.sourceforge.net"

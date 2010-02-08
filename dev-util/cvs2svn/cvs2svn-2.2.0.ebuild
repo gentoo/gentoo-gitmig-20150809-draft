@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-2.2.0.ebuild,v 1.3 2010/01/15 21:13:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-2.2.0.ebuild,v 1.4 2010/02/08 08:57:44 pva Exp $
 
 EAPI="2"
 PYTHON_USE_WITH_OR="berkdb gdbm"
 PYTHON_USE_WITH_OPT="test"
 
-inherit distutils
+inherit eutils distutils
 
 FILEVER="44372"
 

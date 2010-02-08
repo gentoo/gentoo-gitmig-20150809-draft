@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.1.4.ebuild,v 1.2 2009/03/10 13:57:09 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.1.4.ebuild,v 1.3 2010/02/08 08:55:38 pva Exp $
 
-inherit gnome2 distutils
+inherit eutils gnome2 distutils
 
 DESCRIPTION="D-Feet is a powerful D-Bus debugger"
 HOMEPAGE="http://hosted.fedoraproject.org/projects/d-feet/"
