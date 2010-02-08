@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11182 2010/02/07 17:21:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11183 2010/02/08 10:42:58 spock Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1013,6 +1013,7 @@ www-apps/Embperl
 # Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
 # beta/experimental drivers
 >=x11-drivers/nvidia-drivers-195.01
+>=media-video/nvidia-settings-195.01
 
 # Doug Goldstein <cardoe@gentoo.org> (07 Nov 2009)
 # upstream MythTV development versions
