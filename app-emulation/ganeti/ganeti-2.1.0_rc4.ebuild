@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.1.0_rc4.ebuild,v 1.1 2010/01/31 01:55:10 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.1.0_rc4.ebuild,v 1.2 2010/02/08 22:38:59 ramereth Exp $
 
 EAPI=2
 
@@ -55,6 +55,7 @@ src_configure () {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newinitd "${FILESDIR}"/ganeti-2.1.initd ganeti
+	newconfd "${FILESDIR}"/ganeti.confd ganeti
 	dobashcompletion doc/examples/bash_completion ganeti
 	dodoc INSTALL NEWS README doc/*.{rst,png}
 	rm -rf "${D}"/usr/share/doc/ganeti
