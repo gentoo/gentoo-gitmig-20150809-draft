@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.140 2010/01/25 12:40:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.141 2010/02/08 11:35:25 scarabeus Exp $
+
+*ktorrent-3.3.4 (08 Feb 2010)
+
+  08 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +ktorrent-3.3.4.ebuild:
+  Version bump.
 
 *ktorrent-3.3.3 (25 Jan 2010)
 
