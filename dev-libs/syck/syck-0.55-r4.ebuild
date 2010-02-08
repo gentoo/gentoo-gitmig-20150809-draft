@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.12 2010/01/14 21:41:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.13 2010/02/08 09:01:38 pva Exp $
 
-inherit flag-o-matic distutils
+inherit eutils flag-o-matic distutils
 
 IUSE="php python"
 DESCRIPTION="Syck is an extension for reading and writing YAML swiftly in popular scripting languages."
