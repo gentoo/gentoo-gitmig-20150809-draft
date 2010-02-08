@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/netboot
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/ChangeLog,v 1.6 2008/11/13 20:02:53 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/ChangeLog,v 1.7 2010/02/08 23:57:04 jer Exp $
+
+*netboot-0.10.2 (08 Feb 2010)
+
+  08 Feb 2010; Jeroen Roovers <jer@gentoo.org> +netboot-0.10.2.ebuild,
+  +files/netboot-0.10.2-ldflags.patch:
+  Version bump, and work around parallel make issue, and respect LDFLAGS
+  (bug #248408).
 
   13 Nov 2008; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   remove superflous whitespace from maintainer
