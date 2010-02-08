@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/xmpp4r
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.15 2009/11/27 17:11:21 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xmpp4r/ChangeLog,v 1.16 2010/02/08 17:10:06 graaff Exp $
+
+*xmpp4r-0.5-r1 (08 Feb 2010)
+
+  08 Feb 2010; Hans de Graaff <graaff@gentoo.org> +xmpp4r-0.5-r1.ebuild:
+  Convert to ruby-fakegem.
 
   27 Nov 2009; Alex Legler <a3li@gentoo.org> xmpp4r-0.5.ebuild:
   Remove SRC_URI, hopefully fixes bug 294440
