@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.47 2010/01/25 12:22:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.48 2010/02/08 22:52:59 alexxy Exp $
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  mask app-admin/system-config-printer-common[policykit] since it needs
+  sys-auth/polkit keyworded
 
   25 Jan 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
   Move TeX Live 2009 mask here from global package.mask, remove it once
