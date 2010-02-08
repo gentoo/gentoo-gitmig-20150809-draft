@@ -1,6 +1,16 @@
 # ChangeLog for app-text/tesseract
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.21 2009/07/25 21:12:14 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.22 2010/02/08 19:57:42 volkmar Exp $
+
+*tesseract-2.04-r1 (08 Feb 2010)
+
+  08 Feb 2010; Mounir Lamouri <volkmar@gentoo.org>
+  -files/tesseract-1.0.xterm-path.patch, -tesseract-1.03-r1.ebuild,
+  -files/tesseract-1.03-globals.patch, -tesseract-1.04b.ebuild,
+  -files/tesseract-1.04b-globals.patch, -tesseract-2.00.ebuild,
+  +tesseract-2.04-r1.ebuild, metadata.xml:
+  Revision bump to clean ebuild and fix bug 287373.
+  Removing old ebuilds and patches.
 
   25 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> tesseract-2.04.ebuild,
   +files/tesseract-2.04-gcc44.patch:
