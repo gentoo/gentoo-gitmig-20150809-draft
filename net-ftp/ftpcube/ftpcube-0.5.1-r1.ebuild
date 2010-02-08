@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1-r1.ebuild,v 1.3 2008/02/15 16:59:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1-r1.ebuild,v 1.4 2010/02/08 09:02:41 pva Exp $
 
-inherit distutils
+inherit eutils distutils
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="Graphical FTP client using wxPython"
