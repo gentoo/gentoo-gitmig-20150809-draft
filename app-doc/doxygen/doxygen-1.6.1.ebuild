@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.6.1.ebuild,v 1.3 2010/01/17 16:31:11 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.6.1.ebuild,v 1.4 2010/02/08 19:21:51 abcd Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils flag-o-matic toolchain-funcs qt4-r2 fdo-mime
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="debug doc nodot qt4 latex elibc_FreeBSD"
 
 RDEPEND="qt4? ( x11-libs/qt-gui:4 )
@@ -52,6 +52,9 @@ src_prepare() {
 	# Call dot with -Teps instead of -Tps for EPS generation - bug #282150
 	epatch "${FILESDIR}/${PN}-1.5-dot-eps.patch"
 
+	# prefix search tools patch, plus OSX fixes
+	epatch "${FILESDIR}"/${PN}-1.5.6-prefix-misc-alt.patch
+
 	# fix final DESTDIR issue
 	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \
 		addon/doxywizard/Makefile.in || die "sed 2 failed"
@@ -73,11 +76,7 @@ src_configure() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
 
 	local my_conf=""
-	if use debug; then
-		my_conf="--prefix /usr --debug"
-	else
-		my_conf="--prefix /usr"
-	fi
+	use debug && my_conf="--debug"
 
 	export CC="${QMAKE_CC}"
 	export CXX="${QMAKE_CXX}"
@@ -85,16 +84,16 @@ src_configure() {
 	export LINK_SHLIB="${QMAKE_CXX}"
 
 	if use qt4; then
-		export QTDIR="/usr"
+		export QTDIR="${EPREFIX}/usr"
 		einfo "using QTDIR: '$QTDIR'."
-		export LIBRARY_PATH="${QTDIR}/$(get_libdir):${LIBRARY_PATH}"
-		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}"
+		export LIBRARY_PATH="${QTDIR}/$(get_libdir)${LIBRARY_PATH:+:}${LIBRARY_PATH}"
+		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir)${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
 		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
 		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-		./configure ${my_conf} $(use_with qt4 doxywizard) \
+		./configure --prefix "${EPREFIX}/usr" ${my_conf} $(use_with qt4 doxywizard) \
 		|| die 'configure with qt4 failed'
 	else
-		./configure ${my_conf} || die 'configure failed'
+		./configure --prefix "${EPREFIX}/usr" ${my_conf} || die 'configure failed'
 	fi
 }
 
