@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.308.0_p37385.ebuild,v 1.1 2010/01/29 10:03:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.308.0_p37385.ebuild,v 1.2 2010/02/08 11:35:33 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -16,7 +16,7 @@ SRC_URI="x86? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
+IUSE="+plugins-symlink"
 
 DEPEND="app-arch/unzip"
 RDEPEND="app-arch/bzip2
@@ -62,8 +62,10 @@ src_install() {
 	newman chrome-linux/chrome.1 chromium-bin.1
 	rm "${D}"${CHROMIUM_HOME}/chrome-linux/chrome.1
 
-	# Plugins symlink
-	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/chrome-linux/plugins
+	# Plugins symlink, optional wrt bug #301911
+	if use plugins-symlink; then
+		dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/chrome-linux/plugins
+	fi
 
 	# Create symlinks for needed libraries
 	dodir ${CHROMIUM_HOME}/nss-nspr
