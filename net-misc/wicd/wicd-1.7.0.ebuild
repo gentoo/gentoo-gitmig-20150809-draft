@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.2 2010/01/19 18:21:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.3 2010/02/08 08:52:13 pva Exp $
 
 EAPI=2
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="http://wicd.sourceforge.net/"
