@@ -1,6 +1,10 @@
 # ChangeLog for virtual/poppler-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-utils/ChangeLog,v 1.39 2010/02/09 11:25:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-utils/ChangeLog,v 1.40 2010/02/09 23:56:04 yngwin Exp $
+
+  09 Feb 2010; Ben de Groot <yngwin@gentoo.org> -poppler-utils-0.8.7.ebuild,
+  poppler-utils-0.12.3-r1.ebuild:
+  Add ~mips keyword. Remove no longer needed ancient version.
 
   09 Feb 2010; Ben de Groot <yngwin@gentoo.org> poppler-utils-0.8.7.ebuild,
   -poppler-utils-0.10.7.ebuild:
