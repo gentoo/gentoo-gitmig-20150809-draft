@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/drkonqi-4.4.0.ebuild,v 1.1 2010/02/09 00:16:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/drkonqi-4.4.0.ebuild,v 1.2 2010/02/09 16:21:14 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,6 +13,8 @@ IUSE="debug"
 
 pkg_postinst() {
 	kde4-meta_pkg_postinst
-	elog "For more usability consider installing folowing packages:"
-	elog "    sys-devel/gdb - Easier debugging support"
+	if ! has_version "sys-devel/gdb"; then
+		elog "For more usability consider installing following packages:"
+		elog "    sys-devel/gdb - Easier debugging support"
+	fi
 }

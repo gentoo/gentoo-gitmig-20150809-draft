@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.152 2010/02/09 00:16:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.153 2010/02/09 16:21:14 scarabeus Exp $
+
+  09 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org> drkonqi-4.3.5.ebuild,
+  drkonqi-4.4.0.ebuild:
+  Fix elog messages per bug #302898.
 
 *drkonqi-4.4.0 (08 Feb 2010)
 
