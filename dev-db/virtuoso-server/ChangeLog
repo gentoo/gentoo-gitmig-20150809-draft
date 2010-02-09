@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.1 2010/02/08 20:33:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.2 2010/02/09 16:18:43 reavertm Exp $
+
+  09 Feb 2010; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
+  Fixed my email
 
 *virtuoso-server-6.1.0 (08 Feb 2010)
 
