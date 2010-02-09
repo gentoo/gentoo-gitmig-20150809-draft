@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.47 2010/01/10 21:35:25 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.48 2010/02/09 20:04:40 spatz Exp $
+
+  09 Feb 2010; Dror Levin <spatz@gentoo.org> -keepassx-0.3.4.ebuild:
+  Remove old.
 
   10 Jan 2010; Dror Levin <spatz@gentoo.org> keepassx-0.4.1.ebuild:
   Fix dep on xextproto/libXtst, bug 300373.
