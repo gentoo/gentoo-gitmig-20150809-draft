@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.93 2010/01/15 00:42:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.94 2010/02/09 16:03:00 scarabeus Exp $
+
+# Gluon still don't have release.
+gluon
 
 # KDE4 specific enablefinal flag
 # Uses huge amounts of ram, and those ricers would be spamming bugzilla.
