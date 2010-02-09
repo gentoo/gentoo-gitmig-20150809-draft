@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.4 2010/02/09 20:52:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.5 2010/02/09 21:01:22 grobian Exp $
+
+*uncrustify-0.55 (09 Feb 2010)
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.55.ebuild,
+  -uncrustify-9999.ebuild:
+  Version bump to 0.55, drop live ebuild: upstream switched from SVN to Git.
 
   09 Feb 2010; Fabian Groffen <grobian@gentoo.org> uncrustify-0.53.ebuild:
   Marked ~amd64-linux
