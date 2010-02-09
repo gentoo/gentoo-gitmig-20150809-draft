@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kdebindings-ruby
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.1 2010/02/09 00:21:37 alexxy Exp $
+
+*kdebindings-ruby-4.4.0 (08 Feb 2010)
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdebindings-ruby-4.4.0.ebuild, +files/kdebindings-ruby-fix-linkage.patch:
+  Version bump to KDE SC 4.4.0
+
