@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.11.ebuild,v 1.3 2010/02/02 17:31:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.1.11.ebuild,v 1.4 2010/02/09 05:51:43 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -32,8 +32,6 @@ RDEPEND="readline? ( sys-libs/readline )
 		)
 		ggz? ( dev-games/ggz-client-libs )
 		media-libs/libpng
-		media-libs/alsa-lib
-		media-libs/audiofile
 		sdl? ( media-libs/sdl-mixer )
 		auth? ( virtual/mysql )
 	)"
@@ -82,7 +80,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local mysoundconf
 	local myclient
 
 	if use dedicated ; then
@@ -104,8 +101,7 @@ src_configure() {
 		$(use_with readline) \
 		$(use_enable sdl sdl-mixer) \
 		$(use_with ggz ggz-client) \
-		--enable-client=${myclient} \
-		${mysoundconf}
+		--enable-client=${myclient}
 }
 
 src_install() {
