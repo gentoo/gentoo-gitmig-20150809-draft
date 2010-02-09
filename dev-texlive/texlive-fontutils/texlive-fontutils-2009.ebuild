@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/texlive-fontutils-2009.ebuild,v 1.6 2010/02/09 20:33:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/texlive-fontutils-2009.ebuild,v 1.7 2010/02/09 20:50:11 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="accfonts afm2pl epstopdf fontware lcdftypetools ps2pkm pstools psutils dvipsconfig fontinst fontools getafm t1utils collection-fontutils
 "
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 !dev-texlive/texlive-psutils
+!<dev-texlive/texlive-fontsextra-2009
 !<app-text/texlive-core-2009
 "
 RDEPEND="${DEPEND} "
