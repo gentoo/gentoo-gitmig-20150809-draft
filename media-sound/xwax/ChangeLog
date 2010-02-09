@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.13 2010/01/06 20:18:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.14 2010/02/09 21:16:35 josejx Exp $
+
+  09 Feb 2010; Joseph Jezak <josejx@gentoo.org> xwax-0.5.ebuild,
+  xwax-0.6-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #293240.
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> xwax-0.6-r1.ebuild:
   Marking xwax-0.6-r1 ~ppc64 for bug 276855
