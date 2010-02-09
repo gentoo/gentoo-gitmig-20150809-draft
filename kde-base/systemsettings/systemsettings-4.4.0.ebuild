@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.4.0.ebuild,v 1.2 2010/02/09 14:50:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.4.0.ebuild,v 1.3 2010/02/09 15:30:50 reavertm Exp $
 
 EAPI="2"
 
@@ -33,7 +33,6 @@ DEPEND="${COMMONDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 "
 RDEPEND="${COMMONDEPEND}
-	
 	x11-apps/setxkbmap
 	x11-misc/xkeyboard-config
 "
