@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.5.1.ebuild,v 1.1 2009/12/09 18:19:32 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.5.1.ebuild,v 1.2 2010/02/09 10:57:02 ali_bush Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps"
@@ -91,6 +91,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/3.5/jvmarg.patch" || die
+
 	# apply patches before we start cleaning junk out
 	eant applyPatches
 

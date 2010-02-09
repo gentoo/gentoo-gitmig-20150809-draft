@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.150 2009/12/09 18:19:32 ali_bush Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.151 2010/02/09 10:57:02 ali_bush Exp $
+
+  09 Feb 2010; Alistair Bush <ali_bush@gentoo.org> +files/3.5/jvmarg.patch,
+  eclipse-sdk-3.5.1.ebuild:
+  Fix out of memory exceptions thanks to Cybercide <cybercide@f2s.com>. see
+  #297057.
 
 *eclipse-sdk-3.5.1 (09 Dec 2009)
 
