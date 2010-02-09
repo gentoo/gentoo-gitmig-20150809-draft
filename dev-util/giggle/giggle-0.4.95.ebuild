@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.95.ebuild,v 1.3 2010/02/06 23:50:25 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.95.ebuild,v 1.4 2010/02/09 18:48:35 ikelos Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ IUSE="eds"
 RDEPEND=">=dev-util/git-1.4.4.3
 		 >=dev-libs/glib-2.18
 		 >=x11-libs/gtk+-2.10
-		 x11-libs/gtksourceview:2.0
+		 >=x11-libs/gtksourceview-2.8
 		 eds? ( gnome-extra/evolution-data-server )
 		 >=gnome-base/libglade-2.4"
 DEPEND="${RDEPEND}
