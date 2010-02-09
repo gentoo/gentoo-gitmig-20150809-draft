@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.143 2010/01/25 16:21:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.144 2010/02/09 00:22:16 alexxy Exp $
+
+*kmplot-4.4.0 (08 Feb 2010)
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> +kmplot-4.4.0.ebuild:
+  Version bump to KDE SC 4.4.0
 
 *kmplot-4.3.5 (25 Jan 2010)
 
