@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxserver-freeedition
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.46 2009/12/15 17:38:58 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.47 2010/02/09 23:22:02 voyageur Exp $
+
+*nxserver-freeedition-3.4.0.12 (09 Feb 2010)
+
+  09 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +nxserver-freeedition-3.4.0.12.ebuild:
+  Maintenance release bump, EAPI2 and remove built_with_use
 
   15 Dec 2009; Bernard Cafarelli <voyageur@gentoo.org>
   -nxserver-freeedition-3.3.0.8-r1.ebuild,
