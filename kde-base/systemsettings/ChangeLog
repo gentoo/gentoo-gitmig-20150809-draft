@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.66 2010/02/09 00:24:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.67 2010/02/09 14:50:25 scarabeus Exp $
+
+  09 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  systemsettings-4.4.0.ebuild:
+  Fix blockers due to bug #304127.
 
 *systemsettings-4.4.0 (09 Feb 2010)
 

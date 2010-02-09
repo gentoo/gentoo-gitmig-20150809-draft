@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.4.0.ebuild,v 1.1 2010/02/09 00:24:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.4.0.ebuild,v 1.2 2010/02/09 14:50:25 scarabeus Exp $
 
 EAPI="2"
 
@@ -33,6 +33,7 @@ DEPEND="${COMMONDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 "
 RDEPEND="${COMMONDEPEND}
+	
 	x11-apps/setxkbmap
 	x11-misc/xkeyboard-config
 "
@@ -47,6 +48,8 @@ KMEXTRACTONLY="
 	libs/
 	plasma/
 "
+
+add_blocker kcontrol '<4.3.98'
 
 src_unpack() {
 	if use handbook; then
