@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.8 2010/01/29 00:30:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.9 2010/02/09 10:06:36 grobian Exp $
 
 # Original Author: Arun Raghavan <ford_prefect@gentoo.org> (based on the
 #		   gnome-python-desktop eclass by Jim Ramsay <lack@gentoo.org>)
@@ -96,7 +96,7 @@ gnome-python-common_src_install() {
 	fi
 
 	# Python does not need these, bug #299243
-	find "${D}$(python_get_sitedir)" -name "*.la" -delete \
+	find "${D%/}${EPREFIX}$(python_get_sitedir)" -name "*.la" -delete \
 		|| die "failed to remove la files"
 
 }
