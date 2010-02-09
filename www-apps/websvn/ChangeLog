@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.37 2010/01/24 13:54:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.38 2010/02/09 14:51:04 fauli Exp $
+
+  09 Feb 2010; Christian Faulhammer <fauli@gentoo.org> websvn-2.3.0.ebuild:
+  stable x86, bug 301144
 
   24 Jan 2010; Brent Baude <ranger@gentoo.org> websvn-2.3.0.ebuild:
   stable ppc, bug 301144
