@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.4.0.ebuild,v 1.1 2010/02/09 00:16:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.4.0.ebuild,v 1.2 2010/02/09 13:29:43 reavertm Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND="
 	dev-libs/libgpg-error
 	>=dev-libs/libical-0.43
 	dev-libs/cyrus-sasl
-	akonadi? ( >=app-office/akonadi-server-1.3.0 )
+	akonadi? ( >=app-office/akonadi-server-1.3.1 )
 	ldap? ( net-nds/openldap )
 "
 RDEPEND="${DEPEND}"
