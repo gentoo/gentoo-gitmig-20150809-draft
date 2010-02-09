@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.143 2010/02/09 21:09:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.144 2010/02/09 21:37:55 alexxy Exp $
+
+  09 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  mask kde sc 4.4.0 since neede deps not keyworded
 
   09 Feb 2010; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
