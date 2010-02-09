@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.29 2010/01/10 20:54:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.30 2010/02/09 22:52:24 tcunha Exp $
+
+  09 Feb 2010; Tiago Cunha <tcunha@gentoo.org> libssh2-1.2.2.ebuild:
+  stable sparc, bug 298456
 
   10 Jan 2010; Markus Meier <maekke@gentoo.org> libssh2-1.2.2.ebuild:
   arm/x86 stable, bug #298456
