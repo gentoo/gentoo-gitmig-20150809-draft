@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.39 2010/01/26 18:58:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.40 2010/02/09 20:40:05 grobian Exp $
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.6.ebuild:
+  Marked ~ppc-macos
 
   26 Jan 2010; Peter Volkov <pva@gentoo.org> urw-fonts-2.4.6.ebuild:
   TODO does not exist in docs, bug #302348, thank R Bar-On for report.
