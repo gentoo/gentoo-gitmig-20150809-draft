@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/dvbstreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.14 2010/02/07 10:20:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/ChangeLog,v 1.15 2010/02/09 15:19:30 pacho Exp $
+
+  09 Feb 2010; Pacho Ramos <pacho@gentoo.org> dvbstreamer-1.1-r1.ebuild:
+  amd64 stable, bug 302478
 
   07 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   dvbstreamer-1.1-r1.ebuild:
