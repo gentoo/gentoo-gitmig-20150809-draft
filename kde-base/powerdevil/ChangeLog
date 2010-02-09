@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.39 2010/01/25 17:34:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.40 2010/02/09 00:20:30 alexxy Exp $
+
+*powerdevil-4.4.0 (09 Feb 2010)
+
+  09 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> +powerdevil-4.4.0.ebuild:
+  Version bump to KDE SC 4.4.0
 
 *powerdevil-4.3.5 (25 Jan 2010)
 
