@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.21 2010/01/22 15:49:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.22 2010/02/09 20:49:54 grobian Exp $
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org> xfconf-4.7.0.ebuild:
+  Marked ~x64-solaris
 
   22 Jan 2010; Jeremy Olexa <darkside@gentoo.org> xfconf-4.7.0.ebuild:
   Fix out of prefix warning regarding document location
