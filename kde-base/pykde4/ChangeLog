@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.57 2010/02/09 07:42:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.58 2010/02/09 15:47:47 pacho Exp $
+
+  09 Feb 2010; Pacho Ramos <pacho@gentoo.org> pykde4-4.3.3-r1.ebuild:
+  amd64 stable, bug 303929
 
   09 Feb 2010; Jonathan Callen <abcd@gentoo.org> metadata.xml:
   Update metadata.xml from overlay
