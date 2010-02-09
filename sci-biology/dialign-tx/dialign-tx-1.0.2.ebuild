@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-tx/dialign-tx-1.0.2.ebuild,v 1.2 2009/12/29 21:07:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-tx/dialign-tx-1.0.2.ebuild,v 1.3 2010/02/09 11:20:45 pacho Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://dialign-tx.gobics.de/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
