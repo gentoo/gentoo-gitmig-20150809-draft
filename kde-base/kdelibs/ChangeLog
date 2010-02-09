@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.669 2010/01/30 03:37:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.670 2010/02/09 00:23:45 alexxy Exp $
+
+*kdelibs-4.4.0 (08 Feb 2010)
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/kdelibs-4.3.80-kdeui_util_kkeyserver_mac.patch,
+  +files/kdelibs-4.3.80-module-suffix.patch, +kdelibs-4.4.0.ebuild:
+  Version bump to KDE SC 4.4.0
 
   30 Jan 2010; Jonathan Callen <abcd@gentoo.org> kdelibs-4.3.5.ebuild:
   Move kde-env dep to RDEPEND (no longer a circular dep)
