@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5261 2010/02/09 07:07:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5262 2010/02/09 07:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1316,6 +1316,7 @@ kde-base/plasma-workspace:google-gadgets - Add google-gadgets support
 kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-base/kdepimlibs)
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/pykde4:akonadi - Builds Akonadi python language bindings
+kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/rocs:R - Enable R backend support
 kde-base/rocs:ps - Enable rendering EPS files
 kde-base/smoke:akonadi - Compile bindings for kde-base/akonadi.
