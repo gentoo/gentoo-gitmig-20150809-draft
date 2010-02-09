@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.21 2010/01/19 11:34:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.22 2010/02/09 12:45:14 fauli Exp $
+
+  09 Feb 2010; Christian Faulhammer <fauli@gentoo.org> pms-2.ebuild,
+  pms-3.ebuild, pms-99999999.ebuild:
+  Do proper slotting
 
 *pms-3 (19 Jan 2010)
 
