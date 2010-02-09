@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/gnome-colors-themes
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-colors-themes/ChangeLog,v 1.1 2010/02/09 13:21:18 pacho Exp $
+
+*gnome-colors-themes-5.5.1 (09 Feb 2010)
+
+  09 Feb 2010; Pacho Ramos <pacho@gentoo.org>
+  +gnome-colors-themes-5.5.1.ebuild, +metadata.xml:
+  New ebuilds for gnome-colors iconsets, this one is for colorized themes,
+  including a Gentoo one
+
