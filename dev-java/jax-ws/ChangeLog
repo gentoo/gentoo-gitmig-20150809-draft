@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jax-ws
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.10 2009/12/09 22:45:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws/ChangeLog,v 1.11 2010/02/09 19:18:21 josejx Exp $
+
+  09 Feb 2010; Joseph Jezak <josejx@gentoo.org> jax-ws-2.0.1-r1.ebuild:
+  Marked ppc stable for bug #296228.
 
   09 Dec 2009; Markus Meier <maekke@gentoo.org> jax-ws-2.0.1-r1.ebuild:
   amd64/x86 stable, bug #296228
