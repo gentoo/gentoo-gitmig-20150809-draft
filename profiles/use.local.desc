@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5260 2010/02/09 02:41:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5261 2010/02/09 07:07:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1233,11 +1233,10 @@ gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objectiv
 gnustep-libs/steptalk:gdl2 - Compile module for gnustep-libs/gdl2
 gpe-base/gpe:games - Builds and installs GPE games.
 kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
-kde-base/ark:lzma - Enable lzma support
+kde-base/ark:lzma - Enable LZMA/XZ archive support
 kde-base/ark:zip - Enable zip support through LibZip
 kde-base/cantor:R - Enable R backend support
 kde-base/cantor:ps - Enable rendering EPS files
-kde-base/dolphin:semantic-desktop -  Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible. 
 kde-base/dolphin:thumbnail -  Enables video thumbnails generation for kde-base/dolphin file manager. 
 kde-base/granatier:gluon - Adds support for media-libs/gluon (recommended) instead of x11-libs/qt-multimedia
 kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
@@ -1258,13 +1257,14 @@ kde-base/kdebindings-ruby:phonon - Compile bindings for media-sound/phonon.
 kde-base/kdebindings-ruby:plasma - Compile bindings for kde's plasma.
 kde-base/kdebindings-ruby:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-ruby:webkit - Compile bindings for x11-libs/webkit.
-kde-base/kdelibs:lzma - Enable lzma support
+kde-base/kdelibs:lzma - Enable LZMA/XZ archive support
+kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdepimlibs:akonadi - Build support for Akonadi resources.
 kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble
 kde-base/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/kdeplasma-addons:qwt - Enable applets that use x11-libs/qwt:5.
 kde-base/kdeplasma-addons:scim - Enable applets that use app-i18n/scim.
-kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2fs filesystems in a floppy.
+kde-base/kdeutils-meta:floppy - Install kde-base/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmail:ayatana - Build in support for Ayatana notification via dev-libs/libindicate-qt
