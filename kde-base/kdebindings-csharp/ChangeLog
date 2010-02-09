@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebindings-csharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.20 2010/02/09 00:21:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.21 2010/02/09 06:58:45 abcd Exp $
+
+  09 Feb 2010; Jonathan Callen <abcd@gentoo.org> metadata.xml:
+  Update metadata.xml from overlay
 
 *kdebindings-csharp-4.4.0 (08 Feb 2010)
 

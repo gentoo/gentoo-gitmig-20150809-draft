@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.149 2010/02/09 00:16:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.150 2010/02/09 06:52:59 abcd Exp $
+
+  09 Feb 2010; Jonathan Callen <abcd@gentoo.org> metadata.xml:
+  Update metadata.xml from overlay
 
 *kdeadmin-meta-4.4.0 (08 Feb 2010)
 

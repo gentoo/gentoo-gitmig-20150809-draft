@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-wallpapers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.27 2010/02/09 00:21:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.28 2010/02/09 06:57:07 abcd Exp $
+
+  09 Feb 2010; Jonathan Callen <abcd@gentoo.org> metadata.xml:
+  Update metadata.xml from overlay
 
 *kdebase-wallpapers-4.4.0 (08 Feb 2010)
 
