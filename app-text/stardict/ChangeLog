@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.5 2010/02/09 14:47:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.6 2010/02/09 21:13:13 josejx Exp $
+
+  09 Feb 2010; Joseph Jezak <josejx@gentoo.org> stardict-3.0.1-r2.ebuild:
+  Marked ppc/ppc64 stable for bug #288555.
 
   09 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   stardict-3.0.1-r2.ebuild:
