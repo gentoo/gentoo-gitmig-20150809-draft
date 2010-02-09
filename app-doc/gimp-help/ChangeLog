@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.62 2010/02/09 14:53:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.63 2010/02/09 15:03:31 pacho Exp $
+
+  09 Feb 2010; Pacho Ramos <pacho@gentoo.org> gimp-help-2.6.0-r1.ebuild:
+  amd64 stable, bug 303309
 
   09 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   gimp-help-2.6.0-r1.ebuild:
