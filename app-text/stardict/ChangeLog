@@ -1,6 +1,10 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.4 2010/02/07 18:21:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.5 2010/02/09 14:47:58 fauli Exp $
+
+  09 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  stardict-3.0.1-r2.ebuild:
+  stable x86, bug 288555
 
   07 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
   stardict-3.0.1-r2.ebuild:
