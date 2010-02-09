@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5267 2010/02/09 17:47:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5268 2010/02/09 18:07:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1318,8 +1318,11 @@ kde-base/pykde4:akonadi - Builds Akonadi python language bindings
 kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/smoke:akonadi - Compile bindings for kde-base/akonadi.
 kde-base/smoke:kdevplatform - Compile bindings for dev-util/kdevplatform.
+kde-base/smoke:okular - Compile bindings for kde-base/okular.
 kde-base/smoke:phonon - Compile bindings for media-sound/phonon.
+kde-base/smoke:qimageblitz - Compile bindings for kde-base/qimageblitz.
 kde-base/smoke:qscintilla - Compile bindings for x11-libs/qscintilla.
+kde-base/smoke:qtmultimedia - Compile bindings for x11-libs/qt-multimedia.
 kde-base/smoke:qwt - Compile bindings for x11-libs/qwt.
 kde-base/smoke:webkit - Compile bindings for x11-libs/webkit.
 kde-base/solid:wicd - Enable Wicd wired and wireless network manager.
@@ -3262,8 +3265,6 @@ www-apache/mod_vhs:suphp - Enable www-apache/mod_suphp support
 www-apache/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 www-apache/pwauth:faillog - Log failed login attempts
 www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
-www-apps/Embperl:modperl - Enable www-apache/mod_perl support
-www-apps/Embperl:xalan - Enable dev-java/xalan support
 www-apps/bugzilla:extras - Optional Perl modules
 www-apps/bugzilla:modperl - Enable www-apache/mod_perl support
 www-apps/egroupware:gallery - Install gallery2 port for eGW
