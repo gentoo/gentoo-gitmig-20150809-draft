@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11196 2010/02/09 16:38:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11197 2010/02/09 16:40:28 abcd Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -133,6 +133,7 @@ dev-python/pyopencl
 ~kde-base/kdebase-startkde-4.4.0
 ~kde-base/kdebase-wallpapers-4.4.0
 ~kde-base/kdebindings-csharp-4.4.0
+~kde-base/kdebindings-ruby-4.4.0
 ~kde-base/kdebugdialog-4.4.0
 ~kde-base/kdeedu-meta-4.4.0
 ~kde-base/kde-env-4.4.0
