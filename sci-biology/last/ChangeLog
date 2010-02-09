@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/last
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.1 2010/02/09 15:30:28 weaver Exp $
+
+*last-96 (09 Feb 2010)
+
+  09 Feb 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +last-96.ebuild:
+  New package, ebuild written by me
+
