@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.63 2010/02/06 16:34:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.64 2010/02/09 21:07:35 spatz Exp $
+
+  09 Feb 2010; Dror Levin <spatz@gentoo.org> -qt-phonon-4.6.0-r1.ebuild:
+  Remove old.
 
   06 Feb 2010; Ben de Groot <yngwin@gentoo.org> qt-phonon-4.6.1-r2.ebuild:
   Extract source to actually build phonon widgets

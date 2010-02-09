@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.87 2010/01/23 15:45:37 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.88 2010/02/09 21:04:22 spatz Exp $
+
+  09 Feb 2010; Dror Levin <spatz@gentoo.org> -qt-core-4.6.0-r1.ebuild:
+  Remove old.
 
   23 Jan 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   qt-core-4.6.1.ebuild:
