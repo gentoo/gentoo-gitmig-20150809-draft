@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtinst
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.16 2009/12/23 17:21:45 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.17 2010/02/09 17:04:02 flameeyes Exp $
+
+*virtinst-0.500.2 (09 Feb 2010)
+
+  09 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +virtinst-0.500.2.ebuild:
+  Version bump.
 
   23 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -virtinst-0.400.3-r1.ebuild, -virtinst-0.500.0.ebuild:
