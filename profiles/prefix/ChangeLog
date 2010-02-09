@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.142 2010/02/03 08:58:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.143 2010/02/09 21:09:17 grobian Exp $
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask binutils-2.20.51.0.6, doesn't compile
 
   03 Feb 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask dev-util/cssc-1.2.0, the Darwin linker doesn't like duplicate symbols
