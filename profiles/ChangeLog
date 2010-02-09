@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3868 2010/02/08 19:15:25 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3869 2010/02/09 12:45:38 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Feb 2010; Christian Faulhammer <fauli@gentoo.org> updates/1Q-2010:
+  Move PMS ebuilds to correct slots
 
   08 Feb 2010; Daniel Pielmeier <billie@gentoo.org> package.mask:
   Mask media-tv/linuxtv-dvb-firmware for removal.
