@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/files/cdemud.init.d-1.1.0,v 1.3 2009/03/30 16:54:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/files/cdemud.init.d-1.1.0,v 1.4 2010/02/09 06:32:08 pva Exp $
 
 depend() {
 	need dbus
-	[ "${CDEMUD_AUDIO_DRIVER}" == alsa ] && need alsasound
+	[ "${CDEMUD_AUDIO_DRIVER}" = alsa ] && need alsasound
 }
 
 start() {
