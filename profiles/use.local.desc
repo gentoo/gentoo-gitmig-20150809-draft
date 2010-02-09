@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5258 2010/02/09 00:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5259 2010/02/09 00:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1253,19 +1253,29 @@ kde-base/kdebindings-csharp:phonon - Compile bindings for media-sound/phonon.
 kde-base/kdebindings-csharp:plasma - Compile bindings for kde's plasma.
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/webkit.
+kde-base/kdebindings-ruby:akonadi - Compile bindings for kde-base/akonadi.
+kde-base/kdebindings-ruby:phonon - Compile bindings for media-sound/phonon.
+kde-base/kdebindings-ruby:plasma - Compile bindings for kde's plasma.
+kde-base/kdebindings-ruby:qscintilla - Compile bindings for x11-libs/qscintilla.
+kde-base/kdebindings-ruby:webkit - Compile bindings for x11-libs/webkit.
 kde-base/kdelibs:lzma - Enable lzma support
-kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble.
+kde-base/kdepimlibs:akonadi - Build support for Akonadi resources.
+kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble
+kde-base/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/libqalculate
+kde-base/kdeplasma-addons:qwt - Enable applets that use x11-libs/qwt:5.
+kde-base/kdeplasma-addons:scim - Enable applets that use app-i18n/scim.
 kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kig:kig-scripting - Support Python scripting
+kde-base/kmail:ayatana - Build in support for Ayatana notification via dev-libs/libindicate-qt
 kde-base/konqueror:auth -  Add dependency on authentization packages. 
 kde-base/konqueror:bookmarks -  Add dependency on bookmark package. 
 kde-base/konqueror:thumbnail -  Enables video thumbnails generation for kde-base/konqueror file manager. 
-kde-base/kopete:addbookmarks - Automaticaly add incoming urls to bookmarks.
-kde-base/kopete:autoreplace - Automaticaly replace selected text
+kde-base/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
+kde-base/kopete:autoreplace - Automatically replace selected text
 kde-base/kopete:bonjour - Enable Link-Local Messaging via the bonjour protocol.
 kde-base/kopete:contactnotes - Enables writing personal notes for contacts.
-kde-base/kopete:facebook - Enable Facebook support.
+kde-base/kopete:facebook - Enable Facebook chat support.
 kde-base/kopete:gadu - Enable the Gadu protocol handler.
 kde-base/kopete:groupwise - Enable the Groupwise protocol handler.
 kde-base/kopete:highlight - Allows you to specify highlights on specific events.
@@ -1277,15 +1287,16 @@ kde-base/kopete:msn - Enable "Windows live messenger" protocol support.
 kde-base/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
 kde-base/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
 kde-base/kopete:pipes - Send messages to external pipe.
-kde-base/kopete:privacy - Filter for incomming messages
-kde-base/kopete:qq - enable support for the chinese network protocol.
+kde-base/kopete:privacy - Filter for incoming messages
+kde-base/kopete:qq - enable support for the Chinese network protocol.
 kde-base/kopete:skype - Enable Skype protocol handler (not fully functional yet).
-kde-base/kopete:statistics - Everybody loves statistic graphs, especialy cake ones. ;]
+kde-base/kopete:sms - Enable SMS sendinge functionality.
+kde-base/kopete:statistics - Everybody loves statistic graphs, especially cake ones. ;]
 kde-base/kopete:testbed - Enable the testbed protocol.
-kde-base/kopete:texteffect - Various fancy text effects for your messages (dont ever consider writing us with this enabled ;]).
+kde-base/kopete:texteffect - Various fancy text effects for your messages (don't ever consider writing us with this enabled ;]).
 kde-base/kopete:translator - Translate incoming and outgoing messages.
 kde-base/kopete:urlpicpreview - Enables in conversation pictures preview.
-kde-base/kopete:webpresence - Show your status and some more informations on web.
+kde-base/kopete:webpresence - Show your status and some more information on web.
 kde-base/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
 kde-base/kopete:yahoo - Enable yahoo protocol support.
 kde-base/kpilot:avantgo - Add support for syncing Avantgo accounts
@@ -1305,6 +1316,8 @@ kde-base/plasma-workspace:google-gadgets - Add google-gadgets support
 kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-base/kdepimlibs)
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/pykde4:akonadi - Builds Akonadi python language bindings
+kde-base/rocs:R - Enable R backend support
+kde-base/rocs:ps - Enable rendering EPS files
 kde-base/smoke:akonadi - Compile bindings for kde-base/akonadi.
 kde-base/smoke:kdevplatform - Compile bindings for dev-util/kdevplatform.
 kde-base/smoke:phonon - Compile bindings for media-sound/phonon.
