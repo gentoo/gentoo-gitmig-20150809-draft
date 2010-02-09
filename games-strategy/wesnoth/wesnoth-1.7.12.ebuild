@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.7.12.ebuild,v 1.1 2010/01/18 08:08:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.7.12.ebuild,v 1.2 2010/02/09 23:11:56 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -12,13 +12,16 @@ SRC_URI="mirror://sourceforge/wesnoth/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="dedicated doc nls server tinygui"
+IUSE="dbus dedicated doc nls server tinygui"
 
 RDEPEND=">=media-libs/libsdl-1.2.7[video,X]
 	media-libs/sdl-net
 	>=media-libs/sdl-ttf-2.0.8
 	>=media-libs/sdl-mixer-1.2[vorbis]
 	>=media-libs/sdl-image-1.2[jpeg,png]
+	!dedicated? (
+		dbus? ( sys-apps/dbus )
+	)
 	dev-libs/boost
 	sys-libs/zlib
 	x11-libs/pango
@@ -73,6 +76,7 @@ src_configure() {
 		$(cmake-utils_use_enable !dedicated GAME)
 		$(cmake-utils_use_enable !dedicated ENABLE_DESKTOP_ENTRY)
 		$(cmake-utils_use_enable nls NLS)
+		$(cmake-utils_use_enable dbus NOTIFICATIONS)
 		-DGUI=$(use tinygui && echo tiny || echo normal)
 		-DENABLE_FRIBIDI=FALSE
 		-DENABLE_STRICT_COMPILATION=FALSE
