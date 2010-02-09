@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.298 2010/02/04 22:05:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.299 2010/02/09 01:54:23 vapier Exp $
+
+  09 Feb 2010; Mike Frysinger <vapier@gentoo.org> util-linux-2.16.2.ebuild:
+  Mark alpha/ia64/s390/sh stable #301179.
 
   04 Feb 2010; Markus Meier <maekke@gentoo.org> util-linux-2.16.2.ebuild:
   amd64/arm stable, bug #301179
