@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.16 2010/01/26 22:39:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.17 2010/02/09 17:23:19 grobian Exp $
 
 DESCRIPTION="Virtual for JDK"
 HOMEPAGE=""
@@ -16,11 +16,21 @@ IUSE=""
 # get a masked license warning for ibm-jdk-bin
 # instead of (not useful) missing keyword warning for sun-jdk
 # see #287615
+# note that this "voodoo" is pretty annoying for Prefix, and that we didn't
+# invent it in the first place!
 RDEPEND="|| (
 		amd64? ( dev-java/icedtea6-bin )
 		x86? ( dev-java/icedtea6-bin )
 		amd64? ( =dev-java/sun-jdk-1.6.0* )
 		x86? ( =dev-java/sun-jdk-1.6.0* )
+		amd64-linux? ( dev-java/icedtea6-bin )
+		x86-linux? ( dev-java/icedtea6-bin )
+		amd64-linux? ( =dev-java/sun-jdk-1.6.0* )
+		x86-linux? ( =dev-java/sun-jdk-1.6.0* )
+		x64-solaris? ( =dev-java/sun-jdk-1.6.0* )
+		x86-solaris? ( =dev-java/sun-jdk-1.6.0* )
+		sparc-solaris? ( =dev-java/sun-jdk-1.6.0* )
+		sparc64-solaris? ( =dev-java/sun-jdk-1.6.0* )
 		=dev-java/ibm-jdk-bin-1.6.0*
 		=dev-java/hp-jdk-bin-1.6.0*
 		=dev-java/diablo-jdk-1.6.0*
