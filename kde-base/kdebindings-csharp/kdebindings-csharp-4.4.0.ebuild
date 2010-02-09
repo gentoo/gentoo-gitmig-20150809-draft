@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/kdebindings-csharp-4.4.0.ebuild,v 1.1 2010/02/09 00:21:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/kdebindings-csharp-4.4.0.ebuild,v 1.2 2010/02/09 16:56:22 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,8 +20,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY="smoke/"
-
-PATCHES=( "${FILESDIR}"/${PN}-4.4-build-fixes.patch )
 
 pkg_setup() {
 	kde4-meta_pkg_setup
