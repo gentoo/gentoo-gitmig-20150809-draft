@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.139 2010/01/25 16:49:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.140 2010/02/09 00:22:24 alexxy Exp $
+
+*ksnapshot-4.4.0 (08 Feb 2010)
+
+  08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> +ksnapshot-4.4.0.ebuild:
+  Version bump to KDE SC 4.4.0
 
 *ksnapshot-4.3.5 (25 Jan 2010)
 
