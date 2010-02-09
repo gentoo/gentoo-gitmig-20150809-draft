@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.40 2010/02/09 20:40:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.41 2010/02/09 20:46:36 grobian Exp $
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.6.ebuild:
+  Marked ~x64-solaris
 
   09 Feb 2010; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.6.ebuild:
   Marked ~ppc-macos
