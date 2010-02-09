@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_security
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.36 2009/12/28 18:18:13 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.37 2010/02/09 17:48:42 flameeyes Exp $
+
+*mod_security-2.5.12 (09 Feb 2010)
+
+  09 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/2.5.10/99_mod_security.conf, -mod_security-2.5.9.ebuild,
+  -mod_security-2.5.11-r1.ebuild, +mod_security-2.5.12.ebuild:
+  Version bump, this version fixes possible security problems. Keep an old
+  version around though as the HTTP Parameter Pollution code changed
+  drastically and might break Rails again.
 
   28 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   mod_security-2.5.9-r1.ebuild:

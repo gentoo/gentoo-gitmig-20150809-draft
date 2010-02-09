@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.11-r1.ebuild,v 1.1 2009/11/21 13:13:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.12.ebuild,v 1.1 2010/02/09 17:48:42 flameeyes Exp $
+
+EAPI=2
 
 inherit apache-module autotools
 
@@ -18,7 +20,8 @@ IUSE="lua perl vanilla"
 
 DEPEND="dev-libs/libxml2
 	perl? ( dev-perl/libwww-perl )
-	lua? ( >=dev-lang/lua-5.1 )"
+	lua? ( >=dev-lang/lua-5.1 )
+	www-servers/apache[apache2_modules_unique_id]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -29,29 +32,24 @@ APACHE2_MOD_DEFINE="SECURITY"
 
 need_apache2
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	if ! use vanilla; then
-		# Disabling rules here
-		epatch "${FILESDIR}"/${PN}-2.5.11-disable-http-pollution.patch
-	fi
-
-	epatch "${FILESDIR}"/${PN}-2.5.10-broken-autotools.patch
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.5.10-as-needed.patch
 
 	cd apache2
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	cd apache2
 
 	econf --with-apxs="${APXS}" \
 		--without-curl \
 		$(use_with lua) \
 		|| die "econf failed"
+}
+
+src_compile() {
+	cd apache2
 
 	APXS_FLAGS=
 	for flag in ${CFLAGS}; do
@@ -72,7 +70,7 @@ src_compile() {
 
 src_test() {
 	cd apache2
-	make test || die
+	emake test || die
 }
 
 src_install() {
@@ -104,6 +102,10 @@ src_install() {
 		mv "${D}"${APACHE_MODULES_CONFDIR}/mod_security/modsecurity_*{41_phpids,50_outbound}* \
 			"${D}"${APACHE_MODULES_CONFDIR}/mod_security/optional_rules || die
 	fi
+
+	keepdir /var/cache/mod_security || die
+	fowners apache:apache /var/cache/mod_security || die
+	fperms 0770 /var/cache/mod_security || die
 }
 
 pkg_postinst() {
