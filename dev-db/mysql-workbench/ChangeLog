@@ -1,0 +1,13 @@
+# ChangeLog for dev-db/mysql-workbench
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.1 2010/02/09 18:47:19 graaff Exp $
+
+*mysql-workbench-5.2.15 (09 Feb 2010)
+
+  09 Feb 2010; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-5.2.15.ebuild,
+  +files/mysql-workbench-5.2.15-as-needed.patch,
+  +files/mysql-workbench-5.2.15-configure.in.pythonlib.patch, +metadata.xml:
+  Initial import of mysql-workbench from my overlay, which in turn was based
+  on the hard work of many in #238507.
+
