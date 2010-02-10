@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.3.0_pre20100113.ebuild,v 1.1 2010/01/13 12:10:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.3.0_pre20100113.ebuild,v 1.2 2010/02/10 22:38:05 ssuominen Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
@@ -16,3 +16,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="virtual/tex-base"
+RDEPEND="${DEPEND}
+	dev-tex/bibtex2html"
