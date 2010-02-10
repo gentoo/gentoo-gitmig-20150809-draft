@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.292 2010/02/09 15:02:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.293 2010/02/10 03:37:32 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> alsa-utils-1.0.21-r1.ebuild:
+  Marked ppc stable for bug #300064.
 
   09 Feb 2010; Brent Baude <ranger@gentoo.org> alsa-utils-1.0.21-r1.ebuild:
   Marking alsa-utils-1.0.21-r1 ppc64 for bug 300064
