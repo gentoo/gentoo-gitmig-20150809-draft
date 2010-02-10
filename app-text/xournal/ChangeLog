@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.12 2009/12/26 19:22:31 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.13 2010/02/10 14:26:42 ssuominen Exp $
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xournal-0.4.2.1-r1.ebuild, xournal-0.4.5.ebuild, xournal-0.4.5-r1.ebuild:
+  Fix poppler depend.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> xournal-0.4.2.1-r1.ebuild,
   xournal-0.4.5.ebuild, xournal-0.4.5-r1.ebuild:
