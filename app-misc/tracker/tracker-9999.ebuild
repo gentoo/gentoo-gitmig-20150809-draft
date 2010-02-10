@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.9 2010/01/22 16:45:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.10 2010/02/10 14:31:12 ssuominen Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -53,8 +53,7 @@ RDEPEND="
 	nautilus? ( gnome-base/nautilus )
 	pdf? (
 		>=x11-libs/cairo-1
-		>=virtual/poppler-glib-0.5[cairo]
-		>=virtual/poppler-utils-0.5
+		>=app-text/poppler-0.12.3-r3[cairo,utils]
 		>=x11-libs/gtk+-2.12 )
 	playlist? ( dev-libs/totem-pl-parser )
 	tiff? ( media-libs/tiff )
