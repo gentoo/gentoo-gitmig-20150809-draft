@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta2-r1.ebuild,v 1.2 2010/01/07 13:35:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta2-r1.ebuild,v 1.3 2010/02/10 08:13:59 tove Exp $
 
 EAPI=2
 
@@ -63,5 +63,5 @@ src_install() {
 	doicon src/images/${PN}.png
 	make_desktop_entry ${PN} ${PN} ${PN} \
 		"Qt;Graphics;DataVisualization" || die "make_desktop_entry failed"
-	dodoc AUTHORS ChangeLog NEWS PORTINGTODO README RELEASE.NOTES || "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS PORTINGTODO README RELEASE.NOTES || die "dodoc failed"
 }
