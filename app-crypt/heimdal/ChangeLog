@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.148 2010/02/04 21:40:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.149 2010/02/10 16:04:45 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> heimdal-1.2.1-r4.ebuild:
+  Marked ppc stable for bug #300686.
 
   04 Feb 2010; Markus Meier <maekke@gentoo.org> heimdal-1.2.1-r4.ebuild:
   arm stable, bug #300686
