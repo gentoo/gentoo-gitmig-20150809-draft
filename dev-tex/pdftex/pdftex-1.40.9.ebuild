@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.9.ebuild,v 1.19 2009/12/12 12:27:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.9.ebuild,v 1.20 2010/02/10 22:06:54 ssuominen Exp $
 
 inherit libtool toolchain-funcs eutils multilib
 
@@ -14,7 +14,7 @@ SRC_URI="http://sarovar.org/download.php/1240/${P}.tar.bz2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=virtual/poppler-0.8
+RDEPEND=">=app-text/poppler-0.12.3-r3
 	media-libs/libpng
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
@@ -29,7 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-xpdfversion.patch"
 	epatch "${FILESDIR}/${P}-poppler-0.11.patch"
 	epatch "${FILESDIR}/${P}-getline.patch"
-	has_version '>=dev-libs/poppler-0.11.3' && epatch "${FILESDIR}/${P}-poppler-0.11.3.patch"
+	epatch "${FILESDIR}/${P}-poppler-0.11.3.patch"
 	elibtoolize
 }
 

@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.10.ebuild,v 1.6 2010/02/07 18:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.10.ebuild,v 1.7 2010/02/10 22:06:54 ssuominen Exp $
 
+EAPI=2
 inherit libtool toolchain-funcs eutils multilib
 
 DESCRIPTION="Standalone (patched to use poppler) version of pdftex"
@@ -14,7 +15,7 @@ SRC_URI="http://sarovar.org/frs/download.php/1292/${P}.tar.bz2"
 KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=virtual/poppler-0.11.3
+RDEPEND=">=app-text/poppler-0.12.3-r3[xpdf-headers]
 	media-libs/libpng
 	sys-libs/zlib
 	virtual/tex-base
@@ -22,16 +23,14 @@ RDEPEND=">=virtual/poppler-0.11.3
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${P}/src"
+S=${WORKDIR}/${P}/src
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
 	epatch "${FILESDIR}/${P}-poppler.patch"
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	# Too many regexps use A-Z a-z constructs, what causes problems with locales
 	# that don't have the same alphabetical order than ascii. Bug #293199
 	# So we set LC_ALL to C in order to avoid problems.
@@ -109,7 +108,9 @@ src_compile() {
 		--with-system-pnglib		\
 		--disable-multiplatform		\
 		${myconf}
+}
 
+src_compile() {
 	emake SHELL=/bin/sh || die
 }
 
