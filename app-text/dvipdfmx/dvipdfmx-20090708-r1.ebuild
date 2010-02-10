@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20090708-r1.ebuild,v 1.4 2010/01/30 19:02:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20090708-r1.ebuild,v 1.5 2010/02/10 21:14:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND="
 	app-text/libpaper
 "
 RDEPEND="${DEPEND}
-	virtual/poppler
+	>=app-text/poppler-0.12.3-r3
 	app-text/poppler-data
 "
 
