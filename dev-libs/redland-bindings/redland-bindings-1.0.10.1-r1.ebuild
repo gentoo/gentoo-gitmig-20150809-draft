@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1-r1.ebuild,v 1.1 2010/01/08 19:04:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1-r1.ebuild,v 1.2 2010/02/10 20:42:35 grobian Exp $
 
 EAPI=2
 inherit multilib
@@ -11,7 +11,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos"
 IUSE="perl python php ruby"
 
 RDEPEND=">=dev-libs/redland-1.0.10-r1
