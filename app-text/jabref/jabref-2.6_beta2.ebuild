@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.6_beta2.ebuild,v 1.1 2009/11/02 21:39:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.6_beta2.ebuild,v 1.2 2010/02/10 23:34:57 caster Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mysql"
 
 CDEPEND="dev-java/spin:0
-	>=dev-java/glazedlists-1.7.0:0[java5]
+	|| ( >=dev-java/glazedlists-1.7.0-r1:0 >=dev-java/glazedlists-1.7.0:0[java5] )
 	>=dev-java/antlr-2.7.3:0[java]
 	>=dev-java/jgoodies-forms-1.1.0:0
 	dev-java/jgoodies-looks:2.0
