@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.38 2010/01/02 11:12:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.39 2010/02/10 19:52:23 grobian Exp $
+
+  10 Feb 2010; Fabian Groffen <grobian@gentoo.org> diction-1.11.ebuild:
+  Marked ~x64-macos
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> diction-1.11.ebuild:
   Transfer Prefix keywords
