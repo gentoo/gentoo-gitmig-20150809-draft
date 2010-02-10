@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mbuffer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.21 2009/02/14 07:31:37 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.22 2010/02/10 05:00:52 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> mbuffer-20090113.ebuild:
+  Marked ppc stable for bug #304089.
 
   14 Feb 2009; Mike Frysinger <vapier@gentoo.org> mbuffer-20090113.ebuild:
   Fix by John R. Graham for bogus /bin/ksh requirement #258359 by Volker
