@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.1.6.ebuild,v 1.4 2008/05/11 16:42:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.1.6.ebuild,v 1.5 2010/02/10 03:23:37 josejx Exp $
 
 inherit toolchain-funcs mount-boot eutils
 
@@ -23,24 +23,24 @@ PROVIDE="virtual/bootloader"
 S=${WORKDIR}
 
 src_unpack() {
-	cd ${WORKDIR}
-	rpm2targz ${DISTDIR}/quik-${MY_PV}.ydl4.src.rpm
-	tar -xzf ${WORKDIR}/quik-${MY_PV}.ydl4.src.tar.gz || die
-	tar -xzf ${WORKDIR}/quik_2.1.orig.tar.gz
+	cd "${WORKDIR}"
+	rpm2targz "${DISTDIR}/quik-${MY_PV}.ydl4.src.rpm"
+	tar -xzf "${WORKDIR}/quik-${MY_PV}.ydl4.src.tar.gz" || die
+	tar -xzf "${WORKDIR}/quik_2.1.orig.tar.gz" || die
 
-	cd ${WORKDIR}/quik-2.1
-	epatch ${WORKDIR}/quik_2.1-6.diff.gz
-	epatch ${FILESDIR}/md-fix.diff
-	epatch ${FILESDIR}/headers.patch
+	cd "${WORKDIR}/quik-2.1"
+	epatch "${WORKDIR}/quik_2.1-6.diff.gz"
+	epatch "${FILESDIR}/md-fix.diff"
+	epatch "${FILESDIR}/headers.patch"
 }
 
 src_compile() {
-	cd ${WORKDIR}/quik-2.1
+	cd "${WORKDIR}/quik-2.1"
 	emake || die
 }
 
 src_install() {
-	cd ${WORKDIR}/quik-2.1
+	cd "${WORKDIR}/quik-2.1"
 	DESTDIR=${D} make install
 	prepman /usr
 }

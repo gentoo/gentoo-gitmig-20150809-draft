@@ -20,3 +20,14 @@
  char *strcpy(char * dest,const char *src);
  char *strncpy(char * dest,const char *src,size_t count);
  char *strchr(const char * s, int c);
+--- second/misc.c.bak	2010-02-09 22:18:47.000000000 -0500
++++ second/misc.c	2010-02-09 22:18:52.000000000 -0500
+@@ -11,7 +11,7 @@
+  */
+ #include <linux/kernel.h>
+ 
+-#include <asm/page.h>
++// #include <asm/page.h>
+ 
+ #include <sys/types.h>
+ #include "setjmp.h"
