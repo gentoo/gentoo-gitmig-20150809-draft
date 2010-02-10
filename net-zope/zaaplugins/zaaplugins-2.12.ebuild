@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.7 2010/02/10 22:45:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.8 2010/02/10 22:47:04 ssuominen Exp $
 
 EAPI=2
 inherit zproduct
@@ -10,7 +10,9 @@ HOMEPAGE="http://ingeniweb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ingeniweb/ZAAPlugins-${PV}.tar.gz"
 
 LICENSE="ZPL"
+SLOT="0"
 KEYWORDS="~ppc ~x86"
+IUSE=""
 
 DEPEND=">=net-zope/zattachmentattribute-2.12
 	>=app-text/wv-1.0.0
