@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.2-r1.ebuild,v 1.2 2009/03/30 16:25:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.2-r1.ebuild,v 1.3 2010/02/10 22:35:23 ssuominen Exp $
 
+EAPI=2
 inherit eutils webapp depend.php
 
 DESCRIPTION="dotProject is a PHP web-based project management framework"
@@ -14,16 +15,14 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=""
-RDEPEND="virtual/poppler-utils"
+RDEPEND=">=app-text/poppler-0.12.3-r3[utils]"
 
 need_httpd_cgi
 need_php_httpd
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}/${P}-r5791_5840.patch"
 }
 
