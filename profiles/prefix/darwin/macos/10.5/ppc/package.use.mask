@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.5/ppc/package.use.mask,v 1.1 2009/06/06 03:54:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.5/ppc/package.use.mask,v 1.2 2010/02/10 10:23:18 ssuominen Exp $
 
 # Elias Pipping <pipping@gentoo.org> (21 Nov 2007)
 # generating documentation fails for hugs98 because of too many errors
@@ -33,5 +33,5 @@ media-video/mplayer gtk sdl libcaca dv nas musepack bidi enca real win32codecs c
 # X only
 media-video/mplayer xvmc xv dga X xinerama
 # linux only
-media-video/mplayer dvb esd lirc svga arts jack joystick matrox
+media-video/mplayer dvb esd lirc svga jack joystick matrox
 media-sound/mpg123 mmx
