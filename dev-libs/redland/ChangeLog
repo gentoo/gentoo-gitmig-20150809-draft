@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.64 2010/01/19 00:27:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.65 2010/02/10 20:40:21 grobian Exp $
+
+*redland-1.0.10-r2 (10 Feb 2010)
+
+  10 Feb 2010; Fabian Groffen <grobian@gentoo.org> redland-1.0.10-r1.ebuild,
+  +redland-1.0.10-r2.ebuild:
+  Bump to EAPI=3 for Prefix, drop Prefix keywords and hacks from -r1,
+  keywords moved to -r2, marked ~ppc-macos
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> redland-1.0.10-r1.ebuild:
   Stable for HPPA (bug #301306).
