@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.195 2010/02/01 19:47:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.196 2010/02/10 04:06:42 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> tor-0.2.1.22.ebuild:
+  Marked ppc stable for bug #301701.
 
   01 Feb 2010; Markus Meier <maekke@gentoo.org> tor-0.2.1.22.ebuild:
   amd64 stable, bug #301701
