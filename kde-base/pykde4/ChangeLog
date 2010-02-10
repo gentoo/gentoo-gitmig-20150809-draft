@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.58 2010/02/09 15:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.59 2010/02/10 06:45:08 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> pykde4-4.3.3-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #303929.
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> pykde4-4.3.3-r1.ebuild:
   amd64 stable, bug 303929
