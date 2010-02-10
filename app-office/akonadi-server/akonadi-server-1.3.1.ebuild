@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.3.1.ebuild,v 1.1 2010/02/09 13:27:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.3.1.ebuild,v 1.2 2010/02/10 03:00:16 abcd Exp $
 
 EAPI="2"
 
@@ -39,11 +39,12 @@ src_install() {
 		driver="QSQLITE"
 	fi
 	# Who knows, maybe it accidentally fixes our permission issues
-	mkdir -p "${D}"/usr/share/config/akonadi || die "mkdir failed"
-	cat <<-EOF > "${D}"/usr/share/config/akonadi/akonadiserverrc
+	cat <<-EOF > "${T}"/akonadiserverrc
 [%General]
 Driver=${driver}
 EOF
+	insinto /usr/share/config/akonadi
+	doins "${T}"/akonadiserverrc || die "doins failed"
 
 	cmake-utils_src_install
 }
