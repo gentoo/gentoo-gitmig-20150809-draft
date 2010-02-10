@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/liblzw-0.2.ebuild,v 1.2 2010/02/10 16:34:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/liblzw-0.2.ebuild,v 1.3 2010/02/10 21:00:05 maekke Exp $
 
 DESCRIPTION="small C library for reading LZW compressed files (.Z)"
 HOMEPAGE="http://freestdf.sourceforge.net/liblzw.php"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/freestdf/${P}.tar.lzma"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ia64 ~m68k ~s390 ~sh ~x86"
+KEYWORDS="amd64 arm hppa ~ia64 ~m68k ~s390 ~sh x86"
 IUSE=""
 
 src_install() {
