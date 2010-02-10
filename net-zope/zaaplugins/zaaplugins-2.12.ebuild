@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.6 2009/03/30 14:02:02 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.7 2010/02/10 22:45:55 ssuominen Exp $
 
+EAPI=2
 inherit zproduct
 
 DESCRIPTION="A collection of ZAttachmentAttribute Plugins"
@@ -14,7 +15,7 @@ KEYWORDS="~ppc ~x86"
 DEPEND=">=net-zope/zattachmentattribute-2.12
 	>=app-text/wv-1.0.0
 	>=app-text/xlhtml-0.5
-	>=virtual/poppler-utils-0.5"
+	>=app-text/poppler-0.12.3-r3[utils]"
 
 ZPROD_LIST="ZAAPlugins"
 
