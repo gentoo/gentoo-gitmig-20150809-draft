@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-RawIP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.36 2010/01/30 14:03:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/ChangeLog,v 1.37 2010/02/10 04:08:11 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> Net-RawIP-0.25.ebuild:
+  Marked ppc stable for bug #301572.
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> Net-RawIP-0.25.ebuild:
   alpha/ia64 stable wrt #301572
