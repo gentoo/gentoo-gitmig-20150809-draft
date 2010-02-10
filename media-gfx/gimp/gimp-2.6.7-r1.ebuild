@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.7-r1.ebuild,v 1.3 2009/11/16 23:09:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.7-r1.ebuild,v 1.4 2010/02/10 13:54:28 ssuominen Exp $
 
 EAPI=2
 
@@ -38,7 +38,7 @@ RDEPEND=">=dev-libs/glib-2.18.1
 	exif? ( >=media-libs/libexif-0.6.15 )
 	lcms? ( media-libs/lcms )
 	mng? ( media-libs/libmng )
-	pdf? ( >=virtual/poppler-glib-0.3.1[cairo] )
+	pdf? ( >=app-text/poppler-0.12.3-r3[cairo] )
 	png? ( >=media-libs/libpng-1.2.2 )
 	python?	( >=dev-lang/python-2.5.0
 		>=dev-python/pygtk-2.10.4 )

@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/pdf2svg-0.2.1.ebuild,v 1.2 2009/03/30 13:40:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/pdf2svg-0.2.1.ebuild,v 1.3 2010/02/10 13:49:35 ssuominen Exp $
 
 EAPI=2
-
 inherit eutils
 
 DESCRIPTION="pdf2svg is based on poppler and cairo and can convert pdf to svg files"
@@ -15,18 +14,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/poppler-glib-0.5.4[cairo]
+RDEPEND=">=app-text/poppler-0.12.3-r3[cairo]
 	>=x11-libs/cairo-1.2.6[svg]
-	>=x11-libs/gtk+-2"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	sed -i -e \
-		's:#include <stdio.h>:#include <stdio.h>\n#include <stdlib.h>:' \
-		${PN}.c || die "sed failed."
+	sed -i \
+		-e 's:#include <stdio.h>:#include <stdio.h>\n#include <stdlib.h>:' \
+		${PN}.c || die
 }
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
 }
