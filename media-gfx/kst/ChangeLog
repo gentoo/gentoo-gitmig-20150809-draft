@@ -1,9 +1,9 @@
 # ChangeLog for media-gfx/kst
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.28 2010/02/10 08:13:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.29 2010/02/10 08:19:42 tove Exp $
 
   10 Feb 2010; Torsten Veller <tove@gentoo.org> kst-2.0.0_beta2-r1.ebuild:
-  Add missing die: "..." -> die "..."
+  Add missing die: || "..." -> || die "..."
 
   07 Jan 2010; <hwoarang@gentoo.org> kst-2.0.0_beta2-r1.ebuild:
   replace qt4 eclass with qt4-r2
