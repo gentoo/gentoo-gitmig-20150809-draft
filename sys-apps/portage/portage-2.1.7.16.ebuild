@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.16.ebuild,v 1.6 2010/01/26 16:16:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.16.ebuild,v 1.7 2010/02/10 00:49:49 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -269,6 +269,8 @@ pkg_preinst() {
 
 	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
 	REPO_LAYOUT_CONF_WARN=$?
+	has_version "<${CATEGORY}/${PN}-2.1.7"
+	UPGRADE_FROM_2_1=$?
 }
 
 pkg_postinst() {
@@ -276,6 +278,7 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
+	local warning_shown=0
 	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
 		ewarn
 		echo "If you want overlay eclasses to override eclasses from" \
@@ -283,7 +286,23 @@ pkg_postinst() {
 			"for information about the new layout.conf and repos.conf" \
 			"configuration files." \
 			| fmt -w 75 | while read -r ; do ewarn "$REPLY" ; done
+	fi
+	if [[ $UPGRADE_FROM_2_1 = 0 && -n $PORTAGE_BINHOST ]] ; then
 		ewarn
+		echo "If you have an old PORTAGE_BINHOST setting in /etc/make.conf" \
+		"then you will encounter bug #303211. Therefore, please ensure" \
+		"that your PORTAGE_BINHOST setting points to a remote directory" \
+		"containing a \$PKGDIR/Packages file which is created by" \
+		">=portage-2.1.6. If \$PKGDIR/Packages does not exist on" \
+		"the server or it is incomplete, you must run \`emaint" \
+		"--fix binhost\` on the server in order to generate it." \
+		"See \`man make.conf\` for more information about" \
+		"PORTAGE_BINHOST." | \
+		fmt -w 70 | while read -r ; do ewarn "$REPLY" ; done
+		warning_shown=1
+	fi
+	if [ $warning_shown = 1 ] ; then
+		ewarn # for symmetry
 	fi
 
 	einfo
