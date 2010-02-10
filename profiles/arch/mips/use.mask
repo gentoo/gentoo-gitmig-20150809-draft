@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.23 2010/01/09 09:43:05 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.24 2010/02/10 10:20:36 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -265,7 +265,6 @@ eds
 acpi
 afs
 apm
-arts
 directfb
 dvdr
 ibm

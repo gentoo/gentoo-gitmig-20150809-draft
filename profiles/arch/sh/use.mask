@@ -52,7 +52,6 @@ mythtv
 dvb
 qt3
 qt4
-arts
 kde
 diet
 lirc

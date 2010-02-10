@@ -73,7 +73,6 @@ gphoto2
 mythtv
 dvb
 qt3
-arts
 afs
 mono
 pike
