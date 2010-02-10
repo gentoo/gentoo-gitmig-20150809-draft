@@ -1,10 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.6 2010/02/10 18:06:09 grobian Exp $
-
-# Fabian Groffen <grobian@gentoo.org> (10 Feb 2010)
-# Bug #304291, tries to build a .app with Qt, don't feel like fixing it
-dev-util/cmake qt4
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.7 2010/02/10 19:23:21 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (30 Oct 2009)
 # X only
