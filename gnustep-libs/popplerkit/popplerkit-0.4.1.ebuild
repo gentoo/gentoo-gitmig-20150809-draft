@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.1.ebuild,v 1.5 2009/07/19 15:27:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.1.ebuild,v 1.6 2010/02/10 20:04:33 ssuominen Exp $
 
 EAPI=2
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/poppler-0.6
+# Check me. Is xpdf-headers required?
+RDEPEND=">=app-text/poppler-0.12.3-r3[xpdf-headers]
 	>=media-libs/freetype-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
