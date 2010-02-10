@@ -1,8 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.7 2010/02/10 03:52:03 dirtyepic Exp $
-
-WX_GTK_VER=2.6
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.8 2010/02/10 06:32:50 dirtyepic Exp $
 
 inherit eutils wxwidgets
 
@@ -47,6 +45,11 @@ src_unpack() {
 }
 
 src_compile() {
+	WX_GTK_VER=2.6
+
+	use wxwidgets && \
+		need-wxwidgets ansi
+
 	use x86 && \
 		myconf="--enable-idle-hack --enable-fast-function-calls"
 
