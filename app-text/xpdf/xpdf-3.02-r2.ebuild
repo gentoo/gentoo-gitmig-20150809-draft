@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r2.ebuild,v 1.9 2010/02/10 19:57:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r2.ebuild,v 1.10 2010/02/10 19:59:09 ssuominen Exp $
 
 EAPI=2
 
@@ -41,10 +41,8 @@ pkg_setup() {
 
 src_prepare() {
 	use nodrm && epatch "${FILESDIR}/${P}-poppler-nodrm.patch"
-	has_version '>=virtual/poppler-0.10.0' && \
-		epatch "${FILESDIR}/${P}-poppler-0.10.0.patch"
-	has_version '>=virtual/poppler-0.11.0' && \
-		epatch "${FILESDIR}/${P}-poppler-0.11.0.patch"
+	epatch "${FILESDIR}/${P}-poppler-0.10.0.patch"
+	epatch "${FILESDIR}/${P}-poppler-0.11.0.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
 
