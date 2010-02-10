@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.7 2009/12/01 11:06:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.8 2010/02/10 03:44:49 josejx Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.funet.fi/pub/msdos/games/interplay/${DEMO}
 # See README.TXT
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 # d2x-0.2.5-r2 may include the demo data itself
