@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.26.2.ebuild,v 1.7 2010/01/17 23:30:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.26.2.ebuild,v 1.8 2010/02/10 17:41:05 ssuominen Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22.0 )
 	nautilus? ( >=gnome-base/nautilus-2.10 )
-	>=virtual/poppler-glib-0.8[cairo]
+	>=app-text/poppler-0.12.3-r3[cairo]
 	dvi? (
 		virtual/tex-base
 		t1lib? ( >=media-libs/t1lib-5.0.0 ) )

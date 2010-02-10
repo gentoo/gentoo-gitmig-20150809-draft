@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.24.2.ebuild,v 1.12 2009/05/18 21:48:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.24.2.ebuild,v 1.13 2010/02/10 17:41:05 ssuominen Exp $
 
 EAPI="2"
 inherit eutils gnome2
@@ -23,7 +23,7 @@ RDEPEND="
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
 	nautilus? ( >=gnome-base/nautilus-2.10 )
-	>=virtual/poppler-glib-0.8[cairo]
+	>=app-text/poppler-0.12.3-r3[cairo]
 	dvi? (
 		virtual/tex-base
 		t1lib? ( >=media-libs/t1lib-5.0.0 )
