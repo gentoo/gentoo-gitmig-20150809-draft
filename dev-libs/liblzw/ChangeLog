@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblzw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/ChangeLog,v 1.9 2010/02/09 01:19:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/ChangeLog,v 1.10 2010/02/10 16:34:29 jer Exp $
+
+  10 Feb 2010; Jeroen Roovers <jer@gentoo.org> liblzw-0.2.ebuild:
+  Stable for HPPA (bug #300943).
 
 *liblzw-0.2 (09 Feb 2010)
 
