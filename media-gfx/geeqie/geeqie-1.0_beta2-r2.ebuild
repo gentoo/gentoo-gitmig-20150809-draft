@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0_beta2-r2.ebuild,v 1.1 2010/01/05 15:27:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0_beta2-r2.ebuild,v 1.2 2010/02/10 10:44:53 voyageur Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	dev-util/intltool
 	sys-devel/gettext"
 
 src_prepare() {
