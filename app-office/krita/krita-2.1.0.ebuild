@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.0.ebuild,v 1.7 2010/01/24 13:39:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.0.ebuild,v 1.8 2010/02/10 19:26:57 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND="
 	gmm? ( sci-mathematics/gmm )
 	kdcraw? ( >=kde-base/libkdcraw-${KDE_MINIMAL} )
 	opengl? ( media-libs/glew )
-	pdf? ( >=virtual/poppler-qt4-0.10.5 )
+	pdf? ( >=app-text/poppler-0.12.3-r3[qt4] )
 "
 RDEPEND="${DEPEND}"
 
