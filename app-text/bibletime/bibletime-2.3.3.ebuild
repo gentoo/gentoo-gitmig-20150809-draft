@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.3.3.ebuild,v 1.4 2009/12/25 17:35:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.3.3.ebuild,v 1.5 2010/02/10 04:03:47 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bibletime/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=app-text/sword-1.6.0
