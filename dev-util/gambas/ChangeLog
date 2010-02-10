@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gambas
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.59 2009/11/11 21:09:34 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.60 2010/02/10 22:09:36 ssuominen Exp $
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> gambas-2.16.0.ebuild:
+  Fix poppler depend.
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> gambas-2.11.1.ebuild,
   gambas-2.16.0.ebuild:
