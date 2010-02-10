@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5272 2010/02/10 21:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5273 2010/02/10 23:07:38 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3253,7 +3253,6 @@ sys-power/suspend:fbsplash - Add support for framebuffer splash
 sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/procps:n32 - Enable n32 ABI support on mips
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
-virtual/poppler-utils:abiword -  Enable support for app-office/abiword output. Requires dev-libs/libxml2. 
 www-apache/mod_mono:aspnet2 - Handle all applications using ASP.NET 2.0 engine by default
 www-apache/mod_security:perl -  Add a dependency upon Perl and install the script to update the Core Rule Set. Please note that this script will use the original Core Rule Set, and it's currently mostly untested. 
 www-apache/mod_security:vanilla -  Provide the original ModSecurity Core Rule Set without Gentoo-specific relaxation. When this flag is enabled, we install the unadulterated Core Rule Set. Warning! The original Core Rule Set is draconic and most likely will break your web applications, including Rails-based web applications and Bugzilla. 
@@ -3385,7 +3384,6 @@ x11-libs/qt:qt3support - Enable the Qt3Support libraries for Qt4
 x11-libs/qt-core:glib - Enable dev-libs/glib eventloop support
 x11-libs/qt-core:optimized-qmake - Enable qmake optimization
 x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-x11-libs/qt-declarative:demos - Install a set of demo applications
 x11-libs/qt-gui:glib -  Enable dev-libs/glib eventloop support 
 x11-libs/qt-gui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4. 
 x11-libs/qt-gui:raster -  Use the alternative raster graphicssystem as default rendering engine 
