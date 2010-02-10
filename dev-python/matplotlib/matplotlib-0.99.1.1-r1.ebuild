@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.2 2010/02/08 08:43:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.3 2010/02/10 22:43:03 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -57,7 +57,7 @@ RDEPEND="${CDEPEND}
 		virtual/latex-base
 		app-text/ghostscript-gpl
 		app-text/dvipng
-		virtual/poppler-utils
+		>=app-text/poppler-0.12.3-r3[utils]
 		|| ( dev-texlive/texlive-fontsrecommended
 			 app-text/ptex ) )"
 RESTRICT_PYTHON_ABIS="3.*"
