@@ -1,27 +1,26 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2-r2.ebuild,v 1.3 2009/11/27 08:51:52 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2-r2.ebuild,v 1.4 2010/02/10 22:32:10 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs flag-o-matic multilib
 
 DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
 SRC_URI="http://charm.cs.uiuc.edu/distrib/${P}_src.tar.gz"
-S="${WORKDIR}/${P}"
+
+LICENSE="charm"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cmkopt tcp smp doc"
 
-DEPEND="doc? ( virtual/poppler-utils
-		dev-tex/latex2html
-		virtual/tex-base
-		)"
-
+DEPEND="doc? ( >=app-text/poppler-0.12.3-r3[utils]
+	dev-tex/latex2html
+	virtual/tex-base )"
 RDEPEND=""
 
 case ${ARCH} in
-
 	x86)
 		CHARM_ARCH="net-linux" ;;
 
@@ -29,10 +28,7 @@ case ${ARCH} in
 		CHARM_ARCH="net-linux-amd64" ;;
 esac
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-charmrun.patch"
 
 	# TCP instead of default UDP for socket comunication
