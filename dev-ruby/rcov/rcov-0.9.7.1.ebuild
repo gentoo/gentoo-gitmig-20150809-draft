@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.7.1.ebuild,v 1.2 2010/01/14 19:25:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.7.1.ebuild,v 1.3 2010/02/10 08:12:52 tove Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ all_ruby_prepare() {
 
 	# Without this change, testing will always cause the extension to
 	# be rebuilt, and we don't want that.
-	sed -i -e '/:test_rcovrt =>/s| => \[.*\]||' Rakefile || "Rakefile fix failed"
+	sed -i -e '/:test_rcovrt =>/s| => \[.*\]||' Rakefile || die "Rakefile fix failed"
 
 	# remove pre-packaged jar file (d'oh!)
 	rm lib/rcovrt.jar || die
