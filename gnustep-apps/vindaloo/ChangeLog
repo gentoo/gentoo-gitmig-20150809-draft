@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/vindaloo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/vindaloo/ChangeLog,v 1.16 2009/07/19 15:30:18 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/vindaloo/ChangeLog,v 1.17 2010/02/10 21:43:42 voyageur Exp $
+
+  10 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -vindaloo-0.2-r1.ebuild, -vindaloo-0.4.0.ebuild:
+  Drop old version
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> vindaloo-0.4.1.ebuild:
   ppc stable #273704
