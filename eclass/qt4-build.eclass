@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.62 2010/01/21 05:57:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.63 2010/02/10 20:34:17 yngwin Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -72,15 +72,11 @@ qt4-build_pkg_setup() {
 		LD_LIBRARY_PATH="${S}/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
 	else
 		DYLD_LIBRARY_PATH="${S}/lib${DYLD_LIBRARY_PATH:+:}${DYLD_LIBRARY_PATH}"
-		# on mac we *need* src/gui/kernel/qapplication_mac.cpp for platfrom
-		# detection since the x11-headers package b0rkens the header
-		# installation, we have to extract src/ and include/ completely on mac
-		# tools is needed for qt-demo and some others
-		QT4_EXTRACT_DIRECTORIES+=" src include"
-
-		if [[ ${PN} == qt-demo || ${PN} == qt-qt3support || ${PN} == qt-webkit ]]; then
-			QT4_EXTRACT_DIRECTORIES+=" tools"
-		fi
+		# On MacOS we *need* at least src/gui/kernel/qapplication_mac.mm for
+		# platform detection. Note: needs to come before any directories to
+		# avoid extract failure.
+		[[ ${CHOST} == *-apple-darwin* ]] && \
+			QT4_EXTRACT_DIRECTORIES="src/gui/kernel/qapplication_mac.mm ${QT4_EXTRACT_DIRECTORIES}"
 	fi
 
 	# Make sure ebuilds use the required EAPI
