@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.247 2010/02/10 22:25:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.248 2010/02/10 22:44:31 chainsaw Exp $
+
+*asterisk-1.6.1.14-r1 (10 Feb 2010)
+
+  10 Feb 2010; <chainsaw@gentoo.org> +asterisk-1.6.1.14-r1.ebuild,
+  +files/1.6.1/asterisk-1.6.1.14-graceful-restart-segfault.patch,
+  +files/1.6.1/asterisk-1.6.1.14-parallel-make.patch:
+  Add nv_faxdetect as scavenged by Cory Coager in bug #298328. Trim
+  unnecessary parts from parallel make patch, upstream bug #16489. Stop
+  segfaulting on a graceful restart, upstream bugs #16062 & #16470.
 
 *asterisk-1.6.2.2-r1 (10 Feb 2010)
 
