@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.25 2010/02/09 07:46:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.26 2010/02/10 08:35:23 pva Exp $
+
+  10 Feb 2010; Peter Volkov <pva@gentoo.org>
+  autoconf-archive-2009.12.16.ebuild:
+  Don't install COPYING.
 
 *autoconf-archive-2009.12.16 (09 Feb 2010)
 
