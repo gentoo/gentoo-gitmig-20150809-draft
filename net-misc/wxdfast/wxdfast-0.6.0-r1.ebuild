@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0-r1.ebuild,v 1.2 2009/10/24 05:36:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/wxdfast-0.6.0-r1.ebuild,v 1.3 2010/02/10 00:14:05 dirtyepic Exp $
 
 EAPI="2"
-
 WX_GTK_VER="2.8"
 
 inherit autotools eutils wxwidgets
@@ -17,12 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/wxGTK:2.8"
+DEPEND="x11-libs/wxGTK:2.8[X]"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	need-wxwidgets unicode
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-wxrc-configure.patch
