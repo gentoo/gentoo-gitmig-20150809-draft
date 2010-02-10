@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3877 2010/02/10 18:26:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3878 2010/02/10 20:14:56 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Removed x11-themes/gtk-engines-qt from tree (see #277726).
 
   10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Removed dev-python/PyQt and reverse deps from tree.

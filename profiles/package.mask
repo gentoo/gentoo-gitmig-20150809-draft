@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11202 2010/02/10 18:26:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11203 2010/02/10 20:14:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -373,13 +373,6 @@ sys-apps/count
 #
 # Removal on 2010-02-26
 sys-apps/sdd
-
-# Samuli Suominen <ssuominen@gentoo.org> (27 Dec 2009)
-# Broken engine, see bug 277726. Replaced by
-# kde-misc/kcm_gtk
-#
-# Masked for removal
-x11-themes/gtk-engines-qt
 
 # Markos Chandras <hwoarang@gentoo.org> (26 Dec 2009)
 # keeping rc ebuilds masked
