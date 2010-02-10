@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/virtuoso-odbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.2 2010/02/09 16:18:07 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.3 2010/02/10 07:08:30 abcd Exp $
+
+  10 Feb 2010; Jonathan Callen <abcd@gentoo.org> virtuoso-odbc-6.1.0.ebuild:
+  Add ~amd64-linux/~x86-linux keywords; bump to EAPI=3
 
   09 Feb 2010; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
   Fixed my email

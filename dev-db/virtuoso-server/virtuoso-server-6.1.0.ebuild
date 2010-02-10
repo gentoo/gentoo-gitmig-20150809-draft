@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.0.ebuild,v 1.1 2010/02/08 20:33:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.0.ebuild,v 1.2 2010/02/10 07:09:49 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit virtuoso
 
 DESCRIPTION="Server binaries for Virtuoso, high-performance object-relational SQL database"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="kerberos ldap readline static-libs"
 
 # zeroconf support looks like broken - disabling
@@ -74,8 +74,6 @@ src_configure() {
 }
 
 src_install() {
-	use prefix || ED="${D}"
-
 	virtuoso_src_install
 
 	# Rename isql executables (conflicts with unixODBC)
