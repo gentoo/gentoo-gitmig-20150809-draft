@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.4.0.ebuild,v 1.1 2010/02/09 00:21:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.4.0.ebuild,v 1.2 2010/02/10 21:39:17 abcd Exp $
 
 EAPI="2"
 
@@ -14,10 +14,10 @@ inherit kde4-meta ruby-ng
 
 DESCRIPTION="KDE Ruby bindings"
 KEYWORDS="~amd64 ~x86"
-IUSE="akonadi debug kdevplatform phonon plasma qscintilla qwt semantic-desktop"
+IUSE="akonadi debug kdevplatform okular phonon plasma qscintilla qwt semantic-desktop"
 
 DEPEND="
-	$(add_kdebase_dep smoke 'akonadi?,kdevplatform?,phonon?,qscintilla?,qwt?,semantic-desktop?')
+	$(add_kdebase_dep smoke 'akonadi?,kdevplatform?,okular?,phonon?,qscintilla?,qwt?,semantic-desktop?')
 "
 
 RDEPEND="${DEPEND}
@@ -65,6 +65,7 @@ each_ruby_configure() {
 		$(cmake-utils_use_enable akonadi)
 		$(cmake-utils_use_enable kdevplatform KDEVPLATFORM_RUBY)
 		$(cmake-utils_use_with kdevplatform KDevPlatform)
+		$(cmake-utils_use_enable okular)
 		$(cmake-utils_use_enable plasma PLASMA_RUBY)
 		$(cmake-utils_use_enable phonon)
 		$(cmake-utils_use_enable phonon PHONON_RUBY)

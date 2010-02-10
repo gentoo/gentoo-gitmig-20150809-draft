@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.2 2010/02/09 16:29:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.3 2010/02/10 21:39:17 abcd Exp $
+
+  10 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  kdebindings-ruby-4.4.0.ebuild, metadata.xml:
+  Make okular bindings optional instead of automagic
 
   09 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Add missing useflag desc.
