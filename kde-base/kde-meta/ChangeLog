@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.156 2010/02/09 00:14:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.157 2010/02/10 09:15:31 scarabeus Exp $
+
+  10 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  kde-meta-4.4.0.ebuild:
+  Wrap semantic-desktop over whole kdepim.
 
 *kde-meta-4.4.0 (08 Feb 2010)
 
