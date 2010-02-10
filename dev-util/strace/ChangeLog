@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.142 2010/02/01 19:55:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.143 2010/02/10 06:55:37 vapier Exp $
+
+  10 Feb 2010; Mike Frysinger <vapier@gentoo.org> strace-4.5.19.ebuild:
+  Mark ia64 stable #297079.
 
   01 Feb 2010; Markus Meier <maekke@gentoo.org> strace-4.5.19.ebuild:
   arm stable, bug #297079
