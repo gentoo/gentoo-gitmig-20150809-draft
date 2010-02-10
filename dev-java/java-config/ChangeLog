@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.238 2010/02/09 15:42:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.239 2010/02/10 03:34:09 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> java-config-2.1.10.ebuild:
+  Marked ppc stable for bug #299868.
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> java-config-2.1.10.ebuild:
   amd64 stable, bug 299868
