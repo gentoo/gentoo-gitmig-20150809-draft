@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.1.ebuild,v 1.8 2010/02/01 09:06:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.1.ebuild,v 1.9 2010/02/10 07:58:20 ssuominen Exp $
 
 EAPI=1
 inherit eutils
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND=">=app-text/opensp-1.5
-	 >=net-misc/curl-7.9.7
+	>=net-misc/curl-7.9.7
 	dev-cpp/libxmlpp:0
 	dev-libs/libxml2"
 
