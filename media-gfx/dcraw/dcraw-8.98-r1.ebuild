@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.98-r1.ebuild,v 1.1 2009/12/14 14:06:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.98-r1.ebuild,v 1.2 2010/02/10 19:22:21 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.cybercom.net/~dcoffin/dcraw/archive/${P}.tar.gz
 
 LICENSE="freedist GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls gimp jpeg lcms"
 
 COMMON_DEPEND="jpeg? ( >=media-libs/jpeg-6b )
@@ -121,7 +121,7 @@ pkg_postinst() {
 	elog "the PPM files produced by dcraw to other image formats."
 	elog ""
 	ewarn "The functionality of the external program 'fujiturn' was"
-	ewarn "incoporated into dcraw and is automatically used now."
+	ewarn "incorporated into dcraw and is automatically used now."
 	elog ""
 	elog "There's an example wrapper script included called 'dcwrap'."
 	elog ""
