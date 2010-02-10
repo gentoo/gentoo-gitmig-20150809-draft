@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.56 2010/02/10 05:13:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.57 2010/02/10 18:27:40 jer Exp $
+
+  10 Feb 2010; Jeroen Roovers <jer@gentoo.org> pytz-2009u.ebuild:
+  Stable for HPPA (bug #303613).
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> pytz-2009u.ebuild:
   Marked ppc/ppc64 stable for bug #303613.
