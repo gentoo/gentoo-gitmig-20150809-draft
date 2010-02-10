@@ -1,14 +1,14 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.18 2010/02/10 00:01:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.19 2010/02/10 00:02:07 josejx Exp $
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> openscenegraph-2.8.2.ebuild:
-  Marked ppc stable for bug #296459.
+  Marked ppc stable for bug #296257.
 
   28 Dec 2009; Markus Meier <maekke@gentoo.org> openscenegraph-2.8.2.ebuild:
   amd64 stable, bug #296257
 
-  28 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  28 Dec 2009; RaÃºl Porcel <armin76@gentoo.org>
   openscenegraph-2.8.2.ebuild:
   sparc stable wrt #296257
 
@@ -18,7 +18,7 @@
 
 *openscenegraph-2.8.2 (12 Oct 2009)
 
-  12 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  12 Oct 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   +openscenegraph-2.8.2.ebuild:
   [QA] version bump. Makre src_configure play nicely with cmake-utils. Acked
   by Mr_Bones_
