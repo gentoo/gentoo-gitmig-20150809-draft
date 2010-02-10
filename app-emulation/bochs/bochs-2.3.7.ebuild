@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.6 2009/09/23 15:32:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.7.ebuild,v 1.7 2010/02/10 03:52:03 dirtyepic Exp $
 
-inherit eutils wxwidgets autotools
+WX_GTK_VER=2.6
+
+inherit eutils wxwidgets
 
 DESCRIPTION="a LGPL-ed pc emulator"
 HOMEPAGE="http://bochs.sourceforge.net/"
@@ -12,7 +14,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ~sparc x86"
-IUSE="X debugger readline usb wxwindows svga sdl ncurses vnc acpi"
+IUSE="X debugger readline usb wxwidgets svga sdl ncurses vnc acpi"
 
 RDEPEND="X? ( x11-libs/libICE
 		x11-libs/libSM
@@ -20,7 +22,7 @@ RDEPEND="X? ( x11-libs/libICE
 		x11-libs/libXpm )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
-	wxwindows? ( =x11-libs/wxGTK-2.6* )
+	wxwidgets? ( =x11-libs/wxGTK-2.6* )
 	readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )"
 
@@ -42,27 +44,18 @@ src_unpack() {
 		-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux4.tar.gz .:" \
 		Makefile.in || \
 		die "sed Makefile.in failed"
-
-	# Make sure wxwindows 2.6 is used in case both 2.6 and 2.4 are installed
-	sed -i -e "s:wx-config:wx-config-2.6:" configure.in
-	eautoconf
 }
 
 src_compile() {
-	export WX_GTK_VER=2.6
-
-	use wxwindows && \
-		need-wxwidgets gtk2
-
 	use x86 && \
 		myconf="--enable-idle-hack --enable-fast-function-calls"
 
 	use amd64 && \
 		myconf="--enable-x86-64"
 
-	use wxwindows && \
+	use wxwidgets && \
 		myconf="${myconf} --with-wx"
-	use wxwindows || \
+	use wxwidgets || \
 		myconf="${myconf} --without-wx"
 
 	use vnc && \
@@ -152,7 +145,7 @@ src_install() {
 		dodoc README.rfb || die "dodoc failed"
 	fi
 
-	if [ use wxwindows ]
+	if [ use wxwidgets ]
 	then
 		dodoc README-wxWindows || die "dodoc failed"
 	fi

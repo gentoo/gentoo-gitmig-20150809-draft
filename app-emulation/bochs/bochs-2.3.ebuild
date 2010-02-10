@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.ebuild,v 1.8 2009/09/23 15:32:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.3.ebuild,v 1.9 2010/02/10 03:52:03 dirtyepic Exp $
+
+WX_GTK_VER=2.6
 
 inherit eutils wxwidgets autotools
 
@@ -12,14 +14,14 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ~sparc x86"
-IUSE="debugger readline sdl wxwindows X ncurses vnc"
+IUSE="debugger readline sdl wxwidgets X ncurses vnc"
 
 RDEPEND="X? ( x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libX11
 		x11-libs/libXpm )
 	sdl? ( media-libs/libsdl )
-	wxwindows? ( =x11-libs/wxGTK-2.6* )
+	wxwidgets? ( =x11-libs/wxGTK-2.6* )
 	readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )"
 
@@ -41,8 +43,6 @@ src_unpack() {
 	sed -i -e "s:/opt/gnome:/usr:" configure
 # Fix some bad coding for gcc-4.1 compliance
 	sed -i -e "s:\#ifndef PARANOID:\#if 0:" iodev/hdimage.h
-# Make sure wxwindows 2.6 is used in case both 2.6 and 2.4 are installed
-	sed -i -e "s:wx-config:wx-config-2.6:" configure
 # wx unicode patches from fedora and bits the fedora missed
 #	epatch ${DISTDIR}/${P}-unicode.patch.gz
 	epatch ${FILESDIR}/${P}-redog.patch
@@ -52,18 +52,13 @@ src_unpack() {
 }
 
 src_compile() {
-	export WX_GTK_VER=2.6
-
-	use wxwindows && \
-		need-wxwidgets gtk2
-
 	[[ "$ARCH" == "x86" ]] \
 		&& myconf="--enable-idle-hack --enable-fast-function-calls"
 	myconf="${myconf} `use_with sdl`"
 	myconf="${myconf} `use_enable readline`"
-	use wxwindows && \
+	use wxwidgets && \
 		myconf="${myconf} --with-wx"
-	use wxwindows || \
+	use wxwidgets || \
 		myconf="${myconf} --without-wx"
 	use debugger && \
 		myconf="$myconf --enable-debugger --enable-disasm \
