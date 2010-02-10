@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.1.ebuild,v 1.5 2010/01/23 15:50:24 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.1.ebuild,v 1.6 2010/02/10 20:11:56 yngwin Exp $
 
 EAPI="2"
 inherit confutils eutils qt4-build
@@ -47,26 +47,23 @@ pkg_setup() {
 	fi
 
 	confutils_use_depend_all gtk glib
-	qt4-build_pkg_setup
-}
 
-src_unpack() {
-QT4_TARGET_DIRECTORIES="
-src/gui
-src/scripttools
-tools/designer
-tools/linguist/linguist
-src/plugins/imageformats/gif
-src/plugins/imageformats/ico
-src/plugins/imageformats/jpeg
-src/plugins/inputmethods"
+	QT4_TARGET_DIRECTORIES="
+		src/gui
+		src/scripttools
+		tools/designer
+		tools/linguist/linguist
+		src/plugins/imageformats/gif
+		src/plugins/imageformats/ico
+		src/plugins/imageformats/jpeg
+		src/plugins/inputmethods"
 
-QT4_EXTRACT_DIRECTORIES="
-include
-src
-tools/linguist/phrasebooks
-tools/linguist/shared
-tools/shared"
+	QT4_EXTRACT_DIRECTORIES="
+		include
+		src
+		tools/linguist/phrasebooks
+		tools/linguist/shared
+		tools/shared"
 
 	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
 	use mng && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/imageformats/mng"
@@ -74,7 +71,7 @@ tools/shared"
 	use accessibility && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} src/plugins/accessible/widgets"
 	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES} ${QT4_EXTRACT_DIRECTORIES}"
 
-	qt4-build_src_unpack
+	qt4-build_pkg_setup
 }
 
 src_prepare() {

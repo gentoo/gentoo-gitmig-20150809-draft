@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.1.ebuild,v 1.3 2010/01/23 15:45:37 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.1.ebuild,v 1.4 2010/02/10 20:11:28 yngwin Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -23,49 +23,6 @@ PATCHES=(
 )
 
 pkg_setup() {
-	qt4-build_pkg_setup
-
-	if has_version x11-libs/qt-core; then
-		# Check to see if they've changed the glib flag since the last time installing this package.
-		if use glib && ! built_with_use x11-libs/qt-core glib && has_version x11-libs/qt-gui; then
-			ewarn "You have changed the \"glib\" use flag since the last time you have emerged this package."
-			ewarn "You should also re-emerge x11-libs/qt-gui in order for it to pick up this change."
-		elif ! use glib && built_with_use x11-libs/qt-core glib && has_version x11-libs/qt-gui; then
-			ewarn "You have changed the \"glib\" use flag since the last time you have emerged this package."
-			ewarn "You should also re-emerge x11-libs/qt-gui in order for it to pick up this change."
-		fi
-
-		# Check to see if they've changed the qt3support flag since the last time installing this package.
-		# If so, give a list of packages they need to uninstall first.
-		if use qt3support && ! built_with_use x11-libs/qt-core qt3support; then
-			local need_to_remove
-			ewarn "You have changed the \"qt3support\" use flag since the last time you have emerged this package."
-			for x in sql opengl gui qt3support; do
-				local pkg="x11-libs/qt-${x}"
-				if has_version $pkg; then
-					need_to_remove="${need_to_remove} ${pkg}"
-				fi
-			done
-			if [[ -n ${need_to_remove} ]]; then
-				die "You must first uninstall these packages before continuing: \n\t\t${need_to_remove}"
-			fi
-		elif ! use qt3support && built_with_use x11-libs/qt-core qt3support ; then
-			local need_to_remove
-			ewarn "You have changed the \"qt3support\" use flag since the last time you have emerged this package."
-			for x in sql opengl gui qt3support; do
-				local pkg="x11-libs/qt-${x}"
-				if has_version $pkg; then
-					need_to_remove="${need_to_remove} ${pkg}"
-				fi
-			done
-			if [[ -n ${need_to_remove} ]]; then
-				die "You must first uninstall these packages before continuing: \n\t\t${need_to_remove}"
-			fi
-		fi
-	fi
-}
-
-src_unpack() {
 	QT4_TARGET_DIRECTORIES="
 		src/tools/bootstrap
 		src/tools/moc
@@ -79,8 +36,6 @@ src_unpack() {
 		tools/linguist/lrelease
 		tools/linguist/lupdate"
 
-	# Most ebuilds include almost everything for testing
-	# Will clear out unneeded directories after everything else works OK
 	QT4_EXTRACT_DIRECTORIES="
 		include/Qt
 		include/QtCore
@@ -102,22 +57,22 @@ src_unpack() {
 
 	if use doc; then
 		QT4_EXTRACT_DIRECTORIES="${QT4_EXTRACT_DIRECTORIES}
-					doc/"
+			doc/"
 		QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
-					tools/qdoc3"
+			tools/qdoc3"
 	fi
 	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
 				${QT4_EXTRACT_DIRECTORIES}"
 
-	qt4-build_src_unpack
+	qt4-build_pkg_setup
+}
 
+src_prepare() {
 	# Don't pre-strip, bug 235026
 	for i in kr jp cn tw ; do
 		echo "CONFIG+=nostrip" >> "${S}"/src/plugins/codecs/${i}/${i}.pro
 	done
-}
 
-src_prepare() {
 	qt4-build_src_prepare
 
 	# bug 172219
