@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.29 2010/01/26 21:55:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.30 2010/02/10 16:37:53 ssuominen Exp $
+
+*gecko-mediaplayer-0.9.9 (10 Feb 2010)
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gecko-mediaplayer-0.9.9.ebuild,
+  +files/gecko-mediaplayer-0.9.9-without-gconf.patch:
+  Version bump.
 
   26 Jan 2010; Ben de Groot <yngwin@gentoo.org>
   gecko-mediaplayer-0.9.8_p347.ebuild,
