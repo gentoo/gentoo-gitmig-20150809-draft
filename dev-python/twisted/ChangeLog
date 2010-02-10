@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.124 2010/02/08 08:41:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.125 2010/02/10 16:18:59 jer Exp $
+
+  10 Feb 2010; Jeroen Roovers <jer@gentoo.org> twisted-9.0.0-r1.ebuild:
+  Stable for HPPA (bug #300702).
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> twisted-8.2.0-r2.ebuild,
   twisted-9.0.0-r1.ebuild:
