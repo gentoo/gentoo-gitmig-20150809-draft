@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.6.ebuild,v 1.2 2010/01/06 17:58:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.6.ebuild,v 1.3 2010/02/10 09:01:59 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.73
 DEPEND="${DEPEND}
 	doc? ( dev-libs/libxslt
 		>=dev-util/gtk-doc-1.3 )
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/gtk-doc-am"
 
 # NOTES:
 # man pages are built (and installed) when doc is enabled
