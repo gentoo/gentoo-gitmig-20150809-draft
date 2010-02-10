@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.67 2010/01/27 04:29:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.68 2010/02/10 20:57:12 maekke Exp $
+
+  10 Feb 2010; Markus Meier <maekke@gentoo.org> pyxdg-0.18.ebuild:
+  amd64/x86 stable, bug #301960
 
   27 Jan 2010; Jeroen Roovers <jer@gentoo.org> pyxdg-0.18.ebuild:
   Stable for HPPA (bug #301960).
