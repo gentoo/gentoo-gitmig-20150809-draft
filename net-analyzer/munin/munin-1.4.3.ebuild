@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.3.ebuild,v 1.2 2010/02/03 19:10:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.3.ebuild,v 1.3 2010/02/10 16:38:14 darkside Exp $
 
 EAPI="2"
 
@@ -76,7 +76,7 @@ src_compile() {
 	if ! use ssl; then
 		echo "tls disabled" >> ${S}/build/node/munin-node.conf \
 			|| die "Fixing munin-node.conf Failed!"
-		echo "tls disabled" >> ${S}/build/server/munin.conf \
+		echo "tls disabled" >> ${S}/build/master/munin.conf \
 			|| die "Fixing munin.conf Failed!"
 	fi
 
