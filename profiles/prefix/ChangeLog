@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.144 2010/02/09 21:37:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.145 2010/02/10 18:06:08 grobian Exp $
+
+  10 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/package.use.mask:
+  Mask qt4 USE-flag for cmake on Darwin, since we don't want the .app
+  version of cmake
 
   09 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   mask kde sc 4.4.0 since neede deps not keyworded
