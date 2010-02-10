@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.127 2010/01/24 16:59:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.128 2010/02/10 10:28:05 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -169,10 +169,6 @@ dev-lang/php java-external
 # freedesktop.org bug #7459 committed fix breaks 3D apps
 # but "fix" is only relevant on USE=nptl
 =media-libs/mesa-7.0* nptl
-
-# Robert Buchholz <rbu@gentoo.org> (29 Aug 2007)
-# PPTP Plugin doesn't work on amd64
-kde-misc/knetworkmanager pptp
 
 dev-java/sun-jdk nsplugin
 dev-java/sun-jre-bin nsplugin
