@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.37.ebuild,v 1.4 2010/02/06 18:56:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.37.ebuild,v 1.5 2010/02/10 21:04:19 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND=2:2.6
@@ -33,7 +33,7 @@ SHARED_DEPEND=">=dev-python/setuptools-0.6_rc5
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
-	>=virtual/poppler-0.12.0
+	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
 	>=sys-apps/help2man-1.36.4
 	app-text/podofo"
 
