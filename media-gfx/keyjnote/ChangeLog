@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/keyjnote
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/ChangeLog,v 1.13 2009/12/26 17:38:34 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/ChangeLog,v 1.14 2010/02/10 22:17:42 ssuominen Exp $
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  keyjnote-0.10.2.ebuild:
+  Fix poppler depend.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> keyjnote-0.10.1a.ebuild,
   keyjnote-0.10.2.ebuild:
