@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11200 2010/02/09 23:01:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11201 2010/02/10 18:16:00 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -235,11 +235,6 @@ net-analyzer/zabbix-server
 # Needs a maintainer
 # Masked for removal in 30 days
 x11-themes/licq-themes
-
-# Samuli Suominen <ssuominen@gentoo.org> (08 Jan 2010)
-# Obsolete Qt3 bindings for DBUS, not used by anything.
-# Masked for removal in 30 days.
-dev-libs/dbus-qt3-old
 
 # Olivier Crête <tester@gentoo.org> (07 Jan 2010)
 # Mask for removal. Replaced by net-libs/telepathy-farsight and farsight2
