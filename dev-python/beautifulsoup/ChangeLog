@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.30 2010/02/07 19:53:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.31 2010/02/10 04:13:24 josejx Exp $
+
+  10 Feb 2010; Joseph Jezak <josejx@gentoo.org> beautifulsoup-3.0.8.ebuild:
+  Marked ppc stable for bug #301954.
 
   07 Feb 2010; Markus Meier <maekke@gentoo.org> beautifulsoup-3.0.8.ebuild:
   amd64/x86 stable, bug #301954
