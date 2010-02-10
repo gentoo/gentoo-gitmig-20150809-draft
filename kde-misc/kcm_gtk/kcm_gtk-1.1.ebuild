@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/kcm_gtk-1.1.ebuild,v 1.3 2010/02/10 20:36:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/kcm_gtk-1.1.ebuild,v 1.4 2010/02/10 20:39:56 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD="1"
@@ -16,7 +16,7 @@ SRC_URI="http://gtk-qt.ecs.soton.ac.uk/files/${PV}/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="!x11-themes/gtk-engines-qt
