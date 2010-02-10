@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>kde</herd>
-<use>
-  <flag name='gnome'>Enable proper theming of buttons in gnome toolbars (as
-  opposed to just plain gtk+ toolbars)</flag>
-</use>
-</pkgmetadata>
