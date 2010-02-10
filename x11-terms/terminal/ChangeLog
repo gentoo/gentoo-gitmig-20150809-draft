@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.46 2010/01/19 00:20:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.47 2010/02/10 16:21:01 darkside Exp $
+
+*terminal-0.4.4 (10 Feb 2010)
+
+  10 Feb 2010; Jeremy Olexa <darkside@gentoo.org> -terminal-0.4.0.ebuild,
+  +terminal-0.4.4.ebuild:
+  Version bump with minor bug fixes,
+  http://releases.xfce.org/feeds/project/terminal - convert to EAPI3
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> terminal-0.4.2.ebuild:
   Stable for HPPA (bug #289179).
