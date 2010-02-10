@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0-r2.ebuild,v 1.1 2010/01/31 15:49:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0-r2.ebuild,v 1.2 2010/02/10 19:19:10 grobian Exp $
 
 EAPI="2"
 
@@ -54,6 +54,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.3-no-duplicates-in-rpath.patch
 	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
 	"${FILESDIR}"/${P}-darwin-default-install_name.patch
+	"${FILESDIR}"/${P}-darwin-no-app-with-qt.patch
 )
 
 src_prepare() {
