@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/fbpanel
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.39 2009/03/29 15:52:36 solar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.40 2010/02/10 01:40:39 yngwin Exp $
+
+*fbpanel-5.6 (10 Feb 2010)
+
+  10 Feb 2010; Ben de Groot <yngwin@gentoo.org> +fbpanel-5.6.ebuild,
+  metadata.xml:
+  Transfer maintainership. Version bump.
 
   29 Mar 2009; <solar@gentoo.org> fbpanel-4.12.ebuild:
   - keyword ~arm
