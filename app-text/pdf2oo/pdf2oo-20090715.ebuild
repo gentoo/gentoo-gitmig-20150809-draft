@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/pdf2oo-20090715.ebuild,v 1.5 2010/01/24 01:59:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/pdf2oo-20090715.ebuild,v 1.6 2010/02/10 22:13:56 ssuominen Exp $
+
+EAPI=2
 
 DESCRIPTION="Converts pdf files to odf"
 HOMEPAGE="http://sourceforge.net/projects/pdf2oo/"
@@ -13,7 +15,7 @@ IUSE=""
 
 RDEPEND="app-arch/zip
 	media-gfx/imagemagick
-	virtual/poppler-utils"
+	>=app-text/poppler-0.12.3-r3[utils]"
 
 S=${WORKDIR}/${PN}
 
