@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r1.ebuild,v 1.9 2009/12/26 19:42:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r1.ebuild,v 1.10 2010/02/10 19:46:08 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
 
 MY_P=${P/_}
@@ -43,7 +44,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!virtual/lpr
 	X? ( x11-misc/xdg-utils )
-	>=virtual/poppler-utils-0.4.3-r1
+	>=app-text/poppler-0.12.3-r3[utils]
 	"
 
 PDEPEND="
@@ -91,10 +92,7 @@ pkg_setup() {
 	enewgroup lpadmin 106
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# disable configure automagic for acl/attr, upstream bug STR #2723
 	epatch "${FILESDIR}/${PN}-1.3.0-configure.patch"
 
@@ -114,7 +112,7 @@ src_unpack() {
 	eautoconf
 }
 
-src_compile() {
+src_configure() {
 	# Fails to compile on SH
 	use sh && replace-flags -O? -O0
 
@@ -186,8 +184,6 @@ src_compile() {
 	sed -i -e 's:SERVERBIN.*:SERVERBIN = "$(BUILDROOT)"/usr/libexec/cups:' Makedefs
 	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/libexec/cups":' config.h
 	sed -i -e 's:cups_serverbin=.*:cups_serverbin=/usr/libexec/cups:' cups-config
-
-	emake || die "emake failed"
 }
 
 src_install() {

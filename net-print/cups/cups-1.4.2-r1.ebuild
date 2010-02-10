@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.3 2010/01/24 02:02:00 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.4 2010/02/10 19:46:08 ssuominen Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	app-text/libpaper
 	dev-libs/libgcrypt
 	dev-libs/libusb
-	virtual/poppler-utils
+	>=app-text/poppler-0.12.3-r3[utils]
 	!net-print/cupsddk"
 
 DEPEND="${COMMON_DEPEND}"
