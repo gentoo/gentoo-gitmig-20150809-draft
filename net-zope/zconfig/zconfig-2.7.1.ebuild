@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zconfig/zconfig-2.7.1.ebuild,v 1.3 2009/11/09 18:40:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zconfig/zconfig-2.7.1.ebuild,v 1.4 2010/02/10 18:32:34 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="test"
 
 DEPEND="dev-python/setuptools
