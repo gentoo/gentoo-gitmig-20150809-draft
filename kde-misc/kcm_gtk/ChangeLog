@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm_gtk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/ChangeLog,v 1.1 2009/12/29 10:27:55 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/ChangeLog,v 1.2 2010/02/10 20:36:33 ssuominen Exp $
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kcm_gtk-1.1.ebuild:
+  Remove useless USE="gnome". It's checked by CMakeLists.txt but not used.
 
 *kcm_gtk-1.1 (29 Dec 2009)
 
