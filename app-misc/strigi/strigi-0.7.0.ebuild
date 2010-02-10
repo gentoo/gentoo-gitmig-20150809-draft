@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.12 2010/01/18 21:14:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.13 2010/02/10 19:41:45 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="+clucene +dbus debug exif fam hyperestraier inotify log +qt4 test"
 COMMONDEPEND="
 	dev-libs/libxml2
 	virtual/libiconv
-	>=virtual/poppler-utils-0.8
+	>=app-text/poppler-0.12.3-r3[utils]
 	clucene? ( >=dev-cpp/clucene-0.9.19[-debug] )
 	dbus? (
 		x11-libs/qt-dbus:4
