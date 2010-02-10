@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.3.ebuild,v 1.1 2010/02/05 23:21:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.3.ebuild,v 1.2 2010/02/10 08:25:49 tove Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_prepare() {
 
 src_configure() {
 	default
-	emake defaults || "emake defaults failed"
+	emake defaults || die "emake defaults failed"
 
 	cd lib
 	perl-app_src_configure
