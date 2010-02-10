@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.1-r1.ebuild,v 1.1 2010/02/02 01:17:42 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.2.ebuild,v 1.1 2010/02/10 21:48:20 tgurr Exp $
 
 EAPI="2"
 
@@ -41,10 +41,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-celt-libnaming.patch"
-}
 
 src_configure() {
 	local conf_add
