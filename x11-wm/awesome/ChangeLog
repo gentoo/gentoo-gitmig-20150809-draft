@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.92 2010/01/23 03:14:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.93 2010/02/10 10:47:07 matsuu Exp $
+
+  10 Feb 2010; MATSUU Takuto <matsuu@gentoo.org> files/awesome-session:
+  Added session handling, bug #303661.
 
   23 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> -awesome-2.3.4.ebuild,
   -awesome-3.2.1-r3.ebuild, -awesome-3.4.1.ebuild, -awesome-3.4.2.ebuild:
