@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.3.3.ebuild,v 1.7 2009/03/30 14:07:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.3.3.ebuild,v 1.8 2010/02/10 22:51:13 ssuominen Exp $
 
+EAPI=2
 inherit zproduct
 
 MY_PN="PortalTransforms"
@@ -22,7 +23,7 @@ RDEPEND=">=net-zope/cmf-1.4.7
 	app-text/unrtf
 	dev-python/docutils
 	www-client/lynx
-	virtual/poppler-utils"
+	>=app-text/poppler-0.12.3-r3[utils]"
 
 ZPROD_LIST="${MY_PN}"
 
