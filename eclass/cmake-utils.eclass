@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.46 2010/02/11 17:41:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.47 2010/02/11 18:00:05 ssuominen Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -332,7 +332,7 @@ enable_cmake-utils_src_configure() {
 		-DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE}"
 		-DCMAKE_INSTALL_DO_STRIP=OFF
 		-DCMAKE_USER_MAKE_RULES_OVERRIDE="${build_rules}"
-		"${EXTRA_ECONF}"
+		"${MYCMAKEARGS}"
 	)
 
 	mkdir -p "${CMAKE_BUILD_DIR}"
