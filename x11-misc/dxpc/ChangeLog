@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dxpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.14 2010/01/09 14:57:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.15 2010/02/11 17:21:48 ssuominen Exp $
+
+*dxpc-3.9.2-r1 (11 Feb 2010)
+
+  11 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> +dxpc-3.9.2-r1.ebuild:
+  Fix quoting and revision bump wrt #304513.
 
 *dxpc-3.9.2 (09 Jan 2010)
 
