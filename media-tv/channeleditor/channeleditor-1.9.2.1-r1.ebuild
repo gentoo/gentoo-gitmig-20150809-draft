@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.1-r1.ebuild,v 1.2 2010/01/16 17:33:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.1-r1.ebuild,v 1.3 2010/02/11 22:51:12 caster Exp $
 
 EAPI="2"
 
+JAVA_PKG_IUSE="source"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Editor for VDR channels.conf"
@@ -13,16 +14,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/_}_src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="java5 java6 source"
+IUSE=""
 
-RDEPEND="java6? ( >=virtual/jre-1.6 )
-	!java6? ( java5? ( >=virtual/jre-1.5 ) )
-	!java6? ( !java5? ( >=virtual/jre-1.4 ) )"
-
-DEPEND="java6? ( >=virtual/jdk-1.6 )
-	!java6? ( java5? ( >=virtual/jdk-1.5 ) )
-	!java6? ( !java5? ( >=virtual/jdk-1.4 ) )
-	source? ( app-arch/zip )"
+RDEPEND=">=virtual/jre-1.5"
+DEPEND=" >=virtual/jdk-1.5"
 
 S="${WORKDIR}/${PN}"
 
@@ -32,25 +27,15 @@ mainclass() {
 	|| die "reading Main-Class failed"
 }
 
-src_prepare() {
+java_prepare() {
 	# move files out of build and remove stuff not needed in the package
 	mv build/* "${S}" || die "cleaning build dir failed"
 	rm -f src/java/org/javalobby/icons/{README,COPYRIGHT} \
 		|| die "removing files failed"
 
 	# copy build.xml
-	if use java6; then
-		sed 's:\(value=\"\)1\.4\(\"\):\11.6\2:g' \
-			"${FILESDIR}/build-${PV}.xml" > build.xml \
-			|| die "copying build.xml failed"
-	elif use java5; then
-		sed 's:\(value=\"\)1\.4\(\"\):\11.5\2:g' \
-			"${FILESDIR}/build-${PV}.xml" > build.xml \
-			|| die "copying build.xml failed"
-	else
-		cp -f "${FILESDIR}/build-${PV}.xml" build.xml \
-			|| die "copying build.xml failed"
-	fi
+	cp -f "${FILESDIR}/build-${PV}.xml" build.xml \
+		|| die "copying build.xml failed"
 
 	# convert CRLF to LF
 	edos2unix MANIFEST.MF

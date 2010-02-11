@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/channeleditor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/ChangeLog,v 1.6 2010/01/16 17:33:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/ChangeLog,v 1.7 2010/02/11 22:51:12 caster Exp $
+
+  11 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  channeleditor-1.9.2.1-r1.ebuild:
+  Remove java5 and java6 flags and cleanup per bug #304639.
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   channeleditor-1.9.2.1-r1.ebuild:
