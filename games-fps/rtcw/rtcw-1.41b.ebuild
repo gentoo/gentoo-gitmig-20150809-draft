@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.10 2010/02/11 23:50:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.11 2010/02/11 23:51:32 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -10,7 +10,6 @@ HOMEPAGE="http://games.activision.com/games/wolfenstein/"
 SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-GOTY-maps.x86.run
 	mirror://idsoftware/wolf/linux/wolf-linux-${PV}.x86.run"
 #	mirror://3dgamers/returnwolfenstein/wolf-linux-${PV}.x86.run
-
 
 LICENSE="RTCW"
 SLOT="0"
