@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.3.0-r2.ebuild,v 1.1 2009/11/05 23:53:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.3.0-r2.ebuild,v 1.2 2010/02/11 05:20:11 calchan Exp $
 
 EAPI="2"
 
@@ -14,6 +14,7 @@ IUSE="unit-mm doc examples"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+RESTRICT="test"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=x11-libs/cairo-1.2"
