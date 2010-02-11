@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.178 2010/02/01 19:50:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.179 2010/02/11 19:44:48 grobian Exp $
+
+*mutt-1.5.20-r11 (11 Feb 2010)
+
+  11 Feb 2010; Fabian Groffen <grobian@gentoo.org> +mutt-1.5.20-r11.ebuild,
+  +files/mutt-1.5.20-copy-From-to-imap-b2b97c7a2ae6.patch:
+  Add patch from upstream to preserve From when copying mail from e.g. mbox
+  to imap.
 
   01 Feb 2010; Markus Meier <maekke@gentoo.org> mutt-1.5.20-r10.ebuild:
   amd64 stable, bug #290660
