@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.295.0_p35884.ebuild,v 1.6 2010/02/11 12:21:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.295.0_p35884.ebuild,v 1.7 2010/02/11 17:01:59 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -81,8 +81,16 @@ src_install() {
 
 	# Create symlinks for needed libraries
 	dodir ${CHROMIUM_HOME}/nss-nspr
-	NSS_DIR=/usr/$(get_libdir)/nss
-	NSPR_DIR=/usr/$(get_libdir)/nspr
+	if has_version ">=dev-libs/nss-3.12.5-r1"; then
+		NSS_DIR=/usr/$(get_libdir)
+	else
+		NSS_DIR=/usr/$(get_libdir)/nss
+	fi
+	if has_version ">=dev-libs/nspr-4.8.3-r2"; then
+		NSPR_DIR=/usr/$(get_libdir)
+	else
+		NSPR_DIR=/usr/$(get_libdir)/nspr
+	fi
 
 	dosym ${NSPR_DIR}/libnspr4.so ${CHROMIUM_HOME}/nss-nspr/libnspr4.so.0d
 	dosym ${NSPR_DIR}/libplc4.so ${CHROMIUM_HOME}/nss-nspr/libplc4.so.0d
