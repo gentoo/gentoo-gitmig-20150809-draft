@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.70 2010/02/08 15:27:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.71 2010/02/11 17:41:44 jer Exp $
+
+  11 Feb 2010; Jeroen Roovers <jer@gentoo.org> glproto-1.4.11.ebuild:
+  Stable for HPPA (bug #302046).
 
   08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   glproto-1.4.11.ebuild:
