@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/litc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/litc/ChangeLog,v 1.1 2010/02/11 22:15:12 flameeyes Exp $
+
+*litc-1.0.2 (11 Feb 2010)
+
+  11 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> +litc-1.0.2.ebuild,
+  +files/litc-1.0.2-tests.patch, +metadata.xml:
+  Initial import of litc.
+
