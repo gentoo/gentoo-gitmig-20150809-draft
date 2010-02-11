@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.24 2009/02/07 12:09:15 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.25 2010/02/11 15:31:48 ulm Exp $
+
+  11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> sux-1.0-r3.ebuild:
+  Fix LICENSE, bug 298556.
 
   07 Feb 2009; Raúl Porcel <armin76@gentoo.org> sux-1.0-r3.ebuild:
   Add ~arm wrt #255203
