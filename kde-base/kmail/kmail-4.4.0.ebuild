@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.0.ebuild,v 1.2 2010/02/11 14:22:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.0.ebuild,v 1.3 2010/02/11 15:12:09 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,10 +17,11 @@ DEPEND="
 	$(add_kdebase_dep libkdepim)
 	$(add_kdebase_dep libkleo)
 	$(add_kdebase_dep libkpgp)
-	$(add_kdebase_dep akonadi)
 	ayatana? ( >=dev-libs/libindicate-qt-0.2.1 )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep akonadi)
+"
 
 add_blocker kmailcvt
 add_blocker libksieve
