@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.218 2010/02/09 23:41:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.219 2010/02/11 00:30:49 yngwin Exp $
+
+  11 Feb 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r3.ebuild,
+  +files/poppler-0.12.3-config.patch:
+  Add small patch for typo in configuration (bug 304407). Add ewarn to
+  prompt users to recompile reverse dependencies (bug 304035).
 
   09 Feb 2010; Ben de Groot <yngwin@gentoo.org> -poppler-0.8.7.ebuild,
   poppler-0.12.3-r3.ebuild, poppler-0.12.3-r4.ebuild:

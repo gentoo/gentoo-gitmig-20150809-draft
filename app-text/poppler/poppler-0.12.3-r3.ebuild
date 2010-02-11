@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r3.ebuild,v 1.11 2010/02/09 23:41:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r3.ebuild,v 1.12 2010/02/11 00:30:49 yngwin Exp $
 
 EAPI="2"
 
@@ -42,6 +42,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-headers-installation.patch
 	epatch "${FILESDIR}"/${P}-gdk.patch
 	epatch "${FILESDIR}"/${P}-darwin-gtk-link.patch
+	epatch "${FILESDIR}"/${P}-config.patch  #304407
 }
 
 src_configure() {
@@ -75,4 +76,10 @@ src_install() {
 		insinto /usr/share/gtk-doc/html/poppler
 		doins -r "${S}"/glib/reference/html/* || die 'failed to install API documentation'
 	fi
+}
+
+pkg_postinst() {
+	ewarn 'After upgrading app-text/poppler you may need to reinstall packages'
+	ewarn 'depending on it. If you have gentoolkit installed, you can find those'
+	ewarn 'with `equery d poppler`.'
 }
