@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.5 2009/12/31 21:10:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.6 2010/02/11 16:19:02 ulm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ IIIMF_V="trunk_r2059-js1"
 UPDATE_P="atokforlinux_update_17_0_2_1"
 SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${UPDATE_P}.tar.gz"
 
-LICENSE="ATOK X11"
+LICENSE="ATOK MIT"
 
 SLOT="0"
 KEYWORDS="-* ~x86"

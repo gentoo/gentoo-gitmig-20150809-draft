@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r2.ebuild,v 1.1 2009/03/09 17:02:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r2.ebuild,v 1.2 2010/02/11 16:19:38 ulm Exp $
 
 inherit eutils multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="ATOK X3 for Linux - The most famous Japanese Input Method Engine"
 HOMEPAGE="http://www.justsystems.com/jp/products/atok_linux/"
 SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${PN}up2.tar.gz"
 
-LICENSE="ATOK X11"
+LICENSE="ATOK MIT"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"

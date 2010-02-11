@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/atokx2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.9 2009/08/06 07:43:17 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.10 2010/02/11 16:19:02 ulm Exp $
+
+  11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> atokx2-17.0.ebuild,
+  atokx2-17.0-r2.ebuild:
+  Replace license X11 by MIT, bug 298556.
 
   06 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -atokx2-17.0-r1.ebuild:
