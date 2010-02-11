@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.2-r1.ebuild,v 1.1 2010/02/10 22:25:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.2-r1.ebuild,v 1.2 2010/02/11 04:50:30 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils autotools linux-info
@@ -115,7 +115,7 @@ src_unpack() {
 
 	#
 	# add special playback with fax detection
-	# Code by NewMan telecom, patch scavenged 
+	# Code by NewMan telecom, patch scavenged
 	# by Cory Coager
 	# http://bugs.gentoo.org/show_bug.cgi?id=298328
 	#
