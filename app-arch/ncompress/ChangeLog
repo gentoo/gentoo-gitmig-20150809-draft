@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.45 2010/02/11 00:34:21 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.46 2010/02/11 19:27:29 armin76 Exp $
+
+  11 Feb 2010; Raúl Porcel <armin76@gentoo.org> ncompress-4.2.4.3.ebuild:
+  alpha/ia64/m68k/s390/sh stable wrt #300943
 
   11 Feb 2010; Tiago Cunha <tcunha@gentoo.org> ncompress-4.2.4.3.ebuild:
   stable sparc, security bug 300943
