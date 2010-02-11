@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r2.ebuild,v 1.10 2010/01/22 00:26:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r3.ebuild,v 1.1 2010/02/11 17:09:07 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils distutils multilib
@@ -70,4 +70,6 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/* || die "doins failed"
 	fi
+
+	find "${D}" -name '*.la' -delete
 }
