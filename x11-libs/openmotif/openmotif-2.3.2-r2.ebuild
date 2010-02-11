@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r1.ebuild,v 1.2 2010/02/06 15:51:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.1 2010/02/11 10:22:56 ulm Exp $
 
 EAPI=3
 
@@ -13,9 +13,9 @@ SRC_URI="ftp://ftp.ics.com/openmotif/${PV%.*}/${PV}/${P}.tar.gz"
 
 LICENSE="MOTIF MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples jpeg png unicode xft"
-# License allows usage only on "open source operating systems"
+# license allows usage only on "open source operating systems"
 RESTRICT="!kernel_linux? (
 	!kernel_FreeBSD? (
 	!kernel_Darwin? (
@@ -85,7 +85,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.3.1-multilist-stipple.patch" #215984
 	epatch "${FILESDIR}/${PN}-2.3.1-ac-editres.patch" #82081
 	epatch "${FILESDIR}/${P}-ldflags.patch" #293573
+	epatch "${FILESDIR}/${P}-ddd-layout.patch" #303887
 	epatch "${FILESDIR}/${P}-sanitise-paths.patch"
+	[[ ${CHOST} == *-solaris2.11 ]] \
+		&& epatch "${FILESDIR}/${P}-solaris-2.11.patch"
 
 	# disable compilation of demo binaries
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/[ \t\n\\]*demos//;}' Makefile.am
@@ -108,6 +111,9 @@ src_configure() {
 
 	# feel free to fix properly if you care
 	append-flags -fno-strict-aliasing
+
+	# For Solaris Xos_r.h :(
+	[[ ${CHOST} == *-solaris2.11 ]] && append-flags -DNEED_XOS_R_H=1
 
 	if use !elibc_glibc && use !elibc_uclibc && use unicode; then
 		# libiconv detection in configure script doesn't always work
