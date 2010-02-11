@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.6.ebuild,v 1.1 2007/12/14 20:05:36 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.6.ebuild,v 1.2 2010/02/11 15:15:51 ulm Exp $
 
 inherit mono multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="Visual Basic .NET Runtime and Class Libraries"
 HOMEPAGE="http://www.go-mono.com"
 SRC_URI="http://go-mono.com/sources/${PN}/${P}.tar.bz2"
 
-LICENSE="|| ( GPL-2 LGPL-2 X11 )"
+LICENSE="|| ( GPL-2 LGPL-2 MIT )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

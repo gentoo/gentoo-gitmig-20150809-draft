@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5.1-r1.ebuild,v 1.7 2010/01/31 19:54:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.5.1-r1.ebuild,v 1.8 2010/02/11 15:15:14 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com"
 SRC_URI="http://www.go-mono.com/sources/mono/${P}.tar.bz2"
 
-LICENSE="|| ( GPL-2 LGPL-2 X11 )"
+LICENSE="|| ( GPL-2 LGPL-2 MIT )"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="X nptl"

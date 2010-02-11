@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono-basic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.24 2009/09/27 17:02:10 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.25 2010/02/11 15:15:51 ulm Exp $
+
+  11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> mono-basic-1.2.4.ebuild,
+  mono-basic-1.2.6.ebuild, mono-basic-2.0.ebuild:
+  Replace license X11 by MIT, bug 298556.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> mono-basic-2.4.2.ebuild:
   ppc stable #284306
