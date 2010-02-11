@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.151 2009/11/05 04:39:55 dragonheart Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.152 2010/02/11 17:08:45 ulm Exp $
+
+  11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> curl-7.19.4.ebuild,
+  curl-7.19.6.ebuild, curl-7.19.7.ebuild:
+  Replace license X11 by MIT, bug 298556.
 
 *curl-7.19.7 (05 Nov 2009)
 
