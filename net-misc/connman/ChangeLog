@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.10 2010/02/05 13:21:31 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.11 2010/02/11 17:15:52 dagger Exp $
+
+*connman-0.49 (11 Feb 2010)
+
+  11 Feb 2010; Robert Piasek <dagger@gentoo.org> -connman-0.46.ebuild,
+  +connman-0.49.ebuild:
+  New version of Connman. Fixes issues with wifi, bluetooth and adds static
+  IP settings
 
 *connman-0.48-r1 (05 Feb 2010)
 

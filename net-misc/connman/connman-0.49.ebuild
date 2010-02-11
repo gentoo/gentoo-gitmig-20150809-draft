@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.46.ebuild,v 1.1 2009/11/03 16:13:46 dagger Exp $
+# $Header $
 
 EAPI="2"
 
@@ -11,20 +11,18 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
-IUSE="3G bluetooth debug +dhclient dnsproxy doc +ethernet modemmanager ofono policykit ppp resolvconf threads tools +udev +wifi"
+IUSE="3G bluetooth debug +dhclient dnsproxy doc +ethernet google moblin ofono policykit resolvconf threads tools +udev +wifi"
 # ospm wimax
 
 RDEPEND=">=dev-libs/glib-2.16
-	>=sys-apps/dbus-1.2
+	>=sys-apps/dbus-1.3
 	bluetooth? ( net-wireless/bluez )
 	dhclient? ( net-misc/dhcp )
-	modemmanager? ( net-misc/modemmanager )
 	ofono? ( net-misc/ofono )
 	policykit? ( >=sys-auth/policykit-0.7 )
-	ppp? ( net-dialup/ppp )
 	resolvconf? ( net-dns/openresolv )
 	udev? ( >=sys-fs/udev-141 )
-	wifi? ( net-wireless/wpa_supplicant[dbus] )"
+	wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )"
 
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
@@ -32,29 +30,27 @@ DEPEND="${RDEPEND}
 src_configure() {
 	econf \
 		--localstatedir=/var \
-		--enable-loopback \
 		--enable-client \
 		--enable-fake \
 		--enable-datafiles \
-		$(use_enable 3G novatel) \
-		$(use_enable 3G huawei) \
-		$(use_enable 3G hso) \
-		$(use_enable 3G mbm) \
-		$(use_enable bluetooth) \
+		--enable-loopback=builtin \
+		$(use_enable ethernet ethernet builtin) \
+		$(use_enable wifi wifi builtin) \
+		$(use_enable bluetooth bluetooth builtin) \
+		$(use_enable ofono ofono builtin) \
+		$(use_enable dhclient dhclient builtin) \
+		$(use_enable resolvconf resolvconf builtin) \
+		$(use_enable dnsproxy dnsproxy builtin) \
+		$(use_enable google google builtin) \
+		$(use_enable moblin moblin builtin) \
+		$(use_enable 3G hso builtin) \
+		$(use_enable 3G mbm builtin) \
+		$(use_enable policykit polkit builtin) \
 		$(use_enable debug) \
-		$(use_enable dhclient) \
-		$(use_enable dnsproxy) \
 		$(use_enable doc gtk-doc) \
-		$(use_enable ethernet) \
-		$(use_enable modemmanager modemmgr) \
-		$(use_enable ofono) \
-		$(use_enable policykit polkit) \
-		$(use_enable ppp) \
-		$(use_enable resolvconf) \
 		$(use_enable threads) \
 		$(use_enable tools) \
 		$(use_enable udev) \
-		$(use_enable wifi) \
 		--disable-udhcp \
 		--disable-iwmx \
 		--disable-iospm
@@ -66,5 +62,5 @@ src_install() {
 
 	keepdir /var/lib/${PN} || die
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
-
+	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
 }
