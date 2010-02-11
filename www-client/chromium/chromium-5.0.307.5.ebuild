@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.5.ebuild,v 1.3 2010/02/08 11:28:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.5.ebuild,v 1.4 2010/02/11 12:13:29 phajdan.jr Exp $
 
 EAPI="2"
-inherit eutils multilib toolchain-funcs flag-o-matic
+inherit eutils flag-o-matic multilib portability toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -39,6 +39,23 @@ DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
+
+pkg_setup() {
+	# Prevent user problems like bug 299777.
+	if ! grep -q /dev/shm <<< $(get_mounts); then
+		eerror "You don't have tmpfs mounted at /dev/shm."
+		eerror "${PN} isn't going to work in that configuration."
+		eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
+		eerror "run 'mount /dev/shm' and try again."
+		die "/dev/shm is not mounted"
+	fi
+	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
+		eerror "/dev/shm does not have correct permissions."
+		eerror "${PN} isn't going to work in that configuration."
+		eerror "Please run chmod 1777 /dev/shm and try again."
+		die "/dev/shm has incorrect permissions"
+	fi
+}
 
 src_prepare() {
 	# Gentoo uses .kde4, not .kde
