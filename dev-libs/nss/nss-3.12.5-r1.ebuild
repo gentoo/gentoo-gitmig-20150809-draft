@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5-r1.ebuild,v 1.1 2010/02/11 03:29:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5-r1.ebuild,v 1.2 2010/02/11 20:52:15 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
-NSPR_VER="4.8"
+NSPR_VER="4.8.3-r2"
 RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
