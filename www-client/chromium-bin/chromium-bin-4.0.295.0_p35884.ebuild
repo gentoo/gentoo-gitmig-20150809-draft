@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.295.0_p35884.ebuild,v 1.5 2010/01/26 08:09:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.295.0_p35884.ebuild,v 1.6 2010/02/11 12:21:47 phajdan.jr Exp $
 
 EAPI="2"
-inherit eutils multilib
+inherit eutils multilib portability
 
 # Latest revision id can be found at
 # http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST
@@ -48,6 +48,21 @@ pkg_setup() {
 	# Built with SSE2 enabled, so will fail on older processors
 	if [[ ${ROOT} == "/" ]] && ! grep -q sse2 /proc/cpuinfo; then
 		die "This binary requires SSE2 support, it will not work on older processors"
+	fi
+
+	# Prevent user problems like bug 299777.
+	if ! grep -q /dev/shm <<< $(get_mounts); then
+		eerror "You don't have tmpfs mounted at /dev/shm."
+		eerror "${PN} isn't going to work in that configuration."
+		eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
+		eerror "run 'mount /dev/shm' and try again."
+		die "/dev/shm is not mounted"
+	fi
+	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
+		eerror "/dev/shm does not have correct permissions."
+		eerror "${PN} isn't going to work in that configuration."
+		eerror "Please run chmod 1777 /dev/shm and try again."
+		die "/dev/shm has incorrect permissions"
 	fi
 }
 
