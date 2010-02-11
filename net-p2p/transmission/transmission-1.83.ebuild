@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.83.ebuild,v 1.1 2010/02/11 08:52:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.83.ebuild,v 1.2 2010/02/11 12:17:24 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2
 
 DESCRIPTION="A Fast, Easy and Free BitTorrent client"
 HOMEPAGE="http://www.transmissionbt.com/"
-SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
+SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.bz2"
 
 LICENSE="MIT GPL-2"
 SLOT="0"
@@ -28,7 +28,6 @@ RDEPEND=">=dev-libs/libevent-1.4.11
 		sound? ( >=media-libs/libcanberra-0.10 ) )
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
 	>=sys-devel/libtool-2.2.6b
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
