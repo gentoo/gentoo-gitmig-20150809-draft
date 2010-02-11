@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.9.ebuild,v 1.1 2010/02/10 16:37:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.9.ebuild,v 1.2 2010/02/11 09:44:51 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit autotools gnome2 multilib
+inherit autotools gnome2 multilib nsplugins
 
 DESCRIPTION="A browser plugin that uses GNOME MPlayer"
 HOMEPAGE="http://code.google.com/p/gecko-mediaplayer/"
@@ -30,7 +30,8 @@ pkg_setup() {
 	G2CONF="--disable-dependency-tracking
 		$(use_enable gnome schemas-install)
 		$(use_with gnome gconf)
-		--with-gio"
+		--with-gio
+		--with-plugin-dir=/usr/$(get_libdir)/${PLUGINS_DIR}"
 }
 
 src_prepare() {
@@ -43,12 +44,5 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-	rm -rf "${D}"/usr/share/doc/${PN}
-
-	# move plugins to correct location and clean up empty dirs
-	dodir /usr/$(get_libdir)/nsbrowser/plugins
-	mv "${D}"/usr/$(get_libdir)/nspr/mozilla/plugins/${PN}* \
-		"${D}"/usr/$(get_libdir)/nsbrowser/plugins || die
-	rm -rf "${D}"/usr/$(get_libdir)/nspr
-	rm -rf "${D}"/var
+	rm -rf "${D}"/usr/share/doc/${PN} "${D}"/var
 }
