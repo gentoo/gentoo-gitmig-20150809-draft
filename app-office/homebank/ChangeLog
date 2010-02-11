@@ -1,6 +1,11 @@
 # ChangeLog for app-office/homebank
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.14 2009/12/15 14:51:02 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.15 2010/02/11 14:55:43 calchan Exp $
+
+*homebank-4.2 (11 Feb 2010)
+
+  11 Feb 2010; Denis Dupeyron <calchan@gentoo.org> +homebank-4.2.ebuild:
+  Version bump, bug #304515.
 
   15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
   metadata.xml: added required herd tag.
