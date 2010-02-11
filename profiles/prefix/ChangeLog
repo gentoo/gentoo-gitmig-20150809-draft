@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.146 2010/02/10 19:23:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.147 2010/02/11 23:50:09 abcd Exp $
+
+  11 Feb 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Remove KDE 4.4 mask
 
   10 Feb 2010; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/package.use.mask:
