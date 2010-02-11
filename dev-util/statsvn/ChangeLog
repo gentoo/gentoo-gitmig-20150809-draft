@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/statsvn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/statsvn/ChangeLog,v 1.3 2009/05/23 06:37:24 serkan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/statsvn/ChangeLog,v 1.4 2010/02/11 14:32:41 fauli Exp $
+
+  11 Feb 2010; Christian Faulhammer <fauli@gentoo.org> statsvn-0.5.0.ebuild:
+  depend on backport-util-concurrent 3.1 for bug 295421
 
 *statsvn-0.5.0 (23 May 2009)
 

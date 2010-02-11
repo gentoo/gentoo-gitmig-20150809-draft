@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/statsvn/statsvn-0.5.0.ebuild,v 1.1 2009/05/23 06:37:24 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/statsvn/statsvn-0.5.0.ebuild,v 1.2 2010/02/11 14:32:41 fauli Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -17,7 +17,7 @@ IUSE=""
 
 COMMON_DEPEND="
 	>=dev-util/statcvs-0.5:0
-	>=dev-java/backport-util-concurrent-3.0:0
+	>=dev-java/backport-util-concurrent-3.1:0
 	dev-java/jcommon:1.0
 	dev-java/jfreechart:1.0"
 
