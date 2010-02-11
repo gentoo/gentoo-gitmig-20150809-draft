@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r4.ebuild,v 1.6 2010/02/10 19:57:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r4.ebuild,v 1.7 2010/02/11 17:03:17 jer Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}-poppler-20071121.tar.b
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="nodrm"
 
 RDEPEND="
