@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.3 2010/01/21 23:38:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.4 2010/02/11 07:38:19 jlec Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4 cmake-utils
@@ -17,7 +17,7 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples mpi patented python tcl tk threads qt3 qt4"
+IUSE="boost cg doc examples mpi patented python tcl tk threads qt4"
 RDEPEND="mpi? ( || (
 					sys-cluster/openmpi
 					sys-cluster/lam-mpi
@@ -27,7 +27,6 @@ RDEPEND="mpi? ( || (
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
-	!qt4? ( qt3? ( >=x11-libs/qt-3.3.4:3 ) )
 	qt4? ( x11-libs/qt-core:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-gui:4 )
@@ -58,12 +57,6 @@ pkg_setup() {
 	epause 5
 
 	java-pkg-opt-2_pkg_setup
-	if use qt3 && use qt4; then
-		echo
-		ewarn "qt3 and qt4 support for vtk are mutually exclusive and"
-		ewarn "qt4 support has therefore been enabled by default."
-		echo
-	fi
 
 	if use qt4; then
 		qt4_pkg_setup
@@ -143,27 +136,13 @@ src_configure() {
 			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
 
-	if use qt3 || use qt4 ; then
+	if use qt4 ; then
 		mycmakeargs+=(
 			-DVTK_USE_GUISUPPORT=ON
 			-DVTK_USE_QVTK=ON
 			-DVTK_USE_QVTK_QTOPENGL=ON
 			-DQT_WRAP_CPP=ON
 			-DQT_WRAP_UI=ON)
-	fi
-
-	# these options we only enable if the use request qt3
-	# only. In case of qt3 && qt4 or qt4 only qt4 always
-	# overrides qt3
-	if use qt3 && use !qt4; then
-		mycmakeargs+=(
-			-DVTK_INSTALL_QT_DIR=/qt/3/plugins/${PN}
-			-DDESIRED_QT_VERSION=3
-			-DQT_MOC_EXECUTABLE=/usr/qt/3/bin/moc
-			-DQT_UIC_EXECUTABLE=/usr/qt/3/bin/uic
-			-DQT_INCLUDE_DIR=/usr/qt/3/include
-			-DQT_QT_LIBRARY=/usr/qt/3/$(get_libdir)/libqt.so
-			-DQT_QMAKE_EXECUTABLE=/usr/qt/3/bin/qmake)
 	fi
 
 	if use qt4; then

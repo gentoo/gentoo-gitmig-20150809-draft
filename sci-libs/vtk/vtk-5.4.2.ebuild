@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.5 2009/12/17 23:43:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.6 2010/02/11 07:38:19 jlec Exp $
 
 EAPI="2"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
@@ -17,7 +17,7 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples mpi patented python tcl tk threads qt3 qt4"
+IUSE="boost cg doc examples mpi patented python tcl tk threads qt4"
 RDEPEND="mpi? ( || (
 					sys-cluster/openmpi
 					sys-cluster/lam-mpi
@@ -27,7 +27,6 @@ RDEPEND="mpi? ( || (
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
-	!qt4? ( qt3? ( >=x11-libs/qt-3.3.4:3 ) )
 	qt4? ( x11-libs/qt-core:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-gui:4 )
@@ -58,13 +57,6 @@ pkg_setup() {
 	epause 5
 
 	java-pkg-opt-2_pkg_setup
-	if use qt3 && use qt4; then
-		echo
-		ewarn "qt3 and qt4 support for vtk are mutually exclusive and"
-		ewarn "qt4 support has therefore been enabled by default."
-		echo
-	fi
-
 	if use qt4; then
 		qt4_pkg_setup
 	fi
@@ -138,24 +130,12 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_PYTHON_SETUP_ARGS:STRING=\"--prefix=${D}/usr\""
 	fi
 
-	if use qt3 || use qt4 ; then
+	if use qt4 ; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_GUISUPPORT:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_QVTK:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_QVTK_QTOPENGL:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_CPP:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_UI:BOOL=ON"
-	fi
-
-	if use qt3; then
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR:PATH=/qt/3/plugins/${PN}"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DDESIRED_QT_VERSION:STRING=3"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_MOC_EXECUTABLE:FILEPATH=/usr/qt/3/bin/moc"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_UIC_EXECUTABLE:FILEPATH=/usr/qt/3/bin/uic"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_INCLUDE_DIR:PATH=/usr/qt/3/include"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_QMAKE_EXECUTABLE:PATH=/usr/qt/3/bin/qmake"
-	fi
-
-	if use qt4; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR:PATH=/$(get_libdir)/qt4/plugins/${PN}"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DDESIRED_QT_VERSION:STRING=4"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_MOC_EXECUTABLE:FILEPATH=/usr/bin/moc"
