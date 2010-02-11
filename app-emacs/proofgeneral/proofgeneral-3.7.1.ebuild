@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.7.1.ebuild,v 1.4 2009/06/11 19:41:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.7.1.ebuild,v 1.5 2010/02/11 09:56:22 ulm Exp $
 
 inherit elisp
 
@@ -18,18 +18,17 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
-	emake compile EMACS=emacs
+	emake -j1 compile EMACS=emacs || die "compile failed"
 }
 
 src_install() {
-	emake install EMACS=emacs PREFIX="${D}"/usr
+	emake -j1 install EMACS=emacs PREFIX="${D}"/usr || die "install failed"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${MY_PN} || die
 
-	dohtml doc/*.html doc/*.jpg
-	doinfo doc/*.info*
+	doinfo doc/*.info* || die
+	doman doc/proofgeneral.1 || die
+	dohtml doc/ProofGeneral/*.html doc/PG-adapting/*.html || die
 	dodoc AUTHORS BUGS CHANGES COMPATIBILITY FAQ FUTURE INSTALL README REGISTER
-
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${MY_PN} \
-		|| die "elisp-site-file-install failed"
 
 	# clean up
 	rm -rf "${D}/usr/share/emacs/site-lisp/site-start.d"
