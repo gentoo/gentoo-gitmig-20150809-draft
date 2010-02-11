@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-wallpapers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.135 2010/02/10 19:12:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.136 2010/02/11 04:51:48 abcd Exp $
+
+  11 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  kdeartwork-wallpapers-4.4.0.ebuild:
+  Fix blocker
 
   10 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   kdeartwork-wallpapers-4.4.0.ebuild:
