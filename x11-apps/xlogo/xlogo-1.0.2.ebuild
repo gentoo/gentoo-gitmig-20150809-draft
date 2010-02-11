@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/xlogo-1.0.2.ebuild,v 1.3 2010/02/08 15:40:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/xlogo-1.0.2.ebuild,v 1.4 2010/02/11 17:37:33 jer Exp $
 
 inherit x-modular
 
 DESCRIPTION="X Window System logo"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXrender
