@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p26.ebuild,v 1.1 2008/12/06 22:46:22 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p26.ebuild,v 1.2 2010/02/11 23:03:14 caster Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils toolchain-funcs java-pkg-2 java-ant-2
 
@@ -23,24 +25,18 @@ SRC_URI="http://sbriesen.de/gentoo/distfiles/${MY_PN}_Source_${PV}.tbz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="X doc source mmx java5 java6"
+IUSE="X mmx"
 
 COMMON_DEP="dev-java/commons-net
 	X? ( =dev-java/browserlauncher2-1* )"
 
-RDEPEND="java6? ( >=virtual/jre-1.6 )
-	!java6? ( java5? ( >=virtual/jre-1.5 ) )
-	!java6? ( !java5? ( >=virtual/jre-1.4 ) )
+RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 
-DEPEND="java6? ( >=virtual/jdk-1.6 )
-	!java6? ( java5? ( >=virtual/jdk-1.5 ) )
-	!java6? ( !java5? ( >=virtual/jdk-1.4 ) )
+DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}
 	app-arch/unzip
-	>=sys-apps/sed-4
-	dev-java/ant-core
-	source? ( app-arch/zip )"
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -54,15 +50,7 @@ src_unpack() {
 	cd "${S}"
 
 	# copy build.xml
-	if use java6; then
-		sed 's:\(value=\"\)1\.4\(\"\):\11.6\2:g' \
-			"${FILESDIR}/build-${PV%.*}.xml" > build.xml
-	elif use java5; then
-		sed 's:\(value=\"\)1\.4\(\"\):\11.5\2:g' \
-			"${FILESDIR}/build-${PV%.*}.xml" > build.xml
-	else
-		cp -f "${FILESDIR}/build-${PV%.*}.xml" build.xml
-	fi
+	cp -f "${FILESDIR}/build-${PV%.*}.xml" build.xml || die
 
 	# patch location of executable
 	sed -i -e "s:^\(Exec=\).*:\1${PN}:g" *.desktop

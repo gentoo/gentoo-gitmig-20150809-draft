@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r3.ebuild,v 1.7 2008/04/03 14:50:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r3.ebuild,v 1.8 2010/02/11 23:03:14 caster Exp $
 
 inherit eutils toolchain-funcs java-pkg-2 java-ant-2
 
@@ -28,10 +28,10 @@ IUSE="X doc source mmx"
 COMMON_DEP="dev-java/commons-net
 	X? ( =dev-java/browserlauncher2-1* )"
 
-RDEPEND=">=virtual/jre-1.4
+RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 
-DEPEND=">=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}
 	app-arch/unzip
 	dev-java/ant-core
