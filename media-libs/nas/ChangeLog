@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.64 2010/02/06 13:08:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.65 2010/02/11 16:01:29 ulm Exp $
+
+  11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> nas-1.8b.ebuild,
+  nas-1.9.2.ebuild:
+  Fix LICENSE, bug 298556.
 
   06 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> nas-1.9.2.ebuild,
   +files/nas-1.9.2-asneeded.patch:

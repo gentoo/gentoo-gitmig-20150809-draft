@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.8b.ebuild,v 1.9 2007/06/24 21:59:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.8b.ebuild,v 1.10 2010/02/11 16:01:29 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Network Audio System"
 HOMEPAGE="http://radscan.com/nas.html"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
 
-LICENSE="X11"
+LICENSE="MIT as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
