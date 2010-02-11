@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.196 2010/02/09 00:20:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.197 2010/02/11 14:22:26 ssuominen Exp $
+
+  11 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kmail-4.4.0.ebuild:
+  Missing kde-base/akonadi depend wrt #304429.
 
 *kmail-4.4.0 (08 Feb 2010)
 
