@@ -1,8 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r4.ebuild,v 1.1 2008/12/22 16:44:16 matsuu Exp $
-
-IUSE="utempter"
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r4.ebuild,v 1.2 2010/02/11 16:10:38 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,9 +8,10 @@ DESCRIPTION="Hanterm -- Korean terminal"
 HOMEPAGE="http://www.hanterm.org/"
 SRC_URI="http://download.kldp.net/hanterm/${P}.tar.gz"
 
+LICENSE="MIT as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-LICENSE="X11"
+IUSE="utempter"
 
 DEPEND="x11-libs/libXmu
 	x11-libs/libICE

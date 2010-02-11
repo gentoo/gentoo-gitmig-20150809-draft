@@ -1,16 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.25 2009/09/23 15:01:50 ssuominen Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.26 2010/02/11 16:10:38 ulm Exp $
 
 DESCRIPTION="Hanterm -- Korean terminal"
 HOMEPAGE="http://www.hanterm.org/"
 SRC_URI="http://download.kldp.net/hanterm/${P}.tar.gz"
 
+LICENSE="MIT as-is"
 SLOT="0"
 KEYWORDS="x86 ppc"
-LICENSE="X11"
+IUSE=""
 
 DEPEND="x11-libs/libXmu
 	x11-libs/libICE
