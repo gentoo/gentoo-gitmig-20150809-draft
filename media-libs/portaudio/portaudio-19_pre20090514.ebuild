@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20090514.ebuild,v 1.2 2010/01/15 09:45:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20090514.ebuild,v 1.3 2010/02/11 22:59:04 abcd Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="alsa +cxx debug jack oss"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

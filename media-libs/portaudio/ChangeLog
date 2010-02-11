@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.69 2010/01/15 09:45:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.70 2010/02/11 22:59:04 abcd Exp $
+
+  11 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  portaudio-19_pre20090514.ebuild:
+  Add ~amd64-linux/~x86-linux keywords
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   portaudio-19_pre20090514.ebuild:
