@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.2.1.ebuild,v 1.4 2010/01/09 18:54:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.2.1.ebuild,v 1.5 2010/02/11 09:51:14 ssuominen Exp $
 
 EAPI=2
 MY_P=${PN}_${PV}
@@ -21,6 +21,8 @@ DEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-webkit:4
 	x11-libs/qt-xmlpatterns:4
 	media-sound/phonon"
+RDEPEND="${DEPEND}
+	sys-fs/fuseiso"
 
 S=${WORKDIR}/${MY_P}/${PN}
 
