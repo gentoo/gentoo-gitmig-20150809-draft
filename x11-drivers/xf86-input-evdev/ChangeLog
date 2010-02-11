@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.141 2010/02/08 15:37:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.142 2010/02/11 17:41:18 jer Exp $
+
+  11 Feb 2010; Jeroen Roovers <jer@gentoo.org>
+  xf86-input-evdev-2.3.2.ebuild:
+  Stable for HPPA (bug #302046).
 
   08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   xf86-input-evdev-2.3.2.ebuild:
