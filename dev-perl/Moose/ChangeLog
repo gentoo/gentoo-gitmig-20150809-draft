@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.38 2010/02/07 09:45:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.39 2010/02/11 11:32:55 tove Exp $
+
+*Moose-0.98 (11 Feb 2010)
+
+  11 Feb 2010; Torsten Veller <tove@gentoo.org> +Moose-0.98.ebuild:
+  Version bump
 
 *Moose-0.96 (07 Feb 2010)
 
