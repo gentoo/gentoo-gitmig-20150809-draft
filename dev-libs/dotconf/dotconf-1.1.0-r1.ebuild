@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/dotconf-1.1.0-r1.ebuild,v 1.3 2010/02/11 23:22:00 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/dotconf-1.1.0-r1.ebuild,v 1.4 2010/02/11 23:23:27 abcd Exp $
 
 EAPI="2"
 
@@ -19,10 +19,6 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-dotconf-m4.patch
-}
-
-src_configure() {
-	econf --prefix=/usr || die
 }
 
 src_compile() {
