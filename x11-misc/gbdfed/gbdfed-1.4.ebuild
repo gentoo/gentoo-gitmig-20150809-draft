@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbdfed/gbdfed-1.4.ebuild,v 1.3 2009/08/08 12:55:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbdfed/gbdfed-1.4.ebuild,v 1.4 2010/02/11 15:38:55 ulm Exp $
 
 EAPI=2
 inherit eutils
@@ -9,7 +9,7 @@ DESCRIPTION="gbdfed Bitmap Font Editor"
 HOMEPAGE="http://www.math.nmsu.edu/~mleisher/Software/gbdfed/"
 SRC_URI="http://www.math.nmsu.edu/~mleisher/Software/gbdfed/${P}.tbz2"
 
-LICENSE="X11"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
