@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libosip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.35 2009/09/23 18:49:40 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.36 2010/02/11 18:07:21 pva Exp $
+
+*libosip-3.3.0 (11 Feb 2010)
+
+  11 Feb 2010; Peter Volkov <pva@gentoo.org> +libosip-3.3.0.ebuild,
+  +files/libosip-3.3.0-out-source-build.patch:
+  Version bump, fixes bug #300566, thank Jeroen Roovers for report. Make
+  tests work.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libosip-2.2.2.ebuild:
   Remove virtual/libc
