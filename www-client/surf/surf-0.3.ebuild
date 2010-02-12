@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.3.ebuild,v 1.1 2010/02/12 17:29:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.3.ebuild,v 1.2 2010/02/12 17:33:43 jer Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs
 
-DESCRIPTION="surf is a simple web browser based on WebKit/GTK+"
+DESCRIPTION="a simple web browser based on WebKit/GTK+"
 HOMEPAGE="http://surf.suckless.org/"
 SRC_URI="http://dl.suckless.org/${PN}/${P}.tar.gz"
 
