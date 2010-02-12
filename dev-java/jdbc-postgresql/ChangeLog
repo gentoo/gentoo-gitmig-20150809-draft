@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.32 2010/01/22 11:16:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.33 2010/02/12 08:50:46 caster Exp $
+
+  12 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  jdbc-postgresql-8.3_p603.ebuild:
+  Remove java5 flag.
 
   22 Jan 2010; Vlastimil Babka <caster@gentoo.org>
   -jdbc-postgresql-8.3_p603-r1.ebuild:
