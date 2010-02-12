@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.17 2010/02/08 22:17:01 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.18 2010/02/12 17:52:13 cardoe Exp $
+
+  12 Feb 2010; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.11.1.ebuild,
+  qemu-kvm-0.11.1-r1.ebuild, qemu-kvm-0.12.1.ebuild,
+  qemu-kvm-0.12.1.1.ebuild, qemu-kvm-0.12.1.2.ebuild,
+  qemu-kvm-0.12.2.ebuild, qemu-kvm-0.12.2-r1.ebuild:
+  add missing depend on sys-apps/iproute2 and net-misc/bridge-utils for the
+  qemu/ifup script
 
 *qemu-kvm-0.11.1-r1 (08 Feb 2010)
 

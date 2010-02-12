@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.2-r1.ebuild,v 1.1 2010/02/03 05:41:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.2-r1.ebuild,v 1.2 2010/02/12 17:52:13 cardoe Exp $
 
 EAPI="2"
 
@@ -47,6 +47,8 @@ RDEPEND="
 	!app-emulation/qemu
 	!app-emulation/qemu-softmmu
 	!app-emulation/qemu-user
+	net-misc/bridge-utils
+	sys-apps/iproute2
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
