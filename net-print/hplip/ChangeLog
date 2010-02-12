@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.145 2010/02/12 11:15:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.146 2010/02/12 19:09:57 josejx Exp $
+
+  12 Feb 2010; Joseph Jezak <josejx@gentoo.org> hplip-3.9.12-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #304079.
 
   12 Feb 2010; Pacho Ramos <pacho@gentoo.org> hplip-3.9.12-r1.ebuild:
   amd64 stable, bug 304079

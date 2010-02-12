@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12-r1.ebuild,v 1.3 2010/02/12 11:15:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12-r1.ebuild,v 1.4 2010/02/12 19:09:57 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
 IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt4 scanner snmp static-ppds -udev-acl"
