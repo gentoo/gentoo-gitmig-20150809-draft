@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1-r1.ebuild,v 1.1 2010/02/12 16:50:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1-r1.ebuild,v 1.2 2010/02/12 16:53:58 jer Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_install () {
-	emake install DESTDIR=${D} || die "emake install failed"
+	emake install DESTDIR="${D}" || die "emake install failed"
 	keepdir /var/lib/qmrtg
 	dodoc INSTALL.txt
 	if use doc ; then
