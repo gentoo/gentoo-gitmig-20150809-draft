@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1.ebuild,v 1.6 2010/02/12 16:50:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1-r1.ebuild,v 1.1 2010/02/12 16:50:30 jer Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -16,9 +18,10 @@ IUSE="doc"
 DEPEND=""
 RDEPEND="net-analyzer/mrtg"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}/examples"
+src_prepare() {
+	sed -i analyzers/Makefile.in filters/Makefile.in \
+		-e 's|^CFLAGS =|CFLAGS ?=|g' || die "sed failed"
+
 	epatch "${FILESDIR}/mrtg.cfg.patch"
 	epatch "${FILESDIR}/qmrtg.conf.sample.patch"
 }
