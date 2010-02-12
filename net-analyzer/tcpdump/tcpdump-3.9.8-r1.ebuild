@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.8-r1.ebuild,v 1.7 2009/06/17 07:21:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.8-r1.ebuild,v 1.8 2010/02/12 14:34:14 jer Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="chroot ssl ipv6 samba"
 
 DEPEND="net-libs/libpcap
