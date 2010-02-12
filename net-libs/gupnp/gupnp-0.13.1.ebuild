@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.13.1.ebuild,v 1.2 2009/10/19 19:36:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.13.1.ebuild,v 1.3 2010/02/12 18:38:08 josejx Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.org/sources/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="networkmanager"
 
 RDEPEND=">=net-libs/gssdp-0.7
