@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-rally
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/ChangeLog,v 1.2 2009/10/06 23:07:16 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/ChangeLog,v 1.3 2010/02/12 05:52:49 mr_bones_ Exp $
+
+  12 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  quake3-rally-1.33.ebuild:
+  update SRC_URI (bug #304659)
 
 *quake3-rally-1.33 (06 Oct 2009)
 
