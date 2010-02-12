@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.1 2010/01/28 22:19:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.2 2010/02/12 04:05:09 bicatali Exp $
 
 EAPI=2
 
@@ -12,10 +12,10 @@ HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
 
 LICENSE="UCAR-Unidata"
 SLOT="0"
-IUSE="doc fortran hdf5 mpi szip cxx"
+IUSE="doc fortran hdf5 szip cxx"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="hdf5? ( >=sci-libs/hdf5-1.8[zlib,szip?,mpi=] )"
+RDEPEND="hdf5? ( >=sci-libs/hdf5-1.8[zlib,szip?] )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	doc? ( virtual/latex-base )
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	mpi? ( virtual/mpi[cxx?,fortran?] )"
 
 pkg_setup() {
-	if use mpi; then
+	if has_version sci-libs/hdf5[mpi]; then
 		export CC=mpicc
 		if use cxx; then
 			export CXX=mpicxx
