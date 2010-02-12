@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/twoftpd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.7 2009/09/23 18:37:33 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.8 2010/02/12 09:46:37 bangert Exp $
+
+*twoftpd-1.41 (12 Feb 2010)
+
+  12 Feb 2010; Thilo Bangert <bangert@gentoo.org> twoftpd-1.21.ebuild,
+  twoftpd-1.21-r1.ebuild, +twoftpd-1.41.ebuild:
+  version bump - dont pre-strip
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> twoftpd-1.21.ebuild,
   twoftpd-1.21-r1.ebuild:
