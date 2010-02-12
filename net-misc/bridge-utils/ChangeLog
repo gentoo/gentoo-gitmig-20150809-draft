@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bridge-utils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.54 2009/05/09 16:00:13 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.55 2010/02/12 17:50:14 robbat2 Exp $
+
+  12 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  bridge-utils-1.4.ebuild:
+  Add warning message for lack of CONFIG_BRIDGE, and add ~ppc64 keyword per
+  request by JoseJX.
 
   09 May 2009; Raúl Porcel <armin76@gentoo.org> bridge-utils-1.4.ebuild:
   sparc stable wrt #268323

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.8 2009/05/09 16:00:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.9 2010/02/12 17:50:14 robbat2 Exp $
 
-inherit toolchain-funcs eutils autotools
+inherit toolchain-funcs eutils autotools linux-info
 
 DESCRIPTION="Tools for configuring the Linux kernel 802.1d Ethernet Bridge"
 HOMEPAGE="http://bridge.sourceforge.net/"
@@ -10,11 +10,14 @@ SRC_URI="mirror://sourceforge/bridge/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="amd64 hppa ia64 ppc sparc x86 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/os-headers"
 RDEPEND=""
+
+CONFIG_CHECK="~BRIDGE"
+WARNING_BRIDGE="CONFIG_BRIDGE is required to get bridge devices in the kernel"
 
 get_headers() {
 	CTARGET=${CTARGET:-${CHOST}}
