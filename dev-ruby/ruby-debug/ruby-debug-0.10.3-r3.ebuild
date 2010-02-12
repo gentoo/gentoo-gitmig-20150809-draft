@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.3-r3.ebuild,v 1.2 2010/02/01 17:56:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.3-r3.ebuild,v 1.3 2010/02/12 10:57:50 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 jruby"
@@ -20,7 +20,7 @@ DESCRIPTION="CLI interface to ruby-debug"
 HOMEPAGE="http://rubyforge.org/projects/ruby-debug/"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 SLOT="0"
 

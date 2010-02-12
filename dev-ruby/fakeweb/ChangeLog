@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fakeweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.4 2010/01/14 16:00:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.5 2010/02/12 10:56:29 flameeyes Exp $
+
+  12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  fakeweb-1.2.8.ebuild:
+  Add ~x86 keyword (tested in development container).
 
   14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   fakeweb-1.2.8.ebuild:

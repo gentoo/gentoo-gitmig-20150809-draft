@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.2.8.ebuild,v 1.3 2010/01/14 16:00:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.2.8.ebuild,v 1.4 2010/02/12 10:56:29 flameeyes Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://github.com/chrisk/fakeweb"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend test '>=dev-ruby/mocha-0.9.5 virtual/ruby-test-unit
