@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77.ebuild,v 1.3 2010/02/10 21:58:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77.ebuild,v 1.4 2010/02/12 00:38:52 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.corpit.ru/mjt/${PN}/${P/-/_}.tar.gz"
 
 RESTRICT="test"
 LICENSE="public-domain"
-KEYWORDS="~amd64 ~hppa ~ia64 ppc x86"
+KEYWORDS="~amd64 hppa ~ia64 ppc x86"
 SLOT="0"
 
 DEPEND="!dev-db/cdb"
