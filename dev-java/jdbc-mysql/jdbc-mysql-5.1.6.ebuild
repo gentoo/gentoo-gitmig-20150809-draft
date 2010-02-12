@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.6.ebuild,v 1.3 2010/01/07 21:23:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.6.ebuild,v 1.4 2010/02/12 22:55:28 caster Exp $
 
 JAVA_PKG_IUSE="source"
 WANT_ANT_TASKS="ant-contrib"
@@ -40,7 +40,9 @@ src_unpack() {
 	epatch "${FILESDIR}/5.0.5-remove-jboss-dependency-from-tests.patch"
 	# http://bugs.mysql.com/bug.php?id=28286
 	epatch "${FILESDIR}/5.0.5-dist-target-depends.patch"
-	epatch "${FILESDIR}/5.1.6-java6-detection.patch"
+
+	# checks fail if java6 bootclasspath is not a single jar
+	sed -i 's/depends="-compiler-check, /depends="/' build.xml || die
 
 	rm -v *.jar || die
 
@@ -61,10 +63,10 @@ EANT_BUILD_TARGET="dist"
 src_compile() {
 	local vm=$(depend-java-query -v ">=virtual/jdk-1.6")
 	local javac=$(GENTOO_VM="${vm}" java-config --javac)
-	local rt=$(GENTOO_VM="${vm}" java-config --jdk-home)/jre/lib/rt.jar
+	local rt=$(GENTOO_VM="${vm}" java-config -g BOOTCLASSPATH)
 	einfo "Using ${vm} to compile the JDBC4 driver"
 	einfo "javac: ${javac}"
-	einfo "rt.jar: ${rt}"
+	einfo "bootclasspath: ${rt}"
 	java-pkg-2_src_compile \
 		-Dcom.mysql.jdbc.java6.javac="${javac}" \
 		-Dcom.mysql.jdbc.java6.rtjar="${rt}"
