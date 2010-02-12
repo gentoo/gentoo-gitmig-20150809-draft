@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.63 2010/02/03 13:58:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.64 2010/02/12 21:19:37 pacho Exp $
+
+  12 Feb 2010; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.1.15.4.ebuild:
+  Dropping pango USE flag since webkit uses pango by default since 1.1.x,
+  bug 301577
 
   03 Feb 2010; Fabian Groffen <grobian@gentoo.org>
   webkit-gtk-1.1.15.4.ebuild,
