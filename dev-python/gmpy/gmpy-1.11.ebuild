@@ -1,11 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.04.ebuild,v 1.1 2009/02/24 21:05:29 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.11.ebuild,v 1.1 2010/02/12 16:10:31 grozin Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
 DESCRIPTION="Python bindings for dev-libs/gmp"
-HOMEPAGE="http://www.aleax.it/gmpy.html"
+HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.zip"
 
 LICENSE="LGPL-2.1"
@@ -13,15 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
-RDEPEND="virtual/python
-	dev-libs/gmp"
+RDEPEND="dev-libs/gmp"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# HACK: distutils only support 'setup.py', so
 	# we symlink what we need to 'setup.py' later
 	mv setup.py setmp.py
@@ -34,6 +33,19 @@ src_compile() {
 	done
 }
 
+src_test() {
+	testing() {
+		if [[ "${PYTHON_ABI}" == 3.* ]]; then
+			pushd test3 > /dev/null
+		else
+			pushd test > /dev/null
+		fi
+		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" gmpy_test.py || return 1
+		popd > /dev/null
+	}
+	python_execute_function testing
+}
+
 src_install() {
 	local i
 	for i in mp es; do
@@ -41,9 +53,4 @@ src_install() {
 	done
 	dohtml doc/index.html
 	dodoc doc/gmpydoc.txt
-}
-
-src_test() {
-	cd test
-	PYTHONPATH="$(ls -d ../build/lib.*)" "${python}" gmpy_test.py
 }
