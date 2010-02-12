@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.ebuild,v 1.4 2009/09/14 14:42:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.ebuild,v 1.5 2010/02/12 10:24:07 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -162,6 +162,7 @@ compile_cctools() {
 }
 
 src_compile() {
+	tc-export CC CXX
 	compile_cctools
 	compile_ld64
 }
