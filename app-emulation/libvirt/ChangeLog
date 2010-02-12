@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.50 2010/02/12 12:35:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.51 2010/02/12 12:36:21 flameeyes Exp $
+
+  12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libvirt-0.7.6-r1.ebuild:
+  Ouch, inverted logic.
 
   12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libvirt-0.7.6-r1.ebuild:

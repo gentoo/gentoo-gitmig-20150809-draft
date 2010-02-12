@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.2 2010/02/12 12:35:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.3 2010/02/12 12:36:21 flameeyes Exp $
 
 BACKPORTS=
 
@@ -125,6 +125,8 @@ src_configure() {
 	# mime the same functionality with this.
 	case ${CHOST} in
 		*cygwin* | *mingw* )
+			;;
+		*)
 			ac_cv_prog_WINDRES=no
 			;;
 	esac
