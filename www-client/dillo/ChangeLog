@@ -1,6 +1,11 @@
 # ChangeLog for www-client/dillo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.82 2009/09/06 16:25:17 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.83 2010/02/12 13:23:29 yngwin Exp $
+
+*dillo-2.2 (12 Feb 2010)
+
+  12 Feb 2010; Ben de Groot <yngwin@gentoo.org> +dillo-2.2.ebuild:
+  Version bump
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> dillo-2.1.1.ebuild:
   Marking dillo-2.1.1 ppc64 for bug 253083
