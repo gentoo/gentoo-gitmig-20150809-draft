@@ -1,6 +1,9 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.34 2010/02/11 23:03:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.35 2010/02/12 11:19:17 pacho Exp $
+
+  12 Feb 2010; Pacho Ramos <pacho@gentoo.org> projectx-0.90.4.00_p32.ebuild:
+  amd64 stable, bug 304673
 
   11 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   projectx-0.90.4.00-r3.ebuild, projectx-0.90.4.00_p26.ebuild,
