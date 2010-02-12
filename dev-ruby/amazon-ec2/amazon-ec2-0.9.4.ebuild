@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.3.ebuild,v 1.1 2010/02/12 21:25:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.4.ebuild,v 1.1 2010/02/12 21:57:50 flameeyes Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RUBY_FAKEGEM_EXTRADOC="README.rdoc README_dev.rdoc ChangeLog"
 
 RUBY_FAKEGEM_BINWRAP="ec2sh"
 
-inherit ruby-fakegem eutils
+inherit ruby-fakegem
 
 DESCRIPTION="Library for accessing the Amazon Web Services EC2 and related"
 HOMEPAGE="http://github.com/grempe/amazon-ec2"
@@ -32,10 +32,6 @@ IUSE=""
 
 ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/test-spec dev-ruby/mocha"
 ruby_add_rdepend '>=dev-ruby/xml-simple-1.0.12'
-
-all_ruby_prepare() {
-	epatch "${FILESDIR}"/${P}-fixes.patch
-}
 
 each_ruby_prepare() {
 	case ${RUBY} in
