@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72.1.ebuild,v 1.3 2008/03/23 21:30:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.72.1.ebuild,v 1.4 2010/02/12 18:56:52 josejx Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -11,14 +11,13 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~ppc"
-IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb pci"
+IUSE="alsa oss fbcon X oldworld sheep debug dga usb pci"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 RDEPEND="net-misc/dhcp
 	sys-libs/zlib
 	net-firewall/iptables
 	alsa? ( media-libs/alsa-lib )
-	vnc? ( net-misc/vnc )
 	X? ( x11-libs/libXext
 		dga? ( x11-libs/libXxf86dga ) )"
 DEPEND="${RDEPEND}
@@ -62,7 +61,8 @@ src_compile() {
 	use sheep	 || sed -i "s:iCONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config-ppc
 	use X		 || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config-ppc
 	use fbcon	 || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config-ppc
-	use vnc		 || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc
+	### Remove VNC, since the deps are broken
+				    sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc
 	use dga		 || sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
 	use usb		 || sed -i "s:CONFIG_USBDEV=y:# CONFIG_USBDEV is not set:" .config-ppc
 	use pci		 || sed -i "s:CONFIG_PCIPROXY=y:# CONFIG_PCIPROXY is not set:" .config-ppc

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.79 2008/07/28 18:54:35 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.80 2010/02/12 18:56:52 josejx Exp $
+
+  12 Feb 2010; Joseph Jezak <josejx@gentoo.org> -mol-0.9.72.ebuild,
+  mol-0.9.72.1.ebuild:
+  Removed vnc flag, removed old ebuild.
 
   28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
