@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.57 2010/02/09 00:20:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.58 2010/02/12 18:56:48 jmbsvicetto Exp $
+
+*krunner-4.4.0-r1 (12 Feb 2010)
+
+  12 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +krunner-4.4.0-r1.ebuild, +files/krunner-4.4.0_lock_dialog_crash.patch:
+  Copied Alex (wired) ebuild from the kde overlay.
+  Thanks to Jeff Mitchell (jefferai) for the patch.
+  [kde-base/krunner-4.4.0-r1] fixed lock dialog crash - b.k.o #217882
 
 *krunner-4.4.0 (08 Feb 2010)
 
