@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.ebuild,v 1.2 2010/01/30 09:36:07 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.ebuild,v 1.3 2010/02/12 04:17:58 bicatali Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc fltk gif glut gsl hdf5 jpeg mpi octave python qt4 wxwidgets"
+IUSE="doc fltk gif glut gsl hdf5 jpeg octave python qt4 wxwidgets"
 
 RDEPEND="media-libs/libpng
 	virtual/glu
@@ -22,9 +22,8 @@ RDEPEND="media-libs/libpng
 	fltk? ( x11-libs/fltk:1.1 )
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
-	hdf5? ( >=sci-libs/hdf5-1.8[mpi=] )
+	hdf5? ( >=sci-libs/hdf5-1.8 )
 	gsl? ( sci-libs/gsl )
-	mpi? ( virtual/mpi[cxx] )
 	octave? ( sci-mathematics/octave )
 	qt4? ( x11-libs/qt-gui:4 )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )"
@@ -39,7 +38,7 @@ pkg_setup() {
 		eerror "You need >=gcc-4.3.0 to compile this package"
 		die "Wrong gcc version"
 	fi
-	if use mpi; then
+	if has_version sci-libs/hdf5[mpi]; then
 		export CC=mpicc
 		export CXX=mpicxx
 	fi
