@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.1 2010/02/04 07:05:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.2 2010/02/12 12:35:36 flameeyes Exp $
 
 BACKPORTS=
 
@@ -116,6 +116,18 @@ src_configure() {
 
 	# we use udev over hal
 	myconf="${myconf} --without-hal"
+
+	# this is a nasty trick to work around the problem in bug
+	# #275073. The reason why we don't solve this properly is that
+	# it'll require us to rebuild autotools (and we don't really want
+	# to do that right now). The proper solution has been sent
+	# upstream and should hopefully land in 0.7.7, in the mean time,
+	# mime the same functionality with this.
+	case ${CHOST} in
+		*cygwin* | *mingw* )
+			ac_cv_prog_WINDRES=no
+			;;
+	esac
 
 	econf \
 		${myconf} \
