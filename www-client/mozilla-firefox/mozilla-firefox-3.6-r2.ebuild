@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.ebuild,v 1.2 2010/01/22 13:45:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6-r2.ebuild,v 1.1 2010/02/12 20:51:53 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -17,7 +17,7 @@ MAJ_XUL_PV="1.9.2"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
-PATCH="${PN}-3.6-patches-0.5"
+PATCH="${PN}-3.6-patches-0.6"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa bindist java libnotify +networkmanager"
+IUSE="+alsa bindist java libnotify wifi"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2
@@ -52,13 +52,13 @@ RDEPEND="
 	>=dev-libs/nss-3.12.4
 	>=dev-libs/nspr-4.8
 	>=app-text/hunspell-1.2
-	>=dev-db/sqlite-3.6.20-r1[fts3]
+	>=dev-db/sqlite-3.6.22-r2[fts3,secure-delete]
 	alsa? ( media-libs/alsa-lib )
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]
-	networkmanager? ( net-wireless/wireless-tools )
+	wifi? ( net-wireless/wireless-tools )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
-	~net-libs/xulrunner-${XUL_PV}[java=,networkmanager=,libnotify=]"
+	~net-libs/xulrunner-${XUL_PV}[java=,wifi=,libnotify=]"
 
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )
@@ -93,6 +93,12 @@ linguas() {
 }
 
 pkg_setup() {
+	# Ensure we always build with C locale.
+	export LANG="C"
+	export LC_ALL="C"
+	export LC_MESSAGES="C"
+	export LC_CTYPE="C"
+
 	if ! use bindist ; then
 		einfo
 		elog "You are enabling official branding. You may not redistribute this build"
@@ -120,13 +126,13 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
+	# Fix media build failure
+	epatch "${FILESDIR}/xulrunner-1.9.2-noalsa-fixup.patch"
+
 	eautoreconf
 
 	cd js/src
 	eautoreconf
-
-	# We need to re-patch this because autoreconf overwrites it
-	epatch "${FILESDIR}/000_flex-configure-LANG.patch"
 }
 
 src_configure() {
@@ -157,6 +163,7 @@ src_configure() {
 	mozconfig_annotate '' --enable-oji --enable-mathml
 	mozconfig_annotate 'places' --enable-storage --enable-places
 	mozconfig_annotate '' --enable-safe-browsing
+	mozconfig_annotate 'sqlite' --enable-system-sqlite
 
 	# Build mozdevelop permately
 	mozconfig_annotate ''  --enable-jsd --enable-xpctools
@@ -179,7 +186,7 @@ src_configure() {
 
 	mozconfig_use_enable libnotify
 	mozconfig_use_enable java javaxpcom
-	mozconfig_use_enable networkmanager necko-wifi
+	mozconfig_use_enable wifi necko-wifi
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
 
@@ -235,7 +242,7 @@ src_install() {
 		newicon "${S}"/browser/base/branding/icon48.png firefox-icon-unbranded.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
 			${PN}-${DESKTOP_PV}.desktop
-		sed -i -e "s:Bon Echo:Shiretoko:" \
+		sed -i -e "s:Bon Echo:Namoroka:" \
 			"${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop || die "sed failed!"
 	fi
 
