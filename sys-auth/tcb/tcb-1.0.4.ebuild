@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/tcb-1.0.3-r1.ebuild,v 1.1 2010/01/12 17:59:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/tcb-1.0.4.ebuild,v 1.1 2010/02/12 10:00:24 phajdan.jr Exp $
+
+EAPI="2"
 
 inherit eutils multilib
 
@@ -11,10 +13,9 @@ SRC_URI="ftp://ftp.openwall.com/pub/projects/tcb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pam"
+IUSE=""
 
-DEPEND=">=sys-libs/libxcrypt-2.4
-	pam? ( >=sys-libs/pam-0.75 )"
+DEPEND=">=sys-libs/pam-0.75"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -29,13 +30,12 @@ pkg_setup() {
 		DESTDIR='${D}'"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-1.0.2-build.patch
-	epatch "${FILESDIR}"/${PN}-xcrypt.patch
-	use pam || sed -i '/pam/d' Makefile
+src_prepare() {
+	# We don't have Openwall glibc extensions. The patch makes it possible
+	# to run tcb with normal glibc. It has been reviewed by upstream, but
+	# is not going to be accepted. The plan is to add support for sha hashes
+	# to Openwall's crypto routines and use them when that's available.
+	epatch "${FILESDIR}"/${PN}-gentoo.patch
 }
 
 src_compile() {
