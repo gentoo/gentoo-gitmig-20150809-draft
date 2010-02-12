@@ -1,0 +1,10 @@
+# ChangeLog for www-client/surf
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.1 2010/02/12 17:29:37 jer Exp $
+
+*surf-0.3 (12 Feb 2010)
+
+  12 Feb 2010; Jeroen Roovers <jer@gentoo.org> +surf-0.3.ebuild,
+  +metadata.xml:
+  Initial commit.
+
