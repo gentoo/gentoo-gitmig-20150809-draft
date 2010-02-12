@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>virtualization</herd>
+  <use>
+	  <flag name='policykit'>Enables <pkg>sys-auth/polkit</pkg> authentication
+		  support, required when using <pkg>app-emulation/libvirt</pkg> with
+		  PolicyKit authentication</flag>
+  </use>
 </pkgmetadata>
