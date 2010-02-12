@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.304 2010/02/10 03:36:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.305 2010/02/12 16:10:20 chainsaw Exp $
+
+*alsa-lib-1.0.22-r1 (12 Feb 2010)
+
+  12 Feb 2010; <chainsaw@gentoo.org> +alsa-lib-1.0.22-r1.ebuild,
+  +files/alsa-lib-1.0.22-fd-leak.patch:
+  Apply patch from Daniel T Chen (Ubuntu) to avoid a file-descriptor leak.
+  It can be triggered by PulseAudio. With thanks to James Brown for
+  identifying the required patch. Closes bug #304629.
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> alsa-lib-1.0.21a.ebuild:
   Marked ppc stable for bug #300064.
