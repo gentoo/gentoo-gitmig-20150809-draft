@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.3 2010/02/12 04:22:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.4 2010/02/12 17:41:23 bicatali Exp $
 
 EAPI=2
 
@@ -15,12 +15,11 @@ SLOT="0"
 IUSE="doc fortran hdf5 szip cxx"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="hdf5? ( >=sci-libs/hdf5-1.8[zlib,szip?] )"
+RDEPEND="hdf5? ( >=sci-libs/hdf5-1.8[zlib,szip?,fortran?] )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	doc? ( virtual/latex-base )
-	fortran? ( dev-lang/cfortran )
-	mpi? ( virtual/mpi[cxx?,fortran?] )"
+	fortran? ( dev-lang/cfortran )"
 
 pkg_setup() {
 	if use hdf5 && has_version sci-libs/hdf5[mpi]; then
