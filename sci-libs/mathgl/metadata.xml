@@ -9,6 +9,5 @@
 	<longdescription>Math Graphics Library</longdescription>
 	<use>
 		<flag name='octave'>Add bindings for <pkg>sci-mathematics/octave</pkg></flag>
-		<flag name='mpi'>Use mpi wrappers for compilation. Requirement for <pkg>sci-libs/hdf5</pkg>[mpi]</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.2 2010/02/12 04:05:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.3 2010/02/12 04:22:21 bicatali Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	mpi? ( virtual/mpi[cxx?,fortran?] )"
 
 pkg_setup() {
-	if has_version sci-libs/hdf5[mpi]; then
+	if use hdf5 && has_version sci-libs/hdf5[mpi]; then
 		export CC=mpicc
 		if use cxx; then
 			export CXX=mpicxx

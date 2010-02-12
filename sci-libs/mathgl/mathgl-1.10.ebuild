@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.ebuild,v 1.3 2010/02/12 04:17:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.ebuild,v 1.4 2010/02/12 04:20:46 bicatali Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -38,7 +38,7 @@ pkg_setup() {
 		eerror "You need >=gcc-4.3.0 to compile this package"
 		die "Wrong gcc version"
 	fi
-	if has_version sci-libs/hdf5[mpi]; then
+	if use hdf5 && has_version sci-libs/hdf5[mpi]; then
 		export CC=mpicc
 		export CXX=mpicxx
 	fi
