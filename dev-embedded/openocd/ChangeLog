@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/openocd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.8 2009/12/26 20:26:19 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.9 2010/02/12 19:32:50 armin76 Exp $
+
+  12 Feb 2010; Raúl Porcel <armin76@gentoo.org> openocd-0.3.1.ebuild,
+  openocd-9999.ebuild:
+  Add ~amd64
 
 *openocd-0.3.1 (26 Dec 2009)
 

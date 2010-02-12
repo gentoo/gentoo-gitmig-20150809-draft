@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.8 2009/12/26 20:28:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.9 2010/02/12 19:32:50 armin76 Exp $
 
 EGIT_REPO_URI="git://openocd.git.sourceforge.net/gitroot/openocd/openocd"
 inherit eutils
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~x86"
+	KEYWORDS="~amd64 ~x86"
 	SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 fi
 
