@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5-r1.ebuild,v 1.2 2010/02/11 20:52:15 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5-r1.ebuild,v 1.3 2010/02/12 14:04:57 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -51,15 +51,16 @@ src_compile() {
 	*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
 	esac
 
+	export PKG_CONFIG_ALLOW_SYSTEM_LIBS=1
+	export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
+	export NSPR_INCLUDE_DIR=`pkg-config --cflags-only-I nspr | sed 's/-I//'`
+	export NSPR_LIB_DIR=`pkg-config --libs-only-L nspr | sed 's/-L//'`
 	export BUILD_OPT=1
 	export NSS_USE_SYSTEM_SQLITE=1
-	export NSPR_INCLUDE_DIR=`pkg-config --cflags-only-I nspr | sed 's/-I//'`
 	export NSDISTMODE=copy
 	export NSS_ENABLE_ECC=1
 	export XCFLAGS="${CFLAGS}"
 	export FREEBL_NO_DEPEND=1
-	export PKG_CONFIG_ALLOW_SYSTEM_LIBS=1
-	export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 	cd "${S}"/mozilla/security/coreconf
 	emake -j1 CC="$(tc-getCC)" || die "coreconf make failed"
@@ -94,12 +95,12 @@ src_install () {
 	done
 
 	if use utils; then
-		local nssutil
-		nssutils="certutil crlutil cmsutil modutil pk12util signtool signver ssltrap addbuiltin"
+		local nssutils
+		nssutils="certutil crlutil cmsutil modutil pk12util signtool signver ssltap addbuiltin"
 
 		cd "${S}"/mozilla/security/dist/*/bin/
 		for f in $nssutils; do
-			newbin ${f}
+			dobin ${f}
 		done
 	fi
 }
