@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.34 2010/02/01 22:15:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.35 2010/02/12 04:10:58 bicatali Exp $
+
+  12 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  pytables-2.1.2.ebuild:
+  Removed mpi use flag in favor of checking if hdf5 was built with mpi, see
+  bug #303215
 
   01 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   pytables-2.1.2.ebuild:

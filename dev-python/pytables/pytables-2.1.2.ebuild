@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.1.2.ebuild,v 1.4 2010/02/01 22:15:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.1.2.ebuild,v 1.5 2010/02/12 04:10:59 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -13,9 +13,9 @@ HOMEPAGE="http://www.pytables.org/"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 LICENSE="BSD"
-IUSE="doc examples mpi"
+IUSE="doc examples"
 
-DEPEND="sci-libs/hdf5[mpi=]
+DEPEND="sci-libs/hdf5
 	dev-python/numpy
 	dev-libs/lzo:2
 	app-arch/bzip2"
@@ -28,9 +28,7 @@ DOCS="ANNOUNCE.txt MIGRATING_TO_2.x.txt RELEASE_NOTES.txt THANKS"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-failingtests.patch
 	epatch "${FILESDIR}"/${P}-no-old-num.patch
-	if use mpi; then
-		export CC=mpicc
-	fi
+	has_version sci-libs/hdf5[mpi] && export CC=mpicc
 }
 
 src_test() {
