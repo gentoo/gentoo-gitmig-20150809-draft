@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mcelog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.19 2008/11/02 11:03:53 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.20 2010/02/12 23:59:52 hanno Exp $
+
+*mcelog-1.0_pre3 (12 Feb 2010)
+
+  12 Feb 2010; Hanno Boeck <hanno@gentoo.org> +mcelog-1.0_pre3.ebuild:
+  Version bump, kernel API changed.
 
   02 Nov 2008; Markus Meier <maekke@gentoo.org> mcelog-0.7.ebuild,
   mcelog-0.8_pre1.ebuild:
