@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.145 2010/01/10 18:58:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.146 2010/02/13 19:29:29 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> Net-DNS-0.66.ebuild,
+  Net-DNS-0.66-r1.ebuild:
+  Add ~m68k/~s390/~sh wrt #300221
 
 *Net-DNS-0.66-r1 (10 Jan 2010)
 
