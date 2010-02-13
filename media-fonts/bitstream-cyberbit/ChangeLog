@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/bitstream-cyberbit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/bitstream-cyberbit/ChangeLog,v 1.1 2010/02/13 22:14:42 chithanh Exp $
+
+*bitstream-cyberbit-2.0 (13 Feb 2010)
+
+  13 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +bitstream-cyberbit-2.0.ebuild, +metadata.xml:
+  Initial import for bug #284684
+
