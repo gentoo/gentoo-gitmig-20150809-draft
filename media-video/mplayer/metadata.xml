@@ -25,7 +25,6 @@
     <flag name="md5sum">Enables md5sum video output</flag>
     <flag name="mmxext">Enables mmx2 support</flag>
     <flag name="mng">MNG input support</flag>
-    <flag name="mp2">Enables support for twolame, an MP2 audio library</flag>
 	<flag name="network">Enables network streaming support</flag>
 	<flag name="nut">Enables support for the NUT container format</flag>
 	<flag name="opencore-amr">Enables Adaptive Multi-Rate format support</flag>
