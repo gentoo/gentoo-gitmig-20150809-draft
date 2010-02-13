@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.169 2010/02/11 20:42:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.170 2010/02/13 14:09:09 anarchy Exp $
+
+*enigmail-0.96.0-r1 (13 Feb 2010)
+
+  13 Feb 2010; <anarchy@gentoo.org> -enigmail-0.96.0.ebuild,
+  +enigmail-0.96.0-r1.ebuild:
+  Fix bug #290586
 
   11 Feb 2010; <anarchy@gentoo.org> enigmail-0.96.0.ebuild,
   enigmail-1.0.1.ebuild:
