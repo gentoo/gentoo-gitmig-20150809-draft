@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>antivirus</herd>
-	<longdescription lang="en">
-		Complete virus defense solution designed for easy virus prevention on
-		Linux systems.
-	</longdescription>
-</pkgmetadata>
