@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/lxdream
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/lxdream/ChangeLog,v 1.1 2010/02/13 23:33:02 chithanh Exp $
+
+*lxdream-0.9.1 (13 Feb 2010)
+
+  13 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +lxdream-0.9.1.ebuild, +metadata.xml:
+  Initial import for bug #202989
+
