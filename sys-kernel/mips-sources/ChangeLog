@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.130 2010/01/10 09:48:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.131 2010/02/13 19:07:33 kumba Exp $
+
+*mips-sources-2.6.31.12 (13 Feb 2010)
+
+  13 Feb 2010; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.27.21-r1.ebuild, mips-sources-2.6.28.9-r1.ebuild,
+  mips-sources-2.6.29.1.ebuild, +mips-sources-2.6.31.12.ebuild:
+  Update to 2.6.31.12. Octane support is disabled as of this release, and
+  may not return. Testing on 2.6.32 will determine. Also fixed spacing
+  issues in the ebuilds.
 
   10 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   mips-sources-2.6.27.21-r1.ebuild, mips-sources-2.6.28.9-r1.ebuild,

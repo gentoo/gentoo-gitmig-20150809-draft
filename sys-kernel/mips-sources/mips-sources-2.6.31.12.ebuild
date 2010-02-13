@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.9-r1.ebuild,v 1.4 2010/02/13 19:07:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.31.12.ebuild,v 1.1 2010/02/13 19:07:33 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -15,8 +15,8 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20090315"			# Date of diff between kernel.org and lmo GIT
-GENPATCHREV="3"				# Tarball revision for patches
+GITDATE="20100213"			# Date of diff between kernel.org and lmo GIT
+GENPATCHREV="1"				# Tarball revision for patches
 
 # Directories
 S="${WORKDIR}/linux-${OKV}-${GITDATE}"
@@ -42,7 +42,7 @@ HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
 KEYWORDS="-* ~mips"
-IUSE="cobalt ip27 ip28 ip30 ip32r10k"
+IUSE="cobalt ip27 ip28 ip30 ip32r10k impactdebug"
 DEPEND=">=sys-devel/gcc-4.1.1"
 RDEPEND=""
 
@@ -50,7 +50,7 @@ RDEPEND=""
 DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
 DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
 DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
-DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
+DO_IP30="no"				# 		   IP30 support		(SGI Octane)
 DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
 DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 
@@ -58,7 +58,7 @@ DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
 SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
 SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
-SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
+SV_IP30="2.6.29.1"			# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
 
@@ -169,6 +169,6 @@ pkg_setup() {
 	pkg_setup
 }
 
-src_unpack() { eblit-run src_unpack v1 ; }
+src_unpack() { eblit-run src_unpack v2 ; }
 
 #//------------------------------------------------------------------------------
