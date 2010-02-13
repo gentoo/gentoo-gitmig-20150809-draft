@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gaul-devel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.9 2009/09/23 20:06:52 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.10 2010/02/13 16:42:19 jlec Exp $
+
+*gaul-devel-0.1849-r2 (13 Feb 2010)
+
+  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +gaul-devel-0.1849-r2.ebuild, +files/gaul-devel-0.1849-as-needed.patch:
+  Fix for as-needed, thanks Kacper Kowalik for providing the patch #248357
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   gaul-devel-0.1849-r1.ebuild:
