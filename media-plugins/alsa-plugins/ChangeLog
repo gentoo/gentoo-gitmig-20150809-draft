@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.122 2010/02/10 03:40:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.123 2010/02/13 16:27:07 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> alsa-plugins-1.0.21.ebuild:
+  alpha/ia64/sh stable wrt #300064
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> alsa-plugins-1.0.21.ebuild:
   Marked ppc stable for bug #300064.
