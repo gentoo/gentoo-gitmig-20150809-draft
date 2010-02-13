@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sqlite3-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.36 2010/01/16 08:35:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.37 2010/02/13 20:18:40 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> sqlite3-ruby-1.2.5.ebuild:
+  Add ~ia64/~sparc
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   sqlite3-ruby-1.2.5.ebuild:
