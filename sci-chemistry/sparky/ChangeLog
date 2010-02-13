@@ -1,6 +1,16 @@
 # ChangeLog for sci-chemistry/sparky
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.13 2009/09/18 14:50:12 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.14 2010/02/13 22:58:13 jlec Exp $
+
+*sparky-3.115 (13 Feb 2010)
+
+  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/3.115-fpic.patch, +files/3.115-ldflags.patch,
+  +files/3.115-makefile.patch, +files/3.115-paths.patch,
+  -sparky-3.113.ebuild, +files/3.115-wrapper.patch, +sparky-3.115.ebuild,
+  metadata.xml:
+  version bump, removed fixed tcl/tk and python version, multilib awareness
+  added, EPREFIX ready, keyworded for ~amd64, bug 267355 299348
 
   18 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> sparky-3.113.ebuild:
   Migrate to EAPI 2 in order to remove built_with_use call.
