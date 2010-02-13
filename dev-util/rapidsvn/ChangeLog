@@ -1,11 +1,16 @@
 # ChangeLog for dev-util/rapidsvn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.67 2009/10/12 07:29:46 nerdboy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.68 2010/02/13 21:16:38 nerdboy Exp $
+
+*rapidsvn-0.12.0 (13 Feb 2010)
+
+  13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> +rapidsvn-0.12.0.ebuild:
+  Updated to latest upstream release; closes bug #294740.
 
 *rapidsvn-0.10.0 (12 Oct 2009)
 
   12 Oct 2009; Steve Arnold <nerdboy@gentoo.org> +rapidsvn-0.10.0.ebuild:
-  Updated to latest upstream release, closes bug 284730.  Re-enabled the
+  Updated to latest upstream release, closes bug #284730.  Re-enabled the
   neon dav support, but it needs testing (the serf dav support is smooth
   as the proverbial baby's butt...)
 
