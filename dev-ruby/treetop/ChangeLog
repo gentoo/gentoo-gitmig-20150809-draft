@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/treetop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.10 2010/01/14 16:13:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.11 2010/02/13 19:36:52 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> treetop-1.4.2.ebuild,
+  treetop-1.4.3.ebuild:
+  Add ~sparc
 
   14 Jan 2010; Brent Baude <ranger@gentoo.org> treetop-1.4.3.ebuild:
   Marking treetop-1.4.3 ~ppc for bug 300739
