@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.8 2010/02/13 18:41:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.9 2010/02/13 19:16:06 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> silgraphite-2.3.1.ebuild:
+  Add ~sh wrt #300068
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> silgraphite-2.3.1.ebuild:
   Add ~alpha/~ia64 wrt #300068
