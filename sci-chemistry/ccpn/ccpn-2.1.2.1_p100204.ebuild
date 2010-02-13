@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.2.1_p100204.ebuild,v 1.3 2010/02/07 01:34:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.2.1_p100204.ebuild,v 1.4 2010/02/13 21:07:17 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -37,6 +37,8 @@ S="${WORKDIR}"/${MY_PN}/${MY_PN}$(get_version_component_range 1-2 ${PV})
 src_prepare() {
 	[[ -n ${PATCHSET} ]] && \
 		epatch "${WORKDIR}"/ccpn-update-${PATCHSET}.patch
+
+	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
 
 	local tk_ver
 	local myconf
