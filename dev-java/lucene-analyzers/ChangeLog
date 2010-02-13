@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene-analyzers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.8 2009/10/03 12:41:29 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.9 2010/02/13 16:41:40 grobian Exp $
+
+  13 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  lucene-analyzers-2.3.2.ebuild:
+  Marked ~x86-linux, ~amd64-linux (bug #303115) and ~ppc-macos
 
   03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
   lucene-analyzers-2.3.2.ebuild:
