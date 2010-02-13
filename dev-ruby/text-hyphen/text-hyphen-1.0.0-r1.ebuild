@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/text-hyphen-1.0.0-r1.ebuild,v 1.3 2010/01/14 15:33:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/text-hyphen-1.0.0-r1.ebuild,v 1.4 2010/02/13 12:01:12 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-ruby_add_bdepend test dev-ruby/archive-tar-minitar
+ruby_add_bdepend test "dev-ruby/archive-tar-minitar virtual/ruby-test-unit"
 
 all_ruby_prepare() {
 	# Fix rakefile for new rake versions
