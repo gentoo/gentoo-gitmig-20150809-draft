@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.27 2009/12/29 06:24:26 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.28 2010/02/13 18:44:40 robbat2 Exp $
+
+  13 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  mtd-utils-20090630.ebuild:
+  Bug #276374 again, trying for a different workaround.
 
   29 Dec 2009; Mike Frysinger <vapier@gentoo.org> mtd-utils-20080907.ebuild:
   Add -j1 for #276374 and fix more ranlib issues #295932.

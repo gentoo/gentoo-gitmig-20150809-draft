@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20090630.ebuild,v 1.4 2009/12/29 06:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20090630.ebuild,v 1.5 2010/02/13 18:44:40 robbat2 Exp $
 
 inherit eutils
 
@@ -34,13 +34,19 @@ src_unpack() {
 }
 
 makeopts() {
-	echo CROSS=${CHOST}-
+	# bug 276374 has an interaction that makes the directories not work quite
+	# right sometimes. This needs more work.
+	[[ "${CTARGET}" != "" && "${CHOST}" != "${CTARGET}" ]] && echo CROSS=${CHOST}-
 	use xattr || echo WITHOUT_XATTR=1
 }
 
 src_compile() {
-	# bug #276374
-	emake -j1 $(makeopts) || die
+	# bug 276374 requires that the contents of ubi-utils gets built BEFORE the
+	# rest of the codebase. There is a parallel interference in the Makefile.
+	pushd ubi-utils
+	emake $(makeopts) || die
+	popd
+	emake $(makeopts) || die
 }
 
 src_install() {
