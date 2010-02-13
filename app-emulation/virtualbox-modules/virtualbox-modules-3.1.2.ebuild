@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-3.1.2.ebuild,v 1.1 2010/01/28 13:12:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-3.1.2.ebuild,v 1.2 2010/02/13 19:00:24 patrick Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -31,6 +31,13 @@ pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 	enewgroup vboxusers
+}
+
+src_prepare() {
+	if kernel_is -ge 2 6 33 ; then
+                # evil patch for new kernels - header moved
+                grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
+        fi
 }
 
 src_install() {
