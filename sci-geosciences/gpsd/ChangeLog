@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.47 2010/01/24 01:48:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.48 2010/02/13 20:04:44 nerdboy Exp $
+
+  13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> files/99-gpsd-usb.rules,
+  gpsd-2.39-r1.ebuild:
+  Updated udev rules for syntax changes (see bug 301887) and restricted 
+  sed to the first 7 lines of the rules file (when USE=pl2303 is enabled).
 
   24 Jan 2010; Steve Arnold <nerdboy@gentoo.org> gpsd-2.39-r1.ebuild:
   Updated sed target for new udev rule syntax (oops)...

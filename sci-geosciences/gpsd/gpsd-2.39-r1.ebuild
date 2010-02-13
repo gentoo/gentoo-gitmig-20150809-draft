@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.2 2010/01/24 01:48:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.3 2010/02/13 20:04:44 nerdboy Exp $
 
 EAPI="2"
 
@@ -127,8 +127,9 @@ src_install() {
 		insinto /etc/udev/rules.d
 		doins "${FILESDIR}"/99-gpsd-usb.rules
 		if use pl2303; then
-			dosed "s:#ATTRS:ATTRS:g" \
-			    /etc/udev/rules.d/99-gpsd-usb.rules
+			sed -i -e "1,7s:#ATTRS:ATTRS:" \
+				-e "1,7s:#ENV:ENV:" \
+				"${D}"/etc/udev/rules.d/99-gpsd-usb.rules
 		fi
 		keepdir /var/run/usb # needed for REMOVER
 	else
