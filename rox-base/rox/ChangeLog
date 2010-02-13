@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.78 2010/02/07 12:45:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.79 2010/02/13 19:12:39 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> rox-2.10.ebuild:
+  alpha/sparc stable wrt #300732
 
   07 Feb 2010; Markos Chandras <hwoarang@gentoo.org> rox-2.10.ebuild:
   Stable on amd64 wrt bug #300732
