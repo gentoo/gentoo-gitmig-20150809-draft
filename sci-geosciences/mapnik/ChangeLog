@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapnik
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.13 2009/11/12 05:06:32 nerdboy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.14 2010/02/13 05:37:07 nerdboy Exp $
+
+  13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> mapnik-0.6.1-r1.ebuild:
+  Updated boost depend for gpsdrive; can cause subtle breakage if built
+  against newer boost.  Could use some code for forcing eselect as is done
+  in some of the other eclasses...
 
 *mapnik-0.6.1-r1 (12 Nov 2009)
 

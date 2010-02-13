@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r1.ebuild,v 1.1 2009/11/12 05:06:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r1.ebuild,v 1.2 2010/02/13 05:37:07 nerdboy Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cairo curl debug doc +gdal postgres python sqlite"
 
-RDEPEND="dev-libs/boost
+RDEPEND="=dev-libs/boost-1.39*
 	dev-libs/libxml2
 	dev-libs/icu
 	media-libs/libpng
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/boost
 	sci-libs/proj
 	x11-libs/agg[gpc,truetype]
 	media-fonts/dejavu
-	python? ( >=dev-libs/boost-1.35.0-r5[python] )
+	python? ( =dev-libs/boost-1.39*[python] )
 	cairo? ( x11-libs/cairo
 		dev-cpp/cairomm )
 	postgres? (
