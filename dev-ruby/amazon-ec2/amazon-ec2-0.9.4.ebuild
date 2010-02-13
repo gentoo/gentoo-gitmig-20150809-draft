@@ -1,21 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.4.ebuild,v 1.1 2010/02/12 21:57:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.4.ebuild,v 1.2 2010/02/13 19:15:52 flameeyes Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 jruby"
 
-# dev-ruby/yard can be used instead of rdoc, but since the output only
-# differs in style and adds one further dependency, we'll just go with
-# rdoc for now.
-#
-# In case, the configuration would be
-# RUBY_FAKEGEM_TASK_DOC="yard"
-# RUBY_FAKEGEM_DOCDIR="doc"
-
-RUBY_FAKEGEM_TASK_DOC="rdoc"
-RUBY_FAKEGEM_DOCDIR="rdoc"
+RUBY_FAKEGEM_TASK_DOC="yard"
+RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc README_dev.rdoc ChangeLog"
 
 RUBY_FAKEGEM_BINWRAP="ec2sh"
@@ -29,6 +21,11 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+# We only need yard for Ruby 1.8, as we use it for documentation
+# generation.
+USE_RUBY=ruby18 \
+	ruby_add_bdepend doc "dev-ruby/yard"
 
 ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/test-spec dev-ruby/mocha"
 ruby_add_rdepend '>=dev-ruby/xml-simple-1.0.12'

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amazon-ec2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.2 2010/02/12 21:57:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.3 2010/02/13 19:15:52 flameeyes Exp $
+
+  13 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  amazon-ec2-0.9.4.ebuild:
+  Generate documentation using YARD rather than RDoc as the options hashes
+  aren't documented very well otherwise.
 
 *amazon-ec2-0.9.4 (12 Feb 2010)
 
