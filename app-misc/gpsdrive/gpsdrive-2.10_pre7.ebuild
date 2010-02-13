@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.4 2009/11/17 05:39:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.5 2010/02/13 05:38:42 nerdboy Exp $
+
 EAPI=2
 
 inherit cmake-utils eutils fdo-mime
@@ -26,8 +27,7 @@ COMMON_DEP="sci-geosciences/gpsd
 	x11-libs/gtk+:2
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
-	mapnik? ( sci-geosciences/mapnik
-		>=dev-libs/boost-1.39.0 )
+	mapnik? ( sci-geosciences/mapnik )
 	libgda? ( =gnome-extra/libgda-3.0*[postgres] )
 	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )"
 
@@ -46,6 +46,16 @@ src_prepare() {
 		-e "s:mapnik/0.5:mapnik:g" \
 	    tests/gpsdriverc-in \
 	    src/gpsdrive_config.c || die "sed failed"
+
+	# update OSM icon paths
+	sed -i \
+		-e "s|icons/map-icons|osm|g" \
+	    cmake/Modules/DefineInstallationPaths.cmake \
+	    scripts/osm/perl_lib/Geo/Gpsdrive/DB_Defaults.pm \
+	    scripts/osm/perl_lib/Geo/Gpsdrive/OSM.pm \
+	    src/icons.c \
+	    || die "sed failed"
+
 	# Fix desktop file...
 	sed -i -e "s:gpsicon:/usr/share/icons/gpsdrive.png:g" \
 	    -e "s:Graphics;Network;Geography:Education;Science;Geography;GPS:g" \

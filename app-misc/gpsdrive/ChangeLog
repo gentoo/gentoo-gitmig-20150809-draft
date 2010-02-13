@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gpsdrive
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.35 2009/11/17 05:39:46 nerdboy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.36 2010/02/13 05:38:42 nerdboy Exp $
+
+  13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.10_pre7.ebuild:
+  Fixed OSM icon path (bug #304045) and libgda dep (bug #281705).  The boost
+  dep has been moved to mapnik, but has subtle breakage if mapnik is built
+  against anything other than the 1.39 version of boost.
 
   17 Nov 2009; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.10_pre7.ebuild:
   Updated depends for boost and speech-dispatcher; fixes bug #293065).
