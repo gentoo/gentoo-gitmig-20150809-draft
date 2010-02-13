@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.0.ebuild,v 1.1 2010/01/31 22:40:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.0.ebuild,v 1.2 2010/02/13 22:29:07 abcd Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.11"
@@ -10,8 +10,6 @@ inherit autotools base pam
 DESCRIPTION="Utility to execute commands in a chroot environment"
 HOMEPAGE="http://packages.debian.org/source/sid/schroot"
 SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${PN}_${PV}.orig.tar.gz"
-
-RESTRICT="mirror"
 
 LICENSE="GPL-3"
 SLOT="0"
