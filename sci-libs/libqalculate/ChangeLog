@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libqalculate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.42 2010/02/13 16:05:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.43 2010/02/13 17:08:35 ssuominen Exp $
+
+  13 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libqalculate-0.9.7.ebuild:
+  amd64 stable wrt #302629
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> libqalculate-0.9.7.ebuild:
   alpha/ia64/sparc stable wrt #302629
