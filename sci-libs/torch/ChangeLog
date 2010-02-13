@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/torch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/ChangeLog,v 1.6 2009/09/23 20:09:57 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/ChangeLog,v 1.7 2010/02/13 20:33:42 jlec Exp $
+
+*torch-3.1 (13 Feb 2010)
+
+  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +torch-3.1.ebuild:
+  Version Bump per 184500
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> torch-3.ebuild:
   Remove virtual/libc
