@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.219 2010/02/11 00:30:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.220 2010/02/13 10:39:25 grobian Exp $
+
+  13 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  files/poppler-0.12.3-darwin-gtk-link.patch:
+  reduce number of libs to link against for poppler-glib, inspired by
+  upstream bug 26442
 
   11 Feb 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r3.ebuild,
   +files/poppler-0.12.3-config.patch:
