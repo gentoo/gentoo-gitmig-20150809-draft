@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.709 2010/02/13 19:43:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.710 2010/02/13 21:50:48 ssuominen Exp $
+
+  13 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.0_rc4_p20100213.ebuild, metadata.xml:
+  Rename local USE flag openjpeg to global USE flag jpeg2k.
 
 *mplayer-1.0_rc4_p20100213 (13 Feb 2010)
 
