@@ -1,9 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.150 2010/02/13 20:39:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.151 2010/02/13 20:42:55 armin76 Exp $
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> actionpack-2.3.5-r1.ebuild:
-  Add ~sparc
+  Add ~ia64/~sparc
 
   01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   actionpack-2.3.5-r1.ebuild:
