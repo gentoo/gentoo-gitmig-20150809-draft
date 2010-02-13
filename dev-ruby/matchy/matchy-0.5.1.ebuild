@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/matchy-0.4.2.ebuild,v 1.1 2010/01/28 01:15:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/matchy-0.5.1.ebuild,v 1.1 2010/02/13 17:05:10 flameeyes Exp $
 
 EAPI="2"
 
@@ -24,12 +24,6 @@ KEYWORDS="~amd64"
 IUSE=""
 
 all_ruby_prepare() {
-	# Don't force us to use Jeweler, disable check_dependency task
-	# dependency.
-	sed -i \
-		-e '/check_dependencies/s:^:#:' \
-		Rakefile || die
-
-	# ordering problem, sent upstream
-	epatch "${FILESDIR}"/${P}-order.patch
+	# jruby compatibility, sent upstream
+	epatch "${FILESDIR}"/${P}+jruby.patch
 }

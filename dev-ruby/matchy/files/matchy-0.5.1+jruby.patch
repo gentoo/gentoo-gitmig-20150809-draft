@@ -1,0 +1,35 @@
+From 0c043d82dc3cba0a4e1c8048e50adf8a1af511fd Mon Sep 17 00:00:00 2001
+From: Thomas E Enebo <tom.enebo@gmail.com>
+Date: Sat, 13 Feb 2010 17:27:06 +0100
+Subject: [PATCH] Use define_method rather than class_eval for adapter-specific method.
+
+With this change, the code works correctly even on JRuby, while the
+previous code failed for a difference of implementation with MRI (see JRuby
+bug http://jira.codehaus.org/browse/JRUBY-4556 for details about the
+problem).
+---
+ lib/matchy.rb |    8 +++-----
+ 1 files changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/lib/matchy.rb b/lib/matchy.rb
+index 7c36838..868aeb7 100644
+--- a/lib/matchy.rb
++++ b/lib/matchy.rb
+@@ -66,11 +66,9 @@ module Matchy
+     end
+     
+     %w(assertions_module test_case_class assertion_failed_error).each do |method|
+-      class_eval <<-EOT, __FILE__, __LINE__
+-        def #{method}
+-          @@current_adapter ? @@current_adapter.#{method} : raise(LoadError, Matchy.adapter_not_found_msg)
+-        end
+-      EOT
++      define_method(method) do
++        @@current_adapter ? @@current_adapter.__send__(method) : raise(LoadError, Matchy.adapter_not_found_msg)
++      end
+     end
+   
+     def init
+-- 
+1.6.6.1
+
