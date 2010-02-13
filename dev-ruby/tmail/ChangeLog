@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.6 2010/02/01 16:42:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.7 2010/02/13 20:32:25 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> tmail-1.2.3.1.ebuild:
+  Add ~sparc
 
   01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   tmail-1.2.3.1.ebuild:

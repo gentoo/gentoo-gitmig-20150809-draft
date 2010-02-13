@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.130 2010/02/01 16:45:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.131 2010/02/13 20:28:56 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  activerecord-2.3.5-r1.ebuild:
+  Add ~sparc
 
   01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   activerecord-2.3.5-r1.ebuild:
