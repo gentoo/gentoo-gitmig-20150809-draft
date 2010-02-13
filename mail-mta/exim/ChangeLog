@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.160 2010/02/09 15:32:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.161 2010/02/13 15:46:31 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> exim-4.71.ebuild:
+  alpha/ia64/sparc stable wrt #300133
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> exim-4.71.ebuild:
   amd64 stable, bug 300133
