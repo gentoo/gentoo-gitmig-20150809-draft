@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.84 2010/02/11 23:16:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.85 2010/02/13 18:49:23 grobian Exp $
+
+*espeak-1.42.04-r1 (13 Feb 2010)
+
+  13 Feb 2010; Fabian Groffen <grobian@gentoo.org> espeak-1.42.04.ebuild,
+  +espeak-1.42.04-r1.ebuild:
+  Revert Prefix changes to espeak-1.42.04, apply them in espeak-1.42.04-r1
+  with EAPI=3
 
   11 Feb 2010; Jonathan Callen <abcd@gentoo.org> espeak-1.42.04.ebuild:
   Add prefix support, ~amd64-linux/~x86-linux keywords

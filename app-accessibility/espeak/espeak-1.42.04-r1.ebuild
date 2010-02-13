@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.42.04.ebuild,v 1.7 2010/02/13 18:49:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.42.04-r1.ebuild,v 1.1 2010/02/13 18:49:23 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils
 
@@ -12,11 +12,11 @@ DESCRIPTION="Speech synthesizer for English and other languages"
 HOMEPAGE="http://espeak.sourceforge.net/"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="portaudio pulseaudio"
 RDEPEND="portaudio? ( >=media-libs/portaudio-19_pre20071207 )
 	pulseaudio? ( media-sound/pulseaudio )"
-	DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}
@@ -58,7 +58,7 @@ src_prepare() {
 
 src_compile() {
 	cd src
-	emake AUDIO="$(get_audio)" CXXFLAGS="${CXXFLAGS}" all || die "Compilation failed"
+	emake PREFIX="${EPREFIX}/usr" AUDIO="$(get_audio)" CXXFLAGS="${CXXFLAGS}" all || die "Compilation failed"
 
 	einfo "Fixing byte order of phoneme data files"
 	cd "${S}/platforms/big_endian"
@@ -69,7 +69,7 @@ src_compile() {
 
 src_install() {
 	cd src
-	make DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" AUDIO="$(get_audio)" install || die "Installation failed"
+	make DESTDIR="${D}" PREFIX="${EPREFIX}/usr" LIBDIR="\$(PREFIX)/$(get_libdir)" AUDIO="$(get_audio)" install || die "Installation failed"
 
 	cd ..
 	insinto /usr/share/espeak-data
