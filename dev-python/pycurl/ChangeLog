@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.62 2010/01/27 19:10:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.63 2010/02/13 18:16:32 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> pycurl-7.19.0.ebuild:
+  Add ~s390/~sh
 
   27 Jan 2010; Raúl Porcel <armin76@gentoo.org> pycurl-7.19.0.ebuild:
   Add ~alpha/~arm
