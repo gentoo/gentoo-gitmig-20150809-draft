@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/sysinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sysinfo/ChangeLog,v 1.1 2010/02/12 22:44:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sysinfo/ChangeLog,v 1.2 2010/02/13 15:12:13 flameeyes Exp $
+
+*sysinfo-0.7.2 (13 Feb 2010)
+
+  13 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -sysinfo-0.7.1.ebuild, -files/sysinfo-0.7.1-hanna.patch,
+  +sysinfo-0.7.2.ebuild:
+  Version bump and drop merged patch.
 
 *sysinfo-0.7.1 (12 Feb 2010)
 
