@@ -1,6 +1,11 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.14 2010/02/06 13:18:13 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.15 2010/02/13 12:35:56 anarchy Exp $
+
+*icecat-3.6-r1 (13 Feb 2010)
+
+  13 Feb 2010; <anarchy@gentoo.org> +icecat-3.6-r1.ebuild:
+  update sqlite dep to handle system sqlite properly
 
   06 Feb 2010; Harald van Dĳk <truedfx@gentoo.org> icecat-3.6.ebuild:
   Use rebranded translation files: modifying the Firefox ones in the ebuild
