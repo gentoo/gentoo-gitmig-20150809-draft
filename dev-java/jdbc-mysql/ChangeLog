@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.68 2010/02/12 23:07:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.69 2010/02/13 00:02:57 caster Exp $
+
+*jdbc-mysql-5.1.11 (12 Feb 2010)
+
+  12 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  +files/5.1.11-java6.patch, +jdbc-mysql-5.1.11.ebuild:
+  Version bump. Remove dependency on 1.5 JDK using bootclasspath magic,
+  fixes bug #283848.
 
   12 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   -files/5.1.6-java6-detection.patch, jdbc-mysql-5.1.10.ebuild:
