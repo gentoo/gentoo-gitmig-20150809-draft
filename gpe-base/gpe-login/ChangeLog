@@ -1,6 +1,11 @@
 # ChangeLog for gpe-base/gpe-login
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.7 2009/07/06 22:03:28 miknix Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.8 2010/02/13 11:58:49 miknix Exp $
+
+  13 Feb 2010; Angelo Arrifano <miknix@gentoo.org> -files/gentoo-badge2.png,
+  gpe-login-0.95-r3.ebuild, +files/windowmanager.xsessiond-gentoo:
+  Autostart matchbox during user session by default.
+  Fetch gentoo badge from mirrors instead of storing it in CVS.
 
   06 Jul 2009; Angelo Arrifano <miknix@gentoo.org> -gpe-login-0.95.ebuild,
   -gpe-login-0.95-r1.ebuild, -gpe-login-0.95-r2.ebuild:
