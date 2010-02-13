@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libint
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.6 2008/07/07 06:38:17 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.7 2010/02/13 18:27:00 jlec Exp $
+
+*libint-1.1.4-r1 (13 Feb 2010)
+
+  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/1.1.4-as-needed.patch, libint-1.1.4.ebuild,
+  +libint-1.1.4-r1.ebuild:
+  Fix for as-needed per 289232
 
 *libint-1.1.4 (07 Jul 2008)
 
