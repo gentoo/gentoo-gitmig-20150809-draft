@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.4.ebuild,v 1.7 2010/02/12 21:19:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.4.ebuild,v 1.8 2010/02/13 19:58:19 pacho Exp $
 
 EAPI="2"
 
-inherit autotools flag-o-matic eutils
+inherit autotools flag-o-matic eutils virtualx
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -83,6 +83,11 @@ src_configure() {
 		$(use aqua && echo "--with-target=quartz")"
 
 	econf ${myconf}
+}
+
+src_test() {
+	# Tests will fail without it, bug 294691
+	Xemake check || die "Test phase failed"
 }
 
 src_install() {
