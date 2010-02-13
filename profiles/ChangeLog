@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3879 2010/02/11 17:14:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3880 2010/02/13 13:40:55 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2010; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Remove perl 5.10 mask as all critical bugs are now fixed
 
   11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> license_groups:
   Remove X11 from GPL-COMPATIBLE because the file is gone, bug 298556.
