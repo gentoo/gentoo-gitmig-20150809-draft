@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarabic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarabic/ChangeLog,v 1.4 2010/02/02 21:06:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarabic/ChangeLog,v 1.5 2010/02/13 18:48:54 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  texlive-langarabic-2009.ebuild:
+  Add ~alpha/~ia64 wrt #300526
 
   02 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   texlive-langarabic-2009.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/texlive-fontutils-2009.ebuild,v 1.7 2010/02/09 20:50:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/texlive-fontutils-2009.ebuild,v 1.8 2010/02/13 18:48:51 armin76 Exp $
 
 TEXLIVE_MODULE_CONTENTS="accfonts afm2pl epstopdf fontware lcdftypetools ps2pkm pstools psutils dvipsconfig fontinst fontools getafm t1utils collection-fontutils
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive TeX and Outline font utilities"
 
 LICENSE="GPL-2 as-is GPL-1 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2009
 !dev-texlive/texlive-psutils
