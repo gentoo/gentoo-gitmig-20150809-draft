@@ -1,12 +1,13 @@
 # ChangeLog for sci-chemistry/tinker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.13 2010/02/13 19:35:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.14 2010/02/13 20:07:43 jlec Exp $
 
 *tinker-5.1 (13 Feb 2010)
 
   13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> -tinker-4.2-r1.ebuild,
   +tinker-5.1.ebuild:
-  Version Bump and old version removed
+  Version Bump and old version removed, parallel build and die when build failed,
+  bug 296888, 275533, 263006 & 241180
 
   14 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   tinker-4.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.ebuild,v 1.1 2010/02/13 19:35:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.ebuild,v 1.2 2010/02/13 20:07:43 jlec Exp $
 
 EAPI="2"
 FORTRAN="gfortran ifc"
@@ -22,35 +22,13 @@ RESTRICT="mirror"
 S="${WORKDIR}"/tinker/source
 
 src_compile() {
-	LINK="./link.make"
-	COMPILE="./compile.make"
-	LIBRARY="./library.make"
-
-	# Need to make sure all of the appropriate config files are in place
-	# for the build.
-	# This should be easily customizable for other Fortran compilers, e.g. pg77.
-	if [[ ${FORTRANC} == "ifort" ]]; then
-		cp ../linux/intel/* .
-	else
-		cp ../linux/gfortran/* .
-	fi
-
-	cp ../make/* .
-
-	# Prep build scripts
-	sed -i -e "s:gfortran:${FORTRANC} ${LDFLAGS}:g" ${LINK}
-	sed -r -i -e "s:^${FORTRANC}.+$:echo &\n&:" ${LINK}
-
-	# Default to -O2 if FFLAGS is unset
-	sed -i -e "s:-O:${FFLAGS:- -O2}:" ${COMPILE}
-	sed -r -i -e "s:^${FORTRANC}.+$:echo &\n&:" ${COMPILE}
-
-	einfo "Compiling ..."
-	${COMPILE} || die "compile failed"
-	einfo "Building libraries ..."
-	${LIBRARY} || die "library creation failed"
-	einfo "Linking ..."
-	${LINK} || die "link failed"
+	emake \
+		-f ../make/Makefile \
+		F77="${FORTRANC}" \
+		F77FLAGS=-c \
+		OPTFLAGS="${FFLAGS}" \
+		LINKFLAGS="${LDFLAGS}" \
+		|| die
 }
 
 src_install() {
