@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.38 2010/01/17 18:52:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.39 2010/02/13 17:45:14 armin76 Exp $
+
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> twisted-lore-9.0.0.ebuild:
+  alpha/ia64/sparc stable wrt #300702
 
   17 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   twisted-lore-9.0.0.ebuild:

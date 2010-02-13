@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-9.0.0.ebuild,v 1.2 2010/01/17 18:52:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-9.0.0.ebuild,v 1.3 2010/02/13 17:45:14 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,7 +10,7 @@ inherit twisted versionator
 
 DESCRIPTION="Twisted documentation system"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="=dev-python/twisted-$(get_version_component_range 1-2)*
