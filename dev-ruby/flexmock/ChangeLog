@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/flexmock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.7 2010/01/13 17:00:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.8 2010/02/14 21:30:44 flameeyes Exp $
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  flexmock-0.8.6-r1.ebuild:
+  Keyword ~x86, tested on development container.
 
 *flexmock-0.8.6-r1 (13 Jan 2010)
 
