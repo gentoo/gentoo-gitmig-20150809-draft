@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.1 2010/02/04 22:56:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.2 2010/02/14 18:14:34 jlec Exp $
+
+  14 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  -cctbx-2009.11.01.0123.ebuild, +cctbx-2009.11.01.0123-r1.ebuild:
+  Workaround for broken python.eclass
+
+*cctbx-2009.11.01.0123-r1 (13 Feb 2010)
+
+  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +cctbx-2009.11.01.0123-r1.ebuild:
+  Correct usage of new python.eclass
 
 *cctbx-2009.11.01.0123 (04 Feb 2010)
 

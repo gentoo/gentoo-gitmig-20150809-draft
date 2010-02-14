@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2009.11.01.0123.ebuild,v 1.1 2010/02/04 22:56:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2009.11.01.0123-r1.ebuild,v 1.1 2010/02/14 18:14:34 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit toolchain-funcs python eutils
+inherit eutils python toolchain-funcs
 
 MY_PV="${PV//./_}"
 
@@ -15,7 +15,7 @@ SRC_URI="http://cci.lbl.gov/cctbx_build/results/${MY_PV}/${PN}_bundle.tar.gz -> 
 
 LICENSE="cctbx-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+minimal openmp threads"
 
 RDEPEND="
@@ -41,6 +41,7 @@ pkg_setup() {
 		ewarn "If you want to build ${PN} with OpenMP, abort now,"
 		ewarn "and switch CC to an OpenMP capable compiler"
 	fi
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -91,7 +92,7 @@ src_configure() {
 
 	# Precompiling python scripts. It is done in upstreams install script.
 	# Perhaps use python_mod_compile, but as this script works we should stick to it.
-	${EPREFIX}/usr/bin/python "${MY_S}/libtbx/command_line/py_compile_all.py"
+	$(PYTHON -a -A) "${MY_S}/libtbx/command_line/py_compile_all.py"
 
 	# Additional USE flag usage
 	check_use openmp
@@ -108,7 +109,7 @@ src_configure() {
 	myconf="${myconf} --build=release fftw3tbx rstbx smtbx mmtbx clipper"
 	einfo "configuring with ${python} ${myconf}"
 
-	${EPREFIX}/usr/bin/python ${myconf} \
+	$(PYTHON -a -A) ${myconf} \
 		|| die "configure failed"
 }
 
