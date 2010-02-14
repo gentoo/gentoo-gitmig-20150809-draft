@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/debhelper
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.14 2009/09/29 18:00:42 yvasilev Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.15 2010/02/14 04:16:10 yvasilev Exp $
+
+*debhelper-7.4.13 (14 Feb 2010)
+
+  14 Feb 2010; Yuri Vasilevski <yvasilev@gentoo.org>
+  +debhelper-7.4.13.ebuild, +files/debhelper-7.4.13-conditional-nls.patch:
+  Version dump to 7.4.13, after pod2man from perl-5.10.1 became unmasked.
+  Fixes bug #286962
 
 *debhelper-7.3.13 (29 Sep 2009)
 
