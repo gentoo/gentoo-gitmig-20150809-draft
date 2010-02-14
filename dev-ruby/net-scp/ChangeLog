@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.13 2010/01/30 17:39:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.14 2010/02/14 14:28:53 flameeyes Exp $
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  net-scp-1.0.2-r1.ebuild:
+  Add Ruby 1.9 support.
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> net-scp-1.0.2-r1.ebuild:
   Add ~ia64

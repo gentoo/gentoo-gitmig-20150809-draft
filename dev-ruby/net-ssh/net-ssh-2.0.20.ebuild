@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.0.20.ebuild,v 1.1 2010/02/11 07:19:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.0.20.ebuild,v 1.2 2010/02/14 14:31:13 flameeyes Exp $
 
 EAPI="2"
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""  # Uses hanna which we don't have yet.
 RUBY_FAKEGEM_TASK_TEST="" # Tests depend on test-unit-2.x which is masked.
