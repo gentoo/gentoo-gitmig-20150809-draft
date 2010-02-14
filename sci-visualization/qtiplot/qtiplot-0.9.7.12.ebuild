@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.11-r2.ebuild,v 1.2 2010/01/12 17:50:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.12.ebuild,v 1.1 2010/02/14 20:49:25 pva Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -29,7 +29,7 @@ CDEPEND="
 	x11-libs/qt-assistant:4
 	x11-libs/qt-svg:4
 	>=x11-libs/gl2ps-1.3.5
-	>=dev-cpp/muParser-1.30
+	>=dev-cpp/muParser-1.32
 	>=dev-libs/boost-1.35.0
 	>=sci-libs/liborigin-20090406:2
 	sci-libs/gsl
@@ -40,9 +40,6 @@ CDEPEND="
 # Still unable to build
 #	emf? ( media-libs/libemf
 #		media-libs/emfengine )
-
-# TODO: check GL2PS_HAVE_ZLIB
-# CONFIG          += BrowserPlugin
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
@@ -82,9 +79,12 @@ src_prepare() {
 	BOOST_LIBS = -lboost_date_time-mt -lboost_thread-mt
 	QWT_INCLUDEPATH = \$\$QTI_ROOT/3rdparty/qwt/src
 	QWT_LIBS = \$\$QTI_ROOT/3rdparty/qwt/lib/libqwt.a
+	QWT3D_INCLUDEPATH = \$\$QTI_ROOT/3rdparty/qwtplot3d/include
+	QWT3D_LIBS = \$\$QTI_ROOT/3rdparty/qwtplot3d/lib/libqwtplot3d.a
 	LIB_ORIGIN_INCLUDEPATH = /usr/include/liborigin2
 	LIB_ORIGIN_LIBS = -lorigin2
-	SYS_LIBS = -lQTeXEngine -lgl2ps
+	QTEXENGINE_LIBS = -lQTeXEngine
+	SYS_LIBS = -lgl2ps
 
 	PYTHON = python
 	LUPDATE = lupdate
@@ -94,6 +94,7 @@ src_prepare() {
 
 	CONFIG          += release
 	CONFIG          += CustomInstall
+	DEFINES         += SCRIPTING_CONSOLE
 
 	EOF
 
@@ -104,6 +105,8 @@ src_prepare() {
 		echo "QUAZIP_LIBS = -lquazip" >> build.conf
 	fi
 
+	sed '/^INSTALLS/d;' -i 3rdparty/qwtplot3d/qwtplot3d.pro || die
+
 	# Fails to build...
 	#if use emf; then
 	#	echo "EMF_ENGINE_INCLUDEPATH = /usr/include/libEMF" >> build.conf
@@ -112,8 +115,8 @@ src_prepare() {
 
 	python_version
 
-	sed -e "s:doc/${PN}/manual:doc/${PF}/html:" \
-		-e "s:local/${PN}:$(get_libdir)/python${PYVER}/site-packages:" \
+	sed -e "s:doc/${PN}/manual:doc/${PN}/html:" \
+		-e "s:/usr/local/${PN}:$(python_get_sitedir)/qtiplot:" \
 			-i qtiplot/qtiplot.pro || die
 
 	sed -e '/INSTALLS.*documentation/d' \
@@ -159,7 +162,7 @@ src_install() {
 	newicon qtiplot_logo.png qtiplot.png
 	make_desktop_entry qtiplot "QtiPlot Scientific Plotting" qtiplot
 	if use doc; then
-		insinto /usr/share/doc/${PF}/html
+		insinto /usr/share/doc/${PN}/html
 		doins -r manual/html/* || die "install manual failed"
 	fi
 
@@ -176,8 +179,10 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	python_mod_optimize "$(python_get_sitedir)/qtiplot"
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	python_mod_cleanup "$(python_get_sitedir)/qtiplot"
 }
