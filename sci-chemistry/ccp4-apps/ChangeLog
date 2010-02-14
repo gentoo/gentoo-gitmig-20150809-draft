@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/ccp4-apps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.1 2010/02/06 00:37:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.2 2010/02/14 15:10:16 jlec Exp $
+
+*ccp4-apps-6.1.3-r1 (14 Feb 2010)
+
+  14 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  -ccp4-apps-6.1.3.ebuild, +ccp4-apps-6.1.3-r1.ebuild:
+  Fixed CLIB to multilib compatible
 
 *ccp4-apps-6.1.3 (06 Feb 2010)
 

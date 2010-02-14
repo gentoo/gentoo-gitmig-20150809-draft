@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3.ebuild,v 1.1 2010/02/06 00:37:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r1.ebuild,v 1.1 2010/02/14 15:10:16 jlec Exp $
 
 EAPI="2"
 
@@ -320,6 +320,7 @@ src_install() {
 		-e "s~^\(.*setenv CLIBD .*\$CCP4\).*~\1/share/ccp4/data~g" \
 		-e "s~^\(.*setenv CLIBD_MON .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*setenv MOLREPLIB .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
+		-e "s~^\(.*setenv CLIB .*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
 		-e "s~^\(export CCP4_MASTER.*\)${WORKDIR}~\1/usr~g" \
 		-e "s~^\(export CCP4.*\$CCP4_MASTER\).*~\1~g" \
 		-e "s~^\(export CCP4I_TOP\).*~\1=\$CCP4/$(get_libdir)/ccp4/ccp4i~g" \
@@ -328,6 +329,7 @@ src_install() {
 		-e "s~^\(.*export CLIBD.*\$CCP4\).*~\1/share/ccp4/data~g" \
 		-e "s~^\(.*export CLIBD_MON.*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*export MOLREPLIB.*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
+		-e "s~^\(.*export CLIB=.*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
 		-e "/IMOSFLM_VERSION/d" \
 		"${S}"/include/ccp4.setup* || die
 
