@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.29 2010/02/06 15:36:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.30 2010/02/14 04:35:54 matsuu Exp $
+
+*fcitx-3.6.3 (14 Feb 2010)
+
+  14 Feb 2010; MATSUU Takuto <matsuu@gentoo.org> -fcitx-3.5.ebuild,
+  -fcitx-3.6.1.ebuild, +fcitx-3.6.3.ebuild,
+  +files/fcitx-3.6.3-asneeded.patch:
+  Version bumped, Removed old versions.
 
   06 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> fcitx-3.6.2.ebuild,
   +files/fcitx-3.6.2-asneeded.patch:

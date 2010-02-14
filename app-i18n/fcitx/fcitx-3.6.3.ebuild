@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.6.1.ebuild,v 1.1 2009/09/16 17:36:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.6.3.ebuild,v 1.1 2010/02/14 04:35:54 matsuu Exp $
+
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -9,31 +12,39 @@ SRC_URI="http://www.fcitx.org/download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="xft"
+IUSE="dbus"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXt
-	xft? ( x11-libs/libXft )"
+	x11-libs/libXtst
+	x11-libs/libXext
+	x11-libs/libXft
+	dbus? ( >=sys-apps/dbus-0.2 )"
 DEPEND="${RDEPEND}
+	x11-proto/xproto
 	dev-util/pkgconfig"
 
-src_compile() {
-	econf $(use_enable xft) || die "configure failed"
-	emake || die "make failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
+
+src_configure() {
+	# --disable-xft doesn't work
+	# econf $(use_enable xft) || die
+	econf $(use_enable dbus) || die
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS ChangeLog README THANKS TODO
+	dodoc AUTHORS ChangeLog README THANKS TODO || die
 
-	# Remove empty directory
-	rmdir "${D}"/usr/share/fcitx/xpm
-	rm -rf "${D}"/usr/share/fcitx/doc/
-	dodoc doc/pinyin.txt doc/cjkvinput.txt
-	dohtml doc/wb_fh.htm
+	rm -rf "${D}"/usr/share/fcitx/doc/ || die
+	dodoc doc/pinyin.txt doc/cjkvinput.txt || die
+	dohtml doc/wb_fh.htm || die
 }
 
 pkg_postinst() {
