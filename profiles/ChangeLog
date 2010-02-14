@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3884 2010/02/14 15:28:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3885 2010/02/14 21:33:32 swegener Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2010; Sven Wegener <swegener@gentoo.org> package.mask:
+  Mask dev-db/mysql-gui-tools, because it has been discontinued by upstream.
+  Pending removal in 30 days.
 
   14 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove mask for sunstudioexpress as it's been removed from tree.
