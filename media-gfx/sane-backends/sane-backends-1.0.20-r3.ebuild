@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20-r3.ebuild,v 1.2 2010/02/14 19:41:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20-r3.ebuild,v 1.3 2010/02/14 19:55:21 ssuominen Exp $
 
 EAPI="1"
 
@@ -108,16 +108,10 @@ RDEPEND="
 				media-libs/libgphoto2
 				>=media-libs/jpeg-6b
 			)
-	v4l? ( sys-kernel/linux-headers
-			arm? ( media-libs/libv4l )
-			alpha? ( media-libs/libv4l )
-			amd64? ( media-libs/libv4l )
-			ppc? ( media-libs/libv4l )
-			ppc64? ( media-libs/libv4l )
-			x86? ( media-libs/libv4l )
-			)"
+	v4l? ( media-libs/libv4l )"
 
 DEPEND="${RDEPEND}
+	v4l? ( sys-kernel/linux-headers )
 	doc? (
 		virtual/latex-base
 		|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
