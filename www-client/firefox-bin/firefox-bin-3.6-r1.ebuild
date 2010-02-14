@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.ebuild,v 1.1 2010/01/24 12:10:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6-r1.ebuild,v 1.1 2010/02/14 23:38:45 anarchy Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -134,6 +134,7 @@ src_install() {
 		cat <<EOF >"${D}"/usr/bin/${PN}
 #!/bin/sh
 unset LD_PRELOAD
+LD_LIBRARY_PATH="/opt/firefox/"
 exec /opt/${MY_PN}/${MY_PN} "\$@"
 EOF
 		fperms 0755 /usr/bin/${PN}
@@ -141,9 +142,6 @@ EOF
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
 	doins "${FILESDIR}"/10${PN} || die
-
-	# install ldpath env.d
-	doenvd "${FILESDIR}"/71${PN} || die
 
 	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins
 	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins || die
