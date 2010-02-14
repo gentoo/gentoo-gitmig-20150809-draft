@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/restrictedpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.4 2010/01/22 18:59:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/ChangeLog,v 1.5 2010/02/14 18:50:51 armin76 Exp $
+
+  14 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  restrictedpython-3.5.1.ebuild:
+  Add ~alpha/~sparc
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org>
   restrictedpython-3.5.1.ebuild:

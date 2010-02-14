@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.10.ebuild,v 1.6 2009/10/30 11:38:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.2.10.ebuild,v 1.7 2010/02/14 18:47:50 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="http://wwwsearch.sourceforge.net/ClientForm/src/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="examples"
 
 DEPEND=""
