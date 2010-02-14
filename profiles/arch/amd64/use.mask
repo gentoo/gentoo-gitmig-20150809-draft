@@ -1,11 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.12 2010/01/23 16:56:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.13 2010/02/14 19:35:52 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# 2010/02/14 - Samuli Suominen <ssuominen@gentoo.org>
+# Unmask amd64/x86 only SANE_BACKENDS
+-sane_backends_canon_pp
+-sane_backends_hpsj5s
+-sane_backends_mustek_pp
 
 # 2010/01/08 - Diego E. Pettenò <flameeyes@gentoo.org>
 # Add support for JRuby targets where jruby is available
