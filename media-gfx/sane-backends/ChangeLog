@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.166 2010/01/02 23:08:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.167 2010/02/14 19:41:41 ssuominen Exp $
+
+  14 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  sane-backends-1.0.20-r3.ebuild:
+  Remove amd64/x86 check from here because it's been properly handled in
+  profiles.
 
 *sane-backends-1.0.20-r3 (02 Jan 2010)
 

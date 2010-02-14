@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20-r3.ebuild,v 1.1 2010/01/02 23:08:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20-r3.ebuild,v 1.2 2010/02/14 19:41:41 ssuominen Exp $
 
 EAPI="1"
 
@@ -100,17 +100,10 @@ RDEPEND="
 	sane_backends_dc240? ( >=media-libs/jpeg-6b )
 	sane_backends_dell1600n_net? ( >=media-libs/jpeg-6b )
 	avahi? ( >=net-dns/avahi-0.6.24 )
-	x86? (
-		sane_backends_canon_pp? ( sys-libs/libieee1284 )
-		sane_backends_hpsj5s? ( sys-libs/libieee1284 )
-		sane_backends_mustek_pp? ( sys-libs/libieee1284 )
-		)
-	amd64? (
-		sane_backends_canon_pp? ( sys-libs/libieee1284 )
-		sane_backends_hpsj5s? ( sys-libs/libieee1284 )
-		sane_backends_mustek_pp? ( sys-libs/libieee1284 )
-		)
-		usb? ( virtual/libusb:0 )
+	sane_backends_canon_pp? ( sys-libs/libieee1284 )
+	sane_backends_hpsj5s? ( sys-libs/libieee1284 )
+	sane_backends_mustek_pp? ( sys-libs/libieee1284 )
+	usb? ( virtual/libusb:0 )
 	gphoto2? (
 				media-libs/libgphoto2
 				>=media-libs/jpeg-6b
@@ -147,7 +140,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 BACKENDS=" "
 
 pkg_setup() {
-
 	enewgroup scanner
 
 	use gphoto2 && BACKENDS="gphoto2"
@@ -157,15 +149,6 @@ pkg_setup() {
 			BACKENDS="${BACKENDS} ${backend}"
 		fi
 	done
-	IEEE1284_BACKENDS="canon_pp hpsj5s mustek_pp"
-	if ! use x86 && ! use amd64; then
-		tmp="${IUSE_SANE_BACKENDS}"
-		for backend in ${IEEE1284_BACKENDS}; do
-			if [[ "${tmp/$backend/}" != "${IUSE_SANE_BACKENDS}" ]]; then
-				ewarn "You selected a backend which is disabled because it's not usable in your arch."
-			fi
-		done
-	fi
 }
 
 src_unpack() {
