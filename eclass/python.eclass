@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.88 2010/02/11 18:52:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.89 2010/02/14 18:53:11 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -152,7 +152,7 @@ _parse_PYTHON_DEPEND() {
 	fi
 }
 
-DEPEND=">=app-admin/eselect-python-20090804"
+DEPEND=">=app-admin/eselect-python-20091230"
 RDEPEND="${DEPEND}"
 
 if [[ -n "${PYTHON_DEPEND}" && -n "${NEED_PYTHON}" ]]; then
@@ -890,7 +890,7 @@ EOF
 		fi
 		cat << EOF >> "${file}"
 
-os.environ["PYTHON_PROCESS_NAME"] = sys.argv[0]
+os.environ["PYTHON_SCRIPT_NAME"] = sys.argv[0]
 target_executable = "%s-%s" % (os.path.realpath(sys.argv[0]), PYTHON_ABI)
 if not os.path.exists(target_executable):
 	sys.stderr.write("'%s' does not exist\n" % target_executable)
@@ -1054,23 +1054,19 @@ PYTHON() {
 			validate_PYTHON_ABIS
 			PYTHON_ABI="${PYTHON_ABIS##* }"
 		elif [[ "${python2}" == "1" ]]; then
-			# PYTHON_ABI="$(eselect python show --python2 --ABI)"
-			PYTHON_ABI="$(eselect python show --python2)"
+			PYTHON_ABI="$(eselect python show --python2 --ABI)"
 			if [[ -z "${PYTHON_ABI}" ]]; then
 				die "${FUNCNAME}(): Active Python 2 interpreter not set"
-			elif [[ "${PYTHON_ABI}" != "python2."* ]]; then
+			elif [[ "${PYTHON_ABI}" != "2."* ]]; then
 				die "${FUNCNAME}(): Internal error in \`eselect python show --python2\`"
 			fi
-			PYTHON_ABI="${PYTHON_ABI#python}"
 		elif [[ "${python3}" == "1" ]]; then
-			# PYTHON_ABI="$(eselect python show --python3 --ABI)"
-			PYTHON_ABI="$(eselect python show --python3)"
+			PYTHON_ABI="$(eselect python show --python3 --ABI)"
 			if [[ -z "${PYTHON_ABI}" ]]; then
 				die "${FUNCNAME}(): Active Python 3 interpreter not set"
-			elif [[ "${PYTHON_ABI}" != "python3."* ]]; then
+			elif [[ "${PYTHON_ABI}" != "3."* ]]; then
 				die "${FUNCNAME}(): Internal error in \`eselect python show --python3\`"
 			fi
-			PYTHON_ABI="${PYTHON_ABI#python}"
 		elif [[ -z "${PYTHON_ABI}" ]]; then
 			die "${FUNCNAME}(): Invalid usage: Python ABI not specified"
 		fi
@@ -1839,16 +1835,16 @@ python_mod_optimize() {
 
 		if ((${#other_dirs[@]})) || ((${#other_files[@]})); then
 			return_code="0"
-			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for Python $(PYTHON -A --ABI)"
+			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version)"
 			if ((${#other_dirs[@]})); then
 				"$(PYTHON "${PYTHON_ABI--A}")" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
+				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON -A --ABI)}")" != "Jython" ]]; then
 					"$(PYTHON "${PYTHON_ABI--A}")" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
 				fi
 			fi
 			if ((${#other_files[@]})); then
 				"$(PYTHON "${PYTHON_ABI--A}")" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
+				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON -A --ABI)}")" != "Jython" ]]; then
 					"$(PYTHON "${PYTHON_ABI--A}")" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
 			fi
@@ -1892,7 +1888,7 @@ python_mod_optimize() {
 		# set additional opts
 		myopts+=(-q)
 
-		ebegin "Compilation and optimization of Python modules for Python $(PYTHON -A --ABI)"
+		ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
 		if ((${#mydirs[@]})); then
 			"$(PYTHON "${PYTHON_ABI--A}")" "${myroot}$(python_get_libdir)/compileall.py" "${myopts[@]}" "${mydirs[@]}" || return_code="1"
 			"$(PYTHON "${PYTHON_ABI--A}")" -O "${myroot}$(python_get_libdir)/compileall.py" "${myopts[@]}" "${mydirs[@]}" &> /dev/null || return_code="1"
