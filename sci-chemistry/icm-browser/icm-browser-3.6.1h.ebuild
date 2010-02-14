@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/icm-browser-3.6.1g.ebuild,v 1.1 2009/11/05 20:55:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/icm-browser-3.6.1h.ebuild,v 1.1 2010/02/14 17:47:48 alexxy Exp $
 
 inherit rpm eutils versionator
 
