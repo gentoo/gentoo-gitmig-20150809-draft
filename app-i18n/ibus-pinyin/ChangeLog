@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/ibus-pinyin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.13 2010/02/04 11:19:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.14 2010/02/14 05:40:58 matsuu Exp $
+
+*ibus-pinyin-1.2.99.20100212 (14 Feb 2010)
+
+  14 Feb 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-pinyin-1.2.0.20090617.ebuild, ibus-pinyin-1.2.0.20090915.ebuild,
+  -ibus-pinyin-1.2.99.20091211.ebuild, +ibus-pinyin-1.2.99.20100212.ebuild:
+  Version bumped. Removed old versions.
 
 *ibus-pinyin-1.2.99.20100202 (04 Feb 2010)
 

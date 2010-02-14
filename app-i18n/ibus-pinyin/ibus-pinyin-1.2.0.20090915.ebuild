@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.0.20090915.ebuild,v 1.1 2009/09/15 15:11:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.0.20090915.ebuild,v 1.2 2010/02/14 05:40:58 matsuu Exp $
 
 EAPI="2"
 inherit eutils python
@@ -31,9 +31,8 @@ src_unpack() {
 	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable nls) || die
-	emake || die
 }
 
 src_install() {
