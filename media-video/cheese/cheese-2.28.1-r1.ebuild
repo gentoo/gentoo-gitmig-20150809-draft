@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.28.1-r1.ebuild,v 1.1 2009/11/21 14:32:56 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.28.1-r1.ebuild,v 1.2 2010/02/14 11:25:32 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -39,7 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-libs/gst-plugins-good-0.10.16
 	v4l? ( >=media-plugins/gst-plugins-v4l-0.10 )
 	|| ( >=media-plugins/gst-plugins-x-0.10
-		>=media-plugins/gst-plugins-xv-0.10 )"
+		>=media-plugins/gst-plugins-xvideo-0.10 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig

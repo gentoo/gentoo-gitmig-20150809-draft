@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.24.3.ebuild,v 1.6 2010/02/14 11:19:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.24.3.ebuild,v 1.7 2010/02/14 11:25:32 pacho Exp $
 
 GCONF_DEBUG="no"
 
@@ -36,7 +36,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.7
 	>=x11-libs/pango-1.18.0
 	v4l? ( >=media-plugins/gst-plugins-v4l-0.10 )
 	|| ( >=media-plugins/gst-plugins-x-0.10
-		>=media-plugins/gst-plugins-xv-0.10 )"
+		>=media-plugins/gst-plugins-xvideo-0.10 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
