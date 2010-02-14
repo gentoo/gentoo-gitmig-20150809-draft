@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.122 2010/01/25 10:51:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.123 2010/02/14 05:05:08 beandog Exp $
+
+*mkvtoolnix-3.2.0 (14 Feb 2010)
+
+  14 Feb 2010; Steve Dibb <beandog@gentoo.org> +mkvtoolnix-3.2.0.ebuild:
+  Version bump
 
 *mkvtoolnix-3.1.0 (25 Jan 2010)
 
