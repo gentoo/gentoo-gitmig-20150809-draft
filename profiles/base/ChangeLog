@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.130 2010/01/28 02:18:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.131 2010/02/14 19:33:55 ssuominen Exp $
+
+  14 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask SANE_BACKENDS="canon_pp hpsj5s mustek_pp" here because they are
+  amd64/x86 only.
 
   28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.force:
   Add jruby-debug-base to the list of forced gems.
