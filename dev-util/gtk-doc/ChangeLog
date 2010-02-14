@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gtk-doc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.114 2009/10/26 17:58:47 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.115 2010/02/14 22:23:40 eva Exp $
+
+*gtk-doc-1.13 (14 Feb 2010)
+
+  14 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org> +gtk-doc-1.13.ebuild:
+  Version bump. gtkdoc-rebase moved to gtk-doc-am, refs bug #262491.
 
   26 Oct 2009; Raúl Porcel <armin76@gentoo.org> gtk-doc-1.11.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #285586
