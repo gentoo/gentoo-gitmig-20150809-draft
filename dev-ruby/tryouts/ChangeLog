@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/tryouts
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.1 2010/02/14 00:18:32 flameeyes Exp $
+
+*tryouts-0.8.5 (14 Feb 2010)
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +tryouts-0.8.5.ebuild, +files/tryouts-0.8.5-fixes.patch, +metadata.xml:
+  Initial import of tryouts, needed for attic (and other packages') tests.
+

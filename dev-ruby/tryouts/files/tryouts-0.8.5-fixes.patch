@@ -1,0 +1,42 @@
+Index: tryouts-0.8.5/lib/tryouts.rb
+===================================================================
+--- tryouts-0.8.5.orig/lib/tryouts.rb
++++ tryouts-0.8.5/lib/tryouts.rb
+@@ -2,10 +2,9 @@
+ require 'time'
+ require 'digest/sha1'
+ 
+-autoload :Attic, 'attic'
+-autoload :SysInfo, 'sysinfo'
+-autoload :OpenStruct, 'ostruct'
+-autoload :YAML, 'yaml'
++require 'attic'
++require 'sysinfo'
++require 'yaml'
+ 
+ ## NOTE: Don't require rye here so
+ ## we can still run tryouts on the
+Index: tryouts-0.8.5/Rakefile
+===================================================================
+--- tryouts-0.8.5.orig/Rakefile
++++ tryouts-0.8.5/Rakefile
+@@ -1,7 +1,6 @@
+ require 'rubygems'
+ require 'rake/clean'
+ require 'rake/gempackagetask'
+-require 'hanna/rdoctask'
+ require 'fileutils'
+ include FileUtils
+  
+@@ -65,6 +64,11 @@ end
+ 
+ 
+ # RUBY DOCS TASK ==================================
++begin
++  require 'hanna/rdoctask'
++rescue LoadError
++  require 'rake/rdoctask'
++end
+ 
+ Rake::RDocTask.new do |t|
+ 	t.rdoc_dir = 'doc'
