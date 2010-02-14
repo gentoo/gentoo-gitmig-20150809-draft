@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5-r1.ebuild,v 1.3 2010/02/12 14:04:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.5-r1.ebuild,v 1.4 2010/02/14 14:27:14 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -74,7 +74,7 @@ src_install () {
 	MINOR_VERSION=12
 	cd "${S}"/mozilla/security/dist
 
-	dodir /usr/$(get_libdir)/nss
+	dodir /usr/$(get_libdir)
 	cp -L */lib/*.so "${D}"/usr/$(get_libdir) || die "copying shared libs failed"
 	cp -L */lib/*.chk "${D}"/usr/$(get_libdir) || die "copying chk files failed"
 	cp -L */lib/libcrmf.a "${D}"/usr/$(get_libdir) || die "copying libs failed"
