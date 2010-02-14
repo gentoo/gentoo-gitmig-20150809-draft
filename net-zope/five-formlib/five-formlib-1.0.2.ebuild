@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/five-formlib-1.0.2.ebuild,v 1.1 2010/01/17 19:15:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/five-formlib-1.0.2.ebuild,v 1.2 2010/02/14 19:17:10 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.zi
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="net-zope/extensionclass

@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-app-testing
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/ChangeLog,v 1.4 2010/01/22 19:13:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/ChangeLog,v 1.5 2010/02/14 19:17:27 armin76 Exp $
+
+  14 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  zope-app-testing-3.7.4.ebuild:
+  Add ~alpha/~sparc wrt #297734
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking zope-app-testing-3.7.4 ~ppc for bug 297734

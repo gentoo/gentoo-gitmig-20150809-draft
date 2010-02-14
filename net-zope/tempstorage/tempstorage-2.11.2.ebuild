@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/tempstorage-2.11.2.ebuild,v 1.3 2010/01/22 19:10:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/tempstorage-2.11.2.ebuild,v 1.4 2010/02/14 19:17:28 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="test"
 
 RDEPEND="net-zope/zodb"

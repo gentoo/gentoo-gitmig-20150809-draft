@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/zope-location-3.9.0.ebuild,v 1.3 2010/01/22 19:20:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-location/zope-location-3.9.0.ebuild,v 1.4 2010/02/14 19:17:01 armin76 Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.zi
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=net-zope/zope-component-3.8.0
