@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.11.ebuild,v 1.1 2010/02/13 00:02:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-5.1.11.ebuild,v 1.2 2010/02/14 05:39:38 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -74,4 +74,3 @@ src_install() {
 	dohtml docs/*.html || die
 	use source && java-pkg_dosrc src/com src/org
 }
-
