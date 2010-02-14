@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.18 2009/12/31 15:56:32 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.19 2010/02/14 11:19:37 pacho Exp $
+
+  14 Feb 2010; Pacho Ramos <pacho@gentoo.org> cheese-2.24.3.ebuild:
+  Added a video sink to RDEPEND, bug 304725
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> cheese-2.24.3.ebuild:
   Marking cheese-2.24.3 ~ppc64 for bug 287051
