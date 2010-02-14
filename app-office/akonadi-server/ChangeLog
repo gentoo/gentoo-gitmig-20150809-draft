@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.34 2010/02/10 03:00:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.35 2010/02/14 15:06:12 arfrever Exp $
+
+  14 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  akonadi-server-1.3.1.ebuild:
+  Fix dependencies with USE="postgres".
 
   10 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   akonadi-server-1.3.1.ebuild:
