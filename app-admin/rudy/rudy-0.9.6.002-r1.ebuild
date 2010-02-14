@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.6.002.ebuild,v 1.1 2010/02/14 21:31:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.6.002-r1.ebuild,v 1.1 2010/02/14 22:03:26 flameeyes Exp $
 
 EAPI=2
 
@@ -11,7 +11,10 @@ RUBY_FAKEGEM_TASK_TEST=""
 
 RUBY_FAKEGEM_TASK_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
-RUBY_FAKEGEM_EXTRADOC="CHANGES.txt README.rdoc"
+RUBY_FAKEGEM_EXTRADOC="CHANGES.txt README.rdoc examples/authorize.rb examples/gem-test.rb
+	examples/solaris.rb examples/windows.rb"
+
+RUBY_FAKEGEM_EXTRAINSTALL="Rudyfile"
 
 inherit ruby-fakegem
 
