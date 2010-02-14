@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/rye-0.8.13.ebuild,v 1.1 2010/02/14 00:38:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/rye-0.8.13.ebuild,v 1.2 2010/02/14 14:33:21 flameeyes Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ ruby_add_rdepend "
 	dev-ruby/sysinfo
 	dev-ruby/drydock"
 
-ruby_add_bdepend test dev-ruby/tryouts
+#ruby_add_bdepend test dev-ruby/tryouts
 
 # Tests require local login to the system, which means either root or
 # portage users should have ssh access. This is definitely a no-go

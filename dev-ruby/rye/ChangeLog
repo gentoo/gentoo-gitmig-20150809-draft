@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rye
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.1 2010/02/14 00:38:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.2 2010/02/14 14:33:21 flameeyes Exp $
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> rye-0.8.13.ebuild:
+  Don't depend on tryouts since we're not going to run tests for now.
 
 *rye-0.8.13 (14 Feb 2010)
 
