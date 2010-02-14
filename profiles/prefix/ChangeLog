@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.147 2010/02/11 23:50:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.148 2010/02/14 13:08:06 grobian Exp $
+
+  14 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask binutils-2.20.51.0.5, doesn't compile
 
   11 Feb 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
   Remove KDE 4.4 mask
