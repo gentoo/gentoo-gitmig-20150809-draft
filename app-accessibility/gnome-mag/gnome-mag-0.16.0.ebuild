@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.15.8.ebuild,v 1.2 2009/08/03 16:42:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.0.ebuild,v 1.1 2010/02/14 22:56:36 eva Exp $
 
-inherit gnome2 virtualx
+EAPI="2"
+
+inherit eutils gnome2 virtualx
 
 DESCRIPTION="Gnome magnification service definition"
 HOMEPAGE="http://www.gnome.org/"
@@ -31,6 +33,8 @@ RDEPEND="${RDEPEND}
 	>=gnome-extra/at-spi-1.5.2
 	>=gnome-base/orbit-2.3.100
 
+	dev-libs/dbus-glib
+
 	x11-libs/libX11
 	x11-libs/libXtst
 	x11-libs/libXdamage
@@ -51,7 +55,22 @@ DOCS="AUTHORS ChangeLog NEWS README"
 #	G2CONF="${G2CONF} $(use_enable applet colorblind-applet)"
 #}
 
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix some ugly warnings, originally per upstream bug #578798
+	epatch "${FILESDIR}/${PN}-0.15.9-magnifier-fix-warnings.patch"
+
+	# Workaround intltool tests failure
+	echo "colorblind/GNOME_Magnifier_ColorblindApplet.server.in.in
+colorblind/data/Colorblind_Applet.xml
+colorblind/data/colorblind-applet.schemas.in
+colorblind/data/colorblind-prefs.ui
+colorblind/ui/About.py
+colorblind/ui/ColorblindPreferencesUI.py
+colorblind/ui/WindowUI.py" >> "${S}"/po/POTFILES.skip
+}
+
 src_test() {
 	Xemake check || die "emake check failed"
-
 }
