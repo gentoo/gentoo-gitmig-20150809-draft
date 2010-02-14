@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.29.1.ebuild,v 1.2 2010/02/14 15:09:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.29.1.ebuild,v 1.3 2010/02/14 15:43:49 ssuominen Exp $
 
 EAPI=2
-inherit flag-o-matic pam
+inherit autotools eutils flag-o-matic pam
 
 DESCRIPTION="Just another screensaver application for X"
 HOMEPAGE="http://www.tux.org/~bagleyd/xlockmore.html"
@@ -33,6 +33,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xineramaproto"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-configure.in.patch
+	eautoreconf
+}
 
 src_configure() {
 	local myconf=""
