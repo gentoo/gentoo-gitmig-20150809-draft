@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.28 2010/01/15 21:42:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.29 2010/02/14 22:21:15 eva Exp $
+
+*gtk-doc-am-1.13 (14 Feb 2010)
+
+  14 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtk-doc-am-1.13.ebuild:
+  Version bump. Now provides gtkdoc-rebase, refs bug #262491.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gtk-doc-am-1.11.ebuild:
