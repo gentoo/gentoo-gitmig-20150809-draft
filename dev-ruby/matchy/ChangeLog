@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/matchy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.2 2010/02/13 17:05:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.3 2010/02/14 14:43:57 flameeyes Exp $
+
+*matchy-0.5.2 (14 Feb 2010)
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -matchy-0.5.1.ebuild, -files/matchy-0.5.1+jruby.patch,
+  +matchy-0.5.2.ebuild:
+  Version bump, patch merged upstream.
 
 *matchy-0.5.1 (13 Feb 2010)
 
