@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.1 2010/02/02 22:43:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.2 2010/02/14 17:01:21 jlec Exp $
+
+  14 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  refmac-5.5.0109.ebuild:
+  Corrected wrong naming of patch
 
 *refmac-5.5.0109 (02 Feb 2010)
 

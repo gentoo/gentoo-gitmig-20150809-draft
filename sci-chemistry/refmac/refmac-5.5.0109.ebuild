@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0109.ebuild,v 1.1 2010/02/02 22:43:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0109.ebuild,v 1.2 2010/02/14 17:01:21 jlec Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ PATCHES=(
 
 src_prepare() {
 	base_src_prepare
-	use test && epatch "${FILESDIR}"/test.log.patch
+	use test && epatch "${FILESDIR}"/$(get_version_component_range 1-2 ${PV})-test.log.patch
 }
 
 src_compile() {
