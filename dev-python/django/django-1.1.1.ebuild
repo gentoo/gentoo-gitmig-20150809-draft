@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.6 2010/02/08 08:43:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.7 2010/02/14 17:37:11 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils bash-completion distutils multilib versionator webapp
@@ -74,11 +75,6 @@ __EOF__
 src_install() {
 	[[ -z "${ED}" ]] && local ED="${D}"
 
-	python_set_active_version 2
-	local sitedir="$(python_get_sitedir)"
-	export PYTHONPATH="${PYTHONPATH}${PYTHONPATH:+:}${ED}/${sitedir}"
-	dodir "${sitedir}"
-
 	distutils_src_install
 
 	dobashcompletion extras/django_bash_completion
@@ -94,7 +90,7 @@ src_install() {
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
-	doins -r "${ED}/${sitedir}/django/contrib/admin/media/"* || die "doins failed"
+	doins -r django/contrib/admin/media/* || die "doins failed"
 
 	webapp_src_install
 }
