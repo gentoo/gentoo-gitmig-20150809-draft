@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.1 2010/01/20 22:30:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.2 2010/02/14 21:47:34 swegener Exp $
 
 GCONF_DEBUG="no"
 
@@ -40,6 +40,10 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install py_compile=true
+	python_version
+
+	# remove pointless .la files, bug #305147
+	rm -f "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/glipper/{keybinder/_keybinder,osutils/_osutils}.la
 }
 
 pkg_postinst() {
