@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/perl-DB_File-1.820.ebuild,v 1.12 2010/02/05 17:48:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/perl-DB_File-1.820.ebuild,v 1.13 2010/02/14 08:02:46 tove Exp $
 
 EAPI=2
-
-inherit eutils
 
 DESCRIPTION="Virtual for DB_File"
 HOMEPAGE=""
