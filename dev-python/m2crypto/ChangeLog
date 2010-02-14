@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/m2crypto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.57 2009/12/15 19:25:52 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.58 2010/02/14 18:00:53 arfrever Exp $
+
+  14 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  m2crypto-0.20.2.ebuild:
+  Fix installation with USE="doc" (bug #302777).
 
   15 Dec 2009; Brent Baude <ranger@gentoo.org> m2crypto-0.20.2.ebuild:
   Marking m2crypto-0.20.2 ppc64 for bug 292314

@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.2.ebuild,v 1.11 2009/12/15 19:25:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.2.ebuild,v 1.12 2010/02/14 18:00:53 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils multilib portability
@@ -48,7 +49,7 @@ src_install() {
 
 		einfo "Generating API documentation..."
 		cd "${S}/doc"
-		PYTHONPATH="${PYTHONPATH}:${ED}$(python_get_sitedir)" epydoc --html --output=api --name=M2Crypto M2Crypto
+		PYTHONPATH="${ED}$(python_get_sitedir -f)" epydoc --html --output=api --name=M2Crypto M2Crypto
 	fi
 	dohtml -r *
 }
