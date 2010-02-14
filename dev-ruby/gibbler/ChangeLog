@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/gibbler
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.1 2010/02/14 00:58:23 flameeyes Exp $
+
+*gibbler-0.7.4 (14 Feb 2010)
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gibbler-0.7.4.ebuild, +metadata.xml:
+  Initial import of gibbler, needed for Rudy.
+
