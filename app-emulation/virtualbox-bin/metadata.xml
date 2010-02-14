@@ -16,5 +16,6 @@
 	<flag name='headless'>Install without any graphic frontend</flag>
 	<flag name='sdk'>Enable building of SDK</flag>
 	<flag name='vboxwebsrv'>Install the VirtualBox webservice</flag>
+	<flag name='rdesktop-vrdp'>Install the rdesktop client integration</flag>
 </use>
 </pkgmetadata>
