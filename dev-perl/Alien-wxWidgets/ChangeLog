@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.26 2010/01/12 12:16:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.27 2010/02/14 03:57:24 dirtyepic Exp $
+
+  14 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> Alien-wxWidgets-0.43.ebuild,
+  Alien-wxWidgets-0.44.ebuild, Alien-wxWidgets-0.46.ebuild,
+  Alien-wxWidgets-0.47.ebuild, Alien-wxWidgets-0.48.ebuild,
+  Alien-wxWidgets-0.50.ebuild:
+  wxGTK-2.8 is always unicode so need-wxwidgets unicode and need-wxwidgets
+  gtk2 are equivalent.
 
 *Alien-wxWidgets-0.50 (12 Jan 2010)
 

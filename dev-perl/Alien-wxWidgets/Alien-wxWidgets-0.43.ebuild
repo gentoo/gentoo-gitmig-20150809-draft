@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.43.ebuild,v 1.3 2009/09/06 08:37:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.43.ebuild,v 1.4 2010/02/14 03:57:24 dirtyepic Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ DESCRIPTION="Building, finding and using wxWidgets binaries"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="amd64 ~ia64 x86"
-IUSE="unicode"
+IUSE=""
 
 SRC_TEST="do"
 
@@ -24,12 +24,6 @@ DEPEND="${RDEPEND}
 	virtual/perl-Module-Build"
 
 perl-module_src_prep() {
-	if use unicode; then
-		need-wxwidgets unicode
-	else
-		need-wxwidgets gtk2
-	fi
-
 	echo no | perl Build.PL --installdirs=vendor \
 		--destdir="${D}" \
 		--libdoc= || die "perl Build.PL has failed!"
