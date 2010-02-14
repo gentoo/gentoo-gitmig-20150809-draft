@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-user
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.38 2009/11/14 13:27:18 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.39 2010/02/14 23:53:40 solar Exp $
+
+*qemu-user-0.12.2 (14 Feb 2010)
+
+  14 Feb 2010; <solar@gentoo.org> +qemu-user-0.12.2.ebuild:
+  -- bump qemu-user to current. Add static use flag for cross arch chroot
+  emulation.
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -qemu-user-0.9.1.ebuild:
