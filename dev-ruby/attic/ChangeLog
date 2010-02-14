@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/attic
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.1 2010/02/14 00:17:26 flameeyes Exp $
+
+*attic-0.5.0 (14 Feb 2010)
+
+  14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> +attic-0.5.0.ebuild,
+  +files/attic-0.5.0-fixes.patch, +metadata.xml:
+  Initial import of attic needed ultimately for rudy.
+

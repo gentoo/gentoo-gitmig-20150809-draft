@@ -1,0 +1,44 @@
+diff --git a/Rakefile b/Rakefile
+index eebef10..3a8edfc 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -1,7 +1,6 @@
+ require 'rubygems'
+ require 'rake/clean'
+ require 'rake/gempackagetask'
+-require 'hanna/rdoctask'
+ require 'fileutils'
+ include FileUtils
+  
+@@ -65,6 +64,11 @@ end
+ 
+ 
+ # RUBY DOCS TASK ==================================
++begin
++  require 'hanna/rdoctask'
++rescue LoadError
++  require 'rake/rdoctask'
++end
+ 
+ Rake::RDocTask.new do |t|
+ 	t.rdoc_dir = 'doc'
+diff --git a/try/30_nometaclass_tryouts.rb b/try/30_nometaclass_tryouts.rb
+index 0a07843..94f3ea8 100644
+--- a/try/30_nometaclass_tryouts.rb
++++ b/try/30_nometaclass_tryouts.rb
+@@ -30,13 +30,13 @@ tryouts "Basics" do
+     :any.metaclass?
+   end
+   
+-  dream [:@___attic_name]
++  dream ["@___attic_name"]
+   drill "A Symbol's attic vars appear in all_instance_variables" do
+     Symbol.extend Attic
+     Symbol.attic :name
+     a, b = :symbol1, :symbol2
+     a.name = :roger
+-    a.all_instance_variables
++    a.all_instance_variables.collect { |x| x.to_s }
+   end
+   
+   dream []
