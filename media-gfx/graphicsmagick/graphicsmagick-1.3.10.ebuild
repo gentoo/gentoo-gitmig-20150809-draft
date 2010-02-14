@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.7-r2.ebuild,v 1.2 2010/02/09 15:19:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.10.ebuild,v 1.1 2010/02/14 18:05:43 bicatali Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic perl-app
+inherit eutils toolchain-funcs flag-o-matic perl-module
 
 MY_P=${P/graphicsm/GraphicsM}
 
@@ -14,9 +14,9 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="bzip2 cxx debug doc fpx imagemagick jbig +jpeg +jpeg2k lcms openmp
-	perl +png q16 q32 +svg +threads tiff +truetype X wmf zlib"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+IUSE="bzip2 cxx debug doc fpx imagemagick jbig jpeg jpeg2k lcms openmp
+	perl png q16 q32 svg threads tiff truetype X wmf zlib"
 
 RDEPEND="app-text/ghostscript-gpl
 	bzip2? ( app-arch/bzip2 )
@@ -31,10 +31,7 @@ RDEPEND="app-text/ghostscript-gpl
 	tiff? ( >=media-libs/tiff-3.8.2 )
 	truetype? ( >=media-libs/freetype-2.0 )
 	wmf? ( media-libs/libwmf )
-	X? ( x11-libs/libXext
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libICE )
+	X? ( x11-libs/libXext x11-libs/libSM )
 	imagemagick? ( !media-gfx/imagemagick )"
 
 DEPEND="${RDEPEND}"
@@ -55,10 +52,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-CVE-2009-1882.patch"
-	epatch "${FILESDIR}/${P}-CVE-2009-3736.patch"
-	epatch "${FILESDIR}/${P}-perl-ldflags.patch"
-	epatch "${FILESDIR}/${P}-debian-fixed.patch"
+	epatch "${FILESDIR}/${PN}-1.3.7-perl-ldflags.patch"
+	epatch "${FILESDIR}/${PN}-1.3.7-debian-fixed.patch"
 }
 
 src_configure() {
@@ -72,7 +67,6 @@ src_configure() {
 	fi
 
 	use debug && filter-flags -fomit-frame-pointer
-
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		--htmldir=/usr/share/doc/${PF}/html \
@@ -85,6 +79,7 @@ src_configure() {
 		--with-quantum-depth=${quantumDepth} \
 		--with-fontpath="/usr/share/fonts" \
 		--with-gs-font-dir="/usr/share/fonts/default/ghostscript" \
+		--with-windows-font-dir="/usr/share/fonts/corefonts" \
 		$(use_enable debug ccmalloc) \
 		$(use_enable debug prof) \
 		$(use_enable debug gcov) \
@@ -123,14 +118,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	if use perl; then
 		perl -MExtUtils::MakeMaker -e 'MY->fixin(@ARGV)' PerlMagick/demo/*.pl
-		emake -C PerlMagick  DESTDIR="${D}" install || die "emake perl install failed"
+		emake -C PerlMagick DESTDIR="${D}" \
+			install || die "emake perl install failed"
 		fixlocalpod
 	fi
 	use doc || rm -rf "${D}"usr/share/doc/${PF}/html
-}
-
-pkg_postinst() {
-	elog "For RAW image suport please install media-gfx/dcraw."
-	elog "For mpeg suport please install media-video/mpeg2vidcodec."
-	elog "To read gnuplot files please install sci-visualization/gnuplot."
 }
