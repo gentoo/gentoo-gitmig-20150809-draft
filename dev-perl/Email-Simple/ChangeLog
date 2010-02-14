@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Simple
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.46 2009/11/19 08:16:24 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.47 2010/02/14 09:57:29 tove Exp $
+
+  14 Feb 2010; Torsten Veller <tove@gentoo.org> Email-Simple-2.100.ebuild:
+  Stable on amd64 and x86 (#304683)
 
   19 Nov 2009; Torsten Veller <tove@gentoo.org> Email-Simple-2.100.ebuild:
   Merge depends of dev-perl/Email-Simple-Creator (#293684)
