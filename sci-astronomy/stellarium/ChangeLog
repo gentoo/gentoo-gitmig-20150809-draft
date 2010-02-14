@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.56 2010/02/06 22:32:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.57 2010/02/14 01:50:50 mr_bones_ Exp $
+
+  14 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.10.3.ebuild:
+  make desktop file pass desktop-file-validate
 
   06 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org>
   stellarium-0.10.3.ebuild, metadata.xml:

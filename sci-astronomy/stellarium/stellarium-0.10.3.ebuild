@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.3.ebuild,v 1.2 2010/02/06 22:32:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.3.ebuild,v 1.3 2010/02/14 01:50:50 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -53,6 +53,6 @@ src_install() {
 		doins "${DISTDIR}"/stars_[45678]_[12]v0_0*.cat || die "doins failed"
 	fi
 	newicon doc/images/stellarium-logo.png ${PN}.png
-	make_desktop_entry ${PN} Stellarium ${PN} "Education;Science;Astronomy;"
+	make_desktop_entry ${PN} Stellarium ${PN} "Education;Science;Astronomy"
 	dodoc AUTHORS ChangeLog README
 }
