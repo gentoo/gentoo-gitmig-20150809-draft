@@ -6,4 +6,7 @@
   <email>dragonheart@gentoo.org</email>
   <name>Daniel Black</name>
 </maintainer>
+<use>
+  <flag name='srv'>enable support for SRV records DNS queries</flag>
+</use>
 </pkgmetadata>
