@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.1 2009/08/06 04:56:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.2 2010/02/14 23:57:45 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -77,6 +77,9 @@ src_unpack() {
 	# wxBase has an automagic sdl dependency.  short circuit it here.
 	# http://bugs.gentoo.org/show_bug.cgi?id=91574
 	use sdl || sed -i -e 's:$wxUSE_LIBSDL" != "no":$wxUSE_LIBSDL" = "yes":' configure
+
+	# Fix for >=libpng-1.4.0.  Bug #305119.
+	sed -i -e 's:png_check_sig:png_sig_cmp:g' "${S}"/configure
 }
 
 src_compile() {
@@ -98,10 +101,10 @@ src_compile() {
 	use X && \
 		myconf="${myconf}
 			--enable-gui
-			--with-libpng
-			--with-libxpm
-			--with-libjpeg
-			--with-libtiff
+			--with-libpng=sys
+			--with-libxpm=sys
+			--with-libjpeg=sys
+			--with-libtiff=sys
 			$(use_enable opengl)
 			$(use_with opengl)
 			$(use_with gnome gnomeprint)"
