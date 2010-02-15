@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.301 2010/02/12 18:30:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.302 2010/02/15 18:42:38 josejx Exp $
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> util-linux-2.16.2.ebuild:
+  Marked ppc stable for bug #301179.
 
   12 Feb 2010; Raúl Porcel <armin76@gentoo.org> util-linux-2.16.2.ebuild:
   sparc stable wrt #301179
