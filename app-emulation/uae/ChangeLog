@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/uae
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.37 2009/06/15 18:22:27 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.38 2010/02/15 00:20:38 hanno Exp $
+
+*uae-0.8.29-r1 (15 Feb 2010)
+
+  15 Feb 2010; Hanno Boeck <hanno@gentoo.org> +uae-0.8.29-r1.ebuild:
+  Updated ebuild with less use flag options, as the upstream code contains
+  lots of broken options.
 
 *uae-0.8.29 (15 Jun 2009)
 
