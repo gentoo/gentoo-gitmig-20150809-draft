@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.89 2010/02/10 20:11:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.90 2010/02/15 15:08:44 spatz Exp $
+
+*qt-core-4.6.2 (15 Feb 2010)
+
+  15 Feb 2010; Dror Levin <spatz@gentoo.org> -files/qt-4.6-nolibx11.diff,
+  -files/qt-core-4.6.0-hebrew.patch, qt-core-4.6.1.ebuild,
+  +files/qt-4.6-nolibx11.patch, -files/qt-core-4.6.1-nolibx11.patch,
+  +qt-core-4.6.2.ebuild:
+  Version bump, rename patch.
 
   10 Feb 2010; Ben de Groot <yngwin@gentoo.org> qt-core-4.6.1.ebuild:
   Move QT4_EXTRACT_DIRECTORIES stuff to pkg_setup, to fix compilation on

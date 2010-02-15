@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-xmlpatterns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.59 2010/02/09 21:11:33 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.60 2010/02/15 15:12:57 spatz Exp $
+
+*qt-xmlpatterns-4.6.2 (15 Feb 2010)
+
+  15 Feb 2010; Dror Levin <spatz@gentoo.org> -files/qt-4.6-nolibx11.diff,
+  qt-xmlpatterns-4.6.1.ebuild, +qt-xmlpatterns-4.6.2.ebuild,
+  +files/qt-4.6-nolibx11.patch, -files/qt-4.6.1-nolibx11.patch:
+  Version bump, rename patch.
 
   09 Feb 2010; Dror Levin <spatz@gentoo.org>
   -qt-xmlpatterns-4.6.0-r1.ebuild:

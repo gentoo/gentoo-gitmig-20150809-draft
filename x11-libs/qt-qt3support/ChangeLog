@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.63 2010/02/09 21:08:03 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.64 2010/02/15 15:11:11 spatz Exp $
+
+*qt-qt3support-4.6.2 (15 Feb 2010)
+
+  15 Feb 2010; Dror Levin <spatz@gentoo.org> +qt-qt3support-4.6.2.ebuild:
+  Version bump.
 
   09 Feb 2010; Dror Levin <spatz@gentoo.org> -qt-qt3support-4.6.0-r1.ebuild:
   Remove old.

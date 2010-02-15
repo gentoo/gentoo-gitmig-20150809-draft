@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.78 2010/02/09 21:11:05 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.79 2010/02/15 15:12:39 spatz Exp $
+
+*qt-webkit-4.6.2 (15 Feb 2010)
+
+  15 Feb 2010; Dror Levin <spatz@gentoo.org>
+  -files/qt-webkit-4.6.0-solaris-jsvalue.patch, qt-webkit-4.6.1.ebuild,
+  +qt-webkit-4.6.2.ebuild, -files/sparc-qt-webkit-sigbus.patch:
+  Version bump, drop failing sparc patch.
 
   09 Feb 2010; Dror Levin <spatz@gentoo.org> -qt-webkit-4.6.0-r1.ebuild:
   Remove old.

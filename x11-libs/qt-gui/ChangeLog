@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.97 2010/02/10 20:11:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.98 2010/02/15 15:09:39 spatz Exp $
+
+*qt-gui-4.6.2 (15 Feb 2010)
+
+  15 Feb 2010; Dror Levin <spatz@gentoo.org>
+  -files/qt-gui-4.6.0-fix-qgraphicsscence.patch, +qt-gui-4.6.2.ebuild:
+  Version bump.
 
   10 Feb 2010; Ben de Groot <yngwin@gentoo.org> qt-gui-4.6.1.ebuild:
   Move QT4_EXTRACT_DIRECTORIES stuff to pkg_setup, to fix compilation on
