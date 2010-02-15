@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/bcm43xx-fwcutter-006.ebuild,v 1.4 2008/03/22 16:06:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/bcm43xx-fwcutter-006.ebuild,v 1.5 2010/02/15 20:43:16 ssuominen Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Firmware Tool for Broadcom 43xx based wireless network devices"
 HOMEPAGE="http://bcm43xx.berlios.de"
-SRC_URI="http://download.berlios.de/bcm43xx/${P}.tar.bz2"
+SRC_URI="mirror://berlios/bcm43xx/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
