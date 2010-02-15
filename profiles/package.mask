@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11215 2010/02/15 16:53:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11216 2010/02/15 17:00:45 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (15 Feb 2010)
+# Upstream changes tarball regularly and do not permit mirroring
+# I am trying to find a solution with upstream #305007
+sci-chemistry/tinker
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (15 February 2010)
 # Mask prerelease libdrm snapshot and depending xf86-video-nouveau
