@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.93 2010/02/10 10:47:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.94 2010/02/15 20:09:34 josejx Exp $
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> awesome-3.4.3.ebuild:
+  Marked ppc/ppc64 stable for bug #304285.
 
   10 Feb 2010; MATSUU Takuto <matsuu@gentoo.org> files/awesome-session:
   Added session handling, bug #303661.
