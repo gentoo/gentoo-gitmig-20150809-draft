@@ -5,6 +5,10 @@
 <maintainer>
   <email>radek@gentoo.org</email>
 </maintainer>
+<maintainer>
+  <email>jlec@gentoo.org</email>
+	<description>Bug fixing guy</description>
+</maintainer>
 <use>
 	<flag name="rar">Enable support for non-free rar decoder</flag>
 </use>	
