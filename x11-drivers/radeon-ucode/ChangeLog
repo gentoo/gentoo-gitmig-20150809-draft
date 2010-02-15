@@ -1,0 +1,10 @@
+# ChangeLog for x11-drivers/radeon-ucode
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.1 2010/02/15 17:10:17 chithanh Exp $
+
+*radeon-ucode-20091209 (15 Feb 2010)
+
+  15 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20091209.ebuild, +metadata.xml:
+  Initial import, based on an ebuild by scarabeus
+
