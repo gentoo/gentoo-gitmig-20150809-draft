@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.4.ebuild,v 1.4 2010/01/23 12:36:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.3.4.ebuild,v 1.5 2010/02/15 21:01:15 ssuominen Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ PLUGINS="+addbookmarks +autoreplace +contactnotes +highlight +history latex
 #   testbed: NO DEPS
 #	winpopup: NO DEPS
 #	yahoo: NO DEPS
-PROTOCOLS="bonjour facebook gadu groupwise +jabber meanwhile msn oscar qq
+PROTOCOLS="bonjour gadu groupwise +jabber meanwhile msn oscar qq
 skype testbed winpopup yahoo"
 
 # disabled protocols
@@ -91,9 +91,6 @@ RDEPEND="${COMMONDEPEND}
 #	telepathy? ( net-libs/decibel )"
 DEPEND="${COMMONDEPEND}
 	!aqua? ( x11-proto/scrnsaverproto )
-"
-PDEPEND="
-	facebook? ( net-im/kopete-facebook )
 "
 
 src_configure() {
