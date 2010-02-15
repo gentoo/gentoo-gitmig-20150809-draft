@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.51 2010/02/12 23:00:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.52 2010/02/15 07:38:50 robbat2 Exp $
+
+*g-cpan-0.16.1 (15 Feb 2010)
+
+  15 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> +g-cpan-0.16.1.ebuild:
+  Bug #269173: fix hangs on build scripts that expect interactivity. Bug
+  #176627: new variable GCPAN_OVERLAY to explicitly select output location
+  of new ebuilds. Also GCPAN_CAT for category of new ebuilds. Confirm bug
+  #178089 fixed in previous 0.16.0 release. 
 
 *g-cpan-0.16.0 (12 Feb 2010)
 
