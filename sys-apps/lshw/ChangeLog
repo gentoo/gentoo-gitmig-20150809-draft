@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.76 2009/06/07 21:36:47 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.77 2010/02/15 21:11:17 josejx Exp $
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> lshw-02.14b.ebuild:
+  Marked ppc/ppc64 stable for bug #304881.
 
 *lshw-02.14b (07 Jun 2009)
 
