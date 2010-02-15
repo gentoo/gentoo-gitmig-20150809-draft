@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/CGI-Builder
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Builder/ChangeLog,v 1.1 2010/02/15 03:31:17 robbat2 Exp $
+
+*CGI-Builder-1.36 (15 Feb 2010)
+
+  15 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +CGI-Builder-1.36.ebuild, +metadata.xml:
+  Initial commit, package or dep for one that cannot be generated correctly
+  by g-cpan and was asked for by a user in a bug.
+

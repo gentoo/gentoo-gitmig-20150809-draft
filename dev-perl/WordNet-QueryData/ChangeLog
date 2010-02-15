@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/WordNet-QueryData
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WordNet-QueryData/ChangeLog,v 1.1 2010/02/15 03:30:55 robbat2 Exp $
+
+*WordNet-QueryData-1.49 (15 Feb 2010)
+
+  15 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +WordNet-QueryData-1.49.ebuild, +metadata.xml:
+  Initial commit, package or dep for one that cannot be generated correctly
+  by g-cpan and was asked for by a user in a bug.
+
