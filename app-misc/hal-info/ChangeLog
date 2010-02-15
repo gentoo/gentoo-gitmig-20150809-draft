@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.82 2010/01/24 23:55:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.83 2010/02/15 19:33:53 armin76 Exp $
+
+  15 Feb 2010; Raúl Porcel <armin76@gentoo.org> hal-info-20090716.ebuild:
+  sh stable wrt #287411
 
   24 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
   hal-info-20090414.ebuild, hal-info-20090716.ebuild,
