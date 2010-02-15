@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.32 2010/01/18 00:34:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.33 2010/02/15 12:18:33 ssuominen Exp $
+
+*xfce4-settings-4.7.1 (15 Feb 2010)
+
+  15 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-settings-4.7.1.ebuild,
+  +files/xfce4-settings-4.7.1-libxklavier.patch:
+  Version bump.
 
   18 Jan 2010; Jeroen Roovers <jer@gentoo.org> xfce4-settings-4.6.3.ebuild:
   Stable for HPPA (bug #281427).
