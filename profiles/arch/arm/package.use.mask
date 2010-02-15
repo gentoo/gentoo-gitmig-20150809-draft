@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.16 2010/02/08 23:04:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.17 2010/02/15 20:46:14 halcy0n Exp $
+
+# Mark Loeser <halcy0n@gentoo.org> (15 Feb 2010)
+# need >=net-wireless/bluez-4.61 keyworded
+net-misc/ofono bluetooth
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded
