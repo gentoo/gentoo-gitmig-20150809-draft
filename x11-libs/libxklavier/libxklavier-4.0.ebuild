@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-4.0.ebuild,v 1.13 2010/01/16 17:07:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-4.0.ebuild,v 1.14 2010/02/15 04:30:42 abcd Exp $
 
 inherit autotools eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 	fi
 
 	econf \
-		--disable-static
+		--disable-static \
 		--with-xkb-base=${xkbbase} \
 		--with-xkb-bin-base=/usr/bin \
 		$(use_enable doc gtk-doc)
