@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.54 2010/02/11 19:56:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.55 2010/02/15 11:04:26 voyageur Exp $
+
+*chromium-5.0.322.2 (15 Feb 2010)
+
+  15 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +chromium-5.0.322.2.ebuild:
+  Dev channel release bump, with experimental native client (check chrome
+  releases blog for details)
 
 *chromium-5.0.307.7 (11 Feb 2010)
 
@@ -26,10 +33,6 @@
   chromium-4.0.295.0.ebuild, chromium-4.0.302.2.ebuild,
   chromium-5.0.307.5.ebuild, chromium-9999.ebuild:
   Fix jpeg dependency to jpeg:0, spotted by ssuominen
-
-  05 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
-  -chromium-5.0.307.1.ebuild, +chromium-5.0.307.5.ebuild:
-  Bump to fix a few bugs in 5.0.307, mostly theme corruption after update
 
 *chromium-5.0.307.5 (05 Feb 2010)
 
