@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.3 2010/02/15 16:40:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.2-r2.ebuild,v 1.1 2010/02/15 16:40:13 cardoe Exp $
 
 EAPI="2"
 
@@ -109,6 +109,8 @@ src_prepare() {
 	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
+
+	epatch "${FILESDIR}"/${P}-virtio-large-iovecs.patch
 }
 
 src_configure() {
