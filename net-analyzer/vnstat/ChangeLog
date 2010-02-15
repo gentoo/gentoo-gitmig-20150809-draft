@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.40 2010/02/12 14:21:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.41 2010/02/15 18:50:15 josejx Exp $
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> vnstat-1.10.ebuild:
+  Marked ppc/ppc64 stable for bug #299499.
 
   12 Feb 2010; Jeroen Roovers <jer@gentoo.org> vnstat-1.10.ebuild:
   Stable for HPPA (bug #299499).
