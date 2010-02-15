@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.4.ebuild,v 1.1 2010/01/15 23:29:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.4.ebuild,v 1.2 2010/02/15 01:53:06 arfrever Exp $
 
-EAPI=2
+EAPI="2"
+PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="ncurses"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils linux-info
 
@@ -15,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.5[ncurses]
-	dev-python/setuptools"
-DEPEND="${RDEPEND}"
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 CONFIG_CHECK="~TASK_IO_ACCOUNTING ~TASKSTATS"
 DOCS="NEWS README THANKS"

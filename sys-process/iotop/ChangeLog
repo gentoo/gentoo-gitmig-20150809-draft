@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.25 2010/02/09 12:21:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.26 2010/02/15 01:53:06 arfrever Exp $
+
+  15 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  iotop-0.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Disable installation for Python 3 (bug #304505).
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> iotop-0.3.2-r1.ebuild:
   amd64 stable, bug 301259
