@@ -1,0 +1,34 @@
+# ChangeLog for dev-perl/Pod-Abstract
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Abstract/ChangeLog,v 1.1 2010/02/15 13:50:03 tove Exp $
+
+  15 Feb 2010; Torsten Veller <tove@gentoo.org> +Pod-Abstract-0.20.ebuild,
+  +metadata.xml:
+  Import to gentoo from perl-experimental
+
+*Pod-Abstract-0.20 (09 Jan 2010)
+
+  09 Jan 2010; Torsten Veller <tove@gentoo.org> -Pod-Abstract-0.17.ebuild,
+  -Pod-Abstract-0.18.ebuild, +Pod-Abstract-0.20.ebuild:
+  Version bump. Cleanup
+
+*Pod-Abstract-0.19 (26 Jun 2009)
+
+  26 Jun 2009; Kent Fredric <kentfredric@gmail.com>
+  +Pod-Abstract-0.19.ebuild:
+  Bumped
+
+*Pod-Abstract-0.18 (12 Jun 2009)
+
+  12 Jun 2009; Torsten Veller <tove@gentoo.org> +Pod-Abstract-0.18.ebuild:
+  Version bump
+
+  31 May 2009; Torsten Veller <tove@gentoo.org> Pod-Abstract-0.17.ebuild:
+  Add ~amd64
+
+*Pod-Abstract-0.17 (30 May 2009)
+
+  30 May 2009; Torsten Veller <tove@gentoo.org> +Pod-Abstract-0.17.ebuild,
+  +metadata.xml:
+  Initial version
+
