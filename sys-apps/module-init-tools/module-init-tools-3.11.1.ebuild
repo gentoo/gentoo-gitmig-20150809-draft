@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.11.1.ebuild,v 1.2 2010/01/08 02:36:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.11.1.ebuild,v 1.3 2010/02/15 02:12:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -55,4 +55,36 @@ pkg_postinst() {
 	if grep -qs modules-update "${ROOT}"/etc/init.d/modules ; then
 		sed -i 's:modules-update:update-modules:' "${ROOT}"/etc/init.d/modules
 	fi
+
+	# For files that were upgraded but not renamed via their ebuild to
+	# have a proper .conf extension, rename them so etc-update tools can
+	# take care of things. #274942
+	local i f cfg
+	eshopts_push -s nullglob
+	for f in "${ROOT}"etc/modprobe.d/* ; do
+		# The .conf files need no upgrading unless a non-.conf exists,
+		# so skip this until later ...
+		[[ ${f} == *.conf ]] && continue
+		# If a .conf doesn't exist, then a package needs updating, or
+		# the user created it, or it's orphaned.  Either way, we don't
+		# really know, so leave it alone.
+		[[ ! -f ${f}.conf ]] && continue
+
+		i=0
+		while :; do
+			cfg=$(printf "%s/._cfg%04d_%s.conf" "${f%/*}" ${i} "${f##*/}")
+			[[ ! -e ${cfg} ]] && break
+			((i++))
+		done
+		einfo "Updating ${f}; please run 'etc-update'"
+		mv "${f}.conf" "${cfg}"
+		mv "${f}" "${f}.conf"
+	done
+	# Whine about any non-.conf files that are left
+	for f in "${ROOT}"etc/modprobe.d/* ; do
+		[[ ${f} == *.conf ]] && continue
+		ewarn "The '${f}' file needs to be upgraded to end with a '.conf'."
+		ewarn "Either upgrade the package that owns it, or manually rename it."
+	done
+	eshopts_pop
 }
