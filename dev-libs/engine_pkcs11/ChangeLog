@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.34 2010/01/07 18:38:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.35 2010/02/15 19:55:35 josejx Exp $
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> engine_pkcs11-0.1.8.ebuild:
+  Marked ppc/ppc64 stable for bug #304003.
 
 *engine_pkcs11-0.1.8 (07 Jan 2010)
 
