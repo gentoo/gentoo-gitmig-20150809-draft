@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.903.ebuild,v 1.2 2010/02/14 09:59:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.903.ebuild,v 1.3 2010/02/15 19:35:42 armin76 Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Easy MIME message parsing"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND="dev-perl/Email-MessageID
