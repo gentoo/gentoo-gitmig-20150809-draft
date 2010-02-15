@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.3 2009/11/02 06:57:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.4 2010/02/15 23:55:38 dirtyepic Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils games wxwidgets
 
 DESCRIPTION="Cross-platform 3D realtime strategy game"
 HOMEPAGE="http://www.glest.org/"
@@ -24,7 +24,7 @@ RDEPEND="media-libs/libsdl[joystick,video]
 	virtual/glu
 	dev-lang/lua
 	x11-libs/libX11
-	editor? ( x11-libs/wxGTK )"
+	editor? ( x11-libs/wxGTK:2.8[X] )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-util/ftjam"
@@ -54,7 +54,13 @@ src_prepare() {
 }
 
 src_configure() {
-	use editor || NOWX="--with-wx-config=disabled_wx"
+	if use editor; then
+		WX_GTK_VER=2.8
+		need-wxwidgets unicode
+	else
+		NOWX="--with-wx-config=disabled_wx"
+	fi
+
 	egamesconf \
 		--with-vorbis=/usr \
 		--with-ogg=/usr \
