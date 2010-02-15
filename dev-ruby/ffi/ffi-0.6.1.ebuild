@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.0.ebuild,v 1.1 2010/02/13 21:20:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.1.ebuild,v 1.1 2010/02/15 13:55:44 flameeyes Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DESCRIPTION="Ruby extension for programmatically loading dynamic libraries"
 HOMEPAGE="http://wiki.github.com/ffi/ffi"
 
 SRC_URI="http://github.com/${PN}/${PN}/tarball/${PV} -> ${PN}-git-${PV}.tgz"
-S="${WORKDIR}/${PN}-${PN}-09d594e"
+S="${WORKDIR}/${PN}-${PN}-392fae5"
 
 IUSE=""
 LICENSE="BSD"

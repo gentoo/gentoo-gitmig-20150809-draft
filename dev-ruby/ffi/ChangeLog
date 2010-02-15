@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.2 2010/02/13 21:20:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.3 2010/02/15 13:55:44 flameeyes Exp $
+
+*ffi-0.6.1 (15 Feb 2010)
+
+  15 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> -ffi-0.6.0.ebuild,
+  +ffi-0.6.1.ebuild:
+  Version bump, still using the git tag.
 
 *ffi-0.6.0 (13 Feb 2010)
 
