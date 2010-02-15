@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.29-r1.ebuild,v 1.1 2010/02/15 00:20:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.29-r1.ebuild,v 1.2 2010/02/15 18:06:18 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 src_compile() {
 	# disabling lots of options, cause many code-paths are broken, these should compile,
 	# if you want/need other options, please test if they work with other combinations
-	# before opening a bug	
+	# before opening a bug
 	econf --enable-ui --with-x --without-svgalib \
 		--without-asciiart --without-sdl-sound --enable-threads \
 		$(use_with sdl) $(use_with sdl sdl-gfx) \
