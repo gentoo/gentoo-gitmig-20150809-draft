@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11209 2010/02/14 21:33:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11210 2010/02/15 00:24:47 hanno Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -278,16 +278,6 @@ net-libs/libjingle
 #
 # Removal on 2010-03-06
 dev-php/roadsend-php
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (05 Jan 2010)
-#  on behalf of QA team
-#
-# Fails to build with different configurations (bug #205050,
-# open January 2008, with patch and bug #262243, open
-# March 2009).
-#
-# Removal on 2010-03-06
-app-emulation/uae
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (05 Jan 2010)
 # No homepage, no sources, dead.
