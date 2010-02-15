@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.61.ebuild,v 1.1 2010/02/13 18:36:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.61.ebuild,v 1.2 2010/02/15 18:04:57 pacho Exp $
 
 EAPI="2"
 
@@ -39,6 +39,12 @@ RDEPEND="${CDEPEND}
 	test-programs? (
 		dev-python/dbus-python
 		dev-python/pygobject )"
+
+pkg_setup() {
+	if ! use consolekit; then
+		enewgroup plugdev
+	fi
+}
 
 src_prepare() {
 	if ! use consolekit; then

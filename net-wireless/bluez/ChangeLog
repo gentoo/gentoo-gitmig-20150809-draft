@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.26 2010/02/13 18:36:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.27 2010/02/15 18:04:57 pacho Exp $
+
+  15 Feb 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.60.ebuild,
+  bluez-4.61.ebuild:
+  Ensure plugdev group is present when needed, thanks to A. Craig West for
+  reporting and Fabio Erculiani (bug 304205). Removing old testing version.
 
 *bluez-4.61 (13 Feb 2010)
 
