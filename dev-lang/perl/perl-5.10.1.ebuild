@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.18 2010/02/13 12:01:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.19 2010/02/15 08:10:59 tove Exp $
 
 EAPI=2
 
@@ -64,9 +64,13 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		echo
-		epause 5
 	fi
-	if has_version dev-lang/perl ; then
+	if has_version "~dev-lang/perl-5.8.8" ; then
+		ewarn "UPDATE THE PERL MODULES:"
+		ewarn "After updating dev-lang/perl you must reinstall"
+		ewarn "the installed perl modules."
+		ewarn "Use: perl-cleaner --all"
+	elif has_version dev-lang/perl ; then
 		# doesnot work
 		#if ! has_version dev-lang/perl[ithreads=,debug=] ; then
 		#if ! has_version dev-lang/perl[ithreads=] || ! has_version dev-lang/perl[debug=] ; then
@@ -78,7 +82,6 @@ pkg_setup() {
 			ewarn "You changed one of the use-flags ithreads or debug."
 			ewarn "You must rebuild all perl-modules installed."
 			ewarn "Use: perl-cleaner --modules ; perl-cleaner --force --libperl"
-			epause
 		fi
 	fi
 	dual_scripts
