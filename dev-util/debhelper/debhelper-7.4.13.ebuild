@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.4.13.ebuild,v 1.1 2010/02/14 04:16:10 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.4.13.ebuild,v 1.2 2010/02/15 18:07:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/${PN}/main/${PV}/+download/${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="nls linguas_es linguas_fr"
+IUSE="nls linguas_es linguas_fr test"
 
 RDEPEND="app-arch/dpkg
 	dev-perl/TimeDate
