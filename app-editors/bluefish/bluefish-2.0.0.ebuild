@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.0_rc3.ebuild,v 1.1 2010/02/02 18:25:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.0.ebuild,v 1.1 2010/02/15 18:46:45 billie Exp $
 
 EAPI=2
 
@@ -37,7 +37,7 @@ S=${WORKDIR}/${MY_P}
 src_prepare () {
 	# Fixes automagic installation of charmap plugin
 	# Upstream bug: https://bugzilla.gnome.org/show_bug.cgi?id=570990
-	epatch "${FILESDIR}"/${PN}-2.0.0_rc1-gucharmap-automagic.patch
+	epatch "${FILESDIR}"/${P}-gucharmap-automagic.patch
 	eautoreconf
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.69 2010/02/02 18:25:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.70 2010/02/15 18:46:45 billie Exp $
+
+*bluefish-2.0.0 (15 Feb 2010)
+
+  15 Feb 2010; Daniel Pielmeier <billie@gentoo.org>
+  -bluefish-2.0.0_rc3.ebuild, +bluefish-2.0.0.ebuild,
+  +files/bluefish-2.0.0-gucharmap-automagic.patch,
+  -files/bluefish-2.0.0_rc1-gucharmap-automagic.patch:
+  Version bump to final release. Remove latest release candidate.
 
 *bluefish-2.0.0_rc3 (02 Feb 2010)
 
