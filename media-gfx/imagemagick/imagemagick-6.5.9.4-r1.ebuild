@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.5.9.4.ebuild,v 1.1 2010/02/14 12:27:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.5.9.4-r1.ebuild,v 1.1 2010/02/15 19:04:44 ssuominen Exp $
 
 EAPI="2"
 
@@ -165,11 +165,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation of files into image failed"
-
-	if ! use static-libs; then
-		find "${D}"/usr/$(get_libdir) -name '*.la' -delete || die
-	fi
+	emake DESTDIR="${D}" install || die
 
 	use doc || rm -r "${D}"/usr/share/doc/${PF}/{www,images,index.html}
 	dodoc NEWS.txt ChangeLog AUTHORS.txt README.txt
