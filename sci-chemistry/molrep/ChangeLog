@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molrep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.1 2010/02/06 00:45:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.2 2010/02/15 19:51:07 jlec Exp $
+
+  15 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> molrep-10.2.35.ebuild,
+  metadata.xml:
+  Removed broken test per 305145
 
 *molrep-10.2.35 (06 Feb 2010)
 

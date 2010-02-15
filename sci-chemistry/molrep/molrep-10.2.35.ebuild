@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-10.2.35.ebuild,v 1.1 2010/02/06 00:45:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-10.2.35.ebuild,v 1.2 2010/02/15 19:51:07 jlec Exp $
 
 EAPI="3"
 
@@ -8,13 +8,12 @@ inherit base multilib toolchain-funcs
 
 DESCRIPTION="molecular replacement program"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/molrep.html"
-SRC_URI="http://dev.gentooexperimental.org/~jlec/science-dist/${P}.tar.gz
-	 test? ( http://dev.gentooexperimental.org/~jlec/distfiles/test-framework.tar.gz )"
+SRC_URI="http://dev.gentooexperimental.org/~jlec/science-dist/${P}.tar.gz"
 
 LICENSE="ccp4"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test extra-test"
+IUSE=""
 
 RDEPEND="
 	>=sci-libs/ccp4-libs-6.1.3
@@ -37,25 +36,6 @@ src_compile() {
 		LDFLAGS="${LDFLAGS}" \
 		MR_LIBRARY="-L${EPREFIX}/usr/$(get_libdir) -lccp4f -lccp4c -lmmdb -lccif -llapack -lstdc++ -lm" \
 		|| die
-}
-
-src_test() {
-	einfo "Starting tests ..."
-	export PATH="${WORKDIR}/test-framework/scripts:${S}/bin:${PATH}"
-	export CCP4_TEST="${WORKDIR}"/test-framework
-	export CCP4_SCR="${T}"
-	ccp4-run-thorough-tests -v test_molrep || die "nomal test failed"
-
-	use extra-test && \
-		cd "${S}"/molrep_check && \
-			ewarn "Can take a long, long time ..." && \
-			ewarn "Go, take a coffee, lunch, go to sleep and have breakfast ..." && \
-				sed 's:\.\.:\.:g' -i em.bat && \
-				mkdir out && \
-				mkdir scr && \
-				MR_TEST="${S}/bin" bash em.bat && \
-				MR_TEST="${S}/bin" bash mr.bat || \
-				die "extra-test failed"
 }
 
 src_install() {
