@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.3.3-r1.ebuild,v 1.10 2010/01/18 00:34:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.3.3-r1.ebuild,v 1.11 2010/02/15 13:10:37 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -30,5 +30,10 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog README"
 	XFCONF="--disable-dependency-tracking
 		$(use_enable debug)"
-	PATCHES=( "${FILESDIR}/${P}-libxklavier.patch" )
+
+	if has_version ">=x11-libs/libxklavier-5"; then
+		PATCHES=( "${FILESDIR}/${P}-libxklavier-5.patch" )
+	else
+		PATCHES=( "${FILESDIR}/${P}-libxklavier.patch" )
+	fi
 }
