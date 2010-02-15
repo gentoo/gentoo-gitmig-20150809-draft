@@ -1,5 +1,6 @@
---- configure.ac
-+++ configure.ac
+diff -ur xfce4-settings-4.7.1.orig/configure.ac xfce4-settings-4.7.1/configure.ac
+--- xfce4-settings-4.7.1.orig/configure.ac	2010-01-23 13:48:05.000000000 +0200
++++ xfce4-settings-4.7.1/configure.ac	2010-02-15 14:20:55.000000000 +0200
 @@ -142,6 +142,8 @@
                             [libxklavier], [Keyboard layout selection])
  XDT_CHECK_OPTIONAL_PACKAGE([LIBXKLAVIER4], [libxklavier], [4.0],

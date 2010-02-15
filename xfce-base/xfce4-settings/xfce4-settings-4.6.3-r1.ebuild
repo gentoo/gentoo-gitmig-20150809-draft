@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.3-r1.ebuild,v 1.3 2010/02/15 12:19:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.3-r1.ebuild,v 1.4 2010/02/15 12:26:04 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -47,5 +47,6 @@ pkg_setup() {
 		$(use_enable debug)"
 	DOCS="AUTHORS ChangeLog NEWS TODO"
 	PATCHES=( "${FILESDIR}/${P}-exo.patch"
-		"${FILESDIR}/${P}-Xi.patch" )
+		"${FILESDIR}/${P}-Xi.patch"
+		"${FILESDIR}/${PN}-4.7.1-libxklavier.patch" )
 }
