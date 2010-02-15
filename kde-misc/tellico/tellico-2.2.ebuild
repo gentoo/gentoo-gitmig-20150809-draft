@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.1.1.ebuild,v 1.2 2010/02/10 19:28:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.2.ebuild,v 1.1 2010/02/15 07:34:43 ssuominen Exp $
 
 EAPI=2
-KDE_LINGUAS="bg ca cs da de el en_GB es et fi fr ga gl hu it lt ms nb nds nl nn
-pl pt pt_BR ro ru sk sv tr uk zh_CN zh_TW"
+KDE_LINGUAS="bg ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hu it lt ms nb nds nl nn pl"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 inherit kde4-base
 
@@ -30,20 +29,19 @@ DEPEND="dev-libs/libxml2
 	yaz? ( >=dev-libs/yaz-2 )
 	v4l? ( media-libs/libv4l )"
 
-DOCS="AUTHORS ChangeLog"
+DOCS="AUTHORS ChangeLog README"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		-DWITH_Kcal=OFF
-		$(cmake-utils_use_with addressbook Kabc)
-		$(cmake-utils_use_with addressbook Kcal)
-		$(cmake-utils_use_with cddb Kcddb)
-		$(cmake-utils_use_with pdf PopplerQt4)
-		$(cmake-utils_use_with scanner KSane)
-		$(cmake-utils_use_with taglib)
+	mycmakeargs+=(
+		$(cmake-utils_use_enable v4l WEBCAM)
 		$(cmake-utils_use_with xmp Exempi)
+		$(cmake-utils_use_with scanner KSane)
+		$(cmake-utils_use_with cddb Kcddb)
+		$(cmake-utils_use_with addressbook KdepimLibs)
+		$(cmake-utils_use_with pdf PopplerQt4)
+		$(cmake-utils_use_with taglib)
 		$(cmake-utils_use_with yaz)
-		$(cmake-utils_use_with v4l)"
+		)
 
 	kde4-base_src_configure
 }
