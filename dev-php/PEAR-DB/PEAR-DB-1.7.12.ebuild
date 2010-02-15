@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.7.12.ebuild,v 1.10 2008/01/10 10:06:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.7.12.ebuild,v 1.11 2010/02/15 01:29:29 beandog Exp $
 
 inherit php-pear-r1
 
@@ -11,5 +11,6 @@ LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
+DEPEND="|| ( <dev-php/PEAR-PEAR-1.71
+	dev-php/PEAR-Console_Getopt )"
 RDEPEND=""
