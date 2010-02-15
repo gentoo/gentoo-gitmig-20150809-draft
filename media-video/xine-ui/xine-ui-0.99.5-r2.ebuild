@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5-r2.ebuild,v 1.2 2008/10/15 12:01:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5-r2.ebuild,v 1.3 2010/02/15 22:28:19 hanno Exp $
 
 EAPI=2
 
@@ -47,6 +47,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-new_libcaca_api.patch"
+	epatch "${FILESDIR}/${P}-libpng14.patch"
 	AT_M4DIR="m4" eautoreconf
 
 	rm misc/xine-bugreport
