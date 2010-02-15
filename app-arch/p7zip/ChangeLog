@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.112 2010/02/15 21:10:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.113 2010/02/15 21:42:28 jlec Exp $
+
+*p7zip-9.04 (15 Feb 2010)
+
+  15 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/9.04-kde4.patch, +p7zip-9.04.ebuild, +files/9.04-makefile.patch:
+  Version Bump per 300838
 
 *p7zip-4.58-r1 (15 Feb 2010)
 *p7zip-4.65-r1 (15 Feb 2010)
