@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hyphen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.5 2010/01/24 18:48:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.6 2010/02/15 19:49:11 josejx Exp $
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> hyphen-2.4.ebuild:
+  Marked ppc/ppc64 stable.
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> hyphen-2.4.ebuild:
   Add ~sparc wrt #299937
