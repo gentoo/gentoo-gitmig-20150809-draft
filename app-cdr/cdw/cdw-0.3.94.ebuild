@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.3.94.ebuild,v 1.4 2010/01/27 20:13:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.3.94.ebuild,v 1.5 2010/02/16 15:30:09 beandog Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cdw/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 RESTRICT="test"  # testing code is broken
 
