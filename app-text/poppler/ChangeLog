@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.221 2010/02/16 13:59:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.222 2010/02/16 15:15:04 yngwin Exp $
+
+  16 Feb 2010; Ben de Groot <yngwin@gentoo.org> +poppler-0.12.3-r5.ebuild,
+  +files/poppler-0.12.3-cairo-downscale.patch:
+  Take 2 for cairo downscale patch from upstream, fixes bug 303817.
 
   16 Feb 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r3.ebuild,
   -poppler-0.12.3-r4.ebuild,
