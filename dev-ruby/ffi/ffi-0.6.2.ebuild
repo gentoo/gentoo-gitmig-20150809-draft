@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.1.ebuild,v 1.1 2010/02/15 13:55:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.2.ebuild,v 1.1 2010/02/16 11:01:26 flameeyes Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DESCRIPTION="Ruby extension for programmatically loading dynamic libraries"
 HOMEPAGE="http://wiki.github.com/ffi/ffi"
 
 SRC_URI="http://github.com/${PN}/${PN}/tarball/${PV} -> ${PN}-git-${PV}.tgz"
-S="${WORKDIR}/${PN}-${PN}-392fae5"
+S="${WORKDIR}/${PN}-${PN}-7abe057"
 
 IUSE=""
 LICENSE="BSD"
@@ -32,8 +32,13 @@ DEPEND="${RDEPEND}"
 
 ruby_add_bdepend dev-ruby/rake-compiler
 
+all_ruby_prepare() {
+	epatch "${FILESDIR}"/${P}-genRakefile.patch
+}
+
 each_ruby_compile() {
 	${RUBY} -S rake compile || die "compile failed"
+	${RUBY} -S rake -f gen/Rakefile || die "types.conf generation failed"
 }
 
 all_ruby_install() {
