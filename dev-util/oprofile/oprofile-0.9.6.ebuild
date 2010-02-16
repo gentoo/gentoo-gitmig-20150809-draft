@@ -1,23 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.4 2010/02/04 03:05:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.5 2010/02/16 16:45:29 ssuominen Exp $
 
 EAPI=1
-
-inherit qt3 linux-info
+inherit linux-info
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
 SRC_URI="mirror://sourceforge/oprofile/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc ~ppc64 ~sparc x86"
-IUSE="qt3"
+IUSE=""
+
 DEPEND=">=dev-libs/popt-1.7-r1
 	>=sys-devel/binutils-2.14.90.0.6-r3
-	>=sys-libs/glibc-2.3.2-r1
-	qt3? ( x11-libs/qt:3 )"
+	>=sys-libs/glibc-2.3.2-r1"
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -28,42 +27,26 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf=""
-
-	if use qt3
-	then
-		REALHOME="$HOME"
-		mkdir -p "$T"/fakehome/.kde
-		mkdir -p "$T"/fakehome/.qt
-		export HOME="$T/fakehome"
-		addwrite "${QTDIR}/etc/settings"
-
-		# things that should access the real homedir
-		[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
-	else
-		myconf="${myconf} --with-qt-dir=/void"
-	fi
-
-	myconf="${myconf} --with-x"
+	local myconf="--with-qt-dir=/void --with-x"
 
 	case ${KV_FULL} in
 	2.2.*|2.4.*) myconf="${myconf} --with-linux=${KV_DIR}";;
 	2.5.*|2.6.*) myconf="${myconf} --with-kernel-support";;
 	*) die "Kernel version '${KV_FULL}' not supported";;
 	esac
-	econf ${myconf} || die "econf failed"
+	econf ${myconf} || die
 
 	local mymake=""
 
 	sed -i -e "s,depmod -a,:,g" Makefile
-	emake ${mymake} || die "emake failed"
+	emake ${mymake} || die
 }
 
 src_install() {
 	local myinst=""
 
 	myinst="${myinst} MODINSTALLDIR=${D}/lib/modules/${KV_FULL}"
-	make DESTDIR="${D}" ${myinst} htmldir="/usr/share/doc/${PF}" install || die "make install failed"
+	make DESTDIR="${D}" ${myinst} htmldir="/usr/share/doc/${PF}" install || die
 
 	dodoc ChangeLog* README TODO
 }
