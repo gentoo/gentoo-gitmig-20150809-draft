@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.22 2009/01/12 23:09:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.23 2010/02/16 04:14:13 beandog Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -19,7 +19,9 @@ inherit multilib
 
 EXPORT_FUNCTIONS src_install
 
-DEPEND="dev-lang/php >=dev-php/PEAR-PEAR-1.6.1"
+DEPEND="dev-lang/php
+	|| ( ( >=dev-php/PEAR-PEAR-1.6.1 <dev-php/PEAR-PEAR-1.8.1 )
+		 >=dev-php/pear-1.8.1 )"
 RDEPEND="${DEPEND}"
 
 # @ECLASS-VARIABLE: PHP_PEAR_PKG_NAME
