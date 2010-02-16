@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.7 2008/09/26 18:42:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.8 2010/02/16 14:50:03 nyhm Exp $
 
 inherit eutils games
 
@@ -51,5 +51,4 @@ pkg_postinst() {
 		elog "Or, re-emerge quake3-teamarena with USE=cdinstall."
 		echo
 	fi
-	elog "There is currently no icon for Q3TA.  This will be resolved soon."
 }
