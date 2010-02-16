@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.106 2010/02/15 20:44:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.107 2010/02/16 16:58:14 darkside Exp $
+
+*gentoo-syntax-20100215 (16 Feb 2010)
+
+  16 Feb 2010; Jeremy Olexa <darkside@gentoo.org>
+  +gentoo-syntax-20100215.ebuild:
+  minor, minor bump to fix the EXPORT_FUNCTIONS highlighting and defaults to
+  EAPI=3
 
   15 Feb 2010; Joseph Jezak <josejx@gentoo.org>
   gentoo-syntax-20090720.ebuild:
