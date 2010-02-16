@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.2-r1.ebuild,v 1.1 2010/01/15 02:28:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3.ebuild,v 1.1 2010/02/16 17:03:32 ssuominen Exp $
 
 EAPI=2
-EAUTORECONF=yes
 inherit xfconf
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
@@ -37,5 +36,4 @@ pkg_setup() {
 		$(use_enable hal)
 		--disable-thunar-vfs"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	PATCHES=( "${FILESDIR}/${P}-exo.patch" )
 }
