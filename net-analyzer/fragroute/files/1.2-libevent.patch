@@ -1,0 +1,20 @@
+diff --git a/fragroute.c b/fragroute.c
+index dc07ce3..29d1007 100644
+--- a/fragroute.c
++++ b/fragroute.c
+@@ -148,7 +148,6 @@ static void
+ fragroute_signal(int sig)
+ {
+ 	warnx("exiting on signal %d", sig);
+-	event_gotsig++;
+ }
+ #endif
+ 
+@@ -178,7 +177,6 @@ fragroute_init(const char *dst)
+ 	pkt_init(128);
+ 	
+ 	event_init();
+-	event_sigcb = fragroute_close;
+ 	
+ 	if ((ctx.arp = arp_open()) == NULL ||
+ 	    (ctx.intf = intf_open()) == NULL ||

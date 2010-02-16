@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.16 2010/01/15 19:52:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.17 2010/02/16 21:00:15 jlec Exp $
+
+*fragroute-1.2-r1 (16 Feb 2010)
+
+  16 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/1.2-libevent.patch, +fragroute-1.2-r1.ebuild:
+  Fixed compilation agianst newer libevent, #295877
 
   15 Jan 2010; Ulrich Mueller <ulm@gentoo.org> fragroute-1.2.ebuild:
   LICENSE is identical with BSD, bug 301123.
