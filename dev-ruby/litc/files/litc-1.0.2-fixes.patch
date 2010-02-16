@@ -38,3 +38,34 @@ index 31392f3..910113c 100644
  task :default => :test
  
  require 'rake/rdoctask'
+diff --git a/lib/litc.rb b/lib/litc.rb
+index 19836db..e4ab9c9 100644
+--- a/lib/litc.rb
++++ b/lib/litc.rb
+@@ -39,7 +39,7 @@ module Litc
+   #   latest
+   API_VERSION = "latest"
+ 
+-  def urlize item
++  def self.urlize item
+     item = item.to_s.gsub(/_/, '-')
+     if item =~ /(placement).+/ or item =~ /(block-device-mapping).+/
+       item.gsub!(/(#{$1})-(.*)$/,'\\1/\\2')
+@@ -50,7 +50,7 @@ module Litc
+     item
+   end
+ 
+-  def get(item)
++  def self.get(item)
+     item = urlize(item)
+ 
+     if item != 'user-data'
+@@ -65,7 +65,7 @@ module Litc
+     end
+   end
+ 
+-  def method_missing(meth, *args, &block)
++  def self.method_missing(meth, *args, &block)
+     if ITEMS.include?(urlize(meth))
+       get(meth)
+     else
