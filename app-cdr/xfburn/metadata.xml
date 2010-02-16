@@ -11,6 +11,7 @@
   <upstream>
     <maintainer>
       <email>bugs@da.mcbf.net</email>
+      <name>David Mohr</name>
     </maintainer>
   </upstream>
   <use>
