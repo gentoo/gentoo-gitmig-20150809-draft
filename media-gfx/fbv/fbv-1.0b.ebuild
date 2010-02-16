@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.12 2009/01/03 13:39:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.13 2010/02/16 04:12:17 beandog Exp $
 
 inherit toolchain-funcs eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	myconf-"${myconf} --without-bmp"
+	myconf="${myconf} --without-bmp"
 	use png || myconf="${myconf} --without-libpng"
 	use gif || myconf="${myconf} --without-libungif"
 	use jpeg || myconf="${myconf} --without-libjpeg"

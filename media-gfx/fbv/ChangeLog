@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbv
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.16 2009/01/03 13:39:49 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.17 2010/02/16 04:12:17 beandog Exp $
+
+  16 Feb 2010; Steve Dibb <beandog@gentoo.org> fbv-1.0b.ebuild:
+  Fix typo, bug 305149
 
   03 Jan 2009; Christoph Mende <angelos@gentoo.org> -fbv-0.99.ebuild,
   fbv-1.0b.ebuild:
