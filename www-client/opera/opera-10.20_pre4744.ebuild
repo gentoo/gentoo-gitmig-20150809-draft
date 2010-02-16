@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.6 2010/01/28 21:52:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.7 2010/02/16 18:13:18 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.10"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 
 RESTRICT="mirror test"
 
@@ -32,7 +32,7 @@ QA_PRESTRIPPED_amd64="
 	opt/${PN}/lib/${PN}/${PV/_pre*}/operapluginwrapper-native
 "
 
-IUSE="elibc_FreeBSD gnome qt3 qt-static"
+IUSE="gnome qt-static"
 MY_LINGUAS="be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk zh-CN zh-HK zh-TW"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
@@ -45,20 +45,12 @@ O_P="${P/_pre/-}"
 SRC_URI="
 	amd64? (
 		qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
-		!qt-static? (
-			qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
-			!qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
-		)
+		!qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
 	)
-	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	x86? (
 		qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
-		!qt-static? (
-			qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
-			!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
-		)
+		!qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
 	)
-	x86-fbsd? ( ${O_U}intel-freebsd/${O_P}.freebsd7-shared-qt3.i386.tar.bz2 )
 	"
 
 DEPEND=">=sys-apps/sed-4"
@@ -79,18 +71,11 @@ RDEPEND="
 	x11-libs/libICE
 	amd64? (
 		qt-static? ( media-libs/nas )
-		!qt-static? (
-			qt3? ( =x11-libs/qt-3*[-immqt] )
-			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
-		)
+		!qt-static? ( x11-libs/qt-gui )
 	)
-	ppc? ( =x11-libs/qt-3*[-immqt] )
 	x86? (
 		qt-static? ( media-libs/nas )
-		!qt-static? (
-			qt3? ( =x11-libs/qt-3*[-immqt] )
-			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
-		)
+		!qt-static? ( x11-libs/qt-gui )
 	)
 	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
@@ -133,11 +118,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-freedesktop.patch"
 
 	# bug #181300:
-	if use elibc_FreeBSD; then
-		epatch "${FILESDIR}/${PN}-10.00-pluginpath-fbsd.patch"
-	else
-		epatch "${FILESDIR}/${PN}-10.00-pluginpath.patch"
-	fi
+	epatch "${FILESDIR}/${PN}-10.00-pluginpath.patch"
 
 	sed -e "s|config_dir=\"/etc\"|config_dir=\"${D}/etc/\"|g" \
 		-e "s|\(str_localdirplugin=\).*$|\1/opt/opera/lib/opera/plugins|" \
@@ -178,20 +159,6 @@ src_install() {
 	dodir /etc/revdep-rebuild
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > "${D}"/etc/revdep-rebuild/90opera
 
-	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
-	if use elibc_FreeBSD; then
-		scanelf -qR -N libz.so.3 -F "#N" "${D}"/opt/${PN}/ | \
-		while read i; do
-			if [[ $(strings "$i" | fgrep -c libz.so.3) -ne 1 ]];
-			then
-				export SANITY_CHECK_LIBZ_FAILED=1
-				break
-			fi
-			sed -i -e 's/libz\.so\.3/libz.so.1/g' "$i"
-		done
-		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
-	fi
-
 	# Add the Opera man dir to MANPATH:
 	insinto /etc/env.d
 	echo 'MANPATH="/opt/opera/share/man"' >> "${D}"/etc/env.d/90opera
@@ -206,12 +173,6 @@ pkg_postinst() {
 	elog "[General] tab, click on [Details...] then [Choose...] and point the"
 	elog "file chooser at /opt/opera/share/opera/locale/, then enter the"
 	elog "directory for the language you want and [Open] the .lng file."
-
-	if use elibc_FreeBSD; then
-		elog
-		elog "To improve shared memory usage please set:"
-		elog "$ sysctl kern.ipc.shm_allow_removed=1"
-	fi
 }
 
 pkg_postrm() {
