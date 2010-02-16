@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.71 2010/01/18 17:11:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.72 2010/02/16 07:49:35 abcd Exp $
+
+  16 Feb 2010; Jonathan Callen <abcd@gentoo.org> hoe-2.5.0.ebuild:
+  Add ~x64-macos for bug 305355
 
   18 Jan 2010; Brent Baude <ranger@gentoo.org> hoe-2.5.0.ebuild:
   Marking hoe-2.5.0 ~ppc64 for bug 297830
