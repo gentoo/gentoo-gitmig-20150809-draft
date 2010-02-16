@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.13.ebuild,v 1.1 2010/02/14 22:21:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.13.ebuild,v 1.2 2010/02/16 07:06:02 eva Exp $
 
 EAPI="2"
 
@@ -19,6 +19,8 @@ RDEPEND=">=dev-lang/perl-5.6"
 
 DEPEND="${RDEPEND}
 	!<dev-util/gtk-doc-1.13
+	app-text/docbook-xml-dtd:4.3
+	dev-libs/libxslt
 	>=dev-util/pkgconfig-0.19"
 
 S=${WORKDIR}/${MY_P}
