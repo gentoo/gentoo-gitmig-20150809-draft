@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r2.ebuild,v 1.3 2010/01/18 19:24:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r2.ebuild,v 1.4 2010/02/16 20:15:02 ssuominen Exp $
 
+EAPI=2
 inherit eutils multilib
 
 DESCRIPTION="Framework for biometric-based authentication"
@@ -11,35 +12,28 @@ SRC_URI="http://bioapi-linux.googlecode.com/files/${PN}_${PV}.tar.gz"
 LICENSE="bioapi"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="qt3"
-
-DEPEND="qt3? ( =x11-libs/qt-3* )"
+IUSE=""
 
 S=${WORKDIR}/bioapi-linux
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-enroll-ret.patch #236654
 	epatch "${FILESDIR}"/${P}-no-delete.patch
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
-src_compile() {
-	econf $(use_with qt3 Qt-dir /usr/qt/3) || die "./configure failed"
-	emake || die "emake failed"
+src_configure() {
+	econf \
+		--without-Qt-dir
 }
 
 src_install() {
-	emake SKIPCONFIG=true DESTDIR="${D}" install || die "install failed"
+	emake SKIPCONFIG=true DESTDIR="${D}" install || die
 	dodoc README
 	dohtml *.htm
 
 	# rename generic binaries
 	mv "${D}"/usr/bin/{,BioAPI}Sample || die
-	if use qt3 ; then
-		mv "${D}"/usr/bin/{,BioAPI}QSample || die
-	fi
 }
 
 pkg_config() {
@@ -47,7 +41,6 @@ pkg_config() {
 	mod_install -fi /usr/$(get_libdir)/libbioapi100.so
 	mod_install -fi /usr/$(get_libdir)/libbioapi_dummy100.so
 	mod_install -fi /usr/$(get_libdir)/libpwbsp.so
-	use qt3 && mod_install -fi /usr/$(get_libdir)/libqtpwbsp.so
 }
 
 pkg_preinst() {
@@ -61,7 +54,6 @@ pkg_preinst() {
 pkg_postinst() {
 	einfo "Some generic-named programs have been renamed:"
 	einfo "  Sample -> BioAPISample"
-	einfo "  QSample -> BioAPIQSample"
 
 	if [[ ${ROOT} == "/" ]] ; then
 		pkg_config
@@ -81,5 +73,4 @@ pkg_prerm() {
 	mod_install -fu libbioapi100.so
 	mod_install -fu libbioapi_dummy100.so
 	mod_install -fu libpwbsp.so
-	use qt3 && mod_install -fu libqtpwbsp.so
 }
