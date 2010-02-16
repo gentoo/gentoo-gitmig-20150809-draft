@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.0.ebuild,v 1.1 2010/02/16 09:31:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.0.ebuild,v 1.2 2010/02/16 10:07:05 eva Exp $
 
 EAPI=2
 inherit eutils libtool multilib
@@ -51,8 +51,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog CREDITS NEWS README || die
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog CREDITS NEWS README || die "dodoc failed"
 }
 
 pkg_preinst() {
