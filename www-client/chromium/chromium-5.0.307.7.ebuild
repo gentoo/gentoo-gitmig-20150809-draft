@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.7.ebuild,v 1.1 2010/02/11 19:56:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.7.ebuild,v 1.2 2010/02/16 12:21:55 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -55,6 +55,10 @@ pkg_setup() {
 		eerror "Please run chmod 1777 /dev/shm and try again."
 		die "/dev/shm has incorrect permissions"
 	fi
+
+	elog "${PN} might crash occasionally. To get more useful backtraces"
+	elog "and submit better bug reports, please read"
+	elog "http://www.gentoo.org/proj/en/qa/backtraces.xml"
 }
 
 src_prepare() {
