@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3896 2010/02/16 12:00:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3897 2010/02/16 14:01:00 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Feb 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Remove poppler mask as offending revision was removed
 
   16 Feb 2010; Dror Levin <spatz@gentoo.org> package.mask:
   Unmask Qt 4.6.2 after testing.

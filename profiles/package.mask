@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11219 2010/02/16 12:00:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11220 2010/02/16 14:01:00 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -60,11 +60,6 @@ dev-db/mysql-gui-tools
 # Mask pending removal on 2010-03-09. Upstream dead, open bug #227717,
 # alternatives exist (e.g. media-gfx/feh)
 x11-misc/bbrb
-
-# Ben de Groot <yngwin@gentoo.org> (09 Feb 2010)
-# Temporary mask until we work out the cairo image downscale patch,
-# which currently breaks apps
-=app-text/poppler-0.12.3-r4
 
 # Michał Januszewski <spock@gentoo.org> (08 Feb 2010)
 # Masked until there is an unmasked OpenCL implementation in the tree.
