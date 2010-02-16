@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.432 2010/02/06 12:49:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.433 2010/02/16 11:16:39 ssuominen Exp $
 
 # Keep them sorted
 
@@ -393,6 +393,7 @@ xinerama - Add support for the xinerama X11 extension, which allows you to stret
 xinetd - Add support for the xinetd super-server
 xml - Add support for XML files
 xmlrpc - Support for xml-rpc library
+xmp - Enable support for Extensible Metadata Platform (Adobe XMP)
 xosd - Sends display using the X On Screen Display library
 xpm - Adds support for XPM graphics format
 xscreensaver - Adds support for XScreenSaver extension
