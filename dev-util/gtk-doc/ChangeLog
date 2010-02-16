@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.115 2010/02/14 22:23:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.116 2010/02/16 20:06:54 mrpouet Exp $
+
+*gtk-doc-1.13-r1 (16 Feb 2010)
+
+  16 Feb 2010; Romain Perier <mrpouet@gentoo.org>
+  +gtk-doc-1.13-r1.ebuild,
+  +files/gtk-doc-1.13-fixxref-compat.patch,
+  +files/gtk-doc-1.13-scan-touch-module-overrides.patch:
+  Import two patches from upstream: touch MODULE-overrides.txt when missing
+  in gtkdoc-scan, be compatible with old versions of gtk-doc in fixxref. Per
+  bug #305191, thanks to Kacper Kowalik.
 
 *gtk-doc-1.13 (14 Feb 2010)
 
