@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5287 2010/02/16 11:27:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5288 2010/02/16 22:28:08 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1146,6 +1146,7 @@ games-puzzle/cuyo:music - Enable playing of background music
 games-puzzle/jag:editor - Install level editor
 games-puzzle/jag:extras - Install additional graphics
 games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the original Amiga version
+games-roguelike/angband:sound - Enable and install sounds
 games-rpg/drascula:audio - Install optional audio files
 games-rpg/eternal-lands-data:music - Install optional music files (extra 30 meg)
 games-rpg/eternal-lands-data:sound - Install optional sound files (extra 40 meg)
