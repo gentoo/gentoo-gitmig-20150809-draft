@@ -15,6 +15,5 @@
     <pkg>gnome-base/nautilus</pkg> by providing entries in its context menu
   </flag>
   <flag name="playlist">Add support for playlists</flag>
-  <flag name="xmp">Adds support for XMP metadata extraction</flag>
 </use>
 </pkgmetadata>
