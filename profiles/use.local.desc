@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5286 2010/02/15 21:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5287 2010/02/16 11:27:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -442,7 +442,6 @@ app-misc/tracker:kmail - Build kmail data miner
 app-misc/tracker:laptop - Make tracker power management aware
 app-misc/tracker:nautilus - Enable tracker to integrate with gnome-base/nautilus by providing entries in its context menu 
 app-misc/tracker:playlist - Add support for playlists
-app-misc/tracker:xmp - Adds support for XMP metadata extraction
 app-misc/worker:avfs - Enable support for sys-fs/avfs
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-mobilephone/gammu:irda - Enables infrared support
@@ -1195,7 +1194,6 @@ gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/nautilus:beagle - Enables support for searching using the Beagle (app-misc/beagle) desktop search tool
 gnome-base/nautilus:tracker - Enables support for searching using the Tracker (app-misc/tracker) search tool
-gnome-base/nautilus:xmp - Adds support for XMP metadata
 gnome-extra/avant-window-navigator:vala - Enables support for applets written in dev-lang/vala.
 gnome-extra/avant-window-navigator:xfce - Enables support for the XFCE 4 desktop environment
 gnome-extra/avant-window-navigator-extras:webkit - Enables support for net-libs/webkit-gtk.
@@ -1332,7 +1330,6 @@ kde-base/solid:wicd - Enable Wicd wired and wireless network manager.
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-misc/kdiff3:konqueror - Enable integration with konqueror
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
-kde-misc/tellico:xmp - Adds support for PDF/XMP metadata using media-libs/exempi
 mail-client/alpine:chappa - enhance alpine by appling Eduardo Chappa's patches
 mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with app-editors/pico and/or mail-client/pine
 mail-client/alpine:passfile - Adds support for caching passwords into a file between sessions
@@ -1494,11 +1491,9 @@ media-gfx/digikam:lensfun - Enable support for lens-correnction library
 media-gfx/digikam:thumbnails - Allow thumbnail previews for images/photos
 media-gfx/enblend:gpu - GPU support for Enblend
 media-gfx/enblend:image-cache - allow for processing of large images
-media-gfx/eog:xmp - Adds support for XMP metadata
 media-gfx/exact-image:agg - Adds Anti-Grain Geometry supportx11-libs/agg
 media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
 media-gfx/exiv2:contrib -  Build additional contrib components 
-media-gfx/exiv2:xmp -  Adds support for Adobe XMP 
 media-gfx/f-spot:beagle - Enable app-misc/beagle support for searches
 media-gfx/f-spot:flickr - Enable building of the Flickr exported.
 media-gfx/fontforge:cjk - Controls whether fontforge understands the gb12345 encoding and installs cidmap package to edit CID-keyed fonts
@@ -1510,7 +1505,6 @@ media-gfx/fontforge:type3 - Build in support for type3/svg fonts containing mult
 media-gfx/fotowall:webcam - Enable webcam support
 media-gfx/freewrl:libeai - Build EAI C library
 media-gfx/freewrl:spidermonkey - Use spidermonkey instead of Firefox
-media-gfx/geeqie:xmp - Adds support for XMP metadata
 media-gfx/gimp:smp -  Enable support for multiprocessors 
 media-gfx/gimp:webkit -  Enable the webkit rendering engine 
 media-gfx/graphicsmagick:fpx - Enable FlashPix support
