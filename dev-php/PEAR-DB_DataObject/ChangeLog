@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.37 2010/01/05 05:36:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.38 2010/02/16 04:30:09 beandog Exp $
+
+*PEAR-DB_DataObject-1.9.3 (16 Feb 2010)
+
+  16 Feb 2010; Steve Dibb <beandog@gentoo.org>
+  +PEAR-DB_DataObject-1.9.3.ebuild:
+  Version bump
 
 *PEAR-DB_DataObject-1.9.0 (05 Jan 2010)
 

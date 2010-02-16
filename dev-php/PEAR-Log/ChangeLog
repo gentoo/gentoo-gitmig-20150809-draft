@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.84 2010/01/05 05:10:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.85 2010/02/16 04:46:33 beandog Exp $
+
+*PEAR-Log-1.12.0 (16 Feb 2010)
+
+  16 Feb 2010; Steve Dibb <beandog@gentoo.org> +PEAR-Log-1.12.0.ebuild:
+  Version bump
 
 *PEAR-Log-1.11.6 (05 Jan 2010)
 
