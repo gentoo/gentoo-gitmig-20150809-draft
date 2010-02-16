@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.68 2010/02/13 21:16:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.69 2010/02/16 01:32:40 nerdboy Exp $
+
+  16 Feb 2010; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.6-r1.ebuild,
+  rapidsvn-0.9.8.ebuild, rapidsvn-0.10.0.ebuild, rapidsvn-0.12.0.ebuild:
+  Removed legacy code, moved checks to pkg_setup, and removed addpredict 
+  in 4 latest ebuild versions. Closes bug #305325.
 
 *rapidsvn-0.12.0 (13 Feb 2010)
 

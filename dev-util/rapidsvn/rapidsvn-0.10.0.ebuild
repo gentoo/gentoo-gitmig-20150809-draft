@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.10.0.ebuild,v 1.1 2009/10/12 07:29:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.10.0.ebuild,v 1.2 2010/02/16 01:32:40 nerdboy Exp $
 
 EAPI="2"
+
 WANT_AUTOCONF="2.5"
-inherit versionator eutils libtool autotools wxwidgets flag-o-matic fdo-mime
+WX_GTK_VER=2.8
+inherit versionator confutils libtool autotools wxwidgets flag-o-matic fdo-mime
 
 MY_PV=$(get_version_component_range 1-2)
 MY_RELEASE="1"
@@ -20,7 +22,7 @@ IUSE="doc"
 COMMON_DEP="|| ( >=dev-util/subversion-1.5.0[webdav-serf]
 		>=dev-util/subversion-1.5.0[webdav-neon]
 	)
-	>=x11-libs/wxGTK-2.6
+	x11-libs/wxGTK:2.8[X]
 	>=dev-libs/apr-1.2.10
 	>=dev-libs/apr-util-1.2.10"
 
@@ -33,6 +35,20 @@ DEPEND="${COMMON_DEP}
 RDEPEND="${COMMON_DEP}"
 
 RESTRICT=""
+
+pkg_setup() {
+	einfo "Checking for subversion compiled with WebDAV support..."
+	confutils_require_built_with_any \
+		dev-util/subversion webdav-serf webdav-neon
+	einfo "Found WebDAV support; continuing..."
+
+	# if you compiled subversion without (the) apache2 (flag) and with the
+	# berkdb flag, you may get an error that it can't find the lib db4
+	# Note: this should be fixed in rapidsvn 0.9.3 and later
+
+	# check for the proper wxGTK support
+	need-wxwidgets unicode
+}
 
 src_prepare() {
 	# Apparently we still need the --as-needed link patch...
@@ -57,11 +73,6 @@ src_configure() {
 		    --without-doxygen --without-dot"
 	fi
 
-	local INST_WX=$(best_version x11-libs/wxGTK)
-	export WX_GTK_VER=$(get_version_component_range 1-2 \
-		        ${INST_WX/x11-libs\/wxGTK})
-
-	need-wxwidgets ansi
 	myconf="${myconf} --with-wx-config=${WX_CONFIG}"
 
 	append-flags $( /usr/bin/apr${apr_suffix}-config --cppflags )
@@ -74,11 +85,7 @@ src_configure() {
 }
 
 src_compile() {
-	## doxygen made a sandbox error; no bug filed yet
-	if use doc; then
-		addpredict /var/cache/fontconfig
-		emake  || die "emake failed"
-	fi
+	emake  || die "emake failed"
 }
 
 src_install() {
