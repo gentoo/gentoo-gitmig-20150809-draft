@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.5 2010/02/16 00:49:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.6 2010/02/16 01:00:31 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils wxwidgets games
@@ -30,11 +30,6 @@ DEPEND="${RDEPEND}
 	dev-util/ftjam"
 
 S=${WORKDIR}/${PN}-source-${PV}
-
-pkg_setup() {
-	games_pkg_setup
-	wxwidgets_pkg_setup
-}
 
 src_prepare() {
 	epatch \
