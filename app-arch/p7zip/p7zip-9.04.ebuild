@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.1 2010/02/15 21:42:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.2 2010/02/16 08:19:27 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -45,7 +45,7 @@ src_prepare() {
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
 		-e "s:OPTFLAGS=-O:OPTFLAGS=${CXXFLAGS}:" \
-		-e 's:-s ::' \
+		-e '/ALLFLAGS/s:-s ::' \
 		makefile* || die "changing makefiles"
 
 	if use amd64; then
