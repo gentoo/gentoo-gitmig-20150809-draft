@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.1 2010/02/16 20:45:27 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.2 2010/02/16 20:54:35 ssuominen Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ RDEPEND=">=x11-libs/gtk+-2.6.0
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
-	  dev-util/pkgconfig
+	dev-util/pkgconfig
 	doc? ( dev-libs/libxslt )"
 
 DOCS="AUTHORS ChangeLog KNOWN_BUGS MAINTAINERS NEWS README RELEASE-PROCESS THANKS TODO"
