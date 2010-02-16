@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.97 2010/02/15 20:57:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.98 2010/02/16 16:35:14 jer Exp $
+
+  16 Feb 2010; Jeroen Roovers <jer@gentoo.org> jpeg-8.ebuild:
+  Stable for HPPA (bug #304827).
 
   15 Feb 2010; Joseph Jezak <josejx@gentoo.org> jpeg-8.ebuild:
   Marked ppc64 stable for bug #304827.
