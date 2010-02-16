@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.19 2010/02/12 18:53:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.20 2010/02/16 18:16:33 jer Exp $
 
 # Joseph Jezak <josejx@gentoo.org (12 Feb 2010)
 # Masking MOL due to breakage, but leaving it in the tree in case anyone 
@@ -291,9 +291,6 @@ app-emulation/mol
 ~kde-base/systemsettings-4.4.0
 ~kde-base/thumbnailers-4.4.0
 ~kde-base/umbrello-4.4.0
-# Jeroen Roovers <jer@gentoo.org> (23 Jan 2010)
-# Needs x11-libs/qt:3 (bug #283430)
-www-client/opera
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing
