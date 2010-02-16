@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1240.ebuild,v 1.1 2010/02/05 20:36:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1240.ebuild,v 1.2 2010/02/16 17:52:11 tommy Exp $
 
 EAPI="2"
 DATE=20100204
@@ -41,7 +41,7 @@ EANT_BUILD_TARGET="dist"
 EANT_GENTOO_CLASSPATH="ant-core db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
 
 pkg_setup() {
-	has_version dev-java/icedtea && built_with_use dev-java/icedtea cacao && {
+	has_version dev-java/icedtea[cacao] && {
 		ewarn "dev-java/icedtea was built with cacao USE flag."
 		ewarn "freenet may compile with it, but it will refuse to run."
 		ewarn "Please remerge dev-java/icedtea without cacao USE flag,"
@@ -62,6 +62,7 @@ src_prepare() {
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath
+	java-pkg-2_src_prepare
 }
 
 src_install() {
