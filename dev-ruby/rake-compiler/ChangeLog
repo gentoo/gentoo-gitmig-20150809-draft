@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.9 2010/01/30 18:31:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.10 2010/02/16 07:51:54 abcd Exp $
+
+  16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  rake-compiler-0.7.0-r1.ebuild:
+  Add ~x86-linux/~x64-macos/~x86-macos for bug 305355
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> rake-compiler-0.7.0.ebuild:
   Add ~sparc
