@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.74 2010/02/15 15:11:49 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.75 2010/02/16 06:51:24 abcd Exp $
+
+  16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  -files/qt-4.6.1-nolibx11.patch:
+  Actually remove old patch
 
 *qt-sql-4.6.2 (15 Feb 2010)
 
