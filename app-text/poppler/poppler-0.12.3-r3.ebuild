@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r3.ebuild,v 1.12 2010/02/11 00:30:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r3.ebuild,v 1.13 2010/02/16 13:59:18 yngwin Exp $
 
 EAPI="2"
 
@@ -36,6 +36,8 @@ RDEPEND="${COMMON_DEPEND}
 	!dev-libs/poppler-qt4
 	!app-text/poppler-utils
 	cjk? ( >=app-text/poppler-data-0.2.1 )"
+
+DOCS="AUTHORS ChangeLog NEWS README README-XPDF TODO"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cmake-disable-tests.patch
