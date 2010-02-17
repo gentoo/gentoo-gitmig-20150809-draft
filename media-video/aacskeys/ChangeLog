@@ -1,0 +1,11 @@
+# ChangeLog for media-video/aacskeys
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.1 2010/02/17 01:48:49 beandog Exp $
+
+*aacskeys-0.4.0c (17 Feb 2010)
+
+  17 Feb 2010; Steve Dibb <beandog@gentoo.org> +aacskeys-0.4.0c.ebuild,
+  +files/aacskeys-0.4.0c-aacskeys-makefile.patch,
+  +files/aacskeys-0.4.0c-libaacskeys-makefile.patch, +metadata.xml:
+  Initial commit
+
