@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.42.04-r1.ebuild,v 1.2 2010/02/17 01:36:56 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.43.ebuild,v 1.1 2010/02/17 06:03:31 williamh Exp $
 
 EAPI="3"
 
@@ -35,14 +35,7 @@ get_audio() {
 }
 
 pkg_setup() {
-	if ! use portaudio && ! use pulseaudio; then
-		echo
-		ewarn "Since portaudio and pulseaudio are not in your use flags,"
-		ewarn "espeak will only be able to create wav files."
-		ewarn "If this is not what you want, please reemerge ${CATEGORY}/${PN}"
-		ewarn "with either portaudio or pulseaudio USE flag enabled."
-		echo
-	elif use portaudio && use pulseaudio; then
+	if use portaudio && use pulseaudio; then
 		die "You must choose either portaudio or pulseaudio, but not both."
 	fi
 }
@@ -75,4 +68,13 @@ src_install() {
 	doins -r dictsource
 	dodoc ChangeLog ReadMe
 	dohtml -r docs/*
+}
+
+pkg_postinst() {
+	if ! use portaudio && ! use pulseaudio; then
+		ewarn "Since portaudio and pulseaudio are not in your use flags,"
+		ewarn "espeak will only be able to create wav files."
+		ewarn "If this is not what you want, please reemerge ${CATEGORY}/${PN}"
+		ewarn "with either portaudio or pulseaudio USE flag enabled."
+	fi
 }
