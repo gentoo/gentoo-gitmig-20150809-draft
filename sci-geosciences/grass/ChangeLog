@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.75 2010/02/03 20:56:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.76 2010/02/17 16:48:21 scarabeus Exp $
+
+  17 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  grass-6.4.0_rc5.ebuild, +files/grass-6.4.0-html-nonviz.patch:
+  Slightly update grass ebuild. Synced with sci overlay + whitespace
+  cleanup.
 
   03 Feb 2010; Markos Chandras <hwoarang@gentoo.org> grass-6.3.0.ebuild:
   Stable on amd64 wrt bug #250850

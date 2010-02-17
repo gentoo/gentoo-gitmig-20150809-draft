@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc5.ebuild,v 1.1 2009/12/28 07:22:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc5.ebuild,v 1.2 2010/02/17 16:48:21 scarabeus Exp $
 
 EAPI="2"
 
@@ -19,8 +19,8 @@ LICENSE="GPL-2"
 SLOT="6"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="ffmpeg fftw gmath jpeg largefile motif mysql nls odbc opengl png \
-postgres python readline sqlite tiff truetype wxwindows X"
+IUSE="X ffmpeg fftw gmath jpeg largefile motif mysql nls odbc opengl png
+	postgres python readline sqlite tiff truetype wxwindows"
 
 RESTRICT="strip"
 
@@ -28,23 +28,28 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.3
 	>=sys-libs/gdbm-1.8.0
 	|| (
-	    sys-apps/man
-	    sys-apps/man-db )
+		sys-apps/man
+		sys-apps/man-db
+	)
 	sci-libs/gdal
 	>=sci-libs/proj-4.4.7
 	ffmpeg? ( media-video/ffmpeg )
 	fftw? ( sci-libs/fftw )
-	gmath? ( virtual/blas
-	    virtual/lapack )
+	gmath? (
+		virtual/blas
+		virtual/lapack
+	)
 	jpeg? ( media-libs/jpeg )
 	mysql? ( dev-db/mysql )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	opengl? ( virtual/opengl )
 	motif? ( x11-libs/openmotif )
 	png? ( >=media-libs/libpng-1.2.2 )
-	postgres? ( || (
-		>=virtual/postgresql-base-8.0
-		>=virtual/postgresql-server-8.0 )
+	postgres? (
+		|| (
+			>=virtual/postgresql-base-8.0
+			>=virtual/postgresql-server-8.0
+		)
 	)
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
@@ -118,7 +123,7 @@ src_prepare() {
 	    || die "sed failed"
 
 	if ! use opengl; then
-	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
+	    epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
 	fi
 
 	# patch missing math functions (yes, this is still needed)
@@ -141,49 +146,49 @@ src_configure() {
 		--without-glw"
 
 	if use X; then
-	    if has_version ">=dev-lang/tcl-8.5"; then
-		TCL_LIBDIR="/usr/$(get_libdir)/tcl8.5"
-	    else
-		TCL_LIBDIR="/usr/$(get_libdir)/tcl8.4"
-	    fi
-	    myconf="${myconf} --with-tcltk --with-x \
-	        --with-tcltk-includes=/usr/include \
+		if has_version ">=dev-lang/tcl-8.5"; then
+			TCL_LIBDIR="/usr/$(get_libdir)/tcl8.5"
+		else
+			TCL_LIBDIR="/usr/$(get_libdir)/tcl8.4"
+		fi
+		myconf+=" --with-tcltk --with-x \
+			--with-tcltk-includes=/usr/include \
 		--with-tcltk-libs=${TCL_LIBDIR}"
 	    if use wxwindows; then
-		WX_GTK_VER=2.8
-		need-wxwidgets unicode
-		myconf="${myconf} --with-python --with-wxwidgets=${WX_CONFIG}"
+			WX_GTK_VER=2.8
+			need-wxwidgets unicode
+			myconf+=" --with-python --with-wxwidgets=${WX_CONFIG}"
 	    else
-		# USE=python must be enabled above if wxwindows is enabled
-		myconf="${myconf} $(use_with python) --without-wxwidgets"
+			# USE=python must be enabled above if wxwindows is enabled
+			myconf+=" $(use_with python) --without-wxwidgets"
 	    fi
 	else
-		myconf="${myconf} --without-tcltk --without-x"
+		myconf+=" --without-tcltk --without-x"
 	fi
 
 	if use opengl; then
-	    myconf="${myconf} --with-opengl --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib"
+		myconf+=" --with-opengl --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib"
 	else
-	    myconf="${myconf} --without-opengl"
+		myconf+=" --without-opengl"
 	fi
 
 	if use truetype; then
-		myconf="${myconf} --with-freetype \
-		    --with-freetype-includes=/usr/include/freetype2"
+		myconf+=" --with-freetype
+			--with-freetype-includes=/usr/include/freetype2"
 	fi
 
 	if use mysql; then
-		myconf="${myconf} --with-mysql --with-mysql-includes=/usr/include/mysql \
-		    --with-mysql-libs=/usr/$(get_libdir)/mysql"
+		myconf+=" --with-mysql --with-mysql-includes=/usr/include/mysql
+			--with-mysql-libs=/usr/$(get_libdir)/mysql"
 	else
-		myconf="${myconf} --without-mysql"
+		myconf+=" --without-mysql"
 	fi
 
 	if use sqlite; then
-		myconf="${myconf} --with-sqlite --with-sqlite-includes=/usr/include \
-		    --with-sqlite-libs=/usr/$(get_libdir)"
+		myconf+=" --with-sqlite --with-sqlite-includes=/usr/include
+			--with-sqlite-libs=/usr/$(get_libdir)"
 	else
-		myconf="${myconf} --without-sqlite"
+		myconf+=" --without-sqlite"
 	fi
 
 	# Old ffmpeg is gone, but new is a pita with all those include dirs,
@@ -191,22 +196,22 @@ src_configure() {
 	if use ffmpeg; then
 	    ffmlib_conf="--with-ffmpeg --with-ffmpeg-libs=/usr/$(get_libdir)"
 	else
-		myconf="${myconf} --without-ffmpeg"
+		myconf+=" --without-ffmpeg"
 	fi
 
-	myconf="${myconf} --with-libs=/usr/$(get_libdir) \
-		$(use_enable amd64 64bit) \
-		$(use_with fftw) \
-		$(use_with gmath blas) \
-		$(use_with gmath lapack) \
-		$(use_with jpeg) \
-		$(use_enable largefile) \
-		$(use_with motif) \
-		$(use_with nls) \
-		$(use_with odbc) \
-		$(use_with png) \
-		$(use_with postgres) \
-		$(use_with readline) \
+	myconf+=" --with-libs=/usr/$(get_libdir)
+		$(use_enable amd64 64bit)
+		$(use_with fftw)
+		$(use_with gmath blas)
+		$(use_with gmath lapack)
+		$(use_with jpeg)
+		$(use_enable largefile)
+		$(use_with motif)
+		$(use_with nls)
+		$(use_with odbc)
+		$(use_with png)
+		$(use_with postgres)
+		$(use_with readline)
 		$(use_with tiff)"
 
 	if use ffmpeg; then
@@ -239,12 +244,12 @@ src_install() {
 	mv "${D}"usr/bin/gem "${D}"usr/${MY_PM}/bin/
 
 	ebegin "Adding env.d and desktop entry for Grass6..."
-	    generate_files
-	    doenvd 99grass-6
-	    if use X; then
+	generate_files
+	doenvd 99grass-6
+	if use X; then
 		doicon "${FILESDIR}"/grass_icon.png
 		domenu ${MY_PM}-grass.desktop
-	    fi
+	fi
 	eend ${?}
 }
 
