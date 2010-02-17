@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.12 2010/02/15 16:52:47 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.13 2010/02/17 23:00:20 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -66,6 +66,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=sys-devel/gettext-0.14
 	>=dev-util/pkgconfig-0.20
+	dev-util/gtk-doc-am
+	>=dev-util/gtk-doc-1.8
 	applet? (
 		dev-lang/vala
 		>=dev-libs/libgee-0.3 )
@@ -73,7 +75,6 @@ DEPEND="${RDEPEND}
 		dev-lang/vala
 		>=dev-libs/libgee-0.3 )
 	doc? (
-		>=dev-util/gtk-doc-1.8
 		media-gfx/graphviz )"
 #	test? ( gcov )
 
