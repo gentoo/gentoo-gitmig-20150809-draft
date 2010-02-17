@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.33 2010/02/17 20:15:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.34 2010/02/17 20:48:20 jer Exp $
+
+  17 Feb 2010; Jeroen Roovers <jer@gentoo.org> gsasl-0.2.4.ebuild,
+  gsasl-0.2.29.ebuild, gsasl-1.1.ebuild, gsasl-1.4.1.ebuild:
+  Switch to new style virtuals (bug #237400).
 
 *gsasl-1.4.1 (17 Feb 2010)
 
