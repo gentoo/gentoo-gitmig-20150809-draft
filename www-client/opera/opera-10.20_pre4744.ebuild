@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.7 2010/02/16 18:13:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.20_pre4744.ebuild,v 1.8 2010/02/17 06:18:18 jer Exp $
 
 EAPI="2"
 
@@ -77,7 +77,6 @@ RDEPEND="
 		qt-static? ( media-libs/nas )
 		!qt-static? ( x11-libs/qt-gui )
 	)
-	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
 
 opera_linguas() {
