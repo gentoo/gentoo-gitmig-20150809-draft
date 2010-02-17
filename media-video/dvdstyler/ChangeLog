@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.39 2009/10/14 07:16:49 dragonheart Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.40 2010/02/17 05:51:05 dirtyepic Exp $
+
+  17 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> dvdstyler-1.7.4.ebuild:
+  Fix wxsvg dependency to account for the removal of the ffmpeg USE flag in
+  later versions.
 
 *dvdstyler-1.7.4 (14 Oct 2009)
 

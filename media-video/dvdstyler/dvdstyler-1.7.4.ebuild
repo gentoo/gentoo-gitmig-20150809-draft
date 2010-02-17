@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.7.4.ebuild,v 1.1 2009/10/14 07:16:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.7.4.ebuild,v 1.2 2010/02/17 05:51:05 dirtyepic Exp $
 
 EAPI=2
 inherit autotools wxwidgets eutils
@@ -18,8 +18,8 @@ IUSE="debug gnome"
 
 COMMON_DEPEND=">=media-video/ffmpeg-0.5[encode]
 	>=media-video/xine-ui-0.99.1
-	x11-libs/wxGTK:2.8
-	>=media-libs/wxsvg-1[ffmpeg]
+	x11-libs/wxGTK:2.8[X]
+	|| ( >=media-libs/wxsvg-1.0.2 >=media-libs/wxsvg-1[ffmpeg] )
 	>=media-libs/libexif-0.6.16
 	gnome? ( >=gnome-base/libgnomeui-2 )"
 RDEPEND="${COMMON_DEPEND}
