@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.1.ebuild,v 1.3 2010/02/17 20:15:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.4.1.ebuild,v 1.1 2010/02/17 20:15:31 jer Exp $
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
 # 	optional external libraries.
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "einstall failed"
-	dodoc AUTHORS ChangeLog NEWS README README-alpha THANKS
+	dodoc AUTHORS ChangeLog NEWS README THANKS
 	doman doc/gsasl.1
 
 	if use doc; then
