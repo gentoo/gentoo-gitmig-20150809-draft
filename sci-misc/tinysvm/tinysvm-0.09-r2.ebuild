@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/tinysvm-0.09-r2.ebuild,v 1.1 2008/11/03 01:20:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/tinysvm-0.09-r2.ebuild,v 1.2 2010/02/17 21:30:06 jlec Exp $
 
-inherit eutils perl-module toolchain-funcs
+inherit eutils perl-module toolchain-funcs autotools
 
 MY_P="TinySVM-${PV}"
 DESCRIPTION="TinySVM is an implementation of Support Vector Machines (SVMs) for
@@ -12,7 +12,7 @@ SRC_URI="http://chasen.org/~taku/software/TinySVM/src/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 #IUSE="java perl python ruby"
 IUSE="perl"
 
@@ -23,6 +23,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PF}-pm.patch"
 	ln -s . src/TinySVM
+
+	epatch ${FILESDIR}/${P}-darwin.patch
+	eautoreconf # need new libtool on Darwin
 }
 
 src_compile() {
