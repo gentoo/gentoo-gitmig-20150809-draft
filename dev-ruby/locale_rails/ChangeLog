@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale_rails
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.14 2010/02/11 14:27:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.15 2010/02/17 20:19:21 maekke Exp $
+
+  17 Feb 2010; Markus Meier <maekke@gentoo.org> locale_rails-2.0.5.ebuild:
+  amd64 stable, bug #302042
 
   11 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   locale_rails-2.0.5.ebuild:
