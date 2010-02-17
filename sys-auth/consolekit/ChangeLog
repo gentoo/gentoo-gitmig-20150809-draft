@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.60 2010/02/16 17:25:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.61 2010/02/17 22:38:53 eva Exp $
+
+  17 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  consolekit-0.4.1.ebuild:
+  Raise dbus-glib dependency, bug #298924.
 
   16 Feb 2010; Joseph Jezak <josejx@gentoo.org> consolekit-0.4.1.ebuild:
   Marked ~ppc/~ppc64 for bug #296548.
