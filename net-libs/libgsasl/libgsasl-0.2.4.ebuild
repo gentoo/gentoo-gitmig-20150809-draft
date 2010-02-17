@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-0.2.4.ebuild,v 1.13 2009/09/23 18:48:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-0.2.4.ebuild,v 1.14 2010/02/17 20:47:44 jer Exp $
 
 DESCRIPTION="The GNU SASL library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -11,12 +11,10 @@ SLOT="0"
 # 	optional external libraries.
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="kerberos nls static idn"
-PROVIDE="virtual/gsasl"
 DEPEND="nls? ( sys-devel/gettext )
 	kerberos? ( virtual/krb5 )
 	idn? ( net-dns/libidn )"
-RDEPEND="${DEPEND}
-	!virtual/gsasl"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
@@ -28,6 +26,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "installation failed"
-	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README README-alpha THANKS
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README README-alpha THANKS
 }
