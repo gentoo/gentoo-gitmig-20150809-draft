@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim-lcd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.22 2010/02/10 04:35:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.23 2010/02/17 22:19:21 maekke Exp $
+
+  17 Feb 2010; Markus Meier <maekke@gentoo.org> gpsim-lcd-0.2.10.ebuild:
+  amd64/x86 stable, bug #302502
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> gpsim-lcd-0.2.10.ebuild:
   Marked ppc64 stable and ~ppc for bug #302502.
