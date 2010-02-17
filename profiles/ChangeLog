@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3905 2010/02/17 16:17:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3906 2010/02/17 18:12:49 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  mask libdrm and nouveau-drm for bug #305595
 
   17 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask dev-util/aegis for removal.
