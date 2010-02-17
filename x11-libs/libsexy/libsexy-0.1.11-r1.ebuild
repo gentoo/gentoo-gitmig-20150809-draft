@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r1.ebuild,v 1.4 2010/02/17 12:55:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r1.ebuild,v 1.5 2010/02/17 12:57:34 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -39,7 +39,7 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable doc gtk-doc) \
-		--with-html-dir=/usr/share/doc/${PF}
+		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
 src_install() {
