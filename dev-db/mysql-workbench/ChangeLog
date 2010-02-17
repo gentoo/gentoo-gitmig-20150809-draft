@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.2 2010/02/13 11:49:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.3 2010/02/17 17:12:16 graaff Exp $
+
+  17 Feb 2010; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.15.ebuild:
+  lua must be compiled with the deprecated USE flag, fixes #304541.
 
   13 Feb 2010; Hans de Graaff <graaff@gentoo.org>
   mysql-workbench-5.2.15.ebuild:
