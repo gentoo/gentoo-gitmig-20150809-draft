@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.12 2010/02/17 21:22:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e-r1.ebuild,v 1.1 2010/02/17 21:22:21 jlec Exp $
+
+EAPI="3"
 
 IUSE=""
 
@@ -12,11 +14,11 @@ HOMEPAGE="http://www.earth.ox.ac.uk/~keithr/moldy.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~x86-linux ~ppc-macos"
 
 DEPEND="virtual/latex-base"
 
-src_compile() {
+src_configure() {
 #Individuals may want to edit the OPT* variables below.
 #From the READ.ME:
 #You may need to  "hand-tune" compiler or optimization options,
@@ -29,10 +31,12 @@ src_compile() {
 #and may be set to a lower level of optimization than OPT2.
 
 	OPT=${CFLAGS} OPT2=${CFLAGS} \
-	./configure --prefix=/usr \
+	./configure --prefix="${EPREFIX}"/usr \
 		--host=${CHOST} \
 		|| die
+}
 
+src_compile() {
 	emake || die
 	# To prevent sandbox violations by metafont
 	VARTEXFONTS="${T}"/fonts make moldy.pdf || die
@@ -40,7 +44,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin
-	make prefix="${D}"/usr install || die
+	make prefix="${ED}"/usr install || die
 	rm Makefile.in configure.in config.h.in
 	insinto /usr/share/${PN}/examples/
 	doins *.in *.out control.*

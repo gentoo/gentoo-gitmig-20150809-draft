@@ -1,8 +1,11 @@
 # ChangeLog for sci-chemistry/moldy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.16 2010/02/17 21:15:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.17 2010/02/17 21:22:21 jlec Exp $
 
-  17 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> moldy-2.16e.ebuild:
+*moldy-2.16e-r1 (17 Feb 2010)
+
+  17 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> moldy-2.16e.ebuild,
+  +moldy-2.16e-r1.ebuild:
   import prefix changes from the overlay, moved to EAPI=3
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> moldy-2.16e.ebuild:
