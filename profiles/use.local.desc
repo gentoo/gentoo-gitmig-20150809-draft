@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5288 2010/02/16 22:28:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5289 2010/02/17 15:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1411,17 +1411,6 @@ mail-filter/opendkim:opendbx - Use opendbx backend to faciliate dataset driven O
 mail-filter/opendkim:unbound - Use the unbound dnssec libary to perform DKIM DNS queries.
 mail-filter/postgrey:targrey - Enables the targrey patch
 mail-filter/qmail-scanner:spamassassin - Build faster mail-filter/spamassassin checks into qmail-scanner
-mail-filter/simscan:attachment - Enable attachment scanning
-mail-filter/simscan:custom-smtp-reject - Return smtp reject message with virus name
-mail-filter/simscan:dropmsg - Drop message in case of virus/spam
-mail-filter/simscan:passthru - Passthru message in case of virus/spam
-mail-filter/simscan:per-domain - Enable support for per-domain settings
-mail-filter/simscan:quarantine - Enable quarantine support
-mail-filter/simscan:received - Add Received: line to mail headers
-mail-filter/simscan:regex - Enable regular expression matching
-mail-filter/simscan:spam-auth-user - Turn on spam scanning for authenticated users
-mail-filter/simscan:spamassassin - Use mail-filter/spamassassin for spam checking
-mail-filter/simscan:spamc-user - Set user option to spamc
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
 mail-filter/spamassassin:tools - Enables tools for spamassassin
 mail-filter/spamassassin-fuzzyocr:amavis - Enable support for mail-filter/amavisd-new
