@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.331 2010/02/17 02:20:35 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.332 2010/02/17 02:22:43 reavertm Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -53,13 +53,13 @@ ebeep() {
 
 else
 
-	ebeep() {
-		eqawarn "QA Notice: ebeep is not defined in EAPI=3, please file a bug at http://bugs.gentoo.org"
-	}
+ebeep() {
+	eqawarn "QA Notice: ebeep is not defined in EAPI=3, please file a bug at http://bugs.gentoo.org"
+}
 
-	epause() {
-		eqawarn "QA Notice: epause is not defined in EAPI=3, please file a bug at http://bugs.gentoo.org"
-	}
+epause() {
+	eqawarn "QA Notice: epause is not defined in EAPI=3, please file a bug at http://bugs.gentoo.org"
+}
 
 fi
 
