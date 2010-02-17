@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ruby-activeldap-1.2.1.ebuild,v 1.2 2010/01/16 05:55:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ruby-activeldap-1.2.1.ebuild,v 1.3 2010/02/17 20:22:00 maekke Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://rubygems/${MY_P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE=""
 USE_RUBY="ruby18"
 
