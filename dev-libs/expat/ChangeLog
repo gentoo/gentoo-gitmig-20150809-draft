@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/expat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.89 2009/08/25 16:24:47 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.90 2010/02/17 12:01:23 ssuominen Exp $
+
+*expat-2.0.1-r3 (17 Feb 2010)
+
+  17 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +expat-2.0.1-r3.ebuild, +files/expat-2.0.1-CVE-2009-3560-revised.patch:
+  Revision bump for security #303727 (CVE-2009-3560).
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org> expat-2.0.1-r2.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #280615
