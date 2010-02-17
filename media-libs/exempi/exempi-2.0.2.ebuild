@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.0.2.ebuild,v 1.16 2009/05/11 16:02:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.0.2.ebuild,v 1.17 2010/02/17 08:29:58 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -18,6 +18,9 @@ RDEPEND="dev-libs/expat
 	virtual/libiconv"
 DEPEND="${RDEPEND}
 	test? ( >=dev-libs/boost-1.33 )"
+
+# Unrestricted again in 2.1.1. Known to fail.
+RESTRICT="test"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
