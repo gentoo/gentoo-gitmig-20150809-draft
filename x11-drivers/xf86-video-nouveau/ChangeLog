@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.1 2010/02/15 21:38:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.2 2010/02/17 21:41:45 chithanh Exp $
+
+  17 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-nouveau-0.0.15_pre20100213.ebuild:
+  add kernel version check for bug #305595
 
 *xf86-video-nouveau-0.0.15_pre20100213 (15 Feb 2010)
 

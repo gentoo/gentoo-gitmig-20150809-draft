@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.15_pre20100213.ebuild,v 1.1 2010/02/15 21:38:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.15_pre20100213.ebuild,v 1.2 2010/02/17 21:41:45 chithanh Exp $
 
 EAPI=2
 SNAPSHOT="yes"
@@ -32,6 +32,11 @@ pkg_postinst() {
 			ewarn "Nouveau DRM not detected. If you want any kind of"
 			ewarn "acceleration with nouveau, emerge x11-base/nouveau-drm or"
 			ewarn "enable CONFIG_DRM_NOUVEAU in the kernel."
+		fi
+		if kernel_is 2 6 33 && has_version ">=x11-libs/libdrm-2.4.18"; then
+			ewarn "Nouveau DRM in kernel 2.6.33 is API incompatible to"
+			ewarn ">=x11-libs/libdrm-2.4.18, please use x11-base/nouveau-drm"
+			ewarn "or x11-libs/libdrm-2.4.18_pre20100211 instead."
 		fi
 	fi
 	if ! has_version x11-drivers/nouveau-firmware; then
