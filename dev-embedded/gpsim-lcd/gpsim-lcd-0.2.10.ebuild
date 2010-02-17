@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.2.10.ebuild,v 1.3 2010/02/17 22:19:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.2.10.ebuild,v 1.4 2010/02/17 22:27:05 ssuominen Exp $
 
 EAPI=2
 MY_P=${PN/gpsim-}-${PV}
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
 
-RDEPEND=">=dev-embedded/gpsim-0.22.0[gtk]
+RDEPEND=">=dev-embedded/gpsim-0.22.0
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}"
 
