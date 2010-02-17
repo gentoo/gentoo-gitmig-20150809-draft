@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpgf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.2 2009/12/29 19:19:52 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.3 2010/02/17 07:57:33 ssuominen Exp $
+
+  17 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libpgf-6.09.44-r1.ebuild:
+  amd64 stable wrt #305153
 
 *libpgf-6.09.44-r1 (29 Dec 2009)
 

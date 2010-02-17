@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/libpgf-6.09.44-r1.ebuild,v 1.1 2009/12/29 19:19:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/libpgf-6.09.44-r1.ebuild,v 1.2 2010/02/17 07:57:33 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=""
