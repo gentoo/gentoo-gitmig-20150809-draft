@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.64 2010/02/15 16:34:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.65 2010/02/17 23:32:24 wired Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -17,6 +17,7 @@ inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 MY_PV=${PV/_/-}
 if version_is_at_least 4.5.99999999; then
 	MY_P=qt-everywhere-opensource-src-${MY_PV}
+	[[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]] && IUSE="+exceptions"
 else
 	MY_P=qt-x11-opensource-src-${MY_PV}
 fi
@@ -25,7 +26,7 @@ HOMEPAGE="http://qt.nokia.com/"
 SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
-IUSE="debug pch aqua"
+IUSE+=" debug pch aqua"
 
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
@@ -38,6 +39,8 @@ RDEPEND="
 	!>x11-libs/qt-demo-${PV}-r9999
 	!<x11-libs/qt-gui-${PV}
 	!>x11-libs/qt-gui-${PV}-r9999
+	!<x11-libs/qt-multimedia-${PV}
+	!>x11-libs/qt-multimedia-${PV}-r9999
 	!<x11-libs/qt-opengl-${PV}
 	!>x11-libs/qt-opengl-${PV}-r9999
 	!<x11-libs/qt-phonon-${PV}
@@ -407,24 +410,15 @@ standard_configure_options() {
 		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
 	esac
 
-	# 4.6: build qt-core with exceptions or qt-xmlpatterns won't build
-	local exceptions=
+	# 4.5: build everything but qt-xmlpatterns w/o exceptions
+	# 4.6: exceptions USE flag
+	local exceptions="-exceptions"
 	case "${PV}" in
-		4.6.*)
-			if [[ ${PN} != "qt-core" ]] && [[ ${PN} != "qt-xmlpatterns" ]]; then
-				case "${PV}:${CHOST}" in
-					4.6.0*:*-darwin*)
-					: # http://bugreports.qt.nokia.com/browse/QTBUG-5909
-					  # workaround for compilation error on OSX (qt-gui)
-					;;
-					*)
-						exceptions="-no-exceptions"
-					;;
-				esac
-			fi
+		4.5.*)
+			[[ ${PN} == "qt-xmlpatterns" ]] || exceptions="-no-exceptions"
 		;;
 		*)
-			[[ ${PN} == "qt-xmlpatterns" ]] || exceptions="-no-exceptions"
+			has exceptions "${IUSE//+}" && exceptions="$(qt_use exceptions)"
 		;;
 	esac
 
