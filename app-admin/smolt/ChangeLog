@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/smolt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.4 2009/10/02 20:09:32 sping Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.5 2010/02/17 00:53:03 sping Exp $
+
+*smolt-1.4.2 (17 Feb 2010)
+
+  17 Feb 2010; Sebastian Pipping <sping@gentoo.org> +smolt-1.4.2.ebuild:
+  Trivial-bump to 1.4.2
 
 *smolt-1.4 (02 Oct 2009)
 
