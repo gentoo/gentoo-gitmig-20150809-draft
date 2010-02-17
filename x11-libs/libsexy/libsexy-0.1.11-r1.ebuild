@@ -1,33 +1,48 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r1.ebuild,v 1.3 2010/01/15 21:40:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r1.ebuild,v 1.4 2010/02/17 12:55:40 ssuominen Exp $
 
-EAPI="2"
-
-inherit gnome2 eutils
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="Sexy GTK+ Widgets"
 HOMEPAGE="http://www.chipx86.com/wiki/Libsexy"
 SRC_URI="http://releases.chipx86.com/${PN}/${PN}/${P}.tar.bz2"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc"
 
-RDEPEND=">=dev-libs/glib-2.6
-		 >=x11-libs/gtk+-2.6
-		   dev-libs/libxml2
-		 >=x11-libs/pango-1.4.0
-		 >=app-text/iso-codes-0.49"
+RDEPEND=">=dev-libs/glib-2.6:2
+	>=x11-libs/gtk+-2.6:2
+	dev-libs/libxml2
+	>=x11-libs/pango-1.4.0
+	>=app-text/iso-codes-0.49"
 DEPEND="${RDEPEND}
-		>=dev-lang/perl-5
-		>=dev-util/pkgconfig-0.19
-		doc? ( >=dev-util/gtk-doc-1.4 )"
-
-DOCS="AUTHORS ChangeLog NEWS README"
+	>=dev-lang/perl-5
+	>=dev-util/pkgconfig-0.19
+	dev-util/gtk-doc-am
+	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-null-list.patch
-	gnome2_src_prepare
+
+	sed -i \
+		-e 's:noinst_PROGRAMS:check_PROGRAMS:' \
+		tests/Makefile.am || die
+
+	eautoreconf
+}
+
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable doc gtk-doc) \
+		--with-html-dir=/usr/share/doc/${PF}
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS
 }
