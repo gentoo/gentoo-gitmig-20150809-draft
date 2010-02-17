@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5289 2010/02/17 15:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5290 2010/02/17 16:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1875,7 +1875,6 @@ media-video/arista:faac - Use external faac library for AAC encoding
 media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support
 media-video/avidemux:amr - Enable Adaptive Multi-Rate format support through media-libs/opencore-amr
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
-media-video/cinepaint:gutenprint - Enable support for gutenprint
 media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?
 media-video/clive:password - Support password controlled sites
