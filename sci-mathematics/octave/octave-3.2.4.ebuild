@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4.ebuild,v 1.2 2010/02/12 03:20:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4.ebuild,v 1.3 2010/02/17 04:38:38 bicatali Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common
@@ -61,7 +61,7 @@ src_prepare() {
 }
 
 src_configure() {
-	use fltk || export FLTK_CONFIG=""
+	use fltk || export FLTK_CONFIG="no"
 	econf \
 		--localstatedir=/var/state/octave \
 		--enable-shared \

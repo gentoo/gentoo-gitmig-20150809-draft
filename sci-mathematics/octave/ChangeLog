@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.83 2010/02/12 03:20:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.84 2010/02/17 04:38:38 bicatali Exp $
+
+  17 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> octave-3.2.4.ebuild:
+  Modified fltk automagic to no instead of empty string
 
   12 Feb 2010; Markus Dittrich <markusle@gentoo.org> octave-3.2.4.ebuild:
   If hdf5 is compiled against MPI we need to use the mpi wrappers to compile 
