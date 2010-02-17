@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.34 2010/01/21 19:45:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.35 2010/02/17 15:11:24 tove Exp $
+
+*Parse-RecDescent-1.964 (17 Feb 2010)
+
+  17 Feb 2010; Torsten Veller <tove@gentoo.org>
+  +Parse-RecDescent-1.964.ebuild:
+  Version bump
 
 *Parse-RecDescent-1.963 (21 Jan 2010)
 
