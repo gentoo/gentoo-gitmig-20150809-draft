@@ -1,0 +1,51 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.initd,v 1.1 2010/02/17 12:28:25 voyageur Exp $
+
+opts="reload"
+
+depend() {
+	need net
+	use logger dns mysql postgresql antivirus
+}
+
+check_configuration() {
+	if [ ! -e /etc/proftpd/proftpd.conf ] ; then
+		eerror "To execute the ProFTPD server you need a /etc/proftpd/proftpd.conf configuration"
+		eerror "file. In /etc/proftpd you can find a sample configuration."
+		return 1
+	fi
+	ebegin "Checking ProFTPD configuration"
+	/usr/sbin/proftpd -t
+	eend $? "A configuration error was found. You have to fix your configuration file."
+}
+
+start() {
+	[ -d /var/run/proftpd ] || mkdir /var/run/proftpd
+	[ "${RC_CMD}" = "restart" ] || check_configuration || return 1
+	ebegin "Starting ProFTPD"
+	start-stop-daemon --start --quiet \
+		--exec /usr/sbin/proftpd \
+		--pidfile /var/run/proftpd/proftpd.pid
+	eend $?
+}
+
+stop() {
+	[ "${RC_CMD}" != "restart" ] || check_configuration || return 1
+	ebegin "Stopping ProFTPD"
+	start-stop-daemon --stop --quiet --retry 20 \
+		--pidfile /var/run/proftpd/proftpd.pid
+	eend $?
+}
+
+reload() {
+	if [ ! -f /var/run/proftpd/proftpd.pid ] ; then
+		eerror "ProFTPD is not running."
+		return 1
+	fi
+	check_configuration || return 1
+	ebegin "Reloading ProFTPD"
+	kill -HUP `cat /var/run/proftpd/proftpd.pid` &>/dev/null
+	eend $?
+}
