@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.1.1.ebuild,v 1.1 2010/02/17 08:29:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.1.1.ebuild,v 1.2 2010/02/17 08:45:54 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,20 +11,21 @@ SRC_URI="http://libopenraw.freedesktop.org/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="examples test"
 
 RDEPEND="dev-libs/expat
 	virtual/libiconv
-	sys-libs/zlib"
+	sys-libs/zlib
+	virtual/libiconv"
 DEPEND="${RDEPEND}
 	test? ( >=dev-libs/boost-1.37 )"
 
 src_prepare() {
-	if use test; then
-		epatch "${FILESDIR}/${PN}-1.99.9-boost.m4.BOOST_FIND_LIB.patch"
-		eautoreconf
-	fi
+	epatch "${FILESDIR}"/${PN}-1.99.9-boost.m4.BOOST_FIND_LIB.patch \
+		"${FILESDIR}"/${P}-iconv.patch
+	touch config.rpath
+	eautoreconf
 }
 
 src_configure() {
