@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cssc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.15 2010/02/03 09:02:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.16 2010/02/17 21:16:54 jer Exp $
+
+  17 Feb 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintain.
 
   03 Feb 2010; Fabian Groffen <grobian@gentoo.org> cssc-1.0.1.ebuild:
   Marked ~x86-macos and ~ppc-macos, 1.2.0 is masked due to compilation
