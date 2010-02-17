@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.11.1.ebuild,v 1.3 2010/02/15 02:12:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.11.1.ebuild,v 1.4 2010/02/17 07:21:45 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -76,7 +76,7 @@ pkg_postinst() {
 			[[ ! -e ${cfg} ]] && break
 			((i++))
 		done
-		einfo "Updating ${f}; please run 'etc-update'"
+		elog "Updating ${f}; please run 'etc-update'"
 		mv "${f}.conf" "${cfg}"
 		mv "${f}" "${f}.conf"
 	done
