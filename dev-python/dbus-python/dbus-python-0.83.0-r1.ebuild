@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0-r1.ebuild,v 1.15 2010/01/20 00:11:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0-r1.ebuild,v 1.16 2010/02/17 22:48:13 eva Exp $
 
 EAPI="2"
 PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
@@ -41,7 +41,7 @@ src_configure() {
 
 	configuration() {
 		econf \
-			--docdir="${EPREFIX}"/usr/share/doc/dbus-python-${PV} \
+			--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 			$(use_enable doc api-docs)
 	}
 	python_execute_function -s configuration
@@ -65,6 +65,8 @@ src_install() {
 		insinto /usr/share/doc/${PF}/
 		doins -r examples || die
 	fi
+
+	find "${D}" -name "*.la" -delete || die "removing *.la files failed"
 }
 
 pkg_postinst() {
