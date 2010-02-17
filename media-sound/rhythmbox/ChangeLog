@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.170 2010/01/11 14:29:33 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.171 2010/02/17 22:58:40 eva Exp $
+
+  17 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/rhythmbox-0.11.5-libmtp-0.3.0-API.patch,
+  -rhythmbox-0.11.6-r1.ebuild, rhythmbox-0.12.5-r2.ebuild,
+  rhythmbox-0.12.6.ebuild:
+  Add libsoup-gnome dependency, it is needed at build time, bug #302670.
+  Raise gnome-doc-utils dependency to an appropriate version, bug #303515.
 
   11 Jan 2010; Romain Perier <mrpouet@gentoo.org> rhythmbox-0.12.6.ebuild:
   Drop seamonkey dep necessary for seamonkey p.mask removal, and drop
