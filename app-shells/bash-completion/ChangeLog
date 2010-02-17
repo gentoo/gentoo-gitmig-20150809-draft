@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.211 2010/01/13 19:56:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.212 2010/02/17 16:16:40 mduft Exp $
+
+  17 Feb 2010; Markus Duft <mduft@gentoo.org> bash-completion-1.1-r5.ebuild:
+  added ~x86-interix keyword
 
   13 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   bash-completion-1.1-r5.ebuild:
