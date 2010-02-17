@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.3.5.ebuild,v 1.2 2010/02/17 21:35:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.3.5-r1.ebuild,v 1.1 2010/02/17 21:35:11 ssuominen Exp $
 
 EAPI="2"
 
@@ -28,6 +28,8 @@ KMEXTRA="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.3.1-darwin-compile-powermanager.patch
+	"${FILESDIR}/${PN}-4.3.4-hal.patch"
+	"${FILESDIR}/${PN}-4.3.4-hal-2.patch"
 )
 
 src_configure() {
