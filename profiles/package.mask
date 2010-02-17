@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11231 2010/02/17 21:14:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11232 2010/02/17 22:42:51 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,11 +34,6 @@
 # Samuli Suominen <ssuominen@gentoo.org> (17 Feb 2010)
 # Masked for testing.
 >=dev-util/intltool-0.41.0
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (17 Feb 2010)
-# Mask libdrm and nouveau drm because of incompatible API changes (#305595)
->=x11-libs/libdrm-2.4.18
->=x11-base/nouveau-drm-20100216
 
 # Samuli Suominen <ssuominen@gentoo.org> (17 Feb 2010)
 # Doesn't compile with stable libc (#295980)
@@ -112,11 +107,6 @@ net-im/kopete-facebook
 # Upstream changes tarball regularly and do not permit mirroring
 # I am trying to find a solution with upstream #305007
 sci-chemistry/tinker
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (15 February 2010)
-# Mask prerelease libdrm snapshot and depending xf86-video-nouveau
-=x11-libs/libdrm-2.4.18_pre*
-=x11-drivers/xf86-video-nouveau-0.0.15_pre*
 
 # Sven Wegener <swegener@gentoo.org> (14 Feb 2010)
 # Masked for removal in 30 days. Discontinued by upstream.
