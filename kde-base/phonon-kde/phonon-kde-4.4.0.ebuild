@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.4.0.ebuild,v 1.1 2010/02/09 00:19:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.4.0.ebuild,v 1.2 2010/02/17 19:12:03 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="alsa debug +xine"
 DEPEND="
 	>=media-sound/phonon-4.3.80[xine?]
 	alsa? ( media-libs/alsa-lib )
+	!=media-sound/phonon-4.4_pre*
 "
 RDEPEND="${DEPEND}"
 
