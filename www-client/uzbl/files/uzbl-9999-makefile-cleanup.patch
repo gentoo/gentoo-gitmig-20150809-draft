@@ -1,5 +1,5 @@
---- Makefile.orig	2010-01-27 17:28:15.809737445 +0200
-+++ Makefile	2010-01-27 17:28:12.985756931 +0200
+--- Makefile.old	2010-02-17 09:13:50.139343494 +0200
++++ Makefile	2010-02-17 09:15:03.711341985 +0200
 @@ -1,7 +1,7 @@
  # first entries are for gnu make, 2nd for BSD make.  see http://lists.uzbl.org/pipermail/uzbl-dev-uzbl.org/2009-July/000177.html
  
@@ -10,17 +10,7 @@
  
  LDFLAGS:=$(shell pkg-config --libs gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0) -pthread $(LDFLAGS)
  LDFLAGS!=echo `pkg-config --libs gtk+-2.0 webkit-1.0 libsoup-2.4 gthread-2.0` -pthread $(LDFLAGS)
-@@ -34,9 +34,6 @@
- 	@echo LINKING object files
- 	@${CC} -o $@ ${OBJ} ${LDFLAGS}
- 	@echo ... done.
--	@echo Stripping binary
--	@strip $@
--	@echo ... done.
- 
- 
- uzbl-browser: uzbl-core
-@@ -96,14 +93,10 @@
+@@ -100,14 +100,10 @@
  
  install-uzbl-core: all
  	install -d $(INSTALLDIR)/bin
