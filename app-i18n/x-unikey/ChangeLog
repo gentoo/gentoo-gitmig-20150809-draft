@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/x-unikey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/ChangeLog,v 1.21 2009/08/10 11:49:41 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/ChangeLog,v 1.22 2010/02/17 21:12:05 maekke Exp $
+
+  17 Feb 2010; Markus Meier <maekke@gentoo.org> x-unikey-1.0.4-r1.ebuild:
+  x86 stable, bug #302497
 
   10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   x-unikey-1.0.4-r1.ebuild, +files/x-unikey-1.0.4-gcc44.patch:

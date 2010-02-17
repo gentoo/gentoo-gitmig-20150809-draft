@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r1.ebuild,v 1.2 2009/08/10 11:49:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r1.ebuild,v 1.3 2010/02/17 21:12:05 maekke Exp $
 
 inherit autotools eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/unikey/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls gtk"
 
 RDEPEND="x11-libs/libX11
