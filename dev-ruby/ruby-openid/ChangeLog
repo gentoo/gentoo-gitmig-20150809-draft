@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.10 2010/01/24 12:45:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.11 2010/02/17 20:16:12 maekke Exp $
+
+  17 Feb 2010; Markus Meier <maekke@gentoo.org> ruby-openid-2.1.7.ebuild:
+  amd64/x86 stable, bug #302060
 
   24 Jan 2010; Hans de Graaff <graaff@gentoo.org> -ruby-openid-2.1.4.ebuild,
   -ruby-openid-2.1.6.ebuild:
