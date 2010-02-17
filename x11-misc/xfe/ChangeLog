@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.55 2010/02/08 11:49:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.56 2010/02/17 15:27:03 ssuominen Exp $
+
+  17 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> xfe-1.32.1.ebuild,
+  +files/xfe-1.32.1-inline.patch:
+  Fix building wrt #305093 by Tom Gillespie.
 
 *xfe-1.32.1 (08 Feb 2010)
 

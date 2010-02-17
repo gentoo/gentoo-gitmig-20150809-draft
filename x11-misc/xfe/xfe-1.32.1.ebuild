@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.1.ebuild,v 1.1 2010/02/08 11:49:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.1.ebuild,v 1.2 2010/02/17 15:27:03 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="MS-Explorer-like minimalist file manager for X"
 HOMEPAGE="http://roland65.free.fr/xfe"
@@ -19,6 +20,10 @@ RDEPEND="x11-libs/libX11
 	startup-notification? ( x11-libs/startup-notification )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-inline.patch
+}
 
 src_configure() {
 	econf \
