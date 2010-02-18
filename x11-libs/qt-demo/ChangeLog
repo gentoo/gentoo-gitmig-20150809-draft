@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.43 2010/02/15 15:09:21 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.44 2010/02/18 00:08:14 wired Exp $
+
+  18 Feb 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added exceptions USE flag description
 
 *qt-demo-4.6.2 (15 Feb 2010)
 
