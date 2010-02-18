@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/musca
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.11 2009/12/27 18:51:23 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.12 2010/02/18 05:41:24 jer Exp $
+
+  18 Feb 2010; Jeroen Roovers <jer@gentoo.org> musca-0.9.24.ebuild:
+  restore_config has its own USE check.
 
   27 Dec 2009; Jeroen Roovers <jer@gentoo.org>
   files/musca-0.9.24-make.patch:

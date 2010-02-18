@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24.ebuild,v 1.5 2009/11/30 23:46:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24.ebuild,v 1.6 2010/02/18 05:41:24 jer Exp $
 
 EAPI="2"
 
@@ -31,13 +31,12 @@ src_prepare() {
 		use ${i} || sed -e "s|${i}||g" -i Makefile
 	done
 
-	use savedconfig && restore_config config.h
+	restore_config config.h
 }
 
 src_compile() {
-	use savedconfig && msg=", please check the saved config file"
 	tc-export CC
-	emake || die "emake failed${msg}"
+	emake || die "emake failed"
 }
 
 src_install() {
