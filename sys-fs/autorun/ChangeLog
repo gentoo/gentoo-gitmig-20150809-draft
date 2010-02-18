@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/autorun
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/ChangeLog,v 1.5 2009/12/28 16:01:28 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/ChangeLog,v 1.6 2010/02/18 22:20:24 ssuominen Exp $
+
+  18 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> autorun-3.17.ebuild:
+  Missing intltool depend wrt #276255.
 
   28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> autorun-3.17.ebuild:
   Stop using deprecated kde-functions.eclass.
