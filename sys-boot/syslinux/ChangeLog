@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.51 2010/02/18 17:40:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.52 2010/02/18 18:27:52 jer Exp $
+
+  18 Feb 2010; Jeroen Roovers <jer@gentoo.org> syslinux-3.84.ebuild:
+  Switch to IUSE=custom-cflags (bug #305783).
 
   18 Feb 2010; Jeroen Roovers <jer@gentoo.org> syslinux-3.84.ebuild:
   Respect CFLAGS, LDFLAGS, CC.

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.84.ebuild,v 1.2 2010/02/18 17:40:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.84.ebuild,v 1.3 2010/02/18 18:27:52 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
+IUSE="custom-cflags"
 
 RDEPEND="sys-fs/mtools
 		dev-perl/Crypt-PasswdMD5
@@ -34,16 +34,18 @@ src_unpack() {
 
 	rm -f gethostip #bug 137081
 
-	sed -i \
-		extlinux/Makefile \
-		linux/Makefile \
-		mtools/Makefile \
-		sample/Makefile \
-		utils/Makefile \
-		-e '/^LDFLAGS/d' \
-		-e 's|-Os||g' \
-		-e 's|CFLAGS[[:space:]]\+=|CFLAGS +=|g' \
-		|| die "sed failed"
+	local SYSLINUX_MAKEFILES="extlinux/Makefile linux/Makefile mtools/Makefile \
+		sample/Makefile utils/Makefile"
+	sed -i ${SYSLINUX_MAKEFILES} -e '/^LDFLAGS/d' || die "sed failed"
+
+	if use custom-cflags; then
+		sed -i ${SYSLINUX_MAKEFILES} \
+			-e 's|-g -Os||g' \
+			-e 's|-Os||g' \
+			-e 's|CFLAGS[[:space:]]\+=|CFLAGS +=|g' \
+			|| die "sed custom-cflags failed"
+	fi
+
 }
 
 src_compile() {
