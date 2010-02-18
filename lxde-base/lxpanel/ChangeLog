@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.15 2010/01/24 18:35:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.16 2010/02/18 02:06:44 yngwin Exp $
+
+*lxpanel-0.5.5 (18 Feb 2010)
+
+  18 Feb 2010; Ben de Groot <yngwin@gentoo.org> +lxpanel-0.5.5.ebuild:
+  Version bump
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> lxpanel-0.5.4.1.ebuild:
   Add ~arm
