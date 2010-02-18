@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.222 2010/02/16 15:15:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.223 2010/02/18 01:41:25 yngwin Exp $
+
+*poppler-0.12.4 (18 Feb 2010)
+
+  18 Feb 2010; Ben de Groot <yngwin@gentoo.org> +poppler-0.12.4.ebuild,
+  +files/poppler-0.12.4-config.patch:
+  Version bump
 
   16 Feb 2010; Ben de Groot <yngwin@gentoo.org> +poppler-0.12.3-r5.ebuild,
   +files/poppler-0.12.3-cairo-downscale.patch:
