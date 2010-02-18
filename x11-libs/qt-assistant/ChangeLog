@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.71 2010/02/16 06:49:26 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.72 2010/02/18 00:06:53 wired Exp $
+
+  18 Feb 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added exceptions USE flag description
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   -files/qt-assistant-4.6.0_rc1-tools.patch:
