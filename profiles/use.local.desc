@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5292 2010/02/18 00:27:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5293 2010/02/18 22:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -707,6 +707,7 @@ dev-java/fop:hyphenation - Precompile hyphenation patterns from the dev-java/off
 dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
 dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
+dev-java/glazedlists:java5 - Builds a Java 1.5 version (recommended)
 dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/gnu-classpath:gconf - Enable the GConf based util.peers backend
 dev-java/gnu-classpath:gjdoc - Build GNU Classpath's javadoc implementation. Formerly dev-java/gjdoc, now part of gnu-classpath upstream.
