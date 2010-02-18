@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3908 2010/02/17 22:42:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3909 2010/02/18 15:08:17 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> package.mask:
+  sci-chemistry/tinker unmasked because bug 305007 is fixed
 
   17 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
