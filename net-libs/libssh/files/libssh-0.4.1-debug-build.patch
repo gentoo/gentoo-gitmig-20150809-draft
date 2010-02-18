@@ -1,5 +1,6 @@
 Author: Arttu Valo
 http://bugs.gentoo.org/show_bug.cgi?id=304301
+http://dev.libssh.org/ticket/58
 
 --- libssh/kex.c	2010-02-10 19:09:22.000000000 +0200
 +++ libssh/kex.c	2010-02-10 19:09:39.000000000 +0200
