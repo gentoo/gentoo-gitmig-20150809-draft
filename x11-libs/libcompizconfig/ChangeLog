@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libcompizconfig
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.21 2009/12/20 17:53:55 mrpouet Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.22 2010/02/18 21:55:27 ssuominen Exp $
+
+  18 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libcompizconfig-0.8.4.ebuild:
+  Raise intltool depend to 0.41.0 wrt #295819, thanks to Diego E. Pettenò
+  for reporting.
 
   20 Dec 2009; Romain Perier <mrpouet@gentoo.org>
   -libcompizconfig-0.6.0.ebuild, -libcompizconfig-0.8.2.ebuild:
