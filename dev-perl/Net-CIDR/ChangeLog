@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CIDR
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.23 2010/02/04 20:53:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.24 2010/02/18 20:31:45 darkside Exp $
+
+  18 Feb 2010; Jeremy Olexa <darkside@gentoo.org> Net-CIDR-0.13.ebuild:
+  Add ~arm kw for bug 305631
 
   04 Feb 2010; Torsten Veller <tove@gentoo.org> Net-CIDR-0.13.ebuild:
   Fix LICENSE (#301969). Maintenance

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-DES
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.25 2010/01/09 18:27:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.26 2010/02/18 20:31:33 darkside Exp $
+
+  18 Feb 2010; Jeremy Olexa <darkside@gentoo.org> Crypt-DES-2.05.ebuild:
+  Add ~arm kw for bug 305631
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Crypt-DES-2.05.ebuild:
   Transfer Prefix keywords
