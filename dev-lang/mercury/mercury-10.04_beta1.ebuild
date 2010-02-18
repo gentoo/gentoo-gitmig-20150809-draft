@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04_beta1.ebuild,v 1.4 2010/02/15 18:30:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04_beta1.ebuild,v 1.5 2010/02/18 08:33:30 keri Exp $
 
 inherit elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -64,8 +64,7 @@ src_compile() {
 		$(use_enable debug debug-grades) \
 		$(use_enable threads par-grades) \
 		$(use_enable !minimal most-grades) \
-		$(use_with readline) \
-		PACKAGE_VERSION=${PV}"
+		$(use_with readline)"
 
 	econf \
 		${myconf} \
@@ -83,7 +82,7 @@ src_test() {
 	cd "${TESTDIR}"
 	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws
 
-	PATH="${TWS}"/scripts:"${TWS}"/util:"${PATH}" \
+	PATH="${TWS}"/scripts:"${TWS}"/util:"${TWS}"/slice:"${PATH}" \
 	TERM="" \
 	WORKSPACE="${TWS}" \
 	MERCURY_COMPILER="${TWS}"/compiler/mercury_compile \
