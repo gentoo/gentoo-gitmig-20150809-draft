@@ -1,6 +1,11 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.7 2010/01/11 11:06:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.8 2010/02/18 22:29:55 darkside Exp $
+
+  18 Feb 2010; Jeremy Olexa <darkside@gentoo.org> libusb-0.ebuild,
+  libusb-1.ebuild:
+  Add ~x86-macos keywords because dev-libs/libusb was tested in the prefix
+  overlay
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> libusb-0.ebuild,
   libusb-1.ebuild:
