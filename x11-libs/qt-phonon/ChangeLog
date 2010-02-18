@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.65 2010/02/15 15:10:53 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.66 2010/02/18 00:09:49 wired Exp $
+
+  18 Feb 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added exceptions USE flag description
 
 *qt-phonon-4.6.2 (15 Feb 2010)
 
