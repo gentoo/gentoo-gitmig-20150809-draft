@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3.ebuild,v 1.1 2010/02/18 13:52:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3.ebuild,v 1.2 2010/02/18 13:56:18 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils toolchain-funcs
+inherit eutils
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
@@ -37,9 +37,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.2.3-autoconf-update.patch \
-		"${FILESDIR}"/${PN}-1.2.3-k3b.patch
-	eautoreconf
+	epatch "${FILESDIR}"/${PN}-1.2.3-k3b.patch
 }
 
 src_configure() {
