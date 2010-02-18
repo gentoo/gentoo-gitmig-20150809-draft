@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.178 2010/02/05 20:48:48 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.179 2010/02/18 19:58:12 fuzzyray Exp $
+
+*gentoolkit-0.3.0_rc9 (18 Feb 2010)
+*gentoolkit-0.2.4.6 (18 Feb 2010)
+
+  18 Feb 2010; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.2.4.6.ebuild,
+  +gentoolkit-0.3.0_rc9.ebuild:
+  gentoolkit-0.3.0_rc9 version bump. Bug 237964 tracks changes to
+  gentoolkit-0.3.0.
+  gentoolkit-0.2.4.6 version bump. This is gentoolkit-0.2.4.5 with
+  revdep-rebuild from gentoolkit-0.3.0. Bug 305793 tracks the changes.
 
   05 Feb 2010; Paul Varner <fuzzyray@gentoo.org>
   gentoolkit-0.3.0_rc8-r1.ebuild:
