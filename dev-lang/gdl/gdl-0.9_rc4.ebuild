@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.1 2010/02/05 04:22:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.2 2010/02/18 21:20:56 bicatali Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
+	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
 	epatch "${FILESDIR}"/${PN}-0.9_rc3-proj4.patch
 	epatch "${FILESDIR}"/${PN}-0.9_rc2-gcc4.4.patch
 	epatch "${FILESDIR}"/${P}-antlr.patch

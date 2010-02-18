@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.15 2010/02/05 04:22:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.16 2010/02/18 21:20:56 bicatali Exp $
+
+  18 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> gdl-0.9_rc4.ebuild:
+  Adding an mpi hack when hdf5 has mpi support, see bug #302621
 
 *gdl-0.9_rc4 (05 Feb 2010)
 
