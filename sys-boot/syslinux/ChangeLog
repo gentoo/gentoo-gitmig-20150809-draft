@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.50 2010/02/16 14:54:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.51 2010/02/18 17:40:22 jer Exp $
+
+  18 Feb 2010; Jeroen Roovers <jer@gentoo.org> syslinux-3.84.ebuild:
+  Respect CFLAGS, LDFLAGS, CC.
 
   16 Feb 2010; Steve Dibb <beandog@gentoo.org> syslinux-3.83.ebuild:
   amd64 stable, bug 292442

@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.84.ebuild,v 1.1 2010/02/16 12:47:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.84.ebuild,v 1.2 2010/02/18 17:40:22 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -33,10 +33,21 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-3.72-nostrip.patch
 
 	rm -f gethostip #bug 137081
+
+	sed -i \
+		extlinux/Makefile \
+		linux/Makefile \
+		mtools/Makefile \
+		sample/Makefile \
+		utils/Makefile \
+		-e '/^LDFLAGS/d' \
+		-e 's|-Os||g' \
+		-e 's|CFLAGS[[:space:]]\+=|CFLAGS +=|g' \
+		|| die "sed failed"
 }
 
 src_compile() {
-	emake installer || die
+	emake CC=$(tc-getCC) installer || die
 }
 
 src_install() {
