@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wormux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.37 2010/02/17 19:55:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.38 2010/02/18 17:04:13 mr_bones_ Exp $
+
+  18 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> wormux-0.9.0.ebuild:
+  ebuild touchups from bug #305753
 
 *wormux-0.9.0 (17 Feb 2010)
 

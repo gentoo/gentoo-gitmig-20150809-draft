@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.9.0.ebuild,v 1.1 2010/02/17 19:55:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.9.0.ebuild,v 1.2 2010/02/18 17:04:13 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -23,7 +23,7 @@ RDEPEND="media-libs/libsdl[joystick,video]
 	media-libs/libpng
 	net-misc/curl
 	media-fonts/dejavu
-	>=dev-cpp/libxmlpp-2.6
+	dev-libs/libxml2
 	nls? ( virtual/libintl )
 	unicode? ( dev-libs/fribidi )"
 DEPEND="${RDEPEND}
@@ -49,6 +49,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
+	rm -f "${D}${GAMES_DATADIR}/${PN}/font/DejaVuSans.ttf"
 	doicon data/wormux.svg
 	make_desktop_entry wormux Wormux
 	prepgamesdirs
