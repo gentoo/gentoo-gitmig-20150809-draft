@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r1.ebuild,v 1.2 2009/09/29 09:25:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r1.ebuild,v 1.3 2010/02/18 22:07:10 ssuominen Exp $
 
 EAPI=2
 
@@ -31,6 +31,9 @@ S=${WORKDIR}/${P/_beta?/}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 	epatch "${FILESDIR}"/${P}-xulrunner-1.9.1.patch
+	sed -i \
+		-e 's:jpeg_mem_src:freepv_jpeg_mem_src:g' \
+		src/libfreepv/JpegReader.cpp || die
 }
 
 src_install() {
