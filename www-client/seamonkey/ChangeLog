@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.210 2010/01/15 01:18:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.211 2010/02/18 00:09:51 anarchy Exp $
+
+  18 Feb 2010; <anarchy@gentoo.org> +files/seamonkey-rebuild-databases.pl:
+  Readd seamonkey-rebuild-databases.pl bug #302694
 
 *seamonkey-2.0.2 (15 Jan 2010)
 
