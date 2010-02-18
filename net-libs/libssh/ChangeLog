@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.26 2010/02/16 16:51:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.27 2010/02/18 18:26:46 pva Exp $
+
+*libssh-0.4.1 (18 Feb 2010)
+
+  18 Feb 2010; Peter Volkov <pva@gentoo.org> +libssh-0.4.1.ebuild,
+  +files/libssh-0.4.1-debug-build.patch:
+  Version bump. Fixed build issue with USE=debug, bug #304301, thank Arttu
+  Valo for this patch.
 
   16 Feb 2010; Joseph Jezak <josejx@gentoo.org> libssh-0.4.0.ebuild:
   Marked ~ppc64 for bug #304365.
