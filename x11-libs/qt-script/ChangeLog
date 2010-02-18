@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.62 2010/02/15 15:11:28 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.63 2010/02/18 00:10:36 wired Exp $
+
+  18 Feb 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added exceptions USE flag description
 
 *qt-script-4.6.2 (15 Feb 2010)
 
