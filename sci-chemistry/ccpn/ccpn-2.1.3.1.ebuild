@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.2.1_p100204.ebuild,v 1.4 2010/02/13 21:07:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1.ebuild,v 1.1 2010/02/18 21:47:20 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="ssl tk"
 
 inherit eutils portability python toolchain-funcs versionator
 
-PATCHSET="${PV##*_p}"
+#PATCHSET="${PV##*_p}"
 MY_PN="${PN}mr"
 MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+opengl"
 
 RDEPEND="
@@ -39,6 +39,7 @@ src_prepare() {
 		epatch "${WORKDIR}"/ccpn-update-${PATCHSET}.patch
 
 	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
+	epatch "${FILESDIR}"/${MY_PV}-dynamics.patch
 
 	local tk_ver
 	local myconf
@@ -66,6 +67,7 @@ src_prepare() {
 
 	preparation() {
 		sed \
+			-e "s:/usr:${EPREFIX}/usr:g" \
 			-e "s:^\(CC =\).*:\1 $(tc-getCC):g" \
 			-e "s:^\(OPT_FLAG =\).*:\1 ${CFLAGS}:g" \
 			-e "s:^\(LINK_FLAGS =.*\):\1 ${LDFLAGS}:g" \
