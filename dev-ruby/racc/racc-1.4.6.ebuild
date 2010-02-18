@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.4 2010/02/01 16:42:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.5 2010/02/18 16:41:12 grobian Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.loveruby.net/en/racc.html"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend test virtual/ruby-test-unit
