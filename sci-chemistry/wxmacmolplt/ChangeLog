@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/wxmacmolplt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.3 2010/01/24 12:14:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.4 2010/02/18 03:30:23 dirtyepic Exp $
+
+  18 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> wxmacmolplt-7.3.ebuild,
+  wxmacmolplt-7.3-r1.ebuild, wxmacmolplt-7.4.ebuild:
+  Use wxwidgets.eclass
 
 *wxmacmolplt-7.4 (24 Jan 2010)
 
