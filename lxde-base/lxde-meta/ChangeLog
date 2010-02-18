@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.16 2010/01/24 18:36:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.17 2010/02/18 02:15:07 yngwin Exp $
+
+*lxde-meta-0.5.0-r1 (18 Feb 2010)
+
+  18 Feb 2010; Ben de Groot <yngwin@gentoo.org> +lxde-meta-0.5.0-r1.ebuild:
+  Make meta ebuild compatible with new lxpanel release
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> lxde-meta-0.5.0.ebuild:
   Add ~arm
