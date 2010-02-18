@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.75 2010/02/16 06:51:24 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.76 2010/02/18 00:11:00 wired Exp $
+
+  18 Feb 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added exceptions USE flag description
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   -files/qt-4.6.1-nolibx11.patch:
