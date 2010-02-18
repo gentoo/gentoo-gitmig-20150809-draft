@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.52 2010/02/18 18:27:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.53 2010/02/18 21:52:04 chithanh Exp $
+
+*syslinux-4.00_pre24 (18 Feb 2010)
+
+  18 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  syslinux-3.84.ebuild, +syslinux-4.00_pre24.ebuild,
+  +files/syslinux-4.00-nopie.patch:
+  version bump, drop nostrip patches (bug #305783)
 
   18 Feb 2010; Jeroen Roovers <jer@gentoo.org> syslinux-3.84.ebuild:
   Switch to IUSE=custom-cflags (bug #305783).
