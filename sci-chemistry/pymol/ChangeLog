@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.54 2010/02/10 11:22:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.55 2010/02/18 13:23:48 jlec Exp $
+
+*pymol-1.2.2-r3 (18 Feb 2010)
+
+  18 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  +files/1.2.2-prefix.patch, +pymol-1.2.2-r3.ebuild:
+  Fixed usage of pathon eclass, EAPI=3 and PREFIX ready fixes, keyworded for
+  amd64-linux & x86-linux
 
 *pymol-1.2.2-r2 (10 Feb 2010)
 
