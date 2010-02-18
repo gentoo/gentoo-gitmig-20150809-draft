@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.5.ebuild,v 1.5 2009/12/13 17:52:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.8.ebuild,v 1.1 2010/02/18 03:16:34 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -9,7 +9,7 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib java-p
 
 MY_PV="${PV/_beta/b}" # Handle betas
 MY_PV="${PV/_/}" # Handle rc1, rc2 etc
-MY_PV="${MY_PV/1.9.1.5/3.5.5}"
+MY_PV="${MY_PV/1.9.1.8/3.5.8}"
 MAJ_PV="1.9.1" # from mozilla-* branch name
 PATCH="${PN}-1.9.1.5-patches-0.1"
 
@@ -62,6 +62,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Apply our patches
+	EPATCH_EXCLUDE="136-fix_ftbfs_with_cairo_fb.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
