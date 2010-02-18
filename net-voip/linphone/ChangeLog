@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/linphone
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.40 2009/08/24 09:13:15 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.41 2010/02/18 18:57:38 pva Exp $
+
+*linphone-3.2.1 (18 Feb 2010)
+
+  18 Feb 2010; Peter Volkov <pva@gentoo.org> +linphone-3.2.1.ebuild,
+  +files/linphone-3.2.1-external-mediastreamer.patch,
+  +files/linphone-3.2.1-log-window-crash.patch,
+  +files/linphone-3.2.1-nls.patch:
+  Version bump, fixes bug #285478.
 
   24 Aug 2009; Mike Frysinger <vapier@gentoo.org> linphone-3.1.2.ebuild:
   Fix libtool mismatch troubles #282268 by rainer and drop pointless LINGUAS
