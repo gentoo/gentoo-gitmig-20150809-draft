@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/ChangeLog,v 1.12 2010/01/08 15:50:10 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/ChangeLog,v 1.13 2010/02/19 16:41:52 jmbsvicetto Exp $
+
+*amarok-utils-2.2.2.90 (19 Feb 2010)
+
+  19 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-utils-2.2.2.90.ebuild:
+  Bumped amarok to the 2.2.2.90 release (2.3 Beta 1).
+  Dropped the bindist use flag and added a hard dep on taglib[asf,mp4] (bug
+  299899) - thanks to Jeff Mitchell (jefferai).
 
 *amarok-utils-2.2.2 (08 Jan 2010)
 
