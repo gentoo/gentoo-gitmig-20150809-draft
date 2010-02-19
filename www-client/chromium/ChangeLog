@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.57 2010/02/18 16:14:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.58 2010/02/19 15:27:51 phajdan.jr Exp $
+
+  19 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-5.0.307.9.ebuild, chromium-5.0.322.2.ebuild,
+  chromium-9999.ebuild, +files/chromium-fix-make-build.patch:
+  Prevent the make build from filling entire disk space on some systems, bug
+  297273.
 
 *chromium-5.0.307.9 (18 Feb 2010)
 
