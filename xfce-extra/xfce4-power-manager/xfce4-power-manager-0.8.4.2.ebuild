@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.4.2.ebuild,v 1.1 2009/11/21 21:18:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.4.2.ebuild,v 1.2 2010/02/19 19:30:01 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.8/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc +dpms +plugins"
+IUSE="debug doc +plugins"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.70
 	>=dev-libs/glib-2.16:2
@@ -24,7 +24,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.70
 	>=xfce-base/libxfcegui4-4.6
 	>=xfce-base/xfconf-4.6
 	plugins? ( >=xfce-base/xfce4-panel-4.6 )
-	dpms? ( x11-libs/libXext )"
+	x11-libs/libXext"
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/librsvg"
 DEPEND="${COMMON_DEPEND}
@@ -36,7 +36,7 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
-		$(use_enable dpms)
+		--enable-dpms
 		$(use_enable plugins panel-plugins)
 		$(use_enable doc xsltproc)
 		$(use_enable debug)"
