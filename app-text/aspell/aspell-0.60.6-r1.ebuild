@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6-r1.ebuild,v 1.3 2009/12/26 20:36:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6-r1.ebuild,v 1.4 2010/02/19 08:45:59 pva Exp $
 
 # N.B. This is before inherit of autotools, as autotools.eclass adds the
 # relevant dependencies to DEPEND.
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nls examples"
 # Note; app-text/aspell-0.6 and app-dicts/aspell-en-0.6 must go stable together
 
@@ -24,7 +24,7 @@ def="app-dicts/aspell-en"
 for l in \
 	"af" "be" "bg" "br" "ca" "cs" "cy" "da" "de" "el" \
 	"en" "eo" "es" "et" "fi" "fo" "fr" "ga" "gl" "he" \
-	"hr" "is" "it" "nl" "no" "pl" "pt" "ro" \
+	"hr" "is" "it" "la" "lt" "nl" "no" "pl" "pt" "ro" \
 	"ru" "sk" "sl" "sr" "sv" "uk" "vi"; do
 	dep="linguas_${l}? ( app-dicts/aspell-${l} )"
 	[[ ${l} = "de" ]] &&
