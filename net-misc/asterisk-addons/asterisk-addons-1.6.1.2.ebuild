@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.6.1.2.ebuild,v 1.1 2009/12/02 18:45:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.6.1.2.ebuild,v 1.2 2010/02/19 15:48:12 chainsaw Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="bluetooth elibc_uclibc mysql"
 
-RDEPEND=">=net-misc/asterisk-1.6.1.11"
+RDEPEND="=net-misc/asterisk-1.6.1*"
 
 src_unpack() {
 	unpack ${A}

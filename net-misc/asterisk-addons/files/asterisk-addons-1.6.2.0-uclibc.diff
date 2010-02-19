@@ -1,6 +1,6 @@
-diff -uNr asterisk-addons-1.6.1.1.ORIG/cdr/cdr_addon_mysql.c asterisk-addons-1.6.1.1/cdr/cdr_addon_mysql.c
---- asterisk-addons-1.6.1.1.ORIG/cdr/cdr_addon_mysql.c	2009-09-11 17:14:31.000000000 +0100
-+++ asterisk-addons-1.6.1.1/cdr/cdr_addon_mysql.c	2009-09-11 17:16:18.000000000 +0100
+diff -uNr asterisk-addons-1.6.2.0.ORIG//cdr/cdr_addon_mysql.c asterisk-addons-1.6.2.0/cdr/cdr_addon_mysql.c
+--- asterisk-addons-1.6.2.0.ORIG//cdr/cdr_addon_mysql.c	2010-02-19 15:11:40.000000000 +0000
++++ asterisk-addons-1.6.2.0/cdr/cdr_addon_mysql.c	2010-02-19 15:12:01.000000000 +0000
 @@ -29,6 +29,13 @@
  
  #include <asterisk.h>
@@ -15,9 +15,9 @@ diff -uNr asterisk-addons-1.6.1.1.ORIG/cdr/cdr_addon_mysql.c asterisk-addons-1.6
  #include <sys/types.h>
  #include <asterisk/config.h>
  #include <asterisk/options.h>
-@@ -40,13 +47,6 @@
- #include <asterisk/strings.h>
+@@ -41,13 +48,6 @@
  #include <asterisk/linkedlists.h>
+ #include <asterisk/threadstorage.h>
  
 -#include <stdio.h>
 -#include <string.h>
@@ -29,9 +29,9 @@ diff -uNr asterisk-addons-1.6.1.1.ORIG/cdr/cdr_addon_mysql.c asterisk-addons-1.6
  #include <mysql/mysql.h>
  #include <mysql/errmsg.h>
  
-diff -uNr asterisk-addons-1.6.1.1.ORIG/res/res_config_mysql.c asterisk-addons-1.6.1.1/res/res_config_mysql.c
---- asterisk-addons-1.6.1.1.ORIG/res/res_config_mysql.c	2009-09-11 17:14:31.000000000 +0100
-+++ asterisk-addons-1.6.1.1/res/res_config_mysql.c	2009-09-11 17:18:27.000000000 +0100
+diff -uNr asterisk-addons-1.6.2.0.ORIG//res/res_config_mysql.c asterisk-addons-1.6.2.0/res/res_config_mysql.c
+--- asterisk-addons-1.6.2.0.ORIG//res/res_config_mysql.c	2010-02-19 15:11:40.000000000 +0000
++++ asterisk-addons-1.6.2.0/res/res_config_mysql.c	2010-02-19 15:12:01.000000000 +0000
 @@ -44,6 +44,9 @@
  
  #include <asterisk.h>
