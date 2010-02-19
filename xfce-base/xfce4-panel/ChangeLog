@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.148 2009/10/24 16:39:13 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.149 2010/02/19 19:46:00 ssuominen Exp $
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-panel-4.6.2.ebuild:
+  amd64 stable wrt #305657
 
   24 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-panel-4.6.2.ebuild, +files/xfce4-panel-4.6.2-exo.patch:
