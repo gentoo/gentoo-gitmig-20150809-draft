@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.56 2010/02/19 08:51:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.57 2010/02/19 11:51:54 caster Exp $
+
+  19 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  -googleearth-5.1.3509.4636_beta.ebuild, -googleearth-5.1.3533.1731.ebuild,
+  googleearth-5.1.3533.1731-r1.ebuild:
+  Fix bug #303789 properly by depending on a fixed version of emul qtlibs.
 
   19 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   googleearth-5.1.3533.1731-r1.ebuild:
