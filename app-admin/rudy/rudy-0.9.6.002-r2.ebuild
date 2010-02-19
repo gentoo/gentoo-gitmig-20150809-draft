@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.6.002-r1.ebuild,v 1.1 2010/02/14 22:03:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.6.002-r2.ebuild,v 1.1 2010/02/19 12:04:38 flameeyes Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGES.txt README.rdoc examples/authorize.rb examples/ge
 
 RUBY_FAKEGEM_EXTRAINSTALL="Rudyfile"
 
-inherit ruby-fakegem
+inherit ruby-fakegem eutils
 
 DESCRIPTION="Not your grandparents' EC2 deployment tool"
 HOMEPAGE="http://solutious.com/"
@@ -41,3 +41,7 @@ ruby_add_rdepend '
 	>=dev-ruby/annoy-0.5.5
 	>=dev-ruby/attic-0.4.0
 	>=dev-ruby/rye-0.8.11'
+
+all_ruby_prepare() {
+	epatch "${FILESDIR}"/${P}+amazon-ec2-0.9.4.patch
+}
