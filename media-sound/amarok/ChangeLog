@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.355 2010/02/16 06:44:24 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.356 2010/02/19 16:42:50 jmbsvicetto Exp $
+
+*amarok-2.2.2.90 (19 Feb 2010)
+
+  19 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.2.2.90.ebuild:
+  Bumped amarok to the 2.2.2.90 release (2.3 Beta 1).
+  Fixed strigi deps (bug 304883) - thanks to Samuli.
+  Dropped the bindist use flag and added a hard dep on taglib[asf,mp4] (bug
+  299899) - thanks to Jeff Mitchell (jefferai).
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   -files/amarok-1.4.9.1-libmtp-0.3.0-API.patch,
