@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3914 2010/02/19 08:30:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3915 2010/02/19 17:14:12 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Feb 2010; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Fixing samba 3.5rc mask for newer rc
 
   19 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask pg pre-releases.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11236 2010/02/19 08:30:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11237 2010/02/19 17:14:12 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -155,10 +155,10 @@ dev-db/mysql-community
 
 # Patrick Lauer <patrick@gentoo.org> (26 Jan 2010)
 # Masking release candidates
-=net-fs/samba-3.5.0_rc2
-=net-fs/samba-libs-3.5.0_rc2
-=net-fs/samba-server-3.5.0_rc2
-=net-fs/samba-client-3.5.0_rc2
+>=net-fs/samba-3.5.0_rc2
+>=net-fs/samba-libs-3.5.0_rc2
+>=net-fs/samba-server-3.5.0_rc2
+>=net-fs/samba-client-3.5.0_rc2
 
 # Daniel Pielmeier <billie@gentoo.org> (26 Jan 2010)
 # Masked for removal in 30 days. Qt3 only package with
