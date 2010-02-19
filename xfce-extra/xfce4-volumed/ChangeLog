@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-volumed
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed/ChangeLog,v 1.7 2009/11/21 21:13:52 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed/ChangeLog,v 1.8 2010/02/19 20:02:34 ssuominen Exp $
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-volumed-0.1.8.ebuild:
+  amd64 stable wrt #305657
 
 *xfce4-volumed-0.1.8 (21 Nov 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-dict
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.43 2009/12/31 16:04:57 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.44 2010/02/19 20:06:32 ssuominen Exp $
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-dict-0.6.0.ebuild:
+  amd64 stable wrt #305657
 
 *xfce4-dict-0.6.0 (31 Dec 2009)
 

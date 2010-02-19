@@ -4,6 +4,5 @@
   <herd>xfce</herd>
   <use>
     <flag name="plugins">Build panel plugins</flag>
-    <flag name="dpms">Build with DPMS support</flag>
   </use>
 </pkgmetadata>
