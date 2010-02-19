@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/libodbc++
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.18 2009/12/16 11:06:40 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.19 2010/02/19 21:41:22 robbat2 Exp $
+
+*libodbc++-0.2.5 (19 Feb 2010)
+
+  19 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +libodbc++-0.2.5.ebuild:
+  Bug #282982: version bump. Upstream build system has lots of bugs however,
+  so there is no longer any isql++ CLI tool, nor non-mt Qt build, as neither
+  of them build.
 
   16 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   libodbc++-0.2.3-r2.ebuild:
