@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/nss_ldap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.58 2009/07/28 18:45:51 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.59 2010/02/19 19:24:14 robbat2 Exp $
+
+*nss_ldap-265 (19 Feb 2010)
+*nss_ldap-264-r1 (19 Feb 2010)
+
+  19 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-254-soname.patch, +nss_ldap-264-r1.ebuild,
+  +nss_ldap-265.ebuild, +files/nss_ldap-265-reconnect-timeouts.patch:
+  Bug #161195, add an SONAME: Added to 264-r1 as stable candidate. Bug
+  #302914: Version bump to 265.
 
 *nss_ldap-264 (28 Jul 2009)
 
