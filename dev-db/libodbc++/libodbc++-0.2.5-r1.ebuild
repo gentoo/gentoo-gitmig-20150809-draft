@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.5.ebuild,v 1.2 2010/02/19 21:55:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.5-r1.ebuild,v 1.1 2010/02/19 21:55:11 robbat2 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -12,18 +12,17 @@ SRC_URI="mirror://sourceforge/libodbcxx/${P}.tar.bz2"
 HOMEPAGE="http://libodbcxx.sourceforge.net/"
 LICENSE="LGPL-2.1"
 SLOT=0
-IUSE="qt3"
+IUSE=""
 
 DEPEND="dev-db/unixODBC
-		qt3? ( dev-db/unixODBC[qt3] )
 		sys-libs/ncurses"
 RDEPEND="${DEPEND}"
 
 SB="${S}-build"
 SB_MT="${S}-build-mt"
-# non-mt QT does not build presently.
+# QT3 is no longer supported in Gentoo.
 #SB_QT="${S}-build_qt"
-SB_QT_MT="${S}-build_qt-mt"
+#SB_QT_MT="${S}-build_qt-mt"
 
 src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-0.2.3-std-streamsize.patch
@@ -47,7 +46,7 @@ src_configure() {
 	append-flags -DODBCXX_DISABLE_READLINE_HACK
 
 	buildlist="${SB} ${SB_MT}"
-	use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
+	#use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
 
 	for sd in ${buildlist}; do
 		einfo "Doing configure pass for $sd"
@@ -78,7 +77,7 @@ src_configure() {
 src_compile() {
 	local buildlist failures
 	buildlist="${SB} ${SB_MT}"
-	use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
+	#use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
 	for sd in ${buildlist}; do
 		einfo "Doing compile pass for $sd"
 		cd "${sd}"
@@ -91,7 +90,7 @@ src_install () {
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 
 	buildlist="${SB} ${SB_MT}"
-	use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
+	#use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
 	for sd in ${buildlist}; do
 		einfo "Doing install pass for $sd"
 		cd ${sd}

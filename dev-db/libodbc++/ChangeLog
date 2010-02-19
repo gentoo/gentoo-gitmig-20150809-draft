@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/libodbc++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.19 2010/02/19 21:41:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.20 2010/02/19 21:55:11 robbat2 Exp $
+
+*libodbc++-0.2.5-r1 (19 Feb 2010)
+
+  19 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> libodbc++-0.2.5.ebuild,
+  +libodbc++-0.2.5-r1.ebuild:
+  Fix up bug 297146 for documentation location. And add new revision for the
+  pending qt3 removal. 0.2.5-r0 has fully specified qt3 support that works
+  for the moment, but is to be pmasked when qt3 mask comes. 0.2.5-r1 has qt3
+  support disabled.
 
 *libodbc++-0.2.5 (19 Feb 2010)
 
