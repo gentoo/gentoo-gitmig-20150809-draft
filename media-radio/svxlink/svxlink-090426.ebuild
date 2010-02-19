@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-090426.ebuild,v 1.4 2009/12/28 16:21:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-090426.ebuild,v 1.5 2010/02/19 16:14:59 ssuominen Exp $
 
 EAPI=2
-inherit multilib qt3
+inherit eutils multilib
 
 DESCRIPTION="Multi Purpose Voice Services System, including Qtel for EchoLink"
 HOMEPAGE="http://svxlink.sourceforge.net/"
@@ -16,7 +16,6 @@ IUSE=""
 
 RDEPEND="dev-lang/tcl
 	media-sound/gsm
-	x11-libs/qt:3
 	dev-libs/libgcrypt
 	media-libs/speex
 	dev-libs/libsigc++:1.2
@@ -27,8 +26,9 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-080730--as-needed.patch"
-	epatch "${FILESDIR}/${P}-gcc44.patch"
+	epatch "${FILESDIR}"/${PN}-080730--as-needed.patch \
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-noqt.patch
 
 	sed -i -e "s:/lib:/$(get_libdir):g" makefile.cfg || die
 }

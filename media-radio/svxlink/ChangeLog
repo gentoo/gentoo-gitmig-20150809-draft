@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/svxlink
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.14 2009/12/28 16:21:24 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.15 2010/02/19 16:14:59 ssuominen Exp $
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> svxlink-090426.ebuild,
+  +files/svxlink-090426-noqt.patch:
+  Remove automagic x11-libs/qt:3 detection wrt #301744, thanks to Ben de
+  Groot and Thomas Beierlein.
 
   28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> svxlink-090426.ebuild:
   Stop using deprecated kde-functions.eclass.
