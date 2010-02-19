@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.60 2010/01/09 17:31:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.61 2010/02/19 06:31:28 bicatali Exp $
+
+*root-5.26.00-r1 (19 Feb 2010)
+
+  19 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +root-5.26.00-r1.ebuild:
+  Patch version bump. Also fixed a configure problem when checking for
+  symbol (bug #305279)
 
 *root-5.26.00 (09 Jan 2010)
 
