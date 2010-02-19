@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/aspell-bg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.4 2009/10/18 20:06:10 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.5 2010/02/19 08:55:18 pva Exp $
+
+*aspell-bg-4.1.0 (19 Feb 2010)
+
+  19 Feb 2010; Peter Volkov <pva@gentoo.org> aspell-bg-0.50.0.ebuild,
+  +aspell-bg-4.1.0.ebuild:
+  Versin bump.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-bg-0.50.0.ebuild:
   QA fixes; IUSE is not defined
