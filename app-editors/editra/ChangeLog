@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.9 2010/01/23 00:15:12 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.10 2010/02/19 00:21:13 dirtyepic Exp $
+
+  19 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> editra-0.5.32.ebuild,
+  +files/editra-0.5.32-sandbox.patch:
+  Fix sandbox violations, bug #298752.
 
 *editra-0.5.32 (23 Jan 2010)
 

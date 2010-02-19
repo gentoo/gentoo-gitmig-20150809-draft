@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.1 2010/01/23 00:15:12 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.2 2010/02/19 00:21:13 dirtyepic Exp $
 
 EAPI=2
 
@@ -25,6 +25,12 @@ RDEPEND="${DEPEND}
 	spell? ( dev-python/pyenchant )"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
+
+src_prepare() {
+	#http://code.google.com/p/editra/issues/detail?id=481
+	epatch "${FILESDIR}"/${P}-sandbox.patch
+	# next version, use setup.py install --no-clean
+}
 
 src_install() {
 	distutils_src_install
