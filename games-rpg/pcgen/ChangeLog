@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/pcgen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.18 2010/01/05 19:26:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.19 2010/02/19 16:27:57 mr_bones_ Exp $
+
+*pcgen-5.16.2 (19 Feb 2010)
+
+  19 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> +pcgen-5.16.2.ebuild:
+  version bump
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> pcgen-5.16.0.ebuild:
   Marked ppc stable for bug #288641.
