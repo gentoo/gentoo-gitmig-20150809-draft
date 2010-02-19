@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.01.1273.ebuild,v 1.1 2010/01/29 10:30:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.01.1273.ebuild,v 1.2 2010/02/19 14:25:48 flameeyes Exp $
 
 EAPI=2
 
 inherit flag-o-matic libtool autotools eutils
 
-DESCRIPTION="Drizzle project"
+DESCRIPTION="Database optimized for Cloud and Net applications"
 HOMEPAGE="http://drizzle.org"
 SRC_URI="http://launchpad.net/drizzle/trunk/bell/+download/${P}.tar.gz"
 LICENSE="GPL-2"
