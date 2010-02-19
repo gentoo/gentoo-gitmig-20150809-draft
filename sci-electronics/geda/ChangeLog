@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.56 2009/12/22 23:11:40 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.57 2010/02/19 23:30:24 calchan Exp $
+
+*geda-1.6.1 (19 Feb 2010)
+
+  19 Feb 2010; Denis Dupeyron <calchan@gentoo.org> +geda-1.6.1.ebuild:
+  Version bump, thanks to Stefan Salewski (bug #305943).
 
   22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   geda-1.6.0-r1.ebuild:
