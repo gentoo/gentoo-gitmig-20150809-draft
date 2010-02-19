@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mock
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/ChangeLog,v 1.5 2009/10/30 10:32:51 deathwing00 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/ChangeLog,v 1.6 2010/02/19 11:37:47 deathwing00 Exp $
+
+*mock-1.0.3 (19 Feb 2010)
+
+  19 Feb 2010; Ioannis Aslanidis <iaslanidis@gentoo.org> +mock-1.0.3.ebuild:
+  Version bump.
 
   30 Oct 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> metadata.xml:
   Fixed metadata as requested in bug #279215
