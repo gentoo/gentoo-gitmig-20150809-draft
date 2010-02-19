@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.4.3.ebuild,v 1.4 2010/01/12 17:49:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.4.3.ebuild,v 1.5 2010/02/19 17:15:38 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -24,6 +24,7 @@ RDEPEND=">=dev-libs/glib-2.21.2
 	archive? ( app-arch/libarchive )
 	avahi? ( >=net-dns/avahi-0.6 )
 	bluetooth? (
+		>=app-mobilephone/obex-data-server-0.4.5
 		dev-libs/dbus-glib
 		net-wireless/bluez
 		dev-libs/expat )
