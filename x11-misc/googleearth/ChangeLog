@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.55 2010/02/11 15:47:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.56 2010/02/19 08:51:53 caster Exp $
+
+  19 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  googleearth-5.1.3533.1731-r1.ebuild:
+  Add dependency on qt-core also for amd64 - workaround for bug #303789
+  until #305825 is solved.
 
   11 Feb 2010; Ulrich Mueller <ulm@gentoo.org>
   googleearth-4.2.205.5730.ebuild, googleearth-4.3.7284.3916.ebuild,

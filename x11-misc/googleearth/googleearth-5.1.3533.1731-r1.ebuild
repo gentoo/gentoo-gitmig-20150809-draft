@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.4 2010/02/11 15:47:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.5 2010/02/19 08:51:53 caster Exp $
 
 EAPI=2
 
@@ -21,6 +21,8 @@ IUSE="qt-bundled"
 
 GCC_NEEDED="4.2"
 
+# the 64bit qt-core is needed to put the emul package on LDPATH
+# - workaround for bug #303789
 RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 	x86? (
 		media-libs/fontconfig
@@ -46,6 +48,7 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 		>=app-emulation/emul-linux-x86-xlibs-20081109
 		>=app-emulation/emul-linux-x86-baselibs-20081109
 		!qt-bundled? (
+			x11-libs/qt-core
 			>=app-emulation/emul-linux-x86-qtlibs-20091231
 		)
 	)
