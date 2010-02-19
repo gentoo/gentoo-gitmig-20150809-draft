@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.13 2010/02/12 18:39:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.14 2010/02/19 18:24:45 armin76 Exp $
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> libnice-0.0.10.ebuild:
+  Add ~ia64/~sparc
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> libnice-0.0.10.ebuild:
+  Add ~ia64/~sparc
 
   12 Feb 2010; Joseph Jezak <josejx@gentoo.org> libnice-0.0.9.ebuild,
   libnice-0.0.10.ebuild:
