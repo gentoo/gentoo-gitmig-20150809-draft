@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5296 2010/02/19 16:47:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5297 2010/02/19 20:08:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3498,6 +3498,5 @@ xfce-extra/thunar-vcs-plugin:git - Enable dev-util/git support
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
 xfce-extra/xfce4-playercontrol-plugin:mpd - Enable Music Player Daemon support
-xfce-extra/xfce4-power-manager:dpms - Build with DPMS support
 xfce-extra/xfce4-power-manager:plugins - Build panel plugins
 xfce-extra/xfce4-screenshooter:zimagez - Optional support to host screenshots on ZimageZ, a free online image service
