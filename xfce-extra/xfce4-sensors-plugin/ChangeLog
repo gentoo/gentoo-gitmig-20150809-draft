@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-sensors-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.1 2009/08/23 20:19:17 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.2 2010/02/19 09:11:19 ssuominen Exp $
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-sensors-plugin-0.10.99.6.ebuild:
+  Don't use -Werror wrt #299438, thanks to Alexander Goomenyuk for
+  reporting.
 
 *xfce4-sensors-plugin-0.10.99.6 (23 Aug 2009)
 

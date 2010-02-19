@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-0.10.99.6.ebuild,v 1.1 2009/08/23 20:19:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-0.10.99.6.ebuild,v 1.2 2010/02/19 09:11:19 ssuominen Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -43,6 +43,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e "/-no-undefined/d" src/Makefile.am || die "sed failed"
+	sed -i \
+		-e '/-no-undefined/d' \
+		src/Makefile.am || die
+
+	sed -i \
+		-e 's/-Werror//' \
+		configure.in || die
+
 	xfconf_src_prepare
 }
