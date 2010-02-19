@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.449 2010/02/17 06:18:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.450 2010/02/19 17:32:50 jer Exp $
+
+*opera-10.50_pre6225 (19 Feb 2010)
+
+  19 Feb 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.50_pre6225.ebuild,
+  +files/opera-10.50-paths.patch:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2010/02/19/gstreamer-video-on-mac>.
+  Fix more paths thanks to shade (bug #305303).
 
   17 Feb 2010; Jeroen Roovers <jer@gentoo.org> opera-10.20_pre4744.ebuild:
   Remove final qt3 dependent thanks to ssuominen.
