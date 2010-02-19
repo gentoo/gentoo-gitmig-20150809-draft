@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-9.8.4.ebuild,v 1.2 2010/01/31 17:33:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-10.2.1.ebuild,v 1.1 2010/02/19 16:36:18 grozin Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils multilib
 
 MY_P=ecl-${PV}
@@ -10,24 +10,21 @@ MY_P=ecl-${PV}
 DESCRIPTION="ECL is an embeddable Common Lisp implementation."
 HOMEPAGE="http://common-lisp.net/project/ecl/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
-RESTRICT="mirror"
 
 LICENSE="BSD LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="X c++ +threads +unicode"
+IUSE="debug doc precisegc +threads +unicode X"
 
 RDEPEND="dev-libs/gmp
 		virtual/libffi
-		>=dev-libs/boehm-gc-7.1[threads?]
-		c++? ( dev-libs/boehm-gc[-nocxx] )"
-DEPEND="${RDEPEND}
-		app-text/texi2html"
+		>=dev-libs/boehm-gc-7.1[threads?]"
+DEPEND="${RDEPEND}"
 PDEPEND="dev-lisp/gentoo-init"
 
 PROVIDE="virtual/commonlisp"
 
-S="${WORKDIR}"/ecl-${PV}
+S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-headers-gentoo.patch
@@ -37,26 +34,37 @@ src_configure() {
 	econf \
 		--with-system-gmp \
 		--enable-boehm=system \
-		--enable-gengc \
 		--enable-longdouble \
-		$(use_with c++ cxx) \
+		--enable-gengc \
+		$(use_enable precisegc) \
+		$(use_with debug debug-cflags) \
 		$(use_enable threads) \
 		$(use_with threads __thread) \
 		$(use_enable unicode) \
 		$(use_with X x) \
-		$(use_with X clx) \
-		|| die "econf failed"
+		$(use_with X clx)
 }
 
 src_compile() {
 	#parallel fails
-	emake -j1 || die "make failed"
+	emake -j1 || die "Compilation failed"
+	if use doc; then
+		pushd build/doc
+		emake || die "Building docs failed"
+		popd
+	fi
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "Could not build ECL"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
-	dohtml doc/*.html
 	dodoc ANNOUNCEMENT Copyright
 	dodoc "${FILESDIR}"/README.Gentoo
+	pushd build/doc
+	newman ecl.man ecl.1
+	newman ecl-config.man ecl-config.1
+	if use doc; then
+		doinfo ecl{,dev}.info || die "Installing info docs failed"
+	fi
+	popd
 }

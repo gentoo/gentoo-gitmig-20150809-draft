@@ -9,8 +9,6 @@ System), conditions, loops, etc, plus a translator to C, which can produce
 standalone executables.
 </longdescription>
 <use>
-<flag name='c++'>Build ECL with a C++ compiler</flag>
-<flag name='threads'>Support for native threads</flag>
-<flag name='unicode'>Support for unicode</flag>
+<flag name='precisegc'>Use type information during garbage collection</flag>
 </use>
 </pkgmetadata>

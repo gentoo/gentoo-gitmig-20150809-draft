@@ -1,6 +1,19 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.33 2010/02/16 22:27:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.34 2010/02/19 16:36:18 grozin Exp $
+
+*ecls-10.2.1 (19 Feb 2010)
+
+  19 Feb 2010; Andrey Grozin <grozin@gentoo.org>
+  -files/0.9g-headers-gentoo.patch, -ecls-0.9h.ebuild,
+  -files/0.9h-headers-gentoo.patch, -ecls-0.9h-r1.ebuild,
+  -files/0.9h-sockets-c++-gentoo.patch, -ecls-0.9i.ebuild,
+  -files/0.9i-headers-gentoo.patch, -ecls-0.9j_p1.ebuild,
+  +files/10.2.1-headers-gentoo.patch, -ecls-0.9g.ebuild, -ecls-9.8.4.ebuild,
+  -files/9.8.4-headers-gentoo.patch, ecls-9.12.3.ebuild,
+  +ecls-10.2.1.ebuild, -files/clc-lite.lisp:
+  Version bump (from the lisp overlay); obsolete dependency on
+  app-text/texi2html removed
 
   16 Feb 2010; Christian Faulhammer <fauli@gentoo.org> ecls-9.12.3.ebuild:
   stable x86, bug 303699
