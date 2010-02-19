@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.21.ebuild,v 1.1 2010/02/18 07:45:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.22.ebuild,v 1.1 2010/02/19 09:20:03 jlec Exp $
 
 EAPI="3"
 
