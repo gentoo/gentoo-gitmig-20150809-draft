@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.0.ebuild,v 1.1 2009/11/12 23:09:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.0.ebuild,v 1.2 2010/02/19 04:53:36 markusle Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="mysql"
 # Most of this mess is designed to give the choice of sqlite or mysql
 # but prefer sqlite. We also need to default to sqlite if neither is requested.
 RDEPEND="virtual/ooo
-	=dev-python/wxpython-2.6*
+	=dev-python/wxpython-2.8*
 	dev-python/pysqlite
 	dev-db/sqliteodbc
 	mysql? (
