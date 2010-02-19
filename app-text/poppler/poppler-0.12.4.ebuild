@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4.ebuild,v 1.1 2010/02/18 01:41:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4.ebuild,v 1.2 2010/02/19 18:01:06 grobian Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils flag-o-matic
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
 HOMEPAGE="http://poppler.freedesktop.org/"
@@ -67,6 +67,9 @@ src_configure() {
 		$(cmake-utils_use_with qt4)
 		$(cmake-utils_use exceptions USE_EXCEPTIONS)
 	)
+
+	# http://bugs.freedesktop.org/show_bug.cgi?id=26650
+	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lrt # for nanosleep
 
 	cmake-utils_src_configure
 }
