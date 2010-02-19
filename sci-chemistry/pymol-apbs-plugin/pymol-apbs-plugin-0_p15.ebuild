@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/pymol-apbs-plugin-0_p15.ebuild,v 1.1 2010/02/11 20:26:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/pymol-apbs-plugin-0_p15.ebuild,v 1.2 2010/02/19 07:49:15 jlec Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ HOMEPAGE="http://sourceforge.net/projects/pymolapbsplugin/"
 SRC_URI="http://pymolapbsplugin.svn.sourceforge.net/viewvc/pymolapbsplugin/trunk/src/apbsplugin.py?revision=${MY_PV} -> ${P}.py"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="pymol"
 IUSE=""
 
