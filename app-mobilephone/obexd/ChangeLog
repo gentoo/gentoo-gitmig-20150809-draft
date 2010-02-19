@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.5 2010/02/19 13:26:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.6 2010/02/19 18:56:19 pacho Exp $
+
+*obexd-0.21-r2 (19 Feb 2010)
+
+  19 Feb 2010; Pacho Ramos <pacho@gentoo.org> -obexd-0.21-r1.ebuild,
+  +obexd-0.21-r2.ebuild, +files/obexd-0.21-fix_configure.patch:
+  Fixing bug 305063 properly, thanks to Vinicius Costa Gomes for the patch
+  and help. Removing old and buggy version
 
 *obexd-0.21-r1 (19 Feb 2010)
 *obexd-0.18-r1 (19 Feb 2010)
