@@ -6,5 +6,9 @@
 		<email>dev-zero@gentoo.org</email>
 		<name>Tiziano Müller</name>
 	</maintainer>
+	<use>
+  		<flag name='server'>Enables server installation, it's
+  		incompatible with obex-data-server provided one</flag>
+	</use>
 </pkgmetadata>
 
