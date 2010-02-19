@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gegl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.29 2009/12/20 16:15:33 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.30 2010/02/19 15:53:41 patrick Exp $
+
+*gegl-0.1.2 (19 Feb 2010)
+
+  19 Feb 2010; Patrick Lauer <patrick@gentoo.org> +gegl-0.1.2.ebuild:
+  Bump for #305627. Some tests fail.
 
   20 Dec 2009; Brent Baude <ranger@gentoo.org> gegl-0.0.22.ebuild:
   Marking gegl-0.0.22 ppc64 for bug 293127
