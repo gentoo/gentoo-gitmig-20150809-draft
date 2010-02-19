@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/mousepad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.19 2010/01/01 21:06:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.20 2010/02/19 08:59:44 ssuominen Exp $
+
+*mousepad-0.2.16-r1 (19 Feb 2010)
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +mousepad-0.2.16-r1.ebuild,
+  +files/mousepad-0.2.16-fix-first-replace.patch,
+  +files/mousepad-0.2.16-resensitize-find-button.patch:
+  Apply Debian 00_resensitize-find-button.patch and
+  01_fix-first-replace.patch wrt #302020 to restore Find and Replace
+  functionality.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mousepad-0.2.16.ebuild:
