@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/aspell-gl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-gl/ChangeLog,v 1.5 2009/10/18 20:22:58 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-gl/ChangeLog,v 1.6 2010/02/19 09:32:21 pva Exp $
+
+*aspell-gl-0.5.2 (19 Feb 2010)
+*aspell-gl-0.5.0 (19 Feb 2010)
+
+  19 Feb 2010; Peter Volkov <pva@gentoo.org> +aspell-gl-0.5.0.ebuild,
+  +aspell-gl-0.5.2.ebuild, -aspell-gl-0.50.0.ebuild:
+  Version bump. Lower version of currently stable version so ~arch users
+  will get 0.5.2.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-gl-0.50.0.ebuild:
   QA fixes; IUSE is not defined
