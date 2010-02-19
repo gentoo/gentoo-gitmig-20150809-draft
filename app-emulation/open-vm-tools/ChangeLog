@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.30 2010/01/02 15:03:02 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.31 2010/02/19 17:53:52 vadimk Exp $
+
+*open-vm-tools-0.0.20100119.226760 (19 Feb 2010)
+
+  19 Feb 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  +open-vm-tools-0.0.20100119.226760.ebuild:
+  Version bump.
 
 *open-vm-tools-0.0.20091216.217847-r1 (02 Jan 2010)
 
