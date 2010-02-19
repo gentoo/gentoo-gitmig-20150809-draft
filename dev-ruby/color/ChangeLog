@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/color
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.8 2010/02/08 19:43:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.9 2010/02/19 10:41:29 flameeyes Exp $
+
+  19 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> color-1.4.1.ebuild:
+  Fix up dependencies: since we don't have to strictly follow the
+  gem-specified dependencies, we can stop depending on hoe at runtime, and
+  stop depending on archive-tar-minitar altogether. Enable Ruby 1.9 and
+  JRuby support.
 
 *color-1.4.1 (08 Feb 2010)
 
