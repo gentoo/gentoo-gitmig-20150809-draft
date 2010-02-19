@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.13 2006/12/23 21:41:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.14 2010/02/19 14:11:46 ulm Exp $
 
 # we only want this for binary-only packages, so we will only be installing
 # the lib used at runtime; no headers and no files to link against
@@ -16,7 +16,7 @@ SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
 	mirror://gentoo/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-patches-${PATCHVER}.tar.bz2"
 
-LICENSE="freedist"
+LICENSE="GPL-2 LGPL-2 BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
