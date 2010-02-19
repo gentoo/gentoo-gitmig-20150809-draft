@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/aspell-sk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sk/ChangeLog,v 1.9 2009/10/18 20:46:25 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sk/ChangeLog,v 1.10 2010/02/19 10:12:16 pva Exp $
+
+*aspell-sk-2.01.2 (19 Feb 2010)
+
+  19 Feb 2010; Peter Volkov <pva@gentoo.org> aspell-sk-0.50.2.ebuild,
+  aspell-sk-0.52.0.ebuild, +aspell-sk-2.01.2.ebuild:
+  Version bump.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-sk-0.50.2.ebuild,
   aspell-sk-0.52.0.ebuild:
