@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.3 2009/12/27 13:33:44 vadimk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.4 2010/02/19 17:53:19 vadimk Exp $
+
+*open-vm-tools-kmod-0.0.20100119.226760 (19 Feb 2010)
+
+  19 Feb 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  +open-vm-tools-kmod-0.0.20100119.226760.ebuild:
+  Version bump, fixes bug 296277. vmxnet3 moved to kernel.
 
   27 Dec 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   open-vm-tools-kmod-0.0.20091216.217847.ebuild:
