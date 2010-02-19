@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.9 2010/02/13 20:43:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.10 2010/02/19 09:30:14 flameeyes Exp $
+
+*pg-0.9.0_pre156 (19 Feb 2010)
+
+  19 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pg-0.9.0_pre156.ebuild:
+  Add pre-release of the 0.9 series gem. Documentation generation is
+  disabled since this package has even more broken Rakefile, reported
+  upstream and will hopefully be fixed before 0.9 final.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> pg-0.8.0.ebuild:
   Add ~ia64/~sparc
