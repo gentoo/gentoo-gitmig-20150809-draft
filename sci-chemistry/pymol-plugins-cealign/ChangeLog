@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol-plugins-cealign
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-cealign/ChangeLog,v 1.1 2010/02/18 22:00:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-cealign/ChangeLog,v 1.2 2010/02/19 10:30:09 jlec Exp $
+
+  19 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  pymol-plugins-cealign-0.9.ebuild:
+  PYMOL_PATH includes EPREFIX, so we should not use it
 
 *pymol-plugins-cealign-0.9 (18 Feb 2010)
 
