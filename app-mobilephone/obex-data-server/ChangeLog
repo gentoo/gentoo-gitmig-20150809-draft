@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.24 2010/01/14 01:27:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.25 2010/02/19 13:29:32 pacho Exp $
+
+  19 Feb 2010; Pacho Ramos <pacho@gentoo.org> obex-data-server-0.4.4.ebuild,
+  obex-data-server-0.4.5.ebuild:
+  Adapt blockers to new obexd ebuilds
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   obex-data-server-0.4.4.ebuild:

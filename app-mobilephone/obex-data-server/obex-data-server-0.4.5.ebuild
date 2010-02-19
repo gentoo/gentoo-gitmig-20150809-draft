@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.5.ebuild,v 1.2 2009/11/21 15:16:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.5.ebuild,v 1.3 2010/02/19 13:29:32 pacho Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ RDEPEND="dev-libs/glib:2
 	imagemagick? ( !gtk? ( media-gfx/imagemagick ) )
 	gtk? ( x11-libs/gtk+ )
 	usb? ( virtual/libusb:0 )
-	!app-mobilephone/obexd"
+	!app-mobilephone/obexd[server]"
+
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
