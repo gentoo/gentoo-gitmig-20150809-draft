@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-fo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fo/ChangeLog,v 1.9 2009/10/18 20:20:59 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fo/ChangeLog,v 1.10 2010/02/19 09:11:26 pva Exp $
+
+  19 Feb 2010; Peter Volkov <pva@gentoo.org> -aspell-fo-0.50.2.ebuild,
+  aspell-fo-0.51.0.ebuild:
+  Remove old.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-fo-0.50.2.ebuild,
   aspell-fo-0.51.0.ebuild:
