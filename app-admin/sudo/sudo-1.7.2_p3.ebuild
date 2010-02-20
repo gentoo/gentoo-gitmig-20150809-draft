@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p2-r2.ebuild,v 1.4 2009/12/26 20:07:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p3.ebuild,v 1.1 2010/02/20 18:58:22 flameeyes Exp $
 
 inherit eutils pam confutils
 
