@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.38-r1.ebuild,v 1.2 2009/11/23 20:02:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.38-r1.ebuild,v 1.3 2010/02/20 17:58:07 abcd Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/lout/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1.4 )"
 RDEPEND="${DEPEND}"
@@ -27,10 +27,10 @@ src_compile() {
 	tc-export CC
 	local myconf
 	use zlib && myconf="$myconf PDF_COMPRESSION=1 ZLIB=-lz"
-	emake COPTS="${CFLAGS}" BINDIR=/usr/bin \
-		LOUTLIBDIR=/usr/share/lout \
-		LOUTDOCDIR=/usr/share/doc/${P} \
-		MANDIR=/usr/share/man/man1 \
+	emake COPTS="${CFLAGS}" BINDIR="${EPREFIX}"/usr/bin \
+		LOUTLIBDIR="${EPREFIX}"/usr/share/lout \
+		LOUTDOCDIR="${EPREFIX}"/usr/share/doc/${PF} \
+		MANDIR="${EPREFIX}"/usr/share/man/man1 \
 		${myconf} lout prg2lout || die "emake prg2lout lout failed"
 }
 
@@ -52,10 +52,10 @@ compile_doc() {
 
 src_install() {
 	local bindir libdir docdir mandir
-	bindir=${D}/usr/bin
-	libdir=${D}/usr/share/lout
-	docdir=${D}/usr/share/doc/${PF}
-	mandir=${D}/usr/share/man/man1
+	bindir=${ED}usr/bin
+	libdir=${ED}usr/share/lout
+	docdir=${ED}usr/share/doc/${PF}
+	mandir=${ED}usr/share/man/man1
 	export LOUTLIB=${libdir}
 	export PATH="${bindir}:${PATH}"
 
@@ -67,10 +67,13 @@ src_install() {
 		MANDIR=${mandir} \
 		install installdoc installman || die "make install failed"
 
-	lout -x -s "${D}"/usr/share/lout/include/init || die "lout init failed"
+	lout -x -s "${ED}"usr/share/lout/include/init || die "lout init failed"
 
 	mv ${docdir}/README{,.docs}
 	dodoc README READMEPDF blurb blurb.short whatsnew
+
+	# stupid build system
+	fperms 755 /usr/share/doc/${PF}/doc/{design,expert,slides,user}
 
 	if use doc ; then
 		einfo "building postscript documentation (may take a while)"
