@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.56 2010/02/19 10:43:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.57 2010/02/20 23:08:55 pacho Exp $
+
+*emul-linux-x86-qtlibs-20100220 (20 Feb 2010)
+
+  20 Feb 2010; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-qtlibs-20100220.ebuild:
+  Version bump with updated packages
 
 *emul-linux-x86-qtlibs-20091231-r1 (19 Feb 2010)
 
