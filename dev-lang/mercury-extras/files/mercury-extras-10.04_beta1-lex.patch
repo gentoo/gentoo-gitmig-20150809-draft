@@ -20,6 +20,8 @@ diff -uN lex/Mmakefile lex/Mmakefile
 +
 +MAIN_TARGET = all
 +
++LIBGRADES := $(filter-out java,$(LIBGRADES))
++
 +.PHONEY: all depend install
 +
 +all: liblex libregex
@@ -27,5 +29,5 @@ diff -uN lex/Mmakefile lex/Mmakefile
 +depend: lex.depend regex.depend
 +
 +install:
-+	$(MMAKE) $(MMAKEFLAGS) liblex.install
-+	$(MMAKE) $(MMAKEFLAGS) libregex.install
++	$(MMAKE) liblex.install
++	$(MMAKE) libregex.install

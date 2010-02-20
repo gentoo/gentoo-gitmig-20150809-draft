@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04_beta1.ebuild,v 1.1 2010/02/13 02:53:06 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04_beta1.ebuild,v 1.2 2010/02/20 08:08:23 keri Exp $
 
 inherit eutils
 
@@ -41,6 +41,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-mercury_tcltk.patch
 	epatch "${FILESDIR}"/${P}-mercury_opengl.patch
 	epatch "${FILESDIR}"/${P}-posix.patch
+	epatch "${FILESDIR}"/${P}-no-java-grade.patch
 
 	if use odbc; then
 		epatch "${FILESDIR}"/${P}-odbc.patch
