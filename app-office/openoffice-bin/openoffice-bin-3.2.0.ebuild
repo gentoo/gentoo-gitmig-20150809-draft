@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.0.ebuild,v 1.1 2010/02/15 13:49:04 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.0.ebuild,v 1.2 2010/02/20 22:04:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -78,7 +78,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	for i in base binfilter calc core01 core02 core03 core04 core05 core06 core07 draw graphicfilter images impress math ooofonts oooimprovement ooolinguistic pyuno testtool writer xsltfilter ; do
 		rpm_unpack "./${UP}/${BASIS}-${i}-${MY_PV3}.${OOARCH}.rpm"
