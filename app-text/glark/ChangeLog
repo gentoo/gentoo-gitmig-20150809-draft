@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.51 2009/12/29 15:11:46 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.52 2010/02/20 17:32:28 abcd Exp $
+
+  20 Feb 2010; Jonathan Callen <abcd@gentoo.org> glark-1.8.0.ebuild:
+  Transfer prefix keywords, bump EAPI
 
   29 Dec 2009; Hans de Graaff <graaff@gentoo.org> glark-1.7.8.ebuild,
   glark-1.8.0.ebuild:
