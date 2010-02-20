@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0.1.ebuild,v 1.1 2010/01/31 01:37:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0.1-r1.ebuild,v 1.1 2010/02/20 14:32:23 anarchy Exp $
 EAPI="2"
 
 inherit eutils multilib mozextension
@@ -103,9 +103,15 @@ src_install() {
 		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${P/-bin}-${X}
 	done
 
-	# Create symbolic link /usr/bin/thunderbird-bin
-	dodir /usr/bin
-	dosym "${MOZILLA_FIVE_HOME}/thunderbird" /usr/bin/thunderbird-bin
+	# Create /usr/bin/thunderbird-bin
+	dodir /usr/bin/
+	cat <<EOF >"${D}"/usr/bin/thunderbird-bin
+#!/bin/sh
+unset LD_PRELOAD
+LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}"
+exec ${MOZILLA_FIVE_HOME}/thunderbird "\$@"
+EOF
+	fperms 0755 /usr/bin/thunderbird-bin
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/${PN}-icon.png
@@ -114,9 +120,6 @@ src_install() {
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
 	doins "${FILESDIR}"/10thunderbird-bin
-
-	# install ldpath env.d
-	doenvd "${FILESDIR}"/71thunderbird-bin
 
 	# Enable very specific settings for thunderbird-3
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs.js \
