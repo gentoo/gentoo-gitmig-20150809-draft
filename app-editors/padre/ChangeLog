@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/padre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.1 2010/02/15 22:22:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.2 2010/02/20 17:25:23 tove Exp $
+
+  20 Feb 2010; Torsten Veller <tove@gentoo.org> padre-0.56.ebuild:
+  Unset DISPLAY
 
   15 Feb 2010; Torsten Veller <tove@gentoo.org> +padre-0.56.ebuild,
   +metadata.xml:
