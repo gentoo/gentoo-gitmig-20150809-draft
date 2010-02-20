@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.2.ebuild,v 1.2 2010/01/15 19:43:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.2.ebuild,v 1.3 2010/02/20 08:11:11 abcd Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit eutils elisp-common
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://wiki.github.com/jwiegley/ledger"
 SRC_URI="http://cloud.github.com/downloads/jwiegley/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos"
 SLOT="0"
 IUSE="emacs debug gnuplot ofx xml"
 
@@ -35,7 +35,7 @@ src_configure() {
 		$(use_enable xml) \
 		$(use_enable ofx) \
 		$(use_enable debug) \
-		$(use_with	 emacs lispdir "${D}${SITELISP}/${PN}")
+		$(use_with emacs lispdir "${ED}${SITELISP}/${PN}")
 }
 
 src_install() {
@@ -50,7 +50,7 @@ src_install() {
 	einstall || die "Installation failed!"
 
 	# Remove timeclock since it is part of Emacs
-	rm -f "${D}${SITELISP}/${PN}"/timeclock.*
+	rm -f "${ED}${SITELISP}/${PN}"/timeclock.*
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
