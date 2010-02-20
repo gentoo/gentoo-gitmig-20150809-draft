@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.91 2010/02/18 00:07:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.92 2010/02/20 09:55:06 ayoy Exp $
+
+*qt-core-4.6.2-r1 (20 Feb 2010)
+*qt-core-4.6.1-r1 (20 Feb 2010)
+
+  20 Feb 2010; Dominik Kapusta <ayoy@gentoo.org>
+  +files/qt-4.6-nox11r6.patch, -qt-core-4.6.1.ebuild,
+  +qt-core-4.6.1-r1.ebuild, -qt-core-4.6.2.ebuild, +qt-core-4.6.2-r1.ebuild:
+  Remove X11R6 from include dirs and libdirs in mkspecs (bug #305001)
 
   18 Feb 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
   added exceptions USE flag description

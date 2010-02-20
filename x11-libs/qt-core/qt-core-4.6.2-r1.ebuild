@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.1.ebuild,v 1.5 2010/02/15 15:08:44 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.6.2-r1.ebuild,v 1.1 2010/02/20 09:55:06 ayoy Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -20,6 +20,7 @@ PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,qt3support] )"
 
 PATCHES=(
 	"${FILESDIR}/qt-4.6-nolibx11.patch"
+	"${FILESDIR}/qt-4.6-nox11r6.patch"
 )
 
 pkg_setup() {
