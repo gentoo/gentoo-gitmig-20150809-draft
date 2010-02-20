@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.13 2010/02/07 09:51:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.14 2010/02/20 05:30:58 dirtyepic Exp $
+
+*wxsvg-1.0.2-r1 (20 Feb 2010)
+
+  20 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> +wxsvg-1.0.2-r1.ebuild,
+  +files/wxsvg-1.0.2-external-expat.patch:
+  Add support for building against system expat. (bug #249625 by Diego)
 
 *wxsvg-1.0.2 (07 Feb 2010)
 
