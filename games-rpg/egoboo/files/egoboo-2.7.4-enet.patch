@@ -1,0 +1,23 @@
+--- game/Makefile.unix.old	2010-02-20 22:53:56.000000000 +0100
++++ game/Makefile.unix	2010-02-20 22:56:07.000000000 +0100
+@@ -22,16 +22,16 @@
+ 
+ CC      := gcc
+ OPT     := -Os -Wall
+-INC     := -I. -I../enet/include -I.. ${SDLCONF_I}
+-CFLAGS  := ${OPT} ${INC}
+-LDFLAGS := ${SDLCONF_L} -lSDL_ttf -lSDL_mixer -lGL -lGLU -lSDL_image
++INC     := -I. -I.. ${SDLCONF_I} -DENET11
++CFLAGS  := ${CFLAGS} ${INC}
++LDFLAGS := ${SDLCONF_L} -lenet -lSDL_ttf -lSDL_mixer -lGL -lGLU -lSDL_image
+ 
+ EGO_BIN := egoboo
+ 
+ all: ${EGO_BIN}
+    
+ 
+-${EGO_BIN}: ${EGO_OBJ} ${ENET_OBJ}
++${EGO_BIN}: ${EGO_OBJ}
+ 	${CC} -o $@ $^ ${LDFLAGS}
+ 
+ install: ${EGO_BIN}

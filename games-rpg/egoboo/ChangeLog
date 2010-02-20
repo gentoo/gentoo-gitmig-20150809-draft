@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/egoboo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.15 2007/05/27 19:30:04 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.16 2010/02/20 22:35:15 tupone Exp $
+
+*egoboo-2.7.4 (20 Feb 2010)
+
+  20 Feb 2010; Tupone Alfredo <tupone@gentoo.org> +egoboo-2.7.4.ebuild,
+  +files/egoboo-2.7.4-enet.patch:
+  Version bump to 2.7.4 Bug #193403 by Matija Suklje (hook)
+  Fix ELF file installed in /usr/share. Bug #305243 by flameeyes@gentoo.org
 
 *egoboo-2.22-r1 (27 May 2007)
 
