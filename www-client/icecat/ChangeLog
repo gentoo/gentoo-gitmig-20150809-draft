@@ -1,6 +1,10 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.15 2010/02/13 12:35:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.16 2010/02/20 00:31:42 anarchy Exp $
+
+  20 Feb 2010; <anarchy@gentoo.org> -icecat-3.5.4.ebuild,
+  -icecat-3.5.5.ebuild:
+  remove stale ebuilds
 
 *icecat-3.6-r1 (13 Feb 2010)
 
