@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20090215.ebuild,v 1.1 2010/01/17 23:03:31 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20090215.ebuild,v 1.2 2010/02/20 19:29:44 abcd Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit eutils versionator toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://invisible-island.net/cdk/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="examples"
 
 DEPEND=">=sys-libs/ncurses-5.2"
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		DOCUMENT_DIR="${D}/usr/share/doc/${MY_P}" install \
+		DOCUMENT_DIR="${ED}/usr/share/doc/${MY_P}" install \
 		|| die "emake install failed"
 
 	if $(use examples); then
