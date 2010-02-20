@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.2.ebuild,v 1.1 2010/02/19 15:53:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.2.ebuild,v 1.2 2010/02/20 18:11:46 patrick Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="cairo debug doc ffmpeg jpeg mmx openexr png raw sdl sse svg v4l"
 DEPEND=">=media-libs/babl-0.1.2
 	>=dev-libs/glib-2.22.0
 	media-libs/libpng
-	>=x11-libs/gtk+-2.14.0
+	>=x11-libs/gtk+-2.18.0
 	x11-libs/pango
 	cairo? ( x11-libs/cairo )
 	doc? ( app-text/asciidoc
