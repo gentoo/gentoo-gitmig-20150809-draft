@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.674 2010/02/11 01:14:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.675 2010/02/20 01:50:35 zmedico Exp $
+
+*portage-2.2_rc63 (19 Feb 2010)
+
+  19 Feb 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc63.ebuild:
+  2.2_rc63 version bump. This fixes bug #268724 (make --unmerge suggest
+  --depclean for safety), bug #277902 (make quickpkg insert comment in
+  config file placeholders), bug #295197 (show newline when dispatch-conf
+  exits), bug #298141 (make /etc/portage/sets relative to PORTAGE_CONFIGROOT),
+  bug #298479 (don't export invalid USER variable), bug #302764 (fix --regen
+  to handle nested overlays correctly), bug #302937 (handle declare -r in
+  environment.bz2), bug #303211 (fix SIZE digest verification failure with
+  old binhost protocol), bug #303401 (don't emerge.log in fetchonly mode),
+  bug #303445 (fix mixed mask messages from different package.mask files),
+  bug #303519 (deprecation warning about internal dep_getkey usage),
+  bug #303567 (merge libc asap), bug #304793 (note in --newuse docs that
+  --selective is implied), and bug #305393 (fix dispatch-conf to handle sdiff
+  from diffutils-2.9).
 
   11 Feb 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.7.16.ebuild,
   portage-2.1.7.17.ebuild, portage-2.2_rc62.ebuild:
