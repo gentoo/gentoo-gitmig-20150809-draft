@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcanberra
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.30 2009/11/04 22:39:49 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.31 2010/02/20 13:58:20 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libcanberra-0.22.ebuild:
+  Install HTML documentation to /usr/share/doc/${PF}/html.
 
 *libcanberra-0.22 (04 Nov 2009)
 
