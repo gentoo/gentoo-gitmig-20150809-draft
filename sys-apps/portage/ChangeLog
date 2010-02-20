@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.676 2010/02/20 01:58:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.677 2010/02/20 09:49:06 zmedico Exp $
 
   19 Feb 2010; Zac Medico <zmedico@gentoo.org> ChangeLog:
   Prune old ChangeLog entries.
@@ -20,7 +20,11 @@
   bug #303519 (deprecation warning about internal dep_getkey usage),
   bug #303567 (merge libc asap), bug #304793 (note in --newuse docs that
   --selective is implied), and bug #305393 (fix dispatch-conf to handle sdiff
-  from diffutils-2.9).
+  from diffutils-2.9). The new --rebuilt-binaries option will replace
+  installed packages with binary packages that have been rebuilt. Rebuilds
+  are detected by comparison of BUILD_TIME package metadata. This option is
+  enabled automatically when using binary packages (--usepkg or --getbinpkg)
+  together with --update and --deep.
 
   11 Feb 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.7.16.ebuild,
   portage-2.1.7.17.ebuild, portage-2.2_rc62.ebuild:
