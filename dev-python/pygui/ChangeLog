@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/ChangeLog,v 1.1 2010/02/19 18:22:59 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/ChangeLog,v 1.2 2010/02/20 19:01:38 grozin Exp $
+
+*pygui-2.2-r1 (21 Feb 2010)
+
+  21 Feb 2010; Andrey Grozin <grozin@gentoo.org> -pygui-2.2.ebuild,
+  +pygui-2.2-r1.ebuild, +files/pygui-2.2-resources.patch:
+  Fixed a bug: resources were not installed
 
 *pygui-2.2 (20 Feb 2010)
 
