@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.506 2010/02/10 21:10:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.507 2010/02/20 17:46:28 suka Exp $
+
+*openoffice-3.2.0 (20 Feb 2010)
+
+  20 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
+  +openoffice-3.2.0.ebuild, +files/gentoo-3.2.0.diff:
+  Bump to OpenOffice.org 3.2.0, remove templates integration for now, breaks
+  the build for me
 
   10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   openoffice-3.1.1.ebuild:
