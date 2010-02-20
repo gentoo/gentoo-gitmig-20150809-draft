@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8-r1.ebuild,v 1.2 2010/01/12 13:11:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8-r1.ebuild,v 1.3 2010/02/20 20:03:47 patrick Exp $
 
 EAPI="2"
 
@@ -177,6 +177,10 @@ pkg_postinst() {
 				;;
 		esac
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/zabbix-as-needed.patch"
 }
 
 src_configure() {
