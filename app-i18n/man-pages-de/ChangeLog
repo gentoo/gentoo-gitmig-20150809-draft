@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-de
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.9 2010/01/03 05:29:15 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.10 2010/02/20 21:57:07 ulm Exp $
+
+  20 Feb 2010; Ulrich Mueller <ulm@gentoo.org> man-pages-de-0.5-r1.ebuild:
+  Fix LICENSE.
 
   03 Jan 2010; Stephanie Lockwood-Childs <wormo@gentoo.org>
   man-pages-de-0.5-r1.ebuild:
