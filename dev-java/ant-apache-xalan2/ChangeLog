@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/ant-apache-xalan2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.1 2010/02/20 23:36:03 caster Exp $
+
+*ant-apache-xalan2-1.8.0 (20 Feb 2010)
+
+  20 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  +ant-apache-xalan2-1.8.0.ebuild, +metadata.xml:
+  New part of dev-java/ant as of 1.8.0, bug #305929.
+
