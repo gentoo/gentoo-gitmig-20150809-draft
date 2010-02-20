@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.1.4-r1.ebuild,v 1.1 2010/02/14 14:23:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.1.4-r1.ebuild,v 1.2 2010/02/20 19:23:54 patrick Exp $
 
 EAPI=2
 
@@ -21,6 +21,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
 PROPERTIES="interactive"
+
+DEPEND="app-arch/unzip"
 
 RDEPEND="!!app-emulation/virtualbox-ose
 	!app-emulation/virtualbox-ose-additions

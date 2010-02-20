@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.74 2010/02/14 14:23:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.75 2010/02/20 19:23:54 patrick Exp $
+
+  20 Feb 2010; Patrick Lauer <patrick@gentoo.org>
+  virtualbox-bin-3.1.4-r1.ebuild:
+  Adding unzip depend for #302127
 
 *virtualbox-bin-3.1.4-r1 (14 Feb 2010)
 
