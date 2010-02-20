@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ant-testutil-1.8.0.ebuild,v 1.1 2010/02/20 23:38:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ant-testutil-1.8.0.ebuild,v 1.2 2010/02/20 23:39:02 caster Exp $
 
 EAPI="1"
 
@@ -15,6 +15,8 @@ DEPEND="dev-java/junit:0
 	~dev-java/ant-trax-${PV}
 	~dev-java/ant-junit-${PV}"
 RDEPEND=""
+
+IUSE=""
 
 # the build system builds much more than it actually packages, so there are many
 # build-only deps, but since those are quite common, it wasn't worth to patch it
