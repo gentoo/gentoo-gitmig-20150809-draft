@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2.90.ebuild,v 1.1 2010/02/19 16:42:50 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2.90.ebuild,v 1.2 2010/02/20 18:29:04 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -64,6 +64,10 @@ RDEPEND="${DEPEND}
 	>=media-sound/amarok-utils-${PV}
 	semantic-desktop? ( >=kde-base/nepomuk-${KDE_MINIMAL} )
 "
+
+# Tests require gmock - http://code.google.com/p/gmock/
+# It's not in the tree yet
+RESTRICT="test"
 
 # Only really required for live ebuild, to skip git_src_prepare
 src_prepare() {
