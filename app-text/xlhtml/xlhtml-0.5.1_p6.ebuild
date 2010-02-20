@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.1_p6.ebuild,v 1.1 2009/02/15 18:05:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.1_p6.ebuild,v 1.2 2010/02/20 18:32:13 abcd Exp $
+
+EAPI=3
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,14 +19,12 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${MY_PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND=""
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}"/${PN}_${MY_PV}-${DEB_PR}.diff
 	# This is needed specifically for depcomp, which is necessary for
 	# building xlhtml, but isn't included.
@@ -41,5 +41,5 @@ src_install() {
 	docinto xlhtml
 	dodoc xlhtml/{ChangeLog,README,THANKS,TODO}
 	rm -rf xlhtml/contrib/CVS
-	cp -pPR xlhtml/contrib "${D}"/usr/share/doc/${PF}/xlhtml
+	cp -pPR xlhtml/contrib "${ED}"/usr/share/doc/${PF}/xlhtml
 }
