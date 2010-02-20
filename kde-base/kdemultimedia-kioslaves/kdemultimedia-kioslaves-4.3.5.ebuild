@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-4.3.5.ebuild,v 1.1 2010/01/25 15:20:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-4.3.5.ebuild,v 1.2 2010/02/20 10:32:18 ssuominen Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ KMMODULE="kioslave"
 inherit kde4-meta
 
 DESCRIPTION="KDE kioslaves from the kdemultimedia package"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook encode flac vorbis"
 
 # 4 of 9 tests fail. Last checked for 4.2.88

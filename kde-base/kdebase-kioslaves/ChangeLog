@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.186 2010/02/09 00:19:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.187 2010/02/20 10:25:02 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  kdebase-kioslaves-4.3.5-r1.ebuild:
+  amd64/x86 stable wrt #300393
 
 *kdebase-kioslaves-4.4.0 (08 Feb 2010)
 

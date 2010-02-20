@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.149 2010/02/09 07:21:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.150 2010/02/20 11:43:23 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kttsd-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
   09 Feb 2010; Jonathan Callen <abcd@gentoo.org> metadata.xml:
   Update metadata.xml from overlay

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.39 2010/02/09 00:21:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.40 2010/02/20 11:33:22 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> ksirk-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
 *ksirk-4.4.0 (08 Feb 2010)
 

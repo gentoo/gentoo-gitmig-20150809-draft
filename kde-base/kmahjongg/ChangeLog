@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmahjongg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.142 2010/02/09 00:20:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.143 2010/02/20 11:08:57 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  kmahjongg-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
 *kmahjongg-4.4.0 (08 Feb 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-menu-icons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.26 2010/02/09 06:54:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.27 2010/02/20 10:25:59 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  kdebase-menu-icons-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
   09 Feb 2010; Jonathan Callen <abcd@gentoo.org> metadata.xml:
   Update metadata.xml from overlay

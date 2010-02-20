@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.3.5.ebuild,v 1.1 2010/01/25 16:41:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.3.5.ebuild,v 1.2 2010/02/20 11:27:39 ssuominen Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ KMMODULE="java/krossjava"
 inherit java-pkg-2 java-ant-2 kde4-meta eutils
 
 DESCRIPTION="Java plugin for the kdelibs/kross scripting framework."
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="

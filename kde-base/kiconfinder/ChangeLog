@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kiconfinder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconfinder/ChangeLog,v 1.41 2010/02/09 00:15:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconfinder/ChangeLog,v 1.42 2010/02/20 11:01:38 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  kiconfinder-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
 *kiconfinder-4.4.0 (08 Feb 2010)
 

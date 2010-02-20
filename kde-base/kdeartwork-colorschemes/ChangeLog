@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-colorschemes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.48 2010/02/09 00:16:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.49 2010/02/20 10:17:17 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  kdeartwork-colorschemes-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
 *kdeartwork-colorschemes-4.4.0 (08 Feb 2010)
 

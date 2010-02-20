@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.60 2010/02/10 16:39:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.61 2010/02/20 12:08:10 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  pykde4-4.3.5-r1.ebuild:
+  amd64/x86 stable wrt #300393
 
   10 Feb 2010; Jeroen Roovers <jer@gentoo.org> pykde4-4.3.3-r1.ebuild:
   Stable for HPPA (bug #303929).

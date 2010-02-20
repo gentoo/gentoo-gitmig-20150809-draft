@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.140 2010/02/09 00:15:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.141 2010/02/20 11:19:32 ssuominen Exp $
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> konquest-4.3.5.ebuild:
+  amd64/x86 stable wrt #300393
 
 *konquest-4.4.0 (08 Feb 2010)
 
