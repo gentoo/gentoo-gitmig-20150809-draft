@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.95 2010/02/14 19:33:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.96 2010/02/20 17:46:31 ssuominen Exp $
 
 # These need libieee1284 which is amd64/x86 only.
 sane_backends_canon_pp
 sane_backends_hpsj5s
 sane_backends_mustek_pp
+sane_backends_qcam
 
 # Gluon still don't have release.
 gluon
