@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45.ebuild,v 1.3 2009/03/26 14:24:48 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45-r1.ebuild,v 1.1 2010/02/20 20:36:49 abcd Exp $
+
+EAPI=3
 
 inherit eutils autotools
 
@@ -25,7 +27,7 @@ SRC_URI="http://dev.gentoo.org/~drizzt/distfiles/${PN}-${GNULIB_COMMIT_GITID}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~ppc-aix ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc"
 
 DEPEND=""
@@ -34,19 +36,39 @@ RDEPEND=""
 S="${WORKDIR}"/${PN}
 MY_S="${WORKDIR}"/${P}
 
-src_unpack() {
+src_prepare() {
 	local requested_gnulib_modules
 
 	case ${CHOST} in
 		*-freebsd*)
 			requested_gnulib_modules="mathl strndup"
 			;;
+		*-solaris2.8|*-solaris2.9)
+			# Don't remove dirfd!
+			requested_gnulib_modules="alphasort dirfd getopt scandir setenv strcasestr stdint strndup xvasprintf"
+			;;
+		*-solaris2.10|*-solaris2.11)
+			requested_gnulib_modules="dirfd getopt strcasestr strndup xvasprintf"
+			;;
+		*-aix*)
+			requested_gnulib_modules="alphasort dirfd getopt scandir strcasestr strndup xvasprintf"
+			;;
+		*-hpux*)
+			requested_gnulib_modules="atoll dirfd getopt setenv strcasestr strndup xvasprintf"
+			;;
+		*-interix*)
+			requested_gnulib_modules="atoll getopt scandir setenv strcasestr strndup xvasprintf"
+			;;
+		*-irix*)
+			requested_gnulib_modules="getopt strcasestr strndup xvasprintf"
+			;;
 	esac
 
-	unpack ${A}
-	cd "${S}" || die
 	epatch "${FILESDIR}"/${PN}-2008.07.23-rpl_getopt.patch
 	epatch "${FILESDIR}"/${P}-scandir.patch
+
+	# Solaris 9 ksh makes gnulib-tool to coredump
+	sed -i "1s:/bin/sh:${EPREFIX}/bin/sh:" gnulib-tool || die "sed failed"
 
 	# Remove the broken pxref
 	sed -i '$d' doc/ld-version-script.texi || die "cannot fix ld-version-script.texi"
@@ -73,12 +95,16 @@ include_HEADERS += \1,;
 	eautoreconf
 }
 
+src_configure() {
+	cd "${MY_S}" || return
+	econf --prefix="${EPREFIX}"/usr/$(get_libdir)/${PN}
+}
+
 src_compile() {
 	if use doc; then
 		emake -C doc info html || die "emake failed"
 	fi
 	cd "${MY_S}" || return
-	econf --prefix=/usr/$(get_libdir)/${PN}
 	emake || die "cannot make ${P}"
 }
 

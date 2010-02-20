@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gnulib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.10 2009/10/25 20:18:09 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/ChangeLog,v 1.11 2010/02/20 20:36:49 abcd Exp $
+
+*gnulib-2009.03.03.14.07.45-r1 (20 Feb 2010)
+
+  20 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  -gnulib-2009.03.03.14.07.45.ebuild, +gnulib-2009.03.03.14.07.45-r1.ebuild:
+  Transfer prefix keywords, bump EAPI
 
   25 Oct 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove drizzt from metadata.xml (#149111)
