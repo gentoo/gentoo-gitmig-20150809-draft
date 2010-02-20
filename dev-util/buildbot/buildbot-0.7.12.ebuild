@@ -1,18 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.12.ebuild,v 1.1 2010/02/19 15:33:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.12.ebuild,v 1.2 2010/02/20 18:48:48 arfrever Exp $
 
-EAPI=1
-NEED_PYTHON="2.4"
+EAPI="2"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="trial"
+DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
+
+inherit distutils eutils
 
 MY_PV="${PV/_p/p}"
 MY_P="${PN}-${MY_PV}"
 
-inherit eutils distutils
-
 DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes"
 HOMEPAGE="http://buildbot.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -30,6 +34,7 @@ DEPEND="${CDEPEND}
 			dev-python/twisted-web
 			dev-python/twisted-words )
 	doc? ( =dev-python/epydoc-2* )"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -37,26 +42,17 @@ pkg_setup() {
 	enewuser buildbot
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/${PN}-0.7.5-root-skip-tests.patch"
 }
 
 src_compile() {
 	distutils_src_compile
-	if use doc; then
-		PYTHONPATH=. "${python}" docs/epyrun -o docs/reference || \
-			die "epyrun failed"
-	fi
-}
 
-src_test() {
-	local trialopts
-	if ! has_version ">=dev-python/twisted-2.2"; then
-		trialopts=-R
+	if use doc; then
+		PYTHONPATH="." "$(PYTHON -f)" docs/epyrun -o docs/reference || die "epyrun failed"
 	fi
-	PYTHONPATH=. trial ${trialopts} buildbot || die "tests failed!"
 }
 
 src_install() {
