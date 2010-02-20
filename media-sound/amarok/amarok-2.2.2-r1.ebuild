@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2-r1.ebuild,v 1.1 2010/02/19 16:58:53 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2-r1.ebuild,v 1.2 2010/02/20 19:44:17 ssuominen Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ else
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp semantic-desktop"
 
