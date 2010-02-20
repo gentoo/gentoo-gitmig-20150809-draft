@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.51 2010/02/02 12:59:36 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.52 2010/02/20 19:05:22 hanno Exp $
+
+  20 Feb 2010; Hanno Boeck <hanno@gentoo.org> compiz-0.8.4-r2.ebuild,
+  +files/compiz-0.8.4-kde44.patch, +files/compiz-0.8.4-libpng14.patch:
+  Compilation fixes for KDE 4.4 and libpng 1.4.
 
 *compiz-0.8.4-r2 (02 Feb 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.4-r2.ebuild,v 1.1 2010/02/02 12:59:36 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.4-r2.ebuild,v 1.2 2010/02/20 19:05:22 hanno Exp $
 
 EAPI="2"
 
@@ -80,6 +80,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-crash-on-opening-windows.patch
 	epatch "${FILESDIR}"/${P}-place-plugin.patch
 	epatch "${FILESDIR}"/${P}-window-region-calculation.patch
+
+	epatch "${FILESDIR}/${P}-libpng14.patch"
+	epatch "${FILESDIR}/${P}-kde44.patch"
 
 	if ! use gnome; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
