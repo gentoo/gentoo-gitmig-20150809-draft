@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.8.1.ebuild,v 1.6 2009/11/21 18:21:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.8.1.ebuild,v 1.7 2010/02/20 15:03:22 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils qt4 games
 
 DESCRIPTION="Qt version of the classic boardgame checkers"
-HOMEPAGE="http://kcheckers.wibix.de/"
+HOMEPAGE="http://qcheckers.sourceforge.net/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
