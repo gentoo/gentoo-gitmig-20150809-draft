@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-SPF
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/ChangeLog,v 1.6 2010/01/30 18:17:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/ChangeLog,v 1.7 2010/02/20 17:21:56 armin76 Exp $
+
+  20 Feb 2010; Raúl Porcel <armin76@gentoo.org> Mail-SPF-2.007.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #302880
 
   30 Jan 2010; Jeroen Roovers <jer@gentoo.org> Mail-SPF-2.007.ebuild:
   Marked ~hppa (bug #302880).

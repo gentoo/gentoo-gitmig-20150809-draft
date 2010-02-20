@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/Mail-SPF-2.007.ebuild,v 1.2 2010/01/30 18:17:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/Mail-SPF-2.007.ebuild,v 1.3 2010/02/20 17:21:56 armin76 Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
 
 RDEPEND="dev-perl/Error
 	dev-perl/URI
