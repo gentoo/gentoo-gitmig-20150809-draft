@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.2-r1.ebuild,v 1.1 2010/02/10 10:56:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.2-r1.ebuild,v 1.2 2010/02/20 17:28:22 abcd Exp $
 
-EAPI=2
+EAPI=3
 
 inherit base
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="+edit gpm nls samba slang X"
 
 RDEPEND=">=dev-libs/glib-2.8:2
@@ -52,8 +52,8 @@ src_configure() {
 		--enable-charset \
 		$(use_with X x) \
 		$(use_with samba) \
-		--with-configdir=/etc/samba \
-		--with-codepagedir=/var/lib/samba/codepages \
+		--with-configdir="${EPREFIX}"/etc/samba \
+		--with-codepagedir="${EPREFIX}"/var/lib/samba/codepages \
 		$(use_with gpm gpm-mouse) \
 		--with-screen=${myscreen} \
 		$(use_with edit)
@@ -67,5 +67,5 @@ src_install() {
 pkg_postinst() {
 	elog "To enable exiting to latest working directory,"
 	elog "put this into your ~/.bashrc:"
-	elog ". /usr/libexec/mc/mc.sh"
+	elog ". ${EPREFIX}/usr/libexec/mc/mc.sh"
 }
