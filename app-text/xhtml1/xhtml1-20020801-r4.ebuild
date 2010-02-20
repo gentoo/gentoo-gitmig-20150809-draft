@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r4.ebuild,v 1.4 2008/01/19 15:16:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r4.ebuild,v 1.5 2010/02/20 18:26:09 abcd Exp $
+
+EAPI=3
 
 inherit sgml-catalog eutils
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.w3.org/TR/xhtml1/xhtml1.tgz"
 LICENSE="W3C"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-text/sgml-common
@@ -21,19 +23,16 @@ sgml-catalog_cat_include "/etc/sgml/${PN}.cat" \
 	"/usr/share/sgml/${PN}/xhtml.soc"
 
 xml_catalog_setup() {
-	CATALOG="${ROOT}etc/xml/catalog"
-	XMLTOOL="${ROOT}usr/bin/xmlcatalog"
-	DTDDIR="${ROOT}usr/share/sgml/${PN}"
+	CATALOG="${EROOT}etc/xml/catalog"
+	XMLTOOL="${EROOT}usr/bin/xmlcatalog"
+	DTDDIR="${EROOT}usr/share/sgml/${PN}"
 
 	[ -x "${XMLTOOL}" ] || return 1
 
 	return 0
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/DTD
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-catalog.patch
 }
 
