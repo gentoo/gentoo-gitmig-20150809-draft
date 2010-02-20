@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.3.ebuild,v 1.2 2010/02/12 17:33:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.3.ebuild,v 1.3 2010/02/20 18:12:19 jer Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit savedconfig toolchain-funcs
 
 DESCRIPTION="a simple web browser based on WebKit/GTK+"
 HOMEPAGE="http://surf.suckless.org/"
@@ -26,6 +26,7 @@ src_prepare() {
 		-e 's|^LDFLAGS.*|LDFLAGS += $(LIBS)|g' \
 		-e 's|^CFLAGS.*|CFLAGS += -std=c99 -pedantic -Wall $(INCS) $(CPPFLAGS)|g' \
 		config.mk Makefile || die "sed failed"
+	restore_config config.h
 }
 
 src_compile() {
@@ -34,4 +35,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed"
+	save_config config.h
 }
