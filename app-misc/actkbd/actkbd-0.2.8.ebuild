@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/actkbd-0.2.8.ebuild,v 1.2 2008/06/21 13:19:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/actkbd-0.2.8.ebuild,v 1.3 2010/02/21 21:54:50 swegener Exp $
 
 inherit linux-info eutils toolchain-funcs
 
 DESCRIPTION="A keyboard shortcut daemon"
-HOMEPAGE="http://www.softlab.ece.ntua.gr/~thkala/projects/actkbd/"
-SRC_URI="http://www.softlab.ece.ntua.gr/~thkala/projects/actkbd/files/${P}.tar.bz2"
+HOMEPAGE="http://users.softlab.ece.ntua.gr/~thkala/projects/actkbd/"
+SRC_URI="http://users.softlab.ece.ntua.gr/~thkala/projects/actkbd/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
