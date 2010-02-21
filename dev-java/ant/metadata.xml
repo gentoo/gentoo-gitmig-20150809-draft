@@ -16,5 +16,6 @@
     <flag name="oro">Enable Apache Oro Ant tasks</flag>
     <flag name="regexp">Enable Apache Regexp Ant tasks</flag>
     <flag name="resolver">Enable Apache Resolver Ant tasks</flag>
+    <flag name="testutil">Enable optional test util classes</flag>
   </use>
 </pkgmetadata>
