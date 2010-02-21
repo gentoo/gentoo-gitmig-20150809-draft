@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.3.1.ebuild,v 1.2 2010/02/21 16:06:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.3.1.ebuild,v 1.3 2010/02/21 17:17:08 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,6 +34,7 @@ src_prepare() {
 	distutils_src_prepare
 
 	epatch "${FILESDIR}/${P}-python-3.patch"
+	epatch "${FILESDIR}/${P}-python-3.2.patch"
 }
 
 src_compile(){
