@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.10 2010/02/16 07:51:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.11 2010/02/21 00:31:27 abcd Exp $
+
+  21 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  rake-compiler-0.7.0-r1.ebuild:
+  Transfer prefix keywords (no other changes)
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   rake-compiler-0.7.0-r1.ebuild:
