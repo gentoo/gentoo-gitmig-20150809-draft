@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.1-r1.ebuild,v 1.2 2010/02/21 01:20:02 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.1-r1.ebuild,v 1.3 2010/02/21 01:48:21 wired Exp $
 
 EAPI="2"
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/"${PN}"-as-needed.patch
 	eautoreconf
+	# fix test fail
+	echo "uget-gtk/ug_list_view.c" >> "${S}"/po/POTFILES.in
 }
 
 src_configure() {
