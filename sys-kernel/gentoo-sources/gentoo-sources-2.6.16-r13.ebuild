@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.16-r13.ebuild,v 1.7 2009/07/31 00:55:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.16-r13.ebuild,v 1.8 2010/02/21 21:44:14 mpagano Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -11,7 +11,7 @@ detect_version
 detect_arch
 
 KEYWORDS="~alpha amd64 arm ~ia64 ~ppc ~ppc64 s390 sparc x86"
-HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
+HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
