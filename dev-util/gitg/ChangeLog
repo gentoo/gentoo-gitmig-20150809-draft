@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gitg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/ChangeLog,v 1.10 2009/12/07 11:24:57 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/ChangeLog,v 1.11 2010/02/21 16:40:39 sping Exp $
+
+*gitg-0.0.6 (21 Feb 2010)
+
+  21 Feb 2010; Sebastian Pipping <sping@gentoo.org> +gitg-0.0.6.ebuild:
+  Bump to 0.0.6
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> gitg-0.0.5.ebuild:
   amd64 stable, bug #288185
