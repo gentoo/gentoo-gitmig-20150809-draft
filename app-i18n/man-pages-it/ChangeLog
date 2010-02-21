@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-it
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.12 2008/06/29 02:11:54 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.13 2010/02/21 15:43:25 ulm Exp $
+
+  21 Feb 2010; Ulrich Mueller <ulm@gentoo.org> man-pages-it-2.65.ebuild,
+  man-pages-it-2.80.ebuild:
+  Fix LICENSE.
 
 *man-pages-it-2.80 (29 Jun 2008)
 
