@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-fr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.5 2007/03/26 13:45:30 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.6 2010/02/21 00:33:16 ulm Exp $
+
+  21 Feb 2010; Ulrich Mueller <ulm@gentoo.org> man-pages-fr-2.39.0.ebuild:
+  Fix LICENSE.
 
   26 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   -man-pages-fr-1.64.0.ebuild, man-pages-fr-2.39.0.ebuild:
