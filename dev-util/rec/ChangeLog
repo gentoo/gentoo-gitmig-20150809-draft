@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rec
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.6 2008/10/14 03:23:02 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.7 2010/02/21 11:59:15 patrick Exp $
+
+  21 Feb 2010; Patrick Lauer <patrick@gentoo.org> rec-1.6.ebuild:
+  Adding ~amd64 for #302892
 
   14 Oct 2008; Jeremy Olexa <darkside@gentoo.org> rec-1.6.ebuild:
   (non maintainer commit) restrict stripping on dev-util/rec because that
