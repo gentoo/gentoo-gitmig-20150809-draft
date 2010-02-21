@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cvs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.136 2010/02/21 03:06:44 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.137 2010/02/21 15:53:13 grobian Exp $
+
+*cvs-1.11.22.1-r1 (21 Feb 2010)
+*cvs-1.11.21-r1 (21 Feb 2010)
+
+  21 Feb 2010; Fabian Groffen <grobian@gentoo.org> +cvs-1.11.21-r1.ebuild,
+  +cvs-1.11.22.1-r1.ebuild:
+  Revbumps for Prefix, EAPI 3. Prefix/r47633/haubi: disable implicit
+  dependency on gssapi. Add Prefix keywords to versions that are NOT masked
+  in Prefix (many oddities found in 1.12.12).
 
 *cvs-1.12.12-r7 (21 Feb 2010)
 
