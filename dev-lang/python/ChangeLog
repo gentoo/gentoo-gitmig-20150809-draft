@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.451 2010/02/13 16:34:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.452 2010/02/21 13:51:12 arfrever Exp $
+
+  21 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.4.6.ebuild, python-2.5.4-r4.ebuild, python-2.6.4-r1.ebuild,
+  python-3.1.1-r1.ebuild:
+  Don't install idle${SLOT} and idlelib module with USE="-tk" (bug #237788).
+  Enable "ssl" USE flag by default via IUSE (bug #304891).
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> python-2.5.4-r4.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #303005
