@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.132 2010/02/02 22:16:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.133 2010/02/21 00:18:16 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -160,25 +160,11 @@ SRC_URI="${SERVER_URI}"
 		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://dev.gentoo.org/~robbat2/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
 
-# PBXT engine
-mysql_version_is_at_least "5.1.12" \
-&& [[ -n "${PBXT_VERSION}" ]] \
-&& PBXT_P="pbxt-${PBXT_VERSION}" \
-&& PBXT_SRC_URI="mirror://sourceforge/pbxt/${PBXT_P}.tar.gz" \
-&& SRC_URI="${SRC_URI} pbxt? ( ${PBXT_SRC_URI} )"
-
-# Get the percona tarball if XTRADB_VER and PERCONA_VER are both set
-mysql_version_is_at_least "5.1.26" \
-&& [[ -n "${XTRADB_VER}" && -n "${PERCONA_VER}" ]] \
-&& XTRADB_P="percona-xtradb-${XTRADB_VER}" \
-&& XTRADB_SRC_URI="http://www.percona.com/${PN}/xtradb/${PERCONA_VER}/source/${XTRADB_P}.tar.gz" \
-&& SRC_URI="${SRC_URI} xtradb? ( ${XTRADB_SRC_URI} )"
-
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="big-tables debug embedded minimal ${IUSE_DEFAULT_ON}perl selinux ssl static"
+IUSE="big-tables debug embedded minimal ${IUSE_DEFAULT_ON}perl selinux ssl static test"
 
 mysql_version_is_at_least "4.1" \
 && IUSE="${IUSE} latin1"
@@ -195,16 +181,24 @@ mysql_version_is_at_least "5.0.18" \
 mysql_version_is_at_least "5.1" \
 || IUSE="${IUSE} berkdb"
 
-mysql_version_is_at_least "5.1.12" \
-&& [[ -n "${PBXT_VERSION}" ]] \
-&& IUSE="${IUSE} pbxt"
-
-mysql_version_is_at_least "5.1.26" \
-&& [[ -n "${XTRADB_VER}" && -n "${PERCONA_VER}" ]] \
-&& IUSE="${IUSE} xtradb"
-
 [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ] \
 && IUSE="${IUSE} ${IUSE_DEFAULT_ON}community profiling"
+
+# PBXT engine
+mysql_version_is_at_least "5.1.12" \
+&& [[ -n "${PBXT_VERSION}" ]] \
+&& PBXT_P="pbxt-${PBXT_VERSION}" \
+&& PBXT_SRC_URI="mirror://sourceforge/pbxt/${PBXT_P}.tar.gz" \
+&& SRC_URI="${SRC_URI} pbxt? ( ${PBXT_SRC_URI} )" \
+&& IUSE="${IUSE} pbxt"
+
+# Get the percona tarball if XTRADB_VER and PERCONA_VER are both set
+mysql_version_is_at_least "5.1.26" \
+&& [[ -n "${XTRADB_VER}" && -n "${PERCONA_VER}" ]] \
+&& XTRADB_P="percona-xtradb-${XTRADB_VER}" \
+&& XTRADB_SRC_URI="http://www.percona.com/${PN}/xtradb/${PERCONA_VER}/source/${XTRADB_P}.tar.gz" \
+&& SRC_URI="${SRC_URI} xtradb? ( ${XTRADB_SRC_URI} )" \
+&& IUSE="${IUSE} xtradb"
 
 #
 # HELPER FUNCTIONS:
@@ -484,8 +478,7 @@ configure_51() {
 	myconf="${myconf} --enable-assembler"
 	myconf="${myconf} --with-geometry"
 	myconf="${myconf} --with-readline"
-	myconf="${myconf} --with-row-based-replication"
-	myconf="${myconf} --with-zlib=/usr/$(get_libdir)"
+	myconf="${myconf} --with-zlib-dir=/usr/"
 	myconf="${myconf} --without-pstack"
 	use max-idx-128 && myconf="${myconf} --with-max-indexes=128"
 
@@ -516,6 +509,20 @@ configure_51() {
 	fi
 
 	myconf="${myconf} --with-plugins=${plugins}"
+}
+
+xtradb_applicable() {
+	mysql_version_is_at_least "5.1.26" \
+	&& [[ -n "${XTRADB_VER}" && -n "${PERCONA_VER}" ]] \
+	&& use xtradb
+	return $?
+}
+
+pbxt_applicable() {
+	mysql_version_is_at_least "5.1.12" \
+	&& [[ -n "${PBXT_VERSION}" ]] \
+	&& use pbxt
+	return $?
 }
 
 pbxt_src_configure() {
@@ -606,6 +613,16 @@ mysql_pkg_setup() {
 	mysql_check_version_range "4.0 to 5.0.99.99" \
 	&& use berkdb \
 	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
+
+	if [ "${PN}" != "mysql-cluster" ] && use cluster; then
+		ewarn "Upstream has noted that the NDB cluster support in the 5.0 and"
+		ewarn "5.1 series should NOT be put into production. In the near"
+		ewarn "future, it will be disabled from building."
+		ewarn ""
+		ewarn "If you need NDB support, you should instead move to the new"
+		ewarn "mysql-cluster package that represents that upstream NDB"
+		ewarn "development."
+	fi
 }
 
 # @FUNCTION: mysql_src_unpack
@@ -644,6 +661,10 @@ mysql_src_prepare() {
 	# And apply
 	epatch
 
+	# last -fPIC fixup, per bug #305873
+	i="${S}"/storage/innodb_plugin/plug.in	
+	[ -f "${i}" ] && sed -i -e '/CFLAGS/s,-prefer-non-pic,,g' "${i}"
+
 	# Additional checks, remove bundled zlib
 	rm -f "${S}/zlib/"*.[ch]
 	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
@@ -666,7 +687,7 @@ mysql_src_prepare() {
 
 	local rebuilddirlist d
 
-	if mysql_version_is_at_least "5.1.26" && use xtradb ; then
+	if xtradb_applicable ; then
 		einfo "Replacing InnoDB with Percona XtraDB"
 		pushd "${S}"/storage
 		i="innobase"
@@ -780,7 +801,7 @@ mysql_src_configure() {
 	-e 's|^pkglibdir *= *$(libdir)/mysql|pkglibdir = $(libdir)|;s|^pkgincludedir *= *$(includedir)/mysql|pkgincludedir = $(includedir)|'
 
 	if [[ $EAPI == 2 ]]; then
-		mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_configure
+		pbxt_applicable && pbxt_src_configure
 	fi
 }
 
@@ -796,7 +817,7 @@ mysql_src_compile() {
 
 	emake || die "emake failed"
 
-	mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_compile
+	pbxt_applicable && pbxt_src_compile
 }
 
 # @FUNCTION: mysql_src_install
@@ -806,9 +827,13 @@ mysql_src_install() {
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
 
-	emake install DESTDIR="${D}" benchdir_root="${MY_SHAREDSTATEDIR}" || die "emake install failed"
+	emake install \
+		DESTDIR="${D}" \
+		benchdir_root="${MY_SHAREDSTATEDIR}" \
+		testroot="${MY_SHAREDSTATEDIR}" \
+		|| die "emake install failed"
 
-	mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_install
+	pbxt_applicable && pbxt_src_install
 
 	# Convenience links
 	einfo "Making Convenience links for mysqlcheck multi-call binary"
@@ -822,7 +847,7 @@ mysql_src_install() {
 	for removeme in  "mysql-log-rotate" mysql.server* \
 		binary-configure* my-*.cnf mi_test_all*
 	do
-		rm -f "${D}"/usr/share/mysql/${removeme}
+		rm -f "${D}"/${MY_SHAREDSTATEDIR}/${removeme}
 	done
 
 	# Clean up stuff for a minimal build
@@ -832,6 +857,13 @@ mysql_src_install() {
 		rm -f "${D}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
 		rm -f "${D}/usr/sbin/mysqld"
 		rm -f "${D}${MY_LIBDIR}"/lib{heap,merge,nisam,my{sys,strings,sqld,isammrg,isam},vio,dbug}.a
+	fi
+
+	# Unless they explicitly specific USE=test, then do not install the
+	# testsuite. It DOES have a use to be installed, esp. when you want to do a
+	# validation of your database configuration after tuning it.
+	if use !test ; then
+		rm -rf "${D}"/${MY_SHAREDSTATEDIR}/mysql-test
 	fi
 
 	# Configuration stuff
@@ -872,7 +904,7 @@ mysql_src_install() {
 
 	# Docs
 	einfo "Installing docs"
-	dodoc README COPYING ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
+	dodoc README ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
 	doinfo "${S}"/Docs/mysql.info
 
 	# Minimal builds don't have the MySQL server
@@ -948,7 +980,7 @@ mysql_pkg_postinst() {
 		einfo
 	fi
 
-	if mysql_version_is_at_least "5.1.12" && use pbxt ; then
+	if pbxt_applicable ; then
 		# TODO: explain it better
 		elog "    mysql> INSTALL PLUGIN pbxt SONAME 'libpbxt.so';"
 		elog "    mysql> CREATE TABLE t1 (c1 int, c2 text) ENGINE=pbxt;"
