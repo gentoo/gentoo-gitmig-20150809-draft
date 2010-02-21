@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/biew
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.25 2009/08/25 18:40:37 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.26 2010/02/21 09:46:24 patrick Exp $
+
+*biew-6.1.0 (21 Feb 2010)
+
+  21 Feb 2010; Patrick Lauer <patrick@gentoo.org> +biew-6.1.0.ebuild:
+  Bump for #305809
 
   25 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> biew-5.7.0.ebuild,
   +files/biew-570-configure.patch, -files/biew-570-configure-gpm.patch,
