@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tgif/tgif-4.1.45-r1.ebuild,v 1.2 2009/11/07 00:37:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tgif/tgif-4.1.45-r1.ebuild,v 1.3 2010/02/21 04:24:52 abcd Exp $
+
+EAPI=3
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +14,7 @@ SRC_URI="ftp://bourbon.usc.edu/pub/${PN}/${MY_P}.tar.gz"
 
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND="x11-libs/libX11
@@ -22,9 +24,7 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-sym.patch"
 	sed -i \
@@ -36,12 +36,12 @@ src_unpack() {
 
 src_compile() {
 	emake -f Makefile.noimake \
-		CC=$(tc-getCC) CPPFLAGS="${CFLAGS}" \
+		CC=$(tc-getCC) CPPFLAGS="${CFLAGS}" TGIFDIR="${EPREFIX}/usr/bin/tgif" \
 		|| die "emake failed"
 }
 
 src_install() {
-	emake -f Makefile.noimake CC=$(tc-getCC) DESTDIR="${D}" install \
+	emake -f Makefile.noimake CC=$(tc-getCC) DESTDIR="${ED}" install \
 		|| die "emake install failed"
 
 	## example-files
