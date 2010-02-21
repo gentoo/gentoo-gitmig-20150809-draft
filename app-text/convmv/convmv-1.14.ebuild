@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/convmv-1.14.ebuild,v 1.1 2009/06/28 09:35:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/convmv-1.14.ebuild,v 1.2 2010/02/21 03:53:20 abcd Exp $
+
+EAPI=3
 
 inherit eutils
 
@@ -15,21 +17,17 @@ IUSE=""
 
 DEPEND="dev-lang/perl"
 
-src_compile() {
-	emake || die "emake failed"
+src_prepare() {
+	sed -i -e "1s|#!/usr|#!${EPREFIX}/usr|" convmv || die
 }
 
 src_install() {
-	einstall DESTDIR="${D}" PREFIX=/usr || die "einstall failed"
+	einstall DESTDIR="${D}" PREFIX="${EPREFIX}"/usr || die "einstall failed"
 	dodoc CREDITS Changes TODO VERSION
 }
 
 src_test() {
 	unpack ./testsuite.tar
-
-	# Patch merged by upstream
-	# Never make assumptions as to the ordering of files inside a directory!
-	#EPATCH_OPTS="-d ${S}/suite/" epatch "${FILESDIR}"/${PN}-1.10-testcase-cleanup.patch
 
 	cd "${S}"/suite
 	./dotests.sh || die "Tests failed"

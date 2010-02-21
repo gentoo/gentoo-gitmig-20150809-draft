@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convmv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.36 2009/06/28 09:35:10 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.37 2010/02/21 03:53:20 abcd Exp $
+
+  21 Feb 2010; Jonathan Callen <abcd@gentoo.org> convmv-1.14.ebuild:
+  Bump EAPI, add prefix support & keywords
 
 *convmv-1.14 (28 Jun 2009)
 
