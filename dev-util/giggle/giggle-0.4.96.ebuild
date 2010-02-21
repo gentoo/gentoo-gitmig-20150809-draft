@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.96.ebuild,v 1.1 2010/02/11 23:50:29 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.96.ebuild,v 1.2 2010/02/21 01:25:58 abcd Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/giggle"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="eds"
 
 RDEPEND=">=dev-util/git-1.4.4.3
