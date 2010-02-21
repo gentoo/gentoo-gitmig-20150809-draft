@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.7.4.ebuild,v 1.3 2010/02/21 08:27:05 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.7.4.ebuild,v 1.4 2010/02/21 11:20:12 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="A 3d dungeon crawling adventure in the spirit of NetHack"
 HOMEPAGE="http://egoboo.sourceforge.net/"
@@ -14,16 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
+	media-libs/libsdl[video]
 	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	net-libs/enet"
-DEPEND="${RDEPEND}"
 
 src_prepare() {
-	edos2unix game/Makefile.unix
 	epatch "${FILESDIR}"/${P}-enet.patch
 	sed -i \
 		-e "s:\${EGOBOO_PREFIX}/share:${GAMES_DATADIR}:" \
@@ -32,7 +31,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C game -f Makefile.unix CC="$(tc-getCC)" || die "emake failed"
+	emake -C game -f Makefile.unix || die "emake failed"
 }
 
 src_install() {
