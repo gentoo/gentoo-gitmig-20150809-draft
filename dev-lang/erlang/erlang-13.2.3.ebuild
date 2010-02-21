@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.3.ebuild,v 1.1 2009/12/10 21:58:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.3.ebuild,v 1.2 2010/02/21 14:43:00 fauli Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -30,7 +30,7 @@ SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 LICENSE="EPL"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc emacs hipe java kpoll odbc smp sctp ssl tk wxwindows"
+IUSE="doc emacs hipe java kpoll odbc smp sctp ssl tk wxwidgets"
 
 RDEPEND=">=dev-lang/perl-5.6.1
 	ssl? ( >=dev-libs/openssl-0.9.7d )
@@ -38,7 +38,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	java? ( >=virtual/jdk-1.2 )
 	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
-	wxwindows? ( x11-libs/wxGTK:2.8[opengl] )
+	wxwidgets? ( x11-libs/wxGTK:2.8[opengl] )
 	sctp? ( net-misc/lksctp-tools )
 	tk? ( dev-lang/tk )"
 
@@ -47,13 +47,13 @@ S="${WORKDIR}/${MY_P}"
 SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
-	use wxwindows && wxwidgets_pkg_setup
+	use wxwidgets && wxwidgets_pkg_setup
 }
 
 src_prepare() {
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 
-	if ! use wxwindows; then
+	if ! use wxwidgets; then
 		sed -i 's: wx : :' lib/Makefile
 		rm -rf lib/wx
 	fi
