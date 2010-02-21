@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3918 2010/02/21 17:39:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3919 2010/02/21 19:23:26 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask kde-misc/kopete-cryptography for removal.
 
   21 Feb 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Masking x11-libs/gtk+extra for removal in 60 days, bug 292211
