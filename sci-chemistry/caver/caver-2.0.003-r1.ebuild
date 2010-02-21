@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-2.0.003.ebuild,v 1.2 2010/02/21 09:56:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-2.0.003-r1.ebuild,v 1.1 2010/02/21 09:56:35 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit multilib python eutils versionator java-utils-2
@@ -16,7 +16,7 @@ SRC_URI="${MY_P}.zip"
 
 LICENSE="CAVER"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -47,7 +47,7 @@ src_install() {
 
 	installation() {
 	sed \
-		-e "s:directory/where/jar/with/plugin/is/located:/usr/share/${PN}/lib/:g" \
+		-e "s:directory/where/jar/with/plugin/is/located:${EPREFIX}/usr/share/${PN}/lib/:g" \
 		-i Caver$(replace_all_version_separators _ ${PV}).py || die
 
 		insinto $(python_get_sitedir)/pmg_tk/startup/
