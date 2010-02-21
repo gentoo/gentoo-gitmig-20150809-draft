@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.2.ebuild,v 1.1 2010/02/20 21:11:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.2-r1.ebuild,v 1.1 2010/02/21 16:09:59 sping Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
@@ -33,6 +33,10 @@ RDEPEND="${COMMON_DEPS}
 		)
 	)"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-missing-import.patch
+}
 
 pkg_setup() {
 	if ! has_version dev-util/subversion; then
