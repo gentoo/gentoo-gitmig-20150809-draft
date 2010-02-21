@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tuxanci
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.7 2009/12/13 21:28:12 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.8 2010/02/21 01:44:42 abcd Exp $
+
+  21 Feb 2010; Jonathan Callen <abcd@gentoo.org> tuxanci-0.21.0.ebuild:
+  Transfer prefix keywords (no other changes)
 
   13 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org> tuxanci-9999.ebuild:
   Update live ebuild syntax to new cmake-utils one.
