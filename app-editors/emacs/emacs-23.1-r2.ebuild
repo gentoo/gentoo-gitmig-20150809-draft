@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1-r2.ebuild,v 1.17 2010/01/31 11:51:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1-r2.ebuild,v 1.18 2010/02/21 17:20:23 ulm Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ if [ "${PV##*.}" = "9999" ]; then
 	S="${WORKDIR}/${ECVS_LOCALNAME}"
 else
 	SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
-		mirror://gentoo/${P}-patches-4.tar.bz2"
+		mirror://gentoo/${P}-patches-5.tar.bz2"
 	# FULL_VERSION keeps the full version number, which is needed in
 	# order to determine some path information correctly for copy/move
 	# operations later on
