@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.3 2010/01/08 23:49:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.4 2010/02/21 11:03:45 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -23,10 +23,12 @@ IUSE="doc"
 
 # hdri causes extensive changes in the imagemagick internals, and
 # rmagick is not ready to deal with those, see bug 184356.
-RDEPEND=">=media-gfx/imagemagick-6.3.5.10[-hdri]"
+RDEPEND=">=media-gfx/imagemagick-6.4.9[-hdri]"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/RMagick-${PV}"
+
+RUBY_PATCHES=( "rmagick-2.13.0-magicklibsubversion.patch" )
 
 each_ruby_configure() {
 	pushd ext/RMagick
