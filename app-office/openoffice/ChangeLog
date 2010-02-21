@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.507 2010/02/20 17:46:28 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.508 2010/02/21 11:45:53 suka Exp $
+
+  21 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.0.ebuild:
+  Raise boost-dependency to prevent build breakage, see bug #306151
 
 *openoffice-3.2.0 (20 Feb 2010)
 
