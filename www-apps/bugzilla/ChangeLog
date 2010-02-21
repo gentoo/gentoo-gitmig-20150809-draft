@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.154 2010/02/18 07:54:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.155 2010/02/21 22:16:48 fauli Exp $
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  bugzilla-3.0.11.ebuild, bugzilla-3.2.6.ebuild:
+  stable x86, security bug 303725
 
 *bugzilla-3.4.5 (18 Feb 2010)
 *bugzilla-3.2.6 (18 Feb 2010)
