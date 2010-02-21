@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/alephone
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.28 2009/11/07 17:00:47 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.29 2010/02/21 19:19:13 tupone Exp $
+
+*alephone-20100218 (21 Feb 2010)
+
+  21 Feb 2010; Tupone Alfredo <tupone@gentoo.org> +alephone-20100218.ebuild:
+  Version bump to 20100218. Bug #306085 by hitachi
 
   07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> alephone-20091015.ebuild:
   Keywording for ppc, bug 275131
