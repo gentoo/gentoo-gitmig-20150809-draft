@@ -9,10 +9,12 @@
  # support server-only versions of 64bit JDKs
  64bit-jdk-server-paths.diff, i#65974, hmth
  # use IBM j9vm over IBM classic JVM
-@@ -3550,4 +3550,4 @@
+@@ -3561,7 +3561,6 @@
  [ BuildBits ]
  # Allow oowintool to detect java sdk 1.6.x
  oowintool-java6.diff, fridrich
 -connectivity-build-fix-mac.diff, thorsten
-+#connectivity-build-fix-mac.diff, thorsten
+ vcl-xinerama-clone-fix.diff, n#578730, thorsten
+ 
+ [ HyphenFix ]
 
