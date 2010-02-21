@@ -1,15 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.2-r1.ebuild,v 1.6 2010/02/21 10:19:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.2-r1.ebuild,v 1.7 2010/02/21 15:59:55 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="python? 2"
 
 # weird test failures.
 RESTRICT="test"
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="none"
-inherit eutils multilib toolchain-funcs versionator autotools
+inherit autotools eutils multilib python toolchain-funcs versionator
 
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 
@@ -33,7 +34,7 @@ wanted_languages() {
 
 RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pg_legacytimestamp=]
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
-	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
+	python? ( dev-python/egenix-mx-base )
 	selinux? ( sec-policy/selinux-postgresql )
 	tcl? ( >=dev-lang/tcl-8 )
 	uuid? ( dev-libs/ossp-uuid )
@@ -48,6 +49,10 @@ S="${WORKDIR}/postgresql-${PV}"
 pkg_setup() {
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
+
+	if use python; then
+		python_set_active_version 2
+	fi
 }
 
 src_prepare() {
@@ -78,11 +83,11 @@ src_configure() {
 		--with-system-tzdata="/usr/share/zoneinfo" \
 		--with-includes="/usr/include/postgresql-${SLOT}/" \
 		--with-libraries="/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)" \
-		"$(built_with_use ~dev-db/postgresql-base-${PV} nls && use_enable nls nls "$(wanted_languages)")" \
-		|| die "configure failed"
+		"$(built_with_use ~dev-db/postgresql-base-${PV} nls && use_enable nls nls "$(wanted_languages)")"
 }
 
 src_compile() {
+	local bd
 	for bd in .  contrib $(use xml && echo contrib/xml2); do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake -C $bd -j1 LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake in $bd failed"
