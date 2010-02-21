@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.140 2010/02/18 16:57:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.141 2010/02/21 22:10:07 fauli Exp $
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  automake-1.4_p6-r1.ebuild, automake-1.5-r1.ebuild,
+  automake-1.6.3-r1.ebuild, automake-1.7.9-r2.ebuild,
+  automake-1.8.5-r4.ebuild, automake-1.9.6-r3.ebuild,
+  automake-1.10.3.ebuild, automake-1.11.1.ebuild:
+  stable x86, bug 295357
 
   18 Feb 2010; Jeroen Roovers <jer@gentoo.org> automake-1.4_p6-r1.ebuild,
   automake-1.5-r1.ebuild, automake-1.6.3-r1.ebuild,
