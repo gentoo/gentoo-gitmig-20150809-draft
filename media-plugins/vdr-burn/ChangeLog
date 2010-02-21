@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.45 2010/02/21 21:31:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.46 2010/02/21 21:41:08 zzam Exp $
+
+  21 Feb 2010; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.2.0_beta1.ebuild:
+  Fix min projectx version. Default-enable projectx use-flag.
 
 *vdr-burn-0.2.0_beta1 (21 Feb 2010)
 

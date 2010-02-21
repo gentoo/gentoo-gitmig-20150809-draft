@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta1.ebuild,v 1.1 2010/02/21 21:31:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta1.ebuild,v 1.2 2010/02/21 21:41:08 zzam Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://firefly.vdr-developer.org/patches/${MY_P}.tgz"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="projectx"
+IUSE="+projectx"
 RESTRICT="test"
 
 DEPEND=">=media-video/vdr-1.6
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}
 		virtual/eject
 		virtual/cdrtools
 		>=app-cdr/dvd+rw-tools-5.21
-		projectx? ( >=media-video/projectx-0.90.4.00-r3 )"
+		projectx? ( >=media-video/projectx-0.90.4.00_p32 )"
 
 # depends that are not rdepend
 DEPEND="${DEPEND}
