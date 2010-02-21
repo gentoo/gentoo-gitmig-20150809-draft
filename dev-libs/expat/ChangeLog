@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.91 2010/02/18 19:02:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.92 2010/02/21 22:18:17 fauli Exp $
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  expat-2.0.1-r3.ebuild:
+  stable x86, security bug 303727
 
   18 Feb 2010; Jeroen Roovers <jer@gentoo.org> expat-2.0.1-r3.ebuild:
   Stable for HPPA (bug #303727).
