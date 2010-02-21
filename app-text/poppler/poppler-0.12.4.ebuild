@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4.ebuild,v 1.2 2010/02/19 18:01:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4.ebuild,v 1.3 2010/02/21 16:43:56 grobian Exp $
 
 EAPI="2"
 
-inherit cmake-utils flag-o-matic
+inherit cmake-utils
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
 HOMEPAGE="http://poppler.freedesktop.org/"
@@ -46,6 +46,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.12.3-darwin-gtk-link.patch
 	epatch "${FILESDIR}"/${P}-config.patch  #304407
 	epatch "${FILESDIR}"/${PN}-0.12.3-cairo-downscale.patch  #303817
+	epatch "${FILESDIR}"/${PN}-0.12.4-nanosleep-rt.patch
 }
 
 src_configure() {
@@ -67,9 +68,6 @@ src_configure() {
 		$(cmake-utils_use_with qt4)
 		$(cmake-utils_use exceptions USE_EXCEPTIONS)
 	)
-
-	# http://bugs.freedesktop.org/show_bug.cgi?id=26650
-	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lrt # for nanosleep
 
 	cmake-utils_src_configure
 }
