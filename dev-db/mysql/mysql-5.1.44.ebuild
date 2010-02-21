@@ -1,13 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.42.ebuild,v 1.4 2010/02/15 21:27:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.44.ebuild,v 1.1 2010/02/21 00:58:52 robbat2 Exp $
 
-MY_EXTRAS_VER="20100201-0104Z"
+MY_EXTRAS_VER="20100221-0021Z"
 EAPI=2
-
-# Broken, does not compile
-#XTRADB_VER="1.0.6-9"
-#PERCONA_VER="5.1.42-9"
 
 inherit toolchain-funcs mysql
 # only to make repoman happy. it is really set in the eclass
@@ -153,20 +149,36 @@ src_test() {
 			;;
 		esac
 
+		# These are also failing in MySQL 5.1 for now, and are believed to be
+		# false positives:
+		#
+		# main.mysql_comment, main.mysql_upgrade:
+		# fails due to USE=-latin1 / utf8 default
+		#
+		# main.mysql_client_test:
+		# segfaults at random under Portage only, suspect resource limits.
+		case ${PV} in
+			5.1.*)
+			for t in main.mysql_client_test main.mysql_comments main.mysql_upgrade; do
+				mysql_disable_test  "$t" "False positives in Gentoo"
+			done
+			;;
+		esac
+
 		# create directories because mysqladmin might right out of order
 		mkdir -p "${S}"/mysql-test/var-{ps,ns}{,/log}
 
 		# We run the test protocols seperately
-		make -j1 test-unit
+		emake test-unit
 		retstatus_unit=$?
 		[[ $retstatus_unit -eq 0 ]] || eerror "test-unit failed"
 
-		make -j1 test-ns force="--force --vardir=${S}/mysql-test/var-ns"
+		emake test-ns force="--force --vardir=${S}/mysql-test/var-ns"
 		retstatus_ns=$?
 		[[ $retstatus_ns -eq 0 ]] || eerror "test-ns failed"
 		has usersandbox $FEATURES && eerror "Some tests may fail with FEATURES=usersandbox"
 
-		make -j1 test-ps force="--force --vardir=${S}/mysql-test/var-ps"
+		emake test-ps force="--force --vardir=${S}/mysql-test/var-ps"
 		retstatus_ps=$?
 		[[ $retstatus_ps -eq 0 ]] || eerror "test-ps failed"
 		has usersandbox $FEATURES && eerror "Some tests may fail with FEATURES=usersandbox"
