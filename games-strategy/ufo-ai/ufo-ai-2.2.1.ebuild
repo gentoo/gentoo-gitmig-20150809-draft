@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.5 2010/01/19 14:42:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.6 2010/02/21 15:02:22 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -85,11 +85,11 @@ src_install() {
 	dogamesbin ufoded || die "Failed installing server"
 	newicon src/ports/linux/installer/data/ufo.xpm ${PN}.xpm \
 		|| die "Failed installing icon"
-	make_desktop_entry ${PN}-ded "UFO: Alien Invasion Server" ${PN}.xpm
+	make_desktop_entry ${PN}-ded "UFO: Alien Invasion Server"
 	if ! use dedicated ; then
 		# client
 		newgamesbin ufo ${PN} || die "Failed installing client"
-		make_desktop_entry ${PN} "UFO: Alien Invasion" ${PN}.xpm
+		make_desktop_entry ${PN} "UFO: Alien Invasion"
 	fi
 
 	if use editor ; then
