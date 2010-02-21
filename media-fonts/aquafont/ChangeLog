@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquafont
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.29 2009/09/27 09:26:12 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.30 2010/02/21 02:14:12 abcd Exp $
+
+  21 Feb 2010; Jonathan Callen <abcd@gentoo.org> aquafont-2.7-r4.ebuild:
+  Transfer prefix keywords (no other changes)
 
   27 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> aquafont-2.7-r4.ebuild:
   Stable for ppc. Fix bug 283907
