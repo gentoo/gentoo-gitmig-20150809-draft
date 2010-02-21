@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-cealign/pymol-plugins-cealign-0.9.ebuild,v 1.3 2010/02/19 12:32:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-cealign/pymol-plugins-cealign-0.9.ebuild,v 1.4 2010/02/21 10:04:20 jlec Exp $
 
 EAPI="3"
 
@@ -30,23 +30,21 @@ src_prepare() {
 }
 
 src_install(){
-	mtype=$(uname -m)
-
 	distutils_src_install
 
 	installation() {
 		insinto $(python_get_sitedir)/cealign
 		doins qkabsch.py cealign.py || die
+
+		cat > "${T}"/pymolrc <<- EOF
+		run ${EPREFIX}/$(python_get_sitedir)/cealign/qkabsch.py
+		run ${EPREFIX}/$(python_get_sitedir)/cealign/cealign.py
+		EOF
+
+		insinto $(python_get_sitedir)/pymol
+		doins "${T}"/pymolrc || die
 	}
 	python_execute_function -s installation
-
-	cat >> "${T}"/pymolrc <<- EOF
-	run ${EPREFIX}/$(python_get_sitedir -f)/cealign/qkabsch.py
-	run ${EPREFIX}/$(python_get_sitedir -f)/cealign/cealign.py
-	EOF
-
-	insinto $(python_get_sitedir -f)/pymol
-	doins "${T}"/pymolrc || die
 
 	dodoc CHANGES doc/cealign.pdf || die
 }
