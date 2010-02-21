@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/egoboo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.18 2010/02/21 08:27:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.19 2010/02/21 08:30:25 tupone Exp $
+
+  21 Feb 2010; Tupone Alfredo <tupone@gentoo.org> egoboo-2.2.2-r1.ebuild,
+  -egoboo-2.22-r1.ebuild:
+  Moving 2.22 to 2.2.2 (last step)
 
 *egoboo-2.2.2-r1 (21 Feb 2010)
 
