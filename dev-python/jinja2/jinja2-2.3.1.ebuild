@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.3.1.ebuild,v 1.1 2010/02/21 11:35:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.3.1.ebuild,v 1.2 2010/02/21 16:06:15 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="Jinja2"
 MY_P="${MY_PN}-${PV}"
@@ -23,12 +24,17 @@ DEPEND="${CDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )"
 RDEPEND="${CDEPEND}
 	i18n? ( >=dev-python/Babel-0.9.3 )"
-RESTRICT_PYTHON_ABIS="3.*" # test suite doesn't work on 3.x
 
 S="${WORKDIR}/${MY_P}"
 
 DISTUTILS_GLOBAL_OPTIONS=("--with-speedups")
 DOCS="CHANGES"
+
+src_prepare() {
+	distutils_src_prepare
+
+	epatch "${FILESDIR}/${P}-python-3.patch"
+}
 
 src_compile(){
 	distutils_src_compile
@@ -39,15 +45,11 @@ src_compile(){
 	fi
 }
 
-src_test(){
-	testing() {
-		PYTHONPATH="$(dir -d build-${PYTHON_ABI}/lib.*)" ${python} setup.py test || die "tests failed"
-	}
-	python_execute_function testing
-}
-
 src_install(){
 	distutils_src_install
+
+	# Don't install C sources.
+	find "${D}"usr/$(get_libdir)/python*/site-packages -name "*.c" | xargs rm -f
 
 	if use doc; then
 		dohtml -r docs/_build/html/* || die "Installation of documentation failed"
