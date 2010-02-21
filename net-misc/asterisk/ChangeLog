@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.249 2010/02/21 20:39:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.250 2010/02/21 21:44:08 chainsaw Exp $
+
+*asterisk-1.2.40 (21 Feb 2010)
+
+  21 Feb 2010; <chainsaw@gentoo.org> +asterisk-1.2.40.ebuild:
+  Security fix for AST-2010-002 (dial plan wildcard injection vulnerability)
+  on the 1.2 branch. Please read up immediately on the use of the Filter
+  command.
 
 *asterisk-1.6.2.4 (21 Feb 2010)
 *asterisk-1.6.1.16 (21 Feb 2010)
