@@ -1,14 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.24.ebuild,v 1.2 2009/12/17 21:29:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.24.ebuild,v 1.3 2010/02/21 01:06:59 abcd Exp $
+
+EAPI=3
 
 inherit autotools
-
-IUSE="tk"
 
 DESCRIPTION="A transaction based revision control system"
 SRC_URI="mirror://sourceforge/aegis/${P}.tar.gz"
 HOMEPAGE="http://aegis.sourceforge.net"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~ppc ~sparc ~x86"
+IUSE="tk"
 
 DEPEND="sys-libs/zlib
 	sys-devel/gettext
@@ -18,33 +23,23 @@ DEPEND="sys-libs/zlib
 	tk? ( >=dev-lang/tk-8.3 )"
 RDEPEND="" #221421
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~alpha ~ppc ~sparc ~x86"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	#FIXME: ? Not sure what effect this has. Only way to get it to compile.
 	sed -i 's/$(SH) etc\/compat.2.3//' Makefile.in || \
 		die "sed Makefile.in failed"
 	eautomake || die "eautomake failed"
 }
 
-src_compile() {
+src_configure() {
 	# By default aegis configure puts shareable read/write files (locks etc)
 	# in ${prefix}/com/aegis but the FHS says /var/lib/aegis can be shared.
 
-	myconf="${myconf} --with-nlsdir=/usr/share/locale"
-
 	econf \
 		--sharedstatedir=/var/lib/aegis \
-		${myconf} || die "./configure failed"
+		--with-nlsdir=/usr/share/locale
+}
 
-	# Second ebuild causes redefined/undefined function errors
-	#make clean
-
+src_compile() {
 	# bug #297334
 	emake -j1 || die
 }
@@ -55,14 +50,14 @@ src_install () {
 	# OK so ${D}/var/lib/aegis gets UID=3, but for some
 	# reason so do the files under /usr/share, even though
 	# they are read-only.
-	chown -R root:root "${D}"/usr/share
+	use prefix || fowners -R root:root /usr/share
 	dodoc lib/en/*
 
 	# Link to share dir so user has a chance of noticing it.
 	dosym /usr/share/aegis /usr/share/doc/${PF}/scripts
 
 	# Config file examples are documentation.
-	mv "${D}"/usr/share/aegis/config.example "${D}"/usr/share/doc/"${PF}"/
+	mv "${ED}"/usr/share/aegis/config.example "${ED}"/usr/share/doc/${PF}/
 
 	dodoc BUILDING README
 }
