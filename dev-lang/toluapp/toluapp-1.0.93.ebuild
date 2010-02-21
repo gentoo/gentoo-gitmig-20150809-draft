@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.93.ebuild,v 1.7 2010/02/15 20:40:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.93.ebuild,v 1.8 2010/02/21 22:05:04 fauli Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.codenix.com/~tolua/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/lua-5.1.1[deprecated]"
