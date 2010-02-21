@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.92 2010/02/20 10:57:29 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.93 2010/02/21 22:27:03 fauli Exp $
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  vpopmail-5.4.30-r1.ebuild:
+  stable x86, bug 285213
 
 *vpopmail-5.4.30-r1 (20 Feb 2010)
 
