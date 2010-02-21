@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5301 2010/02/21 00:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5302 2010/02/21 01:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -611,16 +611,18 @@ dev-db/libdrizzle:tcmalloc -  Use the dev-util/google-perftools libraries to rep
 dev-db/libpq:pg-intdatetime - Enable --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage
 dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
 dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
-dev-db/mysql:cluster - Add support for NDB clustering
+dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
 dev-db/mysql:community - Enables the community features from upstream.
 dev-db/mysql:embedded - Build embedded server (libmysqld)
 dev-db/mysql:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql:minimal - Install client programs only, no server
+dev-db/mysql:pbxt - Add experimental support for PBXT storage engine
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql:raid - Deprecated option, removed in the 5.0 series
-dev-db/mysql:xtradb - Add experimental support for XtraDB storage engine
+dev-db/mysql:test - Install upstream testsuites for end use.
+dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
 dev-db/mysql-community:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql-community:cluster - Add support for NDB clustering
 dev-db/mysql-community:community - Enables the community features from upstream.
