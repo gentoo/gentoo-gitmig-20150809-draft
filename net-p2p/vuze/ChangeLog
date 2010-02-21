@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.29 2010/02/12 09:43:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.30 2010/02/21 16:16:02 caster Exp $
+
+*vuze-4.3.1.4-r1 (21 Feb 2010)
+
+  21 Feb 2010; Vlastimil Babka <caster@gentoo.org> +vuze-4.3.1.4-r1.ebuild:
+  Revbump to add missing ChangeLog.txt to the jar file. Fixes bug #302058 by
+  Hanno Meyer-Thurow <h.mth@web.de>.
 
 *vuze-4.3.1.4 (12 Feb 2010)
 
