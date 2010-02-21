@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.14 2010/02/06 20:00:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.15 2010/02/21 20:52:49 ssuominen Exp $
+
+  21 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  64bit-native/package.mask:
+  Sync with arch/amd64/no-multilib/package.mask.
 
   06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   64bit-native/package.use.mask:

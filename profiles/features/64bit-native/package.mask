@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.43 2010/02/21 19:56:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.44 2010/02/21 20:52:50 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -12,13 +12,17 @@ app-benchmarks/cpuburn
 =app-editors/emacs-18*
 app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
+app-emulation/playonlinux
 app-emulation/point2play
+app-emulation/q4wine
+app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-ose
 app-emulation/vmware-dsp
 app-emulation/vmware-player
 app-emulation/vmware-server
 app-emulation/vmware-server-console
 <app-emulation/vmware-workstation-6.5
+>=app-i18n/atokx3-3.0.0
 app-office/mozilla-sunbird-bin
 app-office/ooextras
 <app-office/openoffice-bin-3.2.0
@@ -31,16 +35,25 @@ app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
 app-emulation/emul-linux-x86-java
+app-emulation/ies4linux
 app-emulation/wine
+app-emulation/wine-doors
 app-text/acroread
 app-text/bibus
+dev-embedded/libftd2xx
+dev-embedded/openocd
 dev-lang/dmd-bin
 dev-lang/icc
 dev-lang/idb
 dev-lang/ifc
+dev-lang/realbasic
 dev-perl/Archive-Rar
+dev-python/skype4py
+dev-util/android-sdk-update-manager
+dev-util/biew
 dev-util/dialogblocks
 dev-util/helpblocks
+dev-util/nvidia-cuda-profiler
 games-action/descent3
 games-action/descent3-demo
 games-action/heretic2
@@ -113,6 +126,7 @@ games-fps/rtcwsp-demo
 games-fps/sauerbraten
 games-fps/soldieroffortune
 games-fps/soldieroffortune-demo
+games-fps/unreal-tournament
 games-fps/ut2003
 games-fps/ut2003-demo
 games-fps/ut2004-demo
@@ -123,39 +137,57 @@ games-rpg/nwmovies
 games-rpg/nwn
 games-rpg/nwn-cep
 games-rpg/nwn-data
+games-rpg/nwn-penultima
 games-rpg/nwn-penultimarerolled
+games-rpg/rain-slick
+games-rpg/sacred-gold
 games-server/etqw-ded
+games-server/greenhouse
 games-server/nwn-ded
 games-server/ut2003-ded
 games-simulation/bcs-demo
+games-simulation/secondlife-bin
 games-simulation/simutrans
 games-strategy/coldwar
 games-strategy/coldwar-demo
 games-strategy/darwinia
 games-strategy/darwinia-demo
+games-strategy/defcon-demo
 games-strategy/dominions2
 games-strategy/heroes3
 games-strategy/heroes3-demo
 games-strategy/majesty-demo
+games-strategy/savage-bin
+games-strategy/smac
 games-strategy/x2
 games-strategy/x2-demo
 mail-client/mozilla-thunderbird-bin
+mail-filter/MailScanner
 media-fonts/acroread-asianfonts
 media-gfx/picasa
+media-libs/realcodecs
 media-libs/win32codecs
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/ventrilo-server-bin
+media-tv/livestation
 media-video/binkplayer
 net-dialup/slmodem
 net-im/skype
+net-im/skysentials
+net-libs/xulrunner-bin
 net-misc/icaclient
 net-nntp/bnr2
 net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
+sci-electronics/eagle
+sci-chemistry/icm
+sci-chemistry/icm-browser
+sci-libs/ipp
 sys-apps/memtest86
 sys-apps/memtest86+
+sys-block/hpacucli
 sys-libs/lib-compat-loki
 <www-client/opera-9.62
 www-client/firefox-bin
