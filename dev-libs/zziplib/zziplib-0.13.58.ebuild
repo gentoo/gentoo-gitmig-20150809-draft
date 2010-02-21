@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.58.ebuild,v 1.1 2009/12/26 18:07:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.58.ebuild,v 1.2 2010/02/21 00:12:40 abcd Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/zziplib/${P}.tar.bz2"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="sdl test"
 
 RDEPEND=">=dev-lang/python-2.4
@@ -20,7 +20,8 @@ RDEPEND=">=dev-lang/python-2.4
 	sdl? ( >=media-libs/libsdl-1.2.6 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	test? ( app-arch/zip )"
+	test? ( app-arch/zip )
+	kernel_Darwin? ( app-text/xmlto )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.13.49-SDL-test.patch
