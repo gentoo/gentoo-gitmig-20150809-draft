@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.100 2010/02/20 18:13:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.101 2010/02/21 22:13:47 fauli Exp $
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  libtheora-1.1.1.ebuild:
+  stable x86, security bug 298039
 
   20 Feb 2010; Jeroen Roovers <jer@gentoo.org> libtheora-1.1.1.ebuild:
   Stable for PPC (bug #298039).
