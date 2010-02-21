@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0.ebuild,v 1.5 2010/01/20 02:42:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0.ebuild,v 1.6 2010/02/21 00:33:17 caster Exp $
 
 EAPI=2
 
-JAVA_PKG_IUSE="doc java5 source"
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -27,12 +27,10 @@ COMMON_DEP="
 	dev-java/qdox:1.6
 	dev-java/junit:0"
 RDEPEND="
-	!java5? ( >=virtual/jre-1.4 )
-	java5? ( >=virtual/jre-1.5 )
+	>=virtual/jre-1.5
 	${COMMON_DEP}"
 DEPEND="
-	!java5? ( >=virtual/jdk-1.4 )
-	java5? ( >=virtual/jdk-1.5 )
+	>=virtual/jdk-1.5
 	${COMMON_DEP}
 	app-arch/unzip"
 
@@ -54,8 +52,7 @@ java_prepare() {
 }
 
 _eant() {
-	local antflags
-	use java5 && antflags="-Djava.version=1.5" || antflags="-Djava.version=1.4"
+	local antflags="-Djava.version=1.5"
 	eant ${antflags} "${@}"
 
 }

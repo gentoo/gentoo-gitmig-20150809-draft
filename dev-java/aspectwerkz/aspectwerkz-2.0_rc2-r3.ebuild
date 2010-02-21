@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r3.ebuild,v 1.4 2008/10/25 17:23:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r3.ebuild,v 1.5 2010/02/21 00:33:17 caster Exp $
 
 EAPI=1
 # no rewriting required since we patch build.xml to contain target/source
 JAVA_PKG_BSFIX="off"
-JAVA_PKG_IUSE="java5 source"
+JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://aspectwerkz.codehaus.org"
 LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="amd64 ppc ~ppc64 x86"
-RDEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.5
 	dev-java/asm:1.5
 	dev-java/concurrent-util:0
 	dev-java/dom4j:1
@@ -23,8 +23,7 @@ RDEPEND=">=virtual/jre-1.3
 	dev-java/junit:0
 	dev-java/trove:0
 	dev-java/qdox:1.6"
-DEPEND="java5? ( >=virtual/jdk-1.5 )
-	!java5? ( >=virtual/jdk-1.3 )
+DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
 	app-arch/unzip"
 IUSE=""
@@ -54,9 +53,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags
-	use "!java5" && antflags="-Dnojdk15=true"
-	eant ${antflags} dist || die "eant failed"
+	eant dist || die "eant failed"
 }
 
 src_install() {
