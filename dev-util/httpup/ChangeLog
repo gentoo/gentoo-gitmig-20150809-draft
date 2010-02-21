@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/httpup
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/ChangeLog,v 1.6 2009/08/25 19:54:09 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/ChangeLog,v 1.7 2010/02/21 01:29:43 abcd Exp $
+
+  21 Feb 2010; Jonathan Callen <abcd@gentoo.org> httpup-0.3.2.ebuild,
+  +files/httpup-0.3.2-darwin.patch:
+  Transfer prefix keywords, add patch for Darwin
 
   25 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> httpup-0.3.2.ebuild,
   +files/httpup-0.3.2-gcc44.patch:
