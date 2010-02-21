@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.0.ebuild,v 1.4 2009/09/12 21:35:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r2.ebuild,v 1.1 2010/02/21 17:30:56 pacho Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ inherit php-ext-source-r1
 DESCRIPTION="PHP 5 bindings for the Gtk+ 2 library."
 HOMEPAGE="http://gtk.php.net/"
 SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
-IUSE="debug doc examples extra +glade libsexy mozembed scintilla spell"
+IUSE="debug doc examples +glade gtkhtml libsexy mozembed scintilla spell"
 LICENSE="PHP-2.02 PHP-3 PHP-3.01 LGPL-2.1 public-domain Scintilla"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -36,9 +36,9 @@ RDEPEND=">=dev-lang/php-5.1.2
 	>=dev-libs/glib-2.6.0
 	>=x11-libs/pango-1.8.0
 	>=dev-libs/atk-1.9.0
-	extra? ( >=x11-libs/gtk+extra-2.1.1 )
 	glade? ( >=gnome-base/libglade-2.5.0 )
 	libsexy? ( >=x11-libs/libsexy-0.1.10 )
+	gtkhtml? ( gnome-extra/gtkhtml:3.14 )
 	mozembed? ( >=www-client/mozilla-firefox-1.5.0 )
 	spell? ( >=app-text/gtkspell-2.0.0 )"
 DEPEND="${RDEPEND}
@@ -64,7 +64,21 @@ src_unpack() {
 	cd "${S}"
 	# we already check for CLI and built-in check creates trouble
 	# on suhosin-based installations, so we remove it
-	epatch "${FILESDIR}"/${P}-no-cli-check.patch
+	epatch "${FILESDIR}"/${PN}-2.0.0-no-cli-check.patch
+
+	# depends on newer gtkhtml
+	epatch "${FILESDIR}"/${PN}-2.0.1-gtkhtml314.patch
+
+	# see bug 232538 for details:
+	# this is needed so that autoconf can find the m4 gtk files (non-standard
+	# location)
+	export AT_M4DIR="${S}"
+	# phpize will invoke autoconf/autoheader (which will fail); we are replacing
+	# these calls with dummies as we call eautoreconf shortly afterwards
+	# anyway
+	export PHP_AUTOCONF="true"
+	export PHP_AUTOHEADER="true"
+	php-ext-source-r1_phpize
 
 	cd "${WORKDIR}"
 	for lang in ${LANGS} ; do
@@ -78,27 +92,16 @@ src_unpack() {
 }
 
 src_compile() {
-	local GLCONF
-	use glade || GLCONF=" --without-libglade"
-
-	# php-ext-source-r1_src_compile can't be used
-	has_php
-	addpredict /usr/share/snmp/mibs/.index
-	addpredict /session_mm_cli0.sem
-	./buildconf
-
-	econf $(use_with extra) \
+	my_conf="--without-extra \
+		$(use_with gtkhtml html) \
 		$(use_with libsexy) \
 		$(use_with mozembed) \
 		$(use_with spell) \
-		$(use_with debug) \
+		$(use_enable debug) \
 		$(use_enable scintilla) \
-		--without-html \
 		--without-sourceview \
-		${GLCONF}
-
-	emake || die "make failed!"
-	mv -f "modules/${PHP_EXT_NAME}.so" "${WORKDIR}/${PHP_EXT_NAME}-default.so" || die "Unable to move extension"
+		$(use glade || echo '--without-libglade')"
+	php-ext-source-r1_src_compile
 }
 
 src_install() {
