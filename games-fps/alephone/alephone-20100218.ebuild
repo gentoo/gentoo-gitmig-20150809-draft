@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100218.ebuild,v 1.1 2010/02/21 19:19:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100218.ebuild,v 1.2 2010/02/21 20:52:39 tupone Exp $
 
 EAPI=2
 inherit autotools games
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/marathon/${MY_P}.tar.bz2"
 LICENSE="GPL-2 BitstreamVera"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa mad mpeg opengl sndfile speex truetype vorbis"
+IUSE="alsa mad mpeg sndfile speex truetype vorbis"
 
 RDEPEND="media-libs/sdl-net
 	media-libs/sdl-image
@@ -22,7 +22,7 @@ RDEPEND="media-libs/sdl-net
 	alsa? ( media-libs/alsa-lib )
 	mad? ( media-libs/libmad )
 	mpeg? ( media-libs/smpeg )
-	opengl? ( virtual/opengl )
+	virtual/opengl
 	sndfile? ( media-libs/libsndfile )
 	speex? ( media-libs/speex )
 	truetype? ( media-libs/sdl-ttf )
@@ -59,7 +59,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable mad) \
 		$(use_enable mpeg smpeg) \
-		$(use_enable opengl) \
+		--enable-opengl
 		$(use_enable sndfile) \
 		$(use_enable speex) \
 		$(use_enable truetype ttf) \
