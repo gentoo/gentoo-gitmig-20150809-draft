@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.1.ebuild,v 1.5 2008/06/16 18:14:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.1.ebuild,v 1.6 2010/02/21 03:06:44 abcd Exp $
+
+EAPI=3
 
 inherit eutils pam versionator
 
@@ -22,7 +24,7 @@ SRC_URI="
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 IUSE="crypt doc kerberos nls pam server"
 
@@ -33,15 +35,16 @@ DEPEND=">=sys-libs/zlib-1.1.4
 src_unpack() {
 	unpack ${P}.tar.bz2
 	use doc && unpack cederqvist-${DOC_PV}.html.tar.bz2
+}
 
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.12.12-cvsbug-tmpfix.patch
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.12.12-install-sh.patch
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.12.13.1-block-requests.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.12.12-cvsbug-tmpfix.patch
+	epatch "${FILESDIR}"/${PN}-1.12.12-install-sh.patch
+	epatch "${FILESDIR}"/${PN}-1.12.13.1-block-requests.patch
 	# Applied by upstream:
-	#EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-1.12.13-openat.patch
-	#EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${PN}-1.12.13-zlib.patch
+	#epatch "${FILESDIR}"/${PN}-1.12.13-openat.patch
+	#epatch "${FILESDIR}"/${PN}-1.12.13-zlib.patch
 
-	cd "${S}"
 	# this testcase was not updated
 	#sed -i.orig -e '/unrecognized keyword.*BogusOption/s,98,73,g' \
 	#  ${S}/src/sanity.sh
@@ -53,7 +56,7 @@ src_unpack() {
 	elog "If you want any CVS server functionality, you MUST emerge with USE=server!"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	# the tests need the server and proxy
 	if has test $FEATURES; then
@@ -70,9 +73,7 @@ src_compile() {
 		$(use_enable pam) \
 		$(use_enable server) \
 		$(use_enable server proxy) \
-		${myconf} \
-		|| die
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
@@ -96,8 +97,7 @@ src_install() {
 		dodoc "${DISTDIR}"/cederqvist-${DOC_PV}.pdf
 		dodoc "${DISTDIR}"/cederqvist-${DOC_PV}.ps
 		dohtml -r "${WORKDIR}"/cederqvist-${DOC_PV}.html/
-		cd "${D}"/usr/share/doc/${PF}/html/
-		ln -s cvs.html index.html
+		dosym cvs.html /usr/share/doc/${PF}/html/index.html
 	fi
 
 	newpamd "${FILESDIR}"/cvs.pam-include-1.12.12 cvs

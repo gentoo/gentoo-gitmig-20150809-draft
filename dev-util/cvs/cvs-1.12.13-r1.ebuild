@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13-r1.ebuild,v 1.6 2008/06/16 18:11:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13-r1.ebuild,v 1.7 2010/02/21 03:06:44 abcd Exp $
+
+EAPI=3
 
 inherit eutils pam
 
@@ -14,7 +16,7 @@ SRC_URI="mirror://gnu/non-gnu/cvs/source/feature/${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 IUSE="crypt doc emacs kerberos nls pam server"
 
@@ -25,10 +27,12 @@ DEPEND=">=sys-libs/zlib-1.1.4
 src_unpack() {
 	unpack ${P}.tar.bz2
 	use doc && unpack cederqvist-${PV}.html.tar.bz2
-	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.12.12-cvsbug-tmpfix.patch
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.12.12-cvsbug-tmpfix.patch
 	epatch "${FILESDIR}"/${P}-openat.patch
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${P}-zlib.patch
-	cd "${S}"
+	epatch "${FILESDIR}"/${P}-zlib.patch
 	epatch "${FILESDIR}"/${PN}-1.12.12-install-sh.patch
 	# this testcase was not updated
 	#sed -i.orig -e '/unrecognized keyword.*BogusOption/s,98,73,g' \
@@ -38,7 +42,7 @@ src_unpack() {
 	  "${S}"/src/sanity.sh
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	# the tests need the server and proxy
 	if has test $FEATURES; then
@@ -54,10 +58,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable pam) \
 		$(use_enable server) \
-		$(use_enable server proxy) \
-		${myconf} \
-		|| die
-	emake || die "emake failed"
+		$(use_enable server proxy)
 }
 
 src_install() {
@@ -81,8 +82,7 @@ src_install() {
 		dodoc "${DISTDIR}"/cederqvist-${PV}.ps
 		tar xjf "${DISTDIR}"/cederqvist-${PV}.html.tar.bz2
 		dohtml -r cederqvist-${PV}.html/*
-		cd "${D}"/usr/share/doc/${PF}/html/
-		ln -s cvs.html index.html
+		dosym cvs.html /usr/share/doc/${PF}/html/index.html
 	fi
 
 	newpamd "${FILESDIR}"/cvs.pam-include-1.12.12 cvs
