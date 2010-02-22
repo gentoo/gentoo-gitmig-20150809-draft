@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.30 2010/02/09 17:23:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.31 2010/02/22 22:29:46 caster Exp $
+
+  22 Feb 2010; Vlastimil Babka <caster@gentoo.org> -jdk-1.4.1.ebuild,
+  -jdk-1.4.2.ebuild:
+  Removal of 1.4 per bug #287615.
 
   09 Feb 2010; Fabian Groffen <grobian@gentoo.org> jdk-1.5.0.ebuild,
   jdk-1.6.0.ebuild:
