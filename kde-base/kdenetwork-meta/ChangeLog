@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.150 2010/02/20 10:34:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.151 2010/02/22 16:59:22 abcd Exp $
+
+  22 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  kdenetwork-meta-4.3.3.ebuild, kdenetwork-meta-4.3.4.ebuild,
+  kdenetwork-meta-4.3.5.ebuild, kdenetwork-meta-4.4.0.ebuild, metadata.xml:
+  Make kppp depend on USE=ppp, so that it can be masked on systems that do
+  not support ppp (such as prefix)
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   kdenetwork-meta-4.3.5.ebuild:
