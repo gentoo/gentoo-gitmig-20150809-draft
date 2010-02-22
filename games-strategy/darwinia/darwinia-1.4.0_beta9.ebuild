@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.7 2009/08/31 19:27:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.8 2010/02/22 19:42:35 pacho Exp $
 
 inherit eutils games
 
@@ -27,6 +27,7 @@ RDEPEND="
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-medialibs
+		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
