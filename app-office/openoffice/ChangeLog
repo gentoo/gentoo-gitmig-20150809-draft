@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.513 2010/02/22 17:17:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.514 2010/02/22 17:22:37 suka Exp $
+
+  22 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.0.ebuild, +files/npwrap-fix-nogtk.diff:
+  Fix build problems without gtk, see bug #306181
 
   22 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.0.ebuild:
