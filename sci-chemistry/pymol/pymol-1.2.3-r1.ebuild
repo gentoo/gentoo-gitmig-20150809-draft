@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.3.ebuild,v 1.1 2010/02/20 12:11:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.3-r1.ebuild,v 1.1 2010/02/22 07:51:52 jlec Exp $
 
 EAPI="3"
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_USE_WITH="tk"
-REV="3868"
+REV="3891"
 
 inherit eutils distutils prefix
 
