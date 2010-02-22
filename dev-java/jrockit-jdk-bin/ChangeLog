@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.48 2009/05/29 20:40:58 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.49 2010/02/22 22:47:10 caster Exp $
+
+  22 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  -files/jrockit-jdk-bin-1.4.2.08, -jrockit-jdk-bin-1.4.2.16.ebuild,
+  -files/jrockit-jdk-bin-1.4.env, -files/jrockit-jdk-bin-1.5.0.03:
+  Removal of 1.4 per bug #287615.
 
   29 May 2009; Vlastimil Babka <caster@gentoo.org>
   -jrockit-jdk-bin-1.4.2.14_p1.ebuild:
