@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.9 2010/02/08 08:51:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.10 2010/02/22 17:10:54 phajdan.jr Exp $
 
 inherit eutils versionator distutils
 
@@ -41,6 +41,7 @@ src_compile() {
 src_install() {
 	dodoc AUTHORS CHANGELOG README
 	sed -i -e 's@INST_PIXMAPDIR=\"/usr/lib/$EXECUTABLE\"@INST_PIXMAPDIR=\"$INST_PREFIX/lib/$EXECUTABLE\"@g' build.sh
+	sed -i -e 's@INST_DOCDIR=\"$INST_PREFIX/doc/$EXECUTABLE\"@INST_DOCDIR=\"$INST_PREFIX/share/doc/'${PF}'\"@g' build.sh
 	# Crazy build system...
 	./build.sh --install --prefix "${D}/usr" || die "./build --install failed"
 	make_desktop_entry gip "GIP IP Address Calculator" gnome-calc3 Network
