@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.5 2010/02/22 10:11:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.6 2010/02/22 16:45:29 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -338,7 +338,7 @@ src_configure() {
 		$(use_enable odk) \
 		$(use_enable pam) \
 		$(use_with java) \
-		--disable-sun-templates \
+		--without-sun-templates \
 		--disable-access \
 		--disable-post-install-scripts \
 		--enable-extensions \
