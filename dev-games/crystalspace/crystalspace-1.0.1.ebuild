@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.1.ebuild,v 1.9 2008/07/08 16:30:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.0.1.ebuild,v 1.10 2010/02/22 12:40:28 tupone Exp $
 
 inherit flag-o-matic java-pkg-opt-2 multilib wxwidgets
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-amd64 x86"
 IUSE="3ds alsa cal3d cegui cg doc java javascript jpeg mng ode perl png python
-sdl truetype vorbis wxwindows"
+sdl truetype vorbis wxwidgets"
 
 RDEPEND="virtual/opengl
 	virtual/glu
@@ -29,7 +29,7 @@ RDEPEND="virtual/opengl
 	alsa? ( media-libs/alsa-lib )
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
-	wxwindows? ( x11-libs/pango
+	wxwidgets? ( x11-libs/pango
 		=x11-libs/wxGTK-2.6* )
 	javascript? ( dev-lang/spidermonkey )
 	cegui? ( >=dev-games/cegui-0.5.0 )
@@ -57,7 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if useq wxwindows; then
+	if useq wxwidgets; then
 		WX_GTK_VER=2.6
 		need-wxwidgets gtk2
 	fi
@@ -86,7 +86,7 @@ src_compile() {
 		$(use_with truetype freetype2) \
 		$(use_with cal3d) \
 		$(use_with sdl) \
-		$(use_with wxwindows wx) \
+		$(use_with wxwidgets wx) \
 		$(use_with cegui CEGUI) \
 		$(use_with cg Cg) \
 		$(use_with javascript js) \
