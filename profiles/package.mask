@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11242 2010/02/21 19:23:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11243 2010/02/22 21:32:40 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (22 Feb 2010)
+# New version is written from scratch, considered experimental/alpha
+# by upstream. Annoying automount error messages on startup.
+=x11-libs/libfm-0.1*
+=x11-misc/pcmanfm-0.9*
 
 # Samuli Suominen <ssuominen@gentoo.org> (21 Feb 2010)
 # libkleo doesn't install required include files anymore,

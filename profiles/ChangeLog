@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3920 2010/02/22 17:00:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3921 2010/02/22 21:32:39 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Mask experimental libfm and pcmanfm version
 
   22 Feb 2010; Pacho Ramos <pacho@gentoo.org>
   arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
