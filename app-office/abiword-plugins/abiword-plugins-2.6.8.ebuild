@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.8.ebuild,v 1.6 2010/02/10 23:02:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.8.ebuild,v 1.7 2010/02/22 14:21:45 lxnay Exp $
 
 EAPI=2
 
@@ -57,7 +57,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10+api.patch
 }
 
 src_configure(){
