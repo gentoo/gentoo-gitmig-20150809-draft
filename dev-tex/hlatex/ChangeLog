@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hlatex
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.11 2008/02/04 20:42:56 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.12 2010/02/22 21:12:43 abcd Exp $
+
+  22 Feb 2010; Jonathan Callen <abcd@gentoo.org> hlatex-1.0.1.ebuild:
+  Transfer prefix keywords, bump EAPI
 
   04 Feb 2008; Fabian Groffen <grobian@gentoo.org> hlatex-0.991.ebuild,
   hlatex-1.0.1.ebuild:
