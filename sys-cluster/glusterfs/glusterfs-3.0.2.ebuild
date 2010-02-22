@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.8.ebuild,v 1.4 2009/12/14 09:42:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.0.2.ebuild,v 1.1 2010/02/22 22:31:39 alexxy Exp $
 
 EAPI="2"
 
@@ -14,7 +14,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs +fuse infiniband static vim-syntax extras"
-#IUSE="emacs +fuse infiniband static vim-syntax"
 
 DEPEND="emacs? ( virtual/emacs )
 		fuse? ( >=sys-fs/fuse-2.7.0 )
@@ -25,8 +24,8 @@ RDEPEND="${DEPEND}
 SITEFILE="50${PN}-mode-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-parallel-make.patch"
-	epatch "${FILESDIR}/${P}-docdir.patch"
+	epatch "${FILESDIR}/${PN}-2.0.8-parallel-make.patch"
+	epatch "${FILESDIR}/${PN}-2.0.8-docdir.patch"
 	eautoreconf || die "eautoreconf failed"
 }
 
@@ -62,7 +61,7 @@ src_install() {
 	fi
 
 	if use extras ; then
-		newbin extras/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
+		newbin extras/volgen/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
 		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die "Failed to install bins"
 		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die "Failed to install bins"
 	fi
