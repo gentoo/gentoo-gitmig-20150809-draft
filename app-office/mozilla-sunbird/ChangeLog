@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.43 2009/03/22 15:26:27 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.44 2010/02/22 16:03:00 fauli Exp $
+
+  22 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-sunbird-0.9.ebuild:
+  fix typo
 
   22 Mar 2009; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.9.ebuild:
   Bump patchset to fix #263215

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.7 2009/03/22 15:26:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.8 2010/02/22 16:03:00 fauli Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -177,7 +177,7 @@ src_compile() {
 pkg_preinst() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
-	einfo "Removing old installs though some really ugly code.  It potentially"
+	einfo "Removing old installs through some really ugly code.  It potentially"
 	einfo "eliminates any problems during the install, however suggestions to"
 	einfo "replace this are highly welcome.  Send comments and suggestions to"
 	einfo "mozilla@gentoo.org."
