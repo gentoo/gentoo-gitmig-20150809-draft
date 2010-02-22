@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.47.ebuild,v 1.2 2009/12/26 17:31:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.47.ebuild,v 1.3 2010/02/22 20:58:34 abcd Exp $
+
+EAPI=3
 
 inherit eutils
 
@@ -10,7 +12,7 @@ SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc tk"
 
 DEPEND=">=media-libs/netpbm-9.12
@@ -19,9 +21,7 @@ DEPEND=">=media-libs/netpbm-9.12
 
 DOCS="AUTHORS BUGS CREDITS HISTORY RE* TODO"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
@@ -30,18 +30,17 @@ src_compile() {
 
 	use doc && mymakes="${mymakes} doc examples"
 
-	econf || die "econf failed"
 	emake ${mymakes} || die "make ${mymakes} failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" prefix="/usr"  exec_prefix="/usr" install || die "make install failed"
+	emake DESTDIR="${D}" prefix="${EPREFIX}/usr"  exec_prefix="${EPREFIX}/usr" install || die "make install failed"
 	# remove the tk frontend if tk is not selected
-	use tk || rm "${D}"/usr/bin/gocr.tcl
+	use tk || rm "${ED}"/usr/bin/gocr.tcl
 	# and install the documentation and examples
 	if use doc ; then
 		DOCS="${DOCS} doc/gocr.html doc/examples.txt doc/unicode.txt"
-		insinto /usr/share/doc/${P}/examples
+		insinto /usr/share/doc/${PF}/examples
 		doins "${S}"/examples/*.{fig,tex,pcx}
 	fi
 	# and then install all the docs
