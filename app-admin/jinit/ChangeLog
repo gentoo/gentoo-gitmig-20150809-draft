@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/jinit
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.15 2009/01/08 00:09:54 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.16 2010/02/22 12:07:45 phajdan.jr Exp $
+
+  22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  jinit-0.1.12-r1.ebuild:
+  Make sure that all docs get installed in /usr/share/doc/, wrt bug #298598
+  by flameeyes.
 
 *jinit-0.1.12-r1 (08 Jan 2009)
 

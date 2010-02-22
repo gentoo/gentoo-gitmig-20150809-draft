@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/jinit-0.1.12-r1.ebuild,v 1.1 2009/01/08 00:09:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/jinit-0.1.12-r1.ebuild,v 1.2 2010/02/22 12:07:45 phajdan.jr Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "failed emake install"
-	emake prefix="${D}"/usr/share/doc/${P}/example-setup install-initscripts \
+	emake prefix="${D}"/usr/share/doc/${PF}/example-setup install-initscripts \
 		|| die "failed installing example setup"
 	mv "${D}"/usr/sbin "${D}"/ || die
 	mv "${D}"/sbin/init "${D}"/sbin/jinit || die
