@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3919 2010/02/21 19:23:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3920 2010/02/22 17:00:35 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2010; Pacho Ramos <pacho@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Mask new emul packages in profiles that require it. Thanks a lot to Samuli
+  for noticing
 
   21 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask kde-misc/kopete-cryptography for removal.
