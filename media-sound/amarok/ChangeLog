@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.360 2010/02/20 19:44:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.361 2010/02/22 18:37:24 robbat2 Exp $
+
+  22 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> amarok-2.2.0.ebuild,
+  amarok-2.2.2.ebuild, amarok-2.2.2-r1.ebuild, amarok-2.2.2.90.ebuild:
+  Bug #306155 workaround: Update MySQL dep to prevent MySQL 5.1 from being
+  considered as a dep solution, due to the lack of a functional
+  shared-embedded patch at this time.
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   amarok-2.2.2-r1.ebuild:

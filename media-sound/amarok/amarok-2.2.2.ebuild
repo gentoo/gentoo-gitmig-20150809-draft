@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2.ebuild,v 1.1 2010/01/08 15:53:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2.ebuild,v 1.2 2010/02/22 18:37:24 robbat2 Exp $
 
 EAPI="2"
 
@@ -33,8 +33,8 @@ DEPEND="
 	app-crypt/qca:2
 	>=app-misc/strigi-0.5.7
 	|| (
-		>=dev-db/mysql-5.0.76-r1[embedded?,-minimal]
-		>=dev-db/mysql-community-5.0.77-r1[embedded?,-minimal]
+		( >=dev-db/mysql-5.0.76-r1[embedded,-minimal] <dev-db/mysql-5.1 )
+		( >=dev-db/mysql-community-5.0.77-r1[embedded,-minimal] <dev-db/mysql-community-5.1 )
 	)
 	>=media-libs/taglib-extras-1.0.1
 	>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
