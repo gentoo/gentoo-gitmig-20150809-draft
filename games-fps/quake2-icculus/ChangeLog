@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.39 2009/12/07 21:20:56 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.40 2010/02/22 12:57:42 ssuominen Exp $
+
+  22 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild:
+  Fix building with jpeg-8 (conflicting type of jpeg_mem_src) wrt #306345,
+  thanks to Alexander Tsoy for reporting.
 
   07 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild:

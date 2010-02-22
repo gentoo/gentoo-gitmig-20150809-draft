@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.20 2010/01/25 22:36:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.21 2010/02/22 12:57:42 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -56,6 +56,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd "${S}"
+
+	sed -i \
+		-e 's:jpeg_mem_src:_&:' \
+		src/ref_candygl/gl_image.c || die
+
 	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile || die
 	# -amd64.patch # make sure this is still needed in future versions
 	epatch \
