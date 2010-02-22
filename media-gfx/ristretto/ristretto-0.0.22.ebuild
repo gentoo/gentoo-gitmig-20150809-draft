@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.22.ebuild,v 1.3 2010/02/19 20:00:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.22.ebuild,v 1.4 2010/02/22 18:31:34 fauli Exp $
 
 inherit fdo-mime gnome2-utils
 
@@ -10,7 +10,7 @@ SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="debug"
 
 RDEPEND="media-libs/libexif
