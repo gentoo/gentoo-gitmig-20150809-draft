@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.81 2010/02/20 18:46:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.82 2010/02/22 12:51:54 ssuominen Exp $
+
+  22 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  taglib-1.6.1-r1.ebuild:
+  Remove USE="static-libs" because it doesn't compile on x86_64.
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   taglib-1.6.1-r1.ebuild:

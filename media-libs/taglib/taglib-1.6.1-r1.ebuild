@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.6.1-r1.ebuild,v 1.3 2010/02/20 18:46:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.6.1-r1.ebuild,v 1.4 2010/02/22 12:51:54 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -12,7 +12,7 @@ SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 SLOT="0"
-IUSE="+asf debug examples +mp4 static-libs test"
+IUSE="+asf debug examples +mp4 test"
 
 DEPEND="
 	dev-util/pkgconfig
@@ -28,7 +28,6 @@ DOCS="AUTHORS NEWS"
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_enable static-libs STATIC)
 		$(cmake-utils_use_build examples)
 		$(cmake-utils_use_with asf)
 		$(cmake-utils_use_with mp4)
