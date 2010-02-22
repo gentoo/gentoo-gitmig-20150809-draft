@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.13.ebuild,v 1.2 2010/02/16 07:06:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.13.ebuild,v 1.3 2010/02/22 18:01:19 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 MY_PN="gtk-doc"
 MY_P=${MY_PN}-${PV}
@@ -28,7 +28,7 @@ S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
 
 src_configure() {
-	econf
+	econf --with-xml-catalog="${EPREFIX}"/etc/xml/catalog
 }
 
 src_compile() {
