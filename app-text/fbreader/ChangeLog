@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.12 2010/02/06 11:42:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.13 2010/02/22 22:28:29 alexxy Exp $
+
+  22 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> fbreader-0.12.2.ebuild:
+  Add missing dep per bug #305387
 
 *fbreader-0.12.2 (06 Feb 2010)
 

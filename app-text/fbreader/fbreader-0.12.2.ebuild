@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.2.ebuild,v 1.1 2010/02/06 11:42:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.2.ebuild,v 1.2 2010/02/22 22:28:29 alexxy Exp $
 
 EAPI=2
 
@@ -20,6 +20,7 @@ DEPEND="dev-libs/expat
 	net-misc/curl
 	dev-libs/fribidi
 	app-arch/bzip2
+	dev-db/sqlite
 	qt4? ( x11-libs/qt-gui:4 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
 	"
