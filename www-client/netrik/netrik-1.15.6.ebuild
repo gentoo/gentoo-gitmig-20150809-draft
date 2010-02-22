@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.15.6.ebuild,v 1.4 2010/01/26 11:46:22 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.15.6.ebuild,v 1.5 2010/02/22 17:59:00 phajdan.jr Exp $
 
 DESCRIPTION="A text based web browser with no ssl support."
 HOMEPAGE="http://netrik.sourceforge.net/"
@@ -22,5 +22,5 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install || die "emake install failed"
 }
