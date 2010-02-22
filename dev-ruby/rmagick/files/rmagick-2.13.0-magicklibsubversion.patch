@@ -22,15 +22,6 @@ diff --git a/ext/RMagick/rmagick.h b/ext/RMagick/rmagick.h
 index e18a678..8aa6f3f 100644
 --- a/ext/RMagick/rmagick.h
 +++ b/ext/RMagick/rmagick.h
-@@ -6,7 +6,7 @@
-  * Changes since Nov. 2009 copyright &copy; by Benjamin Thomas and Omer Bar-or
-  *
-  * @file     rmagick.h
-- * @version  $Id: rmagick-2.13.0-magicklibsubversion.patch,v 1.1 2010/02/21 11:03:44 graaff Exp $
-+ * @version  $Id: rmagick-2.13.0-magicklibsubversion.patch,v 1.1 2010/02/21 11:03:44 graaff Exp $
-  * @author   Tim Hunter
-  ******************************************************************************/
- 
 @@ -162,6 +162,13 @@
  #define DestroyConstitute(void) ConstituteComponentTerminus(void)
  #endif
