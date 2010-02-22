@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.25 2009/05/04 20:14:33 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.26 2010/02/22 20:40:49 abcd Exp $
+
+  22 Feb 2010; Jonathan Callen <abcd@gentoo.org> highlight-2.9.ebuild:
+  Add prefix keywords, support; bump EAPI
 
 *highlight-2.9 (04 May 2009)
 
