@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5303 2010/02/21 17:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5304 2010/02/22 17:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1263,6 +1263,7 @@ kde-base/kdebindings-ruby:qwt - Compile bindings for x11-libs/qwt.
 kde-base/kdebindings-ruby:webkit - Compile bindings for x11-libs/webkit.
 kde-base/kdelibs:lzma - Enable LZMA/XZ archive support
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
+kde-base/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-base/kdepimlibs:akonadi - Build support for Akonadi resources.
 kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble
 kde-base/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/libqalculate
