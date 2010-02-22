@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r11.ebuild,v 1.1 2010/02/11 19:44:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r12.ebuild,v 1.1 2010/02/22 08:07:40 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -106,6 +106,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/mutt-1.5.20-off-by-one-mailcap-736b6af3c5f1.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-subject-mistruncation-31881f38ca1e.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-copy-From-to-imap-b2b97c7a2ae6.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-yes-no-non-ascii-a6fddecdc5f5.patch
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
