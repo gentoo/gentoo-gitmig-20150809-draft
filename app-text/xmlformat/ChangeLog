@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmlformat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/ChangeLog,v 1.9 2009/02/15 18:13:30 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/ChangeLog,v 1.10 2010/02/22 20:55:32 abcd Exp $
+
+  22 Feb 2010; Jonathan Callen <abcd@gentoo.org> xmlformat-1.04.ebuild:
+  Transfer prefix keywords, use `doins -r` to install documentation, use
+  relative symlinks in /usr/bin
 
 *xmlformat-1.04 (15 Feb 2009)
 
