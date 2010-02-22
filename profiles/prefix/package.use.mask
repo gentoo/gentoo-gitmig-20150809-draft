@@ -1,8 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.6 2010/01/09 00:58:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.7 2010/02/22 17:08:52 abcd Exp $
 
-# Christian Faulhammer <fauli@gentoo.org> (09 Dec 2010)
+# Jonathan Callen <abcd@gentoo.org> (22 Feb 2010)
+# ppp is not available in Prefix
+kde-base/kdenetwork-meta ppp
+
+# Christian Faulhammer <fauli@gentoo.org> (09 Jan 2010)
 # hesiod and m17n-lib are not available in Prefix
 app-editors/emacs-vcs hesiod m17n-lib
 app-editors/emacs hesiod m17n-lib

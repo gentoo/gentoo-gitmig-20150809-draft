@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.149 2010/02/17 14:27:11 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.150 2010/02/22 17:08:52 abcd Exp $
+
+  22 Feb 2010; Jonathan Callen <abcd@gentoo.org> package.use.mask:
+  Add ppp on kdenetwork-meta to p.use.mask
 
   17 Feb 2010; Markus Duft <mduft@gentoo.org> windows/interix/package.mask:
   masked perl >=5.10 for ~x86-interix - does not build atm.
