@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.70 2010/02/22 18:50:40 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.71 2010/02/22 19:23:29 lxnay Exp $
+
+  22 Feb 2010; Fabio Erculiani <lxnay@gentoo.org>
+  files/abiword-plugins-2.6.8-glibc-2.10+api.patch:
+  fix ill-conceived API fix patch, use strlen instead of sizeof
 
   22 Feb 2010; Fabio Erculiani <lxnay@gentoo.org>
   abiword-plugins-2.6.8.ebuild,

@@ -15,7 +15,7 @@ diff -Nurp abiword-plugins-2.6.8.orig/wp/impexp/xhtml/xp/ie_imp_MHT.cpp abiword-
  	setReader (&wrapper);
  
 -	return IE_Imp_XHTML::importFile (szFilename);
-+	return IE_Imp_XHTML::importFile (szFilename, sizeof(szFilename));
++	return IE_Imp_XHTML::importFile (szFilename, strlen(szFilename));
  }
  
  UT_Error IE_Imp_MHT::importHTML4 (const char * szFilename)
@@ -24,7 +24,7 @@ diff -Nurp abiword-plugins-2.6.8.orig/wp/impexp/xhtml/xp/ie_imp_MHT.cpp abiword-
  	setParser (&parser);
  
 -	e = IE_Imp_XHTML::importFile (szFilename);
-+	e = IE_Imp_XHTML::importFile (szFilename, sizeof(szFilename));
++	e = IE_Imp_XHTML::importFile (szFilename, strlen(szFilename));
  
  	setParser (0);
  	setReader (0);
