@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/visitors
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.9 2007/10/15 06:57:37 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.10 2010/02/22 16:49:00 phajdan.jr Exp $
+
+  22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> visitors-0.7.ebuild:
+  Fix installed documentation wrt bug #298585 by flameeyes.
 
   15 Oct 2007; Christian Faulhammer <opfer@gentoo.org> visitors-0.7.ebuild:
   remove dependency on graphviz (bug 163593); quote a S variable; adjust

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/visitors-0.7.ebuild,v 1.2 2007/10/15 06:57:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/visitors-0.7.ebuild,v 1.3 2010/02/22 16:49:00 phajdan.jr Exp $
 
 DESCRIPTION="Fast web log analyzer"
 HOMEPAGE="http://www.hping.org/visitors/"
@@ -30,6 +30,6 @@ src_compile() {
 
 src_install() {
 	dobin visitors
-	dodoc AUTHORS COPYING Changelog README TODO
-	dohtml doc.html graph.png visitors.css
+	dodoc AUTHORS Changelog README TODO
+	dohtml doc.html visitors.css visitors.png
 }
