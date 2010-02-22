@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.6 2010/02/22 16:45:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.7 2010/02/22 17:17:16 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -79,7 +79,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		dev-java/lucene-analyzers:2.3
 		dev-java/rhino:1.5 )
 	mono? ( || ( >dev-lang/mono-2.4-r1 <dev-lang/mono-2.4 ) )
-	nsplugin? ( || ( net-libs/xulrunner:1.9 net-libs/xulrunner:1.8 )
+	nsplugin? ( net-libs/xulrunner:1.9
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
 	opengl? ( virtual/opengl
@@ -188,16 +188,6 @@ pkg_setup() {
 		die
 	fi
 
-	if use nsplugin; then
-		if pkg-config --exists libxul; then
-			BRWS="libxul"
-		elif pkg-config --exists xulrunner-xpcom; then
-			BRWS="xulrunner"
-		else
-			die "USE flag [nsplugin] set but no installed xulrunner found!"
-		fi
-	fi
-
 	java-pkg-opt-2_pkg_setup
 
 	# sys-libs/db version used
@@ -243,13 +233,8 @@ src_prepare() {
 		echo "--with-rhino-jar=$(java-pkg_getjar rhino-1.5 js.jar)" >> ${CONFFILE}
 	fi
 
-	if use nsplugin ; then
-		echo "--enable-mozilla" >> ${CONFFILE}
-		echo "--with-system-mozilla=${BRWS}" >> ${CONFFILE}
-	else
-		echo "--disable-mozilla" >> ${CONFFILE}
-		echo "--without-system-mozilla" >> ${CONFFILE}
-	fi
+	echo $(use_enable nsplugin mozilla) >> ${CONFFILE}
+	echo $(use_with nsplugin system-mozilla libxul) >> ${CONFFILE}
 
 	echo $(use_enable binfilter) >> ${CONFFILE}
 	echo $(use_enable cups) >> ${CONFFILE}
