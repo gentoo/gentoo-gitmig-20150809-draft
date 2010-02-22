@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/twitux-0.69-r1.ebuild,v 1.1 2009/07/21 23:44:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/twitux-0.69-r1.ebuild,v 1.2 2010/02/22 12:45:17 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/twitux/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dbus gnome-keyring nls spell"
+IUSE="gnome-keyring nls spell"
 
 RDEPEND="net-libs/libsoup:2.4
 	dev-libs/libxml2
@@ -20,7 +20,7 @@ RDEPEND="net-libs/libsoup:2.4
 	x11-libs/libsexy
 	x11-libs/libnotify
 	>=x11-libs/gtk+-2.14:2
-	dbus? ( dev-libs/dbus-glib )
+	dev-libs/dbus-glib
 	app-text/iso-codes
 	media-libs/libcanberra[gtk]
 	spell? ( app-text/enchant )
@@ -42,8 +42,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
+		--enable-dbus \
 		$(use_enable nls) \
-		$(use_enable dbus) \
 		$(use_enable gnome-keyring) \
 		$(use_enable spell)
 }

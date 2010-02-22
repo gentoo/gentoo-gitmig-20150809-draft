@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/twitux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/ChangeLog,v 1.10 2009/10/12 20:06:37 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/twitux/ChangeLog,v 1.11 2010/02/22 12:45:17 phajdan.jr Exp $
+
+  22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  twitux-0.69-r1.ebuild:
+  Make dbus dependency non-optional, wrt bug #288734 by Andy Spencer
+  <andy753421@gmail.com>.
 
   12 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> metadata.xml:
   Assigning to maintainer-needed due to welp being retired
