@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.24.2.ebuild,v 1.1 2009/08/03 11:19:59 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.24.2.ebuild,v 1.2 2010/02/22 15:39:18 ssuominen Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -49,7 +49,7 @@ RDEPEND="dev-perl/DBD-mysql
 need_apache
 need_php_httpd
 
-S="${WORKDIR}"/${MY_PN}-${MY_PV}
+S=${WORKDIR}/${MY_PN}-${MY_PV}
 
 pkg_setup() {
 	require_php_with_use mysql sockets apache2
@@ -63,6 +63,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PATCH_PV}/zm_create.sql.in.patch
 	epatch "${FILESDIR}"/${PATCH_PV}/zm_remote_camera_http.patch
 	epatch "${FILESDIR}"/${PATCH_PV}/db_upgrade_script_location.patch
+	epatch "${FILESDIR}"/${PATCH_PV}/zm_jpeg.patch
 
 	eautoreconf
 }
