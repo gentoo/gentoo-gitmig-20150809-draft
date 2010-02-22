@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.2 2009/07/16 13:44:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.3 2010/02/22 11:46:57 phajdan.jr Exp $
 
 inherit python multilib eutils
 
@@ -22,7 +22,9 @@ RESTRICT="test"
 src_unpack() {
 	python_version
 
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
+
 	# Fix all hardcoded python2.5 paths
 	for name in python/scxx/PWOBase.h python/PyHead.h python/PyStorage.cpp ; do
 		sed -i -e "s:Python.h:python${PYVER}/Python.h:" ${name}
@@ -54,9 +56,9 @@ src_install () {
 	python_version
 
 	use python && dodir /usr/$(get_libdir)/python${PYVER}/site-packages
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc CHANGES README
-	dohtml MetaKit.html
+	dohtml Metakit.html
 	dohtml -a html,gif,png,jpg -r doc/*
 }

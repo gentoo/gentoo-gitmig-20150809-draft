@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/metakit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.44 2009/07/16 13:44:51 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.45 2010/02/22 11:46:57 phajdan.jr Exp $
+
+  22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  metakit-2.4.9.7.ebuild:
+  Fix the name of installed html doc file, to Metakit.html wrt bug #305551
+  by flameeyes. Also fix repoman warnings about unquoted variables.
 
   16 Jul 2009; Markus Ullmann <jokey@gentoo.org> metakit-2.4.9.7.ebuild:
   Recent version has no WHATSNEW any more
