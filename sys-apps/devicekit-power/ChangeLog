@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/devicekit-power
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.6 2009/12/11 19:12:05 nirbheek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.7 2010/02/23 19:31:23 eva Exp $
+
+*devicekit-power-014 (23 Feb 2010)
+
+  23 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +devicekit-power-014.ebuild:
+  Version bump. Import bsd backend, segfault fixes.
 
 *devicekit-power-013 (11 Dec 2009)
 
