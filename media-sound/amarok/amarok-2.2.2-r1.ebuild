@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2-r1.ebuild,v 1.5 2010/02/23 17:02:29 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2-r1.ebuild,v 1.6 2010/02/23 22:58:04 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -32,6 +32,7 @@ IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp semantic-desktop"
 DEPEND="
 	app-crypt/qca:2
 	>=app-misc/strigi-0.5.7[dbus,qt4]
+	>=dev-db/mysql-5.0.76
 	>=media-libs/taglib-1.6.1[asf,mp4]
 	>=media-libs/taglib-extras-1.0.1
 	>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
@@ -43,8 +44,7 @@ DEPEND="
 		>=kde-base/libkcompactdisc-${KDE_MINIMAL}
 		>=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}
 	)
-	embedded? ( <=dev-db/mysql-5.1[embedded,-minimal] )
-	!embedded? ( dev-db/mysql[-embedded,-minimal] )
+	embedded? ( <dev-db/mysql-5.1[embedded,-minimal] )
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 	lastfm? ( >=media-libs/liblastfm-0.3.0 )
 	mp3tunes? (
@@ -96,5 +96,18 @@ pkg_postinst() {
 		elog "You have installed amarok with daap support."
 		elog "You may be interested in installing www-servers/mongrel as well."
 		echo
+	fi
+
+	if !use embedded; then
+		echo
+		elog "You've disabled the amarok support for embedded mysql DBs."
+		elog "You'll have to configure amarok to use an external db server."
+		echo
+
+		if has_version "dev-db/mysql[minimal]"; then
+			elog "You built mysql with the minimal use flag, so it doesn't include the server."
+			elog "You won't be able to use the local mysql installation to store your amarok collection."
+			echo
+		fi
 	fi
 }
