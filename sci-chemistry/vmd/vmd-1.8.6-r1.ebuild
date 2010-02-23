@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6-r1.ebuild,v 1.2 2009/07/07 22:54:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6-r1.ebuild,v 1.3 2010/02/23 18:00:14 alexxy Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="${P}.src.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="tachyon"
 
 RESTRICT="fetch"
 
@@ -27,7 +27,8 @@ DEPEND="app-shells/tcsh
 	sci-biology/stride
 	sci-libs/netcdf"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		tachyon? ( media-gfx/tachyon )"
 
 VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD"
 
