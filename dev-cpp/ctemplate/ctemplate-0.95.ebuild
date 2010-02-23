@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.1 2009/07/22 14:16:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.2 2010/02/23 09:53:07 idl0r Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://google-ctemplate.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="emacs vim-syntax"
+IUSE="doc emacs vim-syntax"
 
 DEPEND=""
 RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
@@ -21,7 +21,7 @@ RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
 SITEFILE="70ctemplate-gentoo.el"
 
 src_compile() {
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	if use emacs ; then
 		elisp-compile contrib/tpl-mode.el || die "elisp-compile failed"
@@ -35,7 +35,7 @@ src_install() {
 	rm -rf "${D}/usr/share/doc"
 
 	dodoc AUTHORS ChangeLog NEWS README
-	dohtml doc/*
+	use doc && dohtml doc/*
 
 	if use vim-syntax ; then
 		cd "${S}/contrib"
