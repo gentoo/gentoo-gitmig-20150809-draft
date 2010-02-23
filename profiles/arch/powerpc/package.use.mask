@@ -1,10 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.36 2010/02/08 23:03:44 alexxy Exp $
-
-# Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
-# need dev-db/virtuoso-* keyworded
-dev-libs/soprano virtuoso
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.37 2010/02/23 08:26:30 josejx Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need sys-auth/polkit keyworded                   
@@ -41,7 +37,7 @@ sys-block/gparted kde
 
 # Brent Baude <ranger@gentoo.org>
 # Masking off video cards and input devices for xorg-1.5.3 stablization
-x11-base/xorg-server input_devices_spaceorb input_devices_mutouch input_devices_hyperpen input_devices_fpit input_devices_dynapro input_devices_calcomp input_devices_summa input_devices_elographics input_devices_citron input_devices_microtouch input_devices_jamstudio input_devices_elo2300 input_devices_penmount input_devices_tek4957 input_devices_dmc input_devices_digitaledge input_devices_palmax input_devices_magellan video_cards_v4l video_cards_cirrus video_cards_voodoo video_cards_sisusb video_cards_s3 video_cards_mach64 video_cards_s3virge
+x11-base/xorg-server input_devices_spaceorb input_devices_mutouch input_devices_hyperpen input_devices_fpit input_devices_dynapro input_devices_calcomp input_devices_summa input_devices_elographics input_devices_citron input_devices_microtouch input_devices_jamstudio input_devices_elo2300 input_devices_penmount input_devices_tek4957 input_devices_dmc input_devices_digitaledge input_devices_palmax input_devices_magellan video_cards_v4l video_cards_cirrus video_cards_voodoo video_cards_sisusb video_cards_s3 video_cards_s3virge
 
 # Joseph Jezak <josejx@gentoo.org> (Mar 20 2009)
 # Mask Ruby -> Oracle bindings
