@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.17 2010/01/13 16:13:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.18 2010/02/23 18:18:58 graaff Exp $
+
+  23 Feb 2010; Hans de Graaff <graaff@gentoo.org> json-1.2.0-r1.ebuild:
+  Add missing build dependency on dev-ruby/rake, fixes #306493.
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> json-1.2.0-r1.ebuild:
   Marking json-1.2.0-r1 ~ppc64 for bug 297622
