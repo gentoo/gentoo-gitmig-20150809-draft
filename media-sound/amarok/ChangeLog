@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.362 2010/02/23 04:04:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.363 2010/02/23 17:02:29 jmbsvicetto Exp $
+
+  23 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.2.2-r1.ebuild, amarok-2.2.2.90.ebuild:
+  Fixed mysql deps and dropped support for mysql-community - fixes bug
+  306155.
 
   23 Feb 2010; Joseph Jezak <josejx@gentoo.org> amarok-2.2.2-r1.ebuild,
   amarok-2.2.2.90.ebuild:
