@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5308 2010/02/23 06:08:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5309 2010/02/23 10:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2230,10 +2230,13 @@ net-fs/samba:async - Enables asynchronous input/output
 net-fs/samba:automount - Enables automount support
 net-fs/samba:cifsupcall - Enables userspace upcall helper
 net-fs/samba:client - Enables the client part
+net-fs/samba:dso - Enable dso support
+net-fs/samba:netapi - Enable building of netapi bits
 net-fs/samba:oav - Enables support for the OpenAntiVirus plugins
 net-fs/samba:quotas - Enables support for user quotas
 net-fs/samba:server - Enables the server part
 net-fs/samba:swat - Enables support for swat configuration gui
+net-fs/samba:tools - Enable extra tools
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/samba-client:ads - Enable Active Directory support
 net-fs/samba-client:aio - Enable asynchronous IO support
