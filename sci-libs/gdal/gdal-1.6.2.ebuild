@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.2.ebuild,v 1.3 2010/01/23 20:21:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.2.ebuild,v 1.4 2010/02/23 05:29:53 nerdboy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.5"
@@ -54,7 +54,9 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	sqlite? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${RDEPEND}
-	perl? ( python? ( ruby? ( >=dev-lang/swig-1.3.28 ) ) )
+	perl? ( >=dev-lang/swig-1.3.28 )
+	python? ( >=dev-lang/swig-1.3.28 )
+	ruby? ( >=dev-lang/swig-1.3.28 )
 	doc? ( app-doc/doxygen )"
 
 AT_M4DIR="${S}/m4"

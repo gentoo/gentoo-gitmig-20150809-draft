@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3.ebuild,v 1.1 2010/02/15 08:24:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3.ebuild,v 1.2 2010/02/23 05:29:53 nerdboy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.5"
@@ -53,7 +53,9 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	sqlite? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${RDEPEND}
-	perl? ( python? ( ruby? ( >=dev-lang/swig-1.3.28 ) ) )
+	perl? ( >=dev-lang/swig-1.3.32 )
+	python? ( >=dev-lang/swig-1.3.32 )
+	ruby? ( >=dev-lang/swig-1.3.32 )
 	doc? ( app-doc/doxygen )"
 
 AT_M4DIR="${S}/m4"
@@ -130,6 +132,15 @@ src_configure() {
 }
 
 src_compile() {
+	local i
+	for i in perl ruby python; do
+		if useq $i; then
+			rm "${S}"/swig/$i/*_wrap.cpp
+			emake -C "${S}"/swig/$i generate || \
+				die "make generate failed for swig/$i"
+		fi
+	done
+
 	# parallel makes fail on the ogr stuff (C++, what can I say?)
 	# also failing with gcc4 in libcsf
 	emake -j1 || die "emake failed"

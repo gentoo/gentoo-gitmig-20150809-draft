@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.72 2010/02/15 08:24:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.73 2010/02/23 05:29:53 nerdboy Exp $
+
+  23 Feb 2010; Steve Arnold <nerdboy@gentoo.org> gdal-1.6.1.ebuild,
+  gdal-1.6.2.ebuild, gdal-1.6.3.ebuild:
+  Updated swig depends and added work-around for new perl with swig cruft 
+  (fixes bug #305395).  Seems like there ought to be an EAPI2 way to do 
+  the swig deps in a nicer way, but I couldn't find one...
 
 *gdal-1.6.3 (15 Feb 2010)
 
