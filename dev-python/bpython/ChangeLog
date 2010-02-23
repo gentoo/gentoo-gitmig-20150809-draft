@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.19 2010/02/03 17:39:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.20 2010/02/23 11:19:49 fauli Exp $
+
+  23 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  bpython-0.9.6.2.ebuild:
+  stable x86, bug 302896
 
   03 Feb 2010; Markos Chandras <hwoarang@gentoo.org> bpython-0.9.6.2.ebuild:
   Stable on amd64 wrt bug #302896
