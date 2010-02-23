@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.1 2010/02/23 09:50:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.2 2010/02/23 12:19:03 dagger Exp $
 
 EAPI="2"
 
@@ -114,6 +114,7 @@ src_install() {
 	# install libs
 	emake installlib DESTDIR="${D}" || die "emake installib failed"
 	emake installheader DESTDIR="${D}" || die "emake installheader failed"
+	emake installpc DESTDIR="${D}" || die "make installpc failed"
 
 	# compile python
 	if use python ; then

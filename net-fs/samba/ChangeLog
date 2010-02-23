@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.399 2010/02/23 09:50:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.400 2010/02/23 12:19:03 dagger Exp $
+
+  23 Feb 2010; Robert Piasek <dagger@gentoo.org> samba-4.0.0_alpha11.ebuild:
+  We need emake installpc to install PKG-CONFIG files
 
 *samba-4.0.0_alpha11 (23 Feb 2010)
 
