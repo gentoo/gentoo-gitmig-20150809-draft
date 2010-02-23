@@ -1,5 +1,5 @@
---- Makefile.old	2005-10-14 02:11:53.000000000 +0200
-+++ Makefile	2006-10-27 22:59:55.654125000 +0200
+--- Makefile.orig	2010-02-23 11:13:31.000000000 +0100
++++ Makefile	2010-02-23 11:13:37.000000000 +0100
 @@ -1,6 +1,4 @@
  UNAME = $(shell uname)
 -CC = gcc
@@ -16,12 +16,23 @@
  endif
  
  # executable should not depend on cygwin.dll
-@@ -26,7 +22,7 @@
+@@ -26,13 +22,15 @@
  	-rm -f ${OFILES} ${GARBAGE}
  
  flasm:	${OFILES}
 -	${CC} $(CFLAGS) -o flasm ${OFILES} ${LIBS}
 +	${CC} $(CFLAGS) $(LDFLAGS) -o flasm ${OFILES} ${LIBS}
  
- assembler.tab.c assembler.tab.h: assembler.y
+-assembler.tab.c assembler.tab.h: assembler.y
++assembler.tab.c: assembler.tab.h
++
++assembler.tab.h: assembler.y
  	bison --defines --debug assembler.y
+ 
+ lex.yy.c: assembler.flex assembler.tab.h
+ 	flex -i assembler.flex
+ 
+ keywords.c: keywords.gperf assembler.tab.h
+-	gperf --language=ANSI-C -t -T -E -o -k 1,$$,2,5 -S8 keywords.gperf > keywords.c
+\ No newline at end of file
++	gperf --language=ANSI-C -t -T -E -o -k 1,$$,2,5 -S8 keywords.gperf > keywords.c
