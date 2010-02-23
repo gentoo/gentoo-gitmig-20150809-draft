@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.64 2010/02/19 15:55:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.65 2010/02/23 21:58:57 armin76 Exp $
+
+  23 Feb 2010; Raúl Porcel <armin76@gentoo.org> obconf-2.0.3.ebuild:
+  arm stable
 
   19 Feb 2010; Markos Chandras <hwoarang@gentoo.org> -obconf-9999.ebuild:
   Moved to lxde-overlay http://bitbucket.org/yngwin/lxde-overlay/
