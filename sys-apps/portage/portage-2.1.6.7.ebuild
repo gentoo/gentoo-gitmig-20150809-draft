@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.15 2010/02/10 01:04:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.16 2010/02/23 10:41:05 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -100,10 +100,13 @@ src_compile() {
 		my_modules="$(find "${S}/pym" -name "*.py" \
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g' | sort)" || die "error listing modules"
+		# workaround for bug 282760
+		> "$S/pym/pysqlite2.py"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
 			-qqqqq --no-frames --show-imports $epydoc_opts \
 			--name "${PN}" --url "${HOMEPAGE}" \
 			${my_modules} || die "epydoc failed"
+		rm "$S/pym/pysqlite2.py"
 	fi
 }
 

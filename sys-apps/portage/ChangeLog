@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.677 2010/02/20 09:49:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.678 2010/02/23 10:41:05 zmedico Exp $
+
+  23 Feb 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
+  portage-2.1.7.16.ebuild, portage-2.1.7.17.ebuild, portage-2.2_rc62.ebuild,
+  portage-2.2_rc63.ebuild:
+  Bug #282760 - Add a workaround for unicode issues with the pysqlite module
+  that cause epydoc to fail.
 
   19 Feb 2010; Zac Medico <zmedico@gentoo.org> ChangeLog:
   Prune old ChangeLog entries.

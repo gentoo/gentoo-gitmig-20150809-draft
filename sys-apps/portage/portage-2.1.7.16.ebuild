@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.16.ebuild,v 1.8 2010/02/11 01:14:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.7.16.ebuild,v 1.9 2010/02/23 10:41:05 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -130,11 +130,14 @@ src_compile() {
 		my_modules="$(find "${S}/pym" -name "*.py" \
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g' | sort)" || die "error listing modules"
+		# workaround for bug 282760
+		> "$S/pym/pysqlite2.py"
 		PYTHONPATH=${S}/pym:${PYTHONPATH:+:}${PYTHONPATH} \
 			epydoc -o "${WORKDIR}"/api \
 			-qqqqq --no-frames --show-imports $epydoc_opts \
 			--name "${PN}" --url "${HOMEPAGE}" \
 			${my_modules} || die "epydoc failed"
+		rm "$S/pym/pysqlite2.py"
 	fi
 }
 
