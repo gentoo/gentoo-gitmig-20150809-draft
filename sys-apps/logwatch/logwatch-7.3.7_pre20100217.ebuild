@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3.7_pre20100217.ebuild,v 1.1 2010/02/17 19:56:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3.7_pre20100217.ebuild,v 1.2 2010/02/23 15:22:26 josejx Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
