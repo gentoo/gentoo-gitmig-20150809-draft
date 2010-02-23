@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.137 2010/02/14 16:40:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.138 2010/02/23 13:35:18 fauli Exp $
+
+  23 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  cracklib-2.8.15.ebuild:
+  stable x86, bug 305081
 
   14 Feb 2010; Mike Frysinger <vapier@gentoo.org> cracklib-2.8.15.ebuild:
   Fix building with python-3 #302908 by Neil Funk.
