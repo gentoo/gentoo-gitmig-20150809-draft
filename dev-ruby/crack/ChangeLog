@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.10 2010/02/21 15:44:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.11 2010/02/23 18:00:15 graaff Exp $
+
+  22 Feb 2010; Hans de Graaff <graaff@gentoo.org> +crack-0.1.6.ebuild:
+  Resurrected crack-0.1.6 because httparty explicitly depends on it.
 
 *crack-0.1.7 (21 Feb 2010)
 
