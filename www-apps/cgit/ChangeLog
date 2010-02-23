@@ -1,0 +1,12 @@
+# ChangeLog for www-apps/cgit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.1 2010/02/23 22:54:11 ramereth Exp $
+
+*cgit-0.8.3.1 (20 Feb 2010)
+
+  20 Feb 2010; Lance Albertson <ramereth@gentoo.org> +cgit-0.8.3.1.ebuild,
+  +files/cgitrc, +files/postinstall-en.txt, +metadata.xml:
+  Initial ebuild
+
+  Thanks to everyone who helped in #223339 for contributing to the ebuild.
+
