@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-0.9.10.ebuild,v 1.3 2009/12/01 23:13:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.1.ebuild,v 1.1 2010/02/23 16:52:26 alexxy Exp $
 
 EAPI="2"
 
 inherit flag-o-matic linux-info
 
 DESCRIPTION="Linux SCSI target framework (tgt)"
-HOMEPAGE="http://stgt.berlios.de/"
-SRC_URI="http://stgt.berlios.de/releases/${P}.tar.bz2"
+HOMEPAGE="http://stgt.sourceforge.net"
+SRC_URI="http://stgt.sourceforge.net/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,7 +36,9 @@ src_compile() {
 }
 
 src_install() {
-	emake  install-programs install-scripts install-doc DESTDIR="${D}" || die "install failed"
+	emake  install-programs install-scripts install-doc DESTDIR="${D}" \
+		docdir=/usr/share/doc/${PF} \
+		|| die "install failed"
 	doinitd "${FILESDIR}/tgtd"
 	dodir "/etc/tgt"
 }
