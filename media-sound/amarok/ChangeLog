@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.361 2010/02/22 18:37:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.362 2010/02/23 04:04:41 josejx Exp $
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org> amarok-2.2.2-r1.ebuild,
+  amarok-2.2.2.90.ebuild:
+  Marked ~ppc for bug #280552.
 
   22 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> amarok-2.2.0.ebuild,
   amarok-2.2.2.ebuild, amarok-2.2.2-r1.ebuild, amarok-2.2.2.90.ebuild:

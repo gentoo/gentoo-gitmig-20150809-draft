@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/amarok-utils-2.2.2-r1.ebuild,v 1.2 2010/02/20 19:43:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/amarok-utils-2.2.2-r1.ebuild,v 1.3 2010/02/23 04:02:04 josejx Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ else
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 SLOT="4"
 IUSE="debug"
 
