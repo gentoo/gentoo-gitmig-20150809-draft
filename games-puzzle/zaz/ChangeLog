@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/zaz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.5 2009/11/16 22:10:47 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.6 2010/02/23 00:22:47 mr_bones_ Exp $
+
+*zaz-0.3.3 (23 Feb 2010)
+
+  23 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/zaz-0.2.9-build.patch, +zaz-0.3.3.ebuild,
+  +files/zaz-0.3.3-build.patch:
+  version bump
 
   16 Nov 2009; Markus Meier <maekke@gentoo.org> zaz-0.3.0.ebuild:
   amd64/x86 stable, bug #292591
