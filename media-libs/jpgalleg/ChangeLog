@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpgalleg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.9 2009/09/22 14:13:42 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.10 2010/02/23 09:54:16 phajdan.jr Exp $
+
+  23 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jpgalleg-2.5.ebuild:
+  Do not install ELF files in /usr/share wrt bug #295768 by flameeyes.
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> jpgalleg-2.5.ebuild:
   x86 stable, bug #283963
