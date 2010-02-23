@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gpicview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.12 2010/01/24 18:20:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.13 2010/02/23 18:43:43 armin76 Exp $
+
+  23 Feb 2010; Raúl Porcel <armin76@gentoo.org> gpicview-0.2.1.ebuild:
+  arm stable wrt #306433
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> gpicview-0.2.1.ebuild:
   Add ~arm
