@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.442 2010/02/23 09:22:26 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.443 2010/02/23 14:50:29 fauli Exp $
+
+  23 Feb 2010; Christian Faulhammer <fauli@gentoo.org> gtk+-2.18.7.ebuild:
+  Use libresolv from sys-libs/itx-bin on Interix Prefix
 
 *gtk+-2.18.7 (23 Feb 2010)
 
