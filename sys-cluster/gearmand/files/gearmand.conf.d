@@ -1,7 +1,8 @@
 # /etc/conf.d/gearmand: config file for /etc/init.d/gearmand
 
 # Persistent queue store
-# The following queue stores are available: drizzle|memcache|mysql|postgre|sqlite|none
+# The following queue stores are available:
+# drizzle|memcache|mysql|postgre|sqlite|tokyocabinet|none
 # If you do not wish to use persistent queues, leave this option commented out.
 # Note that persistent queue mechanisms are mutally exclusive.
 #PERSISTENT=""

@@ -49,6 +49,9 @@ start() {
             [ ${PERSISTENT_TABLE}  ] && ewarn "Libpq doesn't recognise 'table' parameter."
             [ ${PERSISTENT_SOCKET} ] && ewarn "Libpq doesn't recognise 'socket' parameter. If no host is set, it automatically falls back to a socket."
 	    ;;
+	  tokyocabinet)
+	    GEARMAND_PARAMS="${GEARMAND_PARAMS} -q libtokyocabinet --libtokyocabinet-file=${PERSISTENT_FILE}"
+	    ;;
 	  sqlite)
 	    GEARMAND_PARAMS="${GEARMAND_PARAMS} -q libsqlite3 --libsqlite3-db=${PERSISTENT_FILE}"
 	    ;;

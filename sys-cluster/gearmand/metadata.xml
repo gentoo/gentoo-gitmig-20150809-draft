@@ -25,5 +25,9 @@
       Support <pkg>dev-db/libdrizzle</pkg> for the queue storage. This
       also adds support for MySQL storage.
     </flag>
+    <flag name="tokyocabinet">
+      Support <pkg>dev-db/tokyocabinet</pkg> for the queue storage.
+    </flag>
+
   </use>
 </pkgmetadata>

@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/gearmand
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.5 2010/02/09 19:18:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.6 2010/02/23 00:31:16 scarabeus Exp $
+
+*gearmand-0.12 (23 Feb 2010)
+
+  23 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +gearmand-0.12.ebuild, files/gearmand.conf.d, files/gearmand.init.d,
+  metadata.xml:
+  Version bump. Update init scripts. Proxy commit for Pavel Stratil.
 
   09 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   gearmand-0.11-r2.ebuild:
