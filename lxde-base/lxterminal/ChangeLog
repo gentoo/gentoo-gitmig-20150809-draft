@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.10 2010/01/24 18:21:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.11 2010/02/23 18:42:47 armin76 Exp $
+
+  23 Feb 2010; Raúl Porcel <armin76@gentoo.org> lxterminal-0.1.6.ebuild:
+  arm stable wrt #306433
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> lxterminal-0.1.6.ebuild:
   Add ~arm

@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.0-r1.ebuild,v 1.2 2010/02/23 18:40:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.0-r1.ebuild,v 1.3 2010/02/23 18:45:10 armin76 Exp $
 
 DESCRIPTION="Meta ebuild for LXDE, the Lightweight X11 Desktop Environment"
 HOMEPAGE="http://lxde.sf.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 arm ~ppc ~x86"
 IUSE=""
 
 RDEPEND="=lxde-base/lxappearance-0.4*

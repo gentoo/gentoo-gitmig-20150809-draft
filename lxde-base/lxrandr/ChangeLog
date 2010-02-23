@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxrandr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.10 2010/01/24 18:27:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.11 2010/02/23 18:40:52 armin76 Exp $
+
+  23 Feb 2010; Raúl Porcel <armin76@gentoo.org> lxrandr-0.1.1.ebuild:
+  arm stable wrt #306433
 
   24 Jan 2010; Raúl Porcel <armin76@gentoo.org> lxrandr-0.1.1.ebuild:
   Add ~arm
