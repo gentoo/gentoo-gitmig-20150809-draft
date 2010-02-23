@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/roadsend-php
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.10 2008/12/31 00:16:21 hkbst Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.11 2010/02/23 03:49:40 yngwin Exp $
+
+*roadsend-php-2.9.9_p1 (23 Feb 2010)
+
+  23 Feb 2010; Ben de Groot <yngwin@gentoo.org> -roadsend-php-2.9.3.ebuild,
+  -roadsend-php-2.9.4.ebuild, -roadsend-php-2.9.5.ebuild,
+  -roadsend-php-2.9.6.ebuild, -roadsend-php-2.9.8.ebuild,
+  +roadsend-php-2.9.9_p1.ebuild, -files/bigloo-3.1a-configsupport.patch:
+  Version bump (bug 273210). Remove old versions. Migrate to eapi-2. Fix
+  sqlite useflag (bug 251396).
 
 *roadsend-php-2.9.8 (31 Dec 2008)
 
