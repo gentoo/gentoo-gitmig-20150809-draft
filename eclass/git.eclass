@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.41 2010/01/31 10:13:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.42 2010/02/23 00:43:54 abcd Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -18,6 +18,9 @@ inherit eutils
 
 EGIT="git.eclass"
 
+# We DEPEND on at least a bit recent git version
+DEPEND=">=dev-util/git-1.6"
+
 EXPORTED_FUNCTIONS="src_unpack"
 case "${EAPI:-0}" in
 	3|2) EXPORTED_FUNCTIONS="${EXPORTED_FUNCTIONS} src_prepare" ;;
@@ -28,9 +31,6 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
 # define some nice defaults but only if nothing is set already
 : ${HOMEPAGE:=http://git-scm.com/}
-
-# We DEPEND on at least a bit recent git version
-DEPEND=">=dev-util/git-1.6"
 
 # @ECLASS-VARIABLE: EGIT_QUIET
 # @DESCRIPTION:
@@ -44,6 +44,12 @@ DEPEND=">=dev-util/git-1.6"
 # Can be redefined.
 [[ -z ${EGIT_STORE_DIR} ]] && EGIT_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/git-src"
 
+# @ECLASS-VARIABLE: EGIT_HAS_SUBMODULES
+# @DESCRIPTION:
+# Set this to "true" to enable the (slower) submodule support.
+# This variable should be set before inheriting git.eclass
+: ${EGIT_HAS_SUBMODULES:=false}
+
 # @ECLASS-VARIABLE: EGIT_FETCH_CMD
 # @DESCRIPTION:
 # Command for cloning the repository.
@@ -52,7 +58,11 @@ DEPEND=">=dev-util/git-1.6"
 # @ECLASS-VARIABLE: EGIT_UPDATE_CMD
 # @DESCRIPTION:
 # Git fetch command.
-EGIT_UPDATE_CMD="git pull -f -u"
+if ${EGIT_HAS_SUBMODULES}; then
+	EGIT_UPDATE_CMD="git pull -f -u"
+else
+	EGIT_UPDATE_CMD="git fetch -f -u"
+fi
 
 # @ECLASS-VARIABLE: EGIT_DIFFSTAT_CMD
 # @DESCRIPTION:
@@ -152,10 +162,12 @@ fi
 # @DESCRIPTION:
 # Internal function wrapping the submodule initialisation and update
 git_submodules() {
-	debug-print "git submodule init"
-	git submodule init
-	debug-print "git submodule update"
-	git submodule update
+	if ${EGIT_HAS_SUBMODULES}; then
+		debug-print "git submodule init"
+		git submodule init
+		debug-print "git submodule update"
+		git submodule update
+	fi
 }
 
 # @FUNCTION: git_branch
@@ -180,7 +192,8 @@ git_branch() {
 git_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local GIT_DIR EGIT_CLONE_DIR oldsha1 cursha1
+	local GIT_DIR EGIT_CLONE_DIR oldsha1 cursha1 extra_clone_opts upstream_branch
+	${EGIT_USE_SUBMODULES} || export GIT_DIR
 
 	# choose if user wants elog or just einfo.
 	if [[ ${EGIT_QUIET} != OFF ]]; then
@@ -241,9 +254,20 @@ git_fetch() {
 		einfo "The ${EGIT_CLONE_DIR} was shallow copy. Refetching."
 	fi
 	# repack from bare copy to normal one
-	if [[ -d ${GIT_DIR} && ! -d "${GIT_DIR}/.git/" ]]; then
+	if ${EGIT_HAS_SUBMODULES} && [[ -d ${GIT_DIR} && ! -d "${GIT_DIR}/.git/" ]]; then
 		rm -rf "${GIT_DIR}"
 		einfo "The ${EGIT_CLONE_DIR} was bare copy. Refetching."
+	fi
+	if ! ${EGIT_HAS_SUBMODULES} && [[ -d ${GIT_DIR} && -d ${GIT_DIR}/.git ]]; then
+		rm -rf "${GIT_DIR}"
+		einfo "The ${EGIT_CLONE_DIR} was not a bare copy. Refetching."
+	fi
+
+	if ${EGIT_HAS_SUBMODULES}; then
+		upstream_branch=origin/${EGIT_BRANCH}
+	else
+		upstream_branch=${EGIT_BRANCH}
+		extra_clone_opts=--bare
 	fi
 
 	if [[ ! -d ${GIT_DIR} ]] ; then
@@ -251,19 +275,19 @@ git_fetch() {
 		${elogcmd} "GIT NEW clone -->"
 		${elogcmd} "   repository: 		${EGIT_REPO_URI}"
 
-		debug-print "${EGIT_FETCH_CMD} ${EGIT_OPTIONS} \"${EGIT_REPO_URI}\" ${GIT_DIR}"
-		${EGIT_FETCH_CMD} ${EGIT_OPTIONS} "${EGIT_REPO_URI}" ${GIT_DIR} \
+		debug-print "${EGIT_FETCH_CMD} ${extra_clone_opts} ${EGIT_OPTIONS} \"${EGIT_REPO_URI}\" ${GIT_DIR}"
+		${EGIT_FETCH_CMD} ${extra_clone_opts} ${EGIT_OPTIONS} "${EGIT_REPO_URI}" ${GIT_DIR} \
 			|| die "${EGIT}: can't fetch from ${EGIT_REPO_URI}."
-		
+
 		pushd "${GIT_DIR}" &> /dev/null
-		cursha1=$(git rev-parse origin/${EGIT_BRANCH})
+		cursha1=$(git rev-parse ${upstream_branch})
 		${elogcmd} "   at the commit:		${cursha1}"
 
 		git_submodules
 		popd &> /dev/null
 	elif [[ -n ${EGIT_OFFLINE} ]] ; then
 		pushd "${GIT_DIR}" &> /dev/null
-		cursha1=$(git rev-parse origin/${EGIT_BRANCH})
+		cursha1=$(git rev-parse ${upstream_branch})
 		${elogcmd} "GIT offline update -->"
 		${elogcmd} "   repository: 		${EGIT_REPO_URI}"
 		${elogcmd} "   at the commit:		${cursha1}"
@@ -276,20 +300,26 @@ git_fetch() {
 		# fetch updates
 		${elogcmd} "GIT update -->"
 		${elogcmd} "   repository: 		${EGIT_REPO_URI}"
-		
-		oldsha1=$(git rev-parse origin/${EGIT_BRANCH})
 
-		debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
-		# fix branching
-		git checkout ${EGIT_MASTER}
-		for x in $(git branch |grep -v "* ${EGIT_MASTER}" |tr '\n' ' '); do
-			git branch -D ${x}
-		done
-		${EGIT_UPDATE_CMD} ${EGIT_OPTIONS} \
-			|| die "${EGIT}: can't update from ${EGIT_REPO_URI}."
+		oldsha1=$(git rev-parse ${upstream_branch})
+
+		if ${EGIT_HAS_SUBMODULES}; then
+			debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
+			# fix branching
+			git checkout ${EGIT_MASTER}
+			for x in $(git branch |grep -v "* ${EGIT_MASTER}" |tr '\n' ' '); do
+				git branch -D ${x}
+			done
+			${EGIT_UPDATE_CMD} ${EGIT_OPTIONS} \
+				|| die "${EGIT}: can't update from ${EGIT_REPO_URI}."
+		else
+			debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS} origin ${EGIT_BRANCH}:${EGIT_BRANCH}"
+			${EGIT_UPDATE_CMD} ${EGIT_OPTIONS} origin ${EGIT_BRANCH}:${EGIT_BRANCH} \
+				|| die "${EGIT}: can't update from ${EGIT_REPO_URI}."
+		fi
 
 		git_submodules
-		cursha1=$(git rev-parse origin/${EGIT_BRANCH})
+		cursha1=$(git rev-parse ${upstream_branch})
 
 		# write out message based on the revisions
 		if [[ ${oldsha1} != ${cursha1} ]]; then
@@ -308,10 +338,10 @@ git_fetch() {
 				debug-print "${FUNCNAME}: Repository \"${EGIT_REPO_URI}\" is up-to-date. Skipping." && \
 				die "${EGIT}: Repository \"${EGIT_REPO_URI}\" is up-to-date. Skipping."
 		fi
-		${EGIT_DIFFSTAT_CMD} ${oldsha1}..origin/${EGIT_BRANCH}
+		${EGIT_DIFFSTAT_CMD} ${oldsha1}..${upstream_branch}
 		popd &> /dev/null
 	fi
-	
+
 	pushd "${GIT_DIR}" &> /dev/null
 	if ${EGIT_REPACK} || ${EGIT_PRUNE} ; then
 		ebegin "Garbage collecting the repository"
@@ -328,10 +358,16 @@ git_fetch() {
 	${elogcmd} "   branch: 			${EGIT_BRANCH}"
 	${elogcmd} "   storage directory: 	\"${GIT_DIR}\""
 
-	pushd "${GIT_DIR}" &> /dev/null
-	debug-print "rsync -rlpgo . \"${S}\""
-	time rsync -rlpgo . "${S}"
-	popd &> /dev/null
+	if ${EGIT_HAS_SUBMODULES}; then
+		pushd "${GIT_DIR}" &> /dev/null
+		debug-print "rsync -rlpgo . \"${S}\""
+		time rsync -rlpgo . "${S}"
+		popd &> /dev/null
+	else
+		unset GIT_DIR
+		debug-print "git clone -l -s -n \"${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}\" \"${S}\""
+		git clone -l -s -n "${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}" "${S}"
+	fi
 
 	pushd "${S}" &> /dev/null
 	git_branch
