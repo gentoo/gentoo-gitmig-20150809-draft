@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dnetc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.56 2009/11/18 15:02:07 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.57 2010/02/23 10:04:22 patrick Exp $
+
+  23 Feb 2010; Patrick Lauer <patrick@gentoo.org> dnetc-2.9103.509.ebuild:
+  Adding spool directory so dnetc runs properly, #306385
 
   18 Nov 2009; Jeroen Roovers <jer@gentoo.org> dnetc-2.9001.478.ebuild,
   dnetc-2.9002.479.ebuild, dnetc-2.9003.481-r1.ebuild,
