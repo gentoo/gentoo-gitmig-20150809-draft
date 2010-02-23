@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.0.ebuild,v 1.3 2010/02/16 17:14:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.0.ebuild,v 1.4 2010/02/23 00:53:59 reavertm Exp $
 
 EAPI="3"
 
@@ -10,6 +10,8 @@ DESCRIPTION="Server binaries for Virtuoso, high-performance object-relational SQ
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="kerberos ldap readline static-libs"
+
+RESTRICT="test"
 
 # zeroconf support looks like broken - disabling
 # mono support fetches mono source and compiles it manually - disabling for now
