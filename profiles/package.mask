@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11245 2010/02/23 12:23:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11246 2010/02/23 12:30:56 dagger Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robert Piasek <dagger@gentoo.org> (23 Feb 2010)
+# Masking libmapi as it depends on masked samba4
+=net-libs/libmapi-0.9
 
 # Ben de Groot <yngwin@gentoo.org> (22 Feb 2010)
 # New version is written from scratch, considered experimental/alpha
