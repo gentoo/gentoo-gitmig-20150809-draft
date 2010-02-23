@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5.ebuild,v 1.1 2010/02/22 22:25:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5.ebuild,v 1.2 2010/02/23 12:51:49 alexxy Exp $
 
 inherit autotools flag-o-matic eutils multilib
 
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-CFLAGS.patch
+	epatch "${FILESDIR}/${PN}-5.2.4-CFLAGS.patch"
 
 	# IJS Patch
 	sed -i -e "s:<ijs\([^/]\):<ijs/ijs\1:g" src/ghost/ijsgutenprint.c || die "sed failed"

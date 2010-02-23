@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.8 2010/02/22 22:25:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.9 2010/02/23 12:51:49 alexxy Exp $
+
+  23 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> gutenprint-5.2.5.ebuild:
+  Fix typo in ebuild
 
 *gutenprint-5.2.5 (22 Feb 2010)
 
