@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r2.ebuild,v 1.1 2010/02/10 20:40:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r2.ebuild,v 1.2 2010/02/23 10:35:55 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -62,6 +62,15 @@ src_configure() {
 		--without-threads \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		${myconf}
+}
+
+src_test() {
+	if ! use berkdb; then
+		export REDLAND_TEST_CLONING_STORAGE_TYPE=hashes
+		export REDLAND_TEST_CLONING_STORAGE_NAME=test
+		export REDLAND_TEST_CLONING_STORAGE_OPTIONS="hash-type='memory',dir='.',write='yes',new='yes',contexts='yes'"
+	fi
+	default
 }
 
 src_install() {
