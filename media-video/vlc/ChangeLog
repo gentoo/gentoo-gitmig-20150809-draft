@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.554 2010/02/04 20:59:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.555 2010/02/23 10:24:14 aballier Exp $
+
+  23 Feb 2010; Alexis Ballier <aballier@gentoo.org> vlc-1.0.5.ebuild,
+  vlc-1.0.9999.ebuild:
+  Backport libpng 1.4 fix from upstream master, by Hanno Boeck, bug #305105
 
   04 Feb 2010; Alexis Ballier <aballier@gentoo.org> -vlc-1.0.2.ebuild:
   remove old
