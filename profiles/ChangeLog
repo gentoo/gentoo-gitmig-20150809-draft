@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3925 2010/02/23 12:30:55 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3926 2010/02/23 20:53:26 nelchael Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Feb 2010; Krzysiek Pawlik <nelchael@gentoo.org> package.mask:
+  Add mask for new Resin and related packages.
 
   23 Feb 2010; Robert Piasek <dagger@gentoo.org> package.mask:
   Masking new ebuild for libmapi as it depends on masked samba4
