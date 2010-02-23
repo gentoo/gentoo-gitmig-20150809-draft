@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mediastreamer-x264
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.6 2009/07/08 20:53:40 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.7 2010/02/23 06:49:59 josejx Exp $
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org>
+  mediastreamer-x264-1.1.7.ebuild:
+  Marked ~ppc64.
 
   08 Jul 2009; Markus Meier <maekke@gentoo.org>
   mediastreamer-x264-1.1.7.ebuild:
