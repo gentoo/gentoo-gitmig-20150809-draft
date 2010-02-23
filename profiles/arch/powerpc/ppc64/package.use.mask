@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.11 2010/02/12 18:51:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.12 2010/02/23 15:32:07 josejx Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (15 Jul 2009)
 # Mask dillo useflag as current version is unkeyworded (bug 253083)
@@ -30,3 +30,8 @@ sys-apps/hal laptop
 # Joseph Jezak <josejx@gentoo.org> (12 February 2010)
 # Mask unstable pidgin deps until we can mark them stable (farsight2)
 net-im/pidgin gstreamer
+
+# Joseph Jezak <josejx@gentoo.org> (23 February 2010)
+# Mask webkit flag due to minimal-toc breakage
+x11-misc/google-gadgets	webkit
+
