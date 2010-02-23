@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.59 2010/01/23 14:19:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.60 2010/02/23 10:48:06 aballier Exp $
 
 EAPI="2"
 
@@ -48,7 +48,7 @@ KEYWORDS=""
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt ggi gnome gnutls httpd id3tag ieee1394 jack kate libass libcaca
-	libnotify libproxy libsysfs libtiger libv4l libv4l2 lirc live lua matroska mmx
+	libnotify libproxy libtiger libv4l libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
@@ -93,7 +93,6 @@ RDEPEND="
 		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 		libnotify? ( x11-libs/libnotify )
 		libproxy? ( net-libs/libproxy )
-		libsysfs? ( sys-fs/sysfsutils )
 		libtiger? ( media-libs/libtiger )
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2008.07.06 )
@@ -272,7 +271,6 @@ src_configure() {
 		$(use_enable libproxy) \
 		--disable-libtar \
 		$(use_enable libtiger tiger) \
-		$(use_enable libsysfs) \
 		$(use_enable libv4l) \
 		$(use_enable libv4l2) \
 		$(use_enable lirc) \
