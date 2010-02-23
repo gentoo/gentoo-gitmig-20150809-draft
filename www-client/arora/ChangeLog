@@ -1,6 +1,9 @@
 # ChangeLog for www-client/arora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.34 2010/02/17 21:13:59 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.35 2010/02/23 02:38:04 yngwin Exp $
+
+  23 Feb 2010; Ben de Groot <yngwin@gentoo.org> arora-0.10.2-r1.ebuild:
+  Migrate to qt4-r2.eclass
 
   17 Feb 2010; Alex Alexander <wired@gentoo.org> -arora-0.10.1-r1.ebuild,
   arora-0.10.2-r1.ebuild:
