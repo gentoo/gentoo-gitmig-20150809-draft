@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.24 2010/02/22 22:59:05 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.25 2010/02/23 17:15:11 hwoarang Exp $
+
+  23 Feb 2010; Markos Chandras <hwoarang@gentoo.org> pydf-7.ebuild:
+  Stable on amd64 wrt bug #305705
 
   22 Feb 2010; Tiago Cunha <tcunha@gentoo.org> pydf-7.ebuild:
   stable sparc, bug 305705

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-7.ebuild,v 1.2 2010/02/22 22:59:05 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-7.ebuild,v 1.3 2010/02/23 17:15:11 hwoarang Exp $
 
 EAPI=2
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://kassiopeia.juls.savba.sk/~garabik/software/pydf/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
