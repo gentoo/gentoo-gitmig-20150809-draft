@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5309 2010/02/23 10:07:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5310 2010/02/23 18:08:18 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2848,6 +2848,7 @@ sci-chemistry/pymol:numpy - Compile numpy support
 sci-chemistry/pymol:shaders - Build with Shaders support - good for high-end 3D video cards.
 sci-chemistry/pymol:vmd - Enable vmd module for trajectories
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
+sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/wxmacmolplt:flash - Add support for flash movie generation using media-libs/ming
 sci-electronics/geda:stroke - enable mouse gesture support
 sci-electronics/geda-gschem:stroke - enable mouse gesture support
