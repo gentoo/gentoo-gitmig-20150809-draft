@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.15_pre20100213.ebuild,v 1.2 2010/02/17 21:41:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.15_pre20100213.ebuild,v 1.3 2010/02/23 08:45:56 chithanh Exp $
 
 EAPI=2
 SNAPSHOT="yes"
 inherit linux-info x-modular
 
-DESCRIPTION="Nouveau video driver"
+DESCRIPTION="Accelerated Open Source driver for nVidia cards"
 HOMEPAGE="http://nouveau.freedesktop.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
