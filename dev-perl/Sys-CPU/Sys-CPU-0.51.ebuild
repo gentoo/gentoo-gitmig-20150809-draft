@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/Sys-CPU-0.51.ebuild,v 1.5 2009/12/31 16:24:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/Sys-CPU-0.51.ebuild,v 1.6 2010/02/23 15:20:32 josejx Exp $
 
 EAPI=2
 
@@ -12,5 +12,5 @@ DESCRIPTION="Access CPU info. number, etc on Win and UNIX"
 # License is not specified
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
