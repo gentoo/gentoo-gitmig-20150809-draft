@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.155 2010/02/21 22:16:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.156 2010/02/23 15:40:44 ranger Exp $
+
+  23 Feb 2010; Brent Baude <ranger@gentoo.org> bugzilla-3.0.11.ebuild,
+  bugzilla-3.2.6.ebuild:
+  Marking ppc64 on bugz-3.0.11 and 3.2.6 for sec bug 303725
 
   21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   bugzilla-3.0.11.ebuild, bugzilla-3.2.6.ebuild:
