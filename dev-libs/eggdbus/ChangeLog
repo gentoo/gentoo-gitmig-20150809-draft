@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eggdbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.8 2010/02/16 17:21:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.9 2010/02/23 09:07:59 ssuominen Exp $
+
+  23 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> eggdbus-0.6.ebuild:
+  Fix parallel make wrt #293607, thanks to Wolfram Schlich for reporting.
 
   16 Feb 2010; Joseph Jezak <josejx@gentoo.org> eggdbus-0.6.ebuild:
   Marked ~ppc64 for bug #296548.

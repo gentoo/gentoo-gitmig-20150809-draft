@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.6.ebuild,v 1.4 2010/02/16 17:21:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.6.ebuild,v 1.5 2010/02/23 09:07:59 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="D-Bus bindings for GObject"
@@ -28,8 +27,8 @@ DEPEND="${DEPEND}
 # man pages are built (and installed) when doc is enabled
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.4-ldflags.patch
-	epatch "${FILESDIR}"/${PN}-0.4-tests.patch
+	epatch "${FILESDIR}"/${PN}-0.4-ldflags.patch \
+		"${FILESDIR}"/${PN}-0.4-tests.patch
 
 	eautoreconf
 }
@@ -49,8 +48,12 @@ src_configure() {
 		$(use_enable test tests)
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+src_compile() {
+	emake -C src/eggdbus eggdbusenumtypes.h || die
+	emake || die
+}
 
-	dodoc AUTHORS ChangeLog HACKING NEWS README || die "dodoc failed"
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog HACKING NEWS README || die
 }
