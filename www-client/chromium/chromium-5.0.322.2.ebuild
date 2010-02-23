@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.322.2.ebuild,v 1.3 2010/02/19 15:27:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.322.2.ebuild,v 1.4 2010/02/23 18:26:17 armin76 Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -86,6 +86,9 @@ src_prepare() {
 src_configure() {
 	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 
+	# Fails to build on arm if we don't do this
+	use arm && append-flags -fno-tree-sink
+
 	# CFLAGS/LDFLAGS
 	mkdir -p "${S}"/.gyp
 	cat << EOF > "${S}"/.gyp/include.gypi
@@ -116,7 +119,6 @@ EOF
 
 	if use arm; then
 		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
-		append-flags -fno-tree-sink
 	fi
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
