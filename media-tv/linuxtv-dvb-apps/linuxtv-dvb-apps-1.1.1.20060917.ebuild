@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.9 2008/11/21 16:54:40 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.10 2010/02/23 20:36:09 zzam Exp $
+
+EAPI="1"
 
 inherit eutils versionator multilib
 
@@ -14,7 +16,7 @@ LICENSE="GPL-2"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 KEYWORDS="amd64 ppc x86"
 
-DEPEND="usb? ( >=dev-libs/libusb-0.1.10a )
+DEPEND="usb? ( virtual/libusb:0 )
 	!dev-db/xbase"
 RDEPEND="${DEPEND}"
 # !dev-db/xbase (bug #208596)
@@ -80,7 +82,7 @@ src_install()
 	doins "${S}"/util/av7110_loadkeys/*.rc*
 
 	# install Documentation
-	dodoc README TODO
+	dodoc README
 	newdoc util/scan/README README.dvbscan
 	newdoc util/szap/README README.zap
 	newdoc util/av7110_loadkeys/README README.av7110_loadkeys

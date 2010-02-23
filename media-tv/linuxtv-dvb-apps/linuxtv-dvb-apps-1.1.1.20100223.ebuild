@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20100223.ebuild,v 1.1 2010/02/23 19:57:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20100223.ebuild,v 1.2 2010/02/23 20:36:09 zzam Exp $
+
+EAPI="1"
 
 inherit eutils versionator multilib
 
@@ -14,7 +16,7 @@ LICENSE="GPL-2"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 
-RDEPEND="usb? ( >=dev-libs/libusb-0.1.10a )
+RDEPEND="usb? ( virtual/libusb:0 )
 	!dev-db/xbase"
 DEPEND="${RDEPEND}
 	media-tv/linuxtv-dvb-headers"
