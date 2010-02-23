@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.3 2010/02/11 23:34:55 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.4 2010/02/23 10:32:39 josejx Exp $
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org> rocs-4.4.0.ebuild:
+  Marked ~ppc/~ppc64 for bug #304365.
 
   11 Feb 2010; Jonathan Callen <abcd@gentoo.org> rocs-4.4.0.ebuild:
   Add ~amd64-linux/~x86-linux keywords

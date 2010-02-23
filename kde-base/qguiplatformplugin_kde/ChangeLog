@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qguiplatformplugin_kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.2 2010/02/11 23:34:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.3 2010/02/23 10:31:56 josejx Exp $
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org>
+  qguiplatformplugin_kde-4.4.0.ebuild:
+  Marked ~ppc/~ppc64 for bug #304365.
 
   11 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   qguiplatformplugin_kde-4.4.0.ebuild:
