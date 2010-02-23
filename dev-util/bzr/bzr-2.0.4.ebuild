@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.0.4.ebuild,v 1.3 2010/02/13 18:21:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.0.4.ebuild,v 1.4 2010/02/23 21:47:51 fauli Exp $
 
-EAPI=1
+EAPI=3
 
-NEED_PYTHON=2.4
+PYTHON_DEPEND=2:2.4
 
 inherit distutils bash-completion elisp-common eutils versionator
 
@@ -19,7 +19,7 @@ SRC_URI="http://launchpad.net/bzr/${SERIES}/${MY_PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
 IUSE="curl doc emacs +sftp test"
 
 RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/celementtree )
@@ -57,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	distutils_src_install --install-data /usr/share
+	distutils_src_install --install-data "${EPREFIX}"/usr/share
 
 	if use doc; then
 		docinto developers
@@ -74,7 +74,7 @@ src_install() {
 
 		# don't add automatically to the load-path, so the sitefile
 		# can do a conditional loading
-		touch "${D}${SITELISP}/${PN}/.nosearch"
+		touch "${ED}${SITELISP}/${PN}/.nosearch"
 	fi
 
 	insinto /usr/share/zsh/site-functions
