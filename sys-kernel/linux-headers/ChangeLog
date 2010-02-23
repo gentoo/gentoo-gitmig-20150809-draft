@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.299 2010/02/23 14:52:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.300 2010/02/23 19:36:13 hwoarang Exp $
+
+  23 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  linux-headers-2.6.30-r1.ebuild:
+  Stable on amd64 wrt bug #273358
 
   23 Feb 2010; Joseph Jezak <josejx@gentoo.org>
   linux-headers-2.6.30-r1.ebuild:
