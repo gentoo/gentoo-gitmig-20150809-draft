@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.8-r2.ebuild,v 1.3 2008/11/08 12:55:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.8-r2.ebuild,v 1.4 2010/02/23 15:12:18 josejx Exp $
 
 inherit flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
