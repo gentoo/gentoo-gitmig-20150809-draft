@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/smssend
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.7 2008/06/23 23:05:12 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.8 2010/02/23 15:13:07 josejx Exp $
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org> smssend-3.4.ebuild:
+  Marked ~ppc64.
 
   23 Jun 2008; Alin Năstac <mrness@gentoo.org>
   files/smssend-3.4-verizon.diff, smssend-3.4.ebuild:
