@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.94 2010/02/01 14:41:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.95 2010/02/23 08:08:08 wired Exp $
+
+*qtcurve-qt4-1.1.0 (23 Feb 2010)
+
+  23 Feb 2010; Alex Alexander <wired@gentoo.org> +qtcurve-qt4-1.1.0.ebuild,
+  +files/qtcurve-qt4-1.1.0-no-kde-fail.patch:
+  version bump, patch to fix -kde compilation
 
 *qtcurve-qt4-1.0.2 (01 Feb 2010)
 
