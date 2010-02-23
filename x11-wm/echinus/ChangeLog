@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/echinus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.5 2009/10/07 11:48:03 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.6 2010/02/23 12:51:46 yngwin Exp $
+
+*echinus-0.4.0 (23 Feb 2010)
+
+  23 Feb 2010; Ben de Groot <yngwin@gentoo.org> +echinus-0.4.0.ebuild:
+  Version bump
 
 *echinus-0.3.6 (07 Oct 2009)
 
