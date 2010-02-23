@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.6.3.ebuild,v 1.1 2009/12/13 21:51:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.6.3.ebuild,v 1.2 2010/02/23 19:37:22 eva Exp $
 
 EAPI="2"
 
@@ -24,8 +24,9 @@ RDEPEND=">=x11-libs/gtk+-2.14
 	>=app-text/gtkspell-2.0.9
 	>=dev-libs/boost-1.34
 	sys-libs/e2fsprogs-libs
-	>=gnome-base/gnome-panel-2
-	applet? ( >=dev-cpp/libpanelappletmm-2.26 )"
+	applet? (
+		>=gnome-base/gnome-panel-2
+		>=dev-cpp/libpanelappletmm-2.26 )"
 # Build with dbus is currently not implemented
 #	dbus? ( >=dev-libs/dbus-glib-0.70 )"
 DEPEND="${DEPEND}
