@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/ypbind
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.51 2009/11/03 15:56:59 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.52 2010/02/23 12:11:27 phajdan.jr Exp $
+
+*ypbind-1.31 (23 Feb 2010)
+
+  23 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> +ypbind-1.31.ebuild,
+  +files/ypbind-1.31-man-port.patch:
+  Version bump.
 
   03 Nov 2009; Ulrich Mueller <ulm@gentoo.org> ypbind-1.19.1-r2.ebuild,
   +files/ypbind-1.19.1-man-port.patch:
