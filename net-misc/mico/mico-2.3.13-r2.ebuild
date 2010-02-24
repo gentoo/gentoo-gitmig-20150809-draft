@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r2.ebuild,v 1.1 2010/01/13 14:09:57 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r2.ebuild,v 1.2 2010/02/24 08:53:26 haubi Exp $
 
 EAPI="2"
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-aix ~ia64-hpux ~amd64-linux ~x86-linux ~sparc-solaris ~x86-winnt"
 IUSE="gtk postgres qt4 ssl tcl threads X"
+RESTRICT="test" #298101
 
 # doesn't compile:
 #   bluetooth? ( net-wireless/bluez-libs )
