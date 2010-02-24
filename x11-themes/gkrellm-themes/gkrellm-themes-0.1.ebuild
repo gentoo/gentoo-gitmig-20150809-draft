@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.16 2007/07/02 15:05:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.17 2010/02/24 14:28:38 ssuominen Exp $
 
 DESCRIPTION="A pack of ~200 themes for GKrellM"
 HOMEPAGE="http://www.muhri.net/gkrellm"
@@ -212,24 +212,22 @@ DEPEND=""
 RDEPEND=">=app-admin/gkrellm-2.1"
 
 src_unpack() {
-	mkdir ${S}
-	cd ${S}
+	mkdir "${S}"
+	cd "${S}"
 	for theme in ${SRC_URI} ; do
 		unpack $(basename $theme)
 	done
 }
 
-src_compile() {
-	einfo "Nothing to compile"
-}
+src_compile() { :; }
 
 src_install() {
 	dodir /usr/share/gkrellm2/themes/
 	keepdir /usr/share/gkrellm2/themes/
-	cd ${S}
+	cd "${S}"
 	ewarn "Please ignore any errors that may appear!"
 	chmod -R g-sw+rx *
 	chmod -R o-sw+rx *
 	chmod -R u-s+rwx *
-	cp -pR * ${D}/usr/share/gkrellm2/themes/
+	cp -pR * "${D}"/usr/share/gkrellm2/themes/
 }

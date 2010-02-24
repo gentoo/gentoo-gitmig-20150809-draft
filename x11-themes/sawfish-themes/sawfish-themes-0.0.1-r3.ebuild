@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.20 2007/03/29 08:39:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.21 2010/02/24 14:22:54 ssuominen Exp $
 
 DESCRIPTION="Some nice themes for Sawfish"
 HOMEPAGE="http://themes.freshmeat.net/"
@@ -66,11 +66,9 @@ IUSE=""
 RDEPEND="=x11-wm/sawfish-1*"
 S=${WORKDIR}
 
-src_compile() {
-	einfo "Nothing to compile"
-}
+src_compile() { :; }
 
 src_install() {
 	dodir /usr/share/sawfish/themes
-	cp -pPR * ${D}/usr/share/sawfish/themes
+	cp -pPR * "${D}"/usr/share/sawfish/themes
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/experience/experience-3.04.ebuild,v 1.6 2009/09/18 16:35:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/experience/experience-3.04.ebuild,v 1.7 2010/02/24 14:30:07 ssuominen Exp $
 
 DESCRIPTION="GTK+2 themes which copy and improve the look of XP Luna"
 HOMEPAGE="http://art.gnome.org/themes/gtk2/1058"
@@ -14,11 +14,11 @@ IUSE=""
 
 RDEPEND="x11-themes/gtk-engines-experience"
 DEPEND="${RDEPEND}
-		sys-apps/findutils"
+	sys-apps/findutils"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	mv "eXperience - ice" eXperience-ice
 	mv "eXperience - olive" eXperience-olive
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	for dir in eXperience* ; do
 		insinto "/usr/share/themes/${dir}"

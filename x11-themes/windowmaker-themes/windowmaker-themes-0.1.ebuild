@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.14 2008/09/24 16:41:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.15 2010/02/24 14:19:43 ssuominen Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -100,8 +100,8 @@ DEPEND=""
 RDEPEND="x11-wm/windowmaker"
 
 src_unpack() {
-	mkdir ${S}
-	cd ${S}
+	mkdir "${S}"
+	cd "${S}"
 	for i in ${SRC_URI} ; do
 		bn=`basename $i`
 		if ! use offensive ; then
@@ -116,14 +116,14 @@ src_unpack() {
 	done
 }
 
-src_install () {
+src_install() {
 	dodir /usr/share/WindowMaker/Themes
-	cp -pR * ${D}/usr/share/WindowMaker/Themes/
+	cp -pR * "${D}"/usr/share/WindowMaker/Themes/
 	# TODO: Need to clean this up at some point ...
 	#mv ${D}/usr/share/WindowMaker/Themes/Themes/* ${D}/usr/share/WindowMaker/Themes
 	#rm -Rf ${D}/usr/share/WindowMaker/Themes/Themes
-	chown -R root:0 ${D}/usr/share/WindowMaker/Themes/
-	chmod -R o-w ${D}/usr/share/WindowMaker/Themes/
+	chown -R root:0 "${D}"/usr/share/WindowMaker/Themes/
+	chmod -R o-w "${D}"/usr/share/WindowMaker/Themes/
 }
 
 pkg_postinst() {

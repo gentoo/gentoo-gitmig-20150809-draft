@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.2.ebuild,v 1.5 2008/02/19 02:12:31 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.2.ebuild,v 1.6 2010/02/24 14:24:00 ssuominen Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -79,7 +79,7 @@ src_install() {
 	dodir ${ICEWM_THEMES} || die
 	cp -pR * "${D}"/${ICEWM_THEMES} || die
 	chown -R root:0 "${D}"/${ICEWM_THEMES} || die
-	rm -f ${D}/${ICEWM_THEMES}/Cyrus-IceWM/cpframes.sh || die "Failed in Cyrus-IceWM theme fix"
+	rm -f "${D}"/${ICEWM_THEMES}/Cyrus-IceWM/cpframes.sh || die "Failed in Cyrus-IceWM theme fix"
 
 	# start elberg theme packaging fix
 	mv "${D}"/${ICEWM_THEMES}/themes/* "${D}"/${ICEWM_THEMES} || die "Error in elberg theme fix"
