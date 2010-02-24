@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.6.1.ebuild,v 1.4 2009/12/31 16:14:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.6.1.ebuild,v 1.5 2010/02/24 17:29:25 hwoarang Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal eutils
@@ -14,7 +14,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~sparc x86"
+KEYWORDS="amd64 ~hppa ~sparc x86"
 IUSE="xinerama"
 
 RDEPEND=">=dev-lang/ghc-6.8
