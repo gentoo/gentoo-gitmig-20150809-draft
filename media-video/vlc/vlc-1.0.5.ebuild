@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.5.ebuild,v 1.2 2010/02/23 10:24:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.5.ebuild,v 1.3 2010/02/24 13:13:36 aballier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="81"
+PATCHLEVEL="83"
 M4_TARBALL_VERSION="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
@@ -113,7 +113,7 @@ RDEPEND="
 		mtp? ( >=media-libs/libmtp-0.3.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
-		nsplugin? ( >=net-libs/xulrunner-1.8 x11-libs/libXpm x11-libs/libXt	<net-libs/xulrunner-1.9.2 )
+		nsplugin? ( >=net-libs/xulrunner-1.8 x11-libs/libXpm x11-libs/libXt )
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
@@ -230,6 +230,7 @@ src_prepare() {
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 
+	has_version '>=net-libs/xulrunner-1.9.2' || EPATCH_EXCLUDE="550_all_xulrunner192.patch"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4 ${WORKDIR}/${PN}-m4" eautoreconf
 }
