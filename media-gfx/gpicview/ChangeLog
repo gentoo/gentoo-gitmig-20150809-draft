@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gpicview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.13 2010/02/23 18:43:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.14 2010/02/24 09:24:53 ssuominen Exp $
+
+  24 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> gpicview-0.2.1.ebuild:
+  Missing dev-util/intltool depend wrt #306601.
 
   23 Feb 2010; Raúl Porcel <armin76@gentoo.org> gpicview-0.2.1.ebuild:
   arm stable wrt #306433
