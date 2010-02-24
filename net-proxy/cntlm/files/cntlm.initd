@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/files/cntlm.initd,v 1.1 2010/02/24 13:18:14 mduft Exp $
+
+PIDFILE=${PIDFILE:-/var/run/cntlm.pid}
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting cntlm"
+	start-stop-daemon --start --pidfile ${PIDFILE} --exec /usr/bin/cntlm -- -U cntlm ${CNTLM_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping cntlm"
+	start-stop-daemon --stop --pidfile ${PIDFILE}
+	eend $?
+}

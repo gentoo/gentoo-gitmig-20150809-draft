@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/cntlm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/ChangeLog,v 1.1 2010/02/24 13:18:15 mduft Exp $
+
+*cntlm-0.35.1-r1 (24 Feb 2010)
+
+  24 Feb 2010; Markus Duft <mduft@gentoo.org> +cntlm-0.35.1-r1.ebuild,
+  +files/cntlm.confd, +files/cntlm.initd, +metadata.xml:
+  initially added cntlm to tree
+
