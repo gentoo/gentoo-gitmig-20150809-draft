@@ -1,6 +1,13 @@
 # ChangeLog for media-video/isight-firmware-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.9 2009/06/28 21:18:41 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.10 2010/02/24 22:20:27 eva Exp $
+
+*isight-firmware-tools-1.5.90 (24 Feb 2010)
+
+  24 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +isight-firmware-tools-1.5.90.ebuild:
+  Version bump, bug #297480. Add translations, support for X.{5.7,5.8,6}.
+  Drop HAL support.
 
 *isight-firmware-tools-1.4.2 (28 Jun 2009)
 
