@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.9 2010/01/31 16:38:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.10 2010/02/24 19:38:51 ssuominen Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="a52 aac alsa amr debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad ogg opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwindows xml xvid"
+IUSE="a52 aac alsa amr debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad ogg opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
 
 S=${WORKDIR}/${PN}
 
@@ -35,7 +35,7 @@ RDEPEND="
 	vorbis? ( >=media-libs/libvorbis-1.1 )
 	theora? ( media-libs/libtheora )
 	truetype? ( >=media-libs/freetype-2.1.4 )
-	wxwindows? ( =x11-libs/wxGTK-2.8* )
+	wxwidgets? ( =x11-libs/wxGTK-2.8* )
 	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
 	sdl? ( media-libs/libsdl )
@@ -71,7 +71,7 @@ src_unpack() {
 
 	chmod +x configure
 	# make sure configure looks for wx-2.6
-	if use wxwindows; then
+	if use wxwidgets; then
 		WX_GTK_VER=2.8
 		need-wxwidgets unicode
 		sed -i -e "s:wx-config:${WX_CONFIG}:g" configure
