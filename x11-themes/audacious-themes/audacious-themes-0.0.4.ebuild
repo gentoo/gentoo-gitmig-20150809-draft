@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/audacious-themes-0.0.4.ebuild,v 1.7 2009/06/02 20:12:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/audacious-themes-0.0.4.ebuild,v 1.8 2010/02/24 14:55:36 ssuominen Exp $
 
 DESCRIPTION="Collection of XMMS themes for Audacious"
 HOMEPAGE="http://www.xmms.org"
@@ -118,10 +118,10 @@ src_unpack() {
 	for i in ${SRC_URI} ; do
 		bn=`basename $i`
 		if [ -n "`echo ${bn} | grep '\.zip'`" ] ; then
-			cp ${DISTDIR}/${bn} .
+			cp "${DISTDIR}"/${bn} .
 		else
 			if [ -n "`echo ${bn} | grep '\.wsz'`" ] ; then
-				cp ${DISTDIR}/${bn} .
+				cp "${DISTDIR}"/${bn} .
 			else
 				unpack ${bn}
 			fi

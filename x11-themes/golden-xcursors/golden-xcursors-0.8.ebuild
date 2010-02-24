@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.21 2006/01/03 21:14:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.22 2010/02/24 14:56:41 ssuominen Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -17,8 +17,8 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	dodir /usr/share/cursors/xorg-x11/Gold/cursors/
-	cp -R ${WORKDIR}/${MY_P:5}/Gold/cursors ${D}/usr/share/cursors/xorg-x11/Gold/ || die
-	dodoc ${WORKDIR}/${MY_P:5}/README
+	cp -R "${WORKDIR}"/${MY_P:5}/Gold/cursors "${D}"/usr/share/cursors/xorg-x11/Gold/ || die
+	dodoc "${WORKDIR}"/${MY_P:5}/README
 }
 
 pkg_postinst() {

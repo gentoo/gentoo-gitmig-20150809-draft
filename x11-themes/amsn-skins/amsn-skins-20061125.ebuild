@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20061125.ebuild,v 1.9 2007/07/02 15:03:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/amsn-skins-20061125.ebuild,v 1.10 2010/02/24 14:54:29 ssuominen Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of AMSN themes"
@@ -49,5 +49,5 @@ RDEPEND="net-im/amsn"
 
 src_install () {
 	dodir /usr/share/amsn/skins
-	cp -r ${S}/* ${D}/usr/share/amsn/skins/
+	cp -r "${S}"/* "${D}"/usr/share/amsn/skins/
 }

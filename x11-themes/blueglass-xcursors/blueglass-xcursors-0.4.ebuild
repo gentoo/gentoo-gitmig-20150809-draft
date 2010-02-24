@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.23 2008/12/21 00:41:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.24 2010/02/24 14:53:46 ssuominen Exp $
 
 MY_P="5532-BlueGlass-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -19,8 +19,8 @@ DEPEND="${RDEPEND}"
 # use the directory 'Blue'.
 src_install() {
 	dodir /usr/share/cursors/xorg-x11/Blue/cursors/
-	cp -R ${WORKDIR}/${MY_P:5}/Blue/cursors ${D}/usr/share/cursors/xorg-x11/Blue/ || die
-	dodoc ${WORKDIR}/${MY_P:5}/README
+	cp -R "${WORKDIR}"/${MY_P:5}/Blue/cursors "${D}"/usr/share/cursors/xorg-x11/Blue/ || die
+	dodoc "${WORKDIR}"/${MY_P:5}/README
 }
 
 pkg_postinst() {

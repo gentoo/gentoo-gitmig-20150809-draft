@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_icons/fvwm_icons-1.0.ebuild,v 1.15 2007/08/07 11:53:22 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_icons/fvwm_icons-1.0.ebuild,v 1.16 2010/02/24 14:52:11 ssuominen Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Icons for use with FVWM"
@@ -15,5 +15,5 @@ LICENSE="GPL-2 FVWM"
 src_install () {
 	dodir /usr/share/icons/fvwm
 	insinto /usr/share/icons/fvwm
-	doins ${S}/*
+	doins "${S}"/*
 }
