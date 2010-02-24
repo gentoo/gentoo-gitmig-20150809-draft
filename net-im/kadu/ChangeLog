@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.86 2010/02/08 21:28:05 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.87 2010/02/24 16:18:54 hwoarang Exp $
+
+  24 Feb 2010; Markos Chandras <hwoarang@gentoo.org> kadu-0.6.5.3-r2.ebuild:
+  Stable on amd64 wrt bug #304203
 
 *kadu-0.6.5.4 (08 Feb 2010)
 
