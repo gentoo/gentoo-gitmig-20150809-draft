@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.7 2010/02/24 12:49:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.8 2010/02/24 12:52:35 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -55,7 +55,7 @@ src_configure() {
 		${myconf}
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die
 	dohtml -r site/*
 
