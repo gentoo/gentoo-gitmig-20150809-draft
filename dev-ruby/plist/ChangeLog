@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/plist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.3 2010/02/08 20:08:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.4 2010/02/24 07:15:58 graaff Exp $
+
+*plist-3.1.0 (24 Feb 2010)
+
+  24 Feb 2010; Hans de Graaff <graaff@gentoo.org> +plist-3.1.0.ebuild:
+  Version bump. Enable tests since they now work.
 
 *plist-3.0.0-r1 (08 Feb 2010)
 
