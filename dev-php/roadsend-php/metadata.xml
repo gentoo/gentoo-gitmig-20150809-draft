@@ -4,8 +4,11 @@
   <herd>scheme</herd>
   <herd>php</herd>
   <maintainer>
+    <email>yngwin@gentoo.org</email>
+  </maintainer>
+  <maintainer>
     <email>notordoktor@gmail.com</email>
-    <description>proxy maintainer through yngwin@gentoo.org</description>
+    <description>proxy maintainer</description>
   </maintainer>
   <longdescription lang="en">
     Roadsend PHP Compiler is a free, open source native compiler for the PHP
