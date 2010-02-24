@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/commonbox-styles-0.6.ebuild,v 1.20 2008/02/03 15:35:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/commonbox-styles-0.6.ebuild,v 1.21 2010/02/24 14:53:17 ssuominen Exp $
 
 IUSE=""
 DESCRIPTION="Common styles for fluxbox, blackbox, and openbox."
@@ -14,14 +14,14 @@ KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND="|| ( x11-wm/fluxbox x11-wm/blackbox x11-wm/openbox )"
 
-src_install () {
+src_install() {
 
 	insinto /usr/share/commonbox/backgrounds
-	doins ${S}/backgrounds/*
+	doins "${S}"/backgrounds/*
 
 	insinto /usr/share/commonbox/styles
-	doins ${S}/styles/*
+	doins "${S}"/styles/*
 
-	dodoc README.commonbox-styles COPYING STYLES.authors
+	dodoc README.commonbox-styles STYLES.authors
 
 }
