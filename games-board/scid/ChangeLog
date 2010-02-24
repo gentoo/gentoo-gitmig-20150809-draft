@@ -1,6 +1,9 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.24 2010/01/25 07:16:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.25 2010/02/24 17:34:37 mr_bones_ Exp $
+
+  24 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> scid-4.2.2.ebuild:
+  add desktop entry (bug #298230)
 
 *scid-4.2.2 (25 Jan 2010)
 

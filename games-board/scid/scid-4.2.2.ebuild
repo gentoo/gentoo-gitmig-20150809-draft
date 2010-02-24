@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.2.2.ebuild,v 1.1 2010/01/25 07:16:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.2.2.ebuild,v 1.2 2010/02/24 17:34:37 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -63,6 +63,9 @@ src_install() {
 
 	dodoc CHANGES ChangeLog README THANKS TODO
 	dohtml help/*.html
+
+	newicon svg/scid_app.svg ${PN}.svg
+	make_desktop_entry scid Scid
 
 	cd ..
 	newins spelling_2009_01.ssp spelling.ssp \
