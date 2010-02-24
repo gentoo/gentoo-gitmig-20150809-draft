@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/yaydl-1.3.ebuild,v 1.2 2009/07/19 18:55:12 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/yaydl-1.3.7.ebuild,v 1.1 2010/02/24 20:36:58 volkmar Exp $
 
 EAPI="2"
 
 DESCRIPTION="Yet Another Youtube DownLoader which is downloading more than youtube"
-HOMEPAGE="http://pdes-net.org/x-haui/yaydl.html"
+HOMEPAGE="http://pdes-net.org/x-haui/"
 SRC_URI="http://pdes-net.org/x-haui/scripts/perl/yaydl_youtubedownloader/${P}.tar.gz"
 
 LICENSE="GPL-3"
