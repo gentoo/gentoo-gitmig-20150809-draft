@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.4.0.ebuild,v 1.2 2010/01/09 19:44:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.4.0.ebuild,v 1.3 2010/02/24 14:52:39 mduft Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -100,6 +100,8 @@ src_prepare() {
 	else
 		export {ATLAS,PTATLAS,BLAS,LAPACK,MKL}=None
 	fi
+
+	epatch "${FILESDIR}"/${P}-interix.patch
 }
 
 src_compile() {
