@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.2 2010/02/23 09:53:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.3 2010/02/24 11:19:08 idl0r Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
 SITEFILE="70ctemplate-gentoo.el"
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	if use emacs ; then
 		elisp-compile contrib/tpl-mode.el || die "elisp-compile failed"
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	# Installs just every piece
 	rm -rf "${D}/usr/share/doc"

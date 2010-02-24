@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.5 2010/02/23 09:53:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.6 2010/02/24 11:19:08 idl0r Exp $
+
+  24 Feb 2010; Christian Ruppert <idl0r@gentoo.org> ctemplate-0.95.ebuild:
+  Move -j1 to emake install since this caused the parallel-build issues.
 
   23 Feb 2010; Christian Ruppert <idl0r@gentoo.org> ctemplate-0.95.ebuild:
   Add -j1 due to parallel compilation issues. Add doc useflag for html docs.
