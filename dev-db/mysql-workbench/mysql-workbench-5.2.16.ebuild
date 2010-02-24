@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.16.ebuild,v 1.1 2010/02/17 19:34:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.16.ebuild,v 1.2 2010/02/24 17:36:13 idl0r Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ S="${WORKDIR}"/"${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/mysql-workbench-5.2.15-configure.in.pythonlib.patch"
-	epatch "${FILESDIR}/mysql-workbench-5.2.15-as-needed.patch"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 	eautoreconf
 }
 
