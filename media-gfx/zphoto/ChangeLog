@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/zphoto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.23 2009/10/02 22:52:45 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.24 2010/02/24 19:56:22 ssuominen Exp $
+
+  24 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> zphoto-1.2-r2.ebuild:
+  Rename USE wxwindows to wxwidgets wrt #306275.
 
   02 Oct 2009; Markus Meier <maekke@gentoo.org> zphoto-1.2-r2.ebuild:
   amd64/x86 stable, bug #286765
