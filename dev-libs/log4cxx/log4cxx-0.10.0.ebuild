@@ -1,12 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.6 2009/12/23 16:14:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.7 2010/02/24 12:49:00 ssuominen Exp $
 
-EAPI="1"
-
+EAPI=2
 inherit eutils
 
-MY_P="apache-${P}"
+MY_P=apache-${P}
 
 DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations"
 HOMEPAGE="http://logging.apache.org/log4cxx/"
@@ -17,34 +16,32 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~ppc-macos"
 IUSE="doc iodbc unicode odbc smtp"
 
-RDEPEND="dev-libs/apr:1
+DEPEND="dev-libs/apr:1
 	dev-libs/apr-util:1
 	odbc? (
 		iodbc? ( >=dev-db/libiodbc-3.52.4 )
 		!iodbc? ( dev-db/unixODBC ) )
 	smtp? ( net-libs/libesmtp )"
-DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	if use iodbc && ! use odbc ; then
+	if use iodbc && ! use odbc; then
 		elog "Please enable the odbc USE-flag as well if you want odbc-support through iodbc."
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-missing_includes.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-unixODBC.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	use smtp && myconf="${myconf} --with-SMTP=libesmtp"
-	if use odbc ; then
-		if use iodbc ; then
+	if use odbc; then
+		if use iodbc; then
 			myconf="${myconf} --with-ODBC=iODBC"
 		else
 			myconf="${myconf} --with-ODBC=unixODBC"
@@ -55,12 +52,11 @@ src_compile() {
 	econf \
 		--disable-doxygen \
 		--disable-html-docs \
-		${myconf} || die "econf failed"
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dohtml -r site/*
 
 	insinto /usr/share/doc/${PF}/examples

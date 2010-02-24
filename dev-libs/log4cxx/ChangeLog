@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/log4cxx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.30 2009/12/23 16:14:08 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.31 2010/02/24 12:49:00 ssuominen Exp $
+
+  24 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> log4cxx-0.10.0.ebuild,
+  +files/log4cxx-0.10.0-unixODBC.patch:
+  Fix building with unixODBC wrt #254920, thanks to David Klempner for
+  reporting.
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org> log4cxx-0.10.0.ebuild:
   Marked ~amd64-linux and ~ppc-macos, bug #294614
