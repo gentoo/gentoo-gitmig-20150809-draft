@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.8 2010/02/24 12:52:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.9 2010/02/24 12:55:18 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -9,7 +9,7 @@ MY_P=apache-${P}
 
 DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations"
 HOMEPAGE="http://logging.apache.org/log4cxx/"
-SRC_URI="http://www.apache.org/dist/logging/${PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://apache/logging/${PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
