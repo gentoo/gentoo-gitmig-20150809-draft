@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.1 2010/02/06 11:39:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.2 2010/02/24 08:23:04 jlec Exp $
+
+  24 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> oasis-4.0.ebuild:
+  fperms -> chmod to use bash globs, fixes 306061
+  removed circular dependencies
 
 *oasis-4.0 (06 Feb 2010)
 

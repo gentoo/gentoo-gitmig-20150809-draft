@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0.ebuild,v 1.1 2010/02/06 11:39:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0.ebuild,v 1.2 2010/02/24 08:23:04 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils multilib toolchain-funcs
 
@@ -18,15 +18,17 @@ LICENSE="ccp4 oasis"
 IUSE="examples +minimal"
 
 RDEPEND="
+	${RDEPEND}
 	sci-chemistry/ccp4-apps
 	sci-chemistry/pymol
-	sci-libs/ccp4-libs
 	sci-libs/mmdb
 	sci-visualization/gnuplot
 	!minimal? (
-	sci-chemistry/solve-resolve-bin
-	sci-chemistry/arp-warp-bin )"
-DEPEND="${RDEPEND}"
+		sci-chemistry/solve-resolve-bin
+		sci-chemistry/arp-warp-bin
+	)"
+DEPEND="sci-libs/ccp4-libs"
+
 
 S="${WORKDIR}"/${MY_P}
 
@@ -51,7 +53,7 @@ src_install() {
 
 	insinto /usr/$(get_libdir)/${PN}/html
 	doins bin/html/* || die
-	fperms 755 /usr/$(get_libdir)/${PN}/html/*.{csh,awk} || die
+	chmod 755 "${ED}"/usr/$(get_libdir)/${PN}/html/*.{csh,awk} || die
 
 	if use examples; then
 		insinto /usr/share/${PN}
