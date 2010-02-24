@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.41 2010/02/14 19:47:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.42 2010/02/24 20:17:01 ssuominen Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded
@@ -75,6 +75,3 @@ app-text/enchant zemberek
 
 # Mask srtp for ortp because libsrtp is marked -sparc
 net-libs/ortp srtp
-
-# Needs testing
-media-gfx/sane-backends v4l
