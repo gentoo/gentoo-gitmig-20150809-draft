@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/skinenigmang-logos/skinenigmang-logos-20070214.ebuild,v 1.3 2009/04/27 23:58:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skinenigmang-logos/skinenigmang-logos-20070214.ebuild,v 1.4 2010/02/24 14:48:05 ssuominen Exp $
 
 inherit eutils
 
