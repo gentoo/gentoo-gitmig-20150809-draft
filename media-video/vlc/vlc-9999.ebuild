@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.60 2010/02/23 10:48:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.61 2010/02/24 12:30:21 aballier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="80"
+PATCHLEVEL="82"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -358,4 +358,17 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
 		newins "${S}"/share/vlc${res}x${res}.png vlc.png
 	done
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+
+	if [ "$ROOT" = "/" ] && [ -x "/usr/$(get_libdir)/vlc/vlc-cache-gen" ] ; then
+		einfo "Running /usr/$(get_libdir)/vlc/vlc-cache-gen"
+		"/usr/$(get_libdir)/vlc/vlc-cache-gen"
+	else
+		ewarn "We cannot run vlc-cache-gen (most likely ROOT!=/)"
+		ewarn "Please run /usr/$(get_libdir)/vlc/vlc-cache-gen manually"
+		ewarn "If you do not do it, vlc will take a long time to load."
+	fi
 }

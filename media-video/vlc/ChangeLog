@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.556 2010/02/23 10:48:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.557 2010/02/24 12:30:21 aballier Exp $
+
+  24 Feb 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  Do not generate the plugin cache at buildtime and do it in postinst
 
   23 Feb 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   libsysfs code is gone in master
