@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r2.ebuild,v 1.2 2010/02/24 08:53:26 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.1 2010/02/24 10:05:29 haubi Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RESTRICT="test" #298101
 
 RDEPEND="
 	gtk?       ( x11-libs/gtk+:2 )
-	postgres?  ( dev-db/postgresql )
+	postgres?  ( virtual/postgresql-base )
 	qt4?       ( x11-libs/qt-gui:4[qt3support] )
 	ssl?       ( dev-libs/openssl )
 	tcl?       ( dev-lang/tcl )
@@ -42,6 +42,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-hpux.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch #280678
 	epatch "${FILESDIR}"/${P}-qt4-nothread.patch
+	epatch "${FILESDIR}"/${P}-drop-pgsql-header-check.patch
 
 	[[ ${CHOST} == *-winnt* ]] && epatch "${FILESDIR}"/${P}-winnt.patch.bz2
 

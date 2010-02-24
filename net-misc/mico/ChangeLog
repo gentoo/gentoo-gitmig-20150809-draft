@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.25 2010/02/24 08:53:26 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.26 2010/02/24 10:05:29 haubi Exp $
+
+*mico-2.3.13-r3 (24 Feb 2010)
+
+  24 Feb 2010; Michael Haubenwallner <haubi@gentoo.org>
+  -mico-2.3.13-r2.ebuild, +mico-2.3.13-r3.ebuild,
+  +files/mico-2.3.13-drop-pgsql-header-check.patch:
+  update postgres dependency to use virtual/postgresql-base (#306255)
 
   24 Feb 2010; Michael Haubenwallner <haubi@gentoo.org>
   mico-2.3.13-r2.ebuild:
