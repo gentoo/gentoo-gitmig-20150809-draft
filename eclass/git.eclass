@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.42 2010/02/23 00:43:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.43 2010/02/24 01:16:35 abcd Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -193,7 +193,7 @@ git_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local GIT_DIR EGIT_CLONE_DIR oldsha1 cursha1 extra_clone_opts upstream_branch
-	${EGIT_USE_SUBMODULES} || export GIT_DIR
+	${EGIT_HAS_SUBMODULES} || export GIT_DIR
 
 	# choose if user wants elog or just einfo.
 	if [[ ${EGIT_QUIET} != OFF ]]; then
