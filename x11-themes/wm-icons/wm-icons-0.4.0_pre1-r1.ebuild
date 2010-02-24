@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.13 2007/01/04 19:48:09 flameeyes Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.14 2010/02/24 14:18:04 ssuominen Exp $
 
 inherit autotools
 
@@ -24,11 +21,11 @@ S=${WORKDIR}/wm-icons
 src_unpack() {
 	unpack ${A}
 
-	sed -i 's#$(bindir)/wm-icons-config#true#g' ${S}/Makefile.am
+	sed -i 's#$(bindir)/wm-icons-config#true#g' "${S}"/Makefile.am
 	# duplication of bin/Makefile in configure.in #91764
-	sed -i '132s/bin\/Makefile//' ${S}/configure.in
+	sed -i '132s/bin\/Makefile//' "${S}"/configure.in
 	# non-portable comment bombs automake.
-	sed -i 's/\t#/#/' ${S}/Makefile.am
+	sed -i 's/\t#/#/' "${S}"/Makefile.am
 
 	cd "${S}"
 	eautoreconf
@@ -41,16 +38,16 @@ src_compile() {
 
 src_install() {
 	# strange makefile...
-	einstall icondir=${D}/usr/share/icons/wm-icons DESTDIR=${D}
+	einstall icondir="${D}/usr/share/icons/wm-icons" DESTDIR="${D}" || die
 
 	dodir /usr/bin
-	mv ${D}/${D}/usr/bin/wm-icons-config ${D}/usr/bin/wm-icons-config
-	rm -rf ${D}/var
+	mv "${D}"/"${D}"/usr/bin/wm-icons-config "${D}"/usr/bin/wm-icons-config
+	rm -rf "${D}"/var
 
 	einfo "Setting default aliases..."
-	${D}/usr/bin/wm-icons-config --user-dir="${D}/usr/share/icons/wm-icons" --defaults
+	"${D}"/usr/bin/wm-icons-config --user-dir="${D}/usr/share/icons/wm-icons" --defaults
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
