@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.71 2010/02/22 17:00:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.72 2010/02/24 08:12:08 jlec Exp $
+
+# 24 Feb. 2010, Justin Lecher <jlec@gentoo.org>
+# needs amd64 multilib
+sci-chemistry/mars
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
