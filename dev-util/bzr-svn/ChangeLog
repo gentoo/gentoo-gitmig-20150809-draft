@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/bzr-svn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr-svn/ChangeLog,v 1.6 2010/01/23 20:14:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr-svn/ChangeLog,v 1.7 2010/02/24 10:24:26 fauli Exp $
+
+*bzr-svn-1.0.2 (24 Feb 2010)
+
+  24 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  +bzr-svn-1.0.2.ebuild:
+  version bump: straighten dependencies, introduce test USE flag to block
+  dev-util/bzr-rewrite (from Bazaar overlay) and restrict test until they
+  are permanently fixed upstream
 
   23 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   -bzr-svn-1.0.0.ebuild:
