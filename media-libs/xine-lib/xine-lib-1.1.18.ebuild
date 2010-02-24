@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.18.ebuild,v 1.2 2010/02/24 20:15:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.18.ebuild,v 1.3 2010/02/24 21:09:32 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -75,6 +75,7 @@ RDEPEND="X? ( x11-libs/libXext
 		amd64? ( media-libs/amd64codecs ) )
 	v4l? ( media-libs/libv4l )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	X? ( x11-libs/libXt
 		 x11-proto/xproto
 		 x11-proto/videoproto
