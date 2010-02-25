@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.11.ebuild,v 1.1 2010/02/25 04:16:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.11.ebuild,v 1.2 2010/02/25 04:18:23 bicatali Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ pkg_setup() {
 	if use openmp &&
 		[[ $(tc-getCC)$ == *gcc* ]] &&
 		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
-			! built_with_use sys-devel/gcc openmp )
+			! has_version sys-devel/gcc[openmp] )
 	then
 		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
 		ewarn "If you want to build fftw with OpenMP, abort now,"
