@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3931 2010/02/25 09:11:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3932 2010/02/25 19:52:10 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Feb 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove sys-fs/archfs mask entry (bug #274119).
 
   25 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Remove p.mask entries for www-client/chromium versions no longer in the
