@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/scponly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.46 2010/01/23 03:18:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.47 2010/02/25 15:54:45 phajdan.jr Exp $
+
+  25 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  scponly-4.8-r4.ebuild:
+  x86 stable, bug #302480
 
 *scponly-4.8-r4 (23 Jan 2010)
 
