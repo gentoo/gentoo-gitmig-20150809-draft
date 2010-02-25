@@ -1,6 +1,6 @@
 --- share.orig/arpwarp_setup_base.bash	2008-08-03 16:50:03.000000000 -0700
 +++ share/arpwarp_setup_base.bash	2008-08-03 16:51:20.000000000 -0700
-@@ -23,11 +23,14 @@
+@@ -23,11 +23,13 @@
  #
  # Checks for CBIN variable
  if [ "$CBIN" = "" ]; then
@@ -9,7 +9,6 @@
 -    echo 'Variable $CBIN is not defined'
 -    echo "Please install CCP4 first"
 -    testccp='1'
-+    source /etc/profile.d/ccp4.setup.sh
 +    if [ "$CBIN" = "" ]; then
 +        echo
 +        echo "Cannot setup ARP/wARP"
@@ -22,7 +21,7 @@
      if [ ! -d $CBIN ]; then
 --- share.orig/arpwarp_setup_base.csh	2008-08-03 16:50:06.000000000 -0700
 +++ share/arpwarp_setup_base.csh	2008-08-03 16:52:03.000000000 -0700
-@@ -22,11 +22,14 @@
+@@ -22,11 +22,13 @@
  # Settings for python
  # Checks for CBIN variable
  if ( ! $?CBIN ) then
@@ -31,7 +30,6 @@
 -    echo 'Variable $CBIN is not defined'
 -    echo 'Please install CCP4 first'
 -    goto errorsetup
-+    source /etc/profile.d/ccp4.setup.sh
 +    if ( ! $?CBIN ) then
 +        echo
 +        echo 'Cannot setup ARP/wARP'

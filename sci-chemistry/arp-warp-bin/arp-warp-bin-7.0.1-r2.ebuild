@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.0.1-r1.ebuild,v 1.2 2010/02/07 22:04:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.0.1-r2.ebuild,v 1.1 2010/02/25 08:06:28 jlec Exp $
 
 inherit eutils python
 
@@ -62,6 +62,7 @@ src_install(){
 }
 
 pkg_postinst(){
+	python_need_rebuild
 	python_mod_optimize "${ROOT}"/opt/${PN}/byte-code/python-${PYVER}
 
 	testcommand=$(echo 3 2 | awk '{printf"%3.1f",$1/$2}')

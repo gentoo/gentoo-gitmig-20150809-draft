@@ -58,7 +58,7 @@ diff -Nu -Nu -uarN arp_warp_7.0.1.orig/share/arpwarp_setup_base.bash arp_warp_7.
          echo "WARNING while setting up ARP/wARP"
          echo "No valid 'python' command was found"
          echo "flex-warp ('ARP/wARP Expert System' in the GUI) will not be available."
-+	echo "Did you upgrade your python? Reemerge ArpWarp!"
++	echo "Did you upgrade your python? Please run 'emerge sci-chemistry/arp-warp-bin!'"
          echo
          export flex_wARP_warpbin="Unavailable"
          export flex_wARP_cbin="Unavailable"
@@ -140,7 +140,7 @@ diff -Nu -Nu -uarN arp_warp_7.0.1.orig/share/arpwarp_setup_base.csh arp_warp_7.0
      echo "WARNING while setting up ARP/wARP"
      echo "No valid 'python' command was found"
      echo "flex-warp ('ARP/wARP Expert System' in the GUI) will not be available."
-+    echo "Did you upgrade your python? Reemerge ArpWarp!"
++    echo "Did you upgrade your python? Please run 'emerge sci-chemistry/arp-warp-bin!'"
      echo
      setenv flex_wARP_warpbin "Unavailable"
      setenv flex_wARP_cbin "Unavailable"
