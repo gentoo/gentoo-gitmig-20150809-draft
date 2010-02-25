@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.12.0.ebuild,v 1.1 2010/02/23 16:01:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.12.0.ebuild,v 1.2 2010/02/25 22:22:57 jer Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A network tool to gather ip traffic informations"
 HOMEPAGE="http://www.pmacct.net/"
@@ -13,7 +13,7 @@ SRC_URI="http://www.pmacct.net/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="64bit debug ipv6 mmap mysql postgres sqlite"
+IUSE="64bit debug ipv6 mysql postgres sqlite threads ulog"
 
 RDEPEND="net-libs/libpcap
 	mysql? ( virtual/mysql )
@@ -22,25 +22,29 @@ RDEPEND="net-libs/libpcap
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i "s|\(CFLAGS=\).*$|\1\"${CFLAGS}\"|g" configure || die "sed failed"
+	cp -av configure{,.org}
+	cp -av configure.in{,.org}
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_configure() {
 	tc-export CC
 	econf \
+		$(use_enable 64bit) \
+		$(use_enable debug) \
+		$(use_enable ipv6) \
 		$(use_enable mysql) \
 		$(use_enable postgres pgsql) \
-		$(use_enable mmap) \
-		$(use_enable ipv6) \
-		$(use_enable debug) \
-		$(use_enable 64bit) \
-		$(use_enable sqlite sqlite3)
+		$(use_enable threads) \
+		$(use_enable ulog) \
+		|| die "econf failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc README EXAMPLES KNOWN-BUGS CONFIG-KEYS FAQS ChangeLog docs/SIGNALS \
-		docs/PLUGINS docs/INTERNALS TODO TOOLS || die "dodoc failed"
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc ChangeLog CONFIG-KEYS EXAMPLES FAQS KNOWN-BUGS README UPGRADE \
+		docs/SIGNALS docs/PLUGINS docs/INTERNALS TODO TOOLS \
+		|| die "dodoc failed"
 
 	for dirname in examples sql; do
 		docinto ${dirname}

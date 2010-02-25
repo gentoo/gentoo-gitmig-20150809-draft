@@ -3,5 +3,8 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <longdescription>A network tool to gather ip traffic informations</longdescription>
-<use><flag name='64bit'>Use 64bit counters instead of 32bit ones</flag></use>
+<use>
+  <flag name='64bit'>Use 64bit counters instead of 32bit ones</flag>
+  <flag name='ulog'>Enable ULOG support</flag>
+</use>
 </pkgmetadata>
