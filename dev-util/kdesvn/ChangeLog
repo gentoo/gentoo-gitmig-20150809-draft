@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.77 2010/02/25 14:20:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.78 2010/02/25 14:41:21 reavertm Exp $
+
+  25 Feb 2010; Maciej Mrozowski <reavertm@gentoo.org> kdesvn-1.4.1.ebuild,
+  kdesvn-1.5.2-r1.ebuild:
+  Add sys-devel/gettext to DEPEND
 
   25 Feb 2010; Maciej Mrozowski <reavertm@gentoo.org> -kdesvn-1.5.2.ebuild,
   +kdesvn-1.5.2-r1.ebuild:
