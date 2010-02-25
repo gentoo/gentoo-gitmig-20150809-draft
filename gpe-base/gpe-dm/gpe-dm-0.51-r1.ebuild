@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/gpe-dm-0.51-r1.ebuild,v 1.2 2009/05/30 18:40:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/gpe-dm-0.51-r1.ebuild,v 1.3 2010/02/25 17:37:49 miknix Exp $
+
+# NOTE to bumpers: Version 0.52 changes don't affect Gentoo.
+# Please don't bump to that version.
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit eutils gpe autotools
