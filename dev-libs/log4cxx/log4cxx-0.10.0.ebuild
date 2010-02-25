@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.9 2010/02/24 12:55:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.10 2010/02/25 09:53:49 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/logging/${PN}/${PV}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~ppc-macos"
-IUSE="doc iodbc unicode odbc smtp"
+IUSE="iodbc unicode odbc smtp"
 
 DEPEND="dev-libs/apr:1
 	dev-libs/apr-util:1
