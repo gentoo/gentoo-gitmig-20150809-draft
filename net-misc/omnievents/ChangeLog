@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omnievents
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/ChangeLog,v 1.6 2009/07/20 15:16:32 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/ChangeLog,v 1.7 2010/02/25 10:29:53 phajdan.jr Exp $
+
+  25 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  omnievents-2.6.2.ebuild:
+  Do not install ELF files to /usr/share wrt bug #295764 by flameeyes.
 
   20 Jul 2009; Víctor Ostorga <vostorga@gentoo.org>
   omnievents-2.6.2.ebuild, +files/omnievents-2.6.2-gcc44.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.5 2009/07/20 15:16:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.6 2010/02/25 10:29:53 phajdan.jr Exp $
 
 inherit eutils versionator
 
@@ -38,6 +38,9 @@ src_install () {
 	doman doc/man/*
 
 	dohtml -A xml -x man,rc -r doc/*
+
+	# Remove ELF files from examples that go to /usr/share, bug #295764.
+	rm examples/{pull,push}{cons,supp}{,.o} || die "rm failed"
 
 	insinto /usr/share/doc/${PF}/examples
 	doins -r examples/*
