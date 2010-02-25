@@ -17,4 +17,31 @@
  vcl-xinerama-clone-fix.diff, n#578730, thorsten
  
  [ HyphenFix ]
+--- configure.in 
++++ configure.in 
+@@ -1326,12 +1326,18 @@
+ 	done
+     fi
+     SUNTEMPLATES_LANG=
+-    # check whether the langs are requested at all
+-    for lang in $wanted_sun_templates ; do
+-	if test -n "`echo $with_lang | grep "$lang"`" ; then
+-		SUNTEMPLATES_LANG="$SUNTEMPLATES_LANG $lang"
+-	fi
+-    done
++
++    # --with-lang="" now used for en-US
++    if test "z$with_lang" = "z" ; then
++        SUNTEMPLATES_LANG="en-US"
++    else
++        # check whether the langs are requested at all
++        for lang in $wanted_sun_templates ; do
++	    if test -n "`echo $with_lang | grep "$lang"`" ; then
++		  SUNTEMPLATES_LANG="$SUNTEMPLATES_LANG $lang"
++	    fi
++        done
++    fi
+     AC_MSG_RESULT([$SUNTEMPLATES_LANG])
+ fi
+ AC_SUBST(SUNTEMPLATES_LANG)
 
