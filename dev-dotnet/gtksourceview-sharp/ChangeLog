@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtksourceview-sharp
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.43 2009/04/30 15:36:06 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.44 2010/02/25 12:12:19 patrick Exp $
+
+  25 Feb 2010; Patrick Lauer <patrick@gentoo.org>
+  gtksourceview-sharp-0.12.ebuild:
+  Fixing RDEP for #306805
 
   30 Apr 2009; Brent Baude <ranger@gentoo.org>
   gtksourceview-sharp-2.24.0-r10.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.12.ebuild,v 1.3 2008/12/14 15:21:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.12.ebuild,v 1.4 2010/02/25 12:12:19 patrick Exp $
 
 EAPI=2
 
@@ -24,6 +24,7 @@ RDEPEND=">=dev-lang/mono-1.0
 		 >=dev-dotnet/gtk-sharp-2.4.0
 		 >=dev-dotnet/gnome-sharp-2.4.0
 		 =x11-libs/gtksourceview-1*
+		 dev-dotnet/gtk-sharp-gapi
 		 !<dev-dotnet/gtksourceview-sharp-0.12"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
