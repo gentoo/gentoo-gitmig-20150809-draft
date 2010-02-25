@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/menu-cache-0.3.1.ebuild,v 1.3 2010/02/23 18:44:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/menu-cache-0.3.1.ebuild,v 1.4 2010/02/25 10:15:05 fauli Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2"

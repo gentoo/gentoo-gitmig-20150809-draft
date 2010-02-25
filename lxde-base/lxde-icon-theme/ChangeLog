@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxde-icon-theme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.4 2010/02/23 18:38:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.5 2010/02/25 10:09:40 fauli Exp $
+
+  25 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  lxde-icon-theme-0.0.1.ebuild:
+  stable x86, bug 306433
 
   23 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   lxde-icon-theme-0.0.1.ebuild:

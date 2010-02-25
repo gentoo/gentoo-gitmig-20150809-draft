@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxde-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.12 2010/02/23 18:39:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.13 2010/02/25 10:12:57 fauli Exp $
+
+  25 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  lxde-common-0.5.0.ebuild:
+  stable x86, bug 306433
 
   23 Feb 2010; Raúl Porcel <armin76@gentoo.org> lxde-common-0.5.0.ebuild:
   arm stable wrt #306433
