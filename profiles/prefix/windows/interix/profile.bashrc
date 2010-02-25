@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/profile.bashrc,v 1.2 2009/08/13 09:56:51 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/profile.bashrc,v 1.3 2010/02/25 09:01:19 abcd Exp $
 
 # One basically always wants -D_ALL_SOURCE, it's some stupid restriction
 # to hide useful stuff. newer GCCs have this define built-int, so no need
@@ -102,7 +102,7 @@ post_pkg_preinst() {
 		test -r "${ROOT}${f}" || continue
 		rmstem="${f}.removedbyportage"
 		# keep list of old busy text files unique
-		grep "^${rmstem}$" "${removedlist}" >/dev/null \
+		grep -F "${rmstem}" "${removedlist}" >/dev/null \
 			|| echo "${rmstem}" >> "${removedlist}"
 
 		local n=$(interix_find_removed_slot ${ROOT}${rmstem})
