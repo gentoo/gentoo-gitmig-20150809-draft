@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.149 2010/02/17 15:12:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.150 2010/02/25 21:11:26 grobian Exp $
+
+  25 Feb 2010; Fabian Groffen <grobian@gentoo.org> libevent-1.4.13.ebuild:
+  Marked ~x64-macos, thanks Ramon van Alteren, bug #305367
 
   17 Feb 2010; Jeroen Roovers <jer@gentoo.org> -libevent-1.4.12.ebuild:
   Remove old.
