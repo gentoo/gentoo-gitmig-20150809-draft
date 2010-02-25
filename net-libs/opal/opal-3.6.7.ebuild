@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.7.ebuild,v 1.1 2010/02/18 19:08:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.7.ebuild,v 1.2 2010/02/25 00:22:30 robbat2 Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="+audio capi celt debug doc dtmf examples fax ffmpeg h224 h281 h323 iax
 ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig theora
 +video vpb vxml wav x264 x264-static xml"
 
-RDEPEND=">=net-libs/ptlib-2.6.4[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.6.6[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )

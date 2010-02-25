@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.60 2010/02/18 19:08:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.61 2010/02/25 00:22:30 robbat2 Exp $
+
+  25 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> opal-3.6.7.ebuild:
+  Latest opal requires a new ptlib during configure phase: Package
+  requirements (ptlib >= 2.6.6) were not met.
 
 *opal-3.6.7 (18 Feb 2010)
 
