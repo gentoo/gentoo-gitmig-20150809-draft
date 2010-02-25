@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.0.ebuild,v 1.1 2009/10/23 19:29:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.0.ebuild,v 1.2 2010/02/25 14:59:39 lxnay Exp $
 
 EAPI=2
 
@@ -29,6 +29,10 @@ RDEPEND=">=sci-chemistry/openbabel-2.2.2
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:2
 	>=dev-util/cmake-2.6.2"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-sip-4.10.patch"
+}
 
 src_configure() {
 	local mycmakeargs

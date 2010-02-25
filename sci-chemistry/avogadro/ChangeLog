@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/avogadro
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.31 2009/10/23 19:29:26 cryos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.32 2010/02/25 14:59:39 lxnay Exp $
+
+  25 Feb 2010; Fabio Erculiani <lxnay@gentoo.org> avogadro-1.0.0.ebuild,
+  +files/avogadro-1.0.0-sip-4.10.patch:
+  fix compilation with sip 4.10, thanks to Victor Yu. Kowalsky and
+  Kacper Kowalik for reporting, close bug #303703
 
 *avogadro-1.0.0 (23 Oct 2009)
 
