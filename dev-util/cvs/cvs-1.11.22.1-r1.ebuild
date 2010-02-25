@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.22.1-r1.ebuild,v 1.1 2010/02/21 15:53:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.22.1-r1.ebuild,v 1.2 2010/02/25 08:02:47 robbat2 Exp $
 
 EAPI=3
 
@@ -25,9 +25,8 @@ src_unpack() {
 	find "${S}" -type f -name getdate -exec rm \{\} \;
 }
 
-src_compile() {
+src_configure() {
 	econf --with-tmpdir=/tmp --without-gssapi || die
-	emake || die "emake failed"
 }
 
 src_install() {
