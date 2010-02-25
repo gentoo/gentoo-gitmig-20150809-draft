@@ -1,12 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.0.20100119.ebuild,v 1.1 2010/01/31 14:57:15 hd_brummy Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.0.20100119.ebuild,v 1.2 2010/02/25 18:44:08 ssuominen Exp $
 
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
-
-inherit eutils autotools
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="Mark commercial Breaks in VDR records"
 HOMEPAGE="http://noad.heliohost.org/"
@@ -24,7 +21,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 
-	epatch "${FILESDIR}"/patches-0.6.0/hangcheck.diff
+	epatch "${FILESDIR}"/patches-0.6.0/hangcheck.diff \
+		"${FILESDIR}"/patches-0.7.x/${P}-asneeded.patch
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
 		sed -e "s:include/ffmpeg:include/libavcodec:g" -i configure.ac
