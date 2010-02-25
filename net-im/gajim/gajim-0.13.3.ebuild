@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.1.ebuild,v 1.3 2010/02/13 18:12:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.3.ebuild,v 1.1 2010/02/25 06:13:22 pva Exp $
 
 EAPI="2"
 
@@ -63,8 +63,6 @@ src_prepare() {
 	# install pyfiles in /usr/lib/python2.x/site-packages/gajim
 	# upstream: http://trac.gajim.org/ticket/5460
 	epatch "${FILESDIR}/${PN}-0.13-autotools--enable-site-packages_option.patch"
-	# http://trac.gajim.org/ticket/5457
-	epatch "${FILESDIR}/${P}-define-exception.patch"
 	eautoreconf
 }
 
