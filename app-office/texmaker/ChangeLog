@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.66 2010/01/24 23:09:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.67 2010/02/25 12:04:42 aballier Exp $
+
+*texmaker-1.99 (25 Feb 2010)
+
+  25 Feb 2010; Alexis Ballier <aballier@gentoo.org> +texmaker-1.99.ebuild,
+  +files/texmaker-1.99-hunspell.patch:
+  version bump, by Dustin Polke <gentoobugsie.20.dsurawicz@spamgourmet.com>,
+  bug #303251
 
   24 Jan 2010; Tom Gall <tgall@gentoo.org> texmaker-1.92.ebuild:
   stable on ppc64, bug #299590
