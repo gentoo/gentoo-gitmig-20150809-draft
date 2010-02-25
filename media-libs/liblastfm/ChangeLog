@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblastfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.6 2010/02/23 04:03:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.7 2010/02/25 20:28:50 wired Exp $
+
+  25 Feb 2010; Alex Alexander <wired@gentoo.org> liblastfm-0.3.0.ebuild:
+  added missing qt-test dep
 
   23 Feb 2010; Joseph Jezak <josejx@gentoo.org> liblastfm-0.3.0.ebuild:
   Marked ~ppc.
