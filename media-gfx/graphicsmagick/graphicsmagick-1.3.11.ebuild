@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.8.ebuild,v 1.3 2010/02/20 19:05:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.11.ebuild,v 1.1 2010/02/25 04:16:37 bicatali Exp $
 
 EAPI="2"
 
