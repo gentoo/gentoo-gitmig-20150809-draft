@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.104 2010/01/24 23:21:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.105 2010/02/25 00:19:50 eva Exp $
+
+*anjuta-2.28.2.0 (25 Feb 2010)
+
+  25 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +anjuta-2.28.2.0.ebuild:
+  Version bump, build fixes and other fixes.
 
   24 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org> -anjuta-2.24.1.ebuild,
   -anjuta-2.26.2.0.ebuild, anjuta-2.28.1.0.ebuild:
