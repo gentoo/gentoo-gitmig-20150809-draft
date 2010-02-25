@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/evolution-sharp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.48 2009/10/24 13:13:08 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.49 2010/02/25 18:43:05 halcy0n Exp $
+
+  25 Feb 2010; Mark Loeser <halcy0n@gentoo.org>
+  -evolution-sharp-0.18.1.ebuild:
+  Drop old so evolution-data-server-2.24 can be removed from the tree
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> evolution-sharp-0.21.1.ebuild:
   ppc stable #288324
