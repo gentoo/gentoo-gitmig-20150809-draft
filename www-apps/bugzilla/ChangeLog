@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.156 2010/02/23 15:40:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.157 2010/02/25 19:57:30 armin76 Exp $
+
+  25 Feb 2010; Raúl Porcel <armin76@gentoo.org> bugzilla-3.0.11.ebuild,
+  bugzilla-3.2.6.ebuild:
+  alpha/ia64/sparc stable wrt #303725
 
   23 Feb 2010; Brent Baude <ranger@gentoo.org> bugzilla-3.0.11.ebuild,
   bugzilla-3.2.6.ebuild:
