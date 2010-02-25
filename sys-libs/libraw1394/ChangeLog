@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.51 2010/02/14 16:06:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.52 2010/02/25 21:22:29 ssuominen Exp $
+
+  25 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libraw1394-2.0.5.ebuild:
+  Pass --without-fw-dir to econf for _FORTIFY_SOURCE=2 wrt #305241 by Gary
+  Stein.
 
 *libraw1394-2.0.5 (14 Feb 2010)
 
