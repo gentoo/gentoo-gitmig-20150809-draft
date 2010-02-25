@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r7,v 1.1 2009/11/12 08:37:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r7,v 1.2 2010/02/25 19:03:31 robbat2 Exp $
 
 opts="start stop reload restart"
 
@@ -95,7 +95,7 @@ stop() {
 	ebegin "Stopping ${CHROOT:+chrooted }named"
 	checkconfig || return 2
 	if [ -f $KEY ] ; then
-		rndc -k $KEY stop &>/dev/null
+		rndc $SERVER -k $KEY stop &>/dev/null
 	else
 		start-stop-daemon --stop --quiet --pidfile $PIDFILE \
 			--exec /usr/sbin/named -- stop
@@ -133,7 +133,7 @@ reload() {
 
 	if [ -f $KEY ] ; then
 		ebegin "Reloading named.conf and zone files"
-		rndc -k $KEY reload &>/dev/null
+		rndc $SERVER -k $KEY reload &>/dev/null
 		eend $?
 	else /etc/init.d/named restart &>/dev/null
 	fi

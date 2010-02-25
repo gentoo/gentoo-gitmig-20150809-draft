@@ -6,6 +6,9 @@ OPTIONS=""
 # Leave this unchanged if you want bind to automatically detect the number
 #CPU="1"
 
+# RNDC needs to be told what server we're using sometimes.
+#SERVER="-s 127.0.0.1"
+
 # If you wish to run bind in a chroot, run:
 # emerge --config =<bind-version>
 # and un-comment the following line.
