@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.254 2010/02/24 22:46:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.255 2010/02/25 15:57:37 halcy0n Exp $
+
+  25 Feb 2010; Mark Loeser <halcy0n@gentoo.org>
+  +files/evolution-data-server-1.11.3-no-libdb.patch,
+  +files/evolution-data-server-2.23.6-as-needed.patch,
+  +evolution-data-server-2.24.5-r3.ebuild,
+  +files/evolution-data-server-2.24.5-CVE-2009-0547.patch,
+  +files/evolution-data-server-2.24.5-fix-body.patch,
+  +files/evolution-data-server-CVE-2009-0582.patch:
+  Restoring due to dev-dotnet/evolution-sharp-0.18.1 requiring it
 
   24 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/evolution-data-server-1.11.3-no-libdb.patch,
