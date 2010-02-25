@@ -24,7 +24,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=305547
          saved_LDFLAGS="$LDFLAGS"
          LDFLAGS="$LDFLAGS $expat_lib_flags"
  
-+        saved_LIBS="$LIBSS"
++        saved_LIBS="$LIBS"
 +        LIBS="$LIBS $expat_libs"
          dnl
          dnl Check Expat headers
