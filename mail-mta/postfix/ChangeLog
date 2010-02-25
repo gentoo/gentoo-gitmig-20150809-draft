@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.202 2010/02/05 22:15:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.203 2010/02/25 22:18:02 robbat2 Exp $
+
+*postfix-2.6.5-r1 (25 Feb 2010)
+
+  25 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +postfix-2.6.5-r1.ebuild:
+  Bug #292598: Update the vda patch for quota bug.
 
   05 Feb 2010; Ulrich Mueller <ulm@gentoo.org> postfix-2.5.5.ebuild,
   postfix-2.5.7.ebuild, postfix-2.5.9.ebuild, postfix-2.6.5.ebuild:
