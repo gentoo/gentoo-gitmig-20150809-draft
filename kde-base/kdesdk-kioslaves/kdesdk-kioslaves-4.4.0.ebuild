@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.4.0.ebuild,v 1.1 2010/02/09 00:17:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.4.0.ebuild,v 1.2 2010/02/25 12:46:53 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!kdeprefix? (
-		subversion? ( !dev-util/kdesvn:4 )
+		subversion? ( !<dev-util/kdesvn-1.5.1:4 )
 	)
 "
 
