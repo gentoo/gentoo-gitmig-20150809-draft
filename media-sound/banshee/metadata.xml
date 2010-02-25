@@ -8,5 +8,7 @@
     <flag name="daap">Build with Daap support</flag>
     <flag name="karma">Build with karma support</flag>
     <flag name="podcast">Build with podcasting support</flag>
+	<flag name="wikipedia">Enable the Wikipedia context pane (requires
+		<pkg>net-libs/webkit-gtk</pkg>)</flag>
   </use>
 </pkgmetadata>
