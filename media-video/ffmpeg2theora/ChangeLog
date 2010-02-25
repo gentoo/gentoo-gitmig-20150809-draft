@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.40 2010/02/23 18:51:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.41 2010/02/25 16:47:19 phajdan.jr Exp $
+
+  25 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ffmpeg2theora-0.25.ebuild:
+  x86 stable, bug #250723, arch-tested by Thomas Kahle <tom111@gmx.de>
 
   23 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
   ffmpeg2theora-0.25.ebuild:
