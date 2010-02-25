@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXmu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.60 2010/01/23 20:50:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.61 2010/02/25 07:30:37 abcd Exp $
+
+  25 Feb 2010; Jonathan Callen <abcd@gentoo.org> libXmu-1.0.5.ebuild:
+  Transfer prefix keywords (no other changes)
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -libXmu-1.0.3.ebuild,
   -libXmu-1.0.4.ebuild:
