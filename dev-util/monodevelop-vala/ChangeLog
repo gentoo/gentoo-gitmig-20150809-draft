@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monodevelop-vala
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.4 2009/10/18 12:18:59 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.5 2010/02/25 13:49:22 patrick Exp $
+
+*monodevelop-vala-2.2 (25 Feb 2010)
+
+  25 Feb 2010; Patrick Lauer <patrick@gentoo.org>
+  +monodevelop-vala-2.2.ebuild:
+  Bump
 
 *monodevelop-vala-2.1.1 (18 Oct 2009)
 
