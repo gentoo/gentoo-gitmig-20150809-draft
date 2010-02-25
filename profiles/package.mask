@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11250 2010/02/25 07:43:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11251 2010/02/25 07:50:15 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (25 Feb 2010)
+# Masked for removal as soon as possible
+# Merged in dev-perl/Email-MIME
+dev-perl/Email-MIME-Modifier
+dev-perl/Email-MIME-Creator
+# Merged in dev-perl/Email-Simple (#304683)
+#dev-perl/Email-Simple-Creator
+# Merged in dev-perl/XML-LibXML (#304685)
+#dev-perl/XML-LibXML-Common
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (23 Feb 2010)
 # Masked for testing.
