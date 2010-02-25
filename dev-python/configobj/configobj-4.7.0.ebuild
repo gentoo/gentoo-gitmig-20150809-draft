@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.7.0.ebuild,v 1.1 2010/01/11 09:15:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/configobj-4.7.0.ebuild,v 1.2 2010/02/25 10:22:02 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"
