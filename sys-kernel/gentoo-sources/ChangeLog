@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.682 2010/02/24 12:55:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.683 2010/02/25 02:09:07 mpagano Exp $
+
+*gentoo-sources-2.6.33 (25 Feb 2010)
+
+  25 Feb 2010; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.33.ebuild:
+  Initial 2.6.33 release including the fbcondecor patch, a patch to enable
+  control of the unaligned access control policy from sysctl and a patch for
+  bad block relocation support for LiveCD users.
 
 *gentoo-sources-2.6.32-r7 (24 Feb 2010)
 
