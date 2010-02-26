@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11253 2010/02/25 19:52:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11254 2010/02/26 05:48:05 halcy0n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -288,12 +288,6 @@ media-tv/vdrplugin-rebuild
 # and report bugs *upstream* at http://jira.atheme.org
 =media-plugins/audacious-plugins-2.3_alpha*
 =media-sound/audacious-2.3_alpha*
-
-# Tiziano Müller <dev-zero@gentoo.org> (19 Jan 2010)
-# masked for removal (tracker bug #271131)
-=dev-libs/dbxml-2.4*
-=dev-libs/xqilla-2.1*
-<=dev-libs/xerces-c-2.8.0-r1
 
 # Doug Goldstein <cardoe@gentoo.org> (18 Jan 2010)
 # masked for testing and development
