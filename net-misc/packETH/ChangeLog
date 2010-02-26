@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/packETH
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.6 2009/11/01 22:44:39 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.7 2010/02/26 11:26:46 phajdan.jr Exp $
+
+  26 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> packETH-1.6.3.ebuild:
+  x86 stable wrt bug #304041
 
   01 Nov 2009; Jeroen Roovers <jer@gentoo.org> -packETH-1.4.ebuild:
   Remove old.
