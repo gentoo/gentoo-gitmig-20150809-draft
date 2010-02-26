@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.1 2010/02/26 10:59:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.2 2010/02/26 12:15:41 ulm Exp $
 
 EAPI=2
 
@@ -134,7 +134,7 @@ src_compile() {
 		cd "${S}/tutorial"
 		emake pdf || die
 
-		if use emacs || use xemacs; then
+		if use xemacs || use emacs; then
 			cd "${S}/lisp"
 			emake pdf || die
 		fi
