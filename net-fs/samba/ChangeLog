@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.400 2010/02/23 12:19:03 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.401 2010/02/26 20:11:21 patrick Exp $
+
+*samba-3.4.6 (26 Feb 2010)
+
+  26 Feb 2010; Patrick Lauer <patrick@gentoo.org>
+  +files/samba-3.4.2-lib.tevent.python.mk, +files/3.4/lmhosts,
+  +files/3.4/nsswitch.conf-winbind, +files/3.4/nsswitch.conf-wins,
+  +files/3.4/samba.confd, +files/3.4/samba.initd, +files/3.4/samba.pam,
+  +files/3.4/smb.conf.default, +samba-3.4.6.ebuild, +files/3.4/smbusers,
+  +files/3.4/swat.xinetd, +files/3.4/system-auth-winbind.pam, metadata.xml:
+  Adding unsplit 3.4 ebuild
 
   23 Feb 2010; Robert Piasek <dagger@gentoo.org> samba-4.0.0_alpha11.ebuild:
   We need emake installpc to install PKG-CONFIG files
