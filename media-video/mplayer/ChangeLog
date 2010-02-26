@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.710 2010/02/13 21:50:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.711 2010/02/26 23:19:14 sping Exp $
+
+  26 Feb 2010; Sebastian Pipping <sping@gentoo.org> mplayer-9999.ebuild:
+  Copy latest to 9999 before proceeding
 
   13 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   mplayer-1.0_rc4_p20100213.ebuild, metadata.xml:
