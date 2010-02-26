@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213.ebuild,v 1.2 2010/02/13 21:50:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213.ebuild,v 1.3 2010/02/26 23:23:56 sping Exp $
 
 EAPI="2"
 
@@ -97,6 +97,7 @@ RDEPEND+="
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	bidi? ( dev-libs/fribidi )
+	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( media-sound/cdparanoia )
 	dirac? ( media-video/dirac )
@@ -128,6 +129,7 @@ RDEPEND+="
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
 	openal? ( media-libs/openal )
+	opencore-amr? ( media-libs/opencore-amr )
 	jpeg2k? ( media-libs/openjpeg )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
