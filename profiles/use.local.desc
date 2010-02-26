@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5317 2010/02/26 20:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5318 2010/02/26 21:48:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1541,6 +1541,9 @@ media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transform
 media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
+media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering backend
+media-libs/clutter:introspection - Use dev-libs/gobject-introspection for introspection
+media-libs/clutter:opengl - Use virtual/opengl as the backend for rendering (default). If disabled, media-libs/libsdl is used.
 media-libs/devil:allegro - Add support for Allegro
 media-libs/esdl:image - Enable image support
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
