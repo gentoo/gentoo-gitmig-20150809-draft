@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.4_beta1.ebuild,v 1.2 2010/02/26 00:30:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.4_beta1.ebuild,v 1.3 2010/02/26 22:12:23 ssuominen Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs python
+inherit eutils flag-o-matic toolchain-funcs python
 
 MY_P=${P/_/-}
 
@@ -37,6 +37,11 @@ src_prepare() {
 	for i in $(find bindings -name Makefile); do
 		sed -i -e "s:@g++:@$(tc-getCXX):g" ${i}  || die
 	done
+}
+
+src_compile() {
+	append-cxxflags -frounding-math
+	emake || die
 }
 
 src_test() {
