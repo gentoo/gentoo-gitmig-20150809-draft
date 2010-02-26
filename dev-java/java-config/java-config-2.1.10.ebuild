@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.10.ebuild,v 1.7 2010/02/20 14:35:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.10.ebuild,v 1.8 2010/02/26 19:26:02 arfrever Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -44,7 +44,6 @@ src_install() {
 }
 
 pkg_postrm() {
-	distutils_python_version
 	distutils_pkg_postrm
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
