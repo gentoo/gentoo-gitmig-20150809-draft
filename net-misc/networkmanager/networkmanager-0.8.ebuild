@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.999.ebuild,v 1.2 2010/01/25 17:48:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.ebuild,v 1.1 2010/02/26 10:23:29 dagger Exp $
 
 EAPI="2"
 
@@ -58,7 +58,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.7.1-confchanges.patch"
 
 	# Hack keyfile plugin to read hostname file, fixes bug 176873
-	epatch "${FILESDIR}/${PN}-0.8-read-hostname.patch"
+	epatch "${FILESDIR}/${P}-read-hostname.patch"
+
+	# Clear NSCD cache rather then kill daemon bug 301720
+	epatch "${FILESDIR}/${P}-nscd-clear-cache.patch"
 }
 
 src_configure() {

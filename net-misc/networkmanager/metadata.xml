@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>steev@gentoo.org</email>
-		<name>Stephen Klimaszewski</name>
-	</maintainer>
-	<maintainer>
 		<email>dagger@gentoo.org</email>
 		<name>Robert Piasek</name>
 	</maintainer>
@@ -14,6 +10,10 @@
 		<email>nirbheek@gentoo.org</email>
 		<name>Nirbheek Chauhan</name>
 	</maintainer>
+        <maintainer>
+                <email>steev@gentoo.org</email>
+                <name>Stephen Klimaszewski</name>
+        </maintainer>
 	<use>
 		<flag name="dhclient">Use dhclient from <pkg>net-misc/dhcp</pkg> for getting ip.</flag>
 		<flag name="dhcpcd">Use <pkg>net-misc/dhcpcd</pkg> for getting ip.</flag>
