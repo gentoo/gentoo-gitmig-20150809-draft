@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.17.4.ebuild,v 1.1 2009/11/16 14:41:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.17.4.ebuild,v 1.2 2010/02/26 15:45:15 ssuominen Exp $
 
 inherit flag-o-matic autotools
 
@@ -32,6 +32,9 @@ src_unpack() {
 
 	# Fix Makefile bug.
 	sed -i -e "s:test -z \"\$(firmwaredir)\":test -z\"\$(DESTDIR)(firmwaredir)\":g" Makefile.am
+
+	# Fix asneeded linking.
+	sed -i -e "s:AM_LDFLAGS:LDADD:" {dhc,overlay}/Makefile.am || die
 
 	eautoreconf
 }
