@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>steev@gentoo.org</email>
-		<name>Stephen Klimaszewski</name>
-	</maintainer>
-	<maintainer>
 		<email>dagger@gentoo.org</email>
 		<name>Robert Piasek</name>
 	</maintainer>
@@ -14,4 +10,8 @@
 		<email>nirbheek@gentoo.org</email>
 		<name>Nirbheek Chauhan</name>
 	</maintainer>
+        <maintainer>
+                <email>steev@gentoo.org</email>
+                <name>Stephen Klimaszewski</name>
+        </maintainer>
 </pkgmetadata>
