@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.4_beta1.ebuild,v 1.1 2010/01/10 10:36:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.4_beta1.ebuild,v 1.2 2010/02/26 00:30:37 ssuominen Exp $
 
 EAPI=2
-inherit toolchain-funcs python
+inherit eutils toolchain-funcs python
 
 MY_P=${P/_/-}
 
@@ -16,11 +16,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=">=sci-mathematics/cgal-3.5.1"
+DEPEND="dev-libs/mpfr
+	>=sci-mathematics/cgal-3.5.1"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-linking.patch
+
+	if has_version sci-mathematics/cgal[gmp]; then
+		sed -i \
+			-e 's:$(CGAL_LDFLAGS):-lgmp $(CGAL_LDFLAGS):' \
+			bindings/makefile.inc || die
+	fi
+
 	python_version
 	sed -i \
 		-e "s:-I../.. -O2:-I/usr/include/python${PYVER} -I../..:g" \
