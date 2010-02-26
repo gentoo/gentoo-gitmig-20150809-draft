@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.115.ebuild,v 1.1 2010/02/13 22:58:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.115.ebuild,v 1.2 2010/02/26 23:10:27 jlec Exp $
 
 EAPI="3"
 
@@ -109,9 +109,9 @@ src_install() {
 
 pkg_postinst() {
 	python_need_rebuild
-	python_mod_optimize $(python_get_sitedir)/${PN}
+	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/${PN}
+	python_mod_cleanup ${PN}
 }

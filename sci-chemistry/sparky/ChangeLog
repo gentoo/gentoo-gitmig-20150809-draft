@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/sparky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.14 2010/02/13 22:58:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.15 2010/02/26 23:10:27 jlec Exp $
+
+  26 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> sparky-3.115.ebuild:
+  python_mod_compile arguments fixed
 
 *sparky-3.115 (13 Feb 2010)
 
