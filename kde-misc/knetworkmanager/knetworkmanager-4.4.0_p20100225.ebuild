@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20100225.ebuild,v 1.1 2010/02/26 19:14:01 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20100225.ebuild,v 1.2 2010/02/26 19:30:11 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,21 +20,11 @@ IUSE="consolekit debug +networkmanager wicd"
 DEPEND="
 	!kde-misc/networkmanager-applet
 	>=kde-base/solid-${KDE_MINIMAL}[networkmanager?,wicd?]
+	!wicd? ( >=kde-base/solid-${KDE_MINIMAL}[networkmanager] )
 	>=net-misc/networkmanager-0.7
 	consolekit? ( sys-auth/consolekit )
 "
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if ! use networkmanager && ! use wicd; then
-		eerror "You need to pick up one of the backend implementations"
-		eerror "   * networkmanager"
-		eerror "   * wicd"
-		die "No backend selected"
-	fi
-
-	kde4-base_pkg_setup
-}
 
 src_prepare() {
 	kde4-base_src_prepare
