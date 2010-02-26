@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.4 2010/02/04 21:26:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.5 2010/02/26 19:08:21 jlec Exp $
+
+  26 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  clipper-20091215.ebuild:
+  Missing sci-libs/mmdb DEP added
 
 *clipper-20091215 (04 Feb 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20091215.ebuild,v 1.1 2010/02/04 21:26:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20091215.ebuild,v 1.2 2010/02/26 19:08:21 jlec Exp $
 
 EAPI="3"
 
@@ -20,7 +20,8 @@ IUSE="debug"
 
 RDEPEND="
 	sci-libs/ccp4-libs
-	sci-libs/fftw"
+	sci-libs/fftw
+	sci-libs/mmdb"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}-2.1
