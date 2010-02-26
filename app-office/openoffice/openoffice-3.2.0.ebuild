@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.12 2010/02/25 17:57:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.13 2010/02/26 11:54:10 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -162,7 +162,7 @@ pkg_setup() {
 	strip-linguas ${LANGS}
 
 	# en_US is built by default, upstream needs us to use --with-lang="" in this case though, so strip it out
-	export LINGUAS_TEMP=$(echo ${LINGUAS} | sed -e 's/\ben_US\b//g;s/en//g')
+	export LINGUAS_TEMP=$(echo ${LINGUAS} | sed -e 's/\ben_US\b//g;s/en//g;s/_GB/en_GB/g;s/_ZA/en_ZA/g')
 
 	if [[ -z "${LINGUAS_TEMP}" ]] || [[ ${LINGUAS_TEMP} == " " ]]; then
 		export LINGUAS_OOO=""

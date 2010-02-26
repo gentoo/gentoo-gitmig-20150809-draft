@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.518 2010/02/25 17:57:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.519 2010/02/26 11:54:10 suka Exp $
+
+  26 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.0.ebuild:
+  No matter how hard you try, there's always one LINGUAS case you forget 
+  about, bug #306221 again.
 
   25 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.0.ebuild:
