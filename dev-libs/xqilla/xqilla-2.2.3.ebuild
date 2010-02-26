@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.0.ebuild,v 1.3 2010/02/26 07:56:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.3.ebuild,v 1.1 2010/02/26 07:56:47 dev-zero Exp $
 
 EAPI="2"
 inherit eutils
@@ -20,16 +20,16 @@ IUSE="debug doc faxpp htmltidy"
 # - yajl, moderately patched
 # There's currently no way to unbundle those
 
-RDEPEND="=dev-libs/xerces-c-3.0*
+RDEPEND=">=dev-libs/xerces-c-3.1.0
 	faxpp? ( dev-libs/faxpp )
 	htmltidy? ( app-text/htmltidy )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}/${PV}-xerces-c-3.1.0.patch"
 	sed -i -e 's|^LDFLAGS =|LDFLAGS +=|' Makefile.in || die "sed failed"
 }
 
