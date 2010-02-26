@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.0.6.ebuild,v 1.2 2010/02/07 10:37:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.0.6.ebuild,v 1.3 2010/02/26 12:07:32 fauli Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/azureus/Vuze_${PV}_source.zip
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 # bundles parts of commons-lang, but modified
