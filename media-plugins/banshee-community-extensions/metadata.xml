@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>dotnet</herd>
+  <herd>gstreamer</herd>
+  <use>
+	  <flag name="lirc">Enable the remote control plugin (uses
+		  <pkg>app-misc/lirc</pkg>)</flag>
+	  <flag name="lyrics">Enable support for automatically fetching
+		  lyrics</flag>
+	  <flag name="mirage">Enable the Mirage plugin which automatically, and
+		  intelligently generates playlists for you</flag>
+  </use>
+</pkgmetadata>
