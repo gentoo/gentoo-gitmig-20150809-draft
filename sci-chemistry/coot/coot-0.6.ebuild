@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.ebuild,v 1.1 2010/02/06 00:15:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.ebuild,v 1.2 2010/02/26 19:02:11 jlec Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ SCIDEPS="
 	>=sci-libs/clipper-20090520
 	>=sci-libs/coot-data-2
 	>=sci-libs/gsl-1.3
+	sci-libs/mmdb
 	sci-chemistry/reduce
 	sci-chemistry/refmac
 	sci-chemistry/probe"
