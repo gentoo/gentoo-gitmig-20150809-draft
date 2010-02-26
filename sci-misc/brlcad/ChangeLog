@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/brlcad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/ChangeLog,v 1.1 2010/02/25 06:15:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/ChangeLog,v 1.2 2010/02/26 21:55:15 bicatali Exp $
+
+  26 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> brlcad-7.16.6.ebuild:
+  Enabling debug by default, following bug #306841
 
 *brlcad-7.16.6 (25 Feb 2010)
 

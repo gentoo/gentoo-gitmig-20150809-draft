@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6.ebuild,v 1.1 2010/02/25 06:15:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6.ebuild,v 1.2 2010/02/26 21:55:15 bicatali Exp $
 
 EAPI=2
 inherit eutils java-pkg-opt-2
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc examples java opengl smp X"
+IUSE="+debug doc examples java opengl smp X"
 
 RDEPEND="media-libs/libpng
 	sys-libs/zlib
