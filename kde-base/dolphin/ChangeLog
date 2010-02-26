@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.65 2010/02/26 23:30:21 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.66 2010/02/26 23:38:15 ssuominen Exp $
+
+  26 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> dolphin-4.4.0.ebuild,
+  -dolphin-4.4.0-r1.ebuild:
+  Revert pointless revision bump for runtime depend modification.
 
 *dolphin-4.4.0-r1 (27 Feb 2010)
 
