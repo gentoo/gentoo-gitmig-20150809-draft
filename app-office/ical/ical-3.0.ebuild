@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0.ebuild,v 1.4 2010/02/15 19:43:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0.ebuild,v 1.5 2010/02/26 12:04:43 fauli Exp $
 
 EAPI=2
 inherit autotools eutils multilib virtualx
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/ical-tcl/3.x/${PV}/+download/${P}.tar.gz"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/tcl
