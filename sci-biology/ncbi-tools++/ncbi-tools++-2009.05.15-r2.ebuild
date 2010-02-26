@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r1.ebuild,v 1.5 2010/01/12 14:46:33 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r2.ebuild,v 1.1 2010/02/26 16:07:02 weaver Exp $
 
 EAPI="2"
 
@@ -61,12 +61,14 @@ src_configure() {
 		--with-dll \
 		--without-ftds \
 		--prefix="${D}"/usr \
-		--libdir="${D}"/usr/$(get_libdir) \
+		--libdir="${D}"/usr/$(get_libdir)/${PN} \
 		--with-z="/usr" \
 		--with-bz2="/usr" \
 		--with-pcre="/usr" \
 		--with-openssl="/usr" \
 		|| die
+
+#		--with-mt \ # fails with gcc-4.4 but not 4.3
 
 # apparently gbench-only configs
 #		--with-boost="/usr" \
@@ -88,7 +90,11 @@ src_install() {
 	emake install || die
 	# File collisions with sci-biology/ncbi-tools
 	rm -f "${D}"/usr/bin/{asn2asn,rpsblast,test_regexp}
-	rm -f "${D}"/usr/$(get_libdir)/libblast.*
-	# File collision with openrc. NCBI probably needs a subdirectory in /usr/lib
-	rm -f "${D}"/usr/$(get_libdir)/libeinfo.*
+
+	echo "LD_LIBRARY_PATH=/usr/lib/${PN}" > ${S}/99${PN}
+	doenvd "${S}/99${PN}"
+}
+
+pkg_postinst() {
+	einfo 'Please run "source /etc/profile" before using this package in the current shell.'
 }
