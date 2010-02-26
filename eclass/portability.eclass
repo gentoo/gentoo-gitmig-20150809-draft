@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.14 2009/10/31 15:34:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.15 2010/02/26 18:09:43 grobian Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -54,14 +54,16 @@ seq() {
 
 # Gets the linker flag to link to dlopen() function
 dlopen_lib() {
-	# this might need a proper case statement, so far this seems to work as is
 	# - Solaris needs nothing
 	# - Darwin needs nothing
 	# - *BSD needs nothing
 	# - Linux needs -ldl (glibc and uclibc)
-	if [[ ${CHOST} == *-linux-gnu* || ${CHOST} == *-linux-uclibc ]]; then
-		echo "-ldl"
-	fi
+	# - Interix needs -ldl
+	case "${CHOST}" in
+		*-linux-gnu*|*-linux-uclibc|*-interix*)
+			echo "-ldl"
+		;;
+	esac
 }
 
 # Gets the home directory for the specified user
