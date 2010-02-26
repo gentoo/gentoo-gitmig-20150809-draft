@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/darts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.27 2010/01/27 00:16:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.28 2010/02/26 12:04:35 phajdan.jr Exp $
+
+  26 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> darts-0.32.ebuild:
+  x86 stable wrt bug #302323
 
   27 Jan 2010; Brent Baude <ranger@gentoo.org> darts-0.32.ebuild:
   stable ppc64, bug 302323
