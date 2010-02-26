@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.64 2010/02/20 09:57:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.65 2010/02/26 23:30:21 mrpouet Exp $
+
+*dolphin-4.4.0-r1 (27 Feb 2010)
+
+  27 Feb 2010; Romain Perier <mrpouet@gentoo.org> +dolphin-4.4.0-r1.ebuild:
+  Add kde-base/kompare as pure rdepend with subversion USE flag.
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> dolphin-4.3.5.ebuild:
   amd64/x86 stable wrt #300393
