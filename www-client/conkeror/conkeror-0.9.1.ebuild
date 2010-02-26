@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.1.ebuild,v 1.4 2010/02/04 16:57:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.1.ebuild,v 1.5 2010/02/26 10:28:33 fauli Exp $
+
+EAPI=3
 
 inherit eutils fdo-mime
 
@@ -13,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
@@ -46,6 +48,8 @@ src_install() {
 
 	doman contrib/man/conkeror.1 || die
 	dodoc CREDITS || die
+	# Use the XULRunner found in the Prefix, not the system's one
+	sed -e "s:/etc/gre.d:\"${EPREFIX}/etc/gre.d\":g" -i "${ED}"/usr/lib/conkeror/contrib/run-conkeror || die
 }
 
 pkg_postinst() {
