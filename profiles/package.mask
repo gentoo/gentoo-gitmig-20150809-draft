@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11261 2010/02/26 21:32:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11262 2010/02/26 21:37:29 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (27 Feb 2010)
+# Introspection support is sketchy, and untested
+# introspection USE-flag is already use.masked
+# gir-repository has problems being a nice package too
+dev-libs/gobject-introspection
+dev-libs/gir-repository
 
 # Patrick Lauer <patrick@gentoo.org> (26 Feb 2010)
 # Unsplit samba ebuild. might need some testing :)
