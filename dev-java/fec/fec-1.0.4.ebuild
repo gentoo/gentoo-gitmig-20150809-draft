@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.4.ebuild,v 1.2 2010/01/17 17:56:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.4.ebuild,v 1.3 2010/02/26 12:24:29 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -29,7 +29,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}" || die
 	sed -i -e 's/build.compiler=jikes/#build.compiler=jikes/g' build.properties || die
+	sed -i -e 's/test.lib/lib/g' build.properties || die
 	epatch "${FILESDIR}"/${P}-libfec8path.patch
+	pushd src/csrc > /dev/null
+	epatch "${FILESDIR}/${P}-soname.patch"
+	popd > /dev/null
+
 	eant clean
 	cd lib || die
 	rm -v *.jar || die
@@ -46,8 +51,10 @@ src_compile() {
 	java-pkg-2_src_compile
 	cd "${S}"/src/csrc
 	(use amd64 || use hardened ) && append-flags -fPIC
-	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die
+	emake CC=$(tc-getCC) CFLAGS="${CFLAGS} $(java-pkg_get-jni-cflags)" || die
 }
+
+#there seem to be unit tests, but they are in such a state.
 
 src_install() {
 	java-pkg_newjar lib/onion-${PN}.jar ${PN}.jar

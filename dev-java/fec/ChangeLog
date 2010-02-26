@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.8 2010/01/17 17:56:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.9 2010/02/26 12:24:29 ali_bush Exp $
+
+  26 Feb 2010; Alistair Bush <ali_bush@gentoo.org> fec-1.0.4.ebuild,
+  +files/fec-1.0.4-soname.patch:
+  Fix build error. see #300401.
 
   17 Jan 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> fec-1.0.4.ebuild:
   Add -fPIC for amd64 ARCH too, bug 301296
