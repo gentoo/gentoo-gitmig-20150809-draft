@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.3 2009/11/30 16:39:01 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.4 2010/02/26 19:16:07 arfrever Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ src_install() {
 	fi
 
 	exeinto /usr/bin
-	newexe "${FILESDIR}"/${P}.boot freevoboot
+	newexe "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
 	newconfd "${FILESDIR}/freevo.conf" freevo
 
 	rm -rf "${D}/usr/share/doc"
