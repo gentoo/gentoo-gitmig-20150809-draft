@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3936 2010/02/26 15:54:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3937 2010/02/26 17:46:44 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Feb 2010; Alex Alexander <wired@gentoo.org> package.mask:
+  masked >=app-misc/mc-4.7.1 to give 4.7.0.3 some testing
 
   26 Feb 2010; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Update mirror://gnu list.
