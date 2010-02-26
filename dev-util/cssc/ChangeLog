@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cssc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.16 2010/02/17 21:16:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.17 2010/02/26 11:59:20 scarabeus Exp $
+
+  26 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org> cssc-1.2.0.ebuild:
+  QA: add missing dies where they are supposed to be. So bug #305659 can
+  proceed.
 
   17 Feb 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Maintain.

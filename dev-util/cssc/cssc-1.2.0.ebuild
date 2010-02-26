@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/cssc-1.2.0.ebuild,v 1.3 2010/01/31 19:48:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/cssc-1.2.0.ebuild,v 1.4 2010/02/26 11:59:20 scarabeus Exp $
 
 EAPI="2"
 
@@ -22,9 +22,11 @@ src_prepare() {
 }
 
 src_configure() { econf --enable-binary; }
-src_compile() { emake all; }
+src_compile() {
+	emake all || die "emake failed"
+}
 
 src_install () {
-	emake DESTDIR="${D}" install || die
-	dodoc README NEWS ChangeLog AUTHORS
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc README NEWS ChangeLog AUTHORS || die "dodoc failed"
 }
