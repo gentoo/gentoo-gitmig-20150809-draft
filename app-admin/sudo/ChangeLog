@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.208 2010/02/25 21:08:34 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.209 2010/02/26 11:11:30 phajdan.jr Exp $
+
+  26 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sudo-1.7.2_p4.ebuild:
+  x86 stable wrt security bug #306865
 
 *sudo-1.7.2_p4 (25 Feb 2010)
 
