@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/miscfiles
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.29 2010/02/24 16:49:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.30 2010/02/26 15:33:33 ranger Exp $
+
+  26 Feb 2010; Brent Baude <ranger@gentoo.org> miscfiles-1.4.2-r1.ebuild:
+  Marking miscfiles-1.4.2-r1 ppc64 for bug 293265
 
   24 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
   miscfiles-1.4.2-r1.ebuild:
