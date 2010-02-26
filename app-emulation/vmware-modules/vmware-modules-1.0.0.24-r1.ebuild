@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.24-r1.ebuild,v 1.2 2010/01/02 20:07:47 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.24-r1.ebuild,v 1.3 2010/02/26 14:54:32 vadimk Exp $
 
 EAPI="2"
 
@@ -61,6 +61,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-kernel-2.6.30.patch"
 	epatch "${FILESDIR}/${PV}-vmnet-2.6.31.patch"
 	epatch "${FILESDIR}/sched_h-2.6.32.patch"
+	epatch "${FILESDIR}/${PV}-autoconf-generated.patch"
 }
 
 src_install() {
