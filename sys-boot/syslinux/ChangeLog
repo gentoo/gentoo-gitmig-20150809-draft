@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.54 2010/02/22 19:16:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.55 2010/02/26 12:10:54 fauli Exp $
+
+  26 Feb 2010; Christian Faulhammer <fauli@gentoo.org> syslinux-3.83.ebuild:
+  stable x86, bug 292442
 
 *syslinux-3.85 (22 Feb 2010)
 
