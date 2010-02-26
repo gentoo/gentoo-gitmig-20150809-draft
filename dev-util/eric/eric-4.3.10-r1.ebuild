@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.10-r1.ebuild,v 1.2 2010/01/02 16:55:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.10-r1.ebuild,v 1.3 2010/02/26 19:29:38 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -35,8 +35,6 @@ S=${WORKDIR}/${MY_P}
 
 LANGS="cs de es fr ru tr"
 
-python_version
-
 src_prepare() {
 	epatch "${FILESDIR}/4.2.3-no-interactive.patch"
 	! use kde && epatch "${FILESDIR}"/${PN}-4.3-no-pykde.patch
@@ -56,10 +54,9 @@ src_install() {
 	}
 	python_execute_function installation
 
-	python_version
 	make_desktop_entry "eric4 --nosplash" \
 			eric4 \
-			"/usr/$(get_libdir)/python${PYVER}/site-packages/eric4/icons/default/eric.png" \
+			"$(python_get_sitedir -f)/eric4/icons/default/eric.png" \
 			"Development;IDE;Qt"
 }
 

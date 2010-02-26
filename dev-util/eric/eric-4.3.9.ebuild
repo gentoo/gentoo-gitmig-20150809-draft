@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.9.ebuild,v 1.8 2010/01/17 19:09:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.9.ebuild,v 1.9 2010/02/26 19:29:38 arfrever Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -36,8 +36,6 @@ S=${WORKDIR}/${MY_P}
 
 LANGS="cs de es fr ru tr"
 
-python_version
-
 src_prepare() {
 	epatch "${FILESDIR}/4.2.3-no-interactive.patch"
 }
@@ -56,10 +54,9 @@ src_install() {
 	}
 	python_execute_function installation
 
-	python_version
 	make_desktop_entry "eric4 --nosplash" \
 			eric4 \
-			"/usr/$(get_libdir)/python${PYVER}/site-packages/eric4/icons/default/eric.png" \
+			"$(python_get_sitedir -f)/eric4/icons/default/eric.png" \
 			"Development;IDE;Qt"
 }
 
