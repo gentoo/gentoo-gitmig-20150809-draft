@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.4 2010/02/02 13:00:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.5 2010/02/26 12:36:38 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic autotools
@@ -33,8 +33,9 @@ DEPEND="${DEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-xdg-utils.patch
-	epatch "${FILESDIR}"/${PN}-gnome.patch
+	epatch "${FILESDIR}"/${PN}-xdg-utils.patch \
+		"${FILESDIR}"/${PN}-gnome.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
 }
 
