@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.334 2010/02/26 03:15:26 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.335 2010/02/26 05:17:24 halcy0n Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -961,7 +961,6 @@ make_desktop_entry() {
 					news)	type=News;;
 					nntp)	type=News;;
 					p2p)	type=FileTransfer;;
-					voip)	type=Telephony;;
 					*)		type=;;
 				esac
 				type="Network;${type}"
@@ -980,7 +979,7 @@ make_desktop_entry() {
 					visual*) type=DataVisualization;;
 					*)		 type=;;
 				esac
-				type="Education;Science;${type}"
+				type="Science;${type}"
 				;;
 
 			sys)
@@ -992,7 +991,7 @@ make_desktop_entry() {
 					client) type=WebBrowser;;
 					*)		type=;;
 				esac
-				type="Network;${type}"
+				type="Network"
 				;;
 
 			*)
@@ -1008,17 +1007,6 @@ make_desktop_entry() {
 	local desktop="${T}/$(echo ${exec} | sed 's:[[:space:]/:]:_:g')-${desktop_name}.desktop"
 	#local desktop=${T}/${exec%% *:-${desktop_name}}.desktop
 
-	# Don't append another ";" when a valid category value is provided.
-	type=${type%;}${type:+;}
-
-	eshopts_push -s extglob
-	if [[ -n ${icon} && ${icon} != /* && ${icon} == *.@(xpm|png|svg) ]]; then
-		ewarn "As described in the Icon Theme Specification, icon file extensions are not"
-		ewarn "allowed in .desktop files if the value is not an absolute path."
-		icon=${icon%.@(xpm|png|svg)}
-	fi
-	eshopts_pop
-
 	cat <<-EOF > "${desktop}"
 	[Desktop Entry]
 	Name=${name}
@@ -1027,7 +1015,7 @@ make_desktop_entry() {
 	Exec=${exec}
 	TryExec=${exec%% *}
 	Icon=${icon}
-	Categories=${type}
+	Categories=${type};
 	EOF
 
 	[[ ${path} ]] && echo "Path=${path}" >> "${desktop}"
