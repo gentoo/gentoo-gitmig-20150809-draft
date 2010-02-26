@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3933 2010/02/26 05:48:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3934 2010/02/26 06:04:18 ford_prefect Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Feb 2010; Arun Raghavan <ford_prefect@gentoo.org> package.mask:
+  Mask banshee-community-extensions (soon to be added).
 
   26 Feb 2010; Mark Loeser <halcy0n@gentoo.org> package.mask:
   Vulnerable versions of xerces-c have been removed, along with packages
