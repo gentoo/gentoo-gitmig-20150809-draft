@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/xcircuit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.44 2009/12/26 17:45:00 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.45 2010/02/26 09:22:54 ssuominen Exp $
+
+*xcircuit-3.6.165 (26 Feb 2010)
+
+  26 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xcircuit-3.6.165.ebuild, +files/xcircuit-3.6.165-implicit.patch:
+  Version bump wrt #294774, thanks to Lukas Sandström for reporting.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> xcircuit-3.4.30.ebuild,
   xcircuit-3.6.161.ebuild:
