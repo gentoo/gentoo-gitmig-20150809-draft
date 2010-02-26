@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.2.3.ebuild,v 1.3 2008/12/07 04:46:06 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.2.3.ebuild,v 1.4 2010/02/26 02:44:04 markusle Exp $
 
 inherit autotools eutils
 
@@ -24,11 +24,11 @@ S="${WORKDIR}/${PN}${PV:0:1}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/try-more-compilers.patch
-	epatch ${FILESDIR}/try-pthread-for-blas-lapack.patch
-	epatch ${FILESDIR}/dont-build-libint.patch
-	epatch ${FILESDIR}/use-external-libint.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/try-more-compilers.patch
+	epatch "${FILESDIR}"/try-pthread-for-blas-lapack.patch
+	epatch "${FILESDIR}"/dont-build-libint.patch
+	epatch "${FILESDIR}"/use-external-libint.patch
 	eautoreconf
 }
 
