@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.453 2010/02/25 21:29:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.454 2010/02/26 18:16:08 jer Exp $
+
+  26 Feb 2010; Jeroen Roovers <jer@gentoo.org> python-2.6.4-r1.ebuild:
+  Stable for HPPA (bug #306793).
 
   25 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   python-2.6.4-r1.ebuild:
