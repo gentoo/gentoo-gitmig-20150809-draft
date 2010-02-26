@@ -1,0 +1,21 @@
+diff -Naur molden4.8.old/makefile molden4.8/makefile
+--- molden4.8.old/makefile	2009-09-21 12:01:33.000000000 -0400
++++ molden4.8/makefile	2010-02-26 00:11:28.000000000 -0500
+@@ -224,7 +224,7 @@
+ 
+ 
+ molden:	$(OBJS) mpdum.o xwin.o 
+-	$(LDR) -o molden $(OBJS) mpdum.o xwin.o $(LIBS)
++	$(LDR) $(LDFLAGS) -o molden $(OBJS) mpdum.o xwin.o $(LIBS)
+ 
+ gmolden:	$(OBJS) mpdum.o xwingl.o 
+ 	$(LDR) -o gmolden $(OBJS) mpdum.o xwingl.o $(LIBSG)
+@@ -269,7 +269,7 @@
+ # Moldens OpenGL helper program
+ 
+ moldenogl:	oglmol.o silly.o
+-	$(CC) -o moldenogl oglmol.o silly.o $(LIBSOGL)
++	$(CC) $(LDFLAGS) -o moldenogl oglmol.o silly.o $(LIBSOGL)
+ 
+ # conversion of CADPAC output to molden format
+ 

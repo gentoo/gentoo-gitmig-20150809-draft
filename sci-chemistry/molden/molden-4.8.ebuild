@@ -1,32 +1,36 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.4.ebuild,v 1.6 2009/09/23 19:55:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8.ebuild,v 1.1 2010/02/26 05:33:34 markusle Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic fortran
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
 HOMEPAGE="http://www.cmbi.kun.nl/~schaft/molden/molden.html"
-SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.Z"
+SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
 IUSE="opengl"
 
 RDEPEND="opengl? ( virtual/glut
 	virtual/opengl )
 	x11-libs/libXmu"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-editors/vim"
+	# vim provides ex, which the build system uses (surf/Makefile, at least)
 
 S="${WORKDIR}/${MY_P}"
 
 FORTRAN="g77 gfortran"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gfortran-gentoo.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-ambfor.patch
+	epatch "${FILESDIR}"/${P}-overflow.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
@@ -49,10 +53,12 @@ src_compile() {
 }
 
 src_install() {
-	dobin molden
-	use opengl && dobin moldenogl
-	dodoc HISTORY README REGISTER
+	dobin molden || die "failed to install molden executable."
+	if use opengl ; then
+		dobin moldenogl || die "failed to install moldenogl."
+	fi
+
+	dodoc HISTORY README REGISTER || die "failed to install docs."
 	cd doc
-	uncompress *
-	dodoc *
+	uncompress * && dodoc * || die "failed to install docs."
 }
