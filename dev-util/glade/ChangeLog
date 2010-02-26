@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.124 2010/01/24 17:20:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.125 2010/02/26 17:22:14 ranger Exp $
+
+  26 Feb 2010; Brent Baude <ranger@gentoo.org> glade-3.6.7.ebuild:
+  Marking glade-3.6.7 ppc64 for bug 298204
 
   24 Jan 2010; Tobias Klausmann <klausman@gentoo.org> glade-3.6.7.ebuild:
   Stable on alpha, bug #298204
