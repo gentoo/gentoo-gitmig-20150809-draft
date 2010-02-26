@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chasen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.36 2010/01/23 08:16:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.37 2010/02/26 12:05:31 phajdan.jr Exp $
+
+  26 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chasen-2.4.4.ebuild:
+  x86 stable wrt bug #305695
 
   23 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> chasen-2.4.0.ebuild,
   -chasen-2.4.2.ebuild, chasen-2.4.4.ebuild:
