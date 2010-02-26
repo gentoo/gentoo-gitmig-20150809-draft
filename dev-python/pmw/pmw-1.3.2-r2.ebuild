@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r2.ebuild,v 1.1 2010/02/20 12:21:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r2.ebuild,v 1.2 2010/02/26 19:05:09 arfrever Exp $
 
 EAPI="2"
-PYTHON_MODNAME="Pmw"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils distutils
+inherit distutils eutils
 
 MY_P="Pmw.${PV}"
 
@@ -20,12 +21,15 @@ IUSE="doc examples"
 
 DEPEND="dev-lang/python[tk]"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
-DOCS="${PYTHON_MODNAME}/README"
 S="${WORKDIR}/${MY_P}/src"
 
-src_unpack() {
-	distutils_src_unpack
+DOCS="Pmw/README"
+PYTHON_MODNAME="Pmw"
+
+src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-install-no-docs.patch"
 	epatch "${FILESDIR}/${PV}-python2.5.patch"
 }
@@ -33,21 +37,14 @@ src_unpack() {
 src_install() {
 	distutils_src_install
 
-	local DIR
-	DIR="${S}/${PYTHON_MODNAME}/Pmw_1_3"
+	local DIR="${PYTHON_MODNAME}/Pmw_1_3"
 
 	if use doc; then
-		dohtml -a html,gif,py "${DIR}"/doc/* \
-			|| die "failed to install docs"
+		dohtml -a html,gif,py "${DIR}"/doc/* || die "Installation of documentation failed"
 	fi
 
 	if use examples; then
-		insinto "${ROOT}/usr/share/doc/${PF}/examples"
-		doins "${DIR}"/demos/* \
-			|| die "failed to install demos"
+		insinto "/usr/share/doc/${PF}/examples"
+		doins "${DIR}"/demos/* || die "Installation of demos failed"
 	fi
-
-	#Tests are not unittests and show various
-	#GUIs. So we don't run them in the ebuild
-
 }
