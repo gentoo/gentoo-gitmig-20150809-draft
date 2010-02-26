@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-skk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/ChangeLog,v 1.19 2008/05/07 15:29:02 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/ChangeLog,v 1.20 2010/02/26 10:49:22 pacho Exp $
+
+  26 Feb 2010; Pacho Ramos <pacho@gentoo.org> scim-skk-0.5.2-r1.ebuild:
+  amd64 stable, bug 306931
 
 *scim-skk-0.5.2-r1 (07 May 2008)
 
