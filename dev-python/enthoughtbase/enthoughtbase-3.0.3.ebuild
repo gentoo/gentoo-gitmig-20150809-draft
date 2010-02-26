@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.3.ebuild,v 1.4 2009/11/08 19:53:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.3.ebuild,v 1.5 2010/02/26 04:47:30 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,7 +32,10 @@ S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="enthought"
 
 src_prepare() {
-	sed -i -e "s/self.run_command('build_docs')/pass/" setup.py || die
+	sed -i \
+		-e "s/self.run_command('build_docs')/pass/" \
+		-e '/setupdocs/d' \
+		setup.py || die
 }
 
 src_compile() {

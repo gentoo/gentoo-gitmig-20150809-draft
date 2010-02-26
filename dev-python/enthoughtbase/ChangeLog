@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enthoughtbase
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.9 2009/11/08 19:53:57 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.10 2010/02/26 04:47:30 bicatali Exp $
+
+  26 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  enthoughtbase-3.0.3.ebuild:
+  Removed a trailing setupdocs in the setup.py
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> enthoughtbase-3.0.3.ebuild:
   ppc stable #290607
