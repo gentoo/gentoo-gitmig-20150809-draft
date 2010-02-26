@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5315 2010/02/26 06:47:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5316 2010/02/26 19:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1335,6 +1335,8 @@ kde-base/smoke:webkit - Compile bindings for x11-libs/webkit.
 kde-base/solid:wicd - Enable Wicd wired and wireless network manager.
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-misc/kdiff3:konqueror - Enable integration with konqueror
+kde-misc/knetworkmanager:consolekit - Enable support for sys-auth/consolekit
+kde-misc/knetworkmanager:wicd - Enable the wicd backend
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 mail-client/alpine:chappa - enhance alpine by appling Eduardo Chappa's patches
 mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with app-editors/pico and/or mail-client/pine
