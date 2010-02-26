@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3934 2010/02/26 06:04:18 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3935 2010/02/26 11:16:54 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Feb 2010; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Add LDP* to FREE-DOCUMENTS. Remove IBM-J1.4 because the file is gone.
 
   26 Feb 2010; Arun Raghavan <ford_prefect@gentoo.org> package.mask:
   Mask banshee-community-extensions (soon to be added).
