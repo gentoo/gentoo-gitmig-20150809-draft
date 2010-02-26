@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.141 2010/02/09 15:26:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.142 2010/02/26 15:46:20 jer Exp $
+
+*parted-2.2 (26 Feb 2010)
+
+  26 Feb 2010; Jeroen Roovers <jer@gentoo.org> +parted-2.2.ebuild:
+  Version bump.
 
   09 Feb 2010; Jeroen Roovers <jer@gentoo.org> -parted-1.8.8.ebuild,
   -files/parted-1.8.8-t3100-test-success.patch:
