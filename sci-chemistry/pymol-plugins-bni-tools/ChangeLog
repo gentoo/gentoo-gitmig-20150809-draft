@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/pymol-plugins-bni-tools
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-bni-tools/ChangeLog,v 1.1 2010/02/27 10:36:49 jlec Exp $
+
+*pymol-plugins-bni-tools-0.25.1 (27 Feb 2010)
+
+  27 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +pymol-plugins-bni-tools-0.25.1.ebuild, +metadata.xml:
+  Imported from sci overlay
+
