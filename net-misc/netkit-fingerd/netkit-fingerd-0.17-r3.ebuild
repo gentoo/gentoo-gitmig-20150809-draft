@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r3.ebuild,v 1.1 2006/11/11 07:49:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r3.ebuild,v 1.2 2010/02/27 18:39:18 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PN="${PN/netkit/bsd}"
 MY_PN="${MY_PN/rd/r}"
@@ -29,8 +29,13 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure || die
-	emake || die
+	tc-export CC
+	if tc-is-cross-compiler; then
+		touch MCONFIG
+	else
+		./configure || die
+	fi
+	emake CC="${CC}" || die
 }
 
 src_install() {
