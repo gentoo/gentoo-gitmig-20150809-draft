@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xfce-gant-icon-theme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce-gant-icon-theme/ChangeLog,v 1.1 2009/09/02 08:34:15 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce-gant-icon-theme/ChangeLog,v 1.2 2010/02/27 10:39:51 phajdan.jr Exp $
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xfce-gant-icon-theme-3.9_p6.ebuild:
+  ~x86 keyword wrt bug #306999 by Doktor Notor <notordoktor@gmail.com>
 
 *xfce-gant-icon-theme-3.9_p6 (02 Sep 2009)
 
