@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.58 2010/02/21 17:42:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.59 2010/02/27 20:52:42 grobian Exp $
+
+  27 Feb 2010; Fabian Groffen <grobian@gentoo.org>
+  logilab-common-0.46.1.ebuild, logilab-common-0.48.0.ebuild:
+  Marked ~x64-macos, thanks Ramon van Alteren in bug #306705
 
 *logilab-common-0.48.0 (21 Feb 2010)
 
