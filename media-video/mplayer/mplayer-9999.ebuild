@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.25 2010/02/27 16:21:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.26 2010/02/27 23:37:39 sping Exp $
 
 EAPI="2"
 
@@ -157,6 +157,7 @@ X_DEPS="
 "
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	X? (
 		${X_DEPS}
 		dga? ( x11-proto/xf86dgaproto )
@@ -461,7 +462,7 @@ src_configure() {
 			--disable-toolame
 		"
 		uses="aac faac x264 xvid toolame twolame"
-		for i in uses; do
+		for i in ${uses}; do
 			use ${i} && elog "Useflag \"${i}\" require \"encode\" useflag enabled to work."
 		done
 	fi
@@ -613,7 +614,7 @@ src_configure() {
 		--disable-xvmc
 		"
 		uses="dga dxr3 ggi opengl osdmenu vdpau vidix xinerama xscreensaver xv"
-		for i in uses; do
+		for i in ${uses}; do
 			use ${i} && elog "Useflag \"${i}\" require \"X\" useflag enabled to work."
 		done
 	fi
