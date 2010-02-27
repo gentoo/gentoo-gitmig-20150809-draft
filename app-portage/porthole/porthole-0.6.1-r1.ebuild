@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1.ebuild,v 1.1 2010/02/26 18:31:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1-r1.ebuild,v 1.1 2010/02/27 15:47:34 idl0r Exp $
 
 EAPI="2"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A GTK+-based frontend to Portage"
 HOMEPAGE="http://porthole.sourceforge.net"
@@ -25,6 +25,10 @@ RDEPEND=">=dev-lang/python-2.4[xml,threads]
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.14 )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-masking_status.patch" # bug 307037
+}
 
 src_compile(){
 	# Compile localizations if necessary
