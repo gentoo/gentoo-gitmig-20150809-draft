@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.74 2010/01/24 13:39:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.75 2010/02/27 22:03:41 ssuominen Exp $
+
+*kplato-2.1.1 (27 Feb 2010)
+
+  27 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> +kplato-2.1.1.ebuild:
+  Version bump.
 
   24 Jan 2010; Brent Baude <ranger@gentoo.org> kplato-2.1.0.ebuild:
   Marking kplato-2.1.0 ~ppc for bug 295884
