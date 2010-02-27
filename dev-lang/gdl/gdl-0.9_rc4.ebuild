@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.3 2010/02/27 04:33:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.4 2010/02/27 05:03:45 markusle Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ S="${WORKDIR}/${MYP}"
 src_prepare() {
 	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
 	epatch "${FILESDIR}"/${PN}-0.9_rc2-gcc4.4.patch
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 	epatch "${FILESDIR}"/${P}-antlr.patch
 
 	# we need to blow away the directory with antlr
