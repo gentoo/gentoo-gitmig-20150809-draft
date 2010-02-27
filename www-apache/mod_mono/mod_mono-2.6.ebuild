@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.6.ebuild,v 1.1 2010/02/27 00:22:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.6.ebuild,v 1.2 2010/02/27 21:06:57 patrick Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ src_prepare() {
 	sed -e "s:@LIBDIR@:$(get_libdir):" "${FILESDIR}/${APACHE2_MOD_CONF}.conf" \
 		> "${WORKDIR}/${APACHE2_MOD_CONF##*/}.conf" || die
 	go-mono_src_prepare
-	use aspnet2 && epatch "${FILESDIR}/mono_auto_application_aspnet2.patch"
+	use aspnet2 && epatch "${FILESDIR}/mono26_auto_application_aspnet2.patch"
 }
 
 src_configure() {
