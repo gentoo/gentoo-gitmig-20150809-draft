@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r1.ebuild,v 1.1 2010/01/31 12:34:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r2.ebuild,v 1.1 2010/02/27 22:12:13 ulm Exp $
 
 EAPI=3
 
@@ -24,6 +24,11 @@ RDEPEND="virtual/latex-base
 
 S="${WORKDIR}/${MY_P}"
 SITEFILE="50${PN}-gentoo.el"
+
+src_prepare() {
+	# Remove broken Info file (will be recreated)
+	rm imaxima.info
+}
 
 src_configure() {
 	econf --with-lispdir="${EPREFIX}${SITELISP}/${PN}"
