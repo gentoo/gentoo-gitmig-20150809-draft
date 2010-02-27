@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.14 2010/02/13 22:29:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.15 2010/02/27 02:06:47 abcd Exp $
+
+*schroot-1.4.1 (27 Feb 2010)
+
+  27 Feb 2010; Jonathan Callen <abcd@gentoo.org> +schroot-1.4.1.ebuild:
+  New upstream version; automatically move local scripts to new locations,
+  and add (temporary) symlinks from the old
 
   13 Feb 2010; Jonathan Callen <abcd@gentoo.org> schroot-1.4.0.ebuild:
   Remove RESTRICT=mirror, was only meant for local testing
