@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.6.2.ebuild,v 1.1 2010/02/26 20:49:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.6.2.ebuild,v 1.2 2010/02/27 00:34:00 patrick Exp $
 
 KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -9,8 +9,6 @@ SRC_URI="http://la-samhna.de/archive/samhain_signed-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="crypt debug login-watch mounts-check mysql netclient netserver postgres prelude static suidcheck userfiles xml"
-
-RESTRICT="strip"
 
 DEPEND="crypt? ( >=app-crypt/gnupg-1.2 )
 		mysql? ( virtual/mysql )
@@ -71,6 +69,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	tar -xzf "samhain-${PV}.tar.gz"
+	cd ${S}
+	sed -i -e 's/INSTALL_PROGRAM = @INSTALL@ -s/INSTALL_PROGRAM = @INSTALL@/' Makefile.in || die "Failed to patch Makefile"
 }
 
 src_compile() {
