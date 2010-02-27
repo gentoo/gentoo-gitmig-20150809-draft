@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.0.ebuild,v 1.1 2010/02/26 20:08:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.0.ebuild,v 1.2 2010/02/27 22:11:23 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -58,12 +58,14 @@ src_prepare() {
 }
 
 src_configure() {
-	local myclient="gtk" # default to gtk if none specified
+	local myclient
 
 	if use dedicated ; then
 		myclient="no"
 	else
 		use sdl && myclient="${myclient} sdl"
+		use gtk && myclient="${myclient} gtk"
+		[[ -z ${myclient} ]] && myclient="gtk" # default to gtk if none specified
 	fi
 
 	egamesconf \
