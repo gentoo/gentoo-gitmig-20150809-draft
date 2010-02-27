@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.18 2010/02/23 18:18:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.19 2010/02/27 07:38:59 graaff Exp $
+
+*json-1.2.1 (27 Feb 2010)
+
+  27 Feb 2010; Hans de Graaff <graaff@gentoo.org> +json-1.2.1.ebuild:
+  Version bump: added :symbolize_names option to Parser, which returns
+  symbols instead of strings in object names/keys.
 
   23 Feb 2010; Hans de Graaff <graaff@gentoo.org> json-1.2.0-r1.ebuild:
   Add missing build dependency on dev-ruby/rake, fixes #306493.
