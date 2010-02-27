@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226.ebuild,v 1.1 2010/02/26 20:29:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226.ebuild,v 1.2 2010/02/27 10:25:19 patrick Exp $
 
 inherit eutils autotools
 
@@ -30,7 +30,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		$(use_enable unicode wide-character-type) \
-		$(use_enable rawio raw-access) \
+		$(use_enable rawio low-level-functions) \
 		$(use_enable debug verbose-output) \
 		$(use_enable debug debug-output)
 	emake
