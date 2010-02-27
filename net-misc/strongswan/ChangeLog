@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.78 2010/02/17 08:49:14 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.79 2010/02/27 22:43:10 ulm Exp $
+
+  27 Feb 2010; Ulrich Mueller <ulm@gentoo.org> strongswan-4.3.3.ebuild,
+  strongswan-4.3.4.ebuild, strongswan-4.3.5.ebuild, strongswan-4.3.6.ebuild:
+  Remove RSA-MD2 from LICENSE because src/pluto/md2.c is gone.
 
 *strongswan-4.3.6 (17 Feb 2010)
 

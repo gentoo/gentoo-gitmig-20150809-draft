@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.5.ebuild,v 1.1 2009/11/02 13:23:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.5.ebuild,v 1.2 2010/02/27 22:43:10 ulm Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -11,7 +11,7 @@ DESCRIPTION="Open Source implementation of IPsec for the Linux operating system.
 HOMEPAGE="http://www.strongswan.org/"
 SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
-LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11 DES"
+LICENSE="GPL-2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86 ~amd64"
 IUSE="caps cisco curl debug ldap nat smartcard static xml"
