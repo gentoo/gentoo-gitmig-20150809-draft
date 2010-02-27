@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.2-r1.ebuild,v 1.1 2010/02/26 20:31:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.2-r1.ebuild,v 1.2 2010/02/27 10:11:39 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="jpeg jbig +cxx zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b:0 )
