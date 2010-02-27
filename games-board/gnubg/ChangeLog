@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.52 2010/02/10 06:42:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.53 2010/02/27 18:03:01 phajdan.jr Exp $
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnubg-20100107.ebuild:
+  x86 stable wrt bug #303831
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> gnubg-20100107.ebuild:
   Marked ppc/ppc64 stable for bug #303831.
