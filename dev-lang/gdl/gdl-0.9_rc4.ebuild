@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.2 2010/02/18 21:20:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.3 2010/02/27 04:33:54 markusle Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gnudatalanguage/${MYP}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python fftw hdf hdf5 netcdf imagemagick proj"
+IUSE="python fftw hdf hdf5 netcdf imagemagick"
 
 RDEPEND=">=sys-libs/readline-4.3
 	sci-libs/gsl
@@ -25,8 +25,7 @@ RDEPEND=">=sys-libs/readline-4.3
 	hdf5? ( sci-libs/hdf5 )
 	netcdf? ( sci-libs/netcdf )
 	python? ( dev-python/numarray dev-python/matplotlib )
-	fftw? ( >=sci-libs/fftw-3 )
-	proj? ( sci-libs/proj )"
+	fftw? ( >=sci-libs/fftw-3 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
@@ -35,7 +34,6 @@ S="${WORKDIR}/${MYP}"
 
 src_prepare() {
 	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
-	epatch "${FILESDIR}"/${PN}-0.9_rc3-proj4.patch
 	epatch "${FILESDIR}"/${PN}-0.9_rc2-gcc4.4.patch
 	epatch "${FILESDIR}"/${P}-antlr.patch
 
@@ -44,6 +42,9 @@ src_prepare() {
 	# header files
 	rm -fr "${S}"/src/antlr || die "failed to remove antlr directory"
 
+	# adjust the *.pro file install path
+	sed -i -e "s:datasubdir=.*$:datasubdir=\"${PN}\":" configure.in \
+		|| die "Failed to fix *.pro install patch."
 	eautoreconf
 }
 
@@ -65,7 +66,6 @@ src_configure() {
 	  $(use_with hdf5) \
 	  $(use_with netcdf) \
 	  $(use_with imagemagick Magick) \
-	  $(use_with proj libproj4) \
 	  ${myconf} \
 	  || die "econf failed"
 
@@ -81,13 +81,6 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	insinto /usr/share/${PN}
-	doins -r src/pro src/py || die "install pro and py files failed"
 	dodoc README PYTHON.txt AUTHORS ChangeLog NEWS TODO HACKING \
 		|| die "Failed to install docs"
-
-	# add GDL provided routines to IDL_PATH
-	echo "GDL_STARTUP=/usr/share/${PN}/pro" > 99gdl
-	echo "GDL_PATH=/usr/share/${PN}" >> 99gdl
-	doenvd 99gdl || die "doenvd failed"
 }
