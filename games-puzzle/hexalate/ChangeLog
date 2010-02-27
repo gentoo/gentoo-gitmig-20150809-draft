@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/hexalate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexalate/ChangeLog,v 1.1 2009/12/31 22:03:36 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexalate/ChangeLog,v 1.2 2010/02/27 15:35:11 phajdan.jr Exp $
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  hexalate-1.0.1.ebuild:
+  x86 stable wrt bug #302945, arch-tested by Thomas Kahle
 
 *hexalate-1.0.1 (31 Dec 2009)
 
