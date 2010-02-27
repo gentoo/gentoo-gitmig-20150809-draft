@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2.90.ebuild,v 1.6 2010/02/23 22:58:04 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2.90.ebuild,v 1.7 2010/02/27 20:45:45 tampakrap Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ fi
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="4"
-IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp semantic-desktop"
+IUSE="cdda daap debug embedded ipod lastfm mp3tunes mtp semantic-desktop"
 
 # ipod requires gdk enabled and also gtk compiled in libgpod
 DEPEND="
