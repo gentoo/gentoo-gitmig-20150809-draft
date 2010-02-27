@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.48 2010/01/03 17:55:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.49 2010/02/27 10:30:48 ulm Exp $
+
+*cedet-1.0_pre7 (27 Feb 2010)
+
+  27 Feb 2010; Ulrich Mueller <ulm@gentoo.org> cedet-1.0_pre6.ebuild,
+  +cedet-1.0_pre7.ebuild, +files/50cedet-gentoo-1.0_pre6.el,
+  files/50cedet-gentoo.el:
+  Version bump. Update site-init file.
 
   03 Jan 2010; Ulrich Mueller <ulm@gentoo.org> cedet-1.0_pre6.ebuild:
   Explicitly add srecode to the load-path in src_test, fixes bug 299461.

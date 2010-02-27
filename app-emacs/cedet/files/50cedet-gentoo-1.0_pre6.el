@@ -1,10 +1,8 @@
 (load "@SITELISP@/common/cedet" nil t)
 (add-to-list 'image-load-path "@SITEETC@/common/icons" t)
-(add-to-list 'image-load-path "@SITEETC@/cogre" t)
 (setq srecode-map-load-path
       (list "@SITEETC@/srecode/templates"
 	    "@SITEETC@/ede/templates"
-	    "@SITEETC@/cogre/templates"
 	    (expand-file-name "~/.srecode")))
 
 ;; If you wish to customize CEDET, you will need to follow the
