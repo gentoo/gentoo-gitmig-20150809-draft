@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/scim-skk-0.5.2-r1.ebuild,v 1.2 2010/02/26 10:49:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/scim-skk-0.5.2-r1.ebuild,v 1.3 2010/02/27 15:41:29 phajdan.jr Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/scim-imengine/18121/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 DEPEND="|| ( >=app-i18n/scim-1.2 >=app-i18n/scim-cvs-1.2 )"
