@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.5 2008/01/30 17:10:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.6 2010/02/27 21:04:12 tupone Exp $
+EAPI=2
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="an OpenGL car racing game, based on ID's famous Quake engine"
 HOMEPAGE="http://miniracer.sourceforge.net/"
@@ -25,9 +26,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nosharedelf.patch
 	sed -i \
 		-e '/^CC=/d' \
 		-e "s:\$(DESTDIR)/usr/bin:\$(DESTDIR)${GAMES_BINDIR}:" \
@@ -36,6 +36,11 @@ src_unpack() {
 		-e "/LDFLAGS/s:-lSDL -lSDL_mixer -lpthread:$(sdl-config --libs) -lSDL_mixer:" \
 		Makefile \
 		|| die "sed failed"
+	sed -i \
+		-e "s:@GAMES_LIBDIR@:$(games_get_libdir)/${PN}:" \
+		miniracer \
+		Makefile \
+		|| die "2nd sed failed"
 }
 
 src_install() {

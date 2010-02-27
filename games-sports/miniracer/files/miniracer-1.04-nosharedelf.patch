@@ -1,0 +1,35 @@
+--- miniracer.old	2010-02-27 21:05:11.000000000 +0100
++++ miniracer	2010-02-27 21:10:34.000000000 +0100
+@@ -12,10 +12,6 @@
+ fi
+ 
+ #checks for files
+-if ! [ -f $HOME/.MiniRacer/engine.glx ]; then
+-	ln -s $MINIRACERDIR/engine.glx $HOME/.MiniRacer
+-fi
+-
+ if ! [ -f $HOME/.MiniRacer/data/pak0.pak ]; then
+ 	ln -s $MINIRACERDIR/data/pak0.pak $HOME/.MiniRacer/data
+ fi
+@@ -35,7 +31,4 @@
+ 
+ # change directory and start MiniRacer
+ cd $HOME/.MiniRacer
+-./engine.glx $*
+-
+-exit 0
+-      
+\ No newline at end of file
++exec @GAMES_LIBDIR@/engine.glx $*
+--- Makefile.old	2010-02-27 21:29:15.000000000 +0100
++++ Makefile	2010-02-27 21:31:15.000000000 +0100
+@@ -48,7 +48,8 @@
+ 	install -d $(DESTDIR)/usr/share/games/MiniRacer
+ 	install -d $(DESTDIR)/usr/share/games/MiniRacer/data
+ 	install -d $(DESTDIR)/usr/share/games/MiniRacer/data/maps
+-	install -m 755 engine.glx $(DESTDIR)/usr/share/games/MiniRacer
++	install -d $(DESTDIR)@GAMES_LIBDIR@
++	install -m 755 engine.glx $(DESTDIR)@GAMES_LIBDIR@
+ 	install -m 644 data/pak0.pak $(DESTDIR)/usr/share/games/MiniRacer/data
+ 	install -m 644 data/config.cfg $(DESTDIR)/usr/share/games/MiniRacer/data
+ 	install -m 755 miniracer $(DESTDIR)/usr/bin/miniracer
