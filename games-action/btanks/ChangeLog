@@ -1,6 +1,10 @@
 # ChangeLog for games-action/btanks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.21 2010/01/09 17:39:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.22 2010/02/27 18:10:00 phajdan.jr Exp $
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  btanks-0.9.8083.ebuild:
+  x86 stable wrt bug #304095
 
 *btanks-0.9.8083 (09 Jan 2010)
 
