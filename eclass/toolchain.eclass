@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.416 2010/01/09 20:42:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.417 2010/02/27 20:54:35 halcy0n Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1230,6 +1230,17 @@ gcc-compiler-configure() {
 	fi
 
 	case $(tc-arch) in
+		# bug #264534
+		arm)
+			local arm_arch="${CTARGET%%-*}"
+			# Convert armv7{a,r,m} to armv7-{a,r,m}
+			[[ ! -z "${arm_arch##armv7}" ]] && arm_arch="${arm_arch/armv7/armv7-}"
+			# Remove 'l'
+			[[ -z "${arm_arch##armv*l}" ]] && arch="${arm_arch/l/}"
+			# Remove 'eb'
+			[[ -z "${arm_arch##armv*eb}" ]] && arch="${arm_arch/eb/}"
+			confgcc="${confgcc} --with-arch=${arm_arch}"
+			;;
 		# Add --with-abi flags to set default MIPS ABI
 		mips)
 			local mips_abi=""
