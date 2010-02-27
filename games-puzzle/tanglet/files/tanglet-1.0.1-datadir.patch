@@ -1,0 +1,23 @@
+diff -ru tanglet-1.0.1.orig/src/main.cpp tanglet-1.0.1/src/main.cpp
+--- tanglet-1.0.1.orig/src/main.cpp	2010-01-11 20:23:45.000000000 -0500
++++ tanglet-1.0.1/src/main.cpp	2010-02-27 13:54:16.915177582 -0500
+@@ -36,6 +36,7 @@
+ 
+ 	QString path = app.applicationDirPath();
+ 	QStringList paths;
++	paths.append("GENTOO_DIR");
+ 	paths.append(path + "/data/");
+ 	paths.append(path + "/../share/tanglet/data/");
+ 	paths.append(path + "/../Resources/");
+diff -ru tanglet-1.0.1.orig/tanglet.pro tanglet-1.0.1/tanglet.pro
+--- tanglet-1.0.1.orig/tanglet.pro	2010-01-11 18:25:54.000000000 -0500
++++ tanglet-1.0.1/tanglet.pro	2010-02-27 13:53:13.104184583 -0500
+@@ -48,7 +48,7 @@
+ 
+ unix:!macx {
+ 	isEmpty(PREFIX) {
+-		PREFIX = /usr/local
++		PREFIX = /usr
+ 	}
+ 
+ 	target.path = $$PREFIX/bin/
