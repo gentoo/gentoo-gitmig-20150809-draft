@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.226 2010/02/21 12:04:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.227 2010/02/27 20:57:06 suka Exp $
+
+  27 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-3.1.1.ebuild, openoffice-bin-3.2.0.ebuild:
+  Make sure the permissions of installed files are right, bug #306779
 
   21 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-3.2.0.ebuild:
