@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.520 2010/02/26 11:59:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.521 2010/02/27 20:24:09 suka Exp $
+
+  27 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.0.ebuild:
+  Another bump for the patchset (ooo-build 3.2.0.7), minor fixes
 
   26 Feb 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.0.ebuild:

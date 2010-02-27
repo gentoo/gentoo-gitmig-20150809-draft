@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.14 2010/02/26 11:59:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.15 2010/02/27 20:24:09 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -11,7 +11,7 @@ inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
-MY_PV=3.2.0.6
+MY_PV=3.2.0.7
 PATCHLEVEL=OOO320
 SRC=OOo_${PV}_src
 MST=OOO320_m12
