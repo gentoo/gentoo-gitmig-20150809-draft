@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/mars-1.1.3.ebuild,v 1.1 2010/02/24 08:17:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/mars-1.1.3.ebuild,v 1.2 2010/02/27 10:03:09 jlec Exp $
 
 EAPI="3"
 
@@ -14,6 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="as-is"
 IUSE="examples"
+
+RDEPEND="sci-chemistry/psipred"
+DEPEND=""
 
 S="${WORKDIR}"/${MY_P}
 
