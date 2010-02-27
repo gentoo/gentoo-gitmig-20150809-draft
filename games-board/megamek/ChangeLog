@@ -1,6 +1,10 @@
 # ChangeLog for games-board/megamek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.18 2010/02/10 05:09:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.19 2010/02/27 16:17:20 phajdan.jr Exp $
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  megamek-0.34.9.ebuild:
+  x86 stable wrt bug #303493
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> megamek-0.34.9.ebuild:
   Marked ppc stable for bug #303493.
