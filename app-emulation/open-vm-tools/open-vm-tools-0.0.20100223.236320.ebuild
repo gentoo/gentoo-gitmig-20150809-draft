@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100119.226760.ebuild,v 1.1 2010/02/19 17:53:52 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100223.236320.ebuild,v 1.1 2010/02/27 21:27:32 vadimk Exp $
 
 EAPI="2"
 
@@ -63,7 +63,9 @@ src_prepare() {
 	epatch "${FILESDIR}/default-scripts1.patch"
 	epatch "${FILESDIR}/checkvm-pie-safety.patch"
 	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
-	sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
+	# Do not filter out Werror
+	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708
+	# sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
 	sed -i -e 's:\(TEST_PLUGIN_INSTALLDIR=\).*:\1\$libdir/open-vm-tools/plugins/tests:g' configure || die "sed test_plugin_installdir failed"
 }
 
