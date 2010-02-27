@@ -26,7 +26,7 @@ diff -Naur gdl-0.9rc4/src/Makefile.am gdl-0.9rc4.new/src/Makefile.am
  # the library search path.
  gdl_LDFLAGS = $(all_libraries)
 -gdl_LDADD = $(top_builddir)/src/antlr/libantlr.a -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lX11
-+gdl_LDADD = -lantlr -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lX11
++gdl_LDADD = ANTLR_LIB -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lX11
  endif
  
  # build as library (for python module)
@@ -35,6 +35,6 @@ diff -Naur gdl-0.9rc4/src/Makefile.am gdl-0.9rc4.new/src/Makefile.am
  endif 
  
 -libgdl_la_LIBADD = $(top_builddir)/src/antlr/libantlr.la -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lX11
-+libgdl_la_LIBADD = -lantlr -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lX11
++libgdl_la_LIBADD = ANTLR_LIB -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lX11
  endif
  

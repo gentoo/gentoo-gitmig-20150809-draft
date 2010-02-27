@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.4 2010/02/27 05:03:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc4.ebuild,v 1.5 2010/02/27 05:28:16 markusle Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools multilib
 
 MYP=${P/_/}
 DESCRIPTION="An Interactive Data Language compatible incremental compiler"
@@ -46,6 +46,12 @@ src_prepare() {
 	# adjust the *.pro file install path
 	sed -i -e "s:datasubdir=.*$:datasubdir=\"${PN}\":" configure.in \
 		|| die "Failed to fix *.pro install patch."
+
+	# set path to libantlr. Note that we need to explicitly link against
+	# libantlr.a since kde-sdk provides libantlr.so which we can not
+	# use (see bug #286630).
+	sed -i -e "s:ANTLR_LIB:/usr/$(get_libdir)/libantlr.a:" src/Makefile.am \
+		|| die "Failed to adjust link to libantlr."
 	eautoreconf
 }
 
