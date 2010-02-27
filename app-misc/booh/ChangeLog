@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/booh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.21 2009/02/24 06:16:18 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.22 2010/02/27 08:12:29 graaff Exp $
+
+*booh-0.9.2.2 (27 Feb 2010)
+
+  27 Feb 2010; Hans de Graaff <graaff@gentoo.org> +booh-0.9.2.2.ebuild:
+  Version bump. Thanks to hitachi for the notification in bug 306721.
 
   24 Feb 2009; Joseph Jezak <josejx@gentoo.org> booh-0.9.1.ebuild:
   Marked ~ppc for bug #231068.
