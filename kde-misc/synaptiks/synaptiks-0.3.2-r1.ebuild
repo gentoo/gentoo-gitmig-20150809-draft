@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.3.2.ebuild,v 1.1 2010/02/04 22:24:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.3.2-r1.ebuild,v 1.1 2010/02/27 13:06:25 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="da de en_GB ru tr"
@@ -11,11 +11,12 @@ HOMEPAGE="http://synaptiks.lunaryorn.de/"
 SRC_URI="http://bitbucket.org/lunar/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD-2"
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-DEPEND="x11-libs/libXi"
+DEPEND="x11-libs/libXi
+	!${CATEGORY}/${PN}:0"
 
 DOCS="CHANGES README"
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.8 2010/02/04 22:24:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.9 2010/02/27 13:06:25 ssuominen Exp $
+
+*synaptiks-0.3.2-r1 (27 Feb 2010)
+
+  27 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.3.2-r1.ebuild:
+  Change SLOT from 0 to 4.
 
 *synaptiks-0.3.2 (04 Feb 2010)
 
