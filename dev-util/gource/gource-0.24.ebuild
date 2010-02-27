@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.24.ebuild,v 1.1 2010/02/09 14:19:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.24.ebuild,v 1.2 2010/02/27 10:28:01 phajdan.jr Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://gource.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
