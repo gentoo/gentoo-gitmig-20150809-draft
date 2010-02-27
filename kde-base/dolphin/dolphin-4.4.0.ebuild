@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.4.0.ebuild,v 1.2 2010/02/26 23:38:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.4.0.ebuild,v 1.3 2010/02/27 00:20:13 reavertm Exp $
 
 EAPI="2"
 
@@ -17,10 +17,11 @@ DEPEND="
 	semantic-desktop? ( >=dev-libs/shared-desktop-ontologies-0.2 )
 "
 RDEPEND="${DEPEND}
-	subversion? (
-	dev-util/subversion
-	$(add_kdebase_dep kompare) )
 	$(add_kdebase_dep kfind)
+	subversion? (
+		dev-util/subversion
+		$(add_kdebase_dep kompare)
+	)
 "
 PDEPEND="
 	thumbnail? ( $(add_kdebase_dep mplayerthumbs) )
