@@ -1,6 +1,9 @@
 # ChangeLog for games-board/peg-e
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.1 2009/12/31 23:02:06 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.2 2010/02/27 15:38:23 phajdan.jr Exp $
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> peg-e-1.1.0.ebuild:
+  x86 stable wrt bug #302946, arch-tested by Thomas Kahle
 
 *peg-e-1.1.0 (31 Dec 2009)
 
