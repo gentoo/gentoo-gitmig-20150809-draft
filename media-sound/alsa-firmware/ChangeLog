@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.94 2010/01/08 01:51:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.95 2010/02/27 17:38:18 lxnay Exp $
+
+*alsa-firmware-1.0.20-r2 (27 Feb 2010)
+
+  27 Feb 2010; Fabio Erculiani <lxnay@gentoo.org> files/52-usx2yaudio.rules,
+  -alsa-firmware-1.0.20-r1.ebuild, +alsa-firmware-1.0.20-r2.ebuild:
+  fix 52-usx2yaudio.rules deprecated usage of SYSFS{}
 
 *alsa-firmware-1.0.20-r1 (08 Jan 2010)
 
