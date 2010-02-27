@@ -1,6 +1,11 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.110 2010/02/10 19:26:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.111 2010/02/27 22:17:04 ssuominen Exp $
+
+*krita-2.1.1 (27 Feb 2010)
+
+  27 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> +krita-2.1.1.ebuild:
+  Version bump.
 
   10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> krita-2.1.0.ebuild:
   Fix poppler depend.
