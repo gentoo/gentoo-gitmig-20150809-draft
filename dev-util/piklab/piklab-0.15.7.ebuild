@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.15.7.ebuild,v 1.1 2010/02/28 00:52:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.15.7.ebuild,v 1.2 2010/02/28 00:53:16 ssuominen Exp $
 
 EAPI=2
 inherit qt4-r2
@@ -30,7 +30,7 @@ src_install() {
 	for bin in coff hex prog; do
 		dobin src/piklab-${bin}/piklab-${bin} || die
 	done
-	
+
 	doman man/piklab-{hex,prog}.1 || die
 	dodoc README TODO
 }
