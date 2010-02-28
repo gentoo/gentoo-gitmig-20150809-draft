@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.220 2010/02/27 05:33:50 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.221 2010/02/28 17:43:37 lxnay Exp $
+
+  28 Feb 2010; Fabio Erculiani <lxnay@gentoo.org>
+  nvidia-drivers-190.53-r1.ebuild,
+  +files/nvidia-drivers-190.53-2.6.33.patch:
+  add 2.6.33 kernel support to 190.53
 
 *nvidia-drivers-173.14.25 (27 Feb 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.53-r1.ebuild,v 1.1 2010/01/04 08:23:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.53-r1.ebuild,v 1.2 2010/02/28 17:43:37 lxnay Exp $
 
 EAPI="2"
 
@@ -246,6 +246,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/NVIDIA_glx-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
+
+	# 2.6.33 kernel support
+	if use kernel_linux && kernel_is eq 2 6 33; then
+		epatch "${FILESDIR}"/nvidia-drivers-190.53-2.6.33.patch
+	fi
 
 	if use kernel_linux; then
 		# Quiet down warnings the user does not need to see
