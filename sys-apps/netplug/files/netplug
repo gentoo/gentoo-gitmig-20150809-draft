@@ -39,6 +39,7 @@ case "${ACTION}" in
 	;;
     probe)
 	# Do nothing as we should already be up
+	exit 0
 	;;
     *)
 	echo "$0: wrong arguments" >&2
