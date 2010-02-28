@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.89 2010/02/14 18:53:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.90 2010/02/28 11:48:40 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -263,11 +263,11 @@ unset _PYTHON_ATOMS
 # Set this in EAPI <= 4 to indicate that current package supports installation for
 # multiple versions of Python.
 
-# @ECLASS-VARIABLE: PYTHON_DEFINE_DEFAULT_FUNCTIONS
+# @ECLASS-VARIABLE: PYTHON_EXPORT_PHASE_FUNCTIONS
 # @DESCRIPTION:
-# Set this to define default functions for the following ebuild phases:
+# Set this to export phase functions for the following ebuild phases:
 # src_prepare, src_configure, src_compile, src_test, src_install.
-if ! has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_DEFINE_DEFAULT_FUNCTIONS}" ]]; then
+if ! has "${EAPI:-0}" 0 1 && [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 	python_src_prepare() {
 		python_copy_sources
 	}
@@ -277,11 +277,12 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_DEFINE_DEFAULT_FUNCTIONS}" ]]; then
 	done
 	unset python_default_function
 
-	EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+	if [[ -n "${PYTHON_EXPORT_PHASE_FUNCTIONS}" ]]; then
+		EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+	fi
 fi
 
 unset PYTHON_ABIS
-unset PYTHON_ABIS_SANITY_CHECKS
 
 # @FUNCTION: validate_PYTHON_ABIS
 # @DESCRIPTION:
@@ -293,17 +294,7 @@ validate_PYTHON_ABIS() {
 		die "${FUNCNAME}() cannot be used in this EAPI without setting SUPPORT_PYTHON_ABIS variable"
 	fi
 
-	# Ensure that /usr/bin/python and /usr/bin/python-config are valid.
-	if [[ "$(readlink "${EPREFIX}/usr/bin/python")" != "python-wrapper" ]]; then
-		eerror "'${EPREFIX}/usr/bin/python' is not valid symlink."
-		eerror "Use \`eselect python set \${python_interpreter}\` to fix this problem."
-		die "'${EPREFIX}/usr/bin/python' is not valid symlink"
-	fi
-	if [[ "$(<"${EPREFIX}/usr/bin/python-config")" != *"Gentoo python-config wrapper script"* ]]; then
-		eerror "'${EPREFIX}/usr/bin/python-config' is not valid script"
-		eerror "Use \`eselect python set \${python_interpreter}\` to fix this problem."
-		die "'${EPREFIX}/usr/bin/python-config' is not valid script"
-	fi
+	_python_initial_sanity_checks
 
 	# USE_${ABI_TYPE^^} and RESTRICT_${ABI_TYPE^^}_ABIS variables hopefully will be included in EAPI >= 5.
 	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3 4; then
@@ -428,36 +419,18 @@ validate_PYTHON_ABIS() {
 		fi
 	fi
 
-	if ! _python_implementation && [[ "$(declare -p PYTHON_ABIS_SANITY_CHECKS 2> /dev/null)" != "declare -- PYTHON_ABIS_SANITY_CHECKS="* ]]; then
-		local PYTHON_ABI
-		for PYTHON_ABI in ${PYTHON_ABIS}; do
-			# Ensure that appropriate version of Python is installed.
-			if ! has_version "$(python_get_implementational_package)"; then
-				die "$(python_get_implementational_package) is not installed"
-			fi
-
-			# Ensure that EPYTHON variable is respected.
-			if [[ "$(EPYTHON="$(PYTHON)" python -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")" != "${PYTHON_ABI}" ]]; then
-				eerror "python:                    '$(type -p python)'"
-				eerror "ABI:                       '${ABI}'"
-				eerror "DEFAULT_ABI:               '${DEFAULT_ABI}'"
-				eerror "EPYTHON:                   '$(PYTHON)'"
-				eerror "PYTHON_ABI:                '${PYTHON_ABI}'"
-				eerror "Version of enabled Python: '$(EPYTHON="$(PYTHON)" python -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")'"
-				die "'python' does not respect EPYTHON variable"
-			fi
-		done
-		PYTHON_ABIS_SANITY_CHECKS="1"
-	fi
+	_python_final_sanity_checks
 }
 
 # @FUNCTION: python_execute_function
-# @USAGE: [--action-message message] [-d|--default-function] [--failure-message message] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] [--source-dir source_directory] [--] <function> [arguments]
+# @USAGE: [--action-message message] [-d|--default-function] [--failure-message message] [-f|--final-ABI] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] [--source-dir source_directory] [--] <function> [arguments]
 # @DESCRIPTION:
 # Execute specified function for each value of PYTHON_ABIS, optionally passing additional
 # arguments. The specified function can use PYTHON_ABI and BUILDDIR variables.
 python_execute_function() {
-	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function i nonfatal="0" previous_directory previous_directory_stack previous_directory_stack_length PYTHON_ABI quiet="0" separate_build_dirs="0" source_dir=
+	_python_set_color_variables
+
+	local action action_message action_message_template= default_function="0" failure_message failure_message_template= final_ABI="0" function i iterated_PYTHON_ABIS nonfatal="0" previous_directory previous_directory_stack previous_directory_stack_length PYTHON_ABI quiet="0" separate_build_dirs="0" source_dir=
 
 	while (($#)); do
 		case "$1" in
@@ -471,6 +444,9 @@ python_execute_function() {
 			--failure-message)
 				failure_message_template="$2"
 				shift
+				;;
+			-f|--final-ABI)
+				final_ABI="1"
 				;;
 			--nonfatal)
 				nonfatal="1"
@@ -573,28 +549,20 @@ python_execute_function() {
 		[[ "${EBUILD_PHASE}" == "postrm" ]] && action="Postuninstallation"
 	fi
 
-	local RED GREEN BLUE NORMAL
-	if [[ "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
-		RED=$'\e[1;31m'
-		GREEN=$'\e[1;32m'
-		BLUE=$'\e[1;34m'
-		NORMAL=$'\e[0m'
-	else
-		RED=
-		GREEN=
-		BLUE=
-		NORMAL=
-	fi
-
 	validate_PYTHON_ABIS
-	for PYTHON_ABI in ${PYTHON_ABIS}; do
+	if [[ "${final_ABI}" == "1" ]]; then
+		iterated_PYTHON_ABIS="$(PYTHON -f --ABI)"
+	else
+		iterated_PYTHON_ABIS="${PYTHON_ABIS}"
+	fi
+	for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
 		if [[ "${quiet}" == "0" ]]; then
 			if [[ -n "${action_message_template}" ]]; then
 				action_message="$(eval echo -n "${action_message_template}")"
 			else
 				action_message="${action} of ${CATEGORY}/${PF} with $(python_get_implementation) $(python_get_version)..."
 			fi
-			echo " ${GREEN}*${NORMAL} ${BLUE}${action_message}${NORMAL}"
+			echo " ${_GREEN}*${_NORMAL} ${_BLUE}${action_message}${_NORMAL}"
 		fi
 
 		if [[ "${separate_build_dirs}" == "1" ]]; then
@@ -627,9 +595,9 @@ python_execute_function() {
 
 			if [[ "${nonfatal}" == "1" ]]; then
 				if [[ "${quiet}" == "0" ]]; then
-					ewarn "${RED}${failure_message}${NORMAL}"
+					ewarn "${_RED}${failure_message}${_NORMAL}"
 				fi
-			elif has "${PYTHON_ABI}" ${FAILURE_TOLERANT_PYTHON_ABIS}; then
+			elif [[ "${final_ABI}" == "0" ]] && has "${PYTHON_ABI}" ${FAILURE_TOLERANT_PYTHON_ABIS}; then
 				if [[ "${EBUILD_PHASE}" != "test" ]] || ! has test-fail-continue ${FEATURES}; then
 					local enabled_PYTHON_ABIS= other_PYTHON_ABI
 					for other_PYTHON_ABI in ${PYTHON_ABIS}; do
@@ -638,7 +606,7 @@ python_execute_function() {
 					export PYTHON_ABIS="${enabled_PYTHON_ABIS}"
 				fi
 				if [[ "${quiet}" == "0" ]]; then
-					ewarn "${RED}${failure_message}${NORMAL}"
+					ewarn "${_RED}${failure_message}${_NORMAL}"
 				fi
 				if [[ -z "${PYTHON_ABIS}" ]]; then
 					die "${function}() function failed with all enabled versions of Python"
@@ -681,54 +649,31 @@ python_execute_function() {
 }
 
 # @FUNCTION: python_copy_sources
-# @USAGE: [--no-link] [--] [directory]
+# @USAGE: <directory="${S}"> [directory]
 # @DESCRIPTION:
 # Copy unpacked sources of current package to separate build directory for each Python ABI.
 python_copy_sources() {
-	local dir dirs=() no_link="0" PYTHON_ABI
-
-	while (($#)); do
-		case "$1" in
-			--no-link)
-				no_link="1"
-				;;
-			--)
-				shift
-				break
-				;;
-			-*)
-				die "${FUNCNAME}(): Unrecognized option '$1'"
-				;;
-			*)
-				break
-				;;
-		esac
-		shift
-	done
+	local dir dirs=() PYTHON_ABI
 
 	if [[ "$#" -eq 0 ]]; then
 		if [[ "${WORKDIR}" == "${S}" ]]; then
 			die "${FUNCNAME}() cannot be used"
 		fi
-		dirs="${S}"
+		dirs=("${S}")
 	else
-		dirs="$@"
+		dirs=("$@")
 	fi
 
 	validate_PYTHON_ABIS
 	for PYTHON_ABI in ${PYTHON_ABIS}; do
 		for dir in "${dirs[@]}"; do
-			if [[ "${no_link}" == "1" ]]; then
-				cp -pr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
-			else
-				cp -lpr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
-			fi
+			cp -pr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
 		done
 	done
 }
 
 # @FUNCTION: python_set_build_dir_symlink
-# @USAGE: [directory="build"]
+# @USAGE: <directory="build">
 # @DESCRIPTION:
 # Create build directory symlink.
 python_set_build_dir_symlink() {
@@ -922,6 +867,8 @@ python_set_active_version() {
 		die "${FUNCNAME}() requires 1 argument"
 	fi
 
+	_python_initial_sanity_checks
+
 	if [[ "$1" =~ ^[[:digit:]]+\.[[:digit:]]+$ ]]; then
 		if ! _python_implementation && ! has_version "dev-lang/python:$1"; then
 			die "${FUNCNAME}(): 'dev-lang/python:$1' is not installed"
@@ -946,6 +893,8 @@ python_set_active_version() {
 	PYTHON_ABI="${EPYTHON#python}"
 	PYTHON_ABI="${PYTHON_ABI%%-*}"
 
+	_python_final_sanity_checks
+
 	# python-updater checks PYTHON_REQUESTED_ACTIVE_VERSION variable.
 	PYTHON_REQUESTED_ACTIVE_VERSION="$1"
 }
@@ -954,7 +903,11 @@ python_set_active_version() {
 # @DESCRIPTION: Mark current package for rebuilding by python-updater after
 # switching of active version of Python.
 python_need_rebuild() {
-	export PYTHON_NEED_REBUILD="$(PYTHON -A --ABI)"
+	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		die "${FUNCNAME}() cannot be used in ebuilds of packages supporting installation for multiple versions of Python"
+	fi
+
+	export PYTHON_NEED_REBUILD="$(PYTHON --ABI)"
 }
 
 # ================================================================================================
@@ -982,22 +935,20 @@ _python_get_implementation() {
 }
 
 # @FUNCTION: PYTHON
-# @USAGE: [-2] [-3] [--ABI] [-A|--active] [-a|--absolute-path] [-f|--final-ABI] [--] <Python_ABI="${PYTHON_ABI}">
+# @USAGE: [-2] [-3] [--ABI] [-a|--absolute-path] [-f|--final-ABI] [--] <Python_ABI="${PYTHON_ABI}">
 # @DESCRIPTION:
 # Print filename of Python interpreter for specified Python ABI. If Python_ABI argument
 # is ommitted, then PYTHON_ABI environment variable must be set and is used.
 # If -2 option is specified, then active version of Python 2 is used.
 # If -3 option is specified, then active version of Python 3 is used.
-# If --active option is specified, then active version of Python is used.
-# Active version of Python can be set by python_set_active_version().
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
-# -2, -3, --active and --final-ABI options and Python_ABI argument cannot be specified simultaneously.
+# -2, -3 and --final-ABI options and Python_ABI argument cannot be specified simultaneously.
 # If --ABI option is specified, then only specified Python ABI is printed instead of
 # filename of Python interpreter.
 # If --absolute-path option is specified, then absolute path to Python interpreter is printed.
 # --ABI and --absolute-path options cannot be specified simultaneously.
 PYTHON() {
-	local ABI_output="0" absolute_path_output="0" active="0" final_ABI="0" PYTHON_ABI="${PYTHON_ABI}" python_interpreter python2="0" python3="0"
+	local ABI_output="0" absolute_path_output="0" final_ABI="0" PYTHON_ABI="${PYTHON_ABI}" python_interpreter python2="0" python3="0"
 
 	while (($#)); do
 		case "$1" in
@@ -1009,9 +960,6 @@ PYTHON() {
 				;;
 			--ABI)
 				ABI_output="1"
-				;;
-			-A|--active)
-				active="1"
 				;;
 			-a|--absolute-path)
 				absolute_path_output="1"
@@ -1037,17 +985,12 @@ PYTHON() {
 		die "${FUNCNAME}(): '--ABI and '--absolute-path' options cannot be specified simultaneously"
 	fi
 
-	if [[ "$((${python2} + ${python3} + ${active} + ${final_ABI}))" -gt 1 ]]; then
-		die "${FUNCNAME}(): '-2', '-3', '--active' or '--final-ABI' options cannot be specified simultaneously"
+	if [[ "$((${python2} + ${python3} + ${final_ABI}))" -gt 1 ]]; then
+		die "${FUNCNAME}(): '-2', '-3' or '--final-ABI' options cannot be specified simultaneously"
 	fi
 
 	if [[ "$#" -eq 0 ]]; then
-		if [[ "${active}" == "1" ]]; then
-			if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-				die "${FUNCNAME}(): '--active' option cannot be used in ebuilds of packages supporting installation for multiple versions of Python"
-			fi
-			PYTHON_ABI="$("${EPREFIX}/usr/bin/python" -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")"
-		elif [[ "${final_ABI}" == "1" ]]; then
+		if [[ "${final_ABI}" == "1" ]]; then
 			if has "${EAPI:-0}" 0 1 2 3 4 && [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
 				die "${FUNCNAME}(): '--final-ABI' option cannot be used in ebuilds of packages not supporting installation for multiple versions of Python"
 			fi
@@ -1067,13 +1010,12 @@ PYTHON() {
 			elif [[ "${PYTHON_ABI}" != "3."* ]]; then
 				die "${FUNCNAME}(): Internal error in \`eselect python show --python3\`"
 			fi
+		elif [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
+			PYTHON_ABI="$("${EPREFIX}/usr/bin/python" -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")"
 		elif [[ -z "${PYTHON_ABI}" ]]; then
 			die "${FUNCNAME}(): Invalid usage: Python ABI not specified"
 		fi
 	elif [[ "$#" -eq 1 ]]; then
-		if [[ "${active}" == "1" ]]; then
-			die "${FUNCNAME}(): '--active' option and Python ABI cannot be specified simultaneously"
-		fi
 		if [[ "${final_ABI}" == "1" ]]; then
 			die "${FUNCNAME}(): '--final-ABI' option and Python ABI cannot be specified simultaneously"
 		fi
@@ -1136,7 +1078,7 @@ python_get_implementation() {
 	if [[ "${final_ABI}" == "1" ]]; then
 		PYTHON_ABI="$(PYTHON -f --ABI)"
 	elif [[ -z "${PYTHON_ABI}" ]]; then
-		PYTHON_ABI="$(PYTHON -A --ABI)"
+		PYTHON_ABI="$(PYTHON --ABI)"
 	fi
 
 	echo "$(_python_get_implementation "${PYTHON_ABI}")"
@@ -1168,7 +1110,7 @@ python_get_implementational_package() {
 	if [[ "${final_ABI}" == "1" ]]; then
 		PYTHON_ABI="$(PYTHON -f --ABI)"
 	elif [[ -z "${PYTHON_ABI}" ]]; then
-		PYTHON_ABI="$(PYTHON -A --ABI)"
+		PYTHON_ABI="$(PYTHON --ABI)"
 	fi
 
 	if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
@@ -1204,7 +1146,7 @@ python_get_includedir() {
 	if [[ "${final_ABI}" == "1" ]]; then
 		PYTHON_ABI="$(PYTHON -f --ABI)"
 	elif [[ -z "${PYTHON_ABI}" ]]; then
-		PYTHON_ABI="$(PYTHON -A --ABI)"
+		PYTHON_ABI="$(PYTHON --ABI)"
 	fi
 
 	if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
@@ -1240,7 +1182,7 @@ python_get_libdir() {
 	if [[ "${final_ABI}" == "1" ]]; then
 		PYTHON_ABI="$(PYTHON -f --ABI)"
 	elif [[ -z "${PYTHON_ABI}" ]]; then
-		PYTHON_ABI="$(PYTHON -A --ABI)"
+		PYTHON_ABI="$(PYTHON --ABI)"
 	fi
 
 	if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
@@ -1306,7 +1248,7 @@ python_get_library() {
 	if [[ "${final_ABI}" == "1" ]]; then
 		PYTHON_ABI="$(PYTHON -f --ABI)"
 	elif [[ -z "${PYTHON_ABI}" ]]; then
-		PYTHON_ABI="$(PYTHON -A --ABI)"
+		PYTHON_ABI="$(PYTHON --ABI)"
 	fi
 
 	if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
@@ -1371,7 +1313,7 @@ python_get_version() {
 	if [[ "${final_ABI}" == "1" ]]; then
 		"$(PYTHON -f)" -c "${python_command}"
 	else
-		"$(PYTHON "${PYTHON_ABI--A}")" -c "${python_command}"
+		"$(PYTHON ${PYTHON_ABI})" -c "${python_command}"
 	fi
 }
 
@@ -1397,6 +1339,66 @@ _python_initialize_prefix_variables() {
 		if [[ -n "${D}" && -z "${ED}" ]]; then
 			ED="${D%/}${EPREFIX}/"
 		fi
+	fi
+}
+
+unset PYTHON_SANITY_CHECKS
+
+_python_initial_sanity_checks() {
+	if [[ "$(declare -p PYTHON_SANITY_CHECKS 2> /dev/null)" != "declare -- PYTHON_SANITY_CHECKS="* ]]; then
+		# Ensure that /usr/bin/python and /usr/bin/python-config are valid.
+		if [[ "$(readlink "${EPREFIX}/usr/bin/python")" != "python-wrapper" ]]; then
+			eerror "'${EPREFIX}/usr/bin/python' is not valid symlink."
+			eerror "Use \`eselect python set \${python_interpreter}\` to fix this problem."
+			die "'${EPREFIX}/usr/bin/python' is not valid symlink"
+		fi
+		if [[ "$(<"${EPREFIX}/usr/bin/python-config")" != *"Gentoo python-config wrapper script"* ]]; then
+			eerror "'${EPREFIX}/usr/bin/python-config' is not valid script"
+			eerror "Use \`eselect python set \${python_interpreter}\` to fix this problem."
+			die "'${EPREFIX}/usr/bin/python-config' is not valid script"
+		fi
+	fi
+}
+
+_python_final_sanity_checks() {
+	if ! _python_implementation && [[ "$(declare -p PYTHON_SANITY_CHECKS 2> /dev/null)" != "declare -- PYTHON_SANITY_CHECKS="* ]]; then
+		local PYTHON_ABI="${PYTHON_ABI}"
+		for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI}}; do
+			# Ensure that appropriate version of Python is installed.
+			if ! has_version "$(python_get_implementational_package)"; then
+				die "$(python_get_implementational_package) is not installed"
+			fi
+
+			# Ensure that EPYTHON variable is respected.
+			if [[ "$(EPYTHON="$(PYTHON)" python -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")" != "${PYTHON_ABI}" ]]; then
+				eerror "python:                    '$(type -p python)'"
+				eerror "ABI:                       '${ABI}'"
+				eerror "DEFAULT_ABI:               '${DEFAULT_ABI}'"
+				eerror "EPYTHON:                   '$(PYTHON)'"
+				eerror "PYTHON_ABI:                '${PYTHON_ABI}'"
+				eerror "Version of enabled Python: '$(EPYTHON="$(PYTHON)" python -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")'"
+				die "'python' does not respect EPYTHON variable"
+			fi
+		done
+	fi
+	PYTHON_SANITY_CHECKS="1"
+}
+
+_python_set_color_variables() {
+	if [[ "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
+		_BOLD=$'\e[1m'
+		_RED=$'\e[1;31m'
+		_GREEN=$'\e[1;32m'
+		_BLUE=$'\e[1;34m'
+		_CYAN=$'\e[1;36m'
+		_NORMAL=$'\e[0m'
+	else
+		_BOLD=
+		_RED=
+		_GREEN=
+		_BLUE=
+		_CYAN=
+		_NORMAL=
 	fi
 }
 
@@ -1493,24 +1495,7 @@ python_mod_exists() {
 	if [[ "$#" -ne 1 ]]; then
 		die "${FUNCNAME}() requires 1 argument"
 	fi
-	"$(PYTHON "${PYTHON_ABI--A}")" -c "import $1" &> /dev/null
-}
-
-# @FUNCTION: python_tkinter_exists
-# @DESCRIPTION:
-# Run without arguments, checks if Python was compiled with Tkinter
-# support.  If not, prints an error message and dies.
-python_tkinter_exists() {
-	if ! "$(PYTHON "${PYTHON_ABI--A}")" -c "from sys import version_info
-if version_info[0] == 3:
-	import tkinter
-else:
-	import Tkinter" &> /dev/null; then
-		eerror "Python needs to be rebuilt with tkinter support enabled."
-		eerror "Add the following line to '${EPREFIX}/etc/portage/package.use' and rebuild Python"
-		eerror "dev-lang/python tk"
-		die "Python installed without support for tkinter"
-	fi
+	"$(PYTHON ${PYTHON_ABI})" -c "import $1" &> /dev/null
 }
 
 # ================================================================================================
@@ -1528,6 +1513,8 @@ PYTHON_TEST_VERBOSITY="${PYTHON_TEST_VERBOSITY:-1}"
 # @DESCRIPTION:
 # Execute nosetests for all enabled versions of Python.
 python_execute_nosetests() {
+	_python_set_color_variables
+
 	local PYTHONPATH_template= separate_build_dirs=
 
 	while (($#)); do
@@ -1564,10 +1551,10 @@ python_execute_nosetests() {
 		fi
 
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
-			echo PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"${_NORMAL}
 			PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
 		else
-			echo nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+			echo ${_BOLD}nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"${_NORMAL}
 			nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
 		fi
 	}
@@ -1588,6 +1575,8 @@ python_execute_nosetests() {
 # @DESCRIPTION:
 # Execute py.test for all enabled versions of Python.
 python_execute_py.test() {
+	_python_set_color_variables
+
 	local PYTHONPATH_template= separate_build_dirs=
 
 	while (($#)); do
@@ -1624,10 +1613,10 @@ python_execute_py.test() {
 		fi
 
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
-			echo PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"
+			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"${_NORMAL}
 			PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"
 		else
-			echo py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"
+			echo ${_BOLD}py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"${_NORMAL}
 			py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"
 		fi
 	}
@@ -1648,6 +1637,8 @@ python_execute_py.test() {
 # @DESCRIPTION:
 # Execute trial for all enabled versions of Python.
 python_execute_trial() {
+	_python_set_color_variables
+
 	local PYTHONPATH_template= separate_build_dirs=
 
 	while (($#)); do
@@ -1684,10 +1675,10 @@ python_execute_trial() {
 		fi
 
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
-			echo PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"${_NORMAL}
 			PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
 		else
-			echo trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+			echo ${_BOLD}trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"${_NORMAL}
 			trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
 		fi
 	}
@@ -1745,7 +1736,7 @@ python_mod_optimize() {
 	[[ ${EBUILD_PHASE} != "postinst" ]] && die "${FUNCNAME}() should only be run in pkg_postinst()"
 
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-		local dir file options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" PYTHON_ABI return_code root site_packages_absolute_dirs=() site_packages_dirs=() site_packages_absolute_files=() site_packages_files=()
+		local dir file options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_absolute_dirs=() site_packages_dirs=() site_packages_absolute_files=() site_packages_files=()
 
 		# Strip trailing slash from ROOT.
 		root="${EROOT%/}"
@@ -1777,7 +1768,7 @@ python_mod_optimize() {
 							ewarn "'${root}/$1' does not exist!"
 						fi
 					else
-						for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI-$(PYTHON -A --ABI)}}; do
+						for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI:-$(PYTHON --ABI)}}; do
 							if [[ -d "${root}$(python_get_sitedir)/$1" ]]; then
 								site_packages_dirs+=("$1")
 								break
@@ -1799,7 +1790,7 @@ python_mod_optimize() {
 		# Set additional options.
 		options+=("-q")
 
-		for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI-$(PYTHON -A --ABI)}}; do
+		for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI:-$(PYTHON --ABI)}}; do
 			if ((${#site_packages_dirs[@]})) || ((${#site_packages_files[@]})); then
 				return_code="0"
 				ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
@@ -1837,15 +1828,15 @@ python_mod_optimize() {
 			return_code="0"
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version)"
 			if ((${#other_dirs[@]})); then
-				"$(PYTHON "${PYTHON_ABI--A}")" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON -A --ABI)}")" != "Jython" ]]; then
-					"$(PYTHON "${PYTHON_ABI--A}")" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
+				"$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
+				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON --ABI)}")" != "Jython" ]]; then
+					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
 				fi
 			fi
 			if ((${#other_files[@]})); then
-				"$(PYTHON "${PYTHON_ABI--A}")" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON -A --ABI)}")" != "Jython" ]]; then
-					"$(PYTHON "${PYTHON_ABI--A}")" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
+				"$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
+				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON --ABI)}")" != "Jython" ]]; then
+					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
 			fi
 			eend "${return_code}"
@@ -1890,8 +1881,8 @@ python_mod_optimize() {
 
 		ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
 		if ((${#mydirs[@]})); then
-			"$(PYTHON "${PYTHON_ABI--A}")" "${myroot}$(python_get_libdir)/compileall.py" "${myopts[@]}" "${mydirs[@]}" || return_code="1"
-			"$(PYTHON "${PYTHON_ABI--A}")" -O "${myroot}$(python_get_libdir)/compileall.py" "${myopts[@]}" "${mydirs[@]}" &> /dev/null || return_code="1"
+			"$(PYTHON ${PYTHON_ABI})" "${myroot}$(python_get_libdir)/compileall.py" "${myopts[@]}" "${mydirs[@]}" || return_code="1"
+			"$(PYTHON ${PYTHON_ABI})" -O "${myroot}$(python_get_libdir)/compileall.py" "${myopts[@]}" "${mydirs[@]}" &> /dev/null || return_code="1"
 		fi
 
 		if ((${#myfiles[@]})); then
@@ -1915,8 +1906,9 @@ python_mod_optimize() {
 # This function should only be run in pkg_postrm().
 python_mod_cleanup() {
 	_python_initialize_prefix_variables
+	_python_set_color_variables
 
-	local path py_file PYTHON_ABI SEARCH_PATH=() root
+	local path py_file PYTHON_ABI="${PYTHON_ABI}" SEARCH_PATH=() root
 
 	# Check if phase is pkg_postrm().
 	[[ ${EBUILD_PHASE} != "postrm" ]] && die "${FUNCNAME}() should only be run in pkg_postrm()"
@@ -1932,7 +1924,7 @@ python_mod_cleanup() {
 				elif [[ "$1" =~ ^/ ]]; then
 					SEARCH_PATH+=("${root}/${1#/}")
 				else
-					for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI-$(PYTHON -A --ABI)}}; do
+					for PYTHON_ABI in ${PYTHON_ABIS-${PYTHON_ABI:-$(PYTHON --ABI)}}; do
 						SEARCH_PATH+=("${root}$(python_get_sitedir)/$1")
 					done
 				fi
@@ -1960,44 +1952,33 @@ python_mod_cleanup() {
 		done
 	fi
 
-	local BLUE CYAN NORMAL
-	if [[ "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
-		BLUE=$'\e[1;34m'
-		CYAN=$'\e[1;36m'
-		NORMAL=$'\e[0m'
-	else
-		BLUE=
-		CYAN=
-		NORMAL=
-	fi
-
 	for path in "${SEARCH_PATH[@]}"; do
 		if [[ -d "${path}" ]]; then
 			find "${path}" "(" -name "*.py[co]" -o -name "*\$py.class" ")" -print0 | while read -rd ''; do
 				if [[ "${REPLY}" == *[co] ]]; then
 					py_file="${REPLY%[co]}"
 					[[ -f "${py_file}" || (! -f "${py_file}c" && ! -f "${py_file}o") ]] && continue
-					einfo "${BLUE}<<< ${py_file}[co]${NORMAL}"
+					einfo "${_BLUE}<<< ${py_file}[co]${_NORMAL}"
 					rm -f "${py_file}"[co]
 				elif [[ "${REPLY}" == *\$py.class ]]; then
 					py_file="${REPLY%\$py.class}.py"
 					[[ -f "${py_file}" || ! -f "${py_file%.py}\$py.class" ]] && continue
-					einfo "${BLUE}<<< ${py_file%.py}\$py.class${NORMAL}"
+					einfo "${_BLUE}<<< ${py_file%.py}\$py.class${_NORMAL}"
 					rm -f "${py_file%.py}\$py.class"
 				fi
 			done
 
 			# Attempt to delete directories, which may be empty.
 			find "${path}" -type d | sort -r | while read -r dir; do
-				rmdir "${dir}" 2>/dev/null && einfo "${CYAN}<<< ${dir}${NORMAL}"
+				rmdir "${dir}" 2>/dev/null && einfo "${_CYAN}<<< ${dir}${_NORMAL}"
 			done
 		elif [[ "${path}" == *.py && ! -f "${path}" ]]; then
 			if [[ (-f "${path}c" || -f "${path}o") ]]; then
-				einfo "${BLUE}<<< ${path}[co]${NORMAL}"
+				einfo "${_BLUE}<<< ${path}[co]${_NORMAL}"
 				rm -f "${path}"[co]
 			fi
 			if [[ -f "${path%.py}\$py.class" ]]; then
-				einfo "${BLUE}<<< ${path%.py}\$py.class${NORMAL}"
+				einfo "${_BLUE}<<< ${path%.py}\$py.class${_NORMAL}"
 				rm -f "${path%.py}\$py.class"
 			fi
 		fi
@@ -2013,7 +1994,7 @@ python_mod_cleanup() {
 # Run without arguments and it will export the version of python
 # currently in use as $PYVER; sets PYVER/PYVER_MAJOR/PYVER_MINOR
 python_version() {
-	if ! has "${EAPI:-0}" 0 1 2; then
+	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		eerror "Use PYTHON() and/or python_get_*() instead of ${FUNCNAME}()."
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
@@ -2029,6 +2010,28 @@ python_version() {
 		export PYVER_MICRO="${PYVER_ALL:4}"
 	fi
 	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+}
+
+# @FUNCTION: python_tkinter_exists
+# @DESCRIPTION:
+# Run without arguments, checks if Python was compiled with Tkinter
+# support.  If not, prints an error message and dies.
+python_tkinter_exists() {
+	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		eerror "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()."
+		die "${FUNCNAME}() cannot be used in this EAPI"
+	fi
+
+	if ! "$(PYTHON ${PYTHON_ABI})" -c "from sys import version_info
+if version_info[0] == 3:
+	import tkinter
+else:
+	import Tkinter" &> /dev/null; then
+		eerror "Python needs to be rebuilt with tkinter support enabled."
+		eerror "Add the following line to '${EPREFIX}/etc/portage/package.use' and rebuild Python"
+		eerror "dev-lang/python tk"
+		die "Python installed without support for tkinter"
+	fi
 }
 
 # @FUNCTION: python_mod_compile
@@ -2062,8 +2065,8 @@ python_mod_compile() {
 	done
 
 	if ((${#myfiles[@]})); then
-		"$(PYTHON "${PYTHON_ABI--A}")" "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}"
-		"$(PYTHON "${PYTHON_ABI--A}")" -O "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}" &> /dev/null
+		"$(PYTHON ${PYTHON_ABI})" "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}"
+		"$(PYTHON ${PYTHON_ABI})" -O "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}" &> /dev/null
 	else
 		ewarn "No files to compile!"
 	fi
