@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-emovie/pymol-plugins-emovie-1.0.4.ebuild,v 1.1 2010/02/25 16:24:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-emovie/pymol-plugins-emovie-1.0.4.ebuild,v 1.2 2010/02/28 13:50:41 arfrever Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ src_prepare() {
 	mkdir ${P}
 	mv e* ${P}/
 
-	python_copy_sources --no-link
+	python_copy_sources
 
 	conversion() {
 		[[ "${PYTHON_ABI}" == 2.* ]] && return

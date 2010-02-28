@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-2.0.003.ebuild,v 1.2 2010/02/21 09:56:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-2.0.003.ebuild,v 1.3 2010/02/28 13:46:56 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -36,7 +36,7 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	python_copy_sources --no-link
+	python_copy_sources
 }
 
 src_install() {

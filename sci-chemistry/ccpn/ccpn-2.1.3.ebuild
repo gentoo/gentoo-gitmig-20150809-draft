@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.ebuild,v 1.1 2010/02/17 20:59:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.ebuild,v 1.2 2010/02/28 13:48:39 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -63,7 +63,7 @@ src_prepare() {
 	GLUT_NOT_IN_GL=""
 	GLUT_FLAG="\$(GLUT_NEED_INIT) \$(GLUT_NOT_IN_GL)"
 
-	python_copy_sources --no-link
+	python_copy_sources
 
 	preparation() {
 		sed \

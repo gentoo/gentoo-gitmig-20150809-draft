@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/pymol-apbs-plugin-0_p15.ebuild,v 1.3 2010/02/23 08:59:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/pymol-apbs-plugin-0_p15.ebuild,v 1.4 2010/02/28 13:49:40 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,7 +28,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 src_unpack() {
 	mkdir "${S}"
 	cp "${DISTDIR}"/${P}.py "${S}"/
-	python_copy_sources --no-link
+	python_copy_sources
 }
 
 src_install() {
