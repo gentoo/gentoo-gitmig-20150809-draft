@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebkitgtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.13 2010/02/21 17:18:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.14 2010/02/28 19:02:10 nixnut Exp $
+
+  28 Feb 2010; nixnut <nixnut@gentoo.org> pywebkitgtk-1.1.6-r1.ebuild:
+  ppc stable #299568
 
   21 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   pywebkitgtk-1.1.6-r1.ebuild:
