@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.0.ebuild,v 1.2 2010/02/28 11:25:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.0.ebuild,v 1.3 2010/02/28 11:53:41 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -37,5 +37,5 @@ src_install() {
 	doins libjbig/*.h || die
 	dolib libjbig/libjbig{,85}{.a,$(get_libname)} || die
 
-	dodoc ANNOUNCE CHANGES TODO
+	dodoc ANNOUNCE CHANGES TODO libjbig/*.txt
 }
