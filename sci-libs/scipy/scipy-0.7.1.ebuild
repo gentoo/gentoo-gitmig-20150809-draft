@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.1.ebuild,v 1.9 2010/02/25 04:05:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.1.ebuild,v 1.10 2010/02/28 10:53:17 arfrever Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -113,7 +113,7 @@ src_test() {
 		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install \
 			--home="${S}/test-${PYTHON_ABI}" --no-compile ${SCIPY_FCONFIG} || die "install test failed"
 		pushd "${S}/test-${PYTHON_ABI}/"lib*/python > /dev/null
-		PYTHONPATH=. "${python}" -c "import scipy; scipy.test('full')" 2>&1 | tee test.log
+		PYTHONPATH=. "$(PYTHON)" -c "import scipy; scipy.test('full')" 2>&1 | tee test.log
 		grep -q ^ERROR test.log && die "test failed"
 		popd > /dev/null
 		rm -fr test-${PYTHON_ABI}
