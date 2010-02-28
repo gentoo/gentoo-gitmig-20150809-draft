@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.2 2010/02/23 12:19:03 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.3 2010/02/28 16:03:03 patrick Exp $
 
 EAPI="2"
 
@@ -135,7 +135,7 @@ src_install() {
 		doexe setup/{setexpiry,setpassword,upgrade_from_s3}
 
 		# init script
-		newinitd "${FILESDIR}/samba.initd" samba
+		newinitd "${FILESDIR}/samba4.initd" samba
 	fi
 }
 
