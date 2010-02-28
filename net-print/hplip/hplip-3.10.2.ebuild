@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12.ebuild,v 1.4 2010/01/02 19:49:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2.ebuild,v 1.1 2010/02/28 12:21:59 billie Exp $
 
 EAPI=2
 
@@ -17,19 +17,16 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
 IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt4 scanner snmp static-ppds -udev-acl"
 
-# Note : libusb-compat untested (calchan 20090516)
-
 COMMON_DEPEND="
-	app-text/ghostscript-gpl
 	media-libs/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	udev-acl? ( >=sys-fs/udev-145[extras] )
 	!minimal? (
 		net-print/cups
 		virtual/libusb:0
 		>=dev-lang/python-2.4.4[threads,xml]
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
+		fax? ( sys-apps/dbus )
 		snmp? (
 			net-analyzer/net-snmp
 			dev-libs/openssl
@@ -40,21 +37,21 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
+	>=app-text/ghostscript-gpl-8.70
+	dev-python/pygobject
+	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	!minimal? (
 		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
-			dev-python/imaging
 			gtk? ( media-gfx/xsane )
-			!gtk? ( media-gfx/sane-frontends )
+			!gtk? ( || ( media-gfx/sane-frontends dev-python/imaging ) )
 		)
 		fax? (
 			dev-python/reportlab
-			sys-apps/dbus
 			dev-python/dbus-python
 		)
 		qt4? (
 			dev-python/PyQt4[dbus,X]
-			dev-python/pygobject
 			libnotify? (
 				dev-python/notify-python
 			)
@@ -99,11 +96,15 @@ src_prepare() {
 
 	# Use cups-config when checking for cupsddk
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483136
-	epatch "${FILESDIR}"/${P}-cupsddk.patch
+	epatch "${FILESDIR}"/${PN}-3.9.12-cupsddk.patch
 
 	# htmldocs are not installed under docdir/html so enable htmldir configure switch
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
 	epatch "${FILESDIR}"/${PN}-3.9.10-htmldir.patch
+
+	# Increase systray check timeout for slower machines
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/335662
+	epatch "${FILESDIR}"/${PN}-3.9.12-systray.patch
 
 	# SYSFS deprecated but kept upstream for compatibility reasons
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
@@ -124,18 +125,6 @@ src_prepare() {
 		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | gzip > ${i}.temp || die
 		mv ${i}.temp ${i}
 	done
-
-	local qt_ver
-	if use qt4 ; then
-		qt_ver="4"
-		sed -i \
-			-e "s/%s --force-startup/%s --force-startup --qt${qt_ver}/" \
-			-e "s/'--force-startup'/'--force-startup', '--qt${qt_ver}'/" \
-			base/device.py || die
-		sed -i \
-			-e "s/Exec=hp-systray/Exec=hp-systray --qt${qt_ver}/" \
-			hplip-systray.desktop.in || die
-	fi
 
 	eautoreconf
 }
@@ -230,19 +219,6 @@ src_install() {
 	# Installed by sane-backends
 	# Gentoo Bug: #201023
 	rm -f "${D}"/etc/sane.d/dll.conf || die
-
-	# kde3 autostart hack
-	if [[ -d /usr/kde/3.5/share/autostart ]] && use !minimal ; then
-		insinto /usr/kde/3.5/share/autostart
-		doins hplip-systray.desktop || die
-	fi
-}
-
-pkg_preinst() {
-	# avoid collisions with cups-1.2 compat symlinks
-	if [ -e "${ROOT}"/usr/lib/cups/backend/hp ] && [ -e "${ROOT}"/usr/libexec/cups/backend/hp ] ; then
-		rm "${ROOT}"/usr/libexec/cups/backend/hp{,fax} || die
-	fi
 }
 
 pkg_postinst() {
