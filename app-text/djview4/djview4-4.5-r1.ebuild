@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.5-r1.ebuild,v 1.1 2010/02/01 07:35:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.5-r1.ebuild,v 1.2 2010/02/28 22:00:44 pva Exp $
 
 EAPI=2
 
-inherit autotools versionator qt4 toolchain-funcs multilib nsplugins fdo-mime flag-o-matic
+inherit eutils autotools versionator qt4 toolchain-funcs multilib nsplugins fdo-mime flag-o-matic
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
 
@@ -30,6 +30,7 @@ src_prepare() {
 	# Force XEmbed instead of Xt-based mainloop (disable Xt autodep)
 	sed -e 's:\(ac_xt=\)yes:\1no:' -i configure* || die
 	sed 's/AC_CXX_OPTIMIZE/OPTS=;AC_SUBST(OPTS)/' -i configure.ac || die #263688
+	epatch "${FILESDIR}/${P}-libtool.patch"
 	rm aclocal.m4 config/{libtool.m4,ltmain.sh,install-sh}
 	AT_M4DIR="config" eautoreconf
 }

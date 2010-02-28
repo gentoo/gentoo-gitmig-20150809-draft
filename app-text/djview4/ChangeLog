@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djview4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.23 2010/02/01 07:35:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.24 2010/02/28 22:00:44 pva Exp $
+
+  28 Feb 2010; Peter Volkov <pva@gentoo.org> djview4-4.5-r1.ebuild,
+  +files/djview4-4.5-libtool.patch:
+  Fix build issue witu USE=-nsplugin, bug #305949, thank Roman Sergeev for
+  report.
 
 *djview4-4.5-r1 (01 Feb 2010)
 
