@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.7 2010/01/09 20:51:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.8 2010/02/28 11:07:44 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_configure() {
-	python config.py -auto
+	"$(PYTHON -f)" config.py -auto
 	sed -i -e 's:X11R6/lib:lib64:g' Setup
 	use X || sed -i -e 's:scrap :#scrap :' Setup
 }
