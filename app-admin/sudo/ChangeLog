@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.210 2010/02/28 15:23:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.211 2010/02/28 18:02:28 jer Exp $
+
+  28 Feb 2010; Jeroen Roovers <jer@gentoo.org> sudo-1.7.2_p4.ebuild:
+  Stable for HPPA (bug #306865).
 
   28 Feb 2010; Brent Baude <ranger@gentoo.org> sudo-1.7.2_p4.ebuild:
   Marking sudo-1.7.2_p4 ppc64 for bug 306865
