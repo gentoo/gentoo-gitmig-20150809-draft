@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.7.0.ebuild,v 1.5 2010/02/28 01:32:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.9.0.ebuild,v 1.1 2010/02/28 01:32:20 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -15,11 +15,11 @@ SRC_URI="mirror://sourceforge/javagroups/${MY_P}.src.zip"
 HOMEPAGE="http://www.jgroups.org/javagroupsnew/docs/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 RDEPEND=">=virtual/jre-1.5
 	dev-java/bsh:0
-	dev-java/commons-logging:0
+	dev-java/log4j:0
 	java-virtuals/jmx"
 
 DEPEND=">=virtual/jdk-1.5
@@ -29,11 +29,14 @@ DEPEND=">=virtual/jdk-1.5
 S=${WORKDIR}/${MY_P}.src
 
 java_prepare() {
+	# bug #305929
+	epatch "${FILESDIR}/2.9.0-ant-1.8-compat.patch"
+
 	cd "${S}/lib" || die
 	rm -v *.jar || die
 
 	java-pkg_jar-from bsh
-	java-pkg_jar-from commons-logging
+	java-pkg_jar-from log4j
 	java-pkg_jar-from --virtual jmx
 
 	# Needed for unit tests

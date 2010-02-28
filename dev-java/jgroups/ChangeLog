@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jgroups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.30 2010/01/15 20:33:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.31 2010/02/28 01:32:20 caster Exp $
+
+*jgroups-2.9.0 (28 Feb 2010)
+
+  28 Feb 2010; Vlastimil Babka <caster@gentoo.org> -files/2.4.1-jdk4.patch,
+  +files/2.9.0-ant-1.8-compat.patch, jgroups-2.7.0.ebuild,
+  +jgroups-2.9.0.ebuild:
+  Version bump. Fix building with ant-1.8 - bug #305929. Use java_prepare.
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> jgroups-2.7.0.ebuild:
   Add prefix keywords
