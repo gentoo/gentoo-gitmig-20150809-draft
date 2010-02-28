@@ -1,6 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.14 2009/12/13 23:20:34 remi Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.15 2010/02/28 22:48:46 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (28 Feb 2010)
+# app-accessibility/flite does not work (bug #307241)
+flite
 
 # Jeroen Roovers <jer@gentoo.org> (4 Aug 2009)
 # net-misc/wicd and sys-power/pm-utils are currently not supported (bug #280312)
