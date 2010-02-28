@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.0.ebuild,v 1.3 2010/02/28 11:53:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.0.ebuild,v 1.4 2010/02/28 11:54:53 ssuominen Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="data compression algorithm for bi-level high-resolution images"
 HOMEPAGE="http://www.cl.cam.ac.uk/~mgk25/jbigkit/"
