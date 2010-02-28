@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.7.13.ebuild,v 1.1 2010/02/10 18:48:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.7.13.ebuild,v 1.2 2010/02/28 00:43:09 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -31,7 +31,12 @@ RDEPEND=">=media-libs/libsdl-1.2.7[video,X]
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	!dedicated? (
-		tinygui? ( media-gfx/imagemagick[jpeg,png] )
+		tinygui? (
+			|| (
+				media-gfx/imagemagick[jpeg,png]
+				media-gfx/graphicsmagick[imagemagick,jpeg,png]
+			)
+		)
 	)
 	sys-devel/gettext"
 
