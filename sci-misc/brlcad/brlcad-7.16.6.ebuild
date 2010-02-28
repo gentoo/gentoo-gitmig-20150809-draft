@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6.ebuild,v 1.2 2010/02/26 21:55:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6.ebuild,v 1.3 2010/02/28 03:35:06 bicatali Exp $
 
 EAPI=2
 inherit eutils java-pkg-opt-2
@@ -40,6 +40,8 @@ src_prepare() {
 	#a full and slow autoreconf of many directories
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-stl-headers.patch
+	# hack for 7.16.6 only (bug #307061)
+	sed -i -e 's/-Werror//g' configure || die
 }
 
 src_configure() {
