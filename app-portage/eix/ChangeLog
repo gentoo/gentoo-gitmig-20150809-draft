@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.322 2010/02/16 21:11:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.323 2010/02/28 15:29:25 ranger Exp $
+
+  28 Feb 2010; Brent Baude <ranger@gentoo.org> eix-0.19.2.ebuild:
+  Marking eix-0.19.2 ppc64 for bug 300861
 
   16 Feb 2010; Christian Faulhammer <fauli@gentoo.org> eix-0.19.2.ebuild:
   stable x86, bug 300861
