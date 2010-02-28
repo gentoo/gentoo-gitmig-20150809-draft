@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.17 2010/01/11 17:17:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.18 2010/02/28 12:45:14 arfrever Exp $
 
 EAPI="2"
-PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils multilib python toolchain-funcs
