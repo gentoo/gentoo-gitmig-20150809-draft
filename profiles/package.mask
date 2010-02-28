@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11269 2010/02/28 11:50:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11270 2010/02/28 14:45:03 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -107,33 +107,6 @@ kde-misc/kopete-cryptography
 # gtk+-2.18 and nobody want to maintain it (#292211)
 # Masked for removal in 60 days
 x11-libs/gtk+extra
-
-# Vlastimil Babka <caster@gentoo.org> (21 Feb 2010)
-# Masked for atomic bump and testing, bug #305929
-~dev-java/ant-core-1.8.0
-~dev-java/ant-antlr-1.8.0
-~dev-java/ant-apache-bcel-1.8.0
-~dev-java/ant-apache-bsf-1.8.0
-~dev-java/ant-apache-log4j-1.8.0
-~dev-java/ant-apache-oro-1.8.0
-~dev-java/ant-apache-regexp-1.8.0
-~dev-java/ant-apache-resolver-1.8.0
-~dev-java/ant-apache-xalan2-1.8.0
-~dev-java/ant-commons-logging-1.8.0
-~dev-java/ant-commons-net-1.8.0
-~dev-java/ant-jai-1.8.0
-~dev-java/ant-javamail-1.8.0
-~dev-java/ant-jdepend-1.8.0
-~dev-java/ant-jmf-1.8.0
-~dev-java/ant-jsch-1.8.0
-~dev-java/ant-junit-1.8.0
-~dev-java/ant-junit4-1.8.0
-~dev-java/ant-nodeps-1.8.0
-~dev-java/ant-swing-1.8.0
-~dev-java/ant-testutil-1.8.0
-~dev-java/ant-trax-1.8.0
-~dev-java/ant-1.8.0
-
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 Feb 2010)
 # Pre-releases
@@ -291,14 +264,6 @@ dev-ruby/activerecord-jdbc
 # Obsoleted by xorg-server-1.6
 # Let us know in bugs if you have some issues with 1.6
 <x11-base/xorg-server-1.6.0
-
-# Vlastimil Babka <caster@gentoo.org> (23 Jan 2010)
-# Time to go due to EOL and security, bug #287615.
-# Will be moved to java-overlay in 30 days.
-=dev-java/ibm-jdk-bin-1.4*
-=dev-java/jrockit-jdk-bin-1.4*
-=virtual/jdk-1.4*
-=virtual/jre-1.4*
 
 # Matthias Schwarzott <zzam@gentoo.org> (22 Jan 2010)
 # since long time included in media-tv/gentoo-vdr-scripts
