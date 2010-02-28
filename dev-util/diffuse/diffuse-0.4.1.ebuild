@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.1.ebuild,v 1.3 2010/02/23 18:43:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.1.ebuild,v 1.4 2010/02/28 14:37:08 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ src_prepare() {
 }
 
 src_install() {
-	"$(PYTHON -A)" install.py \
+	"$(PYTHON)" install.py \
 		--prefix=/usr \
 		--files-only \
 		--destdir="${D}" \
