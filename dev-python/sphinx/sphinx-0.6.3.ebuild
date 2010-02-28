@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.3.ebuild,v 1.12 2009/12/20 12:27:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.3.ebuild,v 1.13 2010/02/28 10:51:15 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,20 +25,18 @@ RDEPEND=">=dev-python/pygments-0.8
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/nose )"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
+DOCS="CHANGES"
+
 src_compile() {
-	DOCS="CHANGES"
 	distutils_src_compile
 
 	if use doc; then
 		cd doc
-		PYTHONPATH="../" emake \
-			SPHINXBUILD="${python} ../sphinx-build.py" \
-			html || die "making docs failed"
+		PYTHONPATH="../" emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die "Generation of documentation failed"
 	fi
 }
 
@@ -53,7 +51,7 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -A txt -r doc/_build/html/* || die
+		dohtml -A txt -r doc/_build/html/* || die "dohtml failed"
 	fi
 }
 
