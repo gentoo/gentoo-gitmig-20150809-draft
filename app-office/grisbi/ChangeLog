@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.37 2010/02/27 09:44:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.38 2010/02/28 19:04:16 nixnut Exp $
+
+  28 Feb 2010; nixnut <nixnut@gentoo.org> grisbi-0.6.0_rc2.ebuild:
+  ppc stable #306033
 
   27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   grisbi-0.6.0_rc2.ebuild:
