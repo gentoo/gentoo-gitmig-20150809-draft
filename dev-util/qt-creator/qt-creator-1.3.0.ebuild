@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.0.ebuild,v 1.4 2010/01/06 10:05:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.0.ebuild,v 1.5 2010/02/28 19:58:27 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -15,7 +15,7 @@ SRC_URI="http://get.qt.nokia.com/${MY_PN}/${P}-src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="bineditor bookmarks +cmake cvs debug +debugger +designer doc examples fakevim git kde mercurial perforce qtscript subversion"
+IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git kde mercurial perforce qtscript subversion"
 
 DEPEND=">=x11-libs/qt-assistant-4.6.0:4
 	>=x11-libs/qt-gui-4.6.0:4[dbus,qt3support]"
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}
 	qtscript? ( >=x11-libs/qt-script-4.6.0:4 )
 	subversion? ( dev-util/subversion )"
 
-PLUGINS="bookmarks bineditor cmake cvs debugger designer fakevim git mercurial perforce qtscript subversion"
+PLUGINS="bookmarks bineditor cmake cvs designer fakevim git mercurial perforce qtscript subversion"
 
 src_prepare() {
 	qt4_src_prepare
