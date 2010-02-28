@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.51 2010/01/07 22:31:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.52 2010/02/28 18:59:22 nixnut Exp $
+
+  28 Feb 2010; nixnut <nixnut@gentoo.org> optipng-0.6.3.ebuild:
+  ppc stable #306359
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> optipng-0.6.3.ebuild:
   Transfer Prefix keywords
