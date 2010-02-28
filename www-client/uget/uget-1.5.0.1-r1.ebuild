@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.1-r1.ebuild,v 1.5 2010/02/26 11:45:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.1-r1.ebuild,v 1.6 2010/02/28 18:58:01 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gstreamer libnotify nls"
 
 RDEPEND="
