@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.195 2010/02/09 21:47:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.196 2010/02/28 15:19:57 chainsaw Exp $
+
+*audacious-2.3_beta1 (28 Feb 2010)
+
+  28 Feb 2010; <chainsaw@gentoo.org> +audacious-2.3_beta1.ebuild:
+  First 2.3 beta; now unmasked so ~arch users can join in on the fun. Bug
+  reports upstream please.
 
 *audacious-2.3_alpha2 (09 Feb 2010)
 
