@@ -45,7 +45,7 @@ start() {
 	local args=""
 	# If the config file does not specify the cd option, we do
 	# But if we specify it, we override the config option which we do not want
-	if ! grep -q "^[ \t]*cd[ \t].*" "${VPNCONF}" ; then
+	if ! grep -q "^[ 	]*cd[ 	].*" "${VPNCONF}" ; then
 		args="${args} --cd ${VPNDIR}"
 	fi
 
