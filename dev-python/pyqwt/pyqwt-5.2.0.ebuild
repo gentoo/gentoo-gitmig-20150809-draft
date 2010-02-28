@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.4 2010/02/07 03:07:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.5 2010/02/28 12:33:09 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit flag-o-matic python
 

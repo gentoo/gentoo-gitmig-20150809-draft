@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.ebuild,v 1.2 2010/01/20 00:13:26 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.ebuild,v 1.3 2010/02/28 12:31:17 arfrever Exp $
 
 EAPI="2"
-PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit qt4-r2 python toolchain-funcs
@@ -136,7 +136,7 @@ src_configure() {
 }
 
 src_compile() {
-	python_execute_function -d -s
+	python_src_compile
 }
 
 src_install() {
