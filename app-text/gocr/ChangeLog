@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gocr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.59 2010/02/22 20:58:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.60 2010/02/28 20:08:37 billie Exp $
+
+*gocr-0.48 (28 Feb 2010)
+
+  28 Feb 2010; Daniel Pielmeier <billie@gentoo.org> +gocr-0.48.ebuild:
+  Verson bump.
 
   22 Feb 2010; Jonathan Callen <abcd@gentoo.org> gocr-0.47.ebuild:
   Transfer prefix keywords, bump EAPI
