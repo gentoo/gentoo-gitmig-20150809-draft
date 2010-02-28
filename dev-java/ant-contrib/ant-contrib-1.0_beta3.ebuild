@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta3.ebuild,v 1.6 2010/01/23 14:39:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta3.ebuild,v 1.7 2010/02/28 12:02:54 caster Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -8,7 +8,7 @@ WANT_ANT_TASKS="ant-ivy"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="The Ant-Contrib project is a collection of tasks (and at one point maybe types and other tools) for Apache Ant."
+DESCRIPTION="A collection of tasks (and at one point maybe types and other tools) for Apache Ant."
 HOMEPAGE="http://ant-contrib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ant-contrib/${PN}-${PV/_beta/b}-src.tar.bz2"
 LICENSE="Apache-2.0"
@@ -40,7 +40,7 @@ root.append(et.Element('path',id='compile.classpath'))
 skip=['resolve','classpath']
 for target in tree.getiterator("target"):
 	if target.attrib['name'] in skip:
-		target.attrib['if'] = 'true'
+		target.attrib['if'] = 'false'
 
 tree.write('build.xml')
 EOF
