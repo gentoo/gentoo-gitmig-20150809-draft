@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r4.ebuild,v 1.6 2010/02/28 14:35:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.8.0-r1.ebuild,v 1.1 2010/02/28 14:35:43 caster Exp $
 
-EAPI="2"
+EAPI="3"
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
 # rewriting build.xml files for the testcases has no reason atm
 JAVA_PKG_BSFIX_ALL=no
 JAVA_PKG_IUSE="doc source"
-inherit java-pkg-2 java-ant-2
+inherit eutils java-pkg-2 java-ant-2 prefix
 
 MY_P="apache-ant-${PV}"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://apache/ant/source/${MY_P}-src.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
@@ -34,8 +34,8 @@ src_prepare() {
 	# remove bundled xerces
 	rm -v lib/*.jar || die
 
-	epatch "${WORKDIR}/patches/1.7.1-pkg-info.patch"
-	epatch "${WORKDIR}/patches/1.7.1-jdk4-javadoc.patch"
+	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches/"
+	eprefixify "${WORKDIR}/ant"
 
 	# use our split-ant build.xml
 	mv -f "${WORKDIR}/build.xml" . || die
@@ -71,7 +71,7 @@ src_install() {
 
 	dobin "${WORKDIR}/ant" || die "failed to install wrapper"
 	dodir /usr/share/${PN}/bin
-	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
+	for each in antRun antRun.pl runant.pl runant.py complete-ant-cmd.pl ; do
 		dobin "${S}/src/script/${each}"
 		dosym /usr/bin/${each} /usr/share/${PN}/bin/${each}
 	done
@@ -81,13 +81,12 @@ src_install() {
 	doins -r dist/etc
 	dosym /usr/share/${PN}/etc /usr/share/ant/etc
 
-	echo "ANT_HOME=\"/usr/share/ant\"" > "${T}/20ant"
+	echo "ANT_HOME=\"${EPREFIX}/usr/share/ant\"" > "${T}/20ant"
 	doenvd "${T}/20ant" || die "failed to install env.d file"
 
-	dodoc README WHATSNEW KEYS
+	dodoc NOTICE README WHATSNEW KEYS || die
 
 	if use doc; then
-		dohtml welcome.html
 		dohtml -r docs/*
 		java-pkg_dojavadoc --symlink manual/api build/javadocs
 	fi

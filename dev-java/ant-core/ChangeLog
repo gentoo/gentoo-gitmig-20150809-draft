@@ -1,10 +1,21 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.101 2010/02/21 00:34:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.102 2010/02/28 14:35:43 caster Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+*ant-core-1.8.0-r1 (28 Feb 2010)
+*ant-core-1.7.1-r5 (28 Feb 2010)
+
+  28 Feb 2010; Vlastimil Babka <caster@gentoo.org> -files/1.7.1-ant-r1,
+  +ant-core-1.7.1-r5.ebuild, -files/1.7.1-jdk4-javadoc.patch,
+  +ant-core-1.8.0-r1.ebuild, -files/1.7.1-pkg-info.patch,
+  ant-core-1.7.1-r4.ebuild:
+  Revbump to apply prefix changes from bug #306425 by Fabian Groffen
+  <grobian@gentoo.org>. Put everything from FILESDIR into the gentoo
+  distfiles.
 
 *ant-core-1.8.0 (21 Feb 2010)
 
