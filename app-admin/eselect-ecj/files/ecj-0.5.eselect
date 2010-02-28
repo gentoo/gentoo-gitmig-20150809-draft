@@ -1,7 +1,7 @@
 # -*-eselect-*-  vim: ft=eselect
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ecj-0.5.eselect,v 1.1 2010/02/28 18:52:00 ulm Exp $
+# $Id: ecj-0.5.eselect,v 1.2 2010/02/28 19:24:35 ulm Exp $
 
 DESCRIPTION="Manage ECJ targets"
 MAINTAINER="java@gentoo.org"
@@ -50,8 +50,7 @@ get_target() {
 set_symlink() {
 	local target=$(find_target "${1}")
 	remove_symlink
-	ln -s "${EROOT}/usr/bin/${target}" "${ECJ}" || \
-		die "Couldn't set ${target} symlink."
+	ln -s "${target}" "${ECJ}" || die "Couldn't set ${target} symlink."
 }
 
 ### show action ###
