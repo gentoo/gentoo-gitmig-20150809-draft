@@ -1,9 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.2.2.ebuild,v 1.5 2009/11/08 20:09:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.2.2.ebuild,v 1.6 2010/02/28 22:24:11 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
@@ -17,10 +19,9 @@ SRC_URI="http://cheeseshop.python.org/packages/source/${MY_P:0:1}/${MY_PN}/${MY_
 LICENSE="PSF-2.4"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="doc test"
+IUSE="doc"
 
-DEPEND="dev-python/setuptools
-	test? ( dev-python/nose )"
+DEPEND="dev-python/setuptools"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -34,10 +35,7 @@ src_prepare() {
 }
 
 src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" LC_ALL="C" nosetests-${PYTHON_ABI}
-	}
-	python_execute_function testing
+	LC_ALL="C" distutils_src_test
 }
 
 src_install() {
