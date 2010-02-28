@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/mpi-dotnet-1.0.0.ebuild,v 1.2 2009/05/11 22:15:32 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/mpi-dotnet-1.0.0.ebuild,v 1.3 2010/02/28 22:12:10 mabi Exp $
 
 WANT_AUTOTOOLS="2.5"
 inherit autotools mono
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples"
 
 RDEPEND="virtual/mpi
+		!sys-cluster/lam-mpi
 		>=dev-lang/mono-2.0"
 DEPEND="${RDEPEND}
 		dev-lang/perl"
