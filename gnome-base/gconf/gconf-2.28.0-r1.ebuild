@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.28.0-r1.ebuild,v 1.1 2009/11/04 21:43:37 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.28.0-r1.ebuild,v 1.2 2010/02/28 19:01:15 armin76 Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sparc ~x86"
 IUSE="debug doc ldap policykit"
 
 RDEPEND=">=dev-libs/glib-2.14
