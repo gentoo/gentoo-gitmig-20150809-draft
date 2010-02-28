@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.90 2010/02/28 11:48:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.91 2010/02/28 15:49:33 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1479,25 +1479,6 @@ python_convert_shebangs() {
 	done
 }
 
-# @FUNCTION: python_mod_exists
-# @USAGE: <module>
-# @DESCRIPTION:
-# Run with the module name as an argument. It will check if a
-# Python module is installed and loadable. It will return
-# TRUE(0) if the module exists, and FALSE(1) if the module does
-# not exist.
-#
-# Example:
-#         if python_mod_exists gtk; then
-#             echo "gtk support enabled"
-#         fi
-python_mod_exists() {
-	if [[ "$#" -ne 1 ]]; then
-		die "${FUNCNAME}() requires 1 argument"
-	fi
-	"$(PYTHON ${PYTHON_ABI})" -c "import $1" &> /dev/null
-}
-
 # ================================================================================================
 # ================================ FUNCTIONS FOR RUNNING OF TESTS ================================
 # ================================================================================================
@@ -2010,6 +1991,30 @@ python_version() {
 		export PYVER_MICRO="${PYVER_ALL:4}"
 	fi
 	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+}
+
+# @FUNCTION: python_mod_exists
+# @USAGE: <module>
+# @DESCRIPTION:
+# Run with the module name as an argument. It will check if a
+# Python module is installed and loadable. It will return
+# TRUE(0) if the module exists, and FALSE(1) if the module does
+# not exist.
+#
+# Example:
+#         if python_mod_exists gtk; then
+#             echo "gtk support enabled"
+#         fi
+python_mod_exists() {
+	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+		eerror "Use USE dependencies and/or has_version() instead of ${FUNCNAME}()."
+		die "${FUNCNAME}() cannot be used in this EAPI"
+	fi
+
+	if [[ "$#" -ne 1 ]]; then
+		die "${FUNCNAME}() requires 1 argument"
+	fi
+	"$(PYTHON ${PYTHON_ABI})" -c "import $1" &> /dev/null
 }
 
 # @FUNCTION: python_tkinter_exists
