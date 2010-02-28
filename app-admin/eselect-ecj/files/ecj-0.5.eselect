@@ -1,10 +1,11 @@
+# -*-eselect-*-  vim: ft=eselect
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ecj-0.4.eselect,v 1.1 2010/02/28 18:11:03 abcd Exp $
+# $Id: ecj-0.5.eselect,v 1.1 2010/02/28 18:52:00 ulm Exp $
 
 DESCRIPTION="Manage ECJ targets"
-MAINTAINER="chewi@aura-online.co.uk"
-VERSION="0.4"
+MAINTAINER="java@gentoo.org"
+VERSION="0.5"
 
 ECJ="${EROOT}/usr/bin/ecj"
 
@@ -24,7 +25,7 @@ find_target() {
 	if is_number "${target}" && [[ ${target} -ge 1 ]] ; then
 		targets=( $(find_targets ) )
 		[[ -z "${targets}" ]] && die -q "No targets found!"
-		target=${targets[$(( ${target} - 1 ))]}
+		target=${targets[target-1]}
 	fi
 
 	if [[ "${target}" = ecj-[0-9]* ]] && [[ -f "${EROOT}/usr/bin/${target}" ]] ; then
@@ -90,23 +91,13 @@ do_list() {
 	local i targets
 	targets=( $(find_targets) )
 
-	if [[ -n ${targets[@]} ]] ; then
-		local canonicalised basename
+	for (( i = 0; i < ${#targets[@]}; i++ )); do
+		[[ ${targets[i]} = $(basename "$(canonicalise "${ECJ}")") ]] \
+			&& targets[i]=$(highlight_marker "${targets[i]}")
+	done
 
-		for (( i = 0 ; i < ${#targets[@]} ; i = i + 1 )) ; do
-			canonicalised=$(canonicalise "${ECJ}")
-			basename=$(basename "${canonicalised}")
-
-			if [[ "${targets[${i}]}" = "${basename}" ]] ; then
-				targets[${i}]="${targets[${i}]} $(highlight '*')"
-			fi
-		done
-
-		write_list_start "Available ECJ targets:"
-		write_numbered_list "${targets[@]}"
-	else
-		write_kv_list_entry "(none found)" ""
-	fi
+	write_list_start "Available ECJ targets:"
+	write_numbered_list -m "(none found)" "${targets[@]}"
 }
 
 ### set action ###
@@ -183,5 +174,3 @@ do_update() {
 		fi
 	fi
 }
-
-# vim: set ft=eselect :
