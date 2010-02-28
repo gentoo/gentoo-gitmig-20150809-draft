@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-unison
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.9 2009/11/22 17:39:04 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.10 2010/02/28 20:39:53 abcd Exp $
+
+*eselect-unison-0.3 (28 Feb 2010)
+
+  28 Feb 2010; Jonathan Callen <abcd@gentoo.org> +files/unison.eselect-0.3,
+  +eselect-unison-0.3.ebuild:
+  Version bump to add prefix support
 
 *eselect-unison-0.2 (22 Nov 2009)
 
