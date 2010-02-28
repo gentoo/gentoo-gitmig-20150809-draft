@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.18 2010/02/28 22:31:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.19 2010/02/28 23:50:31 williamh Exp $
 
 EAPI="2"
 PATCHVER=1
@@ -69,7 +69,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "You have disabled espeak, which is speech-dispatcher's"
 		ewarn "default speech synthesizer."
-		ewarn "You must edit ${ROOT}etc/speechd/speechd.conf"
+		ewarn "You must edit ${ROOT}/etc/speechd/speechd.conf"
 	fi
 	elog
 	elog "To enable Festival support, you must install app-accessibility/festival-freebsoft-utils."
