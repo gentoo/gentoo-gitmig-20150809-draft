@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.19 2009/12/26 00:44:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.20 2010/02/28 02:18:15 sping Exp $
 
 EAPI=2
 
@@ -163,7 +163,7 @@ src_prepare() {
 	#epatch "${FILESDIR}"/20090505-git-1.6.2.5-getopt-fixes.patch
 
 	# JS install fixup
-	epatch "${FILESDIR}"/git-1.6.6-always-install-js.patch
+	epatch "${FILESDIR}"/git-1.7.0-always-install-js.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.396 2010/02/13 18:37:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.397 2010/02/28 02:18:15 sping Exp $
+
+  28 Feb 2010; Sebastian Pipping <sping@gentoo.org> git-9999.ebuild:
+  Sync live ebuild with latest (bug #305157)
 
 *git-1.7.0 (13 Feb 2010)
 
