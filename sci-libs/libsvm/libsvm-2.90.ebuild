@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.90.ebuild,v 1.1 2010/02/10 21:21:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.90.ebuild,v 1.2 2010/02/28 13:54:32 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,7 +29,7 @@ S="${WORKDIR}"/${MY_P}
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-fpic.patch
 	epatch "${FILESDIR}"/${PV}-ldflags.patch
-	python_copy_sources --no-link
+	python_copy_sources
 }
 
 src_compile() {
