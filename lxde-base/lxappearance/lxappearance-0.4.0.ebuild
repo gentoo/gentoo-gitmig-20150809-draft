@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/lxappearance-0.4.0.ebuild,v 1.6 2010/02/25 10:14:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/lxappearance-0.4.0.ebuild,v 1.7 2010/02/28 18:33:33 nixnut Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"

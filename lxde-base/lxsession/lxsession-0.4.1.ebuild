@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.1.ebuild,v 1.5 2010/02/25 10:17:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.1.ebuild,v 1.6 2010/02/28 18:36:07 nixnut Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 arm ~ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 SLOT="0"
 IUSE="+hal"
 

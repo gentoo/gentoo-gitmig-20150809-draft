@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/lxde-common-0.5.0.ebuild,v 1.5 2010/02/25 10:12:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/lxde-common-0.5.0.ebuild,v 1.6 2010/02/28 18:34:40 nixnut Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"

@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.19 2010/02/25 10:16:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.20 2010/02/28 18:35:47 nixnut Exp $
+
+  28 Feb 2010; nixnut <nixnut@gentoo.org> lxpanel-0.5.5.ebuild:
+  ppc stable #306433
 
   25 Feb 2010; Christian Faulhammer <fauli@gentoo.org> lxpanel-0.5.5.ebuild:
   stable x86, bug 306433

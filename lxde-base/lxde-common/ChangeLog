@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.13 2010/02/25 10:12:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.14 2010/02/28 18:34:40 nixnut Exp $
+
+  28 Feb 2010; nixnut <nixnut@gentoo.org> lxde-common-0.5.0.ebuild:
+  ppc stable #306433
 
   25 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   lxde-common-0.5.0.ebuild:
