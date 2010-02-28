@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.171 2010/01/11 19:04:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.172 2010/02/28 17:40:02 jer Exp $
+
+*sysstat-9.1.1 (28 Feb 2010)
+*sysstat-9.0.6.1 (28 Feb 2010)
+
+  28 Feb 2010; Jeroen Roovers <jer@gentoo.org> +sysstat-9.0.6.1.ebuild,
+  +sysstat-9.1.1.ebuild:
+  Version bumps.
 
   11 Jan 2010; Jeroen Roovers <jer@gentoo.org> -sysstat-9.0.5.ebuild:
   Remove old.
