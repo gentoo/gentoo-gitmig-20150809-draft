@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.61 2010/02/25 00:22:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.62 2010/02/28 10:43:09 pva Exp $
+
+  28 Feb 2010; Peter Volkov <pva@gentoo.org> opal-3.6.7.ebuild,
+  +files/opal-3.6.7-celt-0.7-update.patch:
+  Fixed build issue with newer celt codec, #300629 thank Matti Nykyri for
+  report and Stefan Knoblich for this fix. Updated ptlib dep, bug #306141,
+  thank Andrey Grozin for report.
 
   25 Feb 2010; Robin H. Johnson <robbat2@gentoo.org> opal-3.6.7.ebuild:
   Latest opal requires a new ptlib during configure phase: Package

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.7.ebuild,v 1.2 2010/02/25 00:22:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.7.ebuild,v 1.3 2010/02/28 10:43:09 pva Exp $
 
 EAPI="2"
 
@@ -86,6 +86,8 @@ src_prepare() {
 
 	# upstream patch 2808915
 	epatch "${FILESDIR}"/${PN}-3.6.4-jdkroot.patch
+
+	epatch "${FILESDIR}/${P}-celt-0.7-update.patch"
 
 	# h224 really needs h323 ?
 	# TODO: get a confirmation in ml
