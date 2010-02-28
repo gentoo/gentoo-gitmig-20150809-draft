@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.51 2010/01/26 15:58:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.52 2010/02/28 03:04:54 matsuu Exp $
+
+*puppet-0.25.4 (28 Feb 2010)
+
+  28 Feb 2010; MATSUU Takuto <matsuu@gentoo.org> +puppet-0.25.4.ebuild,
+  +files/puppet-0.25.4-rrd.patch:
+  Version bumped. Fixed rrd issue, bug #294304.
 
 *puppet-0.25.3 (26 Jan 2010)
 
