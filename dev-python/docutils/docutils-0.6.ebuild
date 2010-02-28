@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.5 2010/02/06 15:58:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.6 2010/02/28 13:22:37 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -37,7 +37,7 @@ src_prepare() {
 	# Fix tests.
 	sed -e "/sys\.exit(result)/d" -i test/alltests.py || die "sed test/alltests.py failed"
 
-	python_copy_sources --no-link
+	python_copy_sources
 }
 
 src_compile() {
