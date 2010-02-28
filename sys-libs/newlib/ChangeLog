@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/newlib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.11 2008/06/09 17:20:17 lu_zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.12 2010/02/28 14:50:26 lu_zero Exp $
+
+*newlib-1.18.0 (28 Feb 2010)
+
+  28 Feb 2010; Luca Barbato <lu_zero@gentoo.org> +newlib-1.18.0.ebuild:
+  New version
 
 *newlib-1.16.0 (09 Jun 2008)
 
