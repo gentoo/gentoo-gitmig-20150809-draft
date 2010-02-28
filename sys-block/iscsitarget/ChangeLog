@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.32 2010/02/28 17:14:02 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.33 2010/02/28 17:28:09 lxnay Exp $
+
+  28 Feb 2010; Fabio Erculiani <lxnay@gentoo.org> iscsitarget-1.4.19.ebuild,
+  +files/iscsitarget-1.4.19+linux-2.6.33.patch:
+  add 2.6.33 kernel support to 1.4.19
 
   28 Feb 2010; Fabio Erculiani <lxnay@gentoo.org> iscsitarget-1.4.19.ebuild:
   KSRC= also required for 'emake usr'
