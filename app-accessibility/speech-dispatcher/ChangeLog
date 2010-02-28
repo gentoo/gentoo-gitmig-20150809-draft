@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.57 2010/02/23 15:08:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.58 2010/02/28 22:31:53 williamh Exp $
+
+  28 Feb 2010; William Hubbs <williamh@gentoo.org>
+  speech-dispatcher-0.6.7.ebuild:
+  Chris Brannon, from upstream, provided a fix for bug #305347.
+  Also, I reverted the prefix changes.
+  These need to be done via an eapi bump and revbump.
 
   23 Feb 2010; Joseph Jezak <josejx@gentoo.org>
   speech-dispatcher-0.6.7.ebuild:
