@@ -1,0 +1,11 @@
+# ChangeLog for sci-biology/psipred
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.1 2010/02/28 10:31:18 jlec Exp $
+
+*psipred-2.6.1 (28 Feb 2010)
+
+  28 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/2.6.1-Makefile.patch, +files/2.6.1-path.patch,
+  +psipred-2.6.1.ebuild, +metadata.xml:
+  moved from sci-chemistry to sci-biology
+
