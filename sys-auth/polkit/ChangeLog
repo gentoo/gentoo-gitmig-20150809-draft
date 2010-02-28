@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.7 2010/02/16 17:25:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.8 2010/02/28 18:45:06 armin76 Exp $
+
+  28 Feb 2010; Raúl Porcel <armin76@gentoo.org> polkit-0.96.ebuild:
+  Add ~alpha/~arm/~ia64/~sparc
 
   16 Feb 2010; Joseph Jezak <josejx@gentoo.org> polkit-0.96.ebuild:
   Marked ~ppc/~ppc64 for bug #296548.
