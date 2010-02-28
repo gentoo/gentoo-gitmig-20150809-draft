@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.37_p20080210.ebuild,v 1.1 2009/12/14 17:33:02 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.37_p20080210.ebuild,v 1.2 2010/02/28 17:40:00 lxnay Exp $
 
 inherit linux-mod
 
@@ -43,6 +43,8 @@ src_unpack() {
 	# Apply various fixes to make module compile with 2.6.31+ kernels
 	# thanks to Mepis
 	epatch "${FILESDIR}"/2.6.31+-mepis/*
+	# 2.6.33 patches
+	epatch "${FILESDIR}"/acx-2.6.33.patch
 
 }
 
