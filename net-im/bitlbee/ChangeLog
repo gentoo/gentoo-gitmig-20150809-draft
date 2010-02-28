@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.122 2009/11/15 13:56:01 cedk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.123 2010/02/28 15:48:42 cedk Exp $
+
+*bitlbee-1.2.4-r1 (28 Feb 2010)
+
+  28 Feb 2010; Cédric Krier <cedk@gentoo.org> +bitlbee-1.2.4-r1.ebuild,
+  +files/bitlbee.confd, +files/bitlbee.initd:
+  Replace bitlbeed init script with bitlbee for bug #301082
 
 *bitlbee-1.2.4 (15 Nov 2009)
 
