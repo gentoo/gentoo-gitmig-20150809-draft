@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.10-r1.ebuild,v 1.3 2010/02/26 19:29:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.10-r1.ebuild,v 1.4 2010/02/28 10:00:18 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -54,10 +54,8 @@ src_install() {
 	}
 	python_execute_function installation
 
-	make_desktop_entry "eric4 --nosplash" \
-			eric4 \
-			"$(python_get_sitedir -f)/eric4/icons/default/eric.png" \
-			"Development;IDE;Qt"
+	doicon eric/icons/default/eric.png
+	make_desktop_entry "eric4 --nosplash" eric4 eric "Development;IDE;Qt"
 }
 
 pkg_postinst() {
@@ -65,14 +63,14 @@ pkg_postinst() {
 
 	elog
 	elog "If you want to use eric4 with mod_python, have a look at"
-	elog "\"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric4/patch_modpython.py\"."
+	elog "\"${ROOT%/}$(python_get_sitedir -f)/eric4/patch_modpython.py\"."
 	elog
 	elog "The following packages will give eric extended functionality:"
 	elog "  dev-python/pylint"
 	elog "  dev-python/pysvn"
 	elog
 	elog "This version has a plugin interface with plugin-autofetch from"
-	elog "the App itself. You may want to check those as well."
+	elog "the application itself. You may want to check those as well."
 	elog
 }
 
