@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/simplyhtml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.21 2010/01/15 17:28:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.22 2010/02/28 10:36:37 caster Exp $
+
+  28 Feb 2010; Vlastimil Babka <caster@gentoo.org>
+  -simplyhtml-0.12.3.ebuild, -simplyhtml-0.12.5.ebuild:
+  Remove old.
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org> simplyhtml-0.13.1.ebuild:
   Marked ~x64-solaris
