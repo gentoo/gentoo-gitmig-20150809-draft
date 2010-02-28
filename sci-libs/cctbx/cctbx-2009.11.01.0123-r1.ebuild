@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2009.11.01.0123-r1.ebuild,v 1.1 2010/02/14 18:14:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2009.11.01.0123-r1.ebuild,v 1.2 2010/02/28 14:39:00 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -92,7 +92,7 @@ src_configure() {
 
 	# Precompiling python scripts. It is done in upstreams install script.
 	# Perhaps use python_mod_compile, but as this script works we should stick to it.
-	$(PYTHON -a -A) "${MY_S}/libtbx/command_line/py_compile_all.py"
+	$(PYTHON -a) "${MY_S}/libtbx/command_line/py_compile_all.py"
 
 	# Additional USE flag usage
 	check_use openmp
@@ -109,7 +109,7 @@ src_configure() {
 	myconf="${myconf} --build=release fftw3tbx rstbx smtbx mmtbx clipper"
 	einfo "configuring with ${python} ${myconf}"
 
-	$(PYTHON -a -A) ${myconf} \
+	$(PYTHON -a) ${myconf} \
 		|| die "configure failed"
 }
 
