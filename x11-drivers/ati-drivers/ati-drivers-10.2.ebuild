@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.2.ebuild,v 1.1 2010/02/23 20:55:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.2.ebuild,v 1.2 2010/02/28 17:31:48 lxnay Exp $
 
 EAPI="2"
 
@@ -225,6 +225,11 @@ src_prepare() {
 				|| die "Failed to enable debug output."
 		fi
 	fi
+
+	# 2.6.33 kernel support
+	epatch "${FILESDIR}"/ati-drivers-2.6.33.patch
+	# Fix a known compilation error
+	epatch "${FILESDIR}"/ati-drivers-fix_compilation-bug-297322.patch
 
 	# These are the userspace utilities that we also have source for.
 	# We rebuild these later.
