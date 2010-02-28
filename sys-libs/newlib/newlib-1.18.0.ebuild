@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.18.0.ebuild,v 1.1 2010/02/28 14:50:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.18.0.ebuild,v 1.2 2010/02/28 20:12:04 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -50,8 +50,8 @@ src_compile() {
 		&& myconf="--disable-newlib-hw-fp" \
 		|| myconf="--enable-newlib-hw-fp"
 	[[ ${CTARGET} == "spu" ]] \
-		&& myconf="${myconf} --disable-threads" \
-		|| myconf="${myconf} $(use_enable threads)"
+		&& myconf="${myconf} --disable-newlib-multithread" \
+		|| myconf="${myconf} $(use_enable threads newlib-multithread)"
 
 	cd "${NEWLIBBUILD}"
 
