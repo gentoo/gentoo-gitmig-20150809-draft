@@ -1,18 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.ebuild,v 1.1 2009/11/24 19:22:35 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.1.ebuild,v 1.1 2010/02/28 14:05:34 cedk Exp $
 
 EAPI=2
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="an IRC gateway to IM networks"
 HOMEPAGE="http://minbif.im/"
-SRC_URI="http://symlink.me/attachments/download/30/${P}.tar.gz"
+SRC_URI="http://symlink.me/attachments/download/39/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="libcaca gstreamer xinetd"
 
 DEPEND=">=net-im/pidgin-2.6[gstreamer?]
@@ -31,6 +31,8 @@ src_prepare() {
 		sed -i "s/type\s=\s[0-9]/type = 0/" \
 			minbif.conf || die "sed failed"
 	fi
+
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
 
 src_configure() {
