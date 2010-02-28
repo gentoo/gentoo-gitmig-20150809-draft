@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3948 2010/02/28 11:20:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3949 2010/02/28 11:50:03 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask jbigkit since all reverse deps compile and link against it.
 
   28 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask jbigkit-2.0 for testing.
