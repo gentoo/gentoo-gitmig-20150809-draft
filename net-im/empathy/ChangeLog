@@ -1,6 +1,15 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.50 2010/02/19 19:33:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.51 2010/02/28 12:44:17 nirbheek Exp $
+
+*empathy-2.28.2-r1 (28 Feb 2010)
+
+  28 Feb 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/empathy-2.28-networkmanager-0.8.patch, -empathy-2.28.1.1.ebuild,
+  -empathy-2.28.1.2.ebuild, empathy-2.28.2.ebuild,
+  +empathy-2.28.2-r1.ebuild:
+  Add patch to fix compilation with networkmanager-0.8, fixes bug 306977 .
+  also remove old versions.
 
   19 Feb 2010; Raúl Porcel <armin76@gentoo.org> empathy-2.26.2.ebuild,
   empathy-2.28.1.1.ebuild, empathy-2.28.1.2.ebuild, empathy-2.28.2.ebuild:

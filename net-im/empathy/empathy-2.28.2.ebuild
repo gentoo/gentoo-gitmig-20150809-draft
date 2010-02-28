@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.28.2.ebuild,v 1.3 2010/02/19 19:33:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.28.2.ebuild,v 1.4 2010/02/28 12:44:17 nirbheek Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	net-voip/telepathy-connection-managers
 
 	applet? ( >=gnome-base/gnome-panel-2.10 )
-	networkmanager? ( >=net-misc/networkmanager-0.7 )
+	networkmanager? ( =net-misc/networkmanager-0.7* )
 	python? (
 		>=dev-lang/python-2.4.4-r5
 		>=dev-python/pygtk-2 )

@@ -1,17 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.28.1.2.ebuild,v 1.2 2010/02/19 19:33:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.28.2-r1.ebuild,v 1.1 2010/02/28 12:44:17 nirbheek Exp $
 
 EAPI="2"
 
-inherit eutils gnome2 multilib
+inherit autotools eutils gnome2 multilib
 
 DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 # FIXME: Add location support once geoclue stops being idiotic with automagic deps
 IUSE="applet networkmanager python spell test webkit" # map
 
@@ -36,7 +36,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	net-voip/telepathy-connection-managers
 
 	applet? ( >=gnome-base/gnome-panel-2.10 )
-	networkmanager? ( >=net-misc/networkmanager-0.7 )
+	networkmanager? ( >=net-misc/networkmanager-0.8 )
 	python? (
 		>=dev-lang/python-2.4.4-r5
 		>=dev-python/pygtk-2 )
@@ -72,11 +72,11 @@ pkg_setup() {
 		--disable-static
 		--disable-location
 		--disable-gtk-doc
+		--disable-map
 		$(use_enable applet megaphone)
 		$(use_enable applet nothere)
 		$(use_enable debug)
 		$(use_with networkmanager connectivity nm)
-		$(use_enable map)
 		$(use_enable python)
 		$(use_enable spell)
 		$(use_enable test coding-style-checks)
@@ -86,6 +86,9 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	epatch "${FILESDIR}/empathy-2.28-networkmanager-0.8.patch"
+	eautoreconf
 
 	# Remove hard enabled -Werror (see AM_MAINTAINER_MODE), bug 218687
 	sed -i "s:-Werror::g" configure || die "sed 1 failed"
