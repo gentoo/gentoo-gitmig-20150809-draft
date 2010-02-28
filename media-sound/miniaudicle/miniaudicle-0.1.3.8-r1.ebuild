@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8-r1.ebuild,v 1.1 2009/08/09 14:33:34 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8-r1.ebuild,v 1.2 2010/02/28 16:53:57 cedk Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs flag-o-matic
+WX_GTK_VER=2.8
+inherit eutils toolchain-funcs flag-o-matic wxwidgets
 
 MY_P=${P/a/A}
 
@@ -19,7 +20,8 @@ IUSE="+alsa jack oss"
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	media-libs/libsndfile
-	>=x11-libs/wxGTK-2.6
+	>=x11-libs/gtk+-2.10
+	x11-libs/wxGTK:2.8[X]
 	app-admin/eselect-miniaudicle"
 DEPEND="${RDEPEND}
 	sys-devel/bison
