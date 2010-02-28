@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.2.ebuild,v 1.1 2010/01/28 15:44:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.2.ebuild,v 1.2 2010/02/28 13:43:06 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,7 +27,7 @@ src_prepare() {
 	# Don't use internal copy of dev-python/pycxx.
 	rm -fr Import
 
-	python_copy_sources --no-link
+	python_copy_sources
 
 	preparation() {
 		cd Source
