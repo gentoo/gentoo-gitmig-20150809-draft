@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_rc6.ebuild,v 1.1 2009/10/25 10:22:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_rc6.ebuild,v 1.2 2010/02/28 11:40:44 caster Exp $
 
 EAPI="2"
 
@@ -70,7 +70,7 @@ src_compile() {
 	fi
 	local gcp="$(java-pkg_getjars --with-dependencies ${gcp}):lib/bindings.jar"
 	ANT_TASKS="${WANT_ANT_TASKS} jibx xsd2jibx" eant -Djibxlibs="${jibxlibs}" \
-		-Dgentoo.classpath="${gcp}" dist browser $(use_doc doc)
+		-Dgentoo.classpath="${gcp}" -Dbasedir="${PWD}" dist browser $(use_doc doc)
 }
 
 src_install() {
