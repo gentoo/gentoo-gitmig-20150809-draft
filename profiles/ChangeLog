@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3951 2010/02/28 16:44:16 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3952 2010/02/28 17:31:34 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask sysstat 9.1.
 
   28 Feb 2010; <vostorga@gentoo.org> package.mask:
   sys-apps/sdd entry removal (pending 2010-02-26), see bug #298522 for
