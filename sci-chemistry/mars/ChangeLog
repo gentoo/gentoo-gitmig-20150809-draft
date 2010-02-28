@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mars
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/ChangeLog,v 1.2 2010/02/27 10:03:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/ChangeLog,v 1.3 2010/02/28 10:36:08 jlec Exp $
+
+  28 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> mars-1.1.3.ebuild:
+  Changed RDEPEND sci-chemistry/psipred to sci-biology/psipred
 
   27 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> mars-1.1.3.ebuild:
   Missing sci-chemistry/psipred tp DEPEND added
