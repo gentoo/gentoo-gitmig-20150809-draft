@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.6 2010/02/28 13:22:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.6.ebuild,v 1.7 2010/02/28 13:37:42 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,6 +21,7 @@ DEPEND="dev-python/setuptools"
 RDEPEND=""
 # Emacs support is in PDEPEND to avoid a dependency cycle (bug #183242)
 PDEPEND="emacs? ( || ( >=app-emacs/rst-0.4 >=virtual/emacs-23 ) )"
+RESTRICT_PYTHON_ABIS="3.*" # Bug #304641
 
 GLEP_SRC="${WORKDIR}/glep-0.4-r1"
 
