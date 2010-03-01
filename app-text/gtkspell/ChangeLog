@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.78 2010/01/02 11:20:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.79 2010/03/01 20:26:28 eva Exp $
+
+*gtkspell-2.0.16 (01 Mar 2010)
+
+  01 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtkspell-2.0.13.ebuild, -gtkspell-2.0.14.ebuild, +gtkspell-2.0.16.ebuild:
+  Version bump, bug #297731. Bug fixes and translation updates.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gtkspell-2.0.15-r1.ebuild:
