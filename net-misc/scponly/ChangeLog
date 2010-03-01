@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/scponly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.47 2010/02/25 15:54:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.48 2010/03/01 11:08:42 ssuominen Exp $
+
+  01 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> scponly-4.8-r4.ebuild:
+  amd64 stable wrt #302480
 
   25 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   scponly-4.8-r4.ebuild:
