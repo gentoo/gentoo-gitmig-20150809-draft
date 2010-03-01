@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.1.ebuild,v 1.1 2010/03/01 22:17:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.1.ebuild,v 1.2 2010/03/01 22:50:59 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -51,11 +51,8 @@ src_configure() {
 }
 
 src_test() {
-	runtest() {
-		unset DBUS_SESSION_BUS_ADDRESS
-		emake check || die
-	}
-	python_execute_function -s runtest
+	unset DBUS_SESSION_BUS_ADDRESS
+	python_src_test
 }
 
 src_install() {
