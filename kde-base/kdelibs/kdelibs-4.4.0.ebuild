@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.0.ebuild,v 1.1 2010/02/09 00:23:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.0.ebuild,v 1.2 2010/03/01 18:57:59 lxnay Exp $
 
 EAPI="2"
 
@@ -137,6 +137,11 @@ src_prepare() {
 	sed -e "s|@REPLACE_MENU_PREFIX@|${menu_prefix}|" \
 		-i kded/vfolder_menu.cpp || die "Sed on vfolder_menu.cpp failed."
 
+	# Properly place xinitrc.d file that exports XDG_MENU_PREFIX to env
+	cp "${FILESDIR}"/dist/11-xdg-menu-kde .
+	sed -e "s|@REPLACE_MENU_PREFIX@|${menu_prefix}|" \
+		-i 11-xdg-menu-kde || die "Sed on vfolder_menu.cpp failed."
+
 	if use aqua; then
 		sed -i -e \
 			"s:BUNDLE_INSTALL_DIR \"/Applications:BUNDLE_INSTALL_DIR \"${EPREFIX}/${APP_BUNDLE_DIR}:g" \
@@ -262,6 +267,11 @@ src_install() {
 			"${ED}"/${KDEDIR}/share/apps/cmake/modules/FindXKB.cmake \
 			|| die "failed fixing FindXKB.cmake"
 	fi
+
+	# Install xinitrc.d entry
+	exeinto /etc/X11/xinit/xinitrc.d/
+	doexe "${S}/11-xdg-menu-kde" || die "doexe failed"
+
 }
 
 pkg_postinst() {
