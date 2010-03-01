@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/tct-1.19.ebuild,v 1.1 2009/11/08 11:46:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/tct-1.19.ebuild,v 1.2 2010/03/01 14:51:02 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -55,7 +55,7 @@ src_install() {
 		help-when-broken-into quick-start || die "doc installation failed"
 
 	# these manual pages are provided by other packages
-	rm -f man/man1/{file,md5,icat,ils,lastcomm,timeout}.1
+	rm -f man/man1/{file,md5,icat,ils,lastcomm,timeout,mactime}.1
 	rm -f man/man5/magic.5
 	doman man/*/* || die "man installation failed"
 
