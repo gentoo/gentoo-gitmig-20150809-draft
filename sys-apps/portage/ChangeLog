@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.679 2010/02/28 18:26:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.680 2010/03/01 11:08:58 fauli Exp $
+
+  01 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  portage-2.1.7.17.ebuild:
+  stable x86, bug 307151
 
   28 Feb 2010; nixnut <nixnut@gentoo.org> portage-2.1.7.17.ebuild:
   ppc stable #307151
