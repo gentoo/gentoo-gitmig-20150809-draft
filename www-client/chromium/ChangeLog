@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.61 2010/02/27 15:50:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.62 2010/03/01 10:26:59 phajdan.jr Exp $
+
+  01 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-5.0.307.11.ebuild, chromium-5.0.335.0.ebuild,
+  chromium-9999.ebuild:
+  Add check for $ROOT in the /dev/shm sanity check wrt latest comments in
+  bug #299777.
 
 *chromium-5.0.307.11 (27 Feb 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.11.ebuild,v 1.1 2010/02/27 15:50:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.11.ebuild,v 1.2 2010/03/01 10:26:59 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -41,19 +41,21 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 pkg_setup() {
-	# Prevent user problems like bug 299777.
-	if ! grep -q /dev/shm <<< $(get_mounts); then
-		eerror "You don't have tmpfs mounted at /dev/shm."
-		eerror "${PN} isn't going to work in that configuration."
-		eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
-		eerror "run 'mount /dev/shm' and try again."
-		die "/dev/shm is not mounted"
-	fi
-	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
-		eerror "/dev/shm does not have correct permissions."
-		eerror "${PN} isn't going to work in that configuration."
-		eerror "Please run chmod 1777 /dev/shm and try again."
-		die "/dev/shm has incorrect permissions"
+	if [[ "${ROOT}" == "/" ]]; then
+		# Prevent user problems like bug 299777.
+		if ! grep -q /dev/shm <<< $(get_mounts); then
+			eerror "You don't have tmpfs mounted at /dev/shm."
+			eerror "${PN} isn't going to work in that configuration."
+			eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
+			eerror "run 'mount /dev/shm' and try again."
+			die "/dev/shm is not mounted"
+		fi
+		if [ `stat -c %a /dev/shm` -ne 1777 ]; then
+			eerror "/dev/shm does not have correct permissions."
+			eerror "${PN} isn't going to work in that configuration."
+			eerror "Please run chmod 1777 /dev/shm and try again."
+			die "/dev/shm has incorrect permissions"
+		fi
 	fi
 
 	elog "${PN} might crash occasionally. To get more useful backtraces"
