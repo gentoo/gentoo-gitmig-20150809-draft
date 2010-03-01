@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.158 2010/02/10 16:40:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.159 2010/03/01 20:35:52 phajdan.jr Exp $
+
+  01 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sip-4.10.ebuild:
+  x86 stable wrt bug #301105
 
   10 Feb 2010; Jeroen Roovers <jer@gentoo.org> sip-4.9.3-r1.ebuild:
   Stable for HPPA (bug #300713).
