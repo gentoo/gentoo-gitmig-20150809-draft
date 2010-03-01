@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5321 2010/03/01 13:07:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5322 2010/03/01 15:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2779,11 +2779,11 @@ net-voip/ekiga:shm - Enable the Shared Memory Extension from libXext
 net-voip/ekiga:static - Statically link to opal and ptlib
 net-voip/ekiga:xcap - Enable XML Configuration Access Protocal
 net-voip/linphone:video - Enable video support (display/capture)
-net-voip/telepathy-connection-managers:bonjour - Enable Link-Local Messaging via the bonjour protocol.
 net-voip/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
 net-voip/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
 net-voip/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
 net-voip/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
+net-voip/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
 net-voip/twinkle:ilbc - Enables use of ilbc (RFC3951) audio encoding
 net-voip/twinkle:zrtp - Enables use of secure rtp using the zrtp extension of GNU RTP stack developed by Phil Zimmermann 
 net-voip/yate:amrnb -  Enables Adaptive Multi-Rate Audio support (Narrow Band) 
