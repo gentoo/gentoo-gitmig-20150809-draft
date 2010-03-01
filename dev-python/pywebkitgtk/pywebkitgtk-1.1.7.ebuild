@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.7.ebuild,v 1.4 2010/02/28 12:38:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.7.ebuild,v 1.5 2010/03/01 01:40:05 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
@@ -22,13 +23,13 @@ RDEPEND="dev-python/pygobject:2
 	dev-python/sexy-python
 	x11-libs/libsexy
 	dev-libs/libxslt
-	>=net-libs/webkit-gtk-1.1.10"
+	>=net-libs/webkit-gtk-1.1.15"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
-	python_execute_function -d -s
+	python_src_install
 
 	dodoc AUTHORS MAINTAINERS NEWS README || die "dodoc failed"
 }
