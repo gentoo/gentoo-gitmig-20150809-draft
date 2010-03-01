@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.58 2010/02/17 22:48:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.59 2010/03/01 22:17:18 eva Exp $
+
+*dbus-python-0.83.1 (01 Mar 2010)
+
+  01 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +dbus-python-0.83.1.ebuild,
+  +files/dbus-python-0.83.1-workaround-broken-test.patch:
+  Version bum, bug #306329. Workaround test problems, bug #288629.
 
   17 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
   dbus-python-0.83.0-r1.ebuild:
