@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.65 2010/02/11 16:01:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.66 2010/03/01 08:35:05 phajdan.jr Exp $
+
+  01 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nas-1.9.2.ebuild:
+  x86 stable wrt bug #303715
 
   11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> nas-1.8b.ebuild,
   nas-1.9.2.ebuild:
