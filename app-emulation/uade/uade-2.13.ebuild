@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.13.ebuild,v 1.3 2010/01/24 01:41:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.13.ebuild,v 1.4 2010/03/01 22:57:12 chainsaw Exp $
 
 inherit eutils
 
@@ -11,10 +11,9 @@ SRC_URI="http://zakalwe.fi/uade/uade2/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="audacious"
+IUSE=""
 
-RDEPEND="media-libs/libao
-	audacious? ( <=media-sound/audacious-2.1 )"
+RDEPEND="media-libs/libao"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -23,7 +22,6 @@ src_compile() {
 	./configure \
 		--prefix=/usr \
 		--package-prefix="${D}" \
-		$(use_with audacious) \
 		--with-uade123 \
 		--with-text-scope \
 		--without-xmms \

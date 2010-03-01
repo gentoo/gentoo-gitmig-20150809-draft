@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/uade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.56 2010/01/24 01:41:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.57 2010/03/01 22:57:12 chainsaw Exp $
+
+  01 Mar 2010; <chainsaw@gentoo.org> -uade-2.12.ebuild, uade-2.13.ebuild,
+  metadata.xml:
+  Drop audacious USE-flag, versioned depend on old release. Remove old
+  ebuild. Herd approval by Mr_Bones_.
 
   23 Jan 2010; Brent Baude <ranger@gentoo.org> uade-2.13.ebuild:
   stable ppc, bug 299699
