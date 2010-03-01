@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openmq-cclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openmq-cclient/ChangeLog,v 1.1 2010/03/01 16:58:37 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openmq-cclient/ChangeLog,v 1.2 2010/03/01 17:19:08 haubi Exp $
+
+  01 Mar 2010; Michael Haubenwallner <haubi@gentoo.org>
+  openmq-cclient-4.4.1.ebuild, +files/openmq-cclient-4.4.1-aix-gcc.patch:
+  add fix to know gcc on AIX, keyworded ~ppc-aix
 
 *openmq-cclient-4.4.1 (01 Mar 2010)
 
