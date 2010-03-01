@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgdata
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.3 2009/12/10 22:26:15 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.4 2010/03/01 22:41:53 eva Exp $
+
+*libgdata-0.6.2 (01 Mar 2010)
+
+  01 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgdata-0.5.0.ebuild, +libgdata-0.6.2.ebuild:
+  Version bump. Enable all but failing tests.
 
 *libgdata-0.5.1 (10 Dec 2009)
 
