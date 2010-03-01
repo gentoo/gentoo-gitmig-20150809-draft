@@ -1,28 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.2_p6750.ebuild,v 1.4 2009/09/26 22:56:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.3.3.ebuild,v 1.1 2010/03/01 12:52:52 patrick Exp $
 
-MY_P=${PN/metasploit/framework}-${PV}
-
-# Metasploit uses subversion as a *normal* update mechanism for stable branches
-# of the package. This ebuild uses _p<number> inside $PV to install updated up
-# to revision <number> version of framework. For more information, take a look
-# at bug #195924.
-if [[ "${PV}" =~ (_p)([0-9]+) ]] ; then
-	inherit subversion
-	SRC_URI=""
-	MTSLPT_REV=${BASH_REMATCH[2]}
-	ESVN_REPO_URI="https://metasploit.com/svn/framework3/branches/framework-${PV%_p*}/@${MTSLPT_REV}"
-else
-	SRC_URI="http://sugar.metasploit.com/releases/${MY_P}.tar.gz"
-fi
+SRC_URI="http://www.metasploit.com/releases/framework-${PV}.tar.bz2"
 
 DESCRIPTION="Advanced open-source framework for developing, testing, and using vulnerability exploit code"
 HOMEPAGE="http://www.metasploit.org/"
 
 LICENSE="BSD"
-SLOT="3.2"
-KEYWORDS="amd64 ppc ~sparc x86"
+SLOT="3.3"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gtk sqlite postgres"
 
 # Note we use bundled gems (see data/msfweb/vendor/rails/) as upstream voted for
@@ -36,7 +23,7 @@ RDEPEND="dev-lang/ruby
 		dev-ruby/activerecord )"
 DEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/msf3
 
 src_install() {
 	if [[ "${SRC_URI}" != "" ]] ; then
@@ -55,7 +42,7 @@ src_install() {
 	dosym /usr/share/doc/${PF}/documentation /usr/lib/${PN}${SLOT}/documentation
 
 	dodir /usr/bin/
-	use gtk || rm msfgui3.2
+	use gtk || rm msfgui
 	for file in msf*; do
 		dosym /usr/lib/${PN}${SLOT}/${file} /usr/bin/${file}${SLOT}
 	done
@@ -89,9 +76,5 @@ pkg_postinst() {
 		elog "each time you reemerge ${PN} it'll be updated to get all possible"
 		elog "updates for framework-${PV%_p*} branch."
 		elog "You can do similar things in paludis using /etc/paludis/bashrc."
-	else
-		ewarn "${PN} version you installed is for testing purposes only"
-		ewarn "as it's impossible to update it. For day by day work use"
-		ewarn "different version."
 	fi
 }

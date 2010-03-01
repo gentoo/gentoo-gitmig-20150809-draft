@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/metasploit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.48 2009/09/26 23:05:40 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.49 2010/03/01 12:52:52 patrick Exp $
+
+*metasploit-3.3.3 (01 Mar 2010)
+
+  01 Mar 2010; Patrick Lauer <patrick@gentoo.org> +files/msfweb3.3.confd,
+  -metasploit-3.2_p6750.ebuild, +files/msfweb3.3.initd,
+  +metasploit-3.3.3.ebuild:
+  Bump to 3.3.3, fixes #277405 #282501 #296157
 
   26 Sep 2009; Alex Legler <a3li@gentoo.org>
   -metasploit-3.1_p5699-r1.ebuild:
