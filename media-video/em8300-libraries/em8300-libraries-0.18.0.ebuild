@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.18.0.ebuild,v 1.1 2010/02/26 16:07:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.18.0.ebuild,v 1.2 2010/03/01 16:47:57 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -10,7 +10,7 @@ MY_P=${P/-libraries}
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card libraries"
 HOMEPAGE="http://dxr3.sourceforge.net"
 SRC_URI="mirror://sourceforge/dxr3/${MY_P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/em8300-gtk-2.0.m4.tbz2"
+	mirror://gentoo/em8300-gtk-2.0.m4.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
