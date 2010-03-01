@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fluidsynth
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.57 2009/12/23 20:01:09 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.58 2010/03/01 19:05:42 jer Exp $
+
+  01 Mar 2010; Jeroen Roovers <jer@gentoo.org> fluidsynth-1.1.1.ebuild:
+  Stable for HPPA (bug #295051).
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> fluidsynth-1.1.1.ebuild:
   Marked ~hppa (bug #294508).

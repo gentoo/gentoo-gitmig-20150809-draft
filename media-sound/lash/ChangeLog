@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.31 2009/12/23 20:00:42 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.32 2010/03/01 19:03:30 jer Exp $
+
+  01 Mar 2010; Jeroen Roovers <jer@gentoo.org> lash-0.5.4-r1.ebuild:
+  Stable for HPPA (bug #295051).
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> lash-0.5.4-r1.ebuild:
   Marked ~hppa (bug #294508).
