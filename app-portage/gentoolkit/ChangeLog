@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.180 2010/03/01 19:58:04 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.181 2010/03/01 20:12:56 fuzzyray Exp $
+
+  01 Mar 2010; Paul Varner <fuzzyray@gentoo.org>
+  files/revdep-rebuild.143498.patch:
+  Fix missing quote in patch
 
 *gentoolkit-0.2.4.6-r1 (01 Mar 2010)
 
