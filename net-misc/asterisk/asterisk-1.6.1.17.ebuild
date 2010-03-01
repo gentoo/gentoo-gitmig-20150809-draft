@@ -1,20 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.4.ebuild,v 1.1 2010/02/21 20:39:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.17.ebuild,v 1.1 2010/03/01 22:07:46 chainsaw Exp $
 
 EAPI=1
-inherit eutils autotools linux-info
+inherit eutils autotools
 
 MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://downloads.digium.com/pub/asterisk/releases/${MY_P}.tar.gz"
+SRC_URI="http://downloads.digium.com/pub/telephony/asterisk/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa +caps curl dahdi debug freetds iconv jabber ldap keepsrc misdn newt nosamples oss postgres radius snmp span speex ssl sqlite static vorbis"
+IUSE="alsa +caps curl dahdi debug freetds iconv jabber ldap keepsrc misdn newt nosamples odbc oss postgres radius snmp span speex ssl sqlite static vorbis"
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
@@ -30,6 +30,7 @@ RDEPEND="sys-libs/ncurses
 	ldap?	( net-nds/openldap )
 	misdn? ( net-dialup/misdnuser )
 	newt? ( dev-libs/newt )
+	odbc? ( dev-db/unixODBC )
 	postgres? ( virtual/postgresql-base )
 	radius? ( net-dialup/radiusclient-ng )
 	snmp? ( net-analyzer/net-snmp )
@@ -45,6 +46,33 @@ DEPEND="${RDEPEND}
 	!net-misc/zaptel"
 
 S="${WORKDIR}/${MY_P}"
+
+#
+# shortcuts
+#
+
+# update from asterisk-1.0.x
+is_ast10update() {
+	return $(has_version "=net-misc/asterisk-1.0*")
+}
+
+# update from asterisk-1.2.x
+is_ast12update() {
+	return $(has_version "=net-misc/asterisk-1.2*")
+}
+
+# update from asterisk 1.4.x
+is_ast14update() {
+	return $(has_version "=net-misc/asterisk-1.4*")
+}
+
+# update in the asterisk-1.6.x line
+is_astupdate() {
+	if ! is_ast10update && ! is_ast12update && !is_ast14update; then
+		return $(has_version "<net-misc/asterisk-${PV}")
+	fi
+	return 0
+}
 
 get_available_modules() {
 	local modules mod x
@@ -62,19 +90,43 @@ get_available_modules() {
 }
 
 pkg_setup() {
+	local checkfailed=0 waitaftermsg=0
+
+	if is_ast12update ; then
+		ewarn "Please note that the configuration style (particularly the dial plan) has changed significantly."
+		ewarn "sip.conf: insecure=very -> insecure=port,invite"
+		ewarn "asterisk.conf: please familiarise yourself with [compat]"
+		ewarn "extensions.conf: use comma instead of pipe as a separator"
+		ewarn "- Please read "${ROOT}"usr/share/doc/${PF}/UPGRADE.txt.bz2 after the installation!"
+		echo
+		waitaftermsg=1
+	fi
+
+	if [[ $waitaftermsg -eq 1 ]]; then
+		einfo "Press Ctrl+C to abort"
+		echo
+		ebeep 10
+	fi
+
+	#
+	# Regular checks
+	#
+	einfo "Running some pre-flight checks..."
+	echo
+
 	if [[ -n "${ASTERISK_MODULES}" ]] ; then
 		ewarn "You are overriding ASTERISK_MODULES. We will assume you know what you are doing. There is no support for this option, try without if you see breakage."
 	fi
-	CONFIG_CHECK="~!NF_CONNTRACK_SIP"
-	local WARNING_NF_CONNTRACK_SIP="SIP (NAT) connection tracking is a module written for a single SIP client talking to a
-	remote server. It is not able to track multiple remote SIP clients registering with
-	a local server. Critical SIP packets may be dropped."
-	check_extra_config
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	#
+	# put pid file(s) into /var/run/asterisk
+	#
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1-var_rundir.patch || die "patch failed"
 
 	#
 	# fix gsm codec cflags (e.g. i586 core epias) and disable
@@ -98,20 +150,20 @@ src_unpack() {
 	# otherwise automated British Telecom line test causes permanent red alarm
 	# https://issues.asterisk.org/view.php?id=14163
 	#
-	epatch "${FILESDIR}"/1.6.2/${PN}-1.6.2.0-bt-line-test.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.6-bt-line-test.patch || die "patch failed"
 
 	#
 	# sprinkle some plus signs in strategic locations for maximum parallel make happiness
 	# https://issues.asterisk.org/view.php?id=16489
 	#
-	epatch "${FILESDIR}"/1.6.2/${PN}-1.6.2.2-parallel-make.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.14-parallel-make.patch || die "patch failed"
 
 	#
 	# do not segfault when asked to restart gracefully
 	# https://issues.asterisk.org/view.php?id=16062
 	# https://issues.asterisk.org/view.php?id=16470
 	#
-	epatch "${FILESDIR}"/1.6.2/${PN}-1.6.2.2-graceful-restart-segfault.patch
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1.14-graceful-restart-segfault.patch
 
 	#
 	# add special playback with fax detection
@@ -174,6 +226,7 @@ src_compile() {
 		$(use_with misdn suppserv) \
 		$(use_with misdn) \
 		$(use_with newt) \
+		$(use_with odbc) \
 		$(use_with oss) \
 		$(use_with postgres) \
 		$(use_with radius) \
@@ -261,6 +314,12 @@ src_install() {
 	fi
 	rm -rf "${D}"var/spool/asterisk/voicemail/default
 
+	# move sample configuration files to doc directory
+	if is_ast10update || is_ast12update || is_ast14update; then
+		einfo "Updating from old (pre-1.6) asterisk version, new configuration files have been installed"
+		einfo "into "${ROOT}"etc/asterisk, use etc-update or dispatch-conf to update them"
+	fi
+
 	einfo "Configuration samples have been moved to: "${ROOT}"/usr/share/doc/${PF}/conf"
 	insinto /usr/share/doc/${PF}/conf
 	doins "${D}"etc/asterisk/*.conf*
@@ -290,17 +349,16 @@ src_install() {
 	# copy the whole source tree to /usr/src/asterisk-${PVF} and run make clean there
 	if use keepsrc
 	then
+		einfo "keepsrc useflag enabled, copying source..."
 		dodir /usr/src
 
-		ebegin "Copying sources into /usr/src"
-		cp -dPR "${S}" "${D}"/usr/src/${PF} || die "Unable to copy sources"
+		cp -dPR "${S}" "${D}"/usr/src/${PF} || die "copying source tree failed"
+
+		ebegin "running make clean..."
+		emake -C "${D}"/usr/src/${PF} clean >/dev/null || die "make clean failed"
 		eend $?
 
-		ebegin "Cleaning source tree"
-		emake -C "${D}"/usr/src/${PF} clean &>/dev/null || die "Unable to clean sources"
-		eend $?
-
-		einfo "Clean sources are available in "${ROOT}"usr/src/${PF}"
+		einfo "Source files have been saved to "${ROOT}"usr/src/${PF}"
 	fi
 
 	# install the upgrade documentation
@@ -337,11 +395,15 @@ pkg_postinst() {
 	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
-	elog "1.6.1 -> 1.6.2 changes that you may care about:"
-	elog "canreinvite -> directmedia (sip.conf)"
-	elog "extensive T.38 (fax) changes"
-	elog "http://svn.asterisk.org/svn/${PN}/tags/${PV}/UPGRADE.txt"
-	elog "or: bzless ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.bz2"
+
+	#
+	# Warning about 1.x -> 1.6 changes...
+	#
+	if is_ast10update || is_ast12update || is_ast14update; then
+		ewarn ""
+		ewarn "- Please read "${ROOT}"usr/share/doc/${PF}/UPGRADE.txt.bz2 before continuing"
+		ewarn ""
+	fi
 }
 
 pkg_config() {
