@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.6.2.ebuild,v 1.1 2010/03/01 22:41:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.6.2.ebuild,v 1.2 2010/03/01 22:50:23 eva Exp $
 
 EAPI="2"
 
@@ -51,4 +51,14 @@ src_prepare() {
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	emake check || die "emake check failed"
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	preserve_old_lib /usr/$(get_libdir)/libgdata.so.6
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	preserve_old_lib_notify /usr/$(get_libdir)/libgdata.so.6
 }
