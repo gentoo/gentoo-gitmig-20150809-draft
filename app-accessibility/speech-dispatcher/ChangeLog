@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.60 2010/03/01 00:46:14 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.61 2010/03/01 21:05:51 patrick Exp $
+
+  01 Mar 2010; Patrick Lauer <patrick@gentoo.org>
+  speech-dispatcher-0.6.7-r1.ebuild, +files/speech-dispatcher-mutils.patch:
+  Fixing compile failure, fixes #307341. Thanks to Renato Gallo.
 
   01 Mar 2010; Jonathan Callen <abcd@gentoo.org>
   +speech-dispatcher-0.6.7-r1.ebuild:

@@ -1,0 +1,28 @@
+--- src/modules/module_utils.h  2008-07-30 10:53:07.000000000 +0200
++++ src/modules/module_utils.h.new      2010-03-01 18:28:08.000000000 +0100
+@@ -420,9 +420,9 @@
+
+
+
+-/* So that gcc doesn't complain */
++/* So that gcc doesn't complain
+ int getline(char**, size_t*, FILE*);
+-
++*/
+ pthread_mutex_t module_stdout_mutex;
+
+ int module_utils_init(void);
+
+--- src/modules/module_main.c   2008-06-27 14:29:26.000000000 +0200
++++ src/modules/module_main.c.new       2010-03-01 18:32:16.000000000 +0100
+@@ -21,8 +21,9 @@
+  * $Id: speech-dispatcher-mutils.patch,v 1.1 2010/03/01 21:05:52 patrick Exp $
+  */
+
+-/* So that gcc doesn't comply */
++/* So that gcc doesn't comply
+ int getline(char**, size_t*, FILE*);
++*/
+
+ #define PROCESS_CMD(command, function) \
+ if (!strcmp(cmd_buf, #command"\n")){ \
