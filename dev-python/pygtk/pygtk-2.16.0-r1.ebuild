@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.3 2010/01/11 16:59:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.4 2010/03/01 02:16:50 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx
@@ -20,9 +21,8 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	>=dev-libs/atk-1.12.0
 	>=x11-libs/gtk+-2.13.6
 	>=gnome-base/libglade-2.5.0
-	>=dev-lang/python-2.4.4-r5
 	>=dev-python/pycairo-1.0.2
-	>=dev-python/pygobject-2.15.3
+	>=dev-python/pygobject-2.16.1
 	dev-python/numpy"
 
 DEPEND="${RDEPEND}
