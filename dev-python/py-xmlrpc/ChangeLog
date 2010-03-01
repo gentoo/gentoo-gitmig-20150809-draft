@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/py-xmlrpc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.21 2007/07/04 20:53:27 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.22 2010/03/01 23:46:49 neurogeek Exp $
+
+*py-xmlrpc-0.8.8.3-r1 (01 Mar 2010)
+
+  01 Mar 2010; Jesus Rivero <neurogeek@gentoo.org>
+  +py-xmlrpc-0.8.8.3-r1.ebuild, +files/py-xmlrpc_patch-extra.patch,
+  +files/py-xmlrpc_rpcBase64.patch, +files/py-xmlrpc_rpcClient.patch,
+  +files/py-xmlrpc_rpcDate.patch, +files/py-xmlrpc_rpcDispatch.patch,
+  +files/py-xmlrpc_rpcSource.patch, +files/py-xmlrpc_rpcUtils.patch:
+  Added patchs wrt bug #299023 (now closed), Thanks to Florian for the
+  report
 
   04 Jul 2007; Ali Polatel <hawking@gentoo.org> py-xmlrpc-0.8.8.2.ebuild,
   py-xmlrpc-0.8.8.3.ebuild:
