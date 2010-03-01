@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.70 2010/01/31 00:19:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.71 2010/03/01 22:44:52 ssuominen Exp $
+
+*libmikmod-3.2.0_beta2-r2 (01 Mar 2010)
+
+  01 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libmikmod-3.2.0_beta2-r2.ebuild,
+  +files/libmikmod-3.2.0_beta2-no-drv_raw.patch, metadata.xml:
+  Make raw file writer plug-in optional as requested wrt #266885.
 
   31 Jan 2010; Markus Meier <maekke@gentoo.org>
   libmikmod-3.2.0_beta2-r1.ebuild:
