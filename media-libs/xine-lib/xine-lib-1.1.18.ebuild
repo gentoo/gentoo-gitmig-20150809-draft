@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.18.ebuild,v 1.4 2010/02/26 16:26:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.18.ebuild,v 1.5 2010/03/01 16:49:04 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -18,7 +18,7 @@ fi
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-1.1.15-textrel-fix.patch
-	http://dev.gentoo.org/~ssuominen/${P}-compat.c.tbz2"
+	mirror://gentoo/${P}-compat.c.tbz2"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net"
