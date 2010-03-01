@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-oodict
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.26 2009/10/11 23:24:18 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.27 2010/03/01 00:03:03 abcd Exp $
+
+*eselect-oodict-20100228 (01 Mar 2010)
+
+  01 Mar 2010; Jonathan Callen <abcd@gentoo.org>
+  -eselect-oodict-20060621.ebuild, -eselect-oodict-20060706.ebuild,
+  -eselect-oodict-20060806.ebuild, +eselect-oodict-20100228.ebuild:
+  Version bump for prefix support; drop old versions
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
   eselect-oodict-20060621.ebuild, eselect-oodict-20060706.ebuild,
