@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11_p77.ebuild,v 1.1 2008/03/02 18:06:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.1 2010/03/01 13:37:47 patrick Exp $
 
 EAPI=1
 WX_GTK_VER="2.8"
@@ -12,7 +12,7 @@ if [[ "${PV}" =~ (_p)([0-9]+) ]] ; then
 	FE3D_REV=${BASH_REMATCH[2]}
 	ESVN_REPO_URI="http://svn.icapsid.net/fe3d/fe3d/branches/fe3d_0.11/@${FE3D_REV}"
 else
-	SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
+	SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}-src.tar.bz2"
 fi
 
 DESCRIPTION="A 3D visualization tool for network security information"
