@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11274 2010/03/01 11:12:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11275 2010/03/01 11:14:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Mar 2010)
 # Orphaned library. Doesn't compile with recent toolchain.
-# Masked for removal in 30 days.
+# Masked for removal in 30 days. Bug 300595.
 dev-tex/mplib
 
 # Hans de Graaff <graaff@gentoo.org> (01 Mar 2010)
