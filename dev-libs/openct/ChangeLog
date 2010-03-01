@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.84 2010/02/20 20:26:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.85 2010/03/01 08:46:10 phajdan.jr Exp $
+
+  01 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> openct-0.6.19.ebuild:
+  x86 stable wrt bug #304001
 
 *openct-0.6.20 (20 Feb 2010)
 
