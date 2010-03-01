@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.83.ebuild,v 1.6 2010/02/01 00:55:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.83.ebuild,v 1.7 2010/03/01 19:57:42 robbat2 Exp $
 
 MY_EXTRAS_VER="20090706-1838Z"
 EAPI=2
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbs
 # When MY_EXTRAS is bumped, the index should be revised to exclude these.
 EPATCH_EXCLUDE=''
 
-DEPEND="|| ( >=sys-devel/gcc-4 >=sys-devel/gcc-apple-4 )"
+DEPEND="|| ( >=sys-devel/gcc-4.3 >=sys-devel/gcc-apple-4.2 )"
 RDEPEND=""
 
 # Please do not add a naive src_unpack to this ebuild
