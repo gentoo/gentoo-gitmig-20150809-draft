@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.366 2010/02/27 20:45:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.367 2010/03/01 10:34:19 spatz Exp $
+
+  01 Mar 2010; Dror Levin <spatz@gentoo.org> amarok-2.2.2-r1.ebuild,
+  amarok-2.2.2.90.ebuild:
+  Fix !use space issue, bug 306681.
 
   27 Feb 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   amarok-2.2.2.90.ebuild:

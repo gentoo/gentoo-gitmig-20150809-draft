@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2-r1.ebuild,v 1.7 2010/02/25 11:04:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.2.2-r1.ebuild,v 1.8 2010/03/01 10:34:19 spatz Exp $
 
 EAPI="2"
 
@@ -98,7 +98,7 @@ pkg_postinst() {
 		echo
 	fi
 
-	if !use embedded; then
+	if ! use embedded; then
 		echo
 		elog "You've disabled the amarok support for embedded mysql DBs."
 		elog "You'll have to configure amarok to use an external db server."
