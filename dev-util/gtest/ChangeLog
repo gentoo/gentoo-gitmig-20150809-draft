@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/gtest
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.1 2010/03/01 23:54:29 matsuu Exp $
+
+*gtest-1.4.0 (01 Mar 2010)
+
+  01 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +gtest-1.4.0.ebuild,
+  +files/gtest-1.4.0-asneeded.patch, +metadata.xml:
+  Initial import.
+
