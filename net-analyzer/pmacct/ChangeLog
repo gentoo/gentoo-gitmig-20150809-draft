@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.63 2010/02/25 22:22:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.64 2010/03/01 23:39:16 jer Exp $
+
+*pmacct-0.12.0-r1 (01 Mar 2010)
+
+  01 Mar 2010; Jeroen Roovers <jer@gentoo.org> -pmacct-0.12.0.ebuild,
+  +pmacct-0.12.0-r1.ebuild:
+  Add missing sqlite support in econf call thanks to Marcel Klein (bug
+  #307339).
 
   25 Feb 2010; Jeroen Roovers <jer@gentoo.org> pmacct-0.12.0.ebuild,
   +files/pmacct-0.12.0-gentoo.patch, metadata.xml:
