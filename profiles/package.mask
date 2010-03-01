@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11284 2010/03/01 19:02:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11285 2010/03/01 20:08:52 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (01 Mar 2010)
+# Orphaned library for obsolete musepack API support.
+# Doesn't work with autoconf 2.65. Masked for removal
+# in 30 days. See bug 294582.
+media-libs/libmpcdecsv7
 
 # Ben de Groot <yngwin@gentoo.org> (01 Mar 2010)
 # Grand mask of qt:3 and remaining reverse dependencies
@@ -393,13 +399,6 @@ app-misc/welcome2l
 net-analyzer/zabbix-agent
 net-analyzer/zabbix-frontend
 net-analyzer/zabbix-server
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Jan 2009)
-# KDE 3.5.10 has been removed from Portage. You can find it in layman, kde-sunset overlay.
-#
-# http://linuxized.blogspot.com/2008/10/how-to-unmerge-kde-3-packages-if-their.html
-#
-<kde-base/kdelibs-4
 
 # Michał Januszewski <spock@gentoo.org> (08 Jan 2010)
 # Masked until CUDA 3.0 is officially released in a non-beta version.
