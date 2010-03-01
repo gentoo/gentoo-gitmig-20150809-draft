@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.34 2009/12/23 19:59:57 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.35 2010/03/01 19:05:12 jer Exp $
+
+  01 Mar 2010; Jeroen Roovers <jer@gentoo.org> ladspa-cmt-1.16.ebuild:
+  Stable for HPPA (bug #295051).
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org> ladspa-cmt-1.16.ebuild:
   Marked ~hppa (bug #294508).
