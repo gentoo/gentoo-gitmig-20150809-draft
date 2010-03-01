@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.47 2010/01/10 18:32:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.48 2010/03/01 21:22:16 arfrever Exp $
+
+*bsddb3-4.8.3 (01 Mar 2010)
+
+  01 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +bsddb3-4.8.3.ebuild, +files/bsddb3-4.8.3-BSDDB_TEST_PATH.patch:
+  Version bump. Run tests in ${T}/tests-${PYTHON_ABI} directories
+  instead of /tmp/z-Berkeley_DB.
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> bsddb3-4.8.1.ebuild:
   ppc stable #296027
