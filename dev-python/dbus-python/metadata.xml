@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>freedesktop</herd>
+<herd>python</herd>
 <maintainer>
 	<email>cardoe@gentoo.org</email>
 </maintainer>
