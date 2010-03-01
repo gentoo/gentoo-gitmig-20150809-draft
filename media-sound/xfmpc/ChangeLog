@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xfmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.13 2010/02/22 18:33:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.14 2010/03/01 19:53:08 armin76 Exp $
+
+  01 Mar 2010; Raúl Porcel <armin76@gentoo.org> xfmpc-0.2.0.ebuild:
+  sparc stable wrt #305657
 
   22 Feb 2010; Christian Faulhammer <fauli@gentoo.org> xfmpc-0.2.0.ebuild:
   stable x86, bug 305657
