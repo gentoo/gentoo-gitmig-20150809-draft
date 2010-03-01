@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5323 2010/03/01 22:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5324 2010/03/01 23:07:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -301,7 +301,6 @@ app-emulation/qemu-softmmu:ncurses - Enable the ncurses-based console
 app-emulation/qemu-softmmu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu-softmmu:sdl - Enable the SDL-based console
 app-emulation/qemu-softmmu:vde - Enable VDE-based networking
-app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use media-sound/sdl-sound for audio output
 app-emulation/uae:ui - Build the user interface (could be gtk or ncurses based, depending on sdl, dga, svga and aalib USE flags)
