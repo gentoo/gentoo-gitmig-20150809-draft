@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/openmq-cclient
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openmq-cclient/ChangeLog,v 1.1 2010/03/01 16:58:37 haubi Exp $
+
+*openmq-cclient-4.4.1 (01 Mar 2010)
+
+  01 Mar 2010; Michael Haubenwallner <haubi@gentoo.org>
+  +files/Makefile.in-4, +openmq-cclient-4.4.1.ebuild, +metadata.xml:
+  add openmq-cclient 4.4u1
+
