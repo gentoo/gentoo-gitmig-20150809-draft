@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3958 2010/03/01 13:40:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3959 2010/03/01 18:26:41 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Mar 2010; Ben de Groot <yngwin@gentoo.org> base/use.mask, package.mask:
+  Masking qt:3 and remaining reverse dependencies pending removal, bug
+  283429
 
   01 Mar 2010; Patrick Lauer <patrick@gentoo.org> package.mask:
   Removing fe3d mask as it is using proper tarballs now
