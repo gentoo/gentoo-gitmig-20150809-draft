@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.4.ebuild,v 1.2 2010/02/15 01:53:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.4.ebuild,v 1.3 2010/03/01 22:17:22 darkside Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -22,7 +22,7 @@ DEPEND=""
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-CONFIG_CHECK="~TASK_IO_ACCOUNTING ~TASKSTATS"
+CONFIG_CHECK="~TASK_IO_ACCOUNTING ~TASK_DELAY_ACCT"
 DOCS="NEWS README THANKS"
 
 src_install() {
