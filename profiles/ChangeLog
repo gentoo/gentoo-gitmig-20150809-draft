@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3952 2010/02/28 17:31:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3953 2010/03/01 08:52:22 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Mar 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask Passenger 2.2.10 pending investigation of problems.
 
   28 Feb 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask sysstat 9.1.
