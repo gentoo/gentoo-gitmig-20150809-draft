@@ -4,7 +4,7 @@
 <herd>voip</herd>
 <herd>net-im</herd>
 <use>
-  <flag name='bonjour'>Enable Link-Local Messaging via the bonjour protocol.</flag>
+  <flag name='zeroconf'>Enable Link-Local Messaging via the zeroconf or Bonjour protocol.</flag>
   <flag name='sip'>Enable SIP/SIMPLE messaging and calling.</flag>
   <flag name='irc'>Enable Internet Relay Chat (IRC) support.</flag>
   <flag name='yahoo'>Enable Yahoo! messaging support.</flag>

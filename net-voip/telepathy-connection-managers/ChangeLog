@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-connection-managers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/ChangeLog,v 1.4 2010/02/19 19:29:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/ChangeLog,v 1.5 2010/03/01 14:49:26 tester Exp $
+
+  01 Mar 2010; Olivier Crête <tester@gentoo.org>
+  telepathy-connection-managers-1.ebuild, metadata.xml:
+  Replace USE=bonjour with USE=zeroconf to match rest of tree, bug #307103
 
   19 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   telepathy-connection-managers-1.ebuild:
