@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.62 2010/03/01 21:07:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.63 2010/03/01 22:12:37 patrick Exp $
+
+  01 Mar 2010; Patrick Lauer <patrick@gentoo.org>
+  speech-dispatcher-0.6.7-r1.ebuild:
+  Reverting fix as it causes breakage in other places
 
   01 Mar 2010; Patrick Lauer <patrick@gentoo.org>
   speech-dispatcher-0.6.7-r1.ebuild:
