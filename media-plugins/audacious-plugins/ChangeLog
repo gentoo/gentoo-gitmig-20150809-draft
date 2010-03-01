@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.166 2010/03/01 19:06:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.167 2010/03/01 19:57:40 chainsaw Exp $
+
+  01 Mar 2010; <chainsaw@gentoo.org> -files/2.1-libmpcdecsv7.patch,
+  -audacious-plugins-2.1-r1.ebuild, -audacious-plugins-2.3_alpha1.ebuild,
+  -audacious-plugins-2.3_alpha2.ebuild:
+  Deleting old ebuild and 2.3 alpha releases.
 
   01 Mar 2010; Jeroen Roovers <jer@gentoo.org>
   audacious-plugins-2.2-r2.ebuild:
