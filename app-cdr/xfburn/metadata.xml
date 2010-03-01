@@ -14,7 +14,4 @@
       <name>David Mohr</name>
     </maintainer>
   </upstream>
-  <use>
-    <flag name='thunar'>Adds integration with Thunar file manager</flag>
-  </use>
 </pkgmetadata>
