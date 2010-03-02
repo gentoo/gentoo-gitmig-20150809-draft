@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.23 2010/02/21 15:02:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.24 2010/03/02 10:44:00 tupone Exp $
+
+  02 Mar 2010; Tupone Alfredo <tupone@gentoo.org> ufo-ai-2.2.1.ebuild,
+  +files/ufo-ai-2.2.1-noelfonshared.patch:
+  Do not install ELF under share. Bug #304707 by flameeyes@gentoo.org
 
   21 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> ufo-ai-2.2.1.ebuild:
   make_desktop_entry cleanup (bug #306193)

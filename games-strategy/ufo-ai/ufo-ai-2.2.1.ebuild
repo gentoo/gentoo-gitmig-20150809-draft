@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.6 2010/02/21 15:02:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.7 2010/03/02 10:44:00 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -45,10 +45,12 @@ src_prepare() {
 	mv "${WORKDIR}/base" "${S}" || die
 
 	# Set basedir & fixes bug in finding text files - it should use fs_basedir
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-noelfonshared.patch
 
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
+		-e "s:@GAMES_LIBDIR@:$(games_get_libdir)/${PN}:" \
 		src/common/files.c \
 		src/tools/gtkradiant/games/ufoai.game \
 		src/client/cl_main.c \
@@ -78,6 +80,8 @@ src_compile() {
 	fi
 
 	emake || die "emake failed"
+	mv base/game.so . \
+		|| die "Failed moving game library"
 }
 
 src_install() {
@@ -95,6 +99,9 @@ src_install() {
 	if use editor ; then
 		dogamesbin ufo2map || die "Failed installing editor"
 	fi
+
+	exeinto "$(games_get_libdir)"/${PN}
+	doexe game.so || die "Failed installing game library"
 
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r base || die "doins -r failed"
