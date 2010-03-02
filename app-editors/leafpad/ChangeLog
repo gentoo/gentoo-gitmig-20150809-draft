@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/leafpad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.24 2010/01/01 21:04:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.25 2010/03/02 08:17:23 phajdan.jr Exp $
+
+  02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  leafpad-0.8.17.ebuild:
+  x86 stable wrt bug #306449
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   leafpad-0.8.17.ebuild:
