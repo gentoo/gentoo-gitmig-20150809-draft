@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/zzuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.6 2010/02/26 20:50:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/ChangeLog,v 1.7 2010/03/02 18:35:29 patrick Exp $
+
+  02 Mar 2010; Patrick Lauer <patrick@gentoo.org> zzuf-0.13.ebuild:
+  Prevent file collision with zziplib on /bin/zzcat, #307049
 
 *zzuf-0.13 (26 Feb 2010)
 
