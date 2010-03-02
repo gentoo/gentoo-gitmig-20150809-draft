@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0.ebuild,v 1.2 2010/02/24 08:23:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0.ebuild,v 1.3 2010/03/02 18:58:27 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -28,7 +28,6 @@ RDEPEND="
 		sci-chemistry/arp-warp-bin
 	)"
 DEPEND="sci-libs/ccp4-libs"
-
 
 S="${WORKDIR}"/${MY_P}
 
