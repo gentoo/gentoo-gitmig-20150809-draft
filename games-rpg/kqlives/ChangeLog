@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/kqlives
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/kqlives/ChangeLog,v 1.1 2010/01/05 16:12:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/kqlives/ChangeLog,v 1.2 2010/03/02 10:34:56 phajdan.jr Exp $
+
+  02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> kqlives-0.99.ebuild:
+  x86 stable wrt bug #303477
 
 *kqlives-0.99 (05 Jan 2010)
 
