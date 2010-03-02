@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.599 2010/02/25 19:51:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.600 2010/03/02 20:20:37 keytoaster Exp $
+
+  02 Mar 2010; Tobias Heinlein <keytoaster@gentoo.org>
+  mozilla-firefox-3.5.8.ebuild:
+  amd64 stable, security bug #305689
 
   25 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-3.5.8.ebuild:
