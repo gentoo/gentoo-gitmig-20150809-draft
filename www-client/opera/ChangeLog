@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.452 2010/02/25 15:12:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.453 2010/03/02 15:11:25 jer Exp $
+
+*opera-10.50_pre6240 (02 Mar 2010)
+
+  02 Mar 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.50_pre6240.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2010/03/02/windows-10-50-is-released
+  >.
 
 *opera-10.50_pre6235 (25 Feb 2010)
 
