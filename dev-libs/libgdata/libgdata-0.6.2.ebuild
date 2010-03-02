@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.6.2.ebuild,v 1.2 2010/03/01 22:50:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.6.2.ebuild,v 1.3 2010/03/02 18:57:09 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
-	
+
 	# Disable broken tests, update upstream bug #604313
 	sed 's:^\(.*"/media/thumbnail".*\):/*\1*/:' \
 		-i gdata/tests/general.c || die
