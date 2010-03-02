@@ -18,7 +18,5 @@
 	<flag name='projectm'>Build with ProjectM visualization</flag>
 	<flag name='scrobbler'>Build with scrobbler/LastFM submission support</flag>
 	<flag name='sid'>Build with SID (Commodore 64 Audio) support</flag>
-	<flag name='tta'>Build with TTA (True-Audio Loseless) support</flag>
-	<flag name='wma'>Build with WMA (Windows Media Audio) support</flag>
 </use>
 </pkgmetadata>
