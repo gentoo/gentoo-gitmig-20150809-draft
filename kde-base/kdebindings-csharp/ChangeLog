@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebindings-csharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.23 2010/03/02 10:28:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.24 2010/03/02 16:21:36 tampakrap Exp $
+
+*kdebindings-csharp-4.4.1 (02 Mar 2010)
+
+  02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kdebindings-csharp-4.4.1.ebuild,
+  +files/kdebindings-csharp-4.4-build-fixes.patch:
+  Version bump
 
   02 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   -kdebindings-csharp-4.3.3.ebuild, -kdebindings-csharp-4.3.4.ebuild,
