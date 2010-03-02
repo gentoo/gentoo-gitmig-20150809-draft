@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/osc-mpiexec-0.83.ebuild,v 1.3 2009/11/20 14:43:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/osc-mpiexec/osc-mpiexec-0.83.ebuild,v 1.4 2010/03/02 02:40:39 jsbronder Exp $
 
 MY_PN=${PN#osc-}
 DESCRIPTION="replacement for mpirun, integrates MPI with PBS."
-SRC_URI="http://www.osc.edu/~pw/mpiexec/${MY_PN}-${PV}.tgz"
-HOMEPAGE="http://www.osc.edu/~pw/mpiexec/"
+SRC_URI="http://www.osc.edu/~djohnson/mpiexec/${MY_PN}-${PV}.tgz"
+HOMEPAGE="http://www.osc.edu/~djohnson/mpiexec/index.php"
 
 DEPEND="sys-cluster/torque"
 RDEPEND="${DEPEND}
