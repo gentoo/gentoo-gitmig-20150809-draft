@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/xawtv
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.59 2009/01/10 13:13:56 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.60 2010/03/02 16:55:31 ssuominen Exp $
+
+*xawtv-3.95-r2 (02 Mar 2010)
+
+  02 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +xawtv-3.95-r2.ebuild,
+  +files/xawtv-3.95-jpeg-7.patch:
+  Fix segmentation fault with jpeg >= 7 wrt #288158 by Salah Coronya.
 
   10 Jan 2009; Steve Dibb <beandog@gentoo.org> xawtv-3.95-r1.ebuild:
   Drop deprecated bindnow flags, bug 226979
