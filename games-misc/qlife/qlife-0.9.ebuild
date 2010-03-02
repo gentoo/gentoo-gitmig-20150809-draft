@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.7 2009/06/25 20:30:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.8 2010/03/02 19:53:57 ssuominen Exp $
 
 EAPI=1
 inherit qt4 games
