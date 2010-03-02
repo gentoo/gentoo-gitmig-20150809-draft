@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/screengrab
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.1 2010/03/02 16:19:42 hwoarang Exp $
+
+*screengrab-0.6.1 (02 Mar 2010)
+
+  02 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  +screengrab-0.6.1.ebuild, +metadata.xml:
+  Initial commit of screengrab application. Fixes bug #307093. Thanks to
+  tuupic <me@tuupic.org.ru> for the initial ebuild. 
+
