@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/lspbs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/ChangeLog,v 1.10 2008/01/31 06:53:24 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/ChangeLog,v 1.11 2010/03/02 02:29:06 jsbronder Exp $
+
+*lspbs-1.1-r1 (02 Mar 2010)
+
+  02 Mar 2010; Justin Bronder <jsbronder@gentoo.org> +lspbs-1.1-r1.ebuild:
+  Update deps and remove unnecessary ldflags mangling.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>; -lspbs-1.0.ebuild,
   -lspbs-1.0-r1.ebuild:
