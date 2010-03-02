@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.1.0_beta4.ebuild,v 1.6 2010/02/26 19:09:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.1.0.ebuild,v 1.1 2010/03/02 15:59:57 fauli Exp $
 
 EAPI=3
 
@@ -8,9 +8,7 @@ PYTHON_DEPEND=2
 
 inherit bash-completion distutils elisp-common eutils versionator
 
-MY_PV=${PV/_rc/rc}
-MY_PV=${PV/_beta/b}
-MY_P=${PN}-${MY_PV}
+MY_P=${PN}-${PV}
 SERIES=$(get_version_component_range 1-2)
 
 DESCRIPTION="Bazaar is a next generation distributed version control system."
@@ -22,6 +20,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
 IUSE="curl doc emacs +sftp test"
+
+# Disable until https://bugs.launchpad.net/bzr/+bug/392127 is fixed
+RESTRICT=test
 
 RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/celementtree )
 	curl? ( dev-python/pycurl )
@@ -115,9 +116,9 @@ src_test() {
 	python_enable_pyc
 	if [[ -n ${skip_tests} ]]; then
 		einfo "Skipping tests known to fail: ${skip_tests}"
-		"${python}" bzr --no-plugins selftest -x ${skip_tests} || die
+		"$(PYTHON -A)" bzr --no-plugins selftest -x ${skip_tests} || die
 	else
-		"${python}" bzr --no-plugins selftest || die
+		"$(PYTHON -A)" bzr --no-plugins selftest || die
 	fi
 	# Just to make sure we don't hit any errors on later stages.
 	python_disable_pyc
