@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ois
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.4 2009/10/15 06:18:33 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.5 2010/03/02 07:32:06 phajdan.jr Exp $
+
+  02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ois-1.2.0.ebuild:
+  x86 stable wrt bug #303471
 
   15 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> ois-1.2.0.ebuild:
   EAPI=2
