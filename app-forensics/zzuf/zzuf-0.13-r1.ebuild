@@ -1,33 +1,36 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.13.ebuild,v 1.2 2010/03/02 18:35:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.13-r1.ebuild,v 1.1 2010/03/02 19:28:17 cardoe Exp $
+
+EAPI="2"
 
 inherit autotools
 
 DESCRIPTION="Transparent application input fuzzer"
 HOMEPAGE="http://libcaca.zoy.org/wiki/zzuf/"
-SRC_URI="http://caca.zoy.org/files/${PN}/${P}.tar.gz"
+SRC_URI="http://caca.zoy.org/files/${PN}/${P}.tar.gz
+	http://dev.gentoo.org/~cardoe/distfiles/${P}-zzcat-zzat-rename.patch.bz2"
 
 LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="!dev-libs/zziplib"
+DEPEND=""
+RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i -e '/CFLAGS/d' "${S}"/configure.ac \
 		|| die "unable to fix the configure.ac"
 	sed -i -e 's:noinst_:check_:' "${S}"/test/Makefile.am \
 		|| die "unable to fix unconditional test building"
 
+	epatch "${DISTDIR}"/${P}-zzcat-zzat-rename.patch.bz2
+
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# Don't build the static library, as the library is only used for
 	# preloading, so there is no reason to build it statically, unless
 	# you want to use zzuf with a static-linked executable, which I'm
@@ -36,6 +39,9 @@ src_compile() {
 		--disable-dependency-tracking \
 		--disable-static \
 		|| die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
