@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.1 2010/01/22 13:10:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.2 2010/03/02 12:41:08 dev-zero Exp $
+
+*python-daemon-1.5.5 (02 Mar 2010)
+
+  02 Mar 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +python-daemon-1.5.5.ebuild:
+  Version bump, various improvements.
 
 *python-daemon-1.5.2 (22 Jan 2010)
 
