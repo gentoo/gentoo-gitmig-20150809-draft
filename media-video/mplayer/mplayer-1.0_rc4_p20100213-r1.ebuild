@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213-r1.ebuild,v 1.2 2010/03/01 17:23:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213-r1.ebuild,v 1.3 2010/03/02 22:26:50 ssuominen Exp $
 
 EAPI="2"
 
@@ -558,7 +558,11 @@ src_configure() {
 
 	use debug && myconf+=" --enable-debug=3"
 
-	filter-flags -fPIC -fPIE
+	if use x86; then
+		filter-flags -fPIC -fPIE
+		append-ldflags -nopie
+	fi
+
 	append-flags -D__STDC_LIMIT_MACROS
 	is-flag -O? || append-flags -O2
 	if use x86 || use x86-fbsd; then
