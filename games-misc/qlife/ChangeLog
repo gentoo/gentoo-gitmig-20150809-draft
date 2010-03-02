@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/qlife
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/ChangeLog,v 1.10 2008/08/14 17:18:48 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/ChangeLog,v 1.11 2010/03/02 19:50:56 ssuominen Exp $
+
+*qlife-1.1 (02 Mar 2010)
+
+  02 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +qlife-1.1.ebuild:
+  Version bump wrt #264711, thanks to Markos Chandras for reporting.
 
   14 Aug 2008; nixnut <nixnut@gentoo.org> qlife-0.9.ebuild:
   Stable on ppc wrt bug 234453
