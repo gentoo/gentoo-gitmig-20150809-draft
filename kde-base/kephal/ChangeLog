@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kephal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.38 2010/02/20 10:52:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.39 2010/03/02 17:18:40 tampakrap Exp $
+
+*kephal-4.4.1 (02 Mar 2010)
+
+  02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kephal-4.4.1.ebuild:
+  Version bump
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kephal-4.3.5.ebuild:
   amd64/x86 stable wrt #300393
