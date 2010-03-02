@@ -1,28 +1,26 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.25 2009/10/07 07:43:39 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.26 2010/03/02 20:57:16 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs flag-o-matic games
 
 MY_PV=${PV//.}
 DESCRIPTION="The ultimate old-school single player dungeon exploration game"
 HOMEPAGE="http://www.nethack.org/"
 SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
-#SRC_URI="ftp://ftp.nethack.org/pub/nethack/nh340/src/nethack-340.tgz"
 
 LICENSE="nethack"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
-IUSE="X qt3"
+IUSE="X"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5
 	X? (
 		x11-libs/libXaw
 		x11-libs/libXpm
 		x11-libs/libXt
-	)
-	qt3? ( =x11-libs/qt-3* )"
+	)"
 DEPEND="${RDEPEND}
 	X? (
 		x11-proto/xproto
@@ -30,7 +28,7 @@ DEPEND="${RDEPEND}
 		x11-apps/mkfontdir
 	)"
 
-HACKDIR="${GAMES_DATADIR}/${PN}"
+HACKDIR=${GAMES_DATADIR}/${PN}
 
 src_prepare() {
 	# This copies the /sys/unix Makefile.*s to their correct places for
@@ -66,31 +64,22 @@ src_prepare() {
 
 	if use X ; then
 		epatch "${FILESDIR}/${PV}-X-support.patch"
-		if use qt3 ; then
-			epatch "${FILESDIR}/${PV}-QT-support.patch"
-		fi
 	fi
 }
 
 src_compile() {
-	local qtver=
 	local lflags="-L/usr/X11R6/lib"
 
-	has_version =x11-libs/qt-3* \
-		&& qtver=3 \
-		|| qtver=2
 	cd "${S}"/src
 	append-flags -I../include
 
 	emake \
-		QTDIR=/usr/qt/${qtver} \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="${lflags}" \
 		../util/makedefs \
 		|| die "initial makedefs build failed"
 	emake \
-		QTDIR=/usr/qt/${qtver} \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="${lflags}" \
@@ -100,7 +89,7 @@ src_compile() {
 }
 
 src_install() {
-	make \
+	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
@@ -110,7 +99,7 @@ src_install() {
 		GAMEDIR="${D}${HACKDIR}" \
 		SHELLDIR="${D}/${GAMES_BINDIR}" \
 		install \
-		|| die "make install failed"
+		|| die "emake install failed"
 
 	# We keep this stuff in ${GAMES_STATEDIR} instead so tidy up.
 	rm -rf "${D}/usr/share/games/nethack/save"
@@ -133,7 +122,6 @@ src_install() {
 	doins "${FILESDIR}/dot.nethackrc"
 
 	local windowtypes="tty"
-	use qt3 && windowtypes="${windowtypes} qt"
 	use X && windowtypes="${windowtypes} x11"
 	set -- ${windowtypes}
 	sed -i \
@@ -176,9 +164,5 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	if use qt3 && has_version '=x11-libs/qt-3.1*' ; then
-		ewarn "the qt frontend may be a little unstable with this version of qt"
-		ewarn "please see Bug 32629 for more information"
-	fi
 	elog "You may want to look at /etc/skel/.nethackrc for interesting options"
 }

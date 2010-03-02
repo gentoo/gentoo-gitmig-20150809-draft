@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/nethack
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.32 2009/10/07 07:43:39 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.33 2010/03/02 20:57:16 mr_bones_ Exp $
+
+  02 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  nethack-3.4.3-r1.ebuild:
+  punt QT support (bug #301735)
 
   07 Oct 2009; Tupone Alfredo <tupone@gentoo.org>
   +files/nethack-3.4.3-gibc210.patch, nethack-3.4.3-r1.ebuild:
