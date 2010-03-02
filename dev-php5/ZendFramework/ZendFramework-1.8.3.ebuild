@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.8.3.ebuild,v 1.4 2009/07/19 11:52:28 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.8.3.ebuild,v 1.5 2010/03/02 22:30:42 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
@@ -76,7 +76,7 @@ pkg_postinst() {
 	else
 		elog "You have installed the full version of ZendFramework, which"
 		elog "includes the Dojo toolkit, demos and tests."
-		elog "To install ZendFramework without there, enable the"
+		elog "To install ZendFramework without these, enable the"
 		elog "minimal USE flag."
 	fi
 }
