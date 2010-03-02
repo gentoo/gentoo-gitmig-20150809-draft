@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.46 2010/02/28 22:48:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.47 2010/03/02 04:01:19 jer Exp $
+
+  02 Mar 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask >=dev-db/mysql-5.0.83 (bug #307251).
 
   28 Feb 2010; Jeroen Roovers <jer@gentoo.org> use.mask:
   USE.mask flite (bug #307241).
