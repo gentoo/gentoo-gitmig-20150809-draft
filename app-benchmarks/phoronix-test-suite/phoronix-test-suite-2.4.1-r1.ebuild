@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.4.1-r1.ebuild,v 1.1 2010/03/01 15:23:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.4.1-r1.ebuild,v 1.2 2010/03/02 12:48:41 patrick Exp $
 
 EAPI=2
+
+inherit eutils
 
 DESCRIPTION="Phoronix's comprehensive, cross-platform testing and benchmark suite"
 HOMEPAGE="http://www.phoronix-test-suite.com"
@@ -49,9 +51,9 @@ src_install() {
 
 	fperms a+x /usr/share/${PN}/pts/test-resources/*/*.sh
 	fperms a+x /usr/share/${PN}/pts/base-test-resources/*/*.sh
-	fperms a+x /usr/share/${PN}/pts-core/modules/*.sh
+	#fperms a+x /usr/share/${PN}/pts-core/modules/*.sh
 	fperms a+x /usr/share/${PN}/pts-core/test-libraries/*.sh
-	fperms a+x /usr/share/${PN}/pts/distro-scripts/install-gentoo-packages.sh
+	#fperms a+x /usr/share/${PN}/pts/distro-scripts/install-gentoo-packages.sh
 
 	# Need to fix the cli-php config for downloading to work. Very naughty!
 	dodir /etc/php/cli-php5
