@@ -1,4 +1,4 @@
-(load "@SITELISP@/common/cedet" nil t)
+(require 'cedet "@SITELISP@/common/cedet")
 (add-to-list 'image-load-path "@SITEETC@/common/icons" t)
 (add-to-list 'image-load-path "@SITEETC@/cogre" t)
 (setq srecode-map-load-path

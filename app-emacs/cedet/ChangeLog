@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.49 2010/02/27 10:30:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.50 2010/03/02 19:25:10 ulm Exp $
+
+  02 Mar 2010; Ulrich Mueller <ulm@gentoo.org> files/50cedet-gentoo.el:
+  Use "require" instead of "load", in order to make the site-init file
+  idempotent, bug 307321.
 
 *cedet-1.0_pre7 (27 Feb 2010)
 
