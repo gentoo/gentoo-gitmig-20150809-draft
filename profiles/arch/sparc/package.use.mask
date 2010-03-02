@@ -1,6 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.42 2010/02/24 20:17:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.43 2010/03/02 19:02:41 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (02 Mar 2010)
+# needs dev-python/mako which depends on
+# dev-python/beaker which sigbuses
+media-sound/rhythmbox webkit
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded
