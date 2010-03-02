@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.3 2010/03/02 17:42:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.2.ebuild,v 1.1 2010/03/02 17:42:24 cardoe Exp $
 
 EAPI="2"
 
