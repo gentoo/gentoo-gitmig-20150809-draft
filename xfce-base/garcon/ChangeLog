@@ -1,6 +1,14 @@
 # ChangeLog for xfce-base/garcon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.7 2009/11/10 16:41:18 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.8 2010/03/02 16:44:28 darkside Exp $
+
+*garcon-0.1.1 (02 Mar 2010)
+
+  02 Mar 2010; Jeremy Olexa <darkside@gentoo.org> -garcon-0.1.0.ebuild,
+  +garcon-0.1.1.ebuild:
+  Version bump, mostly bug fixes:
+  http://releases.xfce.org/feeds/project/garcon - >=xfce4-panel-4.7.0 will
+  be using >=garcon-0.1.1
 
   10 Nov 2009; Joseph Jezak <josejx@gentoo.org> garcon-0.1.0.ebuild:
   Marked ~ppc64 for bug #289983.
