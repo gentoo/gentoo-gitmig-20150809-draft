@@ -32,15 +32,8 @@ diff -Naur puppet-0.25.4.orig//lib/puppet/reports/rrdgraph.rb puppet-0.25.4//lib
          of the metrics generated during transactions, and it will create a
 diff -Naur puppet-0.25.4.orig//lib/puppet/util/metric.rb puppet-0.25.4//lib/puppet/util/metric.rb
 --- puppet-0.25.4.orig//lib/puppet/util/metric.rb	2010-01-28 12:48:34.000000000 +0900
-+++ puppet-0.25.4//lib/puppet/util/metric.rb	2010-02-28 11:35:34.000000000 +0900
-@@ -1,5 +1,6 @@
- # included so we can test object types
- require 'puppet'
-+require 'RRD'
- 
- # A class for handling metrics.  This is currently ridiculously hackish.
- class Puppet::Util::Metric
-@@ -31,7 +32,6 @@
++++ puppet-0.25.4//lib/puppet/util/metric.rb	2010-03-02 20:19:40.000000000 +0900
+@@ -31,7 +31,6 @@
  
          start ||= Time.now.to_i - 5
  
@@ -48,7 +41,7 @@ diff -Naur puppet-0.25.4.orig//lib/puppet/util/metric.rb puppet-0.25.4//lib/pupp
          args = []
  
          values.each { |value|
-@@ -42,14 +42,17 @@
+@@ -42,14 +41,17 @@
          args.push "RRA:AVERAGE:0.5:1:300"
  
          begin
@@ -68,7 +61,7 @@ diff -Naur puppet-0.25.4.orig//lib/puppet/util/metric.rb puppet-0.25.4//lib/pupp
      end
  
      def graph(range = nil)
-@@ -84,12 +87,12 @@
+@@ -84,12 +86,12 @@
              if range
                  args.push("--start",range[0],"--end",range[1])
              else
@@ -84,7 +77,7 @@ diff -Naur puppet-0.25.4.orig//lib/puppet/util/metric.rb puppet-0.25.4//lib/pupp
              rescue => detail
                  Puppet.err "Failed to graph %s: %s" % [self.name,detail]
              end
-@@ -122,7 +125,6 @@
+@@ -122,7 +124,6 @@
              self.create(time - 5)
          end
  
@@ -92,7 +85,7 @@ diff -Naur puppet-0.25.4.orig//lib/puppet/util/metric.rb puppet-0.25.4//lib/pupp
  
          # XXX this is not terribly error-resistant
          args = [time]
-@@ -135,7 +137,9 @@
+@@ -135,7 +136,9 @@
          arg = args.join(":")
          template = temps.join(":")
          begin

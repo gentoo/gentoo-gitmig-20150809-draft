@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.25.4.ebuild,v 1.1 2010/02/28 03:04:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.25.4-r1.ebuild,v 1.1 2010/03/02 12:11:53 matsuu Exp $
 
 EAPI="2"
 inherit elisp-common eutils ruby
@@ -35,7 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Bug #294304
-	epatch "${FILESDIR}/${P}-rrd.patch"
+	epatch "${FILESDIR}/${PF}-rrd.patch"
 }
 
 src_compile() {
