@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3962 2010/03/01 23:04:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3963 2010/03/02 15:13:57 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  KDE 4.4.1 will be unmasked as soon as there is an official announcement in
+  kde.org
 
   01 Mar 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
   Add qt-embedded-3 and aabrowse to qt:3 mask
