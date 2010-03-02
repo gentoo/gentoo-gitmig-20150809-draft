@@ -1,0 +1,14 @@
+# ChangeLog for dev-ruby/msgpack
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.1 2010/03/02 15:51:40 matsuu Exp $
+
+  02 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +msgpack-0.3.3.ebuild,
+  +metadata.xml:
+  Initial import.
+
+*msgpack-0.3.3 (02 Mar 2010)
+
+  02 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +msgpack-0.3.3.ebuild,
+  +metadata.xml:
+  Initial import.
+
