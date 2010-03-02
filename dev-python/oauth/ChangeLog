@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/oauth
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth/ChangeLog,v 1.1 2010/03/02 02:53:07 neurogeek Exp $
+
+*oauth-1.0.1 (02 Mar 2010)
+
+  02 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> +oauth-1.0.1.ebuild,
+  +metadata.xml:
+  Initial commit. Closes bug #290159. Thanks to Ravi for the report
+
