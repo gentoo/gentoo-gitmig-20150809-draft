@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.30 2010/02/21 17:25:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.31 2010/03/02 10:29:12 fauli Exp $
+
+  02 Mar 2010; Christian Faulhammer <fauli@gentoo.org> py-1.2.0.ebuild:
+  stable x86, bug 306219
 
 *py-1.2.1 (21 Feb 2010)
 

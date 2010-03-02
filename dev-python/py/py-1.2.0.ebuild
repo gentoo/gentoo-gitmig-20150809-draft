@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.2.0.ebuild,v 1.1 2010/01/18 17:23:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.2.0.ebuild,v 1.2 2010/03/02 10:29:12 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ HOMEPAGE="http://codespeak.net/py/ http://pypi.python.org/pypi/py"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND=">=dev-python/setuptools-0.6.2"
