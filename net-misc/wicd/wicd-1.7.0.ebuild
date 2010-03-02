@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.3 2010/02/08 08:52:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.4 2010/03/02 10:39:59 fauli Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.wicd.net/src/stable/1.7.x/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE="X +gtk ioctl libnotify ncurses nls +pm-utils"
 
 DEPEND=""
