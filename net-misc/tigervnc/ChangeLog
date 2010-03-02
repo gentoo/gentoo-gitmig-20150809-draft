@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.37 2010/03/02 19:50:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.38 2010/03/02 20:33:02 armin76 Exp $
+
+*tigervnc-1.0.0-r4 (02 Mar 2010)
+
+  02 Mar 2010; Raúl Porcel <armin76@gentoo.org> +tigervnc-1.0.0-r4.ebuild:
+  Use system jpeg and zlib, bug #273107
 
   02 Mar 2010; Raúl Porcel <armin76@gentoo.org> -tigervnc-1.0.0-r3.ebuild:
   Revert
