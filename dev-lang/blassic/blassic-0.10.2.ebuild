@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.2.ebuild,v 1.3 2010/02/28 18:39:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.2.ebuild,v 1.4 2010/03/02 08:43:03 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto )"
 
-src_compile() {
+src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		$(use_with X x) \
