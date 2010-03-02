@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/maui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.13 2010/01/15 14:46:49 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.14 2010/03/02 02:31:24 jsbronder Exp $
+
+  02 Mar 2010; Justin Bronder <jsbronder@gentoo.org> maui-3.2.6_p16.ebuild,
+  maui-3.2.6_p21.ebuild:
+  Update deps
 
   15 Jan 2010; Thilo Bangert <bangert@gentoo.org> Manifest:
   rebuild manifest (#164373)
