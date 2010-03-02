@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/miniupnpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.13 2010/02/28 19:36:07 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.14 2010/03/02 22:11:19 gurligebis Exp $
+
+  02 Mar 2010; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  miniupnpd-1.5_pre20091222.ebuild:
+  Updating dependencies, fixing bug #307461
 
 *miniupnpd-1.5_pre20091222 (28 Feb 2010)
 

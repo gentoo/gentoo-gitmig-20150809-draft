@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.5_pre20091222.ebuild,v 1.1 2010/02/28 19:36:07 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.5_pre20091222.ebuild,v 1.2 2010/03/02 22:11:19 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info toolchain-funcs
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=net-firewall/iptables-1.4.3
+RDEPEND=">=net-firewall/iptables-1.4.6
 	sys-apps/lsb-release
 	>=sys-kernel/linux-headers-2.6.31"
 DEPEND="${RDEPEND}"
