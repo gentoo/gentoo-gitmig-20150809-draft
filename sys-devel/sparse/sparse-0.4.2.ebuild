@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.2.ebuild,v 1.1 2010/03/02 17:42:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.2.ebuild,v 1.2 2010/03/02 17:45:26 cardoe Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://www.kernel.org/pub/software/devel/sparse/dist/${P}.tar.bz2"
+	SRC_URI="mirror://kernel/software/devel/sparse/dist/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
@@ -30,7 +30,6 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	cd "${S}"
 	sed -i \
 		-e '/^PREFIX=/s:=.*:=/usr:' \
 		-e "/^LIBDIR=/s:/lib:/$(get_libdir):" \
