@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hg-git
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hg-git/ChangeLog,v 1.5 2009/12/27 09:32:22 djc Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hg-git/ChangeLog,v 1.6 2010/03/02 09:37:25 phajdan.jr Exp $
+
+  02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> hg-git-0.2.1.ebuild:
+  x86 stable wrt bug #307277
 
 *hg-git-0.2.1 (27 Dec 2009)
 
