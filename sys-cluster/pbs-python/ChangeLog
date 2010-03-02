@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pbs-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pbs-python/ChangeLog,v 1.2 2009/02/22 18:27:48 jsbronder Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pbs-python/ChangeLog,v 1.3 2010/03/02 02:35:22 jsbronder Exp $
+
+  02 Mar 2010; Justin Bronder <jsbronder@gentoo.org>
+  -pbs-python-2.9.4.ebuild:
+  Cleanup.
 
 *pbs-python-3.0.1 (22 Feb 2009)
 
