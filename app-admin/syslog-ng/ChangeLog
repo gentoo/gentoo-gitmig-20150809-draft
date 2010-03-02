@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.226 2009/12/30 08:41:05 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.227 2010/03/02 21:29:03 mr_bones_ Exp $
+
+  02 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-3.0.4.ebuild, syslog-ng-3.0.5.ebuild:
+  skip trying to install the non-existing reference (bug #299079)
 
   30 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
   files/syslog-ng.rc6.3.0-r1:
