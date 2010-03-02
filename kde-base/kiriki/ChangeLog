@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kiriki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiriki/ChangeLog,v 1.49 2010/02/20 11:04:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiriki/ChangeLog,v 1.50 2010/03/02 17:53:33 tampakrap Exp $
+
+*kiriki-4.4.1 (02 Mar 2010)
+
+  02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kiriki-4.4.1.ebuild:
+  Version bump
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kiriki-4.3.5.ebuild:
   amd64/x86 stable wrt #300393

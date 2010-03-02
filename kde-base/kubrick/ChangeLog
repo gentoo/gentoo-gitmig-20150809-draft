@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.39 2010/02/20 11:45:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.40 2010/03/02 18:59:54 tampakrap Exp $
+
+*kubrick-4.4.1 (02 Mar 2010)
+
+  02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kubrick-4.4.1.ebuild:
+  Version bump
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kubrick-4.3.5.ebuild:
   amd64/x86 stable wrt #300393

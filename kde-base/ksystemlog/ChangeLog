@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.41 2010/02/20 11:38:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.42 2010/03/02 18:49:58 tampakrap Exp $
+
+*ksystemlog-4.4.1 (02 Mar 2010)
+
+  02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +ksystemlog-4.4.1.ebuild:
+  Version bump
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   ksystemlog-4.3.5.ebuild:
