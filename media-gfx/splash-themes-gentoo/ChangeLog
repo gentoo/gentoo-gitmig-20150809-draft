@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.14 2009/09/26 15:21:18 spock Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.15 2010/03/02 21:54:31 spock Exp $
+
+*splash-themes-gentoo-20100302 (02 Mar 2010)
+
+  02 Mar 2010; Michał Januszewski <spock@gentoo.org>
+  +splash-themes-gentoo-20100302.ebuild:
+  Version bump. Includes an updated version of the Natural Gentoo theme.
 
 *splash-themes-gentoo-20090926 (26 Sep 2009)
 
