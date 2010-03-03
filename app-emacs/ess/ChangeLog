@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.59 2010/01/31 11:20:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.60 2010/03/03 13:29:50 ulm Exp $
+
+*ess-5.8 (03 Mar 2010)
+
+  03 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +ess-5.8.ebuild:
+  Version bump.
 
 *ess-5.7.1-r1 (31 Jan 2010)
 
