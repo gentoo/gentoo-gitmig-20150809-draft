@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.12 2010/03/03 10:52:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.13 2010/03/03 11:11:57 phajdan.jr Exp $
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> crack-0.1.6.ebuild:
+  Mark ~x86 wrt bug #302963 (required dependency)
 
   03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> crack-0.1.7.ebuild:
   Mark ~x86 wrt bug #302560
