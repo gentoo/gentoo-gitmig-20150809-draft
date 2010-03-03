@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol-plugins-promol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-promol/ChangeLog,v 1.1 2010/02/20 12:16:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-promol/ChangeLog,v 1.2 2010/03/03 07:17:12 jlec Exp $
+
+  03 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  pymol-plugins-promol-3.0.2.ebuild:
+  Fixed for PREFIX
 
 *pymol-plugins-promol-3.0.2 (20 Feb 2010)
 

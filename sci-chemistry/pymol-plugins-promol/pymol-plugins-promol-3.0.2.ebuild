@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-promol/pymol-plugins-promol-3.0.2.ebuild,v 1.2 2010/02/28 13:53:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-promol/pymol-plugins-promol-3.0.2.ebuild,v 1.3 2010/03/03 07:17:12 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -27,7 +27,7 @@ RESTRICT_PYTHON_ABIS="2.4 3.*"
 src_prepare() {
 	python_copy_sources
 	preparation() {
-		sed -e "s:./modules/pmg_tk/startup:$(python_get_sitedir)/pmg_tk/startup/ProMol:g" -i ProMOL_302.py
+		sed -e "s:./modules/pmg_tk/startup:${EPREFIX}/$(python_get_sitedir)/pmg_tk/startup/ProMol:g" -i ProMOL_302.py
 	}
 	python_execute_function -s preparation
 }
