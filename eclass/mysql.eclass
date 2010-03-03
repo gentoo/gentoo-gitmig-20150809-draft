@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.134 2010/02/27 18:21:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.135 2010/03/03 23:57:13 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -407,7 +407,7 @@ configure_40_41_50() {
 	fi
 
 	if mysql_version_is_at_least "5.1.11" ; then
-		myconf="${myconf} $(use_with ssl)"
+		myconf="${myconf} $(use_with ssl /usr)"
 	else
 		myconf="${myconf} $(use_with ssl openssl)"
 	fi
