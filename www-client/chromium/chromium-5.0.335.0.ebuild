@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.335.0.ebuild,v 1.2 2010/03/01 10:26:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.335.0.ebuild,v 1.3 2010/03/03 17:57:17 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+ffmpeg +plugins-symlink"
+IUSE="bindist +ffmpeg +plugins-symlink"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
@@ -24,7 +24,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
+	ffmpeg? ( >=media-video/ffmpeg-0.5_p21602 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver
@@ -61,6 +61,13 @@ pkg_setup() {
 	elog "${PN} might crash occasionally. To get more useful backtraces"
 	elog "and submit better bug reports, please read"
 	elog "http://www.gentoo.org/proj/en/qa/backtraces.xml"
+
+	if ! use bindist; then
+		einfo
+		elog "You may not redistribute this build to any users on your network"
+		elog "or the internet."
+		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
+	fi
 }
 
 src_prepare() {
@@ -73,8 +80,10 @@ src_prepare() {
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-	# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
-	epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
+	if ! use bindist; then
+		# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
+		epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
+	fi
 	# Prevent the make build from filling entire disk space on some systems,
 	# bug 297273.
 	epatch "${FILESDIR}"/${PN}-fix-make-build.patch
@@ -104,7 +113,7 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
+	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1"
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
@@ -125,6 +134,10 @@ EOF
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
+	fi
+
+	if use ffmpeg; then
+		myconf="${myconf} -Duse_system_ffmpeg=1"
 	fi
 
 	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die "gyp failed"
@@ -186,5 +199,4 @@ src_install() {
 	dodir /usr/share/gnome-control-center/default-apps
 	insinto /usr/share/gnome-control-center/default-apps
 	doins "${FILESDIR}"/chromium.xml
-
 }
