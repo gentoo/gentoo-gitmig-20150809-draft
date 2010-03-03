@@ -11,24 +11,27 @@
 
 SLOT="3.5"
 
-[ -f "/etc/eclipserc-${SLOT}" ] && source "/etc/eclipserc-${SLOT}"
-[ -f "$HOME/gentoo/.eclipserc" ] && source "$HOME/gentoo/.eclipserc"
+[ -f "/etc/eclipserc-${SLOT}" ] && . "/etc/eclipserc-${SLOT}"
+[ -f "$HOME/gentoo/.eclipserc" ] && . "$HOME/gentoo/.eclipserc"
 
 ECLIPSE_HOME=${ECLIPSE_HOME:="/usr/lib/eclipse-${SLOT}"}
 ECLIPSE_BIN="${ECLIPSE_HOME}/eclipse"
 
 if [ ! -x "${ECLIPSE_BIN}" ] ; then
 	echo "Failed to find executable '${ECLIPSE_BIN}'" > /dev/stderr
-	exit -1
+	exit 1
 fi
 
 if [ $(id -u) -eq 0 ] ; then
-	echo "Do not run eclipse as root user! Exiting ..."
-	exit -1
+	echo "Do not run eclipse as root user! Exiting ..." > /dev/stderr
+	exit 1
 fi
 
-[[ "$(java-config -f)" =~ "gcj" ]] \
-	&& export JAVA_PKG_CLASSMAP="${ECLIPSE_HOME}/eclipse.gcjdb"
+case "$(java-config -f)" in
+	*gcj*)
+		export JAVA_PKG_CLASSMAP="${ECLIPSE_HOME}/eclipse.gcjdb"
+		;;
+esac
 
 eval $(gjl --package "swt-${SLOT}" --get-args)
 
