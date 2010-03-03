@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/chrpath
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.11 2009/12/07 12:13:28 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.12 2010/03/03 17:19:52 hwoarang Exp $
+
+*chrpath-0.13-r1 (03 Mar 2010)
+
+  03 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  +chrpath-0.13-r1.ebuild, +files/chrpath-keepgoing.patch,
+  +files/chrpath-multilib.patch:
+  Revbump fixes multiple issues wrt bug #265575 thanks to Mario Fetka
+  (geos_one) <mario.fetka@gmail.com> for the patches and the ebuild
 
   07 Dec 2009; Fabian Groffen <grobian@gentoo.org> chrpath-0.13.ebuild:
   Add Prefix keywords

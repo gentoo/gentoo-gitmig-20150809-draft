@@ -1,0 +1,141 @@
+--- a/configure.ac	2004-09-19 10:28:33.000000000 +0200
++++ b/configure.ac	2006-02-27 16:12:00.282066250 +0100
+@@ -16,6 +16,7 @@
+ dnl Checks for programs.
+ AC_PROG_CC
+ AC_PROG_INSTALL
++AC_PROG_LIBTOOL
+ 
+ dnl Checks for libraries.
+ 
+@@ -26,7 +27,6 @@
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ AC_C_BIGENDIAN
+-AC_CHECK_SIZEOF(void *)
+ 
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(getopt_long)
+--- a/Makefile.am	2004-09-19 10:29:28.000000000 +0200
++++ b/Makefile.am	2006-02-27 16:57:31.166290750 +0100
+@@ -12,12 +12,19 @@
+ 	fakeroot debian/rules binary
+ 
+ chrpath_SOURCES = \
+-	chrpath.c	\
+-	killrpath.c	\
+ 	main.c		\
+-	elf.c		\
+ 	protos.h
+ 
++chrpath_LDADD = -ldl
++
++lib_LTLIBRARIES = libchrpath32.la libchrpath64.la
++libchrpath32_la_SOURCES = chrpath.c killrpath.c elf.c protos.h
++libchrpath32_la_CFLAGS = -DSIZEOF_VOID_P=4
++libchrpath32_la_LDFLAGS = -avoid-version
++libchrpath64_la_SOURCES = chrpath.c killrpath.c elf.c protos.h
++libchrpath64_la_CFLAGS = -DSIZEOF_VOID_P=8
++libchrpath64_la_LDFLAGS = -avoid-version
++
+ EXTRA_DIST = ChangeLog.usermap $(man_MANS)
+ 
+ CLEANFILES = *.bb *.bbg *.da *.gcov testsuite/*.bb testsuite/*.bbg
+--- a/main.c	2004-09-19 10:33:37.000000000 +0200
++++ b/main.c	2006-02-27 17:23:39.400267750 +0100
+@@ -12,13 +12,19 @@
+ #  include "config.h"
+ #endif
+ 
++#include <dlfcn.h>
++#include <elf.h>
++#include <fcntl.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #ifdef HAVE_GETOPT_H
+ #include <getopt.h>
+ #endif
+-#include "protos.h"
++
++typedef int (*killrpath_t)(const char *filename);
++typedef int (*chrpath_t)(const char *filename, const char *newpath, int convert);
+ 
+ #ifdef HAVE_GETOPT_LONG
+ #  define GETOPT_LONG getopt_long
+@@ -61,6 +67,30 @@
+   printf("\n");
+ }
+ 
++static unsigned
++elf_class(const char *filename)
++{
++   Elf32_Ehdr ehdr;
++   int fd;
++
++   fd = open(filename, O_RDONLY);
++   if (fd == -1)
++     return 0;
++   if (read(fd, &ehdr, sizeof(ehdr)) != sizeof(ehdr))
++   {
++     close(fd);
++     return 0;
++   }
++   close(fd);
++   if ((memcmp(ehdr.e_ident, ELFMAG, SELFMAG) != 0)
++       || (ehdr.e_ident[EI_VERSION] != EV_CURRENT))
++   {
++     fprintf(stderr, "`%s' probably isn't an ELF file.\n", filename);
++     return 0;
++   }
++   return ehdr.e_ident[EI_CLASS];
++}
++
+ int
+ main(int argc, char * const argv[])
+ {
+@@ -73,6 +103,9 @@
+ #ifdef HAVE_GETOPT_LONG
+   int option_index = 0;
+ #endif /* HAVE_GETOPT_LONG */
++  void* dll[2];
++  killrpath_t killrpath[2];
++  chrpath_t chrpath[2];
+ 
+   if (argc < 2)
+     {
+@@ -116,14 +149,31 @@
+       }
+   } while (-1 != opt);
+ 
++  dll[0] = dlopen("libchrpath32.so", RTLD_LAZY);
++  killrpath[0] = (killrpath_t)dlsym(dll[0], "killrpath");
++  chrpath[0] = (chrpath_t)dlsym(dll[0], "chrpath");
++
++  dll[1] = dlopen("libchrpath64.so", RTLD_LAZY);
++  killrpath[1] = (killrpath_t)dlsym(dll[1], "killrpath");
++  chrpath[1] = (chrpath_t)dlsym(dll[1], "chrpath");
++
+   while (optind < argc && (!retval || keep_going))
+     {
++      const char* program = argv[optind++];
++      unsigned eclass = elf_class(program);
++      if (!eclass)
++      {
++        retval = 1;
++        continue;
++      }
+       if (remove)
+-        retval |= killrpath(argv[optind++]);
++        retval |= killrpath[eclass - ELFCLASS32](program);
+       else
+         /* list by default, replace if path is set */
+-        retval |= chrpath(argv[optind++], newpath, convert);
++        retval |= chrpath[eclass - ELFCLASS32](program, newpath, convert);
+     }
+ 
++  dlclose(dll[0]);
++  dlclose(dll[1]);
+   return retval;
+ }
