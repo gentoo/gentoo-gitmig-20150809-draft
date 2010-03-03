@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-ng
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.72 2009/10/24 13:15:52 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.73 2010/03/03 12:33:58 pva Exp $
+
+*madwifi-ng-0.9.4.4119.20100201 (03 Mar 2010)
+
+  03 Mar 2010; Peter Volkov <pva@gentoo.org>
+  +madwifi-ng-0.9.4.4119.20100201.ebuild:
+  Version bump, bug #306851, thank Oschtan for report and Andrey for
+  explanation of the problem.
 
   24 Oct 2009; nixnut <nixnut@gentoo.org>
   madwifi-ng-0.9.4.4030.20090529.ebuild:
