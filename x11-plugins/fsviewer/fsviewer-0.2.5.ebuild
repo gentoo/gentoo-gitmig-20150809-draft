@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.7 2007/07/22 05:36:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.8 2010/03/03 19:07:57 ssuominen Exp $
 
 inherit eutils
 
@@ -32,7 +32,6 @@ DEPEND=">=x11-wm/windowmaker-0.92.0-r3
 	x11-proto/xproto
 	x11-proto/xextproto
 	media-libs/tiff
-	media-libs/libpng
 	media-libs/jpeg
 	media-libs/giflib
 	media-libs/libpng

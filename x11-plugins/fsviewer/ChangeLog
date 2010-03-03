@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/fsviewer
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.15 2007/07/22 05:36:37 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.16 2010/03/03 19:07:57 ssuominen Exp $
+
+  03 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> fsviewer-0.2.5.ebuild:
+  List media-libs/libpng only once in DEPEND wrt #258534.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   fsviewer-0.2.5.ebuild:
