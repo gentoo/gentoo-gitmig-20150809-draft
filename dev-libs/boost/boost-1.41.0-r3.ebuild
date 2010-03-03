@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.41.0-r3.ebuild,v 1.2 2010/03/03 10:57:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.41.0-r3.ebuild,v 1.3 2010/03/03 12:19:36 djc Exp $
 
 EAPI="2"
 
@@ -134,6 +134,11 @@ src_configure() {
 	# Using -fno-strict-aliasing to prevent possible creation of invalid code.
 	append-flags -fno-strict-aliasing
 
+	# bug 298489
+	if use ppc || use ppc64 ; then
+		[[ $(gcc-version) > 4.3 ]] && append-flags -mno-altivec
+	fi;
+
 	use mpi && mpi="using mpi ;"
 
 	if use python ; then
@@ -174,7 +179,7 @@ __EOF__
 		OPTIONS="${OPTIONS} --disable-long-double"
 	fi
 
-	OPTIONS="${OPTIONS} --user-config=\"${S}/user-config.jam\" --boost-build=/usr/share/boost-build-${MAJOR_PV} --prefix=\"${D}/usr\" --layout=versioned"
+	OPTIONS="${OPTIONS} pch=off --user-config=\"${S}/user-config.jam\" --boost-build=/usr/share/boost-build-${MAJOR_PV} --prefix=\"${D}/usr\" --layout=versioned"
 
 }
 
@@ -369,7 +374,7 @@ src_install () {
 	cd "${S}/status"
 	if [ -f regress.log ] ; then
 		docinto status
-		dohtml *.{html,gif} ../boost.png
+		dohtml *.html ../boost.png
 		dodoc regress.log
 	fi
 
@@ -437,7 +442,7 @@ src_test() {
 		--dump-tests 2>&1 | tee regress.log
 
 	# Postprocessing
-	cat regress.log | "${S}/tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/process_jam_log" --v2
+	cat regress.log | "${S}/tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/pch-off/process_jam_log" --v2
 	if test $? != 0 ; then
 		die "Postprocessing the build log failed"
 	fi
@@ -447,7 +452,7 @@ src_test() {
 __EOF__
 
 	# Generate the build log html summary page
-	"${S}/tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/compiler_status" --v2 \
+	"${S}/tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/pch-off/compiler_status" --v2 \
 		--comment "${S}/status/comment.html" "${S}" \
 		cs-$(uname).html cs-$(uname)-links.html
 	if test $? != 0 ; then
@@ -459,7 +464,10 @@ __EOF__
 }
 
 pkg_postinst() {
-	use eselect && eselect boost update
+	if use eselect ; then
+		eselect boost update || ewarn "eselect boost update failed."
+	fi
+
 	if [ ! -h "${ROOT}/etc/eselect/boost/active" ] ; then
 		elog "No active boost version found. Calling eselect to select one..."
 		eselect boost update
