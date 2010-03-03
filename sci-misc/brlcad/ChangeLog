@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/brlcad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/ChangeLog,v 1.3 2010/02/28 03:35:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/ChangeLog,v 1.4 2010/03/03 15:47:50 bicatali Exp $
+
+*brlcad-7.16.6-r1 (03 Mar 2010)
+
+  03 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -brlcad-7.16.6.ebuild, +brlcad-7.16.6-r1.ebuild, metadata.xml:
+  Added benchmarks which can be run if the tests are enabled. Added a
+  desktop entry, and itk/itcl library path to the LDPATH environment
 
   28 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> brlcad-7.16.6.ebuild:
   Filtered -Werror, still creating problems (bug #307061)

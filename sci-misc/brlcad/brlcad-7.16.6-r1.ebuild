@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6.ebuild,v 1.3 2010/02/28 03:35:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6-r1.ebuild,v 1.1 2010/03/03 15:47:50 bicatali Exp $
 
 EAPI=2
 inherit eutils java-pkg-opt-2
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+debug doc examples java opengl smp X"
+IUSE="benchmarks +debug doc examples java opengl smp X"
 
 RDEPEND="media-libs/libpng
 	sys-libs/zlib
@@ -37,20 +37,19 @@ BRLCAD_DIR="/usr/${PN}"
 
 src_prepare() {
 	#patch a simple Makefile.in since the Makefile.am would need
-	#a full and slow autoreconf of many directories
+	# a full and slow autoreconf of many directories
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-stl-headers.patch
-	# hack for 7.16.6 only (bug #307061)
-	sed -i -e 's/-Werror//g' configure || die
 }
 
 src_configure() {
-	local myitcl="/usr/$(get_libdir)/itcl3.4"
-	local myitk="/usr/$(get_libdir)/itk3.4"
+	local myitcl="/usr/$(get_libdir)/itcl3.4" myitk="/usr/$(get_libdir)/itk3.4"
+	export LD_LIBRARY_PATH="${myitcl}:${myitk}:${LD_LIBRARY_PATH}"
 	econf \
+		--disable-strict-build \
 		--prefix="${BRLCAD_DIR}" \
 		--datadir="/usr/share/${PN}" \
-		--mandir="${BRLCAR_DIR}/man" \
+		--mandir="${BRLCAD_DIR}/man" \
 		--disable-almost-everything \
 		--disable-regex-build \
 		--disable-png-build \
@@ -68,7 +67,6 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable debug optimization) \
 		$(use_enable debug runtime-debug) \
-		$(use_enable debug strict-build) \
 		$(use_enable debug verbose) \
 		$(use_enable debug warnings) \
 		$(use_enable debug progress) \
@@ -78,13 +76,24 @@ src_configure() {
 		$(use_with java jdk $(java-config -O)) \
 		$(use_with opengl ogl) \
 		$(use_with X x) \
-		$(use_with X x11) \
-		LD_LIBRARY_PATH="${myitcl}:${myitk}:${LD_LIBRARY_PATH}"
+		$(use_with X x11)
+}
+
+src_test() {
+	emake check || die "emake check failed"
+	if use benchmarks; then
+		emake benchmark || die "emake benchmark failed"
+	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -f "${D}"usr/share/brlcad/${README,NEWS,AUTHORS,HACKING,INSTALL,COPYING}
+	dodoc AUTHORS NEWS README HACKING TODO BUGS ChangeLog
 	echo "PATH=${BRLCAD_DIR}/bin" >  99brlcad
 	echo "MANPATH=${BRLCAD_DIR}/man" >> 99brlcad
+	echo "LDPATH=${myitcl}:${myitk}" >> 99brlcad
 	doenvd 99brlcad || die
+	newicon misc/macosx/Resources/ReadMe.rtfd/brlcad_logo_tiny.png brlcad.png
+	make_desktop_entry mged "BRL-CAD" brlcad "Graphics;Engineering"
 }
