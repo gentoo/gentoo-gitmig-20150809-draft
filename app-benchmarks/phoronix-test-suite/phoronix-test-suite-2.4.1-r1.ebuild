@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.4.1-r1.ebuild,v 1.2 2010/03/02 12:48:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.4.1-r1.ebuild,v 1.3 2010/03/03 20:11:10 patrick Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="gd gtk"
 DEPEND=""
 RDEPEND="dev-lang/php:5[cli,gd,posix,pcntl,truetype,pcre]
 		app-arch/unzip
-		ps? ( dev-php5/pecl-ps )
+		dev-php5/pecl-ps
 		gtk? ( dev-php5/php-gtk )"
 
 S="${WORKDIR}/${PN}"

@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.7 2010/03/02 12:48:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.8 2010/03/03 20:11:10 patrick Exp $
+
+  03 Mar 2010; Patrick Lauer <patrick@gentoo.org>
+  phoronix-test-suite-2.4.1-r1.ebuild:
+  No need to add a useflag for a dependency
 
   02 Mar 2010; Patrick Lauer <patrick@gentoo.org>
   phoronix-test-suite-2.4.1-r1.ebuild:
