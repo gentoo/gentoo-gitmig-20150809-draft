@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.7.ebuild,v 1.1 2010/03/01 23:31:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.7.ebuild,v 1.2 2010/03/03 16:15:08 dang Exp $
 
 EAPI="2"
 
-inherit gnome2 python multilib virtualx
+inherit gnome2 python multilib virtualx eutils
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
@@ -146,6 +146,9 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	# Fix the audiocd plugin build. bug #307457
+	epatch "${FILESDIR}"/${P}-audiocd.patch
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
