@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.20 2010/03/02 05:15:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.21 2010/03/03 06:16:25 williamh Exp $
 
 EAPI="2"
-PATCHVER=2
+PATCHVER=3
 
 inherit autotools eutils
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/dotconf
 	>=dev-libs/glib-2
 	alsa? ( media-libs/alsa-lib )
 	espeak? ( app-accessibility/espeak )
-	flite? ( >=app-accessibility/flite-1.3 )
+	flite? ( >=app-accessibility/flite-1.3 <app-accessibility/flite-1.4 )
 	nas? ( media-libs/nas )
 	pulseaudio? ( media-sound/pulseaudio
 		dev-libs/libatomic_ops )

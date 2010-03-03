@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.64 2010/03/02 05:15:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.65 2010/03/03 06:16:25 williamh Exp $
+
+  03 Mar 2010; William Hubbs <williamh@gentoo.org>
+  speech-dispatcher-0.6.7.ebuild, speech-dispatcher-0.6.7-r1.ebuild:
+  Cleaned up the patchset again and restricted this version of
+  speech dispatcher to run with flite-1.3 only for bug #307551.
 
   02 Mar 2010; William Hubbs <williamh@gentoo.org>
   speech-dispatcher-0.6.7.ebuild, speech-dispatcher-0.6.7-r1.ebuild,
