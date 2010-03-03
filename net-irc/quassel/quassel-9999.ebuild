@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.31 2010/01/07 15:42:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.32 2010/03/03 17:03:16 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivi
 HOMEPAGE="http://quassel-irc.org/"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64-linux"
+KEYWORDS=""
 SLOT="0"
 IUSE="ayatana dbus debug kde monolithic phonon postgres +server +ssl webkit +X"
 
