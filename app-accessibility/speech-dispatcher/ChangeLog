@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.66 2010/03/03 06:29:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.67 2010/03/03 07:34:06 williamh Exp $
+
+  03 Mar 2010; William Hubbs <williamh@gentoo.org>
+  speech-dispatcher-0.6.6.ebuild, speech-dispatcher-0.6.7.ebuild,
+  speech-dispatcher-0.6.7-r1.ebuild:
+  corrected flite dependencies to be <1.4.
 
   03 Mar 2010; William Hubbs <williamh@gentoo.org>
   -speech-dispatcher-0.6.5.ebuild, -speech-dispatcher-0.6.6-r1.ebuild,
