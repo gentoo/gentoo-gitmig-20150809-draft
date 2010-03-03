@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fatsort
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.7 2010/01/12 18:38:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.8 2010/03/03 20:36:46 phajdan.jr Exp $
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fatsort-0.9.13.1.206.ebuild:
+  x86 stable wrt bug #304051, arch-tested by Andreas Schurch
 
   12 Jan 2010; Daniel Pielmeier <billie@gentoo.org>
   fatsort-0.9.13.1.206.ebuild:
