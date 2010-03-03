@@ -1,16 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.6_beta1.ebuild,v 1.1 2010/02/17 20:25:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.6_rc1.ebuild,v 1.1 2010/03/03 16:53:01 scarabeus Exp $
 
 EAPI="2"
-
-MY_P="${P/_/-}"
 
 inherit cmake-utils eutils
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
-SRC_URI="http://quassel-irc.org/pub/${MY_P}.tar.bz2"
+SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
@@ -50,7 +48,7 @@ DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${P/_/-}"
 
 pkg_setup() {
 	if ! use monolithic && ! use server && ! use X ; then
