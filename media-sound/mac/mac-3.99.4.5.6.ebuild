@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.4.ebuild,v 1.4 2010/03/03 20:07:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.6.ebuild,v 1.1 2010/03/03 20:07:51 billie Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ MY_P=${PN}-${MY_PV}-${PATCH}
 
 DESCRIPTION="Monkey's Audio Codecs"
 HOMEPAGE="http://etree.org/shnutils/shntool/"
-SRC_URI="http://etree.org/shnutils/shntool/support/formats/ape/unix/${MY_PV}/${PATCH}/${MY_P}.tar.gz"
+SRC_URI="http://etree.org/shnutils/shntool/support/formats/ape/unix/${MY_PV}-${PATCH}/${MY_P}.tar.gz"
 
 LICENSE="mac"
 SLOT="0"
@@ -28,7 +28,6 @@ S=${WORKDIR}/${MY_P}
 RESTRICT="mirror"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
 	sed -i -e 's:-O3::' configure || die
 }
 
@@ -49,8 +48,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog ChangeLog.shntool NEWS README TODO src/Credits.txt \
-		src/History.txt || die
+	dodoc AUTHORS ChangeLog* NEWS README TODO src/*.txt || die
 	dohtml src/Readme.htm || die
 	find "${D}"/usr/$(get_libdir) -name '*.la' -delete || die
 }
