@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portato
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.19 2009/09/01 11:01:51 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.20 2010/03/03 18:03:04 cla Exp $
+
+*portato-0.13.1 (03 Mar 2010)
+
+  03 Mar 2010; Dawid Węgliński <cla@gentoo.org> +portato-0.13.1.ebuild:
+  Version bump wrt bug #292389
 
   01 Sep 2009; Patrick Lauer <patrick@gentoo.org> -portato-0.10.ebuild,
   -portato-0.11.1.ebuild:
