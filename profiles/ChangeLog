@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3968 2010/03/02 20:49:50 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3969 2010/03/03 08:48:18 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask dev-lang/squeak wrt #247363.
 
   02 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   KDE SC 4.4.1 Released
