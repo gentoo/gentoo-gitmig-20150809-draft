@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.14 2010/01/30 08:51:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.15 2010/03/03 19:42:57 phajdan.jr Exp $
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnurobbo-0.65.6.ebuild:
+  x86 stable wrt bug #307359
 
 *gnurobbo-0.65.6 (30 Jan 2010)
 
