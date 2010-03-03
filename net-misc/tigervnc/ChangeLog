@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.38 2010/03/02 20:33:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.39 2010/03/03 10:29:10 phajdan.jr Exp $
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tigervnc-1.0.0-r4.ebuild:
+  x86 stable wrt bug #273107
 
 *tigervnc-1.0.0-r4 (02 Mar 2010)
 
