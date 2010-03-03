@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.187 2010/03/03 12:19:36 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.188 2010/03/03 13:01:59 djc Exp $
+
+*boost-1.42.0 (03 Mar 2010)
+
+  03 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> +boost-1.42.0.ebuild,
+  +files/boost-1.42.0-parameter-needs-python.patch,
+  +files/remove-toolset-1.42.0.patch:
+  Version bump to 1.42.0.
 
   03 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> boost-1.41.0-r3.ebuild:
   Fix bug 298489 in boost-1.41.0-r3.
