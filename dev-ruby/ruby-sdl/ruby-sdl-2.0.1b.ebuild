@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-2.0.1b.ebuild,v 1.2 2009/12/24 17:10:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-2.0.1b.ebuild,v 1.3 2010/03/03 18:46:27 phajdan.jr Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kmc.gr.jp/~ohai/rubysdl.en.html"
 SRC_URI="mirror://rubyforge/rubysdl/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 
 IUSE="image mixer truetype mpeg sge"
 
