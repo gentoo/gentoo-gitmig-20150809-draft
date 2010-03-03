@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.1.0.ebuild,v 1.1 2010/03/02 15:59:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-2.1.0.ebuild,v 1.2 2010/03/03 08:44:51 fauli Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SERIES=$(get_version_component_range 1-2)
 DESCRIPTION="Bazaar is a next generation distributed version control system."
 HOMEPAGE="http://bazaar-vcs.org/"
 #SRC_URI="http://bazaar-vcs.org/releases/src/${MY_P}.tar.gz"
-SRC_URI="http://launchpad.net/bzr/${SERIES}/${MY_PV}/+download/${MY_P}.tar.gz"
+SRC_URI="http://launchpad.net/bzr/${SERIES}/${PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
