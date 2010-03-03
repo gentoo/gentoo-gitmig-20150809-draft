@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.27 2010/02/15 18:04:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.28 2010/03/03 19:55:23 lxnay Exp $
+
+*bluez-4.61-r1 (03 Mar 2010)
+
+  03 Mar 2010; Fabio Erculiani <lxnay@gentoo.org> -bluez-4.61.ebuild,
+  +bluez-4.61-r1.ebuild:
+  fix alsa bluetooth.conf install path (from /etc/alsa to /usr/share/alsa --
+  former is invalid)
 
   15 Feb 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.60.ebuild,
   bluez-4.61.ebuild:

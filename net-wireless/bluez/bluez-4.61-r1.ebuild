@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.61.ebuild,v 1.2 2010/02/15 18:04:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.61-r1.ebuild,v 1.1 2010/03/03 19:55:23 lxnay Exp $
 
 EAPI="2"
 
@@ -126,6 +126,17 @@ src_install() {
 
 	newinitd "${FILESDIR}/4.60/bluetooth-init.d" bluetooth || die
 	newconfd "${FILESDIR}/4.60/bluetooth-conf.d" bluetooth || die
+
+	if use alsa; then
+		# ALSA config directory in Gentoo is the default one: /usr/share/alsa
+		# so bluetooth.conf must be moved there.
+		# Upstream should be contacted about this.
+		dodir /usr/share/alsa
+		mv "${D}"/etc/alsa/bluetooth.conf "${D}"/usr/share/alsa || \
+			die "cannot move bluetooth.conf to /usr/share/alsa"
+		rmdir "${D}"/etc/alsa || die "/etc/alsa not empty"
+	fi
+
 }
 
 pkg_postinst() {
