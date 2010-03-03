@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.65 2009/11/21 15:59:56 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.66 2010/03/03 15:38:57 rich0 Exp $
+
+  03 Mar 2010; Richard Freeman <rich0@gentoo.org>
+  mythtv-themes-0.22_p22869.ebuild:
+  amd64 stable - 299222
 
 *mythtv-themes-0.22_p22869 (21 Nov 2009)
 
