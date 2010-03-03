@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5328 2010/03/03 10:07:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5329 2010/03/03 16:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2980,6 +2980,7 @@ sci-mathematics/singular:boost - Compile against external boost headers (dev-lib
 sci-mathematics/yacas:server - Build the network server version
 sci-misc/boinc:client -  Build client part of the boinc. Not only the manager but also the computation unit. With +X only you will have only manager which can connect to remote clients. 
 sci-misc/boinc:cuda -  Use nvidia cuda toolkit for speeding up computations. NOTE: works only for subset of nvidia graphic cards so make sure your card is supported before opening bug about it. 
+sci-misc/brlcad:benchmarks -  Run benchmarks during test phase (need test option enabled) 
 sci-misc/h5utils:octave - Build Octave plugins
 sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs dev-java/antlr)
 sci-misc/nco:udunits - Add sci-libs/udunits files support
