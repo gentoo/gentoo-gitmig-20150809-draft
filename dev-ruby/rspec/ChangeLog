@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.64 2010/02/17 17:58:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.65 2010/03/03 18:52:58 phajdan.jr Exp $
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> rspec-1.2.9.ebuild:
+  x86 stable wrt bug #305607
 
   17 Feb 2010; Hans de Graaff <graaff@gentoo.org> rspec-1.3.0.ebuild:
   Block older versions of rspec-rails which are not compatible, fixes
