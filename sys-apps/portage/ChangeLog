@@ -1,6 +1,44 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.683 2010/03/02 14:56:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.684 2010/03/03 11:08:48 zmedico Exp $
+
+*portage-2.2_rc64 (03 Mar 2010)
+
+  03 Mar 2010; Zac Medico <zmedico@gentoo.org> portage-2.2_rc64.ebuild:
+  2.2_rc64 version bump. This fixes bug #299095 (repoman check for
+  check_license calls in EAPI 3 or later), bug #306659 (binary packages from
+  binhost reinstalled for no reason by portage-2.2_rc63), bug #307021 (make
+  repoman please fix message red), and bug #307235 (dropped dependencies
+  triggered in some rare cases when a package needs to be uninstalled).
+
+*portage-2.1.8 (03 Mar 2010)
+
+  03 Mar 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.8.ebuild:
+  2.1.8 version bump. This fixes bug #268724 (make --unmerge suggest
+  --depclean for safety), bug #277902 (make quickpkg insert comment
+  in config file placeholders), bug #295197 (show newline when
+  dispatch-conf exits), bug #298141 (make /etc/portage/sets relative to
+  PORTAGE_CONFIGROOT), bug #298479 (don't export invalid USER variable),
+  bug #299095 (repoman check for check_license calls in EAPI 3 or later),
+  bug #302764 (fix --regen to handle nested overlays correctly), bug #302937
+  (handle declare -r in environment.bz2), bug #303211 (fix SIZE digest
+  verification failure with old binhost protocol), bug #303401 (don't
+  emerge.log in fetchonly mode), bug #303445 (fix mixed mask messages from
+  different package.mask files), bug #303519 (deprecation warning about
+  internal dep_getkey usage), bug #303567 (merge libc asap), bug #304793
+  (note in --newuse docs that --selective is implied), bug #305393 (fix
+  dispatch-conf to handle sdiff from diffutils-2.9), bug #307021 (make
+  repoman please fix message red), and bug #307235 (dropped dependencies
+  triggered in some rare cases when a package needs to be uninstalled). The
+  new --rebuilt-binaries option will replace installed packages with binary
+  packages that have been rebuilt. Rebuilds are detected by comparison of
+  BUILD_TIME package metadata. This option is enabled automatically when
+  using binary packages (--usepkgonly or --getbinpkgonly) together with
+  --update and --deep. The top-level __init__.py for the portage python
+  package has been split into many smaller python modules, making the
+  code easier to navigate and allowing small parts of the portage api to
+  be imported with less overhead. Bug #307597 tracks all bugs fixed since
+  portage-2.1.7.x.
 
   02 Mar 2010; Jeroen Roovers <jer@gentoo.org> portage-2.1.7.17.ebuild:
   Stable for HPPA (bug #307151).
