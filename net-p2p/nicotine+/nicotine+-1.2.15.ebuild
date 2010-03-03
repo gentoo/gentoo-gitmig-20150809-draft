@@ -1,21 +1,22 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.13.ebuild,v 1.1 2009/09/27 05:31:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.15.ebuild,v 1.1 2010/03/03 22:41:00 dirtyepic Exp $
 
-inherit distutils multilib toolchain-funcs
+EAPI=2
+SUPPORT_PYTHON_ABIS=1
+
+inherit distutils python
 
 DESCRIPTION="A fork of nicotine, a Soulseek client in Python"
 HOMEPAGE="http://nicotine-plus.sourceforge.net"
-#SRC_URI="http://www.nicotine-plus.org/files/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/nicotine-plus/${P}.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="geoip spell"
 
-RDEPEND="virtual/python
-	>=dev-python/pygtk-2.10
+RDEPEND=">=dev-python/pygtk-2.12
 	media-libs/mutagen
 	geoip? ( >=dev-python/geoip-python-0.2.0
 			 >=dev-libs/geoip-1.2.1 )
@@ -24,9 +25,10 @@ RDEPEND="virtual/python
 
 DEPEND="${RDEPEND}"
 
+PYTHON_DEPEND="2"
+RESTRICT_PYTHON_ABIS="3.*"
+
 src_install() {
-	distutils_python_version
-	distutils_src_install \
-		--install-lib /usr/$(get_libdir)/python${PYVER}/site-packages
+	distutils_src_install
 	dosym nicotine.py /usr/bin/nicotine
 }
