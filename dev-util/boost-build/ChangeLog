@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.48 2010/03/03 10:54:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.49 2010/03/03 12:32:08 djc Exp $
+
+*boost-build-1.42.0 (03 Mar 2010)
+
+  03 Mar 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +files/boost-1.42-fix-mpich2-detection.patch, +boost-build-1.42.0.ebuild:
+  Version bump to dev-util/boost-build-1.42.0.
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   boost-build-1.41.0.ebuild:
