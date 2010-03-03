@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.101 2010/02/22 19:53:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.102 2010/03/03 15:36:21 phajdan.jr Exp $
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libffi-3.0.9.ebuild:
+  x86 stable wrt bug #306281
 
   22 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> libffi-3.0.9.ebuild:
   amd64 stable wrt #306281
