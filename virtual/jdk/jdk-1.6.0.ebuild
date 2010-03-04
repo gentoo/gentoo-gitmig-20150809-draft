@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.17 2010/02/09 17:23:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.18 2010/03/04 23:47:11 caster Exp $
 
 DESCRIPTION="Virtual for JDK"
 HOMEPAGE=""
@@ -21,10 +21,12 @@ IUSE=""
 RDEPEND="|| (
 		amd64? ( dev-java/icedtea6-bin )
 		x86? ( dev-java/icedtea6-bin )
-		amd64? ( =dev-java/sun-jdk-1.6.0* )
-		x86? ( =dev-java/sun-jdk-1.6.0* )
 		amd64-linux? ( dev-java/icedtea6-bin )
 		x86-linux? ( dev-java/icedtea6-bin )
+		amd64? ( =dev-java/icedtea-6* )
+		x86? ( =dev-java/icedtea-6* )
+		amd64? ( =dev-java/sun-jdk-1.6.0* )
+		x86? ( =dev-java/sun-jdk-1.6.0* )
 		amd64-linux? ( =dev-java/sun-jdk-1.6.0* )
 		x86-linux? ( =dev-java/sun-jdk-1.6.0* )
 		x64-solaris? ( =dev-java/sun-jdk-1.6.0* )

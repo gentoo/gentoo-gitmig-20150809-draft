@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.31 2010/02/22 22:29:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.32 2010/03/04 23:47:11 caster Exp $
+
+  04 Mar 2010; Vlastimil Babka <caster@gentoo.org> jdk-1.6.0.ebuild:
+  Add icedtea-6 in the alternatives.
 
   22 Feb 2010; Vlastimil Babka <caster@gentoo.org> -jdk-1.4.1.ebuild,
   -jdk-1.4.2.ebuild:
