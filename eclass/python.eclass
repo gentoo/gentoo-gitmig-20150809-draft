@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.91 2010/02/28 15:49:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.92 2010/03/04 17:42:11 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -190,6 +190,9 @@ fi
 # are respected. Only exported if one of those variables is set.
 if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR} ]]; then
 	python_pkg_setup() {
+		# Check if phase is pkg_setup().
+		[[ "${EBUILD_PHASE}" != "setup" ]] && die "${FUNCNAME}() can be used only in pkg_setup() phase"
+
 		python_pkg_setup_fail() {
 			eerror "${1}"
 			die "${1}"
@@ -229,27 +232,30 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR
 
 	EXPORT_FUNCTIONS pkg_setup
 
-	_PYTHON_USE_WITH_ATOM=""
+	_PYTHON_USE_WITH_ATOMS_ARRAY=()
 	if [[ -n "${PYTHON_USE_WITH}" ]]; then
 		for _PYTHON_ATOM in "${_PYTHON_ATOMS[@]}"; do
-			_PYTHON_USE_WITH_ATOM+="${_PYTHON_USE_WITH_ATOM:+ }${_PYTHON_ATOM}[${PYTHON_USE_WITH/ /,}]"
+			_PYTHON_USE_WITH_ATOMS_ARRAY+=("${_PYTHON_ATOM}[${PYTHON_USE_WITH/ /,}]")
 		done
-		_PYTHON_USE_WITH_ATOM="|| ( ${_PYTHON_USE_WITH_ATOM} )"
 	elif [[ -n "${PYTHON_USE_WITH_OR}" ]]; then
 		for _USE_flag in ${PYTHON_USE_WITH_OR}; do
 			for _PYTHON_ATOM in "${_PYTHON_ATOMS[@]}"; do
-				_PYTHON_USE_WITH_ATOM+="${_PYTHON_USE_WITH_ATOM:+ }${_PYTHON_ATOM}[${_USE_flag}]"
+				_PYTHON_USE_WITH_ATOMS_ARRAY+=("${_PYTHON_ATOM}[${_USE_flag}]")
 			done
 		done
 		unset _USE_flag
-		_PYTHON_USE_WITH_ATOM="|| ( ${_PYTHON_USE_WITH_ATOM} )"
+	fi
+	if [[ "${#_PYTHON_USE_WITH_ATOMS_ARRAY[@]}" -gt 1 ]]; then
+		_PYTHON_USE_WITH_ATOMS="|| ( ${_PYTHON_USE_WITH_ATOMS_ARRAY[@]} )"
+	else
+		_PYTHON_USE_WITH_ATOMS="${_PYTHON_USE_WITH_ATOMS_ARRAY[@]}"
 	fi
 	if [[ -n "${PYTHON_USE_WITH_OPT}" ]]; then
-		_PYTHON_USE_WITH_ATOM="${PYTHON_USE_WITH_OPT}? ( ${_PYTHON_USE_WITH_ATOM} )"
+		_PYTHON_USE_WITH_ATOMS="${PYTHON_USE_WITH_OPT}? ( ${_PYTHON_USE_WITH_ATOMS} )"
 	fi
-	DEPEND+=" ${_PYTHON_USE_WITH_ATOM}"
-	RDEPEND+=" ${_PYTHON_USE_WITH_ATOM}"
-	unset _PYTHON_ATOM _PYTHON_USE_WITH_ATOM
+	DEPEND+=" ${_PYTHON_USE_WITH_ATOMS}"
+	RDEPEND+=" ${_PYTHON_USE_WITH_ATOMS}"
+	unset _PYTHON_ATOM _PYTHON_USE_WITH_ATOMS _PYTHON_USE_WITH_ATOMS_ARRAY
 fi
 
 unset _PYTHON_ATOMS
@@ -1263,19 +1269,22 @@ python_get_library() {
 }
 
 # @FUNCTION: python_get_version
-# @USAGE: [-f|--final-ABI] [--major] [--minor] [--micro]
+# @USAGE: [-f|--final-ABI] [--full] [--major] [--minor] [--micro]
 # @DESCRIPTION:
 # Print Python version.
-# --major, --minor and --micro options cannot be specified simultaneously.
-# If --major, --minor and --micro options are not specified, then "${major_version}.${minor_version}" is printed.
+# --full, --major, --minor and --micro options cannot be specified simultaneously.
+# If --full, --major, --minor and --micro options are not specified, then "${major_version}.${minor_version}" is printed.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
 python_get_version() {
-	local final_ABI="0" major="0" minor="0" micro="0" python_command
+	local final_ABI="0" full="0" major="0" minor="0" micro="0" python_command
 
 	while (($#)); do
 		case "$1" in
 			-f|--final-ABI)
 				final_ABI="1"
+				;;
+			--full)
+				full="1"
 				;;
 			--major)
 				major="1"
@@ -1296,17 +1305,27 @@ python_get_version() {
 		shift
 	done
 
-	if [[ "$((${major} + ${minor} + ${micro}))" -gt 1 ]]; then
-		die "${FUNCNAME}(): '--major', '--minor' or '--micro' options cannot be specified simultaneously"
+	if [[ "$((${full} + ${major} + ${minor} + ${micro}))" -gt 1 ]]; then
+		die "${FUNCNAME}(): '--full', '--major', '--minor' or '--micro' options cannot be specified simultaneously"
 	fi
 
-	if [[ "${major}" == "1" ]]; then
+	if [[ "${full}" == "1" ]]; then
+		python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:3]))"
+	elif [[ "${major}" == "1" ]]; then
 		python_command="from sys import version_info; print(version_info[0])"
 	elif [[ "${minor}" == "1" ]]; then
 		python_command="from sys import version_info; print(version_info[1])"
 	elif [[ "${micro}" == "1" ]]; then
 		python_command="from sys import version_info; print(version_info[2])"
 	else
+		if [[ -n "${PYTHON_ABI}" && "${final_ABI}" == "0" ]]; then
+			if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
+				echo "${PYTHON_ABI}"
+			elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
+				echo "${PYTHON_ABI%-jython}"
+			fi
+			return
+		fi
 		python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:2]))"
 	fi
 
@@ -1489,10 +1508,22 @@ python_convert_shebangs() {
 # Supported values: 0, 1, 2, 3, 4.
 PYTHON_TEST_VERBOSITY="${PYTHON_TEST_VERBOSITY:-1}"
 
+_python_test_hook() {
+	if [[ "$#" -ne 1 ]]; then
+		die "${FUNCNAME}() requires 1 argument"
+	fi
+
+	if [[ -n "${SUPPORT_PYTHON_ABIS}" && "$(type -t "${FUNCNAME[3]}_$1_hook")" == "function" ]]; then
+		"${FUNCNAME[3]}_$1_hook"
+	fi
+}
+
 # @FUNCTION: python_execute_nosetests
 # @USAGE: [-P|--PYTHONPATH PYTHONPATH] [-s|--separate-build-dirs] [--] [arguments]
 # @DESCRIPTION:
 # Execute nosetests for all enabled versions of Python.
+# In ebuilds of packages supporting installation for multiple versions of Python, this function
+# calls python_execute_nosetests_pre_hook() and python_execute_nosetests_post_hook(), if they are defined.
 python_execute_nosetests() {
 	_python_set_color_variables
 
@@ -1531,13 +1562,17 @@ python_execute_nosetests() {
 			fi
 		fi
 
+		_python_test_hook pre
+
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
 			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"${_NORMAL}
-			PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+			PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@" || return "$?"
 		else
 			echo ${_BOLD}nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"${_NORMAL}
-			nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"
+			nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@" || return "$?"
 		fi
+
+		_python_test_hook post
 	}
 	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
@@ -1555,6 +1590,8 @@ python_execute_nosetests() {
 # @USAGE: [-P|--PYTHONPATH PYTHONPATH] [-s|--separate-build-dirs] [--] [arguments]
 # @DESCRIPTION:
 # Execute py.test for all enabled versions of Python.
+# In ebuilds of packages supporting installation for multiple versions of Python, this function
+# calls python_execute_py.test_pre_hook() and python_execute_py.test_post_hook(), if they are defined.
 python_execute_py.test() {
 	_python_set_color_variables
 
@@ -1593,13 +1630,17 @@ python_execute_py.test() {
 			fi
 		fi
 
+		_python_test_hook pre
+
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
 			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"${_NORMAL}
-			PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"
+			PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@" || return "$?"
 		else
 			echo ${_BOLD}py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"${_NORMAL}
-			py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@"
+			py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@" || return "$?"
 		fi
+
+		_python_test_hook post
 	}
 	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
@@ -1617,6 +1658,8 @@ python_execute_py.test() {
 # @USAGE: [-P|--PYTHONPATH PYTHONPATH] [-s|--separate-build-dirs] [--] [arguments]
 # @DESCRIPTION:
 # Execute trial for all enabled versions of Python.
+# In ebuilds of packages supporting installation for multiple versions of Python, this function
+# calls python_execute_trial_pre_hook() and python_execute_trial_post_hook(), if they are defined.
 python_execute_trial() {
 	_python_set_color_variables
 
@@ -1655,13 +1698,17 @@ python_execute_trial() {
 			fi
 		fi
 
+		_python_test_hook pre
+
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
 			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"${_NORMAL}
-			PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+			PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@" || return "$?"
 		else
 			echo ${_BOLD}trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"${_NORMAL}
-			trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"
+			trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@" || return "$?"
 		fi
+
+		_python_test_hook post
 	}
 	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
@@ -1704,17 +1751,15 @@ python_disable_pyc() {
 #
 # If supplied with arguments, it will recompile all modules recursively
 # in the supplied directory.
-# This function should only be run in pkg_postinst().
 #
 # Options passed to this function are passed to compileall.py.
 #
-# Example:
-#         python_mod_optimize ctypesgencore
+# This function can be used only in pkg_postinst() phase.
 python_mod_optimize() {
 	_python_initialize_prefix_variables
 
 	# Check if phase is pkg_postinst().
-	[[ ${EBUILD_PHASE} != "postinst" ]] && die "${FUNCNAME}() should only be run in pkg_postinst()"
+	[[ ${EBUILD_PHASE} != "postinst" ]] && die "${FUNCNAME}() can be used only in pkg_postinst() phase"
 
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		local dir file options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_absolute_dirs=() site_packages_dirs=() site_packages_absolute_files=() site_packages_files=()
@@ -1884,7 +1929,7 @@ python_mod_optimize() {
 # determine if they are orphaned (i.e. their corresponding .py files are missing.)
 # If they are, then it will remove their corresponding .pyc and .pyo files.
 #
-# This function should only be run in pkg_postrm().
+# This function can be used only in pkg_postrm() phase.
 python_mod_cleanup() {
 	_python_initialize_prefix_variables
 	_python_set_color_variables
@@ -1892,7 +1937,7 @@ python_mod_cleanup() {
 	local path py_file PYTHON_ABI="${PYTHON_ABI}" SEARCH_PATH=() root
 
 	# Check if phase is pkg_postrm().
-	[[ ${EBUILD_PHASE} != "postrm" ]] && die "${FUNCNAME}() should only be run in pkg_postrm()"
+	[[ ${EBUILD_PHASE} != "postrm" ]] && die "${FUNCNAME}() can be used only in pkg_postrm() phase"
 
 	# Strip trailing slash from ROOT.
 	root="${EROOT%/}"
@@ -1980,6 +2025,15 @@ python_version() {
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
 
+	_python_set_color_variables
+
+	if [[ "${FUNCNAME[1]}" != "distutils_python_version" ]]; then
+		eerror
+		eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
+		eerror "${_RED}Use PYTHON() instead of python variable. Use python_get_*() instead of PYVER* variables.${_NORMAL}"
+		eerror
+	fi
+
 	[[ -n "${PYVER}" ]] && return 0
 	local tmpstr
 	python="${python:-${EPREFIX}/usr/bin/python}"
@@ -2011,6 +2065,13 @@ python_mod_exists() {
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
 
+	_python_set_color_variables
+
+	eerror
+	eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
+	eerror "${_RED}Use USE dependencies and/or has_version() instead of ${FUNCNAME}().${_NORMAL}"
+	eerror
+
 	if [[ "$#" -ne 1 ]]; then
 		die "${FUNCNAME}() requires 1 argument"
 	fi
@@ -2025,6 +2086,15 @@ python_tkinter_exists() {
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		eerror "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()."
 		die "${FUNCNAME}() cannot be used in this EAPI"
+	fi
+
+	_python_set_color_variables
+
+	if [[ "${FUNCNAME[1]}" != "distutils_python_tkinter" ]]; then
+		eerror
+		eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
+		eerror "${_RED}Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}().${_NORMAL}"
+		eerror
 	fi
 
 	if ! "$(PYTHON ${PYTHON_ABI})" -c "from sys import version_info
@@ -2043,7 +2113,7 @@ else:
 # @USAGE: <file> [more files ...]
 # @DESCRIPTION:
 # Given filenames, it will pre-compile the module's .pyc and .pyo.
-# This function should only be run in pkg_postinst()
+# This function can be used only in pkg_postinst() phase.
 #
 # Example:
 #         python_mod_compile /usr/lib/python2.3/site-packages/pygoogle.py
@@ -2059,7 +2129,7 @@ python_mod_compile() {
 	local f myroot myfiles=()
 
 	# Check if phase is pkg_postinst()
-	[[ ${EBUILD_PHASE} != postinst ]] && die "${FUNCNAME}() should only be run in pkg_postinst()"
+	[[ ${EBUILD_PHASE} != postinst ]] && die "${FUNCNAME}() can be used only in pkg_postinst() phase"
 
 	# strip trailing slash
 	myroot="${EROOT%/}"
