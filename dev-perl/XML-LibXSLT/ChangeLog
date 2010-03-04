@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.67 2010/03/03 17:02:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.68 2010/03/04 01:10:17 tcunha Exp $
+
+  04 Mar 2010; Tiago Cunha <tcunha@gentoo.org> XML-LibXSLT-1.70.ebuild:
+  stable sparc, bug 307385
 
   03 Mar 2010; Torsten Veller <tove@gentoo.org> XML-LibXSLT-1.70.ebuild:
   Stable on x86, amd64 (#307385)
