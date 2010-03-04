@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.1.ebuild,v 1.2 2010/01/20 18:20:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.1.ebuild,v 1.3 2010/03/04 12:03:41 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://unbound.net/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug libevent python static test threads"
 
 RDEPEND=">=dev-libs/openssl-0.9.8
