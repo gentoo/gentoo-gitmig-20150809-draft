@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.1 2010/02/10 16:40:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.2 2010/03/04 00:47:21 matsuu Exp $
+
+*redmine-0.9.3 (04 Mar 2010)
+
+  04 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +redmine-0.9.3.ebuild:
+  Version bumped.
 
 *redmine-0.9.2 (10 Feb 2010)
 
