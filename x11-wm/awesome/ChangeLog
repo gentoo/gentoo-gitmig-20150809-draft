@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.96 2010/03/02 11:56:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.97 2010/03/04 00:42:16 matsuu Exp $
+
+*awesome-3.4.4 (04 Mar 2010)
+
+  04 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +awesome-3.4.4.ebuild:
+  Version bumped.
 
   02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> awesome-3.4.3.ebuild:
   x86 stable wrt bug #304285
