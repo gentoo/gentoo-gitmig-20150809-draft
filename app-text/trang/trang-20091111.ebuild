@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20091111.ebuild,v 1.2 2010/03/04 10:59:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20091111.ebuild,v 1.3 2010/03/04 17:05:54 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -37,6 +37,22 @@ java_prepare() {
 }
 
 EANT_GENTOO_CLASSPATH="xerces-2,xml-commons-resolver"
+
+src_test() {
+	# a very simple test
+	mkdir "test"
+
+	java -jar "dist/${PN}.jar" "${FILESDIR}/test.xml" "test/test.xsd"
+	java -jar "dist/${PN}.jar" "${FILESDIR}/test.xml" "test/test.dtd"
+	java -jar "dist/${PN}.jar" "test/test.dtd" "test/test.dtd.xsd"
+
+	md5sum -c <<MD5SUMS_END || die "Failed to verify md5sum"
+4bcb454ade46c0188f809d2e8ce15315  ${FILESDIR}/test.xml
+d096c1fb462902e10a3440a604a21664  test/test.xsd
+3fb46bdb16dc75a2a1e36e421b13e51d  test/test.dtd
+fce355ca962cb063d7baa5d7fd571bcf  test/test.dtd.xsd
+MD5SUMS_END
+}
 
 src_install() {
 	java-pkg_dojar "dist/${PN}.jar"
