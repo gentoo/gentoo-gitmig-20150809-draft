@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.0.1.ebuild,v 1.2 2010/02/11 20:42:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.0.1-r1.ebuild,v 1.1 2010/03/04 14:31:54 anarchy Exp $
 
 WANT_AUTOCONF="2.1"
 EAPI="2"
@@ -20,10 +20,11 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVE
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
-IUSE=""
+IUSE="system-sqlite"
 
-DEPEND=">=mail-client/mozilla-thunderbird-3.0"
+DEPEND=">=mail-client/mozilla-thunderbird-3.0[system-sqlite=]"
 RDEPEND="${DEPEND}
+	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	|| (
 		(
 			>=app-crypt/gnupg-2.0
@@ -95,6 +96,8 @@ src_configure() {
 		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
 		--with-user-appdir=.thunderbird \
 		--enable-application=mail
+
+	mozconfig_use_enable system-sqlite
 
 	# Finalize and report settings
 	mozconfig_final
