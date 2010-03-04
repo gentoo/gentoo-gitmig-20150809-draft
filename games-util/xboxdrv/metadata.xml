@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>games</herd>
+	<maintainer>
+		<email>nyhm@gentoo.org</email>
+		<name>Tristan Heaven</name>
+	</maintainer>
+	<use>
+		<flag name="daemon">Install xboxdrv-daemon.py (and its dependencies)</flag>
+	</use>
+</pkgmetadata>

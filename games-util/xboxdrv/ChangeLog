@@ -1,10 +1,10 @@
 # ChangeLog for games-util/xboxdrv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.1 2010/03/04 19:07:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.2 2010/03/04 19:10:14 nyhm Exp $
 
 *xboxdrv-0.4.10 (04 Mar 2010)
 
   04 Mar 2010; Tristan Heaven <nyhm@gentoo.org> +xboxdrv-0.4.10.ebuild,
   +files/xboxdrv-0.4.10-build.patch, +metadata.xml:
-  Initial commit, based on Frittella Laurentos ebuild from bug
+  Initial commit, based on Frittella Laurento's ebuild from bug #279652
 
