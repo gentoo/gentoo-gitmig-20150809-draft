@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.12.ebuild,v 1.8 2008/01/12 17:48:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.12.ebuild,v 1.9 2010/03/04 00:30:39 eva Exp $
 
 inherit gnome2
 
@@ -41,4 +41,4 @@ src_configure() {
 	gnome2_src_compile
 }
 
-DOCS="AUTHORS CREDITS ChangeLog README ABOUT-NLS"
+DOCS="AUTHORS CREDITS ChangeLog README"
