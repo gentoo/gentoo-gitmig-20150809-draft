@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.148 2010/03/02 12:46:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.149 2010/03/04 22:15:35 billie Exp $
+
+  04 Mar 2010; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.12-r1.ebuild,
+  hplip-3.10.2.ebuild:
+  Fix dependencies especially RDEPEND vs. DEPEND. Move the snmp use flag out
+  of !minimal as it is needed for a minimal build. This fixes bug #292976,
+  thanks to David Honour for reporting. Move dev-python/pygobject out of the
+  qt4 use flag. media-gfx/sane-frontends dev-python/imaging are equal
+  non-gui scanner frontends.
 
   02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   hplip-3.9.12-r1.ebuild:

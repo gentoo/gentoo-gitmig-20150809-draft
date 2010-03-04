@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2.ebuild,v 1.1 2010/02/28 12:21:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2.ebuild,v 1.2 2010/03/04 22:15:35 billie Exp $
 
 EAPI=2
 
@@ -21,16 +21,16 @@ COMMON_DEPEND="
 	media-libs/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 	udev-acl? ( >=sys-fs/udev-145[extras] )
+	snmp? (
+		net-analyzer/net-snmp
+		dev-libs/openssl
+	)
 	!minimal? (
 		net-print/cups
 		virtual/libusb:0
 		>=dev-lang/python-2.4.4[threads,xml]
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
-		snmp? (
-			net-analyzer/net-snmp
-			dev-libs/openssl
-		)
 	)"
 
 DEPEND="${COMMON_DEPEND}
@@ -38,9 +38,9 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.70
-	dev-python/pygobject
 	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	!minimal? (
+		dev-python/pygobject
 		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
 			gtk? ( media-gfx/xsane )

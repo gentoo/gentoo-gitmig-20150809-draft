@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12-r1.ebuild,v 1.5 2010/03/02 12:46:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.12-r1.ebuild,v 1.6 2010/03/04 22:15:35 billie Exp $
 
 EAPI=2
 
@@ -17,44 +17,41 @@ KEYWORDS="amd64 ppc ppc64 x86"
 # zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
 IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt4 scanner snmp static-ppds -udev-acl"
 
-# Note : libusb-compat untested (calchan 20090516)
-
 COMMON_DEPEND="
-	app-text/ghostscript-gpl
 	media-libs/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	udev-acl? ( >=sys-fs/udev-145[extras] )
+	snmp? (
+		net-analyzer/net-snmp
+		dev-libs/openssl
+	)
 	!minimal? (
 		net-print/cups
 		virtual/libusb:0
 		>=dev-lang/python-2.4.4[threads,xml]
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
-		snmp? (
-			net-analyzer/net-snmp
-			dev-libs/openssl
-		)
+		fax? ( sys-apps/dbus )
 	)"
 
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
+	app-text/ghostscript-gpl
+	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	!minimal? (
+		dev-python/pygobject
 		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
-			dev-python/imaging
 			gtk? ( media-gfx/xsane )
-			!gtk? ( media-gfx/sane-frontends )
+			!gtk? ( || ( media-gfx/sane-frontends dev-python/imaging ) )
 		)
 		fax? (
 			dev-python/reportlab
-			sys-apps/dbus
 			dev-python/dbus-python
 		)
 		qt4? (
 			dev-python/PyQt4[dbus,X]
-			dev-python/pygobject
 			libnotify? (
 				dev-python/notify-python
 			)
