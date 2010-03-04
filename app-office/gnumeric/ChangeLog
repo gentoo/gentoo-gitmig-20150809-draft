@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.196 2010/01/17 23:29:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.197 2010/03/04 22:57:05 eva Exp $
+
+*gnumeric-1.10.0 (04 Mar 2010)
+
+  04 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnumeric-1.8.4-r1.ebuild, gnumeric-1.8.4-r2.ebuild,
+  +gnumeric-1.10.0.ebuild:
+  Version bump. Restrict gnumeric-1.8 to goffice:0.6 slot.
 
   17 Jan 2010; Jeroen Roovers <jer@gentoo.org> gnumeric-1.8.4-r2.ebuild:
   Stable for HPPA (bug #281427).
