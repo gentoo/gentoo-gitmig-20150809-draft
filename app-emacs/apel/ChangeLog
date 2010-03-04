@@ -1,9 +1,9 @@
 # ChangeLog for app-emacs/apel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.32 2010/03/04 19:13:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.33 2010/03/04 19:31:38 armin76 Exp $
 
   04 Mar 2010; Raúl Porcel <armin76@gentoo.org> apel-10.7-r1.ebuild:
-  alpha/ia64/sparc stable wrt #307573 stable wrt #301548
+  alpha/ia64/sparc stable wrt #307573
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org> apel-10.7-r1.ebuild:
   stable x86, bug 307573
