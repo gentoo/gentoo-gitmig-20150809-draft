@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dovecot-antispam
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.15 2009/09/12 13:10:28 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.16 2010/03/04 18:29:35 hollow Exp $
+
+  04 Mar 2010; Benedikt Böhm <hollow@gentoo.org>
+  dovecot-antispam-1.2.ebuild, metadata.xml:
+  add spool2dir use flag wrt #295566
 
 *dovecot-antispam-1.2 (12 Sep 2009)
 
