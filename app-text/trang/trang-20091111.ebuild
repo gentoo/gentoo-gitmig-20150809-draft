@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20091111.ebuild,v 1.1 2010/03/04 10:50:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/trang-20091111.ebuild,v 1.2 2010/03/04 10:59:40 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -36,10 +36,7 @@ java_prepare() {
 	cp "${FILESDIR}/build.xml" "${S}/build.xml"
 }
 
-src_compile() {
-	java-pkg-2_src_compile \
-		-Dclasspath="$(java-pkg_getjars xerces-2,xml-commons-resolver)"
-}
+EANT_GENTOO_CLASSPATH="xerces-2,xml-commons-resolver"
 
 src_install() {
 	java-pkg_dojar "dist/${PN}.jar"

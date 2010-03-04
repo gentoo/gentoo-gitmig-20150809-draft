@@ -29,7 +29,7 @@
   </target>
 
   <target name="compile" description="Compiles source" depends="prepare">
-    <javac srcdir="${src.dir}" destdir="${build.dir}" encoding="UTF-8" classpath="${classpath}">
+    <javac srcdir="${src.dir}" destdir="${build.dir}" encoding="UTF-8" classpath="${gentoo.classpath}">
 <!--      <compilerarg value="-Xlint:deprecation"/> -->
 <!--      <compilerarg value="-Xlint"/> -->
     </javac>
@@ -37,7 +37,7 @@
 
   <target name="javadoc" depends="prepare" description="Create javadocs">
     <javadoc packagenames="net.*"
-			 classpath="${classpath}"
+			 classpath="${gentoo.classpath}"
              sourcepath="${src.dir}"
              defaultexcludes="yes"
              destdir="./${docs.dir}"

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/trang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.22 2010/03/04 10:50:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.23 2010/03/04 10:59:40 betelgeuse Exp $
+
+  04 Mar 2010; Petteri Räty <betelgeuse@gentoo.org> trang-20091111.ebuild,
+  files/build.xml:
+  Migrate to EANT_GENTOO_CLASSPATH.
 
 *trang-20091111 (04 Mar 2010)
 
