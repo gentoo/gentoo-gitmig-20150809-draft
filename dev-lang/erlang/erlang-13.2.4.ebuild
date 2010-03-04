@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.4.ebuild,v 1.2 2010/03/04 09:22:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.4.ebuild,v 1.3 2010/03/04 09:31:30 fauli Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -73,6 +73,7 @@ src_configure() {
 
 	econf \
 		--enable-threads \
+		--enable-shared-zlib \ \
 		$(use_enable sctp) \
 		$(use_enable hipe) \
 		$(use_with ssl ssl "${EPREFIX}"/usr) \
