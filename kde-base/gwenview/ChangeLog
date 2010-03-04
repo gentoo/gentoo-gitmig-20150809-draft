@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.56 2010/03/02 15:35:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.57 2010/03/04 12:06:22 ssuominen Exp $
+
+*gwenview-4.4.1-r1 (04 Mar 2010)
+
+  04 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gwenview-4.4.1-r1.ebuild:
+  Update jinclude.h, jpegint.h, transupp.c, and transupp.h from libjpeg-6b
+  to libjpeg-8a wrt http://bugs.kde.org/show_bug.cgi?id=227313.
 
 *gwenview-4.4.1 (02 Mar 2010)
 
