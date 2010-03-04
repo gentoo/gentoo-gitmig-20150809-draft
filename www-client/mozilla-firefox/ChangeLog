@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.601 2010/03/04 14:33:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.602 2010/03/04 14:36:26 nirbheek Exp $
+
+  04 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -mozilla-firefox-3.5.6.ebuild:
+  Remove old, vulnerable 3.5.6
 
 *mozilla-firefox-3.6-r4 (04 Mar 2010)
 
