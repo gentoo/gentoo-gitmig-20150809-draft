@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-2.1.1.ebuild,v 1.4 2010/01/07 18:22:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-2.1.1.ebuild,v 1.5 2010/03/04 00:49:51 nyhm Exp $
 
 EAPI=2
-inherit autotools gnome2-utils versionator games
+inherit autotools eutils gnome2-utils versionator games
 
 MY_P=${PN}-$(get_version_component_range 1).~-$(get_version_component_range 2-3)
 DESCRIPTION="highly addictive and remotely related to tetris"
