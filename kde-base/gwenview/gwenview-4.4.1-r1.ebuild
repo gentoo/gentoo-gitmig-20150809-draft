@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.4.1-r1.ebuild,v 1.1 2010/03/04 12:06:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.4.1-r1.ebuild,v 1.2 2010/03/04 18:13:17 ssuominen Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-li
 IUSE="debug +handbook kipi semantic-desktop"
 
 SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~ssuominen/${P}-libjpeg-8a.patch.bz2"
+	mirror://gentoo/${P}-libjpeg-8a.patch.bz2"
 
 # tests hang, last checked for 4.2.96
 RESTRICT="test"
