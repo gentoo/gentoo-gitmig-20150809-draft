@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.3.ebuild,v 1.2 2010/02/21 14:43:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.3.ebuild,v 1.3 2010/03/04 08:46:17 fauli Exp $
 
-EAPI=2
+EAPI=3
 WX_GTK_VER="2.8"
 
 inherit autotools elisp-common eutils multilib versionator wxwidgets
@@ -29,7 +29,7 @@ SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc emacs hipe java kpoll odbc smp sctp ssl tk wxwidgets"
 
 RDEPEND=">=dev-lang/perl-5.6.1
@@ -75,7 +75,7 @@ src_configure() {
 		--enable-threads \
 		$(use_enable sctp) \
 		$(use_enable hipe) \
-		$(use_with ssl) \
+		$(use_with ssl ssl "${EPREFIX}"/usr) \
 		$(use_enable ssl dynamic-ssl-lib) \
 		$(use_enable kpoll kernel-poll) \
 		$(use_enable smp smp-support) \
@@ -115,24 +115,24 @@ src_install() {
 	use smp && dosym "${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam.smp" /usr/bin/beam.smp
 
 	## Remove ${D} from the following files
-	dosed "${ERL_LIBDIR}/bin/erl"
-	dosed "${ERL_LIBDIR}/bin/start"
-	grep -rle "${D}" "${D}/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}" | xargs sed -i -e "s:${D}::g"
+	dosed "s:${D}::g" "${ERL_LIBDIR}/bin/erl"
+	dosed "s:${D}::g" "${ERL_LIBDIR}/bin/start"
+	grep -rle "${D}" "${ED}/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}" | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
-	rm "${D}/${ERL_LIBDIR}/Install"
+	rm "${ED}/${ERL_LIBDIR}/Install"
 
 	for i in "${WORKDIR}"/man/man* ; do
 		dodir "${ERL_LIBDIR}/${i##${WORKDIR}}"
 	done
 	for file in "${WORKDIR}"/man/man*/*.[1-9]; do
 			# doman sucks so we can't use it
-		cp ${file} "${D}/${ERL_LIBDIR}"/man/man${file##*.}/
+		cp ${file} "${ED}/${ERL_LIBDIR}"/man/man${file##*.}/
 	done
 	# extend MANPATH, so the normal man command can find it
 	# see bug 189639
 	dodir /etc/env.d/
-	echo "MANPATH=\"${ERL_LIBDIR}/man\"" > "${D}/etc/env.d/90erlang"
+	echo "MANPATH=\"${EPREFIX}${ERL_LIBDIR}/man\"" > "${ED}/etc/env.d/90erlang"
 
 	if use doc ; then
 		dohtml -A README,erl,hrl,c,h,kwc,info -r \
@@ -142,13 +142,15 @@ src_install() {
 	if use emacs ; then
 		pushd "${S}"
 		elisp-install erlang lib/tools/emacs/*.{el,elc}
-		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
+		sed -e "s:/usr/share:${EPREFIX}/usr/share:g" \
+			"${FILESDIR}"/${SITEFILE} > "${T}"/${SITEFILE}
+		elisp-site-file-install "${T}"/${SITEFILE}
 		popd
 	fi
 
 	# prepare erl for SMP, fixes bug #188112
 	use smp && sed -i -e 's:\(exec.*erlexec\):\1 -smp:' \
-		"${D}/${ERL_LIBDIR}/bin/erl"
+		"${ED}/${ERL_LIBDIR}/bin/erl"
 }
 
 pkg_postinst() {
