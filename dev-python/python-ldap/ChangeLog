@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.76 2010/03/02 18:56:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.77 2010/03/04 21:09:53 robbat2 Exp $
+
+  04 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +python-ldap-2.3.9.ebuild:
+  Re-add python-2.3.9 as the last python-ldap version that works with
+  openldap-2.3.x.
 
 *python-ldap-2.3.11 (02 Mar 2010)
 
