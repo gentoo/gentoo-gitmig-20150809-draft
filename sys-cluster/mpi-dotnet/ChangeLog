@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpi-dotnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.3 2010/02/28 22:12:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.4 2010/03/04 09:56:44 fauli Exp $
+
+  04 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  mpi-dotnet-1.0.0.ebuild:
+  stable x86, bug 281207
 
   28 Feb 2010; <mabi@gentoo.org> mpi-dotnet-1.0.0.ebuild,
   files/Unsafe.pl.patch, files/configure.ac.patch:
