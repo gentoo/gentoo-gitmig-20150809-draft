@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.2.3.ebuild,v 1.5 2010/01/07 15:58:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.2.3.ebuild,v 1.6 2010/03/04 18:51:27 arfrever Exp $
 
-EAPI=2
-NEED_PYTHON="2.4"
+EAPI="2"
+PYTHON_DEPEND="2"
 PYTHON_USE_WITH="xml"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils python
 
@@ -26,6 +27,7 @@ done
 DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
 	dev-python/PyQt4[X]"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/TreeLine"
 
@@ -44,20 +46,28 @@ src_prepare() {
 	# let's leave compiling to python_mod_optimize
 	epatch "${FILESDIR}"/${P}-nocompile.patch
 
-	# install into proper python site-packages dir
-	sed -i "s;prefixDir, 'lib;'$(python_get_sitedir);" install.py || die 'sed failed'
-
 	rm doc/LICENSE
+
+	python_copy_sources
+
+	preparation() {
+		# install into proper python site-packages dir
+		sed -i "s;prefixDir, 'lib;'$(python_get_sitedir);" install.py
+	}
+	python_execute_function -s preparation
 }
 
 src_install() {
-	"${python}" install.py -x -p /usr/ -d /usr/share/doc/${PF} -b "${D}"
+	installation() {
+		"$(PYTHON)" install.py -x -p /usr/ -d /usr/share/doc/${PF} -b "${D}"
+	}
+	python_execute_function -s installation
 }
 
 pkg_postinst() {
-	python_mod_optimize "$(python_get_sitedir)/${PN}"
+	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup ${PN}
 }
