@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.600 2010/03/02 20:20:37 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.601 2010/03/04 14:33:50 nirbheek Exp $
+
+*mozilla-firefox-3.6-r4 (04 Mar 2010)
+
+  04 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +mozilla-firefox-3.6-r4.ebuild, metadata.xml:
+  Move over the latest revision from the overlay. USE=system-sqlite is used
+  for toggling usage of internal/external sqlite + minor ebuild changes
 
   02 Mar 2010; Tobias Heinlein <keytoaster@gentoo.org>
   mozilla-firefox-3.5.8.ebuild:
