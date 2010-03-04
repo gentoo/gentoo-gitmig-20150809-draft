@@ -47,8 +47,6 @@ m68k            default/linux/m68k/10.0/server                  dev
 mips            default/linux/mips/10.0/cobalt/n32                              exp
 mips            default/linux/mips/10.0/cobalt/n64                              exp
 mips            default/linux/mips/10.0/cobalt                                  exp
-mips            default/linux/mips/10.0/desktop                                 exp
-mips            default/linux/mips/10.0/developer                               exp
 mips            default/linux/mips/10.0/lemote/lm2e/fulong/n32                  exp
 mips            default/linux/mips/10.0/lemote/lm2e/fulong/n64                  exp
 mips            default/linux/mips/10.0/lemote/lm2e/fulong                      exp
