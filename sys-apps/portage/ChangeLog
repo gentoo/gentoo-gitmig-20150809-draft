@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.684 2010/03/03 11:08:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.685 2010/03/04 19:11:57 zmedico Exp $
+
+*portage-2.2_rc65 (04 Mar 2010)
+
+  04 Mar 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc65.ebuild:
+  2.2_rc65 version bump. This includes all fixes in 2.1.8.1.
+
+*portage-2.1.8.1 (04 Mar 2010)
+
+  04 Mar 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.8.1.ebuild:
+  2.1.8.1 version bump. This fixes bug #307723 (NameError for basestring
+  with python3) and bug #307707 (CommandNotFound with emerge -pf and
+  fetch restriction). Bug #307597 tracks all bugs fixed since
+  portage-2.1.7.x.
 
 *portage-2.2_rc64 (03 Mar 2010)
 
