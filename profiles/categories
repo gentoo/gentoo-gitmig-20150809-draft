@@ -46,6 +46,7 @@ dev-tex
 dev-texlive
 dev-tinyos
 dev-util
+dev-vcs
 games-action
 games-arcade
 games-board
