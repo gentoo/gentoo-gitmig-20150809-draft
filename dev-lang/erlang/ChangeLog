@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.182 2010/03/04 08:46:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.183 2010/03/04 09:22:40 fauli Exp $
+
+  04 Mar 2010; Christian Faulhammer <fauli@gentoo.org> erlang-13.2.4.ebuild:
+  port Prefix changes, add some dies
 
   04 Mar 2010; Christian Faulhammer <fauli@gentoo.org> erlang-13.2.3.ebuild:
   port Prefix changes
