@@ -1,6 +1,13 @@
 # ChangeLog for app-text/trang
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.21 2007/07/02 08:25:04 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.22 2010/03/04 10:50:30 betelgeuse Exp $
+
+*trang-20091111 (04 Mar 2010)
+
+  04 Mar 2010; Petteri Räty <betelgeuse@gentoo.org> +trang-20091111.ebuild,
+  +files/build.xml:
+  Version bump. Fixes bug #258643. Thanks to Ralph Sennhauser
+  <gentoo.sera@bluewin.ch>.
 
   02 Jul 2007; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Remove emacs herd from metadata.
