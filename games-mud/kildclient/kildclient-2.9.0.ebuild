@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.2 2009/12/09 22:36:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.3 2010/03/04 00:45:57 nyhm Exp $
 
 EAPI=2
-inherit autotools games
+inherit autotools eutils games
 
 DESCRIPTION="Powerful MUD client with a built-in PERL interpreter"
 HOMEPAGE="http://kildclient.sourceforge.net"
