@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.211 2010/02/18 00:09:51 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.212 2010/03/04 14:51:31 nirbheek Exp $
+
+*seamonkey-2.0.3 (04 Mar 2010)
+
+  04 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +seamonkey-2.0.3.ebuild, metadata.xml:
+  Copy 2.0.3 bump from overlay. USE-flags have changed names, and
+  USE=system-sqlite has been added
 
   18 Feb 2010; <anarchy@gentoo.org> +files/seamonkey-rebuild-databases.pl:
   Readd seamonkey-rebuild-databases.pl bug #302694
