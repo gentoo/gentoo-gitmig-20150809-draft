@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-hy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.3 2009/10/18 20:27:18 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.4 2010/03/04 15:41:32 jer Exp $
+
+  04 Mar 2010; Jeroen Roovers <jer@gentoo.org> aspell-hy-0.10.0.ebuild:
+  Marked ~hppa (bug #305845).
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-hy-0.10.0.ebuild:
   QA fixes; IUSE is not defined
