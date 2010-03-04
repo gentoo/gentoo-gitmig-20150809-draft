@@ -8,6 +8,7 @@
 	<flag name="brasero">Enable CD burning via <pkg>app-cdr/brasero</pkg> rather than <pkg>gnome-extra/nautilus-cd-burner</pkg></flag>
 	<flag name="udev">Enable hardware detection via <pkg>sys-fs/udev</pkg>
 	replacing the deprecated <pkg>sys-apps/hal</pkg> code.</flag>
+	<flag name="upnp">Enable support for local network music sharing via upnp</flag>
 	<flag name="webkit">Enable context panel plugin.</flag>
   </use>
 </pkgmetadata>

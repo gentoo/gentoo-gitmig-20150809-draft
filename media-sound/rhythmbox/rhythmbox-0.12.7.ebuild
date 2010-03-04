@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.7.ebuild,v 1.2 2010/03/03 16:15:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.7.ebuild,v 1.3 2010/03/04 00:01:57 eva Exp $
 
 EAPI="2"
 
@@ -9,8 +9,8 @@ inherit gnome2 python multilib virtualx eutils
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev webkit"
+KEYWORDS="~amd64"
+IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
@@ -62,6 +62,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18
 		webkit? (
 			dev-python/mako
 			dev-python/pywebkitgtk )
+		upnp? ( media-video/coherence )
 	)"
 
 RDEPEND="${COMMON_DEPEND}
@@ -110,9 +111,15 @@ pkg_setup() {
 		ewarn "You will not be able to burn CDs."
 	fi
 
-	if use webkit && ! use python; then
-		ewarn "You need python support in addition to webkit to be able to use"
-		ewarn "the context panel plugin."
+	if ! use python; then
+		if use webkit; then
+			ewarn "You need python support in addition to webkit to be able to use"
+			ewarn "the context panel plugin."
+		fi
+
+		if use upnp; then
+			ewarn "You need python support in addition to upnp"
+		fi
 	fi
 
 	if use brasero; then
