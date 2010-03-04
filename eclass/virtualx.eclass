@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.33 2009/12/21 17:27:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.34 2010/03/04 21:18:27 abcd Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -17,7 +17,7 @@
 
 # Dep string available for use outside of eclass, in case a more
 # complicated dep is needed
-VIRTUALX_DEPEND="x11-base/xorg-server
+VIRTUALX_DEPEND="!prefix? ( x11-base/xorg-server )
 	x11-apps/xhost"
 
 case ${VIRTUALX_REQUIRED} in
