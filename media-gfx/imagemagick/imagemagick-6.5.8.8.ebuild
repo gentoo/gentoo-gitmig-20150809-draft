@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.5.8.8.ebuild,v 1.5 2010/02/21 21:58:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.5.8.8.ebuild,v 1.6 2010/03/04 19:55:56 armin76 Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://imagemagick/${MY_P2}.tar.bz2
 RESTRICT="perl? ( userpriv )"
 LICENSE="imagemagick"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="autotrace bzip2 +corefonts djvu doc fftw fontconfig fpx graphviz gs hdri
 	jbig jpeg jpeg2k lcms lqr nocxx openexr openmp perl png q8 q32 raw svg tiff
 	truetype X wmf xml zlib"
