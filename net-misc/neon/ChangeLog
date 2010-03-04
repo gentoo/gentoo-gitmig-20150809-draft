@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.151 2010/02/28 09:14:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.152 2010/03/04 15:23:14 jer Exp $
+
+  04 Mar 2010; Jeroen Roovers <jer@gentoo.org> neon-0.29.3.ebuild:
+  Stable for HPPA (bug #305181).
 
   28 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> neon-0.29.3.ebuild:
   x86 stable wrt bug #305181
