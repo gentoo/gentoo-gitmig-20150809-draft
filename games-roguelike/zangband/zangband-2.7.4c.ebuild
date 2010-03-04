@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.10 2009/11/23 09:33:19 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.11 2010/03/04 00:52:42 nyhm Exp $
 
 EAPI=2
-inherit autotools games
+inherit autotools eutils games
 
 DESCRIPTION="An enhanced version of the Roguelike game Angband"
 HOMEPAGE="http://www.zangband.org/"
