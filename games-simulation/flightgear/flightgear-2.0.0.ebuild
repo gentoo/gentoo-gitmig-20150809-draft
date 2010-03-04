@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.0.0.ebuild,v 1.1 2010/03/03 14:42:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.0.0.ebuild,v 1.2 2010/03/04 11:57:29 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -10,7 +10,7 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Open Source Flight Simulator"
 HOMEPAGE="http://www.flightgear.org/"
 SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
-	mirror://flightgear/Shared/${MY_PN}-data-1.9.0.tar.bz2"
+	mirror://flightgear/Shared/${MY_PN}-data-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
