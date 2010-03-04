@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.21.ebuild,v 1.1 2010/02/24 20:42:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.24.ebuild,v 1.1 2010/03/04 21:48:17 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -23,7 +23,6 @@ RDEPEND="
 	>=dev-db/sqlite-3.6.16[threadsafe]
 	>=dev-libs/dbus-glib-0.82-r1
 	>=dev-libs/glib-2.20
-	>=gnome-base/gconf-2
 	>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 	>=media-libs/libpng-1.2
 	>=x11-libs/pango-1
@@ -32,7 +31,7 @@ RDEPEND="
 	applet? (
 		>=x11-libs/libnotify-0.4.3
 		gnome-base/gnome-panel
-		>=x11-libs/gtk+-2.16 )
+		>=x11-libs/gtk+-2.18 )
 	deskbar? ( >=gnome-extra/deskbar-applet-2.19 )
 	eds? (
 		>=mail-client/evolution-2.25.5
@@ -42,7 +41,7 @@ RDEPEND="
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? ( >=media-libs/gstreamer-0.10.12 )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
-	gtk? ( >=x11-libs/gtk+-2.16 )
+	gtk? ( >=x11-libs/gtk+-2.18 )
 	iptc? ( media-libs/libiptcdata )
 	jpeg? ( media-libs/jpeg:0 )
 	laptop? (
