@@ -31,3 +31,4 @@ slotmove =app-doc/pms-3 0 3
 slotmove =app-doc/pms-3 2 3
 slotmove =app-doc/pms-99999999 0 live
 move sci-chemistry/psipred sci-biology/psipred
+move dev-util/gitg dev-vcs/gitg
