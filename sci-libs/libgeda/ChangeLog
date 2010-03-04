@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.50 2010/02/24 16:41:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.51 2010/03/04 12:39:39 phajdan.jr Exp $
+
+  04 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libgeda-1.4.3-r1.ebuild:
+  x86 stable wrt bug #285493
 
   24 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
   libgeda-1.4.3-r1.ebuild:
