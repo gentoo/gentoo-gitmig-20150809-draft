@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/workrave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.60 2009/11/20 17:04:13 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.61 2010/03/04 21:39:55 eva Exp $
+
+*workrave-1.9.1 (04 Mar 2010)
+
+  04 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +workrave-1.9.1.ebuild:
+  Version bump, bug #299188 and bug #285881.
 
   20 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> workrave-1.8.5.ebuild,
   workrave-1.9.0.ebuild:
