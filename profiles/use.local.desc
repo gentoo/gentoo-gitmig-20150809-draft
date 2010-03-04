@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5336 2010/03/04 19:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5337 2010/03/04 23:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -718,6 +718,14 @@ dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/gnu-classpath:gconf - Enable the GConf based util.peers backend
 dev-java/gnu-classpath:gjdoc - Build GNU Classpath's javadoc implementation. Formerly dev-java/gjdoc, now part of gnu-classpath upstream.
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
+dev-java/icedtea:cacao - Use the CACAO virtual machine instead of HotSpot on x86, amd64 or SPARC architectures.
+dev-java/icedtea:hs16 - Use the new version of HotSpot (16).
+dev-java/icedtea:nio2 - Enable backport of NIO2 to OpenJDK6.
+dev-java/icedtea:npplugin - Enable the new alpha-quality plugin which works with Firefox 3.6+ and Chromium.
+dev-java/icedtea:nss - Enable NSS security provider support.
+dev-java/icedtea:systemtap - Enable SystemTap probes in HotSpot.
+dev-java/icedtea:xrender - Enable support for using XRender with the AWT libraries.
+dev-java/icedtea:zero - Enable the zero assembler port of HotSpot.
 dev-java/itext:rtf - Build and provide libraries for rich text format
 dev-java/itext:rups - Build and provide GUI for Reading/Updating PDF Syntax
 dev-java/jamvm:libffi - use dev-libs/libffi to call native methods
