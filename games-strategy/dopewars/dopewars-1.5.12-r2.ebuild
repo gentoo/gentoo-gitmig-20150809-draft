@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r2.ebuild,v 1.4 2009/11/11 11:11:37 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r2.ebuild,v 1.5 2010/03/04 00:55:41 nyhm Exp $
 
 EAPI=2
-inherit games
+inherit eutils games
 
 DESCRIPTION="Re-Write of the game Drug Wars"
 HOMEPAGE="http://dopewars.sourceforge.net/"
