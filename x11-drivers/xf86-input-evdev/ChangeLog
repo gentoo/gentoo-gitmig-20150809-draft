@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.143 2010/02/15 19:09:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.144 2010/03/04 20:25:52 armin76 Exp $
+
+  04 Mar 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-input-evdev-2.3.2.ebuild:
+  alpha/arm/ia64/sh/sparc stable
 
   15 Feb 2010; Joseph Jezak <josejx@gentoo.org>
   xf86-input-evdev-2.3.2.ebuild:
