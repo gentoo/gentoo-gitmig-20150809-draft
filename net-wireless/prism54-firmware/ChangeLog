@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/prism54-firmware
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.11 2010/03/04 14:05:11 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.12 2010/03/04 14:14:44 lxnay Exp $
+
+  04 Mar 2010; Fabio Erculiani <lxnay@gentoo.org>
+  prism54-firmware-2.13.ebuild:
+  move elog calls to preinst
 
 *prism54-firmware-2.13 (04 Mar 2010)
 
