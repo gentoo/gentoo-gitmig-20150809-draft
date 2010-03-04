@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.53 2010/03/04 10:09:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.54 2010/03/04 16:14:47 pva Exp $
+
+*dcraw-8.99 (04 Mar 2010)
+
+  04 Mar 2010; Peter Volkov <pva@gentoo.org> -dcraw-8.86.ebuild,
+  +dcraw-8.99.ebuild:
+  Version bump. Drop unused and broken.
 
   04 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dcraw-8.98-r1.ebuild:
   x86 stable wrt bug #304229
