@@ -2,11 +2,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or
 # later
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/files/bitlbee.initd,v 1.1 2010/02/28 15:48:44 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/files/bitlbee.initd,v 1.2 2010/03/04 17:47:00 cedk Exp $
 
 DAEMON=/usr/sbin/bitlbee
 PIDFILE=/var/run/bitlbee/bitlbee.pid
-BITLBEE_OPTS=-F
 
 depend() {
 	need logger net

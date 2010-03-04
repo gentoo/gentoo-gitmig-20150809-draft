@@ -1,2 +1,2 @@
 #Bitlbee options (see /usr/sbin/bitlbee -h)
-#BITLBEE_OPTS="-F"
+BITLBEE_OPTS="-F"
