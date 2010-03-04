@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.1 2010/02/22 19:57:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.2 2010/03/04 21:34:05 wired Exp $
+
+  04 Mar 2010; Alex Alexander <wired@gentoo.org> clementine-0.1.ebuild:
+  added missing boost DEPEND
 
 *clementine-0.1 (22 Feb 2010)
 
