@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.73 2010/02/28 11:52:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.74 2010/03/04 17:49:03 arfrever Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -22,15 +22,15 @@ case "${EAPI:-0}" in
 		;;
 esac
 
-if [[ -z "${PYTHON_DEPEND}" ]]; then
+if [[ -z "$(declare -p PYTHON_DEPEND 2> /dev/null)" ]]; then
 	DEPEND="dev-lang/python"
 	RDEPEND="${DEPEND}"
 fi
 
+# 'python' variable is deprecated. Use PYTHON() instead.
 if has "${EAPI:-0}" 0 1 2 && [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
 	python="python"
 else
-	# Use "$(PYTHON)" instead of "${python}".
 	python="die"
 fi
 
@@ -85,7 +85,7 @@ fi
 
 # @ECLASS-VARIABLE: DISTUTILS_NONVERSIONED_PYTHON_SCRIPTS
 # @DESCRIPTION:
-# List of paths to Python scripts, relative to ${D}, which are excluded from
+# List of paths to Python scripts, relative to ${ED}, which are excluded from
 # renaming and generation of wrapper scripts.
 
 # @ECLASS-VARIABLE: DOCS
@@ -192,17 +192,45 @@ distutils_src_compile() {
 	fi
 }
 
+_distutils_src_test_hook() {
+	if [[ "$#" -ne 1 ]]; then
+		die "${FUNCNAME}() requires 1 arguments"
+	fi
+
+	if [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
+		return
+	fi
+
+	if [[ "$(type -t "distutils_src_test_pre_hook")" == "function" ]]; then
+		eval "python_execute_$1_pre_hook() {
+			distutils_src_test_pre_hook
+		}"
+	fi
+
+	if [[ "$(type -t "distutils_src_test_post_hook")" == "function" ]]; then
+		eval "python_execute_$1_post_hook() {
+			distutils_src_test_post_hook
+		}"
+	fi
+}
+
 # @FUNCTION: distutils_src_test
 # @DESCRIPTION:
 # The distutils src_test function. This function is exported, when DISTUTILS_SRC_TEST variable is set.
+# In ebuilds of packages supporting installation for multiple versions of Python, this function
+# calls distutils_src_test_pre_hook() and distutils_src_test_post_hook(), if they are defined.
 distutils_src_test() {
 	_python_set_color_variables
 
 	if [[ "${DISTUTILS_SRC_TEST}" == "setup.py" ]]; then
 		if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 			distutils_testing() {
+				_distutils_hook pre
+
 				echo ${_BOLD}PYTHONPATH="$(_distutils_get_PYTHONPATH)" "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" $([[ -z "${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES}" ]] && echo build -b "$(_distutils_get_build_dir)") test "$@"${_NORMAL}
-				PYTHONPATH="$(_distutils_get_PYTHONPATH)" "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" $([[ -z "${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES}" ]] && echo build -b "$(_distutils_get_build_dir)") test "$@"
+				PYTHONPATH="$(_distutils_get_PYTHONPATH)" "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" $([[ -z "${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES}" ]] && echo build -b "$(_distutils_get_build_dir)") test "$@" || return "$?"
+
+				_distutils_hook post
 			}
 			python_execute_function ${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES:+-s} distutils_testing "$@"
 		else
@@ -210,8 +238,12 @@ distutils_src_test() {
 			PYTHONPATH="$(_distutils_get_PYTHONPATH)" "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" test "$@" || die "Testing failed"
 		fi
 	elif [[ "${DISTUTILS_SRC_TEST}" == "nosetests" ]]; then
+		_distutils_src_test_hook nosetests
+
 		python_execute_nosetests -P '$(_distutils_get_PYTHONPATH)' ${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES:+-s} -- "$@"
 	elif [[ "${DISTUTILS_SRC_TEST}" == "py.test" ]]; then
+		_distutils_src_test_hook py.test
+
 		python_execute_py.test -P '$(_distutils_get_PYTHONPATH)' ${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES:+-s} -- "$@"
 	# trial requires an argument, which is usually equal to "${PN}".
 	elif [[ "${DISTUTILS_SRC_TEST}" =~ ^trial(\ .*)?$ ]]; then
@@ -221,6 +253,8 @@ distutils_src_test() {
 		else
 			trial_arguments="${PN}"
 		fi
+
+		_distutils_src_test_hook trial
 
 		python_execute_trial -P '$(_distutils_get_PYTHONPATH)' ${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES:+-s} -- ${trial_arguments} "$@"
 	else
@@ -240,6 +274,7 @@ distutils_src_install() {
 		die "${FUNCNAME}() can be used only in src_install() phase"
 	fi
 
+	_python_initialize_prefix_variables
 	_python_set_color_variables
 
 	if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
@@ -247,8 +282,8 @@ distutils_src_install() {
 			declare -A wrapper_scripts=()
 
 			rename_scripts_with_versioned_shebangs() {
-				if [[ -d "${D}usr/bin" ]]; then
-					cd "${D}usr/bin"
+				if [[ -d "${ED}usr/bin" ]]; then
+					cd "${ED}usr/bin"
 
 					local nonversioned_file file
 					for file in *; do
@@ -257,7 +292,7 @@ distutils_src_install() {
 								[[ "${nonversioned_file}" == "/usr/bin/${file}" ]] && continue 2
 							done
 							mv "${file}" "${file}-${PYTHON_ABI}" || die "Renaming of '${file}' failed"
-							wrapper_scripts+=(["${D}usr/bin/${file}"]=)
+							wrapper_scripts+=(["${ED}usr/bin/${file}"]=)
 						fi
 					done
 				fi
@@ -290,7 +325,7 @@ distutils_src_install() {
 		"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" install --root="${D}" --no-compile "$@" || die "Installation failed"
 	fi
 
-	if [[ -e "${D}usr/local" ]]; then
+	if [[ -e "${ED}usr/local" ]]; then
 		die "Illegal installation into /usr/local"
 	fi
 
@@ -318,9 +353,11 @@ distutils_pkg_postinst() {
 		die "${FUNCNAME}() can be used only in pkg_postinst() phase"
 	fi
 
+	_python_initialize_prefix_variables
+
 	local pylibdir pymod
 	if [[ -z "${PYTHON_MODNAME}" ]]; then
-		for pylibdir in "${ROOT}"usr/$(get_libdir)/python* "${ROOT}"/usr/share/jython-*/Lib; do
+		for pylibdir in "${EROOT}"usr/$(get_libdir)/python* "${EROOT}"/usr/share/jython-*/Lib; do
 			if [[ -d "${pylibdir}/site-packages/${PN}" ]]; then
 				PYTHON_MODNAME="${PN}"
 			fi
@@ -347,9 +384,11 @@ distutils_pkg_postrm() {
 		die "${FUNCNAME}() can be used only in pkg_postrm() phase"
 	fi
 
+	_python_initialize_prefix_variables
+
 	local pylibdir pymod
 	if [[ -z "${PYTHON_MODNAME}" ]]; then
-		for pylibdir in "${ROOT}"usr/$(get_libdir)/python* "${ROOT}"/usr/share/jython-*/Lib; do
+		for pylibdir in "${EROOT}"usr/$(get_libdir)/python* "${EROOT}"/usr/share/jython-*/Lib; do
 			if [[ -d "${pylibdir}/site-packages/${PN}" ]]; then
 				PYTHON_MODNAME="${PN}"
 			fi
@@ -361,9 +400,9 @@ distutils_pkg_postrm() {
 			python_mod_cleanup ${PYTHON_MODNAME}
 		else
 			for pymod in ${PYTHON_MODNAME}; do
-				for pylibdir in "${ROOT}"usr/$(get_libdir)/python*; do
+				for pylibdir in "${EROOT}"usr/$(get_libdir)/python*; do
 					if [[ -d "${pylibdir}/site-packages/${pymod}" ]]; then
-						python_mod_cleanup "${pylibdir#${ROOT%/}}/site-packages/${pymod}"
+						python_mod_cleanup "${pylibdir#${EROOT%/}}/site-packages/${pymod}"
 					fi
 				done
 			done
@@ -382,6 +421,13 @@ distutils_python_version() {
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
 
+	_python_set_color_variables
+
+	eerror
+	eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
+	eerror "${_RED}Use PYTHON() instead of python variable. Use python_get_*() instead of PYVER* variables.${_NORMAL}"
+	eerror
+
 	python_version
 }
 
@@ -393,6 +439,13 @@ distutils_python_tkinter() {
 		eerror "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()."
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
+
+	_python_set_color_variables
+
+	eerror
+	eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
+	eerror "${_RED}Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}().${_NORMAL}"
+	eerror
 
 	python_tkinter_exists
 }
