@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.8 2009/02/11 13:05:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.9 2010/03/04 00:54:33 nyhm Exp $
 
 EAPI=2
-inherit games
+inherit eutils games
 
 DESCRIPTION="city simulation game"
 HOMEPAGE="http://www.contrib.andrew.cmu.edu/~tmartin/senken/"
