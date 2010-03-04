@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/blassic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.29 2010/03/02 09:46:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.30 2010/03/04 04:39:53 jer Exp $
+
+  04 Mar 2010; Jeroen Roovers <jer@gentoo.org> blassic-0.10.2.ebuild:
+  Stable for HPPA (bug #306667).
 
   02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   blassic-0.10.2.ebuild:
