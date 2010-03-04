@@ -1,0 +1,11 @@
+# ChangeLog for dev-vcs/svn2git
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.1 2010/03/04 23:01:34 sping Exp $
+
+*svn2git-20100303 (04 Mar 2010)
+*svn2git-9999 (04 Mar 2010)
+
+  04 Mar 2010; Sebastian Pipping <sping@gentoo.org> +svn2git-9999.ebuild,
+  +svn2git-20100303.ebuild, +metadata.xml:
+  New package
+
