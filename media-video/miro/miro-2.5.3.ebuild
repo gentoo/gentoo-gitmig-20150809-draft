@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.3.ebuild,v 1.4 2009/11/28 15:09:34 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.3.ebuild,v 1.5 2010/03/05 18:07:16 volkmar Exp $
 
 EAPI="2"
 
@@ -75,7 +75,7 @@ src_prepare() {
 	# set xine as the default renderer if gstreamer is disabled
 	if ! use gstreamer; then
 		sed -i -e "s:default=u\"gstreamer\":default=u\"xine\":" \
-			|| die "sed failed"
+			plat/options.py || die "sed failed"
 	fi
 }
 
