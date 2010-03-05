@@ -1,0 +1,25 @@
+# ChangeLog for dev-vcs/qsvn
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.1 2010/03/05 03:10:58 tampakrap Exp $
+
+  05 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> +qsvn-0.8.3.ebuild,
+  +files/qsvn-0.8.3-tests.patch, +metadata.xml:
+  Move qsvn from dev-util to dev-vcs
+
+  17 Dec 2009; Markos Chandras <hwoarang@gentoo.org> qsvn-0.8.3.ebuild:
+  add blocker for dev-util/kdesvn ( wrt bug #296624 )
+
+  12 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> qsvn-0.8.3.ebuild,
+  +files/qsvn-0.8.3-tests.patch:
+  Adding a patch to fix tests (use QCoreApplication instead of QApplication)
+  - bug #296622.
+
+*qsvn-0.8.3 (04 Aug 2009)
+
+  04 Aug 2009; Markos Chandras <hwoarang@gentoo.org> +qsvn-0.8.3.ebuild,
+  +metadata.xml:
+  Initial commit of qsvn application. Fixes bug 135792. Thanks to Georges
+  Toth
+  <sim0n@trypill.org>, Thomas Beinicke <merlin@liao.homelinux.org>, Vladimir
+  <vovan888@gmail.com> for the initial ebuilds
+
