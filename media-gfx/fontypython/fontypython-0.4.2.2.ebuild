@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/fontypython-0.4.2.2.ebuild,v 1.1 2009/10/03 07:22:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/fontypython-0.4.2.2.ebuild,v 1.2 2010/03/05 20:54:20 dirtyepic Exp $
 
 EAPI=2
 
@@ -15,25 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-lang/python:2.6
-	dev-python/imaging
+# Crashes w/ debug build of wxGTK (#201315)
+DEPEND="dev-python/imaging
 	dev-python/wxpython:2.8
 	x11-libs/wxGTK:2.8[-debug]"
 RDEPEND="${DEPEND}"
 
+PYTHON_DEPEND="2:2.6"
+PYTHON_MODNAME="fontypythonmodules"
+
 src_install() {
-	python_version
-	distutils_src_install \
-		--install-data=/usr/$(get_libdir)/python${PYVER}/site-packages
+	distutils_src_install
 	doman "${S}"/fontypython.1
-}
-
-pkg_postinst() {
-	pydir=/usr/$(get_libdir)/python${PYVER}/site-packages/fontypythonmodules
-	python_mod_optimize ${pydir}
-}
-
-pkg_postrm() {
-	pydir=/usr/$(get_libdir)/python${PYVER}/site-packages/fontypythonmodules
-	python_mod_cleanup ${pydir}
 }
