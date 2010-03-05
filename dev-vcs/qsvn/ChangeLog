@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qsvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.1 2010/03/05 03:10:58 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.2 2010/03/05 03:12:34 tampakrap Exp $
+
+  05 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> qsvn-0.8.3.ebuild:
+  update category of kdesvn blocker
 
   05 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> +qsvn-0.8.3.ebuild,
   +files/qsvn-0.8.3-tests.patch, +metadata.xml:

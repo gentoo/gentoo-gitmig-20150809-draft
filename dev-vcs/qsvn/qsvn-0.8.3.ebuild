@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/qsvn-0.8.3.ebuild,v 1.1 2010/03/05 03:10:58 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/qsvn-0.8.3.ebuild,v 1.2 2010/03/05 03:12:34 tampakrap Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="x11-libs/qt-gui:4[qt3support]
 	x11-libs/qt-sql:4[sqlite]
 	dev-util/subversion
-	!dev-util/kdesvn"
+	!dev-vcs/kdesvn"
 DEPEND="${RDEPEND}
 	x11-libs/qt-test"
 
