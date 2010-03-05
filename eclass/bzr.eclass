@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.7 2009/12/18 07:08:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.8 2010/03/05 09:35:23 fauli Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -30,7 +30,7 @@ esac
 HOMEPAGE="http://bazaar-vcs.org/"
 DESCRIPTION="Based on the ${EBZR} eclass"
 
-DEPEND=">=dev-util/bzr-1.5"
+DEPEND=">=dev-vcs/bzr-1.5"
 
 # @ECLASS-VARIABLE: EBZR_STORE_DIR
 # @DESCRIPTION:
@@ -176,10 +176,10 @@ bzr_fetch() {
 			http|https|rsync|lp)
 				;;
 			sftp)
-				if ! built_with_use --missing true dev-util/bzr sftp; then
+				if ! built_with_use --missing true dev-vcs/bzr sftp; then
 					eerror "To fetch sources from ${EBZR_REPO_URI} you need SFTP"
-					eerror "support in dev-util/bzr."
-					die "Please, rebuild dev-util/bzr with the sftp USE flag enabled."
+					eerror "support in dev-vcs/bzr."
+					die "Please, rebuild dev-vcs/bzr with the sftp USE flag enabled."
 				fi
 				;;
 			*)
