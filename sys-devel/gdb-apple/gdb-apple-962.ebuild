@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-962.ebuild,v 1.3 2009/11/27 08:40:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-962.ebuild,v 1.4 2010/03/05 16:25:26 grobian Exp $
+
+EAPI="3"
 
 inherit eutils flag-o-matic
 
@@ -22,10 +24,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/gdb-${PV}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-768-texinfo.patch
 	epatch "${FILESDIR}"/${PN}-768-darwin-arch.patch
 	epatch "${FILESDIR}"/${PN}-962-darwin8.patch
@@ -36,18 +35,15 @@ src_unpack() {
 	sed -e 's/-Wno-long-double//' -i gdb/config/*/macosx.mh
 }
 
-src_compile() {
+src_configure() {
 	replace-flags -O? -O2
 	econf \
 		--disable-werror \
 		$(use_enable nls) \
 		|| die
-	emake || die
 }
 
 src_install() {
-	local ED=${ED-${D}}
-
 	emake DESTDIR="${D}" libdir=/nukeme includedir=/nukeme install || die
 	rm -r "${D}"/nukeme || die
 	rm -Rf "${ED}"/usr/${CHOST} || die
