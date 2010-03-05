@@ -1,6 +1,10 @@
-# ChangeLog for dev-util/bzr-svn
+# ChangeLog for dev-vcs/bzr-svn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.1 2010/03/05 09:42:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.2 2010/03/05 09:55:10 fauli Exp $
+
+  05 Mar 2010; Christian Faulhammer <fauli@gentoo.org> bzr-svn-1.0.1.ebuild,
+  bzr-svn-1.0.2.ebuild:
+  Bzr moved from dev-util to dev-vcs category
 
 *bzr-svn-1.0.2 (24 Feb 2010)
 
