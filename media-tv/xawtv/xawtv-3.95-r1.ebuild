@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.26 2009/07/27 19:16:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.27 2010/03/05 14:57:48 scarabeus Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -142,7 +142,6 @@ src_install() {
 		doins *.gz fonts.alias
 
 		font_xfont_config
-		font_xft_config
 	fi
 }
 
