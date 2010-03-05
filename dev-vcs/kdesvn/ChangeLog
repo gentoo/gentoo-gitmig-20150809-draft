@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/kdesvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.1 2010/03/05 02:46:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.2 2010/03/05 03:19:10 tampakrap Exp $
+
+  05 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> kdesvn-1.4.1.ebuild,
+  kdesvn-1.5.2-r1.ebuild:
+  Update category of qsvn blocker
 
 *kdesvn-1.5.2-r1 (05 Mar 2010)
 

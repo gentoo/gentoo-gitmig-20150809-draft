@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.5.2-r1.ebuild,v 1.1 2010/03/05 02:46:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.5.2-r1.ebuild,v 1.2 2010/03/05 03:19:10 tampakrap Exp $
 
 EAPI="2"
 
@@ -22,8 +22,7 @@ DEPEND="
 	sys-devel/gettext
 "
 RDEPEND="${DEPEND}
-	!dev-util/kdesvn:1.2
-	!dev-util/qsvn
+	!dev-vcs/qsvn
 	!<kde-base/kdesdk-kioslaves-4.3.5[-kdeprefix]
 	!>=kde-base/kdesdk-kioslaves-4.3.5[-kdeprefix,subversion]
 "
