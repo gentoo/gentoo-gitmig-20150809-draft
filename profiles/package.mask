@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11308 2010/03/05 17:07:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11309 2010/03/05 22:53:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -100,12 +100,6 @@ net-im/naim
 #
 # Removed in 60 days
 dev-lang/squeak
-
-# Samuli Suominen <ssuominen@gentoo.org> (01 Mar 2010)
-# Orphaned library for obsolete musepack API support.
-# Doesn't work with autoconf 2.65. Masked for removal
-# in 30 days. See bug 294582.
-media-libs/libmpcdecsv7
 
 # Ben de Groot <yngwin@gentoo.org> (01 Mar 2010)
 # Grand mask of qt:3 and remaining reverse dependencies

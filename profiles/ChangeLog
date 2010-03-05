@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3990 2010/03/05 18:19:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3991 2010/03/05 22:53:02 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Removed libmpcdecsv7 mask (it will be handled by blockers in
+  musepack-tools instead).
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> updates/3Q-2004,
   updates/1Q-2010:
