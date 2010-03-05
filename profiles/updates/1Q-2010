@@ -48,3 +48,4 @@ move dev-util/mcvs dev-vcs/mcvs
 move dev-util/cssc dev-vcs/cssc
 move dev-util/monotone dev-vcs/monotone
 move www-client/urlgfe www-client/uget
+move dev-util/statcvs dev-vcs/statcvs
