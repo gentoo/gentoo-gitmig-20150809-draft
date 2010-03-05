@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5341 2010/03/05 09:47:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5342 2010/03/05 10:07:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -514,7 +514,7 @@ app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to act
 app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLAGS for optimization like graphite (if available). May cause trouble with some buggy compiler versions. Absense of this USE flag does not strip user's *FLAGS
 app-portage/eix:tools - Create separate binary for script helper tools (currently only: versionsort); useful if they are called extremely often
 app-portage/gatt:libpaludis - Do some dependency resolution by using a sys-apps/paludis interface
-app-portage/layman:bazaar - Support dev-util/bzr based overlays
+app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
 app-portage/layman:darcs - Support dev-util/darcs based overlays
 app-portage/layman:git - Support dev-util/git based overlays
 app-portage/layman:mercurial - Support dev-util/mercurial based overlays
@@ -1015,7 +1015,6 @@ dev-util/astyle:libs - builds and installs both shared and static library interf
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
 dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
-dev-util/bzr:sftp - Enable sftp support
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/ctags:ada - Enable Ada support
@@ -1084,7 +1083,7 @@ dev-util/svk:pager - Enable perl pager selection support
 dev-util/svk:patch - Enable patch creation, import support
 dev-util/universalindentgui:html - Add support for HTML files
 dev-vcs/bzr:sftp - Enable sftp support
-dev-vcs/qct:bazaar -  Support for dev-util/bzr 
+dev-vcs/qct:bazaar -  Support for dev-vcs/bzr 
 dev-vcs/qct:mercurial -  Support for dev-util/mercurial 
 dev-vcs/qct:monotone -  Support for dev-util/monotone 
 games-action/abuse:demo - Use the demo data instead of the full game
