@@ -1,6 +1,11 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.5 2010/03/05 18:07:16 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.6 2010/03/05 19:24:41 volkmar Exp $
+
+*miro-2.5.4 (05 Mar 2010)
+
+  05 Mar 2010; Mounir Lamouri <volkmar@gentoo.org> +miro-2.5.4.ebuild:
+  Version bump to 2.5.4, fix bug 301569
 
   05 Mar 2010; Mounir Lamouri <volkmar@gentoo.org> miro-2.5.3.ebuild:
   Fix src_prepare when gstreamer USE flag is disabled, bug 295359
