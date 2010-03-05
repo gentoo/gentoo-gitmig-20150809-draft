@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.15.ebuild,v 1.7 2009/08/26 13:14:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.15.ebuild,v 1.8 2010/03/05 04:56:02 vostorga Exp $
 
 EAPI="1"
 WANT_AUTOMAKE=1.7
@@ -13,15 +13,14 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="dbus firefox gtkhtml gnutls libnotify lua networkmanager seamonkey xulrunner"
+IUSE="dbus firefox gtkhtml gnutls libnotify lua networkmanager xulrunner"
 
 RDEPEND="
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	lua? ( >=dev-lang/lua-5.1 )
 	xulrunner? ( =net-libs/xulrunner-1.8* )
 	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
-	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
-	!amd64? ( !xulrunner? ( !firefox? ( !seamonkey? ( gtkhtml? ( gnome-extra/gtkhtml:2 ) ) ) ) )
+	!amd64? ( !xulrunner? ( !firefox? ( gtkhtml? ( gnome-extra/gtkhtml:2 ) ) ) )
 	>=x11-libs/gtk+-2.8
 	x11-libs/pango
 	>=gnome-base/gconf-2
@@ -42,17 +41,13 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	# Backends are now mutually exclusive.
-	# we prefer xulrunner over firefox over seamonkey over gtkhtml
+	# we prefer xulrunner over firefox over gtkhtml
 	if use xulrunner ; then
 		G2CONF="${G2CONF} --enable-xulrunner"
 		G2CONF="${G2CONF} --disable-gecko"
 		G2CONF="${G2CONF} --disable-gtkhtml2"
 	elif use firefox ; then
 		G2CONF="${G2CONF} --enable-gecko=firefox"
-		G2CONF="${G2CONF} --disable-xulrunner"
-		G2CONF="${G2CONF} --disable-gtkhtml2"
-	elif use seamonkey ; then
-		G2CONF="${G2CONF} --enable-gecko=seamonkey"
 		G2CONF="${G2CONF} --disable-xulrunner"
 		G2CONF="${G2CONF} --disable-gtkhtml2"
 	elif use gtkhtml ; then
@@ -64,13 +59,13 @@ pkg_setup() {
 			elog ""
 			elog "gtkhtml is no longer supported on amd64; you will need to "
 			elog "select one of the gecko backends to use liferea.  "
-			elog "Preference is: xulrunner, firefox, then seamonkey."
+			elog "Preference is: xulrunner then firefox."
 			die "You must enable on of the gecko backends on amd64"
 		fi
 	else
 		elog ""
 		elog "You must choose one backend for liferea to work.  Preference is:"
-		elog "xulrunner, firefox, seamonkey, then gtkhtml."
+		elog "xulrunner, firefox then gtkhtml."
 		die "You must enable on of the backends"
 	fi
 
