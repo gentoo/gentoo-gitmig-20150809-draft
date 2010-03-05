@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.316 2010/03/04 14:27:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.317 2010/03/05 12:21:39 fauli Exp $
+
+  05 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-thunderbird-3.0.3.ebuild:
+  stable x86, security bug 307045
 
 *mozilla-thunderbird-3.0.3 (04 Mar 2010)
 
