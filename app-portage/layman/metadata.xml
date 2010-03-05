@@ -8,7 +8,7 @@
   <description>Primary maintainer</description>
 </maintainer>
 <use>
-  <flag name='bazaar'>Support <pkg>dev-util/bzr</pkg> based overlays</flag>
+  <flag name='bazaar'>Support <pkg>dev-vcs/bzr</pkg> based overlays</flag>
   <flag name='darcs'>Support <pkg>dev-util/darcs</pkg> based overlays</flag>
   <flag name='git'>Support <pkg>dev-util/git</pkg> based overlays</flag>
   <flag name='mercurial'>Support <pkg>dev-util/mercurial</pkg> based overlays</flag>
