@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r4.ebuild,v 1.9 2009/03/04 17:08:31 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r4.ebuild,v 1.10 2010/03/05 22:06:33 solar Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -42,13 +42,15 @@ src_compile() {
 
 src_install() {
 	for d in elfls elftoc rebind sstrip ; do
-		newdoc ${d}/README README.${d}
-		dobin ${d}/${d}{32,64} || die "dobin ${d}{32,64} failed"
-		doman $d/*.1
+		newdoc ${d}/README README.${d} || die
+		dobin ${d}/${d}{32,64} || die
+		for i in ${d}/*.1; do
+		  [ -e ${i} ] && doman ${i}
+		done
 		case $(get_libdir) in
 			lib64) dosym /usr/bin/${d}64 /usr/bin/${d};;
 			lib|lib32) dosym /usr/bin/${d}32 /usr/bin/${d};;
 		esac
 	done
-	dodoc Changelog README
+	dodoc Changelog README || die
 }

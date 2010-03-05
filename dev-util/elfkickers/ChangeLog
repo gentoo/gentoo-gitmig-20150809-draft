@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/elfkickers
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.30 2009/03/04 17:08:31 drizzt Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.31 2010/03/05 22:06:33 solar Exp $
+
+  05 Mar 2010; <solar@gentoo.org> -elfkickers-2.0a.ebuild,
+  -elfkickers-2.0a-r1.ebuild, -elfkickers-2.0a-r2.ebuild,
+  -elfkickers-2.0a-r3.ebuild, elfkickers-2.0a-r4.ebuild:
+  - flush old ebuilds. make sure docs are handled right. (bug 305549)
 
   04 Mar 2009; Timothy Redaelli <drizzt@gentoo.org>
   elfkickers-2.0a-r4.ebuild:
