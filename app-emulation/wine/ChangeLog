@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.294 2010/02/09 20:47:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.295 2010/03/05 17:42:49 vapier Exp $
+
+  05 Mar 2010; Mike Frysinger <vapier@gentoo.org> wine-1.1.30.ebuild,
+  wine-1.1.31.ebuild, wine-1.1.32.ebuild, wine-1.1.33.ebuild,
+  wine-1.1.34.ebuild, wine-1.1.35.ebuild, wine-1.1.36.ebuild,
+  wine-1.1.37.ebuild, wine-1.1.38.ebuild, wine-9999.ebuild:
+  Patch by Nikos Chantziaras to pull in emul-linux-x86-sdl on amd64 multilib
+  systems when USE=openal.
 
 *wine-1.1.38 (09 Feb 2010)
 
