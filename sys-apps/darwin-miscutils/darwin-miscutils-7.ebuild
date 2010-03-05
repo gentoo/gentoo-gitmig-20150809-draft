@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/darwin-miscutils/darwin-miscutils-7.ebuild,v 1.5 2010/01/08 08:56:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/darwin-miscutils/darwin-miscutils-7.ebuild,v 1.6 2010/03/05 18:04:28 grobian Exp $
+
+EAPI="3"
 
 inherit toolchain-funcs eutils
 
@@ -21,8 +23,7 @@ IUSE=""
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${S}"/shell_cmds-${SHELL_VER}
 	epatch "${FILESDIR}"/${PN}-6-w64.patch
 }
@@ -100,8 +101,6 @@ src_compile() {
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
-
 	mkdir -p "${ED}"/bin
 	mkdir -p "${ED}"/usr/bin
 
