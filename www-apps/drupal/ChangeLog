@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/drupal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.62 2009/12/18 20:16:07 alexxy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.63 2010/03/05 13:03:22 a3li Exp $
+
+*drupal-6.16 (05 Mar 2010)
+*drupal-5.22 (05 Mar 2010)
+
+  05 Mar 2010; Alex Legler <a3li@gentoo.org> -drupal-5.21.ebuild,
+  +drupal-5.22.ebuild, -drupal-6.15.ebuild, +drupal-6.16.ebuild,
+  files/postinstall-en.txt:
+  Non-maintainer commit: Version bumps for security bugs 307811, 300199,
+  238571.
 
 *drupal-6.15 (18 Dec 2009)
 *drupal-5.21 (18 Dec 2009)
