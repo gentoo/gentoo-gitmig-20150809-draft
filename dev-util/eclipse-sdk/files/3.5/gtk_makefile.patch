@@ -1,5 +1,5 @@
---- features/org.eclipse.equinox.executable/library/gtk/make_linux.mak	2010-03-06 01:16:49.000000000 +1300
-+++ features/org.eclipse.equinox.executable/library/gtk/make_linux.mak	2010-03-06 01:31:15.000000000 +1300
+--- features/org.eclipse.equinox.executable/library/gtk/make_linux.mak.bak	2010-03-06 06:32:49.000000000 +1300
++++ features/org.eclipse.equinox.executable/library/gtk/make_linux.mak	2010-03-06 06:33:31.000000000 +1300
 @@ -27,14 +27,14 @@
    PROGRAM_OUTPUT=eclipse
  endif
@@ -28,8 +28,12 @@
  	-fpic \
  	-DLINUX \
  	-DMOZILLA_FIX \
-@@ -98,7 +98,7 @@
- 	$(CC) -o $(EXEC) $(MAIN_OBJS) $(COMMON_OBJS) $(LIBS)
+@@ -95,10 +95,10 @@
+ 	$(CC) $(CFLAGS) -c ../eclipseNix.c -o eclipseNix.o
+ 
+ $(EXEC): $(MAIN_OBJS) $(COMMON_OBJS)
+-	$(CC) -o $(EXEC) $(MAIN_OBJS) $(COMMON_OBJS) $(LIBS)
++	$(CC) $(LDFLAGS) -o $(EXEC) $(MAIN_OBJS) $(COMMON_OBJS) $(LIBS)
  	
  $(DLL): $(DLL_OBJS) $(COMMON_OBJS)
 -	$(CC) $(LFLAGS) -o $(DLL) $(DLL_OBJS) $(COMMON_OBJS) $(LIBS)
