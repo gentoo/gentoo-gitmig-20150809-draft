@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5343 2010/03/05 17:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5344 2010/03/05 19:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1425,8 +1425,11 @@ mail-filter/mimedefang:poll - Use poll instead of select
 mail-filter/opendkim:asyncdns - Use inbuilt asynchronous DNS library for queries
 mail-filter/opendkim:db - Include features like stats, querycache, popauth, report intervals and bodylengthdb that include berkdb
 mail-filter/opendkim:diffheaders - On verification failure, compare the original and the received headers to look for possible munging
+mail-filter/opendkim:ldap - Enable openldap as a dataset facilitator or keys, determining domains to sign for, and any other dataset that opendkim supports.
+mail-filter/opendkim:lua - Enables control over signature verification, filtering and policy to be controlled by user defined lua scripts.
 mail-filter/opendkim:multiplesigs - Allow addition of multiple signatures when key lists are in use.
 mail-filter/opendkim:opendbx - Use opendbx backend to faciliate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of databse types
+mail-filter/opendkim:sasl - Used to authenticate to a LDAP server in various ways if required.
 mail-filter/opendkim:unbound - Use the unbound dnssec libary to perform DKIM DNS queries.
 mail-filter/postgrey:targrey - Enables the targrey patch
 mail-filter/qmail-scanner:spamassassin - Build faster mail-filter/spamassassin checks into qmail-scanner
