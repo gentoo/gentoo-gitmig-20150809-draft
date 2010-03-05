@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.1 2009/12/14 18:26:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.2 2010/03/05 22:46:13 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -12,7 +12,8 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="oss alsa aac jack mad vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
+IUSE="oss alsa aac jack mad vorbis flac wavpack sndfile modplug musepack
+timidity sid ffmpeg speex libsamplerate curl debug"
 
 RDEPEND=">=sys-libs/db-4
 	alsa? ( media-libs/alsa-lib )
@@ -24,6 +25,7 @@ RDEPEND=">=sys-libs/db-4
 	wavpack? ( >=media-sound/wavpack-4.31 )
 	sndfile? ( >=media-libs/libsndfile-1 )
 	modplug? ( >=media-libs/libmodplug-0.7 )
+	musepack? ( >=media-sound/musepack-tools-444-r1 )
 	timidity? ( media-libs/libtimidity media-sound/timidity++ )
 	sid? ( >=media-libs/libsidplay-2 )
 	ffmpeg? ( media-video/ffmpeg )
@@ -43,7 +45,7 @@ src_configure() {
 		$(use_with aac) \
 		$(use_with jack) \
 		$(use_with mad mp3) \
-		--without-musepack \
+		$(use_with musepack) \
 		$(use_with vorbis) \
 		$(use_with flac) \
 		$(use_with wavpack) \

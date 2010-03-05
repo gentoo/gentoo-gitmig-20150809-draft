@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.74 2009/12/14 18:26:39 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.75 2010/03/05 22:46:13 ssuominen Exp $
+
+  05 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  moc-2.5.0_alpha4.ebuild:
+  Missing USE musepack (alpha4 has SV8 API support).
 
 *moc-2.5.0_alpha4 (14 Dec 2009)
 
