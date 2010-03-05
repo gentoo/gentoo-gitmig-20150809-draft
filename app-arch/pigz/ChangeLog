@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.9 2010/01/17 23:24:19 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.10 2010/03/05 00:40:46 spatz Exp $
+
+  05 Mar 2010; Dror Levin <spatz@gentoo.org> -pigz-2.1.5.ebuild,
+  -pigz-2.1.5-r1.ebuild, -files/pigz-2.1.5-decode-symlinks-to-stdout.patch,
+  -files/pigz-2.1.5-gunzip-compat.patch,
+  -files/pigz-2.1.5-respect-flags.patch:
+  Remove old.
 
 *pigz-2.1.6 (17 Jan 2010)
 
