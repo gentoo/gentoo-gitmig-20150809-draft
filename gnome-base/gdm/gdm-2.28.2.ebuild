@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2.ebuild,v 1.2 2009/12/27 05:07:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2.ebuild,v 1.3 2010/03/05 10:27:08 nirbheek Exp $
 
 EAPI="2"
 
@@ -34,17 +34,19 @@ RDEPEND=">=sys-apps/devicekit-power-008
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-panel-2
-	xklavier? ( >=x11-libs/libxklavier-4 )
-	x11-libs/libXft
+	>=x11-misc/xdg-utils-1.0.2-r3
+
 	app-text/iso-codes
 
 	x11-base/xorg-server
 	x11-libs/libXi
 	x11-libs/libXau
 	x11-libs/libX11
-	x11-libs/libXext
-	x11-apps/sessreg
 	x11-libs/libXdmcp
+	x11-libs/libXext
+	x11-libs/libXft
+	x11-apps/sessreg
+
 	virtual/pam
 	consolekit? (
 		sys-auth/consolekit
@@ -55,6 +57,7 @@ RDEPEND=">=sys-apps/devicekit-power-008
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	xinerama? ( x11-libs/libXinerama )
+	xklavier? ( >=x11-libs/libxklavier-4 )
 
 	!gnome-extra/fast-user-switch-applet"
 DEPEND="${RDEPEND}
