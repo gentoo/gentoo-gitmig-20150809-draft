@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.172 2010/02/28 17:40:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.173 2010/03/05 07:30:39 ulm Exp $
+
+  05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> sysstat-9.0.6.ebuild,
+  sysstat-9.0.6.1.ebuild, sysstat-9.1.1.ebuild:
+  Update dev-vcs/rcs dependency after package move, bug 56967.
 
 *sysstat-9.1.1 (28 Feb 2010)
 *sysstat-9.0.6.1 (28 Feb 2010)
