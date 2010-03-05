@@ -9,12 +9,12 @@
 <longdescription>A program implementing the Milter API that signs and verifies
 using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescription>
 <use>
+	<flag name='asyncdns'>Use inbuilt asynchronous DNS library for
+	queries</flag>
 	<flag name='db'>Include features like stats, querycache, popauth, report
 	intervals and bodylengthdb that include berkdb</flag>
 	<flag name='diffheaders'>On verification failure, compare the
 	original and the received headers to look for possible munging</flag>
-	<flag name='asyncdns'>Use inbuilt asynchronous DNS library for
-	queries</flag>
 	<flag name='unbound'>Use the unbound dnssec libary to perform DKIM DNS
 	queries.</flag>
 	<flag name='multiplesigs'>Allow addition of multiple signatures when key
@@ -22,6 +22,13 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 	<flag name='opendbx'>Use opendbx backend to faciliate dataset driven
 	OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide
 	variety of databse types</flag>
+	<flag name='sasl'>Used to authenticate to a LDAP server in various ways if
+	required.</flag>
+	<flag name='ldap'>Enable openldap as a dataset facilitator or keys,
+	determining domains to sign for, and any other dataset that opendkim
+	supports.</flag>
+	<flag name='lua'>Enables control over signature verification, filtering and
+	policy to be controlled by user defined lua scripts.</flag>
 
 </use>
 </pkgmetadata>
