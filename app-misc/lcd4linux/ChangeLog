@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lcd4linux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.37 2009/08/17 16:09:34 rbu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.38 2010/03/05 23:26:14 ssuominen Exp $
+
+  05 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  lcd4linux-0.10.1_rc2-r2.ebuild,
+  +files/lcd4linux-0.10.1_rc2-autoconf-2.65.patch:
+  Fix building with Autoconf >= 2.65 wrt #298002, thanks to Flameeyes and
+  SpanKY.
 
   17 Aug 2009; Robert Buchholz <rbu@gentoo.org>
   -files/lcd4linux-0.10.0-gcc4-compat.patch,

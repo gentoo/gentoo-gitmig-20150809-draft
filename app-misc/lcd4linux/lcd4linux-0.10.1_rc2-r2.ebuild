@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.7 2009/08/17 16:09:34 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.8 2010/03/05 23:26:14 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils multilib autotools
@@ -8,7 +8,7 @@ inherit eutils multilib autotools
 MY_P=${P/_rc/-RC}
 
 DESCRIPTION="Shows system and ISDN information on an external display or in a X11 window"
-HOMEPAGE="http://ssl.bulix.org/projects/${PN}"
+HOMEPAGE="http://ssl.bulix.org/projects/lcd4linux"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -73,6 +73,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-warnings.patch"
 	epatch "${FILESDIR}/${P}-mpd.patch"
 	epatch "${FILESDIR}/${P}-nordtsc.patch"
+	epatch "${FILESDIR}/${P}-autoconf-2.65.patch"
 
 	eautoreconf
 }
