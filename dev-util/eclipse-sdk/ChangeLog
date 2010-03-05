@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.152 2010/03/03 08:50:52 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.153 2010/03/05 17:22:59 ali_bush Exp $
+
+*eclipse-sdk-3.5.1-r1 (05 Mar 2010)
+
+  05 Mar 2010; Alistair Bush <ali_bush@gentoo.org>
+  +files/3.5/gtk_makefile.patch, +eclipse-sdk-3.5.1-r1.ebuild,
+  +files/3.5/hamcrest-junit-lib.patch:
+  Revbump with fixes for #296796, #296298 and #296796
 
   03 Mar 2010; Alistair Bush <ali_bush@gentoo.org> files/3.5/eclipse-3.5:
   Make shell script POSIX compliant. Thanks for patch from Michał Górny
