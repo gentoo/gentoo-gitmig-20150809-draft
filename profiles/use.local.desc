@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5340 2010/03/05 07:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5341 2010/03/05 09:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1083,6 +1083,7 @@ dev-util/svk:log4p - Enable perl logger support
 dev-util/svk:pager - Enable perl pager selection support
 dev-util/svk:patch - Enable patch creation, import support
 dev-util/universalindentgui:html - Add support for HTML files
+dev-vcs/bzr:sftp - Enable sftp support
 dev-vcs/qct:bazaar -  Support for dev-util/bzr 
 dev-vcs/qct:mercurial -  Support for dev-util/mercurial 
 dev-vcs/qct:monotone -  Support for dev-util/monotone 
