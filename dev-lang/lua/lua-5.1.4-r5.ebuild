@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r5.ebuild,v 1.1 2010/02/23 12:19:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r5.ebuild,v 1.2 2010/03/05 19:58:21 mabi Exp $
 
 EAPI="1"
 
@@ -90,7 +90,7 @@ src_install() {
 	|| die "emake install gentoo_install failed"
 
 	dodoc HISTORY README
-	dohtml doc/*.html doc/*.gif
+	dohtml doc/*.html doc/*.png doc/*.css doc/*.gif
 
 	insinto /usr/share/pixmaps
 	doins etc/lua.ico
