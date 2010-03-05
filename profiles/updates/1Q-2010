@@ -39,3 +39,4 @@ move dev-util/kdesvn dev-vcs/kdesvn
 move dev-util/qsvn dev-vcs/qsvn
 move dev-util/hgview dev-vcs/hgview
 move dev-util/archway dev-vcs/archway
+move app-text/rcs dev-vcs/rcs
