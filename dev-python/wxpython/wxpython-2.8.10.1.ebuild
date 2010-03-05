@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.11 2010/01/25 13:34:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.12 2010/03/05 22:30:45 dirtyepic Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -25,7 +25,6 @@ IUSE="cairo doc examples opengl"
 RDEPEND="
 	dev-python/setuptools
 	>=x11-libs/wxGTK-${PV}:2.8[opengl?]
-	>=dev-lang/python-2.4
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
 	>=dev-libs/glib-2.0
@@ -38,6 +37,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+PYTHON_DEPEND="2:2.4"
 RESTRICT_PYTHON_ABIS="3*"
 
 S="${WORKDIR}/${MY_P}/wxPython"
@@ -139,7 +139,7 @@ pkg_postinst() {
 		alternatives_auto_makesym "$(python_get_sitedir)/wx.pth" "$(python_get_sitedir)/wx.pth-[0-9].[0-9]"
 		alternatives_auto_makesym "$(python_get_sitedir)/wxversion.py" "$(python_get_sitedir)/wxversion.py-[0-9].[0-9]"
 	}
-	python_execute_function --action-message 'Updating symlinks with Python ${PYTHON_ABI}' create_symlinks
+	python_execute_function -q create_symlinks
 
 	python_mod_optimize wx-${SLOT}-gtk2-unicode wxversion.py
 
@@ -173,12 +173,11 @@ pkg_postinst() {
 
 pkg_postrm() {
 	python_mod_cleanup
-
 	fdo-mime_desktop_database_update
 
 	create_symlinks() {
 		alternatives_auto_makesym "$(python_get_sitedir)/wx.pth" "$(python_get_sitedir)/wx.pth-[0-9].[0-9]"
 		alternatives_auto_makesym "$(python_get_sitedir)/wxversion.py" "$(python_get_sitedir)/wxversion.py-[0-9].[0-9]"
 	}
-	python_execute_function --action-message 'Updating symlinks with Python ${PYTHON_ABI}' create_symlinks
+	python_execute_function -q create_symlinks
 }
