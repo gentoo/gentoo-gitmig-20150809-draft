@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-9999.ebuild,v 1.4 2009/12/24 13:38:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-9999.ebuild,v 1.5 2010/03/05 17:10:28 sping Exp $
 
 inherit bash-completion elisp-common flag-o-matic eutils distutils mercurial
 
@@ -110,7 +110,7 @@ pkg_postinst() {
 	elog "  dev-util/cvs"
 	elog "  dev-util/darcs"
 	elog "  dev-util/git"
-	elog "  dev-util/monotone"
+	elog "  dev-vcs/monotone"
 	elog "  dev-util/subversion"
 }
 
