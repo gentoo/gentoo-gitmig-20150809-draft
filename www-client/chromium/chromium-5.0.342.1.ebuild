@@ -1,19 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.7.ebuild,v 1.2 2010/02/16 12:21:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.342.1.ebuild,v 1.1 2010/03/05 09:12:50 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-#SRC_URI="http://build.chromium.org/buildbot/archives/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+ffmpeg +plugins-symlink"
+IUSE="bindist +ffmpeg +plugins-symlink"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
@@ -24,7 +23,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
+	ffmpeg? ( >=media-video/ffmpeg-0.5_p21602 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver
@@ -41,24 +40,33 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 pkg_setup() {
-	# Prevent user problems like bug 299777.
-	if ! grep -q /dev/shm <<< $(get_mounts); then
-		eerror "You don't have tmpfs mounted at /dev/shm."
-		eerror "${PN} isn't going to work in that configuration."
-		eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
-		eerror "run 'mount /dev/shm' and try again."
-		die "/dev/shm is not mounted"
-	fi
-	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
-		eerror "/dev/shm does not have correct permissions."
-		eerror "${PN} isn't going to work in that configuration."
-		eerror "Please run chmod 1777 /dev/shm and try again."
-		die "/dev/shm has incorrect permissions"
+	if [[ "${ROOT}" == "/" ]]; then
+		# Prevent user problems like bug 299777.
+		if ! grep -q /dev/shm <<< $(get_mounts); then
+			eerror "You don't have tmpfs mounted at /dev/shm."
+			eerror "${PN} isn't going to work in that configuration."
+			eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
+			eerror "run 'mount /dev/shm' and try again."
+			die "/dev/shm is not mounted"
+		fi
+		if [ `stat -c %a /dev/shm` -ne 1777 ]; then
+			eerror "/dev/shm does not have correct permissions."
+			eerror "${PN} isn't going to work in that configuration."
+			eerror "Please run chmod 1777 /dev/shm and try again."
+			die "/dev/shm has incorrect permissions"
+		fi
 	fi
 
 	elog "${PN} might crash occasionally. To get more useful backtraces"
 	elog "and submit better bug reports, please read"
 	elog "http://www.gentoo.org/proj/en/qa/backtraces.xml"
+
+	if ! use bindist; then
+		einfo
+		elog "You may not redistribute this build to any users on your network"
+		elog "or the internet."
+		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
+	fi
 }
 
 src_prepare() {
@@ -71,8 +79,13 @@ src_prepare() {
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-	# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
-	epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
+	if ! use bindist; then
+		# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
+		epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
+	fi
+	# Prevent the make build from filling entire disk space on some systems,
+	# bug 297273.
+	epatch "${FILESDIR}"/${PN}-fix-make-build.patch
 
 	# Disable prefixing to allow linking against system zlib
 	sed -e '/^#include "mozzconf.h"$/d' \
@@ -82,6 +95,9 @@ src_prepare() {
 
 src_configure() {
 	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
+
+	# Fails to build on arm if we don't do this
+	use arm && append-flags -fno-tree-sink
 
 	# CFLAGS/LDFLAGS
 	mkdir -p "${S}"/.gyp
@@ -96,7 +112,7 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1"
+	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1"
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
@@ -113,11 +129,14 @@ EOF
 
 	if use arm; then
 		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
-		append-flags -fno-tree-sink
 	fi
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
+	fi
+
+	if use ffmpeg; then
+		myconf="${myconf} -Duse_system_ffmpeg=1"
 	fi
 
 	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die "gyp failed"
@@ -179,5 +198,4 @@ src_install() {
 	dodir /usr/share/gnome-control-center/default-apps
 	insinto /usr/share/gnome-control-center/default-apps
 	doins "${FILESDIR}"/chromium.xml
-
 }
