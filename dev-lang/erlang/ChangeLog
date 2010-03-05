@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.184 2010/03/04 09:31:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.185 2010/03/05 08:21:38 fauli Exp $
+
+  05 Mar 2010; Christian Faulhammer <fauli@gentoo.org> erlang-13.2.4.ebuild:
+  fix sed lines to really modify the file
 
   04 Mar 2010; Christian Faulhammer <fauli@gentoo.org> erlang-13.2.4.ebuild:
   use system zlib, thanks to Frej Drejhammar <frej AT sics DOT se> in bug
