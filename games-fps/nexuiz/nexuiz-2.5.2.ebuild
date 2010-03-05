@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.1 2009/10/03 03:44:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.2 2010/03/05 14:11:21 fauli Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="alsa dedicated maps opengl sdl"
 
 UIRDEPEND="media-libs/libogg
