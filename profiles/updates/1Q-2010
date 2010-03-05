@@ -45,3 +45,4 @@ move dev-util/bzrtools dev-vcs/bzrtools
 move dev-util/qbzr dev-vcs/qbzr
 move dev-util/bzr-svn dev-vcs/bzr-svn
 move dev-util/mcvs dev-vcs/mcvs
+move dev-util/cssc dev-vcs/cssc
