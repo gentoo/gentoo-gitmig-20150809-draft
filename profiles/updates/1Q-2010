@@ -36,3 +36,4 @@ move dev-util/mr dev-vcs/mr
 move dev-util/giggle dev-vcs/giggle
 move dev-util/qct dev-vcs/qct
 move dev-util/kdesvn dev-vcs/kdesvn
+move dev-util/qsvn dev-vcs/qsvn
