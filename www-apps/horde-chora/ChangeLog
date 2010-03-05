@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-chora
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.18 2008/08/07 18:26:17 wrobel Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.19 2010/03/05 07:34:56 ulm Exp $
+
+  05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> horde-chora-2.0.1.ebuild,
+  horde-chora-2.0.2.ebuild:
+  Update dev-vcs/rcs dependency after package move, bug 56967.
 
   07 Aug 2008; wrobel@gentoo.org metadata.xml:
   Updated maintainer.

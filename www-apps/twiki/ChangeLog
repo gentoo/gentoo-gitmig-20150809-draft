@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/twiki
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.48 2009/08/01 20:59:32 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.49 2010/03/05 07:37:13 ulm Exp $
+
+  05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> twiki-4.3.1.ebuild:
+  Update dev-vcs/rcs dependency after package move, bug 56967.
 
   01 Aug 2009; Alex Legler <a3li@gentoo.org> twiki-4.3.1.ebuild:
   Adding dependency on dev-perl/Unicode-String, bug 279949.

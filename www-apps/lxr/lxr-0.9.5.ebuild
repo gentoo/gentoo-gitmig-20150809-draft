@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.6 2008/02/08 10:20:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.7 2010/03/05 07:37:15 ulm Exp $
 
 inherit perl-module webapp multilib eutils depend.apache
 
@@ -19,7 +19,7 @@ RDEPEND="dev-util/ctags
 	dev-lang/perl
 	dev-perl/DBI
 	dev-perl/File-MMagic
-	cvs? ( app-text/rcs )
+	cvs? ( dev-vcs/rcs )
 	postgres? ( dev-perl/DBD-Pg )
 	mysql? ( dev-perl/DBD-mysql )"
 
