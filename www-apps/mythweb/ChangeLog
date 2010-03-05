@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.74 2010/01/08 22:32:44 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.75 2010/03/05 00:00:57 rich0 Exp $
+
+  05 Mar 2010; Richard Freeman <rich0@gentoo.org>
+  mythweb-0.22_p22763-r1.ebuild:
+  amd64 stable to support mythtv 0.22 transition
 
   08 Jan 2010; Thomas Anderson <tanderson@gentoo.org>
   mythweb-0.22_p22763.ebuild, mythweb-0.22_p22763-r1.ebuild:
