@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-1.5.0.ebuild,v 1.8 2007/12/14 14:22:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-1.5.0.ebuild,v 1.9 2010/03/05 07:41:23 ulm Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="dev-lang/python
 		>=dev-util/subversion-1.0.9"
 RDEPEND="${DEPEND}
-		app-text/rcs"
+		dev-vcs/rcs"
 
 src_install() {
 	distutils_src_install

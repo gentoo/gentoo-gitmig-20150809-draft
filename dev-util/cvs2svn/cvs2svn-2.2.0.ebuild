@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-2.2.0.ebuild,v 1.4 2010/02/08 08:57:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/cvs2svn-2.2.0.ebuild,v 1.5 2010/03/05 07:41:23 ulm Exp $
 
 EAPI="2"
 PYTHON_USE_WITH_OR="berkdb gdbm"
@@ -22,7 +22,7 @@ IUSE="test"
 DEPEND="dev-lang/python
 	>=dev-util/subversion-1.0.9"
 RDEPEND="${DEPEND}
-	app-text/rcs"
+	dev-vcs/rcs"
 
 src_prepare() {
 	epatch "${FILESDIR}/2.2.0-deprecated-modules.patch"

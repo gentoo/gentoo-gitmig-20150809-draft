@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvs2svn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.27 2010/02/08 08:57:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.28 2010/03/05 07:41:23 ulm Exp $
+
+  05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> cvs2svn-1.5.0.ebuild,
+  cvs2svn-1.5.1.ebuild, cvs2svn-2.0.1.ebuild, cvs2svn-2.1.0.ebuild,
+  cvs2svn-2.1.1.ebuild, cvs2svn-2.2.0.ebuild:
+  Update dev-vcs/rcs dependency after package move, bug 56967.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> cvs2svn-2.2.0.ebuild:
   Add inherit eutils for epatch.

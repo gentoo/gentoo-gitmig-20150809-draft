@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mcvs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/ChangeLog,v 1.10 2007/03/19 11:52:12 kloeri Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/ChangeLog,v 1.11 2010/03/05 07:45:09 ulm Exp $
+
+  05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> mcvs-1.0.10.ebuild,
+  mcvs-1.0.13.ebuild:
+  Update dev-vcs/rcs dependency after package move, bug 56967.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove mkennedy from metadata.xml due to retirement.
