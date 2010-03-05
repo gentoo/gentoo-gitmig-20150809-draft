@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.15 2010/02/01 20:03:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.16 2010/03/05 14:19:34 pva Exp $
+
+  05 Mar 2010; Peter Volkov <pva@gentoo.org> vhba-1.2.1.ebuild,
+  +files/vhba-1.2.1-kernel-2.6.33.patch:
+  Added patch to fix compatibility with 2.6.33 kernels, bug 303146 thank
+  Rion for catching upstream fix fast.
 
   01 Feb 2010; Peter Volkov <pva@gentoo.org> -vhba-1.0.0.ebuild,
   -vhba-1.1.0.ebuild:
