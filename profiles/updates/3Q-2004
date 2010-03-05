@@ -122,7 +122,7 @@ move net-www/cocoon dev-java/cocoon
 move net-www/mod_mono www-apache/mod_mono
 move net-www/mod_lisp www-apache/mod_lisp
 move net-www/mod_tcl www-apache/mod_tcl
-move net-www/cvsweb dev-util/cvsweb
+move net-www/cvsweb www-apps/cvsweb
 move net-www/linklint dev-util/linklint
 move net-www/screem dev-util/screem
 move net-www/webcpp dev-util/webcpp
