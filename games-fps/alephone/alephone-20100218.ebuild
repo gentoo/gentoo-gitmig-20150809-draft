@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100218.ebuild,v 1.2 2010/02/21 20:52:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100218.ebuild,v 1.3 2010/03/05 08:09:00 tupone Exp $
 
 EAPI=2
 inherit autotools games
@@ -19,10 +19,13 @@ RDEPEND="media-libs/sdl-net
 	media-libs/sdl-image
 	media-libs/libsdl
 	dev-libs/expat
+	dev-libs/zziplib
+	media-libs/libpng
 	alsa? ( media-libs/alsa-lib )
 	mad? ( media-libs/libmad )
 	mpeg? ( media-libs/smpeg )
 	virtual/opengl
+	virtual/glu
 	sndfile? ( media-libs/libsndfile )
 	speex? ( media-libs/speex )
 	truetype? ( media-libs/sdl-ttf )
@@ -59,7 +62,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable mad) \
 		$(use_enable mpeg smpeg) \
-		--enable-opengl
+		--enable-opengl \
 		$(use_enable sndfile) \
 		$(use_enable speex) \
 		$(use_enable truetype ttf) \
