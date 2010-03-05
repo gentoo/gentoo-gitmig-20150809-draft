@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/cppi-1.14.ebuild,v 1.1 2010/03/04 16:19:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/cppi-1.14.ebuild,v 1.2 2010/03/05 15:58:00 jer Exp $
 
 EAPI=3
 
 DESCRIPTION="a cpp directive indenter"
-HOMEPAGE="http://www.gnu.org/"
+HOMEPAGE="http://savannah.gnu.org/projects/cppi"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
