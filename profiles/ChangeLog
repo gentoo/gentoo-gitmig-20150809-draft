@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3985 2010/03/05 10:02:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3986 2010/03/05 16:33:41 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> updates/1Q-2010:
+  Move mcvs from dev-util to dev-vcs, bug 56967.
 
   05 Mar 2010; Christian Faulhammer <fauli@gentoo.org> updates/1Q-2010:
   Move bzr, bzr-svn, qbzr and bzrtools from dev-util to dev-vcs category
