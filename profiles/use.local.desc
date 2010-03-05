@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5338 2010/03/05 02:38:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5339 2010/03/05 02:51:58 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1057,9 +1057,6 @@ dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/perf:demangle -  Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils. 
 dev-util/perf:doc -  Build documentation and man pages. With thise USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems. 
 dev-util/perf:perl -  Add support for Perl as a scripting language for perf tools. 
-dev-util/qct:bazaar -  Support for dev-util/bzr 
-dev-util/qct:mercurial -  Support for dev-util/mercurial 
-dev-util/qct:monotone -  Support for dev-util/monotone 
 dev-util/qt-creator:bineditor - enable bineditor plugin
 dev-util/qt-creator:bookmarks - enable bookmarks plugin
 dev-util/qt-creator:cmake - enable cmake project manager plugin
