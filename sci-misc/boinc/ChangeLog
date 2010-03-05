@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/boinc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.84 2009/12/09 19:03:44 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.85 2010/03/05 14:56:17 scarabeus Exp $
+
+*boinc-6.10.36 (05 Mar 2010)
+
+  05 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org> boinc-6.10.18.ebuild,
+  +boinc-6.10.36.ebuild:
+  Version bump. Fix up missing dependency on sqlite per bug #302100.
 
   09 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/6.6.40-as-needed.patch, -files/6.6.40-cuda.patch,
