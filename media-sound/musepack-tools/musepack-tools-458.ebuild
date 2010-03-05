@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-458.ebuild,v 1.4 2010/03/01 17:21:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-458.ebuild,v 1.5 2010/03/05 22:49:54 ssuominen Exp $
 
 inherit cmake-utils
 
@@ -18,6 +18,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
 IUSE=""
 
 DEPEND=">=media-libs/libcuefile-${PV}
-	>=media-libs/libreplaygain-${PV}"
+	>=media-libs/libreplaygain-${PV}
+	!media-libs/libmpcdec
+	!media-libs/libmpcdecsv7"
 
 PATCHES=( "${FILESDIR}/${P}-gentoo.patch" )
