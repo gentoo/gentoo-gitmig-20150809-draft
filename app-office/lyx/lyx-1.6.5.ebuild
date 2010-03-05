@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.5.ebuild,v 1.8 2010/01/25 18:26:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.5.ebuild,v 1.9 2010/03/05 07:20:12 ulm Exp $
 
 EAPI=1
 
@@ -80,7 +80,7 @@ RDEPEND="${COMMONDEPEND}
 	dot? ( media-gfx/graphviz )
 	dia? ( app-office/dia )
 	subversion? ( dev-util/subversion )
-	rcs? ( app-text/rcs )"
+	rcs? ( dev-vcs/rcs )"
 
 DEPEND="${COMMONDEPEND}
 	x11-proto/xproto
