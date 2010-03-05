@@ -34,3 +34,4 @@ move sci-chemistry/psipred sci-biology/psipred
 move dev-util/gitg dev-vcs/gitg
 move dev-util/mr dev-vcs/mr
 move dev-util/giggle dev-vcs/giggle
+move dev-util/qct dev-vcs/qct
