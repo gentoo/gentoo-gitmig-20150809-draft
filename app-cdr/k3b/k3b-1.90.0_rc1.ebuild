@@ -1,10 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.90.0_rc1.ebuild,v 1.1 2010/03/05 19:53:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.90.0_rc1.ebuild,v 1.2 2010/03/05 20:03:49 ssuominen Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
 KDE_MINIMAL=4.4
+KDE_LINGUAS="ast be bg ca ca@valencia cs csb da de el en_GB eo es et eu fi fr ga
+gl he hi hne hr hu is it ja km ko ku lt mai nb nds nl nn oc pa pl pt pt_BR ro ru
+se sk sl sv th tr uk zh_CN zh_TW"
+KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 inherit kde4-base
 
 DESCRIPTION="The CD/DVD Kreator for KDE"
@@ -14,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.bz2"
 LICENSE="GPL-2 FDL-1.2"
 SLOT="4"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="debug dvd emovix encode ffmpeg flac mad lame musepack musicbrainz sndfile sox taglib vcd vorbis +wav"
+IUSE="debug dvd emovix encode ffmpeg flac +handbook mad lame musepack musicbrainz sndfile sox taglib vcd vorbis +wav"
 
 DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	media-libs/libsamplerate
