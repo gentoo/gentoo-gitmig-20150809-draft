@@ -40,3 +40,7 @@ move dev-util/qsvn dev-vcs/qsvn
 move dev-util/hgview dev-vcs/hgview
 move dev-util/archway dev-vcs/archway
 move app-text/rcs dev-vcs/rcs
+move dev-util/bzr dev-vcs/bzr
+move dev-util/bzrtools dev-vcs/bzrtools
+move dev-util/qbzr dev-vcs/qbzr
+move dev-util/bzr-svn dev-vcs/bzr-svn
