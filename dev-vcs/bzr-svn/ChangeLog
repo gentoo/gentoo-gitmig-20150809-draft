@@ -1,0 +1,38 @@
+# ChangeLog for dev-util/bzr-svn
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.1 2010/03/05 09:42:50 fauli Exp $
+
+*bzr-svn-1.0.2 (24 Feb 2010)
+
+  24 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  +bzr-svn-1.0.2.ebuild:
+  version bump: straighten dependencies, introduce test USE flag to block
+  dev-util/bzr-rewrite (from Bazaar overlay) and restrict test until they
+  are permanently fixed upstream
+
+  23 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-svn-1.0.0.ebuild:
+  clean up
+
+  12 Jan 2010; <hwoarang@gentoo.org> bzr-svn-1.0.1.ebuild:
+  Stable on amd64 wrt bug #299576
+
+  04 Jan 2010; Christian Faulhammer <fauli@gentoo.org> bzr-svn-1.0.1.ebuild:
+  x86 stable, bug 299576
+
+*bzr-svn-1.0.1 (21 Oct 2009)
+
+  21 Oct 2009; Peter Volkov <pva@gentoo.org> +bzr-svn-1.0.1.ebuild,
+  metadata.xml:
+  Version bump. Added to bazaar herd.
+
+  10 Oct 2009; Peter Volkov <pva@gentoo.org> bzr-svn-1.0.0.ebuild:
+  Fixed typo: minimum required bzr version is 1.16 and 1.18 is supported
+  too.
+
+*bzr-svn-1.0.0 (06 Oct 2009)
+
+  06 Oct 2009; Peter Volkov <pva@gentoo.org> +bzr-svn-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import. ebuild originated from bazaar overlay, IIRC.
+

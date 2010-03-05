@@ -1,0 +1,119 @@
+# ChangeLog for dev-util/qbzr
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.1 2010/03/05 09:44:31 fauli Exp $
+
+  02 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  -files/qbzr-0.14.3-has_dir.patch:
+  clean up more
+
+  02 Mar 2010; Christian Faulhammer <fauli@gentoo.org> -qbzr-0.17.ebuild:
+  clean up
+
+*qbzr-0.18.2 (02 Mar 2010)
+
+  02 Mar 2010; Christian Faulhammer <fauli@gentoo.org> +qbzr-0.18.2.ebuild:
+  version bump
+
+  11 Feb 2010; Christian Faulhammer <fauli@gentoo.org> -qbzr-0.14.4.ebuild:
+  clean up
+
+*qbzr-0.18.1 (11 Feb 2010)
+
+  11 Feb 2010; Christian Faulhammer <fauli@gentoo.org> +qbzr-0.18.1.ebuild:
+  version bump for bug 304553
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> -qbzr-0.14.3.ebuild:
+  clean up
+
+*qbzr-0.17 (17 Dec 2009)
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> +qbzr-0.17.ebuild:
+  version bump
+
+*qbzr-0.14.4 (20 Oct 2009)
+
+  20 Oct 2009; Peter Volkov <pva@gentoo.org> -qbzr-0.12.ebuild,
+  -qbzr-0.14.ebuild, +qbzr-0.14.4.ebuild, metadata.xml:
+  Version bump. Drop old. Added to bazaar herd.
+
+  06 Oct 2009; Peter Volkov <pva@gentoo.org> qbzr-0.14.3.ebuild,
+  +files/qbzr-0.14.3-has_dir.patch:
+  Fix TestLogGraphProvider tests.
+
+*qbzr-0.14.3 (06 Oct 2009)
+
+  06 Oct 2009; Christian Faulhammer <fauli@gentoo.org> +qbzr-0.14.3.ebuild:
+  version bump for bug 287637
+
+*qbzr-0.14 (27 Aug 2009)
+
+  27 Aug 2009; Christian Faulhammer <fauli@gentoo.org> +qbzr-0.14.ebuild:
+  version bump
+
+  27 Aug 2009; Christian Faulhammer <fauli@gentoo.org> -qbzr-0.11.0.ebuild:
+  clean up
+
+*qbzr-0.12 (10 Jul 2009)
+
+  10 Jul 2009; Peter Volkov <pva@gentoo.org> -qbzr-0.9.9.ebuild,
+  -qbzr-0.10.0.ebuild, +qbzr-0.12.ebuild:
+  Version bump.
+
+  02 Jul 2009; Christian Faulhammer <fauli@gentoo.org> qbzr-0.9.9.ebuild,
+  qbzr-0.10.0.ebuild, qbzr-0.11.0.ebuild:
+  use EAPI 2 to ask for X USE flag on dev-python/PyQt4
+
+  17 Jun 2009; Peter Volkov <pva@gentoo.org> qbzr-0.9.9.ebuild,
+  qbzr-0.10.0.ebuild, qbzr-0.11.0.ebuild:
+  Make repoman happy: RDEPEND.implicit fixed.
+
+*qbzr-0.11.0 (17 Jun 2009)
+
+  17 Jun 2009; Peter Volkov <pva@gentoo.org> +qbzr-0.11.0.ebuild:
+  Version bump.
+
+*qbzr-0.10.0 (05 Jun 2009)
+
+  05 Jun 2009; Peter Volkov <pva@gentoo.org> -qbzr-0.9.8.ebuild,
+  +qbzr-0.10.0.ebuild:
+  Version bump.
+
+*qbzr-0.9.9 (28 Mar 2009)
+
+  28 Mar 2009; Peter Volkov <pva@gentoo.org> -qbzr-0.9.6.ebuild,
+  -qbzr-0.9.7.ebuild, +qbzr-0.9.9.ebuild:
+  Version bump. Remove old.
+
+*qbzr-0.9.8 (13 Feb 2009)
+
+  13 Feb 2009; Peter Volkov <pva@gentoo.org> +qbzr-0.9.8.ebuild:
+  Version bump.
+
+*qbzr-0.9.7 (09 Feb 2009)
+
+  09 Feb 2009; Peter Volkov <pva@gentoo.org> -qbzr-0.9.4.ebuild,
+  -qbzr-0.9.5.ebuild, +qbzr-0.9.7.ebuild:
+  Version bump. Removed old.
+
+*qbzr-0.9.6 (10 Jan 2009)
+
+  10 Jan 2009; Peter Volkov <pva@gentoo.org> +qbzr-0.9.6.ebuild:
+  Version bump.
+
+*qbzr-0.9.5 (03 Nov 2008)
+
+  03 Nov 2008; Peter Volkov <pva@gentoo.org> -qbzr-0.9.3.ebuild,
+  +qbzr-0.9.5.ebuild:
+  Version bump, removed old.
+
+*qbzr-0.9.4 (19 Oct 2008)
+
+  19 Oct 2008; Peter Volkov <pva@gentoo.org> +qbzr-0.9.4.ebuild:
+  Version bump.
+
+*qbzr-0.9.3 (03 Oct 2008)
+
+  03 Oct 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +qbzr-0.9.3.ebuild:
+  Initial import for bug #234960
+
