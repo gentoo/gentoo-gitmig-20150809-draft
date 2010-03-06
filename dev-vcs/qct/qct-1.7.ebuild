@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.3 2010/03/05 17:07:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.4 2010/03/06 12:27:48 djc Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -20,7 +20,7 @@ DEPEND="app-text/asciidoc
 	dev-python/PyQt4
 	bazaar? ( dev-vcs/bzr )
 	cvs? ( dev-util/cvs )
-	mercurial? ( dev-util/mercurial )
+	mercurial? ( dev-vcs/mercurial )
 	monotone? ( dev-vcs/monotone )
 	subversion? ( dev-util/subversion )"
 RDEPEND="${DEPEND}"

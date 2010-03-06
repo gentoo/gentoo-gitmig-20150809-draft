@@ -7,7 +7,7 @@
       Support for <pkg>dev-vcs/bzr</pkg>
     </flag>
     <flag name='mercurial'>
-      Support for <pkg>dev-util/mercurial</pkg>
+      Support for <pkg>dev-vcs/mercurial</pkg>
     </flag>
     <flag name='monotone'>
       Support for <pkg>dev-vcs/monotone</pkg>
