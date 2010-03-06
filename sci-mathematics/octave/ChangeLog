@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.84 2010/02/17 04:38:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.85 2010/03/06 18:40:19 bicatali Exp $
+
+*octave-3.2.4-r1 (06 Mar 2010)
+
+  06 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +octave-3.2.4-r1.ebuild, +files/octave-3.2.4-imread.patch,
+  +files/octave-3.2.4-ldflags.patch:
+  Added a possibility to view results of tests (bug #303537), fixed imread
+  (bug #307693), removed hdf5 (bug #299876), and now respect LDFLAGS
 
   17 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> octave-3.2.4.ebuild:
   Modified fltk automagic to no instead of empty string
