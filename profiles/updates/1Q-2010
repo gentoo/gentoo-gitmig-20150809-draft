@@ -52,3 +52,4 @@ move dev-util/statcvs dev-vcs/statcvs
 move dev-util/statsvn dev-vcs/statsvn
 move dev-util/cvsweb www-apps/cvsweb
 move dev-util/colorcvs dev-vcs/colorcvs
+move dev-util/mercurial dev-vcs/mercurial
