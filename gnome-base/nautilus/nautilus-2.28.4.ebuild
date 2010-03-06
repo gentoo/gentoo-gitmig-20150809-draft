@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.28.4.ebuild,v 1.2 2010/01/16 00:36:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.28.4.ebuild,v 1.3 2010/03/06 21:18:28 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.21.3
 	>=dev-libs/libxml2-2.4.7
 	>=media-libs/libexif-0.5.12
 	>=gnome-base/gconf-2.0
-	>=gnome-base/gvfs-0.1.2
 	dev-libs/libunique
 	dev-libs/dbus-glib
 	x11-libs/libXft
@@ -44,7 +43,8 @@ DEPEND="${RDEPEND}
 #	gnome-base/gnome-common
 #	dev-util/gtk-doc-am"
 
-PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
+PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )
+	>=gnome-base/gvfs-0.1.2"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 
