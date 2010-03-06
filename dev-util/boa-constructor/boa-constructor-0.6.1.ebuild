@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.6.1.ebuild,v 1.5 2008/10/18 16:45:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.6.1.ebuild,v 1.6 2010/03/06 04:57:14 dirtyepic Exp $
+
+EAPI=2
 
 inherit eutils python multilib
 
@@ -13,19 +15,18 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="=dev-python/wxpython-2.6*
+RDEPEND="dev-python/wxpython:2.6
 	dev-libs/expat"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 src_compile() {
-	python -c "import compileall; compileall.compile_dir('.', force=1)"
+	"$(PYTHON)" -c "import compileall; compileall.compile_dir('.', force=1)"
 }
 
 src_install() {
-	python_version
-	local boadir="/usr/$(get_libdir)/python${PYVER}/site-packages/boa"
+	local boadir="$(python_get_sitedir)"/boa
 
 	local dir
 	for dir in $(find . -type d)
@@ -47,12 +48,4 @@ src_install() {
 	newbin "${FILESDIR}"/${P} boa-constructor
 
 	dodoc Bugs.txt Changes.txt Credits.txt README.txt
-}
-
-pkg_postinst() {
-	python_mod_optimize
-}
-
-pkg_postrm() {
-	python_mod_cleanup
 }
