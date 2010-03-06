@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/blt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.32 2009/09/22 11:55:33 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.33 2010/03/06 12:16:07 jlec Exp $
+
+*blt-2.4z-r6 (06 Mar 2010)
+
+  06 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> +blt-2.4z-r6.ebuild,
+  +files/blt-2.4z-ldflags.patch:
+  EAPI=3, respecting CC & LDFLAGS per 247195, ~{amd86,x86}-linux keyworded,
+  corrected shebangs in demos
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> blt-2.4z-r5.ebuild:
   amd64 stable, bug #281404
