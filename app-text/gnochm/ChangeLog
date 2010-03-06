@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnochm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.15 2009/09/27 04:56:04 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.16 2010/03/06 03:58:27 dirtyepic Exp $
+
+  06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> gnochm-0.9.11-r1.ebuild:
+  EAPI 2 and fix python dep.
 
   27 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> -gnochm-0.9.10.ebuild,
   -gnochm-0.9.11.ebuild:
