@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.10 2010/02/19 00:21:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.11 2010/03/06 04:36:24 dirtyepic Exp $
+
+  06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> -editra-0.5.05.ebuild,
+  -editra-0.5.15.ebuild, -editra-0.5.25.ebuild, editra-0.5.32.ebuild:
+  Use SUPPORT_PYTHON_ABIS. Remove old.
 
   19 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> editra-0.5.32.ebuild,
   +files/editra-0.5.32-sandbox.patch:

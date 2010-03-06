@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.2 2010/02/19 00:21:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.3 2010/03/06 04:36:24 dirtyepic Exp $
 
 EAPI=2
+SUPPORT_PYTHON_ABIS=1
 
-inherit distutils eutils fdo-mime
+inherit distutils eutils fdo-mime python
 
 MY_PN=${PN/e/E}
 
@@ -17,12 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="spell"
 
-DEPEND=">=dev-lang/python-2.5
-		>=dev-python/wxpython-2.8.9.2:2.8
-		dev-python/setuptools"
+DEPEND=">=dev-python/wxpython-2.8.9.2:2.8
+		>=dev-python/setuptools-0.6"
 # setuptools is RDEPEND because it's used by the runtime for installing plugins
 RDEPEND="${DEPEND}
 	spell? ( dev-python/pyenchant )"
+
+PYTHON_DEPEND="2:2.4"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
 
@@ -30,6 +33,7 @@ src_prepare() {
 	#http://code.google.com/p/editra/issues/detail?id=481
 	epatch "${FILESDIR}"/${P}-sandbox.patch
 	# next version, use setup.py install --no-clean
+	distutils_src_prepare
 }
 
 src_install() {
