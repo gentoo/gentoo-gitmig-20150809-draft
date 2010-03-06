@@ -1,0 +1,131 @@
+diff -ruN dvutil-1.0.10.orig/configure.ac dvutil-1.0.10/configure.ac
+--- dvutil-1.0.10.orig/configure.ac	2009-12-05 14:12:00.000000000 +0200
++++ dvutil-1.0.10/configure.ac	2010-03-06 23:47:40.000000000 +0200
+@@ -89,19 +89,25 @@
+ #   DV_REQUIRE_CFUNC(SHA1,ssl)
+ # fi
+ 
+-DV_CHECK_CFUNC(SHA1,ssl)
+-DV_CHECK_CFUNC(MD5,ssl)
+-if test "${dv_ac_func_MD5}" = "yes"; then
+-  if test "${dv_ac_func_SHA1}" = "yes"; then
+-    have_openssl="yes"
+-  else
+-    have_openssl="no"
+-  fi
+-else
+-  have_openssl="no"
++# DV_CHECK_CFUNC(SHA1,ssl)
++# DV_CHECK_CFUNC(MD5,ssl)
++# if test "${dv_ac_func_MD5}" = "yes"; then
++#   if test "${dv_ac_func_SHA1}" = "yes"; then
++#     have_openssl="yes"
++#   else
++#     have_openssl="no"
++#   fi
++# else
++#   have_openssl="no"
++# fi
++# AC_DEFINE([HAVE_OPENSSL],[HAVE_MD5 && HAVE_SHA1],[openssl available])
++# AC_SUBST(have_openssl)
++
++AC_ARG_WITH([ssl], AS_HELP_STRING([--with-ssl], [Build with ssl library (default: disabled)]))
++if test "x$with_ssl" == "xyes"; then
++   PKG_CHECK_MODULES([SSL], [libssl])
++   AC_DEFINE([HAVE_OPENSSL], [1], [openssl available])
+ fi
+-AC_DEFINE([HAVE_OPENSSL],[HAVE_MD5 && HAVE_SHA1],[openssl available])
+-AC_SUBST(have_openssl)
+ 
+ DV_REQUIRE_CFUNC(getgrnam)
+ DV_REQUIRE_CFUNC(chown)
+diff -ruN dvutil-1.0.10.orig/dvutil/Makefile.am dvutil-1.0.10/dvutil/Makefile.am
+--- dvutil-1.0.10.orig/dvutil/Makefile.am	2009-12-05 14:09:51.000000000 +0200
++++ dvutil-1.0.10/dvutil/Makefile.am	2010-03-06 23:20:32.000000000 +0200
+@@ -9,8 +9,8 @@
+ lib_LTLIBRARIES = libdvutil.la
+ 
+ libdvutil_la_LDFLAGS = -release @VERSION@ 
+-libdvutil_la_LIBADD = @LIBS@ 
+-libdvutil_la_CXXFLAGS = -Wno-deprecated -g -Wall -O3
++libdvutil_la_LIBADD = @LIBS@ @SSL_LIBS@
++libdvutil_la_CXXFLAGS = -Wno-deprecated -Wall @SSL_CFLAGS@
+ libdvutil_la_SOURCES = debug_dump.C strings.C strings.h props.h props.C \
+   date.h date.C period.h period.C getdate.c getdate.h \
+   file.C file.h user.C user.h fdstreambuf.h fdstreambuf.C makedaemon.h makedaemon.C \
+diff -ruN dvutil-1.0.10.orig/m4/dvfuncs.m4 dvutil-1.0.10/m4/dvfuncs.m4
+--- dvutil-1.0.10.orig/m4/dvfuncs.m4	1970-01-01 02:00:00.000000000 +0200
++++ dvutil-1.0.10/m4/dvfuncs.m4	2010-03-06 23:24:17.000000000 +0200
+@@ -0,0 +1,60 @@
++dnl =====================================================================
++dnl DV_REQUIRE_CFUNC(   function [$1],          crypt
++dnl                     libraries [$2])         [ crypt crypto ]
++dnl =====================================================================
++dnl This macro verifies that the C function $1 is available, if necesssary
++dnl after linking with one of the libraries in $2 (without lib prefix). 
++dnl The library for which linking succeeds is added to $LIBS.
++dnl =====================================================================
++AC_DEFUN([DV_REQUIRE_CFUNC],
++[
++AC_LANG_PUSH(C)
++AC_CHECK_FUNC($1,, [ AC_SEARCH_LIBS($1,"$2",,AC_MSG_ERROR([need $1 function])) ])
++AC_LANG_POP(C)
++])
++
++dnl =====================================================================
++dnl DV_CHECK_CFUNC(     function [$1],          crypt
++dnl                     libraries [$2])         [ crypt crypto ]
++dnl =====================================================================
++dnl This macro checks whether the C function $1 is available, if necesssary
++dnl after linking with one of the libraries in $2 (without lib prefix). 
++dnl The library for which linking succeeds is added to $LIBS.
++dnl =====================================================================
++AC_DEFUN([DV_CHECK_CFUNC],
++[
++AC_LANG_PUSH(C)
++AC_CHECK_FUNC($1,[ AC_DEFINE(HAVE_$1, [1], [C function $1]) ],
++  [ AC_SEARCH_LIBS($1,"$2", AC_DEFINE(HAVE_$1, [1], [C function $1 in $2])) ])
++AC_LANG_POP(C)
++])
++dnl =====================================================================
++dnl DV_REQUIRE_PROG(
++dnl         pathvar[$1],      [ GZIP ]
++dnl            program-name[$2], [ gzip ]
++dnl            bin-dirs[$3],     [ [/usr/bin /usr/local/bin] ]
++dnl =====================================================================
++dnl Find out where program-name is, checking directories in bin-dirs.
++dnl Set pathvar if found and abort if not found
++dnl =====================================================================
++AC_DEFUN([DV_REQUIRE_PROG],
++[
++$1=""
++AM_PATH_PROG_WITH_TEST($1,$2,true, ,[$3])
++if test -z "$$1"; then
++  AC_MSG_ERROR([program $2 not found])
++fi
++])
++
++AC_DEFUN([DV_APPEND_UNIQ],
++[
++{ echo "${$2}" | grep -- "$1 " >/dev/null || $2="${$2} $1"; }dnl
++])
++
++AC_DEFUN([DV_SET_LIBTOOL],
++[
++AC_ARG_WITH(libtool,
++  [  --with-libtool=path     path of libtool program], 
++dv_lt=$withval,dv_lt="libtool")
++])
++
+diff -ruN dvutil-1.0.10.orig/Makefile.am dvutil-1.0.10/Makefile.am
+--- dvutil-1.0.10.orig/Makefile.am	2009-02-09 17:07:09.000000000 +0200
++++ dvutil-1.0.10/Makefile.am	2010-03-06 23:13:41.000000000 +0200
+@@ -1,6 +1,6 @@
+ # $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/files/dvutil-1.0.10-asneeded.patch,v 1.1 2010/03/06 21:45:53 ssuominen Exp $
+-ACLOCAL_AMFLAGS=-I m4 -I /usr/local/share/aclocal
+-SUBDIRS =  dvutil doc m4
++ACLOCAL_AMFLAGS = -I m4
++SUBDIRS = dvutil m4
+ 
+ maintainer-check: distcheck
+ 	@:
