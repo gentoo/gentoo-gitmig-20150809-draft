@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.42 2010/03/06 16:27:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.43 2010/03/06 16:30:01 armin76 Exp $
+
+  06 Mar 2010; Raúl Porcel <armin76@gentoo.org> files/tigervnc.initd:
+  Provide valid shell, wrt bug #285705
 
 *tigervnc-1.0.1_pre20100306 (06 Mar 2010)
 
