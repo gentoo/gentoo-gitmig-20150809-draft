@@ -3,11 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>abcd@gentoo.org</email>
-  <name>Jonathan Callen</name>
+  <email>wizzleby@gmail.com</email>
+  <name>Locke Shinseiko</name>
 </maintainer>
 <maintainer>
-  <email>wizzleby@gmail.com</email>
-  <name>Wizzleby</name>
+  <email>abcd@gentoo.org</email>
+  <name>Jonathan Callen</name>
+  <description>Proxy maintainer (CC bugs)</description>
 </maintainer>
 </pkgmetadata>
