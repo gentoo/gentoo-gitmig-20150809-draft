@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.445 2010/03/06 16:16:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.446 2010/03/06 18:47:56 pacho Exp $
+
+  06 Mar 2010; Pacho Ramos <pacho@gentoo.org> gtk+-2.18.7.ebuild:
+  amd64 stable, bug 304777
 
   06 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtk+-2.18.6.ebuild:
   x86 stable wrt bug #304777
