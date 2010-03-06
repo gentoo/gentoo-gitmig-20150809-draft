@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.7-r1.ebuild,v 1.4 2009/05/16 09:16:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.2.7-r1.ebuild,v 1.5 2010/03/06 20:23:15 robbat2 Exp $
 
 inherit eutils linux-info perl-module python multilib
 
@@ -24,10 +24,11 @@ RDEPEND="${DEPEND}
 
 uinput_check() {
 	ebegin "Checking for uinput support"
-	linux_chkconfig_present INPUT_UINPUT
-	eend $?
+	local rc=1
+	linux_config_exists && linux_chkconfig_present INPUT_UINPUT
+	rc=$?
 
-	if [[ $? -ne 0 ]] ; then
+	if [[ $rc -ne 0 ]] ; then
 		eerror "To use g15daemon, you need to compile your kernel with uinput support."
 		eerror "Please enable uinput support in your kernel config, found at:"
 		eerror
@@ -35,7 +36,6 @@ uinput_check() {
 		eerror
 		eerror "Once enabled, you should have the /dev/input/uinput device."
 		eerror "g15daemon will not work without the uinput device."
-		die "INPUT_UINPUT support not detected!"
 	fi
 }
 
