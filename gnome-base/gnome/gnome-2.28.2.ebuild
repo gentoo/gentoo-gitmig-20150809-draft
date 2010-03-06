@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.1 2010/02/24 23:45:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.2 2010/03/06 21:43:59 nirbheek Exp $
 
-EAPI="1"
+EAPI="2"
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -58,7 +58,6 @@ RDEPEND="
 	>=gnome-base/gnome-settings-daemon-2.28.1
 	>=gnome-base/gnome-control-center-2.28.1
 
-	>=gnome-base/gvfs-1.4.3
 	>=gnome-base/nautilus-2.28.4
 
 	>=media-libs/gstreamer-0.10.25
@@ -157,6 +156,8 @@ RDEPEND="
 	mono? (
 		>=dev-dotnet/gtk-sharp-2.12.9
 		>=app-misc/tomboy-1.0.1 )"
+DEPEND=""
+PDEPEND=">=gnome-base/gvfs-1.4.3[gdu]"
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
 # which isn't the case with nautilus-2.22, bug #216019
 #	>=app-admin/gnome-system-tools-2.28.2
