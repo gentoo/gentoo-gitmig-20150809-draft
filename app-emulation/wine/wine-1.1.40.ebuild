@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.40.ebuild,v 1.1 2010/03/05 20:17:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.40.ebuild,v 1.2 2010/03/06 21:45:27 vapier Exp $
 
 EAPI="2"
 
@@ -103,7 +103,7 @@ src_unpack() {
 
 src_prepare() {
 	if use pulseaudio ; then
-		epatch `pulse_patches "${DISTDIR}"`
+		EPATCH_OPTS=-p1 epatch `pulse_patches "${DISTDIR}"`
 		eautoreconf
 	fi
 	epatch "${FILESDIR}"/${PN}-1.1.15-winegcc.patch #260726
@@ -142,6 +142,7 @@ src_configure() {
 		$(use_with oss) \
 		$(use_with png) \
 		$(use_with threads pthread) \
+		$(use_with pulseaudio pulse) \
 		$(use_with scanner sane) \
 		$(use_enable test tests) \
 		$(use_with truetype freetype) \

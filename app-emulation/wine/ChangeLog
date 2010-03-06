@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.297 2010/03/05 20:17:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.298 2010/03/06 21:45:27 vapier Exp $
+
+  06 Mar 2010; Mike Frysinger <vapier@gentoo.org> wine-1.1.39.ebuild,
+  wine-1.1.40.ebuild:
+  Fix up pulse patches #307927 by Marc-Antoine Perennou.
 
 *wine-1.1.40 (05 Mar 2010)
 
