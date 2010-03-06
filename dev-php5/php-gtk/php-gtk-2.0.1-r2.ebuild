@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r2.ebuild,v 1.1 2010/02/21 17:30:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r2.ebuild,v 1.2 2010/03/06 18:57:13 sping Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ PHP_EXT_ZENDEXT="no"
 PHPSAPILIST="cli"
 DOCS="AUTHORS ChangeLog INSTALL NEWS README README.KNOWN-ISSUES TODO2"
 
-inherit php-ext-source-r1
+inherit php-ext-source-r1 virtualx
 
 DESCRIPTION="PHP 5 bindings for the Gtk+ 2 library."
 HOMEPAGE="http://gtk.php.net/"
@@ -101,7 +101,9 @@ src_compile() {
 		$(use_enable scintilla) \
 		--without-sourceview \
 		$(use glade || echo '--without-libglade')"
-	php-ext-source-r1_src_compile
+	# call virtualmake to setup an virtual x environment
+	export maketype="php-ext-source-r1_src_compile"
+	virtualmake
 }
 
 src_install() {
