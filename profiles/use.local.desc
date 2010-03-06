@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5351 2010/03/06 18:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5352 2010/03/06 21:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1019,7 +1019,6 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/ctags:ada - Enable Ada support
 dev-util/cvs:server - Enable server support
-dev-util/cvsspam:svn - Add subversion support
 dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/gambas:corba - Enable CORBA 2 ORB (net-misc/omniORB)
 dev-util/gambas:smtp - Enable smtp support.
