@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.98.ebuild,v 1.1 2010/02/11 18:23:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.98.ebuild,v 1.2 2010/03/06 12:51:43 djc Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!<dev-util/kdevelop-${KDEVELOP_PV}
 	cvs? ( dev-util/cvs )
-	mercurial? ( dev-util/mercurial )
+	mercurial? ( dev-vcs/mercurial )
 "
 
 src_prepare() {
