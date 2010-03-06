@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.20.7.ebuild,v 1.1 2010/01/21 14:57:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.20.7.ebuild,v 1.2 2010/03/06 17:52:54 ssuominen Exp $
 
 EAPI=2
-
-inherit versionator
+inherit eutils versionator
 
 # TODO:
 # matio? ( sci-libs/matio ) - in sunrise
@@ -19,8 +18,7 @@ SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="exif fftw imagemagick jpeg lcms openexr png python tiff v4l"
 
-RDEPEND="
-	>=dev-libs/glib-2.6:2
+RDEPEND=">=dev-libs/glib-2.6:2
 	>=dev-libs/liboil-0.3
 	dev-libs/libxml2
 	sys-libs/zlib
@@ -37,6 +35,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-build.patch
+}
+
 src_configure() {
 	econf \
 		$(use_with fftw fftw3) \
@@ -52,6 +54,6 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
 }
