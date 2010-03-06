@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11315 2010/03/06 16:54:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11316 2010/03/06 17:02:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (06 Mar 2010)
+# Masked for QA, treecleaners, security
+#
+# Internal copy of vuln. dev-libs/expat
+#
+# Masked for removal in 60 days
+dev-lisp/cl-albert
 
 # Fabian Groffen <grobian@gentoo.org> (06 Mar 2010)
 # Masked for security issues and discontinued interest from upstream to
