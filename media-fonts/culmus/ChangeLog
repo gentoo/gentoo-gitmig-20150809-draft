@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.41 2010/01/20 09:26:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.42 2010/03/06 15:14:09 spatz Exp $
+
+*culmus-0.104-r1 (06 Mar 2010)
+
+  06 Mar 2010; Dror Levin <spatz@gentoo.org> +culmus-0.104-r1.ebuild:
+  Fix installation of Type1 versions of David and Miriam, bump to EAPI=2.
 
 *culmus-0.104 (20 Jan 2010)
 
