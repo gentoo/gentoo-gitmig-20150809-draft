@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.9_rc3.ebuild,v 1.5 2009/11/10 02:30:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.9_rc3.ebuild,v 1.6 2010/03/06 09:17:37 ssuominen Exp $
 
 EAPI=2
 KMNAME="playground/utils"
@@ -22,3 +22,11 @@ IUSE="debug"
 RDEPEND="x11-apps/xdpyinfo"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	sed -i \
+		-e '/qimageblitz/d' \
+		src/part/radialMap/map.cpp || die "Unused include wrt bug #307823"
+
+	kde4-base_src_prepare
+}
