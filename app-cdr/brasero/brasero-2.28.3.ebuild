@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.28.3.ebuild,v 1.4 2010/01/18 00:24:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.28.3.ebuild,v 1.5 2010/03/06 21:50:31 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -32,7 +32,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.15.6:2
 RDEPEND="${COMMON_DEPEND}
 	app-cdr/cdrdao
 	app-cdr/dvd+rw-tools
-	gnome-base/gvfs
 	media-plugins/gst-plugins-meta
 	css? ( media-libs/libdvdcss )
 	cdr? ( virtual/cdrtools )
@@ -47,6 +46,7 @@ DEPEND="${COMMON_DEPEND}
 # eautoreconf deps
 #	gnome-base/gnome-common
 #	dev-util/gtk-doc-am
+PDEPEND="gnome-base/gvfs"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
