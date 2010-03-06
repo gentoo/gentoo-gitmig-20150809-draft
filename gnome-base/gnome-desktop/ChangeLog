@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.268 2010/01/16 17:13:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.269 2010/03/06 18:43:26 pacho Exp $
+
+*gnome-desktop-2.28.2-r1 (06 Mar 2010)
+
+  06 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  +gnome-desktop-2.28.2-r1.ebuild,
+  +files/gnome-desktop-2.28.2-slideshow-fix.patch:
+  Fix bug 299242 (slideshow don't animate), thanks to Ian Whyman for
+  reporting.
 
   16 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   gnome-desktop-2.26.3.ebuild:
