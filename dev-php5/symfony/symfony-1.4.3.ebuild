@@ -1,20 +1,20 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.1.1.ebuild,v 1.1 2008/09/10 07:37:01 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.4.3.ebuild,v 1.1 2010/03/06 14:41:42 yngwin Exp $
 
 inherit php-pear-lib-r1 depend.php
 
-KEYWORDS="~amd64 ~x86"
-
-DESCRIPTION="Open-source PHP5 professional web framework."
+DESCRIPTION="Open-source PHP5 professional web framework"
 HOMEPAGE="http://www.symfony-project.com/"
 SRC_URI="http://pear.symfony-project.com/get/${P}.tgz"
+
 LICENSE="MIT LGPL-2.1 BSD BSD-2 FDL-1.2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND=">=dev-php/pear-1.8.1"
+RDEPEND="${DEPEND}"
 
 need_php_by_category
 

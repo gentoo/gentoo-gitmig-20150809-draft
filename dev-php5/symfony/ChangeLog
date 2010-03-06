@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/symfony
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.10 2008/12/03 17:48:51 wrobel Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.11 2010/03/06 14:41:42 yngwin Exp $
+
+*symfony-1.4.3 (06 Mar 2010)
+
+  06 Mar 2010; Ben de Groot <yngwin@gentoo.org> -symfony-1.0.16.ebuild,
+  -symfony-1.0.17.ebuild, -symfony-1.1.1.ebuild, -symfony-1.2.0.ebuild,
+  +symfony-1.4.3.ebuild, metadata.xml:
+  Remove obsolete versions. Bump to latest version. Update metadata.
 
 *symfony-1.2.0 (03 Dec 2008)
 
