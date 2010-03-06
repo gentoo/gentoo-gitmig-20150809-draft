@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.84.ebuild,v 1.7 2010/03/01 19:57:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.84.ebuild,v 1.8 2010/03/06 21:34:21 robbat2 Exp $
 
 MY_EXTRAS_VER="20090904-0939Z"
 EAPI=2
@@ -23,7 +23,7 @@ RDEPEND=""
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 # Official test instructions:
-# USE='berkdb cluster embedded extraengine' \
+# USE='berkdb -cluster embedded extraengine' \
 # FEATURES='test userpriv -usersandbox' \
 # ebuild mysql-X.X.XX.ebuild \
 # digest clean package
