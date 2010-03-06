@@ -57,3 +57,5 @@ move dev-util/hgsubversion dev-vcs/hgsubversion
 move dev-util/hg-git dev-vcs/hg-git
 move dev-util/guilt dev-vcs/guilt
 move dev-util/stgit dev-vcs/stgit
+move dev-util/cvsspam dev-vcs/cvsspam
+move dev-util/svnmailer dev-vcs/svnmailer
