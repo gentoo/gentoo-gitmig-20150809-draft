@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.131 2009/10/07 21:09:28 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.132 2010/03/06 20:12:04 pacho Exp $
+
+  06 Mar 2010; Pacho Ramos <pacho@gentoo.org> libgda-4.1.0.ebuild:
+  amd64 stable, bug 298201
 
   07 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org libgda-4.1.0.ebuild:
   Add missing gtk-doc-am dependency, bug #288045.
