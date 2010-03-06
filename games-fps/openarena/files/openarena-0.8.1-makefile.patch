@@ -19,3 +19,12 @@
  
  else # ifeq Linux
  
+@@ -821,7 +821,7 @@
+   ifeq ($(USE_INTERNAL_SPEEX),1)
+     BASE_CFLAGS += -DFLOATING_POINT -DUSE_ALLOCA -I$(SPEEXDIR)/include
+   else
+-    CLIENT_LDFLAGS += -lspeex
++    CLIENT_LDFLAGS += -lspeex -lspeexdsp
+   endif
+ endif
+ 

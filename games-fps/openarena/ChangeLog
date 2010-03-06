@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/openarena
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.10 2009/10/12 15:14:04 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.11 2010/03/06 22:04:30 tupone Exp $
+
+*openarena-0.8.1-r1 (06 Mar 2010)
+
+  06 Mar 2010; Tupone Alfredo <tupone@gentoo.org>
+  +openarena-0.8.1-r1.ebuild, files/openarena-0.8.1-makefile.patch,
+  +files/openarena-0.8.1-zlib.patch:
+  Unbundling speex and zlib. Partially fix bug #255453 by
+  flameeyes@gentoo.org
 
   12 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   openarena-0.8.1.ebuild:
