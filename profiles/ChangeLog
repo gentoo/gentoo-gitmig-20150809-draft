@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3997 2010/03/06 14:44:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3998 2010/03/06 16:00:43 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Mar 2010; Ulrich Mueller <ulm@gentoo.org> updates/1Q-2010:
+  Move stgit from dev-util to dev-vcs, bug 56967.
 
   06 Mar 2010; Ben de Groot <yngwin@gentoo.org> package.mask:
   Mask symfony-1.4.3 for testing
