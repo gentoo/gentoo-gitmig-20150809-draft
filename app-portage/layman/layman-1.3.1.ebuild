@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.1.ebuild,v 1.3 2010/03/05 09:55:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.1.ebuild,v 1.4 2010/03/06 12:41:09 djc Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPS}
 	cvs? ( dev-util/cvs )
 	darcs? ( dev-util/darcs )
 	git? ( dev-util/git )
-	mercurial? ( dev-util/mercurial )
+	mercurial? ( dev-vcs/mercurial )
 	subversion? (
 		|| (
 			>=dev-util/subversion-1.5.4[webdav-neon]
