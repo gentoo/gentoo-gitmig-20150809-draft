@@ -54,3 +54,4 @@ move dev-util/cvsweb www-apps/cvsweb
 move dev-util/colorcvs dev-vcs/colorcvs
 move dev-util/mercurial dev-vcs/mercurial
 move dev-util/hgsubversion dev-vcs/hgsubversion
+move dev-util/hg-git dev-vcs/hg-git
