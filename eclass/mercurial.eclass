@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.10 2010/01/17 12:03:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.11 2010/03/06 12:24:05 djc Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@ inherit eutils
 
 EXPORT_FUNCTIONS src_unpack
 
-DEPEND="dev-util/mercurial"
+DEPEND="dev-vcs/mercurial"
 
 # @ECLASS-VARIABLE: EHG_REPO_URI
 # @DESCRIPTION:
