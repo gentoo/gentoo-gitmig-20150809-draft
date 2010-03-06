@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.15 2010/03/05 09:27:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.16 2010/03/06 12:22:42 djc Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -68,7 +68,7 @@ dev-lang/ruby xemacs
 # Sebastian Pipping <sping@gentoo.org> (27 Jan 2010)
 # dev-vcs/bzr is not keyworded on this arch
 # dev-util/darcs is not keyworded on this arch
-# dev-util/mercurial is not keyworded on this arch
+# dev-vcs/mercurial is not keyworded on this arch
 app-portage/layman bazaar
 app-portage/layman darcs
 app-portage/layman mercurial
