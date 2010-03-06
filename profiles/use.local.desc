@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5346 2010/03/06 12:22:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5347 2010/03/06 12:27:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -517,7 +517,7 @@ app-portage/gatt:libpaludis - Do some dependency resolution by using a sys-apps/
 app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
 app-portage/layman:darcs - Support dev-util/darcs based overlays
 app-portage/layman:git - Support dev-util/git based overlays
-app-portage/layman:mercurial - Support dev-vcs/mercurial based overlays
+app-portage/layman:mercurial - Support dev-util/mercurial based overlays
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
 app-portage/portato:userpriv - Allow emerge processes as normal user
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
@@ -1087,7 +1087,7 @@ dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
 dev-vcs/qct:bazaar -  Support for dev-vcs/bzr 
-dev-vcs/qct:mercurial -  Support for dev-vcs/mercurial 
+dev-vcs/qct:mercurial -  Support for dev-util/mercurial 
 dev-vcs/qct:monotone -  Support for dev-vcs/monotone 
 games-action/abuse:demo - Use the demo data instead of the full game
 games-action/abuse:levels - Install user-created levels (fRaBs)
@@ -3318,7 +3318,7 @@ www-apps/mediawiki:math - Ads math rendering support
 www-apps/mediawiki:restrict - Initial setup will only allow sysop user to create new accounts, read and edit any pages
 www-apps/redmine:darcs - Enable support for dev-util/darcs
 www-apps/redmine:git - Enable support for dev-util/git
-www-apps/redmine:mercurial - Enable support for dev-vcs/mercurial
+www-apps/redmine:mercurial - Enable support for dev-util/mercurial
 www-apps/redmine:openid - Enable support for OpenID
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
