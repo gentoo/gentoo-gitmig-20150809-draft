@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/toluapp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.26 2010/02/21 22:05:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.27 2010/03/06 19:57:56 armin76 Exp $
+
+  06 Mar 2010; Raúl Porcel <armin76@gentoo.org> toluapp-1.0.93.ebuild:
+  alpha/sparc stable wrt #304759
 
   21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   toluapp-1.0.93.ebuild:
