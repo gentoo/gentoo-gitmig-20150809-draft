@@ -1,0 +1,29 @@
+--- dvutil-1.0.5.orig/dvutil/debug_dump.C	2008-03-14 22:44:10.000000000 +0100
++++ dvutil-1.0.5/dvutil/debug_dump.C	2009-10-30 21:21:17.211325923 +0100
+@@ -1,4 +1,5 @@
+ // $Id: dvutil-1.0.5-gcc44.patch,v 1.1 2010/03/06 20:44:28 ssuominen Exp $
++#include <stdint.h>
+ #include <ctype.h>
+ #include <iomanip>
+ 
+--- dvutil-1.0.5.orig/dvutil/props.C	2008-03-14 22:44:10.000000000 +0100
++++ dvutil-1.0.5/dvutil/props.C	2009-10-30 21:22:31.245328026 +0100
+@@ -1,6 +1,7 @@
+ // $Id: dvutil-1.0.5-gcc44.patch,v 1.1 2010/03/06 20:44:28 ssuominen Exp $
+ 
+ #include <ctype.h>
++#include <cstdio>
+ #include <unistd.h> // environ
+ #include <string.h> // strchr
+ #include <dvutil/props.h>
+--- dvutil-1.0.5.orig/dvutil/filterstreambuf.h	2008-03-16 16:17:26.000000000 +0100
++++ dvutil-1.0.5/dvutil/filterstreambuf.h	2009-10-30 21:23:13.555577358 +0100
+@@ -3,6 +3,8 @@
+ // $Id: dvutil-1.0.5-gcc44.patch,v 1.1 2010/03/06 20:44:28 ssuominen Exp $
+ 
+ #include <iostream>
++#include <cstdio>
++
+ /** @file 
+  * The Dv::Util::filterstreambuf class is a template class that
+  * is used to define Dv::Util::filterstream objects.
