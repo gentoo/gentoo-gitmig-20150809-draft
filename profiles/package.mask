@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11316 2010/03/06 17:02:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11317 2010/03/06 17:59:54 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -409,14 +409,6 @@ dev-db/mysql-community
 =net-misc/networkmanager-vpnc-0.7.999*
 =net-misc/networkmanager-openvpn-0.7.999*
 =gnome-extra/nm-applet-0.7.999*
-
-# Raúl Porcel <armin76@gentoo.org> (24 Jan 2010)
-# Upstream stopped developing open source version,
-# heavy patching done by Fedora
-# and they've deprecated it for some time ago.
-# net-misc/tigervnc is its replacement
-# To be removed in 30 days
-net-misc/vnc
 
 # Hans de Graaff <graaff@gentoo.org> (23 Jan 2010)
 # Installs only for ruby 1.8 but it actually a JRuby package
