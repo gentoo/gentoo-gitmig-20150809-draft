@@ -1,51 +1,62 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.3.ebuild,v 1.6 2008/10/18 19:23:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.3.ebuild,v 1.7 2010/03/06 05:42:22 dirtyepic Exp $
 
-inherit python multilib eutils
+EAPI="2"
+
+inherit eutils multilib python
 
 MY_P="wxGlade-${PV}"
+
 DESCRIPTION="Glade-like GUI designer which can generate Python, Perl, C++ or XRC code"
 HOMEPAGE="http://wxglade.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wxglade/${MY_P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
+
+DEPEND="dev-python/wxpython:2.8"
+PYTHON_DEPEND="2:2.3"
+
 S="${WORKDIR}/${MY_P}"
-DEPEND=">=dev-lang/python-2.3
-	=dev-python/wxpython-2.8*"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-wxversion.patch
 }
 
 src_install() {
-	python_version
-	dodir /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 	dodoc CHANGES.txt README.txt TODO.txt credits.txt
-	cp credits.txt "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/
-	dohtml -r docs/*
+
+	pydir=$(python_get_sitedir)/wxglade
+
+	dodir "${pydir}"
+	mv "${S}"/credits.txt "${D}${pydir}"
+	dohtml -r "${S}"/docs/*
 	rm -rf docs *txt
-	cp -R * "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/
-	dosym /usr/share/doc/${PF}/html /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/docs
-	echo "#!/bin/bash" > wxglade
-	echo "exec python /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/wxglade.py \$*" >> wxglade
+
+	cp -R "${S}"/* "${D}${pydir}"
+	dosym /usr/share/doc/${PF}/html "${pydir}"/docs
+
+	cat > "${S}"/wxglade <<-EOF
+		#!/bin/sh
+		$(PYTHON) ${pydir}/wxglade.py \$*
+	EOF
+
 	exeinto /usr/bin
-	doexe wxglade
+	doexe "${S}"/wxglade
+
 	insinto /usr/share/pixmaps
 	newins icons/icon.xpm wxglade.xpm
+
 	make_desktop_entry wxglade wxGlade wxglade "Development;GUIDesigner"
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/wxglade
+	python_mod_optimize "$(python_get_sitedir)"/wxglade
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/wxglade
+	python_mod_cleanup "$(python_get_sitedir)"/wxglade
 }
