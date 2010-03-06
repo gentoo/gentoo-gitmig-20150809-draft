@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3991 2010/03/05 22:53:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3992 2010/03/06 06:01:14 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask net-p2p/pysoulseek for removal. (bug #307971)
 
   05 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Removed libmpcdecsv7 mask (it will be handled by blockers in
