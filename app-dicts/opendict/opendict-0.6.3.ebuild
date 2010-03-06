@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.1 2009/11/23 00:22:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.2 2010/03/06 04:26:28 dirtyepic Exp $
 
 EAPI=2
 
-inherit eutils python gnome2
+inherit eutils gnome2 python
 
 DESCRIPTION="OpenDict is a free cross-platform dictionary program."
 HOMEPAGE="http://opendict.sourceforge.net/"
@@ -14,27 +14,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/python-2.3
-	dev-python/wxpython:2.8
+RDEPEND="dev-python/wxpython:2.8
 	dev-python/pyxml"
 
+PYTHON_DEPEND="2"
+
 src_prepare() {
-	#epatch "${FILESDIR}/${PN}-0.6.1-desktop.patch"
 	sed -e "s:), '..')):), '../../../../..', 'share', 'opendict')):g" \
 		-i "${S}/lib/info.py"
 }
 
 src_configure() {
-	:
+	# override gnome2_src_configure
+	default
 }
 
 src_compile() {
+	# evil makefile
 	:
 }
 
 src_install() {
-	python_version
-	DHOME="/usr/lib/python${PYVER}/site-packages/opendict"
+	# makefile is broken, do it manually
 
 	dodir /usr/share/${PN}/dictionaries/plugins # global dictionary plugins folder
 
@@ -42,12 +43,12 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins "${S}"/copying.html
 
-	insinto "${DHOME}/lib"
-	doins -r "${S}"/lib/*
-
 	insinto /usr/share/${PN}/pixmaps
 	doins "${S}"/pixmaps/*
 
+	DHOME="$(python_get_sitedir)/opendict"
+	insinto "${DHOME}/lib"
+	doins -r "${S}"/lib/*
 	exeinto "${DHOME}"
 	doexe opendict.py
 
@@ -69,16 +70,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize \
-		/usr/$(get_libdir)/python${PYVER}/site-packages/opendict
+	python_mod_optimize $(python_get_sitedir)/opendict
 	gnome2_icon_cache_update
 
+	echo
 	elog "If you want system-wide plugins, unzip them into"
 	elog "${ROOT}usr/share/${PN}/dictionaries/plugins"
+	elog
 	elog "Some are available from http://opendict.sourceforge.net/?cid=3"
+	echo
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/opendict
 	gnome2_icon_cache_update
 }
