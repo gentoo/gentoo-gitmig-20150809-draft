@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-0.9.3.ebuild,v 1.1 2010/03/04 00:47:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-0.9.3.ebuild,v 1.2 2010/03/06 12:55:12 djc Exp $
 
 EAPI="2"
 inherit eutils confutils depend.apache
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 	cvs? ( >=dev-util/cvs-1.12 )
 	darcs? ( dev-util/darcs )
 	git? ( dev-util/git )
-	mercurial? ( dev-util/mercurial )
+	mercurial? ( dev-vcs/mercurial )
 	subversion? ( >=dev-util/subversion-1.3 )"
 
 REDMINE_DIR="/var/lib/${PN}"
