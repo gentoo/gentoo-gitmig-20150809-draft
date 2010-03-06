@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe/gpe-2.8.ebuild,v 1.4 2010/02/27 01:25:39 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe/gpe-2.8.ebuild,v 1.5 2010/03/06 18:22:37 miknix Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ RDEPEND="
 >=gpe-utils/gpe-taskmanager-0.20
 >=gpe-utils/gpe-what-0.5
 >=gpe-utils/gpe-filemanager-0.30
+>=gpe-utils/gpe-plucker-0.4
 
 games? (
 	>=games-misc/gpe-julia-0.0.6
