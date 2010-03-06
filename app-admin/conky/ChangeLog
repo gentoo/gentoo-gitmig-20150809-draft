@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.128 2010/02/21 22:06:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.129 2010/03/06 20:16:17 armin76 Exp $
+
+  06 Mar 2010; Raúl Porcel <armin76@gentoo.org> conky-1.7.2-r2.ebuild:
+  alpha/sparc stable wrt #304761
 
   21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   conky-1.7.2-r2.ebuild:
