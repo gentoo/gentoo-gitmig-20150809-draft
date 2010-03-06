@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/single-unix-specification-4-r1.ebuild,v 1.8 2009/11/03 17:56:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/single-unix-specification-4-r1.ebuild,v 1.9 2010/03/06 21:45:41 dirtyepic Exp $
 
 DESCRIPTION="The Single UNIX Specification, Version 4, 2008 Edition (8 Volumes)"
 HOMEPAGE="http://www.opengroup.org/bookstore/catalog/c082.htm"
@@ -10,8 +10,6 @@ LICENSE="sus4-copyright"
 SLOT="4"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
-
-RESTRICT="mirror"
 
 S=${WORKDIR}/susv4
 
