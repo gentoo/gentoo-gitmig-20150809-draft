@@ -8,8 +8,6 @@
 </maintainer>
 <use>
 	<flag name='exim'>Set <pkg>mail-mta</pkg> to used MTA</flag>
-	<flag name='f-prot'>Enable usage of <pkg>app-antivirus/f-prot</pkg> virus
-		scanner</flag>
 	<flag name='postfix'>Set <pkg>mail-mta/postfix</pkg> to used MTA</flag>
 	<flag name='spamassassin'>Enable usage of
 		<pkg>mail-filter/spamassassin</pkg> for spam protection</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.7 2010/01/03 16:47:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.8 2010/03/06 18:41:09 ssuominen Exp $
 
 inherit eutils versionator
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.mailscanner.info/files/4/tar/${PN}-install-${MY_PVR}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="clamav doc exim f-prot postfix spamassassin"
+IUSE="clamav doc exim postfix spamassassin"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
@@ -46,7 +46,6 @@ RDEPEND="${DEPEND}
 	exim? ( !postfix? ( mail-mta/exim ) )
 	!postfix? ( !exim? ( mail-mta/sendmail ) )
 	clamav? ( >=app-antivirus/clamav-0.88.4 )
-	f-prot? ( app-antivirus/f-prot )
 	spamassassin? ( >=mail-filter/spamassassin-3.1.5 )"
 
 S="${WORKDIR}/${PN}-${MY_PVR}"
@@ -87,7 +86,6 @@ src_unpack() {
 	# setup virus scanner(s)
 	VIRUS_SCANNERS=""
 	use clamav && VIRUS_SCANNERS="clamav ${VIRUS_SCANNERS}"
-	use f-prot && VIRUS_SCANNERS="f-prot ${VIRUS_SCANNERS}"
 
 	if [ "$VIRUS_SCANNERS" == "" ]; then
 		VIRUS_SCANNERS="none"
@@ -184,11 +182,10 @@ src_unpack() {
 	# update spam.assassin.prefs.conf
 	sed -i -e "s#YOURDOMAIN-COM#${YOURSITE}#" "${S}"/etc/spam.assassin.prefs.conf
 
-	# net-mail/clamav net-mail/f-prot package compatibility
+	# net-mail/clamav package compatibility
 	sed -i \
 		-e "s#/opt/MailScanner/lib#/usr/lib/MailScanner#" \
 		-e 's#^\(clamav\t.*/usr\)/local$#\1#' \
-		-e 's#^\(f-prot.*\)/usr/local/f-prot$#\1/opt/f-prot#' \
 		"${S}/etc/virus.scanners.conf"
 
 	# update lib files
