@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916-r1.ebuild,v 1.2 2009/11/27 14:14:40 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916-r1.ebuild,v 1.3 2010/03/06 22:03:26 halcy0n Exp $
 
 EAPI="2"
 
@@ -66,7 +66,7 @@ src_prepare() {
 
 	cd "${WORKDIR}"/${PN}-util
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
-	epatch "${FILESDIR}"/{${P}-makefile.patch.bz2,utils-2.6.31.patch}
+	epatch "${FILESDIR}"/{${P}-makefile.patch,utils-2.6.31.patch}
 }
 
 src_compile() {

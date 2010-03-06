@@ -1,0 +1,12 @@
+diff --git a/Makefile b/Makefile
+index 9b8dec7..cca9c4f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -44,6 +44,7 @@ ${BinObj}: %.o: %.c ${LibUtilHdr} ${LibUtil}
+ 
+ ${LibUtilObj}: %.o: %.c ${LibUtilHdr}
+ ${LibUtil}: ${LibUtil}(${LibUtilObj})
++.NOTPARALLEL: ${LibUtil}
+ 
+ # this is unnecessary on 64bit system?
+ rdu64.c: rdu.c
