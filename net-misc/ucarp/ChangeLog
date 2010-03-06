@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ucarp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.14 2009/09/12 09:13:59 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.15 2010/03/06 20:06:06 sping Exp $
+
+  06 Mar 2010; Sebastian Pipping <sping@gentoo.org> metadata.xml:
+  Fix metadata.xml (bug #307209)
 
 *ucarp-1.5.1 (12 Sep 2009)
 
