@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/opentyrian-20091025.ebuild,v 1.1 2009/10/25 19:05:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/opentyrian-20091025.ebuild,v 1.2 2010/03/06 12:32:16 djc Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-net"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-util/mercurial"
+	dev-vcs/mercurial"
 
 S=${WORKDIR}/${PN}
 
