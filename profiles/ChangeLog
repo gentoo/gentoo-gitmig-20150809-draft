@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4003 2010/03/07 00:21:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4004 2010/03/07 05:53:50 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2010; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Mask old e2fsprogs libs packages so people get the hint.
 
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask some dev-libs/dv* libraries for removal as unported to >=dvutil-1.
