@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-fastcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/ChangeLog,v 1.5 2010/01/11 11:01:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/ChangeLog,v 1.6 2010/03/07 13:12:52 hollow Exp $
+
+  07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> httpd-fastcgi-0.ebuild:
+  use fastcgi providing modules instead of plain apache
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> httpd-fastcgi-0.ebuild:
   Set empty HOMEPAGE and LICENSE.
