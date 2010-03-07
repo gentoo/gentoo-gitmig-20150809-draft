@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.16.ebuild,v 1.1 2010/03/05 13:03:22 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.16.ebuild,v 1.2 2010/03/07 04:28:38 mr_bones_ Exp $
 
 inherit webapp eutils depend.php
 
@@ -62,4 +62,3 @@ pkg_postinst() {
 	ewarn "\t# webapp-config --show-postinst ${PN} ${PV}"
 	ewarn
 }
-
