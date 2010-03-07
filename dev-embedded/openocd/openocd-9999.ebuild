@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.9 2010/02/12 19:32:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.10 2010/03/07 04:44:21 vapier Exp $
 
 EGIT_REPO_URI="git://openocd.git.sourceforge.net/gitroot/openocd/openocd"
 inherit eutils
 if [[ ${PV} == "9999" ]] ; then
 	inherit git autotools
-	KEYWORDS=""
+	#KEYWORDS=""
 	SRC_URI=""
 else
 	KEYWORDS="~amd64 ~x86"
@@ -52,15 +52,13 @@ src_compile() {
 
 	econf \
 		--disable-werror \
-		--enable-parport \
-		--enable-parport_ppdev \
 		--enable-amtjtagaccel \
 		--enable-ep93xx \
 		--enable-at91rm9200 \
 		--enable-gw16012 \
 		--enable-oocd_trace \
 		$(use_enable usb usbprog) \
-		$(use_enable parport parport_giveio) \
+		$(use_enable parport) \
 		$(use_enable presto presto_ftd2xx) \
 		$(use_enable ftdi ft2232_libftdi) \
 		$(use ftdi || use_enable ftd2xx ft2232_ftd2xx) \
