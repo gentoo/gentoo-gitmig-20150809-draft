@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.339 2010/03/07 02:55:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.340 2010/03/07 03:00:08 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1035,7 +1035,7 @@ make_desktop_entry() {
 		# doesn't corrupt the env of the caller
 		insinto /usr/share/applications
 		doins "${desktop}"
-	)
+	) || die "installing desktop file failed"
 }
 
 # @FUNCTION: validate_desktop_entries
