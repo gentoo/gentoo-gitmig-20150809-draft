@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.4 2010/02/27 10:28:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.5 2010/03/07 23:18:23 flameeyes Exp $
+
+*gource-0.25 (07 Mar 2010)
+
+  07 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org> +gource-0.25.ebuild:
+  Version bump.
 
   27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gource-0.24.ebuild:
   ~x86 keyword wrt bug #306563
