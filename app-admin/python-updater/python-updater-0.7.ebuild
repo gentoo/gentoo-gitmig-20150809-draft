@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.7.ebuild,v 1.8 2009/10/17 19:22:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.7.ebuild,v 1.9 2010/03/07 17:51:03 arfrever Exp $
 
 DESCRIPTION="Script used to remerge python packages when changing Python version."
 HOMEPAGE="http://www.gentoo.org/proj/en/Python"
@@ -13,10 +13,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="!<dev-lang/python-2.3.6-r2
+	dev-lang/python
 	>=sys-apps/portage-2.1.2"
 
-src_install()
-{
+src_install() {
 	dosbin ${PN} || die "dosbin failed"
 	doman ${PN}.1 || die "doman failed"
 	dodoc AUTHORS ChangeLog || die "dodoc failed"

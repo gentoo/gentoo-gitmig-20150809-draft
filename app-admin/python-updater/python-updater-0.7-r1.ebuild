@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.7-r1.ebuild,v 1.2 2010/02/01 22:02:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.7-r1.ebuild,v 1.3 2010/03/07 17:51:03 arfrever Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="!<dev-lang/python-2.3.6-r2
+	dev-lang/python
 	>=sys-apps/portage-2.1.2"
 
 src_unpack() {
@@ -25,8 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-fix_import.patch"
 }
 
-src_install()
-{
+src_install() {
 	dosbin ${PN} || die "dosbin failed"
 	doman ${PN}.1 || die "doman failed"
 	dodoc AUTHORS ChangeLog || die "dodoc failed"
