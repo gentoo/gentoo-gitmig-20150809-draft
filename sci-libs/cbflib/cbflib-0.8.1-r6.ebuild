@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.8.1-r6.ebuild,v 1.1 2010/02/07 21:01:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.8.1-r6.ebuild,v 1.2 2010/03/07 17:02:20 jlec Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P1}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 #RDEPEND=""
@@ -43,6 +43,8 @@ src_prepare(){
 		-e "s:^F90C.*$:F90C = $(tc-getFC):" \
 		-e "s:^F90FLAGS.*$:F90FLAGS = ${FFLAGS}:" \
 		-e "s:^SOLDFLAGS.*$:SOLDFLAGS = -shared ${LDFLAGS}:g" \
+		-e "s: /bin: ${EPREFIX}/bin:g" \
+		-e "s:/usr:${EPREFIX}/usr:g" \
 		-i Makefile || die
 }
 
