@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnotime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.48 2010/02/21 17:18:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.49 2010/03/07 21:17:19 eva Exp $
+
+  07 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> -gnotime-2.3.0.ebuild,
+  -gnotime-2.3.0-r2.ebuild, gnotime-2.3.0-r3.ebuild:
+  amd64 stable wrt #303807. Clean up old revisions.
 
   21 Feb 2010; Raúl Porcel <armin76@gentoo.org> gnotime-2.3.0-r3.ebuild:
   sparc stable wrt #303807
