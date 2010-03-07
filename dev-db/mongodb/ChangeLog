@@ -1,0 +1,13 @@
+# ChangeLog for dev-db/mongodb
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.1 2010/03/07 23:39:41 ramereth Exp $
+
+*mongodb-1.2.2 (07 Mar 2010)
+
+  07 Mar 2010; Lance Albertson <ramereth@gentoo.org> +mongodb-1.2.2.ebuild,
+  +files/mongodb-1.2-modify-post-strip.patch,
+  +files/mongodb-1.2-modify-testing.patch, +files/mongodb.confd,
+  +files/mongodb.initd, +metadata.xml:
+  Import ebuild from the sunrise overlay and apply various fixes. Resolves
+  #273259
+
