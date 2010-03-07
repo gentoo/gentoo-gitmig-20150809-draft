@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.96.ebuild,v 1.4 2010/03/07 00:07:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.96.ebuild,v 1.5 2010/03/07 00:13:49 nirbheek Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit autotools eutils multilib pam
 DESCRIPTION="Policy framework for controlling privileges for system-wide services"
 HOMEPAGE="http://hal.freedesktop.org/docs/PolicyKit"
 SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz
-mirror://gentoo/polkit-0.96-shadow-support.patch.bz2"
+!pam? ( mirror://gentoo/${P}-shadow-support.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
