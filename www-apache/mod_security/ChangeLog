@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.38 2010/03/05 12:29:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.39 2010/03/07 14:51:51 maekke Exp $
+
+  07 Mar 2010; Markus Meier <maekke@gentoo.org> mod_security-2.5.12.ebuild:
+  amd64 stable, bug #304147
 
   05 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   mod_security-2.5.12.ebuild:
