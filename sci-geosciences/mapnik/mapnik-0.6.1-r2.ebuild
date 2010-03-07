@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r1.ebuild,v 1.2 2010/02/13 05:37:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r2.ebuild,v 1.1 2010/03/07 21:15:50 nerdboy Exp $
 
 EAPI=2
 
-inherit eutils distutils toolchain-funcs
+inherit eutils python distutils toolchain-funcs versionator
 
 DESCRIPTION="A Free Toolkit for developing mapping applications."
 HOMEPAGE="http://www.mapnik.org/"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cairo curl debug doc +gdal postgres python sqlite"
 
-RDEPEND="=dev-libs/boost-1.39*
+RDEPEND="<dev-libs/boost-1.41.0
 	dev-libs/libxml2
 	dev-libs/icu
 	media-libs/libpng
@@ -25,7 +25,7 @@ RDEPEND="=dev-libs/boost-1.39*
 	sci-libs/proj
 	x11-libs/agg[gpc,truetype]
 	media-fonts/dejavu
-	python? ( =dev-libs/boost-1.39*[python] )
+	python? ( <dev-libs/boost-1.41.0[python] )
 	cairo? ( x11-libs/cairo
 		dev-cpp/cairomm )
 	postgres? (
@@ -66,12 +66,32 @@ src_configure() {
 
 	use postgres && use sqlite && MAKEOPTS="${MAKEOPTS} PGSQL2SQLITE=yes"
 
+	BOOST_PKG="$(best_version "<dev-libs/boost-1.41.0")"
+	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
+	export BOOST_VERSION="$(replace_all_version_separators _ "${BOOST_VER}")"
+	elog "${P} BOOST_VERSION is ${BOOST_VERSION}"
+	export BOOST_INC="/usr/include/boost-${BOOST_VERSION}"
+	elog "${P} BOOST_INC is ${BOOST_INC}"
+	BOOST_LIBDIR_SCHEMA="$(get_libdir)/boost-${BOOST_VERSION}"
+	export BOOST_LIB="/usr/${BOOST_LIBDIR_SCHEMA}"
+	elog "${P} BOOST_LIB is ${BOOST_LIB}"
+
+	# Passing things doesn't seem to hit all the right paths; another
+	# poster-child for just a bit too much complexity for its own good.
+	# See bug #301674 for more info.
+#	sed -i -e "s|BOOST_INCLUDE_DIR = None|BOOST_INCLUDE_DIR = \'${BOOST_INC}\'|" \
+#		-i -e "s|BOOST_LIB_DIR = None|BOOST_LIB_DIR = \'${BOOST_LIB}\'|" \
+	sed -i -e "s|searchDir, LIBDIR_SCHEMA|searchDir, \'${BOOST_LIBDIR_SCHEMA}\'|" \
+		-i -e "s|include/boost*|include/boost-${BOOST_VERSION}|" \
+		"${S}"/SConstruct || die "sed boost paths failed..."
+
 	scons CXX="$(tc-getCXX)" ${MAKEOPTS} DESTDIR="${D}" configure \
-	    || die "scons configure failed"
+		|| die "scons configure failed"
 }
 
 src_compile() {
-	scons || die "scons make failed"
+	scons BOOST_INCLUDES=${BOOST_INC} BOOST_LIBS=${BOOST_LIB} \
+		BOOST_VERSION=${BOOST_VERSION} || die "scons make failed"
 }
 
 src_install() {

@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.14 2010/02/13 05:37:07 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.15 2010/03/07 21:15:50 nerdboy Exp $
+
+*mapnik-0.6.1-r2 (07 Mar 2010)
+
+  07 Mar 2010; Steve Arnold <nerdboy@gentoo.org> -mapnik-0.6.1-r1.ebuild,
+  +mapnik-0.6.1-r2.ebuild:
+  Had to hack around broken scons build script in order to force a given 
+  boost version (see bug #301674).  Many thanks to Sebastian Luther 
+  <SebastianLuther@gmx.de> and Juergen Rose <rose@rz.uni-potsdam.de> for 
+  providing the initial basis for the complete hack.
 
   13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> mapnik-0.6.1-r1.ebuild:
   Updated boost depend for gpsdrive; can cause subtle breakage if built
