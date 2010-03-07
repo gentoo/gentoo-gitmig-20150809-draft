@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.338 2010/03/07 02:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.339 2010/03/07 02:55:54 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -937,13 +937,19 @@ make_desktop_entry() {
 
 			media)
 				case ${catmin} in
-					gfx)   type=Graphics;;
-					radio) type=Tuner;;
-					sound) type=Audio;;
-					tv)    type=TV;;
-					video) type=Video;;
+					gfx)
+						type=Graphics
+						;;
+					*)
+						case ${catmin} in
+							radio) type=Tuner;;
+							sound) type=Audio;;
+							tv)    type=TV;;
+							video) type=Video;;
+						esac
+						type="AudioVideo;${type}"
+						;;
 				esac
-				type="AudioVideo;${type}"
 				;;
 
 			net)
