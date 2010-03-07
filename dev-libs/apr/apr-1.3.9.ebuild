@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.3.9.ebuild,v 1.8 2009/11/17 15:26:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.3.9.ebuild,v 1.9 2010/03/07 11:56:25 hollow Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="debug doc older-kernels-compatibility +urandom"
+IUSE="doc older-kernels-compatibility +urandom"
 RESTRICT="test"
 
 DEPEND="doc? ( app-doc/doxygen )"
@@ -28,10 +28,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-
-	if use debug; then
-		myconf+=" --enable-maintainer-mode --enable-pool-debug=all"
-	fi
 
 	if use older-kernels-compatibility; then
 		local apr_cv_accept4 apr_cv_dup3 apr_cv_epoll_create1 apr_cv_sock_cloexec
