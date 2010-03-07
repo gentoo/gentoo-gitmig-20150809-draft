@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/libpdb++
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb++/ChangeLog,v 1.1 2010/03/07 10:53:37 jlec Exp $
+
+*libpdb++-040728 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/040728-dynlib.patch, +libpdb++-040728.ebuild, +metadata.xml:
+  C++ lib to handle pdb files
+
