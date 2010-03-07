@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.14 2010/01/04 11:07:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.15 2010/03/07 12:40:57 ssuominen Exp $
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pyflakes-0.4.0.ebuild:
+  amd64 stable wrt #298977
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   pyflakes-0.4.0.ebuild:

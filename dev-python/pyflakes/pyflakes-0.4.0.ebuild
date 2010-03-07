@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.4.0.ebuild,v 1.3 2010/01/26 19:10:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.4.0.ebuild,v 1.4 2010/03/07 12:40:57 ssuominen Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/p/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ia64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="test"
 
 DEPEND="test? ( dev-python/nose dev-python/twisted )"
