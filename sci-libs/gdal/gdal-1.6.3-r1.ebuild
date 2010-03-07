@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.1 2010/03/07 19:32:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.2 2010/03/07 22:56:28 jlec Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
+PYTHON_DEPEND="2"
 
 inherit autotools distutils eutils perl-module ruby toolchain-funcs
 
@@ -67,6 +68,7 @@ pkg_setup() {
 	    elog "User-specified configure options are not set."
 	    elog "If needed, set GDAL_CONFIGURE_OPTS to enable grass support."
 	fi
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -87,8 +89,6 @@ src_prepare() {
 }
 
 src_configure() {
-
-	distutils_python_version
 
 	local pkg_conf="${GDAL_CONFIGURE_OPTS}"
 	local use_conf=""
@@ -120,7 +120,7 @@ src_configure() {
 	fi
 
 	if useq python ; then
-	    use_conf="--with-pymoddir=${EPREFIX}/usr/$(get_libdir)/python${PYVER}/site-packages \
+	    use_conf="--with-pymoddir=${EPREFIX}/$(python_get_sitedir) \
 		${use_conf}"
 	fi
 
