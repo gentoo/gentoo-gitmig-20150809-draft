@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.5 2010/03/07 18:58:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.6 2010/03/07 18:59:31 jlec Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ src_configure() {
 	fi
 
 	econf \
-		--docdir=${EPREFIX}/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--enable-shared \
 		$(use_enable fortran f77) \
 		$(use_enable fortran f90) \
