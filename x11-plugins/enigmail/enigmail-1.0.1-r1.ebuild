@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.0.1-r1.ebuild,v 1.2 2010/03/05 12:23:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.0.1-r1.ebuild,v 1.3 2010/03/07 19:23:01 maekke Exp $
 
 WANT_AUTOCONF="2.1"
 EAPI="2"
@@ -17,7 +17,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVE
 	http://www.mozilla-enigmail.org/download/source/${PN}-${EMVER}.tar.gz
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE="system-sqlite"
