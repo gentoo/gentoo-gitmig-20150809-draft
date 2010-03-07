@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pdb2pqr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.19 2009/11/03 05:40:25 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.20 2010/03/07 12:26:12 jlec Exp $
+
+*pdb2pqr-1.5.0-r1 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> +pdb2pqr-1.5.0-r1.ebuild:
+  Moved to EAPI=3 for prefix support, keyworded for *-linux, adopted to new python.eclass style
 
 *pdb2pqr-1.5.0 (03 Nov 2009)
 
