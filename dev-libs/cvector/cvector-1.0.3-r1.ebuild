@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/cvector-1.0.3.ebuild,v 1.2 2010/02/15 08:40:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/cvector-1.0.3-r1.ebuild,v 1.1 2010/03/07 18:30:50 jlec Exp $
 
-inherit eutils toolchain-funcs
+inherit base eutils toolchain-funcs versionator
 
 MY_PN=CVector
 MY_P="${MY_PN}-${PV}"
@@ -21,25 +21,24 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-LDFLAGS.patch
-}
+PATCHES=(
+	"${FILESDIR}"/${PV}-LDFLAGS.patch
+	"${FILESDIR}"/${PV}-dynlib.patch
+	)
 
 src_compile() {
 	emake \
 		CC=$(tc-getCC) \
 		CXX=$(tc-getCXX) \
 		CFLAGS="${CFLAGS}" \
-		all || die "compilation failed"
-}
-
-src_test() {
-	emake tests || die "test failed"
+		all || die
 }
 
 src_install() {
-	dobin bin/* || die
-	dolib.a lib/.libs/*.a || die
+	dolib.so *.so.${PV} || die
+	dosym libCVector.so.${PV} /usr/$(get_libdir)/libCVector.so.$(get_version_component_range 1-2) || die
+	dosym libCVector.so.${PV} /usr/$(get_libdir)/libCVector.so.$(get_major_version) || die
+	dosym libCVector.so.${PV} /usr/$(get_libdir)/libCVector.so || die
 
 	insinto /usr/include
 	doins *.h || die
