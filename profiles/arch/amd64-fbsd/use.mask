@@ -1,10 +1,9 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.1 2009/03/11 21:55:27 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.2 2010/03/07 17:55:07 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
-
 
 -3dnow
 -3dnowext
@@ -13,6 +12,9 @@
 -sse
 -sse2
 -sse3
+-sse4
+-sse4a
+-sse5
 -ssse3
 -win32codecs
 

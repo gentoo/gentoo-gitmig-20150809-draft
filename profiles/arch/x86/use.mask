@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.15 2010/02/20 17:49:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.16 2010/03/07 17:53:10 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -32,6 +32,10 @@
 -mmxext
 -sse
 -sse2
+-sse3
+-sse4
+-sse4a
+-sse5
 -ssse3
 -svga
 -kqemu
