@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.3 2010/03/06 04:36:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.4 2010/03/07 21:29:36 abcd Exp $
 
 EAPI=2
 SUPPORT_PYTHON_ABIS=1
+PYTHON_DEPEND="2:2.4"
 
 inherit distutils eutils fdo-mime python
 
@@ -24,7 +25,6 @@ DEPEND=">=dev-python/wxpython-2.8.9.2:2.8
 RDEPEND="${DEPEND}
 	spell? ( dev-python/pyenchant )"
 
-PYTHON_DEPEND="2:2.4"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}"/${MY_PN}-${PV}

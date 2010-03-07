@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.11 2010/03/06 04:36:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.12 2010/03/07 21:29:36 abcd Exp $
+
+  07 Mar 2010; Jonathan Callen <abcd@gentoo.org> editra-0.5.32.ebuild:
+  Move PYTHON_DEPEND before inherit(), so that the dep is actually added
 
   06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> -editra-0.5.05.ebuild,
   -editra-0.5.15.ebuild, -editra-0.5.25.ebuild, editra-0.5.32.ebuild:
