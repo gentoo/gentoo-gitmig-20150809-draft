@@ -21,7 +21,7 @@ diff -ur -x make-sparky sparky.orig/bin/sparky sparky/bin/sparky
  # application resource file and print prolog file.
  #
 -setenv SPARKY_INSTALL		$sparky_inst
-+setenv SPARKY_INSTALL		/usr/lib/sparky
++setenv SPARKY_INSTALL		@GENTOO_PORTAGE_EPREFIX@/usr/lib/sparky
  
  # -----------------------------------------------------------------------------
  # If Python is available start Sparky as a Python extension.

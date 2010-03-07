@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.115.ebuild,v 1.2 2010/02/26 23:10:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.115.ebuild,v 1.3 2010/03/07 12:49:22 jlec Exp $
 
 EAPI="3"
 
 PYTHON_USE_WITH="tk"
+PYTHON_DEPEND="2"
 
 inherit eutils flag-o-matic multilib prefix python toolchain-funcs
 
@@ -14,7 +15,7 @@ SRC_URI="http://www.cgl.ucsf.edu/home/sparky/distrib-${PV}/${PN}-source-${PV}.ta
 
 LICENSE="sparky"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="app-shells/tcsh"
@@ -25,6 +26,8 @@ RESTRICT="mirror"
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 	TKVER=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 	PYVER=$(python_get_version)
 }
