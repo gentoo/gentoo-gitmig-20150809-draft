@@ -1,7 +1,7 @@
 #!/bin/sh
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-8.sh,v 1.1 2009/11/21 19:08:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-8.sh,v 1.2 2010/03/07 15:01:09 vapier Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -156,4 +156,4 @@ fi
 
 exec "${binary}" "$@"
 
-err "ac-wrapper: was unable to exec ${binary} !?"
+err "was unable to exec ${binary} !?"
