@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.4 2010/02/12 17:41:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.0.1-r1.ebuild,v 1.5 2010/03/07 18:58:23 jlec Exp $
 
-EAPI=2
+EAPI="3"
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE="doc fortran hdf5 szip cxx"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="hdf5? ( >=sci-libs/hdf5-1.8[zlib,szip?,fortran?] )"
 DEPEND="${RDEPEND}
@@ -46,11 +46,12 @@ src_prepare() {
 src_configure() {
 	local myconf
 	if use hdf5; then
-		myconf="--with-hdf5=/usr --with-zlib=/usr"
-		use szip && myconf="${myconf} --with-szlib=/usr"
+		myconf="--with-hdf5=${EPREFIX}/usr --with-zlib=${EPREFIX}/usr"
+		use szip && myconf="${myconf} --with-szlib=${EPREFIX}/usr"
 	fi
+
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir=${EPREFIX}/usr/share/doc/${PF} \
 		--enable-shared \
 		$(use_enable fortran f77) \
 		$(use_enable fortran f90) \
