@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9.ebuild,v 1.1 2010/02/23 17:44:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9.ebuild,v 1.2 2010/03/07 22:32:01 alexxy Exp $
 
 EAPI=2
 
@@ -10,18 +10,18 @@ DESCRIPTION="A portable, high performance parallel ray tracing system"
 HOMEPAGE="http://jedi.ks.uiuc.edu/~johns/raytracer/"
 SRC_URI="http://jedi.ks.uiuc.edu/~johns/raytracer/files/${PV}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples jpeg mpi opengl png threads"
 
-RESTRICT="mirror"
-
-DEPEND="jpeg? ( media-libs/jpeg )
+CDEPEND="jpeg? ( media-libs/jpeg )
 	mpi? ( virtual/mpi )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )"
-RDEPEND="${DEPEND}"
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${CDEPEND}"
 
 S="${WORKDIR}/${PN}/unix"
 
@@ -38,8 +38,7 @@ pkg_setup() {
 		if use opengl ; then
 			TACHYON_MAKE_TARGET=linux-thr-ogl
 			if use mpi ; then
-				eerror "tachyon does not support MPI with OpenGL and threads"
-				die
+				die "tachyon does not support MPI with OpenGL and threads"
 			fi
 		elif use mpi ; then
 			TACHYON_MAKE_TARGET=linux-mpi-thr
@@ -52,7 +51,7 @@ pkg_setup() {
 		if use opengl ; then
 			# TODO: Support target: linux-lam-64-ogl
 
-			eerror "OpenGL is only available with USE=threads!"
+			die "OpenGL is only available with USE=threads!"
 		elif use mpi ; then
 				TACHYON_MAKE_TARGET=linux-mpi
 		else
@@ -63,7 +62,7 @@ pkg_setup() {
 	fi
 
 	if [[ -z "${TACHYON_MAKE_TARGET}" ]]; then
-		eerror "No target found, check use flags" && die
+		die "No target found, check use flags"
 	else
 		einfo "Using target: ${TACHYON_MAKE_TARGET}"
 	fi
@@ -80,8 +79,8 @@ src_prepare() {
 	if use png ; then
 		sed -i \
 			-e "s:USEPNG=:USEPNG=-DUSEPNG:g" \
-			-e "s:PNGINC=:PNGINC=$(libpng-config --cflags):g" \
-			-e "s:PNGLIB=:PNGLIB=$(libpng-config --ldflags):g" Make-config \
+			-e "s:PNGINC=:PNGINC=$(pkg-config libpng --cflags):g" \
+			-e "s:PNGLIB=:PNGLIB=$(pkg-config libpng --libs):g" Make-config \
 			|| die "sed failed"
 	fi
 
@@ -98,25 +97,25 @@ src_prepare() {
 }
 
 src_compile() {
-	emake "${TACHYON_MAKE_TARGET}" || die "emake failed"
+	emake ${TACHYON_MAKE_TARGET} || die "emake failed"
 }
 
 src_install() {
 	cd ..
-	dodoc Changes README
+	dodoc Changes README || die "dodoc failed"
 
 	if use doc ; then
-		dohtml docs/tachyon/*
+		dohtml docs/tachyon/* || die "dohtml failed"
 	fi
 
-	cd "compile/${TACHYON_MAKE_TARGET}"
+	cd compile/${TACHYON_MAKE_TARGET}
 
-	dobin tachyon
-	dolib libtachyon.a
+	dobin tachyon || die "dobin failed"
+	dolib libtachyon.a || die "dolib failed"
 
 	if use examples; then
 		cd "${S}/../scenes"
 		insinto "/usr/share/${PN}/examples"
-		doins *
+		doins * || die "doins failed"
 	fi
 }
