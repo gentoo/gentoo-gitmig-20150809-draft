@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index e21d52e..b71e11c 100644
+index e21d52e..4a22862 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -85,7 +85,7 @@ else
@@ -38,7 +38,7 @@ index e21d52e..b71e11c 100644
  $(LIB)/libCQRlib.$(LIB_EXT): $(SOURCE) $(HEADERS) $(COMMONDEP)
 -	$(COMPILE_COMMAND) -c $(SOURCE)
 -	$(LIBRARY_LINK_COMMAND) -o $(LIB)/libCQRlib.$(LIB_EXT) *.$(OBJ_EXT) 
-+	$(CC) $(CFLAGS) -fPIC -c $(SOURCE) -o cqrlib.o
++	$(CC) $(CFLAGS) -fPIC -c $(SOURCE) -o cqrlib.o -I.
 +	$(CC) $(LDFLAGS) -Wl,--soname,libCQRlib.so.1 -shared -o libCQRlib.so.$(RELEASE) *.$(OBJ_EXT) -lm 
  
  #

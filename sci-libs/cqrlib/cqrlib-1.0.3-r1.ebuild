@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.3-r1.ebuild,v 1.1 2010/03/07 18:17:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.3-r1.ebuild,v 1.2 2010/03/07 18:49:41 jlec Exp $
 
 inherit base flag-o-matic multilib toolchain-funcs versionator
 
@@ -33,10 +33,6 @@ src_compile() {
 		CXX=$(tc-getCXX) \
 		CFLAGS="${CFLAGS}" \
 		all || die
-}
-
-src_test() {
-	emake tests || die
 }
 
 src_install() {

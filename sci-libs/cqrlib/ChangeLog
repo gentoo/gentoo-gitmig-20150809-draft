@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cqrlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.2 2010/03/07 18:17:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.3 2010/03/07 18:49:41 jlec Exp $
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  cqrlib-1.0.3-r1.ebuild:
+  remove crappie test
 
 *cqrlib-1.0.3-r1 (07 Mar 2010)
 
