@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.129 2010/02/20 20:12:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.130 2010/03/07 06:08:44 dirtyepic Exp $
+
+*elfutils-0.145 (07 Mar 2010)
+
+  07 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> +elfutils-0.145.ebuild:
+  Version bump.
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> elfutils-0.144.ebuild:
   Transfer prefix keywords, remove dep on glibc on prefix
