@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-1.0.10.ebuild,v 1.3 2010/03/07 11:32:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-1.0.10.ebuild,v 1.4 2010/03/07 22:47:33 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -8,7 +8,7 @@ inherit autotools eutils
 DESCRIPTION="C++ classes for files, dates, property lists, reference counted pointers, number conversion etc."
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvutil/html/"
 SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/${PN}/download/${P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}-asneeded.patch.bz2"
+	mirror://gentoo/${P}-asneeded.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
