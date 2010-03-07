@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.7.0.ebuild,v 1.3 2010/01/12 11:15:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.7.0.ebuild,v 1.4 2010/03/07 10:20:27 arfrever Exp $
 
 EAPI="2"
+DISTUTILS_SRC_TEST="trial xmantissa"
+DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 SUPPORT_PYTHON_ABIS="1"
 
 # setup.py uses epsilon.setuphelper.autosetup(), which tries to use
@@ -45,10 +47,7 @@ src_compile() {
 }
 
 src_test() {
-	testing() {
-		PYTHONPATH="." trial xmantissa
-	}
-	python_execute_function testing
+	TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE="1" distutils_src_test
 }
 
 src_install() {
