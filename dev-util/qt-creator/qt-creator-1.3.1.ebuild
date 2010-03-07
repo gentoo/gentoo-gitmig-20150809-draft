@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.7 2010/03/06 12:53:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.8 2010/03/07 12:30:31 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -15,7 +15,8 @@ SRC_URI="http://get.qt.nokia.com/${MY_PN}/${P}-src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux"
-IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git kde mercurial perforce qml qtscript subversion"
+IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git
+kde mercurial perforce qml qtscript rss subversion"
 
 DEPEND=">=x11-libs/qt-assistant-4.6.0:4
 	>=x11-libs/qt-gui-4.6.0:4[dbus,qt3support]"
@@ -71,6 +72,13 @@ src_prepare() {
 		ewarn "download perforce client from http://www.perforce.com/perforce/downloads/index.html"
 		ewarn
 		ebeep 5
+	fi
+	# disable rss news on startup ( bug #302978 )
+	if ! use rss; then
+		einfo "Disabling RSS welcome news"
+		sed -i "/m_rssFetcher->fetch/s:^:\/\/:" \
+			src/plugins/welcome/communitywelcomepagewidget.cpp \
+			|| die "failed to disable rss"
 	fi
 }
 
