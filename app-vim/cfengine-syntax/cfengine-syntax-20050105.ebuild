@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/cfengine-syntax-20050105.ebuild,v 1.9 2005/09/29 21:08:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/cfengine-syntax-20050105.ebuild,v 1.10 2010/03/07 22:21:39 ramereth Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Cfengine configuration files syntax"
 HOMEPAGE="http://dev.gentoo.org/~ramereth/vim/syntax/cfengine.vim"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\

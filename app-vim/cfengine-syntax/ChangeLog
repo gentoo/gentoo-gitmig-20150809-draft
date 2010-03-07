@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cfengine-syntax
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.10 2007/02/21 23:54:00 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.11 2010/03/07 22:21:39 ramereth Exp $
+
+  07 Mar 2010; Lance Albertson <ramereth@gentoo.org>
+  cfengine-syntax-20050105.ebuild:
+  Keyword arm so that it can be used with the vim-syntax useflag in #152275
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
