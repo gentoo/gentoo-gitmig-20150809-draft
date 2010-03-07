@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.15.ebuild,v 1.1 2010/03/07 11:48:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.15.ebuild,v 1.2 2010/03/07 16:20:22 hollow Exp $
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20100307"
@@ -84,7 +84,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 DEPEND="${DEPEND}
+	>=dev-libs/openssl-0.9.8m
 	apache2_modules_deflate? ( sys-libs/zlib )"
 
 RDEPEND="${RDEPEND}
+	>=dev-libs/openssl-0.9.8m
 	apache2_modules_mime? ( app-misc/mime-types )"
