@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20100302.ebuild,v 1.1 2010/03/02 13:43:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20100302.ebuild,v 1.2 2010/03/07 22:45:41 ssuominen Exp $
 
 EAPI=2
 inherit autotools flag-o-matic games
 
 DESCRIPTION="Chart Program to use with Flightgear Flight Simulator"
 HOMEPAGE="http://atlas.sourceforge.net/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
