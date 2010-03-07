@@ -1,0 +1,15 @@
+# ChangeLog for sci-chemistry/cyana
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/ChangeLog,v 1.1 2010/03/07 10:07:09 jlec Exp $
+
+*cyana-2.1 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> +files/2.1-exec.patch,
+  +files/2.1-typo.patch, +cyana-2.1.ebuild, +metadata.xml:
+  CYANA ((c) by Peter Gu"ntert) is a program for automated structure
+  calculation of biological macromolecules on the basis of conformational
+  constraints from NMR. The combination of automated NOESY cross peak
+  assignment, structure calculation with a fast torsion angle dynamics
+  algorithm, and the ease-of-use of CYANA provide for unprecedented
+  efficiency in NMR protein structure determination.
+
