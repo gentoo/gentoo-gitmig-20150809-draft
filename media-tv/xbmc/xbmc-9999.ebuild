@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.48 2010/01/25 13:38:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.49 2010/03/07 06:30:51 vapier Exp $
 
 EAPI="2"
 
@@ -57,6 +57,7 @@ RDEPEND="virtual/opengl
 	css? ( media-libs/libdvdcss )
 	media-libs/libmad
 	media-libs/libmms
+	media-libs/libmodplug
 	media-libs/libmpeg2
 	media-libs/libogg
 	media-libs/libsamplerate
@@ -160,6 +161,7 @@ src_configure() {
 		--enable-external-libraries \
 		--enable-goom \
 		--enable-gl \
+		--disable-webserver \
 		$(use_enable avahi) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \

@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.45 2010/01/25 13:38:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.46 2010/03/07 06:30:51 vapier Exp $
+
+  07 Mar 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Pull in libmodplug #305911 by Michael Lange. Disable the webserver for now
+  #305229 by Jan Vansteenkiste.
 
   25 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> xbmc-9.11-r1.ebuild,
   xbmc-9999.ebuild:
