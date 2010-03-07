@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-table-cangjie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cangjie/ChangeLog,v 1.9 2010/01/20 23:00:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cangjie/ChangeLog,v 1.10 2010/03/07 01:49:03 matsuu Exp $
+
+*ibus-table-cangjie-1.2.0.20100305 (07 Mar 2010)
+
+  07 Mar 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-cangjie-1.2.0.20100305.ebuild:
+  Version bumped.
 
 *ibus-table-cangjie-1.2.0.20100119 (20 Jan 2010)
 
