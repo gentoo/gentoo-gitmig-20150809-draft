@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting cf-serverd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/cf-serverd 
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping cf-serverd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/cf-serverd
+	eend $?
+}
