@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.457 2010/03/07 11:31:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.458 2010/03/07 12:20:05 ssuominen Exp $
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  python-2.6.4-r1.ebuild:
+  amd64 stable wrt #306793
 
   07 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.4.6.ebuild, python-2.5.4-r4.ebuild, python-2.6.4.ebuild,
