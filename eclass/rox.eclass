@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.30 2008/10/31 13:02:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.31 2010/03/07 20:42:13 lack Exp $
 
 # ROX eclass Version 3
 
@@ -126,8 +126,6 @@ rox_desktop_entry() {
 
 	cat <<-EOF > "${desktop}"
 	[Desktop Entry]
-	Encoding=UTF-8
-	Version=1.0
 	Name=${name}
 	Type=Application
 	Comment=${DESCRIPTION}
