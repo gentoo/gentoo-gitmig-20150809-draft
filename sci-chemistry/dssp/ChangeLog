@@ -1,0 +1,21 @@
+# ChangeLog for sci-chemistry/dssp
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.1 2010/03/07 10:13:05 jlec Exp $
+
+*dssp-070831 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> +dssp-070831.ebuild,
+  +files/Makefile, +metadata.xml:
+  The DSSP program was designed by Wolfgang Kabsch and Chris Sander to
+  standardize secondary structure assignment. DSSP is a database of
+  secondary structure assignments (and much more) for all protein entries in
+  the Protein Data Bank (PDB). DSSP is also the program that calculates DSSP
+  entries from PDB entries.
+
+  If you use DSSP, please quote:
+
+  Dictionary of protein secondary structure: pattern recognition of
+  hydrogen-bonded and geometrical features.
+  Biopolymers. 1983 Dec;22(12):2577-637.
+  PMID: 6667333; UI: 84128824.
+
