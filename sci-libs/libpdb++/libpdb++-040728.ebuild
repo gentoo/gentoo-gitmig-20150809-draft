@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb++/libpdb++-040728.ebuild,v 1.1 2010/03/07 10:53:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb++/libpdb++-040728.ebuild,v 1.2 2010/03/07 11:29:30 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.shar"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-LICENSE="as-is"
+LICENSE="BSD"
 IUSE=""
 
 RDEPEND=""
