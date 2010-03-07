@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.34-r1.ebuild,v 1.1 2010/03/07 10:43:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.34-r1.ebuild,v 1.2 2010/03/07 16:17:10 hollow Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ inherit eutils ssl-cert toolchain-funcs perl-module ruby-ng flag-o-matic
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.net/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz
-	nginx_modules_passenger? ( mirror://rubyforge/passenger/passenger-${PASSENGER_PV}.tar.gz )"
+	nginx_modules_http_passenger? ( mirror://rubyforge/passenger/passenger-${PASSENGER_PV}.tar.gz )"
 
 LICENSE="BSD"
 SLOT="0"
@@ -91,7 +91,7 @@ pkg_setup() {
 		ewarn "Please do not file bug reports!"
 	fi
 
-	if use nginx_modules_passenger; then
+	if use nginx_modules_http_passenger; then
 		ruby-ng_pkg_setup
 		use debug && append-flags -DPASSENGER_DEBUG
 	fi
@@ -105,7 +105,7 @@ src_unpack() {
 src_prepare() {
 	sed -i 's/ make/ \\$(MAKE)/' "${S}"/auto/lib/perl/make
 
-	if use nginx_modules_passenger; then
+	if use nginx_modules_http_passenger; then
 		cd "${WORKDIR}"/passenger-${PASSENGER_PV}
 		epatch "${FILESDIR}"/passenger-CFLAGS.patch
 	fi
@@ -221,13 +221,13 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/nginx.logrotate nginx
 
-	if use nginx_modules_perl; then
+	if use nginx_modules_http_perl; then
 		cd "${S}"/objs/src/http/modules/perl/
 		einstall DESTDIR="${D}" INSTALLDIRS=vendor || die "failed to install perl stuff"
 		fixlocalpod
 	fi
 
-	if use nginx_modules_passenger; then
+	if use nginx_modules_http_passenger; then
 		# passengers Rakefile is so horribly broken that we have to do it
 		# manually
 		cd "${WORKDIR}"/passenger-${PASSENGER_PV}
