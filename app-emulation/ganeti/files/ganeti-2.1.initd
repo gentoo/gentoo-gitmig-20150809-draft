@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.2 2010/02/08 22:38:58 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.3 2010/03/07 20:56:02 ramereth Exp $
 
 depend() {
-    need localmount drbd
+    need localmount
     after bootmisc
 }
 
