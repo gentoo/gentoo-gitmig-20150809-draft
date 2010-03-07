@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306.ebuild,v 1.1 2010/03/06 16:27:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306.ebuild,v 1.2 2010/03/07 04:29:19 mr_bones_ Exp $
 
 EAPI="1"
 
