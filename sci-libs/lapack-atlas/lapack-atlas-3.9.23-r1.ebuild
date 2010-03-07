@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r1.ebuild,v 1.1 2010/03/07 20:25:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r1.ebuild,v 1.2 2010/03/07 21:32:53 jlec Exp $
 
 EAPI="3"
 
@@ -54,12 +54,12 @@ src_prepare() {
 		"${S}"/CONFIG/src/SpewMakeInc.c \
 		|| die "failed to append proper includes"
 
-	cp "${FILESDIR}"/eselect.{,c}blas.{,threaded-}atlas "${T}"/
+	cp "${FILESDIR}"/eselect.lapack.atlas "${T}"/
 	sed -i -e "s:/usr:${EPREFIX}/usr:" \
-		"${T}"/eselect.{,c}blas.{,threaded-}atlas || die
+		"${T}"/eselect.lapack.atlas || die
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		sed -i -e 's/\.so\([\.0-9]\+\)\?/\1.dylib/g' \
-			"${T}"/eselect.{,c}blas.{,threaded-}atlas || die
+			"${T}"/eselect.lapack.atlas || die
 		sed -e /LIBTOOL/s/libtool/glibtool/ -i CONFIG/src/SpewMakeInc.c
 		epatch "${FILESDIR}"/${PN}-3.9.3-darwin-make-top.patch
 	fi
