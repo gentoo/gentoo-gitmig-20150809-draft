@@ -1,6 +1,10 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.26 2010/03/04 10:16:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.27 2010/03/07 20:33:48 armin76 Exp $
+
+  07 Mar 2010; Raúl Porcel <armin76@gentoo.org> scid-4.0.ebuild,
+  scid-4.2.2.ebuild:
+  Drop alpha/sparc keywords
 
   04 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> scid-4.2.2.ebuild:
   x86 stable wrt bug #306683
