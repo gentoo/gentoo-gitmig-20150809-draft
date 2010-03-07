@@ -1,81 +1,67 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.4.ebuild,v 1.2 2010/03/07 22:23:15 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r1.ebuild,v 1.1 2010/03/07 22:23:15 ramereth Exp $
 
 EAPI="2"
 
 inherit eutils
 
-MY_PV="${PV//_beta/b}"
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="An automated suite of programs for configuring and maintaining
 Unix-like computers"
 HOMEPAGE="http://www.cfengine.org/"
-SRC_URI="http://www.cfengine.org/tarballs/${MY_P}.tar.gz"
+SRC_URI="http://www.cfengine.org/tarballs/${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
-IUSE="mysql postgres selinux vim-syntax"
+IUSE="vim-syntax"
 
 DEPEND=">=sys-libs/db-4
 	>=dev-libs/openssl-0.9.7
-	dev-libs/libpcre
-	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )
 	app-portage/portage-utils"
 RDEPEND="${DEPEND}"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
-S="${WORKDIR}/${MY_P}"
 
 src_configure() {
-	local myconf
-
-	if use mysql || use postgres ; then
-		myconf="--with-sql"
-	else
-		myconf="--without-sql"
-	fi
-	# selinux incorrectly enables if it sets --disable-selinux
-	if use selinux ; then
-		myconf="${myconf} $(use_enable selinux)"
-	fi
-
 	# Enforce /var/cfengine for historical compatibility
 	econf \
-		"${myconf}" \
 		--with-workdir=/var/cfengine \
-		--docdir=/usr/share/doc/"${P}" \
 		--with-berkeleydb=/usr || die
 
-	# Fix Makefile to skip inputs
-	sed -i -e 's/\(SUBDIRS.*\) inputs/\1/' Makefile
+	# Fix Makefile to skip doc,inputs, & contrib install to wrong locations
+	sed -i -e 's/\(DIST_SUBDIRS.*\) contrib inputs doc/\1/' Makefile
+	sed -i -e 's/\(SUBDIRS.*\) contrib inputs/\1/' Makefile
 	sed -i -e 's/\(install-data-am.*\) install-docDATA/\1/' Makefile
-	# Fix Makefiles to install tests in correct directory
-	for i in file_masters file_operands units ; do
-		sed -i -e "s/\(docdir.*\) =.*/\1 = \/usr\/share\/doc\/${P}\/tests\/${i}/" \
-			tests/${i}/Makefile
-	done
+
+	# Fix man pages
+	sed -i -e 's/\/usr\/local/\/usr/' doc/*.8
 }
 
 src_install() {
-	newinitd "${FILESDIR}"/cf-serverd.rc6 cf-servd
-	newinitd "${FILESDIR}"/cf-monitord.rc6 cf-monitord
-	newinitd "${FILESDIR}"/cf-execd.rc6 cf-execd
+	newinitd "${FILESDIR}"/cfservd.rc6 cfservd
+	newinitd "${FILESDIR}"/cfenvd.rc6 cfenvd
+	newinitd "${FILESDIR}"/cfexecd.rc6 cfexecd
 
 	make DESTDIR="${D}" install || die
+
+	# Remove static library and libtool file as they are not needed
+	rm "${D}"/usr/$(get_libdir)/*.la
+	rm "${D}"/usr/$(get_libdir)/*.a
+
 	dodoc AUTHORS ChangeLog README TODO INSTALL
 
-	# Manually install inputs
+	# Manually install doc and inputs
+	doman doc/*.8
 	docinto examples
-	dodoc inputs/*.cf
+	doinfo doc/*.info*
+	dodoc inputs/*.example
 
 	# Create cfengine working directory
 	mkdir -p "${D}"/var/cfengine
 	fperms 700 /var/cfengine
 	keepdir /var/cfengine/bin
 	keepdir /var/cfengine/inputs
+	dodir /var/cfengine/modules
 }
 
 pkg_postinst() {
@@ -84,13 +70,16 @@ pkg_postinst() {
 	# binaries here. This is the default search location for the
 	# binaries.
 
-	cp -f /usr/sbin/cf-{agent,serverd,execd} "${ROOT}"/var/cfengine/bin/
+	cp -f /usr/sbin/cf{agent,servd,execd} "${ROOT}"/var/cfengine/bin/
 
 	einfo
-	einfo "Init scripts for cf-serverd, cf-monitord, and cf-execd are provided."
+	einfo "NOTE: The cfportage module has been deprecated in favor of the"
+	einfo "      upstream 'packages' action."
+	einfo
+	einfo "Init scripts for cfservd, cfenvd, and cfexecd are now provided."
 	einfo
 	einfo "To run cfengine out of cron every half hour modify your crontab:"
-	einfo "0,30 * * * *    /usr/sbin/cf-execd -F"
+	einfo "0,30 * * * *    /usr/sbin/cfexecd -F"
 	einfo
 
 	elog "You MUST generate the keys for cfengine by running:"
@@ -101,7 +90,7 @@ pkg_config() {
 	if [ "${ROOT}" == "/" ]; then
 		if [ ! -f "/var/cfengine/ppkeys/localhost.priv" ]; then
 			einfo "Generating keys for localhost."
-			/usr/sbin/cf-key
+			/usr/sbin/cfkey
 		fi
 	else
 		die "cfengine cfkey does not support any value of ROOT other than /."
