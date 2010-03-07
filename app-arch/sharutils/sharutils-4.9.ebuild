@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.9.ebuild,v 1.1 2010/03/06 23:42:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.9.ebuild,v 1.2 2010/03/07 14:40:26 vapier Exp $
 
 inherit eutils
 
 MY_P="${P/_/-}"
 DESCRIPTION="Tools to deal with shar archives"
 HOMEPAGE="http://www.gnu.org/software/sharutils/"
-SRC_URI="mirror://gnu/${PN}/REL-${PV}/${P}.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
