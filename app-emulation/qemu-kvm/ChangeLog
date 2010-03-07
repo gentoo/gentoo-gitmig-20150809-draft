@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.20 2010/03/02 16:56:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.21 2010/03/07 03:15:30 jmbsvicetto Exp $
+
+  07 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  qemu-kvm-9999.ebuild, +files/qemu-kvm-9999-sysconfigdir.patch:
+  Added a patch to fix the support for --sysconfdir and updated
+  src_configure to prevent the default $prefix/etc.
 
 *qemu-kvm-0.12.3 (02 Mar 2010)
 

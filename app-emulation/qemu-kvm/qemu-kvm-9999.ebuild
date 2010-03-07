@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.4 2010/03/02 16:56:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.5 2010/03/07 03:15:30 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -108,6 +108,7 @@ src_prepare() {
 	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
+	epatch "${FILESDIR}/${P}-sysconfigdir.patch"
 }
 
 src_configure() {
@@ -139,6 +140,9 @@ src_configure() {
 
 	# Add support for static builds
 	use static && conf_opts="${conf_opts} --static"
+
+	# Fix the $(prefix)/etc issue
+	conf_opts="${conf_opts} --sysconfdir=${D}/etc"
 
 	#config options
 	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
