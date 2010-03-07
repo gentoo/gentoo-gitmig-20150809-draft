@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.24 2010/01/11 21:23:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.25 2010/03/07 13:18:18 ssuominen Exp $
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pyro-3.10.ebuild:
+  amd64 stable wrt #300243
 
   11 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pyro-3.10.ebuild:
   stable x86, bug 300243

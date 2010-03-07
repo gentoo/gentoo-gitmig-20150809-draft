@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-3.10.ebuild,v 1.2 2010/01/11 21:23:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-3.10.ebuild,v 1.3 2010/03/07 13:18:18 ssuominen Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/pyro/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ia64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 DEPEND=""
