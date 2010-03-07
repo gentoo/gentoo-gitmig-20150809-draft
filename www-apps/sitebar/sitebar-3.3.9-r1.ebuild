@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9-r1.ebuild,v 1.4 2008/02/08 18:06:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9-r1.ebuild,v 1.5 2010/03/07 13:17:12 hollow Exp $
 
 inherit webapp eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/httpd-cgi
 	virtual/php"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_install() {
 	webapp_src_preinst
