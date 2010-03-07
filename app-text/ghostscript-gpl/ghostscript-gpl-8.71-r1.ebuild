@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.71.ebuild,v 1.1 2010/02/15 19:08:50 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.71-r1.ebuild,v 1.1 2010/03/07 17:08:03 tgurr Exp $
 
 inherit autotools eutils versionator flag-o-matic
 
@@ -12,7 +12,7 @@ GSDJVU_PV=1.4
 PVM=$(get_version_component_range 1-2)
 SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
 	mirror://sourceforge/ghostscript/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-8.70-patchset-2.tar.bz2"
+	mirror://gentoo/${P}-patchset-1.tar.bz2"
 
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
@@ -73,6 +73,13 @@ src_unpack() {
 	epatch "${WORKDIR}/patches/${PN}-8.70-runlibfileifexists.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.64-system-jasper.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.64-pksmraw.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-CVE-2009-4270.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-gdevcups-y-axis.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-jbig2dec-nullderef.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-ldflags.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-pdf2dsc.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-pdftoraster-exit.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.71-vsnprintf.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
