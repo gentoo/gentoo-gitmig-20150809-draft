@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.72 2010/02/24 08:12:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.73 2010/03/07 09:48:05 jlec Exp $
+
+# 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
+# needs amd64 multilib
+sci-chemistry/cara-bin
 
 # 24 Feb. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib

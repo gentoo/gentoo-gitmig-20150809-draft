@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.77 2010/02/24 08:12:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.78 2010/03/07 09:48:04 jlec Exp $
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  no-multilib/package.mask:
+  Masked sci-chemistry/cara-bin for no-multilib -> binary package which
+  needs emul*
 
   24 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
   no-multilib/package.mask:
