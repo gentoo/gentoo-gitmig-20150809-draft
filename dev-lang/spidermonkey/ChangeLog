@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/spidermonkey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.45 2009/12/29 17:45:20 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.46 2010/03/07 22:38:56 ramereth Exp $
+
+*spidermonkey-1.7.0-r1 (07 Mar 2010)
+
+  07 Mar 2010; Lance Albertson <ramereth@gentoo.org>
+  +spidermonkey-1.7.0-r1.ebuild:
+  Add unicode support fixing #277697
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.7.0.ebuild:
   Add ~arm
