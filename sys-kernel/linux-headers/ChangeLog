@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.302 2010/03/06 20:38:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.303 2010/03/07 22:47:34 maekke Exp $
+
+  07 Mar 2010; Markus Meier <maekke@gentoo.org>
+  linux-headers-2.6.30-r1.ebuild:
+  arm stable, bug #273358
 
   06 Mar 2010; Tobias Klausmann <klausman@gentoo.org>
   linux-headers-2.6.30-r1.ebuild:
