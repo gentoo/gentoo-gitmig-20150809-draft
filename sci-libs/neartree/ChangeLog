@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/neartree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.1 2010/02/03 20:23:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.2 2010/03/07 18:48:36 jlec Exp $
+
+*neartree-2.1.4-r1 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/2.1.4-dynlib.patch, -neartree-2.1.4.ebuild,
+  +neartree-2.1.4-r1.ebuild:
+  building shared libs now
 
 *neartree-2.1.4 (03 Feb 2010)
 

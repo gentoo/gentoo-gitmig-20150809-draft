@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-2.1.4.ebuild,v 1.1 2010/02/03 20:23:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-2.1.4-r1.ebuild,v 1.1 2010/03/07 18:48:36 jlec Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit base flag-o-matic multilib toolchain-funcs versionator
 
 MY_PN=NearTree
 MY_P="${MY_PN}-${PV}"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}/${MY_PN}.zip -> ${P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/cvector"
@@ -28,6 +28,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PV}-gcc4.3.patch
 	epatch "${FILESDIR}"/${PV}-iterator.patch
 	epatch "${FILESDIR}"/${PV}-test.patch
+	epatch "${FILESDIR}"/${PV}-dynlib.patch
 
 	sed \
 		-e "s:GENTOOLIBDIR:$(get_libdir):g" \
@@ -42,19 +43,14 @@ src_compile() {
 		all || die
 }
 
-src_test() {
-	emake \
-		CC=$(tc-getCC) \
-		CXX=$(tc-getCXX) \
-		tests || die
-}
-
 src_install() {
-	dobin bin/* || die "failed to install bins"
-	dolib.a lib/.libs/*.a || die "failed to install libs"
+	dolib.so *.so.${PV} || die
+	dosym libCNearTree.so.${PV} /usr/$(get_libdir)/libCNearTree.so.$(get_version_component_range 1-2) || die
+	dosym libCNearTree.so.${PV} /usr/$(get_libdir)/libCNearTree.so.$(get_major_version) || die
+	dosym libCNearTree.so.${PV} /usr/$(get_libdir)/libCNearTree.so || die
 
 	insinto /usr/include
-	doins *.h || die "failed to install includes"
+	doins CNearTree.h || die
 
 	dodoc README_NearTree.txt || die
 	dohtml *.html || die
