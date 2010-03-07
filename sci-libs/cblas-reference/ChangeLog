@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cblas-reference
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.32 2008/04/21 14:54:44 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.33 2010/03/07 19:14:51 jlec Exp $
+
+*cblas-reference-20030223-r5 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +cblas-reference-20030223-r5.ebuild:
+  Moved to EAPI=3 for PREFIX support, imported prefix patches from overlay,
+  keyworded {amd64,x86}-linux
 
   21 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org>
   cblas-reference-20030223-r4.ebuild:
