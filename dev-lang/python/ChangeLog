@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.456 2010/03/04 19:44:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.457 2010/03/07 11:31:55 arfrever Exp $
+
+  07 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.4.6.ebuild, python-2.5.4-r4.ebuild, python-2.6.4.ebuild,
+  python-2.6.4-r1.ebuild:
+  Delete no longer needed recommendation (bug #307887).
 
   04 Mar 2010; Raúl Porcel <armin76@gentoo.org> python-2.6.4-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #306793

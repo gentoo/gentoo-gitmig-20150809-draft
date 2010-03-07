@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.4.ebuild,v 1.15 2010/01/16 14:34:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.4.ebuild,v 1.16 2010/03/07 11:31:55 arfrever Exp $
 
 EAPI="2"
 
@@ -62,10 +62,6 @@ pkg_setup() {
 		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python. It has"
 		ewarn "been additionally removed in Python 3. You should use external, still maintained \"bsddb3\""
 		ewarn "module provided by dev-python/bsddb3 which supports both Python 2 and Python 3."
-	fi
-
-	if ! has_version "=dev-lang/python-3*"; then
-		elog "It is highly recommended to additionally install Python 3, but without configuring Python wrapper to use Python 3."
 	fi
 }
 
