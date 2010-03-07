@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.6.1.ebuild,v 1.6 2010/01/24 23:59:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.6.1.ebuild,v 1.7 2010/03/07 15:36:09 arfrever Exp $
 
+PYTHON_DEPEND="2" # Support for Python 3 not verified
 GCONF_DEBUG="no"
 
 inherit gnome2 python
@@ -16,8 +17,7 @@ IUSE=""
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
 
-RDEPEND=">=dev-lang/python-2.4
-	dev-python/ipython
+RDEPEND="dev-python/ipython
 	dev-python/pygtk
 	dev-python/pygobject
 	dev-python/pycairo

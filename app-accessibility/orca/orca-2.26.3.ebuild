@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.3.ebuild,v 1.7 2010/01/18 00:56:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.3.ebuild,v 1.8 2010/03/07 15:38:38 arfrever Exp $
+
+PYTHON_DEPEND="2" # Support for Python 3 not verified
 
 inherit gnome2 python
 
@@ -21,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.10
 	>=gnome-base/libbonobo-2.14
 	>=dev-python/libbonobo-python-2.14
 
-	>=dev-lang/python-2.4
 	dev-python/pygobject
 	dev-python/pycairo
 	>=dev-python/pygtk-2.12
