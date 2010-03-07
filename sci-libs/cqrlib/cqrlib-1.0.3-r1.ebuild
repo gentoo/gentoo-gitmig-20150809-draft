@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.3.ebuild,v 1.1 2010/02/03 22:12:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.3-r1.ebuild,v 1.1 2010/03/07 18:17:57 jlec Exp $
 
-inherit base flag-o-matic toolchain-funcs
+inherit base flag-o-matic multilib toolchain-funcs versionator
 
 MY_PN=CQRlib
 MY_P="${MY_PN}-${PV}"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/cvector"
@@ -23,11 +23,12 @@ S="${WORKDIR}"/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-LDFLAGS.patch
+	"${FILESDIR}"/${PV}-dynlib.patch
 	)
 
 src_compile() {
 	append-flags -ansi
-	emake \
+	emake -j1 \
 		CC=$(tc-getCC) \
 		CXX=$(tc-getCXX) \
 		CFLAGS="${CFLAGS}" \
@@ -39,8 +40,10 @@ src_test() {
 }
 
 src_install() {
-	dobin bin/* || die
-	dolib.a lib/.libs/*.a || die
+	dolib.so *.so.${PV} || die
+	dosym libCQRlib.so.${PV} /usr/$(get_libdir)/libCQRlib.so.$(get_version_component_range 1-2) || die
+	dosym libCQRlib.so.${PV} /usr/$(get_libdir)/libCQRlib.so.$(get_major_version) || die
+	dosym libCQRlib.so.${PV} /usr/$(get_libdir)/libCQRlib.so || die
 
 	insinto /usr/include
 	doins *.h || die

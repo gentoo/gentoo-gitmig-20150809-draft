@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cqrlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.1 2010/02/03 22:12:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.2 2010/03/07 18:17:57 jlec Exp $
+
+*cqrlib-1.0.3-r1 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/1.0.3-dynlib.patch, -cqrlib-1.0.3.ebuild, +cqrlib-1.0.3-r1.ebuild:
+  Building shared instead of statis libs now
 
 *cqrlib-1.0.3 (03 Feb 2010)
 
