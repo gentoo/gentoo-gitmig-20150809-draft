@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.2 2010/02/26 12:15:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.3 2010/03/07 20:02:31 ulm Exp $
 
 EAPI=2
 
@@ -25,8 +25,6 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.1 )
 	ggi? ( media-libs/libggi )
 	gd? ( >=media-libs/gd-2[png] )
-	doc? ( virtual/latex-base
-		app-text/ghostscript-gpl )
 	latex? ( virtual/latex-base
 		lua? ( dev-tex/pgf
 			>=dev-texlive/texlive-latexrecommended-2008-r2 ) )
@@ -39,7 +37,9 @@ RDEPEND="
 		>=x11-libs/pango-1.10.3
 		>=x11-libs/gtk+-2.8 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	doc? ( virtual/latex-base
+		app-text/ghostscript-gpl )"
 
 S="${WORKDIR}/${MY_P}"
 E_SITEFILE="50${PN}-gentoo.el"
