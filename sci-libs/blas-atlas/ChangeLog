@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.97 2010/02/19 02:35:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.98 2010/03/07 16:56:06 jlec Exp $
+
+*blas-atlas-3.9.23-r1 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/blas-atlas-3.9.3-darwin-make-top.patch,
+  +blas-atlas-3.9.23-r1.ebuild:
+  Moved to EAPI=3 for PREFIX support, imported prefix patches from overlay,
+  removed epause
 
 *blas-atlas-3.9.23 (18 Feb 2010)
 
