@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.6 2010/03/02 02:33:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.7 2010/03/07 22:49:13 maekke Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 -sh ~sparc x86"
+KEYWORDS="-alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 -sh ~sparc x86"
 IUSE="selinux +devfs-compat -extras test"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )

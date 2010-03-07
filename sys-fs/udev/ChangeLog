@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.528 2010/03/02 02:33:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.529 2010/03/07 22:49:13 maekke Exp $
+
+  07 Mar 2010; Markus Meier <maekke@gentoo.org> udev-149.ebuild:
+  amd64/arm stable, bug #303031
 
   02 Mar 2010; Jeroen Roovers <jer@gentoo.org> udev-149.ebuild:
   Stable for HPPA (bug #303031).
