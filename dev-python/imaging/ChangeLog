@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.57 2010/01/17 18:55:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.58 2010/03/07 12:51:07 ssuominen Exp $
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> imaging-1.1.7.ebuild:
+  amd64 stable wrt #298979
 
   17 Jan 2010; Raúl Porcel <armin76@gentoo.org> imaging-1.1.7.ebuild:
   alpha/arm/ia64/sparc stable wrt #298979
