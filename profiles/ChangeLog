@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4005 2010/03/07 13:04:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4006 2010/03/07 18:35:46 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2010; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  Add <sys-fs/e2fsprogs-1.41.9 to the e2fsprogs mask
 
   07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> package.mask:
   remove www-apps/mambo from package.mask wrt #203084
