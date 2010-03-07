@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r2.ebuild,v 1.1 2010/02/26 16:07:02 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r2.ebuild,v 1.2 2010/03/07 09:19:05 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils multilib
 
@@ -18,7 +18,7 @@ LICENSE="public-domain"
 SLOT="0"
 #IUSE="X unicode opengl gnutls test"
 IUSE="sqlite"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 # wxGTK: must run eselect wxwindows after installing wxgtk or build will fail. Check and abort here.
 # dev-libs/xalan-c - problems detecting, api mismatch?
@@ -60,12 +60,12 @@ src_configure() {
 		--without-static \
 		--with-dll \
 		--without-ftds \
-		--prefix="${D}"/usr \
-		--libdir="${D}"/usr/$(get_libdir)/${PN} \
-		--with-z="/usr" \
-		--with-bz2="/usr" \
-		--with-pcre="/usr" \
-		--with-openssl="/usr" \
+		--prefix="${ED}"/usr \
+		--libdir="${ED}"/usr/$(get_libdir)/${PN} \
+		--with-z="${EPREFIX}/usr" \
+		--with-bz2="${EPREFIX}/usr" \
+		--with-pcre="${EPREFIX}/usr" \
+		--with-openssl="${EPREFIX}/usr" \
 		|| die
 
 #		--with-mt \ # fails with gcc-4.4 but not 4.3
@@ -89,9 +89,9 @@ src_compile() {
 src_install() {
 	emake install || die
 	# File collisions with sci-biology/ncbi-tools
-	rm -f "${D}"/usr/bin/{asn2asn,rpsblast,test_regexp}
+	rm -f "${ED}"/usr/bin/{asn2asn,rpsblast,test_regexp}
 
-	echo "LD_LIBRARY_PATH=/usr/lib/${PN}" > ${S}/99${PN}
+	echo "LD_LIBRARY_PATH=${EPREFIX}/usr/$(get_libdir)/${PN}" > ${S}/99${PN}
 	doenvd "${S}/99${PN}"
 }
 
