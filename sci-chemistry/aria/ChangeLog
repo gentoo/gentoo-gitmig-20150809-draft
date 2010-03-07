@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.1 2010/02/06 21:50:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.2 2010/03/07 09:31:51 jlec Exp $
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> aria-2.2_p2.ebuild:
+  keyworded for *-linux, tested by me
 
 *aria-2.2_p2 (06 Feb 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.2_p2.ebuild,v 1.3 2010/02/07 01:35:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.2_p2.ebuild,v 1.4 2010/03/07 09:31:51 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://aria.pasteur.fr/archives/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="cns"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="
@@ -91,6 +91,7 @@ src_install(){
 }
 
 pkg_postinst() {
+	python_need_rebuild
 	python_mod_optimize ${PN}
 }
 
