@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.75 2010/02/13 10:49:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.76 2010/03/07 09:24:52 jlec Exp $
+
+*ncbi-tools-20090809-r2 (07 Mar 2010)
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +ncbi-tools-20090809-r2.ebuild:
+  Moved to EAPI=3 for PREFIX support, keyworded for *-linux, tested by me
 
 *ncbi-tools-20090809-r1 (13 Feb 2010)
 
