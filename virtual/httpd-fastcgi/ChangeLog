@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-fastcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/ChangeLog,v 1.6 2010/03/07 13:12:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/ChangeLog,v 1.7 2010/03/07 18:25:53 hollow Exp $
+
+  07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> httpd-fastcgi-0.ebuild:
+  fix typo wrt #308347
 
   07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> httpd-fastcgi-0.ebuild:
   use fastcgi providing modules instead of plain apache
