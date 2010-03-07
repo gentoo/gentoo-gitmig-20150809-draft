@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysolfc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.1 2010/03/07 21:02:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.2 2010/03/07 21:34:57 ssuominen Exp $
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pysolfc-2.0.ebuild:
+  Set "python_set_active_version 2" to ensure used python is 2.
 
 *pysolfc-2.0 (07 Mar 2010)
 
