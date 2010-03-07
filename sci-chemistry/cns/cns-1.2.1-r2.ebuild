@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r2.ebuild,v 1.1 2010/02/06 21:49:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r2.ebuild,v 1.2 2010/03/07 09:54:15 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils fortran toolchain-funcs versionator flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="${MY_P}_all-mp.tar.gz
 
 SLOT="0"
 LICENSE="cns"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="aria openmp"
 
 RDEPEND="app-shells/tcsh
@@ -85,6 +85,10 @@ src_prepare() {
 		-e "s:_CNSsolve_location_:${S}:g" \
 		-e "17 s:\(.*\):\1\nexport _POSIX2_VERSION; _POSIX2_VERSION=199209:g" \
 		"${T}"/cns_solve_env_sh
+
+	einfo "Fixing shebangs..."
+	find "${S}" -type f \
+		-exec sed "s:/bin/csh:${EPREFIX}/bin/csh:g" -i '{}' \; || die
 }
 
 src_compile() {
@@ -130,7 +134,7 @@ src_install() {
 	# Install to locations resembling FHS
 	sed -i \
 		-e "s:${S}:usr:g" \
-		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT /usr:g" \
+		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_ROOT ${EPREFIX}/usr:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DATA \$CNS_ROOT/share/cns:g" \
 		-e "s:^\(setenv CNS_SOLVE.*\):\1\nsetenv CNS_DOC \$CNS_ROOT/share/doc/${PF}:g" \
 		-e "s:CNS_LIB \$CNS_SOLVE/libraries:CNS_LIB \$CNS_DATA/libraries:g" \
@@ -142,7 +146,7 @@ src_install() {
 	# for CNS_SOLVE and CNS_ROOT, but it does
 	sed -i \
 		-e "s:${S}:/usr:g" \
-		-e "s:^\(^[[:space:]]*CNS_SOLVE=.*\):\1\nexport CNS_ROOT=/usr:g" \
+		-e "s:^\(^[[:space:]]*CNS_SOLVE=.*\):\1\nexport CNS_ROOT=${EPREFIX}/usr:g" \
 		-e "s:^\(^[[:space:]]*CNS_SOLVE=.*\):\1\nexport CNS_DATA=\$CNS_ROOT/share/cns:g" \
 		-e "s:^\(^[[:space:]]*CNS_SOLVE=.*\):\1\nexport CNS_DOC=\$CNS_ROOT/share/doc/${PF}:g" \
 		-e "s:CNS_LIB=\$CNS_SOLVE/libraries:CNS_LIB=\$CNS_DATA/libraries:g" \
