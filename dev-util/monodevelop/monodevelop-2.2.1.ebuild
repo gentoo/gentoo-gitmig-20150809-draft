@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.2.1.ebuild,v 1.1 2010/02/21 16:19:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.2.1.ebuild,v 1.2 2010/03/07 08:34:56 loki_val Exp $
 
 EAPI=2
 
-inherit fdo-mime mono multilib gnome2-utils
+inherit fdo-mime mono multilib gnome2-utils versionator
 
 DESCRIPTION="Integrated Development Environment for .NET"
 HOMEPAGE="http://www.monodevelop.com/"
@@ -36,12 +36,12 @@ RDEPEND="sys-apps/dbus[X]
 	>=dev-dotnet/xsp-2
 	subversion? ( dev-util/subversion )
 	dev-util/ctags
-	!<dev-util/monodevelop-boo-${PV}
-	!<dev-util/monodevelop-java-${PV}
-	!<dev-util/monodevelop-database-${PV}
-	!<dev-util/monodevelop-debugger-gdb-${PV}
-	!<dev-util/monodevelop-debugger-mdb-${PV}
-	!<dev-util/monodevelop-vala-${PV}"
+	!<dev-util/monodevelop-boo-$(get_version_component_range 1-2)
+	!<dev-util/monodevelop-java-$(get_version_component_range 1-2)
+	!<dev-util/monodevelop-database-$(get_version_component_range 1-2)
+	!<dev-util/monodevelop-debugger-gdb-$(get_version_component_range 1-2)
+	!<dev-util/monodevelop-debugger-mdb-$(get_version_component_range 1-2)
+	!<dev-util/monodevelop-vala-$(get_version_component_range 1-2)"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
