@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.3.1.ebuild,v 1.1 2009/01/31 18:30:09 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.3.1.ebuild,v 1.2 2010/03/07 14:40:38 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 JAVA_PKG_IUSE="doc"
 
 inherit java-pkg-2 java-ant-2
@@ -33,10 +33,7 @@ IUSE=""
 
 S="${WORKDIR}/${MY_P}/"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	# get rid of jarjar, and add ant.jar to the taskdef module's classpath
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
@@ -58,7 +55,7 @@ src_install() {
 
 	newdoc xmlc/modules/xmlc/README.XMLC README || die
 	dodoc xmlc/modules/xmlc/ChangeLog || die
-	dohtml release/release-notes/xmlc-${PV/./-}-release-note.html \
+	dohtml release/release-notes/xmlc-${PV//./-}-release-note.html \
 		xmlc/bugs/bugs.html || die
 
 	# move the generated documentation around
