@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.07-r2.ebuild,v 1.1 2010/03/05 19:08:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.07-r2.ebuild,v 1.2 2010/03/07 22:49:03 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Image viewers for the framebuffer console (fbi) and X11 (ida)."
 HOMEPAGE="http://linux.bytesex.org/fbida/"
 SRC_URI="http://dl.bytesex.org/releases/${PN}/${P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}-libjpeg-8a.patch.bz2"
+	mirror://gentoo/${P}-libjpeg-8a.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
