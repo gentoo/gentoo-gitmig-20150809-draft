@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.99 2010/02/21 15:46:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.100 2010/03/07 12:28:19 arfrever Exp $
+
+  07 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kvirc-4.0_pre3921.ebuild, kvirc-4.0_pre4000.ebuild, kvirc-9999.ebuild:
+  Delete "crypt" USE flag (bug #307345).
 
 *kvirc-4.0_pre4000 (21 Feb 2010)
 

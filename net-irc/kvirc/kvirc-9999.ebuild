@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.24 2010/01/11 10:36:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.25 2010/03/07 12:28:19 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="python? 2"
 
 inherit cmake-utils multilib python subversion
 
@@ -15,7 +16,7 @@ ESVN_PROJECT="kvirc"
 LICENSE="kvirc"
 SLOT="4"
 KEYWORDS=""
-IUSE="audiofile +crypt dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl theora +transparency"
+IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl theora +transparency"
 
 RDEPEND="
 	>=dev-libs/crypto++-5.6.0-r1
@@ -32,7 +33,6 @@ RDEPEND="
 	oss? ( audiofile? ( media-libs/audiofile ) )
 	perl? ( dev-lang/perl )
 	phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-4.5 ) )
-	python? ( dev-lang/python )
 	qt-dbus? ( >=x11-libs/qt-dbus-4.5 )
 	qt-webkit? ( >=x11-libs/qt-webkit-4.5 )
 	ssl? ( dev-libs/openssl )"
@@ -77,9 +77,9 @@ src_configure() {
 		-DMANUAL_REVISION=${VERSIO_PRAESENS}
 		-DUSE_ENV_FLAGS=1
 		-DVERBOSE=1
+		-DWANT_CRYPT=1
 		-DWANT_NO_EMBEDDED_CODE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
-		$(cmake-utils_use_want crypt CRYPT)
 		$(cmake-utils_use_want dcc_video DCC_VIDEO)
 		$(cmake-utils_use_want dcc_voice DCC_VOICE)
 		$(cmake-utils_use_want debug DEBUG)
