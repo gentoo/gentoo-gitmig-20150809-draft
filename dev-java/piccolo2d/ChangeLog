@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/piccolo2d
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo2d/ChangeLog,v 1.1 2009/11/12 17:41:50 weaver Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo2d/ChangeLog,v 1.2 2010/03/07 14:35:04 betelgeuse Exp $
+
+*piccolo2d-1.2.1-r1 (07 Mar 2010)
+
+  07 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  +piccolo2d-1.2.1-r1.ebuild:
+  Uses com.sun classes so depend on java-virtuals/jdk-with-com-sun.
+  Fixes bug #305555.
 
 *piccolo2d-1.2.1 (12 Nov 2009)
 
