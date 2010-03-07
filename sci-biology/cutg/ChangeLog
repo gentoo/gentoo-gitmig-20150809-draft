@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/cutg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.52 2009/09/01 20:54:10 ribosome Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.53 2010/03/07 20:50:00 jlec Exp $
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> cutg-160.ebuild:
+  Moved to EAPI=3 for PREFIX support, imported prefix patches from overlay,
+  keyworded as in overlay
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Giving up maintainership of this package.
