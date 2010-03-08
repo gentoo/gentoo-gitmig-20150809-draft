@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.14 2010/02/09 21:16:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.15 2010/03/08 00:26:02 nixphoeni Exp $
+
+*xwax-0.7 (08 Mar 2010)
+
+  08 Mar 2010; Joe Sapp <nixphoeni@gentoo.org> +xwax-0.7.ebuild,
+  metadata.xml:
+  Version bump; added XWAX_DECODERS to IUSE so RDEPEND (and the xwax-import
+  script) can be setup properly to handle the audio files the user cares
+  about; bumped EAPI for access to EROOT
 
   09 Feb 2010; Joseph Jezak <josejx@gentoo.org> xwax-0.5.ebuild,
   xwax-0.6-r1.ebuild:
