@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.1 2009/12/18 11:35:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.2 2010/03/08 22:28:13 ssuominen Exp $
 
 EAPI=2
 
@@ -40,6 +40,10 @@ pkg_setup() {
 		ewarn "the openmp and image-cache USE-flags are mutually exclusive"
 		ewarn "image-cache will be disabled in favour of openmp"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_configure() {
