@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.2 2010/02/16 08:19:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.3 2010/03/08 19:13:14 grobian Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -52,10 +52,13 @@ src_prepare() {
 		cp -f makefile.linux_amd64 makefile.machine
 	elif [[ ${CHOST} == *-darwin* ]] ; then
 		# Mac OS X needs this special makefile, because it has a non-GNU linker
-		cp -f makefile.macosx makefile.machine
+		[[ ${CHOST} == *64-* ]] \
+			&& cp -f makefile.macosx_64bits makefile.machine \
+			|| cp -f makefile.macosx_32bits makefile.machine
 		# bundles have extension .bundle
 		sed -i -e '/^PROG=/s/\.so/.bundle/' \
-			CPP/7zip/Bundles/Format7zFree/makefile || die
+			CPP/7zip/Bundles/Format7zFree/makefile \
+			CPP/7zip/Compress/Rar/makefile || die
 	elif use x86-fbsd; then
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine
