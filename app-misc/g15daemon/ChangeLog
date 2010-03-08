@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.29 2010/03/06 20:44:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.30 2010/03/08 17:24:41 ranger Exp $
+
+  08 Mar 2010; Brent Baude <ranger@gentoo.org> g15daemon-1.9.5.3-r3.ebuild:
+  Marking g15daemon-1.9.5.3-r3 ppc64 for bug 284520
 
 *g15daemon-1.9.5.3-r3 (06 Mar 2010)
 
