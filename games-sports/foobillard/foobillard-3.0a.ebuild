@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.12 2008/12/07 11:28:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.13 2010/03/08 22:17:34 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools games
 
 DESCRIPTION="8ball, 9ball, snooker and carambol game"
-HOMEPAGE="http://foobillard.sunsite.dk/"
-SRC_URI="http://foobillard.sunsite.dk/dnl/${P}.tar.gz"
+HOMEPAGE="http://foobillard.sourceforge.net/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,9 +25,7 @@ RDEPEND="x11-libs/libXaw
 DEPEND="${RDEPEND}
 	app-admin/eselect-opengl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-no_nvidia.patch \
 		"${FILESDIR}"/${P}-fbsd.patch \
@@ -35,7 +34,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	[[ "$(eselect opengl show)" == 'nvidia' ]] \
 		&& myconf='--enable-nvidia=yes' \
@@ -45,9 +44,7 @@ src_compile() {
 		--enable-sound \
 		$(use_enable sdl SDL) \
 		$(use_enable !sdl glut) \
-		${myconf} \
-		|| die
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
