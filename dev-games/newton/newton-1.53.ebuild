@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-1.53.ebuild,v 1.3 2007/07/24 00:22:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-1.53.ebuild,v 1.4 2010/03/08 22:12:34 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="an integrated solution for real time simulation of physics environments"
-HOMEPAGE="http://www.physicsengine.com/"
-SRC_URI="http://www.physicsengine.com/downloads/${PN}Linux-${PV}.tar.gz
-	http://www.newtondynamics.com/downloads/${PN}Linux-${PV}.tar.gz"
+HOMEPAGE="newtondynamics.com/"
+SRC_URI="http://www.newtondynamics.com/downloads/${PN}Linux-${PV}.tar.gz"
 
 LICENSE="newton"
 SLOT="0"
@@ -22,9 +22,7 @@ DEPEND="doc? (
 
 S=${WORKDIR}/newtonSDK
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	if use doc; then
 		cd samples
 		rm -rf gl
