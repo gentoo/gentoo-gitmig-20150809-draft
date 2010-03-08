@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r1.ebuild,v 1.10 2010/02/10 19:46:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r1.ebuild,v 1.11 2010/03/08 22:20:59 reavertm Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -16,7 +16,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="acl avahi dbus gnutls java jpeg kerberos ldap pam perl php png ppds python samba slp ssl static tiff X xinetd zeroconf"
 
-COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
+COMMON_DEPEND="
+	app-text/libpaper
+	dev-libs/libgcrypt
+	acl? (
+		kernel_linux? (
+			sys-apps/acl
+			sys-apps/attr
+		)
+	)
 	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
 	gnutls? ( net-libs/gnutls )
@@ -30,38 +38,41 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	png? ( >=media-libs/libpng-1.2.1 )
 	python? ( dev-lang/python )
 	slp? ( >=net-libs/openslp-1.0.4 )
-	ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8g ) )
+	ssl? (
+		!gnutls? ( >=dev-libs/openssl-0.9.8g )
+	)
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	xinetd? ( sys-apps/xinetd )
-	zeroconf? ( !avahi? ( net-misc/mDNSResponder ) )
-	app-text/libpaper
-	dev-libs/libgcrypt"
-
-DEPEND="${COMMON_DEPEND}
-	!<net-print/foomatic-filters-ppds-20070501
-	!<net-print/hplip-1.7.4a-r1"
-
+	zeroconf? (
+		!avahi? ( net-misc/mDNSResponder )
+	)
+"
+DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}
+	!<net-print/foomatic-filters-ppds-20070501
+	!<net-print/hplip-1.7.4a-r1
 	!virtual/lpr
 	X? ( x11-misc/xdg-utils )
-	>=app-text/poppler-0.12.3-r3[utils]
-	"
-
+"
 PDEPEND="
-	ppds? ( || (
-		(
+	app-text/ghostscript-gpl
+	>=app-text/poppler-0.12.3-r3[utils]
+	ppds? (
+		|| (
+			(
+				net-print/foomatic-filters-ppds
+				net-print/foomatic-db-ppds
+			)
 			net-print/foomatic-filters-ppds
 			net-print/foomatic-db-ppds
+			net-print/hplip
+			net-print/gutenprint
+			net-print/foo2zjs
+			net-print/cups-pdf
 		)
-		net-print/foomatic-filters-ppds
-		net-print/foomatic-db-ppds
-		net-print/hplip
-		net-print/gutenprint
-		net-print/foo2zjs
-		net-print/cups-pdf
-	) )
+	)
 	samba? ( >=net-fs/samba-3.0.8 )
-	app-text/ghostscript-gpl"
+"
 
 PROVIDE="virtual/lpr"
 
@@ -157,7 +168,7 @@ src_configure() {
 		--with-cups-group=lp \
 		--with-docdir=/usr/share/cups/html \
 		--with-languages=${LINGUAS} \
-		--with-pdftops=pdftops \
+		--with-pdftops=/usr/bin/pdftops \
 		--with-system-groups=lpadmin \
 		--with-xinetd=/etc/xinetd.d \
 		$(use_enable acl) \

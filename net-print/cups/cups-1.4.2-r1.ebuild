@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.4 2010/02/10 19:46:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.5 2010/03/08 22:20:59 reavertm Exp $
 
 EAPI="2"
 
@@ -17,7 +17,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static +tiff X xinetd"
 
-COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
+COMMON_DEPEND="
+	app-text/libpaper
+	dev-libs/libgcrypt
+	dev-libs/libusb
+	acl? (
+		kernel_linux? (
+			sys-apps/acl
+			sys-apps/attr
+		)
+	)
 	dbus? ( sys-apps/dbus )
 	gnutls? ( net-libs/gnutls )
 	java? ( >=virtual/jre-1.4 )
@@ -30,22 +39,26 @@ COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	png? ( >=media-libs/libpng-1.2.1 )
 	python? ( dev-lang/python )
 	slp? ( >=net-libs/openslp-1.0.4 )
-	ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8g ) )
+	ssl? (
+		!gnutls? ( >=dev-libs/openssl-0.9.8g )
+	)
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	xinetd? ( sys-apps/xinetd )
-	app-text/libpaper
-	dev-libs/libgcrypt
-	dev-libs/libusb
-	>=app-text/poppler-0.12.3-r3[utils]
-	!net-print/cupsddk"
-
+"
 DEPEND="${COMMON_DEPEND}"
 
 RDEPEND="${COMMON_DEPEND}
+	!net-print/cupsddk
 	!virtual/lpr
-	X? ( x11-misc/xdg-utils )"
-
-PDEPEND="|| ( app-text/ghostscript-gpl[cups] app-text/ghostscript-gnu[cups] )"
+	X? ( x11-misc/xdg-utils )
+"
+PDEPEND="
+	|| (
+		app-text/ghostscript-gpl[cups]
+		app-text/ghostscript-gnu[cups]
+	)
+	>=app-text/poppler-0.12.3-r3[utils]
+"
 
 PROVIDE="virtual/lpr"
 
@@ -102,7 +115,7 @@ src_configure() {
 		--with-cups-group=lp \
 		--with-docdir=/usr/share/cups/html \
 		--with-languages="${LINGUAS}" \
-		--with-pdftops=pdftops \
+		--with-pdftops=/usr/bin/pdftops \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
 		$(use_enable dbus) \
