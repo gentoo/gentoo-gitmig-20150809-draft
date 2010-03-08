@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.23.ebuild,v 1.9 2008/10/27 05:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.23.ebuild,v 1.10 2010/03/08 08:14:49 sping Exp $
 
 inherit eutils libtool
 
 MY_P=${P/-/_}
 DESCRIPTION="Library for handling paper characteristics"
 HOMEPAGE="http://packages.debian.org/unstable/source/libpaper"
-SRC_URI="mirror://debian/pool/main/libp/libpaper/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
