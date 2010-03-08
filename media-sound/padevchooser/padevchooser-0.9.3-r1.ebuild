@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/padevchooser-0.9.3-r1.ebuild,v 1.2 2010/03/08 17:04:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/padevchooser-0.9.3-r1.ebuild,v 1.3 2010/03/08 20:18:41 maekke Exp $
 
 EAPI=2
 
@@ -34,5 +34,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dohtml -r doc
-	dodoc README doc/todo
+	dodoc README
 }
