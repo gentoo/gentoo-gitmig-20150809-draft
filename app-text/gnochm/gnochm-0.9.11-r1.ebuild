@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/gnochm-0.9.11-r1.ebuild,v 1.5 2010/03/06 03:58:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/gnochm-0.9.11-r1.ebuild,v 1.6 2010/03/08 00:48:32 abcd Exp $
 
 EAPI="2"
+
+PYTHON_DEPEND="2"
 
 inherit gnome2 python
 
@@ -24,8 +26,6 @@ RDEPEND=">=dev-python/pychm-0.8.4
 DEPEND="${RDEPEND}
 		app-text/scrollkeeper
 		>=dev-util/intltool-0.21"
-
-PYTHON_DEPEND="2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
