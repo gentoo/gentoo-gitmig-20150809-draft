@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.153 2010/03/08 17:19:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.154 2010/03/08 18:57:19 grobian Exp $
+
+  08 Mar 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Update cssc mask to point to the right category (dev-util -> dev-vcs)
 
   08 Mar 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Unmask Snow Leopard compilers, their ebuilds should be fine now.
