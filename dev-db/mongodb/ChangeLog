@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.1 2010/03/07 23:39:41 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.2 2010/03/08 07:05:29 ramereth Exp $
+
+*mongodb-1.3.3 (08 Mar 2010)
+*mongodb-1.2.4 (08 Mar 2010)
+
+  08 Mar 2010; Lance Albertson <ramereth@gentoo.org> +mongodb-1.2.4.ebuild,
+  +mongodb-1.3.3.ebuild, +files/mongodb-1.3-modify-post-strip.patch,
+  +files/mongodb-1.3-modify-testing.patch:
+  Version bump, add 1.3.x branch ebuild, remove postinst bits, use correct
+  upstream tarball.
 
 *mongodb-1.2.2 (07 Mar 2010)
 
