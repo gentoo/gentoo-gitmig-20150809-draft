@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.4 2010/03/02 10:39:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.5 2010/03/08 17:18:17 hwoarang Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.wicd.net/src/stable/1.7.x/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="X +gtk ioctl libnotify ncurses nls +pm-utils"
 
 DEPEND=""
@@ -66,7 +66,7 @@ src_install() {
 		|| die "keepdir failed, critical for this app"
 	keepdir /var/log/wicd \
 		|| die "keepdir failed, critical for this app"
-	use nls || rm -rf ${D}/usr/share/locale
+	use nls || rm -rf "${D}"/usr/share/locale
 }
 
 pkg_postinst() {
@@ -80,10 +80,8 @@ pkg_postinst() {
 	elog "(For example, RC_PLUG_SERVICES=\"!net.eth0 !net.wlan0\")"
 	# Maintainer's note: the consolekit use flag short circuits a dbus rule and
 	# allows the connection. Else, you need to be in the group.
-	if has_version sys-auth/pambase; then
-		if ! built_with_use sys-auth/pambase consolekit; then
+	if ! has_version sys-auth/pambase[consolekit]; then
 			ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
 			ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf"
-		fi
 	fi
 }
