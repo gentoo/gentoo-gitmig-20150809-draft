@@ -1,6 +1,5 @@
-diff -ur spamprobe-1.4d.orig/src/parser/PngParser.cc spamprobe-1.4d/src/parser/PngParser.cc
---- spamprobe-1.4d.orig/src/parser/PngParser.cc	2006-11-17 09:11:10.000000000 +0200
-+++ spamprobe-1.4d/src/parser/PngParser.cc	2010-03-08 19:37:56.000000000 +0200
+--- src/parser/PngParser.cc
++++ src/parser/PngParser.cc
 @@ -53,9 +53,9 @@
  {
    if (m_initialized) {
