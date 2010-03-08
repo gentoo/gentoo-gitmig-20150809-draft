@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/opendict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.18 2010/03/06 04:26:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.19 2010/03/08 00:47:47 abcd Exp $
+
+  08 Mar 2010; Jonathan Callen <abcd@gentoo.org> opendict-0.6.3.ebuild:
+  Move PYTHON_DEPEND before inherit(), so that the dep is actually added
 
   06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> opendict-0.6.3.ebuild:
   Drop use of deprecated python.eclass functions.
