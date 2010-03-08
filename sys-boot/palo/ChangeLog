@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/palo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.23 2009/08/14 14:02:37 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.24 2010/03/08 05:06:30 jer Exp $
+
+*palo-1.17 (08 Mar 2010)
+
+  08 Mar 2010; Jeroen Roovers <jer@gentoo.org> +palo-1.17.ebuild,
+  +files/palo-1.17-fortify-source.patch:
+  Version bump with only trivial changes, but with an extra patch to build
+  with -D_FORTIFY_SOURCE=2.
 
   14 Aug 2009; Jeroen Roovers <jer@gentoo.org> -palo-1.2_pre20030630.ebuild,
   -palo-1.3_pre20040303.ebuild, -palo-1.5_pre20040515.ebuild,
