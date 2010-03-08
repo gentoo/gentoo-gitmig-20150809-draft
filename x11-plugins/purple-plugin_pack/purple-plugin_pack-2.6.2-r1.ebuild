@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.1.ebuild,v 1.2 2009/12/22 00:35:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.2-r1.ebuild,v 1.1 2010/03/08 18:37:33 pva Exp $
 
 EAPI="2"
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="A package with many different plugins for pidgin and libpurple"
 HOMEPAGE="http://plugins.guifications.org"
@@ -21,18 +21,13 @@ RDEPEND="net-im/pidgin[gtk?,ncurses?]
 DEPEND="${RDEPEND}
 	dev-lang/python"
 
-src_prepare() {
-	# http://plugins.guifications.org/trac/ticket/597
-	sed -e '/DEPENDENCIES=/{s:talkfilters:talkfiltersbin:}' \
-		-i configure* || die
-	sed -e '/^depends/{s:$: talkfiltersbin:}' \
-		-i talkfilters/plugins.cfg || die
-	eautoreconf #Avoid maintainer mode
-}
-
 list_plugins_dep() {
 	local dependency=${1}
 	grep -EH "depends.*$dependency" */plugins.cfg | sed 's:/.*::'
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-build-irc-more.patch"
 }
 
 src_configure() {
@@ -40,6 +35,8 @@ src_configure() {
 
 	# list all plugins, then pull DISABLED_PLUGINS with the ones we don't need
 	plugins="$(python plugin_pack.py -d dist_dirs)"
+	einfo "List of all possible plugins:"
+	einfo "${plugins}"
 
 	eval DISABLED_PLUGINS="\$${PN//[^a-z]/_}_DISABLED_PLUGINS"
 	# disable known broken plugins
@@ -68,5 +65,5 @@ src_install() {
 pkg_preinst() {
 	elog "Note: if you want to disable some plugins in pack, define"
 	elog "${PN//[^a-z]/_}_DISABLED_PLUGINS with a list of plugins to"
-	elog "skip during install."
+	elog "skip during install (for list see einfo in build output)."
 }
