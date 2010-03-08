@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.20.ebuild,v 1.2 2010/01/22 16:40:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.20.ebuild,v 1.3 2010/03/08 21:20:40 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -19,9 +20,11 @@ DEPEND="x11-libs/gtk+
 	>=media-libs/libpng-1.2.3"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/Ted-${PV}"
+S=${WORKDIR}/Ted-${PV}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+
 	sed -i -e 's|/Ted/|/share/Ted/|' \
 		"${S}"/appFrame/appFrameConfig.h.in \
 		"${S}"/Ted/tedConfig.h.in || die
