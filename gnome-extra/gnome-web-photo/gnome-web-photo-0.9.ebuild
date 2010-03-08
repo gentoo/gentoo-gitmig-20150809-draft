@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.8-r1.ebuild,v 1.2 2010/03/08 23:40:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.9.ebuild,v 1.1 2010/03/08 23:40:02 eva Exp $
+
+EAPI="2"
 
 inherit autotools gnome2
 
@@ -12,25 +14,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="jpeg"
 
-RDEPEND=">=dev-libs/glib-2.6.0
-		>=x11-libs/gtk+-2.6.3
-		>=dev-libs/libxml2-2.6.12
-		media-libs/libpng
-		gnome-base/gconf
-		jpeg? ( media-libs/jpeg )
-		net-libs/xulrunner"
+RDEPEND=">=dev-libs/glib-2.6
+	>=x11-libs/gtk+-2.6.3
+	>=dev-libs/libxml2-2.6.12
+	media-libs/libpng
+	gnome-base/gconf
+	jpeg? ( media-libs/jpeg )
+	net-libs/xulrunner"
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.19"
+	>=dev-util/pkgconfig-0.19
+	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable jpeg)"
 }
-src_unpack() {
-	gnome2_src_unpack
+
+src_prepare() {
+	gnome2_src_prepare
 
 	# Compatibility with xulrunner-1.9.2, per bug #303897
-	epatch "${FILESDIR}"/${P}-libxul-compat.patch
+	epatch "${FILESDIR}/${PN}-0.8-libxul-compat.patch"
+
 	eautoreconf
 }
