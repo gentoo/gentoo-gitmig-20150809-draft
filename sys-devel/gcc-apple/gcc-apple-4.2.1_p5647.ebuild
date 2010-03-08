@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.1 2010/03/08 17:12:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.2 2010/03/08 18:20:32 grobian Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-${APPLE
 		fortran? ( mirror://gnu/gcc/gcc-4.2.4/gcc-fortran-4.2.4.tar.bz2 )"
 LICENSE="GPL-2 GPL-3"
 
-if [[ ${CHOST#*-darwin} -ge 9 ]] ; then
+if [[ ${CHOST} == *-darwin* && ${CHOST#*-darwin} -ge 9 ]] ; then
 	LIBSTDCXX_APPLE_VERSION=39
 else
 	# pre Leopard has no dtrace, which is required by 37.11 and above
