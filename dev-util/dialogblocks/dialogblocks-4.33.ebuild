@@ -1,29 +1,32 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.33.ebuild,v 1.1 2009/08/23 08:34:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.33.ebuild,v 1.2 2010/03/08 21:57:29 ssuominen Exp $
 
-inherit eutils
+EAPI=2
 
 DESCRIPTION="GUI builder tool for wxWidgets"
 HOMEPAGE="http://www.anthemion.co.uk/dialogblocks/"
-SRC_URI="!amd64? ( http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-i386.tar.gz )
+SRC_URI="x86? ( http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-i386.tar.gz )
 	amd64? ( http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-x86_64.tar.gz )"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* ~amd64 ~x86"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="app-arch/tar"
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXinerama
-	>=media-libs/libpng-1.2
-	media-libs/jpeg
-	>=media-libs/tiff-3"
+	x11-libs/libXxf86vm
+	x11-libs/libSM
+	=media-libs/libpng-1.2*
+	=media-libs/jpeg-6*
+	sys-libs/zlib
+	x11-libs/libX11"
 
-S="${WORKDIR}"
+QA_PRESTRIPPED="opt/dialogblocks/dialogblocks"
+QA_DT_HASH="opt/dialogblocks/dialogblocks"
 
-RESTRICT="strip" # the dialogblocks program is already stripped
+S=${WORKDIR}
 
 src_install() {
 	dodir /opt/dialogblocks
