@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.3 2010/02/10 22:43:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.4 2010/03/08 17:54:02 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -134,6 +134,8 @@ src_prepare() {
 	# remove pyparsing only when upstream pyparsing included matplotlib
 	# fixes. See bug #260025
 	#rm -f lib/matplotlib/pyparsing.py
+
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_compile() {
