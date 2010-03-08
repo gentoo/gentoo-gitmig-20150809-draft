@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610-r1.ebuild,v 1.1 2009/11/15 02:37:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610-r1.ebuild,v 1.2 2010/03/08 16:41:39 ssuominen Exp $
 
 # jmbreuer FOR DEV ONLY
 RESTRICT="mirror test"
@@ -199,7 +199,8 @@ EOF
 	# security bug #282874
 	epatch "${FILESDIR}/CVE-2009-1284.patch"
 
-	epatch "${FILESDIR}/${P}-getline.patch"
+	epatch "${FILESDIR}"/${P}-getline.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	cd "${TETEX_S}/texk/dviljk"
 	eautoreconf
