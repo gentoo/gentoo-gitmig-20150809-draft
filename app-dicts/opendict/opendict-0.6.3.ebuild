@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.3 2010/03/08 00:47:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.4 2010/03/08 02:22:36 dirtyepic Exp $
 
 EAPI=2
-
-PYTHON_DEPEND="2"
+PYTHON_DEPEND=2
 
 inherit eutils gnome2 python
 
@@ -18,6 +17,10 @@ IUSE=""
 
 RDEPEND="dev-python/wxpython:2.8
 	dev-python/pyxml"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	sed -e "s:), '..')):), '../../../../..', 'share', 'opendict')):g" \
@@ -50,6 +53,7 @@ src_install() {
 	insinto "${DHOME}/lib"
 	doins -r "${S}"/lib/*
 	exeinto "${DHOME}"
+	python_convert_shebangs 2 opendict.py
 	doexe opendict.py
 
 	dosym "${DHOME}/opendict.py" /usr/bin/opendict
