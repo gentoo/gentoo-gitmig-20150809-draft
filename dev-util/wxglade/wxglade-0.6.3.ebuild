@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.3.ebuild,v 1.7 2010/03/06 05:42:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.3.ebuild,v 1.8 2010/03/08 00:52:31 abcd Exp $
 
 EAPI="2"
 
+PYTHON_DEPEND="2:2.4"
 inherit eutils multilib python
 
 MY_P="wxGlade-${PV}"
@@ -18,7 +19,6 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-python/wxpython:2.8"
-PYTHON_DEPEND="2:2.3"
 
 S="${WORKDIR}/${MY_P}"
 
