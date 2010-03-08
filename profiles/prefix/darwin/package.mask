@@ -1,7 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.9 2010/02/03 08:58:53 grobian Exp $
-# $Id: package.mask,v 1.9 2010/02/03 08:58:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.10 2010/03/08 17:19:34 grobian Exp $
+# $Id: package.mask,v 1.10 2010/03/08 17:19:34 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (03 Feb 2010)
 # ld: duplicate symbol mylist<....> caused by implementation code in
@@ -14,10 +14,6 @@
 ~sys-devel/gcc-4.3.4
 ~sys-devel/gcc-4.4.1
 ~sys-devel/gcc-4.4.2
-
-# Fabian Groffen <grobian@gentoo.org> (05 Sep 2009)
-# These are Snow Leopard releases and still a Work In Progress (tm)
-~sys-devel/gcc-apple-4.2.1_p5646
 
 # Fabian Groffen <grobian@gentoo.org> (30 Jun 2009)
 # platform.h:81: error: conflicting types for ‘setmode’
