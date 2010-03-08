@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.44 2010/03/08 00:54:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.45 2010/03/08 03:29:41 dirtyepic Exp $
+
+  08 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> nicotine+-1.2.15.ebuild:
+  More python fixedness.
 
   08 Mar 2010; Jonathan Callen <abcd@gentoo.org> nicotine+-1.2.15.ebuild:
   Move PYTHON_DEPEND before inherit(), so that the dep is actually added
