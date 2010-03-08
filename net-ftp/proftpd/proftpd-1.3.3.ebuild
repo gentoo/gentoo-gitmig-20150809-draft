@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc3-r1.ebuild,v 1.1 2009/12/18 23:13:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3.ebuild,v 1.1 2010/03/08 13:38:46 voyageur Exp $
 
 EAPI="2"
 inherit eutils
 
 CASE_VER="0.3"
 CLAMAV_VER="0.11rc"
-DEFLATE_VER="0.4"
-GSS_VER="1.3.2"
+DEFLATE_VER="0.5.4"
+GSS_VER="1.3.3"
 VROOT_VER="0.8.5"
 
 DESCRIPTION="An advanced and very configurable FTP server."
@@ -74,9 +74,6 @@ src_prepare() {
 	fi
 	use deflate && __prepare_module mod_deflate
 	use vroot && __prepare_module mod_vroot
-
-	# Fix segfault on conf check, Gentoo bug #297310
-	epatch "${FILESDIR}"/${P}-tls-shmcache-bug3359.patch
 
 	# Fix MySQL includes
 	sed -i -e "s/<mysql.h>/<mysql\/mysql.h>/g" contrib/mod_sql_mysql.c
@@ -167,8 +164,8 @@ src_configure() {
 	use ifsession && mym="${mym}:mod_ifsession"
 
 	[ -z ${mym} ] || myc="${myc} --with-modules=${mym:1}"
-	LIBS="${myl}" econf --sbindir=/usr/sbin --localstatedir=/var/run/proftpd \
-		--sysconfdir=/etc/proftpd --enable-shadow --enable-autoshadow \
+	LIBS="${myl:1}" econf --sbindir=/usr/sbin --localstatedir=/var/run/proftpd \
+		--sysconfdir=/etc/proftpd --enable-shadow --enable-autoshadow ${myc:1} \
 		$(use_enable acl facl) \
 		$(use_enable authfile auth-file) \
 		$(use_enable caps cap) \
@@ -177,21 +174,20 @@ src_configure() {
 		$(use_enable ncurses) \
 		$(use_enable nls) \
 		$(use_enable trace) \
-		$(use_enable pam auth-pam) \
-		${myc:1} || die "econf failed"
+		$(use_enable pam auth-pam)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
+	insinto /etc/proftpd
+	doins "${FILESDIR}"/proftpd.conf.sample
 	keepdir /var/run/proftpd
-	newinitd "${FILESDIR}"/proftpd.rc7 proftpd
+	newinitd "${FILESDIR}"/proftpd.initd proftpd
 	if use xinetd ; then
 		insinto /etc/xinetd.d
 		newins "${FILESDIR}"/proftpd.xinetd proftpd
 	fi
-	insinto /etc/proftpd
-	doins "${FILESDIR}"/proftpd.conf.sample
 
 	dodoc ChangeLog CREDITS INSTALL NEWS README* RELEASE_NOTES
 	if use doc ; then
