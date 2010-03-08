@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20050831.ebuild,v 1.9 2010/03/08 12:21:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20050831.ebuild,v 1.10 2010/03/08 12:22:38 ssuominen Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ has_tetex_3() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's/\(f dvipdfm.map\)/%\1/' \
 		-e '/^%% GhostScript (Unix\/Linux)/,+1s/^%//g' \
 		data/config/dvipdfmx.cfg || die
@@ -52,7 +52,7 @@ src_install() {
 	doins data/config/dvipdfmx.cfg || die
 
 	insinto /usr/share/texmf/fonts/map/dvipdfm
-	doins ${FILESDIR}/cid-x.map || die
+	doins "${FILESDIR}"/cid-x.map || die
 
 	insinto /usr/share/texmf/fonts/cmap
 	doins data/CMap/*-UCS2*
