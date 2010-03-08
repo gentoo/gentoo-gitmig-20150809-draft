@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.6.0.ebuild,v 1.3 2010/02/23 11:17:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.6.0.ebuild,v 1.4 2010/03/08 10:43:25 djc Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,4 +24,13 @@ src_install() {
 
 	dodoc README
 	newdoc python3/README README-python3
+}
+
+src_test() {
+	testing() {
+		cd "$S/python${PYTHON_ABI:0:1}"
+		"$(PYTHON)" httplib2test.py
+		cd ../..
+	}
+	python_execute_function testing
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/httplib2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.17 2010/02/23 11:17:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.18 2010/03/08 10:43:25 djc Exp $
+
+  08 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> httplib2-0.6.0.ebuild:
+  Added a src_test() function to 0.6.0.
 
   23 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   httplib2-0.6.0.ebuild:
