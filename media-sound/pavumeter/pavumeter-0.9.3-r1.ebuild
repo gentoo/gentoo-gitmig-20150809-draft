@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/pavumeter-0.9.3-r1.ebuild,v 1.2 2010/02/19 18:58:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/pavumeter-0.9.3-r1.ebuild,v 1.3 2010/03/08 20:25:48 maekke Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-cpp/gtkmm-2.4
