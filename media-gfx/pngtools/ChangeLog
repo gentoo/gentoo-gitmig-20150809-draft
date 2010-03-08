@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngtools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/ChangeLog,v 1.7 2009/11/26 09:22:33 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/ChangeLog,v 1.8 2010/03/08 22:43:31 ssuominen Exp $
+
+  08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pngtools-0.4.ebuild,
+  +files/pngtools-0.4-libpng14.patch:
+  Fix building with -Wl,--as-needed and libpng14.
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> pngtools-0.4.ebuild:
   add trailing slash to HOMEPAGE by Mr. Anderson in bug #293205
