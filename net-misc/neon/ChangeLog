@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/neon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.152 2010/03/04 15:23:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.153 2010/03/08 22:35:30 swegener Exp $
+
+  08 Mar 2010; Sven Wegener <swegener@gentoo.org> neon-0.29.1.ebuild,
+  neon-0.29.2.ebuild, neon-0.29.3.ebuild, +files/neon-0.29-sni-fix.patch:
+  Pull in a patch from Debian to fix SNI support.
 
   04 Mar 2010; Jeroen Roovers <jer@gentoo.org> neon-0.29.3.ebuild:
   Stable for HPPA (bug #305181).
