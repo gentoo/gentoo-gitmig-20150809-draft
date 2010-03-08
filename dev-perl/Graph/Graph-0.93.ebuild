@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.92.ebuild,v 1.1 2010/03/05 08:01:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.93.ebuild,v 1.1 2010/03/08 07:49:20 tove Exp $
 
 EAPI=2
 
