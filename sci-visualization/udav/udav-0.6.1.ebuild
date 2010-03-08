@@ -1,25 +1,26 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/udav-0.5.2.ebuild,v 1.1 2009/11/26 19:51:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/udav-0.6.1.ebuild,v 1.1 2010/03/08 19:16:04 grozin Exp $
 
 EAPI=2
-inherit qt4 fdo-mime flag-o-matic
+inherit qt4 fdo-mime
 
 DESCRIPTION="Universal Data Array Visualization"
 HOMEPAGE="http://udav.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RDEPEND="sci-libs/mathgl[qt4,hdf5]"
+RDEPEND=">=sci-libs/mathgl-1.10.1[qt4,hdf5]"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.5.1-pro.patch
+	epatch "${FILESDIR}"/${P}-pro.patch
+	rm src/Makefile || die "no src/Makefile"
 }
 
 src_compile() {
-	append-flags -DH5_USE_16_API
 	eqmake4
 	emake || die "emake failed"
 }
@@ -27,10 +28,7 @@ src_compile() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 
-	make_desktop_entry ${PN}
-	insinto /usr/share/icons/hicolor/48x48/apps
-	doins src/${PN}.png
-	dosym /usr/share/icons/hicolor/48x48/apps/${PN}.png \
+	dosym /usr/share/icons/hicolor/64x64/apps/${PN}.png \
 		/usr/share/pixmaps/${PN}.png
 }
 
