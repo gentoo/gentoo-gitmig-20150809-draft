@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.11 2009/09/22 13:10:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.12 2010/03/08 08:45:25 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -56,8 +56,9 @@ pkg_setup() {
 		# xulrunner-1.9.0* dir structure is broken
 		G2CONF="${G2CONF}
 		--with-gecko-home=/usr/$(get_libdir)/xulrunner-1.9"
-	elif has_version "=net-libs/xulrunner-1.9.1*"; then
-		# xulrunner-1.9.1 dir structure is fine, but the build system pukes on
+	elif has_version "=net-libs/xulrunner-1.9.1*" || \
+		 has_version "=net-libs/xulrunner-1.9.2*"; then
+		# xulrunner-1.9.{1,2} dir structure is fine, but the build system pukes on
 		# auto-detect
 		G2CONF="${G2CONF}
 		--with-gecko-home=$(pkg-config --variable=sdkdir libxul)/bin"

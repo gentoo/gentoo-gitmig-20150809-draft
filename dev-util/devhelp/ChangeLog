@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.100 2010/03/06 20:14:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.101 2010/03/08 08:45:25 nirbheek Exp $
+
+  08 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  devhelp-0.21-r1.ebuild:
+  Add support for xulrunner-1.9.2 to stable devhelp; fixes bug 304183
 
   06 Mar 2010; Pacho Ramos <pacho@gentoo.org> devhelp-2.28.1.ebuild:
   amd64 stable, bug 298202
