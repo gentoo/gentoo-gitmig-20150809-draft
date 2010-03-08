@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/padevchooser
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.13 2008/10/09 21:36:43 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.14 2010/03/08 17:04:15 hwoarang Exp $
+
+  08 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  padevchooser-0.9.3-r1.ebuild:
+  Stable on amd64 wrt bug #305923
 
 *padevchooser-0.9.3-r1 (09 Oct 2008)
 
