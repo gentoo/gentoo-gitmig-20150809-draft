@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.29 2010/02/10 04:20:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.30 2010/03/08 20:57:44 maekke Exp $
+
+  08 Mar 2010; Markus Meier <maekke@gentoo.org> powertop-1.11.ebuild:
+  arm stable, bug #302349
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> powertop-1.11.ebuild:
   Marked ppc stable for bug #302349.
