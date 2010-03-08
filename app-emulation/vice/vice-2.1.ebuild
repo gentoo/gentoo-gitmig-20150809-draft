@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.1.ebuild,v 1.6 2010/01/22 16:41:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.1.ebuild,v 1.7 2010/03/08 18:52:38 ssuominen Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="The Versatile Commodore 8-bit Emulator"
 HOMEPAGE="http://www.viceteam.org/"
@@ -55,6 +55,12 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch \
 		"${FILESDIR}"/${P}-xshm.patch
+
+	sed -i \
+		-e 's:png_check_sig:png_sig_cmp:g' \
+		configure.in || die
+
+	AT_NO_RECURSIVE=1 eautoreconf
 }
 
 src_configure() {
