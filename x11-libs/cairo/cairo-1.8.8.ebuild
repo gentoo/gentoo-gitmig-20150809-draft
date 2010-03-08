@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.17 2010/02/08 15:59:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.18 2010/03/08 09:00:40 ssuominen Exp $
 
 EAPI=2
 
@@ -54,7 +54,8 @@ src_prepare() {
 	# ClearType-like patches applied by ArchLinux
 	use cleartype && epatch "${FILESDIR}"/cairo-1.2.4-lcd-cleartype-like.diff
 
-	epatch "${FILESDIR}"/${P}-interix.patch
+	epatch "${FILESDIR}"/${P}-interix.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	# upgraded to an eautoreconf for the above interix patch.

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.236 2010/02/08 15:59:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.237 2010/03/08 09:00:40 ssuominen Exp $
+
+  08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> cairo-1.8.8.ebuild,
+  +files/cairo-1.8.8-libpng14.patch:
+  Fix libpng14 detection wrt #305117 by Lars Wendler.
 
   08 Feb 2010; Doug Goldstein <cardoe@gentoo.org> cairo-1.8.8.ebuild:
   remove xcb-proto DEPEND as per bug #285606
