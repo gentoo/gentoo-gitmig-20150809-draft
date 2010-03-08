@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.686 2010/03/06 11:18:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.687 2010/03/08 10:24:07 zmedico Exp $
+
+*portage-2.2_rc66 (08 Mar 2010)
+
+  08 Mar 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc66.ebuild:
+  2.2_rc66 version bump. This includes all fixes in 2.1.8.2.
+
+*portage-2.1.8.2 (08 Mar 2010)
+
+  08 Mar 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.8.2.ebuild:
+  2.1.8.2 version bump. This fixes bug #291331 (UnicodeEncodeError with
+  python3 and elog mail module), bug #307409 (always show all USE flags
+  in circular deps display), and bug #308415 (broken fetch with ebuild(1)
+  in some cases). Bug #307597 tracks all bugs fixed since portage-2.1.7.x.
 
   06 Mar 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.8.ebuild,
   -portage-2.2_rc63.ebuild, -portage-2.2_rc64.ebuild:
