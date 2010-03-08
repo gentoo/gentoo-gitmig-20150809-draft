@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.28 2010/03/03 19:55:23 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.29 2010/03/08 14:35:09 pacho Exp $
+
+*bluez-4.62 (08 Mar 2010)
+
+  08 Mar 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.61-r1.ebuild,
+  +bluez-4.62.ebuild, +files/bluez-alsa_location.patch:
+  Version bump, fixes important bugs like symbol breakage introduced in 4.61
+  that was causing bug 308081. Thanks to David Watzke for reporting.
 
 *bluez-4.61-r1 (03 Mar 2010)
 
