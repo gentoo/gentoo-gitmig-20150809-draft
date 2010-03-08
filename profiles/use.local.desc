@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5358 2010/03/08 00:13:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5359 2010/03/08 00:28:19 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1838,7 +1838,13 @@ media-sound/squeezecenter:bonjour - Enable support for bonjour
 media-sound/traverso:lv2 - Add support for Ladspa V2
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
 media-sound/xmp:audacious - Enable audacious support
-media-sound/xwax:alsa - Enable ALSA support.
+media-sound/xwax:alsa - Adds support for ALSA audio input/output.
+media-sound/xwax:xwax_decoders_aac - Sets runtime dependencies to support decoding AAC audio.
+media-sound/xwax:xwax_decoders_cd - Sets runtime dependencies to support decoding audio from a compact disc.
+media-sound/xwax:xwax_decoders_flac - Sets runtime dependencies to support decoding FLAC audio.
+media-sound/xwax:xwax_decoders_misc - Sets runtime dependencies to support decoding "other" audio files.
+media-sound/xwax:xwax_decoders_mp3 - Sets runtime dependencies to support decoding MP3 audio.
+media-sound/xwax:xwax_decoders_ogg - Sets runtime dependencies to support decoding Ogg Vorbis audio.
 media-tv/freevo:ivtv - Enables ivtv support
 media-tv/freevo:mixer - Enable support for adjusting volume via media-sound/aumix
 media-tv/freevo:snes - Enable Super Nintendo games support
