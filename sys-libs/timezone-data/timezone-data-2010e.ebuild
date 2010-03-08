@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2010d.ebuild,v 1.1 2010/03/08 17:55:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2010e.ebuild,v 1.1 2010/03/08 22:01:18 cardoe Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
-code_ver=${PV%d}c
+code_ver=${PV%e}c
 data_ver=${PV}
 DESCRIPTION="Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)"
 HOMEPAGE="ftp://elsie.nci.nih.gov/pub/"
