@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.8 2009/01/14 15:12:05 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.9 2010/03/08 02:00:20 tanderson Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.fcoutant.freesurf.fr/download/${P}.tar.gz"
 HOMEPAGE="http://www.fcoutant.freesurf.fr/wmmenu.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 DEPEND="x11-libs/libdockapp"
 
 src_unpack() {
