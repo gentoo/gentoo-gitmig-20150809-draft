@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.6 2010/03/08 21:28:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.7 2010/03/08 23:44:07 eva Exp $
+
+  08 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gedit-plugins-2.28.0.ebuild:
+  Fix bad intltool rules.
 
 *gedit-plugins-2.28.0 (08 Mar 2010)
 
