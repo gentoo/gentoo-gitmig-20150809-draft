@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.9.2.ebuild,v 1.2 2009/11/04 15:48:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.9.2.ebuild,v 1.3 2010/03/08 06:35:48 sping Exp $
 
 DESCRIPTION="Simple programming interface for decoding and encoding audio data using vorbis or speex"
-HOMEPAGE="http://www.annodex.net/software/libfishsound/html/"
-SRC_URI="http://www.annodex.net/software/libfishsound/download/${P}.tar.gz"
+HOMEPAGE="http://www.xiph.org/fishsound/"
+SRC_URI="http://downloads.xiph.org/releases/libfishsound/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
