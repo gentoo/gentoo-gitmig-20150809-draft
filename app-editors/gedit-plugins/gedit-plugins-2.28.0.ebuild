@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.5 2009/08/17 11:15:07 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.28.0.ebuild,v 1.1 2010/03/08 21:28:17 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 multilib python
 
 DESCRIPTION="Offical plugins for gedit."
 HOMEPAGE="http://live.gnome.org/GeditPlugins"
@@ -37,10 +37,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-DOCS="AUTHORS NEWS"
+DOCS="AUTHORS NEWS ChangeLog*"
 
-pkg_setup()
-{
+pkg_setup() {
 	local myplugins="codecomment"
 
 	for plugin in ${IUSE/python}; do
@@ -57,6 +56,31 @@ pkg_setup()
 		$(use_enable python)"
 }
 
+src_prepare() {
+	gnome2_src_prepare
+
+	# disable pyc compiling
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile
+}
+
 src_test() {
 	emake check || die "make check failed"
+}
+
+src_install() {
+	gnome2_src_install
+	# gedit doesn't rely on *.la files
+	find "${D}" -name "*.la" -delete || die "*.la files removal failed"
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	python_need_rebuild
+	python_mod_optimize /usr/$(get_libdir)/gedit-2/plugins
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	python_mod_cleanup /usr/$(get_libdir)/gedit-2/plugins
 }
