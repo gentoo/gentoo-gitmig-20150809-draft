@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5360 2010/03/08 08:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5361 2010/03/08 16:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -118,9 +118,6 @@ app-benchmarks/bootchart:acct - Enable process accounting
 app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
 app-cdr/backlite:mplayer - Add support for mplayer preview in addition to X11 and phonon
 app-cdr/brasero:beagle - Enable app-misc/beagle support for searches
-app-cdr/brasero:cdrkit - Enable app-cdr/cdrkit backend
-app-cdr/brasero:cdrtools - Enable app-cdr/cdrtools backend
-app-cdr/brasero:gnome - Enable integration with the gnome-base/gnome desktop (help, session management, etc.)
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
 app-cdr/brasero:nautilus -  Build gnome-base/nautilus extension
 app-cdr/brasero:playlist - Enable support for playlists through dev-libs/totem-pl-parser
