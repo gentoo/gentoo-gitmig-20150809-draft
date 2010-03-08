@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3-r2.ebuild,v 1.1 2010/02/09 09:47:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3-r2.ebuild,v 1.2 2010/03/08 11:13:45 george Exp $
 
 # Need to let configure know where to find stddef.h
 #EXTRA_CONFGCC="${WORKDIR}/usr/lib/include/"
@@ -25,7 +25,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2
 	x86?   ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-i586.tar.bz2 )"
 #	ppc?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~sparc"
 
 # starting with 4.3.0 gnat needs these libs
 DEPEND=">=dev-libs/mpfr-2.3.1
