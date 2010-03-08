@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.71-r1.ebuild,v 1.1 2010/03/07 17:08:03 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.71-r1.ebuild,v 1.2 2010/03/08 10:25:36 ssuominen Exp $
 
 inherit autotools eutils versionator flag-o-matic
 
@@ -114,7 +114,17 @@ src_unpack() {
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
 		base/Makefile.in base/*.mak || die "sed failed"
 
+	# http://repos.archlinux.org/wsvn/packages/ghostscript/trunk/libpng14.patch
+	if has_version ">=media-libs/libpng-1.4"; then
+		sed -i \
+			-e 's:png_check_sig:png_sig_cmp:' \
+			"${S}"/{,base,jbig2dec}/configure.ac || die
+	fi
+
 	cd "${S}"
+	eautoreconf
+
+	cd "${S}/jbig2dec"
 	eautoreconf
 
 	cd "${S}/ijs"
