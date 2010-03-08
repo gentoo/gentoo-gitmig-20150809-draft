@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/matlab
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.20 2009/11/24 20:59:48 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.21 2010/03/08 10:35:09 fauli Exp $
+
+*matlab-3.3.1_pre20100121 (08 Mar 2010)
+
+  08 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  +matlab-3.3.1_pre20100121.ebuild:
+  version bump
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   matlab-3.1.0_pre20070306.ebuild, matlab-3.3.0_pre20091116.ebuild:
