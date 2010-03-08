@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.4.ebuild,v 1.4 2010/02/24 09:17:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.4.ebuild,v 1.5 2010/03/08 10:46:13 mduft Exp $
 
 EAPI=3
 
@@ -51,6 +51,13 @@ src_install() {
 
 	into /usr
 	newbin getopt getopt-long
+
+	# at least on interix, the system getopt is ... broken...
+	# util-linx, which would provide the getopt binary, does not build & install
+	# on interix/prefix, so, this has to provide it.
+	[[ ${CHOST} == *-interix* ]] && \
+		dosym getopt-long /usr/bin/getopt
+
 	newman getopt.1 getopt-long.1
 
 	dodoc "${S}/getopt-"*sh
