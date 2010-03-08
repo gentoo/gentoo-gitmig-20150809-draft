@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/deltup
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.20 2009/08/02 15:42:25 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.21 2010/03/08 06:15:21 sping Exp $
+
+  08 Mar 2010; Sebastian Pipping <sping@gentoo.org> deltup-0.4.4.ebuild:
+  Fix SRC_URI for bzip2-1.0.3 (bug #259598)
 
   02 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> deltup-0.4.4.ebuild,
   +files/deltup-0.4.4-CFLAGS.patch, +files/deltup-0.4.4-asneeded.patch,
