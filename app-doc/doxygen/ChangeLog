@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.174 2010/02/08 19:21:51 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.175 2010/03/08 07:15:06 nerdboy Exp $
+
+*doxygen-1.6.3 (08 Mar 2010)
+*doxygen-1.6.2 (08 Mar 2010)
+
+  08 Mar 2010; Steve Arnold <nerdboy@gentoo.org> +doxygen-1.6.2.ebuild,
+  +files/doxygen-1.6.2-dot-eps.patch, +doxygen-1.6.3.ebuild:
+  Updated to latest versions, (closes bug 300577) simplified texlive deps.
 
   08 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   +files/doxygen-1.5.6-prefix-misc-alt.patch, doxygen-1.6.1.ebuild:

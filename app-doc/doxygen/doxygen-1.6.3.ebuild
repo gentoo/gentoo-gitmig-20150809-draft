@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8-r1.ebuild,v 1.7 2010/03/08 07:15:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.6.3.ebuild,v 1.1 2010/03/08 07:15:06 nerdboy Exp $
 
-EAPI=1
+EAPI=3
 
-inherit eutils flag-o-matic toolchain-funcs qt4 fdo-mime
+inherit eutils flag-o-matic toolchain-funcs qt4-r2 fdo-mime
 
 DESCRIPTION="documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages"
 HOMEPAGE="http://www.doxygen.org/"
@@ -12,21 +12,16 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="debug doc nodot qt4 latex elibc_FreeBSD"
 
 RDEPEND="qt4? ( x11-libs/qt-gui:4 )
-	latex? ( app-text/texlive-core
-		dev-texlive/texlive-genericrecommended
-		dev-texlive/texlive-fontsrecommended
-		dev-texlive/texlive-latexrecommended
-		dev-texlive/texlive-fontsextra
-		dev-texlive/texlive-latexextra )
+	latex? ( >=app-text/texlive-2008[extra] )
 	dev-lang/python
 	virtual/libiconv
 	media-libs/libpng
 	app-text/ghostscript-gpl
-	!nodot? ( >=media-gfx/graphviz-2.6
+	!nodot? ( >=media-gfx/graphviz-2.20.0
 		media-libs/freetype )"
 DEPEND=">=sys-apps/sed-4
 	sys-devel/flex
@@ -34,16 +29,13 @@ DEPEND=">=sys-apps/sed-4
 
 EPATCH_SUFFIX="patch"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# use CFLAGS, CXXFLAGS, LDFLAGS
 	sed -i.orig -e 's:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= $(ECFLAGS):' \
 		-e 's:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= $(ECXXFLAGS):' \
 		-e 's:^\(TMAKE_LFLAGS_RELEASE\s*\)=.*$:\1= $(ELDFLAGS):' \
 		tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf \
-		|| die "sed failed"
+		|| die "sed 1 failed"
 
 	# Ensure we link to -liconv
 	if use elibc_FreeBSD; then
@@ -52,18 +44,15 @@ src_unpack() {
 		done
 	fi
 
-	# Consolidate patches, apply FreeBSD configure patch, codepage patch,
-	# qtools stuff, and patches for bugs 129142, 121770, and 129560.
-	epatch "${FILESDIR}/${PN}-1.5-legacy-patches.diff"
-	# backport fix for bug #266693
-	epatch "${FILESDIR}/${P}-kdedocs.patch"
+	# Call dot with -Teps instead of -Tps for EPS generation - bug #282150
+	epatch "${FILESDIR}/${PN}-1.6.2-dot-eps.patch"
 
-	# remove internal libpng - see bug #210237
-	epatch "${FILESDIR}/${PN}-1.5-system-libpng.patch"
+	# prefix search tools patch, plus OSX fixes
+	epatch "${FILESDIR}"/${PN}-1.5.6-prefix-misc-alt.patch
 
 	# fix final DESTDIR issue
 	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \
-		addon/doxywizard/Makefile.in || die "sed failed"
+		addon/doxywizard/Makefile.in || die "sed 2 failed"
 
 	if is-flagq "-O3" ; then
 		echo
@@ -77,16 +66,12 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	export ECFLAGS="${CFLAGS}" ECXXFLAGS="${CXXFLAGS}" ELDFLAGS="${LDFLAGS}"
 	# set ./configure options (prefix, Qt based wizard, docdir)
 
 	local my_conf=""
-	if use debug; then
-		my_conf="--prefix /usr --debug"
-	else
-		my_conf="--prefix /usr"
-	fi
+	use debug && my_conf="--debug"
 
 	export CC="${QMAKE_CC}"
 	export CXX="${QMAKE_CXX}"
@@ -94,19 +79,20 @@ src_compile() {
 	export LINK_SHLIB="${QMAKE_CXX}"
 
 	if use qt4; then
-		export QTDIR="/usr"
+		export QTDIR="${EPREFIX}/usr"
 		einfo "using QTDIR: '$QTDIR'."
-		export LIBRARY_PATH="${QTDIR}/$(get_libdir):${LIBRARY_PATH}"
-		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}"
+		export LIBRARY_PATH="${QTDIR}/$(get_libdir)${LIBRARY_PATH:+:}${LIBRARY_PATH}"
+		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir)${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
 		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
 		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-		./configure ${my_conf} $(use_with qt4 doxywizard) \
+		./configure --prefix "${EPREFIX}/usr" ${my_conf} $(use_with qt4 doxywizard) \
 		|| die 'configure with qt4 failed'
 	else
-		./configure ${my_conf} || die 'configure failed'
+		./configure --prefix "${EPREFIX}/usr" ${my_conf} || die 'configure failed'
 	fi
+}
 
-	# and compile
+src_compile() {
 	emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
