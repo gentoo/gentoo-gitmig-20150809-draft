@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11324 2010/03/08 10:37:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11325 2010/03/08 13:02:43 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -575,11 +575,6 @@ net-libs/libjingle
 # Markos Chandras <hwoarang@gentoo.org> (26 Dec 2009)
 # keeping rc ebuilds masked
 =sys-kernel/zen-sources-2.6.33_rc*
-
-# Peter Volkov <pva@gentoo.org> (24 Dec 2009)
-# Masking release candidate. Yes, upstream supposes that we keep such
-# packages away from users. See bug #292321
-=x11-plugins/msn-pecan-0.1*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (23 Dec 2009)
 # Masked while we work on polishing the ebuild. Right now it lacks
