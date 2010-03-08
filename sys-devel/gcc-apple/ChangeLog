@@ -1,6 +1,21 @@
 # ChangeLog for sys-devel/gcc-apple
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.10 2009/09/25 20:34:17 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.11 2010/03/08 17:12:11 grobian Exp $
+
+*gcc-apple-4.2.1_p5647 (08 Mar 2010)
+
+  08 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-3.5.0_p3506-r1.ebuild, gcc-apple-4.0.1_p5490-r2.ebuild,
+  gcc-apple-4.0.1_p5493.ebuild, gcc-apple-4.2.1_p5566-r2.ebuild,
+  gcc-apple-4.2.1_p5574.ebuild, gcc-apple-4.2.1_p5646.ebuild,
+  +gcc-apple-4.2.1_p5647.ebuild,
+  +files/gcc-apple-4.2.1_p5646-gfortran.patch:
+  Ported all ebuilds to EAPI=3, bump to Dev Tools 3.2.1, 5646.1 as 5647
+  (hack), update gfortran support, use version 4.2.4 for latest ebuild since
+  ATTR seems to be doing that too, hopefully for a good reason. Put back
+  stdc++-v3 into the gcc tree so we don't have to configure/make twice
+  (necessary even for EAPI=2+). Sed Gentoo version into version string, so
+  our compilers are identifyable, let bugs url point to our bugzilla.
 
   25 Sep 2009; Fabian Groffen <grobian@gentoo.org>
   gcc-apple-4.2.1_p5574.ebuild, -files/gcc-apple-4.2.1_p5574-darwin10.patch:

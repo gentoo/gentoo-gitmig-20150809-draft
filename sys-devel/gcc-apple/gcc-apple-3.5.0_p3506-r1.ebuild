@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-3.5.0_p3506-r1.ebuild,v 1.1 2009/06/21 10:27:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-3.5.0_p3506-r1.ebuild,v 1.2 2010/03/08 17:12:11 grobian Exp $
+
+EAPI="3"
 
 inherit eutils
 
@@ -28,9 +30,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/gcc_os_35-${APPLE_VERS}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# we use our libtool
 	sed -i -e "s:/usr/bin/libtool:${EPREFIX}/usr/bin/libtool:" \
 		gcc/config/darwin.h || die "sed gcc/config/darwin.h failed"
@@ -43,7 +43,7 @@ src_unpack() {
 		gcc/Makefile.in || die "sed gcc/Makefile.in failed."
 }
 
-src_compile() {
+src_configure() {
 	local langs="c"
 	use nocxx || langs="${langs},c++"
 	use fortran && langs="${langs},f77"
@@ -100,12 +100,14 @@ src_compile() {
 	cd "${WORKDIR}"/build
 	einfo "Configuring GCC with: ${myconf//--/\n\t--}"
 	"${S}"/configure ${myconf} || die "conf failed"
+}
+
+src_compile() {
+	cd "${WORKDIR}"/build || die
 	make -j1 bootstrap || die "emake failed"
 }
 
 src_install() {
-	local ED=${ED-${D}}
-
 	cd "${WORKDIR}"/build
 	make DESTDIR="${D}" install || die
 
@@ -133,9 +135,4 @@ src_install() {
 	echo "MANPATH=\"${EPREFIX}/usr/share/gcc-data/${CHOST}/${GCC_VERS}/man\"" >> ${gcc_envd_file}
 	echo "INFOPATH=\"${EPREFIX}/usr/share/gcc-data/${CHOST}/${GCC_VERS}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"g++-v${GCC_VERS/\.*/}\"" >> ${gcc_envd_file}
-}
-
-pkg_postinst() {
-	# beware this also switches when it's on another branch version of GCC
-	gcc-config ${CHOST}-${GCC_VERS}
 }

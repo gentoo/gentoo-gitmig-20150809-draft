@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.1 2009/09/05 16:46:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.2 2010/03/08 17:12:11 grobian Exp $
+
+EAPI="3"
 
 ETYPE="gcc-compiler"
 
@@ -8,13 +10,20 @@ inherit eutils toolchain flag-o-matic autotools prefix
 
 GCC_VERS=${PV/_p*/}
 APPLE_VERS=${PV/*_p/}
-LIBSTDCXX_APPLE_VERSION=39
 DESCRIPTION="Apple branch of the GNU Compiler Collection, Developer Tools 3.2"
 HOMEPAGE="http://gcc.gnu.org"
 SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-${APPLE_VERS}.tar.gz
-		http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-${LIBSTDCXX_APPLE_VERSION}.tar.gz
+		http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-16.tar.gz
+		http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-39.tar.gz
 		fortran? ( mirror://gnu/gcc/gcc-${GCC_VERS}/gcc-fortran-${GCC_VERS}.tar.bz2 )"
-LICENSE="APSL-2 GPL-2"
+LICENSE="GPL-2"
+
+if [[ ${CHOST#*-darwin} -ge 9 ]] ; then
+	LIBSTDCXX_APPLE_VERSION=39
+else
+	# pre Leopard has no dtrace, which is required by 37.11 and above
+	LIBSTDCXX_APPLE_VERSION=16
+fi
 
 if is_crosscompile; then
 	SLOT="${CTARGET}-42"
@@ -54,17 +63,26 @@ fi
 STDCXX_INCDIR=${LIBPATH}/include/g++-v${GCC_VERS/\.*/}
 
 src_unpack() {
+	# override toolchain.eclass func
 	unpack ${A}
-	cd "${S}"
+}
 
+src_prepare() {
 	# Support for fortran
 	if use fortran ; then
-		cd "${WORKDIR}"/gcc-${GCC_VERS}
-		# hmmm, just use rsync?
-		tar cf - * | ( cd "${S}" && tar xf - )
-		cd "${S}"
-		# from: http://r.research.att.com/tools/
-		epatch "${FILESDIR}"/${PN}-${GCC_VERS}-gfortran.patch
+		mv "${WORKDIR}"/gcc-${GCC_VERS}/gcc/fortran gcc/ || die
+		mv "${WORKDIR}"/gcc-${GCC_VERS}/libgfortran . || die
+		# from: substracted from http://r.research.att.com/tools/
+		epatch "${FILESDIR}"/${PN}-4.2.1_p5646-gfortran.patch
+	fi
+
+	# move in libstdc++
+	mv "${WORKDIR}"/libstdcxx-${LIBSTDCXX_APPLE_VERSION}/libstdcxx/libstdc++-v3 .
+	if [[ ${LIBSTDCXX_APPLE_VERSION} == 16 ]] ; then
+		epatch "${FILESDIR}"/libstdc++-${LIBSTDCXX_APPLE_VERSION}.patch # does it apply on 37?
+		sed -i -e 's/__block\([^_]\)/__blk\1/g' \
+			libstdc++-v3/include/ext/mt_allocator.h \
+			libstdc++-v3/src/mt_allocator.cc || die "conflict fix failed"
 	fi
 
 	# we use our libtool
@@ -104,9 +122,18 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-texinfo.patch
 	cd "${S}"/gcc && eautoconf
 	cd "${S}"/libgomp && eautoconf
+
+	local BRANDING_GCC_PKGVERSION="$(sed -n -e '/^#define VERSUFFIX/s/^[^"]*"\([^"]\+\)".*$/\1/p' "${S}"/gcc/version.c)"
+	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/)/, Gentoo ${PVR})}
+	einfo "patching gcc version: ${GCC_VERS}${BRANDING_GCC_PKGVERSION}"
+
+	sed -i -e "s~VERSUFFIX \"[^\"]*~VERSUFFIX \"${BRANDING_GCC_PKGVERSION}~" \
+		"${S}"/gcc/version.c || die "failed to update VERSUFFIX with Gentoo branding"
+	sed -i -e 's~developer\.apple\.com\/bugreporter~bugs\.gentoo\.org\/~' \
+		"${S}"/gcc/version.c || die "Failed to change the bug URL"
 }
 
-src_compile() {
+src_configure() {
 	local langs="c"
 	use nocxx || langs="${langs},c++"
 	use objc && langs="${langs},objc"
@@ -172,7 +199,7 @@ src_compile() {
 		&& myconf="${myconf} --disable-multilib"
 
 	#libstdcxx does not support this one
-	local gccconf="${myconf} --enable-languages=${langs}"
+	myconf="${myconf} --enable-languages=${langs}"
 
 	# The produced libgcc_s.dylib is faulty if using a bit too much
 	# optimisation.  Nail it down to something sane
@@ -187,30 +214,19 @@ src_compile() {
 
 	mkdir -p "${WORKDIR}"/build
 	cd "${WORKDIR}"/build
-	einfo "Configuring GCC with: ${gccconf//--/\n\t--}"
-	"${S}"/configure ${gccconf} || die "conf failed"
-	emake bootstrap || die "emake failed"
+	einfo "Configuring GCC with: ${myconf//--/\n\t--}"
+	"${S}"/configure ${myconf} || die "conf failed"
+}
 
-	local libstdcxxconf="${myconf} --disable-libstdcxx-debug"
-	mkdir -p "${WORKDIR}"/build_libstdcxx || die
-	cd "${WORKDIR}"/build_libstdcxx
-	#the build requires the gcc built before, so link to it
-	ln -s "${WORKDIR}"/build/gcc "${WORKDIR}"/build_libstdcxx/gcc || die
-	einfo "Configuring libstdcxx with: ${libstdcxxconf//--/\n\t--}"
-	"${WORKDIR}"/libstdcxx-${LIBSTDCXX_APPLE_VERSION}/libstdcxx/configure ${libstdcxxconf} || die "conf failed"
-	emake all || die "emake failed"
+src_compile() {
+	cd "${WORKDIR}"/build || die
+	emake bootstrap || die "emake failed"
 }
 
 src_install() {
-	local ED=${ED-${D}}
-
 	cd "${WORKDIR}"/build
 	# -jX doesn't work
 	emake -j1 DESTDIR="${D}" install || die
-
-	cd "${WORKDIR}"/build_libstdcxx
-	emake -j1 DESTDIR="${D}" install || die
-	cd "${WORKDIR}"/build
 
 	# Punt some tools which are really only useful while building gcc
 	find "${ED}" -name install-tools -prune -type d -exec rm -rf "{}" \;
@@ -299,8 +315,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	local EROOT=${EROOT-${ROOT}}
-
 	# clean up the cruft left behind by cross-compilers
 	if is_crosscompile ; then
 		if [[ -z $(ls "${EROOT}"/etc/env.d/gcc/${CTARGET}* 2>/dev/null) ]] ; then

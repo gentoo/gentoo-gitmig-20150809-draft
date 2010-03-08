@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5493.ebuild,v 1.2 2009/09/26 18:15:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5493.ebuild,v 1.3 2010/03/08 17:12:11 grobian Exp $
+
+EAPI="3"
 
 ETYPE="gcc-compiler"
 
@@ -45,8 +47,11 @@ fi
 STDCXX_INCDIR=${LIBPATH}/include/g++-v${GCC_VERS/\.*/}
 
 src_unpack() {
+	# override toolchain.eclass func
 	unpack ${A}
-	cd "${S}"
+}
+
+src_prepare() {
 	# we use our libtool
 	sed -i -e "s:/usr/bin/libtool:${EPREFIX}/usr/bin/${CTARGET}-libtool:" \
 		gcc/config/darwin.h || die "sed gcc/config/darwin.h failed"
@@ -65,7 +70,7 @@ src_unpack() {
 	eprefixify "${S}"/gcc/gcc.c
 }
 
-src_compile() {
+src_configure() {
 	local langs="c"
 	use nocxx || langs="${langs},c++"
 	use objc && langs="${langs},objc"
@@ -147,12 +152,14 @@ src_compile() {
 	cd "${WORKDIR}"/build
 	einfo "Configuring GCC with: ${myconf//--/\n\t--}"
 	"${S}"/configure ${myconf} || die "conf failed"
+}
+
+src_compile() {
+	cd "${WORKDIR}"/build || die
 	emake bootstrap || die "emake failed"
 }
 
 src_install() {
-	local ED=${ED-${D}}
-
 	cd "${WORKDIR}"/build
 	# -jX doesn't work
 	emake -j1 DESTDIR="${D}" install || die
@@ -217,11 +224,11 @@ src_install() {
 	done
 
 	# I do not know if this will break gcj stuff, so I'll only do it for
-	#	objc for now; basically "ffi.h" is the correct file to include,
-	#	but it gets installed in .../GCCVER/include and yet it does
-	#	"#include <ffitarget.h>" which (correctly, as it's an "extra" file)
-	#	is installed in .../GCCVER/include/libffi; the following fixes
-	#	ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
+	# objc for now; basically "ffi.h" is the correct file to include,
+	# but it gets installed in .../GCCVER/include and yet it does
+	# "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
+	# is installed in .../GCCVER/include/libffi; the following fixes
+	# ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
 	if [[ -d ${D}${LIBPATH}/include/libffi ]] ; then
 		mv -i "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include || die
 		rm -r "${D}"${LIBPATH}/include/libffi || die
@@ -244,8 +251,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	local EROOT=${EROOT-${ROOT}}
-
 	# clean up the cruft left behind by cross-compilers
 	if is_crosscompile ; then
 		if [[ -z $(ls "${EROOT}"/etc/env.d/gcc/${CTARGET}* 2>/dev/null) ]] ; then

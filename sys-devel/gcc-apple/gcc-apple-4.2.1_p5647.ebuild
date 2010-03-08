@@ -1,37 +1,53 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5490-r2.ebuild,v 1.2 2010/03/08 17:12:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.1 2010/03/08 17:12:11 grobian Exp $
 
 EAPI="3"
 
 ETYPE="gcc-compiler"
 
-inherit eutils toolchain prefix
+inherit eutils toolchain flag-o-matic autotools prefix
 
 GCC_VERS=${PV/_p*/}
-APPLE_VERS=${PV/*_p/}
-DESCRIPTION="Apple branch of the GNU Compiler Collection, Xcode Tools 3.1.2"
+APPLE_VERS="$((${PV/*_p/} - 1)).1" # stupid hack because _p may not contain .
+DESCRIPTION="Apple branch of the GNU Compiler Collection, Developer Tools 3.2.1"
 HOMEPAGE="http://gcc.gnu.org"
-SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-${APPLE_VERS}.tar.gz"
-LICENSE="APSL-2 GPL-2"
+SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-${APPLE_VERS}.tar.gz
+		http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-16.tar.gz
+		http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-39.tar.gz
+		fortran? ( mirror://gnu/gcc/gcc-4.2.4/gcc-fortran-4.2.4.tar.bz2 )"
+LICENSE="GPL-2 GPL-3"
 
-if is_crosscompile; then
-	SLOT="${CTARGET}-40"
+if [[ ${CHOST#*-darwin} -ge 9 ]] ; then
+	LIBSTDCXX_APPLE_VERSION=39
 else
-	SLOT="40"
+	# pre Leopard has no dtrace, which is required by 37.11 and above
+	LIBSTDCXX_APPLE_VERSION=16
 fi
 
-KEYWORDS="~ppc-macos ~x86-macos"
+if is_crosscompile; then
+	SLOT="${CTARGET}-42"
+else
+	SLOT="42"
+fi
 
-IUSE="nls objc objc++ nocxx"
+KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
+
+IUSE="fortran nls objc objc++ nocxx"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.2-r2
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	>=sys-devel/gcc-config-1.3.12-r4
+	fortran? (
+		>=dev-libs/gmp-4.2.1
+		>=dev-libs/mpfr-2.2.0_p10
+	)"
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	${CATEGORY}/binutils-apple"
+	${CATEGORY}/binutils-apple
+	>=dev-libs/mpfr-2.2.0_p10"
 
 S=${WORKDIR}/gcc-${APPLE_VERS}
 
@@ -52,6 +68,23 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Support for fortran
+	if use fortran ; then
+		mv "${WORKDIR}"/gcc-4.2.4/gcc/fortran gcc/ || die
+		mv "${WORKDIR}"/gcc-4.2.4/libgfortran . || die
+		# from: substracted from http://r.research.att.com/tools/
+		epatch "${FILESDIR}"/${PN}-4.2.1_p5646-gfortran.patch
+	fi
+
+	# move in libstdc++
+	mv "${WORKDIR}"/libstdcxx-${LIBSTDCXX_APPLE_VERSION}/libstdcxx/libstdc++-v3 .
+	if [[ ${LIBSTDCXX_APPLE_VERSION} == 16 ]] ; then
+		epatch "${FILESDIR}"/libstdc++-${LIBSTDCXX_APPLE_VERSION}.patch # does it apply on 37?
+		sed -i -e 's/__block\([^_]\)/__blk\1/g' \
+			libstdc++-v3/include/ext/mt_allocator.h \
+			libstdc++-v3/src/mt_allocator.cc || die "conflict fix failed"
+	fi
+
 	# we use our libtool
 	sed -i -e "s:/usr/bin/libtool:${EPREFIX}/usr/bin/${CTARGET}-libtool:" \
 		gcc/config/darwin.h || die "sed gcc/config/darwin.h failed"
@@ -65,9 +98,39 @@ src_prepare() {
 		gcc/Makefile.in || die "sed gcc/Makefile.in failed."
 
 	epatch "${FILESDIR}"/${PN}-4.0.1_p5465-default-altivec.patch
+	#epatch "${FILESDIR}"/${PN}-4.2.1_p5566-x86_64-defines.patch
+
+	# dsymutil stuff breaks on 10.4/x86, revert it
+	[[ ${CHOST} == *86*-apple-darwin8 ]] && \
+		epatch "${FILESDIR}"/${PN}-${GCC_VERS}-dsymutil.patch
+
+	# bootstrapping might fail with host provided gcc on 10.4/x86
+	if ! is_crosscompile && ! echo "int main(){return 0;}" | gcc -o "${T}"/foo \
+		-mdynamic-no-pic -x c - >/dev/null 2>&1;
+	then
+		einfo "-mdynamic-no-pic doesn't work - disabling..."
+		echo "BOOT_CFLAGS=-g -O2" > config/mh-x86-darwin
+		XD=gcc/config/i386/x-darwin
+		awk 'BEGIN{x=1}{if ($0 ~ "use -mdynamic-no-pic to build x86")
+		{x=1-x} else if (x) print}' $XD > t && mv t $XD \
+			|| die "Failed to rewrite $XD"
+	fi
 
 	epatch "${FILESDIR}"/${PN}-4.2.1-prefix-search-dirs.patch
 	eprefixify "${S}"/gcc/gcc.c
+
+	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-texinfo.patch
+	cd "${S}"/gcc && eautoconf
+	cd "${S}"/libgomp && eautoconf
+
+	local BRANDING_GCC_PKGVERSION="$(sed -n -e '/^#define VERSUFFIX/s/^[^"]*"\([^"]\+\)".*$/\1/p' "${S}"/gcc/version.c)"
+	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/)/, Gentoo ${PVR})}
+	einfo "patching gcc version: ${GCC_VERS}${BRANDING_GCC_PKGVERSION}"
+
+	sed -i -e "s~VERSUFFIX \"[^\"]*~VERSUFFIX \"${BRANDING_GCC_PKGVERSION}~" \
+		"${S}"/gcc/version.c || die "failed to update VERSUFFIX with Gentoo branding"
+	sed -i -e 's~developer\.apple\.com\/bugreporter~bugs\.gentoo\.org\/~' \
+		"${S}"/gcc/version.c || die "Failed to change the bug URL"
 }
 
 src_configure() {
@@ -75,6 +138,7 @@ src_configure() {
 	use nocxx || langs="${langs},c++"
 	use objc && langs="${langs},objc"
 	use objc++ && langs="${langs/,objc/},objc,obj-c++" # need objc with objc++
+	use fortran && langs="${langs},fortran"
 
 	local myconf="${myconf} \
 		--prefix=${EPREFIX}/usr \
@@ -118,9 +182,6 @@ src_configure() {
 		--disable-checking \
 		--disable-werror"
 
-	# languages to build
-	myconf="${myconf} --enable-languages=${langs}"
-
 	# ???
 	myconf="${myconf} --enable-shared --enable-threads=posix"
 
@@ -136,6 +197,9 @@ src_configure() {
 	# make sure we never do multilib stuff, for that we need a different Prefix
 	[[ -z ${I_KNOW_WHAT_IM_DOING_I_WANT_APPLE_MULTILIB} ]] \
 		&& myconf="${myconf} --disable-multilib"
+
+	#libstdcxx does not support this one
+	myconf="${myconf} --enable-languages=${langs}"
 
 	# The produced libgcc_s.dylib is faulty if using a bit too much
 	# optimisation.  Nail it down to something sane
@@ -224,11 +288,11 @@ src_install() {
 	done
 
 	# I do not know if this will break gcj stuff, so I'll only do it for
-	# objc for now; basically "ffi.h" is the correct file to include,
-	# but it gets installed in .../GCCVER/include and yet it does
-	# "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
-	# is installed in .../GCCVER/include/libffi; the following fixes
-	# ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
+	#	objc for now; basically "ffi.h" is the correct file to include,
+	#	but it gets installed in .../GCCVER/include and yet it does
+	#	"#include <ffitarget.h>" which (correctly, as it's an "extra" file)
+	#	is installed in .../GCCVER/include/libffi; the following fixes
+	#	ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
 	if [[ -d ${D}${LIBPATH}/include/libffi ]] ; then
 		mv -i "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include || die
 		rm -r "${D}"${LIBPATH}/include/libffi || die
