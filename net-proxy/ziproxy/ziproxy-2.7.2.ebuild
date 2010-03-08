@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.7.2.ebuild,v 1.1 2009/12/17 14:12:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.7.2.ebuild,v 1.2 2010/03/08 20:06:17 ssuominen Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A forwarding, non-caching, compressing web proxy server"
 HOMEPAGE="http://ziproxy.sourceforge.net/"
@@ -38,6 +38,10 @@ src_prepare() {
 	sed -i -e "s:/usr/bin/:/usr/sbin/:g" \
 		-e "s:\(.*port.*\):\1\n\ttype\t\t\t= UNLISTED:g" \
 		-e "s:root:ziproxy:g" etc/xinetd.d/ziproxy
+
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+
+	AT_M4DIR="config" eautoreconf
 }
 
 src_configure() {
