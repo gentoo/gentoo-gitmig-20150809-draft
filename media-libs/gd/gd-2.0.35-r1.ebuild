@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r1.ebuild,v 1.8 2010/03/08 09:42:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r1.ebuild,v 1.9 2010/03/08 20:14:28 ssuominen Exp $
 
 inherit autotools
 
@@ -23,11 +23,9 @@ DEPEND="${RDEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-libpng14.patch \
+		"${FILESDIR}"/${P}-maxcolors.patch
 
-	has_version ">=media-libs/libpng-1.4" && epatch \
-		"${FILESDIR}"/${P}-libpng14.patch
-
-	epatch "${FILESDIR}"/${P}-maxcolors.patch
 	eautoconf
 	find . -type f -print0 | xargs -0 touch -r configure
 }
