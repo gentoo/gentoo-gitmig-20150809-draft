@@ -1,13 +1,17 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.59 2010/03/01 22:17:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.60 2010/03/08 22:43:55 eva Exp $
+
+  08 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild, dbus-python-0.83.1.ebuild:
+  pyrex is unnecessary, bug #308503.
 
 *dbus-python-0.83.1 (01 Mar 2010)
 
   01 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
   +dbus-python-0.83.1.ebuild,
   +files/dbus-python-0.83.1-workaround-broken-test.patch:
-  Version bum, bug #306329. Workaround test problems, bug #288629.
+  Version bump, bug #306329. Workaround test problems, bug #288629.
 
   17 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
   dbus-python-0.83.0-r1.ebuild:
