@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.1.0-r1.ebuild,v 1.1 2010/03/07 23:10:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.1.0-r1.ebuild,v 1.2 2010/03/08 23:26:59 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="ar be bg ca ca@valencia cs da de el en_GB eo es et eu fa fi fr ga
@@ -43,7 +43,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog DESIGN HACKING NEWS README TODO"
 
 PATCHES=( "${FILESDIR}/${P}-libpgf.patch"
-	"${WORKDIR}/${P}-libjpeg-8a.patch" )
+	"${WORKDIR}/${P}-libjpeg-8a.patch"
+	"${FILESDIR}/${P}-libpng14.patch" )
 
 src_configure() {
 	mycmakeargs+=( "-DENABLE_THEMEDESIGNER=OFF"
