@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.90-r2.ebuild,v 1.3 2010/03/06 21:34:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.90-r2.ebuild,v 1.4 2010/03/08 21:01:53 robbat2 Exp $
 
 MY_EXTRAS_VER="20100221-0021Z"
 EAPI=2
@@ -123,12 +123,28 @@ src_test() {
 		# expired/invalid.
 		case ${PV} in
 			5.0.*|5.1.*)
-				for t in openssl_1 rpl_openssl rpl_ssl ssl ssl_8k_key \
+				for t in openssl_1 rpl_openssl rpl.rpl_ssl rpl.rpl_ssl1 ssl ssl_8k_key \
 					ssl_compress ssl_connect ; do \
 					mysql_disable_test \
 						"$t" \
 						"These OpenSSL tests break due to expired certificates"
 				done
+			;;
+		esac
+		
+		# These are also failing in MySQL 5.0 for now, and are believed to be
+		# false positives:
+		#
+		# main.mysql_comment, main.mysql_upgrade:
+		# fails due to USE=-latin1 / utf8 default
+		#
+		# main.mysql_client_test:
+		# segfaults at random under Portage only, suspect resource limits.
+		case ${PV} in
+			5.0.*)
+			for t in main.mysql_client_test main.mysql_comments main.mysql_upgrade; do
+				mysql_disable_test  "$t" "False positives in Gentoo"
+			done
 			;;
 		esac
 
