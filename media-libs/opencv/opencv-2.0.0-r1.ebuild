@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.3 2010/02/06 11:05:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.4 2010/03/09 12:45:38 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}/${P}-multilib.patch" )
+PATCHES=( "${FILESDIR}/${P}-multilib.patch"
+	"${FILESDIR}/${P}-libpng14.patch" )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
