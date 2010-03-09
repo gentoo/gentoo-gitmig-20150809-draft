@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>no-herd</herd>
+  <herd>virtualization</herd>
   <maintainer>
     <email>flameeyes@gentoo.org</email>
   </maintainer>
   <maintainer>
     <email>dev-zero@gentoo.org</email>
   </maintainer>
-  <use>
-    <flag name="doc">
-      Build documentation and man pages. This is optional since it
-      requires extra dependencies. If you don't enable this flag, you
-      will have no man pages.
-    </flag>
-  </use>
 </pkgmetadata>

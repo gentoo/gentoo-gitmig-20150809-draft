@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.5.ebuild,v 1.1 2010/01/30 23:16:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.5.ebuild,v 1.2 2010/03/09 13:43:25 flameeyes Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="+doc examples"
+IUSE="doc examples"
 
 RDEPEND="sys-libs/libcap"
 
@@ -63,7 +63,16 @@ src_install() {
 	dodoc AUTHORS CONTRIBUTING MAINTAINERS \
 		NEWS TODO README doc/FAQ.txt || die "dodoc failed"
 
-	rm -r "${D}"/etc/lxc "${D}"/usr/sbin/lxc-{setcap,ls}
+	# If the documentation is going to be rebuilt, the Makefiles will
+	# install the man pages themselves; if we're not going to, we
+	# still need to install them, as they are provided with the
+	# tarball in recent versions.
+	if ! use doc; then
+		doman doc/*.{1,5,7} || die
+	fi
+
+	rm -r "${D}"/etc/lxc "${D}"/usr/sbin/lxc-{setcap,ls} \
+		"${D}"/usr/share/man/man1/lxc-ls.1 || die "unable to remove extraenous content"
 
 	keepdir /etc/lxc
 
