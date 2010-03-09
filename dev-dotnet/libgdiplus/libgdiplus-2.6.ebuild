@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.6.ebuild,v 1.1 2010/02/20 10:33:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.6.ebuild,v 1.2 2010/03/09 22:28:34 ssuominen Exp $
 
 EAPI=2
 
-inherit go-mono mono flag-o-matic
+inherit eutils go-mono mono flag-o-matic
 
 DESCRIPTION="Library for using System.Drawing with mono"
 HOMEPAGE="http://www.go-mono.com/"
@@ -34,6 +34,10 @@ RESTRICT="test"
 src_prepare() {
 	go-mono_src_prepare
 	sed -i -e 's:ungif:gif:g' configure || die
+
+	# info_ptr->trans_alpha might be no-go with libpng12
+	has_version ">=media-libs/libpng-1.4" && epatch \
+		"${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_configure() {
