@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-26.0.1.ebuild,v 1.2 2010/01/07 09:37:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-26.0.1.ebuild,v 1.3 2010/03/09 11:56:06 abcd Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS NEWS-RU TODO
 	doicon icons/tea_icon_v2.png
 
-	make_desktop_entry tea Tea tea_icon_v2.png Utility
+	make_desktop_entry tea Tea tea_icon_v2 Utility
 }
 
 pkg_postinst() {
