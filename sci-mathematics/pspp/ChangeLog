@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pspp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.11 2009/11/21 08:29:49 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.12 2010/03/09 11:36:02 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> pspp-0.6.1.ebuild,
+  pspp-0.6.2.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
 *pspp-0.6.2 (21 Nov 2009)
 

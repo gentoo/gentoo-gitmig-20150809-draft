@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.1 2009/11/21 08:29:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.2 2010/03/09 11:36:02 abcd Exp $
 
 EAPI=2
 inherit eutils elisp-common autotools
@@ -74,7 +74,7 @@ src_install() {
 
 	if use gtk; then
 		doicon src/ui/gui/${PN}icon.png
-		make_desktop_entry psppire psppire ${PN}icon.png
+		make_desktop_entry psppire psppire ${PN}icon
 	fi
 }
 
