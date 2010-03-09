@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.21.1.ebuild,v 1.1 2010/02/01 06:40:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.21.1.ebuild,v 1.2 2010/03/09 11:19:14 grobian Exp $
 
 inherit eutils autotools
 
@@ -20,6 +20,7 @@ src_unpack() {
 		-e 's,/usr/local/lib/,/usr/share/,g' \
 		"${S}"/src/*.h || die "failed to sed"
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-iconv-detection.patch
 	eautoreconf
 }
 
