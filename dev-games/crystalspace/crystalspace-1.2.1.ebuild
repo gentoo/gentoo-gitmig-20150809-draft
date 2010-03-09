@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.1.ebuild,v 1.2 2010/02/22 12:40:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.1.ebuild,v 1.3 2010/03/09 06:06:32 ssuominen Exp $
 
 EAPI=2
-inherit flag-o-matic multilib wxwidgets
+inherit eutils flag-o-matic multilib wxwidgets
 
 MY_P=${PN}-src-${PV}
 DESCRIPTION="Portable 3D Game Development Kit written in C++"
@@ -51,6 +51,8 @@ src_prepare() {
 		Jamfile.in \
 		docs/Jamfile \
 		|| die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_configure() {
