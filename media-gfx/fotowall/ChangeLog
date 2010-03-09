@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fotowall
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.9 2010/03/03 11:41:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.10 2010/03/09 00:43:47 wired Exp $
+
+  09 Mar 2010; Alex Alexander <wired@gentoo.org> fotowall-0.9-r1.ebuild:
+  fixed failing -webcam
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   fotowall-0.8.2.ebuild:

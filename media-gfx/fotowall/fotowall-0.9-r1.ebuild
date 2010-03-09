@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.2 2010/01/07 13:29:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.3 2010/03/09 00:43:47 wired Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_prepare() {
 
 src_configure() {
 	if ! use webcam; then
-		eqmake4 ${PN}.pro "CONFIG += no-webcam"
+		eqmake4 ${PN}.pro "CONFIG+=no-webcam"
 	else
 		eqmake4
 	fi
