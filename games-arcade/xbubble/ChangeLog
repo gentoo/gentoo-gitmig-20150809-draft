@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xbubble
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/ChangeLog,v 1.11 2008/10/07 16:05:08 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/ChangeLog,v 1.12 2010/03/09 21:19:38 ssuominen Exp $
+
+  09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> xbubble-0.5.8.ebuild,
+  +files/xbubble-0.5.8-libpng14.patch:
+  Fix building with libpng14 wrt #308731 by Locke Shinseiko.
 
   07 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/xbubble-0.5.8-locale.patch, xbubble-0.5.8.ebuild:
