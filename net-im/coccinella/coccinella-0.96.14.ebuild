@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.14.ebuild,v 1.1 2009/11/24 11:15:41 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.14.ebuild,v 1.2 2010/03/09 13:03:59 abcd Exp $
 
 inherit eutils fdo-mime
 
@@ -51,7 +51,7 @@ src_install () {
 		unset dir
 	done
 
-	make_desktop_entry "coccinella" "Coccinella IM Client" "coccinella2-shadow.png" "Network" "/usr/share/icons/hicolor/128x128/apps/coccinella2-shadow.png"
+	make_desktop_entry coccinella "Coccinella IM Client" coccinella2-shadow
 }
 
 pkg_postinst() {
