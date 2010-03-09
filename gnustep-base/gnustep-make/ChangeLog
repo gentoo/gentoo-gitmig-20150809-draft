@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.87 2010/02/10 21:49:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.88 2010/03/09 18:52:57 grobian Exp $
+
+*gnustep-make-2.2.0-r1 (09 Mar 2010)
+
+  09 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  +gnustep-make-2.2.0-r1.ebuild, +files/gnustep-3.csh, +files/gnustep-3.sh:
+  Revbump for EAPI=3, Prefix fixes, transferred Prefix keywords
 
   10 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -gnustep-make-2.0.5.ebuild, -gnustep-make-2.0.6.ebuild,
