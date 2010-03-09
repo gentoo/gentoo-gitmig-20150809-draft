@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.326 2010/03/08 01:16:08 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.327 2010/03/09 20:49:07 darkside Exp $
+
+*eix-0.20.2 (09 Mar 2010)
+
+  09 Mar 2010; Jeremy Olexa <darkside@gentoo.org> -eix-0.17.0.ebuild,
+  -eix-0.19.1.ebuild, +eix-0.20.2.ebuild, metadata.xml:
+  Version bump, small bug fixes. Fixes Gentoo bug 307479. Moved to BerliOS
 
   08 Mar 2010; Thomas Anderson <tanderson@gentoo.org> eix-0.19.2.ebuild:
   stable amd64, bug 300861

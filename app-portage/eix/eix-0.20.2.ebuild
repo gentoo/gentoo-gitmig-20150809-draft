@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.19.1.ebuild,v 1.1 2009/12/19 15:50:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.20.2.ebuild,v 1.1 2010/03/09 20:49:07 darkside Exp $
 
-EAPI=2
+EAPI=3
 
 inherit multilib
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
-HOMEPAGE="http://eix.sourceforge.net"
-SRC_URI="mirror://sourceforge/eix/${P}.tar.xz"
+HOMEPAGE="http://eix.berlios.de"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,17 +22,6 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	doc? ( dev-python/docutils )
 	nls? ( sys-devel/gettext )"
-
-src_unpack() {
-	local i s
-	for i in ${A}
-	do
-		s="${DISTDIR%/}/${i}"
-		einfo "Unpacking ${s} to ${PWD}"
-		test -s "${s}" || die "${s} does not exist"
-		xz -dc -- "${s}" | tar xof - || die "Unpacking ${s} failed"
-	done
-}
 
 src_configure() {
 	econf $(use_with bzip2) $(use_with sqlite) $(use_with doc rst) \
