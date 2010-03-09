@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.135 2010/03/03 23:57:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.136 2010/03/09 20:37:34 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -398,18 +398,14 @@ configure_40_41_50() {
 	myconf="${myconf} --with-extra-tools"
 	myconf="${myconf} --with-innodb"
 	myconf="${myconf} --without-readline"
+	myconf="${myconf} $(use_with ssl openssl)"
 	mysql_version_is_at_least "5.0" || myconf="${myconf} $(use_with raid)"
 
 	# --with-vio is not needed anymore, it's on by default and
 	# has been removed from configure
+	#  Apply to 4.x and 5.0.[0-3]
 	if use ssl ; then
 		 mysql_version_is_at_least "5.0.4" || myconf="${myconf} --with-vio"
-	fi
-
-	if mysql_version_is_at_least "5.1.11" ; then
-		myconf="${myconf} $(use_with ssl /usr)"
-	else
-		myconf="${myconf} $(use_with ssl openssl)"
 	fi
 
 	if mysql_version_is_at_least "5.0.60" ; then
@@ -476,13 +472,21 @@ configure_51() {
 	# TODO: !!!! readd --without-readline
 	# the failure depend upon config/ac-macros/readline.m4 checking into
 	# readline.h instead of history.h
-	myconf="${myconf} $(use_with ssl)"
+	myconf="${myconf} $(use_with ssl ssl /usr)"
 	myconf="${myconf} --enable-assembler"
 	myconf="${myconf} --with-geometry"
 	myconf="${myconf} --with-readline"
 	myconf="${myconf} --with-zlib-dir=/usr/"
 	myconf="${myconf} --without-pstack"
 	use max-idx-128 && myconf="${myconf} --with-max-indexes=128"
+	if [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ]; then
+		myconf="${myconf} $(use_enable community community-features)"
+		if use community; then
+			myconf="${myconf} $(use_enable profiling)"
+		else
+			myconf="${myconf} --disable-profiling"
+		fi
+	fi
 
 	# 5.1 introduces a new way to manage storage engines (plugins)
 	# like configuration=none
