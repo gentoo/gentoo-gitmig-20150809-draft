@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.1 2009/06/01 21:44:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.2 2010/03/09 05:30:41 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[joystick,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-net
 	!games-fps/lsdldoom
