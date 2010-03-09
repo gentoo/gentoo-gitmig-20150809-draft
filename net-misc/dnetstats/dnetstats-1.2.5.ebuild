@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.5.ebuild,v 1.1 2010/01/16 12:25:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.5.ebuild,v 1.2 2010/03/09 12:19:40 abcd Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ src_install() {
 	newbin mythread ${PN} || die "newbin failed"
 	dodoc ReadMe || die "dodoc failed"
 	newicon resource/energy.png ${PN}.png || die "doicon failed"
-	make_desktop_entry ${PN} DNetStats ${PN}.png 'Qt;Network;Dialup'
+	make_desktop_entry ${PN} DNetStats ${PN} 'Qt;Network;Dialup'
 	# adjust the .desktop file
 	if use kde; then
 		sed -i "/^Exec/s:${PN}:kdesu -c ${PN}:" \
