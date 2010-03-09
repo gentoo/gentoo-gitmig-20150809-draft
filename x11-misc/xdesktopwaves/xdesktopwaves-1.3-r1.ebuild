@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3-r1.ebuild,v 1.1 2010/02/08 19:16:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/xdesktopwaves-1.3-r1.ebuild,v 1.2 2010/03/09 12:49:58 abcd Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ src_install() {
 	doman xdesktopwaves.1
 	insinto /usr/share/pixmaps
 	doins xdesktopwaves.xpm
-	make_desktop_entry xdesktopwaves "xdesktopwaves" xdesktopwaves.xpm
+	make_desktop_entry xdesktopwaves
 	dodoc README
 }
 
