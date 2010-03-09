@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.9 2008/07/07 16:54:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.10 2010/03/09 10:35:33 nyhm Exp $
 
 # Author:
 #	Kevin F. Quinn <kevquinn@gentoo.org>
@@ -21,7 +21,7 @@
 # is present), the legacy 'chpax' style markings will be
 # set.  If PT is present in PAX_MARKINGS (and the paxctl
 # utility is present), the 'paxctl' markings will be set.
-# Default is to try to do both.  Set it to "NONE" to prevent
+# Default is to try to do both.  Set it to "none" to prevent
 # any markings being made.
 #
 #
