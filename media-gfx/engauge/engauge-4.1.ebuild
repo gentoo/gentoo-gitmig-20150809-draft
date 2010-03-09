@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/engauge-4.1.ebuild,v 1.3 2010/01/04 12:45:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/engauge-4.1.ebuild,v 1.4 2010/03/09 11:35:13 abcd Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ serc_compile() {
 src_install() {
 	dobin bin/engauge
 	newicon src/img/lo32-app-digitizer.png "${PN}.png"
-	make_desktop_entry engauge "Engauge Digitizer" "${PN}.png" Graphics
+	make_desktop_entry engauge "Engauge Digitizer" ${PN} Graphics
 	use doc && dodoc -r usermanual
 	use examples && dodoc -r samples
 }

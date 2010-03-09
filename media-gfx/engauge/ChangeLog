@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/engauge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.4 2010/01/04 12:45:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.5 2010/03/09 11:35:13 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> engauge-4.1.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> engauge-4.1.ebuild:
   Keyword ~amd64 wrt #294955.
