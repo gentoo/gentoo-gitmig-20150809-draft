@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8m.ebuild,v 1.1 2010/03/05 21:43:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8m-r1.ebuild,v 1.1 2010/03/09 13:25:30 lxnay Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8h-ldflags.patch #181438
 	epatch "${FILESDIR}"/${PN}-0.9.8m-binutils.patch #289130
+	epatch "${FILESDIR}"/${PN}-0.9.8m-cfb.patch #308123
 
 	# disable fips in the build
 	# make sure the man pages are suffixed #302165
