@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.15 2008/11/19 06:58:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.16 2010/03/09 12:57:51 abcd Exp $
 
 inherit eutils games
 
@@ -46,6 +46,6 @@ src_install () {
 	doins -r data/ || die "doins failed"
 	dodoc AUTHORS CHANGELOG README README.GGZ doc/*
 	newicon data/images/icon.xpm ${PN}.xpm
-	make_desktop_entry xtux "Xtux" /usr/share/icons/${PN}.xpm
+	make_desktop_entry xtux "Xtux"
 	prepgamesdirs
 }

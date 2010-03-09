@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xtux
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.12 2008/11/19 06:58:21 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.13 2010/03/09 12:57:51 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> xtux-20030306.ebuild:
+  QA: Do not use absolute path to icon when in standard dirs (in
+  make_desktop_entry()); remove now-unneeded argument
 
   19 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org> xtux-20030306.ebuild:
   work around parallel-make issues (bug #247332)
