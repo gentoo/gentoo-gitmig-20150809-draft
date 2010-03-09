@@ -2,12 +2,28 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-dialup</herd>
-  <longdescription>A proxy DNS server with permanent caching (the cache contents are written to hard disk on exit) 
-that is designed to cope with unreachable or down DNS servers (for example in dial-in networking).</longdescription>
-<use>
-	<flag name='isdn'>Enable ISDN features</flag>
-	<flag name='underscores'>Enable support for domain names containing
-		underscores</flag>
-	<flag name='urandom'>Use /dev/urandom instead of /dev/random</flag>
-</use>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    A proxy DNS server with permanent caching (the cache contents are
+    written to hard disk on exit) that is designed to cope with
+    unreachable or down DNS servers (for example in dial-in
+    networking).
+  </longdescription>
+  <use>
+    <flag name='isdn'>Enable ISDN features</flag>
+    <flag name='underscores'>
+      Enable support for domain names containing underscores
+    </flag>
+    <flag name="nptl">
+      Linux-only: override auto-detection of the system threading
+      implementation and force usage of the Native Posix Thread
+      Library.
+    </flag>
+    <flag name='urandom'>
+      Linux-only: use /dev/urandom (pseudo-random number generation)
+      instead of the default use of random() PRNG.
+    </flag>
+  </use>
 </pkgmetadata>
