@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-3.0.7.ebuild,v 1.4 2010/03/08 20:14:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-3.0.7.ebuild,v 1.5 2010/03/09 21:54:40 josejx Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fwbuilder.org/"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="bind snmp stlport"
 
 DEPEND=">=dev-libs/libxml2-2.4.10
