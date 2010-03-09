@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.4 2010/01/30 18:01:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.5 2010/03/09 12:10:25 abcd Exp $
 
 EAPI="2"
 
@@ -218,7 +218,7 @@ src_install() {
 
 		newicon "${S}"/Applications/OverView/Icon.png overview.png \
 			|| die "Failed to create OverView icon"
-		make_desktop_entry OverView "OverView" overview.png \
+		make_desktop_entry OverView "OverView" overview \
 			|| die "Failed to install OverView desktop icon"
 	fi
 
@@ -239,7 +239,7 @@ src_install() {
 	# last but not least lets make a desktop entry
 	newicon "${S}"/Applications/Client/ParaViewLogo.png paraview.png \
 		|| die "Failed to create paraview icon."
-	make_desktop_entry paraview "Paraview" paraview.png \
+	make_desktop_entry paraview "Paraview" paraview \
 		|| die "Failed to install Paraview desktop entry"
 
 }

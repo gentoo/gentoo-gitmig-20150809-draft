@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.46 2010/01/30 18:01:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.47 2010/03/09 12:10:25 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> paraview-3.6.2.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   30 Jan 2010; Markus Dittrich <markusle@gentoo.org> paraview-3.6.2.ebuild,
   +files/paraview-3.6.2-h5part.patch:
