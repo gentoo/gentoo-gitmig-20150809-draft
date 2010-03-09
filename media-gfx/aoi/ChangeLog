@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/aoi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.25 2009/12/23 00:23:31 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.26 2010/03/09 12:59:04 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> aoi-2.5.ebuild,
+  aoi-2.7.2.ebuild:
+  QA: Do not use absolute path to icon when in standard dirs (in
+  make_desktop_entry())
 
   23 Dec 2009; Vlastimil Babka <caster@gentoo.org> aoi-2.7.2.ebuild:
   Raise jre dep to 1.5 as the jar contains 1.5 bytecode. Fixes bug #297462.

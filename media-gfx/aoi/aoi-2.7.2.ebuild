@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.7.2.ebuild,v 1.2 2009/12/23 00:23:31 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.7.2.ebuild,v 1.3 2010/03/09 12:59:04 abcd Exp $
 
 inherit java-pkg-2 eutils versionator
 
@@ -46,5 +46,5 @@ src_install() {
 	doicon Icons/aoi.png
 
 	# desktop entry
-	make_desktop_entry aoi "Art of Illusion" /usr/share/pixmaps/aoi.png "Graphics"
+	make_desktop_entry aoi "Art of Illusion" aoi "Graphics"
 }
