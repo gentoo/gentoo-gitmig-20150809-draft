@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gwave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.22 2009/11/29 07:06:23 calchan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.23 2010/03/09 12:45:33 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> gwave-20090213.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
 *gwave-20090213 (29 Nov 2009)
 

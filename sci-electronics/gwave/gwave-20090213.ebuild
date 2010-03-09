@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213.ebuild,v 1.1 2009/11/29 07:06:23 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213.ebuild,v 1.2 2010/03/09 12:45:33 abcd Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "Installation failed"
 	dodoc AUTHORS NEWS README TODO || die "Installation of documentation failed"
 	newicon icons/wave-drag-ok.xpm gwave.xpm
-	make_desktop_entry gwave "Gwave" gwave.xpm "Electronics"
+	make_desktop_entry gwave "Gwave" gwave "Electronics"
 }
 
 pkg_preinst() {
