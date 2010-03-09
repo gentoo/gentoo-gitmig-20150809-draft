@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.33 2007/07/22 03:35:05 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.34 2010/03/09 20:30:41 phosphan Exp $
+
+  09 Mar 2010; Patrick Kursawe <phosphan@gentoo.org> -x2vnc-1.7.1.ebuild:
+  Removing obsolete revision.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; x2vnc-1.6.1.ebuild,
   x2vnc-1.7.1.ebuild, x2vnc-1.7.2.ebuild:
