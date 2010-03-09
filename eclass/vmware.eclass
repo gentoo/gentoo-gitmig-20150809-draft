@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.32 2010/01/21 06:07:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.33 2010/03/09 13:12:08 abcd Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -286,7 +286,7 @@ vmware_src_install() {
 
 	# We like desktop icons.
 	# TODO: Fix up the icon creation, across the board.
-	#make_desktop_entry ${PN} "VMware ${FULL_NAME}" ${PN}.png
+	#make_desktop_entry ${PN} "VMware ${FULL_NAME}"
 
 	# We like symlinks for console users.
 	# TODO: Fix up the symlink creation, across the board.
