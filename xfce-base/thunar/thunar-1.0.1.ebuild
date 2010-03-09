@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.0.1.ebuild,v 1.16 2010/01/22 16:48:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.0.1.ebuild,v 1.17 2010/03/09 10:41:19 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/t/T}
@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt )"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}/${P}-libpng14.patch" )
 	XFCONF="--disable-dependency-tracking
 		$(use_enable dbus)
 		$(use_enable gnome gnome-thumbnailers)
