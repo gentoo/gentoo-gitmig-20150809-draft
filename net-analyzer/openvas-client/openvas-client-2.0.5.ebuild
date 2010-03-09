@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/openvas-client-2.0.5.ebuild,v 1.2 2009/11/07 20:19:43 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/openvas-client-2.0.5.ebuild,v 1.3 2010/03/09 13:02:03 abcd Exp $
 
 inherit eutils
 
@@ -29,5 +29,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS CHANGES README TODO || die "dodoc failed"
 
-	make_desktop_entry OpenVAS-Client "OpenVAS Client" /usr/share/pixmaps/openvas-client.png "Network"
+	make_desktop_entry OpenVAS-Client "OpenVAS Client"
 }
