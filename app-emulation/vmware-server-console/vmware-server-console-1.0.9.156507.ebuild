@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.9.156507.ebuild,v 1.1 2009/05/09 21:59:41 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.9.156507.ebuild,v 1.2 2010/03/09 12:04:48 abcd Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -71,7 +71,7 @@ src_install() {
 
 	# Fix an ugly GCC error on start
 	rm -f "${D}${VMWARE_INSTALL_DIR}/lib/lib/libgcc_s.so.1/libgcc_s.so.1"
-	make_desktop_entry ${PN} "VMWare Remote Console" ${PN}.png System
+	make_desktop_entry ${PN} "VMWare Remote Console" ${PN} System
 
 	dodir /usr/bin
 	dosym ${VMWARE_INSTALL_DIR}/bin/${PN} /usr/bin/${PN}

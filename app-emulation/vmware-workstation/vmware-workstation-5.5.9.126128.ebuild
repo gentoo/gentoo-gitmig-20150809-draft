@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.9.126128.ebuild,v 1.3 2009/01/12 21:46:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.9.126128.ebuild,v 1.4 2010/03/09 12:06:38 abcd Exp $
 
 inherit vmware eutils versionator
 
@@ -88,8 +88,8 @@ src_install() {
 	doicon lib/share/pixmaps/vmware-player.png
 	# Fix an ugly GCC error on start
 	rm -f "${Ddir}lib/lib/libgcc_s.so.1/libgcc_s.so.1"
-	make_desktop_entry vmware "VMWare Workstation" ${PN}.png System
-	make_desktop_entry vmplayer "VMWare Player" vmware-player.png System
+	make_desktop_entry vmware "VMWare Workstation" ${PN} System
+	make_desktop_entry vmplayer "VMWare Player" vmware-player System
 }
 
 pkg_postinst() {

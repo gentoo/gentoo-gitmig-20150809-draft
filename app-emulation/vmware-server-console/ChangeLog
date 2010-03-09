@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-server-console
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.41 2009/05/09 21:59:41 ikelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.42 2010/03/09 12:04:48 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org>
+  vmware-server-console-1.0.8.126538.ebuild,
+  vmware-server-console-1.0.9.156507.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
 *vmware-server-console-1.0.9.156507 (09 May 2009)
 
