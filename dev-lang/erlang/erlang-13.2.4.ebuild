@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.4.ebuild,v 1.4 2010/03/05 08:21:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2.4.ebuild,v 1.5 2010/03/09 02:07:02 abcd Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -116,8 +116,8 @@ src_install() {
 	use smp && dosym "${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam.smp" /usr/bin/beam.smp
 
 	## Remove ${D} from the following files
-	sed -e "s:${D}::g" -i "${D}${ERL_LIBDIR}/bin/erl" || die
-	sed -e "s:${D}::g" -i "${D}${ERL_LIBDIR}/bin/start" || die
+	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/erl" || die
+	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/start" || die
 	grep -rle "${D}" "${ED}/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}" | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
