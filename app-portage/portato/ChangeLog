@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.20 2010/03/03 18:03:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.21 2010/03/09 19:20:30 fuzzyray Exp $
+
+  09 Mar 2010; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
+  Change herd to tools-portage.
 
 *portato-0.13.1 (03 Mar 2010)
 
