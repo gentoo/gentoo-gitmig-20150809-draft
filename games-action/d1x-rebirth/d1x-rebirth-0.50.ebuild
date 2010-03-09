@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.50.ebuild,v 1.3 2010/01/31 04:53:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.50.ebuild,v 1.4 2010/03/09 12:33:33 abcd Exp $
 
 inherit eutils games
 
@@ -94,7 +94,6 @@ src_compile() {
 }
 
 src_install() {
-	local icon="${PN}.xpm"
 	# Reasonable set of default options.
 	# Don't bother with ${DVX}.ini file.
 	local params="-gl_trilinear -gl_anisotropy 8.0 -gl_16bpp -gl_16bittextures -gl_reticle 2 -fullscreen -menu_gameres -nomovies -nocdrom"
@@ -103,8 +102,8 @@ src_install() {
 	use opengl && exe=${PN}-gl
 	newgamesbin ${exe} ${PN} || die "newgamesbin ${exe} failed"
 	games_make_wrapper ${PN}-common "${PN} ${params}"
-	doicon "${WORKDIR}/${icon}"
-	make_desktop_entry ${PN}-common "Descent ${DV} Rebirth" "${icon}"
+	doicon "${WORKDIR}/${PN}.xpm"
+	make_desktop_entry ${PN}-common "Descent ${DV} Rebirth" "${PN}"
 
 	insinto "${dir}"
 	doins "${WORKDIR}"/*.{pcx,fnt} || die
