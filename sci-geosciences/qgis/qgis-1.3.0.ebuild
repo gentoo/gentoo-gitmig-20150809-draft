@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.3.0.ebuild,v 1.3 2009/12/15 10:59:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.3.0.ebuild,v 1.4 2010/03/09 12:09:12 abcd Exp $
 
 EAPI="2"
 
@@ -73,7 +73,7 @@ src_install() {
 	dodoc AUTHORS BUGS ChangeLog README SPONSORS CONTRIBUTORS
 
 	newicon images/icons/qgis-icon.png qgis.png
-	make_desktop_entry qgis "Quantum GIS " qgis.png
+	make_desktop_entry qgis "Quantum GIS " qgis
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
