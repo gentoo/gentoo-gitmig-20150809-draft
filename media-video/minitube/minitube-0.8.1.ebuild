@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.8.1.ebuild,v 1.3 2010/02/07 19:48:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.8.1.ebuild,v 1.4 2010/03/09 12:25:58 abcd Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ src_configure() {
 src_install() {
 	dobin build/target/minitube || die "dobin failed"
 	newicon images/app.png minitube.png || die "doicon failed"
-	make_desktop_entry minitube MiniTube minitube.png "Qt;AudioVideo;Video" \
+	make_desktop_entry minitube MiniTube minitube "Qt;AudioVideo;Video" \
 		|| die "make_desktop_entry failed"
 	#translations
 	insinto "/usr/share/${PN}/locale/"

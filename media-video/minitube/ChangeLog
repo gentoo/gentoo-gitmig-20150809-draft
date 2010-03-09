@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.19 2010/02/07 19:48:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.20 2010/03/09 12:25:58 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> minitube-0.7.ebuild,
+  minitube-0.8.ebuild, minitube-0.8.1.ebuild, minitube-0.9.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   07 Feb 2010; Markus Meier <maekke@gentoo.org> minitube-0.8.1.ebuild:
   x86 stable, bug #301904
