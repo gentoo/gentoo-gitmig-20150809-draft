@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0.ebuild,v 1.2 2009/11/29 09:39:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0.ebuild,v 1.3 2010/03/09 11:57:42 abcd Exp $
 
 EAPI="2"
 
@@ -67,6 +67,6 @@ src_install(){
 	insinto "/usr/$(get_libdir)/qutim"
 	doins $(find . -type f -executable -iname "*.so") || die
 	doicon "${S}"/icons/${PN}_64.png || die "Failed to install icon"
-	make_desktop_entry ${PN} ${MY_PN} ${PN}_64.png \
+	make_desktop_entry ${PN} ${MY_PN} ${PN}_64 \
 	"Network;InstantMessaging;Qt" || die "make_desktop_entry failed"
 }
