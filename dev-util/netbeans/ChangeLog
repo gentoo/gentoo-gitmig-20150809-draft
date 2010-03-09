@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.132 2010/01/24 21:33:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.133 2010/03/09 11:53:54 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> netbeans-6.5-r4.ebuild,
+  netbeans-6.7.ebuild, netbeans-6.7.1.ebuild, netbeans-6.8-r1.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   24 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> netbeans-6.8-r1.ebuild:
   Filter ecj-3.5
