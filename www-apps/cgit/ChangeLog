@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.1 2010/02/23 22:54:11 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.2 2010/03/09 23:12:20 ramereth Exp $
+
+*cgit-0.8.3.1-r1 (09 Mar 2010)
+
+  09 Mar 2010; Lance Albertson <ramereth@gentoo.org>
+  +cgit-0.8.3.1-r1.ebuild:
+  Add doc useflag to make install the manpage optional
 
 *cgit-0.8.3.1 (20 Feb 2010)
 
