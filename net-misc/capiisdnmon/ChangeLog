@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/capiisdnmon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/ChangeLog,v 1.8 2009/08/10 10:43:38 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/ChangeLog,v 1.9 2010/03/09 12:37:35 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> capiisdnmon-0.42-r1.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   capiisdnmon-0.42-r1.ebuild, +files/capiisdnmon-0.42-gcc44.patch:

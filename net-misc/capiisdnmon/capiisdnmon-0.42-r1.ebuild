@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/capiisdnmon-0.42-r1.ebuild,v 1.4 2009/08/10 10:43:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/capiisdnmon-0.42-r1.ebuild,v 1.5 2010/03/09 12:37:35 abcd Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,5 +37,5 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	newicon icon1.xpm capiisdnmon.xpm
-	make_desktop_entry capiIsdnMon "CAPI ISDN Monitor" capiisdnmon.xpm
+	make_desktop_entry capiIsdnMon "CAPI ISDN Monitor" capiisdnmon
 }
