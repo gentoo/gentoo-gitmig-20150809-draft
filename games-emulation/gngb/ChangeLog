@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gngb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/ChangeLog,v 1.11 2010/01/03 11:50:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/ChangeLog,v 1.12 2010/03/09 04:44:30 mr_bones_ Exp $
+
+  09 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> gngb-20060309.ebuild:
+  add use flags for libsdl
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gngb-20060309.ebuild:
   Transfer Prefix keywords

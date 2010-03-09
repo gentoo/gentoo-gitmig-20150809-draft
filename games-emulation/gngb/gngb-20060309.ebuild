@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/gngb-20060309.ebuild,v 1.3 2010/01/03 11:50:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/gngb-20060309.ebuild,v 1.4 2010/03/09 04:44:30 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="opengl"
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[audio,joystick,video]
 	sys-libs/zlib
 	app-arch/bzip2
 	opengl? ( virtual/opengl )"
