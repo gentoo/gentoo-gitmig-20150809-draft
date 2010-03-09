@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.2.203138.ebuild,v 1.1 2009/10/29 13:24:13 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.2.203138.ebuild,v 1.2 2010/03/09 12:03:47 abcd Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -193,7 +193,7 @@ src_install() {
 
 	# We like desktop icons.
 	# TODO: Fix up the icon creation, across the board.
-	#make_desktop_entry ${PN} "${product_name}" ${PN}.png
+	#make_desktop_entry ${PN} "${product_name}" ${PN}
 
 	# Now, we copy in our services.sh file
 	exeinto "${config_dir}"/init.d

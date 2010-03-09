@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-server
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.61 2009/12/18 16:14:42 vadimk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.62 2010/03/09 12:03:47 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org>
+  vmware-server-2.0.1.156745-r3.ebuild, vmware-server-2.0.2.203138.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry (fix usage
+  in comment)
 
 *vmware-server-1.0.10.203137 (18 Dec 2009)
 
