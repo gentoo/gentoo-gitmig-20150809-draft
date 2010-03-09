@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.74 2010/03/07 19:32:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.75 2010/03/09 13:24:22 grobian Exp $
+
+  09 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  +files/gdal-1.5.0-install_name.patch, gdal-1.6.3-r1.ebuild:
+  Unbreak compilation on Darwin
 
 *gdal-1.6.3-r1 (07 Mar 2010)
 
