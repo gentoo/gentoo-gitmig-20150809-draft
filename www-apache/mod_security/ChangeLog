@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.39 2010/03/07 14:51:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.40 2010/03/09 22:06:34 josejx Exp $
+
+  09 Mar 2010; Joseph Jezak <josejx@gentoo.org> mod_security-2.5.12.ebuild:
+  Marked ppc stable for bug #304147.
 
   07 Mar 2010; Markus Meier <maekke@gentoo.org> mod_security-2.5.12.ebuild:
   amd64 stable, bug #304147
