@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.5 2009/10/29 14:32:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.6 2010/03/09 12:23:23 abcd Exp $
 
 inherit eutils games
 
@@ -46,7 +46,7 @@ src_install() {
 
 	games_make_wrapper micropolis res/sim "${dir}"
 	doicon Micropolis.png
-	make_desktop_entry micropolis "Micropolis" Micropolis.png
+	make_desktop_entry micropolis "Micropolis" Micropolis
 
 	prepgamesdirs
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/micropolis
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.3 2009/10/29 14:32:37 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.4 2010/03/09 12:23:23 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> micropolis-1.0.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   29 Oct 2009; Markus Meier <maekke@gentoo.org> micropolis-1.0.ebuild:
   amd64/x86 stable, bug #288954
