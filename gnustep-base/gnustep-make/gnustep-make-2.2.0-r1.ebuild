@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.2.0-r1.ebuild,v 1.1 2010/03/09 18:52:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.2.0-r1.ebuild,v 1.2 2010/03/09 18:58:29 grobian Exp $
 
 EAPI="3"
 
@@ -27,11 +27,12 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-	myconf="--prefix=${GNUSTEP_PREFIX} --with-layout=gnustep"
-	myconf="$myconf --with-config-file=${EPREFIX}/etc/GNUstep/GNUstep.conf"
-	myconf="$myconf $(use_enable native-exceptions native-objc-exceptions)"
-	econf $myconf || die "configure failed"
+	econf \
+		--prefix="${GNUSTEP_PREFIX}" \
+		--with-layout=gnustep \
+		--with-config-file="${EPREFIX}"/etc/GNUstep/GNUstep.conf \
+		$(use_enable native-exceptions native-objc-exceptions) \
+		|| die "configure failed"
 }
 
 src_compile() {
