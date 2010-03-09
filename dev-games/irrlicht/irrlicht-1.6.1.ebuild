@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.6.1.ebuild,v 1.1 2010/01/14 22:17:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.6.1.ebuild,v 1.2 2010/03/09 06:27:40 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -45,6 +45,10 @@ src_prepare() {
 		-e '/^JPEGLIBOBJ/d' \
 		-e '/^LIBPNGOBJ/d' \
 		Makefile || die "sed failed"
+
+	sed -i \
+		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
+		CImageLoaderPNG.cpp || die
 }
 
 src_compile() {
