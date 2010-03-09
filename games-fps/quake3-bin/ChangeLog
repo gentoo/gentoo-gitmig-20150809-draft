@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.29 2009/07/26 10:55:33 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.30 2010/03/09 12:36:34 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> quake3-bin-1.32c.ebuild,
+  quake3-bin-1.32c-r1.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   26 Jul 2009; Tristan Heaven <nyhm@gentoo.org> quake3-bin-1.32c-r1.ebuild:
   Don't install mod symlinks, they should be installed by the mod packages
