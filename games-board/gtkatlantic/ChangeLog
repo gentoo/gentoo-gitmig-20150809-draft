@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gtkatlantic
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.15 2008/01/24 07:57:28 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.16 2010/03/09 22:05:34 ssuominen Exp $
+
+  09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gtkatlantic-0.4.2.ebuild, +files/gtkatlantic-0.4.2-libpng14.patch:
+  Fix building with libpng14 wrt #308741 by Locke Shinseiko.
 
   24 Jan 2008; Tristan Heaven <nyhm@gentoo.org> gtkatlantic-0.4.2.ebuild:
   Add pkgconfig dep, bug #206308
