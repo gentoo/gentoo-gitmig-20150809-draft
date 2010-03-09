@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/italc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.21 2009/11/10 01:14:53 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.22 2010/03/09 12:20:47 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> italc-1.0.9.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry (fix usage
+  in comment)
 
   10 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   -files/italc-1.0.3-fpic-asneeded.patch:

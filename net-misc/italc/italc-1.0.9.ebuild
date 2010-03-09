@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.6 2009/11/10 01:09:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.7 2010/03/09 12:20:47 abcd Exp $
 
 EAPI=2
 
@@ -83,7 +83,7 @@ src_install() {
 	# -- joke
 	# Install server logo
 	#newicon ima/resources/client_manager.png ${PN}.png
-	#make_desktop_entry "${PN}" "iTALC Master" "${PN}.png" "Qt;KDE;Education"
+	#make_desktop_entry ${PN} "iTALC Master" ${PN} "Qt;KDE;Education"
 }
 
 pkg_postinst() {
