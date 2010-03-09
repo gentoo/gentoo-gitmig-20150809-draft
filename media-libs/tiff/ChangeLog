@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.150 2010/03/07 15:06:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.151 2010/03/09 21:46:10 josejx Exp $
+
+  09 Mar 2010; Joseph Jezak <josejx@gentoo.org> tiff-3.9.2-r1.ebuild:
+  Marked ppc stable for bug #307001.
 
   07 Mar 2010; Markus Meier <maekke@gentoo.org> tiff-3.9.2-r1.ebuild:
   amd64 stable, bug #307001
