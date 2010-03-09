@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.12.ebuild,v 1.4 2009/03/08 20:26:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.12.ebuild,v 1.5 2010/03/09 13:08:42 abcd Exp $
 
 EAPI="1"
 
@@ -34,5 +34,5 @@ src_install() {
 	dodoc AUTHORS CHANGELOG HACKING || die "dodoc failed"
 
 	doicon Icons/Mercator_100x100.png
-	make_desktop_entry merkaartor "Merkaartor" /usr/share/pixmaps/Mercator_100x100.png "Science;Geoscience"
+	make_desktop_entry merkaartor "Merkaartor" Mercator_100x100 "Science;Geoscience"
 }
