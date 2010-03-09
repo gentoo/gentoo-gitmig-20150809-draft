@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/qshare-0.9.ebuild,v 1.1 2009/12/15 21:20:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/qshare-0.9.ebuild,v 1.2 2010/03/09 11:26:18 abcd Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ src_prepare() {
 src_install() {
 	dobin ${PN} || die "dobin failed"
 	doicon icons/${PN}.png
-	make_desktop_entry /usr/bin/${PN} QShare ${PN}.png "Qt;Network;FileTransfer"
+	make_desktop_entry /usr/bin/${PN} QShare ${PN} "Qt;Network;FileTransfer"
 	dohtml docs/* || die "dohtml failed"
 	for X in ${LINGUAS}; do
 		for Z in ${LANGS}; do
