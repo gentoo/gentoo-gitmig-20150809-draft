@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.7.1.ebuild,v 1.2 2009/11/04 18:06:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.7.1.ebuild,v 1.3 2010/03/09 01:45:36 mr_bones_ Exp $
 
 EAPI=2
 inherit multilib flag-o-matic eutils qt4 games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dedicated"
 
-DEPEND="dev-libs/boost:1.39
+DEPEND="|| ( dev-libs/boost:1.41 dev-libs/boost:1.39 )
 	>=net-libs/gnutls-2.2.2
 	>=net-misc/curl-7.16
 	x11-libs/qt-core:4
@@ -29,6 +29,8 @@ DEPEND="dev-libs/boost:1.39
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	local boost_ver
+
 	if use dedicated ; then
 		sed -i \
 			-e 's/pokerth_game.pro//' \
@@ -39,10 +41,12 @@ src_prepare() {
 		-e '/no_dead_strip_inits_and_terms/d' \
 		*pro \
 		|| die 'sed failed'
+	has_version dev-libs/boost:1.39 && boost_ver=1_39
+	has_version dev-libs/boost:1.41 && boost_ver=1_41
 	append-cxxflags \
-		-I/usr/include/boost-1_39
+		-I/usr/include/boost-${boost_ver}
 	append-ldflags \
-		-L/usr/$(get_libdir)/boost-1_39
+		-L/usr/$(get_libdir)/boost-${boost_ver}
 }
 
 src_configure() {
