@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.18.1.ebuild,v 1.2 2010/03/05 09:50:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.18.3.ebuild,v 1.1 2010/03/09 10:04:50 fauli Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit distutils
 
 DESCRIPTION="Qt frontend for Bazaar"
 HOMEPAGE="https://launchpad.net/qbzr"
-SRC_URI="http://launchpad.net/qbzr/${PV%%.1}/${PV}/+download/${PN}-${PV}.tar.gz"
+SRC_URI="http://launchpad.net/qbzr/${PV%%.3}/${PV}/+download/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
