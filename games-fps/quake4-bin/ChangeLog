@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake4-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.37 2008/09/26 18:54:33 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.38 2010/03/09 12:12:16 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> quake4-bin-1.3.2.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry (fix usage
+  in comment)
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org> quake4-bin-1.3.2.ebuild,
   quake4-bin-1.4.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.8 2008/09/26 18:54:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.3.2.ebuild,v 1.9 2010/03/09 12:12:16 abcd Exp $
 
 inherit eutils versionator games
 
@@ -89,8 +89,8 @@ src_install() {
 		games_make_wrapper quake4 ./quake4.x86 "${dir}" "${dir}"
 		games_make_wrapper quake4-smp ./quake4smp.x86 "${dir}" "${dir}"
 #		doicon ${FILESDIR}/quake4.png || die "copying icon"
-#		make_desktop_entry quake4 "Quake IV" quake4.png
-#		make_desktop_entry quake4-smp "Quake IV (SMP)" quake4.png
+#		make_desktop_entry quake4 "Quake IV" quake4
+#		make_desktop_entry quake4-smp "Quake IV (SMP)" quake4
 		newicon q4icon.bmp quake4.bmp || die "copying icon"
 		make_desktop_entry quake4 "Quake IV" /usr/share/pixmaps/quake4.bmp
 		make_desktop_entry quake4-smp "Quake IV (SMP)" /usr/share/pixmaps/quake4.bmp
