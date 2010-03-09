@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/criticalmass
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.15 2009/01/06 01:38:39 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.16 2010/03/09 18:05:33 ssuominen Exp $
+
+*criticalmass-1.0.0-r1 (09 Mar 2010)
+
+  09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +criticalmass-1.0.0-r1.ebuild, +files/criticalmass-1.0.0-libpng14.patch,
+  +files/criticalmass-1.0.0-system_curl.patch:
+  Use system libcurl and fix building with libpng14 by Locke Shinseiko
+  (Wizzleby).
 
   06 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   criticalmass-1.0.0.ebuild:
