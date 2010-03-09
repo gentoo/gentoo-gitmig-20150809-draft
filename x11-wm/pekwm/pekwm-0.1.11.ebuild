@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.11.ebuild,v 1.2 2010/01/22 16:51:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.11.ebuild,v 1.3 2010/03/09 14:13:48 ssuominen Exp $
 
-EAPI=1
+EAPI=2
+inherit eutils
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://pekwm.org/"
@@ -24,7 +25,11 @@ DEPEND="media-libs/jpeg:0
 RDEPEND="${DEPEND}
 	x11-apps/xprop"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+}
+
+src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable truetype xft) \
@@ -35,13 +40,11 @@ src_compile() {
 		--enable-image-xpm \
 		--enable-menus \
 		--enable-shape \
-		--enable-xrandr || die "econf failed"
-
-	emake || die "emake failed"
+		--enable-xrandr
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 
 	rm "${WORKDIR}/themes/Ace/.theme.swp"
