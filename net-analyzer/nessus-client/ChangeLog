@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-client
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.7 2007/04/08 18:30:59 vanquirius Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.8 2010/03/09 12:59:58 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> nessus-client-1.0.2.ebuild:
+  QA: Do not use absolute path to icon when in standard dirs (in
+  make_desktop_entry())
 
   08 Apr 2007; Marcelo Goes <vanquirius@gentoo.org>
   -nessus-client-1.0.1.ebuild, nessus-client-1.0.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.4 2007/04/08 18:30:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.5 2010/03/09 12:59:58 abcd Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_install() {
 	dodoc CHANGES README_SSL VERSION
 
 	doicon "${WORKDIR}"/${PN}.png
-	make_desktop_entry NessusClient "Nessus Client" /usr/share/pixmaps/nessus-client.png "Application;Network;"
+	make_desktop_entry NessusClient "Nessus Client" nessus-client "Application;Network;"
 }
 
 pkg_postinst() {
