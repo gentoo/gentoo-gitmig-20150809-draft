@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mauve/mauve-9999.ebuild,v 1.1 2009/12/09 20:01:51 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mauve/mauve-9999.ebuild,v 1.2 2010/03/09 13:04:57 abcd Exp $
 
 EAPI="2"
 
@@ -50,5 +50,5 @@ src_install() {
 	icotool -x win32/mauve.ico
 	insinto /usr/share/pixmaps
 	newins mauve_4_48x48x32.png Mauve.png
-	make_desktop_entry Mauve Mauve /usr/share/pixmaps/Mauve.png || die
+	make_desktop_entry Mauve Mauve Mauve
 }

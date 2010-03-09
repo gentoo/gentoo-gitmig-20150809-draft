@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.1.ebuild,v 1.1 2009/10/07 18:36:07 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.1.ebuild,v 1.2 2010/03/09 13:06:45 abcd Exp $
 
 EAPI="2"
 
@@ -69,7 +69,7 @@ src_install() {
 	insinto /usr/share/seaview/images
 	doins seaview.xpm || die
 
-	make_desktop_entry seaview Seaview /usr/share/pixmaps/seaview.xpm || die
+	make_desktop_entry seaview Seaview
 
 	doman seaview.1 || die
 }
