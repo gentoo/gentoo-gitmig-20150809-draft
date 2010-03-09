@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-0.9.9.8.6.ebuild,v 1.2 2010/02/23 09:29:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-0.9.9.8.6.ebuild,v 1.3 2010/03/09 12:14:36 abcd Exp $
 
 EAPI=2
 
@@ -42,7 +42,7 @@ src_install() {
 	cd ..
 	python setup.py install --root="${D}" || die
 
-	make_desktop_entry ${PN} ${PN} ${PN}.png "Education"
+	make_desktop_entry ${PN} ${PN} ${PN} "Education"
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.40-r1.ebuild,v 1.2 2009/06/07 16:03:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.40-r1.ebuild,v 1.3 2010/03/09 12:17:09 abcd Exp $
 
 NEED_PYTHON=2.5
 
@@ -27,7 +27,7 @@ src_install() {
 		doins   Icons/* || die "doins failed"
 		doicon  Icons/pysmssend.png || die "doicon failed"
 		dobin   pysmssend pysmssendcmd || die "failed to create executables"
-		make_desktop_entry pysmssend pySMSsend pysmssend.png \
+		make_desktop_entry pysmssend pySMSsend pysmssend \
 			"Applications;Network" || die "make_desktop_entry failed"
 	else
 		dobin   pysmssendcmd || die "failed to create executable"

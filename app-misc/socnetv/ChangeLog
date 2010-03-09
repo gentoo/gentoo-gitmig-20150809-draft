@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/socnetv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.5 2010/01/12 19:24:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.6 2010/03/09 12:16:08 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> socnetv-0.51.ebuild,
+  socnetv-0.60.ebuild, socnetv-0.70.ebuild, socnetv-0.80.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
 *socnetv-0.80 (12 Jan 2010)
 

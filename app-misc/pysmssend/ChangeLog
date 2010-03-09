@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pysmssend
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.8 2009/11/23 08:21:43 wired Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.9 2010/03/09 12:17:09 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> pysmssend-1.40.ebuild,
+  pysmssend-1.40-r1.ebuild, pysmssend-1.42.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
   23 Nov 2009; Alex Alexander <wired@gentoo.org> pysmssend-1.42.ebuild:
   fixed SRC_URI, bug 294116
