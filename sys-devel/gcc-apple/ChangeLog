@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.11 2010/03/08 17:12:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.12 2010/03/09 17:53:25 grobian Exp $
+
+  09 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.2.1_p5566-r2.ebuild, gcc-apple-4.2.1_p5574.ebuild,
+  gcc-apple-4.2.1_p5646.ebuild, gcc-apple-4.2.1_p5647.ebuild:
+  Fix version hacking, Apple actually parses it back again to set
+  __APPLE_CC__ to their build number. Fixes bug #308659
 
 *gcc-apple-4.2.1_p5647 (08 Mar 2010)
 

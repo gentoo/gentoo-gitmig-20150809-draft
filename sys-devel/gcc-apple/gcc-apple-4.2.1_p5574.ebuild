@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5574.ebuild,v 1.5 2010/03/08 17:12:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5574.ebuild,v 1.6 2010/03/09 17:53:25 grobian Exp $
 
 EAPI="3"
 
@@ -112,7 +112,7 @@ src_prepare() {
 	cd "${S}"/libgomp && eautoconf
 
 	local BRANDING_GCC_PKGVERSION="$(sed -n -e '/^#define VERSUFFIX/s/^[^"]*"\([^"]\+\)".*$/\1/p' "${S}"/gcc/version.c)"
-	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/)/, Gentoo ${PVR})}
+	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/(/(Gentoo ${PVR}, }
 	einfo "patching gcc version: ${GCC_VERS}${BRANDING_GCC_PKGVERSION}"
 
 	sed -i -e "s~VERSUFFIX \"[^\"]*~VERSUFFIX \"${BRANDING_GCC_PKGVERSION}~" \
