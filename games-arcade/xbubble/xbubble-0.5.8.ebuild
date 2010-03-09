@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.14 2010/03/09 21:19:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.15 2010/03/09 21:22:50 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="a Puzzle Bobble clone similar to Frozen-Bubble"
@@ -20,9 +21,7 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-xpaths.patch \
 		"${FILESDIR}"/${P}-locale.patch \
@@ -35,12 +34,10 @@ src_unpack() {
 		configure po/Makefile.in.in || die "sed locale"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
-		$(use_enable nls) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable nls)
 }
 
 src_install() {
