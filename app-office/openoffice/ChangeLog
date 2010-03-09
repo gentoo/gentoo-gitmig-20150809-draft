@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.522 2010/03/03 11:00:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.523 2010/03/09 17:42:21 arfrever Exp $
+
+  09 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  openoffice-3.2.0.ebuild, +files/neon-remove-SSPI-support.diff:
+  Fix building with =net-misc/neon-0.30* (bug #307501).
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   openoffice-3.2.0.ebuild:
