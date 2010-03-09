@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r4.ebuild,v 1.12 2010/02/21 04:31:18 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r4.ebuild,v 1.13 2010/03/09 21:15:19 ssuominen Exp $
 
 EAPI=1
 inherit eutils
@@ -52,7 +52,8 @@ src_unpack() {
 	EPATCH_OPTS="-F3 -l" epatch "${FILESDIR}"/xli-security-gentoo.diff
 
 	# Fix scale per bug 282979
-	epatch "${FILESDIR}"/${P}-fix-scale-zoom.patch
+	epatch "${FILESDIR}"/${P}-fix-scale-zoom.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_compile() {
