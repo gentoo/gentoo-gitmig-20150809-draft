@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.28 2010/03/02 22:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.29 2010/03/09 14:25:37 beandog Exp $
 
 EAPI="2"
 
@@ -371,7 +371,7 @@ src_configure() {
 	# broken upstream, won't work with recent kernels
 	myconf+=" --disable-ivtv"
 	if { use dvb || use v4l || use v4l2 || use pvr || use radio; }; then
-		use dvb || myconf+=" --disable-dvb --disable-dvbhead"
+		use dvb || myconf+=" --disable-dvb"
 		use pvr || myconf+=" --disable-pvr"
 		use v4l	|| myconf+=" --disable-tv-v4l1"
 		use v4l2 || myconf+=" --disable-tv-v4l2"
