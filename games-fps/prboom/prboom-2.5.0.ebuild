@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.2 2010/03/09 05:30:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.3 2010/03/09 21:51:20 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -28,6 +28,7 @@ src_prepare() {
 	local ret=$?
 	eend ${ret} "NVidia GL/prboom bug found ;("
 	[ ${ret} -eq 0 ] || epatch "${FILESDIR}"/${P}-nvidia.patch
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 	sed -i \
 		-e '/^gamesdir/ s/\/games/\/bin/' \
 		src/Makefile.in \

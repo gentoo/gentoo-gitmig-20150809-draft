@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/prboom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.29 2010/03/09 05:30:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.30 2010/03/09 21:51:20 ssuominen Exp $
+
+  09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> prboom-2.5.0.ebuild,
+  +files/prboom-2.5.0-libpng14.patch:
+  Fix building with libpng14 wrt #308739 by Rafał Mużyło.
 
   09 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.5.0.ebuild:
   add use deps for libsdl
