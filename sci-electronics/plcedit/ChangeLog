@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/plcedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/ChangeLog,v 1.5 2010/01/06 14:25:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/ChangeLog,v 1.6 2010/03/09 12:21:47 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> plcedit-2.1.1.ebuild,
+  plcedit-2.1.2.ebuild:
+  QA: When not using an absolute path, you MUST NOT use a file extension
+  (.png, .svg, or .xpm) on the icon name for make_desktop_entry
 
 *plcedit-2.1.2 (06 Jan 2010)
 

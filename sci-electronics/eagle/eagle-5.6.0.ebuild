@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.6.0.ebuild,v 1.6 2010/01/17 21:30:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.6.0.ebuild,v 1.7 2010/03/09 12:22:43 abcd Exp $
 
 inherit eutils
 
@@ -75,7 +75,7 @@ src_install() {
 
 	# Create desktop entry
 	doicon bin/${PN}icon50.png
-	make_desktop_entry "${ROOT}/usr/bin/eagle" ${PN} ${PN}icon50.png "Graphics;Electronics"
+	make_desktop_entry "${ROOT}/usr/bin/eagle" ${PN} ${PN}icon50 "Graphics;Electronics"
 
 }
 

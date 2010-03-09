@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.1.1.ebuild,v 1.2 2010/01/06 13:59:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.1.1.ebuild,v 1.3 2010/03/09 12:21:47 abcd Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}"
 src_install(){
 	newbin release/${MY_PN} ${PN} || die "dobin failed"
 	newicon src/ressources/images/icon.png ${PN}.png
-	make_desktop_entry ${PN} ${MY_PN} ${PN}.png 'Qt;Electronics'
+	make_desktop_entry ${PN} ${MY_PN} ${PN} 'Qt;Electronics'
 	dodoc readme.txt || die "dodoc failed"
 	if use doc; then
 		dohtml -r Docs/html/* || die "dohtml failed"
