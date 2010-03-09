@@ -1,6 +1,24 @@
 # ChangeLog for net-dns/pdnsd
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.91 2009/05/09 13:06:11 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.92 2010/03/09 15:39:06 flameeyes Exp $
+
+*pdnsd-1.2.8 (09 Mar 2010)
+
+  09 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org> +pdnsd-1.2.8.ebuild,
+  +files/pdnsd.rc6.1:
+  Version bump, with a few changes: init script is no longer totally quiet
+  (you'd miss on the errors) and will create the cache directory if missing;
+  the configuration file for pdnsd does no longer contain the whole help
+  text (saves from etc-update and fixes cross-compilation); the test
+  function should work even if no network is available (and will no longer
+  happen “automagically”, as it depends on dig being present now); ipv6
+  is enabled automatically on the build rather than by parameter, with the
+  USE flag set; drop underscores USE flag (obsoleted, upstream no longer
+  supports it), enable urandom by default (avoids sapping entropy by
+  default, most users will be comfortable with that default); drop nptl USE
+  flag (leave it to be auto-configured, which is good). To do for the next
+  revision: install the dhcp2pdnsd script properly, and write an init script
+  for that.
 
   09 May 2009; Alin Năstac <mrness@gentoo.org> -files/pdnsd.resolvconf,
   -pdnsd-1.2.6.ebuild, -pdnsd-1.2.6-r1.ebuild, pdnsd-1.2.7-r1.ebuild:
