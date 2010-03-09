@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/supervisor
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.1 2010/03/09 13:45:31 djc Exp $
+
+*supervisor-3.0_alpha8 (09 Mar 2010)
+
+  09 Mar 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +supervisor-3.0_alpha8.ebuild, +files/conf.d, +files/init.d,
+  +metadata.xml:
+  Initial version of the package.
+
