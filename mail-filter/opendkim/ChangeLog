@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.9 2010/03/05 19:29:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.10 2010/03/09 00:43:12 dragonheart Exp $
+
+  09 Mar 2010; Daniel Black <dragonheart@gentoo.org> opendkim-2.0.0.ebuild,
+  +files/opendkim-2.0.0-lua-ldap.patch:
+  fix for bug #308171 to enable compulation with USE=ldap,-lua. Thanks to
+  Guillaume Castagnino
 
 *opendkim-2.0.0 (05 Mar 2010)
 

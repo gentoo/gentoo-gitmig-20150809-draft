@@ -1,0 +1,25 @@
+Index: configure.ac
+===================================================================
+RCS file: /cvsroot/opendkim/configure.ac,v
+retrieving revision 1.139
+retrieving revision 1.140
+diff -u -b -B -r1.139 -r1.140
+--- configure.ac	3 Mar 2010 16:32:55 -0000	1.139
++++ configure.ac	7 Mar 2010 17:17:57 -0000	1.140
+@@ -3,7 +3,7 @@
+ #
+ # Copyright (c) 2009, 2010  The OpenDKIM Project.  All rights reserved.
+ # 
+-# $Id: opendkim-2.0.0-lua-ldap.patch,v 1.1 2010/03/09 00:43:13 dragonheart Exp $
++# $Id: opendkim-2.0.0-lua-ldap.patch,v 1.1 2010/03/09 00:43:13 dragonheart Exp $
+ 
+ #
+ # Setup
+@@ -1063,7 +1063,6 @@
+ 				AC_MSG_RESULT([ok]), 
+ 				AC_MSG_ERROR([OpenLDAP version 2.1.3 or later required]))
+ 	CPPFLAGS="$saved_CPPFLAGS"
+-	AC_DEFINE([USE_LUA], 1, [support for Lua scripting])
+ 	AC_DEFINE([USE_LDAP], 1, [OpenLDAP support for datasets enabled])
+ fi
+ AM_CONDITIONAL(USE_LDAP, test x"$ldap_found" = x"yes")

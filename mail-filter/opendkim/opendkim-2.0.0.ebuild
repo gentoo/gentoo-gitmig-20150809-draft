@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.0.ebuild,v 1.1 2010/03/05 19:29:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.0.ebuild,v 1.2 2010/03/09 00:43:12 dragonheart Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 # for betas
 #MY_P=${P/_b/.B}
@@ -46,6 +46,8 @@ src_prepare() {
 	sed -i -e 's:/var/db/dkim:/etc/opendkim:g' \
 	       -e 's:/etc/mail:/etc/opendkim:g' \
 		   opendkim/opendkim.conf.sample
+	epatch "${FILESDIR}"/${P}-lua-ldap.patch
+	eautoreconf
 }
 
 src_configure() {
