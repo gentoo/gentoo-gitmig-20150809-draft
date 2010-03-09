@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306.ebuild,v 1.2 2010/03/07 04:29:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306.ebuild,v 1.3 2010/03/09 20:15:16 armin76 Exp $
 
 EAPI="1"
 
@@ -50,6 +50,7 @@ RDEPEND="sys-libs/zlib
 	!net-misc/tightvnc
 	!net-misc/xf4vnc"
 DEPEND="${RDEPEND}
+	amd64? ( dev-lang/nasm )
 	x86? ( dev-lang/nasm )
 	>=x11-proto/inputproto-1.5
 	>=x11-proto/xextproto-7.0.3
