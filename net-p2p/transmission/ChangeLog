@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.107 2010/02/22 06:52:23 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.108 2010/03/09 22:02:11 josejx Exp $
+
+  09 Mar 2010; Joseph Jezak <josejx@gentoo.org> transmission-1.83.ebuild:
+  Marked ppc stable for bug #301773.
 
 *transmission-1.91 (22 Feb 2010)
 
