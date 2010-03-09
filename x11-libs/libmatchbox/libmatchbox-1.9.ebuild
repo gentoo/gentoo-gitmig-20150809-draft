@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.7 2009/03/14 04:16:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.8 2010/03/09 14:57:48 ssuominen Exp $
 
 inherit eutils libtool
 
@@ -36,7 +36,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 	elibtoolize
 }
 

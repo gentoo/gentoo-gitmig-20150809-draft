@@ -1,0 +1,13 @@
+http://repos.archlinux.org/wsvn/community/libmatchbox/trunk/PKGBUILD
+
+--- libmb/mbpixbuf.c
++++ libmb/mbpixbuf.c
+@@ -228,7 +228,7 @@
+   if ((fd = fopen( file, "rb" )) == NULL) return NULL;
+ 
+   fread( header, 1, 8, fd );
+-  if ( ! png_check_sig( header, 8 ) ) 
++  if ( ! png_sig_cmp( header, 0, 8 ) ) 
+     {
+       fclose(fd);
+       return NULL;
