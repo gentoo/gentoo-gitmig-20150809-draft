@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/brlcad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/ChangeLog,v 1.4 2010/03/03 15:47:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/ChangeLog,v 1.5 2010/03/09 03:31:52 bicatali Exp $
+
+  09 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  brlcad-7.16.6-r1.ebuild:
+  Get the LDPATH right, bug #307867
 
 *brlcad-7.16.6-r1 (03 Mar 2010)
 

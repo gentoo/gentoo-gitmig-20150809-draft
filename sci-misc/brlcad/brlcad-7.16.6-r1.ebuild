@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6-r1.ebuild,v 1.1 2010/03/03 15:47:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/brlcad/brlcad-7.16.6-r1.ebuild,v 1.2 2010/03/09 03:31:52 bicatali Exp $
 
 EAPI=2
 inherit eutils java-pkg-opt-2
@@ -43,7 +43,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myitcl="/usr/$(get_libdir)/itcl3.4" myitk="/usr/$(get_libdir)/itk3.4"
+	myitcl="/usr/$(get_libdir)/itcl3.4" myitk="/usr/$(get_libdir)/itk3.4"
 	export LD_LIBRARY_PATH="${myitcl}:${myitk}:${LD_LIBRARY_PATH}"
 	econf \
 		--disable-strict-build \
