@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.14 2010/02/02 20:17:22 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.15 2010/03/10 23:41:30 abcd Exp $
+
+  10 Mar 2010; Jonathan Callen <abcd@gentoo.org> pycups-1.9.45-r1.ebuild,
+  pycups-1.9.46.ebuild, pycups-1.9.48.ebuild:
+  Replace NEED_PYTHON with PYTHON_DEPEND
 
 *pycups-1.9.48 (02 Feb 2010)
 

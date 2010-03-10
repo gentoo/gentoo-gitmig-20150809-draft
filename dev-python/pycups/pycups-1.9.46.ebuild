@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.8 2009/12/27 12:45:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.9 2010/03/10 23:41:30 abcd Exp $
 
 EAPI="2"
 
-NEED_PYTHON="2.4"
+PYTHON_DEPEND="2:2.4"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils flag-o-matic
