@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.13 2009/10/28 13:52:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.14 2010/03/10 15:51:16 ssuominen Exp $
 
 EAPI="2"
-inherit xfconf multilib git
+inherit eutils xfconf multilib git
 
 DESCRIPTION="A lightweight web browser"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
@@ -40,6 +40,8 @@ src_prepare() {
 }
 
 src_configure() {
+	strip-linguas -i po
+
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" ./waf \
 		--prefix="/usr/" \
 		--libdir="/usr/$(get_libdir)" \

@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.4.ebuild,v 1.1 2010/03/08 16:01:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.4.ebuild,v 1.2 2010/03/10 15:51:16 ssuominen Exp $
 
 EAPI=2
-inherit xfconf multilib
+inherit eutils xfconf multilib
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
@@ -39,6 +39,8 @@ src_prepare() {
 }
 
 src_configure() {
+	strip-linguas -i po
+
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" ./waf \
 		--prefix="/usr/" \
 		--libdir="/usr/$(get_libdir)" \
