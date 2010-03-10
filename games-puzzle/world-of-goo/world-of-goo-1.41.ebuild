@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.41.ebuild,v 1.3 2009/10/25 07:53:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.41.ebuild,v 1.4 2010/03/10 15:45:36 nyhm Exp $
 
 inherit eutils games
 
@@ -48,7 +48,7 @@ src_install() {
 	games_make_wrapper ${MY_PN} "${d}"/${MY_PN%Demo}
 	dodoc readme.html linux-issues.txt
 	newicon icons/scalable.svg ${MY_PN}.svg
-	make_desktop_entry ${MY_PN} "World Of Goo" ${MY_PN}
+	make_desktop_entry ${MY_PN} "World of Goo" ${MY_PN}
 
 	pushd "${D}${d}" >/dev/null
 	chmod a+rx ${MY_PN%Demo}* libs*/lib* || die
