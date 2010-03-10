@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/libnss-pgsql
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.4 2008/05/19 20:21:19 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.5 2010/03/10 15:00:05 flameeyes Exp $
+
+*libnss-pgsql-1.5.0_beta (10 Mar 2010)
+
+  10 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libnss-pgsql-1.5.0_beta.ebuild,
+  +files/libnss-pgsql-1.5.0_beta-gentoo.patch, metadata.xml:
+  Version bump, 1.5.0 is considered “beta” but seems to be more reliable
+  than 1.4.0. Update metadata.
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   libnss-pgsql-1.4.0.ebuild:
