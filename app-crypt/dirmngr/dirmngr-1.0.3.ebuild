@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.0.3.ebuild,v 1.9 2009/08/31 00:46:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.0.3.ebuild,v 1.10 2010/03/10 18:46:47 arfrever Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND=">=net-nds/openldap-2.1.26
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
-	>=dev-libs/libassuan-1.0.4
+	=dev-libs/libassuan-1*
 	nls? ( >=sys-devel/gettext-0.12.1 )"
 
 src_configure() {
