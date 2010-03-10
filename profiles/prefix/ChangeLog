@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.155 2010/03/10 14:48:00 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.156 2010/03/10 17:36:10 haubi Exp $
+
+  10 Mar 2010; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
+  drop >=net-misc/openssh-5.0_p1-r2 mask on aix, works just fine with proper
+  interix-rootuid-fix
 
   10 Mar 2010; Michael Haubenwallner <haubi@gentoo.org> +aix/profile.bashrc:
   re-adding aix/profile.bashrc to keep setting CONFIG_SHELL
