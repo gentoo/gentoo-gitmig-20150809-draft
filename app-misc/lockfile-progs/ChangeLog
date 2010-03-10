@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lockfile-progs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.4 2010/02/24 11:56:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.5 2010/03/10 09:49:23 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
+  lockfile-progs-0.1.13.ebuild:
+  Marked ~ppc for bug #306633.
 
   24 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> files/Makefile:
   Add a test suite.
