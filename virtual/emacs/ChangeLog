@@ -1,6 +1,11 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.39 2010/01/31 11:52:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.40 2010/03/10 18:30:18 ulm Exp $
+
+*emacs-24 (10 Mar 2010)
+
+  10 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +emacs-24.ebuild:
+  Add virtual for Emacs 24.
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> emacs-23.ebuild:
   arm stable wrt #296159
