@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11332 2010/03/10 17:05:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11333 2010/03/10 18:21:03 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (10 Mar 2010)
+# Emacs live ebuilds. Use at your own risk.
+~app-editors/emacs-vcs-23.1.9999
+~app-editors/emacs-vcs-24.0.9999
+~virtual/emacs-24
 
 # Justin Lecher <jlec@gentoo.org> (10 Mar 2010)
 # doesn't work with current python setup (>python3)
@@ -596,10 +602,6 @@ dev-ruby/test-unit
 # with xorg-server-1.5 and later which are the only
 # available versions in the tree
 <x11-drivers/nvidia-drivers-72.0.0
-
-# Ulrich Mueller <ulm@gentoo.org> (14 Dec 2009)
-# Emacs live ebuild. Use at your own risk.
-~app-editors/emacs-vcs-23.1.9999
 
 # Rémi Cardona <remi@gentoo.org> (13 Dec 2009)
 # ttmkfdir had multiple QA issues and bugs (bugs #209616, #235354 and #262945)
