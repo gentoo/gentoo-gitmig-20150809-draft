@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.104 2010/03/10 11:11:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.105 2010/03/10 16:18:02 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
+  xf86-video-ati-6.12.5.ebuild:
+  Marked ppc/ppc64 stable for bug #308809.
 
   10 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   xf86-video-ati-6.12.5.ebuild:
