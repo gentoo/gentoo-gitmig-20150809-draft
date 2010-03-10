@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.ebuild,v 1.1 2010/03/08 21:37:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.ebuild,v 1.2 2010/03/10 23:33:47 abcd Exp $
 
 EAPI="2"
 
 KDE_LINGUAS="pt_BR"
-NEED_PYTHON="2.6"
+PYTHON_DEPEND="2:2.6"
 
 inherit kde4-base python
 
