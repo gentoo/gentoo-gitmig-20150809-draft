@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/slimrat
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.1 2010/03/10 21:33:28 scarabeus Exp $
+
+*slimrat-1.0 (10 Mar 2010)
+
+  10 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org> +slimrat-1.0.ebuild,
+  +metadata.xml:
+  Initial commit. Per bug #247580.
+
