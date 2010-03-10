@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.21 2010/03/07 03:15:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.22 2010/03/10 18:17:27 tommy Exp $
+
+  10 Mar 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -qemu-kvm-0.12.1.ebuild, -qemu-kvm-0.12.1.1.ebuild,
+  -qemu-kvm-0.12.1.2.ebuild, -qemu-kvm-0.12.2.ebuild,
+  -qemu-kvm-0.12.2-r1.ebuild, qemu-kvm-0.12.3.ebuild:
+  Add message, if no targets are defined (bug #298287), some cleanup, remove
+  older 0.12* versions
 
   07 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   qemu-kvm-9999.ebuild, +files/qemu-kvm-9999-sysconfigdir.patch:

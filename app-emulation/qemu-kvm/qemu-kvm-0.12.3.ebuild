@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.3.ebuild,v 1.1 2010/03/02 16:56:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.3.ebuild,v 1.2 2010/03/10 18:17:27 tommy Exp $
 
 EAPI="2"
 
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.29
 	gnutls? ( dev-util/pkgconfig )"
 
-kvm_kern_war() {
+kvm_kern_warn() {
 	eerror "Please enable KVM support in your kernel, found at:"
 	eerror
 	eerror "  Virtualization"
@@ -79,10 +79,19 @@ kvm_kern_war() {
 }
 
 pkg_setup() {
+
+	local counter="0" check
+	for check in ${IUSE_SOFTMMU_TARGETS} ; do
+		use "qemu_softmmu_targets_${check}" && counter="1"
+	done
+	for check in ${IUSE_USER_TARGETS} ; do
+		use "qemu_user_targets_${check}" && counter="1"
+	done
+	[[ ${counter} == 0 ]] && eerror "You did not set any targets, this is NOT SUPPORTED"
+
 	if kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
 		eerror "Either upgrade your kernel"
-		die "qemu-kvm version not compatible"
 	else
 		if ! linux_config_exists; then
 			eerror "Unable to check your kernel for KVM support"
