@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.125 2010/02/26 17:22:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.126 2010/03/10 22:56:26 eva Exp $
+
+  10 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> -glade-3.6.3.ebuild,
+  -glade-3.6.4.ebuild, -files/glade-3.6.4-fix-linking.patch,
+  -glade-3.6.5.ebuild:
+  Clean up old revisions.
 
   26 Feb 2010; Brent Baude <ranger@gentoo.org> glade-3.6.7.ebuild:
   Marking glade-3.6.7 ppc64 for bug 298204
