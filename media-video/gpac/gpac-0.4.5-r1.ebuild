@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.10 2010/02/24 19:38:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.11 2010/03/10 23:49:37 ssuominen Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -63,7 +63,8 @@ src_unpack() {
 	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-	epatch "${FILESDIR}"/glx-define-prototype.patch
+	epatch "${FILESDIR}"/${P}-glx-define-prototype.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	sed -ie '/ldconfig / d' "${S}/Makefile"
 
