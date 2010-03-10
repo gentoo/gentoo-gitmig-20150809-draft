@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian-bindings
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.12 2009/11/22 16:52:35 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.13 2010/03/10 09:34:25 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
+  xapian-bindings-1.0.17.ebuild:
+  Marked ~ppc for bug #292972.
 
 *xapian-bindings-1.0.17 (22 Nov 2009)
 
