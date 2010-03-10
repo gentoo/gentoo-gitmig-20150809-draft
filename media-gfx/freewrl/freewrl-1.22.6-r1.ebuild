@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.6-r1.ebuild,v 1.1 2010/02/08 23:50:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.6-r1.ebuild,v 1.2 2010/03/10 14:13:41 ssuominen Exp $
 
 EAPI="2"
 
@@ -54,6 +54,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+
 	# A hack to get around expat being grabbed from xulrunner
 	if use xulrunner && has_version ">=net-libs/xulrunner-1.9.2"; then
 		mkdir "${S}/src/lib/include";
