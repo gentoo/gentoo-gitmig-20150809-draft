@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.61 2010/02/19 06:31:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.62 2010/03/10 07:17:59 bicatali Exp $
+
+*root-5.26.00-r2 (10 Mar 2010)
+
+  10 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> -root-5.26.00.ebuild,
+  -root-5.26.00-r1.ebuild, +root-5.26.00-r2.ebuild:
+  Now do not optimize dictionary upon upstream recomendation, remove buggy
+  gcc44 patch (fixing bug #305871), update various patches, documentation
+  (bug #307915) and cleaned up some seds
 
 *root-5.26.00-r1 (19 Feb 2010)
 

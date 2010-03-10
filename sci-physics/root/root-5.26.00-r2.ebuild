@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r1.ebuild,v 1.1 2010/02/19 06:31:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r2.ebuild,v 1.1 2010/03/10 07:17:59 bicatali Exp $
 
 EAPI=2
 inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs flag-o-matic
@@ -8,7 +8,7 @@ inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs flag-o-mati
 DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4
-PATCH_PV=p02
+PATCH_PV=p03
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
@@ -103,12 +103,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-svn32375.patch
-	epatch "${WORKDIR}"/${P}-gcc44.patch
-	epatch "${WORKDIR}"/${P}-prop-flags.patch
+	epatch "${WORKDIR}"/${P}-svn32505.patch
+	epatch "${WORKDIR}"/${P}-prop-ldflags.patch
 	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-configure-paths.patch
-	epatch "${WORKDIR}"/${P}-g4root-flags.patch
 
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
@@ -124,7 +122,6 @@ src_prepare() {
 	sed -i \
 		-e 's/libPythia6/libpythia6/g' \
 		-e 's/ungif/gif/g' \
-		-e 's/ftgl_pic/ftgl/g' \
 		configure || die "adjusting library names failed"
 
 	# libafterimage flags are hardcoded
@@ -202,8 +199,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake OPT="" || die "emake failed"
-	emake cintdlls || die "emake cintdlls failed"
+	emake OPT="${CFLAGS}" F77OPT="${FFLAGS}" || die "emake failed"
 	if use emacs; then
 		elisp-compile build/misc/*.el || die "elisp-compile failed"
 	fi
@@ -299,7 +295,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	use ruby && elog "ROOT Ruby  module is available as libRubyROOT"
+	use ruby && elog "ROOT Ruby module is available as libRubyROOT"
 	fdo-mime_desktop_database_update
 }
 
