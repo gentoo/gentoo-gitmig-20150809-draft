@@ -31,8 +31,8 @@
 
     <flag name="pam">
       Enable PAM support for fcron. This means that fcron will pass
-      through the “fcron” stack before executing the jobs, and
-      fcrontab will use the “fcrontab” stack to authenticate the user
+      through the "fcron" stack before executing the jobs, and
+      fcrontab will use the "fcrontab" stack to authenticate the user
       before editing its crontab file.
     </flag>
   </use>
