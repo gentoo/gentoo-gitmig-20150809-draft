@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/wmifinfo-0.09.ebuild,v 1.7 2008/01/16 15:24:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/wmifinfo-0.09.ebuild,v 1.8 2010/03/10 11:23:20 s4t4n Exp $
 
 inherit toolchain-funcs
 
@@ -22,14 +22,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e "s:-O2:${CFLAGS}:" "${S}"/Makefile
+	sed -i -e "s:-O2:${CFLAGS}:" "${S}"/Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" || die "emake failed."
+	emake CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" || die
 }
 
 src_install() {
-	dobin ${PN}
-	dodoc ChangeLog README
+	dobin ${PN} || die
+	dodoc README || die
 }

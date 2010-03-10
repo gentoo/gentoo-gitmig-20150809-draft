@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmifinfo
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.19 2008/01/16 15:24:09 drac Exp $
+# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.20 2010/03/10 11:23:20 s4t4n Exp $
+
+  10 Mar 2010; Michele Noberasco <s4t4n@gentoo.org> wmifinfo-0.09.ebuild:
+  Fixed INSTALLing missing documentation. Fixes bug #297342.
 
   16 Jan 2008; Samuli Suominen <drac@gentoo.org> wmifinfo-0.09.ebuild:
   Fixed build system to respect CC, LD and LDFLAGS and marked amd64 stable.
