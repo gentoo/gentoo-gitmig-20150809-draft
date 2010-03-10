@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9-r2.ebuild,v 1.5 2010/02/08 08:50:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.9-r2.ebuild,v 1.6 2010/03/10 17:58:05 arfrever Exp $
 
 inherit eutils distutils
 
@@ -64,8 +64,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-
-	python_version
 
 	insinto $(python_get_sitedir)
 	doins -r "${WORKDIR}/${P}"/site-packages/*
