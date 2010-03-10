@@ -1,0 +1,10 @@
+# ChangeLog for games-util/deutex
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.1 2010/03/10 17:58:25 mr_bones_ Exp $
+
+*deutex-4.4.0 (10 Mar 2010)
+
+  10 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> +deutex-4.4.0.ebuild,
+  +files/deutex-4.4.0-makefile.patch, +metadata.xml:
+  Initial commit - ebuild submitted by Marcel Schmedes via bug #275323
+
