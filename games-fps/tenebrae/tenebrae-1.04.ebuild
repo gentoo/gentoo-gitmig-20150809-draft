@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.12 2007/07/02 17:39:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.13 2010/03/10 21:46:59 ssuominen Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
@@ -38,6 +38,11 @@ src_unpack() {
 		cvs_src_unpack
 	fi
 	cd tenebrae_0
+
+	sed -i \
+		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:g' \
+		gl_warp.c || die
+
 	epatch \
 		"${FILESDIR}"/${PV}-glhax.patch \
 		"${FILESDIR}"/${P}-exec-stack.patch
