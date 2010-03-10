@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.689 2010/03/10 14:12:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.690 2010/03/10 20:57:50 zmedico Exp $
+
+  10 Mar 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.7.16.ebuild,
+  -portage-2.1.8.2.ebuild, -portage-2.2_rc66.ebuild:
+  Remove old ebuilds.
 
   10 Mar 2010; Brent Baude <ranger@gentoo.org> portage-2.1.7.17.ebuild:
   Marking portage-2.1.7.17 ppc64 for bug 307151
