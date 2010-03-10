@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.12 2009/02/17 18:27:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.13 2010/03/10 21:34:58 ssuominen Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="A falling block game similar to Blockout"
 HOMEPAGE="http://criticalmass.sourceforge.net/shaaft.php"
@@ -29,10 +29,16 @@ src_prepare() {
 		game/main.cpp \
 		|| die "sed main.cpp failed"
 
+	sed -i \
+		-e 's:png12:png:g' \
+		configure.in || die
+
 	epatch \
 		"${FILESDIR}"/${P}-gcc34.patch \
 		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
+
+	eautoreconf
 }
 
 src_install() {
