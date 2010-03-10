@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.5 2010/02/20 20:47:27 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.6 2010/03/10 17:17:46 ssuominen Exp $
+
+  10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> qrencode-3.1.1.ebuild:
+  Fix libpng14 detection.
 
 *qrencode-3.1.1 (20 Feb 2010)
 
