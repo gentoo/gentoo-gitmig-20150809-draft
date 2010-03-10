@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.36.ebuild,v 1.3 2010/02/07 20:18:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.37.ebuild,v 1.1 2010/03/10 23:13:23 cedk Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,7 @@ MY_P=${MY_PN}-${MY_PV}
 DESCRIPTION="CAD program written in PyGTK"
 HOMEPAGE="http://www.pythoncad.org/"
 LICENSE="GPL-2"
-SRC_URI="http://www.pythoncad.org/releases/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/pythoncad/${MY_P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -29,6 +29,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-png.patch"
 
 	sed -i \
 		-e "s/gtkpycad.png/pythoncad.png/" \
