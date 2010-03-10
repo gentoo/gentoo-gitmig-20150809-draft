@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.14 2010/03/10 17:31:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.15 2010/03/10 17:32:44 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -20,11 +20,11 @@ DEPEND="x11-libs/libX11
 	media-libs/jpeg:0"
 
 src_prepare() {
-	cd ${S}/images
+	cd "${S}"/images
 	mv Makefile.in Makefile.in-orig
 	sed -e "s:\$(prefix)/images:\$(prefix)/share/${PN}/images:" Makefile.in-orig > Makefile.in
 
-	cd ${S}/lookuptables
+	cd "${S}"/lookuptables
 	mv Makefile.in Makefile.in-orig
 	sed -e "s:\$(prefix)/lookuptables:\$(prefix)/share/${PN}/lookuptables:" Makefile.in-orig > Makefile.in
 }
@@ -35,6 +35,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README README.MORE
 }
