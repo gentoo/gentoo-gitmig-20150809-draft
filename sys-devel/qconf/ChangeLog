@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/qconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.5 2010/01/01 12:43:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.6 2010/03/10 08:45:32 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> qconf-1.5_pre717.ebuild:
+  Marked ~ppc/~ppc64 for bug #295631.
 
   01 Jan 2010; Raúl Porcel <armin76@gentoo.org> qconf-1.5_pre717.ebuild:
   Add ~arm
