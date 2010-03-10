@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxattr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.21 2009/10/25 13:41:48 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.22 2010/03/10 00:08:49 sping Exp $
+
+*pyxattr-0.5.0 (10 Mar 2010)
+
+  10 Mar 2010; Sebastian Pipping <sping@gentoo.org> +pyxattr-0.5.0.ebuild:
+  Bump to 0.5.0 which introduces Python 3 support
 
   25 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyxattr-0.4.0.ebuild:
