@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/IPC-Signal-1.00.ebuild,v 1.10 2007/07/10 23:33:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/IPC-Signal-1.00.ebuild,v 1.11 2010/03/10 09:51:45 josejx Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="amd64 ia64 sparc x86"
+KEYWORDS="amd64 ia64 ~ppc sparc x86"
 
 DEPEND="dev-lang/perl"
