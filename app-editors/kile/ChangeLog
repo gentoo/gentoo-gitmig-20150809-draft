@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.130 2009/12/28 20:54:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.131 2010/03/10 14:45:35 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> kile-2.1_beta3.ebuild:
+  Marked ~ppc for bug #292808.
 
   28 Dec 2009; Markus Meier <maekke@gentoo.org> kile-2.1_beta3.ebuild:
   x86 stable, bug #294349
