@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.4.1.ebuild,v 1.1 2010/03/02 16:28:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.4.1.ebuild,v 1.2 2010/03/10 21:10:16 ssuominen Exp $
 
 EAPI="2"
 
@@ -69,6 +69,10 @@ src_configure() {
 
 src_compile() {
 	[[ -n ${A} ]] && kde4-base_src_compile
+}
+
+src_test() {
+	[[ -n ${A} ]] && kde4-base_src_test
 }
 
 src_install() {
