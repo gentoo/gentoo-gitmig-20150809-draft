@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.0_alpha1.ebuild,v 1.5 2009/09/12 18:14:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.0_alpha1.ebuild,v 1.6 2010/03/10 18:02:38 arfrever Exp $
 
 inherit distutils eutils
 
@@ -50,6 +50,5 @@ src_install() {
 }
 
 src_test() {
-	distutils_python_version
-	PYTHONPATH="$(ls -d build/lib.*):." "${python}" tests/test.py || die "tests failed"
+	PYTHONPATH="$(ls -d build/lib.*):." "$(PYTHON)" tests/test.py || die "tests failed"
 }
