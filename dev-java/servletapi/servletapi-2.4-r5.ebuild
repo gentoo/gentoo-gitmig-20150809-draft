@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.8 2010/01/03 21:33:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r5.ebuild,v 1.9 2010/03/10 03:45:00 sping Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
 TC_VERSION="5.5.20"
 DESCRIPTION="Servlet API 2.4 from jakarta.apache.org"
 HOMEPAGE="http://jakarta.apache.org/"
-SRC_URI="mirror://apache/jakarta/tomcat-5/v${TC_VERSION}/src/apache-tomcat-${TC_VERSION}-src.tar.gz"
+SRC_URI="http://archive.apache.org/dist/tomcat/tomcat-5/v${TC_VERSION}/src/apache-tomcat-${TC_VERSION}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2.4"
