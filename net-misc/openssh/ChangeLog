@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.369 2010/03/09 01:06:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.370 2010/03/10 14:46:50 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> openssh-5.3_p1-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #308555.
 
 *openssh-5.4_p1 (09 Mar 2010)
 
