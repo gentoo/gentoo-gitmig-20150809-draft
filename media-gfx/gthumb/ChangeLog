@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.104 2010/03/08 22:41:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.105 2010/03/10 17:51:57 eva Exp $
+
+  10 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gthumb-2.11.2.1.ebuild:
+  Fix use flags & configure, thanks to mr_bones.
 
 *gthumb-2.11.2.1 (08 Mar 2010)
 
