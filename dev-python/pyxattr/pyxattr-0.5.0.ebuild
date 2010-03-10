@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/pyxattr-0.5.0.ebuild,v 1.1 2010/03/10 00:08:49 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/pyxattr-0.5.0.ebuild,v 1.2 2010/03/10 16:47:58 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+#DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
@@ -18,11 +19,12 @@ IUSE="test"
 
 RDEPEND="sys-apps/attr"
 DEPEND="${RDEPEND}
-		>=dev-python/setuptools-0.6_rc7-r1
+		dev-python/setuptools
 		test? ( dev-python/nose )"
 
 src_test() {
 	testing() {
+		[[ "${PYTHON_ABI}" == 3.* ]] && return
 		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" nosetests-${PYTHON_ABI}
 	}
 	python_execute_function testing
