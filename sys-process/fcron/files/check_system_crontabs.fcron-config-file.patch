@@ -1,5 +1,5 @@
---- check_system_crontabs.orig	2008-07-18 15:56:49.110205300 +0200
-+++ check_system_crontabs	2008-07-18 16:00:46.303783312 +0200
+--- script/check_system_crontabs.orig	2008-07-18 15:56:49.110205300 +0200
++++ script/check_system_crontabs	2008-07-18 16:00:46.303783312 +0200
 @@ -74,7 +74,7 @@
  DEFAULT_CROND_DIR=/etc/cron.d
  DEFAULT_CRONTAB_FILE=/etc/crontab

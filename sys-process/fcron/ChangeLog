@@ -1,6 +1,20 @@
 # ChangeLog for sys-process/fcron
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.68 2009/10/02 16:31:05 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.69 2010/03/10 01:38:20 flameeyes Exp $
+
+*fcron-3.0.5 (10 Mar 2010)
+
+  10 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org> +fcron-3.0.5.ebuild,
+  files/check_system_crontabs.fcron-config-file.patch, +files/fcron.init.2,
+  metadata.xml:
+  Version bump (bug #308075); use gentoo-editor instead of vi as hardcoded
+  editor; don't build documentation at all (avoids a long list of deps and
+  closes bug #273482); fix pre-generated documentation paths (bug #216460);
+  solve bug #277077; install proper PAM default (closes bug #261683); use
+  bash as shell for the check_system_crontabs (works around bug #282214,
+  upstream will have to fix the script); update debug USE flag not to
+  disable background-execution of fcron, and avoid mocking with CFLAGS;
+  remove use-dependencies from the init script for ldap, postgres and mysql.
 
   02 Oct 2009; Raúl Porcel <armin76@gentoo.org> fcron-3.0.4-r1.ebuild,
   fcron-3.0.4-r2.ebuild:
