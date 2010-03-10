@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/qrna
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.20 2009/08/05 19:32:12 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.21 2010/03/10 21:13:06 jlec Exp $
+
+*qrna-2.0.3c-r1 (10 Mar 2010)
+
+  10 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +qrna-2.0.3c-r1.ebuild, +files/qrna-2.0.3c-ldflags.patch:
+  Respecting LDFLAGS, rebuilding all libs instead of using upstreams bundled
+  ones, #308703
 
   05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> qrna-2.0.3c.ebuild,
   +files/qrna-2.0.3c-glibc-2.10.patch:
