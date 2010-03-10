@@ -1,6 +1,6 @@
-.TH TAR 1 "Jul 2007" "GNU" "tar"
+.TH TAR 1 "Mar 2010" "GNU" "tar"
 .SH NAME
-tar \- The GNU version of the tar archiving utility
+tar \- The GNU version of the tape archiver (tar) utility
 .SH SYNOPSIS
 .B tar
 .I <operation> [options]
@@ -20,8 +20,9 @@ tar \- The GNU version of the tar archiving utility
 .I Common Options:
 .nf
 .BR -C ", " --directory " DIR"
-.BR -f ", " --file " F"
+.BR -f ", " --file " FILE"
 .BR -j ", " --bzip2
+.BR -J ", " --xz
 .BR -p ", " --preserve-permissions
 .BR -v ", " --verbose
 .BR -z ", " --gzip
@@ -29,6 +30,15 @@ tar \- The GNU version of the tar archiving utility
 
 .I All Options:
 .br
+[
+.BR -a ", " --auto-compress
+]
+[
+.BR --add-file " FILE"
+]
+[
+.BR --anchored
+]
 [
 .BR --atime-preserve
 ]
@@ -51,10 +61,34 @@ tar \- The GNU version of the tar archiving utility
 .BR --checkpoint
 ]
 [
-.BR -f ", " --file " [HOSTNAME:]F"
+.BR --delay-directory-restore
 ]
 [
-.BR -F ", " --info-script " F, " --new-volume-script " F"
+.BR --exclude " PATTERN"
+]
+[
+.BR --exclude-caches
+]
+[
+.BR --exclude-caches-all
+]
+[
+.BR --exclude-caches-under
+]
+[
+.BR --exclude-tag " FILE"
+]
+[
+.BR --exclude-tag-all " FILE"
+]
+[
+.BR --exclude-tag-under " FILE"
+]
+[
+.BR -f ", " --file " [HOSTNAME:]FILE"
+]
+[
+.BR -F ", " --info-script " FILE, " --new-volume-script " FILE"
 ]
 [
 .BR --force-local
@@ -63,7 +97,7 @@ tar \- The GNU version of the tar archiving utility
 .BR --format " FORMAT"
 ]
 [
-.BR -g ", " --listed-incremental " F"
+.BR -g ", " --listed-incremental " SNAPSHOT"
 ]
 [
 .BR -G ", " --incremental
@@ -81,7 +115,13 @@ tar \- The GNU version of the tar archiving utility
 .BR -i ", " --ignore-zeros
 ]
 [
+.BR -I ", " --use-compress-program " PROG"
+]
+[
 .BR --ignore-case
+]
+[
+.BR --ignore-command-error
 ]
 [
 .BR --ignore-failed-read
@@ -91,6 +131,9 @@ tar \- The GNU version of the tar archiving utility
 ]
 [
 .BR -j ", " --bzip2
+]
+[
+.BR -J ", " --xz
 ]
 [
 .BR -k ", " --keep-old-files
@@ -108,6 +151,15 @@ tar \- The GNU version of the tar archiving utility
 .BR -L ", " --tape-length " N"
 ]
 [
+.BR --lzip
+]
+[
+.BR --lzma
+]
+[
+.BR --lzop
+]
+[
 .BR -m ", " --touch ", " --modification-time
 ]
 [
@@ -115,6 +167,9 @@ tar \- The GNU version of the tar archiving utility
 ]
 [
 .BR --mode " PERMISSIONS"
+]
+[
+.BR --mtime " DATE"
 ]
 [
 .BR -N ", " --after-date " DATE, " --newer " DATE"
@@ -126,13 +181,31 @@ tar \- The GNU version of the tar archiving utility
 .BR --no-anchored
 ]
 [
+.BR --no-auto-compress
+]
+[
+.BR --no-delay-directory-restore
+]
+[
 .BR --no-ignore-case
+]
+[
+.BR --no-ignore-command-error
+]
+[
+.BR --no-overwrite-dir
+]
+[
+.BR --no-quote-chars
 ]
 [
 .BR --no-recursion
 ]
 [
 .BR --no-same-permissions
+]
+[
+.BR --no-unquote
 ]
 [
 .BR --no-wildcards
@@ -183,6 +256,12 @@ tar \- The GNU version of the tar archiving utility
 .BR --preserve
 ]
 [
+.BR --quote-chars " STRING"
+]
+[
+.BR --quote-style " STYLE"
+]
+[
 .BR -R ", " --block-number
 ]
 [
@@ -196,6 +275,9 @@ tar \- The GNU version of the tar archiving utility
 ]
 [
 .BR --remove-files
+]
+[
+.BR --restrict
 ]
 [
 .BR --rmt-command " CMD"
@@ -219,7 +301,10 @@ tar \- The GNU version of the tar archiving utility
 .BR --show-omitted-dirs
 ]
 [
-.BR --strip-components " NUMBER, " --strip-path " NUMBER (1)"
+.BR --show-transformed-names ", " --show-stored-names
+]
+[
+.BR --strip-components " NUMBER"
 ]
 [
 .BR --suffix " SUFFIX"
@@ -228,13 +313,22 @@ tar \- The GNU version of the tar archiving utility
 .BR -T ", " --files-from " FILE"
 ]
 [
+.BR --test-label
+]
+[
+.BR --to-command " COMMAND"
+]
+[
+.BR --transform " EXPRESSION"
+]
+[
 .BR --totals	
 ]
 [
 .BR -U ", " --unlink-first
 ]
 [
-.BR --use-compress-program " PROG"
+.BR --unquote
 ]
 [
 .BR --utc
@@ -264,9 +358,6 @@ tar \- The GNU version of the tar archiving utility
 .BR --wildcards-match-slash
 ]
 [
-.BR --exclude " PATTERN"
-]
-[
 .BR -X ", " --exclude-from " FILE"
 ]
 [
@@ -278,8 +369,6 @@ tar \- The GNU version of the tar archiving utility
 [
 .BR -[0-7][lmh]
 ]
-
-(1) tar-1.14 uses --strip-path, tar-1.14.90+ uses --strip-components
 .SH DESCRIPTION
 This manual page documents the GNU version of \fBtar\fR, an archiving 
 program designed to store and extract files from an archive file known 
@@ -306,6 +395,10 @@ extract bzipped foo.tar.bz2 after changing directory to bar
 .TP
 .B tar -xzf foo.tar.gz blah.txt
 extract the file blah.txt from foo.tar.gz
+.P
+Note: When working with archives, specifying the compression option is often
+times unnecessary as \fBtar\fR will automatically detect the compression type
+based on the suffix of the archive.
 .SH "FUNCTION LETTERS"
 .TP
 .B One of the following options must be used:
@@ -332,17 +425,20 @@ only append files that are newer than the existing in archive
 extract files from an archive
 .TP
 .BR --delete
-delete from the archive (not for use on mag tapes!)
+delete from the archive (not for use on magnetic tapes!)
 .SH "COMMON OPTIONS"
 .TP
 .BR -C ", " --directory " DIR"
 change to directory DIR
 .TP
-.BR -f ", " --file " [HOSTNAME:]F"
-use archive file or device F (default "-", meaning stdin/stdout)
+.BR -f ", " --file " [HOSTNAME:]FILE"
+use archive file or device FILE (default is "-", meaning stdin/stdout)
 .TP
 .BR -j ", " --bzip2
-filter archive through bzip2, use to decompress .bz2 files
+filter archive through bzip2; use to decompress .bz2 files
+.TP
+.BR -J ", " --xz
+filter archive through xz; use to decompress .xz files
 .TP
 .BR -p ", " --preserve-permissions
 extract all protection information
@@ -354,8 +450,17 @@ verbosely list files processed
 filter the archive through gzip
 .SH "ALL OPTIONS"
 .TP
+.BR -a ", " --auto-compress
+use archive suffix to determine the compression program
+.TP
+.BR --add-file " FILE"
+add specified FILE to the archive (useful if FILE starts with a dash)
+.TP
+.BR --anchored
+patterns will match the start of file names
+.TP
 .BR --atime-preserve
-don't change access times on dumped files
+don't change access times of files that are archived
 .TP
 .BR -b ", " --blocking-factor " N"
 block size of Nx512 bytes (default N=20)
@@ -376,17 +481,30 @@ change to directory DIR
 .BR --checkpoint
 print directory names while reading the archive
 .TP
-.BR -f ", " --file " [HOSTNAME:]F"
-use archive file or device F (default "-", meaning stdin/stdout)
+.BR --delay-directory-restore
+delay setting modification times and permissions of extracted directories
+until the end of extraction
+.TP
+.BR --exclude " PATTERN"
+exclude files based upon PATTERN
+.TP
+.BR --exclude-caches
+exclude directories that contain a cache directory tag
+.TP
+.BR --exclude-tag " FILE"
+exclude directories that contain a file named FILE
+.TP
+.BR -f ", " --file " [HOSTNAME:]FILE"
+use archive file or device FILE (default "-", meaning stdin/stdout)
 .TP
 .BR -F ", " --info-script " FILE, " --new-volume-script " FILE"
 run script at end of each tape (implies \fI--multi-volume\fR)
 .TP
 .BR --force-local
-archive file is local even if has a colon
+archive file is local even if its name contains a colon
 .TP
 .BR --format " FORMAT"
-selects output archive format
+selects the format of the created archive
 .nf
 \fIv7\fR - Unix V7
 \fIoldgnu\fR - GNU tar <=1.12
@@ -395,14 +513,18 @@ selects output archive format
 \fIposix\fR - POSIX.1-2001
 .fi
 .TP
-.BR -g ", " --listed-incremental " F"
+.BR -g ", " --listed-incremental " SNAPSHOT"
 create/list/extract new GNU-format incremental backup
+.TP
+.BR --group " GROUP"
+give files added to the archive a group id of GROUP instead of the group id
+of the source file; this option does not affect extraction
 .TP
 .BR -G ", " --incremental
 create/list/extract old GNU-format incremental backup
 .TP
 .BR -h ", " --dereference
-don't dump symlinks; dump the files they point to
+don't archive symlinks; archive the files they point to
 .TP
 .BR --help
 like this manpage, but not as cool
@@ -410,8 +532,15 @@ like this manpage, but not as cool
 .BR -i ", " --ignore-zeros
 ignore blocks of zeros in archive (normally mean EOF)
 .TP
+.BR -I ", " --use-compress-program " PROG"
+access the archive through PROG (which is generally a compression program;
+it must accept the \fI-d\fR option)
+.TP
 .BR --ignore-case
 ignore case when excluding files
+.TP
+.BR --ignore-command-error
+ignore exit codes of subprocesses
 .TP
 .BR --ignore-failed-read
 don't exit with non-zero status on unreadable files
@@ -422,18 +551,21 @@ send verbose output to FILE instead of stdout
 .BR -j ", " --bzip2
 filter archive through bzip2, use to decompress .bz2 files
 .TP
+.BR -J ", " --xz
+filter archive through xz; use to decompress .xz files
+.TP
 .BR -k ", " --keep-old-files
 keep existing files; don't overwrite them from archive
 .TP
 .BR -K ", " --starting-file " FILE"
-begin at file F in the archive
+begin at file FILE in the archive
 .TP
 .BR --keep-newer-files
 do not overwrite files which are newer than the archive
 .TP
 .BR -l ", " --check-links
-warn if number of hard links to the file on the filesystem mismatch the 
-number of links recorded in the archive
+warn if number of hard links to the file on the filesystem mismatchs
+the number of links recorded in the archive
 .TP
 .BR -L ", " --tape-length " N"
 change tapes after writing N*1024 bytes
@@ -447,9 +579,13 @@ create/list/extract multi-volume archive
 .BR --mode " PERMISSIONS"
 apply PERMISSIONS while adding files (see \fBchmod\fR(1))
 .TP
+.BR --mtime " DATE"
+when creating archives, use  DATE as the modification time of the members,
+instead of their actual modification times
+.TP
 .BR -N ", " --after-date " DATE, " --newer " DATE"
 only store files that were modified or had status updates (permissions,
-ACLs, extended attributes,...) since DATE
+ACLs, extended attributes, ...) since DATE
 .TP
 .BR --newer-mtime " DATE"
 like \fI--newer\fR, but only store files that were modified since DATE
@@ -457,14 +593,36 @@ like \fI--newer\fR, but only store files that were modified since DATE
 .BR --no-anchored
 match any subsequenceof the name's components with \fI--exclude\fR
 .TP
+.BR --no-auto-compress
+do not use archive suffix to determine the compression program
+.TP
+.BR --no-delay-directory-restore
+modification times and permissions of extracted directories are set when
+all files from this directory have been extracted; this is the default
+.TP
+.BR --no-ignore-command-error
+print warnings about subprocesses that terminated with a non-zero exit code
+.TP
 .BR --no-ignore-case
 use case-sensitive matching with \fI--exclude\fR
+.TP
+.BR --no-overwrite-dir
+preserve metadata of existing directories when extracting files from an
+archive
+.TP
+.BR --no-quote-chars " STRING"
+remove characters listed in STRING from the list of quoted characters
+set by a previous \fI--quote-chars\fR option
 .TP
 .BR --no-recursion
 don't recurse into directories
 .TP
 .BR --no-same-permissions
 apply user's umask when extracting files instead of recorded permissions
+.TP
+.BR --no-unquote
+treat all input file or member names literally, do not interpret
+escape sequences
 .TP
 .BR --no-wildcards
 don't use wildcards with \fI--exclude\fR
@@ -496,6 +654,9 @@ process only NUM occurrences of each named file; used with
 .BR --one-file-system
 stay in local file system when creating an archive
 .TP
+.BR --one-file-system
+stay in local file system when creating an archive
+.TP
 .BR --overwrite
 overwrite existing files and directory metadata when extracting
 .TP
@@ -503,9 +664,10 @@ overwrite existing files and directory metadata when extracting
 overwrite directory metadata when extracting
 .TP
 .BR --owner " USER"
-change owner of extraced files to USER
+give files added to the archive a user id of USER instead of the user id
+of the source file; this option does not affect extraction
 .TP
-.BR -p ", " --same-permissions ", " --preserve-permissions
+.BR -p ", " --preserve-permissions ", " --same-permissions
 extract all protection information
 .TP
 .BR -P ", " --absolute-names
@@ -519,7 +681,14 @@ extended header keywords
 like \fI--format=posix\fR
 .TP
 .BR --preserve
-like \fI--preserve-permissions\fR \fI--same-order\fR
+like \fI--preserve-permissions\fR plus \fI--same-order\fR
+.TP
+.BR --quote-chars " STRING"
+always quote the characters from STRING, even if the selected quoting
+style would not quote them
+.TP
+.BR --quote-style " STYLE"
+set the quoting style to be used when printing member and file names
 .TP
 .BR -R ", " --record-number
 show record number within archive with each message
@@ -535,6 +704,10 @@ remove existing directories before extracting directories of the same name
 .TP
 .BR --remove-files
 remove files after adding them to the archive
+.TP
+.BR --restrict
+disable the use of some potentially harmful options; currently this
+disables shell invocation from the multi-volume menu
 .TP
 .BR --rmt-command " CMD"
 use CMD instead of the default /usr/sbin/rmt
@@ -557,10 +730,11 @@ display the default options used by \fBtar\fR
 .BR --show-omitted-dirs
 print directories \fBtar\fR skips while operating on an archive
 .TP
-.BR --strip-components " NUMBER, " --strip-path " NUMBER"
-strip NUMBER of leading components from file names before extraction
-
-(1) tar-1.14 uses --strip-path, tar-1.14.90+ uses --strip-components
+.BR --show-transformed-names ", " --show-stored-names
+display file or member names after applying any \fBsed\fR transformations
+.TP
+.BR --strip-components " NUMBER"
+strip NUMBER of leading path components from file names before extraction
 .TP
 .BR --suffix " SUFFIX"
 use SUFFIX instead of default '~' when backing up files
@@ -568,14 +742,25 @@ use SUFFIX instead of default '~' when backing up files
 .BR -T ", " --files-from " FILE"
 get names to extract or create from file FILE
 .TP
+.BR --test-label
+read the volume label; if an argument is specified, test whether it
+matches the volume label
+.TP
+.BR --to-command " COMMAND"
+during extraction, pipe extracted files to the standard input of COMMAND
+.TP
 .BR --totals
 print total bytes written with --create
+.TP
+.BR --transform " EXPRESSION"
+transform file or member names using the \fBsed\fR replacement expression
+EXPRESSION
 .TP
 .BR -U ", " --unlink-first
 remove existing files before extracting files of the same name
 .TP
-.BR --use-compress-program " PROG"
-access the archive through PROG which is generally a compression program
+.BR --unquote
+enable unquoting input file or member names; this is the default
 .TP
 .BR --utc
 display file modification dates in UTC
@@ -605,9 +790,6 @@ use wildcards with \fI--exclude\fR
 .BR --wildcards-match-slash
 wildcards match slashes (/) with \fI--exclude\fR
 .TP
-.BR --exclude " PATTERN"
-exclude files based upon PATTERN
-.TP
 .BR -X ", " --exclude-from " FILE"
 exclude files listed in FILE
 .TP
@@ -616,9 +798,6 @@ filter the archive through gzip
 .TP
 .BR -Z ", " --compress ", " --uncompress
 filter the archive through compress
-.TP
-.BR --use-compress-program " PROG"
-filter the archive through PROG (which must accept -d)
 .TP
 .BR -[0-7][lmh]
 specify drive and density
