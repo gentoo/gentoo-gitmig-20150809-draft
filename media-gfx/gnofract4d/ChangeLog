@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnofract4d
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.7 2009/09/03 14:10:50 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.8 2010/03/10 14:38:31 ssuominen Exp $
+
+  10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gnofract4d-3.12.ebuild, +files/gnofract4d-3.12-libpng14.patch:
+  Fix building with libpng14.
 
 *gnofract4d-3.12 (03 Sep 2009)
 

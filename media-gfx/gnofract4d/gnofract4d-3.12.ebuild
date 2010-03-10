@@ -1,9 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.12.ebuild,v 1.1 2009/09/03 14:10:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.12.ebuild,v 1.2 2010/03/10 14:38:31 ssuominen Exp $
 
-EAPI=1
-inherit distutils fdo-mime multilib python
+EAPI=2
+
+PYTHON_DEPEND="2:2.6"
+
+inherit distutils eutils fdo-mime
 
 DESCRIPTION="a program for drawing beautiful mathematically-based images known as fractals."
 HOMEPAGE="http://gnofract4d.sourceforge.net"
@@ -22,20 +25,24 @@ RDEPEND=">=x11-libs/gtk+-2:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+	distutils_src_prepare
+}
+
 src_install() {
 	distutils_src_install
 	rm -rf "${D}"/usr/share/doc/${PN}
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/fract*
+	python_mod_optimize $(python_get_sitedir)/fract*
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/fract*
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
