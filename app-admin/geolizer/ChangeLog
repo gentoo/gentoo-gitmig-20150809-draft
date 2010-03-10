@@ -1,0 +1,12 @@
+# ChangeLog for app-admin/geolizer
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/ChangeLog,v 1.1 2010/03/10 16:13:36 sping Exp $
+
+*geolizer-2.01.10_p20070115 (10 Mar 2010)
+
+  10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +geolizer-2.01.10_p20070115.ebuild,
+  +files/geolizer-2.01.10_p20070115-etc-geolizer-conf.patch,
+  +files/apache.geolizer, +files/geolizer-language-list.txt, +metadata.xml:
+  New package split off from webalizer
+
