@@ -1,0 +1,13 @@
+# ChangeLog for app-admin/webalizer-xtended
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer-xtended/ChangeLog,v 1.1 2010/03/10 16:42:44 sping Exp $
+
+*webalizer-xtended-2.01.10_p21 (10 Mar 2010)
+
+  10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +webalizer-xtended-2.01.10_p21.ebuild,
+  +files/webalizer-xtended-2.01.10_p21-etc-webalizer-xtended-conf.patch,
+  +files/apache.webalizer-xtended, +files/webalizer-db4.2.patch,
+  +files/webalizer-language-list.txt, +metadata.xml:
+  New package split off from webalizer
+
