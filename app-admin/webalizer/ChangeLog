@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.76 2010/03/10 16:50:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.77 2010/03/10 17:15:39 sping Exp $
+
+*webalizer-2.21.02 (10 Mar 2010)
+
+  10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +webalizer-2.21.02.ebuild:
+  Bump to 2.21.02 (bug #231859)
+  geolizer and webalizer xtended now have dedicated packages
 
   10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   webalizer-2.01.10-r15.ebuild, webalizer-2.01.10-r16.ebuild,
