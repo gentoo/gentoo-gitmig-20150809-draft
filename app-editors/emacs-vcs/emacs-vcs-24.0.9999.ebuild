@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.1.9999-r50.ebuild,v 1.1 2010/03/10 08:18:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.1 2010/03/10 18:05:48 ulm Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ DESCRIPTION="The extensible, customizable, self-documenting real-time display ed
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode"
-SLOT="23"
+SLOT="24"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 RESTRICT="strip"
@@ -73,7 +73,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=app-emacs/emacs-common-gentoo-1[X?]"
 
-EMACS_SUFFIX="emacs-${SLOT}-vcs"
+EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 pkg_setup() {
