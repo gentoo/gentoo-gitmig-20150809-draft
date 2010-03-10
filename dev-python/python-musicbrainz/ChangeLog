@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-musicbrainz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.7 2009/07/17 10:19:21 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.8 2010/03/10 09:25:17 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
+  python-musicbrainz-0.7.0.ebuild:
+  Marked ~ppc/~ppc64 for bug #306859.
 
 *python-musicbrainz-0.7.0 (17 Jul 2009)
 
