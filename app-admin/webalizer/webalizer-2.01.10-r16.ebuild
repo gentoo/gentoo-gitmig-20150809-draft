@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r16.ebuild,v 1.1 2008/02/23 16:52:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r16.ebuild,v 1.2 2010/03/10 16:50:36 sping Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -17,7 +17,7 @@ GEOLIZER_VER="20070115"
 
 DESCRIPTION="Webserver log file analyzer"
 HOMEPAGE="http://www.mrunix.net/webalizer/"
-SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
+SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/old/${MY_P}-src.tar.bz2
 	geoip? (
 	http://sysd.org/stas/files/active/0/geolizer_${MY_PV}-patch.${GEOLIZER_VER}.tar.gz )
 	xtended? ( http://patrickfrei.ch/webalizer/${XTENDED_URL}/${PN}-${MY_PV}-${XTENDED_VER}-patch.tar.gz )
