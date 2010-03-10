@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.38-r2.ebuild,v 1.2 2010/03/09 23:30:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/mirmon-1.38-r2.ebuild,v 1.3 2010/03/10 14:17:33 darkside Exp $
 
 inherit webapp eutils
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-lang/perl-5.8.5-r2"
 RDEPEND="${DEPEND}
-	dev-perl/Socket6
-	virtual/perl-File-Temp"
+	dev-perl/File-Tempdir
+	dev-perl/Socket6"
 
 src_unpack() {
 	unpack ${A}
