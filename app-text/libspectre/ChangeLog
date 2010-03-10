@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.32 2010/01/08 02:26:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.33 2010/03/10 23:05:14 tgurr Exp $
+
+*libspectre-0.2.4 (10 Mar 2010)
+
+  10 Mar 2010; Timo Gurr <tgurr@gentoo.org> +libspectre-0.2.4.ebuild:
+  Version bump.
 
   08 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   +files/libspectre-0.2.0-interix.patch, libspectre-0.2.3.ebuild:
