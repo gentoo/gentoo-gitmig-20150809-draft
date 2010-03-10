@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20090923.ebuild,v 1.4 2010/01/07 22:04:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20090923.ebuild,v 1.5 2010/03/10 13:44:18 ssuominen Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -60,6 +60,11 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/fontforge-desktop.patch
 	epatch "${FILESDIR}"/${P}-configure.patch
+
+	# info_ptr->trans_alpha might be no-go with libpng12
+	has_version ">=media-libs/libpng-1.4" && epatch \
+		"${FILESDIR}"/${P}-libpng14.patch
+
 	eautoconf
 	if use doc; then
 		cd "${WORKDIR}"/html/
