@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/308863
+http://ufoai.svn.sourceforge.net/viewvc/ufoai/ufoai/trunk/src/client/renderer/r_image.c?r1=28392&r2=28395
 
 --- src/renderer/r_image.c
 +++ src/renderer/r_image.c
@@ -7,7 +8,7 @@ http://bugs.gentoo.org/308863
  
  	/* Parse the PNG file */
 -	if ((png_check_sig(PngFileBuffer.buffer, 8)) == 0) {
-+	if ((png_sig_cmp(PngFileBuffer.buffer, 0, 8)) == 0) {
++	if ((png_sig_cmp(PngFileBuffer.buffer, 0, 8)) != 0) {
  		Com_Printf("LoadPNG: Not a PNG file: %s\n", name);
  		FS_FreeFile(PngFileBuffer.buffer);
  		return 0;
