@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/psad
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.45 2009/12/24 21:21:13 battousai Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.46 2010/03/10 19:37:06 battousai Exp $
+
+  10 Mar 2010; Bryan Stine <battousai@gentoo.org> psad-2.1.5.ebuild:
+  Rename /usr/bin/pscan to /usr/bin/psad-pscan to avoid colliding with
+  sci-biology/emboss, bug #248231.
 
 *psad-2.1.5 (24 Dec 2009)
 
