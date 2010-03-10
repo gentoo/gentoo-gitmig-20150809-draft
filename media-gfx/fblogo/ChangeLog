@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fblogo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.13 2009/10/10 11:47:46 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.14 2010/03/10 13:32:40 ssuominen Exp $
+
+  10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> fblogo-0.5.2.ebuild:
+  Keyword ~amd64.
 
   10 Oct 2009; nixnut <nixnut@gentoo.org> fblogo-0.5.2.ebuild:
   ppc stable #286344
