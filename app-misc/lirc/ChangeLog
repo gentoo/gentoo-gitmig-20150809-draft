@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.212 2009/11/15 10:04:21 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.213 2010/03/10 09:31:37 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> lirc-0.8.6-r2.ebuild:
+  Marked ~ppc/~ppc64 for bug #287662.
 
 *lirc-0.8.6-r2 (15 Nov 2009)
 
