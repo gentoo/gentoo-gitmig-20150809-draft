@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/viewmol
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.8 2008/06/27 10:32:55 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.9 2010/03/10 17:09:14 jlec Exp $
+
+*viewmol-2.4.1-r1 (10 Mar 2010)
+
+  10 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  +files/2.4.1-change-default-paths.patch, +viewmol-2.4.1-r1.ebuild:
+  Bumped to EAPI=3, princepily prefix ready, adopt to current python
+  situation, fix #308691
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> viewmol-2.4.1.ebuild:
   Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
