@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.73.ebuild,v 1.5 2009/08/18 22:21:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.73.ebuild,v 1.6 2010/03/10 11:08:52 ssuominen Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="DOS emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
@@ -21,6 +21,11 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libsdl[joystick,video]
 	media-libs/sdl-net
 	media-libs/sdl-sound"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-AC_CANONICAL_BUILD_and_libpng14.patch
+	eautoreconf
+}
 
 src_configure() {
 	egamesconf \
