@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.92.ebuild,v 1.1 2010/03/10 00:09:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.92.ebuild,v 1.2 2010/03/10 19:39:52 nelchael Exp $
 
 EAPI=2
-KDE_LINGUAS="de pl pt ru sv uk"
+KDE_LINGUAS="de en_GB es et fr km nds pl pt ru sv tr uk"
 KDE_LINGUAS_DIR="applet/po"
 # KDE_LINGUAS_DIR doesn't have support for multiple directories: containment/po
 inherit kde4-base
