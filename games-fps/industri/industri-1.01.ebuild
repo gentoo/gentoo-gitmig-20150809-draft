@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.15 2008/01/30 17:30:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.16 2010/03/10 22:35:04 ssuominen Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -47,6 +47,10 @@ src_unpack() {
 				|| die "sed failed"
 		fi
 	done
+
+	sed -i \
+		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:g' \
+		gl_warp.c || die
 
 	epatch "${FILESDIR}"/${P}-exec-stack.patch
 }
