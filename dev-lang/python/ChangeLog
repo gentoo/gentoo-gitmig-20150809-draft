@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.458 2010/03/07 12:20:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.459 2010/03/10 10:09:02 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> python-2.6.4-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #306793.
 
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   python-2.6.4-r1.ebuild:
