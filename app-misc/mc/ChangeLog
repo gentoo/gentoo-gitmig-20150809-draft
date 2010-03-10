@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.191 2010/03/08 15:33:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.192 2010/03/10 14:47:57 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> mc-4.7.0.3.ebuild:
+  Marked ppc/ppc64 stable for bug #308383.
 
   08 Mar 2010; Alex Alexander <wired@gentoo.org> mc-4.7.0.3.ebuild:
   amd64 stable, bug #308383
