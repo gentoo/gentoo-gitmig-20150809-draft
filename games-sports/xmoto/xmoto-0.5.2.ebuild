@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.2.ebuild,v 1.7 2010/01/07 00:48:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.2.ebuild,v 1.8 2010/03/10 20:22:33 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-db/sqlite:3
 	dev-games/ode
 	dev-lang/lua[deprecated]
-	media-libs/jpeg
+	media-libs/jpeg:0
 	media-libs/libpng
 	media-libs/libsdl[joystick]
 	media-libs/sdl-mixer[vorbis]
@@ -43,8 +43,10 @@ src_prepare() {
 	use editor && rm -vf "${WORKDIR}"/extensions/{bezmisc,inkex}.py
 	sed -i \
 		-e '/^gettextsrcdir/s:=.*:= @localedir@/gettext/po:' \
-		po/Makefile.in.in \
-		|| die "sed failed"
+		po/Makefile.in.in || die
+	sed -i \
+		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
+		src/image/tim_png.cpp || die
 	epatch "${FILESDIR}"/${P}-64bit.patch
 }
 
