@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.10 2010/01/25 22:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.11 2010/03/10 21:02:26 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -24,7 +24,7 @@ UIDEPEND="alsa? ( media-libs/alsa-lib )
 		virtual/opengl
 		virtual/glu )
 	sdl? ( media-libs/libsdl )
-	media-libs/jpeg
+	media-libs/jpeg:0
 	media-libs/libogg
 	media-libs/libpng
 	media-libs/libvorbis
@@ -108,6 +108,10 @@ src_prepare() {
 		-e "s:\"oss\":\"${snd_drv}\":" \
 		-e "s:\"\./snd:\"$(games_get_libdir)/${PN}/snd:" \
 		|| die "sed snd_dma.c failed"
+
+	sed -i \
+		-e 's:jpeg_mem_src:qudos_jpeg_mem_src:g' \
+		src/ref_gl/gl_image.c || die
 }
 
 src_compile() {

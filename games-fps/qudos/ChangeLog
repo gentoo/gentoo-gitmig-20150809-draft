@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/qudos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.9 2010/01/25 22:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.10 2010/03/10 21:02:26 ssuominen Exp $
+
+  10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> qudos-0.40.1.ebuild:
+  Fix building with jpeg-8 wrt #308895 by Locke Shinseiko.
 
   25 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org> qudos-0.40.1.ebuild:
   EAPI=2; tidy
