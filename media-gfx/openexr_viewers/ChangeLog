@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/openexr_viewers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.18 2009/12/15 20:37:49 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.19 2010/03/10 03:02:03 sping Exp $
+
+  10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  openexr_viewers-1.0.1.ebuild:
+  Fix SRC_URI (bug #262655)
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   files/openexr_viewers-1.0.1-gcc44.patch:
