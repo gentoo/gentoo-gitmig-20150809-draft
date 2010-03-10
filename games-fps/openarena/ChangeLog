@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/openarena
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.11 2010/03/06 22:04:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.12 2010/03/10 09:54:08 tupone Exp $
+
+  10 Mar 2010; Tupone Alfredo <tupone@gentoo.org> openarena-0.8.1-r1.ebuild,
+  +files/openarena-0.8.1-unbundling.patch,
+  -files/openarena-0.8.1-zlib.patch:
+  Unbundle media-libs/jpeg. Bug #255453 by flameeyes@gentoo.org
 
 *openarena-0.8.1-r1 (06 Mar 2010)
 

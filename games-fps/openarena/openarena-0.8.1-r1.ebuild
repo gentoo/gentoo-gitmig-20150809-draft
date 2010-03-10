@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1-r1.ebuild,v 1.1 2010/03/06 22:04:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1-r1.ebuild,v 1.2 2010/03/10 09:54:08 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic versionator games
@@ -20,6 +20,7 @@ IUSE="+curl +openal +vorbis"
 RDEPEND="virtual/opengl
 	media-libs/libsdl[joystick,opengl,video]
 	media-libs/speex
+	media-libs/jpeg
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau
@@ -37,7 +38,7 @@ DIR=${GAMES_DATADIR}/${PN}
 src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}"/${P}-makefile.patch \
-		"${FILESDIR}"/${P}-zlib.patch
+		"${FILESDIR}"/${P}-unbundling.patch
 	append-cflags -fno-strict-aliasing # bug #268851
 	sed -i \
 		-e "s:%CFLAGS%:${CFLAGS}:g" \
