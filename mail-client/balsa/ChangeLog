@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.93 2010/02/01 20:17:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.94 2010/03/10 23:46:25 eva Exp $
+
+*balsa-2.4.7 (10 Mar 2010)
+
+  10 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> +balsa-2.4.7.ebuild,
+  metadata.xml:
+  Version bump. Fix a couple of crashers and security issues. Also fix
+  automagic USE flags, bug #301850.
 
   01 Feb 2010; Markos Chandras <hwoarang@gentoo.org> balsa-2.4.1-r1.ebuild:
   Stable on amd64 wrt bug #278718
