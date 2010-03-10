@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-1.1.0.ebuild,v 1.2 2010/01/06 16:00:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-1.1.0.ebuild,v 1.3 2010/03/10 15:57:51 flameeyes Exp $
 
 EAPI=1
 
@@ -26,7 +26,8 @@ IUSE="nls elibc_FreeBSD"
 
 RDEPEND="nls? ( virtual/libintl )
 	!<sys-libs/pam-0.99
-	>=sys-libs/pam-1.1.0"
+	>=sys-libs/pam-1.1.0
+	!>=sys-libs/pam-1.1.1-r1"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
