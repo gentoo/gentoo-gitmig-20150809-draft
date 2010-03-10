@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-0.9.8.ebuild,v 1.1 2010/02/04 21:09:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-0.9.8.ebuild,v 1.2 2010/03/10 15:39:29 josejx Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,7 +15,7 @@ HOMEPAGE="http://pythonpaste.org/webob/ http://pypi.python.org/pypi/WebOb"
 SRC_URI="http://pypi.python.org/packages/source/W/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 SLOT="0"
 IUSE=""
 

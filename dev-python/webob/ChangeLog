@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.12 2010/02/10 04:00:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.13 2010/03/10 15:39:29 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> webob-0.9.8.ebuild:
+  Marked ppc stable, added ~ppc64.
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> webob-0.9.7.1.ebuild:
   Marked ppc stable for bug #301409.
