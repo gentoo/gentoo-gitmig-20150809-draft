@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/notify-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.21 2010/03/07 20:35:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.22 2010/03/10 18:29:41 arfrever Exp $
+
+  10 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  notify-python-0.1.1-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Delete call to deprecated python_version() (bug #308019).
 
   07 Mar 2010; Raúl Porcel <armin76@gentoo.org> notify-python-0.1.1.ebuild,
   notify-python-0.1.1-r1.ebuild:
