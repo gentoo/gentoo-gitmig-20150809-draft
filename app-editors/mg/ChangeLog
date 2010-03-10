@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.19 2009/11/25 20:34:27 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.20 2010/03/10 09:45:57 josejx Exp $
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> mg-20090107.ebuild:
+  Marked ~ppc for bug #305487.
 
   25 Nov 2009; Christian Faulhammer <fauli@gentoo.org> mg-20090107.ebuild:
   import changes from Prefix overlay
