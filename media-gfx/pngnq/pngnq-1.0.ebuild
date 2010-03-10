@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/pngnq-1.0.ebuild,v 1.2 2010/01/17 22:32:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/pngnq-1.0.ebuild,v 1.3 2010/03/10 16:59:32 ssuominen Exp $
 
 EAPI=2
-
-inherit eutils autotools
+inherit autotools eutils
 
 DESCRIPTION="Pngnq is a tool for quantizing PNG images in RGBA format."
 HOMEPAGE="http://pngnq.sourceforge.net/"
@@ -18,11 +17,12 @@ IUSE=""
 DEPEND="media-libs/libpng"
 
 src_prepare() {
-	epatch "${FILESDIR}/pngnq-1.0-as-needed.patch"
+	epatch "${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc README NEWS || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc README NEWS || die
 }
