@@ -1,0 +1,11 @@
+# ChangeLog for dev-cpp/gstreamermm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.1 2010/03/10 20:40:16 flameeyes Exp $
+
+*gstreamermm-0.10.6 (10 Mar 2010)
+
+  10 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gstreamermm-0.10.6.ebuild, +metadata.xml:
+  Initial import of the C++ bindings for gstreamer. Thanks to the guys who
+  contributed the ebuilds in bug #211417.
+
