@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4012 2010/03/10 14:41:32 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4013 2010/03/10 17:01:09 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> package.mask:
+  =sci-chemistry/viewmol-2.4.1 doesn't work with current python.eclass
 
   10 Mar 2010; Jim Ramsay <lack@gentoo.org> package.mask:
   Temporarily masking xorg-server-1.7.5.901 (Bug #296514)
