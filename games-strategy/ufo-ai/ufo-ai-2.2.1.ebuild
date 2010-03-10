@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.7 2010/03/02 10:44:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.8 2010/03/10 18:37:22 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -46,7 +46,8 @@ src_prepare() {
 
 	# Set basedir & fixes bug in finding text files - it should use fs_basedir
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
-		"${FILESDIR}"/${P}-noelfonshared.patch
+		"${FILESDIR}"/${P}-noelfonshared.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
