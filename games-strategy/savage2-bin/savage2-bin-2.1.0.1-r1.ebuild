@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1-r1.ebuild,v 1.3 2010/01/17 21:35:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1-r1.ebuild,v 1.4 2010/03/10 19:36:49 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -42,7 +42,7 @@ RDEPEND="virtual/opengl
 	media-libs/freetype:2
 	media-libs/fmod:1
 	sys-libs/glibc
-	x86? ( <media-libs/jpeg-7 )"
+	=media-libs/jpeg-6*"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/data
