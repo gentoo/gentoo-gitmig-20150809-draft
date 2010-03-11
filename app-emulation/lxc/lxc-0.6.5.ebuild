@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.5.ebuild,v 1.2 2010/03/09 13:43:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.6.5.ebuild,v 1.3 2010/03/11 13:33:26 flameeyes Exp $
 
 EAPI="2"
 
@@ -71,8 +71,9 @@ src_install() {
 		doman doc/*.{1,5,7} || die
 	fi
 
-	rm -r "${D}"/etc/lxc "${D}"/usr/sbin/lxc-{setcap,ls} \
-		"${D}"/usr/share/man/man1/lxc-ls.1 || die "unable to remove extraenous content"
+	rm -r "${D}"/usr/sbin/lxc-{setcap,ls} \
+		"${D}"/usr/share/man/man1/lxc-ls.1 \
+		|| die "unable to remove extraenous content"
 
 	keepdir /etc/lxc
 

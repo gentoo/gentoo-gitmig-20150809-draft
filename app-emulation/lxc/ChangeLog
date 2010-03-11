@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.9 2010/03/09 13:43:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.10 2010/03/11 13:33:26 flameeyes Exp $
+
+  11 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org> lxc-0.6.5.ebuild:
+  Stop trying to remove /etc/lxc, it's no longer installed.
 
   09 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -lxc-0.6.4-r2.ebuild, lxc-0.6.5.ebuild, metadata.xml:
