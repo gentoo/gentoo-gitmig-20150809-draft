@@ -20,7 +20,7 @@
 	<use>
 		<flag name="monolithic">
 			Build Standalone client with integrated core, no external
-			quasselcore needed. Only useful if one don't want to use quassels
+			quasselcore needed. Only useful if you don't want to use quassels
 			client/server model. The server and X flags are not needed in this
 			case but it is possible to enable them too.
 		</flag>
@@ -39,8 +39,8 @@
 			disable it on the client.
 		</flag>
 		<flag name="webkit">
-			Use qt-webkit rendering engine for showing url thumbmails and
-			for other things that needs webbrowser intergration.
+			Use qt-webkit rendering engine for showing URL thumbnails and
+			for other things that need web browser integration.
 		</flag>
 		<flag name="X">
 			Build the Qt 4 GUI client for quassel. If this USE flag is
