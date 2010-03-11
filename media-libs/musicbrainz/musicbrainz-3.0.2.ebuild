@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.8 2010/01/21 21:52:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.9 2010/03/11 22:59:10 sping Exp $
 
 inherit cmake-utils
 
 DESCRIPTION="Client library to access metadata of mp3/vorbis/CD media"
-HOMEPAGE="http://www.musicbrainz.org/"
+HOMEPAGE="http://musicbrainz.org/"
 SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
