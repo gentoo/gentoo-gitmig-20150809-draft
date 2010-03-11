@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100223.236320.ebuild,v 1.1 2010/02/27 21:27:32 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100223.236320.ebuild,v 1.2 2010/03/11 20:31:21 nyhm Exp $
 
 EAPI="2"
 
-inherit eutils pam versionator
+inherit eutils multilib pam versionator
 
 MY_DATE="$(get_version_component_range 3)"
 MY_BUILD="$(get_version_component_range 4)"
