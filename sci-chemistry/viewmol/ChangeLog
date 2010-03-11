@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/viewmol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.9 2010/03/10 17:09:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.10 2010/03/11 07:57:23 jlec Exp $
+
+  11 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  -viewmol-2.4.1.ebuild:
+  broken version removed
 
 *viewmol-2.4.1-r1 (10 Mar 2010)
 
