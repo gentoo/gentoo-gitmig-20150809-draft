@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5381 2010/03/11 21:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5382 2010/03/11 22:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1857,7 +1857,7 @@ media-tv/freevo:xmame - Enables support for Xmame arcade games
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/mythtv:alsa - Allows MythTV to directly output sound to ALSA devices, this is needed if you are using ALSA dmix or SPDIF. Note, you will have to physically type your device into the MythTV configuration since it will only give you /dev/dsp devices in the drop down.
 media-tv/mythtv:altivec - Builds ffmpeg's codec libraries with altivec support.
-media-tv/mythtv:autostart - Uses a custom autostart configuration gleened from expierence with MythTV since it's early versions and discussed with other MythTV maintainers and users. Does not rely on KDE being installed like most methods do.
+media-tv/mythtv:autostart - Uses a custom autostart configuration gleaned from experience with MythTV since its early versions and discussed with other MythTV maintainers and users. Does not rely on KDE being installed like most methods do.
 media-tv/mythtv:debug - Instructs Qt to use the 'debug' target instead of 'release' target. If your MythTV is crashing or you need a backtrace, you need to compile it with this option otherwise the debugging data is useless.
 media-tv/mythtv:directv - Installs the DirecTV channel changing script so that you can configure MythTV to use it to change the channels on your DirecTV box.
 media-tv/mythtv:dvb - Enables support for Linux DVB cards. These include all cards that work with digital signals such as ATSC, DVB-T, DVB-C, and DVB-S, QAM-64, and QAM-256.
@@ -1872,7 +1872,7 @@ media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write 
 media-tv/mythtv:tiff - Add support for tiff loading and rendering which is only used by media-plugins/mythgallery
 media-tv/mythtv:vdpau - enable support of NVIDIA's VDPAU for video playback
 media-tv/mythtv:video_cards_nvidia - When combined with the xvmc USE flag, enables NVIDIA specific XvMC extension usage.
-media-tv/mythtv:xvmc - Instructs MythTV to use XvMC for it's video output. By default, this will use the generic XvMC wrapper unless a specific video card driver is enabled via their VIDEO_CARDS USE flags.
+media-tv/mythtv:xvmc - Instructs MythTV to use XvMC for its video output. By default, this will use the generic XvMC wrapper unless a specific video card driver is enabled via their VIDEO_CARDS USE flags.
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extensions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
