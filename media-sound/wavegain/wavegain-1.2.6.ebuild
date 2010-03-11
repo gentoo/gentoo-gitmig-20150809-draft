@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/wavegain-1.2.6.ebuild,v 1.3 2009/06/19 10:50:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/wavegain-1.2.6.ebuild,v 1.4 2010/03/11 23:02:58 sping Exp $
 
 inherit toolchain-funcs
 
 MY_P=${P/wavegain/WaveGain}
 
 DESCRIPTION="ReplayGain for WAVE audio files"
-HOMEPAGE="http://www.rarewares.org/files/others"
+HOMEPAGE="http://www.rarewares.org/files/others/"
 SRC_URI="http://www.rarewares.org/files/others/${P}srcs.zip"
 
 LICENSE="LGPL-2.1"
