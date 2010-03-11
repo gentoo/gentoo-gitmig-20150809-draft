@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11337 2010/03/11 07:56:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11338 2010/03/11 13:44:52 s4t4n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# <s4t4n@gentoo.org> (11 Mar 2010)
+# The following packages are not compatible with lm-sensors-3, upstream is unresponsive.
+# Masked pending removal from the tree.
+# http://bugs.gentoo.org/show_bug.cgi?id=289829
+# http://bugs.gentoo.org/show_bug.cgi?id=291426
+# http://bugs.gentoo.org/show_bug.cgi?id=291429
+x11-plugins/wmalms
+x11-plugins/wmgtemp
+x11-plugins/wmsensormon
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Mar 2010)
 # Explicitly mask these as per NVIDIA's request
