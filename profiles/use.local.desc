@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5376 2010/03/11 16:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5377 2010/03/11 20:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -42,7 +42,7 @@ app-admin/conky:eve - enable support for the eve-online skill monitor
 app-admin/conky:iostats - enable support for per-task I/O statistics
 app-admin/conky:ipv6 - disable support for tcp (ip4) port monitoring
 app-admin/conky:lua - enable if you want Lua scripting support
-app-admin/conky:lua-cairo - enable if you want Lua Cairo bindings for Conky (also anables lua support)
+app-admin/conky:lua-cairo - enable if you want Lua Cairo bindings for Conky (also enables lua support)
 app-admin/conky:lua-imlib - enable if you want Lua Imlib2 bindings for Conky (also enables lua and imlib support)
 app-admin/conky:math - enable support for glibc's libm math library
 app-admin/conky:moc - enable monitoring of music played by media-sound/moc
@@ -67,9 +67,9 @@ app-admin/gnome-system-tools:policykit - Use sys-auth/policykit to gain privileg
 app-admin/hddtemp:network-cron -  Monthly cronjob to update hddtemp.db. 
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
-app-admin/puppet:augeas - Eanble augeas support
-app-admin/puppet:rrdtool - Eanble rrdtool support
-app-admin/puppet:shadow - Eanble shadow support
+app-admin/puppet:augeas - Enable augeas support
+app-admin/puppet:rrdtool - Enable rrdtool support
+app-admin/puppet:shadow - Enable shadow support
 app-admin/rsyslog:relp - Add support for the Reliable Event Logging Protocol using dev-libs/librelp
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
@@ -145,7 +145,7 @@ app-crypt/heimdal:otp -  Enable support for one-time passwords (OTP) in some hei
 app-crypt/heimdal:pkinit -  Enable pkinit support to get the initial ticket 
 app-crypt/heimdal:ssl -  Enable usage of openssl 
 app-crypt/heimdal:threads -  Enable pthread support 
-app-crypt/kstart:afs -  Enables afs support which means you can aquire an afs token and set PAGs. It's recommend to set this USE if you need authenticated access to an AFS cell for your daemon/app. 
+app-crypt/kstart:afs -  Enables afs support which means you can acquire an afs token and set PAGs. It's recommended to set this USE if you need authenticated access to an AFS cell for your daemon/app. 
 app-crypt/mit-krb5:doc -  Creates and installs the API and implementation documentation. This is only useful if you want to develop software which depends on kerberos. 
 app-crypt/mit-krb5:krb4 -  This option enables Kerberos V4 backwards compatibility using the builtin Kerberos V4 library. This is really outdated and dangerous to use because not safe. 
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
