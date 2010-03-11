@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.9 2010/03/06 20:16:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.10 2010/03/11 18:25:21 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="alsa apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
 # currently removed openmp, see
 # http://git.omp.am/?p=conky.git;a=commit;h=670e9a0eb15ed3bc384ae0154d3c09de691e390c
