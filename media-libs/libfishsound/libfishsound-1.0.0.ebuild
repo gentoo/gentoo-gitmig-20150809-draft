@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-1.0.0.ebuild,v 1.1 2010/03/11 10:56:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-1.0.0.ebuild,v 1.2 2010/03/11 11:18:37 ssuominen Exp $
 
 EAPI=2
 
@@ -11,12 +11,13 @@ SRC_URI="http://downloads.xiph.org/releases/libfishsound/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="flac speex"
+IUSE="speex"
+# flac
 
 RDEPEND="media-libs/libvorbis
 	media-libs/libogg
-	flac? ( media-libs/flac )
 	speex? ( media-libs/speex )"
+# flac? ( media-libs/flac )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -28,7 +29,10 @@ src_prepare() {
 
 src_configure() {
 	local myconf=""
-	use flac || myconf="${myconf} --disable-flac"
+	# FLAC pkg-config file is broken and shouldn't append -I/usr/include/FLAC
+	# because of e.g. assert.h
+	# use flac ||
+	myconf="${myconf} --disable-flac"
 	use speex || myconf="${myconf} --disable-speex"
 
 	econf \
