@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r4.ebuild,v 1.1 2010/02/04 23:43:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r4.ebuild,v 1.2 2010/03/11 13:55:37 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/encode/${MY_PN}-${PV}-
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
@@ -27,6 +27,7 @@ src_unpack () {
 	epatch "${FILESDIR}"/${P}-64bit_fixes.patch
 	epatch "${FILESDIR}"/${P}-tempfile-convert.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-powerpc.patch
 	cd "${S}"
 	rm -r jpeg
 	epatch "${FILESDIR}"/${P}-system-jpeg.patch
