@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.9.0_rc2.ebuild,v 1.1 2010/02/08 21:21:47 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.9.0_rc3.ebuild,v 1.1 2010/03/11 02:25:11 reavertm Exp $
 
 EAPI="2"
 
