@@ -11,7 +11,7 @@
 			<name>Torsten Veller</name>
 		</maintainer>
 	<use>
-		<flag name='chappa'>enhance alpine by appling Eduardo Chappa's
+		<flag name='chappa'>enhance alpine by applying Eduardo Chappa's
 			patches</flag>
 		<flag name='onlyalpine'>installs only the alpine binary, so it does
 			not collied with <pkg>app-editors/pico</pkg> and/or 
