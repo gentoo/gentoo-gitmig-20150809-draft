@@ -6,4 +6,8 @@
 		<email>spatz@gentoo.org</email>
 		<name>Dror Levin</name>
 	</maintainer>
+	<longdescription>
+		Vim spell files for Hebrew (he). Supported character sets are UTF-8 and
+		ISO-8859-8.
+	</longdescription>
 </pkgmetadata>

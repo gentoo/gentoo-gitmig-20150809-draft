@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-he
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-he/ChangeLog,v 1.1 2010/03/11 23:24:30 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-he/ChangeLog,v 1.2 2010/03/11 23:50:09 spatz Exp $
+
+  11 Mar 2010; Dror Levin <spatz@gentoo.org> metadata.xml:
+  Add longdescription.
 
 *vim-spell-he-20100312 (11 Mar 2010)
 
