@@ -1,6 +1,20 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.180 2010/02/22 08:07:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.181 2010/03/11 20:18:28 grobian Exp $
+
+*mutt-1.5.20-r13 (11 Mar 2010)
+
+  11 Mar 2010; Fabian Groffen <grobian@gentoo.org> +mutt-1.5.20-r13.ebuild,
+  +files/mutt-1.5.20-abort-prompt-ctrlc-c837ab790d2e.patch,
+  +files/mutt-1.5.20-gpgme-case-insensitive-domain-2c78b28027cc.patch,
+  +files/mutt-1.5.20-mailbox-save-message-double-free-57124ea5592e.patch,
+  +files/mutt-1.5.20-null-dptr-use-data-817c60d5da7d.patch,
+  +files/mutt-1.5.20-pop-port-in-url-6b057dc52222.patch,
+  +files/mutt-1.5.20-regexp-fail-crash-05cec973f0d9.patch,
+  +files/mutt-1.5.20-rfc-2047-decode-before-dequote-2a4ca6917fd0.patch:
+  Bump du jour, add another bunch of patches from upstream, they really
+  should make a new release.  Convert to EAPI=3, remove WANT_AUTOCONF
+  unsetting.
 
 *mutt-1.5.20-r12 (22 Feb 2010)
 
