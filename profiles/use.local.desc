@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5375 2010/03/11 12:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5376 2010/03/11 16:47:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -502,6 +502,7 @@ app-pda/synce-fur:void-chmod - enable a fake fuse hook for "chmod" that just ret
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
 app-portage/eix:bzip2 - Support for parsing of environment.bz2 to guess repository name of packages installed with ancient portage versions (requires app-arch/bzip2). This flag is safe to disable for portage users that have re-merged all packages since 2007. This flag will be phased out.
 app-portage/eix:debug - Build with CXXFLAGS/LDFLAGS for debugging support. Only makes sense in combination with FEATURES=nostrip.
+app-portage/eix:deprecated - Installs wrapper scripts for all the previous executable names that will soon be going away. Enabled by default in 0.17.0, optional in 0.18.0, removed in next major release.
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
 app-portage/eix:hardened - Add CXXFLAGS/LDFLAGS enhancing security at the cost of a slight speed loss. If a hardened gcc is used, these flags should not make a difference.
 app-portage/eix:nls - Support foreign language messages (experimental; currently only de)
