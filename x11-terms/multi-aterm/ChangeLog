@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/multi-aterm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.30 2008/05/06 17:45:27 dertobi123 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.31 2010/03/11 00:44:53 ssuominen Exp $
+
+  11 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  multi-aterm-0.2.1-r1.ebuild, +files/multi-aterm-0.2.1-libpng14.patch:
+  Fix (detection and) building with libpng14.
 
   06 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   multi-aterm-0.2.1-r1.ebuild:
