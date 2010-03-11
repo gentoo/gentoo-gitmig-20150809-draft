@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-014.ebuild,v 1.1 2010/02/23 19:31:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-014.ebuild,v 1.2 2010/03/11 13:33:51 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -59,7 +59,10 @@ pkg_setup() {
 		$(use_enable test tests)
 	"
 
-	check_battery
+	# ACPI is only availably on amd64/x86
+	if use amd64 || use x86; then
+		check_battery
+	fi
 }
 
 src_prepare() {

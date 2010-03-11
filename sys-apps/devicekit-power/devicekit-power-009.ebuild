@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-009.ebuild,v 1.2 2009/09/08 18:37:48 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-009.ebuild,v 1.3 2010/03/11 13:33:51 nirbheek Exp $
 
 EAPI="2"
 
@@ -49,7 +49,10 @@ pkg_setup() {
 		$(use_enable debug verbose-mode)
 	"
 
-	check_battery
+	# ACPI is only availably on amd64/x86
+	if use amd64 || use x86; then
+		check_battery
+	fi
 }
 
 src_prepare() {
