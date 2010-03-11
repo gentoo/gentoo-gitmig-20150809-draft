@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.127 2010/02/20 11:09:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.128 2010/03/11 18:37:34 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> kmailcvt-4.3.5.ebuild:
+  Marking kmailcvt-4.3.5 ppc stable for bug 300393
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kmailcvt-4.3.5.ebuild:
   amd64/x86 stable wrt #300393

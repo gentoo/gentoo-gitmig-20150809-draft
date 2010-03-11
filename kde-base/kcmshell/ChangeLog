@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcmshell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.53 2010/03/02 15:57:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.54 2010/03/11 18:37:14 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> kcmshell-4.3.5.ebuild:
+  Marking kcmshell-4.3.5 ppc stable for bug 300393
 
 *kcmshell-4.4.1 (02 Mar 2010)
 

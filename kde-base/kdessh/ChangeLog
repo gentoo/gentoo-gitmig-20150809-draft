@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdessh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdessh/ChangeLog,v 1.49 2010/02/20 10:42:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdessh/ChangeLog,v 1.50 2010/03/11 18:35:26 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> kdessh-4.3.5.ebuild:
+  Marking kdessh-4.3.5 ppc stable for bug 300393
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kdessh-4.3.5.ebuild:
   amd64/x86 stable wrt #300393

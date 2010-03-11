@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.45 2010/03/02 19:11:35 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.46 2010/03/11 18:38:03 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> libkdcraw-4.3.5.ebuild:
+  Marking libkdcraw-4.3.5 ppc stable for bug 300393
 
 *libkdcraw-4.4.1 (02 Mar 2010)
 

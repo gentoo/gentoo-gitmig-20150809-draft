@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.115 2010/03/02 17:07:12 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.116 2010/03/11 18:37:37 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> kdesdk-misc-4.3.5.ebuild:
+  Marking kdesdk-misc-4.3.5 ppc stable for bug 300393
 
 *kdesdk-misc-4.4.1 (02 Mar 2010)
 

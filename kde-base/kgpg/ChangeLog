@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.150 2010/03/02 17:44:46 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.151 2010/03/11 18:35:40 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> kgpg-4.3.5.ebuild:
+  Marking kgpg-4.3.5 ppc stable for bug 300393
 
 *kgpg-4.4.1 (02 Mar 2010)
 

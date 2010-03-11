@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.140 2010/03/02 17:12:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.141 2010/03/11 18:36:47 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> kdf-4.3.5.ebuild:
+  Marking kdf-4.3.5 ppc stable for bug 300393
 
 *kdf-4.4.1 (02 Mar 2010)
 

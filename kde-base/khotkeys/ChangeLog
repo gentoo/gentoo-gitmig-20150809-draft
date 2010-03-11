@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.150 2010/03/02 17:47:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.151 2010/03/11 18:37:48 ranger Exp $
+
+  11 Mar 2010; Brent Baude <ranger@gentoo.org> khotkeys-4.3.5.ebuild:
+  Marking khotkeys-4.3.5 ppc stable for bug 300393
 
 *khotkeys-4.4.1 (02 Mar 2010)
 
