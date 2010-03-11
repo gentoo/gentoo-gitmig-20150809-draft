@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.62.ebuild,v 1.1 2010/03/08 14:35:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.62.ebuild,v 1.2 2010/03/11 15:22:41 pacho Exp $
 
 EAPI="2"
 
@@ -58,6 +58,9 @@ src_prepare() {
 
 	# Fix alsa files location
 	epatch "${FILESDIR}/${PN}-alsa_location.patch"
+
+	# Upstream patch to fix ipctest build, bug 308081
+	epatch "${FILESDIR}/${P}-makefile_ipctest.patch"
 
 	eautoreconf
 }
