@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.18 2008/11/25 23:49:59 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.19 2010/03/11 08:48:48 s4t4n Exp $
 
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A pager dockapp"
 HOMEPAGE="http://www.dockapps.com/file.php/id/158"
-SRC_URI="http://linux-sea.tucows.webusenet.com/files/x11/dock/${P}.tar.gz"
+SRC_URI="http://www.dockapps.org/download.php/id/213/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
