@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.5.ebuild,v 1.1 2010/03/10 01:38:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.5-r1.ebuild,v 1.1 2010/03/11 13:17:25 flameeyes Exp $
 
 inherit cron pam eutils
 
@@ -40,6 +40,9 @@ src_unpack() {
 
 	# patch check_system_crontabs to support "-c /path/to/fcron.conf"
 	epatch "${FILESDIR}"/check_system_crontabs.fcron-config-file.patch
+
+	# bug #308799
+	epatch "${FILESDIR}"/${P}-pam.patch
 
 	# the script contains bashism, so until upstream fixes it we're
 	# going to simply require bash for this to work, sorry!
