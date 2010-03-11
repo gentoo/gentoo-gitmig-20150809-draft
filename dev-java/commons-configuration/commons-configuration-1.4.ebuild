@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.4.ebuild,v 1.4 2009/02/15 17:30:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.4.ebuild,v 1.5 2010/03/11 22:44:30 sping Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -8,8 +8,8 @@ JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Java library for reading configuration data from a variety of sources."
-HOMEPAGE="http://jakarta.apache.org/commons/configuration/"
-SRC_URI="mirror://apache/jakarta/commons/configuration/source/${P}-src.tar.gz"
+HOMEPAGE="http://commons.apache.org/configuration/"
+SRC_URI="http://archive.apache.org/dist/commons/configuration/source/${P}-src.tar.gz"
 
 COMMON_DEPENDS="
 	>=dev-java/commons-beanutils-1.7.0:1.7
