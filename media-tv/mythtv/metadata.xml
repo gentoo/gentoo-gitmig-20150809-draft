@@ -15,8 +15,8 @@
 		will only give you /dev/dsp devices in the drop down.</flag>
 	<flag name="altivec">Builds ffmpeg's codec libraries with altivec
 		support.</flag>
-	<flag name="autostart">Uses a custom autostart configuration gleened from
-		expierence with MythTV since it's early versions and discussed with
+	<flag name="autostart">Uses a custom autostart configuration gleaned from
+		experience with MythTV since its early versions and discussed with
 		other MythTV maintainers and users. Does not rely on KDE being installed
 		like most methods do.</flag>
 	<flag name="debug">Instructs Qt to use the 'debug' target instead of
@@ -54,7 +54,7 @@
 		it.</flag>
 	<flag name='tiff'>Add support for tiff loading and rendering which is only
 		used by <pkg>media-plugins/mythgallery</pkg></flag>
-	<flag name="xvmc">Instructs MythTV to use XvMC for it's video output. By
+	<flag name="xvmc">Instructs MythTV to use XvMC for its video output. By
 		default, this will use the generic XvMC wrapper unless a specific video
 		card driver is enabled via their VIDEO_CARDS USE flags.</flag>
 	<flag name="vdpau">enable support of NVIDIA's VDPAU for video
