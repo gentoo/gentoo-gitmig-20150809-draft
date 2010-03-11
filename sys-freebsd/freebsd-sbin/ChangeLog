@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.53 2009/05/24 22:44:55 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.54 2010/03/11 11:20:03 aballier Exp $
+
+  11 Mar 2010; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-sbin-6.2-r2.ebuild, -files/freebsd-sbin-6.2-ipfilter.patch,
+  -freebsd-sbin-7.1.ebuild, -freebsd-sbin-7.1-r1.ebuild,
+  -files/freebsd-sbin-zlib.patch, metadata.xml:
+  remove old
 
   24 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   freebsd-sbin-7.1-r1.ebuild, freebsd-sbin-7.2.ebuild:
