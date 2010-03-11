@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5377 2010/03/11 20:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5378 2010/03/11 20:47:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -258,9 +258,9 @@ app-emulation/libvirt:xen - Add support for app-emulation/xen based virtual mach
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
 app-emulation/mol:sheep - Support for the sheep net driver
-app-emulation/open-vm-tools:doc - Generate API documantation
+app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
-app-emulation/open-vm-tools:pic - Force shared libraries to be build as PIC
+app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
 app-emulation/open-vm-tools:unity - Enable host unity support
 app-emulation/pearpc:jit - Use the JITC-x86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
@@ -1047,7 +1047,7 @@ dev-util/nvidia-cuda-toolkit:debugger -  Installs the CUDA debugger.
 dev-util/nvidia-cuda-toolkit:profiler -  Installs the NVIDIA CUDA visual profiler. 
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/perf:demangle -  Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils. 
-dev-util/perf:doc -  Build documentation and man pages. With thise USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems. 
+dev-util/perf:doc -  Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems. 
 dev-util/perf:perl -  Add support for Perl as a scripting language for perf tools. 
 dev-util/qt-creator:bineditor - enable bineditor plugin
 dev-util/qt-creator:bookmarks - enable bookmarks plugin
@@ -1060,7 +1060,7 @@ dev-util/qt-creator:mercurial - enable mercurial plugin
 dev-util/qt-creator:perforce - enable perforce software configuration manager plugin
 dev-util/qt-creator:qml - Simple way of building UIs based on Qt Declarative module
 dev-util/qt-creator:qtscript - enable qt script editor plugin
-dev-util/qt-creator:subversion - enable subersion plugin
+dev-util/qt-creator:subversion - enable subversion plugin
 dev-util/radare:gui -  Enable the graphical user interface of radare (broken) 
 dev-util/radare:vala -  Enable support for the vala programming language 
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
