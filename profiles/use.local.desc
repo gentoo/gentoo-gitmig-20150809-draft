@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5383 2010/03/11 22:27:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5384 2010/03/11 22:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2411,11 +2411,11 @@ net-irc/psybnc:oidentd - Adds support for oidentd
 net-irc/psybnc:scripting - Adds scripting support
 net-irc/quassel:X -  Build the Qt 4 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client. 
 net-irc/quassel:ayatana -  Build in support for Ayatana notification using the libindicate-qt plugin. 
-net-irc/quassel:monolithic -  Build Standalone client with integrated core, no external quasselcore needed. Only useful if one don't want to use quassels client/server model. The server and X flags are not needed in this case but it is possible to enable them too. 
+net-irc/quassel:monolithic -  Build Standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use quassels client/server model. The server and X flags are not needed in this case but it is possible to enable them too. 
 net-irc/quassel:oxygen -  Install oxygen icons. Highly recommended for KDE-4.1 and KDE-4.2 (or usage without kde). KDE-4.3 will ship the icons by default. 
 net-irc/quassel:phonon -  Build client with phonon backend support. This enables sound playback in client. 
 net-irc/quassel:server -  Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client. 
-net-irc/quassel:webkit -  Use qt-webkit rendering engine for showing url thumbmails and for other things that needs webbrowser intergration. 
+net-irc/quassel:webkit -  Use qt-webkit rendering engine for showing URL thumbnails and for other things that need web browser integration. 
 net-irc/rbot:aspell -  Use aspell instead of ispell in the "spell" plugin for rbot. The vanilla plugin uses ispell, but enabling this flag makes it use the ispell interface from aspell instead. 
 net-irc/rbot:cal -  Add dependency over a package providing the /usr/bin/cal command, which is needed to enable the "cal" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default. 
 net-irc/rbot:dict -  Add dependency over dev-ruby/ruby-dict, which is needed to enable the "dict" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default. 
@@ -2465,7 +2465,7 @@ net-libs/libfwbuilder:bind - Use bind's name resolving library
 net-libs/libfwbuilder:stlport - Enagle support for STLport
 net-libs/libinfinity:server -  Build and install the server binary including init.d/conf.d-scripts. Needed if you want to host an infinote server for gobby. 
 net-libs/libnice:upnp - Enable UPnP IGD support
-net-libs/libpcap:libnl - link with dev-libs/libnl (used to put wireless interfaces in monitore mode)
+net-libs/libpcap:libnl - link with dev-libs/libnl (used to put wireless interfaces in monitor mode)
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libproxy:gnome - Enable support for reading proxy settings from GNOME using gnome-base/gconf
 net-libs/libproxy:kde - Enable support for reading proxy settings from KDE
@@ -2528,7 +2528,7 @@ net-libs/ptlib:video - Enable video support
 net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/webkit-gtk:coverage - enable code coverage support
-net-libs/webkit-gtk:pango - Use pango as fontbackend instead of freetype
+net-libs/webkit-gtk:pango - Use pango as font backend instead of freetype
 net-libs/webkit-gtk:ruby - Enable HTML5 support for furigana/ruby annotation
 net-libs/webkit-gtk:soup - Use SOUP as backend instead of curl
 net-libs/webkit-gtk:websockets - enable full duplex single socket communication
@@ -2601,7 +2601,7 @@ net-misc/curl:gnutls - Use gnutls as the crypto engine
 net-misc/curl:libssh2 - Enabled SSH urls in curl using libssh2
 net-misc/curl:nss - Use NSS as the crypto engine
 net-misc/curl:openssl - Use openssl as the crypto engine
-net-misc/dhcpcd:compat - Enable commandline compability with dhcpcd-3.x
+net-misc/dhcpcd:compat - Enable commandline compatibility with dhcpcd-3.x
 net-misc/directvnc:mouse - Adds mouse support
 net-misc/dnetstats:kde - Use kdesu to gain root access
 net-misc/dropbear:bsdpty - Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it
@@ -2721,7 +2721,7 @@ net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanma
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-news/liferea:dbus -  Enables the DBUS connector for liferea, so feeds can be managed from external programs 
 net-news/liferea:gnutls -  Enable https feeds using gnutls 
-net-news/liferea:gtkhtml -  Uses the gtkhtml rendering engine for item rendering. Depricated, and broken on amd64. 
+net-news/liferea:gtkhtml -  Uses the gtkhtml rendering engine for item rendering. Deprecated, and broken on amd64. 
 net-news/liferea:libnotify -  Enable popup notifications 
 net-news/liferea:lua -  Enable lua scripting 
 net-news/liferea:networkmanager -  Enable NetworkManager integration to automatically detect online/offline status 
@@ -2770,7 +2770,7 @@ net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
-net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application" 
+net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application 
 net-p2p/transmission:dht - Enable Distributed Hash Tables support
 net-p2p/transmission:sound - Enable sound event support with media-libs/libcanberra
 net-print/hplip:cupsddk - Add support for net-print/cupsddk which enables dynamic PPD files (recommended)
@@ -2892,7 +2892,7 @@ sci-chemistry/gromacs:single-precision - Single precision version of gromacs
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd 
 sci-chemistry/oasis:minimal - Restricts functionality on free software
 sci-chemistry/openbabel:swig - Use swig to rebuild language bindings.
-sci-chemistry/pdb2pqr:opal - Add web interafce via opal
+sci-chemistry/pdb2pqr:opal - Add web interface via opal
 sci-chemistry/pymol:apbs - Install the apbs plugin
 sci-chemistry/pymol:numpy - Compile numpy support
 sci-chemistry/pymol:shaders - Build with Shaders support - good for high-end 3D video cards.
