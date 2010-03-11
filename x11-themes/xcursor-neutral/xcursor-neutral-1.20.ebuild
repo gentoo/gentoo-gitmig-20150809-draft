@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.5 2008/03/06 12:25:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/xcursor-neutral-1.20.ebuild,v 1.6 2010/03/11 00:25:50 ssuominen Exp $
 
 MY_P="48837-Neutral_Plus_1.2.tar.bz2"
 MY_PN="Neutral_Plus"
@@ -15,7 +15,7 @@ KEYWORDS="amd64 sparc x86 ~x86-fbsd"
 IUSE="examples"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXcursor
-	=media-libs/libpng-1.2*"
+	>=media-libs/libpng-1.2"
 DEPEND="${RDEPEND}
 	x11-apps/xcursorgen"
 S="${WORKDIR}/Neutral_Plus"
@@ -25,8 +25,6 @@ src_install(){
 
 	doins -r "${S}"/cursors/
 	doins "${S}"/index.theme
-	dodoc "${S}"/LICENSE
-	dodoc "${S}"/COPYRIGHT
 
 	## install additional cursor source files?
 	if use examples; then
