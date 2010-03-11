@@ -1,6 +1,9 @@
 # ChangeLog for app-text/migemo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.26 2010/02/07 16:03:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.27 2010/03/11 16:02:09 josejx Exp $
+
+  11 Mar 2010; Joseph Jezak <josejx@gentoo.org> migemo-0.40-r4.ebuild:
+  Marked ppc stable for bug #301519.
 
   07 Feb 2010; Raúl Porcel <armin76@gentoo.org> migemo-0.40-r4.ebuild:
   alpha/ia64/sparc stable wrt #301519
