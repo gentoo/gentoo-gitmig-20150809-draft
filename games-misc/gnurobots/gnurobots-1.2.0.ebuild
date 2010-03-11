@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.2.0.ebuild,v 1.7 2009/11/18 04:13:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/gnurobots-1.2.0.ebuild,v 1.8 2010/03/11 16:27:13 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -23,7 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e 's/-pedantic-errors -Werror//' \
-		configure \
+		configure.ac \
 		|| die "sed failed"
 	eautoreconf
 }
