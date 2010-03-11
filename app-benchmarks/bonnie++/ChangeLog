@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.30 2010/03/06 16:24:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.31 2010/03/11 16:26:04 josejx Exp $
+
+  11 Mar 2010; Joseph Jezak <josejx@gentoo.org> bonnie++-1.96.ebuild:
+  Marked ppc/ppc64 stable for bug #299765.
 
   06 Mar 2010; Raúl Porcel <armin76@gentoo.org> bonnie++-1.93c.ebuild,
   bonnie++-1.96.ebuild:
