@@ -1,6 +1,17 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.81 2010/03/11 11:49:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.82 2010/03/11 12:01:14 aballier Exp $
+
+  11 Mar 2010; Alexis Ballier <aballier@gentoo.org>
+  -files/freebsd-lib-6.0-binutils-asm.patch,
+  -files/freebsd-lib-6.0-ssp.patch, -freebsd-lib-6.2-r4.ebuild,
+  -files/freebsd-lib-6.2-as-needed.patch,
+  -files/freebsd-lib-6.2-dl_iterate_phdr.patch,
+  -files/freebsd-lib-6.2-gcc41.patch, -files/freebsd-lib-6.2-libc.patch,
+  -files/freebsd-lib-6.2-libthr.patch, -files/freebsd-lib-6.2-pty6.patch,
+  -freebsd-lib-7.1-r4.ebuild, -files/freebsd-lib-7.1-db.patch,
+  -files/freebsd-lib-7.1-strndup_bport.patch, metadata.xml:
+  remove old
 
   11 Mar 2010; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-7.2.ebuild:
   remove old
