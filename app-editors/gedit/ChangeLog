@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.293 2010/02/19 23:42:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.294 2010/03/11 21:02:13 pacho Exp $
+
+  11 Mar 2010; Pacho Ramos <pacho@gentoo.org> gedit-2.26.3-r1.ebuild:
+  amd64 stable, bug 308549
 
   19 Feb 2010; Jonathan Callen <abcd@gentoo.org> gedit-2.28.3.ebuild:
   Transfer prefix keywords (no other changes)
