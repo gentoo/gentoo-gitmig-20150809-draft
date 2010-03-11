@@ -1,0 +1,12 @@
+# ChangeLog for sys-auth/pam-pgsql
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.1 2010/03/11 13:53:10 flameeyes Exp $
+
+*pam-pgsql-0.7_p20100311 (11 Mar 2010)
+
+  11 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pam-pgsql-0.7_p20100311.ebuild, +metadata.xml:
+  Initial import of pam-pgsql, using a snapshot of the current development
+  series from upstream, with a working autotools-based buildsystem. Closes
+  bug #34517.
+
