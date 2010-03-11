@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.4.0_pre20090420.ebuild,v 1.4 2009/12/08 19:33:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.4.0_pre20090420.ebuild,v 1.5 2010/03/11 22:38:06 ssuominen Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="!app-editors/qe
 	X? ( x11-libs/libX11
 		x11-libs/libXext
 		xv? ( x11-libs/libXv ) )
-	png? ( media-libs/libpng:1.2 )"
+	png? ( >=media-libs/libpng-1.2 )"
 
 DEPEND="${RDEPEND}
 	app-text/texi2html"
