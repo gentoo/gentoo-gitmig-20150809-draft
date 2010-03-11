@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.9.ebuild,v 1.2 2009/10/19 10:43:37 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.9.ebuild,v 1.3 2010/03/11 16:06:12 s4t4n Exp $
+
+EAPI="2"
 
 inherit elisp-common eutils pam
 
@@ -19,7 +21,7 @@ IUSE="crypt directfb emacs gpm opensslcrypt pam static X"
 RDEPEND=">=sys-libs/ncurses-5.4-r6
 	opensslcrypt? ( >=dev-libs/openssl-0.9.7e )
 	crypt?        ( >=dev-libs/libgcrypt-1.2.1 )
-	directfb?     ( >=dev-libs/DirectFB-0.9.24 )
+	directfb?     ( >=dev-libs/DirectFB-1.4.2[fbcon,jpeg,png,truetype] )
 	emacs?        ( virtual/emacs )
 	pam?          ( >=sys-libs/pam-0.75-r11 )
 	X?            ( x11-libs/libX11
@@ -34,54 +36,21 @@ RDEPEND="${RDEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
-src_unpack()
-{
-	if use crypt && use opensslcrypt; then
-		echo
-		eerror "You can have openssl or libgcrypt as a crypto library, not both."
-		eerror "Please check your USE flags..."
-		echo
-		die "USE flags check failed"
-	fi
-
-	if use directfb; then
-
-		if ! built_with_use -a dev-libs/DirectFB fbcon jpeg png truetype; then
-			echo
-			eerror "qingy expects DirectFB to provide certain capabilities."
-			eerror "It depends on the theme you use, but at least the following USE flags"
-			eerror "should be enabled in DirectFB: fbcon jpeg png truetype."
-			eerror "You must rebuild DirectFB those USE flags enabled!"
-			echo
-			die "USE flags check failed"
-		fi
-
-		if has_version ">=dev-libs/DirectFB-1.2.6"; then
-			if built_with_use -a dev-libs/DirectFB X; then
-				echo
-				eerror "Detected DirectFB version >= 1.2.6."
-				eerror "For this version of DirectFB to work with qingy"
-				eerror "X USE flag must be disabled."
-				eerror "You must rebuild DirectFB with X USE flag disabled!"
-				echo
-				die "USE flags check failed"
-			fi
-		fi
-
-	fi
-
-	unpack ${A}
-}
-
-src_compile()
+src_configure()
 {
 	local crypto_support="--disable-crypto"
 	local emacs_support="--disable-emacs"
 
+	if use crypt && use opensslcrypt; then
+		echo
+		ewarn "You can have openssl or libgcrypt as a crypto library, not both."
+		ewarn "Using libgcrypt now..."
+		echo
+	fi
+
 	use emacs 		 && emacs_support="--enable-emacs --with-lispdir=${SITELISP}/${PN}"
 	use opensslcrypt && crypto_support="--enable-crypto=openssl"
 	use crypt        && crypto_support="--enable-crypto=libgcrypt"
-
 	econf                                      \
 		--sbindir=/sbin                        \
 		--disable-optimizations                \
@@ -93,7 +62,6 @@ src_compile()
 		${crypto_support}                      \
 		${emacs_support}					   \
 		|| die "Configuration failed"
-	emake || die "Compilation failed"
 }
 
 src_install()
