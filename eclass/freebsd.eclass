@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.14 2009/05/22 15:23:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.15 2010/03/11 17:55:55 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -24,6 +24,7 @@ ETC="freebsd-etc-${PV}"
 SYS="freebsd-sys-${PV}"
 INCLUDE="freebsd-include-${PV}"
 RESCUE="freebsd-rescue-${PV}"
+CDDL="freebsd-cddl-${PV}"
 
 # Release version (5.3, 5.4, 6.0, etc)
 RV="$(get_version_component_range 1-2)"
