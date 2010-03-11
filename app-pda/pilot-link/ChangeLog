@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.53 2010/01/23 09:35:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.54 2010/03/11 13:19:42 ssuominen Exp $
+
+  11 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  pilot-link-0.12.3-r2.ebuild, +files/pilot-link-0.12.3-libpng14.patch:
+  Fix building with libpng14.
 
   23 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   pilot-link-0.12.3-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r2.ebuild,v 1.6 2010/01/23 09:35:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r2.ebuild,v 1.7 2010/03/11 13:19:42 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ BOTH_DEPEND="virtual/libiconv
 	>=dev-libs/popt-1.10.7
 	perl? ( >=dev-lang/perl-5.8.8-r2 )
 	python? ( >=dev-lang/python-2.4.4-r4 )
-	png? ( >=media-libs/libpng-1.2.18-r1 )
+	png? ( >=media-libs/libpng-1.2.40 )
 	readline? ( >=sys-libs/readline-5.2_p4 )
 	usb? ( virtual/libusb:0 )
 	bluetooth? ( || ( >=net-wireless/bluez-libs-3.10 net-wireless/bluez ) )"
@@ -36,7 +36,8 @@ src_prepare() {
 	# Fixing some broken configure switches and automagic deps.
 	epatch "${FILESDIR}/${PN}-0.12.2-readline.patch"
 	epatch "${FILESDIR}/${PN}-0.12.2-threads.patch"
-	epatch "${FILESDIR}/${P}-png.patch"
+	epatch "${FILESDIR}"/${P}-png.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	# Upstream's check for Werror was wrong. Fixes bug 194921.
 	epatch "${FILESDIR}/${PN}-0.12.2-werror_194921.patch"
