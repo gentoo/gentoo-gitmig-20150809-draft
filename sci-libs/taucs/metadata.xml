@@ -8,7 +8,7 @@
   functionality:
 
   * Multifrontal Supernodal Cholesky Factorization.
-  * Left-Looking Supernodal Cholesky Factorization. 
+  * Left-Looking Supernodal Cholesky Factorization.
   * Drop-Tolerance Incomplete-Cholesky Factorization.
   * Out-of-Core, Left-Looking Supernodal Sparse Cholesky Factorization.
   * Out-of-Core Sparse LU with Partial Pivoting Factor and Solve.
@@ -19,12 +19,12 @@
   * Matrix Generators.
   * Iterative Solvers.
   * Vaidya's Preconditioners.
-  * Recursive Vaidya's Preconditioners. 
+  * Recursive Vaidya's Preconditioners.
   * Multilevel-Support-Graph Preconditioners.
   * Utility Routines
 </longdescription>
 <use>
-  <flag name='metis'>Add partioning support using metis
+  <flag name='metis'>Add partitioning support using metis
     (<pkg>sci-libs/metis</pkg>, <pkg>sci-libs/parmetis</pkg>)</flag>
   <flag name='cilk'>Enable multithreading using <pkg>dev-lang/cilk</pkg>)</flag>
 </use>
