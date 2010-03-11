@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfrog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.8 2009/08/16 17:22:38 gentoofan23 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.9 2010/03/11 08:35:49 s4t4n Exp $
+
+  10 Mar 2010; Michele Noberasco <s4t4n@gentoo.org> wmfrog-0.2.0-r1.ebuild:
+  stable x86, bug #280361.
 
   16 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org> wmfrog-0.2.0.ebuild:
   stable amd64, bug 280361
