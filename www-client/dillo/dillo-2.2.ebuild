@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.2 2010/02/12 13:47:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.3 2010/03/11 16:03:08 ssuominen Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/dillo2-inbuf.patch
+	epatch "${FILESDIR}"/dillo2-inbuf.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_configure() {
