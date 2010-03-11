@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.327 2010/03/09 20:49:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.328 2010/03/11 16:29:12 halcy0n Exp $
+
+  11 Mar 2010; Mark Loeser <halcy0n@gentoo.org> +eix-0.17.0.ebuild:
+  Add back as the stable version of app-admin/puppet depends upon it
 
 *eix-0.20.2 (09 Mar 2010)
 
