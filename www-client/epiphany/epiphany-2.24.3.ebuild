@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.24.3.ebuild,v 1.6 2009/04/12 20:34:25 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.24.3.ebuild,v 1.7 2010/03/11 00:17:56 eva Exp $
 
 inherit gnome2 eutils multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~x86-fbsd"
 IUSE="avahi doc networkmanager python spell xulrunner"
 
 RDEPEND=">=dev-libs/glib-2.18.0

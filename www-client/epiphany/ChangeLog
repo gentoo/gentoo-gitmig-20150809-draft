@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.227 2010/03/07 12:54:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.228 2010/03/11 00:17:56 eva Exp $
+
+  11 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  epiphany-2.24.3.ebuild, -epiphany-2.24.3-r10.ebuild,
+  -epiphany-2.26.3.ebuild, -epiphany-2.28.1.ebuild, epiphany-2.28.2.ebuild:
+  Clean up old revisions. Make sure libsoup-gnome is in RDEPEND, bug
+  #305423.
 
   07 Mar 2010; Pacho Ramos <pacho@gentoo.org> epiphany-2.26.3-r3.ebuild:
   amd64 stable, bug 308089
