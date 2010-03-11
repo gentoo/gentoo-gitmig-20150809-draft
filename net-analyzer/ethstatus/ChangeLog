@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethstatus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.8 2008/11/24 09:55:13 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.9 2010/03/11 14:07:28 s4t4n Exp $
+
+  11 Mar 2010; Michele Noberasco <s4t4n@gentoo.org> ChangeLog:
+  Made package honour user LDFLAGS, see bug #290840.
 
   24 Nov 2008; Michele Noberasco <s4t4n@gentoo.org> ChangeLog:
   Fixed LDFLAGS ordering, see bug #247926.
