@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.0.ebuild,v 1.1 2010/01/18 15:33:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1.ebuild,v 1.1 2010/03/11 10:31:15 scarabeus Exp $
 
 EAPI=2
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.org/"
@@ -48,5 +48,7 @@ src_configure() {
 			mycmakeargs="${mycmakeargs} $(cmake-utils_use_disable ${x/+/})"
 		fi
 	done
+	mycmakeargs="${mycmakeargs} -DLIBDIR=$(get_libdir)"
+
 	cmake-utils_src_configure
 }
