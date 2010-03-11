@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>kde</herd>
 <use>
-	<flag name="mjpeg">Add mjpeg suppport</flag>
-	<flag name="redeyes">Add redeyes removal suppport</flag>
+	<flag name="mjpeg">Add mjpeg support</flag>
+	<flag name="redeyes">Add redeyes removal support</flag>
 </use>
 </pkgmetadata>
