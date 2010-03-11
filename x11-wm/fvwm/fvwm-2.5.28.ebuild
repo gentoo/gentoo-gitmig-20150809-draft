@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.28.ebuild,v 1.7 2009/12/31 16:11:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.28.ebuild,v 1.8 2010/03/11 00:03:11 ssuominen Exp $
 
 EAPI=2
 
@@ -67,6 +67,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+
 	if ! use vanilla; then
 		# Enables fast translucent menus; patch from fvwm-user mailing list.
 		epatch "${FILESDIR}/${PN}-2.5.27-translucent-menus.diff"
