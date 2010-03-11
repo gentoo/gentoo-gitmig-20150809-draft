@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.15 2010/03/07 22:20:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.16 2010/03/11 14:36:06 josejx Exp $
+
+  11 Mar 2010; Joseph Jezak <josejx@gentoo.org> goocanvas-0.14.ebuild:
+  Marked ~ppc64.
 
   07 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -goocanvas-0.10.ebuild, -goocanvas-0.13.ebuild, metadata.xml:
