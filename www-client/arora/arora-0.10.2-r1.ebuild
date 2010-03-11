@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.10.2-r1.ebuild,v 1.5 2010/03/03 12:13:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.10.2-r1.ebuild,v 1.6 2010/03/11 18:21:57 hwoarang Exp $
 
 EAPI=2
 inherit eutils qt4-r2
@@ -11,7 +11,7 @@ SRC_URI="http://arora.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( GPL-3 GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="debug doc"
 
 RDEPEND="x11-libs/qt-gui:4
