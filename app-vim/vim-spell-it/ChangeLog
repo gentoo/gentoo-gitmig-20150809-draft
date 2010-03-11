@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-it
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-it/ChangeLog,v 1.1 2010/03/11 23:42:41 spatz Exp $
+
+*vim-spell-it-20100312 (11 Mar 2010)
+
+  11 Mar 2010; Dror Levin <spatz@gentoo.org> +vim-spell-it-20100312.ebuild,
+  +metadata.xml:
+  Initial import, bug 168381.
+
