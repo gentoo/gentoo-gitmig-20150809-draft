@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>sci-chemistry</herd>
 <use>
-        <flag name='opal'>Add web interafce via opal</flag>
+        <flag name='opal'>Add web interface via opal</flag>
 </use>
 </pkgmetadata>
