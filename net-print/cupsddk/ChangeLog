@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cupsddk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/ChangeLog,v 1.7 2008/08/12 15:35:59 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/ChangeLog,v 1.8 2010/03/11 21:12:31 sping Exp $
+
+  11 Mar 2010; Sebastian Pipping <sping@gentoo.org> cupsddk-1.2.3.ebuild:
+  Fix homepage, improve description (bug #307969)
 
   12 Aug 2008; Brent Baude <ranger@gentoo.org> cupsddk-1.2.3.ebuild:
   Marking cupsddk ppc stable.  Skipping normal 30 day wait due to security 
