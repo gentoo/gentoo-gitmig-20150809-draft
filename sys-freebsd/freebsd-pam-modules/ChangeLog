@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-pam-modules
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.24 2009/05/22 13:38:33 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.25 2010/03/11 11:31:46 aballier Exp $
+
+  11 Mar 2010; Alexis Ballier <aballier@gentoo.org> -files/5.4/README.pamd,
+  -files/5.4/convert.pl, -files/5.4/pam.d/other, -files/5.4/pam.d/system,
+  -files/5.4/pam.d/system-auth, -freebsd-pam-modules-6.2-r1.ebuild,
+  -freebsd-pam-modules-7.1.ebuild:
+  remove old
 
 *freebsd-pam-modules-7.2 (22 May 2009)
 
