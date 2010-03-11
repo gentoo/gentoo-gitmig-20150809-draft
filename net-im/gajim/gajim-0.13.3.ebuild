@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.3.ebuild,v 1.4 2010/03/07 20:37:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.3.ebuild,v 1.5 2010/03/11 21:28:18 maekke Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome idle libnotify nls spell srv trayicon X xhtml"
 
 COMMON_DEPEND=">=dev-python/pygtk-2.12.0"
