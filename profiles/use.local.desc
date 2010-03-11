@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5382 2010/03/11 22:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5383 2010/03/11 22:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1930,9 +1930,9 @@ media-video/dv2sub:kino - install kino plugin
 media-video/dvd-slideshow:themes - Install theme pack
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
-media-video/ffmpeg:3dnowext -  Enable manually-optimised routines using the AMD 3DNow!Ex SIMD instruction set, present in modern AMD CPUs. (Check for 3dnowext in /proc/cpuinfo to know whehter you support it). 
+media-video/ffmpeg:3dnowext -  Enable manually-optimised routines using the AMD 3DNow!Ex SIMD instruction set, present in modern AMD CPUs. (Check for 3dnowext in /proc/cpuinfo to know whether your CPU supports it). 
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
-media-video/ffmpeg:cpudetection - Enables runtime cpudetection (useful for bindist, compatability on other CPUs)
+media-video/ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
 media-video/ffmpeg:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/ffmpeg:faac - Use external faac library for AAC encoding
 media-video/ffmpeg:faad - Use external faad library for AAC decoding (instead of internal libavcodec support)
@@ -1960,7 +1960,7 @@ media-video/mplayer:ass - Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subti
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mplayer:cdio - Use libcdio for CD support (instead of cdparanoia)
-media-video/mplayer:cpudetection - Enables runtime cpudetection (useful for bindist, compatability on other CPUs)
+media-video/mplayer:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
 media-video/mplayer:custom-cpuopts - Fine-tune custom CPU optimizations (UNSUPPORTED)
 media-video/mplayer:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/mplayer:dvdnav - Use forked libdvdnav, navigate menus in GUIs
@@ -2146,7 +2146,7 @@ net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
 net-analyzer/nagios-plugins:ups - installs deps for monitoring Network-UPS (sys-power/nut)
 net-analyzer/nagvis:automap - Enable automated map generation using media-gfx/graphviz
 net-analyzer/net-snmp:diskio - Enable the use of diskio mibs
-net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some sytems
+net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some systems
 net-analyzer/net-snmp:extensible - build deprecated extensible mib module (extend is successor)
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
 net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
