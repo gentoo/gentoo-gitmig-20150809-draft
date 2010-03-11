@@ -15,7 +15,7 @@
 			external programs
 		</flag>
 		<flag name='gtkhtml'>
-			Uses the gtkhtml rendering engine for item rendering.  Depricated,
+			Uses the gtkhtml rendering engine for item rendering.  Deprecated,
 			and broken on amd64.
 		</flag>
 		<flag name='gnutls'>
