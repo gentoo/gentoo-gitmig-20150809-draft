@@ -13,7 +13,7 @@
       binutils.
     </flag>
     <flag name="doc">
-      Build documentation and man pages. With thise USE flag disabled,
+      Build documentation and man pages. With this USE flag disabled,
       the --help parameter for perf and its sub-tools will not be
       available. This is optional because it depends on a few
       documentation handling tools that are not always welcome on user
