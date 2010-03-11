@@ -1,24 +1,23 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r1.ebuild,v 1.4 2010/03/11 15:30:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r2.ebuild,v 1.1 2010/03/11 15:30:44 voyageur Exp $
 
 EAPI=2
 
-inherit cmake-utils nsplugins
+inherit cmake-utils
 
-DESCRIPTION="Panorama viewer and browser plugin (Quicktime, PangeaVR, GLPanoView)"
+DESCRIPTION="Panorama viewer (Quicktime, PangeaVR, GLPanoView formats)"
 HOMEPAGE="http://freepv.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freepv/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2
 	media-libs/jpeg
 	media-libs/libpng
-	=net-libs/xulrunner-1.9.1*
 	virtual/glut
 	sys-libs/zlib
 	x11-libs/libXmu
@@ -26,19 +25,10 @@ DEPEND="dev-libs/libxml2
 	x11-libs/libXxf86vm"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P/_beta?/}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
-	epatch "${FILESDIR}"/${P}-xulrunner-1.9.1.patch
+	epatch "${FILESDIR}"/${P}-noplugin.patch
 	sed -i \
 		-e 's:jpeg_mem_src:freepv_jpeg_mem_src:g' \
 		src/libfreepv/JpegReader.cpp || die
-}
-
-src_install() {
-	cmake-utils_src_install
-
-	# Remove plugin and install it in the correct place
-	src_mv_plugins /usr/$(get_libdir)/mozilla/plugins
 }
