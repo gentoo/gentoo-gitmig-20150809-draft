@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.26.2.ebuild,v 1.4 2010/03/09 00:05:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.26.2.ebuild,v 1.5 2010/03/11 21:04:43 pacho Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="test"
 
 # FIXME: possibly automagic dual slot dep on musicbrainz
