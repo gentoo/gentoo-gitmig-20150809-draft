@@ -5,6 +5,6 @@
 <longdescription>A system-independent library for user-level network packet capture</longdescription>
 <use>
 	<flag name='libnl'>link with <pkg>dev-libs/libnl</pkg> (used to put wireless
-	interfaces in monitore mode)</flag>
+	interfaces in monitor mode)</flag>
 </use>
 </pkgmetadata>
