@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5380 2010/03/11 21:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5381 2010/03/11 21:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1645,7 +1645,7 @@ media-libs/taglib:asf - Provide support for Microsoft's 'advanced systems format
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264:pic - disable optimized assembly code that is not PIC friendly
-media-libs/xine-lib:dxr3 -  Enable support for DXR3 mpeg accelleration cards. 
+media-libs/xine-lib:dxr3 -  Enable support for DXR3 mpeg acceleration cards. 
 media-libs/xine-lib:flac -  Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates. 
 media-libs/xine-lib:gnome -  Build the gnome-base/gnome-vfs based input plugin. This plugin is used to access any resource that can be accessed through Nautilus's (and others') URLs. 
 media-libs/xine-lib:gtk -  Build the gdkpixbuf-based image decoder plugin. 
@@ -1675,8 +1675,8 @@ media-plugins/frei0r-plugins:facedetect - Enables building of facedetect plugin,
 media-plugins/frei0r-plugins:scale0tilt - Enables building of scale0tilt and vectorscope plugins, which depend on media-libs/gavl 
 media-plugins/gkrellmpc:threads - Use separate thread to init connection (unsafe)
 media-plugins/gst-plugins-meta:mythtv - Support for retrieval from media-tv/mythtv backend
-media-plugins/kipi-plugins:mjpeg - Add mjpeg suppport
-media-plugins/kipi-plugins:redeyes - Add redeyes removal suppport
+media-plugins/kipi-plugins:mjpeg - Add mjpeg support
+media-plugins/kipi-plugins:redeyes - Add redeyes removal support
 media-plugins/mythmusic:libvisual - Enables media-libs/libvisual support for effects
 media-plugins/mythphone:festival - Enable app-accessibility/festival support
 media-plugins/mythvideo:jamu - Use and configure the Just Another Metadata Utility by default
@@ -1720,7 +1720,7 @@ media-sound/aqualung:systray - Enable system tray support
 media-sound/ardour:freesound - Enables direct searching and download of samples from Freesound via the Import dialog
 media-sound/ardour:lv2 - Add support for Ladspa V2
 media-sound/ario:audioscrobbler - Enable song tracking via last.fm
-media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwith and cpu usage, requires MPD 0.14
+media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/audacious:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:midi - Enables MIDI support
