@@ -1,7 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.16 2010/02/10 01:04:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.17 2010/03/11 19:59:34 zmedico Exp $
 
+# EAPI 1 since python-2.5 is also EAPI 1.
+EAPI=1
 inherit eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"

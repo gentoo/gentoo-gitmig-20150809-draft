@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.690 2010/03/10 20:57:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.691 2010/03/11 19:59:34 zmedico Exp $
+
+  11 Mar 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.6.13.ebuild:
+  Make portage-2.1.6.13 EAPI 1 since python-2.5 is also EAPI 1.
 
   10 Mar 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.7.16.ebuild,
   -portage-2.1.8.2.ebuild, -portage-2.2_rc66.ebuild:
