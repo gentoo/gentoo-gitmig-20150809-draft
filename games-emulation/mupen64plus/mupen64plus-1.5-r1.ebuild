@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.7 2010/01/11 13:08:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.8 2010/03/11 15:30:44 ssuominen Exp $
 
 EAPI="2"
 
@@ -52,6 +52,8 @@ pkg_setup() {
 src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
 		epatch
+
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 
 	sed -i \
 		-e "s:/usr/local/share/mupen64plus:${GAMES_DATADIR}/mupen64plus:" \
