@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/diablo-jre-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/ChangeLog,v 1.6 2008/10/15 13:36:46 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/ChangeLog,v 1.7 2010/03/11 10:43:33 aballier Exp $
+
+  11 Mar 2010; Alexis Ballier <aballier@gentoo.org>
+  -diablo-jre-bin-1.5.0.07.01.ebuild, -files/diablo-jre-bin-1.5.env:
+  remove old
 
   15 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   files/diablo-jre-bin-1.5.env:
