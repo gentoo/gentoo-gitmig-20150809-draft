@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.19.4.ebuild,v 1.6 2010/02/11 17:08:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.20.0.ebuild,v 1.1 2010/03/11 18:01:15 spatz Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -15,16 +15,12 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-#IUSE="ssl ipv6 ldap ares gnutls nss idn kerberos test"
-IUSE="ssl ipv6 ldap ares gnutls libssh2 nss idn kerberos test"
-
-# TODO - change to openssl USE flag in the not too distant future
-# https://bugs.gentoo.org/show_bug.cgi?id=207653#c3 (April 2008)
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="openssl ipv6 ldap ares gnutls libssh2 nss idn kerberos test"
 
 RDEPEND="gnutls? ( net-libs/gnutls app-misc/ca-certificates )
 	nss? ( !gnutls? ( dev-libs/nss app-misc/ca-certificates ) )
-	ssl? ( !gnutls? ( !nss? ( dev-libs/openssl app-misc/ca-certificates ) ) )
+	openssl? ( !gnutls? ( !nss? ( dev-libs/openssl app-misc/ca-certificates ) ) )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/libidn )
 	ares? ( >=net-dns/c-ares-1.4.0 )
@@ -40,12 +36,12 @@ DEPEND="${RDEPEND}
 		dev-lang/perl
 	)"
 # used - but can do without in self test: net-misc/stunnel
-#S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/curl-7.17.0-strip-ldflags.patch
+	epatch "${FILESDIR}"/${P}-strip-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-7.19.7-test241.patch
 }
 
 src_compile() {
@@ -56,6 +52,7 @@ src_compile() {
 		$(use_with kerberos gssapi /usr)
 		$(use_with libssh2)
 		$(use_enable ipv6)
+		$(use_enable ares)
 		--enable-http
 		--enable-ftp
 		--enable-gopher
@@ -63,6 +60,10 @@ src_compile() {
 		--enable-dict
 		--enable-manual
 		--enable-telnet
+		--enable-smtp
+		--enable-pop3
+		--enable-imap
+		--enable-rtsp
 		--enable-nonblocking
 		--enable-largefile
 		--enable-maintainer-mode
@@ -70,20 +71,13 @@ src_compile() {
 		--without-krb4
 		--without-spnego"
 
-	if use ipv6 && use ares; then
-		elog "c-ares support disabled because it is incompatible with ipv6."
-		myconf="${myconf} --disable-ares"
-	else
-		myconf="${myconf} $(use_enable ares)"
-	fi
-
 	if use gnutls; then
 		myconf="${myconf} --without-ssl --with-gnutls --without-nss"
 		myconf="${myconf} --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
 	elif use nss; then
 		myconf="${myconf} --without-ssl --without-gnutls --with-nss"
 		myconf="${myconf} --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
-	elif use ssl; then
+	elif use openssl; then
 		myconf="${myconf} --without-gnutls --without-nss --with-ssl"
 		myconf="${myconf} --without-ca-bundle --with-ca-path=/etc/ssl/certs"
 	else
