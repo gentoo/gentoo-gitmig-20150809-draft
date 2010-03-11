@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/openarena
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.12 2010/03/10 09:54:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.13 2010/03/11 11:21:33 tupone Exp $
+
+  11 Mar 2010; Tupone Alfredo <tupone@gentoo.org>
+  files/openarena-0.8.1-makefile.patch:
+  Fix usage of vm for amd64 arch. Bug #255453 by Zeev Tarantov
 
   10 Mar 2010; Tupone Alfredo <tupone@gentoo.org> openarena-0.8.1-r1.ebuild,
   +files/openarena-0.8.1-unbundling.patch,
