@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5379 2010/03/11 21:08:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5380 2010/03/11 21:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1416,7 +1416,7 @@ mail-filter/dovecot-antispam:crm114 - Build CRM114 backend
 mail-filter/dovecot-antispam:dspam - Build mail-filter/dspam backend
 mail-filter/dovecot-antispam:mailtrain - Build mailtrain backend
 mail-filter/dovecot-antispam:signature-log - Build signature-log backend
-mail-filter/dovecot-antispam:spool2dir - Build spoll directory backend
+mail-filter/dovecot-antispam:spool2dir - Build spool directory backend
 mail-filter/dspam:daemon -  Enable support for DSPAM to run in --daemon mode 
 mail-filter/dspam:debug -  Enable debugging support (don't enable this unless something needs testing!) 
 mail-filter/dspam:debug-bnr -  Activates debugging output for Bayesian Noise Reduction 
@@ -1433,9 +1433,9 @@ mail-filter/opendkim:diffheaders - On verification failure, compare the original
 mail-filter/opendkim:ldap - Enable openldap as a dataset facilitator or keys, determining domains to sign for, and any other dataset that opendkim supports.
 mail-filter/opendkim:lua - Enables control over signature verification, filtering and policy to be controlled by user defined lua scripts.
 mail-filter/opendkim:multiplesigs - Allow addition of multiple signatures when key lists are in use.
-mail-filter/opendkim:opendbx - Use opendbx backend to faciliate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of databse types
+mail-filter/opendkim:opendbx - Use opendbx backend to facilitate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of database types
 mail-filter/opendkim:sasl - Used to authenticate to a LDAP server in various ways if required.
-mail-filter/opendkim:unbound - Use the unbound dnssec libary to perform DKIM DNS queries.
+mail-filter/opendkim:unbound - Use the unbound dnssec library to perform DKIM DNS queries.
 mail-filter/postgrey:targrey - Enables the targrey patch
 mail-filter/qmail-scanner:spamassassin - Build faster mail-filter/spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -1484,7 +1484,7 @@ media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-
 media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:bolddiag - Boldified diagonal parts of '4', 'k', 'x' and some other chars
-media-fonts/terminus-font:pcf - Intall Portable Compiled Font (PCF) (required for X11)
+media-fonts/terminus-font:pcf - Install Portable Compiled Font (PCF) (required for X11)
 media-fonts/terminus-font:psf - Install PC Screen Font (PSF) with unicode data (for linux console)
 media-fonts/terminus-font:quote - Changes view of quotes: symmetric ` and ' instead of asymmetric one (see homepage)
 media-fonts/terminus-font:raw-font-data - Install RAW font data which should be compatible with most UNIX systems (you don't need this on linux)
