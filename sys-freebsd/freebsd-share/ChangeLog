@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.34 2010/01/07 13:06:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.35 2010/03/11 11:00:43 aballier Exp $
+
+  11 Mar 2010; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-share-6.2.ebuild, -freebsd-share-7.1.ebuild,
+  -freebsd-share-7.2.ebuild:
+  remove old
 
 *freebsd-share-7.2-r1 (07 Jan 2010)
 
