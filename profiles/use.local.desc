@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5378 2010/03/11 20:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5379 2010/03/11 21:08:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1262,7 +1262,7 @@ kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via ap
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-base/kalzium:solver - Enable the equation solver
 kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot loader
-kde-base/kdeartwork-kscreensaver:eigen - Enable various aritmethic screensavers which use Eigen2 for computations.
+kde-base/kdeartwork-kscreensaver:eigen - Enable various arithmetic screensavers which use Eigen2 for computations.
 kde-base/kdebase-kioslaves:lzma - Enable LZMA/XZ archive support
 kde-base/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-base/kdebindings-csharp:akonadi - Compile bindings for kde-base/akonadi.
@@ -1290,7 +1290,7 @@ kde-base/kdeutils-meta:floppy - Install kde-base/kfloppy to format and create DO
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmail:ayatana - Build in support for Ayatana notification via dev-libs/libindicate-qt
-kde-base/konqueror:auth -  Add dependency on authentization packages. 
+kde-base/konqueror:auth -  Add dependency on authentication packages. 
 kde-base/konqueror:bookmarks -  Add dependency on bookmark package. 
 kde-base/konqueror:thumbnail -  Enables video thumbnails generation for kde-base/konqueror file manager. 
 kde-base/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
@@ -1331,7 +1331,7 @@ kde-base/kttsd:freetts - Build a plugin for app-accessibility/freetts
 kde-base/kttsd:mbrola - Build a plugin for app-accessibility/mbrola
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
-kde-base/okular:ebook - Add E-Book suppport
+kde-base/okular:ebook - Add E-Book support
 kde-base/okular:ps - Add PostScript support
 kde-base/plasma-workspace:google-gadgets - Add google-gadgets support
 kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-base/kdepimlibs)
@@ -1353,7 +1353,7 @@ kde-misc/kdiff3:konqueror - Enable integration with konqueror
 kde-misc/knetworkmanager:consolekit - Enable support for sys-auth/consolekit
 kde-misc/knetworkmanager:wicd - Enable the wicd backend
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
-mail-client/alpine:chappa - enhance alpine by appling Eduardo Chappa's patches
+mail-client/alpine:chappa - enhance alpine by applying Eduardo Chappa's patches
 mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with app-editors/pico and/or mail-client/pine
 mail-client/alpine:passfile - Adds support for caching passwords into a file between sessions
 mail-client/alpine:smime - Enable support for S/MIME
