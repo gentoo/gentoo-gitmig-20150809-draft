@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.10 2008/06/11 06:55:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/gaia-0.1.2.ebuild,v 1.11 2010/03/11 12:35:25 ssuominen Exp $
 
 inherit eutils
 
@@ -8,11 +8,10 @@ DESCRIPTION="Opensource 3D interface to the planet, based on NASA World Wind dat
 HOMEPAGE="http://sourceforge.net/projects/gaia-clean"
 SRC_URI="mirror://sourceforge/gaia-clean/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-
-IUSE="gps doc"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="gps doc"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -20,7 +19,6 @@ RDEPEND="media-libs/jpeg
 	net-misc/curl
 	virtual/opengl
 	gps? ( sci-geosciences/gpsd )"
-
 DEPEND="${RDEPEND}
 	dev-util/scons
 	doc? ( app-doc/doxygen )"
@@ -28,9 +26,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-scons-0.98.patch"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
-	epatch "${FILESDIR}/${P}-curl-7.18.patch"
+	epatch "${FILESDIR}"/${P}-scons-0.98.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-curl-7.18.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	# the binary would fail with a wrong hard coded path for font.png
 	cd "${S}/programs/gaia/"
