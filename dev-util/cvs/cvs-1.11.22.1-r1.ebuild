@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.22.1-r1.ebuild,v 1.3 2010/02/25 08:16:36 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.22.1-r1.ebuild,v 1.4 2010/03/11 10:32:40 haubi Exp $
 
 EAPI=3
+
+inherit eutils
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.cvshome.org/"
@@ -23,6 +25,10 @@ src_unpack() {
 	# remove a useless binary
 	einfo "Removing a compiled binary"
 	find "${S}" -type f -name getdate -exec rm \{\} \;
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-hash-nameclash.patch # for AIX
 }
 
 src_configure() {

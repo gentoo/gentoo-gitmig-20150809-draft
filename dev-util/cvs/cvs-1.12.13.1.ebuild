@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.1.ebuild,v 1.6 2010/02/21 03:06:44 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.13.1.ebuild,v 1.7 2010/03/11 10:32:40 haubi Exp $
 
 EAPI=3
 
@@ -41,6 +41,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.12.12-cvsbug-tmpfix.patch
 	epatch "${FILESDIR}"/${PN}-1.12.12-install-sh.patch
 	epatch "${FILESDIR}"/${PN}-1.12.13.1-block-requests.patch
+	epatch "${FILESDIR}"/${PN}-1.12.13.1-hash-nameclash.patch # for AIX
+	epatch "${FILESDIR}"/${PN}-1.12.13.1-gl-mempcpy.patch # for AIX
 	# Applied by upstream:
 	#epatch "${FILESDIR}"/${PN}-1.12.13-openat.patch
 	#epatch "${FILESDIR}"/${PN}-1.12.13-zlib.patch
