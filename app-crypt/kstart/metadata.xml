@@ -12,8 +12,8 @@
   </maintainer>
   <use>
     <flag name="afs">
-      Enables afs support which means you can aquire an afs token and
-      set PAGs. It's recommend to set this USE if you need
+      Enables afs support which means you can acquire an afs token and
+      set PAGs. It's recommended to set this USE if you need
       authenticated access to an AFS cell for your daemon/app.
     </flag>
   </use>
