@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9.ebuild,v 1.2 2010/03/07 22:32:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9.ebuild,v 1.3 2010/03/11 19:32:40 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://jedi.ks.uiuc.edu/~johns/raytracer/files/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples jpeg mpi opengl png threads"
 
 CDEPEND="jpeg? ( media-libs/jpeg )
