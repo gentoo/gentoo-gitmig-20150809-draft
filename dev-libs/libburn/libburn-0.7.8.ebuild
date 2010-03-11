@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.7.4.ebuild,v 1.1 2009/12/09 19:27:38 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.7.8.ebuild,v 1.1 2010/03/11 18:54:12 billie Exp $
 
 EAPI=2
 
@@ -16,8 +16,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="track-src-odirect"
+#IUSE="cdio track-src-odirect"
+#Supports libcdio but needs version >=0.83 which is not yet released.
 
 RDEPEND=""
+#RDEPEND="cdio? ( >=dev-libs/libcdio-0.83 )"
 DEPEND="dev-util/pkgconfig"
 
 S=${WORKDIR}/${P%_p*}
@@ -25,7 +28,9 @@ S=${WORKDIR}/${P%_p*}
 src_configure() {
 	econf --disable-static \
 	--disable-dvd-obs-64k \
+	--disable-libcdio \
 	$(use_enable track-src-odirect)
+#	$(use_enable cdio libcdio) \
 }
 
 src_install() {
