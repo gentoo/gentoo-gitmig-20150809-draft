@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5384 2010/03/11 22:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5385 2010/03/11 23:07:58 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2953,7 +2953,7 @@ sci-libs/gdal:hdf - Add support for the Hierarchical Data Format v. 4 (sci-libs/
 sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface (sci-libs/ogdi)
 sci-libs/gerris:dx - Enable support for sci-visualization/opendx
 sci-libs/gsl:cblas - Link gsl with external cblas provided by (virtual/cblas)
-sci-libs/hdf5:f90 - Override Fortran for externel compilers
+sci-libs/hdf5:f90 - Override Fortran for external compilers
 sci-libs/hdf5:hlapi - Enable support for high-level library
 sci-libs/hdf5:tools - Install support and test tools
 sci-libs/indilib:fits - Enable support for the FITS image format through cfitsio
@@ -2977,7 +2977,7 @@ sci-libs/spqr:metis - Use METIS (sci-libs/metis or sci-libs/parmetis) for partit
 sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block (needs dev-cpp/tbb)
 sci-libs/suitesparse:metis -  Use METIS (sci-libs/metis or sci-libs/parmetis) for partitioning 
 sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk)
-sci-libs/taucs:metis - Add partioning support using metis (sci-libs/metis, sci-libs/parmetis)
+sci-libs/taucs:metis - Add partitioning support using metis (sci-libs/metis, sci-libs/parmetis)
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:patented - Build patented classes
@@ -3033,7 +3033,7 @@ sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
 sci-physics/lhapdf:octave - Add bindings for sci-mathematics/octave
 sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
-sci-physics/root:cern - Build the HBOOK input/ouput functionality, needs fortran or sci-physics/cernlib
+sci-physics/root:cern - Build the HBOOK input/output functionality, needs fortran or sci-physics/cernlib
 sci-physics/root:cint7 - Build the *experimental* new C++ interpretor CINT7
 sci-physics/root:clarens -  Buld the Clarens and PEAC plug-ins, to use in a GRID enabled analysis.
 sci-physics/root:geant4 - Build the sci-physics/geant (GEANT4) navigator
@@ -3260,7 +3260,7 @@ sys-kernel/dracut:md - Add support for MD devices, also known as software raid d
 sys-kernel/dracut:nbd - Add support for network block devices
 sys-kernel/dracut:nfs - Add support for NFS
 sys-kernel/gentoo-sources:ultra1 - Enable if you have a SUN Ultra 1 with a HME interface
-sys-kernel/linux-docs:html - Install HTML documenation
+sys-kernel/linux-docs:html - Install HTML documentation
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:impactdebug - Enables use of the Impact Early Console Hack. FOR DEBUGGING ONLY!
 sys-kernel/mips-sources:ip27 - Enables support for SGI Origin (IP27)
