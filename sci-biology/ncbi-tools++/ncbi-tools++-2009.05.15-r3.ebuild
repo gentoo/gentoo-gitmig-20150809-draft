@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r2.ebuild,v 1.2 2010/03/07 09:19:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r3.ebuild,v 1.1 2010/03/11 20:49:57 weaver Exp $
 
 EAPI="3"
 
@@ -52,6 +52,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# required with gcc-4.4 and code turned on by --with-mt
+	export CPPFLAGS="${CPPFLAGS} -fpermissive"
+
 	# econf fails
 	# --with-bin-release and --without-ftds are workarounds for build system bugs
 	# NB: build system supports ICC
@@ -66,9 +69,8 @@ src_configure() {
 		--with-bz2="${EPREFIX}/usr" \
 		--with-pcre="${EPREFIX}/usr" \
 		--with-openssl="${EPREFIX}/usr" \
+		--with-mt \
 		|| die
-
-#		--with-mt \ # fails with gcc-4.4 but not 4.3
 
 # apparently gbench-only configs
 #		--with-boost="/usr" \
