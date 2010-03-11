@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.36.0.ebuild,v 1.1 2010/03/10 20:50:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.36.0.ebuild,v 1.2 2010/03/11 13:09:12 flameeyes Exp $
 
 EAPI="2"
 
@@ -38,6 +38,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+
+	# bug #308937
+	epatch "${FILESDIR}"/${P}-r681.patch
 }
 
 src_configure() {
