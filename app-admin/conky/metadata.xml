@@ -27,7 +27,7 @@
 		<flag name='ipv6'>disable support for tcp (ip4) port monitoring</flag>
 		<flag name='iostats'>enable support for per-task I/O statistics</flag>
 		<flag name='lua'>enable if you want Lua scripting support</flag>
-		<flag name='lua-cairo'>enable if you want Lua Cairo bindings for Conky (also anables lua support)</flag>
+		<flag name='lua-cairo'>enable if you want Lua Cairo bindings for Conky (also enables lua support)</flag>
 		<flag name='lua-imlib'>enable if you want Lua Imlib2 bindings for Conky (also enables lua and imlib support)</flag>
 		<flag name='math'>enable support for glibc's libm math library</flag>
 		<flag name='moc'>enable monitoring of music played by <pkg>media-sound/moc</pkg></flag>
