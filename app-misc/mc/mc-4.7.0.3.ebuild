@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.3.ebuild,v 1.3 2010/03/10 14:47:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.3.ebuild,v 1.4 2010/03/11 12:15:55 phajdan.jr Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="+edit gpm nls samba slang X"
 
 RDEPEND=">=dev-libs/glib-2.8:2
