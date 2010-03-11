@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.6.ebuild,v 1.1 2010/02/18 19:58:12 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.6.1.ebuild,v 1.1 2010/03/11 22:32:46 fuzzyray Exp $
 
 EAPI=2
 

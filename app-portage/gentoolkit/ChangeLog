@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.181 2010/03/01 20:12:56 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.182 2010/03/11 22:32:46 fuzzyray Exp $
+
+*gentoolkit-0.2.4.6.1 (11 Mar 2010)
+
+  11 Mar 2010; Paul Varner <fuzzyray@gentoo.org> -gentoolkit-0.2.4.6.ebuild,
+  -gentoolkit-0.2.4.6-r1.ebuild, +gentoolkit-0.2.4.6.1.ebuild,
+  -files/revdep-rebuild.143498.patch:
+  Version bump to backport lastest epkginfo to fix bug 308929. Remove older
+  gentoolkit-0.2.4.6 releases.
+  Bug 305793 tracks fixes to the gentoolkit-0.2.4.6 release.
 
   01 Mar 2010; Paul Varner <fuzzyray@gentoo.org>
   files/revdep-rebuild.143498.patch:
