@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.6.ebuild,v 1.1 2010/03/10 20:40:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.6.ebuild,v 1.2 2010/03/11 12:27:06 flameeyes Exp $
 
 EAPI=2
 
@@ -14,9 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+# gstreamer 0.10.25 is needed for per-stream volume
+# see bug #308935
 RDEPEND="
-	>=media-libs/gstreamer-0.10.24
-	>=media-libs/gst-plugins-base-0.10.24
+	>=media-libs/gstreamer-0.10.25
+	>=media-libs/gst-plugins-base-0.10.25
 	>=dev-cpp/glibmm-2.21.1
 	>=dev-cpp/libxmlpp-2.14
 	>=dev-libs/libsigc++-2.0"
