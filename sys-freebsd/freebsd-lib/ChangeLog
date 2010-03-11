@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.80 2010/01/10 23:01:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.81 2010/03/11 11:49:03 aballier Exp $
+
+  11 Mar 2010; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-7.2.ebuild:
+  remove old
 
 *freebsd-lib-7.2-r1 (10 Jan 2010)
 
