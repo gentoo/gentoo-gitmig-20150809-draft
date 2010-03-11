@@ -15,13 +15,13 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 	intervals and bodylengthdb that include berkdb</flag>
 	<flag name='diffheaders'>On verification failure, compare the
 	original and the received headers to look for possible munging</flag>
-	<flag name='unbound'>Use the unbound dnssec libary to perform DKIM DNS
+	<flag name='unbound'>Use the unbound dnssec library to perform DKIM DNS
 	queries.</flag>
 	<flag name='multiplesigs'>Allow addition of multiple signatures when key
 	lists are in use.</flag>
-	<flag name='opendbx'>Use opendbx backend to faciliate dataset driven
+	<flag name='opendbx'>Use opendbx backend to facilitate dataset driven
 	OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide
-	variety of databse types</flag>
+	variety of database types</flag>
 	<flag name='sasl'>Used to authenticate to a LDAP server in various ways if
 	required.</flag>
 	<flag name='ldap'>Enable openldap as a dataset facilitator or keys,
