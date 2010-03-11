@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-ParseXS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ChangeLog,v 1.21 2010/03/10 14:57:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ChangeLog,v 1.22 2010/03/11 20:32:50 maekke Exp $
+
+  11 Mar 2010; Markus Meier <maekke@gentoo.org>
+  ExtUtils-ParseXS-2.22.03.ebuild:
+  amd64/x86 stable, bug #307243
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
   ExtUtils-ParseXS-2.22.03.ebuild:
