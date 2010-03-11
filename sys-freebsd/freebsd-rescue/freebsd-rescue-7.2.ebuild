@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-7.2.ebuild,v 1.1 2009/05/22 13:40:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-7.2.ebuild,v 1.2 2010/03/11 11:09:04 aballier Exp $
+
+EAPI=2
 
 inherit bsdmk freebsd
 
@@ -23,6 +25,7 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 
 RDEPEND=""
 DEPEND="sys-devel/flex
+	=sys-freebsd/freebsd-lib-${RV}*[atm?]
 	=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
 
@@ -32,18 +35,10 @@ pkg_setup() {
 	use atm || mymakeopts="${mymakeopts} NO_ATM= "
 	use nis || mymakeopts="${mymakeopts} NO_NIS= "
 
-	for flag in atm nis; do
-		if use ${flag} && ! built_with_use sys-libs/freebsd-lib ${flag}; then
-			die "You can't add ${flag} support here without adding it to sys-libs/freebsd-lib"
-		fi
-	done
-
 #	append-flags -fno-stack-protector -fno-stack-protector-all
 }
 
-src_unpack() {
-	freebsd_src_unpack
-
+src_prepare() {
 	# As they are patches from ${WORKDIR} apply them by hand
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${PN}"-5.4-gentoo.patch
