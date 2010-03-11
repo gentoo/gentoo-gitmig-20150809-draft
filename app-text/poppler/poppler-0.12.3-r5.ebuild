@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r5.ebuild,v 1.1 2010/02/16 15:15:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r5.ebuild,v 1.2 2010/03/11 22:07:20 yngwin Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ COMMON_DEPEND=">=media-libs/fontconfig-2.6.0
 			 >=x11-libs/gtk+-2.14.0:2 )
 	jpeg? ( >=media-libs/jpeg-7:0 )
 	jpeg2k? ( media-libs/openjpeg )
+	lcms? ( media-libs/lcms )
 	png? ( media-libs/libpng )
 	qt4? ( x11-libs/qt-core:4
 		   x11-libs/qt-gui:4 )"

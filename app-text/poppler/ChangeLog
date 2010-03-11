@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.225 2010/02/21 16:43:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.226 2010/03/11 22:07:20 yngwin Exp $
+
+  11 Mar 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r3.ebuild,
+  poppler-0.12.3-r5.ebuild, poppler-0.12.4.ebuild:
+  Add missing lcms dep, bug #309005
 
   21 Feb 2010; Fabian Groffen <grobian@gentoo.org> poppler-0.12.4.ebuild,
   +files/poppler-0.12.4-nanosleep-rt.patch:
