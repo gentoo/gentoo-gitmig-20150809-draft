@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.294 2010/03/11 21:02:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.295 2010/03/12 21:27:08 ranger Exp $
+
+  12 Mar 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking gedit-2.26.3-r1 ppc64 stable for bug 308549
 
   11 Mar 2010; Pacho Ramos <pacho@gentoo.org> gedit-2.26.3-r1.ebuild:
   amd64 stable, bug 308549
