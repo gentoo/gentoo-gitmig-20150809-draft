@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gphpedit
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.18 2008/03/27 21:29:12 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.19 2010/03/12 13:07:33 pacho Exp $
+
+*gphpedit-0.9.91-r1 (12 Mar 2010)
+
+  12 Mar 2010; Pacho Ramos <pacho@gentoo.org> -gphpedit-0.4.3.ebuild,
+  -gphpedit-0.9.6.ebuild, -gphpedit-0.9.50.ebuild, -gphpedit-0.9.80.ebuild,
+  +gphpedit-0.9.91-r1.ebuild, +files/gphpedit-0.9.91-find_replace.patch:
+  Fix bug 248497 and clean old
 
   27 Mar 2008; Markus Meier <maekke@gentoo.org> gphpedit-0.9.91.ebuild:
   amd64/x86 stable, bug #214904; quotes
