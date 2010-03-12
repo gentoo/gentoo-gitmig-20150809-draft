@@ -1,14 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.335.0.ebuild,v 1.3 2010/03/03 17:57:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.342.3.ebuild,v 1.1 2010/03/12 09:08:53 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-#SRC_URI="http://build.chromium.org/buildbot/archives/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
