@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.22 2010/02/25 21:58:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.23 2010/03/12 07:56:25 hollow Exp $
+
+  12 Mar 2010; Benedikt Böhm <hollow@gentoo.org> facter-1.5.7.ebuild,
+  +files/facter-1.5.7-fqdn.patch:
+  backport FQDN patch from upstream
 
   25 Feb 2010; Fabian Groffen <grobian@gentoo.org> facter-1.5.7.ebuild:
   Marked ~x64-macos, thanks Ramon van Alteren, bug #305367
