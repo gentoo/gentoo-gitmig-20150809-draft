@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.6 2010/01/11 18:57:19 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.7 2010/03/12 20:19:12 fuzzyray Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS="1"
+RESTRICT_PYTHON_ABIS="2.[45]"
 
 inherit distutils subversion
 
@@ -20,14 +22,13 @@ IUSE=""
 
 KEYWORDS=""
 
-DEPEND="sys-apps/portage
-	dev-lang/python[xml]
+DEPEND=">=dev-lang/python-2.6[xml]
+	sys-apps/portage
 	dev-lang/perl
 	sys-apps/grep
 	sys-apps/gawk"
 RDEPEND="${DEPEND}
 	app-misc/realpath"
-RESTRICT_PYTHON_ABIS="3.*"
 
 distutils_src_compile_pre_hook() {
 	echo VERSION="9999-r${ESVN_WC_REVISION}" "$(PYTHON)" setup.py set_version
@@ -40,6 +41,7 @@ src_compile() {
 }
 
 src_install() {
+	python_convert_shebangs -r "" build-*/scripts-*
 	distutils_src_install
 
 	# Create cache directory for revdep-rebuild
@@ -49,8 +51,8 @@ src_install() {
 	fperms 0700 /var/cache/revdep-rebuild
 
 	# Can distutils handle this?
-	dosym eclean-$(PYTHON --ABI -f) /usr/bin/eclean-dist
-	dosym eclean-$(PYTHON --ABI -f) /usr/bin/eclean-pkg
+	dosym eclean /usr/bin/eclean-dist
+	dosym eclean /usr/bin/eclean-pkg
 }
 
 pkg_postinst() {
@@ -61,12 +63,12 @@ pkg_postinst() {
 	chmod 0700 "${ROOT}/var/cache/revdep-rebuild"
 
 	einfo
-	elog "The default location for revdep-rebuild files has been moved"
-	elog "to /var/cache/revdep-rebuild when run as root."
-	einfo
-	einfo "Another alternative to equery is app-portage/portage-utils"
-	einfo
 	einfo "For further information on gentoolkit, please read the gentoolkit"
 	einfo "guide: http://www.gentoo.org/doc/en/gentoolkit.xml"
 	einfo
+	einfo "Another alternative to equery is app-portage/portage-utils"
+}
+
+pkg_info() {
+	eselect python show
 }
