@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/knews
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/ChangeLog,v 1.5 2008/11/17 20:50:36 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/ChangeLog,v 1.6 2010/03/12 11:37:09 ssuominen Exp $
+
+*knews-1.0.1b-r3 (12 Mar 2010)
+
+  12 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +knews-1.0.1b-r3.ebuild:
+  Disable broken libpng support wrt #309003. Use correct app-defaults
+  directory.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/knews-1.0.1b-r1.patch:
