@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-hu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-hu/ChangeLog,v 1.2 2010/03/12 00:08:19 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-hu/ChangeLog,v 1.3 2010/03/12 00:17:48 spatz Exp $
+
+  12 Mar 2010; Dror Levin <spatz@gentoo.org> vim-spell-hu-20100312.ebuild:
+  Remove untested keywords.
 
   12 Mar 2010; Dror Levin <spatz@gentoo.org> metadata.xml:
   List correct encoding in longdescription.
