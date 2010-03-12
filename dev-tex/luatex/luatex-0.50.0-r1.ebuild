@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.50.0-r1.ebuild,v 1.8 2010/02/25 11:55:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.50.0-r1.ebuild,v 1.9 2010/03/12 00:14:59 cardoe Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ kpathsea_extraconf="--disable-shared --disable-largefile"
 
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	epatch "${FILESDIR}"/${P}-m4-error.patch
 	eautoreconf
 	elibtoolize
 }
