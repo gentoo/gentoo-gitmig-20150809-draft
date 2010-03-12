@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/ganeti-instance-debootstrap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debootstrap/ChangeLog,v 1.2 2010/03/07 21:03:00 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debootstrap/ChangeLog,v 1.3 2010/03/12 19:29:10 ramereth Exp $
+
+*ganeti-instance-debootstrap-0.9 (12 Mar 2010)
+
+  12 Mar 2010; Lance Albertson <ramereth@gentoo.org>
+  +ganeti-instance-debootstrap-0.9.ebuild:
+  Version bump to 0.9
+
+  * Install example hooks
 
 *ganeti-instance-debootstrap-0.8 (07 Mar 2010)
 
