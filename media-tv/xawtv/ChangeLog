@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.61 2010/03/05 14:57:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.62 2010/03/12 09:45:09 phajdan.jr Exp $
+
+  12 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> xawtv-3.95-r2.ebuild:
+  x86 stable wrt bug #307891
 
   05 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org> xawtv-3.95-r1.ebuild,
   xawtv-3.95-r2.ebuild:
