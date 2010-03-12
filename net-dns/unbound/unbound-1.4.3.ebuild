@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.2.ebuild,v 1.1 2010/03/09 16:29:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.3.ebuild,v 1.1 2010/03/12 12:46:45 matsuu Exp $
 
 EAPI="2"
 
@@ -44,6 +44,8 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable debug lock-checks) \
 		$(use_enable debug alloc-checks) \
+		$(use_enable debug alloc-lite) \
+		$(use_enable debug alloc-nonregional) \
 		$(use_enable static static-exe) \
 		$(use_with libevent) \
 		$(use_with threads pthreads) \
@@ -55,7 +57,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# bug #299016
-	rm "${D}/usr/$(get_libdir)"/python*/site-packages/_unbound.*a || die
+	if use python ; then
+		rm "${D}/usr/$(get_libdir)"/python*/site-packages/_unbound.*a || die
+	fi
 
 	newinitd "${FILESDIR}/unbound.initd" unbound || die "newinitd failed"
 	newconfd "${FILESDIR}/unbound.confd" unbound || die "newconfd failed"
