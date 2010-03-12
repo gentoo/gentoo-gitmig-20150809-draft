@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.92 2010/03/04 17:42:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.93 2010/03/12 18:27:01 betelgeuse Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2025,13 +2025,11 @@ python_version() {
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
 
-	_python_set_color_variables
-
 	if [[ "${FUNCNAME[1]}" != "distutils_python_version" ]]; then
-		eerror
-		eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
-		eerror "${_RED}Use PYTHON() instead of python variable. Use python_get_*() instead of PYVER* variables.${_NORMAL}"
-		eerror
+		einfo
+		einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01."
+		einfo "Use PYTHON() instead of python variable. Use python_get_*() instead of PYVER* variables."
+		einfo
 	fi
 
 	[[ -n "${PYVER}" ]] && return 0
@@ -2065,12 +2063,10 @@ python_mod_exists() {
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
 
-	_python_set_color_variables
-
-	eerror
-	eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
-	eerror "${_RED}Use USE dependencies and/or has_version() instead of ${FUNCNAME}().${_NORMAL}"
-	eerror
+	einfo
+	einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01."
+	einfo "Use USE dependencies and/or has_version() instead of ${FUNCNAME}()."
+	einfo
 
 	if [[ "$#" -ne 1 ]]; then
 		die "${FUNCNAME}() requires 1 argument"
@@ -2088,13 +2084,11 @@ python_tkinter_exists() {
 		die "${FUNCNAME}() cannot be used in this EAPI"
 	fi
 
-	_python_set_color_variables
-
 	if [[ "${FUNCNAME[1]}" != "distutils_python_tkinter" ]]; then
-		eerror
-		eerror "${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01.${_NORMAL}"
-		eerror "${_RED}Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}().${_NORMAL}"
-		eerror
+		einfo
+		einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01."
+		einfo "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()."
+		einfo
 	fi
 
 	if ! "$(PYTHON ${PYTHON_ABI})" -c "from sys import version_info
