@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.3.ebuild,v 1.5 2010/03/11 21:28:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.3.ebuild,v 1.6 2010/03/12 06:13:15 pva Exp $
 
 EAPI="2"
 
@@ -85,6 +85,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	rm "${D}/usr/share/doc/${PF}/{README.html,COPYING}"
+	rm "${D}/usr/share/doc/${PF}/"{README.html,COPYING}
 	dohtml README.html
 }
