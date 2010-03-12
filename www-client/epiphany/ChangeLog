@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.229 2010/03/12 11:03:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.230 2010/03/12 21:29:04 ranger Exp $
+
+  12 Mar 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking epiphany-2.26.3-r3 ppc64 stable for bug 308549
 
 *epiphany-2.26.3-r4 (12 Mar 2010)
 
