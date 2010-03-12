@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.100 2010/01/20 07:30:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.101 2010/03/12 17:33:11 jer Exp $
+
+  12 Mar 2010; Jeroen Roovers <jer@gentoo.org> cpio-2.10-r1.ebuild:
+  Stable for HPPA (bug #308827).
 
 *cpio-2.10-r1 (20 Jan 2010)
 
