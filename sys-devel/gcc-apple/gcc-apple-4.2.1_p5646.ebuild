@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.5 2010/03/12 12:06:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.6 2010/03/12 12:09:55 grobian Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-${APPLE
 LICENSE="GPL-2"
 
 case ${CHOST} in
-	*-darwin1*|i?86-*darwin9)
+	*-darwin1*|i?86-*-darwin9|powerpc-*-darwin9)
 		LIBSTDCXX_APPLE_VERSION=39
 	;;
 	*)  
