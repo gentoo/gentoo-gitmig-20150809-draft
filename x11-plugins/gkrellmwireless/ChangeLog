@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellmwireless
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.17 2007/03/12 15:54:09 lack Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.18 2010/03/12 00:44:51 sping Exp $
+
+  12 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  gkrellmwireless-2.0.3.ebuild:
+  Fix HOMEPAGE (bug #305855)
 
   12 Mar 2007; Jim Ramsay <lack@gentoo.org> gkrellmwireless-2.0.3.ebuild:
   Updated to use new gkrellm-plugin eclass
