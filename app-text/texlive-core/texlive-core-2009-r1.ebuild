@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2009-r1.ebuild,v 1.3 2010/03/08 14:28:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2009-r1.ebuild,v 1.4 2010/03/12 10:58:45 ssuominen Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2 LPPL-1.3c TeX"
 SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 # Fetch patches
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~ssuominen/${PN}-patches-${PATCHLEVEL}.tar.xz
+SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.xz
 	mirror://gentoo/${P}-texmf.d-${TEXMFD_VERSION}.tar.xz"
 
 TL_CORE_BINEXTRA_MODULES="a2ping asymptote bibtex8 ctie cweb dtl dvi2tty dviasm dvicopy dvidvi dviljk dvipng dvipos findhyph fragmaster hyphenex lacheck latex2man latexdiff latexmk listings-ext mkind-english mkjobtexmf patgen pdfcrop pdftools pkfix pkfix-helper purifyeps seetexk synctex texcount texdiff texdirflatten texdoc texloganalyser texware tie tpic2pdftex web collection-binextra"
