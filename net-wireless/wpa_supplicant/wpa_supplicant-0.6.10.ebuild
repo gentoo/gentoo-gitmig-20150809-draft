@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.1.ebuild,v 1.2 2010/03/12 23:13:21 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.10.ebuild,v 1.1 2010/03/12 23:13:21 gurligebis Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs qt4-r2
+inherit eutils toolchain-funcs qt3 qt4
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -13,7 +13,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
 
 DEPEND="dev-libs/libnl
 	dbus? ( sys-apps/dbus )
@@ -27,6 +27,7 @@ DEPEND="dev-libs/libnl
 	!kernel_linux? ( net-libs/libpcap )
 	qt4? ( x11-libs/qt-gui:4
 		x11-libs/qt-svg:4 )
+	!qt4? ( qt3? ( x11-libs/qt:3 ) )
 	readline? ( sys-libs/ncurses sys-libs/readline )
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
@@ -42,6 +43,10 @@ pkg_setup() {
 
 	if use gnutls && use ssl ; then
 		einfo "You have both 'gnutls' and 'ssl' USE flags enabled: defaulting to USE=\"ssl\""
+	fi
+
+	if use qt3 && use qt4 ; then
+		einfo "You have both 'qt3' and 'qt4' USE flags enabled: defaulting to USE=\"qt4\""
 	fi
 }
 
@@ -64,7 +69,7 @@ src_prepare() {
 		-e "s:/usr/lib/pkcs11:/usr/$(get_libdir):" \
 		wpa_supplicant.conf || die
 
-	epatch "${FILESDIR}"/${P}-dbus_path_fix.patch
+	epatch "${FILESDIR}"/dbus_path_fix.patch
 }
 
 src_configure() {
@@ -165,21 +170,19 @@ src_configure() {
 
 	# Enable mitigation against certain attacks against TKIP
 	echo "CONFIG_DELAYED_MIC_ERROR_REPORT=y" >> .config
-
-	if use qt4 ; then
-		cd "${S}"/wpa_gui-qt4
-		eqmake4 wpa_gui.pro
-	fi
 }
 
 src_compile() {
-	einfo "Building wpa_supplicant"
 	emake || die "emake failed"
 
 	if use qt4 ; then
 		cd "${S}"/wpa_gui-qt4
-		einfo "Building wpa_gui"
-		emake || die "wpa_gui compilation failed"
+		eqmake4 wpa_gui.pro
+		emake || die "Qt4 wpa_gui compilation failed"
+	elif use qt3 ; then
+		cd "${S}"/wpa_gui
+		eqmake3 wpa_gui.pro
+		emake || die "Qt3 wpa_gui compilation failed"
 	fi
 }
 
@@ -211,16 +214,21 @@ src_install() {
 	if use qt4 ; then
 		into /usr
 		dobin wpa_gui-qt4/wpa_gui || die
+	elif use qt3 ; then
+		into /usr
+		dobin wpa_gui/wpa_gui || die
+	fi
+
+	if use qt3 || use qt4 ; then
 		doicon wpa_gui-qt4/icons/wpa_gui.svg || die "Icon not found"
 		make_desktop_entry wpa_gui "WPA Supplicant Administration GUI" "wpa_gui" "Qt;Network;"
 	fi
 
 	if use dbus ; then
-		cd "${S}"/dbus
 		insinto /etc/dbus-1/system.d
 		newins dbus-wpa_supplicant.conf wpa_supplicant.conf || die
 		insinto /usr/share/dbus-1/system-services
-		doins fi.epitest.hostap.WPASupplicant.service || die
+		newins dbus-wpa_supplicant.service 'fi.epitest.hostap.WPASupplicant.service' || die
 		keepdir /var/run/wpa_supplicant
 	fi
 }
