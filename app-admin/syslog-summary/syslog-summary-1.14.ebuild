@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14.ebuild,v 1.1 2010/02/08 12:38:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14.ebuild,v 1.2 2010/03/12 10:21:03 phajdan.jr Exp $
 
 EAPI=2
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2:2.5"
 
 inherit eutils python
 
@@ -18,6 +18,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	python_convert_shebangs 2 syslog-summary
