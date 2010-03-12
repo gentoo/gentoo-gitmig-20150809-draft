@@ -24,6 +24,7 @@
 		<flag name='kvm'>Enable KVM support</flag>
 		<flag name='xen'>Enable Xen support</flag>
 		<flag name='drbd'>Enable DRBD support</flag>
+		<flag name='filestorage'>Enable File Storage</flag>
 	</use>
 </pkgmetadata>
 

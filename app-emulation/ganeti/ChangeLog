@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.19 2010/03/11 17:18:18 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.20 2010/03/12 19:21:58 ramereth Exp $
+
+*ganeti-2.1.1 (12 Mar 2010)
+
+  12 Mar 2010; Lance Albertson <ramereth@gentoo.org> +ganeti-2.1.1.ebuild,
+  +files/ganeti-2.1.1-disable-check-man.patch, metadata.xml:
+  Version bump to 2.1.1
+
+  * Added patch to remove use of check-man (ganeti issue 91)
+
+  * Removed old brctl patch since its now fixed upstream.
+
+  * Added filestorage useflag to give the option disabling it
+
+  * Added syslog useflag
 
   11 Mar 2010; Lance Albertson <ramereth@gentoo.org> -ganeti-1.2.1.ebuild,
   -ganeti-2.0.5.ebuild, -ganeti-2.1.0_rc3.ebuild, -ganeti-2.1.0_rc4.ebuild:
