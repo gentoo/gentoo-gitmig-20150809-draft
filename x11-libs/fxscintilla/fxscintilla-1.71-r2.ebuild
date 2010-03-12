@@ -1,8 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r2.ebuild,v 1.1 2010/03/12 19:59:11 mabi Exp $
-
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r2.ebuild,v 1.2 2010/03/12 22:32:12 mabi Exp $
 
 inherit autotools eutils multilib
 
@@ -15,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="x11-libs/fox:1.6"
+RDEPEND="=x11-libs/fox-1.6*"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
