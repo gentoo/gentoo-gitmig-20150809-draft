@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.27 2009/09/27 13:52:28 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.28 2010/03/12 13:18:06 pacho Exp $
+
+  12 Mar 2010; Pacho Ramos <pacho@gentoo.org> gnome-build-2.24.1.ebuild:
+  amd64 stable, bug 308859
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> gnome-build-2.24.1.ebuild:
   ppc stable #268359
