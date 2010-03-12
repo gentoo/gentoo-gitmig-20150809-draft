@@ -60,3 +60,4 @@ move dev-util/stgit dev-vcs/stgit
 move dev-util/cvsspam dev-vcs/cvsspam
 move dev-util/svnmailer dev-vcs/svnmailer
 move dev-util/git-sh dev-vcs/git-sh
+slotmove >=sys-freebsd/freebsd-lib-7 7.0 0
