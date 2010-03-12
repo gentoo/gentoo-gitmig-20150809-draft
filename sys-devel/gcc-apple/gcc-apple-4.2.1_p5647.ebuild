@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.3 2010/03/09 17:53:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.4 2010/03/12 12:06:25 grobian Exp $
 
 EAPI="3"
 
@@ -18,12 +18,16 @@ SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-${APPLE
 		fortran? ( mirror://gnu/gcc/gcc-4.2.4/gcc-fortran-4.2.4.tar.bz2 )"
 LICENSE="GPL-2 GPL-3"
 
-if [[ ${CHOST} == *-darwin* && ${CHOST#*-darwin} -ge 9 ]] ; then
-	LIBSTDCXX_APPLE_VERSION=39
-else
-	# pre Leopard has no dtrace, which is required by 37.11 and above
-	LIBSTDCXX_APPLE_VERSION=16
-fi
+case ${CHOST} in
+	*-darwin1*|i?86-*darwin9)
+		LIBSTDCXX_APPLE_VERSION=39
+	;;
+	*)  
+		# pre Leopard has no dtrace, which is required by 37.11 and above
+		# Leopard only has 32-bits version of dtrace
+		LIBSTDCXX_APPLE_VERSION=16
+	;;
+esac
 
 if is_crosscompile; then
 	SLOT="${CTARGET}-42"
