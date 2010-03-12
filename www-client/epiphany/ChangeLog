@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.228 2010/03/11 00:17:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.229 2010/03/12 11:03:32 pacho Exp $
+
+*epiphany-2.26.3-r4 (12 Mar 2010)
+
+  12 Mar 2010; Pacho Ramos <pacho@gentoo.org> +epiphany-2.26.3-r4.ebuild,
+  +files/epiphany-2.26.3-glib.patch, +files/epiphany-2.26.3-nspr.patch,
+  +files/epiphany-2.26.3-xul192.patch:
+  Support xulrunner-1.9.2, thanks a lot to Hicham HAOUARI for his help and
+  patches.
 
   11 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
   epiphany-2.24.3.ebuild, -epiphany-2.24.3-r10.ebuild,
