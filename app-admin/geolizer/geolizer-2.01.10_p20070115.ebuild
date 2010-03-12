@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/geolizer-2.01.10_p20070115.ebuild,v 1.1 2010/03/10 16:13:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/geolizer-2.01.10_p20070115.ebuild,v 1.2 2010/03/12 23:08:46 spatz Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -14,7 +14,6 @@ WEBAPP_MANUAL_SLOT="yes"
 MY_PV="$(get_version_component_range 1-2)-$(get_version_component_range 3)"
 WEBALIZER_P="webalizer-${MY_PV}"
 GEOLIZER_P="${PN}_${MY_PV}-patch.${PV/*_p/}"
-echo ${GEOLIZER_P}
 
 DESCRIPTION="Webserver log file analyzer"
 HOMEPAGE="http://sysd.org/stas/node/10"
