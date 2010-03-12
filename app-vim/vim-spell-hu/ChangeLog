@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-hu
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-hu/ChangeLog,v 1.1 2010/03/12 00:02:46 spatz Exp $
+
+*vim-spell-hu-20100312 (11 Mar 2010)
+
+  11 Mar 2010; Dror Levin <spatz@gentoo.org> +vim-spell-hu-20100312.ebuild,
+  +metadata.xml:
+  Initial import, bug 167214.
+
