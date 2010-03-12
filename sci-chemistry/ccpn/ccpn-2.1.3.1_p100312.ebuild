@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100227.ebuild,v 1.2 2010/02/28 13:48:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100312.ebuild,v 1.1 2010/03/12 08:24:10 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -15,7 +15,7 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
 SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
-	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentooexperimental.org/~jlec/distfiles/ccpn-update-${PATCHSET}.patch.bz2"
+	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${PATCHSET}.patch.bz2"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
