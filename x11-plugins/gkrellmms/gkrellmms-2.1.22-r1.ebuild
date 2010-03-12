@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.22-r1.ebuild,v 1.11 2009/08/16 09:00:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.22-r1.ebuild,v 1.12 2010/03/12 00:40:05 sping Exp $
 
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A sweet plugin to control Audacious from GKrellM2"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz
 	mirror://gentoo/${P}-audacious.patch.gz"
-HOMEPAGE="http://gkrellm.luon.net/gkrellmms.phtml"
+HOMEPAGE="http://gkrellm.luon.net/gkrellmms.php"
 
 DEPEND=">=app-admin/gkrellm-2
 	>=media-sound/audacious-1.5.0
