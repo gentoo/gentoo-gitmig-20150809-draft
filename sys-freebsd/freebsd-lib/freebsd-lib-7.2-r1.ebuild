@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.1 2010/01/10 23:01:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.2 2010/03/12 15:38:49 aballier Exp $
 
 EAPI=2
 
 inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="FreeBSD's base system libraries"
-SLOT="7.0"
+SLOT="0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
 # Crypto is needed to have an internal OpenSSL header
