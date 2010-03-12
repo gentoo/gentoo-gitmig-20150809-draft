@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1.ebuild,v 1.1 2010/03/11 10:31:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.1 2010/03/12 12:52:19 scarabeus Exp $
 
 EAPI=2
 inherit cmake-utils multilib
@@ -38,6 +38,14 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README UPGRADE_0.3"
 
+src_prepare() {
+	# fix libdir placement
+	sed -i \
+		-e "s:lib/:$(get_libdir)/:g" \
+		-e "s:lib\":$(get_libdir)\":g" \
+		CMakeLists.txt || die "sed failed"
+}
+
 src_configure() {
 	local x
 
@@ -48,7 +56,6 @@ src_configure() {
 			mycmakeargs="${mycmakeargs} $(cmake-utils_use_disable ${x/+/})"
 		fi
 	done
-	mycmakeargs="${mycmakeargs} -DLIBDIR=$(get_libdir)"
 
 	cmake-utils_src_configure
 }
