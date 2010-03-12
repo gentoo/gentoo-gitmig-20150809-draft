@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.3 2009/08/08 22:28:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.4 2010/03/12 19:07:59 ssuominen Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.5
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="nls xinerama"
 
 RDEPEND="x11-libs/libSM
