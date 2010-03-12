@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0_beta2-r2.ebuild,v 1.1 2010/03/01 22:44:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0_beta2-r2.ebuild,v 1.2 2010/03/12 12:23:24 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -46,4 +46,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README TODO
 	dohtml docs/*.html
+}
+
+pkg_postinst() {
+	use oss || ewarn "No audio output will be available because of USE=\"-oss\"."
 }
