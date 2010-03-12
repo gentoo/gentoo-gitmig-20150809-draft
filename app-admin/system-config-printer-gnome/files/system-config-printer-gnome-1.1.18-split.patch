@@ -1,18 +1,18 @@
-diff -ru ../system-config-printer-1.1.16/configure.in ./configure.in
---- ../system-config-printer-1.1.16/configure.in	2009-12-22 15:44:19.000000000 +0100
-+++ ./configure.in	2010-01-16 06:30:30.200718127 +0100
+diff -ru ../system-config-printer-1.1.18/configure.in ./configure.in
+--- ../system-config-printer-1.1.18/configure.in	2010-03-10 10:33:54.000000000 +0100
++++ ./configure.in	2010-03-11 02:52:12.740702738 +0100
 @@ -1,6 +1,6 @@
- AC_INIT(system-config-printer, 1.1.16)
+ AC_INIT(system-config-printer, 1.1.18)
  AC_CONFIG_SRCDIR(system-config-printer.py)
 -AM_INIT_AUTOMAKE([dist-xz dist-bzip2 subdir-objects 1.6])
 +AM_INIT_AUTOMAKE([dist-bzip2 subdir-objects 1.6])
  IT_PROG_INTLTOOL
  AM_GNU_GETTEXT([external])
  AM_PATH_PYTHON
-diff -ru ../system-config-printer-1.1.16/Makefile.am ./Makefile.am
---- ../system-config-printer-1.1.16/Makefile.am	2009-12-22 15:44:19.000000000 +0100
-+++ ./Makefile.am	2010-01-16 06:33:42.388946122 +0100
-@@ -2,77 +2,8 @@
+diff -ru ../system-config-printer-1.1.18/Makefile.am ./Makefile.am
+--- ../system-config-printer-1.1.18/Makefile.am	2010-03-10 10:33:45.000000000 +0100
++++ ./Makefile.am	2010-03-11 02:54:55.390957640 +0100
+@@ -2,78 +2,9 @@
  
  SUBDIRS=po
  
@@ -86,11 +86,12 @@ diff -ru ../system-config-printer-1.1.16/Makefile.am ./Makefile.am
 -
  nobase_pkgdata_SCRIPTS=				\
  	my-default-printer.py			\
+ 	check-device-ids.py			\
 -	pysmb.py				\
  	system-config-printer.py		\
  	troubleshoot/__init__.py		\
  	applet.py
-@@ -84,9 +15,7 @@
+@@ -85,9 +16,7 @@
  	asyncpk0.py					\
  	asyncpk1.py					\
  	authconn.py					\
@@ -100,7 +101,7 @@ diff -ru ../system-config-printer-1.1.16/Makefile.am ./Makefile.am
  	errordialogs.py					\
  	HIG.py						\
  	firewall.py					\
-@@ -95,22 +24,13 @@
+@@ -96,22 +25,13 @@
  	GroupsPaneModel.py				\
  	gtkinklevel.py					\
  	gtkspinner.py					\
@@ -123,7 +124,7 @@ diff -ru ../system-config-printer-1.1.16/Makefile.am ./Makefile.am
  	glade/AboutDialog.glade				\
  	glade/ConnectDialog.glade			\
  	glade/ConnectingDialog.glade			\
-@@ -172,8 +92,6 @@
+@@ -173,8 +93,6 @@
  	man/system-config-printer.1		\
  	man/system-config-printer-applet.1
  
