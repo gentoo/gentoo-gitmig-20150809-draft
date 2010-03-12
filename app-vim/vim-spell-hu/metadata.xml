@@ -8,6 +8,6 @@
 	</maintainer>
 	<longdescription>
 		Vim spell files for Hungarian (hu). Supported character sets are UTF-8,
-		ISO-8859-8 and CP-1250.
+		ISO-8859-2 and CP-1250.
 	</longdescription>
 </pkgmetadata>
