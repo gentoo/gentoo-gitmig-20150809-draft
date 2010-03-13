@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1239.ebuild,v 1.2 2010/02/16 17:52:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1241.ebuild,v 1.1 2010/03/13 18:38:08 tommy Exp $
 
 EAPI="2"
-DATE=20091027
+DATE=20100313
 
 inherit eutils java-pkg-2 java-ant-2 multilib
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="http://www.freenetproject.org/"
-SRC_URI="http://github.com/${PN}/fred-official/tarball/build0${PV#*p} -> ${P}.tgz
+SRC_URI="http://github.com/${PN}/fred-official/zipball/build0${PV#*p} -> ${P}.zip
 	mirror://gentoo/seednodes-${DATE}.fref"
 
 LICENSE="as-is GPL-2"
@@ -28,11 +28,10 @@ CDEPEND="dev-db/db-je:3.3
 	dev-java/lzmajio
 	dev-java/mersennetwister"
 #force secure versions for now
-DEPEND="|| ( >=dev-java/icedtea6-1.5.1 >=dev-java/icedtea6-bin-1.5.1 >=dev-java/sun-jdk-1.5.0.20 >=dev-java/sun-jdk-1.6.0.15 )
+DEPEND="app-arch/unzip
 	>=virtual/jdk-1.5
 	${CDEPEND}"
-RDEPEND="|| ( >=dev-java/icedtea6-1.5.1 >=dev-java/icedtea6-bin-1.5.1 >=dev-java/sun-jdk-1.5.0.20 >=dev-java/sun-jdk-1.6.0.15 >=dev-java/sun-jre-bin-1.5.0.20 >=dev-java/sun-jre-bin-1.6.0.15 )
-	>=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.5
 	net-libs/nativebiginteger
 	${CDEPEND}"
 PDEPEND="net-libs/NativeThread
@@ -42,6 +41,12 @@ EANT_BUILD_TARGET="dist"
 EANT_GENTOO_CLASSPATH="ant-core db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
 
 pkg_setup() {
+	has_version dev-java/icedtea[cacao] && {
+		ewarn "dev-java/icedtea was built with cacao USE flag."
+		ewarn "freenet may compile with it, but it will refuse to run."
+		ewarn "Please remerge dev-java/icedtea without cacao USE flag,"
+		ewarn "if you plan to use it for running freenet."
+	}
 	java-pkg-2_pkg_setup
 	enewgroup freenet
 	enewuser freenet -1 -1 /var/freenet freenet
