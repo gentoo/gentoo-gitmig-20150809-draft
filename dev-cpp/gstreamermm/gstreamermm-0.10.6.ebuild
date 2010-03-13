@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.6.ebuild,v 1.2 2010/03/11 12:27:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.6.ebuild,v 1.3 2010/03/13 11:24:40 phajdan.jr Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gstreamer.freedesktop.org/bindings/cplusplus.html"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # gstreamer 0.10.25 is needed for per-stream volume
