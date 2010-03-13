@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.4_p1.ebuild,v 1.1 2010/03/09 01:06:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.4_p1.ebuild,v 1.2 2010/03/13 01:28:51 vapier Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="hpn kerberos ldap libedit pam pkcs11 selinux skey static tcpd X X509"
+IUSE="hpn kerberos ldap libedit pam selinux skey static tcpd X X509"
 
 RDEPEND="pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
@@ -32,7 +32,6 @@ RDEPEND="pam? ( virtual/pam )
 	libedit? ( dev-libs/libedit )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.2.3
-	pkcs11? ( dev-libs/pkcs11-helper )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	X? ( x11-apps/xauth )
 	userland_GNU? ( sys-apps/shadow )"
@@ -134,7 +133,6 @@ src_compile() {
 		$(static_use_with kerberos kerberos5 /usr) \
 		${LDAP_PATCH:+$(use ldap && use_with ldap)} \
 		$(use_with libedit) \
-		$(use pkcs11 && static_use_with pkcs11) \
 		$(use_with selinux) \
 		$(use_with skey) \
 		$(use_with tcpd tcp-wrappers) \
@@ -213,11 +211,6 @@ pkg_postinst() {
 		echo
 		ewarn "Please be aware users need a valid shell in /etc/passwd"
 		ewarn "in order to be allowed to login."
-	fi
-	if use pkcs11 ; then
-		echo
-		einfo "For PKCS#11 you should also emerge one of the askpass softwares"
-		einfo "Example: net-misc/x11-ssh-askpass"
 	fi
 	# This instruction is from the HPN webpage,
 	# Used for the server logging functionality
