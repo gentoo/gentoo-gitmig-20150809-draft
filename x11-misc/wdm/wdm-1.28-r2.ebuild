@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r2.ebuild,v 1.8 2009/01/09 16:04:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r2.ebuild,v 1.9 2010/03/13 13:24:51 hwoarang Exp $
 
 inherit pam
 
@@ -15,6 +15,7 @@ IUSE="truetype pam selinux"
 
 RDEPEND=">=x11-wm/windowmaker-0.70.0
 	truetype? ( x11-libs/libXft )
+	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libXpm
 	pam? ( virtual/pam )"
