@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.28 2010/01/08 14:56:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.29 2010/03/13 13:07:03 hwoarang Exp $
+
+  13 Mar 2010; Markos Chandras <hwoarang@gentoo.org> accessx-0951-r1.ebuild:
+  Fix homepage wrt bug #306005
 
   08 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   accessx-0951-r1.ebuild:

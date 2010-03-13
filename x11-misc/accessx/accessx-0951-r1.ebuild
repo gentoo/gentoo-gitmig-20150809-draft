@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951-r1.ebuild,v 1.5 2010/01/08 14:56:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951-r1.ebuild,v 1.6 2010/03/13 13:07:03 hwoarang Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Interface to the XKEYBOARD extension in X11"
-HOMEPAGE="http://cmos-eng.rehab.uiuc.edu/accessx"
+HOMEPAGE="http://cita.disability.uiuc.edu/software/accessx/freewareaccessx.php"
 SRC_URI="http://cmos-eng.rehab.uiuc.edu/${PN}/software/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-2"
