@@ -1,14 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/fuser-bsd-1142334561.ebuild,v 1.6 2009/07/18 09:43:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/fuser-bsd-1142334561.ebuild,v 1.7 2010/03/13 12:30:14 aballier Exp $
+
+EAPI=2
 
 inherit base bsdmk eutils
 
 MY_P="${PN/-bsd/}-${PV}"
 
+PATCHLEVEL=1
 DESCRIPTION="fuser(1) utility for *BSD"
 HOMEPAGE="http://mbsd.msk.ru/stas/fuser.html"
-SRC_URI="http://mbsd.msk.ru/dist/${MY_P}.tar.bz2"
+SRC_URI="http://mbsd.msk.ru/dist/${MY_P}.tar.bz2
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -19,6 +23,12 @@ DEPEND="sys-freebsd/freebsd-mk-defs"
 RDEPEND="!sys-process/psmisc"
 
 S="${WORKDIR}/${PN/-bsd/}"
+
+src_prepare() {
+	if has_version '>=sys-freebsd/freebsd-lib-8' ; then # any better way to	check it?
+		EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	fi
+}
 
 src_install() {
 	into /
