@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.20 2010/03/11 15:21:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.21 2010/03/13 19:41:30 ulm Exp $
 
 EAPI=2
 
@@ -51,7 +51,6 @@ RDEPEND="|| ( app-editors/nano
 	app-misc/mc[edit]
 	dev-lisp/cmucl
 	mail-client/pine
-	sys-apps/busybox
 	sys-apps/ed )"
 
 # Packages outside app-editors providing an editor:
