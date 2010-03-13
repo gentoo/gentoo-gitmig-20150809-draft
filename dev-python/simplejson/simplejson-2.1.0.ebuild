@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-2.1.0.ebuild,v 1.1 2010/03/11 16:17:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-2.1.0.ebuild,v 1.2 2010/03/13 19:37:23 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -18,12 +18,11 @@ IUSE="doc test"
 
 DEPEND="dev-python/setuptools"
 RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
-RESTRICT_PYTHON_ABIS="3*"
-
-# failures reported as http://code.google.com/p/simplejson/issues/detail?id=73
 src_test() {
 	testing() {
+		ln -fs ../$(ls -d build-${PYTHON_ABI}/lib*)/simplejson/_speedups.so simplejson/_speedups.so
 		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" simplejson/tests/__init__.py
 	}
 	python_execute_function testing
