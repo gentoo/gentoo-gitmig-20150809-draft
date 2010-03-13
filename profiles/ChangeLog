@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4019 2010/03/12 15:39:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4020 2010/03/13 16:18:35 lavajoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Mar 2010; Joe Peterson <lavajoe@gentoo.org> package.mask:
+  Last rites for sys-fs/btrfs - masked for removal (see bug #285357)
 
   12 Mar 2010; Alexis Ballier <aballier@gentoo.org> updates/1Q-2010:
   move freebsd-lib to slot 0, they cant be slotted and we should rely on
