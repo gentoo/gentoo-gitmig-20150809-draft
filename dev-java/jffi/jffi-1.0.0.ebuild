@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.0.ebuild,v 1.1 2010/03/12 22:42:12 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.0.ebuild,v 1.2 2010/03/13 22:33:09 mr_bones_ Exp $
 
 # Probably best to leave the CFLAGS as they are here. See...
 # http://weblogs.java.net/blog/kellyohair/archive/2006/01/compilation_of_1.html
@@ -13,7 +13,7 @@ inherit java-pkg-2 java-ant-2 toolchain-funcs flag-o-matic versionator
 DESCRIPTION="An optimized Java interface to libffi"
 HOMEPAGE="http://github.com/wmeissner/jffi"
 
-SRC_URI="mirrors://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0.4"
