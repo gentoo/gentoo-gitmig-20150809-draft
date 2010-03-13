@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1-r1.ebuild,v 1.1 2010/03/12 11:07:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1-r1.ebuild,v 1.2 2010/03/13 17:07:20 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -47,7 +47,7 @@ pkg_setup() {
 
 	use dbus && extensions="${extensions} rss"
 
-# java-console cannot build against xul-1.9.2, see bug #302929	
+# java-console cannot build against xul-1.9.2, see bug #302929
 #	use java && extensions="${extensions} java-console"
 
 	use pcre && extensions="${extensions} adblock greasemonkey"
