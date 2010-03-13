@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.16 2010/02/20 00:31:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.17 2010/03/13 14:40:42 anarchy Exp $
+
+  13 Mar 2010; <anarchy@gentoo.org> icecat-3.6-r1.ebuild, metadata.xml:
+  Fix system-sqlite useage for current xulrunner, bug #308949
 
   20 Feb 2010; <anarchy@gentoo.org> -icecat-3.5.4.ebuild,
   -icecat-3.5.5.ebuild:

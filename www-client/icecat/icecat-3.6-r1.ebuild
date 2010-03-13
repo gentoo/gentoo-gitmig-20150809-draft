@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6-r1.ebuild,v 1.1 2010/02/13 12:35:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6-r1.ebuild,v 1.2 2010/03/13 14:40:42 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa java libnotify wifi"
+IUSE="+alsa java libnotify system-sqlite wifi"
 
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2
@@ -57,13 +57,13 @@ RDEPEND="
 	>=dev-libs/nss-3.12.4
 	>=dev-libs/nspr-4.8
 	>=app-text/hunspell-1.2
-	>=dev-db/sqlite-3.6.22-r2[fts3,secure-delete]
+	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]
 	wifi? ( net-wireless/wireless-tools )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
-	~net-libs/xulrunner-${XUL_PV}[java=,wifi=,libnotify=]"
+	~net-libs/xulrunner-${XUL_PV}[java=,wifi=,libnotify=,system-sqlite=]"
 
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )
@@ -174,7 +174,6 @@ src_configure() {
 	mozconfig_annotate '' --enable-oji --enable-mathml
 	mozconfig_annotate 'places' --enable-storage --enable-places
 	mozconfig_annotate '' --enable-safe-browsing
-	mozconfig_annotate 'sqlite' --enable-system-sqlite
 
 	# Build mozdevelop permately
 	mozconfig_annotate ''  --enable-jsd --enable-xpctools
@@ -200,6 +199,7 @@ src_configure() {
 	mozconfig_use_enable wifi necko-wifi
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
+	mozconfig_use_enable system-sqlite
 
 	# Other browser-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
