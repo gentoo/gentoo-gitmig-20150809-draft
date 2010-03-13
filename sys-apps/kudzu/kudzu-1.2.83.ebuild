@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.5 2010/01/15 22:35:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.6 2010/03/13 18:32:05 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils multilib python rpm toolchain-funcs
@@ -37,9 +38,9 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	PYTHON_VERSIONS=
 	validate_PYTHON_ABIS
-	local python_version
-	for python_version in ${PYTHON_ABIS}; do
-		PYTHON_VERSIONS+="${PYTHON_VERSIONS:+ }python${python_version}"
+	local version
+	for version in ${PYTHON_ABIS}; do
+		PYTHON_VERSIONS+="${PYTHON_VERSIONS:+ }python${version}"
 	done
 }
 
