@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/arb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.1 2009/10/04 00:25:29 weaver Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.2 2010/03/13 12:44:45 jlec Exp $
+
+*arb-5.1-r1 (13 Mar 2010)
+
+  13 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> +files/5.1-libs.patch,
+  -arb-5.1.ebuild, +arb-5.1-r1.ebuild:
+  Fixed compilation w/ glibc-2.10, #294876
+  Respecting LDFLAGS
 
 *arb-5.1 (03 Oct 2009)
 

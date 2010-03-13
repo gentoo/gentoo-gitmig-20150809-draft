@@ -1,14 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1.ebuild,v 1.1 2009/10/04 00:25:29 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.1 2010/03/13 12:44:45 jlec Exp $
 
-EAPI=2
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Tools for DNA/RNA sequence database handling and data analysis, phylogenetic analysis"
 HOMEPAGE="http://www.arb-home.de/"
-SRC_URI="http://download.arb-home.de/release/arb_${PV}/arbsrc.tgz -> ${P}.tgz"
+SRC_URI="
+	http://download.arb-home.de/release/arb_${PV}/arbsrc.tgz -> ${P}.tgz
+	mirror://gentoo/${P}-glibc2.10.patch.bz2
+	mirror://gentoo/${P}-linker.patch.bz2"
 MY_TAG=6213
 
 LICENSE="arb"
@@ -16,7 +19,8 @@ SLOT="0"
 IUSE="+opengl"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="app-text/sablotron
+DEPEND="
+	app-text/sablotron
 	www-client/lynx
 	x11-libs/openmotif
 	x11-libs/libXpm
@@ -33,7 +37,9 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/arbsrc_${MY_TAG}"
 
 src_prepare() {
-	sed -i -e 's/getline/arb_getline/' READSEQ/ureadseq.c || die
+	epatch "${WORKDIR}"/${P}-glibc2.10.patch
+	epatch "${WORKDIR}"/${P}-linker.patch
+	epatch "${FILESDIR}"/${PV}-libs.patch
 	sed -i \
 		-e 's/all: checks/all:/' \
 		-e "s/GCC:=.*/GCC=$(tc-getCC) ${CFLAGS}/" \
@@ -57,10 +63,10 @@ src_compile() {
 
 src_install() {
 	ARBHOME="${D}/opt/arb" "${S}/arb_install.sh" || die
-	cat <<EOF > "${S}/99${PN}"
-ARBHOME=/opt/arb
-PATH=/opt/arb/bin
-LD_LIBRARY_PATH=/opt/arb/lib
-EOF
+	cat <<- EOF > "${S}/99${PN}"
+	ARBHOME=/opt/arb
+	PATH=/opt/arb/bin
+	LD_LIBRARY_PATH=/opt/arb/lib
+	EOF
 	doenvd "${S}/99${PN}" || die
 }
