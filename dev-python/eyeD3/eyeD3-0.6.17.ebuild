@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.12 2010/03/13 17:59:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.13 2010/03/13 18:03:03 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -22,6 +22,10 @@ RDEPEND=""
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
+
+src_configure() {
+	python_execute_function -d -f -q
+}
 
 src_install() {
 	dohtml *.html && rm -f *.html
