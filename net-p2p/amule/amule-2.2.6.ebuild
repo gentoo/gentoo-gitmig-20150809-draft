@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.1 2009/09/18 14:59:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.2 2010/03/13 19:12:55 armin76 Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="daemon debug geoip gtk nls remote stats unicode upnp"
 
 DEPEND="=x11-libs/wxGTK-2.8*
-	=dev-libs/crypto++-5.5*
+	>=dev-libs/crypto++-5
 	>=sys-libs/zlib-1.2.1
 	stats? ( >=media-libs/gd-2.0.26[jpeg] )
 	geoip? ( dev-libs/geoip )
