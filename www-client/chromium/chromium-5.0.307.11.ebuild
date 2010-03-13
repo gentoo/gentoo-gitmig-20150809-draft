@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.11.ebuild,v 1.2 2010/03/01 10:26:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.307.11.ebuild,v 1.3 2010/03/13 10:21:54 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -27,18 +27,26 @@ RDEPEND="app-arch/bzip2
 	ffmpeg? ( >=media-video/ffmpeg-0.5_p19787 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
-	x11-libs/libXScrnSaver
-	x11-misc/xdg-utils
-	|| (
-		x11-themes/gnome-icon-theme
-		x11-themes/tango-icon-theme
-		x11-themes/xfce4-icon-theme
-	)"
+	x11-libs/libXScrnSaver"
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
+RDEPEND+="
+	|| (
+		x11-themes/gnome-icon-theme
+		x11-themes/tango-icon-theme
+		x11-themes/xfce4-icon-theme
+	)
+	x11-misc/xdg-utils"
+
+# Incompatible system plugins:
+# www-plugins/gecko-mediaplayer, bug #309231.
+RDEPEND+="
+	plugins-symlink? (
+		!www-plugins/gecko-mediaplayer
+	)"
 
 pkg_setup() {
 	if [[ "${ROOT}" == "/" ]]; then

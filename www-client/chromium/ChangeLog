@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.65 2010/03/12 09:08:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.66 2010/03/13 10:21:54 phajdan.jr Exp $
+
+  13 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-5.0.307.11.ebuild, chromium-5.0.342.3.ebuild,
+  chromium-9999.ebuild:
+  Add blocker for incompatible plugin (gecko-mediaplayer) when
+  USE=plugins-symlink is enabled, bug #309231 by George Reitsma
+  <g.p.reitsma@ieee.org>. Also clean up DEPEND vs. RDEPEND a bit.
 
 *chromium-5.0.342.3 (12 Mar 2010)
 
