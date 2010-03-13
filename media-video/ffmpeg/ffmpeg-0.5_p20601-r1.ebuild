@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.5_p20601-r1.ebuild,v 1.4 2010/01/26 15:56:13 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.5_p20601-r1.ebuild,v 1.5 2010/03/13 14:33:52 lu_zero Exp $
 
 EAPI=2
 SCM=""
@@ -64,6 +64,8 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
+	dirac? ( dev-util/pkgconfig )
+	schroedinger? ( dev-util/pkgconfig )
 	mmx? ( dev-lang/yasm )
 	doc? ( app-text/texi2html )
 	test? ( net-misc/wget )
