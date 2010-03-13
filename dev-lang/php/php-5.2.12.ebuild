@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.12.ebuild,v 1.9 2010/01/31 19:53:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.12.ebuild,v 1.10 2010/03/13 18:23:23 ssuominen Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -135,6 +135,8 @@ src_unpack() {
 	fi
 
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 
 	# Concurrent PHP Apache2 modules support
 	if use apache2 ; then
