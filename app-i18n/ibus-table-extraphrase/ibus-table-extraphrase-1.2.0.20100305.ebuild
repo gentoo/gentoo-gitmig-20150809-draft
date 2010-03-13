@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-extraphrase/ibus-table-extraphrase-1.1.0.20090327.ebuild,v 1.1 2009/04/02 16:00:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-extraphrase/ibus-table-extraphrase-1.2.0.20100305.ebuild,v 1.1 2010/03/13 00:54:30 matsuu Exp $
 
 DESCRIPTION="Chinese extra phrases for ibus-table based IME"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -18,5 +18,5 @@ RDEPEND=""
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die
 }

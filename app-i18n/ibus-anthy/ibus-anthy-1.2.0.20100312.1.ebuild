@@ -1,36 +1,37 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.99.20100202.ebuild,v 1.1 2010/02/04 11:19:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20100312.1.ebuild,v 1.1 2010/03/13 00:54:44 matsuu Exp $
 
-EAPI="2"
+EAPI=2
+
 inherit eutils python
 
-PYDB_TAR="pinyin-database-1.2.99.tar.bz2"
-DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
+DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
-	http://ibus.googlecode.com/files/${PYDB_TAR}"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-RDEPEND=">=app-i18n/ibus-1.1.0
-	>=dev-lang/python-2.5[sqlite]
+RDEPEND=">=app-i18n/ibus-1.2.0.20090904
+	app-i18n/anthy
+	>=dev-lang/python-2.5
+	>=dev-python/pygtk-2.15.2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	dev-lang/swig
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
 src_prepare() {
-	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/data/db/open-phrase/ || die
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
 }
 
 src_configure() {
-	econf $(use_enable nls) --enable-db-open-phrase || die
+	econf $(use_enable nls) || die
 }
 
 src_install() {
@@ -40,6 +41,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog
+	elog "app-dicts/kasumi is not required but probably useful for you."
+	elog
+	elog "# emerge app-dicts/kasumi"
+	elog
+
 	python_mod_optimize /usr/share/${PN}
 }
 
