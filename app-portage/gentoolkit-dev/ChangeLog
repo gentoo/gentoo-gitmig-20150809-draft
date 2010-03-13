@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/gentoolkit-dev
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.79 2009/11/12 20:12:46 idl0r Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.80 2010/03/13 11:15:47 idl0r Exp $
+
+*gentoolkit-dev-0.2.6.13-r1 (13 Mar 2010)
+
+  13 Mar 2010; Christian Ruppert <idl0r@gentoo.org>
+  -gentoolkit-dev-0.2.6.13.ebuild, +gentoolkit-dev-0.2.6.13-r1.ebuild,
+  +files/echangelog_add-vcs-switch.patch,
+  +files/echangelog_fix-textwrap-regex.patch,
+  +files/echangelog_improve-vcs-detection.patch:
+  Rev bump to 0.2.6.13-r1. Apply patches to fix bug 302784 and bug 304249,
+  thanks to Martin von Gagern <Martin.vGagern@gmx.net> and Torsten Veller
+  <tove@gentoo.org>.
 
   12 Nov 2009; Christian Ruppert <idl0r@gentoo.org>
   gentoolkit-dev-0.2.6.13.ebuild:

@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.6.13.ebuild,v 1.2 2009/11/12 20:12:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.6.13-r1.ebuild,v 1.1 2010/03/13 11:15:47 idl0r Exp $
 
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -20,6 +22,11 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	sed -i -e 's:sh test:bash test:' src/echangelog/Makefile || die
+
+	# bug 302784 and bug 304249
+	epatch "${FILESDIR}/echangelog_improve-vcs-detection.patch" \
+		"${FILESDIR}/echangelog_add-vcs-switch.patch" \
+		"${FILESDIR}/echangelog_fix-textwrap-regex.patch"
 }
 
 src_test() {
