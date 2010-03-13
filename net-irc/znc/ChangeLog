@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.29 2010/03/12 12:40:11 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.30 2010/03/13 00:03:07 wired Exp $
+
+  12 Mar 2010; Alex Alexander <wired@gentoo.org> znc-0.078.ebuild,
+  znc-0.080.ebuild:
+  added ~arm to newer versions, accidentally lost on 0.078 bump
 
 *znc-0.080 (12 Mar 2010)
 
