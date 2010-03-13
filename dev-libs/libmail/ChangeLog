@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/libmail
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.1 2010/03/13 20:45:24 hwoarang Exp $
+
+*libmail-0.3 (13 Mar 2010)
+
+  13 Mar 2010; Markos Chandras <hwoarang@gentoo.org> +libmail-0.3.ebuild,
+  +metadata.xml:
+  Initial commit of libmail library. Moved from sunrise overlay. Fixes bug
+  #270065. Thanks to Dimitris Mandalidis <mandas@users.sourceforge.net> for
+  the initial ebuild
+
