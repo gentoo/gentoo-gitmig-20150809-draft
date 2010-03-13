@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.56 2010/02/20 23:10:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.57 2010/03/13 19:11:52 pacho Exp $
+
+*emul-linux-x86-soundlibs-20100220-r1 (13 Mar 2010)
+
+  13 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-soundlibs-20100220-r1.ebuild:
+  Fix bug 307893 to provide media-libs/libmikmod:2, that will be included in
+  tarball in the next emul round.
 
 *emul-linux-x86-soundlibs-20100220 (20 Feb 2010)
 
