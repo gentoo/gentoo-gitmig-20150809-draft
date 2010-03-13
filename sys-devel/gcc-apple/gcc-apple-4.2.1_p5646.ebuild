@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.6 2010/03/12 12:09:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.7 2010/03/13 14:57:39 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ case ${CHOST} in
 	*-darwin1*|i?86-*-darwin9|powerpc-*-darwin9)
 		LIBSTDCXX_APPLE_VERSION=39
 	;;
-	*)  
+	*)
 		# pre Leopard has no dtrace, which is required by 37.11 and above
 		# Leopard only has 32-bits version of dtrace
 		LIBSTDCXX_APPLE_VERSION=16
