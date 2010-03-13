@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.0-r1.ebuild,v 1.6 2010/03/07 17:56:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.0-r1.ebuild,v 1.7 2010/03/13 15:10:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -27,6 +27,7 @@ src_compile() {
 	# More than -O1 gives problems.
 	replace-flags -O? -O1
 	filter-flags -fomit-frame-pointer
+	use amd64 && append-flags -DCRYPTOPP_DISABLE_ASM
 	use sse3 || append-flags -DCRYPTOPP_DISABLE_SSE2
 	emake -f GNUmakefile \
 		LIBDIR="$(get_libdir)" \
