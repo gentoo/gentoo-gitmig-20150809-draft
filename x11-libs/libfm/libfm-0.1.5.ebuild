@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.5.ebuild,v 1.1 2010/03/13 16:19:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.5.ebuild,v 1.2 2010/03/13 16:30:05 yngwin Exp $
 
 EAPI="2"
 inherit eutils
@@ -18,6 +18,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
 	>=lxde-base/menu-cache-0.3.2"
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
