@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.57 2010/03/12 18:19:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.58 2010/03/13 16:41:34 ranger Exp $
+
+  13 Mar 2010; Brent Baude <ranger@gentoo.org> xfe-1.32.1.ebuild:
+  stable ppc64, bug 309023
 
   12 Mar 2010; Markos Chandras <hwoarang@gentoo.org> xfe-1.32.1.ebuild:
   Stable on amd64 wrt bug #309023
