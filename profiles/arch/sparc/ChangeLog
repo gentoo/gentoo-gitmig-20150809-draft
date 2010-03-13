@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.85 2010/03/03 09:28:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.86 2010/03/13 15:01:22 ssuominen Exp $
+
+  13 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask libpng-1.4 pending on texlive-core-2009 unmasking.
 
   03 Mar 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
   Mask all of KDE SC 4.4.x, not just 4.4.0

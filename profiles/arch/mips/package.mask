@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.7 2010/01/25 12:22:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.8 2010/03/13 15:00:11 ssuominen Exp $
 
 # Unmask =mozilla-thunderbird-1.5* until 2.0 is keyworded and stabilized
 -=mail-client/mozilla-thunderbird-1.5*
@@ -8,6 +8,10 @@
 # Mask pam_ldap and nss_ldap - openldap dep missing.
 sys-auth/pam_ldap
 sys-auth/nss_ldap
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Mar 2010)
+# Only texlive-core-2009 is patched for libpng-1.4.
+>=media-libs/libpng-1.4
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing

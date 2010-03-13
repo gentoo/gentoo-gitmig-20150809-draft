@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.26 2010/01/25 12:22:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.27 2010/03/13 14:58:35 ssuominen Exp $
+
+  13 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask libpng-1.4 pending on texlive-core-2009 unmasking.
 
   25 Jan 2010; Alexis Ballier <aballier@gentoo.org> +package.mask:
   Move TeX Live 2009 mask here from global package.mask, remove it once
