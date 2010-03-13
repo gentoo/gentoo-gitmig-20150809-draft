@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.148 2010/03/04 10:35:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.149 2010/03/13 18:38:06 armin76 Exp $
+
+  13 Mar 2010; Raúl Porcel <armin76@gentoo.org> pwlib-1.10.10-r2.ebuild:
+  alpha/ia64/sparc stable wrt #307739
 
   04 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   pwlib-1.10.10-r2.ebuild:
