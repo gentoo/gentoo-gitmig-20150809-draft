@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/desktopcouch
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/ChangeLog,v 1.1 2010/03/13 18:33:38 neurogeek Exp $
+
+*desktopcouch-0.6.1 (13 Mar 2010)
+
+  13 Mar 2010; Jesus Rivero <neurogeek@gentoo.org>
+  +desktopcouch-0.6.1.ebuild, +files/desktopcouch-setup_hardlinks.patch,
+  +metadata.xml:
+  Initial commit. Closes bug #290160.
+
