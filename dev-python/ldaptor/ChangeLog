@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.34 2010/02/07 21:07:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.35 2010/03/13 19:14:42 arfrever Exp $
+
+  13 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ldaptor-0.0.43.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> ldaptor-0.0.43.ebuild:
   Add inherit eutils: epatch is defined there.

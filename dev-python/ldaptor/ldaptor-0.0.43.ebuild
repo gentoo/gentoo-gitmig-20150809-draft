@@ -1,8 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.14 2010/02/07 21:07:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.15 2010/03/13 19:14:42 arfrever Exp $
 
-inherit eutils distutils
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="trial"
+DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
+
+inherit distutils eutils
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://www.inoi.fi/open/trac/ldaptor"
@@ -19,9 +25,9 @@ DEPEND=">=dev-python/twisted-2
 	dev-python/twisted-mail
 	dev-python/pyparsing
 	web? (
-		dev-python/webut
 		>=dev-python/nevow-0.3
 		dev-python/twisted-web
+		dev-python/webut
 	)
 	doc? (
 		dev-python/epydoc
@@ -30,12 +36,11 @@ DEPEND=">=dev-python/twisted-2
 	)
 	samba? ( dev-python/pycrypto )"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="README TODO ldaptor.schema"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-zope_interface.patch"
 	epatch "${FILESDIR}/${P}-usage-exception.patch"
 }
@@ -60,21 +65,24 @@ src_test() {
 	if ! use web; then
 		rm -f ldaptor/test/test_webui.py
 	fi
-	PYTHONPATH=. trial ldaptor || die "test failed"
+
+	distutils_src_test
 }
 
 src_install() {
 	distutils_src_install
 
 	if ! use web; then
-		rm "${D}"/usr/bin/ldaptor-webui || die "couldn't rm ldaptor-webui"
-		rm -rf "${D}"/$(python_get_sitedir)/ldaptor/apps/webui || die "couldn't prune webui"
+		rm -f "${D}"usr/bin/ldaptor-webui*
+		rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/ldaptor/apps/webui
 	else
-		cp ldaptor/apps/webui/skin-default.html "${D}"/$(python_get_sitedir)/ldaptor/apps/webui \
-			|| die "couldn't copy default skin"
+		copy_skin-default() {
+			cp ldaptor/apps/webui/skin-default.html "${D}$(python_get_sitedir)/ldaptor/apps/webui"
+		}
+		python_execute_function -q copy_skin-default
 	fi
 
-	# install examples
+	# Install examples.
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins -r doc/api doc/ldap-intro doc/examples
