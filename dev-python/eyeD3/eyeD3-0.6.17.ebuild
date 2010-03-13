@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.11 2010/02/16 07:44:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.12 2010/03/13 17:59:18 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON="2.5"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
