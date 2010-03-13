@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.11 2009/11/25 22:14:58 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.12 2010/03/13 18:59:15 arfrever Exp $
+
+  13 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  webut-0.1.0.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> webut-0.1.0.2.ebuild:
   amd64 stable, bug #284764
