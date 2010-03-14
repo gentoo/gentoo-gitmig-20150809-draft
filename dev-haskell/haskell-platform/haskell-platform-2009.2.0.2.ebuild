@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/haskell-platform-2009.2.0.2.ebuild,v 1.2 2009/08/02 14:12:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/haskell-platform-2009.2.0.2.ebuild,v 1.3 2010/03/14 18:58:30 kolmodin Exp $
 
 # for slot dependencies
 EAPI=1
@@ -17,9 +17,9 @@ IUSE=""
 # use gnome style of meta packages;
 # minimum version, open range
 
-# for the packages parsec and quickcheck we depend on SLOT="0" to not get too
-# recent versions (quickcheck-2 and parsec-3 which behaves significantly
-# different)
+# for the packages parsec (SLOT=0) and quickcheck (SLOT=1) we depend on
+# different SLOTs to not get too recent versions (quickcheck-2 and parsec-3
+# which behaves significantly different)
 
 # for the regex-packages we don't want the 0.9x series, and there is currently
 # no way in portage to specify a from-to range interval. thus, we depend on the
@@ -40,7 +40,7 @@ DEPEND="~dev-lang/ghc-6.10.4
 		>=dev-haskell/opengl-2.2.1.1
 		>=dev-haskell/parallel-1.1.0.1
 		>=dev-haskell/parsec-2.1.0.1:0
-		>=dev-haskell/quickcheck-1.2.0.0:0
+		>=dev-haskell/quickcheck-1.2.0.0:1
 		>=dev-haskell/stm-2.1.1.2
 		>=dev-haskell/time-1.1.2.4
 		>=dev-haskell/xhtml-3000.2.0.1

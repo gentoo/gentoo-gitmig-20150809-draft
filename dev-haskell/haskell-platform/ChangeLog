@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-platform
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.3 2009/11/01 11:19:52 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.4 2010/03/14 18:58:30 kolmodin Exp $
+
+  14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  haskell-platform-2009.2.0.2.ebuild:
+  Reflect that dev-haskell/quickcheck-1* now has SLOT=1.
 
   01 Nov 2009; <kolmodin@gentoo.org> -haskell-platform-2009.2.0.ebuild:
   Remove old version as its dependency ghc-6.10.2 has been removed too.
