@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.13 2010/03/14 21:33:29 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.14 2010/03/14 21:44:49 vostorga Exp $
+
+  14 Mar 2010; Víctor Ostorga <vostorga@gentoo.org> lxsession-0.4.2.ebuild:
+  Adding sys-apps/dbus as RDEPEND
 
 *lxsession-0.4.2 (14 Mar 2010)
 
