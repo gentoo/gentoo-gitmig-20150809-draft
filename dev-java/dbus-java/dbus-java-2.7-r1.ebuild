@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.6.ebuild,v 1.1 2009/04/29 17:53:35 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.1 2010/03/14 10:43:01 serkan Exp $
 
 EAPI="2"
 
@@ -30,7 +30,6 @@ DEPEND=">=virtual/jdk-1.5
 
 java_prepare() {
 	epatch "${FILESDIR}/${PN}-2.5.1-jarfixes.patch"
-	epatch "${FILESDIR}/${P}-disconnectfix.patch"
 }
 
 src_compile() {
@@ -53,7 +52,7 @@ src_compile() {
 src_install() {
 	local debug="disable"
 	use debug && debug="enable"
-	for jar in unix debug-${debug}; do
+	for jar in unix hexdump debug-${debug}; do
 		java-pkg_register-dependency libmatthew-java ${jar}.jar
 	done
 	java-pkg_newjar lib${P}.jar dbus.jar
