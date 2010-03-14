@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.7 2008/05/14 18:13:14 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.8 2010/03/14 12:31:41 kolmodin Exp $
 #
 # darcs eclass author:  Andres Loeh <kosmikus@gentoo.org>
 # tla eclass author:    <rphillips@gentoo.org>
@@ -51,7 +51,7 @@ SRC_URI=""
 # --- end ebuild-configurable settings ---
 
 # add darcs to deps
-DEPEND="dev-util/darcs"
+DEPEND="dev-vcs/darcs"
 
 # is called from darcs_src_unpack
 darcs_fetch() {
