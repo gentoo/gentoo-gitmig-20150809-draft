@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.126 2010/03/10 22:56:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.127 2010/03/14 17:42:30 armin76 Exp $
+
+  14 Mar 2010; Raúl Porcel <armin76@gentoo.org> glade-3.6.7.ebuild:
+  arm/ia64/sh/sparc stable wrt #298204
 
   10 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> -glade-3.6.3.ebuild,
   -glade-3.6.4.ebuild, -files/glade-3.6.4-fix-linking.patch,
