@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.1 2010/03/03 03:49:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.2 2010/03/14 18:09:44 jsbronder Exp $
 
 EAPI=2
 inherit eutils fortran
@@ -120,7 +120,7 @@ src_configure() {
 	c="${c} --sysconfdir=/etc/${PN}"
 	econf ${c} ${romio_conf} \
 		--docdir=/usr/share/doc/${PF} \
-		--with-pm=mpd:gforker \
+		--with-pm=mpd:hydra:gforker \
 		--disable-mpe \
 		$(use_enable romio) \
 		$(use_enable cxx) \

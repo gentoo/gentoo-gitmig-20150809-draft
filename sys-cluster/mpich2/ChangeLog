@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.50 2010/03/03 03:49:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.51 2010/03/14 18:09:44 jsbronder Exp $
+
+  14 Mar 2010; Justin Bronder <jsbronder@gentoo.org> mpich2-1.2.1_p1.ebuild:
+  Add hydra pm, #309353
 
 *mpich2-1.2.1_p1 (03 Mar 2010)
 
