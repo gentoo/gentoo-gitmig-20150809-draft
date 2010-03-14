@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/ansi-wl-pprint
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.1 2010/03/14 18:12:04 kolmodin Exp $
+
+*ansi-wl-pprint-0.5.1 (14 Mar 2010)
+
+  14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +ansi-wl-pprint-0.5.1.ebuild, +metadata.xml:
+  Initial version.
+
