@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-1.0.ebuild,v 1.14 2007/12/13 00:51:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-1.0.ebuild,v 1.15 2010/03/14 18:42:10 kolmodin Exp $
 
 inherit ghc-package
 
@@ -8,7 +8,7 @@ DESCRIPTION="An automatic, specification based testing utility for Haskell progr
 HOMEPAGE="http://haskell.org/ghc/"
 SRC_URI=""
 LICENSE="BSD"
-SLOT="0"
+SLOT="1"
 
 KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""

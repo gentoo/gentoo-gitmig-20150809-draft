@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.37 2010/03/14 18:29:10 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.38 2010/03/14 18:42:10 kolmodin Exp $
+
+  14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> quickcheck-1.0.ebuild,
+  quickcheck-1.0.1.ebuild, quickcheck-1.1.0.0.ebuild,
+  quickcheck-1.2.0.0.ebuild:
+  Move SLOT=0 to SLOT=1 for quickcheck-1*.
 
   14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   quickcheck-1.2.0.0.ebuild:
