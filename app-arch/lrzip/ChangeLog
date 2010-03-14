@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lrzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.9 2010/01/07 14:49:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.10 2010/03/14 21:23:50 spatz Exp $
+
+*lrzip-0.44 (14 Mar 2010)
+
+  14 Mar 2010; Dror Levin <spatz@gentoo.org> +lrzip-0.44.ebuild:
+  Version bump, bug 302913.
 
 *lrzip-0.43 (07 Jan 2010)
 
