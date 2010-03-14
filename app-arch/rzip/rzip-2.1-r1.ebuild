@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/rzip-2.1-r1.ebuild,v 1.1 2010/01/17 19:30:05 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/rzip-2.1-r1.ebuild,v 1.2 2010/03/14 16:06:31 bangert Exp $
 
 EAPI="2"
 
@@ -24,4 +24,16 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
+}
+
+pkg_postinst() {
+	ewarn "Warning: Gentoo shipped a broken rzip for quite some time. During"
+	ewarn "compression of large files it didn't set the right file size, so"
+	ewarn "if you have any reason to believe that your archive was compressed "
+	ewarn "with an old Gentoo rzip, please refer to "
+	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=217552 "
+	ewarn "for the rzip-handle-broken-archive.patch patch to rescue your"
+	ewarn "data."
+	ewarn
+	ewarn "We apologize for the inconvenience."
 }
