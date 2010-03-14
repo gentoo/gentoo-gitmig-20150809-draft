@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.165 2010/03/12 21:24:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.166 2010/03/14 11:19:31 pacho Exp $
+
+*libgphoto2-2.4.8-r1 (14 Mar 2010)
+
+  14 Mar 2010; Pacho Ramos <pacho@gentoo.org> +libgphoto2-2.4.8-r1.ebuild,
+  +files/libgphoto2-2.4.8-increase_max_entries.patch:
+  Fix bug 291049 with debian patch until upstream releases 2.6 series or
+  backports the fix
 
   12 Mar 2010; Brent Baude <ranger@gentoo.org> libgphoto2-2.4.8.ebuild:
   Marking libgphoto2-2.4.8 ppc64 stable for bug 308549
