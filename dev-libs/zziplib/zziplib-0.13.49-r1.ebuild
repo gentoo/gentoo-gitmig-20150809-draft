@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.49-r1.ebuild,v 1.14 2009/01/07 17:48:46 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.49-r1.ebuild,v 1.15 2010/03/14 20:22:33 reavertm Exp $
 
 inherit libtool fixheadtails eutils
 
@@ -48,5 +48,5 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install install-man3 || die "make install failed"
 	dodoc ChangeLog README TODO
-	dohtml docs/*
+	dohtml -r docs/*
 }

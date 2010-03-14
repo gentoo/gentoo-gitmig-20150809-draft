@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.71 2010/02/21 00:12:40 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.72 2010/03/14 20:22:32 reavertm Exp $
+
+*zziplib-0.13.58-r1 (14 Mar 2010)
+
+  14 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  zziplib-0.13.49-r1.ebuild, -zziplib-0.13.58.ebuild,
+  +zziplib-0.13.58-r1.ebuild:
+  All: fixed one QA warning (dohtml -r needed), Testing: added doc and
+  static-libs USE flags, xmlto removed from dependencies, moved python
+  to DEPEND, ACK from Mike
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> zziplib-0.13.58.ebuild:
   Transfer prefix keywords, dep on app-text/xmlto on Darwin

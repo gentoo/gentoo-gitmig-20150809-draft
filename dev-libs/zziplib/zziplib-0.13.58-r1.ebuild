@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.58.ebuild,v 1.2 2010/02/21 00:12:40 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.58-r1.ebuild,v 1.1 2010/03/14 20:22:33 reavertm Exp $
 
 EAPI="2"
 
@@ -13,15 +13,14 @@ SRC_URI="mirror://sourceforge/zziplib/${P}.tar.bz2"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="sdl test"
+IUSE="doc sdl static-libs test"
 
-RDEPEND=">=dev-lang/python-2.4
-	sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.6 )"
 DEPEND="${RDEPEND}
+	>=dev-lang/python-2.4
 	dev-util/pkgconfig
-	test? ( app-arch/zip )
-	kernel_Darwin? ( app-text/xmlto )"
+	test? ( app-arch/zip )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.13.49-SDL-test.patch
@@ -33,7 +32,10 @@ src_prepare() {
 
 src_configure() {
 	append-flags -fno-strict-aliasing # bug reported upstream
-	econf $(use_enable sdl)
+	export ac_cv_path_XMLTO=
+	econf \
+		$(use_enable sdl) \
+		$(use_enable static-libs static)
 }
 
 src_test() {
@@ -43,7 +45,16 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-man3 || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
+
+	if ! use static-libs; then
+		find "${D}" -type f -name '*.la' -exec rm {} + \
+			|| die "la removal failed"
+	fi
+
 	dodoc ChangeLog README TODO
-	dohtml docs/*
+
+	if use doc; then
+		dohtml -r docs/* || die 'dohtml failed'
+	fi
 }
