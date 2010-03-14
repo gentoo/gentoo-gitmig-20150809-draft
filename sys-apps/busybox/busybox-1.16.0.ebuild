@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.16.0.ebuild,v 1.1 2010/03/14 19:55:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.16.0.ebuild,v 1.2 2010/03/14 21:49:33 solar Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -58,7 +58,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug make-symlinks ipv6 -pam selinux static"
+IUSE="debug ipv6 make-symlinks +mdev -pam selinux static"
 RESTRICT="test"
 
 DEPEND="selinux? ( sys-libs/libselinux )
@@ -199,8 +199,10 @@ src_install() {
 	else
 		dobin bb || die
 	fi
-	dosym /bin/bb /sbin/mdev
-
+	if use mdev; then
+		use make-symlinks || dosym /bin/bb /sbin/mdev
+		cp "${S}"/examples/mdev_fat.conf "${D}"/etc/mdev.conf
+	fi
 	insinto /$(get_libdir)/rcscripts/addons
 	doins "${FILESDIR}"/mdev-start.sh || die
 

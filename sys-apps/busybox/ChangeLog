@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.242 2010/03/14 19:55:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.243 2010/03/14 21:49:33 solar Exp $
+
+  14 Mar 2010; <solar@gentoo.org> metadata.xml, busybox-1.16.0.ebuild:
+  - also install mdev.conf when USE=mdev is enabled (default)
 
 *busybox-1.16.0 (14 Mar 2010)
 
