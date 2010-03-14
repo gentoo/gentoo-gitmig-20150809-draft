@@ -1,6 +1,12 @@
 # ChangeLog for games-action/violetland
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.4 2010/02/10 20:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.5 2010/03/14 23:19:42 mr_bones_ Exp $
+
+*violetland-0.2.9 (14 Mar 2010)
+
+  14 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +violetland-0.2.9.ebuild:
+  version bump
 
 *violetland-0.2.8 (10 Feb 2010)
 
