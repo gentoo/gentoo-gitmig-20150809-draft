@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.4 2009/07/20 23:10:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.5 2010/03/14 21:55:48 eva Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-panel-2
+	>=gnome-base/gnome-session-2.26
 	xklavier? ( >=x11-libs/libxklavier-3.5 )
 	x11-libs/libXft
 	app-text/iso-codes
