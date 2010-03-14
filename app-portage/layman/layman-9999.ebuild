@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.8 2010/03/06 12:41:09 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.9 2010/03/14 12:41:16 kolmodin Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
@@ -25,7 +25,7 @@ DEPEND="${COMMON_DEPS}
 RDEPEND="${COMMON_DEPS}
 	bazaar? ( dev-vcs/bzr )
 	cvs? ( dev-util/cvs )
-	darcs? ( dev-util/darcs )
+	darcs? ( dev-vcs/darcs )
 	git? ( dev-util/git )
 	mercurial? ( dev-vcs/mercurial )
 	subversion? (
