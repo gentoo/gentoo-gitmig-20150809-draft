@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.6 2010/01/30 18:22:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.7 2010/03/14 09:56:12 hwoarang Exp $
 
 inherit fortran flag-o-matic
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://itpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="blas debug doc fftw lapack minimal"
 
 RDEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
