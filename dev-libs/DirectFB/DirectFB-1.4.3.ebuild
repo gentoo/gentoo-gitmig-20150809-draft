@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.3.ebuild,v 1.1 2010/01/16 05:21:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.3.ebuild,v 1.2 2010/03/14 14:55:52 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -51,6 +51,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2.7-CFLAGS.patch
 	epatch "${FILESDIR}"/${PN}-1.2.0-headers.patch
 	epatch "${FILESDIR}"/${PN}-1.1.1-pkgconfig.patch
+
+	# info_ptr->trans_alpha might be no-go with libpng12
+	has_version ">=media-libs/libpng-1.4" && epatch \
+		"${FILESDIR}"/${P}-libpng14.patch
 
 	# Avoid invoking `ld` directly #300779
 	find -name Makefile.in -exec sed -i \
