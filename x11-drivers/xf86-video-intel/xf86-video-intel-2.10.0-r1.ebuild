@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.10.0-r1.ebuild,v 1.1 2010/03/14 22:37:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.10.0-r1.ebuild,v 1.2 2010/03/14 22:42:25 remi Exp $
 
 EAPI=3
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/renderproto
 	x11-proto/xextproto
+	x11-proto/xineramaproto
 	x11-proto/xproto
 	dri? ( x11-proto/xf86driproto
 	       x11-proto/glproto )"
