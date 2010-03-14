@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.4.ebuild,v 1.4 2010/03/07 11:03:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.4.ebuild,v 1.5 2010/03/14 13:05:50 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="setup.py"
@@ -46,7 +46,5 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-
-	# Don't install C sources.
-	find "${D}"usr/$(get_libdir)/python*/site-packages -name "*.c" -o -name "*.h" | xargs rm -f
+	python_clean_sitedirs
 }
