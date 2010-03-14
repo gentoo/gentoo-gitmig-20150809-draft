@@ -62,3 +62,4 @@ move dev-util/svnmailer dev-vcs/svnmailer
 move dev-util/git-sh dev-vcs/git-sh
 slotmove >=sys-freebsd/freebsd-lib-7 7.0 0
 move dev-util/darcs dev-vcs/darcs
+slotmove =dev-haskell/quickcheck-1* 0 1
