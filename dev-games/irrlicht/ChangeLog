@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.37 2010/03/09 06:27:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.38 2010/03/14 18:50:37 tupone Exp $
+
+*irrlicht-1.7.1 (14 Mar 2010)
+
+  14 Mar 2010; Tupone Alfredo <tupone@gentoo.org> +irrlicht-1.7.1.ebuild,
+  +files/irrlicht-1.7.1-config.patch, +files/irrlicht-1.7.1-demoMake.patch:
+  Version bump to 1.7.1. Bug #308079 by Peter Asplund
 
   09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> irrlicht-1.6.1.ebuild:
   Fix building with libpng14.
