@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916-r1.ebuild,v 1.3 2010/03/06 22:03:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100308.ebuild,v 1.1 2010/03/14 20:23:43 tommy Exp $
 
 EAPI="2"
 
-inherit linux-mod toolchain-funcs
+inherit linux-mod multilib toolchain-funcs
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net"
@@ -25,7 +25,7 @@ MODULE_NAMES="aufs(misc:${S})"
 pkg_setup() {
 	get_version
 	kernel_is lt 2 6 27 && die "kernel too old"
-	kernel_is gt 2 6 31 && die "kernel too new"
+	kernel_is gt 2 6 33 && die "kernel too new"
 
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
 		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
@@ -50,9 +50,6 @@ pkg_setup() {
 
 src_prepare() {
 	local branch=origin/aufs2-${KV_PATCH}
-	if [[ $KV_PATCH == 31 ]] ; then
-		branch=origin/aufs2
-	fi
 	git checkout -q $branch || die
 	if ! use debug; then
 		sed -i "s:DEBUG = y:DEBUG =:g" config.mk || die
@@ -66,7 +63,7 @@ src_prepare() {
 
 	cd "${WORKDIR}"/${PN}-util
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
-	epatch "${FILESDIR}"/{${P}-makefile.patch,utils-2.6.31.patch}
+	sed -i -e "s:m 644 -s:m 644:g" -e "s:/usr/lib:/usr/$(get_libdir):g" libau/Makefile || die
 }
 
 src_compile() {
