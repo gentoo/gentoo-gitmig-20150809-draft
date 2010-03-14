@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.37 2010/01/08 21:55:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.38 2010/03/14 17:15:13 ssuominen Exp $
+
+*snes9x-1.52 (14 Mar 2010)
+
+  14 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +snes9x-1.52.ebuild,
+  +files/snes9x-1.52-build.patch:
+  Version bump wrt #254468 by Wizzleby.
 
   08 Jan 2010; Tupone Alfredo <tupone@gentoo.org>
   files/snes9x-1.51-config.patch:
