@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/echoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.11 2010/02/19 09:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.12 2010/03/14 13:57:16 graaff Exp $
+
+  14 Mar 2010; Hans de Graaff <graaff@gentoo.org> -echoe-4.0-r1.ebuild,
+  -echoe-4.1.ebuild:
+  Remove old versions.
 
 *echoe-4.2 (19 Feb 2010)
 
