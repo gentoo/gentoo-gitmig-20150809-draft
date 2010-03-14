@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.47 2010/03/07 09:48:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.48 2010/03/14 17:18:47 ssuominen Exp $
 
 # 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib
@@ -80,7 +80,7 @@ games-emulation/caps
 games-emulation/goosnes
 games-emulation/nestra
 games-emulation/snes9express
-games-emulation/snes9x
+<games-emulation/snes9x-1.52
 games-emulation/zinc
 games-emulation/zsnes
 games-fps/avp
