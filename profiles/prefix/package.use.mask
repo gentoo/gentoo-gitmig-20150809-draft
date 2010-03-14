@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.7 2010/02/22 17:08:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.8 2010/03/14 12:07:40 kolmodin Exp $
 
 # Jonathan Callen <abcd@gentoo.org> (22 Feb 2010)
 # ppp is not available in Prefix
@@ -43,6 +43,7 @@ dev-tex/feynmf doc
 
 # Elias Pipping <pipping@gentoo.org> (18 Nov 2007)
 # draws in tetex as a dependency -- there's only tetex 2, which blocks texlive
+dev-vcs/darcs doc
 dev-util/darcs doc
 
 # Elias Pipping <pipping@gentoo.org> (15 Nov 2007)
