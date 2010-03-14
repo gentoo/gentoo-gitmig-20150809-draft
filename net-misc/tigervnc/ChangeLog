@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.47 2010/03/12 17:35:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.48 2010/03/14 10:57:55 maekke Exp $
+
+  14 Mar 2010; Markus Meier <maekke@gentoo.org> tigervnc-1.0.0-r4.ebuild:
+  amd64 stable, bug #273107
 
   12 Mar 2010; Jeroen Roovers <jer@gentoo.org> tigervnc-1.0.0-r4.ebuild:
   Stable for HPPA (bug #273107).
