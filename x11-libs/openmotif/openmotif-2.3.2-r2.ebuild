@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.5 2010/03/08 16:58:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.6 2010/03/14 15:25:48 ulm Exp $
 
 EAPI=3
 
@@ -101,7 +101,7 @@ src_prepare() {
 
 src_configure() {
 	# get around some LANG problems in make (#15119)
-	unset LANG
+	LANG=C
 
 	# bug #80421
 	filter-flags -ftracer
