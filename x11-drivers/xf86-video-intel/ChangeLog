@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.48 2010/03/14 22:33:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.49 2010/03/14 22:37:49 remi Exp $
+
+*xf86-video-intel-2.10.0-r1 (14 Mar 2010)
+
+  14 Mar 2010; Rémi Cardona <remi@gentoo.org>
+  +files/2.10.0-0001-Extract-pixel-value-for-all-formats-to-avoid-hitting.pa
+  tch, -xf86-video-intel-2.10.0.ebuild, +xf86-video-intel-2.10.0-r1.ebuild:
+  new 2.10.0 ebuild from the overlay, fixes bugs #299907, #308501 and
+  #309067
 
   14 Mar 2010; Rémi Cardona <remi@gentoo.org>
   -files/2.6.3-0001-clean-up-man-page-generation-and-remove-all-traces-o.pat
