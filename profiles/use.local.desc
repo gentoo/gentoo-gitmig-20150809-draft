@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5389 2010/03/14 12:07:36 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5390 2010/03/14 12:09:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -513,7 +513,7 @@ app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLA
 app-portage/eix:tools - Create separate binary for script helper tools (currently only: versionsort); useful if they are called extremely often
 app-portage/gatt:libpaludis - Do some dependency resolution by using a sys-apps/paludis interface
 app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
-app-portage/layman:darcs - Support dev-vcs/darcs based overlays
+app-portage/layman:darcs - Support dev-util/darcs based overlays
 app-portage/layman:git - Support dev-util/git based overlays
 app-portage/layman:mercurial - Support dev-vcs/mercurial based overlays
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
@@ -3329,7 +3329,7 @@ www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vp
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Ads math rendering support
 www-apps/mediawiki:restrict - Initial setup will only allow sysop user to create new accounts, read and edit any pages
-www-apps/redmine:darcs - Enable support for dev-vcs/darcs
+www-apps/redmine:darcs - Enable support for dev-util/darcs
 www-apps/redmine:git - Enable support for dev-util/git
 www-apps/redmine:mercurial - Enable support for dev-util/mercurial
 www-apps/redmine:openid - Enable support for OpenID
