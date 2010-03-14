@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20100220-r2.ebuild,v 1.1 2010/03/14 15:50:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20100220-r2.ebuild,v 1.2 2010/03/14 15:54:29 ssuominen Exp $
 
 inherit emul-linux-x86
 
@@ -31,8 +31,8 @@ src_install() {
 	emul-linux-x86_src_install
 	insinto /usr/lib32/
 	doins "${DISTDIR}"/libglade-2.0.so.0.0.7 || die
-	dosym /usr/lib32/libglade-2.0.so.0.0.7 /usr/lib32/libglade-2.0.so.0 || die
-	dosym /usr/lib32/libglade-2.0.so.0.0.7 /usr/lib32/libglade-2.0.so || die
+	dosym libglade-2.0.so.0.0.7 /usr/lib32/libglade-2.0.so.0 || die
+	dosym libglade-2.0.so.0.0.7 /usr/lib32/libglade-2.0.so || die
 }
 
 pkg_preinst() {
