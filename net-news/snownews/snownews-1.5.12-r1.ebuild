@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.8.ebuild,v 1.1 2008/01/10 23:10:46 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.12-r1.ebuild,v 1.1 2010/03/14 11:26:50 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,9 +14,11 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="unicode"
 
 DEPEND=">=dev-libs/libxml2-2.5.6
-	>=sys-libs/ncurses-5.3"
+	>=sys-libs/ncurses-5.3
+	dev-libs/openssl"
 
-RDEPEND="dev-perl/XML-LibXML
+RDEPEND="${DEPEND}
+	dev-perl/XML-LibXML
 	dev-perl/XML-LibXSLT
 	dev-perl/libwww-perl"
 
@@ -31,19 +33,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	use unicode && sed -i -e "s/-lncurses/-lncursesw/" \
+		configure
+
 	sed -i -e "s/-O2//" \
 		configure
 
 	sed -i -e 's/$(INSTALL) -s/$(INSTALL)/' \
 		Makefile
-
-	#Bug #121805
-	epatch "${FILESDIR}"/${PN}-1.5.7-stdint.patch
 }
 
 src_compile() {
 	local conf="--prefix=/usr"
-	use unicode && conf="${conf} --charset=UTF-8"
 	./configure ${conf} || die "configure failed"
 	emake CC="$(tc-getCC)" EXTRA_CFLAGS="${CFLAGS}" EXTRA_LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
@@ -51,5 +52,5 @@ src_compile() {
 src_install() {
 	emake PREFIX="${D}/usr" install || die "make install failed"
 
-	dodoc AUTHOR CREDITS README README.colors README.de README.patching
+	dodoc AUTHOR Changelog CREDITS README README.de README.patching
 }
