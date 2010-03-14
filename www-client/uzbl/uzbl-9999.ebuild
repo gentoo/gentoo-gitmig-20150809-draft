@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.9 2010/01/27 15:33:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.10 2010/03/14 14:37:35 wired Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ RDEPEND="
 "
 
 pkg_setup() {
-	use experimental && EGIT_BRANCH="experimental"
+	use experimental && EGIT_BRANCH="experimental" && EGIT_COMMIT="experimental"
 
 	if ! use helpers; then
 		elog "uzbl's extra scripts use various optional applications:"
@@ -84,8 +84,12 @@ pkg_setup() {
 src_prepare() {
 	git_src_prepare
 
-	# patch Makefile to make it more sane
-	epatch "${FILESDIR}"/"${P}"-makefile-cleanup.patch
+	# patch Makefile for DOCDIR
+	epatch "${FILESDIR}"/"${PN}"-makefile-docdir.patch
+
+	# remove -ggdb
+	sed -i "s/-ggdb //g" Makefile ||
+		die "-ggdb removal sed failed"
 
 	# adjust path in default config file to /usr/share
 	sed -i "s:/usr/local/share/uzbl:/usr/share/uzbl:g" \
@@ -102,8 +106,6 @@ src_install() {
 	use browser && targets="${targets} install-uzbl-browser"
 	use browser && use tabbed && targets="${targets} install-uzbl-tabbed"
 
-	emake DESTDIR="${D}" PREFIX="/usr" ${targets} || die "Installation failed"
-
-	# Install the docs in /usr/share/doc.
-	dodoc AUTHORS README docs/* || die "docs install failed"
+	emake DESTDIR="${D}" PREFIX="/usr" DOCDIR="${D}/usr/share/doc/${PF}" ${targets} ||
+		die "Installation failed"
 }
