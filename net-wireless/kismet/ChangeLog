@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.106 2009/08/09 15:09:23 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.107 2010/03/14 13:19:08 yngwin Exp $
+
+*kismet-2010.01.1 (14 Mar 2010)
+
+  14 Mar 2010; Ben de Groot <yngwin@gentoo.org> +kismet-2010.01.1.ebuild:
+  Version bump. Ebuild as provided by Davide Pesavento in bug 273825.
 
   09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   kismet-2008.05.1.ebuild, +files/kismet-2008.05.1-glibc-2.10.patch:
@@ -407,13 +412,13 @@
   Sed fix and added inits to 2.8.1.ebuild
 
   3 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump.
-	
+
 *kismet-2.8.0b-r1 (29 Jan 2003)
 
   29 Jan 2003; Jared Hudson <jhhudso@gentoo.org> : Added ethereal use flag,
   and made ethereal download/compile optional based on that use flag. Bug #
   14565
-	
+
 *kismet-2.8.0b (30 Dec 2002)
 
   30 Dec 2002; Martin Holzer <mholzer@gentoo.org> kismet-2.8.0b.ebuild ChangeLog files/digest-kismet-2.8.0b :
@@ -431,22 +436,22 @@
 
 *kismet-2.6.2-r1 (20 Dec 2002)
 
-  23 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
+  23 Dec 2002; Christian Birchinger <joker@gentoo.org> :
   Removed sparc64 keyword.
 
   20 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Bug ID #12459. Credit goes
   to Nate Lynch <ntl@swt.edu>. Added dependency on >=net-libs/libpcap-0.7.1-r1.
-	
-	
+
+
   19 Dev 2002; Dean Bailey <alron@gentoo.org> : removed sparc64 keyword
 
 *kismet-2.6.2 (16 Dec 2002)
 
   16 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Bug ids #9349, 10643, 11018.
   ebuild submitted by Alberto Ornaghi <alor@blackhats.it>
-	
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
   31 Oct 2002; Hannes Mehnert <hannes@gentoo.org>:
   moved to net-wireless
 

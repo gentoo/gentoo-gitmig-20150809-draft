@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>mobile</herd>
+  <herd>mobile</herd>
+  <use>
+    <flag name="client">Build the ncurses-based user interface</flag>
+    <flag name="pcap">
+      Enable packet capturing support using <pkg>net-libs/libpcap</pkg>
+    </flag>
+	<flag name="suid">
+      Install a setuid root helper binary with limited functionality;
+      this allows running kismet as a normal user, significantly
+      reducing security risks
+    </flag>
+  </use>
 </pkgmetadata>
