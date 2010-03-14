@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.10 2010/03/14 14:37:35 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.11 2010/03/14 14:56:01 wired Exp $
 
 EAPI="2"
 
@@ -84,8 +84,8 @@ pkg_setup() {
 src_prepare() {
 	git_src_prepare
 
-	# patch Makefile for DOCDIR
-	epatch "${FILESDIR}"/"${PN}"-makefile-docdir.patch
+	# patch Makefile for DOCDIR - already applied in experimental branch
+	use experimental || epatch "${FILESDIR}"/"${PN}"-makefile-docdir.patch
 
 	# remove -ggdb
 	sed -i "s/-ggdb //g" Makefile ||
