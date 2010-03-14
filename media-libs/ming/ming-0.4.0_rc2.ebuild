@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.0_rc2.ebuild,v 1.9 2010/01/31 16:01:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.0_rc2.ebuild,v 1.10 2010/03/14 14:44:47 ssuominen Exp $
 
 EAPI=1
 
@@ -38,6 +38,7 @@ RESTRICT="test"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-0.4.x-libpng14.patch
 
 	#Let's get rid of the TEXTRELS, link dynamic. Use gif.
 	sed -i \
