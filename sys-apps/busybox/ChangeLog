@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.241 2010/03/14 17:55:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.242 2010/03/14 19:55:15 solar Exp $
+
+*busybox-1.16.0 (14 Mar 2010)
+
+  14 Mar 2010; <solar@gentoo.org> +files/busybox-1.16.0-bb.patch,
+  +busybox-1.16.0.ebuild:
+  - Version bump. Convert EAPI=2 and disable pam by default. Add ipv6 to IUSE
+  to disable v6 applets unless requested. 8 new applets otherwise.
+  lspci,lsusb,flashcp,mkfs.reiser,mkfs_ext2,ntpd,traceroute6,tune2fs,wall
 
   14 Mar 2010; Raúl Porcel <armin76@gentoo.org> busybox-1.15.3.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #305619
