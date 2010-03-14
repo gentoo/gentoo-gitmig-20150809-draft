@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11345 2010/03/14 12:15:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11346 2010/03/14 12:21:29 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,12 @@
 #--- END OF EXAMPLES ---
 
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
+# Mask for removal (#309281)
+dev-perl/XML-GDOME
+
+# Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask "End Of Life" versions
-<=www-apps/bugzilla-3.0
+<www-apps/bugzilla-3.0
 
 # Joe Peterson <lavajoe@gentoo.org> (13 Mar 2010)
 # Old, unmainted standalone kernel modules for older kernels.

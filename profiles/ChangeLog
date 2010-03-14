@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4021 2010/03/14 12:15:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4022 2010/03/14 12:21:29 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Mar 2010; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/XML-GDOME for removal (#309281)
 
   14 Mar 2010; Torsten Veller <tove@gentoo.org> package.mask:
   Mask end-of-life versions of www-apps/bugzilla
