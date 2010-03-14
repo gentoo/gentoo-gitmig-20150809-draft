@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.10.ebuild,v 1.1 2009/12/11 02:40:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.10.ebuild,v 1.2 2010/03/14 20:39:17 darkside Exp $
 
+PYTHON_DEPEND="2"
 inherit autotools eutils multilib python
 
 DESCRIPTION="Ham radio backend rig control libraries"
@@ -36,15 +37,10 @@ src_unpack() {
 	sed -i -e "s#fix}/lib#fix}/$(get_libdir)/hamlib#" \
 		-e "s#fix}/include#fix}/include/hamlib#" \
 		hamlib.pc.in || die "sed failed"
-	sed -i -e "s#/lib/#/$(get_libdir)/#g" \
-		bindings/Makefile.am || die "sed failed"
 
-	if use python ; then
-		# fix python lib path
-		python_version
-		sed -i -e "s#/python#/python${PYVER}#" \
-			bindings/Makefile.am || die "sed failed"
-	fi
+	# fix python and tcl lib path and
+	# drop unneeded search for python library
+	epatch "${FILESDIR}"/${PN}-bindings.diff
 
 	# avoid compilation and use of bundled libltdl copy
 	sed -i -e "s/lib libltdl src/lib src/g" \
@@ -60,7 +56,7 @@ src_compile() {
 		--with-rpc-backends \
 		--without-perl-binding \
 		$(use_with python python-binding) \
-		$(use_enable tcl  tcl-binding)
+		$(use_enable tcl tcl-binding)
 
 	emake || die "emake failed"
 
