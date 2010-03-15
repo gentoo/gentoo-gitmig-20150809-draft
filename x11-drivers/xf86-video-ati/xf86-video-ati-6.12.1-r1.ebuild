@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.1-r1.ebuild,v 1.11 2010/02/21 16:51:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.1-r1.ebuild,v 1.12 2010/03/15 22:57:09 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
-#SNAPSHOT="yes"
+SNAPSHOT="yes"
 
 EAPI=2
 
@@ -21,7 +21,6 @@ SRC_URI="${SRC_URI}
 RDEPEND=">=x11-base/xorg-server-1.2[-minimal]"
 DEPEND="${RDEPEND}
 	>=x11-libs/libdrm-2
-	>=x11-misc/util-macros-1.1.3
 	x11-proto/fontsproto
 	x11-proto/glproto
 	x11-proto/randrproto
@@ -37,13 +36,13 @@ CONFIGURE_OPTIONS="--enable-dri"
 #PATCHES=""
 
 src_prepare() {
-	x-modular_src_prepare
 	if [[ -n "${SRC_PATCHES}" ]]; then
 		EPATCH_FORCE="yes" \
 		EPATCH_SOURCE="${WORKDIR}/patches" \
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
+	x-modular_src_prepare
 }
 
 pkg_postinst() {
