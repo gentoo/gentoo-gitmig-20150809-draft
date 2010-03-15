@@ -1,6 +1,14 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.21 2010/03/15 15:46:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.22 2010/03/15 20:55:57 chithanh Exp $
+
+*gnash-0.8.7 (15 Mar 2010)
+
+  15 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnash-0.8.7.ebuild, +files/gnash-0.8.7-klash.patch,
+  +files/gnash-0.8.7-moc-qt4.patch, +files/gnash-0.8.7-xpcom-idldir.patch:
+  Version bump. Fixes bug #285157, bug #286444, bug #298848, bug #302793,
+  bug #304335 and bug #305311
 
   15 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.6.ebuild:
