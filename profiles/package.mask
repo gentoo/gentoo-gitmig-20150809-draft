@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11348 2010/03/14 22:38:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11349 2010/03/15 08:09:29 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (15 Mar 2010)
+# Replaced by games-board/pysolfc which is a fork
+# of original and now unmaintained pysol.
+#
+# Masked for removal in 30 days.
+games-board/pysol
+games-board/pysol-sound-server
+
+# Samuli Suominen <ssuominen@gentoo.org> (15 Mar 2010)
+# Replaced by USE=gtk in snes9x-1.52.
+#
+# Masked for removal in 30 days.
+games-emulation/goosnes
 
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask for removal (#309281)
