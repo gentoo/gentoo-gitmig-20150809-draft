@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.4.0.ebuild,v 1.1 2010/02/09 00:16:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.4.0.ebuild,v 1.2 2010/03/15 03:54:10 reavertm Exp $
 
 EAPI="2"
 
@@ -47,11 +47,4 @@ src_unpack() {
 	fi
 
 	kde4-meta_src_unpack
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/fix-broken-gpgme-cmake-guard.diff"
-
-	# Need to patch it this way
-	kde4-meta_src_prepare
 }

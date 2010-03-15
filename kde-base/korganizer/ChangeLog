@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.155 2010/03/11 18:38:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.156 2010/03/15 03:45:20 reavertm Exp $
+
+  14 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  korganizer-4.4.0.ebuild, korganizer-4.4.1.ebuild,
+  -files/fix-broken-gpgme-cmake-guard.diff:
+  Patch not needed anymore, now it's handled by eclass
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> korganizer-4.3.5.ebuild:
   Marking korganizer-4.3.5 ppc stable for bug 300393

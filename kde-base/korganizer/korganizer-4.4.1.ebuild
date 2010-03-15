@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.1.ebuild,v 1.1 2010/03/02 18:24:50 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.1.ebuild,v 1.2 2010/03/15 03:45:20 reavertm Exp $
 
 EAPI="3"
 
@@ -42,13 +42,6 @@ src_unpack() {
 	fi
 
 	kde4-meta_src_unpack
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/fix-broken-gpgme-cmake-guard.diff"
-
-	# Needs to be done this way
-	kde4-meta_src_prepare
 }
 
 pkg_postinst() {

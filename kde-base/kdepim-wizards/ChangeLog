@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.138 2010/03/11 18:37:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.139 2010/03/15 03:49:51 reavertm Exp $
+
+  15 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdepim-wizards-4.4.0.ebuild, kdepim-wizards-4.4.1.ebuild,
+  -files/fix-broken-gpgme-cmake-guard.diff:
+  Removed patch, it's now handled in eclass
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kdepim-wizards-4.3.5.ebuild:
   Marking kdepim-wizards-4.3.5 ppc stable for bug 300393
