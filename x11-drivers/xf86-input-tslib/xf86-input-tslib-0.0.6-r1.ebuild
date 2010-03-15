@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r1.ebuild,v 1.1 2010/02/19 06:42:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r1.ebuild,v 1.2 2010/03/15 16:46:50 vapier Exp $
 
 # Based on xf86-input-synaptics ebuild
 
@@ -17,8 +17,10 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
-RDEPEND="x11-base/xorg-server x11-libs/tslib"
-DEPEND="x11-proto/inputproto"
+RDEPEND="x11-base/xorg-server
+	x11-libs/tslib"
+DEPEND="${RDEPEND}
+	x11-proto/inputproto"
 
 S=${WORKDIR}/${PN}-trunk
 

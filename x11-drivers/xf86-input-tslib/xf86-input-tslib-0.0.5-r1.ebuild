@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5-r1.ebuild,v 1.12 2009/06/23 20:09:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5-r1.ebuild,v 1.13 2010/03/15 16:46:50 vapier Exp $
 
 # Based on xf86-input-synaptics ebuild
 
@@ -16,8 +16,11 @@ SRC_URI="http://www.pengutronix.de/software/${PN}/download/${P}.tar.bz2
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 sh sparc x86"
 LICENSE="GPL-2"
 IUSE=""
-RDEPEND="x11-base/xorg-server x11-libs/tslib"
-DEPEND="x11-proto/inputproto"
+
+RDEPEND="x11-base/xorg-server
+	x11-libs/tslib"
+DEPEND="${RDEPEND}
+	x11-proto/inputproto"
 
 # Remove stupid evdev checks.
 # Never die simply cuz kernel sources do not exist.
