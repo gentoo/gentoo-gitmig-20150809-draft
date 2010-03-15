@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.191.ebuild,v 1.1 2010/03/14 10:30:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.192.ebuild,v 1.1 2010/03/15 21:22:17 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2
@@ -18,7 +18,6 @@ DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/videoproto
 	x11-proto/xextproto
-	x11-proto/xineramaproto
 	x11-proto/xf86driproto
 	x11-proto/xf86miscproto
 	x11-proto/xproto"
