@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.57 2010/03/13 16:36:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.58 2010/03/15 19:21:35 nixnut Exp $
+
+  15 Mar 2010; nixnut <nixnut@gentoo.org> jed-0.99.19.ebuild:
+  ppc stable #307509
 
   13 Mar 2010; Brent Baude <ranger@gentoo.org> jed-0.99.19.ebuild:
   stable ppc64, bug 307509
