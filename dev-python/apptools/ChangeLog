@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apptools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.4 2009/09/06 15:36:49 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.5 2010/03/15 03:17:35 bicatali Exp $
+
+  15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -apptools-3.2.0.ebuild, apptools-3.3.0.ebuild:
+  Fixed building with new setuptools, bug #308193
 
 *apptools-3.3.0 (06 Sep 2009)
 
