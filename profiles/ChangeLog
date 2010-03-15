@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4026 2010/03/15 08:17:33 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4027 2010/03/15 11:56:12 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2010; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Mask faulty nx/nxnode versions, bug #304743
 
   14 Mar 2010; Alistair Bush <ali_bush@gentoo.org> package.mask:
   Package.mask dev-java/kaffe for removal.
