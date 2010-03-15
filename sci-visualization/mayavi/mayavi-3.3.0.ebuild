@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.3 2009/09/14 09:17:11 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.4 2010/03/15 03:22:41 bicatali Exp $
 
 EAPI="2"
 inherit distutils eutils
@@ -44,6 +44,9 @@ PYTHON_MODNAME=enthought
 src_prepare() {
 	# documentation generation requires X
 	epatch "${FILESDIR}"/${P}-nodocs.patch
+	sed -i \
+		-e "s/setupdocs>=1.0//" \
+		setup.py || die
 }
 
 src_install() {
