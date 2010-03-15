@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.716 2010/03/15 15:05:45 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.717 2010/03/15 15:13:19 lxnay Exp $
+
+  15 Mar 2010; Fabio Erculiani <lxnay@gentoo.org>
+  mplayer-1.0_rc4_p20100213-r1.ebuild, mplayer-9999.ebuild:
+  fine tune USE="vdpau" dependencies
 
   15 Mar 2010; Fabio Erculiani <lxnay@gentoo.org>
   mplayer-1.0_rc4_p20100213-r1.ebuild, mplayer-9999.ebuild:
