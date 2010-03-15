@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5395 2010/03/14 22:08:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5396 2010/03/15 00:27:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3070,7 +3070,7 @@ sec-policy/selinux-base-policy:open_perms - Enable the open permissions for file
 sec-policy/selinux-base-policy:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
 sys-apps/acl:nfs -  add support for NFS acls 
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
-sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf
+sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf and support files
 sys-apps/flashrom:ftdi - Enable flashing through FTDI/SPI USB interface
 sys-apps/flashrom:serprog - Enable Serial Flasher support
 sys-apps/gawk:libsigsegv - Support segfault recovery/debugging
