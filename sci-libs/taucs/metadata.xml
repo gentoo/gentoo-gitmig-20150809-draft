@@ -24,8 +24,6 @@
   * Utility Routines
 </longdescription>
 <use>
-  <flag name='metis'>Add partitioning support using metis
-    (<pkg>sci-libs/metis</pkg>, <pkg>sci-libs/parmetis</pkg>)</flag>
   <flag name='cilk'>Enable multithreading using <pkg>dev-lang/cilk</pkg>)</flag>
 </use>
 </pkgmetadata>
