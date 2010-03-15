@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.251 2010/03/01 22:07:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.252 2010/03/15 13:36:22 chainsaw Exp $
+
+*asterisk-1.6.2.6 (15 Mar 2010)
+
+  15 Mar 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.6.ebuild:
+  Version bump, some patches are now finally upstream.
 
 *asterisk-1.6.2.5 (01 Mar 2010)
 *asterisk-1.6.1.17 (01 Mar 2010)
