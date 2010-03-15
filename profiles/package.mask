@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11352 2010/03/15 11:56:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11353 2010/03/15 12:29:24 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (15 Mar 2010)
+# Masked until tarballs are released
+=media-sound/amarok-2.3.0
+=media-sound/amarok-utils-2.3.0
 
 # Bernard Cafarelli <voyageur@gentoo.org> (15 Mar 2010)
 # Problematic behavior with special keys (french Alt Gr,
