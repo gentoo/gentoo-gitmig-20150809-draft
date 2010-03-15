@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213-r1.ebuild,v 1.5 2010/03/15 15:13:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213-r1.ebuild,v 1.6 2010/03/15 15:15:35 lxnay Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ samba +shm +schroedinger sdl +speex sse sse2 ssse3 svga tga +theora +tremor
 +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
 [[ ${PV} == *9999* ]] && IUSE+=" external-ffmpeg"
 
-VIDEO_CARDS="s3virge mga tdfx nvidia vesa"
+VIDEO_CARDS="s3virge mga tdfx vesa"
 for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
