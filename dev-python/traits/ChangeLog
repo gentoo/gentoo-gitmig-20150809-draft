@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/traits
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.6 2009/11/08 19:57:11 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.7 2010/03/15 03:10:37 bicatali Exp $
+
+  15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> -traits-3.1.0.ebuild,
+  traits-3.2.0.ebuild:
+  Fixed building with new setuptools, bug #307609
 
   08 Nov 2009; nixnut <nixnut@gentoo.org> traits-3.2.0.ebuild:
   ppc stable #290607

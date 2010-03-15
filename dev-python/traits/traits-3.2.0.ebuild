@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.2.0.ebuild,v 1.6 2010/02/06 14:53:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.2.0.ebuild,v 1.7 2010/03/15 03:10:37 bicatali Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -33,7 +33,10 @@ PYTHON_MODNAME="enthought"
 DOCS="CHANGELOG.txt"
 
 src_prepare() {
-	sed -i -e "s/self.run_command('build_docs')/pass/" setup.py || die
+	sed -i \
+		-e "s/self.run_command('build_docs')/pass/" \
+		-e "s/setupdocs>=1.0//" \
+		setup.py || die
 }
 
 src_compile() {
