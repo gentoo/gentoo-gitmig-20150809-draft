@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r3.ebuild,v 1.3 2010/03/12 21:29:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r3.ebuild,v 1.4 2010/03/15 19:08:50 nixnut Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
 IUSE="avahi doc networkmanager python spell"
 
 RDEPEND=">=dev-libs/glib-2.18.0
