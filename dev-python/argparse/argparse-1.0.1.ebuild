@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.0.1.ebuild,v 1.4 2009/12/02 10:49:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.0.1.ebuild,v 1.5 2010/03/15 17:16:57 sping Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=""
 
 PYTHON_MODNAME="argparse.py"
