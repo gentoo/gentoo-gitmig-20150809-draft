@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/gnurobots
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.21 2010/03/11 16:27:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.22 2010/03/15 16:02:03 mr_bones_ Exp $
+
+  15 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  gnurobots-1.2.0.ebuild:
+  Add use-dep for guile (bug #308991)
 
   11 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
   gnurobots-1.2.0.ebuild:
