@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.72 2010/02/11 19:31:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.73 2010/03/15 19:54:21 darkside Exp $
+
+  15 Mar 2010; Jeremy Olexa <darkside@gentoo.org> terminus-font-4.30.ebuild:
+  Convert to EAPI3 and add EPREFIX where needed, bug 309603
 
   11 Feb 2010; Mark Loeser <halcy0n@gentoo.org> terminus-font-4.28.ebuild,
   terminus-font-4.30.ebuild:
