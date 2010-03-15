@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/font-micro-misc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-micro-misc/ChangeLog,v 1.27 2009/10/11 10:59:58 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-micro-misc/ChangeLog,v 1.28 2010/03/15 22:24:11 scarabeus Exp $
+
+*font-micro-misc-1.0.1 (15 Mar 2010)
+
+  15 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +font-micro-misc-1.0.1.ebuild:
+  Version bump.
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> font-micro-misc-1.0.0.ebuild:
   ppc stable #282290
