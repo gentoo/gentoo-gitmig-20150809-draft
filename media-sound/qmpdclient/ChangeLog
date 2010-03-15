@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.63 2010/01/14 12:33:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.64 2010/03/15 15:37:16 hwoarang Exp $
+
+*qmpdclient-1.1.2-r2 (15 Mar 2010)
+
+  15 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/directory_listing_gcc44.patch, +qmpdclient-1.1.2-r2.ebuild:
+  Apply patch from upstream to fix empty directory listing when qmpdclient
+  is compiled with gcc-4.4. Fixes bug #284524
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   qmpdclient-1.1.2.ebuild:
