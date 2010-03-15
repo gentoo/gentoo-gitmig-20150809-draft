@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.3.5.ebuild,v 1.3 2010/03/11 18:37:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.3.5-r1.ebuild,v 1.1 2010/03/15 03:39:29 reavertm Exp $
 
 EAPI="2"
 
@@ -27,6 +27,15 @@ KMEXTRACTONLY="
 	libkleo/
 "
 KMLOADLIBS="libkdepim libkleo"
+
+src_prepare() {
+	kde4-meta_src_prepare
+
+	sed -n -e '/qt4_generate_dbus_interface(.*org\.kde\.kmail\.\(kmail\|mailcomposer\)\.xml/p' \
+		-e '/add_custom_target(kmail_xml /,/)/p' \
+		-i kmail/CMakeLists.txt || die "uncommenting xml failed"
+	_change_cmakelists_parent_dirs kmail
+}
 
 src_configure() {
 	mycmakeargs=(

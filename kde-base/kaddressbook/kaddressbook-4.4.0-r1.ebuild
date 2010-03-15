@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.4.0.ebuild,v 1.1 2010/02/09 00:18:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.4.0-r1.ebuild,v 1.1 2010/03/15 03:39:29 reavertm Exp $
 
 EAPI="2"
 

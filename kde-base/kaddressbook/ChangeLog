@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.148 2010/03/11 18:37:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.149 2010/03/15 03:39:29 reavertm Exp $
+
+*kaddressbook-4.4.1-r1 (14 Mar 2010)
+*kaddressbook-4.4.0-r1 (14 Mar 2010)
+*kaddressbook-4.3.5-r1 (14 Mar 2010)
+
+  14 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -kaddressbook-4.3.5.ebuild, +kaddressbook-4.3.5-r1.ebuild,
+  -kaddressbook-4.4.0.ebuild, +kaddressbook-4.4.0-r1.ebuild,
+  -kaddressbook-4.4.1.ebuild, +kaddressbook-4.4.1-r1.ebuild:
+  Bumped to fix bug 303651 - handled in eclass now for >=4.4, apply
+  manually for 4.3.
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking kaddressbook-4.3.5 ppc stable for bug 300393
