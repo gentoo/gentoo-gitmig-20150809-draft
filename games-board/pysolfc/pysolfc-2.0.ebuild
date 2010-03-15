@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0.ebuild,v 1.4 2010/03/07 21:45:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0.ebuild,v 1.5 2010/03/15 08:52:04 ssuominen Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ inherit distutils eutils games
 MY_PN=PySolFC
 SOL_URI="mirror://sourceforge/${PN}"
 
-DESCRIPTION="A collection of more than 1000 solitaire card games"
+DESCRIPTION="An exciting collection of more than 1000 solitaire card games"
 HOMEPAGE="http://pysolfc.sourceforge.net/"
 SRC_URI="${SOL_URI}/${MY_PN}-${PV}.tar.bz2
 	extra-cardsets? ( ${SOL_URI}/${MY_PN}-Cardsets-${PV}.tar.bz2 )"
