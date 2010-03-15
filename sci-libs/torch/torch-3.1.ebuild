@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.1.ebuild,v 1.1 2010/02/13 20:33:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.1.ebuild,v 1.2 2010/03/15 04:48:17 bicatali Exp $
 
 inherit toolchain-funcs multilib
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	dolib lib/*/*.a || die
 	insinto /usr/include/torch
-	for directory in core ${torch_packages}; do
+	for directory in core ${TORCH_PACKAGES}; do
 		doins ${directory}/*.h || die
 	done
 
