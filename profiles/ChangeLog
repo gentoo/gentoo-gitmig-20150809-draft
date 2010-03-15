@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4025 2010/03/15 08:09:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4026 2010/03/15 08:17:33 ali_bush Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Mar 2010; Alistair Bush <ali_bush@gentoo.org> package.mask:
+  Package.mask dev-java/kaffe for removal.
 
   15 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask pysol and goosnes.

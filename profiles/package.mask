@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11349 2010/03/15 08:09:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11350 2010/03/15 08:17:34 ali_bush Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alistair Bush <ali_bush@gentoo.org> (15 Mar 2010)
+# Mask for removal (#309459).  Does not compile
+# and Dead upstream. Recommend icedtea jdk's for
+# a free alternative.
+dev-java/kaffe
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Mar 2010)
 # Replaced by games-board/pysolfc which is a fork
