@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7_p20100311.ebuild,v 1.1 2010/03/11 13:53:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7_p20100311-r1.ebuild,v 1.1 2010/03/15 18:08:47 flameeyes Exp $
+
+EAPI=2
 
 inherit eutils pam
 
@@ -23,11 +25,18 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-bug309311.patch
+}
+
+src_configure() {
 	econf \
 		--sysconfdir=/etc/security \
 		--libdir=/$(get_libdir) \
 		--docdir=/usr/share/doc/${PF} || die "econf failed"
+}
+
+src_compile() {
 	emake pammoddir="$(getpam_mod_dir)" || die "emake failed"
 }
 

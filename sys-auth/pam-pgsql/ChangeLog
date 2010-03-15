@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pam-pgsql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.1 2010/03/11 13:53:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/ChangeLog,v 1.2 2010/03/15 18:08:47 flameeyes Exp $
+
+*pam-pgsql-0.7_p20100311-r1 (15 Mar 2010)
+
+  15 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pam-pgsql-0.7_p20100311.ebuild, +pam-pgsql-0.7_p20100311-r1.ebuild,
+  +files/pam-pgsql-0.7_p20100311-bug309311.patch:
+  Add a patch to fix bug #309311, thanks to Giampaolo Tomassoni for
+  reporting.
 
 *pam-pgsql-0.7_p20100311 (11 Mar 2010)
 
