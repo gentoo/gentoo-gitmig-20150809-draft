@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.66 2010/03/11 18:54:12 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.67 2010/03/15 18:45:00 nixnut Exp $
+
+  15 Mar 2010; nixnut <nixnut@gentoo.org> libburn-0.7.6-r1.ebuild:
+  ppc stable #309053
 
 *libburn-0.7.8 (11 Mar 2010)
 
