@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.91 2010/01/31 15:30:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.92 2010/03/15 21:22:56 ulm Exp $
+
+*tramp-2.1.18 (15 Mar 2010)
+
+  15 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +tramp-2.1.18.ebuild,
+  +files/tramp-2.1.18-fix-texinfo.patch:
+  Version bump.
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> tramp-2.1.17.ebuild:
   alpha/sparc stable wrt #301301
