@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.8.ebuild,v 1.3 2010/03/12 21:24:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.8.ebuild,v 1.4 2010/03/15 18:59:01 nixnut Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
 IUSE="bonjour doc examples exif hal nls kernel_linux"
 
 # ???
