@@ -1,21 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.12 2010/03/15 09:37:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.03.14.ebuild,v 1.1 2010/03/15 09:37:38 wired Exp $
 
 EAPI="2"
 
-inherit base git
+inherit base
 
 DESCRIPTION="A keyboard controlled (modal vim-like bindings, or with modifierkeys) browser based on Webkit."
 HOMEPAGE="http://www.uzbl.org"
-SRC_URI=""
-
-EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/Dieterbe/uzbl.git"}
+SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS=""
-IUSE="+browser experimental helpers +tabbed"
+KEYWORDS="~amd64 ~x86"
+IUSE="+browser helpers +tabbed"
 
 COMMON_DEPEND="
 	>=dev-libs/icu-4.0.1
@@ -49,8 +47,6 @@ RDEPEND="
 "
 
 pkg_setup() {
-	use experimental && EGIT_BRANCH="experimental" && EGIT_COMMIT="experimental"
-
 	if ! use helpers; then
 		elog "uzbl's extra scripts use various optional applications:"
 		elog
@@ -82,7 +78,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	git_src_prepare
+	cd "${WORKDIR}"/Dieterbe-uzbl-*
+	S=$(pwd)
+
+	# patch Makefile to make it more sane
+	epatch "${FILESDIR}"/"${PN}"-makefile-docdir.patch
 
 	# remove -ggdb
 	sed -i "s/-ggdb //g" Makefile ||

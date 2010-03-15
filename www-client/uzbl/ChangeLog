@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.22 2010/03/14 14:56:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.23 2010/03/15 09:37:38 wired Exp $
+
+*uzbl-2010.03.14 (15 Mar 2010)
+
+  15 Mar 2010; Alex Alexander <wired@gentoo.org> +uzbl-2010.03.14.ebuild,
+  uzbl-9999.ebuild:
+  version bump. removed makefile patch from -9999 (applied upstream)
 
   14 Mar 2010; Alex Alexander <wired@gentoo.org> uzbl-9999.ebuild:
   makefile patch applied upstream in experimental branch, don't try to patch
