@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.42 2010/03/12 21:24:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.43 2010/03/15 18:58:13 nixnut Exp $
+
+  15 Mar 2010; nixnut <nixnut@gentoo.org> gtk-vnc-0.3.10.ebuild:
+  ppc stable #308549
 
   12 Mar 2010; Brent Baude <ranger@gentoo.org> gtk-vnc-0.3.10.ebuild:
   Marking gtk-vnc-0.3.10 ppc64 stable for bug 308549
