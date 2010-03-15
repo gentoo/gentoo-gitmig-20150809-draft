@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.33 2010/02/02 14:20:16 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.34 2010/03/15 03:35:39 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -573,7 +573,15 @@ kde4-meta_change_cmakelists() {
 			sed -r -e '/find_package\(KdepimLibs/s/REQUIRED//' \
 				-e '/find_package\((KdepimLibs|Boost|QGpgme|Akonadi|ZLIB|Strigi|SharedDesktopOntologies|Soprano|Nepomuk)/{/macro_optional_/!s/find/macro_optional_&/}' \
 				-e '/macro_log_feature\((Boost|QGPGME|Akonadi|ZLIB|STRIGI|SHAREDDESKTOPONTOLOGIES|Soprano|Nepomuk)_FOUND/s/ TRUE / FALSE /' \
+				-e '/if[[:space:]]*([[:space:]]*BUILD_.*)/s/^/#OVERRIDE /' \
+				-e '/if[[:space:]]*([[:space:]]*[[:alnum:]]*_FOUND[[:space:]]*)/s/^/#OVERRIDE /' \
 				-i CMakeLists.txt || die "failed to disable hardcoded checks"
+			# Disable broken or redundant build logic
+			if ( has kontact ${IUSE//+} && use kontact ) || [[ ${PN} = kontact ]]; then
+				sed -e '/if[[:space:]]*([[:space:]]*BUILD_.*)/s/^/#OVERRIDE /' \
+					-e '/if[[:space:]]*([[:space:]]*[[:alnum:]]*_FOUND[[:space:]]*)/s/^/#OVERRIDE /' \
+					-i kontact/plugins/CMakeLists.txt || die 'failed to override build logic'
+			fi
 			if ! slot_is_at_least 4.5 ${SLOT}; then
 				case ${PN} in
 					kalarm|kmailcvt|kontact|korganizer|korn)
