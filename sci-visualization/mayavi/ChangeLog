@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.13 2010/03/15 03:22:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.14 2010/03/15 03:42:46 bicatali Exp $
+
+  15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.3.0.ebuild:
+  Added use dependencies for qt4 and wxwidgets
 
   15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> -mayavi-3.2.0.ebuild,
   mayavi-3.3.0.ebuild:
