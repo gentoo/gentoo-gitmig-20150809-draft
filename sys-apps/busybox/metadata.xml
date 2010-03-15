@@ -4,6 +4,6 @@
 <herd>embedded</herd>
 <use>
 <flag name="make-symlinks">Create all the appropriate symlinks in /bin and /sbin.</flag>
-<flag name="mdev">Create the appropriate symlink in /sbin and install mdev.conf</flag>
+<flag name="mdev">Create the appropriate symlink in /sbin and install mdev.conf and support files</flag>
 </use>
 </pkgmetadata>

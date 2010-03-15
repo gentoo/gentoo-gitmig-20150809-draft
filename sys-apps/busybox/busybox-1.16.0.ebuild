@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.16.0.ebuild,v 1.2 2010/03/14 21:49:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.16.0.ebuild,v 1.3 2010/03/15 00:21:50 solar Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -200,11 +200,16 @@ src_install() {
 		dobin bb || die
 	fi
 	if use mdev; then
+		dodir /$(get_libdir)/mdev/
 		use make-symlinks || dosym /bin/bb /sbin/mdev
 		cp "${S}"/examples/mdev_fat.conf "${D}"/etc/mdev.conf
+
+		exeinto /$(get_libdir)/mdev/
+		doexe "${FILESDIR}"/mdev/*
+
+		insinto /$(get_libdir)/rcscripts/addons
+		doins "${FILESDIR}"/mdev-start.sh || die
 	fi
-	insinto /$(get_libdir)/rcscripts/addons
-	doins "${FILESDIR}"/mdev-start.sh || die
 
 	# bundle up the symlink files for use later
 	emake install || die
@@ -221,7 +226,7 @@ src_install() {
 	dodoc *.txt
 	docinto pod
 	dodoc *.pod
-	dohtml *.html *.sgml
+	dohtml *.html
 
 	cd ../examples || die
 	docinto examples

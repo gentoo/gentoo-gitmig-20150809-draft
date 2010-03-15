@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.244 2010/03/14 22:29:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.245 2010/03/15 00:21:50 solar Exp $
+
+  15 Mar 2010; <solar@gentoo.org> busybox-1.16.0.ebuild, +files/mdev/dvbdev,
+  +files/mdev/ide_links, +files/mdev/usbdev, +files/mdev/usbdisk_link,
+  metadata.xml:
+  import mdev.conf support scripts from Aline Linux 1.10.0
 
   14 Mar 2010; Markus Meier <maekke@gentoo.org> busybox-1.15.3.ebuild:
   amd64 stable, bug #305619
