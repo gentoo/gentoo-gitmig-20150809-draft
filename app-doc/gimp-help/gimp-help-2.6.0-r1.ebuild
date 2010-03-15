@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-2.6.0-r1.ebuild,v 1.6 2010/03/01 12:23:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-2.6.0-r1.ebuild,v 1.7 2010/03/15 19:54:57 ranger Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://docs.gimp.org/"
 
 LICENSE="FDL-1.2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE=""
 
