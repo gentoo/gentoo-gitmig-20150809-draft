@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.715 2010/03/09 14:25:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.716 2010/03/15 15:05:45 lxnay Exp $
+
+  15 Mar 2010; Fabio Erculiani <lxnay@gentoo.org>
+  mplayer-1.0_rc4_p20100213-r1.ebuild, mplayer-9999.ebuild:
+  there is no need to depend against x11-drivers/nvidia-drivers for
+  USE="vdpau", x11-libs/libvdpau is enough
 
   09 Mar 2010; Steve Dibb <beandog@gentoo.org> mplayer-9999.ebuild:
   Drop dvbhead argument, bug 307951

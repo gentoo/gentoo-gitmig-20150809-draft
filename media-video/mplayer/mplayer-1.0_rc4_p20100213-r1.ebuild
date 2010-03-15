@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213-r1.ebuild,v 1.3 2010/03/02 22:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100213-r1.ebuild,v 1.4 2010/03/15 15:05:45 lxnay Exp $
 
 EAPI="2"
 
@@ -84,9 +84,7 @@ RDEPEND+="
 		)
 		opengl? ( virtual/opengl )
 		truetype? ( ${FONT_RDEPS} )
-		video_cards_nvidia? (
-			vdpau? ( >=x11-drivers/nvidia-drivers-180.60 )
-		)
+		vdpau? ( x11-libs/libvdpau )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? (
@@ -580,7 +578,7 @@ src_configure() {
 		use dga || myconf+=" --disable-dga1 --disable-dga2"
 		use opengl || myconf+=" --disable-gl"
 		use osdmenu && myconf+=" --enable-menu"
-		use video_cards_nvidia && use vdpau || myconf+=" --disable-vdpau"
+		use vdpau || myconf+=" --disable-vdpau"
 		use video_cards_vesa || myconf+=" --disable-vesa"
 		use vidix || myconf+=" --disable-vidix --disable-vidix-pcidb"
 		use xscreensaver || myconf+=" --disable-xss"
