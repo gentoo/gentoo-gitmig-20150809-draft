@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.ebuild,v 1.1 2010/01/12 17:45:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.ebuild,v 1.2 2010/03/15 00:55:34 mr_bones_ Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_prepare() {
+	# make src_test work
+	echo gnome-hearts.desktop.in >> po/POTFILES.skip
+
 	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-python.patch
 	intltoolize --force --copy --automake || die
