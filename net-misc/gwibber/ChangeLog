@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gwibber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.7 2010/03/15 02:28:50 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.8 2010/03/15 02:40:52 neurogeek Exp $
+
+*gwibber-2.29.92.1 (15 Mar 2010)
+
+  15 Mar 2010; Jesus Rivero <neurogeek@gentoo.org>
+  +gwibber-2.29.92.1.ebuild:
+  Version bump. Closes bug #304341
 
   15 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> -gwibber-0.7.ebuild:
   Removed older version.
