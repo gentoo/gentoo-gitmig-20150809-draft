@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.137 2010/03/15 18:50:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.138 2010/03/15 19:05:51 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -591,10 +591,9 @@ pbxt_src_configure() {
 	AT_GNUCONF_UPDATE="yes" eautoreconf
 
 	local myconf=""
-	myconf="${myconf} --with-mysql=${S} --libdir=${MY_LIBDIR}"
+	myconf="${myconf} --with-mysql=${S} --libdir=/usr/$(get_libdir)"
 	use debug && myconf="${myconf} --with-debug=full"
-	# TODO: is it safe/needed to use econf here ?
-	./configure ${myconf} || die "Problem configuring PBXT storage engine"
+	econf ${myconf} || die "Problem configuring PBXT storage engine"
 }
 
 pbxt_src_compile() {
