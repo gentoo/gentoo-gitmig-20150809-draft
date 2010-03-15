@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.4 2009/02/23 17:30:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.5 2010/03/15 05:45:42 bicatali Exp $
 
-inherit eutils toolchain-funcs fortran
+EAPI=2
+inherit eutils toolchain-funcs
 
 MY_P="${PN}${PV//.}"
 DESCRIPTION="FORTRAN/C device-independent scientific graphic library"
@@ -22,19 +23,14 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}"
 
-FORTRAN="g77 gfortran ifc"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-drivers.patch
 	epatch "${FILESDIR}"/${PN}-makemake.patch
 	epatch "${FILESDIR}"/${PN}-compile-setup.patch
 	epatch "${FILESDIR}"/${PN}-headers.patch
 
 	# gfortran < 4.3 does not compile gif, pp and wd drivers
-	if [[ "${FORTRANC}" == gfortran ]] &&
+	if [[ "$(tc-getFC)" == gfortran ]] &&
 		[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]] ; then
 		ewarn
 		ewarn "Warning!"
@@ -60,11 +56,11 @@ src_unpack() {
 	cp sys_linux/g77_gcc.conf local.conf
 
 	sed -i \
-		-e "s:FCOMPL=.*:FCOMPL=\"${FORTRANC}\":g" \
+		-e "s:FCOMPL=.*:FCOMPL=\"$(tc-getFC)\":g" \
 		-e "s:CCOMPL=.*:CCOMPL=\"$(tc-getCC)\":g" \
 		local.conf || die "sed flags failed"
 
-	if [[ "${FORTRANC}" = if* ]]; then
+	if [[ "$(tc-getFC)" = if* ]]; then
 		sed -i \
 			-e 's/-Wall//g' \
 			-e 's/TK_LIBS="/TK_LIBS="-nofor-main /' \

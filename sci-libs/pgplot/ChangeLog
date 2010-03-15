@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pgplot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.17 2009/02/23 17:30:38 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.18 2010/03/15 05:45:42 bicatali Exp $
+
+  15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  pgplot-5.2.2-r3.ebuild:
+  Removed fortran eclass and switched to EAPI2
 
   23 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   pgplot-5.2.2-r3.ebuild:
