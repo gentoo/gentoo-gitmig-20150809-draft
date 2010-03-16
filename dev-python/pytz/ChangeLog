@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.61 2010/03/16 10:46:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.62 2010/03/16 18:26:29 fauli Exp $
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org> pytz-2010b.ebuild:
+  stable x86, bug 306797
 
   16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> pytz-2010b.ebuild:
   amd64 stable, bug 306797
