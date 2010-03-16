@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.18 2010/03/16 09:32:55 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.19 2010/03/16 09:42:51 djc Exp $
+
+*mod_wsgi-3.2 (16 Mar 2010)
+
+  16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> +mod_wsgi-3.2.ebuild:
+  Version bump to 3.2.
 
   16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> mod_wsgi-3.1.ebuild:
   amd64 stable, bug 300246
