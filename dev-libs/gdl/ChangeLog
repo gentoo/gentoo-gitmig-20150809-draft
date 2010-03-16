@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.36 2010/03/06 20:18:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.37 2010/03/16 18:30:36 fauli Exp $
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org> gdl-2.28.2.ebuild:
+  stable x86, bug 298200
 
   06 Mar 2010; Pacho Ramos <pacho@gentoo.org> gdl-2.28.2.ebuild:
   amd64 stable, bug 298200
