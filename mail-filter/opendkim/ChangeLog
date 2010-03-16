@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.10 2010/03/09 00:43:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.11 2010/03/16 09:57:54 dragonheart Exp $
+
+  16 Mar 2010; Daniel Black <dragonheart@gentoo.org>
+  files/opendkim-2.0.0-lua-ldap.patch:
+  fix digest and patch - id tag in patch. bug #308765 thanks to Gary E.
+  Miller
 
   09 Mar 2010; Daniel Black <dragonheart@gentoo.org> opendkim-2.0.0.ebuild,
   +files/opendkim-2.0.0-lua-ldap.patch:
