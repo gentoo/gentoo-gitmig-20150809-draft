@@ -2,7 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>no-herd</herd>
-  <maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
+        <maintainer>
+                <email>patrick@gentoo.org</email>
+                <name>Patrick Lauer</name>
+        </maintainer>
+        <maintainer>
+                <email>ua_bugz_gentoo@mortal-soul.de</email>
+                <name>Matthias Dahl </name>
+        </maintainer>
+
   <longdescription lang="en">
 		strongSwan is an OpenSource IPsec implementation for the Linux
 		operating system. It is based on the discontinued FreeS/WAN project and
@@ -13,5 +21,10 @@
   <use>
     <flag name="cisco">Enable support of Cisco VPN client</flag>
     <flag name="nat">Enable NAT traversal with IPsec transport mode</flag>
+    <flag name="gcrypt">Enable gcrypt support</flag>
+    <flag name="ikev1">Enable ikev1 protocol</flag>
+    <flag name="ikev2">Enable ikev2 protocol</flag>
+    <flag name="openssl">Enable openssl support</flag>
+    <flag name="non-root">Enable running as non-root</flag>
   </use>
 </pkgmetadata>
