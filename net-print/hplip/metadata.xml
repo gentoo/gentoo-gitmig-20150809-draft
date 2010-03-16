@@ -21,10 +21,6 @@
 
   <use>
     <flag name="doc">Build documentation</flag>
-    <flag name="cupsddk">Add support for <pkg>net-print/cupsddk</pkg> which
-    enables dynamic PPD files (recommended)</flag>
-    <flag name="dbus">Add support for <pkg>sys-apps/dbus</pkg> which enables
-    better communications with your device (recommended)</flag>
     <flag name="fax">Enable fax on multifunction devices which support
     it</flag>
     <flag name="gtk">Enable GTK+ dependencies, currently only the scanner GUI
@@ -40,8 +36,6 @@
     it</flag>
     <flag name="policykit">Enable sys-auth/policykit authentication
     support</flag>
-    <flag name="ppds">Use precompiled PPD files (obsolete, use cupsddk
-    instead)</flag>
     <flag name="qt4">Enable graphical interface using Qt 4</flag>
     <flag name="scanner">Enable scanner on multifunction devices which support
     it</flag>

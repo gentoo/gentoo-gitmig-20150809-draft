@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.149 2010/03/04 22:15:35 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.150 2010/03/16 17:48:47 billie Exp $
+
+  16 Mar 2010; Daniel Pielmeier <billie@gentoo.org> -hplip-2.8.6b.ebuild,
+  -hplip-3.9.8-r3.ebuild, metadata.xml:
+  Remove old.
 
   04 Mar 2010; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.12-r1.ebuild,
   hplip-3.10.2.ebuild:
