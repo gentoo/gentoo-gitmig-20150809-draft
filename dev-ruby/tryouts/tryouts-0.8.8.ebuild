@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/tryouts-0.8.7.ebuild,v 1.1 2010/02/17 19:13:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/tryouts-0.8.8.ebuild,v 1.1 2010/03/16 12:23:37 flameeyes Exp $
 
 EAPI=2
 
@@ -21,10 +21,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-all_ruby_prepare() {
-	epatch "${FILESDIR}"/${P}-fixes.patch
-}
 
 RESTRICT=test
 
