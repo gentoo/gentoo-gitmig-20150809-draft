@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.2.2.ebuild,v 1.5 2010/03/04 19:47:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.2.2.ebuild,v 1.6 2010/03/16 10:35:23 djc Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,7 +15,7 @@ HOMEPAGE="http://pygments.org/ http://pypi.python.org/pypi/Pygments"
 SRC_URI="http://pypi.python.org/packages/source/P/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 SLOT="0"
 IUSE="doc test"
 
