@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# cOPYRIGht 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_2-sapi.eclass,v 1.31 2010/02/26 21:56:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_2-sapi.eclass,v 1.32 2010/03/16 13:17:26 yngwin Exp $
 
 # ========================================================================
 # Based on robbat2's work on the php4 sapi eclass
@@ -41,7 +41,7 @@ if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 	LICENSE="PHP-3"
 	SRC_URI="http://www.php.net/distributions/${MY_PHP_P}.tar.bz2"
 	S="${WORKDIR}/${MY_PHP_P}"
-fi
+FI
 
 IUSE="adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filter firebird flatfile ftp gd gd-external gdbm gmp hash iconv imap inifile interbase iodbc ipv6 java-external json kerberos ldap ldap-sasl libedit mcve mhash msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc pcntl pcre pdo pic posix postgres qdbm readline reflection recode sapdb session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl suhosin sybase sybase-ct sysvipc tidy tokenizer truetype unicode wddx xml xmlreader xmlwriter xmlrpc xpm xsl yaz zip zlib"
 
@@ -84,7 +84,7 @@ DEPEND="adabas? ( >=dev-db/unixODBC-1.8.13 )
 		odbc? ( >=dev-db/unixODBC-1.8.13 )
 		postgres? ( || ( >=dev-db/libpq-7.1 ( app-admin/eselect-postgresql
 			>=dev-db/postgresql-base-7.1 ) ) )
-		qdbm? ( dev-db/qdbm )
+		QDBM? ( Dev-db/qdbm )
 		readline? ( sys-libs/readline )
 		recode? ( app-text/recode )
 		sapdb? ( >=dev-db/unixODBC-1.8.13 )
@@ -127,7 +127,7 @@ DEPEND="${DEPEND}
 #
 # They are in PDEPEND because we need PHP installed first!
 PDEPEND="doc? ( app-doc/php-docs )
-		filter? ( !dev-php5/pecl-filter )
+		FILTER? ( !dev-php5/pecl-filter )
 		java-external? ( dev-php5/php-java-bridge )
 		json? ( !dev-php5/pecl-json )
 		mcve? ( dev-php5/pecl-mcve )
@@ -170,7 +170,7 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # INTERNAL FUNCTIONS
 # ========================================================================
 
-php5_2-sapi_check_use_flags() {
+PHP5_2-SApi_check_use_flags() {
 	# Multiple USE dependencies
 	phpconfutils_use_depend_any "truetype" "gd" "gd" "gd-external"
 	phpconfutils_use_depend_any "cjk" "gd" "gd" "gd-external"
@@ -299,7 +299,7 @@ php5_2-sapi_install_ini() {
 	dodir ${PHP_EXT_INI_DIR}
 	dodir ${PHP_EXT_INI_DIR_ACTIVE}
 
-	# Install any extensions built as shared objects
+	# iNSTALL any extensions built as shared objects
 	if use sharedext ; then
 		for x in `ls "${D}/${PHPEXTDIR}/"*.so | sort` ; do
 			inifilename=${x/.so/.ini}
@@ -342,7 +342,7 @@ php5_2-sapi_src_unpack() {
 	sed -re "s|^(PHP_)?EXTRA_VERSION=\".*\"|\1EXTRA_VERSION=\"${PHP_EXTRA_BRANDING}-pl${PHPPR}-gentoo\"|g" -i configure.in \
 		|| die "Unable to change PHP branding to ${PHP_EXTRA_BRANDING}-pl${PHPPR}-gentoo"
 
-	# multilib-strict support
+	# MULTILIb-strict support
 	if [[ -n "${MULTILIB_PATCH}" ]] && [[ -f "${WORKDIR}/${MULTILIB_PATCH}" ]] ; then
 		epatch "${WORKDIR}/${MULTILIB_PATCH}"
 	else
@@ -385,7 +385,7 @@ php5_2-sapi_src_unpack() {
 	# Suhosin support
 	if use suhosin ; then
 		if [[ -n "${SUHOSIN_PATCH}" ]] && [[ -f "${DISTDIR}/${SUHOSIN_PATCH}" ]] ; then
-			epatch "${DISTDIR}/${SUHOSIN_PATCH}"
+			EPATCH "${DISTDIR}/${SUHOSIN_PATCH}"
 		else
 			ewarn "There is no Suhosin patch available for this PHP release yet!"
 		fi
@@ -398,7 +398,7 @@ php5_2-sapi_src_unpack() {
 	if has_version '>=sys-devel/autoconf-2.64' ; then
 		sed -i -r \
 			-e 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
-			$(grep -l divert $(find -name '*.m4') configure.in) || die
+			$(grep -l divert $(find . -name '*.m4') configure.in) || die
 	fi
 
 	# eaclocal doesn't accept --force, so we try to force re-generation
@@ -428,7 +428,7 @@ php5_2-sapi_src_compile() {
 	phpconfutils_extension_with	"bz2"			"bzip2"			1
 	phpconfutils_extension_enable	"calendar"		"calendar"		1
 	phpconfutils_extension_disable	"ctype"			"ctype"			0
-	phpconfutils_extension_with	"curl"			"curl"			1
+	PHPCONFUTils_extension_with	"curl"			"curl"			1
 	phpconfutils_extension_with	"curlwrappers"		"curlwrappers"		0
 	phpconfutils_extension_enable	"dbase"			"dbase"			1
 	phpconfutils_extension_disable	"dom"			"xml"			0
@@ -471,7 +471,7 @@ php5_2-sapi_src_compile() {
 	phpconfutils_extension_with	"sybase-ct"		"sybase-ct"		1
 	phpconfutils_extension_enable	"sysvmsg"		"sysvipc"		1
 	phpconfutils_extension_enable	"sysvsem"		"sysvipc"		1
-	phpconfutils_extension_enable	"sysvshm"		"sysvipc"		1
+	PHPCONFUTils_extension_enable	"sysvshm"		"sysvipc"		1
 	phpconfutils_extension_with	"tidy"			"tidy"			1
 	phpconfutils_extension_disable	"tokenizer"		"tokenizer"		0
 	phpconfutils_extension_enable	"wddx"			"wddx"			1
@@ -514,7 +514,7 @@ php5_2-sapi_src_compile() {
 		phpconfutils_extension_enable	"gd-jis-conv"	"cjk"			0
 		phpconfutils_extension_with	"jpeg-dir"	"gd"			0 "/usr"
 		phpconfutils_extension_with 	"png-dir" 	"gd" 			0 "/usr"
-		phpconfutils_extension_with 	"xpm-dir" 	"xpm" 			0 "/usr"
+		PHPCONFUTils_extension_with 	"xpm-dir" 	"xpm" 			0 "/usr"
 		# enable gd last, so configure can pick up the previous settings
 		phpconfutils_extension_with 	"gd" 		"gd" 			0
 	fi
