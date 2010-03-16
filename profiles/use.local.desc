@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5405 2010/03/16 19:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5406 2010/03/16 21:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2139,6 +2139,9 @@ media-video/winki:mjpeg - Enables mjpegtools support
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
+net-analyzer/barnyard2:aruba - Enable Aruba support
+net-analyzer/barnyard2:gre - Enable GRE support
+net-analyzer/barnyard2:mpls - Enable support for mpls networks
 net-analyzer/base:signatures - Install community signatures from net-analyzer/snort
 net-analyzer/bmon:rrdtool - Enables net-analyzer/rrdtool support
 net-analyzer/bwm-ng:csv - Enable csv output
