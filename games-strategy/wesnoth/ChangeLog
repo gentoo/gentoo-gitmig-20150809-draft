@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.170 2010/03/15 02:47:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.171 2010/03/16 16:19:44 mr_bones_ Exp $
+
+  16 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.6.5.ebuild,
+  wesnoth-1.7.15.ebuild:
+  make mycmakeargs an array
 
 *wesnoth-1.7.15 (15 Mar 2010)
 

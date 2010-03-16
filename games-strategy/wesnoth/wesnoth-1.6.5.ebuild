@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6.5.ebuild,v 1.5 2009/12/31 14:28:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6.5.ebuild,v 1.6 2010/03/16 16:19:44 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -50,32 +50,34 @@ src_configure() {
 		append-flags -fno-stack-protector
 	fi
 	if use dedicated || use server ; then
-		mycmakeargs="${mycmakeargs}
-			-DENABLE_CAMPAIGN_SERVER=TRUE
-			-DENABLE_SERVER=TRUE
-			-DSERVER_UID=${GAMES_USER_DED}
-			-DSERVER_GID=${GAMES_GROUP}
-			-DFIFO_DIR=${GAMES_STATEDIR}/run/wesnothd"
+		mycmakeargs=(
+			"-DENABLE_CAMPAIGN_SERVER=TRUE"
+			"-DENABLE_SERVER=TRUE"
+			"-DSERVER_UID=${GAMES_USER_DED}"
+			"-DSERVER_GID=${GAMES_GROUP}"
+			"-DFIFO_DIR=${GAMES_STATEDIR}/run/wesnothd"
+			)
 	else
-		mycmakeargs="${mycmakeargs}
-			-DENABLE_CAMPAIGN_SERVER=FALSE
-			-DENABLE_SERVER=FALSE"
+		mycmakeargs=(
+			"-DENABLE_CAMPAIGN_SERVER=FALSE"
+			"-DENABLE_SERVER=FALSE"
+			)
 	fi
-	mycmakeargs="
-		${mycmakeargs}
+	mycmakeargs+=(
 		$(cmake-utils_use_enable !dedicated GAME)
 		$(cmake-utils_use_enable !dedicated ENABLE_DESKTOP_ENTRY)
 		$(cmake-utils_use_enable nls NLS)
-		-DGUI=$(use tinygui && echo tiny || echo normal)
-		-DENABLE_FRIBIDI=FALSE
-		-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}
-		-DPREFERENCES_DIR=.wesnoth
-		-DDATAROOTDIR=${GAMES_DATADIR}
-		-DBINDIR=${GAMES_BINDIR}
-		-DICONDIR=/usr/share/pixmaps
-		-DDESKTOPDIR=/usr/share/applications
-		-DMANDIR=/usr/share/man
-		-DDOCDIR=/usr/share/doc/${PF}"
+		"-DGUI=$(use tinygui && echo tiny || echo normal)"
+		"-DENABLE_FRIBIDI=FALSE"
+		"-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
+		"-DPREFERENCES_DIR=.wesnoth"
+		"-DDATAROOTDIR=${GAMES_DATADIR}"
+		"-DBINDIR=${GAMES_BINDIR}"
+		"-DICONDIR=/usr/share/pixmaps"
+		"-DDESKTOPDIR=/usr/share/applications"
+		"-DMANDIR=/usr/share/man"
+		"-DDOCDIR=/usr/share/doc/${PF}"
+		)
 	cmake-utils_src_configure
 }
 
