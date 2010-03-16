@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.226 2010/03/11 22:07:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.227 2010/03/16 12:18:00 ssuominen Exp $
+
+*poppler-0.12.4-r1 (16 Mar 2010)
+
+  16 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +poppler-0.12.4-r1.ebuild:
+  Revision bump wrt #309739 to get poppler linked against lcms.
 
   11 Mar 2010; Ben de Groot <yngwin@gentoo.org> poppler-0.12.3-r3.ebuild,
   poppler-0.12.3-r5.ebuild, poppler-0.12.4.ebuild:
