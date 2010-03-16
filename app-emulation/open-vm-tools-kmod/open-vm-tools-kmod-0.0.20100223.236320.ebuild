@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-0.0.20100119.226760.ebuild,v 1.1 2010/02/19 17:53:19 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-0.0.20100223.236320.ebuild,v 1.1 2010/03/16 16:15:37 vadimk Exp $
 
 inherit linux-mod versionator
 
@@ -38,7 +38,7 @@ pkg_setup() {
 
 	for mod in ${VMWARE_MODULE_LIST};
 	do
-		if [ "${mod}" == "vmxnet" -o "${mod}" == "vmxnet3" ];
+		if [ "${mod}" == "vmxnet" ];
 		then
 			MODTARGET="net"
 		else
@@ -46,4 +46,8 @@ pkg_setup() {
 		fi
 		MODULE_NAMES="${MODULE_NAMES} ${mod}(${MODTARGET}:${S}/${VMWARE_MOD_DIR}/${mod})"
 	done
+}
+pkg_postinst() {
+	linux-mod_pkg_postinst
+	elog "vmxnet3 for Linux is now upstream (as of Linux 2.6.32)"
 }
