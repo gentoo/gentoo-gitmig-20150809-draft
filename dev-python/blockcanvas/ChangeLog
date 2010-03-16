@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/blockcanvas
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.4 2009/09/07 06:12:11 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.5 2010/03/16 19:11:17 bicatali Exp $
+
+  16 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -blockcanvas-3.1.0.ebuild:
+  Removed old
 
 *blockcanvas-3.1.0 (07 Sep 2009)
 

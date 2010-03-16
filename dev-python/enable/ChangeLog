@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enable
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.3 2009/09/05 22:31:52 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.4 2010/03/16 19:15:12 bicatali Exp $
+
+  16 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> -enable-3.1.0.ebuild:
+  Removed old
 
 *enable-3.2.0 (05 Sep 2009)
 
