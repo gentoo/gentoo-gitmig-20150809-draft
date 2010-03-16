@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/nouveau-drm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.7 2010/03/16 04:21:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.8 2010/03/16 18:54:09 chithanh Exp $
+
+*nouveau-drm-20100316 (16 Mar 2010)
+
+  16 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -nouveau-drm-20100216.ebuild, -nouveau-drm-20100221.ebuild,
+  -nouveau-drm-20100222.ebuild, +nouveau-drm-20100316.ebuild:
+  new snapshot, remove old
 
   16 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   nouveau-drm-20100226.ebuild:

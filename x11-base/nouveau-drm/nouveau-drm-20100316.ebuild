@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/nouveau-drm-20100216.ebuild,v 1.1 2010/02/17 20:46:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/nouveau-drm-20100316.ebuild,v 1.1 2010/03/16 18:54:09 chithanh Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/master
 
-CONFIG_CHECK="~BACKLIGHT_CLASS_DEVICE ~DEBUG_FS !DRM ~FB_CFB_FILLRECT ~FB_CFB_COPYAREA ~FB_CFB_IMAGEBLIT ~FRAMEBUFFER_CONSOLE ~!FB_VESA ~!FB_UVESA ~I2C_ALGOBIT ~VGA_ARB"
+CONFIG_CHECK="~BACKLIGHT_CLASS_DEVICE ~DEBUG_FS !DRM ~FB_CFB_FILLRECT ~FB_CFB_COPYAREA ~FB_CFB_IMAGEBLIT ~FRAMEBUFFER_CONSOLE ~!FB_UVESA ~I2C_ALGOBIT ~VGA_ARB"
 
 pkg_setup() {
 	linux-mod_pkg_setup
@@ -47,11 +47,4 @@ src_compile() {
 src_install() {
 	insinto /lib/modules/${KV_FULL}/${PN}
 	doins drivers/gpu/drm/{*/,}*.ko || die "doins failed"
-}
-
-pkg_postinst() {
-	if ! has_version x11-drivers/nouveau-firmware; then
-		ewarn "Nouveau firmware not detected, for acceleration on NV50 (G80)"
-		ewarn "and newer chipsets, emerge x11-drivers/nouveau-firmware."
-	fi
 }
