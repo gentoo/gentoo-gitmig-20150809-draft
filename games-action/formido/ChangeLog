@@ -1,6 +1,9 @@
 # ChangeLog for games-action/formido
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.8 2007/03/13 18:38:18 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.9 2010/03/16 14:56:18 mr_bones_ Exp $
+
+  16 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> formido-1.0.1.ebuild:
+  update HOMEPAGE (bug #309719)
 
 *formido-1.0.1 (13 Mar 2007)
 

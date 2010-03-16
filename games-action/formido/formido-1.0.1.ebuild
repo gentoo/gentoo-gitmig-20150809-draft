@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.1.ebuild,v 1.1 2007/03/13 18:38:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.1.ebuild,v 1.2 2010/03/16 14:56:18 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="A shooting game in the spirit of Phobia games"
-HOMEPAGE="http://www.mhgames.cjb.net/"
+HOMEPAGE="http://www.mhgames.org/oldies/formido/"
 SRC_URI="http://noe.falzon.free.fr/prog/${P}.tar.gz
 	http://koti.mbnet.fi/lsoft/formido/formido-music.tar.bz2"
 
