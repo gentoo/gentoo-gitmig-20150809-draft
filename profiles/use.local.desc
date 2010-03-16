@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5406 2010/03/16 21:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5407 2010/03/16 21:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2617,10 +2617,11 @@ net-misc/connman:resolvconf - Use net-dns/openresolv for managing DNS informatio
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:udev - Enable udev support.
 net-misc/curl:ares - Enabled c-ares dns support
-net-misc/curl:gnutls - Use gnutls as the crypto engine
+net-misc/curl:gnutls - Prefer gnutls over nss and openssl as the crypto engine
 net-misc/curl:libssh2 - Enabled SSH urls in curl using libssh2
-net-misc/curl:nss - Use NSS as the crypto engine
+net-misc/curl:nss - Prefer NSS over openssl as the crypto engine
 net-misc/curl:openssl - Use openssl as the crypto engine
+net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -nss')
 net-misc/dhcpcd:compat - Enable commandline compatibility with dhcpcd-3.x
 net-misc/directvnc:mouse - Adds mouse support
 net-misc/dnetstats:kde - Use kdesu to gain root access
