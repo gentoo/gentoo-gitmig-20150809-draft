@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/poedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.62 2010/02/10 19:16:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.63 2010/03/16 22:37:12 dirtyepic Exp $
+
+*poedit-1.4.5 (16 Mar 2010)
+
+  16 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> +poedit-1.4.5.ebuild:
+  Version bump.
 
   10 Feb 2010; Jeroen Roovers <jer@gentoo.org> poedit-1.4.3.ebuild:
   Stable for HPPA (bug #303285).
