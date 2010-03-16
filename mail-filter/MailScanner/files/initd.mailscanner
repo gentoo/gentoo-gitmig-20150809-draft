@@ -9,7 +9,11 @@ depend() {
 
 start() {
 	ebegin "Starting MailScanner"
-	/usr/sbin/check_MailScanner >/dev/null
+	#/usr/sbin/check_MailScanner >/dev/null
+	start-stop-daemon --start --pidfile /var/run/${SVCNAME}.pid \
+		--exec /usr/sbin/MailScanner -- /etc/MailScanner/MailScanner.conf ${OPT} > /var/run/${SVCNAME}.pid
+        eend $?
+
 	RETVAL=$?
 	[ ${RETVAL} -eq 0 ] && touch /var/lock/subsys/MailScanner
 	[ ${RETVAL} -eq 0 ] && rm -f /var/lock/subsys/MailScanner.off
@@ -18,7 +22,7 @@ start() {
 
 stop() {
 	ebegin "Stopping MailScanner"
-	killall -15 MailScanner
+	start-stop-daemon --stop --quiet --pidfile /var/run/${SVCNAME}.pid
 	RETVAL=$?
 	[ ${RETVAL} -eq 0 ] && rm -f /var/lock/subsys/MailScanner
 	[ ${RETVAL} -eq 0 ] && touch /var/lock/subsys/MailScanner.off
