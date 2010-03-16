@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/zlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.71 2009/10/10 17:01:04 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.72 2010/03/16 00:35:09 vapier Exp $
+
+*zlib-1.2.4 (16 Mar 2010)
+
+  16 Mar 2010; Mike Frysinger <vapier@gentoo.org> +zlib-1.2.4.ebuild,
+  +files/zlib-1.2.4-LDFLAGS.patch, +files/zlib-1.2.4-build.patch,
+  +files/zlib-1.2.4-visibility-support.patch:
+  Version bump #309623 by Samuli Suominen.
 
   10 Oct 2009; Mike Frysinger <vapier@gentoo.org> zlib-1.2.3-r1.ebuild,
   +files/zlib-1.2.3-mingw-implib.patch:
