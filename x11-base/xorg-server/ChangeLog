@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.490 2010/03/15 13:01:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.491 2010/03/16 01:21:03 solar Exp $
+
+  16 Mar 2010; <solar@gentoo.org> +files/tslib-1.0-check.patch,
+  xorg-server-1.7.5.902.ebuild:
+  tslib changed the tslib-0.0.pc to tslib.pc; We check for both. Bug #304067
 
 *xorg-server-1.7.5.902 (15 Mar 2010)
 

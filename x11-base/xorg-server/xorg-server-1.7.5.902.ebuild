@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.5.902.ebuild,v 1.1 2010/03/15 13:01:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.5.902.ebuild,v 1.2 2010/03/16 01:21:03 solar Exp $
 
 EAPI="2"
 
 # Must be before x-modular eclass is inherited
-#SNAPSHOT="yes"
+SNAPSHOT="yes"
 
 inherit x-modular multilib versionator
 
@@ -128,6 +128,7 @@ UPSTREAMED_PATCHES=(
 
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
+	"${FILESDIR}/tslib-1.0-check.patch"
 	)
 
 pkg_setup() {
