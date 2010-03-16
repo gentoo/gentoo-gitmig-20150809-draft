@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.231 2010/03/15 19:08:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.232 2010/03/16 19:01:38 fauli Exp $
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  epiphany-2.26.3-r3.ebuild:
+  stable x86, bug 308549
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> epiphany-2.26.3-r3.ebuild:
   ppc stable #308549
