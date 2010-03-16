@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/MailScanner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/ChangeLog,v 1.11 2010/03/06 18:41:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/ChangeLog,v 1.12 2010/03/16 18:42:05 patrick Exp $
+
+*MailScanner-4.79.11.1 (16 Mar 2010)
+
+  16 Mar 2010; Patrick Lauer <patrick@gentoo.org>
+  +MailScanner-4.79.11.1.ebuild:
+  Bump for #298054, small ebuild improvements thanks to Carlos Silva
 
   06 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   MailScanner-4.70.7.1.ebuild:
