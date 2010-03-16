@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/caesars-0.7.3.ebuild,v 1.1 2010/02/14 20:12:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/caesars-0.7.4.ebuild,v 1.1 2010/03/16 12:35:53 flameeyes Exp $
 
 EAPI=2
 
@@ -24,10 +24,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-all_ruby_prepare() {
-	epatch "${FILESDIR}"/${P}-hanna.patch
-}
-
 #ruby_add_bdepend test dev-ruby/tryouts
 
 # Tests currenty fail for all implementations
@@ -38,7 +34,7 @@ RESTRICT=test
 # don't need the whole sources as it is.
 
 #SRC_URI="http://github.com/delano/${PN}/tarball/${P} -> ${PN}-git-${PV}.tgz"
-#S="${WORKDIR}/delano-${PN}-${whatever}"
+#S="${WORKDIR}/delano-${PN}-3629f49"
 
 each_ruby_test() {
 	${RUBY} -S sergeant || die "tests failed"
