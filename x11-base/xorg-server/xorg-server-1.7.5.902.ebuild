@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.5.902.ebuild,v 1.2 2010/03/16 01:21:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.5.902.ebuild,v 1.3 2010/03/16 15:01:48 solar Exp $
 
 EAPI="2"
 
@@ -128,7 +128,6 @@ UPSTREAMED_PATCHES=(
 
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
-	"${FILESDIR}/tslib-1.0-check.patch"
 	)
 
 pkg_setup() {

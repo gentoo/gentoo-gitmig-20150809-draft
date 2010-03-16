@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.491 2010/03/16 01:21:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.492 2010/03/16 15:01:48 solar Exp $
+
+  16 Mar 2010; <solar@gentoo.org> xorg-server-1.7.5.902.ebuild:
+  comment out tslib patch for a few hours. We ended up making it non
+  optional
 
   16 Mar 2010; <solar@gentoo.org> +files/tslib-1.0-check.patch,
   xorg-server-1.7.5.902.ebuild:
