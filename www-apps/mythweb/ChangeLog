@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.75 2010/03/05 00:00:57 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.76 2010/03/16 18:37:23 fauli Exp $
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  mythweb-0.22_p22763-r1.ebuild:
+  stable x86, bug 309637
 
   05 Mar 2010; Richard Freeman <rich0@gentoo.org>
   mythweb-0.22_p22763-r1.ebuild:
