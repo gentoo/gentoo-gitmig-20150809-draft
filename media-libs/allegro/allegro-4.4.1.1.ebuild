@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1.ebuild,v 1.2 2010/03/16 14:29:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1.ebuild,v 1.3 2010/03/16 14:43:24 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -99,6 +99,14 @@ src_install() {
 
 	dohtml docs/html/*.html || die
 	doman docs/man/*.3 || die
+
+	if use X; then
+		newbin setup/setup ${PN}-setup || die
+		insinto /usr/share/${PN}
+		doins {keyboard,language,setup/setup}.dat || die
+		newicon misc/icon.png ${PN}.png
+		make_desktop_entry ${PN}-setup "Allegro Setup" ${PN} "Settings"
+	fi
 
 	if use png; then
 		dodir /usr/include/loadpng
