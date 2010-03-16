@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1.ebuild,v 1.3 2010/03/16 14:43:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1.ebuild,v 1.4 2010/03/16 14:53:20 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -45,7 +45,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-shared.patch \
-		"${FILESDIR}"/${P}-optional_drivers.patch
+		"${FILESDIR}"/${P}-optional_drivers.patch \
+		"${FILESDIR}"/${P}-rpath.patch
 
 	# loadpng.h is too common for /usr/include, see src_install
 	sed -i \
