@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.6 2010/02/06 19:34:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.7 2010/03/16 17:18:49 billie Exp $
+
+*vdradmin-am-3.6.6 (16 Mar 2010)
+
+  16 Mar 2010; Daniel Pielmeier <billie@gentoo.org>
+  +vdradmin-am-3.6.6.ebuild, +files/vdradmin-3.6.6.conf,
+  +files/vdradmin-3.6.6.init, +files/vdradmin-3.6.6.logrotate, metadata.xml:
+  Version bump. Add myself to maintainers.
 
   06 Feb 2010; Matthias Schwarzott <zzam@gentoo.org>
   vdradmin-am-3.6.4-r1.ebuild:
@@ -32,7 +39,7 @@
   15 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org> files/vdradmin-rc-3,
   files/vdradmin-4:
   added --pidfile for baselayout2 start script part, bug 255423; thanks to
-  D. Pillmeier
+  D. Pielmeier
 
   13 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org> files/vdradmin-4,
   metadata.xml, +vdradmin-am-3.6.4-r1.ebuild:
