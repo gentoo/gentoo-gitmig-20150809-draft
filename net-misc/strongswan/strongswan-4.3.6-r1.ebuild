@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.6-r1.ebuild,v 1.1 2010/03/16 18:37:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.6-r1.ebuild,v 1.2 2010/03/16 19:30:09 mr_bones_ Exp $
 
 EAPI=2
 
@@ -199,7 +199,7 @@ pkg_postinst() {
 		elog "  ipsec ALL=(ALL) NOPASSWD: /usr/sbin/ipsec"
 		elog "Under the specific connection block in /etc/ipsec.conf:"
 		elog "  leftupdown=\"sudo ipsec _updown\""
-		elog 
+		elog
 	fi
 	elog
 	elog "The up-to-date manual is available online at:"
