@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.43 2010/03/10 14:06:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.44 2010/03/16 11:02:56 ssuominen Exp $
+
+*phonon-4.4.0 (16 Mar 2010)
+
+  16 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +phonon-4.4.0.ebuild:
+  Version bump wrt #309009 by Marco DR.
 
   10 Mar 2010; Brent Baude <ranger@gentoo.org> phonon-4.3.80-r1.ebuild:
   Marking phonon-4.3.80-r1 ppc for bug 299585
