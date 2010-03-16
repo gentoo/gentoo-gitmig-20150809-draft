@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.21 2010/02/28 18:37:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.22 2010/03/16 00:53:20 yngwin Exp $
+
+*lxde-meta-0.5.0-r2 (16 Mar 2010)
+
+  16 Mar 2010; Ben de Groot <yngwin@gentoo.org> -lxde-meta-0.4.2.ebuild,
+  -lxde-meta-0.5.0.ebuild, +lxde-meta-0.5.0-r2.ebuild:
+  Revbump for new lxsession. Remove old versions.
 
   28 Feb 2010; nixnut <nixnut@gentoo.org> lxde-meta-0.5.0-r1.ebuild:
   ppc stable #306433
