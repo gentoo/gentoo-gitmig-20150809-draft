@@ -1,14 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-7.3.21.ebuild,v 1.4 2010/01/08 01:25:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.0.24.ebuild,v 1.1 2010/03/16 22:50:49 patrick Exp $
 
-EAPI="1"
+EAPI="2"
 
-WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="none"
 inherit eutils multilib toolchain-funcs versionator autotools
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
@@ -16,9 +15,10 @@ SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 IUSE_LINGUAS="
-	linguas_cs linguas_de linguas_es linguas_fr linguas_hr linguas_hu
-	linguas_pt_BR linguas_ru linguas_sv linguas_tr linguas_zh_CN
-	linguas_zh_TW"
+	linguas_af linguas_cs linguas_de linguas_es linguas_fa linguas_fr
+	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
+	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
+	linguas_tr linguas_zh_CN linguas_zh_TW"
 IUSE="doc perl python selinux tcl xml nls kernel_linux ${IUSE_LINGUAS}"
 
 wanted_languages() {
@@ -36,31 +36,30 @@ RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	xml? ( dev-util/pkgconfig )"
-PDEPEND="doc? ( dev-db/postgresql-docs:${SLOT} )"
+PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 S="${WORKDIR}/postgresql-${PV}"
 
 pkg_setup() {
 	enewgroup postgres 70
-	enewuser postgres 70 /bin/bash /var/lib postgres
+	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 
-	epatch "${FILESDIR}/postgresql-${PV}-autoconf.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-server.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-cubeparse.patch"
+	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-server.patch"
 
-	if hasq test ${FEATURES}; then
-		epatch "${FILESDIR}/postgresql-${SLOT}-regress.patch"
+	if use test; then
+		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source
 	fi
 
 	eautoconf
 }
 
-src_compile() {
+src_configure() {
+	# TODO: test if PPC really cannot work with other CFLAGS settings
+	# use ppc && CFLAGS="-pipe -fsigned-char"
 
 	# eval is needed to get along with pg_config quotation of space-rich entities.
 	eval econf "$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --configure)" \
@@ -68,16 +67,16 @@ src_compile() {
 		$(use_with python) \
 		$(use_with tcl) \
 		--with-includes="/usr/include/postgresql-${SLOT}/" \
-		--with-libs="/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)/" \
-		"$(built_with_use ~dev-db/postgresql-base-${PV} nls && use_enable nls nls "$(wanted_languages)")" \
-		"CFLAGS='${CFLAGS} $(use xml && pkg-config --cflags libxml-2.0)'" \
-		"LIBS='${LIBS} $(use xml && pkg-config --libs libxml-2.0) -L/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)'" \
+		"$(has_version ~dev-db/postgresql-base-${PV}[nls] && use_enable nls nls "$(wanted_languages)")" \
 		|| die "configure failed"
+}
 
-	for bd in . contrib $(use xml && echo contrib/xml) ; do
+src_compile() {
+	for bd in . contrib $(use xml && echo contrib/xml2) ; do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake -C $bd -j1 LD="$(tc-getLD) $(get_abi_LDFLAGS)" \
-				docdir=/usr/share/doc/${PF} SLOT=${SLOT} || die "emake in $bd failed"
+				PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
+				NO_PGXS=0 USE_PGXS=1 docdir=/usr/share/doc/${PF} || die "emake in $bd failed"
 	done
 }
 
@@ -88,13 +87,15 @@ src_install() {
 			"${S}/src/pl/plperl/GNUmakefile_orig" > "${S}/src/pl/plperl/GNUmakefile"
 	fi
 
-	for bd in . contrib $(use xml && echo contrib/xml) ; do
+	for bd in . contrib $(use xml && echo contrib/xml2) ; do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake install -C $bd -j1 DESTDIR="${D}" \
-				docdir=/usr/share/doc/${PF} SLOT=${SLOT} || die "emake install in $bd failed"
+				PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
+				NO_PGXS=0 USE_PGXS=1 docdir=/usr/share/doc/${PF} || die "emake install in $bd failed"
 	done
-	rm -rf "${D}/usr/share/postgresql-${SLOT}/man/man7/"
-	rm "${D}"/usr/share/postgresql-${SLOT}/man/man1/{clusterdb,create{db,lang,user},drop{db,lang,user},ecpg,pg_{config,dump,dumpall,restore},psql,vacuumdb,pgtksh,pgtclsh}.1
+
+	rm -rf "${D}/usr/share/postgresql-${SLOT}/man/man7/" "${D}/usr/share/doc/${PF}/html"
+	rm "${D}"/usr/share/postgresql-${SLOT}/man/man1/{clusterdb,create{db,lang,user},drop{db,lang,user},ecpg,pg_{config,dump,dumpall,restore},psql,vacuumdb}.1
 
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
 
@@ -107,8 +108,7 @@ src_install() {
 	newinitd "${FILESDIR}/postgresql.init-${SLOT}" postgresql-${SLOT} || die "Inserting init.d-file failed"
 	newconfd "${FILESDIR}/postgresql.conf-${SLOT}" postgresql-${SLOT} || die "Inserting conf.d-file failed"
 
-	# Workaround for paludis
-	[ -f "${ROOT}/var/run/postgresql/.keep" ] || keepdir /var/run/postgresql
+	keepdir /var/run/postgresql
 	fperms 0770 /var/run/postgresql
 	fowners postgres:postgres /var/run/postgresql
 }
@@ -138,7 +138,61 @@ pkg_postrm() {
 }
 
 pkg_config() {
+	[[ -f /etc/conf.d/postgresql-${SLOT} ]] && source /etc/conf.d/postgresql-${SLOT}
 	[[ -z "${PGDATA}" ]] && PGDATA="/var/lib/postgresql/${SLOT}/data"
+
+	if [ -z "${PG_INITDB_OPTS}" ]; then
+		if [ -f /etc/env.d/02locale ]; then
+			source /etc/env.d/02locale
+			[ -n "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="--locale=$LC_ALL"
+			[ -n "${LC_COLLATE}" -a "${LC_COLLATE}" != "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="${PG_INITDB_OPTS} --lc-collate=${LC_COLLATE}"
+			[ -n "${LC_CTYPE}" -a "${LC_CTYPE}" != "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="${PG_INITDB_OPTS} --lc-ctype=${LC_CTYPE}"
+			[ -n "${LC_MESSAGES}" -a "${LC_MESSAGES}" != "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="${PG_INITDB_OPTS} --lc-messages=${LC_MESSAGES}"
+			[ -n "${LC_MONETARY}" -a "${LC_MONETARY}" != "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="${PG_INITDB_OPTS} --lc-monetary=${LC_MONETARY}"
+			[ -n "${LC_NUMERIC}" -a "${LC_MONETARY}" != "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="${PG_INITDB_OPTS} --lc-numeric=${LC_NUMERIC}"
+			[ -n "${LC_TIME}" -a "${LC_TIME}" != "${LC_ALL}" ] &&
+				PG_INITDB_OPTS="${PG_INITDB_OPTS} --lc-time=${LC_TIME}"
+		fi
+		if [ -n "$PG_INITDB_OPTS" ]; then
+			einfo "Locale info set from /etc/env.d/02locale"
+		else
+			eerror "You must set PG_INITDB_OPTS in /etc/conf.d/postgresql-${SLOT}"
+			eerror "    More knfo: http://www.postgresql.org/docs/${SLOT}/static/locale.html"
+			eerror "Or, you must localize this system."
+			eerror "    More info: http://www.gentoo.org/doc/en/guide-localization.xml"
+			die "No locale variables found."
+		fi
+	else
+		einfo "PG_INITDB_OPTS set in /etc/conf.d/postgresql-${SLOT}"
+	fi
+
+	# Matches C, POSIX, or locale codes as described in "locale -a"
+	# This could probably use a little work, but is sufficient.
+	MATCHSTRING="([cC]|[pP][oO][sS][iI][xX]|[a-z][a-z]_[A-Z][A-Z]\.[[:alnum:]_-]+)"
+	# Test that at the very least --locale is present as it sets the default
+	# locale and encoding to be used for the server. If not, check to make sure
+	# the other six variables are set.
+	if [[ $PG_INITDB_OPTS =~ .*--locale=$MATCHSTRING ]] || (
+			[[ "${PG_INITDB_OPTS}" =~ .*--lc-collate=$MATCHSTRING ]] &&
+			[[ "${PG_INITDB_OPTS}" =~ .*--lc-ctype=$MATCHSTRING ]] &&
+			[[ "${PG_INITDB_OPTS}" =~ .*--lc-messages=$MATCHSTRING ]] &&
+			[[ "${PG_INITDB_OPTS}" =~ .*--lc-monetary=$MATCHSTRING ]] &&
+			[[ "${PG_INITDB_OPTS}" =~ .*--lc-numeric=$MATCHSTRING ]] &&
+			[[ "${PG_INITDB_OPTS}" =~ .*--lc-time=$MATCHSTRING ]]
+		); then
+		einfo "Locale settings look okay."
+	else
+		eerror "PG_INITDB_OPTS was set in /etc/conf.d/postgresql-${SLOT}"
+		eerror "Or, locales were found in /etc/env.d/02locale"
+		eerror "But, a satisfying match was not found."
+		die "No locale information found or character set not specified."
+	fi
 
 	einfo "You can pass options to initdb by setting the PG_INITDB_OPTS variable."
 	einfo "More information can be found here:"
@@ -157,6 +211,11 @@ pkg_config() {
 	read answer
 	[ -z $answer ] && answer=Y
 	[ "$answer" == "Y" ] || [ "$answer" == "y" ] || die "aborted"
+
+	if [[ -f "${PGDATA}/PG_VERSION" ]] ; then
+		eerror "The given directory \"${PGDATA}\" already contains a database cluster."
+		die "cluster already exists"
+	fi
 
 	if [[ -f "${PGDATA}/PG_VERSION" ]] ; then
 		eerror "The given directory \"${PGDATA}\" already contains a database cluster."
@@ -193,7 +252,7 @@ pkg_config() {
 				eerror "  - Set SKIP_SYSTEM_TESTS in case you want to ignore this test completely"
 				eerror "More information can be found here:"
 				eerror "  http://www.postgresql.org/docs/${SLOT}/static/kernel-resources.html"
-				die "system test failed"
+				die "System test failed."
 			fi
 		done
 		einfo "Passed."

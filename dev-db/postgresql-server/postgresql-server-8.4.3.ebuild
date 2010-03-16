@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0_alpha4.ebuild,v 1.2 2010/03/16 22:50:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.3.ebuild,v 1.1 2010/03/16 22:50:49 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -15,11 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
-
-MY_PV=${PV/_/}
-SRC_URI="mirror://postgresql/source/${MY_PV}/postgresql-${MY_PV}.tar.bz2"
-S=${WORKDIR}/postgresql-${MY_PV}
-
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 IUSE_LINGUAS="
@@ -35,7 +31,7 @@ wanted_languages() {
 	done
 }
 
-RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pg_legacytimestamp=]
+RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pg_legacytimestamp=,nls=]
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( dev-python/egenix-mx-base )
 	selinux? ( sec-policy/selinux-postgresql )
@@ -46,6 +42,8 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	xml? ( dev-util/pkgconfig )"
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
+
+S="${WORKDIR}/postgresql-${PV}"
 
 pkg_setup() {
 	enewgroup postgres 70
@@ -58,8 +56,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-server.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-makefile.patch"
+		"${FILESDIR}/postgresql-${SLOT}-server.patch"
 
 	if use test; then
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source
@@ -76,7 +73,6 @@ src_configure() {
 
 	# eval is needed to get along with pg_config quotation of space-rich entities.
 	eval econf "$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --configure)" \
-		--disable-thread-safety \
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with tcl) \

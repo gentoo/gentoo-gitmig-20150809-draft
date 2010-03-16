@@ -1,25 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0_alpha4.ebuild,v 1.2 2010/03/16 22:50:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.16.ebuild,v 1.1 2010/03/16 22:50:49 patrick Exp $
 
 EAPI="2"
-PYTHON_DEPEND="python? 2"
-
-# weird test failures.
-RESTRICT="test"
 
 WANT_AUTOMAKE="none"
-inherit autotools eutils multilib python toolchain-funcs versionator
+inherit eutils multilib toolchain-funcs versionator autotools
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
-
-MY_PV=${PV/_/}
-SRC_URI="mirror://postgresql/source/${MY_PV}/postgresql-${MY_PV}.tar.bz2"
-S=${WORKDIR}/postgresql-${MY_PV}
-
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 IUSE_LINGUAS="
@@ -27,7 +19,7 @@ IUSE_LINGUAS="
 	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
 	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
 	linguas_tr linguas_zh_CN linguas_zh_TW"
-IUSE="pg_legacytimestamp doc perl python selinux tcl uuid xml nls kernel_linux ${IUSE_LINGUAS}"
+IUSE="doc perl python selinux tcl xml nls kernel_linux ${IUSE_LINGUAS}"
 
 wanted_languages() {
 	for u in ${IUSE_LINGUAS} ; do
@@ -35,31 +27,28 @@ wanted_languages() {
 	done
 }
 
-RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pg_legacytimestamp=]
+RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
-	python? ( dev-python/egenix-mx-base )
+	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	selinux? ( sec-policy/selinux-postgresql )
 	tcl? ( >=dev-lang/tcl-8 )
-	uuid? ( dev-libs/ossp-uuid )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	xml? ( dev-util/pkgconfig )"
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
+S="${WORKDIR}/postgresql-${PV}"
+
 pkg_setup() {
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
-
-	if use python; then
-		python_set_active_version 2
-	fi
 }
 
 src_prepare() {
+
 	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-server.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-makefile.patch"
+		"${FILESDIR}/postgresql-${SLOT}-server.patch"
 
 	if use test; then
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source
@@ -80,20 +69,17 @@ src_configure() {
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with tcl) \
-		$(use_with xml libxml) \
-		$(use_with xml libxslt) \
-		$(use_with uuid ossp-uuid) \
-		--with-system-tzdata="/usr/share/zoneinfo" \
 		--with-includes="/usr/include/postgresql-${SLOT}/" \
-		--with-libraries="/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)" \
-		"$(has_version ~dev-db/postgresql-base-${PV}[nls] && use_enable nls nls "$(wanted_languages)")"
+		"$(has_version ~dev-db/postgresql-base-${PV}[nls] && use_enable nls nls "$(wanted_languages)")" \
+		|| die "configure failed"
 }
-
 src_compile() {
-	local bd
-	for bd in .  contrib $(use xml && echo contrib/xml2); do
+	for bd in . contrib $(use xml && echo contrib/xml2); do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
-			emake -C $bd -j1 LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake in $bd failed"
+			emake -C $bd -j1 LD="$(tc-getLD) $(get_abi_LDFLAGS)" \
+				PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
+				PGXS_IN_SERVER=1 PGXS_WITH_SERVER="${S}/src/backend/postgres" \
+				NO_PGXS=0 USE_PGXS=1 docdir=/usr/share/doc/${PF} || die "emake in $bd failed"
 	done
 }
 
@@ -106,10 +92,13 @@ src_install() {
 
 	for bd in . contrib $(use xml && echo contrib/xml2) ; do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
-			emake install -C $bd -j1 DESTDIR="${D}" || die "emake install in $bd failed"
+			emake install -C $bd -j1 DESTDIR="${D}" \
+				PGXS_IN_SERVER=1 PGXS_WITH_SERVER="${S}/src/backend/postgres" \
+				PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
+				NO_PGXS=0 USE_PGXS=1 docdir=/usr/share/doc/${PF} || die "emake install in $bd failed"
 	done
 
-	rm -rf "${D}/usr/share/postgresql-${SLOT}/man/man7/" "${D}/usr/share/doc/postgresql-${SLOT}/html"
+	rm -rf "${D}/usr/share/postgresql-${SLOT}/man/man7/" "${D}/usr/share/doc/${PF}/html"
 	rm "${D}"/usr/share/postgresql-${SLOT}/man/man1/{clusterdb,create{db,lang,user},drop{db,lang,user},ecpg,pg_{config,dump,dumpall,restore},psql,reindexdb,vacuumdb}.1
 
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
@@ -123,7 +112,8 @@ src_install() {
 	newinitd "${FILESDIR}/postgresql.init-${SLOT}" postgresql-${SLOT} || die "Inserting init.d-file failed"
 	newconfd "${FILESDIR}/postgresql.conf-${SLOT}" postgresql-${SLOT} || die "Inserting conf.d-file failed"
 
-	keepdir /var/run/postgresql
+	# Workaround for paludis
+	[ -f "${ROOT}/var/run/postgresql/.keep" ] || keepdir /var/run/postgresql
 	fperms 0770 /var/run/postgresql
 	fowners postgres:postgres /var/run/postgresql
 }
@@ -147,13 +137,8 @@ pkg_postinst() {
 	elog "emerge --config =${CATEGORY}/${PF}"
 	elog
 	elog "The autovacuum function, which was in contrib, has been moved to the main"
-	elog "PostgreSQL functions starting with 8.1 and starting with 8.4 is now"
-	elog "enabled by default. You can disable it in the cluster's postgresql.conf."
-	elog
-	elog "The timestamp format is 64bit integers now. If you upgrade from older databases"
-	elog "this may force you to either do a dump and reload or enable pg_legacytimestamp"
-	elog "until you find time to do so. If the database can't start please try enabling"
-	elog "pg_legacytimestamp and rebuild."
+	elog "PostgreSQL functions starting with 8.1."
+	elog "You can enable it in the clusters postgresql.conf."
 }
 
 pkg_postrm() {
@@ -300,7 +285,9 @@ pkg_config() {
 src_test() {
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
-		emake -j1 check  || die "Make check failed. See above for details."
+		emake -j1 check \
+			PGXS=$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --pgxs) \
+			NO_PGXS=0 USE_PGXS=1 SLOT=${SLOT} || die "Make check failed. See above for details."
 
 	einfo "Yes, there are other tests which could be run."
 	einfo "... and no, we don't plan to add/support them."

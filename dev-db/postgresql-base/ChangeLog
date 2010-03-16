@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.46 2010/02/26 15:47:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.47 2010/03/16 22:49:44 patrick Exp $
+
+*postgresql-base-8.4.3 (16 Mar 2010)
+*postgresql-base-8.3.10 (16 Mar 2010)
+*postgresql-base-8.2.16 (16 Mar 2010)
+*postgresql-base-8.1.20 (16 Mar 2010)
+*postgresql-base-8.0.24 (16 Mar 2010)
+*postgresql-base-7.4.28 (16 Mar 2010)
+
+  16 Mar 2010; Patrick Lauer <patrick@gentoo.org>
+  -postgresql-base-7.3.21.ebuild, -files/postgresql-7.3.21-autoconf.patch,
+  -files/postgresql-7.3-base.patch, +postgresql-base-7.4.28.ebuild,
+  +files/postgresql-7.4.28-autoconf.patch, +postgresql-base-8.0.24.ebuild,
+  +postgresql-base-8.1.20.ebuild, +postgresql-base-8.2.16.ebuild,
+  +postgresql-base-8.3.10.ebuild, +postgresql-base-8.4.3.ebuild,
+  -postgresql-base-8.5_alpha3.ebuild, -files/postgresql-8.5-base.patch,
+  -files/postgresql-8.5-common.patch, -files/postgresql-8.5-makefile.patch,
+  postgresql-base-9.0_alpha4.ebuild:
+  Bump, remove 7.3 (unsupported upstream) and 8.5alpha (9.0 now). EAPI2.
+  Thanks to Aaron W. Swenson
 
 *postgresql-base-9.0_alpha4 (26 Feb 2010)
 

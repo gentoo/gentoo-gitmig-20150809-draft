@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0_alpha4.ebuild,v 1.2 2010/03/16 22:49:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.4.3.ebuild,v 1.1 2010/03/16 22:49:44 patrick Exp $
 
 EAPI="2"
 
@@ -12,11 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
-
-MY_PV=${PV/_/}
-SRC_URI="mirror://postgresql/source/${MY_PV}/postgresql-${MY_PV}.tar.bz2"
-S=${WORKDIR}/postgresql-${MY_PV}
-
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 IUSE_LINGUAS="
@@ -51,9 +47,11 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
+S="${WORKDIR}/postgresql-${PV}"
+
 src_prepare() {
+
 	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-makefile.patch" \
 		"${FILESDIR}/postgresql-${SLOT}-base.patch"
 
 	# to avoid collision - it only should be installed by server
@@ -61,7 +59,7 @@ src_prepare() {
 
 	# because psql/help.c includes the file
 	ln -s "${S}/src/include/libpq/pqsignal.h" "${S}/src/bin/psql/"
-	cd ${S}
+
 	eautoconf
 }
 
@@ -84,14 +82,15 @@ src_configure() {
 		$(use_enable !pg_legacytimestamp integer-datetimes ) \
 		$(use_with ssl openssl) \
 		$(use_enable threads thread-safety) \
+		$(use_enable threads thread-safety-force) \
 		$(use_with zlib) \
 		$(use_with ldap) \
 		${myconf} \
 		|| die "configure failed"
 }
-src_compile() {
 
-	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)"  || die "emake failed"
+src_compile() {
+	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake failed"
 
 	cd "${S}/contrib"
 	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake failed"

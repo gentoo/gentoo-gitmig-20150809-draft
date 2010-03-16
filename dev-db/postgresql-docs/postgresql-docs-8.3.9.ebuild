@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.3.9.ebuild,v 1.2 2010/01/07 18:15:12 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.3.9.ebuild,v 1.3 2010/03/16 22:50:11 patrick Exp $
 
 inherit versionator
 
@@ -29,6 +29,7 @@ src_compile() {
 src_install() {
 	dodir /usr/share/doc/${PF}/html
 	tar -zxf "${S}/doc/postgres.tar.gz" -C "${D}/usr/share/doc/${PF}/html"
+	fowners root:0 -R /usr/share/doc/${PF}/html
 	cd "${S}/doc"
 	docinto FAQ_html
 	dodoc src/FAQ/*

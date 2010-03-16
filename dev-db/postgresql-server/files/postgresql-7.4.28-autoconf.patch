@@ -1,5 +1,5 @@
 diff --git a/config/programs.m4 b/config/programs.m4
-index 35d9e2b..c681983 100644
+index ae3b91a..6af24d2 100644
 --- a/config/programs.m4
 +++ b/config/programs.m4
 @@ -153,13 +153,13 @@ AC_DEFUN([PGAC_CHECK_GETTEXT],
@@ -24,7 +24,7 @@ index 35d9e2b..c681983 100644
    AC_SUBST(localedir)
    AC_DEFINE_UNQUOTED(LOCALEDIR, ["$exp_localedir"],
 diff --git a/configure.in b/configure.in
-index 07cc529..37fdded 100644
+index f7bdec3..c8b5b7e 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -19,17 +19,8 @@ m4_pattern_forbid(^PGAC_)dnl to catch undefined macros
@@ -33,25 +33,16 @@ index 07cc529..37fdded 100644
  dnl Texinfo. Use this sorcery to use "docdir" instead of "infodir".
 -m4_define([info], [doc])
 -m4_define([infodir], [docdir])
- AC_INIT([PostgreSQL], [7.3.21], [pgsql-bugs@postgresql.org])
+ AC_INIT([PostgreSQL], [7.4.28], [pgsql-bugs@postgresql.org])
 -m4_undefine([infodir])
 -m4_undefine([info])
 -AC_SUBST(docdir)
 -
--m4_if(m4_defn([m4_PACKAGE_VERSION]), [2.53], [], [m4_fatal([Autoconf version 2.59 is required.
+-m4_if(m4_defn([m4_PACKAGE_VERSION]), [2.53], [], [m4_fatal([Autoconf version 2.53 is required.
 -Untested combinations of 'autoconf' and PostgreSQL versions are not
 -recommended.  You can remove the check from 'configure.in' but it is then
 -your responsibility whether the result works or not.])])
 +
- AC_COPYRIGHT([Copyright 2002 PostgreSQL Global Development Group])
+ AC_COPYRIGHT([Copyright 2004 PostgreSQL Global Development Group])
  AC_CONFIG_SRCDIR([src/backend/access/common/heaptuple.c])
  AC_CONFIG_AUX_DIR(config)
-@@ -626,7 +617,7 @@ AC_CHECK_LIB(PW,       main)
- AC_CHECK_LIB(resolv,   main)
- AC_SEARCH_LIBS(getopt_long, [getopt gnugetopt])
- # QNX:
--AC_CHECK_LIB([[unix]], main)
-+AC_CHECK_LIB([unix], main)
- AC_SEARCH_LIBS(crypt,  crypt)
- # BeOS:
- AC_CHECK_LIB(bind,     __inet_ntoa)

@@ -1,6 +1,28 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.56 2010/02/26 15:48:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.57 2010/03/16 22:50:49 patrick Exp $
+
+*postgresql-server-8.4.3 (16 Mar 2010)
+*postgresql-server-8.3.10 (16 Mar 2010)
+*postgresql-server-8.2.16 (16 Mar 2010)
+*postgresql-server-8.1.20 (16 Mar 2010)
+*postgresql-server-8.0.24 (16 Mar 2010)
+*postgresql-server-7.4.28 (16 Mar 2010)
+
+  16 Mar 2010; Patrick Lauer <patrick@gentoo.org>
+  -files/postgresql.conf-7.3, -files/postgresql.init-7.3,
+  -postgresql-server-7.3.21.ebuild, -files/postgresql-7.3.21-autoconf.patch,
+  -files/postgresql-7.3-cubeparse.patch,
+  -files/postgresql-7.3-regress.patch, -files/postgresql-7.3-server.patch,
+  +postgresql-server-7.4.28.ebuild, +files/postgresql-7.4.28-autoconf.patch,
+  +postgresql-server-8.0.24.ebuild, +postgresql-server-8.1.20.ebuild,
+  +postgresql-server-8.2.16.ebuild, +postgresql-server-8.3.10.ebuild,
+  +postgresql-server-8.4.3.ebuild, -postgresql-server-8.5_alpha3.ebuild,
+  -files/postgresql.conf-8.5, -files/postgresql.init-8.5,
+  -files/postgresql-8.5-common.patch, -files/postgresql-8.5-makefile.patch,
+  -files/postgresql-8.5-server.patch, postgresql-server-9.0_alpha4.ebuild:
+  Bump, remove 7.3 (unsupported upstream) and 8.5alpha (now 9.0). Fixes
+  #110912 #278958 #214438 #233572. Thanks to Aaron W. Swenson.
 
 *postgresql-server-9.0_alpha4 (26 Feb 2010)
 

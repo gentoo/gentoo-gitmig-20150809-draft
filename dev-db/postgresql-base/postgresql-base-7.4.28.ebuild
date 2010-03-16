@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0_alpha4.ebuild,v 1.2 2010/03/16 22:49:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.28.ebuild,v 1.1 2010/03/16 22:49:44 patrick Exp $
 
 EAPI="2"
 
@@ -8,23 +8,18 @@ WANT_AUTOMAKE="none"
 
 inherit eutils multilib toolchain-funcs versionator autotools
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
-
-MY_PV=${PV/_/}
-SRC_URI="mirror://postgresql/source/${MY_PV}/postgresql-${MY_PV}.tar.bz2"
-S=${WORKDIR}/postgresql-${MY_PV}
-
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 IUSE_LINGUAS="
-	linguas_af linguas_cs linguas_de linguas_es linguas_fa linguas_fr
-	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
-	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
+	linguas_cs linguas_de linguas_es linguas_fr linguas_hr linguas_hu
+	linguas_it linguas_nb linguas_pt_BR linguas_ru linguas_sl linguas_sv
 	linguas_tr linguas_zh_CN linguas_zh_TW"
-IUSE="doc kerberos nls pam readline ssl threads zlib ldap pg_legacytimestamp ${IUSE_LINGUAS}"
+IUSE="doc kerberos nls pam pg-intdatetime readline ssl threads zlib ${IUSE_LINGUAS}"
 RESTRICT="test"
 
 wanted_languages() {
@@ -43,55 +38,56 @@ RDEPEND="kerberos? ( virtual/krb5 )
 	!dev-db/postgresql-libs
 	!dev-db/postgresql-client
 	!dev-db/libpq
-	!dev-db/postgresql
-	ldap? ( net-nds/openldap )"
+	!dev-db/postgresql"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/bison-1.875
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
+S="${WORKDIR}/postgresql-${PV}"
+
 src_prepare() {
-	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-makefile.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-base.patch"
+
+	epatch "${FILESDIR}/postgresql-${PV}-autoconf.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-hppa.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-base.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-com_err.patch"
 
 	# to avoid collision - it only should be installed by server
 	rm "${S}/src/backend/nls.mk"
 
 	# because psql/help.c includes the file
 	ln -s "${S}/src/include/libpq/pqsignal.h" "${S}/src/bin/psql/"
-	cd ${S}
-	eautoconf
+
+	eautoreconf
 }
 
 src_configure() {
 	econf --prefix=/usr/$(get_libdir)/postgresql-${SLOT} \
 		--datadir=/usr/share/postgresql-${SLOT} \
-		--docdir=/usr/share/doc/postgresql-${SLOT} \
 		--sysconfdir=/etc/postgresql-${SLOT} \
 		--includedir=/usr/include/postgresql-${SLOT} \
+		--with-locale-dir=/usr/share/postgresql-${SLOT}/locale \
 		--mandir=/usr/share/postgresql-${SLOT}/man \
-		--enable-depend \
+		--host=${CHOST} \
+		--docdir=/usr/share/doc/${PF} \
 		--without-tcl \
 		--without-perl \
 		--without-python \
-		$(use_with readline) \
 		$(use_with kerberos krb5) \
-		$(use_with kerberos gssapi) \
 		"$(use_enable nls nls "$(wanted_languages)")" \
 		$(use_with pam) \
-		$(use_enable !pg_legacytimestamp integer-datetimes ) \
+		$(use_enable pg-intdatetime integer-datetimes ) \
+		$(use_with readline) \
 		$(use_with ssl openssl) \
-		$(use_enable threads thread-safety) \
+		$(use_enable threads thread-safety ) \
 		$(use_with zlib) \
-		$(use_with ldap) \
-		${myconf} \
 		|| die "configure failed"
 }
-src_compile() {
 
-	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)"  || die "emake failed"
+src_compile() {
+	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake failed"
 
 	cd "${S}/contrib"
 	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die "emake failed"
@@ -101,11 +97,16 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	insinto /usr/include/postgresql-${SLOT}/postmaster
 	doins "${S}"/src/include/postmaster/*.h
+
+	# Install missing libpgport.a
+	insinto /usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
+	doins "${S}/src/port/libpgport.a"
+
 	dodir /usr/share/postgresql-${SLOT}/man/man1
 	tar -zxf "${S}/doc/man.tar.gz" -C "${D}"/usr/share/postgresql-${SLOT}/man man1/{ecpg,pg_config}.1
 
-	rm -r "${D}/usr/share/doc/postgresql-${SLOT}/html"
-	rm "${D}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,ipcclean,pg_controldata,pg_ctl,pg_resetxlog,pg_restore,postgres,postmaster}.1
+	rm -rf "${D}/usr/share/doc/${PF}/html"
+	rm "${D}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,initlocation,ipcclean,pg_controldata,pg_ctl,pg_resetxlog,pg_restore,postgres,postmaster}.1
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
 
 	cd "${S}/contrib"
@@ -128,11 +129,11 @@ postgres_symlinks=(
 )
 __EOF__
 
-	cat >"${T}/50postgresql-94-${SLOT}" <<-__EOF__
+	cat >"${T}/50postgresql-98-${SLOT}" <<-__EOF__
 		LDPATH=/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
 		MANPATH=/usr/share/postgresql-${SLOT}/man
 	__EOF__
-	doenvd "${T}/50postgresql-94-${SLOT}"
+	doenvd "${T}/50postgresql-98-${SLOT}"
 
 	keepdir /etc/postgresql-${SLOT}
 }
