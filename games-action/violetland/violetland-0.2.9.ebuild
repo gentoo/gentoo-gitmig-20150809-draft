@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.2.9.ebuild,v 1.1 2010/03/14 23:19:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.2.9.ebuild,v 1.2 2010/03/16 16:40:31 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -35,9 +35,10 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs="\
-		-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX} \
-		-DDATA_INSTALL_DIR=${GAMES_DATADIR}"
+	mycmakeargs=(
+		"-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
+		"-DDATA_INSTALL_DIR=${GAMES_DATADIR}"
+		)
 	cmake-utils_src_configure
 }
 
