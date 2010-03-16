@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.181 2010/03/15 19:06:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.182 2010/03/16 18:51:30 fauli Exp $
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  sound-juicer-2.26.2.ebuild:
+  stable x86, bug 308549
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> sound-juicer-2.26.2.ebuild:
   ppc stable #308549
