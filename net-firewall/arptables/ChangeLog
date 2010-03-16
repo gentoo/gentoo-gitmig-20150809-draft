@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/arptables
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.14 2008/10/13 11:13:26 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.15 2010/03/16 07:57:29 pva Exp $
+
+*arptables-0.0.3.4 (16 Mar 2010)
+
+  16 Mar 2010; Peter Volkov <pva@gentoo.org> +arptables-0.0.3.4.ebuild:
+  Version bump, #309475 thank hitachi for report.
 
   13 Oct 2008; Peter Volkov <pva@gentoo.org> arptables-0.0.3.3-r1.ebuild:
   Fixed build issue when no optimisation or only -O0 was passed in CFLAGS,
