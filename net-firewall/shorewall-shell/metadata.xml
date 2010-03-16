@@ -3,10 +3,7 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-  <email>netmon@gentoo.org</email>
-</maintainer>
-<maintainer>
-  <email>rentorbuy@yahoo.com</email>
-  <name>Vieri</name>
+  <email>chainsaw@gentoo.org</email>
+  <name>Tony Vroon</name>
 </maintainer>
 </pkgmetadata>

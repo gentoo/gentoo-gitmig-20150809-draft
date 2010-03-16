@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-perl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.34 2009/10/09 12:03:31 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.35 2010/03/16 14:24:45 chainsaw Exp $
+
+  16 Mar 2010; <chainsaw@gentoo.org> metadata.xml:
+  Taking over maintainership from Vieri who is stepping down due to time
+  constraints.
 
 *shorewall-perl-4.2.11.1 (09 Oct 2009)
 
