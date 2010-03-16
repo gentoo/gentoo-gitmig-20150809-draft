@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5400 2010/03/16 14:07:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5401 2010/03/16 17:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1778,6 +1778,7 @@ media-sound/mixxx:djconsole - Enable djconsole support
 media-sound/mixxx:hifieq - Enable hifi equalizer support
 media-sound/mixxx:recording - Enable experimental recording support
 media-sound/mixxx:shout - Enable shoutcast support
+media-sound/mixxx:tonal - Enable tonal analysis support
 media-sound/mixxx:vinylcontrol - Enable vinylcontrol feature
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mp3blaster:sid - Build with SID (Commodore 64 Audio) support
