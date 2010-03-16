@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.4.1.ebuild,v 1.1 2010/03/16 21:20:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.4.1.ebuild,v 1.2 2010/03/16 21:24:25 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -20,8 +20,7 @@ COMMON_DEPEND="x11-libs/libX11
 	media-libs/imlib2
 	>=media-libs/giblib-1.2.4
 	xinerama? ( x11-libs/libXinerama
-		x11-libs/libXext )
-	!<sci-astronomy/xephem-3.7.3"
+		x11-libs/libXext )"
 RDEPEND="${COMMON_DEPEND}
 	media-libs/jpeg:0"
 DEPEND="${COMMON_DEPEND}
