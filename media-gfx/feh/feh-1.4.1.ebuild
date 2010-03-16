@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.4.ebuild,v 1.2 2010/03/07 22:46:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.4.1.ebuild,v 1.1 2010/03/16 21:20:13 ssuominen Exp $
 
 EAPI=2
 inherit autotools
 
 DESCRIPTION="A fast, lightweight imageviewer using imlib2"
 HOMEPAGE="https://derf.homelinux.org/~derf/projects/feh/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+#SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
