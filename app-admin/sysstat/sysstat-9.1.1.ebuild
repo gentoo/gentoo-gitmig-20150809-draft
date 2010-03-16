@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.1.1.ebuild,v 1.2 2010/03/05 07:30:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.1.1.ebuild,v 1.3 2010/03/16 01:49:41 jer Exp $
 
 EAPI="2"
 
@@ -15,6 +15,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cron +doc isag nls"
 
+SYSSTAT_LINGUAS="af da de es fi fr id it ja ky lv mt nb nl nn pl pt_BR pt ro ru sk sv vi zh_CN zh_TW"
+
+for SYSSTAT_LINGUA in ${SYSSTAT_LINGUAS}; do
+	IUSE="${IUSE} linguas_${SYSSTAT_LINGUA}"
+done
+
 RDEPEND="
 	cron? ( sys-process/cronbase )
 	isag? (
@@ -26,6 +32,17 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-nls.patch"
+	local lingua NLSDIR="${S}/nls"
+	einfo "Keeping these locales: ${LINGUAS}."
+	for lingua in ${SYSSTAT_LINGUAS}; do
+		if ! use linguas_${lingua}; then
+			rm -rf "${NLSDIR}/${lingua}.po"
+		fi
+	done
+}
 
 src_configure() {
 	local myconf=""

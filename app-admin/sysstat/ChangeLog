@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.173 2010/03/05 07:30:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.174 2010/03/16 01:49:41 jer Exp $
+
+  16 Mar 2010; Jeroen Roovers <jer@gentoo.org> sysstat-9.1.1.ebuild,
+  +files/sysstat-9.1.1-nls.patch:
+  Add LINGUAS support (bug #194567).
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> sysstat-9.0.6.ebuild,
   sysstat-9.0.6.1.ebuild, sysstat-9.1.1.ebuild:
