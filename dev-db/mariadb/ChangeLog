@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.1 2010/03/15 18:47:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.2 2010/03/16 19:02:17 robbat2 Exp $
+
+  16 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Fix Manifest.
 
 *mariadb-5.1.42 (15 Mar 2010)
 
