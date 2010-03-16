@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100223.236320.ebuild,v 1.2 2010/03/11 20:31:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100223.236320-r1.ebuild,v 1.1 2010/03/16 16:23:03 vadimk Exp $
 
 EAPI="2"
 
-inherit eutils multilib pam versionator
+inherit eutils pam versionator
 
 MY_DATE="$(get_version_component_range 3)"
 MY_BUILD="$(get_version_component_range 4)"
@@ -62,6 +62,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/default-scripts1.patch"
 	epatch "${FILESDIR}/checkvm-pie-safety.patch"
+	epatch "${FILESDIR}/vmguestlib-pkg-config.patch"
 	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	# Do not filter out Werror
 	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708

@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.33 2010/03/11 20:31:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.34 2010/03/16 16:23:03 vadimk Exp $
+
+*open-vm-tools-0.0.20100223.236320-r1 (16 Mar 2010)
+*open-vm-tools-0.0.20091216.217847-r2 (16 Mar 2010)
+
+  16 Mar 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  -open-vm-tools-0.0.20091015.201664.ebuild,
+  -open-vm-tools-0.0.20091216.217847-r1.ebuild,
+  +open-vm-tools-0.0.20091216.217847-r2.ebuild,
+  -open-vm-tools-0.0.20100223.236320.ebuild,
+  +open-vm-tools-0.0.20100223.236320-r1.ebuild,
+  +files/vmguestlib-pkg-config.patch:
+  added vmguestlib pkg-config patch. Bug 309749
 
   11 Mar 2010; Tristan Heaven <nyhm@gentoo.org>
   open-vm-tools-0.0.20100223.236320.ebuild:

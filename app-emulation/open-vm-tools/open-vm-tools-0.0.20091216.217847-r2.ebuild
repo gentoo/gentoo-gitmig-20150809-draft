@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20091015.201664.ebuild,v 1.3 2009/11/10 16:51:16 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20091216.217847-r2.ebuild,v 1.1 2010/03/16 16:23:03 vadimk Exp $
 
 EAPI="2"
 
@@ -62,8 +62,10 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/default-scripts1.patch"
 	epatch "${FILESDIR}/checkvm-pie-safety.patch"
+	epatch "${FILESDIR}/vmguestlib-pkg-config.patch"
 	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
+	sed -i -e 's:\(TEST_PLUGIN_INSTALLDIR=\).*:\1\$libdir/open-vm-tools/plugins/tests:g' configure || die "sed test_plugin_installdir failed"
 }
 
 src_configure() {
@@ -71,6 +73,8 @@ src_configure() {
 		--with-procps \
 		--with-dnet \
 		--without-kernel-modules \
+		$(use_enable doc docs) \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_with X x) \
 		$(use_with X gtk2) \
 		$(use_with X gtkmm) \
@@ -89,6 +93,9 @@ src_install() {
 
 	rm "${D}"/etc/pam.d/vmtoolsd
 	pamd_mimic_system vmtoolsd auth account
+
+	rm "${D}"/usr/$(get_libdir)/*.la
+	rm "${D}"/usr/$(get_libdir)/open-vm-tools/plugins/common/*.la
 
 	newinitd "${FILESDIR}/open-vm-tools.initd" vmware-tools || die "failed to newinitd"
 	newconfd "${FILESDIR}/open-vm.confd" vmware-tools || die "failed to newconfd"
