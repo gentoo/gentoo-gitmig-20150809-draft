@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>patrick@gentoo.org</email>
+  <name>Patrick Lauer</name>
+</maintainer>
+<maintainer>
+  <email>jason.r.wallace@gmail.com</email>
+  <name>Jason Wallace</name>
+</maintainer>
+<herd>netmon</herd>
+<longdescription>Parser for Snort unified/unified2 files</longdescription>
+<use>
+<flag name='aruba'>Enable Aruba support</flag>
+<flag name='gre'>Enable GRE support</flag>
+<flag name='mpls'>Enable support for mpls networks</flag>
+</use>
+</pkgmetadata>
