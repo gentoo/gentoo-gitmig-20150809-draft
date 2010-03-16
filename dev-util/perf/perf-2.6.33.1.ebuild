@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.33_rc7.ebuild,v 1.1 2010/02/09 15:50:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.33.1.ebuild,v 1.1 2010/03/16 11:02:43 flameeyes Exp $
 
 EAPI=2
 
@@ -20,6 +20,11 @@ if [ ${PV/_rc} != ${PV} ]; then
 	LINUX_PATCH=patch-${PV//_/-}.bz2
 	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/testing/${LINUX_PATCH}
 		mirror://kernel/linux/kernel/v${LINUX_V}/testing/v${PATCH_VERSION}/${LINUX_PATCH}"
+elif [ $(get_version_component_count) == 4 ]; then
+	# stable-release series
+	LINUX_VER=$(get_version_component_range 1-3)
+	LINUX_PATCH=patch-${PV}.bz2
+	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_PATCH}"
 else
 	LINUX_VER=${PV}
 fi
@@ -57,9 +62,11 @@ src_unpack() {
 	tar --wildcards -xpf "${DISTDIR}"/${LINUX_SOURCES} ${_tarpattern}
 	eend $? || die "tar failed"
 
-	ebegin "Filtering partial source patch"
-	filterdiff -p1 ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
-	eend $? || die "filterdiff failed"
+	if [[ -n ${LINUX_PATCH} ]]; then
+		ebegin "Filtering partial source patch"
+		filterdiff -p1 ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
+		eend $? || die "filterdiff failed"
+	fi
 
 	MY_A=
 	for _AFILE in ${A}; do
@@ -71,10 +78,10 @@ src_unpack() {
 }
 
 src_prepare() {
-		if [[ -n ${LINUX_PATCH} ]]; then
-				cd "${WORKDIR}"/linux-"${LINUX_VER}"
-				epatch "${WORKDIR}"/${P}.patch
-		fi
+	if [[ -n ${LINUX_PATCH} ]]; then
+		cd "${WORKDIR}"/linux-"${LINUX_VER}"
+		epatch "${WORKDIR}"/${P}.patch
+	fi
 
 	# Drop some upstream too-developer-oriented flags and fix the
 	# Makefile in general
