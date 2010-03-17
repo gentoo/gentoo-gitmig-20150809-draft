@@ -1,6 +1,10 @@
 # ChangeLog for net-news/snownews
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.30 2010/03/14 11:26:50 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.31 2010/03/17 12:02:39 cedk Exp $
+
+  17 Mar 2010; Cédric Krier <cedk@gentoo.org>
+  +files/snownews-1.5.7-stdint.patch:
+  Re-add snownews-1.5.7-stdint.patch for bug #309933
 
 *snownews-1.5.12-r1 (14 Mar 2010)
 
