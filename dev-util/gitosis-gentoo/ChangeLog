@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gitosis-gentoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/ChangeLog,v 1.8 2010/02/08 08:57:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/ChangeLog,v 1.9 2010/03/17 17:22:38 sping Exp $
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  gitosis-gentoo-0.2_p20080203.ebuild, gitosis-gentoo-0.2_p20080711.ebuild,
+  gitosis-gentoo-0.2_p20081028.ebuild, gitosis-gentoo-0.2_p20090515.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org>
   gitosis-gentoo-0.2_p20080203.ebuild, gitosis-gentoo-0.2_p20080711.ebuild,
