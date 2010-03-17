@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.22 2010/03/15 20:55:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.23 2010/03/17 23:35:21 chithanh Exp $
+
+  17 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.7.ebuild, +files/gnash-0.8.7-amf-include.patch:
+  Make agg the default renderer again, bug #309801. Attempt to fix build
+  with USE="lirc", bug #286933
 
 *gnash-0.8.7 (15 Mar 2010)
 
