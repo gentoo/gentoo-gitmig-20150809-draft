@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11360 2010/03/17 10:05:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11361 2010/03/17 10:14:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -424,48 +424,8 @@ x11-libs/wxmozilla
 net-dialup/umtsmon
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Feb 2010)
-# These are abandoned by upstream
-#
-# cheesetracker, bug 302257, replaced by schismtracker or milkytracker
-# djplay, bug 302259, replaced by mixxx
-# kaconnect, bug 302260
-# kmp, bug 302261, replaced by qmpdclient
-# museseq, bug 302262, replaced by rosegarden
-# prokyon3, bug 302264
-# qjackconnect, bug 302265, replaced by qjackctl
-# qmbtagger, bug 302267
-# qmidiarp, bug 302269
-# radiomixer, bug 302272
-# squelch, bug 302275
-#
-# Masked for removal in 30 days
-media-sound/cheesetracker
-media-sound/djplay
-media-sound/kaconnect
-media-sound/kmp
-media-sound/museseq
-media-sound/prokyon3
-media-sound/qjackconnect
-media-sound/qmbtagger
-media-sound/qmidiarp
-media-sound/radiomixer
-media-sound/squelch
-
-# Samuli Suominen <ssuominen@gentoo.org> (16 Feb 2010)
-# Doesn't compile with latest taglib wrt #304395.
-# Abandoned by upstream wrt #302270.
-# Masked for removal in 30 days.
-media-sound/quasar
-
-# Samuli Suominen <ssuominen@gentoo.org> (16 Feb 2010)
 # API breakage.   Masked for testing.
 >=x11-libs/libxklavier-5
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Feb 2010)
-# Masked for removal. Unrequired as FaceBook has XMPP (Jabber)
-# support.
-# http://blog.facebook.com/blog.php?post=297991732130
-net-im/kopete-facebook
 
 # Sven Wegener <swegener@gentoo.org> (14 Feb 2010)
 # Masked for removal in 30 days. Discontinued by upstream.
