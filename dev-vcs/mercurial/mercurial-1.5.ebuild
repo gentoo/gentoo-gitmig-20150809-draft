@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.5.ebuild,v 1.2 2010/03/14 12:37:49 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.5.ebuild,v 1.3 2010/03/17 15:45:36 sping Exp $
 
 EAPI=2
 
@@ -111,7 +111,7 @@ pkg_postinst() {
 	elog "extension please install correct tool:"
 	elog "  dev-util/cvs"
 	elog "  dev-vcs/darcs"
-	elog "  dev-util/git"
+	elog "  dev-vcs/git"
 	elog "  dev-vcs/monotone"
 	elog "  dev-util/subversion"
 }
