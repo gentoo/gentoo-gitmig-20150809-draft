@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.1.6.ebuild,v 1.3 2009/06/22 18:27:02 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.1.6.ebuild,v 1.4 2010/03/17 16:49:57 sping Exp $
 
 inherit distutils
 
@@ -15,6 +15,6 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/python
-	dev-util/git"
+	dev-vcs/git"
 
 S=${WORKDIR}/GitPython-${PV}
