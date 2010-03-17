@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5412 2010/03/17 17:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5413 2010/03/17 17:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1034,13 +1034,6 @@ dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/gambas:corba - Enable CORBA 2 ORB (net-misc/omniORB)
 dev-util/gambas:smtp - Enable smtp support.
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
-dev-util/git:blksha1 - Use the new optimized SHA1 implementation.
-dev-util/git:cgi - Install gitweb too
-dev-util/git:gtk - Include the gitview contrib tool.
-dev-util/git:mozsha1 - Makes git use an optimized SHA1 routine from Mozilla that should be fast on non-x86 machines.
-dev-util/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch.
-dev-util/git:subversion - Include git-svn for dev-util/subversion support.
-dev-util/git:webdav - Adds support for push'ing to HTTP repositories via DAV.
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/kdevelop:cmake - Enable support for CMAKE build system
 dev-util/kdevelop:qmake - Enable support for Qmake build system
