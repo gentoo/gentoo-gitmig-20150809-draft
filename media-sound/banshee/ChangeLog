@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.107 2010/02/25 06:22:21 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.108 2010/03/17 18:58:33 ford_prefect Exp $
+
+*banshee-1.5.5 (17 Mar 2010)
+
+  17 Mar 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +banshee-1.5.5.ebuild, +files/banshee-1.5.5-volume-reset-fix.patch,
+  +files/banshee-1.5.5-volume-slider-fix.patch, metadata.xml:
+  Bump to 1.5.5 (1.6 RC1). Drops some flags in favour of depending on
+  gst-plugins-meta, makes CD ripping support optional, and adds USE-flag
+  controlled support for the Youtube plugin.
 
   25 Feb 2010; Arun Raghavan <ford_prefect@gentoo.org>
   -banshee-1.5.0.ebuild, -banshee-1.5.2.ebuild:
