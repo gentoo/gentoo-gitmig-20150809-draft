@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/App-Nopaste-0.17.ebuild,v 1.1 2009/11/10 09:56:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/App-Nopaste-0.17.ebuild,v 1.2 2010/03/17 17:30:21 sping Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ DEPEND="
 	)
 	github? (
 		|| (
-			dev-util/git[perl]
+			dev-vcs/git[perl]
 			dev-perl/Config-INI
 		)
 	)
