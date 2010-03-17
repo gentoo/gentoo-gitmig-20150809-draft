@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.8.3.1.ebuild,v 1.1 2010/02/23 22:54:11 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.8.3.1.ebuild,v 1.2 2010/03/17 16:48:17 sping Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+cgi"
 
-RDEPEND="dev-util/git
+RDEPEND="dev-vcs/git
 	sys-libs/zlib
 	dev-libs/openssl
 	cgi? ( virtual/httpd-cgi )"
