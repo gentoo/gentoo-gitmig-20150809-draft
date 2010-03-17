@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/guilt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/ChangeLog,v 1.1 2010/03/06 14:24:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/ChangeLog,v 1.2 2010/03/17 16:31:41 sping Exp $
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> guilt-0.32.ebuild,
+  guilt-0.32.1.ebuild, guilt-0.32.2.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
 
 *guilt-0.32.2 (06 Mar 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/guilt-0.32.ebuild,v 1.1 2010/03/06 14:24:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/guilt-0.32.ebuild,v 1.2 2010/03/17 16:31:41 sping Exp $
 
 DESCRIPTION="A series of bash scripts which add a quilt-like interface to git"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/jsipek/guilt/"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ~sparc x86"
 IUSE="doc"
 
-RDEPEND="dev-util/git"
+RDEPEND="dev-vcs/git"
 DEPEND="${RDEPEND}
 	doc? ( app-text/asciidoc app-text/xmlto )"
 
