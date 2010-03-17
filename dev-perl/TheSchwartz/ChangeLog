@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/TheSchwartz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.4 2009/12/10 21:09:00 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.5 2010/03/17 07:35:02 tove Exp $
+
+*TheSchwartz-1.10 (17 Mar 2010)
+
+  17 Mar 2010; Torsten Veller <tove@gentoo.org> +TheSchwartz-1.10.ebuild:
+  Version bump. Enable tests
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> TheSchwartz-1.07.ebuild:
   Marking TheSchwartz-1.07 ~ppc64 for bug 284166
