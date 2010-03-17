@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/oxygen-molecule-2.1.ebuild,v 1.2 2009/12/31 14:35:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/oxygen-molecule-3.0.ebuild,v 1.1 2010/03/17 13:13:36 spatz Exp $
 
 MY_PN=Oxygen-Molecule
 
@@ -13,21 +13,18 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="kde-base/oxygen-icons
-	x11-themes/gtk-engines
-	x11-themes/gtk-engines-murrine"
+RDEPEND="kde-base/oxygen-icons"
 
 S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	tar -xzf kde43-${PN}.tar.gz || die
-	find "${WORKDIR}" -name .directory -delete
+	tar -xzf kde44-${PN}.tar.gz || die
 }
 
 src_install() {
 	insinto /usr/share/themes
-	doins -r kde43-${PN} || die
+	doins -r kde44-${PN} || die
 	insinto /usr/share/${PN}
 	doins *.colors || die
 	insinto /usr/share/doc/${PF}/pdf
