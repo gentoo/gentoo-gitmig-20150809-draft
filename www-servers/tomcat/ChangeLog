@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.223 2009/11/17 14:53:52 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.224 2010/03/17 10:10:58 ali_bush Exp $
+
+*tomcat-6.0.26 (16 Mar 2010)
+
+  16 Mar 2010; Alistair Bush <ali_bush@gentoo.org> +tomcat-6.0.26.ebuild:
+  Version Bump.
 
   17 Nov 2009; Vlastimil Babka <caster@gentoo.org> -tomcat-5.5.27-r3.ebuild:
   Remove old.
