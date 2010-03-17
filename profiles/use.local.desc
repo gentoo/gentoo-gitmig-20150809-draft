@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5408 2010/03/17 10:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5409 2010/03/17 15:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1094,6 +1094,13 @@ dev-vcs/bzr-gtk:gconf - Enable GConf support
 dev-vcs/bzr-gtk:gpg - Support signing with GnuPG.
 dev-vcs/bzr-gtk:nautilus - Integrate with Nautilus file manager
 dev-vcs/bzr-gtk:sourceview - Enable GtkSourceView support
+dev-vcs/git:blksha1 - Use the new optimized SHA1 implementation.
+dev-vcs/git:cgi - Install gitweb too
+dev-vcs/git:gtk - Include the gitview contrib tool.
+dev-vcs/git:mozsha1 - Makes git use an optimized SHA1 routine from Mozilla that should be fast on non-x86 machines.
+dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch.
+dev-vcs/git:subversion - Include git-svn for dev-util/subversion support.
+dev-vcs/git:webdav - Adds support for push'ing to HTTP repositories via DAV.
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
