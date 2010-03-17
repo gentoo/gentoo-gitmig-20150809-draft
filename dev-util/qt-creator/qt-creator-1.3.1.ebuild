@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.8 2010/03/07 12:30:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.9 2010/03/17 17:06:17 sping Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 	cvs? ( dev-util/cvs )
 	sys-devel/gdb
 	examples? ( >=x11-libs/qt-demo-4.6.1:4 )
-	git? ( dev-util/git )
+	git? ( dev-vcs/git )
 	mercurial? ( dev-vcs/mercurial )
 	qml? ( >=x11-libs/qt-declarative-4.6.0:4 )
 	qtscript? ( >=x11-libs/qt-script-4.6.1:4 )

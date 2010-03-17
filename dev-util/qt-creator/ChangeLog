@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.45 2010/03/07 12:30:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.46 2010/03/17 17:06:17 sping Exp $
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> qt-creator-1.2.1.ebuild,
+  qt-creator-1.3.1.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
 
   07 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
   -qt-creator-1.3.0.ebuild, qt-creator-1.3.1.ebuild:
