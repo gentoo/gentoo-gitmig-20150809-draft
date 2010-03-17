@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.1.3_p1168.ebuild,v 1.2 2009/03/09 19:00:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.1.3_p1168.ebuild,v 1.3 2010/03/17 15:39:19 yngwin Exp $
 
+EAPI=2
 WANT_AUTOCONF="2.5"
 inherit eutils autotools multilib
 
@@ -17,15 +18,13 @@ IUSE=""
 DEPEND=">=media-libs/libdvdread-4.1.3_p1168"
 RDEPEND="$DEPEND"
 
-src_unpack() {
-	unpack $A
-	cd "${S}"
+src_prepare() {
 	elibtoolize
 	eautoreconf
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install died"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS DEVELOPMENT-POLICY.txt ChangeLog TODO \
-		doc/dvd_structures README
+		doc/dvd_structures README || die
 }
