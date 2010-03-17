@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/barnyard2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.1 2010/03/16 21:25:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.2 2010/03/17 07:42:38 patrick Exp $
+
+  17 Mar 2010; Patrick Lauer <patrick@gentoo.org> barnyard2-1.8.ebuild:
+  Removing incomplete sguil support for now
 
 *barnyard2-1.8 (16 Mar 2010)
 

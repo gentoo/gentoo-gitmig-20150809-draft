@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/barnyard2-1.8.ebuild,v 1.1 2010/03/16 21:25:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/barnyard2-1.8.ebuild,v 1.2 2010/03/17 07:42:38 patrick Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ DEPEND="virtual/libpcap
 	    mysql? ( virtual/mysql )
 		postgres? ( >=virtual/postgresql-server-7.2 )
 		prelude? ( >=dev-libs/libprelude-0.9.0 )
-		sguil? ( dev-lang/tcl )
 		odbc? ( dev-db/unixODBC )"
 
 src_unpack() {
