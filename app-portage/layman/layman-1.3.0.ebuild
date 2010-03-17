@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.0.ebuild,v 1.2 2010/02/08 00:38:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.0.ebuild,v 1.3 2010/03/17 15:39:37 sping Exp $
 
 EAPI="2"
 NEED_PYTHON=2.5
@@ -21,7 +21,7 @@ COMMON_DEPS="dev-lang/python[xml]"
 DEPEND="${COMMON_DEPS}
 	test? ( dev-util/subversion )"
 RDEPEND="${COMMON_DEPS}
-	git? ( dev-util/git )
+	git? ( dev-vcs/git )
 	subversion? (
 		|| (
 			>=dev-util/subversion-1.5.4[webdav-neon]
