@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.24.ebuild,v 1.2 2010/02/27 10:28:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.26.ebuild,v 1.1 2010/03/17 12:34:49 flameeyes Exp $
 
 EAPI=2
 
@@ -40,5 +40,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc README || die "dodoc failed"
+	dodoc README ChangeLog THANKS || die "dodoc failed"
 }
