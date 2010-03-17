@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.10.ebuild,v 1.6 2008/11/09 23:48:05 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.10.ebuild,v 1.7 2010/03/17 13:23:29 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,6 @@ DEPEND=">=dev-libs/libxml2-2.5.6
 	>=sys-libs/ncurses-5.3"
 
 RDEPEND="dev-perl/XML-LibXML
-	dev-perl/XML-LibXSLT
 	dev-perl/libwww-perl"
 
 src_unpack() {
