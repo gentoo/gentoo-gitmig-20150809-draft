@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.131 2010/03/17 19:33:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.132 2010/03/17 20:10:25 grobian Exp $
+
+  17 Mar 2010; Fabian Groffen <grobian@gentoo.org> cmake-2.8.1.ebuild,
+  +files/cmake-2.8.1-more-no_host_paths.patch:
+  Port more-no_host_paths patch since it is really necessary for proper
+  operation in Prefix, bump to EAPI=3.
 
 *cmake-2.8.1 (17 Mar 2010)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.1.ebuild,v 1.1 2010/03/17 19:33:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.1.ebuild,v 1.2 2010/03/17 20:10:25 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils
 
@@ -50,12 +50,11 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
 	"${FILESDIR}"/${PN}-2.8.0-darwin-default-install_name.patch
 	"${FILESDIR}"/${PN}-2.8.0-darwin-no-app-with-qt.patch
+	"${FILESDIR}"/${PN}-2.8.1-more-no_host_paths.patch
 )
 
 src_prepare() {
 	base_src_prepare
-
-	use prefix || EPREFIX=
 
 	# Add gcc libs to the default link paths
 	sed -i \
