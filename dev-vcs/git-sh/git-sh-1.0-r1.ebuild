@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-sh/git-sh-1.0-r1.ebuild,v 1.1 2010/03/07 12:38:50 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-sh/git-sh-1.0-r1.ebuild,v 1.2 2010/03/17 16:36:41 sping Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="dev-util/git"
+RDEPEND="dev-vcs/git"
 
 S="${WORKDIR}/rtomayko-${PN}-bedba53"
 
@@ -31,7 +31,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "For bash completion in git commands emerge dev-util/git"
+	einfo "For bash completion in git commands emerge dev-vcs/git"
 	einfo "with bash-completion USE flag."
 	einfo
 }
