@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/tig-0.14.1.ebuild,v 1.5 2010/03/06 00:15:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/tig-0.14.1.ebuild,v 1.6 2010/03/17 17:25:14 sping Exp $
 
 inherit bash-completion
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
-		dev-util/git"
+		dev-vcs/git"
 
 src_compile() {
 	econf CFLAGS="${CFLAGS}" || die "econf failed"

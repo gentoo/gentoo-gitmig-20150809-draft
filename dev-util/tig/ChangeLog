@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/tig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.25 2010/03/06 00:15:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.26 2010/03/17 17:25:14 sping Exp $
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> tig-0.14.1.ebuild,
+  tig-0.15.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
 
   06 Mar 2010; Joseph Jezak <josejx@gentoo.org> tig-0.14.1.ebuild,
   tig-0.15.ebuild:
