@@ -1,6 +1,11 @@
-# ChangeLog for dev-util/gitg
+# ChangeLog for dev-vcs/gitg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.1 2010/03/04 18:52:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.2 2010/03/17 16:13:43 sping Exp $
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> gitg-0.0.1.ebuild,
+  gitg-0.0.2.ebuild, gitg-0.0.3.ebuild, gitg-0.0.4.ebuild,
+  gitg-0.0.5.ebuild, gitg-0.0.6.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
 
 *gitg-0.0.6 (21 Feb 2010)
 

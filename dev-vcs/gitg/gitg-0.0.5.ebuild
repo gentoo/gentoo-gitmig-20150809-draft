@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.5.ebuild,v 1.1 2010/03/04 18:52:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.5.ebuild,v 1.2 2010/03/17 16:13:43 sping Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/gtk+-2.16
 	>=x11-libs/gtksourceview-2.2
 	>=gnome-base/gconf-2.10
-	dev-util/git"
+	dev-vcs/git"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
