@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15.ebuild,v 1.1 2010/03/06 15:58:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15.ebuild,v 1.2 2010/03/17 16:32:55 sping Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
-RDEPEND=">=dev-util/git-1.6.3.3"
+RDEPEND=">=dev-vcs/git-1.6.3.3"
 
 # NOTE: It seems to be quite important which asciidoc version to use.
 # So keep an eye on it for the future. Reference should be the online
