@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/xdriinfo-1.0.3.ebuild,v 1.9 2010/01/18 19:10:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/xdriinfo-1.0.3.ebuild,v 1.10 2010/03/17 14:32:02 scarabeus Exp $
 
-inherit x-modular
+EAPI=3
+
+XORG_STATIC="no"
+inherit xorg-2
 
 DESCRIPTION="query configuration information of DRI drivers"
 
@@ -16,13 +19,17 @@ DEPEND="${RDEPEND}
 	x11-proto/glproto"
 
 pkg_setup() {
-	# Bug #138920
-	ewarn "Forcing on xorg-x11 for header sanity..."
 	OLD_IMPLEM="$(eselect opengl show)"
-	eselect opengl set --impl-headers xorg-x11
+
+	if [[ ${OLD_IMPLEM} != xorg-x11 ]]; then
+		# Bug #138920
+		ewarn "Forcing on xorg-x11 for header sanity..."
+		einfo "If compilation fails run:"
+		einfo "# eselect opengl set ${OLD_IMPLEM}"
+		eselect opengl set xorg-x11
+	fi
 }
 
 pkg_postinst() {
-	echo
-	eselect opengl set ${OLD_IMPLEM}
+	[[ ${OLD_IMPLEM} != xorg-x11 ]] && eselect opengl set ${OLD_IMPLEM}
 }
