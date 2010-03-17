@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.314 2010/03/10 21:47:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.315 2010/03/17 13:01:01 dang Exp $
+
+  17 Mar 2010; Daniel Gryniewicz <dang@gentoo.org> hal-0.5.14-r2.ebuild,
+  +files/hal-0.5.14-r2-fbsd.patch:
+  Add upstream patch to build on fbsd; bug #309263
 
   10 Mar 2010; Daniel Gryniewicz <dang@gentoo.org> -hal-0.5.11-r9.ebuild,
   -hal-0.5.12_rc1-r6.ebuild, -hal-0.5.12_rc1-r7.ebuild,

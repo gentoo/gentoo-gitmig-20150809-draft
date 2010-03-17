@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14-r2.ebuild,v 1.1 2010/01/20 13:42:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14-r2.ebuild,v 1.2 2010/03/17 13:01:01 dang Exp $
 
 EAPI="2"
 
@@ -132,6 +132,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Patch for fbsd, Bug #309263.  MOVE INTO PATCHSET FOR NEXT BUMP!
+	epatch "${FILESDIR}"/${PF}-fbsd.patch
+
 	# Only apply one of the policy patches.  Bug #267042
 	if use policykit ; then
 		rm "${WORKDIR}/${PATCHNAME}/patches/0001-plugdev-dbus-policy.patch"
