@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.223 2010/03/10 20:08:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.224 2010/03/17 23:05:06 cardoe Exp $
+
+*nvidia-drivers-195.36.15 (17 Mar 2010)
+
+  17 Mar 2010; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-195.36.15.ebuild:
+  add upstream's pre-release version of the 195.x.y series. Still needs to
+  be tested on further kernels and x86 before unmasking
 
   10 Mar 2010; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-71.86.09.ebuild, -nvidia-drivers-96.43.13.ebuild,
