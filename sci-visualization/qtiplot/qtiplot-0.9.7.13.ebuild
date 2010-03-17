@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.11-r4.ebuild,v 1.1 2010/01/12 19:59:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.13.ebuild,v 1.1 2010/03/17 15:18:42 pva Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -29,7 +29,7 @@ CDEPEND="
 	x11-libs/qt-assistant:4
 	x11-libs/qt-svg:4
 	>=x11-libs/gl2ps-1.3.5
-	>=dev-cpp/muParser-1.30
+	>=dev-cpp/muParser-1.32
 	>=dev-libs/boost-1.35.0
 	>=sci-libs/liborigin-20090406:2
 	sci-libs/gsl
@@ -55,11 +55,10 @@ RDEPEND="${CDEPEND}
 		sci-libs/scipy )"
 
 PATCHES=(
-	"${FILESDIR}/${P}-system-QTeXEngine.patch"
-	"${FILESDIR}/${P}-system-liborigin.patch"
-	"${FILESDIR}/${P}-system-gl2ps.patch"
+	"${FILESDIR}/${PN}-0.9.7.12-system-QTeXEngine.patch"
+	"${FILESDIR}/${PN}-0.9.7.12-system-liborigin.patch"
+	"${FILESDIR}/${PN}-0.9.7.12-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
-	"${FILESDIR}/${P}-transparency.patch"
 	)
 
 src_prepare() {
@@ -80,9 +79,12 @@ src_prepare() {
 	BOOST_LIBS = -lboost_date_time-mt -lboost_thread-mt
 	QWT_INCLUDEPATH = \$\$QTI_ROOT/3rdparty/qwt/src
 	QWT_LIBS = \$\$QTI_ROOT/3rdparty/qwt/lib/libqwt.a
+	QWT3D_INCLUDEPATH = \$\$QTI_ROOT/3rdparty/qwtplot3d/include
+	QWT3D_LIBS = \$\$QTI_ROOT/3rdparty/qwtplot3d/lib/libqwtplot3d.a
 	LIB_ORIGIN_INCLUDEPATH = /usr/include/liborigin2
 	LIB_ORIGIN_LIBS = -lorigin2
-	SYS_LIBS = -lQTeXEngine -lgl2ps
+	QTEXENGINE_LIBS = -lQTeXEngine
+	SYS_LIBS = -lgl2ps
 
 	PYTHON = python
 	LUPDATE = lupdate
@@ -102,6 +104,8 @@ src_prepare() {
 		echo "QUAZIP_INCLUDEPATH = /usr/include/quazip" >> build.conf
 		echo "QUAZIP_LIBS = -lquazip" >> build.conf
 	fi
+
+	sed '/^INSTALLS/d;' -i 3rdparty/qwtplot3d/qwtplot3d.pro || die
 
 	# Fails to build...
 	#if use emf; then
