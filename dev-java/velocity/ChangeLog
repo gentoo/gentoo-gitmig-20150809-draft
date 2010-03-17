@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/velocity
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.41 2008/05/02 20:01:03 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.42 2010/03/17 09:32:53 ali_bush Exp $
+
+*velocity-1.6.3 (16 Mar 2010)
+
+  16 Mar 2010; Alistair Bush <ali_bush@gentoo.org> velocity-1.5-r1.ebuild,
+  +velocity-1.6.3.ebuild:
+  Version bump and restrict tests. see #219668.
 
   02 May 2008; Christian Faulhammer <opfer@gentoo.org>
   velocity-1.5-r1.ebuild:
