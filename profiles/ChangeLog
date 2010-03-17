@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4036 2010/03/17 15:21:09 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4037 2010/03/17 17:11:26 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  x11-base/xorg-server-1.7.5.901 removed
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> updates/1Q-2010:
   Move dev-util/git to dev-vcs/git
