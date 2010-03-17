@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.3.ebuild,v 1.6 2010/01/07 20:23:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-2.3.ebuild,v 1.7 2010/03/17 17:18:04 sping Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}
-	>=dev-util/git-1.5.3"
+	>=dev-vcs/git-1.5.3"
 
 S="${WORKDIR}/${PN}"
 
