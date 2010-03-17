@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylons
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.6 2009/07/17 15:52:40 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.7 2010/03/17 03:33:26 neurogeek Exp $
+
+  17 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> pylons-0.9.7.ebuild:
+  Removed doc IUSE as this version doesn't have docs. Closes bug #271462
 
   17 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pylons-0.9.7.ebuild:

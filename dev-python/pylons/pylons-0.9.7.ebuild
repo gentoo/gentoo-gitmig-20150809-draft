@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.7.ebuild,v 1.2 2009/07/17 15:52:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.7.ebuild,v 1.3 2010/03/17 03:33:26 neurogeek Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://pylonshq.com"
 SRC_URI="http://cheeseshop.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-IUSE="cheetah genshi jinja2 kid +mako myghty doc"
+IUSE="cheetah genshi jinja2 kid +mako myghty"
 
 RDEPEND=">=dev-python/routes-1.10.3
 	>=dev-python/webhelpers-0.6.4
@@ -48,34 +48,12 @@ RDEPEND=">=dev-python/routes-1.10.3
 	mako? ( >=dev-python/mako-0.2.4 )
 	myghty? ( >=dev-python/myghty-1.1 )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
-	doc? ( dev-python/pudge dev-python/buildutils )"
+	dev-python/setuptools"
 
 # The tests fail, needs further investigation
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	distutils_src_unpack
-
-	sed -i \
-		-e 's|dest =.*|dest = docs/html|' \
-		setup.cfg || die "sed failed"
-}
-
-src_compile() {
-	distutils_src_compile
-	if use doc ; then
-		einfo "Generating docs as requested..."
-		"${python}" setup.py pudge || die "generating docs failed"
-	fi
-}
-
-src_install() {
-	distutils_src_install
-	use doc && dohtml -r docs/html/*
-}
 
 pkg_postinst() {
 	elog "pylons can make use of many other packages like:"
