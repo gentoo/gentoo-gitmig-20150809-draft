@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.126 2010/02/13 17:38:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.127 2010/03/17 10:39:23 patrick Exp $
+
+*twisted-10.0.0 (17 Mar 2010)
+
+  17 Mar 2010; Patrick Lauer <patrick@gentoo.org> +twisted-10.0.0.ebuild:
+  Bump
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> twisted-9.0.0-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #300702
