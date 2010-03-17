@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.44 2010/03/16 08:02:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.45 2010/03/17 20:48:48 tupone Exp $
+
+  17 Mar 2010; Tupone Alfredo <tupone@gentoo.org> flightgear-2.0.0.ebuild:
+  Fix dependency on media-libs/freeglut (bug #307899 by Thorsten), 
+  dev-util/subversion for terrasync and other.
 
   16 Mar 2010; Tupone Alfredo <tupone@gentoo.org> flightgear-1.9.1.ebuild,
   flightgear-2.0.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.0.0.ebuild,v 1.3 2010/03/16 08:02:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.0.0.ebuild,v 1.4 2010/03/17 20:48:48 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -17,10 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="sdl"
 
-RDEPEND="virtual/glut
+RDEPEND=">=media-libs/freeglut-2.6.0
 	~dev-games/simgear-2.0.0
 	dev-games/openscenegraph[png]
-	x11-libs/libXmu"
+	x11-libs/libXmu
+	x11-libs/libXi
+	dev-util/subversion"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
