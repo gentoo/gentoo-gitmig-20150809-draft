@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.95.ebuild,v 1.6 2010/03/06 12:51:43 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.95.ebuild,v 1.7 2010/03/17 17:07:35 sping Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND="
 # bazaar? ( dev-util/bzr )
 RDEPEND="${DEPEND}
 	cvs? ( dev-util/cvs )
-	git? ( dev-util/git )
+	git? ( dev-vcs/git )
 	mercurial? ( dev-vcs/mercurial )
 "
 

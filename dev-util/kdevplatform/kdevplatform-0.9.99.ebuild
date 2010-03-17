@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.99.ebuild,v 1.1 2010/03/10 14:16:56 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.99.ebuild,v 1.2 2010/03/17 17:07:35 sping Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ IUSE="cvs debug subversion"
 # bazaar? ( dev-vcs/bzr )
 # kompare? ( >=kde-base/kompare-${KDE_MINIMAL} )
 # mercurial? ( dev-vcs/mercurial )
-# git? ( dev-util/git )
+# git? ( dev-vcs/git )
 # block - some plugins moved to kdevplatform from kdevelop
 DEPEND="
 	dev-libs/boost
