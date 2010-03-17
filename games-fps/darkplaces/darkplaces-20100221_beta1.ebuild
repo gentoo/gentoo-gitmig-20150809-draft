@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20090709.ebuild,v 1.1 2009/07/21 04:13:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20100221_beta1.ebuild,v 1.1 2010/03/17 20:17:20 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -85,13 +85,18 @@ src_prepare() {
 	cd "${S}"
 	rm mingw_note.txt
 
+	strip-flags
+
 	# Only additional CFLAGS optimization is the -march flag
 	local march=$(get-flag -march)
 	sed -i \
-		-e '/^CC=/d' \
 		-e "s:-lasound:$(pkg-config --libs alsa):" \
-		-e "s:CPUOPTIMIZATIONS=:CPUOPTIMIZATIONS=${march}:" \
-		-e "s:strip:echo:" \
+		-e "/^CPUOPTIMIZATIONS/d" \
+		-e '/^OPTIM_RELEASE/s/=.*/=$(CFLAGS)/' \
+		-e '/^OPTIM_DEBUG/s/=.*/=$(CFLAGS)/' \
+		-e '/^LDFLAGS_DEBUG/s/$/ $(LDFLAGS)/' \
+		-e '/^LDFLAGS_RELEASE/s/$/ $(LDFLAGS)/' \
+		-e "s:strip:true:" \
 		makefile.inc || die "sed makefile.inc failed"
 
 	if ! use cdsound ; then
@@ -106,7 +111,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local opts="DP_FS_BASEDIR=\"${dir}\""
+	local opts="DP_FS_BASEDIR=\"${dir}\" DP_LINK_TO_LIBJPEG=1"
 
 	# Preferred sound is alsa
 	local sound_api="NULL"
