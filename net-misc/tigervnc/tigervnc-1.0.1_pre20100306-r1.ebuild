@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306.ebuild,v 1.3 2010/03/09 20:15:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306-r1.ebuild,v 1.1 2010/03/17 20:49:55 armin76 Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools
 
-XSERVER_VERSION="1.7.5"
+XSERVER_VERSION="1.7.6"
 #kPATCH="${P/_p*/}-patches-0.3"
 PATCH="${PN}-0.0.90-patches-0.3"
 OPENGL_DIR="xorg-x11"
