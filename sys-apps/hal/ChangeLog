@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.315 2010/03/17 13:01:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.316 2010/03/17 13:14:40 aballier Exp $
+
+  17 Mar 2010; Alexis Ballier <aballier@gentoo.org> hal-0.5.14-r2.ebuild:
+  keyword ~x86-fbsd
 
   17 Mar 2010; Daniel Gryniewicz <dang@gentoo.org> hal-0.5.14-r2.ebuild,
   +files/hal-0.5.14-r2-fbsd.patch:
