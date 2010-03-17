@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name='git'>Enable <pkg>dev-util/git</pkg> support</flag>
+    <flag name='git'>Enable <pkg>dev-vcs/git</pkg> support</flag>
   </use>
 </pkgmetadata>

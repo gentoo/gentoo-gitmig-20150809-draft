@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.2.ebuild,v 1.5 2010/02/22 18:27:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.2.ebuild,v 1.6 2010/03/17 16:51:15 sping Exp $
 
 EAPI=2
 inherit xfconf
@@ -17,7 +17,7 @@ IUSE="debug git subversion"
 RDEPEND="<xfce-base/thunar-1.1.0
 	>=x11-libs/gtk+-2.6:2
 	>=dev-libs/glib-2.6:2
-	git? ( dev-util/git )
+	git? ( dev-vcs/git )
 	subversion? ( >=dev-libs/apr-0.9.7
 		>=dev-util/subversion-1.5 )"
 DEPEND="${RDEPEND}
