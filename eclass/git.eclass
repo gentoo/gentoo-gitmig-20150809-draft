@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.43 2010/02/24 01:16:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.44 2010/03/17 15:17:10 sping Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -19,7 +19,7 @@ inherit eutils
 EGIT="git.eclass"
 
 # We DEPEND on at least a bit recent git version
-DEPEND=">=dev-util/git-1.6"
+DEPEND=">=dev-vcs/git-1.6"
 
 EXPORTED_FUNCTIONS="src_unpack"
 case "${EAPI:-0}" in
