@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.12 2010/03/07 21:29:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.13 2010/03/17 23:09:57 dirtyepic Exp $
+
+*editra-0.5.51 (17 Mar 2010)
+
+  17 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> +editra-0.5.51.ebuild:
+  Version bump. Use new --no-clean option added to prevent sandbox
+  violations.
 
   07 Mar 2010; Jonathan Callen <abcd@gentoo.org> editra-0.5.32.ebuild:
   Move PYTHON_DEPEND before inherit(), so that the dep is actually added
