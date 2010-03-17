@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/metro
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/ChangeLog,v 1.2 2009/07/26 20:06:09 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/ChangeLog,v 1.3 2010/03/17 17:15:51 sping Exp $
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> metro-1.4.1.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
 
   26 Jul 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd> tag

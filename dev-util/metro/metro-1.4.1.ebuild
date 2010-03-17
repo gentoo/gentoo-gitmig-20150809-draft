@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/metro-1.4.1.ebuild,v 1.1 2009/07/22 09:48:11 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/metro-1.4.1.ebuild,v 1.2 2010/03/17 17:15:51 sping Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ DEPEND=""
 RDEPEND="dev-lang/python
 	threads? ( app-arch/pbzip2 )
 	ccache? ( dev-util/ccache )
-	git? ( dev-util/git )"
+	git? ( dev-vcs/git )"
 
 src_install() {
 	insinto /usr/lib/metro
