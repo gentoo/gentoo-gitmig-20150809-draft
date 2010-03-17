@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/gprof2dot
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.1 2010/03/17 00:40:16 sping Exp $
+
+*gprof2dot-0_p20100216 (17 Mar 2010)
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +gprof2dot-0_p20100216.ebuild, +metadata.xml:
+  New package
+
