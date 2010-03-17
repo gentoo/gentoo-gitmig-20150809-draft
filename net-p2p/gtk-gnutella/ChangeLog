@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.97 2010/03/17 18:19:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.98 2010/03/17 18:22:44 graaff Exp $
+
+  17 Mar 2010; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Update metadata.xml to list myself as primary maintainer.
 
 *gtk-gnutella-0.96.7 (17 Mar 2010)
 
