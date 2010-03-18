@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.5 2010/03/18 13:04:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.6 2010/03/18 13:04:53 flameeyes Exp $
+
+  18 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  drizzle-2010.03.1317.ebuild:
+  Fix header.
 
 *drizzle-2010.03.1317 (18 Mar 2010)
 
