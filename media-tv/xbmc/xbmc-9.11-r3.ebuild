@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r2.ebuild,v 1.1 2010/03/18 14:31:25 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r3.ebuild,v 1.1 2010/03/18 15:11:23 lxnay Exp $
 
 EAPI="2"
 
@@ -109,6 +109,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-wavpack.patch
 	epatch "${FILESDIR}"/${P}-jpeg-speedup.patch #300909
+	epatch "${FILESDIR}"/${P}-use-cdio-system-headers-on-non-win32.patch #303030, upstream: #8026
 	# http://xbmc.org/trac/ticket/8218
 	sed -i \
 		-e 's: ftell64: dll_ftell64:' \
@@ -153,10 +154,6 @@ src_prepare() {
 
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -print0 | xargs -0 touch -r configure
-
-	# Workaround upstream issue, see #303030
-	find -type f -name "*.cpp" -exec sed -i "s:lib/libcdio:cdio:" "{}";
-	find -type f -name "Makefile" -exec sed -i "s:lib/libcdio:cdio:" "{}";
 
 }
 

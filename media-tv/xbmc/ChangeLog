@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.47 2010/03/18 14:31:25 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.48 2010/03/18 15:11:23 lxnay Exp $
+
+*xbmc-9.11-r3 (18 Mar 2010)
+
+  18 Mar 2010; Fabio Erculiani <lxnay@gentoo.org> -xbmc-9.11-r2.ebuild,
+  +xbmc-9.11-r3.ebuild,
+  +files/xbmc-9.11-use-cdio-system-headers-on-non-win32.patch:
+  backport libcdio patch from trunk, makes DVD playback working, close
+  #303030, upstream reference #8026
 
 *xbmc-9.11-r2 (18 Mar 2010)
 
