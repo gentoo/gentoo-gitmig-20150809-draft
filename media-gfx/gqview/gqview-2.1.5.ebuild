@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.10 2009/10/20 01:01:14 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.11 2010/03/18 18:58:23 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils
@@ -24,6 +24,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-windows.patch"
+	sed -i \
+		-e '/^Encoding/d' \
+		-e '/^Icon/s/\.png//' \
+		-e '/^Categories/s/Application;//' \
+		gqview.desktop \
+		|| die
 }
 
 src_configure() {
