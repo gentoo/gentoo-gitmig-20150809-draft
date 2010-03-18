@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-el
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.4 2010/03/11 23:46:56 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.5 2010/03/18 13:29:24 hwoarang Exp $
+
+  18 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  vim-spell-el-20080402.ebuild:
+  Stable on amd64
 
   11 Mar 2010; Dror Levin <spatz@gentoo.org> vim-spell-el-20080402.ebuild:
   Keyword ~amd64, bug 294725.
