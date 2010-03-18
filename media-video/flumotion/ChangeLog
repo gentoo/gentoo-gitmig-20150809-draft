@@ -1,16 +1,16 @@
 # ChangeLog for media-video/flumotion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.17 2009/10/30 10:52:39 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.18 2010/03/18 11:29:47 deathwing00 Exp $
 
 *flumotion-0.6.1 (30 Oct 2009)
 
-  30 Oct 2009; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  30 Oct 2009; Ioannis Aslanidis <deathwing00@gentoo.org>
   +flumotion-0.6.1.ebuild:
   Version bump.
 
 *flumotion-0.5.3 (13 Feb 2009)
 
-  13 Feb 2009; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  13 Feb 2009; Ioannis Aslanidis <deathwing00@gentoo.org>
   +files/flumotion-0.5.3-missing-files.diff, +flumotion-0.5.3.ebuild:
   Version bump. Added files that are missing in the default flumotion tarball
   for version 0.5.3. Fixed problems with gconf.
@@ -19,7 +19,7 @@
   metadata.xml:
   Removing zaheerm as a maintainer since he was retired.
 
-  27 Oct 2008; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  27 Oct 2008; Ioannis Aslanidis <deathwing00@gentoo.org>
   files/flumotion-init-0.2.0, metadata.xml, +flumotion-0.5.2.ebuild:
   Version bump. Added fix for access violation of gconf. Added missing
   dependency, dev-python/kiwi. All this done together with zaheerm.
