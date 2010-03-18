@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.4.ebuild,v 1.1 2010/03/18 13:45:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.4.ebuild,v 1.2 2010/03/18 14:14:32 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -23,6 +23,7 @@ src_prepare() {
 		src/scripts/gcc.mak.in \
 		lib/pngxtern/scripts/gcc.mak.in \
 		|| die "sed failed"
+	cp lib/libpng/pngpriv.h src/ || die
 	rm -rf lib/{libpng,zlib}
 }
 
