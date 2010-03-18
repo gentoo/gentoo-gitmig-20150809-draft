@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.136 2010/03/15 18:42:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.137 2010/03/18 16:34:43 hwoarang Exp $
+
+  18 Mar 2010; Markos Chandras <hwoarang@gentoo.org> openal-1.11.753.ebuild:
+  Stable on amd64 wrt bug #309083
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> openal-1.11.753.ebuild:
   ppc stable #309083
