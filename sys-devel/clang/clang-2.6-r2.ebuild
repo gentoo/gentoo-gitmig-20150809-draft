@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r1.ebuild,v 1.5 2010/01/28 00:32:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r2.ebuild,v 1.1 2010/03/18 21:33:10 voyageur Exp $
 
 EAPI=2
 inherit eutils python
@@ -53,6 +53,9 @@ src_prepare() {
 	einfo "Fixing rpath"
 	sed -e 's/\$(RPATH) -Wl,\$(\(ToolDir\|LibDir\))//g' -i Makefile.rules \
 		|| die "rpath sed failed"
+
+	# Do not force -O3 -fomit-frame-pointer on users, from llvm ebuild
+	epatch "${FILESDIR}"/llvm-2.6-cflags.patch
 }
 
 src_configure() {
