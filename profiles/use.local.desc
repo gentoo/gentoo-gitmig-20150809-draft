@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5415 2010/03/18 17:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5416 2010/03/18 18:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1198,6 +1198,7 @@ games-strategy/glest:editor - Also install a level editor
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
+games-strategy/naev:mixer -  Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one. 
 games-strategy/ufo-ai:editor - Build map editor
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
