@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avr-libc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.44 2009/02/15 23:40:43 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.45 2010/03/18 01:57:12 solar Exp $
+
+*avr-libc-1.6.8 (18 Mar 2010)
+
+  18 Mar 2010; <solar@gentoo.org> +avr-libc-1.6.8.ebuild:
+  Version bump
 
   15 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   -files/avr-libc-macros.patch, -avr-libc-1.2.6.ebuild,
