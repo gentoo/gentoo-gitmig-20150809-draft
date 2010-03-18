@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6.ebuild,v 1.4 2009/11/17 10:14:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6-r1.ebuild,v 1.1 2010/03/18 19:38:22 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -89,6 +89,9 @@ src_prepare() {
 
 	# Buggy test, http://llvm.org/bugs/show_bug.cgi?id=5047
 	rm test/DebugInfo/2009-01-15-dbg_declare.ll
+
+	# Do not force -O3 -fomit-frame-pointer on users
+	epatch "${FILESDIR}"/${PN}-2.6-cflags.patch
 }
 
 src_configure() {
