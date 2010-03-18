@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.66 2010/03/15 19:54:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.67 2010/03/18 05:07:37 pva Exp $
+
+  18 Mar 2010; Peter Volkov <pva@gentoo.org>
+  -files/gimp-help-0.13-image-files.patch,
+  -files/gimp-help-2.4.0-quickreference-linguas.patch,
+  -files/gimp-help-2.4.0-skip-linguas-images.patch, -gimp-help-2.4.2.ebuild:
+  Drop old.
 
   15 Mar 2010; Brent Baude <ranger@gentoo.org> gimp-help-2.6.0-r1.ebuild:
   stable ppc64, bug 303309
