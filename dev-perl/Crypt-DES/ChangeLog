@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-DES
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.26 2010/02/18 20:31:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.27 2010/03/18 19:38:02 darkside Exp $
+
+  18 Mar 2010; Jeremy Olexa <darkside@gentoo.org> Crypt-DES-2.05.ebuild:
+  add ~x86-solaris ~sparc-solaris kw, as tested on bug 308683
 
   18 Feb 2010; Jeremy Olexa <darkside@gentoo.org> Crypt-DES-2.05.ebuild:
   Add ~arm kw for bug 305631
