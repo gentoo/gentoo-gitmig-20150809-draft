@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.2.ebuild,v 1.1 2010/03/10 16:17:43 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.3.ebuild,v 1.1 2010/03/18 15:32:24 weaver Exp $
 
 EAPI="2"
 
