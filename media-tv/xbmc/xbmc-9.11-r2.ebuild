@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r1.ebuild,v 1.3 2010/01/25 13:38:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r2.ebuild,v 1.1 2010/03/18 14:31:25 lxnay Exp $
 
 EAPI="2"
 
@@ -153,6 +153,11 @@ src_prepare() {
 
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -print0 | xargs -0 touch -r configure
+
+	# Workaround upstream issue, see #303030
+	find -type f -name "*.cpp" -exec sed -i "s:lib/libcdio:cdio:" "{}";
+	find -type f -name "Makefile" -exec sed -i "s:lib/libcdio:cdio:" "{}";
+
 }
 
 src_configure() {
