@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.111 2010/03/03 12:16:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.112 2010/03/18 00:47:04 yngwin Exp $
+
+*PyQt4-4.7.2 (18 Mar 2010)
+
+  18 Mar 2010; Ben de Groot <yngwin@gentoo.org> +PyQt4-4.7.2.ebuild,
+  +files/PyQt4-4.7.2-configure.py.patch:
+  Version bump. ChangeLog is no longer shipped. Update patch.
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org> PyQt4-4.7.ebuild:
   stable x86, bug 301105
