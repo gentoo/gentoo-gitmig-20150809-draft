@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.3.ebuild,v 1.1 2010/03/12 12:46:45 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.3.ebuild,v 1.2 2010/03/18 16:30:23 fauli Exp $
 
 EAPI="2"
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	test? (
 		net-dns/ldns-utils[examples]
 		dev-util/splint
+		app-text/wdiff
 	)"
 
 pkg_setup() {
