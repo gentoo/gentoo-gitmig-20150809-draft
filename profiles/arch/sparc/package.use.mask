@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.43 2010/03/02 19:02:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.44 2010/03/18 00:45:24 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (18 Jan 2010)
+# newer qt-webkit is not keyworded (bug #235685)
+dev-python/PyQt4 webkit
 
 # Raúl Porcel <armin76@gentoo.org> (02 Mar 2010)
 # needs dev-python/mako which depends on
@@ -12,8 +16,8 @@ media-sound/rhythmbox webkit
 dev-libs/soprano virtuoso
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
-# need sys-auth/polkit keyworded                   
-app-admin/system-config-printer-common  policykit  
+# need sys-auth/polkit keyworded
+app-admin/system-config-printer-common  policykit
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qt-multimedia is not keyworded, bug 293671
