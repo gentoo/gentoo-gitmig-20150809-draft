@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.44 2010/03/18 00:45:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.45 2010/03/18 16:40:43 yngwin Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (18 Jan 2010)
 # newer qt-webkit is not keyworded (bug #235685)
-dev-python/PyQt4 webkit
+>=dev-python/PyQt4-4.7.2 webkit
 
 # Raúl Porcel <armin76@gentoo.org> (02 Mar 2010)
 # needs dev-python/mako which depends on
