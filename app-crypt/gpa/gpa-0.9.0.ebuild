@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.0.ebuild,v 1.7 2010/01/30 18:41:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.0.ebuild,v 1.8 2010/03/18 21:53:10 arfrever Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10.0
 	>=dev-libs/libgpg-error-1.4
-	>=dev-libs/libassuan-1.0.4
+	=dev-libs/libassuan-1*
 	>=app-crypt/gnupg-2
 	>=app-crypt/gpgme-1.2.0"
 DEPEND="${RDEPEND}
