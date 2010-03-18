@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.24 2009/09/11 01:20:07 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.25 2010/03/18 11:30:06 deathwing00 Exp $
 
 *dhcpv6-1.2.0 (11 Sep 2009)
 
@@ -11,7 +11,7 @@
 
 *dhcpv6-1.0.22-r1 (04 Apr 2009)
 
-  04 Apr 2009; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  04 Apr 2009; Ioannis Aslanidis <deathwing00@gentoo.org>
   +files/fix-gnusource-collisions.patch, metadata.xml, dhcpv6-1.0.14.ebuild,
   dhcpv6-1.0.20.ebuild, dhcpv6-1.0.22.ebuild, +dhcpv6-1.0.22-r1.ebuild:
   Fixed RDEPEND. Fixes bug #233326. Package taken over.
