@@ -1,13 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.28.1.ebuild,v 1.1 2010/01/14 22:55:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.28.1.ebuild,v 1.2 2010/03/18 17:25:40 nirbheek Exp $
+
+EAPI="2"
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="2.0"
-IUSE=""
+IUSE="+automount"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -51,7 +53,6 @@ RDEPEND="!gnome-base/gnome
 	>=gnome-base/gnome-settings-daemon-2.28.1
 	>=gnome-base/gnome-control-center-2.28.1
 
-	>=gnome-base/gvfs-1.4.3
 	>=gnome-base/nautilus-2.28.4
 
 	>=gnome-base/gnome-desktop-2.28.1
@@ -66,6 +67,9 @@ RDEPEND="!gnome-base/gnome
 	>=gnome-base/librsvg-2.26.0
 
 	>=gnome-extra/yelp-2.28.1"
+DEPEND=""
+PDEPEND=">=gnome-base/gvfs-1.4.3
+	automount? ( >=gnome-base/gvfs-1.4.3[gdu] )"
 
 pkg_postinst () {
 # FIXME: Rephrase to teach about using different WMs instead, as metacity is the default anyway
