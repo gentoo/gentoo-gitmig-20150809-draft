@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.4 2010/02/19 14:25:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.5 2010/03/18 13:04:23 flameeyes Exp $
+
+*drizzle-2010.03.1317 (18 Mar 2010)
+
+  18 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +drizzle-2010.03.1317.ebuild, +files/drizzle.conf.d,
+  +files/drizzle.init.d:
+  Version bump from Pavel, this time with an init script that can start
+  drizzled.
 
   19 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/drizzle-2009.12.1240-asneeded.patch, -drizzle-2009.12.1251.ebuild,
