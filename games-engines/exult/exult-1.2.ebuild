@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.20 2010/02/17 06:49:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.21 2010/03/18 18:55:22 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools multilib games
@@ -51,6 +51,12 @@ src_prepare() {
 		-e "s/u7siinstrics.data/u7siintrinsics.data/" \
 		usecode/ucxt/data/Makefile.am \
 		|| die "sed usecode/ucxt/data/Makefile.am failed"
+	sed -i \
+		-e '/^Encoding/d' \
+		-e '/^Icon/s/\.png//' \
+		-e '/^Categories/s/Application;//' \
+		desktop/exult.desktop \
+		|| die
 	# This fix is needed for gimp-plugin support if we want to turn that on.
 	#sed -i \
 		#-e 's/$(DESTDIR)$(GIMP_PLUGINS) /$(GIMP_PLUGINS) $(DESTDIR)/' \
