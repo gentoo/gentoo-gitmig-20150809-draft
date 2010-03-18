@@ -1,31 +1,31 @@
 # ChangeLog for dev-util/mock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/ChangeLog,v 1.6 2010/02/19 11:37:47 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/ChangeLog,v 1.7 2010/03/18 11:29:38 deathwing00 Exp $
 
 *mock-1.0.3 (19 Feb 2010)
 
-  19 Feb 2010; Ioannis Aslanidis <iaslanidis@gentoo.org> +mock-1.0.3.ebuild:
+  19 Feb 2010; Ioannis Aslanidis <deathwing00@gentoo.org> +mock-1.0.3.ebuild:
   Version bump.
 
-  30 Oct 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> metadata.xml:
+  30 Oct 2009; Ioannis Aslanidis <deathwing00@gentoo.org> metadata.xml:
   Fixed metadata as requested in bug #279215
 
 *mock-0.9.10-r2 (27 Mar 2009)
 
-  27 Mar 2009; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  27 Mar 2009; Ioannis Aslanidis <deathwing00@gentoo.org>
   +files/mock-0.9.10-chroot-fix.patch, +mock-0.9.10-r2.ebuild:
   Added patch so that chroot is looked for in /usr/bin instead of /usr/sbin.
 
 *mock-0.9.10-r1 (27 Mar 2009)
 
-  27 Mar 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> mock-0.9.10.ebuild,
+  27 Mar 2009; Ioannis Aslanidis <deathwing00@gentoo.org> mock-0.9.10.ebuild,
   +mock-0.9.10-r1.ebuild:
   Now properly creating the mock group.
 
-  03 Mar 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> mock-0.9.10.ebuild:
+  03 Mar 2009; Ioannis Aslanidis <deathwing00@gentoo.org> mock-0.9.10.ebuild:
   Added missing dependency. Fixed src_install so that it now properly installs
   the files.
 
-  02 Mar 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> ChangeLog:
+  02 Mar 2009; Ioannis Aslanidis <deathwing00@gentoo.org> ChangeLog:
   Initial version.
 
