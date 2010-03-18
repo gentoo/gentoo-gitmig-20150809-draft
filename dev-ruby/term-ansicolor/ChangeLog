@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/term-ansicolor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.6 2010/03/15 06:40:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.7 2010/03/18 12:52:57 flameeyes Exp $
+
+  18 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  term-ansicolor-1.0.5.ebuild:
+  Don't install the cdiff wrapper as it would collide with
+  app-misc/colordiff. Closes bug #310073.
 
 *term-ansicolor-1.0.5 (15 Mar 2010)
 

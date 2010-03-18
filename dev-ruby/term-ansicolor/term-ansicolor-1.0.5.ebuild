@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/term-ansicolor-1.0.5.ebuild,v 1.1 2010/03/15 06:40:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/term-ansicolor-1.0.5.ebuild,v 1.2 2010/03/18 12:52:57 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -8,6 +8,10 @@ USE_RUBY="ruby18"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST="tests"
 RUBY_FAKEGEM_EXTRADOC="CHANGES README"
+
+# don't install a cdiff wrapper, collides with app-misc/colordiff (bug
+# #310073).
+RUBY_FAKEGEM_BINWRAP="decolor"
 
 inherit ruby-fakegem
 
